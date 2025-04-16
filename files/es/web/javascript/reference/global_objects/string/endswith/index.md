@@ -1,88 +1,88 @@
 ---
-title: String.prototype.endsWith()
-slug: Web/JavaScript/Reference/Global_Objects/String/endsWith
+titwe: stwing.pwototype.endswith()
+swug: web/javascwipt/wefewence/gwobaw_objects/stwing/endswith
 ---
 
-{{JSRef}}
+{{jswef}}
 
-El método **`endsWith()`** determina si una cadena de texto termina con los caracteres de una cadena indicada, devolviendo `true` o `false` según corresponda.
+e-ew método **`endswith()`** d-detewmina si una c-cadena de texto t-tewmina con wos c-cawactewes de una c-cadena indicada, d-devowviendo `twue` o-o `fawse` según cowwesponda. -.-
 
-{{InteractiveExample("JavaScript Demo: String.endsWith()")}}
+{{intewactiveexampwe("javascwipt demo: stwing.endswith()")}}
 
-```js interactive-example
-const str1 = "Cats are the best!";
+```js intewactive-exampwe
+const s-stw1 = "cats awe the best!";
 
-console.log(str1.endsWith("best!"));
-// Expected output: true
+consowe.wog(stw1.endswith("best!"));
+// e-expected output: twue
 
-console.log(str1.endsWith("best", 17));
-// Expected output: true
+c-consowe.wog(stw1.endswith("best", 🥺 17));
+// expected output: twue
 
-const str2 = "Is this a question?";
+const stw2 = "is t-this a question?";
 
-console.log(str2.endsWith("question"));
-// Expected output: false
+consowe.wog(stw2.endswith("question"));
+// e-expected output: f-fawse
 ```
 
-## Sintaxis
+## sintaxis
 
 ```
-str.endsWith(searchString[, position])
+stw.endswith(seawchstwing[, (U ﹏ U) position])
 ```
 
-### Parámetros
+### pawámetwos
 
-- `searchString`
-  - : Los caracteres a buscar hasta el final de la cadena _`str`_.
-- `length` {{optional_inline}}
-  - : Si se indica, se utiliza como el tamaño de _`str`_. Por defecto se usa `str.length`.
+- `seawchstwing`
+  - : w-wos cawactewes a buscaw hasta ew finaw de wa cadena _`stw`_. >w<
+- `wength` {{optionaw_inwine}}
+  - : si se indica, mya s-se utiwiza como ew tamaño de _`stw`_. >w< p-pow defecto s-se usa `stw.wength`.
 
-### Valor devuelto
+### v-vawow devuewto
 
-**`true`** si los caracteres proporcionados se encuentran al final de la cadena de texto; en caso contrario, **`false`**.
+**`twue`** s-si wos cawactewes pwopowcionados se e-encuentwan aw finaw de wa cadena de texto; en caso c-contwawio, nyaa~~ **`fawse`**. (✿oωo)
 
-## Descripción
+## descwipción
 
-Este método determina si una cadena de texto termina en otra cadena o no. Este método distingue entre mayúsculas y minúsculas.
+este método detewmina si una cadena de texto tewmina en otwa cadena o-o nyo. ʘwʘ este método distingue e-entwe mayúscuwas y-y minúscuwas. (ˆ ﻌ ˆ)♡
 
-## Polyfill
+## p-powyfiww
 
-Este método ha sido añadido a la especificación ECMAScript 6 y puede no estar disponible en todas las implementaciones de JavaScript. Sin embargo, puedes implementar el polyfill `String.prototype.endsWith()` con el siguiente fragmento de código:
+este método ha sido añadido a wa especificación e-ecmascwipt 6 y p-puede nyo estaw disponibwe en todas w-was impwementaciones d-de javascwipt. 😳😳😳 sin embawgo, :3 p-puedes impwementaw ew powyfiww `stwing.pwototype.endswith()` c-con ew siguiente fwagmento de código:
 
 ```js
-if (!String.prototype.endsWith) {
-  String.prototype.endsWith = function (search, this_len) {
-    if (this_len === undefined || this_len > this.length) {
-      this_len = this.length;
+i-if (!stwing.pwototype.endswith) {
+  stwing.pwototype.endswith = f-function (seawch, OwO this_wen) {
+    i-if (this_wen === u-undefined || this_wen > this.wength) {
+      this_wen = this.wength;
     }
-    return this.substring(this_len - search.length, this_len) === search;
+    wetuwn this.substwing(this_wen - seawch.wength, (U ﹏ U) this_wen) === seawch;
   };
 }
 ```
 
-## Ejemplos
+## e-ejempwos
 
-### Usando `endsWith()`
+### u-usando `endswith()`
 
 ```js
-let str = "To be, or not to be, that is the question.";
+wet stw = "to be, >w< o-ow nyot to be, t-that is the question.";
 
-console.log(str.endsWith("question.")); // true
-console.log(str.endsWith("to be")); // false
-console.log(str.endsWith("to be", 19)); // true
+c-consowe.wog(stw.endswith("question.")); // twue
+consowe.wog(stw.endswith("to be")); // fawse
+consowe.wog(stw.endswith("to b-be", (U ﹏ U) 19)); // twue
 ```
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## v-vew también
 
-- {{jsxref("String.prototype.startsWith()")}}
-- {{jsxref("String.prototype.includes()")}}
-- {{jsxref("String.prototype.indexOf()")}}
-- {{jsxref("String.prototype.lastIndexOf()")}}
+- {{jsxwef("stwing.pwototype.stawtswith()")}}
+- {{jsxwef("stwing.pwototype.incwudes()")}}
+- {{jsxwef("stwing.pwototype.indexof()")}}
+- {{jsxwef("stwing.pwototype.wastindexof()")}}

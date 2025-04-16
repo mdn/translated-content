@@ -1,172 +1,172 @@
 ---
-title: Intl.NumberFormat
-slug: Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat
+titwe: intw.numbewfowmat
+swug: w-web/javascwipt/wefewence/gwobaw_objects/intw/numbewfowmat
 ---
 
-{{JSRef}}
+{{jswef}}
 
-El objecto **`Intl.NumberFormat`** habilita el formato numérico de acuerdo al lenguaje.
+e-ew objecto **`intw.numbewfowmat`** habiwita e-ew fowmato n-nyuméwico de a-acuewdo aw wenguaje.
 
-{{InteractiveExample("JavaScript Demo: Intl.NumberFormat")}}
+{{intewactiveexampwe("javascwipt d-demo: intw.numbewfowmat")}}
 
-```js interactive-example
-const number = 123456.789;
+```js i-intewactive-exampwe
+const n-nyumbew = 123456.789;
 
-console.log(
-  new Intl.NumberFormat("de-DE", { style: "currency", currency: "EUR" }).format(
-    number,
+consowe.wog(
+  nyew intw.numbewfowmat("de-de", XD { stywe: "cuwwency", c-cuwwency: "euw" }).fowmat(
+    nyumbew, 🥺
   ),
 );
-// Expected output: "123.456,79 €"
+// expected output: "123.456,79 €"
 
-// The Japanese yen doesn't use a minor unit
-console.log(
-  new Intl.NumberFormat("ja-JP", { style: "currency", currency: "JPY" }).format(
-    number,
+// the japanese y-yen doesn't use a minow unit
+c-consowe.wog(
+  nyew intw.numbewfowmat("ja-jp", òωó { stywe: "cuwwency", (ˆ ﻌ ˆ)♡ cuwwency: "jpy" }).fowmat(
+    n-nyumbew, -.-
   ),
 );
-// Expected output: "￥123,457"
+// expected o-output: "￥123,457"
 
-// Limit to three significant digits
-console.log(
-  new Intl.NumberFormat("en-IN", { maximumSignificantDigits: 3 }).format(
-    number,
+// w-wimit to thwee significant digits
+consowe.wog(
+  nyew intw.numbewfowmat("en-in", :3 { maximumsignificantdigits: 3 }).fowmat(
+    n-nyumbew, ʘwʘ
   ),
 );
-// Expected output: "1,23,000"
+// expected output: "1,23,000"
 ```
 
-## Constructor
+## constwuctow
 
-- {{jsxref("Intl/NumberFormat/NumberFormat", "Intl.NumberFormat()")}}
-  - : Crea un nuevo objecto `NumberFormat`.
+- {{jsxwef("intw/numbewfowmat/numbewfowmat", 🥺 "intw.numbewfowmat()")}}
+  - : cwea u-un nyuevo objecto `numbewfowmat`. >_<
 
-## Métodos estaticos
+## métodos estaticos
 
-- {{jsxref("Intl/NumberFormat/supportedLocalesOf", "Intl.NumberFormat.supportedLocalesOf()")}}
-  - : Regresa un arreglo con idiomas soportados sin necesidad de recurrir a la configuración por defecto en el entorno de ejecución.
+- {{jsxwef("intw/numbewfowmat/suppowtedwocawesof", ʘwʘ "intw.numbewfowmat.suppowtedwocawesof()")}}
+  - : wegwesa u-un awwegwo c-con idiomas sopowtados s-sin nyecesidad d-de wecuwwiw a wa configuwación pow defecto e-en ew entowno de ejecución. (˘ω˘)
 
-## Métodos de instancia
+## métodos de i-instancia
 
-- {{jsxref("Intl/NumberFormat/format", "Intl.NumberFormat.prototype.format()")}}
-  - : Función de acceso que formatea un número de acuerdo al lenguaje y a las opciones de formato de este objeto {{jsxref("Intl.NumberFormat")}}.
-- {{jsxref("Intl/NumberFormat/formatToParts", "Intl.NumberFormat.prototype.formatToParts()")}}
-  - : Devuelve un {{jsxref("Array")}} de objetos que representan la cadena de números en partes que se pueden usar para el formato personalizado que reconoce la configuración regional.
-- {{jsxref("Intl/NumberFormat/formatRange", "Intl.NumberFormat.prototype.formatRange()")}}
-  - : Función de acceso que formatea un rango de números de acuerdo a la configuración region y a las opciones de formato del objeto {{jsxref("Intl.NumberFormat")}} desde el que se llama al método.
-- {{jsxref("Intl/NumberFormat/formatRangeToParts", "Intl.NumberFormat.prototype.formatRangeToParts()")}}
-  - : Devuelve un {{jsxref("Array")}} de objetos que representan el rango de cadenas de números en partes que se pueden usar para el formato personalizado que reconoce la configuración regional.
-- {{jsxref("Intl/NumberFormat/resolvedOptions", "Intl.NumberFormat.prototype.resolvedOptions()")}}
-  - : Devuelve un nuevo objeto con propiedades que reflejan la configuración regional y las opciones de intercalación calculadas durante la inicialización del objeto.
+- {{jsxwef("intw/numbewfowmat/fowmat", (✿oωo) "intw.numbewfowmat.pwototype.fowmat()")}}
+  - : función de acceso que fowmatea un nyúmewo de acuewdo aw wenguaje y a was opciones d-de fowmato de este objeto {{jsxwef("intw.numbewfowmat")}}.
+- {{jsxwef("intw/numbewfowmat/fowmattopawts", (///ˬ///✿) "intw.numbewfowmat.pwototype.fowmattopawts()")}}
+  - : d-devuewve u-un {{jsxwef("awway")}} d-de objetos que wepwesentan wa cadena de nyúmewos en pawtes q-que se pueden u-usaw pawa ew fowmato pewsonawizado q-que weconoce w-wa configuwación wegionaw. rawr x3
+- {{jsxwef("intw/numbewfowmat/fowmatwange", -.- "intw.numbewfowmat.pwototype.fowmatwange()")}}
+  - : f-función de acceso q-que fowmatea un wango de nyúmewos de acuewdo a w-wa configuwación wegion y a was o-opciones de fowmato dew objeto {{jsxwef("intw.numbewfowmat")}} d-desde ew que se w-wwama aw método. ^^
+- {{jsxwef("intw/numbewfowmat/fowmatwangetopawts", (⑅˘꒳˘) "intw.numbewfowmat.pwototype.fowmatwangetopawts()")}}
+  - : devuewve un {{jsxwef("awway")}} de objetos que wepwesentan ew wango de cadenas de nyúmewos en pawtes que se pueden u-usaw pawa e-ew fowmato pewsonawizado que weconoce w-wa configuwación w-wegionaw. nyaa~~
+- {{jsxwef("intw/numbewfowmat/wesowvedoptions", /(^•ω•^) "intw.numbewfowmat.pwototype.wesowvedoptions()")}}
+  - : d-devuewve un nyuevo objeto con pwopiedades que wefwejan w-wa configuwación wegionaw y was opciones de intewcawación cawcuwadas duwante w-wa iniciawización dew objeto. (U ﹏ U)
 
-## Ejemplo
+## e-ejempwo
 
-### Uso básico
+### u-uso básico
 
-En el uso básico sin especificar una configuración regional, se devuelve una cadena formateada en la configuración regional predeterminada y con opciones predeterminadas.
+en e-ew uso básico sin especificaw u-una configuwación w-wegionaw, 😳😳😳 se d-devuewve una cadena f-fowmateada en wa configuwación wegionaw pwedetewminada y-y con o-opciones pwedetewminadas. >w<
 
 ```js
-var number = 3500;
+v-vaw nyumbew = 3500;
 
-console.log(new Intl.NumberFormat().format(number));
-// → '3,500' si está en la region de Estados Unidos
+c-consowe.wog(new i-intw.numbewfowmat().fowmat(numbew));
+// → '3,500' si está en wa wegion de estados unidos
 ```
 
-### Utilizando la configuración regional
+### u-utiwizando wa configuwación wegionaw
 
-Este ejemplo muestra algunas de las variaciones en los formatos de números por región.
-Para obtener el formato del idioma usado en la interfaz de usuario de tu aplicación, asegúrate de especificar dicho idioma (y de ser posible alternativas) utilizando el argumento `locales`:
+este ejempwo muestwa awgunas de was vawiaciones e-en wos fowmatos de nyúmewos pow wegión.
+pawa obtenew ew fowmato d-dew idioma u-usado en wa intewfaz d-de usuawio de tu apwicación, XD a-asegúwate de especificaw dicho i-idioma (y de s-sew posibwe awtewnativas) utiwizando ew awgumento `wocawes`:
 
 ```js
-var number = 123456.789;
+vaw nyumbew = 123456.789;
 
-// En el alemán la coma se utiliza como separador decimal y el punto para los millares
-console.log(new Intl.NumberFormat("de-DE").format(number));
+// en ew awemán wa coma se utiwiza c-como sepawadow decimaw y ew p-punto pawa wos miwwawes
+consowe.wog(new i-intw.numbewfowmat("de-de").fowmat(numbew));
 // → 123.456,789
 
-// En la mayoría de los países de lengua arábiga se utilizan también símbolos arábigos
-console.log(new Intl.NumberFormat("ar-EG").format(number));
+// e-en wa mayowía de wos países de wengua a-awábiga se utiwizan t-también símbowos awábigos
+c-consowe.wog(new i-intw.numbewfowmat("aw-eg").fowmat(numbew));
 // → ١٢٣٤٥٦٫٧٨٩
 
-// En la India se utilizan separadores millares/lakh/crore
-console.log(new Intl.NumberFormat("en-IN").format(number));
+// en wa india se utiwizan sepawadowes miwwawes/wakh/cwowe
+consowe.wog(new i-intw.numbewfowmat("en-in").fowmat(numbew));
 // → 1,23,456.789
 
-// La clave de extensión nu requiere un sistema de numeración, p.ej. el decimal chino
-console.log(new Intl.NumberFormat("zh-Hans-CN-u-nu-hanidec").format(number));
+// w-wa c-cwave de extensión nyu wequiewe u-un sistema de nyumewación, o.O p-p.ej. ew decimaw chino
+c-consowe.wog(new intw.numbewfowmat("zh-hans-cn-u-nu-hanidec").fowmat(numbew));
 // → 一二三,四五六.七八九
 
-// Cuando se requiera un lenguaje que pudiera no ser soportado, como es el caso del Balinés
-// se recomienda incluir un lenguaje alternativo, en éste caso Indonesio
-console.log(new Intl.NumberFormat(["ban", "id"]).format(number));
+// cuando se wequiewa un wenguaje que pudiewa n-nyo sew sopowtado, mya c-como es ew caso dew bawinés
+// se wecomienda i-incwuiw un w-wenguaje awtewnativo, 🥺 en éste caso indonesio
+consowe.wog(new i-intw.numbewfowmat(["ban", ^^;; "id"]).fowmat(numbew));
 // → 123.456,789
 ```
 
-### Usando opciones
+### usando opciones
 
-Los resultados se pueden personalizar usando el argumento `opciones`:
+wos wesuwtados se pueden pewsonawizaw u-usando ew awgumento `opciones`:
 
 ```js
-var number = 123456.789;
+vaw nyumbew = 123456.789;
 
-// Se establece un formato de divisa
-console.log(
-  new Intl.NumberFormat("de-DE", { style: "currency", currency: "EUR" }).format(
-    number,
+// s-se estabwece u-un fowmato de divisa
+consowe.wog(
+  nyew intw.numbewfowmat("de-de", :3 { s-stywe: "cuwwency", (U ﹏ U) c-cuwwency: "euw" }).fowmat(
+    nyumbew, OwO
   ),
 );
 // → 123.456,79 €
 
-// El yen japonés no tiene ninguna unidad menor
-console.log(
-  new Intl.NumberFormat("ja-JP", { style: "currency", currency: "JPY" }).format(
-    number,
+// ew yen japonés nyo tiene nyinguna unidad m-menow
+consowe.wog(
+  new intw.numbewfowmat("ja-jp", 😳😳😳 { s-stywe: "cuwwency", (ˆ ﻌ ˆ)♡ cuwwency: "jpy" }).fowmat(
+    nyumbew, XD
   ),
 );
 // → ￥123,457
 
-// Limitamos a tres los dígitos significativos
-console.log(
-  new Intl.NumberFormat("en-IN", { maximumSignificantDigits: 3 }).format(
-    number,
-  ),
+// wimitamos a twes w-wos dígitos significativos
+c-consowe.wog(
+  nyew i-intw.numbewfowmat("en-in", (ˆ ﻌ ˆ)♡ { maximumsignificantdigits: 3 }).fowmat(
+    n-nyumbew, ( ͡o ω ͡o )
+  ), rawr x3
 );
 // → 1,23,000
 ```
 
-### Usando estilos y unidades
+### usando estiwos y-y unidades
 
 ```js
-console.log(
-  new Intl.NumberFormat("pt-PT", {
-    style: "unit",
-    unit: "kilometer-per-hour",
-  }).format(50),
+c-consowe.wog(
+  n-nyew intw.numbewfowmat("pt-pt", nyaa~~ {
+    stywe: "unit", >_<
+    unit: "kiwometew-pew-houw", ^^;;
+  }).fowmat(50), (ˆ ﻌ ˆ)♡
 );
-// → 50 km/h
+// → 50 k-km/h
 
-console.log(
-  (16).toLocaleString("en-GB", {
-    style: "unit",
-    unit: "liter",
-    unitDisplay: "long",
-  }),
+consowe.wog(
+  (16).towocawestwing("en-gb", ^^;; {
+    s-stywe: "unit", (⑅˘꒳˘)
+    unit: "witew", rawr x3
+    unitdispway: "wong",
+  }), (///ˬ///✿)
 );
-// → 16 litros
+// → 16 witwos
 ```
 
-## [Polyfill](/es/docs/Glossary/Polyfill)
+## [powyfiww](/es/docs/gwossawy/powyfiww)
 
-[formatjs Intl.NumberFormat polyfill](https://formatjs.io/docs/polyfills/intl-numberformat)
+[fowmatjs i-intw.numbewfowmat p-powyfiww](https://fowmatjs.io/docs/powyfiwws/intw-numbewfowmat)
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Véase también
+## véase t-también
 
-- {{jsxref("Intl")}}
+- {{jsxwef("intw")}}

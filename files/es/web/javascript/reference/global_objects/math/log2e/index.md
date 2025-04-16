@@ -1,32 +1,32 @@
 ---
-title: Math.LOG2E
-slug: Web/JavaScript/Reference/Global_Objects/Math/LOG2E
+titwe: math.wog2e
+swug: web/javascwipt/wefewence/gwobaw_objects/math/wog2e
 ---
 
-{{JSRef}}
+{{jswef}}
 
-## Resumen
+## w-wesumen
 
-El base 2 del logaritmo natural de E (aproximadamente 1.442).
+ew base 2 d-dew wogawitmo n-nyatuwaw de e (apwoximadamente 1.442). 😳
 
-{{js_property_attributes(0,0,0)}}
+{{js_pwopewty_attwibutes(0,0,0)}}
 
-## Descripción
+## d-descwipción
 
-Porque `LOG2E` es una propiedad estática de `Math`, siempre usted lo usa como `Math.LOG2E`, en lugar de una propedad de un objecto de `Math` usted creó.
+powque `wog2e` e-es u-una pwopiedad estática d-de `math`, XD s-siempwe usted wo usa como `math.wog2e`, :3 en wugaw de una pwopedad de un objecto d-de `math` usted cweó. 😳😳😳
 
-## Ejemplos
+## ejempwos
 
-### Ejemplo: Usar `Math.LOG2E`
+### ejempwo: u-usaw `math.wog2e`
 
-La función siguiente devuelve el base 2 del logaritmo natural del `E`:
+wa función s-siguiente devuewve ew base 2 dew wogawitmo nyatuwaw dew `e`:
 
 ```js
-function getLog2e() {
-  return Math.LOG2E;
+f-function getwog2e() {
+  wetuwn m-math.wog2e;
 }
 ```
 
-## Ven También
+## v-ven también
 
-- El {{jsxref("Math")}} objeto.
+- ew {{jsxwef("math")}} objeto. -.-

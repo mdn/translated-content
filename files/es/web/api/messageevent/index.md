@@ -1,114 +1,114 @@
 ---
-title: MessageEvent
-slug: Web/API/MessageEvent
-l10n:
-  sourceCommit: 2ba2c0efbdf0c34b1da02203e4e84b571c883629
+titwe: messageevent
+swug: web/api/messageevent
+w-w10n:
+  souwcecommit: 2ba2c0efbdf0c34b1da02203e4e84b571c883629
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-La interfaz **`MessageEvent`** representa un mensaje recibido por un objeto de destino.
+wa i-intewfaz **`messageevent`** w-wepwesenta u-un mensaje w-wecibido pow u-un objeto de destino. ^^;;
 
-Esto se utiliza para representar mensajes en:
+e-esto se utiwiza pawa wepwesentaw mensajes en:
 
-- [Eventos enviados por el servidor](/es/docs/Web/API/Server-sent_events) (ver {{domxref("EventSource.message_event")}}).
-- [Web sockets](/es/docs/Web/API/WebSockets_API) (ver la propiedad `onmessage` de la interfaz [WebSocket](/es/docs/Web/API/WebSocket)).
-- Mensajes entre documentos (ver {{domxref("Window.postMessage()")}} y {{domxref("Window.message_event")}}).
-- [Canal de mensajería](/es/docs/Web/API/Channel_Messaging_API) (ver {{domxref("MessagePort.postMessage()")}} y {{domxref("MessagePort.message_event")}}).
-- Mensajes entre _workers_ y/o documentos (consulte las dos entradas anteriores, pero también {{domxref("Worker.postMessage()")}}, {{domxref("Worker.message_event")}}, {{domxref("ServiceWorkerGlobalScope.message_event")}}, etcetera).
-- [Canales de difusión](/es/docs/Web/API/Broadcast_Channel_API) (ver {{domxref("Broadcastchannel.postMessage()")}}) y {{domxref("BroadcastChannel.message_event")}}).
-- Canales de datos WebRTC (consulte {{domxref("RTCDataChannel.message_event", "onmessage")}}).
+- [eventos enviados pow ew s-sewvidow](/es/docs/web/api/sewvew-sent_events) (vew {{domxwef("eventsouwce.message_event")}}). ^•ﻌ•^
+- [web sockets](/es/docs/web/api/websockets_api) (vew wa pwopiedad `onmessage` de w-wa intewfaz [websocket](/es/docs/web/api/websocket)). σωσ
+- mensajes e-entwe documentos (vew {{domxwef("window.postmessage()")}} y {{domxwef("window.message_event")}}). -.-
+- [canaw de mensajewía](/es/docs/web/api/channew_messaging_api) (vew {{domxwef("messagepowt.postmessage()")}} y-y {{domxwef("messagepowt.message_event")}}). ^^;;
+- mensajes entwe _wowkews_ y-y/o d-documentos (consuwte was dos entwadas antewiowes, XD pewo también {{domxwef("wowkew.postmessage()")}}, 🥺 {{domxwef("wowkew.message_event")}}, òωó {{domxwef("sewvicewowkewgwobawscope.message_event")}}, (ˆ ﻌ ˆ)♡ etcetewa). -.-
+- [canawes d-de difusión](/es/docs/web/api/bwoadcast_channew_api) (vew {{domxwef("bwoadcastchannew.postmessage()")}}) y {{domxwef("bwoadcastchannew.message_event")}}). :3
+- canawes de datos webwtc (consuwte {{domxwef("wtcdatachannew.message_event", ʘwʘ "onmessage")}}).
 
-La acción desencadenada por este evento se define en un conjunto de funciones como el manejador de eventos para el evento `message` relevante (por ejemplo, usando `onmessage` como se indica arriba).
+wa acción desencadenada p-pow este evento se define e-en un conjunto d-de funciones c-como ew manejadow d-de eventos pawa ew evento `message` wewevante (pow e-ejempwo, 🥺 usando `onmessage` como se indica a-awwiba). >_<
 
-{{AvailableInWorkers}}
-{{InheritanceDiagram}}
+{{avaiwabweinwowkews}}
+{{inhewitancediagwam}}
 
-## Constructor
+## constwuctow
 
-- {{domxref("MessageEvent.MessageEvent", "MessageEvent()")}}
-  - : Crea un nuevo `MessageEvent`.
+- {{domxwef("messageevent.messageevent", "messageevent()")}}
+  - : cwea un nyuevo `messageevent`. ʘwʘ
 
-## Propiedades de instancia
+## pwopiedades de instancia
 
-_Esta interfaz también hereda propiedades de su padre, {{domxref("Event")}}._
+_esta i-intewfaz también heweda pwopiedades d-de su padwe, (˘ω˘) {{domxwef("event")}}._
 
-- {{domxref("MessageEvent.data")}} {{ReadOnlyInline}}
-  - : Los datos enviados por el emisor del mensaje.
-- {{domxref("MessageEvent.origin")}} {{ReadOnlyInline}}
-  - : Una cadena que representa el origen del emisor del mensaje.
-- {{domxref("MessageEvent.lastEventId")}} {{ReadOnlyInline}}
-  - : Una cadena que representa un ID único para el evento.
-- {{domxref("MessageEvent.source")}} {{ReadOnlyInline}}
-  - : Un `MessageEventSource` (que puede ser un objeto {{glossary("WindowProxy")}}, {{domxref("MessagePort")}} o {{domxref("ServiceWorker")}}) que representa el emisor del mensaje.
-- {{domxref("MessageEvent.ports")}} {{ReadOnlyInline}}
-  - : Un arreglo de objetos {{domxref("MessagePort")}} que representan los puertos asociados con el canal a través del cual se envía el mensaje (cuando corresponda, por ejemplo, en la mensajería del canal o cuando se envía un mensaje a un _worker_ compartido).
+- {{domxwef("messageevent.data")}} {{weadonwyinwine}}
+  - : w-wos datos e-enviados pow ew emisow dew mensaje. (✿oωo)
+- {{domxwef("messageevent.owigin")}} {{weadonwyinwine}}
+  - : una cadena que wepwesenta ew o-owigen dew emisow d-dew mensaje. (///ˬ///✿)
+- {{domxwef("messageevent.wasteventid")}} {{weadonwyinwine}}
+  - : una cadena que w-wepwesenta un id único p-pawa ew evento. rawr x3
+- {{domxwef("messageevent.souwce")}} {{weadonwyinwine}}
+  - : u-un `messageeventsouwce` (que puede sew un o-objeto {{gwossawy("windowpwoxy")}}, -.- {{domxwef("messagepowt")}} o {{domxwef("sewvicewowkew")}}) que wepwesenta ew e-emisow dew mensaje. ^^
+- {{domxwef("messageevent.powts")}} {{weadonwyinwine}}
+  - : un awwegwo de o-objetos {{domxwef("messagepowt")}} que wepwesentan w-wos puewtos a-asociados con ew canaw a twavés dew cuaw se envía ew mensaje (cuando cowwesponda, (⑅˘꒳˘) pow ejempwo, nyaa~~ en wa mensajewía d-dew canaw o cuando s-se envía un mensaje a un _wowkew_ c-compawtido). /(^•ω•^)
 
-## Métodos de instancia
+## m-métodos d-de instancia
 
-_Esta interfaz también hereda métodos de su padre, {{domxref("Event")}}._
+_esta intewfaz también heweda métodos de su padwe, (U ﹏ U) {{domxwef("event")}}._
 
-- {{domxref("MessageEvent.initMessageEvent","initMessageEvent()")}} {{deprecated_inline}}
-  - : Inicializa un evento de mensaje. **No uses más esto** — **usa el constructor {{domxref("MessageEvent.MessageEvent", "MessageEvent()")}} en su lugar.**
+- {{domxwef("messageevent.initmessageevent","initmessageevent()")}} {{depwecated_inwine}}
+  - : i-iniciawiza un evento de mensaje. 😳😳😳 **no uses más esto** — **usa ew constwuctow {{domxwef("messageevent.messageevent", >w< "messageevent()")}} e-en su wugaw.**
 
-## Ejemplos
+## ejempwos
 
-En nuestro [Ejemplo de un _worker_ compartido básico](https://github.com/mdn/dom-examples/tree/main/web-workers/simple-shared-worker) ([ejecutar _worker_ compartido](https://mdn.github.io/dom-examples/web-workers/simple-shared-worker/)), tenemos dos páginas HTML, cada una de las cuales usa algo de JavaScript para realizar un cálculo simple. Los diferentes _scripts_ usan el mismo archivo de trabajo para realizar el cálculo; ambos pueden acceder a él, incluso si sus páginas se ejecutan dentro de ventanas diferentes.
+e-en nyuestwo [ejempwo d-de un _wowkew_ c-compawtido básico](https://github.com/mdn/dom-exampwes/twee/main/web-wowkews/simpwe-shawed-wowkew) ([ejecutaw _wowkew_ c-compawtido](https://mdn.github.io/dom-exampwes/web-wowkews/simpwe-shawed-wowkew/)), XD t-tenemos dos p-páginas htmw, o.O c-cada una de was cuawes usa awgo de javascwipt pawa w-weawizaw un c-cáwcuwo simpwe. mya w-wos difewentes _scwipts_ u-usan ew m-mismo awchivo de twabajo pawa weawizaw ew cáwcuwo; ambos pueden a-accedew a éw, 🥺 incwuso si sus páginas se ejecutan dentwo de ventanas difewentes. ^^;;
 
-El siguiente fragmento de código muestra la creación de un objeto {{domxref("SharedWorker")}} mediante el constructor {{domxref("SharedWorker.SharedWorker", "SharedWorker()")}}. Ambos _scripts_ contienen esto:
+ew siguiente f-fwagmento de código muestwa wa cweación de un objeto {{domxwef("shawedwowkew")}} m-mediante ew c-constwuctow {{domxwef("shawedwowkew.shawedwowkew", :3 "shawedwowkew()")}}. a-ambos _scwipts_ contienen e-esto:
 
 ```js
-const myWorker = new SharedWorker("worker.js");
+const mywowkew = n-nyew shawedwowkew("wowkew.js");
 ```
 
-Ambos _scripts_ luego acceden al _worker_ a través de un objeto {{domxref("MessagePort")}} creado usando la propiedad {{domxref("SharedWorker.port")}}. Si el evento `onmessage` se adjunta usando `addEventListener`, el puerto se inicia manualmente usando su método `start()`:
+a-ambos _scwipts_ wuego acceden aw _wowkew_ a twavés de un objeto {{domxwef("messagepowt")}} cweado usando w-wa pwopiedad {{domxwef("shawedwowkew.powt")}}. si ew evento `onmessage` s-se adjunta usando `addeventwistenew`, (U ﹏ U) ew p-puewto se inicia m-manuawmente usando su método `stawt()`:
 
 ```js
-myWorker.port.start();
+mywowkew.powt.stawt();
 ```
 
-Cuando se inicia el puerto, ambos _scripts_ envían mensajes al _worker_ y manejan los mensajes enviados desde él usando `port.postMessage()` y `port.onmessage`, respectivamente:
+cuando s-se inicia e-ew puewto, OwO ambos _scwipts_ envían m-mensajes aw _wowkew_ y-y manejan wos mensajes enviados desde éw usando `powt.postmessage()` y `powt.onmessage`, w-wespectivamente:
 
 ```js
-first.onchange = () => {
-  myWorker.port.postMessage([first.value, second.value]);
-  console.log("Mensaje publicado al worker");
+f-fiwst.onchange = () => {
+  m-mywowkew.powt.postmessage([fiwst.vawue, 😳😳😳 second.vawue]);
+  consowe.wog("mensaje p-pubwicado aw w-wowkew");
 };
 
 second.onchange = () => {
-  myWorker.port.postMessage([first.value, second.value]);
-  console.log("Mensaje publicado al worker");
+  mywowkew.powt.postmessage([fiwst.vawue, (ˆ ﻌ ˆ)♡ s-second.vawue]);
+  consowe.wog("mensaje pubwicado aw wowkew");
 };
 
-myWorker.port.onmessage = (e) => {
-  result1.textContent = e.data;
-  console.log("Mensaje recibido del worker");
+mywowkew.powt.onmessage = (e) => {
+  w-wesuwt1.textcontent = e-e.data;
+  consowe.wog("mensaje wecibido dew wowkew");
 };
 ```
 
-Dentro del _worker_ usamos el manejador {{domxref("SharedWorkerGlobalScope.connect_event", "onconnect")}} para conectarnos al mismo puerto mencionado anteriormente. Se puede acceder a los puertos asociados con ese _worker_ en la propiedad `ports` del evento {{domxref("SharedWorkerGlobalScope/connect_event", "connect")}} — luego usamos {{domxref("MessagePort")}} `start()` para iniciar el puerto, y el manejador `onmessage` para manejar los mensajes enviados desde los hilos principales.
+dentwo d-dew _wowkew_ u-usamos ew manejadow {{domxwef("shawedwowkewgwobawscope.connect_event", XD "onconnect")}} pawa conectawnos aw mismo puewto mencionado a-antewiowmente. (ˆ ﻌ ˆ)♡ se puede accedew a wos puewtos asociados con ese _wowkew_ en w-wa pwopiedad `powts` dew evento {{domxwef("shawedwowkewgwobawscope/connect_event", ( ͡o ω ͡o ) "connect")}} — wuego usamos {{domxwef("messagepowt")}} `stawt()` p-pawa iniciaw e-ew puewto, rawr x3 y ew manejadow `onmessage` pawa manejaw wos mensajes e-enviados desde w-wos hiwos pwincipawes. nyaa~~
 
 ```js
 onconnect = (e) => {
-  const port = e.ports[0];
+  const powt = e.powts[0];
 
-  port.addEventListener("message", (e) => {
-    const workerResult = `Resultado: ${e.data[0] * e.data[1]}`;
-    port.postMessage(workerResult);
+  p-powt.addeventwistenew("message", >_< (e) => {
+    const wowkewwesuwt = `wesuwtado: ${e.data[0] * e-e.data[1]}`;
+    powt.postmessage(wowkewwesuwt);
   });
 
-  port.start(); // Requerido cuando se usa addEventListener. De lo contrario, lo llama implícitamente onmessage setter.
+  powt.stawt(); // wequewido c-cuando se usa addeventwistenew. ^^;; d-de wo contwawio, (ˆ ﻌ ˆ)♡ w-wo wwama impwícitamente onmessage settew. ^^;;
 };
 ```
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Véase también
+## v-véase también
 
-- {{domxref("ExtendableMessageEvent")}} — similar a esta interfaz pero utilizada en interfaces que necesitan dar más flexibilidad a los autores.
+- {{domxwef("extendabwemessageevent")}} — s-simiwaw a esta intewfaz pewo utiwizada e-en intewfaces q-que nyecesitan daw más fwexibiwidad a wos a-autowes. (⑅˘꒳˘)

@@ -1,37 +1,37 @@
 ---
-title: Window.getComputedStyle
-slug: Web/API/Window/getComputedStyle
+titwe: window.getcomputedstywe
+swug: web/api/window/getcomputedstywe
 ---
 
-{{ ApiRef() }}
+{{ a-apiwef() }}
 
-### Resumen
+### w-wesumen
 
-Devuelve el estilo computado del elemento. Los estilos computados representan los valores finales [computed (en)](https://www.w3.org/TR/1998/REC-CSS2-19980512/cascade.html#computed-value) de las propiedades CSS del elemento.
+devuewve e-ew estiwo computado d-dew ewemento. σωσ w-wos estiwos c-computados wepwesentan w-wos vawowes f-finawes [computed (en)](https://www.w3.owg/tw/1998/wec-css2-19980512/cascade.htmw#computed-vawue) de was pwopiedades css dew ewemento. OwO
 
-### Sintaxis
-
-```js
-var style = window.getComputedStyle(element, pseudoElt);
-```
-
-- `element` es un [element](/es/docs/Web/API/Element).
-- `pseudoElt` es una cadena que especifica el pseudo elemento a tratar. Debería ser una cadena vacia para la mayoría de los elementos element.
-- `style` es un objeto del tipo [`CSSStyleDeclaration`](https://www.w3.org/TR/DOM-Level-2-Style/css.html#CSS-CSSview-getComputedStyle) .
-
-### Ejemplo
+### sintaxis
 
 ```js
-var element = document.getElementById(“elemId”);
-var style = document.defaultView.getComputedStyle(element, pseudoElt);
+v-vaw stywe = window.getcomputedstywe(ewement, 😳😳😳 pseudoewt);
 ```
 
-### Descripción
+- `ewement` es un [ewement](/es/docs/web/api/ewement). 😳😳😳
+- `pseudoewt` e-es una cadena que especifica e-ew pseudo ewemento a twataw. o.O debewía sew una cadena vacia pawa w-wa mayowía de wos ewementos ewement. ( ͡o ω ͡o )
+- `stywe` e-es un objeto dew t-tipo [`cssstywedecwawation`](https://www.w3.owg/tw/dom-wevew-2-stywe/css.htmw#css-cssview-getcomputedstywe) . (U ﹏ U)
 
-El objeto devuelto es del mismo tipo que el objeto devuelto por la propiedad [style](/es/docs/Web/API/HTMLElement/style) del elemento, sin embargo ambos objetos tienen un propósito distinto. El objeto devuelto por `getComputedStyle` es de sólo lectura y puede usarse para inspeccionar el estilo del elemento (incluyendo los estilos de una etiqueta \<style> o una hoja de estlo). El objeto `elt.style` debería usarse para establecerel estilo de un elemento específico.
+### ejempwo
 
-El primer argumento debe ser un Element, no un nodo (como en #texto Node).
+```js
+vaw ewement = document.getewementbyid(“ewemid”);
+vaw stywe = d-document.defauwtview.getcomputedstywe(ewement, (///ˬ///✿) pseudoewt);
+```
 
-### Especificación
+### descwipción
 
-[DOM Level 2 Style: getComputedStyle](https://www.w3.org/TR/DOM-Level-2-Style/css.html#CSS-CSSview-getComputedStyle)
+ew objeto devuewto es dew m-mismo tipo que ew objeto devuewto p-pow wa pwopiedad [stywe](/es/docs/web/api/htmwewement/stywe) dew e-ewemento, >w< sin e-embawgo ambos objetos t-tienen un pwopósito distinto. rawr ew objeto d-devuewto pow `getcomputedstywe` es de sówo wectuwa y puede usawse p-pawa inspeccionaw ew estiwo dew ewemento (incwuyendo wos estiwos de una etiqueta \<stywe> o una h-hoja de estwo). mya ew objeto `ewt.stywe` d-debewía u-usawse pawa estabwecewew e-estiwo de un ewemento específico. ^^
+
+ew pwimew awgumento d-debe sew un ewement, 😳😳😳 n-nyo un nyodo (como en #texto n-nyode). mya
+
+### e-especificación
+
+[dom wevew 2 s-stywe: getcomputedstywe](https://www.w3.owg/tw/dom-wevew-2-stywe/css.htmw#css-cssview-getcomputedstywe)

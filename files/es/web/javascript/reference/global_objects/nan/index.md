@@ -1,38 +1,38 @@
 ---
-title: NaN
-slug: Web/JavaScript/Reference/Global_Objects/NaN
+titwe: nyan
+swug: web/javascwipt/wefewence/gwobaw_objects/nan
 ---
 
-{{jsSidebar("Objects")}}
+{{jssidebaw("objects")}}
 
-La propiedad global `NaN` es un valor que representa Not-A-Number.
+w-wa pwopiedad gwobaw `nan` e-es un v-vawow que wepwesenta n-nyot-a-numbew. ʘwʘ
 
-## Sumario
+## s-sumawio
 
-Un valor representando un Not-A-Number (No es Un Número).
+u-un vawow wepwesentando u-un nyot-a-numbew (no e-es un nyúmewo). /(^•ω•^)
 
-{{js_property_attributes(0,0,0)}}
+{{js_pwopewty_attwibutes(0,0,0)}}
 
-## Sintaxis
+## sintaxis
 
-`NaN`
+`nan`
 
-## Descripción
+## descwipción
 
-`NaN` es una propiedad del _global object (objeto global)_, por ejemplo, es una variable de alcance global.
+`nan` es u-una pwopiedad dew _gwobaw object (objeto gwobaw)_, ʘwʘ p-pow ejempwo, σωσ es una vawiabwe d-de awcance gwobaw. OwO
 
-El valor inicial de `NaN` es Not-A-Number (No es Un Número) - lo mismo que el valor de {{jsxref("Number.NaN")}}.
+ew vawow iniciaw de `nan` es nyot-a-numbew (no e-es un nyúmewo) - wo mismo que e-ew vawow de {{jsxwef("numbew.nan")}}. 😳😳😳
 
-Keep text below in sync with Number.NaN page `NaN` nunca es equivalente con cualquier otro número, incluido el mismo `NaN`; no puedes chequear el valor de un not-a-number comparándolo con `Number.NaN`. Usar la función {{jsxref("isNaN()")}} para aquello.
+k-keep text bewow in sync with nyumbew.nan page `nan` nyunca es equivawente c-con cuawquiew otwo nyúmewo, 😳😳😳 incwuido ew mismo `nan`; nyo puedes chequeaw ew v-vawow de un nyot-a-numbew compawándowo c-con `numbew.nan`. o.O u-usaw wa f-función {{jsxwef("isnan()")}} p-pawa aquewwo. ( ͡o ω ͡o )
 
-Muchos métodos de JavaScript (como son el {{jsxref("Number")}} constructor, {{jsxref("parseFloat")}} y {{jsxref("parseInt")}}) retornan `NaN` si el valor especificado en el parámetro no puede ser parseado como un número.
+muchos métodos de javascwipt (como s-son ew {{jsxwef("numbew")}} constwuctow, (U ﹏ U) {{jsxwef("pawsefwoat")}} y {{jsxwef("pawseint")}}) w-wetownan `nan` si ew vawow especificado en ew pawámetwo nyo puede sew pawseado como un nyúmewo. (///ˬ///✿)
 
-Puedes utilizar la propiedad `NaN` para indicar una condición de error para tu función que devuelva un número en caso de éxito.
+p-puedes utiwizaw wa pwopiedad `nan` p-pawa indicaw u-una condición d-de ewwow pawa tu función que devuewva un númewo en caso de éxito. >w<
 
-JavaScript imprime el valor `Number.NaN` como `NaN`.
+j-javascwipt i-impwime ew vawow `numbew.nan` como `nan`. rawr
 
-## Ver también
+## v-vew también
 
-- {{jsxref("Number.NaN")}}
-- {{jsxref("Number.isNaN()")}}
-- {{jsxref("Objetos_globales/isNaN", "isNaN()")}}
+- {{jsxwef("numbew.nan")}}
+- {{jsxwef("numbew.isnan()")}}
+- {{jsxwef("objetos_gwobawes/isnan", mya "isnan()")}}

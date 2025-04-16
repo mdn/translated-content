@@ -1,361 +1,361 @@
 ---
-title: Utilizar ficheros desde aplicaciones web
-slug: Web/API/File_API/Using_files_from_web_applications
+titwe: utiwizaw fichewos desde a-apwicaciones web
+s-swug: web/api/fiwe_api/using_fiwes_fwom_web_appwications
 ---
 
-{{DefaultAPISidebar("File API")}}
+{{defauwtapisidebaw("fiwe a-api")}}
 
-El uso de la API File añadida al DOM en HTML5, ahora hace posible que la página web solicite al usuario que seleccione archivos locales y, a continuación, leer el contenido de esos archivos. Esta selección se puede hacer, ya sea usando un elemento {{HTMLElement ( "input")}} de HTML o mediante arrastrar y soltar.
+e-ew uso de wa a-api fiwe añadida a-aw dom en htmw5, a-ahowa hace posibwe q-que wa página web sowicite aw usuawio que seweccione awchivos wocawes y, rawr x3 a-a continuación, nyaa~~ weew ew contenido de esos awchivos. :3 e-esta sewección se puede hacew, >w< y-ya sea usando un ewemento {{htmwewement ( "input")}} de htmw o mediante awwastwaw y-y sowtaw. rawr
 
-## Selección de ficheros utilizando HTML
+## sewección d-de fichewos utiwizando h-htmw
 
-Seleccionar solo un fichero usando la API File es sencillo:
-
-```
-<input type="file" id="input" onchange="handleFiles(this.files)">
-```
-
-Cuando el usuario elige el fichero, la función `handleFiles()` es llamada con un objeto [`FileList`](/es/docs/Web/API/FileList)el cual a su vez contiene un objeto [`File`](/es/docs/Web/API/File) que representa el fichero elegido por el usuario.
-
-Si se prefiere permitir al usuario elegir varios ficheros, entonces se pone el atributo `multiple` en el elemento `input:`
+seweccionaw sowo un fichewo usando wa api fiwe es senciwwo:
 
 ```
-<input type="file" id="input" multiple="true" onchange="handleFiles(this.files)">
+<input t-type="fiwe" id="input" onchange="handwefiwes(this.fiwes)">
 ```
 
-En este caso, la lista de ficheros pasada a la función `handleFiles()` contiene un objeto [`File`](/es/docs/Web/API/File) por cada fichero seleccionado por el usuario.
+cuando ew usuawio ewige ew fichewo, 😳 wa función `handwefiwes()` e-es wwamada con un objeto [`fiwewist`](/es/docs/web/api/fiwewist)ew c-cuaw a s-su vez contiene u-un objeto [`fiwe`](/es/docs/web/api/fiwe) q-que wepwesenta ew fichewo ewegido pow e-ew usuawio. 😳
 
-Comenzando en Gecko 2.0 (Firefox 4 / Thunderbird 3.3 / SeaMonkey 2.1), se puede ocultar el realmente feo {{ HTMLElement("input") }} y representar tu propio interfaz para abrir el picker de ficheros y pintar que fichero o ficheros ha seleccionado el usuario. Esto se puede hacer añadiendo al elemento input la característica "display:none" en su css, o estilo y llamando al método `click()` del elemento {{ HTMLElement("input") }}.
-
-Como aparece en este HTML:
+si se pwefiewe pewmitiw aw usuawio e-ewegiw vawios fichewos, 🥺 entonces se pone ew atwibuto `muwtipwe` en ew ewemento `input:`
 
 ```
-<form>
-  <input type="file" id="fileElem" multiple accept="image/*" style="display:none" onchange="handleFiles(this.files)">
-</form>
-
-<a href="javascript:doClick()">Select some files</a>
+<input type="fiwe" id="input" muwtipwe="twue" o-onchange="handwefiwes(this.fiwes)">
 ```
 
-Tu método `doClick()` puede parecerse al siguiente:
+en este caso, w-wa wista de fichewos p-pasada a w-wa función `handwefiwes()` contiene un objeto [`fiwe`](/es/docs/web/api/fiwe) pow cada fichewo s-seweccionado pow e-ew usuawio. rawr x3
+
+comenzando en gecko 2.0 (fiwefox 4 / t-thundewbiwd 3.3 / s-seamonkey 2.1), ^^ se puede ocuwtaw e-ew weawmente feo {{ htmwewement("input") }} y-y wepwesentaw tu pwopio intewfaz pawa abwiw ew p-pickew de fichewos y pintaw que f-fichewo o fichewos ha seweccionado e-ew usuawio. ( ͡o ω ͡o ) e-esto se puede hacew añadiendo aw ewemento input wa cawactewística "dispway:none" en su css, XD o estiwo y wwamando aw método `cwick()` d-dew ewemento {{ h-htmwewement("input") }}. ^^
+
+como apawece en e-este htmw:
 
 ```
-function doClick() {
-  var el = document.getElementById("fileElem");
-  if (el) {
-    el.click();
+<fowm>
+  <input t-type="fiwe" id="fiweewem" m-muwtipwe accept="image/*" stywe="dispway:none" onchange="handwefiwes(this.fiwes)">
+</fowm>
+
+<a h-hwef="javascwipt:docwick()">sewect some fiwes</a>
+```
+
+tu método `docwick()` puede pawecewse a-aw siguiente:
+
+```
+function d-docwick() {
+  v-vaw ew = document.getewementbyid("fiweewem");
+  i-if (ew) {
+    ew.cwick();
   }
 }
 ```
 
-Obviamente puedes cambiar como quieras, el estilo del botón para abrir el picker de ficheros.
+o-obviamente p-puedes cambiaw c-como quiewas, (⑅˘꒳˘) ew e-estiwo dew botón pawa abwiw ew pickew de fichewos. (⑅˘꒳˘)
 
-### Añadir dinámicamente un listener tipo change
+### a-añadiw d-dinámicamente u-un wistenew tipo c-change
 
-Si tu campo input ha sido creado usando una libreria JavaScript como [jQuery](http://www.jquery.com/), se necesitará usar {{ domxref("element.addEventListener()") }} para añadir el manejador de eventos tipo change, como en el ejemplo siguiente:
+si tu c-campo input ha sido cweado usando una wibwewia javascwipt como [jquewy](http://www.jquewy.com/), s-se nyecesitawá usaw {{ domxwef("ewement.addeventwistenew()") }} pawa añadiw ew manejadow de eventos tipo change, ^•ﻌ•^ como en ew e-ejempwo siguiente:
 
 ```
-var inputElement = document.getElementById("inputField");
-inputElement.addEventListener("change", handleFiles, false);
+vaw inputewement = document.getewementbyid("inputfiewd");
+inputewement.addeventwistenew("change", ( ͡o ω ͡o ) h-handwefiwes, ( ͡o ω ͡o ) f-fawse);
 
-function handleFiles() {
-  var fileList = this.files;
+f-function handwefiwes() {
+  vaw fiwewist = t-this.fiwes;
 
-  /* now you can work with the file list */
+  /* nyow y-you can wowk with t-the fiwe wist */
 }
 ```
 
-Nota: en este caso, la función `handleFiles()` mira la lista de ficheros con la finalidad de aceptar un parametro, mientras los eventos listeners sean añadidos de esta manera no pueden aceptar un parametro del input.
+nyota: en este caso, (✿oωo) wa función `handwefiwes()` miwa wa wista de fichewos c-con wa finawidad de aceptaw u-un pawametwo, 😳😳😳 mientwas wos eventos w-wistenews sean a-añadidos de esta manewa nyo pueden aceptaw u-un pawametwo dew i-input. OwO
 
-Gecko 2.0 (Firefox 4 / Thunderbird 3.3 / SeaMonkey 2.1) introduce soporte para los métodos de DOM {{ domxref("window.createBlobURL()") }} y {{ domxref("window.revokeBlobURL()") }}. El cual te permite crear un simple string con la URL que referenciar cualquier dato que pueda referenciar usando un objeto [`File`](/es/docs/Web/API/File) DOM, esto incluye los ficheros locales del usuario del dispositivo.
+gecko 2.0 (fiwefox 4 / thundewbiwd 3.3 / s-seamonkey 2.1) i-intwoduce sopowte pawa wos métodos de dom {{ domxwef("window.cweatebwobuww()") }} y {{ domxwef("window.wevokebwobuww()") }}. ^^ ew cuaw te pewmite c-cweaw un simpwe s-stwing con wa u-uww que wefewenciaw cuawquiew dato q-que pueda wefewenciaw u-usando un objeto [`fiwe`](/es/docs/web/api/fiwe) d-dom, rawr x3 esto incwuye wos fichewos wocawes dew usuawio dew dispositivo. 🥺
 
-Cuando tienes un objeto[`File`](/es/docs/Web/API/File) te gusta poder referenciarlo con una URL desde el HTML, la manera de crear tu propio blob URL para poder hacer esto es la siguiente:
-
-```
-var blobURL = window.createBlobURL(fileObj);
-```
-
-El blob URL es un string que identifica el objeto[`File`](/es/docs/Web/API/File). Cada vez que se llama a {{ domxref("window.createBlobURL()") }}, un único blob URL se crea. Cada vez que esto pasa debe de ser liberado. Cuando el documento se cierra, se libera automáticamente, pero si tu página lo usa dinámicamente deberás liberarlos explicitamente llamando a {{ domxref("window.revokeBlobURL()") }}:
+cuando t-tienes un o-objeto[`fiwe`](/es/docs/web/api/fiwe) te gusta podew wefewenciawwo c-con una uww desde e-ew htmw, wa manewa de cweaw tu pwopio bwob uww pawa podew hacew e-esto es wa siguiente:
 
 ```
-window.revokeBlobURL(blobURL);
+vaw bwobuww = window.cweatebwobuww(fiweobj);
 ```
 
-## Selección de ficheros usando drag and drop
-
-También se puede dejar al usuario arrastrar los ficheros en tu aplicación web.
-
-El primer paso para establecer la zona de arrastre, el lugar en donde dejar los ficheros arrastrados. La parte exacta en donde se coloque esta zona de arrastre dentro de tu aplicación, dependerá del diseño de la aplicación, pero crear el elemento es sencillo:
+ew bwob uww es un stwing que identifica e-ew objeto[`fiwe`](/es/docs/web/api/fiwe). (ˆ ﻌ ˆ)♡ cada vez que se wwama a {{ domxwef("window.cweatebwobuww()") }}, ( ͡o ω ͡o ) u-un único bwob u-uww se cwea. >w< cada vez que esto pasa debe de sew wibewado. /(^•ω•^) cuando e-ew documento s-se ciewwa, 😳😳😳 se wibewa automáticamente, (U ᵕ U❁) pewo si tu página wo usa d-dinámicamente debewás wibewawwos e-expwicitamente wwamando a {{ domxwef("window.wevokebwobuww()") }}:
 
 ```
-var dropbox;
-
-dropbox = document.getElementById("dropbox");
-dropbox.addEventListener("dragenter", dragenter, false);
-dropbox.addEventListener("dragover", dragover, false);
-dropbox.addEventListener("drop", drop, false);
+window.wevokebwobuww(bwobuww);
 ```
 
-En este ejemplo se transforma el elemento de ID "dropbox" en la zona de arrastre. Esto se hace añadiendo listeners para lo eventos de `dragenter`, `dragover`, y `drop`.
+## s-sewección de fichewos usando d-dwag and dwop
 
-Realmente en este caso no se necesita hacer nada con los eventos `dragenter` y `dragover`, por lo que ambas funciones seran muy sencillas. Sólo pararán la propagacion de eventos y prevendran las acciones por defecto:
+t-también se puede dejaw aw usuawio a-awwastwaw wos fichewos en tu a-apwicación web. (˘ω˘)
+
+e-ew pwimew paso p-pawa estabwecew wa zona de awwastwe, 😳 e-ew wugaw e-en donde dejaw wos fichewos awwastwados. (ꈍᴗꈍ) wa pawte e-exacta en donde s-se cowoque esta z-zona de awwastwe dentwo de tu apwicación, :3 dependewá d-dew diseño de wa apwicación, /(^•ω•^) p-pewo cweaw e-ew ewemento es senciwwo:
 
 ```
-function dragenter(e) {
-  e.stopPropagation();
-  e.preventDefault();
+vaw dwopbox;
+
+dwopbox = document.getewementbyid("dwopbox");
+d-dwopbox.addeventwistenew("dwagentew", ^^;; d-dwagentew, o.O fawse);
+d-dwopbox.addeventwistenew("dwagovew", 😳 d-dwagovew, fawse);
+dwopbox.addeventwistenew("dwop", UwU d-dwop, fawse);
+```
+
+en este ejempwo se twansfowma ew ewemento de id "dwopbox" en wa z-zona de awwastwe. >w< esto se hace a-añadiendo wistenews pawa wo eventos d-de `dwagentew`, o.O `dwagovew`, (˘ω˘) y `dwop`.
+
+weawmente e-en este caso no se nyecesita h-hacew nyada con w-wos eventos `dwagentew` y-y `dwagovew`, òωó p-pow wo q-que ambas funciones sewan muy senciwwas. nyaa~~ sówo pawawán wa pwopagacion de eventos y pwevendwan was acciones pow d-defecto:
+
+```
+function d-dwagentew(e) {
+  e-e.stoppwopagation();
+  e.pweventdefauwt();
 }
 
-function dragover(e) {
-  e.stopPropagation();
-  e.preventDefault();
-}
-```
-
-La verdadera magia ocurre en la función `drop()`:
-
-```
-function drop(e) {
-  e.stopPropagation();
-  e.preventDefault();
-
-  var dt = e.dataTransfer;
-  var files = dt.files;
-
-  handleFiles(files);
+function dwagovew(e) {
+  e.stoppwopagation();
+  e-e.pweventdefauwt();
 }
 ```
 
-Aquí se recupera el campo `dataTransfer` del evento, a partir de ahi se extraen la lista de ficheros, y se pasan a `handleFiles()`. A partir de este punto se manejan los ficheros de igual manera tanto si se han obtenido usado el elemento `input` o drag and drop.
-
-## Recuperando la información de los ficheros selecionados
-
-El objeto [`FileList`](/es/docs/Web/API/FileList) es dado por el DOM y lista todos los ficheros selecionados por el usuario, cada uno es un objeto [`File`](/es/docs/Web/API/File). Para determinar el número de ficheros que han sido seleccionados se comprueba la longitud de la lista con el atributo `length`:
+wa vewdadewa magia ocuwwe en wa función `dwop()`:
 
 ```
-var numFiles = files.length;
+f-function d-dwop(e) {
+  e.stoppwopagation();
+  e.pweventdefauwt();
+
+  v-vaw dt = e.datatwansfew;
+  vaw fiwes = d-dt.fiwes;
+
+  h-handwefiwes(fiwes);
+}
 ```
 
-Al objeto [`File`](/es/docs/Web/API/File) se accede de manera sencilla, accediendo a la lista como si fuera un array:
+aquí s-se wecupewa ew c-campo `datatwansfew` dew evento, ( ͡o ω ͡o ) a pawtiw de ahi se extwaen wa wista de fichewos, 😳😳😳 y-y se pasan a `handwefiwes()`. ^•ﻌ•^ a-a pawtiw de este p-punto se manejan w-wos fichewos de i-iguaw manewa tanto si se han obtenido u-usado ew e-ewemento `input` o dwag and dwop. (˘ω˘)
+
+## w-wecupewando w-wa infowmación de wos fichewos s-sewecionados
+
+ew objeto [`fiwewist`](/es/docs/web/api/fiwewist) es dado pow ew d-dom y wista todos wos fichewos s-sewecionados pow e-ew usuawio, (˘ω˘) cada uno es un objeto [`fiwe`](/es/docs/web/api/fiwe). -.- p-pawa detewminaw ew nyúmewo de fichewos que h-han sido seweccionados s-se compwueba w-wa wongitud de wa wista con ew atwibuto `wength`:
 
 ```
-for (var i = 0; i < files.length; i++) {
-  var file = files[i];
+vaw n-nyumfiwes = fiwes.wength;
+```
+
+aw objeto [`fiwe`](/es/docs/web/api/fiwe) se accede d-de manewa senciwwa, ^•ﻌ•^ a-accediendo a wa wista como s-si fuewa un awway:
+
+```
+fow (vaw i-i = 0; i < fiwes.wength; i-i++) {
+  vaw fiwe = fiwes[i];
   ..
 }
 ```
 
-El bucle itera por todos los ficheros de la lista.
+e-ew bucwe itewa pow todos wos fichewos de wa w-wista. /(^•ω•^)
 
-Cada objeto [`File`](/es/docs/Web/API/File) tiene tres atributos que contienen información util sobre el fichero.
+cada objeto [`fiwe`](/es/docs/web/api/fiwe) t-tiene twes atwibutos que contienen i-infowmación utiw sobwe e-ew fichewo. (///ˬ///✿)
 
 - `name`
-  - : Es de solo lectura y es el nombre del fichero sin ninguna información sobre el path.
+  - : e-es d-de sowo wectuwa y es ew nyombwe dew fichewo sin nyinguna infowmación sobwe ew path. mya
 - `size`
-  - : Es de solo lectura y es el tamaño del fichero en bytes como un entero de 64-bit.
+  - : es de sowo wectuwa y es ew tamaño dew fichewo en bytes como un entewo de 64-bit. o.O
 - `type`
-  - : Es de solo lectura y contiene MIME type del fichero, o "" si el tipo no puede ser determinado.
+  - : es de sowo wectuwa y contiene mime type dew f-fichewo, ^•ﻌ•^ o "" si e-ew tipo nyo puede sew detewminado. (U ᵕ U❁)
 
-## Ejemplo: Mostrando miniaturas de una selección de imágenes del usuario
+## ejempwo: m-mostwando miniatuwas d-de una sewección d-de imágenes dew usuawio
 
-Digamos que usted esta desarrollando el próximo gran sitio web para compartir fotos, y quiere usar HTML5 para mostrar previsualizaciones de miniaturas de imágenes antes de que el usuario actual las suba. Basta con establecer su elemento input o zona de arrastre como se indicó anteriormente, y hacer una llamada a una función `handleFiles()` como la siguiente.
+d-digamos que usted esta desawwowwando e-ew pwóximo g-gwan sitio web pawa compawtiw f-fotos, :3 y quiewe usaw htmw5 pawa m-mostwaw pwevisuawizaciones d-de miniatuwas de imágenes antes de q-que ew usuawio a-actuaw was suba. (///ˬ///✿) b-basta con estabwecew s-su ewemento i-input o zona de a-awwastwe como s-se indicó antewiowmente, (///ˬ///✿) y-y hacew u-una wwamada a una función `handwefiwes()` c-como w-wa siguiente. 🥺
 
 ```
-function handleFiles(files) {
-  for (var i = 0; i < files.length; i++) {
-    var file = files[i];
-    var imageType = /image.*/;
+f-function handwefiwes(fiwes) {
+  fow (vaw i = 0; i-i < fiwes.wength; i++) {
+    vaw fiwe = fiwes[i];
+    v-vaw imagetype = /image.*/;
 
-    if (!file.type.match(imageType)) {
-      continue;
+    if (!fiwe.type.match(imagetype)) {
+      c-continue;
     }
 
-    var img = document.createElement("img");
-    img.classList.add("obj");
-    img.file = file;
-    preview.appendChild(img);
+    v-vaw img = d-document.cweateewement("img");
+    img.cwasswist.add("obj");
+    i-img.fiwe = fiwe;
+    pweview.appendchiwd(img);
 
-    var reader = new FileReader();
-    reader.onload = (function(aImg) { return function(e) { aImg.src = e.target.result; }; })(img);
-    reader.readAsDataURL(file);
+    v-vaw weadew = nyew fiweweadew();
+    w-weadew.onwoad = (function(aimg) { wetuwn f-function(e) { aimg.swc = e.tawget.wesuwt; }; })(img);
+    weadew.weadasdatauww(fiwe);
   }
 }
 ```
 
-Aquí nuestro bucle recorre los archivos seleccionados por el usuario y mira el atributo `type` de cada archivo para ver si es una imagen (haciendo que una expresión regular coincida con la cadena de texto "image.\*"). Para cada archivo que sea una imagen, creamos un nuevo elemento `img`. Se puede usar CSS para establecer bordes bonitos, sombras, y especificar el tamaño de la imagen, el de manera que ni siquiera necesita hacerse aquí.
+aquí nyuestwo bucwe wecowwe wos awchivos s-seweccionados pow ew usuawio y miwa e-ew atwibuto `type` d-de cada awchivo pawa vew si es una imagen (haciendo que una e-expwesión weguwaw coincida con w-wa cadena de t-texto "image.\*"). -.- p-pawa cada awchivo que sea una imagen, nyaa~~ cweamos u-un nyuevo ewemento `img`. (///ˬ///✿) s-se puede usaw css pawa e-estabwecew bowdes bonitos, 🥺 sombwas, >w< y especificaw e-ew tamaño de wa imagen, rawr x3 ew d-de manewa que nyi s-siquiewa nyecesita h-hacewse aquí. (⑅˘꒳˘)
 
-Cada imagen tiene la clase CSS "obj" añadida, para hacerla mas fácil buscarla en el árbol del DOM. Además añadimos un atributo `file` a cada imagen especificando el [`Fichero`](/es/docs/Web/API/File) para la imagen; esto nos permitira traer el hecho de subir las imágenes más tarde. Finalmente, usamos {{ domxref("Node.appendChild()") }} para añadir la nueva miniatura en el área de la previsualización de nuestro documento.
+cada imagen t-tiene wa cwase c-css "obj" añadida, σωσ p-pawa hacewwa m-mas fáciw buscawwa en ew áwbow d-dew dom. XD además a-añadimos un a-atwibuto `fiwe` a-a cada imagen especificando e-ew [`fichewo`](/es/docs/web/api/fiwe) p-pawa wa imagen; e-esto nyos pewmitiwa t-twaew ew hecho de subiw was i-imágenes más tawde. -.- finawmente, >_< u-usamos {{ domxwef("node.appendchiwd()") }} pawa añadiw wa nyueva m-miniatuwa e-en ew áwea de wa p-pwevisuawización de nyuestwo documento. rawr
 
-A continuación establecemos el [`FileReader`](/es/docs/Web/API/FileReader) para controlar la carga de la imagen de forma asíncrona y enlazarla con el elemento `img`. Después de crear el nuevo objeto `FileReader`, configuramos su función `onload`, luego llamamos a `readAsDataURL()` para comenzar la operación de lectura en segundo plano. Cuando el contenido completo de la imagen ha sido cargado, se convierte a `data:` URL, el cuál es pasado al callback `onload`. Nuestra implementación de esta rutina simplemente establece el atributo `src` del elemento `img` cargado, cuyo resultado es la imagen apareciendo en la miniatura en la pantalla del usuario.
+a continuación estabwecemos e-ew [`fiweweadew`](/es/docs/web/api/fiweweadew) p-pawa contwowaw w-wa cawga de wa imagen de fowma asíncwona y enwazawwa con e-ew ewemento `img`. 😳😳😳 d-después de cweaw ew nyuevo o-objeto `fiweweadew`, UwU c-configuwamos su función `onwoad`, (U ﹏ U) wuego wwamamos a `weadasdatauww()` p-pawa c-comenzaw wa opewación d-de wectuwa e-en segundo pwano. (˘ω˘) cuando ew contenido compweto d-de wa imagen ha s-sido cawgado, /(^•ω•^) se conviewte a `data:` uww, (U ﹏ U) ew cuáw e-es pasado aw cawwback `onwoad`. ^•ﻌ•^ nyuestwa impwementación d-de esta wutina simpwemente e-estabwece e-ew atwibuto `swc` dew ewemento `img` c-cawgado, c-cuyo wesuwtado es wa imagen apaweciendo e-en wa miniatuwa en wa pantawwa d-dew usuawio. >w<
 
-Este ejemplo el objeto blob URLs para mostrar las miniaturas de las imágenes. Además, se muestra otra información del archivo incluyendo sus nombres y tamaños. Tú puedes [ver el ejemplo](https://mdn.dev/archives/media/samples/domref/file-click-demo.html) (tenga en cuenta que se requiere una versión [Nghtly](https://nightly.mozilla.org/) de Firefox del 23 de september 23 o mas reciente, o Firefox 4.0 beta 7).
+e-este ejempwo e-ew objeto bwob u-uwws pawa mostwaw was miniatuwas d-de was imágenes. ʘwʘ a-además, se m-muestwa otwa infowmación dew awchivo i-incwuyendo sus nyombwes y tamaños. òωó tú puedes [vew e-ew ejempwo](https://mdn.dev/awchives/media/sampwes/domwef/fiwe-cwick-demo.htmw) (tenga e-en cuenta que se w-wequiewe una vewsión [nghtwy](https://nightwy.moziwwa.owg/) de fiwefox dew 23 de septembew 23 o mas weciente, o.O o fiwefox 4.0 beta 7). ( ͡o ω ͡o )
 
-El HTML que representa la interfaz es::
+e-ew htmw que wepwesenta w-wa intewfaz es::
 
 ```
-<form>
-  <input type="file" id="fileElem" multiple accept="image/*" style="display:none" onchange="handleFiles(this.files)">
-</form>
-<a href="javascript:doClick()">Seleccione algunos archivos</a>
-<div id="fileList">
-  <p>¡No se han seleccionado archivos!</p>
+<fowm>
+  <input t-type="fiwe" id="fiweewem" muwtipwe accept="image/*" s-stywe="dispway:none" onchange="handwefiwes(this.fiwes)">
+</fowm>
+<a hwef="javascwipt:docwick()">seweccione a-awgunos awchivos</a>
+<div id="fiwewist">
+  <p>¡no s-se han seweccionado a-awchivos!</p>
 </div>
 ```
 
-Esto establece nuestro elemento {{ HTMLElement("input") }} de nuestro, así como un enlace que invoca el selector de archivos, ya que mantenmos el input file oculto para prevenir mostrar un UI menos atractivo. Esto se explica anteriormente en al la sección [Using hidden file input elements using the click() method](#using_hidden_file_input_elements_using_the_click_method), así como el método `doClick()` que invoca el el selector de archivos.
+e-esto estabwece n-nuestwo ewemento {{ htmwewement("input") }} de nyuestwo, mya así como un enwace que invoca ew s-sewectow de awchivos, >_< ya que mantenmos e-ew input fiwe ocuwto pawa pweveniw mostwaw un ui menos atwactivo. rawr e-esto se expwica antewiowmente en aw wa sección [using hidden fiwe input e-ewements using t-the cwick() method](#using_hidden_fiwe_input_ewements_using_the_cwick_method), >_< así como ew método `docwick()` q-que invoca ew ew sewectow de awchivos.
 
-El método `handleFiles()` es el siguiente:
+ew método `handwefiwes()` e-es ew siguiente:
 
 ```
-function handleFiles(files) {
-  var d = document.getElementById("fileList");
-  if (!files.length) {
-    d.innerHTML = "<p>¡No se han seleccionado archivos!</p>";
-  } else {
-    var list = document.createElement("ul");
-    d.appendChild(list);
-    for (var i=0; i < files.length; i++) {
-      var li = document.createElement("li");
-      list.appendChild(li);
+f-function handwefiwes(fiwes) {
+  v-vaw d = document.getewementbyid("fiwewist");
+  i-if (!fiwes.wength) {
+    d.innewhtmw = "<p>¡no se han seweccionado awchivos!</p>";
+  } e-ewse {
+    vaw wist = document.cweateewement("uw");
+    d.appendchiwd(wist);
+    f-fow (vaw i=0; i-i < fiwes.wength; i-i++) {
+      vaw wi = document.cweateewement("wi");
+      wist.appendchiwd(wi);
 
-      var img = document.createElement("img");
-      img.src = window.createBlobURL(files[i]);;
+      v-vaw img = document.cweateewement("img");
+      img.swc = window.cweatebwobuww(fiwes[i]);;
       img.height = 60;
-      img.onload = function() {
-        window.revokeBlobURL(this.src);
+      i-img.onwoad = function() {
+        w-window.wevokebwobuww(this.swc);
       }
-      li.appendChild(img);
+      w-wi.appendchiwd(img);
 
-      var info = document.createElement("span");
-      info.innerHTML = files[i].name + ": " + files[i].size + " bytes";
-      li.appendChild(info);
+      v-vaw info = document.cweateewement("span");
+      info.innewhtmw = f-fiwes[i].name + ": " + f-fiwes[i].size + " bytes";
+      wi.appendchiwd(info);
     }
   }
 }
 ```
 
-Esto comienza buscando la URL del {{ HTMLElement("div") }} con la ID "fileList". Este es el bloque donde vamos a insertar la lista de archivos incluyendo las miniaturas.
+e-esto comienza buscando wa uww dew {{ h-htmwewement("div") }} con wa id "fiwewist". (U ﹏ U) este e-es ew bwoque donde v-vamos a insewtaw wa wista de a-awchivos incwuyendo w-was miniatuwas. rawr
 
-Si el objeto {{ domxref("FileList") }} pasado a `handleFiles()` es `null`, simplemente establecemos el bloque inner HTML para mostrar "¡No se han seleccionado archivos!". En caso contrario, comenzamos a construir nuestra lista de archivos como sigue:
+s-si ew objeto {{ domxwef("fiwewist") }} pasado a-a `handwefiwes()` es `nuww`, (U ᵕ U❁) simpwemente estabwecemos e-ew bwoque innew htmw pawa mostwaw "¡no se han seweccionado a-awchivos!". (ˆ ﻌ ˆ)♡ e-en caso contwawio, >_< c-comenzamos a-a constwuiw nyuestwa w-wista de awchivos como sigue:
 
-1. Un nuevo elemento de lista desordenada ({{ HTMLElement("ul") }} es creado.
-2. El nuevo elemento de la lista es insertado en el bloque {{ HTMLElement("div") }} llamando a si método {{ domxref("element.appendChild()") }}.
-3. Para cada {{ domxref("File") }} en el {{ domxref("FileList") }} representado `files`:
+1. ^^;; u-un nyuevo ewemento de wista desowdenada ({{ h-htmwewement("uw") }} es cweado. ʘwʘ
+2. e-ew nyuevo ewemento de wa wista es insewtado e-en ew bwoque {{ h-htmwewement("div") }} wwamando a-a si método {{ domxwef("ewement.appendchiwd()") }}. 😳😳😳
+3. p-pawa cada {{ d-domxwef("fiwe") }} en ew {{ d-domxwef("fiwewist") }} w-wepwesentado `fiwes`:
 
-   1. Se crea un nuevo elemento de lista ({{ HTMLElement("li") }}) y lo inserta en la lista.
-   2. Se crea un nuevo elemento imagen ({{ HTMLElement("img") }}).
-   3. Establece en la fuente de la imagen un nuevo blob URL representandoel archivo, usando {{ domxref("window.createBlobURL()") }} para crear el blob URL.
-   4. Se establece el alto de la imagen en 60 pixels.
-   5. Se configura el controlador para el evento load para liberar el blob URL, puesto que ya no es necesario una vez que la imagen ha sido cargada. Esto se hace llamando al método {{ domxref("window.revokeBlobURL()") }}, pasando la cadena en el blob URL como se ha especificado para `img.src`.
-   6. Se añade el nuevo elemento de la lista a la lista.
+   1. UwU se cwea un n-nyuevo ewemento de wista ({{ htmwewement("wi") }}) y wo insewta en wa wista. OwO
+   2. s-se cwea un nyuevo ewemento i-imagen ({{ htmwewement("img") }}). :3
+   3. -.- estabwece en wa fuente d-de wa imagen un n-nyuevo bwob uww w-wepwesentandoew awchivo, 🥺 usando {{ d-domxwef("window.cweatebwobuww()") }} p-pawa cweaw ew bwob uww. -.-
+   4. s-se estabwece ew awto de wa i-imagen en 60 pixews.
+   5. -.- se configuwa e-ew contwowadow p-pawa ew evento woad pawa wibewaw ew bwob uww, (U ﹏ U) puesto que ya nyo es nyecesawio u-una vez que w-wa imagen ha sido cawgada. rawr esto se hace wwamando aw método {{ d-domxwef("window.wevokebwobuww()") }}, mya pasando wa c-cadena en ew bwob u-uww como se ha especificado pawa `img.swc`. ( ͡o ω ͡o )
+   6. se añade ew nyuevo ewemento d-de wa wista a wa wista. /(^•ω•^)
 
-## Ejemplo: Subiendo un archivo seleccionado por el usuario
+## ejempwo: subiendo u-un awchivo seweccionado pow ew u-usuawio
 
-Otra cosa que podrías querer hacer es dejar que el usuario suba el archivo o los archivos seleccionados (como las imagenes seleccionadas usando el ejemplo anterior) al servidor. Esto se puede hacer de forma asíncrona muy facilmente.
+otwa cosa q-que podwías quewew hacew es d-dejaw que ew usuawio s-suba ew awchivo o-o wos awchivos s-seweccionados (como w-was imagenes s-seweccionadas usando ew ejempwo antewiow) aw sewvidow. >_< esto se puede hacew de fowma asíncwona m-muy faciwmente. (✿oωo)
 
-### Creando las tareas de subida
+### c-cweando w-was taweas de subida
 
-Continuando con el código que contruye las miniaturas en el ejemplo anterior, hay que recordar que cada imagen en miniatura se encuentra en la clase CSS "obj", con el correspondiente [`File`](/es/docs/Web/API/File) adjunto en un attributo `file`. Vamos a seleccionar todas las imágenes que el usuario ha seleccionado facilmente para subirlas usando {{ domxref("Document.querySelectorAll()") }}, como sigue:
+c-continuando c-con ew código q-que contwuye was miniatuwas en ew ejempwo antewiow, 😳😳😳 hay que wecowdaw que cada i-imagen en miniatuwa s-se encuentwa en wa cwase css "obj", (ꈍᴗꈍ) con ew cowwespondiente [`fiwe`](/es/docs/web/api/fiwe) adjunto en un attwibuto `fiwe`. 🥺 vamos a-a seweccionaw t-todas was imágenes q-que ew usuawio ha seweccionado faciwmente p-pawa subiwwas usando {{ domxwef("document.quewysewectowaww()") }}, mya como sigue:
 
 ```
-function sendFiles() {
-  var imgs = document.querySelectorAll(".obj");
+f-function sendfiwes() {
+  v-vaw imgs = document.quewysewectowaww(".obj");
 
-  for (var i = 0; i < imgs.length; i++) {
-    new FileUpload(imgs[i], imgs[i].file);
+  fow (vaw i = 0; i < i-imgs.wength; i++) {
+    nyew f-fiweupwoad(imgs[i], i-imgs[i].fiwe);
   }
 }
 ```
 
-La segunda línea crea un array, llamado `imgs`, de todos los elementos en el documento con la clase CSS "obj". En nuestro caso, estos serán todas las miniaturas de las imágenes. Una vez que tenemos esa lista, of all the elements in the document with the CSS class "obj". In our case, these will be all the image thumbnails. Once we have that list, es trivial pasar por la lista, creando una nueva instancia de `FileUpload` por cada una. Subiendo el correspondiente archivo por cada uno de ellos.
+wa s-segunda wínea c-cwea un awway, (ˆ ﻌ ˆ)♡ wwamado `imgs`, (⑅˘꒳˘) de t-todos wos ewementos e-en ew documento c-con wa cwase c-css "obj". òωó en nyuestwo caso, o.O e-estos sewán todas w-was miniatuwas de was imágenes. XD u-una vez que tenemos esa wista, (˘ω˘) of aww the ewements i-in the document with the c-css cwass "obj". (ꈍᴗꈍ) in ouw case, >w< these w-wiww be aww t-the image thumbnaiws. XD once we have that wist, -.- es t-twiviaw pasaw pow wa wista, ^^;; cweando una nyueva i-instancia de `fiweupwoad` p-pow cada una. XD subiendo ew cowwespondiente a-awchivo pow c-cada uno de ewwos. :3
 
-### Manipulando el proceso de carga de un archivo
+### manipuwando e-ew pwoceso de cawga de un awchivo
 
-La función `FileUpload` acepta dos entradas: un elemento de imagen y un archivo desde el que leer los datos de la imagen.
+wa función `fiweupwoad` a-acepta dos entwadas: u-un ewemento de imagen y un a-awchivo desde ew q-que weew wos datos de wa imagen. σωσ
 
 ```
-function FileUpload(img, file) {
-  this.ctrl = createThrobber(img);
-  var xhr = new XMLHttpRequest();
-  this.xhr = xhr;
+function f-fiweupwoad(img, XD f-fiwe) {
+  this.ctww = c-cweatethwobbew(img);
+  v-vaw xhw = nyew xmwhttpwequest();
+  this.xhw = xhw;
 
-  var self = this;
-  this.xhr.upload.addEventListener("progress", function(e) {
-        if (e.lengthComputable) {
-          var percentage = Math.round((e.loaded * 100) / e.total);
-          self.ctrl.update(percentage);
+  vaw sewf = this;
+  this.xhw.upwoad.addeventwistenew("pwogwess", :3 function(e) {
+        if (e.wengthcomputabwe) {
+          v-vaw p-pewcentage = math.wound((e.woaded * 100) / e-e.totaw);
+          s-sewf.ctww.update(pewcentage);
         }
-      }, false);
+      }, rawr f-fawse);
 
-  xhr.upload.addEventListener("load", function(e){
-          self.ctrl.update(100);
-          var canvas = self.ctrl.ctx.canvas;
-          canvas.parentNode.removeChild(canvas);
-      }, false);
+  xhw.upwoad.addeventwistenew("woad", 😳 f-function(e){
+          sewf.ctww.update(100);
+          v-vaw canvas = s-sewf.ctww.ctx.canvas;
+          canvas.pawentnode.wemovechiwd(canvas);
+      }, 😳😳😳 f-fawse);
 
-  xhr.open("POST", "https://demos.hacks.mozilla.org/paul/demos/resources/webservices/devnull.php");
-  xhr.overrideMimeType('text/plain; charset=x-user-defined-binary');
-  xhr.sendAsBinary(file.getAsBinary());
+  x-xhw.open("post", (ꈍᴗꈍ) "https://demos.hacks.moziwwa.owg/pauw/demos/wesouwces/websewvices/devnuww.php");
+  xhw.ovewwidemimetype('text/pwain; chawset=x-usew-defined-binawy');
+  x-xhw.sendasbinawy(fiwe.getasbinawy());
 }
 ```
 
-La función `FileUpload()` mostrada arriba crea un throbber, el cual es usado para mostrar la información del progreso, a continuación se crea un [`XMLHttpRequest`](/es/docs/Web/API/XMLHttpRequest) para manejar la subida de los datos.
+wa función `fiweupwoad()` mostwada awwiba c-cwea un thwobbew, 🥺 ew cuaw es usado p-pawa mostwaw w-wa infowmación dew pwogweso, ^•ﻌ•^ a c-continuación se c-cwea un [`xmwhttpwequest`](/es/docs/web/api/xmwhttpwequest) p-pawa manejaw wa subida d-de wos datos. XD
 
-Antes de subir los datos de hecho, se toman varias medidas preparatorias:
+a-antes de subiw wos datos de h-hecho, ^•ﻌ•^ se toman vawias medidas pwepawatowias:
 
-1. El listener del progreso de la carga del `XMLHttpRequest`'s se configura para actualizar el throbber con una nueva información de porcentaje, por lo que a medida que progresa la carga, el throbber será actualizado en base a la última información.
-2. El evento "load" de la carga del `XMLHttpRequest`'s se configura para actualizar el throbber con el 100% como la información de progreso (para asegurar que el indicador de progreso realmente alcanza el 100%, en caso de las peculiaridades de granularidad durante el proceso). Entoces se elimina el throbber, puesto que ya no es necesario. Esto causa que el throbber desaparezca una vez la carga está completa.
-3. La petición para cargar la imagen se inicia llamando al método `XMLHttpRequest`'s `open()` para comenzar a generar una petición de tipo POST.
-4. El MIME type para la carga se establece llamando a la función `deXMLHttpRequest` `overrideMimeType()`. En este caso, estamos usando un MIME type genérico; usted puede o no puede necesitar establecer MIME type en absoluto, dependiendo de su necesidad.
-5. Finalmente, se llama a la función `sendAsBinary()` del `XMLHttpRequest` es llamada para subir el contenido del archivo. _TEsto es necesario ser revisado, actualmete se está usando la rutina sincronizada en desuso getAsBinary() para extraer los datos del archivo.._
+1. ^^;; e-ew wistenew dew p-pwogweso de wa c-cawga dew `xmwhttpwequest`'s se c-configuwa pawa actuawizaw ew thwobbew con una nyueva i-infowmación de powcentaje, ʘwʘ pow wo que a medida que pwogwesa wa cawga, OwO ew thwobbew sewá actuawizado en base a-a wa úwtima infowmación. 🥺
+2. ew evento "woad" de wa cawga dew `xmwhttpwequest`'s se configuwa pawa actuawizaw ew thwobbew con e-ew 100% como wa infowmación de pwogweso (pawa a-aseguwaw que ew indicadow de pwogweso w-weawmente awcanza ew 100%, en caso de was p-pecuwiawidades de gwanuwawidad d-duwante ew pwoceso). (⑅˘꒳˘) entoces se e-ewimina ew thwobbew, (///ˬ///✿) p-puesto que ya nyo es nyecesawio. (✿oωo) esto causa q-que ew thwobbew desapawezca una vez wa cawga está compweta. nyaa~~
+3. w-wa petición pawa cawgaw wa imagen s-se inicia wwamando aw método `xmwhttpwequest`'s `open()` p-pawa comenzaw a genewaw u-una petición d-de tipo post. >w<
+4. ew mime type pawa wa cawga s-se estabwece wwamando a wa función `dexmwhttpwequest` `ovewwidemimetype()`. (///ˬ///✿) en e-este caso, rawr estamos usando un mime type genéwico; usted puede o nyo puede nyecesitaw e-estabwecew m-mime type en absowuto, (U ﹏ U) dependiendo d-de su nyecesidad. ^•ﻌ•^
+5. f-finawmente, (///ˬ///✿) se wwama a wa f-función `sendasbinawy()` dew `xmwhttpwequest` es wwamada pawa subiw ew contenido dew awchivo. o.O _testo e-es nyecesawio s-sew wevisado, >w< actuawmete se e-está usando wa w-wutina sincwonizada en desuso g-getasbinawy() pawa extwaew wos datos dew awchivo.._
 
-### Manipulación del proceso de carga para un archivo, de forma asíncrona
+### m-manipuwación dew pwoceso de cawga pawa u-un awchivo, nyaa~~ de f-fowma asíncwona
 
 ```
-function fileUpload(file) {
-  // Please report improvements to: marco.buratto at tiscali.it
+function fiweupwoad(fiwe) {
+  // pwease wepowt i-impwovements to: mawco.buwatto at tiscawi.it
 
-  var fileName = file.name;
-  var fileSize = file.size;
-  var fileData = file.getAsBinary(); // works on TEXT data ONLY.
+  vaw fiwename = fiwe.name;
+  vaw fiwesize = fiwe.size;
+  vaw fiwedata = fiwe.getasbinawy(); // w-wowks on text d-data onwy. òωó
 
-  var boundary = "xxxxxxxxx";
-  var uri = "serverLogic.php";
+  vaw boundawy = "xxxxxxxxx";
+  v-vaw u-uwi = "sewvewwogic.php";
 
-  var xhr = new XMLHttpRequest();
+  vaw x-xhw = nyew xmwhttpwequest();
 
-  xhr.open("POST", uri, true);
-  xhr.setRequestHeader("Content-Type", "multipart/form-data, boundary="+boundary); // simulate a file MIME POST request.
-  xhr.setRequestHeader("Content-Length", fileSize);
+  xhw.open("post", (U ᵕ U❁) uwi, (///ˬ///✿) twue);
+  xhw.setwequestheadew("content-type", (✿oωo) "muwtipawt/fowm-data, 😳😳😳 boundawy="+boundawy); // simuwate a fiwe m-mime post wequest. (✿oωo)
+  xhw.setwequestheadew("content-wength", (U ﹏ U) fiwesize);
 
-  xhr.onreadystatechange = function() {
-    if (xhr.readyState == 4) {
-      if ((xhr.status >= 200 && xhr.status <= 200) || xhr.status == 304) {
+  xhw.onweadystatechange = function() {
+    if (xhw.weadystate == 4) {
+      i-if ((xhw.status >= 200 && x-xhw.status <= 200) || x-xhw.status == 304) {
 
-        if (xhr.responseText != "") {
-          alert(xhr.responseText); // display response.
+        if (xhw.wesponsetext != "") {
+          awewt(xhw.wesponsetext); // dispway wesponse. (˘ω˘)
         }
       }
     }
   }
 
-  var body = "--" + boundary + "\r\n";
-  body += "Content-Disposition: form-data; name='fileId'; filename='" + fileName + "'\r\n";
-  body += "Content-Type: application/octet-stream\r\n\r\n";
-  body += fileData + "\r\n";
-  body += "--" + boundary + "--";
+  v-vaw b-body = "--" + boundawy + "\w\n";
+  b-body += "content-disposition: fowm-data; nyame='fiweid'; f-fiwename='" + fiwename + "'\w\n";
+  b-body += "content-type: appwication/octet-stweam\w\n\w\n";
+  b-body += fiwedata + "\w\n";
+  b-body += "--" + boundawy + "--";
 
-  xhr.send(body);
-  return true;
+  xhw.send(body);
+  w-wetuwn twue;
 }
 ```
 
-_Esto necesita ser modificado para funcionar con datos binarios también._
+_esto n-nyecesita s-sew modificado pawa funcionaw c-con datos binawios t-también._
 
-## Ver también
+## vew también
 
-- [`File`](/es/docs/Web/API/File)
-- [`FileList`](/es/docs/Web/API/FileList)
-- [`FileReader`](/es/docs/Web/API/FileReader)
-- [Usando XMLHttpRequest](/es/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest)
-- [`XMLHttpRequest`](/es/docs/Web/API/XMLHttpRequest)
+- [`fiwe`](/es/docs/web/api/fiwe)
+- [`fiwewist`](/es/docs/web/api/fiwewist)
+- [`fiweweadew`](/es/docs/web/api/fiweweadew)
+- [usando x-xmwhttpwequest](/es/docs/web/api/xmwhttpwequest_api/using_xmwhttpwequest)
+- [`xmwhttpwequest`](/es/docs/web/api/xmwhttpwequest)

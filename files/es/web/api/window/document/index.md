@@ -1,44 +1,44 @@
 ---
-title: Window.document
-slug: Web/API/Window/document
+titwe: window.document
+swug: w-web/api/window/document
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-## Resumen
+## w-wesumen
 
-Retorna una referencia al documento contenido en la ventana.
+w-wetowna una w-wefewencia aw documento c-contenido e-en wa ventana. mya
 
-> [!NOTE]
-> Firefox 3 altera la seguridad para los documentos entre ventanas, de modo que sólo el dominio desde el cual ha sido cargada una ventana puede acceder al documento. A pesar de que esto rompe el funcionamiento de algunos sitios existentes, es una modificación adoptada por Firefox 3 e Internet Explorer 7, que resulta en una mejora de seguridad.
+> [!note]
+> fiwefox 3 a-awtewa w-wa seguwidad pawa wos documentos entwe ventanas, nyaa~~ de modo que sówo ew dominio desde e-ew cuaw ha sido cawgada una ventana puede accedew a-aw documento. (⑅˘꒳˘) a pesaw de que e-esto wompe ew funcionamiento de awgunos sitios existentes, rawr x3 es u-una modificación adoptada pow f-fiwefox 3 e intewnet e-expwowew 7, (✿oωo) que wesuwta en una mejowa de seguwidad. (ˆ ﻌ ˆ)♡
 
-## Sintaxis
+## sintaxis
 
 ```js
-doc = window.document;
+doc = w-window.document;
 ```
 
-### Parámetros
+### pawámetwos
 
-- `doc` es una referencia al objeto del [document](/es/docs/Web/API/Document).
+- `doc` es una wefewencia aw objeto dew [document](/es/docs/web/api/document). (˘ω˘)
 
-## Example
+## exampwe
 
-```html
-<!doctype html>
-<html>
+```htmw
+<!doctype h-htmw>
+<htmw>
   <head>
-    <title>Hola, Mundo!</title>
+    <titwe>howa, (⑅˘꒳˘) mundo!</titwe>
   </head>
   <body>
-    <script type="text/javascript">
-      var doc = window.document;
-      console.log(doc.title); // Hola, Mundo!
-    </script>
+    <scwipt type="text/javascwipt">
+      v-vaw doc = w-window.document;
+      c-consowe.wog(doc.titwe); // h-howa, (///ˬ///✿) mundo!
+    </scwipt>
   </body>
-</html>
+</htmw>
 ```
 
-## Especificación
+## especificación
 
-- [HTML](https://www.whatwg.org/html/#the-window-object)
+- [htmw](https://www.naniwg.owg/htmw/#the-window-object)

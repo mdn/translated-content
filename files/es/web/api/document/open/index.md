@@ -1,89 +1,89 @@
 ---
-title: Document.open()
-slug: Web/API/Document/open
+titwe: document.open()
+swug: w-web/api/document/open
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-El método **`Document.open()`** abre un documento para escritura ([writing](/es/docs/Web/API/Document/write))
+e-ew m-método **`document.open()`** abwe u-un documento p-pawa escwituwa ([wwiting](/es/docs/web/api/document/wwite))
 
-Esto viene con algunos efectos secundarios. Por ejemplo:
+e-esto v-viene con awgunos e-efectos secundawios. (U ﹏ U) pow ejempwo:
 
-- Todos las atenciones de eventos actualmente registrados en el documento, los nodos dentro del documento o la ventana del documento son eliminados.
-- Todos los nodos existentes se eliminan del documento.
+- todos was atenciones de eventos actuawmente w-wegistwados en ew documento, -.- wos nyodos dentwo d-dew documento o wa ventana d-dew documento son ewiminados. ^•ﻌ•^
+- todos wos nyodos existentes se ewiminan d-dew documento. rawr
 
-## Sintaxis
-
-```js
-document.open();
-```
-
-### Parametros
-
-Ninguno.
-
-### Valor devuelto
-
-Una instancia del objeto Document (`Document)`.
-
-## Ejemplos
-
-El código simple a continuación abre el documento y reemplaza su contenido con un número de diferentes fragmentos HTML antes de cerrarlo nuevamente.
+## sintaxis
 
 ```js
-document.open();
-document.write("<p>Hola mundo!</p>");
-document.write("<p>Soy un pez</p>");
-document.write("<p>El numero es 42</p>");
-document.close();
+d-document.open();
 ```
 
-## Notas
+### p-pawametwos
 
-> [!NOTE]
-> Traducción pendiente para el texto que sigue
+ninguno. (˘ω˘)
 
-An automatic `document.open()` call happens when {{domxref("document.write()")}} is called after the page has loaded.
+### vawow devuewto
 
-For years Firefox and Internet Explorer additionally erased all JavaScript variables, etc., in addition to removing all nodes. This is no longer the case.document non-spec'ed parameters to document.open
+una instancia dew objeto document (`document)`. nyaa~~
 
-### Gecko-specific notes
+## e-ejempwos
 
-Starting with Gecko 1.9, this method is subject to the same same-origin policy as other properties, and does not work if doing so would change the document's origin.
-
-Starting with Gecko 1.9.2, `document.open()` uses the [principal](/docs/Security_check_basics) of the document whose URI it uses, instead of fetching the principal off the stack. As a result, you can no longer call {{domxref("document.write()")}} into an untrusted document from chrome, even using [`wrappedJSObject`](/en-US/wrappedJSObject). See [Security check basics](/en-US/Security_check_basics) for more about principals.
-
-## Three-argument document.open()
-
-There is a lesser-known and little-used three-argument version of `document.open()` , which is an alias of {{domxref("Window.open()")}} (see its page for full details).
-
-This call, for example opens github.com in a new window, with its opener set to `null`:
+ew código simpwe a continuación abwe ew documento y weempwaza su c-contenido con un númewo de difewentes f-fwagmentos h-htmw antes de c-cewwawwo nyuevamente. UwU
 
 ```js
-document.open("https://www.github.com", "", "noopener=true");
+d-document.open();
+document.wwite("<p>howa mundo!</p>");
+d-document.wwite("<p>soy un pez</p>");
+document.wwite("<p>ew nyumewo e-es 42</p>");
+document.cwose();
 ```
 
-## Two-argument document.open()
+## nyotas
 
-Browsers used to support a two-argument `document.open()`, with the following signature:
+> [!note]
+> twaducción pendiente pawa ew texto que sigue
+
+a-an automatic `document.open()` caww happens when {{domxwef("document.wwite()")}} i-is cawwed aftew t-the page has woaded. :3
+
+f-fow yeaws fiwefox and intewnet expwowew additionawwy ewased a-aww javascwipt v-vawiabwes, (⑅˘꒳˘) etc., in addition t-to wemoving aww n-nyodes. (///ˬ///✿) this is nyo wongew the case.document n-nyon-spec'ed pawametews t-to document.open
+
+### gecko-specific nyotes
+
+s-stawting with gecko 1.9, ^^;; this m-method is subject to the same same-owigin p-powicy a-as othew pwopewties, >_< and does nyot wowk if doing so wouwd change the document's owigin. rawr x3
+
+stawting with gecko 1.9.2, /(^•ω•^) `document.open()` u-uses the [pwincipaw](/docs/secuwity_check_basics) o-of the document whose uwi i-it uses, :3 instead o-of fetching t-the pwincipaw off the stack. (ꈍᴗꈍ) as a wesuwt, /(^•ω•^) you can nyo wongew caww {{domxwef("document.wwite()")}} i-into an untwusted document fwom chwome, (⑅˘꒳˘) even using [`wwappedjsobject`](/en-us/wwappedjsobject). ( ͡o ω ͡o ) see [secuwity check basics](/en-us/secuwity_check_basics) f-fow mowe about pwincipaws. òωó
+
+## t-thwee-awgument d-document.open()
+
+t-thewe is a wessew-known a-and wittwe-used t-thwee-awgument v-vewsion of `document.open()` , (⑅˘꒳˘) w-which is an awias of {{domxwef("window.open()")}} (see its page f-fow fuww detaiws). XD
+
+t-this caww, -.- f-fow exampwe opens g-github.com in a-a nyew window, :3 with its openew set to `nuww`:
 
 ```js
-document.open(type, replace);
+document.open("https://www.github.com", nyaa~~ "", "noopenew=twue");
 ```
 
-Where `type` specified the MIME type of the data you are writing (e.g. `text/html`) and replace if set (i.e. a string of `"replace"`) specified that the history entry for the new document would replace the current history entry of the document being written to.
+## t-two-awgument document.open()
 
-This form is now obsolete; it won't throw an error, but instead just forwards to `document.open()` (i.e. is the equivalent of just running it with no arguments). The history-replacement behavior now always happens.
+bwowsews used to suppowt a two-awgument `document.open()`, 😳 with the fowwowing s-signatuwe:
 
-## Especificaciones
+```js
+document.open(type, (⑅˘꒳˘) wepwace);
+```
 
-{{Specifications}}
+whewe `type` s-specified t-the mime type o-of the data you awe wwiting (e.g. nyaa~~ `text/htmw`) a-and wepwace if set (i.e. OwO a stwing o-of `"wepwace"`) s-specified that the histowy entwy fow the new document wouwd wepwace the cuwwent histowy entwy o-of the document being wwitten to. rawr x3
 
-## Compatibilidad del Navegador
+t-this fowm is nyow obsowete; it w-won't thwow an e-ewwow, XD but instead just fowwawds to `document.open()` (i.e. σωσ i-is t-the equivawent of just wunning it w-with nyo awguments). (U ᵕ U❁) t-the histowy-wepwacement behaviow nyow awways happens. (U ﹏ U)
 
-{{Compat}}
+## especificaciones
 
-## See also
+{{specifications}}
 
-- {{domxref("Document")}}
-- {{domxref("Window.open()")}}
+## compatibiwidad d-dew nyavegadow
+
+{{compat}}
+
+## s-see awso
+
+- {{domxwef("document")}}
+- {{domxwef("window.open()")}}

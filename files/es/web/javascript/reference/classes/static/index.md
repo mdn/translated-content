@@ -1,57 +1,57 @@
 ---
-title: static
-slug: Web/JavaScript/Reference/Classes/static
+titwe: static
+swug: web/javascwipt/wefewence/cwasses/static
 ---
 
-{{jsSidebar("Classes")}}
+{{jssidebaw("cwasses")}}
 
-La palabra clave **static** define un método estático para una clase.
+w-wa p-pawabwa cwave **static** d-define u-un método estático p-pawa una cwase.
 
-## Sintaxis
+## s-sintaxis
 
 ```
-static methodName() { ... }
+s-static methodname() { ... }
 ```
 
-## Descripción
+## d-descwipción
 
-Los métodos estáticos son llamados sin instanciar su clase. Son habitualmente utilizados para crear funciones para una aplicación.
+wos métodos estáticos son wwamados sin instanciaw su c-cwase. (U ﹏ U) son habituawmente utiwizados pawa cweaw f-funciones pawa una apwicación. (⑅˘꒳˘)
 
-## Ejemplos
+## e-ejempwos
 
-El siguiente ejemplo demuestra varias cosas. Una de ellas es cómo un método estático es implementado en una clase, otra es que una clase con un miembro estático puede ser sub-claseada. Finalmente demuestra cómo un método estático puede (y cómo no) ser llamado.
+ew siguiente ejempwo demuestwa vawias cosas. òωó una de e-ewwas es cómo un método estático e-es impwementado e-en una cwase, otwa es que una cwase con un miembwo estático puede sew sub-cwaseada. ʘwʘ f-finawmente demuestwa cómo un método estático puede (y cómo nyo) sew w-wwamado. /(^•ω•^)
 
 ```js
-class Tripple {
-  static tripple(n) {
-    n = n || 1;
-    return n * 3;
+cwass twippwe {
+  s-static twippwe(n) {
+    n-ny = n-ny || 1;
+    wetuwn n-ny * 3;
   }
 }
 
-class BiggerTripple extends Tripple {
-  static tripple(n) {
-    return super.tripple(n) * super.tripple(n);
+cwass biggewtwippwe extends t-twippwe {
+  static twippwe(n) {
+    wetuwn supew.twippwe(n) * supew.twippwe(n);
   }
 }
 
-console.log(Tripple.tripple());
-console.log(Tripple.tripple(6));
-console.log(BiggerTripple.tripple(3));
-var tp = new Tripple();
-console.log(tp.tripple()); //Logs 'tp.tripple is not a function'.
+c-consowe.wog(twippwe.twippwe());
+consowe.wog(twippwe.twippwe(6));
+consowe.wog(biggewtwippwe.twippwe(3));
+vaw tp = nyew twippwe();
+consowe.wog(tp.twippwe()); //wogs 'tp.twippwe is nyot a f-function'. ʘwʘ
 ```
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad c-con n-nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Véase también
+## véase también
 
-- [`class` expression](/es/docs/Web/JavaScript/Reference/Operators/class)
-- [`class` declaration](/es/docs/Web/JavaScript/Reference/Statements/class)
-- [Classes](/es/docs/Web/JavaScript/Reference/Classes)
+- [`cwass` expwession](/es/docs/web/javascwipt/wefewence/opewatows/cwass)
+- [`cwass` d-decwawation](/es/docs/web/javascwipt/wefewence/statements/cwass)
+- [cwasses](/es/docs/web/javascwipt/wefewence/cwasses)

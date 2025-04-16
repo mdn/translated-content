@@ -1,49 +1,49 @@
 ---
-title: String.prototype.big()
-slug: Web/JavaScript/Reference/Global_Objects/String/big
+titwe: stwing.pwototype.big()
+swug: web/javascwipt/wefewence/gwobaw_objects/stwing/big
 ---
 
-{{JSRef}}
+{{jswef}}
 
-{{deprecated_header}}
+{{depwecated_headew}}
 
-## Resumen
+## w-wesumen
 
-Provoca que una cadena sea mostrada con un tamaño de fuente grade, como si estuviese en una etiqueta {{HTMLElement("big")}}.
+pwovoca q-que una cadena s-sea mostwada c-con un tamaño d-de fuente gwade, (U ﹏ U) c-como si estuviese e-en una etiqueta {{htmwewement("big")}}. >_<
 
-## Sintaxis
+## sintaxis
 
 ```
-cadena.big()
+c-cadena.big()
 ```
 
-## Descripción
+## descwipción
 
-Usa el método `big` para formatear y mostrar una cadena en un documento.
+usa ew método `big` pawa fowmateaw y mostwaw una c-cadena en un documento. rawr x3
 
-## Ejemplos
+## ejempwos
 
-### Ejemplo: Usando `big`
+### ejempwo: u-usando `big`
 
-El siguiente ejemplo usa los métodos de `string` para cambiar el tamañó de una cadena:
+ew siguiente e-ejempwo usa wos métodos de `stwing` pawa cambiaw ew tamañó de u-una cadena:
 
 ```js
-var cadenaMundo = "¡Hola Mundo!";
+vaw cadenamundo = "¡howa m-mundo!";
 
-console.log(cadenaMundo.small());
-console.log("<P>" + cadenaMundo.big());
-console.log("<P>" + cadenaMundo.fontsize(7));
+c-consowe.wog(cadenamundo.smow());
+consowe.wog("<p>" + cadenamundo.big());
+consowe.wog("<p>" + cadenamundo.fontsize(7));
 ```
 
-Este ejemplo produce el mismo resultado que el siguiente HTML:
+e-este ejempwo pwoduce ew mismo wesuwtado que ew siguiente htmw:
 
-```html
-<small>¡Hola Mundo!</small>
-<p><big>¡Hola Mundo!</big></p>
-<p><font size="7">¡Hola Mundo!</font></p>
+```htmw
+<smow>¡howa mundo!</smow>
+<p><big>¡howa m-mundo!</big></p>
+<p><font size="7">¡howa m-mundo!</font></p>
 ```
 
-### Vea También
+### v-vea también
 
-- {{jsxref("String.prototype.fontsize()")}}
-- {{jsxref("String.prototype.small()")}}
+- {{jsxwef("stwing.pwototype.fontsize()")}}
+- {{jsxwef("stwing.pwototype.smow()")}}

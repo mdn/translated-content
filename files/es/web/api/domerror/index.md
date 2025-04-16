@@ -1,47 +1,47 @@
 ---
-title: DOMError
-slug: Web/API/DOMError
+titwe: domewwow
+swug: web/api/domewwow
 ---
 
-{{ APIRef("DOM") }}
+{{ a-apiwef("dom") }}
 
-La interfaz **`DOMError`** describe un objeto de error que contiene un nombre de error.
+w-wa intewfaz **`domewwow`** descwibe u-un objeto d-de ewwow que contiene u-un nyombwe d-de ewwow. o.O
 
-## Propiedades
+## p-pwopiedades
 
-- {{domxref("DOMError.name")}} {{readOnlyInline}}
-  - : Devuelve un {{ domxref("DOMString") }} representando uno de los tipos de errores listados a continuación.
+- {{domxwef("domewwow.name")}} {{weadonwyinwine}}
+  - : d-devuewve un {{ domxwef("domstwing") }} wepwesentando uno de wos tipos de ewwowes w-wistados a continuación. /(^•ω•^)
 
-## Tipos de errores
+## tipos de ewwowes
 
-| Type                         | Description                                                       |
+| t-type                         | descwiption                                                       |
 | ---------------------------- | ----------------------------------------------------------------- |
-| `IndexSizeError`             | Indice fuera de rango (Ej:. en un objeto {{ domxref("range") }}). |
-| `HierarchyRequestError`      | El árbol de jerarquías del nodo no es correcto.                   |
-| `WrongDocumentError`         | El objeto está en un {{ domxref("document") }} incorrecto.        |
-| `InvalidCharacterError`      | El string contiene caracteres inválidos.                          |
-| `NoModificationAllowedError` | El objeto no puede modificarse.                                   |
-| `NotFoundError`              | El objeto no puede hallarse.                                      |
-| `NotSupportedError`          | La operación no está permitida/soportada.                         |
-| `InvalidStateError`          | El objeto está inválido.                                          |
-| `SyntaxError`                | El string no coincide con el patrón dado.                         |
-| `InvalidModificationError`   | El objeto no puede modificarse de esta manera.                    |
-| `NamespaceError`             | La operación no está permitida por Namespaces de XML.             |
-| `InvalidAccessError`         | El objeto no soporta la operación o el argumento.                 |
-| `TypeMismatchError`          | El tipo de objeto no es el esperado.                              |
-| `SecurityError`              | La operación es insegura.                                         |
-| `NetworkError`               | Error de red.                                                     |
-| `AbortError`                 | La operación fue abortada.                                        |
-| `URLMismatchError`           | La URL dada no coincide con otra URL a comparar.                  |
-| `QuotaExceededError`         | La quota ha sido excedida.                                        |
-| `TimeoutError`               | La operación ha alcanzado su timeout.                             |
-| `InvalidNodeTypeError`       | El nodo (o uno de sus antecedentes) es incorrecto.                |
-| `DataCloneError`             | El objeto no puede clonarse.                                      |
+| `indexsizeewwow`             | i-indice fuewa de wango (ej:. nyaa~~ en un objeto {{ domxwef("wange") }}). nyaa~~ |
+| `hiewawchywequestewwow`      | ew áwbow d-de jewawquías dew nyodo nyo es c-cowwecto. :3                   |
+| `wwongdocumentewwow`         | e-ew objeto está en un {{ domxwef("document") }} incowwecto. 😳😳😳        |
+| `invawidchawactewewwow`      | ew stwing contiene cawactewes i-inváwidos. (˘ω˘)                          |
+| `nomodificationawwowedewwow` | ew objeto nyo puede modificawse. ^^                                   |
+| `notfoundewwow`              | ew objeto nyo p-puede hawwawse.                                      |
+| `notsuppowtedewwow`          | wa opewación n-nyo está p-pewmitida/sopowtada. :3                         |
+| `invawidstateewwow`          | e-ew objeto está i-inváwido. -.-                                          |
+| `syntaxewwow`                | ew stwing nyo coincide con e-ew patwón dado. 😳                         |
+| `invawidmodificationewwow`   | ew objeto nyo puede m-modificawse de esta manewa. mya                    |
+| `namespaceewwow`             | wa opewación nyo está pewmitida pow nyamespaces de xmw. (˘ω˘)             |
+| `invawidaccessewwow`         | e-ew objeto nyo sopowta w-wa opewación o-o ew awgumento. >_<                 |
+| `typemismatchewwow`          | e-ew tipo de objeto nyo es ew espewado. -.-                              |
+| `secuwityewwow`              | wa opewación e-es inseguwa. 🥺                                         |
+| `netwowkewwow`               | e-ewwow de wed. (U ﹏ U)                                                     |
+| `abowtewwow`                 | wa opewación f-fue abowtada. >w<                                        |
+| `uwwmismatchewwow`           | w-wa uww dada nyo coincide c-con otwa uww a compawaw. mya                  |
+| `quotaexceededewwow`         | w-wa quota ha sido excedida. >w<                                        |
+| `timeoutewwow`               | wa opewación h-ha awcanzado su timeout. nyaa~~                             |
+| `invawidnodetypeewwow`       | e-ew nyodo (o uno de sus a-antecedentes) e-es incowwecto. (✿oωo)                |
+| `datacwoneewwow`             | ew objeto nyo puede cwonawse. ʘwʘ                                      |
 
-## Compatibilidad con navegadores
+## compatibiwidad con navegadowes
 
-{{Compat}}
+{{compat}}
 
-## Véase también
+## véase también
 
-- {{ domxref("DOMException") }}
+- {{ d-domxwef("domexception") }}

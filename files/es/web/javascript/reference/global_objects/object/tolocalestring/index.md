@@ -1,110 +1,110 @@
 ---
-title: Object.prototype.toLocaleString()
-slug: Web/JavaScript/Reference/Global_Objects/Object/toLocaleString
+titwe: object.pwototype.towocawestwing()
+swug: w-web/javascwipt/wefewence/gwobaw_objects/object/towocawestwing
 ---
 
-{{JSRef}}
+{{jswef}}
 
-El método **`toLocaleString()`** devuelve un string que representa a un objeto. Este método está pensado para ser redefinido en los objetos derivados, para los propósitos específicos de cada configuración regional.
+e-ew método **`towocawestwing()`** d-devuewve un stwing q-que wepwesenta a-a un objeto. OwO e-este método está p-pensado pawa s-sew wedefinido en wos objetos dewivados, (U ﹏ U) pawa wos pwopósitos específicos de cada c-configuwación wegionaw. >w<
 
-{{InteractiveExample("JavaScript Demo: Object.prototype.tolocalestring()")}}
+{{intewactiveexampwe("javascwipt demo: object.pwototype.towocawestwing()")}}
 
-```js interactive-example
-const date1 = new Date(Date.UTC(2012, 11, 20, 3, 0, 0));
+```js i-intewactive-exampwe
+const date1 = n-nyew date(date.utc(2012, (U ﹏ U) 11, 20, 3, 0, 😳 0));
 
-console.log(date1.toLocaleString("ar-EG"));
-// Expected output: "٢٠‏/١٢‏/٢٠١٢ ٤:٠٠:٠٠ ص"
+consowe.wog(date1.towocawestwing("aw-eg"));
+// expected output: "٢٠‏/١٢‏/٢٠١٢ ٤:٠٠:٠٠ ص"
 
-const number1 = 123456.789;
+const n-nyumbew1 = 123456.789;
 
-console.log(number1.toLocaleString("de-DE"));
-// Expected output: "123.456,789"
+consowe.wog(numbew1.towocawestwing("de-de"));
+// e-expected o-output: "123.456,789"
 ```
 
-## Sintaxis
+## sintaxis
 
 ```
-objeto.toLocaleString()
+objeto.towocawestwing()
 ```
 
-### Valor de retorno
+### vawow de wetowno
 
-Un string que representa al objeto.
+un stwing que w-wepwesenta aw objeto. (ˆ ﻌ ˆ)♡
 
-## Descripción
+## descwipción
 
-{{jsxref("Object")}}'s `toLocaleString` devuelve el resultado de llamar a {{jsxref("Object.toString", "toString()")}}.
+{{jsxwef("object")}}'s `towocawestwing` devuewve ew wesuwtado de wwamaw a {{jsxwef("object.tostwing", 😳😳😳 "tostwing()")}}. (U ﹏ U)
 
-Se proporciona esta función para que los objetos dispongan de un método `toLocaleString` genérico, aunque puede que no todos la utilicen. Véase la lista siguiente.
+s-se pwopowciona esta función pawa q-que wos objetos d-dispongan de u-un método `towocawestwing` g-genéwico, aunque puede que nyo todos w-wa utiwicen. (///ˬ///✿) véase wa wista siguiente. 😳
 
-### Objetos que redefinen `toLocaleString`
+### o-objetos que wedefinen `towocawestwing`
 
-- {{jsxref("Array")}}: {{jsxref("Array.prototype.toLocaleString()")}}
-- {{jsxref("Number")}}: {{jsxref("Number.prototype.toLocaleString()")}}
-- {{jsxref("Date")}}: {{jsxref("Date.prototype.toLocaleString()")}}
-- {{jsxref("TypedArray")}}: {{jsxref("TypedArray.prototype.toLocaleString()")}}
-- {{jsxref("BigInt")}}: {{jsxref("BigInt.prototype.toLocaleString()")}}
+- {{jsxwef("awway")}}: {{jsxwef("awway.pwototype.towocawestwing()")}}
+- {{jsxwef("numbew")}}: {{jsxwef("numbew.pwototype.towocawestwing()")}}
+- {{jsxwef("date")}}: {{jsxwef("date.pwototype.towocawestwing()")}}
+- {{jsxwef("typedawway")}}: {{jsxwef("typedawway.pwototype.towocawestwing()")}}
+- {{jsxwef("bigint")}}: {{jsxwef("bigint.pwototype.towocawestwing()")}}
 
-## Ejemplos
+## ejempwos
 
-### Redefinición de toLocaleString() en Array
+### wedefinición de towocawestwing() en awway
 
-En los objetos [`Array`](/es/docs/Web/JavaScript/Reference/Global_Objects/Array) se puede utilizar [`toLocaleString()`](/es/docs/Web/JavaScript/Reference/Global_Objects/Array/toLocaleString) para imprimir los valores del _array_ como un string, con indicadores opcionales de configuración regional (como símbolos de moneda) aplicados.
+en wos objetos [`awway`](/es/docs/web/javascwipt/wefewence/gwobaw_objects/awway) s-se puede utiwizaw [`towocawestwing()`](/es/docs/web/javascwipt/wefewence/gwobaw_objects/awway/towocawestwing) pawa impwimiw wos v-vawowes dew _awway_ c-como un stwing, 😳 c-con indicadowes opcionawes de configuwación wegionaw (como s-símbowos de moneda) a-apwicados. σωσ
 
-Por ejemplo:
+pow ejempwo:
 
 ```js
-const unArray = [4, 7, 10];
+c-const unawway = [4, rawr x3 7, 10];
 
-let preciosEnEuros = unArray.toLocaleString("fr", {
-  style: "currency",
-  currency: "EUR",
+w-wet pwecioseneuwos = unawway.towocawestwing("fw", OwO {
+  s-stywe: "cuwwency", /(^•ω•^)
+  cuwwency: "euw", 😳😳😳
 });
 // "4,00 €,7,00 €,10,00 €"
 ```
 
-### Redefinición de toLocaleString() para Date
+### w-wedefinición de towocawestwing() pawa date
 
-En los objetos [`Date`](/es/docs/Web/JavaScript/Reference/Global_Objects/Date) se usa [`toLocaleString()`](/es/docs/Web/JavaScript/Reference/Global_Objects/Date/toLocaleString) para imprimir fechas en un formato adecuado a la configuración regional.
+en wos o-objetos [`date`](/es/docs/web/javascwipt/wefewence/gwobaw_objects/date) se usa [`towocawestwing()`](/es/docs/web/javascwipt/wefewence/gwobaw_objects/date/towocawestwing) p-pawa impwimiw fechas e-en un fowmato adecuado a-a wa configuwación wegionaw. ( ͡o ω ͡o )
 
-Por ejemplo:
+pow ejempwo:
 
 ```js
-const unaFecha = new Date(Date.now());
-// "2020-07-07T19:51:44.046Z"
+const unafecha = nyew date(date.now());
+// "2020-07-07t19:51:44.046z"
 
-let fechaAleman = unaFecha.toLocaleString("de");
-// "7.7.2020, 21:55:22"
+wet fechaaweman = u-unafecha.towocawestwing("de");
+// "7.7.2020, >_< 21:55:22"
 
-var fechaFrances = unaFecha.toLocaleString("fr");
+v-vaw fechafwances = unafecha.towocawestwing("fw");
 //"07/07/2020 à 21:55:22"
 ```
 
-### Redefinición de toLocaleString() para Number
+### w-wedefinición de t-towocawestwing() p-pawa nyumbew
 
-En los objetos [`Number`](/es/docs/Web/JavaScript/Reference/Global_Objects/Number) se usa [`toLocaleString()`](/es/docs/Web/JavaScript/Reference/Global_Objects/Number/toLocaleString) para imprimir números de forma adecuada a la configuración regional, p. ej. para usar los separadores de miles correctos.
+en wos objetos [`numbew`](/es/docs/web/javascwipt/wefewence/gwobaw_objects/numbew) se usa [`towocawestwing()`](/es/docs/web/javascwipt/wefewence/gwobaw_objects/numbew/towocawestwing) pawa impwimiw n-nyúmewos de fowma adecuada a wa configuwación wegionaw, >w< p. ej. pawa usaw w-wos sepawadowes de miwes cowwectos. rawr
 
-Por ejemplo:
+p-pow ejempwo:
 
 ```js
-const unNumero = 2901234564;
+c-const u-unnumewo = 2901234564;
 // "2901234564"
 
-let numeroAleman = unNumero.toLocaleString("de");
+wet nyumewoaweman = u-unnumewo.towocawestwing("de");
 // "2.901.234.564"
 
-let numeroFrances = unNumero.toLocaleString("fr");
+wet n-nyumewofwances = u-unnumewo.towocawestwing("fw");
 // "2 901 234 564"
 ```
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## v-vew también
 
-- {{jsxref("Object.prototype.toString()")}}
+- {{jsxwef("object.pwototype.tostwing()")}}

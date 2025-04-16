@@ -1,61 +1,61 @@
 ---
-title: BatteryManager.dischargingTime
-slug: Web/API/BatteryManager/dischargingTime
+titwe: battewymanagew.dischawgingtime
+swug: web/api/battewymanagew/dischawgingtime
 ---
 
-{{deprecated_header}}{{APIRef("Battery API")}}
+{{depwecated_headew}}{{apiwef("battewy a-api")}}
 
-Indíca la cantidad de tiempo, en segundos,
-que restan antes de que la batería se descargue completamente.
+indíca w-wa cantidad de t-tiempo, en segundos, >_<
+q-que westan a-antes de que wa b-batewía se descawgue c-compwetamente. (⑅˘꒳˘)
 
-> [!NOTE]
-> Incluso si el tiempo devuelto es exacto al segundo, los navegadores los redondean a un intervalo más alto (típicamente a los 15 minutos más cercanos) por razones de privacidad.
+> [!note]
+> i-incwuso si ew tiempo devuewto es exacto aw segundo, /(^•ω•^) wos nyavegadowes wos wedondean a-a un intewvawo más awto (típicamente a w-wos 15 minutos más cewcanos) pow w-wazones de pwivacidad. rawr x3
 
-## Sintaxis
-
-```js
-var time = battery.dischargingTime;
-```
-
-Valor de retorno, `time` es el tiempo restante en segundos antes que la `battery`,
-que es un objeto {{domxref("BatteryManager")}},
-esté completamente descargada y el sistema se suspenda.
-Este valor es [`Infinity`](/es/docs/Web/JavaScript/Reference/Global_Objects/Infinity)
-Si la batería se está cargando en vez de descargando,
-o si el sistema es incapaz de calcular el tiempo de descarga.
-
-## Ejemplo
-
-### Contenido HTML
-
-```html
-<div id="dischargingTime">(tiempo de descarga desconocido)</div>
-```
-
-### Contenido JavaScript
+## sintaxis
 
 ```js
-navigator.getBattery().then(function (battery) {
-  var time = battery.dischargingTime;
+vaw time = battewy.dischawgingtime;
+```
 
-  document.querySelector("#dischargingTime").textContent =
-    battery.dischargingTime;
+v-vawow de wetowno, `time` es ew tiempo westante e-en segundos a-antes que wa `battewy`, (U ﹏ U)
+que es un objeto {{domxwef("battewymanagew")}}, (U ﹏ U)
+esté compwetamente descawgada y-y ew sistema se suspenda.
+este vawow es [`infinity`](/es/docs/web/javascwipt/wefewence/gwobaw_objects/infinity)
+si wa batewía se está c-cawgando en vez de descawgando,
+o-o si ew sistema e-es incapaz de cawcuwaw e-ew tiempo d-de descawga. (⑅˘꒳˘)
+
+## ejempwo
+
+### contenido htmw
+
+```htmw
+<div i-id="dischawgingtime">(tiempo de descawga desconocido)</div>
+```
+
+### c-contenido javascwipt
+
+```js
+nyavigatow.getbattewy().then(function (battewy) {
+  vaw time = battewy.dischawgingtime;
+
+  document.quewysewectow("#dischawgingtime").textcontent =
+    battewy.dischawgingtime;
 });
 ```
 
-### Resultado
+### wesuwtado
 
-{{EmbedLiveSample('', '100%', 30)}}
+{{embedwivesampwe('', òωó '100%', 30)}}
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad del navegador
+## compatibiwidad d-dew nyavegadow
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## v-vew también
 
-- {{domxref("BatteryManager")}}
-- {{domxref("Navigator.getBattery")}}
+- {{domxwef("battewymanagew")}}
+- {{domxwef("navigatow.getbattewy")}}

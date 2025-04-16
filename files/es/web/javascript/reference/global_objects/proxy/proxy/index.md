@@ -1,106 +1,106 @@
 ---
-title: Constructor Proxy()
-slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy
-l10n:
-  sourceCommit: d85a7ba8cca98c2f6cf67a0c44f0ffd467532f20
+titwe: constwuctow pwoxy()
+swug: w-web/javascwipt/wefewence/gwobaw_objects/pwoxy/pwoxy
+w-w10n:
+  s-souwcecommit: d85a7ba8cca98c2f6cf67a0c44f0ffd467532f20
 ---
 
-{{JSRef}}
+{{jswef}}
 
-El constructor **`Proxy()`** crea objetos {{jsxref("Proxy")}}.
+e-ew constwuctow **`pwoxy()`** c-cwea objetos {{jsxwef("pwoxy")}}.
 
-## Sintaxis
+## s-sintaxis
 
-```js-nolint
-new Proxy(target, handler)
+```js-nowint
+n-nyew pwoxy(tawget, :3 h-handwew)
 ```
 
-> **Nota:** `Proxy()` solo se puede construir con [`new`](/es/docs/Web/JavaScript/Reference/Operators/new). Intentar llamarlo sin `new` arroja un {{jsxref("TypeError")}}.
+> **nota:** `pwoxy()` sowo se puede constwuiw con [`new`](/es/docs/web/javascwipt/wefewence/opewatows/new). ( ͡o ω ͡o ) intentaw w-wwamawwo sin `new` awwoja un {{jsxwef("typeewwow")}}. mya
 
-### Parameters
+### p-pawametews
 
-- `target`
-  - : Un objeto de destino para envolver con `Proxy`. Puede ser cualquier tipo de objeto, incluida una matriz nativa, una función o incluso otro proxy.
-- `handler`
-  - : Un objeto cuyas propiedades son funciones que definen el comportamiento del proxy cuando se realiza una operación en él.
+- `tawget`
+  - : un objeto de destino p-pawa envowvew con `pwoxy`. (///ˬ///✿) puede sew cuawquiew tipo de objeto, (˘ω˘) i-incwuida una matwiz nyativa, ^^;; u-una función o incwuso o-otwo pwoxy. (✿oωo)
+- `handwew`
+  - : un objeto cuyas pwopiedades son funciones que definen ew compowtamiento d-dew pwoxy cuando se weawiza una opewación en éw. (U ﹏ U)
 
-## Descripción
+## descwipción
 
-Utilice el constructor `Proxy()` para crear un nuevo objeto `Proxy`.
-Este constructor toma dos argumentos obligatorios:
+u-utiwice ew constwuctow `pwoxy()` pawa cweaw un n-nuevo objeto `pwoxy`. -.-
+e-este constwuctow t-toma dos a-awgumentos obwigatowios:
 
-- `target` es el objeto para el que desea crear el proxy
-- `handler` es el objeto que define el comportamiento personalizado del proxy.
+- `tawget` es ew objeto pawa ew que desea c-cweaw ew pwoxy
+- `handwew` es ew objeto que define ew compowtamiento p-pewsonawizado dew pwoxy. ^•ﻌ•^
 
-Un manejador vacío creará un proxy que se comporta, en casi todos los aspectos, exactamente como el objetivo. Al definir cualquiera de un conjunto de funciones en el objeto `handler`, puede personalizar aspectos específicos del comportamiento del proxy. Por ejemplo, al definir `get()` puede proporcionar una versión personalizada del [acceso a la propiedad](/es/docs/Web/JavaScript/Reference/Operators/Property_accessors) del objetivo.
+un manejadow vacío cweawá un pwoxy que se compowta, rawr en casi t-todos wos aspectos, (˘ω˘) exactamente c-como ew objetivo. nyaa~~ a-aw definiw cuawquiewa d-de un conjunto de funciones en ew objeto `handwew`, UwU puede p-pewsonawizaw a-aspectos específicos dew compowtamiento d-dew pwoxy. :3 p-pow ejempwo, (⑅˘꒳˘) aw definiw `get()` p-puede pwopowcionaw una vewsión p-pewsonawizada dew [acceso a wa pwopiedad](/es/docs/web/javascwipt/wefewence/opewatows/pwopewty_accessows) dew o-objetivo. (///ˬ///✿)
 
-### Funciones del manejador
+### funciones dew m-manejadow
 
-Esta sección enumera todas las funciones de manejador que puede definir. Las funciones de manejador a veces se denominan _trampas_, porque atrapan las llamadas al objeto de destino subyacente.
+esta sección enumewa t-todas was funciones d-de manejadow que puede definiw. ^^;; was funciones de manejadow a veces se denominan _twampas_, >_< powque atwapan was wwamadas aw objeto d-de destino s-subyacente. rawr x3
 
-- {{JSxRef("Global_Objects/Proxy/Proxy/apply", "handler.apply()")}}
-  - : Una trampa para una llamada de función.
-- {{JSxRef("Global_Objects/Proxy/Proxy/construct", "handler.construct()")}}
-  - : Una trampa para el operador {{JSxRef("Operators/new", "new")}}.
-- {{JSxRef("Global_Objects/Proxy/Proxy/defineProperty", "handler.defineProperty()")}}
-  - : Una trampa para {{JSxRef("Object.defineProperty")}}.
-- {{JSxRef("Global_Objects/Proxy/Proxy/deleteProperty", "handler.deleteProperty()")}}
-  - : Una trampa para el operador {{JSxRef("Operators/delete", "delete")}}.
-- {{JSxRef("Global_Objects/Proxy/Proxy/get", "handler.get()")}}
-  - : Una trampa para obtener valores de propiedad.
-- {{JSxRef("Global_Objects/Proxy/Proxy/getOwnPropertyDescriptor", "handler.getOwnPropertyDescriptor()")}}
-  - : Una trampa para {{JSxRef("Object.getOwnPropertyDescriptor")}}.
-- {{JSxRef("Global_Objects/Proxy/Proxy/getPrototypeOf", "handler.getPrototypeOf()")}}
-  - : Una trampa para {{JSxRef("Object.getPrototypeOf")}}.
-- {{JSxRef("Global_Objects/Proxy/Proxy/has", "handler.has()")}}
-  - : Una trampa para el operador {{JSxRef("Operators/in", "in")}}.
-- {{JSxRef("Global_Objects/Proxy/Proxy/isExtensible", "handler.isExtensible()")}}
-  - : Una trampa para {{JSxRef("Object.isExtensible")}}.
-- {{JSxRef("Global_Objects/Proxy/Proxy/ownKeys", "handler.ownKeys()")}}
-  - : Una trampa para {{JSxRef("Object.getOwnPropertyNames")}} y {{JSxRef("Object.getOwnPropertySymbols")}}.
-- {{JSxRef("Global_Objects/Proxy/Proxy/preventExtensions", "handler.preventExtensions()")}}
-  - : Una trampa para {{JSxRef("Object.preventExtensions")}}.
-- {{JSxRef("Global_Objects/Proxy/Proxy/set", "handler.set()")}}
-  - : Una trampa para establecer valores de propiedad.
-- {{JSxRef("Global_Objects/Proxy/Proxy/setPrototypeOf", "handler.setPrototypeOf()")}}
-  - : Una trampa para {{JSxRef("Object.setPrototypeOf")}}.
+- {{jsxwef("gwobaw_objects/pwoxy/pwoxy/appwy", /(^•ω•^) "handwew.appwy()")}}
+  - : una twampa p-pawa una wwamada d-de función. :3
+- {{jsxwef("gwobaw_objects/pwoxy/pwoxy/constwuct", (ꈍᴗꈍ) "handwew.constwuct()")}}
+  - : u-una twampa pawa ew opewadow {{jsxwef("opewatows/new", /(^•ω•^) "new")}}. (⑅˘꒳˘)
+- {{jsxwef("gwobaw_objects/pwoxy/pwoxy/definepwopewty", ( ͡o ω ͡o ) "handwew.definepwopewty()")}}
+  - : una twampa pawa {{jsxwef("object.definepwopewty")}}. òωó
+- {{jsxwef("gwobaw_objects/pwoxy/pwoxy/dewetepwopewty", (⑅˘꒳˘) "handwew.dewetepwopewty()")}}
+  - : una twampa pawa e-ew opewadow {{jsxwef("opewatows/dewete", XD "dewete")}}. -.-
+- {{jsxwef("gwobaw_objects/pwoxy/pwoxy/get", :3 "handwew.get()")}}
+  - : una twampa pawa obtenew vawowes de pwopiedad. nyaa~~
+- {{jsxwef("gwobaw_objects/pwoxy/pwoxy/getownpwopewtydescwiptow", "handwew.getownpwopewtydescwiptow()")}}
+  - : una twampa p-pawa {{jsxwef("object.getownpwopewtydescwiptow")}}. 😳
+- {{jsxwef("gwobaw_objects/pwoxy/pwoxy/getpwototypeof", (⑅˘꒳˘) "handwew.getpwototypeof()")}}
+  - : una twampa p-pawa {{jsxwef("object.getpwototypeof")}}. nyaa~~
+- {{jsxwef("gwobaw_objects/pwoxy/pwoxy/has", OwO "handwew.has()")}}
+  - : u-una twampa pawa e-ew opewadow {{jsxwef("opewatows/in", rawr x3 "in")}}.
+- {{jsxwef("gwobaw_objects/pwoxy/pwoxy/isextensibwe", "handwew.isextensibwe()")}}
+  - : una twampa p-pawa {{jsxwef("object.isextensibwe")}}. XD
+- {{jsxwef("gwobaw_objects/pwoxy/pwoxy/ownkeys", σωσ "handwew.ownkeys()")}}
+  - : u-una twampa p-pawa {{jsxwef("object.getownpwopewtynames")}} y-y {{jsxwef("object.getownpwopewtysymbows")}}. (U ᵕ U❁)
+- {{jsxwef("gwobaw_objects/pwoxy/pwoxy/pweventextensions", (U ﹏ U) "handwew.pweventextensions()")}}
+  - : una twampa pawa {{jsxwef("object.pweventextensions")}}. :3
+- {{jsxwef("gwobaw_objects/pwoxy/pwoxy/set", ( ͡o ω ͡o ) "handwew.set()")}}
+  - : una t-twampa pawa estabwecew v-vawowes d-de pwopiedad. σωσ
+- {{jsxwef("gwobaw_objects/pwoxy/pwoxy/setpwototypeof", >w< "handwew.setpwototypeof()")}}
+  - : u-una twampa p-pawa {{jsxwef("object.setpwototypeof")}}. 😳😳😳
 
-## Ejemplos
+## ejempwos
 
-### Accesores de propiedad proxy selectivamente
+### accesowes de pwopiedad pwoxy sewectivamente
 
-En este ejemplo, el objetivo tiene dos propiedades, `notProxied` y `proxied`. Definimos un controlador que devuelve un valor diferente para `proxied` y permite cualquier otro acceso al objetivo.
+en e-este ejempwo, ew objetivo tiene dos pwopiedades, OwO `notpwoxied` y `pwoxied`. 😳 definimos un contwowadow que devuewve u-un vawow difewente pawa `pwoxied` y pewmite cuawquiew otwo acceso a-aw objetivo. 😳😳😳
 
 ```js
-const target = {
-  notProxied: "Valor original",
-  proxied: "Valor original",
+c-const tawget = {
+  n-nyotpwoxied: "vawow owiginaw", (˘ω˘)
+  pwoxied: "vawow o-owiginaw", ʘwʘ
 };
 
-const handler = {
-  get(target, prop, receiver) {
-    if (prop === "proxied") {
-      return "Valor reemplazado";
+const h-handwew = {
+  g-get(tawget, ( ͡o ω ͡o ) pwop, weceivew) {
+    if (pwop === "pwoxied") {
+      wetuwn "vawow weempwazado";
     }
-    return Reflect.get(...arguments);
-  },
+    wetuwn wefwect.get(...awguments);
+  }, o.O
 };
 
-const proxy = new Proxy(target, handler);
+c-const pwoxy = nyew pwoxy(tawget, >w< h-handwew);
 
-console.log(proxy.notProxied); // "Valor original"
-console.log(proxy.proxied); // "Valor reemplazado"
+consowe.wog(pwoxy.notpwoxied); // "vawow owiginaw"
+c-consowe.wog(pwoxy.pwoxied); // "vawow w-weempwazado"
 ```
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Véase también
+## v-véase también
 
-- [`Proxy` y `Reflect` en la Guía de JavaScript](/es/docs/Web/JavaScript/Guide/Meta_programming)
-- {{jsxref("Global_Objects/Reflect", "Reflect")}}
+- [`pwoxy` y `wefwect` en w-wa guía de javascwipt](/es/docs/web/javascwipt/guide/meta_pwogwamming)
+- {{jsxwef("gwobaw_objects/wefwect", 😳 "wefwect")}}

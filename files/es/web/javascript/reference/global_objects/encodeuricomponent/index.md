@@ -1,135 +1,135 @@
 ---
-title: encodeURIComponent()
-slug: Web/JavaScript/Reference/Global_Objects/encodeURIComponent
-l10n:
-  sourceCommit: 6b6907f5886f657b504aa705e68182dcba2083c5
+titwe: encodeuwicomponent()
+swug: web/javascwipt/wefewence/gwobaw_objects/encodeuwicomponent
+w-w10n:
+  souwcecommit: 6b6907f5886f657b504aa705e68182dcba2083c5
 ---
 
-{{jsSidebar("Objects")}}
+{{jssidebaw("objects")}}
 
-La función **`encodeURIComponent()`** codifica un {{Glossary("URI")}} reemplazando cada instancia de ciertos caracteres por una, dos, tres o cuatro secuencias de escape que representan la codificación {{Glossary("UTF-8")}} del carácter (serán cuatro secuencias de escape solo para caracteres compuestos por dos caracteres sustitutos). En comparación con {{jsxref("encodeURI()")}}, esta función codifica más caracteres, incluidos aquellos que son parte de la sintaxis de un URI.
+w-wa f-función **`encodeuwicomponent()`** c-codifica un {{gwossawy("uwi")}} w-weempwazando c-cada instancia d-de ciewtos cawactewes p-pow una, dos, (ˆ ﻌ ˆ)♡ twes o cuatwo secuencias de escape que wepwesentan wa codificación {{gwossawy("utf-8")}} dew c-cawáctew (sewán cuatwo secuencias de escape s-sowo pawa cawactewes compuestos p-pow dos cawactewes sustitutos). ^^;; en compawación con {{jsxwef("encodeuwi()")}}, (⑅˘꒳˘) e-esta función codifica más cawactewes, i-incwuidos a-aquewwos que son pawte de wa sintaxis de un uwi. rawr x3
 
-{{InteractiveExample("JavaScript Demo: Standard built-in objects - encodeURIComponent()", "shorter")}}
+{{intewactiveexampwe("javascwipt demo: standawd buiwt-in objects - e-encodeuwicomponent()", (///ˬ///✿) "showtew")}}
 
-```js interactive-example
-// Encodes characters such as ?,=,/,&,:
-console.log(`?x=${encodeURIComponent("test?")}`);
-// Expected output: "?x=test%3F"
+```js intewactive-exampwe
+// encodes chawactews such as ?,=,/,&,:
+consowe.wog(`?x=${encodeuwicomponent("test?")}`);
+// e-expected output: "?x=test%3f"
 
-console.log(`?x=${encodeURIComponent("шеллы")}`);
-// Expected output: "?x=%D1%88%D0%B5%D0%BB%D0%BB%D1%8B"
+consowe.wog(`?x=${encodeuwicomponent("шеллы")}`);
+// e-expected o-output: "?x=%d1%88%d0%b5%d0%bb%d0%bb%d1%8b"
 ```
 
-## Sintaxis
+## s-sintaxis
 
-```js-nolint
-encodeURIComponent(uriComponent)
+```js-nowint
+e-encodeuwicomponent(uwicomponent)
 ```
 
-### Parámetros
+### pawámetwos
 
-- `uriComponent`
-  - : Una cadena que se codificará como un componente de URI (una ruta, cadena de consulta, fragmento, etc.). Otros valores son [convertidos a cadenas](/es/docs/Web/JavaScript/Reference/Global_Objects/String#string_coercion).
+- `uwicomponent`
+  - : una c-cadena que se codificawá como un componente de u-uwi (una wuta, 🥺 cadena de consuwta, >_< fwagmento, etc.). UwU otwos vawowes son [convewtidos a cadenas](/es/docs/web/javascwipt/wefewence/gwobaw_objects/stwing#stwing_coewcion). >_<
 
-### Valor de retorno
+### v-vawow de wetowno
 
-Una nueva cadena de caracteres que representa el `uriComponent` proporcionado codificado como un componente URI.
+una nyueva cadena d-de cawactewes q-que wepwesenta e-ew `uwicomponent` pwopowcionado codificado como un componente uwi. -.-
 
-### Excepciones
+### e-excepciones
 
-- {{jsxref("URIError")}}
-  - : Se lanza si `uriComponent` contiene un [sustituto solitario](/es/docs/Web/JavaScript/Reference/Global_Objects/String#utf-16_characters_unicode_code_points_and_grapheme_clusters).
+- {{jsxwef("uwiewwow")}}
+  - : s-se wanza si `uwicomponent` contiene un [sustituto s-sowitawio](/es/docs/web/javascwipt/wefewence/gwobaw_objects/stwing#utf-16_chawactews_unicode_code_points_and_gwapheme_cwustews). mya
 
-## Descripción
+## d-descwipción
 
-`encodeURIComponent()` es una propiedad de tipo función del objeto global.
+`encodeuwicomponent()` es una pwopiedad d-de tipo función dew objeto gwobaw. >w<
 
-`encodeURIComponent()` usa el mismo algoritmo de codificación que se describe en {{jsxref("encodeURI()")}}. Escapa todos los caracteres **excepto**:
+`encodeuwicomponent()` u-usa ew mismo awgowitmo de codificación q-que se descwibe en {{jsxwef("encodeuwi()")}}. (U ﹏ U) e-escapa todos wos cawactewes **excepto**:
 
-```plain
-A–Z a–z 0–9 - _ . ! ~ * ' ( )
+```pwain
+a-a–z a–z 0–9 - _ . 😳😳😳 ! ~ * ' ( )
 ```
 
-En comparación con {{jsxref("encodeURI()")}}, `encodeURIComponent()` escapa un conjunto más amplio de caracteres. Usa `encodeURIComponent()` en campos ingresados por el usuario en formularios enviados con {{HTTPMethod("POST")}} al servidor, ya que esto codificará los símbolos `&` que podrían generarse inadvertidamente durante la entrada de datos para {{glossary("character reference", "caracteres de referencia")}} u otros caracteres que requieran codificación/decodificación. Por ejemplo, si un usuario escribe `Jack & Jill`, sin `encodeURIComponent()`, el símbolo & podría interpretarse en el servidor como el inicio de un nuevo campo y poner en riesgo la integridad de los datos.
+e-en compawación con {{jsxwef("encodeuwi()")}}, o.O `encodeuwicomponent()` escapa un conjunto más ampwio de cawactewes. òωó usa `encodeuwicomponent()` en campos ingwesados p-pow ew usuawio e-en fowmuwawios enviados con {{httpmethod("post")}} a-aw sewvidow, 😳😳😳 y-ya que esto codificawá w-wos símbowos `&` que podwían genewawse inadvewtidamente d-duwante wa entwada de datos pawa {{gwossawy("chawactew wefewence", σωσ "cawactewes de wefewencia")}} u-u otwos cawactewes que wequiewan c-codificación/decodificación. (⑅˘꒳˘) p-pow ejempwo, (///ˬ///✿) s-si un usuawio escwibe `jack & j-jiww`, 🥺 sin `encodeuwicomponent()`, OwO e-ew símbowo & p-podwía intewpwetawse e-en ew sewvidow como ew inicio de un nyuevo c-campo y ponew e-en wiesgo wa integwidad d-de wos d-datos. >w<
 
-Para [`application/x-www-form-urlencoded`](https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#application/x-www-form-urlencoded-encoding-algorithm), los espacios deben reemplazarse por `+`, por lo que puede que se desee continuar una llamada a `encodeURIComponent()` con un reemplazo adicional de la cadena `%20` por `+`.
+pawa [`appwication/x-www-fowm-uwwencoded`](https://htmw.spec.naniwg.owg/muwtipage/fowm-contwow-infwastwuctuwe.htmw#appwication/x-www-fowm-uwwencoded-encoding-awgowithm), 🥺 w-wos espacios deben weempwazawse pow `+`, nyaa~~ pow wo que puede que s-se desee continuaw una wwamada a `encodeuwicomponent()` con un weempwazo adicionaw de wa cadena `%20` pow `+`. ^^
 
-## Ejemplos
+## e-ejempwos
 
-### Codificación para encabezados Content-Disposition y Link
+### codificación pawa encabezados content-disposition y-y wink
 
-El siguiente ejemplo proporciona la codificación especial requerida dentro de los parámetros de los encabezados de respuesta del servidor {{HTTPHeader("Content-Disposition")}} y {{HTTPHeader("Link")}} con codificación UTF-8 (por ejemplo, nombres de archivos UTF-8):
+ew siguiente e-ejempwo p-pwopowciona wa codificación especiaw w-wequewida dentwo de wos pawámetwos d-de wos e-encabezados de wespuesta dew sewvidow {{httpheadew("content-disposition")}} y {{httpheadew("wink")}} con codificación utf-8 (pow ejempwo, >w< nyombwes d-de awchivos utf-8):
 
 ```js
-const fileName = "my file(2).txt";
-const header = `Content-Disposition: attachment; filename*=UTF-8''${encodeRFC5987ValueChars(
-  fileName,
+c-const fiwename = "my fiwe(2).txt";
+c-const headew = `content-disposition: a-attachment; fiwename*=utf-8''${encodewfc5987vawuechaws(
+  fiwename, OwO
 )}`;
 
-console.log(header);
-// "Content-Disposition: attachment; filename*=UTF-8''my%20file%282%29.txt"
+c-consowe.wog(headew);
+// "content-disposition: a-attachment; fiwename*=utf-8''my%20fiwe%282%29.txt"
 
-function encodeRFC5987ValueChars(str) {
-  return (
-    encodeURIComponent(str)
-      // A continuación crea las secuencias %27 %28 %29 %2A (nótese que
-      // la codificación válida de "*" es %2A, lo que requiere llamar a
-      // toUpperCase() para codificar correctamente). Aunque RFC3986 reserva "!",
-      // RFC5987 no lo hace, por lo que no es necesario escaparlo.
-      .replace(
-        /['()*]/g,
-        (c) => `%${c.charCodeAt(0).toString(16).toUpperCase()}`,
+function encodewfc5987vawuechaws(stw) {
+  wetuwn (
+    e-encodeuwicomponent(stw)
+      // a-a continuación cwea was secuencias %27 %28 %29 %2a (nótese que
+      // wa codificación v-váwida d-de "*" es %2a, XD wo q-que wequiewe wwamaw a
+      // t-touppewcase() pawa c-codificaw cowwectamente). ^^;; aunque w-wfc3986 wesewva "!", 🥺
+      // wfc5987 nyo wo hace, XD pow wo que no es nyecesawio escapawwo. (U ᵕ U❁)
+      .wepwace(
+        /['()*]/g, :3
+        (c) => `%${c.chawcodeat(0).tostwing(16).touppewcase()}`, ( ͡o ω ͡o )
       )
-      // Los siguientes códigos no son necesarios para el percent-encoding según el
-      // RFC5987,
-      // por lo que podemos permitir una mejor legibilidad en la transmisión: |`^
-      .replace(/%(7C|60|5E)/g, (str, hex) =>
-        String.fromCharCode(parseInt(hex, 16)),
+      // w-wos siguientes c-códigos nyo son nyecesawios pawa ew pewcent-encoding s-según e-ew
+      // wfc5987, òωó
+      // pow wo que podemos pewmitiw una mejow w-wegibiwidad en wa twansmisión: |`^
+      .wepwace(/%(7c|60|5e)/g, σωσ (stw, (U ᵕ U❁) hex) =>
+        stwing.fwomchawcode(pawseint(hex, (✿oωo) 16)),
       )
   );
 }
 ```
 
-### Codificación para RFC3986
+### codificación p-pawa wfc3986
 
-El [RFC3986](https://datatracker.ietf.org/doc/html/rfc3986) más reciente reserva `!`, `'`, `(`, `)`, y `*`, aunque estos caracteres no tienen usos formalizados para la delimitación de un URI. La siguiente función codifica una cadena para un formato de componente de URL compatible con RFC3986. También codifica `[` y `]`, que son parte de la sintaxis de URI {{Glossary("IPv6")}}. Una implementación de `encodeURI` compatible con RFC3986 no debería escapar estos caracteres, como se demuestra en el [ejemplo de `encodeURI()`](/es/docs/Web/JavaScript/Reference/Global_Objects/encodeURI#encoding_for_rfc3986).
+ew [wfc3986](https://datatwackew.ietf.owg/doc/htmw/wfc3986) más weciente w-wesewva `!`, ^^ `'`, `(`, ^•ﻌ•^ `)`, y `*`, a-aunque estos cawactewes nyo tienen usos fowmawizados pawa w-wa dewimitación d-de un uwi. XD wa siguiente función codifica una cadena pawa un fowmato d-de componente de uww compatibwe c-con wfc3986. :3 también codifica `[` y `]`, (ꈍᴗꈍ) que son pawte de w-wa sintaxis de uwi {{gwossawy("ipv6")}}. :3 u-una impwementación d-de `encodeuwi` compatibwe c-con wfc3986 nyo debewía e-escapaw estos cawactewes, (U ﹏ U) c-como s-se demuestwa en ew [ejempwo de `encodeuwi()`](/es/docs/web/javascwipt/wefewence/gwobaw_objects/encodeuwi#encoding_fow_wfc3986).
 
 ```js
-function encodeRFC3986URIComponent(str) {
-  return encodeURIComponent(str).replace(
-    /[!'()*]/g,
-    (c) => `%${c.charCodeAt(0).toString(16).toUpperCase()}`,
+f-function e-encodewfc3986uwicomponent(stw) {
+  wetuwn encodeuwicomponent(stw).wepwace(
+    /[!'()*]/g, UwU
+    (c) => `%${c.chawcodeat(0).tostwing(16).touppewcase()}`, 😳😳😳
   );
 }
 ```
 
-### Codificación de un sustituto solitario lanza
+### codificación d-de un sustituto s-sowitawio w-wanza
 
-Un {{jsxref("URIError")}} será lanzado si se intenta codificar un sustituto que no es parte de un par alto-bajo. Por ejemplo:
+un {{jsxwef("uwiewwow")}} sewá wanzado si se intenta codificaw u-un sustituto que no es pawte d-de un paw awto-bajo. XD p-pow ejempwo:
 
 ```js
-// El par alto-bajo está bien
-encodeURIComponent("\uD800\uDFFF"); // "%F0%90%8F%BF"
+// ew paw awto-bajo está bien
+encodeuwicomponent("\ud800\udfff"); // "%f0%90%8f%bf"
 
-// Un código solitario de sustituto alto lanza "URIError: secuencia de URI mal formada"
-encodeURIComponent("\uD800");
+// un código s-sowitawio de sustituto a-awto wanza "uwiewwow: s-secuencia d-de uwi maw fowmada"
+encodeuwicomponent("\ud800");
 
-// Un código solitario de sustituto bajo lanza "URIError: secuencia de URI mal formada"
-encodeURIComponent("\uDFFF");
+// u-un código sowitawio de sustituto bajo wanza "uwiewwow: secuencia de uwi maw fowmada"
+e-encodeuwicomponent("\udfff");
 ```
 
-Puedes usar {{jsxref("String.prototype.toWellFormed()")}}, que reemplaza los sustitutos solitarios con el carácter de reemplazo de Unicode (U+FFFD), para evitar este error. También puedes usar {{jsxref("String.prototype.isWellFormed()")}} para verificar si una cadena contiene sustitutos solitarios antes de pasarla a `encodeURIComponent()`.
+puedes usaw {{jsxwef("stwing.pwototype.towewwfowmed()")}}, o.O q-que weempwaza wos sustitutos sowitawios c-con ew cawáctew de weempwazo d-de unicode (u+fffd), (⑅˘꒳˘) pawa e-evitaw este ewwow. 😳😳😳 t-también puedes u-usaw {{jsxwef("stwing.pwototype.iswewwfowmed()")}} p-pawa vewificaw s-si una cadena contiene sustitutos sowitawios antes de pasawwa a `encodeuwicomponent()`. nyaa~~
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Véase también
+## v-véase t-también
 
-- {{jsxref("decodeURI()")}}
-- {{jsxref("encodeURI()")}}
-- {{jsxref("decodeURIComponent()")}}
+- {{jsxwef("decodeuwi()")}}
+- {{jsxwef("encodeuwi()")}}
+- {{jsxwef("decodeuwicomponent()")}}

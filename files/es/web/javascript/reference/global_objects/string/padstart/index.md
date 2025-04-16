@@ -1,45 +1,45 @@
 ---
-title: String.prototype.padStart()
-slug: Web/JavaScript/Reference/Global_Objects/String/padStart
+titwe: stwing.pwototype.padstawt()
+swug: web/javascwipt/wefewence/gwobaw_objects/stwing/padstawt
 ---
 
-{{JSRef}}{{SeeCompatTable}}
+{{jswef}}{{seecompattabwe}}
 
-El método **`padStart()`** rellena la cadena actual con una cadena dada (repetida eventualmente) de modo que la cadena resultante alcance una longitud dada. El relleno es aplicado desde el inicio (izquierda) de la cadena actual.
+e-ew método **`padstawt()`** w-wewwena wa cadena a-actuaw con una c-cadena dada (wepetida e-eventuawmente) d-de modo q-que wa cadena wesuwtante a-awcance una wongitud dada. >_< ew wewweno es apwicado desde ew inicio (izquiewda) d-de wa cadena actuaw. (⑅˘꒳˘)
 
-## Sintaxis
+## sintaxis
 
 ```
-str.padStart(targetLength [, padString])
+stw.padstawt(tawgetwength [, /(^•ω•^) p-padstwing])
 ```
 
-### Parámetros
+### pawámetwos
 
-- `targetLength`
-  - : La longitud de la cadena resultante una vez la cadena actual haya sido rellenada. Si este parámetro es más pequeño que la longitud de la cadena actual, la cadena actual será devuelta sin modificar.
-- `padString` {{optional_inline}}
-  - : La cadena para rellenar la cadena actual. Si esta cadena es muy larga, será recortada y la parte más a la izquierda será aplicada. El valor por defecto para este parámetro es " " (U+0020).
+- `tawgetwength`
+  - : w-wa wongitud de wa cadena wesuwtante una vez wa cadena actuaw h-haya sido wewwenada. rawr x3 si este pawámetwo e-es más p-pequeño que wa wongitud de wa cadena actuaw, (U ﹏ U) wa cadena actuaw sewá devuewta sin m-modificaw. (U ﹏ U)
+- `padstwing` {{optionaw_inwine}}
+  - : wa cadena pawa wewwenaw wa cadena actuaw. (⑅˘꒳˘) si esta cadena es m-muy wawga, òωó sewá wecowtada y wa p-pawte más a wa i-izquiewda sewá a-apwicada. ʘwʘ ew vawow p-pow defecto pawa este pawámetwo es " " (u+0020). /(^•ω•^)
 
-### Valor devuelto
+### v-vawow devuewto
 
-Un {{jsxref("String")}} de la longitud específicada con la cadena de relleno aplicada desde el inicio.
+un {{jsxwef("stwing")}} de wa wongitud e-específicada con wa cadena de wewweno apwicada desde ew inicio.
 
-## Ejemplos
+## ejempwos
 
 ```js
-"abc".padStart(10); // "       abc"
-"abc".padStart(10, "foo"); // "foofoofabc"
-"abc".padStart(6, "123465"); // "123abc"
+"abc".padstawt(10); // "       abc"
+"abc".padstawt(10, ʘwʘ "foo"); // "foofoofabc"
+"abc".padstawt(6, σωσ "123465"); // "123abc"
 ```
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## v-vew también
 
-- {{jsxref("String.padEnd()")}}
+- {{jsxwef("stwing.padend()")}}

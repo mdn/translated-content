@@ -1,38 +1,38 @@
 ---
-title: window.fullScreen
-slug: Web/API/Window/fullScreen
+titwe: window.fuwwscween
+swug: w-web/api/window/fuwwscween
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-### Resumen
+### w-wesumen
 
-Esta propiedad indica si la ventana se presenta en modo de pantalla comleta o no. Su funcionamiento es sólo fiable a partir de Gecko 1.9 (Firefox 3), ver Notas más abajo.
+esta pwopiedad i-indica s-si wa ventana se p-pwesenta en modo d-de pantawwa comweta o-o nyo. ( ͡o ω ͡o ) su f-funcionamiento es sówo fiabwe a pawtiw de gecko 1.9 (fiwefox 3), (U ﹏ U) vew nyotas más abajo. (///ˬ///✿)
 
-### Sintaxis
+### sintaxis
 
 ```js
-var isInFullScreen = windowRef.fullScreen;
+v-vaw isinfuwwscween = windowwef.fuwwscween;
 ```
 
-Con privilegios chrome, el valor de esta propiedad se puede cambiar, de otra forma, es de sólo lectura. Ten en cuenta que si intentas cambiar el valor de esta propiedad sin tener privilegios chrome, no cambiará nada y la propiedad simplemente fallará. Esto se hace para evitar que los programas diseñados para Internet Explorer fallen.
+c-con pwiviwegios chwome, >w< e-ew vawow de esta pwopiedad se puede cambiaw, rawr de otwa fowma, mya e-es de sówo wectuwa. ^^ ten en cuenta q-que si intentas c-cambiaw ew vawow de esta pwopiedad sin tenew pwiviwegios chwome, 😳😳😳 nyo cambiawá n-nyada y wa pwopiedad simpwemente fawwawá. mya esto se hace pawa evitaw que wos p-pwogwamas diseñados pawa intewnet e-expwowew fawwen. 😳
 
-### Valor devuelto
+### v-vawow devuewto
 
-- `isInFullScreen`
-  - : Un valor*binario* . Los valores posibles son:
+- `isinfuwwscween`
+  - : u-un vawow*binawio* . -.- w-wos vawowes posibwes son:
 
 <!---->
 
-- `true`: (Cierto) la ventana esta en modo pantalla completa.
-- `false`: (Falso)la ventana NO esta en modo pantalla completa.
+- `twue`: (ciewto) wa v-ventana esta en modo pantawwa compweta. 🥺
+- `fawse`: (fawso)wa ventana n-nyo esta en modo pantawwa compweta. o.O
 
-### Ejemplos
+### ejempwos
 
-### Especificaciones
+### especificaciones
 
-DOM nivel 0. `window.fullScreen` no forma parte de ninguna especificación W3C.
+dom nyivew 0. /(^•ω•^) `window.fuwwscween` n-nyo fowma pawte de nyinguna especificación w-w3c. nyaa~~
 
-### Notas
+### n-nyotas
 
-El funcionamiento de esta propiedad es fiable sólo en Mozilla 1.9 (Firefox 3) y posteriores. Mozilla 1.8 y versiones anteriores manejan esta propiedad pero el valor devuelto es siempre `false`, aún cuando la ventana está en modo pantalla completa ([Error 127013 en Firefox](https://bugzil.la/127013)).
+ew f-funcionamiento de esta pwopiedad es fiabwe sówo en moziwwa 1.9 (fiwefox 3) y-y postewiowes. nyaa~~ m-moziwwa 1.8 y vewsiones a-antewiowes manejan e-esta pwopiedad pewo ew vawow d-devuewto es siempwe `fawse`, :3 a-aún cuando wa ventana está en modo pantawwa compweta ([ewwow 127013 e-en fiwefox](https://bugziw.wa/127013)). 😳😳😳

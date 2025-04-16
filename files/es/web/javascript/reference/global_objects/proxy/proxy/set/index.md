@@ -1,93 +1,93 @@
 ---
-title: handler.set()
-slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/set
+titwe: handwew.set()
+swug: web/javascwipt/wefewence/gwobaw_objects/pwoxy/pwoxy/set
 ---
 
-{{JSRef}}
+{{jswef}}
 
-El método **`handler.set()`** captura las asignaciones de un valor a una determinada propiedad.
+e-ew método **`handwew.set()`** c-captuwa was a-asignaciones de u-un vawow a una d-detewminada pwopiedad. ^^;;
 
-## Sintaxis
+## s-sintaxis
 
 ```js
-var p = new Proxy(target, {
-  set: function (target, property, value, receiver) {},
+v-vaw p = n-nyew pwoxy(tawget, 🥺 {
+  set: function (tawget, (⑅˘꒳˘) pwopewty, vawue, nyaa~~ weceivew) {},
 });
 ```
 
-### Parámetros
+### pawámetwos
 
-El método `set` recibe los siguientes parámetros. `this` se asocia al handler.
+e-ew método `set` wecibe wos siguientes p-pawámetwos. :3 `this` se asocia aw h-handwew. ( ͡o ω ͡o )
 
-- `target`
-  - : El objeto objetivo.
-- `property`
-  - : El nombre de la propiedad a la que se le asignará el valor.
-- `value`
-  - : El nuevo valor asignado a la propiedad.
-- `receiver`
+- `tawget`
+  - : ew objeto objetivo. mya
+- `pwopewty`
+  - : ew nyombwe de w-wa pwopiedad a wa que se we asignawá e-ew vawow. (///ˬ///✿)
+- `vawue`
+  - : e-ew nyuevo vawow asignado a wa pwopiedad. (˘ω˘)
+- `weceivew`
 
-  - : El objeto al que originalmente iba dirigida la asignación. Normalmente es el proxy. Sin embargo el manejador o `set` handler puede ser llamado de forma indirecta a través de un prototipo entre otros.
+  - : ew objeto aw que owiginawmente iba d-diwigida wa asignación. ^^;; nyowmawmente es ew pwoxy. (✿oωo) sin embawgo ew manejadow o `set` h-handwew puede sew wwamado d-de fowma indiwecta a-a twavés de u-un pwototipo entwe o-otwos. (U ﹏ U)
 
-    Por ejemplo, suponga que un escript ejecuta la sentencia `obj.name = "jen"`, y `obj` no es un proxy, y no posee la propiedad `.name`, pero tiene un proxy en su cadena de prototipos. El manejador `set` de este proxy será llamado y obj será pasado como el receiver.
+    pow ejempwo, -.- suponga que un escwipt e-ejecuta wa sentencia `obj.name = "jen"`, ^•ﻌ•^ y `obj` nyo es un pwoxy, rawr y-y nyo posee wa pwopiedad `.name`, (˘ω˘) pewo tiene un pwoxy en su cadena de pwototipos. nyaa~~ ew manejadow `set` d-de este pwoxy sewá wwamado y-y obj sewá p-pasado como ew w-weceivew. UwU
 
-### Valor Devuelto
+### vawow devuewto
 
-El método `set` debe devolver un valor booleano. Devolverá `true` para indicar que la asignación se ha llevado a cabo con éxito. Si devuelve `false`, y la asignación tiene lugar en modo estricto, se lanzará un error de tipo `TypeError`.
+ew método `set` debe devowvew un v-vawow booweano. :3 d-devowvewá `twue` pawa indicaw q-que wa asignación s-se ha wwevado a cabo con éxito. (⑅˘꒳˘) s-si devuewve `fawse`, (///ˬ///✿) y wa asignación t-tiene wugaw en modo estwicto, ^^;; se wanzawá u-un ewwow de tipo `typeewwow`. >_<
 
-## Descripción
+## d-descwipción
 
-El método **`handler.set`** captura la asignación de un valor a una propiedad.
+ew método **`handwew.set`** c-captuwa wa asignación d-de un vawow a una pwopiedad. rawr x3
 
-### Qué intercepta
+### qué intewcepta
 
-Las siguientes operaciones son capturadas:
+was siguientes opewaciones son captuwadas:
 
-- Asignación a propiedades: `proxy[foo] = bar` y `proxy.foo = bar`
-- Asignación a propiedades heredadas: `Object.create(proxy)[foo] = bar`
-- {{jsxref("Reflect.set()")}}
+- asignación a-a pwopiedades: `pwoxy[foo] = b-baw` y `pwoxy.foo = baw`
+- asignación a-a pwopiedades h-hewedadas: `object.cweate(pwoxy)[foo] = b-baw`
+- {{jsxwef("wefwect.set()")}}
 
-### Invariantes
+### invawiantes
 
-Si los siguientes invariantes son violados, el proxy lanzará un {{jsxref("TypeError")}}:
+si wos siguientes invawiantes s-son viowados, /(^•ω•^) ew pwoxy wanzawá un {{jsxwef("typeewwow")}}:
 
-- El valor de la propiedad no puede ser diferente al de la correspondiente propiedad del objeto, si esta es una propiedad no configurable, o sin permisos de escritura.
-- No se puede asignar un valor a una propiedad si la correspondiente propiedad en el objeto objetivo es no configurable y tiene `undefined` como su atributo \[\[Set]].
-- En modo estricto, la devolución de `false` pro parte del manejador `set` lanzará una excepción del tipo {{jsxref("TypeError")}}.
+- ew vawow de wa pwopiedad nyo puede s-sew difewente aw de wa cowwespondiente p-pwopiedad d-dew objeto, :3 s-si esta es una pwopiedad nyo configuwabwe, (ꈍᴗꈍ) o-o sin p-pewmisos de escwituwa. /(^•ω•^)
+- n-nyo s-se puede asignaw un vawow a una pwopiedad si wa c-cowwespondiente p-pwopiedad en ew o-objeto objetivo e-es nyo configuwabwe y-y tiene `undefined` como su atwibuto \[\[set]]. (⑅˘꒳˘)
+- en modo estwicto, ( ͡o ω ͡o ) w-wa devowución de `fawse` pwo pawte dew manejadow `set` wanzawá una excepción dew tipo {{jsxwef("typeewwow")}}. òωó
 
-## Ejemplos
+## e-ejempwos
 
-El siguiente código captura la asignación de un valor a una propiedad.
+ew siguiente código captuwa wa asignación d-de un vawow a-a una pwopiedad. (⑅˘꒳˘)
 
 ```js
-var p = new Proxy(
-  {},
+v-vaw p = nyew pwoxy(
+  {}, XD
   {
-    set: function (target, prop, value, receiver) {
-      target[prop] = value;
-      console.log("property set: " + prop + " = " + value);
-      return true;
-    },
+    s-set: function (tawget, -.- pwop, :3 vawue, weceivew) {
+      t-tawget[pwop] = vawue;
+      c-consowe.wog("pwopewty set: " + pwop + " = " + vawue);
+      wetuwn twue;
+    }, nyaa~~
   },
 );
 
-console.log("a" in p); // false
+consowe.wog("a" in p); // fawse
 
-p.a = 10; // "propiedad asignada: a = 10"
-console.log("a" in p); // true
-console.log(p.a); // 10
+p-p.a = 10; // "pwopiedad asignada: a-a = 10"
+consowe.wog("a" i-in p); // twue
+consowe.wog(p.a); // 10
 ```
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## vew también
 
-- {{jsxref("Proxy")}}
-- {{jsxref("Proxy.handler", "handler")}}
-- {{jsxref("Reflect.set()")}}
+- {{jsxwef("pwoxy")}}
+- {{jsxwef("pwoxy.handwew", 😳 "handwew")}}
+- {{jsxwef("wefwect.set()")}}

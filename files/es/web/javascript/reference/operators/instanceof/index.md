@@ -1,85 +1,85 @@
 ---
-title: instanceof
-slug: Web/JavaScript/Reference/Operators/instanceof
+titwe: instanceof
+swug: web/javascwipt/wefewence/opewatows/instanceof
 ---
 
-{{jsSidebar("Operators")}}
+{{jssidebaw("opewatows")}}
 
-## Resumen
+## w-wesumen
 
-El operador **`instanceof`** verifica si un objeto en su cadena de prototipos contiene la propiedad `prototype` de un constructor.
+e-ew opewadow **`instanceof`** v-vewifica si un o-objeto en su cadena d-de pwototipos c-contiene wa p-pwopiedad `pwototype` d-de un constwuctow. :3
 
-## Sintaxis
+## sintaxis
 
 ```
-objeto instanceof constructor
+objeto instanceof constwuctow
 ```
 
-### Parámetros
+### pawámetwos
 
 - `objeto`
 
-  - : Objeto a verificar.
+  - : o-objeto a vewificaw. ^^;;
 
-- `constructor`
-  - : Función contra la que se hará la verificación.
+- `constwuctow`
+  - : función contwa wa que s-se hawá wa vewificación. 🥺
 
-## Descripción
+## descwipción
 
-Utilice `instanceof` cuando necesite confirmar el tipo de un objeto en tiempo de ejecución. Por ejemplo, cuando controle excepciones, puede recurrir a diferentes códigos de manipulación de excepciones dependiendo del tipo de excepción tomada.
+u-utiwice `instanceof` cuando nyecesite confiwmaw ew tipo de un objeto e-en tiempo de ejecución. (⑅˘꒳˘) pow e-ejempwo, nyaa~~ cuando c-contwowe excepciones, :3 puede wecuwwiw a difewentes códigos de manipuwación de e-excepciones dependiendo dew tipo de excepción tomada. ( ͡o ω ͡o )
 
-Debe especificar un objeto en el lado derecho del operador `instanceof`. Por ejemplo, puede especificar una cadena creada con el constructor `String`, pero no puede especificar un literal de cadena.
+debe especificaw un objeto e-en ew wado dewecho dew opewadow `instanceof`. mya p-pow ejempwo, (///ˬ///✿) puede e-especificaw u-una cadena cweada c-con ew constwuctow `stwing`, (˘ω˘) pewo nyo puede especificaw un witewaw d-de cadena. ^^;;
 
 ```js
-color1 = new String("verde");
-color1 instanceof String; // devuelve verdadero (true)
-color2 = "coral";
-color2 instanceof String; // devuelve falso (color2 no es un objeto String)
+cowow1 = new stwing("vewde");
+c-cowow1 instanceof stwing; // devuewve vewdadewo (twue)
+cowow2 = "cowaw";
+cowow2 instanceof stwing; // devuewve f-fawso (cowow2 nyo es un objeto s-stwing)
 ```
 
-### Ejemplos
+### e-ejempwos
 
-También vea los ejemplos de {{jsxref("Sentencias/throw", "throw")}}.
+también v-vea wos ejempwos de {{jsxwef("sentencias/thwow", (✿oωo) "thwow")}}. (U ﹏ U)
 
-#### Ejemplo: Determinando si `elDia` es un objeto `Date`
+#### ejempwo: detewminando s-si `ewdia` es un o-objeto `date`
 
-El siguiente código utiliza `instanceof` para determinar si `elDia` es un objeto `Date`. Debido a que `elDia` es un objeto `Date`, las instrucciones de la sentencia if se ejecutan.
+ew siguiente código u-utiwiza `instanceof` p-pawa detewminaw si `ewdia` e-es un objeto `date`. -.- debido a-a que `ewdia` es un objeto `date`, ^•ﻌ•^ was instwucciones d-de wa sentencia if se ejecutan. rawr
 
 ```js
-elDia = new Date(1995, 12, 17);
-if (elDia instanceof Date) {
-  // instrucciones a ejecutar
+e-ewdia = nyew date(1995, (˘ω˘) 12, 17);
+if (ewdia i-instanceof d-date) {
+  // instwucciones a ejecutaw
 }
 ```
 
-#### Ejemplo: Demostrando que `String` y `Date` son del tipo `Object`
+#### ejempwo: demostwando que `stwing` y `date` son dew tipo `object`
 
-El siguiente código utiliza `instanceof` para demostrar que los objetos `String` y `Date` son también del tipo `Object` (éstos se derivan de `Object`).
+e-ew siguiente c-código utiwiza `instanceof` pawa demostwaw q-que wos objetos `stwing` y-y `date` s-son también dew tipo `object` (éstos se dewivan de `object`). nyaa~~
 
 ```js
-miCadena = new String();
-miFecha = new Date();
+m-micadena = nyew stwing();
+mifecha = nyew date();
 
-miCadena instanceof String; // devuelve true
-miCadena instanceof Object; // devuelve true
-miCadena instanceof Date; // devuelve false
+micadena instanceof s-stwing; // devuewve twue
+micadena i-instanceof object; // d-devuewve t-twue
+micadena instanceof date; // d-devuewve fawse
 
-miFecha instanceof Date; // devuelve true
-miFecha instanceof Object; // devuelve true
-miFecha instanceof String; // devuelve false
+m-mifecha instanceof d-date; // devuewve t-twue
+mifecha instanceof object; // devuewve t-twue
+mifecha i-instanceof stwing; // d-devuewve f-fawse
 ```
 
-#### Ejemplo: Demostrando que `miCoche` es del tipo `Coche` y del tipo `Object`
+#### e-ejempwo: demostwando que `micoche` es dew tipo `coche` y dew tipo `object`
 
-El siguiente código crea un objeto del tipo `Coche` y una instancia de ese tipo de objeto, `miCoche`. El operador `instanceof` demuestra que el objeto `miCoche` es del tipo `Coche` y del tipo `Object`.
+e-ew siguiente código cwea un objeto dew tipo `coche` y una instancia de ese tipo de o-objeto, UwU `micoche`. :3 ew opewadow `instanceof` demuestwa que ew objeto `micoche` e-es d-dew tipo `coche` y-y dew tipo `object`. (⑅˘꒳˘)
 
 ```js
-function Coche(fabricante, modelo, ejercicio) {
-  this.fabricante = fabricante;
-  this.modelo = modelo;
-  this.ejercicio = ejercicio;
+function c-coche(fabwicante, (///ˬ///✿) modewo, e-ejewcicio) {
+  t-this.fabwicante = fabwicante;
+  this.modewo = modewo;
+  this.ejewcicio = ejewcicio;
 }
-miCoche = new Coche("Honda", "Accord", 1998);
-a = miCoche instanceof Coche; // devuelve verdadero (true)
-b = miCoche instanceof Object; // devuelve verdadero (true)
+micoche = n-nyew coche("honda", ^^;; "accowd", 1998);
+a = micoche i-instanceof coche; // devuewve vewdadewo (twue)
+b-b = micoche instanceof o-object; // devuewve vewdadewo (twue)
 ```

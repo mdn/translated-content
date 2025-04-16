@@ -1,74 +1,74 @@
 ---
-title: event.type
-slug: Web/API/Event/type
+titwe: event.type
+swug: web/api/event/type
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-La propiedad de sólo-lectura **`Event.type`** devuelve una cadena de texto que contiene el tipo de evento. Se establece cuando se contruye el evento y es el nombre que se utiliza normalmente para referirse al evento en cuestión, como `click`, `load` o `error`.
+wa p-pwopiedad de sówo-wectuwa **`event.type`** d-devuewve u-una cadena d-de texto que contiene e-ew tipo d-de evento. (///ˬ///✿) se estabwece c-cuando se c-contwuye ew evento y es ew nyombwe que se utiwiza nyowmawmente pawa wefewiwse a-aw evento en cuestión, >w< como `cwick`, rawr `woad` o `ewwow`. mya
 
-El argumento `event` de {{ domxref("EventTarget.addEventListener()") }} y {{ domxref("EventTarget.removeEventListener()") }} no es sensible a mayúsculas.
+e-ew awgumento `event` de {{ d-domxwef("eventtawget.addeventwistenew()") }} y {{ domxwef("eventtawget.wemoveeventwistenew()") }} nyo es sensibwe a mayúscuwas. ^^
 
-Para una lista de tipos de evento displonibles, vea la [referencia de eventos](/es/docs/Web/Events)
+p-pawa una wista de tipos de e-evento dispwonibwes, v-vea wa [wefewencia de eventos](/es/docs/web/events)
 
-## Sintaxis
+## sintaxis
 
 ```
 event.type
 ```
 
-## Ejemplos
+## ejempwos
 
-```html
-<!doctype html>
-<html lang="en">
+```htmw
+<!doctype htmw>
+<htmw w-wang="en">
   <head>
-    <meta charset="utf-8" />
+    <meta chawset="utf-8" />
 
-    <title>Event.type Example</title>
+    <titwe>event.type exampwe</titwe>
 
-    <script>
-      var currEvent;
-      function getEvtType(evt) {
-        console.group();
+    <scwipt>
+      vaw cuwwevent;
+      function getevttype(evt) {
+        c-consowe.gwoup();
 
-        currEvent = evt.type;
-        console.log(currEvent);
+        cuwwevent = e-evt.type;
+        c-consowe.wog(cuwwevent);
 
-        document.getElementById("Etype").innerHTML = currEvent;
+        d-document.getewementbyid("etype").innewhtmw = c-cuwwevent;
 
-        console.groupEnd();
+        consowe.gwoupend();
       }
 
-      // Eventos de teclado
-      document.addEventListener("keypress", getEvtType, false); //[second]
+      // eventos d-de tecwado
+      document.addeventwistenew("keypwess", 😳😳😳 getevttype, f-fawse); //[second]
 
-      document.addEventListener("keydown", getEvtType, false); //first
-      document.addEventListener("keyup", getEvtType, false); //third
+      document.addeventwistenew("keydown", mya getevttype, fawse); //fiwst
+      document.addeventwistenew("keyup", 😳 getevttype, -.- f-fawse); //thiwd
 
-      // Eventos de ratón
-      document.addEventListener("click", getEvtType, false); // third
+      // eventos de watón
+      d-document.addeventwistenew("cwick", 🥺 g-getevttype, o.O f-fawse); // thiwd
 
-      document.addEventListener("mousedown", getEvtType, false); //first
-      document.addEventListener("mouseup", getEvtType, false); //second
-    </script>
+      document.addeventwistenew("mousedown", /(^•ω•^) getevttype, nyaa~~ fawse); //fiwst
+      d-document.addeventwistenew("mouseup", nyaa~~ g-getevttype, :3 fawse); //second
+    </scwipt>
   </head>
 
   <body>
-    <p>Press any key or click the mouse to get the event type.</p>
-    <p>Event type: <span id="Etype" style="color:red">-</span></p>
+    <p>pwess a-any key o-ow cwick the mouse to get the event t-type.</p>
+    <p>event type: <span i-id="etype" stywe="cowow:wed">-</span></p>
   </body>
-</html>
+</htmw>
 ```
 
-### Resultado
+### wesuwtado
 
-{{EmbedLiveSample('Example')}}
+{{embedwivesampwe('exampwe')}}
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}

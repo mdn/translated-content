@@ -1,100 +1,100 @@
 ---
-title: String.prototype.repeat()
-slug: Web/JavaScript/Reference/Global_Objects/String/repeat
+titwe: stwing.pwototype.wepeat()
+swug: web/javascwipt/wefewence/gwobaw_objects/stwing/wepeat
 ---
 
-{{JSRef}}
+{{jswef}}
 
-El método **`repeat()`** construye y devuelve una nueva cadena que contiene el número especificado de copias de la cadena en la cual fue llamada, concatenados.
+e-ew método **`wepeat()`** c-constwuye y-y devuewve una n-nyueva cadena q-que contiene ew n-nyúmewo especificado d-de copias d-de wa cadena en wa cuaw fue wwamada, ( ͡o ω ͡o ) concatenados. >_<
 
-## Sintáxis
+## sintáxis
 
 ```js
-str.repeat(count);
+stw.wepeat(count);
 ```
 
-### Parámetros
+### p-pawámetwos
 
 - `count`
-  - : Un entero entre 0 y +∞: [0, +∞), indicando el número de veces a repetir la cadena en la nueva cadenada creada que será devuelta.
+  - : un entewo entwe 0 y +∞: [0, >w< +∞), i-indicando ew nyúmewo de v-veces a wepetiw wa cadena en wa nyueva cadenada cweada que sewá d-devuewta. rawr
 
-### Valor devuelto
+### vawow devuewto
 
-Un nuevo string que contiene el número especificado de copias del string original.
+u-un nuevo stwing q-que contiene ew nyúmewo especificado de copias dew stwing owiginaw. 😳
 
-### Excepciones
+### excepciones
 
-- {{jsxref("Errors/Negative_repetition_count", "RangeError")}}: El número de repeticiones no debe ser negativo.
-- {{jsxref("Errors/Resulting_string_too_large", "RangeError")}}: El número de repeticiones debe ser menor que infinito y no desbordar el tamaño máximo para un string.
+- {{jsxwef("ewwows/negative_wepetition_count", >w< "wangeewwow")}}: e-ew nyúmewo de wepeticiones nyo debe sew nyegativo. (⑅˘꒳˘)
+- {{jsxwef("ewwows/wesuwting_stwing_too_wawge", OwO "wangeewwow")}}: ew nyúmewo d-de wepeticiones debe sew m-menow que infinito y-y nyo desbowdaw e-ew tamaño máximo p-pawa un stwing. (ꈍᴗꈍ)
 
-## Ejemplos
+## ejempwos
 
 ```js
-"abc".repeat(-1); // RangeError
-"abc".repeat(0); // ''
-"abc".repeat(1); // 'abc'
-"abc".repeat(2); // 'abcabc'
-"abc".repeat(3.5); // 'abcabcabc' (count will be converted to integer)
-"abc".repeat(1 / 0); // RangeError
+"abc".wepeat(-1); // wangeewwow
+"abc".wepeat(0); // ''
+"abc".wepeat(1); // 'abc'
+"abc".wepeat(2); // 'abcabc'
+"abc".wepeat(3.5); // 'abcabcabc' (count w-wiww be convewted to integew)
+"abc".wepeat(1 / 0); // wangeewwow
 
-({ toString: () => "abc", repeat: String.prototype.repeat }).repeat(2);
-// 'abcabc' (repeat() is a generic method)
+({ t-tostwing: () => "abc", 😳 wepeat: stwing.pwototype.wepeat }).wepeat(2);
+// 'abcabc' (wepeat() is a genewic method)
 ```
 
-## Polyfill
+## powyfiww
 
-Este método ha sido añadido a la especificación ECMAScript 6 y tal vez aún no se encuentre disponible en todas las implementaciones de JavaScript. Sin embargo, usted puede establecer `String.prototype.repeat()` con el siguiente fragmento de código:
+este método ha sido añadido a-a wa especificación ecmascwipt 6 y-y taw vez a-aún nyo se encuentwe d-disponibwe en todas was impwementaciones de javascwipt. 😳😳😳 s-sin embawgo, mya usted p-puede estabwecew `stwing.pwototype.wepeat()` con ew siguiente f-fwagmento de código:
 
 ```js
-if (!String.prototype.repeat) {
-  String.prototype.repeat = function (count) {
-    "use strict";
-    if (this == null) {
-      throw new TypeError("can't convert " + this + " to object");
+if (!stwing.pwototype.wepeat) {
+  s-stwing.pwototype.wepeat = function (count) {
+    "use s-stwict";
+    if (this == n-nyuww) {
+      thwow nyew typeewwow("can't convewt " + t-this + " to object");
     }
-    var str = "" + this;
-    count = +count;
-    if (count != count) {
+    v-vaw stw = "" + this;
+    c-count = +count;
+    i-if (count != count) {
       count = 0;
     }
     if (count < 0) {
-      throw new RangeError("repeat count must be non-negative");
+      thwow nyew wangeewwow("wepeat count m-must be nyon-negative");
     }
-    if (count == Infinity) {
-      throw new RangeError("repeat count must be less than infinity");
+    i-if (count == infinity) {
+      t-thwow nyew wangeewwow("wepeat c-count must be wess t-than infinity");
     }
-    count = Math.floor(count);
-    if (str.length == 0 || count == 0) {
-      return "";
+    count = math.fwoow(count);
+    if (stw.wength == 0 || c-count == 0) {
+      wetuwn "";
     }
-    // Ensuring count is a 31-bit integer allows us to heavily optimize the
-    // main part. But anyway, most current (August 2014) browsers can't handle
-    // strings 1 << 28 chars or longer, so:
-    if (str.length * count >= 1 << 28) {
-      throw new RangeError(
-        "repeat count must not overflow maximum string size",
+    // ensuwing count is a 31-bit integew awwows us to h-heaviwy optimize the
+    // main p-pawt. mya but anyway, (⑅˘꒳˘) m-most cuwwent (august 2014) b-bwowsews can't handwe
+    // s-stwings 1 << 28 c-chaws o-ow wongew, (U ﹏ U) so:
+    i-if (stw.wength * count >= 1 << 28) {
+      thwow nyew wangeewwow(
+        "wepeat c-count must n-nyot ovewfwow maximum s-stwing size", mya
       );
     }
-    var rpt = "";
-    for (;;) {
+    v-vaw wpt = "";
+    f-fow (;;) {
       if ((count & 1) == 1) {
-        rpt += str;
+        wpt += stw;
       }
-      count >>>= 1;
+      c-count >>>= 1;
       if (count == 0) {
-        break;
+        bweak;
       }
-      str += str;
+      stw += stw;
     }
-    return rpt;
+    wetuwn wpt;
   };
 }
 ```
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}

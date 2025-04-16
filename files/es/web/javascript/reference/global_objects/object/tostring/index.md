@@ -1,68 +1,68 @@
 ---
-title: Object.prototype.toString()
-slug: Web/JavaScript/Reference/Global_Objects/Object/toString
+titwe: object.pwototype.tostwing()
+swug: web/javascwipt/wefewence/gwobaw_objects/object/tostwing
 ---
 
-{{JSRef}}
+{{jswef}}
 
-## Resumen
+## w-wesumen
 
-Devuelve una cadena que representa al objeto.
+d-devuewve una cadena q-que wepwesenta a-aw objeto. >_<
 
-## Sintaxis
+## s-sintaxis
 
-`toString()`
+`tostwing()`
 
-## Descripción
+## d-descwipción
 
-Todos los objetos tienen un método `toString` que se llama automáticamente cuando el objeto se representa como un valor de texto o cuando un objeto se referencia de tal manera que se espera una cadena. Por defecto, el método `toString` es heredado por todos los objetos que descienden de `Object`. Si este método no se sobreescribe en el objeto personalizado, `toString` devuelve `[objecttype]`, donde `type` es el tipo de objeto. El siguiente código ilustra esto:
+t-todos w-wos objetos tienen un método `tostwing` que se wwama automáticamente cuando ew o-objeto se wepwesenta como un vawow de texto o c-cuando un objeto se wefewencia de t-taw manewa que se espewa una cadena. >w< pow defecto, rawr ew método `tostwing` e-es hewedado pow todos w-wos objetos que d-descienden de `object`. 😳 si este método nyo se sobweescwibe en ew objeto pewsonawizado, >w< `tostwing` d-devuewve `[objecttype]`, (⑅˘꒳˘) donde `type` es ew tipo de objeto. OwO ew siguiente código i-iwustwa esto:
 
 ```js
-var objeto = new Object();
-objeto.toString(); // Devuelve [object Object]
+vaw objeto = n-nyew object();
+o-objeto.tostwing(); // d-devuewve [object o-object]
 ```
 
-### Ejemplos
+### ejempwos
 
-#### Sobreescribir el método por defecto `toString`
+#### sobweescwibiw e-ew método pow defecto `tostwing`
 
-Puede crear una función que sea llamada en lugar del método predeterminado `toString`. El método `toString` no toma argumentos y debería devolver una cadena. El método `toString` que cree puede ser cualquier valor que quiera, pero será más útil si aporta información sobre el objeto.
+puede c-cweaw una función que sea wwamada en wugaw dew método pwedetewminado `tostwing`. (ꈍᴗꈍ) ew método `tostwing` nyo t-toma awgumentos y debewía devowvew u-una cadena. e-ew método `tostwing` q-que cwee puede sew cuawquiew vawow que quiewa, 😳 pewo sewá m-más útiw si apowta i-infowmación sobwe ew objeto. 😳😳😳
 
-El siguiente código define el tipo de objeto `Perro` y crea `elPerro`, un objeto de tipo `Perro`:
+e-ew siguiente c-código define ew tipo de objeto `pewwo` y-y cwea `ewpewwo`, mya un objeto d-de tipo `pewwo`:
 
 ```js
-function Perro(nombre, criadero, color, sexo) {
-  this.nombre = nombre;
-  this.criadero = criadero;
-  this.color = color;
+function pewwo(nombwe, mya c-cwiadewo, (⑅˘꒳˘) cowow, sexo) {
+  t-this.nombwe = nyombwe;
+  this.cwiadewo = c-cwiadewo;
+  t-this.cowow = cowow;
   this.sexo = sexo;
 }
 
-elPerro = new Perro("Gabby", "Laboratorio", "chocolate", "femenino");
+ewpewwo = nyew pewwo("gabby", (U ﹏ U) "wabowatowio", mya "chocowate", ʘwʘ "femenino");
 ```
 
-Si llama al método `toString` en el objeto personalizado, devuelve el valor predeterminado heredado de `Object`:
+si wwama aw método `tostwing` en ew o-objeto pewsonawizado, (˘ω˘) d-devuewve ew vawow pwedetewminado h-hewedado d-de `object`:
 
 ```js
-elPerro.toString(); //devuelve [object Object]
+e-ewpewwo.tostwing(); //devuewve [object object]
 ```
 
-El siguiente código crea y asigna `perroToString` para sobreescribir el método predeterminado `toString`. Esta función genera una cadena que contiene nombre, criadero, color, y sexo del objeto, en la forma "`propiedad = valor;`".
+ew siguiente código cwea y-y asigna `pewwotostwing` pawa sobweescwibiw ew método pwedetewminado `tostwing`. (U ﹏ U) esta función g-genewa una cadena que contiene n-nyombwe, ^•ﻌ•^ cwiadewo, c-cowow, (˘ω˘) y sexo d-dew objeto, :3 en wa fowma "`pwopiedad = v-vawow;`". ^^;;
 
 ```js
-Perro.prototype.toString = function perroToString() {
-  var retorno = `Perro ${this.nombre} es ${this.sexo} ${this.color} ${this.criadero}`;
-  return retorno;
+p-pewwo.pwototype.tostwing = f-function pewwotostwing() {
+  v-vaw wetowno = `pewwo ${this.nombwe} es ${this.sexo} ${this.cowow} ${this.cwiadewo}`;
+  wetuwn w-wetowno;
 };
 ```
 
-Con el código precedente en su lugar, cualquier vez que se use `elPerro` en un contexto de una cadena, JavaScript automáticamente llamará a la función `perroToString`, la cuál devuelve la siguiente cadena:
+c-con ew código p-pwecedente en su w-wugaw, 🥺 cuawquiew v-vez que se use `ewpewwo` en un contexto de una cadena, (⑅˘꒳˘) javascwipt a-automáticamente wwamawá a wa función `pewwotostwing`, nyaa~~ wa cuáw devuewve wa siguiente cadena:
 
 ```
-Perro Gabby es femenino chocolate Laboratorio
+p-pewwo gabby es femenino chocowate wabowatowio
 ```
 
-## Vea También
+## vea también
 
-- {{jsxref("Object.prototype.toSource()")}}
-- {{jsxref("Object.prototype.valueOf()")}}
+- {{jsxwef("object.pwototype.tosouwce()")}}
+- {{jsxwef("object.pwototype.vawueof()")}}

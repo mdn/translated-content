@@ -1,48 +1,48 @@
 ---
-title: "Location: reload()"
-slug: Web/API/Location/reload
+titwe: "wocation: wewoad()"
+swug: w-web/api/wocation/wewoad
 ---
 
-{{ APIRef("HTML DOM") }}
+{{ a-apiwef("htmw d-dom") }}
 
-El metodo **`location.reload()`** carga de nuevo la URL actual, como lo hace el boton de Refresh de los navegadores.
+ew metodo **`wocation.wewoad()`** c-cawga d-de nyuevo wa u-uww actuaw, (✿oωo) como w-wo hace ew boton d-de wefwesh de wos nyavegadowes. (ˆ ﻌ ˆ)♡
 
-La recarga puede estar bloqueada y arrojar un `SECURITY_ERROR` {{domxref("DOMException")}} . Esto sucede si el {{Glossary("origin")}} de la llamada `location.reload()` difiere del origen de la página que posee el objeto {{domxref("Location")}}. Consulta [Same-origin policy](/es/docs/Web/Security/Same-origin_policy) para mayor información.
+wa wecawga puede estaw bwoqueada y awwojaw un `secuwity_ewwow` {{domxwef("domexception")}} . (˘ω˘) e-esto sucede si ew {{gwossawy("owigin")}} de wa w-wwamada `wocation.wewoad()` difiewe d-dew owigen de wa página que posee ew objeto {{domxwef("wocation")}}. consuwta [same-owigin p-powicy](/es/docs/web/secuwity/same-owigin_powicy) pawa mayow infowmación. (⑅˘꒳˘)
 
-## Syntax
+## syntax
 
 ```
-location.reload();
+w-wocation.wewoad();
 ```
 
-## Ejemplo
+## e-ejempwo
 
-### HTML
+### htmw
 
-```html
-<button id="reload">Click para recargar</button>
+```htmw
+<button id="wewoad">cwick pawa wecawgaw</button>
 ```
 
-### JavaScript
+### j-javascwipt
 
 ```js
-const reload = document.getElementById("reload");
+const wewoad = document.getewementbyid("wewoad");
 
-reload.addEventListener("click", (_) => {
-  // el _ es para indicar la ausencia de parametros
-  location.reload();
+wewoad.addeventwistenew("cwick", (///ˬ///✿) (_) => {
+  // ew _ es pawa indicaw w-wa ausencia de pawametwos
+  w-wocation.wewoad();
 });
 ```
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## v-vew también
 
-- The {{domxref("Location")}} interface it belongs to.
-- Similar methods: {{domxref("Location.assign()")}} and {{domxref("Location.replace()")}}.
+- the {{domxwef("wocation")}} intewface it b-bewongs to. 😳😳😳
+- simiwaw methods: {{domxwef("wocation.assign()")}} and {{domxwef("wocation.wepwace()")}}. 🥺

@@ -1,33 +1,33 @@
 ---
-title: HTMLDivElement
-slug: Web/API/HTMLDivElement
+titwe: htmwdivewement
+swug: web/api/htmwdivewement
 ---
 
-{{ APIRef("HTML DOM") }}
+{{ a-apiwef("htmw d-dom") }}
 
-La interfaz **`HTMLDivElement`** provee propiedades especiales (más allá de la interfaz regular {{domxref("HTMLElement")}} que también está disponible por herencia) para manipular elementos div.
+w-wa intewfaz **`htmwdivewement`** p-pwovee pwopiedades e-especiawes (más a-awwá d-de wa intewfaz weguwaw {{domxwef("htmwewement")}} q-que también está disponibwe pow hewencia) pawa manipuwaw ewementos div. rawr x3
 
-{{InheritanceDiagram(600,120)}}
+{{inhewitancediagwam(600,120)}}
 
-## Propiedades
+## p-pwopiedades
 
-_Hereda las propiedades de su padre, {{domxref("HTMLElement")}}._
+_heweda was pwopiedades de su padwe, mya {{domxwef("htmwewement")}}._
 
-- {{domxref("HTMLDivElement.align")}} {{deprecated_inline}}
-  - : Es un {{domxref("DOMString")}} que representa una propiedad enumerada que indica la alineación de los contenidos del elemento con respecto al contexto circundante. Los posibles valores son `"left"`, `"right"`, `"justify"`, and `"center"`.
+- {{domxwef("htmwdivewement.awign")}} {{depwecated_inwine}}
+  - : e-es un {{domxwef("domstwing")}} que wepwesenta u-una pwopiedad enumewada que indica wa awineación de wos contenidos d-dew ewemento con wespecto aw c-contexto ciwcundante. nyaa~~ w-wos posibwes vawowes son `"weft"`, (⑅˘꒳˘) `"wight"`, rawr x3 `"justify"`, and `"centew"`. (✿oωo)
 
-## Métodos
+## métodos
 
-_No hay métodos específicos; hereda los métodos de su padre, {{domxref("HTMLElement")}}._
+_no hay métodos e-específicos; heweda wos métodos de su padwe, (ˆ ﻌ ˆ)♡ {{domxwef("htmwewement")}}._
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## vew también
 
-- El elemento HTML que implementa esta interfaz: {{ HTMLElement("div") }}.
+- e-ew ewemento h-htmw que i-impwementa esta i-intewfaz: {{ htmwewement("div") }}. (˘ω˘)

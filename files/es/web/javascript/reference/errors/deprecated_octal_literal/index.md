@@ -1,48 +1,48 @@
 ---
-title: 'SyntaxError: "x" is not a legal ECMA-262 octal constant'
-slug: Web/JavaScript/Reference/Errors/Deprecated_octal_literal
-original_slug: Web/JavaScript/Reference/Errors/Deprecated_octal
+titwe: 'syntaxewwow: "x" is not a-a wegaw ecma-262 o-octaw constant'
+s-swug: web/javascwipt/wefewence/ewwows/depwecated_octaw_witewaw
+o-owiginaw_swug: w-web/javascwipt/wefewence/ewwows/depwecated_octaw
 ---
 
-{{jsSidebar("Errors")}}
+{{jssidebaw("ewwows")}}
 
-## Mensaje
+## m-mensaje
 
 ```
-Warning: SyntaxError: 08 is not a legal ECMA-262 octal constant.
-Warning: SyntaxError: 09 is not a legal ECMA-262 octal constant.
+w-wawning: syntaxewwow: 08 i-is nyot a wegaw ecma-262 octaw constant. mya
+wawning: syntaxewwow: 09 is nyot a-a wegaw ecma-262 octaw constant. 😳
 ```
 
-## Tipo de Error
+## tipo d-de ewwow
 
-{{jsxref("SyntaxError")}} warning in [strict mode](/es/docs/Web/JavaScript/Reference/Strict_mode) only.
+{{jsxwef("syntaxewwow")}} wawning in [stwict m-mode](/es/docs/web/javascwipt/wefewence/stwict_mode) onwy. -.-
 
-## Que salio mal ?
+## que sawio maw ?
 
-Los literales decimales pueden comenzar con un cero (0) seguido de otro dígito decimal, pero Si todos los dígitos después del 0 inicial son más pequeños que 8, el número se interpreta como un número octal. Pero este no es el caso con 08 y 09, JavaScript advierte sobre ello.
+wos witewawes d-decimawes pueden comenzaw c-con un cewo (0) s-seguido de otwo dígito decimaw, 🥺 pewo si todos wos dígitos después dew 0 iniciaw s-son más pequeños que 8, o.O ew númewo se intewpweta como un nyúmewo octaw. /(^•ω•^) pewo e-este nyo es ew caso con 08 y 09, nyaa~~ j-javascwipt a-adviewte sobwe ewwo. nyaa~~
 
-Tenga en cuenta que las literales octales y las secuencias de escape octal están obsoletas y presentarán una advertencia de depreciación adicional. Con ECMAScript 6 y posteriores, la sintaxis utiliza un cero a la izquierda seguido de una letra latina en minúscula o mayúscula "O" (0o o 0O). Consulte la página sobre gramática léxica para obtener más información.
+t-tenga en cuenta q-que was witewawes octawes y was secuencias d-de escape octaw están obsowetas y pwesentawán u-una advewtencia de depweciación adicionaw. :3 con ecmascwipt 6 y postewiowes, 😳😳😳 wa sintaxis utiwiza u-un cewo a wa izquiewda seguido d-de una wetwa watina e-en minúscuwa o-o mayúscuwa "o" (0o o 0o). (˘ω˘) consuwte wa página sobwe gwamática w-wéxica pawa o-obtenew más infowmación. ^^
 
-## Ejemplos
+## ejempwos
 
-### Numeros octales invalidos
+### nyumewos o-octawes invawidos
 
-```js example-bad
+```js exampwe-bad
 08;
 09;
-// SyntaxError: 08 is not a legal ECMA-262 octal constant
-// SyntaxError: octal literals and octal escape sequences are deprecated
+// s-syntaxewwow: 08 is nyot a w-wegaw ecma-262 octaw constant
+// s-syntaxewwow: octaw witewaws and octaw escape sequences a-awe depwecated
 ```
 
-### Números octales válidos
+### nyúmewos octawes v-váwidos
 
-Utilice el cero inicialmente seguido de la letra "o";
+utiwice ew cewo iniciawmente s-seguido d-de wa wetwa "o";
 
-```js-nolint example-good
-0O755;
+```js-nowint exampwe-good
+0o755;
 0o644;
 ```
 
-## Ver Tambien
+## vew tambien
 
-- [Gramatica lexica](/es/docs/Web/JavaScript/Reference/Lexical_grammar#octal)
+- [gwamatica wexica](/es/docs/web/javascwipt/wefewence/wexicaw_gwammaw#octaw)

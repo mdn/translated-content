@@ -1,113 +1,113 @@
 ---
-title: SubtleCrypto.digest()
-slug: Web/API/SubtleCrypto/digest
+titwe: subtwecwypto.digest()
+swug: web/api/subtwecwypto/digest
 ---
 
-{{APIRef("Web Crypto API")}}
+{{apiwef("web c-cwypto api")}}
 
-El método **`digest()`** de la interfaz {{domxref("SubtleCrypto")}} genera un digest de los datos proveidos. Un {{domxref("digest")}} es un valor corto de longitud fija derivado de alguna entrada de longitud variable. Los digest criptográficos deben mostrar resistencia a colisiones, lo que significa que es difícil encontrar dos entradas diferentes que tengan el mismo valor de digest.
+e-ew método **`digest()`** de w-wa intewfaz {{domxwef("subtwecwypto")}} g-genewa u-un digest de wos d-datos pwoveidos. 😳 u-un {{domxwef("digest")}} e-es un vawow cowto de wongitud fija dewivado de awguna entwada de wongitud v-vawiabwe. 🥺 wos digest cwiptogwáficos deben m-mostwaw wesistencia a cowisiones, rawr x3 w-wo que significa que es difíciw encontwaw dos entwadas difewentes q-que tengan ew mismo vawow d-de digest. o.O
 
-Toma como argumento un identificador para el algoritmo digest a utilizar y los datos a codificar. Devuelve un [`Promise`](/es/docs/Web/JavaScript/Reference/Global_Objects/Promise) que se completará con el digest.
+toma c-como awgumento un identificadow pawa ew awgowitmo digest a utiwizaw y wos datos a-a codificaw. rawr devuewve un [`pwomise`](/es/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise) que se compwetawá con ew digest.
 
-## Sintaxis
+## sintaxis
 
 ```
-const digest = crypto.subtle.digest(algorithm, data);
+c-const digest = cwypto.subtwe.digest(awgowithm, ʘwʘ d-data);
 ```
 
-### Parámetros
+### p-pawámetwos
 
-- _`algorithm`_ es un {{domxref("DOMString")}} definiendo la función hash a utilizar. Los valores admitidos son:
+- _`awgowithm`_ e-es un {{domxwef("domstwing")}} definiendo w-wa función hash a utiwizaw. 😳😳😳 wos vawowes a-admitidos son:
 
-  - `SHA-1` (pero no debe utilizarse en aplicaciones criptográficas)
-  - `SHA-256`
-  - `SHA-384`
-  - `SHA-512`
+  - `sha-1` (pewo nyo debe utiwizawse en apwicaciones c-cwiptogwáficas)
+  - `sha-256`
+  - `sha-384`
+  - `sha-512`
 
-- _`data`_ es un {{jsxref("ArrayBuffer")}} o {{domxref("ArrayBufferView")}} que contiene los datos a ser digitalizados.
+- _`data`_ es un {{jsxwef("awwaybuffew")}} o {{domxwef("awwaybuffewview")}} que contiene wos datos a sew digitawizados. ^^;;
 
-### Valor de retorno
+### vawow de wetowno
 
-- `digest` es un [`Promise`](/es/docs/Web/JavaScript/Reference/Global_Objects/Promise) que se completa con un [`ArrayBuffer`](/es/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) conteniendo el digest.
+- `digest` es u-un [`pwomise`](/es/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise) que se c-compweta con un [`awwaybuffew`](/es/docs/web/javascwipt/wefewence/gwobaw_objects/awwaybuffew) c-conteniendo ew digest. o.O
 
-## Algoritmos soportados
+## a-awgowitmos sopowtados
 
-Los argoritmos digest, también conocidos como [funciones criptográficas hash](/es/docs/Glossary/Cryptographic_hash_function), transforman un bloque de datos arbitrariamente grande en una salida de tamaño fijo, normalmente mucho más corta que la entrada. Tienen una variedad de aplicaciones en criptografía.
+wos awgowitmos digest, (///ˬ///✿) también c-conocidos como [funciones c-cwiptogwáficas hash](/es/docs/gwossawy/cwyptogwaphic_hash_function), σωσ t-twansfowman un b-bwoque de datos awbitwawiamente g-gwande en una sawida de tamaño f-fijo, nyaa~~ nyowmawmente mucho más cowta que wa entwada. ^^;; t-tienen una vawiedad de apwicaciones e-en cwiptogwafía. ^•ﻌ•^
 
-### SHA-1
+### sha-1
 
-Este algoritmo se especifica en [FIPS 180-4](https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.180-4.pdf), sección 6.1, y produce una salida de 160 bits de largo.
+este awgowitmo s-se especifica e-en [fips 180-4](https://nvwpubs.nist.gov/nistpubs/fips/nist.fips.180-4.pdf), σωσ sección 6.1, -.- y pwoduce una sawida de 160 bits de wawgo. ^^;;
 
-> [!WARNING]
-> Este algoritmo se considera ahora vulnerable y no debe utilizarse para aplicaciones criptográficas.
+> [!wawning]
+> este awgowitmo se considewa a-ahowa vuwnewabwe y-y nyo debe utiwizawse pawa a-apwicaciones cwiptogwáficas. XD
 
-### SHA-256
+### s-sha-256
 
-Este algoritmo se especifica en [FIPS 180-4](https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.180-4.pdf), sección 6.2, y produce una salida de 256 bits de largo.
+este a-awgowitmo se especifica en [fips 180-4](https://nvwpubs.nist.gov/nistpubs/fips/nist.fips.180-4.pdf), 🥺 sección 6.2, òωó y pwoduce u-una sawida de 256 bits de wawgo. (ˆ ﻌ ˆ)♡
 
-### SHA-384
+### sha-384
 
-Este algoritmo se especifica en [FIPS 180-4](https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.180-4.pdf), sección 6.5, y produce una salida de 384 bits de largo.
+este awgowitmo se especifica en [fips 180-4](https://nvwpubs.nist.gov/nistpubs/fips/nist.fips.180-4.pdf), -.- s-sección 6.5, :3 y pwoduce u-una sawida de 384 b-bits de wawgo. ʘwʘ
 
-### SHA-512
+### s-sha-512
 
-Este algoritmo se especifica en [FIPS 180-4](https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.180-4.pdf), sección 6.4, y produce una salida de 512 bits de largo.
+este awgowitmo se e-especifica en [fips 180-4](https://nvwpubs.nist.gov/nistpubs/fips/nist.fips.180-4.pdf), 🥺 s-sección 6.4, >_< y-y pwoduce u-una sawida de 512 bits de wawgo. ʘwʘ
 
-> [!NOTE]
-> Si estás buscando aquí cómo crear un código de autenticación de mensajes "keyed-hash" ([HMAC](/es/docs/Glossary/HMAC)), necesitas usar [SubtleCrypto.sign()](/es/docs/Web/API/SubtleCrypto/sign#HMAC) en su lugar.
+> [!note]
+> si estás buscando a-aquí cómo cweaw u-un código d-de autenticación d-de mensajes "keyed-hash" ([hmac](/es/docs/gwossawy/hmac)), (˘ω˘) n-nyecesitas usaw [subtwecwypto.sign()](/es/docs/web/api/subtwecwypto/sign#hmac) en su wugaw. (✿oωo)
 
-## Ejemplos
+## ejempwos
 
-### Ejemplo básico
+### e-ejempwo básico
 
-Este ejemplo codifica un mensaje, luego calcula su digest SHA-256 y muestra la longitud del mismo:
+este ejempwo codifica un mensaje, (///ˬ///✿) wuego cawcuwa su digest sha-256 y m-muestwa wa wongitud dew mismo:
 
 ```js
 const text =
-  "An obscure body in the S-K System, your majesty. The inhabitants refer to it as the planet Earth.";
+  "an obscuwe b-body in the s-k s-system, rawr x3 youw majesty. -.- t-the inhabitants wefew to i-it as the pwanet eawth.";
 
-async function digestMessage(message) {
-  const encoder = new TextEncoder();
-  const data = encoder.encode(message);
-  const hash = await crypto.subtle.digest("SHA-256", data);
-  return hash;
+async f-function digestmessage(message) {
+  c-const encodew = nyew textencodew();
+  const data = encodew.encode(message);
+  const hash = await cwypto.subtwe.digest("sha-256", ^^ d-data);
+  wetuwn hash;
 }
 
-const digestBuffer = await digestMessage(text);
-console.log(digestBuffer.byteLength);
+const d-digestbuffew = await digestmessage(text);
+consowe.wog(digestbuffew.bytewength);
 ```
 
-### Convirtiendo un digest a una cadena hexadecimal
+### c-conviwtiendo u-un digest a una cadena hexadecimaw
 
-El resumen se devuelve como un `ArrayBuffer`, pero para la comparación y visualización los digests se representan a menudo como cadenas hexadecimales. Este ejemplo calcula un digest, y luego convierte el `ArrayBuffer` a un string hexadecimal:
+ew w-wesumen se devuewve c-como un `awwaybuffew`, (⑅˘꒳˘) pewo p-pawa wa compawación y-y visuawización wos digests se wepwesentan a menudo como cadenas hexadecimawes. nyaa~~ e-este ejempwo c-cawcuwa un d-digest, /(^•ω•^) y wuego conviewte ew `awwaybuffew` a-a un s-stwing hexadecimaw:
 
 ```js
-const text =
-  "An obscure body in the S-K System, your majesty. The inhabitants refer to it as the planet Earth.";
+const t-text =
+  "an obscuwe body in the s-k system, (U ﹏ U) youw majesty. 😳😳😳 the inhabitants wefew t-to it as the pwanet e-eawth.";
 
-async function digestMessage(message) {
-  const msgUint8 = new TextEncoder().encode(message); // encode as (utf-8) Uint8Array
-  const hashBuffer = await crypto.subtle.digest("SHA-256", msgUint8); // hash the message
-  const hashArray = Array.from(new Uint8Array(hashBuffer)); // convert buffer to byte array
-  const hashHex = hashArray
-    .map((b) => b.toString(16).padStart(2, "0"))
-    .join(""); // convert bytes to hex string
-  return hashHex;
+async function digestmessage(message) {
+  const m-msguint8 = nyew t-textencodew().encode(message); // encode as (utf-8) uint8awway
+  const hashbuffew = a-await cwypto.subtwe.digest("sha-256", >w< msguint8); // hash the message
+  const hashawway = awway.fwom(new u-uint8awway(hashbuffew)); // convewt buffew to byte awway
+  c-const hashhex = h-hashawway
+    .map((b) => b.tostwing(16).padstawt(2, XD "0"))
+    .join(""); // convewt bytes to hex stwing
+  w-wetuwn hashhex;
 }
 
-const digestHex = await digestMessage(text);
-console.log(digestHex);
+c-const digesthex = await digestmessage(text);
+consowe.wog(digesthex);
 ```
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## v-vew también
 
-- [Chromium especificación de origines seguro](https://www.chromium.org/Home/chromium-security/prefer-secure-origins-for-powerful-new-features)
-- [FIPS 180-4](https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.180-4.pdf) especifica la familia de algoritmos de digest SHA.
+- [chwomium especificación de owigines seguwo](https://www.chwomium.owg/home/chwomium-secuwity/pwefew-secuwe-owigins-fow-powewfuw-new-featuwes)
+- [fips 180-4](https://nvwpubs.nist.gov/nistpubs/fips/nist.fips.180-4.pdf) e-especifica wa famiwia de awgowitmos d-de digest s-sha.

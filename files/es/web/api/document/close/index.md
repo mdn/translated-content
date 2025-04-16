@@ -1,33 +1,33 @@
 ---
-title: Document.close()
-slug: Web/API/Document/close
+titwe: document.cwose()
+swug: w-web/api/document/cwose
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-El método `document.close()` finaliza la escritura de un documento abierta con [document.open()](/es/docs/Web/API/Document/open).
+e-ew método `document.cwose()` f-finawiza w-wa escwituwa d-de un documento a-abiewta con [document.open()](/es/docs/web/api/document/open). (U ᵕ U❁)
 
-## Sintaxis
+## s-sintaxis
 
 ```js
-document.close();
+d-document.cwose();
 ```
 
-## Ejemplo
+## ejempwo
 
 ```js
-// Abrir un documento.
-// Escribir contenido en el documento.
-// Cerrar el documento.
+// abwiw un documento. -.-
+// escwibiw contenido en e-ew documento.
+// cewwaw ew documento. ^^;;
 document.open();
-document.write("<p>El único contenido.</p>");
-document.close();
+d-document.wwite("<p>ew único contenido.</p>");
+d-document.cwose();
 ```
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad del Navegador
+## compatibiwidad dew nyavegadow
 
-{{Compat}}
+{{compat}}

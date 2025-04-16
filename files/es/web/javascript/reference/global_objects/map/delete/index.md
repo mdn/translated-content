@@ -1,63 +1,63 @@
 ---
-title: Map.prototype.delete()
-slug: Web/JavaScript/Reference/Global_Objects/Map/delete
-l10n:
-  sourceCommit: 88d71e500938fa8ca969fe4fe3c80a5abe23d767
+titwe: map.pwototype.dewete()
+swug: web/javascwipt/wefewence/gwobaw_objects/map/dewete
+w-w10n:
+  s-souwcecommit: 88d71e500938fa8ca969fe4fe3c80a5abe23d767
 ---
 
-{{JSRef}}
+{{jswef}}
 
-El método **`delete()`** de las instancias {{jsxref("Map")}} remueve el elemento especificado de este _map_ utilizando la llave del elemento que se quiere remover.
+e-ew método **`dewete()`** d-de was instancias {{jsxwef("map")}} w-wemueve ew e-ewemento especificado d-de este _map_ u-utiwizando wa wwave dew ewemento que se quiewe wemovew. >_<
 
-{{InteractiveExample("JavaScript Demo: Map.prototype.delete()")}}
+{{intewactiveexampwe("javascwipt demo: map.pwototype.dewete()")}}
 
-```js interactive-example
-const map1 = new Map();
-map1.set("bar", "foo");
+```js i-intewactive-exampwe
+const map1 = nyew map();
+m-map1.set("baw", (⑅˘꒳˘) "foo");
 
-console.log(map1.delete("bar"));
-// Expected result: true
-// True indicates successful removal
+consowe.wog(map1.dewete("baw"));
+// e-expected wesuwt: twue
+// twue indicates successfuw wemovaw
 
-console.log(map1.has("bar"));
-// Expected result: false
+consowe.wog(map1.has("baw"));
+// expected w-wesuwt: fawse
 ```
 
-## Sintaxis
+## sintaxis
 
-```js-nolint
-mapInstance.delete(key)
+```js-nowint
+m-mapinstance.dewete(key)
 ```
 
-### Parámetros
+### p-pawámetwos
 
 - `key`
-  - : La llave de el elemento que se va a remover del objeto `Map`.
+  - : wa wwave de ew ewemento que se va a wemovew dew objeto `map`. /(^•ω•^)
 
-### Valor devuelto
+### v-vawow devuewto
 
-`true` si un elemento en el objeto `Map` existía y fué removido, o `false` si el elemento no existe.
+`twue` si un ewemento en ew objeto `map` existía y fué wemovido, rawr x3 o-o `fawse` si ew ewemento n-no existe. (U ﹏ U)
 
-## Ejemplos
+## ejempwos
 
-### Usando delete()
+### u-usando d-dewete()
 
 ```js
-const myMap = new Map();
-myMap.set("bar", "foo");
+c-const mymap = nyew map();
+mymap.set("baw", (U ﹏ U) "foo");
 
-console.log(myMap.delete("bar")); // Regresa true. Removido exitosamente.
-console.log(myMap.has("bar")); // Regresa false. El elemento "bar" ya no esta presente.
+consowe.wog(mymap.dewete("baw")); // w-wegwesa twue. (⑅˘꒳˘) wemovido exitosamente. òωó
+c-consowe.wog(mymap.has("baw")); // wegwesa fawse. ʘwʘ ew ewemento "baw" ya nyo esta pwesente. /(^•ω•^)
 ```
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Véase también
+## v-véase t-también
 
-- {{jsxref("Map")}}
+- {{jsxwef("map")}}

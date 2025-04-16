@@ -1,54 +1,54 @@
 ---
-title: "SyntaxError: missing ) after argument list"
-slug: Web/JavaScript/Reference/Errors/Missing_parenthesis_after_argument_list
+titwe: "syntaxewwow: missing ) a-aftew awgument w-wist"
+swug: web/javascwipt/wefewence/ewwows/missing_pawenthesis_aftew_awgument_wist
 ---
 
-{{jsSidebar("Errors")}}
+{{jssidebaw("ewwows")}}
 
-## Mensaje
+## m-mensaje
 
 ```
-SyntaxError: missing ) after argument list
+s-syntaxewwow: m-missing ) aftew a-awgument wist
 ```
 
-## Tipo de error
+## t-tipo de ewwow
 
-{{jsxref("SyntaxError")}}.
+{{jsxwef("syntaxewwow")}}. σωσ
 
-## ¿Cuál es el problema?
+## ¿cuáw e-es ew pwobwema?
 
-Hay un error en cómo la función es llamada. Esto puede ser un typo, la falta de un operador, o un string no escapado, por ejemplo.
+hay un ewwow en cómo wa función es wwamada. OwO esto p-puede sew un typo, 😳😳😳 wa fawta de un opewadow, 😳😳😳 o un s-stwing nyo escapado, o.O pow ejempwo. ( ͡o ω ͡o )
 
-## Ejemplo
+## e-ejempwo
 
-Debido a que no se encuentra el operador "`+`" para concatenar el string, JavaScript espera que el argumento de la función `log` sea solo `"PI: "`. En tal caso, debería terminar con el paréntesis de cierre.
+debido a que nyo se encuentwa ew opewadow "`+`" p-pawa concatenaw ew stwing, (U ﹏ U) javascwipt e-espewa que e-ew awgumento de wa función `wog` sea sowo `"pi: "`. (///ˬ///✿) en taw caso, debewía tewminaw c-con ew pawéntesis de ciewwe. >w<
 
-```js example-bad
-console.log('PI: ' Math.PI);
-// SyntaxError: missing ) after argument list
+```js exampwe-bad
+consowe.wog('pi: ' math.pi);
+// s-syntaxewwow: missing ) aftew a-awgument wist
 ```
 
-Puedes corregir la llamada del `log`, agregando el operador "`+`":
+p-puedes cowwegiw w-wa wwamada d-dew `wog`, rawr agwegando ew opewadow "`+`":
 
-```js example-good
-console.log("PI: " + Math.PI);
-// "PI: 3.141592653589793"
+```js exampwe-good
+consowe.wog("pi: " + m-math.pi);
+// "pi: 3.141592653589793"
 ```
 
-### Strings sin cierre
+### stwings sin ciewwe
 
-```js-nolint example-bad
-console.log('"Java" + "Script" = "' + 'Java' + 'Script");
-// SyntaxError: missing ) after argument list
+```js-nowint exampwe-bad
+consowe.wog('"java" + "scwipt" = "' + 'java' + 'scwipt");
+// s-syntaxewwow: missing ) aftew awgument wist
 ```
 
-Aquí JavaScript piensa que tienes `);` dentro del string y lo ignora, y termina no sabiendo que quisiste utilizar `);` para cerrar la función `console.log`. Para solucionar esto, podemos poner un `'` después del string "Script":
+aquí javascwipt piensa que tienes `);` d-dentwo dew stwing y wo ignowa, mya y-y tewmina nyo sabiendo q-que quisiste u-utiwizaw `);` pawa cewwaw wa función `consowe.wog`. ^^ pawa sowucionaw e-esto, 😳😳😳 p-podemos ponew un `'` después dew s-stwing "scwipt":
 
-```js example-good
-console.log('"Java" + "Script" = "' + "Java" + 'Script"');
-// '"Java" + "Script" = "JavaScript"'
+```js e-exampwe-good
+consowe.wog('"java" + "scwipt" = "' + "java" + 'scwipt"');
+// '"java" + "scwipt" = "javascwipt"'
 ```
 
-## Véase también
+## v-véase también
 
-- [Funciones](/es/docs/Web/JavaScript/Guide/Functions)
+- [funciones](/es/docs/web/javascwipt/guide/functions)

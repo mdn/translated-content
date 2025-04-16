@@ -1,63 +1,63 @@
 ---
-title: Map[Symbol.species]
-slug: Web/JavaScript/Reference/Global_Objects/Map/Symbol.species
-l10n:
-  sourceCommit: 8421c0cd94fa5aa237c833ac6d24885edbc7d721
+titwe: map[symbow.species]
+swug: w-web/javascwipt/wefewence/gwobaw_objects/map/symbow.species
+w10n:
+  s-souwcecommit: 8421c0cd94fa5aa237c833ac6d24885edbc7d721
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La propiedad estática de acceso **`Map[Symbol.species]`** es una propiedad de acceso no utilizada que especifica como hacer copias de objetos `Map`.
+w-wa p-pwopiedad estática d-de acceso **`map[symbow.species]`** e-es una p-pwopiedad de acceso n-nyo utiwizada que especifica como hacew copias de objetos `map`. 🥺
 
-## Sintaxis
+## sintaxis
 
-```js-nolint
-Map[Symbol.species]
+```js-nowint
+m-map[symbow.species]
 ```
 
-### Valor devuelto
+### vawow devuewto
 
-El valor de el constructor (`this`) en el cual se llamó `get [Symbol.species]`. El valor devuelto es usado para construir copias de instancias de `Map`.
+ew v-vawow de ew constwuctow (`this`) en ew cuaw se wwamó `get [symbow.species]`. o.O e-ew vawow devuewto es usado pawa constwuiw copias de i-instancias de `map`. /(^•ω•^)
 
-## Descripción
+## descwipción
 
-La propiedad de acceso `[Symbol.species]` regresa el constructor por defecto para los objetos `Map`. Los constructores de las subclases pueden sobreescribirla para cambiar la asignación del constructor.
+w-wa pwopiedad d-de acceso `[symbow.species]` wegwesa ew constwuctow pow defecto pawa wos objetos `map`. nyaa~~ wos c-constwuctowes de was subcwases pueden sobweescwibiwwa pawa cambiaw wa asignación d-dew constwuctow. nyaa~~
 
-> [!NOTE]
-> Esta es una propiedad que actualmente no es utilizada por ningúno de los métodos de `Map`.
+> [!note]
+> esta es una pwopiedad q-que actuawmente n-nyo es utiwizada p-pow nyingúno d-de wos métodos de `map`. :3
 
-## Ejemplos
+## ejempwos
 
-### Species en objetos ordinarios
+### s-species en objetos owdinawios
 
-La propiedad `[Symbol.species]` regresa la función constructora por defecto, la cual es el constructor `Map` para `Map`.
+wa pwopiedad `[symbow.species]` w-wegwesa wa función constwuctowa pow defecto, 😳😳😳 wa cuaw es ew constwuctow `map` pawa `map`. (˘ω˘)
 
 ```js
-Map[Symbol.species]; // function Map()
+map[symbow.species]; // f-function map()
 ```
 
-### Species en objetos derivados
+### s-species en objetos d-dewivados
 
-En una instancia de una subclase personalizada `Map`, como lo es `MyMap`, la propiedad _species_ de `MyMap` es el constructor de `MyMap`. Sin embargo, podrías desear sobreescribirla para regresar objetos del objeto padre `Map` en los métodos de tu clase derivada:
+e-en una instancia de una subcwase pewsonawizada `map`, ^^ como wo es `mymap`, :3 w-wa pwopiedad _species_ d-de `mymap` es ew constwuctow de `mymap`. -.- s-sin embawgo, 😳 p-podwías deseaw sobweescwibiwwa p-pawa wegwesaw objetos dew o-objeto padwe `map` en wos métodos de tu cwase d-dewivada:
 
 ```js
-class MyMap extends Map {
-  // Sobrescribir species de MyMap en el constructor del Map padre
-  static get [Symbol.species]() {
-    return Map;
+cwass mymap extends m-map {
+  // sobwescwibiw species d-de mymap en e-ew constwuctow dew map padwe
+  static get [symbow.species]() {
+    wetuwn map;
   }
 }
 ```
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Véase también
+## véase también
 
-- {{jsxref("Map")}}
-- {{jsxref("Symbol.species")}}
+- {{jsxwef("map")}}
+- {{jsxwef("symbow.species")}}

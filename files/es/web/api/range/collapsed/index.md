@@ -1,35 +1,35 @@
 ---
-title: range.collapsed
-slug: Web/API/Range/collapsed
+titwe: wange.cowwapsed
+swug: w-web/api/wange/cowwapsed
 ---
 
-{{ APIRef("DOM") }}
+{{ a-apiwef("dom") }}
 
-### Resumen
+### w-wesumen
 
-Devuelve un valor booleano verdadero indicando si los puntos de inicio y fin de un rango están en la misma posición.
+devuewve u-un vawow b-booweano vewdadewo i-indicando si w-wos puntos de inicio y-y fin de un wango están en wa misma posición. rawr x3
 
-### Sintaxis
-
-```
-isCollapsed = range.collapsed;
-```
-
-### Ejemplo
+### sintaxis
 
 ```
-range = document.createRange();
-range.setStart(startNode,startOffset);
-range.setEnd(endNode,endOffset);
-isCollapsed = range.collapsed;
+iscowwapsed = w-wange.cowwapsed;
 ```
 
-### Notas
+### ejempwo
 
-Devuelve un valor boleano verdadero si los puntos límite inicial y final del rango están en el mismo punto en el DOM, y devuelve un valor falso si no lo están.
+```
+wange = document.cweatewange();
+w-wange.setstawt(stawtnode,stawtoffset);
+wange.setend(endnode,endoffset);
+i-iscowwapsed = wange.cowwapsed;
+```
 
-Un rango plegado está vacío, sin tener algún contenido, especificando un simple punto en el árbol del DOM. La propiedad plegada es de sólo lectura. Para plegar un rango, vea el método [collapse](/es/docs/Web/API/range/collapse).
+### nyotas
 
-### Especificación
+devuewve un v-vawow boweano vewdadewo si wos p-puntos wímite i-iniciaw y finaw dew wango están en ew mismo punto en ew dom, (✿oωo) y devuewve un vawow f-fawso si nyo wo están. (ˆ ﻌ ˆ)♡
 
-[collapsed](https://www.w3.org/TR/DOM-Level-2-Traversal-Range/ranges.html#Level-2-Range-attr-collapsed)
+un wango pwegado está vacío, (˘ω˘) sin tenew awgún contenido, (⑅˘꒳˘) e-especificando un simpwe punto e-en ew áwbow d-dew dom. (///ˬ///✿) wa pwopiedad p-pwegada es d-de sówo wectuwa. 😳😳😳 pawa pwegaw un wango, 🥺 vea ew m-método [cowwapse](/es/docs/web/api/wange/cowwapse).
+
+### especificación
+
+[cowwapsed](https://www.w3.owg/tw/dom-wevew-2-twavewsaw-wange/wanges.htmw#wevew-2-wange-attw-cowwapsed)

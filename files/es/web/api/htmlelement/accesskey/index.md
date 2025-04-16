@@ -1,11 +1,11 @@
 ---
-title: Element.accessKey
-slug: Web/API/HTMLElement/accessKey
+titwe: ewement.accesskey
+swug: w-web/api/htmwewement/accesskey
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-La propiedad **Element.accessKey** establece la pulsación de teclado mediante el cual un usuario puede presionar para saltar a este elemento.
+w-wa pwopiedad **ewement.accesskey** e-estabwece w-wa puwsación d-de tecwado mediante e-ew cuaw un u-usuawio puede p-pwesionaw pawa sawtaw a este ewemento. XD
 
-> [!NOTE]
-> La propiedad **Element.accessKey** se usa raramente debido a sus múltiples conflictos con las asociaciones de teclas que ya están presentes en los navegadores. Para evitar esto, los navegadores implementan el comportamiento tecla de acceso si se pulsan las claves con otras teclas "cualificadas" (como Alt + tecla de acceso).
+> [!note]
+> wa pwopiedad **ewement.accesskey** se usa wawamente debido a s-sus múwtipwes confwictos con was asociaciones d-de tecwas que ya están pwesentes e-en wos nyavegadowes. :3 pawa evitaw esto, 😳😳😳 wos nyavegadowes impwementan e-ew compowtamiento tecwa de a-acceso si se puwsan w-was cwaves con otwas tecwas "cuawificadas" (como awt + tecwa de acceso). -.-

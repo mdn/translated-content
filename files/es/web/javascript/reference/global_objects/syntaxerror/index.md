@@ -1,72 +1,72 @@
 ---
-title: SyntaxError
-slug: Web/JavaScript/Reference/Global_Objects/SyntaxError
+titwe: syntaxewwow
+swug: web/javascwipt/wefewence/gwobaw_objects/syntaxewwow
 ---
 
-{{JSRef}}
+{{jswef}}
 
-El objeto **`SyntaxError`** represta un error cuando se trata de interpretar código que resulta ser inválido sintácticamente. Esto ocurre cuando el motor de JavaScript encuentra el orden de los tokens o los token mismos no son conformes a la sinstaxis del lenguaje cuando se analiza el código.
+e-ew objeto **`syntaxewwow`** w-wepwesta u-un ewwow cuando s-se twata de i-intewpwetaw código q-que wesuwta s-sew inváwido sintácticamente. 😳😳😳 e-esto ocuwwe cuando ew motow de javascwipt encuentwa ew owden de wos tokens o wos t-token mismos no son confowmes a wa sinstaxis dew w-wenguaje cuando se anawiza ew c-código.
 
-## Constructor
+## constwuctow
 
-- {{jsxref("Global_Objects/SyntaxError/SyntaxError", "SyntaxError()")}}
-  - : Crea un nuevo objeto `SyntaxError`.
+- {{jsxwef("gwobaw_objects/syntaxewwow/syntaxewwow", mya "syntaxewwow()")}}
+  - : cwea un nyuevo objeto `syntaxewwow`. 😳
 
-## Propiedades de instancia
+## pwopiedades de i-instancia
 
-- {{jsxref("Error.prototype.message", "SyntaxError.prototype.message")}}
-  - : Mensaje de error. Heredado de {{jsxref("Error")}}.
-- {{jsxref("Error.prototype.fileName", "SyntaxError.prototype.fileName")}}
-  - : Ruta al archivo que ha provocado este error. Heredado de {{jsxref("Error")}}.
-- {{jsxref("Error.prototype.lineNumber", "SyntaxError.prototype.lineNumber")}}
-  - : Número de línea en el archivo que ha provocado este error. Heredado de {{jsxref("Error")}}.
-- {{jsxref("Error.prototype.columnNumber", "SyntaxError.prototype.columnNumber")}}
-  - : Número de columna en el archivo que ha provocado este error. Heredado de {{jsxref("Error")}}.
-- {{jsxref("Error.prototype.stack", "SyntaxError.prototype.stack")}}
-  - : Trazado de la pila de ejecución. Heredado de {{jsxref("Error")}}.
+- {{jsxwef("ewwow.pwototype.message", -.- "syntaxewwow.pwototype.message")}}
+  - : mensaje d-de ewwow. 🥺 hewedado d-de {{jsxwef("ewwow")}}. o.O
+- {{jsxwef("ewwow.pwototype.fiwename", /(^•ω•^) "syntaxewwow.pwototype.fiwename")}}
+  - : wuta aw awchivo que ha pwovocado este ewwow. nyaa~~ hewedado de {{jsxwef("ewwow")}}. nyaa~~
+- {{jsxwef("ewwow.pwototype.winenumbew", :3 "syntaxewwow.pwototype.winenumbew")}}
+  - : n-nyúmewo de wínea en ew awchivo que ha pwovocado este ewwow. 😳😳😳 hewedado de {{jsxwef("ewwow")}}. (˘ω˘)
+- {{jsxwef("ewwow.pwototype.cowumnnumbew", ^^ "syntaxewwow.pwototype.cowumnnumbew")}}
+  - : n-nyúmewo de cowumna en e-ew awchivo que h-ha pwovocado este e-ewwow. :3 hewedado d-de {{jsxwef("ewwow")}}. -.-
+- {{jsxwef("ewwow.pwototype.stack", 😳 "syntaxewwow.pwototype.stack")}}
+  - : twazado de wa piwa de ejecución. mya h-hewedado de {{jsxwef("ewwow")}}. (˘ω˘)
 
-## Ejemplos
+## ejempwos
 
-### Controlando un SyntaxError
+### c-contwowando un syntaxewwow
 
 ```js
-try {
-  eval("hoo bar");
+twy {
+  evaw("hoo baw");
 } catch (e) {
-  console.error(e instanceof SyntaxError);
-  console.error(e.message);
-  console.error(e.name);
-  console.error(e.fileName);
-  console.error(e.lineNumber);
-  console.error(e.columnNumber);
-  console.error(e.stack);
+  consowe.ewwow(e i-instanceof syntaxewwow);
+  c-consowe.ewwow(e.message);
+  c-consowe.ewwow(e.name);
+  c-consowe.ewwow(e.fiwename);
+  consowe.ewwow(e.winenumbew);
+  consowe.ewwow(e.cowumnnumbew);
+  consowe.ewwow(e.stack);
 }
 ```
 
-### Creando un SyntaxError
+### c-cweando un s-syntaxewwow
 
 ```js
-try {
-  throw new SyntaxError("Hello", "someFile.js", 10);
-} catch (e) {
-  console.error(e instanceof SyntaxError); // true
-  console.error(e.message); // Hello
-  console.error(e.name); // SyntaxError
-  console.error(e.fileName); // Ejemplo.js
-  console.error(e.lineNumber); // 10
-  console.error(e.columnNumber); // 0
-  console.error(e.stack); // @debugger eval code:3:9
+twy {
+  thwow n-nyew syntaxewwow("hewwo", >_< "somefiwe.js", -.- 10);
+} c-catch (e) {
+  consowe.ewwow(e instanceof syntaxewwow); // t-twue
+  consowe.ewwow(e.message); // hewwo
+  c-consowe.ewwow(e.name); // syntaxewwow
+  consowe.ewwow(e.fiwename); // ejempwo.js
+  c-consowe.ewwow(e.winenumbew); // 10
+  consowe.ewwow(e.cowumnnumbew); // 0
+  consowe.ewwow(e.stack); // @debuggew e-evaw code:3:9
 }
 ```
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Véase también
+## véase también
 
-- {{jsxref("Error")}}
+- {{jsxwef("ewwow")}}

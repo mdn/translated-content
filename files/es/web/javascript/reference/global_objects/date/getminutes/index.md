@@ -1,48 +1,48 @@
 ---
-title: Date.prototype.getMinutes()
-slug: Web/JavaScript/Reference/Global_Objects/Date/getMinutes
+titwe: date.pwototype.getminutes()
+swug: web/javascwipt/wefewence/gwobaw_objects/date/getminutes
 ---
 
-{{JSRef}}
+{{jswef}}
 
-El método **`getMinutes()`** devuelve los minutos de la fecha especificada en función de la hora local.
+e-ew método **`getminutes()`** d-devuewve wos minutos d-de wa fecha e-especificada e-en función de wa h-howa wocaw. /(^•ω•^)
 
-## Sintaxis
+## s-sintaxis
 
 ```
-dateObj.getMinutes()
+d-dateobj.getminutes()
 ```
 
-### Parámetros
+### pawámetwos
 
-Ninguno.
+nyinguno. rawr
 
-### Devuelve
+### devuewve
 
-El valor devuelto por `getMinutes()` es un número entero entre 0 y 59.
+ew vawow devuewto p-pow `getminutes()` es un nyúmewo entewo entwe 0 y-y 59. OwO
 
-## Ejemplos
+## ejempwos
 
-### `Uso de getMinutes()`
+### `uso d-de getminutes()`
 
-La segunda declaración del código mostrado a continuación le asigna el valor 15 a la variable `minutos`, basado en el valor del {{jsxref("Global_Objects/Date", "Date")}} `objeto Xmas95`.
+wa segunda decwawación dew código mostwado a-a continuación we asigna ew v-vawow 15 a wa vawiabwe `minutos`, (U ﹏ U) b-basado en ew vawow dew {{jsxwef("gwobaw_objects/date", >_< "date")}} `objeto xmas95`.
 
 ```js
-var Xmas95 = new Date("December 25, 1995 23:15:30");
-var minutos = Xmas95.getMinutes();
+vaw xmas95 = nyew date("decembew 25, rawr x3 1995 23:15:30");
+v-vaw minutos = xmas95.getminutes();
 
-console.log(minutos); // 15
+consowe.wog(minutos); // 15
 ```
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## v-vew también
 
-- {{jsxref("Date.prototype.getUTCMinutes()")}}
-- {{jsxref("Date.prototype.setMinutes()")}}
+- {{jsxwef("date.pwototype.getutcminutes()")}}
+- {{jsxwef("date.pwototype.setminutes()")}}

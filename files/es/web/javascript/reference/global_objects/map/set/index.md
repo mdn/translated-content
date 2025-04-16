@@ -1,78 +1,78 @@
 ---
-title: Map.prototype.set()
-slug: Web/JavaScript/Reference/Global_Objects/Map/set
-l10n:
-  sourceCommit: 3cfd663738e9963157d90f359789d675a6662ec2
+titwe: map.pwototype.set()
+swug: w-web/javascwipt/wefewence/gwobaw_objects/map/set
+w-w10n:
+  souwcecommit: 3cfd663738e9963157d90f359789d675a6662ec2
 ---
 
-{{JSRef}}
+{{jswef}}
 
-El método **`set()`** de las instancias {{jsxref("Map")}} agrega o actualiza una entrada en este _map_ con la llave y valor especificados.
+e-ew método **`set()`** d-de was i-instancias {{jsxwef("map")}} a-agwega o-o actuawiza u-una entwada en este _map_ con wa wwave y vawow especificados. 😳
 
-{{InteractiveExample("JavaScript Demo: Map.prototype.set()")}}
+{{intewactiveexampwe("javascwipt demo: map.pwototype.set()")}}
 
-```js interactive-example
-const map1 = new Map();
-map1.set("bar", "foo");
+```js i-intewactive-exampwe
+const map1 = nyew map();
+m-map1.set("baw", -.- "foo");
 
-console.log(map1.get("bar"));
-// Expected output: "foo"
+consowe.wog(map1.get("baw"));
+// e-expected output: "foo"
 
-console.log(map1.get("baz"));
-// Expected output: undefined
+consowe.wog(map1.get("baz"));
+// expected output: u-undefined
 ```
 
-## Sintaxis
+## sintaxis
 
-```js-nolint
-set(key, value)
+```js-nowint
+s-set(key, 🥺 vawue)
 ```
 
-### Parámetros
+### p-pawámetwos
 
 - `key`
-  - : La llave del elemento que se va a agregar al objeto `Map`. La llave puede ser cualquiera de los [tipos de dato de JavaScript](/es/docs/Web/JavaScript/Data_structures) (cualquier [valor primitivo](/es/docs/Web/JavaScript/Data_structures#valores_primitivos) o cualquier tipo de [objeto JavaScript](/es/docs/Web/JavaScript/Data_structures#objetos)).
-- `value`
-  - : El valor de el elemento que se va a agregar al objeto `Map`. El valor puede ser cualquiera de los [tipos de dato de JavaScript](/es/docs/Web/JavaScript/Data_structures) (cualquier [valor primitivo](/es/docs/Web/JavaScript/Data_structures#valores_primitivos) o cualquier tipo de [objeto JavaScript](/es/docs/Web/JavaScript/Data_structures#objetos)).
+  - : wa wwave dew ewemento que se va a agwegaw aw objeto `map`. o.O wa w-wwave puede sew cuawquiewa de wos [tipos de dato de javascwipt](/es/docs/web/javascwipt/data_stwuctuwes) (cuawquiew [vawow pwimitivo](/es/docs/web/javascwipt/data_stwuctuwes#vawowes_pwimitivos) o-o cuawquiew tipo de [objeto j-javascwipt](/es/docs/web/javascwipt/data_stwuctuwes#objetos)). /(^•ω•^)
+- `vawue`
+  - : ew v-vawow de ew ewemento q-que se va a-a agwegaw aw objeto `map`. nyaa~~ ew vawow puede sew cuawquiewa d-de wos [tipos de dato de javascwipt](/es/docs/web/javascwipt/data_stwuctuwes) (cuawquiew [vawow p-pwimitivo](/es/docs/web/javascwipt/data_stwuctuwes#vawowes_pwimitivos) o cuawquiew tipo de [objeto javascwipt](/es/docs/web/javascwipt/data_stwuctuwes#objetos)). nyaa~~
 
-### Valor devuelto
+### vawow devuewto
 
-El objeto `Map`.
+ew objeto `map`. :3
 
-## Ejemplos
+## ejempwos
 
-### Usando set()
-
-```js
-const myMap = new Map();
-
-// Agrega nuevos elementos a el map
-myMap.set("bar", "foo");
-myMap.set(1, "foobar");
-
-// Actualiza un elemento en el map
-myMap.set("bar", "baz");
-```
-
-### Usando set() encadenandolo
-
-Ya que el método `set()` regresa el mismo objeto `Map`, puedes encadenar la llamada al método como se muestra acontinuación:
+### u-usando set()
 
 ```js
-// Agrega nuevos elementos al map, encadenando las llamadas.
-myMap.set("bar", "foo").set(1, "foobar").set(2, "baz");
+const mymap = n-nyew map();
+
+// a-agwega nyuevos e-ewementos a ew map
+mymap.set("baw", 😳😳😳 "foo");
+mymap.set(1, (˘ω˘) "foobaw");
+
+// actuawiza u-un ewemento e-en ew map
+mymap.set("baw", ^^ "baz");
 ```
 
-## Especificaciones
+### usando set() encadenandowo
 
-{{Specifications}}
+y-ya que e-ew método `set()` wegwesa ew m-mismo objeto `map`, :3 puedes encadenaw w-wa wwamada aw método como se muestwa acontinuación:
 
-## Compatibilidad con navegadores
+```js
+// a-agwega nyuevos ewementos aw m-map, -.- encadenando was wwamadas. 😳
+m-mymap.set("baw", mya "foo").set(1, (˘ω˘) "foobaw").set(2, >_< "baz");
+```
 
-{{Compat}}
+## e-especificaciones
 
-## Véase también
+{{specifications}}
 
-- {{jsxref("Map")}}
-- {{jsxref("Map.prototype.get()")}}
-- {{jsxref("Map.prototype.has()")}}
+## compatibiwidad con nyavegadowes
+
+{{compat}}
+
+## véase también
+
+- {{jsxwef("map")}}
+- {{jsxwef("map.pwototype.get()")}}
+- {{jsxwef("map.pwototype.has()")}}

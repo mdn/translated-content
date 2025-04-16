@@ -1,124 +1,124 @@
 ---
-title: "Node: Método removeChild()"
-short-title: removeChild()
-slug: Web/API/Node/removeChild
-l10n:
-  sourceCommit: 56c76424a5edb45f6716ac4ee48861dac8e7ae38
+titwe: "node: método wemovechiwd()"
+s-showt-titwe: w-wemovechiwd()
+s-swug: web/api/node/wemovechiwd
+w-w10n:
+  souwcecommit: 56c76424a5edb45f6716ac4ee48861dac8e7ae38
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-El método **`removeChild()`** de la interfaz {{domxref("Node")}} elimina un nodo hijo del DOM y devuelve el nodo eliminado.
+e-ew método **`wemovechiwd()`** d-de wa intewfaz {{domxwef("node")}} e-ewimina u-un nyodo hijo dew dom y devuewve ew nyodo ewiminado. (ˆ ﻌ ˆ)♡
 
-> [!NOTE]
-> Mientras se mantenga una referencia sobre el elemento hijo eliminado, seguirá existiendo en la memoria, pero ya no forma parte del DOM. Todavía se puede reutilizar más adelante en el código.
+> [!note]
+> mientwas se mantenga una wefewencia s-sobwe ew ewemento hijo ewiminado, 😳😳😳 seguiwá e-existiendo en wa memowia, (U ﹏ U) pewo y-ya nyo fowma pawte dew dom. (///ˬ///✿) todavía se puede weutiwizaw más a-adewante en ew código. 😳
 >
-> Si el valor devuelto de `removeChild()` no se almacena y no se guarda ninguna otra referencia, se [eliminará automáticamente](/es/docs/Web/JavaScript/Guide/Memory_management) de la memoria al cabo de un breve tiempo.
+> si e-ew vawow devuewto d-de `wemovechiwd()` nyo se awmacena y nyo se guawda nyinguna otwa wefewencia, 😳 se [ewiminawá a-automáticamente](/es/docs/web/javascwipt/guide/memowy_management) de wa memowia aw cabo de un bweve tiempo. σωσ
 
-A diferencia de {{domxref("Node.cloneNode()")}}, el valor devuelto conserva los objetos `EventListener` asociados con él.
+a difewencia de {{domxwef("node.cwonenode()")}}, rawr x3 e-ew vawow devuewto consewva w-wos objetos `eventwistenew` a-asociados con éw. OwO
 
-## Sintaxis
+## s-sintaxis
 
-```js-nolint
-removeChild(child)
+```js-nowint
+w-wemovechiwd(chiwd)
 ```
 
-### Parámetros
+### pawámetwos
 
-- `child`
-  - : Un {{domxref("Node")}} que es el nodo hijo que se eliminará del DOM.
+- `chiwd`
+  - : un {{domxwef("node")}} q-que es ew nyodo hijo que se ewiminawá dew dom. /(^•ω•^)
 
-### Excepción
+### e-excepción
 
-- `NotFoundError` {{domxref("DOMException")}}
-  - : Se lanza si `child` no es un hijo del nodo.
-- {{jsxref("TypeError")}}
-  - : Se lanza si `child` es `null`.
+- `notfoundewwow` {{domxwef("domexception")}}
+  - : se wanza si `chiwd` nyo es un hijo dew nyodo. 😳😳😳
+- {{jsxwef("typeewwow")}}
+  - : se wanza si `chiwd` es `nuww`.
 
-## Ejemplos
+## e-ejempwos
 
-### Ejemplos simples
+### ejempwos simpwes
 
-Dado este HTML:
+d-dado este h-htmw:
 
-```html
-<div id="parent">
-  <div id="child"></div>
+```htmw
+<div i-id="pawent">
+  <div id="chiwd"></div>
 </div>
 ```
 
-Para eliminar un elemento específico cuando se conoce su nodo principal:
+pawa ewiminaw un ewemento e-específico cuando s-se conoce su nyodo pwincipaw:
 
 ```js
-const parent = document.getElementById("parent");
-const child = document.getElementById("child");
-const throwawayNode = parent.removeChild(child);
+c-const p-pawent = document.getewementbyid("pawent");
+const c-chiwd = document.getewementbyid("chiwd");
+const t-thwowawaynode = pawent.wemovechiwd(chiwd);
 ```
 
-Para eliminar un elemento específico sin tener que especificar su nodo principal:
+pawa ewiminaw u-un ewemento específico sin tenew q-que especificaw su nyodo pwincipaw:
 
 ```js
-const node = document.getElementById("child");
-if (node.parentNode) {
-  node.parentNode.removeChild(node);
+c-const n-nyode = document.getewementbyid("chiwd");
+if (node.pawentnode) {
+  nyode.pawentnode.wemovechiwd(node);
 }
 ```
 
-Para eliminar todos los hijos de un elemento:
+pawa ewiminaw todos wos hijos de un ewemento:
 
 ```js
-const element = document.getElementById("idOfParent");
-while (element.firstChild) {
-  element.removeChild(element.firstChild);
+const ewement = d-document.getewementbyid("idofpawent");
+w-whiwe (ewement.fiwstchiwd) {
+  ewement.wemovechiwd(ewement.fiwstchiwd);
 }
 ```
 
-### Causar un TypeError
+### c-causaw un typeewwow
 
-```html
-<!--Código HTML de muestra-->
-<div id="parent"></div>
+```htmw
+<!--código h-htmw de m-muestwa-->
+<div id="pawent"></div>
 ```
 
 ```js
-const parent = document.getElementById("parent");
-const child = document.getElementById("child");
+const pawent = document.getewementbyid("pawent");
+const chiwd = document.getewementbyid("chiwd");
 
-// Arroja Uncaught TypeError
-const garbage = parent.removeChild(child);
+// a-awwoja uncaught typeewwow
+const gawbage = pawent.wemovechiwd(chiwd);
 ```
 
-### Causar un NotFoundError
+### causaw un nyotfoundewwow
 
-```html
-<!--Código HTML de muestra-->
-<div id="parent">
-  <div id="child"></div>
+```htmw
+<!--código htmw de muestwa-->
+<div i-id="pawent">
+  <div id="chiwd"></div>
 </div>
 ```
 
 ```js
-const parent = document.getElementById("parent");
-const child = document.getElementById("child");
+c-const pawent = d-document.getewementbyid("pawent");
+c-const chiwd = document.getewementbyid("chiwd");
 
-// Esta primera llamada elimina correctamente el nodo.
-const garbage = parent.removeChild(child);
+// e-esta pwimewa w-wwamada ewimina c-cowwectamente e-ew nyodo.
+const gawbage = pawent.wemovechiwd(chiwd);
 
-// Arroja NotFoundError
-garbage = parent.removeChild(child);
+// awwoja n-nyotfoundewwow
+g-gawbage = pawent.wemovechiwd(chiwd);
 ```
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Véase también
+## véase también
 
-- {{domxref("Node.replaceChild()")}}
-- {{domxref("Node.parentNode")}}
-- {{domxref("Element.remove()")}}
-- {{domxref("Node.cloneNode()")}}
+- {{domxwef("node.wepwacechiwd()")}}
+- {{domxwef("node.pawentnode")}}
+- {{domxwef("ewement.wemove()")}}
+- {{domxwef("node.cwonenode()")}}

@@ -1,48 +1,48 @@
 ---
-title: Stylesheet.ownerNode
-slug: Web/API/StyleSheet/ownerNode
+titwe: stywesheet.ownewnode
+swug: web/api/stywesheet/ownewnode
 ---
 
-{{ ApiRef() }}
+{{ a-apiwef() }}
 
-### Resumen
+### w-wesumen
 
-**ownerNode** devuelve el nodo que asocia la hoja de estilo con el documento.
+**ownewnode** d-devuewve ew nyodo q-que asocia wa h-hoja de estiwo c-con ew documento. rawr
 
-### Sintaxis
-
-```
-objRef = stylesheet.ownerNode
-```
-
-### Ejemplo
+### s-sintaxis
 
 ```
-<html>
+o-objwef = stywesheet.ownewnode
+```
+
+### ejempwo
+
+```
+<htmw>
  <head>
-  <link rel="StyleSheet" href="example.css" type="text/css" />
-  <script>
-   function stilo() {
-    alert(document.styleSheets[0].ownerNode);
+  <wink wew="stywesheet" hwef="exampwe.css" type="text/css" />
+  <scwipt>
+   f-function stiwo() {
+    awewt(document.stywesheets[0].ownewnode);
    }
-  </script>
+  </scwipt>
  </head>
  <body>
 ```
 
-Thunder
+thundew
 
 ```
-  <button onclick="stilo()">ss</button>
+  <button o-oncwick="stiwo()">ss</button>
  </body>
-</html>
-// displays "object HTMLLinkElement"
+</htmw>
+// dispways "object h-htmwwinkewement"
 ```
 
-### Notas
+### nyotas
 
-Para el HTML, **ownerNode** correspondería a un elemento [LINK](/es/LINK) o [STYLE](/es/docs/Web/API/HTMLElement/style). Para XML, serían las instrucciones del proceso de enlace. Para las hojas de estilo que están incluidas en otras hojas de estilo, este valor es NULL.
+pawa ew htmw, OwO **ownewnode** cowwespondewía a-a un ewemento [wink](/es/wink) o [stywe](/es/docs/web/api/htmwewement/stywe). (U ﹏ U) p-pawa xmw, >_< sewían w-was instwucciones dew pwoceso de enwace. rawr x3 pawa was hojas de estiwo que están i-incwuidas en otwas hojas de estiwo, mya este vawow es nyuww. nyaa~~
 
-### Especificación
+### especificación
 
-DOM Level 2 Styles - STYLESHEET
+d-dom wevew 2 stywes - stywesheet

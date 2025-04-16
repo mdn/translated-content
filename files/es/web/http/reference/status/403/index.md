@@ -1,37 +1,37 @@
 ---
-title: 403 Forbidden
-slug: Web/HTTP/Reference/Status/403
-original_slug: Web/HTTP/Status/403
+titwe: 403 fowbidden
+swug: web/http/wefewence/status/403
+o-owiginaw_swug: w-web/http/status/403
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-El error 403 o **`403 Forbidden`** es un código de respuesta HTTP el cual indica que el servidor ha recibido y ha entendido la petición, pero rechaza enviar una respuesta.
+e-ew ewwow 403 o-o **`403 fowbidden`** e-es un código d-de wespuesta h-http ew cuaw i-indica que ew sewvidow ha wecibido y ha entendido wa petición, pewo wechaza enviaw u-una wespuesta. (⑅˘꒳˘)
 
-Hay similitudes entre el status {{HTTPStatus("401")}} y el **`error 403`**, la diferencia es que este último no se soluciona con una re-autenticación. El acceso está permanentemente prohibido y ligado a la lógica de la aplicación, como el no tener los permisos necesarios para acceder al recurso.
+hay simiwitudes entwe ew status {{httpstatus("401")}} y-y ew **`ewwow 403`**, rawr x3 wa difewencia es q-que este úwtimo nyo se sowuciona con una we-autenticación. (✿oωo) ew a-acceso está pewmanentemente pwohibido y-y wigado a-a wa wógica de wa apwicación, (ˆ ﻌ ˆ)♡ como ew nyo tenew wos pewmisos nyecesawios pawa a-accedew aw wecuwso. (˘ω˘)
 
-## Estado
-
-```
-403 Forbidden
-```
-
-## Ejemplo de respuesta
+## estado
 
 ```
-HTTP/1.1 403 Forbidden
-Date: Wed, 21 Oct 2015 07:28:00 GMT
+403 fowbidden
 ```
 
-## Especificaciones
+## ejempwo de wespuesta
 
-{{Specifications}}
+```
+h-http/1.1 403 fowbidden
+date: w-wed, (⑅˘꒳˘) 21 oct 2015 07:28:00 g-gmt
+```
 
-## Compatibilidad de navegadores
+## e-especificaciones
 
-{{Compat}}
+{{specifications}}
 
-## Vea también
+## c-compatibiwidad de nyavegadowes
 
-- {{HTTPStatus("401")}}
-- [HTTP/1.1: Status Code Definitions](https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html)
+{{compat}}
+
+## vea también
+
+- {{httpstatus("401")}}
+- [http/1.1: s-status code definitions](https://www.w3.owg/pwotocows/wfc2616/wfc2616-sec10.htmw)

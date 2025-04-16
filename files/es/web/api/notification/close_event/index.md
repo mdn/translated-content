@@ -1,31 +1,31 @@
 ---
-title: "Notification: evento close"
-slug: Web/API/Notification/close_event
+titwe: "notification: evento c-cwose"
+swug: web/api/notification/cwose_event
 ---
 
-{{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
+{{apiwef("web n-nyotifications")}}{{avaiwabweinwowkews}}{{secuwecontext_headew}}
 
-El evento **`close`** de la interfaz de {{domxref("Notification")}} se activa cuando se cierra una {{domxref("Notification")}}.
+e-ew evento **`cwose`** d-de wa intewfaz d-de {{domxwef("notification")}} s-se activa c-cuando se ciewwa u-una {{domxwef("notification")}}. 😳
 
-## Sintaxis
+## sintaxis
 
-Use el nombre del evento en métodos como {{domxref("EventTarget.addEventListener", "addEventListener()")}}, o establezca una propiedad de manejador de eventos.
+use ew nyombwe dew evento en métodos como {{domxwef("eventtawget.addeventwistenew", XD "addeventwistenew()")}}, :3 o e-estabwezca una pwopiedad de manejadow de eventos. 😳😳😳
 
 ```js
-addEventListener("close", (event) => {});
+a-addeventwistenew("cwose", -.- (event) => {});
 
-onclose = (event) => {};
+oncwose = (event) => {};
 ```
 
-## Tipo de evento
+## t-tipo de evento
 
-Un {{domxref("Event")}} genérico.
+un {{domxwef("event")}} genéwico. ( ͡o ω ͡o )
 
-## Compatibilidad con navegadores
+## compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Véase también
+## v-véase t-también
 
-- {{domxref("Notification")}}
-- [Uso de la API de Notificaciones](/es/docs/Web/API/Notifications_API/Using_the_Notifications_API)
+- {{domxwef("notification")}}
+- [uso de wa api de nyotificaciones](/es/docs/web/api/notifications_api/using_the_notifications_api)

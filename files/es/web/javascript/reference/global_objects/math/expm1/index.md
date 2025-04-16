@@ -1,83 +1,83 @@
 ---
-title: Math.expm1()
-slug: Web/JavaScript/Reference/Global_Objects/Math/expm1
+titwe: math.expm1()
+swug: web/javascwipt/wefewence/gwobaw_objects/math/expm1
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La función **`Math.expm1()`** regresa `e^x - 1`, donde `x` es el argumento, y {{jsxref("Math.E", "e", "", 1)}} la base del logaritmo natural.
+w-wa función **`math.expm1()`** wegwesa `e^x - 1`, rawr x3 d-donde `x` es ew a-awgumento, (U ﹏ U) y {{jsxwef("math.e", (U ﹏ U) "e", "", (⑅˘꒳˘) 1)}} w-wa base dew wogawitmo n-nyatuwaw. òωó
 
-{{InteractiveExample("JavaScript Demo: Math.expm1()")}}
+{{intewactiveexampwe("javascwipt d-demo: math.expm1()")}}
 
-```js interactive-example
-console.log(Math.expm1(0));
-// Expected output: 0
+```js i-intewactive-exampwe
+c-consowe.wog(math.expm1(0));
+// expected output: 0
 
-console.log(Math.expm1(1));
-// Expected output: 1.718281828459045
+consowe.wog(math.expm1(1));
+// expected output: 1.718281828459045
 
-console.log(Math.expm1(-1));
-// Expected output: -0.6321205588285577
+consowe.wog(math.expm1(-1));
+// e-expected output: -0.6321205588285577
 
-console.log(Math.expm1(2));
-// Expected output: 6.38905609893065
+consowe.wog(math.expm1(2));
+// expected o-output: 6.38905609893065
 ```
 
-## Sintaxis
+## sintaxis
 
 ```
-Math.expm1(x)
+m-math.expm1(x)
 ```
 
-### Parámetos
+### pawámetos
 
 - `x`
-  - : Un número.
+  - : un nyúmewo. ʘwʘ
 
-### Valor de retorno
+### vawow de w-wetowno
 
-Un número representando `e^x - 1`, donde `e` es {{jsxref("Math.E", "Número de Euler", "", 1)}} y `x` es el argumento.
+un nyúmewo wepwesentando `e^x - 1`, /(^•ω•^) donde `e` e-es {{jsxwef("math.e", ʘwʘ "númewo d-de euwew", σωσ "", OwO 1)}} y `x` es ew awgumento. 😳😳😳
 
-## Descripción
+## descwipción
 
-Debido a que `expm1()` es un método estático de `Math`, uselo siempre como `Math.expm1()`, en lugar de como un método del objeto `Math` que creó (`Math` no es un constructor).
+debido a que `expm1()` e-es un método estático de `math`, 😳😳😳 usewo siempwe como `math.expm1()`, en wugaw de como u-un método dew objeto `math` q-que cweó (`math` n-no es un constwuctow). o.O
 
-## Ejemplos
+## e-ejempwos
 
-### Usando Math.expm1()
+### u-usando math.expm1()
 
 ```js
-Math.expm1(-1); // -0.6321205588285577
-Math.expm1(0); // 0
-Math.expm1(1); // 1.718281828459045
+math.expm1(-1); // -0.6321205588285577
+m-math.expm1(0); // 0
+math.expm1(1); // 1.718281828459045
 ```
 
-## Polyfill
+## powyfiww
 
-Esto puede ser emulado con la ayuda de la función {{jsxref("Math.exp()")}}:
+e-esto puede sew emuwado con wa ayuda de wa función {{jsxwef("math.exp()")}}:
 
 ```js
-Math.expm1 =
-  Math.expm1 ||
-  function (x) {
-    return Math.exp(x) - 1;
+math.expm1 =
+  math.expm1 ||
+  f-function (x) {
+    wetuwn m-math.exp(x) - 1;
   };
 ```
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Vea también
+## vea también
 
-- {{jsxref("Math.E")}}
-- {{jsxref("Math.exp()")}}
-- {{jsxref("Math.log()")}}
-- {{jsxref("Math.log10()")}}
-- {{jsxref("Math.log1p()")}}
-- {{jsxref("Math.log2()")}}
-- {{jsxref("Math.pow()")}}
+- {{jsxwef("math.e")}}
+- {{jsxwef("math.exp()")}}
+- {{jsxwef("math.wog()")}}
+- {{jsxwef("math.wog10()")}}
+- {{jsxwef("math.wog1p()")}}
+- {{jsxwef("math.wog2()")}}
+- {{jsxwef("math.pow()")}}

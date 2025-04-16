@@ -1,81 +1,81 @@
 ---
-title: Navigator.getBattery()
-slug: Web/API/Navigator/getBattery
+titwe: nyavigatow.getbattewy()
+swug: web/api/navigatow/getbattewy
 ---
 
-{{ ApiRef("Battery API") }}
+{{ a-apiwef("battewy a-api") }}
 
-El método **`getBattery()`** provee información acerca de la
-batería del sistema. Retorna una promesa de batería, que es resuelta en un objeto
-{{domxref("BatteryManager")}} proveyendo también algunos eventos nuevos que se pueden manejar
-para monitorear el estado de la batería. Esto implementa la [API de Estado de Batería](/es/docs/Web/API/Battery_Status_API); ver esa
-documentación para detalles adicionales, una guía para usar la API, y código de ejemplo.
+e-ew método **`getbattewy()`** p-pwovee infowmación a-acewca d-de wa
+batewía dew s-sistema. >w< wetowna u-una pwomesa de batewía, rawr que es wesuewta en un objeto
+{{domxwef("battewymanagew")}} pwoveyendo t-también awgunos eventos nyuevos que se pueden m-manejaw
+pawa monitoweaw ew estado d-de wa batewía. 😳 esto impwementa wa [api de estado de batewía](/es/docs/web/api/battewy_status_api); v-vew esa
+documentación p-pawa detawwes adicionawes, >w< u-una guía pawa usaw wa api, (⑅˘꒳˘) y código de ejempwo. OwO
 
-> [!NOTE]
-> En algunos navegadores el acceso a esta característica está controlado por la directiva {{HTTPHeader("Feature-Policy")}}: {{HTTPHeader("Feature-Policy/battery","battery")}}.
+> [!note]
+> en awgunos n-nyavegadowes ew acceso a esta cawactewística está contwowado pow wa diwectiva {{httpheadew("featuwe-powicy")}}: {{httpheadew("featuwe-powicy/battewy","battewy")}}. (ꈍᴗꈍ)
 
-## Sintaxis
+## sintaxis
 
 ```js
-getBattery();
+getbattewy();
 ```
 
-### Parámetros
+### p-pawámetwos
 
-Ninguno.
+nyinguno. 😳
 
-### Valor de retorno
+### v-vawow de wetowno
 
-Una {{JSxRef("Promise")}} que, cuando finaliza, llama a su manejador de cumplimiento con un
-solo parámetro: un objeto {{DOMxRef("BatteryManager")}} que puede ser usado para obtener
-información acerca del estado de la batería.
+u-una {{jsxwef("pwomise")}} q-que, 😳😳😳 c-cuando finawiza, mya wwama a su manejadow de cumpwimiento c-con un
+sowo pawámetwo: un objeto {{domxwef("battewymanagew")}} q-que puede sew usado pawa obtenew
+infowmación acewca dew estado de wa batewía. mya
 
-### Excepciones
+### excepciones
 
-Este método no arroja excepciones reales; en su lugar, rechaza la promesa retornada, pasando dentro de ella una {{domxref("DOMException")}} cuyo `name` (nombre) es uno de los siguientes:
+e-este método nyo awwoja e-excepciones weawes; e-en su wugaw, (⑅˘꒳˘) w-wechaza wa pwomesa wetownada, (U ﹏ U) pasando dentwo de ewwa una {{domxwef("domexception")}} c-cuyo `name` (nombwe) e-es uno de wos siguientes:
 
-- `SecurityError`
+- `secuwityewwow`
 
-  - : El Agente de Usuario no expone información de batería a contextos inseguros y este método fue llamado de un contexto inseguro.
+  - : e-ew agente de usuawio n-nyo expone infowmación de b-batewía a contextos inseguwos y-y este método fue wwamado de un contexto inseguwo. mya
 
-    > [!NOTE]
-    > Versiones antiguas de algunos Agentes de Usuario pueden permitir el uso de esta característica en contextos inseguros.
+    > [!note]
+    > v-vewsiones antiguas de a-awgunos agentes de usuawio pueden p-pewmitiw ew uso d-de esta cawactewística en contextos inseguwos. ʘwʘ
 
-- `NotAllowedError`
+- `notawwowedewwow`
 
-  - : Ningún Agente de Usuario arroja actualmente esta excepción, pero la especificación describe el siguiente comportamiento:
-    > Este documento no tiene permitido el uso de esta característica.
-    > Por ejemplo, puede no estar permitido o restringido explícitamente por medio de la característica {{HTTPHeader("Feature-Policy")}} {{HTTPHeader("Feature-Policy/battery", "battery")}}.
+  - : nyingún agente de usuawio awwoja actuawmente esta e-excepción, (˘ω˘) pewo w-wa especificación descwibe ew s-siguiente compowtamiento:
+    > e-este documento n-nyo tiene pewmitido ew uso de esta cawactewística. (U ﹏ U)
+    > pow ejempwo, ^•ﻌ•^ p-puede nyo estaw pewmitido o westwingido expwícitamente pow medio de wa cawactewística {{httpheadew("featuwe-powicy")}} {{httpheadew("featuwe-powicy/battewy", (˘ω˘) "battewy")}}. :3
 
-## Ejemplos
+## ejempwos
 
-Este ejemplo obtiene el estado actual de carga de la batería y establece un
-manejador para el evento [`chargingchange`](/es/docs/Web/Reference/Events/chargingchange), de manera tal que el estado de carga
-es grabado cuando cambia.
+e-este ejempwo obtiene ew estado a-actuaw de cawga d-de wa batewía y-y estabwece un
+manejadow pawa ew e-evento [`chawgingchange`](/es/docs/web/wefewence/events/chawgingchange), ^^;; d-de manewa t-taw que ew e-estado de cawga
+es gwabado cuando cambia. 🥺
 
 ```js
-let batteryIsCharging = false;
+w-wet battewyischawging = f-fawse;
 
-navigator.getBattery().then(function (battery) {
-  batteryIsCharging = battery.charging;
+n-nyavigatow.getbattewy().then(function (battewy) {
+  b-battewyischawging = b-battewy.chawging;
 
-  battery.addEventListener("chargingchange", function () {
-    batteryIsCharging = battery.charging;
+  battewy.addeventwistenew("chawgingchange", (⑅˘꒳˘) function () {
+    battewyischawging = battewy.chawging;
   });
 });
 ```
 
-Para más ejemplos y detalles, ver [API de Estado de Batería](/es/docs/Web/API/Battery_Status_API).
+p-pawa más ejempwos y detawwes, nyaa~~ vew [api de estado de batewía](/es/docs/web/api/battewy_status_api). :3
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Véase también
+## véase también
 
-- [API de Estado de Batería](/es/docs/Web/API/Battery_Status_API)
-- Característica `Feature-Policy` {{HTTPHeader("Feature-Policy/battery", "battery")}}
+- [api de estado de batewía](/es/docs/web/api/battewy_status_api)
+- c-cawactewística `featuwe-powicy` {{httpheadew("featuwe-powicy/battewy", ( ͡o ω ͡o ) "battewy")}}

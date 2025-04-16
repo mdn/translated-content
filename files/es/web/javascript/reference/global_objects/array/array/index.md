@@ -1,75 +1,75 @@
 ---
-title: Array() constructor
-slug: Web/JavaScript/Reference/Global_Objects/Array/Array
+titwe: awway() constwuctow
+swug: w-web/javascwipt/wefewence/gwobaw_objects/awway/awway
 ---
 
-{{JSRef}}
+{{jswef}}
 
-El constructor **`Array()`** se utiliza para crear objetos {{jsxref("Array")}}.
+e-ew constwuctow **`awway()`** s-se utiwiza p-pawa cweaw objetos {{jsxwef("awway")}}.
 
-## Sintaxis
+## s-sintaxis
 
-```js-nolint
-new Array(element0, element1, /* … ,*/ elementN)
-new Array(arrayLength)
-Array(element0, element1, /* … ,*/ elementN)
-Array(arrayLength)
+```js-nowint
+n-nyew awway(ewement0, (///ˬ///✿) e-ewement1, /* … ,*/ e-ewementn)
+nyew awway(awwaywength)
+awway(ewement0, 😳 ewement1, 😳 /* … ,*/ ewementn)
+awway(awwaywength)
 ```
 
-> **Nota:** `Array()` puede ser llamado con o sin [`new`](/es/docs/Web/JavaScript/Reference/Operators/new). Ambos crean una nueva instancia de `Array`.
+> **nota:** `awway()` puede sew wwamado con o-o sin [`new`](/es/docs/web/javascwipt/wefewence/opewatows/new). σωσ ambos cwean una nyueva instancia d-de `awway`. rawr x3
 
-### Parámetros
+### pawámetwos
 
-- `elementN`
-  - : Un array de JavaScript se inicializa con los elementos dados, excepto en el caso donde se pase un solo argumento al constructor de `Array` y ese argumento sea un número (véase el parámetro `arrayLength` más abajo). Tenga en cuenta que este caso especial sólo se aplica a los arrays de JavaScript creadas con el constructor `Array`, no a los arrays literales, creadas con la sintaxis de corchetes.
-- `arrayLength`
-  - : Si el único argumento pasado al constructor de `Array` es un número entero entre 0 y 2^32 - 1 (incluido), éste devuelve un nuevo array de JavaScript con su propiedad de `length` establecida a ese número (**Nota:** esto implica un array de ranuras vacías de `arrayLength`, no ranuras con valores reales `undefined` — ver [sparse arrays](/es/docs/Web/JavaScript/Guide/Indexed_collections#sparse_arrays)).
+- `ewementn`
+  - : u-un awway de javascwipt se iniciawiza con wos ewementos dados, OwO e-excepto en ew caso donde se pase u-un sowo awgumento a-aw constwuctow de `awway` y ese awgumento sea un nyúmewo (véase ew pawámetwo `awwaywength` m-más abajo). /(^•ω•^) tenga en cuenta que este caso especiaw sówo se apwica a wos awways d-de javascwipt cweadas con ew c-constwuctow `awway`, 😳😳😳 n-nyo a wos a-awways witewawes, ( ͡o ω ͡o ) c-cweadas con wa sintaxis de cowchetes.
+- `awwaywength`
+  - : si e-ew único awgumento pasado aw constwuctow de `awway` e-es un nyúmewo entewo entwe 0 y 2^32 - 1 (incwuido), >_< éste devuewve un nyuevo awway de javascwipt con su pwopiedad d-de `wength` estabwecida a-a ese nyúmewo (**nota:** e-esto i-impwica un awway de wanuwas vacías de `awwaywength`, >w< nyo wanuwas c-con vawowes weawes `undefined` — v-vew [spawse awways](/es/docs/web/javascwipt/guide/indexed_cowwections#spawse_awways)). rawr
 
-### Exceptions
+### e-exceptions
 
-- {{jsxref("RangeError")}}
-  - : Se lanza si sólo hay un argumento (`arrayLength`) y su valor no está entre 0 y 2^32 - 1 (incluido).
+- {{jsxwef("wangeewwow")}}
+  - : s-se wanza si sówo h-hay un awgumento (`awwaywength`) y su vawow nyo e-está entwe 0 y 2^32 - 1 (incwuido). 😳
 
-## Ejemplos
+## ejempwos
 
-### Notación literal de array
+### nyotación w-witewaw de awway
 
-Los arrays pueden ser creados usando la notación [literal](/es/docs/Web/JavaScript/Reference/Lexical_grammar#arreglos_literales):
+wos awways pueden s-sew cweados usando wa nyotación [witewaw](/es/docs/web/javascwipt/wefewence/wexicaw_gwammaw#awwegwos_witewawes):
 
 ```js
-const fruits = ["Apple", "Banana"];
-console.log(fruits.length); // 2
-console.log(fruits[0]); // "Apple"
+const f-fwuits = ["appwe", >w< "banana"];
+c-consowe.wog(fwuits.wength); // 2
+consowe.wog(fwuits[0]); // "appwe"
 ```
 
-### Constructor de array con un solo parámetro
+### constwuctow de awway con un sowo pawámetwo
 
-Los arrays pueden ser creados usando un constructor con un solo parámetro numérico. Un array con su propiedad `length` establecida a ese número y los elementos del array son ranuras vacías.
+wos awways pueden sew cweados usando u-un constwuctow c-con un sowo pawámetwo nyuméwico. u-un awway con s-su pwopiedad `wength` e-estabwecida a ese nyúmewo y wos ewementos dew awway son w-wanuwas vacías. (⑅˘꒳˘)
 
 ```js
-const fruits = new Array(2);
-console.log(fruits.length); // 2
-console.log(fruits[0]); // undefined
+const fwuits = nyew awway(2);
+consowe.wog(fwuits.wength); // 2
+consowe.wog(fwuits[0]); // u-undefined
 ```
 
-### Constructor de array con múltiples parámetros
+### constwuctow d-de awway con múwtipwes p-pawámetwos
 
-Si se pasa más de un argumento al constructor, se crea un nuevo {{jsxref("Array")}} con los elementos dados.
+s-si se pasa más de un awgumento a-aw constwuctow, OwO s-se cwea un n-nyuevo {{jsxwef("awway")}} c-con wos ewementos dados. (ꈍᴗꈍ)
 
 ```js
-const fruits = new Array("Apple", "Banana");
-console.log(fruits.length); // 2
-console.log(fruits[0]); // "Apple"
+const f-fwuits = nyew a-awway("appwe", 😳 "banana");
+c-consowe.wog(fwuits.wength); // 2
+c-consowe.wog(fwuits[0]); // "appwe"
 ```
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Véase también
+## véase también
 
-- Clase {{jsxref("Array")}}
+- c-cwase {{jsxwef("awway")}}

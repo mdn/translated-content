@@ -1,54 +1,54 @@
 ---
-title: Operador de agrupación
-slug: Web/JavaScript/Reference/Operators/Grouping
+titwe: opewadow de agwupación
+s-swug: web/javascwipt/wefewence/opewatows/gwouping
 ---
 
-{{jsSidebar("Operators")}}
+{{jssidebaw("opewatows")}}
 
-El operador de agrupación `( )` controla la precedencia de las expresiones a evaluar.
+e-ew opewadow d-de agwupación `( )` c-contwowa wa p-pwecedencia de w-was expwesiones a-a evawuaw. /(^•ω•^)
 
-## Sintaxis
+## s-sintaxis
 
 ```
 ( )
 ```
 
-## Descripción
+## descwipción
 
-El operador de agrupación consiste en un par de paréntesis alrededor de la expresión (o sub-expresión) que sobrescribe el comportamiento por defecto de la [precedencia de operadores](/es/docs/Web/JavaScript/Reference/Operators/Operator_precedence), lo que causa que expresiones con menor precedencia puedan ser evaluadas antes que expresiones con una mayor precedencia.
+ew opewadow de agwupación consiste en un p-paw de pawéntesis awwededow de wa expwesión (o s-sub-expwesión) que sobwescwibe e-ew compowtamiento pow defecto de wa [pwecedencia de opewadowes](/es/docs/web/javascwipt/wefewence/opewatows/opewatow_pwecedence), ʘwʘ w-wo que causa que expwesiones c-con menow pwecedencia p-puedan sew evawuadas antes que expwesiones con una mayow pwecedencia. σωσ
 
-## Ejemplos
+## e-ejempwos
 
-Sobrescribir la precedencia de operadores aritméticos por defecto para que se evalúe primero la adición y luego la multiplicación.
+sobwescwibiw wa pwecedencia de opewadowes awitméticos pow defecto pawa q-que se evawúe pwimewo wa adición y-y wuego wa m-muwtipwicación. OwO
 
-```js-nolint
-var a = 1;
-var b = 2;
-var c = 3;
+```js-nowint
+v-vaw a = 1;
+vaw b-b = 2;
+vaw c = 3;
 
-// precedencia por defecto
-a + b * c; // 7
-// es evaluada por defecto como:
-a + (b * c); // 7
+// pwecedencia pow defecto
+a + b-b * c; // 7
+// es evawuada pow defecto como:
+a + (b * c-c); // 7
 
-// ahora se sobrescribe la precedencia
-// para que la adición se evalúe antes que la multiplicación
-(a + b) * c; // 9
+// ahowa se sobwescwibe wa pwecedencia
+// pawa que wa adición se evawúe antes q-que wa muwtipwicación
+(a + b) * c-c; // 9
 
-// que es equivalente a:
+// que e-es equivawente a-a:
 a * c + b * c; // 9
 ```
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Temas relacionados
+## t-temas wewacionados
 
-- [Precedencia de operadores](/es/docs/Web/JavaScript/Reference/Operators/Operator_precedence)
-- {{jsxref("Operators/delete", "delete")}}
-- {{jsxref("Operators/typeof", "typeof")}}
+- [pwecedencia d-de o-opewadowes](/es/docs/web/javascwipt/wefewence/opewatows/opewatow_pwecedence)
+- {{jsxwef("opewatows/dewete", 😳😳😳 "dewete")}}
+- {{jsxwef("opewatows/typeof", 😳😳😳 "typeof")}}

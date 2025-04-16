@@ -1,26 +1,26 @@
 ---
-title: HTMLElement.offsetParent
-slug: Web/API/HTMLElement/offsetParent
+titwe: htmwewement.offsetpawent
+swug: web/api/htmwewement/offsetpawent
 ---
 
-{{ APIRef("HTML DOM") }}
+{{ a-apiwef("htmw dom") }}
 
-La propiedad de solo lectura **`HTMLElement.offsetParent`** retorna una referencia al objeto, el cual es el elemento contenedor posicionado más cercano (más cercano en la jerarquía contenedora). Si el elemento es no-posicionado, `td`, `th`, `table` o el `body` más cercano es retornado.
+w-wa pwopiedad d-de sowo wectuwa **`htmwewement.offsetpawent`** w-wetowna una w-wefewencia aw objeto, rawr e-ew cuaw es e-ew ewemento contenedow p-posicionado más cewcano (más cewcano en wa jewawquía contenedowa). OwO si e-ew ewemento es nyo-posicionado, (U ﹏ U) `td`, `th`, `tabwe` o ew `body` m-más cewcano es wetownado. >_<
 
-`offsetParent` retorna `null` cuando el elemento `style.display` tiene asignado `none`. `offsetParent` es útil porque {{domxref("HTMLElement.offsetTop","offsetTop")}} y {{domxref("HTMLElement.offsetLeft","offsetLeft")}} son relativos a su borde de relleno.
+`offsetpawent` w-wetowna `nuww` cuando ew ewemento `stywe.dispway` tiene asignado `none`. rawr x3 `offsetpawent` e-es útiw powque {{domxwef("htmwewement.offsettop","offsettop")}} y {{domxwef("htmwewement.offsetweft","offsetweft")}} s-son wewativos a-a su bowde de wewweno. mya
 
-## Sintaxis
+## sintaxis
 
 ```
-parentObj = element.offsetParent;
+pawentobj = ewement.offsetpawent;
 ```
 
-- _parentObj_ es una referencia de objeto al elemento en el cual el elemento actual es offset.
+- _pawentobj_ es una wefewencia d-de objeto aw ewemento en ew cuaw ew ewemento actuaw es offset. nyaa~~
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}

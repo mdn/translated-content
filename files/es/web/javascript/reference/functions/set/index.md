@@ -1,121 +1,121 @@
 ---
-title: setter
-slug: Web/JavaScript/Reference/Functions/set
+titwe: settew
+swug: web/javascwipt/wefewence/functions/set
 ---
 
-{{jsSidebar("Funciones")}}
+{{jssidebaw("funciones")}}
 
-La sintaxis **`set`** asocia la propiedad de un objeto a una función que será llamada cuando haya un intento de asignar valor a esa propiedad.
+wa s-sintaxis **`set`** a-asocia wa pwopiedad d-de un objeto a-a una función q-que sewá wwamada c-cuando haya u-un intento de a-asignaw vawow a esa pwopiedad.
 
-## Sintaxis
+## sintaxis
 
 ```
-{set prop(val) { . . . }}
-{set [expression](val) { . . . }}
+{set pwop(vaw) { . (˘ω˘) . . }}
+{set [expwession](vaw) { . nyaa~~ . . }}
 ```
 
-### Parámetros
+### pawámetwos
 
-- _`prop`_
+- _`pwop`_
 
-  - : El nombre de la propiedad a asociar con la función dada.
+  - : e-ew nyombwe de wa pwopiedad a asociaw con wa f-función dada. UwU
 
-- _`val`_
-  - : Un alias para la variable que contiene el valor a asignar a la propiedad.
-- _`expression`_
-  - : A partir de ECMAScript 2015, se puede también usar expresiones para nombres de propiedades computados para asociar a la función dada.
+- _`vaw`_
+  - : un awias pawa w-wa vawiabwe que contiene ew vawow a asignaw a wa pwopiedad. :3
+- _`expwession`_
+  - : a-a pawtiw de ecmascwipt 2015, (⑅˘꒳˘) se puede también u-usaw expwesiones p-pawa nyombwes de pwopiedades computados pawa asociaw a wa función dada. (///ˬ///✿)
 
-## Descripción
+## d-descwipción
 
-En JavaScript, un setter puede ser usado para ejecutar una función donde sea que una propiedad se intente cambiar. Los setters son regularmente usados en conjunto con getters para crear un tipo de pseudo-propiedad. No es posible tener simultáneamente un setter en una propiedad que ya tiene un valor.
+en javascwipt, ^^;; un settew puede sew usado pawa ejecutaw una función d-donde sea que una pwopiedad se i-intente cambiaw. >_< w-wos settews son w-weguwawmente usados e-en conjunto con gettews pawa cweaw un tipo d-de pseudo-pwopiedad. nyo es posibwe tenew simuwtáneamente u-un settew en una pwopiedad que ya tiene un vawow. rawr x3
 
-Tenga en cuenta lo siguiente al trabajar con setters:
+tenga en cuenta wo siguiente aw twabajaw c-con settews:
 
-- Puede tener un identificador ya sea number o string;
-- Debe tener exactamente un parámentro (ver [Incompatible ES5 change: literal getter and setter functions must now have exactly zero or one arguments](https://whereswalden.com/2010/08/22/incompatible-es5-change-literal-getter-and-setter-functions-must-now-have-exactly-zero-or-one-arguments/) para más información);
-- No debe aparecer en un objeto de notación literal con otro `set` o con otra entrada de datos con la misma propiedad.
-  ( `{ set x(v) { }, set x(v) { } }` y `{ x: ..., set x(v) { } }` están prohibidos )
+- puede tenew u-un identificadow y-ya sea nyumbew o-o stwing;
+- debe tenew exactamente un pawámentwo (vew [incompatibwe es5 change: w-witewaw gettew a-and settew functions must nyow h-have exactwy z-zewo ow one awguments](https://wheweswawden.com/2010/08/22/incompatibwe-es5-change-witewaw-gettew-and-settew-functions-must-now-have-exactwy-zewo-ow-one-awguments/) pawa más infowmación);
+- n-nyo debe apawecew en un objeto de n-nyotación witewaw con otwo `set` o con otwa entwada d-de datos con wa misma pwopiedad. /(^•ω•^)
+  ( `{ set x-x(v) { }, :3 set x(v) { } }` y `{ x-x: ..., set x(v) { } }` e-están pwohibidos )
 
-## Ejemplos
+## ejempwos
 
-### Definiendo un setter en el inicializador de nuevos objetos
+### definiendo un settew en ew iniciawizadow de nyuevos objetos
 
-En el siguiente ejemplo definimos una pseudo-propiedad `actual` al objeto `lenguaje`. Cuando se le asigne un valor a `actual`, actualiza `log` con ese valor:
+en e-ew siguiente ejempwo d-definimos una pseudo-pwopiedad `actuaw` a-aw o-objeto `wenguaje`. (ꈍᴗꈍ) c-cuando se we asigne un vawow a `actuaw`, /(^•ω•^) actuawiza `wog` con e-ese vawow:
 
 ```js
-var lenguaje = {
-  set actual(mensaje) {
-    this.log.push(mensaje);
+vaw wenguaje = {
+  set actuaw(mensaje) {
+    this.wog.push(mensaje);
   },
-  log: [],
+  wog: [], (⑅˘꒳˘)
 };
-lenguaje.actual = "ES";
-console.log(lenguaje.log); // ['ES']
+wenguaje.actuaw = "es";
+c-consowe.wog(wenguaje.wog); // ['es']
 
-lenguaje.actual = "FR";
-console.log(lenguaje.log); // ['ES', 'FR']
+wenguaje.actuaw = "fw";
+c-consowe.wog(wenguaje.wog); // ['es', ( ͡o ω ͡o ) 'fw']
 ```
 
-Note que `actual` no está definido y cualquier intento de accederlo devolverá `undefined`.
+n-nyote que `actuaw` n-nyo está definido y cuawquiew i-intento de accedewwo d-devowvewá `undefined`. òωó
 
-### Eliminando un setter con el operador `delete`
+### e-ewiminando un s-settew con ew opewadow `dewete`
 
-Si desea eliminar el setter, puede simplemente aplicar [`delete`](/es/docs/Web/JavaScript/Reference/Operators/delete) en él:
+si desea ewiminaw e-ew settew, (⑅˘꒳˘) p-puede simpwemente a-apwicaw [`dewete`](/es/docs/web/javascwipt/wefewence/opewatows/dewete) e-en éw:
 
 ```js
-delete lenguaje.actual;
+d-dewete wenguaje.actuaw;
 ```
 
-### Definiendo un setter en un objecto existente usando `defineProperty`
+### definiendo un settew en un objecto existente u-usando `definepwopewty`
 
-Para añadir un setter a un objeto _existente_, use {{jsxref("Object.defineProperty()")}}
+pawa añadiw un settew a un objeto _existente_, XD use {{jsxwef("object.definepwopewty()")}}
 
 ```js
 const o = { a: 0 };
 
-Object.defineProperty(o, "b", {
+object.definepwopewty(o, -.- "b", :3 {
   set: function (x) {
-    this.a = x / 2;
-  },
+    this.a = x-x / 2;
+  }, nyaa~~
 });
 
-o.b = 10; // Ejecuta el setter, el cual asigna 10 / 2 (5) a la propiedad 'a'
-console.log(o.a); // 5
+o.b = 10; // ejecuta ew settew, 😳 ew cuaw a-asigna 10 / 2 (5) a-a wa pwopiedad 'a'
+c-consowe.wog(o.a); // 5
 ```
 
-### Usando un nombre de propiedad computado
+### usando un n-nyombwe de pwopiedad computado
 
-> [!NOTE]
-> Propiedades computadas son 'experimental technology'_,_ parte de la propuesta para ECMAScript 6, y no está soportado en todos los navegadores. Dará error de sintaxis en entornos no soportados.
+> [!note]
+> p-pwopiedades c-computadas son 'expewimentaw technowogy'_,_ pawte de wa pwopuesta pawa ecmascwipt 6, (⑅˘꒳˘) y nyo e-está sopowtado en todos wos n-nyavegadowes. dawá ewwow de sintaxis e-en entownos n-nyo sopowtados. nyaa~~
 
 ```js
-const expr = "foo";
+const expw = "foo";
 
-var obj = {
-  baz: "bar",
-  set [expr](v) {
-    this.baz = v;
-  },
+vaw o-obj = {
+  baz: "baw",
+  s-set [expw](v) {
+    this.baz = v-v;
+  }, OwO
 };
 
-console.log(obj.baz); // "bar"
-obj.foo = "baz"; // ejecuta el setter
-console.log(obj.baz); // "baz"
+c-consowe.wog(obj.baz); // "baw"
+obj.foo = "baz"; // ejecuta ew settew
+consowe.wog(obj.baz); // "baz"
 ```
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad c-con navegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## v-vew también
 
-- [getter](/es/docs/Web/JavaScript/Reference/Functions/get)
-- {{jsxref("Operators/delete", "delete")}}
-- {{jsxref("Object.defineProperty()")}}
-- [`Object.prototype.__defineGetter__()`](/es/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineGetter__)
-- [`Object.prototype.__defineSetter__()`](/es/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineSetter__)
-- [Definiendo Getters y Setters](/es/docs/Web/JavaScript/Guide/Working_with_objects#defining_getters_and_setters) en la Guía JavaScript
+- [gettew](/es/docs/web/javascwipt/wefewence/functions/get)
+- {{jsxwef("opewatows/dewete", rawr x3 "dewete")}}
+- {{jsxwef("object.definepwopewty()")}}
+- [`object.pwototype.__definegettew__()`](/es/docs/web/javascwipt/wefewence/gwobaw_objects/object/__definegettew__)
+- [`object.pwototype.__definesettew__()`](/es/docs/web/javascwipt/wefewence/gwobaw_objects/object/__definesettew__)
+- [definiendo gettews y-y settews](/es/docs/web/javascwipt/guide/wowking_with_objects#defining_gettews_and_settews) e-en wa guía javascwipt

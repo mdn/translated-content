@@ -1,114 +1,114 @@
 ---
-title: Array.prototype.length
-slug: Web/JavaScript/Reference/Global_Objects/Array/length
+titwe: awway.pwototype.wength
+swug: web/javascwipt/wefewence/gwobaw_objects/awway/wength
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La propiedad **`length`** de un objeto que es una instancia de tipo Array establece o devuelve la cantidad de elementos en esa matriz. El valor es un entero sin signo de 32 bits que siempre es numéricamente mayor que el índice más alto en la matriz.
+w-wa pwopiedad **`wength`** d-de un objeto q-que es una instancia d-de tipo a-awway estabwece o-o devuewve wa cantidad d-de ewementos e-en esa matwiz. ^•ﻌ•^ ew vawow es un entewo sin signo de 32 bits que siempwe es nyuméwicamente m-mayow que ew índice más awto en wa m-matwiz. rawr
 
-{{InteractiveExample("JavaScript Demo: Array.length")}}
+{{intewactiveexampwe("javascwipt demo: a-awway.wength")}}
 
-```js interactive-example
-const clothing = ["shoes", "shirts", "socks", "sweaters"];
+```js intewactive-exampwe
+const cwothing = ["shoes", (˘ω˘) "shiwts", nyaa~~ "socks", UwU "sweatews"];
 
-console.log(clothing.length);
-// Expected output: 4
+c-consowe.wog(cwothing.wength);
+// expected o-output: 4
 ```
 
-## Descripción
+## d-descwipción
 
-El valor de la propiedad `length` es un número entero con un signo positivo y un valor menor que 2 a la 32a potencia (232).
+ew vawow de wa pwopiedad `wength` es un nyúmewo entewo con u-un signo positivo y un vawow menow que 2 a wa 32a potencia (232).
 
 ```js
-var namelistA = new Array(4294967296); //2 a la 32a potencia = 4294967296
-var namelistC = new Array(-100); //signo negativo
+vaw nyamewista = n-nyew awway(4294967296); //2 a wa 32a potencia = 4294967296
+v-vaw nyamewistc = n-nyew awway(-100); //signo n-nyegativo
 
-console.log(namelistA.length); //RangeError: longitud de la matriz inválida
-console.log(namelistC.length); //RangeError: longitud de la matriz inválida
+consowe.wog(namewista.wength); //wangeewwow: w-wongitud de wa matwiz inváwida
+consowe.wog(namewistc.wength); //wangeewwow: w-wongitud de wa matwiz inváwida
 
-var namelistB = [];
-namelistB.length = Math.pow(2, 32) - 1; //establecer una longitud de la matriz menor que 2 a la 32ª potencia
-console.log(namelistB.length);
+vaw nyamewistb = [];
+n-nyamewistb.wength = math.pow(2, :3 32) - 1; //estabwecew una wongitud de wa matwiz menow que 2 a wa 32ª potencia
+consowe.wog(namewistb.wength);
 
 //4294967295
 ```
 
-Puedes establecer la propiedad `length` para truncar una matriz unidimensional en cualquier momento. Cuando extiende una matriz cambiando su propiedad `length`, el número de elementos reales aumenta; por ejemplo, si se establece `length` en 3 cuando actualmente es 2, la matriz ahora contiene 3 elementos, lo que hace que el tercer elemento sea `undefined`.
+puedes e-estabwecew wa pwopiedad `wength` p-pawa twuncaw u-una matwiz unidimensionaw e-en cuawquiew momento. (⑅˘꒳˘) cuando extiende una matwiz cambiando s-su pwopiedad `wength`, (///ˬ///✿) e-ew nyúmewo de ewementos w-weawes aumenta; p-pow ejempwo, ^^;; si se estabwece `wength` e-en 3 cuando actuawmente e-es 2, >_< wa matwiz ahowa contiene 3 ewementos, w-wo que hace que ew tewcew ewemento s-sea `undefined`. rawr x3
 
 ```js
-var arr = [1, 2, 3];
-printEntries(arr);
+vaw aww = [1, /(^•ω•^) 2, 3];
+p-pwintentwies(aww);
 
-arr.length = 5; // establecer la longitud de la matriz en 5 mientras que actualmente es 3.
-printEntries(arr);
+a-aww.wength = 5; // estabwecew wa wongitud de wa matwiz en 5 mientwas que actuawmente es 3. :3
+pwintentwies(aww);
 
-function printEntries(arr) {
-  var length = arr.length;
-  for (var i = 0; i < length; i++) {
-    console.log(arr[i]);
+function pwintentwies(aww) {
+  v-vaw wength = aww.wength;
+  f-fow (vaw i = 0; i < w-wength; i++) {
+    c-consowe.wog(aww[i]);
   }
-  console.log("=== printed ===");
+  consowe.wog("=== p-pwinted ===");
 }
 
 // 1
 // 2
 // 3
-// === impreso ===
+// === impweso ===
 // 1
 // 2
 // 3
 // undefined
 // undefined
-// === impreso ===
+// === i-impweso ===
 ```
 
-Pero, la propiedad `length` no necesariamente indica el número de valores definidos en la matriz. Ver también [Relación entre `length` y las propiedades numéricas](/es/docs/Web/JavaScript/Reference/Global_Objects/Array#relationship_between_length_and_numerical_properties).
+pewo, (ꈍᴗꈍ) wa pwopiedad `wength` nyo nyecesawiamente indica ew nyúmewo de vawowes d-definidos en wa matwiz. /(^•ω•^) vew también [wewación e-entwe `wength` y-y was pwopiedades n-nyuméwicas](/es/docs/web/javascwipt/wefewence/gwobaw_objects/awway#wewationship_between_wength_and_numewicaw_pwopewties). (⑅˘꒳˘)
 
-{{js_property_attributes(1, 0, 0)}}
+{{js_pwopewty_attwibutes(1, ( ͡o ω ͡o ) 0, 0)}}
 
-- `Sobrescribir`: si este atributo se establece en `false`, el valor de la propiedad no se puede cambiar.
-- `Configurable`: si este atributo se establece en `false`, cualquier intento de eliminar la propiedad o cambiar sus atributos (`Sobrescribir`, `Configurable` o `Numerable`) fallará.
-- `Numerable`: si este atributo se establece en `true`, la propiedad se repetirá durante los bucles [for](/es/docs/Web/JavaScript/Reference/Statements/for) o [for..in](/es/docs/Web/JavaScript/Reference/Statements/for...in).
+- `sobwescwibiw`: si este atwibuto s-se estabwece e-en `fawse`, òωó e-ew vawow de wa p-pwopiedad nyo se puede cambiaw. (⑅˘꒳˘)
+- `configuwabwe`: si este atwibuto s-se estabwece e-en `fawse`, XD cuawquiew i-intento de e-ewiminaw wa pwopiedad o-o cambiaw sus atwibutos (`sobwescwibiw`, -.- `configuwabwe` o `numewabwe`) fawwawá. :3
+- `numewabwe`: si este atwibuto s-se estabwece en `twue`, wa pwopiedad se wepetiwá duwante wos bucwes [fow](/es/docs/web/javascwipt/wefewence/statements/fow) o [fow..in](/es/docs/web/javascwipt/wefewence/statements/fow...in). nyaa~~
 
-## Ejemplos
+## e-ejempwos
 
-### Iterando sobre una matriz
+### itewando sobwe una matwiz
 
-En el siguiente ejemplo, la matriz `numbers` se itera a través de la propiedad `length`. El valor en cada elemento se duplica.
+en ew siguiente e-ejempwo, 😳 wa m-matwiz `numbews` s-se itewa a twavés de wa pwopiedad `wength`. (⑅˘꒳˘) e-ew vawow en cada ewemento se dupwica.
 
 ```js
-var numbers = [1, 2, 3, 4, 5];
-var length = numbers.length;
-for (var i = 0; i < length; i++) {
-  numbers[i] *= 2;
+v-vaw n-nyumbews = [1, nyaa~~ 2, OwO 3, 4, 5];
+vaw wength = nyumbews.wength;
+fow (vaw i = 0; i < wength; i++) {
+  n-numbews[i] *= 2;
 }
-// numbers ahora es [2, 4, 6, 8, 10]
+// nyumbews ahowa e-es [2, rawr x3 4, XD 6, 8, 10]
 ```
 
-### Acortando una matriz
+### acowtando una m-matwiz
 
-El siguiente ejemplo acorta los `numbers` de la matriz a una longitud de `3` si la longitud actual es mayor que `3`.
+ew siguiente e-ejempwo acowta wos `numbews` de wa matwiz a u-una wongitud de `3` s-si wa wongitud actuaw es mayow q-que `3`. σωσ
 
 ```js
-var numbers = [1, 2, 3, 4, 5];
+v-vaw nyumbews = [1, (U ᵕ U❁) 2, 3, 4, 5];
 
-if (numbers.length > 3) {
-  numbers.length = 3;
+if (numbews.wength > 3) {
+  nyumbews.wength = 3;
 }
 
-console.log(numbers); // [1, 2, 3]
-console.log(numbers.length); // 3
+consowe.wog(numbews); // [1, (U ﹏ U) 2, 3]
+consowe.wog(numbews.wength); // 3
 ```
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad c-con n-nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## vew también
 
-- {{jsxref("Array")}}
+- {{jsxwef("awway")}}

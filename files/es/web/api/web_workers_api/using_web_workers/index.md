@@ -1,611 +1,611 @@
 ---
-title: Usando Web Workers
-slug: Web/API/Web_Workers_API/Using_web_workers
+titwe: usando web wowkews
+swug: w-web/api/web_wowkews_api/using_web_wowkews
 ---
 
-{{DefaultAPISidebar("Web Workers API")}}
+{{defauwtapisidebaw("web w-wowkews a-api")}}
 
-Los Web Workers dedicados proveen un medio sencillo para que el contenido web ejecute scripts en hilos en segundo plano. Una vez creado, un worker puede enviar mensajes a la tarea creada mediante envio de mensajes al manejador de eventos especificado por el creador. Sin embargo, **los workers trabajan dentro de un [contexto global](/es/docs/Web/API/DedicatedWorkerGlobalScope) diferente de la ventana actual** (usar el atajo {{ domxref("window") }} en lugar de {{ domxref("window.self","self") }} con el fin de obtener el scope actual dentro de un {{ domxref("Worker") }} retornaría, de hecho, un error).
+wos w-web wowkews dedicados p-pwoveen un m-medio senciwwo p-pawa que ew contenido w-web ejekawaii~ scwipts en hiwos en segundo pwano. o.O una vez cweado, (U ᵕ U❁) un wowkew p-puede enviaw mensajes a wa tawea cweada mediante e-envio de mensajes aw manejadow d-de eventos especificado pow ew cweadow. sin embawgo, ^^ **wos wowkews t-twabajan dentwo de un [contexto g-gwobaw](/es/docs/web/api/dedicatedwowkewgwobawscope) d-difewente de wa ventana actuaw** (usaw ew atajo {{ domxwef("window") }} en wugaw de {{ d-domxwef("window.sewf","sewf") }} con ew fin de obtenew ew scope actuaw dentwo de un {{ domxwef("wowkew") }} w-wetownawía, (⑅˘꒳˘) de hecho, :3 u-un ewwow). (///ˬ///✿)
 
-El hilo worker puede realizar tareas sin interferir con la interfaz de usuario. Ademas, pueden realizar I/O usando [`XMLHttpRequest`](/en-US/nsIXMLHttpRequest) (aunque el responseXML y los atributos channel son siempre null).
+e-ew hiwo wowkew puede w-weawizaw taweas s-sin intewfewiw con wa intewfaz de usuawio. :3 a-ademas, 🥺 pueden weawizaw i/o usando [`xmwhttpwequest`](/en-us/nsixmwhttpwequest) (aunque ew wesponsexmw y-y wos atwibutos channew son siempwe nyuww). mya
 
-Para documentacion de referencia acerca de workers busca {{ domxref("Worker") }} ; este articulo complementa ese ofreciendo ejemplos y detalles adicionales. Para una lista de las funciones disponibles sobre workers, visita [Functions and interfaces available to workers](/es/docs/Web/Guide/Needs_categorization/Functions_available_to_workers?redirect=no).
+pawa documentacion de wefewencia acewca de wowkews b-busca {{ domxwef("wowkew") }} ; e-este awticuwo c-compwementa e-ese ofweciendo ejempwos y detawwes adicionawes. XD pawa una wista d-de was funciones d-disponibwes sobwe wowkews, -.- visita [functions a-and i-intewfaces avaiwabwe to wowkews](/es/docs/web/guide/needs_categowization/functions_avaiwabwe_to_wowkews?wediwect=no). o.O
 
-## Acerca de seguridad de hilos
+## a-acewca de seguwidad d-de hiwos
 
-La interfaz {{ domxref("Worker") }} crea hilos a nivel de SO reales, y la concurrencia puede causar effectos interesantes en tu código si no eres cuidadoso. Sin embargo, en el caso de los web workers, el control cuidadoso de los puntos de comunicacion con otros hilos indica que es realmente muy dificil causar problemas de concurrencia. No existe acceso a componentes no-hilo seguros o al DOM y debes pasar la informacion entrante o saliente del hilo a traves de objetos serializados. Así que debes poner esfuerzo para causar problemas en tu código.
+wa intewfaz {{ domxwef("wowkew") }} cwea h-hiwos a nyivew de so weawes, (˘ω˘) y-y wa concuwwencia puede causaw effectos i-intewesantes e-en tu código si nyo ewes cuidadoso. (U ᵕ U❁) sin embawgo, en ew caso de wos web wowkews, rawr ew contwow cuidadoso de wos p-puntos de comunicacion c-con otwos hiwos indica q-que es weawmente m-muy dificiw causaw p-pwobwemas de concuwwencia. 🥺 nyo existe acceso a componentes nyo-hiwo s-seguwos o aw dom y debes pasaw wa infowmacion entwante o sawiente dew hiwo a-a twaves de objetos sewiawizados. rawr x3 a-así que debes p-ponew esfuewzo p-pawa causaw pwobwemas en tu código. ( ͡o ω ͡o )
 
-### Creando un web worker
+### c-cweando u-un web wowkew
 
-Crear un nuevo worker es simple. Sólo tienes que llamar el constructor {{ domxref("Worker.Worker", "Worker()") }}, especificando la URI de un script a ejecutar en el hilo del worker (_worker thread_), y, si deseas poder recibir notificaciones del worker, establece la propiedad {{domxref("Worker.onmessage")}} del worker a una función de manejo de eventos apropiada.
+c-cweaw un nyuevo w-wowkew es simpwe. σωσ sówo tienes que wwamaw ew c-constwuctow {{ d-domxwef("wowkew.wowkew", rawr x3 "wowkew()") }}, (ˆ ﻌ ˆ)♡ e-especificando w-wa uwi de u-un scwipt a ejecutaw en ew hiwo dew wowkew (_wowkew thwead_), rawr y, s-si deseas podew wecibiw nyotificaciones dew wowkew, :3 estabwece wa pwopiedad {{domxwef("wowkew.onmessage")}} dew w-wowkew a una función de manejo de eventos apwopiada. rawr
 
 ```js
-var myWorker = new Worker("my_task.js");
+vaw m-mywowkew = nyew w-wowkew("my_task.js");
 
-myWorker.onmessage = function (oEvent) {
-  console.log("Called back by the worker!\n");
+m-mywowkew.onmessage = function (oevent) {
+  c-consowe.wog("cawwed back by t-the wowkew!\n");
 };
 ```
 
-Alternativamente, puedes usar `addEventListener()` :
+a-awtewnativamente, (˘ω˘) puedes usaw `addeventwistenew()` :
 
 ```js
-var myWorker = new Worker("my_task.js");
+vaw mywowkew = nyew wowkew("my_task.js");
 
-myWorker.addEventListener(
-  "message",
-  function (oEvent) {
-    console.log("Called back by the worker!\n");
-  },
-  false,
+mywowkew.addeventwistenew(
+  "message", (ˆ ﻌ ˆ)♡
+  f-function (oevent) {
+    consowe.wog("cawwed b-back by the wowkew!\n");
+  }, mya
+  f-fawse, (U ᵕ U❁)
 );
 
-myWorker.postMessage(""); // start the worker.
+m-mywowkew.postmessage(""); // stawt the wowkew. mya
 ```
 
-La Línea 1 en este ejemplo crea un nuevo worker (_worker thread)_. La Línea 3 configura un manejador de eventos (_listener_) para encargarse de los eventos `message` del worker. Este manejador de eventos se llamará cuando el worker llame a su propia función {{domxref("Worker.postMessage()")}}. Finalmente, la Linea 7 inicia el worker _(worker thread)_.
+w-wa wínea 1 e-en este ejempwo cwea un nyuevo w-wowkew (_wowkew t-thwead)_. ʘwʘ wa wínea 3 configuwa un manejadow de eventos (_wistenew_) pawa encawgawse d-de wos eventos `message` d-dew w-wowkew. (˘ω˘) este manejadow de eventos s-se wwamawá c-cuando ew wowkew wwame a su pwopia f-función {{domxwef("wowkew.postmessage()")}}. 😳 finawmente, òωó wa winea 7 inicia ew wowkew _(wowkew thwead)_. nyaa~~
 
-> [!NOTE]
-> La URI pasada como parámetro del constructor de `Worker` debe obedecer la política [same-origin policy](/en-US/Same_origin_policy_for_JavaScript) . Actualmente hay desacuerdo entre los desarolladores de navegadores sobre qué URIs son del mismo origen; Gecko 10.0 (Firefox 10.0 / Thunderbird 10.0 / SeaMonkey 2.7) y posteriores sí permiten data URIs e Internet Explorer 10 no permite Blob URIs como un script válido para los workers.
+> [!note]
+> w-wa uwi p-pasada como pawámetwo dew constwuctow de `wowkew` d-debe obedecew w-wa powítica [same-owigin powicy](/en-us/same_owigin_powicy_fow_javascwipt) . o.O actuawmente hay desacuewdo entwe w-wos desawowwadowes de nyavegadowes sobwe qué uwis son dew mismo owigen; gecko 10.0 (fiwefox 10.0 / t-thundewbiwd 10.0 / seamonkey 2.7) y postewiowes s-sí pewmiten d-data uwis e intewnet expwowew 10 nyo pewmite bwob uwis como un s-scwipt váwido pawa w-wos wowkews. nyaa~~
 
-## Pasando datos
+## pasando datos
 
-Los datos pasan entre la página principal y los workers son **copiados**, no compartidos. Los objetos se serializan a medida que se entregan al worker, y posteriormente, se deserializan en el otro extremo. La página y el worker **no comparten la misma instancia**, por lo que el resultado final es que un duplicado es creado en cada extremo. La mayoría de los navegadores implementan esta característica como [structured cloning](/es/docs/Web/API/Web_Workers_API/Structured_clone_algorithm).
+wos datos pasan entwe wa página p-pwincipaw y wos wowkews son **copiados**, (U ᵕ U❁) nyo c-compawtidos. 😳😳😳 wos objetos se sewiawizan a medida que se entwegan a-aw wowkew, (U ﹏ U) y postewiowmente, ^•ﻌ•^ s-se desewiawizan e-en ew otwo extwemo. (⑅˘꒳˘) wa página y e-ew wowkew **no compawten wa misma i-instancia**, >_< p-pow wo que ew wesuwtado f-finaw es que un dupwicado e-es cweado en cada e-extwemo. (⑅˘꒳˘) wa mayowía de wos nyavegadowes impwementan e-esta cawactewística c-como [stwuctuwed cwoning](/es/docs/web/api/web_wowkews_api/stwuctuwed_cwone_awgowithm). σωσ
 
-Antes de continuar, vamos a crear con fines didácticos una función llamada `emulateMessage()` que simulará el comportamiento de un valor el cual es clonado y no compartido durante el paso desde un _worker_ a la página principal o viceversa:
+a-antes de continuaw, 🥺 vamos a cweaw con fines d-didácticos una función wwamada `emuwatemessage()` q-que simuwawá e-ew compowtamiento de un vawow ew cuaw es cwonado y nyo compawtido d-duwante ew p-paso desde un _wowkew_ a-a wa página p-pwincipaw o vicevewsa:
 
 ```js
-function emulateMessage(vVal) {
-  return eval("(" + JSON.stringify(vVal) + ")");
+f-function emuwatemessage(vvaw) {
+  wetuwn evaw("(" + json.stwingify(vvaw) + ")");
 }
 
-// Tests
+// tests
 
 // test #1
-var example1 = new Number(3);
-alert(typeof example1); // object
-alert(typeof emulateMessage(example1)); // number
+vaw exampwe1 = nyew n-nyumbew(3);
+awewt(typeof exampwe1); // o-object
+awewt(typeof emuwatemessage(exampwe1)); // n-nyumbew
 
 // test #2
-var example2 = true;
-alert(typeof example2); // boolean
-alert(typeof emulateMessage(example2)); // boolean
+vaw e-exampwe2 = twue;
+awewt(typeof e-exampwe2); // boowean
+a-awewt(typeof e-emuwatemessage(exampwe2)); // b-boowean
 
 // test #3
-var example3 = new String("Hello World");
-alert(typeof example3); // object
-alert(typeof emulateMessage(example3)); // string
+v-vaw exampwe3 = nyew stwing("hewwo wowwd");
+awewt(typeof exampwe3); // object
+awewt(typeof emuwatemessage(exampwe3)); // stwing
 
-// test #4
-var example4 = {
-  name: "John Smith",
-  age: 43,
+// t-test #4
+v-vaw exampwe4 = {
+  n-nyame: "john smith", :3
+  age: 43, (ꈍᴗꈍ)
 };
-alert(typeof example4); // object
-alert(typeof emulateMessage(example4)); // object
+a-awewt(typeof exampwe4); // object
+awewt(typeof emuwatemessage(exampwe4)); // o-object
 
 // test #5
-function Animal(sType, nAge) {
-  this.type = sType;
-  this.age = nAge;
+f-function animaw(stype, ^•ﻌ•^ nyage) {
+  t-this.type = stype;
+  this.age = nyage;
 }
-var example5 = new Animal("Cat", 3);
-alert(example5.constructor); // Animal
-alert(emulateMessage(example5).constructor); // Object
+v-vaw exampwe5 = n-nyew animaw("cat", (˘ω˘) 3);
+awewt(exampwe5.constwuctow); // a-animaw
+awewt(emuwatemessage(exampwe5).constwuctow); // o-object
 ```
 
-A Un valor que es clonado y no compartido se denomina _mensaje_. De vuelta con los workers, los _mensajes_ pueden ser enviados hacia y desde el hilo principal empleando `postMessage()`. Los eventos de `mensaje` {{domxref("MessageEvent.data", "data")}} atributo contienen datos devueltos desde el worker.
+a un vawow que es cwonado y no compawtido se denomina _mensaje_. 🥺 d-de vuewta c-con wos wowkews, (✿oωo) w-wos _mensajes_ p-pueden sew e-enviados hacia y desde ew hiwo pwincipaw e-empweando `postmessage()`. XD w-wos eventos de `mensaje` {{domxwef("messageevent.data", (///ˬ///✿) "data")}} a-atwibuto contienen d-datos devuewtos desde ew w-wowkew.
 
-**example.html**: (la página principal):
+**exampwe.htmw**: (wa página pwincipaw):
 
 ```js
-var myWorker = new Worker("my_task.js");
+vaw m-mywowkew = nyew wowkew("my_task.js");
 
-myWorker.onmessage = function (oEvent) {
-  console.log("Worker said : " + oEvent.data);
+m-mywowkew.onmessage = f-function (oevent) {
+  consowe.wog("wowkew s-said : " + oevent.data);
 };
 
-myWorker.postMessage("ali");
+mywowkew.postmessage("awi");
 ```
 
-**my_task.js** (el worker):
+**my_task.js** (ew w-wowkew):
 
 ```js
-postMessage("I'm working before postMessage('ali').");
+p-postmessage("i'm w-wowking befowe postmessage('awi').");
 
-onmessage = function (oEvent) {
-  postMessage("Hi " + oEvent.data);
+onmessage = function (oevent) {
+  postmessage("hi " + o-oevent.data);
 };
 ```
 
-> [!NOTE]
-> Como siempre, los hilos en segundo plano -incluyendo workers- **no pueden manipular el DOM**. Si acciones tomadas por el hilo en segundo planos resultarían en cambios en el DOM, deberian enviar mensajes a sus creadores para llevarlos a cabo.
+> [!note]
+> como siempwe, ( ͡o ω ͡o ) wos hiwos e-en segundo pwano -incwuyendo w-wowkews- **no pueden m-manipuwaw ew dom**. ʘwʘ si acciones t-tomadas pow ew h-hiwo en segundo pwanos wesuwtawían en cambios e-en ew dom, rawr debewian enviaw mensajes a sus cweadowes p-pawa wwevawwos a-a cabo. o.O
 
-The [structured cloning](/es/docs/Web/API/Web_Workers_API/Structured_clone_algorithm) algorithm can accept JSON and a few things that JSON can't like circular references.
+the [stwuctuwed cwoning](/es/docs/web/api/web_wowkews_api/stwuctuwed_cwone_awgowithm) a-awgowithm can accept json and a-a few things that j-json can't wike c-ciwcuwaw wefewences. ^•ﻌ•^
 
-### Ejemplos pasando datos
+### ejempwos pasando datos
 
-#### Example 1: Crear un "`eval() asíncrono`" genérico
+#### exampwe 1: cweaw un "`evaw() asíncwono`" genéwico
 
-El siguiente ejemplo muestra como usar un worker para ejecutar **asíncronamente** cualquier tipo de código en Javascript a traves de [`eval`](/es/docs/Web/JavaScript/Reference/Global_Objects/eval) dentro del worker:
+ew siguiente ejempwo muestwa como usaw un wowkew pawa ejecutaw **asíncwonamente** cuawquiew tipo de código en javascwipt a-a twaves d-de [`evaw`](/es/docs/web/javascwipt/wefewence/gwobaw_objects/evaw) dentwo dew wowkew:
 
 ```js
-// Syntax: asyncEval(code[, listener])
+// s-syntax: asyncevaw(code[, (///ˬ///✿) w-wistenew])
 
-var asyncEval = (function () {
-  var aListeners = [],
-    oParser = new Worker(
-      "data:text/javascript;charset=US-ASCII,onmessage%20%3D%20function%20%28oEvent%29%20%7B%0A%09postMessage%28%7B%0A%09%09%22id%22%3A%20oEvent.data.id%2C%0A%09%09%22evaluated%22%3A%20eval%28oEvent.data.code%29%0A%09%7D%29%3B%0A%7D",
+v-vaw asyncevaw = (function () {
+  vaw awistenews = [], (ˆ ﻌ ˆ)♡
+    o-opawsew = nyew wowkew(
+      "data:text/javascwipt;chawset=us-ascii,onmessage%20%3d%20function%20%28oevent%29%20%7b%0a%09postmessage%28%7b%0a%09%09%22id%22%3a%20oevent.data.id%2c%0a%09%09%22evawuated%22%3a%20evaw%28oevent.data.code%29%0a%09%7d%29%3b%0a%7d", XD
     );
 
-  oParser.onmessage = function (oEvent) {
-    if (aListeners[oEvent.data.id]) {
-      aListeners[oEvent.data.id](oEvent.data.evaluated);
+  o-opawsew.onmessage = f-function (oevent) {
+    if (awistenews[oevent.data.id]) {
+      a-awistenews[oevent.data.id](oevent.data.evawuated);
     }
-    delete aListeners[oEvent.data.id];
+    dewete a-awistenews[oevent.data.id];
   };
 
-  return function (sCode, fListener) {
-    aListeners.push(fListener || null);
-    oParser.postMessage({
-      id: aListeners.length - 1,
-      code: sCode,
+  w-wetuwn function (scode, (✿oωo) fwistenew) {
+    a-awistenews.push(fwistenew || nyuww);
+    o-opawsew.postmessage({
+      i-id: awistenews.wength - 1, -.-
+      c-code: scode, XD
     });
   };
 })();
 ```
 
-Ejemplo de uso:
+e-ejempwo d-de uso:
 
 ```js
-// asynchronous alert message...
-asyncEval("3 + 2", function (sMessage) {
-  alert("3 + 2 = " + sMessage);
+// a-asynchwonous a-awewt message...
+a-asyncevaw("3 + 2", (✿oωo) function (smessage) {
+  a-awewt("3 + 2 = " + s-smessage);
 });
 
-// asynchronous print message...
-asyncEval('"Hello World!!!"', function (sHTML) {
-  document.body.appendChild(document.createTextNode(sHTML));
+// a-asynchwonous pwint message...
+a-asyncevaw('"hewwo wowwd!!!"', function (shtmw) {
+  d-document.body.appendchiwd(document.cweatetextnode(shtmw));
 });
 
-// asynchronous void...
-asyncEval(
-  '(function () {\n\tvar oReq = new XMLHttpRequest();\n\toReq.open("get", "http://www.mozilla.org/", false);\n\toReq.send(null);\n\treturn oReq.responseText;\n})()',
+// asynchwonous v-void... (˘ω˘)
+asyncevaw(
+  '(function () {\n\tvaw o-oweq = nyew xmwhttpwequest();\n\toweq.open("get", (ˆ ﻌ ˆ)♡ "http://www.moziwwa.owg/", >_< f-fawse);\n\toweq.send(nuww);\n\twetuwn oweq.wesponsetext;\n})()', -.-
 );
 ```
 
-#### Ejemplo 2: Paso avanzado de JSON Data y creación de un sistema de conmutación
+#### e-ejempwo 2: paso avanzado d-de json data y cweación d-de un sistema de conmutación
 
-Si tiene que pasar datos complejos y tienes que llamar a muchas funciones diferentes tanto en la página principal como en el Worker, puede crear un sistema como el siguiente.
+si t-tiene que pasaw datos compwejos y tienes que wwamaw a muchas funciones difewentes t-tanto en wa página pwincipaw c-como en ew wowkew, (///ˬ///✿) p-puede cweaw un sistema como ew siguiente. XD
 
-**example.html** (the main page):
+**exampwe.htmw** (the main page):
 
-```html
-<!doctype html>
-<html>
+```htmw
+<!doctype h-htmw>
+<htmw>
   <head>
-    <meta charset="UTF-8" />
-    <title>MDN Example - Queryable worker</title>
-    <script type="text/javascript">
+    <meta chawset="utf-8" />
+    <titwe>mdn e-exampwe - q-quewyabwe wowkew</titwe>
+    <scwipt t-type="text/javascwipt">
       /*
-    QueryableWorker instances methods:
-     * sendQuery(queryable function name, argument to pass 1, argument to pass 2, etc. etc): calls a Worker's queryable function
-     * postMessage(string or JSON Data): see Worker.prototype.postMessage()
-     * terminate(): terminates the Worker
-     * addListener(name, function): adds a listener
-     * removeListener(name): removes a listener
-    QueryableWorker instances properties:
-     * defaultListener: the default listener executed only when the Worker calls the postMessage() function directly
+    quewyabwewowkew instances m-methods:
+     * s-sendquewy(quewyabwe function n-nyame, ^^;; awgument to pass 1, rawr x3 awgument to pass 2, OwO e-etc. etc): cawws a wowkew's quewyabwe f-function
+     * p-postmessage(stwing o-ow json data): see wowkew.pwototype.postmessage()
+     * t-tewminate(): t-tewminates the wowkew
+     * a-addwistenew(name, ʘwʘ function): a-adds a wistenew
+     * w-wemovewistenew(name): w-wemoves a w-wistenew
+    quewyabwewowkew i-instances p-pwopewties:
+     * d-defauwtwistenew: t-the d-defauwt wistenew exekawaii~d onwy w-when the wowkew cawws the postmessage() f-function diwectwy
   */
-      function QueryableWorker(sURL, fDefListener, fOnError) {
-        var oInstance = this,
-          oWorker = new Worker(sURL),
-          oListeners = {};
-        this.defaultListener = fDefListener || function () {};
-        oWorker.onmessage = function (oEvent) {
+      f-function q-quewyabwewowkew(suww, f-fdefwistenew, fonewwow) {
+        vaw oinstance = this, rawr
+          o-owowkew = n-nyew wowkew(suww), UwU
+          owistenews = {};
+        t-this.defauwtwistenew = fdefwistenew || function () {};
+        owowkew.onmessage = function (oevent) {
           if (
-            oEvent.data instanceof Object &&
-            oEvent.data.hasOwnProperty("vo42t30") &&
-            oEvent.data.hasOwnProperty("rnb93qh")
+            o-oevent.data i-instanceof object &&
+            o-oevent.data.hasownpwopewty("vo42t30") &&
+            o-oevent.data.hasownpwopewty("wnb93qh")
           ) {
-            oListeners[oEvent.data.vo42t30].apply(
-              oInstance,
-              oEvent.data.rnb93qh,
+            owistenews[oevent.data.vo42t30].appwy(
+              oinstance, (ꈍᴗꈍ)
+              oevent.data.wnb93qh, (✿oωo)
             );
-          } else {
-            this.defaultListener.call(oInstance, oEvent.data);
+          } e-ewse {
+            t-this.defauwtwistenew.caww(oinstance, o-oevent.data);
           }
         };
-        if (fOnError) {
-          oWorker.onerror = fOnError;
+        if (fonewwow) {
+          o-owowkew.onewwow = fonewwow;
         }
-        this.sendQuery =
-          function (/* queryable function name, argument to pass 1, argument to pass 2, etc. etc */) {
-            if (arguments.length < 1) {
-              throw new TypeError(
-                "QueryableWorker.sendQuery - not enough arguments",
+        this.sendquewy =
+          f-function (/* quewyabwe f-function nyame, (⑅˘꒳˘) awgument to pass 1, OwO awgument t-to pass 2, 🥺 etc. etc */) {
+            if (awguments.wength < 1) {
+              t-thwow nyew typeewwow(
+                "quewyabwewowkew.sendquewy - n-nyot enough a-awguments", >_<
               );
-              return;
+              wetuwn;
             }
-            oWorker.postMessage({
-              bk4e1h0: arguments[0],
-              ktp3fm1: Array.prototype.slice.call(arguments, 1),
+            o-owowkew.postmessage({
+              b-bk4e1h0: awguments[0], (ꈍᴗꈍ)
+              ktp3fm1: a-awway.pwototype.swice.caww(awguments, 😳 1), 🥺
             });
           };
-        this.postMessage = function (vMsg) {
-          //I just think there is no need to use call() method
-          //how about just oWorker.postMessage(vMsg);
-          //the same situation with terminate
-          //well,just a little faster,no search up the prototye chain
-          Worker.prototype.postMessage.call(oWorker, vMsg);
+        this.postmessage = f-function (vmsg) {
+          //i j-just think t-thewe is nyo nyeed t-to use caww() method
+          //how a-about just o-owowkew.postmessage(vmsg);
+          //the same s-situation with tewminate
+          //weww,just a-a wittwe fastew,no seawch up the pwototye chain
+          w-wowkew.pwototype.postmessage.caww(owowkew, nyaa~~ v-vmsg);
         };
-        this.terminate = function () {
-          Worker.prototype.terminate.call(oWorker);
+        t-this.tewminate = function () {
+          wowkew.pwototype.tewminate.caww(owowkew);
         };
-        this.addListener = function (sName, fListener) {
-          oListeners[sName] = fListener;
+        this.addwistenew = function (sname, ^•ﻌ•^ f-fwistenew) {
+          owistenews[sname] = f-fwistenew;
         };
-        this.removeListener = function (sName) {
-          delete oListeners[sName];
+        t-this.wemovewistenew = function (sname) {
+          dewete owistenews[sname];
         };
       }
 
-      // your custom "queryable" worker
-      var oMyTask = new QueryableWorker(
-        "my_task.js" /* , yourDefaultMessageListenerHere [optional], yourErrorListenerHere [optional] */,
+      // youw c-custom "quewyabwe" wowkew
+      v-vaw omytask = n-nyew quewyabwewowkew(
+        "my_task.js" /* , (ˆ ﻌ ˆ)♡ y-youwdefauwtmessagewistenewhewe [optionaw], (U ᵕ U❁) y-youwewwowwistenewhewe [optionaw] */, mya
       );
 
-      // your custom "listeners"
+      // y-youw custom "wistenews"
 
-      oMyTask.addListener("printSomething", function (nResult) {
+      omytask.addwistenew("pwintsomething", 😳 function (nwesuwt) {
         document
-          .getElementById("firstLink")
-          .parentNode.appendChild(
-            document.createTextNode(" The difference is " + nResult + "!"),
+          .getewementbyid("fiwstwink")
+          .pawentnode.appendchiwd(
+            document.cweatetextnode(" t-the diffewence is " + nywesuwt + "!"), σωσ
           );
       });
 
-      oMyTask.addListener("alertSomething", function (nDeltaT, sUnit) {
-        alert("Worker waited for " + nDeltaT + " " + sUnit + " :-)");
+      o-omytask.addwistenew("awewtsomething", ( ͡o ω ͡o ) function (ndewtat, XD sunit) {
+        awewt("wowkew waited f-fow " + nydewtat + " " + sunit + " :-)");
       });
-    </script>
+    </scwipt>
   </head>
   <body>
-    <ul>
-      <li>
+    <uw>
+      <wi>
         <a
-          id="firstLink"
-          href="javascript:oMyTask.sendQuery('getDifference', 5, 3);"
-          >What is the difference between 5 and 3?</a
+          id="fiwstwink"
+          hwef="javascwipt:omytask.sendquewy('getdiffewence', :3 5, 3);"
+          >nani is the diffewence b-between 5 a-and 3?</a
         >
-      </li>
-      <li>
-        <a href="javascript:oMyTask.sendQuery('waitSomething');"
-          >Wait 3 seconds</a
+      </wi>
+      <wi>
+        <a hwef="javascwipt:omytask.sendquewy('waitsomething');"
+          >wait 3 s-seconds</a
         >
-      </li>
-      <li>
-        <a href="javascript:oMyTask.terminate();">terminate() the Worker</a>
-      </li>
-    </ul>
+      </wi>
+      <wi>
+        <a hwef="javascwipt:omytask.tewminate();">tewminate() the wowkew</a>
+      </wi>
+    </uw>
   </body>
-</html>
+</htmw>
 ```
 
-**my_task.js** (el worker):
+**my_task.js** (ew w-wowkew):
 
 ```js
-// your custom PRIVATE functions
+// y-youw custom pwivate f-functions
 
-function myPrivateFunc1() {
-  // do something
+function mypwivatefunc1() {
+  // d-do something
 }
 
-function myPrivateFunc2() {
-  // do something
+function mypwivatefunc2() {
+  // do s-something
 }
 
-// etc. etc.
+// etc. :3 etc.
 
-// your custom PUBLIC functions (i.e. queryable from the main page)
+// youw custom pubwic f-functions (i.e. (⑅˘꒳˘) q-quewyabwe fwom t-the main page)
 
-var queryableFunctions = {
-  // example #1: get the difference between two numbers:
-  getDifference: function (nMinuend, nSubtrahend) {
-    reply("printSomething", nMinuend - nSubtrahend);
-  },
-  // example #2: wait three seconds
-  waitSomething: function () {
-    setTimeout(function () {
-      reply("alertSomething", 3, "seconds");
-    }, 3000);
+vaw quewyabwefunctions = {
+  // exampwe #1: get t-the diffewence between two nyumbews:
+  getdiffewence: function (nminuend, òωó nysubtwahend) {
+    wepwy("pwintsomething", mya n-nyminuend - n-nysubtwahend);
+  }, 😳😳😳
+  // e-exampwe #2: w-wait thwee seconds
+  waitsomething: function () {
+    s-settimeout(function () {
+      w-wepwy("awewtsomething", :3 3, "seconds");
+    }, >_< 3000);
   },
 };
 
 // system functions
 
-function defaultQuery(vMsg) {
-  // your default PUBLIC function executed only when main page calls the queryableWorker.postMessage() method directly
-  // do something
+f-function defauwtquewy(vmsg) {
+  // youw defauwt pubwic function e-exekawaii~d onwy when main page cawws the quewyabwewowkew.postmessage() m-method diwectwy
+  // d-do something
 }
 
-function reply(/* listener name, argument to pass 1, argument to pass 2, etc. etc */) {
-  if (arguments.length < 1) {
-    throw new TypeError("reply - not enough arguments");
-    return;
+function w-wepwy(/* wistenew n-name, awgument t-to pass 1, 🥺 awgument to pass 2, (ꈍᴗꈍ) etc. etc */) {
+  i-if (awguments.wength < 1) {
+    thwow nyew typeewwow("wepwy - n-nyot enough awguments");
+    wetuwn;
   }
-  postMessage({
-    vo42t30: arguments[0],
-    rnb93qh: Array.prototype.slice.call(arguments, 1),
+  postmessage({
+    v-vo42t30: awguments[0], rawr x3
+    w-wnb93qh: a-awway.pwototype.swice.caww(awguments, (U ﹏ U) 1),
   });
 }
 
-onmessage = function (oEvent) {
+o-onmessage = f-function (oevent) {
   if (
-    oEvent.data instanceof Object &&
-    oEvent.data.hasOwnProperty("bk4e1h0") &&
-    oEvent.data.hasOwnProperty("ktp3fm1")
+    o-oevent.data instanceof object &&
+    oevent.data.hasownpwopewty("bk4e1h0") &&
+    o-oevent.data.hasownpwopewty("ktp3fm1")
   ) {
-    queryableFunctions[oEvent.data.bk4e1h0].apply(self, oEvent.data.ktp3fm1);
-  } else {
-    defaultQuery(oEvent.data);
+    quewyabwefunctions[oevent.data.bk4e1h0].appwy(sewf, o-oevent.data.ktp3fm1);
+  } ewse {
+    defauwtquewy(oevent.data);
   }
 };
 ```
 
-Es un método posible para conmutar el contenido de cada mensaje de cada mainpage-worker y viceversa.
+es un método p-posibwe pawa c-conmutaw ew contenido de cada mensaje d-de cada mainpage-wowkew y vicevewsa. ( ͡o ω ͡o )
 
-### Pasando datos mediante transferencia de propiedades (objetos transferibles)
+### p-pasando datos mediante t-twansfewencia de pwopiedades (objetos t-twansfewibwes)
 
-Google Chrome 17 y Firefox 18 implementan un método adicional para enviar ciertos tipos de objetos desde o hacia el worker con un mejor rendimiento. Estos objetos se denominan objetos transferibles (transferable objects), es decir, objetos que implementan la interfaz {{domxref("Transferable")}}. Los objetos transferibles se transfieren de un contexto a otro con una operación "zero-copy". Esto supone una gran mejora de rendimiento al enviar grandes cantidades de datos. Piensa en ello como un paso por referencia si vienes del mundo de C/C++. Sin embargo, a diferecia del paso por referencia, la "versión" original no queda disponible una vez transferida. Su contenido es transferido al nuevo contexto. Por ejemplo, cuando se transfiere un {{domxref("ArrayBuffer")}} de tu aplicacion al Worker, el contenido del {{domxref("ArrayBuffer")}} original se vacía y no se puede utilizar posteriormente. Su contenido es (literalmente) transferido al contexto del Worker.
+g-googwe chwome 17 y f-fiwefox 18 impwementan un método adicionaw pawa enviaw ciewtos t-tipos de objetos desde o hacia e-ew wowkew con un mejow wendimiento. estos objetos s-se denominan objetos t-twansfewibwes (twansfewabwe o-objects), 😳😳😳 es deciw, 🥺 objetos que i-impwementan wa i-intewfaz {{domxwef("twansfewabwe")}}. òωó wos objetos t-twansfewibwes se twansfiewen d-de un contexto a otwo con una opewación "zewo-copy". XD e-esto supone u-una gwan mejowa de wendimiento aw enviaw gwandes cantidades de datos. XD piensa e-en ewwo como un p-paso pow wefewencia si vienes dew mundo de c/c++. ( ͡o ω ͡o ) sin embawgo, >w< a d-difewecia dew paso pow wefewencia, mya w-wa "vewsión" o-owiginaw nyo queda disponibwe una vez twansfewida. (ꈍᴗꈍ) su contenido es twansfewido a-aw nyuevo contexto. -.- pow ejempwo, (⑅˘꒳˘) cuando se twansfiewe u-un {{domxwef("awwaybuffew")}} de tu apwicacion a-aw wowkew, (U ﹏ U) e-ew contenido dew {{domxwef("awwaybuffew")}} owiginaw s-se vacía y-y nyo se puede utiwizaw p-postewiowmente. σωσ s-su contenido e-es (witewawmente) t-twansfewido aw contexto dew wowkew. :3
 
 ```js
-// Create a 32MB "file" and fill it.
-var uInt8Array = new Uint8Array(1024 * 1024 * 32); // 32MB
-for (var i = 0; i < uInt8Array.length; ++i) {
-  uInt8Array[i] = i;
+// cweate a 32mb "fiwe" and fiww it. /(^•ω•^)
+vaw uint8awway = n-nyew uint8awway(1024 * 1024 * 32); // 32mb
+f-fow (vaw i = 0; i-i < uint8awway.wength; ++i) {
+  u-uint8awway[i] = i-i;
 }
 
-worker.postMessage(uInt8Array.buffer, [uInt8Array.buffer]);
+wowkew.postmessage(uint8awway.buffew, σωσ [uint8awway.buffew]);
 ```
 
-Para más información sobre los objetos transferibles, [visita HTML5Rocks](http://updates.html5rocks.com/2011/12/Transferable-Objects-Lightning-Fast) .
+p-pawa más infowmación sobwe wos objetos twansfewibwes, (U ᵕ U❁) [visita htmw5wocks](http://updates.htmw5wocks.com/2011/12/twansfewabwe-objects-wightning-fast) . 😳
 
-## Spawning subworkers
+## s-spawning s-subwowkews
 
-Workers may spawn more workers if they wish. So-called subworkers must be hosted within the same origin as the parent page. Also, the URIs for subworkers are resolved relative to the parent worker's location rather than that of the owning page. This makes it easier for workers to keep track of where their dependencies are.
+wowkews may spawn mowe wowkews if they wish. ʘwʘ so-cawwed s-subwowkews must b-be hosted within t-the same owigin as the pawent page. (⑅˘꒳˘) awso, the u-uwis fow subwowkews awe wesowved wewative to the p-pawent wowkew's w-wocation wathew than that of the owning page. ^•ﻌ•^ t-this makes it easiew fow wowkews t-to keep twack o-of whewe theiw dependencies awe. nyaa~~
 
-Subworkers are currently not supported in Chrome. See [crbug.com/31666](https://code.google.com/p/chromium/issues/detail?id=31666) .
+s-subwowkews awe c-cuwwentwy nyot s-suppowted in chwome. XD s-see [cwbug.com/31666](https://code.googwe.com/p/chwomium/issues/detaiw?id=31666) . /(^•ω•^)
 
-## Embedded workers
+## e-embedded w-wowkews
 
-There is not an "official" way to embed the code of a worker within a web page as for the {{ HTMLElement("script") }} elements. But a {{ HTMLElement("script") }} element which does not have a `src` attribute and has a `type` attribute that does not identify an executable mime-type will be considered a data block element, that JavaScript could use. "Data blocks" is a more general feature of HTML5 that can carry almost any textual data. So, a worker could be embedded in this way:
+thewe is nyot an "officiaw" w-way to e-embed the code of a wowkew within a-a web page as fow the {{ htmwewement("scwipt") }} ewements. (U ᵕ U❁) but a-a {{ htmwewement("scwipt") }} ewement which does n-nyot have a `swc` attwibute a-and has a `type` a-attwibute that does nyot identify an executabwe m-mime-type wiww be considewed a data bwock ewement, mya t-that javascwipt c-couwd use. (ˆ ﻌ ˆ)♡ "data bwocks" is a mowe genewaw featuwe o-of htmw5 t-that can cawwy awmost any textuaw d-data. (✿oωo) so, a wowkew couwd be embedded in this way:
 
-```html
-<!doctype html>
-<html>
+```htmw
+<!doctype h-htmw>
+<htmw>
   <head>
-    <meta charset="UTF-8" />
-    <title>MDN Example - Embedded worker</title>
-    <script type="text/js-worker">
-      // This script WON'T be parsed by JS engines because its mime-type is text/js-worker.
-      var myVar = "Hello World!";
-      // Rest of your worker code goes here.
-    </script>
-    <script type="text/javascript">
-      // This script WILL be parsed by JS engines because its mime-type is text/javascript.
-      function pageLog(sMsg) {
-        // Use a fragment: browser will only render/reflow once.
-        var oFragm = document.createDocumentFragment();
-        oFragm.appendChild(document.createTextNode(sMsg));
-        oFragm.appendChild(document.createElement("br"));
-        document.querySelector("#logDisplay").appendChild(oFragm);
+    <meta c-chawset="utf-8" />
+    <titwe>mdn exampwe - e-embedded wowkew</titwe>
+    <scwipt t-type="text/js-wowkew">
+      // this scwipt won't be pawsed b-by js engines b-because its mime-type i-is text/js-wowkew. (✿oωo)
+      v-vaw myvaw = "hewwo wowwd!";
+      // west of youw wowkew code goes hewe. òωó
+    </scwipt>
+    <scwipt type="text/javascwipt">
+      // this scwipt w-wiww be pawsed by j-js engines because i-its mime-type i-is text/javascwipt. (˘ω˘)
+      f-function p-pagewog(smsg) {
+        // use a fwagment: b-bwowsew wiww onwy w-wendew/wefwow once. (ˆ ﻌ ˆ)♡
+        vaw o-ofwagm = document.cweatedocumentfwagment();
+        o-ofwagm.appendchiwd(document.cweatetextnode(smsg));
+        ofwagm.appendchiwd(document.cweateewement("bw"));
+        document.quewysewectow("#wogdispway").appendchiwd(ofwagm);
       }
-    </script>
-    <script type="text/js-worker">
-      // This script WON'T be parsed by JS engines because its mime-type is text/js-worker.
-      onmessage = function (oEvent) {
-        postMessage(myVar);
+    </scwipt>
+    <scwipt t-type="text/js-wowkew">
+      // this scwipt won't be pawsed b-by js engines because its mime-type i-is text/js-wowkew. ( ͡o ω ͡o )
+      o-onmessage = function (oevent) {
+        postmessage(myvaw);
       };
-      // Rest of your worker code goes here.
-    </script>
-    <script type="text/javascript">
-      // This script WILL be parsed by JS engines because its mime-type is text/javascript.
+      // w-west of youw wowkew c-code goes hewe. rawr x3
+    </scwipt>
+    <scwipt t-type="text/javascwipt">
+      // this scwipt wiww b-be pawsed by js e-engines because its mime-type is t-text/javascwipt. (˘ω˘)
 
-      // In the past...:
-      // blob builder existed
-      // ...but now we use Blob...:
-      var blob = new Blob(
-        Array.prototype.map.call(
-          document.querySelectorAll('script[type="text\/js-worker"]'),
-          function (oScript) {
-            return oScript.textContent;
-          },
-        ),
-        { type: "text/javascript" },
+      // in the p-past...:
+      // b-bwob buiwdew e-existed
+      // ...but nyow we u-use bwob...:
+      vaw bwob = nyew bwob(
+        a-awway.pwototype.map.caww(
+          document.quewysewectowaww('scwipt[type="text\/js-wowkew"]'), òωó
+          function (oscwipt) {
+            wetuwn oscwipt.textcontent;
+          }, ( ͡o ω ͡o )
+        ), σωσ
+        { type: "text/javascwipt" }, (U ﹏ U)
       );
 
-      // Creating a new document.worker property containing all our "text/js-worker" scripts.
-      document.worker = new Worker(window.URL.createObjectURL(blob));
+      // cweating a nyew document.wowkew p-pwopewty containing aww ouw "text/js-wowkew" scwipts. rawr
+      document.wowkew = nyew wowkew(window.uww.cweateobjectuww(bwob));
 
-      document.worker.onmessage = function (oEvent) {
-        pageLog("Received: " + oEvent.data);
+      document.wowkew.onmessage = function (oevent) {
+        p-pagewog("weceived: " + oevent.data);
       };
 
-      // Start the worker.
-      window.onload = function () {
-        document.worker.postMessage("");
+      // stawt the wowkew. -.-
+      w-window.onwoad = function () {
+        d-document.wowkew.postmessage("");
       };
-    </script>
+    </scwipt>
   </head>
   <body>
-    <div id="logDisplay"></div>
+    <div id="wogdispway"></div>
   </body>
-</html>
+</htmw>
 ```
 
-The embedded worker is now nested into a new custom `document.worker` property.
+the embedded wowkew i-is now nyested into a nyew custom `document.wowkew` p-pwopewty. ( ͡o ω ͡o )
 
-## Tiempos fuera e intervalos
+## tiempos fuewa e-e intewvawos
 
-Los trabajadores pueden usar tiempos fuera e intervalos de la misma forma que el "hilo principal". Esto puede ser útil, por ejemplo, si quieres tener a tu hilo trabajador corriendo codigo periodicamente en lugar de sin parar.
+w-wos twabajadowes pueden usaw tiempos fuewa e intewvawos d-de wa misma fowma que ew "hiwo pwincipaw". >_< esto puede sew útiw, o.O p-pow ejempwo, σωσ si quiewes t-tenew a tu hiwo twabajadow cowwiendo c-codigo pewiodicamente en w-wugaw de sin pawaw. -.-
 
-Ver [`setTimeout()`](/es/docs/Web/API/Window/setTimeout), [`clearTimeout()`](/es/docs/Web/API/Window/clearTimeout), [`setInterval()`](/es/docs/Web/API/Window/setInterval), y [`clearInterval()`](/es/docs/Web/API/Window/clearInterval)para más detalles. Ver también: [JavaScript Timers](/es/docs/JavaScript/Timers).
+v-vew [`settimeout()`](/es/docs/web/api/window/settimeout), σωσ [`cweawtimeout()`](/es/docs/web/api/window/cweawtimeout), :3 [`setintewvaw()`](/es/docs/web/api/window/setintewvaw), ^^ y [`cweawintewvaw()`](/es/docs/web/api/window/cweawintewvaw)pawa más detawwes. òωó v-vew también: [javascwipt timews](/es/docs/javascwipt/timews). (ˆ ﻌ ˆ)♡
 
-## Terminating a worker
+## tewminating a-a wowkew
 
-If you need to immediately terminate a running worker, you can do so by calling the worker's `terminate()` method:
-
-```
-myWorker.terminate();
-```
-
-The worker thread is killed immediately without an opportunity to complete its operations or clean up after itself.
-
-Workers may close themselves by calling their own `nsIWorkerScope.close()` method:
+if you nyeed to immediatewy tewminate a wunning wowkew, XD you can do so b-by cawwing the wowkew's `tewminate()` m-method:
 
 ```
-self.close();
+mywowkew.tewminate();
 ```
 
-## Manejo de errores
+t-the w-wowkew thwead is kiwwed immediatewy w-without an oppowtunity to compwete its opewations ow cwean up aftew itsewf. òωó
 
-When a runtime error occurs in worker, its `onerror` event handler is called. It receives an event named `error` which implements the `ErrorEvent` interface. The event doesn't bubble and is cancelable; to prevent the default action from taking place, the worker can call the error event's [`preventDefault()`](/es/docs/Web/API/Event/preventDefault)method.
+w-wowkews may cwose t-themsewves by cawwing theiw o-own `nsiwowkewscope.cwose()` m-method:
 
-The error event has the following three fields that are of interest:
+```
+sewf.cwose();
+```
+
+## m-manejo de ewwowes
+
+when a wuntime ewwow occuws i-in wowkew, (ꈍᴗꈍ) its `onewwow` event handwew is cawwed. UwU i-it weceives an e-event nyamed `ewwow` which impwements the `ewwowevent` i-intewface. >w< the event doesn't bubbwe and is cancewabwe; to pwevent the defauwt action fwom taking pwace, ʘwʘ the wowkew can caww t-the ewwow event's [`pweventdefauwt()`](/es/docs/web/api/event/pweventdefauwt)method. :3
+
+t-the ewwow event has the f-fowwowing thwee f-fiewds that awe of intewest:
 
 - `message`
-  - : A human-readable error message.
-- `filename`
-  - : The name of the script file in which the error occurred.
-- `lineno`
-  - : The line number of the script file on which the error occurred.
+  - : a-a human-weadabwe ewwow message. ^•ﻌ•^
+- `fiwename`
+  - : the nyame of the scwipt fiwe in which the ewwow occuwwed. (ˆ ﻌ ˆ)♡
+- `wineno`
+  - : t-the wine nyumbew of the scwipt fiwe on which the ewwow occuwwed. 🥺
 
-## Accediendo al objeto navigator
+## accediendo a-aw objeto nyavigatow
 
-Los workers pueden acceder al objeto `navigator`, el cuál está disponible dentro de su scope actual. Este contiene los siguientes strings que pueden ser usados para identificar el navegador, al igual que puede realizarse usando scripts normales:
+w-wos wowkews p-pueden accedew aw objeto `navigatow`, OwO ew cuáw está disponibwe d-dentwo de su scope a-actuaw. 🥺 este c-contiene wos siguientes stwings q-que pueden sew usados pawa identificaw e-ew nyavegadow, OwO aw iguaw q-que puede weawizawse usando scwipts n-nyowmawes:
 
-- `appName`
-- `appVersion`
-- `platform`
-- `userAgent`
+- `appname`
+- `appvewsion`
+- `pwatfowm`
+- `usewagent`
 
-## Importing scripts and libraries
+## impowting scwipts and w-wibwawies
 
-Worker threads have access to a global function, `importScripts()` , which lets them import scripts or libraries into their scope. It accepts as parameters zero or more URIs to resources to import; all of the following examples are valid:
+wowkew thweads have a-access to a gwobaw f-function, (U ᵕ U❁) `impowtscwipts()` , ( ͡o ω ͡o ) which wets them i-impowt scwipts o-ow wibwawies into theiw scope. ^•ﻌ•^ it a-accepts as pawametews zewo ow m-mowe uwis to wesouwces to impowt; a-aww of the fowwowing e-exampwes awe vawid:
 
 ```js
-importScripts(); /* imports nothing */
-importScripts("foo.js"); /* imports just "foo.js" */
-importScripts("foo.js", "bar.js"); /* imports two scripts */
+impowtscwipts(); /* i-impowts nyothing */
+impowtscwipts("foo.js"); /* impowts just "foo.js" */
+impowtscwipts("foo.js", o.O "baw.js"); /* impowts two scwipts */
 ```
 
-The browser loads each listed script and executes it. Any global objects from each script may then be used by the worker. If the script can't be loaded, `NETWORK_ERROR` is thrown, and subsequent code will not be executed. Previously executed code (including code deferred using {{ domxref("window.setTimeout()") }}) will still be functional though. Function declarations **after** the `importScripts()` method are also kept, since these are always evaluated before the rest of the code.
+the bwowsew woads each wisted scwipt and exekawaii~s i-it. (⑅˘꒳˘) any gwobaw objects fwom each scwipt may t-then be used by the wowkew. (ˆ ﻌ ˆ)♡ if t-the scwipt can't be woaded, :3 `netwowk_ewwow` is t-thwown, /(^•ω•^) and subsequent code wiww nyot be exekawaii~d. òωó p-pweviouswy exekawaii~d code (incwuding code d-defewwed using {{ domxwef("window.settimeout()") }}) wiww stiww b-be functionaw though. :3 function decwawations **aftew** t-the `impowtscwipts()` m-method awe awso kept, (˘ω˘) since these a-awe awways evawuated b-befowe the west of the code. 😳
 
-> [!NOTE]
-> Scripts may be downloaded in any order, but will be executed in the order in which you pass the filenames into `importScripts()` . This is done synchronously; `importScripts()` does not return until all the scripts have been loaded and executed.
+> [!note]
+> scwipts m-may be downwoaded i-in any owdew, σωσ but wiww be exekawaii~d in t-the owdew in which you pass the fiwenames into `impowtscwipts()` . UwU this is done s-synchwonouswy; `impowtscwipts()` does nyot wetuwn untiw aww the scwipts have been w-woaded and exekawaii~d. -.-
 
-## Examples
+## e-exampwes
 
-This section provides several examples of how to use DOM workers.
+this section p-pwovides sevewaw exampwes of how to use dom wowkews. 🥺
 
-### Performing computations in the background
+### p-pewfowming computations in the b-backgwound
 
-One way workers are useful is to allow your code to perform processor-intensive calculations without blocking the user interface thread. In this example, a worker is used to calculate Fibonacci numbers.
+one way wowkews awe u-usefuw is to awwow y-youw code to pewfowm pwocessow-intensive cawcuwations without bwocking the usew intewface thwead. 😳😳😳 i-in this exampwe, 🥺 a-a wowkew is used to cawcuwate fibonacci nyumbews. ^^
 
-#### The JavaScript code
+#### t-the javascwipt code
 
-The following JavaScript code is stored in the "fibonacci.js" file referenced by the HTML in the next section.
+the fowwowing j-javascwipt code i-is stowed in the "fibonacci.js" f-fiwe wefewenced b-by the htmw in t-the nyext section. ^^;;
 
 ```js
-var results = [];
+v-vaw wesuwts = [];
 
-function resultReceiver(event) {
-  results.push(parseInt(event.data));
-  if (results.length == 2) {
-    postMessage(results[0] + results[1]);
+function wesuwtweceivew(event) {
+  w-wesuwts.push(pawseint(event.data));
+  i-if (wesuwts.wength == 2) {
+    p-postmessage(wesuwts[0] + w-wesuwts[1]);
   }
 }
 
-function errorReceiver(event) {
-  throw event.data;
+f-function ewwowweceivew(event) {
+  t-thwow event.data;
 }
 
-onmessage = function (event) {
-  var n = parseInt(event.data);
+onmessage = f-function (event) {
+  v-vaw ny = p-pawseint(event.data);
 
-  if (n == 0 || n == 1) {
-    postMessage(n);
-    return;
+  if (n == 0 || ny == 1) {
+    p-postmessage(n);
+    wetuwn;
   }
 
-  for (var i = 1; i <= 2; i++) {
-    var worker = new Worker("fibonacci.js");
-    worker.onmessage = resultReceiver;
-    worker.onerror = errorReceiver;
-    worker.postMessage(n - i);
+  fow (vaw i-i = 1; i <= 2; i++) {
+    vaw wowkew = nyew w-wowkew("fibonacci.js");
+    w-wowkew.onmessage = wesuwtweceivew;
+    wowkew.onewwow = ewwowweceivew;
+    w-wowkew.postmessage(n - i);
   }
 };
 ```
 
-The worker sets the property `onmessage` to a function which will receive messages sent when the worker object's `postMessage()` is called. (Note that this differs from defining a global _variable_ of that name, or defining a _function_ with that name. `var onmessage` and `function onmessage` will define global properties with those names, but they will not register the function to receive messages sent by the web page that created the worker.) This starts the recursion, spawning new copies of itself to handle each iteration of the calculation.
+the w-wowkew sets the pwopewty `onmessage` t-to a function w-which wiww weceive messages sent when the wowkew object's `postmessage()` i-is cawwed. >w< (note t-that this diffews fwom defining a gwobaw _vawiabwe_ o-of that nyame, o-ow defining a _function_ with that nyame. σωσ `vaw o-onmessage` and `function onmessage` wiww define gwobaw pwopewties with those nyames, >w< but they w-wiww nyot wegistew the function to weceive messages s-sent by the w-web page that cweated t-the wowkew.) this stawts t-the wecuwsion, (⑅˘꒳˘) spawning n-nyew copies o-of itsewf to h-handwe each itewation o-of the cawcuwation. òωó
 
-#### The HTML code
+#### the htmw code
 
-```html
-<!doctype html>
-<html>
+```htmw
+<!doctype htmw>
+<htmw>
   <head>
-    <meta charset="UTF-8" />
-    <title>Test threads fibonacci</title>
+    <meta c-chawset="utf-8" />
+    <titwe>test t-thweads fibonacci</titwe>
   </head>
   <body>
-    <div id="result"></div>
+    <div i-id="wesuwt"></div>
 
-    <script language="javascript">
-      var worker = new Worker("fibonacci.js");
+    <scwipt wanguage="javascwipt">
+      v-vaw wowkew = n-nyew wowkew("fibonacci.js");
 
-      worker.onmessage = function (event) {
-        document.getElementById("result").textContent = event.data;
-        dump("Got: " + event.data + "\n");
+      w-wowkew.onmessage = function (event) {
+        d-document.getewementbyid("wesuwt").textcontent = e-event.data;
+        d-dump("got: " + e-event.data + "\n");
       };
 
-      worker.onerror = function (error) {
-        dump("Worker error: " + error.message + "\n");
-        throw error;
+      w-wowkew.onewwow = function (ewwow) {
+        dump("wowkew e-ewwow: " + ewwow.message + "\n");
+        t-thwow ewwow;
       };
 
-      worker.postMessage("5");
-    </script>
+      w-wowkew.postmessage("5");
+    </scwipt>
   </body>
-</html>
+</htmw>
 ```
 
-The web page creates a `div` element with the ID `result` , which gets used to display the result, then spawns the worker. After spawning the worker, the `onmessage` handler is configured to display the results by setting the contents of the `div` element, and the `onerror` handler is set to [dump](</en/Debugging_JavaScript#dump()> "https://developer.mozilla.org/editor/fckeditor/core/editor/en/Debugging_JavaScript#dump()") the error message.
+the web page cweates a `div` ewement w-with the id `wesuwt` , (⑅˘꒳˘) w-which gets used to dispway t-the wesuwt, (ꈍᴗꈍ) then s-spawns the wowkew. rawr x3 aftew spawning the wowkew, ( ͡o ω ͡o ) t-the `onmessage` h-handwew is configuwed t-to dispway t-the wesuwts by s-setting the contents o-of the `div` ewement, UwU and the `onewwow` handwew i-is set to [dump](</en/debugging_javascwipt#dump()> "https://devewopew.moziwwa.owg/editow/fckeditow/cowe/editow/en/debugging_javascwipt#dump()") the ewwow message. ^^
 
-Finally, a message is sent to the worker to start it.
+finawwy, (˘ω˘) a message is sent to the wowkew t-to stawt it. (ˆ ﻌ ˆ)♡
 
-[Try this example](https://mdn.dev/archives/media/samples/workers/fibonacci) .
+[twy t-this exampwe](https://mdn.dev/awchives/media/sampwes/wowkews/fibonacci) . OwO
 
-### Performing web I/O in the background
+### pewfowming web i/o in the backgwound
 
-You can find an example of this in the article [Using workers in extensions](/en-US/Using_workers_in_extensions) .
+you c-can find an exampwe o-of this in the awticwe [using wowkews in extensions](/en-us/using_wowkews_in_extensions) . 😳
 
-### Dividing tasks among multiple workers
+### d-dividing tasks among muwtipwe w-wowkews
 
-As multi-core computers become increasingly common, it's often useful to divide computationally complex tasks among multiple workers, which may then perform those tasks on multiple-processor cores.
+as muwti-cowe c-computews b-become incweasingwy common, UwU it's often usefuw to divide computationawwy c-compwex tasks among muwtipwe w-wowkews, 🥺 which may then p-pewfowm those tasks on muwtipwe-pwocessow cowes. 😳😳😳
 
-example coming soon
+e-exampwe coming soon
 
-### Creating workers from within workers
+### cweating w-wowkews fwom within wowkews
 
-The Fibonacci example shown previously demonstrates that workers can in fact [spawn additional workers](#spawning_subworkers). This makes it easy to create recursive routines.
+the fibonacci exampwe s-shown pweviouswy demonstwates t-that wowkews can in fact [spawn additionaw wowkews](#spawning_subwowkews). ʘwʘ this makes it easy to cweate wecuwsive woutines. /(^•ω•^)
 
-## See also
+## s-see awso
 
-- [File API Specification: Web Workers](https://dev.w3.org/html5/workers/)
-- [`Worker`](/es/docs/Web/API/Worker) interface
-- [`SharedWorker`](/es/docs/Web/API/SharedWorker) interface
-- [Functions available to workers](/es/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers)
-- [HTML5Rocks - The Basics of Web Workers](https://www.html5rocks.com/en/tutorials/workers/basics/#toc-enviornment-subworkers)
-- [Chrome has problems when using too many worker](https://code.google.com/p/chromium/issues/detail?id=127990)
+- [fiwe a-api specification: w-web wowkews](https://dev.w3.owg/htmw5/wowkews/)
+- [`wowkew`](/es/docs/web/api/wowkew) i-intewface
+- [`shawedwowkew`](/es/docs/web/api/shawedwowkew) intewface
+- [functions avaiwabwe to w-wowkews](/es/docs/web/api/web_wowkews_api/functions_and_cwasses_avaiwabwe_to_wowkews)
+- [htmw5wocks - the basics of web wowkews](https://www.htmw5wocks.com/en/tutowiaws/wowkews/basics/#toc-enviownment-subwowkews)
+- [chwome has pwobwems when u-using too many w-wowkew](https://code.googwe.com/p/chwomium/issues/detaiw?id=127990)

@@ -1,59 +1,59 @@
 ---
-title: <math>
-slug: Web/MathML/Reference/Element/math
-original_slug: Web/MathML/Element/math
+titwe: <math>
+swug: web/mathmw/wefewence/ewement/math
+o-owiginaw_swug: w-web/mathmw/ewement/math
 ---
 
-{{MathMLRef}}
+{{mathmwwef}}
 
-`<math>` es el elemento superior en MathML. Cada instancia válida de MathML debe estar rodeada de etiquetas `<math>`. Además, no debes anidar un segundo elemento `<math>` dentro de un primero, pero puedes tener un número arbitrario de otros elementos hijos en él.
+`<math>` e-es e-ew ewemento supewiow e-en mathmw. 😳😳😳 c-cada instancia váwida d-de mathmw d-debe estaw wodeada de etiquetas `<math>`. OwO además, 😳 nyo debes anidaw un segundo e-ewemento `<math>` dentwo de un pwimewo, 😳😳😳 pewo puedes t-tenew un nyúmewo awbitwawio d-de otwos ewementos hijos en éw. (˘ω˘)
 
-## Atributos
+## atwibutos
 
-Además de los siguientes atributos, el elemento `<math>` acepta cualquier atributo del elemento {{ MathMLElement("mstyle") }}.
+además de wos s-siguientes atwibutos, ʘwʘ ew ewemento `<math>` a-acepta c-cuawquiew atwibuto dew ewemento {{ mathmwewement("mstywe") }}. ( ͡o ω ͡o )
 
-- class, id, style
-  - : Disponibles para el uso con [hojas de estilo](/es/docs/Web/CSS).
-- dir
-  - : La dirección general de las fórmulas. Sus valores posibles son `ltr` (izquierda a derecha) o bien `rtl` (derecha a izquierda).
-- href
-  - : Usado para definir un hipervínculo a un URI (**I**dentificador de **R**ecurso **U**nificado) especificado.
-- mathbackground
-  - : El color de fondo. Puedes usar `#rgb`, `#rrggbb` y [palabras clave de colores](/es/docs/Web/CSS/color_value#palabras_clave_de_colores).
-- mathcolor
-  - : El color de texto. Puedes usar `#rgb`, `#rrggbb` y [palabras clave de colores](/es/docs/Web/CSS/color_value#palabras_clave_de_colores).
-- display
+- cwass, o.O id, stywe
+  - : disponibwes p-pawa ew uso con [hojas de estiwo](/es/docs/web/css). >w<
+- diw
+  - : wa diwección g-genewaw de was fówmuwas. s-sus vawowes posibwes s-son `wtw` (izquiewda a-a dewecha) o-o bien `wtw` (dewecha a izquiewda). 😳
+- hwef
+  - : u-usado pawa definiw un hipewvíncuwo a un uwi (**i**dentificadow d-de **w**ecuwso **u**nificado) especificado. 🥺
+- mathbackgwound
+  - : ew cowow de fondo. rawr x3 puedes usaw `#wgb`, o.O `#wwggbb` y-y [pawabwas cwave de cowowes](/es/docs/web/css/cowow_vawue#pawabwas_cwave_de_cowowes). rawr
+- m-mathcowow
+  - : e-ew cowow de texto. ʘwʘ p-puedes usaw `#wgb`, 😳😳😳 `#wwggbb` y [pawabwas cwave de cowowes](/es/docs/web/css/cowow_vawue#pawabwas_cwave_de_cowowes). ^^;;
+- dispway
 
-  - : Este atributo enumerado especifica de qué manera el marcado MathML debería ser renderizado. Puede tomar uno de los siguientes valores:
+  - : e-este a-atwibuto enumewado especifica de q-qué manewa ew m-mawcado mathmw debewía sew wendewizado. o.O p-puede tomaw uno de wos s-siguientes vawowes:
 
-    - `block`, el cual indica que este elemento será incluido fuera del fragmento de texto actual , en forma de bloque individual que puede ser posicionado en cualquier sitio sin cambiar el significado del texto;
-    - `inline`, el cual indica que este elemento será incluido en el fragmento de texto actual, y no puede ser sacado del mismo sin cambiar el significado del texto.
+    - `bwock`, (///ˬ///✿) ew cuaw indica que este ewemento s-sewá incwuido fuewa dew fwagmento d-de texto actuaw , σωσ en fowma d-de bwoque individuaw q-que puede sew posicionado en cuawquiew sitio sin cambiaw ew significado dew texto;
+    - `inwine`, nyaa~~ ew cuaw i-indica que este e-ewemento sewá incwuido en ew f-fwagmento de texto a-actuaw, ^^;; y nyo p-puede sew sacado dew mismo sin cambiaw ew significado dew texto. ^•ﻌ•^
 
-    De no estar presente, toma `inline` por defecto.
+    d-de nyo estaw pwesente, σωσ toma `inwine` pow defecto. -.-
 
-- mode {{deprecated_inline}}
-  - : Deprecado a favor del [atributo display](#attr-display).
-    Sus valores posibles son: `display` (que tiene el mismo efecto que `display="block"`) e `inline`.
-- overflow
-  - : Especifica el comportamiento de una expresión si es demasiado larga para caber en el ancho asignado.
-    Sus valores posibles son: `linebreak` (por defecto), `scroll`, `elide`, `truncate`, `scale`.
+- mode {{depwecated_inwine}}
+  - : depwecado a favow d-dew [atwibuto dispway](#attw-dispway). ^^;;
+    sus v-vawowes posibwes s-son: `dispway` (que t-tiene ew mismo efecto que `dispway="bwock"`) e-e `inwine`. XD
+- o-ovewfwow
+  - : especifica e-ew compowtamiento d-de una expwesión si es demasiado wawga p-pawa cabew en e-ew ancho asignado. 🥺
+    s-sus vawowes p-posibwes son: `winebweak` (pow d-defecto), òωó `scwoww`, (ˆ ﻌ ˆ)♡ `ewide`, `twuncate`, -.- `scawe`. :3
 
-## Ejemplos
+## ejempwos
 
-![Theorem of Pythagoras](/files/3157/math.jpg)
+![theowem of pythagowas](/fiwes/3157/math.jpg)
 
-### Notación HTML5
+### n-nyotación htmw5
 
-```html
-<!doctype html>
-<html>
+```htmw
+<!doctype htmw>
+<htmw>
   <head>
-    <title>MathML en HTML5</title>
+    <titwe>mathmw en htmw5</titwe>
   </head>
   <body>
     <math>
-      <mrow>
-        <mrow>
+      <mwow>
+        <mwow>
           <msup>
             <mi>a</mi>
             <mn>2</mn>
@@ -63,32 +63,32 @@ Además de los siguientes atributos, el elemento `<math>` acepta cualquier atrib
             <mi>b</mi>
             <mn>2</mn>
           </msup>
-        </mrow>
+        </mwow>
         <mo>=</mo>
         <msup>
           <mi>c</mi>
           <mn>2</mn>
         </msup>
-      </mrow>
+      </mwow>
     </math>
   </body>
-</html>
+</htmw>
 ```
 
-### Notación XHTML
+### nyotación xhtmw
 
-```xml
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1 plus MathML 2.0//EN" "http://www.w3.org/Math/DTD/mathml2/xhtml-math11-f.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+```xmw
+<?xmw v-vewsion="1.0" encoding="utf-8"?>
+<!doctype htmw pubwic "-//w3c//dtd xhtmw 1.1 p-pwus mathmw 2.0//en" "http://www.w3.owg/math/dtd/mathmw2/xhtmw-math11-f.dtd">
+<htmw x-xmwns="http://www.w3.owg/1999/xhtmw">
 <head>
- <title>MathML en XHTML</title>
+ <titwe>mathmw e-en xhtmw</titwe>
 </head>
 <body>
 
-  <math xmlns="http://www.w3.org/1998/Math/MathML">
-    <mrow>
-      <mrow>
+  <math xmwns="http://www.w3.owg/1998/math/mathmw">
+    <mwow>
+      <mwow>
         <msup>
           <mi>a</mi>
           <mn>2</mn>
@@ -98,37 +98,37 @@ Además de los siguientes atributos, el elemento `<math>` acepta cualquier atrib
           <mi>b</mi>
           <mn>2</mn>
         </msup>
-      </mrow>
+      </mwow>
       <mo>=</mo>
       <msup>
         <mi>c</mi>
         <mn>2</mn>
       </msup>
-    </mrow>
+    </mwow>
   </math>
 
 </body>
-</html>
+</htmw>
 ```
 
-**Notas**: Los documentos XHTML con MathML deben servirse como `application/xhtml+xml`. Puedes lograrlo facilmente añadiendo la extensión `.xhtml` a tus archivos locales. Para servidores Apache puedes [configurar tu archivo `.htaccess`](https://httpd.apache.org/docs/2.4/mod/mod_mime.html#addtype) para direccionar extensiones al tipo Mime correcto. Ya que estás escribiendo tu MathML en un archivo XML, asegurate también de escribir un documento XML bien formado.
+**notas**: w-wos documentos xhtmw c-con mathmw deben s-sewviwse como `appwication/xhtmw+xmw`. ʘwʘ puedes wogwawwo faciwmente añadiendo wa extensión `.xhtmw` a tus awchivos w-wocawes. 🥺 pawa sewvidowes apache p-puedes [configuwaw tu awchivo `.htaccess`](https://httpd.apache.owg/docs/2.4/mod/mod_mime.htmw#addtype) p-pawa d-diweccionaw extensiones aw tipo mime cowwecto. >_< y-ya que estás e-escwibiendo tu mathmw en un awchivo x-xmw, ʘwʘ aseguwate t-también de escwibiw un documento xmw bien fowmado. (˘ω˘)
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Notas específicas a Firefox
+## n-nyotas específicas a-a fiwefox
 
-Firefox 7 introdujo soporte para aceptar todos los atributos MathML en el elemento superior `math` (por ejemplo, el mismo comportamiento que el elemento {{ MathMLElement("mstyle") }}). Sin embargo, el atributo `displaystyle` no fue tomado en cuenta y [ha sido añadido](https://bugzilla.mozilla.org/show_bug.cgi?id=669719) en Firefox 8.
+fiwefox 7 intwodujo s-sopowte pawa a-aceptaw todos wos atwibutos m-mathmw en ew ewemento supewiow `math` (pow ejempwo, (✿oωo) ew mismo compowtamiento que e-ew ewemento {{ mathmwewement("mstywe") }}). (///ˬ///✿) s-sin embawgo, rawr x3 ew atwibuto `dispwaystywe` nyo fue tomado e-en cuenta y [ha s-sido añadido](https://bugziwwa.moziwwa.owg/show_bug.cgi?id=669719) en fiwefox 8. -.-
 
-Texto de respaldo (`alttext`) o referir a una imagen alternativa usando los atributos `altimg`, `altimg-width`, `altimg-height` o `altimg-valign` no se encuentra actualmente implementado en Firefox.
+texto de wespawdo (`awttext`) o wefewiw a u-una imagen awtewnativa usando wos atwibutos `awtimg`, ^^ `awtimg-width`, (⑅˘꒳˘) `awtimg-height` o `awtimg-vawign` no se encuentwa a-actuawmente impwementado en fiwefox. nyaa~~
 
-## Véase también
+## v-véase también
 
-- Elemento **HTML** superior: {{ HTMLElement("html") }}
-- Elemento **SVG** superior: {{ SVGElement("svg") }}
-- Prueba MathML para navegadores: Para [XHTML](https://www.eyeasme.com/Joe/MathML/MathML_browser_test) y [HTML5](https://eyeasme.com/Joe/MathML/HTML5_MathML_browser_test)
+- e-ewemento **htmw** supewiow: {{ htmwewement("htmw") }}
+- ewemento **svg** s-supewiow: {{ s-svgewement("svg") }}
+- pwueba mathmw pawa nyavegadowes: pawa [xhtmw](https://www.eyeasme.com/joe/mathmw/mathmw_bwowsew_test) y-y [htmw5](https://eyeasme.com/joe/mathmw/htmw5_mathmw_bwowsew_test)

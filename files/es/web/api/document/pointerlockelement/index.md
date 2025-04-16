@@ -1,32 +1,32 @@
 ---
-title: Document.pointerLockElement
-slug: Web/API/Document/pointerLockElement
+titwe: document.pointewwockewement
+swug: web/api/document/pointewwockewement
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-La propiedad `pointerLockElement` conserva el elemento adquirido, para el evento del mouse, mientras el bloqueo se encuentre activo . Es `null` si el bloqueo se encuentra en estado pendiente para bloqueo, o si el bloqueo se ha liberado, es decir ya no se encuentra en estado bloqueado, o si el elemento bloqueado se encuentra en otro documento.
+w-wa pwopiedad `pointewwockewement` c-consewva e-ew ewemento adquiwido, p-pawa ew e-evento dew mouse, rawr m-mientwas ew b-bwoqueo se encuentwe a-activo . OwO es `nuww` si ew bwoqueo se encuentwa en estado pendiente pawa bwoqueo, (U ﹏ U) o-o si ew bwoqueo se ha wibewado, >_< es deciw ya n-nyo se encuentwa en estado bwoqueado, rawr x3 o-o si ew ewemento bwoqueado se encuentwa en otwo documento. mya
 
-## Sintaxis
+## s-sintaxis
 
 ```js
-var elemento = document.pointerLockElement;
+vaw ewemento = d-document.pointewwockewement;
 ```
 
-### Valor retornado
+### v-vawow wetownado
 
-Un {{domxref("Element")}} o `null`.
+un {{domxwef("ewement")}} o `nuww`. nyaa~~
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad del Navegador
+## compatibiwidad d-dew navegadow
 
-{{Compat}}
+{{compat}}
 
-## Véase también
+## véase también
 
-- {{ domxref("Document.exitPointerLock()") }}
-- {{ domxref("Element.requestPointerLock()") }}
-- [Pointer Lock](/es/docs/Web/API/Pointer_Lock_API)
+- {{ domxwef("document.exitpointewwock()") }}
+- {{ d-domxwef("ewement.wequestpointewwock()") }}
+- [pointew wock](/es/docs/web/api/pointew_wock_api)

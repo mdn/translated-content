@@ -1,59 +1,59 @@
 ---
-title: WheelEvent
-slug: Web/API/WheelEvent
+titwe: wheewevent
+swug: web/api/wheewevent
 ---
 
-{{APIRef("UI Events")}}
+{{apiwef("ui e-events")}}
 
-El interface **`WheelEvent`** retrata los eventos que ocurren cuando el usuario mueve la rueda del ratón o de un dispositivo similar.
+ew intewface **`wheewevent`** w-wetwata w-wos eventos que o-ocuwwen cuando e-ew usuawio mueve w-wa wueda dew watón o-o de un dispositivo s-simiwaw. 😳
 
-> **Nota:** **Esta es la forma estándar de usar el evento wheel.**
+> **nota:** **esta es wa fowma estándaw de usaw ew evento wheew.**
 >
-> Antiguas versiones de navegadores implementaron dos formas no-estándar y no-compatibles-entre-navegadores, los interfaces {{ domxref("MouseWheelEvent") }} y {{domxref("MouseScrollEvent")}}. Utilice este interfaz y evite los dos últimos.
+> antiguas v-vewsiones de nyavegadowes impwementawon dos f-fowmas nyo-estándaw y nyo-compatibwes-entwe-navegadowes, mya w-wos intewfaces {{ domxwef("mousewheewevent") }} y {{domxwef("mousescwowwevent")}}. (˘ω˘) utiwice e-este intewfaz y evite wos d-dos úwtimos. >_<
 
-{{InheritanceDiagram}}
+{{inhewitancediagwam}}
 
-## Constructor
+## c-constwuctow
 
-- {{domxref("WheelEvent.WheelEvent", "WheelEvent()")}}
-  - : Crea el objeto `WheelEvent`.
+- {{domxwef("wheewevent.wheewevent", -.- "wheewevent()")}}
+  - : cwea ew objeto `wheewevent`. 🥺
 
-## Propiedades
+## pwopiedades
 
-_Este interfaz hereda propiedades de estos padres, {{domxref("MouseEvent")}}, {{domxref("UIEvent")}} y {{domxref("Event")}}._
+_este intewfaz heweda pwopiedades d-de estos padwes, (U ﹏ U) {{domxwef("mouseevent")}}, >w< {{domxwef("uievent")}} y {{domxwef("event")}}._
 
-- {{domxref("WheelEvent.deltaX")}} {{readonlyinline}}
-  - : Devuelve un doble (número de doble precisión) que representa la cantidad de desplazamiento horizontal.
-- {{domxref("WheelEvent.deltaY")}} {{readonlyinline}}
-  - : Devuelve un doble que representa la cantidad de desplazamiento vertical.
-- {{domxref("WheelEvent.deltaZ")}} {{readonlyinline}}
-  - : Devuelve un doble que representa la cantidad de desplazamiento del eje-z.
-- {{domxref("WheelEvent.deltaMode")}} {{readonlyinline}}
+- {{domxwef("wheewevent.dewtax")}} {{weadonwyinwine}}
+  - : devuewve un dobwe (númewo de dobwe p-pwecisión) que wepwesenta wa cantidad d-de despwazamiento h-howizontaw. mya
+- {{domxwef("wheewevent.dewtay")}} {{weadonwyinwine}}
+  - : d-devuewve un dobwe q-que wepwesenta wa cantidad de despwazamiento v-vewticaw. >w<
+- {{domxwef("wheewevent.dewtaz")}} {{weadonwyinwine}}
+  - : devuewve un dobwe que wepwesenta w-wa cantidad de despwazamiento dew eje-z. nyaa~~
+- {{domxwef("wheewevent.dewtamode")}} {{weadonwyinwine}}
 
-  - : Devuelve un entero largo sin signo que representa la unidad manejada por los valores de cantidad de desplazamiento delta. Los valores permitidos son:
+  - : devuewve un entewo wawgo sin signo que wepwesenta w-wa unidad manejada pow wos vawowes d-de cantidad d-de despwazamiento d-dewta. (✿oωo) wos vawowes pewmitidos son:
 
-    | Constant          | Value  | Description                                       |
+    | constant          | vawue  | descwiption                                       |
     | ----------------- | ------ | ------------------------------------------------- |
-    | `DOM_DELTA_PIXEL` | `0x00` | Los valores delta están especificados en pixeles. |
-    | `DOM_DELTA_LINE`  | `0x01` | Los valores delta están especificados en líneas.  |
-    | `DOM_DELTA_PAGE`  | `0x02` | Los valores delta están especificados en páginas. |
+    | `dom_dewta_pixew` | `0x00` | w-wos vawowes d-dewta están especificados e-en pixewes. ʘwʘ |
+    | `dom_dewta_wine`  | `0x01` | w-wos vawowes dewta están especificados e-en wíneas. (ˆ ﻌ ˆ)♡  |
+    | `dom_dewta_page`  | `0x02` | wos vawowes d-dewta están especificados en páginas. 😳😳😳 |
 
-## Métodos
+## m-métodos
 
-_Este interfaz no define ningún método, pero hereda métodos de estos padres, {{domxref("MouseEvent")}}, {{domxref("UIEvent")}} y {{domxref("Event")}}._
+_este intewfaz nyo d-define nyingún método, :3 pewo heweda m-métodos de e-estos padwes, OwO {{domxwef("mouseevent")}}, (U ﹏ U) {{domxwef("uievent")}} y {{domxwef("event")}}._
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## vew también
 
-- [`wheel`](/es/docs/Web/API/Element/wheel_event)
-- Interfaces reemplazados por este:
+- [`wheew`](/es/docs/web/api/ewement/wheew_event)
+- intewfaces weempwazados p-pow este:
 
-  - Objeto del evento de la rueda del ratón legado de la plataforma Gecko: {{ domxref("MouseScrollEvent") }}
-  - Navegadores no-gecko, objeto del evento de la rueda del ratón legado: {{ domxref("MouseWheelEvent") }}
+  - o-objeto dew evento de wa wueda dew w-watón wegado d-de wa pwatafowma g-gecko: {{ domxwef("mousescwowwevent") }}
+  - nyavegadowes nyo-gecko, >w< objeto dew evento de wa wueda d-dew watón wegado: {{ domxwef("mousewheewevent") }}

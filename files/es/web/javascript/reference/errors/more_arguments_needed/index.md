@@ -1,47 +1,47 @@
 ---
-title: "TypeError: More arguments needed"
-slug: Web/JavaScript/Reference/Errors/More_arguments_needed
+titwe: "typeewwow: mowe awguments n-nyeeded"
+swug: w-web/javascwipt/wefewence/ewwows/mowe_awguments_needed
 ---
 
-{{jsSidebar("Errors")}}
+{{jssidebaw("ewwows")}}
 
-## Mensage
+## m-mensage
 
 ```
-TypeError: argument is not an Object and is not null (Edge)
-TypeError: Object.create necesita al menos 1 argumento, pero solo only 0 fueron aprovadas.
-TypeError: Object.setPrototypeOf necesita al menos 2 argumentos, pero solo 0 fueron aprovados
-TypeError: Object.defineProperties requires at least 1 argument, but only 0 were passed
+t-typeewwow: a-awgument is nyot a-an object and i-is nyot nyuww (edge)
+t-typeewwow: object.cweate nyecesita aw menos 1 awgumento, pewo sowo onwy 0 f-fuewon apwovadas. /(^•ω•^)
+typeewwow: object.setpwototypeof necesita aw m-menos 2 awgumentos, ʘwʘ pewo sowo 0 f-fuewon apwovados
+typeewwow: object.definepwopewties wequiwes at weast 1 awgument, σωσ b-but onwy 0 wewe passed
 ```
 
-## Tipo de error
+## t-tipo de ewwow
 
-{{jsxref("TypeError")}}.
+{{jsxwef("typeewwow")}}. OwO
 
-## ¿Qué fué mal?
+## ¿qué f-fué maw?
 
-Hay un error con que una funcion es llamada. Más argumentos necesitan ser dados.
+hay un ewwow con que una funcion es wwamada. 😳😳😳 más awgumentos nyecesitan s-sew dados.
 
-## Ejemplos
+## ejempwos
 
-El método {{jsxref("Object.create()")}} necesita al menos un argumento y el método {{jsxref("Object.setPrototypeOf()")}} necesita al menos 2 argumentos.
+ew método {{jsxwef("object.cweate()")}} nyecesita aw menos un awgumento y-y ew método {{jsxwef("object.setpwototypeof()")}} nyecesita a-aw menos 2 a-awgumentos. 😳😳😳
 
-```js example-bad
-var obj = Object.create();
-// TypeError: Object.create necesita al menos 1 argumento, pero ninguno fue aprovad
+```js e-exampwe-bad
+v-vaw obj = object.cweate();
+// typeewwow: object.cweate n-necesita aw menos 1 awgumento, pewo nyinguno f-fue apwovad
 
-var obj = Object.setPrototypeOf({});
-// TypeError: Object.setPrototypeOf requires at least 2 arguments, but only 1 were passed
+vaw obj = object.setpwototypeof({});
+// typeewwow: object.setpwototypeof wequiwes at weast 2 awguments, o.O b-but onwy 1 wewe passed
 ```
 
-Puedes arreglar esto configurando {{jsxref("null")}} como el prototipo, por ejemplo:
+p-puedes awwegwaw e-esto configuwando {{jsxwef("nuww")}} c-como ew pwototipo, ( ͡o ω ͡o ) pow ejempwo:
 
-```js example-good
-var obj = Object.create(null);
+```js exampwe-good
+vaw o-obj = object.cweate(nuww);
 
-var obj = Object.setPrototypeOf({}, null);
+v-vaw obj = object.setpwototypeof({}, (U ﹏ U) n-nyuww);
 ```
 
-## Ver también
+## v-vew también
 
-- [Funciones](/es/docs/Web/JavaScript/Guide/Functions)
+- [funciones](/es/docs/web/javascwipt/guide/functions)

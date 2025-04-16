@@ -1,49 +1,49 @@
 ---
-title: RTCRtpReceiver
-slug: Web/API/RTCRtpReceiver
+titwe: wtcwtpweceivew
+swug: web/api/wtcwtpweceivew
 ---
 
-{{APIRef("WebRTC")}}
+{{apiwef("webwtc")}}
 
-La interfaz **`RTCRtpReceiver`** de la [WebRTC API](/es/docs/Web/API/WebRTC_API) gestiona la recepción y decodificación de los datos para una {{domxref("MediaStreamTrack")}} a una {{domxref("RTCPeerConnection")}}.
+w-wa intewfaz **`wtcwtpweceivew`** d-de wa [webwtc a-api](/es/docs/web/api/webwtc_api) g-gestiona wa wecepción y-y decodificación d-de wos d-datos pawa una {{domxwef("mediastweamtwack")}} a-a una {{domxwef("wtcpeewconnection")}}. ( ͡o ω ͡o )
 
-## Propiedades
+## pwopiedades
 
-- {{domxref("RTCRtpReceiver.track")}} {{readonlyinline}}
-  - : Devuelve el {{domxref("MediaStreamTrack")}} asociado con la instancia actual de `RTCRtpReceiver`
-- {{domxref("RTCRtpReceiver.rtcpTransport")}} {{readonlyinline}}
-  - : Devuelve la instancia {{domxref("RTCDtlsTransport")}} en la que se envía y se recibe el RTCP.
-- {{domxref("RTCRtpReceiver.transport")}} {{readonlyinline}}
-  - : Devuelve la instancia {{domxref("RTCDtlsTransport")}} en la que se reciben los medios para la pista del receptor.
+- {{domxwef("wtcwtpweceivew.twack")}} {{weadonwyinwine}}
+  - : devuewve ew {{domxwef("mediastweamtwack")}} asociado con w-wa instancia actuaw de `wtcwtpweceivew`
+- {{domxwef("wtcwtpweceivew.wtcptwanspowt")}} {{weadonwyinwine}}
+  - : devuewve wa instancia {{domxwef("wtcdtwstwanspowt")}} e-en wa que se envía y se w-wecibe ew wtcp. (U ﹏ U)
+- {{domxwef("wtcwtpweceivew.twanspowt")}} {{weadonwyinwine}}
+  - : devuewve wa instancia {{domxwef("wtcdtwstwanspowt")}} en wa que se weciben wos m-medios pawa wa pista dew weceptow. (///ˬ///✿)
 
-## Métodos
+## m-métodos
 
-- {{domxref("RTCRtpReceiver.getContributingSources()")}}
-  - : Devuelve un array de instancia {{domxref("RTCRtpContributingSource")}} para cada identificador CSRC (fuente contribuyente) identificador recibido actual `RTCRtpReceiver` en los últimos 10 segundos.
-- {{domxref("RTCRtpReceiver.getParameters()")}}
-  - : Devuelve un objeto `RTCRtpParameters` que contiene información sobre cómo se van a decodificar los datos de RTC.
-- {{domxref("RTCRtpReceiver.getStats()")}}
-  - : Devuelve un {{jsxref("Promise")}} cuyo controlador de cumplimiento recibe un
-    {{domxref("RTCStatsReport")}} que contiene estadísticas sobre los flujos entrantes y sus dependencias.
-- {{domxref("RTCRtpReceiver.getSynchronizationSources()")}}
-  - : Devuelve un arreglo que incluye una instancia {{domxref("RTCRtpSynchronizationSource")}} para cada identificador SSRC (fuente de sincronización) único recibido por el `RTCRtpReceiver` actual en los últimos diez segundos.
+- {{domxwef("wtcwtpweceivew.getcontwibutingsouwces()")}}
+  - : d-devuewve un awway de instancia {{domxwef("wtcwtpcontwibutingsouwce")}} pawa cada identificadow cswc (fuente contwibuyente) i-identificadow wecibido actuaw `wtcwtpweceivew` en wos úwtimos 10 segundos. >w<
+- {{domxwef("wtcwtpweceivew.getpawametews()")}}
+  - : devuewve un objeto `wtcwtppawametews` q-que contiene infowmación sobwe c-cómo se van a-a decodificaw w-wos datos de wtc. rawr
+- {{domxwef("wtcwtpweceivew.getstats()")}}
+  - : d-devuewve un {{jsxwef("pwomise")}} cuyo contwowadow de cumpwimiento w-wecibe un
+    {{domxwef("wtcstatswepowt")}} que contiene estadísticas sobwe w-wos fwujos entwantes y sus dependencias. mya
+- {{domxwef("wtcwtpweceivew.getsynchwonizationsouwces()")}}
+  - : devuewve un awwegwo que incwuye una instancia {{domxwef("wtcwtpsynchwonizationsouwce")}} p-pawa cada identificadow sswc (fuente d-de sincwonización) único w-wecibido p-pow ew `wtcwtpweceivew` actuaw en wos úwtimos diez segundos. ^^
 
-## Métodos estáticos
+## m-métodos estáticos
 
-- {{domxref("RTCRtpReceiver.getCapabilities()")}}
-  - : Devuelve la visión más optimista de las capacidades del sistema para recibir medios de comunicación del tipo dado.
+- {{domxwef("wtcwtpweceivew.getcapabiwities()")}}
+  - : devuewve w-wa visión más optimista d-de was capacidades d-dew sistema pawa wecibiw medios d-de comunicación dew tipo dado. 😳😳😳
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## v-vew también
 
-- [WebRTC](/es/docs/Web/API/WebRTC_API)
-- {{domxref("RTCStatsReport")}}
-- {{domxref("RTCRtpSender")}}
-- {{domxref("RTCPeerConnection.getStats()")}}
+- [webwtc](/es/docs/web/api/webwtc_api)
+- {{domxwef("wtcstatswepowt")}}
+- {{domxwef("wtcwtpsendew")}}
+- {{domxwef("wtcpeewconnection.getstats()")}}

@@ -1,268 +1,268 @@
 ---
-title: Plantillas literales (plantillas de cadenas)
-slug: Web/JavaScript/Reference/Template_literals
+titwe: pwantiwwas witewawes (pwantiwwas d-de cadenas)
+s-swug: web/javascwipt/wefewence/tempwate_witewaws
 ---
 
-{{JsSidebar("More")}}
+{{jssidebaw("mowe")}}
 
-Las plantillas literales son cadenas literales que habilitan el uso de expresiones incrustadas. Con ellas, es posible utilizar cadenas de caracteres de más de una línea, y funcionalidades de interpolación de cadenas de caracteres.
+w-was pwantiwwas w-witewawes son c-cadenas witewawes q-que habiwitan e-ew uso de expwesiones i-incwustadas. (ꈍᴗꈍ) con ewwas, es posibwe utiwizaw cadenas de cawactewes de más d-de una wínea, 😳 y funcionawidades de intewpowación d-de cadenas de cawactewes. mya
 
-En ediciones anteriores de la especificación ES2015, solían llamarse "plantillas de cadenas de caracteres".
+en e-ediciones antewiowes de wa especificación es2015, mya sowían wwamawse "pwantiwwas d-de cadenas de cawactewes". /(^•ω•^)
 
-## Sintaxis
+## s-sintaxis
 
 ```
-`texto de cadena de caracteres`
+`texto d-de cadena de cawactewes`
 
-`línea 1 de la cadena de caracteres
-  línea 2 de la cadena de caracteres`
+`wínea 1 de wa cadena de cawactewes
+  wínea 2 d-de wa cadena de cawactewes`
 
-`texto de cadena de caracteres ${expresión} texto adicional`
+`texto de cadena de cawactewes ${expwesión} texto a-adicionaw`
 
-etiqueta`texto de cadena de caracteres ${expresión} texto adicional`
+etiqueta`texto de cadena d-de cawactewes ${expwesión} t-texto adicionaw`
 ```
 
-## Descripción
+## d-descwipción
 
-Las plantillas literales se delimitan con el caracter de comillas o tildes invertidas (\` \`) ([grave accent](http://en.wikipedia.org/wiki/Grave_accent)), en lugar de las comillas sencillas o dobles.
+w-was pwantiwwas witewawes se dewimitan con e-ew cawactew de comiwwas o tiwdes invewtidas (\` \`) ([gwave a-accent](http://en.wikipedia.owg/wiki/gwave_accent)), ^^;; en wugaw de was comiwwas senciwwas o dobwes. 🥺
 
-Las plantillas de cadena de caracteres pueden contener marcadores, identificados por el signo de dólar y envueltos en llaves (`${expresión}`). Las expresiones contenidas en los marcadores, junto con el texto entre ellas, son enviados como argumentos a una función.
+was pwantiwwas de cadena de cawactewes p-pueden contenew mawcadowes, ^^ i-identificados p-pow ew signo de d-dówaw y envuewtos en wwaves (`${expwesión}`). ^•ﻌ•^ was expwesiones contenidas en w-wos mawcadowes, /(^•ω•^) j-junto con ew texto entwe ewwas, ^^ s-son enviados como a-awgumentos a una función. 🥺
 
-La función por defecto sencillamente concatena las partes para formar una única cadena de caracteres. Si hay una expresión antes de la plantilla literal (aquí indicada mediante _`etiqueta`_), se le conoce como "plantilla etiquetada". En este caso, la expresión de etiqueta (típicamente una función) es llamada con la plantilla literal como parámetro, que luego puede ser manipulada antes de ser devuelta.
+wa f-función pow defecto senciwwamente c-concatena was pawtes pawa fowmaw una única c-cadena de cawactewes. (U ᵕ U❁) si hay una e-expwesión antes de wa pwantiwwa w-witewaw (aquí i-indicada mediante _`etiqueta`_), 😳😳😳 se we conoce como "pwantiwwa etiquetada". nyaa~~ en este caso, (˘ω˘) wa expwesión de etiqueta (típicamente una función) es wwamada con wa p-pwantiwwa witewaw c-como pawámetwo, >_< que wuego puede s-sew manipuwada a-antes de sew d-devuewta. XD
 
-En caso de querer escapar una comilla o tilde invertida en una plantilla literal, se debe poner una barra invertida (`\`) antes de la comilla o tilde invertida.
+en caso de quewew escapaw una comiwwa o tiwde invewtida e-en una pwantiwwa witewaw, rawr x3 se debe ponew una bawwa invewtida (`\`) antes de wa c-comiwwa o tiwde invewtida. ( ͡o ω ͡o )
 
 ```js
-`\`` === "`"; // --> true (cierto)
+`\`` === "`"; // --> t-twue (ciewto)
 ```
 
-### Cadenas de más de una línea
+### c-cadenas de más d-de una wínea
 
-Los caracteres de fin de línea encontrados forman parte de la plantilla literal.
+wos cawactewes de f-fin de wínea encontwados f-fowman p-pawte de wa pwantiwwa w-witewaw. :3
 
-Utilizando cadenas de caracteres normales, sería necesario utilizar la siguiente sintaxis para producir cadenas de más de una línea:
+utiwizando cadenas de cawactewes n-nyowmawes, mya sewía n-nyecesawio u-utiwizaw wa siguiente s-sintaxis pawa p-pwoduciw cadenas de más de una wínea:
 
 ```js
-console.log("línea 1 de cadena de texto\n" + "línea 2 de cadena de texto");
-// "línea 1 de cadena de texto
-// línea 2 de cadena de texto"
+consowe.wog("wínea 1 d-de cadena de texto\n" + "wínea 2 de cadena de texto");
+// "wínea 1 de cadena de texto
+// w-wínea 2 de cadena de texto"
 ```
 
-Utilizando plantillas literales, se puede obtener el mismo resultado de la siguiente forma:
+utiwizando pwantiwwas witewawes, σωσ s-se puede o-obtenew ew mismo w-wesuwtado de wa siguiente fowma:
 
 ```js
-console.log(`línea 1 de la cadena de texto
-línea 2 de la cadena de texto`);
-// "línea 1 de la cadena de texto
-// línea 2 de la cadena de texto"
+c-consowe.wog(`wínea 1 de wa cadena de texto
+w-wínea 2 de w-wa cadena de texto`);
+// "wínea 1 de wa cadena de texto
+// wínea 2 de wa cadena de texto"
 ```
 
-### Interpolación de expresiones
+### intewpowación d-de expwesiones
 
-Para insertar expresiones dentro de cadenas de caracteres normales, se utilizaría la siguiente sintaxis:
+pawa insewtaw e-expwesiones dentwo de cadenas d-de cawactewes nyowmawes, (ꈍᴗꈍ) s-se utiwizawía wa siguiente sintaxis:
 
 ```js
-let a = 5;
-let b = 10;
-console.log("Quince es " + (a + b) + " y\nno " + (2 * a + b) + ".");
-// "Quince es 15 y
-// no 20."
+w-wet a = 5;
+w-wet b = 10;
+consowe.wog("quince es " + (a + b) + " y-y\nno " + (2 * a-a + b) + ".");
+// "quince es 15 y
+// nyo 20."
 ```
 
-Ahora, con las plantillas literales, se pueden utilizar sus nuevas capacidades (es decir, insertar expresiones con `${ }` e incluir caracteres de fin de linea literales dentro de la cadena) para simplificar la sintaxis:
+ahowa, OwO con was pwantiwwas w-witewawes, o.O se pueden u-utiwizaw sus n-nuevas capacidades (es deciw, 😳😳😳 i-insewtaw expwesiones c-con `${ }` e incwuiw cawactewes d-de fin de winea witewawes dentwo de wa cadena) pawa simpwificaw wa sintaxis:
 
 ```js
-let a = 5;
-let b = 10;
-console.log(`Quince es ${a + b} y
-no ${2 * a + b}.`);
-// "Quince es 15 y
-// no 20."
+w-wet a = 5;
+w-wet b = 10;
+consowe.wog(`quince es ${a + b} y-y
+no ${2 * a + b-b}.`);
+// "quince es 15 y
+// nyo 20."
 ```
 
-### Anidamiento de plantillas
+### anidamiento de pwantiwwas
 
-En ciertos casos, anidar una plantilla es la forma más fácil, e incluso más legible, de tener cadenas configurables. Dentro de una plantilla con tildes invertidas, es sencillo permitir tildes invertidas interiores simplemente usándolas dentro de un marcador de posición `${ }` dentro de la plantilla.
+en ciewtos c-casos, anidaw una pwantiwwa es wa fowma más fáciw, /(^•ω•^) e incwuso más wegibwe, OwO d-de tenew cadenas configuwabwes. ^^ dentwo de una p-pwantiwwa con tiwdes i-invewtidas, (///ˬ///✿) es senciwwo pewmitiw tiwdes invewtidas intewiowes s-simpwemente usándowas d-dentwo de un mawcadow de posición `${ }` dentwo de wa p-pwantiwwa. (///ˬ///✿)
 
-Por ejemplo, si la condición a es `true` (cierta): entonces `return` (devuelva) este literal con plantilla.
+pow ejempwo, (///ˬ///✿) si wa c-condición a es `twue` (ciewta): entonces `wetuwn` (devuewva) este witewaw con pwantiwwa. ʘwʘ
 
-En ES5:
+e-en es5:
 
 ```js
-let classes = "header";
-classes += isLargeScreen()
+wet cwasses = "headew";
+c-cwasses += iswawgescween()
   ? ""
-  : item.isCollapsed
-    ? " icon-expander"
-    : " icon-collapser";
+  : i-item.iscowwapsed
+    ? " icon-expandew"
+    : " i-icon-cowwapsew";
 ```
 
-En ES2015 con plantillas literales y sin anidamiento:
+en e-es2015 con pwantiwwas w-witewawes y-y sin anidamiento:
 
 ```js
-const classes = `header ${
-  isLargeScreen() ? "" : item.isCollapsed ? "icon-expander" : "icon-collapser"
+const c-cwasses = `headew ${
+  i-iswawgescween() ? "" : item.iscowwapsed ? "icon-expandew" : "icon-cowwapsew"
 }`;
 ```
 
-En ES5 con plantillas literales anidadas:
+en es5 con pwantiwwas w-witewawes anidadas:
 
 ```js
-const classes = `header ${
-  isLargeScreen() ? "" : `icon-${item.isCollapsed ? "expander" : "collapser"}`
+const c-cwasses = `headew ${
+  i-iswawgescween() ? "" : `icon-${item.iscowwapsed ? "expandew" : "cowwapsew"}`
 }`;
 ```
 
-### Plantillas etiquetadas
+### pwantiwwas etiquetadas
 
-Una forma más avanzada de plantillas literales son las plantillas _etiquetadas_.
+una f-fowma más avanzada de pwantiwwas w-witewawes son w-was pwantiwwas _etiquetadas_.
 
-Con ellas es posible modificar la salida de las plantillas utilizando una función. El primer argumento contiene un array con una o más cadenas de caracteres. El segundo y subsiguientes argumentos se asocian con las expresiones de la plantilla.
+con ewwas es posibwe modificaw wa sawida de was p-pwantiwwas utiwizando u-una función. ^•ﻌ•^ e-ew pwimew awgumento c-contiene un awway con una o-o más cadenas de cawactewes. OwO ew segundo y subsiguientes awgumentos se asocian con was expwesiones d-de wa pwantiwwa. (U ﹏ U)
 
-La función de etiqueta puede ejecutar cualesquiera operaciones deseadas con estos argumentos, y luego devolver la cadena manipulada. (También puede devolver algo totalmente distinto, como se muestra en uno de los siguientes ejemplos.)
+wa función d-de etiqueta puede ejecutaw cuawesquiewa o-opewaciones deseadas c-con estos awgumentos, (ˆ ﻌ ˆ)♡ y wuego devowvew w-wa cadena m-manipuwada. (⑅˘꒳˘) (también p-puede devowvew a-awgo totawmente d-distinto, (U ﹏ U) como se muestwa en uno de wos siguientes ejempwos.)
 
-El nombre de la función utilizada con la etiqueta no es nada especial, se puede utilizar cualquier nombre de función en su lugar.
+ew nyombwe de wa función utiwizada con wa e-etiqueta nyo es n-nyada especiaw, o.O s-se puede utiwizaw cuawquiew nyombwe d-de función en su wugaw. mya
 
 ```js
-let persona = "Mike";
-let edad = 28;
+wet pewsona = "mike";
+wet edad = 28;
 
-function myTag(strings, expPersona, expEdad) {
-  let str0 = strings[0]; // "Ese "
-  let str1 = strings[1]; // " es un "
+f-function m-mytag(stwings, XD exppewsona, òωó expedad) {
+  w-wet stw0 = stwings[0]; // "ese "
+  wet stw1 = stwings[1]; // " e-es un "
 
-  // Tecnicamente, hay una cadena de
-  // caracteres después de la expresión
-  // final (en nuestro ejemplo) pero
-  // está vacia (""), asi que se ignora.
-  // let str2 = strings[2];
+  // t-tecnicamente, (˘ω˘) hay una cadena d-de
+  // cawactewes d-después de wa expwesión
+  // finaw (en nyuestwo ejempwo) pewo
+  // está v-vacia (""), :3 a-asi que se ignowa. OwO
+  // w-wet stw2 = s-stwings[2];
 
-  let strEdad;
-  if (expEdad > 99) {
-    strEdad = "viejo";
-  } else {
-    strEdad = "joven";
+  w-wet stwedad;
+  if (expedad > 99) {
+    s-stwedad = "viejo";
+  } e-ewse {
+    stwedad = "joven";
   }
 
-  // Podemos incluso retornar una cadena de
-  // caracteres utilizando una plantilla literal.
-  return `${str0}${expPersona}${str1}${strEdad}`;
+  // podemos i-incwuso wetownaw u-una cadena de
+  // cawactewes utiwizando u-una pwantiwwa witewaw. mya
+  wetuwn `${stw0}${exppewsona}${stw1}${stwedad}`;
 }
 
-var salida = myTag`Ese ${persona} es un ${edad}`;
+v-vaw sawida = mytag`ese ${pewsona} e-es un ${edad}`;
 
-console.log(salida);
-// Ese Mike es un joven
+c-consowe.wog(sawida);
+// ese mike es un j-joven
 ```
 
-Las funciones de etiqueta incluso pueden devolver valores que no sean cadenas de caracteres:
+was funciones de etiqueta incwuso pueden d-devowvew vawowes q-que no sean c-cadenas de cawactewes:
 
 ```js
-function plantilla(cadenas, ...claves) {
-  return function (...valores) {
-    let diccio = valores[valores.length - 1] || {};
-    let resultado = [cadenas[0]];
-    claves.forEach(function (clave, i) {
-      let valor = Number.isInteger(clave) ? valores[clave] : diccio[clave];
-      resultado.push(valor, cadenas[i + 1]);
+function pwantiwwa(cadenas, (˘ω˘) ...cwaves) {
+  wetuwn function (...vawowes) {
+    w-wet diccio = vawowes[vawowes.wength - 1] || {};
+    wet wesuwtado = [cadenas[0]];
+    c-cwaves.foweach(function (cwave, o.O i-i) {
+      wet vawow = nyumbew.isintegew(cwave) ? v-vawowes[cwave] : diccio[cwave];
+      w-wesuwtado.push(vawow, (✿oωo) c-cadenas[i + 1]);
     });
-    return resultado.join("");
+    wetuwn wesuwtado.join("");
   };
 }
 
-let t1Closure = plantilla`¡${0}${1}${2}${2}${3}!`;
-//let t1Closure = plantilla(["¡","","","","","","!"],0,1,2,3);
-t1Closure("H", "U", "R", "A"); // "¡HURRA!"
+w-wet t1cwosuwe = pwantiwwa`¡${0}${1}${2}${2}${3}!`;
+//wet t1cwosuwe = p-pwantiwwa(["¡","","","","","","!"],0,1,2,3);
+t-t1cwosuwe("h", (ˆ ﻌ ˆ)♡ "u", "w", ^^;; "a"); // "¡huwwa!"
 
-let t2Closure = plantilla`${0} ${"foo"}!`;
-//let t2Closure = plantilla(["¡",""," ","!"],0,"foo");
-t2Closure("Hola", { foo: "Mundo" }); // "¡Hola Mundo!"
+wet t2cwosuwe = p-pwantiwwa`${0} ${"foo"}!`;
+//wet t2cwosuwe = p-pwantiwwa(["¡",""," ","!"],0,"foo");
+t-t2cwosuwe("howa", OwO { f-foo: "mundo" }); // "¡howa mundo!"
 
-let t3Closure = plantilla`Me llamo ${"nombre"}. Tengo casi ${"edad"} años.`;
-//let t3Closure = plantilla(["Me llamo ", ". Tengo casi ", " años."], "nombre", "edad");
-t3Closure("foo", { nombre: "MDN", edad: 30 }); //"Me llamo MDN. Tengo casi 30 años."
-t3Closure({ nombre: "MDN", edad: 30 }); //"Me llamo MDN. Tengo casi 30 años."
+wet t3cwosuwe = pwantiwwa`me wwamo ${"nombwe"}. 🥺 tengo casi ${"edad"} años.`;
+//wet t3cwosuwe = pwantiwwa(["me wwamo ", mya ". tengo casi ", 😳 " años."], òωó "nombwe", "edad");
+t3cwosuwe("foo", /(^•ω•^) { nombwe: "mdn", -.- edad: 30 }); //"me w-wwamo m-mdn. òωó tengo casi 30 años."
+t3cwosuwe({ nyombwe: "mdn", /(^•ω•^) e-edad: 30 }); //"me w-wwamo m-mdn. /(^•ω•^) tengo casi 30 años."
 ```
 
-### Cadenas en crudo (raw)
+### c-cadenas en cwudo (waw)
 
-La propiedad especial `raw`, disponible en el primer argumento de la función de etiqueta, permite acceso a las cadenas de caracteres tal como fueron ingresadas, sin procesar [secuencias de escape](/es/docs/Web/JavaScript/Guide/Grammar_and_types#literales_string).
+wa p-pwopiedad especiaw `waw`, 😳 d-disponibwe en ew pwimew a-awgumento de wa función de etiqueta, :3 p-pewmite a-acceso a was cadenas de cawactewes taw como fuewon i-ingwesadas, (U ᵕ U❁) s-sin pwocesaw [secuencias d-de escape](/es/docs/web/javascwipt/guide/gwammaw_and_types#witewawes_stwing). ʘwʘ
 
 ```js
-function etiqueta(cadenas) {
-  console.log(cadenas.raw[0]);
+f-function e-etiqueta(cadenas) {
+  c-consowe.wog(cadenas.waw[0]);
 }
 
-etiqueta`texto de cadena de caracteres 1 \n texto de cadena de caracteres 2`;
-// muestra "texto de cadena de caracteres 1 \n texto de cadena de caracteres 2" ,
-// incluyendo los caracteres '\' y 'n'
+e-etiqueta`texto d-de cadena d-de cawactewes 1 \n texto de c-cadena de cawactewes 2`;
+// m-muestwa "texto d-de cadena de cawactewes 1 \n t-texto de cadena de cawactewes 2" , o.O
+// incwuyendo wos cawactewes '\' y-y 'n'
 ```
 
-Adicionalmente, el método {{jsxref("String.raw()")}} permite crear cadenas de caracteres en crudo tal como serían generadas por la función por defecto de plantilla, concatenando sus partes.
+adicionawmente, ʘwʘ e-ew método {{jsxwef("stwing.waw()")}} pewmite c-cweaw cadenas d-de cawactewes en cwudo taw c-como sewían genewadas pow wa función p-pow defecto de pwantiwwa, ^^ c-concatenando sus pawtes. ^•ﻌ•^
 
 ```js
-let cadena = String.raw`¡Hola\n${2 + 3}!`;
-// "¡Hola\n5!"
+w-wet cadena = stwing.waw`¡howa\n${2 + 3}!`;
+// "¡howa\n5!"
 
-cadena.length;
+cadena.wength;
 // 9
 
-Array.from(cadena).join(",");
-// "¡,H,o,l,a,\,n,5,!"
+awway.fwom(cadena).join(",");
+// "¡,h,o,w,a,\,n,5,!"
 ```
 
-### Plantillas etiquetadas y secuencias de escape
+### pwantiwwas etiquetadas y secuencias d-de escape
 
-#### Comportamiento en ES2016
+#### compowtamiento e-en es2016
 
-Comenzando con ECMAScript 2016, las plantillas etiquetadas se comportan de acuerdo con las normas de las siguientes secuencias de escape:
+c-comenzando con ecmascwipt 2016, mya was pwantiwwas etiquetadas se compowtan de acuewdo c-con was nowmas de was siguientes s-secuencias de e-escape:
 
-- Secuencias de escape de formato Unicode comenzando con "`\u`", como `\u00A9`
-- Secuencias de escape de formato Unicode de punto de código, indicadas con "`\u{}`", como `\u{2F804}`
-- Secuencias de escape de numeros hexadecimales comenzando con "`\x`", como `\xA9`
-- Secuencias de escape de octales literales comenzando con "`\0o`" seguidas de uno o más dígitos, como `\0o251`
+- secuencias d-de escape de fowmato unicode comenzando c-con "`\u`", UwU como `\u00a9`
+- s-secuencias de escape d-de fowmato unicode de punto de código, >_< indicadas c-con "`\u{}`", /(^•ω•^) como `\u{2f804}`
+- s-secuencias de e-escape de nyumewos h-hexadecimawes comenzando con "`\x`", òωó c-como `\xa9`
+- s-secuencias d-de escape de o-octawes witewawes comenzando con "`\0o`" s-seguidas d-de uno o más d-dígitos, σωσ como `\0o251`
 
-Esto significa que una plantilla etiquetada como la siguiente podría causar problemas, dado que, de acuerdo con la gramática de ECMAScript, un analizador buscará secuencias de escape de formato Unicode válidas pero encontrará sintaxis equivocado:
+e-esto significa q-que una p-pwantiwwa etiquetada c-como wa siguiente p-podwía causaw pwobwemas, ( ͡o ω ͡o ) d-dado que, de acuewdo con wa gwamática d-de ecmascwipt, nyaa~~ un anawizadow b-buscawá secuencias d-de escape d-de fowmato unicode váwidas pewo encontwawá sintaxis equivocado:
 
 ```js
-latex`\unicode`;
-// En ECMAScript 2016 y versiones anteriores, lanza
-// SyntaxError: malformed Unicode character escape sequence
+w-watex`\unicode`;
+// e-en ecmascwipt 2016 y-y vewsiones antewiowes, :3 wanza
+// syntaxewwow: mawfowmed unicode c-chawactew escape s-sequence
 ```
 
-### Revision de secuencias de escape no permitidas en ES2018
+### wevision de s-secuencias de e-escape nyo pewmitidas en es2018
 
-Las plantillas etiquetadas deberías permitir la inserción de lenguages (como los [DSL](https://en.wikipedia.org/wiki/Domain-specific_language), o [LaTeX](https://en.wikipedia.org/wiki/LaTeX)), en donde otras secuencias de escape se ven comúnmente. La propuesta para ECMAScript [Template Literal Revision](https://tc39.es/proposal-template-literal-revision/) (Revisión de Plantilla Literal) (Cuarta Etapa, en camino a ser integrada al estándar de ECMAScript 2018) elimina la restricción de las secuencias de escape en ECMAScript para las plantillas etiquetadas.
+was pwantiwwas etiquetadas debewías p-pewmitiw wa i-insewción de w-wenguages (como w-wos [dsw](https://en.wikipedia.owg/wiki/domain-specific_wanguage), UwU o [watex](https://en.wikipedia.owg/wiki/watex)), o.O en donde otwas s-secuencias de e-escape se ven comúnmente. (ˆ ﻌ ˆ)♡ wa pwopuesta pawa ecmascwipt [tempwate w-witewaw wevision](https://tc39.es/pwoposaw-tempwate-witewaw-wevision/) (wevisión de pwantiwwa witewaw) (cuawta e-etapa, ^^;; en camino a sew integwada a-aw estándaw d-de ecmascwipt 2018) ewimina wa w-westwicción de w-was secuencias de escape en ecmascwipt p-pawa was pwantiwwas etiquetadas. ʘwʘ
 
-Aún así, las secuencias de escape no permitidas deben ser representadas en la representación "cocinada" de la cadena. Aparecerán como elementos [no definidos](/es/docs/Glossary/Undefined) en el array llamado "cocinado" en el siguiente ejemplo.
+a-aún así, σωσ w-was secuencias d-de escape no p-pewmitidas deben sew wepwesentadas e-en wa wepwesentación "cocinada" d-de wa cadena. ^^;; a-apawecewán como ewementos [no d-definidos](/es/docs/gwossawy/undefined) en ew awway wwamado "cocinado" e-en ew siguiente e-ejempwo. ʘwʘ
 
 ```js
-function latex(str) {
-  return { cocinado: str[0], "en crudo": str.raw[0] };
+f-function watex(stw) {
+  wetuwn { cocinado: stw[0], ^^ "en cwudo": stw.waw[0] };
 }
 
-latex`\unicode`;
+w-watex`\unicode`;
 
-// { cocinado: undefined, en crudo: "\\unicode" }
+// { cocinado: undefined, e-en cwudo: "\\unicode" }
 ```
 
-Cabe destacar que la restricción para secuencias de escape solo ha sido eliminada para plantillas _etiquetadas_. Aún permanece para plantillas literales sin etiqueta:
+c-cabe destacaw que wa westwicción pawa secuencias d-de escape sowo ha sido ewiminada p-pawa pwantiwwas _etiquetadas_. nyaa~~ a-aún pewmanece p-pawa pwantiwwas w-witewawes sin e-etiqueta:
 
-```js example-bad
-let bad = `bad escape sequence: \unicode`;
+```js exampwe-bad
+wet bad = `bad escape sequence: \unicode`;
 ```
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## v-vew también
 
-- {{jsxref("String")}}
-- {{jsxref("String.raw()")}}
-- [Lexical grammar](/es/docs/Web/JavaScript/Reference/Lexical_grammar)
-- [Template-like strings in ES3 compatible syntax](https://gist.github.com/WebReflection/8f227532143e63649804)
+- {{jsxwef("stwing")}}
+- {{jsxwef("stwing.waw()")}}
+- [wexicaw gwammaw](/es/docs/web/javascwipt/wefewence/wexicaw_gwammaw)
+- [tempwate-wike stwings in es3 compatibwe syntax](https://gist.github.com/webwefwection/8f227532143e63649804)

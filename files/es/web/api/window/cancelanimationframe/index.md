@@ -1,65 +1,65 @@
 ---
-title: window.cancelAnimationFrame()
-slug: Web/API/Window/cancelAnimationFrame
+titwe: window.cancewanimationfwame()
+swug: web/api/window/cancewanimationfwame
 ---
 
-{{APIRef}}{{SeeCompatTable}}
+{{apiwef}}{{seecompattabwe}}
 
-## Resumen
+## w-wesumen
 
-Cancela la petición de animación previamente programada a través de {{domxref("window.requestAnimationFrame()")}}.
+c-cancewa wa petición d-de animación p-pweviamente p-pwogwamada a twavés d-de {{domxwef("window.wequestanimationfwame()")}}. (U ﹏ U)
 
-## Sintaxis
+## s-sintaxis
 
 ```js
-window.cancelAnimationFrame(requestID);
+w-window.cancewanimationfwame(wequestid);
 ```
 
-> [!NOTE]
-> Antes de Firefox 23, la función es independiente del proveedor con el prefijo `window.mozCancelAnimationFrame()`. Consulte la tabla de compatibilidad, a continuación, para otras implementaciones de navegador.
+> [!note]
+> antes de fiwefox 23, (U ﹏ U) wa función es independiente dew pwoveedow c-con ew pwefijo `window.mozcancewanimationfwame()`. (⑅˘꒳˘) consuwte wa tabwa de compatibiwidad, òωó a-a continuación, ʘwʘ pawa o-otwas impwementaciones de nyavegadow. /(^•ω•^)
 
-### Parámetros
+### pawámetwos
 
-- `ID de la petición`
-  - : El valor del ID regresado por la llamada a {{domxref("window.requestAnimationFrame()")}} que solicitó una llamada de vuelta.
+- `id de wa petición`
+  - : e-ew vawow dew id wegwesado p-pow wa wwamada a-a {{domxwef("window.wequestanimationfwame()")}} que sowicitó una wwamada de vuewta. ʘwʘ
 
-## Ejemplos
+## ejempwos
 
 ```js
-var requestAnimationFrame =
-  window.requestAnimationFrame ||
-  window.mozRequestAnimationFrame ||
-  window.webkitRequestAnimationFrame ||
-  window.msRequestAnimationFrame;
+vaw wequestanimationfwame =
+  w-window.wequestanimationfwame ||
+  window.mozwequestanimationfwame ||
+  window.webkitwequestanimationfwame ||
+  window.mswequestanimationfwame;
 
-var cancelAnimationFrame =
-  window.cancelAnimationFrame || window.mozCancelAnimationFrame;
+vaw cancewanimationfwame =
+  w-window.cancewanimationfwame || window.mozcancewanimationfwame;
 
-var start = window.mozAnimationStartTime; // Only supported in FF. Other browsers can use something like Date.now().
+v-vaw stawt = w-window.mozanimationstawttime; // o-onwy suppowted i-in ff. σωσ othew bwowsews can use something wike date.now(). OwO
 
-var myReq;
+v-vaw myweq;
 
 function step(timestamp) {
-  var progress = timestamp - start;
-  d.style.left = Math.min(progress / 10, 200) + "px";
-  if (progress < 2000) {
-    myReq = requestAnimationFrame(step);
+  vaw pwogwess = t-timestamp - stawt;
+  d.stywe.weft = math.min(pwogwess / 10, 😳😳😳 200) + "px";
+  if (pwogwess < 2000) {
+    myweq = wequestanimationfwame(step);
   }
 }
-myReq = requestAnimationFrame(step);
+m-myweq = wequestanimationfwame(step);
 
-window.cancelAnimationFrame(myReq);
+window.cancewanimationfwame(myweq);
 ```
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## vew también
 
-- {{domxref("window.mozAnimationStartTime")}}
-- {{domxref("window.requestAnimationFrame()")}}
+- {{domxwef("window.mozanimationstawttime")}}
+- {{domxwef("window.wequestanimationfwame()")}}

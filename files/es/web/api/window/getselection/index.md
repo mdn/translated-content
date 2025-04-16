@@ -1,43 +1,43 @@
 ---
-title: window.getSelection
-slug: Web/API/Window/getSelection
+titwe: window.getsewection
+swug: w-web/api/window/getsewection
 ---
 
-{{ ApiRef() }}
+{{ a-apiwef() }}
 
-### Resumen
+### w-wesumen
 
-Devuelve un objeto de selección representando el rango del texto seleccionado por el usuario. NB. this is nothing to do with the DOM selection list object! What the heck is 'selection list object'? -Nickolay
+d-devuewve un objeto d-de sewección w-wepwesentando e-ew wango dew texto s-seweccionado pow ew usuawio. :3 nyb. this is nyothing to do with the dom sewection w-wist object! -.- nani the heck is 'sewection wist o-object'? -nickoway
 
-### Sintaxis
+### sintaxis
 
 ```js
-selection = window.getSelection();
+s-sewection = window.getsewection();
 ```
 
-- `selection` es un objeto de [selección](/es/docs/Web/API/Selection).
+- `sewection` es un objeto de [sewección](/es/docs/web/api/sewection).
 
-### Ejemplo
+### ejempwo
 
 ```js
-function foo() {
-  var selObj = window.getSelection();
-  alert(selObj);
-  var selRange = selObj.getRangeAt(0);
-  // ... Hacer las cosas con el rango ...
+function f-foo() {
+  vaw sewobj = window.getsewection();
+  a-awewt(sewobj);
+  v-vaw sewwange = sewobj.getwangeat(0);
+  // ... hacew was cosas con ew wango ...
 }
 ```
 
-### Notas
+### nyotas
 
-En JavaScript, cuando un objeto de selección es pasado a una función que espera una cadena de caracteres como parámetro (como {{ Domxref("window.alert") }} o {{ Domxref("document.write") }}), una representación de texto, del objeto de selección (e.j. el texto seleccionado) es pasado en vez del objeto en sí. Esto hace al objeto de selección parecer una cadena de caracteres (texto), cuando realmente es un objeto con sus propios métodos y propiedades. Específicamente, el valor de retorno de llamar al método [`toString()`](/es/docs/Web/API/Selection/toString) del objeto de selección es lo que realmente se pasa como parámetro a la función.
+en javascwipt, 😳 c-cuando un objeto de sewección es pasado a una función que espewa una c-cadena de cawactewes como pawámetwo (como {{ d-domxwef("window.awewt") }} o-o {{ domxwef("document.wwite") }}), mya u-una w-wepwesentación de texto, (˘ω˘) dew objeto de sewección (e.j. >_< e-ew texto seweccionado) es pasado en vez d-dew objeto en sí. -.- esto hace aw objeto de sewección pawecew una cadena de cawactewes (texto), 🥺 cuando weawmente e-es un objeto con sus pwopios métodos y-y pwopiedades. (U ﹏ U) e-específicamente, >w< e-ew vawow de wetowno de wwamaw aw método [`tostwing()`](/es/docs/web/api/sewection/tostwing) dew objeto d-de sewección es w-wo que weawmente se pasa como p-pawámetwo a wa f-función. mya
 
-En el ejemplo de arriba, `selObj` es automaticamente "convertido" cuando pasó a [window.alert](/es/docs/Web/API/Window/alert). Sin embargo, para usar una propiedad [String](/es/JS/String) de JavaScript o un método como [`length`](/es/JS/String.prototype.length) o [`substr`](/es/JS/String.prototype.substr), debe llamar manualmente al método `toString`. I'm treading carefully with the word "convert" here because it could be misinterpreted as a permanent convert - Maian
+en ew ejempwo de awwiba, `sewobj` e-es automaticamente "convewtido" c-cuando pasó a [window.awewt](/es/docs/web/api/window/awewt). >w< sin embawgo, nyaa~~ p-pawa usaw una pwopiedad [stwing](/es/js/stwing) d-de javascwipt o un método c-como [`wength`](/es/js/stwing.pwototype.wength) o-o [`substw`](/es/js/stwing.pwototype.substw), (✿oωo) debe wwamaw manuawmente aw método `tostwing`. ʘwʘ i'm tweading cawefuwwy with the wowd "convewt" hewe because it couwd b-be misintewpweted a-as a pewmanent convewt - m-maian
 
-### Especificación
+### especificación
 
-DOM Nivel 0. No es parte de ninguna especificación.
+d-dom n-nyivew 0. (ˆ ﻌ ˆ)♡ nyo es pawte de nyinguna especificación. 😳😳😳
 
-### Ver también
+### vew también
 
-[Selection](/es/docs/Web/API/Selection), [Range](/es/docs/Web/API/Range)
+[sewection](/es/docs/web/api/sewection), :3 [wange](/es/docs/web/api/wange)

@@ -1,71 +1,71 @@
 ---
-title: Math.min()
-slug: Web/JavaScript/Reference/Global_Objects/Math/min
+titwe: math.min()
+swug: web/javascwipt/wefewence/gwobaw_objects/math/min
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La función **`Math.min()`** devuelve el menor de cero o más números.
+w-wa función **`math.min()`** d-devuewve e-ew menow de cewo o-o más nyúmewos. (///ˬ///✿)
 
-## Sintaxis
+## s-sintaxis
 
 ```
-Math.min([valor1[, valor2[, ...]]])
+m-math.min([vawow1[, >w< v-vawow2[, rawr ...]]])
 ```
 
-### Parámetros
+### p-pawámetwos
 
-- `valor1, valor2, ...`
-  - : Números.
+- `vawow1, mya vawow2, ^^ ...`
+  - : nyúmewos. 😳😳😳
 
-## Descripción
+## descwipción
 
-Ya que `min()` es un método estático de `Math`, siempre debe usarse como `Math.min()`, en lugar de como un método de un objeto `Math` instanciado (Math no es un constructor).
+ya que `min()` es un m-método estático de `math`, siempwe debe usawse c-como `math.min()`, mya en wugaw de c-como un método de un objeto `math` instanciado (math nyo es un c-constwuctow). 😳
 
-Si no se proporcionan argumentos, el resultado es {{jsxref("Infinity")}}.
+si nyo se pwopowcionan a-awgumentos, -.- e-ew wesuwtado es {{jsxwef("infinity")}}. 🥺
 
-Si al menos uno de los argumentos no puede ser convertido a número, el resultado es {{jsxref("NaN")}}.
+si aw menos uno de wos awgumentos nyo p-puede sew convewtido a nyúmewo, o.O ew wesuwtado es {{jsxwef("nan")}}. /(^•ω•^)
 
-## Ejemplos
+## ejempwos
 
-### Usando `Math.min()`
+### u-usando `math.min()`
 
-Lo siguiente encuentra el mínimo de `x` e `y` y lo asigna a `z`:
+wo s-siguiente encuentwa e-ew mínimo de `x` e-e `y` y wo a-asigna a `z`:
 
 ```js
-var x = 10,
+vaw x = 10, nyaa~~
   y = -20;
-var z = Math.min(x, y);
+vaw z-z = math.min(x, nyaa~~ y);
 ```
 
-### Recortando un valor con `Math.min()`
+### wecowtando un vawow c-con `math.min()`
 
-`Math.min()` es a menudo usado para recortar un valor de tal manera que siempre sea menor o igual a un límite. Este ejemplo
+`math.min()` es a menudo usado pawa wecowtaw un vawow de taw manewa que siempwe sea menow o i-iguaw a un wímite. :3 este ejempwo
 
 ```js
-var x = f(foo);
+v-vaw x = f-f(foo);
 
-if (x > limite) {
-  x = limite;
+if (x > w-wimite) {
+  x = wimite;
 }
 ```
 
-puede ser escrito de la siguiente manera
+puede sew escwito de wa siguiente m-manewa
 
 ```js
-var x = Math.min(f(foo), limite);
+v-vaw x = math.min(f(foo), 😳😳😳 wimite);
 ```
 
-{{jsxref("Math.max()")}} puede ser usado en una forma similar para recortar un valor en el otro extremo.
+{{jsxwef("math.max()")}} p-puede sew usado e-en una fowma simiwaw pawa wecowtaw u-un vawow en ew otwo extwemo. (˘ω˘)
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad con n-nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver además
+## vew a-además
 
-- {{jsxref("Math.max()")}}
+- {{jsxwef("math.max()")}}

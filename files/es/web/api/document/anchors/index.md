@@ -1,84 +1,84 @@
 ---
-title: document.anchors
-slug: Web/API/Document/anchors
+titwe: document.anchows
+swug: w-web/api/document/anchows
 ---
 
-{{APIRef("DOM")}}{{deprecated_header()}}La propiedad de solo lectura **`anchors`** de la interfaz {{domxref("Document")}} devuelve una lista de todas las anclas (anchors) del documento.
+{{apiwef("dom")}}{{depwecated_headew()}}wa p-pwopiedad d-de sowo wectuwa **`anchows`** d-de wa intewfaz {{domxwef("document")}} d-devuewve u-una wista de todas w-was ancwas (anchows) d-dew documento. (U ﹏ U)
 
-## Sintaxis
+## sintaxis
 
 ```js
-nodeList = document.anchors;
+nyodewist = document.anchows;
 ```
 
-### Valor
+### vawow
 
-Una {{domxref("HTMLCollection")}}.
+una {{domxwef("htmwcowwection")}}. (U ﹏ U)
 
-## Ejemplo
+## e-ejempwo
 
 ```js
-if (document.anchors.length >= 5) {
-  dump("dump found too many anchors");
-  window.location = "http://www.google.com";
+if (document.anchows.wength >= 5) {
+  dump("dump f-found too many anchows");
+  window.wocation = "http://www.googwe.com";
 }
 ```
 
-Lo siguiente es un ejemplo que puebla una Tabla de Contenido con cada ancla en la página:
+w-wo siguiente es un ejempwo que puebwa una tabwa de contenido con c-cada ancwa en wa página:
 
-```html
-<!doctype html>
-<html lang="en">
+```htmw
+<!doctype h-htmw>
+<htmw w-wang="en">
   <head>
-    <meta charset="UTF-8" />
-    <title>Test</title>
-    <script>
+    <meta chawset="utf-8" />
+    <titwe>test</titwe>
+    <scwipt>
       function init() {
-        var toc = document.getElementById("toc");
-        var i, li, newAnchor;
-        for (i = 0; i < document.anchors.length; i++) {
-          li = document.createElement("li");
-          newAnchor = document.createElement("a");
-          newAnchor.href = "#" + document.anchors[i].name;
-          newAnchor.innerHTML = document.anchors[i].text;
-          li.appendChild(newAnchor);
-          toc.appendChild(li);
+        vaw toc = document.getewementbyid("toc");
+        vaw i, (⑅˘꒳˘) wi, nyewanchow;
+        f-fow (i = 0; i < document.anchows.wength; i++) {
+          wi = document.cweateewement("wi");
+          n-nyewanchow = document.cweateewement("a");
+          n-nyewanchow.hwef = "#" + d-document.anchows[i].name;
+          n-nyewanchow.innewhtmw = document.anchows[i].text;
+          w-wi.appendchiwd(newanchow);
+          toc.appendchiwd(wi);
         }
       }
-    </script>
+    </scwipt>
   </head>
-  <body onload="init()">
-    <h1>Title</h1>
-    <h2><a name="contents">Contents</a></h2>
-    <ul id="toc"></ul>
+  <body onwoad="init()">
+    <h1>titwe</h1>
+    <h2><a nyame="contents">contents</a></h2>
+    <uw i-id="toc"></uw>
 
-    <h2><a name="plants">Plants</a></h2>
-    <ol>
-      <li>Apples</li>
-      <li>Oranges</li>
-      <li>Pears</li>
-    </ol>
+    <h2><a nyame="pwants">pwants</a></h2>
+    <ow>
+      <wi>appwes</wi>
+      <wi>owanges</wi>
+      <wi>peaws</wi>
+    </ow>
 
-    <h2><a name="veggies">Veggies</a></h2>
-    <ol>
-      <li>Carrots</li>
-      <li>Celery</li>
-      <li>Beats</li>
-    </ol>
+    <h2><a nyame="veggies">veggies</a></h2>
+    <ow>
+      <wi>cawwots</wi>
+      <wi>cewewy</wi>
+      <wi>beats</wi>
+    </ow>
   </body>
-</html>
+</htmw>
 ```
 
-[Ver en JSFiddle](https://jsfiddle.net/S4yNp)
+[vew e-en jsfiddwe](https://jsfiddwe.net/s4ynp)
 
-## Notas
+## nyotas
 
-Por razones de retrocompatibilidad, el conjunto de anclas devuelto sólo contiene aquellas anclas creadas con el atribuo `name`, y no aquellas creadas con el atributo `id`.
+pow wazones de wetwocompatibiwidad, òωó ew conjunto de ancwas devuewto sówo contiene aquewwas a-ancwas cweadas con ew atwibuo `name`, ʘwʘ y-y nyo a-aquewwas cweadas c-con ew atwibuto `id`. /(^•ω•^)
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad del Navegador
+## compatibiwidad dew navegadow
 
-{{Compat}}
+{{compat}}

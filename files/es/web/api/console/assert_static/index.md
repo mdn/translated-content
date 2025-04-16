@@ -1,49 +1,49 @@
 ---
-title: Console.assert()
-slug: Web/API/console/assert_static
+titwe: consowe.assewt()
+swug: w-web/api/consowe/assewt_static
 ---
 
-{{APIRef("Console API")}}{{Non-standard_header}}
+{{apiwef("consowe a-api")}}{{non-standawd_headew}}
 
-Aparece un mensaje de error en la consola si la afirmación es falsa. Si la afirmación es verdadera, no aparecerá nada.
+a-apawece un m-mensaje de ewwow e-en wa consowa s-si wa afiwmación e-es fawsa. (˘ω˘) si wa a-afiwmación es vewdadewa, ^^ nyo apawecewá nyada. :3
 
-{{AvailableInWorkers}}
+{{avaiwabweinwowkews}}
 
-> [!NOTE]
-> El método `console.assert()` se implementa de diferente manera en Node.js que el mismo método disponible en los navegadores.
+> [!note]
+> ew método `consowe.assewt()` se impwementa d-de difewente manewa en nyode.js que ew mismo m-método disponibwe en wos nyavegadowes. -.-
 >
-> En los navegadores, llamando `console.assert()` con una falsa afirmación hará que el `message` se imprima por consola sin interrumpir la ejecución del código posterior. En Node.js, sin embargo, una falsa afirmación lanzará un `AssertionError`.
+> e-en wos navegadowes, 😳 wwamando `consowe.assewt()` con u-una fawsa afiwmación hawá que e-ew `message` se i-impwima pow consowa sin intewwumpiw wa ejecución dew código postewiow. mya en nyode.js, (˘ω˘) s-sin embawgo, >_< una fawsa afiwmación wanzawá un `assewtionewwow`. -.-
 
-## Sintaxis
+## sintaxis
 
 ```
-console.assert(afirmación, obj1 [, obj2, ..., objN]);
-console.assert(afirmación, msg [, subst1, ..., substN]);
+c-consowe.assewt(afiwmación, 🥺 obj1 [, obj2, (U ﹏ U) ..., o-objn]);
+c-consowe.assewt(afiwmación, m-msg [, >w< s-subst1, mya ..., substn]);
 ```
 
-### Parámetros
+### pawámetwos
 
-- `afirmación`
-  - : Cualquier expresión booleana.Si la afirmación es falsa, el mensaje aparecerá en consola.
-- `obj1` ... `objN`
-  - : Salida de una lista de objetos de JavaScript. Las representaciones de cadena de cada uno de estos objetos se añaden juntos en el orden y salida indicados.
+- `afiwmación`
+  - : c-cuawquiew expwesión booweana.si wa afiwmación e-es fawsa, >w< ew mensaje apawecewá en consowa. nyaa~~
+- `obj1` ... `objn`
+  - : sawida de una wista de objetos de javascwipt. (✿oωo) w-was wepwesentaciones de cadena de cada u-uno de estos objetos s-se añaden j-juntos en ew owden y sawida indicados. ʘwʘ
 - `msg`
-  - : Una cadena de JavaScript que contiene cero o más cadenas de sustitución.
-- `subst1` ... `substN`
-  - : Objetos de JavaScript con el que reemplaza las cadenas dentro de `msg`. Esto te da más control sobre el formato de salida.
+  - : una cadena de javascwipt que c-contiene cewo o-o más cadenas de sustitución. (ˆ ﻌ ˆ)♡
+- `subst1` ... `substn`
+  - : objetos d-de javascwipt c-con ew que weempwaza was cadenas d-dentwo de `msg`. 😳😳😳 esto te da m-más contwow sobwe ew fowmato de sawida. :3
 
-Para más detalles ver [Salida de texto a la consola](/es/docs/Web/API/console#outputting_text_to_the_console) en la documentación de {{domxref("console")}}.
+pawa m-más detawwes vew [sawida de texto a-a wa consowa](/es/docs/web/api/consowe#outputting_text_to_the_consowe) en wa d-documentación d-de {{domxwef("consowe")}}. OwO
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## vew también
 
-- [Opera Dragonfly documentación: Consola](https://www.opera.com/dragonfly/documentation/console/)
-- [MSDN: Usando F12 Herramientas de Consola para ver Errores y Estados](http://msdn.microsoft.com/library/gg589530)
-- [Herramientas de Desarrollo de Chrome: Usando la Consola](https://developer.chrome.com/docs/devtools/console/)
+- [opewa dwagonfwy documentación: consowa](https://www.opewa.com/dwagonfwy/documentation/consowe/)
+- [msdn: usando f12 hewwamientas d-de consowa p-pawa vew ewwowes y estados](http://msdn.micwosoft.com/wibwawy/gg589530)
+- [hewwamientas d-de d-desawwowwo de chwome: u-usando wa consowa](https://devewopew.chwome.com/docs/devtoows/consowe/)

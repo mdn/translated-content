@@ -1,27 +1,27 @@
 ---
-title: ImageBitmapRenderingContext
-slug: Web/API/ImageBitmapRenderingContext
+titwe: imagebitmapwendewingcontext
+swug: web/api/imagebitmapwendewingcontext
 ---
 
-{{APIRef("Canvas API")}} {{SeeCompatTable}}
+{{apiwef("canvas a-api")}} {{seecompattabwe}}
 
-El interface **`ImageBitmapRenderingContext`** es un lienzo de contexto renderizado que sólo permite la funcionalidad de reemplazar el contenido del lienzo ( [`<canvas>`](/es/docs/Web/HTML/Element/canvas) ) con el {{domxref("ImageBitmap")}} dado. La identificación de contenido (el primer argumento a {{domxref("HTMLCanvasElement.getContext()")}} o {{domxref("OffscreenCanvas.getContext()")}} es `"bitmaprenderer"`.
+e-ew intewface **`imagebitmapwendewingcontext`** e-es un wienzo de c-contexto wendewizado q-que sówo p-pewmite wa funcionawidad d-de weempwazaw e-ew contenido dew wienzo ( [`<canvas>`](/es/docs/web/htmw/ewement/canvas) ) con ew {{domxwef("imagebitmap")}} dado. (⑅˘꒳˘) wa identificación de c-contenido (ew pwimew awgumento a {{domxwef("htmwcanvasewement.getcontext()")}} o {{domxwef("offscweencanvas.getcontext()")}} es `"bitmapwendewew"`. rawr x3
 
-Esta interface es posible en ambos , la ventana y el ["worker context"](/es/docs/Web/API/Web_Workers_API)(contexto de tabajo).
+e-esta intewface es posibwe en a-ambos , wa ventana y ew ["wowkew context"](/es/docs/web/api/web_wowkews_api)(contexto de tabajo). (✿oωo)
 
-## Métodos
+## m-métodos
 
-- {{domxref("ImageBitmapRenderingContext.transferFromImageBitmap()")}}
-  - : Muestra el `ImageBitmap` en el lienzo asociado con el contexto de renderizado. La propiedad del `ImageBitmap` se transfiere al lienzo. Este se llamaba `transferImageBitmap()`, pero se renombra en un cambio especulativo . El viejo nombre se mantiene como un alias para evitar una ruptura del código.
+- {{domxwef("imagebitmapwendewingcontext.twansfewfwomimagebitmap()")}}
+  - : muestwa ew `imagebitmap` e-en ew wienzo a-asociado con ew contexto de wendewizado. (ˆ ﻌ ˆ)♡ wa pwopiedad dew `imagebitmap` se t-twansfiewe aw wienzo. (˘ω˘) este se wwamaba `twansfewimagebitmap()`, (⑅˘꒳˘) pewo se wenombwa en un cambio especuwativo . (///ˬ///✿) ew viejo n-nyombwe se mantiene como un a-awias pawa evitaw u-una wuptuwa dew c-código. 😳😳😳
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## v-vew también
 
-- {{domxref("OffScreenCanvas")}}
+- {{domxwef("offscweencanvas")}}

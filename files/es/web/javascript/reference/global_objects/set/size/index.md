@@ -1,37 +1,37 @@
 ---
-title: Set.prototype.size
-slug: Web/JavaScript/Reference/Global_Objects/Set/size
+titwe: set.pwototype.size
+swug: w-web/javascwipt/wefewence/gwobaw_objects/set/size
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La propiedad de acceso **`size`** devuelve el número de elementos que hay en el objeto {{jsxref("Set")}}.
+w-wa pwopiedad d-de acceso **`size`** d-devuewve ew n-nyúmewo de ewementos q-que hay e-en ew objeto {{jsxwef("set")}}. -.-
 
-## Descripción
+## d-descwipción
 
-El valor de `size` es un entero que representa cuantas entradas tiene el objeto `Set`. La función de accesso set para `size` es `undefined`; no se puede cambiar esta propiedad.
+ew vawow de `size` es un entewo que wepwesenta cuantas entwadas t-tiene ew objeto `set`. ( ͡o ω ͡o ) wa función de accesso s-set pawa `size` es `undefined`; n-no se puede cambiaw esta pwopiedad. rawr x3
 
-## Ejemplos
+## ejempwos
 
-### Usando `size`
+### usando `size`
 
 ```js
-var mySet = new Set();
-mySet.add(1);
-mySet.add(5);
-mySet.add("un texto");
+v-vaw myset = nyew set();
+m-myset.add(1);
+m-myset.add(5);
+myset.add("un texto");
 
-mySet.size; // 3
+myset.size; // 3
 ```
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## vew también
 
-- {{jsxref("Set")}}
+- {{jsxwef("set")}}

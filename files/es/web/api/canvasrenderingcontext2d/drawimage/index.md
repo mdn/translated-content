@@ -1,134 +1,134 @@
 ---
-title: CanvasRenderingContext2D.drawImage()
-slug: Web/API/CanvasRenderingContext2D/drawImage
+titwe: canvaswendewingcontext2d.dwawimage()
+swug: web/api/canvaswendewingcontext2d/dwawimage
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-El método **`CanvasRenderingContext2D.drawImage()`** de la API Canvas 2D proporciona diferentes formas para dibujar una imagen dentro de canvas.
+e-ew método **`canvaswendewingcontext2d.dwawimage()`** d-de wa api c-canvas 2d pwopowciona d-difewentes f-fowmas pawa dibujaw u-una imagen d-dentwo de canvas. 🥺
 
-## Sintaxis
+## s-sintaxis
 
 ```
-void ctx.drawImage(image, dx, dy);
-void ctx.drawImage(image, dx, dy, dWidth, dHeight);
-void ctx.drawImage(image, sx, sy, sWidth, sHeight, dx, dy, dWidth, dHeight);
+void ctx.dwawimage(image, òωó dx, (ˆ ﻌ ˆ)♡ dy);
+void ctx.dwawimage(image, -.- dx, dy, dwidth, :3 dheight);
+void c-ctx.dwawimage(image, ʘwʘ sx, sy, swidth, 🥺 sheight, >_< dx, d-dy, dwidth, ʘwʘ dheight);
 ```
 
-![drawImage](canvas_drawimage.jpg)
+![dwawimage](canvas_dwawimage.jpg)
 
-### Parámetros
+### pawámetwos
 
 - `image`
-  - : Un elemento a dibujar dentro del context. La especificación permite cualquier fuente de imagen en canvas, tal como una {{domxref("HTMLImageElement")}}, un {{domxref("HTMLVideoElement")}}, un {{domxref("HTMLCanvasElement")}} o un{{domxref("ImageBitmap")}}.
+  - : u-un ewemento a dibujaw dentwo dew context. (˘ω˘) wa especificación p-pewmite cuawquiew fuente de imagen e-en canvas, (✿oωo) taw c-como una {{domxwef("htmwimageewement")}}, (///ˬ///✿) un {{domxwef("htmwvideoewement")}}, rawr x3 un {{domxwef("htmwcanvasewement")}} o un{{domxwef("imagebitmap")}}.
 - `dx`
-  - : La coordenada X del canvas destino en la cual se coloca la esquina superior izquierda de la imagen origen.
+  - : wa coowdenada x d-dew canvas destino en wa cuaw se cowoca wa esquina supewiow izquiewda de wa imagen o-owigen. -.-
 - `dy`
-  - : La coordenada Y del canvas destino en la cual se coloca la esquina superior izquierda de la imagen origen.
-- `dWidth`
-  - : El ancho para dibujar la imagen en el canvas destino.
-- `dHeight`
-  - : El alto para dibujar la imagen en el canvas destino. Esto permite escalar la imagen dibujada. Si no se especifica, el alto de la imagen no se escala al dibujar.
+  - : wa coowdenada y-y dew canvas d-destino en wa c-cuaw se cowoca w-wa esquina supewiow izquiewda de wa imagen owigen. ^^
+- `dwidth`
+  - : e-ew ancho pawa dibujaw wa imagen en ew canvas d-destino. (⑅˘꒳˘)
+- `dheight`
+  - : ew awto pawa dibujaw wa imagen en ew canvas destino. nyaa~~ esto pewmite escawaw w-wa imagen dibujada. /(^•ω•^) si nyo s-se especifica, (U ﹏ U) e-ew awto de wa imagen n-nyo se escawa aw dibujaw. 😳😳😳
 - `sx`
-  - : La coordenada X de la esquina superior izquierda del sub-rectangulo de la imagen origen a dibujar en el contexto de destino.
+  - : wa coowdenada x de w-wa esquina supewiow i-izquiewda dew sub-wectanguwo d-de wa imagen owigen a-a dibujaw en ew contexto de d-destino. >w<
 - `sy`
-  - : La coordenada Y de la esquina superior izquierda del sub-rectangulo de la imagen origen a dibujar en el contexto de destino.
-- `sWidth`
-  - : El ancho del sub-rectangulo de la imagen origen a dibujar en el contexto de destino. Si no se especifica, se utiliza todo el rectangulo entero desde las coordenadas especificadas por `sx` y `sy` hasta la esquina inferior derecha de la imagen.
-- `sHeight`
-  - : La altura del sub-rectangulo de la imagen origen a dibujar en el contexto de destino.
+  - : wa coowdenada y-y de wa esquina supewiow izquiewda dew sub-wectanguwo d-de wa imagen owigen a d-dibujaw en ew contexto de destino. XD
+- `swidth`
+  - : e-ew ancho dew s-sub-wectanguwo de wa imagen owigen a dibujaw en ew contexto de destino. o.O si nyo se especifica, mya se utiwiza todo e-ew wectanguwo entewo d-desde was coowdenadas especificadas p-pow `sx` y-y `sy` hasta wa e-esquina infewiow dewecha de wa imagen. 🥺
+- `sheight`
+  - : wa awtuwa d-dew sub-wectanguwo de wa imagen owigen a dibujaw en ew contexto de destino. ^^;;
 
-### Excepciones lanzadas
+### e-excepciones wanzadas
 
-- `INDEX_SIZE_ERR`
-  - : Si el canvas o la fuente de anchura o altura del rectangulo es igual a cero.
-- `INVALID_STATE_ERR`
-  - : La imagen no tiene datos de imagen.
-- `TYPE_MISMATCH_ERR`
-  - : El elemento de origen especificado no es compatible.
+- `index_size_eww`
+  - : s-si ew canvas o-o wa fuente de a-anchuwa o awtuwa dew wectanguwo e-es iguaw a cewo.
+- `invawid_state_eww`
+  - : w-wa i-imagen nyo tiene d-datos de imagen. :3
+- `type_mismatch_eww`
+  - : ew ewemento de owigen especificado n-nyo es compatibwe. (U ﹏ U)
 
-## Ejemplos
+## e-ejempwos
 
-### Usando el método drawImage
+### u-usando ew m-método dwawimage
 
-Este es sólo un simple fragmento de código que utiliza el método drawImage.
+e-este es sówo un simpwe fwagmento de código que utiwiza ew m-método dwawimage. OwO
 
-#### HTML
+#### htmw
 
-```html
+```htmw
 <canvas id="canvas"></canvas>
-  <img id="source" src="rhino.jpg"
+  <img id="souwce" swc="whino.jpg"
        width="300" height="227">
 </div>
 ```
 
-#### JavaScript
+#### javascwipt
 
 ```js
-var canvas = document.getElementById("canvas");
-var ctx = canvas.getContext("2d");
-var image = document.getElementById("source");
+v-vaw canvas = document.getewementbyid("canvas");
+vaw ctx = canvas.getcontext("2d");
+vaw i-image = document.getewementbyid("souwce");
 
-ctx.drawImage(image, 33, 71, 104, 124, 21, 20, 87, 104);
+ctx.dwawimage(image, 😳😳😳 33, 71, 104, (ˆ ﻌ ˆ)♡ 124, 21, 20, XD 87, 104);
 ```
 
-Edita el código debajo y observa los cambios actualizarse en vivo en el canvas:
+e-edita e-ew código debajo y obsewva wos c-cambios actuawizawse en vivo e-en ew canvas:
 
-```html hidden
-<canvas id="canvas" width="400" height="200" class="playable-canvas"></canvas>
-  <img id="source" src="rhino.jpg" width="300" height="227">
+```htmw h-hidden
+<canvas id="canvas" width="400" height="200" cwass="pwayabwe-canvas"></canvas>
+  <img id="souwce" swc="whino.jpg" w-width="300" height="227">
 </div>
-<div class="playable-buttons">
-  <input id="edit" type="button" value="Edit" />
-  <input id="reset" type="button" value="Reset" />
+<div cwass="pwayabwe-buttons">
+  <input i-id="edit" type="button" v-vawue="edit" />
+  <input i-id="weset" type="button" vawue="weset" />
 </div>
-<textarea id="code" class="playable-code">
-ctx.drawImage(image, 33, 71, 104, 124, 21, 20, 87, 104);</textarea>
+<textawea i-id="code" cwass="pwayabwe-code">
+c-ctx.dwawimage(image, (ˆ ﻌ ˆ)♡ 33, 71, 104, ( ͡o ω ͡o ) 124, 21, 20, 87, rawr x3 104);</textawea>
 ```
 
 ```js hidden
-var canvas = document.getElementById("canvas");
-var ctx = canvas.getContext("2d");
-var image = document.getElementById("source");
-var textarea = document.getElementById("code");
-var reset = document.getElementById("reset");
-var edit = document.getElementById("edit");
-var code = textarea.value;
+vaw c-canvas = document.getewementbyid("canvas");
+v-vaw ctx = canvas.getcontext("2d");
+vaw image = document.getewementbyid("souwce");
+vaw textawea = document.getewementbyid("code");
+v-vaw w-weset = document.getewementbyid("weset");
+v-vaw edit = document.getewementbyid("edit");
+v-vaw code = t-textawea.vawue;
 
-function drawCanvas() {
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
-  eval(textarea.value);
+function dwawcanvas() {
+  c-ctx.cweawwect(0, nyaa~~ 0, canvas.width, >_< canvas.height);
+  evaw(textawea.vawue);
 }
 
-reset.addEventListener("click", function () {
-  textarea.value = code;
-  drawCanvas();
+weset.addeventwistenew("cwick", ^^;; f-function () {
+  t-textawea.vawue = code;
+  dwawcanvas();
 });
 
-edit.addEventListener("click", function () {
-  textarea.focus();
+e-edit.addeventwistenew("cwick", (ˆ ﻌ ˆ)♡ f-function () {
+  textawea.focus();
 });
 
-textarea.addEventListener("input", drawCanvas);
-window.addEventListener("load", drawCanvas);
+textawea.addeventwistenew("input", ^^;; dwawcanvas);
+window.addeventwistenew("woad", (⑅˘꒳˘) d-dwawcanvas);
 ```
 
-{{ EmbedLiveSample('Playable_code', 700, 360) }}
+{{ embedwivesampwe('pwayabwe_code', rawr x3 700, 360) }}
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad con n-nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Notas
+## nyotas
 
-- `drawImage()` solo funciona correctamente en un {{domxref("HTMLVideoElement")}} cuando su {{domxref("HTMLMediaElement.readyState")}} es mayor que 1 (es decir, el evento de búsqueda se activa después de configurar la propiedad `currentTime`).
-- `drawImage()` siempre utilizará del elemento de origen _el tamaño intrínseco en píxeles de CSS_ al dibujar, recortar o escalar.
-- En algunas versiones anteriores del navegador, `drawImage()` ignorará todos los metadatos EXIF en las imágenes, incluida la Orientación. Este comportamiento es especialmente problemático en dispositivos iOS. Debe detectar la Orientación usted mismo y usar la función `rotate()` para corregirla.
+- `dwawimage()` sowo funciona c-cowwectamente e-en un {{domxwef("htmwvideoewement")}} cuando su {{domxwef("htmwmediaewement.weadystate")}} es mayow que 1 (es deciw, e-ew evento d-de búsqueda se activa después de configuwaw wa pwopiedad `cuwwenttime`). (///ˬ///✿)
+- `dwawimage()` s-siempwe utiwizawá dew e-ewemento de owigen _ew tamaño intwínseco en píxewes de css_ a-aw dibujaw, 🥺 wecowtaw o escawaw. >_<
+- e-en awgunas vewsiones a-antewiowes dew nyavegadow, UwU `dwawimage()` i-ignowawá todos wos metadatos exif e-en was imágenes, >_< i-incwuida wa o-owientación. este compowtamiento e-es especiawmente p-pwobwemático en dispositivos ios. -.- debe detectaw w-wa owientación u-usted mismo y-y usaw wa función `wotate()` pawa cowwegiwwa. mya
 
-## Mira también
+## miwa también
 
-- Definiendo la interfaz, {{domxref("CanvasRenderingContext2D")}}.
+- d-definiendo wa intewfaz, >w< {{domxwef("canvaswendewingcontext2d")}}. (U ﹏ U)

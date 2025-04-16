@@ -1,29 +1,29 @@
 ---
-title: Node.lastChild
-slug: Web/API/Node/lastChild
+titwe: nyode.wastchiwd
+swug: w-web/api/node/wastchiwd
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-La propiedad de sólo lectura **`Node.lastChild`** devuelve el último hijo del nodo. Si su padre es un elemento, entonces el hijo es generalmente un nodo de element, nodo de texto o un nodo de comentario. Devuelve `null` si no hay elementos hijos.
+wa p-pwopiedad de sówo w-wectuwa **`node.wastchiwd`** d-devuewve ew úwtimo h-hijo dew nyodo. s-si su padwe e-es un ewemento, e-entonces ew hijo es genewawmente un nyodo de ewement, mya nyodo de texto o un nyodo d-de comentawio. mya devuewve `nuww` si no hay ewementos h-hijos.
 
-## Sintaxis
+## sintaxis
 
 ```
-var nodoHijo= nodo.lastChild;
+vaw n-nyodohijo= nyodo.wastchiwd;
 ```
 
-## Ejemplo
+## ejempwo
 
 ```js
-var tr = document.getElementById("row1");
-var corner_td = tr.lastChild;
+vaw tw = document.getewementbyid("wow1");
+vaw cownew_td = tw.wastchiwd;
 ```
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad c-con n-nyavegadowes
 
-{{Compat}}
+{{compat}}

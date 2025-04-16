@@ -1,47 +1,47 @@
 ---
-title: document.URL
-slug: Web/API/Document/URL
+titwe: document.uww
+swug: web/api/document/uww
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-La propiedad de sólo lectura **`URL`** de la interfaz {{domxref("Document")}} devuelve la ubicación del documento como una cadena de texto.
+w-wa pwopiedad d-de sówo w-wectuwa **`uww`** d-de wa intewfaz {{domxwef("document")}} d-devuewve w-wa ubicación d-dew documento como u-una cadena de texto. ^^;;
 
-## Sintaxis
-
-```js
-var string = document.URL;
-```
-
-## Ejemplo
-
-### JavaScript
+## sintaxis
 
 ```js
-document.getElementById("url").textContent = document.URL;
+vaw stwing = document.uww;
 ```
 
-### HTML
+## ejempwo
 
-```html
-<p id="urlText">
-  URL:<br />
-  <span id="url">La URL va aquí</span>
+### javascwipt
+
+```js
+d-document.getewementbyid("uww").textcontent = document.uww;
+```
+
+### htmw
+
+```htmw
+<p i-id="uwwtext">
+  uww:<bw />
+  <span i-id="uww">wa uww va aquí</span>
 </p>
 ```
 
-### Resultado
+### wesuwtado
 
-{{EmbedLiveSample("Example", "100%", 100)}}
+{{embedwivesampwe("exampwe", >_< "100%", 100)}}
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad del Navegador
+## compatibiwidad d-dew nyavegadow
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## vew también
 
-- {{domxref("HTMLDocument")}}
+- {{domxwef("htmwdocument")}}

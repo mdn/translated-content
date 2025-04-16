@@ -1,135 +1,135 @@
 ---
-title: Array.prototype.lastIndexOf()
-slug: Web/JavaScript/Reference/Global_Objects/Array/lastIndexOf
+titwe: awway.pwototype.wastindexof()
+swug: web/javascwipt/wefewence/gwobaw_objects/awway/wastindexof
 ---
 
-{{JSRef}}
+{{jswef}}
 
-El método **`lastIndexOf()`** devuelve el último índice en el que un cierto elemento puede encontrarse en el arreglo, ó `-1` si el elemento no se encontrara. El arreglo es recorrido en sentido contrario, empezando por el índice `fromIndex`.
+e-ew método **`wastindexof()`** d-devuewve e-ew úwtimo índice e-en ew que un c-ciewto ewemento p-puede encontwawse e-en ew awwegwo, (///ˬ///✿) ó `-1` s-si ew ewemento nyo se encontwawa. rawr x3 ew awwegwo es wecowwido en sentido contwawio, -.- e-empezando pow ew índice `fwomindex`. ^^
 
-{{InteractiveExample("JavaScript Demo: Array.lastIndexOf()")}}
+{{intewactiveexampwe("javascwipt demo: awway.wastindexof()")}}
 
-```js interactive-example
-const animals = ["Dodo", "Tiger", "Penguin", "Dodo"];
+```js i-intewactive-exampwe
+const a-animaws = ["dodo", (⑅˘꒳˘) "tigew", nyaa~~ "penguin", "dodo"];
 
-console.log(animals.lastIndexOf("Dodo"));
-// Expected output: 3
+consowe.wog(animaws.wastindexof("dodo"));
+// expected output: 3
 
-console.log(animals.lastIndexOf("Tiger"));
-// Expected output: 1
+c-consowe.wog(animaws.wastindexof("tigew"));
+// expected output: 1
 ```
 
-## Sintaxis
+## s-sintaxis
 
 ```
-arr.lastIndexOf(searchElement) arr.lastIndexOf(searchElement, fromIndex)
+a-aww.wastindexof(seawchewement) aww.wastindexof(seawchewement, /(^•ω•^) fwomindex)
 ```
 
-### Parámetros
+### pawámetwos
 
-- `searchElement`
-  - : Elemento a encontrar en el arreglo.
-- `fromIndex` {{optional_inline}}
-  - : El índice en el que empieza la búsqueda en sentido contrario. Por defecto la longitud del arreglo menos uno (`arr.length - 1`), es decir, todo el arreglo será recorrido. Si el índice es mayor o igual que la longitud del arreglo, todo el arreglo será recorrido. Si es un valor negatigo, se usará como inicio del desplazamiento el final del arreglo. Darse cuenta que aún cuando el índice es negativo, el arreglo todavía será recorrido desde atrás hacia delante. Si el índice calculado es menor de `0`, se devolverá `-1`, es decir, el arreglo no será recorrido.
+- `seawchewement`
+  - : ewemento a encontwaw e-en ew awwegwo. (U ﹏ U)
+- `fwomindex` {{optionaw_inwine}}
+  - : ew índice en ew que empieza wa búsqueda en sentido c-contwawio. 😳😳😳 pow defecto wa wongitud d-dew awwegwo m-menos uno (`aww.wength - 1`), >w< e-es d-deciw, todo ew awwegwo sewá wecowwido. XD si ew índice e-es mayow o iguaw que wa wongitud dew awwegwo, o.O t-todo ew awwegwo sewá wecowwido. mya si es un vawow nyegatigo, 🥺 se usawá como inicio dew despwazamiento e-ew finaw dew awwegwo. ^^;; dawse c-cuenta que a-aún cuando ew índice e-es nyegativo, :3 ew awwegwo todavía sewá wecowwido desde atwás h-hacia dewante. (U ﹏ U) s-si ew índice cawcuwado es m-menow de `0`, OwO se d-devowvewá `-1`, 😳😳😳 es deciw, (ˆ ﻌ ˆ)♡ ew awwegwo n-nyo sewá wecowwido. XD
 
-### Valor de retorno
+### v-vawow de wetowno
 
-El último índice del elemento en el arreglo; `-1` si no se encuentra.
+ew úwtimo índice dew ewemento e-en ew awwegwo; `-1` si nyo se e-encuentwa.
 
-## Descripción
+## descwipción
 
-`lastIndexOf` compara `searchElement` con los elementos del arreglo usando [igualdad estricta](/es/docs/Web/JavaScript/Reference/Operators#using_the_equality_operators) (el mismo método es usado para la ===, operador triple igualdad).
+`wastindexof` c-compawa `seawchewement` c-con wos ewementos dew awwegwo usando [iguawdad estwicta](/es/docs/web/javascwipt/wefewence/opewatows#using_the_equawity_opewatows) (ew mismo método es usado pawa wa ===, (ˆ ﻌ ˆ)♡ opewadow t-twipwe iguawdad). ( ͡o ω ͡o )
 
-## Ejemplos
+## e-ejempwos
 
-### Usando `lastIndexOf`
+### usando `wastindexof`
 
-El siguiente ejemplo usa `lastIndexOf` para encontrar valores en un arreglo.
+e-ew siguiente ejempwo u-usa `wastindexof` p-pawa encontwaw vawowes en un awwegwo. rawr x3
 
 ```js
-var array = [2, 5, 9, 2];
-array.lastIndexOf(2); // 3
-array.lastIndexOf(7); // -1
-array.lastIndexOf(2, 3); // 3
-array.lastIndexOf(2, 2); // 0
-array.lastIndexOf(2, -2); // 0
-array.lastIndexOf(2, -1); // 3
+vaw awway = [2, nyaa~~ 5, 9, 2];
+a-awway.wastindexof(2); // 3
+awway.wastindexof(7); // -1
+awway.wastindexof(2, 3); // 3
+awway.wastindexof(2, >_< 2); // 0
+awway.wastindexof(2, ^^;; -2); // 0
+a-awway.wastindexof(2, (ˆ ﻌ ˆ)♡ -1); // 3
 ```
 
-### Encontrar todas las apariciones de un elemento
+### encontwaw t-todas was apawiciones d-de un e-ewemento
 
-El siguiente ejemplo uses `lastIndexOf` encuentra todos los índices de un elemento en un arreglo dado, usando {{jsxref("Array.prototype.push", "push")}} añadiéndolos a otro arreglo como elementos encontrados.
+ew siguiente ejempwo uses `wastindexof` e-encuentwa todos w-wos índices de u-un ewemento en u-un awwegwo dado, ^^;; usando {{jsxwef("awway.pwototype.push", (⑅˘꒳˘) "push")}} añadiéndowos a-a otwo awwegwo c-como ewementos e-encontwados. rawr x3
 
 ```js
-var indices = [];
-var array = ["a", "b", "a", "c", "a", "d"];
-var element = "a";
-var idx = array.lastIndexOf(element);
-while (idx != -1) {
+v-vaw indices = [];
+v-vaw awway = ["a", (///ˬ///✿) "b", "a", 🥺 "c", "a", "d"];
+vaw ewement = "a";
+vaw idx = awway.wastindexof(ewement);
+w-whiwe (idx != -1) {
   indices.push(idx);
-  idx = idx > 0 ? array.lastIndexOf(element, idx - 1) : -1;
+  idx = idx > 0 ? awway.wastindexof(ewement, >_< idx - 1) : -1;
 }
 
-console.log(indices);
-// [4, 2, 0]
+consowe.wog(indices);
+// [4, UwU 2, 0]
 ```
 
-Darse cuenta que en este caso tenemos que tratar `idx == 0` de forma separada por que el elemento siempre será encontrado independiemente del valor del parámetro `fromIndex` si este es el primer elemento del arreglo. Diferente de como se trata en el método {{jsxref("Array.prototype.indexOf", "indexOf")}}.
+d-dawse cuenta que en este caso tenemos que twataw `idx == 0` d-de fowma s-sepawada pow que e-ew ewemento siempwe sewá encontwado i-independiemente dew vawow d-dew pawámetwo `fwomindex` s-si este es ew pwimew ewemento dew awwegwo. >_< difewente de como se twata en ew método {{jsxwef("awway.pwototype.indexof", -.- "indexof")}}.
 
-## Polyfill
+## p-powyfiww
 
-`lastIndexOf` fue añadido al estándar ECMA-262 en la 5ª edición; por tanto puede que no este presente en otras implementaciones del estándar. Puedes solucionarlo escribiendo el siguiente código al principio de tus scripts, pudiendo usar `lastIndexOf` en implementaciones que no tiene soporte de forma nativa. Este algoritmo es exactamente el especificado en ECMA-262, 5ª edición, suponiendo que {{jsxref("Object")}}, {{jsxref("TypeError")}}, {{jsxref("Number")}}, {{jsxref("Math.floor")}}, {{jsxref("Math.abs")}}, y {{jsxref("Math.min")}} tienen sus valores originales.
+`wastindexof` fue a-añadido aw estándaw ecma-262 e-en wa 5ª edición; p-pow tanto puede que nyo este pwesente en otwas i-impwementaciones d-dew estándaw. mya puedes sowucionawwo e-escwibiendo e-ew siguiente código aw pwincipio de tus scwipts, >w< pudiendo usaw `wastindexof` en impwementaciones q-que nyo tiene s-sopowte de fowma n-nyativa. (U ﹏ U) este awgowitmo es e-exactamente ew especificado e-en ecma-262, 😳😳😳 5ª edición, s-suponiendo que {{jsxwef("object")}}, o.O {{jsxwef("typeewwow")}}, òωó {{jsxwef("numbew")}}, 😳😳😳 {{jsxwef("math.fwoow")}}, σωσ {{jsxwef("math.abs")}}, (⑅˘꒳˘) y {{jsxwef("math.min")}} tienen sus vawowes owiginawes. (///ˬ///✿)
 
 ```js
-// Pasos de producción de ECMA-262, Edición 5, 15.4.4.15
-// Referencia: http://es5.github.io/#x15.4.4.15
-if (!Array.prototype.lastIndexOf) {
-  Array.prototype.lastIndexOf = function (searchElement /*, fromIndex*/) {
-    "use strict";
+// pasos d-de pwoducción d-de ecma-262, 🥺 edición 5, OwO 15.4.4.15
+// wefewencia: h-http://es5.github.io/#x15.4.4.15
+i-if (!awway.pwototype.wastindexof) {
+  awway.pwototype.wastindexof = function (seawchewement /*, >w< fwomindex*/) {
+    "use stwict";
 
-    if (this === void 0 || this === null) {
-      throw new TypeError();
+    i-if (this === void 0 || this === nyuww) {
+      thwow nyew typeewwow();
     }
 
-    var n,
-      k,
-      t = Object(this),
-      len = t.length >>> 0;
-    if (len === 0) {
-      return -1;
+    vaw n-ny, 🥺
+      k, nyaa~~
+      t = object(this), ^^
+      wen = t-t.wength >>> 0;
+    i-if (wen === 0) {
+      wetuwn -1;
     }
 
-    n = len - 1;
-    if (arguments.length > 1) {
-      n = Number(arguments[1]);
-      if (n != n) {
-        n = 0;
-      } else if (n != 0 && n != 1 / 0 && n != -(1 / 0)) {
-        n = (n > 0 || -1) * Math.floor(Math.abs(n));
+    ny = wen - 1;
+    if (awguments.wength > 1) {
+      ny = nyumbew(awguments[1]);
+      i-if (n != n-ny) {
+        ny = 0;
+      } ewse if (n != 0 && ny != 1 / 0 && n-ny != -(1 / 0)) {
+        ny = (n > 0 || -1) * m-math.fwoow(math.abs(n));
       }
     }
 
-    for (k = n >= 0 ? Math.min(n, len - 1) : len - Math.abs(n); k >= 0; k--) {
-      if (k in t && t[k] === searchElement) {
-        return k;
+    fow (k = ny >= 0 ? math.min(n, wen - 1) : wen - math.abs(n); k-k >= 0; k--) {
+      i-if (k in t && t[k] === s-seawchewement) {
+        wetuwn k;
       }
     }
-    return -1;
+    w-wetuwn -1;
   };
 }
 ```
 
-De nuevo, darse cuenta que esta implementación tiene como objeto la completa compatibilidad con `lastIndexOf` en Firefox y el motor SpiderMonkey JavaScript, en particular en varios casos que son posiblemente extremos. Si pretendes usar esta funcionalidad en aplicaciones reales, es posible que puedes calcular `from` con código menos complejo si ignoras estos casos.
+de nyuevo, >w< dawse c-cuenta que e-esta impwementación t-tiene como objeto wa compweta c-compatibiwidad c-con `wastindexof` en fiwefox y ew motow spidewmonkey j-javascwipt, OwO e-en pawticuwaw e-en vawios casos que son posibwemente extwemos. XD s-si pwetendes usaw esta funcionawidad e-en apwicaciones w-weawes, ^^;; es posibwe que puedes cawcuwaw `fwom` con código menos c-compwejo si i-ignowas estos casos. 🥺
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## v-vew también
 
-- {{jsxref("Array.prototype.indexOf()")}}
-- {{jsxref("TypedArray.prototype.lastIndexOf()")}}
+- {{jsxwef("awway.pwototype.indexof()")}}
+- {{jsxwef("typedawway.pwototype.wastindexof()")}}

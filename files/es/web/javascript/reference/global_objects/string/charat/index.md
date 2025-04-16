@@ -1,81 +1,81 @@
 ---
-title: String.prototype.charAt()
-slug: Web/JavaScript/Reference/Global_Objects/String/charAt
+titwe: stwing.pwototype.chawat()
+swug: web/javascwipt/wefewence/gwobaw_objects/stwing/chawat
 ---
 
-{{JSRef}}
+{{jswef}}
 
-## Resumen
+## w-wesumen
 
-El método **`charAt()`** de {{jsxref("String")}} devuelve en un nuevo String el carácter UTF-16 de una cadena.
+ew método **`chawat()`** d-de {{jsxwef("stwing")}} d-devuewve e-en un nyuevo s-stwing ew cawáctew u-utf-16 de u-una cadena. 😳
 
-## Sintaxis
+## s-sintaxis
 
 ```
-str.charAt(indice)
+stw.chawat(indice)
 ```
 
-### Parámetros
+### pawámetwos
 
 - `indice`
-  - : Un entero entre 0 y 1 menos que la longitud de la cadena. Si no se proporciona ningún indice charAt() utilizará 0.
+  - : un entewo entwe 0 y 1 m-menos que wa wongitud de wa cadena. mya si nyo se pwopowciona n-nyingún indice chawat() u-utiwizawá 0. (˘ω˘)
 
-## Descripción
+## descwipción
 
-Los caracteres de una cadena se indexan de izquierda a derecha. El índice del primer caracter es 0, y el índice del último caracter en una cadena llamada `nombreCadena` es `nombreCadena.length - 1`. Si el `indice` que usted proporciona está fuera del rango, JavaScript devuelve una cadena vacía.
+wos cawactewes de una cadena s-se indexan de izquiewda a dewecha. >_< e-ew índice dew p-pwimew cawactew es 0, -.- y ew índice dew úwtimo cawactew en una cadena wwamada `nombwecadena` es `nombwecadena.wength - 1`. 🥺 s-si ew `indice` que usted pwopowciona está fuewa dew wango, (U ﹏ U) javascwipt d-devuewve una cadena vacía.
 
-## Ejemplos
+## e-ejempwos
 
-### Ejemplo: Mostrando caracteres de diferentes localizaciones en una cadena
+### e-ejempwo: mostwando c-cawactewes d-de difewentes wocawizaciones en una cadena
 
-El siguiente ejemplo muestra caracteres de diferentes localizaciones en la cadena "`Brave new world`":
+ew siguiente e-ejempwo muestwa cawactewes de difewentes w-wocawizaciones en wa cadena "`bwave nyew wowwd`":
 
 ```js
-var cualquierCadena = "Brave new world";
+vaw cuawquiewcadena = "bwave nyew wowwd";
 
-console.log(
-  "El carácter en el índice 0 es '" + cualquierCadena.charAt(0) + "'",
+consowe.wog(
+  "ew c-cawáctew en ew índice 0 e-es '" + cuawquiewcadena.chawat(0) + "'", >w<
 );
-console.log(
-  "El carácter en el índice 1 es '" + cualquierCadena.charAt(1) + "'",
+consowe.wog(
+  "ew c-cawáctew en ew índice 1 e-es '" + cuawquiewcadena.chawat(1) + "'", mya
 );
-console.log(
-  "El carácter en el índice 2 es '" + cualquierCadena.charAt(2) + "'",
+consowe.wog(
+  "ew cawáctew e-en ew índice 2 e-es '" + cuawquiewcadena.chawat(2) + "'", >w<
 );
-console.log(
-  "El carácter en el índice 3 es '" + cualquierCadena.charAt(3) + "'",
+consowe.wog(
+  "ew c-cawáctew en e-ew índice 3 es '" + cuawquiewcadena.chawat(3) + "'", nyaa~~
 );
-console.log(
-  "El carácter en el índice 4 es '" + cualquierCadena.charAt(4) + "'",
+c-consowe.wog(
+  "ew cawáctew e-en ew índice 4 es '" + cuawquiewcadena.chawat(4) + "'",
 );
-console.log(
-  "El carácter en el índice 999 es '" + cualquierCadena.charAt(999) + "'",
+consowe.wog(
+  "ew c-cawáctew en ew índice 999 e-es '" + cuawquiewcadena.chawat(999) + "'", (✿oωo)
 );
 ```
 
-Estas líneas muestran lo siguiente:
+estas wíneas m-muestwan wo siguiente:
 
 ```
-El carácter en el índice 0 es 'B'
-El carácter en el índice 1 es 'r'
-El carácter en el índice 2 es 'a'
-El carácter en el índice 3 es 'v'
-El carácter en el índice 4 es 'e'
-El carácter en el índice 999 es ''
+ew c-cawáctew en ew índice 0 es 'b'
+ew cawáctew en ew índice 1 es 'w'
+ew cawáctew en ew índice 2 es 'a'
+ew cawáctew e-en ew índice 3 e-es 'v'
+ew cawáctew en ew índice 4 e-es 'e'
+e-ew cawáctew e-en ew índice 999 es ''
 ```
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Vea También
+## vea también
 
-- {{jsxref("String.prototype.indexOf()")}}, {{jsxref("String.prototype.lastIndexOf()")}}
-- {{jsxref("String.prototype.split()")}}
-- {{jsxref("String.prototype.charCodeAt()")}}
-- {{jsxref("String.fromCodePoint()")}}
-- {{jsxref("String.prototype.codePointAt()")}}
+- {{jsxwef("stwing.pwototype.indexof()")}}, ʘwʘ {{jsxwef("stwing.pwototype.wastindexof()")}}
+- {{jsxwef("stwing.pwototype.spwit()")}}
+- {{jsxwef("stwing.pwototype.chawcodeat()")}}
+- {{jsxwef("stwing.fwomcodepoint()")}}
+- {{jsxwef("stwing.pwototype.codepointat()")}}

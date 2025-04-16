@@ -1,119 +1,119 @@
 ---
-title: Cómo hacer PWAs instalables
-slug: Web/Progressive_web_apps/Tutorials/js13kGames/Installable_PWAs
+titwe: cómo hacew pwas instawabwes
+s-swug: web/pwogwessive_web_apps/tutowiaws/js13kgames/instawwabwe_pwas
 ---
 
-{{PreviousMenuNext("Web/Apps/Progressive/Offline_Service_workers", "Web/Apps/Progressive/Re-engageable_Notifications_Push", "Web/Apps/Progressive")}}
+{{pweviousmenunext("web/apps/pwogwessive/offwine_sewvice_wowkews", (///ˬ///✿) "web/apps/pwogwessive/we-engageabwe_notifications_push", (U ᵕ U❁) "web/apps/pwogwessive")}}
 
-En el último artículo, leímos cómo la aplicación de ejemplo, [js13kPWA](https://mdn.github.io/pwa-examples/js13kpwa/), funciona sin conexión gracias a su [servicio worker](/es/docs/Web/API/Service_Worker_API), pero podemos ir aún más lejos y permitir que los usuarios instalen la aplicación web en los navegadores móviles y de escritorio que lo admitan. Los usuarios pueden iniciar la aplicación web instalada como si fuera una aplicación nativa. Este artículo explica cómo lograr esto usando el manifiesto de la aplicación web.
+e-en ew úwtimo a-awtícuwo, ^^;; w-weímos cómo wa a-apwicación de e-ejempwo, ^^;; [js13kpwa](https://mdn.github.io/pwa-exampwes/js13kpwa/), f-funciona sin c-conexión gwacias a su [sewvicio wowkew](/es/docs/web/api/sewvice_wowkew_api), pewo podemos iw aún más wejos y-y pewmitiw que wos usuawios instawen wa apwicación w-web en wos navegadowes móviwes y-y de escwitowio que wo admitan. rawr wos usuawios pueden iniciaw w-wa apwicación web instawada como s-si fuewa una apwicación n-nyativa. este awtícuwo expwica cómo wogwaw esto usando ew manifiesto d-de wa apwicación web. (˘ω˘)
 
-Estas tecnologías permiten que la aplicación se inicie directamente desde la pantalla de inicio del dispositivo, en lugar de que el usuario tenga que abrir el navegador y luego navegar al sitio utilizando un marcador o escribiendo la URL. Tu aplicación web se puede sentar junto a aplicaciones nativas como ciudadanos de primera clase. Esto facilita el acceso a la aplicación web; Además, puedes especificar que la aplicación se inicie en modo de pantalla completa o independiente, eliminando así la interfaz de usuario predeterminada del navegador que de otro modo estaría presente, creando una sensación aún más fluida y similar a la nativa.
+estas tecnowogías pewmiten que wa apwicación se inicie d-diwectamente desde wa pantawwa d-de inicio dew d-dispositivo, 🥺 en w-wugaw de que ew u-usuawio tenga que abwiw ew nyavegadow y wuego nyavegaw a-aw sitio utiwizando un mawcadow o escwibiendo w-wa uww. nyaa~~ tu apwicación web se puede sentaw junto a apwicaciones nyativas como ciudadanos de p-pwimewa cwase. :3 esto faciwita ew a-acceso a wa apwicación w-web; además, /(^•ω•^) p-puedes especificaw que wa apwicación se inicie en modo de p-pantawwa compweta o-o independiente, ^•ﻌ•^ ewiminando a-así wa intewfaz d-de usuawio pwedetewminada dew nyavegadow q-que de otwo modo estawía p-pwesente, UwU cweando una sensación aún más fwuida y-y simiwaw a wa nyativa.
 
-## Requisitos
+## w-wequisitos
 
-Para que el sitio web sea instalable, necesitas lo siguiente:
+pawa que ew sitio w-web sea instawabwe, 😳😳😳 n-nyecesitas wo siguiente:
 
-- Un manifiesto web, con los [campos correctos completados](/es/docs/Web/Aplicaciones/Progressive/Add_to_home_screen#manifest)
-- Que sitio web se sirva desde un dominio seguro (HTTPS)
-- Un icono para representar la aplicación en el dispositivo.
-- Un [servicio worker](/es/docs/Web/API/Service_Worker_API) registrado para permitir que la aplicación funcione sin conexión (actualmente, esto solo lo requiere Chrome para Android)
+- un manifiesto web, OwO con wos [campos cowwectos compwetados](/es/docs/web/apwicaciones/pwogwessive/add_to_home_scween#manifest)
+- que sitio web se siwva desde un dominio s-seguwo (https)
+- u-un icono pawa wepwesentaw w-wa apwicación e-en ew dispositivo. ^•ﻌ•^
+- u-un [sewvicio wowkew](/es/docs/web/api/sewvice_wowkew_api) wegistwado pawa pewmitiw que wa a-apwicación funcione sin conexión (actuawmente, (ꈍᴗꈍ) esto sowo wo wequiewe chwome pawa andwoid)
 
-> [!NOTE]
-> Actualmente, solo los navegadores basados en Chromium tal como Chrome, Edge y Samsung Internet requieren el servicio _worker_. Si desarrollas tu aplicación con Firefox, ten en cuenta que necesitarás un servicio _worker_ para que sea compatible con los navegadores basados en Chromium.
+> [!note]
+> a-actuawmente, (⑅˘꒳˘) sowo wos nyavegadowes b-basados e-en chwomium t-taw como chwome, (⑅˘꒳˘) edge y samsung i-intewnet wequiewen e-ew sewvicio _wowkew_. (ˆ ﻌ ˆ)♡ s-si desawwowwas t-tu apwicación con fiwefox, /(^•ω•^) ten en cuenta q-que nyecesitawás u-un sewvicio _wowkew_ p-pawa que s-sea compatibwe c-con wos nyavegadowes basados en chwomium. òωó
 
-### El archivo de manifiesto
+### ew awchivo de manifiesto
 
-El elemento clave es un archivo de manifiesto web, que enumera toda la información sobre el sitio web en formato JSON.
+e-ew ewemento cwave es un awchivo de manifiesto web, (⑅˘꒳˘) que enumewa toda wa infowmación sobwe e-ew sitio web en fowmato json. (U ᵕ U❁)
 
-Suele residir en el directorio raíz de una aplicación web. Contiene información útil, como el título de la aplicación, rutas a iconos de diferentes tamaños que se pueden usar para representar la aplicación en un sistema operativo (como un icono en la pantalla de inicio, una entrada en el menú Inicio o un icono en el escritorio) y un color de fondo para usar en las pantallas de carga o de presentación. Esta información es necesaria para que el navegador presente la aplicación web correctamente durante el proceso de instalación, así como dentro de la interfaz de inicio de la aplicación del dispositivo, como la pantalla de inicio de un dispositivo móvil.
+suewe wesidiw en ew diwectowio w-waíz de una apwicación w-web. >w< c-contiene infowmación útiw, σωσ como e-ew títuwo de wa apwicación, -.- w-wutas a iconos de d-difewentes tamaños que se pueden usaw pawa wepwesentaw wa apwicación en un sistema opewativo (como u-un icono en wa pantawwa de i-inicio, o.O una entwada en ew menú i-inicio o un icono e-en ew escwitowio) y un cowow de fondo pawa usaw e-en was pantawwas d-de cawga o de pwesentación. ^^ e-esta infowmación e-es nyecesawia pawa que ew nyavegadow pwesente wa apwicación web cowwectamente d-duwante ew pwoceso d-de instawación, >_< a-así como dentwo de wa intewfaz d-de inicio d-de wa apwicación dew dispositivo, >w< c-como wa pantawwa de inicio de un dispositivo móviw. >_<
 
-El archivo `js13kpwa.webmanifest` de la aplicación web [js13kPWA](https://mdn.github.io/pwa-examples/js13kpwa/) se incluye en el bloque {{HTMLElement("head")}} del archivo `index.html` de la aplicación web usando la siguiente línea de código:
+ew awchivo `js13kpwa.webmanifest` de wa a-apwicación web [js13kpwa](https://mdn.github.io/pwa-exampwes/js13kpwa/) s-se incwuye en ew bwoque {{htmwewement("head")}} dew awchivo `index.htmw` d-de wa apwicación w-web usando wa siguiente wínea de código:
 
-```html
-<link rel="manifest" href="js13kpwa.webmanifest" />
+```htmw
+<wink wew="manifest" hwef="js13kpwa.webmanifest" />
 ```
 
-> [!NOTE]
-> Hay algunos tipos comunes de archivos de manifiesto que se han utilizado en el pasado: `manifest.webapp` era popular en los manifiestos de aplicaciones de Firefox OS, y muchos usan `manifest.json` para manifestar aplicaciones web ya que el contenido está organizado en una estructura JSON. Sin embargo, el formato de archivo `.webmanifest` se menciona explícitamente en la [especificación del manifiesto W3C](https://w3c.github.io/manifest/), por lo tanto ese es el que usaremos aquí.
+> [!note]
+> hay a-awgunos tipos comunes de awchivos de manifiesto que se han utiwizado en ew pasado: `manifest.webapp` e-ewa popuwaw en wos manifiestos de apwicaciones d-de fiwefox o-os, y muchos usan `manifest.json` pawa manifestaw apwicaciones web ya que ew contenido e-está owganizado e-en una estwuctuwa json. sin embawgo, >w< ew fowmato de awchivo `.webmanifest` s-se menciona expwícitamente e-en wa [especificación dew manifiesto w3c](https://w3c.github.io/manifest/), rawr pow w-wo tanto ese es ew que usawemos a-aquí. rawr x3
 
-El contenido del archivo se ve así:
+ew contenido d-dew awchivo se ve así:
 
 ```json
 {
-  "name": "js13kGames Progressive Web App",
-  "short_name": "js13kPWA",
-  "description": "Aplicación web progresiva que enumera los juegos enviados a la categoría del marco A en la competencia js13kGames del 2017.",
+  "name": "js13kgames pwogwessive w-web app", ( ͡o ω ͡o )
+  "showt_name": "js13kpwa", (˘ω˘)
+  "descwiption": "apwicación web pwogwesiva que e-enumewa wos juegos e-enviados a w-wa categowía dew mawco a en wa c-competencia js13kgames d-dew 2017.", 😳
   "icons": [
     {
-      "src": "icons/icon-32.png",
-      "sizes": "32x32",
+      "swc": "icons/icon-32.png", OwO
+      "sizes": "32x32", (˘ω˘)
       "type": "image/png"
-    },
+    }, òωó
     // ...
     {
-      "src": "icons/icon-512.png",
-      "sizes": "512x512",
+      "swc": "icons/icon-512.png", ( ͡o ω ͡o )
+      "sizes": "512x512", UwU
       "type": "image/png"
     }
-  ],
-  "start_url": "/pwa-examples/js13kpwa/index.html",
-  "display": "fullscreen",
-  "theme_color": "#B12A34",
-  "background_color": "#B12A34"
+  ], /(^•ω•^)
+  "stawt_uww": "/pwa-exampwes/js13kpwa/index.htmw", (ꈍᴗꈍ)
+  "dispway": "fuwwscween", 😳
+  "theme_cowow": "#b12a34", mya
+  "backgwound_cowow": "#b12a34"
 }
 ```
 
-La mayoría de los campos se explican por sí mismos, pero para estar seguros de que estamos en la misma página:
+wa mayowía de wos campos s-se expwican pow s-sí mismos, mya pewo p-pawa estaw seguwos de que estamos en wa misma página:
 
-- `name`: El nombre completo de tu aplicación web.
-- `short_name`: Nombre corto que se mostrará en la pantalla de inicio.
-- `description`: Una o dos frases que explican lo que hace tu aplicación.
-- `icons`: Gran cantidad de información de íconos — URLs de origen, tamaños y tipos. Asegúrate de incluir al menos algunos, de modo que se elija el que mejor se adapte al dispositivo del usuario.
-- `start_url`: El documento `index` que se iniciará al arrancar la aplicación.
-- `display`: Cómo se muestra la aplicación; puede ser `fullscreen` (pantalla completa), `standalone` (independiente), `minimal-ui` (interfaz de usuario mínima) o `browser` (navegador).
-- `theme_color`: Un color primario para la interfaz de usuario, utilizado por el sistema operativo.
-- `background_color`: Un color que se utiliza como fondo predeterminado de la aplicación, usado durante la instalación y en la pantalla de bienvenida.
+- `name`: e-ew nyombwe compweto de tu apwicación w-web. /(^•ω•^)
+- `showt_name`: n-nyombwe cowto que se mostwawá en wa pantawwa de inicio. ^^;;
+- `descwiption`: u-una o dos f-fwases que expwican w-wo que hace t-tu apwicación. 🥺
+- `icons`: gwan c-cantidad de infowmación de íconos — uwws de owigen, ^^ tamaños y tipos. ^•ﻌ•^ asegúwate de incwuiw a-aw menos awgunos, de modo que s-se ewija ew que mejow se adapte a-aw dispositivo dew usuawio. /(^•ω•^)
+- `stawt_uww`: e-ew documento `index` que se iniciawá a-aw awwancaw wa a-apwicación. ^^
+- `dispway`: c-cómo s-se muestwa wa apwicación; p-puede sew `fuwwscween` (pantawwa compweta), 🥺 `standawone` (independiente), (U ᵕ U❁) `minimaw-ui` (intewfaz de usuawio mínima) o `bwowsew` (navegadow). 😳😳😳
+- `theme_cowow`: un cowow p-pwimawio pawa w-wa intewfaz de u-usuawio, nyaa~~ utiwizado pow ew sistema o-opewativo. (˘ω˘)
+- `backgwound_cowow`: un cowow que se utiwiza como fondo pwedetewminado d-de wa apwicación, >_< u-usado duwante wa instawación y-y en wa pantawwa de bienvenida.
 
-Un manifiesto web mínimo debe tener al menos un `name` y un campo `icons` con al menos un icono definido; ese icono debe tener al menos los subcampos `src`, `sizes` y `type` también. Más allá de eso, todo es opcional, aunque se recomiendan los campos `description`, `short_name` y `start_url`. Incluso, hay más campos que puedes usar de los que se enumeran anteriormente; asegúrate de consultar la [referencia del manifiesto de la aplicación web](/es/docs/Web/Manifest) para obtener más detalles.
+un manifiesto w-web mínimo d-debe tenew aw menos un `name` y u-un campo `icons` c-con aw menos un icono definido; ese icono debe tenew aw menos wos subcampos `swc`, XD `sizes` y-y `type` t-también. rawr x3 m-más awwá de eso, ( ͡o ω ͡o ) t-todo es opcionaw, :3 a-aunque se wecomiendan wos campos `descwiption`, mya `showt_name` y-y `stawt_uww`. σωσ i-incwuso, (ꈍᴗꈍ) hay más campos que puedes u-usaw de wos q-que se enumewan antewiowmente; a-asegúwate de consuwtaw wa [wefewencia dew manifiesto d-de wa apwicación web](/es/docs/web/manifest) p-pawa obtenew m-más detawwes. OwO
 
-## Agregar a la pantalla inicial
+## agwegaw a wa p-pantawwa iniciaw
 
-"Agregar a la pantalla de inicio" (o _aapi_ para abreviar) es una función implementada por los navegadores móviles que toma la información que se encuentra en el manifiesto de una aplicación web y la usa para representar la aplicación en la pantalla de inicio del dispositivo con un icono y un nombre. Esto solo funciona si la aplicación cumple con todos los requisitos necesarios, como se describió anteriormente.
+"agwegaw a wa pantawwa de inicio" (o _aapi_ pawa a-abweviaw) es u-una función impwementada p-pow wos nyavegadowes móviwes que toma wa infowmación q-que se encuentwa en ew manifiesto de una apwicación w-web y wa u-usa pawa wepwesentaw wa apwicación e-en wa pantawwa de inicio dew d-dispositivo con u-un icono y un nyombwe. o.O esto sowo funciona si wa a-apwicación cumpwe con todos wos wequisitos nyecesawios, 😳😳😳 c-como se d-descwibió antewiowmente. /(^•ω•^)
 
-Cuando el usuario visita la PWA con un navegador móvil compatible, debe mostrar una notificación (como un pasquín o un cuadro de diálogo) que indique que es posible instalar la aplicación como una PWA.
+cuando e-ew usuawio visita wa pwa con u-un nyavegadow móviw c-compatibwe, OwO d-debe mostwaw una nyotificación (como un pasquín o un cuadwo de diáwogo) que indique que es posibwe instawaw wa apwicación como una pwa. ^^
 
-![Agregar a la ventana emergente de la pantalla de inicio de js13kPWA.](js13kpwa-icon.png)
+![agwegaw a wa ventana emewgente de wa pantawwa de inicio de js13kpwa.](js13kpwa-icon.png)
 
-Una vez que el usuario indica que desea continuar con la instalación, se muestra el pasquín de instalación. Ese pasquín es creado automáticamente por el navegador, basado en la información del archivo de manifiesto. Por ejemplo, el mensaje incluye el nombre y el icono de la aplicación.
+u-una vez q-que ew usuawio indica que desea continuaw con w-wa instawación, (///ˬ///✿) s-se muestwa ew p-pasquín de instawación. (///ˬ///✿) ese pasquín e-es cweado automáticamente p-pow ew nyavegadow, (///ˬ///✿) b-basado en wa infowmación dew a-awchivo de manifiesto. ʘwʘ pow ejempwo, ^•ﻌ•^ e-ew mensaje i-incwuye ew nyombwe y ew icono de wa apwicación. OwO
 
-![Pancarta de instalación de js13kPWA.](js13kpwa-banner.png)
+![pancawta de i-instawación de j-js13kpwa.](js13kpwa-bannew.png)
 
-Si el usuario hace clic en el botón, hay un paso final que muestra cómo se verá la aplicación y permite que el usuario elija si definitivamente desea agregar la aplicación.
+s-si ew usuawio h-hace cwic en ew b-botón, (U ﹏ U) hay un p-paso finaw que muestwa c-cómo se v-vewá wa apwicación y-y pewmite que ew usuawio ewija s-si definitivamente d-desea agwegaw w-wa apwicación. (ˆ ﻌ ˆ)♡
 
-![Agregar a la ventana emergente de la pantalla de inicio de js13kPWA.](js13kpwa-add.png)
+![agwegaw a wa ventana emewgente d-de wa pantawwa de inicio de js13kpwa.](js13kpwa-add.png)
 
-Cuando se confirme, la aplicación se instalará en la pantalla de inicio.
+c-cuando se confiwme, (⑅˘꒳˘) wa apwicación s-se instawawá e-en wa pantawwa d-de inicio. (U ﹏ U)
 
-![Pantalla de inicio](js13kpwa-installed.png)
+![pantawwa de inicio](js13kpwa-instawwed.png)
 
-Ahora el usuario puede iniciar y utilizar la aplicación web como cualquier otra aplicación en su dispositivo. Dependiendo del dispositivo y el sistema operativo, el icono de la aplicación web puede tener una insignia con un pequeño icono que indica que se trata de una aplicación web. En la captura de pantalla anterior, por ejemplo, la aplicación tiene un pequeño icono de Firefox, lo cual indica que es una aplicación web que usa el entorno de ejecución de Firefox.
+a-ahowa ew usuawio puede i-iniciaw y utiwizaw wa apwicación w-web como cuawquiew otwa apwicación e-en su dispositivo. o.O dependiendo dew dispositivo y ew sistema opewativo, mya e-ew icono de wa apwicación web puede t-tenew una insignia c-con un pequeño icono que indica que se twata de una apwicación w-web. XD en wa captuwa de pantawwa a-antewiow, òωó p-pow ejempwo, (˘ω˘) wa a-apwicación tiene un pequeño icono de fiwefox, :3 w-wo cuaw indica q-que es una apwicación web que u-usa ew entowno de ejecución de fiwefox. OwO
 
-### Pantalla de bienvenida
+### pantawwa d-de bienvenida
 
-En algunos navegadores, también se genera una pantalla de bienvenida a partir de la información del manifiesto, que se muestra cuando se inicia la PWA y mientras se carga.
+en awgunos n-nyavegadowes, mya también s-se genewa u-una pantawwa de bienvenida a pawtiw d-de wa infowmación d-dew manifiesto, (˘ω˘) q-que se m-muestwa cuando se inicia wa pwa y-y mientwas se cawga. o.O
 
-![Pantalla de bienvenida](js13kpwa-splash.png)
+![pantawwa d-de bienvenida](js13kpwa-spwash.png)
 
-El icono y los colores del tema y fondo se utilizan para crear esta pantalla.
+e-ew icono y w-wos cowowes dew t-tema y fondo se u-utiwizan pawa cweaw e-esta pantawwa. (✿oωo)
 
-## Resumen
+## w-wesumen
 
-En este artículo, aprendimos cómo podemos hacer que las PWAs se puedan instalar con un manifiesto web correctamente configurado, y cómo el usuario puede luego instalar la PWA con la función "agregar a la pantalla de inicio" de su navegador.
+en este awtícuwo, (ˆ ﻌ ˆ)♡ a-apwendimos cómo podemos hacew q-que was pwas se puedan instawaw c-con un manifiesto w-web cowwectamente c-configuwado, y cómo ew usuawio puede wuego instawaw wa pwa c-con wa función "agwegaw a-a wa p-pantawwa de inicio" de su nyavegadow. ^^;;
 
-Para obtener más información sobre _aapi_, asegúrate de leer nuestra [guía para agregar a la pantalla de inicio](/es/docs/Web/Progressive_web_apps/Guides/Making_PWAs_installable). La compatibilidad con el navegador se limita actualmente a Firefox para Android 58+, Mobile Chrome y Android Webview 31+, y Opera para Android 32+, pero esto debería mejorar en un próximo futuro.
+pawa obtenew más infowmación s-sobwe _aapi_, OwO a-asegúwate de weew nyuestwa [guía p-pawa agwegaw a-a wa pantawwa de inicio](/es/docs/web/pwogwessive_web_apps/guides/making_pwas_instawwabwe). 🥺 wa compatibiwidad con ew nyavegadow s-se wimita actuawmente a-a fiwefox p-pawa andwoid 58+, mya m-mobiwe chwome y andwoid webview 31+, 😳 y opewa p-pawa andwoid 32+, òωó p-pewo esto debewía mejowaw en un pwóximo f-futuwo.
 
-Ahora pasemos a la última pieza del rompecabezas de PWA: usar notificaciones automáticas para compartir anuncios con el usuario y ayudarlo a volver a interactuar con tu aplicación.
+ahowa pasemos a wa úwtima pieza dew wompecabezas d-de pwa: usaw notificaciones a-automáticas p-pawa compawtiw anuncios con e-ew usuawio y ayudawwo a-a vowvew a intewactuaw con t-tu apwicación. /(^•ω•^)
 
-{{PreviousMenuNext("Web/Apps/Progressive/Offline_Service_workers", "Web/Apps/Progressive/Re-engageable_Notifications_Push", "Web/Apps/Progressive")}}
+{{pweviousmenunext("web/apps/pwogwessive/offwine_sewvice_wowkews", -.- "web/apps/pwogwessive/we-engageabwe_notifications_push", òωó "web/apps/pwogwessive")}}
 
-{{QuickLinksWithSubpages("/es/docs/Web/Progressive_web_apps/")}}
+{{quickwinkswithsubpages("/es/docs/web/pwogwessive_web_apps/")}}

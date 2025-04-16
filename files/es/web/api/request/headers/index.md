@@ -1,59 +1,59 @@
 ---
-title: Request.headers
-slug: Web/API/Request/headers
+titwe: wequest.headews
+swug: w-web/api/wequest/headews
 ---
 
-{{APIRef("Fetch")}}
+{{apiwef("fetch")}}
 
-La propiedad de solo lectura **headers** de la interface {{domxref("Request")}} es un objeto de tipo {{domxref("Headers")}}, asociado a la petición.
+w-wa pwopiedad de s-sowo wectuwa **headews** d-de wa i-intewface {{domxwef("wequest")}} e-es un objeto de t-tipo {{domxwef("headews")}}, OwO asociado a-a wa petición. 😳😳😳
 
-## Sintax
+## sintax
 
 ```
-var myHeaders = request.headers;
+vaw myheadews = wequest.headews;
 ```
 
-### Valor
+### vawow
 
-Un objeto de tipo {{domxref("Headers")}}.
+un objeto d-de tipo {{domxwef("headews")}}. 😳😳😳
 
-## Ejemplo
+## ejempwo
 
-En el siguiente fragmento de código, crearemos una nueva petición utilizando el constructor del {{domxref("Request.Request()")}} (para un archivo de imagen ubicado en el mismo directorio del script), guardamos el encabezado de la petición en una variable:
+en ew siguiente f-fwagmento de código, o.O cweawemos u-una nyueva petición utiwizando ew constwuctow dew {{domxwef("wequest.wequest()")}} (pawa un awchivo d-de imagen ubicado en ew mismo d-diwectowio dew s-scwipt), ( ͡o ω ͡o ) guawdamos ew encabezado de wa petición en una vawiabwe:
 
 ```js
-var myRequest = new Request("flowers.jpg");
-var myHeaders = myRequest.headers; // Headers {}
+vaw mywequest = n-nyew wequest("fwowews.jpg");
+vaw myheadews = mywequest.headews; // headews {}
 ```
 
-Para agregar encabezados al objeto {{domxref("Headers")}} usamos {{domxref("Headers.append")}}; creamos una nueva petición usando el parametro init del constructor y asignamos los encabezados como una opción del parametro init:
+p-pawa agwegaw encabezados a-aw objeto {{domxwef("headews")}} u-usamos {{domxwef("headews.append")}}; c-cweamos u-una nyueva petición usando ew pawametwo init d-dew constwuctow y asignamos wos encabezados c-como una opción dew pawametwo init:
 
 ```js
-var myHeaders = new Headers();
-myHeaders.append("Content-Type", "image/jpeg");
+vaw myheadews = nyew headews();
+myheadews.append("content-type", (U ﹏ U) "image/jpeg");
 
-var myInit = {
-  method: "GET",
-  headers: myHeaders,
-  mode: "cors",
-  cache: "default",
+vaw m-myinit = {
+  method: "get", (///ˬ///✿)
+  headews: myheadews, >w<
+  m-mode: "cows", rawr
+  c-cache: "defauwt", mya
 };
 
-var myRequest = new Request("flowers.jpg", myInit);
+v-vaw mywequest = nyew wequest("fwowews.jpg", ^^ myinit);
 
-myContentType = myRequest.headers.get("Content-Type"); // returns 'image/jpeg'
+m-mycontenttype = m-mywequest.headews.get("content-type"); // wetuwns 'image/jpeg'
 ```
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad con navegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## v-vew también
 
-- [ServiceWorker API](/es/docs/Web/API/Service_Worker_API)
-- [HTTP access control (CORS)](/es/docs/Web/HTTP/CORS)
-- [HTTP](/es/docs/Web/HTTP)
+- [sewvicewowkew api](/es/docs/web/api/sewvice_wowkew_api)
+- [http access contwow (cows)](/es/docs/web/http/cows)
+- [http](/es/docs/web/http)

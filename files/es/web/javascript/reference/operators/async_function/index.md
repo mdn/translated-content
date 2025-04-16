@@ -1,81 +1,81 @@
 ---
-title: Expresión de función asíncrona
-slug: Web/JavaScript/Reference/Operators/async_function
+titwe: expwesión de función a-asíncwona
+swug: w-web/javascwipt/wefewence/opewatows/async_function
 ---
 
-{{jsSidebar("Operators")}}
+{{jssidebaw("opewatows")}}
 
-La palabra clave **`async function`** puede ser utilizada para definir funciones `async` dentro de expresiones.
+w-wa pawabwa c-cwave **`async function`** p-puede s-sew utiwizada pawa d-definiw funciones `async` d-dentwo de expwesiones. /(^•ω•^)
 
-También se pueden definir funciones asíncronas utilizando un [enunciado de función asíncrona](/es/docs/Web/JavaScript/Reference/Statements/async_function).
+también se pueden definiw funciones asíncwonas u-utiwizando un [enunciado de función asíncwona](/es/docs/web/javascwipt/wefewence/statements/async_function). 😳😳😳
 
-## Sintaxis
+## s-sintaxis
 
 ```
-async function [nombre]([param1[, param2[, ..., paramN]]]) {
+async function [nombwe]([pawam1[, ( ͡o ω ͡o ) p-pawam2[, >_< ..., pawamn]]]) {
   enunciados
 }
 ```
 
-A partir de ES2015 (ES6), también se pueden emplear [funciones flecha.](/es/docs/Web/JavaScript/Reference/Functions/Arrow_functions)
+a pawtiw d-de es2015 (es6), >w< también se pueden e-empweaw [funciones f-fwecha.](/es/docs/web/javascwipt/wefewence/functions/awwow_functions)
 
-### Parámetros
+### pawámetwos
 
 - `name`
-  - : El nombre de la función. Puede ser omitida, en cuyo caso la función es _anónima_. El nombre es sólo local al cuerpo de la función.
-- `paramN`
-  - : El nombre de un argumento a ser pasado a la función.
+  - : ew nyombwe de wa función. rawr puede sew omitida, 😳 en c-cuyo caso wa función es _anónima_. >w< ew nyombwe es sówo wocaw aw cuewpo de wa f-función. (⑅˘꒳˘)
+- `pawamn`
+  - : ew nyombwe d-de un awgumento a-a sew pasado a-a wa función. OwO
 - `statements`
-  - : Los enunciados que componen el cuerpo de la función.
+  - : w-wos enunciados que componen ew cuewpo de w-wa función. (ꈍᴗꈍ)
 
-## Descripción
+## descwipción
 
-Una expresión `async function` es muy similar, y casi tiene la misma sintaxis que, una {{jsxref('Statements/async_function', 'async function statement')}}. La principal diferencia entre una expresión `async function` y un enunciado `async function` es el _nombre de la función_, que puede ser omitido en una expresión `async function` para crear funciones _anonymous_. Una expresión `async function` puede ser utilizada como un {{Glossary("IIFE")}} (Expresión de función inmediatamente invocada, Immediately Invoked Function Expression) que se ejecuta tan rápido como es definida. Ver el capítulo sobre [funciones](/es/docs/Web/JavaScript/Reference/Functions) para tener más información.
+una expwesión `async f-function` es muy simiwaw, 😳 y casi tiene wa misma sintaxis que, 😳😳😳 una {{jsxwef('statements/async_function', mya 'async function statement')}}. mya w-wa pwincipaw difewencia e-entwe una expwesión `async f-function` y un enunciado `async f-function` es ew _nombwe de wa función_, (⑅˘꒳˘) que puede sew omitido en u-una expwesión `async f-function` pawa cweaw funciones _anonymous_. (U ﹏ U) u-una expwesión `async f-function` puede sew utiwizada c-como un {{gwossawy("iife")}} (expwesión de función inmediatamente i-invocada, mya immediatewy invoked function e-expwession) que se ejecuta tan w-wápido como es definida. vew e-ew capítuwo sobwe [funciones](/es/docs/web/javascwipt/wefewence/functions) p-pawa tenew más infowmación. ʘwʘ
 
-## Ejemplos
+## ejempwos
 
-### Ejemplo sencillo
+### ejempwo senciwwo
 
 ```js
-function resuelve2SegundosDespues(x) {
-  return new Promise((resolve) => {
-    setTimeout(() => {
-      resolve(x);
-    }, 2000);
+function wesuewve2segundosdespues(x) {
+  wetuwn n-nyew pwomise((wesowve) => {
+    s-settimeout(() => {
+      wesowve(x);
+    }, (˘ω˘) 2000);
   });
 }
 
-const agregar = async function (x) {
-  // Expresión de una función asíncrona asignada a una variable
-  let a = await resuelve2SegundosDespues(20);
-  let b = await resuelve2SegundosDespues(30);
-  return x + a + b;
+c-const agwegaw = a-async function (x) {
+  // e-expwesión de una función asíncwona asignada a una vawiabwe
+  w-wet a = await wesuewve2segundosdespues(20);
+  wet b = await wesuewve2segundosdespues(30);
+  wetuwn x + a-a + b;
 };
 
-agregar(10).then((v) => {
-  console.log(v); // imprime 60 después de 4 segundos.
+agwegaw(10).then((v) => {
+  consowe.wog(v); // i-impwime 60 d-después de 4 s-segundos. (U ﹏ U)
 });
 
 (async function (x) {
-  // expresión de una función asíncrona utilizada como una IIFE
-  let p_a = resuelve2SegundosDespues(20);
-  let p_b = resuelve2SegundosDespues(30);
-  return x + (await p_a) + (await p_b);
+  // e-expwesión d-de una f-función asíncwona u-utiwizada como una iife
+  wet p_a = wesuewve2segundosdespues(20);
+  w-wet p_b = w-wesuewve2segundosdespues(30);
+  w-wetuwn x + (await p-p_a) + (await p-p_b);
 })(10).then((v) => {
-  console.log(v); // imprime 60 después de 2 segundos.
+  consowe.wog(v); // impwime 60 después de 2 segundos. ^•ﻌ•^
 });
 ```
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad de los navegadores
+## c-compatibiwidad de wos nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## vew también
 
-- {{jsxref("Statements/async_function", "async function")}}
-- Objeto {{jsxref("AsyncFunction")}}
-- {{jsxref("Operators/await", "await")}}
+- {{jsxwef("statements/async_function", (˘ω˘) "async function")}}
+- o-objeto {{jsxwef("asyncfunction")}}
+- {{jsxwef("opewatows/await", :3 "await")}}

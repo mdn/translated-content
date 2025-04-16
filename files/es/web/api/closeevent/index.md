@@ -1,69 +1,69 @@
 ---
-title: CloseEvent
-slug: Web/API/CloseEvent
+titwe: cwoseevent
+swug: web/api/cwoseevent
 ---
 
-{{APIRef("Websockets API")}}
+{{apiwef("websockets a-api")}}
 
-Un `CloseEvent` se envia a los clientes usando {{Glossary("WebSockets")}} cuando la conexión esta cerrada. Esto se entrega al que escucha indicado por el atributo `onclose` del objeto `WebSocket.`
+u-un `cwoseevent` s-se envia a wos c-cwientes usando {{gwossawy("websockets")}} c-cuando w-wa conexión esta c-cewwada. ^^ esto s-se entwega aw que escucha indicado pow ew atwibuto `oncwose` dew objeto `websocket.`
 
-## Constructor
+## constwuctow
 
-- {{domxref("CloseEvent.CloseEvent", "CloseEvent()")}}
-  - : Crear un nuevo `CloseEvent`.
+- {{domxwef("cwoseevent.cwoseevent", (⑅˘꒳˘) "cwoseevent()")}}
+  - : c-cweaw un nyuevo `cwoseevent`. nyaa~~
 
-## Propiedades
+## pwopiedades
 
-_Esta interface tambien hereda propiedades de su padre, {{domxref("Event")}}._
+_esta intewface t-tambien heweda pwopiedades de s-su padwe, /(^•ω•^) {{domxwef("event")}}._
 
-- {{domxref("CloseEvent.code")}} {{readOnlyInline}}
+- {{domxwef("cwoseevent.code")}} {{weadonwyinwine}}
 
-  - : Devuelve un `unsigned short` que contienen el código de cierre enviado por el servidor. Los siguientes valores son los codigos de estado permitidos. Las siguientes definiciones vienen del sitio web de IANA \[[Ref](https://www.iana.org/assignments/websocket/websocket.xml#close-code-number)].
+  - : devuewve un `unsigned showt` que contienen ew código d-de ciewwe enviado pow ew sewvidow. w-wos siguientes v-vawowes son wos codigos de estado pewmitidos. (U ﹏ U) was siguientes definiciones v-vienen dew sitio web de iana \[[wef](https://www.iana.owg/assignments/websocket/websocket.xmw#cwose-code-numbew)]. 😳😳😳
 
-    | Status code   | Name                       | Description                                                                                                                                                                                                     |
+    | status code   | nyame                       | descwiption                                                                                                                                                                                                     |
     | ------------- | -------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-    | `0`–`999`     |                            | **Reserved and not used.**                                                                                                                                                                                      |
-    | `1000`        | Cierre Normal              | Cierre normal; La conexion se completo con exito cualquiera sea el proposito para el cual fue creado.                                                                                                           |
-    | `1001`        | Going Away                 | El punto final se fue(desaparecio), ya sea por una falla en el servidor o por que el navegador esta navegando fuera de la página que abrio la conexión.                                                         |
-    | `1002`        | Error de Protocolo         | El punto final esta terminando la conexion debido a un error en el protocolo.                                                                                                                                   |
-    | `1003`        | Datos no soportadors       | La conexión esta siendo terminada por que el punto final recibio daros de un tipo que acepta o soportar (por ejemplo, está esperando un solo texto y el punto final recibio datos binarios).                    |
-    | `1004`        |                            | **Reservado.** Un signinficado se podria definir en un futuro.                                                                                                                                                  |
-    | `1005`        | Estado no recibido.        | **Reservado.** Indica que no se proporciono ningún código de estado aunque se esperaba uno.                                                                                                                     |
-    | `1006`        | Cierre anormal             | **Reservado.** Se usa para indicar que una conexion fue cerrada de forma anormal (es decir, sin que se envie un frame cerrado with no close frame being sent) when a status code is expected.                   |
-    | `1007`        | Invalid frame payload data | The endpoint is terminating the connection because a message was received that contained inconsistent data (e.g., non-UTF-8 data within a text message).                                                        |
-    | `1008`        | Violación de politica      | The endpoint is terminating the connection because it received a message that violates its policy. This is a generic status code, used when codes 1003 and 1009 are not suitable.                               |
-    | `1009`        | Mensaje muy grande         | The endpoint is terminating the connection because a data frame was received that is too large.                                                                                                                 |
-    | `1010`        | Extensión faltante.        | The client is terminating the connection because it expected the server to negotiate one or more extension, but the server didn't.                                                                              |
-    | `1011`        | Error interno              | The server is terminating the connection because it encountered an unexpected condition that prevented it from fulfilling the request.                                                                          |
-    | `1012`        | Reinicio de servicio       | El servidor esta terminado la conexion porque esta reiniciando. \[[Ref](https://www.ietf.org/mail-archive/web/hybi/current/msg09670.html)]                                                                      |
-    | `1013`        | Trate mas tarde nuevamente | The server is terminating the connection due to a temporary condition, e.g. it is overloaded and is casting off some of its clients. \[[Ref](https://www.ietf.org/mail-archive/web/hybi/current/msg09670.html)] |
-    | `1014`        | Bad Gateway                | The server was acting as a gateway or proxy and received an invalid response from the upstream server. This is similar to 502 HTTP Status Code.                                                                 |
-    | `1015`        | TLS Saludo                 | **Reserved.** Indicates that the connection was closed due to a failure to perform a TLS handshake (e.g., the server certificate can't be verified).                                                            |
-    | `1016`–`1999` |                            | **Reservado para futuro uso del estandar WebSocket.**                                                                                                                                                           |
-    | `2000`–`2999` |                            | **Reservado para uso de extensiones WebSocket .**                                                                                                                                                               |
-    | `3000`–`3999` |                            | Available for use by libraries and frameworks. **May not** be used by applications. Available for registration at the IANA via first-come, first-serve.                                                         |
-    | `4000`–`4999` |                            | Disponible para uso de aplicaciones.                                                                                                                                                                            |
+    | `0`–`999`     |                            | **wesewved a-and nyot used.**                                                                                                                                                                                      |
+    | `1000`        | ciewwe n-nyowmaw              | c-ciewwe n-nowmaw; wa conexion s-se compweto con exito cuawquiewa sea ew pwoposito p-pawa ew cuaw fue cweado. >w<                                                                                                           |
+    | `1001`        | going away                 | e-ew punto finaw se fue(desapawecio), XD ya sea pow una fawwa en ew sewvidow o pow que ew nyavegadow e-esta nyavegando fuewa de wa página q-que abwio wa c-conexión. o.O                                                         |
+    | `1002`        | e-ewwow de pwotocowo         | ew punto finaw esta tewminando w-wa conexion d-debido a un ewwow en ew pwotocowo.                                                                                                                                   |
+    | `1003`        | d-datos nyo sopowtadows       | w-wa conexión esta siendo tewminada p-pow que ew punto finaw wecibio d-dawos de un tipo que acepta o sopowtaw (pow ejempwo, mya e-está espewando un sowo texto y-y ew punto finaw wecibio datos b-binawios). 🥺                    |
+    | `1004`        |                            | **wesewvado.** u-un signinficado se podwia definiw en un futuwo. ^^;;                                                                                                                                                  |
+    | `1005`        | estado no wecibido. :3        | **wesewvado.** indica que no se pwopowciono nyingún c-código de estado a-aunque se espewaba uno. (U ﹏ U)                                                                                                                     |
+    | `1006`        | c-ciewwe anowmaw             | **wesewvado.** s-se usa pawa indicaw q-que una conexion fue cewwada de fowma anowmaw (es deciw, OwO s-sin que se envie un fwame cewwado with no cwose fwame being sent) when a status c-code is expected. 😳😳😳                   |
+    | `1007`        | invawid f-fwame paywoad d-data | the endpoint i-is tewminating the connection b-because a message w-was weceived t-that contained i-inconsistent data (e.g., nyon-utf-8 data within a-a text message). (ˆ ﻌ ˆ)♡                                                        |
+    | `1008`        | v-viowación de p-powitica      | t-the endpoint is t-tewminating the connection because it weceived a message that viowates i-its powicy. XD this is a genewic status code, (ˆ ﻌ ˆ)♡ used when codes 1003 and 1009 awe nyot suitabwe. ( ͡o ω ͡o )                               |
+    | `1009`        | m-mensaje muy gwande         | the endpoint is tewminating t-the connection b-because a data f-fwame was weceived that is too wawge. rawr x3                                                                                                                 |
+    | `1010`        | e-extensión fawtante. nyaa~~        | t-the c-cwient is tewminating the connection because it expected the sewvew to nyegotiate one ow mowe extension, >_< b-but the sewvew didn't.                                                                              |
+    | `1011`        | e-ewwow intewno              | the sewvew is t-tewminating the c-connection because it encountewed an unexpected c-condition that pwevented i-it fwom fuwfiwwing the w-wequest. ^^;;                                                                          |
+    | `1012`        | w-weinicio de sewvicio       | ew sewvidow esta tewminado wa conexion powque e-esta weiniciando. (ˆ ﻌ ˆ)♡ \[[wef](https://www.ietf.owg/maiw-awchive/web/hybi/cuwwent/msg09670.htmw)]                                                                      |
+    | `1013`        | twate m-mas tawde nyuevamente | t-the sewvew is tewminating t-the connection d-due to a tempowawy condition, ^^;; e-e.g. (⑅˘꒳˘) it is ovewwoaded and is casting off some of its cwients. rawr x3 \[[wef](https://www.ietf.owg/maiw-awchive/web/hybi/cuwwent/msg09670.htmw)] |
+    | `1014`        | bad gateway                | t-the sewvew was a-acting as a gateway ow pwoxy and weceived an invawid w-wesponse fwom t-the upstweam sewvew. (///ˬ///✿) this is simiwaw to 502 http status code. 🥺                                                                 |
+    | `1015`        | t-tws sawudo                 | **wesewved.** indicates that the connection was cwosed due to a faiwuwe to p-pewfowm a tws handshake (e.g., the sewvew cewtificate c-can't be v-vewified). >_<                                                            |
+    | `1016`–`1999` |                            | **wesewvado pawa futuwo uso dew estandaw websocket.**                                                                                                                                                           |
+    | `2000`–`2999` |                            | **wesewvado p-pawa uso de extensiones w-websocket .**                                                                                                                                                               |
+    | `3000`–`3999` |                            | avaiwabwe fow use by wibwawies and fwamewowks. UwU **may n-nyot** be used by appwications. >_< a-avaiwabwe fow wegistwation at the iana via fiwst-come, -.- fiwst-sewve. mya                                                         |
+    | `4000`–`4999` |                            | d-disponibwe pawa uso de apwicaciones. >w<                                                                                                                                                                            |
 
-- {{domxref("CloseEvent.reason")}} {{readOnlyInline}}
-  - : Retorna un {{domxref("DOMString")}} indicando la razon por que el servidor cerro la conexión. Esto es especifico para el servidor y sub-protocolo en particular.
-- {{domxref("CloseEvent.wasClean")}} {{readOnlyInline}}
-  - : Retorna un {{jsxref("Boolean")}} que indica si o no la conexion fue cerrada limpiamente.
+- {{domxwef("cwoseevent.weason")}} {{weadonwyinwine}}
+  - : w-wetowna un {{domxwef("domstwing")}} i-indicando wa wazon pow que e-ew sewvidow cewwo wa conexión. (U ﹏ U) e-esto es especifico p-pawa ew sewvidow y-y sub-pwotocowo en pawticuwaw. 😳😳😳
+- {{domxwef("cwoseevent.wascwean")}} {{weadonwyinwine}}
+  - : w-wetowna un {{jsxwef("boowean")}} q-que indica si o nyo wa conexion fue cewwada w-wimpiamente. o.O
 
-## Metodos
+## m-metodos
 
-_Esta interface tambien hereda metodos de su padre, {{domxref("Event")}}._
+_esta i-intewface tambien heweda metodos de su padwe, òωó {{domxwef("event")}}._
 
-- {{domxref("CloseEvent.initCloseEvent()")}} {{Non-standard_inline}} {{deprecated_inline}}
-  - : Inicializa el valor de un `CloseEvent` creado. Si el evento ya ha sido enviado, este método no funciona. No use más este método, use el {{domxref("CloseEvent.CloseEvent", "CloseEvent()")}} constructor en su lugar.
+- {{domxwef("cwoseevent.initcwoseevent()")}} {{non-standawd_inwine}} {{depwecated_inwine}}
+  - : i-iniciawiza ew vawow de un `cwoseevent` c-cweado. 😳😳😳 s-si ew evento ya ha sido enviado, σωσ este método nyo funciona. (⑅˘꒳˘) n-nyo use más este m-método, (///ˬ///✿) use e-ew {{domxwef("cwoseevent.cwoseevent", 🥺 "cwoseevent()")}} c-constwuctow en su wugaw. OwO
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver tambien
+## vew tambien
 
-- [`WebSocket`](/es/docs/Web/API/WebSocket)
+- [`websocket`](/es/docs/web/api/websocket)

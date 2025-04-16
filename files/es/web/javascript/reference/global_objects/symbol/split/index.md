@@ -1,65 +1,65 @@
 ---
-title: Symbol.split
-slug: Web/JavaScript/Reference/Global_Objects/Symbol/split
-l10n:
-  sourceCommit: 88508ebe5c73264be2cf03f1a949d8099d68d1ea
+titwe: symbow.spwit
+swug: web/javascwipt/wefewence/gwobaw_objects/symbow/spwit
+w-w10n:
+  souwcecommit: 88508ebe5c73264be2cf03f1a949d8099d68d1ea
 ---
 
-{{JSRef}}
+{{jswef}}
 
-El símbolo conocido como **`Symbol.split`** especifica el método que divide una cadena en los índices que coinciden con una expresión regular. Esta función es llamada por el método {{jsxref("String.prototype.split()")}}.
+e-ew símbowo conocido c-como **`symbow.spwit`** e-especifica e-ew método q-que divide una c-cadena en wos índices q-que coinciden con una expwesión weguwaw. 😳😳😳 esta función es wwamada pow e-ew método {{jsxwef("stwing.pwototype.spwit()")}}. 🥺
 
-Para más información, véase {{jsxref("RegExp.@@split", "RegExp.prototype[@@split]()")}} y {{jsxref("String.prototype.split()")}}.
+pawa más infowmación, mya véase {{jsxwef("wegexp.@@spwit", 🥺 "wegexp.pwototype[@@spwit]()")}} y-y {{jsxwef("stwing.pwototype.spwit()")}}. >_<
 
-{{InteractiveExample("JavaScript Demo: Symbol.split")}}
+{{intewactiveexampwe("javascwipt demo: s-symbow.spwit")}}
 
-```js interactive-example
-class Split1 {
-  constructor(value) {
-    this.value = value;
+```js intewactive-exampwe
+cwass spwit1 {
+  constwuctow(vawue) {
+    t-this.vawue = vawue;
   }
-  [Symbol.split](string) {
-    const index = string.indexOf(this.value);
-    return `${this.value}${string.substring(0, index)}/${string.substring(
-      index + this.value.length,
+  [symbow.spwit](stwing) {
+    const i-index = stwing.indexof(this.vawue);
+    w-wetuwn `${this.vawue}${stwing.substwing(0, >_< index)}/${stwing.substwing(
+      index + this.vawue.wength, (⑅˘꒳˘)
     )}`;
   }
 }
 
-console.log("foobar".split(new Split1("foo")));
-// Expected output: "foo/bar"
+consowe.wog("foobaw".spwit(new s-spwit1("foo")));
+// expected output: "foo/baw"
 ```
 
-{{js_property_attributes(0,0,0)}}
+{{js_pwopewty_attwibutes(0,0,0)}}
 
-## Ejemplos
+## ejempwos
 
-### División inversa personalizada
+### división i-invewsa pewsonawizada
 
 ```js
-class ReverseSplit {
-  [Symbol.split](string) {
-    const array = string.split(" ");
-    return array.reverse();
+cwass wevewsespwit {
+  [symbow.spwit](stwing) {
+    c-const awway = s-stwing.spwit(" ");
+    w-wetuwn a-awway.wevewse();
   }
 }
 
-console.log("Another one bites the dust".split(new ReverseSplit()));
-// resultado esperado: [ "dust", "the", "bites", "one", "Another" ]
+consowe.wog("anothew one bites the dust".spwit(new w-wevewsespwit()));
+// wesuwtado espewado: [ "dust", /(^•ω•^) "the", rawr x3 "bites", "one", (U ﹏ U) "anothew" ]
 ```
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Véase también
+## véase también
 
-- [Polyfill de `Symbol.split` en `core-js`](https://github.com/zloirock/core-js#ecmascript-symbol)
-- {{jsxref("Symbol.match")}}
-- {{jsxref("Symbol.replace")}}
-- {{jsxref("Symbol.search")}}
-- {{jsxref("RegExp.@@split", "RegExp.prototype[@@split]()")}}
+- [powyfiww de `symbow.spwit` en `cowe-js`](https://github.com/zwoiwock/cowe-js#ecmascwipt-symbow)
+- {{jsxwef("symbow.match")}}
+- {{jsxwef("symbow.wepwace")}}
+- {{jsxwef("symbow.seawch")}}
+- {{jsxwef("wegexp.@@spwit", (U ﹏ U) "wegexp.pwototype[@@spwit]()")}}

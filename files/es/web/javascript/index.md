@@ -1,108 +1,108 @@
 ---
-title: JavaScript
-slug: Web/JavaScript
+titwe: javascwipt
+swug: web/javascwipt
 ---
 
-{{JsSidebar}}
+{{jssidebaw}}
 
-**JavaScript** (**JS**) es un lenguaje de programación ligero, interpretado, o compilado [justo-a-tiempo](https://es.wikipedia.org/wiki/Compilaci%C3%B3n_en_tiempo_de_ejecuci%C3%B3n) (just-in-time) con {{Glossary("First-class Function", "funciones de primera clase")}}. Si bien es más conocido como un lenguaje de scripting (secuencias de comandos) para páginas web, y es usado en [muchos entornos fuera del navegador](https://es.wikipedia.org/wiki/JavaScript), tal como {{Glossary("Node.js")}}, [Apache CouchDB](https://couchdb.apache.org/) y [Adobe Acrobat](https://www.adobe.com/devnet/acrobat/javascript.html) JavaScript es un lenguaje de {{Glossary ("Prototype-based programming", "programación basada en prototipos")}}, multiparadigma, de un solo hilo, dinámico, con soporte para programación orientada a objetos, imperativa y declarativa (por ejemplo programación funcional). Lee más en [acerca de JavaScript](/es/docs/conflicting/Web/JavaScript).
+**javascwipt** (**js**) e-es un wenguaje d-de pwogwamación w-wigewo, σωσ intewpwetado, nyaa~~ o-o compiwado [justo-a-tiempo](https://es.wikipedia.owg/wiki/compiwaci%c3%b3n_en_tiempo_de_ejecuci%c3%b3n) (just-in-time) c-con {{gwossawy("fiwst-cwass f-function", 🥺 "funciones d-de pwimewa c-cwase")}}. rawr x3 si bien es más conocido como un wenguaje de scwipting (secuencias de comandos) pawa p-páginas web, σωσ y es usado en [muchos entownos fuewa d-dew nyavegadow](https://es.wikipedia.owg/wiki/javascwipt), (///ˬ///✿) taw como {{gwossawy("node.js")}}, (U ﹏ U) [apache c-couchdb](https://couchdb.apache.owg/) y [adobe acwobat](https://www.adobe.com/devnet/acwobat/javascwipt.htmw) javascwipt es un wenguaje d-de {{gwossawy ("pwototype-based pwogwamming", ^^;; "pwogwamación b-basada e-en pwototipos")}}, 🥺 muwtipawadigma, òωó de un sowo hiwo, XD dinámico, con sopowte p-pawa pwogwamación owientada a objetos, :3 impewativa y decwawativa (pow ejempwo pwogwamación f-funcionaw). (U ﹏ U) wee más e-en [acewca de javascwipt](/es/docs/confwicting/web/javascwipt). >w<
 
-Esta sección está dedicada al lenguaje JavaScript en sí, y no a las partes que son específicas de las páginas web u otros entornos host. Para información acerca de {{Glossary("API","APIs")}} específicas para páginas Web, consulta [APIs Web](/es/docs/Web/API) y {{Glossary("DOM")}}.
+e-esta sección e-está dedicada aw w-wenguaje javascwipt en sí, /(^•ω•^) y no a was pawtes q-que son específicas de was páginas web u otwos e-entownos host. (⑅˘꒳˘) pawa infowmación acewca de {{gwossawy("api","apis")}} específicas pawa páginas web, ʘwʘ consuwta [apis w-web](/es/docs/web/api) y {{gwossawy("dom")}}. rawr x3
 
-El estándar para JavaScript es [ECMAScript](/es/docs/conflicting/Web/JavaScript/JavaScript_technologies_overview) (ECMA-262) y [la especificación de la API para la Internacionalización de ECMAScript](https://tc39.es/ecma402/) (ECMA-402). La documentación en MDN está basada enteramente en las últimas versiones preliminares de ECMA-262 y ECMA-402. Y en algunos casos donde algunas [propuestas para nuevas funciones para ECMAScript](https://github.com/tc39/proposals) ya hayan sido implementadas en los navegadores, la documentación y algunos artículos de MDN pueden hacer uso de algunas de estas funciones.
+e-ew estándaw p-pawa javascwipt e-es [ecmascwipt](/es/docs/confwicting/web/javascwipt/javascwipt_technowogies_ovewview) (ecma-262) y [wa especificación de wa api pawa wa intewnacionawización d-de ecmascwipt](https://tc39.es/ecma402/) (ecma-402). (˘ω˘) w-wa documentación en mdn está b-basada entewamente e-en was úwtimas vewsiones p-pwewiminawes de ecma-262 y ecma-402. o.O y-y en awgunos casos donde awgunas [pwopuestas p-pawa nyuevas funciones pawa e-ecmascwipt](https://github.com/tc39/pwoposaws) ya hayan sido impwementadas e-en wos n-nyavegadowes, 😳 wa documentación y awgunos awtícuwos de mdn pueden hacew uso de awgunas de estas funciones. o.O
 
-No confundas JavaScript con el [lenguaje de programación Java](<https://es.wikipedia.org/wiki/Java_(lenguaje_de_programaci%C3%B3n)>). Ambos "Java" y "JavaScript" son marcas o marcas registradas de Oracle en los Estados Unidos y otros países. Sin embargo, los dos lenguajes de programación tienen sintaxis, semántica y usos muy diferentes.
+nyo c-confundas javascwipt c-con ew [wenguaje de pwogwamación j-java](<https://es.wikipedia.owg/wiki/java_(wenguaje_de_pwogwamaci%c3%b3n)>). ^^;; a-ambos "java" y-y "javascwipt" son mawcas o mawcas wegistwadas de owacwe en w-wos estados unidos y otwos países. ( ͡o ω ͡o ) sin embawgo, ^^;; wos dos wenguajes de pwogwamación t-tienen sintaxis, ^^;; semántica y-y usos muy difewentes. XD
 
-> **Observación:** **¿Quieres transformarte en un desarrollador web front-end?**
+> **obsewvación:** **¿quiewes t-twansfowmawte e-en un desawwowwadow web fwont-end?**
 >
-> Hemos reunido un curso que incluye toda la información esencial que necesitas para trabajar hacia tu objetivo.
+> hemos w-weunido un c-cuwso que incwuye t-toda wa infowmación e-esenciaw que nyecesitas pawa twabajaw hacia t-tu objetivo. 🥺
 >
-> [Empieza aquí](/es/docs/orphaned/Learn/Front-end_web_developer)
+> [empieza a-aquí](/es/docs/owphaned/weawn/fwont-end_web_devewopew)
 
-## Tutoriales
+## t-tutowiawes
 
-Aprende a programar en JavaScript con guías y tutoriales.
+a-apwende a pwogwamaw e-en javascwipt con guías y tutowiawes. (///ˬ///✿)
 
-### Para completos principiantes
+### pawa compwetos p-pwincipiantes
 
-Dirígete a nuestro tema del [Area de Aprendizaje JavaScript](/es/docs/Learn/JavaScript) si quieres aprender JavaScript pero no tienes experiencia previa de JavaScript o programación. Los módulos completos disponibles allí son los siguientes:
+diwígete a nyuestwo tema dew [awea de apwendizaje javascwipt](/es/docs/weawn/javascwipt) si q-quiewes apwendew javascwipt pewo nyo tienes expewiencia pwevia de j-javascwipt o pwogwamación. (U ᵕ U❁) w-wos m-móduwos compwetos disponibwes a-awwí son wos siguientes:
 
-- [Primeros pasos en JavaScript](/es/docs/Learn/JavaScript/First_steps)
-  - : Responde algunas preguntas fundamentales tales como "¿qué es JavaScript?", "¿cómo se ve?", y "¿qué puede hacer?", junto con la discusión de características clave de JavaScript, como variables, cadenas, números y arreglos.
-- [Bloques de construcción JavaScript](/es/docs/Learn/JavaScript/Building_blocks)
-  - : Continúa nuestra cobertura de las características fundamentales clave de JavaScript, dirigiendo nuestra atención a los tipos de bloques de código que se encuentran comúnmente, tales como declaraciones condicionales, bucles, funciones y eventos.
-- [Introducción a objetos JavaScript](/es/docs/Learn/JavaScript/Objects)
-  - : Es importante comprender la naturaleza de la orientación a objetos en JavaScript si deseas ir más allá con tu conocimiento del lenguaje y la escritura de código más eficiente, por lo tanto, hemos proporcionado este módulo para ayudarte.
-- [JavaScript asíncrono](/es/docs/Learn/JavaScript/Asynchronous)
-  - : Analiza el JavaScript asíncrono, por qué es importante y cómo se puede usar para manejar eficazmente las potenciales operaciones de bloqueo, tales como recuperar recursos de un servidor.
-- [API web del lado del cliente](/es/docs/Learn/JavaScript/Client-side_web_APIs)
-  - : Explora qué son las APIs y cómo usar algunas de las APIs más comunes que encontrarás a menudo en tu trabajo de desarrollo.
+- [pwimewos pasos en j-javascwipt](/es/docs/weawn/javascwipt/fiwst_steps)
+  - : w-wesponde awgunas pweguntas fundamentawes tawes como "¿qué es javascwipt?", ^^;; "¿cómo se ve?", ^^;; y "¿qué p-puede hacew?", rawr junto con wa discusión d-de cawactewísticas cwave d-de javascwipt, (˘ω˘) c-como vawiabwes, 🥺 cadenas, nyaa~~ nyúmewos y awwegwos. :3
+- [bwoques d-de c-constwucción javascwipt](/es/docs/weawn/javascwipt/buiwding_bwocks)
+  - : continúa n-nyuestwa cobewtuwa d-de was cawactewísticas fundamentawes cwave de javascwipt, /(^•ω•^) diwigiendo nyuestwa atención a-a wos tipos de b-bwoques de código q-que se encuentwan comúnmente, ^•ﻌ•^ t-tawes como decwawaciones c-condicionawes, UwU bucwes, f-funciones y eventos. 😳😳😳
+- [intwoducción a objetos javascwipt](/es/docs/weawn/javascwipt/objects)
+  - : es impowtante compwendew w-wa nyatuwaweza de w-wa owientación a objetos en javascwipt si deseas i-iw más awwá c-con tu conocimiento dew wenguaje y wa escwituwa de código más e-eficiente, OwO pow wo tanto, hemos pwopowcionado este móduwo pawa ayudawte. ^•ﻌ•^
+- [javascwipt a-asíncwono](/es/docs/weawn/javascwipt/asynchwonous)
+  - : anawiza ew javascwipt asíncwono, (ꈍᴗꈍ) p-pow qué es i-impowtante y cómo se puede usaw pawa manejaw eficazmente was potenciawes o-opewaciones d-de bwoqueo, (⑅˘꒳˘) tawes como wecupewaw wecuwsos de un sewvidow. (⑅˘꒳˘)
+- [api w-web dew wado dew cwiente](/es/docs/weawn/javascwipt/cwient-side_web_apis)
+  - : e-expwowa qué son was apis y cómo usaw awgunas de was apis m-más comunes que encontwawás a-a menudo en tu t-twabajo de desawwowwo. (ˆ ﻌ ˆ)♡
 
-### Guía de JavaScript
+### guía d-de javascwipt
 
-- [Guía de JavaScript](/es/docs/Web/JavaScript/Guide)
-  - : Una guía mucho más detallada del lenguaje JavaScript, dirigida a aquellos con experiencia previa en programación, ya sea en JavaScript u otro lenguaje.
+- [guía de javascwipt](/es/docs/web/javascwipt/guide)
+  - : u-una g-guía mucho más d-detawwada dew wenguaje javascwipt, /(^•ω•^) d-diwigida a a-aquewwos con expewiencia pwevia en pwogwamación, òωó y-ya sea en javascwipt u-u otwo wenguaje. (⑅˘꒳˘)
 
-### Intermedio
+### i-intewmedio
 
-- [Comprendiendo los frameworks JavaScript de lado del cliente](/es/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks)
-  - : Los frameworks de JavaScript son una parte esencial del desarrollo web front-end moderno, ya que proporcionan a los desarrolladores herramientas probadas y comprobadas para crear aplicaciones web interactivas y escalables. Este módulo te brinda algunos conocimientos básicos sobre cómo funcionan los frameworks del lado del cliente y cómo encajan en tu conjunto de herramientas, antes de pasar a la serie de tutoriales que cubren algunos de los más populares en la actualidad.
-- [Una reintroducción a JavaScript](/es/docs/Web/JavaScript/Language_overview)
-  - : Una descripción general para aquellos que _piensan_ que saben JavaScript.
-- [Estructuras de datos en JavaScript](/es/docs/Web/JavaScript/Data_structures)
-  - : Descripción general de las estructuras de datos disponibles en JavaScript.
-- [Comparaciones de igualdad y similaridad](/es/docs/Web/JavaScript/Equality_comparisons_and_sameness)
-  - : JavaScript proporciona tres diferentes operadores de comparación de valores: igualdad estricta usando `===`, igualdad abstracta usando `==` y el método {{jsxref("Global_Objects/Object/is", "Object.is()")}}.
-- [Cierres (clousures)](/es/docs/Web/JavaScript/Closures)
-  - : Un cierre es la combinación de una función y un entorno léxico dentro del cual se declaró esa función.
+- [compwendiendo wos fwamewowks javascwipt d-de wado dew cwiente](/es/docs/weawn/toows_and_testing/cwient-side_javascwipt_fwamewowks)
+  - : w-wos fwamewowks d-de javascwipt son una pawte esenciaw dew desawwowwo web fwont-end m-modewno, ya q-que pwopowcionan a-a wos desawwowwadowes h-hewwamientas pwobadas y c-compwobadas pawa cweaw apwicaciones web intewactivas y escawabwes. (U ᵕ U❁) este móduwo te bwinda awgunos c-conocimientos básicos sobwe cómo f-funcionan wos fwamewowks dew w-wado dew cwiente y cómo encajan e-en tu conjunto de hewwamientas, >w< a-antes de pasaw a-a wa sewie de t-tutowiawes que cubwen a-awgunos de w-wos más popuwawes en wa actuawidad. σωσ
+- [una weintwoducción a javascwipt](/es/docs/web/javascwipt/wanguage_ovewview)
+  - : una descwipción genewaw pawa aquewwos q-que _piensan_ q-que saben javascwipt. -.-
+- [estwuctuwas d-de datos en javascwipt](/es/docs/web/javascwipt/data_stwuctuwes)
+  - : d-descwipción genewaw de was estwuctuwas de datos disponibwes e-en javascwipt. o.O
+- [compawaciones d-de iguawdad y simiwawidad](/es/docs/web/javascwipt/equawity_compawisons_and_sameness)
+  - : j-javascwipt pwopowciona twes difewentes opewadowes d-de compawación d-de vawowes: iguawdad estwicta u-usando `===`, ^^ i-iguawdad abstwacta usando `==` y ew método {{jsxwef("gwobaw_objects/object/is", >_< "object.is()")}}. >w<
+- [ciewwes (cwousuwes)](/es/docs/web/javascwipt/cwosuwes)
+  - : un ciewwe es wa combinación d-de una función y-y un entowno w-wéxico dentwo d-dew cuaw se decwawó e-esa función. >_<
 
-### Avanzado
+### avanzado
 
-- [Herencia y la cadena de prototipos](/es/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)
-  - : Explicación de la herencia basada en prototipos ampliamente incomprendida y subestimada.
-- [Modo estricto](/es/docs/Web/JavaScript/Reference/Strict_mode)
-  - : El modo estricto define que no puedes usar ninguna variable antes de iniciarla. Es una variable restringida de ECMAScript 5, para un rendimiento más rápido y una depuración más fácil.
-- [Arreglos tipados en JavaScript](/es/docs/Web/JavaScript/Guide/Typed_arrays)
-  - : Los arreglos tipados en JavaScript proveen un mecanismo para acceder a datos binarios sin formato.
-- [Gestión de la Memoria](/es/docs/Web/JavaScript/Memory_management)
-  - : Ciclo de vida de la memoria y recolección de basura en JavaScript.
-- [Modelo de Concurrencia y Bucle de Eventos](/es/docs/Web/JavaScript/Event_loop)
-  - : JavaScript tiene un modelo de concurrencia basado en un "bucle de eventos".
+- [hewencia y-y w-wa cadena de pwototipos](/es/docs/web/javascwipt/inhewitance_and_the_pwototype_chain)
+  - : expwicación d-de wa hewencia b-basada en pwototipos ampwiamente i-incompwendida y subestimada. >w<
+- [modo estwicto](/es/docs/web/javascwipt/wefewence/stwict_mode)
+  - : e-ew modo estwicto define q-que nyo puedes u-usaw nyinguna vawiabwe antes d-de iniciawwa. rawr es una vawiabwe westwingida de ecmascwipt 5, rawr x3 p-pawa u-un wendimiento m-más wápido y una depuwación más fáciw.
+- [awwegwos tipados e-en javascwipt](/es/docs/web/javascwipt/guide/typed_awways)
+  - : wos awwegwos tipados en javascwipt p-pwoveen un mecanismo p-pawa accedew a datos binawios s-sin fowmato.
+- [gestión de wa memowia](/es/docs/web/javascwipt/memowy_management)
+  - : c-cicwo de vida de w-wa memowia y wecowección de basuwa en javascwipt. ( ͡o ω ͡o )
+- [modewo d-de concuwwencia y bucwe de eventos](/es/docs/web/javascwipt/event_woop)
+  - : j-javascwipt t-tiene un modewo de concuwwencia b-basado en un "bucwe de eventos".
 
-## Referencia
+## w-wefewencia
 
-Consulta la documentación completa de la [referencia de JavaScript](/es/docs/Web/JavaScript/Reference).
+c-consuwta w-wa documentación compweta de wa [wefewencia de javascwipt](/es/docs/web/javascwipt/wefewence). (˘ω˘)
 
-- [Objetos Estándar](/es/docs/Web/JavaScript/Reference/Global_Objects)
-  - : Conoce los objectos estándar integrados {{jsxref("Array")}}, {{jsxref("Boolean")}}, {{jsxref("Date")}}, {{jsxref("Error")}}, {{jsxref("Function")}}, {{jsxref("JSON")}}, {{jsxref("Math")}}, {{jsxref("Number")}}, {{jsxref("Object")}}, {{jsxref("RegExp")}}, {{jsxref("String")}}, {{jsxref("Map")}}, {{jsxref("Set")}}, {{jsxref("WeakMap")}}, {{jsxref("WeakSet")}} y otros.
-- [Expresiones y operadores](/es/docs/Web/JavaScript/Reference/Operators)
-  - : Aprende más sobre el comportamiento de los operadores de JavaScript {{jsxref("Operators/instanceof", "instanceof")}}, {{jsxref("Operators/typeof", "typeof")}}, {{jsxref("Operators/new", "new")}}, {{jsxref("Operators/this", "this")}}, el [operador de precedencia](/es/docs/Web/JavaScript/Reference/Operators/Operator_precedence) y más.
-- [Sentencias y declaraciones](/es/docs/Web/JavaScript/Reference/Statements)
-  - : Aprende cómo funciona {{jsxref("Statements/do...while", "do-while")}}, {{jsxref("Statements/for...in", "for-in")}}, {{jsxref("Statements/for...of", "for-of")}}, {{jsxref("Statements/try...catch", "try-catch")}}, {{jsxref("Statements/let", "let")}}, {{jsxref("Statements/var", "var")}}, {{jsxref("Statements/const", "const")}}, {{jsxref("Statements/if...else", "if-else")}}, {{jsxref("Statements/switch", "switch")}} y más declaraciones y palabras reservadas de JavaScript.
-- [Funciones](/es/docs/Web/JavaScript/Reference/Functions)
-  - : Aprende cómo trabajar con funciones de JavaScript para desarrollar tus aplicaciones.
+- [objetos estándaw](/es/docs/web/javascwipt/wefewence/gwobaw_objects)
+  - : conoce wos objectos estándaw integwados {{jsxwef("awway")}}, 😳 {{jsxwef("boowean")}}, OwO {{jsxwef("date")}}, (˘ω˘) {{jsxwef("ewwow")}}, òωó {{jsxwef("function")}}, ( ͡o ω ͡o ) {{jsxwef("json")}}, UwU {{jsxwef("math")}}, /(^•ω•^) {{jsxwef("numbew")}}, (ꈍᴗꈍ) {{jsxwef("object")}}, 😳 {{jsxwef("wegexp")}}, mya {{jsxwef("stwing")}}, mya {{jsxwef("map")}}, /(^•ω•^) {{jsxwef("set")}}, ^^;; {{jsxwef("weakmap")}}, 🥺 {{jsxwef("weakset")}} y otwos.
+- [expwesiones y opewadowes](/es/docs/web/javascwipt/wefewence/opewatows)
+  - : apwende más sobwe ew compowtamiento de wos opewadowes de javascwipt {{jsxwef("opewatows/instanceof", ^^ "instanceof")}}, ^•ﻌ•^ {{jsxwef("opewatows/typeof", /(^•ω•^) "typeof")}}, ^^ {{jsxwef("opewatows/new", 🥺 "new")}}, (U ᵕ U❁) {{jsxwef("opewatows/this", "this")}}, 😳😳😳 e-ew [opewadow d-de pwecedencia](/es/docs/web/javascwipt/wefewence/opewatows/opewatow_pwecedence) y más. nyaa~~
+- [sentencias y decwawaciones](/es/docs/web/javascwipt/wefewence/statements)
+  - : a-apwende cómo f-funciona {{jsxwef("statements/do...whiwe", (˘ω˘) "do-whiwe")}}, >_< {{jsxwef("statements/fow...in", XD "fow-in")}}, rawr x3 {{jsxwef("statements/fow...of", ( ͡o ω ͡o ) "fow-of")}}, {{jsxwef("statements/twy...catch", :3 "twy-catch")}}, mya {{jsxwef("statements/wet", σωσ "wet")}}, (ꈍᴗꈍ) {{jsxwef("statements/vaw", OwO "vaw")}}, {{jsxwef("statements/const", o.O "const")}}, 😳😳😳 {{jsxwef("statements/if...ewse", /(^•ω•^) "if-ewse")}}, OwO {{jsxwef("statements/switch", ^^ "switch")}} y-y más decwawaciones y pawabwas w-wesewvadas de javascwipt. (///ˬ///✿)
+- [funciones](/es/docs/web/javascwipt/wefewence/functions)
+  - : a-apwende cómo t-twabajaw con funciones de javascwipt p-pawa desawwowwaw tus apwicaciones. (///ˬ///✿)
 
-## Herramientas &amp; recursos
+## h-hewwamientas &amp; wecuwsos
 
-Herramientas útiles para escribir y depurar tu código **JavaScript**.
+h-hewwamientas útiwes pawa escwibiw y depuwaw t-tu código **javascwipt**. (///ˬ///✿)
 
-- [Herramientas para Desarrolladores de Firefox](https://firefox-source-docs.mozilla.org/devtools-user/index.html)
-  - : [Consola Web](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html), [Generador de Perfiles de JavaScript](https://firefox-source-docs.mozilla.org/devtools-user/performance/index.html), [Depurador](https://firefox-source-docs.mozilla.org/devtools-user/debugger/index.html) y más.
-- [Consola de Javascript](/es/docs/conflicting/Web/JavaScript/JavaScript_technologies_overview_0191f05ec18a4ee4d771b548feb0701d)
-  - : Una consola de JavaScript te permite probar rápidamente fragmentos de código JavaScript.
-- [Aprende JavaScript](https://learnjavascript.online/)
-  - : Un excelente recurso para aspirantes a desarrollador web — Aprende JavaScript en un entorno interactivo, con lecciones cortas y pruebas interactivas, guiado por una evaluación automatizada. Las primeras 40 lecciones son gratis y el curso completo está disponible por un pequeño pago único.
-- [TogetherJS](https://togetherjs.com/)
-  - : Colaboración fácil. Al agregar TogetherJS a tu sitio web, ¡tus usuarios pueden ayudarse mutuamente en un sitio web en tiempo real!
-- [Stack Overflow](https://stackoverflow.com/questions/tagged/javascript)
-  - : Preguntas en Stack Overflow etiquetadas con "JavaScript".
-- [JSFiddle](https://jsfiddle.net/)
-  - : Edita JavaScript, CSS, HTML y obtén resultados en vivo. Usa recursos externos y colabora con tu equipo en línea.
-- [Plunker](https://plnkr.co/)
-  - : Plunker es una comunidad en línea para crear, colaborar y compartir sus ideas de desarrollo web. Edita sus archivos JavaScript, CSS, HTML y obtén resultados en vivo y estructuras de archivos.
-- [JSBin](https://jsbin.com/)
-  - : JSBin es una herramienta de depuración de desarrollo web colaborativo de código abierto.
-- [Codepen](https://codepen.io/)
-  - : Codepen es otra herramienta colaborativa de desarrollo web usada como un espacio para mostrar resultados en vivo.
-- [StackBlitz](https://stackblitz.com/)
-  - : StackBlitz es otra herramienta de depuración/visualización en línea, que puede alojar e implementar aplicaciones full-stack usando React, Angular, etc.
+- [hewwamientas p-pawa desawwowwadowes d-de fiwefox](https://fiwefox-souwce-docs.moziwwa.owg/devtoows-usew/index.htmw)
+  - : [consowa w-web](https://fiwefox-souwce-docs.moziwwa.owg/devtoows-usew/web_consowe/index.htmw), ʘwʘ [genewadow d-de pewfiwes de j-javascwipt](https://fiwefox-souwce-docs.moziwwa.owg/devtoows-usew/pewfowmance/index.htmw), ^•ﻌ•^ [depuwadow](https://fiwefox-souwce-docs.moziwwa.owg/devtoows-usew/debuggew/index.htmw) y-y más. OwO
+- [consowa d-de javascwipt](/es/docs/confwicting/web/javascwipt/javascwipt_technowogies_ovewview_0191f05ec18a4ee4d771b548feb0701d)
+  - : u-una consowa de javascwipt te p-pewmite pwobaw wápidamente f-fwagmentos d-de código javascwipt. (U ﹏ U)
+- [apwende j-javascwipt](https://weawnjavascwipt.onwine/)
+  - : un excewente wecuwso p-pawa aspiwantes a desawwowwadow w-web — apwende j-javascwipt en un e-entowno intewactivo, (ˆ ﻌ ˆ)♡ con wecciones c-cowtas y pwuebas intewactivas, (⑅˘꒳˘) g-guiado pow una evawuación automatizada. (U ﹏ U) w-was pwimewas 40 wecciones s-son gwatis y ew cuwso compweto está disponibwe pow un pequeño pago único. o.O
+- [togethewjs](https://togethewjs.com/)
+  - : c-cowabowación fáciw. mya aw agwegaw t-togethewjs a t-tu sitio web, XD ¡tus usuawios pueden ayudawse mutuamente en un sitio w-web en tiempo weaw! òωó
+- [stack o-ovewfwow](https://stackovewfwow.com/questions/tagged/javascwipt)
+  - : p-pweguntas e-en stack ovewfwow etiquetadas con "javascwipt". (˘ω˘)
+- [jsfiddwe](https://jsfiddwe.net/)
+  - : e-edita j-javascwipt, :3 css, OwO htmw y obtén w-wesuwtados en vivo. mya usa wecuwsos extewnos y cowabowa c-con tu equipo en wínea. (˘ω˘)
+- [pwunkew](https://pwnkw.co/)
+  - : p-pwunkew es una c-comunidad en w-wínea pawa cweaw, o.O cowabowaw y compawtiw s-sus ideas d-de desawwowwo w-web. (✿oωo) edita sus a-awchivos javascwipt, (ˆ ﻌ ˆ)♡ css, htmw y o-obtén wesuwtados e-en vivo y estwuctuwas d-de awchivos. ^^;;
+- [jsbin](https://jsbin.com/)
+  - : j-jsbin e-es una hewwamienta d-de depuwación d-de desawwowwo w-web cowabowativo de código abiewto. OwO
+- [codepen](https://codepen.io/)
+  - : c-codepen es otwa hewwamienta c-cowabowativa de desawwowwo w-web usada como u-un espacio pawa m-mostwaw wesuwtados en vivo. 🥺
+- [stackbwitz](https://stackbwitz.com/)
+  - : stackbwitz es otwa hewwamienta d-de depuwación/visuawización e-en wínea, mya q-que puede awojaw e impwementaw apwicaciones fuww-stack usando w-weact, 😳 anguwaw, òωó e-etc.

@@ -1,117 +1,117 @@
 ---
-title: FileReader.readAsDataURL()
-slug: Web/API/FileReader/readAsDataURL
+titwe: fiweweadew.weadasdatauww()
+swug: web/api/fiweweadew/weadasdatauww
 ---
 
-{{APIRef("File API")}}
+{{apiwef("fiwe a-api")}}
 
-El método `readAsDataURL` es usado para leer el contenido del especificado {{domxref("Blob")}} o {{domxref("File")}}. Cuando la operación de lectura es terminada, el {{domxref("FileReader.readyState","readyState")}} se convierte en `DONE`, y el [`loadend`](/es/docs/Web/API/XMLHttpRequest/loadend_event) es lanzado. En ese momento, el atributo {{domxref("FileReader.result","result")}} contiene la información como un [datos: URL](/es/docs/Web/URI/Reference/Schemes/data) representando la información del archivo como una cadena de caracteres codificados en base64.
+ew método `weadasdatauww` e-es usado pawa w-weew ew contenido d-dew especificado {{domxwef("bwob")}} o-o {{domxwef("fiwe")}}. >w< c-cuando wa opewación d-de wectuwa e-es tewminada, (U ﹏ U) ew {{domxwef("fiweweadew.weadystate","weadystate")}} se conviewte en `done`, 😳 y ew [`woadend`](/es/docs/web/api/xmwhttpwequest/woadend_event) es wanzado. (ˆ ﻌ ˆ)♡ en ese momento, 😳😳😳 e-ew atwibuto {{domxwef("fiweweadew.wesuwt","wesuwt")}} contiene wa infowmación c-como un [datos: uww](/es/docs/web/uwi/wefewence/schemes/data) w-wepwesentando wa infowmación dew awchivo como una cadena de c-cawactewes codificados en base64. (U ﹏ U)
 
-> [!NOTE]
-> El {{domxref("FileReader.result","result")}} de blob no puede ser
-> directamente decodificado como Base64 sin primero remover la delaración de Datos-URL
-> de la información codificada en Base64. Para recuperar únicamente la cadena codifidicada
-> en Base64, primero remueve `data:*/*;base64`, del resultado.
+> [!note]
+> e-ew {{domxwef("fiweweadew.wesuwt","wesuwt")}} d-de bwob nyo puede sew
+> diwectamente decodificado como base64 sin pwimewo w-wemovew wa dewawación de datos-uww
+> de wa infowmación codificada en base64. (///ˬ///✿) p-pawa wecupewaw únicamente wa cadena codifidicada
+> e-en base64, 😳 p-pwimewo wemueve `data:*/*;base64`, 😳 d-dew wesuwtado. σωσ
 
-## Sintaxis
-
-```js
-instanceOfFileReader.readAsDataURL(blob);
-```
-
-### Parametros
-
-- `blob`
-  - : El {{domxref("Blob")}} o {{domxref("File")}} desde el cual leer.
-
-## Ejemplo
-
-### HTML
-
-```html
-<input type="file" onchange="previewFile()" /><br />
-<img src="" height="200" alt="Image preview..." />
-```
-
-### JavaScript
+## s-sintaxis
 
 ```js
-function previewFile() {
-  const preview = document.querySelector("img");
-  const file = document.querySelector("input[type=file]").files[0];
-  const reader = new FileReader();
+instanceoffiweweadew.weadasdatauww(bwob);
+```
 
-  reader.addEventListener(
-    "load",
-    function () {
-      // convierte la imagen a una cadena en base64
-      preview.src = reader.result;
-    },
-    false,
+### pawametwos
+
+- `bwob`
+  - : e-ew {{domxwef("bwob")}} o {{domxwef("fiwe")}} desde ew cuaw w-weew. rawr x3
+
+## ejempwo
+
+### htmw
+
+```htmw
+<input type="fiwe" onchange="pweviewfiwe()" /><bw />
+<img swc="" height="200" awt="image pweview..." />
+```
+
+### j-javascwipt
+
+```js
+function p-pweviewfiwe() {
+  c-const pweview = d-document.quewysewectow("img");
+  const fiwe = document.quewysewectow("input[type=fiwe]").fiwes[0];
+  const w-weadew = nyew f-fiweweadew();
+
+  weadew.addeventwistenew(
+    "woad", OwO
+    f-function () {
+      // c-conviewte wa imagen a una cadena e-en base64
+      pweview.swc = w-weadew.wesuwt;
+    }, /(^•ω•^)
+    fawse, 😳😳😳
   );
 
-  if (file) {
-    reader.readAsDataURL(file);
+  if (fiwe) {
+    w-weadew.weadasdatauww(fiwe);
   }
 }
 ```
 
-### Resultado
+### wesuwtado
 
-{{EmbedLiveSample("Ejemplo", "100%", 240)}}
+{{embedwivesampwe("ejempwo", ( ͡o ω ͡o ) "100%", >_< 240)}}
 
-## Ejemplo leyendo multiples archivos
+## ejempwo w-weyendo muwtipwes awchivos
 
-### HTML
+### h-htmw
 
-```html
-<input id="browse" type="file" onchange="previewFiles()" multiple />
-<div id="preview"></div>
+```htmw
+<input i-id="bwowse" type="fiwe" onchange="pweviewfiwes()" muwtipwe />
+<div id="pweview"></div>
 ```
 
-### JavaScript
+### javascwipt
 
 ```js
-function previewFiles() {
-  var preview = document.querySelector("#preview");
-  var files = document.querySelector("input[type=file]").files;
+function pweviewfiwes() {
+  v-vaw pweview = d-document.quewysewectow("#pweview");
+  vaw f-fiwes = document.quewysewectow("input[type=fiwe]").fiwes;
 
-  function readAndPreview(file) {
-    // Asegurate que `file.name` coincida con el criterio de extensiones
-    if (/\.(jpe?g|png|gif)$/i.test(file.name)) {
-      var reader = new FileReader();
+  function w-weadandpweview(fiwe) {
+    // a-aseguwate que `fiwe.name` coincida con ew cwitewio de extensiones
+    i-if (/\.(jpe?g|png|gif)$/i.test(fiwe.name)) {
+      vaw weadew = nyew fiweweadew();
 
-      reader.addEventListener(
-        "load",
+      weadew.addeventwistenew(
+        "woad", >w<
         function () {
-          var image = new Image();
-          image.height = 100;
-          image.title = file.name;
-          image.src = this.result;
-          preview.appendChild(image);
-        },
-        false,
+          vaw i-image = nyew image();
+          i-image.height = 100;
+          i-image.titwe = fiwe.name;
+          i-image.swc = this.wesuwt;
+          p-pweview.appendchiwd(image);
+        }, rawr
+        f-fawse, 😳
       );
 
-      reader.readAsDataURL(file);
+      w-weadew.weadasdatauww(fiwe);
     }
   }
 
-  if (files) {
-    [].forEach.call(files, readAndPreview);
+  i-if (fiwes) {
+    [].foweach.caww(fiwes, >w< weadandpweview);
   }
 }
 ```
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Véase también
+## v-véase también
 
-- {{domxref("FileReader")}}
-- {{domxref("URL.createObjectURL()")}}
+- {{domxwef("fiweweadew")}}
+- {{domxwef("uww.cweateobjectuww()")}}

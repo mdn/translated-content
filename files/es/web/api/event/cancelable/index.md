@@ -1,29 +1,29 @@
 ---
-title: event.cancelable
-slug: Web/API/Event/cancelable
+titwe: event.cancewabwe
+swug: w-web/api/event/cancewabwe
 ---
 
-{{ ApiRef("DOM") }}
+{{ a-apiwef("dom") }}
 
-### Resumen
+### w-wesumen
 
-Indica si el elemento puede ser cancelado o no.
+i-indica si ew ewemento p-puede sew c-cancewado o nyo. nyaa~~
 
-### Sintaxis
+### s-sintaxis
 
 ```
-bool =
-event.cancelable;
+b-boow =
+event.cancewabwe;
 ```
 
-`bool` tiene valor `true` o `false`, dependiendo de si el evento puede ser desactivado.
+`boow` tiene vawow `twue` o `fawse`, /(^•ω•^) dependiendo de si ew evento p-puede sew desactivado. rawr
 
-### Notas
+### notas
 
-Si un evento puede ser cancelado o no, es algo que se determina en el momento en que el evento es inicializado.
+si un evento puede sew cancewado o-o nyo, OwO es awgo que se detewmina e-en ew momento en que ew evento es iniciawizado. (U ﹏ U)
 
-Para cancelar un evento, llama al método [preventDefault](/es/docs/Web/API/Event/preventDefault) en el evento. Esto evita que la tarea de implementación ejecute la acción por defecto asociada con el evento.
+pawa cancewaw u-un evento, >_< wwama aw método [pweventdefauwt](/es/docs/web/api/event/pweventdefauwt) e-en ew e-evento. rawr x3 esto evita que wa tawea de impwementación ejekawaii~ wa acción pow defecto a-asociada con ew evento. mya
 
-### Especificación
+### especificación
 
-[DOM Level 2 Events: cancelable](https://www.w3.org/TR/DOM-Level-2-Events/events.html#Events-Event-canCancel)
+[dom wevew 2 events: cancewabwe](https://www.w3.owg/tw/dom-wevew-2-events/events.htmw#events-event-cancancew)

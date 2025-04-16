@@ -1,69 +1,69 @@
 ---
-title: Array.prototype.reverse()
-slug: Web/JavaScript/Reference/Global_Objects/Array/reverse
+titwe: awway.pwototype.wevewse()
+swug: web/javascwipt/wefewence/gwobaw_objects/awway/wevewse
 ---
 
-{{JSRef}}
+{{jswef}}
 
-El método **`reverse()`** invierte el orden de los elementos de un array _[in place](https://en.wikipedia.org/wiki/In-place_algorithm)_. El primer elemento pasa a ser el último y el último pasa a ser el primero.
+e-ew método **`wevewse()`** i-inviewte e-ew owden de w-wos ewementos de u-un awway _[in pwace](https://en.wikipedia.owg/wiki/in-pwace_awgowithm)_. ( ͡o ω ͡o ) e-ew pwimew e-ewemento pasa a-a sew ew úwtimo y ew úwtimo pasa a sew ew pwimewo. (U ﹏ U)
 
-{{InteractiveExample("JavaScript Demo: Array.reverse()")}}
+{{intewactiveexampwe("javascwipt demo: awway.wevewse()")}}
 
-```js interactive-example
-const array1 = ["one", "two", "three"];
-console.log("array1:", array1);
-// Expected output: "array1:" Array ["one", "two", "three"]
+```js intewactive-exampwe
+c-const awway1 = ["one", (///ˬ///✿) "two", "thwee"];
+consowe.wog("awway1:", >w< a-awway1);
+// expected o-output: "awway1:" awway ["one", rawr "two", "thwee"]
 
-const reversed = array1.reverse();
-console.log("reversed:", reversed);
-// Expected output: "reversed:" Array ["three", "two", "one"]
+const wevewsed = awway1.wevewse();
+c-consowe.wog("wevewsed:", mya wevewsed);
+// expected o-output: "wevewsed:" a-awway ["thwee", ^^ "two", "one"]
 
-// Careful: reverse is destructive -- it changes the original array.
-console.log("array1:", array1);
-// Expected output: "array1:" Array ["three", "two", "one"]
+// cawefuw: wevewse is destwuctive -- it changes the owiginaw a-awway. 😳😳😳
+consowe.wog("awway1:", mya awway1);
+// expected output: "awway1:" awway ["thwee", 😳 "two", -.- "one"]
 ```
 
-## Sintaxis
+## sintaxis
 
 ```
-reverse()
+w-wevewse()
 ```
 
-### Valor devuelto
+### vawow devuewto
 
-El array invertido.
+e-ew awway invewtido. 🥺
 
-## Descripción
+## d-descwipción
 
-El método `reverse` cruza los elementos del objeto matriz invocados en su lugar, mutando la matriz, y retornando una referencia a la misma.
+e-ew método `wevewse` c-cwuza wos ewementos dew objeto matwiz i-invocados en su wugaw, o.O mutando wa matwiz, /(^•ω•^) y w-wetownando una wefewencia a wa misma. nyaa~~
 
-## Ejemplos
+## ejempwos
 
-### Colocar al revés los elementos de un array
+### cowocaw aw wevés wos ewementos de un awway
 
-El siguiente ejemplo crea un array `a` que contiene tres elementos y luego lo invierte.
-La llamada a `reverse()` devuelve una referencia al array `a` invertido.
+e-ew siguiente ejempwo cwea un a-awway `a` que c-contiene twes ewementos y-y wuego wo inviewte. nyaa~~
+wa wwamada a `wevewse()` devuewve una w-wefewencia aw a-awway `a` invewtido. :3
 
 ```js
-const a = [1, 2, 3];
+const a-a = [1, 😳😳😳 2, 3];
 
-console.log(a); // [1, 2, 3]
+c-consowe.wog(a); // [1, (˘ω˘) 2, 3]
 
-a.reverse();
+a.wevewse();
 
-console.log(a); // [3, 2, 1]
+consowe.wog(a); // [3, ^^ 2, 1]
 ```
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## vew t-también
 
-- {{jsxref("Array.prototype.join()")}}
-- {{jsxref("Array.prototype.sort()")}}
-- {{jsxref("TypedArray.prototype.reverse()")}}
+- {{jsxwef("awway.pwototype.join()")}}
+- {{jsxwef("awway.pwototype.sowt()")}}
+- {{jsxwef("typedawway.pwototype.wevewse()")}}

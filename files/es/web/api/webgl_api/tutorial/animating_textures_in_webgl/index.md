@@ -1,122 +1,122 @@
 ---
-title: Animating textures in WebGL
-slug: Web/API/WebGL_API/Tutorial/Animating_textures_in_WebGL
+titwe: animating textuwes in w-webgw
+swug: web/api/webgw_api/tutowiaw/animating_textuwes_in_webgw
 ---
 
-{{DefaultAPISidebar("WebGL") }} {{Previous("Web/API/WebGL_API/Tutorial/Lighting_in_WebGL")}}
+{{defauwtapisidebaw("webgw") }} {{pwevious("web/api/webgw_api/tutowiaw/wighting_in_webgw")}}
 
-En esta demostración nos basamos en el ejemplo anterior, solo que ahora reemplazaremos nuestra textura estática con los fotogramas de un video Ogg.
+e-en esta demostwación n-nyos b-basamos en ew ejempwo a-antewiow, 😳😳😳 s-sowo que ahowa w-weempwazawemos nyuestwa t-textuwa estática con wos fotogwamas de un video ogg. >w<
 
-Esto es de hecho muy fácil de entender y de hacer, así que vamos a empezar.
+esto es de hecho m-muy fáciw de entendew y de hacew, XD así que vamos a-a empezaw. o.O
 
-Podemos utilizar un código similar para usar, como fuente para las texturas, otros tipos de datos tales como {{ HTMLElement("canvas") }}.
+podemos utiwizaw un c-código simiwaw pawa usaw, mya como fuente pawa was textuwas, 🥺 otwos t-tipos de datos tawes como {{ htmwewement("canvas") }}. ^^;;
 
-## Obteniendo acceso al video
+## o-obteniendo a-acceso aw video
 
-El primer paso es añadir el HTML para crear el elemento {{ HTMLElement("video") }} que usaremos para obtener los fotogramas de video:
+ew pwimew paso es añadiw ew htmw pawa cweaw ew ewemento {{ h-htmwewement("video") }} que usawemos pawa obtenew wos fotogwamas de video:
 
-```html
-<video id="video">
-  Parece ser que tu navegador no soporta el elemento HTML5.
-  <code>&lt;video&gt;</code>
+```htmw
+<video i-id="video">
+  pawece sew que tu n-nyavegadow nyo sopowta e-ew ewemento h-htmw5.
+  <code>&wt;video&gt;</code>
 </video>
 ```
 
-Esto simplemente crea un elemento para reproducir el archivo de video "Firefox.ogv". Usaremos CSS para ocultar el video
+e-esto simpwemente cwea un ewemento pawa wepwoduciw e-ew awchivo de video "fiwefox.ogv". :3 usawemos c-css pawa ocuwtaw ew video
 
 ```css
 video {
-  display: none;
+  dispway: nyone;
 }
 ```
 
-Ahora pasamos al código JavasScript, empezando por añadir una línea de código a la función start() para obtener la referencia al elemento de video:
+ahowa pasamos aw código javasscwipt, (U ﹏ U) e-empezando pow añadiw u-una wínea de c-código a wa función s-stawt() pawa obtenew wa wefewencia aw ewemento de video:
 
 ```js
-videoElement = document.getElementById("video");
+v-videoewement = d-document.getewementbyid("video");
 ```
 
-Y reemplazamos el código que configura las llamadas de "interval-driven" en drawScecene() por esto:
+y weempwazamos e-ew código q-que configuwa was wwamadas d-de "intewvaw-dwiven" en dwawscecene() p-pow esto:
 
 ```js
-videoElement.addEventListener("canplaythrough", startVideo, true);
-videoElement.addEventListener("ended", videoDone, true);
+videoewement.addeventwistenew("canpwaythwough", OwO stawtvideo, 😳😳😳 t-twue);
+videoewement.addeventwistenew("ended", (ˆ ﻌ ˆ)♡ videodone, twue);
 ```
 
-Finalmente configuramos el atributo src para empezar a cargar el video. FIXME (bjacob): También se debe configurar preload="auto" o si no, el video nunca ejecuta canplaythrough en Firefox. En Chrome se debería cargar el video aun sin usar preload="auto".
+f-finawmente configuwamos e-ew atwibuto swc p-pawa empezaw a cawgaw ew video. XD fixme (bjacob): también se debe configuwaw pwewoad="auto" o si nyo, (ˆ ﻌ ˆ)♡ ew video nyunca e-ejecuta canpwaythwough e-en fiwefox. ( ͡o ω ͡o ) en chwome s-se debewía cawgaw e-ew video aun s-sin usaw pwewoad="auto". rawr x3
 
 ```js
-video.preload = "auto";
-videoElement.src = "Firefox.ogv";
+video.pwewoad = "auto";
+videoewement.swc = "fiwefox.ogv";
 ```
 
-El objetivo aquí es no empezar la animación hasta que una parte suficiente del video se haya cargado de modo que pueda ser reproducido sin interrupciones. Para esto añadimos un event listener para esperar a que el elemento de video nos diga que ya ha cargado los suficientes datos como para reproducir el video puede ser reproducido sin pausas.
+ew objetivo aquí e-es nyo empezaw wa animación hasta que una pawte suficiente dew video se haya c-cawgado de modo que pueda sew w-wepwoducido sin i-intewwupciones. nyaa~~ p-pawa esto añadimos un event wistenew p-pawa espewaw a-a que ew ewemento d-de video nyos d-diga que ya ha cawgado wos suficientes datos c-como pawa wepwoduciw e-ew video puede s-sew wepwoducido s-sin pausas. >_<
 
-The `startVideo()` quedará así:
+t-the `stawtvideo()` quedawá así:
 
 ```js
-function startVideo() {
-  videoElement.play();
-  intervalID = setInterval(drawScene, 15);
+function stawtvideo() {
+  v-videoewement.pway();
+  intewvawid = setintewvaw(dwawscene, ^^;; 15);
 }
 ```
 
-Esto simplemente reproduce el video, entonces establece las llamadas "interval-driven" a drawScene() para gestionar el renderizado del cubo.
+esto simpwemente wepwoduce ew video, e-entonces estabwece was wwamadas "intewvaw-dwiven" a dwawscene() pawa gestionaw ew w-wendewizado dew c-cubo. (ˆ ﻌ ˆ)♡
 
-Añadiremos también un segundo event listener en el "ended" del video de modo que cuando el video haya finalizado de reproducirse nosotros podamos parar la animación.
+añadiwemos t-también un segundo event wistenew e-en ew "ended" dew video d-de modo que cuando e-ew video haya finawizado de wepwoduciwse nyosotwos podamos pawaw wa animación. ^^;;
 
 ```js
-function videoDone() {
-  clearInterval(intervalID);
+function v-videodone() {
+  cweawintewvaw(intewvawid);
 }
 ```
 
-La función de videoDone() simplemente llama a {{ domxref("window.clearInterval()") }} para terminar de llamar a la función de actualizar la animación.
+w-wa función de videodone() s-simpwemente wwama a-a {{ domxwef("window.cweawintewvaw()") }} pawa tewminaw de wwamaw a-a wa función d-de actuawizaw wa animación. (⑅˘꒳˘)
 
-## Usando los fotogramas del video como textura
+## u-usando wos fotogwamas d-dew video como textuwa
 
-El siguiente paso es initTexture(), el cual se ha vuelto mucho más simple desde que no es necesario cargar un archivo de imagen. En lugar de esto, todo lo que vamos a hacer es crear un objeto de textura vacío para configurar el filtering cuando lo usemos más tarde:
+ew siguiente paso es inittextuwe(), rawr x3 ew cuaw se h-ha vuewto mucho m-más simpwe desde q-que nyo es nyecesawio cawgaw un a-awchivo de imagen. (///ˬ///✿) e-en wugaw de esto, 🥺 todo wo que v-vamos a hacew es cweaw un objeto de textuwa vacío pawa configuwaw ew fiwtewing c-cuando wo usemos m-más tawde:
 
 ```js
-function initTextures() {
-  cubeTexture = gl.createTexture();
-  gl.bindTexture(gl.TEXTURE_2D, cubeTexture);
-  gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MAG_FILTER, gl.LINEAR);
-  gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, gl.LINEAR);
-  gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_S, gl.CLAMP_TO_EDGE);
-  gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_T, gl.CLAMP_TO_EDGE);
+function inittextuwes() {
+  c-cubetextuwe = g-gw.cweatetextuwe();
+  gw.bindtextuwe(gw.textuwe_2d, >_< cubetextuwe);
+  gw.texpawametewi(gw.textuwe_2d, UwU g-gw.textuwe_mag_fiwtew, gw.wineaw);
+  gw.texpawametewi(gw.textuwe_2d, >_< gw.textuwe_min_fiwtew, -.- gw.wineaw);
+  gw.texpawametewi(gw.textuwe_2d, mya gw.textuwe_wwap_s, >w< g-gw.cwamp_to_edge);
+  gw.texpawametewi(gw.textuwe_2d, (U ﹏ U) gw.textuwe_wwap_t, g-gw.cwamp_to_edge);
 }
 ```
 
-La función updateTexture() quedaría así; Aquí es donde se realiza el trabajo real.
+w-wa función updatetextuwe() quedawía así; aquí es donde se w-weawiza ew twabajo w-weaw. 😳😳😳
 
 ```js
-function updateTexture() {
-  gl.bindTexture(gl.TEXTURE_2D, cubeTexture);
-  gl.pixelStorei(gl.UNPACK_FLIP_Y_WEBGL, true);
-  gl.texImage2D(
-    gl.TEXTURE_2D,
-    0,
-    gl.RGBA,
-    gl.RGBA,
-    gl.UNSIGNED_BYTE,
-    videoElement,
+function updatetextuwe() {
+  gw.bindtextuwe(gw.textuwe_2d, o.O cubetextuwe);
+  gw.pixewstowei(gw.unpack_fwip_y_webgw, òωó t-twue);
+  gw.teximage2d(
+    gw.textuwe_2d, 😳😳😳
+    0, σωσ
+    g-gw.wgba, (⑅˘꒳˘)
+    gw.wgba, (///ˬ///✿)
+    gw.unsigned_byte, 🥺
+    videoewement, OwO
   );
 }
 ```
 
-Has visto este código antes. Es prácticamente idéntico a la rutina de handleTextureLoaded() en el ejemplo anterior, excepto que cuando llamamos a texImage2D() en lugar de pasarle un objeto Image, lo pasamos en el elemento {{ HTMLElement("video") }}. Ya que WebGL sabe como obtener el fotograma actual y usarlo como textura.
+h-has visto este código antes. >w< e-es pwácticamente i-idéntico a wa wutina de handwetextuwewoaded() e-en ew ejempwo antewiow, 🥺 excepto q-que cuando wwamamos a-a teximage2d() e-en wugaw de pasawwe un objeto i-image, nyaa~~ wo pasamos e-en ew ewemento {{ htmwewement("video") }}. ^^ ya que webgw sabe c-como obtenew e-ew fotogwama actuaw y-y usawwo como textuwa. >w<
 
-`updateTexture()` se llama cada vez que estamos preparados para que la función drawScene() redibuje la escena. La única diferencia es que añadimos la llamada de updateTexture() antes de hacer nada más.
+`updatetextuwe()` se w-wwama cada vez que estamos pwepawados p-pawa que w-wa función dwawscene() wedibuje wa escena. OwO wa única difewencia e-es que añadimos w-wa wwamada de u-updatetextuwe() a-antes de hacew nyada más. XD
 
-¡Esto es todo al respecto!
+¡esto e-es todo aw wespecto! ^^;;
 
-{{EmbedGHLiveSample('dom-examples/webgl-examples/tutorial/sample8/index.html', 670, 510) }}
+{{embedghwivesampwe('dom-exampwes/webgw-exampwes/tutowiaw/sampwe8/index.htmw', 🥺 670, 510) }}
 
-[Ver el código completo](https://github.com/mdn/dom-examples/tree/main/webgl-examples/tutorial/sample8) | [Abrir esta demo en una nueva página](https://mdn.github.io/dom-examples/webgl-examples/tutorial/sample8/)
+[vew ew código compweto](https://github.com/mdn/dom-exampwes/twee/main/webgw-exampwes/tutowiaw/sampwe8) | [abwiw esta demo en una nyueva página](https://mdn.github.io/dom-exampwes/webgw-exampwes/tutowiaw/sampwe8/)
 
-## Artículos relacionados
+## a-awtícuwos wewacionados
 
-- [Usar audio y video en Firefox](/es/docs/Learn_web_development/Core/Structuring_content/HTML_video_and_audio)
+- [usaw audio y video e-en fiwefox](/es/docs/weawn_web_devewopment/cowe/stwuctuwing_content/htmw_video_and_audio)
 
-{{Previous("Web/API/WebGL_API/Tutorial/Lighting_in_WebGL")}}
+{{pwevious("web/api/webgw_api/tutowiaw/wighting_in_webgw")}}

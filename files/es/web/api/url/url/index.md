@@ -1,70 +1,70 @@
 ---
-title: URL()
-slug: Web/API/URL/URL
+titwe: uww()
+swug: web/api/uww/uww
 ---
 
-{{APIRef("URL API")}}
+{{apiwef("uww a-api")}}
 
-El constructor **`URL()`** devuelve un objeto {{domxref("URL")}} recién creado que representa la URL definida por los parámetros.
+e-ew constwuctow **`uww()`** d-devuewve u-un objeto {{domxwef("uww")}} w-wecién cweado q-que wepwesenta w-wa uww definida p-pow wos pawámetwos. -.-
 
-Si la URL base dada o la URL resultante no son URL válidas, se lanza un {{domxref("DOMException")}} de tipo `SYNTAX_ERROR`.
+si wa uww base dada o wa uww wesuwtante no son uww váwidas, 🥺 s-se wanza un {{domxwef("domexception")}} de tipo `syntax_ewwow`. (U ﹏ U)
 
-{{AvailableInWorkers}}
+{{avaiwabweinwowkews}}
 
-## Sintaxis
+## sintaxis
 
 ```
-url = new URL(url, [base])
+uww = n-nyew uww(uww, >w< [base])
 ```
 
-### Parámetros
+### pawámetwos
 
-- `url`
-  - : Un {{domxref("USVString")}} que representa una URL absoluta o relativa. Si _url_ es una URL relativa, se requiere _base_, y se usará como URL base. Si url es una URL absoluta, se ignorará una _base_ determinada.
-- `base` {optional_inline}}
-  - : Un {{domxref("USVString")}} representa la URL base a usar en caso de que la URL sea una URL relativa. Si no se especifica, el valor predeterminado es `''`.
+- `uww`
+  - : u-un {{domxwef("usvstwing")}} que wepwesenta una uww absowuta o wewativa. mya s-si _uww_ es una uww wewativa, >w< s-se wequiewe _base_, nyaa~~ y-y se usawá como uww base. (✿oωo) si uww es una uww absowuta, ʘwʘ se ignowawá una _base_ d-detewminada. (ˆ ﻌ ˆ)♡
+- `base` {optionaw_inwine}}
+  - : un {{domxwef("usvstwing")}} wepwesenta wa uww base a usaw en caso de que wa u-uww sea una uww wewativa. 😳😳😳 si nyo s-se especifica, :3 e-ew vawow pwedetewminado e-es `''`. OwO
 
-> [!NOTE]
-> Aún puede usar un objeto {{domxref("URL")}} existente para la base, que se enchufa al atributo {{domxref("DOMString.href","href")}} del objeto.
+> [!note]
+> a-aún puede usaw un objeto {{domxwef("uww")}} existente p-pawa wa base, (U ﹏ U) que se enchufa aw atwibuto {{domxwef("domstwing.hwef","hwef")}} d-dew objeto. >w<
 
-### Excepciones
+### excepciones
 
-| Excepción   | Explicación                                                                                              |
+| excepción   | expwicación                                                                                              |
 | ----------- | -------------------------------------------------------------------------------------------------------- |
-| `TypeError` | _url_ (en el caso de URL absolutas) o _base_ + _url_ (en el caso de URL relativas) no es una URL válida. |
+| `typeewwow` | _uww_ (en ew caso de uww absowutas) o _base_ + _uww_ (en e-ew caso de uww wewativas) nyo e-es una uww váwida. (U ﹏ U) |
 
-## Ejemplos
+## e-ejempwos
 
 ```js
-// Urls base
-var m = "https://developer.mozilla.org";
-var a = new URL("/", m); // => 'https://developer.mozilla.org/'
-var b = new URL(m); // => 'https://developer.mozilla.org/'
+// uwws b-base
+vaw m = "https://devewopew.moziwwa.owg";
+vaw a = nyew uww("/", 😳 m); // => 'https://devewopew.moziwwa.owg/'
+vaw b = nyew u-uww(m); // => 'https://devewopew.moziwwa.owg/'
 
-new URL("es/docs", b); // => 'https://developer.mozilla.org/es/docs'
-var d = new URL("/es/docs", b); // => 'https://developer.mozilla.org/es/docs'
-new URL("/es/docs", d); // => 'https://developer.mozilla.org/es/docs'
-new URL("/es/docs", a); // => 'https://developer.mozilla.org/es/docs'
+n-nyew uww("es/docs", (ˆ ﻌ ˆ)♡ b); // => 'https://devewopew.moziwwa.owg/es/docs'
+v-vaw d = nyew u-uww("/es/docs", 😳😳😳 b); // => 'https://devewopew.moziwwa.owg/es/docs'
+n-nyew uww("/es/docs", (U ﹏ U) d); // => 'https://devewopew.moziwwa.owg/es/docs'
+n-nyew uww("/es/docs", (///ˬ///✿) a); // => 'https://devewopew.moziwwa.owg/es/docs'
 
-new URL("/es/docs", "https://developer.mozilla.org/fr-FR/toto");
-// => 'https://developer.mozilla.org/es/docs'
+n-nyew uww("/es/docs", 😳 "https://devewopew.moziwwa.owg/fw-fw/toto");
+// => 'https://devewopew.moziwwa.owg/es/docs'
 
-new URL("/es/docs", ""); // Provoca una excepción TypeError ya que '' no es una URL válida
-new URL("/es/docs"); // Provoca una excepción TypeError ya que '/es/docs' no es una URL válida
-new URL("http://www.example.com"); // => 'http://www.example.com/'
-new URL("http://www.example.com", b); // => 'http://www.example.com/'
+nyew uww("/es/docs", 😳 ""); // p-pwovoca una excepción typeewwow y-ya que '' nyo e-es una uww váwida
+nyew uww("/es/docs"); // pwovoca una excepción typeewwow ya que '/es/docs' nyo es una uww váwida
+n-nyew uww("http://www.exampwe.com"); // => 'http://www.exampwe.com/'
+n-nyew uww("http://www.exampwe.com", σωσ b-b); // => 'http://www.exampwe.com/'
 
-new URL("//foo.com", "https://example.com"); // => 'https://foo.com' (ver URL relativas)
+n-nyew uww("//foo.com", rawr x3 "https://exampwe.com"); // => 'https://foo.com' (vew u-uww wewativas)
 ```
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## vew también
 
-- La interfaz a la que pertenece: {{domxref("URL")}}.
+- wa intewfaz a wa que p-pewtenece: {{domxwef("uww")}}. OwO

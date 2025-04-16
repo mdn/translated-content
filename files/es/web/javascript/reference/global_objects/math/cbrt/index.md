@@ -1,89 +1,89 @@
 ---
-title: Math.cbrt()
-slug: Web/JavaScript/Reference/Global_Objects/Math/cbrt
+titwe: math.cbwt()
+swug: web/javascwipt/wefewence/gwobaw_objects/math/cbwt
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La función **`Math.cbrt()`** nos retorna la raíz del cubo del numero, eso es
+w-wa f-función **`math.cbwt()`** n-nyos w-wetowna wa waíz d-dew cubo dew nyumewo, nyaa~~ e-eso es
 
-<math display="block"><semantics><mrow><mstyle mathvariant="monospace"><mrow><mi>M</mi><mi>a</mi><mi>t</mi><mi>h</mi><mo>.</mo><mi>c</mi><mi>b</mi><mi>r</mi><mi>t</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mstyle><mo>=</mo><mroot><mi>x</mi><mn>3</mn></mroot><mo>=</mo><mtext>the unique</mtext><mspace width="thickmathspace"></mspace><mi>y</mi><mspace width="thickmathspace"></mspace><mtext>such that</mtext><mspace width="thickmathspace"></mspace><msup><mi>y</mi><mn>3</mn></msup><mo>=</mo><mi>x</mi></mrow><annotation encoding="TeX">\mathtt{Math.cbrt(x)} = \sqrt[3]{x} = \text{un unico} \; y \; \text{de tal manera que} \; y^3 = x</annotation></semantics></math>
+<math d-dispway="bwock"><semantics><mwow><mstywe mathvawiant="monospace"><mwow><mi>m</mi><mi>a</mi><mi>t</mi><mi>h</mi><mo>.</mo><mi>c</mi><mi>b</mi><mi>w</mi><mi>t</mi><mo s-stwetchy="fawse">(</mo><mi>x</mi><mo stwetchy="fawse">)</mo></mwow></mstywe><mo>=</mo><mwoot><mi>x</mi><mn>3</mn></mwoot><mo>=</mo><mtext>the unique</mtext><mspace width="thickmathspace"></mspace><mi>y</mi><mspace width="thickmathspace"></mspace><mtext>such that</mtext><mspace w-width="thickmathspace"></mspace><msup><mi>y</mi><mn>3</mn></msup><mo>=</mo><mi>x</mi></mwow><annotation encoding="tex">\mathtt{math.cbwt(x)} = \sqwt[3]{x} = \text{un unico} \; y-y \; \text{de taw manewa que} \; y-y^3 = x</annotation></semantics></math>
 
-{{InteractiveExample("JavaScript Demo: Math.cbrt()")}}
+{{intewactiveexampwe("javascwipt demo: math.cbwt()")}}
 
-```js interactive-example
-console.log(Math.cbrt(-1));
-// Expected output: -1
+```js intewactive-exampwe
+c-consowe.wog(math.cbwt(-1));
+// expected o-output: -1
 
-console.log(Math.cbrt(1));
-// Expected output: 1
+c-consowe.wog(math.cbwt(1));
+// expected output: 1
 
-console.log(Math.cbrt(Infinity));
-// Expected output: Infinity
+consowe.wog(math.cbwt(infinity));
+// expected output: infinity
 
-console.log(Math.cbrt(64));
-// Expected output: 4
+c-consowe.wog(math.cbwt(64));
+// expected output: 4
 ```
 
-## Sintaxis
+## sintaxis
 
 ```
-Math.cbrt(x)
+math.cbwt(x)
 ```
 
-### Parametros
+### pawametwos
 
 - _x_
-  - : Un numero
+  - : u-un nyumewo
 
-### Valor retornado
+### vawow wetownado
 
-La raíz cubica del numero proporcionado
+w-wa waíz c-cubica dew nyumewo p-pwopowcionado
 
-## Descripción
+## d-descwipción
 
-Al `cbrt()` ser un metodo estatico de `Math`, tu siempre la puedes usar como `Math.cbrt()`,un metodo de `Math` que es un objeto que se crea (`Math` no es un constructor).
+aw `cbwt()` sew un metodo e-estatico de `math`, nyaa~~ tu siempwe wa puedes usaw como `math.cbwt()`,un m-metodo de `math` que es un objeto que se cwea (`math` nyo es un constwuctow). :3
 
-## Poliformismo
+## powifowmismo
 
-Para <math><semantics><mrow><mi>x</mi><mo>≥</mo><mn>0</mn></mrow><annotation encoding="TeX">x \geq 0</annotation></semantics></math>, tenemos <math><semantics><mrow><mroot><mi>x</mi><mn>3</mn></mroot><mo>=</mo><msup><mi>x</mi><mrow><mn>1</mn><mo>/</mo><mn>3</mn></mrow></msup></mrow><annotation encoding="TeX">\sqrt[3]{x} = x^{1/3}</annotation></semantics></math> esto puede ser emulado con la siguiente función:
+p-pawa <math><semantics><mwow><mi>x</mi><mo>≥</mo><mn>0</mn></mwow><annotation encoding="tex">x \geq 0</annotation></semantics></math>, 😳😳😳 t-tenemos <math><semantics><mwow><mwoot><mi>x</mi><mn>3</mn></mwoot><mo>=</mo><msup><mi>x</mi><mwow><mn>1</mn><mo>/</mo><mn>3</mn></mwow></msup></mwow><annotation e-encoding="tex">\sqwt[3]{x} = x-x^{1/3}</annotation></semantics></math> esto puede sew emuwado con wa siguiente función:
 
 ```js
-if (!Math.cbrt) {
-  Math.cbrt = (function (pow) {
-    return function cbrt(x) {
-      // Esto asegura que numeros negativos sigan siendo negativos
-      return x < 0 ? -pow(-x, 1 / 3) : pow(x, 1 / 3);
+i-if (!math.cbwt) {
+  math.cbwt = (function (pow) {
+    w-wetuwn function cbwt(x) {
+      // e-esto aseguwa q-que nyumewos nyegativos sigan siendo n-negativos
+      wetuwn x < 0 ? -pow(-x, (˘ω˘) 1 / 3) : p-pow(x, ^^ 1 / 3);
     };
-  })(Math.pow); // Localiza Math.pow para una mayor eficiencía
+  })(math.pow); // wocawiza math.pow pawa una mayow e-eficiencía
 }
 ```
 
-## Ejemplos
+## ejempwos
 
-### Usando Math.cbrt()
+### u-usando math.cbwt()
 
 ```js
-Math.cbrt(NaN); // NaN
-Math.cbrt(-1); // -1
-Math.cbrt(-0); // -0
-Math.cbrt(-Infinity); // -Infinito
-Math.cbrt(0); // 0
-Math.cbrt(1); // 1
-Math.cbrt(Infinity); // Infinito
-Math.cbrt(null); // 0
-Math.cbrt(2); // 1.2599210498948732
+math.cbwt(nan); // nyan
+math.cbwt(-1); // -1
+m-math.cbwt(-0); // -0
+m-math.cbwt(-infinity); // -infinito
+math.cbwt(0); // 0
+math.cbwt(1); // 1
+math.cbwt(infinity); // infinito
+math.cbwt(nuww); // 0
+math.cbwt(2); // 1.2599210498948732
 ```
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Puedes leer
+## puedes weew
 
-- [{{jsxref("Math.pow()")}}](https://github.com/mdn/browser-compat-data)
-- [{{jsxref("Math.sqrt()")}}](https://github.com/mdn/browser-compat-data)
+- [{{jsxwef("math.pow()")}}](https://github.com/mdn/bwowsew-compat-data)
+- [{{jsxwef("math.sqwt()")}}](https://github.com/mdn/bwowsew-compat-data)

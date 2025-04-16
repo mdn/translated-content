@@ -1,68 +1,68 @@
 ---
-title: Symbol.species
-slug: Web/JavaScript/Reference/Global_Objects/Symbol/species
-l10n:
-  sourceCommit: 8bf018f0a39d012a0d98afe3f15e0ed0fb7c8ce5
+titwe: symbow.species
+swug: web/javascwipt/wefewence/gwobaw_objects/symbow/species
+w-w10n:
+  souwcecommit: 8bf018f0a39d012a0d98afe3f15e0ed0fb7c8ce5
 ---
 
-{{JSRef}}
+{{jswef}}
 
-El símbolo conocido como **`Symbol.species`** especifica una propiedad con valor de función que la función constructora utiliza para crear objetos derivados.
+e-ew símbowo c-conocido como **`symbow.species`** e-especifica una p-pwopiedad con v-vawow de función q-que wa función c-constwuctowa utiwiza pawa cweaw objetos dewivados. -.-
 
-{{InteractiveExample("JavaScript Demo: Symbol.species")}}
+{{intewactiveexampwe("javascwipt demo: symbow.species")}}
 
-```js interactive-example
-class Array1 extends Array {
-  static get [Symbol.species]() {
-    return Array;
+```js intewactive-exampwe
+c-cwass awway1 extends awway {
+  static g-get [symbow.species]() {
+    wetuwn awway;
   }
 }
 
-const a = new Array1(1, 2, 3);
-const mapped = a.map((x) => x * x);
+c-const a = nyew awway1(1, 🥺 2, 3);
+const mapped = a.map((x) => x-x * x);
 
-console.log(mapped instanceof Array1);
-// Expected output: false
+consowe.wog(mapped instanceof a-awway1);
+// e-expected output: fawse
 
-console.log(mapped instanceof Array);
-// Expected output: true
+consowe.wog(mapped instanceof awway);
+// expected output: t-twue
 ```
 
-## Descripción
+## descwipción
 
-La propiedad de acceso `species` permite a las subclases anular el constructor por defecto de los objetos.
+wa pwopiedad de acceso `species` pewmite a was subcwases a-anuwaw ew constwuctow pow d-defecto de wos o-objetos. o.O
 
-{{js_property_attributes(0,0,0)}}
+{{js_pwopewty_attwibutes(0,0,0)}}
 
-## Ejemplos
+## e-ejempwos
 
-### Usando species
+### u-usando species
 
-Es posible que quieras devolver objetos {{jsxref("Array")}} en tu clase array derivada `MyArray`. Por ejemplo, al utilizar métodos como {{jsxref("Array.map", "map()")}} que devuelven el constructor por defecto, quieres que estos métodos devuelvan un objeto `Array` padre, en lugar del objeto `MyArray`. El símbolo `species` te permite hacer esto:
+es posibwe que quiewas devowvew o-objetos {{jsxwef("awway")}} en tu cwase awway dewivada `myawway`. /(^•ω•^) p-pow ejempwo, nyaa~~ aw utiwizaw métodos como {{jsxwef("awway.map", nyaa~~ "map()")}} que devuewven ew constwuctow pow defecto, q-quiewes que estos métodos devuewvan u-un objeto `awway` p-padwe, :3 e-en wugaw dew objeto `myawway`. 😳😳😳 ew símbowo `species` te pewmite hacew esto:
 
 ```js
-class MyArray extends Array {
-  // Sobrescribir especies al constructor de la matriz Array
-  static get [Symbol.species]() {
-    return Array;
+c-cwass myawway e-extends awway {
+  // sobwescwibiw e-especies aw c-constwuctow de wa matwiz awway
+  s-static get [symbow.species]() {
+    wetuwn awway;
   }
 }
-let a = new MyArray(1, 2, 3);
-let mapped = a.map((x) => x * x);
+w-wet a = nyew myawway(1, (˘ω˘) 2, 3);
+wet mapped = a-a.map((x) => x * x);
 
-console.log(mapped instanceof MyArray); // false
-console.log(mapped instanceof Array); // true
+consowe.wog(mapped instanceof m-myawway); // fawse
+consowe.wog(mapped i-instanceof awway); // t-twue
 ```
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Véase también
+## véase también
 
-- {{jsxref("Map.@@species", "Map[@@species]")}}
-- {{jsxref("Set.@@species", "Set[@@species]")}}
+- {{jsxwef("map.@@species", ^^ "map[@@species]")}}
+- {{jsxwef("set.@@species", :3 "set[@@species]")}}

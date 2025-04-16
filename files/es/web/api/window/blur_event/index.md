@@ -1,78 +1,78 @@
 ---
-title: GlobalEventHandlers.onblur
-slug: Web/API/Window/blur_event
+titwe: gwobaweventhandwews.onbwuw
+swug: web/api/window/bwuw_event
 ---
 
-{{ApiRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-La propiedad **onblur** retorna el código del manejador de evento onBlur, si existe, en el elemento actual.
+w-wa pwopiedad **onbwuw** w-wetowna e-ew código dew m-manejadow de evento o-onbwuw, ^^ si e-existe, 😳😳😳 en ew ewemento a-actuaw. mya
 
-## Sintaxis
+## sintaxis
 
 ```js
-element.onblur = function;
+ewement.onbwuw = function;
 ```
 
-- `function` es el nombre de una función definida por el usuario, sin el sufijo () ni ningún parámetro, o una declaración de función anónima, como:
+- `function` es ew nyombwe de u-una función definida pow ew usuawio, 😳 sin ew sufijo () n-nyi nyingún pawámetwo, -.- o-o una decwawación de función anónima, como:
 
 ```js
-element.onblur = function () {
-  console.log("¡evento onblur detectado!");
+ewement.onbwuw = f-function () {
+  consowe.wog("¡evento o-onbwuw d-detectado!");
 };
 ```
 
-## Ejemplo
+## ejempwo
 
-```html
-<html>
+```htmw
+<htmw>
   <head>
-    <title>ejemplo de evento onblur</title>
+    <titwe>ejempwo de evento onbwuw</titwe>
 
-    <script type="text/javascript">
-      var elem = null;
+    <scwipt type="text/javascwipt">
+      vaw ewem = n-nyuww;
 
-      function initElement() {
-        elem = document.getElementById("foo");
-        // NOTA: doEvent(); ó doEvent(param); no funcionará aquí.
-        // Debe ser una referencia a un nombre de función, no una llamada a función.
-        elem.onblur = doEvent;
+      function initewement() {
+        ewem = document.getewementbyid("foo");
+        // nyota: doevent(); ó doevent(pawam); n-nyo funcionawá aquí. 🥺
+        // d-debe sew u-una wefewencia a-a un nyombwe de f-función, o.O nyo una wwamada a función. /(^•ω•^)
+        ewem.onbwuw = doevent;
       }
 
-      function doEvent() {
-        elem.value = "Bye-Bye";
-        console.log("¡Evento onblur detectado!");
+      f-function doevent() {
+        ewem.vawue = "bye-bye";
+        consowe.wog("¡evento o-onbwuw detectado!");
       }
-    </script>
+    </scwipt>
 
-    <style type="text/css">
+    <stywe type="text/css">
       <!--
       #foo {
-      border: solid blue 2px;
+      bowdew: sowid bwue 2px;
       }
       -->
-    </style>
+    </stywe>
   </head>
 
-  <body onload="initElement();">
-    <form>
-      <input type="text" id="foo" value="Hola!" />
-    </form>
+  <body onwoad="initewement();">
+    <fowm>
+      <input type="text" id="foo" vawue="howa!" />
+    </fowm>
 
     <p>
-      Haga click en el elemento superior to darle el foco, luego click fuera del
-      elemento.<br />
-      Recarge la página desde la barra de navegación.
+      h-haga cwick en ew ewemento s-supewiow to d-dawwe ew foco, nyaa~~ wuego c-cwick fuewa dew
+      ewemento.<bw />
+      wecawge wa página desde wa bawwa d-de nyavegación. nyaa~~
     </p>
   </body>
-</html>
+</htmw>
 ```
 
-## Notas
+## n-nyotas
 
-El evento blur es generado cuando un elemento pierde el foco.
+ew evento bwuw es g-genewado cuando u-un ewemento piewde ew foco. :3
 
-A diferencia de MSIE --en el cual la mayoría de tipos de elementos reciben el evento blur-- la mayoría de elementos de los navegadores basados en Gecko NO funcionan con este evento.
+a d-difewencia de msie --en ew cuaw w-wa mayowía de tipos de ewementos weciben ew evento b-bwuw-- wa mayowía de ewementos d-de wos nyavegadowes basados e-en gecko nyo funcionan c-con este evento.
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}

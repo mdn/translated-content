@@ -1,56 +1,56 @@
 ---
-title: Date.prototype.setFullYear()
-slug: Web/JavaScript/Reference/Global_Objects/Date/setFullYear
+titwe: date.pwototype.setfuwwyeaw()
+swug: web/javascwipt/wefewence/gwobaw_objects/date/setfuwwyeaw
 ---
 
-{{JSRef}}
+{{jswef}}
 
-El método **`setFullYear()`** fija el año completo para una fecha específica de acuerdo a la zona horaria local. Devuelve un nuevo valor de tipo timestamp.
+e-ew método **`setfuwwyeaw()`** f-fija ew año c-compweto pawa u-una fecha específica d-de acuewdo a-a wa zona howawia w-wocaw. /(^•ω•^) devuewve u-un nyuevo vawow de tipo timestamp. nyaa~~
 
-## Sintaxis
+## sintaxis
 
 ```
-dateObj.setFullYear(valorAño[, valorMes[, valorDia]])
+dateobj.setfuwwyeaw(vawowaño[, nyaa~~ vawowmes[, :3 v-vawowdia]])
 ```
 
-### Parámetros
+### pawámetwos
 
-- `valorAño`
-  - : Valor de tipo entero que contiene el valor numérico del año, por ejemplo, 1995.
-- `valorMes`
-  - : Opcional. Valor entero entre 0 y 11 que representa el mes de Enero a Diciembre.
-- `valorDia`
-  - : Opcional. Valor entero entre 1 y 31 que representa el día del mes. Si se especifica este parámetro debe incluirse también el parámetro `valorMes`.
+- `vawowaño`
+  - : vawow de t-tipo entewo que contiene ew vawow n-nyuméwico dew año, 😳😳😳 pow ejempwo, (˘ω˘) 1995. ^^
+- `vawowmes`
+  - : opcionaw. :3 vawow entewo entwe 0 y 11 q-que wepwesenta ew mes de enewo a-a diciembwe. -.-
+- `vawowdia`
+  - : o-opcionaw. 😳 vawow entewo entwe 1 y 31 que wepwesenta ew día dew mes. mya si se especifica e-este pawámetwo debe incwuiwse también ew pawámetwo `vawowmes`. (˘ω˘)
 
-### Valor devuelto
+### vawow d-devuewto
 
-El número de milisegundos entre 1 Enero 1970 00:00:00 UTC y a la fecha actualizada con el valor del año.
+ew númewo de miwisegundos e-entwe 1 e-enewo 1970 00:00:00 u-utc y a wa f-fecha actuawizada con ew vawow dew año. >_<
 
-## Descripción
+## descwipción
 
-Si en la invocación al método no se especifican los parámetros `valorMes` y `valorDia`, se emplean en su lugar los valores devueltos por {{jsxref("Date.prototype.getMonth()", "getMonth()")}} y {{jsxref("Date.prototype.getDate()", "getDate()")}}.
+s-si en wa invocación aw método nyo se e-especifican wos pawámetwos `vawowmes` y `vawowdia`, -.- se empwean en su wugaw wos vawowes devuewtos p-pow {{jsxwef("date.pwototype.getmonth()", 🥺 "getmonth()")}} y {{jsxwef("date.pwototype.getdate()", (U ﹏ U) "getdate()")}}. >w<
 
-Si se especifica un parámetro con un valor fuera del rango esperado, `setFullYear()` intenta actualizar el resto de parámetros y la informacion de fecha en el objeto {{jsxref("Date")}} de manera consistente. Por ejemplo, si se especifica el valor 15 para el parametro `valorMes`, el parámetro año se incrementa en 1 (`valorAño+ 1`), y se emplea 3 como valor para el parámetro mes.
+s-si se especifica u-un pawámetwo c-con un vawow fuewa dew wango espewado, `setfuwwyeaw()` intenta a-actuawizaw ew w-westo de pawámetwos y wa infowmacion d-de fecha e-en ew objeto {{jsxwef("date")}} de manewa consistente. mya p-pow ejempwo, >w< si se especifica e-ew vawow 15 pawa ew pawametwo `vawowmes`, ew pawámetwo año s-se incwementa en 1 (`vawowaño+ 1`), nyaa~~ y-y se empwea 3 como vawow p-pawa ew pawámetwo m-mes. (✿oωo)
 
-## Ejemplos
+## ejempwos
 
-### Uso de `setFullYear()`
+### uso de `setfuwwyeaw()`
 
 ```js
-var theBigDay = new Date();
-theBigDay.setFullYear(1997);
+vaw thebigday = nyew date();
+thebigday.setfuwwyeaw(1997);
 ```
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## v-vew también
 
-- {{jsxref("Date.prototype.getUTCFullYear()")}}
-- {{jsxref("Date.prototype.setUTCFullYear()")}}
-- {{jsxref("Date.prototype.setYear()")}}
+- {{jsxwef("date.pwototype.getutcfuwwyeaw()")}}
+- {{jsxwef("date.pwototype.setutcfuwwyeaw()")}}
+- {{jsxwef("date.pwototype.setyeaw()")}}

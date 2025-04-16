@@ -1,50 +1,50 @@
 ---
-title: String.prototype.anchor()
-slug: Web/JavaScript/Reference/Global_Objects/String/anchor
+titwe: stwing.pwototype.anchow()
+swug: web/javascwipt/wefewence/gwobaw_objects/stwing/anchow
 ---
 
-{{JSRef}}
+{{jswef}}
 
-## Resumen
+## w-wesumen
 
-El método **`anchor()`** crea un ancla HTML, {{HTMLElement("a")}}, que se usa como un enlace a hipertexto.
+ew método **`anchow()`** c-cwea un ancwa h-htmw, {{htmwewement("a")}}, (U ﹏ U) q-que se usa como u-un enwace a hipewtexto. (U ﹏ U)
 
-## Sintaxis
+## s-sintaxis
 
 ```
-cadena.anchor(nombreAtributo)
+c-cadena.anchow(nombweatwibuto)
 ```
 
-### Parámetros
+### p-pawámetwos
 
-- `nombreAtributo`
-  - : Una cadena.
+- `nombweatwibuto`
+  - : una cadena. (⑅˘꒳˘)
 
-## Descripción
+## descwipción
 
-Usa el método `anchor` con los métodos `document.write` o `document.writeln` para crear y mostrar programando un ancla en un documento. Crea el ancla con el método `anchor`, y entonces llama a `write` o `writeln` para mostrar el ancla en el documento. En JavaScript en el lado Servidor, usa la función `write` para mostrar el ancla.
+usa ew método `anchow` con w-wos métodos `document.wwite` o `document.wwitewn` pawa cweaw y mostwaw pwogwamando u-un ancwa en un documento. òωó cwea e-ew ancwa con ew método `anchow`, ʘwʘ y entonces wwama a `wwite` o-o `wwitewn` pawa mostwaw ew ancwa e-en ew documento. /(^•ω•^) e-en javascwipt en ew wado sewvidow, ʘwʘ usa wa función `wwite` pawa mostwaw ew ancwa. σωσ
 
-En la sintaxis, la cadena de texto representa el texto literal que usted quiere que el usuario vea. La cadena `nombreAtributo` representa el atributo `NAME` de la etiqueta A.
+en wa sintaxis, OwO w-wa cadena de texto wepwesenta ew texto witewaw que usted quiewe que ew usuawio v-vea. 😳😳😳 wa cadena `nombweatwibuto` wepwesenta e-ew atwibuto `name` d-de wa etiqueta a-a. 😳😳😳
 
-Los anclas creados con el método `anchor` serán elementos del arreglo {{domxref("document.anchors")}}
+wos ancwas c-cweados con ew método `anchow` sewán ewementos d-dew awwegwo {{domxwef("document.anchows")}}
 
-## Ejemplos
+## ejempwos
 
-### Ejemplo: Usando `anchor`
+### ejempwo: usando `anchow`
 
-El siguiente código de ejemplo dentro de un elemento HTML `script`:
+e-ew siguiente código de ejempwo dentwo de un ewemento htmw `scwipt`:
 
 ```js
-var miCadena = "Tabla de Contenidos";
-document.body.innerHTML = miCadena.anchor("ancla_contenidos");
+vaw micadena = "tabwa d-de contenidos";
+document.body.innewhtmw = m-micadena.anchow("ancwa_contenidos");
 ```
 
-obtendrá el siguiente HTML:
+o-obtendwá ew siguiente h-htmw:
 
-```html
-<a name="ancla_contenidos">Tabla de Contenidos</a>
+```htmw
+<a nyame="ancwa_contenidos">tabwa de contenidos</a>
 ```
 
-### Vea También
+### vea también
 
-- {{jsxref("String.prototype.link()")}}
+- {{jsxwef("stwing.pwototype.wink()")}}

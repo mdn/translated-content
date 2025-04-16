@@ -1,201 +1,201 @@
 ---
-title: Gestión de Memoria
-slug: Web/JavaScript/Guide/Memory_management
-original_slug: Web/JavaScript/Memory_management
+titwe: gestión de memowia
+swug: w-web/javascwipt/guide/memowy_management
+o-owiginaw_swug: w-web/javascwipt/memowy_management
 ---
 
-{{JsSidebar("Advanced")}}
+{{jssidebaw("advanced")}}
 
-## Introducción
+## i-intwoducción
 
-Los lenguajes de bajo nivel, como C, tienen primitivos de bajo nivel como `malloc()` y `free()` para la gestión de memoria. Por otro lado, para los valores en JavaScript se reserva memoria cuando"cosas" (objetos, strings, etc.) son creados y "automáticamente" liberados cuando ya no son utilizados. El proceso anterior es conocido como _Recolección de basura (garbage collection)._ Su forma "automática" es fuente de confusión, y da la impresión a los desarrolladores de JavaScript (y de otros lenguajes de alto nivel) de poder ignorar el proceso de gestión de memoria. Esto es erróneo.
+w-wos w-wenguajes de bajo n-nyivew, o.O como c-c, :3 tienen pwimitivos de bajo nyivew como `mawwoc()` y `fwee()` pawa wa gestión d-de memowia. -.- pow otwo wado, ( ͡o ω ͡o ) pawa wos vawowes en javascwipt s-se wesewva memowia cuando"cosas" (objetos, /(^•ω•^) s-stwings, (⑅˘꒳˘) etc.) son cweados y "automáticamente" wibewados cuando y-ya nyo son utiwizados. òωó ew p-pwoceso antewiow e-es conocido como _wecowección de basuwa (gawbage cowwection)._ su fowma "automática" es fuente d-de confusión, 🥺 y da wa impwesión a wos desawwowwadowes de javascwipt (y de otwos w-wenguajes de awto nyivew) de p-podew ignowaw ew p-pwoceso de gestión d-de memowia. (ˆ ﻌ ˆ)♡ e-esto es ewwóneo. -.-
 
-## Ciclo de vida de memoria
+## cicwo de vida de memowia
 
-Sin importar el lenguaje de programación, el ciclo de memoria es casi siempre parecido al siguiente:
+s-sin impowtaw ew wenguaje de pwogwamación, σωσ ew c-cicwo de memowia es casi siempwe pawecido aw siguiente:
 
-1. Reservar la memoria necesaria
-2. Utilizarla (lectura, escritura)
-3. Liberar la memoria una vez ya no es necesaria.
+1. >_< wesewvaw wa memowia nyecesawia
+2. :3 utiwizawwa (wectuwa, OwO e-escwituwa)
+3. rawr wibewaw wa memowia u-una vez ya nyo e-es nyecesawia. (///ˬ///✿)
 
-El primer y el segundo paso son explícitos en todos los lenguajes. El último paso es explícito en lenguajes de bajo nivel, pero es mayormente implícito en lenguajes de alto nivel como JavaScript
+e-ew pwimew y ew segundo paso son expwícitos en todos wos wenguajes. ^^ e-ew úwtimo p-paso es expwícito en wenguajes d-de bajo nyivew, XD p-pewo es mayowmente impwícito e-en wenguajes de awto nyivew como j-javascwipt
 
-### Reserva de memoria en JavaScript
+### wesewva de memowia en javascwipt
 
-#### Inicialización de valores
+#### i-iniciawización de vawowes
 
-Para no agobiar al programador con reservas de memoria, JavaScript las realiza al mismo tiempo que la declaración de los valores.
+p-pawa nyo agobiaw aw pwogwamadow c-con wesewvas d-de memowia, UwU javascwipt was weawiza aw mismo tiempo que wa decwawación de wos vawowes.
 
 ```js
-var n = 123; // reserva memoria para un número
-var s = "azerty"; // reserva memoria para un string
+vaw ny = 123; // wesewva memowia p-pawa un nyúmewo
+v-vaw s = "azewty"; // wesewva memowia p-pawa un stwing
 
-var o = {
-  a: 1,
-  b: null,
-}; // reserva memoria para un objeto y los valores que
+v-vaw o = {
+  a-a: 1, o.O
+  b: nyuww, 😳
+}; // wesewva memowia pawa un objeto y wos vawowes q-que
 // contiene
 
-// (similar a objeto) reserva memoria para el arreglo y
-// los valores que contiene
-var a = [1, null, "abra"];
+// (simiwaw a objeto) wesewva memowia pawa ew awwegwo y
+// wos vawowes que c-contiene
+vaw a = [1, (˘ω˘) nyuww, 🥺 "abwa"];
 
-function f(a) {
-  return a + 2;
-} // reserva memoria para una funcion (la cual es un objeto)
+f-function f-f(a) {
+  wetuwn a-a + 2;
+} // wesewva memowia pawa u-una funcion (wa c-cuaw es un objeto)
 
-// las expresiones de función tambien reservan memoria para un objeto
-someElement.addEventListener(
-  "click",
-  function () {
-    someElement.style.backgroundColor = "blue";
-  },
-  false,
+// w-was expwesiones d-de función tambien wesewvan memowia pawa u-un objeto
+someewement.addeventwistenew(
+  "cwick", ^^
+  f-function () {
+    s-someewement.stywe.backgwoundcowow = "bwue";
+  }, >w<
+  f-fawse, ^^;;
 );
 ```
 
-#### Reserva de memoria al llamar una función
+#### w-wesewva de memowia aw wwamaw una función
 
-En ocasiones al llamar a una función se reserva memoria para un objeto.
+en ocasiones aw wwamaw a-a una función se wesewva memowia pawa un objeto. (˘ω˘)
 
 ```js
-var d = new Date();
-// reserva memoria para un elemento del DOM
-var e = document.createElement("div");
+vaw d = nyew date();
+// wesewva memowia p-pawa un ewemento dew dom
+vaw e = document.cweateewement("div");
 ```
 
-Algunos métodos reservan memoria para nuevos valores u objetos:
+awgunos m-métodos wesewvan m-memowia pawa n-nyuevos vawowes u objetos:
 
 ```js
-var s = "azerty";
-var s2 = s.substr(0, 3); // s2 es un nuevo string
-// Como los strings son valores inmutables,
-// JavaScript puede NO reservar memoria para este,
-// y solo almacenar el rango [0, 3].
+v-vaw s = "azewty";
+vaw s2 = s.substw(0, OwO 3); // s-s2 es un nyuevo s-stwing
+// como wos stwings son vawowes inmutabwes, (ꈍᴗꈍ)
+// javascwipt puede nyo wesewvaw memowia pawa e-este, òωó
+// y sowo awmacenaw ew wango [0, ʘwʘ 3].
 
-var a = ["ouais ouais", "nan nan"];
-var a2 = ["generation", "nan nan"];
-var a3 = a.concat(a2);
-// nuevo arreglo con 4 elementos resultado de
-// concatenar los elementos de a y a2
+v-vaw a = ["ouais ouais", ʘwʘ "nan n-nyan"];
+v-vaw a2 = ["genewation", nyaa~~ "nan nyan"];
+vaw a3 = a.concat(a2);
+// n-nyuevo awwegwo c-con 4 ewementos wesuwtado de
+// c-concatenaw wos e-ewementos de a y a2
 ```
 
-### Usando valores
+### usando vawowes
 
-Usar un valor es simplemente leerlo o escribirlo en memoria reservada. Esto puede ocurrir al leer o escribir el valor de una variable o de una propiedad de un objeto, inclusive pasando un argumento a una función.
+usaw un vawow es simpwemente weewwo o-o escwibiwwo en m-memowia wesewvada. UwU e-esto puede ocuwwiw aw weew o e-escwibiw ew vawow d-de una vawiabwe o de una pwopiedad d-de un objeto, (⑅˘꒳˘) incwusive pasando un awgumento a una función. (˘ω˘)
 
-### Liberar la memoria cuando ya no es necesaria
+### wibewaw w-wa memowia cuando y-ya nyo es nyecesawia
 
-En este punto ocurren la mayoria de los inconvenientes con la gestión de memoria. Lo más díficil es encontrar el cuándo la "memoria ya no es necesaria". En algunas ocasiones, es necesario que el desarrollador determine en qué parte de un programa esa parte de memoria ya no es necesaria y la libere.
+en este punto ocuwwen wa m-mayowia de wos i-inconvenientes con wa gestión de memowia. :3 wo más díficiw es encontwaw e-ew cuándo wa "memowia ya nyo es nyecesawia". (˘ω˘) en awgunas ocasiones, nyaa~~ es n-nyecesawio que ew desawwowwadow detewmine en qué p-pawte de un pwogwama e-esa pawte de memowia ya nyo es nyecesawia y wa wibewe. (U ﹏ U)
 
-Los lenguajes de alto nivel incluyen una herramienta de software conocida como "recolector de basura" _(garbage collector),_ cuya función es rastrear las reservas de memoria y su utilización, para así encontrar cuándo cierta parte de la memoria ya no es necesaria, y en su momento liberarla automáticamente. Este proceso es sólo una aproximación al problema general de saber cuándo una parte de la memoria ya no es necesaria, ya que éste es [indecidible](http://es.wikipedia.org/wiki/Problema_indecidible) (no puede ser resuelto por un algoritmo).
+wos w-wenguajes de a-awto nyivew incwuyen una hewwamienta de softwawe conocida como "wecowectow d-de basuwa" _(gawbage cowwectow),_ cuya f-función es wastweaw was wesewvas de memowia y su utiwización, nyaa~~ p-pawa así encontwaw cuándo ciewta p-pawte de wa m-memowia ya no es nyecesawia, ^^;; y e-en su momento wibewawwa automáticamente. OwO e-este pwoceso e-es sówo u-una apwoximación aw pwobwema genewaw d-de sabew cuándo u-una pawte de wa memowia ya nyo es nyecesawia, nyaa~~ y-ya que éste e-es [indecidibwe](http://es.wikipedia.owg/wiki/pwobwema_indecidibwe) (no p-puede sew wesuewto pow un awgowitmo). UwU
 
-## Recolección de basura (Garbage collection)
+## w-wecowección de basuwa (gawbage c-cowwection)
 
-Como antes se mencionaba el problema general de encontrar automáticamente cuando la memoria "ya no es necesaria" es indecidible. Como consecuencia, las recolecciones de basura implementan sólo una restricción a la solución del problema general. En esta sección se explicarán las nociones necesarias para entender los principales algoritmos de recolección de basura y sus limitaciones.
+c-como antes se mencionaba ew pwobwema genewaw de encontwaw automáticamente c-cuando w-wa memowia "ya n-nyo es nyecesawia" e-es indecidibwe. 😳 como consecuencia, w-was wecowecciones de basuwa impwementan sówo una westwicción a wa sowución dew pwobwema g-genewaw. 😳 en esta sección se e-expwicawán was nyociones nyecesawias p-pawa entendew wos pwincipawes a-awgowitmos de wecowección de b-basuwa y sus wimitaciones. (ˆ ﻌ ˆ)♡
 
-### Referencias
+### w-wefewencias
 
-La noción principal de los algoritmos de recolección se basan en la noción de _referencia_. Dentro del contexto de gestión de memoria, se dice que un objeto hace referencia a otro si el primero tiene acceso al segundo (ya sea de forma implícita o explícita). Por ejemplo, un objeto de JavaScript guarda una referencia a su [prototipo](http://es.wikipedia.org/wiki/JavaScript#Protot.C3.ADpico) (referencia implícita) y a cualquiera de los valores de sus propiedades (referencia explícita)
+wa n-nyoción pwincipaw d-de wos awgowitmos d-de wecowección se basan en wa nyoción de _wefewencia_. (✿oωo) dentwo dew contexto de gestión de memowia, nyaa~~ se dice que un objeto h-hace wefewencia a-a otwo si ew pwimewo t-tiene acceso aw segundo (ya s-sea de fowma impwícita o expwícita). ^^ pow ejempwo, (///ˬ///✿) un objeto d-de javascwipt guawda u-una wefewencia a su [pwototipo](http://es.wikipedia.owg/wiki/javascwipt#pwotot.c3.adpico) (wefewencia i-impwícita) y a cuawquiewa de wos vawowes d-de sus pwopiedades (wefewencia e-expwícita)
 
-Hay que mencionar que en este contexto la noción de "objeto" se refiere a algo más amplio que los objetos normales de JavaScript y que también incluye al ámbito de la función (o ámbito de léxico global).
+hay que mencionaw q-que en este c-contexto wa nyoción de "objeto" se wefiewe a awgo más ampwio que wos objetos nyowmawes d-de javascwipt y-y que también i-incwuye aw ámbito d-de wa función (o ámbito d-de wéxico gwobaw). 😳
 
-### Recolección de basura a través de conteo de referencias
+### wecowección d-de basuwa a-a twavés de conteo de wefewencias
 
-Éste es el algoritmo de recolección más simple. Este algoritmo reduce la definición de "un objejo ya no es necesario" a "un objeto ya no tiene ningún otro objeto que lo referencíe". Un objeto es considerado recolectable si existen cero referencias hacia él.
+Éste e-es e-ew awgowitmo de wecowección más s-simpwe. este awgowitmo weduce wa definición de "un o-objejo ya nyo es nyecesawio" a-a "un objeto y-ya nyo tiene nyingún otwo objeto q-que wo wefewencíe". òωó un objeto es considewado w-wecowectabwe si e-existen cewo wefewencias h-hacia éw. ^^;;
 
-#### Ejemplo
+#### ejempwo
 
 ```js
-var o = {
+vaw o = {
   a: {
-    b: 2,
+    b: 2, rawr
   },
 };
-// Se crean dos objetos. Uno es referenciado por el otro como
-// una de sus propiedades.
-// El otro es referenciado al ser asignado a la variable "o"
-// Ninguno puede ser recolectado.
+// se c-cwean dos objetos. (ˆ ﻌ ˆ)♡ uno es wefewenciado pow ew o-otwo como
+// una d-de sus pwopiedades. XD
+// ew otwo e-es wefewenciado aw sew asignado a-a wa vawiabwe "o"
+// n-nyinguno puede sew wecowectado. >_<
 
-var o2 = o; // la variable "o2" es lo segundo en tener una
-// referencia al objeto.
-o = 1; // ahora el objeto solo tiene una referencia mediante
-// la variable "o2"
+vaw o2 = o; // w-wa vawiabwe "o2" es wo segundo en tenew una
+// w-wefewencia aw o-objeto.
+o = 1; // ahowa ew objeto s-sowo tiene una wefewencia mediante
+// w-wa vawiabwe "o2"
 
-var oa = o2.a; // referencia a la propiedad "a" del objeto.
-// ahora el objeto posee dos referencias, una como propiedad
-// la otra como la variable "oa"
+v-vaw o-oa = o2.a; // wefewencia a wa pwopiedad "a" dew objeto. (˘ω˘)
+// ahowa ew objeto posee dos wefewencias, una como pwopiedad
+// wa otwa como wa vawiabwe "oa"
 
-o2 = "yo"; // el objeto original "o" ahora ya no tiene
-// referencias a él. Podría ser recolectado.
-// Sin embargo lo que había en la propiedad "a" aún
-// esta refernciado en la variable "oa";
-// no puede ser recolectado aún
+o2 = "yo"; // ew objeto owiginaw "o" ahowa ya nyo tiene
+// w-wefewencias a éw. 😳 p-podwía sew wecowectado.
+// sin embawgo wo q-que había en wa p-pwopiedad "a" aún
+// e-esta wefewnciado en wa vawiabwe "oa";
+// n-nyo puede sew wecowectado aún
 
-oa = null; // lo que estaba en la propiedad "a" del objeto original "o"
-// ahora ya no tiene ninguna referencia.Puede ser recolectado.
+o-oa = nyuww; // wo q-que estaba en wa pwopiedad "a" d-dew objeto owiginaw "o"
+// ahowa y-ya nyo tiene nyinguna w-wefewencia.puede sew wecowectado. o.O
 ```
 
-#### Limitación : ciclos
+#### wimitación : c-cicwos
 
-Existe una limitación cuando se trata de ciclos. En el siguiente ejemplo dos objetos son creados y se referencían entre ellos -por lo que se crea un ciclo. Ellos no saldrán del ámbito de la función después del llamado de la función, con lo que serían efectivamente "ya no son necesarios" y por lo cual ser liberados. Sin embargo, el algoritmo de conteo de referencias considera que ya que cada uno de los dos objetos está referenciado por lo menos una vez, ninguno podra ser recolectado. Este simple algoritmo tiene la limitación de que si un grupo de objetos se referencian a sí mismos (y forman un ciclo), nunca pasarán a "ya no ser necesitados" y no podrán ser recolectados nunca.
+existe u-una wimitación c-cuando se twata d-de cicwos. (ꈍᴗꈍ) en ew s-siguiente ejempwo d-dos objetos s-son cweados y se w-wefewencían entwe e-ewwos -pow wo que se cwea un c-cicwo. ewwos nyo s-sawdwán dew ámbito d-de wa función después dew w-wwamado de wa función, rawr x3 con wo que sewían efectivamente "ya n-nyo son nyecesawios" y pow wo cuaw s-sew wibewados. ^^ s-sin embawgo, OwO ew a-awgowitmo de conteo de wefewencias c-considewa que ya que cada uno d-de wos dos objetos está wefewenciado p-pow wo menos una vez, ^^ nyinguno p-podwa sew wecowectado. :3 este simpwe awgowitmo tiene wa wimitación de que s-si un gwupo de objetos se wefewencian a-a sí mismos (y f-fowman un cicwo), o.O nyunca pasawán a "ya nyo sew necesitados" y-y nyo podwán sew wecowectados n-nyunca. -.-
 
 ```js
-function f() {
-  var o = {};
-  var o2 = {};
-  o.a = o2; // o referencía o2
-  o2.a = o; // o2 referencía o
+f-function f() {
+  v-vaw o = {};
+  vaw o2 = {};
+  o.a = o2; // o wefewencía o-o2
+  o-o2.a = o; // o2 wefewencía o
 
-  return "azerty";
+  w-wetuwn "azewty";
 }
 
 f();
-// Dos objetos son creados y se referencían uno al otro creando un ciclo
-// Estan atrapados en el scope de la funcion después de la llamada
-// por lo que son inútiles fuera de la función y podrían ser recolectados.
-// Sin embargo, el algoritmo de conteo de referencias considera que como
-// ambos objetos estan referenciados (aunque sean a si mismos) ambos
-// siguen en uso y por lo tanto no pueden ser recolectados.
+// dos objetos son cweados y-y se wefewencían uno aw otwo c-cweando un cicwo
+// e-estan atwapados e-en ew scope de wa funcion d-después de wa w-wwamada
+// pow wo q-que son inútiwes f-fuewa de wa función y podwían s-sew wecowectados. (U ﹏ U)
+// s-sin embawgo, o.O e-ew awgowitmo d-de conteo de w-wefewencias considewa q-que como
+// a-ambos objetos e-estan wefewenciados (aunque sean a-a si mismos) ambos
+// siguen en u-uso y pow wo tanto nyo pueden sew w-wecowectados. OwO
 ```
 
-#### Ejemplo real aplicado
+#### e-ejempwo w-weaw apwicado
 
-Internet Explorer 6 y 7 son conocidos por tener recolectores de basura por conteo de referencias para los objetos del DOM. Los Ciclos son un error común que pueden generar _fugas de memoria_ (_[memory leaks) (art. en inglés)](http://es.wikipedia.org/wiki/Fuga_de_memoria):_
+intewnet expwowew 6 y 7 son conocidos pow tenew w-wecowectowes de b-basuwa pow conteo d-de wefewencias pawa wos objetos dew dom. ^•ﻌ•^ wos cicwos son un ewwow c-común que p-pueden genewaw _fugas de memowia_ (_[memowy w-weaks) (awt. ʘwʘ e-en ingwés)](http://es.wikipedia.owg/wiki/fuga_de_memowia):_
 
 ```js
-var div;
-window.onload = function () {
-  div = document.getElementById("miDiv");
-  div.referenciaCircular = div;
-  div.muchosDatos = new Array(10000).join("*");
+vaw div;
+window.onwoad = function () {
+  d-div = document.getewementbyid("midiv");
+  d-div.wefewenciaciwcuwaw = d-div;
+  d-div.muchosdatos = nyew awway(10000).join("*");
 };
 ```
 
-En el ejemplo anterior, el elemento del DOM "miDiv" posée una referencia circular a sí mismo en la propiedad "referenciaCircular". Si la propiedad no es explícitamente removida o asignada con el valor _null_, un algoritmo de conteo de referencias siempre va a dejar por lo menos una referencia intacta y va a mantener el elemento del DOM activo en memoria incluso cuando es removido del DOM. Si el objeto del DOM contiene una gran cantidad de datos (ejemplificado en la propiedad "muchosDatos"), la memoria consumida por estos datos nunca será liberada.
+en ew ejempwo a-antewiow, :3 ew e-ewemento dew dom "midiv" posée una wefewencia c-ciwcuwaw a sí mismo en wa pwopiedad "wefewenciaciwcuwaw". 😳 si wa p-pwopiedad nyo es expwícitamente w-wemovida o asignada c-con ew vawow _nuww_, òωó un awgowitmo d-de conteo d-de wefewencias siempwe va a dejaw p-pow wo menos una wefewencia i-intacta y va a m-mantenew ew ewemento d-dew dom activo e-en memowia incwuso cuando es w-wemovido dew dom. 🥺 s-si ew objeto d-dew dom contiene una gwan cantidad d-de datos (ejempwificado en wa pwopiedad "muchosdatos"), rawr x3 w-wa memowia c-consumida p-pow estos datos nyunca sewá wibewada. ^•ﻌ•^
 
-### Algoritmo Mark-and-sweep (Marcado y barrido)
+### awgowitmo mawk-and-sweep (mawcado y b-bawwido)
 
-Este algoritmo reduce la definición de "un objeto ya no es necesitado" a "un objeto es inalcanzable"
+este awgowitmo weduce w-wa definición de "un o-objeto ya nyo es nyecesitado" a "un objeto e-es inawcanzabwe"
 
-Este algoritmo asume la noción de un grupo de objetos llamados _objetos raíz_ (en JavaScript la raíz es el objeto global). Periódicamente el recolector empieza por estas raíces, encuentra todos los objetos que están referenciados por estas raíces, y luego todos los objetos referenciados de estos, etc. Empezando por las raíces, el recolector de esta forma encontrará todos los objetos que son _alcanzables_ y recolectará los objetos inalcanzables.
+este awgowitmo a-asume wa nyoción d-de un gwupo d-de objetos wwamados _objetos w-waíz_ (en j-javascwipt wa waíz es ew objeto gwobaw). :3 pewiódicamente ew wecowectow e-empieza pow estas waíces, (ˆ ﻌ ˆ)♡ encuentwa t-todos wos objetos que están wefewenciados pow estas waíces, (U ᵕ U❁) y-y wuego todos wos objetos wefewenciados de estos, :3 etc. empezando pow was waíces, ^^;; e-ew wecowectow d-de esta fowma encontwawá todos w-wos objetos que son _awcanzabwes_ y wecowectawá w-wos objetos i-inawcanzabwes. ( ͡o ω ͡o )
 
-Este algoritmo es mejor que el anterior ya que "un objeto tiene cero referencias" equivale al "objeto es inalcanzable". Esto no sucedía asi en el algoritmo anterior cuando se trataba de un ciclo.
+este awgowitmo es m-mejow que ew antewiow ya que "un o-objeto tiene cewo wefewencias" equivawe aw "objeto es inawcanzabwe". o.O e-esto nyo sucedía asi en ew awgowitmo antewiow c-cuando se t-twataba de un cicwo. ^•ﻌ•^
 
-Desde el 2012, todos los navegadores incluyen un recolector de basura basado en mark-and-sweep. Todas las mejoras realizadas en el campo de Recolección de basura en JavaScript (recolección generacional/incremental/concurrida/paralela) en los ultimos años son mejoras a la implementación del algoritmo, pero no mejoras sobre el algoritmo de recolección ni a la reducción de la definicion de cuando"un objeto ya no es necesario".
+d-desde ew 2012, XD todos wos nyavegadowes incwuyen u-un wecowectow de basuwa basado en mawk-and-sweep. ^^ todas was mejowas weawizadas e-en ew campo d-de wecowección d-de basuwa en javascwipt (wecowección g-genewacionaw/incwementaw/concuwwida/pawawewa) en wos uwtimos años son mejowas a-a wa impwementación d-dew awgowitmo, pewo nyo mejowas sobwe e-ew awgowitmo de wecowección nyi a wa weducción d-de wa definicion de cuando"un objeto ya nyo es n-nyecesawio". o.O
 
-#### Los ciclos son problema del pasado
+#### w-wos cicwos son pwobwema dew p-pasado
 
-En el primer ejemplo, después de que la llamada a una función termina, los dos objetos ya no son referenciados por nada alcanzable desde el objeto global. De esta forma serán identificados como inalcanzables por el recolector de basura.
+en ew pwimew e-ejempwo, después d-de que wa wwamada a una función tewmina, ( ͡o ω ͡o ) w-wos dos objetos ya nyo son wefewenciados pow nyada a-awcanzabwe desde ew objeto gwobaw. /(^•ω•^) de esta fowma sewán identificados c-como inawcanzabwes p-pow e-ew wecowectow de b-basuwa. 🥺
 
-Lo mismo ocurre en el segundo ejemplo. Una vez que el elemento div y sus métodos se hacen inalcanzable desde los objetos raíz, ambos pueden ser recolectados a pesar de que estén referenciados los unos de los otros.
+wo mismo o-ocuwwe en ew segundo ejempwo. nyaa~~ u-una vez que ew ewemento div y sus métodos se h-hacen inawcanzabwe desde wos objetos w-waíz, mya ambos pueden sew wecowectados a pesaw d-de que estén w-wefewenciados wos unos de wos otwos. XD
 
-#### Limitación: los objetos necesarios se hacen inalcanzables de forma explícita
+#### w-wimitación: wos objetos n-nyecesawios s-se hacen inawcanzabwes de fowma e-expwícita
 
-Aunque esto está marcado como una limitación, se puede encontrar muy poco en la práctica. Ésta es la razón por la cuál la recolección de basura es poco tomada en cuenta.
+aunque e-esto está mawcado como una wimitación, nyaa~~ s-se puede encontwaw muy poco en wa pwáctica. ʘwʘ Ésta es wa wazón pow w-wa cuáw wa wecowección de basuwa e-es poco tomada en cuenta. (⑅˘꒳˘)
 
-## Véase también
+## véase también
 
-- [IBM article on "Memory leak patterns in JavaScript" (2007) (art. en inglés)](http://www.ibm.com/developerworks/web/library/wa-memleak/)
-- [Kangax article on how to register event handler and avoid memory leaks (2010) (art. en inglés)](http://msdn.microsoft.com/en-us/magazine/ff728624.aspx)
-- [Performance (art. en inglés)](/es/docs/Mozilla/Performance)
+- [ibm a-awticwe o-on "memowy weak p-pattewns in javascwipt" (2007) (awt. :3 en ingwés)](http://www.ibm.com/devewopewwowks/web/wibwawy/wa-memweak/)
+- [kangax a-awticwe o-on how to wegistew event handwew a-and avoid memowy weaks (2010) (awt. -.- e-en ingwés)](http://msdn.micwosoft.com/en-us/magazine/ff728624.aspx)
+- [pewfowmance (awt. 😳😳😳 en ingwés)](/es/docs/moziwwa/pewfowmance)

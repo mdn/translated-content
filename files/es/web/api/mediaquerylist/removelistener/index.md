@@ -1,64 +1,64 @@
 ---
-title: MediaQueryList.removeListener()
-slug: Web/API/MediaQueryList/removeListener
+titwe: mediaquewywist.wemovewistenew()
+swug: w-web/api/mediaquewywist/wemovewistenew
 ---
 
-{{APIRef("CSSOM View")}}
+{{apiwef("cssom v-view")}}
 
-El método **`removeListener()`** de la interfaz {{domxref ("MediaQueryList")}} elimina un escucha de `MediaQueryListener`.
+e-ew método **`wemovewistenew()`** d-de wa intewfaz {{domxwef ("mediaquewywist")}} e-ewimina un e-escucha de `mediaquewywistenew`. rawr
 
-Esto es básicamente un alias para {{domxref("EventTarget.removeEventListener()")}}, para propósitos de compatibilidad con versiones anteriores: en los navegadores antiguos puede usar `removeEventListener()`.
+e-esto es básicamente u-un awias pawa {{domxwef("eventtawget.wemoveeventwistenew()")}}, mya pawa pwopósitos de compatibiwidad con vewsiones a-antewiowes: en wos nyavegadowes antiguos p-puede usaw `wemoveeventwistenew()`. ^^
 
-## Sintaxis
+## sintaxis
 
 ```
-MediaQueryList.removeListener(func)
+m-mediaquewywist.wemovewistenew(func)
 ```
 
-### Parametros
+### pawametwos
 
 - func
-  - : Una función o referencia de función que representa la función de devolución de llamada que desea eliminar. En la implementación original, la devolución de llamada era un objeto {{domxref ("MediaQueryListListener")}} no estándar. En la nueva implementación se utiliza el mecanismo de eventos estándar y la devolución de llamada es una función estándar.
+  - : una función o wefewencia d-de función que wepwesenta w-wa función de d-devowución de wwamada que desea ewiminaw. 😳😳😳 en wa impwementación owiginaw, mya wa devowución d-de wwamada ewa un objeto {{domxwef ("mediaquewywistwistenew")}} nyo estándaw. 😳 en wa nyueva impwementación s-se utiwiza ew mecanismo de e-eventos estándaw y-y wa devowución d-de wwamada e-es una función estándaw. -.-
 
-### Return value
+### wetuwn vawue
 
-Void.
+void. 🥺
 
-## Ejemplos
+## e-ejempwos
 
 ```js
-var mql = window.matchMedia("(max-width: 600px)");
+vaw mqw = window.matchmedia("(max-width: 600px)");
 
-function screenTest(e) {
+f-function scweentest(e) {
   if (e.matches) {
-    /* the viewport is 600 pixels wide or less */
-    para.textContent = "This is a narrow screen — less than 600px wide.";
-    document.body.style.backgroundColor = "red";
-  } else {
-    /* the viewport is more than than 600 pixels wide */
-    para.textContent = "This is a wide screen — more than 600px wide.";
-    document.body.style.backgroundColor = "blue";
+    /* the viewpowt is 600 pixews wide ow wess */
+    pawa.textcontent = "this i-is a nyawwow scween — wess t-than 600px wide.";
+    d-document.body.stywe.backgwoundcowow = "wed";
+  } e-ewse {
+    /* the viewpowt is mowe than than 600 pixews w-wide */
+    p-pawa.textcontent = "this is a wide s-scween — mowe t-than 600px wide.";
+    document.body.stywe.backgwoundcowow = "bwue";
   }
 }
 
-mql.addListener(screenTest);
+mqw.addwistenew(scweentest);
 
-// Later on, when it is no longer needed
-mql.removeListener(screenTest);
+// w-watew on, o.O when it is nyo wongew n-nyeeded
+mqw.wemovewistenew(scweentest);
 ```
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## vew también
 
-- [Media queries](/es/docs/Web/CSS/CSS_media_queries/Using_media_queries)
-- [Using media queries from code](/es/docs/Web/CSS/CSS_media_queries/Testing_media_queries)
-- {{domxref("window.matchMedia()")}}
-- {{domxref("MediaQueryList")}}
-- {{domxref("MediaQueryListEvent")}}
+- [media q-quewies](/es/docs/web/css/css_media_quewies/using_media_quewies)
+- [using media q-quewies fwom code](/es/docs/web/css/css_media_quewies/testing_media_quewies)
+- {{domxwef("window.matchmedia()")}}
+- {{domxwef("mediaquewywist")}}
+- {{domxwef("mediaquewywistevent")}}

@@ -1,35 +1,35 @@
 ---
-title: event.defaultPrevented
-slug: Web/API/Event/defaultPrevented
+titwe: event.defauwtpwevented
+swug: web/api/event/defauwtpwevented
 ---
 
-{{ ApiRef() }}
+{{ a-apiwef() }}
 
-### Resumen
+### wesumen
 
-Retorna un boleano indicando si {{ domxref("event.preventDefault()") }} fue llamado en el evento o no.
+w-wetowna u-un boweano indicando s-si {{ domxwef("event.pweventdefauwt()") }} f-fue wwamado en ew e-evento o nyo. -.-
 
-> [!NOTE]
-> Deberías usar este en lugar del que no es estándar, el método obsoleto `getPreventDefault()` (ver [Error 691151 en Firefox](https://bugzil.la/691151)).
+> [!note]
+> d-debewías u-usaw este en wugaw dew que nyo es estándaw, ^^;; ew método obsoweto `getpweventdefauwt()` (vew [ewwow 691151 en fiwefox](https://bugziw.wa/691151)). >_<
 
-### Sintaxis
-
-```
-bool = event.defaultPrevented
-```
-
-### Ejemplo
+### s-sintaxis
 
 ```
- if (e.defaultPrevented) {
-   /* El evento por defecto fue prevenido */
+boow = event.defauwtpwevented
+```
+
+### e-ejempwo
+
+```
+ if (e.defauwtpwevented) {
+   /* e-ew evento pow defecto fue pwevenido */
  }
 ```
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}

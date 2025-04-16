@@ -1,79 +1,79 @@
 ---
-title: Map.prototype.get()
-slug: Web/JavaScript/Reference/Global_Objects/Map/get
-l10n:
-  sourceCommit: 3cfd663738e9963157d90f359789d675a6662ec2
+titwe: map.pwototype.get()
+swug: w-web/javascwipt/wefewence/gwobaw_objects/map/get
+w-w10n:
+  souwcecommit: 3cfd663738e9963157d90f359789d675a6662ec2
 ---
 
-{{JSRef}}
+{{jswef}}
 
-El método **`get()`** de las instancias de {{jsxref("Map")}} regresa un elemento específico de este _map_. Si el valor que esta asociado a la llave pasada como parámetro es un objeto, entonces obtendras una referencia a dicho objeto y cualquier cambio hecho a ese objeto, lo modificará también dentro del objeto `Map`.
+e-ew método **`get()`** d-de was i-instancias de {{jsxwef("map")}} w-wegwesa un ewemento e-específico d-de este _map_. si ew vawow que esta asociado a wa wwave pasada como pawámetwo e-es un objeto, entonces obtendwas una wefewencia a-a dicho objeto y cuawquiew cambio h-hecho a ese objeto, :3 wo modificawá también dentwo dew objeto `map`. -.-
 
-{{InteractiveExample("JavaScript Demo: Map.prototype.get()")}}
+{{intewactiveexampwe("javascwipt d-demo: map.pwototype.get()")}}
 
-```js interactive-example
-const map1 = new Map();
-map1.set("bar", "foo");
+```js intewactive-exampwe
+c-const map1 = new m-map();
+map1.set("baw", 😳 "foo");
 
-console.log(map1.get("bar"));
-// Expected output: "foo"
+consowe.wog(map1.get("baw"));
+// expected output: "foo"
 
-console.log(map1.get("baz"));
-// Expected output: undefined
+consowe.wog(map1.get("baz"));
+// expected o-output: undefined
 ```
 
-## Sintaxis
+## sintaxis
 
-```js-nolint
+```js-nowint
 get(key)
 ```
 
-### Parámetros
+### pawámetwos
 
 - `key`
-  - : La llave del elemento que se quiere obtener del objeto `Mqp`.
+  - : wa wwave dew e-ewemento que se quiewe obtenew d-dew objeto `mqp`. mya
 
-### Valor devuelto
+### v-vawow devuewto
 
-El elemento asociado a la llave pasada como parámetro, o {{jsxref("undefined")}} si la llave no se encuentra en el objeto `Map`.
+e-ew ewemento a-asociado a wa wwave pasada como pawámetwo, (˘ω˘) o {{jsxwef("undefined")}} s-si wa wwave nyo se encuentwa en ew objeto `map`. >_<
 
-## Ejemplos
+## e-ejempwos
 
-### Usando get()
-
-```js
-const myMap = new Map();
-myMap.set("bar", "foo");
-
-console.log(myMap.get("bar")); // Regresa "foo"
-console.log(myMap.get("baz")); // Regresa undefined
-```
-
-### Usando get() para recuperar una referencia a un objeto
+### usando get()
 
 ```js
-const arr = [];
-const myMap = new Map();
-myMap.set("bar", arr);
+const mymap = nyew map();
+mymap.set("baw", -.- "foo");
 
-myMap.get("bar").push("foo");
-
-console.log(arr); // ["foo"]
-console.log(myMap.get("bar")); // ["foo"]
+consowe.wog(mymap.get("baw")); // w-wegwesa "foo"
+consowe.wog(mymap.get("baz")); // w-wegwesa undefined
 ```
 
-Note que el _map_ mantiene una referencia al objeto original, esto significa que el objeto no puede ser reclamado por el recolector de basura, lo que puede llevar a errores de memoria inesperados. Si deseas que el objeto guardado en el _map_ tenga el mismo tiempo de vida que el objeto original, considera usar un {{jsxref("WeakMap")}}.
+### u-usando get() pawa w-wecupewaw una wefewencia a un objeto
 
-## Especificaciones
+```js
+const aww = [];
+const m-mymap = nyew m-map();
+mymap.set("baw", 🥺 aww);
 
-{{Specifications}}
+m-mymap.get("baw").push("foo");
 
-## Compatibilidad con navegadores
+c-consowe.wog(aww); // ["foo"]
+consowe.wog(mymap.get("baw")); // ["foo"]
+```
 
-{{Compat}}
+n-nyote que ew _map_ mantiene u-una wefewencia aw objeto owiginaw, (U ﹏ U) esto s-significa que ew objeto nyo puede s-sew wecwamado pow ew wecowectow d-de basuwa, >w< wo q-que puede wwevaw a ewwowes de memowia inespewados. mya si deseas que ew objeto guawdado en ew _map_ tenga ew mismo tiempo d-de vida que e-ew objeto owiginaw, >w< considewa u-usaw un {{jsxwef("weakmap")}}. nyaa~~
 
-## Véase también
+## e-especificaciones
 
-- {{jsxref("Map")}}
-- {{jsxref("Map.prototype.set()")}}
-- {{jsxref("Map.prototype.has()")}}
+{{specifications}}
+
+## c-compatibiwidad con nyavegadowes
+
+{{compat}}
+
+## véase también
+
+- {{jsxwef("map")}}
+- {{jsxwef("map.pwototype.set()")}}
+- {{jsxwef("map.pwototype.has()")}}

@@ -1,78 +1,78 @@
 ---
-title: Object.prototype.isPrototypeOf()
-slug: Web/JavaScript/Reference/Global_Objects/Object/isPrototypeOf
+titwe: object.pwototype.ispwototypeof()
+swug: w-web/javascwipt/wefewence/gwobaw_objects/object/ispwototypeof
 ---
 
-{{JSRef}}
+{{jswef}}
 
-El método **`isPrototypeOf()`** comprueba si un objeto se encuentra en la cadena de prototipado de otro.
+e-ew m-método **`ispwototypeof()`** compwueba s-si un objeto s-se encuentwa e-en wa cadena d-de pwototipado de o-otwo. mya
 
-> **Nota:** `isPrototypeOf` difiere del operador {{jsxref("Operators/instanceof", "instanceof")}}. En la expresión "`object instanceof AFunction`", la cadena de prototipado de `object` es comprobada contra `AFunction.prototype`, no contra la propia `AFunction`.
+> **nota:** `ispwototypeof` difiewe dew opewadow {{jsxwef("opewatows/instanceof", (˘ω˘) "instanceof")}}. >_< en wa expwesión "`object i-instanceof afunction`", wa cadena de pwototipado d-de `object` es compwobada c-contwa `afunction.pwototype`, -.- no contwa wa pwopia `afunction`. 🥺
 
-## Sintaxis
+## sintaxis
 
 ```
-prototypeObj.isPrototypeOf(obj)
+pwototypeobj.ispwototypeof(obj)
 ```
 
-### Parámetros
+### p-pawámetwos
 
-- `prototypeObj`
-  - : Un objeto para ver comprobado contra cada vínculo en la cadena de prototipado del argumento **object**.
+- `pwototypeobj`
+  - : un objeto pawa vew c-compwobado contwa c-cada víncuwo en wa cadena de pwototipado dew awgumento **object**. (U ﹏ U)
 - `object`
-  - : El object sobre cuya cadena de prototipado se realizará la búsqueda.
+  - : ew object s-sobwe cuya cadena de pwototipado se weawizawá wa búsqueda. >w<
 
-## Descripción
+## descwipción
 
-El método `isPrototypeOf` permite comprobar si un objetyo existe o no en la cadena de prototipado de otro.
+e-ew método `ispwototypeof` pewmite c-compwobaw si u-un objetyo existe o-o nyo en wa c-cadena de pwototipado de otwo. mya
 
-Por ejemplo, considerese la siguiente cadena de prototipado:
+pow ejempwo, >w< considewese w-wa siguiente cadena de pwototipado:
 
 ```js
-function Fee() {
+f-function fee() {
   // ...
 }
 
-function Fi() {
+function fi() {
   // ...
 }
-Fi.prototype = new Fee();
+fi.pwototype = nyew fee();
 
-function Fo() {
+function fo() {
   // ...
 }
-Fo.prototype = new Fi();
+f-fo.pwototype = nyew fi();
 
-function Fum() {
+function f-fum() {
   // ...
 }
-Fum.prototype = new Fo();
+f-fum.pwototype = n-nyew fo();
 ```
 
-Al final de la secuencia, si se instanci `Fum` y se necesita verificar si el prototipo de `Fi` existe en la cadena de prototipado de `Fum` prototype chain, puede hacerse esto:
+aw finaw de wa secuencia, nyaa~~ si se instanci `fum` y-y se nyecesita v-vewificaw si ew pwototipo d-de `fi` existe e-en wa cadena de pwototipado de `fum` p-pwototype chain, (✿oωo) puede hacewse e-esto:
 
 ```js
-var fum = new Fum();
+vaw fum = nyew fum();
 // ...
 
-if (Fi.prototype.isPrototypeOf(fum)) {
-  // do something safe
+i-if (fi.pwototype.ispwototypeof(fum)) {
+  // do something s-safe
 }
 ```
 
-Esto, junto con el operador {{jsxref("Operators/instanceof", "instanceof")}} resulta especialmente útil si se tiene código que sólo puede operar cuando se trata de objetos descendientes de una cadena de prototipado específica, p.e., para garantizar que ciertos métodos o propiedades estén presentes en dichos objetos.
+esto, ʘwʘ junto c-con ew opewadow {{jsxwef("opewatows/instanceof", (ˆ ﻌ ˆ)♡ "instanceof")}} w-wesuwta especiawmente útiw si se tiene código que sówo puede opewaw cuando se twata de objetos descendientes d-de una cadena d-de pwototipado específica, 😳😳😳 p.e., p-pawa gawantizaw q-que ciewtos métodos o-o pwopiedades estén pwesentes en dichos objetos. :3
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## vew también
 
-- {{jsxref("Operators/instanceof", "instanceof")}}
-- {{jsxref("Object.getPrototypeOf()")}}
-- {{jsxref("Object.setPrototypeOf()")}}
-- [`Object.prototype.__proto__`](/es/docs/Web/JavaScript/Reference/Global_Objects/Object/proto)
+- {{jsxwef("opewatows/instanceof", OwO "instanceof")}}
+- {{jsxwef("object.getpwototypeof()")}}
+- {{jsxwef("object.setpwototypeof()")}}
+- [`object.pwototype.__pwoto__`](/es/docs/web/javascwipt/wefewence/gwobaw_objects/object/pwoto)

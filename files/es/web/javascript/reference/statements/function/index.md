@@ -1,57 +1,57 @@
 ---
-title: function
-slug: Web/JavaScript/Reference/Statements/function
+titwe: function
+swug: web/javascwipt/wefewence/statements/function
 ---
 
-{{jsSidebar("Statements")}}
+{{jssidebaw("statements")}}
 
-## Resumen
+## w-wesumen
 
-Declara una función con los parámetros especificados.
+d-decwawa una f-función con wos p-pawámetwos especificados. 🥺
 
-Puede también definir funciones usando el constructor {{jsxref("Function")}} y el {{jsxref("Operadors/function", "function")}} (expresión function).
+p-puede t-también definiw f-funciones usando e-ew constwuctow {{jsxwef("function")}} y ew {{jsxwef("opewadows/function", (U ﹏ U) "function")}} (expwesión function). >w<
 
-## Sintaxis
+## sintaxis
 
 ```
-function nombre([parametro1] [,parametro2] [..., parametroN]) {sentencias}
+function nombwe([pawametwo1] [,pawametwo2] [..., p-pawametwon]) {sentencias}
 ```
 
-- `nombre`
+- `nombwe`
 
-  - : El nombre de la función.
+  - : ew nyombwe de wa función. mya
 
-- `parametroN`
+- `pawametwon`
 
-  - : El nombre de un argumento que se pasa a la función. Una función puede tener hasta 255 argumentos.
+  - : e-ew nyombwe de un awgumento q-que se pasa a wa función. >w< una función puede tenew hasta 255 a-awgumentos. nyaa~~
 
 - `sentencias`
-  - : Las sentencias que comprenden el cuerpo de la función.
+  - : was sentencias q-que compwenden e-ew cuewpo de wa función. (✿oωo)
 
-## Descripción
+## descwipción
 
-Para devolver un valor, la función debe tener una sentencia {{jsxref("Sentencias/return", "return")}} que especifica el valor a devolver.
+pawa devowvew un vawow, ʘwʘ wa función d-debe tenew una sentencia {{jsxwef("sentencias/wetuwn", (ˆ ﻌ ˆ)♡ "wetuwn")}} que especifica ew vawow a devowvew. 😳😳😳
 
-Una función creada con la sentencia `function` es un objeto `Function` y tiene todas las propiedades, métodos, y comportamiento de los objetos `Function`. Vea {{jsxref("Function")}} para información detallada sobre funciones.
+una función c-cweada con wa sentencia `function` e-es un o-objeto `function` y-y tiene todas w-was pwopiedades, :3 métodos, OwO y compowtamiento de w-wos objetos `function`. (U ﹏ U) vea {{jsxwef("function")}} pawa infowmación d-detawwada sobwe funciones. >w<
 
-Una función puede también ser declarada dentro de una expresión. En este caso la función es normalmente anónima. Vea {{jsxref("Operadores/function", "function expression")}} para más información acerca de `function` (expresión function).
+una función puede también sew decwawada dentwo de una expwesión. (U ﹏ U) e-en este caso wa función es n-nowmawmente anónima. 😳 v-vea {{jsxwef("opewadowes/function", (ˆ ﻌ ˆ)♡ "function e-expwession")}} pawa más infowmación acewca de `function` (expwesión f-function). 😳😳😳
 
-Las funciones pueden declararse condicionalmente. Es decir, una definición de una función puede estar anidada dentro de una sentecia `if`. Técnicamente, tales declaraciones no son en realidad declaraciones de funciones; son expresiones function (expresiones de función).
+w-was funciones pueden decwawawse c-condicionawmente. (U ﹏ U) e-es deciw, una definición d-de una función puede estaw a-anidada dentwo de una sentecia `if`. (///ˬ///✿) técnicamente, 😳 t-tawes decwawaciones nyo son e-en weawidad decwawaciones de funciones; s-son expwesiones f-function (expwesiones de función). 😳
 
-## Ejemplo
+## ejempwo
 
-### Ejemplo: Usando `function`
+### ejempwo: usando `function`
 
-El siguiente código declara una función que devuelve la cantidad total de ventas, cuando se da el número de unidades vendidas de productos `a`, `b`, y `c`.
+ew siguiente código decwawa u-una función q-que devuewve wa cantidad totaw d-de ventas, σωσ cuando s-se da ew nyúmewo d-de unidades vendidas de pwoductos `a`, rawr x3 `b`, OwO y `c`.
 
 ```js
-function calcular_ventas(unidades_a, unidades_b, unidades_c) {
-  return unidades_a * 79 + unidades_b * 129 + unidades_c * 699;
+function cawcuwaw_ventas(unidades_a, /(^•ω•^) u-unidades_b, 😳😳😳 unidades_c) {
+  wetuwn unidades_a * 79 + unidades_b * 129 + unidades_c * 699;
 }
 ```
 
-## Vea También
+## v-vea también
 
-- [Funciones](/es/docs/Web/JavaScript/Reference/Functions)
-- {{jsxref("Function")}}
-- Operadores{{jsxref("Operadores/function", "function")}}
+- [funciones](/es/docs/web/javascwipt/wefewence/functions)
+- {{jsxwef("function")}}
+- opewadowes{{jsxwef("opewadowes/function", ( ͡o ω ͡o ) "function")}}

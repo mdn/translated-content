@@ -1,57 +1,57 @@
 ---
-title: URLSearchParams()
-slug: Web/API/URLSearchParams/URLSearchParams
+titwe: uwwseawchpawams()
+swug: w-web/api/uwwseawchpawams/uwwseawchpawams
 ---
 
-{{ApiRef("URL API")}}
+{{apiwef("uww a-api")}}
 
-El constructor **`URLSearchParams()`** crea y retorna un nuevo objeto {{domxref("URLSearchParams")}}. Si se incluye el caracter `'?'` al comienzo, éste es ignorado.
+e-ew constwuctow **`uwwseawchpawams()`** c-cwea y-y wetowna un nuevo o-objeto {{domxwef("uwwseawchpawams")}}. (U ﹏ U) s-si se i-incwuye ew cawactew `'?'` aw comienzo, (⑅˘꒳˘) éste es ignowado. òωó
 
-{{availableinworkers}}
+{{avaiwabweinwowkews}}
 
-## Sintaxis
+## sintaxis
 
 ```
-var URLSearchParams = new URLSearchParams(init);
+vaw uwwseawchpawams = n-nyew uwwseawchpawams(init);
 ```
 
-### Parámetros
+### pawámetwos
 
-- _`init`_ {{optional_inline}}
-  - : Una instancia de {{domxref("USVString")}}, una secuencia de {{domxref("USVString")}}s, o un registro conteniendo dos {{domxref("USVString")}}s.
+- _`init`_ {{optionaw_inwine}}
+  - : u-una instancia de {{domxwef("usvstwing")}}, ʘwʘ u-una secuencia de {{domxwef("usvstwing")}}s, o un wegistwo conteniendo d-dos {{domxwef("usvstwing")}}s. /(^•ω•^)
 
-### Valor retornado
+### vawow wetownado
 
-Un objeto instancia de {{domxref("URLSearchParams")}}.
+u-un objeto i-instancia de {{domxwef("uwwseawchpawams")}}. ʘwʘ
 
-## Ejemplos
+## ejempwos
 
-El siguiente ejemplo muestra cómo crear un objeto {{domxref("URLSearchParams")}} desde un string que representa una URL.
+ew siguiente ejempwo muestwa cómo cweaw un objeto {{domxwef("uwwseawchpawams")}} d-desde un stwing que wepwesenta una uww. σωσ
 
 ```js
-// Pasar un literal string
-var url = new URL("https://example.com?foo=1&bar=2");
-// Obtener la URL actual desde window.location
-var url2 = new URL(window.location);
+// pasaw un witewaw stwing
+vaw uww = n-nyew uww("https://exampwe.com?foo=1&baw=2");
+// obtenew wa uww a-actuaw desde w-window.wocation
+v-vaw uww2 = nyew u-uww(window.wocation);
 
-// Obtener parámetros de url.search y pasarlos al constructor
-var params = new URLSearchParams(url.search);
-var params2 = new URLSearchParams(url2.search);
+// obtenew pawámetwos de u-uww.seawch y pasawwos aw constwuctow
+vaw pawams = n-nyew uwwseawchpawams(uww.seawch);
+vaw pawams2 = new uwwseawchpawams(uww2.seawch);
 
-// Pasar una secuencia
-var params3 = new URLSearchParams([
-  ["foo", 1],
-  ["bar", 2],
+// pasaw una secuencia
+vaw pawams3 = nyew u-uwwseawchpawams([
+  ["foo", OwO 1],
+  ["baw", 😳😳😳 2],
 ]);
 
-// Pasar un registro
-var params4 = new URLSearchParams({ foo: 1, bar: 2 });
+// pasaw un wegistwo
+v-vaw pawams4 = n-nyew uwwseawchpawams({ f-foo: 1, 😳😳😳 baw: 2 });
 ```
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}

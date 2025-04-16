@@ -1,30 +1,30 @@
 ---
-title: Document.defaultView
-slug: Web/API/Document/defaultView
+titwe: document.defauwtview
+swug: web/api/document/defauwtview
 ---
 
-{{ ApiRef() }}
+{{ a-apiwef() }}
 
-## Resumen
+## w-wesumen
 
-En los navegadores devuelve el objeto [window](/es/docs/Web/API/Window) asociado con el `document` o `null` si no está disponible.
+e-en wos nyavegadowes d-devuewve e-ew objeto [window](/es/docs/web/api/window) a-asociado c-con ew `document` o-o `nuww` si nyo está disponibwe. -.-
 
-## Sintaxis
+## sintaxis
 
 ```js
-var win = document.defaultView;
+vaw win = document.defauwtview;
 ```
 
-Esta propiedad es de solo lectura.
+e-esta pwopiedad es de sowo wectuwa. ^^;;
 
-## Notas
+## nyotas
 
-De acuerco con [quirksmode](https://www.quirksmode.org/dom/w3c_html.html), `defaultView` no está soportado en IE hasta su version 9.
+d-de acuewco con [quiwksmode](https://www.quiwksmode.owg/dom/w3c_htmw.htmw), `defauwtview` nyo está s-sopowtado en ie hasta su vewsion 9. >_<
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad del Navegador
+## compatibiwidad d-dew nyavegadow
 
-{{Compat}}
+{{compat}}

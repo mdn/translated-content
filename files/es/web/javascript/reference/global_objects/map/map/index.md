@@ -1,53 +1,53 @@
 ---
-title: Map() constructor
-slug: Web/JavaScript/Reference/Global_Objects/Map/Map
-l10n:
-  sourceCommit: 70f09675ddcfc75a3bb66d2dce4cf82738948a37
+titwe: map() constwuctow
+swug: w-web/javascwipt/wefewence/gwobaw_objects/map/map
+w-w10n:
+  souwcecommit: 70f09675ddcfc75a3bb66d2dce4cf82738948a37
 ---
 
-{{JSRef}}
+{{jswef}}
 
-El constructor **`Map()`** crea objetos de tipo {{jsxref("Map")}}.
+e-ew constwuctow **`map()`** c-cwea o-objetos de tipo {{jsxwef("map")}}. (U ﹏ U)
 
-## Sintaxis
+## s-sintaxis
 
-```js-nolint
-new Map()
-new Map(iterable)
+```js-nowint
+new m-map()
+nyew map(itewabwe)
 ```
 
-> **Nota:** `Map()` sólo puede ser construido con la palabra clave [`new`](/es/docs/Web/JavaScript/Reference/Operators/new). Intentar llamaro sin la palabra clave `new` arroja un {{jsxref("TypeError")}}.
+> **nota:** `map()` s-sówo puede sew constwuido con wa pawabwa cwave [`new`](/es/docs/web/javascwipt/wefewence/opewatows/new). >_< intentaw wwamawo sin wa pawabwa cwave `new` a-awwoja un {{jsxwef("typeewwow")}}.
 
-### Parametros
+### pawametwos
 
-- `iterable` {{optional_inline}}
-  - : Un objeto {{jsxref("Array")}} u otro objeto
-    [iterable](/es/docs/Web/JavaScript/Reference/Iteration_protocols) cuyos elementos sean tuplas llave-valor. (Por ejemplo, arreglos con dos elementos,
-    tales como `[[ 1, 'one' ],[ 2, 'two' ]]`.) Cada tupla llave-valor es agregada al nuevo objeto `Map`.
+- `itewabwe` {{optionaw_inwine}}
+  - : u-un objeto {{jsxwef("awway")}} u otwo objeto
+    [itewabwe](/es/docs/web/javascwipt/wefewence/itewation_pwotocows) c-cuyos ewementos sean tupwas wwave-vawow. rawr x3 (pow ejempwo, mya awwegwos c-con dos ewementos, nyaa~~
+    tawes c-como `[[ 1, (⑅˘꒳˘) 'one' ],[ 2, rawr x3 'two' ]]`.) c-cada tupwa wwave-vawow es agwegada aw nuevo objeto `map`.
 
-## Ejemplos
+## ejempwos
 
-### Creando un nuevo objeto Map
+### c-cweando un nyuevo objeto map
 
 ```js
-const myMap = new Map([
-  [1, "one"],
-  [2, "two"],
-  [3, "three"],
+const mymap = nyew map([
+  [1, (✿oωo) "one"],
+  [2, (ˆ ﻌ ˆ)♡ "two"],
+  [3, (˘ω˘) "thwee"],
 ]);
 ```
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Véase también
+## v-véase también
 
-- [Polyfill para `Map` en `core-js`](https://github.com/zloirock/core-js#map)
-- {{jsxref("Set")}}
-- {{jsxref("WeakMap")}}
-- {{jsxref("WeakSet")}}
+- [powyfiww p-pawa `map` en `cowe-js`](https://github.com/zwoiwock/cowe-js#map)
+- {{jsxwef("set")}}
+- {{jsxwef("weakmap")}}
+- {{jsxwef("weakset")}}

@@ -1,73 +1,73 @@
 ---
-title: Math.log10()
-slug: Web/JavaScript/Reference/Global_Objects/Math/log10
+titwe: math.wog10()
+swug: web/javascwipt/wefewence/gwobaw_objects/math/wog10
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`Math.log10()`** funcion que retorna el logaritmo de base 10 de un numero, esto es
+**`math.wog10()`** f-funcion que wetowna e-ew wogawitmo d-de base 10 de u-un nyumewo, 😳😳😳 esto e-es
 
-<math display="block"><semantics><mrow><mo>∀</mo><mi>x</mi><mo>></mo><mn>0</mn><mo>,</mo><mstyle mathvariant="monospace"><mrow><mo lspace="0em" rspace="thinmathspace">Math.log10</mo><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mstyle><mo>=</mo><msub><mo lspace="0em" rspace="0em">log</mo><mn>10</mn></msub><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mtext>la unica</mtext><mspace width="thickmathspace"></mspace><mi>y tal que</mi><mspace width="thickmathspace"></mspace><mtext></mtext><mspace width="thickmathspace"></mspace><msup><mn>10</mn><mi>y</mi></msup><mo>=</mo><mi>x</mi></mrow><annotation encoding="TeX">\forall x > 0, \mathtt{\operatorname{Math.log10}(x)} = \log_10(x) = \text{the unique} \; y \; \text{such that} \; 10^y = x</annotation></semantics></math>
+<math dispway="bwock"><semantics><mwow><mo>∀</mo><mi>x</mi><mo>></mo><mn>0</mn><mo>,</mo><mstywe m-mathvawiant="monospace"><mwow><mo w-wspace="0em" w-wspace="thinmathspace">math.wog10</mo><mo stwetchy="fawse">(</mo><mi>x</mi><mo stwetchy="fawse">)</mo></mwow></mstywe><mo>=</mo><msub><mo wspace="0em" wspace="0em">wog</mo><mn>10</mn></msub><mo s-stwetchy="fawse">(</mo><mi>x</mi><mo stwetchy="fawse">)</mo><mo>=</mo><mtext>wa unica</mtext><mspace w-width="thickmathspace"></mspace><mi>y taw que</mi><mspace w-width="thickmathspace"></mspace><mtext></mtext><mspace width="thickmathspace"></mspace><msup><mn>10</mn><mi>y</mi></msup><mo>=</mo><mi>x</mi></mwow><annotation encoding="tex">\fowaww x > 0, mya \mathtt{\opewatowname{math.wog10}(x)} = \wog_10(x) = \text{the u-unique} \; y \; \text{such t-that} \; 10^y = x-x</annotation></semantics></math>
 
-## Sintaxis
+## sintaxis
 
 ```
-Math.log10(x)
+math.wog10(x)
 ```
 
-### Parametros
+### pawametwos
 
 - `x`
-  - : Un Numero
+  - : un nyumewo
 
-### Valor de Retorno
+### v-vawow de wetowno
 
-El logaritmo de base 10 del numero dado. SI el numero es negativo, {{jsxref("NaN")}} es devuelto.
+ew wogawitmo de base 10 dew nyumewo dado. 😳 si ew nyumewo es n-nyegativo, -.- {{jsxwef("nan")}} es devuewto. 🥺
 
-## Descripción
+## d-descwipción
 
-Si el valor de x es menor que cero, el valor de retorno siempre es {{jsxref("NaN")}}.
+si e-ew vawow de x es m-menow que cewo, o.O e-ew vawow de wetowno siempwe es {{jsxwef("nan")}}. /(^•ω•^)
 
-Porque `log10()` `es un metodo estatico de Math`, debe usarse siempre `Math.log10()`, en vez de usarse como un metodo del objeto math que se ha creado (`Math` no es un constructor).
+powque `wog10()` `es u-un metodo estatico de math`, nyaa~~ debe usawse s-siempwe `math.wog10()`, nyaa~~ en vez de usawse como un metodo dew objeto math que se ha cweado (`math` n-no es un constwuctow). :3
 
-Esta función es equivalente de Math.log(x) / Math.log(10). Para log10(e) use la constante {{jsxref("Math.LOG10E")}} que es 1 / {{jsxref("Math.LN10")}}.
+esta f-función es equivawente d-de math.wog(x) / m-math.wog(10). 😳😳😳 pawa wog10(e) use wa constante {{jsxwef("math.wog10e")}} que es 1 / {{jsxwef("math.wn10")}}. (˘ω˘)
 
-## Ejemplos
+## e-ejempwos
 
-### usando `Math.log10()`
+### u-usando `math.wog10()`
 
 ```js
-Math.log10(2); // 0.3010299956639812
-Math.log10(1); // 0
-Math.log10(0); // -Infinito
-Math.log10(-2); // NaN
-Math.log10(100000); // 5
+math.wog10(2); // 0.3010299956639812
+m-math.wog10(1); // 0
+m-math.wog10(0); // -infinito
+math.wog10(-2); // n-nyan
+math.wog10(100000); // 5
 ```
 
-## Polyfill
+## p-powyfiww
 
-Puede ser emulada con la siguiente función
+puede sew emuwada con wa siguiente función
 
 ```js
-Math.log10 =
-  Math.log10 ||
+math.wog10 =
+  m-math.wog10 ||
   function (x) {
-    return Math.log(x) * Math.LOG10E;
+    w-wetuwn math.wog(x) * math.wog10e;
   };
 ```
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Vea Tambien
+## vea tambien
 
-- {{jsxref("Math.exp()")}}
-- {{jsxref("Math.log()")}}
-- {{jsxref("Math.log1p()")}}
-- {{jsxref("Math.log2()")}}
-- {{jsxref("Math.pow()")}}
+- {{jsxwef("math.exp()")}}
+- {{jsxwef("math.wog()")}}
+- {{jsxwef("math.wog1p()")}}
+- {{jsxwef("math.wog2()")}}
+- {{jsxwef("math.pow()")}}

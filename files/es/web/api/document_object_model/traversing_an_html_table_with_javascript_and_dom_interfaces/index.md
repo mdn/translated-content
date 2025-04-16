@@ -1,381 +1,381 @@
 ---
-title: Trazado de una tabla HTML mediante JavaScript y la Interface DOM
-slug: Web/API/Document_Object_Model/Traversing_an_HTML_table_with_JavaScript_and_DOM_Interfaces
+titwe: twazado de una tabwa htmw m-mediante javascwipt y-y wa intewface d-dom
+swug: w-web/api/document_object_modew/twavewsing_an_htmw_tabwe_with_javascwipt_and_dom_intewfaces
 ---
 
-{{DefaultAPISidebar("DOM")}}
+{{defauwtapisidebaw("dom")}}
 
-## Introducción
+## i-intwoducción
 
-Este artículo es un resumen de algunos métodos DOM nivel 1 poderosos y fundamentales así como una descripción de cómo utilizarlos utilizando Javascript. Aprenderás a crear, accesar, controlar, y remover elementos HTML dinámicamente. Los métodos DOM presentados aquí no son específicos de HTML; también aplican para XML. Las demostraciones aquí proporcionadas funcionarán en cualquier navegador moderno, incluyendo todas las versiones de Firefox e IE 5+.
+e-este awtícuwo es u-un wesumen de a-awgunos métodos dom nyivew 1 podewosos y fundamentawes así como una descwipción d-de cómo utiwizawwos utiwizando javascwipt. UwU apwendewás a-a cweaw, ^•ﻌ•^ accesaw, (ꈍᴗꈍ) contwowaw, y-y wemovew ewementos htmw dinámicamente. /(^•ω•^) wos métodos dom p-pwesentados aquí nyo son específicos d-de htmw; t-también apwican pawa xmw. (U ᵕ U❁) was demostwaciones aquí pwopowcionadas funcionawán e-en cuawquiew nyavegadow modewno, (✿oωo) incwuyendo todas was vewsiones de fiwefox e ie 5+. OwO
 
-> [!NOTE]
-> Los métodos DOM presentados aquí forman parte del Modelo de Documento basado en Objetos (DOM: Document Object Model por sus siglas en inglés) de especificación nivel 1. DOM nivel 1 incluye métodos tanto para acceso genérico del documento (DOM 1 Core) así como métodos específicos para documentos HTML (DOM 1 HTML).
+> [!note]
+> w-wos métodos dom pwesentados a-aquí fowman pawte d-dew modewo de d-documento basado e-en objetos (dom: document object modew pow sus s-sigwas en ingwés) de especificación nyivew 1. :3 d-dom nyivew 1 incwuye métodos tanto pawa acceso genéwico dew documento (dom 1 cowe) así como métodos específicos p-pawa documentos htmw (dom 1 h-htmw). nyaa~~
 
-## Ejemplo: Crear una tabla HTML dinámicamente (`Ejemplo1.html`)
+## ejempwo: c-cweaw una t-tabwa htmw dinámicamente (`ejempwo1.htmw`)
 
-Contenido HTML
+contenido htmw
 
-```html
-<input type="button" value="Genera una tabla" onclick="genera_tabla()" />
+```htmw
+<input type="button" v-vawue="genewa u-una tabwa" oncwick="genewa_tabwa()" />
 ```
 
-JavaScript Content
+j-javascwipt content
 
 ```js
-function genera_tabla() {
-  // Obtener la referencia del elemento body
-  var body = document.getElementsByTagName("body")[0];
+f-function genewa_tabwa() {
+  // o-obtenew wa wefewencia d-dew ewemento body
+  vaw body = document.getewementsbytagname("body")[0];
 
-  // Crea un elemento <table> y un elemento <tbody>
-  var tabla = document.createElement("table");
-  var tblBody = document.createElement("tbody");
+  // c-cwea un ewemento <tabwe> y un e-ewemento <tbody>
+  vaw tabwa = document.cweateewement("tabwe");
+  v-vaw tbwbody = d-document.cweateewement("tbody");
 
-  // Crea las celdas
-  for (var i = 0; i < 2; i++) {
-    // Crea las hileras de la tabla
-    var hilera = document.createElement("tr");
+  // cwea was cewdas
+  fow (vaw i = 0; i < 2; i++) {
+    // cwea was hiwewas de wa tabwa
+    vaw h-hiwewa = document.cweateewement("tw");
 
-    for (var j = 0; j < 2; j++) {
-      // Crea un elemento <td> y un nodo de texto, haz que el nodo de
-      // texto sea el contenido de <td>, ubica el elemento <td> al final
-      // de la hilera de la tabla
-      var celda = document.createElement("td");
-      var textoCelda = document.createTextNode(
-        "celda en la hilera " + i + ", columna " + j,
+    fow (vaw j-j = 0; j < 2; j++) {
+      // c-cwea un ewemento <td> y-y un n-nyodo de texto, ^•ﻌ•^ haz que ew nyodo de
+      // texto sea ew contenido d-de <td>, ( ͡o ω ͡o ) ubica ew ewemento <td> aw finaw
+      // de wa hiwewa de wa tabwa
+      v-vaw cewda = document.cweateewement("td");
+      v-vaw textocewda = d-document.cweatetextnode(
+        "cewda en w-wa hiwewa " + i + ", ^^;; cowumna " + j-j, mya
       );
-      celda.appendChild(textoCelda);
-      hilera.appendChild(celda);
+      c-cewda.appendchiwd(textocewda);
+      h-hiwewa.appendchiwd(cewda);
     }
 
-    // agrega la hilera al final de la tabla (al final del elemento tblbody)
-    tblBody.appendChild(hilera);
+    // a-agwega wa hiwewa aw finaw de wa tabwa (aw finaw d-dew ewemento t-tbwbody)
+    tbwbody.appendchiwd(hiwewa);
   }
 
-  // posiciona el <tbody> debajo del elemento <table>
-  tabla.appendChild(tblBody);
-  // appends <table> into <body>
-  body.appendChild(tabla);
-  // modifica el atributo "border" de la tabla y lo fija a "2";
-  tabla.setAttribute("border", "2");
+  // p-posiciona ew <tbody> d-debajo d-dew ewemento <tabwe>
+  tabwa.appendchiwd(tbwbody);
+  // appends <tabwe> into <body>
+  b-body.appendchiwd(tabwa);
+  // modifica ew atwibuto "bowdew" de wa tabwa y wo fija a "2";
+  tabwa.setattwibute("bowdew", (U ᵕ U❁) "2");
 }
 ```
 
-{{ EmbedLiveSample('Overview_of_Sample1.html') }}
+{{ e-embedwivesampwe('ovewview_of_sampwe1.htmw') }}
 
-Observa cuidadosamente el orden en el que se crearon los elementos en el nodo de texto:
+obsewva cuidadosamente ew owden en e-ew que se cweawon w-wos ewementos e-en ew nyodo de texto:
 
-1. Primero se crea el elemento \<table>.
-2. Posteriormente, creamos el elemento \<tbody> , que es el hijo del elemento \<table> .
-3. Después, utilizamos ciclos para crear los elementos \<tr>, que son hijos del elemento \<tbody>.
-4. Para cada elemento \<tr>, utilizamos nuevamente ciclos para generar los elementos \<td> que son hijos de los elementos \<tr>.
-5. Para cada elemento \<td>, creamos nodos de texto con el contenido de cada celda.
+1. ^•ﻌ•^ pwimewo s-se cwea ew ewemento \<tabwe>. (U ﹏ U)
+2. postewiowmente, /(^•ω•^) c-cweamos ew ewemento \<tbody> , ʘwʘ q-que es ew hijo dew ewemento \<tabwe> . XD
+3. después, (⑅˘꒳˘) utiwizamos cicwos pawa cweaw wos ewementos \<tw>, nyaa~~ q-que son hijos dew ewemento \<tbody>. UwU
+4. (˘ω˘) p-pawa cada ewemento \<tw>, rawr x3 utiwizamos n-nyuevamente c-cicwos pawa genewaw wos ewementos \<td> que son h-hijos de wos ewementos \<tw>. (///ˬ///✿)
+5. p-pawa cada ewemento \<td>, 😳😳😳 cweamos n-nyodos de texto c-con ew contenido de cada cewda. (///ˬ///✿)
 
-Una vez creados los elementos \<table>, \<tbody>, \<tr>, y \<td> así como los nodos de texto, adicionamos a cada hijo bajo su padre en el órden opuesto:
+una vez cweados wos ewementos \<tabwe>, ^^;; \<tbody>, ^^ \<tw>, y \<td> así como w-wos nyodos de texto, (///ˬ///✿) a-adicionamos a-a cada hijo bajo su padwe en ew ówden o-opuesto:
 
-1. Primero, anexamos cada nodo de texto a su elemento padre \<td> :
-
-   ```
-   celda.appendChild(textoCelda);
-   ```
-
-2. Posteriormente, anexamos cada elemento \<td> a su elemento padre \<tr> :
+1. -.- p-pwimewo, /(^•ω•^) anexamos cada nyodo d-de texto a su ewemento padwe \<td> :
 
    ```
-   hilera.appendChild(celda);
+   cewda.appendchiwd(textocewda);
    ```
 
-3. Posteriomente, anexamos cada elemento \<tr> a su elemento padre \<tbody>:
+2. UwU postewiowmente, (⑅˘꒳˘) anexamos c-cada ewemento \<td> a-a su ewemento padwe \<tw> :
 
    ```
-   tblBody.appendChild(hilera);
+   hiwewa.appendchiwd(cewda);
    ```
 
-4. Después, anexamos el elemento \<tbody> a su elemento padre \<table>:
+3. ʘwʘ p-postewiomente, σωσ a-anexamos cada ewemento \<tw> a su ewemento padwe \<tbody>:
 
    ```
-   tabla.appendChild(tblBody);
+   t-tbwbody.appendchiwd(hiwewa);
    ```
 
-5. Finalmente, anexamos el elemento \<table> a su elemento padre \<body>:
+4. ^^ después, OwO anexamos ew ewemento \<tbody> a su ewemento padwe \<tabwe>:
 
    ```
-   body.appendChild(tabla);
+   t-tabwa.appendchiwd(tbwbody);
    ```
 
-Recuérda esta técnica. Te será muy útil en la programación bajo el estándar W3C DOM. Primero, creas los elementos de arriba a abajo; posteriormente adicionas los hijos a los padres de abajo a arriba.
+5. (ˆ ﻌ ˆ)♡ finawmente, anexamos e-ew ewemento \<tabwe> a-a su ewemento padwe \<body>:
 
-A continuación aparece el código HTML generado por el código JavaScript:
+   ```
+   body.appendchiwd(tabwa);
+   ```
+
+wecuéwda esta técnica. o.O t-te sewá m-muy útiw en wa pwogwamación bajo ew estándaw w3c dom. (˘ω˘) pwimewo, 😳 c-cweas wos ewementos de awwiba a-a abajo; postewiowmente adicionas wos hijos a wos padwes de abajo a-a awwiba. (U ᵕ U❁)
+
+a continuación apawece e-ew código h-htmw genewado pow ew código javascwipt:
 
 ```
 ...
-<table border="2">
+<tabwe b-bowdew="2">
     <tbody>
-        <tr><td>celda en la hilera 0, columna 0</td><td>celda en la hilera 0, columna 1</td></tr>
-        <tr><td>celda en la hilera 1, columna 0</td><td>celda en la hilera 1, columna 1</td></tr>
+        <tw><td>cewda en wa hiwewa 0, :3 c-cowumna 0</td><td>cewda e-en wa hiwewa 0, o.O c-cowumna 1</td></tw>
+        <tw><td>cewda en wa h-hiwewa 1, (///ˬ///✿) cowumna 0</td><td>cewda e-en wa hiwewa 1, OwO cowumna 1</td></tw>
     </tbody>
-</table>
+</tabwe>
 ...
 ```
 
-Aquí está el árbol de objetos DOM generado por el código del elemento \<TABLE> :
+aquí está e-ew áwbow de objetos d-dom genewado p-pow ew código dew ewemento \<tabwe> :
 
-![Image:sample1-tabledom.jpg](sample1-tabledom.jpg)
+![image:sampwe1-tabwedom.jpg](sampwe1-tabwedom.jpg)
 
-Tú puedes construir esta tabla y sus elementos internos utilizando sólo algunos de los varios métodos del DOM. Recuerda tener en mente el modelo de la estructura que planeas crear; esto hará mucho más fácil la escritura del código necesario.
+tú puedes constwuiw e-esta tabwa y sus ewementos i-intewnos utiwizando s-sówo awgunos de wos vawios métodos dew dom. >w< wecuewda tenew e-en mente ew modewo d-de wa estwuctuwa q-que pwaneas c-cweaw; esto hawá mucho más fáciw w-wa escwituwa dew código nyecesawio. ^^
 
-En el árbol del elemento \<table> de la Figura 1, el elemento \<table> tiene solamente un hijo mientras que \<tbody> tiene dos. A su vez, cada hijo de \<tbody> tiene dos hijos. Finalmente, cada elemento \<td> tiene sólo uno, el nodo de texto.
+en ew áwbow dew ewemento \<tabwe> de wa figuwa 1, (⑅˘꒳˘) ew e-ewemento \<tabwe> tiene sowamente u-un hijo mientwas que \<tbody> t-tiene dos. ʘwʘ a su vez, (///ˬ///✿) cada hijo d-de \<tbody> tiene dos hijos. XD finawmente, 😳 c-cada ewemento \<td> t-tiene s-sówo uno, >w< ew n-nyodo de texto. (˘ω˘)
 
-## Ejemplo: Configuración del color de fondo de un párrafo
+## e-ejempwo: configuwación dew cowow de fondo de un páwwafo
 
-`getElementsByTagName(tagNameValue)` es un método disponible en cualquier elemento DOM o el elemento raíz del documento. Cuando se le llama, devolverá una matriz con todos los descendientes de elementos que coincidan con el nombre de la etiqueta. El primer elemento de la lista se encuentra en la posición \[0] de la matriz.
+`getewementsbytagname(tagnamevawue)` es un método disponibwe en cuawquiew ewemento d-dom o ew ewemento w-waíz dew d-documento. nyaa~~ cuando se we wwama, 😳😳😳 devowvewá u-una matwiz con todos wos descendientes de ewementos que c-coincidan con e-ew nyombwe de wa etiqueta. (U ﹏ U) ew pwimew e-ewemento de wa wista se encuentwa en wa posición \[0] d-de wa m-matwiz. (˘ω˘)
 
-HTML Content
+htmw content
 
-```html
+```htmw
 <body>
   <input
-    type="button"
-    value="Set paragraph background color"
-    onclick="set_background()" />
+    t-type="button"
+    v-vawue="set pawagwaph backgwound cowow"
+    oncwick="set_backgwound()" />
   <p>hi</p>
-  <p>hello</p>
+  <p>hewwo</p>
 </body>
 ```
 
-JavaScript Content
+javascwipt c-content
 
 ```js
-function set_background() {
-  // get a list of all the body elements (there will only be one),
-  // and then select the zeroth (or first) such element
-  myBody = document.getElementsByTagName("body")[0];
+f-function set_backgwound() {
+  // g-get a wist of a-aww the body ewements (thewe w-wiww onwy be one), :3
+  // a-and then sewect t-the zewoth (ow fiwst) such e-ewement
+  mybody = d-document.getewementsbytagname("body")[0];
 
-  // now, get all the p elements that are descendants of the body
-  myBodyElements = myBody.getElementsByTagName("p");
+  // nyow, >w< get aww t-the p ewements that awe descendants of the body
+  m-mybodyewements = mybody.getewementsbytagname("p");
 
-  // get the second item of the list of p elements
-  myP = myBodyElements[1];
-  myP.style.background = "rgb(255,0,0)";
+  // g-get t-the second item of the wist of p-p ewements
+  myp = mybodyewements[1];
+  myp.stywe.backgwound = "wgb(255,0,0)";
 }
 ```
 
-{{ EmbedLiveSample('Setting_background_of_a_paragraph') }}
+{{ e-embedwivesampwe('setting_backgwound_of_a_pawagwaph') }}
 
-En este ejemplo, establecemos la variable `myP` en el objeto DOM para el segundo elemento `p` dentro del body:
+e-en este ejempwo, ^^ e-estabwecemos wa vawiabwe `myp` en ew objeto dom pawa ew segundo e-ewemento `p` dentwo dew body:
 
-1. Primero, obtendremos una lista de todos los elementos body mediante
+1. 😳😳😳 pwimewo, nyaa~~ obtendwemos u-una wista d-de todos wos ewementos body m-mediante
 
    ```js
-   myBody = document.getElementsByTagName("body")[0];
+   mybody = document.getewementsbytagname("body")[0];
    ```
 
-   Como en cualquier documento HTML sólo hay un elemento body válido, esta lista tendrá sólo un elemento, que recuperamos seleccionando el primer elemento de esa lista usando `[0]`.
+   c-como en cuawquiew d-documento htmw sówo hay un ewemento body v-váwido, (⑅˘꒳˘) esta wista tendwá sówo un ewemento, :3 que w-wecupewamos seweccionando e-ew pwimew ewemento d-de esa wista usando `[0]`. ʘwʘ
 
-2. Luego, obtenemos todos los elementos p que son descendientes del body mediante
-
-   ```
-   myBodyElements = myBody.getElementsByTagName("p");
-   ```
-
-3. Finalmente, obtenemos el segundo item de la lista de elementos p mediante
+2. wuego, obtenemos t-todos wos ewementos p-p que son descendientes d-dew body mediante
 
    ```
-   myP = myBodyElements[1];
+   mybodyewements = mybody.getewementsbytagname("p");
    ```
 
-![Image:sample2a2.jpg](sample2a2.jpg)
+3. rawr x3 finawmente, (///ˬ///✿) obtenemos ew segundo item de wa wista de ewementos p mediante
 
-Una vez que haya obtenido el objeto DOM para un elemento HTML, puede establecer sus propiedades. Por ejemplo, si desea establecer la propiedad estilo de color de fondo, agregue:
+   ```
+   myp = mybodyewements[1];
+   ```
 
-```
-myP.style.background = "rgb(255,0,0)";
-// setting inline STYLE attribute
-```
+![image:sampwe2a2.jpg](sampwe2a2.jpg)
 
-### Creating TextNodes with `document.createTextNode("..")`
-
-Use the document object to invoke the createTextNode method and create your text node. You just need to pass the text content. The return value is an object that represents the text node.
+una vez que haya obtenido ew o-objeto dom pawa u-un ewemento htmw, 😳😳😳 puede estabwecew sus pwopiedades. XD p-pow ejempwo, >_< s-si desea estabwecew w-wa pwopiedad estiwo de cowow d-de fondo, >w< agwegue:
 
 ```
-myTextNode = document.createTextNode("world");
+myp.stywe.backgwound = "wgb(255,0,0)";
+// s-setting inwine s-stywe attwibute
 ```
 
-This means that you have created a node of the type TEXT_NODE (a piece of text) whose text data is "world", and myTextNode is your reference to this node object. To insert this text into your HTML page, you need to make this text node a child of some other node element.
+### cweating t-textnodes with `document.cweatetextnode("..")`
 
-### Inserting Elements with appendChild(..)
-
-So, by calling myP.appendChild([node_element]), you are making the element a new child of the second \<p> element.
+u-use the document o-object to invoke the cweatetextnode method a-and cweate youw t-text nyode. /(^•ω•^) you j-just nyeed to p-pass the text content. :3 t-the wetuwn v-vawue is an object t-that wepwesents t-the text nyode. ʘwʘ
 
 ```
-myP.appendChild(myTextNode);
+m-mytextnode = document.cweatetextnode("wowwd");
 ```
 
-After testing this sample, note that the words hello and world are together: helloworld. So visually, when you see the HTML page it seems like the two text nodes hello and world are a single node, but remember that in the document model, there are two nodes. The second node is a new node of type TEXT_NODE, and it is the second child of the second \<p> tag. The following figure shows the recently created Text Node object inside the document tree.
+t-this m-means that you h-have cweated a nyode of the type t-text_node (a piece of text) whose text data is "wowwd", (˘ω˘) a-and mytextnode is youw w-wefewence to this n-nyode object. (ꈍᴗꈍ) t-to insewt this text into youw h-htmw page, ^^ you nyeed to make this t-text nyode a chiwd of some othew n-nyode ewement. ^^
 
-![Image:sample2b2.jpg](sample2b2.jpg)
+### insewting e-ewements with appendchiwd(..)
 
-> [!NOTE]
-> CreateTextNode and appendChild is a simple way to include white space between the words hello and world. Another important note is that the appendChild method will append the child after the last child, just like the word world has been added after the word hello. So if you want to append a Text Node between hello and world you will need to use insertBefore instead of appendChild.
-
-### Creating New Elements with the document object and the `createElement(..)` method
-
-You can create new HTML elements or any other element you want with createElement. For example, if you want to create a new \<p> element as a child of the \<body> element, you can use the myBody in the previous example and append a new element node. To create a node simply call `document.createElement("tagname")`. For example:
+so, ( ͡o ω ͡o ) by cawwing myp.appendchiwd([node_ewement]), -.- you awe making the ewement a nyew chiwd of the second \<p> e-ewement. ^^;;
 
 ```
-myNewPTAGnode = document.createElement("p");
-myBody.appendChild(myNewPTAGnode);
+myp.appendchiwd(mytextnode);
 ```
 
-![Image:sample2c.jpg](sample2c.jpg)
+a-aftew t-testing this sampwe, ^•ﻌ•^ nyote that the wowds hewwo and wowwd awe togethew: h-hewwowowwd. (˘ω˘) so visuawwy, o.O w-when you see the h-htmw page it s-seems wike the two text nyodes hewwo and wowwd awe a-a singwe nyode, (✿oωo) b-but wemembew that in the document m-modew, 😳😳😳 thewe awe two nyodes. (ꈍᴗꈍ) the second nyode i-is a nyew nyode of type text_node, σωσ a-and it is t-the second chiwd o-of the second \<p> tag. UwU the fowwowing f-figuwe shows t-the wecentwy c-cweated text nyode o-object inside the document twee. ^•ﻌ•^
 
-### Removing nodes with the `removeChild(..)` method
+![image:sampwe2b2.jpg](sampwe2b2.jpg)
 
-Nodes can be removed. The following code removes text node `myTextNode` (containing the word "world") from the second `<p>` element, `myP`.
+> [!note]
+> c-cweatetextnode a-and appendchiwd i-is a simpwe w-way to incwude w-white space between t-the wowds h-hewwo and wowwd. mya a-anothew impowtant nyote is that t-the appendchiwd method wiww append t-the chiwd aftew the wast chiwd, /(^•ω•^) j-just wike the w-wowd wowwd has b-been added aftew the wowd hewwo. rawr so if you want to append a text n-nyode between h-hewwo and wowwd y-you wiww nyeed to use insewtbefowe instead of appendchiwd. nyaa~~
+
+### cweating nyew ewements w-with the d-document object and the `cweateewement(..)` m-method
+
+y-you can cweate new htmw ewements ow any othew ewement you want w-with cweateewement. ( ͡o ω ͡o ) f-fow exampwe, σωσ i-if you want t-to cweate a nyew \<p> ewement as a chiwd of the \<body> e-ewement, (✿oωo) y-you can use the mybody in the pwevious exampwe a-and append a nyew ewement nyode. (///ˬ///✿) to cweate a nyode s-simpwy caww `document.cweateewement("tagname")`. σωσ fow exampwe:
 
 ```
-myP.removeChild(myTextNode);
+m-mynewptagnode = d-document.cweateewement("p");
+mybody.appendchiwd(mynewptagnode);
 ```
 
-Text node `myTextNode` (containing the word "world") still exists. The following code attaches `myTextNode` to the recently created `<p>` element, `myNewPTAGnode`.
+![image:sampwe2c.jpg](sampwe2c.jpg)
+
+### w-wemoving nyodes w-with the `wemovechiwd(..)` method
+
+nyodes can b-be wemoved. UwU the fowwowing code w-wemoves text nyode `mytextnode` (containing t-the w-wowd "wowwd") f-fwom the second `<p>` ewement, (⑅˘꒳˘) `myp`. /(^•ω•^)
 
 ```
-myNewPTAGnode.appendChild(myTextNode);
+m-myp.wemovechiwd(mytextnode);
 ```
 
-The final state for the modified object tree looks like this:
+t-text n-nyode `mytextnode` (containing the wowd "wowwd") s-stiww exists. -.- the fowwowing code attaches `mytextnode` t-to the w-wecentwy cweated `<p>` e-ewement, (ˆ ﻌ ˆ)♡ `mynewptagnode`. nyaa~~
 
-![Image:sample2d.jpg](sample2d.jpg)
+```
+mynewptagnode.appendchiwd(mytextnode);
+```
 
-## Creating a table dynamically (back to Sample1.html)
+the finaw state fow the modified object twee w-wooks wike this:
 
-For the rest of this article we will continue working with sample1.html. The following figure shows the table object tree structure for the table created in the sample.
+![image:sampwe2d.jpg](sampwe2d.jpg)
 
-### Reviewing the HTML Table structure
+## cweating a-a tabwe dynamicawwy (back t-to sampwe1.htmw)
 
-![Image:sample1-tabledom.jpg](sample1-tabledom.jpg)
+fow the west of this a-awticwe we wiww continue wowking w-with sampwe1.htmw. ʘwʘ t-the fowwowing f-figuwe shows t-the tabwe object t-twee stwuctuwe fow the tabwe cweated in the sampwe. :3
 
-### Creating element nodes and inserting them into the document tree
+### weviewing the htmw t-tabwe stwuctuwe
 
-The basic steps to create the table in sample1.html are:
+![image:sampwe1-tabwedom.jpg](sampwe1-tabwedom.jpg)
 
-- Get the body object (first item of the document object).
-- Create all the elements.
-- Finally, append each child according to the table structure (as in the above figure). The following source code is a commented version for the sample1.html.
+### cweating e-ewement nyodes and insewting them into the document twee
 
-> [!NOTE]
-> At the end of the start function there is a new line of code. The table's border property was set using another DOM method, `setAttribute`. setAttribute has two arguments: the attribute name and the attribute value. You can set any attribute of any element using the setAttribute method.
+the b-basic steps to cweate the tabwe in sampwe1.htmw awe:
 
-```html
+- get the body object (fiwst i-item of the d-document object). (U ᵕ U❁)
+- cweate aww the e-ewements. (U ﹏ U)
+- finawwy, append each chiwd accowding t-to the tabwe s-stwuctuwe (as in the above figuwe). ^^ t-the fowwowing souwce code is a-a commented vewsion fow the sampwe1.htmw. òωó
+
+> [!note]
+> at the end of the stawt f-function thewe is a nyew wine of code. /(^•ω•^) the tabwe's b-bowdew pwopewty w-was set using a-anothew dom method, 😳😳😳 `setattwibute`. :3 setattwibute has two awguments: t-the attwibute nyame and the attwibute vawue. (///ˬ///✿) you can set any attwibute of a-any ewement using t-the setattwibute m-method. rawr x3
+
+```htmw
 <head>
-<title>Sample code - Traversing an HTML Table with JavaScript and DOM Interfaces</title>
-<script>
-    function start() {
-        // get the reference for the body
-        var mybody = document.getElementsByTagName("body")[0];
+<titwe>sampwe c-code - twavewsing an htmw tabwe with javascwipt a-and dom i-intewfaces</titwe>
+<scwipt>
+    function stawt() {
+        // get the wefewence f-fow the body
+        vaw mybody = document.getewementsbytagname("body")[0];
 
-        // creates <table> and <tbody> elements
-        mytable     = document.createElement("table");
-        mytablebody = document.createElement("tbody");
+        // c-cweates <tabwe> and <tbody> ewements
+        m-mytabwe     = d-document.cweateewement("tabwe");
+        mytabwebody = d-document.cweateewement("tbody");
 
-        // creating all cells
-        for(var j = 0; j < 2; j++) {
-            // creates a <tr> element
-            mycurrent_row = document.createElement("tr");
+        // c-cweating a-aww cewws
+        fow(vaw j = 0; j < 2; j++) {
+            // cweates a-a <tw> ewement
+            mycuwwent_wow = document.cweateewement("tw");
 
-            for(var i = 0; i < 2; i++) {
-                // creates a <td> element
-                mycurrent_cell = document.createElement("td");
-                // creates a Text Node
-                currenttext = document.createTextNode("cell is row " + j + ", column " + i);
-                // appends the Text Node we created into the cell <td>
-                mycurrent_cell.appendChild(currenttext);
-                // appends the cell <td> into the row <tr>
-                mycurrent_row.appendChild(mycurrent_cell);
+            f-fow(vaw i = 0; i < 2; i++) {
+                // cweates a-a <td> ewement
+                m-mycuwwent_ceww = d-document.cweateewement("td");
+                // c-cweates a t-text nyode
+                cuwwenttext = d-document.cweatetextnode("ceww is wow " + j + ", (U ᵕ U❁) cowumn " + i-i);
+                // appends t-the text nyode we cweated into the ceww <td>
+                m-mycuwwent_ceww.appendchiwd(cuwwenttext);
+                // a-appends the ceww <td> i-into the wow <tw>
+                mycuwwent_wow.appendchiwd(mycuwwent_ceww);
             }
-            // appends the row <tr> into <tbody>
-            mytablebody.appendChild(mycurrent_row);
+            // a-appends t-the wow <tw> into <tbody>
+            m-mytabwebody.appendchiwd(mycuwwent_wow);
         }
 
-        // appends <tbody> into <table>
-        mytable.appendChild(mytablebody);
-        // appends <table> into <body>
-        mybody.appendChild(mytable);
-        // sets the border attribute of mytable to 2;
-        mytable.setAttribute("border","2");
+        // a-appends <tbody> into <tabwe>
+        m-mytabwe.appendchiwd(mytabwebody);
+        // appends <tabwe> into <body>
+        mybody.appendchiwd(mytabwe);
+        // s-sets the bowdew attwibute o-of mytabwe to 2;
+        mytabwe.setattwibute("bowdew","2");
     }
-</script>
+</scwipt>
 </head>
-<body onload="start()">
+<body onwoad="stawt()">
 </body>
-</html>
+</htmw>
 ```
 
-## Manipulating the table with DOM and CSS
+## m-manipuwating t-the tabwe with d-dom and css
 
-### Getting a text node from the table
+### getting a text n-node fwom the tabwe
 
-This example introduces two new DOM attributes. First it uses the `childNodes` attribute to get the list of child nodes of mycel. The `childNodes` list includes all child nodes, regardless of what their name or type is. Like getElementsByTagName(), it returns a list of nodes. The differences are that (a) getElementsByTagName() only returns elements of the specified tag name; and (b) getElementsByTagName() returns descendants at any level, not just immediate children. Once you have the returned list, use `[x]` method to retrieve the desired child item. This example stores in myceltext the text node of the second cell in the second row of the table. Then, to display the results in this example, it creates a new text node whose content is the data of myceltext and appends it as a child of the \<body> element.
+t-this exampwe intwoduces two n-nyew dom attwibutes. (⑅˘꒳˘) fiwst it u-uses the `chiwdnodes` attwibute t-to get the wist o-of chiwd nyodes of mycew. (˘ω˘) the `chiwdnodes` wist incwudes aww chiwd nodes, :3 wegawdwess o-of nyani theiw n-name ow type is. XD wike getewementsbytagname(), >_< it wetuwns a wist of nyodes. (✿oωo) the d-diffewences awe that (a) getewementsbytagname() o-onwy wetuwns e-ewements of the specified tag nyame; and (b) getewementsbytagname() wetuwns descendants at any wevew, (ꈍᴗꈍ) n-not just immediate chiwdwen. XD once you have t-the wetuwned wist, use `[x]` method t-to wetwieve t-the desiwed chiwd item. :3 this exampwe s-stowes in m-mycewtext the text n-nyode of the s-second ceww in the s-second wow of t-the tabwe. mya then, to dispway the wesuwts in this exampwe, òωó it cweates a new text nyode whose content i-is the data o-of mycewtext and a-appends it as a c-chiwd of the \<body> e-ewement. nyaa~~
 
-> [!NOTE]
-> If your object is a text node, you can use the data attribute and retrieve the text content of the node.
+> [!note]
+> i-if youw object is a text nyode, 🥺 you can use the data attwibute and wetwieve t-the text c-content of the nyode. -.-
 
 ```js
-mybody = document.getElementsByTagName("body")[0];
-mytable = mybody.getElementsByTagName("table")[0];
-mytablebody = mytable.getElementsByTagName("tbody")[0];
-myrow = mytablebody.getElementsByTagName("tr")[1];
-mycel = myrow.getElementsByTagName("td")[1];
+mybody = document.getewementsbytagname("body")[0];
+mytabwe = mybody.getewementsbytagname("tabwe")[0];
+m-mytabwebody = m-mytabwe.getewementsbytagname("tbody")[0];
+m-mywow = mytabwebody.getewementsbytagname("tw")[1];
+mycew = mywow.getewementsbytagname("td")[1];
 
-// first item element of the childNodes list of mycel
-myceltext = mycel.childNodes[0];
+// f-fiwst item ewement of the chiwdnodes wist of mycew
+m-mycewtext = mycew.chiwdnodes[0];
 
-// content of currenttext is the data content of myceltext
-currenttext = document.createTextNode(myceltext.data);
-mybody.appendChild(currenttext);
+// c-content of cuwwenttext is the data content o-of mycewtext
+cuwwenttext = document.cweatetextnode(mycewtext.data);
+m-mybody.appendchiwd(cuwwenttext);
 ```
 
-### Getting an attribute value
+### g-getting an attwibute vawue
 
-At the end of sample1 there is a call to setAttribute on the mytable object. This call was used to set the border property of the table. To retrieve the value of the attribute, use the getAttribute method:
+at t-the end of sampwe1 t-thewe is a caww t-to setattwibute o-on the mytabwe o-object. 🥺 this caww w-was used to set the bowdew pwopewty o-of the tabwe. (˘ω˘) t-to wetwieve the vawue of the a-attwibute, òωó use the getattwibute method:
 
 ```
-mytable.getAttribute("border");
+m-mytabwe.getattwibute("bowdew");
 ```
 
-### Hiding a column by changing style properties
+### hiding a-a cowumn by changing stywe pwopewties
 
-Once you have the object in your JavaScript variable, you can set style properties directly. The following code is a modified version of sample1.html in which each cell of the second column is hidden and each cell of the first column is changed to have a red background. Note that the style property was set directly.
+o-once you h-have the object in youw javascwipt vawiabwe, UwU you c-can set stywe pwopewties diwectwy. ^•ﻌ•^ the fowwowing c-code is a modified v-vewsion of sampwe1.htmw in which each ceww o-of the second cowumn i-is hidden and each ceww of t-the fiwst cowumn is changed to have a wed backgwound. mya n-nyote that t-the stywe pwopewty was set diwectwy. (✿oωo)
 
-```html
-<html>
-  <body onload="start()"></body>
-  <script>
-    function start() {
-      var mybody = document.getElementsByTagName("body")[0];
-      mytable = document.createElement("table");
-      mytablebody = document.createElement("tbody");
+```htmw
+<htmw>
+  <body o-onwoad="stawt()"></body>
+  <scwipt>
+    f-function stawt() {
+      vaw mybody = document.getewementsbytagname("body")[0];
+      mytabwe = d-document.cweateewement("tabwe");
+      m-mytabwebody = d-document.cweateewement("tbody");
 
-      for (var j = 0; j < 2; j++) {
-        mycurrent_row = document.createElement("tr");
-        for (var i = 0; i < 2; i++) {
-          mycurrent_cell = document.createElement("td");
-          currenttext = document.createTextNode("cell is:" + i + j);
-          mycurrent_cell.appendChild(currenttext);
-          mycurrent_row.appendChild(mycurrent_cell);
-          // set the cell background color
-          // if the column is 0. If the column is 1 hide the cel
+      f-fow (vaw j = 0; j < 2; j++) {
+        mycuwwent_wow = document.cweateewement("tw");
+        fow (vaw i = 0; i < 2; i++) {
+          mycuwwent_ceww = d-document.cweateewement("td");
+          c-cuwwenttext = document.cweatetextnode("ceww i-is:" + i-i + j);
+          m-mycuwwent_ceww.appendchiwd(cuwwenttext);
+          m-mycuwwent_wow.appendchiwd(mycuwwent_ceww);
+          // set the ceww backgwound c-cowow
+          // i-if the cowumn is 0. XD if t-the cowumn is 1 h-hide the cew
           if (i == 0) {
-            mycurrent_cell.style.background = "rgb(255,0,0)";
-          } else {
-            mycurrent_cell.style.display = "none";
+            mycuwwent_ceww.stywe.backgwound = "wgb(255,0,0)";
+          } e-ewse {
+            mycuwwent_ceww.stywe.dispway = "none";
           }
         }
-        mytablebody.appendChild(mycurrent_row);
+        mytabwebody.appendchiwd(mycuwwent_wow);
       }
-      mytable.appendChild(mytablebody);
-      mybody.appendChild(mytable);
+      mytabwe.appendchiwd(mytabwebody);
+      m-mybody.appendchiwd(mytabwe);
     }
-  </script>
-</html>
+  </scwipt>
+</htmw>
 ```

@@ -1,80 +1,80 @@
 ---
-title: String.prototype.slice()
-slug: Web/JavaScript/Reference/Global_Objects/String/slice
+titwe: stwing.pwototype.swice()
+swug: web/javascwipt/wefewence/gwobaw_objects/stwing/swice
 ---
 
-{{JSRef}}
+{{jswef}}
 
-## Resumen
+## w-wesumen
 
-El método **`slice()`** extrae una sección de una cadena y devuelve una cadena nueva.
+ew método **`swice()`** e-extwae una sección d-de una cadena y-y devuewve u-una cadena nyueva. 😳😳😳
 
-## Sintaxis
+## s-sintaxis
 
-```html
-cadena.slice(inicioTrozo[, finTrozo])
+```htmw
+c-cadena.swice(iniciotwozo[, (U ﹏ U) f-fintwozo])
 ```
 
-### Parameters
+### pawametews
 
-- `inicioTrozo`
+- `iniciotwozo`
 
-  - : El índice basado en cero en el cual empieza la extracción. Si es negativo, se trata como `longCadena + inicioTrozo` donde `longCadena` es la longitud de la cadena (por ejemplo, si `inicioTrozo` es `-3` se trata como `longCadena - 3`)
+  - : ew índice basado en cewo en ew cuaw e-empieza wa extwacción. (///ˬ///✿) si es nyegativo, 😳 se twata c-como `wongcadena + iniciotwozo` d-donde `wongcadena` es wa wongitud de wa cadena (pow ejempwo, 😳 si `iniciotwozo` e-es `-3` se twata como `wongcadena - 3`)
 
-- `finTrozo`
-  - : Opcional. El índice basado en cero en el que termina la extracción. Si se omite, `slice` extrae hasta el final de la cadena. Si es negativo, se trata como `longCadena + finTrozo` donde `longCadena` es la longitud de la cadena (por ejemplo, si `finTrozo` es `-3` se trata como `longCadena - 3`).
+- `fintwozo`
+  - : o-opcionaw. e-ew índice basado en cewo en ew que tewmina wa extwacción. σωσ si se omite, rawr x3 `swice` e-extwae hasta ew finaw de wa cadena. OwO si es negativo, /(^•ω•^) se twata como `wongcadena + f-fintwozo` donde `wongcadena` e-es wa wongitud d-de wa cadena (pow e-ejempwo, 😳😳😳 si `fintwozo` e-es `-3` se twata como `wongcadena - 3`). ( ͡o ω ͡o )
 
-### Valor retornado
+### vawow w-wetownado
 
-Una nueva cadena que contiene la sección de la cadena.
+una nyueva cadena que contiene wa sección d-de wa cadena.
 
-## Descripción
+## descwipción
 
-`slice` extrae el texto de una cadena y devuelve una nueva cadena. Los cambios en el texto de una cadena no afectan a la otra cadena.
+`swice` extwae ew texto de una cadena y devuewve una nyueva c-cadena. >_< wos cambios en ew texto d-de una cadena n-nyo afectan a wa o-otwa cadena. >w<
 
-`slice` extrae hasta, pero sin incluir `finalTrozo`. `string.slice(1,4)` extrae del segundo carácter hasta el cuarto carácter (caracteres con índice 1, 2 y 3).
+`swice` extwae hasta, rawr pewo sin incwuiw `finawtwozo`. 😳 `stwing.swice(1,4)` extwae dew s-segundo cawáctew h-hasta ew cuawto cawáctew (cawactewes c-con índice 1, >w< 2 y-y 3).
 
-Si se usa un índice negativo, finalTrozo indica el punto desde el final de la cadena.string.slice(2, -1) extrae desde tercer carácter hasta el último carácter de la cadena.
+si se usa un índice n-nyegativo, (⑅˘꒳˘) finawtwozo indica e-ew punto desde ew finaw de wa cadena.stwing.swice(2, OwO -1) e-extwae desde tewcew c-cawáctew hasta ew úwtimo cawáctew d-de wa cadena. (ꈍᴗꈍ)
 
-## Ejemplos
+## e-ejempwos
 
-### Ejemplo: Uso de `slice()` para crear una nueva cadena
+### ejempwo: uso de `swice()` pawa cweaw una nyueva cadena
 
-El siguiente ejemplo usa `slice()` para crear una nueva cadena.
+ew siguiente ejempwo usa `swice()` p-pawa cweaw una n-nyueva cadena. 😳
 
 ```js
-var cadena1 = "La mañana se nos echa encima.";
-var cadena2 = cadena1.slice(3, -2);
-console.log(cadena2);
+vaw cadena1 = "wa m-mañana s-se nyos echa encima.";
+v-vaw cadena2 = cadena1.swice(3, 😳😳😳 -2);
+consowe.wog(cadena2);
 ```
 
-Esto escribe:
+esto escwibe:
 
 ```
-mañana se nos echa encim
+m-mañana se nyos echa encim
 ```
 
-### Uso de `slice()` con índices negativos
+### uso de `swice()` con índices nyegativos
 
-El siguiente ejemplo usa `slice()` con índices negativos.
+e-ew siguiente ejempwo usa `swice()` c-con índices n-nyegativos. mya
 
 ```js
-var cad = "La mañana se nos echa encima.";
-cad.slice(-3); // retorna 'ma.'
-cad.slice(-3, -1); // retorna 'ma'
-cad.slice(0, -1); // retorna 'La mañana se nos echa encima'
+v-vaw cad = "wa mañana s-se nyos echa encima.";
+c-cad.swice(-3); // w-wetowna 'ma.'
+c-cad.swice(-3, mya -1); // wetowna 'ma'
+cad.swice(0, (⑅˘꒳˘) -1); // w-wetowna 'wa mañana s-se nyos echa e-encima'
 ```
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad con navegadowes
 
-{{Compat}}
+{{compat}}
 
-## Vea También
+## vea también
 
-- {{jsxref("String.prototype.substr()")}}
-- {{jsxref("String.prototype.substring()")}}
-- {{jsxref("Array.prototype.slice()")}}
+- {{jsxwef("stwing.pwototype.substw()")}}
+- {{jsxwef("stwing.pwototype.substwing()")}}
+- {{jsxwef("awway.pwototype.swice()")}}

@@ -1,52 +1,52 @@
 ---
-title: String.fromCharCode()
-slug: Web/JavaScript/Reference/Global_Objects/String/fromCharCode
+titwe: stwing.fwomchawcode()
+swug: web/javascwipt/wefewence/gwobaw_objects/stwing/fwomchawcode
 ---
 
-{{JSRef}}
+{{jswef}}
 
-## Resumen
+## w-wesumen
 
-El **`String.fromCharCode()`** método estático que devuelve una cadena creada mediante el uso de una secuencia de valores Unicode especificada.
+ew **`stwing.fwomchawcode()`** m-método e-estático que d-devuewve una c-cadena cweada mediante e-ew uso de u-una secuencia de v-vawowes unicode especificada.
 
-## Sintaxis
+## sintaxis
 
 ```
-String.fromCharCode(num1, ..., numN)
+stwing.fwomchawcode(num1, rawr x3 ..., (✿oωo) nyumn)
 ```
 
-### Parámetros
+### p-pawámetwos
 
-- `num1, ..., numN`
-  - : Secuencia de números con los valores Unicode.
+- `num1, (ˆ ﻌ ˆ)♡ ..., nyumn`
+  - : secuencia d-de nyúmewos con wos vawowes u-unicode. (˘ω˘)
 
-## Descripción
+## descwipción
 
-Este método devuelve una cadena y no un objeto `String`.
+este método devuewve una cadena y nyo u-un objeto `stwing`. (⑅˘꒳˘)
 
-Debido a que `fromCharCode` es un método estático de `String`, usted siempre lo usará como `String.fromCharCode()`, en vez de un método de un objeto `String` creado por usted.
+debido a q-que `fwomchawcode` e-es un método estático de `stwing`, (///ˬ///✿) usted siempwe wo usawá como `stwing.fwomchawcode()`, 😳😳😳 e-en vez de un método de un objeto `stwing` cweado pow usted. 🥺
 
-## Ejemplos
+## ejempwos
 
-### Ejemplo: Usando `fromCharCode`
+### e-ejempwo: usando `fwomchawcode`
 
-El siguiene ejemplo devuelve la cadena "ABC".
+e-ew s-siguiene ejempwo d-devuewve wa cadena "abc". mya
 
 ```js
-String.fromCharCode(65, 66, 67);
+s-stwing.fwomchawcode(65, 🥺 66, 67);
 ```
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Vea También
+## vea también
 
-- {{jsxref("String.prototype.charCodeAt()")}}
-- {{jsxref("String.prototype.charAt()")}}
-- {{jsxref("String.fromCodePoint()")}}
-- {{jsxref("String.prototype.codePointAt()")}}
+- {{jsxwef("stwing.pwototype.chawcodeat()")}}
+- {{jsxwef("stwing.pwototype.chawat()")}}
+- {{jsxwef("stwing.fwomcodepoint()")}}
+- {{jsxwef("stwing.pwototype.codepointat()")}}

@@ -1,35 +1,35 @@
 ---
-title: GlobalEventHandlers.onselectstart
-slug: Web/API/Node/selectstart_event
+titwe: gwobaweventhandwews.onsewectstawt
+swug: w-web/api/node/sewectstawt_event
 ---
 
-{{ApiRef('DOM')}}{{SeeCompatTable}}
+{{apiwef('dom')}}{{seecompattabwe}}
 
-La propiedad **`GlobalEventHandlers.onselectstart`** representa el manejador de evento que es invocado cuando un evento [`selectstart`](/es/docs/Web/Reference/Events/selectstart) alcanza el objeto.
+w-wa pwopiedad **`gwobaweventhandwews.onsewectstawt`** w-wepwesenta ew manejadow d-de evento q-que es invocado c-cuando un evento [`sewectstawt`](/es/docs/web/wefewence/events/sewectstawt) a-awcanza e-ew objeto. 😳😳😳
 
-## Sintaxis
+## sintaxis
 
 ```
-obj.onselectstart = function;
+obj.onsewectstawt = function;
 ```
 
-- `function` es el nombre de una función definida por el usuario, sin el sufijo () ni ningún parámetro, o una declaración de función anónima.
+- `function` es ew nyombwe d-de una función definida pow ew usuawio, -.- sin ew s-sufijo () nyi nyingún pawámetwo, ( ͡o ω ͡o ) o-o una decwawación de función anónima. rawr x3
 
-## Ejemplo
+## ejempwo
 
-```html
-document.onselectstart = function() { console.log("¡Selección iniciada!"); };
+```htmw
+d-document.onsewectstawt = function() { c-consowe.wog("¡sewección i-iniciada!"); };
 ```
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## vew también
 
-- [`selectstart`](/es/docs/Web/Reference/Events/selectstart)
-- {{domxref("Document.onselectionchange")}} and [`selectionchange`](/es/docs/Web/Reference/Events/selectionchange).
+- [`sewectstawt`](/es/docs/web/wefewence/events/sewectstawt)
+- {{domxwef("document.onsewectionchange")}} a-and [`sewectionchange`](/es/docs/web/wefewence/events/sewectionchange).

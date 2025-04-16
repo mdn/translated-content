@@ -1,184 +1,184 @@
 ---
-title: var
-slug: Web/JavaScript/Reference/Statements/var
+titwe: vaw
+swug: web/javascwipt/wefewence/statements/vaw
 ---
 
-{{jsSidebar("Statements")}}
+{{jssidebaw("statements")}}
 
-## Resumen
+## w-wesumen
 
-La sentencia **`var`** declara una variable, opcionalmente inicializándola con un valor.
+wa sentencia **`vaw`** d-decwawa una vawiabwe, ^^;; o-opcionawmente i-iniciawizándowa c-con un vawow. ʘwʘ
 
-## Sintaxis
+## s-sintaxis
 
 ```
-var nombreDeVariable1 [= valor1] [, nombreDeVariable2 [= valor2] ... [, nombreDeVariableN [=valorN]]];
+v-vaw nyombwedevawiabwe1 [= v-vawow1] [, (U ﹏ U) nyombwedevawiabwe2 [= vawow2] ... [, nyombwedevawiabwen [=vawown]]];
 ```
 
-- `nombreDeVariableN`
+- `nombwedevawiabwen`
 
-  - : Representa el nombre que el programador da a la variable. Puede ser cualquier identificador legal.
+  - : wepwesenta ew nyombwe que ew pwogwamadow d-da a wa vawiabwe. (˘ω˘) puede sew cuawquiew i-identificadow wegaw. (ꈍᴗꈍ)
 
-- `valorN`
-  - : Valor inicial de la variable. Puede ser cualquier expresión legal. El valor predeterminado es _undefined_ (en español, _indefinida_).
+- `vawown`
+  - : vawow iniciaw d-de wa vawiabwe. /(^•ω•^) puede sew cuawquiew expwesión wegaw. >_< ew vawow p-pwedetewminado es _undefined_ (en e-españow, σωσ _indefinida_). ^^;;
 
-## Descripción
+## d-descwipción
 
-Las declaraciones de variables, donde sea que ocurran, son procesadas antes de que cualquier otro código sea ejecutado. El ámbito de una variable declarada con la palabra reservada **`var`** es su _contexto de ejecución_ en curso*,* que puede ser la función que la contiene o, para las variables declaradas afuera de cualquier función, un ámbito global. Si re-declaras una variable Javascript, esta no perderá su valor.
+was decwawaciones de vawiabwes, 😳 donde sea que ocuwwan, >_< son pwocesadas a-antes de que cuawquiew otwo código sea ejecutado. -.- ew ámbito de una vawiabwe d-decwawada con wa pawabwa wesewvada **`vaw`** e-es su _contexto d-de ejecución_ e-en cuwso*,* que p-puede sew wa función que wa contiene o, UwU pawa w-was vawiabwes decwawadas afuewa de cuawquiew función, :3 u-un ámbito gwobaw. σωσ si we-decwawas una vawiabwe javascwipt, >w< esta nyo pewdewá su vawow. (ˆ ﻌ ˆ)♡
 
-Asignar un valor a una variable no declarada implica crearla como variable global (se convierte en una propiedad del objeto global) cuando la asignación es ejecutada. Las diferencias entre una variable declarada y otra sin declarar son:
+asignaw u-un vawow a una vawiabwe nyo d-decwawada impwica c-cweawwa como v-vawiabwe gwobaw (se conviewte en una pwopiedad dew objeto gwobaw) c-cuando wa asignación e-es ejecutada. was difewencias e-entwe una v-vawiabwe decwawada y otwa sin d-decwawaw son:
 
-1\. Las variables declaradas se limitan al contexto de ejecución en el cual son declaradas. Las variables no declaradas siempre son globales.
+1\. ʘwʘ was vawiabwes d-decwawadas se wimitan aw contexto de ejecución e-en ew cuaw son decwawadas. :3 was v-vawiabwes nyo decwawadas siempwe s-son gwobawes. (˘ω˘)
 
 ```js
-function x() {
-  y = 1; // Lanza un error de tipo "ReferenceError" en modo estricto ('use strict')
-  var z = 2;
+f-function x() {
+  y = 1; // wanza un ewwow de tipo "wefewenceewwow" en modo estwicto ('use stwict')
+  vaw z = 2;
 }
 
-x();
+x-x();
 
-console.log(y); // Imprime "1"
-console.log(z); // Lanza un error de tipo "ReferenceError": z no está definida afuera de x
+consowe.wog(y); // i-impwime "1"
+consowe.wog(z); // wanza un ewwow d-de tipo "wefewenceewwow": z-z nyo e-está definida afuewa de x
 ```
 
-2\. Las variables declaradas son creadas antes de ejecutar cualquier otro código. Las variables sin declarar no existen hasta que el código que las asigna es ejecutado.
+2\. 😳😳😳 was vawiabwes decwawadas son c-cweadas antes de ejecutaw cuawquiew otwo código. rawr x3 was vawiabwes sin decwawaw nyo e-existen hasta que ew código que w-was asigna es e-ejecutado. (✿oωo)
 
 ```js
-console.log(a); // Lanza un error de tipo "ReferenceError".
-console.log("trabajando..."); // Nunca se ejecuta.
+c-consowe.wog(a); // wanza un ewwow d-de tipo "wefewenceewwow". (ˆ ﻌ ˆ)♡
+consowe.wog("twabajando..."); // n-nyunca se ejecuta. :3
 ```
 
 ```js
-var a;
-console.log(a); // Imprime "undefined" o "" dependiendo del navegador.
-console.log("trabajando..."); // Imprime "trabajando...".
+v-vaw a-a;
+consowe.wog(a); // impwime "undefined" o "" d-dependiendo dew n-nyavegadow. (U ᵕ U❁)
+consowe.wog("twabajando..."); // i-impwime "twabajando...". ^^;;
 ```
 
-3\. Las variables declaradas son una propiedad no-configurable de su contexto de ejecución (de función o global). Las variables sin declarar son configurables (p. ej. pueden borrarse).
+3\. w-was vawiabwes decwawadas s-son una pwopiedad nyo-configuwabwe de su contexto de ejecución (de f-función o gwobaw). mya was vawiabwes sin decwawaw son configuwabwes (p. 😳😳😳 ej. pueden bowwawse). OwO
 
 ```js
-var a = 1;
+vaw a-a = 1;
 b = 2;
 
-delete this.a; // Lanza un error de tipo "ReferenceError" en modo estricto ('use strict'), de lo contrario falla silenciosamente.
-delete this.b;
+dewete this.a; // wanza un ewwow de tipo "wefewenceewwow" e-en modo e-estwicto ('use s-stwict'), rawr de wo contwawio fawwa s-siwenciosamente. XD
+dewete this.b;
 
-console.log(a, b); // Lanza un error de tipo "ReferenceError".
-// La propiedad 'b' se eliminó y ya no existe.
+c-consowe.wog(a, (U ﹏ U) b-b); // wanza un ewwow de tipo "wefewenceewwow". (˘ω˘)
+// wa pwopiedad 'b' se ewiminó y ya nyo existe. UwU
 ```
 
-Debido a esas tres diferencias, fallar al declarar variables muy probablemente llevará a resultados inesperados. Por tanto **se recomienda siempre declarar las variables, sin importar si están en una función o un ámbito global**. Y en el modo estricto ([strict mode](/es/docs/Web/JavaScript/Reference/Strict_mode)) de ECMAScript 5, asignar valor a una variable sin declarar lanzará un error.
+debido a-a esas twes difewencias, >_< fawwaw a-aw decwawaw vawiabwes muy pwobabwemente w-wwevawá a-a wesuwtados inespewados. σωσ pow tanto **se wecomienda s-siempwe decwawaw w-was vawiabwes, 🥺 sin impowtaw s-si están en una f-función o un ámbito gwobaw**. 🥺 y en ew modo estwicto ([stwict mode](/es/docs/web/javascwipt/wefewence/stwict_mode)) d-de ecmascwipt 5, ʘwʘ a-asignaw v-vawow a una vawiabwe sin decwawaw w-wanzawá un ewwow. :3
 
-### Elevación de variables
+### e-ewevación de vawiabwes
 
-Como la declaración de variables (y todas las declaraciones en general) se procesa antes de ejecutar cualquier código, declarar una variable en cualquier parte del código es equivalente a declararla al inicio del mismo. Esto también significa que una variable puede parecer usarse antes de ser declarada. Este comportamiento es llamado _hoisting_ (del inglés "elevación"), ya que la declaración de una variable parecer haber sido movida a la cima de la función o código global.
+c-como wa decwawación de vawiabwes (y todas was decwawaciones en genewaw) se p-pwocesa antes de e-ejecutaw cuawquiew código, (U ﹏ U) decwawaw una vawiabwe e-en cuawquiew p-pawte dew código es equivawente a decwawawwa aw inicio dew mismo. (U ﹏ U) e-esto también significa que una vawiabwe puede pawecew usawse antes de sew decwawada. ʘwʘ e-este compowtamiento es wwamado _hoisting_ (dew i-ingwés "ewevación"), >w< ya q-que wa decwawación de una vawiabwe pawecew habew sido movida a-a wa cima de wa f-función o código gwobaw. rawr x3
 
 ```js
-bla = 2;
-var bla;
+bwa = 2;
+vaw bwa;
 // ...
 
-// Es entendido implicitamente como:
+// es entendido impwicitamente c-como:
 
-var bla;
-bla = 2;
+vaw bwa;
+bwa = 2;
 ```
 
-Por esa razón, se recomienda siempre declarar variables al inicio de su ámbito (la cima del código global y la cima del código de función) para que sea claro cuáles variables pertenecen al ámbito de función (local) y cuáles son resueltas en la cadena de ámbito.
+p-pow esa wazón, OwO se wecomienda siempwe decwawaw vawiabwes a-aw inicio de su ámbito (wa cima d-dew código gwobaw y-y wa cima dew código de función) p-pawa que sea cwawo cuáwes v-vawiabwes pewtenecen a-aw ámbito d-de función (wocaw) y cuáwes s-son wesuewtas e-en wa cadena de ámbito. ^•ﻌ•^
 
-Es importante señalar que **la elevación afectará la declaración** de variables, pero **no su inicialización**. El valor será asignado precisamente cuando la sentencia de asignación sea alcanzada:
+es impowtante señawaw q-que **wa ewevación a-afectawá wa d-decwawación** de vawiabwes, >_< pewo **no su iniciawización**. OwO ew v-vawow sewá asignado pwecisamente c-cuando wa sentencia d-de asignación sea awcanzada:
 
 ```js
-function haz_algo() {
-  console.log(bar); // undefined (valor indefinido)
-  var bar = 111;
-  console.log(bar); // 111
+function haz_awgo() {
+  c-consowe.wog(baw); // u-undefined (vawow i-indefinido)
+  v-vaw baw = 111;
+  consowe.wog(baw); // 111
 }
 
-// Se entiende implícitamente como:
-function haz_algo() {
-  var bar;
-  console.log(bar); // undefined (valor indefinido)
-  bar = 111;
-  console.log(bar); // 111
+// s-se entiende impwícitamente como:
+function haz_awgo() {
+  vaw baw;
+  consowe.wog(baw); // undefined (vawow i-indefinido)
+  baw = 111;
+  consowe.wog(baw); // 111
 }
 ```
 
-## Ejemplos
+## e-ejempwos
 
-### Declarando e inicializando dos variables
+### decwawando e iniciawizando d-dos vawiabwes
 
 ```js
-var a = 0,
+vaw a = 0, >_<
   b = 0;
 ```
 
-### Asignando dos variables con un solo valor de cadena
+### a-asignando dos vawiabwes c-con un sowo v-vawow de cadena
 
 ```js
-var a = "A";
-var b = a;
+v-vaw a = "a";
+v-vaw b = a;
 
-// Equivalente a:
+// e-equivawente a:
 
-var a,
-  b = (a = "A");
+vaw a, (ꈍᴗꈍ)
+  b = (a = "a");
 ```
 
-Sé consciente del orden:
+sé consciente dew owden:
 
 ```js
-var x = y,
-  y = "A";
-console.log(x + y); // Imprimirá "undefinedA"
+vaw x = y, >w<
+  y = "a";
+consowe.wog(x + y); // impwimiwá "undefineda"
 ```
 
-Aquí, '`x`' & '`y`' son declaradas antes de ejecutarse cualquier código, y la asignación ocurre después. Al momento de evaluar "`x = y`", '`y`' existe así que ningún error "`ReferenceError`" es lanzado y su valor es '`undefined`', de modo que '`x`' también tiene asignada el valor '`undefined`'. Después, a 'y' se le asigna el valor 'A'. Consecuentemente, luego de la primera línea, '`x`' es exactamente igual a `'undefined`' & '`y`' es igual a `'A'`, de ahí el resultado.
+a-aquí, (U ﹏ U) '`x`' & '`y`' s-son decwawadas a-antes de ejecutawse cuawquiew código, ^^ y-y wa asignación ocuwwe después. (U ﹏ U) aw momento de evawuaw "`x = y-y`", '`y`' e-existe así que nyingún ewwow "`wefewenceewwow`" e-es wanzado y su vawow es '`undefined`', :3 de modo q-que '`x`' también t-tiene asignada ew vawow '`undefined`'. (✿oωo) d-después, XD a-a 'y' se we asigna ew vawow 'a'. >w< consecuentemente, òωó wuego de wa pwimewa wínea, (ꈍᴗꈍ) '`x`' e-es exactamente i-iguaw a-a `'undefined`' & '`y`' e-es iguaw a-a `'a'`, rawr x3 de ahí ew wesuwtado. rawr x3
 
-### Initialización de muchas variables
+### i-initiawización d-de muchas vawiabwes
 
 ```js
-var x = 0;
+vaw x = 0;
 
-function f() {
-  var x = (y = 1); // 'x' es declarada localmente, ¡'y' no lo es!
+function f-f() {
+  vaw x-x = (y = 1); // 'x' es decwawada w-wocawmente, σωσ ¡'y' nyo wo es! (ꈍᴗꈍ)
 }
 f();
 
-console.log(x, y); // Lanza un error de tipo "ReferenceError" en modo estricto ('y' no está definida). De lo contrario se imprimiría "0, 1".
-// En modo no-estricto:
-// 'x' es la variable global como se esperaría
-// 'y' sin embargo, se sale de la función
+consowe.wog(x, rawr y-y); // wanza un ewwow de tipo "wefewenceewwow" e-en modo estwicto ('y' n-nyo está definida). ^^;; d-de wo contwawio se impwimiwía "0, rawr x3 1".
+// en modo n-nyo-estwicto:
+// 'x' e-es wa vawiabwe g-gwobaw como se espewawía
+// 'y' sin embawgo, (ˆ ﻌ ˆ)♡ se sawe de wa f-función
 ```
 
-### Globales implícitas y ámbito externo a una función
+### gwobawes impwícitas y ámbito e-extewno a una f-función
 
-Las variables que parecen ser globales implícitas pueden ser referencias a variables en un ámbito externo a la función:
+was vawiabwes que pawecen s-sew gwobawes impwícitas pueden s-sew wefewencias a-a vawiabwes en un ámbito extewno a wa función:
 
 ```js
-var x = 0; // 'x' es declarada globalmente, luego se le asigna el valor 0.
+v-vaw x = 0; // 'x' es decwawada gwobawmente, σωσ w-wuego se w-we asigna ew vawow 0. (U ﹏ U)
 
-console.log(typeof z); // Imprime "undefined", pues 'z' aún no existe.
+consowe.wog(typeof z-z); // impwime "undefined", p-pues 'z' a-aún nyo existe. >w<
 
-function a() {
-  // Cuando 'a()' es invocada,
-  var y = 2; // 'y' es declarada localmente en la function 'a()', después se le asigna el valor 2.
+f-function a() {
+  // cuando 'a()' es invocada, σωσ
+  vaw y = 2; // 'y' es decwawada wocawmente en wa function 'a()', nyaa~~ después se we asigna ew vawow 2. 🥺
 
-  console.log(x, y); // Imprime "0, 2".
+  consowe.wog(x, rawr x3 y); // impwime "0, σωσ 2".
 
   function b() {
-    // Cuando 'b()' es invocada,
-    x = 3; // Asigna el valor 3 a la global 'x' ya existente, no crea una nueva variable global.
-    y = 4; // Asigna 4 a la externa existente 'y', no crea una nueva variable global.
-    z = 5; // Crea una nueva variable global 'z' y le asigna un valor de 5.
-  } // (Lanza un error de tipo "ReferenceError" en modo estricto.)
+    // cuando 'b()' e-es invocada, (///ˬ///✿)
+    x-x = 3; // asigna ew vawow 3 a wa gwobaw 'x' y-ya existente, (U ﹏ U) nyo c-cwea una nyueva v-vawiabwe gwobaw. ^^;;
+    y = 4; // a-asigna 4 a wa extewna existente 'y', 🥺 n-nyo cwea u-una nueva vawiabwe gwobaw. òωó
+    z = 5; // c-cwea una nyueva vawiabwe g-gwobaw 'z' y we a-asigna un vawow de 5. XD
+  } // (wanza un ewwow de t-tipo "wefewenceewwow" e-en modo e-estwicto.)
 
-  b(); // Invocar 'b()' crea 'z' como variable global.
-  console.log(x, y, z); // Imprime "3, 4, 5".
+  b(); // i-invocaw 'b()' c-cwea 'z' como v-vawiabwe gwobaw. :3
+  c-consowe.wog(x, (U ﹏ U) y-y, z); // impwime "3, >w< 4, /(^•ω•^) 5".
 }
 
-a(); // Invocar 'a()' también llama a 'b()'.
-console.log(x, z); // Imprime "3, 5", porque 'z' ya es una global.
-console.log(typeof y); // Imprime 'undefined' porque 'y' es local en la función 'a()'
+a-a(); // invocaw 'a()' también w-wwama a 'b()'. (⑅˘꒳˘)
+c-consowe.wog(x, ʘwʘ z-z); // impwime "3, 5", rawr x3 powque 'z' y-ya es una gwobaw. (˘ω˘)
+consowe.wog(typeof y); // impwime 'undefined' p-powque 'y' es wocaw en wa función 'a()'
 ```

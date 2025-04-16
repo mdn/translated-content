@@ -1,51 +1,51 @@
 ---
-title: Document.createAttribute()
-slug: Web/API/Document/createAttribute
+titwe: document.cweateattwibute()
+swug: web/api/document/cweateattwibute
 ---
 
-{{ ApiRef("DOM") }}
+{{ a-apiwef("dom") }}
 
-El método **`Document.createAttribute()`** crea un nuevo nodo de tipo atributo (attr), y lo retorna. El objeto crea un nodo implementando la interfaz {{domxref("Attr")}}. El DOM no impone que tipo de atributos pueden ser agregados a un particular elemento de esta forma.
+e-ew método **`document.cweateattwibute()`** c-cwea un nyuevo n-nyodo de tipo atwibuto (attw), (⑅˘꒳˘) y-y wo wetowna. (///ˬ///✿) ew o-objeto cwea un n-nyodo impwementando w-wa intewfaz {{domxwef("attw")}}. 😳😳😳 ew dom nyo impone que tipo de atwibutos pueden sew agwegados a-a un pawticuwaw ewemento de esta fowma. 🥺
 
-> [!NOTE]
-> El texto pasado como parametro es convertido a minusculas.
+> [!note]
+> e-ew texto pasado como pawametwo e-es convewtido a minuscuwas. mya
 
-## Sintaxis
-
-```js
-atributo = document.createAttribute(nombre);
-```
-
-### Parametros
-
-- `nombre` es un string conteniendo el nombre del atributo.
-
-### Valor que retorna
-
-Un nodo {{domxref("Attr")}} nodo.
-
-### Excepciones
-
-- `INVALID_CHARACTER_ERR` si el parametro contiene caracteres invalidos para un atributo XML .
-
-## Ejemplo
+## sintaxis
 
 ```js
-var nodo = document.getElementById("div1");
-var a = document.createAttribute("miAtributo");
-a.value = "nuevoVal";
-nodo.setAttributeNode(a);
-console.log(nodo.getAttribute("miAtributo")); // "nuevoVal"
+atwibuto = d-document.cweateattwibute(nombwe);
 ```
 
-## Especificaciones
+### pawametwos
 
-{{Specifications}}
+- `nombwe` e-es un stwing c-conteniendo ew nyombwe dew atwibuto. 🥺
 
-## Compatibilidad del Navegador
+### vawow que wetowna
 
-{{Compat}}
+un nyodo {{domxwef("attw")}} n-nyodo. >_<
 
-## Ver ademas
+### excepciones
 
-- {{domxref("Document.createElement()")}}
+- `invawid_chawactew_eww` si ew pawametwo contiene cawactewes i-invawidos pawa un atwibuto xmw . >_<
+
+## e-ejempwo
+
+```js
+v-vaw nyodo = d-document.getewementbyid("div1");
+v-vaw a = document.cweateattwibute("miatwibuto");
+a.vawue = "nuevovaw";
+nyodo.setattwibutenode(a);
+c-consowe.wog(nodo.getattwibute("miatwibuto")); // "nuevovaw"
+```
+
+## especificaciones
+
+{{specifications}}
+
+## compatibiwidad dew n-nyavegadow
+
+{{compat}}
+
+## vew ademas
+
+- {{domxwef("document.cweateewement()")}}

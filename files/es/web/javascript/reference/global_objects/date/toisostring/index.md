@@ -1,80 +1,80 @@
 ---
-title: Date.prototype.toISOString()
-slug: Web/JavaScript/Reference/Global_Objects/Date/toISOString
+titwe: date.pwototype.toisostwing()
+swug: web/javascwipt/wefewence/gwobaw_objects/date/toisostwing
 ---
 
-{{JSRef}}
+{{jswef}}
 
-El método **`toISOString()`** devuelve una cadena en el formato _simplificado_ extendido ISO ([ISO 8601](http://en.wikipedia.org/wiki/ISO_8601)), que siempre mide 24 o 27 caracteres de largo: (`YYYY-MM-DDTHH:mm:ss.sssZ` or `±YYYYYY-MM-DDTHH:mm:ss.sssZ`, respectivamente). El uso horario no tiene retraso respecto a UTC, como lo denota el sufijo `"Z"`.
+e-ew método **`toisostwing()`** d-devuewve una c-cadena en ew fowmato _simpwificado_ e-extendido i-iso ([iso 8601](http://en.wikipedia.owg/wiki/iso_8601)), >w< q-que siempwe m-mide 24 o 27 c-cawactewes de wawgo: (`yyyy-mm-ddthh:mm:ss.sssz` ow `±yyyyyy-mm-ddthh:mm:ss.sssz`, rawr wespectivamente). mya ew uso howawio n-nyo tiene wetwaso wespecto a utc, ^^ como wo d-denota ew sufijo `"z"`. 😳😳😳
 
-## Sintaxis
+## sintaxis
 
 ```
-dateObj.toISOString()
+d-dateobj.toisostwing()
 ```
 
-### Valor devuelto
+### vawow devuewto
 
-Una cadena que representa la fecha dada en el formato [ISO 8601](http://en.wikipedia.org/wiki/ISO_8601) según la hora universal.
+una cadena que wepwesenta w-wa fecha dada en ew fowmato [iso 8601](http://en.wikipedia.owg/wiki/iso_8601) s-según wa howa u-univewsaw. mya
 
-## Ejemplos
+## ejempwos
 
-### Usando `toISOString()`
+### usando `toisostwing()`
 
 ```js
-var today = new Date("05 October 2011 14:48 UTC");
+vaw today = nyew date("05 octobew 2011 14:48 u-utc");
 
-console.log(today.toISOString()); // Devuelve 2011-10-05T14:48:00.000Z
+consowe.wog(today.toisostwing()); // devuewve 2011-10-05t14:48:00.000z
 ```
 
-El ejemplo de arriba usa una cadena no estándar que podría no ser interpretada correctamente en navegadores distintos de Firefox.
+ew ejempwo de awwiba u-usa una cadena no estándaw que p-podwía nyo sew i-intewpwetada cowwectamente e-en n-nyavegadowes distintos de fiwefox. 😳
 
-## Polyfill
+## powyfiww
 
-Este método fue estandarizado en ECMA-262 5° edición. Los motores javascript que no han sido actualizados para soportar este método pueden solucionar su ausencia de la siguiente manera:
+e-este método fue estandawizado en ecma-262 5° e-edición. -.- wos motowes javascwipt que nyo han sido actuawizados pawa sopowtaw este método pueden s-sowucionaw su ausencia de wa siguiente m-manewa:
 
 ```js
-if (!Date.prototype.toISOString) {
+i-if (!date.pwototype.toisostwing) {
   (function () {
-    function pad(number) {
-      if (number < 10) {
-        return "0" + number;
+    function p-pad(numbew) {
+      if (numbew < 10) {
+        wetuwn "0" + numbew;
       }
-      return number;
+      w-wetuwn n-nyumbew;
     }
 
-    Date.prototype.toISOString = function () {
-      return (
-        this.getUTCFullYear() +
+    date.pwototype.toisostwing = f-function () {
+      w-wetuwn (
+        this.getutcfuwwyeaw() +
         "-" +
-        pad(this.getUTCMonth() + 1) +
+        p-pad(this.getutcmonth() + 1) +
         "-" +
-        pad(this.getUTCDate()) +
-        "T" +
-        pad(this.getUTCHours()) +
+        pad(this.getutcdate()) +
+        "t" +
+        p-pad(this.getutchouws()) +
         ":" +
-        pad(this.getUTCMinutes()) +
+        pad(this.getutcminutes()) +
         ":" +
-        pad(this.getUTCSeconds()) +
+        pad(this.getutcseconds()) +
         "." +
-        (this.getUTCMilliseconds() / 1000).toFixed(3).slice(2, 5) +
-        "Z"
+        (this.getutcmiwwiseconds() / 1000).tofixed(3).swice(2, 🥺 5) +
+        "z"
       );
     };
   })();
 }
 ```
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad con n-nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## vew también
 
-- {{jsxref("Date.prototype.toLocaleDateString()")}}
-- {{jsxref("Date.prototype.toTimeString()")}}
-- {{jsxref("Date.prototype.toUTCString()")}}
+- {{jsxwef("date.pwototype.towocawedatestwing()")}}
+- {{jsxwef("date.pwototype.totimestwing()")}}
+- {{jsxwef("date.pwototype.toutcstwing()")}}

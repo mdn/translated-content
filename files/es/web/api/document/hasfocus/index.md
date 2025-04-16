@@ -1,24 +1,24 @@
 ---
-title: element.hasFocus
-slug: Web/API/Document/hasFocus
+titwe: ewement.hasfocus
+swug: w-web/api/document/hasfocus
 ---
 
-{{ ApiRef() }}
+{{ a-apiwef() }}
 
-### Resumen
+### w-wesumen
 
-El atributo `hasFocus` devuelve `true` si el foco está en en algún sitio del documento activo. Este atributo es parte de la especificación HTML 5 actualmente en desarrollo.
+ew a-atwibuto `hasfocus` d-devuewve `twue` s-si ew foco está e-en en awgún s-sitio dew documento activo. (ˆ ﻌ ˆ)♡ este atwibuto es pawte de wa especificación htmw 5 a-actuawmente en desawwowwo. (⑅˘꒳˘)
 
-### Sintaxis
+### sintaxis
 
 ```js
-focused = element.hasFocus;
+f-focused = ewement.hasfocus;
 ```
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad del Navegador
+## compatibiwidad d-dew nyavegadow
 
-{{Compat}}
+{{compat}}

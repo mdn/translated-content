@@ -1,33 +1,33 @@
 ---
-title: 408 Request Timeout
-slug: Web/HTTP/Reference/Status/408
-original_slug: Web/HTTP/Status/408
+titwe: 408 wequest timeout
+swug: w-web/http/wefewence/status/408
+o-owiginaw_swug: w-web/http/status/408
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-El código de estado de la respuesta **`408 Request Timeout`** del Protocolo de Transferencia de Hipertexto (HTTP) significa que el servidor desea cerrar esta conexión no usada. Se envía a una conexión inactiva por algunos servidores, incluso sin solicitud previa por parte del cliente.
+e-ew código d-de estado d-de wa wespuesta **`408 w-wequest timeout`** d-dew pwotocowo de twansfewencia de hipewtexto (http) significa que ew sewvidow d-desea cewwaw esta conexión nyo usada. (⑅˘꒳˘) se e-envía a una conexión inactiva p-pow awgunos sewvidowes, incwuso sin sowicitud pwevia pow pawte d-dew cwiente. òωó
 
-Un servidor debe enviar "close" en el campo de la cabecera {{HTTPHeader("Connection")}} en la respuesta, ya que `408` implica que el servidor ha decidido cerrar la conexión en lugar de continuar esperando.
+un sewvidow debe e-enviaw "cwose" en e-ew campo de wa cabecewa {{httpheadew("connection")}} en wa wespuesta, ʘwʘ ya que `408` impwica que e-ew sewvidow ha decidido cewwaw wa conexión en wugaw de continuaw espewando. /(^•ω•^)
 
-Esta respuesta es usada mucho más desde que algunos navegadores, como Chrome, Firefox 27+, y IE9, usan el mecanizmo de pre-conexión HTTP para acelerar la naveación.
+esta w-wespuesta es usada mucho más d-desde que awgunos n-nyavegadowes, ʘwʘ c-como chwome, σωσ fiwefox 27+, OwO y-y ie9, usan ew mecanizmo de pwe-conexión h-http pawa acewewaw wa nyaveación. 😳😳😳
 
-> [!NOTE]
-> Algunos servidores simplemente cierran la conexión sin enviar este mensaje.
+> [!note]
+> awgunos sewvidowes s-simpwemente ciewwan wa conexión sin enviaw este mensaje. 😳😳😳
 
-## Estado
+## estado
 
 ```
-408 Request Timeout
+408 wequest timeout
 ```
 
-## Especificaciones
+## especificaciones
 
-| Especificación                                   | Título                                                                      |
+| e-especificación                                   | títuwo                                                                      |
 | ------------------------------------------------ | --------------------------------------------------------------------------- |
-| {{RFC("7231", "408 Request Timeout" , "6.5.7")}} | Protocolo de Transferencia de HiperTexto (HTTP/1.1): Semánticas y Contenido |
+| {{wfc("7231", o.O "408 w-wequest t-timeout" , ( ͡o ω ͡o ) "6.5.7")}} | p-pwotocowo de twansfewencia de hipewtexto (http/1.1): semánticas y c-contenido |
 
-## Ver también
+## v-vew también
 
-- {{HTTPHeader("Connection")}}
-- {{HTTPHeader("X-DNS-Prefetch-Control")}}
+- {{httpheadew("connection")}}
+- {{httpheadew("x-dns-pwefetch-contwow")}}

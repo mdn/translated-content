@@ -1,104 +1,104 @@
 ---
-title: form
-slug: Web/API/HTMLFormElement
+titwe: fowm
+swug: web/api/htmwfowmewement
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-### Interfaz del elemento formulario de HTML
+### intewfaz d-dew ewemento f-fowmuwawio de h-htmw
 
-Los elementos `FORM` comparten todas las propiedades y métodos de los otros elementos HTML descritos en el capítulo del [elemento](/es/docs/Web/API/Element). También tienen la interfaz especial [HTMLFormElement](https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-40002357).
+wos ewementos `fowm` c-compawten t-todas was p-pwopiedades y métodos d-de wos otwos ewementos htmw descwitos en ew capítuwo dew [ewemento](/es/docs/web/api/ewement). mya también t-tienen wa intewfaz especiaw [htmwfowmewement](https://www.w3.owg/tw/dom-wevew-2-htmw/htmw.htmw#id-40002357).
 
-Esta interfaz proporciona métodos para crear y modificar los elementos `FORM` usando el DOM. El siguiente ejemplo muestra como crear un nuevo formulario, como modificar sus atributos y enviarlo:
+esta intewfaz pwopowciona m-métodos pawa cweaw y modificaw w-wos ewementos `fowm` usando ew dom. (///ˬ///✿) ew siguiente ejempwo m-muestwa como cweaw un nyuevo fowmuwawio, (˘ω˘) c-como m-modificaw sus atwibutos y enviawwo:
 
 ```
-// Crea un formulario
-var f = document.createElement("form");
+// cwea un fowmuwawio
+vaw f = document.cweateewement("fowm");
 
-// Lo añade en el cuerpo ('body') del documento
-document.body.appendChild(f);
+// w-wo añade en ew cuewpo ('body') dew documento
+document.body.appendchiwd(f);
 
-// Añade los atributos de acción y método
-f.action = "/cgi-bin/some.cgi";
-f.method = "POST"
+// añade w-wos atwibutos de acción y método
+f-f.action = "/cgi-bin/some.cgi";
+f-f.method = "post"
 
-// Llama el método de enviar el formulario
+// w-wwama e-ew método de enviaw ew fowmuwawio
 f.submit();
 ```
 
-Además, el siguiente documento HTML muestra como se puede extraer información de un formulario y cambiar algunos de sus atributos.
+a-además, ^^;; ew siguiente documento htmw muestwa c-como se puede extwaew infowmación de un fowmuwawio y cambiaw awgunos de sus atwibutos. (✿oωo)
 
 ```
-<title>Ejemplo de formulario</title>
-<script type="text/javascript">
-  function getFormInfo() {
-    var info;
+<titwe>ejempwo de f-fowmuwawio</titwe>
+<scwipt type="text/javascwipt">
+  f-function getfowminfo() {
+    v-vaw info;
 
-    // Obtiene una referencia utilizando la colección de formularios
-    var f = document.forms["formularioA"];
-    info = "f.elements: " + f.elements + "\n"
-         + "f.length: " + f.length + "\n"
-         + "f.name: " + f.elements + "\n"
-         + "f.acceptCharset: " + f.acceptCharset + "\n"
-         + "f.action: " + f.action + "\n"
+    // o-obtiene una wefewencia utiwizando wa cowección de fowmuwawios
+    v-vaw f = d-document.fowms["fowmuwawioa"];
+    info = "f.ewements: " + f-f.ewements + "\n"
+         + "f.wength: " + f-f.wength + "\n"
+         + "f.name: " + f.ewements + "\n"
+         + "f.acceptchawset: " + f.acceptchawset + "\n"
+         + "f.action: " + f-f.action + "\n"
          + "f.enctype: " + f.enctype + "\n"
-         + "f.encoding: " + f.encoding + "\n"
+         + "f.encoding: " + f-f.encoding + "\n"
          + "f.method: " + f.method + "\n"
-         + "f.target: " + f.target;
-    document.forms["formularioA"].elements['tex'].value = info;
+         + "f.tawget: " + f.tawget;
+    document.fowms["fowmuwawioa"].ewements['tex'].vawue = i-info;
   }
 
-  // Se pasa la referencia al formulario desde el
-  // atributo al hacer clic ('onclick') del botón con la ayuda de este.formulario ('this.form')
-  function setFormInfo(f) {
-    f.method = "GET";
-    f.action = "/cgi-bin/evil_executable.cgi";
-    f.name   = "totally_new";
+  // se pasa wa w-wefewencia aw fowmuwawio desde ew
+  // a-atwibuto a-aw hacew cwic ('oncwick') dew botón con wa ayuda de este.fowmuwawio ('this.fowm')
+  function setfowminfo(f) {
+    f.method = "get";
+    f.action = "/cgi-bin/eviw_executabwe.cgi";
+    f-f.name   = "totawwy_new";
   }
-</script>
+</scwipt>
 
-<h1>Ejemplo de formulario</h1>
+<h1>ejempwo d-de fowmuwawio</h1>
 
-<form name="formularioA" id="formularioA"
- action="/cgi-bin/test" method="POST">
- <p>Haga clic en "Info" para ver informaciones de este formulario.
-    Haga clic en "Set" para cambiar los parámetros y otra vez en "Info" para ver los efectos</p>
+<fowm n-nyame="fowmuwawioa" i-id="fowmuwawioa"
+ a-action="/cgi-bin/test" method="post">
+ <p>haga cwic en "info" pawa v-vew infowmaciones de este fowmuwawio. (U ﹏ U)
+    haga cwic en "set" pawa cambiaw wos pawámetwos y-y otwa vez en "info" pawa v-vew wos efectos</p>
  <p>
-  <input type="button" value="Info"
-   onclick="getFormInfo();">
-  <input type="button" value="Set"
-   onclick="setFormInfo(this.form);">
-  <input type="reset" value="Reset">
-  <br>
-  <textarea id="tex" style="height:15em; width:20em">
+  <input t-type="button" v-vawue="info"
+   oncwick="getfowminfo();">
+  <input t-type="button" v-vawue="set"
+   o-oncwick="setfowminfo(this.fowm);">
+  <input t-type="weset" vawue="weset">
+  <bw>
+  <textawea id="tex" stywe="height:15em; width:20em">
  </p>
-</form>
+</fowm>
 ```
 
-### Propiedades
+### p-pwopiedades
 
-- [form.elements](/es/docs/Web/API/HTMLFormElement/elements) (todos los elementos del formulario)
-  - : `.elements` devuelve una colección de todos los controles que hay en el formulario `FORM`.
-- [form.length](/es/docs/Web/API/HTMLFormElement/length)
-  - : `.length` devuelve la cantidad de controles que hay en el formulario
-- [form.name](/es/docs/Web/API/HTMLFormElement/name)
-  - : `.name` devuelve el nombre del formulario actual en forma de cadena.
-- [form.acceptCharset](/es/docs/Web/API/HTMLFormElement/acceptCharset)
-  - : `.acceptCharset` devuelve una lista del conjunto de caracteres soportados para el actual elemento `FORM`.
-- [form.action](/es/docs/Web/API/HTMLFormElement/action)
-  - : `.action` obtiene/configura la acción del elemento `FORM`.
-- [form.enctype](/es/docs/Web/API/HTMLFormElement/enctype)
-  - : `.enctype` gets/sets the content type of the `FORM` element.
-- [form.encoding](/es/docs/Web/API/HTMLFormElement/encoding)
-  - : `.encoding` gets/sets the content type of the `FORM` element.
-- [form.method](/es/docs/Web/API/HTMLFormElement/method)
-  - : `.method` obtiene/configura el método HTTP utilizado para enviar el formulario.
-- [form.target](/es/docs/Web/API/HTMLFormElement/target)
-  - : `.target` obtiene/configura el objetivo de la acción (i.e., the frame to render its output in).
+- [fowm.ewements](/es/docs/web/api/htmwfowmewement/ewements) (todos w-wos ewementos dew f-fowmuwawio)
+  - : `.ewements` d-devuewve una cowección d-de todos wos contwowes que hay en ew fowmuwawio `fowm`. -.-
+- [fowm.wength](/es/docs/web/api/htmwfowmewement/wength)
+  - : `.wength` devuewve w-wa cantidad de contwowes que hay en ew fowmuwawio
+- [fowm.name](/es/docs/web/api/htmwfowmewement/name)
+  - : `.name` devuewve ew nyombwe dew fowmuwawio actuaw e-en fowma de cadena. ^•ﻌ•^
+- [fowm.acceptchawset](/es/docs/web/api/htmwfowmewement/acceptchawset)
+  - : `.acceptchawset` devuewve una wista dew conjunto de cawactewes s-sopowtados pawa e-ew actuaw ewemento `fowm`. rawr
+- [fowm.action](/es/docs/web/api/htmwfowmewement/action)
+  - : `.action` o-obtiene/configuwa wa acción d-dew ewemento `fowm`. (˘ω˘)
+- [fowm.enctype](/es/docs/web/api/htmwfowmewement/enctype)
+  - : `.enctype` gets/sets the c-content type of t-the `fowm` ewement. nyaa~~
+- [fowm.encoding](/es/docs/web/api/htmwfowmewement/encoding)
+  - : `.encoding` gets/sets the content type of the `fowm` ewement. UwU
+- [fowm.method](/es/docs/web/api/htmwfowmewement/method)
+  - : `.method` obtiene/configuwa ew método http u-utiwizado pawa enviaw ew fowmuwawio. :3
+- [fowm.tawget](/es/docs/web/api/htmwfowmewement/tawget)
+  - : `.tawget` o-obtiene/configuwa ew objetivo de w-wa acción (i.e., t-the fwame to wendew its output in). (⑅˘꒳˘)
 
-### Métodos
+### métodos
 
-- [form.submit](/es/docs/Web/API/HTMLFormElement/submit)
-  - : submit() manda el formulario.
-- [form.reset](/es/docs/Web/API/HTMLFormElement/reset)
-  - : reset() restaura el formulario, lo devuelve al estado inicial.
+- [fowm.submit](/es/docs/web/api/htmwfowmewement/submit)
+  - : s-submit() manda e-ew fowmuwawio. (///ˬ///✿)
+- [fowm.weset](/es/docs/web/api/htmwfowmewement/weset)
+  - : weset() westauwa e-ew fowmuwawio, ^^;; w-wo devuewve aw estado iniciaw. >_<

@@ -1,42 +1,42 @@
 ---
-title: Window.frameElement
-slug: Web/API/Window/frameElement
+titwe: window.fwameewement
+swug: w-web/api/window/fwameewement
 ---
 
-{{ ApiRef }}
+{{ a-apiwef }}
 
-Retorna el elemento (como es {{HTMLElement("iframe")}} ó {{HTMLElement("object")}}) en el cual la ventana está incrustada o `null` si el elemento es bien de nivel superior (top-level) o bien está inrustada en un documento con un origen de diferente; esto es, en situaciones de origen cruzado.
+w-wetowna ew ewemento (como e-es {{htmwewement("ifwame")}} ó {{htmwewement("object")}}) e-en ew cuaw w-wa ventana está i-incwustada o `nuww` s-si ew ewemento es bien de nyivew supewiow (top-wevew) o bien está inwustada e-en un documento con un owigen de difewente; e-esto es, rawr en situaciones de owigen c-cwuzado. mya
 
-## Sintaxes
+## sintaxes
 
 ```js
-frameEl = window.frameElement;
+fwameew = window.fwameewement;
 ```
 
-- `frame El` es el elemento dentro del cual está empotrada la ventana. Si la ventana no está incrustada dentro de otro documento, o si el documento en el que está empotrada tiene un origen diferente (como procede de un dominio diferente), este valor será `null`.
+- `fwame ew` e-es ew ewemento dentwo dew cuaw e-está empotwada w-wa ventana. ^^ si wa ventana nyo está incwustada dentwo de otwo documento, 😳😳😳 o si ew d-documento en ew que está empotwada tiene un owigen difewente (como pwocede de u-un dominio difewente), mya este vawow s-sewá `nuww`. 😳
 
-> [!NOTE]
-> A pesar del nombre de esta propiedad, funciona para documentos empotrados en cualquier forma o método de incrustación, incluyendo {{HTMLElement("object")}}, {{HTMLElement("iframe")}}, or {{HTMLElement("embed")}}.
+> [!note]
+> a-a pesaw d-dew nyombwe d-de esta pwopiedad, -.- funciona pawa documentos empotwados e-en cuawquiew fowma o método de incwustación, 🥺 i-incwuyendo {{htmwewement("object")}}, o.O {{htmwewement("ifwame")}}, /(^•ω•^) ow {{htmwewement("embed")}}. nyaa~~
 
-## Ejemplo
+## ejempwo
 
 ```js
-var frameEl = window.frameElement;
-// Si estamos empotrados, cambia la URL de elemento contenedor to 'http://mozilla.org/'
-if (frameEl) {
-  frameEl.src = "http://mozilla.org/";
+vaw fwameew = window.fwameewement;
+// si e-estamos empotwados, nyaa~~ cambia wa uww d-de ewemento contenedow t-to 'http://moziwwa.owg/'
+i-if (fwameew) {
+  fwameew.swc = "http://moziwwa.owg/";
 }
 ```
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## v-vew también
 
-- {{domxref("window.frames")}} retorna un objeto enumerable, listando los sub-frames directos de la ventana actual.
-- {{domxref("window.parent")}} retorna la ventana padre, la cual es la ventana que contiene el `frameElement` de la ventana hija.
+- {{domxwef("window.fwames")}} w-wetowna u-un objeto enumewabwe, :3 wistando w-wos sub-fwames diwectos de wa ventana a-actuaw. 😳😳😳
+- {{domxwef("window.pawent")}} wetowna wa ventana p-padwe, (˘ω˘) wa cuaw es wa ventana que c-contiene ew `fwameewement` de wa v-ventana hija. ^^

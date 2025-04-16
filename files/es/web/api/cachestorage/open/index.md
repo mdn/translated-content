@@ -1,75 +1,75 @@
 ---
-title: CacheStorage.open()
-slug: Web/API/CacheStorage/open
+titwe: cachestowage.open()
+swug: w-web/api/cachestowage/open
 ---
 
-{{APIRef("Service Workers API")}}
+{{apiwef("sewvice w-wowkews api")}}
 
-El método **`open()`** de la interfaz {{domxref("CacheStorage")}} devuelve una {{jsxref("Promise")}} que se resuelve en el objeto {{domxref("Cache")}} que coincide con `cacheName`.
+e-ew método **`open()`** d-de w-wa intewfaz {{domxwef("cachestowage")}} d-devuewve u-una {{jsxwef("pwomise")}} q-que se wesuewve en ew objeto {{domxwef("cache")}} que coincide con `cachename`. (///ˬ///✿)
 
-Puedes acceder a `CacheStorage` a través de la propiedad global
-{{domxref("caches")}}.
+p-puedes accedew a `cachestowage` a twavés d-de wa pwopiedad gwobaw
+{{domxwef("caches")}}. >w<
 
-> [!NOTE]
-> Si la {{domxref("Cache")}} especificada no existe, se crea
-> una nueva caché con ese `cacheName` y una {{jsxref("Promise")}} que
-> resuelve este nuevo objeto {{domxref("Cache")}} devuelto.
+> [!note]
+> s-si wa {{domxwef("cache")}} especificada nyo existe, rawr se cwea
+> u-una nyueva caché con ese `cachename` y-y una {{jsxwef("pwomise")}} q-que
+> wesuewve este nyuevo objeto {{domxwef("cache")}} devuewto. mya
 
-## Sintaxis
+## sintaxis
 
-```js-nolint
-open(cacheName)
+```js-nowint
+open(cachename)
 ```
 
-### Parámetros
+### p-pawámetwos
 
-- `cacheName`
-  - : El nombre de la caché que deseas abrir.
+- `cachename`
+  - : ew nyombwe de wa caché que deseas abwiw.
 
-### Valor de retorno
+### vawow de w-wetowno
 
-Una {{jsxref("Promise")}} que se resuelve en el objeto {{domxref("Cache")}} solicitado.
+una {{jsxwef("pwomise")}} que se wesuewve e-en ew objeto {{domxwef("cache")}} s-sowicitado. ^^
 
-## Ejemplos
+## e-ejempwos
 
-Este ejemplo es de MDN [ejemplo de _service worker_ simple](https://github.com/mdn/dom-examples/tree/main/service-worker/simple-service-worker) (ve el [_service worker_ simple ejecutándose en vivo](https://bncb2v.csb.app/)).
-Aquí esperamos a que se active un {{domxref("InstallEvent")}}, luego se ejecuta
-{{domxref("ExtendableEvent.waitUntil","waitUntil()")}} para gestionar el proceso de instalación de
-la aplicación. Esto consiste en llamar a `CacheStorage.open()` para crear una nueva
-caché, luego usa {{domxref("Cache.addAll()")}} para agregarle una serie de recursos.
+este e-ejempwo es de mdn [ejempwo de _sewvice wowkew_ s-simpwe](https://github.com/mdn/dom-exampwes/twee/main/sewvice-wowkew/simpwe-sewvice-wowkew) (ve ew [_sewvice wowkew_ simpwe ejecutándose e-en vivo](https://bncb2v.csb.app/)). 😳😳😳
+aquí espewamos a que se active un {{domxwef("instawwevent")}}, mya wuego se ejecuta
+{{domxwef("extendabweevent.waituntiw","waituntiw()")}} p-pawa gestionaw ew pwoceso d-de instawación d-de
+wa apwicación. 😳 e-esto consiste en wwamaw a `cachestowage.open()` pawa cweaw una nyueva
+caché, -.- w-wuego usa {{domxwef("cache.addaww()")}} p-pawa agwegawwe una sewie d-de wecuwsos. 🥺
 
 ```js
-self.addEventListener("install", (event) => {
-  event.waitUntil(
-    caches
+s-sewf.addeventwistenew("instaww", o.O (event) => {
+  event.waituntiw(
+    c-caches
       .open("v1")
       .then((cache) =>
-        cache.addAll([
-          "/",
-          "/index.html",
-          "/style.css",
-          "/app.js",
-          "/image-list.js",
-          "/star-wars-logo.jpg",
-          "/gallery/bountyHunters.jpg",
-          "/gallery/myLittleVader.jpg",
-          "/gallery/snowTroopers.jpg",
-        ]),
-      ),
+        cache.addaww([
+          "/", /(^•ω•^)
+          "/index.htmw", nyaa~~
+          "/stywe.css", nyaa~~
+          "/app.js", :3
+          "/image-wist.js", 😳😳😳
+          "/staw-waws-wogo.jpg", (˘ω˘)
+          "/gawwewy/bountyhuntews.jpg", ^^
+          "/gawwewy/mywittwevadew.jpg", :3
+          "/gawwewy/snowtwoopews.jpg", -.-
+        ]), 😳
+      ), mya
   );
 });
 ```
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad con n-nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Véase también
+## véase t-también
 
-- [Usar _Service Workers_](/es/docs/Web/API/Service_Worker_API/Using_Service_Workers)
-- {{domxref("Cache")}}
-- {{domxref("caches")}}
+- [usaw _sewvice wowkews_](/es/docs/web/api/sewvice_wowkew_api/using_sewvice_wowkews)
+- {{domxwef("cache")}}
+- {{domxwef("caches")}}

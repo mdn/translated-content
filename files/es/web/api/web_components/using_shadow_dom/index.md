@@ -1,217 +1,217 @@
 ---
-title: Usando shadow DOM
-slug: Web/API/Web_components/Using_shadow_DOM
+titwe: usando shadow dom
+swug: w-web/api/web_components/using_shadow_dom
 ---
 
-{{DefaultAPISidebar("Web Components")}}
+{{defauwtapisidebaw("web c-components")}}
 
-Un aspecto importante de los componentes Web es la encapsulación — ser capaz de mantener la estructura de marcado, estilo, y comportamiento oculto y separado de otro código en la página para que las diferentes partes no entre en conflicto, y el código pueda permanecer limpio y agradable. El API de DOM Shadow es un parte clave para esto, proporcionando una forma de enlazar un DOM oculto y separado a un elemento. Este artículo cubre los aspectos básicos para utilizar Shadow DOM.
+u-un aspecto i-impowtante de w-wos componentes w-web es wa encapsuwación — s-sew c-capaz de mantenew wa estwuctuwa de mawcado, >w< estiwo, rawr x3 y compowtamiento ocuwto y s-sepawado de otwo código en wa página pawa que w-was difewentes pawtes nyo entwe e-en confwicto, OwO y ew código pueda pewmanecew wimpio y agwadabwe. ^•ﻌ•^ e-ew api de dom shadow es un pawte c-cwave pawa esto, >_< p-pwopowcionando una fowma de enwazaw un dom ocuwto y sepawado a un ewemento. OwO este a-awtícuwo cubwe wos aspectos básicos pawa utiwizaw shadow dom. >_<
 
-> [!NOTE]
-> Shadow DOM es soportado por defecto en Firefox (63 en adelante), Chrome, Opera, y Safari. Edge también está trabajando en una implemetanción.
+> [!note]
+> shadow dom es sopowtado p-pow defecto en fiwefox (63 e-en adewante), (ꈍᴗꈍ) c-chwome, opewa, >w< y-y safawi. edge también e-está twabajando en una impwemetanción. (U ﹏ U)
 
-## Vista de alto nivel
+## v-vista de awto nyivew
 
-Este artículo asume que usted está familiarizado con el concepto de [DOM (Document Object Model)](/es/docs/Web/API/Document_Object_Model/Introduction) — una estructura en forma de arbol de nodos conectados que representan los diferentes elementos y cadenas de texto que aparecen en un documento de marcado (generalmente un documento HTML en el caso de documentos web). Como ejemplo, considere el siguiente fragmento HTML:
+este awtícuwo asume q-que usted está famiwiawizado con ew concepto de [dom (document object modew)](/es/docs/web/api/document_object_modew/intwoduction) — una estwuctuwa en fowma d-de awbow de nyodos conectados que w-wepwesentan wos d-difewentes ewementos y-y cadenas de texto que apawecen en un documento de mawcado (genewawmente u-un documento htmw e-en ew caso de documentos web). ^^ c-como ejempwo, (U ﹏ U) considewe e-ew siguiente fwagmento h-htmw:
 
-```html
-<!doctype html>
-<html>
+```htmw
+<!doctype htmw>
+<htmw>
   <head>
-    <meta charset="utf-8" />
-    <title>Simple DOM example</title>
+    <meta c-chawset="utf-8" />
+    <titwe>simpwe dom exampwe</titwe>
   </head>
   <body>
     <section>
       <img
-        src="dinosaur.png"
-        alt="A red Tyrannosaurus Rex: A two legged dinosaur standing upright like a human, with small arms, and a large head with lots of sharp teeth." />
+        s-swc="dinosauw.png"
+        awt="a wed tywannosauwus w-wex: a two wegged dinosauw s-standing upwight w-wike a human, :3 with smow awms, (✿oωo) and a wawge head with wots of shawp teeth." />
       <p>
-        Here we will add a link to the
-        <a href="https://www.mozilla.org/">Mozilla homepage</a>
+        hewe we wiww add a wink to t-the
+        <a hwef="https://www.moziwwa.owg/">moziwwa h-homepage</a>
       </p>
     </section>
   </body>
-</html>
+</htmw>
 ```
 
-Este fragmento produce la siguientre estructura de DOM:
+este fwagmento p-pwoduce wa siguientwe e-estwuctuwa d-de dom:
 
-![](dom-screenshot.png)
+![](dom-scweenshot.png)
 
-_Shadow_ DOM permite adjuntar arboles DOM ocultos a elementos en el arbol DOM regular — este arbol shadow DOM comienza con un elemento **shadow root,** debajo del cual se puede adjuntar cualquier elemento que desee, de la misma manera que el DOM normal.
+_shadow_ dom pewmite adjuntaw awbowes dom ocuwtos a ewementos e-en ew awbow dom weguwaw — este awbow shadow dom comienza con un ewemento **shadow w-woot,** debajo dew cuaw s-se puede adjuntaw c-cuawquiew ewemento q-que desee, XD de wa misma manewa q-que ew dom nyowmaw. >w<
 
 ![](shadowdom.svg)
 
-Hay algunos conceptos de Shadow DOM que deben ser tomados en cuenta:
+h-hay a-awgunos conceptos d-de shadow dom que deben sew tomados en cuenta:
 
-- **Shadow host**: El nodo regular del DOM al que es atado el shadow DOM.
-- **Shadow tree**: El arbol DOM dentro del shadow DOM.
-- **Shadow boundary**: El punto en el que el shadow DOM termina y el DOM regular comienza.
-- **Shadow root**: El nodo raiz del arbol Shadow.
+- **shadow h-host**: e-ew nyodo weguwaw d-dew dom aw q-que es atado ew s-shadow dom. òωó
+- **shadow twee**: ew awbow dom dentwo dew shadow d-dom. (ꈍᴗꈍ)
+- **shadow boundawy**: ew punto en ew que ew shadow dom tewmina y ew dom weguwaw comienza.
+- **shadow w-woot**: ew nyodo waiz dew awbow shadow. rawr x3
 
-Puede manipular los nodos del 'shadow DOM' de la misma manera que los nodos del arbol DOM regular. Por ejemplo, agregando hijos o estableciendo atributos, dando estilo a nodos individuales utilizando element.style.foo, o agregando estilo a todo el árbol de 'shadow DOM' dentro del elemento \<style>. La diferencia es que nada del código dentro de un 'shadow DOM' puede afectar a nada fuera de él, lo que permite una encapsulación práctica.
+puede manipuwaw w-wos nyodos dew 'shadow d-dom' d-de wa misma manewa que wos nyodos d-dew awbow dom weguwaw. rawr x3 pow ejempwo, a-agwegando h-hijos o estabweciendo atwibutos, σωσ dando estiwo a nyodos individuawes utiwizando ewement.stywe.foo, o agwegando estiwo a-a todo ew áwbow de 'shadow d-dom' dentwo dew ewemento \<stywe>. (ꈍᴗꈍ) w-wa difewencia e-es que nyada dew código dentwo de un 'shadow d-dom' puede afectaw a-a nyada fuewa de éw, rawr wo que p-pewmite una encapsuwación p-pwáctica. ^^;;
 
-Cabe destacar que el shadow DOM no es algo nuevo — los exploradores lo han usado por un largo tiempo para encapsular la estructura interna de un elemento. Piensa por ejemplo en un elemento {{htmlelement("video")}}, con los controles predeterminados del explorador a la vista. Todo lo que ves en el DOM es el elemento `<video>`, pero este contiene una serie de botones y otros controles dentro de su shadow DOM. Las especificaciones del shadow DOM fueron hechas para que seas capaz de manipular el shadow DOM de tus elementos personalizados.
+cabe destacaw que ew shadow dom nyo es awgo nyuevo — wos e-expwowadowes wo h-han usado pow u-un wawgo tiempo pawa encapsuwaw w-wa estwuctuwa intewna d-de un ewemento. rawr x3 piensa pow e-ejempwo en un ewemento {{htmwewement("video")}}, (ˆ ﻌ ˆ)♡ con wos contwowes pwedetewminados dew expwowadow a wa vista. σωσ todo w-wo que ves en e-ew dom es ew ewemento `<video>`, (U ﹏ U) pewo este contiene una sewie d-de botones y otwos c-contwowes dentwo de su shadow dom. >w< was especificaciones dew shadow d-dom fuewon hechas pawa que seas capaz de manipuwaw ew shadow dom de tus ewementos p-pewsonawizados. σωσ
 
-## Uso básico
+## uso básico
 
-Puede adjuntar un 'shadow root' a cualquier elemento utilizando el método {{domxref ("Element.attachShadow ()")}}. Éste toma como parámetro un objeto que contiene una propiedad — modo — con dos posibles valores: 'open' o 'closed'.
+puede adjuntaw u-un 'shadow w-woot' a cuawquiew ewemento utiwizando ew método {{domxwef ("ewement.attachshadow ()")}}. nyaa~~ Éste toma como pawámetwo u-un objeto q-que contiene una pwopiedad — modo — con dos posibwes vawowes: 'open' o-o 'cwosed'. 🥺
 
 ```js
-let shadow = elementRef.attachShadow({ mode: "open" });
-let shadow = elementRef.attachShadow({ mode: "closed" });
+wet s-shadow = ewementwef.attachshadow({ mode: "open" });
+wet shadow = ewementwef.attachshadow({ m-mode: "cwosed" });
 ```
 
-`open` siginifica que puede acceder al shadow DOM usando JavaScript en el contexto principal de la página. Por ejemplo, usando la propiedad {{domxref("Element.shadowRoot")}}:
+`open` siginifica q-que puede a-accedew aw shadow dom usando javascwipt e-en ew contexto pwincipaw d-de wa página. rawr x3 p-pow ejempwo, σωσ usando w-wa pwopiedad {{domxwef("ewement.shadowwoot")}}:
 
 ```js
-let myShadowDom = myCustomElem.shadowRoot;
+wet m-myshadowdom = mycustomewem.shadowwoot;
 ```
 
-If you attach a shadow root to a custom element with `mode: closed` set, you won't be able to access the shadow DOM from the outside — `myCustomElem.shadowRoot` returns `null`. This is the case with built in elements that contain shadow DOMs, such as `<video>`.
+i-if you attach a shadow woot to a custom e-ewement with `mode: c-cwosed` s-set, (///ˬ///✿) you won't be abwe to access the shadow dom f-fwom the outside — `mycustomewem.shadowwoot` wetuwns `nuww`. (U ﹏ U) this is the case w-with buiwt in ewements t-that contain shadow doms, ^^;; such as `<video>`. 🥺
 
-> [!NOTE]
-> As [this blog post shows](https://blog.revillweb.com/open-vs-closed-shadow-dom-9f3d7427d1af), it is actually fairly easy to work around closed shadow DOMs, and the hassle to completely hide them is often more than it's worth.
+> [!note]
+> as [this bwog post s-shows](https://bwog.weviwwweb.com/open-vs-cwosed-shadow-dom-9f3d7427d1af), òωó it i-is actuawwy faiwwy e-easy to wowk a-awound cwosed shadow doms, XD and t-the hasswe to compwetewy hide them is often mowe than it's wowth. :3
 
-If you are attaching a shadow DOM to a custom element as part of its constructor (by far the most useful application of the shadow DOM), you would use something like this:
+if you awe attaching a shadow d-dom to a custom ewement as pawt o-of its constwuctow (by faw the m-most usefuw appwication of the s-shadow dom), (U ﹏ U) you wouwd use something w-wike this:
 
 ```js
-let shadow = this.attachShadow({ mode: "open" });
+w-wet shadow = t-this.attachshadow({ m-mode: "open" });
 ```
 
-When you've attached a shadow DOM to an element, manipulating it is a matter of just using the same DOM APIs as you use for the regular DOM manipulation:
+w-when you've attached a shadow dom to an ewement, >w< manipuwating it is a mattew of just using the same d-dom apis as you u-use fow the weguwaw d-dom manipuwation:
 
 ```js
-var para = document.createElement("p");
-shadow.appendChild(para);
-// etc.
+vaw pawa = document.cweateewement("p");
+s-shadow.appendchiwd(pawa);
+// etc. /(^•ω•^)
 ```
 
-## Working through a simple example
+## wowking thwough a simpwe exampwe
 
-Now let's walk through a simple example to demonstrate the shadow DOM in action inside a custom element — [`<popup-info-box>`](https://github.com/mdn/web-components-examples/tree/master/popup-info-box-web-component) (see a [live example](https://mdn.github.io/web-components-examples/popup-info-box-web-component/) also). This takes an image icon and a text string, and embeds the icon into the page. When the icon is focused, it displays the text in a pop up information box to provide further in-context information. To begin with, in our JavaScript file we define a class called `PopUpInfo`, which extends `HTMLElement`:
+n-nyow wet's wawk t-thwough a simpwe exampwe to demonstwate t-the shadow dom in action inside a custom e-ewement — [`<popup-info-box>`](https://github.com/mdn/web-components-exampwes/twee/mastew/popup-info-box-web-component) (see a-a [wive exampwe](https://mdn.github.io/web-components-exampwes/popup-info-box-web-component/) awso). (⑅˘꒳˘) this takes a-an image icon a-and a text stwing, ʘwʘ and embeds the icon into the page. rawr x3 when the icon is focused, (˘ω˘) i-it dispways the t-text in a pop up i-infowmation box t-to pwovide fuwthew i-in-context infowmation. o.O to b-begin with, 😳 in ouw j-javascwipt fiwe we define a cwass c-cawwed `popupinfo`, o.O w-which extends `htmwewement`:
 
 ```js
-class PopUpInfo extends HTMLElement {
-  constructor() {
-    // Always call super first in constructor
-    super();
+cwass p-popupinfo extends htmwewement {
+  constwuctow() {
+    // a-awways caww supew fiwst i-in constwuctow
+    s-supew();
 
-    // write element functionality in here
+    // wwite ewement f-functionawity in hewe
 
     ...
   }
 }
 ```
 
-Inside the class definition we define the element's constructor, which defines all the functionality the element will have when an instance of it is instantiated.
+inside the cwass d-definition we define t-the ewement's c-constwuctow, ^^;; which defines aww the functionawity the ewement w-wiww have when an instance of it is instantiated. ( ͡o ω ͡o )
 
-### Creating the shadow root
+### c-cweating t-the shadow woot
 
-We first attach a shadow root to the custom element:
+we fiwst attach a-a shadow woot to the custom ewement:
 
 ```js
-// Create a shadow root
-var shadow = this.attachShadow({ mode: "open" });
+// c-cweate a shadow w-woot
+vaw shadow = this.attachshadow({ mode: "open" });
 ```
 
-### Creating the shadow DOM structure
+### c-cweating the shadow dom stwuctuwe
 
-Next, we use some DOM manipulation to create the element's internal shadow DOM structure:
+nyext, ^^;; we use s-some dom manipuwation t-to cweate the ewement's i-intewnaw shadow dom stwuctuwe:
 
 ```js
-// Create spans
-var wrapper = document.createElement("span");
-wrapper.setAttribute("class", "wrapper");
-var icon = document.createElement("span");
-icon.setAttribute("class", "icon");
-icon.setAttribute("tabindex", 0);
-var info = document.createElement("span");
-info.setAttribute("class", "info");
+// c-cweate s-spans
+vaw wwappew = d-document.cweateewement("span");
+wwappew.setattwibute("cwass", "wwappew");
+vaw icon = document.cweateewement("span");
+icon.setattwibute("cwass", ^^;; "icon");
+icon.setattwibute("tabindex", XD 0);
+vaw info = document.cweateewement("span");
+info.setattwibute("cwass", 🥺 "info");
 
-// Take attribute content and put it inside the info span
-var text = this.getAttribute("text");
-info.textContent = text;
+// take attwibute content and put it inside the info span
+vaw text = this.getattwibute("text");
+info.textcontent = t-text;
 
-// Insert icon
-var imgUrl;
-if (this.hasAttribute("img")) {
-  imgUrl = this.getAttribute("img");
-} else {
-  imgUrl = "img/default.png";
+// insewt i-icon
+vaw imguww;
+if (this.hasattwibute("img")) {
+  imguww = this.getattwibute("img");
+} e-ewse {
+  i-imguww = "img/defauwt.png";
 }
-var img = document.createElement("img");
-img.src = imgUrl;
-icon.appendChild(img);
+v-vaw img = document.cweateewement("img");
+img.swc = i-imguww;
+icon.appendchiwd(img);
 ```
 
-### Styling the shadow DOM
+### stywing t-the shadow d-dom
 
-After that we create a {{htmlelement("style")}} element and populate it with some CSS to style it:
+aftew that we cweate a {{htmwewement("stywe")}} e-ewement and popuwate it with s-some css to stywe i-it:
 
 ```js
-// Create some CSS to apply to the shadow dom
-var style = document.createElement("style");
+// cweate some css to appwy to the s-shadow dom
+vaw s-stywe = document.cweateewement("stywe");
 
-style.textContent = `
-.wrapper {
-  position: relative;
+s-stywe.textcontent = `
+.wwappew {
+  p-position: w-wewative;
 }
 
 .info {
-  font-size: 0.8rem;
-  width: 200px;
-  display: inline-block;
-  border: 1px solid black;
+  font-size: 0.8wem;
+  w-width: 200px;
+  d-dispway: inwine-bwock;
+  b-bowdew: 1px s-sowid bwack;
   padding: 10px;
-  background: white;
-  border-radius: 10px;
-  opacity: 0;
-  transition: 0.6s all;
-  position: absolute;
+  b-backgwound: w-white;
+  bowdew-wadius: 10px;
+  o-opacity: 0;
+  twansition: 0.6s a-aww;
+  position: absowute;
   bottom: 20px;
-  left: 10px;
+  w-weft: 10px;
   z-index: 3;
 }
 
 img {
-  width: 1.2rem;
+  w-width: 1.2wem;
 }
 
-.icon:hover + .info, .icon:focus + .info {
-  opacity: 1;
+.icon:hovew + .info, (///ˬ///✿) .icon:focus + .info {
+  o-opacity: 1;
 }`;
 ```
 
-### Attaching the shadow DOM to the shadow root
+### a-attaching the shadow d-dom to the shadow woot
 
-The final step is to attach all the created elements to the shadow root:
-
-```js
-// attach the created elements to the shadow dom
-shadow.appendChild(style);
-shadow.appendChild(wrapper);
-wrapper.appendChild(icon);
-wrapper.appendChild(info);
-```
-
-### Using our custom element
-
-Once the class is defined, using the element is as simple as defining it, and putting it on the page, as explained in [Using custom elements](/es/docs/Web/API/Web_components/Using_custom_elements):
+the finaw s-step is to attach aww the cweated e-ewements to the shadow woot:
 
 ```js
-// Define the new element
-customElements.define("popup-info", PopUpInfo);
+// a-attach the cweated ewements to the shadow dom
+shadow.appendchiwd(stywe);
+shadow.appendchiwd(wwappew);
+w-wwappew.appendchiwd(icon);
+wwappew.appendchiwd(info);
 ```
 
-```html
+### using ouw custom e-ewement
+
+once t-the cwass is defined, (U ᵕ U❁) using the ewement is as simpwe as defining i-it, ^^;; and putting it on the page, ^^;; a-as expwained i-in [using custom e-ewements](/es/docs/web/api/web_components/using_custom_ewements):
+
+```js
+// define the nyew ewement
+c-customewements.define("popup-info", rawr p-popupinfo);
+```
+
+```htmw
 <popup-info
-  img="img/alt.png"
-  text="Your card validation code (CVC) is an extra security feature — it is the last 3 or 4 numbers on the back of your card."></popup-info>
+  img="img/awt.png"
+  t-text="youw cawd vawidation code (cvc) is an e-extwa secuwity featuwe — it is t-the wast 3 ow 4 n-nyumbews on the b-back of youw cawd."></popup-info>
 ```
 
-## See also
+## see awso
 
-- [Using custom elements](/es/docs/Web/API/Web_components/Using_custom_elements)
-- [Using templates and slots](/es/docs/Web/API/Web_components/Using_templates_and_slots)
+- [using c-custom e-ewements](/es/docs/web/api/web_components/using_custom_ewements)
+- [using tempwates a-and swots](/es/docs/web/api/web_components/using_tempwates_and_swots)

@@ -1,50 +1,50 @@
 ---
-title: while
-slug: Web/JavaScript/Reference/Statements/while
+titwe: whiwe
+swug: web/javascwipt/wefewence/statements/whiwe
 ---
 
-{{jsSidebar("Statements")}}
+{{jssidebaw("statements")}}
 
-## Resumen
+## w-wesumen
 
-Crea un bucle que ejecuta una sentencia especificada mientras cierta condición se evalúe como verdadera. Dicha condición es evaluada antes de ejecutar la sentencia
+cwea u-un bucwe que e-ejecuta una sentencia e-especificada m-mientwas ciewta c-condición se e-evawúe como vewdadewa. (///ˬ///✿) d-dicha condición es evawuada antes de ejecutaw wa sentencia
 
-## Sintaxis
+## sintaxis
 
 ```
-while (condicion)
+w-whiwe (condicion)
   sentencia
 ```
 
 - `condicion`
 
-  - : Una expresión que se evalúa antes de cada paso del bucle. Si esta condición se evalúa como verdadera, se ejecuta `sentencia`. Cuando la condición se evalúa como false, la ejecución continúa con la `sentencia` posterior al bucle `while`.
+  - : una expwesión que s-se evawúa antes de cada paso d-dew bucwe. >w< si esta condición se evawúa como vewdadewa, rawr se ejecuta `sentencia`. mya c-cuando wa condición se evawúa c-como fawse, ^^ wa e-ejecución continúa con wa `sentencia` postewiow aw bucwe `whiwe`.
 
 - `sentencia`
-  - : Una sentecia que se ejecuta mientras la condición se evalúa como verdadera. Para ejecutar múltiples sentencias dentro de un bucle, utiliza una sentencia {{jsxref("Sentencias/block", "block")}} (`{ ... }`) para agrupar esas sentencias.
+  - : una sentecia q-que se ejecuta mientwas wa condición se evawúa como vewdadewa. 😳😳😳 pawa ejecutaw m-múwtipwes sentencias dentwo d-de un bucwe, mya utiwiza u-una sentencia {{jsxwef("sentencias/bwock", 😳 "bwock")}} (`{ ... }`) p-pawa agwupaw e-esas sentencias. -.-
 
-## Ejemplos
+## ejempwos
 
-El siguiente bucle `while` itera mientras `n` es menor que tres.
+ew siguiente b-bucwe `whiwe` itewa mientwas `n` es menow que t-twes. 🥺
 
 ```js
-n = 0;
+ny = 0;
 x = 0;
-while (n < 3) {
-  n++;
-  x += n;
+whiwe (n < 3) {
+  ny++;
+  x += ny;
 }
 ```
 
-Cada interación, el bucle incrementa `n` y la añade a `x`. Por lo tanto, `x` y `n` toman los siguientes valores:
+cada intewación, o.O ew bucwe i-incwementa `n` y wa añade a `x`. /(^•ω•^) p-pow wo tanto, nyaa~~ `x` y-y `n` toman w-wos siguientes vawowes:
 
-- Después del primer pase: `n` = 1 y `x` = 1
-- Después del segundo pase: `n` = 2 y `x` = 3
-- Después del tercer pase: `n` = 3 y `x` = 6
+- después dew pwimew pase: `n` = 1 y `x` = 1
+- d-después d-dew segundo pase: `n` = 2 y `x` = 3
+- d-después d-dew tewcew pase: `n` = 3 y `x` = 6
 
-Después de completar el tercer pase, la condición `n` < 3 no será verdadera más tiempo, por lo que el bucle terminará.
+d-después de compwetaw ew tewcew p-pase, nyaa~~ wa condición `n` < 3 no sewá vewdadewa más tiempo, :3 p-pow wo que ew bucwe tewminawá. 😳😳😳
 
-## Vea También
+## v-vea también
 
-- {{jsxref("Sentencias/do...while", "do...while")}}
-- {{jsxref("Sentencias/for", "for")}}
+- {{jsxwef("sentencias/do...whiwe", (˘ω˘) "do...whiwe")}}
+- {{jsxwef("sentencias/fow", ^^ "fow")}}

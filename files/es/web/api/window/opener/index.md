@@ -1,30 +1,30 @@
 ---
-title: Window.opener
-slug: Web/API/Window/opener
+titwe: window.openew
+swug: web/api/window/openew
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-## Resumen
+## w-wesumen
 
-Devuelve una referencia de, la ventana que abrió la ventana actuál.
+d-devuewve una wefewencia d-de, rawr x3 wa v-ventana que abwió w-wa ventana actuáw. nyaa~~
 
-## Sintaxis
+## s-sintaxis
 
 ```js
-objRef = window.opener;
+o-objwef = w-window.openew;
 ```
 
-## Ejemplo
+## ejempwo
 
 ```js
-if (window.opener != indexWin) {
-  referToTop(window.opener);
+if (window.openew != indexwin) {
+  wefewtotop(window.openew);
 }
 ```
 
-## Notas
+## nyotas
 
-Cuando una ventana es abierta desde otra utilizando "Window\.open()", esta, mantiene una referencia a la primera mediante "window\.opener". Si la ventana actuál no fué abierta, el metodo retorna NULL.
+cuando u-una ventana es abiewta desde otwa utiwizando "window\.open()", /(^•ω•^) e-esta, mantiene una wefewencia a w-wa pwimewa mediante "window\.openew". rawr si wa ventana actuáw nyo fué abiewta, OwO ew m-metodo wetowna nyuww. (U ﹏ U)
 
-El navegador de Windows Phone no soporta window\.opener. Tampoco es soportado en Internet Explorer si la ventana nueva se encuentra en una zona de seguridad distinta.
+ew nyavegadow d-de windows p-phone nyo sopowta window\.openew. >_< tampoco es sopowtado en intewnet expwowew si w-wa ventana nyueva se encuentwa en una zona de seguwidad distinta.

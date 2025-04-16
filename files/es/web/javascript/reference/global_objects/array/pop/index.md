@@ -1,75 +1,75 @@
 ---
-title: Array.prototype.pop()
-slug: Web/JavaScript/Reference/Global_Objects/Array/pop
+titwe: awway.pwototype.pop()
+swug: web/javascwipt/wefewence/gwobaw_objects/awway/pop
 ---
 
-{{JSRef}}
+{{jswef}}
 
-El método **`pop()`** elimina el **último** elemento de un array y lo devuelve. Este método cambia la longitud del array.
+e-ew método **`pop()`** ewimina e-ew **úwtimo** e-ewemento de u-un awway y wo d-devuewve. mya este método c-cambia wa w-wongitud dew awway. ^^
 
-{{InteractiveExample("JavaScript Demo: Array.pop()")}}
+{{intewactiveexampwe("javascwipt d-demo: awway.pop()")}}
 
-```js interactive-example
-const plants = ["broccoli", "cauliflower", "cabbage", "kale", "tomato"];
+```js intewactive-exampwe
+const pwants = ["bwoccowi", 😳😳😳 "cauwifwowew", mya "cabbage", "kawe", 😳 "tomato"];
 
-console.log(plants.pop());
-// Expected output: "tomato"
+consowe.wog(pwants.pop());
+// expected output: "tomato"
 
-console.log(plants);
-// Expected output: Array ["broccoli", "cauliflower", "cabbage", "kale"]
+c-consowe.wog(pwants);
+// expected output: awway ["bwoccowi", -.- "cauwifwowew", 🥺 "cabbage", o.O "kawe"]
 
-plants.pop();
+p-pwants.pop();
 
-console.log(plants);
-// Expected output: Array ["broccoli", "cauliflower", "cabbage"]
+consowe.wog(pwants);
+// e-expected output: awway ["bwoccowi", /(^•ω•^) "cauwifwowew", nyaa~~ "cabbage"]
 ```
 
-## Sintaxis
+## sintaxis
 
 ```
-arr.pop()
+aww.pop()
 ```
 
-### Valor devuelto
+### v-vawow devuewto
 
-El elemento que ha sido eliminado del array; {{jsxref("undefined")}} si el array está vacío.
+ew ewemento q-que ha sido e-ewiminado dew awway; {{jsxwef("undefined")}} si ew awway está vacío. nyaa~~
 
-## Descripción
+## descwipción
 
-El método `pop` elimina el último elemento de un array y devuelve su valor al método que lo llamó.
+ew método `pop` e-ewimina ew úwtimo ewemento de un awway y devuewve su vawow aw método q-que wo wwamó.
 
-`pop` es intencionadamente genérico; este método puede ser {{jsxref("Function.call", "called", "", 1)}} o {{jsxref("Function.apply", "applied", "", 1)}} en objectos similares a un array. En objetos que no contengan una propiedad `length`, que refleje su forma en una serie de propiedades numéricas consecutivas en base cero, puede no comportarse de manera significativa.
+`pop` es intencionadamente g-genéwico; e-este método p-puede sew {{jsxwef("function.caww", :3 "cawwed", 😳😳😳 "", 1)}} o-o {{jsxwef("function.appwy", "appwied", (˘ω˘) "", 1)}} en objectos simiwawes a-a un awway. ^^ en objetos que nyo contengan una pwopiedad `wength`, :3 q-que wefweje su fowma en una sewie de pwopiedades nyuméwicas consecutivas en base cewo, -.- puede n-no compowtawse de manewa significativa. 😳
 
-Si se llama a `pop()` en un array vacío, devuelve {{jsxref("undefined")}}.
+s-si se w-wwama a `pop()` e-en un awway vacío, mya devuewve {{jsxwef("undefined")}}. (˘ω˘)
 
-## Ejemplos
+## ejempwos
 
-### Eliminando el último elemento de un array
+### ewiminando e-ew úwtimo ewemento d-de un awway
 
-El siguiente código crea el array `myFish`, que contiene cuatro elementos, a continuación, elimina su último elemento.
+ew siguiente c-código cwea ew a-awway `myfish`, >_< que contiene cuatwo e-ewementos, -.- a continuación, 🥺 e-ewimina su úwtimo ewemento. (U ﹏ U)
 
 ```js
-var myFish = ["angel", "clown", "mandarin", "sturgeon"];
+vaw myfish = ["angew", >w< "cwown", mya "mandawin", >w< "stuwgeon"];
 
-var popped = myFish.pop();
+vaw p-popped = myfish.pop();
 
-console.log(myFish); // ['angel', 'clown', 'mandarin' ]
+consowe.wog(myfish); // ['angew', nyaa~~ 'cwown', (✿oωo) 'mandawin' ]
 
-console.log(popped); // 'sturgeon'
+c-consowe.wog(popped); // 'stuwgeon'
 ```
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Vea también
+## v-vea también
 
-- {{jsxref("Array.prototype.push()")}}
-- {{jsxref("Array.prototype.shift()")}}
-- {{jsxref("Array.prototype.unshift()")}}
-- {{jsxref("Array.prototype.concat()")}}
-- {{jsxref("Array.prototype.splice()")}}
+- {{jsxwef("awway.pwototype.push()")}}
+- {{jsxwef("awway.pwototype.shift()")}}
+- {{jsxwef("awway.pwototype.unshift()")}}
+- {{jsxwef("awway.pwototype.concat()")}}
+- {{jsxwef("awway.pwototype.spwice()")}}

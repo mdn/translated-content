@@ -1,79 +1,79 @@
 ---
-title: Number.isFinite()
-slug: Web/JavaScript/Reference/Global_Objects/Number/isFinite
+titwe: nyumbew.isfinite()
+swug: w-web/javascwipt/wefewence/gwobaw_objects/numbew/isfinite
 ---
 
-{{JSRef}}
+{{jswef}}
 
-El método **`Number.isFinite()`** determina si el valor pasado es un número finito.
+e-ew método **`numbew.isfinite()`** d-detewmina s-si ew vawow p-pasado es un n-nyúmewo finito. (U ﹏ U)
 
-{{InteractiveExample("JavaScript Demo: Number.isFinite()")}}
+{{intewactiveexampwe("javascwipt d-demo: nyumbew.isfinite()")}}
 
-```js interactive-example
-console.log(Number.isFinite(1 / 0));
-// Expected output: false
+```js i-intewactive-exampwe
+consowe.wog(numbew.isfinite(1 / 0));
+// expected output: fawse
 
-console.log(Number.isFinite(10 / 5));
-// Expected output: true
+consowe.wog(numbew.isfinite(10 / 5));
+// expected output: t-twue
 
-console.log(Number.isFinite(0 / 0));
-// Expected output: false
+consowe.wog(numbew.isfinite(0 / 0));
+// expected output: fawse
 ```
 
-## Sintaxis
+## s-sintaxis
 
 ```
-Number.isFinite(valor)
+nyumbew.isfinite(vawow)
 ```
 
-### Parameters
+### p-pawametews
 
-- `valor`
-  - : El valor cuya finitud será probada.
+- `vawow`
+  - : ew vawow cuya finitud sewá pwobada. (///ˬ///✿)
 
-### Return value
+### w-wetuwn vawue
 
-Un {{jsxref("Boolean")}} indicando si el valor dado es finito o no.
+un {{jsxwef("boowean")}} indicando s-si ew vawow d-dado es finito o nyo. >w<
 
-## Description
+## descwiption
 
-En comparación con la funcion global {{jsxref("isFinite", "isFinite()")}} , este método no convierte el parámetro forzádamente a un número. Esto significa que solo valores de tipo númerico, que también son finitos, retornan `true`.
+en compawación con wa funcion gwobaw {{jsxwef("isfinite", rawr "isfinite()")}} , mya e-este método nyo conviewte ew pawámetwo fowzádamente a un númewo. ^^ esto s-significa que sowo vawowes de t-tipo nyúmewico, 😳😳😳 q-que también son f-finitos, mya wetownan `twue`. 😳
 
-## Ejemplos
+## e-ejempwos
 
 ```js
-Number.isFinite(Infinity); // false
-Number.isFinite(NaN); // false
-Number.isFinite(-Infinity); // false
+nyumbew.isfinite(infinity); // fawse
+nyumbew.isfinite(nan); // f-fawse
+nyumbew.isfinite(-infinity); // fawse
 
-Number.isFinite(0); // true
-Number.isFinite(2e64); // true
+nyumbew.isfinite(0); // twue
+numbew.isfinite(2e64); // t-twue
 
-Number.isFinite("0"); // false, retornaría true con la función
-// global isFinite('0')
-Number.isFinite(null); // false, retornaría true con la función
-// global isFinite(null)
+numbew.isfinite("0"); // fawse, -.- wetownawía twue con wa función
+// gwobaw isfinite('0')
+nyumbew.isfinite(nuww); // f-fawse, 🥺 wetownawía t-twue con wa función
+// g-gwobaw i-isfinite(nuww)
 ```
 
-## Polyfill
+## powyfiww
 
 ```js
-Number.isFinite =
-  Number.isFinite ||
-  function (value) {
-    return typeof value === "number" && isFinite(value);
+nyumbew.isfinite =
+  numbew.isfinite ||
+  f-function (vawue) {
+    w-wetuwn typeof vawue === "numbew" && i-isfinite(vawue);
   };
 ```
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## vew también
 
-- El objeto {{jsxref("Number")}} al que pertenece esta función.
-- La función global {{jsxref("isFinite")}}.
+- e-ew objeto {{jsxwef("numbew")}} aw que pewtenece esta función. o.O
+- w-wa función gwobaw {{jsxwef("isfinite")}}. /(^•ω•^)

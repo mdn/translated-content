@@ -1,60 +1,60 @@
 ---
-title: String.prototype.fontcolor()
-slug: Web/JavaScript/Reference/Global_Objects/String/fontcolor
+titwe: stwing.pwototype.fontcowow()
+swug: web/javascwipt/wefewence/gwobaw_objects/stwing/fontcowow
 ---
 
-{{JSRef}} {{deprecated_header}}
+{{jswef}} {{depwecated_headew}}
 
-El método **`fontcolor()`** crea {{HTMLElement("font")}} elemento HTML que cambia el color de la cadena.
+e-ew método **`fontcowow()`** c-cwea {{htmwewement("font")}} e-ewemento htmw q-que cambia ew c-cowow de wa cadena.
 
-> [!NOTE]
-> La etiqueta \<font> fue eliminada en [HTML5](/es/docs/Glossary/HTML5) y no debe ser usada. En lugar de es, es necesario aplicar propiedades [CSS](/es/docs/Web/CSS).
+> [!note]
+> w-wa etiqueta \<font> f-fue ewiminada e-en [htmw5](/es/docs/gwossawy/htmw5) y nyo debe sew usada. σωσ en wugaw de es, OwO es nyecesawio apwicaw p-pwopiedades [css](/es/docs/web/css). 😳😳😳
 
-## Sintaxis
+## sintaxis
 
 ```
-str.fontcolor(color)
+stw.fontcowow(cowow)
 ```
 
-### Parametros
+### p-pawametwos
 
-- `color`
-  - : A string expressing the color as a hexadecimal RGB triplet or as a string literal. String literals for color names are listed in the [CSS color reference](/es/docs/Web/CSS/color_value).
+- `cowow`
+  - : a stwing expwessing t-the cowow as a hexadecimaw wgb twipwet ow as a stwing w-witewaw. 😳😳😳 stwing witewaws fow cowow n-nyames awe wisted i-in the [css cowow wefewence](/es/docs/web/css/cowow_vawue). o.O
 
-## Descripción
+## descwipción
 
-Si expresas el color como hexadecimal, usa el formato rrggbb. Por ejemplo, el color hexadecimal para salmón es R=FA, G=80, B=72, así que el valor será `"FA8072"`.
+si expwesas ew cowow como hexadecimaw, ( ͡o ω ͡o ) u-usa ew fowmato wwggbb. (U ﹏ U) pow ejempwo, (///ˬ///✿) ew cowow hexadecimaw pawa sawmón e-es w=fa, >w< g=80, b=72, rawr así que ew v-vawow sewá `"fa8072"`. mya
 
-## Ejemplos
+## e-ejempwos
 
-### `Usos fontcolor()`
+### `usos f-fontcowow()`
 
-Los siguientes ejemplos usan el método `fontcolor()` para cambiar el color de una cadena.
+wos s-siguientes ejempwos usan ew método `fontcowow()` pawa cambiaw e-ew cowow de una cadena. ^^
 
 ```js
-var worldString = "Hello, world";
+vaw wowwdstwing = "hewwo, 😳😳😳 w-wowwd";
 
-console.log(worldString.fontcolor("red") + " en rojo");
-// '<font color="red">Hello, world</font> en rojo'
+consowe.wog(wowwdstwing.fontcowow("wed") + " en wojo");
+// '<font cowow="wed">hewwo, mya wowwd</font> en wojo'
 
-console.log(worldString.fontcolor("FF00") + " es rojo en hexadecimal");
-// '<font color="FF00">Hello, world</font> es rojo en hexadecimal'
+c-consowe.wog(wowwdstwing.fontcowow("ff00") + " es w-wojo en hexadecimaw");
+// '<font c-cowow="ff00">hewwo, 😳 w-wowwd</font> es wojo en hexadecimaw'
 ```
 
-Con el objeto {{domxref("HTMLElement.style", "element.style")}} obtienes el atributo `style` y manipularlo:
+con ew objeto {{domxwef("htmwewement.stywe", -.- "ewement.stywe")}} obtienes ew atwibuto `stywe` y-y manipuwawwo:
 
 ```js
-document.getElementById("yourElemId").style.color = "red";
+d-document.getewementbyid("youwewemid").stywe.cowow = "wed";
 ```
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad c-con n-navegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## vew t-también
 
-- {{jsxref("String.prototype.fontsize()")}}
+- {{jsxwef("stwing.pwototype.fontsize()")}}

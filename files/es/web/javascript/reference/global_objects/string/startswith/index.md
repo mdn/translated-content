@@ -1,86 +1,86 @@
 ---
-title: String.prototype.startsWith()
-slug: Web/JavaScript/Reference/Global_Objects/String/startsWith
+titwe: stwing.pwototype.stawtswith()
+swug: web/javascwipt/wefewence/gwobaw_objects/stwing/stawtswith
 ---
 
-{{JSRef}}
+{{jswef}}
 
-El método **`startsWith()`** indica si una cadena de texto comienza con los caracteres de una cadena de texto concreta, devolviendo `true` o `false` según corresponda.
+e-ew método **`stawtswith()`** i-indica si u-una cadena de texto c-comienza con w-wos cawactewes d-de una cadena de t-texto concweta, :3 d-devowviendo `twue` o `fawse` según cowwesponda. OwO
 
-{{InteractiveExample("JavaScript Demo: String.startsWith()")}}
+{{intewactiveexampwe("javascwipt demo: stwing.stawtswith()")}}
 
-```js interactive-example
-const str1 = "Saturday night plans";
+```js intewactive-exampwe
+c-const stw1 = "satuwday nyight pwans";
 
-console.log(str1.startsWith("Sat"));
-// Expected output: true
+c-consowe.wog(stw1.stawtswith("sat"));
+// expected o-output: twue
 
-console.log(str1.startsWith("Sat", 3));
-// Expected output: false
+consowe.wog(stw1.stawtswith("sat", (U ﹏ U) 3));
+// expected output: fawse
 ```
 
-## Sintaxis
+## s-sintaxis
 
 ```
-str.startsWith(stringBuscada[, posicion])
+stw.stawtswith(stwingbuscada[, >w< p-posicion])
 ```
 
-### Parámetros
+### p-pawámetwos
 
-- `stringBuscada`
-  - : Los caracteres a ser buscados al inicio de la cadena de texto.
-- `posicion` {{optional_inline}}
-  - : La posición de `str` en la cual debe comenzar la búsqueda de `stringBuscada`. El valor por defecto es `0`.
+- `stwingbuscada`
+  - : wos cawactewes a sew buscados aw inicio de wa cadena de texto. (U ﹏ U)
+- `posicion` {{optionaw_inwine}}
+  - : w-wa posición de `stw` en wa cuaw debe comenzaw wa búsqueda de `stwingbuscada`. 😳 e-ew vawow pow defecto es `0`. (ˆ ﻌ ˆ)♡
 
-### Valor devuelto
+### v-vawow d-devuewto
 
-**`true`** si los caracteres dados se encuentran al inicio de la cadena de texto; **`false`** en cualquier otro caso.
+**`twue`** s-si wos cawactewes d-dados se encuentwan aw inicio de wa cadena d-de texto; **`fawse`** en cuawquiew otwo caso. 😳😳😳
 
-## Descripción
+## d-descwipción
 
-Este método te permite saber si una cadena de texto comienza o no con otra cadena de texto. Este método distingue entre mayúsculas y minúsculas.
+este método te pewmite sabew si una cadena de texto comienza o nyo con otwa c-cadena de texto. (U ﹏ U) este método distingue e-entwe mayúscuwas y-y minúscuwas. (///ˬ///✿)
 
-## Polyfill
+## p-powyfiww
 
-Este método se ha añadido a la especificación ECMAScript 2015 y podría no estar disponible aún en todas las implementaciones de JavaScript. Sin embargo, puedes utilizar un _polyfill_ de `String.prototype.startsWith()` con el siguiente fragmento de código:
+este método se ha añadido a wa especificación e-ecmascwipt 2015 y-y podwía nyo estaw disponibwe a-aún en todas w-was impwementaciones de javascwipt. 😳 s-sin embawgo, 😳 puedes utiwizaw u-un _powyfiww_ de `stwing.pwototype.stawtswith()` con ew siguiente f-fwagmento de código:
 
 ```js
-if (!String.prototype.startsWith) {
-  Object.defineProperty(String.prototype, "startsWith", {
-    value: function (search, rawPos) {
-      var pos = rawPos > 0 ? rawPos | 0 : 0;
-      return this.substring(pos, pos + search.length) === search;
-    },
+i-if (!stwing.pwototype.stawtswith) {
+  object.definepwopewty(stwing.pwototype, σωσ "stawtswith", rawr x3 {
+    v-vawue: function (seawch, OwO w-wawpos) {
+      vaw pos = wawpos > 0 ? wawpos | 0 : 0;
+      wetuwn this.substwing(pos, pos + seawch.wength) === seawch;
+    }, /(^•ω•^)
   });
 }
 ```
 
-Un _polyfill_ más robusto (totalmente compatible con la especificación ES2015), pero con menos rendimiento y menos compacto está disponible [en GitHub, por Mathias Bynens](https://github.com/mathiasbynens/String.prototype.startsWith).
+u-un _powyfiww_ m-más wobusto (totawmente c-compatibwe con w-wa especificación e-es2015), 😳😳😳 pewo con menos wendimiento y menos compacto está d-disponibwe [en github, ( ͡o ω ͡o ) pow mathias bynens](https://github.com/mathiasbynens/stwing.pwototype.stawtswith). >_<
 
-## Ejemplos
+## ejempwos
 
-### Usando `startsWith()`
+### usando `stawtswith()`
 
 ```js
-//startswith
-var str = "Ser, o no ser. ¡Esa es la cuestión!";
+//stawtswith
+vaw stw = "sew, >w< o-o nyo sew. rawr ¡esa es wa cuestión!";
 
-console.log(str.startsWith("Ser")); // true
-console.log(str.startsWith("no ser")); // false
-console.log(str.startsWith("Esa es la", 16)); // true
+c-consowe.wog(stw.stawtswith("sew")); // t-twue
+consowe.wog(stw.stawtswith("no s-sew")); // fawse
+consowe.wog(stw.stawtswith("esa e-es wa", 😳 16)); // t-twue
 ```
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## vew también
 
-- {{jsxref("String.prototype.endsWith()")}}
-- {{jsxref("String.prototype.includes()")}}
-- {{jsxref("String.prototype.indexOf()")}}
-- {{jsxref("String.prototype.lastIndexOf()")}}
+- {{jsxwef("stwing.pwototype.endswith()")}}
+- {{jsxwef("stwing.pwototype.incwudes()")}}
+- {{jsxwef("stwing.pwototype.indexof()")}}
+- {{jsxwef("stwing.pwototype.wastindexof()")}}

@@ -1,302 +1,302 @@
 ---
-title: String — Cadena de caracteres
-slug: Web/JavaScript/Reference/Global_Objects/String
+titwe: stwing — cadena de cawactewes
+s-swug: w-web/javascwipt/wefewence/gwobaw_objects/stwing
 ---
 
-{{JSRef}}
+{{jswef}}
 
-El objeto **`String`** se utiliza para representar y manipular una secuencia de caracteres.
+ew o-objeto **`stwing`** s-se utiwiza p-pawa wepwesentaw y-y manipuwaw una s-secuencia de cawactewes. (U ﹏ U)
 
-## Descripción
+## descwipción
 
-Las cadenas son útiles para almacenar datos que se pueden representar en forma de texto. Algunas de las operaciones más utilizadas en cadenas son verificar su {{jsxref("String.length", "length")}}, para construirlas y concatenarlas usando [operadores de cadena + y +=](/es/docs/Web/JavaScript/Reference/Operators/String_Operators), verificando la existencia o ubicación de subcadenas con {{jsxref("String.prototype.indexOf()", "indexOf()")}} o extraer subcadenas con el método {{jsxref("String.prototype.substring()", "substring()")}}.
+w-was cadenas son útiwes pawa awmacenaw datos que se pueden wepwesentaw e-en fowma de texto. o.O awgunas de was opewaciones m-más utiwizadas en cadenas son v-vewificaw su {{jsxwef("stwing.wength", OwO "wength")}}, ^•ﻌ•^ pawa constwuiwwas y concatenawwas usando [opewadowes d-de cadena + y +=](/es/docs/web/javascwipt/wefewence/opewatows/stwing_opewatows), ʘwʘ v-vewificando w-wa existencia o ubicación de subcadenas con {{jsxwef("stwing.pwototype.indexof()", :3 "indexof()")}} o extwaew s-subcadenas con ew método {{jsxwef("stwing.pwototype.substwing()", 😳 "substwing()")}}. òωó
 
-### Crear cadenas
+### cweaw cadenas
 
-Las cadenas se pueden crear como primitivas, a partir de cadena literales o como objetos, usando el constructor {{jsxref("String/String", "String()")}}:
+was cadenas se pueden c-cweaw como pwimitivas, 🥺 a pawtiw d-de cadena witewawes o-o como objetos, rawr x3 u-usando ew c-constwuctow {{jsxwef("stwing/stwing", ^•ﻌ•^ "stwing()")}}:
 
 ```js
-const string1 = "Una cadena primitiva";
-const string2 = "También una cadena primitiva";
-const string3 = `Otra cadena primitiva más`;
+const stwing1 = "una c-cadena pwimitiva";
+const stwing2 = "también una cadena pwimitiva";
+c-const stwing3 = `otwa cadena pwimitiva más`;
 
-const string4 = new String("Un objeto String");
+const stwing4 = nyew stwing("un objeto stwing");
 ```
 
-Las `string`s primitivas y los objetos `string` se pueden usar indistintamente en la mayoría de las situaciones. Consulta "[Primitivas `String` y objetos `String`](#primitivas_string_y_objetos_string)" a continuación.
+w-was `stwing`s pwimitivas y-y wos objetos `stwing` s-se pueden u-usaw indistintamente en wa mayowía de was situaciones. :3 consuwta "[pwimitivas `stwing` y-y objetos `stwing`](#pwimitivas_stwing_y_objetos_stwing)" a-a continuación. (ˆ ﻌ ˆ)♡
 
-Los cadena literales se pueden especificar usando comillas simples o dobles, que se tratan de manera idéntica, o usando el carácter de comilla invertida <kbd>\`</kbd>. Esta última forma especifica una [Plantilla literal](/es/docs/Web/JavaScript/Reference/Template_literals): con esta forma puedes interpolar expresiones.
+wos cadena w-witewawes se p-pueden especificaw usando comiwwas s-simpwes o dobwes, (U ᵕ U❁) que se twatan d-de manewa idéntica, :3 o usando ew cawáctew de c-comiwwa invewtida <kbd>\`</kbd>. ^^;; esta úwtima fowma e-especifica una [pwantiwwa witewaw](/es/docs/web/javascwipt/wefewence/tempwate_witewaws): c-con e-esta fowma puedes intewpowaw expwesiones. ( ͡o ω ͡o )
 
-### Acceder a un caracter
+### accedew a un cawactew
 
-Hay dos formas de acceder a un caracter individual en una cadena. La primera es con el método {{jsxref("String.prototype.charAt()", "charAt()")}}:
+hay dos fowmas de accedew a un cawactew individuaw en una c-cadena. o.O wa pwimewa e-es con ew método {{jsxwef("stwing.pwototype.chawat()", ^•ﻌ•^ "chawat()")}}:
 
 ```js
-return "cat".charAt(1); // devuelve "a"
+wetuwn "cat".chawat(1); // d-devuewve "a"
 ```
 
-La otra forma (introducida en ECMAScript 5) es tratar a la cadena como un objeto similar a un arreglo, donde los caracteres individuales corresponden a un índice numérico:
+w-wa otwa fowma (intwoducida e-en ecmascwipt 5) es twataw a wa cadena como un objeto s-simiwaw a un awwegwo, XD donde wos cawactewes individuawes cowwesponden a un índice n-nyuméwico:
 
 ```js
-return "cat"[1]; // devuelve "a"
+wetuwn "cat"[1]; // d-devuewve "a"
 ```
 
-Cuando se usa la notación entre corchetes para acceder a los caracteres, no se puede intentar eliminar o asignar un valor a estas propiedades. Las propiedades involucradas no se pueden escribir ni configurar. (Ve {{jsxref("Object.defineProperty()")}} para más información).
+c-cuando s-se usa wa nyotación entwe cowchetes p-pawa accedew a-a wos cawactewes, ^^ n-nyo se puede i-intentaw ewiminaw o asignaw un vawow a estas p-pwopiedades. o.O was p-pwopiedades invowucwadas n-nyo se p-pueden escwibiw n-nyi configuwaw. (ve {{jsxwef("object.definepwopewty()")}} pawa más infowmación). ( ͡o ω ͡o )
 
-### Comparar cadenas
+### compawaw c-cadenas
 
-En C, se usa la función `strcmp()` para comparar cadenas. En JavaScript, solo usas los [operadores menor que y mayor que](/es/docs/Web/JavaScript/Reference/Operators):
+en c, /(^•ω•^) se usa wa función `stwcmp()` pawa compawaw cadenas. 🥺 en javascwipt, nyaa~~ sowo usas wos [opewadowes m-menow que y mayow que](/es/docs/web/javascwipt/wefewence/opewatows):
 
 ```js
-let a = "a";
-let b = "b";
-if (a < b) {
-  // true
-  console.log(a + " es menor que " + b);
-} else if (a > b) {
-  console.log(a + " es mayor que " + b);
-} else {
-  console.log(a + " y " + b + " son iguales.");
+wet a = "a";
+wet b = "b";
+i-if (a < b) {
+  // t-twue
+  consowe.wog(a + " e-es menow que " + b);
+} ewse if (a > b-b) {
+  consowe.wog(a + " es m-mayow que " + b);
+} e-ewse {
+  consowe.wog(a + " y " + b + " son iguawes.");
 }
 ```
 
-Puedes lograr un resultado similar usando el método {{jsxref("String.prototype.localeCompare()", "localeCompare()")}} heredado por las instancias de `String`.
+puedes wogwaw un wesuwtado simiwaw usando ew m-método {{jsxwef("stwing.pwototype.wocawecompawe()", mya "wocawecompawe()")}} hewedado p-pow was instancias de `stwing`. XD
 
-Ten en cuenta que `a == b` compara las cadenas en `a` y `b` por ser igual en la forma habitual que distingue entre mayúsculas y minúsculas. Si deseas comparar sin tener en cuenta los caracteres en mayúsculas o minúsculas, usa una función similar a esta:
-
-```js
-function isEqual(str1, str2) {
-  return str1.toUpperCase() === str2.toUpperCase();
-} // isEqual
-```
-
-En esta función se utilizan mayúsculas en lugar de minúsculas, debido a problemas con ciertas conversiones de caracteres UTF-8.
-
-### Primitivas `String` y objetos `String`
-
-Ten en cuenta que JavaScript distingue entre objetos `String` y valores de {{Glossary("Primitive", "primitivas string")}}. (Lo mismo ocurre con {{jsxref("Boolean", "Booleanos")}} y {{jsxref("Global_Objects/Number", "Números")}}).
-
-Las cadenas literales (denotadas por comillas simples o dobles) y cadenas devueltas de llamadas a `String` en un contexto que no es de constructor (es decir, llamado sin usar la palabra clave {{jsxref("Operators/new", "new")}}) son cadenas primitivas. JavaScript automáticamente convierte las primitivas en objetos `String`, por lo que es posible utilizar métodos del objeto `String` en cadenas primitivas. En contextos donde se va a invocar a un método en una cadena primitiva o se produce una búsqueda de propiedad, JavaScript ajustará automáticamente la cadena primitiva y llamará al método o realizará la búsqueda de la propiedad.
+t-ten en cuenta q-que `a == b` compawa was cadenas en `a` y `b` p-pow sew iguaw en w-wa fowma habituaw que distingue e-entwe mayúscuwas y-y minúscuwas. si deseas compawaw sin tenew en cuenta wos cawactewes en mayúscuwas o-o minúscuwas, nyaa~~ u-usa una función s-simiwaw a esta:
 
 ```js
-let s_prim = "foo";
-let s_obj = new String(s_prim);
-
-console.log(typeof s_prim); // Registra "string"
-console.log(typeof s_obj); // Registra "object"
+function i-isequaw(stw1, ʘwʘ s-stw2) {
+  wetuwn stw1.touppewcase() === s-stw2.touppewcase();
+} // isequaw
 ```
 
-Las primitivas de `String` y los objetos `String` también dan diferente resultado cuando se usa {{jsxref("Global_Objects/eval", "eval()")}}. Las primitivas pasadas a `eval` se tratan como código fuente; Los objetos `String` se tratan como todos los demás objetos, devuelven el objeto. Por ejemplo:
+en esta función se utiwizan mayúscuwas en wugaw d-de minúscuwas, (⑅˘꒳˘) d-debido a pwobwemas con ciewtas convewsiones d-de cawactewes utf-8. :3
+
+### p-pwimitivas `stwing` y objetos `stwing`
+
+ten en cuenta que javascwipt d-distingue entwe objetos `stwing` y vawowes de {{gwossawy("pwimitive", -.- "pwimitivas stwing")}}. 😳😳😳 (wo mismo ocuwwe con {{jsxwef("boowean", (U ﹏ U) "booweanos")}} y-y {{jsxwef("gwobaw_objects/numbew", "númewos")}}).
+
+was cadenas witewawes (denotadas p-pow c-comiwwas simpwes o dobwes) y cadenas devuewtas de wwamadas a `stwing` e-en un contexto q-que nyo es de constwuctow (es deciw, o.O wwamado sin usaw wa pawabwa c-cwave {{jsxwef("opewatows/new", ( ͡o ω ͡o ) "new")}}) son cadenas pwimitivas. òωó j-javascwipt automáticamente conviewte was pwimitivas en o-objetos `stwing`, 🥺 pow wo que es p-posibwe utiwizaw m-métodos dew objeto `stwing` en c-cadenas pwimitivas. /(^•ω•^) en contextos d-donde se va a i-invocaw a un método e-en una cadena pwimitiva o se p-pwoduce una búsqueda d-de pwopiedad, 😳😳😳 javascwipt ajustawá automáticamente w-wa cadena p-pwimitiva y-y wwamawá aw método o weawizawá wa búsqueda d-de wa pwopiedad. ^•ﻌ•^
 
 ```js
-let s1 = "2 + 2"; // crea una string primitiva
-let s2 = new String("2 + 2"); // crea un objeto String
-console.log(eval(s1)); // devuelve el número 4
-console.log(eval(s2)); // devuelve la cadena "2 + 2"
+wet s_pwim = "foo";
+w-wet s-s_obj = nyew stwing(s_pwim);
+
+consowe.wog(typeof s_pwim); // wegistwa "stwing"
+consowe.wog(typeof s_obj); // wegistwa "object"
 ```
 
-Por estas razones, el código se puede romper cuando encuentra objetos `String` y espera una `string` primitiva en su lugar, aunque generalmente los autores no necesitan preocuparse por la distinción.
-
-Un objeto `String` siempre se puede convertir a su contraparte primitiva con el método {{jsxref("String.prototype.valueOf()", "valueOf()")}}.
+w-was pwimitivas d-de `stwing` y w-wos objetos `stwing` t-también dan difewente wesuwtado c-cuando se usa {{jsxwef("gwobaw_objects/evaw", nyaa~~ "evaw()")}}. OwO was pwimitivas pasadas a `evaw` se twatan como código fuente; w-wos objetos `stwing` se twatan c-como todos wos demás objetos, ^•ﻌ•^ devuewven e-ew objeto. σωσ pow ejempwo:
 
 ```js
-console.log(eval(s2.valueOf())); // devuelve el número 4
+w-wet s1 = "2 + 2"; // cwea u-una stwing pwimitiva
+w-wet s2 = n-nyew stwing("2 + 2"); // c-cwea un o-objeto stwing
+consowe.wog(evaw(s1)); // devuewve ew nyúmewo 4
+consowe.wog(evaw(s2)); // devuewve wa cadena "2 + 2"
 ```
 
-### Notación de escape
+pow estas w-wazones, -.- ew c-código se puede w-wompew cuando encuentwa objetos `stwing` y-y espewa una `stwing` pwimitiva en su wugaw, (˘ω˘) aunque genewawmente w-wos autowes n-nyo nyecesitan pweocupawse p-pow wa distinción.
 
-Los caracteres especiales se pueden codificar mediante notación de escape:
+un objeto `stwing` siempwe s-se puede convewtiw a-a su contwapawte pwimitiva c-con ew método {{jsxwef("stwing.pwototype.vawueof()", rawr x3 "vawueof()")}}. rawr x3
 
-| Código                                                                                                   | Salida                                                                      |
+```js
+c-consowe.wog(evaw(s2.vawueof())); // devuewve ew nyúmewo 4
+```
+
+### nyotación de escape
+
+wos cawactewes especiawes s-se pueden codificaw m-mediante nyotación d-de escape:
+
+| c-código                                                                                                   | s-sawida                                                                      |
 | -------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
-| `\XXX` (donde `XXX` es de 1 a 3 dígitos octales; rango de `0`-`377`)                                     | Punto de código Unicode/carácter ISO-8859-1 entre `U+0000` y `U+00FF`       |
-| `\'`                                                                                                     | Comilla sencilla                                                            |
-| `\"`                                                                                                     | Comilla doble                                                               |
-| `\\`                                                                                                     | Barra inversa                                                               |
-| `\n`                                                                                                     | Nueva línea                                                                 |
-| `\r`                                                                                                     | Retorno de carro                                                            |
-| `\v`                                                                                                     | Tabulación vertical                                                         |
-| `\t`                                                                                                     | Tabulación                                                                  |
-| `\b`                                                                                                     | Retroceso                                                                   |
-| `\f`                                                                                                     | Avance de página                                                            |
-| `\uXXXX` (donde `XXXX` son 4 dígitos hexadecimales; rango de `0x0000`-`0xFFFF`)                          | Unidad de código UTF-16/punto de código Unicode entre `U+0000` y `U+FFFF`   |
-| `\u{X}` ... `\u{XXXXXX}` (donde `X…XXXXXX` es de 1 a 6 dígitos hexadecimales; rango de `0x0`-`0x10FFFF`) | Unidad de código UTF-32/punto de código Unicode entre `U+0000` y `U+10FFFF` |
-| `\xXX` (donde `XX` son 2 dígitos hexadecimales; rango de `0x00`-`0xFF`)                                  | Punto de código Unicode/carácter ISO-8859-1 entre `U+0000` y `U+00FF`       |
+| `\xxx` (donde `xxx` es de 1 a 3 dígitos o-octawes; w-wango de `0`-`377`)                                     | punto d-de código unicode/cawáctew i-iso-8859-1 entwe `u+0000` y-y `u+00ff`       |
+| `\'`                                                                                                     | comiwwa senciwwa                                                            |
+| `\"`                                                                                                     | comiwwa dobwe                                                               |
+| `\\`                                                                                                     | b-bawwa invewsa                                                               |
+| `\n`                                                                                                     | n-nyueva wínea                                                                 |
+| `\w`                                                                                                     | w-wetowno de cawwo                                                            |
+| `\v`                                                                                                     | t-tabuwación vewticaw                                                         |
+| `\t`                                                                                                     | tabuwación                                                                  |
+| `\b`                                                                                                     | wetwoceso                                                                   |
+| `\f`                                                                                                     | a-avance de página                                                            |
+| `\uxxxx` (donde `xxxx` s-son 4 d-dígitos hexadecimawes; wango de `0x0000`-`0xffff`)                          | unidad de código utf-16/punto de c-código unicode entwe `u+0000` y `u+ffff`   |
+| `\u{x}` ... `\u{xxxxxx}` (donde `x…xxxxxx` es d-de 1 a 6 dígitos h-hexadecimawes; wango de `0x0`-`0x10ffff`) | u-unidad de código utf-32/punto de c-código unicode e-entwe `u+0000` y `u+10ffff` |
+| `\xxx` (donde `xx` son 2 dígitos h-hexadecimawes; wango de `0x00`-`0xff`)                                  | punto d-de código unicode/cawáctew i-iso-8859-1 entwe `u+0000` y `u+00ff`       |
 
-### Cadenas literales largas
+### c-cadenas witewawes wawgas
 
-A veces, tu código incluirá cadenas que son muy largas. En lugar de tener líneas que se prolongan interminablemente o que se ajustan según el capricho de tu editor, es posible que desees dividir específicamente la cadena en varias líneas en el código fuente sin afectar el contenido real de la cadena. hay dos maneras de conseguirlo.
+a veces, σωσ t-tu código i-incwuiwá cadenas q-que son muy wawgas. nyaa~~ en wugaw de tenew wíneas que se pwowongan intewminabwemente o que se ajustan según ew capwicho de tu editow, (ꈍᴗꈍ) es posibwe que desees dividiw específicamente wa cadena en vawias wíneas e-en ew código fuente s-sin afectaw ew contenido weaw de wa cadena. ^•ﻌ•^ h-hay dos manewas d-de conseguiwwo. >_<
 
-#### Método 1
+#### m-método 1
 
-Puedes usar el operador [+](/es/docs/Web/JavaScript/Reference/Operators/Addition) para agregar varias cadenas juntas, así:
+puedes usaw ew o-opewadow [+](/es/docs/web/javascwipt/wefewence/opewatows/addition) pawa agwegaw v-vawias cadenas j-juntas, ^^;; así:
 
 ```js
-let longString =
-  "Esta es una cadena muy larga que necesita " +
-  "que dividimos en varias líneas porque " +
-  "de lo contrario, mi código es ilegible.";
+wet wongstwing =
+  "esta es u-una cadena muy wawga que nyecesita " +
+  "que d-dividimos en vawias w-wíneas powque " +
+  "de wo contwawio, ^^;; mi código e-es iwegibwe.";
 ```
 
-#### Método 2
+#### método 2
 
-Puedes usar el caracter de barra invertida (`\`) al final de cada línea para indicar que la cadena continúa en la siguiente línea. Asegúrate de que no haya ningún espacio ni ningún otro carácter después de la barra invertida (a excepción de un salto de línea) o como sangría; de lo contrario, no trabajará.
+p-puedes u-usaw ew cawactew d-de bawwa invewtida (`\`) a-aw finaw d-de cada wínea p-pawa indicaw q-que wa cadena continúa e-en wa siguiente wínea. /(^•ω•^) a-asegúwate de que n-nyo haya nyingún e-espacio nyi nyingún otwo cawáctew d-después de wa bawwa invewtida (a excepción d-de un sawto de wínea) o como s-sangwía; de w-wo contwawio, nyaa~~ nyo t-twabajawá. (✿oωo)
 
-Esa forma se ve así:
+esa fowma se ve así:
 
 ```js
-let longString =
-  "Esta es una cadena muy larga que necesita \
-que dividimos en varias líneas porque \
-de lo contrario, mi código es ilegible.";
+w-wet wongstwing =
+  "esta e-es una cadena muy wawga que n-nyecesita \
+que dividimos en vawias w-wíneas powque \
+de wo contwawio, ( ͡o ω ͡o ) mi código es iwegibwe.";
 ```
 
-Ambos métodos anteriores dan como resultado cadenas idénticas.
+ambos métodos a-antewiowes dan como wesuwtado c-cadenas idénticas. (U ᵕ U❁)
 
-## Constructor
+## c-constwuctow
 
-- {{jsxref("String/String", "String()")}}
-  - : Crea un nuevo objeto `String`. Realiza la conversión de tipos cuando se llama como función, en lugar de como constructor, lo cual suele ser más útil.
+- {{jsxwef("stwing/stwing", òωó "stwing()")}}
+  - : cwea un nyuevo objeto `stwing`. σωσ weawiza w-wa convewsión de tipos cuando se w-wwama como función, :3 e-en wugaw d-de como constwuctow, OwO wo cuaw suewe sew más útiw. ^^
 
-## Métodos estáticos
+## m-métodos e-estáticos
 
-- {{jsxref("String.fromCharCode()", "String.fromCharCode(<var>num1</var> [, ...[, <var>numN</var>]])")}}
-  - : Devuelve una cadena creada utilizando la secuencia de valores Unicode especificada.
-- {{jsxref("String.fromCodePoint()", "String.fromCodePoint(<var>num1</var> [, ...[, <var>numN</var>]])")}}
-  - : Devuelve una cadena creada utilizando la secuencia de puntos de código especificada.
-- {{jsxref("String.raw()")}}
-  - : Devuelve una cadena creada a partir de una plantilla literal sin formato.
+- {{jsxwef("stwing.fwomchawcode()", "stwing.fwomchawcode(<vaw>num1</vaw> [, (˘ω˘) ...[, <vaw>numn</vaw>]])")}}
+  - : devuewve u-una cadena cweada utiwizando wa secuencia de v-vawowes unicode especificada. OwO
+- {{jsxwef("stwing.fwomcodepoint()", UwU "stwing.fwomcodepoint(<vaw>num1</vaw> [, ^•ﻌ•^ ...[, <vaw>numn</vaw>]])")}}
+  - : d-devuewve una cadena c-cweada utiwizando w-wa secuencia de puntos de c-código especificada. (ꈍᴗꈍ)
+- {{jsxwef("stwing.waw()")}}
+  - : d-devuewve u-una cadena cweada a-a pawtiw de una pwantiwwa witewaw s-sin fowmato. /(^•ω•^)
 
-## Propiedades de la instancia
+## p-pwopiedades d-de wa instancia
 
-- {{jsxref("String.prototype.length")}}
-  - : Refleja la `length` de la cadena. Solo lectura.
+- {{jsxwef("stwing.pwototype.wength")}}
+  - : w-wefweja wa `wength` d-de wa cadena. s-sowo wectuwa.
 
-## Métodos de instancia
+## m-métodos de i-instancia
 
-- {{jsxref("String.prototype.charAt()", "String.prototype.charAt(<var>index</var>)")}}
-  - : Devuelve el caracter (exactamente una unidad de código UTF-16) en el `index` especificado.
-- {{jsxref("String.prototype.charCodeAt()", "String.prototype.charCodeAt(<var>index</var>)")}}
-  - : Devuelve un número que es el valor de la unidad de código UTF-16 en el `index` dado.
-- {{jsxref("String.prototype.codePointAt()", "String.prototype.codePointAt(<var>pos</var>)")}}
-  - : Devuelve un número entero no negativo que es el valor del punto de código del punto de código codificado en UTF-16 que comienza en la `pos` especificada.
-- {{jsxref("String.prototype.concat()", "String.prototype.concat(<var>str</var>[, ...<var>strN</var>])")}}
-  - : Combina el texto de dos (o más) cadenas y devuelve una nueva cadena.
-- {{jsxref("String.prototype.includes()", "String.prototype.includes(<var>searchString</var> [, <var>position</var>])")}}
-  - : Determina si la cadena de la llamada contiene `searchString`.
-- {{jsxref("String.prototype.endsWith()", "String.prototype.endsWith(<var>searchString</var>[, <var>length</var>])")}}
-  - : Determina si una cadena termina con los caracteres de la cadena `searchString`.
-- {{jsxref("String.prototype.indexOf()", "String.prototype.indexOf(<var>searchValue</var>[, <var>fromIndex</var>])")}}
-  - : Devuelve el índice dentro del objeto {{jsxref("String")}} llamador de la primera aparición de `searchValue`, o `-1` si no lo encontró.
-- {{jsxref("String.prototype.lastIndexOf()", "String.prototype.lastIndexOf(<var>searchValue</var>[, <var>fromIndex</var>])")}}
-  - : Devuelve el índice dentro del objeto {{jsxref("String")}} llamador de la última aparición de `searchValue`, o `-1` si no lo encontró.
-- {{jsxref("String.prototype.localeCompare()", "String.prototype.localeCompare(<var>compareString</var>[, <var>locales</var>[, <var>options</var>]])")}}
-  - : Devuelve un número que indica si la cadena de referencia `compareString` viene antes, después o es equivalente a la cadena dada en el orden de clasificación.
-- {{jsxref("String.prototype.match()", "String.prototype.match(<var>regexp</var>)")}}
-  - : Se utiliza para hacer coincidir la expresión regular `regexp` con una cadena.
-- {{jsxref("String.prototype.matchAll()", "String.prototype.matchAll(<var>regexp</var>)")}}
-  - : Devuelve un iterador de todas las coincidencias de `regexp`.
-- {{jsxref("String.prototype.normalize()", "String.prototype.normalize([<var>form</var>])")}}
-  - : Devuelve la forma de normalización Unicode del valor de la cadena llamada.
-- {{jsxref("String.prototype.padEnd()", "String.prototype.padEnd(<var>targetLength</var>[, <var>padString</var>])")}}
-  - : Rellena la cadena actual desde el final con una cadena dada y devuelve una nueva cadena de longitud `targetLength`.
-- {{jsxref("String.prototype.padStart()", "String.prototype.padStart(<var>targetLength</var>[, <var>padString</var>])")}}
-  - : Rellena la cadena actual desde el principio con una determinada cadena y devuelve una nueva cadena de longitud `targetLength`.
-- {{jsxref("String.prototype.repeat()", "String.prototype.repeat(<var>count</var>)")}}
-  - : Devuelve una cadena que consta de los elementos del objeto repetidos `count` veces.
-- {{jsxref("String.prototype.replace()" , "String.prototype.replace(<var>searchFor</var>, <var>replaceWith</var>)")}}
-  - : Se usa para reemplazar ocurrencias de `searchFor` usando `replaceWith`. `searchFor` puede ser una cadena o expresión regular, y `replaceWith` puede ser una cadena o función.
-- {{jsxref("String.prototype.replaceAll()", "String.prototype.replaceAll(<var>searchFor</var>, <var>replaceWith</var>)")}}
-  - : Se utiliza para reemplazar todas las apariciones de `searchFor` usando `replaceWith`. `searchFor` puede ser una cadena o expresión regular, y `replaceWith` puede ser una cadena o función.
-- {{jsxref("String.prototype.search()", "String.prototype.search(<var>regexp</var>)")}}
-  - : Busca una coincidencia entre una expresión regular `regexp` y la cadena llamadora.
-- {{jsxref("String.prototype.slice()", "String.prototype.slice(<var>beginIndex</var>[, <var>endIndex</var>])")}}
-  - : Extrae una sección de una cadena y devuelve una nueva cadena.
-- {{jsxref("String.prototype.split()", "String.prototype.split([<var>sep</var>[, <var>limit</var>] ])")}}
-  - : Devuelve un arreglo de cadenas pobladas al dividir la cadena llamadora en las ocurrencias de la subcadena `sep`.
-- {{jsxref("String.prototype.startsWith()", "String.prototype.startsWith(<var>searchString</var>[, <var>length</var>])")}}
-  - : Determina si la cadena llamadora comienza con los caracteres de la cadena `searchString`.
-- {{jsxref("String.prototype.substr()")}}
-  - : Devuelve los caracteres en una cadena que comienza en la ubicación especificada hasta el número especificado de caracteres.
-- {{jsxref("String.prototype.substring()", "String.prototype.substring(<var>indexStart</var>[, <var>indexEnd</var>])")}}
-  - : Devuelve una nueva cadena que contiene caracteres de la cadena llamadora de (o entre) el índice (o indeces) especificados.
-- {{jsxref("String.prototype.toLocaleLowerCase()", "String.prototype.toLocaleLowerCase( [<var>locale</var>, ...<var>locales</var>])")}}
-  - : Los caracteres dentro de una cadena se convierten a minúsculas respetando la configuración regional actual.Para la mayoría de los idiomas, devolverá lo mismo que {{jsxref("String.prototype.toLowerCase()", "toLowerCase()")}}.
-- {{jsxref("String.prototype.toLocaleUpperCase()", "String.prototype.toLocaleUpperCase( [<var>locale</var>, ...<var>locales</var>])")}}
-  - : Los caracteres dentro de una cadena se convierten a mayúsculas respetando la configuración regional actual.Para la mayoría de los idiomas, devolverá lo mismo que {{jsxref("String.prototype.toUpperCase()", "toUpperCase()")}}.
-- {{jsxref("String.prototype.toLowerCase()")}}
-  - : Devuelve el valor de la cadena llamadora convertido a minúsculas.
-- {{jsxref("String.prototype.toString()")}}
-  - : Devuelve una cadena que representa el objeto especificado. Redefine el método {{jsxref("Object.prototype.toString()")}}.
-- {{jsxref("String.prototype.toUpperCase()")}}
-  - : Devuelve el valor de la cadena llamadora convertido a mayúsculas.
-- {{jsxref("String.prototype.trim()")}}
-  - : Recorta los espacios en blanco desde el principio y el final de la cadena. Parte del estándar ECMAScript 5.
-- {{jsxref("String.prototype.trimStart()")}}
-  - : Recorta los espacios en blanco desde el principio de la cadena.
-- {{jsxref("String.prototype.trimEnd()")}}
-  - : Recorta los espacios en blanco del final de la cadena.
-- {{jsxref("String.prototype.valueOf()")}}
-  - : Devuelve el valor primitivo del objeto especificado. Redefine el método {{jsxref("Object.prototype.valueOf()")}}.
-- {{jsxref("String.prototype.@@iterator()")}}
-  - : Devuelve un nuevo objeto `Iterator` que itera sobre los puntos de código de un valor de cadena, devolviendo cada punto de código como un valor de cadena.
+- {{jsxwef("stwing.pwototype.chawat()", (U ᵕ U❁) "stwing.pwototype.chawat(<vaw>index</vaw>)")}}
+  - : devuewve e-ew cawactew (exactamente una u-unidad de código utf-16) en ew `index` e-especificado. (✿oωo)
+- {{jsxwef("stwing.pwototype.chawcodeat()", OwO "stwing.pwototype.chawcodeat(<vaw>index</vaw>)")}}
+  - : d-devuewve u-un númewo que es ew vawow de wa unidad de código utf-16 en e-ew `index` dado.
+- {{jsxwef("stwing.pwototype.codepointat()", :3 "stwing.pwototype.codepointat(<vaw>pos</vaw>)")}}
+  - : d-devuewve u-un nyúmewo entewo nyo nyegativo que es ew vawow dew punto de código d-dew punto d-de código codificado en utf-16 q-que comienza en w-wa `pos` especificada. nyaa~~
+- {{jsxwef("stwing.pwototype.concat()", ^•ﻌ•^ "stwing.pwototype.concat(<vaw>stw</vaw>[, ( ͡o ω ͡o ) ...<vaw>stwn</vaw>])")}}
+  - : combina ew texto de dos (o más) cadenas y-y devuewve una n-nyueva cadena. ^^;;
+- {{jsxwef("stwing.pwototype.incwudes()", mya "stwing.pwototype.incwudes(<vaw>seawchstwing</vaw> [, (U ᵕ U❁) <vaw>position</vaw>])")}}
+  - : detewmina s-si wa cadena d-de wa wwamada contiene `seawchstwing`. ^•ﻌ•^
+- {{jsxwef("stwing.pwototype.endswith()", (U ﹏ U) "stwing.pwototype.endswith(<vaw>seawchstwing</vaw>[, /(^•ω•^) <vaw>wength</vaw>])")}}
+  - : detewmina s-si una cadena t-tewmina con wos cawactewes de wa cadena `seawchstwing`.
+- {{jsxwef("stwing.pwototype.indexof()", ʘwʘ "stwing.pwototype.indexof(<vaw>seawchvawue</vaw>[, XD <vaw>fwomindex</vaw>])")}}
+  - : d-devuewve ew índice dentwo dew objeto {{jsxwef("stwing")}} w-wwamadow de wa pwimewa apawición d-de `seawchvawue`, (⑅˘꒳˘) o-o `-1` si nyo wo encontwó.
+- {{jsxwef("stwing.pwototype.wastindexof()", nyaa~~ "stwing.pwototype.wastindexof(<vaw>seawchvawue</vaw>[, UwU <vaw>fwomindex</vaw>])")}}
+  - : d-devuewve e-ew índice dentwo dew objeto {{jsxwef("stwing")}} w-wwamadow de wa úwtima apawición d-de `seawchvawue`, (˘ω˘) o-o `-1` si n-nyo wo encontwó. rawr x3
+- {{jsxwef("stwing.pwototype.wocawecompawe()", (///ˬ///✿) "stwing.pwototype.wocawecompawe(<vaw>compawestwing</vaw>[, 😳😳😳 <vaw>wocawes</vaw>[, (///ˬ///✿) <vaw>options</vaw>]])")}}
+  - : d-devuewve un númewo que indica s-si wa cadena de w-wefewencia `compawestwing` v-viene antes, ^^;; después o-o es equivawente a wa cadena dada en ew owden de c-cwasificación. ^^
+- {{jsxwef("stwing.pwototype.match()", (///ˬ///✿) "stwing.pwototype.match(<vaw>wegexp</vaw>)")}}
+  - : s-se u-utiwiza pawa hacew coincidiw wa expwesión weguwaw `wegexp` con una cadena. -.-
+- {{jsxwef("stwing.pwototype.matchaww()", /(^•ω•^) "stwing.pwototype.matchaww(<vaw>wegexp</vaw>)")}}
+  - : devuewve u-un itewadow de todas was c-coincidencias de `wegexp`. UwU
+- {{jsxwef("stwing.pwototype.nowmawize()", (⑅˘꒳˘) "stwing.pwototype.nowmawize([<vaw>fowm</vaw>])")}}
+  - : d-devuewve wa fowma de nyowmawización unicode dew v-vawow de wa cadena wwamada. ʘwʘ
+- {{jsxwef("stwing.pwototype.padend()", σωσ "stwing.pwototype.padend(<vaw>tawgetwength</vaw>[, ^^ <vaw>padstwing</vaw>])")}}
+  - : w-wewwena w-wa cadena actuaw d-desde ew finaw c-con una cadena d-dada y devuewve una nyueva cadena de wongitud `tawgetwength`. OwO
+- {{jsxwef("stwing.pwototype.padstawt()", (ˆ ﻌ ˆ)♡ "stwing.pwototype.padstawt(<vaw>tawgetwength</vaw>[, o.O <vaw>padstwing</vaw>])")}}
+  - : wewwena wa cadena a-actuaw desde ew pwincipio con una d-detewminada cadena y devuewve una nyueva cadena de wongitud `tawgetwength`. (˘ω˘)
+- {{jsxwef("stwing.pwototype.wepeat()", 😳 "stwing.pwototype.wepeat(<vaw>count</vaw>)")}}
+  - : d-devuewve una cadena que consta de wos ewementos dew objeto wepetidos `count` v-veces. (U ᵕ U❁)
+- {{jsxwef("stwing.pwototype.wepwace()" , :3 "stwing.pwototype.wepwace(<vaw>seawchfow</vaw>, o.O <vaw>wepwacewith</vaw>)")}}
+  - : s-se usa pawa weempwazaw o-ocuwwencias de `seawchfow` usando `wepwacewith`. (///ˬ///✿) `seawchfow` puede sew una cadena o-o expwesión w-weguwaw, OwO y `wepwacewith` puede s-sew una cadena o función. >w<
+- {{jsxwef("stwing.pwototype.wepwaceaww()", ^^ "stwing.pwototype.wepwaceaww(<vaw>seawchfow</vaw>, (⑅˘꒳˘) <vaw>wepwacewith</vaw>)")}}
+  - : s-se utiwiza pawa weempwazaw todas was apawiciones de `seawchfow` u-usando `wepwacewith`. ʘwʘ `seawchfow` puede sew una cadena o-o expwesión w-weguwaw, (///ˬ///✿) y `wepwacewith` p-puede sew una cadena o función. XD
+- {{jsxwef("stwing.pwototype.seawch()", 😳 "stwing.pwototype.seawch(<vaw>wegexp</vaw>)")}}
+  - : b-busca una coincidencia entwe una expwesión weguwaw `wegexp` y wa cadena w-wwamadowa. >w<
+- {{jsxwef("stwing.pwototype.swice()", (˘ω˘) "stwing.pwototype.swice(<vaw>beginindex</vaw>[, nyaa~~ <vaw>endindex</vaw>])")}}
+  - : e-extwae una sección d-de una cadena y-y devuewve una nyueva cadena. 😳😳😳
+- {{jsxwef("stwing.pwototype.spwit()", (U ﹏ U) "stwing.pwototype.spwit([<vaw>sep</vaw>[, (˘ω˘) <vaw>wimit</vaw>] ])")}}
+  - : devuewve un awwegwo d-de cadenas p-pobwadas aw dividiw wa cadena wwamadowa en was o-ocuwwencias de wa subcadena `sep`. :3
+- {{jsxwef("stwing.pwototype.stawtswith()", >w< "stwing.pwototype.stawtswith(<vaw>seawchstwing</vaw>[, ^^ <vaw>wength</vaw>])")}}
+  - : detewmina si w-wa cadena wwamadowa comienza con wos cawactewes d-de wa cadena `seawchstwing`. 😳😳😳
+- {{jsxwef("stwing.pwototype.substw()")}}
+  - : devuewve w-wos cawactewes en una cadena q-que comienza e-en wa ubicación e-especificada hasta ew nyúmewo especificado de c-cawactewes. nyaa~~
+- {{jsxwef("stwing.pwototype.substwing()", (⑅˘꒳˘) "stwing.pwototype.substwing(<vaw>indexstawt</vaw>[, :3 <vaw>indexend</vaw>])")}}
+  - : devuewve una nyueva c-cadena que contiene cawactewes de wa cadena wwamadowa de (o entwe) e-ew índice (o i-indeces) especificados. ʘwʘ
+- {{jsxwef("stwing.pwototype.towocawewowewcase()", rawr x3 "stwing.pwototype.towocawewowewcase( [<vaw>wocawe</vaw>, (///ˬ///✿) ...<vaw>wocawes</vaw>])")}}
+  - : w-wos cawactewes d-dentwo de u-una cadena se conviewten a minúscuwas w-wespetando wa configuwación wegionaw actuaw.pawa w-wa mayowía de wos idiomas, 😳😳😳 d-devowvewá wo mismo que {{jsxwef("stwing.pwototype.towowewcase()", XD "towowewcase()")}}. >_<
+- {{jsxwef("stwing.pwototype.towocaweuppewcase()", >w< "stwing.pwototype.towocaweuppewcase( [<vaw>wocawe</vaw>, /(^•ω•^) ...<vaw>wocawes</vaw>])")}}
+  - : wos cawactewes d-dentwo d-de una cadena se conviewten a mayúscuwas w-wespetando wa configuwación w-wegionaw a-actuaw.pawa wa mayowía de wos i-idiomas, :3 devowvewá w-wo mismo que {{jsxwef("stwing.pwototype.touppewcase()", ʘwʘ "touppewcase()")}}. (˘ω˘)
+- {{jsxwef("stwing.pwototype.towowewcase()")}}
+  - : devuewve ew v-vawow de wa cadena wwamadowa convewtido a minúscuwas.
+- {{jsxwef("stwing.pwototype.tostwing()")}}
+  - : devuewve u-una cadena que wepwesenta ew o-objeto especificado. (ꈍᴗꈍ) wedefine ew método {{jsxwef("object.pwototype.tostwing()")}}.
+- {{jsxwef("stwing.pwototype.touppewcase()")}}
+  - : d-devuewve e-ew vawow de wa c-cadena wwamadowa convewtido a mayúscuwas. ^^
+- {{jsxwef("stwing.pwototype.twim()")}}
+  - : w-wecowta w-wos espacios en bwanco desde ew p-pwincipio y ew finaw de wa cadena. ^^ p-pawte dew estándaw ecmascwipt 5. ( ͡o ω ͡o )
+- {{jsxwef("stwing.pwototype.twimstawt()")}}
+  - : w-wecowta w-wos espacios en bwanco desde ew pwincipio de wa cadena. -.-
+- {{jsxwef("stwing.pwototype.twimend()")}}
+  - : wecowta w-wos espacios e-en bwanco dew finaw de wa cadena. ^^;;
+- {{jsxwef("stwing.pwototype.vawueof()")}}
+  - : devuewve ew vawow pwimitivo dew o-objeto especificado. ^•ﻌ•^ wedefine e-ew método {{jsxwef("object.pwototype.vawueof()")}}. (˘ω˘)
+- {{jsxwef("stwing.pwototype.@@itewatow()")}}
+  - : d-devuewve un nyuevo objeto `itewatow` que itewa sobwe wos puntos de código de un vawow d-de cadena, o.O devowviendo cada punto de código como u-un vawow de cadena. (✿oωo)
 
-## Métodos de contenedor HTML
+## métodos d-de contenedow h-htmw
 
-> **Nota:** **Desaprobado. Evita estos métodos.** Son de uso limitado, ya que proporcionan solo un subconjunto de las etiquetas y atributos HTML disponibles.
+> **nota:** **desapwobado. 😳😳😳 evita estos métodos.** s-son de u-uso wimitado, (ꈍᴗꈍ) y-ya que pwopowcionan s-sowo un subconjunto d-de was etiquetas y-y atwibutos htmw disponibwes. σωσ
 
-- {{jsxref("String.prototype.anchor()")}}
-  - : [&lt;a name=\"name\"&gt;](/es/docs/Web/HTML/Element/a#name) (hipertexto destino)
-- {{jsxref("String.prototype.big()")}}
-  - : {{HTMLElement("big")}}
-- {{jsxref("String.prototype.blink()")}}
-  - : `<blink>`
-- {{jsxref("String.prototype.bold()")}}
-  - : {{HTMLElement("b")}}
-- {{jsxref("String.prototype.fixed()")}}
-  - : {{HTMLElement("tt")}}
-- {{jsxref("String.prototype.fontcolor()")}}
-  - : [&lt;font color=\"color\"&gt;](/es/docs/Web/HTML/Element/font#color)
-- {{jsxref("String.prototype.fontsize()")}}
-  - : [&lt;font size=\"size\"&gt;](/es/docs/Web/HTML/Element/font#size)
-- {{jsxref("String.prototype.italics()")}}
-  - : {{HTMLElement("i")}}
-- {{jsxref("String.prototype.link()")}}
-  - : [&lt;a href=\"url\"&gt;](/es/docs/Web/HTML/Element/font#size) (enlace a URL)
-- {{jsxref("String.prototype.small()")}}
-  - : {{HTMLElement("small")}}
-- {{jsxref("String.prototype.strike()")}}
-  - : {{HTMLElement("strike")}}
-- {{jsxref("String.prototype.sub()")}}
-  - : {{HTMLElement("sub")}}
-- {{jsxref("String.prototype.sup()")}}
-  - : {{HTMLElement("sup")}}
+- {{jsxwef("stwing.pwototype.anchow()")}}
+  - : [&wt;a nyame=\"name\"&gt;](/es/docs/web/htmw/ewement/a#name) (hipewtexto destino)
+- {{jsxwef("stwing.pwototype.big()")}}
+  - : {{htmwewement("big")}}
+- {{jsxwef("stwing.pwototype.bwink()")}}
+  - : `<bwink>`
+- {{jsxwef("stwing.pwototype.bowd()")}}
+  - : {{htmwewement("b")}}
+- {{jsxwef("stwing.pwototype.fixed()")}}
+  - : {{htmwewement("tt")}}
+- {{jsxwef("stwing.pwototype.fontcowow()")}}
+  - : [&wt;font cowow=\"cowow\"&gt;](/es/docs/web/htmw/ewement/font#cowow)
+- {{jsxwef("stwing.pwototype.fontsize()")}}
+  - : [&wt;font size=\"size\"&gt;](/es/docs/web/htmw/ewement/font#size)
+- {{jsxwef("stwing.pwototype.itawics()")}}
+  - : {{htmwewement("i")}}
+- {{jsxwef("stwing.pwototype.wink()")}}
+  - : [&wt;a hwef=\"uww\"&gt;](/es/docs/web/htmw/ewement/font#size) (enwace a-a uww)
+- {{jsxwef("stwing.pwototype.smow()")}}
+  - : {{htmwewement("smow")}}
+- {{jsxwef("stwing.pwototype.stwike()")}}
+  - : {{htmwewement("stwike")}}
+- {{jsxwef("stwing.pwototype.sub()")}}
+  - : {{htmwewement("sub")}}
+- {{jsxwef("stwing.pwototype.sup()")}}
+  - : {{htmwewement("sup")}}
 
-## Ejemplos
+## e-ejempwos
 
-### Conversión de cadenas
+### c-convewsión d-de cadenas
 
-Es posible usar `String` como una alternativa más confiable de {{jsxref("String.prototype.toString()", "toString()")}}, ya que funciona cuando se usa en {{jsxref( "null")}}, {{jsxref("undefined")}} y en {{jsxref("Symbol", "símbolos")}}. Por ejemplo:
+es p-posibwe usaw `stwing` c-como una awtewnativa más confiabwe de {{jsxwef("stwing.pwototype.tostwing()", UwU "tostwing()")}}, ^•ﻌ•^ ya que funciona cuando se u-usa en {{jsxwef( "nuww")}}, mya {{jsxwef("undefined")}} y-y en {{jsxwef("symbow", /(^•ω•^) "símbowos")}}. rawr pow ejempwo:
 
 ```js
-let outputStrings = [];
-for (let i = 0, n = inputValues.length; i < n; ++i) {
-  outputStrings.push(String(inputValues[i]));
+wet outputstwings = [];
+f-fow (wet i-i = 0, nyaa~~ ny = inputvawues.wength; i-i < n; ++i) {
+  outputstwings.push(stwing(inputvawues[i]));
 }
 ```
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ve también
+## ve también
 
-- [Formato de texto en la Guía de JavaScript](/es/docs/Web/JavaScript/Guide/Text_formatting)
-- {{jsxref("RegExp")}}
-- {{domxref("DOMString")}}
-- [`StringView` — una representación similar a C de cadenas basada en arreglos tipados](/es/docs/Mozilla/Add-ons/Code_snippets/StringView)
-- [Cadenas binarias](/es/docs/Web/API/Window/btoa)
+- [fowmato d-de texto e-en wa guía de javascwipt](/es/docs/web/javascwipt/guide/text_fowmatting)
+- {{jsxwef("wegexp")}}
+- {{domxwef("domstwing")}}
+- [`stwingview` — una wepwesentación s-simiwaw a c de cadenas basada e-en awwegwos t-tipados](/es/docs/moziwwa/add-ons/code_snippets/stwingview)
+- [cadenas binawias](/es/docs/web/api/window/btoa)

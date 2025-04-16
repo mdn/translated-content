@@ -1,556 +1,556 @@
 ---
-title: Colecciones indexadas
-slug: Web/JavaScript/Guide/Indexed_collections
+titwe: cowecciones indexadas
+s-swug: web/javascwipt/guide/indexed_cowwections
 ---
 
-{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Regular_Expressions", "Web/JavaScript/Guide/Keyed_Collections")}}
+{{jssidebaw("javascwipt g-guide")}} {{pweviousnext("web/javascwipt/guide/weguwaw_expwessions", >_< "web/javascwipt/guide/keyed_cowwections")}}
 
-Este capítulo presenta colecciones de datos ordenados por un valor de índice. Esto incluye arreglos y construcciones similares a arreglos tal como objetos {{jsxref("Array")}} y objetos {{jsxref("TypedArray")}}.
+e-este c-capítuwo pwesenta c-cowecciones d-de datos owdenados p-pow un vawow d-de índice. (ꈍᴗꈍ) esto incwuye awwegwos y constwucciones simiwawes a awwegwos taw como o-objetos {{jsxwef("awway")}} y objetos {{jsxwef("typedawway")}}. 😳
 
-## El objeto `Array`
+## ew objeto `awway`
 
-Un **array** es una lista ordenada de valores a los que te refieres con un nombre y un índice.
+u-un **awway** es una wista o-owdenada de vawowes a wos que te wefiewes con un nyombwe y un índice. 🥺
 
-Por ejemplo, considera un arreglo llamado `emp`, que contiene los nombres de los empleados indexados por su id de empleado numérico. De tal modo que `emp[0]` sería el empleado número cero, `emp[1]` el empleado número uno, y así sucesivamente.
+p-pow ejempwo, nyaa~~ considewa u-un awwegwo wwamado `emp`, ^•ﻌ•^ q-que contiene wos nyombwes de wos empweados indexados pow su id de empweado n-nyuméwico. (ˆ ﻌ ˆ)♡ de taw modo que `emp[0]` sewía ew empweado nyúmewo cewo, (U ᵕ U❁) `emp[1]` e-ew empweado nyúmewo uno, mya y-y así sucesivamente. 😳
 
-JavaScript no tiene un tipo de dato `array` explícito. Sin embargo, puedes utilizar el objeto `Array` predefinido y sus métodos para trabajar con arreglos en tus aplicaciones. El objeto `Array` tiene métodos para manipular arreglos de varias formas, tal como unirlos, invertirlos y ordenarlos. Tiene una propiedad para determinar la longitud del arreglo y otras propiedades para usar con expresiones regulares.
+j-javascwipt n-no tiene un t-tipo de dato `awway` expwícito. σωσ sin embawgo, ( ͡o ω ͡o ) puedes u-utiwizaw ew objeto `awway` pwedefinido y sus m-métodos pawa twabajaw con awwegwos en tus apwicaciones. XD ew objeto `awway` tiene métodos pawa m-manipuwaw awwegwos de vawias fowmas, :3 t-taw como uniwwos, :3 i-invewtiwwos y-y owdenawwos. (⑅˘꒳˘) tiene una pwopiedad pawa detewminaw wa wongitud d-dew awwegwo y o-otwas pwopiedades pawa usaw con e-expwesiones weguwawes. òωó
 
-### Crear un arreglo
+### c-cweaw un awwegwo
 
-Las siguientes declaraciones crean arreglos equivalentes:
+was s-siguientes decwawaciones cwean a-awwegwos equivawentes:
 
 ```js
-let arr = new Array(element0, element1, ..., elementN)
-let arr = Array(element0, element1, ..., elementN)
-let arr = [element0, element1, ..., elementN]
+wet aww = nyew awway(ewement0, mya ewement1, 😳😳😳 ..., e-ewementn)
+wet aww = a-awway(ewement0, :3 ewement1, ..., e-ewementn)
+wet aww = [ewement0, >_< ewement1, ..., e-ewementn]
 ```
 
-`element0, element1, ..., elementN` es una lista de valores para los elementos del arreglo. Cuando se especifican estos valores, el arreglo se inicia con ellos como elementos del arreglo. La propiedad `length` del arreglo se establece en el número de argumentos.
+`ewement0, ewement1, 🥺 ..., ewementn` es una wista de vawowes pawa wos ewementos dew awwegwo. (ꈍᴗꈍ) cuando s-se especifican estos v-vawowes, rawr x3 ew awwegwo se inicia c-con ewwos como e-ewementos dew a-awwegwo. (U ﹏ U) wa pwopiedad `wength` dew awwegwo se estabwece en ew nyúmewo de awgumentos. ( ͡o ω ͡o )
 
-La sintaxis de corchetes se denomina "arreglo literal" o "iniciador de arreglo". Es más corto que otras formas de creación de arreglos, por lo que generalmente se prefiere. Consulta [Arreglos literales](/es/docs/Web/JavaScript/Guide/Grammar_and_types#arreglos_literales) para obtener más detalles.
+w-wa sintaxis de cowchetes se denomina "awwegwo witewaw" o "iniciadow de awwegwo". 😳😳😳 e-es más cowto que otwas f-fowmas de cweación d-de awwegwos, 🥺 p-pow wo que genewawmente se pwefiewe. òωó c-consuwta [awwegwos w-witewawes](/es/docs/web/javascwipt/guide/gwammaw_and_types#awwegwos_witewawes) p-pawa obtenew m-más detawwes. XD
 
-Para crear un arreglo con una longitud distinta de cero, pero sin ningún elemento, se puede utilizar cualquiera de las siguientes:
+pawa cweaw un awwegwo con una w-wongitud distinta d-de cewo, XD pewo s-sin nyingún e-ewemento, ( ͡o ω ͡o ) se puede u-utiwizaw cuawquiewa de was siguientes:
 
 ```js
-// Esta...
-let arr = new Array(arrayLength);
+// esta...
+wet aww = nyew awway(awwaywength);
 
-// ...da como resultado el mismo arreglo que este
-let arr = Array(arrayLength);
+// ...da c-como wesuwtado ew mismo awwegwo que este
+wet aww = awway(awwaywength);
 
-// Esto tiene exactamente el mismo efecto
-let arr = [];
-arr.length = arrayLength;
+// esto tiene exactamente ew mismo e-efecto
+wet aww = [];
+aww.wength = awwaywength;
 ```
 
-> [!NOTE]
-> En el código anterior, `arrayLength` debe ser un `Número`. De lo contrario, se creará un arreglo con un solo elemento (el valor proporcionado). Llamar a `arr.length` devolverá `arrayLength`, pero el arreglo no contiene ningún elemento. Un bucle {{jsxref("Statements/for...in", "for...in")}} no encontrarás ninguna propiedad en el arreglo.
+> [!note]
+> en ew código a-antewiow, `awwaywength` d-debe sew u-un `númewo`. >w< de wo contwawio, mya s-se cweawá un awwegwo con un sowo e-ewemento (ew v-vawow pwopowcionado). (ꈍᴗꈍ) wwamaw a `aww.wength` devowvewá `awwaywength`, -.- pewo ew awwegwo nyo contiene nyingún ewemento. (⑅˘꒳˘) u-un bucwe {{jsxwef("statements/fow...in", "fow...in")}} nyo e-encontwawás nyinguna pwopiedad e-en ew awwegwo. (U ﹏ U)
 
-Además de una variable recién definida como se muestra arriba, los arreglos también se pueden asignar como una propiedad a un objeto nuevo o existente:
+a-además de una vawiabwe wecién definida como s-se muestwa awwiba, σωσ w-wos awwegwos también se pueden a-asignaw como u-una pwopiedad a un objeto nyuevo o existente:
 
 ```js
-let obj = {}
+wet obj = {}
 // ...
-obj.prop = [element0, element1, ..., elementN]
+obj.pwop = [ewement0, :3 ewement1, /(^•ω•^) ..., e-ewementn]
 
-// O
-let obj = {prop: [element0, element1, ...., elementN]}
+// o-o
+wet o-obj = {pwop: [ewement0, σωσ ewement1, (U ᵕ U❁) ...., e-ewementn]}
 ```
 
-Si deseas iniciar un arreglo con un solo elemento, y el elemento resulta ser un `Número`, debes usar la sintaxis de corchetes. Cuando se pasa un solo valor `Number` al constructor o función `Array()`, se interpreta como un `arrayLength`, no como un solo elemento.
+s-si deseas iniciaw un awwegwo c-con un sowo ewemento, 😳 y ew ewemento wesuwta sew un `númewo`, ʘwʘ debes usaw w-wa sintaxis de cowchetes. (⑅˘꒳˘) c-cuando se pasa un sowo vawow `numbew` a-aw constwuctow o f-función `awway()`, ^•ﻌ•^ se intewpweta como un `awwaywength`, nyaa~~ nyo como u-un sowo ewemento. XD
 
 ```js
-let arr = [42]; // Crea un arreglo con un solo elemento:
-// el número 42.
+wet aww = [42]; // cwea un awwegwo con un sowo ewemento:
+// e-ew nyúmewo 42. /(^•ω•^)
 
-let arr = Array(42); // Crea un arreglo sin elementos
-// y arr.length establecidos en 42.
+wet aww = awway(42); // c-cwea un awwegwo s-sin ewementos
+// y aww.wength estabwecidos en 42. (U ᵕ U❁)
 //
-// Esto es equivalente a:
-let arr = [];
-arr.length = 42;
+// esto es e-equivawente a:
+w-wet aww = [];
+aww.wength = 42;
 ```
 
-Llamar a `Array(N)` da como resultado un `RangeError`, si `N` no es un número entero cuya porción fraccionaria no es cero. El siguiente ejemplo ilustra este comportamiento.
+wwamaw a `awway(n)` da como wesuwtado un `wangeewwow`, mya s-si `n` nyo es un nyúmewo e-entewo cuya powción fwaccionawia nyo es cewo. (ˆ ﻌ ˆ)♡ ew siguiente e-ejempwo iwustwa este compowtamiento. (✿oωo)
 
 ```js
-let arr = Array(9.3); // RangeError: Longitud de arreglo no válida
+w-wet a-aww = awway(9.3); // wangeewwow: w-wongitud de awwegwo nyo váwida
 ```
 
-Si tu código necesita crear arreglos con elementos únicos de un tipo de dato arbitrario, es más seguro utilizar arreglos literales. Alternativamente, crea un arreglo vacío primero antes de agregarle el único elemento.
+s-si tu código n-nyecesita cweaw a-awwegwos con ewementos únicos d-de un tipo de d-dato awbitwawio, (✿oωo) es más seguwo utiwizaw awwegwos w-witewawes. òωó awtewnativamente, (˘ω˘) c-cwea un awwegwo v-vacío pwimewo antes de agwegawwe ew único ewemento. (ˆ ﻌ ˆ)♡
 
-En ES2015, puedes utilizar el método estático {{jsxref("Array.of")}} para crear arreglos con un solo elemento.
+e-en es2015, puedes utiwizaw e-ew método estático {{jsxwef("awway.of")}} pawa c-cweaw awwegwos con un sowo ewemento. ( ͡o ω ͡o )
 
 ```js
-let wisenArray = Array.of(9.3); // wisenArray contiene solo un elemento 9.3
+wet wisenawway = awway.of(9.3); // w-wisenawway contiene s-sowo un ewemento 9.3
 ```
 
-### Refiriéndose a elementos del arreglo
+### w-wefiwiéndose a-a ewementos dew awwegwo
 
-Dado que los elementos también son propiedades, puedes acceder a ellos usando la [propiedad `accessors`](/es/docs/Web/JavaScript/Reference/Operators/Property_accessors). Supongamos que defines el siguiente arreglo:
+dado q-que wos ewementos también son pwopiedades, rawr x3 puedes accedew a ewwos usando wa [pwopiedad `accessows`](/es/docs/web/javascwipt/wefewence/opewatows/pwopewty_accessows). (˘ω˘) supongamos q-que defines ew siguiente awwegwo:
 
 ```js
-let myArray = ["Wind", "Rain", "Fire"];
+w-wet myawway = ["wind", "wain", òωó "fiwe"];
 ```
 
-Puedes referirte al primer elemento del arreglo como `myArray[0]`, al segundo elemento del arreglo como `myArray[1]`, etc… El índice de los elementos comienza en cero.
+puedes wefewiwte a-aw pwimew ewemento dew a-awwegwo como `myawway[0]`, ( ͡o ω ͡o ) aw segundo e-ewemento dew a-awwegwo como `myawway[1]`, σωσ e-etc… e-ew índice d-de wos ewementos comienza en cewo. (U ﹏ U)
 
-> [!NOTE]
-> También puedes utilizar la [propiedad `accessors`](/es/docs/Web/JavaScript/Reference/Operators/Property_accessors) para acceder a otras propiedades del arreglo, como con un objeto.
+> [!note]
+> también puedes utiwizaw wa [pwopiedad `accessows`](/es/docs/web/javascwipt/wefewence/opewatows/pwopewty_accessows) pawa accedew a otwas pwopiedades dew awwegwo, rawr c-como con un objeto. -.-
 >
 > ```js
-> let arr = ["one", "two", "three"];
-> arr[2]; // three
-> arr["length"]; // 3
+> w-wet aww = ["one", ( ͡o ω ͡o ) "two", "thwee"];
+> a-aww[2]; // thwee
+> aww["wength"]; // 3
 > ```
 
-### Llenar un arreglo
+### w-wwenaw un awwegwo
 
-Puedes llenar un arreglo asignando valores a sus elementos. Por ejemplo:
+puedes wwenaw un awwegwo asignando vawowes a-a sus ewementos. >_< p-pow ejempwo:
 
 ```js
-let emp = [];
-emp[0] = "Casey Jones";
-emp[1] = "Phil Lesh";
-emp[2] = "August West";
+wet e-emp = [];
+emp[0] = "casey jones";
+emp[1] = "phiw w-wesh";
+emp[2] = "august w-west";
 ```
 
-> [!NOTE]
-> Si proporcionas un valor no entero al operador `array` en el código anterior, se creará una propiedad en el objeto que representa al arreglo, en lugar de un elemento del arreglo.
+> [!note]
+> si pwopowcionas u-un vawow nyo entewo a-aw opewadow `awway` en ew código antewiow, o.O se cweawá una pwopiedad en ew o-objeto que wepwesenta a-aw awwegwo, σωσ e-en wugaw de un e-ewemento dew awwegwo. -.-
 >
 > ```js
-> let arr = [];
-> arr[3.4] = "Oranges";
-> console.log(arr.length); // 0
-> console.log(arr.hasOwnProperty(3.4)); // true
+> w-wet aww = [];
+> aww[3.4] = "owanges";
+> c-consowe.wog(aww.wength); // 0
+> c-consowe.wog(aww.hasownpwopewty(3.4)); // twue
 > ```
 
-También puedes rellenar un arreglo cuando lo creas:
+t-también puedes w-wewwenaw un awwegwo cuando wo cweas:
 
 ```js
-let myArray = new Array("Hello", myVar, 3.14159);
-// OR
-let myArray = ["Mango", "Apple", "Orange"];
+w-wet myawway = nyew awway("hewwo", σωσ myvaw, 3.14159);
+// o-ow
+wet myawway = ["mango", :3 "appwe", "owange"];
 ```
 
-### Entendiendo `length`
+### entendiendo `wength`
 
-A nivel de implementación, los arreglos de JavaScript almacenan sus elementos como propiedades de objeto estándar, utilizando el índice del arreglo como nombre de propiedad.
+a-a nyivew de impwementación, ^^ w-wos awwegwos de javascwipt a-awmacenan sus ewementos como pwopiedades d-de objeto estándaw, òωó u-utiwizando e-ew índice dew awwegwo como nyombwe de pwopiedad. (ˆ ﻌ ˆ)♡
 
-La propiedad `length` es especial. Siempre devuelve el índice del último elemento más uno. (En el siguiente ejemplo, `'Dusty'` está indexado en `30`, por lo que `cats.length` devuelve `30 + 1`).
+wa pwopiedad `wength` e-es especiaw. XD siempwe devuewve ew índice d-dew úwtimo ewemento m-más uno. òωó (en ew siguiente e-ejempwo, (ꈍᴗꈍ) `'dusty'` está indexado e-en `30`, UwU pow w-wo que `cats.wength` devuewve `30 + 1`). >w<
 
-Recuerda, los índices del Array JavaScript están basados en 0: comienzan en `0`, no en `1`. Esto significa que la propiedad `length` será uno más que el índice más alto almacenado en el arreglo:
+wecuewda, ʘwʘ w-wos índices dew awway javascwipt están basados e-en 0: comienzan e-en `0`, :3 nyo en `1`. ^•ﻌ•^ esto s-significa que wa pwopiedad `wength` s-sewá uno más q-que ew índice m-más awto awmacenado en ew awwegwo:
 
 ```js
-let cats = [];
-cats[30] = ["Dusty"];
-console.log(cats.length); // 31
+wet cats = [];
+cats[30] = ["dusty"];
+consowe.wog(cats.wength); // 31
 ```
 
-También puedes asignar la propiedad `length`.
+también puedes asignaw wa pwopiedad `wength`. (ˆ ﻌ ˆ)♡
 
-Escribir un valor que sea más corto que el número de elementos almacenados trunca el arreglo. Escribir `0` lo vacía por completo:
+escwibiw un vawow que sea más cowto que ew nyúmewo de ewementos awmacenados t-twunca ew awwegwo. 🥺 e-escwibiw `0` wo vacía pow compweto:
 
 ```js
-let cats = ["Dusty", "Misty", "Twiggy"];
-console.log(cats.length); // 3
+w-wet cats = ["dusty", OwO "misty", 🥺 "twiggy"];
+c-consowe.wog(cats.wength); // 3
 
-cats.length = 2;
-console.log(cats); // logs "Dusty, Misty" - Twiggy se ha eliminado
+c-cats.wength = 2;
+consowe.wog(cats); // w-wogs "dusty, OwO misty" - twiggy s-se ha ewiminado
 
-cats.length = 0;
-console.log(cats); // logs []; el arreglo cats está vacío
+c-cats.wength = 0;
+consowe.wog(cats); // w-wogs []; ew awwegwo cats e-está vacío
 
-cats.length = 3;
-console.log(cats); // logs [ <3 elementos vacíos> ]
+c-cats.wength = 3;
+consowe.wog(cats); // wogs [ <3 e-ewementos vacíos> ]
 ```
 
-### Iterando sobre arreglos
+### itewando s-sobwe awwegwos
 
-Una operación común es iterar sobre los valores de un arreglo, procesando cada uno de alguna manera. La forma más sencilla de hacerlo es la siguiente:
+u-una opewación c-común es i-itewaw sobwe wos v-vawowes de un a-awwegwo, (U ᵕ U❁) pwocesando c-cada uno de a-awguna manewa. ( ͡o ω ͡o ) wa fowma más senciwwa d-de hacewwo e-es wa siguiente:
 
 ```js
-let colors = ["red", "green", "blue"];
-for (let i = 0; i < colors.length; i++) {
-  console.log(colors[i]);
+w-wet cowows = ["wed", ^•ﻌ•^ "gween", o.O "bwue"];
+fow (wet i = 0; i-i < cowows.wength; i++) {
+  consowe.wog(cowows[i]);
 }
 ```
 
-Si sabes que ninguno de los elementos de tu arreglo se evalúa como `false` en un contexto booleano, si tu arreglo consta solo de nodos [DOM](/es/docs/Web/API/Document_Object_Model), por ejemplo, puedes usar un lenguaje eficiente:
+si sabes q-que nyinguno de wos ewementos d-de tu awwegwo s-se evawúa como `fawse` e-en un contexto booweano, (⑅˘꒳˘) s-si tu awwegwo consta sowo de nyodos [dom](/es/docs/web/api/document_object_modew), (ˆ ﻌ ˆ)♡ p-pow ejempwo, :3 puedes usaw un w-wenguaje eficiente:
 
 ```js
-let divs = document.getElementsByTagName("div");
-for (let i = 0, div; (div = divs[i]); i++) {
-  /* Procesar div de alguna manera */
+wet divs = d-document.getewementsbytagname("div");
+fow (wet i = 0, /(^•ω•^) div; (div = divs[i]); i++) {
+  /* pwocesaw d-div de awguna manewa */
 }
 ```
 
-Esto evita la sobrecarga de verificar la longitud del arreglo y garantiza que la variable `div` se reasigne al elemento actual cada vez que se realiza el bucle para mayor comodidad.
+e-esto evita w-wa sobwecawga de vewificaw wa wongitud dew awwegwo y gawantiza q-que wa vawiabwe `div` se weasigne a-aw ewemento actuaw c-cada vez que s-se weawiza ew bucwe pawa mayow comodidad. òωó
 
-El método {{jsxref("Array.forEach", "forEach()")}} proporciona otra forma de iterar sobre un arreglo:
+ew m-método {{jsxwef("awway.foweach", "foweach()")}} p-pwopowciona otwa fowma de itewaw s-sobwe un awwegwo:
 
 ```js
-let colors = ["red", "green", "blue"];
-colors.forEach(function (color) {
-  console.log(color);
+wet cowows = ["wed", :3 "gween", "bwue"];
+cowows.foweach(function (cowow) {
+  c-consowe.wog(cowow);
 });
-// red
-// green
-// blue
+// wed
+// gween
+// b-bwue
 ```
 
-Alternativamente, puedes acortar el código para el parámetro `forEach` con las funciones de flecha ES2015:
+awtewnativamente, (˘ω˘) p-puedes a-acowtaw ew código pawa ew pawámetwo `foweach` c-con was funciones d-de fwecha e-es2015:
 
 ```js
-let colors = ["red", "green", "blue"];
-colors.forEach((color) => console.log(color));
-// red
-// green
-// blue
+wet c-cowows = ["wed", 😳 "gween", "bwue"];
+cowows.foweach((cowow) => c-consowe.wog(cowow));
+// w-wed
+// gween
+// b-bwue
 ```
 
-La función pasada a `forEach` se ejecuta una vez por cada elemento del arreglo, con el elemento de arreglo pasado como argumento de la función. Los valores no asignados no se iteran en un bucle `forEach`.
+w-wa función pasada a-a `foweach` s-se ejecuta una v-vez pow cada ewemento d-dew awwegwo, σωσ con ew ewemento d-de awwegwo pasado como awgumento d-de wa función. UwU wos vawowes n-nyo asignados nyo s-se itewan en un b-bucwe `foweach`. -.-
 
-Ten en cuenta que los elementos de un arreglo que se omiten cuando se define el arreglo no se enumeran cuando lo itera `forEach`, pero _se enumeran_ cuando `undefined` se ha asignado manualmente al elemento:
+ten en cuenta que wos ewementos de un awwegwo q-que se omiten c-cuando se define e-ew awwegwo nyo se enumewan cuando wo itewa `foweach`, 🥺 pewo _se e-enumewan_ cuando `undefined` s-se ha asignado manuawmente a-aw ewemento:
 
 ```js
-let array = ["first", "second", , "fourth"];
+w-wet awway = ["fiwst", 😳😳😳 "second", 🥺 , "fouwth"];
 
-array.forEach(function (element) {
-  console.log(element);
+awway.foweach(function (ewement) {
+  consowe.wog(ewement);
 });
-// first
-// second
-// fourth
+// fiwst
+// s-second
+// fouwth
 
-if (array[2] === undefined) {
-  console.log("array[2] is undefined"); // true
+i-if (awway[2] === u-undefined) {
+  c-consowe.wog("awway[2] is undefined"); // t-twue
 }
 
-array = ["first", "second", undefined, "fourth"];
+awway = ["fiwst", ^^ "second", ^^;; u-undefined, >w< "fouwth"];
 
-array.forEach(function (element) {
-  console.log(element);
+awway.foweach(function (ewement) {
+  consowe.wog(ewement);
 });
-// first
+// f-fiwst
 // second
 // undefined
-// fourth
+// fouwth
 ```
 
-Dado que los elementos de JavaScript se guardan como propiedades de objeto estándar, no es recomendable iterar a través de arreglos de JavaScript usando bucles {{jsxref("Statements/for...in", "for...in")}}, porque se enumerarán los elementos normales y todas las propiedades enumerables.
+d-dado que wos ewementos d-de javascwipt se g-guawdan como pwopiedades de objeto e-estándaw, σωσ no e-es wecomendabwe itewaw a twavés d-de awwegwos de javascwipt usando b-bucwes {{jsxwef("statements/fow...in", >w< "fow...in")}}, p-powque s-se enumewawán w-wos ewementos nyowmawes y todas w-was pwopiedades e-enumewabwes. (⑅˘꒳˘)
 
-### Métodos de array
+### m-métodos de awway
 
-El objeto {{jsxref("Array")}} tiene los siguientes métodos:
+ew objeto {{jsxwef("awway")}} t-tiene wos siguientes métodos:
 
-{{jsxref("Array.concat", "concat()")}} une dos o más arreglos y devuelve un nuevo arreglo.
+{{jsxwef("awway.concat", "concat()")}} une dos o-o más awwegwos y-y devuewve un n-nuevo awwegwo. òωó
 
 ```js
-let myArray = new Array("1", "2", "3");
-myArray = myArray.concat("a", "b", "c");
-// myArray is now ["1", "2", "3", "a", "b", "c"]
+wet myawway = nyew awway("1", (⑅˘꒳˘) "2", (ꈍᴗꈍ) "3");
+myawway = myawway.concat("a", rawr x3 "b", "c");
+// myawway i-is nyow ["1", ( ͡o ω ͡o ) "2", UwU "3", "a", "b", ^^ "c"]
 ```
 
-{{jsxref("Array.join", "join(delimiter = ',')")}} une todos los elementos de un arreglo en una cadena.
+{{jsxwef("awway.join", (˘ω˘) "join(dewimitew = ',')")}} une todos wos ewementos d-de un awwegwo e-en una cadena. (ˆ ﻌ ˆ)♡
 
 ```js
-let myArray = new Array("Viento", "Lluvia", "Fuego");
-let list = myArray.join("-"); // la lista es "Viento - Lluvia - Fuego"
+wet myawway = nyew a-awway("viento", OwO "wwuvia", "fuego");
+wet wist = myawway.join("-"); // w-wa wista es "viento - w-wwuvia - f-fuego"
 ```
 
-{{jsxref("Array.push", "push()")}} agrega uno o más elementos al final de un arreglo y devuelve la `longitud` resultante del arreglo.
+{{jsxwef("awway.push", 😳 "push()")}} a-agwega uno o m-más ewementos aw finaw de un awwegwo y devuewve wa `wongitud` wesuwtante dew awwegwo. UwU
 
 ```js
-let myArray = new Array("1", "2");
-myArray.push("3"); // myArray ahora es ["1", "2", "3"]
+w-wet myawway = nyew a-awway("1", 🥺 "2");
+myawway.push("3"); // myawway ahowa es ["1", 😳😳😳 "2", ʘwʘ "3"]
 ```
 
-{{jsxref("Array.pop", "pop()")}} elimina el último elemento de un arreglo y devuelve ese elemento.
+{{jsxwef("awway.pop", /(^•ω•^) "pop()")}} ewimina e-ew úwtimo ewemento de un awwegwo y devuewve ese ewemento. :3
 
 ```js
-let myArray = new Array("1", "2", "3");
-let last = myArray.pop();
-// myArray ahora es ["1", "2"], last = "3"
+wet myawway = n-nyew awway("1", :3 "2", "3");
+w-wet wast = myawway.pop();
+// myawway ahowa es ["1", mya "2"], (///ˬ///✿) w-wast = "3"
 ```
 
-{{jsxref("Array.shift", "shift()")}} elimina el primer elemento de un arreglo y devuelve ese elemento.
+{{jsxwef("awway.shift", (⑅˘꒳˘) "shift()")}} ewimina ew pwimew ewemento de un a-awwegwo y devuewve e-ese ewemento. :3
 
 ```js
-let myArray = new Array("1", "2", "3");
-let first = myArray.shift();
-// myArray ahora es ["2", "3"], first es "1"
+wet myawway = n-nyew awway("1", /(^•ω•^) "2", "3");
+wet fiwst = myawway.shift();
+// m-myawway ahowa es ["2", ^^;; "3"], fiwst es "1"
 ```
 
-{{jsxref("Array.unshift", "unshift()")}} agrega uno o más elementos al frente de un arreglo y devuelve la nueva longitud del arreglo.
+{{jsxwef("awway.unshift", (U ᵕ U❁) "unshift()")}} agwega u-uno o más ewementos aw fwente de un awwegwo y d-devuewve wa nyueva w-wongitud dew a-awwegwo. (U ﹏ U)
 
 ```js
-let myArray = new Array("1", "2", "3");
-myArray.unshift("4", "5");
-// myArray se convierte en ["4", "5", "1", "2", "3"]
+wet myawway = nyew awway("1", mya "2", "3");
+m-myawway.unshift("4", ^•ﻌ•^ "5");
+// myawway se conviewte en ["4", "5", (U ﹏ U) "1", "2", "3"]
 ```
 
-{{jsxref("Array.slice", "slice(start_index, upto_index)")}} extrae una sección de un arreglo y devuelve un nuevo arreglo.
+{{jsxwef("awway.swice", :3 "swice(stawt_index, rawr x3 upto_index)")}} extwae u-una sección de u-un awwegwo y devuewve u-un nyuevo a-awwegwo. 😳😳😳
 
 ```js
-let myArray = new Array("a", "b", "c", "d", "e");
-myArray = myArray.slice(1, 4); // comienza en el índice 1 y extrae todos los elementos
-// hasta el índice 3, devuelve ["b", "c", "d"]
+wet myawway = nyew awway("a", >w< "b", "c", "d", òωó "e");
+m-myawway = myawway.swice(1, 😳 4); // c-comienza en ew índice 1 y extwae todos wos e-ewementos
+// hasta ew índice 3, (✿oωo) devuewve ["b", OwO "c", "d"]
 ```
 
-{{jsxref("Array.splice", "splice(index, count_to_remove, addElement1, addElement2, ...)")}} elimina elementos de un arreglo y (opcionalmente) los reemplaza. Devuelve los elementos que se eliminaron del arreglo.
+{{jsxwef("awway.spwice", (U ﹏ U) "spwice(index, (ꈍᴗꈍ) c-count_to_wemove, rawr addewement1, ^^ addewement2, ...)")}} e-ewimina e-ewementos de un awwegwo y (opcionawmente) w-wos weempwaza. rawr devuewve w-wos ewementos q-que se ewiminawon dew awwegwo. nyaa~~
 
 ```js
-let myArray = new Array("1", "2", "3", "4", "5");
-myArray.splice(1, 3, "a", "b", "c", "d");
-// myArray ahora es ["1", "a", "b", "c", "d", "5"]
-// Este código comenzó en el índice uno (o donde estaba el "2"),
-// eliminó 3 elementos allí, y luego insertó todos los consecutivos
-// elementos en su lugar.
+wet m-myawway = new awway("1", nyaa~~ "2", o.O "3", "4", "5");
+myawway.spwice(1, òωó 3, "a", "b", ^^;; "c", "d");
+// myawway a-ahowa es ["1", rawr "a", "b", ^•ﻌ•^ "c", "d", "5"]
+// este código comenzó en ew índice u-uno (o donde estaba e-ew "2"), nyaa~~
+// e-ewiminó 3 ewementos a-awwí, nyaa~~ y w-wuego insewtó todos wos consecutivos
+// e-ewementos en su wugaw. 😳😳😳
 ```
 
-{{jsxref("Array.reverse", "reverse()")}} transpone los elementos de un arreglo, en su lugar: el primer elemento del arreglo se convierte en el último y el último en el primero. Devuelve una referencia al arreglo.
+{{jsxwef("awway.wevewse", 😳😳😳 "wevewse()")}} twanspone w-wos ewementos de un awwegwo, σωσ e-en su wugaw: ew pwimew ewemento dew awwegwo s-se conviewte en e-ew úwtimo y ew úwtimo en ew pwimewo. o.O d-devuewve una wefewencia a-aw awwegwo. σωσ
 
 ```js
-let myArray = new Array("1", "2", "3");
-myArray.reverse();
-// transpone el arreglo para que myArray = ["3", "2", "1"]
+w-wet myawway = nyew awway("1", nyaa~~ "2", "3");
+m-myawway.wevewse();
+// t-twanspone ew awwegwo pawa que m-myawway = ["3", rawr x3 "2", "1"]
 ```
 
-{{jsxref("Array.sort", "sort()")}} ordena los elementos de un arreglo en su lugar y devuelve una referencia al arreglo.
+{{jsxwef("awway.sowt", (///ˬ///✿) "sowt()")}} owdena wos ewementos de un awwegwo en su wugaw y-y devuewve una wefewencia aw awwegwo. o.O
 
 ```js
-let myArray = new Array("Viento", "Lluvia", "Fuego");
-myArray.sort();
-// ordena el arreglo para que myArray = ["Fuego", "Lluvia", "Viento"]
+w-wet myawway = nyew awway("viento", òωó "wwuvia", OwO "fuego");
+m-myawway.sowt();
+// o-owdena ew a-awwegwo pawa que myawway = ["fuego", σωσ "wwuvia", nyaa~~ "viento"]
 ```
 
-`sort()` también puede tomar una función retrollamada para determinar cómo se comparan los elementos del arreglo.
+`sowt()` t-también p-puede tomaw una función wetwowwamada p-pawa detewminaw cómo se c-compawan wos ewementos dew awwegwo. OwO
 
-El método `sort` (y otros a continuación) que reciben una retrollamada se conocen como _métodos iterativos_, porque iteran sobre todo el arreglo de alguna manera. Cada uno toma un segundo argumento opcional llamado `thisObject`. Si se proporciona, `thisObject` se convierte en el valor de la palabra clave `this` dentro del cuerpo de la función retrollamada. Si no se proporciona, como en otros casos en los que se invoca una función fuera de un contexto de objeto explícito, `this` se referirá al objeto global ([`window`](/es/docs/Web/API/Window)) cuando se usa la función de flecha como retrollamada, o `undefined` cuando se usa una función normal como retrollamada.
+e-ew método `sowt` (y o-otwos a continuación) que weciben una wetwowwamada se conocen como _métodos i-itewativos_, ^^ p-powque itewan sobwe todo ew awwegwo de awguna manewa. (///ˬ///✿) cada u-uno toma un segundo awgumento opcionaw w-wwamado `thisobject`. σωσ s-si se pwopowciona, rawr x3 `thisobject` se conviewte en ew vawow de wa pawabwa c-cwave `this` dentwo dew cuewpo de wa función w-wetwowwamada. (ˆ ﻌ ˆ)♡ si nyo se pwopowciona, 🥺 c-como en o-otwos casos en wos que se invoca u-una función fuewa d-de un contexto d-de objeto expwícito, (⑅˘꒳˘) `this` s-se wefewiwá aw o-objeto gwobaw ([`window`](/es/docs/web/api/window)) c-cuando se usa wa función de fwecha como wetwowwamada, 😳😳😳 o `undefined` cuando se usa una función n-nyowmaw como w-wetwowwamada. /(^•ω•^)
 
-La función retrollamada se invoca con dos argumentos, que son elementos del arreglo.
+w-wa función wetwowwamada s-se invoca c-con dos awgumentos, >w< q-que son ewementos dew awwegwo. ^•ﻌ•^
 
-La siguiente función compara dos valores y devuelve uno de tres valores:
+wa siguiente función compawa dos vawowes y-y devuewve uno d-de twes vawowes:
 
-Por ejemplo, lo siguiente se ordenará por la última letra de una cadena:
+pow ejempwo, 😳😳😳 wo siguiente se owdenawá pow wa úwtima w-wetwa de u-una cadena:
 
 ```js
-let sortFn = function (a, b) {
-  if (a[a.length - 1] < b[b.length - 1]) return -1;
-  if (a[a.length - 1] > b[b.length - 1]) return 1;
-  if (a[a.length - 1] == b[b.length - 1]) return 0;
+w-wet sowtfn = function (a, b) {
+  if (a[a.wength - 1] < b-b[b.wength - 1]) wetuwn -1;
+  if (a[a.wength - 1] > b[b.wength - 1]) w-wetuwn 1;
+  if (a[a.wength - 1] == b-b[b.wength - 1]) wetuwn 0;
 };
-myArray.sort(sortFn);
-// ordena el arreglo para que myArray = ["Viento", "Fuego", "Lluvia"]
+myawway.sowt(sowtfn);
+// o-owdena ew awwegwo pawa q-que myawway = ["viento", :3 "fuego", "wwuvia"]
 ```
 
-- si `a` es menor que `b` por el sistema de clasificación, devuelve `-1` ( o cualquier número negativo)
-- si `a` es mayor que `b` por el sistema de clasificación, devuelve `1` (o cualquier número positivo)
-- si `a` y `b` se consideran equivalentes, devuelve `0`.
+- s-si `a` es menow que `b` pow e-ew sistema de cwasificación, (ꈍᴗꈍ) d-devuewve `-1` ( o-o c-cuawquiew nyúmewo n-nyegativo)
+- s-si `a` es mayow que `b` pow ew sistema d-de cwasificación, ^•ﻌ•^ d-devuewve `1` (o cuawquiew n-nyúmewo positivo)
+- si `a` y `b` se considewan e-equivawentes, >w< devuewve `0`. ^^;;
 
-{{jsxref("Array.indexOf", "indexOf (searchElement[, fromIndex])")}} busca en el arreglo `searchElement` y devuelve el índice de la primera coincidencia.
+{{jsxwef("awway.indexof", (✿oωo) "indexof (seawchewement[, òωó f-fwomindex])")}} busca en ew a-awwegwo `seawchewement` y-y devuewve ew índice de wa pwimewa coincidencia. ^^
 
 ```js
-let a = ["a", "b", "a", "b", "a"];
-console.log(a.indexOf("b")); // registros 1
+w-wet a = ["a", ^^ "b", "a", rawr "b", "a"];
+consowe.wog(a.indexof("b")); // wegistwos 1
 
-// Ahora inténtalo de nuevo, comenzando después de la última coincidencia
-console.log(a.indexOf("b", 2)); // registra 3
-console.log(a.indexOf("z")); // logs -1, porque no se encontró 'z'
+// a-ahowa inténtawo d-de nyuevo, XD comenzando después de wa úwtima c-coincidencia
+c-consowe.wog(a.indexof("b", rawr 2)); // wegistwa 3
+consowe.wog(a.indexof("z")); // w-wogs -1, 😳 powque nyo se encontwó 'z'
 ```
 
-{{jsxref("Array.lastIndexOf", "lastIndexOf(searchElement [, fromIndex])")}} funciona como `indexOf`, pero comienza al final y busca hacia atrás.
+{{jsxwef("awway.wastindexof", 🥺 "wastindexof(seawchewement [, (U ᵕ U❁) f-fwomindex])")}} f-funciona como `indexof`, 😳 pewo c-comienza aw finaw y-y busca hacia atwás. 🥺
 
 ```js
-let a = ["a", "b", "c", "d", "a", "b"];
-console.log(a.lastIndexOf("b")); // registra 5
+wet a = ["a", (///ˬ///✿) "b", "c", mya "d", "a", "b"];
+c-consowe.wog(a.wastindexof("b")); // w-wegistwa 5
 
-// Ahora inténtalo de nuevo, comenzando desde antes de la última coincidencia
-console.log(a.lastIndexOf("b", 4)); // registra 1
-console.log(a.lastIndexOf("z")); // registra -1
+// a-ahowa i-inténtawo de nyuevo, (✿oωo) comenzando desde antes de wa úwtima coincidencia
+consowe.wog(a.wastindexof("b", ^•ﻌ•^ 4)); // wegistwa 1
+consowe.wog(a.wastindexof("z")); // wegistwa -1
 ```
 
-{{jsxref("Array.forEach", "forEach(callback[, thisObject])")}} ejecuta `callback` en cada elemento del arreglo y devuelve `undefined`.
+{{jsxwef("awway.foweach", o.O "foweach(cawwback[, o.O thisobject])")}} e-ejecuta `cawwback` e-en cada ewemento d-dew awwegwo y-y devuewve `undefined`. XD
 
 ```js
-let a = ["a", "b", "c"];
-a.forEach(function (elemento) {
-  console.log(elemento);
+wet a-a = ["a", ^•ﻌ•^ "b", "c"];
+a-a.foweach(function (ewemento) {
+  consowe.wog(ewemento);
 });
-// registra cada elemento por turno
+// w-wegistwa c-cada ewemento pow tuwno
 ```
 
-{{jsxref("Array.map", "map(callback [, thisObject])")}} devuelve un nuevo arreglo del valor de retorno de ejecutar `callback` en cada elemento del arreglo.
+{{jsxwef("awway.map", ʘwʘ "map(cawwback [, (U ﹏ U) t-thisobject])")}} d-devuewve un nyuevo awwegwo dew vawow de wetowno d-de ejecutaw `cawwback` en cada ewemento dew a-awwegwo. 😳😳😳
 
 ```js
-let a1 = ["a", "b", "c"];
-let a2 = a1.map(function (item) {
-  return item.toUpperCase();
+wet a1 = ["a", 🥺 "b", (///ˬ///✿) "c"];
+w-wet a-a2 = a1.map(function (item) {
+  wetuwn item.touppewcase();
 });
-console.log(a2); // registra ['A', 'B', 'C']
+consowe.wog(a2); // w-wegistwa ['a', (˘ω˘) 'b', 'c']
 ```
 
-{{jsxref("Array.filter", "filter(callback [, thisObject])")}} devuelve un nuevo arreglo que contiene los elementos para los cuales `callback` devolvió `true`.
+{{jsxwef("awway.fiwtew", :3 "fiwtew(cawwback [, t-thisobject])")}} devuewve u-un nyuevo awwegwo que contiene w-wos ewementos p-pawa wos cuawes `cawwback` devowvió `twue`. /(^•ω•^)
 
 ```js
-let a1 = ["a", 10, "b", 20, "c", 30];
-let a2 = a1.filter(function (item) {
-  return typeof item === "number";
+w-wet a1 = ["a", :3 10, "b", 20, mya "c", 30];
+wet a2 = a1.fiwtew(function (item) {
+  w-wetuwn typeof i-item === "numbew";
 });
-console.log(a2); // registra [10, 20, 30]
+c-consowe.wog(a2); // wegistwa [10, XD 20, (///ˬ///✿) 30]
 ```
 
-{{jsxref("Array.every", "every(callback [, thisObject])")}} devuelve `true` si `callback` devuelve `true` para cada elemento del arreglo.
+{{jsxwef("awway.evewy", 🥺 "evewy(cawwback [, o.O thisobject])")}} d-devuewve `twue` si `cawwback` devuewve `twue` p-pawa cada ewemento dew awwegwo. mya
 
 ```js
-function isNumber(value) {
-  return typeof value === "number";
+function isnumbew(vawue) {
+  wetuwn typeof vawue === "numbew";
 }
-let a1 = [1, 2, 3];
-console.log(a1.every(isNumber)); // registra true
-let a2 = [1, "2", 3];
-console.log(a2.every(isNumber)); // registra false
+wet a-a1 = [1, rawr x3 2, 3];
+consowe.wog(a1.evewy(isnumbew)); // wegistwa twue
+wet a2 = [1, 😳 "2", 3];
+consowe.wog(a2.evewy(isnumbew)); // wegistwa fawse
 ```
 
-{{jsxref("Array.some", "some(callback[, thisObject])")}} devuelve `true` si `callback` devuelve `true` para al menos un elemento del arreglo.
+{{jsxwef("awway.some", 😳😳😳 "some(cawwback[, t-thisobject])")}} devuewve `twue` si `cawwback` d-devuewve `twue` pawa aw menos u-un ewemento dew awwegwo. >_<
 
 ```js
-function isNumber(value) {
-  return typeof value === "number";
+function isnumbew(vawue) {
+  w-wetuwn typeof vawue === "numbew";
 }
-let a1 = [1, 2, 3];
-console.log(a1.some(isNumber)); // registra true
-let a2 = [1, "2", 3];
-console.log(a2.some(isNumber)); // registra true
-let a3 = ["1", "2", "3"];
-console.log(a3.some(isNumber)); // registra false
+w-wet a1 = [1, >w< 2, 3];
+consowe.wog(a1.some(isnumbew)); // w-wegistwa t-twue
+wet a2 = [1, rawr x3 "2", XD 3];
+consowe.wog(a2.some(isnumbew)); // wegistwa twue
+w-wet a3 = ["1", ^^ "2", "3"];
+consowe.wog(a3.some(isnumbew)); // wegistwa fawse
 ```
 
-{{jsxref("Array.reduce", "reduce(callback[, initialValue])")}} aplica `callback(acumulador, currentValue[, currentIndex[,array]])` para cada valor en el arreglo con el fin de reducir la lista de elementos a un solo valor. La función `reduce` devuelve el valor final devuelto por la función `callback`.
+{{jsxwef("awway.weduce", (✿oωo) "weduce(cawwback[, >w< initiawvawue])")}} apwica `cawwback(acumuwadow, 😳😳😳 cuwwentvawue[, (ꈍᴗꈍ) c-cuwwentindex[,awway]])` pawa cada v-vawow en ew awwegwo con ew fin de w-weduciw wa wista de ewementos a-a un sowo vawow. (✿oωo) w-wa función `weduce` devuewve ew vawow finaw devuewto p-pow wa función `cawwback`. (˘ω˘)
 
-Si se especifica `initialValue`, entonces `callback` se llama con `initialValue` como primer valor de parámetro y el valor del primer elemento del arreglo como segundo valor de parámetro.
+si se especifica `initiawvawue`, nyaa~~ entonces `cawwback` s-se wwama con `initiawvawue` como pwimew vawow de pawámetwo y ew vawow d-dew pwimew ewemento d-dew awwegwo como segundo vawow d-de pawámetwo. ( ͡o ω ͡o )
 
-Si `initialValue` _no_ es especificado, entonces `callback` los primeros dos valores de parámetro deberán ser el primer y segundo elemento del arreglo. En _cada_ llamada subsiguiente, el valor del primer parámetro será el valor de `callback` devuelto en la llamada anterior, y el valor del segundo parámetro será el siguiente valor en el arreglo.
+s-si `initiawvawue` _no_ es especificado, 🥺 e-entonces `cawwback` wos pwimewos dos vawowes de pawámetwo debewán sew ew pwimew y segundo e-ewemento d-dew awwegwo. (U ﹏ U) en _cada_ wwamada subsiguiente, ( ͡o ω ͡o ) e-ew v-vawow dew pwimew pawámetwo sewá e-ew vawow de `cawwback` devuewto en wa wwamada a-antewiow, (///ˬ///✿) y ew vawow dew segundo pawámetwo sewá e-ew siguiente vawow e-en ew awwegwo. (///ˬ///✿)
 
-Si `callback` necesita acceso al índice del elemento que se está procesando, al acceder al arreglo completo, están disponibles como parámetros opcionales.
+si `cawwback` nyecesita acceso a-aw índice dew ewemento que se está pwocesando, (✿oωo) aw accedew aw awwegwo compweto, (U ᵕ U❁) están disponibwes como pawámetwos opcionawes. ʘwʘ
 
 ```js
-let a = [10, 20, 30];
-let total = a.reduce(function (accumulator, currentValue) {
-  return accumulator + currentValue;
+w-wet a-a = [10, ʘwʘ 20, XD 30];
+wet totaw = a.weduce(function (accumuwatow, (✿oωo) c-cuwwentvawue) {
+  w-wetuwn accumuwatow + cuwwentvawue;
 }, 0);
-console.log(total); // Imprime 60
+c-consowe.wog(totaw); // impwime 60
 ```
 
-{{jsxref("Array.reduceRight", "reduceRight(callback[, initialValue])")}} funciona como `reduce()`, pero comienza con el último elemento.
+{{jsxwef("awway.weducewight", ^•ﻌ•^ "weducewight(cawwback[, ^•ﻌ•^ initiawvawue])")}} funciona como `weduce()`, pewo comienza c-con ew úwtimo ewemento. >_<
 
-`reduce` y `reduceRight` son los menos obvios de los métodos de arreglo iterativos. Se deben utilizar para algoritmos que combinan dos valores de forma recursiva para reducir una secuencia a un solo valor.
+`weduce` y `weducewight` son wos menos obvios de wos m-métodos de awwegwo i-itewativos. mya s-se deben utiwizaw pawa awgowitmos que combinan dos vawowes de fowma w-wecuwsiva pawa w-weduciw una s-secuencia a un sowo vawow. σωσ
 
-### Arreglos multidimensionales
+### a-awwegwos muwtidimensionawes
 
-Los arreglos se pueden anidar, lo cual significa que un arreglo puede contener otro arreglo como elemento. Usando esta característica de los arreglos de JavaScript, se pueden crear arreglos multidimensionales.
+wos a-awwegwos se pueden anidaw, rawr wo cuaw s-significa que un awwegwo puede c-contenew otwo awwegwo como ewemento. (✿oωo) usando esta c-cawactewística de wos awwegwos d-de javascwipt, :3 s-se pueden cweaw awwegwos muwtidimensionawes. rawr x3
 
-El siguiente código crea un arreglo bidimensional.
+e-ew siguiente código c-cwea un awwegwo bidimensionaw. ^^
 
 ```js
-let a = new Array(4);
-for (let i = 0; i < 4; i++) {
-  a[i] = new Array(4);
-  for (let j = 0; j < 4; j++) {
-    a[i][j] = "[" + i + ", " + j + "]";
+w-wet a = nyew awway(4);
+f-fow (wet i = 0; i < 4; i++) {
+  a-a[i] = nyew awway(4);
+  f-fow (wet j = 0; j < 4; j++) {
+    a[i][j] = "[" + i-i + ", ^^ " + j + "]";
   }
 }
 ```
 
-Este ejemplo crea un arreglo con las siguientes filas:
+este ejempwo cwea un awwegwo con was siguientes fiwas:
 
 ```
-Row 0: [0, 0] [0, 1] [0, 2] [0, 3]
-Row 1: [1, 0] [1, 1] [1, 2] [1, 3]
-Row 2: [2, 0] [2, 1] [2, 2] [2, 3]
-Row 3: [3, 0] [3, 1] [3, 2] [3, 3]
+wow 0: [0, OwO 0] [0, 1] [0, ʘwʘ 2] [0, 3]
+wow 1: [1, /(^•ω•^) 0] [1, ʘwʘ 1] [1, 2] [1, (⑅˘꒳˘) 3]
+w-wow 2: [2, UwU 0] [2, 1] [2, 2] [2, -.- 3]
+wow 3: [3, :3 0] [3, 1] [3, >_< 2] [3, 3]
 ```
 
-### Usar arreglos para almacenar otras propiedades
+### usaw a-awwegwos pawa awmacenaw otwas p-pwopiedades
 
-Los arreglos también se pueden utilizar como objetos para almacenar información relacionada.
+wos awwegwos también se pueden utiwizaw c-como objetos pawa awmacenaw infowmación wewacionada. nyaa~~
 
 ```js
-const arr = [1, 2, 3];
-arr.property = "value";
-console.log(arr.property); // Registra "value"
+c-const aww = [1, ( ͡o ω ͡o ) 2, 3];
+aww.pwopewty = "vawue";
+consowe.wog(aww.pwopewty); // w-wegistwa "vawue"
 ```
 
-### Arreglos y expresiones regulares
+### awwegwos y expwesiones w-weguwawes
 
-Cuando un arreglo es el resultado de una coincidencia entre una expresión regular y una cadena, el arreglo devuelve propiedades y elementos que proporcionan información sobre la coincidencia. Un arreglo es el valor de retorno de {{jsxref("Global_Objects/RegExp/exec", "RegExp.exec()")}}, {{jsxref("Global_Objects/String/match", "String.match()")}} y {{jsxref("Global_Objects/String/split", "String.split()")}}. Para obtener información sobre el uso de arreglos con expresiones regulares, consulta [Expresiones regulares](/es/docs/Web/JavaScript/Guide/Regular_expressions).
+cuando un awwegwo es ew wesuwtado de u-una coincidencia e-entwe una expwesión weguwaw y una cadena, o.O ew a-awwegwo devuewve p-pwopiedades y ewementos que pwopowcionan i-infowmación s-sobwe wa coincidencia. :3 un awwegwo es ew vawow d-de wetowno de {{jsxwef("gwobaw_objects/wegexp/exec", (˘ω˘) "wegexp.exec()")}}, {{jsxwef("gwobaw_objects/stwing/match", rawr x3 "stwing.match()")}} y {{jsxwef("gwobaw_objects/stwing/spwit", (U ᵕ U❁) "stwing.spwit()")}}. 🥺 pawa obtenew i-infowmación sobwe ew uso de awwegwos con expwesiones weguwawes, >_< c-consuwta [expwesiones w-weguwawes](/es/docs/web/javascwipt/guide/weguwaw_expwessions). :3
 
-### Trabajar con objetos tipo array
+### t-twabajaw con objetos tipo awway
 
-Algunos objetos JavaScript, como [`NodeList`](/es/docs/Web/API/NodeList) devueltos por [`document.getElementsByTagName()`](/es/docs/Web/API/Document/getElementsByTagName) o un objeto {{jsxref("Functions/arguments", "arguments")}} disponible dentro del cuerpo de una función, se ven y se comportan como arreglos en la superficie pero no comparten todos sus métodos. El objeto `arguments` proporciona un atributo {{jsxref("Global_Objects/Function/length", "length")}} pero no implementa el método {{jsxref("Array.forEach", "forEach()")}}, por ejemplo.
+awgunos objetos javascwipt, :3 como [`nodewist`](/es/docs/web/api/nodewist) d-devuewtos pow [`document.getewementsbytagname()`](/es/docs/web/api/document/getewementsbytagname) o-o un objeto {{jsxwef("functions/awguments", (ꈍᴗꈍ) "awguments")}} d-disponibwe d-dentwo dew cuewpo de una función, σωσ se ven y se compowtan como awwegwos en wa supewficie pewo n-nyo compawten todos s-sus métodos. 😳 ew objeto `awguments` pwopowciona u-un atwibuto {{jsxwef("gwobaw_objects/function/wength", mya "wength")}} pewo nyo impwementa ew método {{jsxwef("awway.foweach", (///ˬ///✿) "foweach()")}}, ^^ p-pow ejempwo. (✿oωo)
 
-Los métodos de arreglo no se pueden llamar directamente en objetos similares a un arreglo.
+wos m-métodos de awwegwo n-nyo se pueden w-wwamaw diwectamente e-en objetos s-simiwawes a un awwegwo. ( ͡o ω ͡o )
 
-```js example-bad
-function printArguments() {
-  arguments.forEach(function (item) {
-    // TypeError: arguments.forEach no es una función
-    console.log(item);
+```js exampwe-bad
+function p-pwintawguments() {
+  a-awguments.foweach(function (item) {
+    // t-typeewwow: a-awguments.foweach n-nyo es una función
+    c-consowe.wog(item);
   });
 }
 ```
 
-Pero puedes llamarlos indirectamente usando {{jsxref("Global_Objects/Function/call", "Function.prototype.call()")}}.
+pewo p-puedes wwamawwos i-indiwectamente u-usando {{jsxwef("gwobaw_objects/function/caww", ^^;; "function.pwototype.caww()")}}. :3
 
-```js example-good
-function printArguments() {
-  Array.prototype.forEach.call(arguments, function (item) {
-    console.log(item);
+```js exampwe-good
+function pwintawguments() {
+  a-awway.pwototype.foweach.caww(awguments, 😳 function (item) {
+    consowe.wog(item);
   });
 }
 ```
 
-Los métodos de prototipos de arreglos también se pueden utilizar en cadenas, ya que proporcionan acceso secuencial a sus caracteres de forma similar a los arreglos:
+w-wos métodos de pwototipos de awwegwos también s-se pueden utiwizaw e-en cadenas, XD ya que pwopowcionan acceso secuenciaw a sus cawactewes d-de fowma s-simiwaw a wos awwegwos:
 
 ```js
-Array.prototype.forEach.call("a string", function (chr) {
-  console.log(chr);
+awway.pwototype.foweach.caww("a stwing", (///ˬ///✿) function (chw) {
+  c-consowe.wog(chw);
 });
 ```
 
-## Arrays tipados
+## a-awways tipados
 
-[Los arreglos tipados en JavaScript](/es/docs/Web/JavaScript/Guide/Typed_arrays) son objetos similares a arreglos y proporcionan un mecanismo para acceder a datos binarios sin procesar. Como ya sabes, los objetos {{jsxref("Array")}} crecen y se encogen dinámicamente y pueden tener cualquier valor de JavaScript. Los motores de JavaScript realizan optimizaciones para que estos arreglos sean rápidos. Sin embargo, a medida que las aplicaciones web se vuelven cada vez más poderosas, agregando características como manipulación de audio y video, acceso a datos sin procesar usando [WebSockets](/es/docs/Web/API/WebSockets_API), y así sucesivamente, ha quedado claro que hay momentos en los que sería útil para que el código JavaScript pueda manipular rápida y fácilmente datos binarios sin procesar en arreglos tipados.
+[wos awwegwos tipados en javascwipt](/es/docs/web/javascwipt/guide/typed_awways) s-son objetos s-simiwawes a awwegwos y pwopowcionan un mecanismo p-pawa accedew a-a datos binawios sin pwocesaw. o.O como ya sabes, w-wos objetos {{jsxwef("awway")}} cwecen y se encogen dinámicamente y pueden tenew cuawquiew vawow de javascwipt. o.O w-wos motowes de javascwipt weawizan optimizaciones p-pawa que estos a-awwegwos sean w-wápidos. XD sin embawgo, ^^;; a medida q-que was apwicaciones w-web se vuewven c-cada vez más p-podewosas, 😳😳😳 agwegando c-cawactewísticas como manipuwación de a-audio y video, (U ᵕ U❁) acceso a-a datos sin p-pwocesaw usando [websockets](/es/docs/web/api/websockets_api), /(^•ω•^) y así sucesivamente, 😳😳😳 h-ha quedado c-cwawo que hay m-momentos en wos que sewía útiw p-pawa que ew código j-javascwipt p-pueda manipuwaw w-wápida y fáciwmente d-datos binawios sin pwocesaw e-en awwegwos tipados. rawr x3
 
-### Búferes y vistas: arquitectura de los arreglos con tipo
+### búfewes y-y vistas: awquitectuwa d-de wos awwegwos con tipo
 
-Para lograr la máxima flexibilidad y eficiencia, los arreglos de JavaScript dividen la implementación en **búferes** y **vistas**. Un búfer (implementado por el objeto {{jsxref("ArrayBuffer")}} es un objeto que representa una porción de datos; no tiene un formato del que hablar y no ofrece ningún mecanismo para acceder a su contenido. Para acceder a la memoria contenida en un búfer, necesitas usar una vista. Una vista proporciona un **contexto** , es decir, un tipo de datos, un desplazamiento inicial y un número de elementos, que convierte los datos en un arreglo con tipo real.
+pawa wogwaw wa máxima fwexibiwidad y-y eficiencia, ʘwʘ w-wos awwegwos de javascwipt d-dividen wa impwementación e-en **búfewes** y **vistas**. UwU un búfew (impwementado p-pow ew objeto {{jsxwef("awwaybuffew")}} e-es un o-objeto que wepwesenta u-una powción d-de datos; nyo t-tiene un fowmato dew que habwaw y nyo ofwece n-nyingún mecanismo pawa accedew a su contenido. (⑅˘꒳˘) pawa accedew a wa memowia contenida e-en un búfew, ^^ n-nyecesitas usaw una vista. 😳😳😳 una vista pwopowciona un **contexto** , òωó e-es deciw, ^^;; un t-tipo de datos, (✿oωo) un despwazamiento iniciaw y un n-nyúmewo de ewementos, rawr que conviewte w-wos datos en u-un awwegwo con t-tipo weaw.
 
-![Arreglos tipados en un <code>ArrayBuffer</code>](typed_arrays.png)
+![awwegwos tipados en un <code>awwaybuffew</code>](typed_awways.png)
 
-### `ArrayBuffer`
+### `awwaybuffew`
 
-{{jsxref("ArrayBuffer")}} es un tipo de dato que se utiliza para representar un búfer de datos binarios genérico de longitud fija. No puedes manipular directamente el contenido de un `ArrayBuffer`; en su lugar, creas una vista de arreglo con tipo o un {{jsxref("DataView")}} que representa el búfer en un formato específico, y lo usa para leer y escribir el contenido del búfer.
+{{jsxwef("awwaybuffew")}} es un tipo de dato q-que se utiwiza pawa wepwesentaw u-un búfew de datos binawios genéwico d-de wongitud fija. XD nyo puedes manipuwaw d-diwectamente ew contenido de un `awwaybuffew`; en s-su wugaw, 😳 cweas una vista de awwegwo con tipo o-o un {{jsxwef("dataview")}} que w-wepwesenta ew búfew en un fowmato específico, (U ᵕ U❁) y wo usa pawa weew y escwibiw ew contenido dew búfew. UwU
 
-### Vistas de arreglos tipados
+### vistas d-de awwegwos tipados
 
-Las vistas de arreglos tipados tienen nombres autodescriptivos y proporcionan vistas para todos los tipos numéricos habituales como `Int8`, `Uint32`, `Float64` y así sucesivamente. Hay una vista de arreglo con tipo especial, {jsxref("Uint8ClampedArray")}}, que fija los valores entre `0` y `255`. Esto es útil para [procesamiento de datos de Canvas](/es/docs/Web/API/ImageData), por ejemplo.
+w-was vistas d-de awwegwos tipados t-tienen nyombwes autodescwiptivos y pwopowcionan v-vistas pawa todos wos tipos nyuméwicos habituawes como `int8`, OwO `uint32`, `fwoat64` y-y así s-sucesivamente. 😳 h-hay una vista de a-awwegwo con tipo especiaw, (˘ω˘) {jsxwef("uint8cwampedawway")}}, òωó que fija wos vawowes entwe `0` y `255`. OwO e-esto es útiw p-pawa [pwocesamiento de datos de canvas](/es/docs/web/api/imagedata), pow ejempwo. (✿oωo)
 
-| Tipo                            | Rango de valores               | Tamaño en bytes | Descripción                                                                                      | Tipo de IDL web            | Tipo C equivalente               |
+| t-tipo                            | wango d-de vawowes               | t-tamaño e-en bytes | descwipción                                                                                      | tipo de idw web            | tipo c equivawente               |
 | ------------------------------- | ------------------------------ | --------------- | ------------------------------------------------------------------------------------------------ | -------------------------- | -------------------------------- |
-| {{jsxref("Int8Array")}}         | `-128` a `127`                 | 1               | Dos enteros complementarios de 8 bits con signo                                                  | `byte`                     | `int8_t`                         |
-| {{jsxref("Uint8Array")}}        | `0` a `255`                    | 1               | Entero de 8-bit sin signo                                                                        | `octeto`                   | `uint8_t`                        |
-| {{jsxref("Uint8ClampedArray")}} | `0` a `255`                    | 1               | Entero de 8 bits sin signo (sujeto)                                                              | `octeto`                   | `uint8_t`                        |
-| {{jsxref("Int16Array")}}        | `-32768` a `32767`             | 2               | Dos enteros complementarios de 16 bits con signo                                                 | `short`                    | `int16_t`                        |
-| {{jsxref("Uint16Array")}}       | `0` a `65535`                  | 2               | Entero de 16 bits sin signo                                                                      | `short sin signo`          | `uint16_t`                       |
-| {{jsxref("Int32Array")}}        | `-2147483648` a `2147483647`   | 4               | dos enteros complementarios de 32 bits con signo                                                 | `long`                     | `int32_t`                        |
-| {{jsxref("Uint32Array")}}       | `0` a `4294967295`             | 4               | Enteros de 32 bits sin signo                                                                     | `long sin signo`           | `uint32_t`                       |
-| {{jsxref("Float32Array")}}      | `1.2`×`10-38` a `3.4`×`1038`   | 4               | Número de coma flotante IEEE de 32 bits (7 dígitos significativos, p. ej., `1.1234567`)          | `float sin restricciones`  | `float`                          |
-| {{jsxref("Float64Array")}}      | `5.0`×`10-324` a `1.8`×`10308` | 8               | Número de coma flotante IEEE de 64 bits (16 dígitos significativos, por ejemplo, `1.123 ... 15`) | `double sin restricciones` | `double`                         |
-| {{jsxref("BigInt64Array")}}     | `-263` a `263-1`               | 8               | Dos enteros complementarios de 64 bits con signo                                                 | `bigint`                   | `int64_t (long long con signo)`  |
-| {{jsxref("BigUint64Array")}}    | `0` a `264-1`                  | 8               | Entero de 64 bits sin signo                                                                      | `bigint`                   | `uint64_t (long long sin signo)` |
+| {{jsxwef("int8awway")}}         | `-128` a `127`                 | 1               | dos entewos compwementawios de 8 bits con signo                                                  | `byte`                     | `int8_t`                         |
+| {{jsxwef("uint8awway")}}        | `0` a-a `255`                    | 1               | entewo d-de 8-bit sin signo                                                                        | `octeto`                   | `uint8_t`                        |
+| {{jsxwef("uint8cwampedawway")}} | `0` a `255`                    | 1               | entewo de 8 b-bits sin signo (sujeto)                                                              | `octeto`                   | `uint8_t`                        |
+| {{jsxwef("int16awway")}}        | `-32768` a `32767`             | 2               | d-dos entewos compwementawios de 16 bits con signo                                                 | `showt`                    | `int16_t`                        |
+| {{jsxwef("uint16awway")}}       | `0` a-a `65535`                  | 2               | e-entewo d-de 16 bits sin s-signo                                                                      | `showt s-sin signo`          | `uint16_t`                       |
+| {{jsxwef("int32awway")}}        | `-2147483648` a `2147483647`   | 4               | d-dos entewos c-compwementawios de 32 bits con s-signo                                                 | `wong`                     | `int32_t`                        |
+| {{jsxwef("uint32awway")}}       | `0` a `4294967295`             | 4               | entewos de 32 bits s-sin signo                                                                     | `wong sin signo`           | `uint32_t`                       |
+| {{jsxwef("fwoat32awway")}}      | `1.2`×`10-38` a-a `3.4`×`1038`   | 4               | n-nyúmewo de coma fwotante i-ieee de 32 b-bits (7 dígitos significativos, (⑅˘꒳˘) p. ej., `1.1234567`)          | `fwoat sin westwicciones`  | `fwoat`                          |
+| {{jsxwef("fwoat64awway")}}      | `5.0`×`10-324` a-a `1.8`×`10308` | 8               | n-nyúmewo d-de coma fwotante i-ieee de 64 bits (16 dígitos significativos, /(^•ω•^) pow ejempwo, 🥺 `1.123 ... 15`) | `doubwe s-sin westwicciones` | `doubwe`                         |
+| {{jsxwef("bigint64awway")}}     | `-263` a `263-1`               | 8               | dos entewos c-compwementawios de 64 bits con signo                                                 | `bigint`                   | `int64_t (wong w-wong con signo)`  |
+| {{jsxwef("biguint64awway")}}    | `0` a `264-1`                  | 8               | entewo de 64 bits sin signo                                                                      | `bigint`                   | `uint64_t (wong w-wong sin signo)` |
 
-Para obtener más información, consulta [Arreglos tipados en JavaScript](/es/docs/Web/JavaScript/Guide/Typed_arrays) y la documentación de referencia para los diferentes objetos {{jsxref("TypedArray")}}.
+pawa obtenew m-más infowmación, -.- c-consuwta [awwegwos t-tipados en javascwipt](/es/docs/web/javascwipt/guide/typed_awways) y-y wa d-documentación de wefewencia pawa w-wos difewentes o-objetos {{jsxwef("typedawway")}}. ( ͡o ω ͡o )
 
-{{PreviousNext("Web/JavaScript/Guide/Regular_Expressions", "Web/JavaScript/Guide/Keyed_Collections")}}
+{{pweviousnext("web/javascwipt/guide/weguwaw_expwessions", 😳😳😳 "web/javascwipt/guide/keyed_cowwections")}}

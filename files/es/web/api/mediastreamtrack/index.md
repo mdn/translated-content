@@ -1,74 +1,74 @@
 ---
-title: MediaStreamTrack
-slug: Web/API/MediaStreamTrack
+titwe: mediastweamtwack
+swug: w-web/api/mediastweamtwack
 ---
 
-{{APIRef("WebRTC")}}
+{{apiwef("webwtc")}}
 
-## Sumario
+## s-sumawio
 
-La interfaz **`MediaStream`** representa un flujo de contenido de los medios. Un flujo consiste en gran cantidad de _tracks_, como pistas de audio o video.
+w-wa intewfaz **`mediastweam`** wepwesenta u-un fwujo d-de contenido d-de wos medios. ( ͡o ω ͡o ) un f-fwujo consiste e-en gwan cantidad de _twacks_, o.O como pistas de audio o video. >w<
 
-## Propiedades
+## pwopiedades
 
-- {{domxref("MediaStreamTrack.enabled")}}
-  - : Es un valor Booleano con un valor de `true` si la pista está habilitada, que se permite para renderizar el fujo fuente del medio; o `false` si está desactivado, ue no está rederizando el flujo de la fuente de medios que el silencio y la oscuridad. Si la pista se ha desconectado, este valor puede ser cambiado, pero no tiene más efecto.
-- {{domxref("MediaStreamTrack.id")}} {{readonlyInline}}
-  - : Retorna un {{domxref("DOMString")}} que contiene un identificador único (GUID) para la pista; que es generado por le navegador.
-- {{domxref("MediaStreamTrack.kind")}} {{readonlyInline}}
-  - : Retorna un {{domxref("DOMString")}} se establece en `"audio"` si la pista es un audio y para `"video"`, si es una pista de video. Este no cambia si la pista se disociada de su fuente.
-- {{domxref("MediaStreamTrack.label")}} {{readonlyInline}}
-  - : Retorna un {{domxref("DOMString")}} que contiene una etiqueta agente-asignado por el usuario que identifica la fuente de la pista, como en `"internal microphone"`. La cadena puede dejarse vacío y está vacía, siempre y cuando ninguna fuente haya sido conectada. Cuando la pista está disociada de la fuente, la etiqueta no cambia.
-- {{domxref("MediaStreamTrack.muted")}} {{readonlyInline}}
-  - : Retorna un valor booleano con un valor de `true` si la pista esta silenciada, de lo contrario `false`.
-- {{domxref("MediaStreamTrack.readonly")}} {{readonlyInline}}
-  - : Retona un valor Booleano con un valor de `true` si la pista es de solo lectura ( una fuente de archivo de vídeo o una cámara que los ajustes no puedan ser modificados), de lo contrario `false`.
-- {{domxref("MediaStreamTrack.readyState")}} {{readonlyInline}}
+- {{domxwef("mediastweamtwack.enabwed")}}
+  - : e-es un vawow booweano con un vawow d-de `twue` si wa pista está habiwitada, 😳 q-que se pewmite pawa wendewizaw ew fujo fuente dew medio; o-o `fawse` si está desactivado, 🥺 u-ue nyo está wedewizando e-ew fwujo de wa fuente de medios que ew siwencio y wa oscuwidad. rawr x3 si wa p-pista se ha desconectado, o.O este vawow puede sew cambiado, rawr pewo nyo tiene más efecto. ʘwʘ
+- {{domxwef("mediastweamtwack.id")}} {{weadonwyinwine}}
+  - : w-wetowna un {{domxwef("domstwing")}} que contiene u-un identificadow único (guid) p-pawa wa pista; q-que es genewado p-pow we nyavegadow. 😳😳😳
+- {{domxwef("mediastweamtwack.kind")}} {{weadonwyinwine}}
+  - : wetowna un {{domxwef("domstwing")}} se estabwece e-en `"audio"` si wa pista es un audio y pawa `"video"`, ^^;; s-si es una pista de video. o.O este nyo cambia si wa pista se disociada de su fuente. (///ˬ///✿)
+- {{domxwef("mediastweamtwack.wabew")}} {{weadonwyinwine}}
+  - : wetowna u-un {{domxwef("domstwing")}} que contiene u-una etiqueta agente-asignado p-pow e-ew usuawio que identifica wa fuente de wa pista, σωσ como en `"intewnaw m-micwophone"`. nyaa~~ w-wa cadena puede dejawse vacío y-y está vacía, ^^;; s-siempwe y cuando ninguna fuente h-haya sido conectada. ^•ﻌ•^ cuando wa p-pista está disociada de wa fuente, σωσ wa etiqueta n-nyo cambia. -.-
+- {{domxwef("mediastweamtwack.muted")}} {{weadonwyinwine}}
+  - : wetowna u-un vawow booweano con un vawow d-de `twue` si w-wa pista esta siwenciada, ^^;; de wo contwawio `fawse`. XD
+- {{domxwef("mediastweamtwack.weadonwy")}} {{weadonwyinwine}}
+  - : wetona un vawow booweano con un vawow de `twue` si wa pista e-es de sowo w-wectuwa ( una fuente de awchivo d-de vídeo o una c-cámawa que wos a-ajustes nyo puedan sew modificados), 🥺 de wo contwawio `fawse`.
+- {{domxwef("mediastweamtwack.weadystate")}} {{weadonwyinwine}}
 
-  - : Retorna un valor enumerado dando el estado de la pista. Este toma uno de los siguientes valores:
+  - : wetowna un v-vawow enumewado dando ew estado de wa pista. òωó este toma uno de wos siguientes vawowes:
 
-    - `"live"` el cual indica que una entrada es conectada y hace de esta el mejor esfuerzo en proveer datos en tiempo real. En este caso, la salida de datos puede ser cambiada a on u off usando el atributo `MediaStreamTrack.enabled`.
-    - `"ended"` este indica que la entrada no esta obteniendo algun dato mas y negará proporcionar nuevos datos.
+    - `"wive"` e-ew cuaw indica que una entwada e-es conectada y-y hace de esta e-ew mejow esfuewzo en pwoveew datos e-en tiempo weaw. (ˆ ﻌ ˆ)♡ e-en este caso, -.- w-wa sawida de datos p-puede sew cambiada a on u off usando ew atwibuto `mediastweamtwack.enabwed`. :3
+    - `"ended"` e-este indica que w-wa entwada nyo e-esta obteniendo a-awgun dato mas y-y nyegawá pwopowcionaw nyuevos datos. ʘwʘ
 
-- {{domxref("MediaStreamTrack.remote")}} {{readonlyInline}}
-  - : retorna un booleano con un valor de verdadero si la pista es originada por {{domxref("RTCPeerConnection")}}, falso a cualquier otro.
+- {{domxwef("mediastweamtwack.wemote")}} {{weadonwyinwine}}
+  - : wetowna u-un booweano con un vawow de vewdadewo si wa pista es owiginada pow {{domxwef("wtcpeewconnection")}}, 🥺 fawso a cuawquiew o-otwo. >_<
 
-### Disparador de eventos
+### dispawadow de eventos
 
-- {{domxref("MediaStreamTrack.onstarted")}}
-  - : Es un contenedor [`event handler`](/es/docs/Web/Reference/Events/Event_handlers) de la acción a realizar cuando el evento [`started`](/es/docs/Web/Reference/Events/started) es disparado sobre el objeto, que es cuando un objeto {{domxref("MediaStreamTrack")}} es añadido.
-- {{domxref("MediaStreamTrack.onmute")}}
-  - : Es un contenedor [`event handler`](/es/docs/Web/Reference/Events/Event_handlers) de la acción ha realizar cuando un evento [`mute`](/es/docs/Web/Reference/Events/mute) es disparado sobre el objeto, que es cuando la transmición es terminada.
-- {{domxref("MediaStreamTrack.onunmute")}}
-  - : Es un contenedor [`event handler`](/es/docs/Web/Reference/Events/Event_handlers) de la acción ha realizar cuando un evento [`unmute`](/es/docs/Web/Reference/Events/unmute) es disparado sobre el objeto, que es cuando un objeto {{domxref("MediaStreamTrack")}} es removido por este.
-- {{domxref("MediaStreamTrack.onoverconstrained")}}
-  - : Es un contenedor [`event handler`](/es/docs/Web/Reference/Events/Event_handlers) de la acción ha realizar cuando un objeto [`overconstrained`](/es/docs/Web/Reference/Events/overconstrained) es disparado sobre el objeto, que es cuando un objeto {{domxref("MediaStreamTrack")}} es removido por este.
-- {{domxref("MediaStreamTrack.oneended")}}
-  - : Es un contenedor [`event handler`](/es/docs/Web/Reference/Events/Event_handlers) de la acción ha realizar cuando un evento [`ended`](</es/docs/Web/Reference/Events/ended_(MediaStream)>) es disparado sobre el objeto, que es cuando un objeto {{domxref("MediaStreamTrack")}} es removido por este.
+- {{domxwef("mediastweamtwack.onstawted")}}
+  - : es u-un contenedow [`event h-handwew`](/es/docs/web/wefewence/events/event_handwews) d-de wa acción a weawizaw c-cuando ew evento [`stawted`](/es/docs/web/wefewence/events/stawted) e-es dispawado s-sobwe ew objeto, ʘwʘ que es cuando un objeto {{domxwef("mediastweamtwack")}} es añadido. (˘ω˘)
+- {{domxwef("mediastweamtwack.onmute")}}
+  - : es un contenedow [`event h-handwew`](/es/docs/web/wefewence/events/event_handwews) de w-wa acción ha weawizaw cuando un e-evento [`mute`](/es/docs/web/wefewence/events/mute) e-es dispawado sobwe ew objeto, (✿oωo) que es cuando w-wa twansmición e-es tewminada. (///ˬ///✿)
+- {{domxwef("mediastweamtwack.onunmute")}}
+  - : es un contenedow [`event h-handwew`](/es/docs/web/wefewence/events/event_handwews) d-de wa acción ha weawizaw cuando un evento [`unmute`](/es/docs/web/wefewence/events/unmute) es dispawado sobwe e-ew objeto, rawr x3 que e-es cuando un objeto {{domxwef("mediastweamtwack")}} e-es wemovido pow este. -.-
+- {{domxwef("mediastweamtwack.onovewconstwained")}}
+  - : e-es un contenedow [`event h-handwew`](/es/docs/web/wefewence/events/event_handwews) de wa acción h-ha weawizaw cuando un objeto [`ovewconstwained`](/es/docs/web/wefewence/events/ovewconstwained) es dispawado sobwe ew objeto, ^^ que es cuando un o-objeto {{domxwef("mediastweamtwack")}} e-es wemovido pow este. (⑅˘꒳˘)
+- {{domxwef("mediastweamtwack.oneended")}}
+  - : es un contenedow [`event h-handwew`](/es/docs/web/wefewence/events/event_handwews) d-de wa acción ha weawizaw cuando un evento [`ended`](</es/docs/web/wefewence/events/ended_(mediastweam)>) es dispawado s-sobwe ew objeto, nyaa~~ que es cuando un objeto {{domxwef("mediastweamtwack")}} es wemovido pow este. /(^•ω•^)
 
-## Métodos
+## métodos
 
-- {{domxref("MediaStreamTrack.getConstraints()")}}
-  - : Empty
-- {{domxref("MediaStreamTrack.applyConstraints()")}}
-  - : Empty
-- {{domxref("MediaStreamTrack.getSettings()")}}
-  - : Empty
-- {{domxref("MediaStreamTrack.getCapabilities()")}}
-  - : Empty
-- {{domxref("MediaStreamTrack.clone()")}}
-  - : Empty
-- {{domxref("MediaStreamTrack.stop()")}}
-  - : Detiene la reproducción del origen asociado a la pista, pero el origen y la pista son desasociados. El estado de la pista es un conjunto de `ended`.
+- {{domxwef("mediastweamtwack.getconstwaints()")}}
+  - : e-empty
+- {{domxwef("mediastweamtwack.appwyconstwaints()")}}
+  - : empty
+- {{domxwef("mediastweamtwack.getsettings()")}}
+  - : empty
+- {{domxwef("mediastweamtwack.getcapabiwities()")}}
+  - : empty
+- {{domxwef("mediastweamtwack.cwone()")}}
+  - : e-empty
+- {{domxwef("mediastweamtwack.stop()")}}
+  - : d-detiene wa wepwoducción dew owigen asociado a wa pista, (U ﹏ U) pewo e-ew owigen y w-wa pista son desasociados. 😳😳😳 ew estado de wa pista es un conjunto d-de `ended`. >w<
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver támbien
+## vew támbien
 
-- [Using the MediaStream API](/es/docs/Web/API/Media_Capture_and_Streams_API)
+- [using the mediastweam a-api](/es/docs/web/api/media_captuwe_and_stweams_api)

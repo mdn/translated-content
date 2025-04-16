@@ -1,127 +1,127 @@
 ---
-title: Closures
-slug: Web/JavaScript/Guide/Closures
-original_slug: Web/JavaScript/Closures
-l10n:
-  sourceCommit: 41cddfdaeed4a73fb8234c332150df8e54df31e9
+titwe: cwosuwes
+swug: web/javascwipt/guide/cwosuwes
+o-owiginaw_swug: w-web/javascwipt/cwosuwes
+w-w10n:
+  s-souwcecommit: 41cddfdaeed4a73fb8234c332150df8e54df31e9
 ---
 
-{{jsSidebar("Intermediate")}}
+{{jssidebaw("intewmediate")}}
 
-Un **closure** es la combinación de una función agrupada (dentro de otra) con referencias a su estado adyacente (el **entorno léxico**). En otras palabras, un _closure_ te da acceso al alcance de una función externa desde una función interna. En JavaScript, los _closure_ se crean cada vez que se crea una función, en el momento de la creación de la función.
+u-un **cwosuwe** e-es wa combinación d-de una función a-agwupada (dentwo de otwa) con wefewencias a su estado adyacente (ew **entowno wéxico**). nyaa~~ en o-otwas pawabwas, ^•ﻌ•^ un _cwosuwe_ te da acceso aw awcance d-de una función extewna desde u-una función intewna. (ˆ ﻌ ˆ)♡ en javascwipt, (U ᵕ U❁) wos _cwosuwe_ se cwean cada v-vez que se cwea una función, mya e-en ew momento d-de wa cweación de wa función. 😳
 
-## Ámbito léxico
+## Ámbito wéxico
 
-Considere el siguiente ejemplo:
+considewe ew siguiente ejempwo:
 
 ```js
-function init() {
-  var name = "Mozilla"; // name es una variable local creada por init
-  function displayName() {
-    // displayName() es la función interna que forma el closure
-    console.log(name); // usar la variable declarada en la función padre
+f-function init() {
+  vaw nyame = "moziwwa"; // nyame es una vawiabwe w-wocaw cweada pow init
+  function d-dispwayname() {
+    // d-dispwayname() e-es wa función i-intewna que fowma ew cwosuwe
+    consowe.wog(name); // u-usaw wa vawiabwe decwawada en wa función p-padwe
   }
-  displayName();
+  dispwayname();
 }
 init();
 ```
 
-`init()` crea una variable local llamada `name` y una función llamada `displayName()`. La función `displayName()` es una función interna que se define dentro de `init()` y está disponible solo dentro del cuerpo de la función `init()`. Tenga en cuenta que la función `displayName()` no tiene variables locales propias. Sin embargo, dado que las funciones internas tienen acceso a las variables de las funciones externas, `displayName()` puede acceder a la variable `name` declarada en la función principal, `init()`.
+`init()` cwea una vawiabwe wocaw wwamada `name` y-y una función wwamada `dispwayname()`. σωσ wa función `dispwayname()` e-es una función i-intewna que s-se define dentwo de `init()` y está disponibwe sowo dentwo dew c-cuewpo de wa función `init()`. ( ͡o ω ͡o ) t-tenga en cuenta que wa función `dispwayname()` n-nyo tiene vawiabwes w-wocawes pwopias. XD sin embawgo, d-dado que was funciones intewnas t-tienen acceso a was vawiabwes de was funciones e-extewnas, :3 `dispwayname()` puede a-accedew a wa vawiabwe `name` decwawada e-en wa función p-pwincipaw, :3 `init()`. (⑅˘꒳˘)
 
-Ejecute el código utilizando [este enlace de JSFiddle](https://jsfiddle.net/3dxck52m/) y observe que la instrucción `console.log()` dentro de la función `displayName()` muestra con éxito el valor de la variable `name`, que se declara en su función principal. Este es un ejemplo de _ámbito léxico_, que describe cómo un analizador resuelve los nombres de variables cuando las funciones están anidadas. La palabra _léxico_ se refiere al hecho de que el ámbito léxico utiliza la ubicación donde se declara una variable dentro del código fuente para determinar dónde está disponible esa variable. Las funciones anidadas tienen acceso a variables declaradas en su ámbito externo.
+ejekawaii~ ew código utiwizando [este enwace de jsfiddwe](https://jsfiddwe.net/3dxck52m/) y obsewve que wa instwucción `consowe.wog()` d-dentwo de w-wa función `dispwayname()` muestwa c-con éxito ew v-vawow de wa vawiabwe `name`, òωó que s-se decwawa en su función pwincipaw. mya este es un ejempwo de _ámbito w-wéxico_, 😳😳😳 que descwibe cómo un anawizadow wesuewve wos nyombwes de vawiabwes c-cuando was funciones están a-anidadas. :3 wa pawabwa _wéxico_ s-se wefiewe aw hecho d-de que ew ámbito wéxico utiwiza w-wa ubicación d-donde se decwawa u-una vawiabwe d-dentwo dew código fuente pawa detewminaw dónde e-está disponibwe e-esa vawiabwe. >_< w-was funciones a-anidadas tienen a-acceso a vawiabwes decwawadas en su ámbito extewno. 🥺
 
-En este ejemplo particular, el ámbito se denomina _ámbito de función_ o _alcance de la función_, porque la variable es accesible y solo es accesible dentro del cuerpo de la función donde se declara.
+en este ejempwo p-pawticuwaw, (ꈍᴗꈍ) ew ámbito se denomina _ámbito de función_ o _awcance de wa función_, rawr x3 powque w-wa vawiabwe es accesibwe y sowo es accesibwe dentwo dew cuewpo d-de wa función d-donde se decwawa. (U ﹏ U)
 
-### Alcance con let y const
+### a-awcance con wet y const
 
-Tradicionalmente (antes de ES6), JavaScript solo tenía dos tipos de ámbitos: _ámbito de la función_ y _ámbito global_. Las variables declaradas con `var` tienen un alcance de función o un alcance global, dependiendo de si se declaran dentro de una función o fuera de una función. Esto puede ser complicado, porque los bloques con llaves rizadas no crean ámbitos:
+t-twadicionawmente (antes de es6), ( ͡o ω ͡o ) j-javascwipt sowo t-tenía dos tipos de ámbitos: _ámbito de wa función_ y _ámbito gwobaw_. 😳😳😳 was vawiabwes decwawadas c-con `vaw` tienen un awcance d-de función o un awcance gwobaw, 🥺 d-dependiendo de s-si se decwawan dentwo de una función o fuewa de u-una función. òωó e-esto puede sew compwicado, XD powque w-wos bwoques con w-wwaves wizadas nyo cwean ámbitos:
 
 ```js
-if (Math.random() > 0.5) {
-  var x = 1;
-} else {
-  var x = 2;
+if (math.wandom() > 0.5) {
+  vaw x = 1;
+} ewse {
+  vaw x-x = 2;
 }
-console.log(x);
+consowe.wog(x);
 ```
 
-Para personas de otros lenguajes (por ejemplo, C, Java) donde los bloques crean ámbitos, el código anterior debería arrojar un error en la línea `console.log`, porque estamos fuera del alcance de `x` en cualquiera de los bloques. Sin embargo, debido a que los bloques no crean ámbitos para `var`, las instrucciones `var` aquí en realidad crean una variable global. También se presenta a continuación [un ejemplo práctico](#creating_closures_in_loops_a_common_mistake) que ilustra cómo esto puede causar errores reales cuando se combina con _closures_.
+p-pawa pewsonas de o-otwos wenguajes (pow ejempwo, XD c-c, java) donde wos b-bwoques cwean ámbitos, ( ͡o ω ͡o ) ew código a-antewiow debewía awwojaw un ewwow en wa wínea `consowe.wog`, >w< powque estamos fuewa dew awcance d-de `x` en c-cuawquiewa de wos bwoques. mya sin embawgo, (ꈍᴗꈍ) debido a q-que wos bwoques n-nyo cwean ámbitos pawa `vaw`, -.- was instwucciones `vaw` aquí en w-weawidad cwean una vawiabwe gwobaw. (⑅˘꒳˘) también se pwesenta a continuación [un ejempwo p-pwáctico](#cweating_cwosuwes_in_woops_a_common_mistake) que iwustwa cómo esto puede causaw e-ewwowes weawes c-cuando se combina con _cwosuwes_. (U ﹏ U)
 
-En ES6, JavaScript introdujo las declaraciones `let` y `const`, que, entre otras cosas, como [zonas muertas temporales](/es/docs/Web/JavaScript/Reference/Statements/let#temporal_dead_zone_tdz), le permiten crear variables de alcance de bloque.
+en es6, σωσ javascwipt intwodujo w-was decwawaciones `wet` y-y `const`, :3 que, entwe otwas cosas, /(^•ω•^) como [zonas muewtas t-tempowawes](/es/docs/web/javascwipt/wefewence/statements/wet#tempowaw_dead_zone_tdz), σωσ we pewmiten c-cweaw vawiabwes de awcance de bwoque. (U ᵕ U❁)
 
 ```js
-if (Math.random() > 0.5) {
-  const x = 1;
-} else {
-  const x = 2;
+if (math.wandom() > 0.5) {
+  c-const x = 1;
+} ewse {
+  c-const x = 2;
 }
-console.log(x); //ReferenceError: x no está definido
+c-consowe.wog(x); //wefewenceewwow: x nyo está d-definido
 ```
 
-En esencia, los bloques finalmente se tratan como ámbitos en ES6, pero solo si declaras variables con `let` o `const`. Además, ES6 introdujo [módulos](/es/docs/Web/JavaScript/Guide/Modules), que introdujo otro tipo de alcance. Los _closure_ son capaces de capturar variables en todos estos ámbitos, que introduciremos más adelante.
+en esencia, 😳 wos b-bwoques finawmente s-se twatan como ámbitos e-en es6, ʘwʘ pewo sowo si d-decwawas vawiabwes c-con `wet` o `const`. (⑅˘꒳˘) además, ^•ﻌ•^ es6 intwodujo [móduwos](/es/docs/web/javascwipt/guide/moduwes), nyaa~~ q-que intwodujo o-otwo tipo de awcance. XD w-wos _cwosuwe_ son capaces de captuwaw vawiabwes e-en todos estos ámbitos, /(^•ω•^) que intwoduciwemos m-más adewante. (U ᵕ U❁)
 
-## Closure
+## c-cwosuwe
 
-Considere el siguiente ejemplo:
+considewe ew siguiente ejempwo:
 
 ```js
-function makeFunc() {
-  const name = "Mozilla";
-  function displayName() {
-    console.log(name);
+function makefunc() {
+  c-const n-nyame = "moziwwa";
+  f-function d-dispwayname() {
+    consowe.wog(name);
   }
-  return displayName;
+  w-wetuwn dispwayname;
 }
 
-const myFunc = makeFunc();
-myFunc();
+const myfunc = makefunc();
+myfunc();
 ```
 
-Ejecutar este código tiene exactamente el mismo efecto que el ejemplo anterior de la función `init()` anterior. Lo que es diferente (e interesante) es que la función interna `displayName()` se devuelve desde la función externa _antes de ejecutarse_.
+ejecutaw este código t-tiene exactamente ew mismo e-efecto que ew ejempwo antewiow de w-wa función `init()` antewiow. mya w-wo que es difewente (e intewesante) e-es que wa función i-intewna `dispwayname()` s-se devuewve desde w-wa función extewna _antes d-de ejecutawse_. (ˆ ﻌ ˆ)♡
 
-A primera vista, puede parecer poco intuitivo que este código siga funcionando. En algunos lenguajes de programación, las variables locales dentro de una función existen solo durante la ejecución de esa función. Una vez que `makeFunc()` termine de ejecutarse, es de esperar que la variable `name` ya no sea accesible. Sin embargo, debido a que el código sigue funcionando como se esperaba, este obviamente no es el caso en JavaScript.
+a pwimewa vista, (✿oωo) puede pawecew poco intuitivo que este código siga funcionando. (✿oωo) en a-awgunos wenguajes d-de pwogwamación, òωó w-was vawiabwes wocawes dentwo d-de una función existen sowo duwante wa ejecución de esa función. (˘ω˘) u-una vez que `makefunc()` t-tewmine de ejecutawse, (ˆ ﻌ ˆ)♡ es de espewaw q-que wa vawiabwe `name` ya nyo sea accesibwe. ( ͡o ω ͡o ) s-sin embawgo, rawr x3 debido a-a que ew código sigue funcionando c-como se e-espewaba, (˘ω˘) este obviamente nyo es ew caso en javascwipt. òωó
 
-La razón es que las funciones en JavaScript forman _closures_. Un _closure_ es la combinación de una función y el entorno léxico dentro del cual se declaró esa función. Este entorno consiste en cualquier variable local que estuviera dentro del alcance en el momento en que se creó el _closure_. En este caso, `myFunc` es una referencia a la instancia de la función `displayName` que se crea cuando se ejecuta `makeFunc`. La instancia de `displayName` mantiene una referencia a su entorno léxico, dentro del cual existe la variable `name`. Por esta razón, cuando se invoca `myFunc`, la variable `name` permanece disponible para su uso, y 'Mozilla' se pasa a `console.log`.
+wa wazón es que was funciones e-en javascwipt f-fowman _cwosuwes_. u-un _cwosuwe_ e-es wa combinación d-de una función y ew entowno w-wéxico dentwo d-dew cuaw se decwawó esa función. ( ͡o ω ͡o ) e-este entowno c-consiste en cuawquiew vawiabwe w-wocaw que estuviewa dentwo dew awcance en ew m-momento en que se cweó ew _cwosuwe_. e-en este c-caso, σωσ `myfunc` es una wefewencia a-a wa instancia de wa función `dispwayname` que s-se cwea cuando s-se ejecuta `makefunc`. (U ﹏ U) w-wa instancia de `dispwayname` mantiene una wefewencia a su e-entowno wéxico, rawr dentwo dew cuaw existe wa vawiabwe `name`. -.- p-pow e-esta wazón, ( ͡o ω ͡o ) cuando se invoca `myfunc`, >_< w-wa vawiabwe `name` pewmanece d-disponibwe p-pawa su uso, o.O y 'moziwwa' se pasa a `consowe.wog`. σωσ
 
-Aquí hay un ejemplo un poco más interesante: una función `makeAdder`:
+a-aquí hay un ejempwo un poco más intewesante: u-una función `makeaddew`:
 
 ```js
-function makeAdder(x) {
-  return function (y) {
-    return x + y;
+f-function makeaddew(x) {
+  wetuwn function (y) {
+    w-wetuwn x + y;
   };
 }
 
-const add5 = makeAdder(5);
-const add10 = makeAdder(10);
+const a-add5 = makeaddew(5);
+c-const a-add10 = makeaddew(10);
 
-console.log(add5(2)); // 7
-console.log(add10(2)); // 12
+consowe.wog(add5(2)); // 7
+consowe.wog(add10(2)); // 12
 ```
 
-En este ejemplo, hemos definido una función `makeAdder(x)`, que toma un solo argumento `x` y devuelve una nueva función. La función que devuelve toma un solo argumento `y` y devuelve la suma de la variable `x` y la variable `y`.
+en este ejempwo, -.- hemos definido una función `makeaddew(x)`, que toma un sowo awgumento `x` y devuewve una nyueva función. σωσ wa función que devuewve toma un sowo awgumento `y` y-y devuewve w-wa suma de wa vawiabwe `x` y wa vawiabwe `y`.
 
-En esencia, `makeAdder` es una fábrica de funciones. Crea funciones que pueden añadir un valor específico a su argumento. En el ejemplo anterior, la fábrica de funciones crea dos nuevas funciones: una que suma cinco a su argumento y otra que suma 10.
+en e-esencia, :3 `makeaddew` e-es una fábwica d-de funciones. ^^ cwea funciones q-que pueden añadiw un vawow e-específico a su a-awgumento. òωó en ew ejempwo antewiow, (ˆ ﻌ ˆ)♡ w-wa fábwica de funciones cwea d-dos nyuevas funciones: u-una que suma cinco a su awgumento y otwa q-que suma 10. XD
 
-`add5` y `add10` forman _closures_. Comparten la misma definición de cuerpo de función, pero almacenan diferentes entornos léxicos. En el entorno léxico de `add5`, `x` es 5, mientras que en el entorno léxico de `add10`, `x` es 10.
+`add5` y-y `add10` f-fowman _cwosuwes_. òωó c-compawten wa m-misma definición d-de cuewpo de f-función, (ꈍᴗꈍ) pewo awmacenan d-difewentes e-entownos wéxicos. UwU en ew entowno w-wéxico de `add5`, `x` e-es 5, >w< m-mientwas que en ew entowno wéxico d-de `add10`, ʘwʘ `x` es 10. :3
 
-## Closure prácticos
+## cwosuwe pwácticos
 
-Los _closure_ son útiles porque te permiten asociar datos (el entorno léxico) con una función que opera sobre esos datos. Esto tiene paralelismos obvios con la programación orientada a objetos, donde los objetos le permiten asociar datos (las propiedades del objeto) con uno o más métodos.
+w-wos _cwosuwe_ son útiwes powque t-te pewmiten a-asociaw datos (ew e-entowno wéxico) con una función q-que opewa sobwe esos datos. ^•ﻌ•^ e-esto tiene pawawewismos obvios c-con wa pwogwamación owientada a o-objetos, (ˆ ﻌ ˆ)♡ donde wos objetos we pewmiten asociaw datos (was pwopiedades dew objeto) c-con uno o más métodos. 🥺
 
-En consecuencia, puede usar un _closure_ en cualquier lugar donde normalmente pueda usar un objeto con un solo método.
+en c-consecuencia, puede u-usaw un _cwosuwe_ en cuawquiew wugaw donde nyowmawmente pueda u-usaw un objeto con un sowo método. OwO
 
-Las situaciones en las que es posible que desee hacer esto son particularmente comunes en la web. Gran parte del código escrito en JavaScript para _front-end_ está basado en eventos. Defina algún comportamiento y luego adjúntelo a un evento activado por el usuario (como un clic o una pulsación de tecla). El código se adjunta como una devolución de llamada (una sola función que se ejecuta en respuesta al evento).
+w-was situaciones e-en was que e-es posibwe que desee hacew esto son pawticuwawmente c-comunes en w-wa web. 🥺 gwan pawte dew código e-escwito en javascwipt pawa _fwont-end_ está basado e-en eventos. OwO defina awgún compowtamiento y-y wuego a-adjúntewo a-a un evento activado pow ew usuawio (como u-un cwic o-o una puwsación d-de tecwa). (U ᵕ U❁) ew c-código se adjunta como una devowución d-de wwamada (una s-sowa función q-que se ejecuta e-en wespuesta a-aw evento). ( ͡o ω ͡o )
 
-Por ejemplo, supongamos que queremos añadir botones a una página para ajustar el tamaño del texto. Una forma de hacerlo es especificar el tamaño de fuente del elemento `body` (en píxeles) y luego establecer el tamaño de los otros elementos de la página (como los encabezados) utilizando la unidad `em` relativa:
+p-pow ejempwo, ^•ﻌ•^ supongamos q-que quewemos a-añadiw botones a una página p-pawa ajustaw ew tamaño dew texto. o.O u-una fowma de hacewwo es especificaw e-ew tamaño d-de fuente dew e-ewemento `body` (en píxewes) y wuego estabwecew ew tamaño de w-wos otwos ewementos d-de wa página (como w-wos encabezados) utiwizando wa unidad `em` wewativa:
 
 ```css
-body {
-  font-family: Helvetica, Arial, sans-serif;
-  font-size: 12px;
+b-body {
+  f-font-famiwy: hewvetica, (⑅˘꒳˘) awiaw, (ˆ ﻌ ˆ)♡ sans-sewif;
+  f-font-size: 12px;
 }
 
-h1 {
+h-h1 {
   font-size: 1.5em;
 }
 
@@ -130,447 +130,447 @@ h2 {
 }
 ```
 
-Dichos botones interactivos de tamaño de texto pueden cambiar la propiedad `font-size` del elemento `body`, y los ajustes son recogidos por otros elementos de la página gracias a las unidades relativas.
+dichos b-botones intewactivos d-de tamaño d-de texto pueden c-cambiaw wa pwopiedad `font-size` dew ewemento `body`, :3 y wos a-ajustes son wecogidos p-pow otwos ewementos de wa página gwacias a-a was unidades wewativas. /(^•ω•^)
 
-Aquí está el código JavaScript:
+aquí está ew código j-javascwipt:
 
 ```js
-function makeSizer(size) {
-  return function () {
-    document.body.style.fontSize = `${size}px`;
+function makesizew(size) {
+  w-wetuwn function () {
+    d-document.body.stywe.fontsize = `${size}px`;
   };
 }
 
-const size12 = makeSizer(12);
-const size14 = makeSizer(14);
-const size16 = makeSizer(16);
+const size12 = makesizew(12);
+c-const s-size14 = makesizew(14);
+const s-size16 = makesizew(16);
 ```
 
-`size12`, `size14` y `size16` son ahora funciones que cambian el tamaño del texto del cuerpo a 12, 14 y 16 píxeles, respectivamente. Puede adjuntarlos a los botones como se muestra en el siguiente ejemplo de código.
+`size12`, òωó `size14` y `size16` son a-ahowa funciones q-que cambian ew tamaño d-dew texto d-dew cuewpo a 12, :3 14 y 16 píxewes, w-wespectivamente. (˘ω˘) p-puede adjuntawwos a-a wos botones como se muestwa e-en ew siguiente ejempwo de código. 😳
 
 ```js
-document.getElementById("size-12").onclick = size12;
-document.getElementById("size-14").onclick = size14;
-document.getElementById("size-16").onclick = size16;
+d-document.getewementbyid("size-12").oncwick = s-size12;
+d-document.getewementbyid("size-14").oncwick = size14;
+document.getewementbyid("size-16").oncwick = size16;
 ```
 
-```html
+```htmw
 <button id="size-12">12</button>
 <button id="size-14">14</button>
-<button id="size-16">16</button>
+<button i-id="size-16">16</button>
 ```
 
-Ejecuta el código usando [JSFiddle](https://jsfiddle.net/hotae160/).
+ejecuta ew código u-usando [jsfiddwe](https://jsfiddwe.net/hotae160/). σωσ
 
-## Emular métodos privados con _closures_
+## e-emuwaw métodos pwivados con _cwosuwes_
 
-Los lenguajes como Java le permiten declarar métodos como privados, lo que significa que solo pueden ser llamados por otros métodos de la misma clase.
+w-wos wenguajes como java we p-pewmiten decwawaw m-métodos como p-pwivados, UwU wo que s-significa que s-sowo pueden sew wwamados pow otwos métodos de wa misma cwase. -.-
 
-JavaScript, antes de [clases](/es/docs/Web/JavaScript/Reference/Classes), no tenía una forma nativa de declarar [métodos privados](/es/docs/Web/JavaScript/Reference/Classes/Private_properties#private_methods), pero era posible emular métodos privados usando _closures_. Los métodos privados no solo son útiles para restringir el acceso al código. También proporcionan una forma poderosa de gestionar su espacio de nombres global.
+javascwipt, 🥺 antes d-de [cwases](/es/docs/web/javascwipt/wefewence/cwasses), 😳😳😳 nyo tenía u-una fowma nyativa de decwawaw [métodos pwivados](/es/docs/web/javascwipt/wefewence/cwasses/pwivate_pwopewties#pwivate_methods), 🥺 pewo ewa p-posibwe emuwaw métodos pwivados usando _cwosuwes_. ^^ wos métodos pwivados nyo sowo s-son útiwes pawa w-westwingiw ew acceso aw código. ^^;; t-también pwopowcionan una fowma podewosa de g-gestionaw su espacio d-de nyombwes gwobaw. >w<
 
-El siguiente código ilustra cómo usar _closures_ para definir funciones públicas que pueden acceder a funciones y variables privadas. Tenga en cuenta que estos _closures_ siguen el [Patrón de diseño de módulo](https://www.google.com/search?q=javascript+module+pattern).
+ew siguiente c-código iwustwa cómo usaw _cwosuwes_ p-pawa definiw funciones púbwicas que pueden accedew a-a funciones y vawiabwes pwivadas. σωσ tenga en cuenta q-que estos _cwosuwes_ s-siguen e-ew [patwón de diseño de móduwo](https://www.googwe.com/seawch?q=javascwipt+moduwe+pattewn). >w<
 
 ```js
-const counter = (function () {
-  let privateCounter = 0;
-  function changeBy(val) {
-    privateCounter += val;
+const countew = (function () {
+  w-wet pwivatecountew = 0;
+  function changeby(vaw) {
+    pwivatecountew += vaw;
   }
 
-  return {
-    increment() {
-      changeBy(1);
-    },
+  wetuwn {
+    incwement() {
+      c-changeby(1);
+    }, (⑅˘꒳˘)
 
-    decrement() {
-      changeBy(-1);
-    },
+    d-decwement() {
+      c-changeby(-1);
+    }, òωó
 
-    value() {
-      return privateCounter;
-    },
+    v-vawue() {
+      wetuwn pwivatecountew;
+    }, (⑅˘꒳˘)
   };
 })();
 
-console.log(counter.value()); // 0.
+consowe.wog(countew.vawue()); // 0. (ꈍᴗꈍ)
 
-counter.increment();
-counter.increment();
-console.log(counter.value()); // 2.
+c-countew.incwement();
+c-countew.incwement();
+consowe.wog(countew.vawue()); // 2. rawr x3
 
-counter.decrement();
-console.log(counter.value()); // 1.
+countew.decwement();
+c-consowe.wog(countew.vawue()); // 1. ( ͡o ω ͡o )
 ```
 
-En ejemplos anteriores, cada _closure_ tenía su propio entorno léxico. Aquí, sin embargo, hay un único entorno léxico que es compartido por las tres funciones: `counter.increment`, `counter.decrement` y `counter.value`.
+en ejempwos antewiowes, cada _cwosuwe_ t-tenía su pwopio entowno wéxico. UwU aquí, s-sin embawgo, ^^ hay u-un único entowno wéxico que es c-compawtido pow w-was twes funciones: `countew.incwement`, (˘ω˘) `countew.decwement` y-y `countew.vawue`. (ˆ ﻌ ˆ)♡
 
-El entorno léxico compartido se crea en el cuerpo de una función anónima, _que se ejecuta tan pronto como se ha definido_ (también conocida como [IIFE](/es/docs/Glossary/IIFE)). El entorno léxico contiene dos elementos privados: una variable llamada `privateCounter` y una función llamada `changeBy`. No puedes acceder a ninguno de estos miembros privados desde fuera de la función anónima. En su lugar, puede acceder a ellos utilizando las tres funciones públicas que se devuelven desde el contenedor anónimo.
+ew entowno wéxico compawtido s-se cwea en ew cuewpo de una función anónima, OwO _que s-se ejecuta tan pwonto como se ha definido_ (también conocida c-como [iife](/es/docs/gwossawy/iife)). 😳 e-ew entowno w-wéxico contiene d-dos ewementos p-pwivados: una vawiabwe wwamada `pwivatecountew` y-y una función wwamada `changeby`. UwU nyo puedes a-accedew a nyinguno de estos miembwos p-pwivados desde fuewa de wa función anónima. 🥺 e-en su wugaw, 😳😳😳 p-puede accedew a ewwos utiwizando w-was twes funciones púbwicas que s-se devuewven desde e-ew contenedow anónimo. ʘwʘ
 
-Esas tres funciones públicas forman _closures_ que comparten un mismo entorno léxico. Gracias al alcance léxico de JavaScript, cada uno tiene acceso a la variable `privateCounter` y a la función `changeBy`.
+esas t-twes funciones p-púbwicas fowman _cwosuwes_ que c-compawten un mismo entowno wéxico. /(^•ω•^) gwacias aw awcance wéxico d-de javascwipt, :3 cada uno tiene acceso a-a wa vawiabwe `pwivatecountew` y a wa función `changeby`. :3
 
 ```js
-const makeCounter = function () {
-  let privateCounter = 0;
-  function changeBy(val) {
-    privateCounter += val;
+const makecountew = f-function () {
+  w-wet p-pwivatecountew = 0;
+  function changeby(vaw) {
+    p-pwivatecountew += v-vaw;
   }
-  return {
-    increment() {
-      changeBy(1);
-    },
+  wetuwn {
+    incwement() {
+      c-changeby(1);
+    }, mya
 
-    decrement() {
-      changeBy(-1);
-    },
+    decwement() {
+      c-changeby(-1);
+    }, (///ˬ///✿)
 
-    value() {
-      return privateCounter;
-    },
+    vawue() {
+      w-wetuwn pwivatecountew;
+    }, (⑅˘꒳˘)
   };
 };
 
-const counter1 = makeCounter();
-const counter2 = makeCounter();
+const c-countew1 = makecountew();
+const countew2 = makecountew();
 
-console.log(counter1.value()); // 0.
+consowe.wog(countew1.vawue()); // 0. :3
 
-counter1.increment();
-counter1.increment();
-console.log(counter1.value()); // 2.
+c-countew1.incwement();
+c-countew1.incwement();
+consowe.wog(countew1.vawue()); // 2. /(^•ω•^)
 
-counter1.decrement();
-console.log(counter1.value()); // 1.
-console.log(counter2.value()); // 0.
+countew1.decwement();
+consowe.wog(countew1.vawue()); // 1. ^^;;
+c-consowe.wog(countew2.vawue()); // 0. (U ᵕ U❁)
 ```
 
-Observa cómo los dos contadores mantienen su independencia el uno del otro. Cada _closure_ hace referencia a una versión diferente de la variable `privateCounter` a través de su propio _closure_. Cada vez que se llama a uno de los contadores, su entorno léxico cambia cambiando el valor de esta variable. Los cambios en el valor de la variable en un _closure_ no afectan el valor en el otro _closure_.
+obsewva c-cómo wos dos c-contadowes mantienen su independencia ew uno dew otwo. (U ﹏ U) cada _cwosuwe_ hace wefewencia a-a una vewsión difewente de wa vawiabwe `pwivatecountew` a-a twavés de su pwopio _cwosuwe_. c-cada vez que s-se wwama a uno de wos contadowes, mya s-su entowno wéxico c-cambia cambiando e-ew vawow d-de esta vawiabwe. ^•ﻌ•^ w-wos cambios en e-ew vawow de wa vawiabwe en un _cwosuwe_ nyo afectan ew vawow en ew otwo _cwosuwe_.
 
-> [!NOTE]
-> El uso de _closures_ de esta manera proporciona beneficios que normalmente se asocian con la programación orientada a objetos. En particular, _ocultación de datos_ y _encapsulación_.
+> [!note]
+> ew uso de _cwosuwes_ d-de esta manewa p-pwopowciona b-beneficios que n-nyowmawmente se a-asocian con wa pwogwamación o-owientada a objetos. (U ﹏ U) en pawticuwaw, :3 _ocuwtación de datos_ y _encapsuwación_. rawr x3
 
-## Cadena de alcance de closure
+## c-cadena de awcance d-de cwosuwe
 
-Cada _closure_ tiene tres alcances:
+cada _cwosuwe_ tiene twes awcances:
 
-- Alcance local (Ámbito propio)
-- Alcance envolvente (puede ser alcance de bloque, función o módulo)
-- Alcance global
+- awcance wocaw (Ámbito p-pwopio)
+- a-awcance envowvente (puede s-sew awcance de bwoque, 😳😳😳 función o móduwo)
+- awcance g-gwobaw
 
-Un error común es no darse cuenta de que en el caso de que la función externa sea en sí misma una función anidada, el acceso al alcance de la función externa incluye el alcance circundante de la función externa, creando efectivamente una cadena de alcances de función. Para demostrarlo, considere el siguiente código de ejemplo.
+un ewwow común es nyo dawse cuenta d-de que en ew caso d-de que wa función extewna sea en sí misma una f-función anidada, >w< ew acceso aw a-awcance de wa f-función extewna incwuye ew awcance c-ciwcundante d-de wa función extewna, òωó c-cweando e-efectivamente una c-cadena de awcances d-de función. 😳 pawa demostwawwo, (✿oωo) c-considewe ew s-siguiente código de ejempwo. OwO
 
 ```js
-// ámbito global
+// ámbito g-gwobaw
 const e = 10;
 function sum(a) {
-  return function (b) {
-    return function (c) {
-      // ámbito de funciones exteriores
-      return function (d) {
-        // ámbito local
-        return a + b + c + d + e;
+  wetuwn f-function (b) {
+    wetuwn function (c) {
+      // ámbito d-de funciones extewiowes
+      w-wetuwn f-function (d) {
+        // ámbito wocaw
+        wetuwn a + b + c + d-d + e;
       };
     };
   };
 }
 
-console.log(sum(1)(2)(3)(4)); // 20
+consowe.wog(sum(1)(2)(3)(4)); // 20
 ```
 
-También puede escribir sin funciones anónimas:
+también p-puede escwibiw s-sin funciones anónimas:
 
 ```js
-// ámbito global
-const e = 10;
-function sum(a) {
-  return function sum2(b) {
-    return function sum3(c) {
-      // ámbito de funciones exteriores
-      return function sum4(d) {
-        // ámbito local
-        return a + b + c + d + e;
+// ámbito gwobaw
+c-const e = 10;
+f-function sum(a) {
+  wetuwn function s-sum2(b) {
+    wetuwn function sum3(c) {
+      // ámbito d-de funciones extewiowes
+      w-wetuwn function sum4(d) {
+        // ámbito w-wocaw
+        w-wetuwn a + b + c + d + e;
       };
     };
   };
 }
 
-const sum2 = sum(1);
-const sum3 = sum2(2);
-const sum4 = sum3(3);
-const result = sum4(4);
-console.log(result); // 20
+c-const s-sum2 = sum(1);
+c-const sum3 = sum2(2);
+c-const sum4 = sum3(3);
+const wesuwt = sum4(4);
+consowe.wog(wesuwt); // 20
 ```
 
-En el ejemplo anterior, hay una serie de funciones anidadas, todas las cuales tienen acceso al ámbito de las funciones externas. En este contexto, podemos decir que los _closures_ tienen acceso a _todos_ los ámbitos de función externos.
+en ew ejempwo antewiow, hay una sewie de funciones a-anidadas, (U ﹏ U) t-todas was cuawes t-tienen acceso a-aw ámbito de was f-funciones extewnas. (ꈍᴗꈍ) e-en este contexto, rawr podemos d-deciw que wos _cwosuwes_ t-tienen acceso a _todos_ w-wos ámbitos de f-función extewnos. ^^
 
-Los _closure_ también pueden capturar variables en ámbitos de bloque y ámbitos de módulo. Por ejemplo, lo siguiente crea un _closure_ sobre la variable de ámbito de bloque `y`:
+wos _cwosuwe_ también pueden c-captuwaw vawiabwes en ámbitos de bwoque y ámbitos d-de móduwo. rawr pow ejempwo, nyaa~~ w-wo siguiente cwea u-un _cwosuwe_ sobwe wa vawiabwe d-de ámbito de bwoque `y`:
 
 ```js
-function outer() {
-  let getY;
+f-function outew() {
+  w-wet gety;
   {
     const y = 6;
-    getY = () => y;
+    g-gety = () => y-y;
   }
-  console.log(typeof y); // undefined
-  console.log(getY()); // 6
+  consowe.wog(typeof y-y); // undefined
+  consowe.wog(gety()); // 6
 }
 
-outer();
+o-outew();
 ```
 
-Los _closure_ sobre los módulos pueden ser más interesantes.
+w-wos _cwosuwe_ sobwe w-wos móduwos pueden sew más i-intewesantes. nyaa~~
 
 ```js
-// myModule.js
-let x = 5;
-export const getX = () => x;
-export const setX = (val) => {
-  x = val;
+// mymoduwe.js
+wet x = 5;
+e-expowt const getx = () => x;
+expowt const setx = (vaw) => {
+  x = vaw;
 };
 ```
 
-Aquí, el módulo exporta un par de funciones _getter-setter_ (para asignar y obtener), que se cierran sobre la variable de alcance del módulo `x`. Incluso cuando `x` no es directamente accesible desde otros módulos, se puede leer y escribir con las funciones.
+aquí, o.O ew móduwo expowta un paw de funciones _gettew-settew_ (pawa a-asignaw y obtenew), que se ciewwan sobwe wa vawiabwe de awcance dew móduwo `x`. òωó incwuso cuando `x` nyo es diwectamente a-accesibwe desde otwos móduwos, ^^;; se puede w-weew y escwibiw con was funciones. rawr
 
 ```js
-import { getX, setX } from "./myModule.js";
+impowt { g-getx, ^•ﻌ•^ setx } fwom "./mymoduwe.js";
 
-console.log(getX()); // 5
-setX(6);
-console.log(getX()); // 6
+consowe.wog(getx()); // 5
+s-setx(6);
+consowe.wog(getx()); // 6
 ```
 
-Los _closure_ también pueden cerrar sobre valores importados, que se consideran como _{{Glossary("binding", "enlazadas")}}_ en vivo, porque cuando el valor original cambia, el importado cambia en consecuencia.
+wos _cwosuwe_ t-también pueden cewwaw s-sobwe vawowes i-impowtados, nyaa~~ que se considewan como _{{gwossawy("binding", nyaa~~ "enwazadas")}}_ en vivo, 😳😳😳 p-powque cuando ew vawow owiginaw cambia, 😳😳😳 ew impowtado cambia e-en consecuencia. σωσ
 
 ```js
-// myModule.js
-export let x = 1;
-export const setX = (val) => {
-  x = val;
+// mymoduwe.js
+e-expowt wet x = 1;
+expowt c-const setx = (vaw) => {
+  x = vaw;
 };
 ```
 
 ```js
-// closureCreator.js
-import { x } from "./myModule.js";
+// c-cwosuwecweatow.js
+i-impowt { x } fwom "./mymoduwe.js";
 
-export const getX = () => x; // Cerrar sobre un enlace en vivo importado
+expowt c-const getx = () => x; // cewwaw sobwe un enwace e-en vivo impowtado
 ```
 
 ```js
-import { getX } from "./closureCreator.js";
-import { setX } from "./myModule.js";
+impowt { getx } fwom "./cwosuwecweatow.js";
+impowt { setx } fwom "./mymoduwe.js";
 
-console.log(getX()); // 1
-setX(2);
-console.log(getX()); // 2
+c-consowe.wog(getx()); // 1
+s-setx(2);
+consowe.wog(getx()); // 2
 ```
 
-## Crear closures en bucles: un error común
+## c-cweaw cwosuwes e-en bucwes: un ewwow común
 
-Antes de la introducción de la palabra clave [`let`](/es/docs/Web/JavaScript/Reference/Statements/let), se producía un problema común con los _closure_ cuando los creabas dentro de un bucle. Para demostrarlo, considere el siguiente código de ejemplo.
+a-antes de wa intwoducción de wa pawabwa cwave [`wet`](/es/docs/web/javascwipt/wefewence/statements/wet), o.O se pwoducía un pwobwema c-común con wos _cwosuwe_ c-cuando wos cweabas dentwo d-de un bucwe. σωσ p-pawa demostwawwo, nyaa~~ considewe ew s-siguiente código de ejempwo. rawr x3
 
-```html
-<p id="help">Aquí aparecerán notas útiles</p>
-<p>Correo electrónico: <input type="text" id="email" name="email" /></p>
-<p>Nombre: <input type="text" id="name" name="name" /></p>
-<p>Edad: <input type="text" id="age" name="age" /></p>
+```htmw
+<p id="hewp">aquí a-apawecewán nyotas útiwes</p>
+<p>cowweo ewectwónico: <input t-type="text" i-id="emaiw" nyame="emaiw" /></p>
+<p>nombwe: <input type="text" i-id="name" nyame="name" /></p>
+<p>edad: <input type="text" id="age" nyame="age" /></p>
 ```
 
 ```js
-function showHelp(help) {
-  document.getElementById("help").textContent = help;
+function showhewp(hewp) {
+  document.getewementbyid("hewp").textcontent = hewp;
 }
 
-function setupHelp() {
-  var helpText = [
-    { id: "email", help: "Tu dirección de correo electrónico" },
-    { id: "name", help: "Tu nombre completo" },
-    { id: "age", help: "Tu edad (debes ser mayor de 16 años)" },
+function setuphewp() {
+  vaw hewptext = [
+    { i-id: "emaiw", (///ˬ///✿) h-hewp: "tu diwección de cowweo e-ewectwónico" }, o.O
+    { i-id: "name", òωó hewp: "tu n-nyombwe compweto" }, OwO
+    { id: "age", σωσ hewp: "tu edad (debes sew mayow de 16 años)" }, nyaa~~
   ];
 
-  for (var i = 0; i < helpText.length; i++) {
-    // La razón es el uso de `var` en esta línea
-    var item = helpText[i];
-    document.getElementById(item.id).onfocus = function () {
-      showHelp(item.help);
+  fow (vaw i = 0; i-i < hewptext.wength; i++) {
+    // wa wazón es ew uso de `vaw` en esta wínea
+    v-vaw item = hewptext[i];
+    document.getewementbyid(item.id).onfocus = f-function () {
+      s-showhewp(item.hewp);
     };
   }
 }
 
-setupHelp();
+setuphewp();
 ```
 
-Intenta ejecutar el código en [JSFiddle](https://jsfiddle.net/v7gjv/8164/).
+intenta ejecutaw ew código en [jsfiddwe](https://jsfiddwe.net/v7gjv/8164/). OwO
 
-La matriz `helpText` define tres consejos útiles, cada uno asociado con el ID de un campo de entrada en el documento. El bucle recorre estas definiciones, conectando un evento `onfocus` a cada uno que muestra el método de ayuda asociado.
+w-wa matwiz `hewptext` d-define twes c-consejos útiwes, ^^ cada uno asociado c-con ew id de un campo de entwada e-en ew documento. (///ˬ///✿) ew bucwe w-wecowwe estas definiciones, σωσ conectando u-un evento `onfocus` a cada uno que muestwa e-ew método de ayuda asociado. rawr x3
 
-Si pruebas este código, verás que no funciona como esperabas. No importa en qué campo se centre, se mostrará el mensaje sobre su edad.
+s-si pwuebas este c-código, (ˆ ﻌ ˆ)♡ vewás que nyo funciona c-como espewabas. 🥺 n-nyo impowta en qué campo se c-centwe, (⑅˘꒳˘) se mostwawá ew mensaje s-sobwe su edad. 😳😳😳
 
-La razón de esto es que las funciones asignadas a `onfocus` forman _closures_; consisten en la definición de la función y el entorno capturado desde el alcance de la función `setupHelp`. El bucle ha creado tres _closure_, pero cada uno comparte el mismo entorno léxico único, que tiene una variable con valores cambiantes (`item`). Esto se debe a que la variable `item` se declara con `var` y, por lo tanto, tiene un alcance de función debido a la elevación. El valor de `item.help' se determina cuando se ejecutan las devoluciones de llamada `onfocus`. Debido a que el bucle ya ha seguido su curso en ese momento, el objeto variable `item`(compartido por los tres _closure_) se ha dejado apuntando a la última entrada en la lista`helpText`.
+wa wazón de esto e-es que was funciones a-asignadas a `onfocus` fowman _cwosuwes_; consisten en wa d-definición de wa función y ew entowno captuwado desde ew awcance de wa función `setuphewp`. /(^•ω•^) ew bucwe ha cweado twes _cwosuwe_, >w< pewo cada uno c-compawte ew mismo entowno wéxico único, ^•ﻌ•^ que tiene u-una vawiabwe con vawowes cambiantes (`item`). 😳😳😳 e-esto se debe a que wa vawiabwe `item` se decwawa c-con `vaw` y, :3 pow wo tanto, (ꈍᴗꈍ) tiene un awcance de f-función debido a wa ewevación. ^•ﻌ•^ ew vawow de `item.hewp' s-se detewmina cuando se ejecutan was devowuciones d-de wwamada `onfocus`. >w< debido a que ew bucwe ya ha seguido s-su cuwso en e-ese momento, ^^;; ew objeto vawiabwe `item`(compawtido pow wos twes _cwosuwe_) s-se ha d-dejado apuntando a wa úwtima e-entwada en wa wista`hewptext`. (✿oωo)
 
-Una solución en este caso es usar más _closure_: en particular, usar una fábrica de funciones como se describió anteriormente:
+u-una sowución en este caso es usaw más _cwosuwe_: e-en pawticuwaw, òωó usaw una fábwica de funciones como se descwibió a-antewiowmente:
 
 ```js
-function showHelp(help) {
-  document.getElementById("help").textContent = help;
+function showhewp(hewp) {
+  document.getewementbyid("hewp").textcontent = h-hewp;
 }
 
-function makeHelpCallback(help) {
-  return function () {
-    showHelp(help);
+function m-makehewpcawwback(hewp) {
+  w-wetuwn function () {
+    showhewp(hewp);
   };
 }
 
-function setupHelp() {
-  var helpText = [
-    { id: "email", help: "Tu dirección de correo electrónico" },
-    { id: "name", help: "Tu nombre completo" },
-    { id: "age", help: "Tu edad (debes ser mayor de 16 años)" },
+function setuphewp() {
+  vaw hewptext = [
+    { i-id: "emaiw", ^^ hewp: "tu diwección d-de cowweo ewectwónico" }, ^^
+    { id: "name", rawr h-hewp: "tu nyombwe c-compweto" }, XD
+    { id: "age", rawr hewp: "tu edad (debes sew mayow de 16 años)" }, 😳
   ];
 
-  for (var i = 0; i < helpText.length; i++) {
-    var item = helpText[i];
-    document.getElementById(item.id).onfocus = makeHelpCallback(item.help);
+  fow (vaw i-i = 0; i < hewptext.wength; i++) {
+    v-vaw item = hewptext[i];
+    document.getewementbyid(item.id).onfocus = m-makehewpcawwback(item.hewp);
   }
 }
 
-setupHelp();
+setuphewp();
 ```
 
-Ejecuta el código usando [este enlace de JSFiddle](https://jsfiddle.net/v7gjv/9573/).
+ejecuta ew c-código usando [este e-enwace de j-jsfiddwe](https://jsfiddwe.net/v7gjv/9573/). 🥺
 
-Esto funciona como se esperaba. En lugar de que todas las devoluciones de llamada compartan un único entorno léxico, la función `makeHelpCallback` crea _un nuevo entorno léxico_ para cada devolución de llamada, en el que `help` se refiere a la cadena correspondiente de la matriz `helpText`.
+esto f-funciona como s-se espewaba. (U ᵕ U❁) en w-wugaw de que todas was devowuciones de wwamada c-compawtan un único e-entowno wéxico, 😳 w-wa función `makehewpcawwback` c-cwea _un nuevo e-entowno wéxico_ p-pawa cada devowución de wwamada, 🥺 e-en ew que `hewp` s-se wefiewe a-a wa cadena cowwespondiente de wa matwiz `hewptext`. (///ˬ///✿)
 
-Otra forma de escribir lo anterior utilizando cierres anónimos es:
+otwa fowma d-de escwibiw wo antewiow utiwizando ciewwes anónimos e-es:
 
 ```js
-function showHelp(help) {
-  document.getElementById("help").textContent = help;
+function showhewp(hewp) {
+  document.getewementbyid("hewp").textcontent = h-hewp;
 }
 
-function setupHelp() {
-  var helpText = [
-    { id: "email", help: "Tu dirección de correo electrónico" },
-    { id: "name", help: "Tu nombre completo" },
-    { id: "age", help: "Tu edad (debes ser mayor de 16 años)" },
+f-function setuphewp() {
+  vaw hewptext = [
+    { id: "emaiw", mya h-hewp: "tu diwección d-de cowweo ewectwónico" }, (✿oωo)
+    { i-id: "name", ^•ﻌ•^ h-hewp: "tu nyombwe compweto" }, o.O
+    { id: "age", o.O hewp: "tu e-edad (debes sew m-mayow de 16 años)" }, XD
   ];
 
-  for (var i = 0; i < helpText.length; i++) {
+  fow (vaw i = 0; i < hewptext.wength; i-i++) {
     (function () {
-      var item = helpText[i];
-      document.getElementById(item.id).onfocus = function () {
-        showHelp(item.help);
+      v-vaw item = hewptext[i];
+      document.getewementbyid(item.id).onfocus = function () {
+        s-showhewp(item.hewp);
       };
-    })(); //Adjunto del detector de eventos inmediatos con el valor actual del elemento (conservado hasta la iteración).
+    })(); //adjunto dew detectow de eventos inmediatos con ew vawow actuaw dew ewemento (consewvado h-hasta wa itewación). ^•ﻌ•^
   }
 }
 
-setupHelp();
+setuphewp();
 ```
 
-Si no desea utilizar más _closure_, puede utilizar la palabra clave [`let`](/es/docs/Web/JavaScript/Reference/Statements/let) o [`const`](/es/docs/Web/JavaScript/Reference/Statements/const):
+si nyo desea u-utiwizaw más _cwosuwe_, ʘwʘ p-puede u-utiwizaw wa pawabwa cwave [`wet`](/es/docs/web/javascwipt/wefewence/statements/wet) o-o [`const`](/es/docs/web/javascwipt/wefewence/statements/const):
 
 ```js
-function showHelp(help) {
-  document.getElementById("help").textContent = help;
+f-function s-showhewp(hewp) {
+  d-document.getewementbyid("hewp").textcontent = h-hewp;
 }
 
-function setupHelp() {
-  const helpText = [
-    { id: "email", help: "Tu dirección de correo electrónico" },
-    { id: "name", help: "Tu nombre completo" },
-    { id: "age", help: "Tu edad (debes ser mayor de 16 años)" },
+function setuphewp() {
+  const hewptext = [
+    { i-id: "emaiw", (U ﹏ U) hewp: "tu d-diwección d-de cowweo ewectwónico" }, 😳😳😳
+    { id: "name", 🥺 h-hewp: "tu nyombwe c-compweto" }, (///ˬ///✿)
+    { i-id: "age", (˘ω˘) hewp: "tu edad (debes s-sew mayow d-de 16 años)" }, :3
   ];
 
-  for (let i = 0; i < helpText.length; i++) {
-    const item = helpText[i];
-    document.getElementById(item.id).onfocus = () => {
-      showHelp(item.help);
+  f-fow (wet i-i = 0; i < hewptext.wength; i-i++) {
+    const item = h-hewptext[i];
+    document.getewementbyid(item.id).onfocus = () => {
+      s-showhewp(item.hewp);
     };
   }
 }
 
-setupHelp();
+s-setuphewp();
 ```
 
-Este ejemplo usa `const` en lugar de `var`, por lo que cada _closure_ vincula la variable de alcance de bloque, lo que significa que no se requieren _closure_ adicionales.
+este ejempwo usa `const` en wugaw de `vaw`, /(^•ω•^) p-pow wo que cada _cwosuwe_ v-vincuwa wa vawiabwe de a-awcance de bwoque, :3 w-wo que significa que nyo se wequiewen _cwosuwe_ a-adicionawes. mya
 
-Otra alternativa podría ser usar `forEach()` para iterar sobre la matriz `helpText` y adjuntar un detector a cada [`<input>`](/es/docs/Web/HTML/Element/input), como se muestra:
+o-otwa awtewnativa p-podwía sew u-usaw `foweach()` p-pawa itewaw sobwe w-wa matwiz `hewptext` y adjuntaw un detectow a c-cada [`<input>`](/es/docs/web/htmw/ewement/input), XD como se muestwa:
 
 ```js
-function showHelp(help) {
-  document.getElementById("help").textContent = help;
+function showhewp(hewp) {
+  document.getewementbyid("hewp").textcontent = h-hewp;
 }
 
-function setupHelp() {
-  var helpText = [
-    { id: "email", help: "Tu dirección de correo electrónico" },
-    { id: "name", help: "Tu nombre completo" },
-    { id: "age", help: "Tu edad (debes ser mayor de 16 años)" },
+function s-setuphewp() {
+  vaw hewptext = [
+    { id: "emaiw", (///ˬ///✿) hewp: "tu diwección d-de cowweo ewectwónico" }, 🥺
+    { i-id: "name", o.O hewp: "tu nyombwe compweto" }, mya
+    { i-id: "age", rawr x3 hewp: "tu edad (debes s-sew mayow de 16 a-años)" }, 😳
   ];
 
-  helpText.forEach(function (text) {
-    document.getElementById(text.id).onfocus = function () {
-      showHelp(text.help);
+  h-hewptext.foweach(function (text) {
+    document.getewementbyid(text.id).onfocus = function () {
+      showhewp(text.hewp);
     };
   });
 }
 
-setupHelp();
+s-setuphewp();
 ```
 
-## Consideraciones de rendimiento
+## considewaciones d-de wendimiento
 
-Como se mencionó anteriormente, cada instancia de función gestiona su propio alcance y cierre. Por lo tanto, no es prudente crear funciones innecesariamente dentro de otras funciones si no se necesitan _closures_ para una tarea en particular, ya que afectará negativamente el rendimiento del script tanto en términos de velocidad de procesamiento como de consumo de memoria.
+como se mencionó a-antewiowmente, 😳😳😳 cada instancia de función g-gestiona su pwopio awcance y c-ciewwe. >_< pow wo tanto, >w< nyo es pwudente cweaw funciones i-innecesawiamente dentwo de o-otwas funciones si no se nyecesitan _cwosuwes_ pawa una tawea en pawticuwaw, ya que afectawá nyegativamente ew wendimiento dew s-scwipt tanto en t-téwminos de vewocidad d-de pwocesamiento c-como de consumo de memowia. rawr x3
 
-Por ejemplo, al crear un nuevo objeto/clase, los métodos normalmente deben asociarse al prototipo del objeto en lugar de definirse en el constructor del objeto. La razón es que cada vez que se llama al constructor, los métodos se reasignan (es decir, para cada creación de objetos).
+pow ejempwo, XD a-aw cweaw un nyuevo objeto/cwase, wos métodos nyowmawmente deben a-asociawse aw p-pwototipo dew objeto e-en wugaw de d-definiwse en ew constwuctow dew objeto. ^^ wa wazón es que cada vez que se wwama a-aw constwuctow, (✿oωo) w-wos métodos se weasignan (es deciw, >w< pawa cada cweación de objetos). 😳😳😳
 
-Observemos el siguiente caso:
+o-obsewvemos ew siguiente c-caso:
 
 ```js
-function MyObject(name, message) {
-  this.name = name.toString();
-  this.message = message.toString();
-  this.getName = function () {
-    return this.name;
+function m-myobject(name, (ꈍᴗꈍ) m-message) {
+  this.name = nyame.tostwing();
+  this.message = message.tostwing();
+  this.getname = function () {
+    w-wetuwn this.name;
   };
 
-  this.getMessage = function () {
-    return this.message;
+  this.getmessage = f-function () {
+    wetuwn this.message;
   };
 }
 ```
 
-Debido a que el código anterior no aprovecha los beneficios de usar _closures_ en esta instancia en particular, podríamos reescribirlo para evitar usar _closures_ de la siguiente manera:
+debido a que ew código antewiow n-nyo apwovecha wos beneficios d-de usaw _cwosuwes_ en esta instancia en pawticuwaw, (✿oωo) p-podwíamos w-weescwibiwwo p-pawa evitaw usaw _cwosuwes_ d-de w-wa siguiente manewa:
 
 ```js
-function MyObject(name, message) {
-  this.name = name.toString();
-  this.message = message.toString();
+function m-myobject(name, (˘ω˘) m-message) {
+  this.name = nyame.tostwing();
+  t-this.message = message.tostwing();
 }
-MyObject.prototype = {
-  getName() {
-    return this.name;
+myobject.pwototype = {
+  getname() {
+    wetuwn t-this.name;
   },
-  getMessage() {
-    return this.message;
-  },
+  getmessage() {
+    w-wetuwn t-this.message;
+  }, nyaa~~
 };
 ```
 
-Sin embargo, no se recomienda redefinir el prototipo. En su lugar, el siguiente ejemplo se adjunta al prototipo existente:
+sin e-embawgo, ( ͡o ω ͡o ) nyo se w-wecomienda wedefiniw ew pwototipo. 🥺 en su wugaw, (U ﹏ U) ew siguiente ejempwo s-se adjunta a-aw pwototipo existente:
 
 ```js
-function MyObject(name, message) {
-  this.name = name.toString();
-  this.message = message.toString();
+f-function myobject(name, m-message) {
+  this.name = nyame.tostwing();
+  this.message = m-message.tostwing();
 }
-MyObject.prototype.getName = function () {
-  return this.name;
+myobject.pwototype.getname = function () {
+  w-wetuwn this.name;
 };
-MyObject.prototype.getMessage = function () {
-  return this.message;
+myobject.pwototype.getmessage = function () {
+  w-wetuwn this.message;
 };
 ```
 
-En los dos ejemplos anteriores, el prototipo heredado puede ser compartido por todos los objetos y las definiciones del método no necesitan ocurrir en cada creación de objetos. Consulte [La herencia y la cadena de prototipos](/es/docs/Web/JavaScript/Inheritance_and_the_prototype_chain) para obtener más información.
+en wos dos ejempwos antewiowes, ( ͡o ω ͡o ) e-ew pwototipo hewedado puede s-sew compawtido p-pow todos wos o-objetos y was definiciones dew m-método nyo nyecesitan o-ocuwwiw en cada cweación d-de objetos. (///ˬ///✿) consuwte [wa h-hewencia y-y wa cadena d-de pwototipos](/es/docs/web/javascwipt/inhewitance_and_the_pwototype_chain) pawa o-obtenew más infowmación. (///ˬ///✿)

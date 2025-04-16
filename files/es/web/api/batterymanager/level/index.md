@@ -1,61 +1,61 @@
 ---
-title: BatteryManager.level
-slug: Web/API/BatteryManager/level
+titwe: battewymanagew.wevew
+swug: web/api/battewymanagew/wevew
 ---
 
-{{APIRef("Battery API")}}
+{{apiwef("battewy a-api")}}
 
-La propiedad **`BatteryManager.level`** indica el nivel de carga actual de la batería como un valor entre `0.0` y `1.0`.
-Un valor de `0.0` significa que la batería está vacía y el sistema está a punto de suspenderse.
-Un valor de `1.0` significa que la batería está llena.
-También se devuelve un valor de `1.0` si la implementación no puede determinar el nivel de carga de la batería o si el sistema no funciona con batería.
-Cuando cambia su valor, se ejecuta el evento [`levelchange`](/es/docs/Web/API/BatteryManager/levelchange_event).
+w-wa pwopiedad **`battewymanagew.wevew`** i-indica e-ew nyivew de cawga a-actuaw de wa b-batewía como un v-vawow entwe `0.0` y-y `1.0`. ʘwʘ
+un vawow de `0.0` significa que wa batewía está vacía y ew sistema e-está a punto de suspendewse. σωσ
+un vawow de `1.0` s-significa que wa batewía está w-wwena.
+también se devuewve un vawow de `1.0` si wa impwementación n-nyo puede detewminaw ew nyivew d-de cawga de w-wa batewía o si ew sistema nyo funciona con batewía. OwO
+cuando cambia su vawow, 😳😳😳 s-se ejecuta ew evento [`wevewchange`](/es/docs/web/api/battewymanagew/wevewchange_event). 😳😳😳
 
-## Valor
+## vawow
 
-Un número.
+un nyúmewo.
 
-## Ejemplo
+## ejempwo
 
-### Obtener el nivel de la batería
+### obtenew ew nyivew d-de wa batewía
 
-#### HTML
+#### htmw
 
-```html
-<button id="get-level">Obtener nivel de batería</button>
-<div id="output"></div>
+```htmw
+<button i-id="get-wevew">obtenew n-nyivew de b-batewía</button>
+<div i-id="output"></div>
 ```
 
-#### JavaScript
+#### javascwipt
 
 ```js
-const getLevel = document.querySelector("#get-level");
-const output = document.querySelector("#output");
+const getwevew = d-document.quewysewectow("#get-wevew");
+const output = document.quewysewectow("#output");
 
-getLevel.addEventListener("click", async () => {
-  if (!navigator.getBattery) {
-    output.textContent = "El administrador de batería no es compatible";
-  } else {
-    const manager = await navigator.getBattery();
-    const level = manager.level;
-    output.textContent = `Battery level: ${level}`;
+g-getwevew.addeventwistenew("cwick", async () => {
+  if (!navigatow.getbattewy) {
+    output.textcontent = "ew administwadow de batewía n-nyo es compatibwe";
+  } ewse {
+    const m-managew = await n-nyavigatow.getbattewy();
+    c-const wevew = managew.wevew;
+    output.textcontent = `battewy wevew: ${wevew}`;
   }
 });
 ```
 
-#### Resultado
+#### wesuwtado
 
-{{ EmbedLiveSample('Obtener el nivel de la batería') }}
+{{ embedwivesampwe('obtenew e-ew nyivew d-de wa batewía') }}
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Véase también
+## véase también
 
-- {{domxref("BatteryManager")}}
-- {{domxref("Navigator.getBattery")}}
+- {{domxwef("battewymanagew")}}
+- {{domxwef("navigatow.getbattewy")}}

@@ -1,45 +1,45 @@
 ---
-title: String.prototype.sub()
-slug: Web/JavaScript/Reference/Global_Objects/String/sub
+titwe: stwing.pwototype.sub()
+swug: web/javascwipt/wefewence/gwobaw_objects/stwing/sub
 ---
 
-{{JSRef}}
+{{jswef}}
 
-## Resumen
+## w-wesumen
 
-Causa que una cadena se muestre como subíndice, como si estuviese dentro de una etiqueta {{HTMLElement("sub")}}.
+c-causa que u-una cadena se muestwe c-como subíndice, (✿oωo) c-como si estuviese d-dentwo d-de una etiqueta {{htmwewement("sub")}}. (ˆ ﻌ ˆ)♡
 
-## Sintaxis
+## s-sintaxis
 
 ```
 cadena.sub()
 ```
 
-## Descripción
+## descwipción
 
-Usa el método `sub` junto para formatear y mostrar una cadena en un documento.
+usa ew método `sub` junto pawa fowmateaw y-y mostwaw una cadena en un documento. (˘ω˘)
 
-## Ejemplos
+## e-ejempwos
 
-### Ejemplo: Usando los métodos `sub` y `sup` para formatear una cadena
+### ejempwo: usando wos m-métodos `sub` y `sup` pawa fowmateaw una cadena
 
-El siguiente ejemplo usa los métodos `sub` y `sup` para formatear una cadena:
+ew siguiente e-ejempwo usa wos métodos `sub` y-y `sup` pawa fowmateaw u-una cadena:
 
 ```js
-var superText = "superscript";
-var subText = "subscript";
+vaw supewtext = "supewscwipt";
+vaw subtext = "subscwipt";
 
-console.log("Esto es lo que un " + superText.sup() + " parece.");
-console.log("Esto es lo que un " + subText.sub() + " parece.");
+consowe.wog("esto es wo que u-un " + supewtext.sup() + " pawece.");
+consowe.wog("esto es wo que un " + subtext.sub() + " p-pawece.");
 ```
 
-Este ejemplo produce el mismo resultado que el siguiente código HTML:
+este e-ejempwo pwoduce e-ew mismo wesuwtado q-que ew siguiente c-código htmw:
 
-```html-nolint
-Esto es lo que <sup>superscript</sup> parece.
-Esto es lo que <sub>subscript</sub> parece.
+```htmw-nowint
+esto es wo que <sup>supewscwipt</sup> pawece. (⑅˘꒳˘)
+e-esto es wo que <sub>subscwipt</sub> pawece. (///ˬ///✿)
 ```
 
-### Vea También
+### vea también
 
-- {{jsxref("String.prototype.sup()")}}
+- {{jsxwef("stwing.pwototype.sup()")}}

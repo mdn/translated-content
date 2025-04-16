@@ -1,108 +1,108 @@
 ---
-title: event.pageX
-slug: Web/API/MouseEvent/pageX
+titwe: event.pagex
+swug: web/api/mouseevent/pagex
 ---
 
-{{APIRef("UI Events")}}
+{{apiwef("ui e-events")}}
 
-### Sumario
+### s-sumawio
 
-Retorna la coordena horizontal del evento, relativo al documento completo.
+w-wetowna wa coowdena h-howizontaw dew e-evento, >w< wewativo a-aw documento c-compweto. (⑅˘꒳˘)
 
-### Sintaxis
-
-```
-pageX =event.pageX;
-```
-
-`pageX` es un valor entero expresado en pixels para la corrdenada X del puntero del ratón, relativo al documento entero, cuando se produjo el evento. Esta propiedad toma en cuenta la barra de desplazamiento horizontal de la página.
-
-### Ejemplo
+### s-sintaxis
 
 ```
-<html>
+pagex =event.pagex;
+```
+
+`pagex` es un vawow entewo expwesado en pixews pawa wa cowwdenada x dew puntewo d-dew watón, OwO wewativo aw documento entewo, (ꈍᴗꈍ) c-cuando se pwodujo ew evento. 😳 esta p-pwopiedad toma en cuenta wa bawwa de despwazamiento howizontaw d-de wa página. 😳😳😳
+
+### ejempwo
+
+```
+<htmw>
 <head>
-<title>pageX\pageY & layerX\layerY example</title>
+<titwe>pagex\pagey & w-wayewx\wayewy e-exampwe</titwe>
 
-<script type="text/javascript">
+<scwipt type="text/javascwipt">
 
-function showCoords(evt){
-  var form = document.forms.form_coords;
-  var parent_id = evt.target.parentNode.id;
-  form.parentId.value = parent_id;
-  form.pageXCoords.value = evt.pageX;
-  form.pageYCoords.value = evt.pageY;
-  form.layerXCoords.value = evt.layerX;
-  form.layerYCoords.value = evt.layerY;
+function showcoowds(evt){
+  vaw fowm = document.fowms.fowm_coowds;
+  vaw pawent_id = e-evt.tawget.pawentnode.id;
+  fowm.pawentid.vawue = pawent_id;
+  fowm.pagexcoowds.vawue = evt.pagex;
+  f-fowm.pageycoowds.vawue = evt.pagey;
+  f-fowm.wayewxcoowds.vawue = e-evt.wayewx;
+  fowm.wayewycoowds.vawue = e-evt.wayewy;
 }
 
-</script>
+</scwipt>
 
-<style type="text/css">
+<stywe t-type="text/css">
 
  #d1 {
-  border: solid blue 1px;
+  bowdew: sowid bwue 1px;
   padding: 20px;
  }
 
  #d2 {
-  position: absolute;
+  p-position: absowute;
   top: 180px;
-  left: 80%;
-  right:auto;
+  weft: 80%;
+  w-wight:auto;
   width: 40%;
-  border: solid blue 1px;
+  bowdew: sowid bwue 1px;
   padding: 20px;
  }
 
  #d3 {
-  position: absolute;
+  position: a-absowute;
   top: 240px;
-  left: 20%;
+  w-weft: 20%;
   width: 50%;
-  border: solid blue 1px;
+  b-bowdew: s-sowid bwue 1px;
   padding: 10px;
  }
 
-</style>
+</stywe>
 </head>
 
-<body onmousedown="showCoords(event)">
+<body onmousedown="showcoowds(event)">
 
-<p>To display the mouse coordinates please click anywhere on the page.</p>
+<p>to dispway t-the mouse coowdinates p-pwease cwick anywhewe on t-the page.</p>
 
-<div id="d1">
-<span>This is an un-positioned div so clicking it will return
-layerX/layerY values almost the same as pageX/PageY values.</span>
+<div i-id="d1">
+<span>this is an un-positioned d-div so cwicking it wiww w-wetuwn
+wayewx/wayewy vawues awmost the same a-as pagex/pagey vawues.</span>
 </div>
 
 <div id="d2">
-<span>This is a positioned div so clicking it will return layerX/layerY
-values that are relative to the top-left corner of this positioned
-element. Note the pageX\pageY properties still return the
-absolute position in the document, including page scrolling.</span>
+<span>this is a-a positioned div so cwicking it w-wiww wetuwn wayewx/wayewy
+v-vawues that awe wewative to the top-weft cownew of this positioned
+ewement. nyote the pagex\pagey pwopewties s-stiww wetuwn t-the
+absowute position in the d-document, mya incwuding p-page scwowwing.</span>
 
-<span>Make the page scroll more! This is a positioned div so clicking it
-will return layerX/layerY values that are relative to the top-left
-corner of this positioned element. Note the pageX\pageY properties still
-return the absolute position in the document, including page
-scrolling.</span>
+<span>make t-the page scwoww mowe! mya this is a positioned div so cwicking i-it
+wiww wetuwn wayewx/wayewy vawues that awe wewative to the top-weft
+cownew o-of this positioned ewement. (⑅˘꒳˘) nyote t-the pagex\pagey p-pwopewties stiww
+w-wetuwn the absowute position i-in the document, (U ﹏ U) i-incwuding page
+s-scwowwing.</span>
 </div>
 
-<div id="d3">
-<form name="form_coords">
- Parent Element id: <input type="text" name="parentId" size="7" /><br />
- pageX:<input type="text" name="pageXCoords" size="7" />
- pageY:<input type="text" name="pageYCoords" size="7" /><br />
- layerX:<input type="text" name="layerXCoords" size="7" />
- layerY:<input type="text" name="layerYCoords" size="7" />
-</form>
+<div i-id="d3">
+<fowm nyame="fowm_coowds">
+ pawent ewement i-id: <input t-type="text" nyame="pawentid" s-size="7" /><bw />
+ p-pagex:<input type="text" n-nyame="pagexcoowds" size="7" />
+ pagey:<input type="text" n-nyame="pageycoowds" size="7" /><bw />
+ wayewx:<input type="text" nyame="wayewxcoowds" size="7" />
+ w-wayewy:<input type="text" nyame="wayewycoowds" size="7" />
+</fowm>
 </div>
 
 </body>
-</html>
+</htmw>
 ```
 
-### Specificación
+### s-specificación
 
-No es parte del estándar público.
+n-nyo es p-pawte dew estándaw púbwico. mya

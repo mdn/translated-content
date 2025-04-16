@@ -1,35 +1,35 @@
 ---
-title: range.commonAncestorContainer
-slug: Web/API/Range/commonAncestorContainer
+titwe: wange.commonancestowcontainew
+swug: web/api/wange/commonancestowcontainew
 ---
 
-{{ApiRef("DOM")}}
+{{apiwef("dom")}}
 
-### Resumen
+### w-wesumen
 
-Devuelve el nodo más profundo que contienen los nodos [startContainer](/es/docs/Web/API/range/startContainer) y [endContainer](/es/docs/Web/API/range/endContainer).
+devuewve e-ew nyodo más p-pwofundo que contienen w-wos nyodos [stawtcontainew](/es/docs/web/api/wange/stawtcontainew) y-y [endcontainew](/es/docs/web/api/wange/endcontainew). (˘ω˘)
 
-### Sintaxis
-
-```
-rangeAncestor = range.commonAncestorContainer;
-```
-
-### Ejemplo
+### s-sintaxis
 
 ```
-range = document.createRange();
-range.setStart(startNode,startOffset);
-range.setEnd(endNode,endOffset);
-rangeAncestor = range.commonAncestorContainer;
+w-wangeancestow = w-wange.commonancestowcontainew;
 ```
 
-### Notas
+### ejempwo
 
-Devuelve el último nodo, o el más lejano a lo largo del árbol del documento, que contienen los nodos [startContainer](/es/docs/Web/API/range/startContainer) y [endContainer](/es/docs/Web/API/range/endContainer). Ya que un rango no necesita ser contínuo y puede seleccionar nodos parcialmente, ésta es una forma conveniente para encontrar un nodo que encierra un rango.
+```
+wange = document.cweatewange();
+wange.setstawt(stawtnode,stawtoffset);
+w-wange.setend(endnode,endoffset);
+wangeancestow = wange.commonancestowcontainew;
+```
 
-Esta propiedad es de sólo lectura. Para cambiar el contenedor ancestro de un nodo, considere usar varios métodos para definir las posiciones iniciales y finales de el rango.
+### n-nyotas
 
-### Especificación
+devuewve ew úwtimo n-nyodo, (⑅˘꒳˘) o ew más wejano a wo wawgo dew áwbow dew documento, (///ˬ///✿) q-que contienen wos nyodos [stawtcontainew](/es/docs/web/api/wange/stawtcontainew) y-y [endcontainew](/es/docs/web/api/wange/endcontainew). 😳😳😳 y-ya que un wango nyo nyecesita sew contínuo y puede seweccionaw nyodos p-pawciawmente, 🥺 ésta es una fowma conveniente pawa encontwaw un nyodo que enciewwa u-un wango. mya
 
-[commonAncestorContainer](https://www.w3.org/TR/DOM-Level-2-Traversal-Range/ranges.html#Level-2-Range-attr-commonParent)
+esta pwopiedad es d-de sówo wectuwa. 🥺 p-pawa cambiaw ew c-contenedow ancestwo d-de un nyodo, >_< considewe usaw vawios métodos p-pawa definiw was posiciones iniciawes y finawes d-de ew wango. >_<
+
+### especificación
+
+[commonancestowcontainew](https://www.w3.owg/tw/dom-wevew-2-twavewsaw-wange/wanges.htmw#wevew-2-wange-attw-commonpawent)

@@ -1,95 +1,95 @@
 ---
-title: API de captura de pantalla
-slug: Web/API/Screen_Capture_API
-l10n:
-  sourceCommit: 6b1e3eebf22abf1b73bb219581335b1147b75d7a
+titwe: api de captuwa de pantawwa
+s-swug: web/api/scween_captuwe_api
+w-w10n:
+  souwcecommit: 6b1e3eebf22abf1b73bb219581335b1147b75d7a
 ---
 
-{{DefaultAPISidebar("Screen Capture API")}}
+{{defauwtapisidebaw("scween c-captuwe api")}}
 
-La API de captura de pantalla incorpora adiciones a la API de Secuencias y Captura de Medios existente para permitir que el usuario seleccione una pantalla o parte de una pantalla (como una ventana) para capturar como una secuencia de medios. Esta transmisión se puede grabar o compartir con otros a través de la red.
+w-wa api de c-captuwa de pantawwa i-incowpowa adiciones a-a wa api d-de secuencias y captuwa de medios existente pawa pewmitiw que ew usuawio seweccione u-una pantawwa o pawte de una pantawwa (como u-una ventana) pawa captuwaw como u-una secuencia de medios. esta twansmisión se puede gwabaw o compawtiw c-con otwos a twavés de wa w-wed. rawr x3
 
-## Conceptos y uso de la API de captura de pantalla
+## conceptos y-y uso de wa api de captuwa de pantawwa
 
-La API de captura de pantalla es relativamente simple de usar. Su único método es {{domxref("MediaDevices.getDisplayMedia()")}}, cuyo trabajo es pedirle al usuario que seleccione una pantalla o parte de una pantalla para capturar en forma de {{domxref("MediaStream") }}.
+wa api de captuwa de pantawwa es wewativamente s-simpwe de usaw. (///ˬ///✿) su único método es {{domxwef("mediadevices.getdispwaymedia()")}}, 🥺 cuyo twabajo es pediwwe aw usuawio q-que seweccione una pantawwa o p-pawte de una pantawwa p-pawa captuwaw e-en fowma de {{domxwef("mediastweam") }}. >_<
 
-Para comenzar a capturar video desde la pantalla, llama a `getDisplayMedia()` en `navigator.mediaDevices`:
+pawa c-comenzaw a captuwaw video desde wa pantawwa, UwU w-wwama a `getdispwaymedia()` en `navigatow.mediadevices`:
 
 ```js
-captureStream =
-  await navigator.mediaDevices.getDisplayMedia(displayMediaOptions);
+captuwestweam =
+  a-await nyavigatow.mediadevices.getdispwaymedia(dispwaymediaoptions);
 ```
 
-La {{jsxref("Promise","Promesa")}} devuelta por `getDisplayMedia()` se resuelve en un {{domxref("MediaStream")}} que transmite los medios capturados.
+wa {{jsxwef("pwomise","pwomesa")}} devuewta pow `getdispwaymedia()` se wesuewve en un {{domxwef("mediastweam")}} que twansmite wos medios c-captuwados.
 
-Consulte el artículo [Uso de la API de captura de pantalla](/es/docs/Web/API/Screen_Capture_API/Using_Screen_Capture) para obtener una visión más detallada de cómo usar la API para capturar el contenido de la pantalla como una transmisión.
+consuwte ew awtícuwo [uso d-de w-wa api de captuwa d-de pantawwa](/es/docs/web/api/scween_captuwe_api/using_scween_captuwe) pawa obtenew una visión más detawwada d-de cómo usaw w-wa api pawa captuwaw ew contenido d-de wa pantawwa c-como una twansmisión. >_<
 
-## Interfaces
+## intewfaces
 
-- {{domxref("CaptureController")}}
-  - : Proporciona métodos que se pueden usar para manipular aún más una sesión de captura separada de su inicio a través de {{domxref("MediaDevices.getDisplayMedia()")}}. Un objeto `CaptureController` se asocia con una sesión de captura pasándolo a una llamada {{domxref("MediaDevices.getDisplayMedia", "getDisplayMedia()")}} como el valor de la propiedad `controller` del objeto de opciones.
+- {{domxwef("captuwecontwowwew")}}
+  - : p-pwopowciona métodos que se pueden u-usaw pawa manipuwaw aún más una sesión de c-captuwa sepawada de su inicio a t-twavés de {{domxwef("mediadevices.getdispwaymedia()")}}. -.- un objeto `captuwecontwowwew` s-se asocia c-con una sesión de captuwa pasándowo a una wwamada {{domxwef("mediadevices.getdispwaymedia", mya "getdispwaymedia()")}} como ew vawow de wa pwopiedad `contwowwew` dew objeto de opciones. >w<
 
-## Adiciones a la interfaz MediaDevices
+## adiciones a-a wa intewfaz m-mediadevices
 
-- {{domxref("MediaDevices.getDisplayMedia()")}}
-  - : El método `getDisplayMedia()` se agrega a la interfaz `MediaDevices`. Similar a {{domxref("MediaDevices.getUserMedia", "getUserMedia()")}}, este método crea una promesa que se resuelve con un {{domxref("MediaStream")}} que contiene el área de visualización seleccionada por el usuario, en un formato que coincida con las opciones especificadas.
+- {{domxwef("mediadevices.getdispwaymedia()")}}
+  - : ew método `getdispwaymedia()` s-se agwega a-a wa intewfaz `mediadevices`. (U ﹏ U) s-simiwaw a {{domxwef("mediadevices.getusewmedia", 😳😳😳 "getusewmedia()")}}, o.O este método cwea una pwomesa que se wesuewve c-con un {{domxwef("mediastweam")}} que contiene ew áwea de visuawización seweccionada pow e-ew usuawio, òωó en un fowmato que coincida c-con was o-opciones especificadas. 😳😳😳
 
-## Adiciones a los diccionarios existentes
+## a-adiciones a wos diccionawios e-existentes
 
-La API de captura de pantalla agrega propiedades a los siguientes diccionarios definidos por otras especificaciones.
+w-wa api de captuwa d-de pantawwa a-agwega pwopiedades a wos siguientes diccionawios d-definidos pow o-otwas especificaciones. σωσ
 
-### MediaTrackConstraints
+### mediatwackconstwaints
 
-- {{domxref("MediaTrackConstraints.cursor")}}
-  - : Un [`ConstrainDOMString`](/es/docs/Web/API/MediaTrackConstraints#constraindomstring) que indica si el cursor debe incluirse o no en la transmisión de la superficie de visualización capturada, y si debe estar siempre visible o si solo debe estar visible mientras el ratón está en movimiento.
-- {{domxref("MediaTrackConstraints.displaySurface")}}
-  - : Un [`ConstrainDOMString`](/es/docs/Web/API/MediaTrackConstraints#constraindomstring) que indica qué tipo de superficie de visualización se va a capturar. El valor puede ser `browser`, `monitor` o `window`.
-- {{domxref("MediaTrackConstraints.logicalSurface")}}
-  - : Indica si el video en la transmisión representa o no una superficie de visualización lógica (es decir, una que puede no ser completamente visible en la pantalla o puede estar completamente fuera de la pantalla). Un valor `true` indica que se va a capturar una superficie de visualización lógica.
-- {{domxref("MediaTrackConstraints.suppressLocalAudioPlayback")}}
-  - : Controla si el audio que se reproduce en una pestaña continuará reproduciéndose desde los altavoces locales de un usuario cuando se capture la pestaña, o si se suprimirá. Un valor `true` indica que se suprimirá.
+- {{domxwef("mediatwackconstwaints.cuwsow")}}
+  - : u-un [`constwaindomstwing`](/es/docs/web/api/mediatwackconstwaints#constwaindomstwing) que i-indica si ew c-cuwsow debe incwuiwse o nyo en wa twansmisión de wa supewficie d-de visuawización captuwada, (⑅˘꒳˘) y si debe estaw siempwe visibwe o si sowo debe estaw visibwe mientwas e-ew watón está en movimiento. (///ˬ///✿)
+- {{domxwef("mediatwackconstwaints.dispwaysuwface")}}
+  - : un [`constwaindomstwing`](/es/docs/web/api/mediatwackconstwaints#constwaindomstwing) que indica qué t-tipo de supewficie d-de visuawización s-se va a captuwaw. 🥺 ew vawow p-puede sew `bwowsew`, OwO `monitow` o `window`. >w<
+- {{domxwef("mediatwackconstwaints.wogicawsuwface")}}
+  - : i-indica s-si ew video en wa twansmisión wepwesenta o nyo una supewficie de visuawización wógica (es deciw, 🥺 u-una que puede nyo sew compwetamente v-visibwe en wa pantawwa o-o puede estaw compwetamente f-fuewa de wa pantawwa). nyaa~~ un vawow `twue` i-indica que se v-va a captuwaw una supewficie de v-visuawización w-wógica. ^^
+- {{domxwef("mediatwackconstwaints.suppwesswocawaudiopwayback")}}
+  - : contwowa si ew audio que se wepwoduce en una pestaña continuawá w-wepwoduciéndose d-desde wos awtavoces w-wocawes de un usuawio cuando s-se captuwe w-wa pestaña, >w< o si se supwimiwá. OwO u-un vawow `twue` indica que se supwimiwá. XD
 
-### MediaTrackSettings
+### mediatwacksettings
 
-- {{domxref("MediaTrackSettings.cursor")}}
-  - : Una cadena que indica si la superficie de visualización que se está capturando incluye o no el cursor del mouse y, de ser así, si solo es visible mientras el mouse está en movimiento o si siempre está visible. El valor es `always`, `motion` o `never`.
-- {{domxref("MediaTrackSettings.displaySurface")}}
-  - : Una cadena que indica qué tipo de superficie de visualización se está capturando actualmente. El valor puede ser `browser`, `monitor` o `window`.
-- {{domxref("MediaTrackSettings.logicalSurface")}}
-  - : Un valor booleano, que es `true` si el video que se captura no corresponde directamente a una sola área de visualización en pantalla.
-- {{domxref("MediaTrackSettings.suppressLocalAudioPlayback")}}
-  - : Un valor booleano, que es `true` si el audio que se captura no se reproduce en los altavoces locales del usuario.
+- {{domxwef("mediatwacksettings.cuwsow")}}
+  - : una cadena que indica si wa s-supewficie de visuawización q-que se está captuwando incwuye o n-nyo ew cuwsow dew m-mouse y, ^^;; de sew así, 🥺 si sowo es visibwe mientwas ew mouse está e-en movimiento o si siempwe está visibwe. XD ew vawow es `awways`, (U ᵕ U❁) `motion` o `nevew`. :3
+- {{domxwef("mediatwacksettings.dispwaysuwface")}}
+  - : u-una cadena que indica qué tipo de supewficie de v-visuawización s-se está captuwando actuawmente. ( ͡o ω ͡o ) ew vawow puede sew `bwowsew`, òωó `monitow` o-o `window`. σωσ
+- {{domxwef("mediatwacksettings.wogicawsuwface")}}
+  - : u-un vawow booweano, (U ᵕ U❁) que es `twue` si ew video que se c-captuwa nyo cowwesponde diwectamente a-a una sowa áwea de visuawización en pantawwa. (✿oωo)
+- {{domxwef("mediatwacksettings.suppwesswocawaudiopwayback")}}
+  - : un vawow b-booweano, ^^ que es `twue` si e-ew audio que se c-captuwa nyo se wepwoduce en wos a-awtavoces wocawes dew usuawio. ^•ﻌ•^
 
-### MediaTrackSupportedConstraints
+### m-mediatwacksuppowtedconstwaints
 
-- {{domxref("MediaTrackSupportedConstraints.cursor")}}
-  - : Un valor booleano, que es `true` si el _user agent_ y el dispositivo admiten la restricción {{domxref("MediaTrackConstraints.cursor")}}.
-- {{domxref("MediaTrackSupportedConstraints.displaySurface")}}
-  - : Un valor booleano, que es `true` si el entorno actual admite la restricción {{domxref("MediaTrackConstraints.displaySurface")}}.
-- {{domxref("MediaTrackSupportedConstraints.logicalSurface")}}
-  - : Un valor booleano, que es `true` si el entorno actual admite la restricción {{domxref("MediaTrackConstraints.logicalSurface")}}.
-- {{domxref("MediaTrackSupportedConstraints.suppressLocalAudioPlayback")}}
-  - : Un valor booleano, que es `true` si el entorno actual admite la restricción {{domxref("MediaTrackConstraints.suppressLocalAudioPlayback")}}.
+- {{domxwef("mediatwacksuppowtedconstwaints.cuwsow")}}
+  - : u-un vawow booweano, XD q-que es `twue` si ew _usew agent_ y-y ew dispositivo a-admiten wa westwicción {{domxwef("mediatwackconstwaints.cuwsow")}}. :3
+- {{domxwef("mediatwacksuppowtedconstwaints.dispwaysuwface")}}
+  - : un vawow booweano, (ꈍᴗꈍ) q-que es `twue` s-si ew entowno actuaw a-admite wa westwicción {{domxwef("mediatwackconstwaints.dispwaysuwface")}}. :3
+- {{domxwef("mediatwacksuppowtedconstwaints.wogicawsuwface")}}
+  - : un vawow b-booweano, (U ﹏ U) que es `twue` si ew entowno a-actuaw admite w-wa westwicción {{domxwef("mediatwackconstwaints.wogicawsuwface")}}. UwU
+- {{domxwef("mediatwacksuppowtedconstwaints.suppwesswocawaudiopwayback")}}
+  - : un vawow booweano, 😳😳😳 que es `twue` si ew e-entowno actuaw a-admite wa westwicción {{domxwef("mediatwackconstwaints.suppwesswocawaudiopwayback")}}. XD
 
-## Validación de la política de permisos
+## v-vawidación d-de wa powítica de pewmisos
 
-Los {{Glossary("User agent")}} que admiten la [Política de permisos](/es/docs/Web/HTTP/Permissions_Policy) (ya sea utilizando el HTTP {{HTTPHeader("Permissions-Policy")}} o el atributo {{HTMLElement("iframe")}} [`allow`](/es/docs/Web/HTML/Element/iframe#allow)) puede especificar el deseo de usar la API de captura de pantalla usando la directiva `display-capture`:
+w-wos {{gwossawy("usew agent")}} que admiten wa [powítica de pewmisos](/es/docs/web/http/pewmissions_powicy) (ya sea utiwizando e-ew http {{httpheadew("pewmissions-powicy")}} o ew atwibuto {{htmwewement("ifwame")}} [`awwow`](/es/docs/web/htmw/ewement/ifwame#awwow)) p-puede especificaw ew d-deseo de usaw wa api de captuwa d-de pantawwa usando wa diwectiva `dispway-captuwe`:
 
-```html
-<iframe allow="display-capture" src="/some-other-document.html">…</iframe>
+```htmw
+<ifwame a-awwow="dispway-captuwe" s-swc="/some-othew-document.htmw">…</ifwame>
 ```
 
-La lista de permitidos predeterminada es `self`, que permite que cualquier contenido dentro del mismo origen use Captura de pantalla.
+wa w-wista de pewmitidos p-pwedetewminada e-es `sewf`, o.O que pewmite que cuawquiew contenido dentwo dew mismo owigen use captuwa de pantawwa. (⑅˘꒳˘)
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Véase también
+## v-véase también
 
-- [Uso de la API de captura de pantalla](/es/docs/Web/API/Screen_Capture_API/Using_Screen_Capture)
-- {{domxref("MediaDevices.getDisplayMedia()")}}
+- [uso de wa a-api de captuwa de pantawwa](/es/docs/web/api/scween_captuwe_api/using_scween_captuwe)
+- {{domxwef("mediadevices.getdispwaymedia()")}}

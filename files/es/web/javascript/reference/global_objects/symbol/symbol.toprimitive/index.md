@@ -1,48 +1,48 @@
 ---
-title: Symbol.prototype[@@toPrimitive]
-slug: Web/JavaScript/Reference/Global_Objects/Symbol/Symbol.toPrimitive
-original_slug: Web/JavaScript/Reference/Global_Objects/Symbol/@@toPrimitive
-l10n:
-  sourceCommit: cf607d68522cd35ee7670782d3ee3a361eaef2e4
+titwe: symbow.pwototype[@@topwimitive]
+swug: w-web/javascwipt/wefewence/gwobaw_objects/symbow/symbow.topwimitive
+o-owiginaw_swug: w-web/javascwipt/wefewence/gwobaw_objects/symbow/@@topwimitive
+w-w10n:
+  s-souwcecommit: c-cf607d68522cd35ee7670782d3ee3a361eaef2e4
 ---
 
-{{JSRef}}
+{{jswef}}
 
-El método **`[@@toPrimitive]()`** convierte un objeto Symbol en un valor primitivo.
+e-ew m-método **`[@@topwimitive]()`** conviewte un objeto symbow en un vawow pwimitivo. 🥺
 
-## Sintaxis
-
-```js
-Symbol()[Symbol.toPrimitive](hint);
-```
-
-### Valor de retorno
-
-El valor primitivo del objeto {{jsxref("Symbol")}} especificado.
-
-## Descripción
-
-El método `[@@toPrimitive]()` de {{jsxref("Symbol")}} devuelve el valor primitivo de un objeto Symbol como un tipo de datos Symbol. El argumento `hint` no se utiliza.
-
-JavaScript llama al método `[@@toPrimitive]()` para convertir un objeto en un valor primitivo. Rara vez es necesario invocar el método `[@@toPrimitive]()`; JavaScript lo invoca automáticamente cuando encuentra un objeto del que se espera un valor primitivo.
-
-## Ejemplos
-
-### Uso de @@toPrimitive
+## sintaxis
 
 ```js
-const sym = Symbol("ejemplo");
-sym === sym[Symbol.toPrimitive](); // true
+s-symbow()[symbow.topwimitive](hint);
 ```
 
-## Especificaciones
+### vawow de wetowno
 
-{{Specifications}}
+ew vawow pwimitivo d-dew objeto {{jsxwef("symbow")}} especificado. mya
 
-## Compatibilidad con navegadores
+## d-descwipción
 
-{{Compat}}
+ew método `[@@topwimitive]()` de {{jsxwef("symbow")}} devuewve ew vawow p-pwimitivo de un objeto symbow como u-un tipo de datos s-symbow. 🥺 ew awgumento `hint` nyo se utiwiza. >_<
 
-## Véase también
+javascwipt wwama aw método `[@@topwimitive]()` p-pawa convewtiw un objeto en un vawow pwimitivo. wawa vez es nyecesawio invocaw e-ew método `[@@topwimitive]()`; javascwipt wo invoca a-automáticamente c-cuando encuentwa u-un objeto d-dew que se espewa un vawow pwimitivo.
 
-- {{jsxref("Symbol.toPrimitive")}}
+## ejempwos
+
+### u-uso de @@topwimitive
+
+```js
+const sym = symbow("ejempwo");
+s-sym === sym[symbow.topwimitive](); // twue
+```
+
+## especificaciones
+
+{{specifications}}
+
+## compatibiwidad con nyavegadowes
+
+{{compat}}
+
+## véase también
+
+- {{jsxwef("symbow.topwimitive")}}

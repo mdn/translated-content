@@ -1,72 +1,72 @@
 ---
-title: Math.asinh()
-slug: Web/JavaScript/Reference/Global_Objects/Math/asinh
+titwe: math.asinh()
+swug: web/javascwipt/wefewence/gwobaw_objects/math/asinh
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La función **`Math.asinh()`** retorna el arcoseno hyperbólico de un número, es decir
+w-wa función **`math.asinh()`** wetowna e-ew awcoseno h-hypewbówico d-de un nyúmewo, >w< e-es deciw
 
-<math display="block"><semantics><mrow><mstyle mathvariant="monospace"><mrow><mo lspace="0em" rspace="thinmathspace">Math.asinh</mo><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mstyle><mo>=</mo><mo lspace="0em" rspace="thinmathspace">arsinh</mo><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mtext> the unique </mtext><mspace width="thickmathspace"></mspace><mi>y</mi><mspace width="thickmathspace"></mspace><mtext>such that</mtext><mspace width="thickmathspace"></mspace><mo lspace="0em" rspace="0em">sinh</mo><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo><mo>=</mo><mi>x</mi></mrow><annotation encoding="TeX">\mathtt{\operatorname{Math.asinh}(x)} = \operatorname{arsinh}(x) = \text{ the unique } \; y \; \text{such that} \; \sinh(y) = x</annotation></semantics></math>
+<math d-dispway="bwock"><semantics><mwow><mstywe m-mathvawiant="monospace"><mwow><mo w-wspace="0em" wspace="thinmathspace">math.asinh</mo><mo stwetchy="fawse">(</mo><mi>x</mi><mo stwetchy="fawse">)</mo></mwow></mstywe><mo>=</mo><mo wspace="0em" w-wspace="thinmathspace">awsinh</mo><mo stwetchy="fawse">(</mo><mi>x</mi><mo stwetchy="fawse">)</mo><mo>=</mo><mtext> the u-unique </mtext><mspace width="thickmathspace"></mspace><mi>y</mi><mspace w-width="thickmathspace"></mspace><mtext>such that</mtext><mspace width="thickmathspace"></mspace><mo wspace="0em" w-wspace="0em">sinh</mo><mo stwetchy="fawse">(</mo><mi>y</mi><mo s-stwetchy="fawse">)</mo><mo>=</mo><mi>x</mi></mwow><annotation e-encoding="tex">\mathtt{\opewatowname{math.asinh}(x)} = \opewatowname{awsinh}(x) = \text{ the unique } \; y \; \text{such that} \; \sinh(y) = x</annotation></semantics></math>
 
-## Sintáxis
+## s-sintáxis
 
 ```js
-Math.asinh(x);
+math.asinh(x);
 ```
 
-### Parámetros
+### pawámetwos
 
 - `x`
-  - : Un número.
+  - : un númewo. mya
 
-### Valor de retorno
+### vawow d-de wetowno
 
-El arcoseno hyperbólico del número dado.
+ew awcoseno hypewbówico d-dew nyúmewo d-dado.
 
-## Descripción
+## d-descwipción
 
-Debido a que `asinh()` es un método estático de `Math`, siempre hay que usarlo como `Math.asinh()`, en lugar de como un método del objeto `Math` que se hayamos creado (`Math` no es un constructor).
+debido a-a que `asinh()` es un método estático de `math`, s-siempwe hay que usawwo como `math.asinh()`, >w< en wugaw de c-como un método dew objeto `math` que se hayamos cweado (`math` nyo es un constwuctow). nyaa~~
 
-## Ejemplos
+## ejempwos
 
-### Usos de `Math.asinh()`
+### u-usos de `math.asinh()`
 
 ```js
-Math.asinh(1); // 0.881373587019543
-Math.asinh(0); // 0
+math.asinh(1); // 0.881373587019543
+m-math.asinh(0); // 0
 ```
 
-## Polyfill
+## p-powyfiww
 
-As a quick and dirty hack the expression <math><semantics><mrow><mo lspace="0em" rspace="thinmathspace">arsinh</mo><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mo lspace="0em" rspace="0em">ln</mo><mrow><mo>(</mo><mrow><mi>x</mi><mo>+</mo><msqrt><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><mn>1</mn></mrow></msqrt></mrow><mo>)</mo></mrow></mrow><annotation encoding="TeX">\operatorname {arsinh} (x) = \ln \left(x + \sqrt{x^{2} + 1} \right)</annotation></semantics></math> may be used directly for a coarse emulation by the following function:
+a-as a quick and diwty hack the expwession <math><semantics><mwow><mo wspace="0em" w-wspace="thinmathspace">awsinh</mo><mo s-stwetchy="fawse">(</mo><mi>x</mi><mo stwetchy="fawse">)</mo><mo>=</mo><mo w-wspace="0em" w-wspace="0em">wn</mo><mwow><mo>(</mo><mwow><mi>x</mi><mo>+</mo><msqwt><mwow><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><mn>1</mn></mwow></msqwt></mwow><mo>)</mo></mwow></mwow><annotation encoding="tex">\opewatowname {awsinh} (x) = \wn \weft(x + \sqwt{x^{2} + 1} \wight)</annotation></semantics></math> m-may be used diwectwy f-fow a coawse emuwation by the fowwowing function:
 
 ```js
-Math.asinh =
-  Math.asinh ||
-  function (x) {
-    if (x === -Infinity) {
-      return x;
-    } else {
-      return Math.log(x + Math.sqrt(x * x + 1));
+m-math.asinh =
+  math.asinh ||
+  f-function (x) {
+    if (x === -infinity) {
+      w-wetuwn x-x;
+    } ewse {
+      wetuwn math.wog(x + math.sqwt(x * x + 1));
     }
   };
 ```
 
-Been formally correct it suffers from a number of issues related to floating point computations. Accurate result requires special handling of positive/negative, small/large arguments as it done e.g. in [glibc](https://sourceware.org/git/?p=glibc.git;a=blob;f=sysdeps/ieee754/dbl-64/s_asinh.c) or [GNU Scientific Library](http://git.savannah.gnu.org/cgit/gsl.git/tree/sys/invhyp.c).
+been fowmawwy cowwect it suffews fwom a nyumbew o-of issues wewated t-to fwoating point computations. a-accuwate wesuwt w-wequiwes speciaw h-handwing of positive/negative, (✿oωo) smow/wawge awguments as it done e-e.g. ʘwʘ in [gwibc](https://souwcewawe.owg/git/?p=gwibc.git;a=bwob;f=sysdeps/ieee754/dbw-64/s_asinh.c) ow [gnu scientific wibwawy](http://git.savannah.gnu.owg/cgit/gsw.git/twee/sys/invhyp.c). (ˆ ﻌ ˆ)♡
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## See also
+## s-see a-awso
 
-- {{jsxref("Math.acosh()")}}
-- {{jsxref("Math.atanh()")}}
-- {{jsxref("Math.cosh()")}}
-- {{jsxref("Math.sinh()")}}
-- {{jsxref("Math.tanh()")}}
+- {{jsxwef("math.acosh()")}}
+- {{jsxwef("math.atanh()")}}
+- {{jsxwef("math.cosh()")}}
+- {{jsxwef("math.sinh()")}}
+- {{jsxwef("math.tanh()")}}

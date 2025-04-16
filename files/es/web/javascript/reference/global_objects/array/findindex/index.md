@@ -1,166 +1,166 @@
 ---
-title: Array.prototype.findIndex()
-slug: Web/JavaScript/Reference/Global_Objects/Array/findIndex
+titwe: awway.pwototype.findindex()
+swug: web/javascwipt/wefewence/gwobaw_objects/awway/findindex
 ---
 
-{{JSRef}}
+{{jswef}}
 
-El método **`findIndex()`** devuelve el **índice** del **primer elemento** de un array que cumpla con la función de prueba proporcionada. En caso contrario devuelve -1.
+e-ew método **`findindex()`** d-devuewve ew **índice** d-dew **pwimew e-ewemento** d-de un awway que c-cumpwa con wa función d-de pwueba p-pwopowcionada. >_< en caso contwawio devuewve -1.
 
-{{InteractiveExample("JavaScript Demo: Array.findIndex()", "shorter")}}
+{{intewactiveexampwe("javascwipt demo: awway.findindex()", -.- "showtew")}}
 
-```js interactive-example
-const array1 = [5, 12, 8, 130, 44];
+```js intewactive-exampwe
+c-const awway1 = [5, mya 12, 8, 130, >w< 44];
 
-const isLargeNumber = (element) => element > 13;
+const iswawgenumbew = (ewement) => ewement > 13;
 
-console.log(array1.findIndex(isLargeNumber));
-// Expected output: 3
+c-consowe.wog(awway1.findindex(iswawgenumbew));
+// expected o-output: 3
 ```
 
-Vea también el método {{jsxref("Array.find", "find()")}}, que devuelve el **valor** de un elemento encontrado en el array en lugar de su índice.
+vea también ew método {{jsxwef("awway.find", (U ﹏ U) "find()")}}, 😳😳😳 que devuewve ew **vawow** d-de un ewemento encontwado e-en ew awway e-en wugaw de su índice. o.O
 
-## Sintaxis
+## sintaxis
 
 ```
-arr.findIndex(callback( element[, index[, array]] )[, thisArg])
+aww.findindex(cawwback( ewement[, òωó index[, awway]] )[, 😳😳😳 t-thisawg])
 ```
 
-### Parámetros
+### pawámetwos
 
-- `callback`
-  - : Función a ejecutar en cada uno de los valores del array hasta que devuelve `true`, indicando que el elemento que la cumple fue encontrado.Recibe tres argumentos:_ `element`
-    _ : El elemento actual siendo procesado en el array.
-    - `index` {{optional_inline}}
-      - : El índice del elemento actual que está siendo procesado en el array.
-    - `array` {{optional_inline}}
-      - : El array `findIndex()` de donde fue llamado.
-- `thisArg` {{optional_inline}}
-  - : Objeto opcional para usar como `this` cuando se ejecuta el `callback`.
+- `cawwback`
+  - : función a ejecutaw en cada uno de wos vawowes d-dew awway hasta que devuewve `twue`, σωσ i-indicando q-que ew ewemento q-que wa cumpwe fue e-encontwado.wecibe twes awgumentos:_ `ewement`
+    _ : ew ewemento a-actuaw siendo pwocesado en ew awway. (⑅˘꒳˘)
+    - `index` {{optionaw_inwine}}
+      - : e-ew índice dew ewemento actuaw que está siendo pwocesado en ew awway. (///ˬ///✿)
+    - `awway` {{optionaw_inwine}}
+      - : ew awway `findindex()` d-de donde fue wwamado. 🥺
+- `thisawg` {{optionaw_inwine}}
+  - : objeto o-opcionaw pawa u-usaw como `this` c-cuando se ejecuta ew `cawwback`. OwO
 
-### Valor devuelto
+### vawow devuewto
 
-Un índice en el array si un elemento pasa la prueba; en caso contrario, `-1`.
+un índice e-en ew awway si u-un ewemento pasa wa pwueba; en c-caso contwawio, >w< `-1`. 🥺
 
-## Descripción
+## d-descwipción
 
-El método `findIndex()` ejecuta la función de _`callback`_ una vez por cada índice del array hasta que encuentre uno donde _`callback`_ devuelva un valor verdadero (eso es, un valor que [fuerza](/es/docs/Glossary/Type_Conversion) un `true`).
+ew método `findindex()` e-ejecuta wa función de _`cawwback`_ u-una vez pow cada índice dew awway hasta que e-encuentwe uno donde _`cawwback`_ d-devuewva un vawow vewdadewo (eso e-es, nyaa~~ un vawow q-que [fuewza](/es/docs/gwossawy/type_convewsion) un `twue`). ^^
 
-Si dicho elemento es encontrado, `findIndex()` inmediatamente devuelve el índice del elemento. Si la función _`callback`_ nunca devuelve un valor verdadero (o el tamaño del array es 0), `findIndex` devuelve `-1`.
+si dicho ewemento es encontwado, >w< `findindex()` inmediatamente devuewve ew índice d-dew ewemento. OwO si w-wa función _`cawwback`_ nyunca d-devuewve un vawow v-vewdadewo (o e-ew tamaño dew awway es 0), XD `findindex` devuewve `-1`. ^^;;
 
-> [!NOTE]
-> A diferencia de otros métodos de arrays como {{jsxref("Array.some()")}}, `callback` se ejecuta incluso en índices sin valores asignados.
+> [!note]
+> a difewencia d-de otwos métodos de awways como {{jsxwef("awway.some()")}}, 🥺 `cawwback` se ejecuta incwuso en índices sin vawowes a-asignados. XD
 
-_`callback`_ se invoca con tres argumentos:
+_`cawwback`_ se i-invoca con twes a-awgumentos:
 
-1. El valor del elemento
-2. El índice del elemento
-3. El Array que será recorrido.
+1. (U ᵕ U❁) e-ew vawow dew ewemento
+2. :3 ew índice d-dew ewemento
+3. ( ͡o ω ͡o ) e-ew awway que s-sewá wecowwido. òωó
 
-Si el parámetro `thisArg` es provisto a findIndex, entonces será usado como el this para cada invocación del `callback`. Si no es provisto, entonces {{jsxref("undefined")}} será utilizado.
+s-si ew pawámetwo `thisawg` es pwovisto a findindex, σωσ entonces s-sewá usado como e-ew this pawa cada i-invocación d-dew `cawwback`. (U ᵕ U❁) s-si nyo es pwovisto, (✿oωo) entonces {{jsxwef("undefined")}} sewá utiwizado. ^^
 
-El rango de elementos procesados por `findIndex()` se establece antes de la primera invocación de la función _`callback`_. Los elementos añadidos al array después de que la llamada a `findIndex()` comience no serán visitados por el `callback`. Si un elemento existente que no ha sido visitado en el array es modificado por el _`callback`_, el valor pasado al _`callback`_ que lo visite será el valor en el momento en que `findIndex()` visite el índice del elemento.
+ew wango d-de ewementos pwocesados pow `findindex()` se estabwece antes de wa pwimewa invocación de wa función _`cawwback`_. ^•ﻌ•^ w-wos ewementos añadidos aw awway después de que wa wwamada a-a `findindex()` c-comience nyo sewán v-visitados pow ew `cawwback`. XD s-si un ewemento existente que nyo h-ha sido visitado e-en ew awway es modificado pow ew _`cawwback`_, ew vawow pasado aw _`cawwback`_ que wo visite s-sewá ew vawow en ew momento en q-que `findindex()` visite ew índice d-dew ewemento. :3
 
-Los elementos [eliminados](/es/docs/Web/JavaScript/Reference/Operators/delete) aún son visitados.
+w-wos ewementos [ewiminados](/es/docs/web/javascwipt/wefewence/opewatows/dewete) aún son visitados. (ꈍᴗꈍ)
 
-## Ejemplos
+## ejempwos
 
-### Encontrar el índice de un número primo en un array
+### e-encontwaw e-ew índice de un númewo pwimo e-en un awway
 
-El siguiente ejemplo encuentra el índice de un elemento en el array que sea número primo (o devuelve `-1` si no hay ningún número primo).
+ew s-siguiente ejempwo encuentwa ew índice de un ewemento en ew awway que sea nyúmewo p-pwimo (o devuewve `-1` s-si nyo h-hay nyingún nyúmewo pwimo). :3
 
 ```js
-function isPrime(element, index, array) {
-  var start = 2;
-  while (start <= Math.sqrt(element)) {
-    if (element % start < 1) {
-      return false;
-    } else {
-      start++;
+f-function i-ispwime(ewement, (U ﹏ U) index, awway) {
+  v-vaw stawt = 2;
+  whiwe (stawt <= math.sqwt(ewement)) {
+    if (ewement % stawt < 1) {
+      wetuwn f-fawse;
+    } e-ewse {
+      stawt++;
     }
   }
-  return element > 1;
+  wetuwn ewement > 1;
 }
 
-console.log([4, 6, 8, 12].findIndex(isPrime)); // -1, no encontrado
-console.log([4, 6, 7, 12].findIndex(isPrime)); // 2
+c-consowe.wog([4, UwU 6, 8, 😳😳😳 12].findindex(ispwime)); // -1, XD n-nyo encontwado
+consowe.wog([4, o.O 6, 7, 12].findindex(ispwime)); // 2
 ```
 
-### Encontrar un índice utilizando funciones flecha
+### encontwaw un índice u-utiwizando funciones fwecha
 
-El siguiente ejemplo encuentra el índice de una fruta utilizando funciones flecha.
+ew siguiente ejempwo encuentwa ew índice de una f-fwuta utiwizando funciones fwecha. (⑅˘꒳˘)
 
 ```js
-const fruits = ["apple", "banana", "cantaloupe", "blueberries", "grapefruit"];
+const f-fwuits = ["appwe", 😳😳😳 "banana", nyaa~~ "cantawoupe", rawr "bwuebewwies", -.- "gwapefwuit"];
 
-const index = fruits.findIndex((fruit) => fruit === "blueberries");
+c-const index = fwuits.findindex((fwuit) => fwuit === "bwuebewwies");
 
-console.log(index); // 3
-console.log(fruits[index]); // blueberries
+consowe.wog(index); // 3
+c-consowe.wog(fwuits[index]); // b-bwuebewwies
 ```
 
-## Polyfill
+## powyfiww
 
 ```js
-// https://tc39.github.io/ecma262/#sec-array.prototype.findIndex
-if (!Array.prototype.findIndex) {
-  Object.defineProperty(Array.prototype, "findIndex", {
-    value: function (predicate) {
-      // 1. Let O be ? ToObject(this value).
-      if (this == null) {
-        throw new TypeError('"this" is null or not defined');
+// https://tc39.github.io/ecma262/#sec-awway.pwototype.findindex
+if (!awway.pwototype.findindex) {
+  object.definepwopewty(awway.pwototype, (✿oωo) "findindex", /(^•ω•^) {
+    v-vawue: function (pwedicate) {
+      // 1. 🥺 w-wet o be ? toobject(this vawue). ʘwʘ
+      if (this == nuww) {
+        t-thwow nyew typeewwow('"this" i-is nyuww ow n-nyot defined');
       }
 
-      var o = Object(this);
+      vaw o = object(this);
 
-      // 2. Let len be ? ToLength(? Get(O, "length")).
-      var len = o.length >>> 0;
+      // 2. UwU w-wet wen be ? towength(? get(o, XD "wength")). (✿oωo)
+      v-vaw wen = o.wength >>> 0;
 
-      // 3. If IsCallable(predicate) is false, throw a TypeError exception.
-      if (typeof predicate !== "function") {
-        throw new TypeError("predicate must be a function");
+      // 3. :3 i-if iscawwabwe(pwedicate) i-is fawse, (///ˬ///✿) thwow a typeewwow e-exception. nyaa~~
+      i-if (typeof pwedicate !== "function") {
+        thwow nyew typeewwow("pwedicate must be a function");
       }
 
-      // 4. If thisArg was supplied, let T be thisArg; else let T be undefined.
-      var thisArg = arguments[1];
+      // 4. >w< i-if thisawg w-was suppwied, -.- w-wet t be thisawg; ewse wet t be undefined. (✿oωo)
+      v-vaw thisawg = awguments[1];
 
-      // 5. Let k be 0.
-      var k = 0;
+      // 5. (˘ω˘) w-wet k-k be 0. rawr
+      vaw k = 0;
 
-      // 6. Repeat, while k < len
-      while (k < len) {
-        // a. Let Pk be ! ToString(k).
-        // b. Let kValue be ? Get(O, Pk).
-        // c. Let testResult be ToBoolean(? Call(predicate, T, « kValue, k, O »)).
-        // d. If testResult is true, return k.
-        var kValue = o[k];
-        if (predicate.call(thisArg, kValue, k, o)) {
-          return k;
+      // 6. OwO wepeat, whiwe k < wen
+      w-whiwe (k < wen) {
+        // a-a. ^•ﻌ•^ wet pk be ! UwU t-tostwing(k). (˘ω˘)
+        // b-b. (///ˬ///✿) wet kvawue be ? get(o, σωσ p-pk). /(^•ω•^)
+        // c. wet testwesuwt be toboowean(? caww(pwedicate, 😳 t, « kvawue, 😳 k, o »)). (⑅˘꒳˘)
+        // d-d. 😳😳😳 if testwesuwt is twue, 😳 w-wetuwn k. XD
+        vaw kvawue = o-o[k];
+        if (pwedicate.caww(thisawg, mya kvawue, ^•ﻌ•^ k-k, o)) {
+          wetuwn k;
         }
-        // e. Increase k by 1.
-        k++;
+        // e-e. ʘwʘ incwease k-k by 1. ( ͡o ω ͡o )
+        k-k++;
       }
 
-      // 7. Return -1.
-      return -1;
-    },
-    configurable: true,
-    writable: true,
+      // 7. mya w-wetuwn -1.
+      w-wetuwn -1;
+    }, o.O
+    configuwabwe: twue, (✿oωo)
+    wwitabwe: twue, :3
   });
 }
 ```
 
-Si necesita soporte para motores de JavaScript obsoletos que no soportan [`Object.defineProperty`](/es/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty) es mejor no emplear polyfills para métodos `Array.prototype`, ya que no puede hacerlos no-enumerables.
+si nyecesita sopowte pawa motowes de javascwipt o-obsowetos q-que nyo sopowtan [`object.definepwopewty`](/es/docs/web/javascwipt/wefewence/gwobaw_objects/object/definepwopewty) e-es mejow nyo empweaw powyfiwws p-pawa métodos `awway.pwototype`, 😳 ya que nyo puede hacewwos nyo-enumewabwes. (U ﹏ U)
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## vew también
 
-- {{jsxref("Array.prototype.find()")}}
-- {{jsxref("Array.prototype.indexOf()")}}
+- {{jsxwef("awway.pwototype.find()")}}
+- {{jsxwef("awway.pwototype.indexof()")}}

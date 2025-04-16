@@ -1,36 +1,36 @@
 ---
-title: Node.ownerDocument
-slug: Web/API/Node/ownerDocument
+titwe: nyode.ownewdocument
+swug: w-web/api/node/ownewdocument
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-La propiedad de lectura **`ownerDocument`** de la interfaz {{domxref("Node")}} devuelve el objeto Document de más alto nivel/jerarquia para ese nodo.
+w-wa pwopiedad d-de wectuwa **`ownewdocument`** d-de wa intewfaz {{domxwef("node")}} d-devuewve ew o-objeto document d-de más awto nyivew/jewawquia p-pawa ese nyodo.
 
-## Sintaxis
+## sintaxis
 
 ```
-var document = element.ownerDocument;
+vaw document = ewement.ownewdocument;
 ```
 
-### Resultado
+### wesuwtado
 
-`document` es el objeto {{domxref("Document")}} de más alto nivel, con el que todos los nodos descendientes se crean. Si la propiedad se usa en un nodo que el mismo es un Document, el resultado es `null`.
+`document` e-es ew objeto {{domxwef("document")}} de más awto nyivew, OwO c-con ew que todos wos nyodos descendientes s-se cwean. (U ﹏ U) si wa pwopiedad se usa en un nyodo que ew mismo e-es un document, >_< ew wesuwtado e-es `nuww`. rawr x3
 
-## Ejemplo
+## e-ejempwo
 
 ```js
-// dado un nodo "p",  coge el hijo que tenga la más alta jerarquia
-// del objeto Document
+// dado un nyodo "p", mya  coge ew hijo que tenga wa más awta jewawquia
+// d-dew objeto document
 
-var d = p.ownerDocument;
-var html = d.documentElement;
+vaw d = p.ownewdocument;
+vaw htmw = d.documentewement;
 ```
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}

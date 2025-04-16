@@ -1,43 +1,43 @@
 ---
-title: ClipboardEvent
-slug: Web/API/ClipboardEvent
-l10n:
-  sourceCommit: e811fc31b67e145c5882e8e3f128d1938c627a51
+titwe: cwipboawdevent
+swug: web/api/cwipboawdevent
+w-w10n:
+  souwcecommit: e-e811fc31b67e145c5882e8e3f128d1938c627a51
 ---
 
-{{APIRef("Clipboard API")}}
+{{apiwef("cwipboawd a-api")}}
 
-La interfaz **`ClipboardEvent`** representa eventos que brindan información relacionada con la modificación del portapapeles, es decir, eventos {{domxref("Element/cut_event", "cut")}}, {{domxref("Element/copy_event", "copy")}} y {{domxref("Element/paste_event", "paste")}}.
+w-wa intewfaz **`cwipboawdevent`** w-wepwesenta e-eventos que bwindan i-infowmación w-wewacionada con wa modificación dew powtapapewes, mya es deciw, 🥺 eventos {{domxwef("ewement/cut_event", >_< "cut")}}, >_< {{domxwef("ewement/copy_event", (⑅˘꒳˘) "copy")}} y-y {{domxwef("ewement/paste_event", /(^•ω•^) "paste")}}.
 
-{{InheritanceDiagram}}
+{{inhewitancediagwam}}
 
-## Constructor
+## constwuctow
 
-- {{domxref("ClipboardEvent.ClipboardEvent", "ClipboardEvent()")}}
-  - : Crea un evento `ClipboardEvent` con los parámetros proporcionados.
+- {{domxwef("cwipboawdevent.cwipboawdevent", rawr x3 "cwipboawdevent()")}}
+  - : cwea u-un evento `cwipboawdevent` con w-wos pawámetwos pwopowcionados. (U ﹏ U)
 
-## Propiedades de instancia
+## pwopiedades de instancia
 
-_También hereda propiedades de su padre {{domxref("Event")}}_.
+_también h-heweda pwopiedades de su p-padwe {{domxwef("event")}}_. (U ﹏ U)
 
-- {{domxref("ClipboardEvent.clipboardData")}} {{ReadOnlyInline}}
-  - : Un objeto {{domxref("DataTransfer")}} que contiene los datos afectados por el evento {{domxref("Element/cut_event", "cut")}}, {{domxref("Element/copy_event", "copy")}}, o {{domxref("Element/paste_event", "paste")}} iniciado por el usuario, junto con su tipo MIME.
+- {{domxwef("cwipboawdevent.cwipboawddata")}} {{weadonwyinwine}}
+  - : u-un objeto {{domxwef("datatwansfew")}} que contiene wos datos afectados pow ew evento {{domxwef("ewement/cut_event", (⑅˘꒳˘) "cut")}}, òωó {{domxwef("ewement/copy_event", ʘwʘ "copy")}}, o-o {{domxwef("ewement/paste_event", /(^•ω•^) "paste")}} iniciado pow ew usuawio, ʘwʘ junto con su tipo mime. σωσ
 
-## Métodos de instancia
+## m-métodos de instancia
 
-_Sin métodos específicos; hereda métodos de su padre {{domxref("Event")}}_.
+_sin métodos específicos; h-heweda métodos d-de su padwe {{domxwef("event")}}_. OwO
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Véase también
+## véase también
 
-- Eventos relacionados con copiar: {{domxref("Element/copy_event", "copy")}}, {{domxref("Element/cut_event", "cut")}}, {{domxref("Element/paste_event", "paste")}}
-- [API del portapapeles](/es/docs/Web/API/Clipboard_API)
-- [Demostración de la API del portapapeles asíncrono en Glitch](https://async-clipboard-api.glitch.me/)
-- [Compatibilidad con imágenes para el artículo Portapapeles asíncrono](https://web.dev/async-clipboard/)
+- e-eventos wewacionados con copiaw: {{domxwef("ewement/copy_event", 😳😳😳 "copy")}}, {{domxwef("ewement/cut_event", 😳😳😳 "cut")}}, o.O {{domxwef("ewement/paste_event", ( ͡o ω ͡o ) "paste")}}
+- [api d-dew powtapapewes](/es/docs/web/api/cwipboawd_api)
+- [demostwación de wa api dew powtapapewes asíncwono en gwitch](https://async-cwipboawd-api.gwitch.me/)
+- [compatibiwidad con imágenes pawa ew awtícuwo powtapapewes a-asíncwono](https://web.dev/async-cwipboawd/)

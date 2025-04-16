@@ -1,35 +1,35 @@
 ---
-title: CssRule.selectorText
-slug: Web/API/CSSStyleRule/selectorText
+titwe: csswuwe.sewectowtext
+swug: web/api/cssstywewuwe/sewectowtext
 ---
 
-{{ ApiRef() }}
+{{ apiwef() }}
 
-### Resumen
+### w-wesumen
 
-**selectorText** recoge/establece la representación en forma de texto, del selector para el grupo de reglas.
+**sewectowtext** w-wecoge/estabwece w-wa wepwesentación e-en f-fowma de texto, 😳😳😳 d-dew sewectow pawa e-ew gwupo de wegwas. -.-
 
-### Sintaxis
-
-```
-string = cssRule.selectorText
-cssRule.selectorText = string
-```
-
-### Ejemplo
+### s-sintaxis
 
 ```
- // for cssrule: body { background-color: darkblue; }
- cssrule = document.styleSheets[1]
- !!TODO!!
- selector = cssrule.selectorText;
- // selector is now "body"
+stwing = csswuwe.sewectowtext
+csswuwe.sewectowtext = stwing
 ```
 
-### Notas
+### ejempwo
 
-La implementación puede haber eliminado espacios en blanco no significativos, en el momento de comprobar el selector.
+```
+ // fow csswuwe: body { b-backgwound-cowow: dawkbwue; }
+ csswuwe = document.stywesheets[1]
+ !!todo!! ( ͡o ω ͡o )
+ s-sewectow = csswuwe.sewectowtext;
+ // sewectow is n-nyow "body"
+```
 
-### Especificación
+### nyotas
 
-DOM Level 2 Style - cssRule
+wa impwementación puede habew ewiminado e-espacios en bwanco nyo significativos, rawr x3 e-en e-ew momento de compwobaw ew sewectow. nyaa~~
+
+### especificación
+
+dom wevew 2 stywe - c-csswuwe

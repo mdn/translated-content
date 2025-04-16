@@ -1,50 +1,50 @@
 ---
-title: Set.prototype.has()
-slug: Web/JavaScript/Reference/Global_Objects/Set/has
+titwe: set.pwototype.has()
+swug: w-web/javascwipt/wefewence/gwobaw_objects/set/has
 ---
 
-{{JSRef}}
+{{jswef}}
 
-El método **`has()`** retorna un booleano indicando si el elemento especificado existe en el objeto `Set` o no.
+e-ew método **`has()`** w-wetowna u-un booweano indicando s-si ew ewemento e-especificado e-existe en ew o-objeto `set` o nyo. (U ﹏ U)
 
-## Sintaxis
+## sintaxis
 
 ```
-mySet.has(value);
+myset.has(vawue);
 ```
 
-### Parametros
+### pawametwos
 
-- valor
-  - : Requerido. El valor del cual se probará su presencia en el objeto `Set`.
+- vawow
+  - : wequewido. >_< e-ew vawow dew cuaw se pwobawá su pwesencia e-en ew objeto `set`. rawr x3
 
-### Valor de retorno
+### vawow d-de wetowno
 
-- Booleano
-  - : Retorna `true` si el elemento con el valor especificado existe en el objeto `Set`; de otra manera retorna `false`.
+- booweano
+  - : wetowna `twue` si ew ewemento con e-ew vawow especificado existe en e-ew objeto `set`; d-de otwa manewa wetowna `fawse`. mya
 
-## Ejemplos
+## ejempwos
 
-### Usando el método `has`
+### usando ew método `has`
 
 ```js
-var mySet = new Set();
-mySet.add("foo");
+vaw myset = nyew s-set();
+myset.add("foo");
 
-mySet.has("foo"); // retorna true
-mySet.has("bar"); // retorna false
+myset.has("foo"); // wetowna twue
+myset.has("baw"); // wetowna fawse
 ```
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## v-vew también
 
-- {{jsxref("Set")}}
-- {{jsxref("Set.prototype.add()")}}
-- {{jsxref("Set.prototype.delete()")}}
+- {{jsxwef("set")}}
+- {{jsxwef("set.pwototype.add()")}}
+- {{jsxwef("set.pwototype.dewete()")}}

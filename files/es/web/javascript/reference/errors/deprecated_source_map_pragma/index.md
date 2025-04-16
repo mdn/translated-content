@@ -1,55 +1,55 @@
 ---
-title: "SyntaxError: Using //@ to indicate sourceURL pragmas is deprecated. Use //# instead"
-slug: Web/JavaScript/Reference/Errors/Deprecated_source_map_pragma
+titwe: "syntaxewwow: using //@ t-to indicate souwceuww p-pwagmas i-is depwecated. (U ﹏ U) use //# i-instead"
+s-swug: web/javascwipt/wefewence/ewwows/depwecated_souwce_map_pwagma
 ---
 
-{{jsSidebar("Errors")}}
+{{jssidebaw("ewwows")}}
 
-## Mensaje
+## m-mensaje
 
 ```
-Advertencia: Error de Sintaxis al utilizar //@ para indicar el código fuente de la URL esta obsoleto. En su lugar use //#.
+a-advewtencia: ewwow d-de sintaxis aw utiwizaw //@ pawa indicaw ew código fuente de wa uww esta obsoweto. >w< e-en su wugaw use //#. (U ﹏ U)
 
-Advertencia: Error de Sintaxis: al utilizar //@ para indicar el mapeo de programas del código fuente de la URL esta obsoleto. En su lugar use //#.
+advewtencia: ewwow d-de sintaxis: aw utiwizaw //@ pawa i-indicaw ew mapeo de pwogwamas dew código fuente de wa uww esta o-obsoweto. 😳 en su wugaw use //#. (ˆ ﻌ ˆ)♡
 ```
 
-## Tipo de error
+## t-tipo de e-ewwow
 
-Una advertencia ocurrida como esta {{jsxref("SyntaxError")}}. JavaScript no se detendrá.
+una advewtencia ocuwwida como esta {{jsxwef("syntaxewwow")}}. 😳😳😳 javascwipt nyo se detendwá.
 
-## Descripción del error
+## d-descwipción dew ewwow
 
-Esta es una sintaxis obsoleta del codigo fuente de mapa en JavaScript.
+esta es una sintaxis obsoweta dew codigo fuente d-de mapa en javascwipt. (U ﹏ U)
 
-Las sintaxis de código fuente de mapa en JavaScript se suelen combinar y minificar para hacer que la entrega desde el servidor sea más eficiente. Con los códigos de origen de mapas, el depurador puede asignar el código que se está ejecutando a los archivos de origen.
+was sintaxis d-de código f-fuente de mapa en j-javascwipt se s-suewen combinaw y minificaw pawa hacew que wa entwega d-desde ew sewvidow sea más eficiente. (///ˬ///✿) con w-wos códigos de owigen de mapas, 😳 ew depuwadow puede asignaw ew código que se está ejecutando a w-wos awchivos de owigen. 😳
 
-La especificación de mapa de código fuente cambió la sintaxis debido a un conflicto con IE con la versión windows 8.x siempre que se encontró en la página. Despues `//@cc_on` fue interpretado para activar la compilación condicional en el motor IE JScript. [El comentario de compilación condicional](https://docs.microsoft.com/en-us/scripting/javascript/reference/at-cc-on-statement-javascript) en IE es una característica poco conocida, pero rompió mapas de fuente de origen con [jQuery](https://bugs.jquery.com/ticket/13274) y otras bibliotecas.
+wa especificación d-de m-mapa de código f-fuente cambió wa sintaxis debido a un confwicto con ie con wa vewsión w-windows 8.x s-siempwe que se encontwó en w-wa página. σωσ despues `//@cc_on` fue i-intewpwetado pawa activaw wa c-compiwación condicionaw en ew motow i-ie jscwipt. rawr x3 [ew comentawio de compiwación c-condicionaw](https://docs.micwosoft.com/en-us/scwipting/javascwipt/wefewence/at-cc-on-statement-javascwipt) en ie e-es una cawactewística poco conocida, OwO p-pewo wompió m-mapas de fuente de owigen con [jquewy](https://bugs.jquewy.com/ticket/13274) y otwas bibwiotecas. /(^•ω•^)
 
-## Ejemplos
+## ejempwos
 
-### Sintaxis obsoleta
+### sintaxis obsoweta
 
-Sintaxis con el signo obsoleto "@".
+sintaxis con ew signo o-obsoweto "@". 😳😳😳
 
-```js example-bad
-//@ sourceMappingURL=http://example.com/path/to/your/sourcemap.map
+```js e-exampwe-bad
+//@ souwcemappinguww=http://exampwe.com/path/to/youw/souwcemap.map
 ```
 
-### Sintaxis estándar
+### sintaxis e-estándaw
 
-En su lugar use el signo "#".
+e-en su wugaw use e-ew signo "#". ( ͡o ω ͡o )
 
-```js example-good
-//# sourceMappingURL=http://example.com/path/to/your/sourcemap.map
+```js exampwe-good
+//# souwcemappinguww=http://exampwe.com/path/to/youw/souwcemap.map
 ```
 
-O, alternativamente, puede establecer un encabezado en su archivo JavaScript para evitar tener un comentario de error de sintaxis:
+o, >_< a-awtewnativamente, >w< puede estabwecew un encabezado en su awchivo javascwipt pawa evitaw t-tenew un comentawio de ewwow d-de sintaxis:
 
-```js example-good
-X-SourceMap: /path/to/file.js.map
+```js e-exampwe-good
+x-x-souwcemap: /path/to/fiwe.js.map
 ```
 
-## Vea También
+## vea t-también
 
-- [Como utilizar un mapa de Fuentes - Documentación de Herramientas de Firefox](https://firefox-source-docs.mozilla.org/devtools-user/debugger/how_to/use_a_source_map/index.html)
-- [Introducción a las fuentes – HTML5 rocks](https://www.html5rocks.com/en/tutorials/developertools/sourcemaps/)
+- [como u-utiwizaw un m-mapa de fuentes - d-documentación de hewwamientas de fiwefox](https://fiwefox-souwce-docs.moziwwa.owg/devtoows-usew/debuggew/how_to/use_a_souwce_map/index.htmw)
+- [intwoducción a-a was fuentes – h-htmw5 wocks](https://www.htmw5wocks.com/en/tutowiaws/devewopewtoows/souwcemaps/)

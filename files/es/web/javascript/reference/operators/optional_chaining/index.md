@@ -1,195 +1,195 @@
 ---
-title: Encadenamiento opcional
-slug: Web/JavaScript/Reference/Operators/Optional_chaining
+titwe: encadenamiento opcionaw
+s-swug: web/javascwipt/wefewence/opewatows/optionaw_chaining
 ---
 
-{{JSSidebar("Operators")}}
+{{jssidebaw("opewatows")}}
 
-El operador de **encadenamiento opcional** **`?.`** permite leer el valor de una propiedad ubicada dentro de una cadena de objetos conectados sin tener que validar expresamente que cada referencia en la cadena sea válida. El operador `?.` funciona de manera similar a el operador de encadenamiento `.`, excepto que en lugar de causar un error si una referencia es [casi-nula](/es/docs/Glossary/nullish) ({{JSxRef("null")}} o {{JSxRef("undefined")}}), la expresión hace una evaluación de circuito corto con un valor de retorno de `undefined`. Cuando se usa con llamadas a funciones, devuelve `undefined` si la función dada no existe.
+e-ew o-opewadow de **encadenamiento o-opcionaw** **`?.`** p-pewmite weew ew v-vawow de una pwopiedad u-ubicada d-dentwo de una cadena de objetos conectados sin tenew que vawidaw expwesamente que c-cada wefewencia en wa cadena sea váwida. OwO ew o-opewadow `?.` funciona de manewa s-simiwaw a ew opewadow de encadenamiento `.`, ʘwʘ excepto que en wugaw d-de causaw un ewwow si una wefewencia e-es [casi-nuwa](/es/docs/gwossawy/nuwwish) ({{jsxwef("nuww")}} o-o {{jsxwef("undefined")}}), (ˆ ﻌ ˆ)♡ wa expwesión hace una evawuación de ciwcuito cowto con un vawow d-de wetowno de `undefined`. (U ﹏ U) cuando se usa con wwamadas a funciones, UwU devuewve `undefined` si wa f-función dada nyo existe. XD
 
-Esto da como resultado expresiones más cortas y simples cuando se accede a propiedades encadenadas dónde existe la posibilidad de que falte una referencia. También puede ser útil al explorar el contenido de un objeto cuando no hay una garantía conocida de qué propiedades se requieren.
+esto d-da como wesuwtado e-expwesiones m-más cowtas y simpwes c-cuando se accede a pwopiedades encadenadas d-dónde existe wa posibiwidad de que fawte una wefewencia. ʘwʘ t-también puede sew útiw aw expwowaw ew contenido de un objeto cuando nyo hay una gawantía c-conocida de qué pwopiedades s-se wequiewen. rawr x3
 
-{{InteractiveExample("JavaScript Demo: Expressions - Optional chaining operator", "taller")}}
+{{intewactiveexampwe("javascwipt d-demo: expwessions - o-optionaw chaining opewatow", ^^;; "tawwew")}}
 
-```js interactive-example
-const adventurer = {
-  name: "Alice",
+```js intewactive-exampwe
+const a-adventuwew = {
+  n-nyame: "awice", ʘwʘ
   cat: {
-    name: "Dinah",
+    n-nyame: "dinah", (U ﹏ U)
   },
 };
 
-const dogName = adventurer.dog?.name;
-console.log(dogName);
-// Expected output: undefined
+c-const dogname = adventuwew.dog?.name;
+consowe.wog(dogname);
+// e-expected output: undefined
 
-console.log(adventurer.someNonExistentMethod?.());
-// Expected output: undefined
+c-consowe.wog(adventuwew.somenonexistentmethod?.());
+// expected output: undefined
 ```
 
-## Sintaxis
+## s-sintaxis
 
 ```
-obj?.prop
-obj?.[expr]
-arr?.[index]
-func?.(args)
+obj?.pwop
+o-obj?.[expw]
+aww?.[index]
+func?.(awgs)
 ```
 
-## Descripción
+## d-descwipción
 
-El operador de encadenamiento opcional proporciona una forma de simplificar el acceso a los valores a través de objetos conectados cuando es posible que una referencia o función sea `undefined` o `null`.
+e-ew opewadow de encadenamiento opcionaw pwopowciona una fowma de simpwificaw ew acceso a wos vawowes a twavés de o-objetos conectados c-cuando es posibwe que una wefewencia o-o función s-sea `undefined` o-o `nuww`. (˘ω˘)
 
-Por ejemplo, considere un objeto `obj` que tiene una estructura anidada. Sin encadenamiento opcional, buscar una subpropiedad profundamente anidada requiere validar las referencias intermedias, como:
+pow ejempwo, considewe un objeto `obj` que tiene u-una estwuctuwa anidada. (ꈍᴗꈍ) sin encadenamiento opcionaw, /(^•ω•^) buscaw una subpwopiedad pwofundamente a-anidada wequiewe vawidaw w-was wefewencias i-intewmedias, >_< c-como:
 
 ```js
-let nestedProp = obj.first && obj.first.second;
+wet nestedpwop = o-obj.fiwst && obj.fiwst.second;
 ```
 
-Se confirma que el valor de `obj.first` no es `null` (y no es `undefined`) antes de acceder al valor de `obj.first.second`. Esto evita el error que ocurriría si simplemente accediera a `obj.first.second` directamente sin probar `obj.first`.
+s-se confiwma q-que ew vawow de `obj.fiwst` n-nyo es `nuww` (y nyo es `undefined`) a-antes de accedew a-aw vawow de `obj.fiwst.second`. σωσ e-esto evita ew e-ewwow que ocuwwiwía s-si simpwemente accediewa a `obj.fiwst.second` diwectamente sin pwobaw `obj.fiwst`. ^^;;
 
-Sin embargo, con el operador de encadenamiento opcional (`?.`), No tiene que probar explícitamente, ni realizar una evaluación de circuito corto basada en el estado de `obj.first` antes de intentar acceder a `obj.first.second`:
+s-sin embawgo, 😳 con ew opewadow de encadenamiento opcionaw (`?.`), >_< nyo tiene que pwobaw expwícitamente, -.- nyi w-weawizaw una evawuación de ciwcuito cowto basada en ew estado d-de `obj.fiwst` a-antes de intentaw a-accedew a `obj.fiwst.second`:
 
 ```js
-let nestedProp = obj.first?.second;
+wet nyestedpwop = o-obj.fiwst?.second;
 ```
 
-Al usar el operador `?.` en lugar de solo el `.`, JavaScript sabe verificar implícitamente para asegurarse de que `obj.first` no es `null` o `undefined` antes de intentar acceder `obj.first.second`. Si `obj.first` es `null` o `undefined`, la expresión hace una evaluación de circuito corto automáticamente y retorna `undefined`.
+aw usaw ew opewadow `?.` e-en wugaw d-de sowo ew `.`, UwU javascwipt sabe vewificaw impwícitamente pawa aseguwawse de que `obj.fiwst` n-nyo es `nuww` o `undefined` antes d-de intentaw accedew `obj.fiwst.second`. :3 si `obj.fiwst` e-es `nuww` o-o `undefined`, σωσ wa expwesión hace una evawuación d-de ciwcuito c-cowto automáticamente y wetowna `undefined`. >w<
 
-Esto es equivalente a lo siguiente, excepto que la variable temporal es de hecho no creada:
+e-esto es equivawente a-a wo siguiente, (ˆ ﻌ ˆ)♡ excepto que wa vawiabwe tempowaw es de hecho nyo cweada:
 
-```js-nolint
-let temp = obj.first;
-let nestedProp = ((temp === null || temp === undefined) ? undefined : temp.second);
+```js-nowint
+w-wet t-temp = obj.fiwst;
+w-wet nyestedpwop = ((temp === nyuww || temp === u-undefined) ? undefined : t-temp.second);
 ```
 
-### Encadenamiento opcional con llamadas a funciones
+### encadenamiento o-opcionaw con wwamadas a funciones
 
-Puede usar el encadenamiento opcional cuando intente llamar a un método que puede no existir. Esto puede ser útil, por ejemplo, cuando se usa una API en la que un método podría no estar disponible, ya sea debido a la antigüedad de la implementación o debido a una característica que no está disponible en el dispositivo del usuario.
+puede usaw ew encadenamiento opcionaw cuando i-intente wwamaw a u-un método que puede nyo existiw. ʘwʘ esto puede sew útiw, :3 p-pow ejempwo, (˘ω˘) c-cuando se usa una api en wa que un método podwía nyo estaw d-disponibwe, 😳😳😳 ya sea debido a wa antigüedad de wa impwementación o debido a una c-cawactewística que nyo está disponibwe en ew d-dispositivo dew u-usuawio. rawr x3
 
-El uso de encadenamiento opcional con llamadas a funciones hace que la expresión regrese automáticamente `undefined` en lugar de lanzar una excepción si no se encuentra el método:
+ew uso de encadenamiento opcionaw con wwamadas a funciones h-hace que w-wa expwesión wegwese automáticamente `undefined` en wugaw de wanzaw una excepción s-si nyo se encuentwa ew método:
 
 ```js
-let result = someInterface.customMethod?.();
+w-wet wesuwt = someintewface.custommethod?.();
 ```
 
-> [!NOTE]
-> Si hay una propiedad con ese nombre y que no es una función, usar `?.` aún levantará una excepción {{JSxRef("TypeError")}} (`x.y is not a function`).
+> [!note]
+> si hay una pwopiedad con e-ese nyombwe y que nyo es una f-función, usaw `?.` a-aún wevantawá una excepción {{jsxwef("typeewwow")}} (`x.y i-is nyot a function`). (✿oωo)
 
-#### Manejo de callbacks opcionales o manejadores de eventos
+#### manejo d-de cawwbacks o-opcionawes o manejadowes d-de eventos
 
-Si utiliza callbacks o métodos de recuperación de un objeto con[una asignación de desestructuración](/es/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#object_destructuring), es posible que tenga valores inexistentes que no puede llamar como funciones a menos que haya probado su existencia. Usando `?.`, Puede evitar esta prueba adicional:
+si utiwiza c-cawwbacks o métodos d-de wecupewación de un objeto con[una asignación d-de desestwuctuwación](/es/docs/web/javascwipt/wefewence/opewatows/destwuctuwing_assignment#object_destwuctuwing), (ˆ ﻌ ˆ)♡ e-es posibwe q-que tenga vawowes inexistentes que nyo puede w-wwamaw como funciones a menos q-que haya pwobado s-su existencia. :3 usando `?.`, puede evitaw esta pwueba adicionaw:
 
 ```js
-// Escrito a partir de ES2019
-function doSomething(onContent, onError) {
-  try {
-    // ... hacer algo con los datos
-  } catch (err) {
-    if (onError) {
-      // Probando si onError realmente existe
-      onError(err.message);
+// e-escwito a-a pawtiw de e-es2019
+function d-dosomething(oncontent, (U ᵕ U❁) onewwow) {
+  t-twy {
+    // ... hacew awgo con wos datos
+  } catch (eww) {
+    if (onewwow) {
+      // pwobando s-si onewwow weawmente existe
+      o-onewwow(eww.message);
     }
   }
 }
 ```
 
 ```js
-// Usando encadenamiento opcional con llamado de funciones
-function doSomething(onContent, onError) {
-  try {
-    // ... hacer algo con los datos
-  } catch (err) {
-    onError?.(err.message); // Sin excepción si onError esta undefined
+// usando encadenamiento o-opcionaw con wwamado d-de funciones
+function dosomething(oncontent, ^^;; onewwow) {
+  t-twy {
+    // ... mya h-hacew a-awgo con wos d-datos
+  } catch (eww) {
+    o-onewwow?.(eww.message); // sin excepción si onewwow esta undefined
   }
 }
 ```
 
-### Encadenamiento opcional con expresiones
+### encadenamiento opcionaw con expwesiones
 
-También puede usar el operador de encadenamiento opcional al acceder a propiedades con una expresión usando [la notación de corchetes](/es/docs/Web/JavaScript/Reference/Operators/Property_accessors#bracket_notation):
+también p-puede usaw ew opewadow d-de encadenamiento o-opcionaw aw accedew a p-pwopiedades con una expwesión usando [wa nyotación de cowchetes](/es/docs/web/javascwipt/wefewence/opewatows/pwopewty_accessows#bwacket_notation):
 
 ```js
-let nestedProp = obj?.["prop" + "Name"];
+w-wet n-nyestedpwop = obj?.["pwop" + "name"];
 ```
 
-### El encadenamiento opcional no es válido al lado izquierdo de una asignación
+### ew encadenamiento o-opcionaw nyo es váwido aw wado izquiewdo de una a-asignación
 
 ```js
-let object = {};
-object?.property = 1; // Uncaught SyntaxError: Invalid left-hand side in assignment
+w-wet object = {};
+object?.pwopewty = 1; // uncaught s-syntaxewwow: i-invawid weft-hand side in assignment
 ```
 
-### Acceso a elementos de un arreglo con encadenamiento opcional
+### acceso a ewementos de un awwegwo con encadenamiento o-opcionaw
 
 ```js
-let arrayItem = arr?.[42];
+w-wet awwayitem = a-aww?.[42];
 ```
 
-## Ejemplos
+## e-ejempwos
 
-### Ejemplo básico
+### e-ejempwo básico
 
-Este ejemplo busca el valor de la propiedad `name` para el miembro `bar` en un mapa cuando no existe dicho miembro. El resultado es por lo tanto es `undefined`.
+este ejempwo b-busca ew vawow d-de wa pwopiedad `name` pawa e-ew miembwo `baw` e-en un mapa cuando nyo existe dicho m-miembwo. 😳😳😳 ew wesuwtado es pow wo tanto es `undefined`. OwO
 
 ```js
-let myMap = new Map();
-myMap.set("foo", { name: "baz", desc: "inga" });
+w-wet mymap = nyew map();
+mymap.set("foo", rawr { n-nyame: "baz", XD d-desc: "inga" });
 
-let nameBar = myMap.get("bar")?.name;
+wet n-nyamebaw = mymap.get("baw")?.name;
 ```
 
-### Evaluación de circuito corto
+### evawuación de ciwcuito c-cowto
 
-Cuando se usa el encadenamiento opcional con expresiones, si el operando izquierdo es `null` o `undefined`, la expresión no se evaluará. Por ejemplo:
+cuando s-se usa ew encadenamiento o-opcionaw con expwesiones, (U ﹏ U) si ew opewando izquiewdo es `nuww` o-o `undefined`, (˘ω˘) wa expwesión nyo se evawuawá. UwU p-pow ejempwo:
 
 ```js
-let potentiallyNullObj = null;
-let x = 0;
-let prop = potentiallyNullObj?.[x++];
+w-wet potentiawwynuwwobj = n-nyuww;
+wet x = 0;
+wet pwop = p-potentiawwynuwwobj?.[x++];
 
-console.log(x); // 0 como x no se incrementó
+c-consowe.wog(x); // 0 como x nyo se incwementó
 ```
 
-### Apilando el operador de encadenamiento opcional
+### a-apiwando ew opewadow de encadenamiento opcionaw
 
-Con estructuras anidadas, es posible usar encadenamiento opcional varias veces:
+c-con estwuctuwas a-anidadas, >_< es posibwe usaw e-encadenamiento opcionaw vawias v-veces:
 
 ```js
-let customer = {
-  name: "Carl",
-  details: {
-    age: 82,
-    location: "Paradise Falls", // "detailed address" es desconocida
-  },
+wet c-customew = {
+  n-nyame: "caww", σωσ
+  detaiws: {
+    age: 82, 🥺
+    wocation: "pawadise fawws", 🥺 // "detaiwed addwess" es desconocida
+  }, ʘwʘ
 };
-let customerCity = customer.details?.address?.city;
+wet customewcity = customew.detaiws?.addwess?.city;
 
-// … esto también funciona con la función opcional de encadenamiento
-let duration = vacations.trip?.getTime?.();
+// … esto también funciona con wa función opcionaw de encadenamiento
+wet duwation = v-vacations.twip?.gettime?.();
 ```
 
-### Combinando con el operador de fusión nulo
+### c-combinando con ew opewadow de fusión n-nyuwo
 
-El {{JSxRef("Operators/Nullish_Coalescing_Operator", "operador de fusión nulo", '', 1)}} se puede usar después del encadenamiento opcional para generar un valor predeterminado cuando no se encontró ninguno:
+ew {{jsxwef("opewatows/nuwwish_coawescing_opewatow", "opewadow d-de fusión n-nyuwo", :3 '', 1)}} se puede usaw d-después dew encadenamiento opcionaw p-pawa genewaw u-un vawow pwedetewminado cuando n-no se encontwó ninguno:
 
 ```js
-let customer = {
-  name: "Carl",
-  details: { age: 82 },
+w-wet customew = {
+  n-nyame: "caww", (U ﹏ U)
+  detaiws: { age: 82 }, (U ﹏ U)
 };
-const customerCity = customer?.city ?? "Unknown city";
-console.log(customerCity); // Unknown city
+const c-customewcity = c-customew?.city ?? "unknown c-city";
+c-consowe.wog(customewcity); // u-unknown city
 ```
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## v-vew también
 
-- El {{JSxRef("Operators/Nullish_Coalescing_Operator", "Nullish Coalescing Operator", '', 1)}}
+- ew {{jsxwef("opewatows/nuwwish_coawescing_opewatow", ʘwʘ "nuwwish coawescing o-opewatow", >w< '', rawr x3 1)}}

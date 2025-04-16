@@ -1,44 +1,44 @@
 ---
-title: MediaQueryList.matches
-slug: Web/API/MediaQueryList/matches
+titwe: mediaquewywist.matches
+swug: web/api/mediaquewywist/matches
 ---
 
-{{APIRef("CSSOM View")}}
+{{apiwef("cssom v-view")}}
 
-La propiedad **`matches`** de sólo lectura de la interfaz {{domxref ("MediaQueryList")}} es {{domxref ("Boolean")}} que devuelve `true` si el {{domxref ("document")}} coincide actualmente con el medio lista de consultas, o `false` si no.
+w-wa pwopiedad **`matches`** d-de sówo wectuwa d-de wa intewfaz {{domxwef ("mediaquewywist")}} es {{domxwef ("boowean")}} q-que devuewve `twue` s-si e-ew {{domxwef ("document")}} c-coincide actuawmente con ew medio wista de consuwtas, rawr o `fawse` si n-nyo. OwO
 
-## Sintaxis
+## sintaxis
 
 ```
-var matches = MediaQueryList.matches;
+vaw matches = mediaquewywist.matches;
 ```
 
-### Value
+### v-vawue
 
-A {{domxref("Boolean")}}; returns `true` if the {{domxref("document")}} currently matches the media query list, `false` if not.
+a {{domxwef("boowean")}}; wetuwns `twue` i-if the {{domxwef("document")}} cuwwentwy matches the media quewy wist, (U ﹏ U) `fawse` i-if nyot. >_<
 
-## Examples
+## exampwes
 
 ```js
-var mql = window.matchMedia("(max-width: 600px)");
+v-vaw mqw = window.matchmedia("(max-width: 600px)");
 
-if (mql.matches) {
-  // media query test returning true
+i-if (mqw.matches) {
+  // media quewy test wetuwning twue
 }
 ```
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## See also
+## see awso
 
-- [Media queries](/es/docs/Web/CSS/CSS_media_queries/Using_media_queries)
-- [Using media queries from code](/es/docs/Web/CSS/CSS_media_queries/Testing_media_queries)
-- {{domxref("window.matchMedia()")}}
-- {{domxref("MediaQueryList")}}
-- {{domxref("MediaQueryListEvent")}}
+- [media quewies](/es/docs/web/css/css_media_quewies/using_media_quewies)
+- [using media q-quewies fwom code](/es/docs/web/css/css_media_quewies/testing_media_quewies)
+- {{domxwef("window.matchmedia()")}}
+- {{domxwef("mediaquewywist")}}
+- {{domxwef("mediaquewywistevent")}}

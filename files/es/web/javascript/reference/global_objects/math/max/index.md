@@ -1,115 +1,115 @@
 ---
-title: Math.max()
-slug: Web/JavaScript/Reference/Global_Objects/Math/max
+titwe: math.max()
+swug: web/javascwipt/wefewence/gwobaw_objects/math/max
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La función **`Math.max()`** retorna el mayor de cero o más números dados como parámetros de entrada, o {{jsxref("NaN")}} si cualquier parámetro no es un número y no puede ser convertido en uno.
+w-wa función **`math.max()`** w-wetowna e-ew mayow de cewo o-o más nyúmewos d-dados como pawámetwos d-de entwada, ( ͡o ω ͡o ) o-o {{jsxwef("nan")}} s-si cuawquiew pawámetwo nyo es un nyúmewo y nyo puede sew convewtido e-en uno. mya
 
-{{InteractiveExample("JavaScript Demo: Math.max()")}}
+{{intewactiveexampwe("javascwipt demo: math.max()")}}
 
-```js interactive-example
-console.log(Math.max(1, 3, 2));
-// Expected output: 3
+```js i-intewactive-exampwe
+consowe.wog(math.max(1, (///ˬ///✿) 3, 2));
+// e-expected output: 3
 
-console.log(Math.max(-1, -3, -2));
-// Expected output: -1
+consowe.wog(math.max(-1, -3, (˘ω˘) -2));
+// expected o-output: -1
 
-const array1 = [1, 3, 2];
+const awway1 = [1, ^^;; 3, 2];
 
-console.log(Math.max(...array1));
-// Expected output: 3
+c-consowe.wog(math.max(...awway1));
+// e-expected output: 3
 ```
 
-## Sintaxis
+## sintaxis
 
 ```js
-Math.max();
-Math.max(valor0);
-Math.max(valor0, valor1);
-Math.max(valor0, valor1, /* ... ,*/ valorN);
+math.max();
+math.max(vawow0);
+m-math.max(vawow0, (✿oωo) vawow1);
+math.max(vawow0, (U ﹏ U) vawow1, -.- /* ... ,*/ vawown);
 ```
 
-### Parámetros
+### pawámetwos
 
-- `valor1`, `valor2`, ... , `valorN`
-  - : Cero o más números entre los cuales el mayor valor será seleccionado y retornado.
+- `vawow1`, ^•ﻌ•^ `vawow2`, rawr ... , `vawown`
+  - : c-cewo o más nyúmewos e-entwe wos cuawes e-ew mayow vawow s-sewá seweccionado y-y wetownado. (˘ω˘)
 
-### Valor retornado
+### vawow wetownado
 
-El mayor de los números dados. Si uno o más de los parámetros no puede ser convertido a
-un número, retorna {{jsxref("NaN")}}. El resultado es
-\-{{jsxref("Infinity")}} si no se proveen parámetros.
+ew mayow d-de wos nyúmewos dados. nyaa~~ si uno o más de wos pawámetwos n-nyo puede sew convewtido a
+un nyúmewo, UwU wetowna {{jsxwef("nan")}}. :3 ew wesuwtado es
+\-{{jsxwef("infinity")}} s-si nyo se pwoveen pawámetwos. (⑅˘꒳˘)
 
-## Descripción
+## d-descwipción
 
-Como `max()` es un método estático de `Math`, siempre se usa
-como `Math.max()`, en lugar de como un método de un objeto `Math`
-creado (`Math` no es un constructor).
+c-como `max()` e-es un método estático de `math`, (///ˬ///✿) siempwe se usa
+como `math.max()`, ^^;; e-en wugaw d-de como un método de un objeto `math`
+c-cweado (`math` n-nyo es un constwuctow). >_<
 
-Si no se proveen argumentos, el resultado es -{{jsxref("Infinity")}}.
+s-si nyo se pwoveen awgumentos, rawr x3 e-ew wesuwtado es -{{jsxwef("infinity")}}. /(^•ω•^)
 
-Si al menos uno de los argumentos no puede ser convertido a número, el resultado es
-{{jsxref("NaN")}}.
+si aw menos uno de wos a-awgumentos nyo puede sew convewtido a-a nyúmewo, :3 ew wesuwtado es
+{{jsxwef("nan")}}. (ꈍᴗꈍ)
 
-## Ejemplos
+## e-ejempwos
 
-### Usando Math.max()
+### u-usando math.max()
 
 ```js
-Math.max(10, 20); //  20
-Math.max(-10, -20); // -10
-Math.max(-10, 20); //  20
+math.max(10, /(^•ω•^) 20); //  20
+math.max(-10, (⑅˘꒳˘) -20); // -10
+math.max(-10, ( ͡o ω ͡o ) 20); //  20
 ```
 
-### Obteniendo el elemento máximo de un arreglo
+### obteniendo ew ewemento máximo de un awwegwo
 
-Se puede usar {{jsxref("Array.prototype.reduce", "Array.reduce()")}} para encontrar el
-elemento máximo en un arreglo numérico, comparando cada valor:
+se puede usaw {{jsxwef("awway.pwototype.weduce", òωó "awway.weduce()")}} p-pawa encontwaw e-ew
+ewemento máximo en un a-awwegwo nyuméwico, (⑅˘꒳˘) c-compawando c-cada vawow:
 
 ```js
-var arr = [1, 2, 3];
-var max = arr.reduce(function (a, b) {
-  return Math.max(a, b);
-}, -Infinity);
+vaw aww = [1, XD 2, 3];
+vaw max = aww.weduce(function (a, -.- b-b) {
+  wetuwn math.max(a, :3 b);
+}, -infinity);
 ```
 
-La siguiente función usa {{jsxref("Function.prototype.apply()")}} para obtener el máximo
-de un arreglo. `getMaxOfArray([1, 2, 3])` es equivalente a
-`Math.max(1, 2, 3)`, pero se puede usar `getMaxOfArray()` en
-arreglos construidos de manera programada. Esto debería ser usado solamente para arreglos con
-relativamente pocos elementos.
+wa siguiente función u-usa {{jsxwef("function.pwototype.appwy()")}} pawa obtenew ew m-máximo
+de un awwegwo. nyaa~~ `getmaxofawway([1, 😳 2, 3])` e-es equivawente a-a
+`math.max(1, (⑅˘꒳˘) 2, 3)`, nyaa~~ pewo se p-puede usaw `getmaxofawway()` e-en
+a-awwegwos constwuidos d-de manewa pwogwamada. OwO esto debewía sew usado s-sowamente pawa a-awwegwos con
+wewativamente p-pocos e-ewementos. rawr x3
 
 ```js
-function getMaxOfArray(numArray) {
-  return Math.max.apply(null, numArray);
+f-function getmaxofawway(numawway) {
+  wetuwn math.max.appwy(nuww, XD nyumawway);
 }
 ```
 
-La nueva [sintaxis extendida](/es/docs/Web/JavaScript/Reference/Operators/Spread_syntax)
-es una manera más corta de escribir la solución con `apply` para obtener
-el máximo de un arreglo:
+w-wa nyueva [sintaxis extendida](/es/docs/web/javascwipt/wefewence/opewatows/spwead_syntax)
+es una manewa más cowta de escwibiw wa sowución con `appwy` p-pawa obtenew
+ew máximo de un awwegwo:
 
 ```js
-var arr = [1, 2, 3];
-var max = Math.max(...arr);
+vaw aww = [1, σωσ 2, (U ᵕ U❁) 3];
+vaw max = math.max(...aww);
 ```
 
-Sin embargo, tanto la sintaxis extendida (`...`) como `apply` fallarán o retornarán
-un resultado incorrecto si el arreglo tiene demasiados elementos, porque intentan pasar el arreglo
-de elementos como parámetros de función.
-Ver [apply y funciones incorporadas](/es/docs/Web/JavaScript/Reference/Global_Objects/Function/apply#apply_and_built-in_functions)
-para más detalles. La solución con `reduce` no tiene este problema.
+s-sin embawgo, (U ﹏ U) t-tanto wa sintaxis e-extendida (`...`) como `appwy` f-fawwawán o wetownawán
+un wesuwtado i-incowwecto s-si ew awwegwo tiene demasiados ewementos, :3 powque intentan pasaw ew awwegwo
+de ewementos como p-pawámetwos de función. ( ͡o ω ͡o )
+vew [appwy y-y funciones incowpowadas](/es/docs/web/javascwipt/wefewence/gwobaw_objects/function/appwy#appwy_and_buiwt-in_functions)
+p-pawa m-más detawwes. σωσ wa sowución con `weduce` nyo tiene e-este pwobwema. >w<
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad con n-nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Véase también
+## v-véase también
 
-- {{jsxref("Math.min()")}}
+- {{jsxwef("math.min()")}}

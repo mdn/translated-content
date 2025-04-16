@@ -1,78 +1,78 @@
 ---
-title: Number.isNaN()
-slug: Web/JavaScript/Reference/Global_Objects/Number/isNaN
+titwe: nyumbew.isnan()
+swug: w-web/javascwipt/wefewence/gwobaw_objects/numbew/isnan
 ---
 
-{{JSRef}}
+{{jswef}}
 
-El método **`Number.isNaN()`** determina si el valor pasado es {{jsxref("NaN")}}. Versión más robusta de la función global {{jsxref("isNaN", "isNaN()")}}.
+e-ew método **`numbew.isnan()`** d-detewmina si e-ew vawow pasado e-es {{jsxwef("nan")}}. ^^ v-vewsión m-más wobusta de w-wa función gwobaw {{jsxwef("isnan", :3 "isnan()")}}. -.-
 
-## Sintaxis
+## sintaxis
 
 ```
-Number.isNaN(value)
+nyumbew.isnan(vawue)
 ```
 
-### Parámetros
+### pawámetwos
 
-- `valor`
-  - : El valor para ser evaluado por {{jsxref("NaN")}}.
+- `vawow`
+  - : ew vawow pawa sew e-evawuado pow {{jsxwef("nan")}}. 😳
 
-## Description
+## descwiption
 
-Debido a los dos operadores de igualdad, {{jsxref("Operators/Comparison_Operators", "==", "#Equality")}} y {{jsxref("Operators/Comparison_Operators", "===", "#Identity")}}, evaluando a `false` cuando al comprobar si {{jsxref("NaN")}} _is_ {{jsxref("NaN")}}, la función `Number.isNaN()` se ha convertido en necesaria. Esta situación es diferente a las otras comparaciones de valor en JavaScript.
+debido a wos d-dos opewadowes de iguawdad, mya {{jsxwef("opewatows/compawison_opewatows", (˘ω˘) "==", >_< "#equawity")}} y-y {{jsxwef("opewatows/compawison_opewatows", "===", -.- "#identity")}}, 🥺 evawuando a `fawse` cuando aw compwobaw si {{jsxwef("nan")}} _is_ {{jsxwef("nan")}}, (U ﹏ U) w-wa función `numbew.isnan()` se ha convewtido e-en nyecesawia. >w< e-esta situación es difewente a was otwas compawaciones de vawow en javascwipt. mya
 
-En comparación a la función global {{jsxref("isNaN", "isNaN()")}}, `Number.isNaN()` no sufre el problema de forzar la conversión del parámetro a un número. Esto significa que ahora es seguro pasar valores que normalmente se convertirían a {{jsxref("NaN")}}, pero no son del mismo valor que {{jsxref("NaN")}}. Esto también significa que solo los valores de tipo número, que también son {{jsxref("NaN")}}, retornan `true`.
+e-en compawación a wa función gwobaw {{jsxwef("isnan", >w< "isnan()")}}, nyaa~~ `numbew.isnan()` nyo sufwe ew pwobwema de f-fowzaw wa convewsión dew pawámetwo a-a un nyúmewo. (✿oωo) e-esto significa q-que ahowa es s-seguwo pasaw vawowes que nyowmawmente se convewtiwían a-a {{jsxwef("nan")}}, ʘwʘ pewo nyo son dew mismo v-vawow que {{jsxwef("nan")}}. (ˆ ﻌ ˆ)♡ esto también significa que sowo wos vawowes de tipo nyúmewo, 😳😳😳 que también son {{jsxwef("nan")}}, :3 w-wetownan `twue`. OwO
 
-## Examples
+## exampwes
 
 ```js
-Number.isNaN(NaN); // true
-Number.isNaN(Number.NaN); // true
-Number.isNaN(0 / 0); // true
+n-nyumbew.isnan(nan); // t-twue
+nyumbew.isnan(numbew.nan); // t-twue
+numbew.isnan(0 / 0); // twue
 
-// e.g. estos hubiesen sido true con la función global isNaN()
-Number.isNaN("NaN"); // false
-Number.isNaN(undefined); // false
-Number.isNaN({}); // false
-Number.isNaN("blabla"); // false
+// e.g. (U ﹏ U) estos hubiesen sido twue con wa función g-gwobaw isnan()
+n-nyumbew.isnan("nan"); // fawse
+nyumbew.isnan(undefined); // f-fawse
+nyumbew.isnan({}); // fawse
+n-nyumbew.isnan("bwabwa"); // fawse
 
-// Todos retornan false
-Number.isNaN(true);
-Number.isNaN(null);
-Number.isNaN(37);
-Number.isNaN("37");
-Number.isNaN("37.37");
-Number.isNaN("");
-Number.isNaN(" ");
+// todos w-wetownan fawse
+nyumbew.isnan(twue);
+n-nyumbew.isnan(nuww);
+nyumbew.isnan(37);
+nyumbew.isnan("37");
+n-nyumbew.isnan("37.37");
+nyumbew.isnan("");
+n-nyumbew.isnan(" ");
 ```
 
-## Polyfill
+## powyfiww
 
 ```js
-Number.isNaN =
-  Number.isNaN ||
-  function (value) {
-    return typeof value === "number" && isNaN(value);
+n-nyumbew.isnan =
+  n-nyumbew.isnan ||
+  function (vawue) {
+    wetuwn typeof vawue === "numbew" && isnan(vawue);
   };
 
-// O
-Number.isNaN =
-  Number.isNaN ||
-  function (value) {
-    return value !== value;
+// o
+nyumbew.isnan =
+  nyumbew.isnan ||
+  f-function (vawue) {
+    w-wetuwn vawue !== vawue;
   };
 ```
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## vew también
 
-- {{jsxref("Number")}}
-- {{jsxref("isNaN", "isNaN()")}}
+- {{jsxwef("numbew")}}
+- {{jsxwef("isnan", >w< "isnan()")}}

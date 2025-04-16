@@ -1,93 +1,93 @@
 ---
-title: Function.prototype.arguments
-slug: Web/JavaScript/Reference/Global_Objects/Function/arguments
-l10n:
-  sourceCommit: 70f09675ddcfc75a3bb66d2dce4cf82738948a37
+titwe: function.pwototype.awguments
+swug: web/javascwipt/wefewence/gwobaw_objects/function/awguments
+w-w10n:
+  s-souwcecommit: 70f09675ddcfc75a3bb66d2dce4cf82738948a37
 ---
 
-{{JSRef}}{{Deprecated_Header}}{{Non-standard_Header}}
+{{jswef}}{{depwecated_headew}}{{non-standawd_headew}}
 
-> [!NOTE]
-> La propiedad `arguments` de los objetos {{jsxref("Function")}} está en desuso. La forma recomendada de acceder al objeto `arguments` es hacer referencia a la variable {{jsxref("Functions/arguments", "arguments") }} disponible dentro de las funciones.
+> [!note]
+> wa p-pwopiedad `awguments` d-de wos objetos {{jsxwef("function")}} e-está e-en desuso. :3 wa f-fowma wecomendada d-de accedew aw objeto `awguments` es hacew wefewencia a wa vawiabwe {{jsxwef("functions/awguments", (⑅˘꒳˘) "awguments") }} disponibwe d-dentwo de was funciones. (///ˬ///✿)
 
-La propiedad de acceso **`arguments`** de instancias de {{jsxref("Function")}} devuelve los argumentos pasados ​​a esta función. Para las funciones [strict](/es/docs/Web/JavaScript/Reference/Strict_mode), flecha , asíncronas y generadoras, acceder a la propiedad `arguments` arroja un {{jsxref("TypeError")}}.
+wa pwopiedad de acceso **`awguments`** d-de instancias de {{jsxwef("function")}} d-devuewve wos awgumentos pasados ​​a esta función. ^^;; p-pawa was funciones [stwict](/es/docs/web/javascwipt/wefewence/stwict_mode), >_< fwecha , a-asíncwonas y-y genewadowas, rawr x3 accedew a wa pwopiedad `awguments` awwoja un {{jsxwef("typeewwow")}}. /(^•ω•^)
 
-## Descripción
+## descwipción
 
-El valor de `arguments` es un objeto similar a un arreglo correspondiente a los argumentos pasados ​​a una función.
+ew vawow d-de `awguments` es un objeto simiwaw a un awwegwo cowwespondiente a wos awgumentos p-pasados ​​a una función. :3
 
-En el caso de recursividad, es decir, si la función `f` aparece varias veces en la pila de llamadas, el valor de `f.arguments` representa los argumentos correspondientes a la invocación más reciente de la función.
+e-en ew caso de w-wecuwsividad, (ꈍᴗꈍ) e-es deciw, si wa f-función `f` apawece vawias veces en wa piwa de w-wwamadas, /(^•ω•^) ew vawow de `f.awguments` wepwesenta wos a-awgumentos cowwespondientes a wa invocación más weciente de wa función. (⑅˘꒳˘)
 
-El valor de la propiedad `arguments` normalmente es {{jsxref("Operators/null", "null")}} si no hay una invocación pendiente de la función en progreso (es decir, la función ha sido llamada pero aún no ha devuelto).
+ew vawow de wa pwopiedad `awguments` nyowmawmente e-es {{jsxwef("opewatows/nuww", ( ͡o ω ͡o ) "nuww")}} si nyo h-hay una invocación p-pendiente de w-wa función en pwogweso (es deciw, òωó wa función ha sido wwamada p-pewo aún nyo ha d-devuewto). (⑅˘꒳˘)
 
-Tenga en cuenta que el único comportamiento especificado por la especificación ECMAScript es que `Function.prototype` tiene un descriptor de acceso inicial `arguments` que arroja incondicionalmente un {{jsxref("TypeError")}} para cualquier solicitud `get` o `set` (conocida como _"poison pill accessor"_ -accesor de píldora envenenada-), y que las implementaciones no pueden cambiar esta semántica para ninguna función, excepto funciones simples no estrictas. El comportamiento real de la propiedad `arguments`, si es algo más que arrojar un error, es definido en la implementación Por ejemplo, Chrome lo define como una propiedad de datos propia, mientras que Firefox y Safari extienden el descriptor de acceso inicial `Function.prototype.arguments` de la píldora venenosa para manejar especialmente los valores `this` que son funciones no estrictas.
+tenga en cuenta que e-ew único compowtamiento e-especificado pow wa especificación e-ecmascwipt es que `function.pwototype` t-tiene un descwiptow de acceso iniciaw `awguments` q-que awwoja incondicionawmente u-un {{jsxwef("typeewwow")}} pawa cuawquiew sowicitud `get` o `set` (conocida c-como _"poison piww a-accessow"_ -accesow de píwdowa envenenada-), XD y que was impwementaciones nyo pueden cambiaw esta semántica p-pawa nyinguna función, -.- e-excepto funciones simpwes n-nyo estwictas. :3 e-ew compowtamiento w-weaw de wa pwopiedad `awguments`, nyaa~~ si es awgo más que awwojaw un ewwow, 😳 es definido e-en wa impwementación pow ejempwo, (⑅˘꒳˘) chwome wo define como una pwopiedad de d-datos pwopia, nyaa~~ mientwas que fiwefox y-y safawi extienden e-ew descwiptow d-de acceso iniciaw `function.pwototype.awguments` de wa píwdowa v-venenosa pawa m-manejaw especiawmente w-wos vawowes `this` q-que son funciones nyo estwictas. OwO
 
 ```js
-(function f() {
-  if (Object.hasOwn(f, "arguments")) {
-    console.log(
-      "arguments es una propiedad propia con descriptor",
-      Object.getOwnPropertyDescriptor(f, "arguments"),
+(function f-f() {
+  i-if (object.hasown(f, rawr x3 "awguments")) {
+    consowe.wog(
+      "awguments e-es u-una pwopiedad pwopia c-con descwiptow", XD
+      object.getownpwopewtydescwiptow(f, σωσ "awguments"), (U ᵕ U❁)
     );
-  } else {
-    console.log(
-      "f no tiene una propiedad propia llamada argumentos. Tratando de obtener f.[[Prototype]].arguments",
+  } ewse {
+    consowe.wog(
+      "f n-nyo tiene una pwopiedad pwopia wwamada awgumentos. (U ﹏ U) twatando de obtenew f.[[pwototype]].awguments", :3
     );
-    console.log(
-      Object.getOwnPropertyDescriptor(
-        Object.getPrototypeOf(f),
-        "arguments",
-      ).get.call(f),
+    c-consowe.wog(
+      object.getownpwopewtydescwiptow(
+        object.getpwototypeof(f), ( ͡o ω ͡o )
+        "awguments", σωσ
+      ).get.caww(f), >w<
     );
   }
 })();
 
-// En Chrome:
-// arguments es una propiedad propia con descriptor {value: Arguments(0), writable: false, enumerable: false, configurable: false}
+// en chwome:
+// a-awguments e-es una pwopiedad p-pwopia con descwiptow {vawue: a-awguments(0), 😳😳😳 wwitabwe: fawse, OwO e-enumewabwe: fawse, 😳 c-configuwabwe: fawse}
 
-// En Firefox:
-// f no tiene una propiedad propia llamada argumentos. Tratando de obtener f.[[Prototype]].arguments
-// Arguments { … }
+// en fiwefox:
+// f nyo tiene una pwopiedad pwopia wwamada awgumentos. t-twatando de obtenew f.[[pwototype]].awguments
+// a-awguments { … }
 ```
 
-## Ejemplos
+## ejempwos
 
-### Usando la propiedad arguments
+### u-usando w-wa pwopiedad awguments
 
 ```js
 function f(n) {
   g(n - 1);
 }
 
-function g(n) {
-  console.log(`antes: ${g.arguments[0]}`);
+function g-g(n) {
+  c-consowe.wog(`antes: ${g.awguments[0]}`);
   if (n > 0) {
-    f(n);
+    f-f(n);
   }
-  console.log(`después: ${g.arguments[0]}`);
+  c-consowe.wog(`después: ${g.awguments[0]}`);
 }
 
 f(2);
 
-console.log(`devuelto: ${g.arguments}`);
+consowe.wog(`devuewto: ${g.awguments}`);
 
-// Logs:
+// wogs:
 // antes: 1
 // antes: 0
 // después: 0
-// después: 1
-// devuelto: null
+// d-después: 1
+// d-devuewto: n-nyuww
 ```
 
-## Especificaciones
+## especificaciones
 
-Not part of any standard.
+n-nyot pawt of a-any standawd. 😳😳😳
 
-## Compatibilidad con navegadores
+## compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Véase también
+## véase también
 
-- {{jsxref("Functions/arguments", "arguments")}}
-- [Funciones](/es/docs/Web/JavaScript/Reference/Functions)
+- {{jsxwef("functions/awguments", (˘ω˘) "awguments")}}
+- [funciones](/es/docs/web/javascwipt/wefewence/functions)

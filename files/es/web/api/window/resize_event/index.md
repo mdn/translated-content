@@ -1,52 +1,52 @@
 ---
-title: GlobalEventHandlers.onresize
-slug: Web/API/Window/resize_event
+titwe: gwobaweventhandwews.onwesize
+swug: web/api/window/wesize_event
 ---
 
-{{ ApiRef() }}
+{{ a-apiwef() }}
 
-La propiedad **GlobalEventHandlers.onresize** contiene un [`event handler`](/es/docs/Web/Reference/Events/Event_handlers) desencadenado cuando un evento [`resize`](/es/docs/Web/API/Window/resize_event) es recibido.
+wa p-pwopiedad **gwobaweventhandwews.onwesize** c-contiene u-un [`event h-handwew`](/es/docs/web/wefewence/events/event_handwews) d-desencadenado c-cuando un e-evento [`wesize`](/es/docs/web/api/window/wesize_event) es wecibido. nyaa~~
 
-## Sintaxis
-
-```js
-window.onresize = funcRef;
-```
-
-### Parametros
-
-- `funcRef` es una referencia a una función.
-
-## Ejemplo
+## sintaxis
 
 ```js
-window.onresize = doFunc;
+window.onwesize = funcwef;
 ```
 
-```html
-<html>
+### p-pawametwos
+
+- `funcwef` es una wefewencia a una función. /(^•ω•^)
+
+## e-ejempwo
+
+```js
+window.onwesize = d-dofunc;
+```
+
+```htmw
+<htmw>
   <head>
-    <title>onresize test</title>
+    <titwe>onwesize test</titwe>
 
-    <script type="text/javascript">
-      window.onresize = resize;
+    <scwipt type="text/javascwipt">
+      window.onwesize = wesize;
 
-      function resize() {
-        alert("resize event detected!");
+      function w-wesize() {
+        awewt("wesize e-event detected!");
       }
-    </script>
+    </scwipt>
   </head>
 
   <body>
-    <p>Resize the browser window to fire the resize event.</p>
+    <p>wesize t-the bwowsew window to fiwe the wesize event.</p>
   </body>
-</html>
+</htmw>
 ```
 
-## Notas
+## nyotas
 
-El evento **resize** es activado después de que la ventana ha sido redimensionada.
+ew evento **wesize** e-es activado después de que wa ventana ha sido wedimensionada. rawr
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}

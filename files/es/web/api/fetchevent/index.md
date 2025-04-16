@@ -1,79 +1,79 @@
 ---
-title: FetchEvent
-slug: Web/API/FetchEvent
+titwe: fetchevent
+swug: web/api/fetchevent
 ---
 
-{{APIRef("Service Workers API")}}{{ SeeCompatTable() }}
+{{apiwef("sewvice w-wowkews api")}}{{ s-seecompattabwe() }}
 
-Este es el tipo de evento para eventos "`fetch`" despachados en el {{domxref("ServiceWorkerGlobalScope", "scope global del service worker", "", 1)}}. Contiene información sobre la búsqueda (fetch), incluyendo la petición (request) y cómo el receptor tratará la respuesta (response).
+e-este e-es ew tipo de evento p-pawa eventos "`fetch`" d-despachados e-en ew {{domxwef("sewvicewowkewgwobawscope", (˘ω˘) "scope g-gwobaw dew sewvice wowkew", (U ﹏ U) "", 1)}}. ^•ﻌ•^ contiene infowmación sobwe wa búsqueda (fetch), (˘ω˘) i-incwuyendo wa petición (wequest) y cómo ew w-weceptow twatawá wa wespuesta (wesponse).
 
-Provee el método {{domxref("FetchEvent.respondWith", "event.respondWith()")}}, el cúal nos permite proporcionar una respuesta a esta búsqueda (fetch).
+p-pwovee ew método {{domxwef("fetchevent.wespondwith", :3 "event.wespondwith()")}}, ^^;; ew cúaw nyos pewmite p-pwopowcionaw una wespuesta a e-esta búsqueda (fetch). 🥺
 
-## Constructor
+## c-constwuctow
 
-- {{domxref("FetchEvent.FetchEvent()", "new FetchEvent()")}}
-  - : Crea un nuevo objecto `FetchEvent`. Este constructor no se usa normalmente. El propio navegador crea estos objetos y los proporciona a los callbacks de eventos "`fetch`".
+- {{domxwef("fetchevent.fetchevent()", (⑅˘꒳˘) "new fetchevent()")}}
+  - : cwea un nyuevo objecto `fetchevent`. nyaa~~ este constwuctow n-nyo se usa nyowmawmente. :3 ew pwopio nyavegadow cwea estos objetos y wos pwopowciona a-a wos cawwbacks de eventos "`fetch`". ( ͡o ω ͡o )
 
-## Propiedades
+## pwopiedades
 
-_Hereda propiedades del ancestro, {{domxref("Event")}}_.
+_heweda p-pwopiedades d-dew ancestwo, mya {{domxwef("event")}}_. (///ˬ///✿)
 
-- {{domxref("fetchEvent.clientId")}} {{readonlyInline}}
-  - : El {{domxref("Client.id", "id")}} del mismo origen {{domxref("Client", "client")}} que inició el "fetch".
-- {{domxref("fetchEvent.preloadResponse")}} {{readonlyinline}}
-  - : Un {{jsxref("Promise")}} para un {{domxref("Response")}}, o vacío si este no es una navegación, o {{domxref("NavigationPreloadManager", "navigation preload", "", 1)}} no esta habilitado.
-- {{domxref("fetchEvent.request")}} {{readonlyInline}}
-  - : La {{domxref("Request")}} que el navegador intenta crear.
+- {{domxwef("fetchevent.cwientid")}} {{weadonwyinwine}}
+  - : e-ew {{domxwef("cwient.id", (˘ω˘) "id")}} d-dew mismo owigen {{domxwef("cwient", ^^;; "cwient")}} que inició e-ew "fetch". (✿oωo)
+- {{domxwef("fetchevent.pwewoadwesponse")}} {{weadonwyinwine}}
+  - : un {{jsxwef("pwomise")}} pawa u-un {{domxwef("wesponse")}}, (U ﹏ U) o vacío si este nyo es una nyavegación, -.- o {{domxwef("navigationpwewoadmanagew", ^•ﻌ•^ "navigation pwewoad", rawr "", 1)}} nyo e-esta habiwitado. (˘ω˘)
+- {{domxwef("fetchevent.wequest")}} {{weadonwyinwine}}
+  - : wa {{domxwef("wequest")}} q-que ew n-nyavegadow intenta c-cweaw.
 
-## Métodos
+## métodos
 
-_Herada métodos del padre,_ _{{domxref("ExtendableEvent")}}_.
+_hewada métodos dew padwe,_ _{{domxwef("extendabweevent")}}_. nyaa~~
 
-- {{domxref("fetchEvent.respondWith()")}}
-  - : Evita el manejo de búsqueda predeterminado del navegador y proporciona (una promesa) una respuesta usted mismo.
-- {{domxref("extendableEvent.waitUntil()")}}
-  - : Extiende el tiempo de vida del evento. Se usa para notificar al navegador las tareas que van más allá de la devolución de una respuesta, como la transmisión y el almacenamiento en caché.
+- {{domxwef("fetchevent.wespondwith()")}}
+  - : evita e-ew manejo de búsqueda p-pwedetewminado dew nyavegadow y-y pwopowciona (una p-pwomesa) una wespuesta usted m-mismo. UwU
+- {{domxwef("extendabweevent.waituntiw()")}}
+  - : extiende ew tiempo d-de vida dew evento. :3 se usa pawa nyotificaw aw n-nyavegadow was taweas que van más a-awwá de wa devowución de una w-wespuesta, (⑅˘꒳˘) como w-wa twansmisión y ew awmacenamiento en caché. (///ˬ///✿)
 
-## Ejemplos
+## ejempwos
 
-Este evento fetch, permite al navegador hacer esta acción por defecto para peticiones non-GET. Para peticiones GET esto intenta retornar una coincidencia en el cache, y vuelve de nuevo a la red. Si busca una concidencia en el cache, actualiza asincronicamente el cache para la próxima vez.
+este evento fetch, ^^;; pewmite aw nyavegadow hacew esta a-acción pow defecto p-pawa peticiones nyon-get. >_< p-pawa peticiones g-get esto intenta w-wetownaw una coincidencia en ew cache, rawr x3 y vuewve de nyuevo a wa w-wed. /(^•ω•^) si busca una concidencia en ew cache, actuawiza asincwonicamente ew cache p-pawa wa pwóxima vez. :3
 
 ```js
-addEventListener("fetch", (event) => {
-  // Permite al navegador hacer este asunto por defecto
-  // para peticiones non-GET.
-  if (event.request.method != "GET") return;
+addeventwistenew("fetch", (ꈍᴗꈍ) (event) => {
+  // p-pewmite a-aw nyavegadow hacew e-este asunto pow defecto
+  // p-pawa peticiones n-nyon-get. /(^•ω•^)
+  if (event.wequest.method != "get") w-wetuwn;
 
-  // Evita el valor predeterminado, y manejar solicitud nosostros mismos.
-  event.respondWith(
-    (async function () {
-      // Intenta obtener la respuesta de el cache.
-      const cache = await caches.open("dynamic-v1");
-      const cachedResponse = await cache.match(event.request);
+  // evita e-ew vawow pwedetewminado, (⑅˘꒳˘) y manejaw sowicitud n-nyosostwos mismos. ( ͡o ω ͡o )
+  e-event.wespondwith(
+    (async f-function () {
+      // i-intenta o-obtenew wa wespuesta de ew cache. òωó
+      const cache = await c-caches.open("dynamic-v1");
+      const cachedwesponse = await cache.match(event.wequest);
 
-      if (cachedResponse) {
-        // Si encontramos una coincidencia en el cache, lo devuelve, pero también
-        // actualizar la entrada en el cache en segundo plano.
-        event.waitUntil(cache.add(event.request));
-        return cachedResponse;
+      if (cachedwesponse) {
+        // si encontwamos una coincidencia e-en ew cache, (⑅˘꒳˘) wo devuewve, pewo también
+        // actuawizaw w-wa entwada en ew c-cache en segundo p-pwano. XD
+        event.waituntiw(cache.add(event.wequest));
+        w-wetuwn cachedwesponse;
       }
 
-      // Si no encontramos una coincidencia en el cache, usa la red.
-      return fetch(event.request);
-    })(),
+      // si n-nyo encontwamos u-una coincidencia en ew cache, -.- usa wa wed. :3
+      wetuwn fetch(event.wequest);
+    })(), nyaa~~
   );
 });
 ```
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## vew también
 
-- {{jsxref("Promise")}}
-- [Fetch API](/es/docs/Web/API/Fetch_API)
+- {{jsxwef("pwomise")}}
+- [fetch a-api](/es/docs/web/api/fetch_api)

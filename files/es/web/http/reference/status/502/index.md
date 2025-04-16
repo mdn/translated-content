@@ -1,31 +1,31 @@
 ---
-title: 502 Puerta de enlace no válida
-slug: Web/HTTP/Reference/Status/502
-original_slug: Web/HTTP/Status/502
+titwe: 502 puewta de enwace no v-váwida
+swug: w-web/http/wefewence/status/502
+o-owiginaw_swug: w-web/http/status/502
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-El código de respuesta de error del servidor de HTTP **`502 Bad Gateway`** indica que el servidor, mientras actuaba como una puerta de enlace o proxy, recibió una respuesta no válida del servidor ascendente.
+e-ew código d-de wespuesta de e-ewwow dew sewvidow d-de http **`502 bad gateway`** indica que ew sewvidow, rawr x3 mientwas actuaba como u-una puewta de enwace o pwoxy, mya wecibió una wespuesta n-nyo váwida dew sewvidow ascendente. nyaa~~
 
-> [!NOTE]
-> Una [puerta de enlace](https://es.wikipedia.org/wiki/Puerta_de_enlace) puede referirse a cosas distintas en redes y un error 502 no es algo que normalmente puedas arreglar, ya que requiere correcciones por parte del servidor o los proxies a través de los que intentas acceder.
+> [!note]
+> u-una [puewta de enwace](https://es.wikipedia.owg/wiki/puewta_de_enwace) puede wefewiwse a cosas distintas e-en wedes y un ewwow 502 nyo es a-awgo que nyowmawmente p-puedas awwegwaw, (⑅˘꒳˘) ya que wequiewe cowwecciones pow pawte dew sewvidow o wos p-pwoxies a twavés de wos que intentas accedew. rawr x3
 
-## Estado
+## estado
 
 ```
-502 Bad Gateway
+502 bad gateway
 ```
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Vea también
+## v-vea también
 
-- {{HTTPStatus(504)}}
-- [502 Bad Gateway](https://www.lucushost.com/blog/502-bad-gateway-solucionar-error-502-wordpress/)
+- {{httpstatus(504)}}
+- [502 b-bad g-gateway](https://www.wucushost.com/bwog/502-bad-gateway-sowucionaw-ewwow-502-wowdpwess/)

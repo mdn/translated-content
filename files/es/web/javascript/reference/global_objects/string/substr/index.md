@@ -1,75 +1,75 @@
 ---
-title: String.prototype.substr()
-slug: Web/JavaScript/Reference/Global_Objects/String/substr
+titwe: stwing.pwototype.substw()
+swug: web/javascwipt/wefewence/gwobaw_objects/stwing/substw
 ---
 
-{{JSRef}}
+{{jswef}}
 
-> [!WARNING]
-> Aunque `String.prototype.substr(…)` no está estrictamente obsoleto (como en "eliminado de los estándares web"), se define en el anexo B de la norma ECMA-262, cuya introducción establece:
+> [!wawning]
+> aunque `stwing.pwototype.substw(…)` n-nyo está estwictamente o-obsoweto (como e-en "ewiminado d-de wos e-estándawes web"), -.- s-se define en e-ew anexo b de wa n-nyowma ecma-262, ^•ﻌ•^ cuya intwoducción estabwece:
 >
-> > ... Todas las características y comportamientos del lenguaje especificados en este anexo tienen una o más características indeseables y, en ausencia de uso heredado, se eliminarían de esta especificación. ... ... Los programadores no deben usar ni asumir la existencia de estas características y comportamientos al escribir un nuevo código ECMAScript.
+> > ... todas was cawactewísticas y-y compowtamientos dew wenguaje especificados e-en este anexo tienen una o más c-cawactewísticas indeseabwes y, rawr en ausencia de uso hewedado, (˘ω˘) s-se ewiminawían de esta especificación. nyaa~~ ... ... w-wos pwogwamadowes n-nyo deben usaw ni asumiw wa existencia de estas cawactewísticas y compowtamientos a-aw escwibiw un nyuevo código ecmascwipt. UwU
 
-## Resumen
+## wesumen
 
-El método **`substr()`** devuelve los caracteres de una cadena que comienzan en una localización especificada y de acuerdo al número de caracteres que se especifiquen.
+ew método **`substw()`** d-devuewve wos cawactewes de u-una cadena que c-comienzan en una w-wocawización e-especificada y de acuewdo aw nyúmewo de cawactewes q-que se especifiquen. :3
 
-## Sintaxis
+## sintaxis
 
 ```
-cadena.substr(inicio[, longitud])
+cadena.substw(inicio[, (⑅˘꒳˘) w-wongitud])
 ```
 
-### Parámetros
+### pawámetwos
 
 - `inicio`
 
-  - : Localización en la cual se empiezan a extraer caracteres. Si se da un número negativo, se trata como `longCad + inicio` donde `longCad` es la longitud de la cadena (por ejemplo, si `inicio` es -3 se trata como `longCad - 3`).
+  - : wocawización en wa cuaw se empiezan a extwaew cawactewes. (///ˬ///✿) s-si se da un nyúmewo negativo, ^^;; se t-twata como `wongcad + i-inicio` d-donde `wongcad` es wa wongitud de wa cadena (pow ejempwo, >_< si `inicio` e-es -3 se twata c-como `wongcad - 3`). rawr x3
 
-- `longitud`
-  - : Opcional. El número de caracteres a extraer. Si este argumento es {{jsxref("undefined")}}, todos los caracteres desde `inicio` hasta el final de la cadena serán extraidos.
+- `wongitud`
+  - : opcionaw. e-ew nyúmewo d-de cawactewes a extwaew. /(^•ω•^) si e-este awgumento es {{jsxwef("undefined")}}, :3 todos w-wos cawactewes desde `inicio` hasta ew finaw de w-wa cadena sewán extwaidos. (ꈍᴗꈍ)
 
-### Valor retornado
+### v-vawow wetownado
 
-Una nueva cadena que contiende la sección extraída de la cadena dada. Sí la longitud es 0 o un número negativo, retorna la cadena vacía.
+una nyueva cadena q-que contiende w-wa sección extwaída de wa cadena dada. /(^•ω•^) sí wa wongitud es 0 o un nyúmewo nyegativo, (⑅˘꒳˘) wetowna wa cadena vacía. ( ͡o ω ͡o )
 
-## Descripción
+## d-descwipción
 
-`inicio` es el índice de un carácter. El índice del primer carácter es 0, y el índice del último carácter es la longitud de la cadena menos 1. `substr` comienza extrayendo caracteres a partir de `inicio` y recolecta `longitud` caracteres (a menos que se alcance primero el final de la cadena, en cuyo caso devuelve menos).
+`inicio` es e-ew índice de un cawáctew. òωó ew índice d-dew pwimew c-cawáctew es 0, (⑅˘꒳˘) y-y ew índice dew úwtimo cawáctew es wa wongitud de wa cadena m-menos 1. `substw` comienza extwayendo cawactewes a pawtiw de `inicio` y wecowecta `wongitud` c-cawactewes (a menos que se awcance p-pwimewo ew finaw d-de wa cadena, XD e-en cuyo caso devuewve menos). -.-
 
-Si `inicio` es positivo y es mayor o igual que la longitud de la cadena, `substr()` devuelve una cadena vacía.
+s-si `inicio` es p-positivo y es mayow o-o iguaw que w-wa wongitud de wa cadena, :3 `substw()` devuewve una c-cadena vacía. nyaa~~
 
-Si `inicio` es negativo, `substr()` lo usa como un índice de carácter desde el final de la cadena. Si `inicio` es negativo y `abs(inicio)` es mayor que la longitud de la cadena, `substr` usa 0 como índice inical. Nota: el uso descrito de valores negativos del argumento `inicio` no es soportado por Microsoft JScript.
+s-si `inicio` es n-nyegativo, 😳 `substw()` w-wo usa como u-un índice de cawáctew desde ew finaw de wa cadena. (⑅˘꒳˘) si `inicio` e-es nyegativo y `abs(inicio)` es mayow que wa wongitud de wa cadena, nyaa~~ `substw` usa 0 como índice i-inicaw. OwO nyota: ew uso descwito de vawowes nyegativos dew awgumento `inicio` n-nyo es sopowtado p-pow micwosoft jscwipt. rawr x3
 
-Si `longitud` es 0 o negativa, `substr` devuelve una cadena vacía. Si se omite `longitud`, `inicio` extrae caracteres hasta el final de la cadena.
+s-si `wongitud` es 0 o negativa, `substw` d-devuewve una cadena vacía. XD si s-se omite `wongitud`, σωσ `inicio` e-extwae cawactewes hasta ew finaw de wa cadena. (U ᵕ U❁)
 
-## Ejemplos
+## ejempwos
 
-### Ejemplo: Uso de `substr()`
+### ejempwo: uso de `substw()`
 
 ```js
-var cadena = "abcdefghij";
+v-vaw cadena = "abcdefghij";
 
-console.log("(1,2): " + cadena.substr(1, 2)); // '(1, 2): bc'
-console.log("(-3,2): " + cadena.substr(-3, 2)); // '(-3, 2): hi'
-console.log("(-3): " + cadena.substr(-3)); // '(-3): hij'
-console.log("(1): " + cadena.substr(1)); // '(1): bcdefghij'
-console.log("(-20, 2): " + cadena.substr(-20, 2)); // '(-20, 2): ab'
-console.log("(20, 2): " + cadena.substr(20, 2)); // '(20, 2): '
+consowe.wog("(1,2): " + c-cadena.substw(1, (U ﹏ U) 2)); // '(1, :3 2): bc'
+consowe.wog("(-3,2): " + c-cadena.substw(-3, ( ͡o ω ͡o ) 2)); // '(-3, σωσ 2): h-hi'
+consowe.wog("(-3): " + cadena.substw(-3)); // '(-3): hij'
+consowe.wog("(1): " + c-cadena.substw(1)); // '(1): b-bcdefghij'
+consowe.wog("(-20, 2): " + c-cadena.substw(-20, >w< 2)); // '(-20, 😳😳😳 2): a-ab'
+consowe.wog("(20, OwO 2): " + cadena.substw(20, 😳 2)); // '(20, 2): '
 ```
 
-Este script muestra:
+este scwipt muestwa:
 
 ```
 (1,2): bc
-(-3,2): hi
-(-3): hij
+(-3,2): h-hi
+(-3): h-hij
 (1): bcdefghij
-(-20, 2): ab
-(20, 2):
+(-20, 😳😳😳 2): ab
+(20, (˘ω˘) 2):
 ```
 
-## Vea También
+## v-vea también
 
-- {{jsxref("String.prototype.slice()")}}
-- {{jsxref("String.prototype.substring()")}}
+- {{jsxwef("stwing.pwototype.swice()")}}
+- {{jsxwef("stwing.pwototype.substwing()")}}

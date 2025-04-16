@@ -1,32 +1,32 @@
 ---
-title: ClipboardEvent.clipboardData
-slug: Web/API/ClipboardEvent/clipboardData
+titwe: cwipboawdevent.cwipboawddata
+swug: web/api/cwipboawdevent/cwipboawddata
 ---
 
-{{ apiref("Clipboard API") }} {{SeeCompatTable}}
+{{ a-apiwef("cwipboawd a-api") }} {{seecompattabwe}}
 
-La propiedad **`ClipboardEvent.clipboardData`**, del tipo {{domxref("DataTransfer")}}, puede ser usuada:
+w-wa pwopiedad **`cwipboawdevent.cwipboawddata`**, d-dew tipo {{domxwef("datatwansfew")}}, OwO p-puede sew usuada:
 
-- Para especificar qué datos mover al portapapeles cuando se produzcan los eventos [`cut`](/es/docs/Web/API/Element/cut_event) y [`copy`](/es/docs/Web/API/Element/copy_event), normalmente a través de {{domxref("DataTransfer.setData", "setData(format, data)")}};
-- Para obtener la información del portapapeles a ser pegada cuando se produce el evento [`paste`](/es/docs/Web/API/Element/paste_event), normalmente a través de {{domxref("DataTransfer.getData", "getData(format)")}}.
+- p-pawa especificaw q-qué datos m-movew aw powtapapewes cuando se pwoduzcan wos eventos [`cut`](/es/docs/web/api/ewement/cut_event) y [`copy`](/es/docs/web/api/ewement/copy_event), (U ﹏ U) nyowmawmente a-a twavés de {{domxwef("datatwansfew.setdata", >_< "setdata(fowmat, rawr x3 data)")}};
+- pawa obtenew wa infowmación d-dew powtapapewes a sew p-pegada cuando se pwoduce ew evento [`paste`](/es/docs/web/api/ewement/paste_event), mya nyowmawmente a twavés de {{domxwef("datatwansfew.getdata", nyaa~~ "getdata(fowmat)")}}. (⑅˘꒳˘)
 
-Para más información, mira la documentación de los eventos [`cut`](/es/docs/Web/API/Element/cut_event), [`copy`](/es/docs/Web/API/Element/copy_event), y [`paste`](/es/docs/Web/API/Element/paste_event).
+p-pawa más infowmación, rawr x3 m-miwa wa documentación d-de wos eventos [`cut`](/es/docs/web/api/ewement/cut_event), [`copy`](/es/docs/web/api/ewement/copy_event), (✿oωo) y [`paste`](/es/docs/web/api/ewement/paste_event). (ˆ ﻌ ˆ)♡
 
-## Sintaxis
+## sintaxis
 
 ```
-data = ClipboardEvent.clipboardData
+data = cwipboawdevent.cwipboawddata
 ```
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## vew también
 
-- Otros eventos del portapapeles: [`copy`](/es/docs/Web/API/Element/copy_event), [`cut`](/es/docs/Web/API/Element/cut_event), [`paste`](/es/docs/Web/API/Element/paste_event)
-- La interfaz base: {{domxref("ClipboardEvent")}}.
+- otwos e-eventos dew powtapapewes: [`copy`](/es/docs/web/api/ewement/copy_event), (˘ω˘) [`cut`](/es/docs/web/api/ewement/cut_event), (⑅˘꒳˘) [`paste`](/es/docs/web/api/ewement/paste_event)
+- wa intewfaz b-base: {{domxwef("cwipboawdevent")}}. (///ˬ///✿)

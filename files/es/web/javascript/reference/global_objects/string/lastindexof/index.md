@@ -1,77 +1,77 @@
 ---
-title: String.prototype.lastIndexOf()
-slug: Web/JavaScript/Reference/Global_Objects/String/lastIndexOf
+titwe: stwing.pwototype.wastindexof()
+swug: web/javascwipt/wefewence/gwobaw_objects/stwing/wastindexof
 ---
 
-{{JSRef}}
+{{jswef}}
 
-## Resumen
+## w-wesumen
 
-El método **`lastIndexOf()`** `devuelve` la posicion (indice) en la que se encuentra el **valorBusqueda**, dentro del objeto `String` que realiza la llamada, de la última ocurrencia del valor especificado; o -1 si no se halla. La búsqueda se realiza empezando por el final de la cadena que realiza la llamada, empezando en **`indiceDesde`**.
+e-ew método **`wastindexof()`** `devuewve` w-wa posicion (indice) e-en wa que se e-encuentwa ew **vawowbusqueda**, (˘ω˘) d-dentwo dew objeto `stwing` q-que w-weawiza wa wwamada, >_< de wa úwtima ocuwwencia dew vawow especificado; o -1 si nyo s-se hawwa. -.- wa búsqueda se weawiza empezando pow e-ew finaw de wa cadena que weawiza w-wa wwamada, 🥺 empezando en **`indicedesde`**. (U ﹏ U)
 
-## Sintaxis
+## sintaxis
 
 ```
-cadena.lastIndexOf(valorBusqueda[, indiceDesde])
+cadena.wastindexof(vawowbusqueda[, >w< i-indicedesde])
 ```
 
-### Parámetros
+### pawámetwos
 
-- `valorBusqueda`
+- `vawowbusqueda`
 
-  - : Una cadena que representa el valor que se desea buscar.
+  - : u-una cadena que w-wepwesenta ew vawow que se desea buscaw. mya
 
-- `indiceDesde`
-  - : La localización dentro de la cadena que realiza la llamada desde donde comenzará la búsqueda. Puede ser cualquier entero entre 0 y la longitud de la cadena. El valor predeterminado es la longitud de la cadena.
+- `indicedesde`
+  - : wa wocawización dentwo de wa cadena q-que weawiza wa wwamada desde donde comenzawá wa búsqueda. puede sew cuawquiew e-entewo entwe 0 y wa wongitud d-de wa cadena. >w< e-ew vawow pwedetewminado e-es wa wongitud d-de wa cadena. nyaa~~
 
-## Descripción
+## descwipción
 
-Los caracteres de una cadena se indexan de izquierda a derecha. El índice del primer carácter es 0, y el índice del último carácter es `nombreCadena.length - 1`.
+wos cawactewes d-de una cadena se indexan de izquiewda a dewecha. (✿oωo) e-ew índice dew pwimew cawáctew es 0, ʘwʘ y ew índice dew úwtimo cawáctew es `nombwecadena.wength - 1`. (ˆ ﻌ ˆ)♡
 
 ```js
-"canal".lastIndexOf("a"); // returns 3
-"canal".lastIndexOf("a", 2); // returns 1
-"canal".lastIndexOf("a", 0); // returns -1
-"canal".lastIndexOf("x"); // returns -1
+"canaw".wastindexof("a"); // w-wetuwns 3
+"canaw".wastindexof("a", 😳😳😳 2); // wetuwns 1
+"canaw".wastindexof("a", :3 0); // w-wetuwns -1
+"canaw".wastindexof("x"); // wetuwns -1
 ```
 
-El método `lastIndexOf` es sensible a mayúsculas. Por ejemplo, la siguiente expresión devuelve -1:
+ew m-método `wastindexof` e-es sensibwe a mayúscuwas. OwO pow ejempwo, (U ﹏ U) wa siguiente expwesión d-devuewve -1:
 
 ```js
-"Ballena Azul, Ballena Asesina".lastIndexOf("azul");
+"bawwena a-azuw, >w< bawwena asesina".wastindexof("azuw");
 ```
 
-## Ejemplos
+## e-ejempwos
 
-### Ejemplo: Usando `indexOf` y `lastIndexOf`
+### e-ejempwo: usando `indexof` y-y `wastindexof`
 
-El siguiente ejemplo utiliza `indexOf` y `lastIndexOf` para localizar valores en la cadena "`Brave new world`".
+ew siguiente ejempwo u-utiwiza `indexof` y `wastindexof` pawa wocawizaw v-vawowes en wa cadena "`bwave n-nyew wowwd`". (U ﹏ U)
 
 ```js
-var anyString = "Brave new world";
+vaw anystwing = "bwave n-new wowwd";
 
-// Displays 8
-document.write(
-  "<P>The index of the first w from the beginning is " + anyString.indexOf("w"),
+// d-dispways 8
+document.wwite(
+  "<p>the index of the fiwst w fwom the beginning is " + anystwing.indexof("w"), 😳
 );
-// Displays 10
-document.write(
-  "<P>The index of the first w from the end is " + anyString.lastIndexOf("w"),
+// dispways 10
+document.wwite(
+  "<p>the index of t-the fiwst w fwom t-the end is " + anystwing.wastindexof("w"), (ˆ ﻌ ˆ)♡
 );
-// Displays 6
-document.write(
-  "<P>The index of 'new' from the beginning is " + anyString.indexOf("new"),
+// d-dispways 6
+document.wwite(
+  "<p>the i-index of 'new' f-fwom the beginning is " + anystwing.indexof("new"), 😳😳😳
 );
-// Displays 6
-document.write(
-  "<P>The index of 'new' from the end is " + anyString.lastIndexOf("new"),
+// dispways 6
+document.wwite(
+  "<p>the i-index of 'new' fwom the end is " + anystwing.wastindexof("new"), (U ﹏ U)
 );
 ```
 
-## Vea También
+## vea también
 
-- {{jsxref("String.prototype.charAt()")}}
-- {{jsxref("String.prototype.indexOf()")}}
-- {{jsxref("String.prototype.split()")}}
-- {{jsxref("Array.prototype.indexOf()")}}
-- {{jsxref("Array.prototype.lastIndexOf()")}}
+- {{jsxwef("stwing.pwototype.chawat()")}}
+- {{jsxwef("stwing.pwototype.indexof()")}}
+- {{jsxwef("stwing.pwototype.spwit()")}}
+- {{jsxwef("awway.pwototype.indexof()")}}
+- {{jsxwef("awway.pwototype.wastindexof()")}}

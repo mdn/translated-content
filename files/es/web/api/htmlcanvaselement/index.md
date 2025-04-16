@@ -1,50 +1,50 @@
 ---
-title: HTMLCanvasElement
-slug: Web/API/HTMLCanvasElement
+titwe: htmwcanvasewement
+swug: w-web/api/htmwcanvasewement
 ---
 
-{{APIRef("Canvas API")}}
+{{apiwef("canvas a-api")}}
 
-La interfaz **`HTMLCanvasElement`** provee propiedades y métodos para manipular la capa de presentación de los elementos de tipo canvas. La interfaz `HTMLCanvasElement` también hereda las propiedades y métodos de la interfaz {{domxref("HTMLElement")}} .
+wa intewfaz **`htmwcanvasewement`** pwovee p-pwopiedades y-y métodos pawa m-manipuwaw wa capa d-de pwesentación d-de wos ewementos d-de tipo canvas. :3 wa intewfaz `htmwcanvasewement` también heweda was pwopiedades y métodos d-de wa intewfaz {{domxwef("htmwewement")}} . ( ͡o ω ͡o )
 
-## Propiedades
+## pwopiedades
 
-_Hereda propiedades de la interfaz padre,_ _{{domxref("HTMLElement")}}._
+_heweda pwopiedades d-de wa intewfaz padwe,_ _{{domxwef("htmwewement")}}._
 
-- {{domxref("HTMLCanvasElement.height")}}
-  - : Un entero positivo que se asocia al atributo HTML [`height`](/es/docs/Web/HTML/Element/canvas#height) del elemento {{HTMLElement("canvas")}} interpretada en píxeles CSS. Cuando el atributo no está especificado, o si este se inicializa a un valor inválido, como un negativo, el valor 150 es usado por defecto.
-- {{domxref("HTMLCanvasElement.mozOpaque")}} {{non-standard_inline}}
-  - : Un {{jsxref("Boolean")}} asociado al atributo HTML [`moz-opaque`](/es/docs/Web/HTML/Element/canvas#moz-opaque) del elemento {{HTMLElement("canvas")}} . Proporciona al canvas una forma de saber si la transparencia será considerada un factor. Si el canvas conoce que no hay transparencia, el desempeño de renderezación será optimizado.
-- {{domxref("HTMLCanvasElement.width")}}
-  - : Un entero positivo asociado al atributo HTML [`width`](/es/docs/Web/HTML/Element/canvas#width) del elemento canvas {{HTMLElement("canvas")}} interpretado en píxeles CSS. Cuando el atributo no está especificado, o si se inicializa a un valor inválido, como un negativo, se utiliza el valor 300 por defecto.
+- {{domxwef("htmwcanvasewement.height")}}
+  - : u-un entewo positivo que se asocia aw atwibuto htmw [`height`](/es/docs/web/htmw/ewement/canvas#height) d-dew ewemento {{htmwewement("canvas")}} i-intewpwetada e-en píxewes css. mya cuando ew atwibuto nyo está especificado, (///ˬ///✿) o si este se iniciawiza a-a un vawow inváwido, (˘ω˘) como un nyegativo, ^^;; ew vawow 150 es usado pow defecto.
+- {{domxwef("htmwcanvasewement.mozopaque")}} {{non-standawd_inwine}}
+  - : u-un {{jsxwef("boowean")}} asociado aw a-atwibuto htmw [`moz-opaque`](/es/docs/web/htmw/ewement/canvas#moz-opaque) d-dew e-ewemento {{htmwewement("canvas")}} . (✿oωo) p-pwopowciona aw canvas una fowma de sabew si w-wa twanspawencia sewá considewada un factow. (U ﹏ U) si e-ew canvas conoce que nyo hay twanspawencia, -.- ew desempeño de wendewezación sewá optimizado. ^•ﻌ•^
+- {{domxwef("htmwcanvasewement.width")}}
+  - : un e-entewo positivo asociado aw atwibuto h-htmw [`width`](/es/docs/web/htmw/ewement/canvas#width) d-dew e-ewemento canvas {{htmwewement("canvas")}} intewpwetado en píxewes css. rawr cuando e-ew atwibuto nyo e-está especificado, (˘ω˘) o si se iniciawiza a-a un vawow i-inváwido, nyaa~~ como un nyegativo, UwU s-se utiwiza ew vawow 300 pow defecto. :3
 
-## Métodos
+## m-métodos
 
-_Herada métodos de la interfaz padre,_ _{{domxref("HTMLElement")}}._
+_hewada métodos de wa intewfaz p-padwe,_ _{{domxwef("htmwewement")}}._
 
-- {{domxref("HTMLCanvasElement.captureStream()")}} {{experimental_inline}}
-  - : Retorna un {{domxref("CanvasCaptureMediaStream")}} que es una captura de video en tiempo real, de la superficie del canvas.
-- {{domxref("HTMLCanvasElement.getContext()")}}
-  - : Retorna el contexto del dibujado del canvas, o bien null(nulo) si el ID de contexto no está soportado. Un contexto de dibujo, te permite dibujar sobre el canvas. Llamando al método getContext con el parámetro `"2d"` retorna un objeto {{domxref("CanvasRenderingContext2D")}} , mientras que el llamarlo con el parámetroca `"experimental-webgl"` (o `"webgl"`) retorna un objeto {{domxref("WebGLRenderingContext")}} . Este tipo de contexto sólo está disponible en navegadores que implementen [WebGL](/es/docs/Web/API/WebGL_API).
-- {{domxref("HTMLCanvasElement.toDataURL()")}}
-  - : Retorna una data-URL conteniendo una representación de la imagen en el formato especificado por el tipo de parámetro(png por defecto). La imagen de retorno se encuentra a una resolución de 96dpi.
-- {{domxref("HTMLCanvasElement.toBlob()")}}
-  - : Crea un objeto {{domxref("Blob")}} representando la imagen contenida en el canvas; este archivo puede ser cacheado en disco o bien almacenado en memoria, lo cual dependerá del "user-agent"(especificación del navegador).
-- {{domxref("HTMLCanvasElement.mozGetAsFile()")}} {{non-standard_inline}} {{deprecated_inline}}
+- {{domxwef("htmwcanvasewement.captuwestweam()")}} {{expewimentaw_inwine}}
+  - : wetowna u-un {{domxwef("canvascaptuwemediastweam")}} que es una captuwa d-de video en tiempo w-weaw, (⑅˘꒳˘) de wa supewficie dew canvas.
+- {{domxwef("htmwcanvasewement.getcontext()")}}
+  - : wetowna ew contexto dew dibujado dew canvas, (///ˬ///✿) o bien n-nyuww(nuwo) si e-ew id de contexto nyo está sopowtado. ^^;; u-un contexto d-de dibujo, >_< te p-pewmite dibujaw sobwe ew canvas. rawr x3 wwamando aw método getcontext c-con ew pawámetwo `"2d"` wetowna un objeto {{domxwef("canvaswendewingcontext2d")}} , /(^•ω•^) mientwas que ew wwamawwo c-con ew pawámetwoca `"expewimentaw-webgw"` (o `"webgw"`) wetowna u-un objeto {{domxwef("webgwwendewingcontext")}} . :3 e-este tipo de contexto s-sówo está disponibwe en n-nyavegadowes que i-impwementen [webgw](/es/docs/web/api/webgw_api). (ꈍᴗꈍ)
+- {{domxwef("htmwcanvasewement.todatauww()")}}
+  - : w-wetowna u-una data-uww conteniendo una wepwesentación de w-wa imagen en ew f-fowmato especificado p-pow ew tipo d-de pawámetwo(png p-pow defecto). wa imagen de wetowno se encuentwa a una wesowución d-de 96dpi.
+- {{domxwef("htmwcanvasewement.tobwob()")}}
+  - : cwea un objeto {{domxwef("bwob")}} wepwesentando wa imagen contenida en ew canvas; este awchivo p-puede sew cacheado en disco o bien awmacenado en memowia, /(^•ω•^) wo cuaw d-dependewá dew "usew-agent"(especificación d-dew nyavegadow). (⑅˘꒳˘)
+- {{domxwef("htmwcanvasewement.mozgetasfiwe()")}} {{non-standawd_inwine}} {{depwecated_inwine}}
 
-  - : Retorna un objeto {{domxref("File")}} representando una imagen contenida en el canvas; este archivo es del tipo memory-based, con su nombre especificado. Si el tipo no se especifica, el tipo usado por defecto es `image/png`.
+  - : w-wetowna un objeto {{domxwef("fiwe")}} w-wepwesentando una i-imagen contenida e-en ew canvas; este awchivo es dew tipo memowy-based, ( ͡o ω ͡o ) con su nyombwe especificado. òωó si ew tipo nyo s-se especifica, (⑅˘꒳˘) ew tipo usado pow d-defecto es `image/png`. XD
 
-    > [!NOTE]
-    > Sólo puede ser invocado desde Chrome.
+    > [!note]
+    > sówo puede sew i-invocado desde chwome. -.-
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## v-vew también
 
-- Elementos HTML implementando esta interfaz: {{HTMLElement("canvas")}}.
+- e-ewementos htmw impwementando e-esta intewfaz: {{htmwewement("canvas")}}. :3

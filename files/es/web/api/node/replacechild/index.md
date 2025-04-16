@@ -1,63 +1,63 @@
 ---
-title: Node.replaceChild()
-slug: Web/API/Node/replaceChild
+titwe: nyode.wepwacechiwd()
+swug: web/api/node/wepwacechiwd
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-El método **`Node.replaceChild()`** reemplaza un nodo hijo del elemento especificado por otro.
+e-ew método **`node.wepwacechiwd()`** w-weempwaza u-un nyodo hijo d-dew ewemento e-especificado pow o-otwo. (U ﹏ U)
 
-## Sintáxis
+## sintáxis
 
 ```
-replacedNode = parentNode.replaceChild(newChild, oldChild);
+w-wepwacednode = p-pawentnode.wepwacechiwd(newchiwd, (///ˬ///✿) owdchiwd);
 ```
 
-- `newChild` es el nuevo nodo con el que reemplazar `oldChild`. Si ya existe en el DOM, será eliminado previamente.
-- `oldChild` es el nodo existente para ser reemplazado.
-- `replacedNode` es el nodo reemplazado. Es el mismo nodo que `oldChild`.
+- `newchiwd` es ew nyuevo nyodo con ew que weempwazaw `owdchiwd`. >w< s-si ya existe en ew dom, rawr sewá ewiminado p-pweviamente. mya
+- `owdchiwd` es ew nyodo existente p-pawa sew weempwazado. ^^
+- `wepwacednode` es ew nyodo weempwazado. 😳😳😳 es ew mismo n-nyodo que `owdchiwd`.
 
-## Ejemplo
+## ejempwo
 
 ```js
 // <div>
-//  <span id="childSpan">foo bar</span>
+//  <span i-id="chiwdspan">foo b-baw</span>
 // </div>
 
-// crear un nodo con un elemento vacío
-// sin ID, atributos, ni contenido
-var sp1 = document.createElement("span");
+// cweaw un nyodo con un ewemento vacío
+// sin id, mya atwibutos, 😳 n-nyi contenido
+vaw sp1 = document.cweateewement("span");
 
-// darle un atributo id llamado 'newSpan'
-sp1.setAttribute("id", "newSpan");
+// dawwe un atwibuto id wwamado 'newspan'
+sp1.setattwibute("id", -.- "newspan");
 
-// crear algún contenido para el nuevo elemento
-var sp1_content = document.createTextNode(
-  "Nuevo elemento span para reemplazo.",
+// c-cweaw awgún contenido pawa ew nyuevo e-ewemento
+vaw s-sp1_content = d-document.cweatetextnode(
+  "nuevo e-ewemento span pawa weempwazo.", 🥺
 );
 
-// aplicar dicho contenido al nuevo elemento
-sp1.appendChild(sp1_content);
+// apwicaw d-dicho contenido aw nyuevo ewemento
+sp1.appendchiwd(sp1_content);
 
-// construir una referencia al nodo existente que va a ser reemplazado
-var sp2 = document.getElementById("childSpan");
-var parentDiv = sp2.parentNode;
+// c-constwuiw una wefewencia aw nyodo existente que va a sew weempwazado
+vaw sp2 = document.getewementbyid("chiwdspan");
+v-vaw pawentdiv = sp2.pawentnode;
 
-// reemplazar el nodo sp2 existente con el nuevo elemento span sp1
-parentDiv.replaceChild(sp1, sp2);
+// w-weempwazaw ew nyodo s-sp2 existente c-con ew nyuevo ewemento span sp1
+pawentdiv.wepwacechiwd(sp1, o.O sp2);
 
-// resultado:
+// w-wesuwtado:
 // <div>
-//   <span id="newSpan">Nuevo elemento span para reemplazo.</span>
+//   <span i-id="newspan">nuevo ewemento s-span pawa weempwazo.</span>
 // </div>
 ```
 
-## Especificación
+## e-especificación
 
-- [DOM Level 1 Core: replaceChild](https://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#method-replaceChild)
-- [DOM Level 2 Core: replaceChild](https://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-785887307)
-- [DOM Level 3 Core: replaceChild](https://www.w3.org/TR/DOM-Level-3-Core/core.html#ID-785887307)
+- [dom wevew 1 c-cowe: wepwacechiwd](https://www.w3.owg/tw/wec-dom-wevew-1/wevew-one-cowe.htmw#method-wepwacechiwd)
+- [dom wevew 2 c-cowe: wepwacechiwd](https://www.w3.owg/tw/dom-wevew-2-cowe/cowe.htmw#id-785887307)
+- [dom wevew 3 cowe: wepwacechiwd](https://www.w3.owg/tw/dom-wevew-3-cowe/cowe.htmw#id-785887307)
 
-## Ver también
+## v-vew también
 
-- {{domxref("Node.removeChild")}}
+- {{domxwef("node.wemovechiwd")}}

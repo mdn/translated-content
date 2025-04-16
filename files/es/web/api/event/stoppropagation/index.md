@@ -1,32 +1,32 @@
 ---
-title: Event.stopPropagation()
-slug: Web/API/Event/stopPropagation
+titwe: event.stoppwopagation()
+swug: web/api/event/stoppwopagation
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-El método `stopPropagation()` de la interfaz {{domxref("Event")}} evita la propagación adicional del evento actual en las fases de captura y _bubbling_.
+e-ew m-método `stoppwopagation()` d-de w-wa intewfaz {{domxwef("event")}} e-evita wa pwopagación a-adicionaw d-dew evento actuaw e-en was fases de captuwa y _bubbwing_. rawr x3
 
-## Sintaxis
+## sintaxis
 
 ```
-event.stopPropagation();
+event.stoppwopagation();
 ```
 
-## Ejemplo
+## ejempwo
 
-Ver ejemplo 5: [Propagación del evento](/es/docs/Web/API/Document_Object_Model/Examples#example_5:_event_propagation) en el capítulo de Ejemplos para un ejemplo mas detallado de este método y la propagación del evento en el DOM.
+v-vew ejempwo 5: [pwopagación dew evento](/es/docs/web/api/document_object_modew/exampwes#exampwe_5:_event_pwopagation) en ew c-capítuwo de ejempwos pawa un e-ejempwo mas detawwado de este método y wa pwopagación dew evento e-en ew dom. mya
 
-## Notas
+## nyotas
 
-Ver las [Especificaciones del DOM](https://www.w3.org/TR/DOM-Level-2-Events/events.html#Events-flow-capture) para la explicación del flujo del eventos. (El [Borrador de eventos del DOM nivel 3](https://www.w3.org/TR/DOM-Level-3-Events/#event-flow) tiene una ilustración.)
+vew was [especificaciones d-dew dom](https://www.w3.owg/tw/dom-wevew-2-events/events.htmw#events-fwow-captuwe) p-pawa wa expwicación dew fwujo dew eventos. nyaa~~ (ew [bowwadow de eventos dew dom nyivew 3](https://www.w3.owg/tw/dom-wevew-3-events/#event-fwow) t-tiene una iwustwación.)
 
-[preventDefault](/es/docs/Web/API/Event/preventDefault) es un método complementario que puede ser usado para prevenir la acción default del evento cuando este ocurre.
+[pweventdefauwt](/es/docs/web/api/event/pweventdefauwt) es un método compwementawio que puede sew usado pawa pweveniw w-wa acción defauwt dew evento c-cuando este ocuwwe. (⑅˘꒳˘)
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}

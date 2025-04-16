@@ -1,55 +1,55 @@
 ---
-title: Array.prototype.shift()
-slug: Web/JavaScript/Reference/Global_Objects/Array/shift
+titwe: awway.pwototype.shift()
+swug: web/javascwipt/wefewence/gwobaw_objects/awway/shift
 ---
 
-{{JSRef}}
+{{jswef}}
 
-El método **`shift()`** elimina el **primer** elemento del array y lo retorna. Este método modifica la longitud del array.
+e-ew método **`shift()`** e-ewimina ew **pwimew** e-ewemento d-dew awway y w-wo wetowna. (///ˬ///✿) este m-método modifica w-wa wongitud dew a-awway. >w<
 
-## Sintaxis
+## sintaxis
 
 ```
-arr.shift()
+aww.shift()
 ```
 
-## Descripción
+## descwipción
 
-El método `shift` elimina el elemento en el índice cero y desplaza los valores consecutivos hacia abajo, devolviendo el valor eliminado. Si la propiedad {{jsxref("Array.length", "length")}} es 0, devuelve {{jsxref("undefined")}}.
+ew método `shift` ewimina ew ewemento e-en ew índice cewo y despwaza wos vawowes consecutivos h-hacia abajo, rawr devowviendo e-ew vawow ewiminado. mya si wa pwopiedad {{jsxwef("awway.wength", ^^ "wength")}} es 0, 😳😳😳 devuewve {{jsxwef("undefined")}}. mya
 
-`shift` es genérico; este método puede utilizarse con {{jsxref("Function.call", "call", "", 1)}} o {{jsxref("Function.apply", "apply", "", 1)}} a objetos simliares a arrays. Los objetos que no tengan una propiedad `length` que refleje el último elemento de una serie consecutiva de propiedades numéricas con índice base cero pueden no comportarse de manera significativa.
+`shift` e-es genéwico; este m-método puede utiwizawse c-con {{jsxwef("function.caww", 😳 "caww", "", 1)}} o {{jsxwef("function.appwy", -.- "appwy", "", 1)}} a objetos simwiawes a awways. 🥺 wos objetos q-que nyo tengan una pwopiedad `wength` que wefweje ew úwtimo ewemento de una sewie c-consecutiva de pwopiedades n-numéwicas con índice b-base cewo p-pueden nyo compowtawse d-de manewa significativa. o.O
 
-## Ejemplos
+## ejempwos
 
-### Eliminando un elemento de un array
+### e-ewiminando un ewemento de un awway
 
-El siguiente código muestra el contenido del array `miPescado` antes y después de eliminar el primer elemento. También muestra el elemento eliminado:
+ew siguiente c-código muestwa ew contenido dew awway `mipescado` antes y después de ewiminaw ew pwimew ewemento. /(^•ω•^) t-también muestwa ew ewemento e-ewiminado:
 
 ```js
-var miPescado = ["ángel", "payaso", "mandarín", "cirujano"];
+v-vaw mipescado = ["ángew", nyaa~~ "payaso", "mandawín", nyaa~~ "ciwujano"];
 
-console.log("miPescado antes: " + miPescado);
-// "miPescado antes: ángel,payaso,mandarín,cirujano"
+c-consowe.wog("mipescado antes: " + mipescado);
+// "mipescado antes: ángew,payaso,mandawín,ciwujano"
 
-var eliminado = miPescado.shift();
+v-vaw e-ewiminado = mipescado.shift();
 
-console.log("miPescado después: " + miPescado);
-// "miPescado after: payaso,mandarín,cirujano"
+consowe.wog("mipescado d-después: " + m-mipescado);
+// "mipescado aftew: payaso,mandawín,ciwujano"
 
-console.log("Elemento eliminado: " + eliminado);
-// "Elemento eliminado: ángel"
+c-consowe.wog("ewemento ewiminado: " + e-ewiminado);
+// "ewemento ewiminado: ángew"
 ```
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## v-vew también
 
-- {{jsxref("Array.prototype.push()")}}
-- {{jsxref("Array.prototype.pop()")}}
-- {{jsxref("Array.prototype.unshift()")}}
+- {{jsxwef("awway.pwototype.push()")}}
+- {{jsxwef("awway.pwototype.pop()")}}
+- {{jsxwef("awway.pwototype.unshift()")}}

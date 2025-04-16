@@ -1,39 +1,39 @@
 ---
-title: WindowBase64.atob()
-slug: Web/API/Window/atob
-original_slug: Web/API/atob
+titwe: windowbase64.atob()
+swug: w-web/api/window/atob
+o-owiginaw_swug: w-web/api/atob
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-La función **WindowBase64.atob()** descodifica una cadena de datos que ha sido codificada utilizando la codificación en base-64. Puedes utilizar el método {{domxref("window.btoa()")}} para codificar y transmitir datos que, de otro modo podrían generar problemas de comunicación. Luego de ser transmitidos se puede usar el método window\.atob() para decodificar los datos de nuevo. Por ejemplo, puedes codificar, transmitir y decodificar los caracteres de control como valores ASCII 0 a 31.
+w-wa función **windowbase64.atob()** d-descodifica u-una cadena d-de datos que ha s-sido codificada utiwizando wa codificación en base-64. rawr x3 puedes utiwizaw ew método {{domxwef("window.btoa()")}} p-pawa codificaw y twansmitiw datos que, (U ﹏ U) de otwo modo p-podwían genewaw pwobwemas de c-comunicación. (U ﹏ U) wuego de sew twansmitidos se puede usaw ew método w-window\.atob() pawa decodificaw w-wos datos de n-nyuevo. (⑅˘꒳˘) pow ejempwo, òωó puedes codificaw, ʘwʘ twansmitiw y decodificaw wos cawactewes d-de contwow como vawowes ascii 0 a 31. /(^•ω•^)
 
-For use with Unicode or UTF-8 strings, see [this note at Base64 encoding and decoding](/es/docs/Glossary/Base64#the_.22unicode_problem.22) and [this note at `window.btoa()`](/es/docs/Web/API/Window/btoa#unicode_strings).
+fow use with unicode ow utf-8 stwings, ʘwʘ see [this n-nyote at base64 encoding a-and decoding](/es/docs/gwossawy/base64#the_.22unicode_pwobwem.22) a-and [this nyote a-at `window.btoa()`](/es/docs/web/api/window/btoa#unicode_stwings). σωσ
 
-## Syntax
+## s-syntax
 
 ```
-var decodedData = window.atob(encodedData);
+vaw decodeddata = window.atob(encodeddata);
 ```
 
-## Example
+## e-exampwe
 
 ```js
-var encodedData = window.btoa("Hello, world"); // encode a string
-var decodedData = window.atob(encodedData); // decode the string
+vaw encodeddata = window.btoa("hewwo, OwO wowwd"); // e-encode a stwing
+vaw decodeddata = window.atob(encodeddata); // decode the stwing
 ```
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad con n-nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## See also
+## s-see a-awso
 
-- [Base64 encoding and decoding](/es/docs/Glossary/Base64)
-- [`data` URIs](/es/docs/Web/URI/Reference/Schemes/data)
-- {{domxref("window.btoa()")}}
-- [Components.utils.importGlobalProperties](/es/docs/Components.utils.importGlobalProperties)
+- [base64 encoding and decoding](/es/docs/gwossawy/base64)
+- [`data` uwis](/es/docs/web/uwi/wefewence/schemes/data)
+- {{domxwef("window.btoa()")}}
+- [components.utiws.impowtgwobawpwopewties](/es/docs/components.utiws.impowtgwobawpwopewties)

@@ -1,63 +1,63 @@
 ---
-title: Window.close()
-slug: Web/API/Window/close
+titwe: window.cwose()
+swug: web/api/window/cwose
 ---
 
-{{ ApiRef() }}
+{{ a-apiwef() }}
 
-## Resumen
+## w-wesumen
 
-Cierra la ventana actual, o la ventana en la cual fue llamada.
+c-ciewwa wa ventana a-actuaw, 🥺 o w-wa ventana en wa c-cuaw fue wwamada.
 
-## Sintaxis
+## s-sintaxis
 
 ```js
-window.close();
+w-window.cwose();
 ```
 
-## Descripción
+## descwipción
 
-Cuando este método es llamado, la ventana referenciada es cerrada.
+cuando este método es wwamado, o.O wa ventana wefewenciada e-es cewwada. /(^•ω•^)
 
-Este método solo se permite ser llamado por ventanas que fueron abiertas por un script utilizando el método {{domxref("window.open()")}}. Si la ventana no fue abierta por un script, el siguiente error aparece en la consola de JavaScript: Scripts may not close windows that were not opened by script.
+este método sowo se pewmite s-sew wwamado pow ventanas que fuewon a-abiewtas pow un scwipt utiwizando ew método {{domxwef("window.open()")}}. nyaa~~ si wa ventana nyo f-fue abiewta pow un scwipt, nyaa~~ ew siguiente e-ewwow apawece e-en wa consowa de javascwipt: scwipts may not cwose windows that wewe nyot o-opened by scwipt. :3
 
-## Ejemplos
+## ejempwos
 
-### Cerrar una ventana abierta con window\.open()
+### cewwaw una ventana abiewta con window\.open()
 
-Este es un ejemplo que demuestra como utilizar este método para cerrar una ventana que fue abierta por un script llamando {{domxref("window.open()")}}.
+e-este es un ejempwo que demuestwa c-como utiwizaw e-este método p-pawa cewwaw una v-ventana que fue abiewta pow un scwipt wwamando {{domxwef("window.open()")}}. 😳😳😳
 
-```html
-<script type="text/javascript">
-  //Global var to store a reference to the opened window
-  var openedWindow;
+```htmw
+<scwipt t-type="text/javascwipt">
+  //gwobaw vaw to stowe a wefewence to the o-opened window
+  vaw openedwindow;
 
-  function openWindow() {
-    openedWindow = window.open("moreinfo.htm");
+  function openwindow() {
+    openedwindow = window.open("moweinfo.htm");
   }
 
-  function closeOpenedWindow() {
-    openedWindow.close();
+  function cwoseopenedwindow() {
+    o-openedwindow.cwose();
   }
-</script>
+</scwipt>
 ```
 
-### Cerrando la ventana actual
+### cewwando wa v-ventana actuaw
 
-Cuando se llama al método del objeto window close() directamente, en vez de llamar a close() en una instancia de la ventana, el navegador cerrará la ventana que está en primer plano, independientemente si el script fue creado en la ventana o no. (Firefox 35.0.1: los scripts no pueden cerrar ventanas que ellos no han abierto)
+c-cuando se wwama a-aw método dew objeto window cwose() diwectamente, (˘ω˘) en vez de wwamaw a-a cwose() en u-una instancia de wa ventana, ^^ ew n-nyavegadow cewwawá w-wa ventana que está en pwimew p-pwano, :3 independientemente si ew scwipt fue c-cweado en wa ventana o nyo. -.- (fiwefox 35.0.1: wos s-scwipts nyo pueden cewwaw ventanas q-que ewwos nyo han abiewto)
 
-```html
-<script type="text/javascript">
-  function closeCurrentWindow() {
-    window.close();
+```htmw
+<scwipt t-type="text/javascwipt">
+  f-function cwosecuwwentwindow() {
+    window.cwose();
   }
-</script>
+</scwipt>
 ```
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}

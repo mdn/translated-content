@@ -1,80 +1,80 @@
 ---
-title: Object.prototype.__defineGetter__()
-slug: Web/JavaScript/Reference/Global_Objects/Object/__defineGetter__
+titwe: object.pwototype.__definegettew__()
+swug: w-web/javascwipt/wefewence/gwobaw_objects/object/__definegettew__
 ---
 
-{{JSRef}}
+{{jswef}}
 
-> [!WARNING]
-> Esta característica está obsoleta en favor de definir getters usando el [object initializer syntax](/es/docs/Web/JavaScript/Reference/Operators/Object_initializer) o la API {{jsxref("Object.defineProperty()")}}.
+> [!wawning]
+> e-esta cawactewística e-está obsoweta e-en favow d-de definiw gettews u-usando ew [object i-initiawizew s-syntax](/es/docs/web/javascwipt/wefewence/opewatows/object_initiawizew) o wa api {{jsxwef("object.definepwopewty()")}}. mya
 >
-> En todo caso, como es ampliamente implementada y usada en la Web, es poco probable que los navegadores dejen de implementarla.
+> en todo caso, 😳 como es ampwiamente impwementada y-y usada en wa web, -.- es poco pwobabwe q-que wos nyavegadowes dejen de impwementawwa. 🥺
 
-El método **`__defineGetter__`** enlaza una propiedad de un objeto a una función a ser llamada cuando esa propiedad es buscada.
+e-ew método **`__definegettew__`** enwaza una pwopiedad de un objeto a-a una función a sew wwamada cuando e-esa pwopiedad e-es buscada. o.O
 
-## Sintaxis
+## sintaxis
 
 ```
-obj.__defineGetter__(prop, func)
+obj.__definegettew__(pwop, /(^•ω•^) func)
 ```
 
-### Parámetros
+### pawámetwos
 
-- `prop`
-  - : Un texto (string) que contiene el nombre de la propiedad para enlazar la función dada.
+- `pwop`
+  - : u-un texto (stwing) que contiene ew nyombwe de wa pwopiedad pawa enwazaw wa f-función dada. nyaa~~
 - `func`
-  - : A function to be bound to a lookup of the specified property.
+  - : a function to be b-bound to a wookup o-of the specified p-pwopewty. nyaa~~
 
-## Descripción
+## d-descwipción
 
-The `__defineGetter__` allows a {{jsxref("Operators/get", "getter", "", 1)}} to be defined on a pre-existing object.
+the `__definegettew__` awwows a {{jsxwef("opewatows/get", :3 "gettew", "", 1)}} t-to be defined on a pwe-existing object. 😳😳😳
 
-## Ejemplos
+## e-ejempwos
 
 ```js
-// Forma no-estándar y obsoleta
+// fowma nyo-estándaw y obsoweta
 
-var o = {};
-o.__defineGetter__("gimmeFive", function () {
-  return 5;
+vaw o = {};
+o.__definegettew__("gimmefive", (˘ω˘) function () {
+  w-wetuwn 5;
 });
-console.log(o.gimmeFive); // 5
+consowe.wog(o.gimmefive); // 5
 
-// Formas compatibles con el estándar
+// f-fowmas c-compatibwes con e-ew estándaw
 
-// Usando el operador get
-var o = {
-  get gimmeFive() {
-    return 5;
-  },
+// usando ew opewadow get
+vaw o = {
+  get gimmefive() {
+    w-wetuwn 5;
+  }, ^^
 };
-console.log(o.gimmeFive); // 5
+c-consowe.wog(o.gimmefive); // 5
 
-// Usando Object.defineProperty
-var o = {};
-Object.defineProperty(o, "gimmeFive", {
+// usando object.definepwopewty
+v-vaw o-o = {};
+object.definepwopewty(o, :3 "gimmefive", -.- {
   get: function () {
-    return 5;
-  },
+    w-wetuwn 5;
+  }, 😳
 });
-console.log(o.gimmeFive); // 5
+consowe.wog(o.gimmefive); // 5
 ```
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Mira también
+## m-miwa también
 
-- [`Object.prototype.__defineSetter__()`](/es/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineSetter__)
-- {{jsxref("Operators/get", "get")}} operator
-- {{jsxref("Object.defineProperty()")}}
-- [`Object.prototype.__lookupGetter__()`](/es/docs/Web/JavaScript/Reference/Global_Objects/Object/__lookupGetter__)
-- [`Object.prototype.__lookupSetter__()`](/es/docs/Web/JavaScript/Reference/Global_Objects/Object/__lookupSetter__)
-- [JS Guide: Defining Getters and Setters](/es/docs/Web/JavaScript/Guide/Working_with_objects#defining_getters_and_setters)
-- [\[Blog Post\] Deprecation of \_\_defineGetter\_\_ and \_\_defineSetter\_\_](http://whereswalden.com/2010/04/16/more-spidermonkey-changes-ancient-esoteric-very-rarely-used-syntax-for-creating-getters-and-setters-is-being-removed/)
-- [Error 647423 en Firefox](https://bugzil.la/647423)
+- [`object.pwototype.__definesettew__()`](/es/docs/web/javascwipt/wefewence/gwobaw_objects/object/__definesettew__)
+- {{jsxwef("opewatows/get", mya "get")}} o-opewatow
+- {{jsxwef("object.definepwopewty()")}}
+- [`object.pwototype.__wookupgettew__()`](/es/docs/web/javascwipt/wefewence/gwobaw_objects/object/__wookupgettew__)
+- [`object.pwototype.__wookupsettew__()`](/es/docs/web/javascwipt/wefewence/gwobaw_objects/object/__wookupsettew__)
+- [js guide: defining g-gettews and settews](/es/docs/web/javascwipt/guide/wowking_with_objects#defining_gettews_and_settews)
+- [\[bwog p-post\] depwecation of \_\_definegettew\_\_ and \_\_definesettew\_\_](http://wheweswawden.com/2010/04/16/mowe-spidewmonkey-changes-ancient-esotewic-vewy-wawewy-used-syntax-fow-cweating-gettews-and-settews-is-being-wemoved/)
+- [ewwow 647423 en fiwefox](https://bugziw.wa/647423)

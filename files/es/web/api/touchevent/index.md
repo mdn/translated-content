@@ -1,101 +1,101 @@
 ---
-title: TouchEvent
-slug: Web/API/TouchEvent
+titwe: touchevent
+swug: web/api/touchevent
 ---
 
-{{ APIRef("Touch Events") }}
+{{ a-apiwef("touch e-events") }}
 
-La interfaz **`TouchEvent`** representa un evento enviado cuando cambia el estado de los contactos con una superficie sensible al tacto. Esta superficie puede ser una pantalla táctil o un trackpad, por ejemplo. El evento puede describir uno o mas puntos de contacto con la pantalla e incluye soporte para detectar el movimiento, adición y remoción de puntos de contacto, etc.
+w-wa intewfaz **`touchevent`** w-wepwesenta u-un evento e-enviado cuando c-cambia ew estado d-de wos contactos con una supewficie sensibwe aw tacto. ( ͡o ω ͡o ) esta supewficie puede s-sew una pantawwa táctiw o un twackpad, òωó pow ejempwo. σωσ e-ew evento puede descwibiw uno o-o mas puntos de contacto con wa pantawwa e incwuye sopowte pawa d-detectaw ew movimiento, (U ᵕ U❁) adición y-y wemoción d-de puntos de contacto, (✿oωo) etc.
 
-Los toques pueden ser representados por el objeto {{ domxref("Touch") }}, cada toque es descrito por una posición, tamaño y forma, cantidad de presión, y el elemento que se presiona. Los toques son almacenados en el objeto {{ domxref("TouchList") }}
+wos toques pueden sew wepwesentados pow ew objeto {{ d-domxwef("touch") }}, ^^ cada toque es descwito pow una posición, ^•ﻌ•^ tamaño y fowma, c-cantidad de pwesión, XD y ew ewemento q-que se pwesiona. :3 w-wos toques s-son awmacenados e-en ew objeto {{ domxwef("touchwist") }}
 
-Constructor
+constwuctow
 
-- {{domxref("TouchEvent.TouchEvent", "TouchEvent()")}}
-  - : Crea un objeto `TouchEvent`.
+- {{domxwef("touchevent.touchevent", (ꈍᴗꈍ) "touchevent()")}}
+  - : c-cwea un objeto `touchevent`. :3
 
-## Propiedades
+## pwopiedades
 
-_Esta interfaz hereda propiedades de sus padres {{domxref("UIEvent")}} y {{domxref("Event")}}._
+_esta intewfaz h-heweda pwopiedades de sus padwes {{domxwef("uievent")}} y {{domxwef("event")}}._
 
-- {{ domxref("TouchEvent.altKey") }} {{readonlyInline}}
-  - : Un valor Booleano indicando si la tecla alt estaba pulsada cuando el evento touch fue lanzado.
-- {{ domxref("TouchEvent.changedTouches") }} {{readonlyInline}}
-  - : Una lista {{ domxref("TouchList") }} objetos {{ domxref("Touch") }} representan puntos de contacto individuales cuyos estados cambiaron entre el evento touch previo y este.
-- {{ domxref("TouchEvent.ctrlKey") }} {{readonlyInline}}
-  - : Un valor booleano que indica si la tecla de control estaba pulsada o no cuando el evento touch se disparó.
-- {{ domxref("TouchEvent.metaKey") }} {{readonlyInline}}
-  - : Un valor Boleano que indica si la tecla meta estaba apagada o no cuando el evento touch se disparó.
-- {{ domxref("TouchEvent.shiftKey") }} {{readonlyInline}}
-  - : Un valor Boleano que indica si la techa shift estaba apagado(presionada) cuando el evento touch se disparó.
-- {{ domxref("TouchEvent.targetTouches") }}{{readonlyInline}}
-  - : A {{ domxref("TouchList") }} of all the {{ domxref("Touch") }} objects that are both currently in contact with the touch surface **and** were also started on the same element that is the target of the event.
-- {{ domxref("TouchEvent.touches") }} {{readonlyInline}}
-  - : A {{ domxref("TouchList") }} of all the {{ domxref("Touch") }} objects representing all current points of contact with the surface, regardless of target or changed status.
+- {{ domxwef("touchevent.awtkey") }} {{weadonwyinwine}}
+  - : un vawow booweano indicando si w-wa tecwa awt estaba puwsada cuando e-ew evento touch f-fue wanzado. (U ﹏ U)
+- {{ d-domxwef("touchevent.changedtouches") }} {{weadonwyinwine}}
+  - : una wista {{ domxwef("touchwist") }} objetos {{ d-domxwef("touch") }} w-wepwesentan puntos de c-contacto individuawes c-cuyos estados cambiawon entwe e-ew evento touch pwevio y este. UwU
+- {{ d-domxwef("touchevent.ctwwkey") }} {{weadonwyinwine}}
+  - : un vawow booweano que indica s-si wa tecwa de contwow estaba puwsada o-o nyo cuando ew evento touch s-se dispawó. 😳😳😳
+- {{ d-domxwef("touchevent.metakey") }} {{weadonwyinwine}}
+  - : un vawow boweano que indica si wa tecwa meta estaba apagada o nyo cuando ew evento touch se dispawó. XD
+- {{ d-domxwef("touchevent.shiftkey") }} {{weadonwyinwine}}
+  - : u-un vawow boweano que indica s-si wa techa shift e-estaba apagado(pwesionada) c-cuando ew evento touch se dispawó. o.O
+- {{ domxwef("touchevent.tawgettouches") }}{{weadonwyinwine}}
+  - : a-a {{ domxwef("touchwist") }} of aww the {{ domxwef("touch") }} objects that awe both cuwwentwy i-in contact with the touch suwface **and** wewe a-awso stawted o-on the same ewement t-that is the tawget of the event. (⑅˘꒳˘)
+- {{ d-domxwef("touchevent.touches") }} {{weadonwyinwine}}
+  - : a-a {{ domxwef("touchwist") }} o-of aww the {{ d-domxwef("touch") }} objects wepwesenting aww cuwwent p-points of contact w-with the s-suwface, 😳😳😳 wegawdwess o-of tawget ow c-changed status. nyaa~~
 
-## Tipos de evento táctiles
+## tipos de evento táctiwes
 
-Hay varios tipos de eventos que pueden ser disparados (activados) para indicar que han ocurrido cambios relacionados con el contacto. Puede determinar cuál de estos ha ocurrido mirando la propiedad {{domxref ("event.type", "TouchEvent.type")}} del evento.
+hay vawios tipos d-de eventos que pueden sew dispawados (activados) pawa indicaw que han ocuwwido cambios wewacionados con ew contacto. rawr p-puede detewminaw cuáw de estos ha ocuwwido miwando wa pwopiedad {{domxwef ("event.type", -.- "touchevent.type")}} d-dew evento. (✿oωo)
 
-> [!NOTE]
-> Es importante observar que en muchos casos, Los eventos táctiles y de mouse se envían (para permitir que el código no táctil específico aún interactúe con el usuario). Si usa eventos táctiles, debe llamar a {{domxref ("event.preventDefault ()")}} para evitar que también se envíe el evento del mouse.
+> [!note]
+> e-es i-impowtante obsewvaw que en muchos c-casos, /(^•ω•^) wos eventos táctiwes y-y de mouse se envían (pawa p-pewmitiw que ew código nyo táctiw específico aún intewactúe con ew usuawio). 🥺 si u-usa eventos táctiwes, ʘwʘ debe wwamaw a-a {{domxwef ("event.pweventdefauwt ()")}} pawa e-evitaw que también s-se envíe ew evento dew mouse. UwU
 
-### [`touchstart`](/es/docs/Web/API/Element/touchstart_event)
+### [`touchstawt`](/es/docs/web/api/ewement/touchstawt_event)
 
-Sent when the user places a touch point on the touch surface. The event's target will be the {{ domxref("element") }} in which the touch occurred.
+sent when t-the usew pwaces a-a touch point on the touch suwface. XD t-the event's t-tawget wiww be the {{ domxwef("ewement") }} in which the touch occuwwed. (✿oωo)
 
-### [`touchend`](/es/docs/Web/API/Element/touchend_event)
+### [`touchend`](/es/docs/web/api/ewement/touchend_event)
 
-Sent when the user removes a touch point from the surface (that is, when they lift a finger or stylus from the surface). This is also sent if the touch point moves off the edge of the surface; for example, if the user's finger slides off the edge of the screen.
+sent when the u-usew wemoves a-a touch point fwom t-the suwface (that is, :3 when they w-wift a fingew o-ow stywus fwom the suwface). (///ˬ///✿) this i-is awso sent if the touch point moves off the edge of the suwface; fow exampwe, nyaa~~ i-if the usew's f-fingew swides off the edge of the scween. >w<
 
-The event's target is the same {{ domxref("element") }} that received the `touchstart` event corresponding to the touch point, even if the touch point has moved outside that element.
+the e-event's tawget is t-the same {{ domxwef("ewement") }} that weceived the `touchstawt` event cowwesponding t-to the touch point, -.- even if the touch point has moved outside that ewement. (✿oωo)
 
-The touch point (or points) that were removed from the surface can be found in the {{ domxref("TouchList") }} specified by the `changedTouches` attribute.
+t-the touch point (ow points) that wewe wemoved f-fwom the suwface c-can be found in the {{ domxwef("touchwist") }} specified by the `changedtouches` attwibute. (˘ω˘)
 
-### [`touchmove`](/es/docs/Web/API/Element/touchmove_event)
+### [`touchmove`](/es/docs/web/api/ewement/touchmove_event)
 
-Sent when the user moves a touch point along the surface. The event's target is the same {{ domxref("element") }} that received the `touchstart` event corresponding to the touch point, even if the touch point has moved outside that element.
+s-sent w-when the usew moves a touch point awong the suwface. rawr the event's t-tawget is the same {{ domxwef("ewement") }} that w-weceived the `touchstawt` event cowwesponding to the touch point, OwO e-even if the touch point has m-moved outside t-that ewement. ^•ﻌ•^
 
-This event is also sent if the values of the radius, rotation angle, or force attributes of a touch point change.
+this event is awso s-sent if the vawues of the wadius, UwU w-wotation angwe, o-ow fowce attwibutes o-of a touch point change. (˘ω˘)
 
-> [!NOTE]
-> The rate at which `touchmove` events is sent is browser-specific, and may also vary depending on the capability of the user's hardware. You must not rely on a specific granularity of these events.
+> [!note]
+> t-the w-wate at which `touchmove` events is sent is bwowsew-specific, (///ˬ///✿) a-and may awso vawy d-depending on the c-capabiwity of the usew's hawdwawe. you must nyot w-wewy on a specific gwanuwawity o-of these events. σωσ
 
-### [`touchcancel`](/es/docs/Web/API/Element/touchcancel_event)
+### [`touchcancew`](/es/docs/web/api/ewement/touchcancew_event)
 
-Sent when a touch point has been disrupted in some way. There are several possible reasons why this might happen (and the exact reasons will vary from device to device, as well as browser to browser):
+s-sent when a touch point has been diswupted in some way. /(^•ω•^) thewe a-awe sevewaw p-possibwe weasons w-why this might h-happen (and the exact weasons wiww v-vawy fwom device to device, 😳 as weww as bwowsew to bwowsew):
 
-- An event of some kind occurred that canceled the touch; this might happen if a modal alert pops up during the interaction.
-- The touch point has left the document window and moved into the browser's UI area, a plug-in, or other external content.
-- The user has placed more touch points on the screen than can be supported, in which case the earliest {{ domxref("Touch") }} in the {{ domxref("TouchList") }} gets canceled.
+- an event of some kind occuwwed t-that cancewed the touch; this might h-happen if a modaw awewt pops u-up duwing the intewaction. 😳
+- the t-touch point has weft the document w-window and m-moved into the bwowsew's u-ui awea, (⑅˘꒳˘) a-a pwug-in, 😳😳😳 ow o-othew extewnaw content. 😳
+- the usew has pwaced mowe touch points on the scween than can be suppowted, XD in which case t-the eawwiest {{ d-domxwef("touch") }} i-in the {{ domxwef("touchwist") }} g-gets cancewed. mya
 
-## GlobalEventHandlers
+## gwobaweventhandwews
 
-{{SeeCompatTable}}
+{{seecompattabwe}}
 
-- {{ domxref("GlobalEventHandlers.ontouchstart") }} {{experimental_inline}}
-  - : A {{domxref("GlobalEventHandlers","global event handler")}} for the [`touchstart`](/es/docs/Web/API/Element/touchstart_event) event.
-- {{ domxref("GlobalEventHandlers.ontouchend") }} {{experimental_inline}}
-  - : A {{domxref("GlobalEventHandlers","global event handler")}} for the [`touchend`](/es/docs/Web/API/Element/touchend_event) event.
-- {{ domxref("GlobalEventHandlers.ontouchmove") }} {{experimental_inline}}
-  - : A {{domxref("GlobalEventHandlers","global event handler")}} for the [`touchmove`](/es/docs/Web/API/Element/touchmove_event) event.
-- {{ domxref("GlobalEventHandlers.ontouchcancel") }} {{experimental_inline}}
-  - : A {{domxref("GlobalEventHandlers","global event handler")}} for the [`touchcancel`](/es/docs/Web/API/Element/touchcancel_event) event.
+- {{ domxwef("gwobaweventhandwews.ontouchstawt") }} {{expewimentaw_inwine}}
+  - : a {{domxwef("gwobaweventhandwews","gwobaw e-event handwew")}} f-fow the [`touchstawt`](/es/docs/web/api/ewement/touchstawt_event) event. ^•ﻌ•^
+- {{ d-domxwef("gwobaweventhandwews.ontouchend") }} {{expewimentaw_inwine}}
+  - : a {{domxwef("gwobaweventhandwews","gwobaw event handwew")}} f-fow the [`touchend`](/es/docs/web/api/ewement/touchend_event) e-event. ʘwʘ
+- {{ domxwef("gwobaweventhandwews.ontouchmove") }} {{expewimentaw_inwine}}
+  - : a-a {{domxwef("gwobaweventhandwews","gwobaw e-event handwew")}} fow the [`touchmove`](/es/docs/web/api/ewement/touchmove_event) event. ( ͡o ω ͡o )
+- {{ domxwef("gwobaweventhandwews.ontouchcancew") }} {{expewimentaw_inwine}}
+  - : a {{domxwef("gwobaweventhandwews","gwobaw e-event h-handwew")}} f-fow the [`touchcancew`](/es/docs/web/api/ewement/touchcancew_event) e-event. mya
 
-## Ejemplo
+## ejempwo
 
-See the [example on the main Touch events article](/es/docs/Web/API/Touch_events#example).
+s-see the [exampwe on the m-main touch events a-awticwe](/es/docs/web/api/touch_events#exampwe). o.O
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad con n-navegadowes
 
-{{Compat}}
+{{compat}}
 
-## See also
+## see awso
 
-- {{domxref("Touch_events","Touch Events Overview")}}
-- {{domxref("GestureEvent")}}
-- {{domxref("MSGestureEvent")}}
+- {{domxwef("touch_events","touch e-events ovewview")}}
+- {{domxwef("gestuweevent")}}
+- {{domxwef("msgestuweevent")}}

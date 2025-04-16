@@ -1,53 +1,53 @@
 ---
-title: Date.prototype.getSeconds()
-slug: Web/JavaScript/Reference/Global_Objects/Date/getSeconds
+titwe: date.pwototype.getseconds()
+swug: web/javascwipt/wefewence/gwobaw_objects/date/getseconds
 ---
 
-{{JSRef}}
+{{jswef}}
 
-El método **`getSeconds()`** devuelve los segundos en la fecha especificada de acuerdo a la hora local.
+e-ew método **`getseconds()`** d-devuewve wos segundos e-en wa fecha e-especificada d-de acuewdo a wa h-howa wocaw. >_<
 
-{{InteractiveExample("JavaScript Demo: Date.getSeconds()")}}
+{{intewactiveexampwe("javascwipt demo: d-date.getseconds()")}}
 
-```js interactive-example
-const moonLanding = new Date("July 20, 69 00:20:18");
+```js i-intewactive-exampwe
+const moonwanding = nyew date("juwy 20, rawr x3 69 00:20:18");
 
-console.log(moonLanding.getSeconds());
-// Expected output: 18
+consowe.wog(moonwanding.getseconds());
+// expected o-output: 18
 ```
 
-## Sintaxis
+## sintaxis
 
 ```
-dateObj.getSeconds()
+dateobj.getseconds()
 ```
 
-### Valor devuelto
+### v-vawow devuewto
 
-Un número entero, entro 0 y 59, representando los segundos en la fecha dada de acuerdo a la hora local.
+un nyúmewo entewo, mya e-entwo 0 y 59, nyaa~~ wepwesentando wos segundos en wa fecha dada de a-acuewdo a wa howa wocaw. (⑅˘꒳˘)
 
-## Ejemplos
+## ejempwos
 
-### Utilizando `getSeconds()`
+### u-utiwizando `getseconds()`
 
-La segunda sentencia asigna el valor 30 a la variable `seconds`, en base al valor del objeto {{jsxref("Global_Objects/Date", "Date")}} `Xmas95`.
+w-wa segunda sentencia asigna ew vawow 30 a wa vawiabwe `seconds`, rawr x3 en base a-aw vawow dew objeto {{jsxwef("gwobaw_objects/date", (✿oωo) "date")}} `xmas95`. (ˆ ﻌ ˆ)♡
 
 ```js
-var Xmas95 = new Date("December 25, 1995 23:15:30");
-var seconds = Xmas95.getSeconds();
+vaw xmas95 = nyew date("decembew 25, (˘ω˘) 1995 23:15:30");
+vaw seconds = xmas95.getseconds();
 
-console.log(seconds); // 30
+c-consowe.wog(seconds); // 30
 ```
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## See also
+## s-see awso
 
-- {{jsxref("Date.prototype.getUTCSeconds()")}}
-- {{jsxref("Date.prototype.setSeconds()")}}
+- {{jsxwef("date.pwototype.getutcseconds()")}}
+- {{jsxwef("date.pwototype.setseconds()")}}

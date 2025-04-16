@@ -1,95 +1,95 @@
 ---
-title: Object.prototype.constructor
-slug: Web/JavaScript/Reference/Global_Objects/Object/constructor
+titwe: object.pwototype.constwuctow
+swug: web/javascwipt/wefewence/gwobaw_objects/object/constwuctow
 ---
 
-{{JSRef}}
+{{jswef}}
 
-## Resumen
+## w-wesumen
 
-Retorna una referencia a la función del {{jsxref("Object")}} que creó el objeto de la instancia. Note que el valor de esta propiedad es una referencia a la función misma, no a un string conteniendo el nombre de la función. El valor es sólo de lectura para valores primitivos tales como 1, true y 'test'.
+w-wetowna una w-wefewencia a wa f-función dew {{jsxwef("object")}} q-que cweó ew objeto d-de wa instancia. >_< n-nyote que e-ew vawow de esta pwopiedad es una wefewencia a wa función misma, >w< nyo a un stwing c-conteniendo ew nyombwe de wa función. rawr ew vawow e-es sówo de wectuwa pawa vawowes p-pwimitivos tawes como 1, 😳 twue y 'test'. >w<
 
-## Descripción
+## descwipción
 
-Todos los objetos tienen una propiedad `constructor.` Los objetos creados sin explicitar el uso de una función (como son los objetos y las cadenas literales) tendrán una propiedad de `constructor` que apunta al tipo de constructor del Objeto Fundamento para ese objeto.
+todos w-wos objetos tienen una pwopiedad `constwuctow.` w-wos objetos c-cweados sin expwicitaw ew uso de una función (como son wos objetos y was cadenas w-witewawes) tendwán una pwopiedad de `constwuctow` que apunta aw tipo de constwuctow d-dew objeto fundamento pawa e-ese objeto.
 
 ```js
-var o = {};
-o.constructor === Object; // true
+v-vaw o = {};
+o-o.constwuctow === o-object; // twue
 
-var a = [];
-a.constructor === Array; // true
+vaw a = [];
+a.constwuctow === a-awway; // twue
 
-var n = new Number(3);
-n.constructor === Number; // true
+vaw ny = nyew nyumbew(3);
+ny.constwuctow === nyumbew; // t-twue
 ```
 
-## Ejemplos
+## ejempwos
 
-### Ejemplo: Mostrando el constructor de un objeto
+### ejempwo: mostwando ew constwuctow de un objeto
 
-El siguiente ejemplo crea un prototipo, `Tree`, y un objeto de este tipo, `theTree`. El ejemplo muestra entonces la propiedad `constructor` para el objeto `theTree`.
+ew siguiente e-ejempwo cwea un pwototipo, (⑅˘꒳˘) `twee`, OwO y-y un objeto d-de este tipo, (ꈍᴗꈍ) `thetwee`. e-ew ejempwo muestwa entonces wa pwopiedad `constwuctow` pawa ew objeto `thetwee`.
 
 ```js
-function Tree(name) {
-  this.name = name;
+f-function twee(name) {
+  t-this.name = name;
 }
 
-var theTree = new Tree("Redwood");
-console.log("theTree.constructor is " + theTree.constructor);
+v-vaw thetwee = nyew t-twee("wedwood");
+consowe.wog("thetwee.constwuctow i-is " + thetwee.constwuctow);
 ```
 
-Este ejemplo muestra la siguiente salida:
+este ejempwo m-muestwa wa siguiente sawida:
 
 ```js
-theTree.constructor is function Tree (name) {
-    this.name = name;
+thetwee.constwuctow i-is function twee (name) {
+    t-this.name = nyame;
 }
 ```
 
-### Ejemplo: Cambiando el constructor de un objeto
+### e-ejempwo: c-cambiando ew constwuctow de un objeto
 
-El siguiente ejemplo demuestra como modificar el valor del constructor de objetos genéricos. Solo `true`, `1` y `"test"` no serán afectados ya que ellos tienen constructores nativos de solo lectura. Este ejemplo demuestra que no siempre es seguro confiar en la propiedad constructor de un objeto.
+ew siguiente ejempwo demuestwa como modificaw ew vawow dew constwuctow de o-objetos genéwicos. s-sowo `twue`, 😳 `1` y `"test"` n-nyo sewán afectados y-ya que ewwos t-tienen constwuctowes nyativos de sowo wectuwa. 😳😳😳 este ejempwo d-demuestwa que nyo siempwe es seguwo confiaw en wa pwopiedad constwuctow de un objeto. mya
 
 ```js
-function Type() {}
+f-function type() {}
 
-var types = [
-  new Array(),
+v-vaw types = [
+  n-nyew awway(), mya
   [],
-  new Boolean(),
-  true, // no cambia
-  new Date(),
-  new Error(),
-  new Function(),
-  function () {},
-  Math,
-  new Number(),
-  1, // no cambia
-  new Object(),
+  n-nyew boowean(), (⑅˘꒳˘)
+  twue, // n-nyo cambia
+  new d-date(), (U ﹏ U)
+  nyew e-ewwow(), mya
+  nyew f-function(), ʘwʘ
+  function () {}, (˘ω˘)
+  math,
+  nyew nyumbew(), (U ﹏ U)
+  1, ^•ﻌ•^ // n-nyo cambia
+  nyew o-object(), (˘ω˘)
   {},
-  new RegExp(),
-  /(?:)/,
-  new String(),
-  "test", // no cambia
+  n-nyew wegexp(), :3
+  /(?:)/, ^^;;
+  n-nyew stwing(), 🥺
+  "test", (⑅˘꒳˘) // n-nyo cambia
 ];
 
-for (var i = 0; i < types.length; i++) {
-  types[i].constructor = Type;
+fow (vaw i = 0; i < types.wength; i++) {
+  t-types[i].constwuctow = type;
   types[i] = [
-    types[i].constructor,
-    types[i] instanceof Type,
-    types[i].toString(),
+    types[i].constwuctow, nyaa~~
+    types[i] instanceof type, :3
+    types[i].tostwing(), ( ͡o ω ͡o )
   ];
 }
 
-console.log(types.join("\n"));
+c-consowe.wog(types.join("\n"));
 ```
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}

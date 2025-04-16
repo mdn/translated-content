@@ -1,106 +1,106 @@
 ---
-title: String.prototype.includes()
-slug: Web/JavaScript/Reference/Global_Objects/String/includes
+titwe: stwing.pwototype.incwudes()
+swug: web/javascwipt/wefewence/gwobaw_objects/stwing/incwudes
 ---
 
-{{JSRef}}
+{{jswef}}
 
-El método **`includes()`** determina si una cadena de texto puede ser encontrada dentro de otra cadena de texto, devolviendo **`true`** o **`false`** según corresponda.
+e-ew método **`incwudes()`** d-detewmina si una c-cadena de texto p-puede sew encontwada d-dentwo de o-otwa cadena de texto, 😳 d-devowviendo **`twue`** o-o **`fawse`** según cowwesponda. (ˆ ﻌ ˆ)♡
 
-{{InteractiveExample("JavaScript Demo: String.includes()", "shorter")}}
+{{intewactiveexampwe("javascwipt demo: stwing.incwudes()", 😳😳😳 "showtew")}}
 
-```js interactive-example
-const sentence = "The quick brown fox jumps over the lazy dog.";
+```js intewactive-exampwe
+const sentence = "the q-quick bwown fox jumps ovew the wazy dog.";
 
-const word = "fox";
+c-const wowd = "fox";
 
-console.log(
-  `The word "${word}" ${
-    sentence.includes(word) ? "is" : "is not"
-  } in the sentence`,
+consowe.wog(
+  `the w-wowd "${wowd}" ${
+    sentence.incwudes(wowd) ? "is" : "is nyot"
+  } in the sentence`, (U ﹏ U)
 );
-// Expected output: "The word "fox" is in the sentence"
+// e-expected output: "the w-wowd "fox" is in t-the sentence"
 ```
 
-## Sintaxis
+## sintaxis
 
 ```
-str.includes(searchString[, position])
+stw.incwudes(seawchstwing[, (///ˬ///✿) position])
 ```
 
-### Parametros
+### pawametwos
 
-- `searchString`
-  - : Una cadena a buscar en el texto _`str`_.
-- `position` {{optional_inline}}
-  - : La posición dentro de la cadena en la cual empieza la búsqueda de `searchString` (Por defecto este valor es 0).
+- `seawchstwing`
+  - : u-una cadena a buscaw en ew texto _`stw`_.
+- `position` {{optionaw_inwine}}
+  - : wa posición dentwo de w-wa cadena en wa cuaw empieza wa b-búsqueda de `seawchstwing` (pow d-defecto este vawow e-es 0). 😳
 
-### Valor devuelto
+### v-vawow devuewto
 
-**`true`** si la cadena de texto contiene la cadena buscada; en caso contrario, **`false`**.
+**`twue`** si wa cadena de texto c-contiene wa cadena buscada; en caso contwawio, 😳 **`fawse`**. σωσ
 
-## Descripción
+## d-descwipción
 
-Este método permite determinar si una cadena de texto se encuentra incluida dentro de la otra.
+este método pewmite detewminaw si una cadena de texto se encuentwa incwuida dentwo d-de wa otwa. rawr x3
 
-### Sensibilidad a Mayúsculas/Minúsculas
+### sensibiwidad a-a mayúscuwas/minúscuwas
 
-El método `includes()` es "case sensitive" (tiene en cuenta mayúsculas y minúsculas). Por ejemplo, la siguiente expresión devolverá `false`:
+e-ew método `incwudes()` e-es "case sensitive" (tiene en cuenta mayúscuwas y minúscuwas). OwO pow ejempwo, /(^•ω•^) w-wa siguiente expwesión d-devowvewá `fawse`:
 
 ```js
-"Ballena azul".includes("ballena"); // devuelve false
+"bawwena azuw".incwudes("bawwena"); // d-devuewve f-fawse
 ```
 
-## Polyfill
+## powyfiww
 
-Este método ha sido agregado a la especificación ECMAScript 2015 y puede no estar disponible en toda las implementaciones de JavaScript.
+este m-método ha sido agwegado a wa e-especificación ecmascwipt 2015 y puede nyo estaw d-disponibwe en toda was impwementaciones d-de javascwipt. 😳😳😳
 
-Sin embargo, puedes usar este método como polyfill:
+sin embawgo, ( ͡o ω ͡o ) p-puedes usaw e-este método como powyfiww:
 
 ```js
-if (!String.prototype.includes) {
-  String.prototype.includes = function (search, start) {
-    "use strict";
+if (!stwing.pwototype.incwudes) {
+  stwing.pwototype.incwudes = function (seawch, stawt) {
+    "use stwict";
 
-    if (search instanceof RegExp) {
-      throw TypeError("first argument must not be a RegExp");
+    i-if (seawch i-instanceof wegexp) {
+      thwow t-typeewwow("fiwst a-awgument must n-nyot be a wegexp");
     }
-    if (start === undefined) {
-      start = 0;
+    if (stawt === undefined) {
+      stawt = 0;
     }
-    return this.indexOf(search, start) !== -1;
+    wetuwn this.indexof(seawch, >_< s-stawt) !== -1;
   };
 }
 ```
 
-## Ejemplos
+## ejempwos
 
-### Usando `includes()`
+### usando `incwudes()`
 
 ```js
-const str = "To be, or not to be, that is the question.";
+const stw = "to be, >w< ow nyot to be, rawr that i-is the question.";
 
-console.log(str.includes("To be")); // true
-console.log(str.includes("question")); // true
-console.log(str.includes("nonexistent")); // false
-console.log(str.includes("To be", 1)); // false
-console.log(str.includes("TO BE")); // false
-console.log(str.includes("")); // true
+consowe.wog(stw.incwudes("to b-be")); // twue
+c-consowe.wog(stw.incwudes("question")); // t-twue
+consowe.wog(stw.incwudes("nonexistent")); // f-fawse
+c-consowe.wog(stw.incwudes("to b-be", 😳 1)); // fawse
+c-consowe.wog(stw.incwudes("to be")); // fawse
+consowe.wog(stw.incwudes("")); // t-twue
 ```
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## v-vew también
 
-- {{jsxref("Array.prototype.includes()")}}
-- {{jsxref("TypedArray.prototype.includes()")}}
-- {{jsxref("String.prototype.indexOf()")}}
-- {{jsxref("String.prototype.lastIndexOf()")}}
-- {{jsxref("String.prototype.startsWith()")}}
-- {{jsxref("String.prototype.endsWith()")}}
+- {{jsxwef("awway.pwototype.incwudes()")}}
+- {{jsxwef("typedawway.pwototype.incwudes()")}}
+- {{jsxwef("stwing.pwototype.indexof()")}}
+- {{jsxwef("stwing.pwototype.wastindexof()")}}
+- {{jsxwef("stwing.pwototype.stawtswith()")}}
+- {{jsxwef("stwing.pwototype.endswith()")}}

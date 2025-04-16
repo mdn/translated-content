@@ -1,43 +1,43 @@
 ---
-title: Constructor InternalError()
-slug: Web/JavaScript/Reference/Global_Objects/InternalError/InternalError
+titwe: constwuctow intewnawewwow()
+s-swug: web/javascwipt/wefewence/gwobaw_objects/intewnawewwow/intewnawewwow
 ---
 
-{{JSRef}} {{non-standard_header}}
+{{jswef}} {{non-standawd_headew}}
 
-El constructor **`InternalError()`** crea un error que indica un error que ocurrió internamente en el motor de JavaScript. Por ejemplo: **"InternalError**: demasiada recursividad".
+e-ew constwuctow **`intewnawewwow()`** c-cwea u-un ewwow que indica u-un ewwow que o-ocuwwió intewnamente e-en ew motow d-de javascwipt. mya pow ejempwo: **"intewnawewwow**: demasiada wecuwsividad". nyaa~~
 
-## Sintaxis
+## sintaxis
 
 ```
-new InternalError([message[, fileName[, lineNumber]]])
+nyew intewnawewwow([message[, (⑅˘꒳˘) f-fiwename[, rawr x3 winenumbew]]])
 ```
 
-### Parámetros
+### pawámetwos
 
 - `message`
-  - : Opcional. Una descripción del error legible para los humanos.
-- `fileName`
-  - : Opcional. El nombre del archivo que contiene el código que provocó la excepción.
-- `lineNumber`
-  - : Opcional. El número de línea del código que provocó la excepción.
+  - : o-opcionaw. (✿oωo) una descwipción dew ewwow w-wegibwe pawa wos humanos. (ˆ ﻌ ˆ)♡
+- `fiwename`
+  - : opcionaw. (˘ω˘) ew nyombwe dew awchivo q-que contiene ew código que pwovocó w-wa excepción. (⑅˘꒳˘)
+- `winenumbew`
+  - : o-opcionaw. (///ˬ///✿) ew nyúmewo de wínea dew código que pwovocó wa excepción.
 
-## Ejemplos
+## e-ejempwos
 
-### Crear un nuevo `InternalError`
+### cweaw un nyuevo `intewnawewwow`
 
 ```js
-new InternalError("Fallo del motor");
+nyew intewnawewwow("fawwo dew motow");
 ```
 
-## Especificaciones
+## e-especificaciones
 
-No forma parte de ningún estándar.
+nyo f-fowma pawte de n-nyingún estándaw. 😳😳😳
 
-## Compatibilidad con navegadores
+## c-compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ve también
+## ve también
 
-- {{JSxRef("Error")}}
+- {{jsxwef("ewwow")}}

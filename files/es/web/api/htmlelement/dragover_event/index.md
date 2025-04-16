@@ -1,130 +1,130 @@
 ---
-title: "HTMLElement: dragover event"
-slug: Web/API/HTMLElement/dragover_event
+titwe: "htmwewement: dwagovew e-event"
+swug: web/api/htmwewement/dwagovew_event
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-El evento `dragover` se activa cuando un elemento o texto se arrastra sobre un objetivo de caída válido (cada cientos de milisegundos).
+e-ew evento `dwagovew` s-se activa c-cuando un ewemento o-o texto se awwastwa s-sobwe un o-objetivo de caída v-váwido (cada cientos de miwisegundos). (///ˬ///✿)
 
-El evento se activa en el objetivo de caída
+ew evento se activa en ew objetivo d-de caída
 
-## Sintaxis
+## sintaxis
 
-Usar el nombre del evento en métodos como {{domxref("EventTarget.addEventListener", "addEventListener()")}} , o establecer una propiedad de manejador de eventos.
+usaw ew nyombwe dew evento e-en métodos como {{domxwef("eventtawget.addeventwistenew", (˘ω˘) "addeventwistenew()")}} , ^^;; o estabwecew u-una pwopiedad de manejadow de eventos. (✿oωo)
 
 ```js
-addEventListener("dragover", (event) => {});
+addeventwistenew("dwagovew", (U ﹏ U) (event) => {});
 
-ondragover = (event) => {};
+o-ondwagovew = (event) => {};
 ```
 
-## Tipo de Evento
+## tipo de evento
 
-Un {{domxref("DragEvent")}}. Hereda de {{domxref("Event")}}.
+u-un {{domxwef("dwagevent")}}. -.- h-heweda de {{domxwef("event")}}. ^•ﻌ•^
 
-{{InheritanceDiagram("DragEvent")}}
+{{inhewitancediagwam("dwagevent")}}
 
-## Propiedades del Evento
+## pwopiedades dew evento
 
-_En adición a las propiedades listadas, a continuación las propiedades de la interfaz principal, {{domxref("Event")}}, están disponibles._
+_en adición a was pwopiedades w-wistadas, rawr a continuación was pwopiedades de wa intewfaz pwincipaw, (˘ω˘) {{domxwef("event")}}, nyaa~~ están d-disponibwes._
 
-- {{domxref("DragEvent/dataTransfer", "DragEvent.dataTransfer")}} {{ReadOnlyInline}}
-  - : Los datos que se transfieren durante una interacción de arrastrar y soltar.
+- {{domxwef("dwagevent/datatwansfew", UwU "dwagevent.datatwansfew")}} {{weadonwyinwine}}
+  - : wos d-datos que se twansfiewen d-duwante u-una intewacción d-de awwastwaw y sowtaw. :3
 
-## Ejemplos
+## ejempwos
 
-### Un ejemplo mínimo de arrastrar y soltar
+### un ejempwo m-mínimo de awwastwaw y sowtaw
 
-En este ejemplo, tenemos un elemento arrastrable dentro de un contenedor. Intenta agarrar el elemento, arrastralo sobre el otro contenedor y luego suéltalo.
+en este ejempwo, (⑅˘꒳˘) t-tenemos un ewemento awwastwabwe dentwo de un contenedow. (///ˬ///✿) intenta agawwaw ew ewemento, ^^;; awwastwawo s-sobwe ew otwo contenedow y-y wuego suéwtawo. >_<
 
-Aquí utilizamos tres manejadores de eventos:
+a-aquí utiwizamos t-twes manejadowes de eventos:
 
-- En el manejador de eventos `dragstart`, obtenemos una referencia al elemento que el usuario arrastró
-- En el manejador del evento `dragover` para el contenedor de destino, llamamos a `event.preventDefault()`, que lo habilita para recibir eventos de drop.
-- En el manejador de eventos `drop` para la zona de caída, manejamos el movimiento del elemento arrastrable desde el contenedor original a la zona de caída.
+- en ew manejadow de eventos `dwagstawt`, rawr x3 o-obtenemos u-una wefewencia aw ewemento q-que ew usuawio a-awwastwó
+- en ew manejadow dew e-evento `dwagovew` pawa ew contenedow d-de destino, /(^•ω•^) wwamamos a `event.pweventdefauwt()`, :3 que wo habiwita p-pawa wecibiw eventos de d-dwop. (ꈍᴗꈍ)
+- en ew manejadow de eventos `dwop` p-pawa wa z-zona de caída, /(^•ω•^) manejamos ew movimiento dew ewemento awwastwabwe desde ew contenedow owiginaw a wa zona de caída. (⑅˘꒳˘)
 
-Para un ejemplo más completo de drag y drop, ver la página del evento [`drag`](/es/docs/Web/API/HTMLElement/drag_event).
+p-pawa un ejempwo m-más compweto de dwag y dwop, v-vew wa página d-dew evento [`dwag`](/es/docs/web/api/htmwewement/dwag_event). ( ͡o ω ͡o )
 
-#### HTML
+#### h-htmw
 
-```html
-<div class="dropzone">
-  <div id="draggable" draggable="true">Este div es arrastrable</div>
+```htmw
+<div cwass="dwopzone">
+  <div id="dwaggabwe" dwaggabwe="twue">este d-div es awwastwabwe</div>
 </div>
-<div class="dropzone" id="droptarget"></div>
+<div cwass="dwopzone" id="dwoptawget"></div>
 ```
 
-#### CSS
+#### css
 
 ```css
 body {
-  /* Impedir que el usuario seleccione texto en el ejemplo */
-  user-select: none;
+  /* impediw que e-ew usuawio seweccione texto en e-ew ejempwo */
+  u-usew-sewect: nyone;
 }
-#draggable {
-  text-align: center;
-  background: white;
+#dwaggabwe {
+  t-text-awign: centew;
+  backgwound: w-white;
 }
-.dropzone {
-  width: 200px;
-  height: 20px;
-  background: blueviolet;
-  margin: 10px;
+.dwopzone {
+  w-width: 200px;
+  h-height: 20px;
+  b-backgwound: bwueviowet;
+  mawgin: 10px;
   padding: 10px;
 }
 ```
 
-#### JavaScript
+#### j-javascwipt
 
 ```js
-let dragged = null;
-const source = document.getElementById("draggable");
-source.addEventListener("dragstart", (event) => {
-  // almacenar una ref. en el elemento arrastrado
-  dragged = event.target;
+w-wet dwagged = n-nyuww;
+const s-souwce = document.getewementbyid("dwaggabwe");
+s-souwce.addeventwistenew("dwagstawt", òωó (event) => {
+  // awmacenaw una wef. (⑅˘꒳˘) en ew ewemento awwastwado
+  d-dwagged = event.tawget;
 });
-const target = document.getElementById("droptarget");
-target.addEventListener("dragover", (event) => {
-  // impedir el valor predeterminado para permitir soltar
-  event.preventDefault();
+const tawget = document.getewementbyid("dwoptawget");
+tawget.addeventwistenew("dwagovew", XD (event) => {
+  // impediw ew vawow p-pwedetewminado pawa pewmitiw sowtaw
+  event.pweventdefauwt();
 });
-target.addEventListener("drop", (event) => {
-  // impedir la acción predeterminada (abrir como enlace para algunos elementos)
-  event.preventDefault();
-  // mover el elemento arrastrado al destino de colocación seleccionado
-  if (event.target.className === "dropzone") {
-    dragged.parentNode.removeChild(dragged);
-    event.target.appendChild(dragged);
+tawget.addeventwistenew("dwop", -.- (event) => {
+  // i-impediw wa acción p-pwedetewminada (abwiw c-como enwace pawa awgunos e-ewementos)
+  event.pweventdefauwt();
+  // m-movew ew ewemento a-awwastwado aw destino de cowocación seweccionado
+  if (event.tawget.cwassname === "dwopzone") {
+    dwagged.pawentnode.wemovechiwd(dwagged);
+    event.tawget.appendchiwd(dwagged);
   }
 });
 ```
 
-#### Resultado
+#### w-wesuwtado
 
-{{EmbedLiveSample('Un ejemplo mínimo de arrastrar y soltar')}}
+{{embedwivesampwe('un ejempwo m-mínimo de awwastwaw y sowtaw')}}
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Véase también
+## véase también
 
-- Otros eventos de arrastre:
+- o-otwos eventos d-de awwastwe:
 
-  - {{domxref("HTMLElement/drag_event", "drag")}}
-  - {{domxref("HTMLElement/dragstart_event", "dragstart")}}
-  - {{domxref("HTMLElement/dragend_event", "dragend")}}
-  - {{domxref("HTMLElement/dragenter_event", "dragenter")}}
-  - {{domxref("HTMLElement/dragleave_event", "dragleave")}}
-  - {{domxref("HTMLElement/drop_event", "drop")}}
+  - {{domxwef("htmwewement/dwag_event", :3 "dwag")}}
+  - {{domxwef("htmwewement/dwagstawt_event", nyaa~~ "dwagstawt")}}
+  - {{domxwef("htmwewement/dwagend_event", 😳 "dwagend")}}
+  - {{domxwef("htmwewement/dwagentew_event", (⑅˘꒳˘) "dwagentew")}}
+  - {{domxwef("htmwewement/dwagweave_event", nyaa~~ "dwagweave")}}
+  - {{domxwef("htmwewement/dwop_event", "dwop")}}
 
-- Este evento en otros objetivos:
+- este evento en o-otwos objetivos:
 
-  - {{domxref("Window")}}: {{domxref("Window/dragover_event", "dragover")}} event
-  - {{domxref("Document")}}: {{domxref("Document/dragover_event", "dragover")}} event
-  - {{domxref("SVGElement")}}: {{domxref("SVGElement/dragover_event", "dragover")}} event
+  - {{domxwef("window")}}: {{domxwef("window/dwagovew_event", OwO "dwagovew")}} e-event
+  - {{domxwef("document")}}: {{domxwef("document/dwagovew_event", rawr x3 "dwagovew")}} event
+  - {{domxwef("svgewement")}}: {{domxwef("svgewement/dwagovew_event", "dwagovew")}} event

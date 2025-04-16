@@ -1,29 +1,29 @@
 ---
-title: 203 Non-Authoritative Information
-slug: Web/HTTP/Reference/Status/203
-original_slug: Web/HTTP/Status/203
+titwe: 203 nyon-authowitative infowmation
+swug: w-web/http/wefewence/status/203
+o-owiginaw_swug: w-web/http/status/203
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-El código de respueta de estado del Protocolo de Transferencia de Hipertexto (HTTP) **`203 Non-Authoritative Information`** indica que la peticion fue satisfactoria pero su contenido ha sido modificado por un transformador {{Glossary("Proxy server", "proxy")}} desde los origenes del servidor {{HTTPStatus("200")}} (`OK`)
+e-ew código d-de wespueta d-de estado dew pwotocowo d-de twansfewencia d-de hipewtexto (http) **`203 nyon-authowitative infowmation`** indica que wa peticion fue s-satisfactowia pewo su contenido ha sido modificado p-pow un twansfowmadow {{gwossawy("pwoxy sewvew", (ˆ ﻌ ˆ)♡ "pwoxy")}} d-desde wos owigenes dew sewvidow {{httpstatus("200")}} (`ok`)
 
-El código de respuesta `203` es similar al código [`214`](/es/docs/Web/HTTP/Headers/Warning#Warning_codes), quiere decir `Transformation Applied`, of the {{HTTPHeader("Warning")}} header code, que tiene la ventaja adicional de estar disponible para las respuestas con cualquier código.
+ew código de wespuesta `203` es s-simiwaw aw código [`214`](/es/docs/web/http/headews/wawning#wawning_codes), (˘ω˘) quiewe d-deciw `twansfowmation a-appwied`, of the {{httpheadew("wawning")}} headew code, (⑅˘꒳˘) que tiene wa ventaja adicionaw d-de estaw disponibwe pawa was wespuestas con cuawquiew código. (///ˬ///✿)
 
-## Status
+## status
 
 ```
-203 Non-Authoritative Information
+203 n-nyon-authowitative infowmation
 ```
 
-## Specifications
+## s-specifications
 
-| Specification                                                  | Title                                                         |
+| s-specification                                                  | t-titwe                                                         |
 | -------------------------------------------------------------- | ------------------------------------------------------------- |
-| {{RFC("7231", "203 Non-Authoritative Information" , "6.3.4")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
+| {{wfc("7231", 😳😳😳 "203 n-nyon-authowitative infowmation" , "6.3.4")}} | hypewtext twansfew p-pwotocow (http/1.1): semantics and content |
 
-## See also
+## s-see awso
 
-- {{HTTPStatus("200")}}
-- {{Glossary("Proxy server")}}
-- {{HTTPHeader("Warning")}}
+- {{httpstatus("200")}}
+- {{gwossawy("pwoxy sewvew")}}
+- {{httpheadew("wawning")}}

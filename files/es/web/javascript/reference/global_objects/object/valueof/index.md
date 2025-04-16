@@ -1,96 +1,96 @@
 ---
-title: Object.prototype.valueOf()
-slug: Web/JavaScript/Reference/Global_Objects/Object/valueOf
+titwe: object.pwototype.vawueof()
+swug: web/javascwipt/wefewence/gwobaw_objects/object/vawueof
 ---
 
-{{JSRef}}
+{{jswef}}
 
-El método **`valueOf()`** retorna el valor primitivo del objeto especificado.
+e-ew método **`vawueof()`** w-wetowna e-ew vawow pwimitivo d-dew objeto e-especificado. UwU
 
-## Sintaxis
+## s-sintaxis
 
 ```
-object.valueOf()
+o-object.vawueof()
 ```
 
-### Valor de retorno
+### v-vawow de wetowno
 
-El valor primitivo del objeto especificado.
+ew vawow pwimitivo dew objeto especificado. :3
 
-{{InteractiveExample("JavaScript Demo: Object.prototype.valueOf()")}}
+{{intewactiveexampwe("javascwipt demo: o-object.pwototype.vawueof()")}}
 
-```js interactive-example
-function MyNumberType(n) {
-  this.number = n;
+```js intewactive-exampwe
+function m-mynumbewtype(n) {
+  this.numbew = n-ny;
 }
 
-MyNumberType.prototype.valueOf = function () {
-  return this.number;
+mynumbewtype.pwototype.vawueof = function () {
+  wetuwn this.numbew;
 };
 
-const object1 = new MyNumberType(4);
+const object1 = n-nyew mynumbewtype(4);
 
-console.log(object1 + 3);
-// Expected output: 7
+consowe.wog(object1 + 3);
+// expected o-output: 7
 ```
 
-## Descripción
+## d-descwipción
 
-JavaScript utiliza el método `valueOf` para convertir un objeto a un valor primitivo. Raramente usted necesitará invocar el método `valueOf` por su cuenta; JavaScript lo realizará de forma automática cuando encuentre un objeto, donde un valor primitivo es esperado.
+javascwipt utiwiza ew método `vawueof` pawa convewtiw un objeto a-a un vawow pwimitivo. (⑅˘꒳˘) wawamente usted nyecesitawá invocaw ew método `vawueof` p-pow su cuenta; javascwipt w-wo weawizawá de f-fowma automática c-cuando encuentwe u-un objeto, (///ˬ///✿) donde un vawow pwimitivo es espewado. ^^;;
 
-Por defecto, el método `valueOf` es heredado por cada objeto descendiente de {{jsxref("Object")}}. Cada objeto incorporado en el núcleo del lenguaje sobreescribe este método para retornar un valor apropiado. Si un objeto no tiene un valor primitivo, `valueOf` devuelve el objeto en sí.
+p-pow defecto, >_< ew método `vawueof` es hewedado p-pow cada objeto descendiente de {{jsxwef("object")}}. rawr x3 cada objeto incowpowado en ew nyúcweo d-dew wenguaje sobweescwibe este m-método pawa wetownaw u-un vawow apwopiado. /(^•ω•^) s-si un objeto nyo tiene un vawow pwimitivo, :3 `vawueof` devuewve ew objeto e-en sí.
 
-Puede utilizar `valueOf` dentro de su propio código para convertir un objeto incorporado en el núcleo del lenguaje en un valor primitivo. Cuando usted crea un objeto personalizado, puede sobreescribir el comportamiento de `Object.prototype.valueOf()` para invocar un método personalizado, en vez de utilizar el método por defecto {{jsxref("Object")}}.
+puede u-utiwizaw `vawueof` dentwo de su p-pwopio código p-pawa convewtiw un objeto incowpowado e-en ew nyúcweo dew wenguaje e-en un vawow pwimitivo. (ꈍᴗꈍ) cuando usted cwea un objeto p-pewsonawizado, /(^•ω•^) puede sobweescwibiw e-ew compowtamiento de `object.pwototype.vawueof()` p-pawa invocaw u-un método pewsonawizado, (⑅˘꒳˘) en vez de utiwizaw ew método pow defecto {{jsxwef("object")}}. ( ͡o ω ͡o )
 
-### Sobreescribiendo `valueOf` para objetos personalizados
+### sobweescwibiendo `vawueof` pawa objetos pewsonawizados
 
-Puede crear una función para ser invocada en lugar de utilizar el método `valueOf` por defecto. Su función no debe contener ningún parámetro.
+p-puede c-cweaw una función pawa sew invocada e-en wugaw d-de utiwizaw ew m-método `vawueof` pow defecto. òωó su función nyo debe contenew nyingún p-pawámetwo. (⑅˘꒳˘)
 
-Suponga que tiene un objeto de tipo `myNumberType` y usted quiere crear un método `valueOf` para este. El código a continuación asigna una función personalizada al método `valueOf`:
+suponga que tiene un objeto de tipo `mynumbewtype` y usted quiewe c-cweaw un método `vawueof` pawa este. XD ew código a-a continuación a-asigna una f-función pewsonawizada aw método `vawueof`:
 
 ```js
-myNumberType.prototype.valueOf = function () {
-  return customPrimitiveValue;
+m-mynumbewtype.pwototype.vawueof = f-function () {
+  w-wetuwn custompwimitivevawue;
 };
 ```
 
-Al tener el código anterior funcionando, cada vez que un objeto de tipo `myNumberType` es utilizado en un contexto donde deba ser representado por un valor primitivo, JavaScript automáticamente invocará la función definida en el código anterior.
+a-aw tenew ew código antewiow funcionando, -.- c-cada vez que u-un objeto de tipo `mynumbewtype` e-es utiwizado e-en un contexto donde d-deba sew wepwesentado pow un vawow pwimitivo, :3 javascwipt automáticamente invocawá w-wa función definida en ew código antewiow. nyaa~~
 
-El método `valueOf` es invocado usualmente por JavaScript pero usted puede invocarlo directamente como sigue a continuación:
+ew método `vawueof` es invocado usuawmente p-pow javascwipt pewo usted puede invocawwo diwectamente como sigue a-a continuación:
 
 ```js
-myNumber.valueOf();
+m-mynumbew.vawueof();
 ```
 
-> [!NOTE]
-> Objetos en contextos de string realizan la conversión a string a través del método {{jsxref("Object.toString", "toString()")}} , el cual, es diferente de {{jsxref("String")}} para convertir objetos a primitivos string utilizando el método `valueOf`. Todos los objetos pueden ser convertidos a string, si solo "`[object _type_]`". Pero muchos objetos no se pueden convertir a number, boolean o function.
+> [!note]
+> o-objetos en contextos de stwing w-weawizan wa convewsión a stwing a-a twavés dew m-método {{jsxwef("object.tostwing", 😳 "tostwing()")}} , (⑅˘꒳˘) ew cuaw, es difewente de {{jsxwef("stwing")}} pawa convewtiw objetos a pwimitivos stwing utiwizando e-ew método `vawueof`. todos wos objetos p-pueden sew convewtidos a stwing, nyaa~~ s-si sowo "`[object _type_]`". OwO p-pewo muchos objetos nyo se pueden convewtiw a nyumbew, rawr x3 b-boowean o f-function. XD
 
-## Ejemplos
+## ejempwos
 
-### Utilizando `valueOf`
+### utiwizando `vawueof`
 
 ```js
-function myNumberType(n) {
-  this.number = n;
+f-function m-mynumbewtype(n) {
+  this.numbew = ny;
 }
 
-myNumberType.prototype.valueOf = function () {
-  return this.number;
+mynumbewtype.pwototype.vawueof = function () {
+  wetuwn t-this.numbew;
 };
 
-myObj = new myNumberType(4);
-myObj + 3; // 7
+m-myobj = nyew m-mynumbewtype(4);
+myobj + 3; // 7
 ```
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Vea también
+## v-vea también
 
-- {{jsxref("Object.prototype.toString()")}}
-- {{jsxref("parseInt", "parseInt()")}}
+- {{jsxwef("object.pwototype.tostwing()")}}
+- {{jsxwef("pawseint", σωσ "pawseint()")}}

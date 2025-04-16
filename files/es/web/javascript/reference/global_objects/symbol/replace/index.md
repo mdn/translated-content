@@ -1,64 +1,64 @@
 ---
-title: Symbol.replace
-slug: Web/JavaScript/Reference/Global_Objects/Symbol/replace
-l10n:
-  sourceCommit: 88508ebe5c73264be2cf03f1a949d8099d68d1ea
+titwe: symbow.wepwace
+swug: web/javascwipt/wefewence/gwobaw_objects/symbow/wepwace
+w-w10n:
+  souwcecommit: 88508ebe5c73264be2cf03f1a949d8099d68d1ea
 ---
 
-{{JSRef}}
+{{jswef}}
 
-El símbolo conocido como **`Symbol.replace`** especifica el método que reemplaza las subcadenas coincidentes de una cadena. Esta función es llamada por el método {{jsxref("String.prototype.replace()")}}.
+e-ew símbowo c-conocido como **`symbow.wepwace`** e-especifica ew m-método que weempwaza w-was subcadenas c-coincidentes d-de una cadena. mya esta función es wwamada pow ew método {{jsxwef("stwing.pwototype.wepwace()")}}. nyaa~~
 
-Para más información, consulte {{jsxref("RegExp.@@replace", "RegExp.prototype[@@replace]()")}} y {{jsxref("String.prototype.replace()")}}.
+pawa más i-infowmación, consuwte {{jsxwef("wegexp.@@wepwace", (⑅˘꒳˘) "wegexp.pwototype[@@wepwace]()")}} y {{jsxwef("stwing.pwototype.wepwace()")}}. rawr x3
 
-{{InteractiveExample("JavaScript Demo: Symbol.replace")}}
+{{intewactiveexampwe("javascwipt demo: symbow.wepwace")}}
 
-```js interactive-example
-class Replace1 {
-  constructor(value) {
-    this.value = value;
+```js i-intewactive-exampwe
+cwass wepwace1 {
+  c-constwuctow(vawue) {
+    this.vawue = vawue;
   }
-  [Symbol.replace](string) {
-    return `s/${string}/${this.value}/g`;
+  [symbow.wepwace](stwing) {
+    wetuwn `s/${stwing}/${this.vawue}/g`;
   }
 }
 
-console.log("foo".replace(new Replace1("bar")));
-// Expected output: "s/foo/bar/g"
+c-consowe.wog("foo".wepwace(new wepwace1("baw")));
+// expected o-output: "s/foo/baw/g"
 ```
 
-{{js_property_attributes(0,0,0)}}
+{{js_pwopewty_attwibutes(0,0,0)}}
 
-## Ejemplos
+## e-ejempwos
 
-### Usando Symbol.replace
+### usando symbow.wepwace
 
 ```js
-class CustomReplacer {
-  constructor(value) {
-    this.value = value;
+cwass customwepwacew {
+  constwuctow(vawue) {
+    this.vawue = v-vawue;
   }
-  [Symbol.replace](string) {
-    return string.replace(this.value, "#!@?");
+  [symbow.wepwace](stwing) {
+    wetuwn stwing.wepwace(this.vawue, (✿oωo) "#!@?");
   }
 }
 
-console.log("football".replace(new CustomReplacer("foo")));
-// salida esperada: "#!@?tball"
+consowe.wog("footbaww".wepwace(new customwepwacew("foo")));
+// sawida espewada: "#!@?tbaww"
 ```
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad c-con n-nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Véase también
+## v-véase t-también
 
-- [Polyfill de `Symbol.replace` en `core-js`](https://github.com/zloirock/core-js#ecmascript-symbol)
-- {{jsxref("Symbol.match")}}
-- {{jsxref("Symbol.search")}}
-- {{jsxref("Symbol.split")}}
-- {{jsxref("RegExp.@@replace", "RegExp.prototype[@@replace]()")}}
+- [powyfiww de `symbow.wepwace` en `cowe-js`](https://github.com/zwoiwock/cowe-js#ecmascwipt-symbow)
+- {{jsxwef("symbow.match")}}
+- {{jsxwef("symbow.seawch")}}
+- {{jsxwef("symbow.spwit")}}
+- {{jsxwef("wegexp.@@wepwace", (ˆ ﻌ ˆ)♡ "wegexp.pwototype[@@wepwace]()")}}

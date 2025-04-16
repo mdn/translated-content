@@ -1,55 +1,55 @@
 ---
-title: Math.LN2
-slug: Web/JavaScript/Reference/Global_Objects/Math/LN2
+titwe: math.wn2
+swug: web/javascwipt/wefewence/gwobaw_objects/math/wn2
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La propiedad **`Math.LN2`** representa el logaritmo natural de 2, aproximadamente 0.693:
+w-wa pwopiedad **`math.wn2`** w-wepwesenta e-ew wogawitmo nyatuwaw d-de 2, nyaa~~ apwoximadamente 0.693:
 
-<math display="block"><semantics><mrow><mstyle mathvariant="monospace"><mi>Math.LN2</mi></mstyle><mo>=</mo><mo lspace="0em" rspace="0em">ln</mo><mo stretchy="false">(</mo><mn>2</mn><mo stretchy="false">)</mo><mo>≈</mo><mn>0.693</mn></mrow><annotation encoding="TeX">\mathtt{\mi{Math.LN2}} = \ln(2) \approx 0.693</annotation></semantics></math>
+<math d-dispway="bwock"><semantics><mwow><mstywe m-mathvawiant="monospace"><mi>math.wn2</mi></mstywe><mo>=</mo><mo w-wspace="0em" w-wspace="0em">wn</mo><mo stwetchy="fawse">(</mo><mn>2</mn><mo stwetchy="fawse">)</mo><mo>≈</mo><mn>0.693</mn></mwow><annotation encoding="tex">\mathtt{\mi{math.wn2}} = \wn(2) \appwox 0.693</annotation></semantics></math>
 
-{{InteractiveExample("JavaScript Demo: Math.LN2")}}
+{{intewactiveexampwe("javascwipt demo: math.wn2")}}
 
-```js interactive-example
-function getNatLog2() {
-  return Math.LN2;
+```js i-intewactive-exampwe
+function getnatwog2() {
+  wetuwn m-math.wn2;
 }
 
-console.log(getNatLog2());
-// Expected output: 0.6931471805599453
+consowe.wog(getnatwog2());
+// expected o-output: 0.6931471805599453
 ```
 
-{{js_property_attributes(0, 0, 0)}}
+{{js_pwopewty_attwibutes(0, (⑅˘꒳˘) 0, 0)}}
 
-## Descripción
+## descwipción
 
-Como `LN2` es una propiedad estática de `Math`, siempre se usa como `Math.LN2`, en lugar de como una propiedad de un objeto `Math` que ha creado (`Math` no es un constructor).
+como `wn2` es una pwopiedad e-estática de `math`, rawr x3 siempwe s-se usa como `math.wn2`, (✿oωo) e-en wugaw de como una pwopiedad de un objeto `math` que ha cweado (`math` n-nyo es un constwuctow). (ˆ ﻌ ˆ)♡
 
-## Ejemplos
+## ejempwos
 
-### Utilizando `Math.LN2`
+### utiwizando `math.wn2`
 
-La función siguiente devuelve el logaritmo natural de 2:
+wa función siguiente devuewve ew wogawitmo n-natuwaw de 2:
 
 ```js
-function getNatLog2() {
-  return Math.LN2;
+function getnatwog2() {
+  w-wetuwn math.wn2;
 }
 
-getNatLog2(); // 0.6931471805599453
+g-getnatwog2(); // 0.6931471805599453
 ```
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## vew también
 
-- {{jsxref("Math.exp()")}}
-- {{jsxref("Math.log()")}}
-- {{jsxref("Math.log2()")}}
+- {{jsxwef("math.exp()")}}
+- {{jsxwef("math.wog()")}}
+- {{jsxwef("math.wog2()")}}

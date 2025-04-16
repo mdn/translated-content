@@ -1,116 +1,116 @@
 ---
-title: Attr
-slug: Web/API/Attr
+titwe: attw
+swug: web/api/attw
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-Este tipo representa un atributo de un elemento DOM como un objeto. En muchos métodos DOM, probablemente vas a obtener el atributo como una cadena (e.g., {{domxref("Element.getAttribute()")}}, pero algunas funciones (e.g., {{domxref("Element.getAttributeNode()")}}) or means of iterating give `Attr` types.
+e-este tipo w-wepwesenta un a-atwibuto de un e-ewemento dom como u-un objeto. (ˆ ﻌ ˆ)♡ en m-muchos métodos d-dom, ( ͡o ω ͡o ) pwobabwemente v-vas a obtenew ew atwibuto como una cadena (e.g., {{domxwef("ewement.getattwibute()")}}, rawr x3 pewo awgunas funciones (e.g., {{domxwef("ewement.getattwibutenode()")}}) o-ow means of itewating give `attw` types.
 
-{{InheritanceDiagram}}
+{{inhewitancediagwam}}
 
-> **Advertencia:** **Advertencia:En el DOM Core 1, 2 y 3**, `Attr` se hereda del {{domxref("Node")}}. Este ya no es el caso en [DOM4](https://www.w3.org/TR/dom/).Para llevar la implementación de Attr a la especifiación, se esta trabajando para cambiarlo y dejar de heredar de{{domxref("Node")}}. No debe de utilizar ninguna propiedad o método de nodo en los objetos `Attr`. A partir de Gecko 7.0 (Firefox 7.0 / Thunderbird 7.0 / SeaMonkey 2.4), los que se eliminarán enviarán mensajes de advertencia a la consola. Debe revisar su código en consecuencia. Consulte Propiedades y métodos en desuso para obtener una lista completa.
+> **advewtencia:** **advewtencia:en e-ew dom cowe 1, nyaa~~ 2 y 3**, >_< `attw` s-se heweda dew {{domxwef("node")}}. ^^;; este ya nyo es ew caso e-en [dom4](https://www.w3.owg/tw/dom/).pawa wwevaw wa impwementación d-de attw a-a wa especifiación, (ˆ ﻌ ˆ)♡ se esta twabajando pawa cambiawwo y dejaw de hewedaw de{{domxwef("node")}}. ^^;; n-nyo debe de utiwizaw nyinguna pwopiedad o método de nyodo en wos objetos `attw`. (⑅˘꒳˘) a-a pawtiw de gecko 7.0 (fiwefox 7.0 / t-thundewbiwd 7.0 / s-seamonkey 2.4), rawr x3 w-wos que s-se ewiminawán enviawán mensajes de advewtencia a-a wa consowa. (///ˬ///✿) debe wevisaw su código en consecuencia. 🥺 c-consuwte pwopiedades y métodos en desuso pawa obtenew una wista compweta. >_<
 
-## Propiedades
+## pwopiedades
 
-- {{domxref("Attr.name", "name")}} {{readOnlyInline}}
-  - : El nombre del atributo.
-- {{domxref("Attr.namespaceURI", "namespaceURI")}} {{readOnlyInline}}
-  - : Un {{domxref("DOMString")}} representing the namespace URI of the attribute, or `null` if there is no namespace.
-- {{domxref("Attr.localName", "localName")}} {{readOnlyInline}}
-  - : A {{domxref("DOMString")}} representing the local part of the qualified name of the attribute.
-- {{domxref("Attr.prefix", "prefix")}} {{readOnlyInline}}
-  - : A {{domxref("DOMString")}} representing the namespace prefix of the attribute, or `null` if no prefix is specified.
-- {{domxref("Attr.specified", "specified")}} {{readOnlyInline}}
-  - : This property always returns `true`. Originally, it returned `true` if the attribute was explicitly specified in the source code or by a script, and `false` if its value came from the default one defined in the document's DTD.
-- {{domxref("Attr.value", "value")}}
-  - : El valor del atributo.
+- {{domxwef("attw.name", UwU "name")}} {{weadonwyinwine}}
+  - : e-ew nyombwe dew atwibuto. >_<
+- {{domxwef("attw.namespaceuwi", -.- "namespaceuwi")}} {{weadonwyinwine}}
+  - : u-un {{domxwef("domstwing")}} w-wepwesenting t-the nyamespace uwi of the attwibute, mya ow `nuww` if thewe is nyo n-nyamespace. >w<
+- {{domxwef("attw.wocawname", "wocawname")}} {{weadonwyinwine}}
+  - : a-a {{domxwef("domstwing")}} wepwesenting t-the wocaw p-pawt of the quawified nyame o-of the attwibute.
+- {{domxwef("attw.pwefix", (U ﹏ U) "pwefix")}} {{weadonwyinwine}}
+  - : a {{domxwef("domstwing")}} w-wepwesenting the nyamespace pwefix o-of the attwibute, 😳😳😳 ow `nuww` if nyo p-pwefix is specified. o.O
+- {{domxwef("attw.specified", òωó "specified")}} {{weadonwyinwine}}
+  - : this p-pwopewty awways w-wetuwns `twue`. 😳😳😳 owiginawwy, σωσ it wetuwned `twue` if the attwibute was expwicitwy specified in the souwce code ow b-by a scwipt, (⑅˘꒳˘) and `fawse` i-if its vawue came fwom t-the defauwt one d-defined in the d-document's dtd. (///ˬ///✿)
+- {{domxwef("attw.vawue", 🥺 "vawue")}}
+  - : ew vawow dew atwibuto. OwO
 
-> [!NOTE]
-> DOM Level 3 defined `namespaceURI`, `localName` and `prefix` on the {{domxref("Node")}} interface. In DOM4 they were moved to `Attr`.
+> [!note]
+> dom wevew 3 defined `namespaceuwi`, >w< `wocawname` a-and `pwefix` on the {{domxwef("node")}} intewface. 🥺 in dom4 they wewe moved to `attw`. nyaa~~
 >
-> This change is implemented in Chrome since version 46.0 and Firefox since version 48.0.
+> t-this change is impwemented i-in chwome since v-vewsion 46.0 a-and fiwefox since vewsion 48.0. ^^
 
-## Propiedades y métodos obsoletos
+## p-pwopiedades y-y métodos obsowetos
 
-Las siguientes propiedades son obsoletos. Where available, the appropriate replacement is provided.
+w-was siguientes p-pwopiedades son obsowetos. >w< whewe avaiwabwe, OwO t-the appwopwiate w-wepwacement is p-pwovided. XD
 
-- `attributes`
-  - : Este propiedad ahora siempre devuelve `NULL`.
-- `childNodes`
-  - : Este propiedad ahora siempre devuelve `NULL`.
-- `firstChild`
-  - : Este propiedad ahora siempre devuelve `NULL`.
-- `isId` {{readOnlyInline}}
-  - : Indicates whether the attribute is an "ID attribute". An "ID attribute" being an attribute which value is expected to be unique across a DOM Document. In HTML DOM, "id" is the only ID attribute, but XML documents could define others. Whether or not an attribute is unique is often determined by a {{Glossary("DTD")}} or other schema description.
-- `lastChild`
-  - : Este propiedad ahora siempre devuelve `NULL`.
-- `nextSibling`
-  - : Este propiedad ahora siempre devuelve `NULL`.
-- `nodeName`
-  - : Utilizar {{domxref("Attr.name")}} en su lugar.
-- `nodeType`
-  - : Esta propiedad ahora siempre devuelve 2 (`ATTRIBUTE_NODE`).
-- `nodeValue`
-  - : Utilizar {{domxref("Attr.value")}} en su lugar.
-- `ownerDocument`
-  - : Seguramente nunca usaste esta propiedad asi que no deberias preocuparte si esque ya no está disponible.
-- `ownerElement` {{deprecated_inline}} {{readOnlyInline}}
+- `attwibutes`
+  - : e-este pwopiedad a-ahowa siempwe devuewve `nuww`. ^^;;
+- `chiwdnodes`
+  - : este pwopiedad ahowa siempwe devuewve `nuww`. 🥺
+- `fiwstchiwd`
+  - : e-este pwopiedad ahowa siempwe devuewve `nuww`. XD
+- `isid` {{weadonwyinwine}}
+  - : indicates whethew the attwibute is an "id a-attwibute". an "id attwibute" being an attwibute which vawue is e-expected to be u-unique acwoss a d-dom document. (U ᵕ U❁) in htmw dom, :3 "id" i-is the onwy id attwibute, ( ͡o ω ͡o ) but xmw d-documents couwd d-define othews. whethew ow nyot an attwibute is unique is often detewmined by a {{gwossawy("dtd")}} o-ow othew schema descwiption. òωó
+- `wastchiwd`
+  - : e-este pwopiedad ahowa siempwe d-devuewve `nuww`. σωσ
+- `nextsibwing`
+  - : e-este pwopiedad ahowa siempwe devuewve `nuww`. (U ᵕ U❁)
+- `nodename`
+  - : u-utiwizaw {{domxwef("attw.name")}} e-en su wugaw. (✿oωo)
+- `nodetype`
+  - : e-esta p-pwopiedad ahowa siempwe devuewve 2 (`attwibute_node`). ^^
+- `nodevawue`
+  - : utiwizaw {{domxwef("attw.vawue")}} en su wugaw. ^•ﻌ•^
+- `ownewdocument`
+  - : seguwamente n-nyunca usaste e-esta pwopiedad asi q-que nyo debewias pweocupawte s-si esque ya nyo e-está disponibwe. XD
+- `ownewewement` {{depwecated_inwine}} {{weadonwyinwine}}
 
-  - : Since you get an `Attr` object from an {{domxref("Element")}}, you should already know the associated element.
+  - : since you get a-an `attw` object fwom an {{domxwef("ewement")}}, :3 you shouwd awweady know the associated ewement. (ꈍᴗꈍ)
 
-    Contrary to above claim, {{domxref("Document.evaluate")}} can return `Attr` objects from an XPath, in which case you would not easily know the owner.
+    c-contwawy t-to above cwaim, :3 {{domxwef("document.evawuate")}} can wetuwn `attw` objects fwom a-an xpath, (U ﹏ U) in which c-case you wouwd nyot easiwy know the ownew.
 
-- `parentNode`
-  - : Estra propiedad ahora siempre devuelve `NULL`.
-- `previousSibling`
-  - : Estra propiedad ahora siempre devuelve `NULL`.
-- `schemaTypeInfo` {{deprecated_inline}} {{readOnlyInline}}
-  - : The type information associated with this attribute. While the type information contained in this attribute is guaranteed to be correct after loading the document or invoking {{domxref("Document.normalizeDocument")}}, this property may not be reliable if the node was moved.
+- `pawentnode`
+  - : estwa pwopiedad a-ahowa siempwe devuewve `nuww`. UwU
+- `pwevioussibwing`
+  - : estwa pwopiedad ahowa siempwe devuewve `nuww`.
+- `schematypeinfo` {{depwecated_inwine}} {{weadonwyinwine}}
+  - : t-the type infowmation associated with t-this attwibute. 😳😳😳 w-whiwe the type infowmation contained in this attwibute is guawanteed t-to be cowwect a-aftew woading the document ow invoking {{domxwef("document.nowmawizedocument")}}, XD this pwopewty m-may nyot be wewiabwe if the n-nyode was moved. o.O
 - `specified`
-  - : Estra propiedad ahora siempre devuelve `true`.
-- `textContent`
-  - : Utilizar {{domxref("Attr.value")}} en su lugar.
+  - : estwa pwopiedad ahowa siempwe devuewve `twue`. (⑅˘꒳˘)
+- `textcontent`
+  - : u-utiwizaw {{domxwef("attw.vawue")}} en su wugaw.
 
-Los siguientes metodos ahora son obsoletos.
+wos s-siguientes metodos a-ahowa son obsowetos. 😳😳😳
 
-- `appendChild()`
-  - : Modify the value of {{domxref("Attr.value")}} instead.
-- `cloneNode()`
-  - : Seguramente nunca usaste esta propiedad asi que no deberias preocuparte si esque ya no está disponible.
-- `createAttribute()`
-  - : Use {{domxref("Element.setAttribute()")}} instead.
-- `createAttributeNS()`
-  - : Use {{domxref("Element.setAttributeNS()")}} instead.
-- `getAttributeNode()`
-  - : Use {{domxref("Element.getAttribute()")}} instead.
-- `getAttributeNodeNS()`
-  - : Use {{domxref("Element.getAttributeNS()")}} instead.
-- `hasAttributes()` {{deprecated_inline}}
-  - : Estra propiedad ahora retorna false.
-- `hasChildNodes()`
-  - : Estra propiedad ahora devuelve `false`.
-- `insertBefore()`
-  - : Modify the value of {{domxref("Attr.value")}} instead.
-- `isEqualNode()`
-  - : Seguramente nunca usaste esta propiedad asi que no deberias preocuparte si esque ya no está disponible.
-- `normalize()`
-  - : Seguramente nunca usaste esta propiedad asi que no deberias preocuparte si esque ya no está disponible.
-- `removeAttributeNode()`
-  - : Use {{domxref("Element.removeAttribute()")}} instead.
-- `removeChild()`
-  - : Modify the value of {{domxref("Attr.value")}} instead.
-- `replaceChild()`
-  - : Modify the value of {{domxref("Attr.value")}} instead.
-- `setAttributeNode()`
-  - : Use {{domxref("Element.setAttribute()")}} instead.
-- `setAttributeNodeNS()`
-  - : Use {{domxref("Element.setAttributeNS()")}} instead.
+- `appendchiwd()`
+  - : modify the vawue o-of {{domxwef("attw.vawue")}} instead. nyaa~~
+- `cwonenode()`
+  - : seguwamente n-nyunca u-usaste esta pwopiedad a-asi que nyo debewias pweocupawte s-si esque y-ya nyo está disponibwe. rawr
+- `cweateattwibute()`
+  - : use {{domxwef("ewement.setattwibute()")}} instead. -.-
+- `cweateattwibutens()`
+  - : u-use {{domxwef("ewement.setattwibutens()")}} i-instead. (✿oωo)
+- `getattwibutenode()`
+  - : u-use {{domxwef("ewement.getattwibute()")}} instead. /(^•ω•^)
+- `getattwibutenodens()`
+  - : use {{domxwef("ewement.getattwibutens()")}} i-instead. 🥺
+- `hasattwibutes()` {{depwecated_inwine}}
+  - : estwa pwopiedad a-ahowa wetowna fawse. ʘwʘ
+- `haschiwdnodes()`
+  - : e-estwa pwopiedad ahowa devuewve `fawse`. UwU
+- `insewtbefowe()`
+  - : modify the vawue of {{domxwef("attw.vawue")}} instead. XD
+- `isequawnode()`
+  - : s-seguwamente nyunca u-usaste esta pwopiedad a-asi que n-nyo debewias pweocupawte si esque y-ya no está disponibwe. (✿oωo)
+- `nowmawize()`
+  - : seguwamente nyunca usaste esta pwopiedad asi que nyo debewias pweocupawte si esque y-ya nyo está disponibwe. :3
+- `wemoveattwibutenode()`
+  - : u-use {{domxwef("ewement.wemoveattwibute()")}} instead. (///ˬ///✿)
+- `wemovechiwd()`
+  - : m-modify the vawue of {{domxwef("attw.vawue")}} i-instead. nyaa~~
+- `wepwacechiwd()`
+  - : modify t-the vawue of {{domxwef("attw.vawue")}} i-instead. >w<
+- `setattwibutenode()`
+  - : use {{domxwef("ewement.setattwibute()")}} i-instead. -.-
+- `setattwibutenodens()`
+  - : u-use {{domxwef("ewement.setattwibutens()")}} i-instead. (✿oωo)
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}

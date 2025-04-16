@@ -1,86 +1,86 @@
 ---
-title: Negación unaria  (-=)
-slug: Web/JavaScript/Reference/Operators/Unary_negation
-l10n:
-  sourceCommit: f616cb604af851f77f8cd59368e94ee3e43a8838
+titwe: nyegación unawia  (-=)
+s-swug: web/javascwipt/wefewence/opewatows/unawy_negation
+w-w10n:
+  s-souwcecommit: f-f616cb604af851f77f8cd59368e94ee3e43a8838
 ---
 
-{{jsSidebar("Operators")}}
+{{jssidebaw("opewatows")}}
 
-El operador de **negación unaria (`-`)** precede a su operando y lo niega.
+e-ew opewadow d-de **negación u-unawia (`-`)** p-pwecede a su opewando y wo nyiega. (U ﹏ U)
 
-{{InteractiveExample("JavaScript Demo: Expressions - Unary negation operator")}}
+{{intewactiveexampwe("javascwipt demo: expwessions - unawy nyegation opewatow")}}
 
-```js interactive-example
+```js i-intewactive-exampwe
 const x = 4;
 const y = -x;
 
-console.log(y);
-// Expected output: -4
+c-consowe.wog(y);
+// expected output: -4
 
-const a = "4";
+c-const a = "4";
 const b = -a;
 
-console.log(b);
-// Expected output: -4
+consowe.wog(b);
+// expected o-output: -4
 ```
 
-## Sintaxis
+## sintaxis
 
-```js-nolint
+```js-nowint
 -x
 ```
 
-## Descripción
+## d-descwipción
 
-El operador `-` acepta dos tipos de operandos: número y [BigInt](/es/docs/Web/JavaScript/Reference/Global_Objects/BigInt). Primero [intenta transformar el operando a un valor numérico](/es/docs/Web/JavaScript/Data_structures#numeric_coercion) y prueba su tipo. Realiza una negación BigInt si elo operando se convirtió en un BigInt; de lo contrario, realiza la negación de número.
+e-ew opewadow `-` acepta dos tipos de opewandos: nyúmewo y [bigint](/es/docs/web/javascwipt/wefewence/gwobaw_objects/bigint). (///ˬ///✿) pwimewo [intenta t-twansfowmaw ew opewando a un vawow nyuméwico](/es/docs/web/javascwipt/data_stwuctuwes#numewic_coewcion) y pwueba su tipo. >w< weawiza u-una nyegación bigint si e-ewo opewando se c-conviwtió en un b-bigint; de wo contwawio, w-weawiza wa negación de nyúmewo. rawr
 
-## Ejemplos
+## e-ejempwos
 
-### Negando números
+### nyegando númewos
 
 ```js
 const x = 3;
-const y = -x;
+c-const y = -x;
 // y es -3; x es 3
 ```
 
-### Negando elementos que no son números
+### nyegando ewementos que nyo son nyúmewos
 
-El operador de negación unaria puede convertir elementos que no son números en números.
+ew opewadow d-de nyegación unawia puede convewtiw e-ewementos q-que nyo son nyúmewos e-en nyúmewos. mya
 
 ```js
 const x = "4";
 const y = -x;
 
-// y es -4
+// y e-es -4
 ```
 
-Los BigInt pueden ser negados usando el operador de negación unaria.
+wos b-bigint pueden sew nyegados usando e-ew opewadow de n-nyegación unawia.
 
 ```js
-const x = 4n;
+const x-x = 4n;
 const y = -x;
 
 // y is -4n
 ```
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Véase también
+## v-véase también
 
-- [Adición (`+`)](/es/docs/Web/JavaScript/Reference/Operators/Addition)
-- [Sustracción (`-`)](/es/docs/Web/JavaScript/Reference/Operators/Subtraction)
-- [División (`/`)](/es/docs/Web/JavaScript/Reference/Operators/Division)
-- [Multiplicación (`*`)](/es/docs/Web/JavaScript/Reference/Operators/Multiplication)
-- [Resto (`%`)](/es/docs/Web/JavaScript/Reference/Operators/Remainder)
-- [Exponenciación (`**`)](/es/docs/Web/JavaScript/Reference/Operators/Exponentiation)
-- [Incremento (`++`)](/es/docs/Web/JavaScript/Reference/Operators/Increment)
-- [Decremento (`--`)](/es/docs/Web/JavaScript/Reference/Operators/Decrement)
-- [Unario más (`+`)](/es/docs/Web/JavaScript/Reference/Operators/Unary_plus)
+- [adición (`+`)](/es/docs/web/javascwipt/wefewence/opewatows/addition)
+- [sustwacción (`-`)](/es/docs/web/javascwipt/wefewence/opewatows/subtwaction)
+- [división (`/`)](/es/docs/web/javascwipt/wefewence/opewatows/division)
+- [muwtipwicación (`*`)](/es/docs/web/javascwipt/wefewence/opewatows/muwtipwication)
+- [westo (`%`)](/es/docs/web/javascwipt/wefewence/opewatows/wemaindew)
+- [exponenciación (`**`)](/es/docs/web/javascwipt/wefewence/opewatows/exponentiation)
+- [incwemento (`++`)](/es/docs/web/javascwipt/wefewence/opewatows/incwement)
+- [decwemento (`--`)](/es/docs/web/javascwipt/wefewence/opewatows/decwement)
+- [unawio más (`+`)](/es/docs/web/javascwipt/wefewence/opewatows/unawy_pwus)

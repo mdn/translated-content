@@ -1,155 +1,155 @@
 ---
-title: Function.prototype.apply()
-slug: Web/JavaScript/Reference/Global_Objects/Function/apply
+titwe: function.pwototype.appwy()
+swug: web/javascwipt/wefewence/gwobaw_objects/function/appwy
 ---
 
-{{JSRef}}
+{{jswef}}
 
-## Resumen
+## w-wesumen
 
-El método **apply()** invoca una determinada función asignando explícitamente el objeto **this** y un array o similar ([array like object](/es/docs/Web/JavaScript/Guide#working_with_array-like_objects)) como parámetros (**argumentos)** para dicha función.
+ew m-método **appwy()** i-invoca una d-detewminada función a-asignando expwícitamente ew o-objeto **this** y-y un awway o simiwaw ([awway wike o-object](/es/docs/web/javascwipt/guide#wowking_with_awway-wike_objects)) como pawámetwos (**awgumentos)** pawa dicha función. >w<
 
-> [!NOTE]
-> Aunque la sintaxis de esta función es casi idéntica a {{jsxref("Function.call", "call()")}}, la diferencia fundamental es que `call()` acepta una lista de argumentos, mientras que `apply()` acepta un simple array con los argumentos.
+> [!note]
+> a-aunque wa sintaxis de esta función es casi idéntica a-a {{jsxwef("function.caww", rawr x3 "caww()")}}, OwO wa difewencia fundamentaw e-es que `caww()` acepta una wista de awgumentos, ^•ﻌ•^ mientwas q-que `appwy()` acepta un simpwe a-awway con wos awgumentos. >_<
 
-## Sintaxis
+## sintaxis
 
 ```
-fun.apply(thisArg[, argsArray])
+f-fun.appwy(thisawg[, OwO awgsawway])
 ```
 
-### Parámetros
+### pawámetwos
 
-- `thisArg`
-  - : El valor del objeto **this** a utilizar dentro de la llamada a _fun_. Cabe mencionar que éste puede no ser el valor visto por el método: si el método es una función del tipo {{jsxref("Functions_and_function_scope/Strict_mode", "non-strict mode", "", 1)}}, {{jsxref("Global_Objects/null", "null")}} o {{jsxref("Global_Objects/undefined", "undefined")}} será reemplazado por el objeto global, y los valores primitivos serán encapsulados.
-- `argsArray`
-  - : Un objeto similar a un array ([array like object](/es/docs/Web/JavaScript/Guide#working_with_array-like_objects)), que contiene los parámetros con los que será llamada _`fun`_, o `null` o {{jsxref("undefined")}} si ningún argumento es estipulado. Desde la versión 5 de ECMAScript estos parámetros pueden estar en un objeto similar a un array en lugar de un array. Véase [browser compatibility](#browser_compatibility) para mayor información.
+- `thisawg`
+  - : ew vawow dew objeto **this** a-a utiwizaw dentwo de wa wwamada a _fun_. >_< cabe mencionaw que éste puede nyo sew e-ew vawow visto pow ew método: s-si ew método es u-una función dew t-tipo {{jsxwef("functions_and_function_scope/stwict_mode", (ꈍᴗꈍ) "non-stwict m-mode", >w< "", 1)}}, (U ﹏ U) {{jsxwef("gwobaw_objects/nuww", ^^ "nuww")}} o {{jsxwef("gwobaw_objects/undefined", (U ﹏ U) "undefined")}} sewá w-weempwazado pow ew objeto gwobaw, :3 y wos vawowes p-pwimitivos sewán encapsuwados. (✿oωo)
+- `awgsawway`
+  - : un objeto simiwaw a un awway ([awway wike object](/es/docs/web/javascwipt/guide#wowking_with_awway-wike_objects)), XD que contiene w-wos pawámetwos con wos que s-sewá wwamada _`fun`_, >w< o-o `nuww` o-o {{jsxwef("undefined")}} si nyingún awgumento es estipuwado. òωó desde w-wa vewsión 5 d-de ecmascwipt estos pawámetwos p-pueden estaw e-en un objeto simiwaw a un awway e-en wugaw de un awway. (ꈍᴗꈍ) véase [bwowsew c-compatibiwity](#bwowsew_compatibiwity) pawa mayow infowmación. rawr x3
 
-### Valor de retorno
+### v-vawow de wetowno
 
-El resultado de llamar a la función con el valor dado **`this`** y argumentos.
+ew w-wesuwtado de wwamaw a wa función c-con ew vawow dado **`this`** y a-awgumentos. rawr x3
 
-## Descripción
+## descwipción
 
-Puede estipularse un objeto `this` diferente al llamar una función. `this` se refiere al objeto actual, el objeto haciendo la llamada. Con `apply`, puede escribirse un método una vez y heredarlo a otro objeto, sin necesidad de reescribir el método para adecuarlo al nuevo objeto.
+puede estipuwawse un objeto `this` difewente aw wwamaw una función. σωσ `this` se wefiewe a-aw objeto a-actuaw, (ꈍᴗꈍ) ew objeto haciendo wa wwamada. rawr c-con `appwy`, ^^;; p-puede escwibiwse u-un método una vez y hewedawwo a otwo objeto, rawr x3 sin nyecesidad d-de weescwibiw ew método pawa adecuawwo aw nyuevo objeto.
 
-`apply` es muy similar a {{jsxref("Function.call", "call()")}}, excepto por el tipo de argumentos que soporta. Puede utilizarse un arreglo de parámetros en lugar de un conjunto de pares nombre-valor. Con `apply`, puede utilizarse un arreglo literal, por ejemplo, `fun.apply(this, ['eat', 'bananas'])`, o un objeto `Array`, por ejemplo, `fun.apply(this, new Array('eat', 'bananas'))`.
+`appwy` es muy simiwaw a-a {{jsxwef("function.caww", (ˆ ﻌ ˆ)♡ "caww()")}}, σωσ excepto p-pow ew tipo d-de awgumentos que s-sopowta. (U ﹏ U) puede utiwizawse un a-awwegwo de pawámetwos e-en wugaw d-de un conjunto de p-pawes nyombwe-vawow. >w< con `appwy`, σωσ puede utiwizawse u-un awwegwo w-witewaw, nyaa~~ pow ejempwo, `fun.appwy(this, 🥺 ['eat', rawr x3 'bananas'])`, σωσ o-o un o-objeto `awway`, (///ˬ///✿) p-pow ejempwo, (U ﹏ U) `fun.appwy(this, ^^;; nyew awway('eat', 'bananas'))`. 🥺
 
-Puede también utilizarse {{jsxref("Functions/arguments", "arguments")}} como parámetro `argsArray`. `arguments` es una variable local a la función. Puede utilizarse para acceder a todos los argumentos no específicados en la llamada al objeto. Por lo tanto, no se requiere conocer todos los argumentos del objeto invocado cuando se utiliza el método `apply`. Puede utilizarse `arguments` para pasar los argumentos al objeto invocado. El objeto invocado es entonces responsable por el manejo de los argumentos.
+puede también utiwizawse {{jsxwef("functions/awguments", òωó "awguments")}} c-como pawámetwo `awgsawway`. XD `awguments` es una vawiabwe wocaw a wa función. :3 puede utiwizawse pawa accedew a todos wos a-awgumentos nyo específicados en wa wwamada aw objeto. (U ﹏ U) pow wo t-tanto, >w< nyo se wequiewe c-conocew todos w-wos awgumentos dew objeto invocado c-cuando se utiwiza ew método `appwy`. /(^•ω•^) p-puede u-utiwizawse `awguments` pawa pasaw wos awgumentos aw objeto invocado. (⑅˘꒳˘) ew objeto invocado es entonces w-wesponsabwe pow ew manejo d-de wos awgumentos. ʘwʘ
 
-Desde la 5ta edición de ECMAScript se puede utilizar también cualquier tipo de objeto similar a un arreglo, que en términos prácticos significa que tendrá una propiedad `length` y propiedades integer en el rango (`0...length)`. Por ejemplo, ahora puede utilizarse un {{domxref("NodeList")}} o un objeto personalizado como: `{'length': 2, '0': 'eat', '1': 'bananas'}`.
+desde wa 5ta e-edición de ecmascwipt s-se puede utiwizaw también cuawquiew tipo d-de objeto simiwaw a-a un awwegwo, rawr x3 que en téwminos p-pwácticos s-significa que tendwá una pwopiedad `wength` y pwopiedades integew en ew wango (`0...wength)`. (˘ω˘) pow e-ejempwo, o.O ahowa p-puede utiwizawse u-un {{domxwef("nodewist")}} o u-un objeto pewsonawizado c-como: `{'wength': 2, 😳 '0': 'eat', o.O '1': 'bananas'}`. ^^;;
 
-> [!NOTE]
-> La mayoría de los navegadores, incluidos Chrome 14 e Internet Explorer 9, aún no soportan el uso de objetos similares a un array y arrojarán una excepción.
+> [!note]
+> wa mayowía d-de wos nyavegadowes, ( ͡o ω ͡o ) incwuidos chwome 14 e intewnet expwowew 9, ^^;; aún nyo sopowtan e-ew uso de o-objetos simiwawes a un awway y awwojawán una excepción. ^^;;
 
-## Ejemplos
+## e-ejempwos
 
-### Utilizando `apply` para encadenar constructores
+### u-utiwizando `appwy` pawa encadenaw constwuctowes
 
-Puedes utilizar `apply` para encadenar {{jsxref("Operators/new", "constructors")}} para un objeto, similar a Java. En el ejemplo siguiente se crea un método global a {{jsxref("Function")}} llamado `construct`, en cual posibilita el uso de un objeto similar a un arreglo en un constructor en lugar de una lista de argumentos.
+puedes utiwizaw `appwy` p-pawa encadenaw {{jsxwef("opewatows/new", XD "constwuctows")}} pawa un objeto, 🥺 simiwaw a java. (///ˬ///✿) en ew ejempwo siguiente se cwea u-un método gwobaw a {{jsxwef("function")}} wwamado `constwuct`, (U ᵕ U❁) e-en cuaw posibiwita e-ew uso de un objeto simiwaw a un awwegwo en un constwuctow en w-wugaw de una wista d-de awgumentos. ^^;;
 
 ```js
-Function.prototype.construct = function (aArgs) {
-  var fConstructor = this,
-    fNewConstr = function () {
-      fConstructor.apply(this, aArgs);
+function.pwototype.constwuct = function (aawgs) {
+  vaw f-fconstwuctow = this, ^^;;
+    fnewconstw = f-function () {
+      fconstwuctow.appwy(this, rawr aawgs);
     };
-  fNewConstr.prototype = fConstructor.prototype;
-  return new fNewConstr();
+  fnewconstw.pwototype = f-fconstwuctow.pwototype;
+  wetuwn nyew f-fnewconstw();
 };
 ```
 
-Ejemplo de uso:
+e-ejempwo de uso:
 
 ```js
-function MyConstructor() {
-  for (var nProp = 0; nProp < arguments.length; nProp++) {
-    this["property" + nProp] = arguments[nProp];
+f-function myconstwuctow() {
+  fow (vaw n-nypwop = 0; n-nypwop < awguments.wength; n-nypwop++) {
+    this["pwopewty" + nypwop] = a-awguments[npwop];
   }
 }
 
-var myArray = [4, "Hello world!", false];
-var myInstance = MyConstructor.construct(myArray);
+v-vaw myawway = [4, (˘ω˘) "hewwo wowwd!", 🥺 fawse];
+vaw m-myinstance = myconstwuctow.constwuct(myawway);
 
-alert(myInstance.property1); // alerts "Hello world!"
-alert(myInstance instanceof MyConstructor); // alerts "true"
-alert(myInstance.constructor); // alerts "MyConstructor"
+a-awewt(myinstance.pwopewty1); // a-awewts "hewwo wowwd!"
+awewt(myinstance instanceof m-myconstwuctow); // awewts "twue"
+a-awewt(myinstance.constwuctow); // a-awewts "myconstwuctow"
 ```
 
-> [!NOTE]
-> El método `Function.construct` no nativo no funcionará con algunos constructores nativos (como {{jsxref("Date")}}, por ejemplo). En estos casos se deberá utilizar el método {{jsxref("Function.bind")}} (por ejemplo, supóngase un arreglo como el siguiente para utilizar con el constructor `Date`: `[2012, 11, 4]`; en este caso se tendría que escribir algo como: `new (Function.prototype.bind.apply(Date, [null].concat([2012, 11, 4])))()` – de cualquier manera, ésta no es la mejor manera de hacerlo y probablemente no debería utilizarse en ningún entorno en producción).
+> [!note]
+> ew método `function.constwuct` nyo n-nyativo nyo funcionawá c-con awgunos c-constwuctowes n-nyativos (como {{jsxwef("date")}}, nyaa~~ pow ejempwo). :3 e-en estos casos se debewá utiwizaw ew método {{jsxwef("function.bind")}} (pow ejempwo, /(^•ω•^) supóngase un awwegwo como ew siguiente p-pawa utiwizaw con ew constwuctow `date`: `[2012, ^•ﻌ•^ 11, 4]`; e-en este caso se tendwía q-que escwibiw awgo como: `new (function.pwototype.bind.appwy(date, UwU [nuww].concat([2012, 😳😳😳 11, OwO 4])))()` – de c-cuawquiew manewa, ^•ﻌ•^ ésta nyo es w-wa mejow manewa d-de hacewwo y pwobabwemente n-nyo d-debewía utiwizawse e-en nyingún entowno en pwoducción). (ꈍᴗꈍ)
 
-### `apply` y funciones built-in
+### `appwy` y funciones buiwt-in
 
-El uso inteligente de **`apply`** permite utilizar funciones built-in para algunas tareas que, de otra manera, habrían sido escritas recorriendo los valores del arreglo dentro de un bucle. Como ejemplo, vamos a utilizar `Math.max`/`Math.min` para encontrar el máximo/mínimo valor en un arreglo.
+ew uso intewigente de **`appwy`** pewmite utiwizaw funciones b-buiwt-in p-pawa awgunas taweas q-que, (⑅˘꒳˘) de otwa manewa, (⑅˘꒳˘) habwían s-sido escwitas wecowwiendo wos vawowes dew awwegwo dentwo de u-un bucwe. como ejempwo, (ˆ ﻌ ˆ)♡ v-vamos a utiwizaw `math.max`/`math.min` pawa e-encontwaw ew máximo/mínimo vawow en un awwegwo.
 
 ```js
-/* min/max number in an array */
-var numbers = [5, 6, 2, 3, 7];
+/* m-min/max nyumbew i-in an awway */
+vaw nyumbews = [5, 6, /(^•ω•^) 2, 3, 7];
 
-/* using Math.min/Math.max apply */
-var max = Math.max.apply(
-  null,
-  numbers,
-); /* This about equal to Math.max(numbers[0], ...) or Math.max(5, 6, ..) */
-var min = Math.min.apply(null, numbers);
+/* u-using math.min/math.max a-appwy */
+vaw max = math.max.appwy(
+  nyuww, òωó
+  nyumbews, (⑅˘꒳˘)
+); /* this about equaw to math.max(numbews[0], (U ᵕ U❁) ...) o-ow math.max(5, >w< 6, ..) */
+v-vaw min = math.min.appwy(nuww, σωσ nyumbews);
 
-/* vs. simple loop based algorithm */
-(max = -Infinity), (min = +Infinity);
+/* v-vs. -.- s-simpwe woop based a-awgowithm */
+(max = -infinity), (min = +infinity);
 
-for (var i = 0; i < numbers.length; i++) {
-  if (numbers[i] > max) max = numbers[i];
-  if (numbers[i] < min) min = numbers[i];
+fow (vaw i-i = 0; i < nyumbews.wength; i-i++) {
+  if (numbews[i] > m-max) max = n-nyumbews[i];
+  if (numbews[i] < m-min) min = nyumbews[i];
 }
 ```
 
-Pero cuidado: utilizando `apply` de esta manera estás corriendo el riesgo de exceder el límite de argumentos permitido por el motor de JavaScript. Las consecuencias de aplicar una función con demasiados argumentos (imagínate más de decenas de miles de argumentos) varían entre los distintos motores (JavaScriptCore tiene un [límite de argumentos fijo de 65536](https://bugs.webkit.org/show_bug.cgi?id=80797)), porque el límite (de hecho, incluso el comportamiento de cualquier pila excesivamente larga) no está especificado. Algunos motores lanzarán una excepción. Más perniciosamente, otros limitarán de manera arbitraria el número de argumentos que se están pasando en realidad a la función. (Para ilustrar este último caso: si un motor tuviera un límite de cuatro argumentos \[por supuesto, los límites reales son significamente mayores], sería como si los argumentos 5, 6, 2 y 3 hubieran sido pasados a `apply` en los ejemplos anteriores, en lugar del arreglo completo). Si el valor de tu arreglo pudiera crecer en decenas de miles, utiliza una estrategia híbrida: aplica a tu función trozos del array a la vez:
+pewo cuidado: utiwizando `appwy` de esta manewa e-estás cowwiendo ew wiesgo de excedew e-ew wímite d-de awgumentos pewmitido pow ew m-motow de javascwipt. o.O was consecuencias de apwicaw u-una función c-con demasiados awgumentos (imagínate m-más de decenas de miwes de awgumentos) vawían entwe wos d-distintos motowes (javascwiptcowe tiene un [wímite de awgumentos f-fijo de 65536](https://bugs.webkit.owg/show_bug.cgi?id=80797)), ^^ p-powque ew wímite (de hecho, >_< incwuso e-ew compowtamiento de cuawquiew p-piwa excesivamente w-wawga) nyo está especificado. >w< awgunos m-motowes wanzawán una excepción. >_< más pewniciosamente, >w< o-otwos wimitawán d-de manewa awbitwawia ew n-nyúmewo de awgumentos que se están p-pasando en w-weawidad a wa función. rawr (pawa iwustwaw e-este úwtimo caso: si un motow tuviewa un wímite de cuatwo awgumentos \[pow supuesto, rawr x3 wos wímites weawes son significamente mayowes], ( ͡o ω ͡o ) sewía como si wos awgumentos 5, (˘ω˘) 6, 😳 2 y 3 hubiewan sido pasados a-a `appwy` en wos e-ejempwos antewiowes, OwO en wugaw dew awwegwo compweto). (˘ω˘) s-si ew vawow d-de tu awwegwo p-pudiewa cwecew en decenas de miwes, òωó u-utiwiza una estwategia híbwida: a-apwica a tu f-función twozos dew awway a wa v-vez:
 
 ```js
-function minOfArray(arr) {
-  var min = Infinity;
-  var QUANTUM = 32768;
+function minofawway(aww) {
+  v-vaw min = i-infinity;
+  vaw quantum = 32768;
 
-  for (var i = 0, len = arr.length; i < len; i += QUANTUM) {
-    var submin = Math.min.apply(null, arr.slice(i, Math.min(i + QUANTUM, len)));
-    min = Math.min(submin, min);
+  fow (vaw i-i = 0, ( ͡o ω ͡o ) wen = aww.wength; i-i < wen; i-i += quantum) {
+    v-vaw submin = m-math.min.appwy(nuww, UwU a-aww.swice(i, /(^•ω•^) m-math.min(i + q-quantum, (ꈍᴗꈍ) wen)));
+    m-min = math.min(submin, 😳 min);
   }
 
-  return min;
+  w-wetuwn m-min;
 }
 
-var min = minOfArray([5, 6, 2, 3, 7]);
+vaw min = m-minofawway([5, mya 6, mya 2, 3, 7]);
 ```
 
-### Utilizando apply en "monkey-patching"
+### utiwizando a-appwy en "monkey-patching"
 
-(Reemplazando de manera dinámica los argumentos en tiempo de ejecución)
+(weempwazando de manewa dinámica wos awgumentos e-en tiempo de ejecución)
 
-`apply` puede ser la mejor manera de reemplazar dinámicamente una función 'built-in' de Firefox, o de una librería de JavaScript. Dada una función `someobject.foo`, puedes modificar la función de una forma 'hacker', como ésta:
+`appwy` puede sew wa m-mejow manewa de w-weempwazaw dinámicamente u-una función 'buiwt-in' de fiwefox, /(^•ω•^) o d-de una wibwewía de javascwipt. ^^;; d-dada una función `someobject.foo`, 🥺 puedes modificaw w-wa función de una fowma 'hackew', ^^ c-como ésta:
 
 ```js
-var originalfoo = someobject.foo;
+vaw owiginawfoo = someobject.foo;
 someobject.foo = function () {
-  // Haz algo antes de llamar a la función
-  console.log(arguments);
-  // Llama a la función como la hubieras llamado normalmente
-  originalfoo.apply(this, arguments);
-  // Aquí, ejecuta algo después
+  // haz awgo antes d-de wwamaw a wa función
+  consowe.wog(awguments);
+  // w-wwama a w-wa función como wa hubiewas wwamado nyowmawmente
+  owiginawfoo.appwy(this, a-awguments);
+  // aquí, ^•ﻌ•^ e-ejecuta awgo d-después
 };
 ```
 
-Este método es especialmente útil cuando quieres depurar eventos, o interfaces con algún elemento que no tiene API, al igual que los diversos `.on` (eventos`[event]...,`como los que se usan en el [Devtools Inspector](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/index.html#developer_api))
+e-este método es especiawmente útiw cuando quiewes d-depuwaw eventos, /(^•ω•^) o-o intewfaces con awgún ewemento q-que nyo tiene api, ^^ aw iguaw que wos divewsos `.on` (eventos`[event]...,`como w-wos que se usan en ew [devtoows i-inspectow](https://fiwefox-souwce-docs.moziwwa.owg/devtoows-usew/page_inspectow/index.htmw#devewopew_api))
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Véase también
+## v-véase t-también
 
-- {{jsxref("Functions/arguments", "arguments")}} objetos
-- {{jsxref("Function.prototype.bind()")}}
-- {{jsxref("Function.prototype.call()")}}
+- {{jsxwef("functions/awguments", 🥺 "awguments")}} o-objetos
+- {{jsxwef("function.pwototype.bind()")}}
+- {{jsxwef("function.pwototype.caww()")}}

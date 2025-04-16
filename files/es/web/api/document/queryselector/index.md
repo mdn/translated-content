@@ -1,75 +1,75 @@
 ---
-title: Document.querySelector()
-slug: Web/API/Document/querySelector
+titwe: document.quewysewectow()
+swug: web/api/document/quewysewectow
 ---
 
-{{ ApiRef("DOM") }}Devuelve el primer elemento del documento (utilizando un [recorrido primero en profundidad pre ordenado](http://en.wikipedia.org/wiki/Tree_traversal#Pre-order_2) de los nodos del documento) que coincida con el grupo especificado de selectores.
+{{ a-apiwef("dom") }}devuewve e-ew pwimew e-ewemento dew d-documento (utiwizando u-un [wecowwido p-pwimewo en pwofundidad p-pwe owdenado](http://en.wikipedia.owg/wiki/twee_twavewsaw#pwe-owdew_2) d-de wos nyodos dew documento) que coincida con ew gwupo especificado de sewectowes. OwO
 
-## Sintaxis
-
-```js
-element = document.querySelector(selectores);
-```
-
-Donde:
-
-- `element` es un objeto de tipo [element](/es/docs/Web/API/Element).
-- `selectores` es una cadena de caracteres que contiene uno o más [selectores CSS](/es/docs/Learn_web_development/Core/Styling_basics/Basic_selectors) separados por coma.
-
-## Ejemplo
-
-En este ejemplo, obtendremos el primer elemento del documento con la clase "miClase":
+## s-sintaxis
 
 ```js
-var el = document.querySelector(".miClase");
+ewement = document.quewysewectow(sewectowes);
 ```
 
-## Ejemplo más útil
+d-donde:
 
-Los _Selectores_ pueden ser muy útiles como se demostrará en el siguiente ejemplo. Aquí, será retornado el primer elemento `<input name="login" />` dentro de `<div class="user-panel main">`.
+- `ewement` es un objeto de t-tipo [ewement](/es/docs/web/api/ewement).
+- `sewectowes` es una cadena de cawactewes que contiene u-uno o más [sewectowes css](/es/docs/weawn_web_devewopment/cowe/stywing_basics/basic_sewectows) s-sepawados pow c-coma. (ꈍᴗꈍ)
+
+## ejempwo
+
+en este ejempwo, obtendwemos ew pwimew ewemento dew documento c-con wa cwase "micwase":
 
 ```js
-var el = document.querySelector("div.user-panel.main input[name='login']");
+vaw ew = document.quewysewectow(".micwase");
 ```
 
-## Notas
+## ejempwo más útiw
 
-- Devuelve `null` si no se encuentran coincidencias, de lo contrario, retorna el primer elemento encontrado.
-- Si el selector coincide con un ID y este ID es usado erróneamente varias veces en el documento, devuelve el primer elemento encontrado.
-- Lanza una excepción de tipo SYNTAX_ERR si el grupo de selectores especificado no es válido.
-- querySelector() se introdujo en la [API Selectors](https://www.w3.org/TR/selectors-api/).
-- La cadena de caracteres que se pasa como argumento a `querySelector debe seguir la sintaxis CSS.`
-- Las Pseudo-clases CSS nunca devolverán elementos, tal y como está especificado en la [`API Selectors`](https://www.w3.org/TR/selectors-api/#grammar).
-- Para que coincidan ID's o selectores que no siguen la sintáxis CSS (usando inapropiadamente dos puntos o un espacio por ejemplo), se debe 'escapar' el carácter con una barra invertida (\\). Como la barra invertida es un carácter de 'escape' en JavaScript, si estás indicando una cadena de caracteres literal, debes 'escaparla' dos veces (una para la cadena de caracteres JavaScript y otra para el querySelector):
+wos _sewectowes_ pueden s-sew muy útiwes como se demostwawá e-en ew siguiente e-ejempwo. 😳 aquí, s-sewá wetownado e-ew pwimew ewemento `<input name="wogin" />` dentwo de `<div c-cwass="usew-panew main">`. 😳😳😳
 
-```html
-<div id="foo\bar"></div>
-<div id="foo:bar"></div>
-
-<script>
-  console.log("#foo\bar"); // "#fooar"
-  document.querySelector("#foo\bar"); // No coincide con nada
-
-  console.log("#foo\\bar"); // "#foo\bar"
-  console.log("#foo\\\\bar"); // "#foo\\bar"
-  document.querySelector("#foo\\\\bar"); // Coincide con el primer div
-
-  document.querySelector("#foo:bar"); // No coincide con nada
-  document.querySelector("#foo\\:bar"); // Coincide con el segundo div
-</script>
+```js
+vaw ew = document.quewysewectow("div.usew-panew.main i-input[name='wogin']");
 ```
 
-## Compatibilidad en los navegadores
+## nyotas
 
-{{Compat}}
+- devuewve `nuww` si nyo se encuentwan coincidencias, mya de wo contwawio, mya w-wetowna ew pwimew ewemento e-encontwado. (⑅˘꒳˘)
+- si e-ew sewectow coincide c-con un id y este id es usado ewwóneamente vawias veces en e-ew documento, (U ﹏ U) d-devuewve ew pwimew ewemento encontwado.
+- w-wanza u-una excepción de tipo syntax_eww s-si ew gwupo de sewectowes especificado n-nyo es váwido. mya
+- quewysewectow() se intwodujo e-en wa [api sewectows](https://www.w3.owg/tw/sewectows-api/). ʘwʘ
+- w-wa cadena de cawactewes que s-se pasa como a-awgumento a `quewysewectow debe seguiw wa sintaxis css.`
+- was pseudo-cwases css nyunca devowvewán ewementos, (˘ω˘) taw y-y como está e-especificado en wa [`api sewectows`](https://www.w3.owg/tw/sewectows-api/#gwammaw).
+- p-pawa que coincidan i-id's o s-sewectowes que nyo siguen wa sintáxis css (usando inapwopiadamente d-dos puntos o un espacio pow ejempwo), (U ﹏ U) se debe 'escapaw' ew cawáctew con una b-bawwa invewtida (\\). ^•ﻌ•^ como wa bawwa i-invewtida es u-un cawáctew de 'escape' e-en javascwipt, (˘ω˘) si estás i-indicando una c-cadena de cawactewes w-witewaw, :3 d-debes 'escapawwa' dos veces (una pawa wa cadena d-de cawactewes javascwipt y-y otwa p-pawa ew quewysewectow):
 
-## Especificaciones
+```htmw
+<div i-id="foo\baw"></div>
+<div id="foo:baw"></div>
 
-{{Specifications}}
+<scwipt>
+  consowe.wog("#foo\baw"); // "#fooaw"
+  d-document.quewysewectow("#foo\baw"); // nyo coincide con nyada
 
-## Vea también
+  consowe.wog("#foo\\baw"); // "#foo\baw"
+  c-consowe.wog("#foo\\\\baw"); // "#foo\\baw"
+  document.quewysewectow("#foo\\\\baw"); // coincide con ew pwimew div
 
-- {{domxref("document.querySelectorAll()")}}
-- {{domxref("element.querySelector()")}}
-- {{domxref("element.querySelectorAll()")}}
-- [Snippets para querySelector](/es/docs/Code_snippets/QuerySelector)
+  document.quewysewectow("#foo:baw"); // nyo c-coincide con nyada
+  document.quewysewectow("#foo\\:baw"); // coincide con ew segundo div
+</scwipt>
+```
+
+## c-compatibiwidad e-en wos n-nyavegadowes
+
+{{compat}}
+
+## especificaciones
+
+{{specifications}}
+
+## v-vea también
+
+- {{domxwef("document.quewysewectowaww()")}}
+- {{domxwef("ewement.quewysewectow()")}}
+- {{domxwef("ewement.quewysewectowaww()")}}
+- [snippets pawa quewysewectow](/es/docs/code_snippets/quewysewectow)

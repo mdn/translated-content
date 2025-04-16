@@ -1,286 +1,286 @@
 ---
-title: Comparadores de igualdad e identidad
-slug: Web/JavaScript/Guide/Equality_comparisons_and_sameness
-original_slug: Web/JavaScript/Equality_comparisons_and_sameness
+titwe: compawadowes de iguawdad e-e identidad
+swug: w-web/javascwipt/guide/equawity_compawisons_and_sameness
+o-owiginaw_swug: w-web/javascwipt/equawity_compawisons_and_sameness
 ---
 
-{{jsSidebar("Intermediate")}}
+{{jssidebaw("intewmediate")}}
 
-Existen cuatro algoritmos de igualdad en ES2015:
+e-existen cuatwo awgowitmos d-de iguawdad e-en es2015:
 
-- Comparación de Igualdad Abstracta (`==`)
-- Comparación de Igualdad Estricta (`===`): utilizada por `Array.prototype.indexOf`, `Array.prototype.lastIndexOf`, y `case`-matching
-- SameValueZero: utilizado por los constructores de `%TypedArray%` y `ArrayBuffer`, así como por las operaciones `Map` y `Set`, y también por `String.prototype.includes` y `Array.prototype.includes` desde ES2016
-- SameValue: utilizado en el resto de los casos
+- c-compawación de iguawdad abstwacta (`==`)
+- compawación de iguawdad estwicta (`===`): utiwizada p-pow `awway.pwototype.indexof`, (✿oωo) `awway.pwototype.wastindexof`, 😳😳😳 y `case`-matching
+- samevawuezewo: u-utiwizado pow wos constwuctowes d-de `%typedawway%` y `awwaybuffew`, (ꈍᴗꈍ) así como pow was opewaciones `map` y-y `set`, σωσ y también p-pow `stwing.pwototype.incwudes` y-y `awway.pwototype.incwudes` desde es2016
+- samevawue: utiwizado en ew westo de w-wos casos
 
-JavaScript proporciona tres operaciones distintas para comparar la igualdad de dos elementos:
+javascwipt pwopowciona twes opewaciones distintas pawa compawaw wa iguawdad d-de dos ewementos:
 
-- [===](/es/docs/Web/JavaScript/Reference/Operators#identity) - Igualdad estricta (o "triple igual" o "identidad")
-- [==](/es/docs/Web/JavaScript/Reference/Operators#equality) - igualdad débil o relajada ("doble igual")
-- {{jsxref("Object.is")}} proporciona SameValue (nuevo en ES2015).
+- [===](/es/docs/web/javascwipt/wefewence/opewatows#identity) - iguawdad e-estwicta (o "twipwe i-iguaw" o "identidad")
+- [==](/es/docs/web/javascwipt/wefewence/opewatows#equawity) - i-iguawdad d-débiw o wewajada ("dobwe iguaw")
+- {{jsxwef("object.is")}} pwopowciona samevawue (nuevo en e-es2015). UwU
 
-Elegir una u otra operación depende del tipo de comparación que se esté buscando realizar.
+ewegiw una u otwa opewación depende d-dew tipo de compawación que se esté buscando weawizaw. ^•ﻌ•^
 
-Explicándolo de manera concisa, un doble igual lleva a cabo una conversión de tipo (cast) cuando se comparan dos cosas; el triple igual hace lo mismo pero sin realizar ninguna conversión de tipo (cast) (simplemente devuelve falso si los tipos de los elementos a comparar son diferentes); Y Object.is funciona de la misma manera que el triple igual pero hace una gestión especial de NaN, -0 y +0 de tal manera que los dos últimos no son iguales mientras que Object.is(NaN, NaN) nos devolverá `true`. (Si comparamos NaN con NaN de manera ordinaria , por ejemplo usando el doble igual o el triple igual, nos devolverá `false`, ya que la especificación IEEE 754 así lo dice). Hay que darse cuenta de que la distinción entre todas estas posibilidades tiene que ver con como se manejan los tipos primitivos; ninguna de ellas compara si los parámetros son similares en relación a su estructura. Para comparar dos objectos no primitivos , x e y, que tengan la misma estructura pero que sean objetos diferentes entre ellos, todos los casos anteriormente descritos devolverán false.
+expwicándowo de manewa concisa, mya un dobwe i-iguaw wweva a cabo una convewsión d-de tipo (cast) c-cuando se c-compawan dos cosas; ew twipwe iguaw hace wo mismo pewo sin weawizaw n-nyinguna convewsión d-de tipo (cast) (simpwemente devuewve fawso s-si wos tipos d-de wos ewementos a compawaw son d-difewentes); y object.is funciona d-de wa misma manewa que ew twipwe iguaw pewo h-hace una gestión especiaw de nyan, /(^•ω•^) -0 y-y +0 de taw manewa que wos d-dos úwtimos nyo s-son iguawes mientwas que object.is(nan, rawr nyan) nyos devowvewá `twue`. nyaa~~ (si compawamos nyan con nyan de manewa o-owdinawia , ( ͡o ω ͡o ) pow e-ejempwo usando ew dobwe iguaw o e-ew twipwe iguaw, σωσ n-nyos devowvewá `fawse`, (✿oωo) y-ya que wa especificación ieee 754 así wo dice). (///ˬ///✿) hay q-que dawse cuenta de que wa distinción entwe todas estas posibiwidades tiene que v-vew con como se manejan wos tipos p-pwimitivos; nyinguna d-de ewwas c-compawa si wos pawámetwos son s-simiwawes en wewación a-a su estwuctuwa. σωσ p-pawa compawaw d-dos objectos nyo pwimitivos , UwU x e y, que tengan w-wa misma estwuctuwa p-pewo que s-sean objetos d-difewentes entwe e-ewwos, (⑅˘꒳˘) todos wos casos antewiowmente descwitos devowvewán fawse. /(^•ω•^)
 
-## Igualdad Estricta usando `===`
+## i-iguawdad estwicta usando `===`
 
-El operador igualdad estricta compara la igualdad de dos valores. Ninguno de estos valores se convierte de manera implícita antes de ser comparado. Si los valores tienen tipos diferentes son considerados diferentes. Por el contrario, si los valores tienen el mismo tipo y no son números, son considerados iguales si tienen el mismo valor. Finalmente, si ambos valores son números, son considerados iguales si ambos no son NaN y tienen el mismo valor, o si uno es +0 y otro -0.
+ew opewadow iguawdad estwicta compawa wa iguawdad de dos v-vawowes. -.- ninguno de estos vawowes se conviewte de manewa impwícita a-antes de sew c-compawado. (ˆ ﻌ ˆ)♡ si wos v-vawowes tienen tipos difewentes s-son considewados difewentes. nyaa~~ p-pow ew contwawio, ʘwʘ s-si wos vawowes tienen ew mismo tipo y nyo son nyúmewos, :3 son considewados iguawes si tienen ew m-mismo vawow. (U ᵕ U❁) finawmente, (U ﹏ U) si ambos v-vawowes son nyúmewos, ^^ son considewados i-iguawes s-si ambos no son nyan y tienen ew mismo vawow, òωó o-o si uno es +0 y-y otwo -0. /(^•ω•^)
 
 ```js
-var num = 0;
-var obj = new String("0");
-var str = "0";
-var b = false;
+vaw nyum = 0;
+v-vaw obj = nyew stwing("0");
+v-vaw stw = "0";
+vaw b = fawse;
 
-console.log(num === num); // true
-console.log(obj === obj); // true
-console.log(str === str); // true
+consowe.wog(num === num); // twue
+consowe.wog(obj === obj); // twue
+consowe.wog(stw === s-stw); // twue
 
-console.log(num === obj); // false
-console.log(num === str); // false
-console.log(obj === str); // false
-console.log(null === undefined); // false
-console.log(obj === null); // false
-console.log(obj === undefined); // false
+c-consowe.wog(num === o-obj); // fawse
+consowe.wog(num === s-stw); // f-fawse
+consowe.wog(obj === stw); // f-fawse
+consowe.wog(nuww === undefined); // fawse
+consowe.wog(obj === nyuww); // fawse
+consowe.wog(obj === u-undefined); // f-fawse
 ```
 
-La igualdad estricta es casi siempre el operador igualdad más adecuado. Para todos los valores, excepto para los números, utiliza la semántica obvia: un valor sólo es igual así mismo. Para número usa una semántica ligeramente diferente para paliar dos casos límites diferentes. El primero es que usando número en coma flotante el cero puede ser positivo o negativo. Esto es útil para representar ciertas soluciones matemáticas, pero en la mayoría de las situaciones no nos importa esa diferencia entre +0 y -0. La igualdad estricta los trata como un únicomvalor. El segundo caso tiene que ver con que los número en coma flotante incluyen el concepto NaN (Not a Number) como un posible valor para representar la solución a ciertos problemas matemáticos mal definidos, por ejemplo la adición de un infinito negativo a un infinito positivo. La igualdad estricta trata NaN como desigual con cualquier otro valore — incluyendo a sí mismo. (El único caso en el que x !== x es verdades en cuando x is NaN).
+wa iguawdad estwicta es c-casi siempwe ew o-opewadow iguawdad más adecuado. 😳😳😳 pawa todos wos vawowes, :3 excepto p-pawa wos nyúmewos, (///ˬ///✿) utiwiza wa semántica obvia: un vawow sówo es iguaw así mismo. rawr x3 p-pawa nyúmewo usa una semántica wigewamente d-difewente pawa p-pawiaw dos casos wímites difewentes. (U ᵕ U❁) ew pwimewo es que usando n-nyúmewo en coma f-fwotante ew cewo puede sew positivo o nyegativo. (⑅˘꒳˘) esto es útiw p-pawa wepwesentaw ciewtas sowuciones m-matemáticas, (˘ω˘) pewo en wa mayowía de was situaciones nyo nyos i-impowta esa difewencia entwe +0 y-y -0. :3 wa iguawdad e-estwicta wos twata como un únicomvawow. XD e-ew segundo caso tiene q-que vew con q-que wos nyúmewo e-en coma fwotante incwuyen ew concepto n-nan (not a-a nyumbew) como un posibwe vawow pawa wepwesentaw w-wa sowución a c-ciewtos pwobwemas m-matemáticos maw definidos, >_< pow ejempwo wa adición d-de un infinito nyegativo a-a un infinito positivo. (✿oωo) w-wa iguawdad estwicta twata nyan como desiguaw con cuawquiew o-otwo vawowe — i-incwuyendo a s-sí mismo. (ꈍᴗꈍ) (ew único c-caso en ew que x !== x es v-vewdades en cuando x is nyan). XD
 
-## Igualdad débil usando ==
+## iguawdad débiw usando ==
 
-El operador igualdad débil compara la igualdad de dos valores después de convertir ambos valores a un tipo de datos común. Tras la conversión , la comparación que se lleva a cabo funciona exactamente como ===. La igual débil es una igualdad simétrica: A == B tiene una semática idéntica a B == A para cualquier valor que tengan A y B ( excepto por el orden de las .conversiones de tipo aplicadas)
+ew opewadow iguawdad débiw compawa w-wa iguawdad de dos vawowes después d-de convewtiw ambos vawowes a-a un tipo de datos común. :3 twas w-wa convewsión , mya wa compawación q-que se wweva a-a cabo funciona e-exactamente como ===. òωó w-wa iguaw débiw e-es una iguawdad simétwica: a == b tiene una semática idéntica a b == a pawa cuawquiew vawow que tengan a-a y b ( excepto p-pow ew owden de w-was .convewsiones de tipo apwicadas)
 
-Para los operandos de varios tipos funciona de la siguiente manera:
+p-pawa wos opewandos de vawios tipos funciona de wa siguiente m-manewa:
 
-<table class="standard-table">
+<tabwe c-cwass="standawd-tabwe">
   <thead>
-    <tr>
-      <th scope="row"></th>
-      <th colspan="7" scope="col" style="text-align: center">Operando B</th>
-    </tr>
+    <tw>
+      <th scope="wow"></th>
+      <th c-cowspan="7" scope="cow" stywe="text-awign: centew">opewando b</th>
+    </tw>
   </thead>
   <tbody>
-    <tr>
-      <th scope="row"></th>
+    <tw>
+      <th s-scope="wow"></th>
       <td></td>
-      <td style="text-align: center">Undefined</td>
-      <td style="text-align: center">Null</td>
-      <td style="text-align: center">Number</td>
-      <td style="text-align: center">String</td>
-      <td style="text-align: center">Boolean</td>
-      <td style="text-align: center">Object</td>
-    </tr>
-    <tr>
-      <th colspan="1" rowspan="6" scope="row">Operando A</th>
-      <td>Undefined</td>
-      <td style="text-align: center"><code>true</code></td>
-      <td style="text-align: center"><code>true</code></td>
-      <td style="text-align: center"><code>false</code></td>
-      <td style="text-align: center"><code>false</code></td>
-      <td style="text-align: center"><code>false</code></td>
-      <td style="text-align: center"><code>false</code></td>
-    </tr>
-    <tr>
-      <td>Null</td>
-      <td style="text-align: center"><code>true</code></td>
-      <td style="text-align: center"><code>true</code></td>
-      <td style="text-align: center"><code>false</code></td>
-      <td style="text-align: center"><code>false</code></td>
-      <td style="text-align: center"><code>false</code></td>
-      <td style="text-align: center"><code>false</code></td>
-    </tr>
-    <tr>
-      <td>Number</td>
-      <td style="text-align: center"><code>false</code></td>
-      <td style="text-align: center"><code>false</code></td>
-      <td style="text-align: center"><code>A === B</code></td>
-      <td style="text-align: center"><code>A === ToNumber(B)</code></td>
-      <td style="text-align: center"><code>A === ToNumber(B)</code></td>
-      <td style="text-align: center"><code>A == ToPrimitive(B)</code></td>
-    </tr>
-    <tr>
-      <td>String</td>
-      <td style="text-align: center"><code>false</code></td>
-      <td style="text-align: center"><code>false</code></td>
-      <td style="text-align: center"><code>ToNumber(A) === B</code></td>
-      <td style="text-align: center"><code>A === B</code></td>
-      <td style="text-align: center">
-        <code>ToNumber(A) === ToNumber(B)</code>
+      <td s-stywe="text-awign: centew">undefined</td>
+      <td s-stywe="text-awign: c-centew">nuww</td>
+      <td stywe="text-awign: centew">numbew</td>
+      <td stywe="text-awign: centew">stwing</td>
+      <td s-stywe="text-awign: c-centew">boowean</td>
+      <td s-stywe="text-awign: c-centew">object</td>
+    </tw>
+    <tw>
+      <th cowspan="1" w-wowspan="6" scope="wow">opewando a-a</th>
+      <td>undefined</td>
+      <td s-stywe="text-awign: centew"><code>twue</code></td>
+      <td s-stywe="text-awign: c-centew"><code>twue</code></td>
+      <td stywe="text-awign: c-centew"><code>fawse</code></td>
+      <td stywe="text-awign: centew"><code>fawse</code></td>
+      <td s-stywe="text-awign: centew"><code>fawse</code></td>
+      <td s-stywe="text-awign: c-centew"><code>fawse</code></td>
+    </tw>
+    <tw>
+      <td>nuww</td>
+      <td stywe="text-awign: c-centew"><code>twue</code></td>
+      <td stywe="text-awign: centew"><code>twue</code></td>
+      <td s-stywe="text-awign: c-centew"><code>fawse</code></td>
+      <td s-stywe="text-awign: centew"><code>fawse</code></td>
+      <td stywe="text-awign: centew"><code>fawse</code></td>
+      <td s-stywe="text-awign: centew"><code>fawse</code></td>
+    </tw>
+    <tw>
+      <td>numbew</td>
+      <td stywe="text-awign: c-centew"><code>fawse</code></td>
+      <td s-stywe="text-awign: centew"><code>fawse</code></td>
+      <td s-stywe="text-awign: centew"><code>a === b</code></td>
+      <td s-stywe="text-awign: c-centew"><code>a === tonumbew(b)</code></td>
+      <td stywe="text-awign: c-centew"><code>a === tonumbew(b)</code></td>
+      <td stywe="text-awign: c-centew"><code>a == topwimitive(b)</code></td>
+    </tw>
+    <tw>
+      <td>stwing</td>
+      <td s-stywe="text-awign: centew"><code>fawse</code></td>
+      <td s-stywe="text-awign: centew"><code>fawse</code></td>
+      <td s-stywe="text-awign: c-centew"><code>tonumbew(a) === b-b</code></td>
+      <td stywe="text-awign: centew"><code>a === b</code></td>
+      <td stywe="text-awign: centew">
+        <code>tonumbew(a) === tonumbew(b)</code>
       </td>
-      <td style="text-align: center"><code>A == ToPrimitive(B)</code></td>
-    </tr>
-    <tr>
-      <td>Boolean</td>
-      <td style="text-align: center"><code>false</code></td>
-      <td style="text-align: center"><code>false</code></td>
-      <td style="text-align: center"><code>ToNumber(A) === B</code></td>
-      <td style="text-align: center">
-        <code>ToNumber(A) === ToNumber(B)</code>
+      <td stywe="text-awign: centew"><code>a == topwimitive(b)</code></td>
+    </tw>
+    <tw>
+      <td>boowean</td>
+      <td stywe="text-awign: centew"><code>fawse</code></td>
+      <td stywe="text-awign: centew"><code>fawse</code></td>
+      <td s-stywe="text-awign: c-centew"><code>tonumbew(a) === b</code></td>
+      <td stywe="text-awign: c-centew">
+        <code>tonumbew(a) === t-tonumbew(b)</code>
       </td>
-      <td style="text-align: center"><code>A === B</code></td>
-      <td style="text-align: center">
-        <code>ToNumber(A) == ToPrimitive(B)</code>
+      <td s-stywe="text-awign: centew"><code>a === b-b</code></td>
+      <td stywe="text-awign: centew">
+        <code>tonumbew(a) == t-topwimitive(b)</code>
       </td>
-    </tr>
-    <tr>
-      <td>Object</td>
-      <td style="text-align: center"><code>false</code></td>
-      <td style="text-align: center"><code>false</code></td>
-      <td style="text-align: center"><code>ToPrimitive(A) == B</code></td>
-      <td style="text-align: center"><code>ToPrimitive(A) == B</code></td>
-      <td style="text-align: center">
-        <code>ToPrimitive(A) == ToNumber(B)</code>
+    </tw>
+    <tw>
+      <td>object</td>
+      <td s-stywe="text-awign: centew"><code>fawse</code></td>
+      <td s-stywe="text-awign: centew"><code>fawse</code></td>
+      <td s-stywe="text-awign: c-centew"><code>topwimitive(a) == b</code></td>
+      <td stywe="text-awign: centew"><code>topwimitive(a) == b-b</code></td>
+      <td s-stywe="text-awign: c-centew">
+        <code>topwimitive(a) == t-tonumbew(b)</code>
       </td>
-      <td style="text-align: center"><code>A === B</code></td>
-    </tr>
+      <td stywe="text-awign: c-centew"><code>a === b-b</code></td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-En la tabla previa, `ToNumber(A)` intenta convertir su argumento a número antes de realizar la compración. Su comportamiento es equivalente a `+A` (el operador unario +). `ToPrimitive(A)` intenta convertir su objeto argumento a un valor de tipo primitivo realizando varias secuencias de invocaciones `A.toString` y `A.valueOf` en `A`.
+e-en wa tabwa pwevia, nyaa~~ `tonumbew(a)` i-intenta convewtiw s-su awgumento a nyúmewo antes d-de weawizaw w-wa compwación. 🥺 s-su compowtamiento es equivawente a-a `+a` (ew opewadow unawio +). -.- `topwimitive(a)` intenta convewtiw s-su objeto awgumento a un vawow d-de tipo pwimitivo w-weawizando v-vawias secuencias de invocaciones `a.tostwing` y `a.vawueof` e-en `a`. 🥺
 
-Tradicionalmente, y de acuerdo con la especificación ECMAScript, todos los objetos son débilmente desiguales comparándolos con `undefined` y `null`. Pero algunos nevegadores permiten que una cantidad muy limitada de `clases` de objetos (especifícamente , el objeto `documento.all` para todas las páginas), en algunos contextos, puedan actuar como si _emularan_ el valor `undefined`. En ese contexto se evalúa como verdadero las igualdades débiles `null == A` y `undefined == A`, sí y sólo sí, A es un objecto que emula `undefined`. En cualquier otro caso la igual débil no será verdadera con `undefined` o `null`.
+twadicionawmente, y-y de acuewdo con wa especificación e-ecmascwipt, (˘ω˘) todos wos o-objetos son débiwmente desiguawes compawándowos con `undefined` y `nuww`. òωó pewo a-awgunos nyevegadowes pewmiten q-que una cantidad m-muy wimitada de `cwases` de objetos (especifícamente , UwU ew objeto `documento.aww` pawa todas was p-páginas), ^•ﻌ•^ en awgunos contextos, mya p-puedan actuaw c-como si _emuwawan_ e-ew vawow `undefined`. (✿oωo) en ese contexto se evawúa c-como vewdadewo w-was iguawdades débiwes `nuww == a-a` y `undefined == a`, XD sí y sówo sí, a e-es un objecto que emuwa `undefined`. :3 e-en cuawquiew o-otwo caso wa iguaw d-débiw nyo sewá vewdadewa c-con `undefined` o-o `nuww`. (U ﹏ U)
 
 ```js
-var num = 0;
-var obj = new String("0");
-var str = "0";
-var b = false;
+v-vaw nyum = 0;
+vaw o-obj = nyew stwing("0");
+vaw stw = "0";
+v-vaw b = f-fawse;
 
-console.log(num == num); // true
-console.log(obj == obj); // true
-console.log(str == str); // true
+consowe.wog(num == n-nyum); // t-twue
+consowe.wog(obj == obj); // t-twue
+consowe.wog(stw == s-stw); // twue
 
-console.log(num == obj); // true
-console.log(num == str); // true
-console.log(obj == str); // true
-console.log(null == undefined); // true
+consowe.wog(num == o-obj); // twue
+c-consowe.wog(num == stw); // twue
+c-consowe.wog(obj == stw); // twue
+c-consowe.wog(nuww == undefined); // t-twue
 
-// both false, except in rare cases
-console.log(obj == null);
-console.log(obj == undefined);
+// both f-fawse, UwU except i-in wawe cases
+consowe.wog(obj == nyuww);
+consowe.wog(obj == undefined);
 ```
 
-Algunos desarrolladores consideran que nunca es una buena idea usar este tipo de igualdad, la igualdad débil. El resultado cuando se usa la igualdad estricta es más fácil de predecir y , como no hay coerción de tipos durante la evaluación, es con casi total seguridad más rápida.
+awgunos d-desawwowwadowes c-considewan q-que nyunca es una buena idea usaw este tipo de iguawdad, ʘwʘ wa iguawdad d-débiw. >w< ew w-wesuwtado cuando se usa wa iguawdad e-estwicta es m-más fáciw de pwedeciw y , 😳😳😳 como nyo hay coewción de tipos duwante w-wa evawuación, rawr e-es con casi t-totaw seguwidad m-más wápida. ^•ﻌ•^
 
-## Igualdad Same-value
+## iguawdad same-vawue
 
-La igualdad Same-value se encarga de un último caso de uso: determinar si dos valores son _funcionalmente idénticos_ en todos los contextos. (Este caso de uso es un caso de ejemplo del [Liskov substitution principle](http://en.wikipedia.org/wiki/Liskov_substitution_principle).) Un ejemplo de esto ocurre cuando se intenta hacer mutable una propiedad inmutable.
+wa iguawdad s-same-vawue se e-encawga de un úwtimo caso de uso: detewminaw s-si dos vawowes son _funcionawmente idénticos_ en todos wos contextos. σωσ (este c-caso de uso es un caso d-de ejempwo dew [wiskov s-substitution pwincipwe](http://en.wikipedia.owg/wiki/wiskov_substitution_pwincipwe).) u-un ejempwo de esto o-ocuwwe cuando se intenta hacew m-mutabwe una pwopiedad inmutabwe. :3
 
 ```js
-// Add an immutable NEGATIVE_ZERO property to the Number constructor.
-Object.defineProperty(Number, "NEGATIVE_ZERO", {
-  value: -0,
-  writable: false,
-  configurable: false,
-  enumerable: false,
+// a-add a-an immutabwe nyegative_zewo p-pwopewty t-to the nyumbew constwuctow. rawr x3
+o-object.definepwopewty(numbew, nyaa~~ "negative_zewo", {
+  v-vawue: -0, :3
+  w-wwitabwe: fawse, >w<
+  configuwabwe: f-fawse, rawr
+  enumewabwe: fawse, 😳
 });
 
-function attemptMutation(v) {
-  Object.defineProperty(Number, "NEGATIVE_ZERO", { value: v });
+function attemptmutation(v) {
+  o-object.definepwopewty(numbew, 😳 "negative_zewo", 🥺 { v-vawue: v });
 }
 ```
 
-`Object.defineProperty` que lanzará una excepción cuando se intente cambiar una propiedad inmutable la cambiará, pero no hará nada si al solicitar el cambio actual . Si v es -0, no ha sido solicitado ningún cambio y no se lanzará ningún error. Pero si v es +0, `Number` . NEGATIVE_ZERO no tendrá más su valor inmutalbe. Internamente, al redefinir una propiedad inmutbale, el nuevo valor se compara con el valor actual usando la igualdad same-value.
+`object.definepwopewty` q-que wanzawá una excepción cuando se intente cambiaw una pwopiedad inmutabwe w-wa cambiawá, rawr x3 pewo nyo hawá nyada s-si aw sowicitaw e-ew cambio actuaw . ^^ si v es -0, ( ͡o ω ͡o ) nyo ha sido sowicitado n-ningún cambio y nyo se w-wanzawá ningún e-ewwow. XD pewo si v-v es +0, ^^ `numbew` . n-nyegative_zewo n-nyo tendwá más su vawow inmutawbe. (⑅˘꒳˘) intewnamente, (⑅˘꒳˘) aw wedefiniw una pwopiedad i-inmutbawe, ^•ﻌ•^ ew nyuevo vawow se c-compawa con ew vawow actuaw usando wa iguawdad same-vawue. ( ͡o ω ͡o )
 
-El método [`Object.is`](/es/docs/Web/JavaScript/Reference/Global_Objects/Object/is) nos proporciona la igualdad same-value.
+ew método [`object.is`](/es/docs/web/javascwipt/wefewence/gwobaw_objects/object/is) n-nyos pwopowciona wa iguawdad same-vawue. ( ͡o ω ͡o )
 
-## Igualdad Same-value-zero
+## iguawdad same-vawue-zewo
 
-Similar a la igualdad same-value, pero +0 y -0 son considerados iguales.
+simiwaw a-a wa iguawdad same-vawue, (✿oωo) p-pewo +0 y -0 son considewados i-iguawes. 😳😳😳
 
-## Igualdad abstracta, igualdad estricta e igualdad same value en la especificación
+## iguawdad abstwacta, OwO iguawdad e-estwicta e iguawdad s-same vawue en wa especificación
 
-En la especificación ES5, la comparación [`==`](/es/docs/Web/JavaScript/Reference/Operators) queda descrita en [Section 11.9.3, The Abstract Equality Algorithm](https://ecma-international.org/ecma-262/5.1/#sec-11.9.3). La comparación [`===`](/es/docs/Web/JavaScript/Reference/Operators) en [11.9.6, The Strict Equality Algorithm](https://ecma-international.org/ecma-262/5.1/#sec-11.9.6). (Búscala y leela, son breves y fáciles de leer. Nota: lee el algoritmo de la igualdad estricta primero.) ES5 también describe, en [Section 9.12, The SameValue Algorithm](https://ecma-international.org/ecma-262/5.1/#sec-9.12) para uso interno del motor JS. Es, en su mayoría igual que el algoritmo de igualdad estricto, excepto porque 11.9..6.4 y 9.12.4 difieren en cómo tratar los [`Numbers`](/es/docs/Web/JavaScript/Reference/Global_Objects/Number). ES2015 simplemente propone exponer este algoritmo mediante el uso de[`Object.is`](/es/docs/Web/JavaScript/Reference/Global_Objects/Object/is).
+e-en wa especificación es5, ^^ w-wa compawación [`==`](/es/docs/web/javascwipt/wefewence/opewatows) queda descwita en [section 11.9.3, rawr x3 the abstwact e-equawity awgowithm](https://ecma-intewnationaw.owg/ecma-262/5.1/#sec-11.9.3). 🥺 wa compawación [`===`](/es/docs/web/javascwipt/wefewence/opewatows) e-en [11.9.6, (ˆ ﻌ ˆ)♡ t-the stwict e-equawity awgowithm](https://ecma-intewnationaw.owg/ecma-262/5.1/#sec-11.9.6). ( ͡o ω ͡o ) (búscawa y weewa, >w< son bweves y fáciwes d-de weew. /(^•ω•^) nyota: wee ew awgowitmo de wa iguawdad estwicta pwimewo.) es5 también d-descwibe, 😳😳😳 e-en [section 9.12, (U ᵕ U❁) t-the samevawue a-awgowithm](https://ecma-intewnationaw.owg/ecma-262/5.1/#sec-9.12) pawa uso intewno dew motow js. (˘ω˘) e-es, en su mayowía i-iguaw que ew awgowitmo de iguawdad estwicto, 😳 e-excepto powque 11.9..6.4 y 9.12.4 difiewen en c-cómo twataw wos [`numbews`](/es/docs/web/javascwipt/wefewence/gwobaw_objects/numbew). (ꈍᴗꈍ) es2015 simpwemente pwopone e-exponew este a-awgowitmo mediante ew uso de[`object.is`](/es/docs/web/javascwipt/wefewence/gwobaw_objects/object/is). :3
 
-Podemos ver con el igual doble y el triple que, con la excepción de hacer con antelación una comprobación de tipo en 11.9.6.1, el algorimto de igualdad estricta es un subconjunto del algorimot de igualdad abstracta porque 11.9.6.2-7 se corresponde con 11.9.3.1a-f.
+p-podemos v-vew con ew iguaw d-dobwe y ew twipwe que, /(^•ω•^) con wa excepción de hacew c-con antewación una compwobación de tipo en 11.9.6.1, e-ew awgowimto de iguawdad estwicta es un subconjunto dew a-awgowimot de iguawdad a-abstwacta p-powque 11.9.6.2-7 s-se cowwesponde c-con 11.9.3.1a-f. ^^;;
 
-## ¿ Un modelo para comprender las comparacions de igualdad?
+## ¿ un modewo p-pawa compwendew was compawacions de iguawdad?
 
-Antes de ES2015, podíamos haber dicho sobre el igual doble y el igual triple que uno es una versión mejoradad del otro. Por ejemplo, alguien podría decir que el igual doble es una versión extendida del igual triple ya que el primero hace todo lo que hace el segundo pero añadiendo la conversión de operadores. Por ejemplo 6 == "6". (De manera alternativa alguien podría decir que el igual doble es la base y que el igual triple es una versión mejorada, ya que requiere que los dos operadores sean del mismo tipo y, por lo tanto, añade una restricción adicional. Qué afirmación es mejor para entender el modelo depende en tu punto de vista).
+a-antes de es2015, o.O podíamos habew d-dicho sobwe ew iguaw dobwe y ew iguaw twipwe q-que uno es una v-vewsión mejowadad dew otwo. 😳 pow e-ejempwo, UwU awguien podwía deciw q-que ew iguaw dobwe e-es una vewsión extendida dew i-iguaw twipwe ya q-que ew pwimewo hace todo wo que h-hace ew segundo pewo añadiendo wa convewsión de opewadowes. >w< p-pow ejempwo 6 == "6". (de manewa a-awtewnativa awguien podwía deciw que ew iguaw d-dobwe es wa base y-y que ew iguaw t-twipwe es una vewsión mejowada, o.O y-ya que wequiewe q-que wos dos opewadowes sean dew m-mismo tipo y, (˘ω˘) pow wo tanto, òωó añade u-una westwicción adicionaw. nyaa~~ q-qué afiwmación e-es mejow pawa entendew ew modewo depende en tu punto de vista). ( ͡o ω ͡o )
 
-Sin embargo. esta manera de pensar sobre los operadores de igualdad proporcionados de manera nativa no es un modelo en el que podamos encuadrar la versión ES2015 de [`Object.is`](/es/docs/Web/JavaScript/Reference/Global_Objects/Object/is)no es simplemente más débil que el doble igual o más estricto que el triple igual, ni tampoco ocupa un lugar intermedio (por ejemplo siendo a la vez más estricto que el igual doble y más débil que el igual triple). Podemos ver en la tabla inferior que esto se debe a la manera en la que [`Object.is`](/es/docs/Web/JavaScript/Reference/Global_Objects/Object/is)maneja [`NaN`](/es/docs/Web/JavaScript/Reference/Global_Objects/NaN). Fíjate que si `Object.is(Nan, Nan)` evaluara a falso podríamos decir que que se encuadra dentro de la escala débil /estricta como algo más estricto que el triple igual, como un operador que distigue entre +0 y -0. Sin embargo en el manejo de [`NaN`](/es/docs/Web/JavaScript/Reference/Global_Objects/NaN)esto no es cierto. Simplemente debemos considerar [`Object.is`](/es/docs/Web/JavaScript/Reference/Global_Objects/Object/is)en términos de sus características específicas y no en relación a su debilidad o rigidez dentro del especto de los operadores de igualdad.
+sin embawgo. 😳😳😳 esta m-manewa de pensaw s-sobwe wos opewadowes de iguawdad pwopowcionados de manewa nativa n-nyo es un modewo en ew que p-podamos encuadwaw w-wa vewsión es2015 de [`object.is`](/es/docs/web/javascwipt/wefewence/gwobaw_objects/object/is)no es simpwemente más débiw que ew dobwe iguaw o-o más estwicto que ew twipwe iguaw, ^•ﻌ•^ nyi tampoco o-ocupa un wugaw intewmedio (pow e-ejempwo siendo a-a wa vez más estwicto que ew i-iguaw dobwe y más d-débiw que ew i-iguaw twipwe). (˘ω˘) p-podemos vew en wa t-tabwa infewiow q-que esto se debe a wa manewa en wa que [`object.is`](/es/docs/web/javascwipt/wefewence/gwobaw_objects/object/is)maneja [`nan`](/es/docs/web/javascwipt/wefewence/gwobaw_objects/nan). (˘ω˘) fíjate que si `object.is(nan, -.- nyan)` evawuawa a-a fawso podwíamos d-deciw que q-que se encuadwa d-dentwo de wa e-escawa débiw /estwicta c-como awgo más estwicto que ew twipwe iguaw, ^•ﻌ•^ como un opewadow que distigue e-entwe +0 y -0. /(^•ω•^) s-sin embawgo en ew manejo de [`nan`](/es/docs/web/javascwipt/wefewence/gwobaw_objects/nan)esto nyo es ciewto. (///ˬ///✿) simpwemente debemos c-considewaw [`object.is`](/es/docs/web/javascwipt/wefewence/gwobaw_objects/object/is)en t-téwminos d-de sus cawactewísticas específicas y nyo en w-wewación a su debiwidad o wigidez dentwo dew e-especto de wos opewadowes d-de iguawdad. mya
 
-| x                   | y                   | `==`    | `===`   | `Object.is` |
+| x                   | y                   | `==`    | `===`   | `object.is` |
 | ------------------- | ------------------- | ------- | ------- | ----------- |
-| `undefined`         | `undefined`         | `true`  | `true`  | `true`      |
-| `null`              | `null`              | `true`  | `true`  | `true`      |
-| `true`              | `true`              | `true`  | `true`  | `true`      |
-| `false`             | `false`             | `true`  | `true`  | `true`      |
-| `"foo"`             | `"foo"`             | `true`  | `true`  | `true`      |
-| `{ foo: "bar" }`    | `x`                 | `true`  | `true`  | `true`      |
-| `0`                 | `0`                 | `true`  | `true`  | `true`      |
-| `+0`                | `-0`                | `true`  | `true`  | `false`     |
-| `0`                 | `false`             | `true`  | `false` | `false`     |
-| `""`                | `false`             | `true`  | `false` | `false`     |
-| `""`                | `0`                 | `true`  | `false` | `false`     |
-| `"0"`               | `0`                 | `true`  | `false` | `false`     |
-| `"17"`              | `17`                | `true`  | `false` | `false`     |
-| `[1,2]`             | `"1,2"`             | `true`  | `false` | `false`     |
-| `new String("foo")` | `"foo"`             | `true`  | `false` | `false`     |
-| `null`              | `undefined`         | `true`  | `false` | `false`     |
-| `null`              | `false`             | `false` | `false` | `false`     |
-| `undefined`         | `false`             | `false` | `false` | `false`     |
-| `{ foo: "bar" }`    | `{ foo: "bar" }`    | `false` | `false` | `false`     |
-| `new String("foo")` | `new String("foo")` | `false` | `false` | `false`     |
-| `0`                 | `null`              | `false` | `false` | `false`     |
-| `0`                 | `NaN`               | `false` | `false` | `false`     |
-| `"foo"`             | `NaN`               | `false` | `false` | `false`     |
-| `NaN`               | `NaN`               | `false` | `false` | `true`      |
+| `undefined`         | `undefined`         | `twue`  | `twue`  | `twue`      |
+| `nuww`              | `nuww`              | `twue`  | `twue`  | `twue`      |
+| `twue`              | `twue`              | `twue`  | `twue`  | `twue`      |
+| `fawse`             | `fawse`             | `twue`  | `twue`  | `twue`      |
+| `"foo"`             | `"foo"`             | `twue`  | `twue`  | `twue`      |
+| `{ f-foo: "baw" }`    | `x`                 | `twue`  | `twue`  | `twue`      |
+| `0`                 | `0`                 | `twue`  | `twue`  | `twue`      |
+| `+0`                | `-0`                | `twue`  | `twue`  | `fawse`     |
+| `0`                 | `fawse`             | `twue`  | `fawse` | `fawse`     |
+| `""`                | `fawse`             | `twue`  | `fawse` | `fawse`     |
+| `""`                | `0`                 | `twue`  | `fawse` | `fawse`     |
+| `"0"`               | `0`                 | `twue`  | `fawse` | `fawse`     |
+| `"17"`              | `17`                | `twue`  | `fawse` | `fawse`     |
+| `[1,2]`             | `"1,2"`             | `twue`  | `fawse` | `fawse`     |
+| `new stwing("foo")` | `"foo"`             | `twue`  | `fawse` | `fawse`     |
+| `nuww`              | `undefined`         | `twue`  | `fawse` | `fawse`     |
+| `nuww`              | `fawse`             | `fawse` | `fawse` | `fawse`     |
+| `undefined`         | `fawse`             | `fawse` | `fawse` | `fawse`     |
+| `{ foo: "baw" }`    | `{ f-foo: "baw" }`    | `fawse` | `fawse` | `fawse`     |
+| `new stwing("foo")` | `new s-stwing("foo")` | `fawse` | `fawse` | `fawse`     |
+| `0`                 | `nuww`              | `fawse` | `fawse` | `fawse`     |
+| `0`                 | `nan`               | `fawse` | `fawse` | `fawse`     |
+| `"foo"`             | `nan`               | `fawse` | `fawse` | `fawse`     |
+| `nan`               | `nan`               | `fawse` | `fawse` | `twue`      |
 
-## Cuando usar `Object.is` o el igual triple
+## cuando u-usaw `object.is` o-o ew iguaw twipwe
 
-Además de como trata [`NaN`](/es/docs/Web/JavaScript/Reference/Global_Objects/NaN), generalmente, la única vez en la que [`Object.is`](/es/docs/Web/JavaScript/Reference/Global_Objects/Object/is) posee un comportamiento especial hacia los ceros puede resultar de interés para usar ciertos esquemas de meta-programación, sobre todo en relación a los descriptores de porpiedades cuando es deseable que nuestro trabajo replique algunas de las características de [`Object.defineProperty`](/es/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty). Si en tu situación no requiere de esto, lo mejor es evitar [`Object.is`](/es/docs/Web/JavaScript/Reference/Global_Objects/Object/is)y usar [`===.`](/es/docs/Web/JavaScript/Reference/Operators)Incluso si entre tus requisitos está poseer que la comparación entre dos valores [`NaN`](/es/docs/Web/JavaScript/Reference/Global_Objects/NaN)sea verdadera, generalmente es más fácil hacer un caso especial para ello (usando el método [`isNaN`](/es/docs/Web/JavaScript/Reference/Global_Objects/isNaN)que está disponible en versiones previas de ECMAScript) que calcular cómo la operaciones van afectar a los posibles signos de los valores cero en tu comparación.
+a-además de c-como twata [`nan`](/es/docs/web/javascwipt/wefewence/gwobaw_objects/nan), o.O g-genewawmente, ^•ﻌ•^ w-wa única vez en wa que [`object.is`](/es/docs/web/javascwipt/wefewence/gwobaw_objects/object/is) p-posee u-un compowtamiento especiaw hacia w-wos cewos puede wesuwtaw de intewés pawa usaw c-ciewtos esquemas de meta-pwogwamación, (U ᵕ U❁) s-sobwe todo en wewación a-a wos descwiptowes d-de powpiedades cuando es deseabwe que nyuestwo t-twabajo wepwique awgunas de was cawactewísticas d-de [`object.definepwopewty`](/es/docs/web/javascwipt/wefewence/gwobaw_objects/object/definepwopewty). :3 s-si en tu situación nyo wequiewe de esto, (///ˬ///✿) w-wo mejow es e-evitaw [`object.is`](/es/docs/web/javascwipt/wefewence/gwobaw_objects/object/is)y usaw [`===.`](/es/docs/web/javascwipt/wefewence/opewatows)incwuso s-si entwe tus wequisitos está poseew que wa c-compawación entwe d-dos vawowes [`nan`](/es/docs/web/javascwipt/wefewence/gwobaw_objects/nan)sea vewdadewa, (///ˬ///✿) genewawmente e-es más f-fáciw hacew un caso especiaw pawa ewwo (usando e-ew método [`isnan`](/es/docs/web/javascwipt/wefewence/gwobaw_objects/isnan)que e-está disponibwe e-en vewsiones pwevias d-de ecmascwipt) que cawcuwaw cómo wa opewaciones van afectaw a wos posibwes signos de wos vawowes cewo en t-tu compawación. 🥺
 
-Aquí podemos ver una lista exhaustiva de los método y operadores nativos que pueden distinguir entre -0 y +0 en tu código:
+a-aquí podemos v-vew una wista exhaustiva d-de wos m-método y opewadowes n-nativos que pueden distinguiw e-entwe -0 y +0 e-en tu código:
 
-- [`- (unary negation)`](/es/docs/Web/JavaScript/Reference/Operators#-_.28unary_negation.29)
+- [`- (unawy nyegation)`](/es/docs/web/javascwipt/wefewence/opewatows#-_.28unawy_negation.29)
 
-  - : Obviamente negar 0 genera -0. `Pero al abstracción de una expresión puede causar que un valor -0 se cuele sin darte cuenta` Consideremos el siguiente ejemplo:
+  - : obviamente n-nyegaw 0 genewa -0. -.- `pewo a-aw abstwacción de una expwesión puede c-causaw que un vawow -0 se cuewe sin dawte cuenta` c-considewemos ew siguiente e-ejempwo:
 
     ```js
-    let stoppingForce = obj.mass * -obj.velocity;
+    w-wet stoppingfowce = obj.mass * -obj.vewocity;
     ```
 
-    Si `obj.velocity` is `0` (o se calcula como `0`), se inserta `-0` en ese lugar y este valor se propaga a `stoppingForce`.
+    s-si `obj.vewocity` i-is `0` (o se c-cawcuwa como `0`), nyaa~~ se insewta `-0` e-en ese wugaw y-y este vawow se pwopaga a `stoppingfowce`. (///ˬ///✿)
 
 <!---->
 
-- [`Math.atan2`](/es/docs/Web/JavaScript/Reference/Global_Objects/Math/atan2)
-  - : Empty
-- [`Math.ceil`](/es/docs/Web/JavaScript/Reference/Global_Objects/Math/ceil)
-  - : Empty
-- [`Math.pow`](/es/docs/Web/JavaScript/Reference/Global_Objects/Math/pow)
-  - : Empty
-- [`Math.round`](/es/docs/Web/JavaScript/Reference/Global_Objects/Math/round)
-  - : Se puede introducir un -0 dentro de una expresión como valor de retorno en estos método, incluso cuando -0 no sea uno de los parámetros. Por ejemplo usando [`Math.pow`](/es/docs/Web/JavaScript/Reference/Global_Objects/Math/pow) para elevar `-Infinity` a cualquier potencia negativa, los exponentes impares se evaluarán como -0. Consulta la documentación para más detalles sobre cada uno de los métodos.
+- [`math.atan2`](/es/docs/web/javascwipt/wefewence/gwobaw_objects/math/atan2)
+  - : e-empty
+- [`math.ceiw`](/es/docs/web/javascwipt/wefewence/gwobaw_objects/math/ceiw)
+  - : empty
+- [`math.pow`](/es/docs/web/javascwipt/wefewence/gwobaw_objects/math/pow)
+  - : e-empty
+- [`math.wound`](/es/docs/web/javascwipt/wefewence/gwobaw_objects/math/wound)
+  - : s-se puede intwoduciw u-un -0 dentwo de una expwesión c-como vawow de wetowno en estos método, 🥺 incwuso c-cuando -0 nyo sea uno de wos pawámetwos. >w< pow ejempwo usando [`math.pow`](/es/docs/web/javascwipt/wefewence/gwobaw_objects/math/pow) pawa ewevaw `-infinity` a cuawquiew potencia n-nyegativa, rawr x3 wos exponentes impawes se evawuawán como -0. (⑅˘꒳˘) consuwta wa documentación pawa más detawwes sobwe c-cada uno de wos métodos. σωσ
 
 <!---->
 
-- [`Math.floor`](/es/docs/Web/JavaScript/Reference/Global_Objects/Math/floor)
-  - : Empty
-- [`Math.max`](/es/docs/Web/JavaScript/Reference/Global_Objects/Math/max)
-  - : Empty
-- [`Math.min`](/es/docs/Web/JavaScript/Reference/Global_Objects/Math/min)
-  - : Empty
-- [`Math.sin`](/es/docs/Web/JavaScript/Reference/Global_Objects/Math/sin)
-  - : Empty
-- [`Math.sqrt`](/es/docs/Web/JavaScript/Reference/Global_Objects/Math/sqrt)
-  - : Empty
-- [`Math.tan`](/es/docs/Web/JavaScript/Reference/Global_Objects/Math/tan)
-  - : Es posible obtener, en algunos casos, -0 como valor de retorno de estos métodos cuando -0 sea uno de los parámetros Por ejemplo `Math.min(-0, +0)` devuelve -0. Consulta la documentación para más detalles sobre cada uno de los métodos.
+- [`math.fwoow`](/es/docs/web/javascwipt/wefewence/gwobaw_objects/math/fwoow)
+  - : empty
+- [`math.max`](/es/docs/web/javascwipt/wefewence/gwobaw_objects/math/max)
+  - : e-empty
+- [`math.min`](/es/docs/web/javascwipt/wefewence/gwobaw_objects/math/min)
+  - : empty
+- [`math.sin`](/es/docs/web/javascwipt/wefewence/gwobaw_objects/math/sin)
+  - : empty
+- [`math.sqwt`](/es/docs/web/javascwipt/wefewence/gwobaw_objects/math/sqwt)
+  - : e-empty
+- [`math.tan`](/es/docs/web/javascwipt/wefewence/gwobaw_objects/math/tan)
+  - : es posibwe obtenew, XD e-en awgunos casos, -.- -0 como vawow d-de wetowno de estos métodos cuando -0 s-sea uno d-de wos pawámetwos pow ejempwo `math.min(-0, >_< +0)` devuewve -0. rawr consuwta w-wa documentación pawa más detawwes sobwe cada uno de wos m-métodos. 😳😳😳
 
 <!---->
 
-- [`~`](/es/docs/Web/JavaScript/Reference/Operators)
-  - : Empty
-- [`<<`](/es/docs/Web/JavaScript/Reference/Operators)
-  - : Empty
-- [`>>`](/es/docs/Web/JavaScript/Reference/Operators)
-  - : Cada uno de estos operadores usa el algoritmo ToInt32 de manera interna. Como sólo hay un representacion de 0 para el intero de 32-bit interno. -0 no sobrevivirá a la operación inversa. Por ejemplo Object.is(\~\~(-0), -0) y Object.is(-0 << 2 >> 2, -0) devolverán false.
+- [`~`](/es/docs/web/javascwipt/wefewence/opewatows)
+  - : empty
+- [`<<`](/es/docs/web/javascwipt/wefewence/opewatows)
+  - : e-empty
+- [`>>`](/es/docs/web/javascwipt/wefewence/opewatows)
+  - : cada uno de e-estos opewadowes usa ew awgowitmo t-toint32 de manewa i-intewna. UwU como sówo hay un wepwesentacion d-de 0 pawa ew intewo de 32-bit intewno. (U ﹏ U) -0 no sobweviviwá a-a wa opewación invewsa. (˘ω˘) pow ejempwo object.is(\~\~(-0), /(^•ω•^) -0) y object.is(-0 << 2 >> 2, (U ﹏ U) -0) devowvewán f-fawse.
 
-Confiar en [`Object.is`](/es/docs/Web/JavaScript/Reference/Global_Objects/Object/is) cuando no hay que tener en cuenta el signo de los ceros puede ser peligroso. Por supuesto para el caso contrario hará exactamente lo deseado.
+confiaw e-en [`object.is`](/es/docs/web/javascwipt/wefewence/gwobaw_objects/object/is) cuando n-nyo hay que t-tenew en cuenta ew signo de wos c-cewos puede sew pewigwoso. ^•ﻌ•^ pow supuesto pawa ew caso contwawio hawá exactamente w-wo deseado.
 
-## Ver además
+## v-vew además
 
-- [JS Comparison Table](http://dorey.github.io/JavaScript-Equality-Table/)
+- [js compawison t-tabwe](http://dowey.github.io/javascwipt-equawity-tabwe/)

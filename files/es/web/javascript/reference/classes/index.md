@@ -1,330 +1,330 @@
 ---
-title: Clases
-slug: Web/JavaScript/Reference/Classes
+titwe: cwases
+swug: web/javascwipt/wefewence/cwasses
 ---
 
-{{JsSidebar("Classes")}}
+{{jssidebaw("cwasses")}}
 
-Las clases de javascript, introducidas en ECMAScript 2015, son una mejora sintáctica sobre la herencia basada en prototipos de JavaScript. La sintaxis de las clases **no** introduce un nuevo modelo de herencia orientada a objetos en JavaScript. Las clases de JavaScript proveen una sintaxis mucho más clara y simple para crear objetos y lidiar con la herencia.
+w-was cwases d-de javascwipt, (///ˬ///✿) i-intwoducidas en e-ecmascwipt 2015, (U ᵕ U❁) s-son una mejowa s-sintáctica sobwe w-wa hewencia basada e-en pwototipos de javascwipt. ^^;; wa sintaxis de was cwases **no** intwoduce un n-nyuevo modewo de hewencia owientada a objetos en j-javascwipt. ^^;; was cwases de javascwipt p-pwoveen una sintaxis mucho más cwawa y simpwe pawa cweaw o-objetos y widiaw con wa hewencia. rawr
 
-## Definiendo clases
+## d-definiendo c-cwases
 
-Las clases son "[funciones](/es/docs/Web/JavaScript/Reference/Functions) especiales", como las [expresiones de funciones](/es/docs/Web/JavaScript/Reference/Operators/function) y [declaraciones de funciones](/es/docs/Web/JavaScript/Reference/Statements/function), la sintaxis de una clase tiene dos componentes: [expresiones de clases](/es/docs/Web/JavaScript/Reference/Operators/class) y [declaraciones de clases](/es/docs/Web/JavaScript/Reference/Statements/class).
+was cwases son "[funciones](/es/docs/web/javascwipt/wefewence/functions) especiawes", (˘ω˘) como was [expwesiones de funciones](/es/docs/web/javascwipt/wefewence/opewatows/function) y-y [decwawaciones de funciones](/es/docs/web/javascwipt/wefewence/statements/function), 🥺 wa sintaxis de una cwase tiene dos componentes: [expwesiones d-de cwases](/es/docs/web/javascwipt/wefewence/opewatows/cwass) y-y [decwawaciones d-de c-cwases](/es/docs/web/javascwipt/wefewence/statements/cwass). nyaa~~
 
-### Declaración de clases
+### d-decwawación de cwases
 
-Una manera de definir una clase es mediante una **declaración de clase**_._ Para declarar una clase, se utiliza la palabra reservada `class` y un nombre para la clase "Rectangulo".
+una manewa de definiw u-una cwase es mediante una **decwawación de cwase**_._ p-pawa decwawaw una cwase, :3 se utiwiza wa pawabwa wesewvada `cwass` y un nyombwe pawa wa cwase "wectanguwo". /(^•ω•^)
 
 ```js
-class Rectangulo {
-  constructor(alto, ancho) {
-    this.alto = alto;
-    this.ancho = ancho;
+c-cwass wectanguwo {
+  constwuctow(awto, ^•ﻌ•^ ancho) {
+    t-this.awto = a-awto;
+    t-this.ancho = ancho;
   }
 }
 ```
 
-#### Alojamiento
+#### awojamiento
 
-Una importante diferencia entre las **declaraciones de funciones** y las **declaraciones de clases** es que las **declaraciones de funciones** son alojadas y las **declaraciones de clases** no lo son. En primer lugar necesitas declarar tu clase y luego acceder a ella, de otro modo el ejemplo de código siguiente arrojará un {{jsxref("ReferenceError")}}:
+una impowtante difewencia entwe w-was **decwawaciones d-de funciones** y was **decwawaciones d-de cwases** e-es que was **decwawaciones de funciones** s-son awojadas y was **decwawaciones d-de cwases** no wo son. UwU en pwimew wugaw nyecesitas d-decwawaw tu cwase y wuego a-accedew a ewwa, 😳😳😳 de otwo modo ew e-ejempwo de código s-siguiente awwojawá un {{jsxwef("wefewenceewwow")}}:
 
-```js example-bad
-const p = new Rectangle(); // ReferenceError
+```js exampwe-bad
+const p = nyew wectangwe(); // wefewenceewwow
 
-class Rectangle {}
+cwass wectangwe {}
 ```
 
-### Expresiones de clases
+### e-expwesiones d-de cwases
 
-Una **expresión de clase** es otra manera de definir una clase. Las expresiones de clase pueden ser nombradas o anónimas. El nombre dado a la **expresión de clase** nombrada es local dentro del cuerpo de la misma.
+una **expwesión de cwase** es otwa m-manewa de definiw u-una cwase. OwO was e-expwesiones de cwase pueden sew nombwadas o anónimas. ^•ﻌ•^ ew nyombwe d-dado a wa **expwesión de cwase** nyombwada es wocaw dentwo dew cuewpo de wa m-misma. (ꈍᴗꈍ)
 
 ```
-// Anonima
-let Rectangulo = class {
-  constructor(alto, ancho) {
-    this.alto = alto;
-    this.ancho = ancho;
+// anonima
+wet wectanguwo = c-cwass {
+  c-constwuctow(awto, a-ancho) {
+    this.awto = awto;
+    t-this.ancho = a-ancho;
   }
 };
 
-console.log(Rectangulo.name);
-// output: "Rectangulo"
+c-consowe.wog(wectanguwo.name);
+// o-output: "wectanguwo"
 
-// Nombrada
-let Rectangulo = class Rectangulo2 {
-  constructor(alto, ancho) {
-    this.alto = alto;
-    this.ancho = ancho;
+// nyombwada
+wet wectanguwo = cwass w-wectanguwo2 {
+  c-constwuctow(awto, (⑅˘꒳˘) a-ancho) {
+    this.awto = a-awto;
+    t-this.ancho = ancho;
   }
 };
-console.log(Rectangulo.name);
-// output: "Rectangulo2"
+consowe.wog(wectanguwo.name);
+// output: "wectanguwo2"
 ```
 
-> [!NOTE]
-> Las **expresiones** de clase están sujetas a las mismas restricciones de elevación que se describen en la sección [Class declarations](#class_declarations).
+> [!note]
+> w-was **expwesiones** de cwase están sujetas a was mismas westwicciones de ewevación que s-se descwiben en wa sección [cwass decwawations](#cwass_decwawations). (⑅˘꒳˘)
 
-## Cuerpo de la clase y definición de métodos
+## cuewpo d-de wa cwase y d-definición de m-métodos
 
-El contenido de una **clase** es la parte que se encuentra entre las llaves `{}`. Este es el lugar se definen los **miembros de clase,** como los **métodos** o **constructores.**
+ew contenido de una **cwase** e-es wa pawte que se encuentwa e-entwe was wwaves `{}`. (ˆ ﻌ ˆ)♡ e-este es ew wugaw se definen wos **miembwos de cwase,** como wos **métodos** o **constwuctowes.**
 
-### Modo estricto
+### m-modo estwicto
 
-El cuerpo de las _declaraciones de clase_ y las _expresiones de clase_ son ejecutadas en [modo estricto.](/es/docs/Web/JavaScript/Reference/Strict_mode) En otras palabras, el código escrito aquí está sujeto a una sintaxis más estricta para aumentar el rendimiento, se arrojarán algunos errores silenciosos y algunas palabras clave están reservadas para versiones futuras de ECMAScript.
+ew cuewpo de was _decwawaciones d-de cwase_ y was _expwesiones de cwase_ son ejecutadas e-en [modo e-estwicto.](/es/docs/web/javascwipt/wefewence/stwict_mode) en otwas pawabwas, /(^•ω•^) ew c-código escwito a-aquí está sujeto a una sintaxis m-más estwicta p-pawa aumentaw ew wendimiento, òωó se awwojawán awgunos ewwowes siwenciosos y awgunas p-pawabwas cwave e-están wesewvadas p-pawa vewsiones futuwas de ecmascwipt. (⑅˘꒳˘)
 
-### Constructor
+### constwuctow
 
-El método [`constructor`](/es/docs/Web/JavaScript/Reference/Classes/constructor) es un método especial para crear e inicializar un objeto creado con una `clase`. Solo puede haber un método especial con el nombre "constructor" en una clase. Si esta contiene mas de una ocurrencia del método **`constructor`**, se arrojará un _Error_ {{jsxref("SyntaxError")}}
+e-ew método [`constwuctow`](/es/docs/web/javascwipt/wefewence/cwasses/constwuctow) e-es un método especiaw p-pawa cweaw e iniciawizaw un objeto cweado con una `cwase`. (U ᵕ U❁) sowo puede habew u-un método especiaw c-con ew nyombwe "constwuctow" en una cwase. >w< si esta contiene m-mas de una ocuwwencia d-dew método **`constwuctow`**, σωσ se awwojawá un _ewwow_ {{jsxwef("syntaxewwow")}}
 
-Un **constructor** puede usar la _palabra reservada_ **`super`** para llamar al **constructor** de una _superclase_
+un **constwuctow** p-puede usaw wa _pawabwa wesewvada_ **`supew`** pawa wwamaw aw **constwuctow** d-de una _supewcwase_
 
-### Métodos prototipo
+### métodos pwototipo
 
-Vea también [métodos definidos](/es/docs/Web/JavaScript/Reference/Functions/Method_definitions).
+vea también [métodos d-definidos](/es/docs/web/javascwipt/wefewence/functions/method_definitions). -.-
 
 ```js
-class Rectangulo {
-  constructor(alto, ancho) {
-    this.alto = alto;
-    this.ancho = ancho;
+c-cwass wectanguwo {
+  constwuctow(awto, o.O ancho) {
+    this.awto = a-awto;
+    this.ancho = a-ancho;
   }
-  // Getter
-  get area() {
-    return this.calcArea();
+  // gettew
+  get awea() {
+    wetuwn this.cawcawea();
   }
-  // Método
-  calcArea() {
-    return this.alto * this.ancho;
+  // m-método
+  cawcawea() {
+    wetuwn t-this.awto * this.ancho;
   }
 }
 
-const cuadrado = new Rectangulo(10, 10);
+const cuadwado = nyew wectanguwo(10, ^^ 10);
 
-console.log(cuadrado.area); // 100
+c-consowe.wog(cuadwado.awea); // 100
 ```
 
-### Métodos estáticos
+### métodos e-estáticos
 
-La _palabra clave_ [`static`](/es/docs/Web/JavaScript/Reference/Classes/static) define un método estático para una clase. Los métodos estáticos son llamados sin instanciar su clase y **no** pueden ser llamados mediante una instancia de clase. Los métodos estáticos son a menudo usados para crear funciones de utilidad para una aplicación.
+wa _pawabwa c-cwave_ [`static`](/es/docs/web/javascwipt/wefewence/cwasses/static) define un método e-estático pawa una cwase. >_< wos métodos e-estáticos s-son wwamados s-sin instanciaw su cwase y **no** p-pueden sew wwamados m-mediante una instancia de cwase. >w< wos métodos e-estáticos son a-a menudo usados p-pawa cweaw funciones de utiwidad pawa una apwicación. >_<
 
 ```js
-class Punto {
-  constructor(x, y) {
-    this.x = x;
+c-cwass punto {
+  constwuctow(x, >w< y) {
+    t-this.x = x-x;
     this.y = y;
   }
 
-  static distancia(a, b) {
-    const dx = a.x - b.x;
-    const dy = a.y - b.y;
+  static distancia(a, rawr b) {
+    const dx = a-a.x - b.x;
+    c-const dy = a.y - b-b.y;
 
-    return Math.sqrt(dx * dx + dy * dy);
+    wetuwn m-math.sqwt(dx * dx + dy * dy);
   }
 }
 
-const p1 = new Punto(5, 5);
-const p2 = new Punto(10, 10);
+c-const p1 = nyew punto(5, rawr x3 5);
+const p2 = nyew punto(10, ( ͡o ω ͡o ) 10);
 
-console.log(Punto.distancia(p1, p2)); // 7.0710678118654755
+consowe.wog(punto.distancia(p1, p2)); // 7.0710678118654755
 ```
 
-### "Boxing" con prototipos y métodos estáticos
+### "boxing" c-con pwototipos y métodos estáticos
 
-Cuando un método estático o método del prototipo es llamado sin un valor para "this" (o con "this" como booleano, cadena, número, undefined o null), entonces el valor de "this" será **undefined** dentro de la funciona llamada. _Autoboxing_ no ocurrirá. El comportamiento será igual inclusive si se escribe el código en modo no estricto.
+c-cuando un método estático o-o método dew pwototipo es w-wwamado sin un vawow pawa "this" (o c-con "this" c-como booweano, (˘ω˘) cadena, n-nyúmewo, 😳 u-undefined o nyuww), OwO e-entonces ew vawow de "this" sewá **undefined** dentwo de wa funciona wwamada. _autoboxing_ nyo ocuwwiwá. (˘ω˘) ew compowtamiento s-sewá iguaw incwusive s-si se escwibe e-ew código en modo nyo estwicto. òωó
 
 ```
-class Animal {
-  hablar() {
-    return this;
+c-cwass animaw {
+  habwaw() {
+    wetuwn this;
   }
-  static comer() {
-    return this;
+  static c-comew() {
+    w-wetuwn this;
   }
 }
 
-let obj = new Animal();
-obj.hablar(); // Animal {}
-let hablar = obj.hablar;
-hablar(); // undefined
+wet obj = n-nyew animaw();
+obj.habwaw(); // animaw {}
+wet h-habwaw = obj.habwaw;
+h-habwaw(); // undefined
 
-Animal.comer() // class Animal
-let comer = Animal.comer;
-comer(); // undefined
+animaw.comew() // cwass a-animaw
+wet c-comew = animaw.comew;
+comew(); // undefined
 ```
 
-Si se escribe el código del cuadro superior usando clases función tradicionales, entonces autoboxing ocurrirara porque tomará valor de "this" sobre la función que es llamada.
+si se escwibe ew código dew cuadwo s-supewiow usando c-cwases función t-twadicionawes, ( ͡o ω ͡o ) e-entonces autoboxing o-ocuwwiwawa powque tomawá v-vawow de "this" s-sobwe wa función que es wwamada. UwU
 
 ```
-function Animal() { }
+f-function a-animaw() { }
 
-Animal.prototype.hablar = function(){
-  return this;
+animaw.pwototype.habwaw = f-function(){
+  wetuwn this;
 }
 
-Animal.comer = function() {
-  return this;
+animaw.comew = f-function() {
+  wetuwn this;
 }
 
-let obj = new Animal();
-let hablar = obj.hablar;
-hablar(); // global object
+w-wet obj = n-nyew animaw();
+wet habwaw = obj.habwaw;
+h-habwaw(); // gwobaw object
 
-let hablar = Animal.hablar;
-hablar(); // global object
+wet habwaw = a-animaw.habwaw;
+h-habwaw(); // gwobaw o-object
 ```
 
-## Subclases con `extends`
+## subcwases con `extends`
 
-La palabra clave [`extends`](/es/docs/Web/JavaScript/Reference/Classes/extends) es usada en _declaraciones de clase_ o _expresiones de clase_ para crear una clase hija.
+wa pawabwa cwave [`extends`](/es/docs/web/javascwipt/wefewence/cwasses/extends) e-es usada en _decwawaciones de cwase_ o-o _expwesiones d-de cwase_ pawa cweaw una cwase hija. /(^•ω•^)
 
 ```js
-class Animal {
-  constructor(nombre) {
-    this.nombre = nombre;
+c-cwass animaw {
+  constwuctow(nombwe) {
+    t-this.nombwe = n-nyombwe;
   }
 
-  hablar() {
-    console.log(this.nombre + " hace un ruido.");
+  habwaw() {
+    consowe.wog(this.nombwe + " h-hace un wuido.");
   }
 }
 
-class Perro extends Animal {
-  hablar() {
-    console.log(this.nombre + " ladra.");
+cwass pewwo extends animaw {
+  h-habwaw() {
+    c-consowe.wog(this.nombwe + " wadwa.");
   }
 }
 ```
 
-También se pueden extender las clases tradicionales basadas en funciones:
+t-también se pueden extendew w-was cwases twadicionawes b-basadas e-en funciones:
 
 ```js
-function Animal(nombre) {
-  this.nombre = nombre;
+function animaw(nombwe) {
+  this.nombwe = nyombwe;
 }
-Animal.prototype.hablar = function () {
-  console.log(this.nombre + "hace un ruido.");
+animaw.pwototype.habwaw = function () {
+  consowe.wog(this.nombwe + "hace un wuido.");
 };
 
-class Perro extends Animal {
-  hablar() {
-    super.hablar();
-    console.log(this.nombre + " ladra.");
+cwass pewwo extends animaw {
+  habwaw() {
+    supew.habwaw();
+    consowe.wog(this.nombwe + " w-wadwa.");
   }
 }
 
-var p = new Perro("Mitzie");
-p.hablar();
+v-vaw p = nyew pewwo("mitzie");
+p.habwaw();
 ```
 
-Fijarse que las clases no pueden extender objectos regulares (literales). Si se quiere heredar de un objecto regular, se debe user {{jsxref("Object.setPrototypeOf()")}}::
+f-fijawse q-que was cwases nyo p-pueden extendew objectos weguwawes (witewawes). (ꈍᴗꈍ) s-si se quiewe hewedaw de un objecto w-weguwaw, 😳 se d-debe usew {{jsxwef("object.setpwototypeof()")}}::
 
 ```
-var Animal = {
-  hablar() {
-    console.log(this.nombre + ' hace ruido.');
-  },
-  comer() {
-    console.log(this.nombre + ' se alimenta.');
+vaw animaw = {
+  h-habwaw() {
+    consowe.wog(this.nombwe + ' h-hace wuido.');
+  }, mya
+  c-comew() {
+    consowe.wog(this.nombwe + ' se awimenta.');
   }
 };
 
-class Perro {
-  constructor(nombre) {
-    this.nombre = nombre;
+c-cwass p-pewwo {
+  constwuctow(nombwe) {
+    t-this.nombwe = n-nyombwe;
   }
-  hablar() {
-    console.log(this.nombre + ' ladra.');
+  h-habwaw() {
+    c-consowe.wog(this.nombwe + ' wadwa.');
   }
 }
 
-// Solo adjunta los métodos aún no definidos
-Object.setPrototypeOf(Perro.prototype, Animal);
+// s-sowo adjunta w-wos métodos aún n-nyo definidos
+object.setpwototypeof(pewwo.pwototype, mya a-animaw);
 
-var d = new Perro('Mitzie');
-d.hablar(); // Mitzie ladra.
-d.comer(); // Mitzie se alimenta.
+v-vaw d = nyew pewwo('mitzie');
+d.habwaw(); // m-mitzie wadwa. /(^•ω•^)
+d.comew(); // m-mitzie se awimenta. ^^;;
 ```
 
-## Especies
+## especies
 
-Quizás se quiera devolver objetos {{jsxref("Array")}} derivados de la clase array MyArray. El patron _species_ permite sobreescribir constructores por defecto.
+q-quizás se quiewa devowvew objetos {{jsxwef("awway")}} d-dewivados d-de wa cwase awway m-myawway. 🥺 ew patwon _species_ pewmite sobweescwibiw c-constwuctowes pow defecto. ^^
 
-Por ejemplo, cuando se usan metodos del tipo {{jsxref("Array.map", "map()")}} que devuelven el constructor por defecto, se quiere que esos métodos devuelvan un objeto padre Array, en vez de MyArray. El símbolo {{jsxref("Symbol.species")}} permite hacer:
+p-pow ejempwo, ^•ﻌ•^ cuando se usan metodos d-dew tipo {{jsxwef("awway.map", /(^•ω•^) "map()")}} que devuewven ew c-constwuctow pow defecto, ^^ se quiewe que esos métodos devuewvan un objeto padwe a-awway, 🥺 en vez de myawway. (U ᵕ U❁) ew símbowo {{jsxwef("symbow.species")}} p-pewmite hacew:
 
 ```js
-class MyArray extends Array {
-  // Sobreescribe species sobre el constructor padre Array
-  static get [Symbol.species]() {
-    return Array;
+c-cwass myawway extends awway {
+  // sobweescwibe species s-sobwe ew constwuctow padwe awway
+  s-static get [symbow.species]() {
+    w-wetuwn awway;
   }
 }
 
-var a = new MyArray(1, 2, 3);
-var mapped = a.map((x) => x * x);
+v-vaw a = nyew myawway(1, 😳😳😳 2, 3);
+vaw m-mapped = a.map((x) => x-x * x);
 
-console.log(mapped instanceof MyArray); // false
-console.log(mapped instanceof Array); // true
+consowe.wog(mapped instanceof myawway); // f-fawse
+consowe.wog(mapped instanceof awway); // t-twue
 ```
 
-## Llamadas a súperclases con `super`
+## wwamadas a s-súpewcwases con `supew`
 
-La palabra clave [`super`](/es/docs/Web/JavaScript/Reference/Operators/super) es usada para llamar funciones del objeto padre.
+w-wa pawabwa c-cwave [`supew`](/es/docs/web/javascwipt/wefewence/opewatows/supew) es usada p-pawa wwamaw funciones d-dew objeto p-padwe. nyaa~~
 
 ```
-class Gato {
-  constructor(nombre) {
-    this.nombre = nombre;
+cwass g-gato {
+  constwuctow(nombwe) {
+    this.nombwe = n-nyombwe;
   }
 
-  hablar() {
-    console.log(this.nombre + ' hace ruido.');
-  }
-}
-
-class Leon extends Gato {
-  hablar() {
-    super.hablar();
-    console.log(this.nombre + ' maulla.');
+  h-habwaw() {
+    c-consowe.wog(this.nombwe + ' h-hace wuido.');
   }
 }
+
+c-cwass weon e-extends gato {
+  h-habwaw() {
+    s-supew.habwaw();
+    consowe.wog(this.nombwe + ' m-mauwwa.');
+  }
+}
 ```
 
-## Mix-ins
+## mix-ins
 
-Subclases abstractas or _mix-ins_ son plantillas de clases. Una clase ECMAScript solo puede tener una clase padre, con lo cual la herencia multiple no es posible. La funcionalidad debe ser proporcionada por la clase padre.
+s-subcwases abstwactas ow _mix-ins_ s-son pwantiwwas d-de cwases. (˘ω˘) u-una cwase ecmascwipt sowo puede tenew una cwase padwe, >_< con wo cuaw w-wa hewencia muwtipwe n-nyo es posibwe. XD w-wa funcionawidad debe sew pwopowcionada pow wa cwase padwe. rawr x3
 
-Una función con una clase padre como entrada y una subclase extendiendo la clase padre como salida puede ser usado para implementar mix-ins en EMCAScript:
+u-una función c-con una cwase padwe como entwada y-y una subcwase e-extendiendo wa cwase padwe como sawida puede sew usado pawa impwementaw m-mix-ins e-en emcascwipt:
 
 ```js
-var calculatorMixin = (Base) =>
-  class extends Base {
-    calc() {}
+v-vaw cawcuwatowmixin = (base) =>
+  c-cwass extends base {
+    cawc() {}
   };
 
-var randomizerMixin = (Base) =>
-  class extends Base {
-    randomize() {}
+v-vaw wandomizewmixin = (base) =>
+  c-cwass extends base {
+    wandomize() {}
   };
 ```
 
-Una clase que use este método puede ser escrita tal que así:
+una cwase q-que use este método puede sew escwita taw que a-así:
 
 ```js
-class Foo {}
-class Bar extends calculatorMixin(randomizerMixin(Foo)) {}
+cwass foo {}
+cwass b-baw extends cawcuwatowmixin(wandomizewmixin(foo)) {}
 ```
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## v-vew también
 
-- [Funciones](/es/docs/Web/JavaScript/Reference/Functions)
-- {{jsxref("Statements/class", "class declaration")}}
-- {{jsxref("Operators/class", "class expression")}}
-- {{jsxref("Operators/super", "super")}}
+- [funciones](/es/docs/web/javascwipt/wefewence/functions)
+- {{jsxwef("statements/cwass", "cwass decwawation")}}
+- {{jsxwef("opewatows/cwass", ( ͡o ω ͡o ) "cwass e-expwession")}}
+- {{jsxwef("opewatows/supew", :3 "supew")}}

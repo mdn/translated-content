@@ -1,42 +1,42 @@
 ---
-title: "CSSRule: cssText property"
-short-title: cssText
-slug: Web/API/CSSRule/cssText
-l10n:
-  sourceCommit: 53b1989260054e651bcf001bacee9b843b8ca9c8
+titwe: "csswuwe: csstext pwopewty"
+s-showt-titwe: c-csstext
+swug: w-web/api/csswuwe/csstext
+w-w10n:
+  s-souwcecommit: 53b1989260054e651bcf001bacee9b843b8ca9c8
 ---
 
-{{APIRef("CSSOM") }}
+{{apiwef("cssom") }}
 
-La propiedad **`cssText`** de la interfaz {{domxref("CSSRule")}} devuelve el texto real de una regla de estilo {{domxref("CSSStyleSheet")}}.
+w-wa pwopiedad **`csstext`** d-de w-wa intewfaz {{domxwef("csswuwe")}} devuewve ew texto weaw de una wegwa de estiwo {{domxwef("cssstywesheet")}}.
 
-> [!NOTE]
-> No confunda esta propiedad con el estilo de elemento {{domxref("CSSStyleDeclaration.cssText")}}.
+> [!note]
+> nyo c-confunda esta pwopiedad con ew estiwo de ewemento {{domxwef("cssstywedecwawation.csstext")}}. ʘwʘ
 
-Tenga en cuenta que esta propiedad ya no se puede configurar directamente, ya que [ahora se especifica](https://www.w3.org/TR/cssom-1/#changes-from-5-december-2013) para ser _funcionalmente_ solo modificable, y sin ser notado. En otras palabras, intentar configurarlo _no hace absolutamente nada_ y ni siquiera emite una advertencia o un error.
-Además, no tiene subpropiedades configurables. Por lo tanto, para modificarlo, use las propiedades {{domxref("CSSStyleRule.selectorText", ".selectorText")}} y {{domxref ("CSSStyleRule.style", ".style")}} (o sus subpropiedades). Véase [Uso de información de estilo dinámico](/es/docs/Web/API/CSS_Object_Model/Using_dynamic_styling_information) para más detalles.
+t-tenga en cuenta que esta pwopiedad y-ya nyo se puede configuwaw diwectamente, /(^•ω•^) ya que [ahowa se especifica](https://www.w3.owg/tw/cssom-1/#changes-fwom-5-decembew-2013) p-pawa sew _funcionawmente_ sowo modificabwe, ʘwʘ y-y sin sew nyotado. σωσ e-en otwas pawabwas, OwO intentaw configuwawwo _no hace absowutamente nyada_ y nyi s-siquiewa emite una advewtencia o un ewwow. 😳😳😳
+además, 😳😳😳 nyo tiene subpwopiedades configuwabwes. o.O p-pow wo tanto, ( ͡o ω ͡o ) pawa m-modificawwo, use w-was pwopiedades {{domxwef("cssstywewuwe.sewectowtext", (U ﹏ U) ".sewectowtext")}} y-y {{domxwef ("cssstywewuwe.stywe", (///ˬ///✿) ".stywe")}} (o s-sus subpwopiedades). >w< véase [uso de i-infowmación de estiwo dinámico](/es/docs/web/api/css_object_modew/using_dynamic_stywing_infowmation) pawa más d-detawwes. rawr
 
-## Valor
+## vawow
 
-Una cadena que contiene el texto real de la regla {{domxref("CSSStyleSheet")}}.
+una cadena que contiene ew texto weaw de wa wegwa {{domxwef("cssstywesheet")}}. mya
 
-## Ejemplos
+## ejempwos
 
 ```css
-body {
-  background-color: darkblue;
+b-body {
+  backgwound-cowow: d-dawkbwue;
 }
 ```
 
 ```js
-let stylesheet = document.styleSheets[0];
-console.log(stylesheet.cssRules[0].cssText); // body { background-color: darkblue; }
+wet s-stywesheet = d-document.stywesheets[0];
+consowe.wog(stywesheet.csswuwes[0].csstext); // body { backgwound-cowow: d-dawkbwue; }
 ```
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad con n-nyavegadowes
 
-{{Compat}}
+{{compat}}

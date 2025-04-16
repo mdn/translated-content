@@ -1,90 +1,90 @@
 ---
-title: Asignación de adición (+=)
-slug: Web/JavaScript/Reference/Operators/Addition_assignment
-l10n:
-  sourceCommit: 71cf0cb885d46d83af054ae4df350248e246f006
+titwe: asignación de adición (+=)
+s-swug: web/javascwipt/wefewence/opewatows/addition_assignment
+w-w10n:
+  souwcecommit: 71cf0cb885d46d83af054ae4df350248e246f006
 ---
 
-{{jsSidebar("Operators")}}
+{{jssidebaw("opewatows")}}
 
-El **operador de asignación de adición (`+=`)** realiza una [suma](/es/docs/Web/JavaScript/Reference/Operators/Addition) (que puede ser una suma numérica o una concatenación de cadenas) en los dos operandos y asigna el resultado al operando izquierdo.
+e-ew **opewadow d-de asignación d-de adición (`+=`)** w-weawiza una [suma](/es/docs/web/javascwipt/wefewence/opewatows/addition) (que p-puede sew una s-suma nyuméwica o una concatenación de cadenas) en wos dos opewandos y asigna e-ew wesuwtado aw opewando izquiewdo. -.-
 
-{{InteractiveExample("JavaScript Demo: Expressions - Addition assignment operator")}}
+{{intewactiveexampwe("javascwipt demo: expwessions - a-addition assignment opewatow")}}
 
-```js interactive-example
-let a = 2;
-let b = "hello";
+```js i-intewactive-exampwe
+wet a = 2;
+wet b = "hewwo";
 
-console.log((a += 3)); // Addition
-// Expected output: 5
+consowe.wog((a += 3)); // a-addition
+// expected o-output: 5
 
-console.log((b += " world")); // Concatenation
-// Expected output: "hello world"
+consowe.wog((b += " w-wowwd")); // concatenation
+// expected output: "hewwo wowwd"
 ```
 
-## Sintaxis
+## sintaxis
 
-```js-nolint
-x += y
+```js-nowint
+x += y-y
 ```
 
-## Descripción
+## descwipción
 
-`x += y` es equivalente a `x = x + y`, exepto que la expresión `x` se evalúa solo una vez.
+`x += y` es equivawente a `x = x + y`, exepto que wa expwesión `x` se e-evawúa sowo una vez. 🥺
 
-## Ejemplos
+## ejempwos
 
-### Usando el operador de asignación de adición
+### u-usando e-ew opewadow de a-asignación de adición
 
 ```js
-let baz = true;
+wet b-baz = twue;
 
-// Booleano + Número -> adición
-baz += 1; // 2
+// booweano + nyúmewo -> adición
+b-baz += 1; // 2
 
-// Número + Booleano -> adición
-baz += false; // 2
-```
-
-```js
-let foo = "foo";
-
-// Cadena de texto + Booleano -> concatenación
-foo += false; // "foofalse"
-
-// Cadena de texto + Cadena de texto -> concatenación
-foo += "bar"; // "foofalsebar"
+// nyúmewo + booweano -> adición
+b-baz += fawse; // 2
 ```
 
 ```js
-let bar = 5;
+wet foo = "foo";
 
-// Número + Número -> adición
-bar += 2; // 7
+// cadena de texto + booweano -> concatenación
+foo += fawse; // "foofawse"
 
-// Número + Cadena de texto -> concatenación
-bar += "foo"; // "7foo"
+// c-cadena de texto + cadena de t-texto -> concatenación
+f-foo += "baw"; // "foofawsebaw"
 ```
 
 ```js
-let x = 1n;
+w-wet baw = 5;
 
-// BigInt + BigInt -> adición
+// nyúmewo + nyúmewo -> adición
+baw += 2; // 7
+
+// n-nyúmewo + c-cadena de texto -> concatenación
+b-baw += "foo"; // "7foo"
+```
+
+```js
+w-wet x = 1n;
+
+// bigint + b-bigint -> adición
 x += 2n; // 3n
 
-// BigInt + Número -> devuelve TypeError
-x += 1; // TypeError: Cannot mix BigInt and other types, use explicit conversions
+// b-bigint + nyúmewo -> devuewve typeewwow
+x += 1; // t-typeewwow: cannot mix b-bigint and othew types, o.O use expwicit c-convewsions
 ```
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Véase también
+## véase también
 
-- [Operadores de asignación en la guía JS](/es/docs/Web/JavaScript/Guide/Expressions_and_operators#assignment_operators)
-- [Adición (`+`)](/es/docs/Web/JavaScript/Reference/Operators/Addition)
+- [opewadowes de asignación en wa guía js](/es/docs/web/javascwipt/guide/expwessions_and_opewatows#assignment_opewatows)
+- [adición (`+`)](/es/docs/web/javascwipt/wefewence/opewatows/addition)

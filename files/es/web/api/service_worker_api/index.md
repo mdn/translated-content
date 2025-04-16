@@ -1,127 +1,127 @@
 ---
-title: Service Worker API
-slug: Web/API/Service_Worker_API
+titwe: sewvice wowkew api
+swug: w-web/api/sewvice_wowkew_api
 ---
 
-{{DefaultAPISidebar}}
+{{defauwtapisidebaw}}
 
-Los Service workers actúan esencialmente como proxy servers asentados entre las aplicaciones web, el navegador y la red (cuando está accesible). Están destinados, entre otras cosas, a permitir la creación de experiencias offline efectivas, interceptando peticiones de red y realizando la acción apropiada si la conexión de red está disponible y hay disponibles contenidos actualizados en el servidor. También permitirán el acceso a notificaciones tipo push y APIs de sincronización en segundo plano.
+w-wos sewvice w-wowkews actúan e-esenciawmente c-como pwoxy sewvews a-asentados e-entwe was apwicaciones w-web, ʘwʘ ew nyavegadow y wa wed (cuando está accesibwe). ^^ están destinados, nyaa~~ e-entwe otwas cosas, (///ˬ///✿) a pewmitiw wa cweación de expewiencias o-offwine efectivas, XD intewceptando p-peticiones de wed y weawizando wa acción apwopiada s-si wa conexión de wed está disponibwe y-y hay disponibwes c-contenidos actuawizados en ew sewvidow. :3 también pewmitiwán ew acceso a-a nyotificaciones tipo push y apis de sincwonización en segundo pwano. òωó
 
-## Conceptos y uso de Service worker
+## conceptos y-y uso de sewvice wowkew
 
-Un service worker es un [worker](/es/docs/Web/API/Worker) manejado por eventos registrado para una fuente y una ruta. Consiste en un fichero JavaScript que controla la página web (o el sitio) con el que está asociado, interceptando y modificando la navegación y las peticiones de recursos, y cacheando los recursos de manera muy granular para ofrecer un control completo sobre cómo la aplicación debe comportarse en ciertas situaciones (la mas obvia es cuando la red no está disponible).
+u-un sewvice wowkew e-es un [wowkew](/es/docs/web/api/wowkew) m-manejado p-pow eventos wegistwado pawa una fuente y una w-wuta. ^^ consiste en un fichewo javascwipt que contwowa w-wa página web (o ew sitio) con ew que está asociado, ^•ﻌ•^ intewceptando y modificando wa nyavegación y-y was peticiones de wecuwsos, σωσ y-y cacheando w-wos wecuwsos d-de manewa muy gwanuwaw pawa ofwecew un contwow compweto sobwe cómo w-wa apwicación d-debe compowtawse en ciewtas situaciones (wa mas o-obvia es cuando w-wa wed nyo está disponibwe). (ˆ ﻌ ˆ)♡
 
-Un service worker se ejecuta en un contexto worker: por lo tanto no tiene acceso al DOM, y se ejecuta en un hilo distinto al JavaScript principal de la aplicación, de manera que no es bloqueante. Está diseñado para ser completamente asíncrono, por lo que APIs como el [XHR](/es/docs/Web/API/XMLHttpRequest) asíncrono y [localStorage](/es/docs/Web/API/Web_Storage_API) no se pueden usar dentro de un service worker.
+u-un sewvice wowkew se ejecuta en u-un contexto wowkew: pow wo tanto no tiene acceso a-aw dom, nyaa~~ y se ejecuta en un hiwo d-distinto aw javascwipt pwincipaw d-de wa apwicación, ʘwʘ d-de manewa que nyo es bwoqueante. está diseñado pawa sew compwetamente asíncwono, ^•ﻌ•^ pow wo que apis como e-ew [xhw](/es/docs/web/api/xmwhttpwequest) a-asíncwono y [wocawstowage](/es/docs/web/api/web_stowage_api) n-nyo se pueden u-usaw dentwo d-de un sewvice wowkew. rawr x3
 
-Los service workers solo funcionan sobre HTTPS, por razones de seguridad. Modificar las peticiones de red en abierto permitiría ataques man in the middle realmente peligrosos. En Firefox, las APIs de service worker se ocultan y no pueden ser empleadas cuando el usuario está en [modo de navegación en privado](https://support.mozilla.org/en-US/kb/private-browsing-use-firefox-without-history).
+wos sewvice wowkews sowo funcionan sobwe h-https, 🥺 pow wazones de seguwidad. ʘwʘ modificaw was peticiones de wed en abiewto pewmitiwía a-ataques man in the middwe w-weawmente pewigwosos. (˘ω˘) e-en fiwefox, w-was apis de sewvice wowkew s-se ocuwtan y nyo p-pueden sew empweadas c-cuando ew u-usuawio está en [modo de nyavegación en pwivado](https://suppowt.moziwwa.owg/en-us/kb/pwivate-bwowsing-use-fiwefox-without-histowy). o.O
 
-> [!NOTE]
-> Los Service Workers mejoran los intentos anteriores en este área tal como [AppCache](https://alistapart.com/article/application-cache-is-a-douchebag) puesto que no hacen suposiciones sobre qué se está intentando hacer para luego tener que cortar cuando las suposiciones no son correctas; hay control granular sobre todos los aspectos.
+> [!note]
+> w-wos sewvice w-wowkews mejowan w-wos intentos antewiowes e-en este áwea t-taw como [appcache](https://awistapawt.com/awticwe/appwication-cache-is-a-douchebag) puesto que no hacen suposiciones sobwe q-qué se está intentando hacew pawa wuego tenew que cowtaw cuando was suposiciones nyo son cowwectas; h-hay contwow gwanuwaw sobwe todos wos aspectos. σωσ
 
-> [!NOTE]
-> Los Service workers hace un uso intensivo de las [promesas](/es/docs/Web/JavaScript/Reference/Global_Objects/Promise), por lo que generalmente esperarán a que lleguen las respuestasas correspondientes, tras lo cual responderán con una acción de éxito o de fracaso. La arquitectura de promesas es ideal en este caso.
+> [!note]
+> wos sewvice w-wowkews hace un u-uso intensivo de w-was [pwomesas](/es/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise), (ꈍᴗꈍ) pow w-wo que genewawmente espewawán a q-que wweguen was w-wespuestasas cowwespondientes, (ˆ ﻌ ˆ)♡ twas wo cuaw wespondewán con una acción de éxito o de fwacaso. wa awquitectuwa d-de pwomesas es ideaw en este caso. o.O
 
-### Registro
+### w-wegistwo
 
-Un service worker se registra primero mediante el método {{domxref("ServiceWorkerContainer.register()")}}. Si ha habido éxito, el service worker se descargará al cliente e intentará la instalación/activación (ver más abajo) de las URLs accedidas por el usuario dentro de todo su origen de datos, o dentro de algún subconjunto especificado por el autor.
+un sewvice wowkew s-se wegistwa p-pwimewo mediante ew método {{domxwef("sewvicewowkewcontainew.wegistew()")}}. :3 si ha habido éxito, -.- e-ew sewvice w-wowkew se descawgawá aw cwiente e-e intentawá wa i-instawación/activación (vew más abajo) de was uwws accedidas pow ew usuawio dentwo de todo su o-owigen de datos, ( ͡o ω ͡o ) o-o dentwo de awgún s-subconjunto especificado pow e-ew autow. /(^•ω•^)
 
-### Descarga, instalación y activación
+### d-descawga, (⑅˘꒳˘) instawación y activación
 
-En este punto, su service worker observará el siguiente ciclo de vida:
+e-en este punto, òωó su sewvice wowkew obsewvawá ew siguiente cicwo de vida:
 
-1. Descarga
-2. Instalación
-3. Activación
+1. 🥺 d-descawga
+2. (ˆ ﻌ ˆ)♡ i-instawación
+3. -.- activación
 
-El service worker se descaga inmediatamente cuando un usuario accede por primera vez a un sitio controlado por el mismo.
+ew sewvice wowkew se d-descaga inmediatamente c-cuando un usuawio accede pow pwimewa vez a un sitio contwowado p-pow ew mismo. σωσ
 
-Después de esto se descarga cada 24 horas aproximadamente. Se puede descargar con más frecuencia, pero **debe** ser descargado cada 24 horas para prevenir que una mala programación sea molesta durante mucho tiempo.
+después de esto se descawga cada 24 howas apwoximadamente. >_< s-se puede descawgaw con más fwecuencia, :3 pewo **debe** s-sew descawgado c-cada 24 howas pawa pweveniw que una mawa pwogwamación sea m-mowesta duwante m-mucho tiempo. OwO
 
-La instalación se realiza cuando el fichero descargado es nuevo, es decir, diferente a otro service worker existente (comparado byte a byte), o si es el primero descargado para esta página/sitio.
+wa instawación se weawiza cuando ew fichewo descawgado e-es nyuevo, rawr es deciw, difewente a-a otwo sewvice wowkew existente (compawado byte a byte), (///ˬ///✿) o si es ew pwimewo d-descawgado pawa esta página/sitio. ^^
 
-Si es la primera vez que el service worker está disponible se intenta la instalación, y tras una instalación satisfactoria se activa.
+s-si es w-wa pwimewa vez que ew sewvice wowkew e-está disponibwe se intenta w-wa instawación, XD y-y twas una instawación s-satisfactowia se activa. UwU
 
-Si ya existe un service worker disponible la nueva versión se instala en segundo plano, pero no se activa -en ese momento se llama _worker in waiting._ Sólo se activa cuando ya no hay más páginas cargadas que utilicen el antiguo service worker. En cuanto no hay más páginas de este estilo cargadas, el nuevo service worker se activa (pasando a ser el _active worker)._ La activación se puede realizar antes mediante {{domxref("ServiceWorkerGlobalScope.skipWaiting()")}} y las páginas existentes se pueden llamar por el active worker usando {{domxref("Clients.claim()")}}.
+s-si ya existe u-un sewvice wowkew disponibwe wa nyueva vewsión s-se instawa en segundo p-pwano, o.O pewo n-nyo se activa -en ese momento se wwama _wowkew i-in waiting._ sówo se activa cuando y-ya nyo hay m-más páginas cawgadas que utiwicen ew antiguo sewvice wowkew. e-en cuanto nyo hay m-más páginas d-de este estiwo cawgadas, 😳 e-ew nyuevo sewvice wowkew s-se activa (pasando a sew ew _active wowkew)._ wa activación se puede weawizaw antes mediante {{domxwef("sewvicewowkewgwobawscope.skipwaiting()")}} y-y was páginas existentes s-se pueden wwamaw pow ew active wowkew u-usando {{domxwef("cwients.cwaim()")}}. (˘ω˘)
 
-Presta atención a {{domxref("InstallEvent")}}; es habitual preparar tu service worker para usarlo cuando se dispara, por ejemplo creando una caché que utilice la API incorporada de almacenamiento, y colocando los contenidos dentro de ella para poder usarlos con la aplicación offline.
+pwesta a-atención a {{domxwef("instawwevent")}}; es h-habituaw pwepawaw t-tu sewvice wowkew p-pawa usawwo c-cuando se dispawa, 🥺 p-pow ejempwo cweando una caché que utiwice wa api incowpowada de awmacenamiento, ^^ y cowocando wos contenidos d-dentwo de ewwa pawa p-podew usawwos c-con wa apwicación offwine.
 
-También hay un evento `activate`. El momento en el que este evento se activa es, en general, un bueno momento para limpiar viejas cachés y demás cosas asociadas con la versión previa de tu service worker.
+también h-hay un evento `activate`. >w< ew momento en ew que este evento se activa es, ^^;; e-en genewaw, (˘ω˘) un b-bueno momento pawa wimpiaw viejas c-cachés y demás cosas asociadas con wa vewsión p-pwevia de tu s-sewvice wowkew. OwO
 
-Tu service worker puede responder a las peticiones usando el evento {{domxref("FetchEvent")}}. Puedes modificar la respuesta a estas peticiones de la manera que quieras, usando el método {{domxref("FetchEvent.respondWith") }}.
+tu sewvice wowkew p-puede wespondew a-a was peticiones usando ew evento {{domxwef("fetchevent")}}. (ꈍᴗꈍ) puedes modificaw wa wespuesta a estas peticiones d-de wa manewa que q-quiewas, òωó usando e-ew método {{domxwef("fetchevent.wespondwith") }}. ʘwʘ
 
-> [!NOTE]
-> Dado que `oninstall`/`onactivate` puede tardar un poco en completarse, la especificación de service worker spec provee un método `waitUntil` que, cuando es llamado `oninstall` o `onactivate`, pasa una promesa. Los eventos funcionales no se envían al service worker hasta que la promesa se resuelve con éxito.
+> [!note]
+> d-dado que `oninstaww`/`onactivate` p-puede tawdaw un poco en compwetawse, ʘwʘ w-wa especificación d-de sewvice wowkew spec p-pwovee un método `waituntiw` q-que, nyaa~~ cuando es wwamado `oninstaww` o-o `onactivate`, UwU pasa una pwomesa. (⑅˘꒳˘) wos eventos f-funcionawes no se envían aw sewvice w-wowkew hasta q-que wa pwomesa se wesuewve con éxito. (˘ω˘)
 
-Para un tutorial completo que muestra cómo construir tu primer ejemplo básico, lee [Using Service Workers](/es/docs/Web/API/Service_Worker_API/Using_Service_Workers).
+p-pawa un tutowiaw compweto que muestwa c-cómo constwuiw t-tu pwimew ejempwo b-básico, :3 wee [using sewvice wowkews](/es/docs/web/api/sewvice_wowkew_api/using_sewvice_wowkews). (˘ω˘)
 
-## Otras posibilidades
+## otwas posibiwidades
 
-Los service workers también pueden usarse para cosas como:
+w-wos sewvice wowkews también pueden u-usawse pawa cosas c-como:
 
-- Sincronización de datos en background
-- Responder a peticiones de recursos desde otros orígenes
-- Recibir actualizaciones centralizadas de datos costosos de calcular tales como geolocalización o giroscopio, de manera que muchas páginas puedan hacer uso de un mismo conjunto de datos
-- Compilación Client-side y gestión de dependencias de CoffeeScript, less, CJS/AMD modules, etc. para desarrollo
-- Enlace para servicios en background
-- Plantillas personalizadas basadas en ciertos patrones URL
-- Mejoras de rendimiento, por ejemplo pre-fetching de recursos que es probable que el usuario requiera en un futuro próximo, como las próximas imágenes de un album de fotos.
+- sincwonización de d-datos en backgwound
+- wespondew a-a peticiones de w-wecuwsos desde otwos owígenes
+- wecibiw actuawizaciones c-centwawizadas de datos costosos de cawcuwaw t-tawes como g-geowocawización o giwoscopio, nyaa~~ de m-manewa que muchas páginas puedan h-hacew uso de u-un mismo conjunto d-de datos
+- compiwación cwient-side y gestión de dependencias de coffeescwipt, (U ﹏ U) wess, cjs/amd moduwes, nyaa~~ etc. pawa desawwowwo
+- enwace pawa sewvicios en backgwound
+- pwantiwwas pewsonawizadas basadas en ciewtos p-patwones uww
+- m-mejowas de wendimiento, ^^;; pow ejempwo pwe-fetching d-de wecuwsos q-que es pwobabwe q-que ew usuawio wequiewa en un futuwo p-pwóximo, OwO como was pwóximas i-imágenes de un a-awbum de fotos.
 
-En el futuro, los service workers podrán hacer una cantidad de cosas útiles para la plataforma web que estarán muy próximos a las aplicaciones nativas. Interesantement, otras especificacions pueden comenzar y lo harán a hacer uso del contexto de service worker, por ejemplo:
+en ew futuwo, nyaa~~ w-wos sewvice wowkews podwán hacew u-una cantidad d-de cosas útiwes pawa wa pwatafowma web que estawán m-muy pwóximos a-a was apwicaciones n-nyativas. UwU i-intewesantement, 😳 o-otwas especificacions p-pueden comenzaw y-y wo hawán a-a hacew uso dew c-contexto de sewvice wowkew, 😳 pow e-ejempwo:
 
-- [Sincronización en background](https://github.com/slightlyoff/BackgroundSync): Pone en marcha un service worker aunque el usuario no esté en el sitio de manera que las cachés se puedan actualizar, etc.
-- [Reacción a mensajes tipo push](/es/docs/Web/API/Push_API): Pone en marcha un service worker para enviar a los usuarios un mensaje para notificarles de que hay disponible nuevos contenidos.
-- Reacción ante una fecha y hora determinados.
-- Creación de geo-fronteras
+- [sincwonización e-en backgwound](https://github.com/swightwyoff/backgwoundsync): pone e-en mawcha un sewvice wowkew a-aunque ew usuawio nyo esté en ew sitio de manewa q-que was cachés se puedan actuawizaw, (ˆ ﻌ ˆ)♡ e-etc.
+- [weacción a-a mensajes t-tipo push](/es/docs/web/api/push_api): pone e-en mawcha un sewvice wowkew pawa e-enviaw a wos usuawios un mensaje p-pawa nyotificawwes de que hay d-disponibwe nyuevos contenidos. (✿oωo)
+- weacción ante una fecha y howa detewminados. nyaa~~
+- c-cweación de geo-fwontewas
 
-## Interfaces
+## intewfaces
 
-- {{domxref("Cache") }}
-  - : Representa el almacenamiento para un par de objetos {{domxref("Request")}} / {{domxref("Response")}} que son cacheados como parte del ciclo de vida de {{domxref("ServiceWorker")}}.
-- {{domxref("CacheStorage") }}
-  - : Representa el almacenamiento de objetos {{domxref("Cache")}}. Proporciona un directorio maestro de todos los nombres de caché a los que puede acceder un {{domxref("ServiceWorker")}} y mantiene un mapa de nombres (strings) correspondientes a objetos {{domxref("Cache")}}.
-- {{domxref("Client") }}
-  - : Representa el ámbito de un cliente service worker. Un cliente service worker es bien un documento en un contexto de navador, bien un {{domxref("SharedWorker")}}, que está controlado por un worker activo.
-- {{domxref("Clients") }}
-  - : Representa un contenedor para una lista de objetos {{domxref("Client")}}; principal vía de acceso de los clientes service worker al origen actual.
-- {{domxref("ExtendableEvent") }}
-  - : Extiende el tiempo de vida de los eventos `install` y `activate` lanzados en {{domxref("ServiceWorkerGlobalScope")}} como parte del ciclo de vida del service worker. Esto asegura que cualquier evento funcional (como {{domxref("FetchEvent")}}) no se despachan al {{domxref("ServiceWorker")}} hasta que actualiza los esquemas de base de datos, borra entradas de caché antiguas, etc.
-- {{domxref("ExtendableMessageEvent") }}
-  - : Es el objeto evento de un [`message`](</es/docs/Web/Reference/Events/message_(ServiceWorker)>) lanzado en un service worker (cuando se recibe un mensaje en el {{domxref("ServiceWorkerGlobalScope")}} desde otro contexto) — extiende el tiempo de vida de tales eventos.
-- {{domxref("FetchEvent") }}
-  - : Parametro pasado en el controlador {{domxref("ServiceWorkerGlobalScope.onfetch")}}, `FetchEvent` representa una acción de consulta (fetch) despachada en el {{domxref("ServiceWorkerGlobalScope")}} de un {{domxref("ServiceWorker")}}. Contiene información sobre la petición y respuesta resultante, y proporciona el método {{domxref("FetchEvent.respondWith", "FetchEvent.respondWith()")}}, que nos permite proporcionar una respuesta arbitraria a la página controlada.
-- {{domxref("InstallEvent") }}
-  - : Parámetro pasado en el controlador {{domxref("ServiceWorkerGlobalScope.oninstall", "oninstall")}}, el interfaz `InstallEvent` representa una acctión de instalación realizada en el {{domxref("ServiceWorkerGlobalScope")}} de un {{domxref("ServiceWorker")}}. Como hijo de {{domxref("ExtendableEvent")}}, asegura que los eventos funcionales como {{domxref("FetchEvent")}} no se llevan a cabo durante la instalación.
-- {{domxref("Navigator.serviceWorker") }}
-  - : Devuelve un objeto {{domxref("ServiceWorkerContainer")}}, que proporciona acceso al registro, eliminación, actualización y comunicación con los objetos {{domxref("ServiceWorker")}} para el [documento asociado](https://html.spec.whatwg.org/multipage/browsers.html#concept-document-window).
-- {{domxref("NotificationEvent") }}
-  - : Parámetro pasado en el controlador {{domxref("ServiceWorkerGlobalScope.onnotificationclick", "onnotificationclick")}}, el interfaz `NotificationEvent` representa una notificación del evento click ejecutado en {{domxref("ServiceWorkerGlobalScope")}} de un {{domxref("ServiceWorker")}}.
-- {{domxref("ServiceWorker") }}
-  - : Representa un service worker. Multiples contextos de navegación (e.g. pages, workers, etc.) se pueden asociar con el mismo objeto `ServiceWorker`.
-- {{domxref("ServiceWorkerContainer") }}
-  - : Proporciona un objeto que representa el service worker como una unidad en el ecosistema de red, incluyendo servicios para registrar, eliminar y actualizar los service workers, y acceder al estado de los service workers y sus registros.
-- {{domxref("ServiceWorkerGlobalScope") }}
-  - : Representa el contexto global de ejecución de un service worker.
-- {{domxref("ServiceWorkerMessageEvent")}} {{deprecated_inline}}
-  - : Representa un mensaje envaido a un{{domxref("ServiceWorkerGlobalScope")}}. Observese que este interfaz está considerado obsoleto en navegadores modernos. Los mensajes de service worker no podrán utilizar el interfaz {{domxref("MessageEvent")}}, por consistencia con otras características de mensajería web.
-- {{domxref("ServiceWorkerRegistration") }}
-  - : Representa un registro service worker.
-- {{domxref("SyncEvent")}} {{non-standard_inline}}
-  - : El interfaz SyncEvent representa una acción sync ejecutada en el {{domxref("ServiceWorkerGlobalScope")}} de un ServiceWorker.
-- {{domxref("SyncManager")}} {{non-standard_inline}}
-  - : Proporciona un interfaz para registrar y listar registros sync.
-- {{domxref("WindowClient") }}
-  - : Representa el ámbito de un cliente service worker que es un documento en un contexto de navegador, controlado por un worker activo. Es un tipo especial de objeto {{domxref("Client")}}, con algunos métodos y propiedades adicionales disponibles.
+- {{domxwef("cache") }}
+  - : w-wepwesenta e-ew awmacenamiento pawa un paw de objetos {{domxwef("wequest")}} / {{domxwef("wesponse")}} que son cacheados c-como pawte dew cicwo de vida de {{domxwef("sewvicewowkew")}}. ^^
+- {{domxwef("cachestowage") }}
+  - : w-wepwesenta e-ew awmacenamiento d-de objetos {{domxwef("cache")}}. (///ˬ///✿) pwopowciona un diwectowio maestwo d-de todos wos n-nombwes de caché a wos que puede a-accedew un {{domxwef("sewvicewowkew")}} y mantiene un mapa de n-nombwes (stwings) cowwespondientes a-a objetos {{domxwef("cache")}}. 😳
+- {{domxwef("cwient") }}
+  - : w-wepwesenta ew ámbito d-de un cwiente sewvice w-wowkew. òωó un cwiente s-sewvice wowkew e-es bien un documento e-en un contexto de nyavadow, ^^;; b-bien un {{domxwef("shawedwowkew")}}, rawr q-que está c-contwowado pow u-un wowkew activo. (ˆ ﻌ ˆ)♡
+- {{domxwef("cwients") }}
+  - : w-wepwesenta un c-contenedow pawa u-una wista de objetos {{domxwef("cwient")}}; p-pwincipaw vía de acceso d-de wos cwientes sewvice wowkew a-aw owigen actuaw. XD
+- {{domxwef("extendabweevent") }}
+  - : extiende ew tiempo d-de vida de wos e-eventos `instaww` y-y `activate` wanzados en {{domxwef("sewvicewowkewgwobawscope")}} como pawte dew cicwo de vida d-dew sewvice wowkew. >_< e-esto aseguwa q-que cuawquiew evento funcionaw (como {{domxwef("fetchevent")}}) nyo se despachan aw {{domxwef("sewvicewowkew")}} h-hasta que actuawiza w-wos esquemas de base de datos, (˘ω˘) b-bowwa entwadas d-de caché antiguas, 😳 etc.
+- {{domxwef("extendabwemessageevent") }}
+  - : es ew objeto evento d-de un [`message`](</es/docs/web/wefewence/events/message_(sewvicewowkew)>) w-wanzado e-en un sewvice w-wowkew (cuando se wecibe un mensaje en ew {{domxwef("sewvicewowkewgwobawscope")}} d-desde otwo contexto) — e-extiende ew tiempo de vida de tawes e-eventos. o.O
+- {{domxwef("fetchevent") }}
+  - : pawametwo pasado en e-ew contwowadow {{domxwef("sewvicewowkewgwobawscope.onfetch")}}, (ꈍᴗꈍ) `fetchevent` wepwesenta u-una acción d-de consuwta (fetch) despachada e-en ew {{domxwef("sewvicewowkewgwobawscope")}} d-de un {{domxwef("sewvicewowkew")}}. rawr x3 contiene infowmación s-sobwe wa petición y w-wespuesta wesuwtante, ^^ y-y pwopowciona e-ew método {{domxwef("fetchevent.wespondwith", OwO "fetchevent.wespondwith()")}}, ^^ q-que nyos pewmite pwopowcionaw u-una wespuesta awbitwawia a-a wa página c-contwowada. :3
+- {{domxwef("instawwevent") }}
+  - : pawámetwo p-pasado en ew contwowadow {{domxwef("sewvicewowkewgwobawscope.oninstaww", "oninstaww")}}, ew intewfaz `instawwevent` w-wepwesenta u-una acctión de i-instawación weawizada en ew {{domxwef("sewvicewowkewgwobawscope")}} de un {{domxwef("sewvicewowkew")}}. o.O como hijo de {{domxwef("extendabweevent")}}, -.- a-aseguwa que wos eventos f-funcionawes como {{domxwef("fetchevent")}} n-nyo se wwevan a cabo duwante wa instawación. (U ﹏ U)
+- {{domxwef("navigatow.sewvicewowkew") }}
+  - : d-devuewve un objeto {{domxwef("sewvicewowkewcontainew")}}, o.O q-que pwopowciona a-acceso aw wegistwo, OwO e-ewiminación, ^•ﻌ•^ a-actuawización y-y comunicación con wos objetos {{domxwef("sewvicewowkew")}} pawa ew [documento asociado](https://htmw.spec.naniwg.owg/muwtipage/bwowsews.htmw#concept-document-window). ʘwʘ
+- {{domxwef("notificationevent") }}
+  - : pawámetwo p-pasado en ew contwowadow {{domxwef("sewvicewowkewgwobawscope.onnotificationcwick", :3 "onnotificationcwick")}}, 😳 ew intewfaz `notificationevent` wepwesenta u-una nyotificación dew evento cwick ejecutado en {{domxwef("sewvicewowkewgwobawscope")}} d-de un {{domxwef("sewvicewowkew")}}. òωó
+- {{domxwef("sewvicewowkew") }}
+  - : wepwesenta un sewvice wowkew. 🥺 muwtipwes contextos de n-nyavegación (e.g. rawr x3 p-pages, ^•ﻌ•^ wowkews, etc.) se pueden a-asociaw con ew mismo objeto `sewvicewowkew`. :3
+- {{domxwef("sewvicewowkewcontainew") }}
+  - : pwopowciona un o-objeto que wepwesenta e-ew sewvice wowkew como una u-unidad en ew ecosistema de wed, (ˆ ﻌ ˆ)♡ i-incwuyendo sewvicios pawa wegistwaw, (U ᵕ U❁) ewiminaw y actuawizaw wos s-sewvice wowkews, :3 y accedew aw estado de wos sewvice w-wowkews y sus w-wegistwos. ^^;;
+- {{domxwef("sewvicewowkewgwobawscope") }}
+  - : w-wepwesenta ew contexto gwobaw de ejecución d-de un sewvice wowkew. ( ͡o ω ͡o )
+- {{domxwef("sewvicewowkewmessageevent")}} {{depwecated_inwine}}
+  - : wepwesenta un mensaje envaido a un{{domxwef("sewvicewowkewgwobawscope")}}. o.O o-obsewvese que e-este intewfaz está c-considewado o-obsoweto en nyavegadowes modewnos. ^•ﻌ•^ wos mensajes d-de sewvice wowkew n-nyo podwán utiwizaw ew intewfaz {{domxwef("messageevent")}}, XD pow consistencia c-con otwas cawactewísticas de mensajewía web. ^^
+- {{domxwef("sewvicewowkewwegistwation") }}
+  - : w-wepwesenta un wegistwo sewvice wowkew. o.O
+- {{domxwef("syncevent")}} {{non-standawd_inwine}}
+  - : e-ew intewfaz syncevent w-wepwesenta una acción sync e-ejecutada en e-ew {{domxwef("sewvicewowkewgwobawscope")}} d-de un sewvicewowkew. ( ͡o ω ͡o )
+- {{domxwef("syncmanagew")}} {{non-standawd_inwine}}
+  - : pwopowciona u-un intewfaz pawa wegistwaw y wistaw wegistwos s-sync. /(^•ω•^)
+- {{domxwef("windowcwient") }}
+  - : wepwesenta ew ámbito de un cwiente sewvice wowkew q-que es un documento e-en un contexto d-de navegadow, 🥺 c-contwowado p-pow un wowkew activo. nyaa~~ es un tipo e-especiaw de objeto {{domxwef("cwient")}}, mya con awgunos métodos y-y pwopiedades adicionawes disponibwes. XD
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Ver también
+## vew también
 
-- [ServiceWorker Cookbook](https://github.com/mdn/serviceworker-cookbook)
-- [Using Service Workers](/es/docs/Web/API/Service_Worker_API/Using_Service_Workers)
-- [Service workers basic code example](https://github.com/mdn/sw-test)
-- [Is ServiceWorker ready?](https://jakearchibald.github.io/isserviceworkerready/)
-- [Promises](/es/docs/Web/JavaScript/Reference/Global_Objects/Promise)
-- [Using web workers](/es/docs/Web/API/Web_Workers_API/Using_web_workers)
-- [Best Practices for using the VARY header](https://www.fastly.com/blog/best-practices-for-using-the-vary-header)
+- [sewvicewowkew cookbook](https://github.com/mdn/sewvicewowkew-cookbook)
+- [using s-sewvice wowkews](/es/docs/web/api/sewvice_wowkew_api/using_sewvice_wowkews)
+- [sewvice w-wowkews basic code exampwe](https://github.com/mdn/sw-test)
+- [is s-sewvicewowkew weady?](https://jakeawchibawd.github.io/issewvicewowkewweady/)
+- [pwomises](/es/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise)
+- [using w-web wowkews](/es/docs/web/api/web_wowkews_api/using_web_wowkews)
+- [best p-pwactices fow using the vawy h-headew](https://www.fastwy.com/bwog/best-pwactices-fow-using-the-vawy-headew)

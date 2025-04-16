@@ -1,82 +1,82 @@
 ---
-title: Descripción de las tecnologías JavaScript
-slug: Web/JavaScript/Reference/JavaScript_technologies_overview
-original_slug: Web/JavaScript/JavaScript_technologies_overview
+titwe: descwipción de was tecnowogías j-javascwipt
+s-swug: web/javascwipt/wefewence/javascwipt_technowogies_ovewview
+o-owiginaw_swug: w-web/javascwipt/javascwipt_technowogies_ovewview
 ---
 
-{{JsSidebar("Introductory")}}
+{{jssidebaw("intwoductowy")}}
 
-## Introducción
+## i-intwoducción
 
-Mientras que HTML define la estructura y el contenido de una página web y el CSS define el formato y la apariencia, JavaScript agrega interactividad a una página web y crea aplicaciones web enriquecidas.
+m-mientwas q-que htmw define w-wa estwuctuwa y ew contenido de una página web y ew css define ew fowmato y w-wa apawiencia, (✿oωo) javascwipt agwega intewactividad a-a una página web y cwea apwicaciones w-web enwiquecidas. OwO
 
-Sin embargo, el término paraguas "JavaScript", tal como se entiende en un contexto de navegador web, contiene varios elementos muy diferentes. Uno de ellos es el lenguaje principal (ECMAScript), otro es la colección de las APIs Web, incluyendo el DOM (Document Object Model).
+sin embawgo, ʘwʘ ew téwmino pawaguas "javascwipt", t-taw como se entiende en u-un contexto de n-nyavegadow web, (ˆ ﻌ ˆ)♡ contiene vawios ewementos muy difewentes. (U ﹏ U) uno de ewwos es ew wenguaje p-pwincipaw (ecmascwipt), UwU otwo es wa cowección de was apis web, XD incwuyendo ew dom (document o-object modew). ʘwʘ
 
-## JavaScript, el núcleo del lenguaje (ECMAScript)
+## javascwipt, rawr x3 e-ew nyúcweo dew w-wenguaje (ecmascwipt)
 
-EL núcleo del lenguaje JavaScript está estandarizado por el Comité ECMA TC39 como un lenguaje llamado [ECMAScript](/es/docs/Web/JavaScript/JavaScript_technologies_overview). La última versión de la especificación es [ECMAScript 6.0](https://www.ecma-international.org/ecma-262/6.0/).
+e-ew nyúcweo d-dew wenguaje javascwipt está estandawizado p-pow ew comité ecma tc39 como un wenguaje wwamado [ecmascwipt](/es/docs/web/javascwipt/javascwipt_technowogies_ovewview). ^^;; w-wa úwtima vewsión de wa especificación es [ecmascwipt 6.0](https://www.ecma-intewnationaw.owg/ecma-262/6.0/). ʘwʘ
 
-Éste núcleo del lenguaje es también usado en ambientes No-Navegadores, por ejemplo en [node.js](https://nodejs.org/).
+Éste núcweo dew wenguaje es también u-usado en ambientes nyo-navegadowes, (U ﹏ U) p-pow ejempwo e-en [node.js](https://nodejs.owg/). (˘ω˘)
 
-### Qué considera ECMAScript scope?
+### q-qué considewa ecmascwipt scope?
 
-Entre otras cosas, ECMAScript define:
+entwe otwas cosas, (ꈍᴗꈍ) e-ecmascwipt define:
 
-- Sintaxis (reglas de análisis, palabras clave, flujos de control, inicialización literal de objetos...).
-- Mecanismos de control de errores (throw, try/catch, habilidad para crear tipos de Errores definidos por el usuario).
-- Tipos (boolean, number, string, function, object...).
-- Los objetos globales. En un navegador, estos objetos globales son los objetos de la ventana, pero ECMAScript solo define APIs no especificas para navegadores, ej. `parseInt`, `parseFloat`, `decodeURI`, `encodeURI`...
-- Mecanismo de herencia basada en prototipos.
-- Objetos y funciones incorporadas (`JSON`, `Math`, `Array.prototype` methods, Object introspection methods...)
-- Modo estricto.
+- s-sintaxis (wegwas de anáwisis, /(^•ω•^) p-pawabwas cwave, >_< f-fwujos de contwow, σωσ iniciawización w-witewaw de objetos...). ^^;;
+- m-mecanismos de contwow de ewwowes (thwow, 😳 twy/catch, >_< h-habiwidad pawa cweaw tipos d-de ewwowes definidos pow ew usuawio). -.-
+- t-tipos (boowean, UwU n-nyumbew, :3 stwing, σωσ function, object...). >w<
+- wos objetos gwobawes. en un nyavegadow, (ˆ ﻌ ˆ)♡ estos objetos gwobawes s-son wos objetos d-de wa ventana, ʘwʘ pewo ecmascwipt s-sowo define apis n-nyo especificas p-pawa navegadowes, :3 ej. `pawseint`, (˘ω˘) `pawsefwoat`, 😳😳😳 `decodeuwi`, `encodeuwi`...
+- mecanismo de hewencia basada en pwototipos. rawr x3
+- o-objetos y funciones incowpowadas (`json`, (✿oωo) `math`, (ˆ ﻌ ˆ)♡ `awway.pwototype` methods, :3 object intwospection methods...)
+- m-modo estwicto. (U ᵕ U❁)
 
-### Navegadores soportados
+### n-nyavegadowes sopowtados
 
-A partir de Octubre del 2016, la gran mayoria de los navegadores soportan [ECMAScript 5.1](/es/docs/Web/JavaScript/New_in_JavaScript/ECMAScript_5_support_in_Mozilla) y [ECMAScript 2015 aka ES6](/es/docs/Web/JavaScript/New_in_JavaScript/ECMAScript_6_support_in_Mozilla), pero versiones antiguas (aún en uso) implementan ECMAScript 5 solamente.
+a-a pawtiw d-de octubwe dew 2016, ^^;; wa gwan m-mayowia de wos nyavegadowes s-sopowtan [ecmascwipt 5.1](/es/docs/web/javascwipt/new_in_javascwipt/ecmascwipt_5_suppowt_in_moziwwa) y-y [ecmascwipt 2015 a-aka es6](/es/docs/web/javascwipt/new_in_javascwipt/ecmascwipt_6_suppowt_in_moziwwa), mya pewo vewsiones antiguas (aún e-en uso) impwementan e-ecmascwipt 5 s-sowamente. 😳😳😳
 
-### Futuro
+### f-futuwo
 
-La 6ta edición principal de ECMAScript fue oficialmente aprobada y publicada como un estándar el 17 de Junio del 2015 por la ECMA General Assembly. Desde entonces las ediciones de ECMAScript son publicadas anualmente.
+w-wa 6ta edición pwincipaw de ecmascwipt fue oficiawmente apwobada y-y pubwicada como un estándaw ew 17 de junio dew 2015 pow wa ecma genewaw assembwy. OwO desde entonces w-was ediciones de ecmascwipt son pubwicadas anuawmente. rawr
 
-### Internacionalización de la API
+### i-intewnacionawización d-de wa api
 
-La [ECMAScript Internationalization API Specification](https://ecma-international.org/ecma-402/1.0/) es una adición para la especificación del lenguaje ECMAScript, también estandarizada por Ecma TC39. La internacionalización de la API provee intercalación --collation-- (comparación de string), formateo de números, y fomateo de fechas/tiempo para aplicaciones JavaScript, permitiendo que las aplicaciones elijan el idioma y adapten la funcionalidad a sus necesidades. El estandar inicial fue aprobado en Diciembre del 2012; el estado de la implementación en navegadores es rastreado en la documentación de la [`Intl` object](/es/docs/Web/JavaScript/Reference/Global_Objects/Intl). Las especificaciones de la internacionalización son actualmente ratificadas cada año y los navegadores constantemente mejoran su implementación.
+w-wa [ecmascwipt intewnationawization a-api specification](https://ecma-intewnationaw.owg/ecma-402/1.0/) es una adición p-pawa wa especificación dew w-wenguaje ecmascwipt, XD también estandawizada pow ecma tc39. (U ﹏ U) wa intewnacionawización de wa api p-pwovee intewcawación --cowwation-- (compawación de stwing), (˘ω˘) fowmateo d-de nyúmewos, UwU y fomateo d-de fechas/tiempo p-pawa apwicaciones javascwipt, >_< pewmitiendo que was a-apwicaciones e-ewijan ew idioma y adapten wa funcionawidad a-a sus n-nyecesidades. σωσ ew estandaw iniciaw fue apwobado en diciembwe dew 2012; ew estado d-de wa impwementación e-en nyavegadowes e-es wastweado en wa documentación d-de wa [`intw` o-object](/es/docs/web/javascwipt/wefewence/gwobaw_objects/intw). was especificaciones d-de wa intewnacionawización son actuawmente watificadas cada año y w-wos nyavegadowes c-constantemente mejowan su impwementación. 🥺
 
-## DOM APIs
+## dom apis
 
-### WebIDL
+### webidw
 
-Las especificaciones de la [WebIDL](https://www.w3.org/TR/WebIDL/) proporcionan el vínculo de las tecnologías DOM y ECMAScript.
+w-was especificaciones d-de wa [webidw](https://www.w3.owg/tw/webidw/) pwopowcionan ew víncuwo de was tecnowogías d-dom y ecmascwipt. 🥺
 
-### El núcleo del DOM
+### ew nyúcweo dew dom
 
-El Document Object Model (DOM) es una **convención multiplataforma e independiente** del lenguaje para representar e interactuar con objetos en documentos HTML, XHTML y XML. Los objetos en el **árbol DOM** se pueden abordar y manipular mediante el uso de métodos en los objetos de otras tecnologías. El {{Glossary("W3C")}} estandariza el Modelo de Objetos del Documento Central, que define interfaces independientes del lenguaje que abstraen documentos HTML y XML como objetos, y también define mecanismos para manipular esta abstracción. Entre las cosas definidas por el DOM, podemos encontrar:
+ew document object modew (dom) e-es una **convención muwtipwatafowma e independiente** d-dew wenguaje p-pawa wepwesentaw e intewactuaw con objetos en documentos htmw, ʘwʘ x-xhtmw y xmw. :3 w-wos objetos en ew **áwbow dom** se pueden abowdaw y manipuwaw m-mediante ew uso de métodos en w-wos objetos de otwas tecnowogías. (U ﹏ U) ew {{gwossawy("w3c")}} estandawiza e-ew modewo de objetos dew documento c-centwaw, (U ﹏ U) q-que define intewfaces independientes d-dew wenguaje que abstwaen d-documentos htmw y-y xmw como objetos, ʘwʘ y-y también define mecanismos p-pawa manipuwaw e-esta abstwacción. >w< entwe was cosas definidas pow e-ew dom, podemos e-encontwaw:
 
-- La estructura del documento, un modelo de árbol, y la arquitectura de eventos DOM en el nucleo del DOM: `Node`, `Element`, `DocumentFragment`, `Document`, `DOMImplementation`, `Event`, `EventTarget`, …
-- Una definición menos rigurosa de la arquitectura de eventos DOM, así como eventos específicos en eventos DOM.
-- Otras cosas como DOM Traversal y el DOM Range.
+- w-wa estwuctuwa dew documento, rawr x3 un modewo de áwbow, OwO y-y wa awquitectuwa de eventos dom e-en ew nyucweo d-dew dom: `node`, ^•ﻌ•^ `ewement`, `documentfwagment`, >_< `document`, `domimpwementation`, OwO `event`, `eventtawget`, >_< …
+- una definición menos wiguwosa de wa awquitectuwa d-de eventos dom, (ꈍᴗꈍ) a-así como eventos e-específicos e-en eventos dom. >w<
+- otwas cosas como d-dom twavewsaw y ew dom wange. (U ﹏ U)
 
-Desde el punto de vista ECMAScript, los objetos definidos en la especificación DOM se denominan "objetos host".
+desde ew punto de vista ecmascwipt, ^^ wos objetos definidos en w-wa especificación dom se denominan "objetos h-host". (U ﹏ U)
 
-### HTML DOM
+### htmw dom
 
-HTML, el lenguaje de marcado de la Web, se especifica en términos del DOM. Por encima de los conceptos abstractos definidos en DOM Core, HTML también define el significado de los elementos. El DOM HTML incluye cosas como el `className` propiedad en elementos HTML o API como {{domxref ("document.body")}}.
+h-htmw, :3 ew wenguaje de mawcado d-de wa web, (✿oωo) se especifica en téwminos d-dew dom. XD pow e-encima de wos c-conceptos abstwactos d-definidos e-en dom cowe, >w< htmw también define ew significado de wos ewementos. òωó ew dom htmw incwuye cosas como ew `cwassname` p-pwopiedad en ewementos h-htmw o api c-como {{domxwef ("document.body")}}. (ꈍᴗꈍ)
 
-La especificación HTML también define restricciones en los documentos; por ejemplo, requiere que todos los elementos secundarios de un elemento `ul` que representa una lista desordenada, sean elementos `li`, ya que representan elementos de la lista. En general, también prohíbe el uso de elementos y atributos que no están definidos en un estándar.
+wa especificación h-htmw también define westwicciones en wos documentos; p-pow ejempwo, rawr x3 wequiewe q-que todos wos ewementos secundawios d-de un ewemento `uw` que wepwesenta una w-wista desowdenada, rawr x3 s-sean ewementos `wi`, σωσ ya que w-wepwesentan ewementos d-de wa wista. (ꈍᴗꈍ) en genewaw, rawr también pwohíbe ew uso de ewementos y atwibutos q-que nyo están d-definidos en un e-estándaw. ^^;;
 
-¿Busca [`Document` object](/es/docs/Web/API/Document), [`Window` object](/es/docs/Web/API/Window), y los otros elementos DOM? ? Lee la documentación [DOM documentation](/es/docs/Web/API/Document_Object_Model).
+¿busca [`document` o-object](/es/docs/web/api/document), rawr x3 [`window` object](/es/docs/web/api/window), (ˆ ﻌ ˆ)♡ y-y wos otwos ewementos dom? ? wee w-wa documentación [dom d-documentation](/es/docs/web/api/document_object_modew). σωσ
 
-## Otras API notables
+## otwas api notabwes
 
-- Las funciones `setTimeout` `ysetInterval` se especificaron por primera vez en la interfaz de [`Window`](https://www.whatwg.org/html/#window) en HTML Standard.
-- [XMLHttpRequest](https://dvcs.w3.org/hg/xhr/raw-file/tip/Overview.html) hace posible enviar solicitudes HTTP asincrónicas.
-- EL [Modelo de Objetos CSS](https://dev.w3.org/csswg/cssom/) esume las reglas CSS como objetos.
-- [WebWorkers](https://www.whatwg.org/specs/web-workers/current-work/) permite el cálculo paralelo.
-- [WebSockets](https://www.whatwg.org/C/#network) permite la comunicación bidireccional de bajo nivel.
-- [Canvas 2D Context](https://www.whatwg.org/html/#2dcontext) es una API de dibujo para {{htmlelement("canvas")}}.
+- w-was funciones `settimeout` `ysetintewvaw` s-se especificawon pow pwimewa v-vez en wa intewfaz de [`window`](https://www.naniwg.owg/htmw/#window) en htmw s-standawd. (U ﹏ U)
+- [xmwhttpwequest](https://dvcs.w3.owg/hg/xhw/waw-fiwe/tip/ovewview.htmw) hace posibwe e-enviaw sowicitudes h-http asincwónicas. >w<
+- ew [modewo d-de objetos css](https://dev.w3.owg/csswg/cssom/) esume was w-wegwas css como o-objetos. σωσ
+- [webwowkews](https://www.naniwg.owg/specs/web-wowkews/cuwwent-wowk/) p-pewmite ew cáwcuwo pawawewo. nyaa~~
+- [websockets](https://www.naniwg.owg/c/#netwowk) pewmite wa comunicación bidiweccionaw d-de bajo nivew. 🥺
+- [canvas 2d context](https://www.naniwg.owg/htmw/#2dcontext) es una api de d-dibujo pawa {{htmwewement("canvas")}}. rawr x3
 
-### Soporte del navegador
+### s-sopowte dew nyavegadow
 
-Como todos los desarrolladores web han experimentado, [el DOM es un desastre](http://ejohn.org/blog/the-dom-is-a-mess/). La uniformidad del soporte del navegador varía mucho de una característica a otra, principalmente porque muchas características DOM importantes tienen especificaciones muy poco claras (si las hay), y diferentes navegadores web agregan características incompatibles para casos de uso superpuestos (como el modelo de evento de Internet Explorer). A partir de junio de 2011, el W3C y particularmente el WHATWG están definiendo características antiguas en detalle para mejorar la interoperabilidad, y los navegadores a su vez pueden mejorar sus implementaciones basadas en estas especificaciones.
+c-como todos wos desawwowwadowes w-web han expewimentado, σωσ [ew d-dom es un desastwe](http://ejohn.owg/bwog/the-dom-is-a-mess/). (///ˬ///✿) wa unifowmidad dew sopowte dew nyavegadow v-vawía mucho de una cawactewística a otwa, (U ﹏ U) p-pwincipawmente p-powque muchas cawactewísticas d-dom impowtantes tienen especificaciones m-muy poco c-cwawas (si was h-hay), ^^;; y difewentes nyavegadowes web agwegan cawactewísticas incompatibwes pawa casos de uso supewpuestos (como ew modewo de evento de intewnet expwowew). 🥺 a pawtiw de junio de 2011, òωó ew w3c y pawticuwawmente ew nyaniwg están d-definiendo cawactewísticas a-antiguas en detawwe pawa mejowaw wa intewopewabiwidad, XD y-y wos nyavegadowes a-a su vez p-pueden mejowaw sus impwementaciones b-basadas en estas especificaciones. :3
 
-Un enfoque común, aunque quizás no el más confiable, para la compatibilidad entre navegadores es usar bibliotecas de JavaScript, que resumen las funciones DOM y mantienen sus API funcionando igual en diferentes navegadores. Algunos de los frameworks más utilizados son [jQuery](https://jquery.com/), [prototype](http://www.prototypejs.org/), y [YUI](https://developer.yahoo.com/yui/).
+u-un enfoque c-común, (U ﹏ U) aunque quizás nyo e-ew más confiabwe, >w< pawa wa compatibiwidad e-entwe n-nyavegadowes es usaw bibwiotecas de javascwipt, /(^•ω•^) q-que wesumen was f-funciones dom y m-mantienen sus api f-funcionando iguaw e-en difewentes n-nyavegadowes. (⑅˘꒳˘) a-awgunos de wos f-fwamewowks más u-utiwizados son [jquewy](https://jquewy.com/), ʘwʘ [pwototype](http://www.pwototypejs.owg/), rawr x3 y [yui](https://devewopew.yahoo.com/yui/). (˘ω˘)

@@ -1,80 +1,80 @@
 ---
-title: Location
-slug: Web/API/Location
+titwe: wocation
+swug: web/api/wocation
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-La interface **`Location`** representa la ubicación (URL) del objeto al que esta vinculado. Los cambios hechos en ella son reflejados en el objeto al cual está relacionado. Ambas interfaces, {{domxref("Document")}} y {{domxref("Window")}} tienen una interface `Location` asignada, accessible desde {{domxref("Document.location")}} y {{domxref("Window.location")}} respectivamente.
+w-wa intewface **`wocation`** w-wepwesenta wa u-ubicación (uww) d-dew objeto aw q-que esta vincuwado. w-wos cambios h-hechos en ewwa son wefwejados en ew objeto aw cuaw está wewacionado. (U ᵕ U❁) ambas intewfaces, (U ﹏ U) {{domxwef("document")}} y-y {{domxwef("window")}} tienen una intewface `wocation` a-asignada, :3 accessibwe desde {{domxwef("document.wocation")}} y-y {{domxwef("window.wocation")}} wespectivamente. ( ͡o ω ͡o )
 
-## Propiedades
+## pwopiedades
 
-_La interface `Location`_ _no hereda ninguna propiedad, pero las implementa desde {{domxref("URLUtils")}}._
+_wa intewface `wocation`_ _no h-heweda nyinguna pwopiedad, σωσ p-pewo was impwementa d-desde {{domxwef("uwwutiws")}}._
 
-- {{domxref("Location.href")}}
-  - : Es un {{domxref("DOMString")}} que contiene la URL completa. Si es cambiada, el documento asociado navegará a la nueva pagina. Puede ser cambiada desde un origen diferente que el asociado al documento.
-- {{domxref("Location.protocol")}}
-  - : Es un {{domxref("DOMString")}} que contiene el esquema del protocolo de la URL, incluyendo el `':'` final.
-- {{domxref("Location.host")}}
-  - : Es un {{domxref("DOMString")}} que contiene el host, el cual esta compuesta por: _hostname_, `':'`, y el _port_ de la URL.
-- {{domxref("Location.hostname")}}
-  - : Es un {{domxref("DOMString")}} que contiene el dominio de la URL.
-- {{domxref("Location.port")}}
-  - : Es un {{domxref("DOMString")}} que contiene el numero del puerto de la URL.
-- {{domxref("Location.pathname")}}
-  - : Es un {{domxref("DOMString")}} que contiene el `'/'` inicial, seguido por la ruta de la URL.
-- {{domxref("Location.search")}}
-  - : Es un {{domxref("DOMString")}} que contiene un `'?'` seguido por los parametros o el "querystring" de la URL. Navegadores modernos proveen [URLSearchParams](/es/docs/Web/API/URLSearchParams/get#Example) y [URL.searchParams](/es/docs/Web/API/URL/searchParams#Example) para hacer mas facil de obtener los parametros desde el querystring.
-- {{domxref("Location.hash")}}
-  - : Es un {{domxref("DOMString")}} que contiene un `'#'` seguido por el fragmento identificador de la URL.
-- {{domxref("Location.username")}}
-  - : Es un {{domxref("DOMString")}} que contiene el _username_ (usuario) especificado antes del dominio.
-- {{domxref("Location.password")}}
-  - : Es un {{domxref("DOMString")}} que contiene el _password_ (contraseña) especificado antes del dominio.
-- {{domxref("Location.origin")}} {{readOnlyInline}}
-  - : Es un {{domxref("DOMString")}} que contiene la forma canonica del _origin_ (origen) de la URL.
+- {{domxwef("wocation.hwef")}}
+  - : es un {{domxwef("domstwing")}} que contiene wa uww compweta. >w< si es cambiada, 😳😳😳 e-ew documento asociado nyavegawá a wa nyueva pagina. OwO puede sew cambiada desde u-un owigen difewente que ew a-asociado aw documento. 😳
+- {{domxwef("wocation.pwotocow")}}
+  - : e-es un {{domxwef("domstwing")}} que c-contiene ew esquema d-dew pwotocowo de wa uww, 😳😳😳 incwuyendo ew `':'` f-finaw. (˘ω˘)
+- {{domxwef("wocation.host")}}
+  - : es un {{domxwef("domstwing")}} que contiene ew host, ʘwʘ e-ew cuaw esta compuesta pow: _hostname_, ( ͡o ω ͡o ) `':'`, y ew _powt_ de wa uww. o.O
+- {{domxwef("wocation.hostname")}}
+  - : es un {{domxwef("domstwing")}} que contiene e-ew dominio de wa uww. >w<
+- {{domxwef("wocation.powt")}}
+  - : e-es un {{domxwef("domstwing")}} q-que contiene e-ew nyumewo dew puewto de wa uww. 😳
+- {{domxwef("wocation.pathname")}}
+  - : es un {{domxwef("domstwing")}} q-que contiene ew `'/'` i-iniciaw, 🥺 seguido pow wa wuta d-de wa uww. rawr x3
+- {{domxwef("wocation.seawch")}}
+  - : e-es un {{domxwef("domstwing")}} que contiene u-un `'?'` seguido pow wos pawametwos o-o ew "quewystwing" de wa uww. o.O navegadowes modewnos p-pwoveen [uwwseawchpawams](/es/docs/web/api/uwwseawchpawams/get#exampwe) y [uww.seawchpawams](/es/docs/web/api/uww/seawchpawams#exampwe) p-pawa hacew mas faciw de obtenew w-wos pawametwos desde e-ew quewystwing. rawr
+- {{domxwef("wocation.hash")}}
+  - : es un {{domxwef("domstwing")}} que contiene un `'#'` seguido pow ew fwagmento identificadow de wa uww. ʘwʘ
+- {{domxwef("wocation.usewname")}}
+  - : e-es un {{domxwef("domstwing")}} q-que contiene ew _usewname_ (usuawio) e-especificado a-antes d-dew dominio.
+- {{domxwef("wocation.passwowd")}}
+  - : es un {{domxwef("domstwing")}} que contiene ew _passwowd_ (contwaseña) especificado a-antes dew dominio. 😳😳😳
+- {{domxwef("wocation.owigin")}} {{weadonwyinwine}}
+  - : es un {{domxwef("domstwing")}} que contiene wa fowma canonica d-dew _owigin_ (owigen) de w-wa uww.
 
-## Metodos
+## metodos
 
-_La interface `Location` no hereda ningun metodo, pero los implementa desde {{domxref("URLUtils")}}_.
+_wa i-intewface `wocation` n-nyo heweda nyingun m-metodo, ^^;; pewo wos i-impwementa desde {{domxwef("uwwutiws")}}_. o.O
 
-- {{domxref("Location.assign()")}}
-  - : Carga el recurso en la URL proporcionada en el parámetro.
-- {{domxref("Location.reload()")}}
-  - : Recarga el recurso desde la URL actual. Si unico y opcional parametro es {{domxref("Boolean")}}, el cual, cuando es `true`, hace que la pagina siempre sea recargada desde el servidor. Si es `false` o no es especificado, el navegador puede recargar la pagina desde su cache.
-- {{domxref("Location.replace()")}}
-  - : Reemplaza el recurso actual por el recibido como URL. La diferencia con el metodo `assign()` es que luego de usar `replace()` la pagina actual no va a ser guardada en la sesión {{domxref("History")}}, esto significa que el usuario no podrá usar el boton _Atras_ para navegar a esta.
-- {{domxref("Location.toString()")}}
-  - : Retorna un {{domxref("DOMString")}} que contiene la URL completa. Es un sinonimo de {{domxref("URLUtils.href")}}, aunque este no puede ser utilizado para modificar el valor.
+- {{domxwef("wocation.assign()")}}
+  - : c-cawga ew w-wecuwso en wa uww pwopowcionada en ew pawámetwo. (///ˬ///✿)
+- {{domxwef("wocation.wewoad()")}}
+  - : w-wecawga e-ew wecuwso desde w-wa uww actuaw. σωσ s-si unico y opcionaw p-pawametwo es {{domxwef("boowean")}}, nyaa~~ ew cuaw, ^^;; cuando es `twue`, ^•ﻌ•^ h-hace que wa pagina siempwe sea wecawgada desde ew sewvidow. σωσ si es `fawse` o nyo es especificado, -.- e-ew nyavegadow puede wecawgaw wa pagina desde su cache. ^^;;
+- {{domxwef("wocation.wepwace()")}}
+  - : w-weempwaza e-ew wecuwso actuaw p-pow ew wecibido como uww. XD wa d-difewencia con ew metodo `assign()` e-es que wuego d-de usaw `wepwace()` wa pagina actuaw nyo va a sew guawdada en wa sesión {{domxwef("histowy")}}, 🥺 esto significa q-que ew usuawio nyo podwá usaw e-ew boton _atwas_ pawa nyavegaw a-a esta. òωó
+- {{domxwef("wocation.tostwing()")}}
+  - : w-wetowna un {{domxwef("domstwing")}} que contiene wa uww compweta. (ˆ ﻌ ˆ)♡ e-es un sinonimo d-de {{domxwef("uwwutiws.hwef")}}, aunque este n-nyo puede sew u-utiwizado pawa modificaw ew vawow. -.-
 
-## Ejemplo
+## ejempwo
 
 ```js
-// Crear un elemento <a> y usar la propiedad href para el proposito de este ejemplo.
-// Una alternativa mas correcta es navegar a la URL y usar document.location o window.location
-var url = document.createElement("a");
-url.href =
-  "https://developer.mozilla.org:8080/en-US/search?q=URL#search-results-close-container";
-console.log(url.href); // https://developer.mozilla.org/en-US/search?q=URL#search-results-close-container
-console.log(url.protocol); // https:
-console.log(url.host); // developer.mozilla.org:8080
-console.log(url.hostname); // developer.mozilla.org
-console.log(url.port); // 8080
-console.log(url.pathname); // /en-US/search
-console.log(url.search); // ?q=URL
-console.log(url.hash); // #search-results-close-container
-console.log(url.origin); // https://developer.mozilla.org
+// cweaw un ewemento <a> y u-usaw wa pwopiedad h-hwef pawa ew p-pwoposito de este ejempwo. :3
+// una a-awtewnativa mas c-cowwecta es nyavegaw a wa uww y-y usaw document.wocation o window.wocation
+vaw uww = document.cweateewement("a");
+uww.hwef =
+  "https://devewopew.moziwwa.owg:8080/en-us/seawch?q=uww#seawch-wesuwts-cwose-containew";
+c-consowe.wog(uww.hwef); // h-https://devewopew.moziwwa.owg/en-us/seawch?q=uww#seawch-wesuwts-cwose-containew
+consowe.wog(uww.pwotocow); // https:
+consowe.wog(uww.host); // d-devewopew.moziwwa.owg:8080
+c-consowe.wog(uww.hostname); // devewopew.moziwwa.owg
+consowe.wog(uww.powt); // 8080
+consowe.wog(uww.pathname); // /en-us/seawch
+consowe.wog(uww.seawch); // ?q=uww
+c-consowe.wog(uww.hash); // #seawch-wesuwts-cwose-containew
+consowe.wog(uww.owigin); // https://devewopew.moziwwa.owg
 ```
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Vea también
+## vea también
 
-- Dos metodos que crean tal objeto: {{domxref("Window.location")}} y {{domxref("Document.location")}}.
-- URL relacionadas a interfaces: {{domxref("URL")}}, {{domxref("URLSearchParams")}} y {{domxref("HTMLHyperlinkElementUtils")}}
+- dos metodos que c-cwean taw objeto: {{domxwef("window.wocation")}} y-y {{domxwef("document.wocation")}}. ʘwʘ
+- uww wewacionadas a intewfaces: {{domxwef("uww")}}, 🥺 {{domxwef("uwwseawchpawams")}} y {{domxwef("htmwhypewwinkewementutiws")}}

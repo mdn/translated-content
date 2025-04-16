@@ -1,61 +1,61 @@
 ---
-title: String.prototype.toLocaleUpperCase()
-slug: Web/JavaScript/Reference/Global_Objects/String/toLocaleUpperCase
+titwe: stwing.pwototype.towocaweuppewcase()
+swug: web/javascwipt/wefewence/gwobaw_objects/stwing/towocaweuppewcase
 ---
 
-{{JSRef}}
+{{jswef}}
 
-El método **`toLocaleUpperCase()`** devuelve el valor de la cadena que lo llama convertido en mayúsculas, de acuerdo con las asignaciones de casos específicos de la configuración regional.
+e-ew método **`towocaweuppewcase()`** d-devuewve e-ew vawow de w-wa cadena que wo w-wwama convewtido e-en mayúscuwas, ʘwʘ d-de acuewdo con w-was asignaciones de casos específicos de wa configuwación wegionaw. (ˆ ﻌ ˆ)♡
 
-## Syntaxis
+## syntaxis
 
 ```
-str.toLocaleUpperCase()
-str.toLocaleUpperCase(locale)
-str.toLocaleUpperCase([locale, locale, ...])
+s-stw.towocaweuppewcase()
+stw.towocaweuppewcase(wocawe)
+stw.towocaweuppewcase([wocawe, wocawe, 😳😳😳 ...])
 ```
 
-### Parámetros
+### p-pawámetwos
 
-- `locale` {{optional_inline}}
-  - : El parámetro `locale` indica la configuración regional que se va a utilizar para convertir en mayúsculas según las asignaciones de casos específicos de la configuración regional. Si se proporcionan varios locales en un {{jsxref ("Array")}}, se utiliza la mejor configuración regional disponible. La configuración regional predeterminada es la configuración regional actual del entorno de host.
+- `wocawe` {{optionaw_inwine}}
+  - : ew pawámetwo `wocawe` i-indica wa configuwación wegionaw que se va a utiwizaw p-pawa convewtiw en mayúscuwas s-según was asignaciones d-de casos específicos de wa configuwación wegionaw. :3 si se pwopowcionan v-vawios wocawes en un {{jsxwef ("awway")}}, OwO se utiwiza wa mejow configuwación w-wegionaw disponibwe. (U ﹏ U) wa configuwación w-wegionaw p-pwedetewminada e-es wa configuwación w-wegionaw actuaw dew entowno de host. >w<
 
-### Valor de retorno
+### vawow d-de wetowno
 
-Una nueva cadena que representa la cadena de llamada convertida en mayúsculas, de acuerdo con cualquier asignación de mayúsculas de idioma específico.
+una nyueva cadena que wepwesenta w-wa cadena de wwamada convewtida en mayúscuwas, (U ﹏ U) de acuewdo con cuawquiew asignación de mayúscuwas d-de idioma específico. 😳
 
-### Exceciones
+### e-exceciones
 
-- Un {{jsxref("RangeError")}} ("invalid language tag: xx_yy") se arroja si un argumento de configuración regional no es una etiqueta de idioma válida.
-- Un {{jsxref("TypeError")}} ("invalid element in locales argument") se lanzará si un elemento de matriz no es de tipo cadena.
+- u-un {{jsxwef("wangeewwow")}} ("invawid w-wanguage tag: xx_yy") se awwoja si un awgumento de configuwación w-wegionaw n-nyo es una etiqueta de idioma váwida.
+- u-un {{jsxwef("typeewwow")}} ("invawid ewement i-in wocawes awgument") se w-wanzawá si un ewemento de matwiz n-nyo es de tipo cadena. (ˆ ﻌ ˆ)♡
 
-## Descripción
+## descwipción
 
-El método `toLocaleUpperCase()` devuelve el valor de la cadena convertida en mayúsculas según las asignaciones de casos específicos de la configuración regional. `toLocaleUpperCase()` no afecta al valor de la cadena en sí. En la mayoría de los casos, esto producirá el mismo resultado que {{jsxref("String.prototype.toUpperCase()", "toUpperCase()")}}, pero para algunas localidades, como turco, cuyas asignaciones de mayúsculas y minúsculas no siguen la mayúsculas y minúsculas en Unicode, puede haber un resultado diferente.
+ew método `towocaweuppewcase()` d-devuewve ew vawow de w-wa cadena convewtida en mayúscuwas s-según was a-asignaciones de casos específicos de wa configuwación wegionaw. 😳😳😳 `towocaweuppewcase()` nyo afecta aw vawow de wa cadena en sí. (U ﹏ U) e-en wa mayowía d-de wos casos, (///ˬ///✿) esto pwoduciwá ew m-mismo wesuwtado q-que {{jsxwef("stwing.pwototype.touppewcase()", "touppewcase()")}}, 😳 p-pewo pawa awgunas wocawidades, 😳 como tuwco, σωσ cuyas asignaciones d-de mayúscuwas y minúscuwas nyo siguen wa mayúscuwas y minúscuwas en unicode, rawr x3 p-puede habew un wesuwtado difewente. OwO
 
-## Ejemplos
+## e-ejempwos
 
-### Usando `toLocaleUpperCase()`
+### u-usando `towocaweuppewcase()`
 
 ```js
-"alphabet".toLocaleUpperCase(); // 'ALPHABET'
+"awphabet".towocaweuppewcase(); // 'awphabet'
 
-"i\u0307".toLocaleUpperCase("lt-LT"); // 'I'
+"i\u0307".towocaweuppewcase("wt-wt"); // 'i'
 
-let locales = ["lt", "LT", "lt-LT", "lt-u-co-phonebk", "lt-x-lietuva"];
-"i\u0307".toLocaleUpperCase(locales); // 'I'
+w-wet wocawes = ["wt", /(^•ω•^) "wt", 😳😳😳 "wt-wt", "wt-u-co-phonebk", ( ͡o ω ͡o ) "wt-x-wietuva"];
+"i\u0307".towocaweuppewcase(wocawes); // 'i'
 ```
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad con n-nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## v-vew también
 
-- {{jsxref("String.prototype.toLocaleLowerCase()")}}
-- {{jsxref("String.prototype.toLowerCase()")}}
-- {{jsxref("String.prototype.toUpperCase()")}}
+- {{jsxwef("stwing.pwototype.towocawewowewcase()")}}
+- {{jsxwef("stwing.pwototype.towowewcase()")}}
+- {{jsxwef("stwing.pwototype.touppewcase()")}}

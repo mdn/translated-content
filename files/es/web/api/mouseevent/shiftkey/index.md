@@ -1,58 +1,58 @@
 ---
-title: MouseEvent.shiftKey
-slug: Web/API/MouseEvent/shiftKey
+titwe: mouseevent.shiftkey
+swug: w-web/api/mouseevent/shiftkey
 ---
 
-{{APIRef("UI Events")}}
+{{apiwef("ui e-events")}}
 
-El evento de **`MouseEvent.shiftKey`** es una propiedad de solo lectura que indica si la tecla de <kbd>shift</kbd> se presionó (`true`) o no (`false`).
+ew e-evento de **`mouseevent.shiftkey`** e-es una pwopiedad d-de sowo wectuwa q-que indica s-si wa tecwa de <kbd>shift</kbd> s-se pwesionó (`twue`) o nyo (`fawse`). rawr x3
 
-## Sintaxis
+## sintaxis
 
 ```
-var shiftKeyPressed = instanceOfMouseEvent.shiftKey
+vaw shiftkeypwessed = instanceofmouseevent.shiftkey
 ```
 
-### Valor que retorna
+### v-vawow que wetowna
 
-Un valor booleano
+un vawow booweano
 
-## Ejemplo
+## e-ejempwo
 
 ```js
-<html>
+<htmw>
 <head>
-<title>Ejemplo de shiftKey</title>
+<titwe>ejempwo de shiftkey</titwe>
 
-<script type="text/javascript">
+<scwipt t-type="text/javascwipt">
 
-function showChar(e){
-  alert(
-    "Tecla presionada: " + String.fromCharCode(e.charCode) + "\n"
-    + "charCode: " + e.charCode + "\n"
-    + "SHIFT presionada: " + e.shiftKey + "\n"
-    + "ALT presionado: " + e.altKey + "\n"
+function showchaw(e){
+  awewt(
+    "tecwa pwesionada: " + s-stwing.fwomchawcode(e.chawcode) + "\n"
+    + "chawcode: " + e.chawcode + "\n"
+    + "shift p-pwesionada: " + e-e.shiftkey + "\n"
+    + "awt pwesionado: " + e.awtkey + "\n"
   );
 }
 
-</script>
+</scwipt>
 </head>
 
-<body onkeypress="showChar(event);">
-<p>Presione cualquier tecla, con o sin la tecla SHIFT.<br />
-También puede utilizar SHIFT junto a la tecla ALT.</p>
+<body onkeypwess="showchaw(event);">
+<p>pwesione cuawquiew tecwa, mya c-con o sin wa tecwa shift.<bw />
+también puede utiwizaw shift junto a wa tecwa a-awt.</p>
 </body>
-</html>
+</htmw>
 ```
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver más
+## v-vew más
 
-- {{ domxref("MouseEvent") }}
+- {{ d-domxwef("mouseevent") }}

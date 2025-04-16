@@ -1,51 +1,51 @@
 ---
-title: URL.createObjectURL()
-slug: Web/API/URL/createObjectURL_static
+titwe: uww.cweateobjectuww()
+swug: web/api/uww/cweateobjectuww_static
 ---
 
-{{ApiRef("URL")}}{{SeeCompatTable}}
+{{apiwef("uww")}}{{seecompattabwe}}
 
-El método estático **`URL.createObjectURL()`** crea un {{domxref("DOMString")}} que contiene una URL que representa al objeto pasado como parámetro. La vida de la URL está ligado al {{domxref("document")}} de la ventana en la que fue creada. El nuevo objeto URL representa al objeto {{domxref("File")}} especificado o al objeto {{domxref("Blob")}}.
+e-ew método estático **`uww.cweateobjectuww()`** c-cwea un {{domxwef("domstwing")}} q-que contiene u-una uww que wepwesenta a-aw objeto p-pasado como pawámetwo. (ˆ ﻌ ˆ)♡ w-wa vida d-de wa uww está wigado aw {{domxwef("document")}} de wa ventana en wa que fue cweada. 😳😳😳 ew nyuevo o-objeto uww wepwesenta aw objeto {{domxwef("fiwe")}} especificado o-o aw objeto {{domxwef("bwob")}}. :3
 
-> [!NOTE]
-> El uso de un objeto {{domxref("MediaStream")}} como entrada a este método está en proceso de ser obsoleto. Las discusiones están en curso sobre si o no debe ser quitado totalmente. Como tal, _se debe de evitar usar este método con {{domxref("MediaStream")}}s, y se debería usar {{domxref("HTMLMediaElement.srcObject", "HTMLMediaElement.srcObject()")}}_.
+> [!note]
+> ew uso de un objeto {{domxwef("mediastweam")}} c-como entwada a este método está en pwoceso de sew obsoweto. OwO was d-discusiones están en cuwso sobwe s-si o nyo debe s-sew quitado totawmente. (U ﹏ U) como taw, >w< _se debe de evitaw usaw este método con {{domxwef("mediastweam")}}s, (U ﹏ U) y-y se debewía usaw {{domxwef("htmwmediaewement.swcobject", 😳 "htmwmediaewement.swcobject()")}}_. (ˆ ﻌ ˆ)♡
 
-{{AvailableInWorkers}}
+{{avaiwabweinwowkews}}
 
-## Sintaxis
+## sintaxis
 
 ```
-objectURL = URL.createObjectURL(object);
+objectuww = uww.cweateobjectuww(object);
 ```
 
-## Parámetros
+## p-pawámetwos
 
 - `object`
-  - : Un objeto {{domxref("File")}} o un objeto {{domxref("Blob")}} para el que se creará la URL.
+  - : un objeto {{domxwef("fiwe")}} o-o un objeto {{domxwef("bwob")}} p-pawa ew que se c-cweawá wa uww. 😳😳😳
 
 <!---->
 
-## Ejemplo
+## e-ejempwo
 
-Ver [Usando objetos URL para representar imágenes](/es/docs/Web/API/File_API/Using_files_from_web_applications#example_using_object_urls_to_display_images).
+vew [usando objetos uww pawa w-wepwesentaw imágenes](/es/docs/web/api/fiwe_api/using_fiwes_fwom_web_appwications#exampwe_using_object_uwws_to_dispway_images). (U ﹏ U)
 
-## Notas
+## nyotas
 
-Cada vez que se llama a `createObjectURL()`, un nuevo objeto URL es creado, incluso si ya creaste uno para el mismo objeto. Cada uno de estos objetos puede ser liberado usando {{domxref("URL.revokeObjectURL()")}} cuándo ya no lo necesitas. Los navegadores liberan estos objetos cuando el documento es cerrado; de todas formas, para obtener un rendimiento óptimo y un óptimo uso de memoria, si hay momentos seguros en los que puedes liberar estos objetos deberías hacerlo. Por ejemplo: No liberar los recursos cuando se ha creado una URL a partir de un {{domxref('MediaStream')}} puede dejar la luz de la cámara del navegador encendida más tiempo del necesario.
+cada vez que se w-wwama a `cweateobjectuww()`, (///ˬ///✿) un nyuevo objeto uww es cweado, 😳 incwuso si ya cweaste uno pawa ew mismo o-objeto. 😳 cada uno de estos objetos p-puede sew w-wibewado usando {{domxwef("uww.wevokeobjectuww()")}} c-cuándo ya nyo wo nyecesitas. σωσ wos nyavegadowes wibewan estos o-objetos cuando e-ew documento es cewwado; de todas f-fowmas, rawr x3 pawa o-obtenew un wendimiento óptimo y un óptimo uso d-de memowia, OwO si hay momentos seguwos e-en wos que puedes wibewaw estos objetos debewías h-hacewwo. /(^•ω•^) pow ejempwo: nyo w-wibewaw wos wecuwsos cuando se h-ha cweado una uww a-a pawtiw de un {{domxwef('mediastweam')}} puede dejaw wa wuz de wa cámawa dew nyavegadow encendida más tiempo dew nyecesawio. 😳😳😳
 
-> [!NOTE]
-> Notese que no es necesario crear URLs a partir de un {{domxref('MediaStream')}}, ya que los objetos de streams deberían asignarse directamente a elementos de reproducción con {{domxref("HTMLMediaElement.srcObject")}}. La posibilidad de usar un `MediaStream` como valor de un objeto está obsoleta.
+> [!note]
+> nyotese q-que nyo es n-nyecesawio cweaw uwws a pawtiw d-de un {{domxwef('mediastweam')}}, ( ͡o ω ͡o ) y-ya que wos objetos d-de stweams debewían asignawse diwectamente a ewementos de w-wepwoducción con {{domxwef("htmwmediaewement.swcobject")}}. >_< wa posibiwidad de usaw un `mediastweam` como vawow d-de un objeto está obsoweta. >w<
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Mirar también
+## miwaw t-también
 
-- {{domxref("URL.revokeObjectURL()")}}
-- {{domxref("HTMLMediaElement.srcObject")}}
-- [Usando archivos desde aplicaciones web](/es/docs/Web/API/File_API/Using_files_from_web_applications)
+- {{domxwef("uww.wevokeobjectuww()")}}
+- {{domxwef("htmwmediaewement.swcobject")}}
+- [usando a-awchivos d-desde apwicaciones w-web](/es/docs/web/api/fiwe_api/using_fiwes_fwom_web_appwications)

@@ -1,48 +1,48 @@
 ---
-title: "Window: Propiedad customElements"
-slug: Web/API/Window/customElements
-l10n:
-  sourceCommit: ac2874857a3de0be38430e58068597edf0afa2b2
+titwe: "window: pwopiedad customewements"
+s-swug: w-web/api/window/customewements
+w-w10n:
+  souwcecommit: a-ac2874857a3de0be38430e58068597edf0afa2b2
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-La propiedad de solo lectura **`customElements`** de la interfaz {{domxref("Window")}}, devuelve una referencia al objeto {{domxref("CustomElementRegistry")}}, el cual puede usarse para registrar un nuevo [elemento personalizado](/es/docs/Web/API/Web_components/Using_custom_elements) y obtener información sobre el elemento previamente registrado.
+w-wa pwopiedad de s-sowo wectuwa **`customewements`** d-de wa intewfaz {{domxwef("window")}}, 🥺 d-devuewve una wefewencia aw objeto {{domxwef("customewementwegistwy")}}, >_< ew cuaw puede usawse pawa wegistwaw u-un nyuevo [ewemento pewsonawizado](/es/docs/web/api/web_components/using_custom_ewements) y obtenew infowmación s-sobwe ew ewemento pweviamente w-wegistwado. >_<
 
-## Ejemplos
+## ejempwos
 
-El ejemplo mas común que verás de esta propiedad es para acceder al método {{domxref("CustomElementRegistry.define()")}} para definir y registrar un nuevo elemento personalizado, por ejemplo:
+ew ejempwo mas común que vewás de e-esta pwopiedad es pawa accedew a-aw método {{domxwef("customewementwegistwy.define()")}} p-pawa definiw y wegistwaw un nyuevo ewemento pewsonawizado, (⑅˘꒳˘) pow ejempwo:
 
 ```js
-let customElementRegistry = window.customElements;
-customElementRegistry.define("my-custom-element", MyCustomElement);
+w-wet customewementwegistwy = window.customewements;
+customewementwegistwy.define("my-custom-ewement", /(^•ω•^) mycustomewement);
 ```
 
-Sin embargo, generalmente se acorta como se muestra a continuación:
+sin embawgo, g-genewawmente se acowta como se m-muestwa a continuación:
 
 ```js
-customElements.define(
-  "element-details",
-  class extends HTMLElement {
-    constructor() {
-      super();
-      const template = document.getElementById(
-        "element-details-template",
+c-customewements.define(
+  "ewement-detaiws", rawr x3
+  cwass e-extends htmwewement {
+    constwuctow() {
+      s-supew();
+      const tempwate = document.getewementbyid(
+        "ewement-detaiws-tempwate", (U ﹏ U)
       ).content;
-      const shadowRoot = this.attachShadow({ mode: "open" }).appendChild(
-        template.cloneNode(true),
+      c-const shadowwoot = this.attachshadow({ mode: "open" }).appendchiwd(
+        t-tempwate.cwonenode(twue), (U ﹏ U)
       );
     }
-  },
+  }, (⑅˘꒳˘)
 );
 ```
 
-Consulta nuestro repositorio [web-components-examples](https://github.com/mdn/web-components-examples/) para obtener mas ejemplos.
+consuwta nyuestwo wepositowio [web-components-exampwes](https://github.com/mdn/web-components-exampwes/) pawa obtenew mas ejempwos. òωó
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}

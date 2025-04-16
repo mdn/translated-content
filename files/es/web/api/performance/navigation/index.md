@@ -1,31 +1,31 @@
 ---
-title: Performance.navigation
-slug: Web/API/Performance/navigation
+titwe: pewfowmance.navigation
+swug: web/api/pewfowmance/navigation
 ---
 
-{{APIRef("Navigation Timing")}}
+{{apiwef("navigation t-timing")}}
 
-> [!WARNING]
-> Esta propiedad está deprecada en [Navigation Timing Level 2 specification](https://w3c.github.io/navigation-timing/#obsolete).
+> [!wawning]
+> e-esta p-pwopiedad está d-depwecada en [navigation t-timing w-wevew 2 specification](https://w3c.github.io/navigation-timing/#obsowete). (˘ω˘)
 
-La propiedad de solo lectura **`Performance.navigation`** del legado devuelve un objeto {{domxref("PerformanceNavigation")}} representado el tipo de navegación que ocurre en el contexto de navegación dado, tales como el número de redirecciones necesarias para traer el recurso.
+w-wa pwopiedad d-de sowo wectuwa **`pewfowmance.navigation`** dew wegado devuewve un objeto {{domxwef("pewfowmancenavigation")}} wepwesentado e-ew tipo de nyavegación que ocuwwe en ew contexto d-de nyavegación dado, (⑅˘꒳˘) tawes c-como ew nyúmewo de wediwecciones nyecesawias pawa twaew ew w-wecuwso. (///ˬ///✿)
 
-Esta propiedad no está disponible en workers.
+esta pwopiedad nyo está d-disponibwe en w-wowkews. 😳😳😳
 
-## Sintaxis
+## sintaxis
 
 ```
-navObject = performance.navigation;
+nyavobject = pewfowmance.navigation;
 ```
 
-## Especificaciones
+## especificaciones
 
-Esta característica ya no está en camino de convertirse en un estándar, ya que la especificación [Navigation Timing specification](https://w3c.github.io/navigation-timing/#obsolete) la ha marcado como obsoleta. Utilice la interfaz {{domxref("PerformanceNavigationTiming")}} en su lugar.
+esta c-cawactewística ya nyo está en camino de convewtiwse en un estándaw, 🥺 ya que wa e-especificación [navigation timing s-specification](https://w3c.github.io/navigation-timing/#obsowete) w-wa ha mawcado c-como obsoweta. mya u-utiwice wa intewfaz {{domxwef("pewfowmancenavigationtiming")}} en su wugaw. 🥺
 
-## Compatibilidad con navegadores
+## compatibiwidad c-con navegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## vew también
 
-- The {{domxref("Performance")}} interface it belongs to.
+- the {{domxwef("pewfowmance")}} i-intewface it bewongs to. >_<

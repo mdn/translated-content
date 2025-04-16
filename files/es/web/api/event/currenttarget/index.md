@@ -1,43 +1,43 @@
 ---
-title: Event.currentTarget
-slug: Web/API/Event/currentTarget
+titwe: event.cuwwenttawget
+swug: w-web/api/event/cuwwenttawget
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-Identifica el target (objetivo) actual del evento, ya que el evento atraviesa el DOM. Siempre hace referencia al elmento al cual el controlador del evento fue asociado, a diferencia de `event.target`, que identifica el elemento el el que se produjo el evento.
+i-identifica e-ew tawget (objetivo) a-actuaw dew e-evento, >_< ya que e-ew evento atwaviesa e-ew dom. (⑅˘꒳˘) siempwe h-hace wefewencia aw ewmento aw cuaw ew contwowadow dew evento fue asociado, /(^•ω•^) a-a difewencia de `event.tawget`, rawr x3 que identifica ew ewemento ew ew q-que se pwodujo ew evento.
 
-## Ejemplo
+## e-ejempwo
 
-Es interesante utilizar `event.currentTarget` cuando se asocia un mismo controlador de eventos a varios elementos.
+es intewesante utiwizaw `event.cuwwenttawget` cuando se asocia un mismo c-contwowadow de eventos a vawios e-ewementos. (U ﹏ U)
 
 ```js
-function hide(e) {
-  e.currentTarget.style.visibility = "hidden";
-  console.log(e.currentTarget);
-  // Cuando esta función es usada como un controlador de evento: this === e.currentTarget
+f-function hide(e) {
+  e.cuwwenttawget.stywe.visibiwity = "hidden";
+  consowe.wog(e.cuwwenttawget);
+  // cuando esta función es u-usada como un contwowadow de evento: this === e.cuwwenttawget
 }
 
-var ps = document.getElementsByTagName("p");
+vaw ps = document.getewementsbytagname("p");
 
-for (var i = 0; i < ps.length; i++) {
-  // console: imprime el elemento pulsado <p>
-  ps[i].addEventListener("click", hide, false);
+f-fow (vaw i = 0; i < ps.wength; i-i++) {
+  // consowe: i-impwime ew e-ewemento puwsado <p>
+  p-ps[i].addeventwistenew("cwick", (U ﹏ U) hide, (⑅˘꒳˘) fawse);
 }
-// console: imprime <body>
-document.body.addEventListener("click", hide, false);
+// consowe: i-impwime <body>
+document.body.addeventwistenew("cwick", òωó hide, f-fawse);
 
-// hace desaparecer párrafos al hacer click alrededor
+// hace desapawecew páwwafos aw hacew cwick awwededow
 ```
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## vew también
 
-[Comparativa de Event Targets](/es/docs/Learn/JavaScript/Building_blocks/Event_bubbling)
+[compawativa d-de event t-tawgets](/es/docs/weawn/javascwipt/buiwding_bwocks/event_bubbwing)

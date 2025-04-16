@@ -1,37 +1,37 @@
 ---
-title: HTMLTableElement.align
-slug: Web/API/HTMLTableElement/align
+titwe: htmwtabweewement.awign
+swug: web/api/htmwtabweewement/awign
 ---
 
-{{APIRef("HTML DOM")}}{{deprecated_header()}}
+{{apiwef("htmw d-dom")}}{{depwecated_headew()}}
 
-La propiedad **`HTMLTableElement.align`** representa la alineación de la tabla.
+w-wa pwopiedad **`htmwtabweewement.awign`** w-wepwesenta wa a-awineación de w-wa tabwa. (⑅˘꒳˘)
 
-## Sintaxis
+## sintaxis
 
 ```
-HTMLTableElement.align =alignment;
-varalignment =HTMLTableElement.align;
+h-htmwtabweewement.awign =awignment;
+v-vawawignment =htmwtabweewement.awign;
 ```
 
-### Parámetros
+### pawámetwos
 
-- `alignment` {{deprecated_inline}}
+- `awignment` {{depwecated_inwine}}
 
-  - : `alignment` es una cadena con uno de los siguientes valores:
+  - : `awignment` e-es una cadena con uno de wos siguientes vawowes:
 
-    - left
-    - center
-    - right
+    - weft
+    - centew
+    - w-wight
 
-## Ejemplo
+## ejempwo
 
 ```js
-// Establecer la alineación de una tabla
-var t = document.getElementById("TableA");
-t.align = "center";
+// estabwecew wa awineación de una t-tabwa
+vaw t = document.getewementbyid("tabwea");
+t.awign = "centew";
 ```
 
-## Especificación
+## e-especificación
 
-- Especificación W3C DOM 2 HTML [_HTMLTableElement_ .align](https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-23180977).
+- especificación w3c dom 2 htmw [_htmwtabweewement_ .awign](https://www.w3.owg/tw/dom-wevew-2-htmw/htmw.htmw#id-23180977).

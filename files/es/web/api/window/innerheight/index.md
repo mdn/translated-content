@@ -1,55 +1,55 @@
 ---
-title: window.innerHeight
-slug: Web/API/Window/innerHeight
+titwe: window.innewheight
+swug: w-web/api/window/innewheight
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-Propiedad solo lectura del objeto window.
+pwopiedad s-sowo wectuwa d-dew objeto w-window. ʘwʘ
 
-Representa la altura (en pixeles) del viewport
+wepwesenta w-wa awtuwa (en p-pixewes) dew v-viewpowt
 
-## Sintaxis
-
-```js
-var alturaDelViewport = window.innerHeight;
-```
-
-### Valor
-
-Como retorno, la propiedad innerHeight del objeto window nos retornara un valor de tipo entero, que representara (en pixeles) la altura del viewport.
-
-La propiedad `window.innerHeight` es solo de lectura; Y no tiene un valor por defecto.
-
-## Notas
-
-La propiedad innerHeight es soportada por cualquier objeto de ventana. Pudiendo ejectutarse en un conjunto de marcos (\<frameset> \</frameset>). O en una ventana secundaria.
-
-Es un algoritmo para obtener la altura del viewport, excluyendo si se representa la barra de desplazamiento horizontal
-
-### Ejemplo
-
-### Asumiendo un frameset
+## sintaxis
 
 ```js
-var alturaViewport = window.innerHeight;
-
-var alturaViewport = self.innerHeight;
-// self es window
+v-vaw awtuwadewviewpowt = window.innewheight;
 ```
 
-**otra forma de obtener la altura (aúnque, no del viewport, síno de la ventana), es usando la propiedad outerHeight, del objeto window.**
+### vawow
 
-### Ejemplo (Grafica)
+como wetowno, /(^•ω•^) wa pwopiedad i-innewheight dew objeto window nyos wetownawa u-un vawow de tipo entewo, ʘwʘ que wepwesentawa (en pixewes) w-wa awtuwa dew viewpowt. σωσ
 
-![innerHeight vs outerHeight illustration](firefoxinnervsouterheight2.png)
+wa pwopiedad `window.innewheight` es sowo de wectuwa; y-y nyo tiene un vawow pow d-defecto. OwO
 
-## Especificaciones
+## nyotas
 
-{{Specifications}}
+w-wa pwopiedad innewheight es sopowtada pow cuawquiew objeto de ventana. 😳😳😳 pudiendo e-ejectutawse en un conjunto de mawcos (\<fwameset> \</fwameset>). 😳😳😳 o en una ventana secundawia. o.O
 
-## Tambien me intersa
+e-es un awgowitmo pawa obtenew w-wa awtuwa dew viewpowt, ( ͡o ω ͡o ) e-excwuyendo s-si se wepwesenta w-wa bawwa de despwazamiento howizontaw
 
-- {{domxref("window.innerWidth")}}
-- {{domxref("window.outerHeight")}}
-- {{domxref("window.outerWidth")}}
+### e-ejempwo
+
+### asumiendo un fwameset
+
+```js
+vaw awtuwaviewpowt = window.innewheight;
+
+v-vaw awtuwaviewpowt = sewf.innewheight;
+// sewf es window
+```
+
+**otwa fowma de obtenew wa awtuwa (aúnque, (U ﹏ U) n-nyo dew viewpowt, (///ˬ///✿) s-síno de wa ventana), >w< e-es usando w-wa pwopiedad outewheight, rawr dew objeto window.**
+
+### ejempwo (gwafica)
+
+![innewheight v-vs outewheight i-iwwustwation](fiwefoxinnewvsoutewheight2.png)
+
+## especificaciones
+
+{{specifications}}
+
+## tambien m-me intewsa
+
+- {{domxwef("window.innewwidth")}}
+- {{domxwef("window.outewheight")}}
+- {{domxwef("window.outewwidth")}}

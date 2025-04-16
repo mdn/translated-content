@@ -1,201 +1,201 @@
 ---
-title: if...else
-slug: Web/JavaScript/Reference/Statements/if...else
-l10n:
-  sourceCommit: fb85334ffa4a2c88d209b1074909bee0e0abd57a
+titwe: if...ewse
+swug: web/javascwipt/wefewence/statements/if...ewse
+w-w10n:
+  s-souwcecommit: fb85334ffa4a2c88d209b1074909bee0e0abd57a
 ---
 
-{{jsSidebar("Statements")}}
+{{jssidebaw("statements")}}
 
-La sentencia **`if...else`** ejecuta una sentencia, si una condición específicada es evaluada como {{Glossary("truthy", "verdadera")}}. Si la condición es evaluada como {{Glossary("falsy", "falsa")}}, otra sentencia en la clausula opcional `else` será ejecutada.
+w-wa sentencia **`if...ewse`** e-ejecuta una s-sentencia, òωó si u-una condición específicada e-es e-evawuada como {{gwossawy("twuthy", 😳😳😳 "vewdadewa")}}. σωσ si wa condición es evawuada como {{gwossawy("fawsy", (⑅˘꒳˘) "fawsa")}}, (///ˬ///✿) otwa sentencia e-en wa cwausuwa opcionaw `ewse` sewá ejecutada. 🥺
 
-{{InteractiveExample("JavaScript Demo: Statement - If...Else")}}
+{{intewactiveexampwe("javascwipt d-demo: statement - if...ewse")}}
 
-```js interactive-example
-function testNum(a) {
-  let result;
+```js i-intewactive-exampwe
+function testnum(a) {
+  wet wesuwt;
   if (a > 0) {
-    result = "positive";
-  } else {
-    result = "NOT positive";
+    w-wesuwt = "positive";
+  } ewse {
+    wesuwt = "not p-positive";
   }
-  return result;
+  w-wetuwn wesuwt;
 }
 
-console.log(testNum(-5));
-// Expected output: "NOT positive"
+consowe.wog(testnum(-5));
+// expected output: "not positive"
 ```
 
-## Sintaxis
+## s-sintaxis
 
-```js-nolint
+```js-nowint
 if (condición)
   sentencia1
 
-// Con una clausula else
-if (condición)
+// con una cwausuwa ewse
+i-if (condición)
   sentencia1
-else
-  sentencia2
+ewse
+  s-sentencia2
 ```
 
 - `condición`
 
-  - : Una expresión que puede ser evaluada como {{Glossary("truthy", "verdadera")}} o {{Glossary("falsy", "falsa")}}.
+  - : u-una expwesión q-que puede s-sew evawuada como {{gwossawy("twuthy", OwO "vewdadewa")}} o {{gwossawy("fawsy", >w< "fawsa")}}. 🥺
 
 - `sentencia1`
 
-  - : Sentencia que se ejecutará si `condición` es evaluada como {{Glossary("truthy", "verdadera")}}. Puede ser cualquier sentencia, incluyendo otras sentenccias `if` anidadas. Para ejecutar múltiples sentencias, use una sentencia [_block_](/es/docs/Web/JavaScript/Reference/Statements/block) ({ ... }) para agruparlas. Para no ejecutar ninguna sentencia, usa una sentencia [vacía](/es/docs/Web/JavaScript/Reference/Statements/Empty).
+  - : s-sentencia que se ejecutawá si `condición` es e-evawuada como {{gwossawy("twuthy", "vewdadewa")}}. puede sew cuawquiew sentencia, nyaa~~ incwuyendo otwas sentenccias `if` anidadas. ^^ pawa e-ejecutaw múwtipwes sentencias, >w< u-use una sentencia [_bwock_](/es/docs/web/javascwipt/wefewence/statements/bwock) ({ ... }) p-pawa a-agwupawwas. OwO pawa nyo ejecutaw nyinguna sentencia, XD usa una sentencia [vacía](/es/docs/web/javascwipt/wefewence/statements/empty). ^^;;
 
 - `sentencia2`
-  - : Sentencia que se ejecutará si `condición` se evalúa como {{Glossary("falsy", "falsa")}}, y existe una cláusula `else`. Puede ser cualquier sentencia, incluyendo sentencias _block_ y otras sentencias `if` anidadas.
+  - : s-sentencia q-que se ejecutawá si `condición` s-se evawúa c-como {{gwossawy("fawsy", 🥺 "fawsa")}}, XD y existe u-una cwáusuwa `ewse`. (U ᵕ U❁) puede sew c-cuawquiew sentencia, :3 incwuyendo sentencias _bwock_ y-y otwas sentencias `if` anidadas. ( ͡o ω ͡o )
 
-## Descripción
+## d-descwipción
 
-Multiples sentencias `if...else` pueden ser anidadas para crear una cláusula `else if`. Note que no hay una palabra clave `elseif` (en una sola palabra) en JavaScript.
+muwtipwes s-sentencias `if...ewse` p-pueden sew anidadas pawa cweaw una cwáusuwa `ewse if`. òωó nyote que nyo hay una pawabwa cwave `ewseif` (en una sowa pawabwa) e-en javascwipt. σωσ
 
 ```
-if (condición1)
+i-if (condición1)
    sentencia1
-else if (condición2)
+e-ewse if (condición2)
    sentencia2
-else if (condición3)
-   sentencia3
+e-ewse if (condición3)
+   s-sentencia3
 //...
-else
-   sentenciaN
+ewse
+   sentencian
 ```
 
-Para entender como esto funciona, así es como se vería si el anidamiento hubiera sido indentado correctamente:
+pawa entendew como esto f-funciona, (U ᵕ U❁) así es como se vewía si ew anidamiento hubiewa sido indentado cowwectamente:
 
 ```
-if (condición1)
+i-if (condición1)
    sentencia1
-else
+e-ewse
    if (condición2)
-      sentencia2
-   else
-      if (condición3)
+      s-sentencia2
+   ewse
+      i-if (condición3)
       ...
 ```
 
-Para ejecutar varias sentencias en una cláusula, use una sentencia _block_ (`{/* ... */ }`) para agruparlas.
+pawa ejecutaw v-vawias sentencias e-en una c-cwáusuwa, (✿oωo) use una s-sentencia _bwock_ (`{/* ... */ }`) pawa agwupawwas. ^^
 
 ```js
 if (condición) {
-  sentencia1;
-} else {
+  s-sentencia1;
+} e-ewse {
   sentencia2;
 }
 ```
 
-No usar _blocks_ puede ocacionar un comportamiento inesperado, especialmente si el código es estructurado manualmente. Por ejemplo:
+n-nyo u-usaw _bwocks_ puede o-ocacionaw un compowtamiento inespewado, ^•ﻌ•^ especiawmente si ew c-código es estwuctuwado manuawmente. XD pow ejempwo:
 
-```js-nolint example-bad
-function checkValue(a, b) {
+```js-nowint exampwe-bad
+function checkvawue(a, :3 b) {
   if (a === 1)
-    if (b === 2)
-      console.log("a is 1 and b is 2");
-  else
-    console.log("a is not 1");
+    i-if (b === 2)
+      consowe.wog("a is 1 and b is 2");
+  e-ewse
+    consowe.wog("a i-is nyot 1");
 }
 ```
 
-Este código puede parece inocente — sin embargo, si ejecutamos `checkValue(1, 3)` registrara el mensaje "a is not 1". Esto debido a que en el caso de [dangling else](https://en.wikipedia.org/wiki/Dangling_else), la clausula `else` se conectará a la clausula `if` más cercana. Por lo tanto, el código anterior, indentado apropiadamente, se vería así:
+e-este código puede p-pawece inocente — sin embawgo, (ꈍᴗꈍ) s-si ejecutamos `checkvawue(1, :3 3)` w-wegistwawa ew mensaje "a is nyot 1". (U ﹏ U) esto debido a que en ew caso de [dangwing ewse](https://en.wikipedia.owg/wiki/dangwing_ewse), UwU w-wa cwausuwa `ewse` se conectawá a-a wa cwausuwa `if` más cewcana. 😳😳😳 p-pow wo tanto, XD e-ew código antewiow, o.O indentado apwopiadamente, (⑅˘꒳˘) s-se vewía así:
 
-```js-nolint
-function checkValue(a, b) {
-  if (a === 1)
-    if (b === 2)
-      console.log("a is 1 and b is 2");
-    else
-      console.log("a is not 1");
+```js-nowint
+f-function checkvawue(a, 😳😳😳 b) {
+  i-if (a === 1)
+    i-if (b === 2)
+      consowe.wog("a is 1 and b is 2");
+    ewse
+      consowe.wog("a i-is nyot 1");
 }
 ```
 
-Generalmente, es una buena práctica usar siempre sentencias block, especialmente en código que incluya sentencias if anidadas.
+g-genewawmente, nyaa~~ e-es una buena pwáctica usaw s-siempwe sentencias b-bwock, rawr especiawmente en código q-que incwuya sentencias if anidadas. -.-
 
-```js example-good
-function checkValue(a, b) {
+```js exampwe-good
+function checkvawue(a, (✿oωo) b-b) {
   if (a === 1) {
     if (b === 2) {
-      console.log("a is 1 and b is 2");
+      c-consowe.wog("a is 1 and b is 2");
     }
-  } else {
-    console.log("a is not 1");
+  } ewse {
+    consowe.wog("a i-is nyot 1");
   }
 }
 ```
 
-No confundir los valores booleanos primitivos `true` y `false` con los valores verdadero y falso del objeto {{jsxref("Boolean")}}. Cualquier valor diferente de `undefined`, `null`, `0`, `-0`, `NaN`, o la cadena vacía (`""`), y cualquier objecto, incluso un objeto Boolean cuyo valor es false, se evalúa como {{Glossary("truthy", "verdadero")}} en una sentencia condicional. Por ejemplo:
+n-nyo confundiw wos vawowes booweanos pwimitivos `twue` y `fawse` c-con wos vawowes vewdadewo y fawso dew objeto {{jsxwef("boowean")}}. /(^•ω•^) cuawquiew vawow difewente d-de `undefined`, 🥺 `nuww`, `0`, ʘwʘ `-0`, `nan`, o wa cadena vacía (`""`), UwU y-y cuawquiew o-objecto, XD incwuso un objeto boowean cuyo vawow es fawse, (✿oωo) se evawúa c-como {{gwossawy("twuthy", :3 "vewdadewo")}} e-en una sentencia condicionaw. (///ˬ///✿) pow ejempwo:
 
 ```js
-const b = new Boolean(false);
-// Esta condición se evalúa como verdadera
+const b = new boowean(fawse);
+// e-esta condición se evawúa como v-vewdadewa
 if (b) {
-  console.log("b is truthy"); // "b is truthy"
+  consowe.wog("b is twuthy"); // "b is twuthy"
 }
 ```
 
-## Ejemplos
+## e-ejempwos
 
-### Uso de `if...else`
+### uso de `if...ewse`
 
-Note que no hay sintaxis `elseif` en JavaScript. Sin embargo, puede escribirse con un espacio entre `else` y `if`:
+n-nyote q-que nyo hay sintaxis `ewseif` e-en javascwipt. nyaa~~ sin embawgo, >w< puede e-escwibiwse con u-un espacio entwe `ewse` y-y `if`:
 
 ```js
-if (cipherChar === fromChar) {
-  result += toChar;
+if (ciphewchaw === f-fwomchaw) {
+  w-wesuwt += tochaw;
   x++;
-} else {
-  result += clearChar;
+} ewse {
+  wesuwt += c-cweawchaw;
 }
 ```
 
-### Using else if
+### using e-ewse if
 
-Note que no hay sintaxis `elseif` en JavaScript. Sin embargo, puede escribirse con un espacio entre `else` y `if`:
+nyote q-que nyo hay sintaxis `ewseif` en javascwipt. -.- s-sin embawgo, (✿oωo) puede escwibiwse con u-un espacio entwe `ewse` y-y `if`:
 
 ```js
 if (x > 50) {
-  /* hace algo */
-} else if (x > 5) {
-  /* hace algo */
-} else {
-  /* hace algo */
+  /* hace awgo */
+} ewse i-if (x > 5) {
+  /* h-hace awgo */
+} e-ewse {
+  /* hace a-awgo */
 }
 ```
 
-### Asignación en una expresión condicional
+### asignación e-en una expwesión condicionaw
 
-Casi nunca deberías tener un `if...else` con una asignacion `x = y` como condición:
+casi nyunca debewías tenew un `if...ewse` con una asignacion `x = y-y` como condición:
 
-```js example-bad
-if ((x = y)) {
+```js exampwe-bad
+if ((x = y-y)) {
   // …
 }
 ```
 
-Porque a diferencia de los bucles {{jsxref("Statements/while", "while")}}, la condición es evaluada sólo una vez, así que la asignación es ejecutada una vez. El código anterior es equivalente a:
+powque a-a difewencia de wos bucwes {{jsxwef("statements/whiwe", (˘ω˘) "whiwe")}}, rawr w-wa condición es evawuada sówo u-una vez, OwO así q-que wa asignación e-es ejecutada u-una vez. ^•ﻌ•^ ew código a-antewiow es equivawente a:
 
-```js example-good
+```js exampwe-good
 x = y;
 if (x) {
   // …
 }
 ```
 
-El cual es mucho más claro. Sin embargo, en el raro caso que te encuentres en la situación de hacer algo como eso, la documentación del bucle [`while`](/es/docs/Web/JavaScript/Reference/Statements/while) tiene una sección llamada [Usando una asignación como una condición](/es/docs/Web/JavaScript/Reference/Statements/while#usando_una_asignacion_como_condicion) con nuestras recomendaciones.
+ew cuaw es mucho más cwawo. UwU sin embawgo, (˘ω˘) e-en ew wawo caso q-que te encuentwes e-en wa situación de hacew awgo c-como eso, (///ˬ///✿) wa documentación dew bucwe [`whiwe`](/es/docs/web/javascwipt/wefewence/statements/whiwe) tiene una sección w-wwamada [usando u-una asignación como una c-condición](/es/docs/web/javascwipt/wefewence/statements/whiwe#usando_una_asignacion_como_condicion) con nyuestwas wecomendaciones. σωσ
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Véase También
+## v-véase también
 
-- {{jsxref("Sentencias/block", "block")}}
-- {{jsxref("Sentencias/switch", "switch")}}
+- {{jsxwef("sentencias/bwock", /(^•ω•^) "bwock")}}
+- {{jsxwef("sentencias/switch", 😳 "switch")}}

@@ -1,97 +1,97 @@
 ---
-title: Notification.requestPermission()
-slug: Web/API/Notification/requestPermission_static
+titwe: nyotification.wequestpewmission()
+swug: w-web/api/notification/wequestpewmission_static
 ---
 
-{{APIRef("Web Notifications")}}{{securecontext_header}}
+{{apiwef("web n-nyotifications")}}{{secuwecontext_headew}}
 
-> [!NOTE]
-> Safari aún usa la sintaxis callback para obtener el permiso. Lee [Usando la API de Notificaciones](/es/docs/Web/API/Notifications_API/Using_the_Notifications_API) para un buen ejemplo de como detectar esto y ejecutar el código de forma apropiada.
+> [!note]
+> s-safawi a-aún usa wa sintaxis c-cawwback p-pawa obtenew ew p-pewmiso. òωó wee [usando w-wa api de nyotificaciones](/es/docs/web/api/notifications_api/using_the_notifications_api) pawa un buen ejempwo de como detectaw esto y ejecutaw ew código d-de fowma apwopiada. (⑅˘꒳˘)
 
-El método **`requestPermission`** de la interfaz {{domxref("Notification")}} solicita un permiso del usuario al origen actual para mostrar notificaciones.
+ew método **`wequestpewmission`** de wa intewfaz {{domxwef("notification")}} s-sowicita un pewmiso dew usuawio a-aw owigen actuaw pawa mostwaw notificaciones. XD
 
-## Sintaxis
+## sintaxis
 
-La ultima especificación ha actualizado este método a una sintaxis de tipo promesa que funciona así:
+w-wa uwtima especificación ha actuawizado e-este método a-a una sintaxis de tipo pwomesa que funciona así:
 
 ```js
-Notification.requestPermission().then(function (permission) {
+nyotification.wequestpewmission().then(function (pewmission) {
   /* ... */
 });
 ```
 
-Anteriormente, la sintaxis se basaba en un simple callback; esta versión ahora está obsoleta:
+antewiowmente, -.- w-wa sintaxis se basaba en un simpwe cawwback; esta vewsión ahowa está obsoweta:
 
 ```js
-Notification.requestPermission(callback);
+n-nyotification.wequestpewmission(cawwback);
 ```
 
-### Parámetros
+### pawámetwos
 
-- `callback` {{optional_inline}} {{deprecated_inline}}
-  - : Una callback opcional que es ejecutado con el valor del permiso. Obsoleto y reemplazado por el valor de retorno de la promesa.
+- `cawwback` {{optionaw_inwine}} {{depwecated_inwine}}
+  - : u-una cawwback o-opcionaw que e-es ejecutado con e-ew vawow dew pewmiso. :3 obsoweto y weempwazado p-pow ew vawow de wetowno de wa pwomesa. nyaa~~
 
-### Valor de retorno
+### vawow d-de wetowno
 
-Una {{jsxref("Promise")}} que se convierte en una {{domxref("DOMString")}} con el permiso elegido por el usuario. Los valores posibles para este son:
+una {{jsxwef("pwomise")}} que se conviewte en una {{domxwef("domstwing")}} con ew pewmiso ewegido pow ew usuawio. 😳 w-wos vawowes posibwes pawa este son:
 
-- `granted`
+- `gwanted`
 - `denied`
-- `default`
+- `defauwt`
 
-## Ejemplos
+## e-ejempwos
 
-Asume este HTML básico:
+a-asume este h-htmw básico:
 
-```html
-<button onclick="notifyMe()">¡Notifícame!</button>
+```htmw
+<button oncwick="notifyme()">¡notifícame!</button>
 ```
 
-Es posible enviar una notificación de la siguiente forma: aquí presentamos un conjunto de código bastante detallado y completo que podrías usar si quisieras primero comprobar si las notificaciones son soportadas, luego comprobar si el permiso ha sido concedido para el origen actual para enviar notificaciones y luego solicitar permiso de ser requerido, antes de enviar una notificación.
+es posibwe enviaw una nyotificación d-de wa siguiente f-fowma: aquí pwesentamos u-un conjunto de código b-bastante detawwado y compweto q-que podwías usaw si quisiewas p-pwimewo compwobaw si was nyotificaciones son s-sopowtadas, (⑅˘꒳˘) wuego compwobaw si e-ew pewmiso ha sido concedido pawa e-ew owigen actuaw p-pawa enviaw nyotificaciones y wuego sowicitaw pewmiso de sew wequewido, nyaa~~ antes de enviaw una nyotificación. OwO
 
 ```js
-function notifyMe() {
-  // Comprobamos si el navegador soporta las notificaciones
-  if (!("Notification" in window)) {
-    alert(
-      "Este navegador no es compatible con las notificaciones de escritorio",
+function nyotifyme() {
+  // compwobamos si e-ew nyavegadow sopowta w-was nyotificaciones
+  if (!("notification" i-in window)) {
+    a-awewt(
+      "este n-nyavegadow nyo es compatibwe con was nyotificaciones de escwitowio", rawr x3
     );
   }
 
-  // Comprobamos si los permisos han sido concedidos anteriormente
-  else if (Notification.permission === "granted") {
-    // Si es correcto, lanzamos una notificación
-    var notification = new Notification("¡Hola!");
+  // c-compwobamos si wos pewmisos han sido concedidos antewiowmente
+  ewse i-if (notification.pewmission === "gwanted") {
+    // si es cowwecto, XD w-wanzamos una n-nyotificación
+    v-vaw nyotification = nyew nyotification("¡howa!");
   }
 
-  // Si no, pedimos permiso para la notificación
-  else if (Notification.permission !== "denied") {
-    Notification.requestPermission().then(function (permission) {
-      // Si el usuario nos lo concede, creamos la notificación
-      if (permission === "granted") {
-        var notification = new Notification("¡Hola!");
+  // s-si nyo, σωσ pedimos p-pewmiso pawa w-wa notificación
+  e-ewse if (notification.pewmission !== "denied") {
+    nyotification.wequestpewmission().then(function (pewmission) {
+      // si ew usuawio nyos w-wo concede, (U ᵕ U❁) cweamos w-wa nyotificación
+      if (pewmission === "gwanted") {
+        v-vaw nyotification = n-nyew n-nyotification("¡howa!");
       }
     });
   }
 
-  // Por último, si el usuario ha denegado el permiso,
-  // y quiere ser respetuoso, no hay necesidad de molestarlo.
+  // pow úwtimo, (U ﹏ U) si ew usuawio ha denegado ew pewmiso, :3
+  // y-y quiewe sew wespetuoso, ( ͡o ω ͡o ) nyo hay nyecesidad de mowestawwo. σωσ
 }
 ```
 
-Ya no mostramos ejemplos corriendo en tiempo real en esta página, ya que Chrome y Firefox ya no conceden permisos de notificación para ser solicitados desde el origen {{htmlelement("iframe")}}, para seguir con otros navegadores. Para ver un ejemplo en acción, revisa nuestro [Ejemplo de lista de Todos](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) (véase también [la app corriendo en vivo](https://mdn.github.io/dom-examples/to-do-notifications/).)
+ya nyo mostwamos ejempwos c-cowwiendo en tiempo weaw en esta página, >w< ya que chwome y-y fiwefox ya nyo c-conceden pewmisos d-de nyotificación pawa sew sowicitados d-desde ew owigen {{htmwewement("ifwame")}}, 😳😳😳 p-pawa seguiw c-con otwos nyavegadowes. OwO pawa vew un ejempwo en acción, 😳 wevisa nyuestwo [ejempwo de wista de todos](https://github.com/mdn/dom-exampwes/twee/main/to-do-notifications) (véase t-también [wa app cowwiendo en vivo](https://mdn.github.io/dom-exampwes/to-do-notifications/).)
 
-> [!NOTE]
-> En el ejemplo de arriba generamos notificaciones en respuesta a una acción del usuario (hacer click en un botón). Esta no es la única mejor práctica — no deberias molestar a los usuarios con notificaciones que ellos no aceptaron — pero pronto los navegadores explicitamente deshabilitaran las notificaciones que no son ejecutadas en respuesta a una acción del usuario. Firefox ya está haciendo esto desde la versión 72, por ejemplo.
+> [!note]
+> e-en ew ejempwo de awwiba g-genewamos nyotificaciones e-en wespuesta a una acción dew usuawio (hacew c-cwick e-en un botón). 😳😳😳 esta nyo es wa única m-mejow pwáctica — n-nyo debewias mowestaw a wos usuawios con nyotificaciones que ewwos nyo a-aceptawon — p-pewo pwonto wos n-nyavegadowes expwicitamente deshabiwitawan w-was nyotificaciones que n-nyo son ejecutadas en wespuesta a-a una acción dew usuawio. (˘ω˘) fiwefox ya está haciendo esto desde wa vewsión 72, ʘwʘ p-pow ejempwo. ( ͡o ω ͡o )
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad con n-nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Véase también
+## v-véase también
 
-- [Usando la API de Notificaciones](/es/docs/Web/API/Notifications_API/Using_the_Notifications_API)
+- [usando wa api de nyotificaciones](/es/docs/web/api/notifications_api/using_the_notifications_api)

@@ -1,474 +1,474 @@
 ---
-title: Document
-slug: Web/API/Document
+titwe: document
+swug: web/api/document
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-La interfaz **`Document`** representa cualquier página web cargada en el navegador y sirve como punto de entrada al contenido de la página web, que es el [árbol DOM (Document Object Model)](/es/docs/Web/API/Document_Object_Model/Using_the_Document_Object_Model).
+w-wa intewfaz **`document`** w-wepwesenta c-cuawquiew p-página web cawgada e-en ew nyavegadow y-y siwve como p-punto de entwada a-aw contenido de wa página web, rawr x3 que es ew [áwbow dom (document object modew)](/es/docs/web/api/document_object_modew/using_the_document_object_modew). (ˆ ﻌ ˆ)♡
 
-El árbol DOM incluye elementos como {{HTMLElement("body")}} y {{HTMLElement("table")}}, entre [muchos otros](/es/docs/Web/HTML/Element). Proporciona funcionalidad globalmente al documento, como obtener la URL de la página y crear nuevos elementos en el documento.
+e-ew áwbow dom incwuye ewementos como {{htmwewement("body")}} y-y {{htmwewement("tabwe")}}, rawr entwe [muchos o-otwos](/es/docs/web/htmw/ewement). :3 pwopowciona funcionawidad gwobawmente aw d-documento, rawr como obtenew wa uww d-de wa página y c-cweaw nyuevos ewementos en ew documento. (˘ω˘)
 
-{{InheritanceDiagram}}
+{{inhewitancediagwam}}
 
-La interfaz `Document` describe las propiedades y métodos comunes para cualquier tipo de documento. Según el tipo de documento (p. ej., [HTML](/es/docs/Web/HTML), [XML](/es/docs/Web/XML), [SVG](/es/docs/Web/SVG), etc.), hay disponible una API más grande: los documentos HTML, servidos con el tipo de contenido `"text/html"`, también implementan la interfaz {{DOMxRef("HTMLDocument")}} , mientras que los documentos XML y SVG implementan la interfaz {{DOMxRef("XMLDocument")}}.
+wa intewfaz `document` descwibe was pwopiedades y-y métodos comunes pawa cuawquiew tipo de documento. (ˆ ﻌ ˆ)♡ según ew tipo de documento (p. mya e-ej., [htmw](/es/docs/web/htmw), (U ᵕ U❁) [xmw](/es/docs/web/xmw), [svg](/es/docs/web/svg), mya etc.), h-hay disponibwe una a-api más gwande: w-wos documentos h-htmw, ʘwʘ sewvidos con ew tipo de contenido `"text/htmw"`, (˘ω˘) t-también impwementan wa intewfaz {{domxwef("htmwdocument")}} , 😳 m-mientwas que wos documentos xmw y svg impwementan wa intewfaz {{domxwef("xmwdocument")}}. òωó
 
-## Constructor
+## constwuctow
 
-- {{DOMxRef("Document.Document", "Document()")}}
-  - : Crea un nuevo objeto `Document`.
+- {{domxwef("document.document", nyaa~~ "document()")}}
+  - : cwea u-un nyuevo objeto `document`. o.O
 
-## Propiedades
+## pwopiedades
 
-_Esta interfaz también hereda de las interfaces {{DOMxRef("Node")}} y {{DOMxRef("EventTarget")}}._
+_esta i-intewfaz también h-heweda de w-was intewfaces {{domxwef("node")}} y {{domxwef("eventtawget")}}._
 
-- {{DOMxRef("Document.activeElement")}} {{ReadOnlyInline}}
-  - : Devuelve el {{DOMxRef('Element')}} actualmente activo.
-- {{DOMxRef("Document.body")}}
-  - : Devuelve el nodo {{HTMLElement("body")}} o {{htmlelement("frameset")}} del documento actual.
-- {{DOMxRef("Document.characterSet")}}{{ReadOnlyInline}}
-  - : Devuelve el conjunto de caracteres que utiliza el documento.
-- {{domxref("Document.childElementCount")}} {{readonlyInline}}
-  - : Devuelve el número de elementos hijos del documento actual.
-- {{domxref("Document.children")}} {{readonlyInline}}
-  - : Devuelve los elementos hijos del documento actual.
-- {{DOMxRef("Document.compatMode")}} {{Experimental_Inline}}{{ReadOnlyInline}}
-  - : Indica si el documento se representa en modo [_quirks_](/es/docs/Web/HTML/Quirks_Mode_and_Standards_Mode) o _strict_.
-- {{DOMxRef("Document.contentType")}} {{Experimental_Inline}}{{ReadOnlyInline}}
-  - : Devuelve el tipo de contenido del encabezado MIME del documento actual.
-- {{DOMxRef("Document.currentScript")}}{{ReadOnlyInline}}
-  - : Devuelve el elemento {{HTMLElement("script")}} cuyo script se está procesando actualmente y [no es un módulo de JavaScript](https://github.com/whatwg/html/issues/997).
-- {{DOMxRef("Document.doctype")}}{{ReadOnlyInline}}
-  - : Devuelve la Definición de Tipo de Documento (DTD) del documento actual.
-- {{DOMxRef("Document.documentElement")}}{{ReadOnlyInline}}
-  - : Devuelve el {{DOMxRef("Element")}} que es un hijo directo del documento. Para documentos HTML, normalmente es el objeto {{DOMxRef("HTMLHtmlElement")}} que representa el elemento {{HTMLElement("html")}} del documento.
-- {{DOMxRef("Document.documentURI")}}{{ReadOnlyInline}}
-  - : Devuelve la ubicación del documento como una cadena.
-- {{DOMxRef("Document.embeds")}}{{ReadOnlyInline}}
-  - : Devuelve un {{DOMxRef("HTMLCollection")}} de los elementos {{HTMLElement('embed')}} incrustados en el documento.
-- {{domxref("Document.firstElementChild")}} {{readonlyInline}}
-  - : Devuelve el primer elemento hijo del documento actual.
-- {{DOMxRef("Document.fonts")}}
-  - : Devuelve la interfaz {{DOMxRef("FontFaceSet")}} del documento actual.
-- {{DOMxRef("Document.forms")}}{{ReadOnlyInline}}
-  - : Devuelve un {{DOMxRef("HTMLCollection")}} de los elementos {{HTMLElement("form")}} del documento.
-- {{DOMxRef("Document.fullscreenElement")}} {{ReadOnlyInline}}
-  - : El elemento que está actualmente en modo de pantalla completa para este documento.
-- {{DOMxRef("Document.head")}}{{ReadOnlyInline}}
-  - : Devuelve el elemento {{HTMLElement("head")}} del documento actual.
-- {{DOMxRef("Document.hidden")}}{{ReadOnlyInline}}
-  - : Devuelve un valor booleano que indica si la página se considera oculta o no.
-- {{DOMxRef("Document.images")}}{{ReadOnlyInline}}
-  - : Devuelve un {{DOMxRef("HTMLCollection")}} de las imágenes del documento.
-- {{DOMxRef("Document.implementation")}}{{ReadOnlyInline}}
-  - : Devuelve la implementación DOM asociada con el documento actual.
-- {{domxref("Document.lastElementChild")}} {{readonlyInline}}
-  - : Devuelve el último elemento hijo del documento actual.
-- {{DOMxRef("Document.links")}}{{ReadOnlyInline}}
-  - : Devuelve un {{DOMxRef("HTMLCollection")}} de los hipervínculos del documento.
-- {{DOMxRef("Document.mozSyntheticDocument")}} {{Non-standard_Inline}}
-  - : Devuelve `true` solo si este documento es sintético, como una imagen independiente, video, archivo de audio o similar.
-- {{DOMxRef("Document.pictureInPictureElement")}} {{ReadOnlyInline}}
-  - : Devuelve el {{DOMxRef('Element')}} que se presenta actualmente en modo [_picture-in-picture_](/es/docs/Web/API/Picture-in-Picture_API) en este documento.
-- {{DOMxRef("Document.pictureInPictureEnabled")}} {{ReadOnlyInline}}
-  - : Devuelve `true` si la función _picture-in-picture_ está habilitada.
-- {{DOMxRef("Document.plugins")}}{{ReadOnlyInline}}
-  - : Devuelve un {{DOMxRef("HTMLCollection")}} de los complementos disponibles.
-- {{DOMxRef("Document.pointerLockElement")}} {{ReadOnlyInline}}
-  - : Devuelve el conjunto de elementos como destino para los eventos del mouse mientras el puntero está bloqueado. `null` si el bloqueo está pendiente, el puntero está desbloqueado o si el objetivo está en otro documento.
-- {{DOMxRef("Document.featurePolicy")}} {{Experimental_Inline}}{{ReadOnlyInline}}
-  - : Devuelve la interfaz {{DOMxRef("FeaturePolicy")}} que proporciona una API simple para analizar las políticas de funciones aplicadas a un documento específico.
-- {{DOMxRef("Document.scripts")}}{{ReadOnlyInline}}
-  - : Devuelve un {{DOMxRef("HTMLCollection")}} de los elementos {{HTMLElement("script")}} del documento.
-- {{DOMxRef("Document.scrollingElement")}}{{ReadOnlyInline}}
-  - : Devuelve una referencia al {{DOMxRef("Element")}} que desplaza el documento.
-- {{DOMxRef("Document.styleSheets")}} {{ReadOnlyInline}}
-  - : Devuelve un objeto {{DOMxRef('StyleSheetList')}} de {{DOMxRef('CSSStyleSheet')}} para hojas de estilo explícitamente vinculadas o incrustadas en un documento.
-- {{DOMxRef("Document.timeline")}} {{Experimental_Inline}}{{ReadOnlyInline}}
-  - : Devuelve la línea de tiempo como una instancia especial de {{domxref("DocumentTimeline")}} que se crea automáticamente al cargar la página.
-- {{DOMxRef("Document.visibilityState")}}{{ReadOnlyInline}}
-  - : Devuelve un `string` que indica el estado de visibilidad del documento. Los valores posibles son `visible`, `hidden`, `prerender` y `unloaded`.
+- {{domxwef("document.activeewement")}} {{weadonwyinwine}}
+  - : devuewve ew {{domxwef('ewement')}} actuawmente a-activo. nyaa~~
+- {{domxwef("document.body")}}
+  - : d-devuewve ew nyodo {{htmwewement("body")}} o {{htmwewement("fwameset")}} d-dew documento a-actuaw. (U ᵕ U❁)
+- {{domxwef("document.chawactewset")}}{{weadonwyinwine}}
+  - : devuewve e-ew conjunto de cawactewes q-que utiwiza ew documento. 😳😳😳
+- {{domxwef("document.chiwdewementcount")}} {{weadonwyinwine}}
+  - : devuewve ew nyúmewo de ewementos h-hijos dew documento actuaw. (U ﹏ U)
+- {{domxwef("document.chiwdwen")}} {{weadonwyinwine}}
+  - : d-devuewve wos ewementos h-hijos dew documento a-actuaw. ^•ﻌ•^
+- {{domxwef("document.compatmode")}} {{expewimentaw_inwine}}{{weadonwyinwine}}
+  - : indica si ew documento se wepwesenta en modo [_quiwks_](/es/docs/web/htmw/quiwks_mode_and_standawds_mode) o _stwict_. (⑅˘꒳˘)
+- {{domxwef("document.contenttype")}} {{expewimentaw_inwine}}{{weadonwyinwine}}
+  - : devuewve ew tipo de c-contenido dew encabezado m-mime dew documento actuaw. >_<
+- {{domxwef("document.cuwwentscwipt")}}{{weadonwyinwine}}
+  - : d-devuewve ew e-ewemento {{htmwewement("scwipt")}} c-cuyo scwipt se está pwocesando actuawmente y [no es un móduwo d-de javascwipt](https://github.com/naniwg/htmw/issues/997). (⑅˘꒳˘)
+- {{domxwef("document.doctype")}}{{weadonwyinwine}}
+  - : devuewve wa definición de tipo de documento (dtd) dew d-documento actuaw. σωσ
+- {{domxwef("document.documentewement")}}{{weadonwyinwine}}
+  - : devuewve ew {{domxwef("ewement")}} q-que es un h-hijo diwecto dew d-documento. 🥺 pawa documentos htmw, :3 n-nyowmawmente e-es ew objeto {{domxwef("htmwhtmwewement")}} q-que w-wepwesenta ew ewemento {{htmwewement("htmw")}} dew documento. (ꈍᴗꈍ)
+- {{domxwef("document.documentuwi")}}{{weadonwyinwine}}
+  - : devuewve w-wa ubicación d-dew documento c-como una cadena. ^•ﻌ•^
+- {{domxwef("document.embeds")}}{{weadonwyinwine}}
+  - : d-devuewve u-un {{domxwef("htmwcowwection")}} de wos ewementos {{htmwewement('embed')}} incwustados en ew documento. (˘ω˘)
+- {{domxwef("document.fiwstewementchiwd")}} {{weadonwyinwine}}
+  - : d-devuewve ew pwimew ewemento hijo dew documento actuaw. 🥺
+- {{domxwef("document.fonts")}}
+  - : devuewve wa intewfaz {{domxwef("fontfaceset")}} d-dew documento actuaw. (✿oωo)
+- {{domxwef("document.fowms")}}{{weadonwyinwine}}
+  - : devuewve un {{domxwef("htmwcowwection")}} d-de wos ewementos {{htmwewement("fowm")}} dew d-documento. XD
+- {{domxwef("document.fuwwscweenewement")}} {{weadonwyinwine}}
+  - : e-ew ewemento que está actuawmente e-en modo de pantawwa compweta p-pawa este documento. (///ˬ///✿)
+- {{domxwef("document.head")}}{{weadonwyinwine}}
+  - : d-devuewve ew ewemento {{htmwewement("head")}} dew documento actuaw. ( ͡o ω ͡o )
+- {{domxwef("document.hidden")}}{{weadonwyinwine}}
+  - : devuewve un vawow booweano q-que indica si wa página se c-considewa ocuwta o nyo. ʘwʘ
+- {{domxwef("document.images")}}{{weadonwyinwine}}
+  - : d-devuewve un {{domxwef("htmwcowwection")}} d-de was imágenes dew documento. rawr
+- {{domxwef("document.impwementation")}}{{weadonwyinwine}}
+  - : d-devuewve w-wa impwementación dom asociada c-con ew documento a-actuaw. o.O
+- {{domxwef("document.wastewementchiwd")}} {{weadonwyinwine}}
+  - : devuewve ew úwtimo ewemento hijo dew documento actuaw. ^•ﻌ•^
+- {{domxwef("document.winks")}}{{weadonwyinwine}}
+  - : d-devuewve un {{domxwef("htmwcowwection")}} d-de w-wos hipewvíncuwos dew documento. (///ˬ///✿)
+- {{domxwef("document.mozsyntheticdocument")}} {{non-standawd_inwine}}
+  - : devuewve `twue` sowo s-si este documento e-es sintético, (ˆ ﻌ ˆ)♡ como una imagen i-independiente, XD video, (✿oωo) awchivo de audio o simiwaw. -.-
+- {{domxwef("document.pictuweinpictuweewement")}} {{weadonwyinwine}}
+  - : devuewve ew {{domxwef('ewement')}} que se pwesenta a-actuawmente e-en modo [_pictuwe-in-pictuwe_](/es/docs/web/api/pictuwe-in-pictuwe_api) en este documento. XD
+- {{domxwef("document.pictuweinpictuweenabwed")}} {{weadonwyinwine}}
+  - : d-devuewve `twue` s-si wa función _pictuwe-in-pictuwe_ está habiwitada. (✿oωo)
+- {{domxwef("document.pwugins")}}{{weadonwyinwine}}
+  - : devuewve u-un {{domxwef("htmwcowwection")}} de wos compwementos disponibwes. (˘ω˘)
+- {{domxwef("document.pointewwockewement")}} {{weadonwyinwine}}
+  - : devuewve ew conjunto de e-ewementos como destino pawa wos eventos dew mouse m-mientwas ew puntewo e-está bwoqueado. (ˆ ﻌ ˆ)♡ `nuww` si ew bwoqueo está pendiente, >_< ew p-puntewo está desbwoqueado o-o si ew objetivo está en otwo documento. -.-
+- {{domxwef("document.featuwepowicy")}} {{expewimentaw_inwine}}{{weadonwyinwine}}
+  - : devuewve w-wa intewfaz {{domxwef("featuwepowicy")}} que pwopowciona una a-api simpwe pawa anawizaw was powíticas de funciones apwicadas a-a un documento específico. (///ˬ///✿)
+- {{domxwef("document.scwipts")}}{{weadonwyinwine}}
+  - : d-devuewve u-un {{domxwef("htmwcowwection")}} de wos ewementos {{htmwewement("scwipt")}} d-dew documento. XD
+- {{domxwef("document.scwowwingewement")}}{{weadonwyinwine}}
+  - : devuewve u-una wefewencia a-aw {{domxwef("ewement")}} q-que despwaza ew documento. ^^;;
+- {{domxwef("document.stywesheets")}} {{weadonwyinwine}}
+  - : d-devuewve u-un objeto {{domxwef('stywesheetwist')}} de {{domxwef('cssstywesheet')}} pawa h-hojas de estiwo e-expwícitamente v-vincuwadas o incwustadas en un documento. rawr x3
+- {{domxwef("document.timewine")}} {{expewimentaw_inwine}}{{weadonwyinwine}}
+  - : d-devuewve wa wínea d-de tiempo como u-una instancia especiaw de {{domxwef("documenttimewine")}} que se cwea automáticamente a-aw cawgaw w-wa página. OwO
+- {{domxwef("document.visibiwitystate")}}{{weadonwyinwine}}
+  - : devuewve u-un `stwing` q-que indica ew estado de visibiwidad d-dew documento. ʘwʘ wos vawowes posibwes son `visibwe`, rawr `hidden`, `pwewendew` y `unwoaded`. UwU
 
-### Extensiones para HTMLDocument
+### extensiones pawa htmwdocument
 
-_La interfaz `Document` para documentos HTML hereda de la interfaz {{DOMxRef("HTMLDocument")}} o, desde HTML5, se amplía para dichos documentos._
+_wa i-intewfaz `document` pawa d-documentos htmw heweda de wa intewfaz {{domxwef("htmwdocument")}} o-o, (ꈍᴗꈍ) desde htmw5, (✿oωo) se ampwía pawa d-dichos documentos._
 
-- {{DOMxRef("Document.cookie")}}
-  - : Devuelve una lista separada por punto y coma de las cookies para ese documento o establece una sola cookie.
-- {{DOMxRef("Document.defaultView")}}{{ReadOnlyInline}}
-  - : Devuelve una referencia al objeto de la ventana.
-- {{DOMxRef("Document.designMode")}}
-  - : Establece u obtiene la capacidad de editar todo el documento.
-- {{DOMxRef("Document.dir")}}
-  - : Establece u obtiene la direccionalidad (rtl/ltr) del documento.
-- {{DOMxRef("Document.domain")}} {{Deprecated_Inline}}
-  - : Establece u obtiene el dominio del documento actual.
-- {{DOMxRef("Document.lastModified")}}{{ReadOnlyInline}}
-  - : Devuelve la fecha en la que se modificó por última vez el documento.
-- {{DOMxRef("Document.location")}}{{ReadOnlyInline}}
-  - : Devuelve la URI del documento actual.
-- {{DOMxRef("Document.readyState")}}{{ReadOnlyInline}}
-  - : Devuelve el estado de carga del documento.
-- {{DOMxRef("Document.referrer")}}{{ReadOnlyInline}}
-  - : Devuelve el URI de la página que se vinculó a esta página.
-- {{DOMxRef("Document.title")}}
-  - : Establece u obtiene el título del documento actual.
-- {{DOMxRef("Document.URL")}}{{ReadOnlyInline}}
-  - : Devuelve la ubicación del documento como una cadena.
+- {{domxwef("document.cookie")}}
+  - : devuewve u-una wista s-sepawada pow punto y-y coma de was c-cookies pawa ese d-documento o estabwece una sowa cookie. (⑅˘꒳˘)
+- {{domxwef("document.defauwtview")}}{{weadonwyinwine}}
+  - : devuewve una wefewencia aw objeto de wa ventana. OwO
+- {{domxwef("document.designmode")}}
+  - : e-estabwece u o-obtiene wa capacidad d-de editaw todo ew documento. 🥺
+- {{domxwef("document.diw")}}
+  - : e-estabwece u obtiene wa diweccionawidad (wtw/wtw) dew documento. >_<
+- {{domxwef("document.domain")}} {{depwecated_inwine}}
+  - : estabwece u obtiene e-ew dominio d-dew documento actuaw.
+- {{domxwef("document.wastmodified")}}{{weadonwyinwine}}
+  - : d-devuewve wa fecha en wa que se modificó p-pow úwtima vez e-ew documento. (ꈍᴗꈍ)
+- {{domxwef("document.wocation")}}{{weadonwyinwine}}
+  - : devuewve w-wa uwi dew documento a-actuaw. 😳
+- {{domxwef("document.weadystate")}}{{weadonwyinwine}}
+  - : devuewve ew estado de cawga dew documento. 🥺
+- {{domxwef("document.wefewwew")}}{{weadonwyinwine}}
+  - : devuewve ew uwi d-de wa página q-que se vincuwó a-a esta página. nyaa~~
+- {{domxwef("document.titwe")}}
+  - : e-estabwece u-u obtiene ew títuwo dew documento a-actuaw. ^•ﻌ•^
+- {{domxwef("document.uww")}}{{weadonwyinwine}}
+  - : d-devuewve wa ubicación dew documento c-como una cadena. (ˆ ﻌ ˆ)♡
 
-### Manejadores de eventos
+### m-manejadowes de eventos
 
-_La interfaz `Document` se amplía con manejadores de eventos adicionales definidos en [GlobalEventHandlers](/es/docs/orphaned/Web/API/GlobalEventHandlers#event_handlers)._
+_wa i-intewfaz `document` se ampwía con manejadowes d-de eventos adicionawes definidos e-en [gwobaweventhandwews](/es/docs/owphaned/web/api/gwobaweventhandwews#event_handwews)._
 
-- {{DOMxRef("Document.onafterscriptexecute")}} {{Non-standard_Inline}}
-  - : Representa el código del manejador de eventos para el evento {{domxref("Document/afterscriptexecute_event", "afterscriptexecute")}}.
-- {{DOMxRef("Document.onbeforescriptexecute")}} {{Non-standard_Inline}}
-  - : Representa el código del manejador de eventos para el evento {{domxref("Document/beforescriptexecute_event", "beforescriptexecute")}}.
-- {{DOMxRef("Document.onreadystatechange")}}
-  - : Representa el código del manejador de eventos para el evento {{domxref("Document/readystatechange_event", "readystatechange")}}.
-- {{DOMxRef("GlobalEventHandlers.onselectionchange")}} {{Experimental_Inline}}
-  - : Es un [manejador de eventos](/es/docs/Web/Events/Event_handlers) que representa el código que se llamará cuando se genere el evento {{domxref("Document/selectionchange_event", "selectionchange")}}.
-- {{DOMxRef("Document.onvisibilitychange")}}
-  - : Es un [manejador de eventos](/es/docs/Web/Events/Event_handlers) que representa el código que se llamará cuando se genere el evento {{domxref("Document/visibilitychange_event", "visibilitychange")}}.
+- {{domxwef("document.onaftewscwiptexekawaii~")}} {{non-standawd_inwine}}
+  - : w-wepwesenta ew código dew manejadow d-de eventos pawa ew evento {{domxwef("document/aftewscwiptexekawaii~_event", "aftewscwiptexekawaii~")}}. (U ᵕ U❁)
+- {{domxwef("document.onbefowescwiptexekawaii~")}} {{non-standawd_inwine}}
+  - : wepwesenta ew código d-dew manejadow d-de eventos pawa e-ew evento {{domxwef("document/befowescwiptexekawaii~_event", mya "befowescwiptexekawaii~")}}. 😳
+- {{domxwef("document.onweadystatechange")}}
+  - : wepwesenta ew código dew manejadow de eventos pawa e-ew evento {{domxwef("document/weadystatechange_event", σωσ "weadystatechange")}}. ( ͡o ω ͡o )
+- {{domxwef("gwobaweventhandwews.onsewectionchange")}} {{expewimentaw_inwine}}
+  - : es un [manejadow de eventos](/es/docs/web/events/event_handwews) q-que wepwesenta e-ew código que se wwamawá c-cuando se genewe ew evento {{domxwef("document/sewectionchange_event", XD "sewectionchange")}}. :3
+- {{domxwef("document.onvisibiwitychange")}}
+  - : e-es un [manejadow d-de eventos](/es/docs/web/events/event_handwews) que wepwesenta ew código que s-se wwamawá cuando se genewe ew evento {{domxwef("document/visibiwitychange_event", :3 "visibiwitychange")}}. (⑅˘꒳˘)
 
-### Propiedades obsoletas
+### p-pwopiedades obsowetas
 
-- {{DOMxRef("Document.alinkColor")}} {{Deprecated_Inline}}
-  - : Devuelve o establece el color de los enlaces activos en el cuerpo del documento.
-- {{DOMxRef("Document.all")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
-  - : Proporciona acceso a todos los elementos del documento; devuelve un {{DOMxRef('HTMLAllCollection')}} arraigado en el nodo del documento. Esta es una propiedad heredada, no estándar y no debe usarse.
-- {{DOMxRef("Document.anchors")}} {{Deprecated_Inline}}{{ReadOnlyInline}}
-  - : Devuelve una lista de todos los anclajes en el documento.
-- {{DOMxRef("Document.applets")}} {{Deprecated_Inline}}{{ReadOnlyInline}}
-  - : Devuelve una lista ordenada de los subprogramas dentro de un documento.
-- {{DOMxRef("Document.bgColor")}} {{Deprecated_Inline}}
-  - : Establece u obtiene el color de fondo del documento actual.
-- {{DOMxRef("Document.characterSet","Document.charset")}} {{Deprecated_Inline}}{{ReadOnlyInline}}
-  - : Alias de {{DOMxRef("Document.characterSet")}}. Utilice esta propiedad en su lugar.
-- {{DOMxRef("Document.fgColor")}} {{Deprecated_Inline}}
-  - : Establece u obtiene el color de primer plano o el color del texto del documento actual.
-- {{DOMxRef("Document.fullscreen")}} {{deprecated_inline}}
-  - : Devuelve `true` cuando el documento está en [modo pantalla completa](/es/docs/Web/API/Fullscreen_API).
-- {{DOMxRef("Document.height")}} {{Non-standard_Inline}} {{deprecated_inline}}
-  - : Establece u obtiene la altura del documento actual.
-- {{DOMxRef("Document.characterSet", "Document.inputEncoding")}} {{Deprecated_Inline}}{{ReadOnlyInline}}
-  - : Alias de {{DOMxRef("Document.characterSet")}}. Utilice esta propiedad en su lugar.
-- {{DOMxRef("Document.lastStyleSheetSet")}} {{deprecated_inline}}{{ReadOnlyInline}}
-  - : Devuelve el nombre del conjunto de hojas de estilo que se habilitó por última vez. Tiene el valor `null` hasta que se cambia la hoja de estilo estableciendo el valor de {{DOMxRef("Document.selectedStyleSheetSet","selectedStyleSheetSet")}}.
-- {{DOMxRef("Document.linkColor")}} {{Deprecated_Inline}}
-  - : Establece u obtiene el color de los hipervínculos en el documento.
-- {{DOMxRef("Document.preferredStyleSheetSet")}} {{deprecated_inline}}{{ReadOnlyInline}}
-  - : Devuelve el conjunto de hojas de estilo preferido según lo especificado por el autor de la página.
-- {{DOMxRef("Document.rootElement")}} {{Deprecated_Inline}}
-  - : Como {{DOMxRef("Document.documentElement")}}, pero solo para elementos {{SVGElement("svg")}} raíz. Utilice esta propiedad en su lugar.
-- {{DOMxRef("Document.selectedStyleSheetSet")}} {{deprecated_inline}}
-  - : Devuelve qué conjunto de hojas de estilo está actualmente en uso.
-- {{DOMxRef("Document.styleSheetSets")}} {{deprecated_inline}}{{ReadOnlyInline}}
-  - : Devuelve una lista de los conjuntos de hojas de estilo disponibles en el documento.
-- {{DOMxRef("Document.vlinkColor")}} {{Deprecated_Inline}}
-  - : Establece u obtiene el color de los hipervínculos visitados.
-- {{DOMxRef("Document.width")}} {{Non-standard_Inline}} {{deprecated_inline}}
-  - : Devuelve el ancho del documento actual.
-- {{DOMxRef("Document.xmlEncoding")}} {{Deprecated_Inline}}
-  - : Devuelve la codificación determinada por la declaración XML.
-- {{DOMxRef("Document.xmlStandalone")}} {{deprecated_inline}}
-  - : Devuelve `true` si la declaración XML especifica que el documento sea independiente (_p. ej.,_ Una parte externa de la DTD afecta el contenido del documento), de lo contrario, `false`.
-- {{DOMxRef("Document.xmlVersion")}} {{deprecated_inline}}
-  - : Devuelve el número de versión como se especifica en la declaración XML o `"1.0"` si la declaración está ausente.
+- {{domxwef("document.awinkcowow")}} {{depwecated_inwine}}
+  - : d-devuewve o estabwece ew c-cowow de wos enwaces activos en e-ew cuewpo dew documento. òωó
+- {{domxwef("document.aww")}} {{depwecated_inwine}} {{non-standawd_inwine}}
+  - : p-pwopowciona a-acceso a todos wos ewementos dew documento; devuewve un {{domxwef('htmwawwcowwection')}} awwaigado en ew nyodo dew documento. mya esta es una pwopiedad hewedada, 😳😳😳 nyo estándaw y nyo debe usawse. :3
+- {{domxwef("document.anchows")}} {{depwecated_inwine}}{{weadonwyinwine}}
+  - : devuewve una wista de todos wos ancwajes e-en ew documento. >_<
+- {{domxwef("document.appwets")}} {{depwecated_inwine}}{{weadonwyinwine}}
+  - : d-devuewve una wista owdenada de wos subpwogwamas d-dentwo de un documento. 🥺
+- {{domxwef("document.bgcowow")}} {{depwecated_inwine}}
+  - : e-estabwece u-u obtiene ew cowow de fondo dew d-documento actuaw. (ꈍᴗꈍ)
+- {{domxwef("document.chawactewset","document.chawset")}} {{depwecated_inwine}}{{weadonwyinwine}}
+  - : awias d-de {{domxwef("document.chawactewset")}}. rawr x3 u-utiwice esta pwopiedad e-en su wugaw. (U ﹏ U)
+- {{domxwef("document.fgcowow")}} {{depwecated_inwine}}
+  - : estabwece u-u obtiene e-ew cowow de pwimew pwano o ew cowow dew texto dew d-documento actuaw. ( ͡o ω ͡o )
+- {{domxwef("document.fuwwscween")}} {{depwecated_inwine}}
+  - : d-devuewve `twue` c-cuando ew documento e-está en [modo p-pantawwa c-compweta](/es/docs/web/api/fuwwscween_api). 😳😳😳
+- {{domxwef("document.height")}} {{non-standawd_inwine}} {{depwecated_inwine}}
+  - : e-estabwece u obtiene w-wa awtuwa d-dew documento actuaw. 🥺
+- {{domxwef("document.chawactewset", òωó "document.inputencoding")}} {{depwecated_inwine}}{{weadonwyinwine}}
+  - : awias de {{domxwef("document.chawactewset")}}. XD u-utiwice esta p-pwopiedad en su w-wugaw. XD
+- {{domxwef("document.waststywesheetset")}} {{depwecated_inwine}}{{weadonwyinwine}}
+  - : devuewve ew nyombwe d-dew conjunto de hojas de estiwo que se habiwitó p-pow úwtima vez. ( ͡o ω ͡o ) tiene ew v-vawow `nuww` hasta q-que se cambia w-wa hoja de estiwo estabweciendo e-ew vawow de {{domxwef("document.sewectedstywesheetset","sewectedstywesheetset")}}. >w<
+- {{domxwef("document.winkcowow")}} {{depwecated_inwine}}
+  - : estabwece u o-obtiene ew cowow de wos hipewvíncuwos e-en ew documento. mya
+- {{domxwef("document.pwefewwedstywesheetset")}} {{depwecated_inwine}}{{weadonwyinwine}}
+  - : devuewve e-ew conjunto de hojas de estiwo pwefewido según wo especificado pow ew autow de w-wa página. (ꈍᴗꈍ)
+- {{domxwef("document.wootewement")}} {{depwecated_inwine}}
+  - : como {{domxwef("document.documentewement")}}, -.- pewo s-sowo pawa ewementos {{svgewement("svg")}} w-waíz. (⑅˘꒳˘) utiwice esta pwopiedad en su wugaw. (U ﹏ U)
+- {{domxwef("document.sewectedstywesheetset")}} {{depwecated_inwine}}
+  - : d-devuewve qué conjunto de hojas d-de estiwo está a-actuawmente en u-uso. σωσ
+- {{domxwef("document.stywesheetsets")}} {{depwecated_inwine}}{{weadonwyinwine}}
+  - : devuewve una wista d-de wos conjuntos d-de hojas de estiwo disponibwes e-en ew documento. :3
+- {{domxwef("document.vwinkcowow")}} {{depwecated_inwine}}
+  - : estabwece u obtiene ew cowow d-de wos hipewvíncuwos visitados. /(^•ω•^)
+- {{domxwef("document.width")}} {{non-standawd_inwine}} {{depwecated_inwine}}
+  - : d-devuewve ew a-ancho dew documento a-actuaw. σωσ
+- {{domxwef("document.xmwencoding")}} {{depwecated_inwine}}
+  - : devuewve wa codificación d-detewminada p-pow wa decwawación x-xmw. (U ᵕ U❁)
+- {{domxwef("document.xmwstandawone")}} {{depwecated_inwine}}
+  - : d-devuewve `twue` si wa decwawación x-xmw especifica q-que ew documento s-sea independiente (_p. 😳 e-ej.,_ u-una pawte extewna d-de wa dtd afecta e-ew contenido d-dew documento), ʘwʘ de wo contwawio, (⑅˘꒳˘) `fawse`.
+- {{domxwef("document.xmwvewsion")}} {{depwecated_inwine}}
+  - : d-devuewve ew nyúmewo d-de vewsión como se especifica e-en wa decwawación x-xmw o `"1.0"` s-si wa decwawación está ausente.
 
-## Métodos
+## métodos
 
-_Esta interfaz también hereda de las interfaces {{DOMxRef("Node")}} y {{DOMxRef("EventTarget")}}._
+_esta intewfaz t-también heweda d-de was intewfaces {{domxwef("node")}} y-y {{domxwef("eventtawget")}}._
 
-- {{DOMxRef("Document.adoptNode()")}}
-  - : Adopta un nodo de un documento externo.
-- {{DOMxRef("Document.append()")}}
-  - : Inserta un conjunto de objetos {{domxref("Node")}} u objetos {{domxref("DOMString")}} después del último elemento hijo del documento.
-- {{DOMxRef("Document.captureEvents()")}} {{Deprecated_Inline}}
-  - : Consulte {{DOMxRef("Window.captureEvents")}}.
-- {{DOMxRef("Document.caretPositionFromPoint()")}}
-  - : Devuelve un objeto {{DOMxRef('CaretPosition')}} que contiene el nodo DOM que contiene el signo de intercalación y el desplazamiento del carácter del signo de intercalación dentro de ese nodo.
-- {{DOMxRef("Document.caretRangeFromPoint()")}} {{Non-standard_Inline}}
-  - : Obtiene un objeto {{DOMxRef("Range")}} para el fragmento de documento bajo las coordenadas especificadas.
-- {{DOMxRef("Document.createAttribute()")}}
-  - : Crea un nuevo objeto {{DOMxRef("Attr")}} y lo devuelve.
-- {{DOMxRef("Document.createAttributeNS()")}}
-  - : Crea un nuevo nodo de atributo en un espacio de nombres determinado y lo devuelve.
-- {{DOMxRef("Document.createCDATASection()")}}
-  - : Crea un nuevo nodo CDATA y lo devuelve.
-- {{DOMxRef("Document.createComment()")}}
-  - : Crea un nuevo nodo de comentario y lo devuelve.
-- {{DOMxRef("Document.createDocumentFragment()")}}
-  - : Crea un nuevo fragmento de documento.
-- {{DOMxRef("Document.createElement()")}}
-  - : Crea un nuevo elemento con el nombre de etiqueta dado.
-- {{DOMxRef("Document.createElementNS()")}}
-  - : Crea un nuevo elemento con el nombre de etiqueta y el URI de espacio de nombres dados.
-- {{DOMxRef("Document.createEntityReference()")}} {{deprecated_inline}}
-  - : Crea un nuevo objeto de referencia de entidad y lo devuelve.
-- {{DOMxRef("Document.createEvent()")}}
-  - : Crea un objeto de evento.
-- {{DOMxRef("Document.createNodeIterator()")}}
-  - : Crea un objeto {{DOMxRef("NodeIterator")}}.
-- {{DOMxRef("Document.createProcessingInstruction()")}}
-  - : Crea un nuevo objeto {{DOMxRef("ProcessingInstruction")}}.
-- {{DOMxRef("Document.createRange()")}}
-  - : Crea un objeto {{DOMxRef("Range")}}.
-- {{DOMxRef("Document.createTextNode()")}}
-  - : Crea un nodo de texto.
-- {{DOMxRef("Document.createTouch()")}} {{Deprecated_Inline}}
-  - : Crea un objeto {{DOMxRef("Touch")}}.
-- {{DOMxRef("Document.createTouchList()")}} {{Deprecated_Inline}}
-  - : Crea un objeto {{DOMxRef("TouchList")}}.
-- {{DOMxRef("Document.createTreeWalker()")}}
-  - : Crea un objeto {{DOMxRef("TreeWalker")}}.
-- {{DOMxRef("Document.elementFromPoint()")}}
-  - : Devuelve el elemento superior en las coordenadas especificadas.
-- {{DOMxRef("Document.elementsFromPoint()")}}
-  - : Devuelve una matriz de todos los elementos en las coordenadas especificadas.
-- {{DOMxRef("Document.enableStyleSheetsForSet()")}} {{deprecated_inline}}
-  - : Habilita las hojas de estilo para el conjunto de hojas de estilo especificado.
-- {{DOMxRef("Document.exitPictureInPicture()")}}
-  - : Retira el video de la ventana flotante de _picture-in-picture_ y vuelve a su contenedor original.
-- {{DOMxRef("Document.exitPointerLock()")}} {{Experimental_Inline}}
-  - : Libera el bloqueo del puntero.
-- {{DOMxRef("Document.getAnimations()")}}
-  - : Devuelve una matriz de todos los objetos {{DOMxRef("Animation")}} actualmente en uso, cuyos elementos de destino son descendientes de `document`.
-- {{domxref("Document.getBoxQuads()")}} {{experimental_inline}}
-  - : Devuelve una lista de objetos {{domxref("DOMQuad")}} que representan los fragmentos CSS del nodo.
-- {{DOMxRef("Document.getElementById", "Document.getElementById()")}}
-  - : Devuelve una referencia de objeto al elemento identificado.
-- {{DOMxRef("Document.getElementsByClassName()")}}
-  - : Devuelve una lista de elementos con el nombre de clase dado.
-- {{DOMxRef("Document.getElementsByTagName()")}}
-  - : Devuelve una lista de elementos con el nombre de etiqueta dado.
-- {{DOMxRef("Document.getElementsByTagNameNS()")}}
-  - : Devuelve una lista de elementos con el nombre de etiqueta y el espacio de nombres dados.
-- {{DOMxRef("Document.getSelection()")}}
-  - : Devuelve un objeto {{DOMxRef('Selection')}} que representa el rango de texto seleccionado por el usuario o la posición actual del signo de intercalación.
-- {{DOMxRef("Document.hasStorageAccess()")}} {{Experimental_Inline}}
-  - : Devuelve un {{jsxref("Promise")}} que se resuelve con un valor booleano que indica si el documento tiene acceso a su almacenamiento propio.
-- {{DOMxRef("Document.importNode()")}}
-  - : Devuelve un clon de un nodo de un documento externo.
-- {{DOMxRef("Document.normalizeDocument()")}} {{deprecated_inline}}
-  - : Reemplaza entidades, normaliza nodos de texto, etc.
-- {{DOMxRef("Document.prepend()")}}
-  - : Inserta un conjunto de objetos {{domxref("Node")}} u objetos {{domxref("DOMString")}} antes del primer elemento hijo del documento.
-- {{DOMxRef("Document.querySelector()")}}
-  - : Devuelve el primer nodo [_Element_](/es/docs/Web/API/Element) dentro del documento, en el orden del documento, que coincide con los selectores especificados.
-- {{DOMxRef("Document.querySelectorAll()")}}
-  - : Devuelve una lista de todos los nodos [_Element_](/es/docs/Web/API/Element) dentro del documento que coinciden con los selectores especificados.
-- {{DOMxRef("Document.releaseCapture()")}} {{Non-standard_Inline}}
-  - : Libera la captura actual del mouse si está en un elemento de este documento.
-- {{DOMxRef("Document.releaseEvents()")}} {{Non-standard_Inline}} {{Deprecated_Inline}}
-  - : Consulte {{DOMxRef("Window.releaseEvents()")}}.
-- {{DOMxRef("Document.replaceChildren()")}}
-  - : Reemplaza los elementos hijos existentes de un documento con un nuevo conjunto específico de elementos hijos.
-- {{DOMxRef("Document.requestStorageAccess()")}}
-  - : Devuelve un {{jsxref("Promise")}} que resuelve si se otorgó el acceso al almacenamiento propio y lo rechaza si se denegó el acceso.
-- {{DOMxRef("Document.mozSetImageElement()")}} {{Non-standard_Inline}}
-  - : Le permite cambiar el elemento que se utiliza como imagen de fondo para un ID de elemento específico.
+- {{domxwef("document.adoptnode()")}}
+  - : adopta un nyodo de un documento extewno. ^•ﻌ•^
+- {{domxwef("document.append()")}}
+  - : i-insewta un c-conjunto de objetos {{domxwef("node")}} u objetos {{domxwef("domstwing")}} d-después d-dew úwtimo ewemento hijo dew documento. nyaa~~
+- {{domxwef("document.captuweevents()")}} {{depwecated_inwine}}
+  - : consuwte {{domxwef("window.captuweevents")}}. XD
+- {{domxwef("document.cawetpositionfwompoint()")}}
+  - : d-devuewve u-un objeto {{domxwef('cawetposition')}} q-que contiene e-ew nyodo dom que contiene ew signo de intewcawación y-y ew d-despwazamiento dew cawáctew dew signo de intewcawación d-dentwo de ese nyodo. /(^•ω•^)
+- {{domxwef("document.cawetwangefwompoint()")}} {{non-standawd_inwine}}
+  - : obtiene u-un objeto {{domxwef("wange")}} pawa ew fwagmento d-de documento b-bajo was coowdenadas especificadas. (U ᵕ U❁)
+- {{domxwef("document.cweateattwibute()")}}
+  - : c-cwea un n-nyuevo objeto {{domxwef("attw")}} y wo devuewve. mya
+- {{domxwef("document.cweateattwibutens()")}}
+  - : c-cwea un nyuevo nyodo de atwibuto e-en un espacio d-de nyombwes d-detewminado y wo d-devuewve. (ˆ ﻌ ˆ)♡
+- {{domxwef("document.cweatecdatasection()")}}
+  - : cwea un nyuevo n-nyodo cdata y wo d-devuewve. (✿oωo)
+- {{domxwef("document.cweatecomment()")}}
+  - : c-cwea un nyuevo nyodo d-de comentawio y wo devuewve. (✿oωo)
+- {{domxwef("document.cweatedocumentfwagment()")}}
+  - : cwea un nyuevo f-fwagmento de d-documento. òωó
+- {{domxwef("document.cweateewement()")}}
+  - : c-cwea un nyuevo ewemento con ew nyombwe de etiqueta dado.
+- {{domxwef("document.cweateewementns()")}}
+  - : c-cwea un nyuevo ewemento c-con ew nyombwe de e-etiqueta y ew uwi de espacio de nyombwes dados. (˘ω˘)
+- {{domxwef("document.cweateentitywefewence()")}} {{depwecated_inwine}}
+  - : c-cwea un nyuevo objeto de wefewencia d-de entidad y w-wo devuewve. (ˆ ﻌ ˆ)♡
+- {{domxwef("document.cweateevent()")}}
+  - : c-cwea u-un objeto de evento.
+- {{domxwef("document.cweatenodeitewatow()")}}
+  - : c-cwea un objeto {{domxwef("nodeitewatow")}}. ( ͡o ω ͡o )
+- {{domxwef("document.cweatepwocessinginstwuction()")}}
+  - : cwea un nuevo objeto {{domxwef("pwocessinginstwuction")}}. rawr x3
+- {{domxwef("document.cweatewange()")}}
+  - : cwea u-un objeto {{domxwef("wange")}}. (˘ω˘)
+- {{domxwef("document.cweatetextnode()")}}
+  - : cwea un nyodo d-de texto. òωó
+- {{domxwef("document.cweatetouch()")}} {{depwecated_inwine}}
+  - : cwea un objeto {{domxwef("touch")}}. ( ͡o ω ͡o )
+- {{domxwef("document.cweatetouchwist()")}} {{depwecated_inwine}}
+  - : cwea un objeto {{domxwef("touchwist")}}. σωσ
+- {{domxwef("document.cweatetweewawkew()")}}
+  - : c-cwea un objeto {{domxwef("tweewawkew")}}. (U ﹏ U)
+- {{domxwef("document.ewementfwompoint()")}}
+  - : devuewve ew ewemento supewiow en was coowdenadas e-especificadas. rawr
+- {{domxwef("document.ewementsfwompoint()")}}
+  - : d-devuewve una matwiz de t-todos wos ewementos en was coowdenadas especificadas. -.-
+- {{domxwef("document.enabwestywesheetsfowset()")}} {{depwecated_inwine}}
+  - : h-habiwita w-was hojas de estiwo pawa ew conjunto d-de hojas de estiwo especificado. ( ͡o ω ͡o )
+- {{domxwef("document.exitpictuweinpictuwe()")}}
+  - : w-wetiwa ew video de wa ventana fwotante de _pictuwe-in-pictuwe_ y-y vuewve a su contenedow owiginaw. >_<
+- {{domxwef("document.exitpointewwock()")}} {{expewimentaw_inwine}}
+  - : w-wibewa e-ew bwoqueo dew puntewo. o.O
+- {{domxwef("document.getanimations()")}}
+  - : d-devuewve una matwiz de todos wos objetos {{domxwef("animation")}} a-actuawmente en uso, σωσ cuyos ewementos de destino son descendientes de `document`. -.-
+- {{domxwef("document.getboxquads()")}} {{expewimentaw_inwine}}
+  - : d-devuewve una wista d-de objetos {{domxwef("domquad")}} q-que wepwesentan w-wos fwagmentos css dew nyodo. σωσ
+- {{domxwef("document.getewementbyid", :3 "document.getewementbyid()")}}
+  - : devuewve una wefewencia d-de objeto a-aw ewemento identificado. ^^
+- {{domxwef("document.getewementsbycwassname()")}}
+  - : devuewve una wista de ewementos c-con ew nyombwe de cwase dado. òωó
+- {{domxwef("document.getewementsbytagname()")}}
+  - : devuewve u-una wista de ewementos con ew nombwe de etiqueta d-dado. (ˆ ﻌ ˆ)♡
+- {{domxwef("document.getewementsbytagnamens()")}}
+  - : d-devuewve una wista de ewementos c-con ew nyombwe d-de etiqueta y ew e-espacio de nyombwes dados. XD
+- {{domxwef("document.getsewection()")}}
+  - : devuewve u-un objeto {{domxwef('sewection')}} que wepwesenta ew wango d-de texto seweccionado pow ew usuawio o wa posición actuaw dew signo d-de intewcawación. òωó
+- {{domxwef("document.hasstowageaccess()")}} {{expewimentaw_inwine}}
+  - : d-devuewve un {{jsxwef("pwomise")}} q-que se wesuewve c-con un vawow b-booweano que indica si ew documento t-tiene acceso a su awmacenamiento pwopio. (ꈍᴗꈍ)
+- {{domxwef("document.impowtnode()")}}
+  - : d-devuewve un cwon de u-un nyodo de un documento extewno. UwU
+- {{domxwef("document.nowmawizedocument()")}} {{depwecated_inwine}}
+  - : weempwaza e-entidades, >w< n-nyowmawiza nyodos de texto, ʘwʘ etc.
+- {{domxwef("document.pwepend()")}}
+  - : i-insewta un conjunto d-de objetos {{domxwef("node")}} u o-objetos {{domxwef("domstwing")}} antes dew pwimew e-ewemento hijo d-dew documento. :3
+- {{domxwef("document.quewysewectow()")}}
+  - : devuewve ew pwimew n-nyodo [_ewement_](/es/docs/web/api/ewement) dentwo dew documento, ^•ﻌ•^ en ew owden dew documento, (ˆ ﻌ ˆ)♡ q-que coincide con wos sewectowes e-especificados. 🥺
+- {{domxwef("document.quewysewectowaww()")}}
+  - : devuewve una wista de todos wos n-nyodos [_ewement_](/es/docs/web/api/ewement) dentwo d-dew documento q-que coinciden con wos sewectowes e-especificados. OwO
+- {{domxwef("document.weweasecaptuwe()")}} {{non-standawd_inwine}}
+  - : w-wibewa wa captuwa actuaw d-dew mouse si está en un ewemento d-de este documento. 🥺
+- {{domxwef("document.weweaseevents()")}} {{non-standawd_inwine}} {{depwecated_inwine}}
+  - : c-consuwte {{domxwef("window.weweaseevents()")}}. OwO
+- {{domxwef("document.wepwacechiwdwen()")}}
+  - : w-weempwaza wos ewementos hijos existentes de un documento con un nyuevo c-conjunto específico d-de ewementos hijos. (U ᵕ U❁)
+- {{domxwef("document.wequeststowageaccess()")}}
+  - : devuewve un {{jsxwef("pwomise")}} que wesuewve s-si se otowgó ew acceso aw awmacenamiento p-pwopio y-y wo wechaza si se denegó ew acceso.
+- {{domxwef("document.mozsetimageewement()")}} {{non-standawd_inwine}}
+  - : we pewmite cambiaw ew ewemento q-que se utiwiza como imagen de fondo pawa un i-id de ewemento específico. ( ͡o ω ͡o )
 
-La interfaz `Document` se amplía con la interfaz {{DOMxRef("XPathEvaluator")}}:
+wa i-intewfaz `document` s-se ampwía con wa intewfaz {{domxwef("xpathevawuatow")}}:
 
-- {{DOMxRef("Document.createExpression()")}}
-  - : Compila una [`XPathExpression`](/es/docs/Web/API/XPathExpression) que luego se puede usar para (repetidas) evaluaciones.
-- {{DOMxRef("Document.createNSResolver()")}}
-  - : Crea un objeto {{DOMxRef("XPathNSResolver")}}.
-- {{DOMxRef("Document.evaluate()")}}
-  - : Evalúa una expresión XPath.
+- {{domxwef("document.cweateexpwession()")}}
+  - : c-compiwa una [`xpathexpwession`](/es/docs/web/api/xpathexpwession) q-que wuego se p-puede usaw pawa (wepetidas) e-evawuaciones. ^•ﻌ•^
+- {{domxwef("document.cweatenswesowvew()")}}
+  - : c-cwea u-un objeto {{domxwef("xpathnswesowvew")}}. o.O
+- {{domxwef("document.evawuate()")}}
+  - : evawúa una expwesión xpath. (⑅˘꒳˘)
 
-### Extensión para documentos HTML
+### extensión pawa documentos htmw
 
-La interfaz `Document` para documentos HTML se hereda de la interfaz {{DOMxRef("HTMLDocument")}} o, desde HTML5, se amplía para dichos documentos:
+wa intewfaz `document` p-pawa documentos h-htmw se heweda d-de wa intewfaz {{domxwef("htmwdocument")}} o-o, (ˆ ﻌ ˆ)♡ d-desde htmw5, :3 se a-ampwía pawa dichos documentos:
 
-- {{DOMxRef("Document.clear()")}} {{Non-standard_Inline}} {{Deprecated_Inline}}
-  - : En la mayoría de los navegadores modernos, incluidas las versiones recientes de Firefox e Internet Explorer, este método no hace nada.
-- {{DOMxRef("Document.close()")}}
-  - : Cierra el flujo de escritura en el documento.
-- {{DOMxRef("Document.execCommand()")}} {{deprecated_inline}}
-  - : En un documento editable, ejecuta un comando de formato.
-- {{DOMxRef("Document.getElementsByName()")}}
-  - : Devuelve una lista de elementos con el nombre dado.
-- {{DOMxRef("Document.hasFocus()")}}
-  - : Devuelve `true` si el foco se encuentra actualmente en cualquier lugar dentro del documento especificado.
-- {{DOMxRef("Document.open()")}}
-  - : Abre un flujo de escritura para el documento.
-- {{DOMxRef("Document.queryCommandEnabled()")}} {{deprecated_inline}}
-  - : Devuelve `true` si el comando de formato se puede ejecutar en el rango actual.
-- {{DOMxRef("Document.queryCommandIndeterm()")}} {{deprecated_inline}}
-  - : Devuelve `true` si el comando de formato está en un estado indeterminado en el rango actual.
-- {{DOMxRef("Document.queryCommandState()")}} {{deprecated_inline}}
-  - : Devuelve `true` si el comando de formato se ha ejecutado en el rango actual.
-- {{DOMxRef("Document.queryCommandSupported()")}} {{deprecated_inline}}
-  - : Devuelve `true` si el comando de formato es compatible con el rango actual.
-- {{DOMxRef("Document.queryCommandValue()")}} {{deprecated_inline}}
-  - : Devuelve el valor actual del rango actual para un comando de formato.
-- {{DOMxRef("Document.write()")}}
-  - : Escribe texto en un documento.
-- {{DOMxRef("Document.writeln()")}}
-  - : Escribe una línea de texto en un documento.
+- {{domxwef("document.cweaw()")}} {{non-standawd_inwine}} {{depwecated_inwine}}
+  - : en wa mayowía de wos nyavegadowes modewnos, /(^•ω•^) i-incwuidas was v-vewsiones wecientes de fiwefox e intewnet expwowew, òωó este método n-nyo hace nyada. :3
+- {{domxwef("document.cwose()")}}
+  - : c-ciewwa e-ew fwujo de escwituwa en ew documento. (˘ω˘)
+- {{domxwef("document.execcommand()")}} {{depwecated_inwine}}
+  - : en u-un documento editabwe, 😳 ejecuta un comando de fowmato. σωσ
+- {{domxwef("document.getewementsbyname()")}}
+  - : d-devuewve u-una wista de ewementos con ew nyombwe dado. UwU
+- {{domxwef("document.hasfocus()")}}
+  - : d-devuewve `twue` si ew f-foco se encuentwa a-actuawmente en cuawquiew wugaw d-dentwo dew documento e-especificado. -.-
+- {{domxwef("document.open()")}}
+  - : a-abwe u-un fwujo de escwituwa p-pawa ew documento. 🥺
+- {{domxwef("document.quewycommandenabwed()")}} {{depwecated_inwine}}
+  - : d-devuewve `twue` si ew comando d-de fowmato se p-puede ejecutaw en ew wango actuaw. 😳😳😳
+- {{domxwef("document.quewycommandindetewm()")}} {{depwecated_inwine}}
+  - : d-devuewve `twue` si ew comando de fowmato está e-en un estado indetewminado en ew w-wango actuaw. 🥺
+- {{domxwef("document.quewycommandstate()")}} {{depwecated_inwine}}
+  - : devuewve `twue` s-si ew comando d-de fowmato se ha ejecutado en ew wango actuaw. ^^
+- {{domxwef("document.quewycommandsuppowted()")}} {{depwecated_inwine}}
+  - : d-devuewve `twue` si ew comando de fowmato es c-compatibwe con ew w-wango actuaw. ^^;;
+- {{domxwef("document.quewycommandvawue()")}} {{depwecated_inwine}}
+  - : devuewve ew vawow actuaw d-dew wango actuaw p-pawa un comando de fowmato. >w<
+- {{domxwef("document.wwite()")}}
+  - : e-escwibe texto en un documento. σωσ
+- {{domxwef("document.wwitewn()")}}
+  - : escwibe una wínea d-de texto en u-un documento. >w<
 
-## Eventos
+## eventos
 
-Puede detectar estos eventos usando `addEventListener()` o asignando un detector de eventos a la propiedad `oneventname` de esta interfaz.
+puede d-detectaw estos e-eventos usando `addeventwistenew()` o asignando un detectow de eventos a-a wa pwopiedad `oneventname` d-de esta intewfaz. (⑅˘꒳˘)
 
-- {{DOMxRef("Document/scroll_event", "scroll")}}
-  - : Se activa cuando se ha desplazado la vista del documento o un elemento. También disponible a través de la propiedad {{DOMxRef("GlobalEventHandlers.onscroll", "onscroll")}}.
-- {{DOMxRef("Document/visibilitychange_event", "visibilitychange")}}
-  - : Se activa cuando el contenido de una pestaña se vuelve visible o se oculta. También disponible a través de la propiedad {{DOMxRef("Document.onvisibilitychange", "onvisibilitychange")}}.
-- {{DOMxRef("Document/wheel_event","wheel")}}
-  - : Se activa cuando el usuario gira un botón de rueda en un dispositivo señalador (generalmente un mouse). También disponible a través de la propiedad {{DOMxRef("GlobalEventHandlers.onwheel", "onwheel")}}.
+- {{domxwef("document/scwoww_event", òωó "scwoww")}}
+  - : s-se a-activa cuando se ha despwazado wa vista dew documento o un ewemento. (⑅˘꒳˘) también disponibwe a twavés de wa pwopiedad {{domxwef("gwobaweventhandwews.onscwoww", (ꈍᴗꈍ) "onscwoww")}}. rawr x3
+- {{domxwef("document/visibiwitychange_event", "visibiwitychange")}}
+  - : s-se activa c-cuando ew contenido d-de una pestaña s-se vuewve v-visibwe o se ocuwta. ( ͡o ω ͡o ) t-también disponibwe a twavés d-de wa pwopiedad {{domxwef("document.onvisibiwitychange", UwU "onvisibiwitychange")}}. ^^
+- {{domxwef("document/wheew_event","wheew")}}
+  - : s-se activa cuando ew usuawio g-giwa un botón d-de wueda en un dispositivo señawadow (genewawmente un mouse). (˘ω˘) t-también disponibwe a twavés de wa pwopiedad {{domxwef("gwobaweventhandwews.onwheew", (ˆ ﻌ ˆ)♡ "onwheew")}}. OwO
 
-### Eventos de animación
+### e-eventos de animación
 
-- {{DOMxRef("Document/animationcancel_event", "animationcancel")}}
-  - : Se activa cuando una animación aborta inesperadamente. También disponible a través de la propiedad {{DOMxRef("GlobalEventHandlers/onanimationcancel", "onanimationcancel")}}.
-- {{DOMxRef("Document/animationend_event", "animationend")}}
-  - : Se activa cuando una animación se ha completado normalmente. También disponible a través de la propiedad {{DOMxRef("GlobalEventHandlers/onanimationend", "onanimationend")}}.
-- {{DOMxRef("Document/animationiteration_event", "animationiteration")}}
-  - : Se activa cuando se completa una iteración de animación. También disponible a través de la propiedad {{DOMxRef("GlobalEventHandlers/onanimationiteration", "onanimationiteration")}}.
-- {{DOMxRef("Document/animationstart_event", "animationstart")}}
-  - : Se activa cuando comienza una animación. También disponible a través de la propiedad {{DOMxRef("GlobalEventHandlers/onanimationstart", "onanimationstart")}}.
+- {{domxwef("document/animationcancew_event", 😳 "animationcancew")}}
+  - : s-se a-activa cuando una animación abowta i-inespewadamente. UwU t-también disponibwe a-a twavés de wa pwopiedad {{domxwef("gwobaweventhandwews/onanimationcancew", 🥺 "onanimationcancew")}}. 😳😳😳
+- {{domxwef("document/animationend_event", ʘwʘ "animationend")}}
+  - : s-se activa cuando u-una animación se ha compwetado n-nyowmawmente. /(^•ω•^) también disponibwe a-a twavés de w-wa pwopiedad {{domxwef("gwobaweventhandwews/onanimationend", :3 "onanimationend")}}. :3
+- {{domxwef("document/animationitewation_event", mya "animationitewation")}}
+  - : s-se activa cuando se compweta una i-itewación de animación. (///ˬ///✿) también disponibwe a-a twavés de wa pwopiedad {{domxwef("gwobaweventhandwews/onanimationitewation", (⑅˘꒳˘) "onanimationitewation")}}. :3
+- {{domxwef("document/animationstawt_event", /(^•ω•^) "animationstawt")}}
+  - : se activa cuando comienza una animación. ^^;; también disponibwe a twavés de wa p-pwopiedad {{domxwef("gwobaweventhandwews/onanimationstawt", (U ᵕ U❁) "onanimationstawt")}}. (U ﹏ U)
 
-### Eventos del portapapeles
+### eventos dew powtapapewes
 
-- {{DOMxRef("Document/copy_event", "copy")}}
-  - : Se activa cuando el usuario inicia una acción de copiar a través de la interfaz de usuario del navegador.
-- {{DOMxRef("Document/cut_event", "cut")}}
-  - : Se activa cuando el usuario inicia una acción de cortar a través de la interfaz de usuario del navegador.
-- {{DOMxRef("Document/paste_event", "paste")}}
-  - : Se activa cuando el usuario inicia una acción de pegar a través de la interfaz de usuario del navegador.
+- {{domxwef("document/copy_event", mya "copy")}}
+  - : se activa cuando ew usuawio inicia una acción de copiaw a t-twavés de wa intewfaz de usuawio dew nyavegadow. ^•ﻌ•^
+- {{domxwef("document/cut_event", (U ﹏ U) "cut")}}
+  - : s-se activa cuando ew usuawio i-inicia una acción de cowtaw a twavés de wa intewfaz d-de usuawio dew nyavegadow. :3
+- {{domxwef("document/paste_event", rawr x3 "paste")}}
+  - : s-se activa cuando ew usuawio i-inicia una acción d-de pegaw a twavés de wa intewfaz de usuawio d-dew nyavegadow. 😳😳😳
 
-### Eventos de arrastrar y soltar
+### eventos de awwastwaw y sowtaw
 
-- {{DOMxRef("Document/drag_event", "drag")}}
-  - : Se activa cada pocos cientos de milisegundos cuando el usuario arrastra un elemento o una selección de texto. También disponible a través de la propiedad {{DOMxRef("GlobalEventHandlers/ondrag", "ondrag")}}.
-- {{DOMxRef("Document/dragend_event", "dragend")}}
-  - : Se activa cuando finaliza una operación de arrastre (soltando un botón del mouse o presionando la tecla Escape). También disponible a través de la propiedad {{DOMxRef("GlobalEventHandlers/ondragend", "ondragend")}}.
-- {{DOMxRef("Document/dragenter_event", "dragenter")}}
-  - : Se activa cuando un elemento arrastrado o una selección de texto ingresa en un destino de colocación válido. También disponible a través de la propiedad {{DOMxRef("GlobalEventHandlers/ondragenter", "ondragenter")}}.
-- {{DOMxRef("Document/dragleave_event", "dragleave")}}
-  - : Se activa cuando un elemento arrastrado o una selección de texto deja un destino de colocación válido. También disponible a través de la propiedad {{DOMxRef("GlobalEventHandlers/ondragleave", "ondragleave")}}.
-- {{DOMxRef("Document/dragover_event", "dragover")}}
-  - : Se activa cuando se arrastra un elemento o una selección de texto sobre un destino de colocación válido (cada pocos cientos de milisegundos). También disponible a través de la propiedad {{DOMxRef("GlobalEventHandlers/ondragover", "ondragover")}}.
-- {{DOMxRef("Document/dragstart_event", "dragstart")}}
-  - : Se activa cuando el usuario comienza a arrastrar un elemento o una selección de texto. También disponible a través de la propiedad {{DOMxRef("GlobalEventHandlers/ondragstart", "ondragstart")}}.
-- {{DOMxRef("Document/drop_event", "drop")}}
-  - : Se activa cuando un elemento o una selección de texto se coloca en un destino de colocación válido. También disponible a través de la propiedad {{DOMxRef("GlobalEventHandlers/ondrop", "ondrop")}}.
+- {{domxwef("document/dwag_event", >w< "dwag")}}
+  - : se activa c-cada pocos cientos de miwisegundos c-cuando ew usuawio awwastwa u-un ewemento o una sewección de t-texto. òωó también d-disponibwe a twavés de wa pwopiedad {{domxwef("gwobaweventhandwews/ondwag", "ondwag")}}. 😳
+- {{domxwef("document/dwagend_event", (✿oωo) "dwagend")}}
+  - : se activa cuando f-finawiza una opewación de awwastwe (sowtando u-un botón dew mouse o pwesionando wa tecwa escape). OwO también disponibwe a twavés d-de wa pwopiedad {{domxwef("gwobaweventhandwews/ondwagend", (U ﹏ U) "ondwagend")}}. (ꈍᴗꈍ)
+- {{domxwef("document/dwagentew_event", "dwagentew")}}
+  - : s-se activa cuando un e-ewemento awwastwado o-o una sewección de texto ingwesa e-en un destino de cowocación váwido. rawr también disponibwe a twavés de wa p-pwopiedad {{domxwef("gwobaweventhandwews/ondwagentew", ^^ "ondwagentew")}}. rawr
+- {{domxwef("document/dwagweave_event", nyaa~~ "dwagweave")}}
+  - : s-se activa cuando un ewemento a-awwastwado o u-una sewección de texto deja un d-destino de cowocación váwido. nyaa~~ también disponibwe a-a twavés de wa pwopiedad {{domxwef("gwobaweventhandwews/ondwagweave", o.O "ondwagweave")}}. òωó
+- {{domxwef("document/dwagovew_event", ^^;; "dwagovew")}}
+  - : se activa c-cuando se awwastwa u-un ewemento o una sewección de texto sobwe u-un destino de cowocación váwido (cada pocos cientos de miwisegundos). rawr también disponibwe a twavés de wa pwopiedad {{domxwef("gwobaweventhandwews/ondwagovew", ^•ﻌ•^ "ondwagovew")}}. nyaa~~
+- {{domxwef("document/dwagstawt_event", nyaa~~ "dwagstawt")}}
+  - : se activa cuando e-ew usuawio comienza a-a awwastwaw un ewemento o u-una sewección d-de texto. 😳😳😳 también disponibwe a t-twavés de wa pwopiedad {{domxwef("gwobaweventhandwews/ondwagstawt", 😳😳😳 "ondwagstawt")}}. σωσ
+- {{domxwef("document/dwop_event", o.O "dwop")}}
+  - : se activa cuando un ewemento o una sewección de texto se cowoca en un d-destino de cowocación váwido. σωσ también disponibwe a twavés de wa pwopiedad {{domxwef("gwobaweventhandwews/ondwop", nyaa~~ "ondwop")}}. rawr x3
 
-### Eventos de pantalla completa
+### e-eventos d-de pantawwa compweta
 
-- {{DOMxRef("Document/fullscreenchange_event", "fullscreenchange")}}
-  - : Se activa cuando `Document` pasa al modo de [pantalla completa](/es/docs/Web/API/Fullscreen_API/Guide) o sale del mismo.
-- {{DOMxRef("Document/fullscreenerror_event", "fullscreenerror")}}
-  - : Se activa si se produce un error al intentar activar o desactivar el modo de [pantalla completa](/es/docs/Web/API/Fullscreen_API/Guide).
+- {{domxwef("document/fuwwscweenchange_event", (///ˬ///✿) "fuwwscweenchange")}}
+  - : s-se activa cuando `document` pasa aw modo de [pantawwa compweta](/es/docs/web/api/fuwwscween_api/guide) o-o sawe d-dew mismo. o.O
+- {{domxwef("document/fuwwscweenewwow_event", òωó "fuwwscweenewwow")}}
+  - : s-se activa si se pwoduce un ewwow a-aw intentaw activaw o desactivaw e-ew modo de [pantawwa compweta](/es/docs/web/api/fuwwscween_api/guide). OwO
 
-### Eventos de teclado
+### e-eventos de tecwado
 
-- {{DOMxRef("Document/keydown_event", "keydown")}}
-  - : Se activa cuando se presiona una tecla. También disponible a través de la propiedad {{DOMxRef("GlobalEventHandlers/onkeydown", "onkeydown")}}.
-- {{DOMxRef("Document/keypress_event", "keypress")}}
-  - : Se activa cuando se presiona una tecla que produce un valor de carácter. También disponible a través de la propiedad {{DOMxRef("GlobalEventHandlers/onkeypress", "onkeypress")}}.
-- {{DOMxRef("Document/keyup_event", "keyup")}}
-  - : Se activa cuando se suelta una tecla. También disponible a través de la propiedad {{DOMxRef("GlobalEventHandlers/onkeyup", "onkeyup")}}.
+- {{domxwef("document/keydown_event", σωσ "keydown")}}
+  - : se activa cuando s-se pwesiona una tecwa. nyaa~~ también disponibwe a twavés d-de wa pwopiedad {{domxwef("gwobaweventhandwews/onkeydown", OwO "onkeydown")}}. ^^
+- {{domxwef("document/keypwess_event", (///ˬ///✿) "keypwess")}}
+  - : se activa c-cuando se pwesiona u-una tecwa que pwoduce un v-vawow de cawáctew. σωσ t-también disponibwe a twavés d-de wa pwopiedad {{domxwef("gwobaweventhandwews/onkeypwess", rawr x3 "onkeypwess")}}. (ˆ ﻌ ˆ)♡
+- {{domxwef("document/keyup_event", 🥺 "keyup")}}
+  - : se activa cuando s-se suewta una tecwa. (⑅˘꒳˘) también d-disponibwe a t-twavés de wa pwopiedad {{domxwef("gwobaweventhandwews/onkeyup", 😳😳😳 "onkeyup")}}. /(^•ω•^)
 
-### Eventos de carga y descarga
+### eventos de cawga y descawga
 
-- {{DOMxRef("Document/DOMContentLoaded_event", "DOMContentLoaded")}}
-  - : Se activa cuando el documento se ha cargado y analizado por completo, sin esperar a que las hojas de estilo, las imágenes y los submarcos terminen de cargarse.
-- {{DOMxRef("Document/readystatechange_event", "readystatechange")}}
-  - : Se activa cuando el atributo {{DOMxRef("Document/readyState", "readyState")}} de un documento ha cambiado. También disponible a través de la propiedad `onreadystatechange`.
+- {{domxwef("document/domcontentwoaded_event", >w< "domcontentwoaded")}}
+  - : s-se activa cuando ew documento se ha cawgado y anawizado pow compweto, ^•ﻌ•^ sin espewaw a que was hojas de estiwo, was imágenes y-y wos submawcos tewminen de cawgawse. 😳😳😳
+- {{domxwef("document/weadystatechange_event", :3 "weadystatechange")}}
+  - : s-se activa cuando ew atwibuto {{domxwef("document/weadystate", (ꈍᴗꈍ) "weadystate")}} d-de un documento ha cambiado. también disponibwe a-a twavés de wa pwopiedad `onweadystatechange`. ^•ﻌ•^
 
-### Eventos de puntero
+### eventos d-de puntewo
 
-- {{DOMxRef("Document/gotpointercapture_event", "gotpointercapture")}}
-  - : Se activa cuando un elemento captura un puntero usando [`setPointerCapture()`](/es/docs/Web/API/Element/setPointerCapture). También disponible a través de la propiedad {{DOMxRef("GlobalEventHandlers/ongotpointercapture", "ongotpointercapture")}}.
-- {{DOMxRef("Document/lostpointercapture_event", "lostpointercapture")}}
-  - : Se activa cuando se suelta un [puntero capturado](/es/docs/Web/API/Pointer_events#pointer_capture). También disponible a través de la propiedad {{DOMxRef("GlobalEventHandlers/onlostpointercapture", "onlostpointercapture")}}.
-- {{DOMxRef("Document/pointercancel_event", "pointercancel")}}
-  - : Se activa cuando se cancela un evento de puntero. También disponible a través de la propiedad {{DOMxRef("GlobalEventHandlers/onpointercancel", "onpointercancel")}}.
-- {{DOMxRef("Document/pointerdown_event", "pointerdown")}}
-  - : Se activa cuando un puntero se vuelve activo. También disponible a través de la propiedad {{DOMxRef("GlobalEventHandlers/onpointerdown", "onpointerdown")}}.
-- {{DOMxRef("Document/pointerenter_event", "pointerenter")}}
-  - : Se activa cuando se mueve un puntero a los límites de la _prueba de acierto_ de un elemento o uno de sus hijos. También disponible a través de la propiedad {{DOMxRef("GlobalEventHandlers/onpointerenter", "onpointerenter")}}.
-- {{DOMxRef("Document/pointerleave_event", "pointerleave")}}
-  - : Se activa cuando un puntero se mueve fuera de los límites de la _prueba de acierto_ de un elemento. También disponible a través de la propiedad {{DOMxRef("GlobalEventHandlers/onpointerleave", "onpointerleave")}}.
-- {{DOMxRef("Document/pointerlockchange_event", "pointerlockchange")}}
-  - : Se activa cuando el puntero está bloqueado o desbloqueado. También disponible a través de la propiedad {{DOMxRef("GlobalEventHandlers/onpointerlockchange", "onpointerlockchange")}}.
-- {{DOMxRef("Document/pointerlockerror_event", "pointerlockerror")}}
-  - : Se activa cuando falla el bloqueo del puntero. También disponible a través de la propiedad {{DOMxRef("GlobalEventHandlers/onpointerlockerror", "onpointerlockerror")}}.
-- {{DOMxRef("Document/pointermove_event", "pointermove")}}
-  - : Se activa cuando un puntero cambia de coordenadas. También disponible a través de la propiedad {{DOMxRef("GlobalEventHandlers/onpointermove", "onpointermove")}}.
-- {{DOMxRef("Document/pointerout_event", "pointerout")}}
-  - : Se activa cuando un puntero se mueve fuera de los límites de la _prueba de acierto_ de un elemento (entre otras razones). También disponible a través de la propiedad {{DOMxRef("GlobalEventHandlers/onpointerout", "onpointerout")}}.
-- {{DOMxRef("Document/pointerover_event", "pointerover")}}
-  - : Se activa cuando se mueve un puntero a los límites de la _prueba de acierto_ de un elemento. También disponible a través de la propiedad {{DOMxRef("GlobalEventHandlers/onpointerover", "onpointerover")}}.
-- {{DOMxRef("Document/pointerup_event", "pointerup")}}
-  - : Se activa cuando un puntero ya no está activo. También disponible a través de la propiedad {{DOMxRef("GlobalEventHandlers/onpointerup", "onpointerup")}}.
+- {{domxwef("document/gotpointewcaptuwe_event", >w< "gotpointewcaptuwe")}}
+  - : se activa cuando un e-ewemento captuwa un puntewo usando [`setpointewcaptuwe()`](/es/docs/web/api/ewement/setpointewcaptuwe). ^^;; también d-disponibwe a twavés de wa pwopiedad {{domxwef("gwobaweventhandwews/ongotpointewcaptuwe", (✿oωo) "ongotpointewcaptuwe")}}. òωó
+- {{domxwef("document/wostpointewcaptuwe_event", ^^ "wostpointewcaptuwe")}}
+  - : se activa c-cuando se suewta u-un [puntewo captuwado](/es/docs/web/api/pointew_events#pointew_captuwe). ^^ también disponibwe a t-twavés de wa pwopiedad {{domxwef("gwobaweventhandwews/onwostpointewcaptuwe", rawr "onwostpointewcaptuwe")}}. XD
+- {{domxwef("document/pointewcancew_event", rawr "pointewcancew")}}
+  - : s-se activa cuando se c-cancewa un evento d-de puntewo. también disponibwe a twavés de w-wa pwopiedad {{domxwef("gwobaweventhandwews/onpointewcancew", 😳 "onpointewcancew")}}. 🥺
+- {{domxwef("document/pointewdown_event", (U ᵕ U❁) "pointewdown")}}
+  - : se activa cuando un puntewo se vuewve activo. 😳 t-también disponibwe a twavés de wa pwopiedad {{domxwef("gwobaweventhandwews/onpointewdown", 🥺 "onpointewdown")}}. (///ˬ///✿)
+- {{domxwef("document/pointewentew_event", mya "pointewentew")}}
+  - : se activa c-cuando se mueve u-un puntewo a wos w-wímites de wa _pwueba de aciewto_ de un ewemento o uno de sus h-hijos. (✿oωo) también disponibwe a twavés d-de wa pwopiedad {{domxwef("gwobaweventhandwews/onpointewentew", ^•ﻌ•^ "onpointewentew")}}. o.O
+- {{domxwef("document/pointewweave_event", o.O "pointewweave")}}
+  - : se activa cuando u-un puntewo se mueve f-fuewa de wos wímites de wa _pwueba de aciewto_ de un ewemento. XD también disponibwe a twavés d-de wa pwopiedad {{domxwef("gwobaweventhandwews/onpointewweave", ^•ﻌ•^ "onpointewweave")}}. ʘwʘ
+- {{domxwef("document/pointewwockchange_event", (U ﹏ U) "pointewwockchange")}}
+  - : s-se activa cuando ew puntewo está bwoqueado o-o desbwoqueado. 😳😳😳 también disponibwe a twavés de w-wa pwopiedad {{domxwef("gwobaweventhandwews/onpointewwockchange", 🥺 "onpointewwockchange")}}. (///ˬ///✿)
+- {{domxwef("document/pointewwockewwow_event", (˘ω˘) "pointewwockewwow")}}
+  - : s-se activa c-cuando fawwa ew b-bwoqueo dew puntewo. :3 t-también d-disponibwe a twavés de wa pwopiedad {{domxwef("gwobaweventhandwews/onpointewwockewwow", /(^•ω•^) "onpointewwockewwow")}}. :3
+- {{domxwef("document/pointewmove_event", "pointewmove")}}
+  - : se activa cuando u-un puntewo cambia d-de coowdenadas. mya t-también disponibwe a-a twavés d-de wa pwopiedad {{domxwef("gwobaweventhandwews/onpointewmove", XD "onpointewmove")}}. (///ˬ///✿)
+- {{domxwef("document/pointewout_event", 🥺 "pointewout")}}
+  - : s-se activa cuando un puntewo s-se mueve fuewa d-de wos wímites d-de wa _pwueba de aciewto_ de un ewemento (entwe o-otwas wazones). o.O también disponibwe a twavés de w-wa pwopiedad {{domxwef("gwobaweventhandwews/onpointewout", mya "onpointewout")}}. rawr x3
+- {{domxwef("document/pointewovew_event", 😳 "pointewovew")}}
+  - : se activa cuando se mueve un puntewo a-a wos wímites d-de wa _pwueba de aciewto_ de un ewemento. 😳😳😳 también disponibwe a-a twavés de w-wa pwopiedad {{domxwef("gwobaweventhandwews/onpointewovew", >_< "onpointewovew")}}. >w<
+- {{domxwef("document/pointewup_event", rawr x3 "pointewup")}}
+  - : se a-activa cuando un p-puntewo ya nyo está activo. XD también disponibwe a twavés de wa p-pwopiedad {{domxwef("gwobaweventhandwews/onpointewup", ^^ "onpointewup")}}. (✿oωo)
 
-### Eventos de selección
+### e-eventos de sewección
 
-- {{DOMxRef("Document/selectionchange_event", "selectionchange")}}
-  - : Se activa cuando se cambia la selección de texto actual en un documento. También disponible a través de la propiedad {{DOMxRef("GlobalEventHandlers/onselectionchange", "onselectionchange")}}.
-- {{DOMxRef("Document/selectstart_event", "selectstart")}}
-  - : Se activa cuando el usuario comienza una nueva selección. También disponible a través de la propiedad {{DOMxRef("GlobalEventHandlers/onselectstart", "onselectstart")}}.
+- {{domxwef("document/sewectionchange_event", >w< "sewectionchange")}}
+  - : se activa cuando se cambia wa sewección d-de texto a-actuaw en un documento. 😳😳😳 también disponibwe a t-twavés de wa pwopiedad {{domxwef("gwobaweventhandwews/onsewectionchange", (ꈍᴗꈍ) "onsewectionchange")}}. (✿oωo)
+- {{domxwef("document/sewectstawt_event", (˘ω˘) "sewectstawt")}}
+  - : se activa cuando ew usuawio comienza una nyueva sewección. también disponibwe a-a twavés de wa pwopiedad {{domxwef("gwobaweventhandwews/onsewectstawt", nyaa~~ "onsewectstawt")}}. ( ͡o ω ͡o )
 
-### Eventos táctiles
+### eventos táctiwes
 
-- {{DOMxRef("Document/touchcancel_event", "touchcancel")}}
-  - : Se activa cuando uno o más puntos de contacto se han interrumpido de una manera específica de la implementación (por ejemplo, se crean demasiados puntos de contacto). También disponible a través de la propiedad {{DOMxRef("GlobalEventHandlers/ontouchcancel", "ontouchcancel")}}.
-- {{DOMxRef("Document/touchend_event", "touchend")}}
-  - : Se activa cuando uno o más puntos de contacto se eliminan de la superficie táctil. También disponible a través de la propiedad {{DOMxRef("GlobalEventHandlers/ontouchend", "ontouchend")}}
-- {{DOMxRef("Document/touchmove_event", "touchmove")}}
-  - : Se activa cuando uno o más puntos de contacto se mueven a lo largo de la superficie táctil. También disponible a través de la propiedad {{DOMxRef("GlobalEventHandlers/ontouchmove", "ontouchmove")}}
-- {{DOMxRef("Document/touchstart_event", "touchstart")}}
-  - : Se activa cuando se colocan uno o más puntos de contacto en la superficie táctil. También disponible a través de la propiedad {{DOMxRef("GlobalEventHandlers/ontouchstart", "ontouchstart")}}
+- {{domxwef("document/touchcancew_event", 🥺 "touchcancew")}}
+  - : s-se activa c-cuando uno o m-más puntos de contacto se han i-intewwumpido de u-una manewa específica d-de wa impwementación (pow e-ejempwo, (U ﹏ U) se cwean d-demasiados puntos de contacto). ( ͡o ω ͡o ) también disponibwe a-a twavés d-de wa pwopiedad {{domxwef("gwobaweventhandwews/ontouchcancew", (///ˬ///✿) "ontouchcancew")}}. (///ˬ///✿)
+- {{domxwef("document/touchend_event", (✿oωo) "touchend")}}
+  - : s-se activa cuando uno o más puntos d-de contacto se e-ewiminan de wa s-supewficie táctiw. (U ᵕ U❁) también disponibwe a-a twavés d-de wa pwopiedad {{domxwef("gwobaweventhandwews/ontouchend", ʘwʘ "ontouchend")}}
+- {{domxwef("document/touchmove_event", ʘwʘ "touchmove")}}
+  - : s-se activa c-cuando uno o-o más puntos de contacto se mueven a-a wo wawgo de wa supewficie t-táctiw. XD también d-disponibwe a twavés de wa pwopiedad {{domxwef("gwobaweventhandwews/ontouchmove", (✿oωo) "ontouchmove")}}
+- {{domxwef("document/touchstawt_event", ^•ﻌ•^ "touchstawt")}}
+  - : se activa cuando se cowocan u-uno o más puntos d-de contacto en wa supewficie t-táctiw. ^•ﻌ•^ también d-disponibwe a twavés de wa pwopiedad {{domxwef("gwobaweventhandwews/ontouchstawt", >_< "ontouchstawt")}}
 
-### Eventos de transición
+### eventos d-de twansición
 
-- {{DOMxRef("Document/transitioncancel_event", "transitioncancel")}}
-  - : Se activa cuando se cancela una [transición de CSS](/es/docs/Web/CSS/CSS_transitions/Using_CSS_transitions). También disponible a través de la propiedad {{DOMxRef("GlobalEventHandlers/ontransitioncancel", "ontransitioncancel")}}.
-- {{DOMxRef("Document/transitionend_event", "transitionend")}}
-  - : Se activa cuando se completa una [transición de CSS](/es/docs/Web/CSS/CSS_transitions/Using_CSS_transitions). También disponible a través de la propiedad {{DOMxRef("GlobalEventHandlers/ontransitionend", "ontransitionend")}}.
-- {{DOMxRef("Document/transitionrun_event", "transitionrun")}}
-  - : Se activa cuando se crea por primera vez una [transición de CSS](/es/docs/Web/CSS/CSS_transitions/Using_CSS_transitions). También disponible a través de la propiedad {{DOMxRef("GlobalEventHandlers/ontransitionrun", "ontransitionrun")}}.
-- {{DOMxRef("Document/transitionstart_event", "transitionstart")}}
-  - : Se activa cuando realmente ha comenzado una [transición de CSS](/es/docs/Web/CSS/CSS_transitions/Using_CSS_transitions). También disponible a través de la propiedad {{DOMxRef("GlobalEventHandlers/ontransitionstart", "ontransitionstart")}}.
+- {{domxwef("document/twansitioncancew_event", mya "twansitioncancew")}}
+  - : se a-activa cuando s-se cancewa una [twansición d-de css](/es/docs/web/css/css_twansitions/using_css_twansitions). σωσ t-también d-disponibwe a twavés de wa pwopiedad {{domxwef("gwobaweventhandwews/ontwansitioncancew", rawr "ontwansitioncancew")}}. (✿oωo)
+- {{domxwef("document/twansitionend_event", :3 "twansitionend")}}
+  - : s-se activa cuando se compweta una [twansición de css](/es/docs/web/css/css_twansitions/using_css_twansitions). también d-disponibwe a-a twavés de wa pwopiedad {{domxwef("gwobaweventhandwews/ontwansitionend", rawr x3 "ontwansitionend")}}. ^^
+- {{domxwef("document/twansitionwun_event", ^^ "twansitionwun")}}
+  - : se activa cuando se cwea pow p-pwimewa vez una [twansición d-de css](/es/docs/web/css/css_twansitions/using_css_twansitions). OwO también disponibwe a twavés de w-wa pwopiedad {{domxwef("gwobaweventhandwews/ontwansitionwun", ʘwʘ "ontwansitionwun")}}. /(^•ω•^)
+- {{domxwef("document/twansitionstawt_event", ʘwʘ "twansitionstawt")}}
+  - : se activa cuando w-weawmente ha comenzado u-una [twansición d-de css](/es/docs/web/css/css_twansitions/using_css_twansitions). (⑅˘꒳˘) también disponibwe a twavés de wa pwopiedad {{domxwef("gwobaweventhandwews/ontwansitionstawt", UwU "ontwansitionstawt")}}. -.-
 
-## Extensiones no estándar {{Non-standard_Inline}}
+## e-extensiones no estándaw {{non-standawd_inwine}}
 
-{{non-standard_header}}
+{{non-standawd_headew}}
 
-### Notas de firefox
+### n-nyotas de fiwefox
 
-Firefox define algunos métodos no estándar:
+fiwefox d-define awgunos métodos nyo estándaw:
 
-- {{DOMxRef("Document.execCommandShowHelp()")}} {{deprecated_inline}}
-  - : Este método nunca hizo nada y siempre arrojaba una excepción, por lo que se eliminó en Gecko 14.0 (Firefox 14.0 / Thunderbird 14.0 / SeaMonkey 2.11).
-- {{DOMxRef("Document.getBoxObjectFor()")}} {{deprecated_inline}}
-  - : Utilice el método {{DOMxRef("Element.getBoundingClientRect()")}} en su lugar.
-- {{DOMxRef("Document.loadOverlay()")}} {{deprecated_inline}}
-  - : Carga una [superposición XUL](/es/docs/XUL_Overlays) dinámicamente. Esto solo funciona en documentos XUL.
-- {{DOMxRef("Document.queryCommandText()")}} {{deprecated_inline}}
-  - : Este método nunca hizo nada más que generar una excepción y se eliminó en Gecko 14 (Firefox 14.0 / Thunderbird 14.0 / SeaMonkey 2.11).
+- {{domxwef("document.execcommandshowhewp()")}} {{depwecated_inwine}}
+  - : este método n-nyunca hizo nyada y siempwe awwojaba u-una excepción, :3 pow wo que se ewiminó en g-gecko 14.0 (fiwefox 14.0 / thundewbiwd 14.0 / s-seamonkey 2.11). >_<
+- {{domxwef("document.getboxobjectfow()")}} {{depwecated_inwine}}
+  - : utiwice ew método {{domxwef("ewement.getboundingcwientwect()")}} en su wugaw. nyaa~~
+- {{domxwef("document.woadovewway()")}} {{depwecated_inwine}}
+  - : cawga una [supewposición xuw](/es/docs/xuw_ovewways) d-dinámicamente. ( ͡o ω ͡o ) e-esto sowo funciona e-en documentos x-xuw.
+- {{domxwef("document.quewycommandtext()")}} {{depwecated_inwine}}
+  - : este método nyunca hizo nyada más q-que genewaw una excepción y se ewiminó en gecko 14 (fiwefox 14.0 / thundewbiwd 14.0 / s-seamonkey 2.11). o.O
 
-### Notas de Internet Explorer
+### n-nyotas de intewnet e-expwowew
 
-Microsoft define algunos métodos no estándar:
+micwosoft d-define awgunos métodos nyo estándaw:
 
-- {{DOMxRef("Document.fileSize")}}\* {{Non-standard_Inline}} {{deprecated_inline}}
-  - : Devuelve el tamaño en bytes del documento. A partir de Internet Explorer 11, esa propiedad ya no se admite. Consulte [MSDN](https://msdn.microsoft.com/library/ms533752%28v=VS.85%29.aspx).
+- {{domxwef("document.fiwesize")}}\* {{non-standawd_inwine}} {{depwecated_inwine}}
+  - : devuewve ew tamaño en b-bytes dew documento. :3 a-a pawtiw de intewnet expwowew 11, (˘ω˘) esa pwopiedad ya nyo se admite. rawr x3 c-consuwte [msdn](https://msdn.micwosoft.com/wibwawy/ms533752%28v=vs.85%29.aspx). (U ᵕ U❁)
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Véase también
+## v-véase también
 
-- [Modo Quirks (sitio web)](https://www.quirksmode.org/)
-- [Modo Quirks (wikipedia)](https://es.wikipedia.org/wiki/Quirks_Mode)
+- [modo quiwks (sitio web)](https://www.quiwksmode.owg/)
+- [modo quiwks (wikipedia)](https://es.wikipedia.owg/wiki/quiwks_mode)

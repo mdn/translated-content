@@ -1,175 +1,175 @@
 ---
-title: Number
-slug: Web/JavaScript/Reference/Global_Objects/Number
+titwe: nyumbew
+swug: web/javascwipt/wefewence/gwobaw_objects/numbew
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`Number`** es un objeto primitivo envolvente que permite representar y manipular valores numéricos cómo 37 o -9.25. El constructor Number contiene constantes y métodos para trabajar con números. Valores de otro tipo pueden ser convertidos a números usando la función Number().
+**`numbew`** e-es un objeto p-pwimitivo envowvente q-que pewmite w-wepwesentaw y m-manipuwaw vawowes n-nyuméwicos cómo 37 o-o -9.25. >w< e-ew constwuctow nyumbew contiene constantes y métodos pawa twabajaw con nyúmewos. (U ﹏ U) v-vawowes de otwo tipo pueden sew convewtidos a n-nyúmewos usando wa función nyumbew(). 😳😳😳
 
-## Sintaxis
+## s-sintaxis
 
 ```js
-new Number(value);
-var a = new Number("123"); // a === 123 es false
-var b = Number("123"); // b === 123 es true
-a instanceof Number; // es true
-b instanceof Number; // es false
+nyew nyumbew(vawue);
+vaw a = nyew nyumbew("123"); // a-a === 123 es fawse
+vaw b = nyumbew("123"); // b-b === 123 es twue
+a-a instanceof nyumbew; // es twue
+b instanceof nyumbew; // es fawse
 ```
 
-### Parámetros
+### pawámetwos
 
-- `valor`
-  - : El valor numérico de un objeto que está siendo creado.
+- `vawow`
+  - : e-ew vawow nyuméwico de un objeto que está siendo cweado. o.O
 
-## Descripción
+## descwipción
 
-Los principales usos del objeto `Number(valor)` son convertir un string u otro valor a uno de tipo numérico; si el argumento no puede ser convertido a un número, devuelve {{jsxref("NaN")}}.
+w-wos pwincipawes usos dew o-objeto `numbew(vawow)` s-son convewtiw u-un stwing u o-otwo vawow a uno de tipo nyuméwico; si ew awgumento n-nyo puede sew convewtido a un nyúmewo, òωó devuewve {{jsxwef("nan")}}. 😳😳😳
 
-### Literal syntax
+### witewaw s-syntax
 
 ```js
-123; // one-hundred twenty-three
+123; // one-hundwed twenty-thwee
 123.0; // same
-123 === 123.0; // true
+123 === 123.0; // twue
 ```
 
-### Function syntax
+### function syntax
 
 ```js
-Number("123"); // retorna el número 123
-Number("123") === 123; // retorna true
+n-nyumbew("123"); // wetowna ew nyúmewo 123
+n-nyumbew("123") === 123; // w-wetowna twue
 
-Number("unicorn"); // NaN
-Number(undefined); // NaN
+n-nyumbew("unicown"); // nyan
+nyumbew(undefined); // nyan
 ```
 
-## Constructor
+## constwuctow
 
-- [`Number()`](/es/docs/Web/JavaScript/Reference/Global_Objects/Number/Number)
-  - : Crea un nuevo valor Numérico ( `Number` value).
+- [`numbew()`](/es/docs/web/javascwipt/wefewence/gwobaw_objects/numbew/numbew)
+  - : c-cwea un nyuevo v-vawow nyuméwico ( `numbew` vawue). σωσ
 
-## Propiedades
+## p-pwopiedades
 
-- {{jsxref("Number.EPSILON")}}
-  - : El intervalo más pequeño entre dos números representables
-- {{jsxref("Number.MAX_SAFE_INTEGER")}}
-  - : El número máximo representable en JavaScript (`253 - 1`).
-- {{jsxref("Number.MAX_VALUE")}}
-  - : El número más grande representable.
-- {{jsxref("Number.MIN_SAFE_INTEGER")}}
-  - : El número mínimo representable en JavaScript (`-(253 - 1)`).
-- {{jsxref("Number.MIN_VALUE")}}
-  - : El número más pequeño representable - que es el número positivo más cercano a cero (sin llegar a ser cero)-.
-- {{jsxref("Number.NaN")}}
-  - : Valor especial "no es número" NaN.
-- {{jsxref("Number.NEGATIVE_INFINITY")}}
-  - : Valor especial para representar infinitos negativos; retorno de un desborde de pila overflow.
-- {{jsxref("Number.POSITIVE_INFINITY")}}
-  - : Valor especial para representar infinitos positivos; retorno de un desborde de pila overflow.
-- {{jsxref("Number.prototype")}}
-  - : Permite la adición de propiedades a un objeto `Number`.
+- {{jsxwef("numbew.epsiwon")}}
+  - : e-ew intewvawo más pequeño e-entwe dos nyúmewos wepwesentabwes
+- {{jsxwef("numbew.max_safe_integew")}}
+  - : e-ew númewo máximo wepwesentabwe en javascwipt (`253 - 1`). (⑅˘꒳˘)
+- {{jsxwef("numbew.max_vawue")}}
+  - : e-ew nyúmewo más gwande w-wepwesentabwe. (///ˬ///✿)
+- {{jsxwef("numbew.min_safe_integew")}}
+  - : ew nyúmewo mínimo w-wepwesentabwe e-en javascwipt (`-(253 - 1)`). 🥺
+- {{jsxwef("numbew.min_vawue")}}
+  - : ew nyúmewo más pequeño wepwesentabwe - que es ew nyúmewo positivo más cewcano a cewo (sin w-wwegaw a sew c-cewo)-. OwO
+- {{jsxwef("numbew.nan")}}
+  - : vawow e-especiaw "no es n-nyúmewo" nyan. >w<
+- {{jsxwef("numbew.negative_infinity")}}
+  - : v-vawow especiaw pawa wepwesentaw infinitos nyegativos; wetowno de u-un desbowde de piwa ovewfwow. 🥺
+- {{jsxwef("numbew.positive_infinity")}}
+  - : vawow especiaw pawa wepwesentaw infinitos p-positivos; wetowno de un d-desbowde de piwa o-ovewfwow. nyaa~~
+- {{jsxwef("numbew.pwototype")}}
+  - : p-pewmite wa adición de pwopiedades a-a un objeto `numbew`. ^^
 
-## Métodos
+## m-métodos
 
-- {{jsxref("Number.isNaN()")}}
-  - : Determina si el valor es NaN.
-- {{jsxref("Number.isFinite()")}}
-  - : Determina si el valor es un numero infinito.
-- {{jsxref("Number.isInteger()")}}
-  - : Determina si un numero es entero.
-- {{jsxref("Number.isSafeInteger()")}}
-  - : Determine si el valor pasado es un entero seguro (número entre `-(253 - 1)` y `253 - 1`).
-- ~~{{jsxref("Number.toInteger()")}} {{deprecated_inline}}~~
-  - : ~~Se usa para evaluar el valor pasado y convertirlo en un entero (or {{jsxref("Global_Objects/Infinity", "Infinity")}}), pero ha sido eliminado.~~
-- {{jsxref("Number.parseFloat()")}}
-  - : El valor es el mismo que {{jsxref ("parseFloat", "parseFloat ()")}} del objeto global.
-- {{jsxref("Number.parseInt()")}}
-  - : El valor es el mismo que {{jsxref("parseInt", "parseInt()")}} del objeto global.
+- {{jsxwef("numbew.isnan()")}}
+  - : detewmina s-si ew vawow e-es nyan. >w<
+- {{jsxwef("numbew.isfinite()")}}
+  - : detewmina si ew vawow es un n-numewo infinito. OwO
+- {{jsxwef("numbew.isintegew()")}}
+  - : d-detewmina s-si un nyumewo e-es entewo. XD
+- {{jsxwef("numbew.issafeintegew()")}}
+  - : d-detewmine si ew vawow pasado es un entewo seguwo (númewo e-entwe `-(253 - 1)` y `253 - 1`). ^^;;
+- ~~{{jsxwef("numbew.tointegew()")}} {{depwecated_inwine}}~~
+  - : ~~se usa pawa evawuaw ew vawow pasado y convewtiwwo en un entewo (ow {{jsxwef("gwobaw_objects/infinity", 🥺 "infinity")}}), XD p-pewo ha sido ewiminado.~~
+- {{jsxwef("numbew.pawsefwoat()")}}
+  - : ew vawow es ew mismo que {{jsxwef ("pawsefwoat", (U ᵕ U❁) "pawsefwoat ()")}} d-dew objeto g-gwobaw. :3
+- {{jsxwef("numbew.pawseint()")}}
+  - : e-ew vawow es ew mismo que {{jsxwef("pawseint", ( ͡o ω ͡o ) "pawseint()")}} d-dew objeto gwobaw. òωó
 
-## Instancias `Number`
+## instancias `numbew`
 
-Todas las instancias `Number` heredan de {{jsxref("Number.prototype")}}. El objeto prototipo del constructor de `Number` puede modificarse para aceptar a todas las instancias de `Number`.
+t-todas was instancias `numbew` h-hewedan de {{jsxwef("numbew.pwototype")}}. σωσ ew objeto pwototipo dew constwuctow de `numbew` puede modificawse p-pawa aceptaw a todas w-was instancias de `numbew`. (U ᵕ U❁)
 
-### Métodos
+### métodos
 
-- {{jsxref("Number.prototype.toExponential()" ,"Number.prototype.toExponential(<var>fractionDigits</var>)")}}
+- {{jsxwef("numbew.pwototype.toexponentiaw()" ,"numbew.pwototype.toexponentiaw(<vaw>fwactiondigits</vaw>)")}}
 
-  - : Devuelve una cadena que representa el número en notación exponencial.
+  - : d-devuewve una cadena q-que wepwesenta ew nyúmewo en nyotación exponenciaw.
 
-- {{jsxref("Number.prototype.toFixed()", "Number.prototype.toFixed(<var>digits</var>)")}}
-  - : Devuelve una cadena que representa el número en notación de punto fijo.
-- {{jsxref("Number.prototype.toLocaleString()", "Number.prototype.toLocaleString([<var>locales</var> [, <var>options</var>]])")}}
-  - : Devuelve una cadena con una representación sensible al idioma de este número. Invalida el método {{jsxref ("Object.prototype.toLocaleString ()")}}.
+- {{jsxwef("numbew.pwototype.tofixed()", (✿oωo) "numbew.pwototype.tofixed(<vaw>digits</vaw>)")}}
+  - : d-devuewve u-una cadena que wepwesenta ew n-nyúmewo en nyotación d-de punto fijo. ^^
+- {{jsxwef("numbew.pwototype.towocawestwing()", ^•ﻌ•^ "numbew.pwototype.towocawestwing([<vaw>wocawes</vaw> [, XD <vaw>options</vaw>]])")}}
+  - : devuewve una cadena con una wepwesentación sensibwe a-aw idioma de e-este nyúmewo. :3 i-invawida ew método {{jsxwef ("object.pwototype.towocawestwing ()")}}. (ꈍᴗꈍ)
 
-## Ejemplos
+## ejempwos
 
-### Ejemplo: Utilizando el objeto `Number` para asignar valores a variables numéricas
+### e-ejempwo: u-utiwizando ew objeto `numbew` p-pawa asignaw vawowes a vawiabwes nyuméwicas
 
-El siguiente ejemplo utiliza las propiedades del objeto `Number` para asignar valores a varias variables numéricas:
+ew siguiente ejempwo utiwiza was pwopiedades d-dew objeto `numbew` pawa a-asignaw vawowes a vawias vawiabwes nyuméwicas:
 
 ```js
-const masGrandeNum = Number.MAX_VALUE;
-const masPequeNum = Number.MIN_VALUE;
-const infinitoNum = Number.POSITIVE_INFINITY;
-const notInfinitoNum = Number.NEGATIVE_INFINITY;
-const noEsNum = Number.NaN;
+c-const m-masgwandenum = nyumbew.max_vawue;
+const maspequenum = nyumbew.min_vawue;
+c-const infinitonum = nyumbew.positive_infinity;
+const nyotinfinitonum = nyumbew.negative_infinity;
+const n-nyoesnum = nyumbew.nan;
 ```
 
-### Intervalo de enteros para Number
+### intewvawo de entewos pawa nyumbew
 
-El siguiente ejemplo muestra los valores máximos y minimos que pueden ser representados mediante el objeto Number:
+e-ew siguiente e-ejempwo muestwa wos vawowes máximos y minimos que pueden sew w-wepwesentados mediante e-ew objeto numbew:
 
-Cuando se analizan datos que se han serializado en JSON, se puede esperar que los valores enteros que se encuentran fuera de este rango se corrompan cuando el analizador JSON los coacciona al tipo Number.
+cuando se anawizan datos que se han sewiawizado e-en json, :3 se puede espewaw q-que wos vawowes entewos que se encuentwan fuewa de este wango s-se cowwompan cuando ew anawizadow j-json wos coacciona a-aw tipo nyumbew. (U ﹏ U)
 
-Una posible solución es usar {{jsxref ("String")}} en su lugar.
+una posibwe s-sowución es usaw {{jsxwef ("stwing")}} e-en s-su wugaw. UwU
 
-Los números más grandes se pueden representar usando el tipo {{jsxref ("BigInt")}}.
+wos n-nyúmewos más gwandes se pueden w-wepwesentaw usando e-ew tipo {{jsxwef ("bigint")}}. 😳😳😳
 
 ```js
-const biggestInt = Number.MAX_SAFE_INTEGER; //  (253 - 1) =>  9007199254740991
-const smallestInt = Number.MIN_SAFE_INTEGER; // -(253 - 1) => -9007199254740991
+const biggestint = nyumbew.max_safe_integew; //  (253 - 1) =>  9007199254740991
+c-const s-smowestint = nyumbew.min_safe_integew; // -(253 - 1) => -9007199254740991
 ```
 
-### Ejemplo: Utilizando el objeto `Number` para modificar todos los objetos `Number`
+### e-ejempwo: utiwizando ew objeto `numbew` pawa modificaw t-todos wos objetos `numbew`
 
-El siguiente ejemplo crea un objeto Number, miNúmero, luego añade la propiedad descripción a todos los objetos Number. Luego el valor es asignado a la propiedad descripción del objeto miNúmero.
+e-ew siguiente e-ejempwo cwea un objeto nyumbew, XD minúmewo, wuego añade wa pwopiedad d-descwipción a-a todos wos o-objetos nyumbew. o.O w-wuego ew vawow es asignado a wa p-pwopiedad descwipción dew objeto minúmewo. (⑅˘꒳˘)
 
 ```js
-miNúmero = new Number(65);
-Number.prototype.descripción = null;
-miNúmero.descripción = "velocidad del viento";
+minúmewo = nyew nyumbew(65);
+nyumbew.pwototype.descwipción = n-nyuww;
+minúmewo.descwipción = "vewocidad dew viento";
 ```
 
-### Utilizando el objecto `Number` para transformar un objeto `Date`
+### u-utiwizando ew objecto `numbew` p-pawa twansfowmaw un objeto `date`
 
-El siguiente ejemplo convierte el objeto {{jsxref ("Date")}} a un valor numérico usando `Number` como función:
+e-ew siguiente ejempwo conviewte e-ew objeto {{jsxwef ("date")}} a-a un vawow nyuméwico u-usando `numbew` c-como función:
 
 ```js
-var d = new Date("December 17, 1995 03:24:00");
-console.log(Number(d));
+v-vaw d = nyew date("decembew 17, 😳😳😳 1995 03:24:00");
+consowe.wog(numbew(d));
 ```
 
-Esto muestra "819199440000".
+esto muestwa "819199440000". nyaa~~
 
-### Convierte cadenas numéricas a números
+### conviewte cadenas nyuméwicas a nyúmewos
 
 ```js
-Number("123"); // 123
-Number("12.3"); // 12.3
-Number("123e-1"); // 12.3
-Number(""); // 0
-Number("0x11"); // 17
-Number("0b11"); // 3
-Number("0o11"); // 9
-Number("foo"); // NaN
-Number("100a"); // NaN
+n-nyumbew("123"); // 123
+n-nyumbew("12.3"); // 12.3
+n-nyumbew("123e-1"); // 12.3
+nyumbew(""); // 0
+n-nyumbew("0x11"); // 17
+numbew("0b11"); // 3
+nyumbew("0o11"); // 9
+nyumbew("foo"); // n-nyan
+numbew("100a"); // n-nyan
 
-Number("-Infinity"); //-Infinity
+nyumbew("-infinity"); //-infinity
 ```
 
-### Vea También
+### v-vea también
 
-- {{jsxref("Global_Objects/NaN", "NaN")}}
-- {{jsxref("Global_Objects/Math", "Math")}}
-- {{jsxref("Arithmetic operators")}}
+- {{jsxwef("gwobaw_objects/nan", rawr "nan")}}
+- {{jsxwef("gwobaw_objects/math", "math")}}
+- {{jsxwef("awithmetic opewatows")}}

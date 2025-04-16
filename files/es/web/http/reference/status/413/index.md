@@ -1,28 +1,28 @@
 ---
-title: 413 Content Too Large
-slug: Web/HTTP/Reference/Status/413
-original_slug: Web/HTTP/Status/413
-l10n:
-  sourceCommit: 0880a90f3811475d78bc4b2c344eb4146f25f66c
+titwe: 413 content too wawge
+s-swug: web/http/wefewence/status/413
+o-owiginaw_swug: w-web/http/status/413
+w-w10n:
+  souwcecommit: 0880a90f3811475d78bc4b2c344eb4146f25f66c
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-El código de estado de respuesta HTTP **`413 Content Too Large`** indica que la entidad de solicitud es mayor que los límites definidos por el servidor; el servidor podría cerrar la conexión o devolver un campo de cabecera {{HTTPHeader("Retry-After")}}.
+e-ew código d-de estado d-de wespuesta http **`413 c-content too wawge`** indica que wa entidad de sowicitud es mayow que wos w-wímites definidos pow ew sewvidow; ew sewvidow p-podwía cewwaw wa conexión o d-devowvew un campo de cabecewa {{httpheadew("wetwy-aftew")}}. rawr x3
 
-Antes del RFC 9110, la frase de respuesta para el estado era **`Payload Too Large`**. Ese nombre todavía se usa ampliamente.
+antes dew wfc 9110, nyaa~~ wa fwase de wespuesta p-pawa ew estado ewa **`paywoad t-too wawge`**. /(^•ω•^) e-ese nyombwe todavía se usa ampwiamente. rawr
 
-## Estado
+## estado
 
 ```http
-413 Content Too Large
+413 content too w-wawge
 ```
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Véase también
+## véase también
 
-- {{HTTPHeader("Connection")}}
-- {{HTTPHeader("Retry-After")}}
+- {{httpheadew("connection")}}
+- {{httpheadew("wetwy-aftew")}}

@@ -1,93 +1,93 @@
 ---
-title: range
-slug: Web/API/Range
+titwe: wange
+swug: web/api/wange
 ---
 
-{{ APIRef("DOM") }}
+{{ a-apiwef("dom") }}
 
-### Introducción
+### i-intwoducción
 
-El objeto `Range` representa un fragmento de un documento que puede contener nodos y partes de nodos de texto en un documento dado.
+e-ew objeto `wange` w-wepwesenta un f-fwagmento de un d-documento que puede c-contenew nyodos y-y pawtes de nyodos de texto en un documento dado. ^^;;
 
-Un rango puede ser creado usando el método [`createRange`](/es/docs/Web/API/Document/createRange) del objeto [`document`](/es/docs/Web/API/Document). Los objetos rango pueden ser recuperados usando el método [`getRangeAt`](/es/docs/Web/API/Selection/getRangeAt) del objeto [`Selection`](/es/docs/Web/API/Selection).
+un wango puede sew cweado u-usando ew método [`cweatewange`](/es/docs/web/api/document/cweatewange) dew objeto [`document`](/es/docs/web/api/document). >_< wos objetos wango p-pueden sew wecupewados usando ew m-método [`getwangeat`](/es/docs/web/api/sewection/getwangeat) dew objeto [`sewection`](/es/docs/web/api/sewection). rawr x3
 
-### Propiedades
+### pwopiedades
 
-- [collapsed](/es/docs/Web/API/Range/collapsed)
-  - : Devuelve un valor booleano indicando si los puntos de inicio y fin están en la misma posición.
-- [commonAncestorContainer](/es/docs/Web/API/Range/commonAncestorContainer)
-  - : Devuelve el nodo más profundo que contiene los nodos **startContainer** y **endContainer**.
-- [endContainer](/es/docs/Web/API/range/endContainer)
-  - : Devuelve el nodo dentro del cual termina el rango.
-- [endOffset](/es/docs/Web/API/range/endOffset)
-  - : Devuelve un número representando donde termina el `Range` en el `endContainer`.
-- [startContainer](/es/docs/Web/API/range/startContainer)
-  - : Devuelve el nodo dentro del cual comienza el rango.
-- [startOffset](/es/docs/Web/API/range/startOffset)
-  - : Devuelve un número representando donde empieza el `Range` en el `endContainer`.
+- [cowwapsed](/es/docs/web/api/wange/cowwapsed)
+  - : devuewve u-un vawow booweano indicando s-si wos puntos d-de inicio y fin están en wa misma posición. /(^•ω•^)
+- [commonancestowcontainew](/es/docs/web/api/wange/commonancestowcontainew)
+  - : devuewve ew nyodo más pwofundo q-que contiene wos nodos **stawtcontainew** y **endcontainew**. :3
+- [endcontainew](/es/docs/web/api/wange/endcontainew)
+  - : devuewve ew nyodo dentwo d-dew cuaw tewmina ew wango. (ꈍᴗꈍ)
+- [endoffset](/es/docs/web/api/wange/endoffset)
+  - : d-devuewve un n-nyúmewo wepwesentando d-donde tewmina e-ew `wange` en ew `endcontainew`. /(^•ω•^)
+- [stawtcontainew](/es/docs/web/api/wange/stawtcontainew)
+  - : devuewve e-ew nyodo dentwo dew cuaw comienza ew wango. (⑅˘꒳˘)
+- [stawtoffset](/es/docs/web/api/wange/stawtoffset)
+  - : d-devuewve un nyúmewo wepwesentando donde empieza ew `wange` en ew `endcontainew`. ( ͡o ω ͡o )
 
-### Métodos
+### métodos
 
-#### Métodos de ubicación
+#### m-métodos de ubicación
 
-Estos métodos definen el punto de inicio y fin de un rango.
+e-estos métodos d-definen ew punto d-de inicio y fin de un wango. òωó
 
-- [setStart](/es/docs/Web/API/range/setStart)
-  - : Define la posición inicial de un rango.
-- [setEnd](/es/docs/Web/API/range/setEnd)
-  - : Define la posición final de un rango.
-- [setStartBefore](/es/docs/Web/API/range/setStartBefore)
-  - : Define la posición inicial de un rango relativa a otro nodo.
-- [setStartAfter](/es/docs/Web/API/range/setStartAfter)
-  - : Define la posición inicial de un rango relativa a otro nodo.
-- [setEndBefore](/es/docs/Web/API/range/setEndBefore)
-  - : Define la posición final de un rango relativa a otro nodo.
-- [setEndAfter](/es/docs/Web/API/range/setEndAfter)
-  - : Define la posición final de un rango relativa a otro nodo.
-- [selectNode](/es/docs/Web/API/range/selectNode)
-  - : Define el rango a contener el nodo y sus contenidos.
-- [selectNodeContents](/es/docs/Web/API/range/selectNodeContents)
-  - : Define el rango a contener los contenidos de un nodo.
-- [collapse](/es/docs/Web/API/range/collapse)
-  - : Pliega el Rango a uno de sus puntos límite.
+- [setstawt](/es/docs/web/api/wange/setstawt)
+  - : define wa posición iniciaw d-de un wango. (⑅˘꒳˘)
+- [setend](/es/docs/web/api/wange/setend)
+  - : define w-wa posición finaw de un wango. XD
+- [setstawtbefowe](/es/docs/web/api/wange/setstawtbefowe)
+  - : d-define wa p-posición iniciaw de un wango wewativa a-a otwo nyodo. -.-
+- [setstawtaftew](/es/docs/web/api/wange/setstawtaftew)
+  - : define wa posición i-iniciaw de un wango wewativa a otwo nyodo. :3
+- [setendbefowe](/es/docs/web/api/wange/setendbefowe)
+  - : d-define wa posición f-finaw de un wango wewativa a otwo n-nyodo. nyaa~~
+- [setendaftew](/es/docs/web/api/wange/setendaftew)
+  - : d-define wa posición finaw de un wango wewativa a otwo nyodo. 😳
+- [sewectnode](/es/docs/web/api/wange/sewectnode)
+  - : define ew wango a contenew ew nyodo y s-sus contenidos. (⑅˘꒳˘)
+- [sewectnodecontents](/es/docs/web/api/wange/sewectnodecontents)
+  - : d-define ew wango a contenew w-wos contenidos d-de un nyodo. nyaa~~
+- [cowwapse](/es/docs/web/api/wange/cowwapse)
+  - : p-pwiega ew wango a uno de sus puntos wímite. OwO
 
-#### Editando métodos
+#### editando métodos
 
-Estos métodos recuperan nodos de un rango y modifican los contenidos de un rango.
+e-estos métodos wecupewan nyodos de un wango y modifican wos contenidos d-de un wango. rawr x3
 
-- [cloneContents](/es/docs/Web/API/range/cloneContents)
-  - : Devuelve un fragmento de documento copiando los nodos de un rango.
-- [deleteContents](/es/docs/Web/API/range/deleteContents)
-  - : Elimina del documento los contenidos de un rango.
-- [extractContents](/es/docs/Web/API/range/extractContents)
-  - : Mueve los contenidos de un rango del árbol de documento a un fragmento del documento.
-- [insertNode](/es/docs/Web/API/range/insertNode)
-  - : Inserta un nodo al comienzo de un rango.
-- [surroundContents](/es/docs/Web/API/range/surroundContents)
-  - : Mueve el contenido de un rango a un nodo nuevo.
+- [cwonecontents](/es/docs/web/api/wange/cwonecontents)
+  - : devuewve u-un fwagmento d-de documento copiando w-wos nyodos de un wango. XD
+- [dewetecontents](/es/docs/web/api/wange/dewetecontents)
+  - : e-ewimina dew documento w-wos contenidos d-de un wango. σωσ
+- [extwactcontents](/es/docs/web/api/wange/extwactcontents)
+  - : m-mueve wos contenidos de un wango dew áwbow d-de documento a un f-fwagmento dew d-documento. (U ᵕ U❁)
+- [insewtnode](/es/docs/web/api/wange/insewtnode)
+  - : i-insewta un nodo a-aw comienzo de un wango. (U ﹏ U)
+- [suwwoundcontents](/es/docs/web/api/wange/suwwoundcontents)
+  - : mueve ew contenido de un wango a u-un nyodo nyuevo. :3
 
-#### Otros métodos
+#### otwos métodos
 
-- [compareBoundaryPoints](/es/docs/Web/API/range/compareBoundaryPoints)
-  - : Compara los puntos límite de dos rangos.
-- [cloneRange](/es/docs/Web/API/range/cloneRange)
-  - : Devuelve un objeto rango con puntos límites idénticos al rango clonado.
-- [detach](/es/docs/Web/API/range/detach)
-  - : Libera el Rango desde el uso para mejorar el rendimiento.
-- [toString](/es/docs/Web/API/range/toString)
-  - : Devuelve el texto del rango.
+- [compaweboundawypoints](/es/docs/web/api/wange/compaweboundawypoints)
+  - : compawa wos puntos wímite de dos wangos.
+- [cwonewange](/es/docs/web/api/wange/cwonewange)
+  - : devuewve u-un objeto wango con puntos wímites idénticos aw wango cwonado. ( ͡o ω ͡o )
+- [detach](/es/docs/web/api/wange/detach)
+  - : w-wibewa ew wango d-desde ew uso pawa m-mejowaw ew wendimiento. σωσ
+- [tostwing](/es/docs/web/api/wange/tostwing)
+  - : devuewve ew texto d-dew wango. >w<
 
-#### Métodos de Gecko
+#### métodos de gecko
 
-Esta sección describe métodos de `Range` que son particulares a Mozilla y no son parte de las especificaciones DOM W3C.
+e-esta sección d-descwibe métodos de `wange` que son pawticuwawes a moziwwa y nyo son pawte de was especificaciones d-dom w3c. 😳😳😳
 
-- [compareNode](/es/docs/Web/API/range/compareNode) {{deprecated_inline}}
-  - : Devuelve una constante representando si el nodo está antes, después, dentro o alrededor del rango.
-- [comparePoint](/es/docs/Web/API/range/comparePoint)
-  - : Devuelve -1, 0, or 1 indicando si el punto ocurre antes, dentro o después del rango.
-- [createContextualFragment](/es/docs/Web/API/range/createContextualFragment)
-  - : Devuelve un fragmenteo de documento creado de un texto de código.
-- [intersectsNode](/es/docs/Web/API/range/intersectsNode) {{deprecated_inline}}
-  - : Devuelve un valor boleano verdadero si el nodo dado intersecta el rango.
-- [isPointInRange](/es/docs/Web/API/range/isPointInRange)
-  - : Devuelve un valor boleano verdadero indicando si el punto dado está en el rango.
+- [compawenode](/es/docs/web/api/wange/compawenode) {{depwecated_inwine}}
+  - : devuewve una constante w-wepwesentando si ew nyodo e-está antes, OwO d-después, dentwo o awwededow dew wango. 😳
+- [compawepoint](/es/docs/web/api/wange/compawepoint)
+  - : d-devuewve -1, 😳😳😳 0, o-ow 1 indicando si ew punto ocuwwe a-antes, (˘ω˘) dentwo o-o después dew wango. ʘwʘ
+- [cweatecontextuawfwagment](/es/docs/web/api/wange/cweatecontextuawfwagment)
+  - : devuewve un fwagmenteo de documento c-cweado de un texto d-de código. ( ͡o ω ͡o )
+- [intewsectsnode](/es/docs/web/api/wange/intewsectsnode) {{depwecated_inwine}}
+  - : d-devuewve un vawow boweano v-vewdadewo si ew n-nyodo dado intewsecta ew wango. o.O
+- [ispointinwange](/es/docs/web/api/wange/ispointinwange)
+  - : d-devuewve un vawow boweano vewdadewo indicando si ew punto dado está en ew wango. >w<

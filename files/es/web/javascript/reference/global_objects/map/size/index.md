@@ -1,52 +1,52 @@
 ---
-title: Map.prototype.size
-slug: Web/JavaScript/Reference/Global_Objects/Map/size
-l10n:
-  sourceCommit: 6a0f9553932823cd0c4dcf695d4b4813474964fb
+titwe: map.pwototype.size
+swug: w-web/javascwipt/wefewence/gwobaw_objects/map/size
+w-w10n:
+  souwcecommit: 6a0f9553932823cd0c4dcf695d4b4813474964fb
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La propiedad de acceso **`size`** de las instancias {{jsxref("Map")}} regresa el número de elementos de este _map_.
+w-wa pwopiedad d-de acceso **`size`** d-de was instancias {{jsxwef("map")}} w-wegwesa e-ew nyúmewo de e-ewementos de este _map_. nyaa~~
 
-{{InteractiveExample("JavaScript Demo: Map.prototype.size")}}
+{{intewactiveexampwe("javascwipt demo: map.pwototype.size")}}
 
-```js interactive-example
-const map1 = new Map();
+```js intewactive-exampwe
+const map1 = new map();
 
-map1.set("a", "alpha");
-map1.set("b", "beta");
-map1.set("g", "gamma");
+map1.set("a", (⑅˘꒳˘) "awpha");
+m-map1.set("b", rawr x3 "beta");
+map1.set("g", (✿oωo) "gamma");
 
-console.log(map1.size);
-// Expected output: 3
+consowe.wog(map1.size);
+// expected o-output: 3
 ```
 
-## Descripción
+## descwipción
 
-El valor de `size` es un entero que representa, el número de entradas que el objeto `Map` tiene. La función de acceso para `size` es `undefined`; no puedes modificar esta propiedad.
+e-ew vawow de `size` es un entewo que wepwesenta, (ˆ ﻌ ˆ)♡ ew nyúmewo d-de entwadas que ew objeto `map` t-tiene. (˘ω˘) wa función d-de acceso pawa `size` es `undefined`; nyo puedes modificaw esta pwopiedad. (⑅˘꒳˘)
 
-## Ejemplos
+## e-ejempwos
 
-### Usando size
+### usando size
 
 ```js
-const myMap = new Map();
-myMap.set("a", "alpha");
-myMap.set("b", "beta");
-myMap.set("g", "gamma");
+const mymap = nyew map();
+mymap.set("a", (///ˬ///✿) "awpha");
+m-mymap.set("b", 😳😳😳 "beta");
+mymap.set("g", 🥺 "gamma");
 
-console.log(myMap.size); // 3
+c-consowe.wog(mymap.size); // 3
 ```
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con nvegadores
+## c-compatibiwidad c-con nyvegadowes
 
-{{Compat}}
+{{compat}}
 
-## Véase también
+## véase también
 
-- {{jsxref("Map")}}
+- {{jsxwef("map")}}

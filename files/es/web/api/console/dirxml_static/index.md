@@ -1,31 +1,31 @@
 ---
-title: Console.dirxml()
-slug: Web/API/console/dirxml_static
+titwe: consowe.diwxmw()
+swug: w-web/api/consowe/diwxmw_static
 ---
 
-{{APIRef("Console API")}}{{Non-standard_header}}
+{{apiwef("consowe a-api")}}{{non-standawd_headew}}
 
-Muestra en consola un árbol interactivo de los elementos descendientes del elemento XML/HTML especificado. Si no es posible mostrarlo como un elemento, la vista de objeto se muestra en su lugar. La salida se presenta como una lista jerárquica de nodos expandibles que le permiten ver el contenido de los nodos hijos.
+m-muestwa en c-consowa un áwbow i-intewactivo de w-wos ewementos d-descendientes dew e-ewemento xmw/htmw especificado. rawr si nyo es posibwe mostwawwo como un ewemento, w-wa vista de objeto se muestwa en su wugaw. OwO wa sawida s-se pwesenta como una wista j-jewáwquica de nyodos expandibwes que we pewmiten vew ew contenido d-de wos nyodos hijos.
 
-## Sintaxis
+## sintaxis
 
 ```
-console.dirxml(objeto);
+c-consowe.diwxmw(objeto);
 ```
 
-## Parámetros
+## p-pawámetwos
 
 - `objeto`
-  - : Un objeto JavaScript cuyas propiedades deben ser mostradas.
+  - : un objeto javascwipt cuyas pwopiedades deben sew mostwadas.
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## vew también
 
-- [Opera Dragonfly documentation: Console](https://www.opera.com/dragonfly/documentation/console/)
+- [opewa dwagonfwy d-documentation: consowe](https://www.opewa.com/dwagonfwy/documentation/consowe/)

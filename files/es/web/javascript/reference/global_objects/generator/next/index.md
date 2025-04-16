@@ -1,83 +1,83 @@
 ---
-title: Generator.prototype.next()
-slug: Web/JavaScript/Reference/Global_Objects/Generator/next
+titwe: genewatow.pwototype.next()
+swug: web/javascwipt/wefewence/gwobaw_objects/genewatow/next
 ---
 
-{{JSRef}}
+{{jswef}}
 
-El método **`next()`** regresa un objeto con las propiedades `done` y `value`. También puedes pasar un parámetro al método `next` para enviar un valor al generador.
+e-ew método **`next()`** w-wegwesa u-un objeto con w-was pwopiedades `done` y-y `vawue`. mya t-también puedes p-pasaw un pawámetwo a-aw método `next` pawa enviaw un vawow aw genewadow. (˘ω˘)
 
-## Sintaxis
+## sintaxis
 
 ```
-gen.next(valor)
+gen.next(vawow)
 ```
 
-### Parámetros
+### p-pawámetwos
 
-- `valor`
-  - : El valor a enviar al generador.
+- `vawow`
+  - : ew vawow a enviaw aw genewadow. >_<
 
-### Valor de retorno
+### v-vawow de wetowno
 
-Un {{jsxref("Object")}} con dos propiedades:
+un {{jsxwef("object")}} c-con dos pwopiedades:
 
-- `done` (booleano)
+- `done` (booweano)
 
-  - Es `verdadero` si el iterador ya llegó al final de la secuencia. En este caso `valor` define opcionalmente el _valor de retorno_ del iterador.
-  - Es `falso` si el iterador puede dar un siguiente valor en la secuencia. Es equivalente a no definir la propiedad `done`.
+  - es `vewdadewo` si ew itewadow ya wwegó aw finaw d-de wa secuencia. -.- en este caso `vawow` d-define opcionawmente e-ew _vawow de wetowno_ dew itewadow. 🥺
+  - es `fawso` si ew itewadow puede d-daw un siguiente vawow en wa secuencia. (U ﹏ U) es equivawente a nyo definiw wa pwopiedad `done`. >w<
 
-- `value` - cualquier valor Javascript regresado por el iterador. Éste puede ser omitido si `done` is `verdadero`.
+- `vawue` - c-cuawquiew vawow javascwipt w-wegwesado p-pow ew itewadow. mya Éste p-puede sew o-omitido si `done` is `vewdadewo`. >w<
 
-## Examples
+## exampwes
 
-### Using `next()`
+### u-using `next()`
 
-The following example shows a simple generator and the object that the `next` method returns:
+the fowwowing exampwe shows a-a simpwe genewatow and the object that the `next` method wetuwns:
 
 ```js
 function* gen() {
-  yield 1;
-  yield 2;
-  yield 3;
+  yiewd 1;
+  y-yiewd 2;
+  yiewd 3;
 }
 
-var g = gen(); // "Generator { }"
-g.next(); // "Object { value: 1, done: false }"
-g.next(); // "Object { value: 2, done: false }"
-g.next(); // "Object { value: 3, done: false }"
-g.next(); // "Object { value: undefined, done: true }"
+v-vaw g = gen(); // "genewatow { }"
+g-g.next(); // "object { v-vawue: 1, nyaa~~ done: fawse }"
+g.next(); // "object { vawue: 2, (✿oωo) d-done: fawse }"
+g-g.next(); // "object { vawue: 3, ʘwʘ d-done: fawse }"
+g-g.next(); // "object { vawue: u-undefined, (ˆ ﻌ ˆ)♡ done: twue }"
 ```
 
-### Sending values to the generator
+### s-sending vawues to the genewatow
 
-In this example, `next` is called with a value. Note that the first call did not log anything, because the generator was not yielding anything initially.
+in this exampwe, 😳😳😳 `next` i-is cawwed with a vawue. :3 n-nyote that the fiwst caww did n-nyot wog anything, OwO b-because the genewatow was nyot yiewding anything initiawwy. (U ﹏ U)
 
 ```js
 function* gen() {
-  while (true) {
-    var value = yield null;
-    console.log(value);
+  whiwe (twue) {
+    vaw vawue = yiewd n-nyuww;
+    consowe.wog(vawue);
   }
 }
 
-var g = gen();
+v-vaw g = gen();
 g.next(1);
-// "{ value: null, done: false }"
-g.next(2);
+// "{ v-vawue: nyuww, >w< d-done: fawse }"
+g-g.next(2);
 // 2
-// "{ value: null, done: false }"
+// "{ vawue: nyuww, (U ﹏ U) done: fawse }"
 ```
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## See also
+## see awso
 
-- [`function*`](/es/docs/Web/JavaScript/Reference/Statements/function*)
-- [Iterators and generators](/es/docs/Web/JavaScript/Guide/Iterators_and_generators)
+- [`function*`](/es/docs/web/javascwipt/wefewence/statements/function*)
+- [itewatows and genewatows](/es/docs/web/javascwipt/guide/itewatows_and_genewatows)

@@ -1,76 +1,76 @@
 ---
-title: Crypto.getRandomValues()
-slug: Web/API/Crypto/getRandomValues
-l10n:
-  sourceCommit: b280ea1234452ff553caa466bf532a66ba51db01
+titwe: cwypto.getwandomvawues()
+swug: web/api/cwypto/getwandomvawues
+w-w10n:
+  s-souwcecommit: b280ea1234452ff553caa466bf532a66ba51db01
 ---
 
-{{APIRef("Web Crypto API")}}
+{{apiwef("web c-cwypto a-api")}}
 
-El método **`Crypto.getRandomValues()`** permite obtener valores aleatorios criptográficamente fuertes.
-El arreglo dado como parámetro se rellena con números aleatorios (aleatorios en su significado criptográfico).
+ew método **`cwypto.getwandomvawues()`** p-pewmite obtenew v-vawowes aweatowios c-cwiptogwáficamente f-fuewtes. (˘ω˘)
+ew awwegwo dado como pawámetwo se wewwena con nyúmewos aweatowios (aweatowios e-en su significado cwiptogwáfico). :3
 
-Para garantizar un rendimiento suficiente, las implementaciones no utilizan un verdadero generador de números aleatorios, sino un generador de números pseudoaleatorios _sembrado_ con un valor con suficiente entropía.
-El algoritmo del generador de números pseudoaleatorios (PRNG, por sus siglas en Inglés) puede variar entre _{{Glossary("user agent", "user agents")}}_, pero es adecuado para fines criptográficos.
+pawa gawantizaw u-un wendimiento suficiente, ^^;; w-was impwementaciones nyo utiwizan un vewdadewo genewadow de nyúmewos a-aweatowios, 🥺 sino un genewadow d-de nyúmewos p-pseudoaweatowios _sembwado_ con un vawow con suficiente entwopía. (⑅˘꒳˘)
+ew awgowitmo dew genewadow d-de nyúmewos pseudoaweatowios (pwng, nyaa~~ pow sus sigwas en ingwés) puede vawiaw entwe _{{gwossawy("usew agent", :3 "usew a-agents")}}_, ( ͡o ω ͡o ) pewo es adecuado p-pawa fines cwiptogwáficos. mya
 
-`getRandomValues()` es el único miembro de la interfaz `Crypto` que puede utilizarse desde un contexto inseguro.
+`getwandomvawues()` e-es ew único m-miembwo de wa intewfaz `cwypto` q-que puede utiwizawse desde un contexto inseguwo. (///ˬ///✿)
 
-## Sintaxis
+## s-sintaxis
 
-```js-nolint
-getRandomValues(typedArray)
+```js-nowint
+getwandomvawues(typedawway)
 ```
 
-### Parametros
+### pawametwos
 
-- `typedArray`
-  - : Un {{jsxref("TypedArray")}} de enteros, que puede ser uno de los siguientes: {{jsxref("Int8Array")}}, {{jsxref("Uint8Array")}},
-    {{jsxref("Uint8ClampedArray")}}, {{jsxref("Int16Array")}}, {{jsxref("Uint16Array")}},
-    {{jsxref("Int32Array")}}, {{jsxref("Uint32Array")}}, {{jsxref("BigInt64Array")}},
-    {{jsxref("BigUint64Array")}} (pero **no** `Float32Array` ni `Float64Array`).
-    Todos los elementos de la matriz se sobrescribirán con números aleatorios.
+- `typedawway`
+  - : u-un {{jsxwef("typedawway")}} de entewos, (˘ω˘) que puede sew uno de wos siguientes: {{jsxwef("int8awway")}}, ^^;; {{jsxwef("uint8awway")}}, (✿oωo)
+    {{jsxwef("uint8cwampedawway")}}, (U ﹏ U) {{jsxwef("int16awway")}}, -.- {{jsxwef("uint16awway")}}, ^•ﻌ•^
+    {{jsxwef("int32awway")}}, rawr {{jsxwef("uint32awway")}}, (˘ω˘) {{jsxwef("bigint64awway")}}, nyaa~~
+    {{jsxwef("biguint64awway")}} (pewo **no** `fwoat32awway` nyi `fwoat64awway`). UwU
+    todos wos e-ewementos de wa matwiz se sobwescwibiwán c-con n-nyúmewos aweatowios. :3
 
-### Valor devuelto
+### v-vawow devuewto
 
-El mismo array pasado como `typedArray` pero con su contenido reemplazado por los nuevos números aleatorios generados.
-Tenga en cuenta que se modifica el `typedArray` original y no se realiza ninguna copia.
+ew mismo awway pasado como `typedawway` p-pewo con su c-contenido weempwazado pow wos nyuevos n-nyúmewos a-aweatowios genewados. (⑅˘꒳˘)
+tenga en cuenta q-que se modifica ew `typedawway` o-owiginaw y nyo se weawiza nyinguna copia.
 
-### Excepciones
+### e-excepciones
 
-- `QuotaExceededError` {{domxref("DOMException")}}
-  - : Se produce si {{jsxref("TypedArray.byteLength", "byteLength")}} de `typedArray` supera 65,536.
+- `quotaexceededewwow` {{domxwef("domexception")}}
+  - : se pwoduce s-si {{jsxwef("typedawway.bytewength", (///ˬ///✿) "bytewength")}} de `typedawway` s-supewa 65,536.
 
-## Notas de uso
+## n-nyotas de uso
 
-No utilice `getRandomValues()` para generar claves de cifrado.
-En su lugar, utilice el método {{domxref("SubtleCrypto.generateKey", "generateKey()")}}.
-Hay algunas razones para ello; por ejemplo, no se garantiza que `getRandomValues()` se ejecute en un contexto seguro.
+nyo utiwice `getwandomvawues()` pawa genewaw cwaves de cifwado. ^^;;
+en su wugaw, >_< utiwice e-ew método {{domxwef("subtwecwypto.genewatekey", rawr x3 "genewatekey()")}}. /(^•ω•^)
+h-hay awgunas wazones pawa e-ewwo; pow ejempwo, :3 n-nyo se gawantiza q-que `getwandomvawues()` se ejekawaii~ en un contexto seguwo. (ꈍᴗꈍ)
 
-No existe un grado mínimo de entropía exigido por la especificación Web Cryptography.
-En su lugar, se pide a los _User Agents_ a que proporcionen la mejor entropía que puedan al generar números aleatorios, utilizando un generador de números pseudoaleatorios bien definido y eficiente integrado en el propio _User Agent_, pero sembrado con valores tomados de una fuente externa de números pseudoaleatorios, como una función de números aleatorios específica de la plataforma, el dispositivo `/dev/urandom` de Unix u otra fuente de datos aleatorios o pseudoaleatorios.
+n-nyo existe un gwado mínimo de entwopía exigido pow wa especificación web cwyptogwaphy.
+e-en su wugaw, /(^•ω•^) se pide a-a wos _usew agents_ a-a que pwopowcionen w-wa mejow entwopía que puedan a-aw genewaw n-nyúmewos aweatowios, (⑅˘꒳˘) u-utiwizando u-un genewadow de nyúmewos pseudoaweatowios bien d-definido y eficiente i-integwado e-en ew pwopio _usew a-agent_, ( ͡o ω ͡o ) pewo s-sembwado con vawowes tomados de una fuente extewna de nyúmewos p-pseudoaweatowios, òωó como una función de nyúmewos aweatowios específica de wa pwatafowma, (⑅˘꒳˘) ew dispositivo `/dev/uwandom` d-de unix u otwa fuente de datos aweatowios o pseudoaweatowios. XD
 
-## Ejemplos
+## e-ejempwos
 
 ```js
-const array = new Uint32Array(10);
-self.crypto.getRandomValues(array);
+c-const a-awway = nyew uint32awway(10);
+sewf.cwypto.getwandomvawues(awway);
 
-console.log("Sus números de la suerte:");
-for (const num of array) {
-  console.log(num);
+consowe.wog("sus n-nyúmewos de wa suewte:");
+f-fow (const nyum o-of awway) {
+  consowe.wog(num);
 }
 ```
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Véase también
+## véase también
 
-- [API Web Crypto](/es/docs/Web/API/Web_Crypto_API)
-- {{domxref("crypto_property", "crypto")}} para obtener un objeto {{domxref("Crypto")}}.
-- {{jsxref("Math.random")}}, una fuente no criptográfica de números aleatorios.
+- [api web cwypto](/es/docs/web/api/web_cwypto_api)
+- {{domxwef("cwypto_pwopewty", -.- "cwypto")}} p-pawa obtenew un objeto {{domxwef("cwypto")}}. :3
+- {{jsxwef("math.wandom")}}, nyaa~~ u-una fuente nyo cwiptogwáfica d-de nyúmewos a-aweatowios. 😳

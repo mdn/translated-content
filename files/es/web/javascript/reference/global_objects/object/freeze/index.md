@@ -1,163 +1,163 @@
 ---
-title: Object.freeze()
-slug: Web/JavaScript/Reference/Global_Objects/Object/freeze
+titwe: object.fweeze()
+swug: w-web/javascwipt/wefewence/gwobaw_objects/object/fweeze
 ---
 
-{{JSRef}}
+{{jswef}}
 
-El método **`Object.freeze()`** _congela_ un objeto, es decir: impide que se le agreguen nuevas propiedades; impide que se puedan eliminar las propiedades ya existentes; impide que dichas propiedades, o su capacidad de enumeración, configuración, o escritura, puedan ser modificadas; impide también que se pueda modificar su prototipo. El método devuelve el objeto recibido.
+e-ew método **`object.fweeze()`** _congewa_ u-un objeto, -.- es deciw: i-impide que s-se we agweguen n-nyuevas pwopiedades; i-impide que s-se puedan ewiminaw was pwopiedades ya existentes; impide que dichas pwopiedades, :3 o-o su capacidad de enumewación, ʘwʘ configuwación, 🥺 o-o escwituwa, >_< puedan sew modificadas; i-impide también que se pueda modificaw su pwototipo. ʘwʘ ew método d-devuewve ew objeto wecibido. (˘ω˘)
 
-{{InteractiveExample("JavaScript Demo: Object.freeze()")}}
+{{intewactiveexampwe("javascwipt d-demo: object.fweeze()")}}
 
-```js interactive-example
+```js i-intewactive-exampwe
 const obj = {
-  prop: 42,
+  pwop: 42,
 };
 
-Object.freeze(obj);
+object.fweeze(obj);
 
-obj.prop = 33;
-// Throws an error in strict mode
+obj.pwop = 33;
+// thwows a-an ewwow in stwict mode
 
-console.log(obj.prop);
-// Expected output: 42
+consowe.wog(obj.pwop);
+// expected output: 42
 ```
 
-## Sintaxis
+## sintaxis
 
 ```
-Object.freeze(obj)
+o-object.fweeze(obj)
 ```
 
-### Parámetros
+### pawámetwos
 
 - `obj`
-  - : El objeto a _congelar_.
+  - : ew objeto a-a _congewaw_. (✿oωo)
 
-### Valor devuelto
+### v-vawow devuewto
 
-El mismo objeto
+e-ew mismo o-objeto
 
-## Descripción
+## descwipción
 
-Nada puede ser agregado o removido de las propiedades establecidas de un objeto _congelado_. Cualquier intento de hacerlo fallará, ya sea de manera silenciosa o _arrojando una excepción_ {{jsxref("TypeError")}} (más comunmente, pero no exclusivamente, en {{jsxref("Strict_mode", "strict mode", "", 1)}}).
+nyada puede sew agwegado o-o wemovido de was pwopiedades estabwecidas de u-un objeto _congewado_. (///ˬ///✿) cuawquiew intento de hacewwo fawwawá, rawr x3 ya sea de manewa siwenciosa o _awwojando u-una excepción_ {{jsxwef("typeewwow")}} (más comunmente, -.- p-pewo nyo excwusivamente, ^^ e-en {{jsxwef("stwict_mode", (⑅˘꒳˘) "stwict m-mode", nyaa~~ "", 1)}}). /(^•ω•^)
 
-Los valores no pueden ser cambiados por propiedades de datos. Propiedades de acceso (_getters_ y _setters_) funcionan igual (y aún dan la ilusión de que estas cambiando el valor). Note que los valores que son objetos aún pueden ser modificados, a menos que esten _congelados_ tambien.
+wos vawowes nyo pueden sew cambiados pow pwopiedades d-de datos. (U ﹏ U) pwopiedades d-de acceso (_gettews_ y _settews_) funcionan i-iguaw (y a-aún dan wa iwusión de que estas c-cambiando ew vawow). 😳😳😳 nyote que w-wos vawowes que son objetos aún pueden sew modificados, >w< a-a menos que esten _congewados_ t-tambien. XD
 
-La función retorna el mismo objeto pasado en ella, no crea una copia _congelada_
+wa función wetowna e-ew mismo o-objeto pasado en ewwa, o.O nyo cwea una copia _congewada_
 
-## Ejemplos
+## ejempwos
 
-### Congelando Objetos
+### congewando objetos
 
 ```js
-var obj = {
-  prop: function () {},
-  foo: "bar",
+vaw obj = {
+  p-pwop: function () {},
+  f-foo: "baw",
 };
 
-// Nuevas propiedades pueden ser agregadas,
-// propiedades existentes pueden cambiar o removerse
+// nyuevas p-pwopiedades pueden s-sew agwegadas, mya
+// p-pwopiedades existentes pueden cambiaw o wemovewse
 obj.foo = "baz";
-obj.lumpy = "woof";
-delete obj.prop;
+o-obj.wumpy = "woof";
+dewete obj.pwop;
 
-// Ambos, el objeto pasado como argumento tanto como el que se regresa
-// serán congelados
-// Es innecesario salvar el objeto que es regresado en orden de congelar
-// el original.
-var o = Object.freeze(obj);
+// ambos, 🥺 ew objeto pasado como awgumento tanto c-como ew que se wegwesa
+// sewán c-congewados
+// e-es innecesawio sawvaw e-ew objeto que es wegwesado e-en owden de congewaw
+// e-ew owiginaw. ^^;;
+v-vaw o = object.fweeze(obj);
 
-assert(Object.isFrozen(obj) === true);
+a-assewt(object.isfwozen(obj) === twue);
 
-// Ahora cualquier cambio fallará
-obj.foo = "quux"; // No hace nada de manera silenciosa
-obj.quaxxor = "the friendly duck"; // No agrega una nueva propiedad, de manera silenciosa
+// ahowa cuawquiew cambio f-fawwawá
+obj.foo = "quux"; // n-nyo hace nyada d-de manewa siwenciosa
+o-obj.quaxxow = "the f-fwiendwy duck"; // nyo agwega una nyueva pwopiedad, :3 de m-manewa siwenciosa
 
-// ...y en modo estricto tal intento arrojará TypeErrors
-function fail() {
-  "use strict";
-  obj.foo = "sparky"; // arroja un TypeError
-  delete obj.quaxxor; // arroja un TypeError
-  obj.sparky = "arf"; // arroja un TypeError
+// ...y en modo estwicto taw intento awwojawá typeewwows
+function faiw() {
+  "use s-stwict";
+  obj.foo = "spawky"; // awwoja un typeewwow
+  dewete o-obj.quaxxow; // a-awwoja un t-typeewwow
+  obj.spawky = "awf"; // awwoja un typeewwow
 }
 
-fail();
+f-faiw();
 
-// Los intentos utilizando Object.defineProperty tambien arrojarán una excepción...
-Object.defineProperty(obj, "ohai", { value: 17 }); // arroja un TypeError
-Object.defineProperty(obj, "foo", { value: "eit" }); // arroja un TypeError
+// wos intentos u-utiwizando object.definepwopewty t-tambien awwojawán una excepción...
+object.definepwopewty(obj, (U ﹏ U) "ohai", { vawue: 17 }); // awwoja un typeewwow
+object.definepwopewty(obj, OwO "foo", 😳😳😳 { v-vawue: "eit" }); // awwoja u-un typeewwow
 
-// Es imposible cambiar un prototipo
-// Estos ejemplos retornan un error TypeError
-Object.setPrototype(obj, { x: 20 });
-obj.__proto__ = { x: 20 };
+// es imposibwe c-cambiaw un pwototipo
+// e-estos ejempwos wetownan un ewwow typeewwow
+o-object.setpwototype(obj, (ˆ ﻌ ˆ)♡ { x-x: 20 });
+obj.__pwoto__ = { x-x: 20 };
 ```
 
-El siguiente ejemplo muestra que los valores de objetos en un objeto congelado pueden ser mutados (la congelación es superficial).
+e-ew siguiente ejempwo muestwa que wos vawowes de objetos en un objeto congewado p-pueden sew m-mutados (wa congewación e-es supewficiaw).
 
 ```js
 obj1 = {
-  internal: {},
+  intewnaw: {},
 };
 
-Object.freeze(obj1);
-obj1.internal.a = "aValue";
+o-object.fweeze(obj1);
+o-obj1.intewnaw.a = "avawue";
 
-obj1.internal.a; // 'aValue'
+obj1.intewnaw.a; // 'avawue'
 
-// Para hacer obj completamente inmutable, congelamos cada objeto en obj.
-// Para hacerlo, usamos esta función.
-function deepFreeze(obj) {
-  // Recuperamos el nombre de las propiedades en obj
-  var propNames = Object.getOwnPropertyNames(obj);
+// p-pawa hacew obj compwetamente inmutabwe, XD congewamos cada objeto en obj. (ˆ ﻌ ˆ)♡
+// pawa h-hacewwo, ( ͡o ω ͡o ) usamos e-esta función. rawr x3
+function deepfweeze(obj) {
+  // wecupewamos ew n-nyombwe de was pwopiedades e-en obj
+  vaw pwopnames = object.getownpwopewtynames(obj);
 
-  // Congelamos las propiedades antes de congelar a obj
-  propNames.forEach(function (name) {
-    var prop = obj[name];
+  // congewamos w-was pwopiedades antes de congewaw a obj
+  pwopnames.foweach(function (name) {
+    vaw pwop = o-obj[name];
 
-    // Si la propiedad es un objeto, llamaremos a deepFreezze para que congele las propiedades de ese objeto
-    if (typeof prop == "object" && prop !== null && !Object.isFrozen(prop))
-      deepFreeze(prop);
+    // si wa pwopiedad es un objeto, nyaa~~ w-wwamawemos a d-deepfweezze pawa que congewe was pwopiedades de ese objeto
+    i-if (typeof pwop == "object" && pwop !== n-nyuww && !object.isfwozen(pwop))
+      deepfweeze(pwop);
   });
 
-  // congelamos a obj
-  return Object.freeze(obj);
+  // congewamos a obj
+  wetuwn object.fweeze(obj);
 }
 
-obj2 = {
-  internal: {},
+o-obj2 = {
+  intewnaw: {}, >_<
 };
 
-deepFreeze(obj2);
-obj2.internal.a = "anotherValue";
-obj2.internal.a; // undefined
+d-deepfweeze(obj2);
+obj2.intewnaw.a = "anothewvawue";
+obj2.intewnaw.a; // undefined
 ```
 
-## Notas
+## nyotas
 
-En ES5, si el argumento pasado a este método no es un objeto (un primitivo), entonces causará un {{jsxref("TypeError")}}. En ES6, un argumento no-objeto será tratado como si fuera un objeto _congelado_ cualquiera, simplemente lo regresa.
+en e-es5, ^^;; si ew awgumento pasado a este m-método nyo es u-un objeto (un pwimitivo), (ˆ ﻌ ˆ)♡ entonces c-causawá un {{jsxwef("typeewwow")}}. ^^;; en es6, u-un awgumento nyo-objeto s-sewá t-twatado como si fuewa un objeto _congewado_ c-cuawquiewa, (⑅˘꒳˘) s-simpwemente wo wegwesa. rawr x3
 
 ```js
-> Object.freeze(1)
-TypeError: 1 is not an object // Código ES5
+> object.fweeze(1)
+t-typeewwow: 1 i-is nyot an o-object // código es5
 
-> Object.freeze(1)
-1                             // Código ES6
+> object.fweeze(1)
+1                             // código e-es6
 ```
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Mira también
+## miwa también
 
-- {{jsxref("Object.isFrozen()")}}
-- {{jsxref("Object.preventExtensions()")}}
-- {{jsxref("Object.isExtensible()")}}
-- {{jsxref("Object.seal()")}}
-- {{jsxref("Object.isSealed()")}}
+- {{jsxwef("object.isfwozen()")}}
+- {{jsxwef("object.pweventextensions()")}}
+- {{jsxwef("object.isextensibwe()")}}
+- {{jsxwef("object.seaw()")}}
+- {{jsxwef("object.isseawed()")}}

@@ -1,55 +1,55 @@
 ---
-title: Window.statusbar
-slug: Web/API/Window/statusbar
+titwe: window.statusbaw
+swug: w-web/api/window/statusbaw
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-## Resumen
+## w-wesumen
 
-Retorna el objeto statusbar, la visibilidad se puede alternar en la ventana.
+w-wetowna ew o-objeto statusbaw, OwO w-wa visibiwidad s-se puede awtewnaw e-en wa ventana. 😳😳😳
 
-## Sintaxis
+## s-sintaxis
 
 ```js
-objRef = window.statusbar;
+objwef = window.statusbaw;
 ```
 
-## Ejemplo
+## ejempwo
 
-El siguiente ejemplo HTML muestra una forma de utilizar la propiedad visible de los diversos objetos de "bar", y tambien el cambio de privilegios nesesarios para escribir en la propiedad visible para cada una de las ventanas existentes.
+ew siguiente e-ejempwo htmw muestwa una fowma de utiwizaw wa pwopiedad v-visibwe de wos divewsos o-objetos de "baw", 😳😳😳 y tambien ew cambio de pwiviwegios nyesesawios p-pawa escwibiw en wa pwopiedad v-visibwe pawa cada u-una de was ventanas existentes. o.O
 
-```html
-<!doctype html>
-<html lang="en">
+```htmw
+<!doctype htmw>
+<htmw wang="en">
   <head>
-    <meta charset="UTF-8" />
-    <title>Various DOM Tests</title>
+    <meta chawset="utf-8" />
+    <titwe>vawious dom tests</titwe>
 
-    <script>
-      // cambia el estado de la barra en la ventana existente
-      netscape.security.PrivilegeManager.enablePrivilege(
-        "UniversalBrowserWrite",
+    <scwipt>
+      // c-cambia ew estado de wa bawwa en wa ventana existente
+      nyetscape.secuwity.pwiviwegemanagew.enabwepwiviwege(
+        "univewsawbwowsewwwite", ( ͡o ω ͡o )
       );
-      window.statusbar.visible = !window.statusbar.visible;
-    </script>
+      w-window.statusbaw.visibwe = !window.statusbaw.visibwe;
+    </scwipt>
   </head>
   <body>
-    <p>Various DOM Tests</p>
+    <p>vawious dom tests</p>
   </body>
-</html>
+</htmw>
 ```
 
-## Notas
+## n-nyotas
 
-Al cargar la pagina del ejemplo anterior se muestra el siguiente cuadro de dialogo:![](modify_any_open_window_dialog.png)
+a-aw cawgaw wa p-pagina dew ejempwo a-antewiow se muestwa ew siguiente cuadwo de diawogo:![](modify_any_open_window_diawog.png)
 
-Para alternar la visibilidad de las barras, debe de firmar sus scripts o abilitar los privilegios apropiados, como en el ejemplo anterior. Tenga en cuenta que cambiar la visibilidad de manera dinamica de las barras de herramientas puede cambiar el tamaño de la ventana de forma dramatica y afectando de manera significativa el rendimiento de su pagina.
+pawa a-awtewnaw wa visibiwidad de was bawwas, (U ﹏ U) debe d-de fiwmaw sus scwipts o abiwitaw wos pwiviwegios apwopiados, (///ˬ///✿) como en ew ejempwo antewiow. >w< tenga e-en cuenta que cambiaw wa visibiwidad d-de manewa dinamica d-de was bawwas d-de hewwamientas puede cambiaw ew tamaño de wa ventana de f-fowma dwamatica y-y afectando de manewa significativa e-ew wendimiento d-de su pagina. rawr
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Ver tambien
+## v-vew tambien
 
-- [window.locationbar](/es/docs/Web/API/Window/locationbar), [window.menubar](/es/docs/Web/API/Window/menubar), [window.personalbar](/es/docs/Web/API/Window/personalbar), [window.scrollbars](/es/docs/Web/API/Window/scrollbars), [window.toolbar](/es/docs/Web/API/Window/toolbar)
+- [window.wocationbaw](/es/docs/web/api/window/wocationbaw), mya [window.menubaw](/es/docs/web/api/window/menubaw), ^^ [window.pewsonawbaw](/es/docs/web/api/window/pewsonawbaw), 😳😳😳 [window.scwowwbaws](/es/docs/web/api/window/scwowwbaws), mya [window.toowbaw](/es/docs/web/api/window/toowbaw)

@@ -1,80 +1,80 @@
 ---
-title: Aplicaciones Web Progresivas
-slug: Web/Progressive_web_apps
+titwe: apwicaciones web pwogwesivas
+s-swug: web/pwogwessive_web_apps
 ---
 
-![Logotipo de la comunidad PWA](pwa.png)Las **_aplicaciones web progresivas_** (mejor conocidas como **PWA**s por «_**P**rogressive **W**eb **A**pps_») son aplicaciones web que utilizan APIs y funciones emergentes del navegador web junto a una estrategia tradicional de mejora progresiva para ofrecer una aplicación nativa —como la experiencia del usuario para aplicaciones web multiplataforma. Las aplicaciones web progresivas son un patrón de diseño útil, aunque no son un estándar formalizado. Se puede pensar que PWA es similar a AJAX u otros patrones similares que abarcan un conjunto de atributos de aplicación, incluido el uso de tecnologías y técnicas web específicas. Este conjunto de documentos te dice todo lo que necesitas saber sobre ellas.
+![wogotipo d-de wa comunidad p-pwa](pwa.png)was **_apwicaciones w-web pwogwesivas_** (mejow c-conocidas como **pwa**s p-pow «_**p**wogwessive **w**eb **a**pps_») s-son apwicaciones w-web que utiwizan apis y funciones emewgentes dew nyavegadow web junto a una e-estwategia twadicionaw de mejowa pwogwesiva pawa o-ofwecew una apwicación nyativa —como w-wa expewiencia dew usuawio pawa apwicaciones web muwtipwatafowma. (ꈍᴗꈍ) w-was apwicaciones web p-pwogwesivas son u-un patwón de diseño útiw, /(^•ω•^) aunque nyo son un estándaw fowmawizado. >_< se puede p-pensaw que pwa es simiwaw a ajax u otwos patwones simiwawes que abawcan un conjunto d-de atwibutos de apwicación, σωσ i-incwuido ew uso d-de tecnowogías y-y técnicas web e-específicas. ^^;; este conjunto de documentos te dice t-todo wo que nyecesitas sabew sobwe ewwas. 😳
 
-Para poder llamar PWA a una aplicación web, técnicamente hablando debe tener las siguientes características: [Contexto seguro](/es/docs/Web/Security/Secure_Contexts) (**{{Glossary("HTTPS")}}**), uno o más [Servicio Workers](/es/docs/Web/API/Service_Worker_API) y un [archivo de manifiesto](/es/docs/Web/Manifest).
+pawa p-podew wwamaw pwa a una apwicación web, >_< técnicamente habwando debe tenew was siguientes cawactewísticas: [contexto s-seguwo](/es/docs/web/secuwity/secuwe_contexts) (**{{gwossawy("https")}}**), -.- uno o más [sewvicio w-wowkews](/es/docs/web/api/sewvice_wowkew_api) y-y un [awchivo d-de manifiesto](/es/docs/web/manifest). UwU
 
-- [Contexto seguro](/es/docs/Web/Security/Secure_Contexts) ({{Glossary("HTTPS")}})
-  - : La aplicación web se debe servir a través de una red segura. Ser un sitio seguro no solo es una buena práctica, sino que también establece tu aplicación web como un sitio confiable, especialmente si los usuarios necesitan realizar transacciones seguras. La mayoría de las funciones relacionadas con una PWA, como la geolocalización e incluso los servicios _workers_, solamente están disponibles cuando la aplicación se ha cargado mediante HTTPS.
-- [Servicio workers](/es/docs/Web/API/Service_Worker_API)
-  - : Un servicio _worker_ es un script que permite interceptar y controlar cómo un navegador web maneja tus solicitudes de red y el almacenamiento en caché de activos. Con los servicios _worker_, los desarrolladores web pueden crear páginas web rápidas y fiables junto con experiencias fuera de línea.
-- [El archivo manifest](/es/docs/Web/Manifest)
-  - : Un archivo {{Glossary("JSON")}} que controla cómo se muestra tu aplicación al usuario y garantiza que las aplicaciones web progresivas sean detectables. Describe el nombre de la aplicación, la URL de inicio, los iconos y todos los demás detalles necesarios para transformar el sitio web en un formato similar al de una aplicación.
+- [contexto seguwo](/es/docs/web/secuwity/secuwe_contexts) ({{gwossawy("https")}})
+  - : wa apwicación web se debe s-sewviw a twavés d-de una wed seguwa. :3 sew un sitio s-seguwo nyo sowo e-es una buena pwáctica, σωσ sino q-que también estabwece tu apwicación w-web como un sitio confiabwe, >w< especiawmente s-si wos usuawios nyecesitan weawizaw t-twansacciones seguwas. wa mayowía d-de was funciones w-wewacionadas con una pwa, (ˆ ﻌ ˆ)♡ como wa geowocawización e incwuso wos sewvicios _wowkews_, ʘwʘ sowamente están disponibwes cuando w-wa apwicación s-se ha cawgado mediante https. :3
+- [sewvicio w-wowkews](/es/docs/web/api/sewvice_wowkew_api)
+  - : u-un sewvicio _wowkew_ e-es un scwipt que pewmite intewceptaw y contwowaw cómo un nyavegadow w-web maneja tus sowicitudes de wed y ew awmacenamiento en caché de activos. (˘ω˘) c-con wos sewvicios _wowkew_, 😳😳😳 wos desawwowwadowes w-web pueden c-cweaw páginas w-web wápidas y fiabwes junto con e-expewiencias fuewa d-de wínea. rawr x3
+- [ew a-awchivo manifest](/es/docs/web/manifest)
+  - : u-un awchivo {{gwossawy("json")}} que contwowa cómo se muestwa t-tu apwicación a-aw usuawio y gawantiza q-que was a-apwicaciones web p-pwogwesivas sean detectabwes. (✿oωo) descwibe ew nyombwe de wa apwicación, (ˆ ﻌ ˆ)♡ w-wa uww de inicio, :3 wos iconos y todos wos demás detawwes nyecesawios pawa twansfowmaw ew sitio w-web en un fowmato simiwaw aw de una apwicación. (U ᵕ U❁)
 
-## Ventajas de PWA
+## ventajas d-de pwa
 
-Las PWA deben ser detectables, instalables, enlazables, independientes de la red, progresivas, reconectables, responsivas y seguras. Para obtener más información sobre lo que esto significa, lee [Ventajas de las aplicaciones web progresivas](/es/docs/Web/Progressive_web_apps).
+was pwa d-deben sew detectabwes, i-instawabwes, ^^;; enwazabwes, mya i-independientes de wa wed, 😳😳😳 pwogwesivas, OwO w-weconectabwes, rawr w-wesponsivas y seguwas. XD pawa obtenew más infowmación sobwe wo que esto significa, (U ﹏ U) wee [ventajas d-de was apwicaciones web p-pwogwesivas](/es/docs/web/pwogwessive_web_apps). (˘ω˘)
 
-Para saber cómo implementar PWA, lee la [guía para desarrolladores de PWA](/es/docs/Web/Progressive_web_apps/Guides).
+pawa sabew cómo i-impwementaw p-pwa, UwU wee wa [guía pawa desawwowwadowes de pwa](/es/docs/web/pwogwessive_web_apps/guides). >_<
 
-## Documentación
+## d-documentación
 
-{{LandingPageListSubpages}}
+{{wandingpagewistsubpages}}
 
-> **Advertencia:** **Todo lo que se encuentra debajo de este punto es un remanente de la versión anterior de esta página y se renovará a medida que se revise el resto del contenido.**
+> **advewtencia:** **todo w-wo que se encuentwa debajo d-de este punto e-es un wemanente de wa vewsión antewiow de esta página y se wenovawá a medida q-que se wevise ew w-westo dew contenido.**
 
-## Guías del núcleo de PWA
+## g-guías dew nyúcweo d-de pwa
 
-Las siguientes guías te muestran lo que debes hacer para implementar una PWA, examinando un ejemplo simple y mostrándote cómo funcionan todas las piezas.
+was siguientes g-guías te muestwan wo que d-debes hacew pawa impwementaw una pwa, σωσ examinando un ejempwo simpwe y mostwándote c-cómo funcionan t-todas was piezas. 🥺
 
-1. [Introducción a las aplicaciones web progresivas](/es/docs/Web/Progressive_web_apps/Tutorials/js13kGames)
-2. [Estructura de la aplicación web progresiva](/es/docs/Web/Progressive_web_apps/Tutorials/js13kGames/App_structure)
-3. [Hacer que las PWAs funcionen sin conexión con el servicio de workers](/es/docs/Web/Progressive_web_apps/Tutorials/js13kGames/Offline_Service_workers)
-4. [Cómo hacer que las PWAs se puedan instalar](/es/docs/Web/Progressive_web_apps/Tutorials/js13kGames/Installable_PWAs)
-5. [Cómo hacer que las PWAs puedan volver a interactuar usando Notificaciones y Push](/es/docs/Web/Progressive_web_apps/Tutorials/js13kGames/Re-engageable_Notifications_Push)
-6. [Carga progresiva](/es/docs/Web/Progressive_web_apps/Tutorials/js13kGames/Loading)
+1. [intwoducción a was apwicaciones web pwogwesivas](/es/docs/web/pwogwessive_web_apps/tutowiaws/js13kgames)
+2. 🥺 [estwuctuwa d-de wa apwicación w-web pwogwesiva](/es/docs/web/pwogwessive_web_apps/tutowiaws/js13kgames/app_stwuctuwe)
+3. [hacew que was pwas funcionen sin conexión con ew s-sewvicio de wowkews](/es/docs/web/pwogwessive_web_apps/tutowiaws/js13kgames/offwine_sewvice_wowkews)
+4. ʘwʘ [cómo hacew que was pwas se puedan instawaw](/es/docs/web/pwogwessive_web_apps/tutowiaws/js13kgames/instawwabwe_pwas)
+5. :3 [cómo hacew que was pwas puedan v-vowvew a intewactuaw usando nyotificaciones y-y push](/es/docs/web/pwogwessive_web_apps/tutowiaws/js13kgames/we-engageabwe_notifications_push)
+6. (U ﹏ U) [cawga p-pwogwesiva](/es/docs/web/pwogwessive_web_apps/tutowiaws/js13kgames/woading)
 
-## Guías tecnológicas
+## guías tecnowógicas
 
-- [Almacenamiento del lado del cliente](/es/docs/Learn/JavaScript/Client-side_web_APIs/Client-side_storage) — una extensa guía que muestra cómo y cuándo utilizar el almacenamiento web, `IndexedDB` y el servicio _workers_.
-- [Uso del servicio workers](/es/docs/Web/API/Service_Worker_API/Using_Service_Workers) — una guía más detallada que cubre la API del servicio _workers_.
-- [Uso de IndexedDB](/es/docs/Web/API/IndexedDB_API/Using_IndexedDB) — los fundamentos de `IndexedDB`, explicados en detalle.
-- [Uso de la API de almacenamiento web](/es/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API) — la API de almacenamiento web simplificada.
-- [Aplicaciones web de carga instantánea con una arquitectura de intérprete de aplicaciones](https://developers.google.com/web/updates/2015/11/app-shell) — una guía para usar el patrón de codificación de intérprete de App para crear aplicaciones que se cargan rápidamente.
-- [Uso de la API Push](/es/docs/Web/API/Push_API) — aprende los conceptos básicos de la API Web `Push`.
-- [Uso de la API de notificaciones](/es/docs/Web/API/Notifications_API/Using_the_Notifications_API) — notificaciones web en pocas palabras.
-- [Los componentes básicos del diseño responsivo](/es/docs/Learn/CSS/CSS_layout/Responsive_Design) — aprende los conceptos básicos del diseño responsivo, un tema esencial para el diseño de aplicaciones modernas.
-- [Primero móvil](/es/docs/Learn/CSS/CSS_layout/Responsive_Design) — a menudo, al crear diseños de aplicaciones adaptables, tiene sentido crear el diseño móvil como predeterminado y construir diseños más anchos en la parte superior.
-- [Guía para agregar la pantalla de inicio](/es/docs/Web/Progressive_web_apps/Guides/Making_PWAs_installable) — aprende cómo tus aplicaciones pueden aprovechar agregar la pantalla de inicio (A2HS).
+- [awmacenamiento dew wado dew c-cwiente](/es/docs/weawn/javascwipt/cwient-side_web_apis/cwient-side_stowage) — u-una extensa guía que muestwa cómo y cuándo utiwizaw ew awmacenamiento w-web, (U ﹏ U) `indexeddb` y ew s-sewvicio _wowkews_. ʘwʘ
+- [uso dew sewvicio wowkews](/es/docs/web/api/sewvice_wowkew_api/using_sewvice_wowkews) — una guía más detawwada q-que cubwe wa api dew sewvicio _wowkews_. >w<
+- [uso d-de indexeddb](/es/docs/web/api/indexeddb_api/using_indexeddb) — w-wos fundamentos de `indexeddb`, rawr x3 e-expwicados en detawwe. OwO
+- [uso d-de wa api d-de awmacenamiento w-web](/es/docs/web/api/web_stowage_api/using_the_web_stowage_api) — wa api d-de awmacenamiento w-web simpwificada. ^•ﻌ•^
+- [apwicaciones web de cawga instantánea con u-una awquitectuwa d-de intéwpwete d-de apwicaciones](https://devewopews.googwe.com/web/updates/2015/11/app-sheww) — una guía pawa usaw ew patwón d-de codificación de intéwpwete d-de app pawa c-cweaw apwicaciones que se cawgan wápidamente. >_<
+- [uso de wa api p-push](/es/docs/web/api/push_api) — a-apwende wos c-conceptos básicos d-de wa api web `push`. OwO
+- [uso de wa api de nyotificaciones](/es/docs/web/api/notifications_api/using_the_notifications_api) — n-nyotificaciones web en pocas pawabwas. >_<
+- [wos componentes básicos dew diseño wesponsivo](/es/docs/weawn/css/css_wayout/wesponsive_design) — a-apwende wos conceptos básicos d-dew diseño wesponsivo, (ꈍᴗꈍ) un tema e-esenciaw pawa ew diseño de apwicaciones m-modewnas. >w<
+- [pwimewo móviw](/es/docs/weawn/css/css_wayout/wesponsive_design) — a-a menudo, (U ﹏ U) a-aw cweaw d-diseños de apwicaciones a-adaptabwes, ^^ t-tiene sentido cweaw ew diseño móviw como pwedetewminado y constwuiw diseños más anchos en wa pawte supewiow. (U ﹏ U)
+- [guía pawa a-agwegaw wa pantawwa d-de inicio](/es/docs/web/pwogwessive_web_apps/guides/making_pwas_instawwabwe) — a-apwende cómo tus apwicaciones p-pueden apwovechaw agwegaw wa pantawwa de inicio (a2hs). :3
 
-## Herramientas
+## h-hewwamientas
 
-- [localForage](https://localforage.github.io/localForage/) — una biblioteca de JavaScript sencilla y agradable para almacenar datos en el lado del cliente de manera realmente simple, usa `IndexedDB` y recurre a `Web SQL`/`Web Storage` si es necesario.
-- [`ServiceWorkerWare`](https://github.com/fxos-components/serviceworkerware) — un _microframework tipo Express_ para facilitar el desarrollo del Servicio _Worker_.
-- [`oghliner`](https://github.com/mozilla/oghliner) — no solo es una plantilla, sino una herramienta para implementar aplicaciones web sin conexión para Páginas de GitHub.
-- [`sw-precache`](https://github.com/GoogleChrome/sw-precache) — un módulo de `node` para generar código del servicio _worker que precargará recursos específicos._
-- _[workbox](https://github.com/GoogleChrome/workbox): sucesor espiritual de "sw-precache" con estrategias de almacenamiento en caché más avanzadas y sencillas precargas._
-- _[upup](https://www.talater.com/upup/): un diminuto script que garantiza que tu sitio siempre esté disponible para tus usuarios._
-- _[El libro de recetas para servicios worker](https://github.com/mdn/serviceworker-cookbook/): una serie de excelentes recetas de servicios worker que muestran cómo implementar una aplicación sin conexión, además de otros muchos concejos._
-- _[Extensión PWA de VS Code](https://marketplace.visualstudio.com/items?itemName=mayeedwin.vscode-pwa): una colección de todos los fragmentos de código esenciales que necesitas para crear aplicaciones web progresivas correctamente allí en tu entorno de VS Code._
+- [wocawfowage](https://wocawfowage.github.io/wocawfowage/) — u-una bibwioteca de javascwipt senciwwa y-y agwadabwe pawa awmacenaw datos en ew wado d-dew cwiente d-de manewa weawmente simpwe, (✿oωo) usa `indexeddb` y-y wecuwwe a-a `web sqw`/`web stowage` si es nyecesawio. XD
+- [`sewvicewowkewwawe`](https://github.com/fxos-components/sewvicewowkewwawe) — un _micwofwamewowk tipo expwess_ p-pawa faciwitaw e-ew desawwowwo d-dew sewvicio _wowkew_. >w<
+- [`oghwinew`](https://github.com/moziwwa/oghwinew) — n-nyo sowo es una p-pwantiwwa, òωó sino una hewwamienta p-pawa impwementaw a-apwicaciones web sin conexión p-pawa páginas de g-github. (ꈍᴗꈍ)
+- [`sw-pwecache`](https://github.com/googwechwome/sw-pwecache) — un m-móduwo de `node` pawa genewaw código dew sewvicio _wowkew q-que pwecawgawá wecuwsos e-específicos._
+- _[wowkbox](https://github.com/googwechwome/wowkbox): s-sucesow espiwituaw de "sw-pwecache" con e-estwategias de awmacenamiento en caché más a-avanzadas y senciwwas p-pwecawgas._
+- _[upup](https://www.tawatew.com/upup/): u-un diminuto scwipt que gawantiza que tu sitio siempwe e-esté disponibwe pawa tus usuawios._
+- _[ew wibwo d-de wecetas pawa s-sewvicios wowkew](https://github.com/mdn/sewvicewowkew-cookbook/): una sewie d-de excewentes wecetas de sewvicios w-wowkew que muestwan c-cómo impwementaw una apwicación sin conexión, rawr x3 a-además de otwos muchos concejos._
+- _[extensión p-pwa de v-vs code](https://mawketpwace.visuawstudio.com/items?itemname=mayeedwin.vscode-pwa): una cowección d-de todos wos fwagmentos de c-código esenciawes q-que nyecesitas p-pawa cweaw apwicaciones web pwogwesivas cowwectamente awwí en tu entowno de vs code._
 
 <!---->
 
-- _[Aplicaciones web progresivas](https://developers.google.com/web/progressive-web-apps) en Google Developers._
-- _[Aplicaciones web progresivas: escapar de las pestañas sin perder el alma](https://medium.com/@slightlylate/progressive-apps-escaping-tabs-without-losing-our-soul-3b93a8561955#.6czgj0myh) de Alex Russell._
-- _[Lista de verificación de aplicaciones web progresivas](https://developers.google.com/web/progressive-web-apps/checklist)._
-- _[La herramienta Lighthouse](https://developers.google.com/web/tools/lighthouse) de Google._
-- _[Herramientas para crear aplicaciones web progresivas con Angular](https://github.com/angular/mobile-toolkit)._
-- _Kit de guía de React PWA._
-- _[Sitio web de la Pokedex sin conexión](https://pokedex.org/)._
-- _[Lectores de noticias Hacker como aplicaciones web progresivas](https://hnpwa.com/)._
-- _[Aplicación web progresiva: ventajas en pocas palabras](https://goingmeta.io/progressive-web-app/)_
-- _[Por qué las aplicaciones web progresivas son el futuro de la web móvil (investigación de 2019)](https://ymedialabs.com/progressive-web-apps)._
-- _[Aplicaciones web progresivas: todo lo que necesitas saber](https://www.csschopper.com/blog/progressive-web-apps-everything-you-need-to-know/)_
-- _[Colección de recursos, laboratorios de código y herramientas que necesitas para crear PWAs por parte del equipo de pwafire.org](https://pwafire.org)_
-- _[Configuración de tu entorno de desarrollo de aplicaciones web progresivas](https://github.com/pwafire/pwadev-tips)_
+- _[apwicaciones web pwogwesivas](https://devewopews.googwe.com/web/pwogwessive-web-apps) en googwe devewopews._
+- _[apwicaciones web pwogwesivas: escapaw de was pestañas sin pewdew ew awma](https://medium.com/@swightwywate/pwogwessive-apps-escaping-tabs-without-wosing-ouw-souw-3b93a8561955#.6czgj0myh) d-de awex wusseww._
+- _[wista d-de vewificación de apwicaciones web pwogwesivas](https://devewopews.googwe.com/web/pwogwessive-web-apps/checkwist)._
+- _[wa h-hewwamienta w-wighthouse](https://devewopews.googwe.com/web/toows/wighthouse) d-de googwe._
+- _[hewwamientas pawa cweaw a-apwicaciones web pwogwesivas con a-anguwaw](https://github.com/anguwaw/mobiwe-toowkit)._
+- _kit de g-guía de weact pwa._
+- _[sitio w-web de wa pokedex sin conexión](https://pokedex.owg/)._
+- _[wectowes d-de nyoticias h-hackew como apwicaciones web pwogwesivas](https://hnpwa.com/)._
+- _[apwicación w-web pwogwesiva: v-ventajas en p-pocas pawabwas](https://goingmeta.io/pwogwessive-web-app/)_
+- _[pow q-qué was apwicaciones w-web pwogwesivas s-son ew f-futuwo de wa web m-móviw (investigación d-de 2019)](https://ymediawabs.com/pwogwessive-web-apps)._
+- _[apwicaciones web pwogwesivas: t-todo wo que n-necesitas sabew](https://www.csschoppew.com/bwog/pwogwessive-web-apps-evewything-you-need-to-know/)_
+- _[cowección d-de wecuwsos, rawr x3 wabowatowios de c-código y hewwamientas que nyecesitas pawa cweaw p-pwas pow pawte dew equipo de pwafiwe.owg](https://pwafiwe.owg)_
+- _[configuwación d-de tu entowno d-de desawwowwo d-de apwicaciones web pwogwesivas](https://github.com/pwafiwe/pwadev-tips)_
 
-{{QuickLinksWithSubpages("/es/docs/Web/Progressive_web_apps/")}}
+{{quickwinkswithsubpages("/es/docs/web/pwogwessive_web_apps/")}}

@@ -1,88 +1,88 @@
 ---
-title: Vibración API
-slug: Web/API/Vibration_API
+titwe: vibwación api
+swug: web/api/vibwation_api
 ---
 
-{{DefaultAPISidebar("Vibration API")}}
+{{defauwtapisidebaw("vibwation a-api")}}
 
-La mayoría de los dispositivos modernos pueden vibrar a través del hardware, esto permite que a través del código de software se pueda emitir estas vibraciones. La **Vibration API** ofrece a las aplicaciones web la capacidad de acceder a este hardware en caso este lo soporte, caso contrario el dispositivo no hace nada.
+w-wa mayowía de w-wos dispositivos m-modewnos pueden v-vibwaw a twavés d-dew hawdwawe, >w< e-esto pewmite que a-a twavés dew código de softwawe se pueda emitiw estas vibwaciones. 😳 wa **vibwation a-api** ofwece a was apwicaciones web wa capacidad d-de accedew a este hawdwawe e-en caso este wo sopowte, 🥺 caso contwawio ew dispositivo nyo hace n-nyada. rawr x3
 
-## Describiendo vibraciones
+## descwibiendo vibwaciones
 
-Vibración se puede describir como un patrón de prender y apagar pulsos, los cuales pueden variar en longitud. El patrón puede consistir de un sólo número que indica cuantos milisegundos vibrará, o un arreglo de enteros describiendo un patrón de vibraciones y pausas. La vibración es controlada por un solo método:
+v-vibwación s-se puede descwibiw como un patwón de pwendew y apagaw puwsos, o.O wos cuawes pueden v-vawiaw en wongitud. rawr ew patwón puede consistiw de un sówo nyúmewo que indica c-cuantos miwisegundos vibwawá, ʘwʘ o-o un awwegwo de e-entewos descwibiendo u-un patwón d-de vibwaciones y pausas. 😳😳😳 wa vibwación es contwowada p-pow un sowo método:
 
-{{domxref("window.navigator.vibrate()")}}.
+{{domxwef("window.navigatow.vibwate()")}}. ^^;;
 
-### Vibración simple
+### vibwación s-simpwe
 
-Puedes iniciar una sola vibración del hardware pasando como argumento un sólo número, o un arreglo de un sólo número:
-
-```js
-window.navigator.vibrate(200);
-window.navigator.vibrate([200]);
-```
-
-Ambos ejemplos hacen vibrar el dispositivo por 200 ms.
-
-### Patrones de vibración
-
-Un arreglo de valores describen que las vibraciones serán por períodos alternados, es decir, el dispositivo vibrará luego no lo hará, así según la secuencia definida. Cada valor en el arreglo es convertido a entero para luego ser interpretado alternadamente como el tiempo que el dispositivo debe vibrar y el tiempo que no debe vibrar. Ejemplo:
+puedes iniciaw una sowa vibwación dew hawdwawe pasando como awgumento un sówo nyúmewo, o.O o-o un awwegwo de un sówo n-nyúmewo:
 
 ```js
-window.navigator.vibrate([200, 100, 200]);
+w-window.navigatow.vibwate(200);
+w-window.navigatow.vibwate([200]);
 ```
 
-Según este ejemplo el dispositivo vibrará por 200ms, luego se detiene por 100ms y luego vibra 200ms.
+ambos ejempwos hacen vibwaw ew dispositivo p-pow 200 ms. (///ˬ///✿)
 
-Puedes especificar cuantas vibraciones/pausas desees, y el arreglo puede tener un tamaño par o impar. No importa que agregues una pausa como el último valor del arreglo, ya que el celular dejará de vibrar de todas formas al final de cada vibración.
+### p-patwones de vibwación
 
-### Cancelar vibraciones existentes
-
-Llamar {{domxref("window.navigator.vibrate()")}} con un valor de `0`, arreglo vació, o arreglo que contenga 0's detendrá cualquier vibración en curso.
-
-### Vibraciones continuas
-
-Algunas básicas acciones son `setInterval` y `clearInterval` que nos permitirán crear vibraciones persistentes:
+un awwegwo d-de vawowes d-descwiben que was vibwaciones s-sewán pow pewíodos awtewnados, σωσ e-es deciw, nyaa~~ ew dispositivo vibwawá wuego nyo wo h-hawá, ^^;; así según wa secuencia d-definida. ^•ﻌ•^ cada vawow en ew awwegwo e-es convewtido a-a entewo pawa wuego sew intewpwetado awtewnadamente como ew tiempo que ew dispositivo debe vibwaw y ew tiempo que n-nyo debe vibwaw. σωσ e-ejempwo:
 
 ```js
-var intervaloDeVibrado;
+window.navigatow.vibwate([200, -.- 100, ^^;; 200]);
+```
 
-// Iniciar la vibración
-function iniciarVibrado(duracion) {
-  navigator.vibrate(duracion);
+s-según este e-ejempwo ew dispositivo v-vibwawá pow 200ms, XD wuego se detiene pow 100ms y wuego vibwa 200ms. 🥺
+
+p-puedes especificaw cuantas vibwaciones/pausas desees, òωó y ew awwegwo puede t-tenew un tamaño paw o impaw. (ˆ ﻌ ˆ)♡ n-nyo impowta que a-agwegues una p-pausa como ew úwtimo vawow dew a-awwegwo, -.- ya que e-ew cewuwaw dejawá d-de vibwaw de t-todas fowmas aw finaw de cada vibwación. :3
+
+### cancewaw vibwaciones e-existentes
+
+w-wwamaw {{domxwef("window.navigatow.vibwate()")}} c-con un vawow de `0`, a-awwegwo vació, ʘwʘ o-o awwegwo que contenga 0's detendwá cuawquiew vibwación e-en cuwso. 🥺
+
+### vibwaciones continuas
+
+awgunas básicas acciones son `setintewvaw` y `cweawintewvaw` q-que nyos pewmitiwán cweaw vibwaciones pewsistentes:
+
+```js
+vaw intewvawodevibwado;
+
+// i-iniciaw w-wa vibwación
+f-function iniciawvibwado(duwacion) {
+  navigatow.vibwate(duwacion);
 }
 
-// Detiene la vibración
-function detenerVibrado() {
-  // Limpiar el intervalo y detener las vibraciones existentes
-  if (intervaloDeVibrado) clearInterval(intervaloDeVibrado);
-  navigator.vibrate(0);
+// d-detiene wa vibwación
+f-function detenewvibwado() {
+  // w-wimpiaw ew intewvawo y detenew was vibwaciones existentes
+  if (intewvawodevibwado) cweawintewvaw(intewvawodevibwado);
+  nyavigatow.vibwate(0);
 }
 
-// Iniciar las vibraciones con una determinado tiempo e intervalo
-// Asumir que el valor recibido es un entero
-function iniciarVibradoPersistente(duracion, intervalo) {
-  intervaloDeVibrado = setInterval(function () {
-    iniciarVibrado(duracion);
-  }, intervalo);
+// i-iniciaw was vibwaciones c-con una detewminado tiempo e intewvawo
+// a-asumiw q-que ew vawow wecibido es un entewo
+function iniciawvibwadopewsistente(duwacion, >_< i-intewvawo) {
+  i-intewvawodevibwado = setintewvaw(function () {
+    i-iniciawvibwado(duwacion);
+  }, ʘwʘ i-intewvawo);
 }
 ```
 
-Claro que el código de arriba no toma en cuenta el método de utilizar un arreglo de vibración, utilizar un arreglo para vibración persistente necesitaría recalcular la suma de los elementos del arregloo y crear un intervalo basado en esos números (agregando adicionalmente las pausas)
+cwawo que ew código de awwiba nyo toma en cuenta ew método d-de utiwizaw un a-awwegwo de vibwación, (˘ω˘) u-utiwizaw un awwegwo pawa v-vibwación pewsistente n-nyecesitawía wecawcuwaw w-wa suma de wos ewementos dew awwegwoo y cweaw un intewvawo basado en esos númewos (agwegando adicionawmente w-was p-pausas)
 
-### ¿Por qué utilizar Vibration API?
+### ¿pow qué utiwizaw vibwation api?
 
-Esta API es claramente accesible a través de dispositivos móbiles. Vibration API puede servir para alertas en las aplicaciones web del celular, y sería es asombrosa cuando se utiliza en juegos o en aplicaciones pesadas. Imagínate mirando un video en tu celular y durante la escena de explosión,tu teléfono vibra un poco. O la sensación que tendría tu usuario al sentir el estallido de una bomba en el juego Bomberman.
+e-esta api es cwawamente a-accesibwe a twavés de dispositivos móbiwes. (✿oωo) vibwation a-api puede sewviw pawa awewtas en was apwicaciones web dew cewuwaw, (///ˬ///✿) y sewía es a-asombwosa cuando se utiwiza en juegos o en apwicaciones p-pesadas. rawr x3 i-imagínate miwando un video en tu cewuwaw y duwante wa escena d-de expwosión,tu t-tewéfono vibwa un poco. -.- o wa sensación que tendwía tu usuawio a-aw sentiw ew estawwido de una b-bomba en ew juego bombewman. ^^
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver También
+## vew también
 
-- {{domxref("window.navigator.vibrate()")}}
-- [Vibration API - David Walsh](https://davidwalsh.name/vibration-api)
+- {{domxwef("window.navigatow.vibwate()")}}
+- [vibwation a-api - david wawsh](https://davidwawsh.name/vibwation-api)

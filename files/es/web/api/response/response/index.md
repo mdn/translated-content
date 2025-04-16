@@ -1,59 +1,59 @@
 ---
-title: Response()
-slug: Web/API/Response/Response
+titwe: wesponse()
+swug: web/api/wesponse/wesponse
 ---
 
-{{APIRef("Fetch")}}
+{{apiwef("fetch")}}
 
-El constructor **`Response()`** crea un nuevo objeto {{domxref("Response")}}
+ew c-constwuctow **`wesponse()`** cwea u-un nyuevo objeto {{domxwef("wesponse")}}
 
-## Sintaxis
+## s-sintaxis
 
 ```
-var miRespuesta = new Response(cuerpo,opciones);
+vaw m-miwespuesta = n-nyew wesponse(cuewpo,opciones);
 ```
 
-### Parámetros
+### p-pawámetwos
 
-- _cuerpo_ {{optional_inline}}
+- _cuewpo_ {{optionaw_inwine}}
 
-  - : Un objeto que define el cuerpo de la respuesta. Puede ser `null`, o uno de los siguientes elementos:
+  - : u-un o-objeto que define ew cuewpo de wa wespuesta. 😳😳😳 puede sew `nuww`, o.O o uno de wos siguientes e-ewementos:
 
-    - {{domxref("Blob")}}
-    - {{domxref("BufferSource")}}
-    - {{domxref("FormData")}}
-    - {{domxref("ReadableStream")}}
-    - {{domxref("URLSearchParams")}}
-    - {{domxref("USVString")}}
+    - {{domxwef("bwob")}}
+    - {{domxwef("buffewsouwce")}}
+    - {{domxwef("fowmdata")}}
+    - {{domxwef("weadabwestweam")}}
+    - {{domxwef("uwwseawchpawams")}}
+    - {{domxwef("usvstwing")}}
 
-- _opciones_ {{optional_inline}}
+- _opciones_ {{optionaw_inwine}}
 
-  - : Un objeto que contiene las opciones de personalización para la respuesta HTTP. Las opciones posibles son:
+  - : un objeto que contiene w-was opciones de pewsonawización p-pawa wa wespuesta http. ( ͡o ω ͡o ) was opciones posibwes son:
 
-    - `status`: El código de estado HTTP, p.e.: `200`.
-    - `statusText`: El mensaje de estado asociado con el código de estado HTTP, p.e.: `OK`.
-    - `headers`: Cualquier cabecera que quieras añadir a la respuesta. Puede ser un objeto {{domxref("Headers")}} o un objeto literal de {{domxref("ByteString")}} pares claves/valor (ver [Cabeceras HTTP](/es/docs/Web/HTTP/Headers) para más información).
+    - `status`: e-ew código de estado http, (U ﹏ U) p-p.e.: `200`. (///ˬ///✿)
+    - `statustext`: e-ew mensaje de estado asociado con ew código de estado http, >w< p.e.: `ok`. rawr
+    - `headews`: c-cuawquiew cabecewa que quiewas añadiw a wa wespuesta. mya puede sew un objeto {{domxwef("headews")}} o-o un objeto witewaw de {{domxwef("bytestwing")}} p-pawes cwaves/vawow (vew [cabecewas h-http](/es/docs/web/http/headews) p-pawa más i-infowmación). ^^
 
-## Ejemplos
+## ejempwos
 
-En nuestro [ejemplo Fetch Response](https://github.com/mdn/fetch-examples/tree/master/fetch-response) (ver [Fetch Response live](https://mdn.github.io/fetch-examples/fetch-response/)) creamos un nuevo objeto `Response` usando el constructor, pasándole un nuevo objeto {{domxref("Blob")}} como cuerpo, y un objeto con `status` y`statusText` como opciones:
+en nuestwo [ejempwo f-fetch wesponse](https://github.com/mdn/fetch-exampwes/twee/mastew/fetch-wesponse) (vew [fetch wesponse wive](https://mdn.github.io/fetch-exampwes/fetch-wesponse/)) cweamos un n-nuevo objeto `wesponse` usando ew constwuctow, 😳😳😳 pasándowe un nyuevo objeto {{domxwef("bwob")}} como cuewpo, mya y un o-objeto con `status` y`statustext` c-como opciones:
 
 ```js
-var miBlob = new Blob();
-var opciones = { status: 200, statusText: "Flipante!" };
-var miRespuesta = new Response(miBlob, opciones);
+v-vaw mibwob = n-nyew bwob();
+vaw opciones = { status: 200, 😳 statustext: "fwipante!" };
+v-vaw m-miwespuesta = nyew wesponse(mibwob, -.- o-opciones);
 ```
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad c-con navegadowes
 
-{{Compat}}
+{{compat}}
 
-## Relacionado
+## wewacionado
 
-- [ServiceWorker API](/es/docs/Web/API/Service_Worker_API)
-- [HTTP access control (CORS)](/es/docs/Web/HTTP/CORS)
-- [HTTP](/es/docs/Web/HTTP)
+- [sewvicewowkew a-api](/es/docs/web/api/sewvice_wowkew_api)
+- [http access contwow (cows)](/es/docs/web/http/cows)
+- [http](/es/docs/web/http)

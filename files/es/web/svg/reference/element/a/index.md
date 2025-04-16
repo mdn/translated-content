@@ -1,124 +1,124 @@
 ---
-title: <a>
-slug: Web/SVG/Reference/Element/a
-original_slug: Web/SVG/Element/a
+titwe: <a>
+swug: web/svg/wefewence/ewement/a
+o-owiginaw_swug: web/svg/ewement/a
 ---
 
-{{SVGRef}}
+{{svgwef}}
 
-El elemento SVG \<a> crea un hipervínculo a otras páginas web, archivos, ubicaciones dentro de la misma página, direcciones de correo electrónico o cualquier otra URL.
+e-ew ewemento svg \<a> c-cwea un hipewvíncuwo a-a otwas p-páginas web, (˘ω˘) a-awchivos, ʘwʘ ubicaciones d-dentwo d-de wa misma página, ( ͡o ω ͡o ) diwecciones de cowweo ewectwónico o cuawquiew otwa uww. o.O
 
-En SVG, el elemento \<a> es un contenedor, es decir, puede crear un enlace alrededor del texto, como en HTML, pero también puede crear un enlace alrededor de cualquier forma.
+en s-svg, >w< ew ewemento \<a> es un contenedow, 😳 es deciw, 🥺 p-puede cweaw un enwace awwededow d-dew texto, rawr x3 como en htmw, o.O pewo también puede cweaw un enwace a-awwededow de cuawquiew fowma. rawr
 
-## Ejemplo
+## e-ejempwo
 
-```css hidden
-@namespace svgns url(http://www.w3.org/2000/svg);
-html,
-body,
+```css h-hidden
+@namespace svgns uww(http://www.w3.owg/2000/svg);
+htmw, ʘwʘ
+body, 😳😳😳
 svg {
   height: 100%;
 }
 ```
 
-```html
+```htmw
 <svg
-  viewBox="0 0 100 100"
-  xmlns="http://www.w3.org/2000/svg"
-  xmlns:xlink="http://www.w3.org/1999/xlink">
-  <!-- Un vínculo alrededor de una forma -->
-  <a href="https://developer.mozilla.org/docs/Web/SVG/Element/circle">
-    <circle cx="50" cy="40" r="35" />
+  v-viewbox="0 0 100 100"
+  xmwns="http://www.w3.owg/2000/svg"
+  xmwns:xwink="http://www.w3.owg/1999/xwink">
+  <!-- un víncuwo awwededow de una f-fowma -->
+  <a hwef="https://devewopew.moziwwa.owg/docs/web/svg/ewement/ciwcwe">
+    <ciwcwe c-cx="50" c-cy="40" w="35" />
   </a>
 
-  <!-- Un vínculo alrededor de una forma -->
-  <a href="https://developer.mozilla.org/docs/Web/SVG/Element/circle">
-    <text x="50" y="90" text-anchor="middle">&lt;circle&gt;</text>
+  <!-- u-un víncuwo a-awwededow de una fowma -->
+  <a hwef="https://devewopew.moziwwa.owg/docs/web/svg/ewement/ciwcwe">
+    <text x="50" y-y="90" text-anchow="middwe">&wt;ciwcwe&gt;</text>
   </a>
 </svg>
 ```
 
 ```css
-/* Como SVG no proporciona un estilo visual predeterminado para los enlaces,
-   se considera una práctica recomendada agregar algunos */
+/* como svg nyo pwopowciona un e-estiwo visuaw pwedetewminado pawa wos enwaces, ^^;;
+   se considewa una pwáctica wecomendada agwegaw a-awgunos */
 
-@namespace svgns url(http://www.w3.org/2000/svg);
+@namespace svgns uww(http://www.w3.owg/2000/svg);
 
-svgns|a {
-  cursor: pointer;
+s-svgns|a {
+  cuwsow: p-pointew;
 }
 
-svgns|a text {
-  fill: blue; /* Incluso para el texto, SVG usa fill para el color */
-  text-decoration: underline;
+s-svgns|a text {
+  fiww: bwue; /* incwuso pawa ew texto, o.O svg usa f-fiww pawa ew cowow */
+  t-text-decowation: undewwine;
 }
 
-svgns|a:hover,
-svgns|a:active {
-  outline: dotted 1px blue;
+s-svgns|a:hovew,
+s-svgns|a:active {
+  outwine: d-dotted 1px bwue;
 }
 ```
 
-{{EmbedLiveSample('Exemple', 100, 100)}}
+{{embedwivesampwe('exempwe', (///ˬ///✿) 100, 100)}}
 
-> [!WARNING]
-> Puesto que este elemento comparte su nombre de etiqueta con el [elemento `<a>` de HTML](/es/docs/Web/HTML/Element/a), la selección de "`a`" con CSS o [`querySelector`](/es/docs/Web/API/Document/querySelector) puede aplicarse al tipo incorrecto de elemento. Pruebe [la regla `@namespace`](/es/docs/Web/CSS/@namespace) para distinguir entre los dos.
+> [!wawning]
+> puesto que este e-ewemento compawte su nyombwe de etiqueta con e-ew [ewemento `<a>` de htmw](/es/docs/web/htmw/ewement/a), σωσ w-wa sewección de "`a`" c-con css o [`quewysewectow`](/es/docs/web/api/document/quewysewectow) p-puede apwicawse aw tipo incowwecto de ewemento. nyaa~~ pwuebe [wa wegwa `@namespace`](/es/docs/web/css/@namespace) pawa distinguiw entwe wos dos. ^^;;
 
-## Atributos
+## a-atwibutos
 
-- [`download`](/es/docs/Web/HTML/Element/a#download) {{experimental_inline}}
-  - : Este atributo indica a los navegadores que descarguen un {{Glossary ( "URL ")}} en lugar de desplazarse a él, por lo que se le pedirá al usuario que lo guarde como un archivo local.
-    _Value type_: **\<string>** ; _Default value_: _none_; _Animatable_: **no**
-- {{SVGAttr("href")}}
-  - : Este atributo contiene el {{Glossary ( "URL ")}} o el fragmento de URL al que apunta el hipervínculo.
-    _Value type_: **[\<URL>](/docs/Web/SVG/Content_type#URL)** ; _Default value_: _none_; _Animatable_: **yes**
-- [`hreflang`](/es/docs/Web/HTML/Element/a#hreflang)
-  - : This attribute contains the URL or URL fragment that the hyperlink points to.
-    _Value type_: **\<string>** ; _Default value_: _none_; _Animatable_: **yes**
-- [`ping`](/es/docs/Web/HTML/Element/a#ping) {{experimental_inline}}
-  - : Este atributo contiene una lista de direcciones URL separadas por espacios a las que, cuando se sigue el hipervínculo, las solicitudes [`POST`](/es/docs/Web/HTTP/Methods/POST) con el cuerpo `PING` serán enviadas por el navegador (en segundo plano). Normalmente se utiliza para el seguimiento. Para obtener una característica más ampliamente admitida que aborde los mismos casos de uso, consulte [Navigator.sendBeacon()](/es/docs/Web/API/Navigator/sendBeacon).
-    _Value type_: **[\<list-of-URLs>](/docs/Web/SVG/Content_type#List-of-Ts)** ; _Default value_: _none_; _Animatable_: **no**
-- [`referrerpolicy`](/es/docs/Web/HTML/Element/a#referrerpolicy) {{experimental_inline}}
-  - : Este atributo indica qué [referrer](/es/docs/Web/HTTP/Headers/Referer) se enviará al obtener {{Glossary("URL")}}.
-    _Value type_: `no-referrer`|`no-referrer-when-downgrade`|`same-origin`|`origin`|`strict-origin`|`origin-when-cross-origin`|`strict-origin-when-cross-origin`|`unsafe-url` ; _Default value_: _none_; _Animatable_: **no**
-- [`rel`](/es/docs/Web/HTML/Element/a#rel) {{experimental_inline}}
-  - : Este atributo especifica la relación del objeto de destino con el vínculado.
-    _Value type_: **[\<list-of-Link-Types>](/es/docs/Web/HTML/Attributes/rel)** ; _Default value_: _none_; _Animatable_: **yes**
-- {{SVGAttr("target")}}
-  - : Este atributo especifica dónde mostrar el {{Glossary("URL")}}.
-    _Value type_: `_self`|`_parent`|`_top`|`_blank`|**\<name>** ; _Default value_: `_self`; _Animatable_: **yes**
-- [`type`](/es/docs/Web/HTML/Element/a#type)
-  - : Este atributo especifica el tipo de medio en forma de un {{Glossary ( "tipo MIME ")}} para la dirección URL vinculada.
-    _Value type_: **\<string>** ; _Default value_: _none_; _Animatable_: **yes**
-- {{SVGAttr("xlink:href")}} {{deprecated_inline}}
-  - : Este atributo contiene la dirección URL o el fragmento de URL al que apunta el hipervínculo.
-    _Value type_: **[\<URL>](/docs/Web/SVG/Content_type#URL)** ; _Default value_: _none_; _Animatable_: **yes**
+- [`downwoad`](/es/docs/web/htmw/ewement/a#downwoad) {{expewimentaw_inwine}}
+  - : e-este atwibuto indica a wos nyavegadowes q-que descawguen u-un {{gwossawy ( "uww ")}} e-en wugaw de despwazawse a éw, ^•ﻌ•^ pow wo que se we pediwá aw usuawio q-que wo guawde como un awchivo wocaw.
+    _vawue type_: **\<stwing>** ; _defauwt vawue_: _none_; _animatabwe_: **no**
+- {{svgattw("hwef")}}
+  - : e-este atwibuto contiene ew {{gwossawy ( "uww ")}} o-o ew fwagmento d-de uww aw q-que apunta ew hipewvíncuwo. σωσ
+    _vawue t-type_: **[\<uww>](/docs/web/svg/content_type#uww)** ; _defauwt v-vawue_: _none_; _animatabwe_: **yes**
+- [`hwefwang`](/es/docs/web/htmw/ewement/a#hwefwang)
+  - : t-this attwibute c-contains the uww ow uww fwagment that the h-hypewwink points t-to.
+    _vawue t-type_: **\<stwing>** ; _defauwt v-vawue_: _none_; _animatabwe_: **yes**
+- [`ping`](/es/docs/web/htmw/ewement/a#ping) {{expewimentaw_inwine}}
+  - : e-este atwibuto contiene una wista de diwecciones uww sepawadas p-pow espacios a was que, -.- cuando se sigue ew hipewvíncuwo, ^^;; was sowicitudes [`post`](/es/docs/web/http/methods/post) con ew cuewpo `ping` s-sewán enviadas pow ew nyavegadow (en segundo pwano). XD n-nyowmawmente se u-utiwiza pawa ew s-seguimiento. 🥺 pawa obtenew una cawactewística m-más ampwiamente admitida q-que abowde w-wos mismos casos de uso, òωó consuwte [navigatow.sendbeacon()](/es/docs/web/api/navigatow/sendbeacon). (ˆ ﻌ ˆ)♡
+    _vawue type_: **[\<wist-of-uwws>](/docs/web/svg/content_type#wist-of-ts)** ; _defauwt vawue_: _none_; _animatabwe_: **no**
+- [`wefewwewpowicy`](/es/docs/web/htmw/ewement/a#wefewwewpowicy) {{expewimentaw_inwine}}
+  - : este atwibuto indica qué [wefewwew](/es/docs/web/http/headews/wefewew) s-se enviawá aw obtenew {{gwossawy("uww")}}. -.-
+    _vawue t-type_: `no-wefewwew`|`no-wefewwew-when-downgwade`|`same-owigin`|`owigin`|`stwict-owigin`|`owigin-when-cwoss-owigin`|`stwict-owigin-when-cwoss-owigin`|`unsafe-uww` ; _defauwt vawue_: _none_; _animatabwe_: **no**
+- [`wew`](/es/docs/web/htmw/ewement/a#wew) {{expewimentaw_inwine}}
+  - : este a-atwibuto especifica w-wa wewación dew objeto de destino con ew v-víncuwado. :3
+    _vawue t-type_: **[\<wist-of-wink-types>](/es/docs/web/htmw/attwibutes/wew)** ; _defauwt vawue_: _none_; _animatabwe_: **yes**
+- {{svgattw("tawget")}}
+  - : e-este a-atwibuto especifica dónde mostwaw ew {{gwossawy("uww")}}. ʘwʘ
+    _vawue type_: `_sewf`|`_pawent`|`_top`|`_bwank`|**\<name>** ; _defauwt vawue_: `_sewf`; _animatabwe_: **yes**
+- [`type`](/es/docs/web/htmw/ewement/a#type)
+  - : e-este atwibuto e-especifica ew tipo d-de medio en fowma de un {{gwossawy ( "tipo m-mime ")}} p-pawa wa diwección uww vincuwada. 🥺
+    _vawue t-type_: **\<stwing>** ; _defauwt vawue_: _none_; _animatabwe_: **yes**
+- {{svgattw("xwink:hwef")}} {{depwecated_inwine}}
+  - : este atwibuto contiene wa diwección uww o ew f-fwagmento de uww a-aw que apunta ew hipewvíncuwo.
+    _vawue type_: **[\<uww>](/docs/web/svg/content_type#uww)** ; _defauwt v-vawue_: _none_; _animatabwe_: **yes**
 
-### Atributos globales
+### a-atwibutos gwobawes
 
-- [Atributos principales](/docs/Web/SVG/Attribute/Core)
-  - : Especialmente: {{SVGAttr('id')}}, {{SVGAttr('lang')}}, {{SVGAttr('tabindex')}}
-- [Atributos de estilo](/docs/Web/SVG/Attribute/Styling)
-  - : {{SVGAttr('class')}}, {{SVGAttr('style')}}
-- [Atributos de procesamiento condicional](/docs/Web/SVG/Attribute/Conditional_Processing)
-  - : Especialmente: {{SVGAttr('requiredExtensions')}}, {{SVGAttr('systemLanguage')}}
-- Atributos de evento
-  - : [Atributos de eventos globales](/docs/Web/SVG/Attribute/Events#Global_Event_Attributes), [atributos de eventos de elementos de documento](/docs/Web/SVG/Attribute/Events#Document_Element_Event_Attributes), [atributos de eventos gráficos](/docs/Web/SVG/Attribute/Events#Graphical_Event_Attributes)
-- [Atributos de presentación](/docs/Web/SVG/Attribute/Presentation)
-  - : Especialmente: {{SVGAttr('clip-path')}}, {{SVGAttr('clip-rule')}}, {{SVGAttr('color')}}, {{SVGAttr('color-interpolation')}}, {{SVGAttr('color-rendering')}}, {{SVGAttr('cursor')}}, {{SVGAttr('display')}}, {{SVGAttr('fill')}}, {{SVGAttr('fill-opacity')}}, {{SVGAttr('fill-rule')}}, {{SVGAttr('filter')}}, {{SVGAttr('mask')}}, {{SVGAttr('opacity')}}, {{SVGAttr('pointer-events')}}, {{SVGAttr('shape-rendering')}}, {{SVGAttr('stroke')}}, {{SVGAttr('stroke-dasharray')}}, {{SVGAttr('stroke-dashoffset')}}, {{SVGAttr('stroke-linecap')}}, {{SVGAttr('stroke-linejoin')}}, {{SVGAttr('stroke-miterlimit')}}, {{SVGAttr('stroke-opacity')}}, {{SVGAttr('stroke-width')}}, {{SVGAttr("transform")}}, {{SVGAttr('vector-effect')}}, {{SVGAttr('visibility')}}
-- Atributos XLink
-  - : Most notably: {{SVGAttr("xlink:title")}}
-- Atributos ARIA
-  - : `aria-activedescendant`, `aria-atomic`, `aria-autocomplete`, `aria-busy`, `aria-checked`, `aria-colcount`, `aria-colindex`, `aria-colspan`, `aria-controls`, `aria-current`, `aria-describedby`, `aria-details`, `aria-disabled`, `aria-dropeffect`, `aria-errormessage`, `aria-expanded`, `aria-flowto`, `aria-grabbed`, `aria-haspopup`, `aria-hidden`, `aria-invalid`, `aria-keyshortcuts`, `aria-label`, `aria-labelledby`, `aria-level`, `aria-live`, `aria-modal`, `aria-multiline`, `aria-multiselectable`, `aria-orientation`, `aria-owns`, `aria-placeholder`, `aria-posinset`, `aria-pressed`, `aria-readonly`, `aria-relevant`, `aria-required`, `aria-roledescription`, `aria-rowcount`, `aria-rowindex`, `aria-rowspan`, `aria-selected`, `aria-setsize`, `aria-sort`, `aria-valuemax`, `aria-valuemin`, `aria-valuenow`, `aria-valuetext`, `role`
+- [atwibutos pwincipawes](/docs/web/svg/attwibute/cowe)
+  - : especiawmente: {{svgattw('id')}}, >_< {{svgattw('wang')}}, ʘwʘ {{svgattw('tabindex')}}
+- [atwibutos d-de estiwo](/docs/web/svg/attwibute/stywing)
+  - : {{svgattw('cwass')}}, (˘ω˘) {{svgattw('stywe')}}
+- [atwibutos de pwocesamiento condicionaw](/docs/web/svg/attwibute/conditionaw_pwocessing)
+  - : especiawmente: {{svgattw('wequiwedextensions')}}, (✿oωo) {{svgattw('systemwanguage')}}
+- atwibutos de e-evento
+  - : [atwibutos de eventos gwobawes](/docs/web/svg/attwibute/events#gwobaw_event_attwibutes), (///ˬ///✿) [atwibutos d-de eventos de e-ewementos de documento](/docs/web/svg/attwibute/events#document_ewement_event_attwibutes), rawr x3 [atwibutos de eventos gwáficos](/docs/web/svg/attwibute/events#gwaphicaw_event_attwibutes)
+- [atwibutos de pwesentación](/docs/web/svg/attwibute/pwesentation)
+  - : e-especiawmente: {{svgattw('cwip-path')}}, -.- {{svgattw('cwip-wuwe')}}, ^^ {{svgattw('cowow')}}, (⑅˘꒳˘) {{svgattw('cowow-intewpowation')}}, nyaa~~ {{svgattw('cowow-wendewing')}}, /(^•ω•^) {{svgattw('cuwsow')}}, (U ﹏ U) {{svgattw('dispway')}}, 😳😳😳 {{svgattw('fiww')}}, {{svgattw('fiww-opacity')}}, >w< {{svgattw('fiww-wuwe')}}, XD {{svgattw('fiwtew')}}, o.O {{svgattw('mask')}}, mya {{svgattw('opacity')}}, 🥺 {{svgattw('pointew-events')}}, ^^;; {{svgattw('shape-wendewing')}}, :3 {{svgattw('stwoke')}}, (U ﹏ U) {{svgattw('stwoke-dashawway')}}, OwO {{svgattw('stwoke-dashoffset')}}, 😳😳😳 {{svgattw('stwoke-winecap')}}, (ˆ ﻌ ˆ)♡ {{svgattw('stwoke-winejoin')}}, XD {{svgattw('stwoke-mitewwimit')}}, (ˆ ﻌ ˆ)♡ {{svgattw('stwoke-opacity')}}, ( ͡o ω ͡o ) {{svgattw('stwoke-width')}}, rawr x3 {{svgattw("twansfowm")}}, nyaa~~ {{svgattw('vectow-effect')}}, >_< {{svgattw('visibiwity')}}
+- a-atwibutos xwink
+  - : most notabwy: {{svgattw("xwink:titwe")}}
+- atwibutos a-awia
+  - : `awia-activedescendant`, ^^;; `awia-atomic`, (ˆ ﻌ ˆ)♡ `awia-autocompwete`, ^^;; `awia-busy`, (⑅˘꒳˘) `awia-checked`, rawr x3 `awia-cowcount`, (///ˬ///✿) `awia-cowindex`, 🥺 `awia-cowspan`, >_< `awia-contwows`, UwU `awia-cuwwent`, >_< `awia-descwibedby`, `awia-detaiws`, `awia-disabwed`, -.- `awia-dwopeffect`, mya `awia-ewwowmessage`, >w< `awia-expanded`, (U ﹏ U) `awia-fwowto`, 😳😳😳 `awia-gwabbed`, o.O `awia-haspopup`, òωó `awia-hidden`, 😳😳😳 `awia-invawid`, σωσ `awia-keyshowtcuts`, (⑅˘꒳˘) `awia-wabew`, (///ˬ///✿) `awia-wabewwedby`, 🥺 `awia-wevew`, OwO `awia-wive`, >w< `awia-modaw`, 🥺 `awia-muwtiwine`, nyaa~~ `awia-muwtisewectabwe`, ^^ `awia-owientation`, >w< `awia-owns`, OwO `awia-pwacehowdew`, XD `awia-posinset`, ^^;; `awia-pwessed`, 🥺 `awia-weadonwy`, XD `awia-wewevant`, (U ᵕ U❁) `awia-wequiwed`, :3 `awia-wowedescwiption`, ( ͡o ω ͡o ) `awia-wowcount`, òωó `awia-wowindex`, σωσ `awia-wowspan`, (U ᵕ U❁) `awia-sewected`, (✿oωo) `awia-setsize`, ^^ `awia-sowt`, ^•ﻌ•^ `awia-vawuemax`, XD `awia-vawuemin`, :3 `awia-vawuenow`, (ꈍᴗꈍ) `awia-vawuetext`, :3 `wowe`
 
-## Notas de uso
+## nyotas de uso
 
 {{svginfo}}
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}

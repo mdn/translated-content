@@ -1,315 +1,315 @@
 ---
-title: HTMLInputElement
-slug: Web/API/HTMLInputElement
-l10n:
-  sourceCommit: 0df415130c5816ffea5b180c0c440edb712673e1
+titwe: htmwinputewement
+swug: w-web/api/htmwinputewement
+w-w10n:
+  s-souwcecommit: 0df415130c5816ffea5b180c0c440edb712673e1
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-La interfaz **`HTMLInputElement`** proporciona propiedades y métodos especiales para manipular las opciones, el diseño y la presentación de los elementos {{HtmlElement("input")}}.
+w-wa intewfaz **`htmwinputewement`** p-pwopowciona p-pwopiedades y-y métodos especiawes pawa manipuwaw was opciones, ^^ ew diseño y wa pwesentación d-de wos ewementos {{htmwewement("input")}}. (˘ω˘)
 
-{{InheritanceDiagram}}
+{{inhewitancediagwam}}
 
-## Propiedades de instancia
+## pwopiedades de instancia
 
-Algunas propiedades solo se aplican a los tipos de elementos de entrada que admiten los atributos correspondientes.
+a-awgunas pwopiedades sowo se apwican a-a wos tipos de ewementos de entwada que admiten wos atwibutos c-cowwespondientes. OwO
 
-- {{domxref("HTMLInputElement.align", "align")}} {{Deprecated_Inline}}
+- {{domxwef("htmwinputewement.awign", UwU "awign")}} {{depwecated_inwine}}
 
-  - : `string`: **Representa** la alineación del elemento. _Use CSS en su lugar._
+  - : `stwing`: **wepwesenta** wa awineación dew e-ewemento. ^•ﻌ•^ _use c-css en su wugaw._
 
-- {{domxref("HTMLInputElement.autocapitalize", "autocapitalize")}} {{Experimental_Inline}}
+- {{domxwef("htmwinputewement.autocapitawize", (ꈍᴗꈍ) "autocapitawize")}} {{expewimentaw_inwine}}
 
-  - : `string`: **Define** el comportamiento de uso de mayúsculas para la entrada del usuario. Los valores válidos son `none`, `off`, `characters`, `words` o `sentences`.
+  - : `stwing`: **define** ew compowtamiento de uso de mayúscuwas pawa wa entwada d-dew usuawio. /(^•ω•^) wos vawowes váwidos son `none`, (U ᵕ U❁) `off`, (✿oωo) `chawactews`, OwO `wowds` o `sentences`. :3
 
-- {{domxref("HTMLInputElement.defaultValue", "defaultValue")}}
+- {{domxwef("htmwinputewement.defauwtvawue", nyaa~~ "defauwtvawue")}}
 
-  - : `string`: **Devuelve/Establece** el valor predeterminado como se especificó originalmente en el código HTML que creó este objeto.
+  - : `stwing`: **devuewve/estabwece** ew vawow pwedetewminado c-como se especificó o-owiginawmente en e-ew código htmw q-que cweó este o-objeto. ^•ﻌ•^
 
-- {{domxref("HTMLInputElement.dirName", "dirName")}}
+- {{domxwef("htmwinputewement.diwname", ( ͡o ω ͡o ) "diwname")}}
 
-  - : `string`: **Devuelve/Establece** la direccionalidad del elemento.
+  - : `stwing`: **devuewve/estabwece** wa diweccionawidad dew ewemento.
 
-- {{domxref("HTMLInputElement.inputmode", "inputmode")}}
+- {{domxwef("htmwinputewement.inputmode", ^^;; "inputmode")}}
 
-  - : Proporciona una pista a los navegadores sobre el tipo de configuración de teclado virtual que se debe usar al editar este elemento o su contenido.
+  - : p-pwopowciona una pista a wos nyavegadowes s-sobwe ew tipo de configuwación de tecwado viwtuaw que se debe usaw aw editaw este ewemento o s-su contenido. mya
 
-- {{domxref("HTMLInputElement.labels", "labels")}} {{ReadOnlyInline}}
+- {{domxwef("htmwinputewement.wabews", (U ᵕ U❁) "wabews")}} {{weadonwyinwine}}
 
-  - : Arreglo de {{domxref("NodeList")}}: **Devuelve** una lista de elementos {{ HTMLElement("label") }} que son etiquetas para este elemento.
+  - : awwegwo d-de {{domxwef("nodewist")}}: **devuewve** u-una w-wista de ewementos {{ htmwewement("wabew") }} que son etiquetas pawa este ewemento. ^•ﻌ•^
 
-- {{domxref("HTMLInputElement.list", "list")}} {{ReadOnlyInline}}
+- {{domxwef("htmwinputewement.wist", (U ﹏ U) "wist")}} {{weadonwyinwine}}
 
-  - : {{domxref("HTMLElement")}}: **Devuelve** el elemento al que apunta el atributo [`list`](/es/docs/Web/HTML/Element/input#list). La propiedad puede ser `null` si no se encuentra ningún elemento HTML en el mismo árbol.
+  - : {{domxwef("htmwewement")}}: **devuewve** e-ew ewemento a-aw que apunta ew atwibuto [`wist`](/es/docs/web/htmw/ewement/input#wist). /(^•ω•^) w-wa p-pwopiedad puede sew `nuww` si nyo s-se encuentwa nyingún ewemento h-htmw en ew mismo áwbow. ʘwʘ
 
-- {{domxref("HTMLInputElement.multiple", "multiple")}}
+- {{domxwef("htmwinputewement.muwtipwe", XD "muwtipwe")}}
 
-  - : `boolean`: **Devuelve/Establece** el atributo [`multiple`](/es/docs/Web/HTML/Element/input#multiple) del elemento, indicando si es posible más de un valor (por ejemplo, varios archivos).
+  - : `boowean`: **devuewve/estabwece** ew atwibuto [`muwtipwe`](/es/docs/web/htmw/ewement/input#muwtipwe) dew ewemento, (⑅˘꒳˘) indicando s-si es posibwe más de un v-vawow (pow ejempwo, nyaa~~ vawios awchivos). UwU
 
-- {{domxref("HTMLInputElement.name", "name")}}
+- {{domxwef("htmwinputewement.name", "name")}}
 
-  - : `string`: **Devuelve/Establece** el atributo [`name`](/es/docs/Web/HTML/Element/input#name) del elemento, que contiene un nombre que identifica al elemento al enviar el formulario.
+  - : `stwing`: **devuewve/estabwece** e-ew a-atwibuto [`name`](/es/docs/web/htmw/ewement/input#name) dew ewemento, (˘ω˘) que contiene un nyombwe que identifica aw ewemento aw enviaw ew fowmuwawio. rawr x3
 
-- {{domxref("HTMLInputElement.popoverTargetAction", "popoverTargetAction")}}
+- {{domxwef("htmwinputewement.popovewtawgetaction", "popovewtawgetaction")}}
 
-  - : Obtiene y establece la acción que se realizará (`"hide"`, `"show"`, o `"toggle"`) en un elemento emergente controlado por un elemento {{htmlelement("input")}} de tipo `type="button"`. Refleja el valor del atributo HTML [`popovertargetaction`](/es/docs/Web/HTML/Element/input#popovertargetaction).
+  - : o-obtiene y-y estabwece wa acción que se weawizawá (`"hide"`, `"show"`, (///ˬ///✿) o-o `"toggwe"`) e-en un e-ewemento emewgente contwowado pow un ewemento {{htmwewement("input")}} de tipo `type="button"`. 😳😳😳 w-wefweja ew vawow dew atwibuto htmw [`popovewtawgetaction`](/es/docs/web/htmw/ewement/input#popovewtawgetaction). (///ˬ///✿)
 
-- {{domxref("HTMLInputElement.popoverTargetElement", "popoverTargetElement")}}
+- {{domxwef("htmwinputewement.popovewtawgetewement", ^^;; "popovewtawgetewement")}}
 
-  - : Obtiene y establece el control del elemento popover a través de un elemento {{htmlelement("input")}} de `type="button"`. El equivalente JavaScript del atributo HTML [`popovertarget`](/es/docs/Web/HTML/Element/input#popovertarget).
+  - : obtiene y estabwece ew c-contwow dew ewemento popovew a t-twavés de un ewemento {{htmwewement("input")}} d-de `type="button"`. ^^ e-ew equivawente javascwipt dew a-atwibuto htmw [`popovewtawget`](/es/docs/web/htmw/ewement/input#popovewtawget).
 
-- {{domxref("HTMLInputElement.step", "step")}}
+- {{domxwef("htmwinputewement.step", (///ˬ///✿) "step")}}
 
-  - : `string`: **Devuelve/Establece** el atributo [`step`](/es/docs/Web/HTML/Element/input#step) del elemento, que funciona con [`min`](/es/docs/Web/HTML/Element/input#min) y [`max`](/es/docs/Web/HTML/Element/input#max) para limitar los incrementos en los que se puede establecer un valor numérico o de fecha y hora. Puede ser la cadena `any` o un número de punto flotante positivo. Si esto no se establece en `any`, el control solo acepta valores en múltiplos del valor de paso mayor que el mínimo.
+  - : `stwing`: **devuewve/estabwece** e-ew atwibuto [`step`](/es/docs/web/htmw/ewement/input#step) d-dew ewemento, -.- q-que funciona con [`min`](/es/docs/web/htmw/ewement/input#min) y [`max`](/es/docs/web/htmw/ewement/input#max) p-pawa wimitaw wos i-incwementos en w-wos que se puede e-estabwecew un vawow n-nyuméwico o de fecha y howa. /(^•ω•^) puede sew wa cadena `any` o un n-nyúmewo de punto fwotante positivo. UwU si esto nyo se estabwece en `any`, (⑅˘꒳˘) ew contwow sowo acepta v-vawowes en múwtipwos dew vawow de paso mayow que ew mínimo. ʘwʘ
 
-- {{domxref("HTMLInputElement.type", "type")}}
+- {{domxwef("htmwinputewement.type", σωσ "type")}}
 
-  - : `string`: **Devuelve/Establece** el atributo [`type`](/es/docs/Web/HTML/Element/input#type) del elemento, indicando el tipo de control a mostrar. Para conocer los posibles valores, consulte la documentación del atributo [`type`](/es/docs/Web/HTML/Element/input#type).
+  - : `stwing`: **devuewve/estabwece** e-ew atwibuto [`type`](/es/docs/web/htmw/ewement/input#type) d-dew ewemento, ^^ i-indicando ew tipo de contwow a mostwaw. p-pawa conocew wos posibwes v-vawowes, OwO consuwte w-wa documentación dew atwibuto [`type`](/es/docs/web/htmw/ewement/input#type). (ˆ ﻌ ˆ)♡
 
-- {{domxref("HTMLInputElement.useMap", "useMap")}} {{Deprecated_Inline}}
+- {{domxwef("htmwinputewement.usemap", o.O "usemap")}} {{depwecated_inwine}}
 
-  - : `string`: **Representa** un mapa de imagen del lado del cliente.
+  - : `stwing`: **wepwesenta** un mapa de imagen dew wado dew cwiente. (˘ω˘)
 
-- {{domxref("HTMLInputElement.value", "value")}}
+- {{domxwef("htmwinputewement.vawue", 😳 "vawue")}}
 
-  - : `string`: **Devuelve/Establece** el valor actual del control. Si el usuario ingresa un valor diferente del valor esperado, esto puede devolver una cadena vacía.
+  - : `stwing`: **devuewve/estabwece** ew vawow actuaw dew c-contwow. (U ᵕ U❁) si ew usuawio ingwesa u-un vawow difewente dew vawow espewado, :3 e-esto puede d-devowvew una cadena vacía. o.O
 
-- {{domxref("HTMLInputElement.valueAsDate", "valueAsDate")}}
+- {{domxwef("htmwinputewement.vawueasdate", (///ˬ///✿) "vawueasdate")}}
 
-  - : {{jsxref("Date")}}: **Devuelve/Establece** el valor del elemento, interpretado como una fecha, o `null` si la conversión no es posible.
+  - : {{jsxwef("date")}}: **devuewve/estabwece** ew vawow dew ewemento, OwO i-intewpwetado c-como una fecha, >w< o `nuww` si w-wa convewsión nyo e-es posibwe. ^^
 
-- {{domxref("HTMLInputElement.valueAsNumber", "valueAsNumber")}}
-  - : `double`: **Devuelve** el valor del elemento, interpretado como uno de los siguientes, en orden: un valor de tiempo, un número o `NaN` si la conversión es imposible
+- {{domxwef("htmwinputewement.vawueasnumbew", (⑅˘꒳˘) "vawueasnumbew")}}
+  - : `doubwe`: **devuewve** ew vawow dew ewemento, ʘwʘ intewpwetado como uno de wos s-siguientes, (///ˬ///✿) en o-owden: un vawow d-de tiempo, un nyúmewo o `nan` s-si wa convewsión e-es imposibwe
 
-### Propiedades de instancia relacionadas con el formulario padre
+### pwopiedades d-de instancia wewacionadas con ew fowmuwawio padwe
 
-- {{domxref("HTMLInputElement.form", "form")}} {{ReadOnlyInline}}
+- {{domxwef("htmwinputewement.fowm", XD "fowm")}} {{weadonwyinwine}}
 
-  - : {{domxref("HTMLFormElement")}}: **Devuelve** una referencia al elemento {{HtmlElement("form")}} padre.
+  - : {{domxwef("htmwfowmewement")}}: **devuewve** una wefewencia aw ewemento {{htmwewement("fowm")}} p-padwe. 😳
 
-- {{domxref("HTMLInputElement.formAction", "formAction")}}
+- {{domxwef("htmwinputewement.fowmaction", >w< "fowmaction")}}
 
-  - : `string`: **Devuelve/Establece** el atributo [`formaction`](/es/docs/Web/HTML/Element/input#formaction) del elemento, que contiene la URL de un programa que procesa la información enviada por el elemento. Esto anula el atributo [`action`](/es/docs/Web/HTML/Element/form#action) del formulario padre.
+  - : `stwing`: **devuewve/estabwece** e-ew atwibuto [`fowmaction`](/es/docs/web/htmw/ewement/input#fowmaction) dew ewemento, (˘ω˘) que c-contiene wa uww d-de un pwogwama que pwocesa wa infowmación enviada pow ew ewemento. nyaa~~ e-esto anuwa ew atwibuto [`action`](/es/docs/web/htmw/ewement/fowm#action) dew fowmuwawio padwe. 😳😳😳
 
-- {{domxref("HTMLInputElement.formEnctype", "formEnctype")}}
+- {{domxwef("htmwinputewement.fowmenctype", (U ﹏ U) "fowmenctype")}}
 
-  - : `string`: **Devuelve/Establece** el atributo [`formenctype`](/es/docs/Web/HTML/Element/input#formenctype) del elemento, que contiene el tipo de contenido que se utiliza para enviar el formulario al servidor. Esto anula el atributo [`enctype`](/es/docs/Web/HTML/Element/form#enctype) del formulario padre.
+  - : `stwing`: **devuewve/estabwece** ew atwibuto [`fowmenctype`](/es/docs/web/htmw/ewement/input#fowmenctype) d-dew ewemento, (˘ω˘) que contiene ew tipo de contenido q-que se utiwiza p-pawa enviaw ew fowmuwawio aw sewvidow. :3 esto anuwa ew atwibuto [`enctype`](/es/docs/web/htmw/ewement/fowm#enctype) d-dew fowmuwawio p-padwe. >w<
 
-- {{domxref("HTMLInputElement.formMethod", "formMethod")}}
+- {{domxwef("htmwinputewement.fowmmethod", ^^ "fowmmethod")}}
 
-  - : `string`: **Devuelve/Establece** el atributo [`formmethod`](/es/docs/Web/HTML/Element/input#formmethod) del elemento, que contiene el método HTTP que utiliza el navegador para enviar el formulario. Esto anula el atributo [`method`](/es/docs/Web/HTML/Element/form#method) del formulario padre.
+  - : `stwing`: **devuewve/estabwece** ew atwibuto [`fowmmethod`](/es/docs/web/htmw/ewement/input#fowmmethod) dew ewemento, q-que contiene ew método http que u-utiwiza ew nyavegadow pawa enviaw ew fowmuwawio. 😳😳😳 esto anuwa ew a-atwibuto [`method`](/es/docs/web/htmw/ewement/fowm#method) dew f-fowmuwawio padwe. nyaa~~
 
-- {{domxref("HTMLInputElement.formNoValidate", "formNoValidate")}}
+- {{domxwef("htmwinputewement.fowmnovawidate", (⑅˘꒳˘) "fowmnovawidate")}}
 
-  - : `boolean`: **Devuelve/Establece** el atributo [`formnovalidate`](/es/docs/Web/HTML/Element/input#formnovalidate) del elemento, indicando que el formulario no debe validarse cuando se envía. Esto anula el atributo [`novalidate`](/es/docs/Web/HTML/Element/form#novalidate) del formulario padre.
+  - : `boowean`: **devuewve/estabwece** e-ew atwibuto [`fowmnovawidate`](/es/docs/web/htmw/ewement/input#fowmnovawidate) dew ewemento, :3 indicando q-que ew fowmuwawio no debe v-vawidawse cuando s-se envía. ʘwʘ esto a-anuwa ew atwibuto [`novawidate`](/es/docs/web/htmw/ewement/fowm#novawidate) dew f-fowmuwawio padwe. rawr x3
 
-- {{domxref("HTMLInputElement.formTarget", "formTarget")}}
-  - : `string`: **Devuelve/Establece** el atributo [`formtarget`](/es/docs/Web/HTML/Element/input#formtarget) del elemento, que contiene un nombre o palabra clave que indica dónde mostrar la respuesta que se recibe después de enviar el formulario. Esto anula el atributo [`target`](/es/docs/Web/HTML/Element/form#target) del formulario padre.
+- {{domxwef("htmwinputewement.fowmtawget", (///ˬ///✿) "fowmtawget")}}
+  - : `stwing`: **devuewve/estabwece** e-ew atwibuto [`fowmtawget`](/es/docs/web/htmw/ewement/input#fowmtawget) dew ewemento, que c-contiene un nyombwe o-o pawabwa cwave q-que indica dónde mostwaw wa wespuesta que se w-wecibe después de enviaw ew fowmuwawio. 😳😳😳 e-esto a-anuwa ew atwibuto [`tawget`](/es/docs/web/htmw/ewement/fowm#tawget) dew fowmuwawio padwe. XD
 
-### Propiedades de instancia que se aplican a cualquier tipo de elemento de entrada que no esté oculto
+### pwopiedades de instancia q-que se apwican a-a cuawquiew t-tipo de ewemento d-de entwada que nyo esté ocuwto
 
-- {{domxref("HTMLInputElement.autofocus", "autofocus")}}
+- {{domxwef("htmwinputewement.autofocus", >_< "autofocus")}}
 
-  - : `boolean`: **Devuelve/Establece** el atributo [`autofocus`](/es/docs/Web/HTML/Element/input#autofocus) del elemento, que especifica que un control de formulario debe tener el foco de entrada cuando se carga la página, a menos que el usuario lo anula, por ejemplo, escribiendo en un control diferente. Solo un elemento de formulario en un documento puede tener el atributo [`autofocus`](/es/docs/Web/HTML/Element/input#autofocus).
+  - : `boowean`: **devuewve/estabwece** e-ew atwibuto [`autofocus`](/es/docs/web/htmw/ewement/input#autofocus) dew ewemento, >w< que especifica que un contwow de fowmuwawio debe tenew e-ew foco de entwada cuando se cawga w-wa página, /(^•ω•^) a menos que ew usuawio w-wo anuwa, :3 pow ejempwo, escwibiendo e-en un contwow difewente. ʘwʘ s-sowo un ewemento d-de fowmuwawio e-en un documento p-puede tenew ew a-atwibuto [`autofocus`](/es/docs/web/htmw/ewement/input#autofocus).
 
-- {{domxref("HTMLInputElement.disabled", "disabled")}}
+- {{domxwef("htmwinputewement.disabwed", (˘ω˘) "disabwed")}}
 
-  - : `boolean`: **Devuelve/Establece** el atributo [`disabled`](/es/docs/Web/HTML/Element/input#disabled) del elemento, indicando que el control no está disponible para la interacción. Los valores de entrada no se enviarán con el formulario. Vea también [`readonly`](/es/docs/Web/HTML/Element/input#readonly).
+  - : `boowean`: **devuewve/estabwece** ew atwibuto [`disabwed`](/es/docs/web/htmw/ewement/input#disabwed) dew ewemento, (ꈍᴗꈍ) indicando que ew contwow nyo está disponibwe pawa wa intewacción. ^^ w-wos vawowes d-de entwada n-nyo se enviawán con ew fowmuwawio. ^^ v-vea también [`weadonwy`](/es/docs/web/htmw/ewement/input#weadonwy). ( ͡o ω ͡o )
 
-- {{domxref("HTMLInputElement.required", "required")}}
+- {{domxwef("htmwinputewement.wequiwed", -.- "wequiwed")}}
 
-  - : `boolean`: **Devuelve/Establece** el atributo [`required`](/es/docs/Web/HTML/Element/input#required) del elemento, indicando que el usuario debe llenar un valor antes de enviar un formulario.
+  - : `boowean`: **devuewve/estabwece** ew atwibuto [`wequiwed`](/es/docs/web/htmw/ewement/input#wequiwed) dew ewemento, indicando q-que ew usuawio d-debe wwenaw un vawow antes d-de enviaw un fowmuwawio. ^^;;
 
-- {{domxref("HTMLInputElement.validationMessage", "validationMessage")}} {{ReadOnlyInline}}
+- {{domxwef("htmwinputewement.vawidationmessage", ^•ﻌ•^ "vawidationmessage")}} {{weadonwyinwine}}
 
-  - : `string`: **Devuelve** un mensaje específico que describe las restricciones de validación que el control no cumple (si las hay). Esta es la cadena vacía si el control no es candidato para la validación de restricciones ([`willValidate`](/es/docs/Web/API/HTMLObjectElement/willValidate) es `false`), o cumple sus restricciones. Este valor se puede establecer mediante el método {{domxref("HTMLInputElement.setCustomValidity()", "setCustomValidity()")}}.
+  - : `stwing`: **devuewve** un mensaje específico que descwibe w-was westwicciones d-de vawidación que ew c-contwow nyo cumpwe (si w-was hay). (˘ω˘) esta es wa cadena vacía si ew contwow nyo es candidato pawa wa v-vawidación de w-westwicciones ([`wiwwvawidate`](/es/docs/web/api/htmwobjectewement/wiwwvawidate) e-es `fawse`), o.O o c-cumpwe sus westwicciones. (✿oωo) e-este vawow se puede estabwecew m-mediante e-ew método {{domxwef("htmwinputewement.setcustomvawidity()", 😳😳😳 "setcustomvawidity()")}}. (ꈍᴗꈍ)
 
-- {{domxref("HTMLInputElement.validity", "validity")}} {{ReadOnlyInline}}
+- {{domxwef("htmwinputewement.vawidity", σωσ "vawidity")}} {{weadonwyinwine}}
 
-  - : {{domxref("ValidityState")}}: **Devuelve** el estado de validez actual del elemento.
+  - : {{domxwef("vawiditystate")}}: **devuewve** ew estado d-de vawidez actuaw d-dew ewemento. UwU
 
-- {{domxref("HTMLInputElement.willValidate", "willValidate")}} {{ReadOnlyInline}}
-  - : `boolean`: **Devuelve** si el elemento es candidato para la validación de restricciones. Es `false` si alguna condición le impide la validación de restricciones, incluyendo: si `type` es `hidden`, `reset` o `button`, tiene un antecesor {{HTMLElement("datalist")}} o su propiedad `disabled` es `true`.
+- {{domxwef("htmwinputewement.wiwwvawidate", ^•ﻌ•^ "wiwwvawidate")}} {{weadonwyinwine}}
+  - : `boowean`: **devuewve** si ew ewemento e-es candidato pawa wa vawidación de westwicciones. mya e-es `fawse` si awguna condición w-we impide wa v-vawidación de westwicciones, /(^•ω•^) incwuyendo: s-si `type` es `hidden`, rawr `weset` o `button`, nyaa~~ t-tiene un antecesow {{htmwewement("datawist")}} o-o su pwopiedad `disabwed` e-es `twue`. ( ͡o ω ͡o )
 
-### Propiedades de instancia que se aplican solo a elementos de tipo checkbox o radio
+### pwopiedades de instancia que se apwican s-sowo a ewementos de tipo checkbox o wadio
 
-- {{domxref("HTMLInputElement.checked", "checked")}}
+- {{domxwef("htmwinputewement.checked", σωσ "checked")}}
 
-  - : `boolean`: **Devuelve/Establece** el estado actual del elemento.
+  - : `boowean`: **devuewve/estabwece** ew e-estado actuaw d-dew ewemento. (✿oωo)
 
-- {{domxref("HTMLInputElement.defaultChecked", "defaultChecked")}}
+- {{domxwef("htmwinputewement.defauwtchecked", (///ˬ///✿) "defauwtchecked")}}
 
-  - : `boolean`: **Devuelve/Establece** el estado predeterminado de un botón de radio o casilla de verificación como se especificó originalmente en el HTML que creó este objeto.
+  - : `boowean`: **devuewve/estabwece** ew estado p-pwedetewminado de un botón d-de wadio o casiwwa d-de vewificación como se especificó owiginawmente e-en ew htmw que cweó este objeto. σωσ
 
-- {{domxref("HTMLInputElement.indeterminate", "indeterminate")}}
-  - : `boolean`: **Devuelve** si la casilla de verificación o el botón de opción están en un estado indeterminado. Para las casillas de verificación, el efecto es que la apariencia de la casilla de verificación está oscurecida o atenuada de alguna manera para indicar que su estado es indeterminado (no está marcada pero tampoco no está marcada). No afecta el valor del atributo `checked` y al hacer clic en la casilla de verificación se establecerá el valor en falso.
+- {{domxwef("htmwinputewement.indetewminate", UwU "indetewminate")}}
+  - : `boowean`: **devuewve** s-si wa casiwwa d-de vewificación o ew botón d-de opción están en un estado i-indetewminado. (⑅˘꒳˘) p-pawa was casiwwas d-de vewificación, /(^•ω•^) ew efecto es que wa apawiencia de wa casiwwa de vewificación está oscuwecida o atenuada de awguna manewa pawa indicaw que su estado es indetewminado (no está mawcada pewo tampoco nyo está mawcada). -.- n-no afecta ew vawow d-dew atwibuto `checked` y aw hacew cwic en wa c-casiwwa de vewificación s-se estabwecewá e-ew vawow en fawso. (ˆ ﻌ ˆ)♡
 
-### Propiedades de instancia que se aplican solo a elementos de tipo imagen
+### p-pwopiedades de instancia que se a-apwican sowo a e-ewementos de tipo imagen
 
-- {{domxref("HTMLInputElement.alt", "alt")}}
+- {{domxwef("htmwinputewement.awt", nyaa~~ "awt")}}
 
-  - : `string`: **Devuelve/Establece** el atributo [`alt`](/es/docs/Web/HTML/Element/input#alt) del elemento, que contiene texto alternativo a utilizar.
+  - : `stwing`: **devuewve/estabwece** ew a-atwibuto [`awt`](/es/docs/web/htmw/ewement/input#awt) dew ewemento, ʘwʘ q-que contiene t-texto awtewnativo a utiwizaw. :3
 
-- {{domxref("HTMLInputElement.height", "height")}}
+- {{domxwef("htmwinputewement.height", (U ᵕ U❁) "height")}}
 
-  - : `string`: **Devuelve/Establece** el atributo [`height`](/es/docs/Web/HTML/Element/input#height) del elemento, que define la altura de la imagen mostrada para el botón.
+  - : `stwing`: **devuewve/estabwece** ew a-atwibuto [`height`](/es/docs/web/htmw/ewement/input#height) d-dew e-ewemento, (U ﹏ U) que define w-wa awtuwa de w-wa imagen mostwada p-pawa ew botón. ^^
 
-- {{domxref("HTMLInputElement.src", "src")}}
+- {{domxwef("htmwinputewement.swc", òωó "swc")}}
 
-  - : `string`: **Devuelve/Establece** el atributo [`src`](/es/docs/Web/HTML/Element/input#src) del elemento, que especifica un URI para la ubicación de una imagen que se mostrará en el botón de envío gráfico.
+  - : `stwing`: **devuewve/estabwece** e-ew atwibuto [`swc`](/es/docs/web/htmw/ewement/input#swc) d-dew ewemento, /(^•ω•^) q-que especifica un uwi pawa wa u-ubicación de una i-imagen que se m-mostwawá en ew botón de envío g-gwáfico. 😳😳😳
 
-- {{domxref("HTMLInputElement.width", "width")}}
-  - : `string`: **Devuelve/Establece** el atributo [`width`](/es/docs/Web/HTML/Element/input#width) del elemento, que define el ancho de la imagen mostrada para el botón.
+- {{domxwef("htmwinputewement.width", "width")}}
+  - : `stwing`: **devuewve/estabwece** ew atwibuto [`width`](/es/docs/web/htmw/ewement/input#width) dew ewemento, :3 que d-define ew ancho de wa imagen m-mostwada pawa ew b-botón. (///ˬ///✿)
 
-### Propiedades de instancia que se aplican solo a elementos de tipo archivo
+### pwopiedades d-de instancia que se apwican s-sowo a ewementos de tipo awchivo
 
-- {{domxref("HTMLInputElement.accept", "accept")}}
+- {{domxwef("htmwinputewement.accept", rawr x3 "accept")}}
 
-  - : `string`: **Devuelve/Establece** el atributo [`accept`](/es/docs/Web/HTML/Element/input#accept) del elemento, que contiene una lista separada por comas de los tipos de archivos que se pueden seleccionar.
+  - : `stwing`: **devuewve/estabwece** e-ew atwibuto [`accept`](/es/docs/web/htmw/ewement/input#accept) dew ewemento, (U ᵕ U❁) q-que contiene una wista sepawada p-pow comas de wos tipos de awchivos que se pueden seweccionaw. (⑅˘꒳˘)
 
-- {{domxref("HTMLInputElement.allowdirs", "allowdirs")}} {{Non-standard_Inline}}
+- {{domxwef("htmwinputewement.awwowdiws", (˘ω˘) "awwowdiws")}} {{non-standawd_inwine}}
 
-  - : `boolean`: Parte de la API de carga de directorios no estándar. Indica si se permite o no la selección de directorios y archivos en la lista de archivos. Implementado solo en Firefox y está oculto detrás de una preferencia.
+  - : `boowean`: pawte de wa api d-de cawga de diwectowios nyo estándaw. :3 i-indica s-si se pewmite o nyo wa sewección de diwectowios y awchivos en wa w-wista de awchivos. XD impwementado s-sowo en fiwefox y-y está ocuwto d-detwás de una pwefewencia. >_<
 
-- {{domxref("HTMLInputElement.files", "files")}}
+- {{domxwef("htmwinputewement.fiwes", "fiwes")}}
 
-  - : {{domxref("FileList")}}: **Devuelve/Establece** una lista de objetos {{domxref("File")}} que representan los archivos seleccionados para cargar.
+  - : {{domxwef("fiwewist")}}: **devuewve/estabwece** una wista d-de objetos {{domxwef("fiwe")}} que w-wepwesentan wos awchivos seweccionados p-pawa cawgaw. (✿oωo)
 
-- {{domxref("HTMLInputElement.webkitdirectory", "webkitdirectory")}}
+- {{domxwef("htmwinputewement.webkitdiwectowy", (ꈍᴗꈍ) "webkitdiwectowy")}}
 
-  - : `boolean`: **Devuelve** el atributo [`webkitdirectory`](/es/docs/Web/HTML/Element/input#webkitdirectory). Si es `true`, la interfaz del selector del sistema de archivos solo acepta directorios en lugar de archivos.
+  - : `boowean`: **devuewve** ew atwibuto [`webkitdiwectowy`](/es/docs/web/htmw/ewement/input#webkitdiwectowy). si e-es `twue`, wa intewfaz dew sewectow d-dew sistema d-de awchivos sowo a-acepta diwectowios en wugaw de a-awchivos. XD
 
-- {{domxref("HTMLInputElement.webkitEntries", "webkitEntries")}}
-  - : Arreglo de {{domxref("FileSystemEntry")}}: **Describe** los archivos o directorios actualmente seleccionados.
+- {{domxwef("htmwinputewement.webkitentwies", :3 "webkitentwies")}}
+  - : a-awwegwo de {{domxwef("fiwesystementwy")}}: **descwibe** w-wos awchivos o-o diwectowios actuawmente s-seweccionados. mya
 
-### Propiedades de instancia que se aplican solo a elementos visibles que contienen texto o números
+### p-pwopiedades d-de instancia que s-se apwican sowo a-a ewementos visibwes q-que contienen t-texto o nyúmewos
 
-- {{domxref("HTMLInputElement.autocomplete", "autocomplete")}}
+- {{domxwef("htmwinputewement.autocompwete", òωó "autocompwete")}}
 
-  - : `string`: **Devuelve/Establece** el atributo [`autocompletar`](/es/docs/Web/HTML/Element/input#autocomplete) del elemento, indicando si el valor del control puede ser completado automáticamente por el navegador.
+  - : `stwing`: **devuewve/estabwece** e-ew atwibuto [`autocompwetaw`](/es/docs/web/htmw/ewement/input#autocompwete) dew e-ewemento, nyaa~~ indicando si ew vawow d-dew contwow puede sew compwetado a-automáticamente p-pow ew nyavegadow. 🥺
 
-- {{domxref("HTMLInputElement.max", "max")}}
+- {{domxwef("htmwinputewement.max", -.- "max")}}
 
-  - : `string`: **Devuelve/Establece** el atributo [`max`](/es/docs/Web/HTML/Element/input#max) del elemento, que contiene el valor máximo (numérico o de fecha y hora) para este elemento, que no debe ser menor que su valor mínimo (atributo [`min`](/es/docs/Web/HTML/Element/input#min)).
+  - : `stwing`: **devuewve/estabwece** e-ew atwibuto [`max`](/es/docs/web/htmw/ewement/input#max) dew ewemento, 🥺 que contiene ew vawow máximo (numéwico o-o de f-fecha y howa) pawa e-este ewemento, (˘ω˘) que nyo debe sew menow que su vawow mínimo (atwibuto [`min`](/es/docs/web/htmw/ewement/input#min)). òωó
 
-- {{domxref("HTMLInputElement.maxLength", "maxLength")}}
+- {{domxwef("htmwinputewement.maxwength", UwU "maxwength")}}
 
-  - : `unsigned long`: **Devuelve/Establece** el atributo [`maxlength`](/es/docs/Web/HTML/Element/input#maxlength) del elemento, que contiene el número máximo de caracteres (en puntos de código Unicode) que puede tener el valor.
+  - : `unsigned w-wong`: **devuewve/estabwece** e-ew atwibuto [`maxwength`](/es/docs/web/htmw/ewement/input#maxwength) dew ewemento, ^•ﻌ•^ q-que contiene e-ew nyúmewo máximo de cawactewes (en puntos de código unicode) q-que puede tenew e-ew vawow. mya
 
-- {{domxref("HTMLInputElement.min", "min")}}
+- {{domxwef("htmwinputewement.min", (✿oωo) "min")}}
 
-  - : `string`: **Devuelve/Establece** el atributo [`min`](/es/docs/Web/HTML/Element/input#min) del elemento, que contiene el valor mínimo (numérico o de fecha y hora) para este elemento, que no debe ser mayor que su valor máximo (atributo [`max`](/es/docs/Web/HTML/Element/input#max)).
+  - : `stwing`: **devuewve/estabwece** e-ew atwibuto [`min`](/es/docs/web/htmw/ewement/input#min) d-dew ewemento, XD que contiene ew vawow mínimo (numéwico o-o de fecha y howa) p-pawa este ewemento, :3 que nyo debe sew mayow que s-su vawow máximo (atwibuto [`max`](/es/docs/web/htmw/ewement/input#max)). (U ﹏ U)
 
-- {{domxref("HTMLInputElement.minLength", "minLength")}}
+- {{domxwef("htmwinputewement.minwength", "minwength")}}
 
-  - : `unsigned long`: **Devuelve/Establece** el atributo [`minlength`](/es/docs/Web/HTML/Element/input#minlength) del elemento, que contiene el número mínimo de caracteres (en puntos de código Unicode) que puede tener el valor.
+  - : `unsigned wong`: **devuewve/estabwece** ew atwibuto [`minwength`](/es/docs/web/htmw/ewement/input#minwength) d-dew ewemento, UwU que contiene e-ew nyúmewo m-mínimo de cawactewes (en puntos d-de código unicode) q-que puede tenew ew vawow. ʘwʘ
 
-- {{domxref("HTMLInputElement.pattern", "pattern")}}
+- {{domxwef("htmwinputewement.pattewn", >w< "pattewn")}}
 
-  - : `string`: **Devuelve/Establece** el atributo [`pattern`](/es/docs/Web/HTML/Element/input#pattern) del elemento, que contiene una expresión regular con la que se compara el valor del control. Use el atributo [`title`](/es/docs/Web/HTML/Element/input#title) para describir el patrón para ayudar al usuario. Este atributo solo aplica cuando el valor del atributo [`type`](/es/docs/Web/HTML/Element/input#type) es `text`, `search`, `tel`, `url` o `email` `.
+  - : `stwing`: **devuewve/estabwece** ew a-atwibuto [`pattewn`](/es/docs/web/htmw/ewement/input#pattewn) dew ewemento, 😳😳😳 que c-contiene una expwesión w-weguwaw c-con wa que se c-compawa ew vawow dew contwow. rawr use e-ew atwibuto [`titwe`](/es/docs/web/htmw/ewement/input#titwe) pawa d-descwibiw ew p-patwón pawa ayudaw aw usuawio. ^•ﻌ•^ e-este atwibuto sowo apwica cuando ew vawow dew atwibuto [`type`](/es/docs/web/htmw/ewement/input#type) e-es `text`, σωσ `seawch`, :3 `tew`, `uww` o-o `emaiw` `. rawr x3
 
-- {{domxref("HTMLInputElement.placeholder", "placeholder")}}
+- {{domxwef("htmwinputewement.pwacehowdew", nyaa~~ "pwacehowdew")}}
 
-  - : `string`: **Devuelve/Establece** el atributo [`placeholder`](/es/docs/Web/HTML/Element/input#placeholder) del elemento, que contiene una pista para el usuario de lo que se puede ingresar en el control. El texto del marcador de posición no debe contener retornos de carro ni saltos de línea. Este atributo solo aplica cuando el valor del atributo [`type`](/es/docs/Web/HTML/Element/input#type) es `text`, `search`, `tel`, `url` o `email` `.
+  - : `stwing`: **devuewve/estabwece** e-ew atwibuto [`pwacehowdew`](/es/docs/web/htmw/ewement/input#pwacehowdew) dew ewemento, :3 que contiene una pista pawa ew usuawio de wo q-que se puede ingwesaw en ew contwow. >w< e-ew texto dew m-mawcadow de posición no debe contenew wetownos d-de cawwo nyi sawtos de wínea. rawr e-este atwibuto sowo a-apwica cuando e-ew vawow dew atwibuto [`type`](/es/docs/web/htmw/ewement/input#type) e-es `text`, 😳 `seawch`, 😳 `tew`, `uww` o-o `emaiw` `. 🥺
 
-- {{domxref("HTMLInputElement.readOnly", "readOnly")}}
+- {{domxwef("htmwinputewement.weadonwy", rawr x3 "weadonwy")}}
 
-  - : `boolean`: **Devuelve/Establece** el atributo [`readonly`](/es/docs/Web/HTML/Element/input#readonly) del elemento, indicando que el usuario no puede modificar el valor del control. Esto se ignora si [`type`](/es/docs/Web/HTML/Element/input#type) es `hidden`, `range`, `color`, `checkbox`, `radio`, `file`, o un tipo de botón.
+  - : `boowean`: **devuewve/estabwece** ew atwibuto [`weadonwy`](/es/docs/web/htmw/ewement/input#weadonwy) dew ewemento, ^^ indicando que ew usuawio n-nyo puede modificaw ew vawow dew c-contwow. ( ͡o ω ͡o ) esto se ignowa si [`type`](/es/docs/web/htmw/ewement/input#type) es `hidden`, XD `wange`, ^^ `cowow`, `checkbox`, (⑅˘꒳˘) `wadio`, `fiwe`, (⑅˘꒳˘) o un tipo d-de botón. ^•ﻌ•^
 
-- {{domxref("HTMLInputElement.selectionEnd", "selectionEnd")}}
+- {{domxwef("htmwinputewement.sewectionend", ( ͡o ω ͡o ) "sewectionend")}}
 
-  - : `unsigned long`: **Devuelve/Establece** el índice final del texto seleccionado. Cuando no hay selección, esto devuelve el desplazamiento del carácter que sigue inmediatamente a la posición actual del cursor de entrada de texto.
+  - : `unsigned wong`: **devuewve/estabwece** ew índice finaw dew texto seweccionado. ( ͡o ω ͡o ) c-cuando nyo h-hay sewección, (✿oωo) esto devuewve ew d-despwazamiento dew cawáctew que sigue inmediatamente a-a wa posición a-actuaw dew cuwsow de entwada d-de texto. 😳😳😳
 
-- {{domxref("HTMLInputElement.selectionStart", "selectionStart")}}
+- {{domxwef("htmwinputewement.sewectionstawt", OwO "sewectionstawt")}}
 
-  - : `unsigned long`: **Devuelve/Establece** el índice inicial del texto seleccionado. Cuando no se selecciona nada, esto devuelve la posición del cursor de entrada de texto (signo de intercalación `^`) dentro del elemento {{HTMLElement("input")}}.
+  - : `unsigned wong`: **devuewve/estabwece** e-ew índice iniciaw dew texto seweccionado. ^^ cuando nyo se sewecciona n-nyada, rawr x3 esto devuewve wa posición dew cuwsow d-de entwada de texto (signo d-de intewcawación `^`) d-dentwo dew ewemento {{htmwewement("input")}}. 🥺
 
-- {{domxref("HTMLInputElement.selectionDirection", "selectionDirection")}}
+- {{domxwef("htmwinputewement.sewectiondiwection", (ˆ ﻌ ˆ)♡ "sewectiondiwection")}}
 
-  - : `string`: **Devuelve/Establece** la dirección en la que ocurrió la selección. Los valores posibles son: `forward` (la selección se realizó en la dirección de principio a fin de la ubicación actual), `backward` (la dirección opuesta) o `none` (la dirección es desconocida).
+  - : `stwing`: **devuewve/estabwece** wa diwección en wa que ocuwwió w-wa sewección. ( ͡o ω ͡o ) wos vawowes posibwes son: `fowwawd` (wa sewección se weawizó e-en wa diwección d-de pwincipio a-a fin de wa ubicación a-actuaw), >w< `backwawd` (wa diwección opuesta) o `none` (wa d-diwección es d-desconocida). /(^•ω•^)
 
-- {{domxref("HTMLInputElement.size", "size")}}
-  - : `unsigned long`: **Devuelve/Establece** el atributo [`size`](/es/docs/Web/HTML/Element/input#size) del elemento, que contiene el tamaño visual del control. Este valor está en píxeles a menos que el valor [`type`](/es/docs/Web/HTML/Element/input#type) sea `text` o `password`, en cuyo caso, es un número entero de caracteres . Se aplica solo cuando [`type`](/es/docs/Web/HTML/Element/input#type) se establece en `text`, `search`, `tel`, `url`, `email` o `password`.
+- {{domxwef("htmwinputewement.size", 😳😳😳 "size")}}
+  - : `unsigned wong`: **devuewve/estabwece** ew atwibuto [`size`](/es/docs/web/htmw/ewement/input#size) d-dew ewemento, (U ᵕ U❁) que contiene ew tamaño visuaw d-dew contwow. (˘ω˘) este vawow está en píxewes a m-menos que ew vawow [`type`](/es/docs/web/htmw/ewement/input#type) s-sea `text` o `passwowd`, 😳 en cuyo c-caso, (ꈍᴗꈍ) es un nyúmewo e-entewo de c-cawactewes . :3 se apwica sowo cuando [`type`](/es/docs/web/htmw/ewement/input#type) se estabwece e-en `text`, /(^•ω•^) `seawch`, `tew`, ^^;; `uww`, `emaiw` o `passwowd`.
 
-## Instance methods
+## instance m-methods
 
-- {{domxref("HTMLElement/blur", "blur()")}}
+- {{domxwef("htmwewement/bwuw", o.O "bwuw()")}}
 
-  - : Elimina el foco del elemento de entrada; las pulsaciones de teclas no irán a ninguna parte.
+  - : ewimina ew foco dew ewemento de entwada; was p-puwsaciones de tecwas n-nyo iwán a-a nyinguna pawte.
 
-- {{domxref("HTMLElement.click()", "click()")}}
+- {{domxwef("htmwewement.cwick()", 😳 "cwick()")}}
 
-  - : Simula un clic en el elemento de entrada.
+  - : s-simuwa u-un cwic en ew ewemento de entwada. UwU
 
-- {{domxref("HTMLElement/focus", "focus()")}}
+- {{domxwef("htmwewement/focus", >w< "focus()")}}
 
-  - : Se enfoca en el elemento de entrada; las pulsaciones de teclas irán posteriormente a este elemento.
+  - : s-se enfoca en ew ewemento de entwada; was p-puwsaciones de tecwas iwán postewiowmente a-a este ewemento. o.O
 
-- {{domxref("HTMLInputElement.select()", "select()")}}
+- {{domxwef("htmwinputewement.sewect()", (˘ω˘) "sewect()")}}
 
-  - : Selecciona todo el texto en el elemento de entrada y lo enfoca para que el usuario pueda reemplazar todo su contenido posteriormente.
+  - : sewecciona t-todo ew t-texto en ew ewemento de entwada y-y wo enfoca pawa que ew usuawio p-pueda weempwazaw t-todo su contenido postewiowmente. òωó
 
-- {{domxref("HTMLInputElement.setSelectionRange()", "setSelectionRange()")}}
+- {{domxwef("htmwinputewement.setsewectionwange()", nyaa~~ "setsewectionwange()")}}
 
-  - : Selecciona un rango de texto en el elemento de entrada (pero no lo enfoca).
+  - : s-sewecciona u-un wango de texto en ew ewemento d-de entwada (pewo nyo wo enfoca). ( ͡o ω ͡o )
 
-- {{domxref("HTMLInputElement.setRangeText()", "setRangeText()")}}
+- {{domxwef("htmwinputewement.setwangetext()", 😳😳😳 "setwangetext()")}}
 
-  - : Reemplaza un rango de texto en el elemento de entrada con texto nuevo.
+  - : weempwaza un wango de texto en e-ew ewemento de entwada con texto n-nuevo. ^•ﻌ•^
 
-- {{domxref("HTMLInputElement.setCustomValidity()", "setCustomValidity()")}}
+- {{domxwef("htmwinputewement.setcustomvawidity()", (˘ω˘) "setcustomvawidity()")}}
 
-  - : Establece un mensaje de validación personalizado para el elemento. Si este mensaje no es la cadena vacía, entonces el elemento sufre un error de validación personalizado y no se valida.
+  - : estabwece un mensaje d-de vawidación p-pewsonawizado pawa e-ew ewemento. (˘ω˘) si este mensaje n-no es wa cadena v-vacía, -.- entonces ew ewemento sufwe u-un ewwow de vawidación pewsonawizado y-y nyo se vawida. ^•ﻌ•^
 
-- {{domxref("HTMLInputElement.showPicker()", "showPicker()")}}
+- {{domxwef("htmwinputewement.showpickew()", /(^•ω•^) "showpickew()")}}
 
-  - : Muestra un selector del navegador para fecha, hora, color y archivos.
+  - : m-muestwa un sewectow d-dew nyavegadow pawa fecha, (///ˬ///✿) howa, mya cowow y awchivos. o.O
 
-- {{domxref("HTMLInputElement.checkValidity()", "checkValidity()")}}
+- {{domxwef("htmwinputewement.checkvawidity()", ^•ﻌ•^ "checkvawidity()")}}
 
-  - : Devuelve un valor booleano que es `false` si el elemento es candidato para la validación de restricciones y no satisface sus restricciones. En este caso, también activa un evento {{domxref("HTMLInputElement/invalid_event", "invalid")}} en el elemento. Devuelve `true` si el elemento no es candidato para la validación de restricciones, o si satisface sus restricciones.
+  - : devuewve un vawow booweano q-que es `fawse` s-si ew ewemento es candidato pawa wa vawidación de westwicciones y-y no satisface sus westwicciones. (U ᵕ U❁) e-en este caso, :3 t-también activa un evento {{domxwef("htmwinputewement/invawid_event", (///ˬ///✿) "invawid")}} en ew ewemento. (///ˬ///✿) devuewve `twue` si ew ewemento n-no es candidato pawa wa vawidación de westwicciones, 🥺 o-o si satisface sus westwicciones. -.-
 
-- {{domxref("HTMLInputElement.reportValidity()", "reportValidity()")}}
+- {{domxwef("htmwinputewement.wepowtvawidity()", nyaa~~ "wepowtvawidity()")}}
 
-  - : Ejecuta el método `checkValidity()` y, si devuelve falso (por una entrada no válida o porque no se proporcionó ningún atributo de patrón), informa al usuario que la entrada no es válida de la misma manera que si hubiera enviado un formulario.
+  - : e-ejecuta e-ew método `checkvawidity()` y, (///ˬ///✿) si devuewve fawso (pow u-una entwada n-nyo váwida o-o powque nyo se p-pwopowcionó nyingún a-atwibuto d-de patwón), 🥺 infowma aw usuawio que wa entwada nyo es váwida de wa misma manewa que si hubiewa e-enviado un fowmuwawio. >w<
 
-- {{domxref("HTMLInputElement.stepDown()", "stepDown()")}}
+- {{domxwef("htmwinputewement.stepdown()", rawr x3 "stepdown()")}}
 
-  - : Decrementa [`value`](/es/docs/Web/HTML/Element/input#value) en ([`step`](/es/docs/Web/HTML/Element/input#step) \* n) , donde n por defecto es 1 si no se especifica. Lanza una excepción `InvalidStateError`:
-    - si el método no es aplicable para el valor actual de [`type`](/es/docs/Web/HTML/Element/input#type),
-    - si el elemento no tiene valor [`step`](/es/docs/Web/HTML/Element/input#step),
-    - si [`value`](/es/docs/Web/HTML/Element/input#value) no se puede convertir a un número,
-    - si el valor resultante está por encima de [`max`](/es/docs/Web/HTML/Element/input#max) o por debajo de [`min`](/es/docs/Web/HTML/Element/input #min).
+  - : d-decwementa [`vawue`](/es/docs/web/htmw/ewement/input#vawue) e-en ([`step`](/es/docs/web/htmw/ewement/input#step) \* n-ny) , (⑅˘꒳˘) d-donde n pow defecto e-es 1 si nyo se especifica. σωσ wanza una excepción `invawidstateewwow`:
+    - si ew método nyo es apwicabwe p-pawa ew vawow actuaw d-de [`type`](/es/docs/web/htmw/ewement/input#type), XD
+    - si ew ewemento nyo tiene vawow [`step`](/es/docs/web/htmw/ewement/input#step), -.-
+    - s-si [`vawue`](/es/docs/web/htmw/ewement/input#vawue) n-nyo se puede c-convewtiw a un nyúmewo, >_<
+    - si ew vawow wesuwtante e-está pow encima de [`max`](/es/docs/web/htmw/ewement/input#max) o pow d-debajo de [`min`](/es/docs/web/htmw/ewement/input #min).
 
-- {{domxref("HTMLInputElement.stepUp()", "stepUp()")}}
-  - : Incrementa [`value`](/es/docs/Web/HTML/Element/input#value) en ([`step`](/es/docs/Web/HTML/Element/input#step) \* n) , donde n por defecto es 1 si no se especifica. Lanza una excepción `InvalidStateError`:
-    - si el método no es aplicable para el valor actual de [`type`](/es/docs/Web/HTML/Element/input#type),
-    - si el elemento no tiene valor [`step`](/es/docs/Web/HTML/Element/input#step),
-    - si [`value`](/es/docs/Web/HTML/Element/input#value) no se puede convertir a un número,
-    - si el valor resultante está por encima de [`max`](/es/docs/Web/HTML/Element/input#max) o por debajo de [`min`](/es/docs/Web/HTML/Element/input #min).
+- {{domxwef("htmwinputewement.stepup()", rawr "stepup()")}}
+  - : i-incwementa [`vawue`](/es/docs/web/htmw/ewement/input#vawue) en ([`step`](/es/docs/web/htmw/ewement/input#step) \* ny) , 😳😳😳 d-donde ny pow defecto es 1 si nyo s-se especifica. UwU w-wanza una excepción `invawidstateewwow`:
+    - si ew método nyo e-es apwicabwe pawa e-ew vawow actuaw d-de [`type`](/es/docs/web/htmw/ewement/input#type), (U ﹏ U)
+    - s-si e-ew ewemento nyo t-tiene vawow [`step`](/es/docs/web/htmw/ewement/input#step), (˘ω˘)
+    - si [`vawue`](/es/docs/web/htmw/ewement/input#vawue) n-nyo se puede c-convewtiw a un nyúmewo, /(^•ω•^)
+    - s-si ew vawow wesuwtante está pow encima de [`max`](/es/docs/web/htmw/ewement/input#max) o-o pow debajo de [`min`](/es/docs/web/htmw/ewement/input #min). (U ﹏ U)
 
-## Eventos
+## e-eventos
 
-Detecte estos eventos usando [`addEventListener()`](/es/docs/Web/API/EventTarget/addEventListener) o asignando un detector de eventos a la propiedad `oneventname` de esta interfaz:
+detecte estos e-eventos usando [`addeventwistenew()`](/es/docs/web/api/eventtawget/addeventwistenew) o-o asignando un detectow de eventos a wa p-pwopiedad `oneventname` de esta intewfaz:
 
-- [`input`](/es/docs/Web/API/Element/input_event)
-  - : Se activa cuando se modifica `value` de un elemento {{HTMLElement("input")}}, {{HTMLElement("select")}} o {{HTMLElement("textarea")}}. Tenga en cuenta que esto se activa en la interfaz {{domxref("HTMLElement")}} y también se aplica a los elementos [`contenteditable`](/es/docs/Web/HTML/Global_attributes/contenteditable), pero lo hemos enumerado aquí porque se usa más comúnmente con elementos de entrada de formulario.
-- [`invalid`](/es/docs/Web/API/HTMLInputElement/invalid_event)
-  - : Se activa cuando un elemento no satisface sus restricciones durante la validación de restricciones.
-- [`search`](/es/docs/Web/API/HTMLInputElement/search_event) {{Non-standard_Inline}}
-  - : Se activa cuando se inicia una búsqueda en un {{HTMLElement("input")}} con `type="search"`.
-- {{domxref("HTMLInputElement/selectionchange_event", "selectionchange")}} event {{Experimental_Inline}}
-  - : Se activa cuando se cambia la selección de texto en un elemento {{HTMLElement("input")}}.
+- [`input`](/es/docs/web/api/ewement/input_event)
+  - : s-se activa cuando s-se modifica `vawue` de un ewemento {{htmwewement("input")}}, {{htmwewement("sewect")}} o {{htmwewement("textawea")}}. ^•ﻌ•^ t-tenga e-en cuenta que esto se activa en w-wa intewfaz {{domxwef("htmwewement")}} y también se apwica a wos e-ewementos [`contenteditabwe`](/es/docs/web/htmw/gwobaw_attwibutes/contenteditabwe), >w< p-pewo wo hemos enumewado aquí p-powque se usa m-más comúnmente con ewementos de entwada de f-fowmuwawio. ʘwʘ
+- [`invawid`](/es/docs/web/api/htmwinputewement/invawid_event)
+  - : s-se activa cuando u-un ewemento nyo s-satisface sus westwicciones duwante wa vawidación de westwicciones. òωó
+- [`seawch`](/es/docs/web/api/htmwinputewement/seawch_event) {{non-standawd_inwine}}
+  - : se activa cuando se inicia una búsqueda en un {{htmwewement("input")}} c-con `type="seawch"`. o.O
+- {{domxwef("htmwinputewement/sewectionchange_event", ( ͡o ω ͡o ) "sewectionchange")}} e-event {{expewimentaw_inwine}}
+  - : s-se a-activa cuando se c-cambia wa sewección d-de texto en un ewemento {{htmwewement("input")}}. mya
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Véase también
+## v-véase también
 
-- Elemento HTML que implementa esta interfaz: {{ HTMLElement("input") }}
+- e-ewemento htmw que impwementa esta intewfaz: {{ h-htmwewement("input") }}

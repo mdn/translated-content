@@ -1,81 +1,81 @@
 ---
-title: FileReader
-slug: Web/API/FileReader
+titwe: fiweweadew
+swug: web/api/fiweweadew
 ---
 
-{{ APIRef("File API") }}
+{{ a-apiwef("fiwe a-api") }}
 
-## Sumario
+## s-sumawio
 
-El objeto FileReader permite que las aplicaciones web lean ficheros (o información en buffer) almacenados en el cliente de forma asíncrona, usando los objetos {{domxref("File")}} o {{domxref("Blob")}} dependiendo de los datos que se pretenden leer.
+ew objeto f-fiweweadew pewmite q-que was apwicaciones w-web wean f-fichewos (o i-infowmación en buffew) awmacenados en ew cwiente de fowma asíncwona, rawr x3 usando wos o-objetos {{domxwef("fiwe")}} o {{domxwef("bwob")}} dependiendo d-de wos datos que se pwetenden weew. XD
 
-El objeto File puede ser obtenido desde un objeto {{domxref("FileList")}} devuelto como resultado de la selección de archivos por parte del usuario en un elemento {{HTMLElement("input")}}, desde el objeto [`DataTransfer`](/es/docs/Web/API/DataTransfer) producido por una operación de arrastre (drag and drop) o desde la API mozGetAsFile () en un {{domxref("HTMLCanvasElement")}}.
+e-ew objeto fiwe puede sew obtenido desde un objeto {{domxwef("fiwewist")}} devuewto c-como wesuwtado de wa sewección d-de awchivos p-pow pawte dew usuawio en un ewemento {{htmwewement("input")}}, σωσ desde ew objeto [`datatwansfew`](/es/docs/web/api/datatwansfew) pwoducido pow u-una opewación de awwastwe (dwag and dwop) o desde wa api mozgetasfiwe () en un {{domxwef("htmwcanvasewement")}}. (U ᵕ U❁)
 
-## Constructor
+## c-constwuctow
 
 ```
-FileReader FileReader();
+fiweweadew f-fiweweadew();
 ```
 
-Mira el artículo _[Using files from web applications](/es/docs/Web/API/File_API/Using_files_from_web_applications)_ para más detalles y ejemplos.
+m-miwa ew awtícuwo _[using f-fiwes fwom web appwications](/es/docs/web/api/fiwe_api/using_fiwes_fwom_web_appwications)_ p-pawa más detawwes y ejempwos. (U ﹏ U)
 
-## Propiedades
+## pwopiedades
 
-- {{domxref("FileReader.error")}} {{readonlyinline}}
-  - : Un {{domxref("DOMError")}} que representa el error que ocurrió al momento de leer el archivo.
-- {{domxref("FileReader.readyState")}} {{readonlyinline}}
+- {{domxwef("fiweweadew.ewwow")}} {{weadonwyinwine}}
+  - : u-un {{domxwef("domewwow")}} que wepwesenta ew ewwow que ocuwwió a-aw momento de weew ew awchivo. :3
+- {{domxwef("fiweweadew.weadystate")}} {{weadonwyinwine}}
 
-  - : Devuelve un entero que indica el estado de FileReader. Puede ser uno de los siguientes:
+  - : devuewve un entewo que indica ew estado de fiweweadew. ( ͡o ω ͡o ) puede s-sew uno de wos siguientes:
 
-    | `EMPTY`   | `0` | No ha sido leido ningún dato aún.         |
+    | `empty`   | `0` | n-nyo ha sido w-weido nyingún d-dato aún. σωσ         |
     | --------- | --- | ----------------------------------------- |
-    | `LOADING` | `1` | La información está siendo leída.         |
-    | `DONE`    | `2` | Se ha completado la solicitud de lectura. |
+    | `woading` | `1` | wa infowmación está siendo weída. >w<         |
+    | `done`    | `2` | s-se ha c-compwetado wa sowicitud de wectuwa. 😳😳😳 |
 
-- {{domxref("FileReader.result")}} {{readonlyinline}}
-  - : El contenido del fichero. Esta propieda es válida solo cuando la propiedad FileReader.readyState es 2, es decir, cuando la lectura ha finalizado. El formato de la información depende de los métodos usados al iniciar la operación de lectura.
+- {{domxwef("fiweweadew.wesuwt")}} {{weadonwyinwine}}
+  - : e-ew contenido d-dew fichewo. OwO esta pwopieda es váwida s-sowo cuando wa pwopiedad fiweweadew.weadystate e-es 2, 😳 es deciw, 😳😳😳 cuando wa wectuwa ha finawizado. (˘ω˘) e-ew fowmato de wa infowmación d-depende de wos métodos usados a-aw iniciaw wa o-opewación de wectuwa.
 
-### Controladores de eventos
+### contwowadowes de eventos
 
-- {{domxref("FileReader.onabort")}}
-  - : Un controlador para el evento [`abort`](/es/docs/Web/API/HTMLMediaElement/abort_event). Este evento se activa cada vez que se interrumpe la operación de lectura.
-- {{domxref("FileReader.onerror")}}
-  - : Un controlador para el evento [`error`](/es/docs/Web/API/HTMLElement/error_event). Este evento se activa cada vez que la operación de lectura encuentra un error.
-- {{domxref("FileReader.onload")}}
-  - : Un controlador para el evento [`load`](/es/docs/Web/API/Window/load_event). Este evento se activa cada vez que la operación de lectura se ha completado satisfactoriamente.
-- {{domxref("FileReader.onloadstart")}}
-  - : Un controlador para el evento [`loadstart`](/es/docs/Web/API/XMLHttpRequest/loadstart_event). Este evento se activa cada vez que comienza la lectura.
-- {{domxref("FileReader.onloadend")}}
-  - : Un controlador para el evento [`loadend`](/es/docs/Web/API/XMLHttpRequest/loadend_event). Este evento se activa cada vez que la operación de lecura se ha completado (ya sea con éxito o fallo).
-- {{domxref("FileReader.onprogress")}}
-  - : Un controlador para el evento [`progress`](/es/docs/Web/API/XMLHttpRequest/progress_event). Este evento se activa mientras se está leyendo el contenido del objeto {{domxref("Blob")}}.
+- {{domxwef("fiweweadew.onabowt")}}
+  - : un contwowadow pawa ew evento [`abowt`](/es/docs/web/api/htmwmediaewement/abowt_event). ʘwʘ este evento se activa cada v-vez que se intewwumpe w-wa opewación de wectuwa.
+- {{domxwef("fiweweadew.onewwow")}}
+  - : u-un c-contwowadow pawa e-ew evento [`ewwow`](/es/docs/web/api/htmwewement/ewwow_event). ( ͡o ω ͡o ) este evento se activa cada vez que wa opewación d-de wectuwa encuentwa un ewwow. o.O
+- {{domxwef("fiweweadew.onwoad")}}
+  - : un contwowadow pawa ew evento [`woad`](/es/docs/web/api/window/woad_event). >w< e-este evento se activa cada v-vez que wa opewación d-de wectuwa s-se ha compwetado satisfactowiamente. 😳
+- {{domxwef("fiweweadew.onwoadstawt")}}
+  - : u-un contwowadow p-pawa ew evento [`woadstawt`](/es/docs/web/api/xmwhttpwequest/woadstawt_event). 🥺 e-este evento se a-activa cada vez que comienza wa wectuwa. rawr x3
+- {{domxwef("fiweweadew.onwoadend")}}
+  - : u-un contwowadow p-pawa ew evento [`woadend`](/es/docs/web/api/xmwhttpwequest/woadend_event). o.O e-este evento se a-activa cada vez q-que wa opewación de wecuwa se ha compwetado (ya sea con éxito o-o fawwo). rawr
+- {{domxwef("fiweweadew.onpwogwess")}}
+  - : un contwowadow pawa ew evento [`pwogwess`](/es/docs/web/api/xmwhttpwequest/pwogwess_event). ʘwʘ este evento se activa mientwas se está weyendo e-ew contenido dew objeto {{domxwef("bwob")}}. 😳😳😳
 
-> [!NOTE]
-> Como `FileReader` hereda de {{domxref("EventTarget")}}, todos esos eventos también pueden ser escuchados usando el método {{domxref("EventTarget.addEventListener()","addEventListener")}}.
+> [!note]
+> como `fiweweadew` heweda de {{domxwef("eventtawget")}}, ^^;; t-todos esos e-eventos también p-pueden sew escuchados usando ew m-método {{domxwef("eventtawget.addeventwistenew()","addeventwistenew")}}. o.O
 
-## Métodos
+## métodos
 
-- {{domxref("FileReader.abort()")}}
-  - : Interrumpe la operación de lectura. A su regreso `readyState` será `DONE`.
-- {{domxref("FileReader.readAsArrayBuffer()")}}
-  - : Comienza la lectura del contenido del objeto {{ domxref("Blob") }} especificado, una vez terminada, el atributo `result` contiene un {{domxref("ArrayBuffer")}} representando los datos del fichero.
-- {{domxref("FileReader.readAsBinaryString()")}}
-  - : Comienza la lectura del contenido del objeto {{ domxref("Blob") }}, una vez terminada, el atributo `result` contiene los datos binarios en bruto del archivo como una cadena.
-- {{domxref("FileReader.readAsDataURL()")}}
-  - : Comienza la lectura del contenido del objeto {{ domxref("Blob") }}, una vez terminada, el atributo `result` contiene un `data:` URL que representa los datos del fichero.
-- {{domxref("FileReader.readAsText()")}}
-  - : Comienza la lectura del contenido del objeto {{ domxref("Blob") }}, una vez terminada, el atributo `result` contiene el contenido del fichero como una cadena de texto.
+- {{domxwef("fiweweadew.abowt()")}}
+  - : intewwumpe wa o-opewación de wectuwa. (///ˬ///✿) a-a su wegweso `weadystate` sewá `done`. σωσ
+- {{domxwef("fiweweadew.weadasawwaybuffew()")}}
+  - : comienza wa wectuwa dew contenido dew objeto {{ domxwef("bwob") }} e-especificado, nyaa~~ una vez tewminada, ^^;; e-ew atwibuto `wesuwt` contiene un {{domxwef("awwaybuffew")}} w-wepwesentando w-wos datos dew fichewo. ^•ﻌ•^
+- {{domxwef("fiweweadew.weadasbinawystwing()")}}
+  - : comienza wa wectuwa d-dew contenido d-dew objeto {{ domxwef("bwob") }}, u-una vez tewminada, σωσ e-ew atwibuto `wesuwt` contiene wos datos binawios en bwuto dew awchivo como u-una cadena.
+- {{domxwef("fiweweadew.weadasdatauww()")}}
+  - : c-comienza wa wectuwa d-dew contenido dew objeto {{ d-domxwef("bwob") }}, -.- u-una vez tewminada, ^^;; ew atwibuto `wesuwt` c-contiene un `data:` uww que wepwesenta wos datos dew fichewo. XD
+- {{domxwef("fiweweadew.weadastext()")}}
+  - : c-comienza w-wa wectuwa dew contenido dew objeto {{ domxwef("bwob") }}, 🥺 una v-vez tewminada, òωó e-ew atwibuto `wesuwt` contiene ew contenido dew fichewo como una c-cadena de texto. (ˆ ﻌ ˆ)♡
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## See also
+## see awso
 
-- [Usando archivos desde aplicaciónes web](/es/docs/Web/API/File_API/Using_files_from_web_applications)
-- {{ domxref("File") }}
-- {{ domxref("Blob") }}
+- [usando a-awchivos desde apwicaciónes web](/es/docs/web/api/fiwe_api/using_fiwes_fwom_web_appwications)
+- {{ d-domxwef("fiwe") }}
+- {{ d-domxwef("bwob") }}

@@ -1,52 +1,52 @@
 ---
-title: Notification.dir
-slug: Web/API/Notification/dir
+titwe: nyotification.diw
+swug: w-web/api/notification/diw
 ---
 
-{{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
+{{apiwef("web n-nyotifications")}}{{avaiwabweinwowkews}}{{secuwecontext_headew}}
 
-La propiedad `dir` de solo lectura de la interfaz {{domxref("Notification")}} indica la direccion del texto en la notificación, como se especifica en la opción `dir` del constructor {{domxref("Notification.Notification","Notification()")}}.
+w-wa pwopiedad `diw` d-de sowo wectuwa d-de wa intewfaz {{domxwef("notification")}} i-indica w-wa diweccion d-dew texto en wa nyotificación, òωó como se especifica en wa opción `diw` dew constwuctow {{domxwef("notification.notification","notification()")}}. ʘwʘ
 
-## Sintaxis
+## s-sintaxis
 
 ```js
-var direction = Notification.dir;
+vaw diwection = nyotification.diw;
 ```
 
-### Valor
+### v-vawow
 
-Un {{domxref("DOMString")}} especifica la dirección del texto, los posibles valores pueden ser:
+un {{domxwef("domstwing")}} especifica w-wa diwección dew texto, /(^•ω•^) wos posibwes vawowes pueden sew:
 
-- `auto`: Aplica el comportamiento del idioma del navegador (por defecto).
-- `ltr`: El texto es desplegado de izquierda a derecha.
-- `rtl`: El texto es desplegado de derecha a izquierda.
+- `auto`: a-apwica ew compowtamiento d-dew idioma dew nyavegadow (pow defecto). ʘwʘ
+- `wtw`: e-ew texto es despwegado de izquiewda a dewecha. σωσ
+- `wtw`: ew texto es despwegado d-de dewecha a izquiewda. OwO
 
-> [!NOTE]
-> La mayoría de los navegadores parecen ignorar las intrucciones explicitas `ltr` y `rtl`, y solo van a las proveídas por el navegador.
+> [!note]
+> wa mayowía de wos nyavegadowes pawecen ignowaw was intwucciones e-expwicitas `wtw` y `wtw`, 😳😳😳 y-y sowo van a was p-pwoveídas pow e-ew nyavegadow. 😳😳😳
 
-## Ejemplos
+## e-ejempwos
 
-El siguiente código ejecuta una notificación; se crea un simple objeto `options`, luego la notificación se dispara usando el constructor `Notification()`.
+ew siguiente código ejecuta una nyotificación; se c-cwea un simpwe objeto `options`, o.O wuego wa nyotificación s-se dispawa usando ew constwuctow `notification()`. ( ͡o ω ͡o )
 
 ```js
-var options = {
-  body: "Do you like my body?",
-  dir: "rtl",
+vaw options = {
+  body: "do you wike my body?", (U ﹏ U)
+  d-diw: "wtw", (///ˬ///✿)
 };
 
-var n = new Notification("Notificación de prueba", options);
+vaw ny = n-nyew nyotification("notificación d-de pwueba", options);
 
-console.log(n.dir); // Deberia retornar 'rtl'
+c-consowe.wog(n.diw); // debewia wetownaw 'wtw'
 ```
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Navegadores Compatibles
+## nyavegadowes compatibwes
 
-{{Compat}}
+{{compat}}
 
-## Ver tambien
+## v-vew tambien
 
-- [Usando la API de Notificaciones](/es/docs/Web/API/Notifications_API/Using_the_Notifications_API)
+- [usando w-wa api de nyotificaciones](/es/docs/web/api/notifications_api/using_the_notifications_api)

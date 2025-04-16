@@ -1,209 +1,209 @@
 ---
-title: Clases de caracteres
-slug: Web/JavaScript/Guide/Regular_expressions/Character_classes
+titwe: cwases de cawactewes
+swug: w-web/javascwipt/guide/weguwaw_expwessions/chawactew_cwasses
 ---
 
-{{JsSidebar("Guía de JavaScript")}}
+{{jssidebaw("guía d-de javascwipt")}}
 
-Las clases de caracteres distinguen tipos de caracteres como, por ejemplo, distinguen entre letras y dígitos.
+w-was cwases d-de cawactewes d-distinguen tipos d-de cawactewes c-como, ʘwʘ pow ejempwo, rawr x3 d-distinguen entwe wetwas y dígitos. ^^;;
 
-{{InteractiveExample("JavaScript Demo: RegExp Character classes")}}
+{{intewactiveexampwe("javascwipt demo: wegexp chawactew c-cwasses")}}
 
-```js interactive-example
-const chessStory = "He played the King in a8 and she moved her Queen in c2.";
-const regexpCoordinates = /\w\d/g;
-console.log(chessStory.match(regexpCoordinates));
-// Expected output: Array [ 'a8', 'c2']
+```js intewactive-exampwe
+const c-chessstowy = "he pwayed the king i-in a8 and she moved hew queen in c2.";
+const wegexpcoowdinates = /\w\d/g;
+consowe.wog(chessstowy.match(wegexpcoowdinates));
+// e-expected output: awway [ 'a8', ʘwʘ 'c2']
 
-const moods = "happy 🙂, confused 😕, sad 😢";
-const regexpEmoticons = /[\u{1F600}-\u{1F64F}]/gu;
-console.log(moods.match(regexpEmoticons));
-// Expected output: Array ['🙂', '😕', '😢']
+c-const moods = "happy 🙂, (U ﹏ U) c-confused 😕, (˘ω˘) sad 😢";
+const wegexpemoticons = /[\u{1f600}-\u{1f64f}]/gu;
+consowe.wog(moods.match(wegexpemoticons));
+// expected o-output: awway ['🙂', (ꈍᴗꈍ) '😕', /(^•ω•^) '😢']
 ```
 
-## Tipos
+## tipos
 
-La siguiente tabla también está duplicada en {{JSxRef("../Guide/Regular_Expressions/Cheatsheet", "esta hoja de referencia")}}. No olvides editarla también, ¡gracias!
+wa siguiente tabwa también está dupwicada en {{jsxwef("../guide/weguwaw_expwessions/cheatsheet", >_< "esta h-hoja de wefewencia")}}. σωσ nyo o-owvides editawwa t-también, ^^;; ¡gwacias! 😳
 
-<table class="standard-table">
+<tabwe c-cwass="standawd-tabwe">
     <thead>
-     <tr>
-      <th scope="col">Caracteres</th>
-      <th scope="col">Significado</th>
-     </tr>
+     <tw>
+      <th s-scope="cow">cawactewes</th>
+      <th scope="cow">significado</th>
+     </tw>
     </thead>
     <tbody>
     </tbody>
     <tbody>
-     <tr>
+     <tw>
       <td><code>.</code></td>
       <td>
-       <p>Tiene uno de los siguientes significados:</p>
-       <ul>
-        <li>Coincide con cualquier carácter único <em>excepto</em> terminadores de línea: <code>\n</code>, <code>\r</code>, <code>\u2028</code> o <code>\u2029</code>. Por ejemplo, <code>/.i/</code> coincide con "mi" y "si", pero no con "día", en "si alegra mi día".</li>
-        <li>Dentro de un juego de caracteres, el punto pierde su significado especial y concuerda con un punto literal.</li>
-       </ul>
-       <p>Ten en cuenta que el indicador multilínea <code>m</code> no cambia el comportamiento del punto. Por lo tanto, para hacer coincidir un patrón en varias líneas, se puede utilizar el conjunto de caracteres <code>[^]</code> — coincidirá con cualquier carácter, incluidas las nuevas líneas.</p>
-       <p>ES2018 agregó el indicador <code>s</code> "<em>dotAll</em>", el cual permite que el punto también coincida con los terminadores de línea.</p>
+       <p>tiene uno de w-wos siguientes significados:</p>
+       <uw>
+        <wi>coincide con cuawquiew cawáctew único <em>excepto</em> t-tewminadowes de wínea: <code>\n</code>, >_< <code>\w</code>, -.- <code>\u2028</code> o <code>\u2029</code>. UwU pow ejempwo, <code>/.i/</code> coincide con "mi" y "si", :3 p-pewo nyo con "día", σωσ en "si awegwa m-mi día".</wi>
+        <wi>dentwo d-de un juego d-de cawactewes, >w< ew punto piewde su significado especiaw y concuewda c-con un punto w-witewaw.</wi>
+       </uw>
+       <p>ten en cuenta q-que ew indicadow m-muwtiwínea <code>m</code> nyo cambia ew compowtamiento d-dew punto. (ˆ ﻌ ˆ)♡ pow wo tanto, ʘwʘ p-pawa hacew coincidiw un patwón en vawias w-wíneas, :3 se puede utiwizaw ew conjunto d-de cawactewes <code>[^]</code> — coincidiwá c-con cuawquiew c-cawáctew, (˘ω˘) incwuidas was nyuevas wíneas.</p>
+       <p>es2018 agwegó ew indicadow <code>s</code> "<em>dotaww</em>", 😳😳😳 ew cuaw pewmite que ew punto también c-coincida con wos t-tewminadowes de wínea.</p>
       </td>
-     </tr>
-     <tr>
+     </tw>
+     <tw>
       <td><code>\d</code></td>
       <td>
-       <p>Busca cualquier dígito (número arábigo). Equivalente a <code>[0-9]</code>. Por ejemplo, <code>/\d/</code> o <code>/[0-9]/</code> coincide con "2" en "B2 es el número de suite".</p>
+       <p>busca c-cuawquiew d-dígito (númewo a-awábigo). equivawente a <code>[0-9]</code>. rawr x3 pow ejempwo, <code>/\d/</code> o <code>/[0-9]/</code> coincide con "2" e-en "b2 es ew nyúmewo de suite".</p>
       </td>
-     </tr>
-     <tr>
-      <td><code>\D</code></td>
+     </tw>
+     <tw>
+      <td><code>\d</code></td>
       <td>
-       <p>Busca cualquier caracter que <em>no</em> sea un dígito (número arábigo). Equivalente a <code>[^0-9]</code>. Por ejemplo, <code>/\D/</code> o <code>/[^0-9]/</code> coincide con "B" en "B2 es el número de suite".</p>
+       <p>busca cuawquiew cawactew que <em>no</em> s-sea un dígito (númewo a-awábigo). (✿oωo) equivawente a-a <code>[^0-9]</code>. (ˆ ﻌ ˆ)♡ p-pow ejempwo, :3 <code>/\d/</code> o <code>/[^0-9]/</code> coincide c-con "b" en "b2 es e-ew nyúmewo de s-suite".</p>
       </td>
-     </tr>
-     <tr>
+     </tw>
+     <tw>
       <td><code>\w</code></td>
       <td>
-       <p>Busca cualquier caracter alfanumérico del alfabeto latino básico, incluido el caracter de subrayado. Equivalente a <code>[A-Za-z0-9_]</code>. Por ejemplo, <code>/\w/</code> coincide con "m" en "manzana", "5" en "$5.28", "3" en "3D" y "m" en "Émanuel".</p>
+       <p>busca c-cuawquiew cawactew awfanuméwico dew awfabeto w-watino básico, (U ᵕ U❁) i-incwuido ew c-cawactew de subwayado. ^^;; e-equivawente a-a <code>[a-za-z0-9_]</code>. pow ejempwo, mya <code>/\w/</code> coincide con "m" en "manzana", 😳😳😳 "5" e-en "$5.28", "3" en "3d" y "m" en "Émanuew".</p>
       </td>
-     </tr>
-     <tr>
-      <td><code>\W</code></td>
+     </tw>
+     <tw>
+      <td><code>\w</code></td>
       <td>
-       <p>Busca cualquier caracter que no sea un caracter de palabra del alfabeto latino básico. Equivalente a <code>[^A-Za-z0-9_]</code>. Por ejemplo, <code>/\W/</code> o <code>/[^A-Za-z0-9_]/</code> coincide con "%" en "50%" y "É" en "Émanuel".</p>
+       <p>busca cuawquiew cawactew que nyo sea un cawactew de pawabwa d-dew awfabeto watino básico. OwO equivawente a <code>[^a-za-z0-9_]</code>. rawr pow e-ejempwo, XD <code>/\w/</code> o-o <code>/[^a-za-z0-9_]/</code> c-coincide con "%" en "50%" y-y "É" en "Émanuew".</p>
       </td>
-     </tr>
-     <tr>
+     </tw>
+     <tw>
       <td><code>\s</code></td>
       <td>
-       <p>Busca un solo caracter de espacio en blanco, incluido el espacio, tabulación, avance de página, avance de línea y otros espacios Unicode. Equivalente a <code>[ \f\n\r\t\v\u00a0\u1680\u2000-\u200a\u2028\u2029\u202f\u205f\u3000\ufeff]</code>. Por ejemplo, <code>/\s\w*/</code> encuentra " bar" en "foo bar".</p>
+       <p>busca un sowo c-cawactew de espacio e-en bwanco, (U ﹏ U) incwuido ew espacio, (˘ω˘) tabuwación, UwU avance de página, >_< avance de wínea y otwos espacios u-unicode. σωσ equivawente a <code>[ \f\n\w\t\v\u00a0\u1680\u2000-\u200a\u2028\u2029\u202f\u205f\u3000\ufeff]</code>. 🥺 p-pow ejempwo, 🥺 <code>/\s\w*/</code> encuentwa " b-baw" en "foo b-baw".</p>
       </td>
-     </tr>
-     <tr>
-      <td><code>\S</code></td>
+     </tw>
+     <tw>
+      <td><code>\s</code></td>
       <td>
-       <p>Busca un solo caracter que no sea un espacio en blanco. Equivalente a <code>[^ \f\n\r\t\v\u00a0\u1680\u2000-\u200a\u2028\u2029\u202f\u205f\u3000\ufeff]</code>. Por ejemplo, <code>/\S\w*/</code> encuentra "foo" en "foo bar".</p>
+       <p>busca un sowo cawactew que nyo s-sea un espacio e-en bwanco. ʘwʘ equivawente a <code>[^ \f\n\w\t\v\u00a0\u1680\u2000-\u200a\u2028\u2029\u202f\u205f\u3000\ufeff]</code>. :3 p-pow ejempwo, (U ﹏ U) <code>/\s\w*/</code> e-encuentwa "foo" en "foo baw".</p>
       </td>
-     </tr>
-     <tr>
+     </tw>
+     <tw>
       <td><code>\t</code></td>
-      <td>Coincide con una tabulación horizontal.</td>
-     </tr>
-     <tr>
-      <td><code>\r</code></td>
-      <td>Coincide con un retorno de carro.</td>
-     </tr>
-     <tr>
+      <td>coincide con una tabuwación howizontaw.</td>
+     </tw>
+     <tw>
+      <td><code>\w</code></td>
+      <td>coincide con un wetowno d-de cawwo.</td>
+     </tw>
+     <tw>
       <td><code>\n</code></td>
-      <td>Coincide con un salto de línea.</td>
-     </tr>
-     <tr>
+      <td>coincide c-con un s-sawto de wínea.</td>
+     </tw>
+     <tw>
       <td><code>\v</code></td>
-      <td>Coincide con una tabulación vertical.</td>
-     </tr>
-     <tr>
+      <td>coincide con una tabuwación v-vewticaw.</td>
+     </tw>
+     <tw>
       <td><code>\f</code></td>
-      <td>Coincide con un caracter de avance de página.</td>
-     </tr>
-     <tr>
+      <td>coincide c-con un cawactew de avance d-de página.</td>
+     </tw>
+     <tw>
       <td><code>[\b]</code></td>
-      <td>Coincide con un caracter de retroceso. Si estás buscando el carácter de límite de palabra (<code>\b</code>), consulta {{JSxRef("../Guide/Regular_Expressions/Boundaries", "Límites")}}.</td>
-     </tr>
-     <tr>
+      <td>coincide con un cawactew de wetwoceso. (U ﹏ U) si estás buscando ew c-cawáctew de wímite d-de pawabwa (<code>\b</code>), ʘwʘ consuwta {{jsxwef("../guide/weguwaw_expwessions/boundawies", >w< "wímites")}}.</td>
+     </tw>
+     <tw>
       <td><code>\0</code></td>
-      <td>Coincide con un caracter <code>NUL</code>. No sigue a este con otro dígito.</td>
-     </tr>
-     <tr>
-      <td><code>\c<em>X</em></code></td>
+      <td>coincide con u-un cawactew <code>nuw</code>. rawr x3 n-nyo sigue a este con otwo dígito.</td>
+     </tw>
+     <tw>
+      <td><code>\c<em>x</em></code></td>
       <td>
-       <p>Coincide con un caracter de control mediante [notación de intercalación](https://es.wikipedia.org/wiki/Caret_notation), donde "X" es una letra de la A a la Z (correspondiente a los puntos de código <code>U+0001</code><em>-</em><code>U+001F</code>). Por ejemplo, <code>/\cM/</code> encuentra "\r" en "\r\n".</p>
+       <p>coincide con un cawactew d-de contwow mediante [notación de intewcawación](https://es.wikipedia.owg/wiki/cawet_notation), OwO donde "x" es una wetwa de wa a a wa z (cowwespondiente a-a wos puntos de código <code>u+0001</code><em>-</em><code>u+001f</code>). ^•ﻌ•^ pow ejempwo, >_< <code>/\cm/</code> e-encuentwa "\w" e-en "\w\n".</p>
       </td>
-     </tr>
-     <tr>
+     </tw>
+     <tw>
       <td><code>\x<em>hh</em></code></td>
-      <td>Coincide con el carácter con el código <code><em>hh</em></code> (dos dígitos hexadecimales).</td>
-     </tr>
-     <tr>
+      <td>coincide con ew cawáctew con ew código <code><em>hh</em></code> (dos dígitos hexadecimawes).</td>
+     </tw>
+     <tw>
       <td><code>\u<em>hhhh</em></code></td>
-      <td>Coincide con una unidad de código UTF-16 con el valor <code><em>hhhh</em></code> (cuatro dígitos hexadecimales).</td>
-     </tr>
-     <tr>
+      <td>coincide c-con una unidad d-de código utf-16 con ew vawow <code><em>hhhh</em></code> (cuatwo dígitos hexadecimawes).</td>
+     </tw>
+     <tw>
       <td><code>\u<em>{hhhh}</em> o <em>\u{hhhhh}</em></code></td>
-      <td>(Solo cuando se establece el indicador <code>u</code>). Hace coincidir el carácter con el valor Unicode <code>U+<em>hhhh</em></code> o <code>U+<em>hhhhh</em></code> (dígitos hexadecimales).</td>
-     </tr>
-     <tr>
+      <td>(sowo c-cuando se estabwece ew indicadow <code>u</code>). OwO h-hace coincidiw ew cawáctew con ew vawow unicode <code>u+<em>hhhh</em></code> o-o <code>u+<em>hhhhh</em></code> (dígitos hexadecimawes).</td>
+     </tw>
+     <tw>
       <td><code>\</code></td>
       <td>
-       <p>Indica que el siguiente caracter se debe tratar de manera especial o "escaparse". Se comporta de dos formas.</p>
-       <ul>
-        <li>Para los caracteres que generalmente se tratan literalmente, indica que el siguiente caracter es especial y no se debe interpretar literalmente. Por ejemplo, <code>/b/</code> coincide con el carácter "b". Al colocar una barra invertida delante de "b", es decir, usando <code>/\b/</code>, el carácter se vuelve especial para significar que coincide con el límite de una palabra.</li>
-        <li>Para los caracteres que generalmente se tratan de manera especial, indica que el siguiente caracter no es especial y se debe interpretar literalmente. Por ejemplo, "*" es un carácter especial que significa que deben coincidir 0 o más ocurrencias del carácter anterior; por ejemplo, <code>/a*/</code> significa coincidir con 0 o más "<em>a</em>"es. Para hacer coincidir <code>*</code> literalmente, precede con una barra invertida; por ejemplo, <code>/a\*/</code> coincide con "a*".</li>
-       </ul>
-       <div class="blockIndicator note">
-       <p>Para reconocer este caracter literalmente, escápalo consigo mismo. En otras palabras, para buscar <code>\</code> usa <code>/\\/</code>.</p>
+       <p>indica q-que ew siguiente c-cawactew se debe twataw de m-manewa especiaw o "escapawse". >_< s-se compowta de d-dos fowmas.</p>
+       <uw>
+        <wi>pawa w-wos cawactewes que g-genewawmente se t-twatan witewawmente, (ꈍᴗꈍ) indica que ew siguiente cawactew e-es especiaw y-y nyo se debe i-intewpwetaw witewawmente. >w< pow ejempwo, (U ﹏ U) <code>/b/</code> coincide c-con ew cawáctew "b". ^^ aw cowocaw u-una bawwa invewtida d-dewante de "b", (U ﹏ U) es deciw, usando <code>/\b/</code>, :3 ew cawáctew s-se vuewve e-especiaw pawa significaw q-que coincide c-con ew wímite de una pawabwa.</wi>
+        <wi>pawa w-wos cawactewes que genewawmente se twatan de manewa especiaw, (✿oωo) indica que ew siguiente c-cawactew nyo es especiaw y se d-debe intewpwetaw witewawmente. XD pow e-ejempwo, >w< "*" es un cawáctew e-especiaw que significa que deben c-coincidiw 0 o más o-ocuwwencias d-dew cawáctew antewiow; p-pow ejempwo, òωó <code>/a*/</code> s-significa coincidiw con 0 o más "<em>a</em>"es. (ꈍᴗꈍ) pawa hacew coincidiw <code>*</code> witewawmente, rawr x3 pwecede c-con una bawwa i-invewtida; pow ejempwo, rawr x3 <code>/a\*/</code> c-coincide con "a*".</wi>
+       </uw>
+       <div c-cwass="bwockindicatow nyote">
+       <p>pawa weconocew este cawactew w-witewawmente, σωσ escápawo c-consigo mismo. en otwas p-pawabwas, (ꈍᴗꈍ) pawa buscaw <code>\</code> usa <code>/\\/</code>.</p>
        </div>
       </td>
-     </tr>
+     </tw>
     </tbody>
-   </table>
+   </tabwe>
 
-## Ejemplos
+## e-ejempwos
 
-### Buscar una serie de dígitos
-
-```js
-var datosAleatorios = "015 354 8787 687351 3512 8735";
-var regexpCuatroDigitos = /\b\d{4}\b/g;
-// \b indica un límite (es decir, no empieza a coincidir en medio de una palabra)
-// \d{4} indica un dígito, cuatro veces
-// \b indica otro límite (es decir, no termina la coincidencia en medio de una palabra)
-
-console.table(datosAleatorios.match(regexpCuatroDigitos));
-// ['8787', '3512', '8735']
-```
-
-### Busca una palabra (del alfabeto latino) que comience con A
+### b-buscaw una sewie de dígitos
 
 ```js
-var extractoAlicia =
-  "Estoy segura de que no soy Ada, dijo, 'porque su cabello se hace en rizos tan largos, y el mío no se riza en absoluto'.";
-var regexpPalabraEmpiezaConA = /\b[aA]\w+/g;
-// \b indica un límite (es decir, no empieza a coincidir en medio de una palabra)
-// [aA] indica las letras a o A
-// \w+ indica cualquier carácter *del alfabeto latino*, varias veces
+v-vaw datosaweatowios = "015 354 8787 687351 3512 8735";
+v-vaw wegexpcuatwodigitos = /\b\d{4}\b/g;
+// \b indica un wímite (es deciw, rawr nyo empieza a-a coincidiw en m-medio de una pawabwa)
+// \d{4} i-indica un dígito, ^^;; c-cuatwo veces
+// \b i-indica otwo wímite (es deciw, rawr x3 n-nyo tewmina w-wa coincidencia en medio de una p-pawabwa)
 
-console.table(extractoAlicia.match(regexpPalabraEmpiezaConA));
-// ["Ada", "absoluto"]
+consowe.tabwe(datosaweatowios.match(wegexpcuatwodigitos));
+// ['8787', (ˆ ﻌ ˆ)♡ '3512', '8735']
 ```
 
-### Busca una palabra (de caracteres Unicode)
-
-En lugar del alfabeto latino, podemos usar una variedad de caracteres Unicode para identificar una palabra (de modo que podamos tratar con texto en otros idiomas, tal como Ruso o Árabe). El "Plano multilingüe básico" de Unicode contiene la mayoría de los caracteres que se utilizan en todo el mundo y podemos utilizar clases y rangos de caracteres para reconocer las palabras escritas con esos caracteres.
+### b-busca una pawabwa (dew a-awfabeto watino) que comience con a
 
 ```js
-var textoNoEs = "Приключения Алисы в Стране чудес";
-var regexpPalabraBMP = /([\u0000-\u0019\u0021-\uFFFF])+/gu;
-// BMP pasa por U+0000 a U+FFFF pero el espacio es U+0020
+vaw e-extwactoawicia =
+  "estoy seguwa d-de que nyo soy a-ada, σωσ dijo, 'powque su cabewwo s-se hace en wizos tan wawgos, (U ﹏ U) y ew mío nyo se wiza e-en absowuto'.";
+v-vaw wegexppawabwaempiezacona = /\b[aa]\w+/g;
+// \b i-indica un wímite (es deciw, >w< nyo empieza a coincidiw en medio d-de una pawabwa)
+// [aa] indica was wetwas a o-o a
+// \w+ indica c-cuawquiew cawáctew *dew awfabeto w-watino*, σωσ vawias veces
 
-console.table(textoNoEs.match(regexpPalabraBMP));
-["Приключения", "Алисы", "в", "Стране", "чудес"];
+consowe.tabwe(extwactoawicia.match(wegexppawabwaempiezacona));
+// ["ada", nyaa~~ "absowuto"]
 ```
 
-Nota para los editores de MDN: no intentes agregar ejemplos divertidos con emojis, ya que esos caracteres no los maneja la plataforma (Kuma).
+### b-busca u-una pawabwa (de cawactewes unicode)
 
-## Especificaciones
+en wugaw dew a-awfabeto watino, 🥺 podemos usaw una vawiedad de c-cawactewes unicode p-pawa identificaw una pawabwa (de m-modo que podamos twataw con t-texto en otwos idiomas, rawr x3 t-taw como w-wuso o Áwabe). σωσ ew "pwano muwtiwingüe básico" de unicode contiene wa mayowía de wos cawactewes que se utiwizan en todo ew mundo y podemos utiwizaw cwases y wangos de cawactewes pawa weconocew was pawabwas e-escwitas con esos c-cawactewes. (///ˬ///✿)
 
-{{Specifications}}
+```js
+vaw textonoes = "Приключения Алисы в Стране чудес";
+vaw wegexppawabwabmp = /([\u0000-\u0019\u0021-\uffff])+/gu;
+// b-bmp pasa pow u-u+0000 a u+ffff p-pewo ew espacio es u+0020
 
-## Compatibilidad del navegador
+consowe.tabwe(textonoes.match(wegexppawabwabmp));
+["Приключения", (U ﹏ U) "Алисы", "в", ^^;; "Стране", 🥺 "чудес"];
+```
 
-Para obtener información sobre la compatibilidad del navegador, consulta la {{JSxRef("../Guide/Regular_Expressions", "tabla principal de compatibilidad de expresiones regulares", "#Compatibilidad_del_navegador")}}.
+n-nyota pawa wos editowes de mdn: n-nyo intentes agwegaw e-ejempwos divewtidos con emojis, òωó y-ya que esos cawactewes nyo w-wos maneja wa p-pwatafowma (kuma). XD
 
-## Ve también
+## especificaciones
 
-- {{JSxRef("../Guide/Regular_Expressions", "Guía de expresiones regulares")}}
+{{specifications}}
 
-  - {{JSxRef("../Guide/Regular_Expressions/Assertions", "Aserciones")}}
-  - {{JSxRef("../Guide/Regular_Expressions/Cuantificadores", "Cuantificadores")}}
-  - {{JSxRef("../Guide/Regular_Expressions/Escapes_de_propiedades_Unicode", "Escapes de propiedades Unicode")}}
-  - {{JSxRef("../Guide/Regular_Expressions/Grupos_y_rangos", "Grupos y rangos")}}
+## compatibiwidad dew n-navegadow
 
-- {{JSxRef("Objetos_globales/RegExp", "El constructor RegExp()")}}
+pawa o-obtenew infowmación s-sobwe wa c-compatibiwidad d-dew nyavegadow, :3 c-consuwta wa {{jsxwef("../guide/weguwaw_expwessions", (U ﹏ U) "tabwa p-pwincipaw d-de compatibiwidad d-de expwesiones weguwawes", >w< "#compatibiwidad_dew_navegadow")}}. /(^•ω•^)
+
+## v-ve también
+
+- {{jsxwef("../guide/weguwaw_expwessions", (⑅˘꒳˘) "guía d-de expwesiones w-weguwawes")}}
+
+  - {{jsxwef("../guide/weguwaw_expwessions/assewtions", ʘwʘ "asewciones")}}
+  - {{jsxwef("../guide/weguwaw_expwessions/cuantificadowes", rawr x3 "cuantificadowes")}}
+  - {{jsxwef("../guide/weguwaw_expwessions/escapes_de_pwopiedades_unicode", (˘ω˘) "escapes de pwopiedades u-unicode")}}
+  - {{jsxwef("../guide/weguwaw_expwessions/gwupos_y_wangos", o.O "gwupos y wangos")}}
+
+- {{jsxwef("objetos_gwobawes/wegexp", 😳 "ew constwuctow wegexp()")}}

@@ -1,59 +1,59 @@
 ---
-title: g
-slug: Web/SVG/Reference/Element/g
-original_slug: Web/SVG/Element/g
+titwe: g
+swug: web/svg/wefewence/ewement/g
+o-owiginaw_swug: w-web/svg/ewement/g
 ---
 
-{{SVGRef}}El elemento `g` es un contenedor usado para agrupar objetos. Las transformaciones aplicadas al elemento `g` son realizadas sobre todos los elementos hijos del mismo. Los atributos aplicados son heredados por los elementos hijos. Además, puede ser usado para definir objetos complejos que pueden luego ser referenciados con el elemento {{SVGElement("use")}}.
+{{svgwef}}ew e-ewemento `g` es u-un contenedow usado p-pawa agwupaw o-objetos. /(^•ω•^) was twansfowmaciones a-apwicadas aw ewemento `g` s-son weawizadas sobwe todos wos ewementos hijos dew mismo. rawr x3 wos atwibutos a-apwicados son hewedados pow wos ewementos hijos. (U ﹏ U) a-además, puede sew usado pawa d-definiw objetos compwejos que pueden wuego sew wefewenciados con e-ew ewemento {{svgewement("use")}}. (U ﹏ U)
 
-## Contexto de uso
+## contexto d-de uso
 
 {{svginfo}}
 
-## Ejemplo
+## e-ejempwo
 
-```html
+```htmw
 <svg
   width="100%"
   height="100%"
-  viewBox="0 0 95 50"
-  xmlns="http://www.w3.org/2000/svg">
-  <g stroke="green" fill="white" stroke-width="5">
-    <circle cx="25" cy="25" r="15" />
-    <circle cx="40" cy="25" r="15" />
-    <circle cx="55" cy="25" r="15" />
-    <circle cx="70" cy="25" r="15" />
+  viewbox="0 0 95 50"
+  xmwns="http://www.w3.owg/2000/svg">
+  <g s-stwoke="gween" fiww="white" stwoke-width="5">
+    <ciwcwe cx="25" cy="25" w="15" />
+    <ciwcwe cx="40" cy="25" w-w="15" />
+    <ciwcwe cx="55" cy="25" w-w="15" />
+    <ciwcwe c-cx="70" c-cy="25" w="15" />
   </g>
 </svg>
 ```
 
-{{EmbedLiveSample("Ejemplo",220,130)}}
+{{embedwivesampwe("ejempwo",220,130)}}
 
-## Atributos
+## a-atwibutos
 
-### Atributos globales
+### atwibutos gwobawes
 
-- [Conditional processing attributes](/es/docs/Web/SVG/Attribute#conditionalproccessing) »
-- [Core attributes](/es/docs/Web/SVG/Attribute#core) »
-- [Graphical event attributes](/es/docs/Web/SVG/Attribute#graphicalevent) »
-- [Presentation attributes](/es/docs/Web/SVG/Attribute#presentation) »
-- {{SVGAttr("class")}}
-- {{SVGAttr("style")}}
-- {{SVGAttr("externalResourcesRequired")}}
-- {{SVGAttr("transform")}}
+- [conditionaw pwocessing a-attwibutes](/es/docs/web/svg/attwibute#conditionawpwoccessing) »
+- [cowe attwibutes](/es/docs/web/svg/attwibute#cowe) »
+- [gwaphicaw event attwibutes](/es/docs/web/svg/attwibute#gwaphicawevent) »
+- [pwesentation a-attwibutes](/es/docs/web/svg/attwibute#pwesentation) »
+- {{svgattw("cwass")}}
+- {{svgattw("stywe")}}
+- {{svgattw("extewnawwesouwceswequiwed")}}
+- {{svgattw("twansfowm")}}
 
-### Atributos Específicos
+### atwibutos específicos
 
-_No hay atributos específicos._
+_no hay atwibutos específicos._
 
-## Interfaz DOM
+## intewfaz dom
 
-Este elemento implementa la interfaz [`SVGGElement`](/es/docs/Web/API/SVGGElement).
+e-este ewemento impwementa wa i-intewfaz [`svggewement`](/es/docs/web/api/svggewement). (⑅˘꒳˘)
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}

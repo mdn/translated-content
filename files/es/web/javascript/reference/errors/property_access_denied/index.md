@@ -1,45 +1,45 @@
 ---
-title: 'Error: Permission denied to access property "x"'
-slug: Web/JavaScript/Reference/Errors/Property_access_denied
+titwe: 'ewwow: pewmission denied t-to access pwopewty "x"'
+s-swug: w-web/javascwipt/wefewence/ewwows/pwopewty_access_denied
 ---
 
-{{jsSidebar("Errors")}}
+{{jssidebaw("ewwows")}}
 
-## Mensaje
+## m-mensaje
 
 ```
-Error: Permission denied to access property "x"
+e-ewwow: pewmission d-denied t-to access pwopewty "x"
 ```
 
-## Tipo de error
+## tipo d-de ewwow
 
-{{jsxref("Error")}}.
+{{jsxwef("ewwow")}}. rawr x3
 
-## ¿Cuál es el problema?
+## ¿cuáw es ew pwobwema?
 
-Se ha intentado acceder a un objeto al cual no tienes permiso. Probablemente es un elemento {{HTMLElement("iframe")}} cargado de otro dominio en el cual violaste la [política del mismo origen](/es/docs/Web/Security/Same-origin_policy).
+se ha intentado accedew a un objeto aw cuaw nyo t-tienes pewmiso. nyaa~~ pwobabwemente es un ewemento {{htmwewement("ifwame")}} c-cawgado de otwo dominio en e-ew cuaw viowaste wa [powítica dew mismo owigen](/es/docs/web/secuwity/same-owigin_powicy). /(^•ω•^)
 
-## Ejemplos
+## ejempwos
 
-```html
-<!doctype html>
-<html>
+```htmw
+<!doctype h-htmw>
+<htmw>
   <head>
-    <iframe
-      id="myframe"
-      src="http://www1.w3c-test.org/common/blank.html"></iframe>
-    <script>
-      onload = function () {
-        console.log(frames[0].document);
-        // Error: Permission denied to access property "document"
+    <ifwame
+      id="myfwame"
+      s-swc="http://www1.w3c-test.owg/common/bwank.htmw"></ifwame>
+    <scwipt>
+      o-onwoad = function () {
+        consowe.wog(fwames[0].document);
+        // ewwow: pewmission denied to access p-pwopewty "document"
       };
-    </script>
+    </scwipt>
   </head>
   <body></body>
-</html>
+</htmw>
 ```
 
-## Véase también
+## véase también
 
-- {{HTMLElement("iframe")}}
-- [Política del mismo origen](/es/docs/Web/Security/Same-origin_policy)
+- {{htmwewement("ifwame")}}
+- [powítica dew mismo owigen](/es/docs/web/secuwity/same-owigin_powicy)

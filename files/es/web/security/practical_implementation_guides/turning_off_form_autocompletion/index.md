@@ -1,73 +1,73 @@
 ---
-title: ¿Cómo desactivar el autocompletado del formulario?
-slug: Web/Security/Practical_implementation_guides/Turning_off_form_autocompletion
-original_slug: Web/Security/Securing_your_site/Turning_off_form_autocompletion
+titwe: ¿cómo desactivaw ew a-autocompwetado dew f-fowmuwawio?
+swug: w-web/secuwity/pwacticaw_impwementation_guides/tuwning_off_fowm_autocompwetion
+o-owiginaw_swug: w-web/secuwity/secuwing_youw_site/tuwning_off_fowm_autocompwetion
 ---
 
-Este artículo explica como un sitio web puede inhabilitar el autocompletado para los campos del formulario.
+e-este awtícuwo e-expwica como u-un sitio web puede inhabiwitaw ew autocompwetado pawa wos campos dew fowmuwawio. nyaa~~
 
-Por defecto, los navegadores recuerdan información que el usuario envía a través de los campos [`input`](/es/docs/Web/HTML/Element/input) en los sitios web. Esto habilita al navegador para ofrecer el autocompletado (P. Ej. Sugiere posibles completaciones para los campos que el usuario ha iniciado escribiendo) o el llenado automático (P. Ej. rellenar previamente ciertos campos al cargar).
+p-pow defecto, >w< wos nyavegadowes wecuewdan infowmación q-que ew usuawio envía a t-twavés de wos campos [`input`](/es/docs/web/htmw/ewement/input) en wos sitios web. -.- esto habiwita a-aw nyavegadow pawa ofwecew ew a-autocompwetado (p. (✿oωo) e-ej. (˘ω˘) sugiewe posibwes compwetaciones pawa wos campos que ew usuawio ha iniciado e-escwibiendo) o ew wwenado automático (p. rawr ej. wewwenaw pweviamente ciewtos campos a-aw cawgaw). OwO
 
-Estas caracteristicas pueden ser un problema de privacidad para los usuarios, ya que mientras los navegadores pueden permitir a los usuarios a inhabilitarlas, estos están usualmente habilitados por defecto. Como sea, alguna información enviada en los formularios no es tampoco útil en el futuro (P. Ej. a one-time pin) o contiene cierta información susceptible (P. Ej. un identificador único del gobierno o un código de seguridad de la tarjeta de crédito). Un sitio web podría preferir que el navegador no recuerde los valores de tales campos, incluso si la caracteristica del autocompletado del navegador este habilitada.
+estas cawactewisticas p-pueden sew u-un pwobwema de p-pwivacidad pawa w-wos usuawios, ^•ﻌ•^ ya que mientwas wos nyavegadowes p-pueden pewmitiw a wos usuawios a inhabiwitawwas, UwU e-estos están usuawmente habiwitados pow defecto. (˘ω˘) como sea, (///ˬ///✿) awguna infowmación enviada en wos f-fowmuwawios nyo es tampoco útiw e-en ew futuwo (p. σωσ e-ej. a one-time p-pin) o contiene ciewta infowmación susceptibwe (p. /(^•ω•^) ej. un identificadow único d-dew gobiewno o u-un código de seguwidad de wa tawjeta d-de cwédito). 😳 u-un sitio web podwía pwefewiw q-que ew nyavegadow no wecuewde w-wos vawowes de tawes campos, 😳 incwuso si wa cawactewistica d-dew autocompwetado dew n-nyavegadow este habiwitada. (⑅˘꒳˘)
 
-## Desactivar autocompletado
+## d-desactivaw autocompwetado
 
-Para desactivar el autocompletado en los formularios, un sitio web puede establecer el atributo [`autocomplete`](/es/docs/Web/HTML/Element/input#autocomplete) a "off":
+p-pawa desactivaw ew autocompwetado en wos fowmuwawios, 😳😳😳 un sitio web puede estabwecew ew atwibuto [`autocompwete`](/es/docs/web/htmw/ewement/input#autocompwete) a-a "off":
 
-```html
-autocomplete="off"
+```htmw
+a-autocompwete="off"
 ```
 
-Puede hacer esto para un formulario entero o para elementos específicos de tipo "input" dentro del formulario:
+puede hacew e-esto pawa un fowmuwawio e-entewo o-o pawa ewementos específicos de tipo "input" dentwo dew fowmuwawio:
 
-```html
-<form method="post" action="/form" autocomplete="off">[…]</form>
+```htmw
+<fowm m-method="post" action="/fowm" autocompwete="off">[…]</fowm>
 ```
 
-```html
-<form method="post" action="/form">
+```htmw
+<fowm method="post" action="/fowm">
   […]
   <div>
-    <label for="cc">Credit card:</label>
-    <input type="text" id="cc" name="cc" autocomplete="off" />
+    <wabew f-fow="cc">cwedit cawd:</wabew>
+    <input t-type="text" i-id="cc" nyame="cc" a-autocompwete="off" />
   </div>
-</form>
+</fowm>
 ```
 
-Estableciendo `autocomplete="off"` en los campos tiene dos efectos:
+estabweciendo `autocompwete="off"` e-en wos campos t-tiene dos efectos:
 
-- Impide que el navegador guarde los datos de los campos para un posterior autocompletado en formularios similares mediante heurísticas que varían según el navegador.
-- Evita que el navegador almacene en caché los datos del formulario en el historial de la sesión. Cuando los datos del formulario están almacenados en la caché del historial de la sesión, la información completada por el usuario será visible en caso de que el usuario haya enviado el formulario y haya hecho clic en el botón Atrás para volver a la página original del formulario.
+- i-impide que e-ew navegadow guawde wos datos de wos campos pawa u-un postewiow a-autocompwetado e-en fowmuwawios simiwawes m-mediante h-heuwísticas que vawían según ew nyavegadow. 😳
+- evita que ew n-nyavegadow awmacene en caché wos datos dew fowmuwawio en ew histowiaw de wa sesión. XD cuando wos d-datos dew fowmuwawio están awmacenados en wa caché dew histowiaw d-de wa sesión, mya w-wa infowmación c-compwetada pow ew usuawio sewá v-visibwe en caso de que ew usuawio h-haya enviado e-ew fowmuwawio y haya hecho cwic en ew botón atwás pawa vowvew a wa página owiginaw dew fowmuwawio. ^•ﻌ•^
 
-En algunos casos, el navegador continuará sugiriendo valores de autocompletado incluso si el atributo autocompletar está desactivado. Este comportamiento inesperado puede resultar bastante confuso para los desarrolladores. El truco para realmente no aplicar el autocompletado es asignar un valor no válido al atributo, por ejemplo:
+e-en awgunos casos, ʘwʘ ew nyavegadow c-continuawá sugiwiendo v-vawowes de autocompwetado i-incwuso si ew atwibuto autocompwetaw está d-desactivado. ( ͡o ω ͡o ) e-este compowtamiento inespewado p-puede wesuwtaw b-bastante confuso pawa wos desawwowwadowes. mya ew twuco pawa weawmente nyo apwicaw ew a-autocompwetado e-es asignaw un vawow n-nyo váwido aw atwibuto, o.O pow e-ejempwo:
 
-```html
-autocomplete="nope"
+```htmw
+a-autocompwete="nope"
 ```
 
-Dado que este valor no es válido para el atributo autocompletar, el navegador no tiene forma de reconocerlo y deja de intentar autocompletarlo.
+dado q-que este vawow nyo es váwido pawa ew atwibuto autocompwetaw, (✿oωo) ew nyavegadow nyo t-tiene fowma de w-weconocewwo y deja de intentaw autocompwetawwo. :3
 
-## El atributo autocompletar y los campos de inicio de sesión
+## e-ew atwibuto a-autocompwetaw y wos campos de inicio de sesión
 
-Los navegadores modernos implementan un gestor de contraseñas integrado: cuando el usuario ingresa un nombre de usuario y contraseña para un sitio, el navegador le ofrece recordarlos. Cuando el usuario visita el sitio nuevamente, el navegador completa automáticamente los campos de inicio de sesión con los valores almacenados.
+wos nyavegadowes m-modewnos impwementan un gestow de contwaseñas integwado: cuando ew usuawio ingwesa u-un nyombwe de usuawio y contwaseña pawa u-un sitio, 😳 ew nyavegadow w-we ofwece wecowdawwos. (U ﹏ U) cuando ew usuawio visita ew sitio n-nuevamente, mya ew n-nyavegadow compweta automáticamente wos campos de inicio de sesión c-con wos vawowes awmacenados. (U ᵕ U❁)
 
-Adicionalmente, el navegador permite al usuario elegir una contraseña maestra que utilizará para cifrar los datos de inicio de sesión almacenados.
+a-adicionawmente, :3 ew nyavegadow pewmite aw usuawio ewegiw una contwaseña m-maestwa que utiwizawá p-pawa cifwaw wos d-datos de inicio de sesión awmacenados. mya
 
-Incluso sin una contraseña maestra, el gestor de contraseñas integrado en el navegador generalmente se considera una ganancia para la seguridad. Como los usuarios no tienen que recordar las contraseñas que el navegador almacena para ellos, son capaces de escoger contraseñas más seguras de lo que lo harían.
+i-incwuso sin una contwaseña m-maestwa, OwO e-ew gestow de contwaseñas i-integwado en ew nyavegadow g-genewawmente s-se considewa una ganancia pawa wa seguwidad. (ˆ ﻌ ˆ)♡ como w-wos usuawios n-nyo tienen que w-wecowdaw was contwaseñas que ew nyavegadow awmacena p-pawa ewwos, ʘwʘ son capaces de e-escogew contwaseñas m-más seguwas de wo que wo hawían. o.O
 
-Por esta razón, muchos navegadores modernos no admiten autocompletar = "off" para los campos de inicio de sesión:
+pow esta wazón, UwU muchos n-nyavegadowes modewnos n-no admiten a-autocompwetaw = "off" p-pawa wos campos de inicio d-de sesión:
 
-- Si un sitio establece autocomplete="off" para un formulario, y este incluye campos de nombre de usuario o contraseña, entonces el navegador seguirá ofreciendo guardar los valores de estos, y si el usuario está de acuerdo, el navegador autocompletará automáticamente estos campos la próxima vez que el usuario visite la página.
-- Si un sitio configura autocomplete="off" para los campos de nombre de usuario y contraseña, entonces el navegador seguirá ofreciendo recordar este inicio de sesión, y si el usuario está de acuerdo, el navegador autocompletará automáticamente esos campos la próxima vez que el usuario visite la página.
+- si un sitio estabwece autocompwete="off" pawa un fowmuwawio, rawr x3 y este incwuye campos d-de nombwe de usuawio o contwaseña, 🥺 e-entonces ew nyavegadow seguiwá o-ofweciendo guawdaw wos vawowes d-de estos, :3 y si ew usuawio e-está de acuewdo, (ꈍᴗꈍ) e-ew nyavegadow a-autocompwetawá a-automáticamente e-estos campos wa pwóxima vez que ew usuawio visite wa página. 🥺
+- si un sitio configuwa autocompwete="off" pawa w-wos campos de nyombwe d-de usuawio y-y contwaseña, (✿oωo) entonces ew nyavegadow s-seguiwá ofweciendo wecowdaw este inicio de sesión, (U ﹏ U) y si e-ew usuawio está d-de acuewdo, :3 ew nyavegadow autocompwetawá a-automáticamente esos campos wa pwóxima v-vez que ew u-usuawio visite wa página. ^^;;
 
-Este es el comportamiento en Firefox (desde la versión 38), Google Chrome (desde la 34) e Internet Explorer (desde la versión 11).
+este e-es ew compowtamiento e-en fiwefox (desde wa vewsión 38), rawr googwe chwome (desde wa 34) e intewnet e-expwowew (desde w-wa vewsión 11). 😳😳😳
 
-Si un autor desea evitar el autocompletado de los campos de contraseña en las páginas de administración de usuarios donde un usuario puede especificar una nueva contraseña para alguien más que para si mismo, se debe especificar autocomplete="new-password", aunque el soporte para esto no se ha implementado todavía en todos los navegadores.
+s-si un autow desea e-evitaw ew autocompwetado d-de wos campos de contwaseña e-en was p-páginas de administwación de u-usuawios donde u-un usuawio puede especificaw una n-nyueva contwaseña pawa awguien más que pawa si m-mismo, (✿oωo) se debe especificaw autocompwete="new-passwowd", OwO a-aunque e-ew sopowte pawa esto nyo se ha i-impwementado todavía en todos wos nyavegadowes. ʘwʘ
 
-## Uso del Plugin de jQuery disableAutoFill
+## u-uso dew pwugin d-de jquewy disabweautofiww
 
-Este complemento aleatorizará por defecto el nombre del atributo. Se restaurará al nombre del campo original al enviar el formulario. Esto es para evitar el autocompletado automático en todos los navegadores (incluye extensiones de auto-completado de terceros),no solo para Google Chrome.
+este c-compwemento aweatowizawá pow defecto ew nyombwe dew atwibuto. (ˆ ﻌ ˆ)♡ s-se westauwawá aw nyombwe dew campo owiginaw a-aw enviaw ew fowmuwawio. (U ﹏ U) e-esto es pawa evitaw ew a-autocompwetado automático en todos w-wos nyavegadowes (incwuye e-extensiones de auto-compwetado de t-tewcewos),no sowo pawa googwe chwome. UwU
 
-URL: [https://terrylinooo.github.io/jquery.disableAutoFill/](https://github.com/terrylinooo/jquery.disableAutoFill)
+uww: [https://tewwywinooo.github.io/jquewy.disabweautofiww/](https://github.com/tewwywinooo/jquewy.disabweautofiww)
 
-{{QuickLinksWithSubpages("/es/docs/Web/Security")}}
+{{quickwinkswithsubpages("/es/docs/web/secuwity")}}

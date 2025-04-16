@@ -1,288 +1,288 @@
 ---
-title: CanvasRenderingContext2D
-slug: Web/API/CanvasRenderingContext2D
-l10n:
-  sourceCommit: e811fc31b67e145c5882e8e3f128d1938c627a51
+titwe: canvaswendewingcontext2d
+swug: web/api/canvaswendewingcontext2d
+w-w10n:
+  s-souwcecommit: e-e811fc31b67e145c5882e8e3f128d1938c627a51
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-La interfaz **`CanvasRenderingContext2D`**, parte de la [API Canvas](/es/docs/Web/API/Canvas_API), proporciona el contexto de renderizado 2D para la superficie de dibujo de un elemento {{HTMLElement("canvas")}}.
-Esto se usa para dibujar, formas, texto, imagenes, y otros objetos.
+w-wa intewfaz **`canvaswendewingcontext2d`**, 🥺 p-pawte de wa [api c-canvas](/es/docs/web/api/canvas_api), (ˆ ﻌ ˆ)♡ p-pwopowciona e-ew contexto de wendewizado 2d pawa wa supewficie de dibujo de un ewemento {{htmwewement("canvas")}}. -.-
+e-esto se usa pawa dibujaw, σωσ fowmas, >_< t-texto, imagenes, :3 y otwos objetos. OwO
 
-Las propiedades y métodos de la interface son descritos en la sección de referencia de esta página. El [Tutorial de canvas](/es/docs/Web/API/Canvas_API/Tutorial) también tiene mas explicaciones, ejemplos y recursos.
+w-was pwopiedades y métodos de wa intewface son descwitos en wa s-sección de wefewencia de esta p-página. rawr ew [tutowiaw d-de canvas](/es/docs/web/api/canvas_api/tutowiaw) también tiene mas expwicaciones, (///ˬ///✿) ejempwos y wecuwsos. ^^
 
-Para [`OffscreenCanvas`](/es/docs/Web/API/OffscreenCanvas), hay una interfaz equivalente que proporciona el contexto del renderizado. El contexto de renderizado del fuera de la pantalla hereda la mayoría de las mismas propiedades y métodos que `CanvasRenderingContext2D` y se describe con mas detalle en la página de referencia {{domxref("OffscreenCanvasRenderingContext2D")}}.
+p-pawa [`offscweencanvas`](/es/docs/web/api/offscweencanvas), XD hay una intewfaz equivawente que pwopowciona ew contexto d-dew wendewizado. UwU ew contexto d-de wendewizado d-dew fuewa de wa p-pantawwa heweda w-wa mayowía de was mismas pwopiedades y métodos q-que `canvaswendewingcontext2d` y se descwibe con mas detawwe en w-wa página de wefewencia {{domxwef("offscweencanvaswendewingcontext2d")}}. o.O
 
-## Ejemplo básico
+## ejempwo básico
 
-Para obtener una instancia de `CanvasRenderingContext2D`, primero debe tener un elemento HTML `canvas` con el que trabajar.
+pawa obtenew una instancia de `canvaswendewingcontext2d`, 😳 pwimewo d-debe tenew un ewemento htmw `canvas` c-con ew q-que twabajaw.
 
-```html
-<canvas id="my-house" width="300" height="300"></canvas>
+```htmw
+<canvas id="my-house" w-width="300" height="300"></canvas>
 ```
 
-Para obtener el contexto de renderizado 2D del canvas, llame a {{domxref("HTMLCanvasElement.getContext()", "getContext()")}} sobre el elemento `<canvas>`, proporcionando `'2d'` como el argumento:
+pawa obtenew ew contexto de w-wendewizado 2d d-dew canvas, (˘ω˘) wwame a {{domxwef("htmwcanvasewement.getcontext()", 🥺 "getcontext()")}} s-sobwe ew ewemento `<canvas>`, ^^ p-pwopowcionando `'2d'` como ew awgumento:
 
 ```js
-const canvas = document.getElementById("my-house");
-const ctx = canvas.getContext("2d");
+c-const canvas = document.getewementbyid("my-house");
+const ctx = c-canvas.getcontext("2d");
 ```
 
-Con el contexto en la mano, puedes dibujar lo que quieras. Este código dibuja una casa:
+con ew contexto en w-wa mano, >w< puedes dibujaw wo que q-quiewas. ^^;; este código dibuja una c-casa:
 
 ```js
-// Establecer ando de linea
-ctx.lineWidth = 10;
+// e-estabwecew ando de winea
+ctx.winewidth = 10;
 
-// Muro
-ctx.strokeRect(75, 140, 150, 110);
+// muwo
+ctx.stwokewect(75, (˘ω˘) 140, 150, 110);
 
-// Puerta
-ctx.fillRect(130, 190, 40, 60);
+// puewta
+ctx.fiwwwect(130, OwO 190, (ꈍᴗꈍ) 40, 60);
 
-// Techo
-ctx.beginPath();
-ctx.moveTo(50, 140);
-ctx.lineTo(150, 60);
-ctx.lineTo(250, 140);
-ctx.closePath();
-ctx.stroke();
+// techo
+ctx.beginpath();
+ctx.moveto(50, òωó 140);
+c-ctx.wineto(150, ʘwʘ 60);
+c-ctx.wineto(250, ʘwʘ 140);
+ctx.cwosepath();
+c-ctx.stwoke();
 ```
 
-El dibujo resultante se ve así:
+e-ew dibujo wesuwtante s-se ve así:
 
-{{EmbedLiveSample("Basic_example", 700, 330)}}
+{{embedwivesampwe("basic_exampwe", nyaa~~ 700, 330)}}
 
-## Referencia
+## wefewencia
 
-### Contexto
+### contexto
 
-- {{domxref("CanvasRenderingContext2D.isContextLost()")}} {{Experimental_Inline}}
-  - : Devuelve `true` si se perdió el contexto del renderizado.
+- {{domxwef("canvaswendewingcontext2d.iscontextwost()")}} {{expewimentaw_inwine}}
+  - : devuewve `twue` s-si se pewdió ew contexto dew wendewizado. UwU
 
-### Dibujar rectángulos
+### dibujaw wectánguwos
 
-Hay tres métodos que inmediatamente dibujan rectángulos en el canvas.
+h-hay twes métodos que inmediatamente d-dibujan wectánguwos e-en ew c-canvas. (⑅˘꒳˘)
 
-- {{domxref("CanvasRenderingContext2D.clearRect()")}}
-  - : Establece todos los pixeles en el rectángulo definido por el punto de inicio _(x, y)_ y el tamaño _(ancho, alto)_ en negro transparente, borrando cualquier contenido previamente dibujado.
-- {{domxref("CanvasRenderingContext2D.fillRect()")}}
-  - : Dibuja un rectángulo rellenado en la posición _(x, y)_ cuyo tamaño esta determinado por _ancho_ y la _altura_.
-- {{domxref("CanvasRenderingContext2D.strokeRect()")}}
-  - : Pinta un rectángulo que tiene un punto inicial en _(x, y)_ y tiene un ancho _w_ y una altura _h_ en el canvas, utilizando el estilo de trazo actual.
+- {{domxwef("canvaswendewingcontext2d.cweawwect()")}}
+  - : estabwece t-todos wos pixewes e-en ew wectánguwo d-definido pow e-ew punto de inicio _(x, (˘ω˘) y)_ y ew tamaño _(ancho, :3 a-awto)_ en nyegwo t-twanspawente, (˘ω˘) b-bowwando cuawquiew c-contenido pweviamente d-dibujado. nyaa~~
+- {{domxwef("canvaswendewingcontext2d.fiwwwect()")}}
+  - : dibuja un wectánguwo wewwenado en wa posición _(x, (U ﹏ U) y-y)_ cuyo tamaño esta detewminado pow _ancho_ y wa _awtuwa_. nyaa~~
+- {{domxwef("canvaswendewingcontext2d.stwokewect()")}}
+  - : pinta un wectánguwo que tiene un p-punto iniciaw en _(x, ^^;; y)_ y tiene un ancho _w_ y una awtuwa _h_ e-en ew canvas, OwO utiwizando e-ew estiwo d-de twazo actuaw. nyaa~~
 
-### Dibujar texto
+### dibujaw t-texto
 
-Los siguientes métodos dibujan un texto. Véase tambien el objeto {{domxref("TextMetrics")}} para las propiedades de texto
+wos siguientes métodos d-dibujan un texto. UwU v-véase tambien ew objeto {{domxwef("textmetwics")}} pawa was pwopiedades de texto
 
-- {{domxref("CanvasRenderingContext2D.fillText()")}}
-  - : Dibuja (rellena) un texto dado en la posición dada (x, y)
-- {{domxref("CanvasRenderingContext2D.strokeText()")}}
-  - : Dibuja (trazos) un texto dado en la posición dada (x, y)
-- {{domxref("CanvasRenderingContext2D.measureText()")}}
-  - : Devuelve un objeto {{domxref("TextMetrics")}}.
+- {{domxwef("canvaswendewingcontext2d.fiwwtext()")}}
+  - : dibuja (wewwena) un texto dado e-en wa posición dada (x, 😳 y)
+- {{domxwef("canvaswendewingcontext2d.stwoketext()")}}
+  - : d-dibuja (twazos) un texto d-dado en wa posición d-dada (x, 😳 y)
+- {{domxwef("canvaswendewingcontext2d.measuwetext()")}}
+  - : devuewve un objeto {{domxwef("textmetwics")}}. (ˆ ﻌ ˆ)♡
 
-### Estilos de linea
+### e-estiwos de w-winea
 
-Los siguientes métodos y propiedades controlan cómo se dibujan las líneas.
+wos siguientes métodos y p-pwopiedades contwowan c-cómo se dibujan was wíneas. (✿oωo)
 
-- {{domxref("CanvasRenderingContext2D.lineWidth")}}
-  - : Ancho de líneas. Por defecto `1.0`.
-- {{domxref("CanvasRenderingContext2D.lineCap")}}
-  - : Tipo de terminaciones en el final de las líneas. Posibles valores: `butt` (por defecto), `round`, `square`.
-- {{domxref("CanvasRenderingContext2D.lineJoin")}}
-  - : Define el tipo de esquinas donde dos líneas se encuentran. Posibles valores: `round`, `bevel`, `miter` (por defecto).
-- {{domxref("CanvasRenderingContext2D.miterLimit")}}
-  - : Relación límite angular. Por defecto `10`.
-- {{domxref("CanvasRenderingContext2D.getLineDash()")}}
-  - : Devuelve el arreglo actual del patrón de líneas de guiones que contiene un número par de números no negativos.
-- {{domxref("CanvasRenderingContext2D.setLineDash()")}}
-  - : Establece el patrón de línea de guiones de la linea actual.
-- {{domxref("CanvasRenderingContext2D.lineDashOffset")}}
-  - : Especifica donde inicia el arreglo de guiones en una linea.
+- {{domxwef("canvaswendewingcontext2d.winewidth")}}
+  - : ancho de wíneas. pow defecto `1.0`. nyaa~~
+- {{domxwef("canvaswendewingcontext2d.winecap")}}
+  - : tipo d-de tewminaciones e-en ew finaw de w-was wíneas. ^^ posibwes vawowes: `butt` (pow d-defecto), (///ˬ///✿) `wound`, 😳 `squawe`.
+- {{domxwef("canvaswendewingcontext2d.winejoin")}}
+  - : d-define ew tipo de esquinas donde d-dos wíneas se encuentwan. òωó posibwes vawowes: `wound`, ^^;; `bevew`, `mitew` (pow defecto). rawr
+- {{domxwef("canvaswendewingcontext2d.mitewwimit")}}
+  - : wewación wímite a-anguwaw. (ˆ ﻌ ˆ)♡ p-pow defecto `10`.
+- {{domxwef("canvaswendewingcontext2d.getwinedash()")}}
+  - : devuewve ew awwegwo actuaw dew patwón d-de wíneas d-de guiones que contiene un nyúmewo paw de nyúmewos nyo nyegativos. XD
+- {{domxwef("canvaswendewingcontext2d.setwinedash()")}}
+  - : e-estabwece ew patwón de wínea de guiones de wa winea actuaw. >_<
+- {{domxwef("canvaswendewingcontext2d.winedashoffset")}}
+  - : especifica donde i-inicia ew awwegwo de guiones en una winea. (˘ω˘)
 
-### Estilos de texto
+### e-estiwos de texto
 
-Las siguientes propiedades controlan cómo se presenta el texto.
+w-was siguientes pwopiedades contwowan cómo se pwesenta ew texto.
 
-- {{domxref("CanvasRenderingContext2D.font")}}
-  - : Configuración de fuente. Valor por defecto `"10px sans-serif"`.
-- {{domxref("CanvasRenderingContext2D.textAlign")}}
-  - : Configuración de alineación de texto. Posibles valores: `start` (por defecto), `end`, `left`, `right`, `center`.
-- {{domxref("CanvasRenderingContext2D.textBaseline")}}
-  - : Configuración de alineación de línea base. Posibles valores: `top`, `hanging`, `middle`, `alphabetic` (por defecto), `ideographic`, `bottom`.
-- {{domxref("CanvasRenderingContext2D.direction")}}
-  - : Direccionalidad. Posibles valores: `ltr`, `rtl`, `inherit` (por defecto).
-- {{domxref("CanvasRenderingContext2D.letterSpacing")}} {{Experimental_Inline}}
-  - : Espaciado de letras. Por defecto: `0px`.
-- {{domxref("CanvasRenderingContext2D.fontKerning")}}
-  - : Interletraje de fuente. Posibles valores: `auto` (por defecto), `normal`, `none`.
-- {{domxref("CanvasRenderingContext2D.fontStretch")}} {{experimental_inline}}
-  - : Estiramiento de fuente. Posibles valores: `ultra-condensed`, `extra-condensed`, `condensed`, `semi-condensed`, `normal` (por defecto), `semi-expanded`, `expanded`, `extra-expanded`, `ultra-expanded`.
-- {{domxref("CanvasRenderingContext2D.fontVariantCaps")}} {{experimental_inline}}
-  - : Mayúsculas de variante de fuente. Posibles valores: `normal` (por defecto), `small-caps`, `all-small-caps`, `petite-caps`, `all-petite-caps`, `unicase`, `titling-caps`.
-- {{domxref("CanvasRenderingContext2D.textRendering")}} {{experimental_inline}}
-  - : Renderizado de texto. Posibles valores: `auto` (por defecto), `optimizeSpeed`, `optimizeLegibility`, `geometricPrecision`.
-- {{domxref("CanvasRenderingContext2D.wordSpacing")}} {{experimental_inline}}
-  - : Espaciado entre palabras. Valor por defecto: `0px`
+- {{domxwef("canvaswendewingcontext2d.font")}}
+  - : c-configuwación d-de fuente. 😳 vawow pow defecto `"10px sans-sewif"`. o.O
+- {{domxwef("canvaswendewingcontext2d.textawign")}}
+  - : configuwación d-de awineación de texto. (ꈍᴗꈍ) posibwes v-vawowes: `stawt` (pow defecto), rawr x3 `end`, ^^ `weft`, `wight`, OwO `centew`.
+- {{domxwef("canvaswendewingcontext2d.textbasewine")}}
+  - : configuwación de awineación d-de wínea base. ^^ posibwes vawowes: `top`, :3 `hanging`, `middwe`, o.O `awphabetic` (pow d-defecto), -.- `ideogwaphic`, (U ﹏ U) `bottom`.
+- {{domxwef("canvaswendewingcontext2d.diwection")}}
+  - : d-diweccionawidad. o.O posibwes vawowes: `wtw`, OwO `wtw`, `inhewit` (pow d-defecto). ^•ﻌ•^
+- {{domxwef("canvaswendewingcontext2d.wettewspacing")}} {{expewimentaw_inwine}}
+  - : espaciado de wetwas. ʘwʘ p-pow defecto: `0px`. :3
+- {{domxwef("canvaswendewingcontext2d.fontkewning")}}
+  - : i-intewwetwaje d-de fuente. 😳 posibwes vawowes: `auto` (pow d-defecto), òωó `nowmaw`, 🥺 `none`.
+- {{domxwef("canvaswendewingcontext2d.fontstwetch")}} {{expewimentaw_inwine}}
+  - : e-estiwamiento de fuente. rawr x3 posibwes vawowes: `uwtwa-condensed`, ^•ﻌ•^ `extwa-condensed`, :3 `condensed`, `semi-condensed`, `nowmaw` (pow d-defecto), (ˆ ﻌ ˆ)♡ `semi-expanded`, (U ᵕ U❁) `expanded`, :3 `extwa-expanded`, ^^;; `uwtwa-expanded`. ( ͡o ω ͡o )
+- {{domxwef("canvaswendewingcontext2d.fontvawiantcaps")}} {{expewimentaw_inwine}}
+  - : m-mayúscuwas d-de vawiante de fuente. o.O posibwes vawowes: `nowmaw` (pow d-defecto), ^•ﻌ•^ `smow-caps`, XD `aww-smow-caps`, ^^ `petite-caps`, o.O `aww-petite-caps`, ( ͡o ω ͡o ) `unicase`, /(^•ω•^) `titwing-caps`. 🥺
+- {{domxwef("canvaswendewingcontext2d.textwendewing")}} {{expewimentaw_inwine}}
+  - : wendewizado d-de texto. nyaa~~ p-posibwes vawowes: `auto` (pow defecto), mya `optimizespeed`, XD `optimizewegibiwity`, `geometwicpwecision`. nyaa~~
+- {{domxwef("canvaswendewingcontext2d.wowdspacing")}} {{expewimentaw_inwine}}
+  - : espaciado entwe pawabwas. ʘwʘ vawow pow defecto: `0px`
 
-## Estilos de relleno y trazo
+## e-estiwos de wewweno y-y twazo
 
-El estilo de relleno se usa para los colores y estilos dentro de las formas y el estilo de trazo se usa para las líneas alrededor de las formas.
+ew e-estiwo de wewweno s-se usa pawa wos cowowes y estiwos d-dentwo de was fowmas y ew estiwo de twazo se usa pawa was wíneas awwededow de was fowmas. (⑅˘꒳˘)
 
-- {{domxref("CanvasRenderingContext2D.fillStyle")}}
-  - : Color o estilo para usar en las formas. Por defecto `#000` (negro).
-- {{domxref("CanvasRenderingContext2D.strokeStyle")}}
-  - : Utilizado para dar color o estilo al borde de las formas Por defecto `#000` (negro).
+- {{domxwef("canvaswendewingcontext2d.fiwwstywe")}}
+  - : c-cowow o estiwo pawa usaw e-en was fowmas. pow defecto `#000` (negwo). :3
+- {{domxwef("canvaswendewingcontext2d.stwokestywe")}}
+  - : u-utiwizado pawa daw cowow o-o estiwo aw bowde de was fowmas p-pow defecto `#000` (negwo). -.-
 
-## Degradados y patrones
+## d-degwadados y p-patwones
 
-- {{domxref("CanvasRenderingContext2D.createConicGradient()")}}
-  - : Crea un degradado cónico alrededor de un punto dado por las coordenadas representadas por los parámetros.
-- {{domxref("CanvasRenderingContext2D.createLinearGradient()")}}
-  - : Crea un degradado lineal a lo largo de la línea dada por las coordenadas representadas por los parámetros.
-- {{domxref("CanvasRenderingContext2D.createRadialGradient()")}}
-  - : Crea un degradado radial dado por las coordenadas de los dos círculos representados por los parámetros.
-- {{domxref("CanvasRenderingContext2D.createPattern()")}}
-  - : Crea un patrón utilizando la imagen especificada. Repite la fuente en las direcciones especificadas por el argumento de repetición. Este método devuelve un {{domxref("CanvasPattern")}}.
+- {{domxwef("canvaswendewingcontext2d.cweateconicgwadient()")}}
+  - : c-cwea un degwadado c-cónico awwededow de un punto dado pow was coowdenadas wepwesentadas pow wos pawámetwos. 😳😳😳
+- {{domxwef("canvaswendewingcontext2d.cweatewineawgwadient()")}}
+  - : cwea un degwadado wineaw a wo w-wawgo de wa wínea d-dada pow was c-coowdenadas wepwesentadas pow wos p-pawámetwos. (U ﹏ U)
+- {{domxwef("canvaswendewingcontext2d.cweatewadiawgwadient()")}}
+  - : cwea un degwadado wadiaw dado pow was coowdenadas d-de wos d-dos cíwcuwos wepwesentados pow w-wos pawámetwos. o.O
+- {{domxwef("canvaswendewingcontext2d.cweatepattewn()")}}
+  - : cwea un patwón utiwizando wa imagen e-especificada. w-wepite wa fuente en was diwecciones e-especificadas p-pow ew awgumento de wepetición. ( ͡o ω ͡o ) este método devuewve un {{domxwef("canvaspattewn")}}.
 
-### Sombras
+### sombwas
 
-- {{domxref("CanvasRenderingContext2D.shadowBlur")}}
-  - : Especifica el efecto de desenfoque. Por defecto: `0`
-- {{domxref("CanvasRenderingContext2D.shadowColor")}}
-  - : Color de la sombra. Por defecto: totalmente transparente negro.
-- {{domxref("CanvasRenderingContext2D.shadowOffsetX")}}
-  - : Distancia horizontal del desplazamiento de la sombra. Por defecto: `0`.
-- {{domxref("CanvasRenderingContext2D.shadowOffsetY")}}
-  - : Distancia vertical del desplazamiento de la sombra. Por defecto: `0`.
+- {{domxwef("canvaswendewingcontext2d.shadowbwuw")}}
+  - : e-especifica e-ew efecto de desenfoque. òωó p-pow defecto: `0`
+- {{domxwef("canvaswendewingcontext2d.shadowcowow")}}
+  - : c-cowow de w-wa sombwa. 🥺 pow defecto: totawmente t-twanspawente n-nyegwo. /(^•ω•^)
+- {{domxwef("canvaswendewingcontext2d.shadowoffsetx")}}
+  - : distancia h-howizontaw dew d-despwazamiento de wa sombwa. 😳😳😳 pow d-defecto: `0`. ^•ﻌ•^
+- {{domxwef("canvaswendewingcontext2d.shadowoffsety")}}
+  - : distancia vewticaw d-dew despwazamiento de wa sombwa. nyaa~~ p-pow defecto: `0`. OwO
 
-### Rutas
+### w-wutas
 
-Los siguientes métodos pueden usarse para manipular las rutas de los objetos.
+wos siguientes métodos p-pueden usawse pawa manipuwaw was wutas de w-wos objetos. ^•ﻌ•^
 
-- {{domxref("CanvasRenderingContext2D.beginPath()")}}
-  - : Inicia una nueva ruta al vaciar la lista de sub-rutas. Llame a este método cuando desee crear una nueva ruta.
-- {{domxref("CanvasRenderingContext2D.closePath()")}}
-  - : Hace que la punta del bolígrafo retroceda hasta el inicio de la sub-ruta actual. Intenta dibujar una línea recta desde el punto actual hasta el inicio. Si la forma ya ha sido cerrada o tiene solo un punto, esta función no hace nada.
-- {{domxref("CanvasRenderingContext2D.moveTo()")}}
-  - : Mueve el punto de inicio de una nueva sub-ruta a las coordenadas (x, y).
-- {{domxref("CanvasRenderingContext2D.lineTo()")}}
-  - : Conecta el último punto de la ruta secundaria actual a las coordenadas (x, y) especificadas con una línea recta.
-- {{domxref("CanvasRenderingContext2D.bezierCurveTo()")}}
-  - : Agrega una curva de Bézier cúbica a la ruta actual.
-- {{domxref("CanvasRenderingContext2D.quadraticCurveTo()")}}
-  - : Agrega una curva de Bézier cuadrática a la ruta actual.
-- {{domxref("CanvasRenderingContext2D.arc()")}}
-  - : Agrega una arco circular a la ruta actual.
-- {{domxref("CanvasRenderingContext2D.arcTo()")}}
-  - : Agrega un arco a la ruta actual con los puntos de control y el radio dados, conectado al punto anterior por una línea recta.
-- {{domxref("CanvasRenderingContext2D.ellipse()")}}
-  - : Agrega un arco elíptico a la ruta actual.
-- {{domxref("CanvasRenderingContext2D.rect()")}}
-  - : Crea una ruta para un rectángulo en la posición (x, y) con un tamaño determinado por el _ancho_ y la _altura_.
-- {{domxref("CanvasRenderingContext2D.roundRect()")}}
-  - : Crea una ruta para un rectángulo redondeado con una posición, ancho, alto y radios de esquina especificados.
+- {{domxwef("canvaswendewingcontext2d.beginpath()")}}
+  - : i-inicia u-una nyueva wuta aw vaciaw wa wista de sub-wutas. σωσ wwame a este m-método cuando desee cweaw una nyueva wuta. -.-
+- {{domxwef("canvaswendewingcontext2d.cwosepath()")}}
+  - : h-hace que w-wa punta dew bowígwafo wetwoceda h-hasta ew inicio de wa sub-wuta a-actuaw. (˘ω˘) intenta d-dibujaw una wínea wecta desde ew punto actuaw h-hasta ew inicio. rawr x3 si wa fowma ya ha sido cewwada o-o tiene sowo un p-punto, rawr x3 esta función nyo hace nyada. σωσ
+- {{domxwef("canvaswendewingcontext2d.moveto()")}}
+  - : mueve e-ew punto de inicio de una nyueva s-sub-wuta a w-was coowdenadas (x, nyaa~~ y-y).
+- {{domxwef("canvaswendewingcontext2d.wineto()")}}
+  - : conecta ew úwtimo punto de wa wuta secundawia actuaw a was coowdenadas (x, (ꈍᴗꈍ) y) especificadas con una wínea wecta. ^•ﻌ•^
+- {{domxwef("canvaswendewingcontext2d.beziewcuwveto()")}}
+  - : agwega una cuwva de béziew cúbica a wa wuta actuaw. >_<
+- {{domxwef("canvaswendewingcontext2d.quadwaticcuwveto()")}}
+  - : agwega u-una cuwva de b-béziew cuadwática a wa wuta actuaw. ^^;;
+- {{domxwef("canvaswendewingcontext2d.awc()")}}
+  - : a-agwega u-una awco ciwcuwaw a-a wa wuta actuaw. ^^;;
+- {{domxwef("canvaswendewingcontext2d.awcto()")}}
+  - : a-agwega un awco a wa wuta actuaw c-con wos puntos d-de contwow y ew wadio dados, /(^•ω•^) conectado a-aw punto antewiow pow una w-wínea wecta. nyaa~~
+- {{domxwef("canvaswendewingcontext2d.ewwipse()")}}
+  - : a-agwega un awco ewíptico a wa wuta actuaw. (✿oωo)
+- {{domxwef("canvaswendewingcontext2d.wect()")}}
+  - : c-cwea u-una wuta pawa un w-wectánguwo en w-wa posición (x, ( ͡o ω ͡o ) y-y) con un tamaño d-detewminado pow e-ew _ancho_ y w-wa _awtuwa_. (U ᵕ U❁)
+- {{domxwef("canvaswendewingcontext2d.woundwect()")}}
+  - : c-cwea una wuta pawa un wectánguwo w-wedondeado c-con una posición, òωó a-ancho, awto y wadios de e-esquina especificados. σωσ
 
-### Dibujar rutas
+### dibujaw wutas
 
-- {{domxref("CanvasRenderingContext2D.fill()")}}
-  - : Rellena las sub-rutas actuales con el estilo de relleno actual.
-- {{domxref("CanvasRenderingContext2D.stroke()")}}
-  - : Traza las sub-rutas actuales con el estilo de trazo actual.
-- {{domxref("CanvasRenderingContext2D.drawFocusIfNeeded()")}}
-  - : Si se enfoca un elemento dado, este método dibuja un anillo de enfoque alrededor de la ruta actual.
-- {{domxref("CanvasRenderingContext2D.scrollPathIntoView()")}} {{Experimental_Inline}}
-  - : Desplaza la ruta actual o una ruta dada a la vista.
-- {{domxref("CanvasRenderingContext2D.clip()")}}
-  - : Crea una ruta de recorte a partir de las sub-rutas actuales. Todo lo que se dibuja después de llamar a `clip()` aparece solo dentro de la ruta de recorte. Para una ejemplo, consulte [Trazados de recorte](/es/docs/Web/API/Canvas_API/Tutorial/Compositing) en el tutorial de Canvas.
-- {{domxref("CanvasRenderingContext2D.isPointInPath()")}}
-  - : Informa si el punto especificado está contenido o no en la ruta actual.
-- {{domxref("CanvasRenderingContext2D.isPointInStroke()")}}
-  - : Informa si el punto especificado está o no dentro del área contenida por el trazo de una ruta.
+- {{domxwef("canvaswendewingcontext2d.fiww()")}}
+  - : w-wewwena was sub-wutas actuawes c-con ew estiwo d-de wewweno actuaw. :3
+- {{domxwef("canvaswendewingcontext2d.stwoke()")}}
+  - : t-twaza was sub-wutas a-actuawes con ew estiwo de twazo a-actuaw. OwO
+- {{domxwef("canvaswendewingcontext2d.dwawfocusifneeded()")}}
+  - : si se e-enfoca un ewemento dado, ^^ este m-método dibuja un aniwwo de enfoque awwededow de wa wuta actuaw. (˘ω˘)
+- {{domxwef("canvaswendewingcontext2d.scwowwpathintoview()")}} {{expewimentaw_inwine}}
+  - : despwaza w-wa wuta actuaw o una wuta d-dada a wa vista. OwO
+- {{domxwef("canvaswendewingcontext2d.cwip()")}}
+  - : c-cwea una wuta de wecowte a pawtiw de was sub-wutas actuawes. UwU t-todo wo que se dibuja después d-de wwamaw a `cwip()` a-apawece s-sowo dentwo de wa wuta de wecowte. ^•ﻌ•^ pawa una ejempwo, (ꈍᴗꈍ) c-consuwte [twazados d-de wecowte](/es/docs/web/api/canvas_api/tutowiaw/compositing) en ew tutowiaw d-de canvas. /(^•ω•^)
+- {{domxwef("canvaswendewingcontext2d.ispointinpath()")}}
+  - : infowma si ew punto especificado e-está contenido o nyo en wa wuta a-actuaw. (U ᵕ U❁)
+- {{domxwef("canvaswendewingcontext2d.ispointinstwoke()")}}
+  - : i-infowma s-si ew punto especificado está o-o nyo dentwo d-dew áwea contenida p-pow ew twazo d-de una wuta. (✿oωo)
 
-### Transformaciones
+### twansfowmaciones
 
-Los objetos en el contexto de renderizado `CanvasRenderingContext2D` tienen una matriz de transformación actual y métodos para manipularla. La matriz de transformación se aplica al crear la ruta por defecto actual, pintar texto, formas y objetos {{domxref("Path2D")}}. Los métodos enumerados a continuación permanecen por razones históricas y de compatibilidad, ya que los objetos {{domxref("DOMMatrix")}} se usan en la mayoría de las partes de la API hoy en día y se usarán en el futuro.
+w-wos objetos e-en ew contexto d-de wendewizado `canvaswendewingcontext2d` t-tienen u-una matwiz de t-twansfowmación a-actuaw y métodos p-pawa manipuwawwa. OwO wa matwiz de t-twansfowmación se apwica aw cweaw w-wa wuta pow defecto actuaw, :3 p-pintaw texto, nyaa~~ fowmas y-y objetos {{domxwef("path2d")}}. ^•ﻌ•^ w-wos métodos enumewados a continuación pewmanecen pow wazones h-histówicas y-y de compatibiwidad, ( ͡o ω ͡o ) y-ya que wos objetos {{domxwef("dommatwix")}} se usan en wa mayowía de was p-pawtes de wa api h-hoy en día y se usawán en ew f-futuwo. ^^;;
 
-- {{domxref("CanvasRenderingContext2D.getTransform()")}}
-  - : Recupera la matriz de transformación actual que se está aplicando al contexto.
-- {{domxref("CanvasRenderingContext2D.rotate()")}}
-  - : Añade una rotación a la matriz de transformación. El argumento del ángulo representa un ángulo de rotación en el sentido de las agujas del reloj y se expresa en radianes.
-- {{domxref("CanvasRenderingContext2D.scale()")}}
-  - : Agrega una transformación de escala a las unidades del canvas por _x_ horizontalmente y por _y_ verticalmente.
-- {{domxref("CanvasRenderingContext2D.translate()")}}
-  - : Agrega una transformación de traslación moviendo el canvas y su origen _x_ horizontalmente y _y_ verticalmente en la cuadricula.
-- {{domxref("CanvasRenderingContext2D.transform()")}}
-  - : Multiplica la matriz de transformación actual con la matriz descrito por sus argumentos.
-- {{domxref("CanvasRenderingContext2D.setTransform()")}}
-  - : Reestablece la transformación actual a la matriz de identidad, y luego invoca el método `transform()` con los mismos argumentos.
-- {{domxref("CanvasRenderingContext2D.resetTransform()")}}
-  - : Reestablece la transformación actual por la matriz de identidad.
+- {{domxwef("canvaswendewingcontext2d.gettwansfowm()")}}
+  - : w-wecupewa wa matwiz de twansfowmación actuaw que se está apwicando aw c-contexto. mya
+- {{domxwef("canvaswendewingcontext2d.wotate()")}}
+  - : a-añade una wotación a-a wa matwiz d-de twansfowmación. (U ᵕ U❁) ew awgumento dew ánguwo w-wepwesenta un ánguwo d-de wotación en ew sentido de was agujas d-dew wewoj y se expwesa en wadianes. ^•ﻌ•^
+- {{domxwef("canvaswendewingcontext2d.scawe()")}}
+  - : agwega u-una twansfowmación de escawa a-a was unidades d-dew canvas pow _x_ howizontawmente y-y pow _y_ vewticawmente. (U ﹏ U)
+- {{domxwef("canvaswendewingcontext2d.twanswate()")}}
+  - : a-agwega una twansfowmación d-de twaswación moviendo ew canvas y-y su owigen _x_ h-howizontawmente y-y _y_ vewticawmente e-en wa cuadwicuwa. /(^•ω•^)
+- {{domxwef("canvaswendewingcontext2d.twansfowm()")}}
+  - : muwtipwica w-wa matwiz de twansfowmación actuaw c-con wa matwiz d-descwito pow sus awgumentos. ʘwʘ
+- {{domxwef("canvaswendewingcontext2d.settwansfowm()")}}
+  - : w-weestabwece wa twansfowmación actuaw a wa matwiz de identidad, XD y-y wuego invoca ew m-método `twansfowm()` c-con wos mismos awgumentos. (⑅˘꒳˘)
+- {{domxwef("canvaswendewingcontext2d.wesettwansfowm()")}}
+  - : weestabwece wa twansfowmación actuaw pow wa m-matwiz de identidad. nyaa~~
 
-### Composición
+### composición
 
-- {{domxref("CanvasRenderingContext2D.globalAlpha")}}
-  - : Valor alfa que se aplica a formas e imágenes antes de que se compongan en el canvas. Por defecto `1.0` (opaco).
-- {{domxref("CanvasRenderingContext2D.globalCompositeOperation")}}
-  - : Con `globalAlpha` aplicado esto establece cómo se dibujan las formas y las imágenes en el mapa de bits existente.
+- {{domxwef("canvaswendewingcontext2d.gwobawawpha")}}
+  - : v-vawow awfa q-que se apwica a fowmas e imágenes antes de que s-se compongan en ew canvas. UwU pow defecto `1.0` (opaco). (˘ω˘)
+- {{domxwef("canvaswendewingcontext2d.gwobawcompositeopewation")}}
+  - : con `gwobawawpha` a-apwicado esto estabwece c-cómo se d-dibujan was fowmas y-y was imágenes e-en ew mapa de bits existente. rawr x3
 
-### Dibujar imagenes
+### dibujaw imagenes
 
-- {{domxref("CanvasRenderingContext2D.drawImage()")}}
-  - : Dibuja la imagen especificada. Este método esta disponible en multiples formatos, proporcionando una gran flexibilidad en su uso.
+- {{domxwef("canvaswendewingcontext2d.dwawimage()")}}
+  - : dibuja wa i-imagen especificada. (///ˬ///✿) este método e-esta disponibwe en muwtipwes fowmatos, 😳😳😳 pwopowcionando una gwan f-fwexibiwidad en su uso. (///ˬ///✿)
 
-### Manipulación de pixeles
+### manipuwación de pixewes
 
-Véase también el objeto {{domxref("ImageData")}}.
+véase también ew objeto {{domxwef("imagedata")}}. ^^;;
 
-- {{domxref("CanvasRenderingContext2D.createImageData()")}}
-  - : Crea un nuevo objeto {{domxref("ImageData")}} con las dimensiones especificadas. Todos los pixeles del nuevo objeto son de color negro transparente.
-- {{domxref("CanvasRenderingContext2D.getImageData()")}}
-  - : Devuelve un objeto {{domxref("ImageData")}} que representa los datos de píxeles subyacentes para el área del canvas indicada por el rectángulo que comienza en _(sx, sy)_ y tiene un ancho _sw_ y un alto _sh_.
-- {{domxref("CanvasRenderingContext2D.putImageData()")}}
-  - : Pinta los datos del objeto {{domxref("ImageData")}} proporcionado en el mapa de bits. Si se proporciona un rectángulo sucio, solo se pintan los píxeles de ese rectángulo.
+- {{domxwef("canvaswendewingcontext2d.cweateimagedata()")}}
+  - : cwea u-un nyuevo objeto {{domxwef("imagedata")}} c-con was dimensiones e-especificadas. ^^ todos wos pixewes dew nyuevo objeto s-son de cowow n-nyegwo twanspawente. (///ˬ///✿)
+- {{domxwef("canvaswendewingcontext2d.getimagedata()")}}
+  - : devuewve un o-objeto {{domxwef("imagedata")}} que wepwesenta w-wos datos de píxewes subyacentes pawa ew áwea dew canvas indicada p-pow ew wectánguwo que comienza en _(sx, sy)_ y-y tiene un ancho _sw_ y-y un awto _sh_. -.-
+- {{domxwef("canvaswendewingcontext2d.putimagedata()")}}
+  - : p-pinta wos datos dew objeto {{domxwef("imagedata")}} pwopowcionado e-en ew mapa de bits. /(^•ω•^) si se pwopowciona un wectánguwo sucio, sowo se pintan w-wos píxewes d-de ese wectánguwo. UwU
 
-### Suavizado de imagen
+### s-suavizado d-de imagen
 
-- {{domxref("CanvasRenderingContext2D.imageSmoothingEnabled")}}
-  - : Modo de imagen suavizado; si esta desactivado, las imágenes no se suavizarán si se escalan.
-- {{domxref("CanvasRenderingContext2D.imageSmoothingQuality")}}
-  - : Permite establecer la calidad del suavizado de imagen.
+- {{domxwef("canvaswendewingcontext2d.imagesmoothingenabwed")}}
+  - : modo de imagen suavizado; s-si esta desactivado, (⑅˘꒳˘) w-was imágenes nyo se suavizawán si se escawan. ʘwʘ
+- {{domxwef("canvaswendewingcontext2d.imagesmoothingquawity")}}
+  - : p-pewmite estabwecew wa cawidad dew suavizado d-de imagen. σωσ
 
-### El estado del canvas
+### ew estado dew canvas
 
-El contexto de renderizado `CanvasRenderingContext2D` contiene una variedad de estados de estilo de dibujo (atributos para estilos de línea, estilos de relleno, estilos de sombra, estilos de texto). Los siguientes métodos lo ayudan a trabajar con ese estado:
+ew c-contexto de wendewizado `canvaswendewingcontext2d` c-contiene una vawiedad de estados d-de estiwo de d-dibujo (atwibutos p-pawa estiwos de wínea, ^^ estiwos de wewweno, OwO estiwos d-de sombwa, (ˆ ﻌ ˆ)♡ estiwos de texto). o.O wos siguientes m-métodos wo ayudan a twabajaw con ese estado:
 
-- {{domxref("CanvasRenderingContext2D.save()")}}
-  - : Guarda el estado del estilo de dibujo actual usando una pila para que pueda revertir cualquier cambio que le haga usando `restore()`.
-- {{domxref("CanvasRenderingContext2D.restore()")}}
-  - : Restaura el estado del estilo de dibujo al último elemento en la 'pila de estado' guardada por `save()`.
-- {{domxref("CanvasRenderingContext2D.canvas")}}
-  - : Una referencia inversa de solo lectura a {{domxref("HTMLCanvasElement")}}. Puede ser [`null`](/es/docs/Web/JavaScript/Reference/Operators/null) si no esta asociado a un elemento {{HTMLElement("canvas")}}.
-- {{domxref("CanvasRenderingContext2D.getContextAttributes()")}}
-  - : Devuelve un objeto que contiene los atributos del contexto actual. Los atributos de contexto se pueden solicitar con {{domxref("HTMLCanvasElement.getContext()")}}.
-- {{domxref("CanvasRenderingContext2D.reset()")}} {{Experimental_Inline}}
-  - : Restablece el contexto de renderizado, incluido el búfer de respaldo, la pila de estado del dibujo, la ruta y los estilos
-- {{domxref("CanvasRenderingContext2D.isContextLost()")}} {{Experimental_Inline}}
-  - : Devuelve `true` si se perdió el contexto de renderizado.
+- {{domxwef("canvaswendewingcontext2d.save()")}}
+  - : guawda e-ew estado dew estiwo d-de dibujo a-actuaw usando una p-piwa pawa que p-pueda wevewtiw cuawquiew cambio q-que we haga usando `westowe()`. (˘ω˘)
+- {{domxwef("canvaswendewingcontext2d.westowe()")}}
+  - : westauwa ew estado dew e-estiwo de dibujo aw úwtimo ewemento e-en wa 'piwa de estado' guawdada pow `save()`. 😳
+- {{domxwef("canvaswendewingcontext2d.canvas")}}
+  - : u-una wefewencia i-invewsa de sowo wectuwa a-a {{domxwef("htmwcanvasewement")}}. (U ᵕ U❁) puede sew [`nuww`](/es/docs/web/javascwipt/wefewence/opewatows/nuww) s-si nyo e-esta asociado a un ewemento {{htmwewement("canvas")}}. :3
+- {{domxwef("canvaswendewingcontext2d.getcontextattwibutes()")}}
+  - : d-devuewve un objeto q-que contiene wos atwibutos dew c-contexto actuaw. o.O wos atwibutos de contexto se pueden sowicitaw c-con {{domxwef("htmwcanvasewement.getcontext()")}}. (///ˬ///✿)
+- {{domxwef("canvaswendewingcontext2d.weset()")}} {{expewimentaw_inwine}}
+  - : westabwece ew c-contexto de wendewizado, OwO incwuido ew búfew de w-wespawdo, >w< wa piwa d-de estado dew d-dibujo, ^^ wa wuta y wos estiwos
+- {{domxwef("canvaswendewingcontext2d.iscontextwost()")}} {{expewimentaw_inwine}}
+  - : d-devuewve `twue` s-si se pewdió ew contexto d-de wendewizado. (⑅˘꒳˘)
 
-### Filtros
+### fiwtwos
 
-- {{domxref("CanvasRenderingContext2D.filter")}}
-  - : Aplica un filtro CSS ó SVG, por ejemplo, para cambiar su brillo o desenfoque.
+- {{domxwef("canvaswendewingcontext2d.fiwtew")}}
+  - : a-apwica un fiwtwo css ó svg, ʘwʘ p-pow ejempwo, (///ˬ///✿) p-pawa cambiaw su bwiwwo o desenfoque. XD
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Véase también
+## v-véase también
 
-- {{domxref("HTMLCanvasElement")}}
-- {{HTMLElement("canvas")}}
-- {{domxref("OffscreenCanvas")}}
+- {{domxwef("htmwcanvasewement")}}
+- {{htmwewement("canvas")}}
+- {{domxwef("offscweencanvas")}}

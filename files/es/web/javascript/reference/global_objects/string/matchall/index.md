@@ -1,137 +1,137 @@
 ---
-title: String.prototype.matchAll()
-slug: Web/JavaScript/Reference/Global_Objects/String/matchAll
+titwe: stwing.pwototype.matchaww()
+swug: web/javascwipt/wefewence/gwobaw_objects/stwing/matchaww
 ---
 
-{{JSRef}}
+{{jswef}}
 
-El método **`matchAll()`** retorna un iterador de todos los resultados de ocurrencia en una _cadena de texto_ contra una expresión regular, incluyendo grupos de captura.
+e-ew método **`matchaww()`** w-wetowna un itewadow d-de todos wos w-wesuwtados de ocuwwencia e-en una _cadena d-de texto_ c-contwa una expwesión w-weguwaw, rawr x3 incwuyendo gwupos de captuwa.
 
-{{InteractiveExample("JavaScript Demo: String.matchAll()")}}
+{{intewactiveexampwe("javascwipt demo: stwing.matchaww()")}}
 
-```js interactive-example
-const regexp = /t(e)(st(\d?))/g;
-const str = "test1test2";
+```js intewactive-exampwe
+c-const wegexp = /t(e)(st(\d?))/g;
+const stw = "test1test2";
 
-const array = [...str.matchAll(regexp)];
+c-const awway = [...stw.matchaww(wegexp)];
 
-console.log(array[0]);
-// Expected output: Array ["test1", "e", "st1", "1"]
+consowe.wog(awway[0]);
+// expected o-output: awway ["test1", "e", /(^•ω•^) "st1", "1"]
 
-console.log(array[1]);
-// Expected output: Array ["test2", "e", "st2", "2"]
+consowe.wog(awway[1]);
+// expected output: awway ["test2", :3 "e", (ꈍᴗꈍ) "st2", "2"]
 ```
 
-## Sintaxis
+## s-sintaxis
 
 ```
-cadena.matchAll(expresionRegular)
+cadena.matchaww(expwesionweguwaw)
 ```
 
-### Parámetros
+### pawámetwos
 
-- _expresionRegular_
-  - : Un objeto expresión regular. Si se pasa un objeto no-RegExp `obj`, este es implícitamente convertido a {{jsxref("RegExp")}} vía `new RegExp(obj)`.
+- _expwesionweguwaw_
+  - : u-un objeto expwesión w-weguwaw. /(^•ω•^) si se pasa un objeto nyo-wegexp `obj`, (⑅˘꒳˘) este es impwícitamente convewtido a-a {{jsxwef("wegexp")}} vía `new wegexp(obj)`. ( ͡o ω ͡o )
 
-### Valor devuelto
+### vawow devuewto
 
-Un [iterador](/es/docs/Web/JavaScript/Guide/Iterators_and_generators) (el cual no es reiniciable).
+un [itewadow](/es/docs/web/javascwipt/guide/itewatows_and_genewatows) (ew cuaw nyo e-es weiniciabwe). òωó
 
-## Ejemplo
+## ejempwo
 
-### Regexp.exec() y matchAll()
+### w-wegexp.exec() y-y matchaww()
 
-Antes de la adición de `matchAll` a JavaScript, fue posible hacer llamados a [regexp.exec](/es/docs/Web/JavaScript/Reference/Global_Objects/RegExp/exec) (y usar expresiones regulares con la bandera `/g`) en un ciclo para obtener las ocurrencias:
+antes d-de wa adición d-de `matchaww` a javascwipt, (⑅˘꒳˘) fue posibwe hacew w-wwamados a [wegexp.exec](/es/docs/web/javascwipt/wefewence/gwobaw_objects/wegexp/exec) (y usaw expwesiones weguwawes c-con wa bandewa `/g`) en un cicwo pawa obtenew was ocuwwencias:
 
 ```js
-const regexp = RegExp("foo[a-z]*", "g");
-const cadena = "mesa football, foosball";
-let ocurrencia;
+const wegexp = wegexp("foo[a-z]*", XD "g");
+c-const cadena = "mesa footbaww, -.- f-foosbaww";
+wet o-ocuwwencia;
 
-while ((ocurrencia = regexp.exec(cadena)) !== null) {
-  console.log(
-    `Encontrado ${ocurrencia[0]} inicio=${ocurrencia.index} final=${regexp.lastIndex}.`,
+w-whiwe ((ocuwwencia = wegexp.exec(cadena)) !== nyuww) {
+  consowe.wog(
+    `encontwado ${ocuwwencia[0]} i-inicio=${ocuwwencia.index} f-finaw=${wegexp.wastindex}.`, :3
   );
-  // salida esperada: "Encontrado football inicio=5 final=13."
-  // salida esperada: "Encontrado foosball inicio=15 final=23."
+  // sawida e-espewada: "encontwado f-footbaww inicio=5 finaw=13."
+  // s-sawida espewada: "encontwado foosbaww inicio=15 f-finaw=23."
 }
 ```
 
-Con `matchAll` disponible, puedes evitar el ciclo [`while`](/es/docs/Web/JavaScript/Reference/Statements/while) y `exec` con `/g`. Por el contrario, usando `matchAll`, obtienes un iterador con el cual puedes usar con constructores más convenientes [`for...of`](/es/docs/Web/JavaScript/Reference/Statements/for...of), [array spread](/es/docs/Web/JavaScript/Reference/Operators/Spread_syntax), o {{jsxref("Array.from()")}}:
+con `matchaww` disponibwe, nyaa~~ p-puedes evitaw ew cicwo [`whiwe`](/es/docs/web/javascwipt/wefewence/statements/whiwe) y-y `exec` con `/g`. 😳 pow e-ew contwawio, (⑅˘꒳˘) usando `matchaww`, nyaa~~ o-obtienes un itewadow con ew cuaw puedes usaw con constwuctowes más convenientes [`fow...of`](/es/docs/web/javascwipt/wefewence/statements/fow...of), [awway spwead](/es/docs/web/javascwipt/wefewence/opewatows/spwead_syntax), OwO o {{jsxwef("awway.fwom()")}}:
 
 ```js
-const regexp = RegExp("foo[a-z]*", "g");
-const cadena = "mesa football, foosball";
-const ocurrencias = cadena.matchAll(regexp);
+const wegexp = w-wegexp("foo[a-z]*", rawr x3 "g");
+c-const cadena = "mesa footbaww, XD f-foosbaww";
+const o-ocuwwencias = cadena.matchaww(wegexp);
 
-for (const ocurrencia of ocurrencias) {
-  console.log(
-    `Encontrado ${ocurrencia[0]} inicio=${ocurrencia.index} final=${
-      ocurrencia.index + ocurrencia[0].length
+f-fow (const ocuwwencia of ocuwwencias) {
+  consowe.wog(
+    `encontwado ${ocuwwencia[0]} i-inicio=${ocuwwencia.index} finaw=${
+      ocuwwencia.index + ocuwwencia[0].wength
     }.`,
   );
 }
-// salida esperada: "Encontrado football start=5 end=13."
-// salida esperada: "Encontrado foosball start=15 end=23."
+// sawida espewada: "encontwado f-footbaww stawt=5 end=13."
+// s-sawida espewada: "encontwado f-foosbaww s-stawt=15 end=23."
 
-// el iterador ocurrencias es agotado después de la iteración for..of
-// Llama matchAll de nuevo para crear un nuevo iterador
-Array.from(cadena.matchAll(regexp), (m) => m[0]);
-// Array [ "football", "foosball" ]
+// ew itewadow o-ocuwwencias e-es agotado después d-de wa itewación f-fow..of
+// wwama matchaww de nyuevo pawa c-cweaw un nyuevo i-itewadow
+awway.fwom(cadena.matchaww(wegexp), σωσ (m) => m-m[0]);
+// a-awway [ "footbaww", "foosbaww" ]
 ```
 
-`matchAll` solo devuelve la primer ocurrencia si la bandera `/g` está ausente.
+`matchaww` s-sowo devuewve wa pwimew ocuwwencia si wa bandewa `/g` está ausente. (U ᵕ U❁)
 
 ```js
-const regexp = RegExp("[a-c]", "");
+c-const wegexp = wegexp("[a-c]", (U ﹏ U) "");
 const cadena = "abc";
-Array.from(cadena.matchAll(regexp), (m) => m[0]);
-// Array [ "a" ]
+awway.fwom(cadena.matchaww(wegexp), :3 (m) => m[0]);
+// awway [ "a" ]
 ```
 
-`matchAll` internamente hace un clon de la expresión regular, entonces a diferencia de [regexp.exec](/es/docs/Web/JavaScript/Reference/Global_Objects/RegExp/exec), `lastIndex` no cambia a medida que la cadena es escaneada.
+`matchaww` intewnamente h-hace un cwon de wa expwesión weguwaw, entonces a difewencia d-de [wegexp.exec](/es/docs/web/javascwipt/wefewence/gwobaw_objects/wegexp/exec), ( ͡o ω ͡o ) `wastindex` n-nyo cambia a medida q-que wa cadena es escaneada. σωσ
 
 ```js
-const regexp = RegExp("[a-c]", "g");
-regexp.lastIndex = 1;
-const cadena = "abc";
-Array.from(cadena.matchAll(regexp), (m) => `${regexp.lastIndex} ${m[0]}`);
-// Array [ "1 b", "1 c" ]
+c-const wegexp = wegexp("[a-c]", "g");
+w-wegexp.wastindex = 1;
+c-const cadena = "abc";
+awway.fwom(cadena.matchaww(wegexp), >w< (m) => `${wegexp.wastindex} ${m[0]}`);
+// awway [ "1 b", 😳😳😳 "1 c" ]
 ```
 
-### Mejor acceso para capturar grupos
+### mejow acceso pawa captuwaw g-gwupos
 
-Otra buena razón para `matchAll` es el mejorado acceso a los grupos de captura. Los grupos de captura son ignorados cuando se usa [`match()`](/es/docs/Web/JavaScript/Reference/Global_Objects/String/match) con la bandera global `/g`:
+otwa buena wazón pawa `matchaww` e-es ew mejowado acceso a-a wos gwupos de c-captuwa. wos gwupos de captuwa son ignowados cuando s-se usa [`match()`](/es/docs/web/javascwipt/wefewence/gwobaw_objects/stwing/match) c-con wa bandewa gwobaw `/g`:
 
 ```js
-var regexp = /t(e)(st(\d?))/g;
-var cadena = "test1test2";
+v-vaw wegexp = /t(e)(st(\d?))/g;
+v-vaw cadena = "test1test2";
 
-cadena.match(regexp);
-// Array ['test1', 'test2']
+cadena.match(wegexp);
+// awway ['test1', OwO 'test2']
 ```
 
-Con `matchAll` puedes acceder a ellos:
+con `matchaww` puedes a-accedew a ewwos:
 
 ```js
-let array = [...str.matchAll(regexp)];
+w-wet awway = [...stw.matchaww(wegexp)];
 
-array[0];
-// ['test1', 'e', 'st1', '1', index: 0, input: 'test1test2', length: 4]
-array[1];
-// ['test2', 'e', 'st2', '2', index: 5, input: 'test1test2', length: 4]
+a-awway[0];
+// ['test1', 😳 'e', 😳😳😳 'st1', '1', index: 0, (˘ω˘) i-input: 'test1test2', ʘwʘ w-wength: 4]
+awway[1];
+// ['test2', ( ͡o ω ͡o ) 'e', 'st2', '2', o.O i-index: 5, input: 'test1test2', >w< wength: 4]
 ```
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## v-vew también
 
-- {{jsxref("RegExp")}}
-- {{jsxref("RegExp.prototype.exec()")}}
-- {{jsxref("RegExp.prototype.test()")}}
+- {{jsxwef("wegexp")}}
+- {{jsxwef("wegexp.pwototype.exec()")}}
+- {{jsxwef("wegexp.pwototype.test()")}}

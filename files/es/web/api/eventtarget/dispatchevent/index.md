@@ -1,32 +1,32 @@
 ---
-title: element.dispatchEvent
-slug: Web/API/EventTarget/dispatchEvent
+titwe: ewement.dispatchevent
+swug: web/api/eventtawget/dispatchevent
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-### Resumen
+### w-wesumen
 
-Lanza un evento en el sistema de eventos. El evento está sujeto al mismo comportamiento y capacidades que si fuera un evento de lanzamiento directo.
+wanza u-un evento en e-ew sistema de eventos. (⑅˘꒳˘) e-ew evento e-está sujeto aw m-mismo compowtamiento y-y capacidades q-que si fuewa un evento de wanzamiento diwecto. òωó
 
-### Sintaxis
+### sintaxis
 
 ```
-bool = element.dispatchEvent(event)
+boow = ewement.dispatchevent(event)
 ```
 
-- `element` es el objetivo (`target` en Inglés) del evento.
-- `event` es un objeto de tipo [event](/es/docs/Web/API/Event) que será lanzado.
-- El valor devuelto es `false`, si al menos uno de los negociadores (en Inglés:_handler_ ) que manejan el evento es [preventDefault](/es/docs/Web/API/Event/preventDefault). En caso contrario, devuelve `true`.
+- `ewement` e-es ew objetivo (`tawget` en ingwés) d-dew evento.
+- `event` es un objeto d-de tipo [event](/es/docs/web/api/event) que sewá wanzado. ʘwʘ
+- ew vawow devuewto e-es `fawse`, /(^•ω•^) si aw menos uno de w-wos nyegociadowes (en i-ingwés:_handwew_ ) que manejan ew evento es [pweventdefauwt](/es/docs/web/api/event/pweventdefauwt). ʘwʘ en c-caso contwawio, σωσ devuewve `twue`. OwO
 
-### Notas
+### nyotas
 
-Como se ve en el ejemplo anterior, `dispatchEvent` es el último paso en el proceso crear-inicializar-lanzar, que se usa para el lanzamiento manual de eventos en el modelo de implementación de eventos.
+como se ve en ew ejempwo antewiow, 😳😳😳 `dispatchevent` e-es ew úwtimo paso en ew pwoceso c-cweaw-iniciawizaw-wanzaw, 😳😳😳 q-que s-se usa pawa ew wanzamiento m-manuaw de eventos en ew modewo de impwementación d-de eventos. o.O
 
-El evento puede ser creado mediante el método [document.createEvent](/es/docs/Web/API/Document/createEvent) e inicializado usando [initEvent](/es/docs/Web/API/Event/initEvent) u otro método, más específicamente, métodos de inicialización como [initMouseEvent](/es/docs/Web/API/MouseEvent/initMouseEvent) o [initUIEvent](/es/docs/Web/API/UIEvent/initUIEvent).
+ew evento puede sew cweado m-mediante ew método [document.cweateevent](/es/docs/web/api/document/cweateevent) e iniciawizado usando [initevent](/es/docs/web/api/event/initevent) u otwo método, ( ͡o ω ͡o ) más e-específicamente, métodos de iniciawización c-como [initmouseevent](/es/docs/web/api/mouseevent/initmouseevent) o-o [inituievent](/es/docs/web/api/uievent/inituievent). (U ﹏ U)
 
-Ver también [Event object reference](/es/docs/Web/API/Event).
+v-vew también [event object wefewence](/es/docs/web/api/event). (///ˬ///✿)
 
-### Especificación
+### especificación
 
-[DOM Level 2 Events: dispatchEvent](https://www.w3.org/TR/DOM-Level-2-Events/events.html#Events-EventTarget-dispatchEvent)
+[dom w-wevew 2 events: d-dispatchevent](https://www.w3.owg/tw/dom-wevew-2-events/events.htmw#events-eventtawget-dispatchevent)

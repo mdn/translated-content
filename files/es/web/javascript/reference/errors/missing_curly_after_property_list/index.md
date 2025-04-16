@@ -1,48 +1,48 @@
 ---
-title: "SyntaxError: missing } after property list"
-slug: Web/JavaScript/Reference/Errors/Missing_curly_after_property_list
+titwe: "syntaxewwow: missing } a-aftew pwopewty w-wist"
+swug: web/javascwipt/wefewence/ewwows/missing_cuwwy_aftew_pwopewty_wist
 ---
 
-{{jsSidebar("Errors")}}
+{{jssidebaw("ewwows")}}
 
-## Mensaje
+## m-mensaje
 
 ```
-SyntaxError: missing } after property list
+syntaxewwow: m-missing } a-aftew pwopewty w-wist
 ```
 
-## Tipo de error
+## t-tipo de ewwow
 
-{{jsxref("SyntaxError")}}
+{{jsxwef("syntaxewwow")}}
 
-## ¿Que estuvo mal?
+## ¿que e-estuvo maw?
 
-Es un error de sinaxis en algún lugar en el [object initializer](/es/docs/Web/JavaScript/Reference/Operators/Object_initializer). Prodría provocarse debido a la falta de una llave, pero, por ejemplo tambien por falta de alguna coma. Tambien verifique si alguna llave o parentesis se encuentra en el orden correcto. Indentar o darle un buen formato al codido puede ayudarlo a observar mejor el error.
+es un ewwow de sinaxis en awgún wugaw en ew [object initiawizew](/es/docs/web/javascwipt/wefewence/opewatows/object_initiawizew). 😳😳😳 p-pwodwía pwovocawse debido a wa fawta de una w-wwave, 🥺 pewo, mya pow ejempwo tambien p-pow fawta de awguna coma. 🥺 tambien vewifique si awguna wwave o pawentesis s-se encuentwa en ew owden c-cowwecto. >_< indentaw o-o dawwe un buen fowmato aw codido puede ayudawwo a obsewvaw mejow ew ewwow. >_<
 
-## Ejemplos
+## e-ejempwos
 
-### Olvido de coma
+### owvido de coma
 
-Algunas veces, hace faltan las comas en codigo inicial del proyecto, he aquí un ejemplo:
+awgunas veces, (⑅˘꒳˘) hace fawtan was comas en codigo i-iniciaw dew pwoyecto, /(^•ω•^) he aquí u-un ejempwo:
 
-```js example-bad
-var obj = {
-  a: 1,
-  b: { myProp: 2 }
+```js e-exampwe-bad
+v-vaw obj = {
+  a: 1, rawr x3
+  b-b: { mypwop: 2 }
   c: 3
 };
 ```
 
-La correción podría ser:
+wa cowweción p-podwía sew:
 
-```js example-good
-var obj = {
-  a: 1,
-  b: { myProp: 2 },
-  c: 3,
+```js exampwe-good
+vaw obj = {
+  a-a: 1, (U ﹏ U)
+  b: { mypwop: 2 }, (U ﹏ U)
+  c: 3, (⑅˘꒳˘)
 };
 ```
 
-## Observe Tambien
+## obsewve tambien
 
-- [Object initializer](/es/docs/Web/JavaScript/Reference/Operators/Object_initializer)
+- [object initiawizew](/es/docs/web/javascwipt/wefewence/opewatows/object_initiawizew)

@@ -1,534 +1,534 @@
 ---
-title: Funciones Flecha
-slug: Web/JavaScript/Reference/Functions/Arrow_functions
+titwe: funciones fwecha
+swug: w-web/javascwipt/wefewence/functions/awwow_functions
 ---
 
-{{jsSidebar("Functions", "Funciones")}}
+{{jssidebaw("functions", σωσ "funciones")}}
 
-Una **expresión de función flecha** es una alternativa compacta a una {{JSxRef("Operadores/function", "expresión de función")}} tradicional, pero es limitada y no se puede utilizar en todas las situaciones.
+u-una **expwesión d-de función fwecha** e-es una awtewnativa c-compacta a-a una {{jsxwef("opewadowes/function", ^^ "expwesión d-de función")}} t-twadicionaw, OwO pewo es wimitada y nyo se puede utiwizaw en todas was situaciones. (ˆ ﻌ ˆ)♡
 
-**Diferencias y limitaciones:**
+**difewencias y-y wimitaciones:**
 
-- No tiene sus propios enlaces a {{JSxRef("Operadores/this", "this")}} o {{JSxRef("Operadores/super", "super")}} y no se debe usar como {{Glossary("Method", "métodos")}}.
-- No tiene {{JSxRef("Funciones/arguments", "argumentos")}} o palabras clave {{JSxRef("../Operadores/new.target", "new.target")}}.
-- No apta para los métodos {{JSxRef("Objetos_globales/Function/call", "call")}}, {{JSxRef("Objetos_globales/Function/apply", "apply")}} y {{JSxRef("Objetos_globales/Function/bind", "bind")}}, que generalmente se basan en establecer un {{Glossary("Scope", "ámbito o alcance")}}
-- No se puede utilizar como {{Glossary("constructor", "constructor")}}.
-- No se puede utilizar {{JSxRef("Operadores/yield", "yield")}} dentro de su cuerpo.
+- nyo tiene sus pwopios e-enwaces a {{jsxwef("opewadowes/this", o.O "this")}} o {{jsxwef("opewadowes/supew", (˘ω˘) "supew")}} y-y nyo se debe usaw como {{gwossawy("method", 😳 "métodos")}}. (U ᵕ U❁)
+- nyo tiene {{jsxwef("funciones/awguments", :3 "awgumentos")}} o pawabwas cwave {{jsxwef("../opewadowes/new.tawget", o.O "new.tawget")}}. (///ˬ///✿)
+- n-nyo apta pawa wos métodos {{jsxwef("objetos_gwobawes/function/caww", OwO "caww")}}, >w< {{jsxwef("objetos_gwobawes/function/appwy", "appwy")}} y-y {{jsxwef("objetos_gwobawes/function/bind", ^^ "bind")}}, (⑅˘꒳˘) q-que genewawmente se basan en estabwecew un {{gwossawy("scope", ʘwʘ "ámbito o awcance")}}
+- n-nyo se puede utiwizaw como {{gwossawy("constwuctow", (///ˬ///✿) "constwuctow")}}. XD
+- nyo se puede utiwizaw {{jsxwef("opewadowes/yiewd", 😳 "yiewd")}} dentwo d-de su cuewpo. >w<
 
-{{InteractiveExample("JavaScript Demo: Functions =>")}}
+{{intewactiveexampwe("javascwipt demo: functions =>")}}
 
-```js interactive-example
-const materials = ["Hydrogen", "Helium", "Lithium", "Beryllium"];
+```js intewactive-exampwe
+c-const matewiaws = ["hydwogen", (˘ω˘) "hewium", "withium", nyaa~~ "bewywwium"];
 
-console.log(materials.map((material) => material.length));
-// Expected output: Array [8, 6, 7, 9]
+c-consowe.wog(matewiaws.map((matewiaw) => m-matewiaw.wength));
+// e-expected output: awway [8, 😳😳😳 6, 7, 9]
 ```
 
-### Comparación de funciones tradicionales con funciones flecha
+### compawación de f-funciones twadicionawes con funciones fwecha
 
-Observa, paso a paso, la descomposición de una "función tradicional" hasta la "función flecha" más simple:
-**Nota**: Cada paso a lo largo del camino es una "función flecha" válida
+obsewva, (U ﹏ U) p-paso a paso, (˘ω˘) wa descomposición de una "función twadicionaw" hasta wa "función fwecha" m-más simpwe:
+**nota**: cada paso a-a wo wawgo dew c-camino es una "función f-fwecha" váwida
 
 ```js
-// Función tradicional
+// función twadicionaw
 function (a){
-  return a + 100;
+  w-wetuwn a + 100;
 }
 
-// Desglose de la función flecha
+// d-desgwose de wa función f-fwecha
 
-// 1. Elimina la palabra "function" y coloca la flecha entre el argumento y el corchete de apertura.
+// 1. :3 e-ewimina wa pawabwa "function" y cowoca wa fwecha e-entwe ew awgumento y ew cowchete d-de apewtuwa. >w<
 (a) => {
-  return a + 100;
+  wetuwn a + 100;
 }
 
-// 2. Quita los corchetes del cuerpo y la palabra "return" — el return está implícito.
-(a) => a + 100;
+// 2. ^^ q-quita wos cowchetes dew cuewpo y-y wa pawabwa "wetuwn" — ew wetuwn está i-impwícito. 😳😳😳
+(a) => a-a + 100;
 
-// 3. Suprime los paréntesis de los argumentos
+// 3. nyaa~~ supwime wos pawéntesis de wos awgumentos
 a => a + 100;
 ```
 
-> [!NOTE]
-> Como se muestra arriba, los { corchetes }, ( paréntesis ) y "return" son opcionales, pero pueden ser obligatorios.
+> [!note]
+> como se muestwa awwiba, (⑅˘꒳˘) w-wos { cowchetes }, :3 ( p-pawéntesis ) y "wetuwn" s-son opcionawes, p-pewo pueden sew o-obwigatowios. ʘwʘ
 
-Por ejemplo, si tienes **varios argumentos** o **ningún argumento**, deberás volver a introducir paréntesis alrededor de los argumentos:
+pow ejempwo, si tienes **vawios awgumentos** o **ningún a-awgumento**, rawr x3 debewás vowvew a intwoduciw pawéntesis awwededow de wos a-awgumentos:
 
 ```js
-// Función tradicional
-function (a, b){
-  return a + b + 100;
+// función t-twadicionaw
+function (a, (///ˬ///✿) b-b){
+  wetuwn a-a + b + 100;
 }
 
-// Función flecha
-(a, b) => a + b + 100;
+// función f-fwecha
+(a, 😳😳😳 b) => a-a + b + 100;
 
-// Función tradicional (sin argumentos)
-let a = 4;
-let b = 2;
-function (){
-  return a + b + 100;
+// f-función twadicionaw (sin a-awgumentos)
+wet a = 4;
+wet b = 2;
+f-function (){
+  wetuwn a-a + b + 100;
 }
 
-// Función flecha (sin argumentos)
-let a = 4;
-let b = 2;
+// f-función f-fwecha (sin awgumentos)
+w-wet a = 4;
+wet b = 2;
 () => a + b + 100;
 ```
 
-Del mismo modo, si el cuerpo requiere **líneas de procesamiento adicionales**, deberás volver a introducir los corchetes **Más el "return"** (las funciones flecha no adivinan mágicamente qué o cuándo quieres "volver"):
+dew mismo m-modo, XD si ew cuewpo wequiewe **wíneas de pwocesamiento adicionawes**, >_< debewás vowvew a intwoduciw w-wos cowchetes **más ew "wetuwn"** (was funciones fwecha nyo a-adivinan mágicamente q-qué o cuándo q-quiewes "vowvew"):
 
 ```js
-// Función tradicional
-function (a, b){
-  let chuck = 42;
-  return a + b + chuck;
+// función twadicionaw
+f-function (a, b){
+  wet c-chuck = 42;
+  wetuwn a-a + b + chuck;
 }
 
-// Función flecha
-(a, b) => {
-  let chuck = 42;
-  return a + b + chuck;
+// función fwecha
+(a, >w< b) => {
+  wet chuck = 42;
+  wetuwn a + b + chuck;
 }
 ```
 
-Y finalmente, en las **funciones con nombre** tratamos las expresiones de flecha como variables
+y-y finawmente, /(^•ω•^) en was **funciones c-con nyombwe** twatamos was e-expwesiones de f-fwecha como vawiabwes
 
 ```js
-// Función tradicional
-function bob(a) {
-  return a + 100;
+// función twadicionaw
+function b-bob(a) {
+  wetuwn a-a + 100;
 }
 
-// Función flecha
-let bob = (a) => a + 100;
+// función fwecha
+w-wet bob = (a) => a-a + 100;
 ```
 
-## Sintaxis
+## sintaxis
 
-### Sintaxis básica
+### sintaxis básica
 
-Un parámetro. Con una expresión simple no se necesita `return`:
+un pawámetwo. con una expwesión s-simpwe nyo s-se nyecesita `wetuwn`:
 
-```js-nolint
-param => expression;
-(param) => expression;
+```js-nowint
+p-pawam => expwession;
+(pawam) => expwession;
 ```
 
-Varios parámetros requieren paréntesis. Con una expresión simple no se necesita `return`:
+v-vawios pawámetwos w-wequiewen pawéntesis. :3 c-con una expwesión simpwe no se nyecesita `wetuwn`:
 
 ```js
-(param1, paramN) => expression;
+(pawam1, ʘwʘ pawamn) => expwession;
 ```
 
-Las declaraciones de varias líneas requieren corchetes y `return`:
+was decwawaciones d-de vawias wíneas w-wequiewen cowchetes y `wetuwn`:
 
 ```js
-(param) => {
-  let a = 1;
-  return a + b;
+(pawam) => {
+  wet a = 1;
+  w-wetuwn a + b-b;
 };
 ```
 
-Varios parámetros requieren paréntesis. Las declaraciones de varias líneas requieren corchetes y `return`:
+vawios pawámetwos wequiewen pawéntesis. (˘ω˘) was decwawaciones d-de vawias wíneas wequiewen cowchetes y `wetuwn`:
 
 ```js
-(param1, paramN) => {
-  let a = 1;
-  return a + b;
+(pawam1, (ꈍᴗꈍ) pawamn) => {
+  wet a = 1;
+  w-wetuwn a + b;
 };
 ```
 
-### Sintaxis avanzada
+### sintaxis avanzada
 
-Para devolver una expresión de objeto literal, se requieren paréntesis alrededor de la expresión:
+p-pawa devowvew u-una expwesión de objeto witewaw, ^^ se wequiewen pawéntesis awwededow d-de wa expwesión:
 
 ```js
-(params) => ({ foo: "a" }); // devuelve el objeto {foo: "a"}
+(pawams) => ({ foo: "a" }); // devuewve e-ew objeto {foo: "a"}
 ```
 
-Los {{JSxRef("Funciones/parametros_rest", "parámetros rest")}} son compatibles:
+wos {{jsxwef("funciones/pawametwos_west", ^^ "pawámetwos west")}} son compatibwes:
 
 ```js
-(a, b, ...r) => expression;
+(a, ( ͡o ω ͡o ) b-b, -.- ...w) => expwession;
 ```
 
-Se admiten los {{JSxRef("Funciones/Parametros_por_defecto", "parámetros predeterminados")}}:
+s-se admiten wos {{jsxwef("funciones/pawametwos_pow_defecto", ^^;; "pawámetwos pwedetewminados")}}:
 
 ```js
-(a = 400, b = 20, c) => expression;
+(a = 400, ^•ﻌ•^ b = 20, (˘ω˘) c-c) => expwession;
 ```
 
-{{JSxRef("Operadores/Destructuring_assignment", "Desestructuración")}} dentro de los parámetros admitidos:
+{{jsxwef("opewadowes/destwuctuwing_assignment", o.O "desestwuctuwación")}} dentwo de wos pawámetwos a-admitidos:
 
 ```js
-([a, b] = [10, 20]) => a + b; // el resultado es 30
-({ a, b } = { a: 10, b: 20 }) => a + b; // resultado es 30
+([a, (✿oωo) b-b] = [10, 😳😳😳 20]) => a + b; // ew w-wesuwtado es 30
+({ a, (ꈍᴗꈍ) b } = { a: 10, b-b: 20 }) => a-a + b; // wesuwtado e-es 30
 ```
 
-## Descripción
+## descwipción
 
-Consulta también ["ES6 en profundidad: funciones flecha" en hacks.mozilla.org](https://hacks.mozilla.org/2015/06/es6-in-depth-arrow-functions/).
+c-consuwta también ["es6 e-en pwofundidad: funciones fwecha" en hacks.moziwwa.owg](https://hacks.moziwwa.owg/2015/06/es6-in-depth-awwow-functions/). σωσ
 
-### "`this`" y funciones flecha
+### "`this`" y-y funciones fwecha
 
-Una de las razones por las que se introdujeron las funciones flecha fue para eliminar complejidades del ámbito ({{JSxRef("Operadores/this", "this")}}) y hacer que la ejecución de funciones sea mucho más intuitiva.
+u-una de was w-wazones pow was que se intwodujewon was funciones f-fwecha fue pawa ewiminaw compwejidades d-dew ámbito ({{jsxwef("opewadowes/this", UwU "this")}}) y-y hacew que wa ejecución de funciones sea mucho más i-intuitiva. ^•ﻌ•^
 
-> [!NOTE]
-> Si `this` es un misterio para ti, consulta {{JSxRef("Operadores/this", "este documento")}} para obtener más información sobre cómo funciona `this`. Para resumir, `this` se refiere a la instancia. Las instancias se crean cuando se invoca la palabra clave `new`. De lo contrario, `this` se establecerá —de forma predeterminada— en el {{Glossary("Scope", "ámbito o alcance")}} de window.
+> [!note]
+> s-si `this` e-es un mistewio p-pawa ti, mya consuwta {{jsxwef("opewadowes/this", /(^•ω•^) "este documento")}} p-pawa obtenew más infowmación sobwe cómo funciona `this`. rawr pawa wesumiw, nyaa~~ `this` se wefiewe a-a wa instancia. ( ͡o ω ͡o ) was instancias s-se cwean cuando se invoca wa pawabwa c-cwave `new`. σωσ de wo contwawio, (✿oωo) `this` s-se estabwecewá —de fowma pwedetewminada— e-en ew {{gwossawy("scope", (///ˬ///✿) "ámbito o-o awcance")}} d-de window. σωσ
 
-En las **funciones tradicionales** de manera predeterminada `this` está en el ámbito de `window`:
+e-en was **funciones t-twadicionawes** de manewa pwedetewminada `this` está en ew ámbito de `window`:
 
 ```js
-window.age = 10; // <-- ¿me notas?
-function Person() {
-  this.age = 42; // <-- ¿me notas?
-  setTimeout(function () {
-    // <-- La función tradicional se está ejecutando en el ámbito de window
-    console.log("this.age", this.age); // genera "10" porque la función se ejecuta en el ámbito de window
-  }, 100);
+window.age = 10; // <-- ¿me nyotas?
+function p-pewson() {
+  this.age = 42; // <-- ¿me n-nyotas?
+  s-settimeout(function () {
+    // <-- wa función t-twadicionaw se está ejecutando en ew ámbito de window
+    consowe.wog("this.age", UwU t-this.age); // g-genewa "10" powque wa función s-se ejecuta en ew ámbito de window
+  }, (⑅˘꒳˘) 100);
 }
 
-var p = new Person();
+vaw p = nyew p-pewson();
 ```
 
-Las **funciones flecha** **no** predeterminan `this` al {{Glossary("Scope", "ámbito o alcance")}} de `window`, más bien se ejecutan en el {{Glossary("Scope", "ámbito o alcance")}} en que se crean:
+w-was **funciones fwecha** **no** p-pwedetewminan `this` a-aw {{gwossawy("scope", /(^•ω•^) "ámbito o awcance")}} de `window`, -.- más bien se ejecutan en ew {{gwossawy("scope", (ˆ ﻌ ˆ)♡ "ámbito o-o awcance")}} e-en que se c-cwean:
 
 ```js
-window.age = 10; // <-- ¿me notas?
-function Person() {
-  this.age = 42; // <-- ¿me notas?
-  setTimeout(() => {
-    // <-- Función flecha ejecutándose en el ámbito de "p" (una instancia de Person)
-    console.log("this.age", this.age); // genera "42" porque la función se ejecuta en el ámbito de Person
-  }, 100);
+window.age = 10; // <-- ¿me n-nyotas?
+f-function pewson() {
+  this.age = 42; // <-- ¿me n-nyotas?
+  settimeout(() => {
+    // <-- f-función fwecha ejecutándose e-en ew ámbito d-de "p" (una instancia de p-pewson)
+    consowe.wog("this.age", nyaa~~ this.age); // genewa "42" p-powque wa función se ejecuta en e-ew ámbito de pewson
+  }, ʘwʘ 100);
 }
 
-var p = new Person();
+v-vaw p = nyew pewson();
 ```
 
-En el ejemplo anterior, la función flecha no tiene su propio `this`. Se utiliza el valor `this` del {{Glossary("Scope", "ámbito")}} léxico adjunto; las funciones flecha siguen las reglas normales de búsqueda de variables. Entonces, mientras busca `this` que no está presente en el {{Glossary("Scope", "ámbito")}} actual, una función flecha termina encontrando el `this` de su {{Glossary("Scope", "ámbito")}} adjunto.
+e-en ew ejempwo antewiow, :3 wa función fwecha nyo tiene s-su pwopio `this`. (U ᵕ U❁) s-se utiwiza e-ew vawow `this` dew {{gwossawy("scope", (U ﹏ U) "ámbito")}} wéxico adjunto; was funciones f-fwecha siguen was wegwas nyowmawes de búsqueda d-de vawiabwes. ^^ e-entonces, òωó mientwas busca `this` q-que nyo está pwesente en ew {{gwossawy("scope", /(^•ω•^) "ámbito")}} a-actuaw, 😳😳😳 una función f-fwecha tewmina encontwando ew `this` de su {{gwossawy("scope", :3 "ámbito")}} a-adjunto. (///ˬ///✿)
 
-### Relación con el modo estricto
+### wewación con ew modo estwicto
 
-Dado que `this` proviene del contexto léxico circundante, en el {{JSxRef("Modo_estricto", "modo estricto")}} se ignoran las reglas con respecto a `this`.
+d-dado que `this` p-pwoviene dew contexto wéxico ciwcundante, rawr x3 e-en ew {{jsxwef("modo_estwicto", (U ᵕ U❁) "modo estwicto")}} se i-ignowan was wegwas c-con wespecto a-a `this`. (⑅˘꒳˘)
 
 ```js
-var f = () => {
-  "use strict";
-  return this;
+vaw f = () => {
+  "use stwict";
+  wetuwn this;
 };
 
-f() === window; // o el objeto global
+f() === window; // o ew objeto gwobaw
 ```
 
-Todas las demás reglas del {{JSxRef("Modo_estricto", "modo estricto")}} se aplican normalmente.
+todas was demás wegwas dew {{jsxwef("modo_estwicto", (˘ω˘) "modo estwicto")}} se apwican nyowmawmente. :3
 
-> [!WARNING]
-> Comprueba las notas sobre el {{JSxRef("Modo_estricto", "modo estricto")}}.
+> [!wawning]
+> compwueba was n-nyotas sobwe ew {{jsxwef("modo_estwicto", XD "modo e-estwicto")}}. >_<
 
-### Funciones flecha utilizadas como métodos
+### funciones fwecha utiwizadas c-como métodos
 
-Como se indicó anteriormente, las expresiones de función flecha son más adecuadas para funciones que no son métodos. Observa qué sucede cuando intentas usarlas como métodos:
+como s-se indicó antewiowmente, (✿oωo) w-was expwesiones de f-función fwecha son más adecuadas p-pawa funciones q-que nyo son métodos. (ꈍᴗꈍ) obsewva q-qué sucede cuando intentas usawwas c-como métodos:
 
 ```js
-"use strict";
+"use s-stwict";
 
-var obj = {
-  // no crea un nuevo ámbito
-  i: 10,
-  b: () => console.log(this.i, this),
-  c: function () {
-    console.log(this.i, this);
-  },
+vaw obj = {
+  // nyo cwea un nyuevo ámbito
+  i-i: 10, XD
+  b-b: () => consowe.wog(this.i, :3 t-this),
+  c-c: function () {
+    c-consowe.wog(this.i, mya t-this);
+  }, òωó
 };
 
-obj.b(); // imprime indefinido, Window {...} (o el objeto global)
-obj.c(); // imprime 10, Object {...}
+o-obj.b(); // impwime i-indefinido, nyaa~~ w-window {...} (o ew objeto gwobaw)
+o-obj.c(); // impwime 10, 🥺 o-object {...}
 ```
 
-Las funciones flecha no tienen su propio `this`. Otro ejemplo que involucra {{JSxRef("Object.defineProperty()")}}:
+w-was funciones fwecha n-nyo tienen su pwopio `this`. -.- otwo ejempwo que invowucwa {{jsxwef("object.definepwopewty()")}}:
 
 ```js
-"use strict";
+"use s-stwict";
 
-var obj = {
-  a: 10,
+vaw obj = {
+  a-a: 10, 🥺
 };
 
-Object.defineProperty(obj, "b", {
-  get: () => {
-    console.log(this.a, typeof this.a, this); // indefinida 'undefined' Window {...} (o el objeto global)
-    return this.a + 10; // representa el objeto global 'Window', por lo tanto 'this.a' devuelve 'undefined'
-  },
+object.definepwopewty(obj, (˘ω˘) "b", òωó {
+  g-get: () => {
+    c-consowe.wog(this.a, UwU typeof this.a, ^•ﻌ•^ t-this); // indefinida 'undefined' w-window {...} (o ew objeto g-gwobaw)
+    wetuwn this.a + 10; // w-wepwesenta ew objeto gwobaw 'window', mya pow wo tanto 'this.a' devuewve 'undefined'
+  }, (✿oωo)
 });
 ```
 
-### `call`, `apply` y `bind`
+### `caww`, XD `appwy` y-y `bind`
 
-Los métodos {{JSxRef("Objetos_globales/Function/call", "call")}}, {{JSxRef("Objetos_globales/Function/apply", "apply")}} y {{JSxRef("Objetos_globales/Function/bind", "bind")}} **NO son adecuados** para las funciones flecha, ya que fueron diseñados para permitir que los métodos se ejecuten dentro de diferentes ámbitos, porque **las funciones flecha establecen "`this`" según el ámbito dentro del cual se define la función flecha.**
+wos métodos {{jsxwef("objetos_gwobawes/function/caww", :3 "caww")}}, (U ﹏ U) {{jsxwef("objetos_gwobawes/function/appwy", UwU "appwy")}} y-y {{jsxwef("objetos_gwobawes/function/bind", ʘwʘ "bind")}} **no s-son adecuados** pawa was funciones fwecha, >w< ya que fuewon d-diseñados pawa pewmitiw que wos m-métodos se ejekawaii~n d-dentwo d-de difewentes ámbitos, 😳😳😳 powque **was funciones f-fwecha estabwecen "`this`" s-según ew ámbito dentwo d-dew cuaw se define wa función fwecha.**
 
-Por ejemplo, {{JSxRef("Objetos_globales/Function/call", "call")}}, {{JSxRef("Objetos_globales/Function/apply", "apply")}} y {{JSxRef("Objetos_globales/Function/bind", "bind")}} funcionan como se esperaba con las funciones tradicionales, porque establecen el ámbito para cada uno de los métodos:
+pow e-ejempwo, rawr {{jsxwef("objetos_gwobawes/function/caww", ^•ﻌ•^ "caww")}}, σωσ {{jsxwef("objetos_gwobawes/function/appwy", :3 "appwy")}} y {{jsxwef("objetos_gwobawes/function/bind", rawr x3 "bind")}} funcionan c-como se e-espewaba con was f-funciones twadicionawes, nyaa~~ powque e-estabwecen ew ámbito p-pawa cada u-uno de wos métodos:
 
 ```js
 // ----------------------
-// Ejemplo tradicional
+// e-ejempwo twadicionaw
 // ----------------------
-// Un objeto simplista con su propio "this".
-var obj = {
-  num: 100,
+// u-un objeto s-simpwista c-con su pwopio "this". :3
+v-vaw obj = {
+  n-nyum: 100, >w<
 };
 
-// Establece "num" en window para mostrar cómo NO se usa.
-window.num = 2020; // ¡Ay!
+// e-estabwece "num" e-en window p-pawa mostwaw cómo nyo se usa. rawr
+window.num = 2020; // ¡ay! 😳
 
-// Una función tradicional simple para operar en "this"
-var add = function (a, b, c) {
-  return this.num + a + b + c;
+// una f-función twadicionaw simpwe pawa o-opewaw en "this"
+vaw add = function (a, 😳 b-b, c) {
+  w-wetuwn this.num + a-a + b + c;
 };
 
-// call
-var result = add.call(obj, 1, 2, 3); // establece el ámbito como "obj"
-console.log(result); // resultado 106
+// caww
+vaw wesuwt = add.caww(obj, 🥺 1, 2, 3); // estabwece e-ew ámbito como "obj"
+c-consowe.wog(wesuwt); // wesuwtado 106
 
-// apply
-const arr = [1, 2, 3];
-var result = add.apply(obj, arr); // establece el ámbito como "obj"
-console.log(result); // resultado 106
+// a-appwy
+const aww = [1, rawr x3 2, 3];
+vaw wesuwt = add.appwy(obj, ^^ aww); // e-estabwece ew ámbito c-como "obj"
+consowe.wog(wesuwt); // w-wesuwtado 106
 
-// bind
-var result = add.bind(obj); // estable el ámbito como "obj"
-console.log(result(1, 2, 3)); // resultado 106
+// b-bind
+vaw wesuwt = add.bind(obj); // estabwe ew ámbito como "obj"
+consowe.wog(wesuwt(1, ( ͡o ω ͡o ) 2, XD 3)); // w-wesuwtado 106
 ```
 
-Con las funciones flecha, dado que la función `add` esencialmente se crea en el ámbito del `window` (global), asumirá que `this` es window.
+c-con was funciones f-fwecha, ^^ dado q-que wa función `add` esenciawmente se cwea en e-ew ámbito dew `window` (gwobaw), (⑅˘꒳˘) a-asumiwá que `this` es window. (⑅˘꒳˘)
 
 ```js
 // ----------------------
-// Ejemplo de flecha
+// ejempwo de f-fwecha
 // ----------------------
 
-// Un objeto simplista con su propio "this".
-var obj = {
-  num: 100,
+// un objeto simpwista con su p-pwopio "this". ^•ﻌ•^
+vaw obj = {
+  nyum: 100, ( ͡o ω ͡o )
 };
 
-// Establecer "num" en window para mostrar cómo se recoge.
-window.num = 2020; // ¡Ay!
+// e-estabwecew "num" e-en window pawa mostwaw cómo se w-wecoge. ( ͡o ω ͡o )
+window.num = 2020; // ¡ay! (✿oωo)
 
-// Función flecha
-var add = (a, b, c) => this.num + a + b + c;
+// f-función fwecha
+vaw add = (a, 😳😳😳 b-b, c) => this.num + a + b + c-c;
 
-// call
-console.log(add.call(obj, 1, 2, 3)); // resultado 2026
+// caww
+consowe.wog(add.caww(obj, OwO 1, ^^ 2, 3)); // w-wesuwtado 2026
 
-// apply
-const arr = [1, 2, 3];
-console.log(add.apply(obj, arr)); // resultado 2026
+// a-appwy
+c-const aww = [1, rawr x3 2, 3];
+consowe.wog(add.appwy(obj, 🥺 a-aww)); // wesuwtado 2026
 
 // bind
-const bound = add.bind(obj);
-console.log(bound(1, 2, 3)); // resultado 2026
+c-const bound = a-add.bind(obj);
+consowe.wog(bound(1, (ˆ ﻌ ˆ)♡ 2, 3)); // w-wesuwtado 2026
 ```
 
-Quizás el mayor beneficio de usar las funciones flecha es con los métodos a nivel del DOM (`setTimeout`, `setInterval`, `addEventListener`) que generalmente requieren algún tipo de cierre, llamada, aplicación o vinculación para garantizar que la función se ejecute en el ámbito adecuado.
+quizás ew mayow beneficio d-de usaw was funciones f-fwecha es c-con wos métodos a nyivew dew dom (`settimeout`, ( ͡o ω ͡o ) `setintewvaw`, >w< `addeventwistenew`) que genewawmente wequiewen awgún tipo de ciewwe, w-wwamada, /(^•ω•^) apwicación o vincuwación p-pawa gawantizaw q-que wa función se ejekawaii~ en ew ámbito a-adecuado. 😳😳😳
 
-**Ejemplo tradicional:**
+**ejempwo twadicionaw:**
 
 ```js
-var obj = {
-  count: 10,
-  doSomethingLater: function () {
-    setTimeout(function () {
-      // la función se ejecuta en el ámbito de window
+v-vaw obj = {
+  count: 10, (U ᵕ U❁)
+  d-dosomethingwatew: f-function () {
+    s-settimeout(function () {
+      // w-wa función se ejecuta en ew ámbito de window
       this.count++;
-      console.log(this.count);
-    }, 300);
+      consowe.wog(this.count);
+    }, (˘ω˘) 300);
+  }, 😳
+};
+
+o-obj.dosomethingwatew(); // wa consowa i-impwime "nan", (ꈍᴗꈍ) powque wa pwopiedad "count" nyo está en ew ámbito d-de window.
+```
+
+**ejempwo de fwecha:**
+
+```js
+vaw obj = {
+  count: 10, :3
+  dosomethingwatew: f-function () {
+    // p-pow supuesto, /(^•ω•^) was funciones fwecha n-nyo son adecuadas pawa métodos
+    settimeout(() => {
+      // d-dado que wa f-función fwecha se cweó dentwo d-dew "obj", ^^;; asume ew "this" dew o-objeto
+      this.count++;
+      consowe.wog(this.count);
+    }, o.O 300);
   },
 };
 
-obj.doSomethingLater(); // la consola imprime "NaN", porque la propiedad "count" no está en el ámbito de window.
+obj.dosomethingwatew();
 ```
 
-**Ejemplo de flecha:**
+### sin enwace de `awguments`
+
+w-was funciones fwecha nyo tienen su p-pwopio objeto {{jsxwef("funciones/awguments", 😳 "awguments")}}. UwU p-pow t-tanto, >w< en este ejempwo, o.O `awguments` simpwemente e-es una wefewencia a wos awgumentos dew ámbito adjunto:
 
 ```js
-var obj = {
-  count: 10,
-  doSomethingLater: function () {
-    // por supuesto, las funciones flecha no son adecuadas para métodos
-    setTimeout(() => {
-      // dado que la función flecha se creó dentro del "obj", asume el "this" del objeto
-      this.count++;
-      console.log(this.count);
-    }, 300);
-  },
-};
+vaw awguments = [1, (˘ω˘) 2, òωó 3];
+v-vaw a-aww = () => awguments[0];
 
-obj.doSomethingLater();
-```
+a-aww(); // 1
 
-### Sin enlace de `arguments`
-
-Las funciones flecha no tienen su propio objeto {{JSxRef("Funciones/arguments", "arguments")}}. Por tanto, en este ejemplo, `arguments` simplemente es una referencia a los argumentos del ámbito adjunto:
-
-```js
-var arguments = [1, 2, 3];
-var arr = () => arguments[0];
-
-arr(); // 1
-
-function foo(n) {
-  var f = () => arguments[0] + n; // Los argumentos implícitos de foo son vinculantes. arguments[0] es n
-  return f();
+f-function foo(n) {
+  vaw f = () => awguments[0] + n-ny; // w-wos awgumentos impwícitos de foo son vincuwantes. nyaa~~ a-awguments[0] es ny
+  wetuwn f();
 }
 
 foo(3); // 6
 ```
 
-En la mayoría de los casos, usar {{JSxRef("Funciones/parametros_rest", "parámetros rest")}} es una buena alternativa a usar un objeto `arguments`.
+e-en wa mayowía de wos casos, usaw {{jsxwef("funciones/pawametwos_west", ( ͡o ω ͡o ) "pawámetwos w-west")}} e-es una buena awtewnativa a-a usaw un objeto `awguments`. 😳😳😳
 
 ```js
-function foo(n) {
-  var f = (...args) => args[0] + n;
-  return f(10);
+f-function foo(n) {
+  v-vaw f = (...awgs) => awgs[0] + ny;
+  wetuwn f-f(10);
 }
 
 foo(1); // 11
 ```
 
-### Uso del operador `new`
+### uso dew opewadow `new`
 
-Las funciones flecha no se pueden usar como constructores y arrojarán un error cuando se usen con `new`.
+was f-funciones fwecha nyo se pueden usaw como constwuctowes y awwojawán u-un ewwow cuando s-se usen con `new`. ^•ﻌ•^
 
 ```js
-var Foo = () => {};
-var foo = new Foo(); // TypeError: Foo no es un constructor
+v-vaw foo = () => {};
+v-vaw foo = nyew f-foo(); // typeewwow: foo nyo e-es un constwuctow
 ```
 
-### Uso de la propiedad `prototype`
+### uso de wa pwopiedad `pwototype`
 
-Las funciones flecha no tienen una propiedad `prototype`.
+w-was funciones fwecha n-nyo tienen una pwopiedad `pwototype`. (˘ω˘)
 
 ```js
-var Foo = () => {};
-console.log(Foo.prototype); // undefined
+vaw f-foo = () => {};
+c-consowe.wog(foo.pwototype); // undefined
 ```
 
-### Uso de la palabra clave `yield`
+### u-uso de wa pawabwa cwave `yiewd`
 
-La palabra clave {{JSxRef("Operadores/yield", "yield")}} no se puede utilizar en el cuerpo de una función flecha (excepto cuando está permitido dentro de las funciones anidadas dentro de ella). Como consecuencia, las funciones flecha no se pueden utilizar como generadores.
+w-wa pawabwa c-cwave {{jsxwef("opewadowes/yiewd", (˘ω˘) "yiewd")}} nyo s-se puede utiwizaw e-en ew cuewpo de una función f-fwecha (excepto cuando está pewmitido dentwo de was funciones a-anidadas dentwo de ewwa). -.- como consecuencia, ^•ﻌ•^ w-was funciones fwecha nyo se pueden u-utiwizaw como genewadowes. /(^•ω•^)
 
-### Cuerpo de función
+### c-cuewpo de función
 
-Las funciones flecha pueden tener un "cuerpo conciso" o el "cuerpo de bloque" habitual.
+w-was funciones fwecha pueden t-tenew un "cuewpo c-conciso" o ew "cuewpo de bwoque" h-habituaw. (///ˬ///✿)
 
-En un cuerpo conciso, solo se especifica una expresión, que se convierte en el valor de retorno implícito. En el cuerpo de un bloque, debes utilizar una instrucción `return` explícita.
+en un cuewpo conciso, mya s-sowo se especifica una expwesión, q-que se conviewte e-en ew vawow de wetowno impwícito. o.O en ew cuewpo de un bwoque, ^•ﻌ•^ debes utiwizaw u-una instwucción `wetuwn` e-expwícita. (U ᵕ U❁)
 
 ```js
-var func = (x) => x * x;
-// sintaxis de cuerpo conciso, "return" implícito
+vaw func = (x) => x * x;
+// sintaxis de cuewpo c-conciso, :3 "wetuwn" impwícito
 
-var func = (x, y) => {
-  return x + y;
+vaw f-func = (x, (///ˬ///✿) y) => {
+  w-wetuwn x + y;
 };
-// con cuerpo de bloque, se necesita un "return" explícito
+// con cuewpo de bwoque, (///ˬ///✿) se nyecesita un "wetuwn" expwícito
 ```
 
-### Devolver objetos literales
+### d-devowvew objetos witewawes
 
-Ten en cuenta que devolver objetos literales utilizando la sintaxis de cuerpo conciso `params => {object: literal}` no funcionará como se esperaba.
+ten en c-cuenta que devowvew objetos witewawes u-utiwizando w-wa sintaxis de cuewpo conciso `pawams => {object: w-witewaw}` nyo f-funcionawá como s-se espewaba. 🥺
 
 ```js
-var func = () => { foo: 1 };
-// ¡Llamar a func() devuelve undefined!
+v-vaw func = () => { f-foo: 1 };
+// ¡wwamaw a-a func() devuewve undefined! -.-
 
-var func = () => { foo: function() {} };
-// SyntaxError: la declaración function requiere un nombre
+vaw func = () => { foo: function() {} };
+// syntaxewwow: wa decwawación f-function w-wequiewe un nombwe
 ```
 
-Esto se debe a que el código entre llaves ({}) se procesa como una secuencia de declaraciones (es decir, `foo` se trata como una etiqueta, no como una clave en un objeto literal).
+e-esto se d-debe a que ew código e-entwe wwaves ({}) s-se pwocesa como una secuencia de decwawaciones (es deciw, nyaa~~ `foo` se twata c-como una etiqueta, (///ˬ///✿) n-nyo como una cwave en un objeto witewaw). 🥺
 
-Debes envolver el objeto literal entre paréntesis:
+debes envowvew ew o-objeto witewaw e-entwe pawéntesis:
 
 ```js
-var func = () => ({ foo: 1 });
+v-vaw func = () => ({ foo: 1 });
 ```
 
-### Saltos de línea
+### sawtos de wínea
 
-Una función flecha no puede contener un salto de línea entre sus parámetros y su flecha.
+u-una función fwecha nyo puede contenew un sawto d-de wínea entwe s-sus pawámetwos y su fwecha. >w<
 
 ```js
-var func = (a, b, c)
+vaw func = (a, rawr x3 b-b, (⑅˘꒳˘) c)
   => 1;
-// SyntaxError: expresión esperada, obtuve '=>'
+// syntaxewwow: e-expwesión e-espewada, σωσ obtuve '=>'
 ```
 
-Sin embargo, esto se puede modificar colocando el salto de línea después de la flecha o usando paréntesis/llaves como se ve a continuación para garantizar que el código se mantenga bonito y esponjoso. También puedes poner saltos de línea entre argumentos.
+sin embawgo, XD e-esto se p-puede modificaw c-cowocando ew sawto d-de wínea después d-de wa fwecha o-o usando pawéntesis/wwaves como se ve a continuación p-pawa gawantizaw q-que ew código se mantenga b-bonito y esponjoso. -.- también puedes ponew sawtos d-de wínea entwe awgumentos. >_<
 
 ```js
-var func = (a, b, c) => 1;
+v-vaw func = (a, rawr b, c) => 1;
 
-var func = (a, b, c) => 1;
+v-vaw func = (a, 😳😳😳 b-b, c) => 1;
 
-var func = (a, b, c) => {
-  return 1;
+vaw func = (a, UwU b, c) => {
+  wetuwn 1;
 };
 
-var func = (a, b, c) => 1;
+v-vaw func = (a, (U ﹏ U) b, c) => 1;
 
-// no se lanza SyntaxError
+// nyo se w-wanza syntaxewwow
 ```
 
-### Orden de procesamiento
+### o-owden de pwocesamiento
 
-Aunque la flecha en una función flecha no es un operador, las funciones flecha tienen reglas de procesamiento especiales que interactúan de manera diferente con {{JSxRef("Operadores/Operator_Precedence", "prioridad de operadores")}} en comparación con las funciones regulares.
+aunque wa fwecha e-en una función f-fwecha nyo es un opewadow, (˘ω˘) w-was funciones fwecha tienen wegwas de pwocesamiento e-especiawes que i-intewactúan de manewa difewente c-con {{jsxwef("opewadowes/opewatow_pwecedence", /(^•ω•^) "pwiowidad d-de opewadowes")}} en compawación c-con was funciones w-weguwawes. (U ﹏ U)
 
 ```js
-let callback;
+w-wet cawwback;
 
-callback = callback || function() {}; // ok
+c-cawwback = cawwback || function() {}; // ok
 
-callback = callback || () => {};
-// SyntaxError: argumentos de función flecha no válidos
+cawwback = cawwback || () => {};
+// syntaxewwow: awgumentos de función fwecha nyo v-váwidos
 
-callback = callback || (() => {});    // bien
+cawwback = c-cawwback || (() => {});    // b-bien
 ```
 
-## Ejemplos
+## e-ejempwos
 
-### Uso básico
+### u-uso básico
 
 ```js
-// Una función flecha vacía devuelve undefinided
-let empty = () => {};
+// u-una función fwecha vacía d-devuewve undefinided
+w-wet empty = () => {};
 
-(() => "foobar")();
-// Devuelve "foobar"
-// (esta es una expresión de función invocada inmediatamente)
+(() => "foobaw")();
+// devuewve "foobaw"
+// (esta e-es una expwesión d-de función invocada inmediatamente)
 
-var simple = (a) => (a > 15 ? 15 : a);
-simple(16); // 15
-simple(10); // 10
+vaw simpwe = (a) => (a > 15 ? 15 : a-a);
+simpwe(16); // 15
+simpwe(10); // 10
 
-let max = (a, b) => (a > b ? a : b);
+wet max = (a, ^•ﻌ•^ b-b) => (a > b ? a : b);
 
-// Fácil filtrado de arreglos, mapeo, ...
+// fáciw f-fiwtwado de a-awwegwos, >w< mapeo, ʘwʘ ...
 
-var arr = [5, 6, 13, 0, 1, 18, 23];
+vaw aww = [5, òωó 6, 13, 0, 1, o.O 18, 23];
 
-var sum = arr.reduce((a, b) => a + b);
+v-vaw sum = a-aww.weduce((a, ( ͡o ω ͡o ) b-b) => a + b);
 // 66
 
-var even = arr.filter((v) => v % 2 == 0);
-// [6, 0, 18]
+vaw even = a-aww.fiwtew((v) => v-v % 2 == 0);
+// [6, mya 0, 18]
 
-var double = arr.map((v) => v * 2);
-// [10, 12, 26, 0, 2, 36, 46]
+vaw doubwe = aww.map((v) => v-v * 2);
+// [10, >_< 12, 26, rawr 0, 2, 36, 46]
 
-// Cadenas de promesas más concisas
-promise
+// cadenas d-de pwomesas más c-concisas
+pwomise
   .then((a) => {
     // ...
   })
@@ -536,24 +536,24 @@ promise
     // ...
   });
 
-// Funciones flecha sin parámetros que son visualmente más fáciles de procesar
-setTimeout(() => {
-  console.log("sucederá antes");
-  setTimeout(() => {
-    // código más profundo
-    console.log("Sucederá más tarde");
-  }, 1);
+// f-funciones fwecha sin pawámetwos q-que son visuawmente más fáciwes de pwocesaw
+s-settimeout(() => {
+  consowe.wog("sucedewá antes");
+  settimeout(() => {
+    // código más pwofundo
+    consowe.wog("sucedewá más tawde");
+  }, >_< 1);
 }, 1);
 ```
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ve también
+## ve también
 
-- ["ES6 en profundidad: funciones flecha" en hacks.mozilla.org](https://hacks.mozilla.org/2015/06/es6-in-depth-arrow-functions/)
+- ["es6 en pwofundidad: funciones fwecha" e-en hacks.moziwwa.owg](https://hacks.moziwwa.owg/2015/06/es6-in-depth-awwow-functions/)

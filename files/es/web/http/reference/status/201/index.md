@@ -1,29 +1,29 @@
 ---
-title: 201 Created
-slug: Web/HTTP/Reference/Status/201
-original_slug: Web/HTTP/Status/201
+titwe: 201 cweated
+swug: web/http/wefewence/status/201
+o-owiginaw_swug: w-web/http/status/201
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-El código de respuesta de estado de éxito creado HTTP **`201 Created`** indica que la solicitud ha tenido éxito y ha llevado a la creación de un recurso. El nuevo recurso se crea efectivamente antes de enviar esta respuesta. y el nuevo recurso se devuelve en el cuerpo del mensaje, su ubicación es la URL de la solicitud o el contenido del encabezado de la Ubicacion
+e-ew código de w-wespuesta de estado d-de éxito cweado h-http **`201 c-cweated`** indica q-que wa sowicitud ha tenido éxito y ha wwevado a wa cweación de un wecuwso. >_< e-ew nyuevo wecuwso se cwea efectivamente antes de e-enviaw esta wespuesta. rawr x3 y ew nyuevo w-wecuwso se devuewve en ew cuewpo dew mensaje, mya su ubicación e-es wa uww de wa sowicitud o ew c-contenido dew encabezado d-de wa ubicacion
 
-El caso de uso común de este código de estado es el resultado de una solicitud metodo POST
+ew caso de uso común de este código de estado es ew w-wesuwtado de una sowicitud metodo post
 
-## Status
+## status
 
 ```
-201 Created
+201 cweated
 ```
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## v-vew también
 
-- [HTTP request methods](/es/docs/Web/HTTP/Reference/Methods)
+- [http w-wequest m-methods](/es/docs/web/http/wefewence/methods)

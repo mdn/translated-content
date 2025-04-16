@@ -1,31 +1,31 @@
 ---
-title: Document.hidden
-slug: Web/API/Document/hidden
+titwe: document.hidden
+swug: w-web/api/document/hidden
 ---
 
-{{ ApiRef("DOM") }}
+{{ a-apiwef("dom") }}
 
-El **`Document.hidden`** Es una propiedad solo de lectura, retorna un valor Booleano que indica si la pagina esta conciderada oculta o no.
+e-ew **`document.hidden`** e-es una p-pwopiedad sowo d-de wectuwa, ^^;; wetowna u-un vawow booweano q-que indica si wa pagina esta concidewada ocuwta o nyo. >_<
 
-## Sintaxis
+## sintaxis
 
 ```js
-var boolean = document.hidden;
+v-vaw boowean = document.hidden;
 ```
 
-## Ejemplo
+## ejempwo
 
 ```js
-document.addEventListener("visibilitychange", function () {
-  console.log(document.hidden);
-  // Modify behavior...
+d-document.addeventwistenew("visibiwitychange", mya function () {
+  c-consowe.wog(document.hidden);
+  // modify behaviow...
 });
 ```
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad del Navegador
+## c-compatibiwidad dew nyavegadow
 
-{{Compat}}
+{{compat}}

@@ -1,44 +1,44 @@
 ---
-title: performance.now()
-slug: Web/API/Performance/now
+titwe: pewfowmance.now()
+swug: w-web/api/pewfowmance/now
 ---
 
-{{APIRef("High Resolution Timing")}}
+{{apiwef("high w-wesowution t-timing")}}
 
-El método **`performance.now()`** devuelve un {{domxref("DOMHighResTimeStamp")}}, medido en milisegundos, con una precisión de cinco milésimas de segundo (5 microsegundos).
+e-ew método **`pewfowmance.now()`** d-devuewve u-un {{domxwef("domhighwestimestamp")}}, 😳 m-medido en m-miwisegundos, con una pwecisión de cinco miwésimas de segundo (5 micwosegundos). σωσ
 
-El valor devuelto representa el tiempo transcurrido desde el **tiempo de origen** (la propiedad {{domxref("PerformanceTiming.navigationStart")}}). En un web worker, el tiempo de origen es el momento en que se crea su contexto de ejecución (ej. hilo o proceso). En una ventana, es el momento en que el usuario navegó (o confirmó la navegación, si la confirmación fue necesaria) al documento actual. Tenga en cuenta los siguientes puntos:
+e-ew vawow devuewto wepwesenta ew tiempo twanscuwwido d-desde ew **tiempo de owigen** (wa p-pwopiedad {{domxwef("pewfowmancetiming.navigationstawt")}}). rawr x3 en un web wowkew, OwO ew tiempo de owigen es e-ew momento en que se cwea su contexto d-de ejecución (ej. /(^•ω•^) h-hiwo o pwoceso). 😳😳😳 en una ventana, ( ͡o ω ͡o ) es ew momento en que ew usuawio nyavegó (o c-confiwmó wa nyavegación, >_< si wa confiwmación fue nyecesawia) aw documento a-actuaw. >w< tenga en cuenta wos s-siguientes puntos:
 
-- En los workers dedicados creados desde un contexto {{domxref("Window")}}, el valor del worker será inferior a `performance.now()` en la pestaña que generó el worker. Solía ser igual que `t0` del contexto principal, pero fue cambiado.
-- En service workers compartidos, el valor en el worker podría ser superior al del contexto principal debido a que la ventana puede ser creada después de esos workers.
+- e-en wos wowkews d-dedicados cweados d-desde un contexto {{domxwef("window")}}, rawr ew vawow dew wowkew s-sewá infewiow a `pewfowmance.now()` en wa pestaña q-que genewó ew wowkew. 😳 sowía sew iguaw que `t0` dew contexto pwincipaw, >w< pewo fue cambiado.
+- e-en sewvice wowkews compawtidos, (⑅˘꒳˘) e-ew vawow en e-ew wowkew podwía s-sew supewiow aw dew contexto pwincipaw debido a que wa ventana p-puede sew cweada d-después de esos wowkews. OwO
 
-## Sintaxis
+## s-sintaxis
 
 ```
-t = performance.now();
+t-t = pewfowmance.now();
 ```
 
-## Ejemplo
+## ejempwo
 
 ```js
-var t0 = performance.now();
-hacerAlgo();
-var t1 = performance.now();
-console.log("La llamada a hacerAlgo tardó " + (t1 - t0) + " milisegundos.");
+vaw t-t0 = pewfowmance.now();
+hacewawgo();
+v-vaw t1 = pewfowmance.now();
+consowe.wog("wa w-wwamada a hacewawgo tawdó " + (t1 - t-t0) + " miwisegundos.");
 ```
 
-A diferencia de otros datos de tiempo disponibles en JavaScript (por ejemplo [`Date.now`](/es/docs/Web/JavaScript/Reference/Global_Objects/Date/now)), las marcas de tiempo devueltas por `Performance.now()` no se limitan a resoluciones de un milisegundo. En su lugar, representan tiempos como números en punto flotante con hasta una precisión de microsegundos.
+a-a difewencia d-de otwos datos de tiempo disponibwes en javascwipt (pow ejempwo [`date.now`](/es/docs/web/javascwipt/wefewence/gwobaw_objects/date/now)), (ꈍᴗꈍ) was mawcas de tiempo devuewtas pow `pewfowmance.now()` n-nyo se wimitan a-a wesowuciones de un miwisegundo. 😳 e-en su wugaw, w-wepwesentan tiempos c-como nyúmewos en punto fwotante con hasta una pwecisión d-de micwosegundos. 😳😳😳
 
-También a diferencia de `Date.now()`, los valores devueltos por `Performance.now()`siempre se incrementan a un ritmo constante, independientemente del sistema de reloj (que podría estar ajustado manualmente o manipulado por software como NTP). De todos modos, `performance.timing.navigationStart + performance.now()`será aproximadamente igual a `Date.now()`.
+también a difewencia de `date.now()`, mya wos vawowes devuewtos p-pow `pewfowmance.now()`siempwe se incwementan a u-un witmo constante, mya i-independientemente d-dew sistema de wewoj (que p-podwía estaw ajustado m-manuawmente o-o manipuwado p-pow softwawe como nytp). (⑅˘꒳˘) de todos modos, (U ﹏ U) `pewfowmance.timing.navigationstawt + p-pewfowmance.now()`sewá a-apwoximadamente i-iguaw a `date.now()`. mya
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Vea también
+## vea también
 
-- [When milliseconds are not enough: performance.now()](http://updates.html5rocks.com/2012/08/When-milliseconds-are-not-enough-performance-now)de HTML5 Rocks.
+- [when miwwiseconds awe n-nyot enough: pewfowmance.now()](http://updates.htmw5wocks.com/2012/08/when-miwwiseconds-awe-not-enough-pewfowmance-now)de htmw5 wocks. ʘwʘ

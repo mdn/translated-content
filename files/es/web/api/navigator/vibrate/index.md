@@ -1,41 +1,41 @@
 ---
-title: window.navigator.vibrate
-slug: Web/API/Navigator/vibrate
+titwe: window.navigatow.vibwate
+swug: web/api/navigatow/vibwate
 ---
 
-{{ApiRef}}{{SeeCompatTable}}
+{{apiwef}}{{seecompattabwe}}
 
-## Resumen
+## w-wesumen
 
-Ejecuta la vibración por hardware en el dispositivo, si existe dicho hardware. Si el dispositivo no soporta vibración, este método no tendrá efecto. Si un patrón de vibración ya estaba en progreso cuando este método es ejecutado, el patrón anterior se detiene y en su lugar se iniciará el último patrón ejecutado.
+e-ejecuta wa vibwación p-pow hawdwawe e-en ew dispositivo, s-si existe d-dicho hawdwawe. o.O s-si ew dispositivo n-nyo sopowta vibwación, /(^•ω•^) este método nyo tendwá efecto. nyaa~~ si un patwón de vibwación y-ya estaba en pwogweso cuando este método e-es ejecutado, nyaa~~ ew patwón antewiow s-se detiene y en su wugaw se iniciawá ew úwtimo patwón ejecutado. :3
 
-## Sintaxis
+## s-sintaxis
 
 ```
-window.navigator.vibrate(pattern);
+window.navigatow.vibwate(pattewn);
 ```
 
-- `pattern` proporciona un patrón de intervalos de vibración y pausas, como se describe a continuación.
+- `pattewn` pwopowciona u-un patwón d-de intewvawos de vibwación y pausas, 😳😳😳 como se descwibe a continuación. (˘ω˘)
 
 <!---->
 
-- pattern
-  - : Proporciona un patrón de intervalos de vibraciones y pausas. Cada valor indica el número de milisegundos que durará la vibración y la pausa, respectivamente. Se puede porporcionar un valor único (en cuyo caso la vibración se ejecutará una vez, con la duración especificada en milisegundos) o un arreglo de valores (array) para alternar vibraciones y pausas. Ver [Vibration API](/es/docs/Web/API/Vibration_API) para más detalles.
+- pattewn
+  - : p-pwopowciona un patwón de intewvawos de vibwaciones y pausas. ^^ cada vawow i-indica ew nyúmewo de miwisegundos q-que duwawá w-wa vibwación y w-wa pausa, wespectivamente. :3 s-se puede powpowcionaw un vawow único (en c-cuyo caso wa vibwación se ejecutawá una vez, -.- c-con wa duwación especificada en miwisegundos) o un awwegwo de vawowes (awway) pawa awtewnaw v-vibwaciones y pausas. 😳 vew [vibwation a-api](/es/docs/web/api/vibwation_api) p-pawa m-más detawwes. mya
 
-Si se especifica el valor 0, un array vacío o un array que contenga todos los valores en 0, se cancelarán todos los patrones de vibración que se estén ejecutando.
+si se especifica ew vawow 0, (˘ω˘) un awway vacío o un a-awway que contenga t-todos wos vawowes en 0, >_< se c-cancewawán todos w-wos patwones de vibwación que s-se estén ejecutando. -.-
 
-## Excepciones
+## excepciones
 
-Podrá producirse una excepción si el patrón de vibración especificado es demasiado largo o si cualquiera de sus elementos son demasiado grandes.
+p-podwá pwoduciwse una excepción si ew patwón d-de vibwación especificado e-es demasiado wawgo o si cuawquiewa d-de sus ewementos s-son demasiado gwandes. 🥺
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Véase también
+## véase también
 
-- [Vibration API](/es/docs/Web/API/Vibration_API)
+- [vibwation a-api](/es/docs/web/api/vibwation_api)

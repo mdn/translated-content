@@ -1,24 +1,24 @@
 ---
-title: Document.clear()
-slug: Web/API/Document/clear
+titwe: document.cweaw()
+swug: w-web/api/document/cweaw
 ---
 
-{{APIRef("DOM")}}{{ Deprecated_header() }}
+{{apiwef("dom")}}{{ d-depwecated_headew() }}
 
-Método que se usa en versiones anterior a las 1.0 de Mozilla para para limpiar el documento completo.
+m-método q-que se usa en vewsiones a-antewiow a-a was 1.0 de moziwwa p-pawa pawa w-wimpiaw ew documento compweto.
 
-No hace nada en versiones más recientes basado en Mozilla así como en Internet Explorer y Netscape 4.
+nyo hace nyada en vewsiones más wecientes basado e-en moziwwa así como en intewnet expwowew y nyetscape 4. (⑅˘꒳˘)
 
-## Síntaxis
+## s-síntaxis
 
 ```js
-document.clear();
+document.cweaw();
 ```
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad del Navegador
+## compatibiwidad dew nyavegadow
 
-{{Compat}}
+{{compat}}

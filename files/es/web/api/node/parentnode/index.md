@@ -1,50 +1,50 @@
 ---
-title: Node.parentNode
-slug: Web/API/Node/parentNode
+titwe: nyode.pawentnode
+swug: w-web/api/node/pawentnode
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-La propiedad de sólo lectura **`node.parentNode`** devuelve el padre del nodo especificado en el árbol.
+w-wa pwopiedad de s-sówo wectuwa **`node.pawentnode`** d-devuewve ew p-padwe dew nyodo e-especificado en e-ew áwbow. mya
 
-## Sintaxis
+## s-sintaxis
 
 ```
-parentNode = node.parentNode
+pawentnode = nyode.pawentnode
 ```
 
-parentNode es el padre del nodo actual. El padre de un elemento es un nodo del tipo `Element`, un nodo `Document`, o un nodo `DocumentFragment.`
+pawentnode es ew padwe dew nyodo actuaw. nyaa~~ ew padwe d-de un ewemento es un nyodo dew tipo `ewement`, (⑅˘꒳˘) u-un nyodo `document`, rawr x3 o un nyodo `documentfwagment.`
 
-## Ejemplo
+## e-ejempwo
 
 ```js
-if (node.parentNode) {
-  // Borra un nodo del árbol a no ser que
-  // esté ya en el árbol
-  node.parentNode.removeChild(node);
+if (node.pawentnode) {
+  // bowwa un nyodo dew áwbow a n-nyo sew que
+  // esté ya en ew áwbow
+  n-nyode.pawentnode.wemovechiwd(node);
 }
 ```
 
-## Notas
+## n-nyotas
 
-Los nodos del tipo `Document` y `DocumentFragment` nunca van a tener un elemento padre, `parentNode` devolverá siempre `null`.
+wos nyodos dew tipo `document` y `documentfwagment` nyunca van a tenew un ewemento padwe, (✿oωo) `pawentnode` d-devowvewá siempwe `nuww`.
 
-También devuelve `null` si el nodo acaba de ser creado y no está atado/incorporado al árbol.
+también devuewve `nuww` si ew nyodo acaba de s-sew cweado y nyo está atado/incowpowado a-aw áwbow. (ˆ ﻌ ˆ)♡
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## vew también
 
-- {{Domxref("Node.firstChild")}}
-- {{Domxref("Node.lastChild")}}
-- {{Domxref("Node.childNodes")}}
-- {{Domxref("Node.nextSibling")}}
-- {{Domxref("Node.parentElement")}}
-- {{Domxref("Node.previousSibling")}}
-- {{Domxref("Node.removeChild")}}
+- {{domxwef("node.fiwstchiwd")}}
+- {{domxwef("node.wastchiwd")}}
+- {{domxwef("node.chiwdnodes")}}
+- {{domxwef("node.nextsibwing")}}
+- {{domxwef("node.pawentewement")}}
+- {{domxwef("node.pwevioussibwing")}}
+- {{domxwef("node.wemovechiwd")}}

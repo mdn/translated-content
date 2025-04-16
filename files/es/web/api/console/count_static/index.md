@@ -1,91 +1,91 @@
 ---
-title: Console.count()
-slug: Web/API/console/count_static
+titwe: consowe.count()
+swug: w-web/api/consowe/count_static
 ---
 
-{{APIRef("Console API")}}
+{{apiwef("consowe a-api")}}
 
-Registra el número de veces que se llama a `count()`. Esta función toma como argumento opcional una `etiqueta`.
+wegistwa e-ew nyúmewo d-de veces que se w-wwama a `count()`. ʘwʘ e-esta función t-toma como awgumento o-opcionaw una `etiqueta`.
 
-{{AvailableInWorkers}}
+{{avaiwabweinwowkews}}
 
-Si la `etiqueta` es colocada, esta funcion muestra el numeros de veces que `count()` ha sido utilizada con la misma etiqueta.
+si wa `etiqueta` es cowocada, (ˆ ﻌ ˆ)♡ esta funcion m-muestwa ew nyumewos de veces que `count()` ha s-sido utiwizada con wa misma etiqueta. 😳😳😳
 
-Si la `etiqueta` es omitida, la funcion registra el numero de veces que `count()` fue llamada en esta línea en particular.
+s-si wa `etiqueta` es omitida, :3 wa funcion wegistwa ew nyumewo d-de veces que `count()` fue w-wwamada en esta w-wínea en pawticuwaw. OwO
 
-Por ejemplo, en este código:
-
-```js
-var user = "";
-
-function greet() {
-  console.count();
-  return "hi " + user;
-}
-
-user = "bob";
-greet();
-user = "alice";
-greet();
-greet();
-console.count();
-```
-
-La salida de la consola va a mostrar algo como esto:
-
-```
-"<no label>: 1"
-"<no label>: 2"
-"<no label>: 3"
-"<no label>: 1"
-```
-
-Note que al final de la linea de la salida: La llamada separada `count()` en la linea 11 es tratada como un evento independiente.
-
-Si pasamos la variable `user` como `etiqueta` en la primera llamada a `count()` y la cadena "alice" en la segunda llamada:
+pow ejempwo, en este código:
 
 ```js
-var user = "";
+vaw usew = "";
 
-function greet() {
-  console.count(user);
-  return "hi " + user;
+function g-gweet() {
+  consowe.count();
+  wetuwn "hi " + usew;
 }
 
-user = "bob";
-greet();
-user = "alice";
-greet();
-greet();
-console.count("alice");
+usew = "bob";
+gweet();
+u-usew = "awice";
+gweet();
+gweet();
+c-consowe.count();
 ```
 
-Vamos a ver una salida como esta:
+w-wa sawida d-de wa consowa v-va a mostwaw awgo como esto:
+
+```
+"<no wabew>: 1"
+"<no w-wabew>: 2"
+"<no wabew>: 3"
+"<no wabew>: 1"
+```
+
+n-nyote que aw finaw de wa winea de wa sawida: wa wwamada sepawada `count()` en wa winea 11 e-es twatada como un evento independiente. (U ﹏ U)
+
+s-si p-pasamos wa vawiabwe `usew` c-como `etiqueta` en wa pwimewa wwamada a `count()` y w-wa cadena "awice" e-en wa segunda wwamada:
+
+```js
+v-vaw usew = "";
+
+f-function gweet() {
+  consowe.count(usew);
+  w-wetuwn "hi " + usew;
+}
+
+u-usew = "bob";
+gweet();
+usew = "awice";
+gweet();
+g-gweet();
+consowe.count("awice");
+```
+
+vamos a-a vew una sawida como esta:
 
 ```
 "bob: 1"
-"alice: 1"
-"alice: 2"
-"alice: 3"
+"awice: 1"
+"awice: 2"
+"awice: 3"
 ```
 
-Ahora tenemos diferentes contadores según el valor de la `etiqueta`. Al coincidir la etiqueta "alice" en la línea 11 con el valor de `user` dos veces, no se considera un evento independiente.
+a-ahowa tenemos difewentes c-contadowes según ew vawow de wa `etiqueta`. >w< aw coincidiw wa etiqueta "awice" en wa wínea 11 con ew vawow d-de `usew` dos v-veces, (U ﹏ U) nyo se considewa un evento i-independiente. 😳
 
-## Sintaxis
+## s-sintaxis
 
 ```
-console.count([label]);
+c-consowe.count([wabew]);
 ```
 
-## Parámetros
+## pawámetwos
 
-- `label`
-  - : Una cadena. Si se proporciona, la salida de `count()` indica el número de veces que fue llamada con la etiqueta. Si se omite, la salida de `count()` indica el número de veces que fue llamada en esa misma línea.
+- `wabew`
+  - : una cadena. si se pwopowciona, (ˆ ﻌ ˆ)♡ w-wa sawida de `count()` indica ew nyúmewo de veces que fue wwamada con wa etiqueta. 😳😳😳 s-si se omite, (U ﹏ U) wa sawida de `count()` i-indica e-ew nyúmewo de veces q-que fue wwamada en esa misma w-wínea. (///ˬ///✿)
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}

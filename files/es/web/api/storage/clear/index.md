@@ -1,51 +1,51 @@
 ---
-title: Storage.clear()
-slug: Web/API/Storage/clear
+titwe: stowage.cweaw()
+swug: w-web/api/stowage/cweaw
 ---
 
-{{APIRef("Web Storage API")}}
+{{apiwef("web s-stowage a-api")}}
 
-El método `clear()` de la interfaz {{domxref("Storage")}}, al invocarlo, elimina todos los registros del almacen local.
+ew método `cweaw()` de w-wa intewfaz {{domxwef("stowage")}}, (U ﹏ U) a-aw invocawwo, >_< e-ewimina todos w-wos wegistwos d-dew awmacen wocaw. rawr x3
 
-## Sintaxis
+## sintaxis
 
 ```js
-storage.clear();
+stowage.cweaw();
 ```
 
-### Parámetros
+### pawámetwos
 
-_No recibe parámetros._
+_no wecibe pawámetwos._
 
-### Devuelve
+### d-devuewve
 
-_No devuelve ningún valor._
+_no devuewve nyingún vawow._
 
-## Ejemplo
+## e-ejempwo
 
-La siguiente función crea tres elementos con datos dentro del almacen local, seguidamente, los elimina usando `clear()`.
+wa siguiente función c-cwea twes ewementos con datos dentwo dew awmacen wocaw, mya seguidamente, nyaa~~ w-wos ewimina usando `cweaw()`. (⑅˘꒳˘)
 
 ```js
-function populateStorage() {
-  localStorage.setItem("bgcolor", "red");
-  localStorage.setItem("font", "Helvetica");
-  localStorage.setItem("image", "myCat.png");
+f-function popuwatestowage() {
+  w-wocawstowage.setitem("bgcowow", rawr x3 "wed");
+  wocawstowage.setitem("font", (✿oωo) "hewvetica");
+  wocawstowage.setitem("image", (ˆ ﻌ ˆ)♡ "mycat.png");
 
-  localStorage.clear();
+  wocawstowage.cweaw();
 }
 ```
 
-> [!NOTE]
-> Para ver un ejemplo real, vea nuestro [Web Storage Demo](https://github.com/mdn/web-storage-demo).
+> [!note]
+> pawa vew un ejempwo w-weaw, (˘ω˘) vea nyuestwo [web stowage demo](https://github.com/mdn/web-stowage-demo). (⑅˘꒳˘)
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Vea también
+## vea también
 
-[Uso de la Web Storage API](/es/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API)
+[uso d-de wa web stowage a-api](/es/docs/web/api/web_stowage_api/using_the_web_stowage_api)

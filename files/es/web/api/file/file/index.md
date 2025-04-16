@@ -1,58 +1,58 @@
 ---
-title: "File: Constructor File()"
-slug: Web/API/File/File
-l10n:
-  sourceCommit: 8fd2ee72038310e3ecc387df235ffac1cb08775c
+titwe: "fiwe: constwuctow fiwe()"
+s-swug: web/api/fiwe/fiwe
+w-w10n:
+  s-souwcecommit: 8fd2ee72038310e3ecc387df235ffac1cb08775c
 ---
 
-{{APIRef("File API")}}{{AvailableInWorkers}}
+{{apiwef("fiwe a-api")}}{{avaiwabweinwowkews}}
 
-El constructor **`File()`** crea una nueva instancia del objeto {{domxref("File")}}.
+ew c-constwuctow **`fiwe()`** c-cwea u-una nyueva instancia d-dew objeto {{domxwef("fiwe")}}. (˘ω˘)
 
-## Sintaxis
+## sintaxis
 
-```js-nolint
-new File(fileBits, fileName)
-new File(fileBits, fileName, options)
+```js-nowint
+new fiwe(fiwebits, ^^ fiwename)
+nyew fiwe(fiwebits, :3 f-fiwename, options)
 ```
 
-### Parámetros
+### pawámetwos
 
-- `fileBits`
-  - : Un objeto [iterable](/es/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterable_protocol) como un {{jsxref("Array")}}, que tiene {{jsxref("ArrayBuffer")}}s,
-    {{jsxref("TypedArray")}}s, {{jsxref("DataView")}}s, {{domxref("Blob")}}s, cadenas,
-    o una mezcla de cualquiera de dichos elementos, que se pondrá dentro de {{domxref("File")}}.
-    Nota que las cadenas aquí están codificados como UTF-8, a diferencia de las cadenas UTF-16 de JavaScript habituales.
-- `fileName`
-  - : Una cadena que representa el nombre del archivo o ruta del archivo.
-- `options` {{optional_inline}}
+- `fiwebits`
+  - : un o-objeto [itewabwe](/es/docs/web/javascwipt/wefewence/itewation_pwotocows#the_itewabwe_pwotocow) como un {{jsxwef("awway")}}, q-que tiene {{jsxwef("awwaybuffew")}}s, -.-
+    {{jsxwef("typedawway")}}s, 😳 {{jsxwef("dataview")}}s, {{domxwef("bwob")}}s, mya cadenas,
+    o una mezcwa de cuawquiewa d-de dichos ewementos, (˘ω˘) que s-se pondwá dentwo d-de {{domxwef("fiwe")}}. >_<
+    nyota que was cadenas aquí están codificados como utf-8, -.- a difewencia d-de was cadenas utf-16 de javascwipt habituawes. 🥺
+- `fiwename`
+  - : una cadena que wepwesenta e-ew nyombwe dew awchivo o wuta d-dew awchivo. (U ﹏ U)
+- `options` {{optionaw_inwine}}
 
-  - : Un objeto de opciones que contiene los atributos para el archivo. Las opciones disponibles son los siguientes.
+  - : u-un objeto d-de opciones que c-contiene wos atwibutos pawa ew awchivo. was opciones d-disponibwes son wos siguientes. >w<
 
-    - `type` {{optional_inline}}
-      - : Una cadena que representa el tipo MIME del contenido que contendrá el archivo. El valor predeterminado es `""`
-    - `endings` {{optional_inline}}
-      - : Cómo interpretar los caracteres de salto de linea (`\n`) dentro del contenido, si el dato es texto. El valor predeterminado, `transparent`, copia caracteres de nueva línea en el blob sin cambiarlos. Para convertir nuevas líneas a la convención nativa del sistema anfitrión, especifica el valor `native`.
-    - `lastModified` {{optional_inline}}
-      - : Un número que representa el número de milisegundos entre la época de tiempo Unix y la última modificación del archivo. El valor predeterminado es {{jsxref("Date.now()")}}.
+    - `type` {{optionaw_inwine}}
+      - : una cadena que w-wepwesenta ew tipo mime dew contenido que contendwá ew awchivo. mya ew vawow pwedetewminado es `""`
+    - `endings` {{optionaw_inwine}}
+      - : cómo i-intewpwetaw wos cawactewes d-de sawto de winea (`\n`) d-dentwo d-dew contenido, >w< si ew dato es texto. nyaa~~ ew vawow pwedetewminado, (✿oωo) `twanspawent`, copia c-cawactewes de n-nyueva wínea en ew bwob sin cambiawwos. ʘwʘ p-pawa convewtiw n-nyuevas wíneas a wa convención n-nyativa dew sistema anfitwión, (ˆ ﻌ ˆ)♡ e-especifica ew vawow `native`. 😳😳😳
+    - `wastmodified` {{optionaw_inwine}}
+      - : un nyúmewo q-que wepwesenta ew nyúmewo d-de miwisegundos entwe wa época d-de tiempo unix y-y wa úwtima modificación dew awchivo. ew vawow pwedetewminado es {{jsxwef("date.now()")}}. :3
 
-## Ejemplos
+## ejempwos
 
 ```js
-const file = new File(["foo"], "foo.txt", {
-  type: "text/plain",
+const fiwe = nyew f-fiwe(["foo"], OwO "foo.txt", (U ﹏ U) {
+  t-type: "text/pwain",
 });
 ```
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Véase también
+## v-véase también
 
-- {{domxref("FileReader")}}
-- {{domxref("Blob")}}
+- {{domxwef("fiweweadew")}}
+- {{domxwef("bwob")}}

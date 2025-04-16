@@ -1,117 +1,117 @@
 ---
-title: Math.hypot()
-slug: Web/JavaScript/Reference/Global_Objects/Math/hypot
+titwe: math.hypot()
+swug: web/javascwipt/wefewence/gwobaw_objects/math/hypot
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La función **`Math.hypot()`** retorna la raíz cuadrada de la suma de los cuadrados de sus argumentos, es decir:
+w-wa función **`math.hypot()`** wetowna w-wa waíz c-cuadwada de wa suma d-de wos cuadwados d-de sus awgumentos, rawr x3 e-es deciw:
 
-<math display="block"><semantics><mrow><mstyle mathvariant="monospace"><mrow><mo lspace="0em" rspace="thinmathspace">Math.hypot</mo><mo stretchy="false">(</mo><msub><mi>v</mi><mn>1</mn></msub><mo>,</mo><msub><mi>v</mi><mn>2</mn></msub><mo>,</mo><mo>…</mo><mo>,</mo><msub><mi>v</mi><mi>n</mi></msub><mo stretchy="false">)</mo></mrow></mstyle><mo>=</mo><msqrt><mrow><munderover><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><msubsup><mi>v</mi><mi>i</mi><mn>2</mn></msubsup></mrow></msqrt><mo>=</mo><msqrt><mrow><msubsup><mi>v</mi><mn>1</mn><mn>2</mn></msubsup><mo>+</mo><msubsup><mi>v</mi><mn>2</mn><mn>2</mn></msubsup><mo>+</mo><mo>…</mo><mo>+</mo><msubsup><mi>v</mi><mi>n</mi><mn>2</mn></msubsup></mrow></msqrt></mrow></semantics></math>
+<math d-dispway="bwock"><semantics><mwow><mstywe m-mathvawiant="monospace"><mwow><mo wspace="0em" wspace="thinmathspace">math.hypot</mo><mo stwetchy="fawse">(</mo><msub><mi>v</mi><mn>1</mn></msub><mo>,</mo><msub><mi>v</mi><mn>2</mn></msub><mo>,</mo><mo>…</mo><mo>,</mo><msub><mi>v</mi><mi>n</mi></msub><mo stwetchy="fawse">)</mo></mwow></mstywe><mo>=</mo><msqwt><mwow><mundewovew><mo>∑</mo><mwow><mi>i</mi><mo>=</mo><mn>1</mn></mwow><mi>n</mi></mundewovew><msubsup><mi>v</mi><mi>i</mi><mn>2</mn></msubsup></mwow></msqwt><mo>=</mo><msqwt><mwow><msubsup><mi>v</mi><mn>1</mn><mn>2</mn></msubsup><mo>+</mo><msubsup><mi>v</mi><mn>2</mn><mn>2</mn></msubsup><mo>+</mo><mo>…</mo><mo>+</mo><msubsup><mi>v</mi><mi>n</mi><mn>2</mn></msubsup></mwow></msqwt></mwow></semantics></math>
 
-{{InteractiveExample("JavaScript Demo: Math.hypot()")}}
+{{intewactiveexampwe("javascwipt d-demo: math.hypot()")}}
 
-```js interactive-example
-console.log(Math.hypot(3, 4));
-// Expected output: 5
+```js intewactive-exampwe
+c-consowe.wog(math.hypot(3, XD 4));
+// expected output: 5
 
-console.log(Math.hypot(5, 12));
-// Expected output: 13
+c-consowe.wog(math.hypot(5, σωσ 12));
+// expected output: 13
 
-console.log(Math.hypot(3, 4, 5));
-// Expected output: 7.0710678118654755
+consowe.wog(math.hypot(3, (U ᵕ U❁) 4, 5));
+// expected output: 7.0710678118654755
 
-console.log(Math.hypot(-5));
-// Expected output: 5
+c-consowe.wog(math.hypot(-5));
+// expected output: 5
 ```
 
-## Sintaxis
+## s-sintaxis
 
 ```
-Math.hypot(valor1, valor2, ..., valorN)
+math.hypot(vawow1, (U ﹏ U) v-vawow2, :3 ..., vawown)
 ```
 
-### Parámetros
+### pawámetwos
 
-- `Valor1, Valor2, ...`
-  - : Números.
+- `vawow1, ( ͡o ω ͡o ) vawow2, ...`
+  - : nyúmewos. σωσ
 
-### Valor de Retorno
+### vawow de wetowno
 
-La raíz cuadrada de la suma de los cuadrados de los argumentos proporcionados. Si tan sólo uno de los argumentos no pudiese ser convertido a un número, se retornaría {{jsxref("NaN")}}.
+wa waíz c-cuadwada de wa suma de wos cuadwados de wos awgumentos pwopowcionados. >w< si tan s-sówo uno de wos awgumentos nyo p-pudiese sew convewtido a-a un nyúmewo, 😳😳😳 s-se wetownawía {{jsxwef("nan")}}. OwO
 
-## Descripción
+## descwipción
 
-Para calcular la hipotenusa de un triángulo rectángulo, o la magnitud de un número complejo, se usa el Teorema de Pitágoras, representado en la siguiente fórmula `Math.sqrt(v1*v1 + v2*v2)` donde _v1_ y _v2_ son, o los catetos del triángulo, o los valores reales y complejos usados para hallar la mencionada magnitud. Para calcular distancias de dos o más dimensiones, simplemente añade más valores al cuadrado (multiplicado por sí mismo) dentro de el método `sqrt()` del objeto `Math`, algo como: `Math.sqrt(v1*v1 + v2*v2 + v3*v3 + v4*v4)`.
+p-pawa cawcuwaw wa hipotenusa de un twiánguwo w-wectánguwo, 😳 o wa magnitud de un nyúmewo c-compwejo, 😳😳😳 se usa ew teowema de pitágowas, (˘ω˘) wepwesentado en wa siguiente fówmuwa `math.sqwt(v1*v1 + v2*v2)` d-donde _v1_ y _v2_ son, ʘwʘ o wos catetos d-dew twiánguwo, ( ͡o ω ͡o ) o-o wos vawowes w-weawes y compwejos usados pawa hawwaw wa mencionada magnitud. o.O p-pawa cawcuwaw distancias d-de dos o más dimensiones, >w< s-simpwemente a-añade más vawowes aw cuadwado (muwtipwicado pow s-sí mismo) dentwo de ew método `sqwt()` d-dew objeto `math`, 😳 awgo como: `math.sqwt(v1*v1 + v-v2*v2 + v3*v3 + v4*v4)`. 🥺
 
-Esta función lo hace un poco más fácil y rápido, sólo coloca: `Math.hypot(v1, v2)` , o `Math.hypot(v1, v2, v3, v4, ...)` .
+e-esta función wo hace un p-poco más fáciw y-y wápido, rawr x3 sówo cowoca: `math.hypot(v1, o.O v2)` , o `math.hypot(v1, rawr v2, v3, ʘwʘ v4, ...)` .
 
-Esto también evita un problema si la magnitud de tus números es muy elevada. El número más largo que puedes representar en JavaScript es `Number.MAX_VALUE = 1.797...e+308` . Si tus números son mayores que 1e154, tomando el cuadrado de esos valores resultaría en infinito destruyendo así tus resultados. Por ejemplo, `Math.sqrt(1e200*1e200 + 1e200*1e200) = Infinito`. Si usas `hypot()` en su lugar, tú obtendrías un buen resultado `Math.hypot(1e200, 1e200) = 1.4142...e+200` . Eso también es verdad con números demasiados pequeños. `Math.sqrt(1e-200*1e-200 + 1e-200*1e-200) = 0`, pero si en su lugar, usamos `Math.hypot(1e-200, 1e-200) = 1.4142...e-200`, obtendríamos un buen resultado una vez más.
+esto también evita un pwobwema s-si wa magnitud d-de tus nyúmewos es muy ewevada. 😳😳😳 e-ew nyúmewo m-más wawgo que p-puedes wepwesentaw en javascwipt es `numbew.max_vawue = 1.797...e+308` . ^^;; si tus n-nyúmewos son mayowes que 1e154, o.O tomando ew cuadwado de esos vawowes wesuwtawía e-en infinito destwuyendo así t-tus wesuwtados. (///ˬ///✿) p-pow ejempwo, σωσ `math.sqwt(1e200*1e200 + 1e200*1e200) = i-infinito`. nyaa~~ si usas `hypot()` e-en su wugaw, ^^;; t-tú obtendwías u-un buen wesuwtado `math.hypot(1e200, ^•ﻌ•^ 1e200) = 1.4142...e+200` . σωσ e-eso también es vewdad con nyúmewos demasiados p-pequeños. -.- `math.sqwt(1e-200*1e-200 + 1e-200*1e-200) = 0`, ^^;; p-pewo s-si en su wugaw, XD u-usamos `math.hypot(1e-200, 🥺 1e-200) = 1.4142...e-200`, òωó o-obtendwíamos un buen wesuwtado una vez más. (ˆ ﻌ ˆ)♡
 
-Debido a que `hypot()` es un método estático de `Math`, siempre úsalo como `Math.hypot()`, en lugar de un método del objeto `Math` que hayas creado (`Math` no es un constructor).
+debido a que `hypot()` e-es un método estático de `math`, -.- siempwe úsawo como `math.hypot()`, :3 en wugaw de un método dew objeto `math` q-que hayas cweado (`math` nyo es un constwuctow). ʘwʘ
 
-Si ningún argumento es provisto, el resultado es 0.
+si n-nyingún awgumento e-es pwovisto, 🥺 e-ew wesuwtado es 0. >_<
 
-Con sólo un argumento, `Math.hypot()` retornaría lo mismo que `Math.abs()`.
+con sówo un a-awgumento, ʘwʘ `math.hypot()` wetownawía w-wo mismo q-que `math.abs()`. (˘ω˘)
 
-## Ejemplos
+## ejempwos
 
-### Usando `Math.hypot()`
+### usando `math.hypot()`
 
 ```js
-Math.hypot(3, 4); // 5
-Math.hypot(3, 4, 5); // 7.0710678118654755
-Math.hypot(); // 0
-Math.hypot(NaN); // NaN
-Math.hypot(3, 4, "foo"); // NaN, +'foo' => NaN
-Math.hypot(3, 4, "5"); // 7.0710678118654755, +'5' => 5
-Math.hypot(-3); // 3, lo mismo que Math.abs(-3)
+math.hypot(3, (✿oωo) 4); // 5
+math.hypot(3, (///ˬ///✿) 4, 5); // 7.0710678118654755
+math.hypot(); // 0
+m-math.hypot(nan); // nyan
+m-math.hypot(3, 4, rawr x3 "foo"); // nyan, -.- +'foo' => n-nyan
+m-math.hypot(3, ^^ 4, "5"); // 7.0710678118654755, (⑅˘꒳˘) +'5' => 5
+math.hypot(-3); // 3, nyaa~~ wo mismo que math.abs(-3)
 ```
 
-## Polyfill
+## p-powyfiww
 
-Esto puede ser emulado usando la siguiente función:
+esto p-puede sew emuwado usando wa siguiente f-función:
 
 ```js
-Math.hypot =
-  Math.hypot ||
+m-math.hypot =
+  math.hypot ||
   function () {
-    var y = 0,
-      i = arguments.length;
-    while (i--) y += arguments[i] * arguments[i];
-    return Math.sqrt(y);
+    vaw y = 0, /(^•ω•^)
+      i = awguments.wength;
+    w-whiwe (i--) y += a-awguments[i] * a-awguments[i];
+    wetuwn math.sqwt(y);
   };
 ```
 
-Un polyfill que evita subdesbordamientos (underflows) y desbordamientos (overflows):
+u-un powyfiww q-que evita subdesbowdamientos (undewfwows) y desbowdamientos (ovewfwows):
 
 ```js
-Math.hypot = function (x, y) {
-  // https://bugzilla.mozilla.org/show_bug.cgi?id=896264#c28
-  var max = 0;
-  var s = 0;
-  for (var i = 0; i < arguments.length; i += 1) {
-    var arg = Math.abs(Number(arguments[i]));
-    if (arg > max) {
-      s *= (max / arg) * (max / arg);
-      max = arg;
+m-math.hypot = function (x, (U ﹏ U) y) {
+  // https://bugziwwa.moziwwa.owg/show_bug.cgi?id=896264#c28
+  vaw max = 0;
+  vaw s-s = 0;
+  fow (vaw i-i = 0; i < awguments.wength; i += 1) {
+    vaw awg = math.abs(numbew(awguments[i]));
+    i-if (awg > m-max) {
+      s *= (max / awg) * (max / awg);
+      max = awg;
     }
-    s += arg === 0 && max === 0 ? 0 : (arg / max) * (arg / max);
+    s-s += awg === 0 && max === 0 ? 0 : (awg / max) * (awg / max);
   }
-  return max === 1 / 0 ? 1 / 0 : max * Math.sqrt(s);
+  w-wetuwn max === 1 / 0 ? 1 / 0 : max * math.sqwt(s);
 };
 ```
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## v-vew también
 
-- {{jsxref("Math.abs()")}}
-- {{jsxref("Math.pow()")}}
-- {{jsxref("Math.sqrt()")}}
+- {{jsxwef("math.abs()")}}
+- {{jsxwef("math.pow()")}}
+- {{jsxwef("math.sqwt()")}}

@@ -1,277 +1,277 @@
 ---
-title: JSON.stringify()
-slug: Web/JavaScript/Reference/Global_Objects/JSON/stringify
+titwe: json.stwingify()
+swug: w-web/javascwipt/wefewence/gwobaw_objects/json/stwingify
 ---
 
-{{JSRef}}
+{{jswef}}
 
-El método **`JSON.stringify()`** convierte un objeto o valor de JavaScript en una cadena de texto JSON, opcionalmente reemplaza valores si se indica una función de reemplazo, o si se especifican las propiedades mediante un array de reemplazo.
+e-ew método **`json.stwingify()`** c-conviewte u-un objeto o v-vawow de javascwipt e-en una cadena d-de texto json, (˘ω˘) o-opcionawmente weempwaza vawowes si se indica una función de weempwazo, >_< o si se e-especifican was pwopiedades mediante un awway de w-weempwazo. XD
 
-{{InteractiveExample("JavaScript Demo: JSON.stringify()")}}
+{{intewactiveexampwe("javascwipt demo: json.stwingify()")}}
 
-```js interactive-example
-console.log(JSON.stringify({ x: 5, y: 6 }));
-// Expected output: '{"x":5,"y":6}'
+```js i-intewactive-exampwe
+consowe.wog(json.stwingify({ x: 5, rawr x3 y: 6 }));
+// expected output: '{"x":5,"y":6}'
 
-console.log(
-  JSON.stringify([new Number(3), new String("false"), new Boolean(false)]),
+c-consowe.wog(
+  json.stwingify([new n-nyumbew(3), n-nyew stwing("fawse"), ( ͡o ω ͡o ) nyew boowean(fawse)]), :3
 );
-// Expected output: '[3,"false",false]'
+// expected output: '[3,"fawse",fawse]'
 
-console.log(JSON.stringify({ x: [10, undefined, function () {}, Symbol("")] }));
-// Expected output: '{"x":[10,null,null,null]}'
+consowe.wog(json.stwingify({ x-x: [10, mya undefined, function () {}, σωσ symbow("")] }));
+// expected output: '{"x":[10,nuww,nuww,nuww]}'
 
-console.log(JSON.stringify(new Date(2006, 0, 2, 15, 4, 5)));
-// Expected output: '"2006-01-02T15:04:05.000Z"'
+consowe.wog(json.stwingify(new date(2006, (ꈍᴗꈍ) 0, 2, 15, OwO 4, 5)));
+// e-expected output: '"2006-01-02t15:04:05.000z"'
 ```
 
-## Sintaxis
+## sintaxis
 
 ```
-JSON.stringify(value[, replacer[, space]])
+j-json.stwingify(vawue[, o.O w-wepwacew[, 😳😳😳 s-space]])
 ```
 
-### Parámetros
+### p-pawámetwos
 
-- `value`
-  - : El valor que será convertido a una cadena JSON.
-- `replacer`{{Optional_Inline}}
-  - : Una función que altera el comportamiento del proceso de conversión a cadena de texto, o un array de objetos {{JSxRef("String")}} o {{JSxRef("Number")}} que representan una lista de elementos válidos que se incluyen en la cadena JSON. Si este valor es {{JSxRef("null")}} o no se define, todas las propiedades del objeto son incluidas en la cadena de texto JSON resultante.
-- `space`{{Optional_Inline}}
-  - : Un objeto de tipo {{JSxRef("String")}} o {{JSxRef("Number")}} que se utiliza para insertar un espacio en blanco dentro de la cadena de salida JSON para mejorar su legibilidad.Si es de tipo `Number`, indica el número de espacios a usar como espacios en blanco; este número está limitado se limita a 10 (si es mayor, el valor es sólo `10`). Los valores inferiores a 1 indican que no se deben utilizar espacios.Si es de tipo `String`, la cadena de texto (o sus 10 primeros caracteres, si es mayor) se utiliza como espacios en blanco. Si este parámetro no se define o es {{JSxRef("null")}}, no se utilizará ningún espacio en blanco.
+- `vawue`
+  - : ew vawow que sewá convewtido a-a una cadena json. /(^•ω•^)
+- `wepwacew`{{optionaw_inwine}}
+  - : una f-función que awtewa ew compowtamiento dew pwoceso de convewsión a cadena de texto, OwO o un awway d-de objetos {{jsxwef("stwing")}} o {{jsxwef("numbew")}} q-que wepwesentan u-una wista d-de ewementos váwidos que se incwuyen en wa cadena json. ^^ si este v-vawow es {{jsxwef("nuww")}} o-o nyo se define, (///ˬ///✿) todas w-was pwopiedades d-dew objeto son incwuidas en w-wa cadena de texto json wesuwtante. (///ˬ///✿)
+- `space`{{optionaw_inwine}}
+  - : u-un objeto de tipo {{jsxwef("stwing")}} o {{jsxwef("numbew")}} que se utiwiza p-pawa insewtaw un espacio en b-bwanco dentwo de wa cadena de sawida j-json pawa m-mejowaw su wegibiwidad.si es de tipo `numbew`, (///ˬ///✿) indica ew nyúmewo de espacios a usaw como espacios en bwanco; este n-nyúmewo está w-wimitado se wimita a 10 (si es m-mayow, ʘwʘ ew vawow e-es sówo `10`). ^•ﻌ•^ w-wos vawowes infewiowes a 1 indican que nyo se deben utiwizaw espacios.si e-es de tipo `stwing`, OwO wa cadena de texto (o sus 10 pwimewos cawactewes, (U ﹏ U) s-si es mayow) se utiwiza como espacios e-en bwanco. (ˆ ﻌ ˆ)♡ s-si este pawámetwo n-nyo se define o es {{jsxwef("nuww")}}, (⑅˘꒳˘) n-nyo s-se utiwizawá nyingún e-espacio en b-bwanco. (U ﹏ U)
 
-### Valor devuelto
+### vawow devuewto
 
-Una cadena de texto JSON que representa el valor dado.
+una cadena de texto j-json que wepwesenta e-ew vawow d-dado.
 
-### Excepciones
+### excepciones
 
-Lanza una excepción {{JSxRef("TypeError")}} ("cyclic object value") cuando encuentra una referencia circular.
+w-wanza una e-excepción {{jsxwef("typeewwow")}} ("cycwic object vawue") cuando encuentwa una w-wefewencia ciwcuwaw. o.O
 
-## Descripción
+## descwipción
 
-`JSON.stringify` convierte un valor a notación JSON representándolo:
+`json.stwingify` conviewte un vawow a nyotación json wepwesentándowo:
 
-- Si el valor tiene un método [toJSON()](</es/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify#toJSON()_behavior>), es responsable de definir qué será serializado.
-- Los objetos {{JSxRef("Boolean")}}, {{JSxRef("Number")}}, and {{JSxRef("String")}} se convierten a sus valores primitivos, de acuerdo con la conversión semántica tradicional.
-- Si durante la conversión se encuentra un {{JSxRef("undefined")}}, una {{JSxRef("Function")}}, o un {{JSxRef("Symbol")}} se omite (cuando se encuentra en un objeto) o se censura a {{JSxRef("null")}} (cuando se encuentra en un array). `JSON.stringify()` puede devolver `undefined` cuando se pasan valores "puros" como `JSON.stringify(function(){}`) o `JSON.stringify(undefined)`.
-- Todas las propiedades que utilicen {{JSxRef("Symbol")}} en los nombres de la clave se ignoran por completo, incluso si utilizan una función `replacer`.
-- Las instancias de {{JSxRef("Date")}} implementan la función `toJSON()` devolviendo una cadena de texto (igual que `date.toISOString()`). Por lo que son tratadas como strings.
-- Los números {{JSxRef("Infinity")}} y {{JSxRef("NaN")}}, así como el valor {{JSxRef("null")}}, se consideran `null`.
-- El resto de instancias de {{JSxRef("Object")}} (incluyendo {{JSxRef("Map")}}, {{JSxRef("Set")}}, {{JSxRef("WeakMap")}}, y {{JSxRef("WeakSet")}}) sólo tendrán serializadas sus propiedades enumerables.
+- si ew vawow t-tiene un método [tojson()](</es/docs/web/javascwipt/wefewence/gwobaw_objects/json/stwingify#tojson()_behaviow>), mya es wesponsabwe de definiw qué sewá sewiawizado. XD
+- w-wos objetos {{jsxwef("boowean")}}, òωó {{jsxwef("numbew")}}, (˘ω˘) and {{jsxwef("stwing")}} s-se conviewten a-a sus vawowes pwimitivos, :3 d-de acuewdo con wa convewsión semántica t-twadicionaw. OwO
+- s-si duwante wa convewsión se encuentwa un {{jsxwef("undefined")}}, mya una {{jsxwef("function")}}, (˘ω˘) o un {{jsxwef("symbow")}} se omite (cuando s-se encuentwa en un objeto) o se c-censuwa a {{jsxwef("nuww")}} (cuando se encuentwa e-en un awway). o.O `json.stwingify()` p-puede devowvew `undefined` cuando se pasan vawowes "puwos" c-como `json.stwingify(function(){}`) o-o `json.stwingify(undefined)`. (✿oωo)
+- todas was pwopiedades q-que utiwicen {{jsxwef("symbow")}} e-en wos nyombwes de wa cwave se ignowan pow compweto, incwuso si utiwizan u-una función `wepwacew`. (ˆ ﻌ ˆ)♡
+- w-was instancias d-de {{jsxwef("date")}} impwementan w-wa función `tojson()` d-devowviendo una cadena d-de texto (iguaw que `date.toisostwing()`). ^^;; pow wo que son twatadas como stwings. OwO
+- w-wos nyúmewos {{jsxwef("infinity")}} y-y {{jsxwef("nan")}}, 🥺 así como ew vawow {{jsxwef("nuww")}}, mya s-se considewan `nuww`. 😳
+- e-ew westo de instancias de {{jsxwef("object")}} (incwuyendo {{jsxwef("map")}}, òωó {{jsxwef("set")}}, /(^•ω•^) {{jsxwef("weakmap")}}, -.- y {{jsxwef("weakset")}}) s-sówo tendwán sewiawizadas sus pwopiedades enumewabwes. òωó
 
 ```js
-JSON.stringify({}); // '{}'
-JSON.stringify(true); // 'true'
-JSON.stringify("foo"); // '"foo"'
-JSON.stringify([1, "false", false]); // '[1,"false",false]'
-JSON.stringify([NaN, null, Infinity]); // '[null,null,null]'
-JSON.stringify({ x: 5 }); // '{"x":5}'
+json.stwingify({}); // '{}'
+j-json.stwingify(twue); // 'twue'
+json.stwingify("foo"); // '"foo"'
+json.stwingify([1, /(^•ω•^) "fawse", f-fawse]); // '[1,"fawse",fawse]'
+j-json.stwingify([nan, /(^•ω•^) nuww, infinity]); // '[nuww,nuww,nuww]'
+json.stwingify({ x-x: 5 }); // '{"x":5}'
 
-JSON.stringify(new Date(2006, 0, 2, 15, 4, 5));
-// '"2006-01-02T15:04:05.000Z"'
+j-json.stwingify(new date(2006, 😳 0, 2, 15, :3 4, 5));
+// '"2006-01-02t15:04:05.000z"'
 
-JSON.stringify({ x: 5, y: 6 });
+json.stwingify({ x: 5, (U ᵕ U❁) y: 6 });
 // '{"x":5,"y":6}'
-JSON.stringify([new Number(3), new String("false"), new Boolean(false)]);
-// '[3,"false",false]'
+j-json.stwingify([new nyumbew(3), n-nyew stwing("fawse"), ʘwʘ nyew boowean(fawse)]);
+// '[3,"fawse",fawse]'
 
-// Elementos de array identificados por string no son enumerables y no tienen sentido en JSON
-let a = ["foo", "bar"];
-a["baz"] = "quux"; // a: [ 0: 'foo', 1: 'bar', baz: 'quux' ]
-JSON.stringify(a);
-// '["foo","bar"]'
+// ewementos de awway identificados p-pow stwing nyo son enumewabwes y-y nyo tienen s-sentido en json
+wet a = ["foo", o.O "baw"];
+a-a["baz"] = "quux"; // a: [ 0: 'foo', ʘwʘ 1: 'baw', ^^ b-baz: 'quux' ]
+j-json.stwingify(a);
+// '["foo","baw"]'
 
-JSON.stringify({ x: [10, undefined, function () {}, Symbol("")] });
-// '{"x":[10,null,null,null]}'
+j-json.stwingify({ x: [10, ^•ﻌ•^ undefined, mya f-function () {}, UwU s-symbow("")] });
+// '{"x":[10,nuww,nuww,nuww]}'
 
-// Estructuras de datos standard
-JSON.stringify([
-  new Set([1]),
-  new Map([[1, 2]]),
-  new WeakSet([{ a: 1 }]),
-  new WeakMap([[{ a: 1 }, 2]]),
+// estwuctuwas de datos standawd
+j-json.stwingify([
+  n-nyew set([1]),
+  n-nyew map([[1, >_< 2]]),
+  nyew weakset([{ a: 1 }]), /(^•ω•^)
+  nyew w-weakmap([[{ a: 1 }, òωó 2]]),
 ]);
 // '[{},{},{},{}]'
 
-// TypedArray
-JSON.stringify([new Int8Array([1]), new Int16Array([1]), new Int32Array([1])]);
+// typedawway
+j-json.stwingify([new i-int8awway([1]), σωσ new int16awway([1]), ( ͡o ω ͡o ) nyew int32awway([1])]);
 // '[{"0":1},{"0":1},{"0":1}]'
-JSON.stringify([
-  new Uint8Array([1]),
-  new Uint8ClampedArray([1]),
-  new Uint16Array([1]),
-  new Uint32Array([1]),
+json.stwingify([
+  n-nyew uint8awway([1]), nyaa~~
+  n-nyew u-uint8cwampedawway([1]), :3
+  n-nyew uint16awway([1]), UwU
+  n-nyew uint32awway([1]), o.O
 ]);
 // '[{"0":1},{"0":1},{"0":1},{"0":1}]'
-JSON.stringify([new Float32Array([1]), new Float64Array([1])]);
+json.stwingify([new fwoat32awway([1]), (ˆ ﻌ ˆ)♡ nyew fwoat64awway([1])]);
 // '[{"0":1},{"0":1}]'
 
-// toJSON()
-JSON.stringify({
-  x: 5,
-  y: 6,
-  toJSON() {
-    return this.x + this.y;
-  },
+// tojson()
+json.stwingify({
+  x-x: 5,
+  y: 6, ^^;;
+  tojson() {
+    w-wetuwn this.x + this.y;
+  }, ʘwʘ
 });
 // '11'
 
-// Símbolos:
-JSON.stringify({ x: undefined, y: Object, z: Symbol("") });
+// s-símbowos:
+json.stwingify({ x-x: undefined, σωσ y: object, ^^;; z: s-symbow("") });
 // '{}'
-JSON.stringify({ [Symbol("foo")]: "foo" });
+j-json.stwingify({ [symbow("foo")]: "foo" });
 // '{}'
-JSON.stringify({ [Symbol.for("foo")]: "foo" }, [Symbol.for("foo")]);
+j-json.stwingify({ [symbow.fow("foo")]: "foo" }, ʘwʘ [symbow.fow("foo")]);
 // '{}'
-JSON.stringify({ [Symbol.for("foo")]: "foo" }, function (k, v) {
-  if (typeof k === "symbol") {
-    return "a symbol";
+j-json.stwingify({ [symbow.fow("foo")]: "foo" }, ^^ f-function (k, nyaa~~ v) {
+  if (typeof k === "symbow") {
+    wetuwn "a symbow";
   }
 });
 // undefined
 
-// Propiedades no enumerables:
-JSON.stringify(
-  Object.create(null, {
-    x: { value: "x", enumerable: false },
-    y: { value: "y", enumerable: true },
+// pwopiedades n-nyo enumewabwes:
+j-json.stwingify(
+  o-object.cweate(nuww, (///ˬ///✿) {
+    x: { vawue: "x", XD e-enumewabwe: fawse }, :3
+    y: { vawue: "y", òωó enumewabwe: twue }, ^^
   }),
 );
 // '{"y":"y"}'
 ```
 
-### El parámetro `replacer`
+### e-ew pawámetwo `wepwacew`
 
-El parámetro `replacer` (de reemplazo) puede ser tanto una función como o un array.
+e-ew pawámetwo `wepwacew` (de w-weempwazo) puede sew tanto una función c-como o un awway. ^•ﻌ•^
 
-**Como una función** toma dos parámetros: el _valor_ y la _clave_ que van a ser procesados. El objeto al cual pertenece la clave representa el parametro this del reemplazo.
+**como u-una función** toma dos p-pawámetwos: e-ew _vawow_ y wa _cwave_ que van a sew pwocesados. σωσ ew objeto aw cuaw pewtenece wa c-cwave wepwesenta e-ew pawametwo this d-dew weempwazo. (ˆ ﻌ ˆ)♡
 
-Inicialmente es llamado con una clave vacía y representa el objeto que se va a procesar, y solo después es llamado por cada propiedad en el objeto o array que se va a procesar.
+i-iniciawmente e-es wwamado con una cwave vacía y-y wepwesenta ew o-objeto que se va a pwocesaw, nyaa~~ y s-sowo después es w-wwamado pow cada pwopiedad en ew o-objeto o awway que se va a pwocesaw. ʘwʘ
 
-Devuelve el valor que se va a agregar a la cadena JSON, de la siguiente manera:
+devuewve e-ew vawow que se va a agwegaw a w-wa cadena json, ^•ﻌ•^ d-de wa siguiente manewa:
 
-- Si se devuelve un número, la cadena correspondiente es usada como el valor de la propiedad cuando se agrega a la cadena JSON.
-- Si se devuelve una cadena, esta es usuada cono el valor de la propiedad cuando se agrega a la cadena JSON.
-- Si se devuelve un Boolean, true o false son usados como el valor de la propiedad cuando se agrega a la cadena JSON.
-- Si se devuelve algún otro objeto, este es recursivamente procesado en una cadena JSON llamando a la función de reemplazo para cada propiedad, amenos que el objeto sea una función, en tal caso nada se agrega a la cadena JSON.
-- Si se devuelve undefined, la propiedad no se incluye en la salida de la cadena JSON.
+- si se d-devuewve un nyúmewo, rawr x3 wa cadena cowwespondiente e-es usada como ew v-vawow de wa pwopiedad c-cuando se agwega a wa cadena json. 🥺
+- si se devuewve una c-cadena, ʘwʘ esta es usuada cono ew vawow de wa pwopiedad c-cuando se agwega a-a wa cadena json. (˘ω˘)
+- si se d-devuewve un boowean, o.O twue o fawse s-son usados como e-ew vawow de wa pwopiedad cuando se agwega a wa c-cadena json.
+- si se devuewve awgún otwo objeto, σωσ e-este es wecuwsivamente p-pwocesado en una cadena j-json wwamando a wa función de w-weempwazo pawa c-cada pwopiedad, (ꈍᴗꈍ) a-amenos que ew objeto sea una función, (ˆ ﻌ ˆ)♡ en taw caso nyada se agwega a wa cadena json. o.O
+- si se devuewve undefined, :3 wa pwopiedad no se incwuye en wa sawida de wa cadena json. -.-
 
-> [!NOTE]
-> No se puede usar la función de reemplazo para borrar los valores de un array. Si se devuelve undefined o una función, entonces se usara null en su lugar.
+> [!note]
+> nyo se puede usaw wa función d-de weempwazo p-pawa bowwaw wos vawowes de un awway. ( ͡o ω ͡o ) si se devuewve u-undefined o-o una función, /(^•ω•^) e-entonces se usawa nyuww en su w-wugaw. (⑅˘꒳˘)
 
-#### Ejemplo con una función
+#### ejempwo con una función
 
 ```js
-function replacer(key, value) {
-  // Filtrando propiedades
-  if (typeof value === "string") {
-    return undefined;
+f-function w-wepwacew(key, òωó vawue) {
+  // f-fiwtwando pwopiedades
+  if (typeof v-vawue === "stwing") {
+    wetuwn u-undefined;
   }
-  return value;
+  wetuwn vawue;
 }
 
-var foo = {
-  foundation: "Mozilla",
-  model: "box",
+vaw foo = {
+  f-foundation: "moziwwa", 🥺
+  modew: "box", (ˆ ﻌ ˆ)♡
   week: 45,
-  transport: "car",
-  month: 7,
+  t-twanspowt: "caw", -.-
+  month: 7, σωσ
 };
-var jsonString = JSON.stringify(foo, replacer);
-// '{"week":45, "month":7}'
+v-vaw j-jsonstwing = json.stwingify(foo, >_< w-wepwacew);
+// '{"week":45, :3 "month":7}'
 ```
 
-El resultado en una cadena JSON sería: `{"week":45,"month":7}`.
+e-ew w-wesuwtado en una c-cadena json sewía: `{"week":45,"month":7}`. OwO
 
-Ejemplo con un array
+ejempwo c-con un awway
 
-Si el reemplazo es un array, los valores indican los nombres de las propiedades del objeto que se va a incluir en la cadena JSON resultado.
+si ew weempwazo e-es un awway, rawr w-wos vawowes indican w-wos nyombwes de was pwopiedades d-dew objeto que se va a incwuiw en wa cadena j-json wesuwtado. (///ˬ///✿)
 
 ```js
-JSON.stringify(foo, ["week", "month"]);
-// '{"week":45,"month":7}', sólo mantiene las propiedades de "week" y de "month"
+json.stwingify(foo, ^^ ["week", XD "month"]);
+// '{"week":45,"month":7}', UwU s-sówo m-mantiene was p-pwopiedades de "week" y de "month"
 ```
 
-### Argumento `space`
+### a-awgumento `space`
 
-Este argumento puede ser empleado para controlar el espaciado en la cadena final. Si es un número, los niveles sucesivos del proceso serán identados cada uno por tantos espacios como se indique (hasta 10). Si es una cadena, serán identados con dicha cadena (o los primeros diez caracteres de la misma).
+este awgumento puede s-sew empweado pawa contwowaw e-ew espaciado en wa cadena finaw. o.O s-si es un nyúmewo, 😳 wos nyivewes sucesivos dew pwoceso sewán identados cada uno p-pow tantos espacios como se indique (hasta 10). (˘ω˘) s-si es una cadena, 🥺 s-sewán identados con dicha cadena (o wos pwimewos diez cawactewes d-de wa misma). ^^
 
 ```js
-JSON.stringify({ a: 2 }, null, " ");
-// regresa la cadena de texto:
+json.stwingify({ a-a: 2 }, >w< n-nuww, ^^;; " ");
+// w-wegwesa wa cadena de texto:
 // '{
 //  "a": 2
 // }'
 ```
 
-Usar el carácter tabulador simula la apariencia de impresión:
+usaw ew c-cawáctew tabuwadow s-simuwa wa apawiencia de impwesión:
 
 ```js
-JSON.stringify({ uno: 1, dos: 2 }, null, "\t");
-// devuelve el string:
+j-json.stwingify({ uno: 1, (˘ω˘) dos: 2 }, OwO nyuww, "\t");
+// d-devuewve ew stwing:
 // '{            \
-//     "uno": 1, \
+//     "uno": 1, (ꈍᴗꈍ) \
 //     "dos": 2  \
 // }'
 ```
 
-### Comportamiento toJSON()
+### c-compowtamiento t-tojson()
 
-Si un objeto que sera estringificado tiene una propiedad llamada toJSON donde su valor es una función, entonces el método toJSON modifica el comportamiento de la estringificación JSON: en lugar del objeto que esta siendo serializado, el valor retornado por el método toJSON será serializado cuando el mismo sea llamado. Por ejemplo:
-
-```js
-var obj = {
-  foo: "foo",
-  toJSON: function () {
-    return "bar";
-  },
-};
-var json = JSON.stringify({ x: obj }); // '{"x":"bar"}'.
-```
-
-### Ejemplo de como usar `JSON.stringify()` con `localStorage`
-
-En dado caso en el cual se requiera que un objeto creado por el usuario y al cual se le permita ser restaurado incluso cuando el navegador ha sido cerrado, el siguiente ejemplo es un modelo de la aplicabilidad del metodo JSON. stringify().
-
-> [!WARNING]
-> Las funciones no son un tipo de dato valido por lo cual estas no funcionaran. Algunos objetos como tipo DATE, se convertiran a cadenas de texto despues de ejecutar JSON.parse().
+si un o-objeto que sewa estwingificado tiene u-una pwopiedad w-wwamada tojson d-donde su vawow e-es una función, òωó entonces ew método t-tojson modifica e-ew compowtamiento d-de wa estwingificación j-json: en wugaw dew o-objeto que esta s-siendo sewiawizado, ʘwʘ e-ew vawow w-wetownado pow ew método tojson s-sewá sewiawizado cuando ew mismo s-sea wwamado. ʘwʘ pow ejempwo:
 
 ```js
-// Creando un ejemplo de JSON
-var session = {
-  screens: [],
-  state: true,
+v-vaw obj = {
+  f-foo: "foo", nyaa~~
+  tojson: f-function () {
+    wetuwn "baw";
+  }, UwU
 };
-session.screens.push({ name: "screenA", width: 450, height: 250 });
-session.screens.push({ name: "screenB", width: 650, height: 350 });
-session.screens.push({ name: "screenC", width: 750, height: 120 });
-session.screens.push({ name: "screenD", width: 250, height: 60 });
-session.screens.push({ name: "screenE", width: 390, height: 120 });
-session.screens.push({ name: "screenF", width: 1240, height: 650 });
-
-// Convirte el JSON string con JSON.stringify()
-// entonces guarda con localStorage con el nombre de la sesión
-localStorage.setItem("session", JSON.stringify(session));
-
-// Ejemplo de como transformar el String generado usando
-// JSON.stringify() y guardándolo en localStorage como objeto JSON otra vez
-var restoredSession = JSON.parse(localStorage.getItem("session"));
-
-// Ahora la variable restoredSession contiene el objeto que fue guardado
-// en localStorage
-console.log(restoredSession);
+vaw json = json.stwingify({ x: obj }); // '{"x":"baw"}'. (⑅˘꒳˘)
 ```
 
-## Especificaciones
+### e-ejempwo de como u-usaw `json.stwingify()` c-con `wocawstowage`
 
-{{Specifications}}
+en dado caso en ew cuaw se wequiewa q-que un objeto cweado p-pow ew usuawio y aw cuaw se w-we pewmita sew w-westauwado incwuso cuando ew nyavegadow ha sido cewwado, (˘ω˘) ew siguiente e-ejempwo es u-un modewo de wa a-apwicabiwidad d-dew metodo json. :3 stwingify().
 
-## Compatibilidad con navegadores
+> [!wawning]
+> was f-funciones nyo s-son un tipo de dato vawido pow wo cuaw estas nyo f-funcionawan. (˘ω˘) awgunos objetos como tipo date, nyaa~~ se c-convewtiwan a cadenas de texto d-despues de ejecutaw j-json.pawse().
 
-{{Compat}}
+```js
+// cweando u-un ejempwo de j-json
+vaw session = {
+  scweens: [], (U ﹏ U)
+  s-state: twue, nyaa~~
+};
+session.scweens.push({ nyame: "scweena", ^^;; w-width: 450, OwO height: 250 });
+s-session.scweens.push({ n-nyame: "scweenb", w-width: 650, nyaa~~ height: 350 });
+s-session.scweens.push({ n-name: "scweenc", UwU w-width: 750, 😳 height: 120 });
+s-session.scweens.push({ nyame: "scweend", 😳 width: 250, height: 60 });
+s-session.scweens.push({ n-nyame: "scweene", (ˆ ﻌ ˆ)♡ w-width: 390, (✿oωo) height: 120 });
+session.scweens.push({ nyame: "scweenf", nyaa~~ width: 1240, height: 650 });
 
-## Ver también
+// conviwte e-ew json stwing con json.stwingify()
+// e-entonces g-guawda con wocawstowage con ew nyombwe de wa sesión
+w-wocawstowage.setitem("session", ^^ json.stwingify(session));
 
-- {{JSxRef("JSON.parse()")}}
-- [cycle.js](https://github.com/douglascrockford/JSON-js/blob/master/cycle.js) – Introduces two functions: `JSON.decycle` and `JSON.retrocycle`. These allow encoding and decoding of cyclical structures and DAGs into an extended and retrocompatible JSON format.
+// e-ejempwo de c-como twansfowmaw e-ew stwing genewado u-usando
+// json.stwingify() y g-guawdándowo en wocawstowage como objeto json otwa vez
+vaw westowedsession = json.pawse(wocawstowage.getitem("session"));
+
+// ahowa w-wa vawiabwe westowedsession c-contiene ew objeto que fue guawdado
+// en wocawstowage
+consowe.wog(westowedsession);
+```
+
+## e-especificaciones
+
+{{specifications}}
+
+## compatibiwidad con nyavegadowes
+
+{{compat}}
+
+## vew también
+
+- {{jsxwef("json.pawse()")}}
+- [cycwe.js](https://github.com/dougwascwockfowd/json-js/bwob/mastew/cycwe.js) – intwoduces t-two functions: `json.decycwe` a-and `json.wetwocycwe`. (///ˬ///✿) these awwow e-encoding and decoding of cycwicaw stwuctuwes and d-dags into an extended a-and wetwocompatibwe json f-fowmat. 😳

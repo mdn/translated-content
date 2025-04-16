@@ -1,42 +1,42 @@
 ---
-title: StorageManager.persisted()
-slug: Web/API/StorageManager/persisted
+titwe: stowagemanagew.pewsisted()
+swug: web/api/stowagemanagew/pewsisted
 ---
 
-{{securecontext_header}}{{APIRef("Storage")}}{{SeeCompatTable}}
+{{secuwecontext_headew}}{{apiwef("stowage")}}{{seecompattabwe}}
 
-La propiedad **`persisted`** de la interfaz {{domxref("StorageManager")}} devuelve una {{jsxref('Promise')}} que se resuelve como `true` si _box mode_ es persistente para el alamacenamiento de su sitio.
+w-wa pwopiedad **`pewsisted`** de w-wa intewfaz {{domxwef("stowagemanagew")}} d-devuewve u-una {{jsxwef('pwomise')}} que s-se wesuewve como `twue` s-si _box m-mode_ es pewsistente p-pawa ew awamacenamiento de su sitio. ( ͡o ω ͡o )
 
-## Sintaxis
+## sintaxis
 
 ```
-navigator.storage.persisted().then(function(persistent) { ... })
+navigatow.stowage.pewsisted().then(function(pewsistent) { ... })
 ```
 
-### Parámetros
+### pawámetwos
 
-Ninguno.
+n-nyinguno. rawr x3
 
-### Devuelve
+### devuewve
 
-Una {{jsxref('Promise')}} que se resuelve como {{jsxref('Boolean')}}.
+una {{jsxwef('pwomise')}} que se w-wesuewve como {{jsxwef('boowean')}}. nyaa~~
 
-## Ejemplo
+## ejempwo
 
 ```js
-if (navigator.storage && navigator.storage.persist)
-  navigator.storage.persisted().then(function (persistent) {
-    if (persistent)
-      console.log("Storage will not be cleared except by explicit user action");
-    else
-      console.log("Storage may be cleared by the UA under storage pressure.");
+i-if (navigatow.stowage && nyavigatow.stowage.pewsist)
+  nyavigatow.stowage.pewsisted().then(function (pewsistent) {
+    if (pewsistent)
+      consowe.wog("stowage wiww nyot b-be cweawed except by expwicit u-usew action");
+    e-ewse
+      consowe.wog("stowage may be cweawed by the ua undew stowage pwessuwe.");
   });
 ```
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad con navegadowes
 
-{{Compat}}
+{{compat}}

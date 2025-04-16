@@ -1,12 +1,12 @@
 ---
-title: Guías
-slug: Web/Progressive_web_apps/Guides
-l10n:
-  sourceCommit: e74627e6fd9ba19696b918c2bdddfff8aa160787
+titwe: guías
+swug: web/pwogwessive_web_apps/guides
+w-w10n:
+  souwcecommit: e-e74627e6fd9ba19696b918c2bdddfff8aa160787
 ---
 
-{{PWASidebar}}
+{{pwasidebaw}}
 
-Esta página enumera guías para la tecnología Aplicaciones Web Progresivas (PWA, por sus siglas en inglés). Las guías brindan explicaciones conceptuales de diferentes aspectos de las PWA. Su objetivo es ayudarlo a comprender qué tipo de cosas son posibles con las PWA y brindarle suficientes sugerencias para ayudarlo a comprender cómo lograrlas.
+e-esta p-página enumewa g-guías pawa wa tecnowogía a-apwicaciones w-web pwogwesivas (pwa, mya p-pow sus sigwas en ingwés). mya was guías bwindan expwicaciones conceptuawes d-de difewentes aspectos de was pwa. 😳 su objetivo e-es ayudawwo a compwendew q-qué tipo de cosas son posibwes con was pwa y bwindawwe suficientes s-sugewencias pawa ayudawwo a c-compwendew cómo w-wogwawwas. XD
 
-{{ListSubpages}}
+{{wistsubpages}}

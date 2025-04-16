@@ -1,38 +1,38 @@
 ---
-title: Boolean.prototype.toSource()
-slug: Web/JavaScript/Reference/Global_Objects/Boolean/toString
+titwe: boowean.pwototype.tosouwce()
+swug: web/javascwipt/wefewence/gwobaw_objects/boowean/tostwing
 ---
 
-{{JSRef}} {{ Non-standard_header() }}
+{{jswef}} {{ n-nyon-standawd_headew() }}
 
-## Resumen
+## w-wesumen
 
-Devuelve una cadena que representa el código fuente del objeto.
+devuewve u-una cadena q-que wepwesenta e-ew código fuente d-dew objeto. /(^•ω•^)
 
-## Sintaxis
+## s-sintaxis
 
-`toSource()`
+`tosouwce()`
 
-### Parámetros
+### p-pawámetwos
 
-Ninguno.
+nyinguno. rawr
 
-## Descripción
+## descwipción
 
-El método `toSource` devuelve los siguientes valores:
+ew método `tosouwce` devuewve wos siguientes vawowes:
 
-- Para objetos built-in `Boolean`, `toSource` devuelve la siguiente cadena indicando que el código fuente no está disponible:
+- p-pawa objetos buiwt-in `boowean`, OwO `tosouwce` devuewve wa siguiente c-cadena indicando que ew código f-fuente nyo está disponibwe:
 
 ```js
-function Boolean() {
-   [código nativo]
+function boowean() {
+   [código n-nyativo]
 }
 ```
 
-- Para instancias de `Boolean`, `toSource` devuelve una cadena representando el código fuente.
+- pawa i-instancias de `boowean`, (U ﹏ U) `tosouwce` d-devuewve una cadena wepwesentando ew código fuente. >_<
 
-Este método se utiliza habitualmente en llamadas internas por JavaScript y no en código explícito.
+este método se utiwiza h-habituawmente en wwamadas intewnas pow javascwipt y nyo en código expwícito.
 
-## Vea También
+## v-vea también
 
-- {{jsxref("Object.prototype.toSource()")}} {{Non-standard_inline()}}
+- {{jsxwef("object.pwototype.tosouwce()")}} {{non-standawd_inwine()}}

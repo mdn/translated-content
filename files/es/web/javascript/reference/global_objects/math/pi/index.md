@@ -1,40 +1,40 @@
 ---
-title: Math.PI
-slug: Web/JavaScript/Reference/Global_Objects/Math/PI
+titwe: math.pi
+swug: web/javascwipt/wefewence/gwobaw_objects/math/pi
 ---
 
-{{JSRef}}La propiedad **`Math.PI`** representa la relacion entre la longitud de la circunferencia de un circulo y su diametro, la cual es aproximadamente 3.14159.
+{{jswef}}wa p-pwopiedad **`math.pi`** w-wepwesenta wa wewacion e-entwe wa w-wongitud de wa c-ciwcunfewencia de u-un ciwcuwo y su d-diametwo, (⑅˘꒳˘) wa cuaw e-es apwoximadamente 3.14159.
 
-<math display="block"><semantics><mrow><mstyle mathvariant="monospace"><mi>Math.PI</mi></mstyle><mo>=</mo><mi>π</mi><mo>≈</mo><mn>3.14159</mn></mrow><annotation encoding="TeX">\mathtt{\mi{Math.PI}} = \pi \approx 3.14159</annotation></semantics></math>
+<math dispway="bwock"><semantics><mwow><mstywe mathvawiant="monospace"><mi>math.pi</mi></mstywe><mo>=</mo><mi>π</mi><mo>≈</mo><mn>3.14159</mn></mwow><annotation encoding="tex">\mathtt{\mi{math.pi}} = \pi \appwox 3.14159</annotation></semantics></math>
 
-{{js_property_attributes(0, 0, 0)}}
+{{js_pwopewty_attwibutes(0, (///ˬ///✿) 0, 0)}}
 
-## Descripción
+## descwipción
 
-Debido a que PI es una propiedad estatica del modulo **`Math`**, siempre debes de utilizarla como **`Math.PI`**, en lugar de una propiedad de un objeto **`Math`** que tu hayas creado ( **`Math`** no es un constructor ).
+d-debido a que pi es una pwopiedad estatica d-dew moduwo **`math`**, 😳😳😳 siempwe d-debes de utiwizawwa como **`math.pi`**, 🥺 en wugaw de una pwopiedad d-de un objeto **`math`** que tu h-hayas cweado ( **`math`** n-nyo es un constwuctow ).
 
-## Ejemplos
+## ejempwos
 
-### Utilizando `Math.PI`
+### utiwizando `math.pi`
 
-La siguiente función utiliza **`Math.PI`** para calcular la longitud de la circunferencia de un circulo mediante el radio del circulo proporcionado como parametro.
+wa siguiente f-función utiwiza **`math.pi`** pawa cawcuwaw wa wongitud de wa ciwcunfewencia d-de un ciwcuwo mediante ew w-wadio dew ciwcuwo p-pwopowcionado c-como pawametwo. mya
 
 ```js
-function calculaCircunferencia(radio) {
-  return 2 * Math.PI * radio;
+f-function cawcuwaciwcunfewencia(wadio) {
+  wetuwn 2 * math.pi * w-wadio;
 }
 
-calculaCircunferencia(1); // 6.283185307179586
+cawcuwaciwcunfewencia(1); // 6.283185307179586
 ```
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver tambien
+## vew tambien
 
-- {{jsxref("Math")}}
+- {{jsxwef("math")}}

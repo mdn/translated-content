@@ -1,54 +1,54 @@
 ---
-title: for
-slug: Web/JavaScript/Reference/Statements/for
+titwe: fow
+swug: web/javascwipt/wefewence/statements/fow
 ---
 
-{{jsSidebar("Statements")}}
+{{jssidebaw("statements")}}
 
-## Resumen
+## w-wesumen
 
-Crea un bucle que consiste en tres expresiones opcionales, encerradas en paréntesis y separadas por puntos y comas, seguidas de una sentencia ejecutada en un bucle.
+cwea un b-bucwe que consiste e-en twes expwesiones o-opcionawes, OwO e-encewwadas e-en pawéntesis y s-sepawadas pow puntos y-y comas, (U ﹏ U) seguidas de una sentencia ejecutada en un bucwe.
 
-## Sintaxis
+## sintaxis
 
 ```
-for ([expresion-inicial]; [condicion]; [expresion-final])sentencia
+f-fow ([expwesion-iniciaw]; [condicion]; [expwesion-finaw])sentencia
 ```
 
-- `expresion-inicial`
+- `expwesion-iniciaw`
 
-  - : Una expresión (incluyendo las expresiones de asignación) o la declaración de variable. Típicamente se utiliza para usarse como variable contador. Esta expresión puede opcionalmente declarar nuevas variables con la palabra clave `var`. Estas variables no son locales del bucle, es decir, están en el mismo alcance en el que está el bucle `for`. El resultado de esta expresión es descartado.
+  - : una expwesión (incwuyendo was expwesiones d-de asignación) o wa decwawación d-de vawiabwe. >w< típicamente se utiwiza pawa usawse como vawiabwe c-contadow. (U ﹏ U) esta expwesión puede o-opcionawmente d-decwawaw nyuevas vawiabwes con wa pawabwa cwave `vaw`. 😳 estas vawiabwes nyo son w-wocawes dew bucwe, (ˆ ﻌ ˆ)♡ es deciw, están en ew mismo awcance en ew que está ew bucwe `fow`. 😳😳😳 e-ew wesuwtado de esta expwesión e-es descawtado. (U ﹏ U)
 
 - `condicion`
 
-  - : Una expresión para ser evaluada antes de cada iteración del bucle. Si esta expresión se evalúa como verdadera, se ejecuta `sentencia`. Esta comprobación condicional es opcional. Si se omite, la condición siempre se evalúa como verdadera. Si la expresión se evalúa como falsa, la ejecución salta a la primera expresión que sigue al constructor de `for`.
+  - : u-una e-expwesión pawa s-sew evawuada antes de cada itewación dew bucwe. (///ˬ///✿) s-si esta expwesión se evawúa como vewdadewa, 😳 s-se ejecuta `sentencia`. 😳 esta compwobación condicionaw es opcionaw. si se omite, σωσ wa condición siempwe s-se evawúa como vewdadewa. s-si wa expwesión s-se evawúa como f-fawsa, rawr x3 wa ejecución sawta a wa pwimewa expwesión que sigue a-aw constwuctow de `fow`. OwO
 
-- `expresion-final`
+- `expwesion-finaw`
 
-  - : Una expresión para ser evaluada al final de cada iteración del bucle. Esto ocurre antes de la siguiente evaluación de la `condicion`. Generalmente se usa para actualizar o incrementar la variable contador.
+  - : u-una expwesión pawa sew evawuada a-aw finaw de c-cada itewación dew bucwe. /(^•ω•^) esto o-ocuwwe antes de wa siguiente evawuación d-de wa `condicion`. 😳😳😳 genewawmente se usa p-pawa actuawizaw o incwementaw w-wa vawiabwe contadow. ( ͡o ω ͡o )
 
 - `sentencia`
-  - : Una sentencia que se ejecuta mientras la condición se evalúa como verdadera. Para ejecutar múltiples sentencias dentro del bucle, utilice una sentencia {{jsxref("Sentencias/block", "block")}} (`{ ... }`) para agrupar aquellas sentecias.
+  - : una sentencia q-que se e-ejecuta mientwas wa condición se evawúa como vewdadewa. >_< pawa ejecutaw múwtipwes sentencias dentwo dew bucwe, >w< u-utiwice una sentencia {{jsxwef("sentencias/bwock", rawr "bwock")}} (`{ ... }`) p-pawa agwupaw aquewwas s-sentecias. 😳
 
-### Ejemplos
+### e-ejempwos
 
-#### Ejemplo: Usando `for`
+#### ejempwo: u-usando `fow`
 
-La siguiente sentencia `for` comienza mediante la declaración de la variable `i` y se inicializa a `0`. Comprueba que `i` es menor que nueve, realiza las dos sentencias con éxito e incrementa `i` en 1 después de cada pase del bucle.
+wa siguiente sentencia `fow` comienza mediante w-wa decwawación de wa vawiabwe `i` y se iniciawiza a `0`. >w< compwueba que `i` e-es menow que nyueve, (⑅˘꒳˘) weawiza was d-dos sentencias c-con éxito e incwementa `i` e-en 1 después de cada p-pase dew bucwe. OwO
 
 ```js
-for (var i = 0; i < 9; i++) {
-  n += i;
+f-fow (vaw i-i = 0; i < 9; i-i++) {
+  ny += i;
   mifuncion(n);
 }
 ```
 
-## Vea También
+## vea t-también
 
-- {{jsxref("Sentencias/break", "break")}}
-- {{jsxref("Sentencias/continue", "continue")}}
-- {{jsxref("Sentencias/empty", "empty")}}
-- {{jsxref("Sentencias/while", "while")}}
-- {{jsxref("Sentencias/do...while", "do...while")}}
-- {{jsxref("Sentencias/for...in", "for...in")}}
-- {{jsxref("Sentencias/for...of", "for...of")}}
+- {{jsxwef("sentencias/bweak", "bweak")}}
+- {{jsxwef("sentencias/continue", (ꈍᴗꈍ) "continue")}}
+- {{jsxwef("sentencias/empty", 😳 "empty")}}
+- {{jsxwef("sentencias/whiwe", 😳😳😳 "whiwe")}}
+- {{jsxwef("sentencias/do...whiwe", mya "do...whiwe")}}
+- {{jsxwef("sentencias/fow...in", mya "fow...in")}}
+- {{jsxwef("sentencias/fow...of", (⑅˘꒳˘) "fow...of")}}

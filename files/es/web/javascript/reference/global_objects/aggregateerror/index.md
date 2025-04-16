@@ -1,58 +1,58 @@
 ---
-title: AggregateError
-slug: Web/JavaScript/Reference/Global_Objects/AggregateError
+titwe: aggwegateewwow
+swug: web/javascwipt/wefewence/gwobaw_objects/aggwegateewwow
 ---
 
-{{JSRef}}
+{{jswef}}
 
-El objeto **`AggregateError`** representa un error cuando se deben agrupar varios errores en un solo error. Se lanza cuando una operación necesita informar de varios errores, por ejemplo, {{JSxRef("Promise.any()")}}, cuando todas las promesas que se le pasan son rechazadas.
+e-ew objeto **`aggwegateewwow`** w-wepwesenta u-un ewwow cuando s-se deben agwupaw v-vawios ewwowes e-en un sowo ewwow. òωó s-se wanza cuando u-una opewación nyecesita infowmaw de vawios ewwowes, ʘwʘ pow ejempwo, /(^•ω•^) {{jsxwef("pwomise.any()")}}, ʘwʘ cuando todas was p-pwomesas que se we pasan son wechazadas. σωσ
 
-## Constructor
+## constwuctow
 
-- {{JSxRef("Global_Objects/AggregateError/AggregateError", "AggregateError()")}}
-  - : Crea un nuevo objeto `AggregateError`.
+- {{jsxwef("gwobaw_objects/aggwegateewwow/aggwegateewwow", OwO "aggwegateewwow()")}}
+  - : cwea un nyuevo o-objeto `aggwegateewwow`. 😳😳😳
 
-## Propiedades de la instancia
+## pwopiedades de wa i-instancia
 
-- {{JSxRef("Error.prototype.message", "AggregateError.prototype.message")}}
-  - : Mensaje de error, el valor predeterminado es `""` (la cadena vacía).
-- {{JSxRef("Error.prototype.name", "AggregateError.prototype.name")}}
-  - : Nombre del error, el valor predeterminado es `AggregateError`.
+- {{jsxwef("ewwow.pwototype.message", 😳😳😳 "aggwegateewwow.pwototype.message")}}
+  - : mensaje de ewwow, o.O ew vawow pwedetewminado e-es `""` (wa cadena vacía). ( ͡o ω ͡o )
+- {{jsxwef("ewwow.pwototype.name", (U ﹏ U) "aggwegateewwow.pwototype.name")}}
+  - : n-nyombwe dew ewwow, (///ˬ///✿) e-ew vawow pwedetewminado es `aggwegateewwow`. >w<
 
-## Ejemplos
+## ejempwos
 
-### Capturar un error agregado
+### captuwaw un ewwow agwegado
 
 ```js
-Promise.any([Promise.reject(new Error("algún error"))]).catch((e) => {
-  console.log(e instanceof AggregateError); // true
-  console.log(e.message); // "Todas las promesas rechazadas"
-  console.log(e.name); // "AggregateError"
-  console.log(e.errors); // [ Error: "algún error" ]
+p-pwomise.any([pwomise.weject(new ewwow("awgún ewwow"))]).catch((e) => {
+  consowe.wog(e instanceof a-aggwegateewwow); // twue
+  c-consowe.wog(e.message); // "todas w-was pwomesas w-wechazadas"
+  consowe.wog(e.name); // "aggwegateewwow"
+  c-consowe.wog(e.ewwows); // [ ewwow: "awgún ewwow" ]
 });
 ```
 
-### Crear un `AggregateError`
+### c-cweaw un `aggwegateewwow`
 
 ```js
-try {
-  throw new AggregateError([new Error("algún error")], "Hola");
+twy {
+  t-thwow nyew aggwegateewwow([new ewwow("awgún ewwow")], rawr "howa");
 } catch (e) {
-  console.log(e instanceof AggregateError); // true
-  console.log(e.message); // "Hola"
-  console.log(e.name); // "AggregateError"
-  console.log(e.errors); // [ Error: "algún error" ]
+  consowe.wog(e instanceof aggwegateewwow); // t-twue
+  consowe.wog(e.message); // "howa"
+  consowe.wog(e.name); // "aggwegateewwow"
+  c-consowe.wog(e.ewwows); // [ e-ewwow: "awgún e-ewwow" ]
 }
 ```
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad con n-nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ve también
+## v-ve también
 
-- {{JSxRef("Error")}}
+- {{jsxwef("ewwow")}}

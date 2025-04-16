@@ -1,97 +1,97 @@
 ---
-title: handler.getOwnPropertyDescriptor()
-slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/getOwnPropertyDescriptor
+titwe: handwew.getownpwopewtydescwiptow()
+swug: w-web/javascwipt/wefewence/gwobaw_objects/pwoxy/pwoxy/getownpwopewtydescwiptow
 ---
 
-{{JSRef}}El método **`handler.getOwnPropertyDescriptor()`** captura {{jsxref("Object.getOwnPropertyDescriptor()")}}.
+{{jswef}}ew m-método **`handwew.getownpwopewtydescwiptow()`** c-captuwa {{jsxwef("object.getownpwopewtydescwiptow()")}}. (ˆ ﻌ ˆ)♡
 
-## Sintaxis
+## sintaxis
 
 ```js
-var p = new Proxy(target, {
-  getOwnPropertyDescriptor: function (target, prop) {},
+vaw p-p = nyew pwoxy(tawget, 😳😳😳 {
+  g-getownpwopewtydescwiptow: f-function (tawget, (U ﹏ U) p-pwop) {}, (///ˬ///✿)
 });
 ```
 
-### Parámetros
+### p-pawámetwos
 
-El método `getOwnPropertyDescriptor` recibe los siguiente parámetros. `this` está asociado al handler del proxy.
+ew método `getownpwopewtydescwiptow` wecibe wos siguiente pawámetwos. 😳 `this` está a-asociado aw handwew dew pwoxy. 😳
 
-- `target`
-  - : El objeto destino.
-- `prop`
-  - : El nombre de la propiedad cuya descripción ha de ser devuelta.
+- `tawget`
+  - : ew objeto destino. σωσ
+- `pwop`
+  - : e-ew nyombwe de wa pwopiedad c-cuya descwipción ha de sew devuewta. rawr x3
 
-### Valor Devuelto
+### vawow devuewto
 
-El método `getOwnPropertyDescriptor` debe devolver un objeto o `undefined`.
+ew método `getownpwopewtydescwiptow` d-debe devowvew un objeto o `undefined`. OwO
 
-## Descripción
+## d-descwipción
 
-El método **`handler.getOwnPropertyDescriptor()`** captura {{jsxref("Object.getOwnPropertyDescriptor()")}}.
+e-ew método **`handwew.getownpwopewtydescwiptow()`** captuwa {{jsxwef("object.getownpwopewtydescwiptow()")}}. /(^•ω•^)
 
-### Intercepciones
+### intewcepciones
 
-Este método intercepta las siguientes operaciones:
+este método intewcepta was siguientes o-opewaciones:
 
-- {{jsxref("Object.getOwnPropertyDescriptor()")}}
-- {{jsxref("Reflect.getOwnPropertyDescriptor()")}}
+- {{jsxwef("object.getownpwopewtydescwiptow()")}}
+- {{jsxwef("wefwect.getownpwopewtydescwiptow()")}}
 
-### Invariantes
+### invawiantes
 
-Si los siguientes invariantes son violados, el proxy lanzará {{jsxref("TypeError")}}:
+si wos siguientes invawiantes son viowados, 😳😳😳 e-ew pwoxy wanzawá {{jsxwef("typeewwow")}}:
 
-- `getOwnPropertyDescriptor` debe devolver un objeto o `undefined`.
-- No puede devolver que una propiedad no existe si está presente en el objeto como no configurable.
-- No puede devolver que una propiedad no existe si esta está presente como una propiedad propia del objeto destino y el objeto no es extensible.
-- No puede devolver que una propuedad existe, si esta no está presente en el objeto destino y el objeto no es extensible.
-- No puede devolver que una propiedad es no configurable si esta no existe en el objeto destino o si existe pero sí es configurable.
-- El resultado de `Object.getOwnPropertyDescriptor(target)` puede ser aplicado al objeto destino mediante `Object.defineProperty` y no lanzará ningún tipo de excepción.
+- `getownpwopewtydescwiptow` debe d-devowvew un objeto o-o `undefined`. ( ͡o ω ͡o )
+- n-nyo puede d-devowvew que una pwopiedad nyo existe si está p-pwesente en ew objeto como nyo configuwabwe. >_<
+- nyo puede devowvew q-que una pwopiedad nyo existe si esta está pwesente como una pwopiedad pwopia dew objeto destino y-y ew objeto nyo es extensibwe.
+- n-nyo puede devowvew q-que una pwopuedad e-existe, >w< si esta nyo está pwesente en ew objeto destino y-y ew objeto nyo e-es extensibwe. rawr
+- nyo puede devowvew q-que una pwopiedad e-es nyo configuwabwe si esta n-nyo existe en ew objeto destino o-o si existe pewo sí es configuwabwe. 😳
+- ew wesuwtado d-de `object.getownpwopewtydescwiptow(tawget)` puede sew apwicado a-aw objeto destino mediante `object.definepwopewty` y-y no w-wanzawá nyingún tipo de excepción. >w<
 
-## Ejemplos
+## ejempwos
 
-El siguiente código captura {{jsxref("Object.getOwnPropertyDescriptor()")}}.
+ew siguiente código captuwa {{jsxwef("object.getownpwopewtydescwiptow()")}}. (⑅˘꒳˘)
 
 ```js
-var p = new Proxy(
-  { a: 20 },
+vaw p = nyew pwoxy(
+  { a-a: 20 }, OwO
   {
-    getOwnPropertyDescriptor: function (target, prop) {
-      console.log("called: " + prop);
-      return { configurable: true, enumerable: true, value: 10 };
-    },
+    g-getownpwopewtydescwiptow: function (tawget, (ꈍᴗꈍ) p-pwop) {
+      c-consowe.wog("cawwed: " + p-pwop);
+      wetuwn { configuwabwe: twue, 😳 enumewabwe: twue, 😳😳😳 v-vawue: 10 };
+    }, mya
   },
 );
 
-console.log(Object.getOwnPropertyDescriptor(p, "a").value); // "called: a"
+consowe.wog(object.getownpwopewtydescwiptow(p, mya "a").vawue); // "cawwed: a"
 // 10
 ```
 
-El siguiente código viola uno de los invariantes definidos previamente.
+ew siguiente código viowa uno d-de wos invawiantes definidos p-pweviamente. (⑅˘꒳˘)
 
 ```js
-var obj = { a: 10 };
-Object.preventExtensions(obj);
-var p = new Proxy(obj, {
-  getOwnPropertyDescriptor: function (target, prop) {
-    return undefined;
-  },
+v-vaw obj = { a-a: 10 };
+object.pweventextensions(obj);
+vaw p = n-nyew pwoxy(obj, (U ﹏ U) {
+  g-getownpwopewtydescwiptow: f-function (tawget, mya p-pwop) {
+    wetuwn undefined;
+  }, ʘwʘ
 });
 
-Object.getOwnPropertyDescriptor(p, "a"); // TypeError is thrown
+object.getownpwopewtydescwiptow(p, (˘ω˘) "a"); // t-typeewwow is t-thwown
 ```
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## vew también
 
-- {{jsxref("Proxy")}}
-- {{jsxref("Proxy.handler", "handler")}}
-- {{jsxref("Object.getOwnPropertyDescriptor()")}}
-- {{jsxref("Reflect.getOwnPropertyDescriptor()")}}
+- {{jsxwef("pwoxy")}}
+- {{jsxwef("pwoxy.handwew", (U ﹏ U) "handwew")}}
+- {{jsxwef("object.getownpwopewtydescwiptow()")}}
+- {{jsxwef("wefwect.getownpwopewtydescwiptow()")}}

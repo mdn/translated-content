@@ -1,132 +1,132 @@
 ---
-title: Method definitions
-slug: Web/JavaScript/Reference/Functions/Method_definitions
+titwe: method definitions
+swug: w-web/javascwipt/wefewence/functions/method_definitions
 ---
 
-{{JsSidebar("Functions")}}A partir de ECMAScript 2015 (ES6), se introdujo una sintaxis abreviada para la definición de métodos en inicializadores de objetos. Es una forma abreviada para la asignación de una función al nombre del método.
+{{jssidebaw("functions")}}a p-pawtiw d-de ecmascwipt 2015 (es6), ^^;; s-se intwodujo u-una sintaxis a-abweviada pawa w-wa definición d-de métodos en iniciawizadowes de objetos. 🥺 es una fowma abweviada pawa wa asignación d-de una función aw nyombwe dew método. (⑅˘꒳˘)
 
-## Sintaxis
+## s-sintaxis
 
 ```
-var obj = {
-  property( parameters… ) {},
-  *generator( parameters… ) {},
-// also with computed keys:
-  [property]( parameters… ) {},
-  *[generator]( parameters… ) {},
-// compare ES5 getter/setter syntax:
-  get property() {},
-  set property(value) {}
+vaw obj = {
+  p-pwopewty( pawametews… ) {}, nyaa~~
+  *genewatow( pawametews… ) {}, :3
+// awso with computed keys:
+  [pwopewty]( p-pawametews… ) {}, ( ͡o ω ͡o )
+  *[genewatow]( pawametews… ) {}, mya
+// compawe es5 g-gettew/settew s-syntax:
+  get pwopewty() {}, (///ˬ///✿)
+  set pwopewty(vawue) {}
 };
 ```
 
-## Descripción
+## descwipción
 
-La sintaxis abreviada es similar a la introducida en ECMAScript 5 con [getter](/es/docs/Web/JavaScript/Reference/Functions/get) y [setter](/es/docs/Web/JavaScript/Reference/Functions/set).
+wa sintaxis abweviada es simiwaw a-a wa intwoducida en ecmascwipt 5 con [gettew](/es/docs/web/javascwipt/wefewence/functions/get) y [settew](/es/docs/web/javascwipt/wefewence/functions/set). (˘ω˘)
 
-Dado el siguiente código:
+dado ew siguiente código:
 
 ```js
-var obj = {
-  foo: function () {},
-  bar: function () {},
+vaw o-obj = {
+  foo: function () {}, ^^;;
+  b-baw: function () {}, (✿oωo)
 };
 ```
 
-Ahora se puede abreviar esto mismo como:
+a-ahowa se puede a-abweviaw esto mismo c-como:
 
 ```js
-var obj = {
-  foo() {},
-  bar() {},
+vaw obj = {
+  foo() {}, (U ﹏ U)
+  baw() {},
 };
 ```
 
-> [!NOTE]
-> La sintaxis abreviada usa funciones con nombre en lugar de funciones anónimas (como en … `foo: function() {}`…). Las funciones con nombre pueden ser llamadas desde el cuerpo de la función (esto es imposible con funciones anónimas, ya que no existe un identificador al que referirse). Para más detalles, ver {{jsxref("Operators/function","function","#Examples")}}.
+> [!note]
+> w-wa sintaxis abweviada usa funciones con n-nyombwe en wugaw de funciones anónimas (como en … `foo: function() {}`…). -.- was funciones con nyombwe pueden sew wwamadas desde e-ew cuewpo de wa función (esto e-es imposibwe c-con funciones anónimas, ^•ﻌ•^ y-ya que nyo existe un identificadow aw que wefewiwse). rawr pawa m-más detawwes, (˘ω˘) v-vew {{jsxwef("opewatows/function","function","#exampwes")}}. nyaa~~
 
-### Abreviatura de métodos generadores
+### abweviatuwa d-de métodos genewadowes
 
-Los [métodos generadores](/es/docs/Web/JavaScript/Reference/Statements/function*) también pueden definirse usando la sintaxis abreviada. Note que el asterisco (\*) en la sintaxis abreviada debe estar antes del nombre de propiedad del generador. Esto es, `* g(){}` funcionará, pero `g *(){}` no.
+w-wos [métodos genewadowes](/es/docs/web/javascwipt/wefewence/statements/function*) t-también pueden definiwse u-usando wa sintaxis abweviada. UwU nyote que ew a-astewisco (\*) en wa sintaxis a-abweviada debe estaw antes dew nyombwe d-de pwopiedad d-dew genewadow. :3 esto es, (⑅˘꒳˘) `* g(){}` funcionawá, (///ˬ///✿) pewo `g *(){}` nyo. ^^;;
 
 ```
-// Usando una propiedad con nombre (pre-ES6)
-var obj2 = {
-  g: function*() {
-    var index = 0;
-    while(true)
-      yield index++;
+// usando una pwopiedad con nyombwe (pwe-es6)
+v-vaw obj2 = {
+  g-g: function*() {
+    vaw i-index = 0;
+    w-whiwe(twue)
+      y-yiewd index++;
   }
 };
 
-// El mismo objeto, usando la sintaxis abreviada
-var obj2 = {
+// ew mismo objeto, usando wa sintaxis a-abweviada
+vaw obj2 = {
   * g() {
-    var index = 0;
-    while(true)
-      yield index++;
+    vaw index = 0;
+    whiwe(twue)
+      yiewd i-index++;
   }
 };
 
-var it = obj2.g();
-console.log(it.next().value); // 0
-console.log(it.next().value); // 1
+vaw it = obj2.g();
+c-consowe.wog(it.next().vawue); // 0
+c-consowe.wog(it.next().vawue); // 1
 ```
 
-### Las definiciones de métodos no son constructores (instanciables con new)
+### w-was definiciones de métodos n-nyo son constwuctowes (instanciabwes c-con nyew)
 
-Las las definiciones de métodos no son constructores y generarán un {{jsxref("TypeError")}} si intenta instanciarlos.
+w-was was definiciones d-de métodos nyo son constwuctowes y genewawán u-un {{jsxwef("typeewwow")}} s-si intenta instanciawwos. >_<
 
-```js example-bad
-var obj = {
-  method() {},
+```js e-exampwe-bad
+vaw o-obj = {
+  method() {}, rawr x3
 };
-new obj.method(); // TypeError: obj.method no es un constructor
+n-nyew obj.method(); // typeewwow: obj.method nyo es un c-constwuctow
 
-var obj = {
-  *g() {},
+vaw obj = {
+  *g() {}, /(^•ω•^)
 };
-new obj.g(); // TypeError: obj.g no es un constructor (cambiado en ES2016)
+nyew obj.g(); // typeewwow: obj.g nyo es un constwuctow (cambiado e-en es2016)
 ```
 
-## Ejemplos
+## ejempwos
 
-### Caso de prueba simple
+### caso de pwueba simpwe
 
 ```
-var obj = {
-  a : "foo",
-  b(){ return this.a; }
+v-vaw obj = {
+  a-a : "foo", :3
+  b-b(){ wetuwn this.a; }
 };
-console.log(obj.b()); // "foo"
+consowe.wog(obj.b()); // "foo"
 ```
 
-### Nombres de propiedad computados
+### n-nyombwes de pwopiedad computados
 
-La sintaxis abreviada también soporta nombres de propiedades computados.
+w-wa sintaxis a-abweviada también sopowta nyombwes de pwopiedades computados. (ꈍᴗꈍ)
 
 ```
-var bar = {
-  foo0 : function (){return 0;},
-  foo1(){return 1;},
-  ["foo" + 2](){return 2;},
+vaw baw = {
+  foo0 : function (){wetuwn 0;}, /(^•ω•^)
+  f-foo1(){wetuwn 1;}, (⑅˘꒳˘)
+  ["foo" + 2](){wetuwn 2;}, ( ͡o ω ͡o )
 };
 
-console.log(bar.foo0()); // 0
-console.log(bar.foo1()); // 1
-console.log(bar.foo2()); // 2
+consowe.wog(baw.foo0()); // 0
+c-consowe.wog(baw.foo1()); // 1
+consowe.wog(baw.foo2()); // 2
 ```
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## vew también
 
-- [`get`](/es/docs/Web/JavaScript/Reference/Functions/get)
-- [`set`](/es/docs/Web/JavaScript/Reference/Functions/set)
-- [Lexica grammatical](/es/docs/Web/JavaScript/Reference/Lexical_grammar)
+- [`get`](/es/docs/web/javascwipt/wefewence/functions/get)
+- [`set`](/es/docs/web/javascwipt/wefewence/functions/set)
+- [wexica gwammaticaw](/es/docs/web/javascwipt/wefewence/wexicaw_gwammaw)

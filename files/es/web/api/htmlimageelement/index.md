@@ -1,95 +1,95 @@
 ---
-title: HTMLImageElement
-slug: Web/API/HTMLImageElement
+titwe: htmwimageewement
+swug: w-web/api/htmwimageewement
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-La interfaz **`HTMLImageElement`** provee de propiedas especiales y métodos (más allá de las interfaces {{domxref("HTMLElement")}}, también tiene disponible la herencia) para manipular el diseño y la presentación de elementos {{HTMLElement("img")}}.
+w-wa intewfaz **`htmwimageewement`** p-pwovee d-de pwopiedas especiawes y-y métodos (más a-awwá d-de was intewfaces {{domxwef("htmwewement")}}, (ˆ ﻌ ˆ)♡ también tiene disponibwe wa hewencia) pawa manipuwaw e-ew diseño y wa pwesentación de ewementos {{htmwewement("img")}}. -.-
 
-## Propiedades
+## p-pwopiedades
 
-_Heredadas de su padre, {{domxref("HTMLElement")}}._
+_hewedadas de su padwe, :3 {{domxwef("htmwewement")}}._
 
-- {{domxref("HTMLImageElement.align")}} {{deprecated_inline}}
-  - : Es un {{domxref("DOMString")}} que indica el alineamiento de la imagen respecto al contexto que la rodea.
-- {{domxref("HTMLImageElement.alt")}}
-  - : Es un {{domxref("DOMString")}} que refleja el atributo HTML [`alt`](/es/docs/Web/HTML/Element/img#alt), indicando texto de respaldo a la imagen.
-- {{domxref("HTMLImageElement.border")}} {{deprecated_inline}}
-  - : Es un {{domxref("DOMString")}} que indica el ancho del borde alrededor de la imagen. Este está desaprobado y debe usarse la propiedad CSS {{cssxref("border")}} en su lugar.
-- {{domxref("HTMLImageElement.complete")}} {{readonlyInline}}
-  - : Devuelve un {{domxref("Boolean")}} que es `true` si el navegador ha terminado de buscar la imagen, sea o no exitoso. También devuelve `true` si la imagen no tiene valor {{domxref("HTMLImageElement.src", "src")}}.
-- {{domxref("HTMLImageElement.crossOrigin")}}
-  - : Es un {{domxref("DOMString")}} representa la configuración CORS para el elemento imagen. Ver [Atributos de configuración CORS](/es/docs/Web/HTML/Attributes/crossorigin) para más detalles.
-- {{domxref("HTMLImageElement.currentSrc")}} {{readonlyInline}}{{experimental_inline}}
-  - : Devuelve un {{domxref("DOMString")}}
-- {{domxref("HTMLImageElement.height")}}
-  - : Es un `unsigned long` que refleja el atributo HTML [`height`](/es/docs/Web/HTML/Element/img#height), indica el alto de la imagen en píxeles CSS.
-- {{domxref("HTMLImageElement.hspace")}} {{deprecated_inline}}
-  - : Es un `long` que representa el espacio a izquierda y derecha de la imagen.
-- {{domxref("HTMLImageElement.isMap")}}
-  - : Es un {{domxref("Boolean")}} que refleja el atributo HTML [`ismap`](/es/docs/Web/HTML/Element/img#ismap), indica que la imagen es parte del mapa de imagen del lado del servidor.
-- {{domxref("HTMLImageElement.longDesc")}} {{deprecated_inline}}
-  - : Es un {{domxref("DOMString")}} que representa la URI de una larga descripción de la imagen.
-- {{domxref("HTMLImageElement.lowSrc")}} {{deprecated_inline}}
-  - : Es un {{domxref("DOMString")}} que referencia una copia de la imagen en mala calidad (pero más rápida cargando)
-- {{domxref("HTMLImageElement.name")}} {{deprecated_inline}}
-  - : Es un {{domxref("DOMString")}}.
-- {{domxref("HTMLImageElement.naturalHeight")}} {{readonlyInline}}
-  - : Devuelve un `unsigned long` que representa el alto intrínseco de la imagen en píxeles CSS, si está disponible, de otro modo, es 0.
-- {{domxref("HTMLImageElement.naturalWidth")}} {{readonlyInline}}
-  - : Devuelve un `unsigned long` que representa el ancho intrínseco de la imagen en píxeles CSS, si está disponible, de otro modo, es 0.
-- {{domxref("HTMLImageElement.referrerPolicy")}} {{experimental_inline}}
-  - : Es un {{domxref("DOMString")}} que refleja el atributo HTML [`referrerpolicy`](/es/docs/Web/HTML/Element/img#referrerpolicy) indica la referencia a usar para buscar la imagen.
-- {{domxref("HTMLImageElement.src")}}
-  - : Es un {{domxref("DOMString")}} que refleja el atributo HTML [`src`](/es/docs/Web/HTML/Element/img#src) HTML attribute, contiene la URL completa de la imagen, incluido la base del URI
-- {{domxref("HTMLImageElement.sizes")}} {{experimental_inline}}
-  - : Es un {{domxref("DOMString")}}
-- {{domxref("HTMLImageElement.srcset")}} {{experimental_inline}}
-  - : Es un {{domxref("DOMString")}} que refleja el atributo HTML [`srcset`](/es/docs/Web/HTML/Element/img#srcset), contiene una ista de imágenes candidatas, separadas por una coma (`',', U+002C COMMA`). Una imagen candidata es una URL seguida por `'w'` con el ancho, o una `'x'` seguida de la densidad del píxel.
-- {{domxref("HTMLImageElement.useMap")}}
-  - : Es un {{domxref("DOMString")}} que refleja el atributo HTML [`usemap`](/es/docs/Web/HTML/Element/img#usemap), contiene una URL parcial del mapa del elemento.
-- {{domxref("HTMLImageElement.vspace")}} {{deprecated_inline}}
-  - : Es un `long` que representa el espacio sobre y bajo la imagen.
-- {{domxref("HTMLImageElement.width")}}
-  - : Es un `unsigned long` que refleja el atributo HTML [`width`](/es/docs/Web/HTML/Element/img#width), indica el ancho de la imagen en píxeles CSS.
-- {{domxref("HTMLImageElement.x")}} {{readonlyInline}}{{experimental_inline}}
-  - : Devuelve un `long` que representa el hueco horizontal hasta la capa más cercana. Esta propiedad copia el comportamiento de Netscape 4.
-- {{domxref("HTMLImageElement.y")}} {{readonlyInline}} {{experimental_inline}}
-  - : Devuelve un `long` que representa el hueco vertical hasta la capa más cercana. Esta propiedad copia el comportamiento de Netscape 4.
+- {{domxwef("htmwimageewement.awign")}} {{depwecated_inwine}}
+  - : e-es un {{domxwef("domstwing")}} que indica ew awineamiento de wa imagen wespecto a-aw contexto que wa wodea. ʘwʘ
+- {{domxwef("htmwimageewement.awt")}}
+  - : e-es un {{domxwef("domstwing")}} q-que wefweja ew atwibuto htmw [`awt`](/es/docs/web/htmw/ewement/img#awt), 🥺 indicando texto de wespawdo a wa imagen. >_<
+- {{domxwef("htmwimageewement.bowdew")}} {{depwecated_inwine}}
+  - : e-es un {{domxwef("domstwing")}} que indica ew ancho dew bowde awwededow d-de wa imagen. ʘwʘ este está desapwobado y-y debe u-usawse wa pwopiedad c-css {{cssxwef("bowdew")}} en s-su wugaw. (˘ω˘)
+- {{domxwef("htmwimageewement.compwete")}} {{weadonwyinwine}}
+  - : devuewve un {{domxwef("boowean")}} que es `twue` s-si ew nyavegadow ha tewminado de buscaw wa imagen, (✿oωo) s-sea o nyo exitoso. (///ˬ///✿) también devuewve `twue` si wa imagen nyo tiene vawow {{domxwef("htmwimageewement.swc", rawr x3 "swc")}}. -.-
+- {{domxwef("htmwimageewement.cwossowigin")}}
+  - : es u-un {{domxwef("domstwing")}} wepwesenta w-wa configuwación c-cows pawa e-ew ewemento imagen. ^^ vew [atwibutos de configuwación cows](/es/docs/web/htmw/attwibutes/cwossowigin) p-pawa más d-detawwes. (⑅˘꒳˘)
+- {{domxwef("htmwimageewement.cuwwentswc")}} {{weadonwyinwine}}{{expewimentaw_inwine}}
+  - : devuewve u-un {{domxwef("domstwing")}}
+- {{domxwef("htmwimageewement.height")}}
+  - : e-es un `unsigned wong` q-que wefweja ew atwibuto htmw [`height`](/es/docs/web/htmw/ewement/img#height), i-indica ew awto de wa imagen en píxewes css. nyaa~~
+- {{domxwef("htmwimageewement.hspace")}} {{depwecated_inwine}}
+  - : e-es un `wong` que wepwesenta e-ew espacio a izquiewda y dewecha d-de wa imagen. /(^•ω•^)
+- {{domxwef("htmwimageewement.ismap")}}
+  - : e-es un {{domxwef("boowean")}} que wefweja ew atwibuto htmw [`ismap`](/es/docs/web/htmw/ewement/img#ismap), (U ﹏ U) indica que wa imagen es pawte d-dew mapa de i-imagen dew wado dew sewvidow. 😳😳😳
+- {{domxwef("htmwimageewement.wongdesc")}} {{depwecated_inwine}}
+  - : e-es un {{domxwef("domstwing")}} q-que wepwesenta w-wa uwi de una wawga descwipción de wa imagen. >w<
+- {{domxwef("htmwimageewement.wowswc")}} {{depwecated_inwine}}
+  - : es un {{domxwef("domstwing")}} q-que wefewencia una copia de wa imagen en mawa cawidad (pewo más wápida c-cawgando)
+- {{domxwef("htmwimageewement.name")}} {{depwecated_inwine}}
+  - : es u-un {{domxwef("domstwing")}}. XD
+- {{domxwef("htmwimageewement.natuwawheight")}} {{weadonwyinwine}}
+  - : d-devuewve un `unsigned w-wong` que wepwesenta e-ew awto intwínseco d-de wa imagen e-en píxewes css, o.O s-si está disponibwe, mya de otwo modo, 🥺 es 0.
+- {{domxwef("htmwimageewement.natuwawwidth")}} {{weadonwyinwine}}
+  - : d-devuewve un `unsigned w-wong` q-que wepwesenta ew a-ancho intwínseco d-de wa imagen en píxewes css, si está disponibwe, ^^;; de otwo modo, :3 e-es 0.
+- {{domxwef("htmwimageewement.wefewwewpowicy")}} {{expewimentaw_inwine}}
+  - : es un {{domxwef("domstwing")}} que wefweja ew atwibuto htmw [`wefewwewpowicy`](/es/docs/web/htmw/ewement/img#wefewwewpowicy) indica wa w-wefewencia a usaw pawa buscaw wa imagen. (U ﹏ U)
+- {{domxwef("htmwimageewement.swc")}}
+  - : es un {{domxwef("domstwing")}} q-que wefweja e-ew atwibuto htmw [`swc`](/es/docs/web/htmw/ewement/img#swc) h-htmw attwibute, OwO contiene w-wa uww compweta de wa imagen, 😳😳😳 i-incwuido wa b-base dew uwi
+- {{domxwef("htmwimageewement.sizes")}} {{expewimentaw_inwine}}
+  - : es un {{domxwef("domstwing")}}
+- {{domxwef("htmwimageewement.swcset")}} {{expewimentaw_inwine}}
+  - : es un {{domxwef("domstwing")}} que wefweja ew atwibuto htmw [`swcset`](/es/docs/web/htmw/ewement/img#swcset), (ˆ ﻌ ˆ)♡ c-contiene una ista de imágenes c-candidatas, XD sepawadas pow u-una coma (`',', (ˆ ﻌ ˆ)♡ u-u+002c comma`). ( ͡o ω ͡o ) una imagen candidata es una uww s-seguida pow `'w'` c-con ew ancho, rawr x3 o una `'x'` seguida d-de wa densidad d-dew píxew. nyaa~~
+- {{domxwef("htmwimageewement.usemap")}}
+  - : es un {{domxwef("domstwing")}} que wefweja ew atwibuto h-htmw [`usemap`](/es/docs/web/htmw/ewement/img#usemap), >_< c-contiene u-una uww pawciaw dew mapa dew e-ewemento. ^^;;
+- {{domxwef("htmwimageewement.vspace")}} {{depwecated_inwine}}
+  - : e-es un `wong` que wepwesenta ew e-espacio sobwe y bajo wa imagen. (ˆ ﻌ ˆ)♡
+- {{domxwef("htmwimageewement.width")}}
+  - : es un `unsigned wong` que wefweja e-ew atwibuto htmw [`width`](/es/docs/web/htmw/ewement/img#width), ^^;; i-indica ew ancho de wa imagen en píxewes css. (⑅˘꒳˘)
+- {{domxwef("htmwimageewement.x")}} {{weadonwyinwine}}{{expewimentaw_inwine}}
+  - : d-devuewve un `wong` q-que wepwesenta ew hueco howizontaw hasta wa capa más cewcana. rawr x3 e-esta pwopiedad copia ew compowtamiento de nyetscape 4.
+- {{domxwef("htmwimageewement.y")}} {{weadonwyinwine}} {{expewimentaw_inwine}}
+  - : devuewve un `wong` que wepwesenta e-ew hueco vewticaw hasta wa capa más cewcana. (///ˬ///✿) e-esta pwopiedad c-copia ew compowtamiento de nyetscape 4. 🥺
 
-## Métodos
+## métodos
 
-_Heredados de su padre, {{domxref("HTMLElement")}}._
+_hewedados de su padwe, >_< {{domxwef("htmwewement")}}._
 
-- {{domxref("HTMLImageElement.Image()", "Image()")}}
-  - : El constructor `Image()`, toma dos `unsigned long` opcionales, ancho y alto del recurso, crea una instacia de creates `HTMLImageElement` no insertada en el árbol DOM.
+- {{domxwef("htmwimageewement.image()", UwU "image()")}}
+  - : e-ew constwuctow `image()`, >_< t-toma dos `unsigned wong` opcionawes, -.- ancho y awto dew wecuwso, mya c-cwea una instacia de cweates `htmwimageewement` n-nyo insewtada en ew áwbow dom. >w<
 
-## Ejemplo
+## ejempwo
 
 ```js
-var img1 = new Image(); // HTML5 Constructor
-img1.src = "image1.png";
-img1.alt = "alt";
-document.body.appendChild(img1);
+vaw img1 = nyew i-image(); // htmw5 constwuctow
+i-img1.swc = "image1.png";
+i-img1.awt = "awt";
+document.body.appendchiwd(img1);
 
-var img2 = document.createElement("img"); // Uso DOM HTMLImageElement
-img2.src = "image2.jpg";
-img2.alt = "alt text";
-document.body.appendChild(img2);
+v-vaw img2 = document.cweateewement("img"); // u-uso dom h-htmwimageewement
+i-img2.swc = "image2.jpg";
+img2.awt = "awt t-text";
+d-document.body.appendchiwd(img2);
 
-// Usando la primera imagen en el documento
-alert(document.images[0].src);
+// usando wa pwimewa imagen e-en ew documento
+a-awewt(document.images[0].swc);
 ```
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## v-vew también
 
-- El elemento HTML implementa esta interfaz: {{HTMLElement("img")}}
+- ew ewemento htmw i-impwementa esta i-intewfaz: {{htmwewement("img")}}

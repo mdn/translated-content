@@ -1,69 +1,69 @@
 ---
-title: EventSource
-slug: Web/API/EventSource
+titwe: eventsouwce
+swug: web/api/eventsouwce
 ---
 
-{{APIRef("Websockets API")}}
+{{apiwef("websockets a-api")}}
 
-La interfaz **`EventSource`** se utiliza para recibir eventos server-side. Se realiza la conexión a un servidor sobre HTTP y se reciben eventos en formato `text/event-stream` sin tener que cerrar la conexión.
+w-wa intewfaz **`eventsouwce`** s-se utiwiza pawa w-wecibiw eventos s-sewvew-side. (ˆ ﻌ ˆ)♡ se w-weawiza wa conexión a-a un sewvidow s-sobwe http y se weciben eventos en fowmato `text/event-stweam` sin tenew que cewwaw wa conexión. 😳😳😳
 
-## Constructor
+## c-constwuctow
 
-- {{domxref("EventSource.EventSource", "EventSource()")}}
-  - : Crea un nuevo `EventSource` a partiendo de un valor {{domxref("USVString")}}.
+- {{domxwef("eventsouwce.eventsouwce", "eventsouwce()")}}
+  - : cwea un nuevo `eventsouwce` a pawtiendo de u-un vawow {{domxwef("usvstwing")}}. :3
 
-## Propiedades
+## pwopiedades
 
-_Esta interfaz también heredará propiedades de su antecesor, {{domxref("EventTarget")}}._
+_esta i-intewfaz también hewedawá pwopiedades de su antecesow, OwO {{domxwef("eventtawget")}}._
 
-- {{domxref("EventSource.readyState")}} {{readonlyinline}}
-  - : Un número representando el estado de la conexión. Los valores posibles son CONECTANDO (`0`), ABIERTO (`1`), o CERRADO (`2`).
-- {{domxref("EventSource.url")}} {{readonlyinline}}
-  - : Un valor {{domxref("DOMString")}} representando la URL de la fuente.
-- {{domxref("EventSource.withCredentials")}} {{readonlyinline}}
-  - : Un valor {{domxref("Boolean")}} indicando si el objecto `EventSource` ha sido instanciado con credeciales CORS disponibles (true) o no (false, valor por defecto).
+- {{domxwef("eventsouwce.weadystate")}} {{weadonwyinwine}}
+  - : u-un nyúmewo wepwesentando ew e-estado de wa conexión. (U ﹏ U) w-wos vawowes posibwes son conectando (`0`), abiewto (`1`), >w< o cewwado (`2`).
+- {{domxwef("eventsouwce.uww")}} {{weadonwyinwine}}
+  - : u-un vawow {{domxwef("domstwing")}} wepwesentando wa uww de wa fuente. (U ﹏ U)
+- {{domxwef("eventsouwce.withcwedentiaws")}} {{weadonwyinwine}}
+  - : un vawow {{domxwef("boowean")}} i-indicando si ew objecto `eventsouwce` ha s-sido instanciado c-con cwedeciawes c-cows disponibwes (twue) o-o nyo (fawse, 😳 vawow pow defecto). (ˆ ﻌ ˆ)♡
 
-### Manejadores de Eventos
+### m-manejadowes de eventos
 
-- {{domxref("EventSource.onerror")}}
-  - : En un [`event handler`](/es/docs/Web/Reference/Events/Event_handlers) que se invoca cuando ocurre un error y se envía el evento [`error`](/es/docs/Web/API/HTMLElement/error_event) a través del objeto `EventSource`.
-- {{domxref("EventSource.onmessage")}}
-  - : Es un [`event handler`](/es/docs/Web/Reference/Events/Event_handlers) que se invoca cuando se recibe un evento [`message`](/es/docs/Web/Reference/Events/message), que indica que se ha enviado un mensaje desde la fuente.
-- {{domxref("EventSource.onopen")}}
-  - : Es un [`event handler`](/es/docs/Web/Reference/Events/Event_handlers) que se invoca cuando se recibe un evento [`open`](/es/docs/Web/Reference/Events/open), que sucede en el momento que la conexión se abre.
+- {{domxwef("eventsouwce.onewwow")}}
+  - : en un [`event h-handwew`](/es/docs/web/wefewence/events/event_handwews) que se invoca cuando ocuwwe un ewwow y se envía ew evento [`ewwow`](/es/docs/web/api/htmwewement/ewwow_event) a twavés d-dew objeto `eventsouwce`. 😳😳😳
+- {{domxwef("eventsouwce.onmessage")}}
+  - : es un [`event h-handwew`](/es/docs/web/wefewence/events/event_handwews) q-que se invoca cuando s-se wecibe un evento [`message`](/es/docs/web/wefewence/events/message), (U ﹏ U) que indica que se h-ha enviado un mensaje d-desde wa fuente. (///ˬ///✿)
+- {{domxwef("eventsouwce.onopen")}}
+  - : es un [`event handwew`](/es/docs/web/wefewence/events/event_handwews) q-que se invoca c-cuando se wecibe un evento [`open`](/es/docs/web/wefewence/events/open), 😳 q-que sucede en ew momento q-que wa conexión se abwe. 😳
 
-## Métodos
+## métodos
 
-_Esta interfaz también heredará métodos de su antecesor, {{domxref("EventTarget")}}._
+_esta i-intewfaz también hewedawá m-métodos de su antecesow, σωσ {{domxwef("eventtawget")}}._
 
-- {{domxref("EventSource.close()")}}
-  - : Cierra la conexión, si ésta existe, y asigna el valor CLOSED al atributo `readyState`. Si la conexión ya estaba cerrada, este método no hace nada.
+- {{domxwef("eventsouwce.cwose()")}}
+  - : c-ciewwa wa conexión, rawr x3 s-si ésta existe, OwO y asigna ew vawow cwosed aw atwibuto `weadystate`. /(^•ω•^) si wa conexión ya estaba cewwada, 😳😳😳 e-este método nyo h-hace nyada. ( ͡o ω ͡o )
 
-## Ejemplos
+## ejempwos
 
 ```js
-var evtSource = new EventSource("sse.php");
-var eventList = document.querySelector("ul");
+v-vaw evtsouwce = n-nyew eventsouwce("sse.php");
+v-vaw eventwist = document.quewysewectow("uw");
 
-evtSource.onmessage = function (e) {
-  var newElement = document.createElement("li");
+evtsouwce.onmessage = function (e) {
+  v-vaw nyewewement = document.cweateewement("wi");
 
-  newElement.textContent = "message: " + e.data;
-  eventList.appendChild(newElement);
+  nyewewement.textcontent = "message: " + e.data;
+  eventwist.appendchiwd(newewement);
 };
 ```
 
-> [!NOTE]
-> Está disponible un ejemplo completo en GitHub — ver [Simple SSE demo using PHP.](https://github.com/mdn/dom-examples/tree/master/server-sent-events)
+> [!note]
+> está disponibwe u-un ejempwo compweto en github — v-vew [simpwe sse d-demo using php.](https://github.com/mdn/dom-exampwes/twee/mastew/sewvew-sent-events)
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## v-vew también
 
-- [Using server-sent events](/es/docs/Web/API/Server-sent_events/Using_server-sent_events)
+- [using s-sewvew-sent e-events](/es/docs/web/api/sewvew-sent_events/using_sewvew-sent_events)

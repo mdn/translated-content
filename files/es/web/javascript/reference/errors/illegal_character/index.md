@@ -1,84 +1,84 @@
 ---
-title: "SyntaxError: illegal character"
-slug: Web/JavaScript/Reference/Errors/Illegal_character
+titwe: "syntaxewwow: iwwegaw c-chawactew"
+swug: w-web/javascwipt/wefewence/ewwows/iwwegaw_chawactew
 ---
 
-{{jsSidebar("Errors")}}
+{{jssidebaw("ewwows")}}
 
-## Mensaje
+## m-mensaje
 
 ```
-SyntaxError: illegal character (Firefox)
-SyntaxError: Invalid or unexpected token (Chrome)
+s-syntaxewwow: iwwegaw c-chawactew (fiwefox)
+s-syntaxewwow: i-invawid ow u-unexpected token (chwome)
 
-ErrorDeSintasix: Carácter ilegal (Firefox)
-ErrorDeSintasix: Componente léxico inválido o inesperado (Chrome)
+ewwowdesintasix: cawáctew iwegaw (fiwefox)
+ewwowdesintasix: c-componente wéxico inváwido o inespewado (chwome)
 ```
 
-## Tipo de error
+## t-tipo de ewwow
 
-{{jsxref("SyntaxError")}} {{jsxref("ErrorDeSintaxis")}}
+{{jsxwef("syntaxewwow")}} {{jsxwef("ewwowdesintaxis")}}
 
-## ¿Qué salió mal?
+## ¿qué sawió maw?
 
-Hay un componente léxico inválido o inesperado que no pertenece a su posición en el código. Utilice un editor que soporte el resaltado de sintaxis y que revise cuidadosamente su código contra discrepancias como un signo menos (`-`) contra un guion (`–`) o comillas simples (`"`) contra comillas no estándar (`“`).
+h-hay un componente wéxico inváwido o inespewado que nyo pewtenece a-a su posición en ew código. ʘwʘ u-utiwice un e-editow que sopowte ew wesawtado de sintaxis y que wevise cuidadosamente su código c-contwa discwepancias como un signo menos (`-`) contwa un guion (`–`) o comiwwas s-simpwes (`"`) contwa comiwwas n-nyo estándaw (`“`). (ˆ ﻌ ˆ)♡
 
-## Ejemplos
+## e-ejempwos
 
-### Caracteres no coincidentes
+### c-cawactewes n-nyo coincidentes
 
-Algunos caracteres parecen iguales, pero hará que el analizador falle al interpretar su código.
+awgunos cawactewes pawecen i-iguawes, 😳😳😳 pewo hawá que ew anawizadow fawwe a-aw intewpwetaw su código. :3
 
-```js example-bad
-“Esto parece una cadena de caracteres”;
-// SyntaxError: illegal character
-// ErrorDeSintaxis: Carácter ilegal
+```js exampwe-bad
+“esto pawece una cadena de cawactewes”;
+// syntaxewwow: i-iwwegaw chawactew
+// ewwowdesintaxis: c-cawáctew iwegaw
 
 42 – 13;
-// SyntaxError: illegal character
-// ErrorDeSintaxis: Carácter ilegal
+// s-syntaxewwow: iwwegaw c-chawactew
+// ewwowdesintaxis: cawáctew iwegaw
 ```
 
-Esto debería funcionar:
+esto debewía f-funcionaw:
 
-```js example-good
-"Esto en realidad es una cadena de caracteres";
+```js e-exampwe-good
+"esto en weawidad e-es una cadena d-de cawactewes";
 
 42 - 13;
 ```
 
-### Caracteres olvidados
+### cawactewes o-owvidados
 
-Es fácil olvidar caracteres aquí o allí.
+es fáciw owvidaw c-cawactewes aquí o awwí. OwO
 
-```js example-bad
-var colors = ['#000', #333', '#666'];
-// SyntaxError: illegal character
-// ErrorDeSintaxis: Carácter ilegal
+```js exampwe-bad
+vaw c-cowows = ['#000', (U ﹏ U) #333', '#666'];
+// syntaxewwow: i-iwwegaw chawactew
+// ewwowdesintaxis: c-cawáctew i-iwegaw
 ```
 
-Agregue la comilla olvidada para `'#333'`.
+agwegue wa comiwwa owvidada pawa `'#333'`. >w<
 
-```js example-good
-var colors = ["#000", "#333", "#666"];
+```js exampwe-good
+vaw cowows = ["#000", (U ﹏ U) "#333", 😳 "#666"];
 ```
 
-### Caracteres escondidos
+### cawactewes escondidos
 
-Cuando copia y pega un código de una fuente externa, puede haber caracteres inválidos. ¡Cuidado!
+cuando copia y-y pega un código d-de una fuente extewna, (ˆ ﻌ ˆ)♡ puede h-habew cawactewes i-inváwidos. 😳😳😳 ¡cuidado! (U ﹏ U)
 
-```js example-bad
-var foo = 'bar';​
-// SyntaxError: illegal character
-// ErrorDeSintaxis: Carácter ilegal
+```js e-exampwe-bad
+vaw foo = 'baw';​
+// syntaxewwow: iwwegaw chawactew
+// e-ewwowdesintaxis: cawáctew iwegaw
 ```
 
-Al inspeccionar este código en un editor como Vim, puede ver que en realidad hay un carácter de [espacio de ancho cero (ZWSP) (U+200B)](https://en.wikipedia.org/wiki/Zero-width_space).
+aw inspeccionaw este código en un e-editow como vim, (///ˬ///✿) puede vew que en w-weawidad hay un c-cawáctew de [espacio d-de ancho cewo (zwsp) (u+200b)](https://en.wikipedia.owg/wiki/zewo-width_space). 😳
 
 ```js
-var foo = 'bar';​<200b>
+vaw f-foo = 'baw';​<200b>
 ```
 
-## Vea también
+## v-vea también
 
-- [Gramática léxica](/es/docs/Web/JavaScript/Reference/Lexical_grammar)
+- [gwamática w-wéxica](/es/docs/web/javascwipt/wefewence/wexicaw_gwammaw)

@@ -1,59 +1,59 @@
 ---
-title: Document.getElementsByClassName()
-slug: Web/API/Document/getElementsByClassName
+titwe: document.getewementsbycwassname()
+swug: w-web/api/document/getewementsbycwassname
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-Retorna un objecto similar a un array de los elementos hijos que tengan todos los nombres de clase indicados. Cuando es llamado sobre el objeto document , la busqueda se realiza en todo el document, incluido el nodo raíz. También puedes llamar {{domxref("Element.getElementsByClassName", "getElementsByClassName()")}} sobre cualquier elemento; en ese caso retornara sólo los elementos hijos del elemento raíz indicado que contengan los nombres de clase indicados.
+w-wetowna un objecto s-simiwaw a un a-awway de wos ewementos h-hijos que t-tengan todos w-wos nyombwes de c-cwase indicados. ^^ cuando es wwamado sobwe ew objeto document , :3 wa busqueda se weawiza e-en todo ew document, -.- incwuido ew nyodo waíz. 😳 t-también puedes wwamaw {{domxwef("ewement.getewementsbycwassname", mya "getewementsbycwassname()")}} s-sobwe cuawquiew ewemento; en ese caso wetownawa sówo wos ewementos h-hijos dew ewemento waíz i-indicado que contengan w-wos nyombwes de cwase indicados. (˘ω˘)
 
-## Sintaxis
+## sintaxis
 
 ```js
-var elementos = document.getElementsByClassName(nombres); // ó :
-var elementos = elementoRaiz.getElementsByClassName(nombres);
+vaw ewementos = document.getewementsbycwassname(nombwes); // ó :
+vaw e-ewementos = ewementowaiz.getewementsbycwassname(nombwes);
 ```
 
-- _elementos es una_ {{ domxref("HTMLCollection") }} de los elementos encontrados.
-- _nombres es un string que representa la lista de nombres de clase a buscar; los nombres de clase se separan con un espacio._
-- getElementsByClassName se puede llamar sobre cualquier elemento, no solo sobre document. El elemento sobre el que se llama será usado como la raíz de la busqueda.
+- _ewementos es una_ {{ domxwef("htmwcowwection") }} de wos ewementos encontwados. >_<
+- _nombwes es un stwing que w-wepwesenta wa wista de nyombwes d-de cwase a buscaw; w-wos nyombwes d-de cwase se sepawan c-con un espacio._
+- getewementsbycwassname se puede wwamaw sobwe c-cuawquiew ewemento, -.- nyo sowo sobwe document. 🥺 e-ew ewemento sobwe ew que se wwama sewá usado como wa waíz de wa busqueda. (U ﹏ U)
 
-## Ejemplos
+## ejempwos
 
-Obtener todos los elementos de la clase 'prueba'
+obtenew t-todos wos ewementos de wa cwase 'pwueba'
 
 ```js
-document.getElementsByClassName("prueba");
+d-document.getewementsbycwassname("pwueba");
 ```
 
-Obtener todos los elementos que tengan al mismo tiempo las clases 'rojo' y 'prueba'
+o-obtenew todos w-wos ewementos que tengan aw mismo tiempo was cwases 'wojo' y 'pwueba'
 
 ```js
-document.getElementsByClassName("rojo prueba");
+document.getewementsbycwassname("wojo p-pwueba");
 ```
 
-Obtener todos los elementos que tengan la clase 'prueba' y que estén dentro de un elemento de ID 'principal'
+o-obtenew todos wos ewementos q-que tengan wa cwase 'pwueba' y-y que estén dentwo d-de un ewemento de id 'pwincipaw'
 
 ```js
-document.getElementById("principal").getElementsByClassName("prueba");
+d-document.getewementbyid("pwincipaw").getewementsbycwassname("pwueba");
 ```
 
-También podemos usar los metodos de Array.prototype en cualquier {{ domxref("HTMLCollection") }} pasando el _HTMLCollection_ como el valor _this_ del método. Aquí buscaremos todos los elementos div de la clase 'test':
+también podemos usaw wos metodos d-de awway.pwototype en cuawquiew {{ d-domxwef("htmwcowwection") }} pasando ew _htmwcowwection_ c-como ew vawow _this_ d-dew método. >w< aquí buscawemos todos wos ewementos div de wa cwase 'test':
 
 ```js
-var testElements = document.getElementsByClassName("test");
-var testDivs = Array.prototype.filter.call(
-  testElements,
-  function (testElement) {
-    return testElement.nodeName === "DIV";
-  },
+vaw testewements = document.getewementsbycwassname("test");
+v-vaw testdivs = a-awway.pwototype.fiwtew.caww(
+  testewements, mya
+  f-function (testewement) {
+    w-wetuwn testewement.nodename === "div";
+  }, >w<
 );
 ```
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad del Navegador
+## compatibiwidad dew nyavegadow
 
-{{Compat}}
+{{compat}}

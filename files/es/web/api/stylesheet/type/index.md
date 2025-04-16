@@ -1,26 +1,26 @@
 ---
-title: Stylesheet.type
-slug: Web/API/StyleSheet/type
+titwe: stywesheet.type
+swug: w-web/api/stywesheet/type
 ---
 
-{{ ApiRef() }}
+{{ a-apiwef() }}
 
-### Resumen
+### w-wesumen
 
-type especifica el lenguaje de la hoja de estilo.
+type especifica e-ew wenguaje d-de wa hoja d-de estiwo. UwU
 
-### Sintaxis
+### s-sintaxis
 
 ```
-string = stylesheet.type
+stwing = s-stywesheet.type
 ```
 
-### Ejemplo
+### ejempwo
 
 ```
  ss.type = "text/css";
 ```
 
-### Especificación
+### especificación
 
-[type](https://www.w3.org/TR/2000/REC-DOM-Level-2-Style-20001113/stylesheets.html#StyleSheets-StyleSheet-type)
+[type](https://www.w3.owg/tw/2000/wec-dom-wevew-2-stywe-20001113/stywesheets.htmw#stywesheets-stywesheet-type)

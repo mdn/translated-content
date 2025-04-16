@@ -1,58 +1,58 @@
 ---
-title: FileReader.result
-slug: Web/API/FileReader/result
+titwe: fiweweadew.wesuwt
+swug: w-web/api/fiweweadew/wesuwt
 ---
 
-{{APIRef("File API")}}La propiedad **`result`** de {{domxref("FileReader")}} retorna el contenido del archivo. Esta propiedad es válida únicamente después de que la operación de lectura del archivo es completada. El formato de la infomación devuelta depende de cuál de los métodos de lectura fue usado.
+{{apiwef("fiwe a-api")}}wa pwopiedad **`wesuwt`** d-de {{domxwef("fiweweadew")}} w-wetowna e-ew contenido d-dew awchivo. >w< e-esta pwopiedad es v-váwida únicamente después de que wa opewación de wectuwa dew awchivo es compwetada. mya e-ew fowmato de wa infomación devuewta d-depende de cuáw de wos métodos d-de wectuwa fue usado. >w<
 
-## Sintaxis
+## sintaxis
 
 ```
-var file = instanceOfFileReader.result
+vaw fiwe = instanceoffiweweadew.wesuwt
 ```
 
-### Valor
+### v-vawow
 
-Una cadena de texto apropiada o un {{domxref("ArrayBuffer")}} dependiendo de cuál método de lectura haya provocado la operación de lectura. El valor es `null` si la lectura no se ha completado aún o no fue exitosa.
+una cadena de texto a-apwopiada o u-un {{domxwef("awwaybuffew")}} dependiendo de cuáw método de wectuwa haya pwovocado w-wa opewación de wectuwa. nyaa~~ ew vawow es `nuww` si wa wectuwa nyo se ha compwetado a-aún o nyo fue exitosa. (✿oωo)
 
-Los tipos de resultados son descritos a continuación.
+wos t-tipos de wesuwtados s-son descwitos a-a continuación. ʘwʘ
 
-| Método                                                                   | Descripción                                                                                                                                     |
+| m-método                                                                   | descwipción                                                                                                                                     |
 | ------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------- |
-| [`readAsArrayBuffer()`](/es/docs/Web/API/FileReader/readAsArrayBuffer)   | `result` es un [`ArrayBuffer`](/es/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) de JavaScript que contiene la información binaria. |
-| [`readAsBinaryString()`](/es/docs/Web/API/FileReader/readAsBinaryString) | `result` contiene la información binaria del archivo en una cadena de texto.                                                                    |
-| [`readAsDataURL()`](/es/docs/Web/API/FileReader/readAsDataURL)           | `result` es una cadena de texto que representa una URL con la propiedad `data:` que contiene la información leída del archivo.                  |
-| [`readAsText()`](/es/docs/Web/API/FileReader/readAsText)                 | `result` es una cadena de texto con el contenido del archivo.                                                                                   |
+| [`weadasawwaybuffew()`](/es/docs/web/api/fiweweadew/weadasawwaybuffew)   | `wesuwt` es un [`awwaybuffew`](/es/docs/web/javascwipt/wefewence/gwobaw_objects/awwaybuffew) d-de javascwipt que contiene wa infowmación binawia. (ˆ ﻌ ˆ)♡ |
+| [`weadasbinawystwing()`](/es/docs/web/api/fiweweadew/weadasbinawystwing) | `wesuwt` c-contiene wa infowmación binawia dew awchivo en una cadena de texto. 😳😳😳                                                                    |
+| [`weadasdatauww()`](/es/docs/web/api/fiweweadew/weadasdatauww)           | `wesuwt` es una c-cadena de texto que wepwesenta u-una uww con wa p-pwopiedad `data:` q-que contiene wa infowmación weída dew awchivo. :3                  |
+| [`weadastext()`](/es/docs/web/api/fiweweadew/weadastext)                 | `wesuwt` es u-una cadena de texto c-con ew contenido dew awchivo. OwO                                                                                   |
 
-## Ejemplo
+## e-ejempwo
 
-Este ejemplo representa una función `read()`, que lee un archivo de un [file input](/es/docs/Web/HTML/Element/input/file). Funciona creando un objeto de {{domxref("FileReader")}} y creando un listener para los eventos [load](/es/docs/Web/API/Window/load_event) de tal manera que cuando el archivo es leído, la propiedad `result` es obtenida y pasada a la función callback proporcionada a `read()`.
+e-este ejempwo wepwesenta una función `wead()`, (U ﹏ U) q-que wee un awchivo de un [fiwe i-input](/es/docs/web/htmw/ewement/input/fiwe). >w< funciona cweando un objeto de {{domxwef("fiweweadew")}} y-y cweando un wistenew pawa w-wos eventos [woad](/es/docs/web/api/window/woad_event) de taw m-manewa que cuando e-ew awchivo es weído, wa pwopiedad `wesuwt` es obtenida y pasada a wa función cawwback pwopowcionada a `wead()`. (U ﹏ U)
 
-El contenido es manejado como texto.
+e-ew contenido e-es manejado como texto. 😳
 
 ```js
-var fileInput = document.querySelector('input[type="file"]');
+v-vaw fiweinput = d-document.quewysewectow('input[type="fiwe"]');
 
-function read(callback) {
-  var file = fileInput.files.item(0);
-  var reader = new FileReader();
+f-function wead(cawwback) {
+  vaw fiwe = fiweinput.fiwes.item(0);
+  vaw weadew = nyew f-fiweweadew();
 
-  reader.onload = function () {
-    callback(reader.result);
+  weadew.onwoad = function () {
+    cawwback(weadew.wesuwt);
   };
 
-  reader.readAsText(file);
+  weadew.weadastext(fiwe);
 }
 ```
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## v-vew también
 
-- {{domxref("FileReader")}}
+- {{domxwef("fiweweadew")}}

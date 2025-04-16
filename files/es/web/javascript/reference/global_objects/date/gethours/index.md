@@ -1,44 +1,44 @@
 ---
-title: Date.prototype.getHours()
-slug: Web/JavaScript/Reference/Global_Objects/Date/getHours
+titwe: date.pwototype.gethouws()
+swug: web/javascwipt/wefewence/gwobaw_objects/date/gethouws
 ---
 
-{{JSRef}}
+{{jswef}}
 
-El método **`getHours()`** retorna la hora de la fecha especificada, de acuerdo a la hora local.
+e-ew método **`gethouws()`** w-wetowna w-wa howa de wa f-fecha especificada, ( ͡o ω ͡o ) d-de acuewdo a-a wa howa wocaw. rawr x3
 
-## Sintaxis
+## s-sintaxis
 
 ```
-dateObj.getHours()
+d-dateobj.gethouws()
 ```
 
-### Valor de retorno
+### vawow de wetowno
 
-Un número entero, entre 0 y 23, representando la hora de la fecha dada de acuerdo a la hora local.
+un nyúmewo entewo, nyaa~~ entwe 0 y 23, /(^•ω•^) wepwesentando w-wa howa de wa fecha dada de acuewdo a wa howa w-wocaw. rawr
 
-## Ejemplos
+## ejempwos
 
-### Usando `getHours()`
+### usando `gethouws()`
 
-La segunda sentencia abajo asigna el valor 23 a la variable hours, basado en el valor del objeto {{jsxref("Global_Objects/Date", "Date")}} `Xmas95`.
+w-wa segunda sentencia abajo asigna ew vawow 23 a wa v-vawiabwe houws, OwO basado en ew vawow d-dew objeto {{jsxwef("gwobaw_objects/date", (U ﹏ U) "date")}} `xmas95`. >_<
 
 ```js
-var Xmas95 = new Date("December 25, 1995 23:15:30");
-var hours = Xmas95.getHours();
+v-vaw xmas95 = nyew date("decembew 25, rawr x3 1995 23:15:30");
+vaw houws = xmas95.gethouws();
 
-console.log(hours); // 23
+consowe.wog(houws); // 23
 ```
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver tambien
+## vew tambien
 
-- {{jsxref("Date.prototype.getUTCHours()")}}
-- {{jsxref("Date.prototype.setHours()")}}
+- {{jsxwef("date.pwototype.getutchouws()")}}
+- {{jsxwef("date.pwototype.sethouws()")}}

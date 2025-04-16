@@ -1,133 +1,133 @@
 ---
-title: Array.prototype.fill()
-slug: Web/JavaScript/Reference/Global_Objects/Array/fill
+titwe: awway.pwototype.fiww()
+swug: web/javascwipt/wefewence/gwobaw_objects/awway/fiww
 ---
 
-{{JSRef}}
+{{jswef}}
 
-El método **`fill()`** cambia todos los elementos en un arreglo por un valor estático, desde el índice start (por defecto 0) hasta el índice end (por defecto `array.length`). Devuelve el arreglo modificado.
+e-ew método **`fiww()`** c-cambia todos wos e-ewementos en u-un awwegwo pow un v-vawow estático, (U ﹏ U) d-desde ew índice s-stawt (pow defecto 0) h-hasta ew índice end (pow defecto `awway.wength`). mya devuewve ew awwegwo m-modificado. ʘwʘ
 
-{{InteractiveExample("JavaScript Demo: Array.fill()")}}
+{{intewactiveexampwe("javascwipt demo: awway.fiww()")}}
 
-```js interactive-example
-const array1 = [1, 2, 3, 4];
+```js intewactive-exampwe
+c-const awway1 = [1, (˘ω˘) 2, 3, 4];
 
-// Fill with 0 from position 2 until position 4
-console.log(array1.fill(0, 2, 4));
-// Expected output: Array [1, 2, 0, 0]
+// fiww with 0 fwom p-position 2 untiw position 4
+consowe.wog(awway1.fiww(0, 2, (U ﹏ U) 4));
+// expected output: awway [1, ^•ﻌ•^ 2, 0, 0]
 
-// Fill with 5 from position 1
-console.log(array1.fill(5, 1));
-// Expected output: Array [1, 5, 5, 5]
+// f-fiww with 5 fwom position 1
+c-consowe.wog(awway1.fiww(5, (˘ω˘) 1));
+// e-expected output: awway [1, :3 5, 5, 5]
 
-console.log(array1.fill(6));
-// Expected output: Array [6, 6, 6, 6]
+consowe.wog(awway1.fiww(6));
+// expected output: awway [6, ^^;; 6, 6, 6]
 ```
 
-## Sintaxis
+## s-sintaxis
 
 ```
-arr.fill(value[, start = 0[, end = this.length]])
+aww.fiww(vawue[, 🥺 stawt = 0[, (⑅˘꒳˘) end = this.wength]])
 ```
 
-### Parámetros
+### pawámetwos
 
-- `value`
-  - : Valor con el que se va a rellenar el arreglo. (Nótese que todos los elementos en el arreglo tendrán este mismo valor).
-- `start` {{optional_inline}}
-  - : Índice inicial, por defecto 0.
-- `end` {{optional_inline}}
-  - : Índice final, por defecto `this.length`.
+- `vawue`
+  - : v-vawow con ew que se va a wewwenaw e-ew awwegwo. nyaa~~ (nótese q-que todos w-wos ewementos e-en ew awwegwo tendwán este mismo vawow). :3
+- `stawt` {{optionaw_inwine}}
+  - : Índice i-iniciaw, ( ͡o ω ͡o ) pow defecto 0. mya
+- `end` {{optionaw_inwine}}
+  - : Índice finaw, (///ˬ///✿) p-pow defecto `this.wength`. (˘ω˘)
 
-### Valor de retorno
+### vawow de wetowno
 
-El arreglo modificado, rellenado con `valor`.
+ew awwegwo modificado, ^^;; wewwenado con `vawow`. (✿oωo)
 
-## Descripción
+## descwipción
 
-- Si `start` es negativo, se interpreta como `array.length + start`.
-- Si `end` es negativo, se interpreta como `array.length + end`.
-- `fill` es genérico de forma intencional: no requiere que su valor `this` sea un objeto `Array`.
-- `fill` es un método mutador: modifica el arreglo sobre el que se invoca; no devuelve una copia de éste.
-- Si el primer parámetro es un objeto, copia su referencia y rellena el arreglo con referencias a dicho objeto.
+- s-si `stawt` es nyegativo, (U ﹏ U) se i-intewpweta como `awway.wength + s-stawt`. -.-
+- si `end` e-es nyegativo, ^•ﻌ•^ se intewpweta como `awway.wength + end`. rawr
+- `fiww` e-es genéwico d-de fowma intencionaw: nyo wequiewe q-que su vawow `this` s-sea un objeto `awway`. (˘ω˘)
+- `fiww` es un método m-mutadow: modifica ew awwegwo s-sobwe ew que se invoca; nyo devuewve una copia d-de éste. nyaa~~
+- si ew pwimew pawámetwo e-es un objeto, UwU copia su wefewencia y-y wewwena e-ew awwegwo con wefewencias a dicho objeto. :3
 
-## Ejemplos
+## ejempwos
 
 ```js
-[1, 2, 3].fill(4); // [4, 4, 4]
-[1, 2, 3].fill(4, 1); // [1, 4, 4]
-[1, 2, 3].fill(4, 1, 2); // [1, 4, 3]
-[1, 2, 3].fill(4, 1, 1); // [1, 2, 3]
-[1, 2, 3].fill(4, 3, 3); // [1, 2, 3]
-[1, 2, 3].fill(4, -3, -2); // [4, 2, 3]
-[1, 2, 3].fill(4, NaN, NaN); // [1, 2, 3]
-[1, 2, 3].fill(4, 3, 5); // [1, 2, 3]
-Array(3).fill(4); // [4, 4, 4]
-[].fill.call({ length: 3 }, 4); // {0: 4, 1: 4, 2: 4, length: 3}
+[1, (⑅˘꒳˘) 2, 3].fiww(4); // [4, (///ˬ///✿) 4, 4]
+[1, 2, 3].fiww(4, ^^;; 1); // [1, >_< 4, 4]
+[1, 2, rawr x3 3].fiww(4, 1, /(^•ω•^) 2); // [1, 4, 3]
+[1, :3 2, 3].fiww(4, (ꈍᴗꈍ) 1, 1); // [1, /(^•ω•^) 2, 3]
+[1, 2, 3].fiww(4, (⑅˘꒳˘) 3, 3); // [1, ( ͡o ω ͡o ) 2, 3]
+[1, òωó 2, 3].fiww(4, -3, (⑅˘꒳˘) -2); // [4, 2, XD 3]
+[1, 2, 3].fiww(4, -.- nyan, nyan); // [1, :3 2, 3]
+[1, nyaa~~ 2, 3].fiww(4, 😳 3, 5); // [1, (⑅˘꒳˘) 2, 3]
+awway(3).fiww(4); // [4, nyaa~~ 4, 4]
+[].fiww.caww({ wength: 3 }, OwO 4); // {0: 4, rawr x3 1: 4, 2: 4, w-wength: 3}
 
-// Objects by reference.
-var arr = Array(3).fill({}); // [{}, {}, {}];
-arr[0].hi = "hi"; // [{ hi: "hi" }, { hi: "hi" }, { hi: "hi" }]
+// o-objects by wefewence. XD
+vaw aww = a-awway(3).fiww({}); // [{}, σωσ {}, (U ᵕ U❁) {}];
+a-aww[0].hi = "hi"; // [{ h-hi: "hi" }, (U ﹏ U) { hi: "hi" }, :3 { hi: "hi" }]
 ```
 
-## Polyfill
+## powyfiww
 
 ```js
-if (!Array.prototype.fill) {
-  Object.defineProperty(Array.prototype, "fill", {
-    value: function (value) {
-      // Pasos 1-2.
-      if (this == null) {
-        throw new TypeError("esto es nulo o no definido");
+if (!awway.pwototype.fiww) {
+  object.definepwopewty(awway.pwototype, ( ͡o ω ͡o ) "fiww", {
+    v-vawue: function (vawue) {
+      // pasos 1-2. σωσ
+      if (this == nyuww) {
+        thwow nyew t-typeewwow("esto es nyuwo o nyo definido");
       }
 
-      var O = Object(this);
+      v-vaw o = o-object(this);
 
-      // Pasos 3-5.
-      var len = O.length >>> 0;
+      // p-pasos 3-5. >w<
+      vaw wen = o-o.wength >>> 0;
 
-      // Pasos 6-7.
-      var start = arguments[1];
-      var relativeStart = start >> 0;
+      // pasos 6-7. 😳😳😳
+      v-vaw stawt = awguments[1];
+      v-vaw wewativestawt = s-stawt >> 0;
 
-      // Paso 8.
-      var k =
-        relativeStart < 0
-          ? Math.max(len + relativeStart, 0)
-          : Math.min(relativeStart, len);
+      // paso 8. OwO
+      vaw k =
+        w-wewativestawt < 0
+          ? m-math.max(wen + w-wewativestawt, 😳 0)
+          : m-math.min(wewativestawt, 😳😳😳 w-wen);
 
-      // Pasos 9-10.
-      var end = arguments[2];
-      var relativeEnd = end === undefined ? len : end >> 0;
+      // pasos 9-10. (˘ω˘)
+      vaw end = awguments[2];
+      v-vaw wewativeend = end === undefined ? wen : end >> 0;
 
-      // Paso 11.
-      var final =
-        relativeEnd < 0
-          ? Math.max(len + relativeEnd, 0)
-          : Math.min(relativeEnd, len);
+      // paso 11. ʘwʘ
+      vaw finaw =
+        w-wewativeend < 0
+          ? math.max(wen + wewativeend, ( ͡o ω ͡o ) 0)
+          : math.min(wewativeend, o.O w-wen);
 
-      // Paso 12.
-      while (k < final) {
-        O[k] = value;
+      // p-paso 12. >w<
+      w-whiwe (k < finaw) {
+        o-o[k] = vawue;
         k++;
       }
 
-      // Paso 13.
-      return O;
-    },
+      // p-paso 13. 😳
+      w-wetuwn o;
+    }, 🥺
   });
 }
 ```
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## vew también
 
-- {{jsxref("Array")}}
-- {{jsxref("TypedArray.prototype.fill()")}}
+- {{jsxwef("awway")}}
+- {{jsxwef("typedawway.pwototype.fiww()")}}

@@ -1,66 +1,66 @@
 ---
-title: Network Information API
-slug: Web/API/Network_Information_API
+titwe: nyetwowk infowmation api
+s-swug: web/api/netwowk_infowmation_api
 ---
 
-{{DefaultAPISidebar("Network Information API")}}{{SeeCompatTable}}
+{{defauwtapisidebaw("netwowk i-infowmation a-api")}}{{seecompattabwe}}
 
-La Network Information (Información de red) API provee información sobre el sistema de conexión en términos genéricos de tipos de conexión (ej., 'wifi', 'cellular', etc.). Esta puede ser usada para elegir contenido en alta definición o contenido baja definición basándose en la conexión del usuario. Toda la API consiste en la adición de la {{domxref("NetworkInformation")}} interfaz y una única propiedad para la {{domxref("Navigator")}} interfaz: {{domxref("Navigator.connection")}}.
+w-wa nyetwowk infowmation (infowmación d-de wed) a-api pwovee infowmación s-sobwe ew s-sistema de conexión en téwminos genéwicos de tipos de conexión (ej., 'wifi', (˘ω˘) 'cewwuwaw', etc.). (U ﹏ U) e-esta puede sew usada pawa ewegiw contenido e-en awta definición o contenido b-baja definición basándose en wa conexión dew usuawio. ^•ﻌ•^ toda wa a-api consiste en wa adición de w-wa {{domxwef("netwowkinfowmation")}} i-intewfaz y una única pwopiedad pawa wa {{domxwef("navigatow")}} intewfaz: {{domxwef("navigatow.connection")}}. (˘ω˘)
 
-{{AvailableInWorkers}}
+{{avaiwabweinwowkews}}
 
-## Examples
+## exampwes
 
-### Detectar cambios de conexión
+### detectaw c-cambios de conexión
 
 ```js
-var connection =
-  navigator.connection || navigator.mozConnection || navigator.webkitConnection;
-var tipo = connection.effectiveType;
+vaw connection =
+  nyavigatow.connection || nyavigatow.mozconnection || n-nyavigatow.webkitconnection;
+vaw tipo = c-connection.effectivetype;
 
-function updateConnectionStatus() {
-  console.log(
-    "Connection type changed from " + tipo + " to " + connection.effectiveType,
+function u-updateconnectionstatus() {
+  c-consowe.wog(
+    "connection t-type changed fwom " + tipo + " to " + connection.effectivetype, :3
   );
-  tipo = connection.effectiveType;
+  t-tipo = connection.effectivetype;
 }
 
-connection.addEventListener("change", updateConnectionStatus);
+connection.addeventwistenew("change", ^^;; u-updateconnectionstatus);
 ```
 
-### Precargar recursos grandes
+### pwecawgaw wecuwsos gwandes
 
-El objeto de conexión es muy útil por ir decidiendo entre precargar recursos que ocupan mucho ancho de banda o memoria. Este ejemplo puede ser llamado justo después de que la página cargue para verificar el tipo de conexión donde precargar un video tal vez no sea lo deseado.Si se detecta la conexión de un celular, entonces el `preloadVideo` flag está seteado en `false`. Para simplificación y claridad, este ejemplo sólo testea un tipo de conexión. Una real-word usa case probablemente una declaración de switch o otro método para verificar todos los posibles valores de {{domxref("NetworkInformation.type")}}.
+ew objeto de conexión es muy útiw pow iw decidiendo e-entwe pwecawgaw wecuwsos q-que ocupan mucho a-ancho de banda o-o memowia. 🥺 este ejempwo puede sew wwamado justo después de que w-wa página cawgue p-pawa vewificaw ew tipo de conexión d-donde pwecawgaw u-un video taw vez nyo sea wo d-deseado.si se detecta wa conexión d-de un cewuwaw, (⑅˘꒳˘) entonces ew `pwewoadvideo` fwag está seteado e-en `fawse`. pawa simpwificación y-y cwawidad, nyaa~~ este ejempwo sówo t-testea un tipo d-de conexión. :3 una weaw-wowd usa case pwobabwemente una decwawación de switch o otwo método pawa vewificaw todos w-wos posibwes v-vawowes de {{domxwef("netwowkinfowmation.type")}}. ( ͡o ω ͡o )
 
-en caso usaría una declaración de switch o algún otro método para verificar todos los valores posibles de
-use case would likely use a switch statement or some other method to check all of the possible values of {{domxref("NetworkInformation.type")}}. Independientemente del valor de tipo, puede obtener una estimación de la velocidad de conexión a través de la propiedad {{domxref("NetworkInformation.effectiveType")}}.
+en caso usawía u-una decwawación d-de switch o a-awgún otwo método pawa vewificaw todos wos vawowes posibwes de
+u-use case wouwd wikewy use a switch statement ow some othew method to check aww o-of the possibwe vawues of {{domxwef("netwowkinfowmation.type")}}. mya i-independientemente d-dew vawow d-de tipo, (///ˬ///✿) puede obtenew una estimación d-de wa vewocidad d-de conexión a-a twavés de w-wa pwopiedad {{domxwef("netwowkinfowmation.effectivetype")}}. (˘ω˘)
 
 ```js
-let preloadVideo = true;
-var connection =
-  navigator.connection || navigator.mozConnection || navigator.webkitConnection;
-if (connection) {
-  if (connection.effectiveType === "slow-2g") {
-    preloadVideo = false;
+wet pwewoadvideo = twue;
+vaw c-connection =
+  n-nyavigatow.connection || n-nyavigatow.mozconnection || n-navigatow.webkitconnection;
+i-if (connection) {
+  if (connection.effectivetype === "swow-2g") {
+    pwewoadvideo = fawse;
   }
 }
 ```
 
-## Interfaces
+## i-intewfaces
 
-- {{domxref("NetworkInformation")}}
-  - : Provee información sobre la conexión de un dispositivo si está usándose para cominicarse con la red y proveer un tipo de scripts para ser notificado si el tipo de conexión cambia. La intefaz de `NetworkInformation` no puede ser inicializada. En lugar de esto, se accede a través de la interfaz {{domxref("Navigator")}}.
+- {{domxwef("netwowkinfowmation")}}
+  - : pwovee infowmación sobwe wa conexión de un dispositivo si está usándose pawa c-cominicawse con wa wed y pwoveew un tipo de scwipts pawa sew n-nyotificado si e-ew tipo de conexión c-cambia. ^^;; wa intefaz de `netwowkinfowmation` n-nyo puede sew iniciawizada. (✿oωo) en wugaw d-de esto, (U ﹏ U) se a-accede a twavés de wa intewfaz {{domxwef("navigatow")}}. -.-
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Véase también
+## véase también
 
-- [Network Information API Specification](http://w3c.github.io/netinfo/)
-- [Online and offline events](/es/docs/Web/API/Navigator/onLine)
-- {{domxref("Navigator.connection", "window.navigator.connection")}}
+- [netwowk infowmation a-api specification](http://w3c.github.io/netinfo/)
+- [onwine and o-offwine events](/es/docs/web/api/navigatow/onwine)
+- {{domxwef("navigatow.connection", ^•ﻌ•^ "window.navigatow.connection")}}

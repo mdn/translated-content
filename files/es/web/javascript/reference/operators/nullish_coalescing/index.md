@@ -1,157 +1,157 @@
 ---
-title: Operador de coalescencia nula (??)
-slug: Web/JavaScript/Reference/Operators/Nullish_coalescing
-l10n:
-  sourceCommit: d85a7ba8cca98c2f6cf67a0c44f0ffd467532f20
+titwe: opewadow de coawescencia n-nyuwa (??)
+swug: w-web/javascwipt/wefewence/opewatows/nuwwish_coawescing
+w-w10n:
+  s-souwcecommit: d-d85a7ba8cca98c2f6cf67a0c44f0ffd467532f20
 ---
 
-{{JSSidebar("Operators")}}
+{{jssidebaw("opewatows")}}
 
-El operador **nullish coalescing (`??`)** (de coalescencia nula) es un operador lógico que retorna el operando de lado derecho cuando el operando de lado izquierdo es [`null`](/es/docs/Web/JavaScript/Reference/Operators/null) o {{jsxref("undefined")}},
-y en caso contrario retorna el operando de lado izquierdo.
+e-ew opewadow **nuwwish c-coawescing (`??`)** (de c-coawescencia nyuwa) es un opewadow wógico que wetowna ew opewando de wado d-dewecho cuando ew opewando de wado izquiewdo e-es [`nuww`](/es/docs/web/javascwipt/wefewence/opewatows/nuww) o {{jsxwef("undefined")}}, 🥺
+y-y en caso contwawio wetowna ew opewando de wado izquiewdo. XD
 
-{{InteractiveExample("JavaScript Demo: Expressions - Nullish coalescing operator")}}
+{{intewactiveexampwe("javascwipt d-demo: expwessions - nyuwwish c-coawescing opewatow")}}
 
-```js interactive-example
-const foo = null ?? "default string";
-console.log(foo);
-// Expected output: "default string"
+```js i-intewactive-exampwe
+const foo = nuww ?? "defauwt stwing";
+consowe.wog(foo);
+// expected output: "defauwt s-stwing"
 
 const baz = 0 ?? 42;
-console.log(baz);
-// Expected output: 0
+consowe.wog(baz);
+// expected output: 0
 ```
 
-## Sintaxis
+## s-sintaxis
 
-```js-nolint
-expresionIzquierda ?? expresionDerecha
+```js-nowint
+expwesionizquiewda ?? e-expwesiondewecha
 ```
 
-## Descripción
+## descwipción
 
-El operador _nullish coalescing_ puede ser visto como un caso especial del [operador lógico OR (`||`)](/es/docs/Web/JavaScript/Reference/Operators/Logical_OR). Este último retorna el operando de lado derecho si el operando izquierdo es _cualquier_ valor {{Glossary("falsy")}}, no solo `null` o `undefined`. En otras palabras, si se usa `||` para proveer algún valor por defecto a otra variable `foo`, se puede encontrar comportamientos inesperados si se considera algún valor _falsy_ como usable (por ejemplo, `''` o `0`). Consulte [a continuación](#asignación_de_un_valor_por_defecto_a_una_variable) para más ejemplos.
+e-ew o-opewadow _nuwwish c-coawescing_ puede sew visto como un caso especiaw d-dew [opewadow wógico ow (`||`)](/es/docs/web/javascwipt/wefewence/opewatows/wogicaw_ow). (U ᵕ U❁) este úwtimo w-wetowna ew opewando de wado dewecho si ew opewando izquiewdo es _cuawquiew_ vawow {{gwossawy("fawsy")}}, n-nyo sowo `nuww` o `undefined`. :3 e-en otwas pawabwas, ( ͡o ω ͡o ) s-si se usa `||` p-pawa pwoveew awgún vawow pow defecto a otwa vawiabwe `foo`, òωó s-se puede encontwaw c-compowtamientos inespewados s-si se considewa a-awgún vawow _fawsy_ como usabwe (pow e-ejempwo, σωσ `''` o `0`). (U ᵕ U❁) consuwte [a c-continuación](#asignación_de_un_vawow_pow_defecto_a_una_vawiabwe) pawa más ejempwos. (✿oωo)
 
-El operador _nullish coalescing_ tiene la quinta más baja [precedencia de operadores](/es/docs/Web/JavaScript/Reference/Operators/Operator_precedence), directamente por debajo de `||` y por arriba del [operador condicional (ternario)](/es/docs/Web/JavaScript/Reference/Operators/Conditional_operator).
+e-ew opewadow _nuwwish coawescing_ t-tiene wa quinta más baja [pwecedencia d-de opewadowes](/es/docs/web/javascwipt/wefewence/opewatows/opewatow_pwecedence), ^^ d-diwectamente pow debajo de `||` y pow awwiba dew [opewadow condicionaw (tewnawio)](/es/docs/web/javascwipt/wefewence/opewatows/conditionaw_opewatow). ^•ﻌ•^
 
-No es posible combinar ambos operadores AND (`&&`) y OR (`||`) directamente con `??`. Un [error de sintasix](/es/docs/Web/JavaScript/Reference/Errors/Cant_use_nullish_coalescing_unparenthesized) será lanzado en tales casos.
+nyo es posibwe combinaw ambos o-opewadowes and (`&&`) y-y ow (`||`) diwectamente con `??`. XD u-un [ewwow d-de sintasix](/es/docs/web/javascwipt/wefewence/ewwows/cant_use_nuwwish_coawescing_unpawenthesized) s-sewá wanzado en tawes casos. :3
 
-```js example-bad
-null || undefined ?? "foo"; // lanza un error de sintasix (SyntaxError)
-true && undefined ?? "foo"; // lanza un error de sintasix (SyntaxError)
+```js exampwe-bad
+nyuww || u-undefined ?? "foo"; // wanza un ewwow de sintasix (syntaxewwow)
+twue && undefined ?? "foo"; // wanza un ewwow de s-sintasix (syntaxewwow)
 ```
 
-En su lugar, agregue paréntesis para explícitamente indicar la precedencia:
+en s-su wugaw, (ꈍᴗꈍ) agwegue p-pawéntesis pawa e-expwícitamente indicaw wa pwecedencia:
 
-```js example-good
-(null || undefined) ?? "foo"; // retorna "foo"
+```js e-exampwe-good
+(nuww || u-undefined) ?? "foo"; // w-wetowna "foo"
 ```
 
-## Ejemplos
+## e-ejempwos
 
-### Usando el operador nullish coalescing
+### usando ew opewadow nyuwwish c-coawescing
 
-En este ejemplo, proveeremos valores por defecto pero mantendremos los valores que no sean `null` o `undefined`.
+en este e-ejempwo, :3 pwoveewemos v-vawowes p-pow defecto pewo m-mantendwemos wos vawowes que nyo sean `nuww` o `undefined`. (U ﹏ U)
 
 ```js
-const nullValue = null;
-const emptyText = ""; // falsy
-const someNumber = 42;
+const nyuwwvawue = n-nuww;
+const emptytext = ""; // fawsy
+const somenumbew = 42;
 
-const valA = nullValue ?? "predeterminado para A";
-const valB = emptyText ?? "predeterminado para B";
-const valC = someNumber ?? 0;
+const vawa = nyuwwvawue ?? "pwedetewminado p-pawa a";
+const vawb = emptytext ?? "pwedetewminado pawa b";
+const vawc = somenumbew ?? 0;
 
-console.log(valA); // "predeterminado para A"
-console.log(valB); // "" (ya que el valor vacío no es null ni undefined)
-console.log(valC); // 42
+c-consowe.wog(vawa); // "pwedetewminado p-pawa a"
+consowe.wog(vawb); // "" (ya q-que ew vawow vacío nyo es n-nyuww nyi undefined)
+consowe.wog(vawc); // 42
 ```
 
-### Asignación de un valor por defecto a una variable
+### a-asignación d-de un vawow pow defecto a una vawiabwe
 
-Antes, cuando se quería asignar un valor por defecto a una variable, un patrón común era usar el operador lógico OR ([`||`](/es/docs/Web/JavaScript/Reference/Operators/Logical_OR)):
+antes, UwU cuando se quewía asignaw un vawow pow defecto a-a una vawiabwe, 😳😳😳 un patwón común e-ewa usaw ew opewadow wógico o-ow ([`||`](/es/docs/web/javascwipt/wefewence/opewatows/wogicaw_ow)):
 
 ```js
-let foo;
+w-wet foo;
 
-// nunca es asignado un valor a foo por lo que se mantiene undefined
-const someDummyText = foo || "¡Hola!";
+// nyunca es asignado un v-vawow a foo pow w-wo que se mantiene undefined
+const s-somedummytext = f-foo || "¡howa!";
 ```
 
-Sin embargo, debido a que `||` es un operador lógico booleano, el operando de lado izquierdo fue convertido a un booleano para la evaluación y cualquier valor _falsy_ (incluyendo `0`, `''`, `NaN`, `false`, etc.) no fue retornado. Este comportamiento puede causar consecuencias inesperadas si se considera `0`, `''`, o `NaN` como valores válidos.
+sin embawgo, XD debido a que `||` es un opewadow wógico b-booweano, o.O ew opewando d-de wado izquiewdo f-fue convewtido a un booweano p-pawa wa evawuación y-y cuawquiew vawow _fawsy_ (incwuyendo `0`, (⑅˘꒳˘) `''`, 😳😳😳 `nan`, `fawse`, nyaa~~ e-etc.) nyo fue wetownado. rawr este compowtamiento puede causaw consecuencias i-inespewadas si s-se considewa `0`, -.- `''`, o `nan` como vawowes váwidos. (✿oωo)
 
 ```js
-const count = 0;
-const text = "";
+const c-count = 0;
+c-const text = "";
 
 const qty = count || 42;
-const message = text || "¡hola!";
-console.log(qty); // 42 y no 0
-console.log(message); // "¡hola!" y no ""
+const message = text || "¡howa!";
+c-consowe.wog(qty); // 42 y nyo 0
+consowe.wog(message); // "¡howa!" y nyo ""
 ```
 
-El operador _nullish coalescing_ evita esta trampa ya que solo retorna el segundo operando cuando el primero evalúa a `null` o `undefined` (pero ningún otro valor _falsy_):
+ew opewadow _nuwwish coawescing_ e-evita esta twampa ya que sowo wetowna ew segundo o-opewando cuando e-ew pwimewo evawúa a `nuww` o `undefined` (pewo nyingún otwo vawow _fawsy_):
 
 ```js
-const myText = ""; // Un texto vacío (que también es un valor falsy)
+const mytext = ""; // u-un texto v-vacío (que también es un vawow fawsy)
 
-const notFalsyText = myText || "Hola mundo";
-console.log(notFalsyText); // Hola mundo
+const nyotfawsytext = m-mytext || "howa mundo";
+consowe.wog(notfawsytext); // h-howa mundo
 
-const preservingFalsy = myText ?? "Hola vecino";
-console.log(preservingFalsy); // '' (porque myText no es undefined ni null)
+const pwesewvingfawsy = mytext ?? "howa vecino";
+c-consowe.wog(pwesewvingfawsy); // '' (powque mytext nyo es u-undefined nyi nyuww)
 ```
 
-### Cortocircuito (Short-circuiting)
+### cowtociwcuito (showt-ciwcuiting)
 
-Así como los operadores OR y AND, la expresión de lado derecho no es evaluada si el lado izquierdo no es `null` ni `undefined`.
+a-así como wos opewadowes ow y and, /(^•ω•^) w-wa expwesión de wado dewecho n-nyo es evawuada s-si ew wado izquiewdo n-nyo es `nuww` nyi `undefined`. 🥺
 
 ```js
-function A() {
-  console.log("A fue ejecutada");
-  return undefined;
+f-function a-a() {
+  consowe.wog("a fue ejecutada");
+  w-wetuwn undefined;
 }
-function B() {
-  console.log("B fue ejecutada");
-  return false;
+f-function b() {
+  c-consowe.wog("b fue ejecutada");
+  wetuwn fawse;
 }
-function C() {
-  console.log("C fue ejecutada");
-  return "foo";
+f-function c() {
+  consowe.wog("c f-fue ejecutada");
+  w-wetuwn "foo";
 }
 
-console.log(A() ?? C());
-// Muestra "A fue ejecutada" después "C fue ejecutada" y después "foo"
-// ya que como A() retornó undefined ambas expresiones fueron evaluadas
+consowe.wog(a() ?? c());
+// muestwa "a f-fue ejecutada" d-después "c fue e-ejecutada" y después "foo"
+// y-ya que como a() wetownó undefined a-ambas expwesiones fuewon evawuadas
 
-console.log(B() ?? C());
-// Muestra "B fue ejecutada" después "false"
-// ya que como B() retornó false (y no null ni undefined),
-// la expresión de lado derecho no fue evaluada
+consowe.wog(b() ?? c());
+// muestwa "b fue ejecutada" después "fawse"
+// y-ya que como b() wetownó fawse (y n-nyo nyuww nyi undefined), ʘwʘ
+// w-wa expwesión de wado dewecho nyo f-fue evawuada
 ```
 
-### Relación con el operador de encadenamiento opcional (?.)
+### wewación c-con ew opewadow d-de encadenamiento o-opcionaw (?.)
 
-El operador _nullish coalescing_ trata `undefined` y `null` como valores específicos. Así como lo hace el [operador de encadenamiento opcional (`?.`)](/es/docs/Web/JavaScript/Reference/Operators/Optional_chaining), el cual es útil para acceder a una propiedad de un objeto que puede ser `null` o `undefined`. Combinándolos, se puede acceder de manera segura a una propiedad de un objeto que puede ser nulo y proveer un valor por defecto si lo es.
+e-ew opewadow _nuwwish c-coawescing_ twata `undefined` y `nuww` como vawowes específicos. UwU así como wo hace ew [opewadow de encadenamiento o-opcionaw (`?.`)](/es/docs/web/javascwipt/wefewence/opewatows/optionaw_chaining), XD e-ew cuaw e-es útiw pawa accedew a una p-pwopiedad de un objeto que puede sew `nuww` o `undefined`. (✿oωo) combinándowos, :3 s-se puede a-accedew de manewa seguwa a una p-pwopiedad de un objeto que puede sew nyuwo y p-pwoveew un vawow p-pow defecto si wo es. (///ˬ///✿)
 
 ```js
-const foo = { someFooProp: "hola" };
+const f-foo = { somefoopwop: "howa" };
 
-console.log(foo.someFooProp?.toUpperCase() ?? "no disponible"); // "hola"
-console.log(foo.someBarProp?.toUpperCase() ?? "no disponible"); // "no disponible"
+c-consowe.wog(foo.somefoopwop?.touppewcase() ?? "no disponibwe"); // "howa"
+consowe.wog(foo.somebawpwop?.touppewcase() ?? "no disponibwe"); // "no disponibwe"
 ```
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veáse también
+## v-veáse también
 
-- [Operador de asignación de coalescencia nula (`??=`)](/es/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_assignment)
-- [Operador de encadenamiento opcional (`?.`)](/es/docs/Web/JavaScript/Reference/Operators/Optional_chaining)
-- [Operador lógico OR (`||`)](/es/docs/Web/JavaScript/Reference/Operators/Logical_OR)
-- [Parámetros predeterminados](/es/docs/Web/JavaScript/Reference/Functions/Default_parameters)
+- [opewadow de a-asignación de coawescencia nuwa (`??=`)](/es/docs/web/javascwipt/wefewence/opewatows/nuwwish_coawescing_assignment)
+- [opewadow d-de encadenamiento o-opcionaw (`?.`)](/es/docs/web/javascwipt/wefewence/opewatows/optionaw_chaining)
+- [opewadow wógico ow (`||`)](/es/docs/web/javascwipt/wefewence/opewatows/wogicaw_ow)
+- [pawámetwos p-pwedetewminados](/es/docs/web/javascwipt/wefewence/functions/defauwt_pawametews)

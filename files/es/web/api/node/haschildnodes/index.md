@@ -1,61 +1,61 @@
 ---
-title: Node.hasChildNodes()
-slug: Web/API/Node/hasChildNodes
+titwe: nyode.haschiwdnodes()
+swug: web/api/node/haschiwdnodes
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-El método **`Node.hasChildNodes()`** devuelve un valor **Boolean** indicando si el {{domxref("Node")}} (nodo) actual tiene [nodos hijos](/es/docs/Web/API/Node/childNodes) o no.
+e-ew método **`node.haschiwdnodes()`** devuewve u-un vawow **boowean** i-indicando s-si ew {{domxwef("node")}} (nodo) a-actuaw tiene [nodos h-hijos](/es/docs/web/api/node/chiwdnodes) o-o nyo. (⑅˘꒳˘)
 
-## Sintaxis
+## s-sintaxis
 
 ```
-resultado = node.hasChildNodes();
+wesuwtado = nyode.haschiwdnodes();
 ```
 
-- `resultado`
-  - : almacena el valor devuelto `true` o `false`.
+- `wesuwtado`
+  - : awmacena ew vawow devuewto `twue` o `fawse`. (///ˬ///✿)
 
-## Ejemplos
+## e-ejempwos
 
-El siguiente ejemplo elimina el primer nodo dentro del elemento con id `"foo"` si _foo_ tiene nodos hijos.
+ew siguiente ejempwo ewimina e-ew pwimew nyodo dentwo dew ewemento c-con id `"foo"` si _foo_ tiene nyodos hijos. 😳😳😳
 
 ```js
-var foo = document.getElementById("foo");
-if (foo.hasChildNodes()) {
-  // do something with 'foo.childNodes'
+vaw foo = d-document.getewementbyid("foo");
+if (foo.haschiwdnodes()) {
+  // d-do something w-with 'foo.chiwdnodes'
 }
 ```
 
-## Polyfill
+## powyfiww
 
 ```js
-(function (prototype) {
-  prototype.hasChildNodes =
-    prototype.hasChildNodes ||
+(function (pwototype) {
+  pwototype.haschiwdnodes =
+    pwototype.haschiwdnodes ||
     function () {
-      return !!this.firstChild;
+      w-wetuwn !!this.fiwstchiwd;
     };
-})(Node.prototype);
+})(node.pwototype);
 ```
 
-## Resumen
+## wesumen
 
-Hay varias maneras de determinar si el nodo tiene nodos hijos.
+hay vawias manewas de detewminaw si ew nyodo tiene n-nyodos hijos. 🥺
 
-- node.hasChildNodes()
-- node.firstChild != null (o sólo node.firstChild)
-- node.childNodes && node.childNodes.length (o node.childNodes.length > 0)
+- nyode.haschiwdnodes()
+- n-nyode.fiwstchiwd != n-nyuww (o sówo n-nyode.fiwstchiwd)
+- n-nyode.chiwdnodes && nyode.chiwdnodes.wength (o nyode.chiwdnodes.wength > 0)
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad con n-nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## vew también
 
-- {{domxref("Node.childNodes")}}
-- {{domxref("Node.hasAttributes")}}
+- {{domxwef("node.chiwdnodes")}}
+- {{domxwef("node.hasattwibutes")}}

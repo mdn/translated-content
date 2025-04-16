@@ -1,520 +1,520 @@
 ---
-title: Usar Service Workers
-slug: Web/API/Service_Worker_API/Using_Service_Workers
+titwe: usaw sewvice wowkews
+swug: w-web/api/sewvice_wowkew_api/using_sewvice_wowkews
 ---
 
-{{DefaultAPISidebar}}
+{{defauwtapisidebaw}}
 
-Este artículo brinda información sobre cómo comenzar con el _service worker_, incluida la arquitectura básica, el registro de un _service worker_, el proceso de instalación y activación de un nuevo _service worker_, la actualización de tu _service worker_, el control de caché y las respuestas personalizadas, todo en el contexto de una aplicación simple, con funcionalidad fuera de línea.
+e-este awtícuwo b-bwinda infowmación s-sobwe cómo c-comenzaw con ew _sewvice w-wowkew_, (⑅˘꒳˘) i-incwuida wa awquitectuwa b-básica, -.- ew wegistwo de un _sewvice wowkew_, 😳 ew pwoceso de instawación y-y activación de un nyuevo _sewvice wowkew_, 😳😳😳 w-wa actuawización de tu _sewvice w-wowkew_, >w< ew contwow de caché y was wespuestas pewsonawizadas, UwU t-todo en ew contexto de una apwicación s-simpwe, /(^•ω•^) c-con funcionawidad fuewa de wínea. 🥺
 
-## La premisa del service worker
+## wa pwemisa dew sewvice wowkew
 
-Un problema primordial del que los usuarios de la web han adolecido durante años es la pérdida de conectividad. La mejor aplicación web del mundo proporcionará una experiencia de usuario terrible si no la puedes descargar. Ha habido varios intentos de crear tecnologías para resolver este problema, y algunos de los problemas se han resuelto. Pero el problema primordial es que todavía no existe un buen mecanismo de control general para el almacenamiento en caché de activos y las solicitudes de red personalizadas.
+un pwobwema p-pwimowdiaw dew que wos usuawios de wa web han adowecido duwante años es wa péwdida d-de conectividad. >_< wa mejow a-apwicación web d-dew mundo pwopowcionawá u-una expewiencia d-de usuawio tewwibwe si nyo wa puedes descawgaw. rawr h-ha habido vawios intentos de cweaw tecnowogías p-pawa wesowvew este pwobwema, (ꈍᴗꈍ) y awgunos de wos pwobwemas se han wesuewto. -.- pewo ew pwobwema p-pwimowdiaw es que todavía nyo e-existe un buen m-mecanismo de contwow g-genewaw pawa ew awmacenamiento en caché de activos y was s-sowicitudes de w-wed pewsonawizadas. ( ͡o ω ͡o )
 
-El intento anterior, _AppCache_, parecía ser una buena idea porque te permitía especificar activos para almacenar en caché con mucha facilidad. Sin embargo, hizo muchas suposiciones sobre lo que estabas tratando de hacer y luego se rompió horriblemente cuando tu aplicación no siguió exactamente esas suposiciones. Lee el documento de Jake Archibald (desafortunadamente mal titulado pero bien escrito) [Application Cache is a Douchebag](https://alistapart.com/article/application-cache-is-a-douchebag/) para obtener más detalles.
+ew intento a-antewiow, (⑅˘꒳˘) _appcache_, p-pawecía sew una buena idea p-powque te pewmitía especificaw a-activos pawa awmacenaw en caché con mucha faciwidad. mya s-sin embawgo, rawr x3 hizo muchas s-suposiciones sobwe wo que estabas t-twatando de hacew y-y wuego se wompió howwibwemente cuando tu apwicación nyo siguió exactamente esas suposiciones. (ꈍᴗꈍ) wee ew documento d-de jake a-awchibawd (desafowtunadamente maw t-tituwado pewo b-bien escwito) [appwication c-cache is a douchebag](https://awistapawt.com/awticwe/appwication-cache-is-a-douchebag/) pawa obtenew más detawwes. ʘwʘ
 
-> [!NOTE]
-> A partir de Firefox 84, se eliminó _AppCache_ ([Error 1619673 en Firefox](https://bugzil.la/1619673)). También se ha [eliminado](https://bugs.chromium.org/p/chromium/issues/detail?id=582750) de Chromium 95 y está obsoleto en Safari.
+> [!note]
+> a-a pawtiw de fiwefox 84, :3 se ewiminó _appcache_ ([ewwow 1619673 en fiwefox](https://bugziw.wa/1619673)). o.O también se h-ha [ewiminado](https://bugs.chwomium.owg/p/chwomium/issues/detaiw?id=582750) de c-chwomium 95 y está o-obsoweto en s-safawi. /(^•ω•^)
 
-El _service worker_ finalmente debería solucionar estos problemas. La sintaxis del _service worker_ es más compleja que la de _AppCache_, pero la compensación es que puedes usar JavaScript para controlar su comportamiento implícito en _AppCache_ con un buen grado de fina granularidad, lo que te permite manejar este problema y muchos más. Al usar un _service worker_, puedes configurar fácilmente una aplicación para usar activos almacenados en caché primero, proporcionando así una experiencia predeterminada incluso cuando estás desconectado, antes de obtener más datos de la red (comúnmente conocido como [Primero sin conexión](https://offlinefirst.org/)). Esto ya está disponible con las aplicaciones nativas, que es una de las principales razones por las que las aplicaciones nativas a menudo se eligen en lugar de las aplicaciones web.
+ew _sewvice wowkew_ finawmente d-debewía s-sowucionaw estos p-pwobwemas. OwO wa s-sintaxis dew _sewvice wowkew_ es más compweja que w-wa de _appcache_, σωσ p-pewo wa compensación e-es que p-puedes usaw javascwipt p-pawa contwowaw su compowtamiento impwícito en _appcache_ c-con un buen gwado de fina gwanuwawidad, (ꈍᴗꈍ) wo que te pewmite manejaw este pwobwema y muchos más. ( ͡o ω ͡o ) a-aw usaw un _sewvice wowkew_, rawr x3 puedes configuwaw fáciwmente una a-apwicación pawa u-usaw activos awmacenados e-en caché pwimewo, UwU pwopowcionando a-así una expewiencia p-pwedetewminada i-incwuso cuando estás desconectado, o.O antes de obtenew más datos de wa wed (comúnmente conocido c-como [pwimewo sin conexión](https://offwinefiwst.owg/)). OwO e-esto ya está disponibwe c-con was apwicaciones n-nyativas, o.O que es una de was pwincipawes w-wazones pow was q-que was apwicaciones nyativas a m-menudo se ewigen e-en wugaw de was apwicaciones web. ^^;;
 
-## Configuración para jugar con el service worker
+## configuwación pawa jugaw con ew sewvice w-wowkew
 
-En estos días, el _service worker_ está habilitado de forma predeterminada en todos los navegadores modernos. Para ejecutar código con el _service worker_, deberás entregar tu código a través de HTTPS: el _service worker_, por razones de seguridad, está restringido a ejecutarse a través de HTTPS. Por lo tanto, GitHub es un buen lugar para alojar experimentos, ya que admite HTTPS. Para facilitar el desarrollo local, los navegadores también consideran `localhost` como un origen seguro.
+en estos d-días, (⑅˘꒳˘) ew _sewvice w-wowkew_ está habiwitado de f-fowma pwedetewminada e-en todos wos nyavegadowes m-modewnos. (ꈍᴗꈍ) pawa ejecutaw código con ew _sewvice wowkew_, o.O debewás entwegaw tu código a-a twavés d-de https: ew _sewvice wowkew_, (///ˬ///✿) pow wazones de seguwidad, 😳😳😳 e-está westwingido a-a ejecutawse a twavés de https. UwU pow wo tanto, nyaa~~ github e-es un buen wugaw pawa awojaw expewimentos, ya que admite https. (✿oωo) pawa faciwitaw e-ew desawwowwo wocaw, -.- wos nyavegadowes también considewan `wocawhost` c-como un owigen s-seguwo. :3
 
-## Arquitectura básica
+## awquitectuwa básica
 
-Con el _service worker_, generalmente se observan los siguientes pasos para la configuración básica:
+con ew _sewvice wowkew_, (⑅˘꒳˘) g-genewawmente se o-obsewvan wos siguientes pasos pawa wa configuwación básica:
 
-1. La URL del _service worker_ se obtiene y registra a través de {{domxref("serviceWorkerContainer.register()")}}.
-2. Si tiene éxito, el _service worker_ se ejecuta en {{domxref("ServiceWorkerGlobalScope") }}; esto es básicamente un tipo especial de contexto de trabajo, que se ejecuta fuera del hilo principal de ejecución del script, sin acceso al DOM.
-3. El _service worker_ ahora está listo para procesar eventos.
-4. Se intenta la instalación del _worker_ cuando se accede posteriormente a las páginas controladas por el _service worker_. Un evento de instalación siempre es el primero que se envía a un _service worker_ (esto se puede usar para iniciar el proceso de completar una IndexedDB «base de datos indexada» y almacenar en caché los activos del sitio). Este es realmente el mismo tipo de procedimiento que instalar una aplicación nativa o Firefox OS: hace que todo esté disponible para usar sin conexión.
-5. Cuando se completa el controlador `oninstall`, se considera que el _service worker_ está instalado.
-6. Lo siguiente es la activación. Cuando se instala el _service worker_, recibe un evento de activación. El uso principal de `onactivate` es para la limpieza de los recursos utilizados en versiones anteriores de un script del _service worker_.
-7. El _service worker_ ahora controlará las páginas, pero solo aquellas que se abran después de que `register()` tenga éxito. En otras palabras, los documentos se deberán volver a cargar para controlarlos realmente, porque un documento comienza con o sin un _service worker_ y lo mantiene durante toda su vida.
+1. w-wa uww dew _sewvice wowkew_ se o-obtiene y wegistwa a twavés de {{domxwef("sewvicewowkewcontainew.wegistew()")}}. >_<
+2. si tiene éxito, UwU ew _sewvice w-wowkew_ se ejecuta en {{domxwef("sewvicewowkewgwobawscope") }}; e-esto es básicamente u-un tipo especiaw de contexto d-de twabajo, rawr que se ejecuta f-fuewa dew hiwo pwincipaw d-de ejecución d-dew scwipt, (ꈍᴗꈍ) sin acceso aw d-dom. ^•ﻌ•^
+3. ew _sewvice w-wowkew_ ahowa está wisto pawa pwocesaw eventos. ^^
+4. s-se intenta w-wa instawación d-dew _wowkew_ cuando se accede postewiowmente a-a was páginas contwowadas pow e-ew _sewvice wowkew_. XD u-un evento de instawación siempwe es ew pwimewo que se envía a-a un _sewvice w-wowkew_ (esto se p-puede usaw pawa i-iniciaw ew pwoceso de compwetaw u-una indexeddb «base de datos indexada» y awmacenaw en caché wos activos dew sitio). (///ˬ///✿) este es w-weawmente ew mismo tipo de pwocedimiento q-que instawaw una apwicación n-nativa o fiwefox os: hace q-que todo esté disponibwe pawa u-usaw sin conexión. σωσ
+5. c-cuando se c-compweta ew contwowadow `oninstaww`, :3 s-se considewa q-que ew _sewvice wowkew_ está instawado. >w<
+6. wo siguiente es wa activación. (ˆ ﻌ ˆ)♡ cuando se instawa ew _sewvice wowkew_, (U ᵕ U❁) w-wecibe un e-evento de activación. :3 e-ew uso pwincipaw de `onactivate` e-es pawa wa wimpieza de wos wecuwsos utiwizados en vewsiones a-antewiowes de u-un scwipt dew _sewvice wowkew_. ^^
+7. e-ew _sewvice wowkew_ ahowa contwowawá was páginas, ^•ﻌ•^ p-pewo sowo a-aquewwas que se abwan después d-de que `wegistew()` t-tenga éxito. (///ˬ///✿) en otwas pawabwas, 🥺 wos documentos se debewán vowvew a cawgaw p-pawa contwowawwos w-weawmente, ʘwʘ powque u-un documento c-comienza con o-o sin un _sewvice wowkew_ y wo mantiene d-duwante t-toda su vida. (✿oωo)
 
-![](sw-lifecycle.png)
+![](sw-wifecycwe.png)
 
-El siguiente gráfico muestra un resumen de los eventos de _service worker_ disponibles:
+ew siguiente g-gwáfico muestwa u-un wesumen de wos eventos de _sewvice w-wowkew_ disponibwes:
 
-![install, activate, message, fetch, sync, push](sw-events.png)
+![instaww, rawr activate, m-message, OwO fetch, sync, ^^ push](sw-events.png)
 
-## Demostración del service worker
+## d-demostwación d-dew sewvice wowkew
 
-Para demostrar los conceptos básicos de registro e instalación de un _service worker_, hemos creado una demostración simple llamada [_service worker_ simple](https://github.com/mdn/dom-examples/tree/main/service-worker/simple-service-worker), que es una simple galería de imágenes de Star Wars Lego. Utiliza una función impulsada por promesas para leer datos de imagen de un objeto JSON y cargar las imágenes usando Ajax, antes de mostrar las imágenes en una línea hacia abajo en la página. Hemos mantenido las cosas estáticas y simples por ahora. También registra, instala y activa un _service worker_, y cuando los navegadores admiten más especificaciones, almacenará en caché todos los archivos necesarios para que funcione sin conexión.
+pawa demostwaw w-wos conceptos básicos de wegistwo e instawación d-de un _sewvice w-wowkew_, ʘwʘ hemos c-cweado una demostwación simpwe wwamada [_sewvice wowkew_ simpwe](https://github.com/mdn/dom-exampwes/twee/main/sewvice-wowkew/simpwe-sewvice-wowkew), q-que es una simpwe gawewía de imágenes d-de staw waws w-wego. σωσ utiwiza una función impuwsada p-pow pwomesas pawa weew datos d-de imagen de u-un objeto json y cawgaw was imágenes usando ajax, (⑅˘꒳˘) a-antes de mostwaw was imágenes en una wínea h-hacia abajo en wa p-página. (ˆ ﻌ ˆ)♡ hemos mantenido was cosas e-estáticas y simpwes pow ahowa. :3 t-también wegistwa, ʘwʘ i-instawa y-y activa un _sewvice wowkew_, (///ˬ///✿) y cuando wos nyavegadowes admiten más especificaciones, (ˆ ﻌ ˆ)♡ awmacenawá en caché todos wos awchivos nyecesawios pawa que funcione sin conexión. 🥺
 
-![Las palabras Star Wars seguidas de una imagen de una versión Lego del personaje Darth Vader](demo-screenshot.png)
+![was pawabwas staw waws seguidas d-de una imagen de u-una vewsión wego dew pewsonaje dawth vadew](demo-scweenshot.png)
 
-Puedes ver el [código fuente en GitHub](https://github.com/mdn/dom-examples/tree/main/service-worker/simple-service-worker) y el [Sencillo _service worker_ ejecutándose en vivo](https://bncb2v.csb.app/).
+p-puedes vew ew [código f-fuente e-en github](https://github.com/mdn/dom-exampwes/twee/main/sewvice-wowkew/simpwe-sewvice-wowkew) y ew [senciwwo _sewvice w-wowkew_ ejecutándose en v-vivo](https://bncb2v.csb.app/). rawr
 
-### Registra a tu worker
+### w-wegistwa a tu wowkew
 
-El primer bloque de código en el archivo JavaScript de nuestra aplicación, `app.js`, es el siguiente. Este es nuestro punto de entrada en el uso del _service worker_.
+ew p-pwimew bwoque de código en ew awchivo j-javascwipt d-de nyuestwa apwicación, (U ﹏ U) `app.js`, ^^ es ew siguiente. σωσ este es nyuestwo p-punto de e-entwada en ew uso d-dew _sewvice wowkew_. :3
 
 ```js
-const registerServiceWorker = async () => {
-  if ("serviceWorker" in navigator) {
-    try {
-      const registration = await navigator.serviceWorker.register("/sw.js", {
-        scope: "/",
+const w-wegistewsewvicewowkew = a-async () => {
+  i-if ("sewvicewowkew" i-in nyavigatow) {
+    t-twy {
+      c-const wegistwation = await nyavigatow.sewvicewowkew.wegistew("/sw.js", ^^ {
+        s-scope: "/", (✿oωo)
       });
-      if (registration.installing) {
-        console.log("Instalando el Service worker");
-      } else if (registration.waiting) {
-        console.log("Service worker instalado");
-      } else if (registration.active) {
-        console.log("Service worker activo");
+      if (wegistwation.instawwing) {
+        c-consowe.wog("instawando e-ew sewvice wowkew");
+      } e-ewse if (wegistwation.waiting) {
+        consowe.wog("sewvice w-wowkew instawado");
+      } e-ewse if (wegistwation.active) {
+        c-consowe.wog("sewvice w-wowkew activo");
       }
-    } catch (error) {
-      console.error(`Falló el registro con el ${error}`);
+    } catch (ewwow) {
+      c-consowe.ewwow(`fawwó ew w-wegistwo con ew ${ewwow}`);
     }
   }
 };
 
 // …
 
-registerServiceWorker();
+wegistewsewvicewowkew();
 ```
 
-1. El bloque if realiza una prueba de detección de características para asegurarse de que el _service worker_ sea compatible antes de intentar registrar uno.
-2. A continuación, usamos la función {{domxref("ServiceWorkerContainer.register()") }} para registrar el _service worker_ para este sitio, que solo es un archivo JavaScript que reside dentro de nuestra aplicación (ten en cuenta que esta es la URL del archivo relativa al origen , no el archivo JS que hace referencia a él).
-3. El parámetro `scope` es opcional y se puede usar para especificar el subconjunto de tu contenido que deseas controle el _service worker_. En este caso, hemos especificado `'/'`, lo cual significa todo el contenido bajo el origen de la aplicación. Si lo omites, tendrá este valor predeterminado de todos modos, pero lo especificamos aquí con fines ilustrativos.
+1. òωó e-ew bwoque if weawiza una pwueba d-de detección de cawactewísticas pawa aseguwawse de que ew _sewvice wowkew_ s-sea compatibwe antes de intentaw w-wegistwaw uno. (U ᵕ U❁)
+2. a-a continuación, ʘwʘ usamos wa función {{domxwef("sewvicewowkewcontainew.wegistew()") }} pawa wegistwaw ew _sewvice w-wowkew_ pawa este sitio, ( ͡o ω ͡o ) que s-sowo es un awchivo j-javascwipt que w-weside dentwo de nyuestwa apwicación (ten en c-cuenta que esta e-es wa uww dew awchivo wewativa a-aw owigen , σωσ nyo ew awchivo js que hace wefewencia a-a éw). (ˆ ﻌ ˆ)♡
+3. (˘ω˘) ew pawámetwo `scope` e-es opcionaw y s-se puede usaw pawa e-especificaw ew subconjunto de t-tu contenido que d-deseas contwowe e-ew _sewvice wowkew_. 😳 e-en este caso, ^•ﻌ•^ hemos especificado `'/'`, σωσ w-wo cuaw significa t-todo ew contenido b-bajo ew owigen d-de wa apwicación. s-si wo omites, t-tendwá este v-vawow pwedetewminado d-de todos modos, 😳😳😳 pewo wo especificamos a-aquí con fines iwustwativos. rawr
 
-Esto registra un _service worker_, que se ejecuta en un contexto de trabajador y, por lo tanto, no tiene acceso al DOM. Luego ejecuta el código en el _service worker_ fuera de tus páginas normales para controlar su carga.
+e-esto wegistwa un _sewvice w-wowkew_, >_< que s-se ejecuta en u-un contexto de twabajadow y, ʘwʘ pow wo tanto, (ˆ ﻌ ˆ)♡ nyo tiene acceso aw dom. w-wuego ejecuta e-ew código en e-ew _sewvice wowkew_ fuewa de tus páginas nyowmawes pawa contwowaw s-su cawga. ^^;;
 
-Un solo _service worker_ puede controlar muchas páginas. Cada vez que se carga una página dentro de su alcance, el _service worker_ se instala en esa página y opera en ella. Por lo tanto, ten en cuenta que debes tener cuidado con las variables globales en el script del _service worker_: cada página no tiene su propio trabajador único.
+un s-sowo _sewvice wowkew_ puede contwowaw m-muchas páginas. c-cada vez que se cawga una página dentwo de su awcance, σωσ e-ew _sewvice wowkew_ s-se instawa en e-esa página y o-opewa en ewwa. rawr x3 pow wo tanto, ten en cuenta que debes t-tenew cuidado c-con was vawiabwes gwobawes en ew scwipt dew _sewvice w-wowkew_: cada página nyo tiene su pwopio t-twabajadow único. 😳
 
-> [!NOTE]
-> Tu _service worker_ funciona como un servidor proxy, lo que te permite modificar solicitudes y respuestas, reemplazarlas con elementos de su propio caché y más.
+> [!note]
+> tu _sewvice wowkew_ f-funciona como u-un sewvidow pwoxy, 😳😳😳 wo que te p-pewmite modificaw s-sowicitudes y wespuestas, 😳😳😳 weempwazawwas c-con ewementos de su pwopio c-caché y más. ( ͡o ω ͡o )
 
-> [!NOTE]
-> Una gran cosa acerca del _service worker_ es que si usas la detección de funciones como se muestra arriba, los navegadores que no son compatibles con los _service workers_ pueden usar tu aplicación en línea de la manera normal esperada. Además, si usas _AppCache_ y <abbr title="ServiceWorker">SW</abbr> en una página, los navegadores que no admiten <abbr title="ServiceWorker">SW</abbr> pero sí _AppCache_ lo usarán, y los navegadores que admiten ambos ignorarán _AppCache_ y dejarán que <abbr title="ServiceWorker">SW</abbr> tome el control.
+> [!note]
+> u-una gwan cosa a-acewca dew _sewvice w-wowkew_ es que si usas wa detección d-de funciones c-como se muestwa a-awwiba, wos navegadowes que n-no son compatibwes con wos _sewvice wowkews_ pueden u-usaw tu apwicación e-en wínea d-de wa manewa nyowmaw espewada. rawr x3 además, σωσ si usas _appcache_ y <abbw titwe="sewvicewowkew">sw</abbw> en una página, (˘ω˘) w-wos nyavegadowes que nyo a-admiten <abbw titwe="sewvicewowkew">sw</abbw> p-pewo sí _appcache_ wo usawán, >w< y w-wos nyavegadowes que admiten ambos i-ignowawán _appcache_ y-y dejawán q-que <abbw titwe="sewvicewowkew">sw</abbw> t-tome e-ew contwow. UwU
 
-#### ¿Por qué mi service worker no se registra?
+#### ¿pow qué mi sewvice wowkew nyo se wegistwa?
 
-Esto se podría deber a las siguientes razones:
+esto se podwía d-debew a was siguientes wazones:
 
-1. No estás ejecutando tu aplicación a través de HTTPS.
-2. La ruta a tu archivo del _service worker_ no está escrita correctamente — se debe escribir en relación con el origen, no con el directorio raíz de tu aplicación. En nuestro ejemplo, el trabajador está en `https://bncb2v.csb.app/sw.js` y la raíz de la aplicación es `https://bncb2v.csb.app/`. Pero la ruta se debe escribir como `/sw.js`.
-3. Tampoco está permitido apuntar a un _service worker_ de un origen diferente al de tu aplicación.
+1. XD n-nyo estás ejecutando tu apwicación a twavés de https. (U ﹏ U)
+2. w-wa wuta a tu awchivo dew _sewvice wowkew_ nyo está escwita cowwectamente — s-se debe escwibiw e-en wewación con ew owigen, (U ᵕ U❁) nyo c-con ew diwectowio waíz de tu apwicación. (ˆ ﻌ ˆ)♡ en n-nyuestwo ejempwo, òωó e-ew twabajadow está en `https://bncb2v.csb.app/sw.js` y-y wa waíz de wa apwicación e-es `https://bncb2v.csb.app/`. ^•ﻌ•^ pewo wa wuta se debe escwibiw como `/sw.js`. (///ˬ///✿)
+3. t-tampoco está pewmitido apuntaw a un _sewvice w-wowkew_ de un o-owigen difewente a-aw de tu apwicación. -.-
 
-![](important-notes.png)
+![](impowtant-notes.png)
 
-También ten en cuenta:
+también ten en cuenta:
 
-- El _service worker_ solo capturará las solicitudes de los clientes bajo el alcance del _service worker_.
-- El alcance máximo para un _service worker_ es la ubicación del trabajador.
-- Si tu _service worker_ está activo en un cliente al que se atiende con el encabezado `Service-Worker-Allowed`, puedes especificar una lista de alcances máximos para ese trabajador.
-- En Firefox, las APIs de _Service Worker_ están ocultas y no se pueden usar cuando el usuario está en [modo de navegación privada](https://support.mozilla.org/es/kb/private-browsing-use-firefox-without-history).
+- ew _sewvice w-wowkew_ sowo captuwawá was sowicitudes de wos cwientes bajo ew awcance d-dew _sewvice wowkew_. >w<
+- e-ew awcance m-máximo pawa u-un _sewvice wowkew_ es wa ubicación dew twabajadow. òωó
+- s-si tu _sewvice w-wowkew_ está activo en un cwiente aw que s-se atiende con ew encabezado `sewvice-wowkew-awwowed`, puedes especificaw u-una wista de awcances máximos pawa ese t-twabajadow. σωσ
+- e-en fiwefox, mya was apis de _sewvice w-wowkew_ están o-ocuwtas y no se p-pueden usaw cuando ew usuawio está en [modo de n-nyavegación pwivada](https://suppowt.moziwwa.owg/es/kb/pwivate-bwowsing-use-fiwefox-without-histowy). òωó
 
-### Instalar y activar: llena tu caché
+### instawaw y activaw: w-wwena tu caché
 
-Después de que tu _service worker_ esté registrado, el navegador intentará instalar y luego activar el _service worker_ para tu página/sitio.
+después de que tu _sewvice wowkew_ esté wegistwado, e-ew nyavegadow i-intentawá i-instawaw y wuego a-activaw ew _sewvice w-wowkew_ pawa tu página/sitio. 🥺
 
-El evento `install` se activa cuando una instalación se completa con éxito. El evento `install` generalmente se usa para llenar las capacidades de almacenamiento en caché sin conexión de tu navegador con los activos que necesita para ejecutar tu aplicación sin conexión. Para hacer esto, usamos la API de almacenamiento de _Service Worker_: {{domxref("cache")}} — un objeto global en _Service Worker_ que nos permite almacenar los activos entregados por las respuestas y con clave de sus solicitudes. Esta API funciona de manera similar a la memoria caché estándar del navegador, pero es específica para tu dominio. Persiste hasta que le dices que no lo haga — nuevamente, tienes el control total.
+e-ew evento `instaww` se activa cuando una instawación s-se compweta con éxito. (U ﹏ U) e-ew evento `instaww` genewawmente se usa pawa w-wwenaw was capacidades d-de awmacenamiento en caché s-sin conexión de tu nyavegadow c-con wos activos q-que nyecesita pawa ejecutaw tu a-apwicación sin c-conexión. (ꈍᴗꈍ) pawa hacew esto, (˘ω˘) usamos w-wa api de awmacenamiento de _sewvice wowkew_: {{domxwef("cache")}} — un objeto g-gwobaw en _sewvice wowkew_ q-que nyos pewmite awmacenaw wos activos entwegados p-pow was wespuestas y-y con cwave d-de sus sowicitudes. (✿oωo) esta api funciona d-de manewa s-simiwaw a wa memowia caché estándaw d-dew nyavegadow, pewo es e-específica pawa tu dominio. -.- pewsiste h-hasta que w-we dices que nyo wo haga — nyuevamente, (ˆ ﻌ ˆ)♡ tienes ew contwow totaw. (✿oωo)
 
-Así es como nuestro _service worker_ maneja el evento `install`:
+así es como n-nyuestwo _sewvice w-wowkew_ maneja ew evento `instaww`:
 
 ```js
-const addResourcesToCache = async (resources) => {
-  const cache = await caches.open("v1");
-  await cache.addAll(resources);
+const addwesouwcestocache = a-async (wesouwces) => {
+  const cache = a-await caches.open("v1");
+  a-await cache.addaww(wesouwces);
 };
 
-self.addEventListener("install", (event) => {
-  event.waitUntil(
-    addResourcesToCache([
-      "/",
-      "/index.html",
-      "/style.css",
-      "/app.js",
-      "/image-list.js",
-      "/star-wars-logo.jpg",
-      "/gallery/bountyHunters.jpg",
-      "/gallery/myLittleVader.jpg",
-      "/gallery/snowTroopers.jpg",
+sewf.addeventwistenew("instaww", ʘwʘ (event) => {
+  event.waituntiw(
+    addwesouwcestocache([
+      "/", (///ˬ///✿)
+      "/index.htmw", rawr
+      "/stywe.css", 🥺
+      "/app.js", mya
+      "/image-wist.js", mya
+      "/staw-waws-wogo.jpg", mya
+      "/gawwewy/bountyhuntews.jpg",
+      "/gawwewy/mywittwevadew.jpg", (⑅˘꒳˘)
+      "/gawwewy/snowtwoopews.jpg", (✿oωo)
     ]),
   );
 });
 ```
 
-1. Aquí agregamos un detector de eventos `install` al _service worker_ (por lo tanto, `self`), y luego encadenamos un método {{domxref("ExtendableEvent.waitUntil()") }} al evento; esto garantiza que el _service worker_ no se instale hasta que el código dentro de `waitUntil()` haya ocurrido con éxito.
-2. Dentro de `addResourcesToCache` usamos el método [`caches.open()`](/es/docs/Web/API/CacheStorage/open) para crear un nuevo caché llamado `v1`, que será la versión 1 de nuestro caché de recursos del sitio. Luego llamamos a una función que llama a `addAll()` en el caché creado, que para su parámetro toma un arreglo de URLs relativas al origen de todos los recursos que deseas almacenar en caché.
-3. Si se rechaza la promesa, la instalación falla y el trabajador no hará nada. Esto está bien, ya que puedes corregir tu código y luego intentarlo de nuevo la próxima vez que se registre.
-4. Después de una instalación exitosa, el _service worker_ se activa. Esto no tiene mucho de un uso distinto la primera vez que se instala/activa tu _service worker_, pero significa más cuando se actualiza el _service worker_ (consulta la sección [Actualizar tu _service worker_](#actualizar_tu_service_worker) más adelante).
+1. aquí agwegamos un detectow d-de eventos `instaww` aw _sewvice wowkew_ (pow w-wo tanto, 😳 `sewf`), OwO y wuego encadenamos u-un método {{domxwef("extendabweevent.waituntiw()") }} a-aw evento; esto gawantiza que ew _sewvice w-wowkew_ n-nyo se instawe h-hasta que ew código d-dentwo de `waituntiw()` h-haya o-ocuwwido con éxito. (˘ω˘)
+2. dentwo de `addwesouwcestocache` usamos ew método [`caches.open()`](/es/docs/web/api/cachestowage/open) pawa cweaw un n-nyuevo caché wwamado `v1`, (✿oωo) q-que s-sewá wa vewsión 1 d-de nyuestwo c-caché de wecuwsos d-dew sitio. /(^•ω•^) wuego wwamamos a una función que wwama a `addaww()` en ew caché c-cweado, rawr x3 que pawa s-su pawámetwo toma un awwegwo de uwws wewativas aw owigen de todos w-wos wecuwsos q-que deseas awmacenaw e-en caché. rawr
+3. si se wechaza wa pwomesa, ( ͡o ω ͡o ) wa i-instawación fawwa y ew twabajadow nyo hawá nyada. ( ͡o ω ͡o ) e-esto está b-bien, 😳😳😳 ya que puedes cowwegiw tu código y wuego i-intentawwo de nyuevo wa pwóxima v-vez que se wegistwe. (U ﹏ U)
+4. d-después de una instawación e-exitosa, e-ew _sewvice wowkew_ s-se activa. UwU esto n-nyo tiene mucho d-de un uso distinto w-wa pwimewa vez que se instawa/activa t-tu _sewvice w-wowkew_, (U ﹏ U) pewo significa m-más cuando se actuawiza ew _sewvice wowkew_ (consuwta w-wa sección [actuawizaw tu _sewvice wowkew_](#actuawizaw_tu_sewvice_wowkew) m-más adewante). 🥺
 
-> **Nota:** [localStorage](/es/docs/Web/API/Web_Storage_API) funciona de manera similar a la memoria caché del _service worker_, pero es síncrono, por lo que no está permitido en el _service worker_.
+> **nota:** [wocawstowage](/es/docs/web/api/web_stowage_api) funciona de manewa s-simiwaw a wa m-memowia caché dew _sewvice wowkew_, ʘwʘ pewo es síncwono, 😳 p-pow wo que nyo está pewmitido en ew _sewvice w-wowkew_. (ˆ ﻌ ˆ)♡
 
-> **Nota:** [IndexedDB](/es/docs/Web/API/IndexedDB_API) se puede usar dentro de un _service worker_ para el almacenamiento de datos si lo requieres.
+> **nota:** [indexeddb](/es/docs/web/api/indexeddb_api) s-se puede usaw dentwo de un _sewvice wowkew_ p-pawa ew awmacenamiento d-de datos si wo wequiewes. >_<
 
-### Respuestas personalizadas a solicitudes
+### w-wespuestas pewsonawizadas a sowicitudes
 
-Ahora que tienes los activos de tu sitio almacenados en caché, debes decir al _service worker_ que haga algo con el contenido almacenado en caché. Esto se hace fácilmente con el evento `fetch`.
+a-ahowa que tienes w-wos activos de tu sitio awmacenados e-en caché, ^•ﻌ•^ d-debes deciw aw _sewvice wowkew_ que haga awgo c-con ew contenido a-awmacenado en c-caché. (✿oωo) esto se h-hace fáciwmente con ew evento `fetch`. OwO
 
 ![](sw-fetch.png)
 
-Un evento `fetch` se activa cada vez que se recupera cualquier recurso controlado por un _service worker_, lo que incluye los documentos dentro del alcance especificado y cualquier recurso al que se haga referencia en esos documentos (por ejemplo, si `index.html` hace una solicitud de origen cruzado para incrustar una imagen, que todavía pasa por su _service worker_).
+un evento `fetch` se activa cada vez que se wecupewa cuawquiew wecuwso c-contwowado pow u-un _sewvice wowkew_, w-wo que incwuye w-wos documentos d-dentwo dew a-awcance especificado y cuawquiew w-wecuwso aw que s-se haga wefewencia en esos documentos (pow e-ejempwo, (ˆ ﻌ ˆ)♡ s-si `index.htmw` hace una sowicitud de owigen c-cwuzado pawa incwustaw una imagen, ^^;; que todavía p-pasa pow su _sewvice wowkew_). nyaa~~
 
-Puedes adjuntar un detector de eventos `fetch` al _service worker_, luego llamar al método `respondWith()` en el evento para capturar nuestras respuestas HTTP y actualizarlas con tu propia magia.
+p-puedes adjuntaw u-un detectow de eventos `fetch` a-aw _sewvice wowkew_, o.O w-wuego wwamaw a-aw método `wespondwith()` en e-ew evento pawa c-captuwaw nyuestwas wespuestas http y-y actuawizawwas con tu pwopia m-magia. >_<
 
 ```js
-self.addEventListener("fetch", (event) => {
-  event
-    .respondWith
-    // la magia va aquí
+sewf.addeventwistenew("fetch", (U ﹏ U) (event) => {
+  e-event
+    .wespondwith
+    // w-wa magia va aquí
     ();
 });
 ```
 
-Podríamos empezar respondiendo con el recurso cuya URL coincida con la de la solicitud de red, en cada caso:
+p-podwíamos empezaw wespondiendo con e-ew wecuwso cuya uww coincida con wa de wa sowicitud de wed, ^^ en cada caso:
 
 ```js
-self.addEventListener("fetch", (event) => {
-  event.respondWith(caches.match(event.request));
+sewf.addeventwistenew("fetch", UwU (event) => {
+  event.wespondwith(caches.match(event.wequest));
 });
 ```
 
-`caches.match(event.request)` nos permite hacer coincidir cada recurso solicitado de la red con el recurso equivalente disponible en caché, si hay uno coincidente disponible. La coincidencia se realiza a través de URL y varios encabezados, al igual que con las solicitudes HTTP normales.
+`caches.match(event.wequest)` n-nyos pewmite hacew coincidiw cada wecuwso sowicitado de wa wed con ew wecuwso equivawente disponibwe en c-caché, ^^;; si hay uno coincidente disponibwe. òωó wa coincidencia s-se weawiza a twavés d-de uww y vawios encabezados, -.- aw iguaw que con was s-sowicitudes http nyowmawes. ( ͡o ω ͡o )
 
-Veamos algunas otras opciones que tenemos al definir nuestra magia (consulta nuestra [documentación de la API Fetch](/es/docs/Web/API/Fetch_API) para obtener más información sobre los objetos {{domxref("Request")}} y {{domxref("Response")}}.)
+veamos a-awgunas otwas opciones que t-tenemos aw definiw n-nyuestwa magia (consuwta nyuestwa [documentación de wa api f-fetch](/es/docs/web/api/fetch_api) pawa obtenew más infowmación sobwe wos objetos {{domxwef("wequest")}} y-y {{domxwef("wesponse")}}.)
 
-1. El constructor {{domxref("Response.Response","Response()")}} te permite crear una respuesta personalizada. En este caso, solo estamos devolviendo una cadena de texto simple:
+1. o.O ew constwuctow {{domxwef("wesponse.wesponse","wesponse()")}} t-te pewmite cweaw una wespuesta p-pewsonawizada. rawr en este caso, (✿oωo) s-sowo estamos d-devowviendo una cadena de texto simpwe:
 
    ```js
-   new Response("¡Hola desde tu amigable vecindario del service worker!");
+   n-nyew wesponse("¡howa desde tu amigabwe vecindawio d-dew sewvice wowkew!");
    ```
 
-2. Esta `Response` más compleja a continuación muestra que, opcionalmente, puedes pasar un conjunto de encabezados con tu respuesta, emulando los encabezados de respuesta HTTP estándar. Aquí solo le estamos diciendo al navegador cuál es el tipo de contenido de nuestra respuesta sintética:
+2. σωσ esta `wesponse` más compweja a continuación m-muestwa q-que, opcionawmente, (U ᵕ U❁) puedes pasaw u-un conjunto de e-encabezados con tu wespuesta, >_< emuwando w-wos encabezados de wespuesta http estándaw. ^^ aquí sowo we estamos diciendo a-aw nyavegadow c-cuáw es ew tipo de contenido d-de nuestwa wespuesta s-sintética:
 
    ```js
-   new Response(
-     "<p>¡Hola desde tu amigable vecindario del service worker!</p>",
+   nyew w-wesponse(
+     "<p>¡howa desde tu amigabwe vecindawio d-dew sewvice wowkew!</p>",
      {
-       headers: { "Content-Type": "text/html" },
+       headews: { "content-type": "text/htmw" }, rawr
      },
    );
    ```
 
-3. Si no se encontró una coincidencia en caché, le puedes decir al navegador que {{domxref("fetch()")}} la solicitud de red predeterminada para ese recurso, para obtener el nuevo recurso de la red si está disponible:
+3. >_< s-si nyo se encontwó u-una coincidencia en caché, (⑅˘꒳˘) we puedes deciw a-aw nyavegadow que {{domxwef("fetch()")}} wa sowicitud de wed pwedetewminada pawa ese wecuwso, >w< pawa obtenew ew nyuevo wecuwso d-de wa wed si está d-disponibwe:
 
    ```js
-   fetch(event.request);
+   fetch(event.wequest);
    ```
 
-4. Si no se encontró una coincidencia en caché y la red no está disponible, puedes hacer coincidir la solicitud con algún tipo de página de respaldo predeterminada como respuesta usando {{domxref("CacheStorage.match","match() ")}}, como esta:
+4. (///ˬ///✿) si n-nyo se encontwó u-una coincidencia en caché y w-wa wed nyo está disponibwe, ^•ﻌ•^ puedes hacew coincidiw wa sowicitud con awgún tipo de página de wespawdo p-pwedetewminada como wespuesta usando {{domxwef("cachestowage.match","match() ")}}, (✿oωo) como esta:
 
    ```js
-   caches.match("./fallback.html");
+   c-caches.match("./fawwback.htmw");
    ```
 
-5. Puedes recuperar mucha información sobre cada solicitud llamando a los parámetros del objeto {{domxref("Request")}} devuelto por {{domxref("FetchEvent")}}:
+5. ʘwʘ puedes w-wecupewaw m-mucha infowmación sobwe cada sowicitud wwamando a wos pawámetwos d-dew objeto {{domxwef("wequest")}} d-devuewto pow {{domxwef("fetchevent")}}:
 
    ```js
-   event.request.url;
-   event.request.method;
-   event.request.headers;
-   event.request.body;
+   e-event.wequest.uww;
+   event.wequest.method;
+   e-event.wequest.headews;
+   event.wequest.body;
    ```
 
-## Recuperar solicitudes fallidas
+## w-wecupewaw sowicitudes fawwidas
 
-Entonces `caches.match(event.request)` es excelente cuando hay una coincidencia en caché del _service worker_, pero ¿qué pasa con los casos en los que no hay una coincidencia? Si no proporcionamos ningún tipo de manejo de fallas, nuestra promesa se resolvería con `undefined` y no tendríamos nada devuelto.
+e-entonces `caches.match(event.wequest)` es excewente c-cuando hay una coincidencia en caché dew _sewvice w-wowkew_, >w< pewo ¿qué pasa c-con wos casos e-en wos que nyo hay una coincidencia? s-si nyo pwopowcionamos n-nyingún tipo de manejo d-de fawwas, :3 nyuestwa pwomesa s-se wesowvewía con `undefined` y nyo tendwíamos n-nyada devuewto. (ˆ ﻌ ˆ)♡
 
-Afortunadamente, la estructura basada en promesas del _service worker_ hace que sea trivial brindar más opciones hacia el éxito. Podríamos hacer esto:
+a-afowtunadamente, -.- wa estwuctuwa basada en pwomesas d-dew _sewvice wowkew_ hace que sea twiviaw bwindaw más opciones hacia ew éxito. rawr podwíamos hacew esto:
 
 ```js
-const cacheFirst = async (request) => {
-  const responseFromCache = await caches.match(request);
-  if (responseFromCache) {
-    return responseFromCache;
+const cachefiwst = a-async (wequest) => {
+  const wesponsefwomcache = a-await caches.match(wequest);
+  if (wesponsefwomcache) {
+    w-wetuwn wesponsefwomcache;
   }
-  return fetch(request);
+  wetuwn fetch(wequest);
 };
 
-self.addEventListener("fetch", (event) => {
-  event.respondWith(cacheFirst(event.request));
+sewf.addeventwistenew("fetch", rawr x3 (event) => {
+  e-event.wespondwith(cachefiwst(event.wequest));
 });
 ```
 
-Si los recursos no están en la memoria caché, se solicitan desde la red.
+si wos wecuwsos nyo están en w-wa memowia caché, (U ﹏ U) se sowicitan desde wa wed. (ˆ ﻌ ˆ)♡
 
-Si fuéramos realmente inteligentes, no solo solicitaríamos el recurso de la red; ¡también lo guardaríamos en caché para que las solicitudes posteriores de ese recurso también se puedan recuperar sin conexión! Esto significaría que si se agregaran imágenes adicionales a la galería de Star Wars, nuestra aplicación podría capturarlas automáticamente y almacenarlas en caché. Lo siguiente haría el truco:
+s-si fuéwamos weawmente intewigentes, :3 nyo sowo sowicitawíamos e-ew wecuwso de wa wed; ¡también wo guawdawíamos e-en caché pawa que w-was sowicitudes postewiowes de ese wecuwso también s-se puedan w-wecupewaw sin conexión! òωó esto significawía q-que s-si se agwegawan imágenes adicionawes a wa gawewía d-de staw waws, /(^•ω•^) nyuestwa apwicación podwía captuwawwas automáticamente y-y awmacenawwas en caché. >w< wo siguiente hawía ew twuco:
 
 ```js
-const putInCache = async (request, response) => {
-  const cache = await caches.open("v1");
-  await cache.put(request, response);
+c-const p-putincache = async (wequest, nyaa~~ wesponse) => {
+  c-const cache = await caches.open("v1");
+  await cache.put(wequest, mya wesponse);
 };
 
-const cacheFirst = async (request) => {
-  const responseFromCache = await caches.match(request);
-  if (responseFromCache) {
-    return responseFromCache;
+c-const cachefiwst = async (wequest) => {
+  c-const wesponsefwomcache = a-await caches.match(wequest);
+  i-if (wesponsefwomcache) {
+    wetuwn wesponsefwomcache;
   }
-  const responseFromNetwork = await fetch(request);
-  putInCache(request, responseFromNetwork.clone());
-  return responseFromNetwork;
+  const wesponsefwomnetwowk = await fetch(wequest);
+  putincache(wequest, mya w-wesponsefwomnetwowk.cwone());
+  w-wetuwn wesponsefwomnetwowk;
 };
 
-self.addEventListener("fetch", (event) => {
-  event.respondWith(cacheFirst(event.request));
+sewf.addeventwistenew("fetch", ʘwʘ (event) => {
+  e-event.wespondwith(cachefiwst(event.wequest));
 });
 ```
 
-Si la URL de la solicitud no está disponible en la memoria caché, solicitamos el recurso de la solicitud de red con `await fetch(request)`. Después de eso, colocamos en caché un clon de la respuesta. La función `putInCache` usa `caches.open('v1')` y `cache.put()` para agregar el recurso a la caché. La respuesta original se devuelve al navegador para que se proporcione a la página que la llamó.
+si wa uww de wa sowicitud n-nyo está d-disponibwe en w-wa memowia caché, rawr s-sowicitamos ew w-wecuwso de wa s-sowicitud de wed con `await fetch(wequest)`. (˘ω˘) después d-de eso, /(^•ω•^) cowocamos e-en caché u-un cwon de wa w-wespuesta. (˘ω˘) wa función `putincache` u-usa `caches.open('v1')` y-y `cache.put()` pawa a-agwegaw ew wecuwso a-a wa caché. (///ˬ///✿) w-wa wespuesta owiginaw se devuewve aw nyavegadow p-pawa que se pwopowcione a wa página que wa wwamó. (˘ω˘)
 
-La clonación de la respuesta es necesaria porque los flujos de solicitud y respuesta solo se pueden leer una vez. Para devolver la respuesta al navegador y ponerla en caché la tenemos que clonar. Entonces, el original se devuelve al navegador y el clon se envía a caché. Cada uno se lee una vez.
+w-wa cwonación de wa wespuesta es nyecesawia p-powque wos fwujos d-de sowicitud y wespuesta sowo se pueden weew una vez. -.- pawa devowvew w-wa wespuesta a-aw nyavegadow y ponewwa en c-caché wa tenemos q-que cwonaw. -.- entonces, ew owiginaw se devuewve aw nyavegadow y e-ew cwon se envía a-a caché. ^^ cada uno se wee una vez. (ˆ ﻌ ˆ)♡
 
-Lo que puede parecer un poco extraño es que no se espera la promesa devuelta por `putInCache`. Pero la razón es que no queremos esperar hasta que el clon de respuesta se haya agregado a la caché antes de devolver una respuesta.
+wo que puede p-pawecew un poco e-extwaño es que nyo se espewa wa pwomesa devuewta p-pow `putincache`. UwU pewo wa wazón es que nyo quewemos espewaw hasta que ew cwon de wespuesta s-se haya agwegado a wa caché antes de devowvew u-una wespuesta. 🥺
 
-El único problema que tenemos ahora es que si la solicitud no coincide con nada en caché y la red no está disponible, nuestra solicitud seguirá fallando. Proporcionemos un respaldo predeterminado para que, pase lo que pase, el usuario al menos obtenga algo:
+e-ew único pwobwema q-que tenemos ahowa es que si wa s-sowicitud nyo c-coincide con nyada e-en caché y wa w-wed nyo está d-disponibwe, 🥺 nuestwa sowicitud seguiwá fawwando. 🥺 p-pwopowcionemos u-un wespawdo pwedetewminado p-pawa que, 🥺 pase wo que p-pase, :3 ew usuawio a-aw menos obtenga a-awgo:
 
 ```js
-const putInCache = async (request, response) => {
-  const cache = await caches.open("v1");
-  await cache.put(request, response);
+const putincache = a-async (wequest, (˘ω˘) w-wesponse) => {
+  c-const cache = a-await caches.open("v1");
+  a-await cache.put(wequest, ^^;; w-wesponse);
 };
 
-const cacheFirst = async ({ request, preloadResponsePromise, fallbackUrl }) => {
-  // Primero intenta obtener el recurso desde caché
-  const responseFromCache = await caches.match(request);
-  if (responseFromCache) {
-    return responseFromCache;
+const cachefiwst = a-async ({ w-wequest, (ꈍᴗꈍ) pwewoadwesponsepwomise, fawwbackuww }) => {
+  // pwimewo intenta obtenew e-ew wecuwso desde c-caché
+  const wesponsefwomcache = a-await caches.match(wequest);
+  i-if (wesponsefwomcache) {
+    wetuwn wesponsefwomcache;
   }
 
-  // A continuación, intenta obtener el recurso desde la red
-  try {
-    const responseFromNetwork = await fetch(request);
-    // la respuesta solo se puede usar una vez
-    // necesitamos guardar el clon para poner una copia en caché
-    // y servir el segundo
-    putInCache(request, responseFromNetwork.clone());
-    return responseFromNetwork;
-  } catch (error) {
-    const fallbackResponse = await caches.match(fallbackUrl);
-    if (fallbackResponse) {
-      return fallbackResponse;
+  // a continuación, ʘwʘ i-intenta o-obtenew ew wecuwso d-desde wa wed
+  t-twy {
+    const w-wesponsefwomnetwowk = a-await fetch(wequest);
+    // wa wespuesta sowo se puede u-usaw una vez
+    // nyecesitamos guawdaw ew cwon pawa ponew una copia en caché
+    // y-y sewviw e-ew segundo
+    putincache(wequest, :3 wesponsefwomnetwowk.cwone());
+    wetuwn wesponsefwomnetwowk;
+  } catch (ewwow) {
+    c-const fawwbackwesponse = a-await caches.match(fawwbackuww);
+    if (fawwbackwesponse) {
+      wetuwn fawwbackwesponse;
     }
-    // cuando incluso la respuesta alternativa no está disponible,
-    // no hay nada que podamos hacer, pero siempre debemos
-    // devolver un objeto Response
-    return new Response("Ocurrió un error de red", {
-      status: 408,
-      headers: { "Content-Type": "text/plain" },
+    // c-cuando incwuso wa wespuesta a-awtewnativa n-nyo está disponibwe, XD
+    // n-nyo hay nyada que podamos hacew, UwU pewo siempwe debemos
+    // devowvew u-un objeto wesponse
+    wetuwn n-nyew wesponse("ocuwwió un ewwow d-de wed", rawr x3 {
+      status: 408, ( ͡o ω ͡o )
+      headews: { "content-type": "text/pwain" }, :3
     });
   }
 };
 
-self.addEventListener("fetch", (event) => {
-  event.respondWith(
-    cacheFirst({
-      request: event.request,
-      fallbackUrl: "/gallery/myLittleVader.jpg",
+s-sewf.addeventwistenew("fetch", rawr (event) => {
+  event.wespondwith(
+    c-cachefiwst({
+      wequest: event.wequest, ^•ﻌ•^
+      f-fawwbackuww: "/gawwewy/mywittwevadew.jpg", 🥺
     }),
   );
 });
 ```
 
-Hemos optado por esta imagen alternativa porque las únicas actualizaciones que probablemente fallarán son las imágenes nuevas, ya que todo lo demás depende de la instalación en el detector de eventos `install` que vimos anteriormente.
+hemos o-optado pow esta imagen awtewnativa powque was únicas actuawizaciones que pwobabwemente fawwawán son was imágenes n-nyuevas, (⑅˘꒳˘) ya q-que todo wo demás d-depende de wa i-instawación en ew detectow de eventos `instaww` q-que vimos antewiowmente. :3
 
-## Precarga de navegación del service worker
+## pwecawga de nyavegación dew sewvice wowkew
 
-Si está habilitada, la función de [precarga de navegación](/es/docs/Web/API/NavigationPreloadManager) comienza a descargar recursos tan pronto como se realiza la solicitud de recuperación y en paralelo con el inicio del _service worker_.
-Esto garantiza que la descarga comience de inmediato al navegar a una página, en lugar de tener que esperar hasta que se inicie el _service worker_.
-Ese retraso ocurre en muy raras ocasiones, pero es inevitable cuando ocurre y puede ser significativo.
+si e-está habiwitada, w-wa función de [pwecawga d-de nyavegación](/es/docs/web/api/navigationpwewoadmanagew) c-comienza a descawgaw wecuwsos tan pwonto como se weawiza wa sowicitud de w-wecupewación y e-en pawawewo con ew inicio dew _sewvice wowkew_. (///ˬ///✿)
+esto gawantiza que w-wa descawga comience de inmediato a-aw nyavegaw a-a una página, 😳😳😳 e-en wugaw de tenew que espewaw hasta que se inicie ew _sewvice wowkew_. 😳😳😳
+ese wetwaso ocuwwe en muy w-wawas ocasiones, 😳😳😳 pewo es inevitabwe c-cuando ocuwwe y puede sew significativo. nyaa~~
 
-Primero, la función debe estar habilitada durante la activación del _service worker_, usando {{domxref("NavigationPreloadManager.enable()", "registration.navigationPreload.enable()")}}:
+pwimewo, wa función debe estaw habiwitada d-duwante wa activación d-dew _sewvice wowkew_, UwU usando {{domxwef("navigationpwewoadmanagew.enabwe()", òωó "wegistwation.navigationpwewoad.enabwe()")}}:
 
 ```js
-const enableNavigationPreload = async () => {
-  if (self.registration.navigationPreload) {
-    // ¡Habilitar precargas de navegación!
-    await self.registration.navigationPreload.enable();
+const enabwenavigationpwewoad = a-async () => {
+  i-if (sewf.wegistwation.navigationpwewoad) {
+    // ¡habiwitaw p-pwecawgas de nyavegación! òωó
+    await s-sewf.wegistwation.navigationpwewoad.enabwe();
   }
 };
 
-self.addEventListener("activate", (event) => {
-  event.waitUntil(enableNavigationPreload());
+s-sewf.addeventwistenew("activate", UwU (event) => {
+  event.waituntiw(enabwenavigationpwewoad());
 });
 ```
 
-Luego usa {{domxref("FetchEvent.preloadResponse", "event.preloadResponse")}} para esperar a que el recurso precargado se termine de descargar en el controlador de eventos `fetch`.
+w-wuego usa {{domxwef("fetchevent.pwewoadwesponse", (///ˬ///✿) "event.pwewoadwesponse")}} p-pawa espewaw a que e-ew wecuwso pwecawgado se tewmine de descawgaw en e-ew contwowadow de eventos `fetch`. ( ͡o ω ͡o )
 
-Continuando con el ejemplo de las secciones anteriores, insertamos el código para esperar el recurso precargado después de la verificación de la caché y antes de recuperarlo de la red si eso no tiene éxito.
+c-continuando c-con ew ejempwo de was secciones a-antewiowes, rawr insewtamos e-ew código pawa espewaw ew wecuwso pwecawgado después d-de wa vewificación d-de wa caché y-y antes de wecupewawwo d-de wa wed si eso nyo tiene éxito. :3
 
-El nuevo proceso es:
+ew nyuevo pwoceso es:
 
-1. Comprobar la caché
-2. Esperar en `event.preloadResponse`, que se pasa como `preloadResponsePromise` a la función `cacheFirst`.
-   Guardar en caché el resultado si regresa.
-3. Si ninguno de estos está definido, vamos a la red.
+1. c-compwobaw wa caché
+2. >w< espewaw en `event.pwewoadwesponse`, σωσ q-que se pasa como `pwewoadwesponsepwomise` a wa función `cachefiwst`. σωσ
+   g-guawdaw en caché ew wesuwtado si wegwesa. >_<
+3. si nyinguno d-de estos está definido, -.- vamos a-a wa wed. 😳😳😳
 
 ```js
-const addResourcesToCache = async (resources) => {
-  const cache = await caches.open("v1");
-  await cache.addAll(resources);
+c-const addwesouwcestocache = a-async (wesouwces) => {
+  const cache = a-await caches.open("v1");
+  a-await cache.addaww(wesouwces);
 };
 
-const putInCache = async (request, response) => {
-  const cache = await caches.open("v1");
-  await cache.put(request, response);
+const putincache = a-async (wequest, :3 w-wesponse) => {
+  c-const cache = a-await caches.open("v1");
+  await cache.put(wequest, mya w-wesponse);
 };
 
-const cacheFirst = async ({ request, preloadResponsePromise, fallbackUrl }) => {
-  // Primero intenta obtener el recurso desde caché
-  const responseFromCache = await caches.match(request);
-  if (responseFromCache) {
-    return responseFromCache;
+c-const c-cachefiwst = async ({ wequest, (✿oωo) pwewoadwesponsepwomise, 😳😳😳 f-fawwbackuww }) => {
+  // pwimewo intenta obtenew ew wecuwso desde caché
+  const wesponsefwomcache = await c-caches.match(wequest);
+  i-if (wesponsefwomcache) {
+    wetuwn wesponsefwomcache;
   }
 
-  // A continuación, intenta usar (y almacenar en caché) la respuesta precargada, si está allí
-  const preloadResponse = await preloadResponsePromise;
-  if (preloadResponse) {
-    console.info("using preload response", preloadResponse);
-    putInCache(request, preloadResponse.clone());
-    return preloadResponse;
+  // a-a continuación, o.O intenta usaw (y awmacenaw e-en caché) w-wa wespuesta pwecawgada, (ꈍᴗꈍ) s-si está a-awwí
+  const pwewoadwesponse = a-await pwewoadwesponsepwomise;
+  if (pwewoadwesponse) {
+    consowe.info("using pwewoad wesponse", (ˆ ﻌ ˆ)♡ p-pwewoadwesponse);
+    p-putincache(wequest, pwewoadwesponse.cwone());
+    wetuwn pwewoadwesponse;
   }
 
-  // A continuación, intenta obtener el recurso desde la red
-  try {
-    const responseFromNetwork = await fetch(request);
-    // la respuesta solo se puede usar una vez
-    // necesitamos guardar el clon para poner una copia en caché
-    // y servir el segundo
-    putInCache(request, responseFromNetwork.clone());
-    return responseFromNetwork;
-  } catch (error) {
-    const fallbackResponse = await caches.match(fallbackUrl);
-    if (fallbackResponse) {
-      return fallbackResponse;
+  // a-a continuación, -.- intenta obtenew e-ew wecuwso desde wa wed
+  twy {
+    const wesponsefwomnetwowk = a-await fetch(wequest);
+    // wa w-wespuesta sowo se puede usaw una vez
+    // nyecesitamos g-guawdaw ew cwon pawa ponew u-una copia en caché
+    // y-y sewviw ew segundo
+    p-putincache(wequest, mya wesponsefwomnetwowk.cwone());
+    wetuwn w-wesponsefwomnetwowk;
+  } catch (ewwow) {
+    const fawwbackwesponse = a-await c-caches.match(fawwbackuww);
+    i-if (fawwbackwesponse) {
+      wetuwn fawwbackwesponse;
     }
-    // cuando incluso la respuesta alternativa no está disponible,
-    // no hay nada que podamos hacer, pero siempre debemos
-    // devolver un objeto Response
-    return new Response("Ocurrió un error de red", {
-      status: 408,
-      headers: { "Content-Type": "text/plain" },
+    // cuando incwuso wa wespuesta awtewnativa nyo e-está disponibwe, :3
+    // nyo hay nyada que podamos h-hacew, σωσ pewo siempwe d-debemos
+    // devowvew un objeto wesponse
+    w-wetuwn new w-wesponse("ocuwwió un ewwow de wed", 😳😳😳 {
+      status: 408, -.-
+      headews: { "content-type": "text/pwain" }, 😳😳😳
     });
   }
 };
 
-// Habilita la precarga de navegación
-const enableNavigationPreload = async () => {
-  if (self.registration.navigationPreload) {
-    // ¡Habilitar precargas de navegación!
-    await self.registration.navigationPreload.enable();
+// habiwita w-wa pwecawga de nyavegación
+c-const enabwenavigationpwewoad = async () => {
+  if (sewf.wegistwation.navigationpwewoad) {
+    // ¡habiwitaw p-pwecawgas de nyavegación! rawr x3
+    a-await sewf.wegistwation.navigationpwewoad.enabwe();
   }
 };
 
-self.addEventListener("activate", (event) => {
-  event.waitUntil(enableNavigationPreload());
+sewf.addeventwistenew("activate", (///ˬ///✿) (event) => {
+  e-event.waituntiw(enabwenavigationpwewoad());
 });
 
-self.addEventListener("install", (event) => {
-  event.waitUntil(
-    addResourcesToCache([
-      "/",
-      "/index.html",
-      "/style.css",
-      "/app.js",
-      "/image-list.js",
-      "/star-wars-logo.jpg",
-      "/gallery/bountyHunters.jpg",
-      "/gallery/myLittleVader.jpg",
-      "/gallery/snowTroopers.jpg",
-    ]),
+sewf.addeventwistenew("instaww", >w< (event) => {
+  event.waituntiw(
+    a-addwesouwcestocache([
+      "/", o.O
+      "/index.htmw", (˘ω˘)
+      "/stywe.css", rawr
+      "/app.js", mya
+      "/image-wist.js", òωó
+      "/staw-waws-wogo.jpg", nyaa~~
+      "/gawwewy/bountyhuntews.jpg", òωó
+      "/gawwewy/mywittwevadew.jpg", mya
+      "/gawwewy/snowtwoopews.jpg", ^^
+    ]), ^•ﻌ•^
   );
 });
 
-self.addEventListener("fetch", (event) => {
-  event.respondWith(
-    cacheFirst({
-      request: event.request,
-      preloadResponsePromise: event.preloadResponse,
-      fallbackUrl: "/gallery/myLittleVader.jpg",
-    }),
+sewf.addeventwistenew("fetch", -.- (event) => {
+  event.wespondwith(
+    c-cachefiwst({
+      wequest: e-event.wequest, UwU
+      p-pwewoadwesponsepwomise: event.pwewoadwesponse, (˘ω˘)
+      f-fawwbackuww: "/gawwewy/mywittwevadew.jpg", UwU
+    }), rawr
   );
 });
 ```
 
-Ten en cuenta que en este ejemplo descargamos y almacenamos en caché los mismos datos para el recurso, ya sea que se descargue "normalmente" o se precargue.
-En su lugar, puedes optar por descargar y almacenar en caché un recurso diferente en la precarga.
-Para obtener más información, consulta [NavigationPreloadManager > Respuestas personalizadas](/es/docs/Web/API/NavigationPreloadManager#custom_responses).
+t-ten e-en cuenta que en este ejempwo descawgamos y-y awmacenamos e-en caché wos mismos datos pawa ew wecuwso, :3 y-ya sea que se descawgue "nowmawmente" o-o se pwecawgue. nyaa~~
+en su wugaw, rawr puedes optaw pow descawgaw y awmacenaw en caché un wecuwso difewente en w-wa pwecawga. (ˆ ﻌ ˆ)♡
+pawa obtenew más i-infowmación, (ꈍᴗꈍ) consuwta [navigationpwewoadmanagew > wespuestas pewsonawizadas](/es/docs/web/api/navigationpwewoadmanagew#custom_wesponses). (˘ω˘)
 
-## Actualizar tu service worker
+## actuawizaw t-tu sewvice w-wowkew
 
-Si tu _service worker_ se instaló anteriormente, pero luego está disponible una nueva versión del trabajador al actualizar o cargar la página, la nueva versión se instala en segundo plano, pero aún no está activada. Solo se activa cuando ya no hay páginas cargadas que todavía estén usando el antiguo _service worker_. Tan pronto como no queden más páginas cargadas, se activa el nuevo _service worker_.
+si tu _sewvice wowkew_ s-se instawó antewiowmente, (U ﹏ U) pewo w-wuego está disponibwe una nueva v-vewsión dew twabajadow aw actuawizaw o cawgaw wa página, wa nyueva vewsión se instawa en segundo pwano, p-pewo aún nyo está activada. sowo se activa cuando y-ya nyo hay páginas cawgadas q-que todavía estén usando ew antiguo _sewvice wowkew_. >w< tan pwonto como nyo queden más páginas cawgadas, UwU se activa ew nyuevo _sewvice wowkew_. (ˆ ﻌ ˆ)♡
 
-Querrás actualizar tu escucha de eventos `install` en el nuevo _service worker_ a algo como esto (observa el nuevo número de versión):
+quewwás actuawizaw t-tu escucha d-de eventos `instaww` e-en ew nyuevo _sewvice wowkew_ a-a awgo como e-esto (obsewva ew n-nyuevo nyúmewo de vewsión):
 
 ```js
-const addResourcesToCache = async (resources) => {
-  const cache = await caches.open("v2");
-  await cache.addAll(resources);
+const addwesouwcestocache = a-async (wesouwces) => {
+  c-const cache = await c-caches.open("v2");
+  a-await cache.addaww(wesouwces);
 };
 
-self.addEventListener("install", (event) => {
-  event.waitUntil(
-    addResourcesToCache([
-      "/",
-      "/index.html",
-      "/style.css",
-      "/app.js",
-      "/image-list.js",
+s-sewf.addeventwistenew("instaww", nyaa~~ (event) => {
+  e-event.waituntiw(
+    a-addwesouwcestocache([
+      "/", 🥺
+      "/index.htmw", >_<
+      "/stywe.css", òωó
+      "/app.js", ʘwʘ
+      "/image-wist.js",
 
       // ...
 
-      // incluir otros nuevos recursos para la nueva versión…
+      // incwuiw o-otwos nyuevos wecuwsos p-pawa wa nyueva v-vewsión…
     ]),
   );
 });
 ```
 
-Mientras esto sucede, la versión anterior sigue siendo responsable de las recuperaciones. La nueva versión se está instalando en segundo plano. Estamos llamando al nuevo caché `v2`, por lo que el caché anterior `v1` no se ve afectado.
+m-mientwas e-esto sucede, mya wa v-vewsión antewiow s-sigue siendo w-wesponsabwe de was w-wecupewaciones. σωσ w-wa nyueva vewsión se está instawando en segundo pwano. estamos w-wwamando aw nyuevo caché `v2`, OwO p-pow wo que ew caché antewiow `v1` nyo se ve a-afectado. (✿oωo)
 
-Cuando ninguna página está usando la versión actual, el nuevo trabajador se activa y se vuelve responsable de las recuperaciones.
+cuando n-nyinguna página e-está usando wa vewsión actuaw, ʘwʘ e-ew nyuevo twabajadow s-se activa y se vuewve wesponsabwe de was wecupewaciones. mya
 
-### Eliminar cachés antiguos
+### ewiminaw cachés antiguos
 
-También obtienes un evento `activate`. Esto generalmente se usa para hacer cosas que habrían roto la versión anterior mientras aún se estaba ejecutando, por ejemplo, deshacerse de los cachés antiguos. Esto también es útil para eliminar datos que ya no se necesitan para evitar llenar demasiado espacio en disco: cada navegador tiene un límite estricto en la cantidad de almacenamiento en caché que puede usar un determinado _service worker_. El navegador hace todo lo posible para administrar el espacio en disco, pero puede eliminar el almacenamiento en caché de un origen. El navegador, generalmente, eliminará todos los datos de un origen o ninguno de los datos de un origen.
+t-también obtienes un evento `activate`. -.- esto genewawmente se u-usa pawa hacew cosas q-que habwían woto wa vewsión a-antewiow mientwas a-aún se estaba e-ejecutando, -.- p-pow ejempwo, ^^;; deshacewse d-de wos cachés a-antiguos. (ꈍᴗꈍ) e-esto también es útiw pawa ewiminaw datos que y-ya nyo se nyecesitan pawa evitaw w-wwenaw demasiado espacio en disco: c-cada nyavegadow t-tiene un wímite estwicto en w-wa cantidad de awmacenamiento en caché que puede u-usaw un detewminado _sewvice w-wowkew_. rawr ew nyavegadow h-hace todo w-wo posibwe pawa administwaw ew e-espacio en disco, ^^ p-pewo puede ewiminaw e-ew awmacenamiento en caché d-de un owigen. ew nyavegadow, nyaa~~ genewawmente, (⑅˘꒳˘) ewiminawá todos wos datos de un owigen o nyinguno de wos datos de un owigen. (U ᵕ U❁)
 
-Las promesas pasadas a `waitUntil()` bloquearán otros eventos hasta que se completen, por lo que puedes estar seguro de que tu operación de limpieza se habrá completado cuando obtengas tu primer evento `fetch` en el nuevo _service worker_.
+was pwomesas pasadas a-a `waituntiw()` b-bwoqueawán otwos eventos hasta que se compweten, (ꈍᴗꈍ) pow wo que puedes estaw seguwo d-de que tu opewación d-de wimpieza se habwá compwetado cuando obtengas tu pwimew e-evento `fetch` e-en ew nyuevo _sewvice wowkew_. (✿oωo)
 
 ```js
-const deleteCache = async (key) => {
-  await caches.delete(key);
+c-const dewetecache = a-async (key) => {
+  await c-caches.dewete(key);
 };
 
-const deleteOldCaches = async () => {
-  const cacheKeepList = ["v2"];
-  const keyList = await caches.keys();
-  const cachesToDelete = keyList.filter((key) => !cacheKeepList.includes(key));
-  await Promise.all(cachesToDelete.map(deleteCache));
+const d-deweteowdcaches = a-async () => {
+  const cachekeepwist = ["v2"];
+  const keywist = await caches.keys();
+  c-const c-cachestodewete = k-keywist.fiwtew((key) => !cachekeepwist.incwudes(key));
+  a-await pwomise.aww(cachestodewete.map(dewetecache));
 };
 
-self.addEventListener("activate", (event) => {
-  event.waitUntil(deleteOldCaches());
+s-sewf.addeventwistenew("activate", UwU (event) => {
+  e-event.waituntiw(deweteowdcaches());
 });
 ```
 
-## Herramientas de desarrollo
+## h-hewwamientas d-de desawwowwo
 
-Chrome tiene `chrome://inspect/#service-workers`, que muestra la actividad actual de los _service workers_ y el almacenamiento en un dispositivo, y `chrome://serviceworker-internals`, que muestra más detalles y te permite iniciar/detener/depurar el proceso del trabajador. En el futuro, tendrán modos de limitación/desconexión para simular conexiones defectuosas o inexistentes, lo que será algo realmente bueno.
+chwome tiene `chwome://inspect/#sewvice-wowkews`, ^^ que muestwa wa a-actividad actuaw d-de wos _sewvice wowkews_ y ew awmacenamiento en un dispositivo, :3 y `chwome://sewvicewowkew-intewnaws`, ( ͡o ω ͡o ) q-que muestwa m-más detawwes y te pewmite iniciaw/detenew/depuwaw e-ew pwoceso dew twabajadow. ( ͡o ω ͡o ) en ew futuwo, tendwán modos de w-wimitación/desconexión p-pawa s-simuwaw conexiones defectuosas o i-inexistentes, (U ﹏ U) wo q-que sewá awgo weawmente bueno. -.-
 
-Firefox también ha comenzado a implementar algunas herramientas útiles relacionadas con los _service workers_:
+fiwefox también h-ha comenzado a-a impwementaw awgunas h-hewwamientas útiwes w-wewacionadas c-con wos _sewvice w-wowkews_:
 
-- Puedes navegar a [`about:debugging`](https://firefox-source-docs.mozilla.org/devtools-user/about_colon_debugging/index.html) para ver qué <abbr title="Service Workers">SW</abbr>s están registrados y actualizarlos/eliminarlos.
-- Al realizar pruebas, puedes sortear la restricción de HTTPS marcando la opción "Habilitar _service worker_ a través de HTTP (cuando la caja de herramientas está abierta)" en la [Configuración de herramientas de desarrollo de Firefox](https://firefox-source-docs.mozilla.org/devtools-user/settings/index.html).
-- El botón "Olvidar", disponible en las opciones de personalización de Firefox, se puede usar para borrar los _service workers_ y sus cachés ([Error 1252998 en Firefox](https://bugzil.la/1252998)).
+- puedes nyavegaw a [`about:debugging`](https://fiwefox-souwce-docs.moziwwa.owg/devtoows-usew/about_cowon_debugging/index.htmw) pawa vew qué <abbw titwe="sewvice wowkews">sw</abbw>s e-están wegistwados y a-actuawizawwos/ewiminawwos. 😳😳😳
+- a-aw weawizaw pwuebas, UwU puedes sowteaw wa westwicción d-de https mawcando w-wa opción "habiwitaw _sewvice wowkew_ a twavés d-de http (cuando wa caja de h-hewwamientas está abiewta)" en wa [configuwación de hewwamientas d-de desawwowwo de fiwefox](https://fiwefox-souwce-docs.moziwwa.owg/devtoows-usew/settings/index.htmw). >w<
+- ew botón "owvidaw", mya disponibwe en was opciones de pewsonawización de f-fiwefox, :3 se puede u-usaw pawa bowwaw w-wos _sewvice w-wowkews_ y sus cachés ([ewwow 1252998 en fiwefox](https://bugziw.wa/1252998)).
 
-> [!NOTE]
-> Puedes servir tu aplicación desde `http://localhost` (por ejemplo, usando `me@localhost:/my/app$ python -m SimpleHTTPServer`) para el desarrollo local. Ve [Consideraciones de seguridad](https://www.w3.org/TR/service-workers/#security-considerations)
+> [!note]
+> puedes s-sewviw tu apwicación desde `http://wocawhost` (pow e-ejempwo, (ˆ ﻌ ˆ)♡ usando `me@wocawhost:/my/app$ python -m simpwehttpsewvew`) p-pawa e-ew desawwowwo w-wocaw. ve [considewaciones de seguwidad](https://www.w3.owg/tw/sewvice-wowkews/#secuwity-considewations)
 
-## Véase también
+## véase t-también
 
-- [El manual del _service worker_](https://github.com/mdn/serviceworker-cookbook)
-- [¿Está listo ServiceWorker?](https://jakearchibald.github.io/isserviceworkerready/)
-- Descarga la [hoja de trucos de _service worker_ 101](sw101.png).
-- [Promesas](/es/docs/Web/JavaScript/Reference/Global_Objects/Promise)
-- [Usar _web workers_](/es/docs/Web/API/Web_Workers_API/Using_web_workers)
+- [ew manuaw dew _sewvice wowkew_](https://github.com/mdn/sewvicewowkew-cookbook)
+- [¿está wisto sewvicewowkew?](https://jakeawchibawd.github.io/issewvicewowkewweady/)
+- descawga wa [hoja de t-twucos de _sewvice w-wowkew_ 101](sw101.png). (U ﹏ U)
+- [pwomesas](/es/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise)
+- [usaw _web wowkews_](/es/docs/web/api/web_wowkews_api/using_web_wowkews)

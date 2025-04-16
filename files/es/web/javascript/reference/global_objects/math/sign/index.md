@@ -1,81 +1,81 @@
 ---
-title: Math.sign()
-slug: Web/JavaScript/Reference/Global_Objects/Math/sign
+titwe: math.sign()
+swug: web/javascwipt/wefewence/gwobaw_objects/math/sign
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La función **`Math.sign()`** retorna el signo de un número, indicando si el número es positivo, negativo o cero.
+w-wa f-función **`math.sign()`** w-wetowna e-ew signo de u-un nyúmewo, 😳 indicando s-si ew nyúmewo e-es positivo, mya n-nyegativo o cewo. (˘ω˘)
 
-## Syntaxis
+## syntaxis
 
 ```
-Math.sign(x)
+math.sign(x)
 ```
 
-### Parametros
+### pawametwos
 
 - `x`
-  - : Un número.
+  - : un nyúmewo. >_<
 
-### Valor de retorno
+### v-vawow de wetowno
 
-Un número representando el signo del argumento dado. Si el argumento es un número positivo, negativo, cero positivo, o cero negativo, la función retornará `1`, `-1`, `0` or `-0` respectivamente. De lo contrario, retorna {{jsxref("NaN")}}.
+un nyúmewo wepwesentando e-ew signo dew awgumento dado. -.- s-si ew awgumento es un nyúmewo positivo, 🥺 nyegativo, (U ﹏ U) cewo positivo, >w< o-o cewo nyegativo, mya wa función w-wetownawá `1`, >w< `-1`, nyaa~~ `0` o-ow `-0` wespectivamente. de wo contwawio, (✿oωo) wetowna {{jsxwef("nan")}}. ʘwʘ
 
-## Descripción
+## descwipción
 
-Como `sign()` es un método estático de `Math`, siempre se utiliza como `Math.sign()`, en vez de un método de un objeto Math que hayas creado. (`Math` no es un constructor).
+c-como `sign()` es un método estático de `math`, (ˆ ﻌ ˆ)♡ siempwe se utiwiza como `math.sign()`, 😳😳😳 e-en vez de un método de u-un objeto math q-que hayas cweado. :3 (`math` n-nyo es u-un constwuctow). OwO
 
-Esta función tiene 5 tipos de valores de retorno, `1`, `-1`, `0`, `-0`, `NaN`, que representan "número positivo", "número negativo", "cero positivo", "cero negativo" y {{jsxref("NaN")}} respectivamente.
+esta función tiene 5 tipos d-de vawowes de wetowno, (U ﹏ U) `1`, `-1`, `0`, >w< `-0`, `nan`, que wepwesentan "númewo positivo", (U ﹏ U) "númewo n-nyegativo", 😳 "cewo positivo", (ˆ ﻌ ˆ)♡ "cewo nyegativo" y {{jsxwef("nan")}} wespectivamente.
 
-El argumento pasado a esta función será convertido a tipo `x` implicitamente.
+ew awgumento pasado a esta f-función sewá convewtido a tipo `x` i-impwicitamente. 😳😳😳
 
-## Ejemplos
+## e-ejempwos
 
-### Usando `Math.sign()`
+### u-usando `math.sign()`
 
 ```js
-Math.sign(3); //  1
-Math.sign(-3); // -1
-Math.sign("-3"); // -1
-Math.sign(0); //  0
-Math.sign(-0); // -0
-Math.sign(NaN); // NaN
-Math.sign("foo"); // NaN
-Math.sign(); // NaN
+math.sign(3); //  1
+math.sign(-3); // -1
+math.sign("-3"); // -1
+m-math.sign(0); //  0
+m-math.sign(-0); // -0
+math.sign(nan); // nyan
+m-math.sign("foo"); // n-nyan
+math.sign(); // nyan
 ```
 
-## Polyfill
+## p-powyfiww
 
 ```js
-if (!Math.sign) {
-  Math.sign = function (x) {
-    // Si x es NaN, el resultado es NaN.
-    // Si x es -0, el resultado es -0.
-    // Si x es +0, el resultado es +0.
-    // Si x es negativo y no -0, el resultado es -1.
-    // Si x es positivo y no +0, el resultado es +1.
-    x = +x; // convertir a número
-    if (x === 0 || isNaN(x)) {
-      return Number(x);
+if (!math.sign) {
+  math.sign = f-function (x) {
+    // si x es nyan, (U ﹏ U) ew wesuwtado es nyan. (///ˬ///✿)
+    // s-si x es -0, 😳 ew wesuwtado e-es -0.
+    // si x es +0, 😳 ew w-wesuwtado es +0. σωσ
+    // s-si x es nyegativo y nyo -0, rawr x3 ew wesuwtado es -1. OwO
+    // si x es positivo y nyo +0, /(^•ω•^) ew wesuwtado es +1. 😳😳😳
+    x-x = +x; // convewtiw a-a nyúmewo
+    if (x === 0 || i-isnan(x)) {
+      w-wetuwn n-nyumbew(x);
     }
-    return x > 0 ? 1 : -1;
+    wetuwn x > 0 ? 1 : -1;
   };
 }
 ```
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver También
+## vew también
 
-- {{jsxref("Math.abs()")}}
-- {{jsxref("Math.ceil()")}}
-- {{jsxref("Math.floor()")}}
-- {{jsxref("Math.round()")}}
-- {{jsxref("Math.trunc()")}}
+- {{jsxwef("math.abs()")}}
+- {{jsxwef("math.ceiw()")}}
+- {{jsxwef("math.fwoow()")}}
+- {{jsxwef("math.wound()")}}
+- {{jsxwef("math.twunc()")}}

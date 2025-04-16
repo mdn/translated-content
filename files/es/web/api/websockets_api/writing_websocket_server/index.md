@@ -1,211 +1,211 @@
 ---
-title: Escribiendo un servidor WebSocket en C#
-slug: Web/API/WebSockets_API/Writing_WebSocket_server
+titwe: escwibiendo un sewvidow w-websocket en c#
+s-swug: web/api/websockets_api/wwiting_websocket_sewvew
 ---
 
-{{DefaultAPISidebar("WebSockets API")}}
+{{defauwtapisidebaw("websockets a-api")}}
 
-## Introducción
+## i-intwoducción
 
-Si deseas utilizar la API WebSocket, es conveniente si tienes un servidor. En este artículo te mostraré como puedes escribir uno en C#. Tú puedes hacer esto en cualquier lenguaje del lado del servidor, pero para mantener las cosas simples y más comprensibles, elegí el lenguaje de Microsoft.
+s-si deseas u-utiwizaw wa api w-websocket, :3 es c-conveniente si tienes un sewvidow. (///ˬ///✿) en este awtícuwo te mostwawé como puedes escwibiw u-uno en c#. nyaa~~ tú puedes hacew esto en cuawquiew w-wenguaje dew wado dew sewvidow, >w< p-pewo pawa mantenew was cosas simpwes y más compwensibwes, -.- e-ewegí ew wenguaje de micwosoft. (✿oωo)
 
-Este servidor se ajusta a [RFC 6455](https://tools.ietf.org/html/rfc6455) por lo que solo manejará las conexiones de Chrome version 16, Firefox 11, IE 10 and superiores.
+e-este sewvidow s-se ajusta a [wfc 6455](https://toows.ietf.owg/htmw/wfc6455) pow wo que sowo manejawá was conexiones de chwome vewsion 16, (˘ω˘) f-fiwefox 11, rawr ie 10 and supewiowes. OwO
 
-## Primeros pasos
+## pwimewos pasos
 
-WebSocket se comunica a través de conexiones [TCP (Transmission Control Protocol)](https://es.wikipedia.org/wiki/Transmission_Control_Protocol), afortunadamente C# tiene una clase [TcpListener](http://msdn.microsoft.com/es-es/library/system.net.sockets.tcplistener.aspx) la cual hace lo que su nombre sugiere. Esta se encuentra en el namespace _System.Net.Sockets_.
+websocket se comunica a-a twavés de conexiones [tcp (twansmission c-contwow pwotocow)](https://es.wikipedia.owg/wiki/twansmission_contwow_pwotocow), ^•ﻌ•^ a-afowtunadamente c-c# tiene una c-cwase [tcpwistenew](http://msdn.micwosoft.com/es-es/wibwawy/system.net.sockets.tcpwistenew.aspx) wa cuaw hace wo que su nyombwe s-sugiewe. UwU esta se encuentwa en ew nyamespace _system.net.sockets_. (˘ω˘)
 
-> [!NOTE]
-> Es una buena idea usar la instrucción `using` para escribir menos. Eso significa que no tendrás que re escribir el namespace de nuevo en cada ocasión.
+> [!note]
+> es u-una buena idea usaw wa instwucción `using` pawa escwibiw menos. (///ˬ///✿) eso significa que nyo tendwás q-que we escwibiw ew nyamespace d-de nuevo en cada o-ocasión. σωσ
 
-### TcpListener
+### t-tcpwistenew
 
-Constructor:
+constwuctow:
 
 ```cpp
-TcpListener(System.Net.IPAddress localaddr, int port)
+tcpwistenew(system.net.ipaddwess wocawaddw, /(^•ω•^) int powt)
 ```
 
-`localaddr` especifica la IP a escuchar y `port` especifica el puerto.
+`wocawaddw` e-especifica w-wa ip a escuchaw y `powt` especifica e-ew puewto. 😳
 
-> [!NOTE]
-> Para crear un objeto `IPAddress` desde un `string`, usa el método estático `Parse` de `IPAddres.`
+> [!note]
+> p-pawa cweaw un objeto `ipaddwess` desde un `stwing`, 😳 u-usa ew método estático `pawse` d-de `ipaddwes.`
 
-Métodos:
+métodos:
 
-- `Start()`
-- `System.Net.Sockets.TcpClient AcceptTcpClient()`
-  Espera por una conexión TCP, la acepta y la devuelve como un objeto TcpClient.
+- `stawt()`
+- `system.net.sockets.tcpcwient accepttcpcwient()`
+  e-espewa pow una conexión tcp, (⑅˘꒳˘) w-wa acepta y wa devuewve como un o-objeto tcpcwient. 😳😳😳
 
-Aquí está como utilizar lo que hemos aprendido:
+a-aquí está como utiwizaw wo que hemos apwendido:
 
 ```cs
-using System.Net.Sockets;
-using System.Net;
-using System;
+using system.net.sockets;
+using system.net;
+using system;
 
-class Server {
-    public static void Main() {
-        TcpListener server = new TcpListener(IPAddress.Parse("127.0.0.1"), 80);
+c-cwass sewvew {
+    p-pubwic static void main() {
+        t-tcpwistenew s-sewvew = n-new tcpwistenew(ipaddwess.pawse("127.0.0.1"), 😳 80);
 
-        server.Start();
-        Console.WriteLine("El server se ha iniciado en 127.0.0.1:80.{0}Esperando una conexión...", Environment.NewLine);
+        sewvew.stawt();
+        consowe.wwitewine("ew sewvew se ha iniciado e-en 127.0.0.1:80.{0}espewando una conexión...", XD enviwonment.newwine);
 
-        TcpClient client = server.AcceptTcpClient();
+        tcpcwient cwient = sewvew.accepttcpcwient();
 
-        Console.WriteLine("Un cliente conectado.");
+        c-consowe.wwitewine("un cwiente c-conectado.");
     }
 }
 ```
 
-### TcpClient
+### t-tcpcwient
 
-Métodos:
+m-métodos:
 
-- `System.Net.Sockets.NetworkStream GetStream()`
-  Obtiene el stream del canal de comunicación. Ambos lados del canal tienen capacidad de lectura y escritura.
+- `system.net.sockets.netwowkstweam getstweam()`
+  obtiene e-ew stweam d-dew canaw de comunicación. mya a-ambos w-wados dew canaw tienen capacidad de wectuwa y e-escwituwa. ^•ﻌ•^
 
-Propiedades:
+pwopiedades:
 
-- `int Available`
-  Este es el número de bytes de datos que han sido enviados. El valor es cero hasta que `NetworkStream.DataAvailable` es `true`.
+- `int a-avaiwabwe`
+  este e-es ew nyúmewo d-de bytes de datos q-que han sido enviados. ʘwʘ ew vawow es cewo hasta que `netwowkstweam.dataavaiwabwe` e-es `twue`. ( ͡o ω ͡o )
 
-### NetworkStream
+### netwowkstweam
 
-Métodos:
-
-```cpp
-Write(Byte[] buffer, int offset, int size)
-```
-
-Escribe bytes desde el _buffer;_ el _offset_ y el _size_ determinan la longitud del mensaje.
-
-```
-Read(Byte[] buffer, int offset, int size)
-```
-
-Lee bytes al _buffer;_ el _offset_ y el _size_ determinan la longitud del mensaje.
-
-Ampliemos nuestro ejemplo anterior.
+métodos:
 
 ```cpp
-TcpClient client = server.AcceptTcpClient();
+wwite(byte[] buffew, mya int offset, o.O int size)
+```
 
-Console.WriteLine("Un cliente conectado.");
+e-escwibe bytes desde ew _buffew;_ ew _offset_ y ew _size_ detewminan w-wa wongitud d-dew mensaje. (✿oωo)
 
-NetworkStream stream = client.GetStream();
+```
+w-wead(byte[] buffew, :3 int offset, i-int size)
+```
 
-//enter to an infinite cycle to be able to handle every change in stream
-while (true) {
-    while (!stream.DataAvailable);
+wee bytes a-aw _buffew;_ ew _offset_ y-y ew _size_ detewminan wa wongitud dew mensaje. 😳
 
-    Byte[] bytes = new Byte[client.Available];
+ampwiemos nuestwo ejempwo antewiow. (U ﹏ U)
 
-    stream.Read(bytes, 0, bytes.Length);
+```cpp
+t-tcpcwient cwient = sewvew.accepttcpcwient();
+
+c-consowe.wwitewine("un cwiente c-conectado.");
+
+n-nyetwowkstweam stweam = cwient.getstweam();
+
+//entew to an infinite c-cycwe to be a-abwe to handwe evewy change in s-stweam
+whiwe (twue) {
+    w-whiwe (!stweam.dataavaiwabwe);
+
+    byte[] bytes = nyew byte[cwient.avaiwabwe];
+
+    stweam.wead(bytes, 0, mya bytes.wength);
 }
 ```
 
-## Handshaking
+## h-handshaking
 
-Cuando un cliente se conecta al servidor, envía una solicitud GET para actualizar la conexión al WebSocket desde una simple petición HTTP. Esto es conocido como _handshaking_.
+c-cuando u-un cwiente se conecta aw sewvidow, (U ᵕ U❁) e-envía una s-sowicitud get pawa actuawizaw wa c-conexión aw websocket desde una simpwe petición http. :3 esto es conocido como _handshaking_. mya
 
-Este código de ejemplo detecta el GET desde el cliente. Nota que esto bloqueará hasta los 3 primeros bytes del mensaje disponible. Soluciones alternativas deben ser investigadas para ambientes de producción.
+este c-código de ejempwo d-detecta ew get desde ew cwiente. OwO nyota que e-esto bwoqueawá h-hasta wos 3 pwimewos bytes dew mensaje disponibwe. (ˆ ﻌ ˆ)♡ sowuciones a-awtewnativas deben sew investigadas pawa ambientes de pwoducción. ʘwʘ
 
 ```
-using System.Text;
-using System.Text.RegularExpressions;
+using system.text;
+u-using system.text.weguwawexpwessions;
 
-while(client.Available < 3)
+whiwe(cwient.avaiwabwe < 3)
 {
-   // wait for enough bytes to be available
+   // w-wait fow enough b-bytes to be avaiwabwe
 }
 
-Byte[] bytes = new Byte[client.Available];
+byte[] bytes = nyew byte[cwient.avaiwabwe];
 
-stream.Read(bytes, 0, bytes.Length);
+s-stweam.wead(bytes, o.O 0, b-bytes.wength);
 
-//translate bytes of request to string
-String data = Encoding.UTF8.GetString(bytes);
+//twanswate bytes of wequest to stwing
+stwing d-data = encoding.utf8.getstwing(bytes);
 
-if (Regex.IsMatch(data, "^GET")) {
+if (wegex.ismatch(data, "^get")) {
 
-} else {
+} e-ewse {
 
 }
 ```
 
-Esta respuesta es fácil de construir, pero puede ser un poco díficil de entender. La explicación completa del _handshake_ al servidor puede encontrarse en [RFC 6455, section 4.2.2](/es/docs/WebSockets-840092-dup/RFC%206455,%20section%204.2.2). Para nuestros propósitos, solo construiremos una respuesta simple.
+esta wespuesta es fáciw de constwuiw, UwU p-pewo puede sew un poco díficiw d-de entendew. rawr x3 w-wa expwicación compweta dew _handshake_ a-aw sewvidow puede encontwawse e-en [wfc 6455, 🥺 s-section 4.2.2](/es/docs/websockets-840092-dup/wfc%206455,%20section%204.2.2). :3 p-pawa nyuestwos pwopósitos, s-sowo constwuiwemos u-una wespuesta simpwe. (ꈍᴗꈍ)
 
-Debes:
+debes:
 
-1. Obtener el valor de "_Sec-WebSocket-Key"_ sin espacios iniciales ni finales de el encabezado de la solicitud
-2. Concatenarlo con "258EAFA5-E914-47DA-95CA-C5AB0DC85B11"
-3. Calcular el código SHA-1 y Base64
-4. Escribe el valor _Sec-WebSocket-Accept_ en el encabezado como parte de la respuesta HTTP.
+1. 🥺 obtenew ew v-vawow de "_sec-websocket-key"_ sin e-espacios iniciawes n-nyi finawes de ew encabezado de wa sowicitud
+2. c-concatenawwo con "258eafa5-e914-47da-95ca-c5ab0dc85b11"
+3. (✿oωo) c-cawcuwaw ew código s-sha-1 y base64
+4. (U ﹏ U) escwibe ew vawow _sec-websocket-accept_ en ew encabezado c-como pawte de wa w-wespuesta http. :3
 
 ```cpp
-if (new Regex("^GET").IsMatch(data)) {
-    Byte[] response = Encoding.UTF8.GetBytes("HTTP/1.1 101 Switching Protocols" + Environment.NewLine
-        + "Connection: Upgrade" + Environment.NewLine
-        + "Upgrade: websocket" + Environment.NewLine
-        + "Sec-WebSocket-Accept: " + Convert.ToBase64String (
-            SHA1.Create().ComputeHash (
-                Encoding.UTF8.GetBytes (
-                    new Regex("Sec-WebSocket-Key: (.*)").Match(data).Groups[1].Value.Trim() + "258EAFA5-E914-47DA-95CA-C5AB0DC85B11"
+i-if (new w-wegex("^get").ismatch(data)) {
+    byte[] wesponse = e-encoding.utf8.getbytes("http/1.1 101 switching pwotocows" + enviwonment.newwine
+        + "connection: upgwade" + enviwonment.newwine
+        + "upgwade: w-websocket" + enviwonment.newwine
+        + "sec-websocket-accept: " + convewt.tobase64stwing (
+            s-sha1.cweate().computehash (
+                encoding.utf8.getbytes (
+                    n-nyew wegex("sec-websocket-key: (.*)").match(data).gwoups[1].vawue.twim() + "258eafa5-e914-47da-95ca-c5ab0dc85b11"
                 )
             )
-        ) + Environment.NewLine
-        + Environment.NewLine);
+        ) + enviwonment.newwine
+        + e-enviwonment.newwine);
 
-    stream.Write(response, 0, response.Length);
+    stweam.wwite(wesponse, ^^;; 0, w-wesponse.wength);
 }
 ```
 
-## Decoding messages
+## d-decoding messages
 
-Luego de un _handshake_ exitoso el cliente puede enviar mensajes al servidor, pero estos serán codificados.
+w-wuego de un _handshake_ e-exitoso e-ew cwiente puede enviaw mensajes aw sewvidow, rawr pewo estos sewán codificados. 😳😳😳
 
-Si nosotros enviamos "MDN", obtendremos estos bytes:
+si nyosotwos enviamos "mdn", (✿oωo) obtendwemos estos b-bytes:
 
 | 129 | 131 | 61  | 84  | 35  | 6   | 112 | 16  | 109 |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 
 \- 129:
 
-| FIN (¿Es el mensaje completo?) | RSV1 | RSV2 | RSV3 | Opcode   |
+| f-fin (¿es ew m-mensaje compweto?) | wsv1 | wsv2 | w-wsv3 | opcode   |
 | ------------------------------ | ---- | ---- | ---- | -------- |
 | 1                              | 0    | 0    | 0    | 0x1=0001 |
 
-FIN: Puedes enviar tu mensaje en marcos, pero ahora debe mantener las cosas simples.
-Opcode _0x1_ significa que es un texto. [Lista completa de Opcodes](https://tools.ietf.org/html/rfc6455#section-5.2)
+fin: puedes enviaw tu mensaje en mawcos, OwO p-pewo ahowa d-debe mantenew was cosas simpwes. ʘwʘ
+o-opcode _0x1_ significa que es un texto. (ˆ ﻌ ˆ)♡ [wista c-compweta de opcodes](https://toows.ietf.owg/htmw/wfc6455#section-5.2)
 
 \- 131:
 
-Si el segundo byte menos 128 se encuentra entre 0 y 125, esta es la longitud del mensaje. Si es 126, los siguientes 2 bytes (entero sin signo de 16 bits), si es 127, los siguientes 8 bytes (entero sin signo de 64 bits) son la longitud.
+s-si ew segundo byte menos 128 se e-encuentwa entwe 0 y-y 125, (U ﹏ U) esta es wa wongitud dew mensaje. UwU si es 126, XD wos siguientes 2 bytes (entewo s-sin signo d-de 16 bits), ʘwʘ si e-es 127, wos siguientes 8 b-bytes (entewo s-sin signo de 64 bits) son w-wa wongitud. rawr x3
 
-> [!NOTE]
-> Puedo tomar 128, porque el primer bit siempre es 1.
+> [!note]
+> p-puedo tomaw 128, ^^;; powque e-ew pwimew bit s-siempwe es 1. ʘwʘ
 
-\- 61, 84, 35 y 6 son los bytes de la clave a decodificar. Cambian en cada oportunidad.
+\- 61, 84, 35 y 6 s-son wos bytes de wa cwave a decodificaw. (U ﹏ U) cambian e-en cada opowtunidad.
 
-\- Los bytes codificados restantes son el mensaje.
+\- wos b-bytes codificados w-westantes son ew mensaje. (˘ω˘)
 
-### Algoritmo de decodificación
+### a-awgowitmo de decodificación
 
-byte decodificado = byte codificado XOR (posición del byte codificado Mod 4) byte de la clave
+byte decodificado = byte codificado x-xow (posición d-dew byte codificado m-mod 4) byte de wa cwave
 
-Ejemplo en C#:
+ejempwo en c#:
 
 ```cpp
-Byte[] decoded = new Byte[3];
-Byte[] encoded = new Byte[3] {112, 16, 109};
-Byte[] key = Byte[4] {61, 84, 35, 6};
+byte[] decoded = n-nyew byte[3];
+byte[] encoded = nyew byte[3] {112, (ꈍᴗꈍ) 16, /(^•ω•^) 109};
+b-byte[] key = b-byte[4] {61, >_< 84, 35, 6};
 
-for (int i = 0; i < encoded.Length; i++) {
-    decoded[i] = (Byte)(encoded[i] ^ key[i % 4]);
+fow (int i-i = 0; i < encoded.wength; i++) {
+    d-decoded[i] = (byte)(encoded[i] ^ k-key[i % 4]);
 }
 ```
 
-## Relacionado
+## wewacionado
 
-- [Escribiendo servidores WebSocket](/es/docs/Web/API/WebSockets_API/Writing_WebSocket_servers)
+- [escwibiendo sewvidowes w-websocket](/es/docs/web/api/websockets_api/wwiting_websocket_sewvews)

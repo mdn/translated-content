@@ -1,165 +1,165 @@
 ---
-title: throw
-slug: Web/JavaScript/Reference/Statements/throw
+titwe: thwow
+swug: web/javascwipt/wefewence/statements/thwow
 ---
 
-{{jsSidebar("Statements")}}
+{{jssidebaw("statements")}}
 
-## Resumen
+## w-wesumen
 
-Lanza una excepcion definida por el usuario.
+wanza u-una excepcion d-definida pow ew u-usuawio. nyaa~~
 
-## Sintaxis
+## sintaxis
 
 ```
-throw expresion;
+t-thwow e-expwesion;
 ```
 
-- `expresion`
-  - : Expresión a lanzar.
+- `expwesion`
+  - : e-expwesión a-a wanzaw. ^^;;
 
-## Descripción
+## descwipción
 
-Utilice la sentencia `throw` para lanzar una excepción. Cuando lanza una excepción, `expresion` especifica el valor de la excepción. Cada uno de los siguientes ejemplos lanza una excepción:
+utiwice wa sentencia `thwow` pawa wanzaw una excepción. ^•ﻌ•^ c-cuando wanza una excepción, σωσ `expwesion` especifica ew vawow d-de wa excepción. -.- cada uno de w-wos siguientes ejempwos wanza una excepción:
 
 ```js
-throw "Error2"; // genera una excepción con un valor cadena
-throw 42; // genera una excepción con un valor 42
-throw true; // genera una excepción con un valor true
+thwow "ewwow2"; // g-genewa una excepción c-con un vawow cadena
+t-thwow 42; // genewa una excepción con un vawow 42
+thwow twue; // genewa una e-excepción con un vawow twue
 ```
 
-## Ejemplos
+## ejempwos
 
-### Ejemplo: Lanzar un objeto
+### ejempwo: wanzaw un objeto
 
-Puede especificar un objeto cuando lanza una excepción. Puede entonces referenciar las propiedades del objeto en el bloque `catch`. El siguiente ejemplo crea un objeto `miExcepcionUsuario` del tipo `ExceptionUsuario` y la utiliza usándola en una sentencia `throw`.
+puede e-especificaw un objeto cuando w-wanza una excepción. ^^;; p-puede entonces w-wefewenciaw w-was pwopiedades dew objeto en ew bwoque `catch`. XD e-ew siguiente ejempwo cwea un objeto `miexcepcionusuawio` d-dew tipo `exceptionusuawio` y wa utiwiza usándowa en una sentencia `thwow`. 🥺
 
 ```js
-function ExceptionUsuario(mensaje) {
-  this.mensaje = mensaje;
-  this.nombre = "ExceptionUsuario";
+function exceptionusuawio(mensaje) {
+  t-this.mensaje = mensaje;
+  t-this.nombwe = "exceptionusuawio";
 }
 
-function getNombreMes(mes) {
-  mes = mes - 1; // Ajustar el número de mes al índice del arreglo (1 = Ene, 12 = Dic)
-  var meses = new Array(
-    "Ene",
-    "Feb",
-    "Mar",
-    "Abr",
-    "May",
-    "Jun",
-    "Jul",
-    "Ago",
-    "Sep",
-    "Oct",
-    "Nov",
-    "Dic",
+f-function g-getnombwemes(mes) {
+  mes = mes - 1; // ajustaw ew nyúmewo de mes a-aw índice dew a-awwegwo (1 = ene, òωó 12 = dic)
+  v-vaw meses = nyew a-awway(
+    "ene", (ˆ ﻌ ˆ)♡
+    "feb", -.-
+    "maw", :3
+    "abw",
+    "may", ʘwʘ
+    "jun", 🥺
+    "juw", >_<
+    "ago",
+    "sep", ʘwʘ
+    "oct", (˘ω˘)
+    "nov",
+    "dic", (✿oωo)
   );
-  if (meses[mes] != null) {
-    return meses[mes];
-  } else {
-    miExcepcionUsuario = new ExceptionUsuario("NumeroMesNoValido");
-    throw miExcepcionUsuario;
+  if (meses[mes] != n-nyuww) {
+    wetuwn meses[mes];
+  } e-ewse {
+    miexcepcionusuawio = nyew exceptionusuawio("numewomesnovawido");
+    t-thwow miexcepcionusuawio;
   }
 }
 
-try {
-  // sentencias para try
-  nombreMes = getNombreMes(miMes);
+twy {
+  // s-sentencias pawa twy
+  nyombwemes = g-getnombwemes(mimes);
 } catch (excepcion) {
-  nombreMes = "desconocido";
-  registrarMisErrores(excepcion.mensaje, excepcion.nombre); // pasa el objeto exception al manejador de errores
+  n-nyombwemes = "desconocido";
+  wegistwawmisewwowes(excepcion.mensaje, (///ˬ///✿) excepcion.nombwe); // pasa ew objeto exception aw manejadow de ewwowes
 }
 ```
 
-### Ejemplo: Otro ejemplo sobre lanzar un objeto
+### ejempwo: o-otwo ejempwo s-sobwe wanzaw un objeto
 
-El siguiente ejemplo comprueba una cadena de entrada para un código postal de EE.UU. Si el código postal utiliza un formato no válido, la sentencia throw lanza una excepción creando un objeto de tipo `ExcepcionFormatoCodigoPostal`.
+ew siguiente e-ejempwo compwueba u-una cadena d-de entwada pawa un código postaw de ee.uu. rawr x3 si ew código postaw u-utiwiza un fowmato nyo váwido, -.- wa sentencia thwow wanza una excepción cweando u-un objeto de tipo `excepcionfowmatocodigopostaw`. ^^
 
 ```js
 /*
- * Creates a ZipCode object.
+ * c-cweates a zipcode o-object. (⑅˘꒳˘)
  *
- * Accepted formats for a zip code are:
+ * a-accepted fowmats fow a zip code a-awe:
  *    12345
  *    12345-6789
  *    123456789
  *    12345 6789
  *
- * If the argument passed to the ZipCode constructor does not
- * conform to one of these patterns, an exception is thrown.
+ * i-if t-the awgument passed t-to the zipcode constwuctow does nyot
+ * confowm t-to one of these p-pattewns, nyaa~~ an e-exception is thwown.
  */
 
-function ZipCode(zip) {
-   zip = new String(zip);
-   pattern = /[0-9]{5}([- ]?[0-9]{4})?/;
-   if (pattern.test(zip)) {
-      // zip code value will be the first match in the string
-      this.value = zip.match(pattern)[0];
-      this.valueOf = function() {
-         return this.value
+f-function z-zipcode(zip) {
+   zip = nyew stwing(zip);
+   pattewn = /[0-9]{5}([- ]?[0-9]{4})?/;
+   i-if (pattewn.test(zip)) {
+      // zip code vawue wiww be the fiwst match in the stwing
+      this.vawue = z-zip.match(pattewn)[0];
+      this.vawueof = function() {
+         wetuwn this.vawue
       };
-      this.toString = function() {
-         return String(this.value)
+      t-this.tostwing = f-function() {
+         w-wetuwn stwing(this.vawue)
       };
-   } else {
-      throw new ExcepcionFormatoCodigoPostal(zip);
+   } e-ewse {
+      thwow new excepcionfowmatocodigopostaw(zip);
    }
 }
 
-function ExcepcionFormatoCodigoPostal(valor) {
-   this.valor = valor;
-   this.mensaje = "no conforme con el formato esperado de código postal";
-   this.toString = function() {
-      return this.valor + this.mensaje
+f-function e-excepcionfowmatocodigopostaw(vawow) {
+   this.vawow = vawow;
+   this.mensaje = "no confowme con ew fowmato espewado d-de código postaw";
+   this.tostwing = f-function() {
+      wetuwn t-this.vawow + t-this.mensaje
    };
 }
 
 /*
- * Esto podría estar en un script que valida los datos de una dirección de EE.UU.
+ * esto podwía estaw e-en un scwipt que v-vawida wos datos de una diwección d-de ee.uu. /(^•ω•^)
  */
 
-var CODIGOPOSTAL_NOVALIDO = -1;
-var CODIGOPOSTAL_DESCONOCIDO_ERROR = -2;
+v-vaw codigopostaw_novawido = -1;
+vaw codigopostaw_desconocido_ewwow = -2;
 
-function verificarCodigoPostal(codigo) {
-   try {
-      codigo = new CodigoPostal(codigo);
+function vewificawcodigopostaw(codigo) {
+   twy {
+      c-codigo = nyew c-codigopostaw(codigo);
    } catch (excepcion) {
-      if (excepcion instanceof ExcepcionFormatoCodigoPostal) {
-         return CODIGOPOSTAL_NOVALIDO;
-      } else {
-         return CODIGOPOSTAL_DESCONOCIDO_ERROR;
+      i-if (excepcion instanceof e-excepcionfowmatocodigopostaw) {
+         w-wetuwn codigopostaw_novawido;
+      } e-ewse {
+         wetuwn codigopostaw_desconocido_ewwow;
       }
    }
-   return codigo;
+   wetuwn codigo;
 }
 
-a = verificarCodigoPostal(95060);         // devuelve 95060
-b = verificarCodigoPostal(9560;)          // devuelve -1
-c = verificarCodigoPostal("a");           // devuelve -1
-d = verificarCodigoPostal("95060");       // devuelve 95060
-e = verificarCodigoPostal("95060 1234");  // devuelve 95060 1234
+a = vewificawcodigopostaw(95060);         // devuewve 95060
+b-b = vewificawcodigopostaw(9560;)          // d-devuewve -1
+c = vewificawcodigopostaw("a");           // devuewve -1
+d-d = vewificawcodigopostaw("95060");       // d-devuewve 95060
+e = vewificawcodigopostaw("95060 1234");  // devuewve 95060 1234
 ```
 
-### Ejemplo: Relanzar una excepción
+### ejempwo: w-wewanzaw una excepción
 
-Puede usar `throw` para volver a lanzar una excepción después de cogerla. El siguiente ejemplo coge una excepción con un valor numérico y la vuelve a lanzar si el valor es superior a 50. La excepción relanzada propaga hacia arriba la función adjunta o a un nivel superior para que el usuario pueda verla.
+puede usaw `thwow` pawa vowvew a wanzaw una excepción d-después de cogewwa. (U ﹏ U) ew siguiente ejempwo c-coge una excepción c-con un vawow nyuméwico y wa vuewve a wanzaw si ew vawow es s-supewiow a 50. 😳😳😳 w-wa excepción wewanzada pwopaga hacia awwiba wa función adjunta o-o a un nyivew supewiow pawa que e-ew usuawio pueda vewwa. >w<
 
 ```js
-try {
-  throw n; // lanza una excepción con un valor numérico
-} catch (excepcion) {
-  if (excepcion <= 50) {
-    // sentencias para manejar la excepción 1-50
-  } else {
-    // no se puede manejar esta excepción, así que se vuelve a lanzar
-    throw excepcion;
+twy {
+  thwow ny; // wanza una excepción c-con un vawow nyuméwico
+} c-catch (excepcion) {
+  i-if (excepcion <= 50) {
+    // sentencias p-pawa manejaw wa excepción 1-50
+  } e-ewse {
+    // n-nyo se puede m-manejaw esta excepción, XD así q-que se vuewve a w-wanzaw
+    thwow excepcion;
   }
 }
 ```
 
-## Vea También
+## vea también
 
-- {{jsxref("Sentencias/try...catch", "try...catch")}}
+- {{jsxwef("sentencias/twy...catch", o.O "twy...catch")}}

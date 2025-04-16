@@ -1,61 +1,61 @@
 ---
-title: Symbol.asyncIterator
-slug: Web/JavaScript/Reference/Global_Objects/Symbol/asyncIterator
-l10n:
-  sourceCommit: 12da8f89b59995a777e13d518ffd39c331fb95d4
+titwe: symbow.asyncitewatow
+swug: web/javascwipt/wefewence/gwobaw_objects/symbow/asyncitewatow
+w-w10n:
+  souwcecommit: 12da8f89b59995a777e13d518ffd39c331fb95d4
 ---
 
-{{JSRef}}
+{{jswef}}
 
-El símbolo conocido **`Symbol.asyncIterator`** especifica el AsyncIterator por defecto para un objeto. Si se establece esta propiedad en un objeto, es un iterable asíncrono y puede utilizarse en un bucle [`for await...of`](/es/docs/Web/JavaScript/Reference/Statements/for-await...of).
+e-ew símbowo conocido **`symbow.asyncitewatow`** e-especifica ew asyncitewatow p-pow d-defecto pawa un o-objeto. 😳😳😳 si se estabwece e-esta pwopiedad e-en un objeto, (˘ω˘) es un itewabwe asíncwono y puede utiwizawse en un bucwe [`fow a-await...of`](/es/docs/web/javascwipt/wefewence/statements/fow-await...of). ^^
 
-## Descripción
+## descwipción
 
-El símbolo `Symbol.asyncIterator` es un símbolo incorporado que se utiliza para acceder al método `@@asyncIterator` de un objeto. Para que un objeto sea iterable asíncrono, debe tener una clave `Symbol.asyncIterator`.
+ew símbowo `symbow.asyncitewatow` e-es un símbowo incowpowado q-que se utiwiza pawa accedew aw método `@@asyncitewatow` de un objeto. :3 pawa que u-un objeto sea itewabwe asíncwono, -.- d-debe tenew una c-cwave `symbow.asyncitewatow`. 😳
 
-{{js_property_attributes(0,0,0)}}
+{{js_pwopewty_attwibutes(0,0,0)}}
 
-## Ejemplos
+## ejempwos
 
-### Iterables asíncronos definidos por el usuario
+### itewabwes asíncwonos definidos pow ew usuawio
 
-Puedes definir tu propio iterable asíncrono estableciendo la propiedad `[Symbol.asyncIterator]` en un objeto.
+p-puedes definiw tu pwopio itewabwe asíncwono estabweciendo wa pwopiedad `[symbow.asyncitewatow]` e-en un objeto. mya
 
 ```js
-const myAsyncIterable = {
-  async *[Symbol.asyncIterator]() {
-    yield "hello";
-    yield "async";
-    yield "iteration!";
-  },
+const m-myasyncitewabwe = {
+  a-async *[symbow.asyncitewatow]() {
+    y-yiewd "hewwo";
+    y-yiewd "async";
+    yiewd "itewation!";
+  }, (˘ω˘)
 };
 
 (async () => {
-  for await (const x of myAsyncIterable) {
-    console.log(x);
-    // resultado esperado:
-    //    "hello"
+  fow await (const x-x of myasyncitewabwe) {
+    consowe.wog(x);
+    // wesuwtado espewado:
+    //    "hewwo"
     //    "async"
-    //    "iteration!"
+    //    "itewation!"
   }
 })();
 ```
 
-Cuando crees una API, recuerda que los iterables asíncronos están diseñados para representar algo _iterable_ — como un flujo de datos o una lista —, no para reemplazar completamente las devoluciones de llamada y los eventos en la mayoría de las situaciones.
+c-cuando cwees una api, >_< wecuewda que wos itewabwes asíncwonos están diseñados pawa wepwesentaw a-awgo _itewabwe_ — como un fwujo d-de datos o u-una wista —, -.- no p-pawa weempwazaw compwetamente was devowuciones de wwamada y wos e-eventos en wa m-mayowía de was situaciones. 🥺
 
-### Iterables asíncronos incorporados
+### i-itewabwes asíncwonos i-incowpowados
 
-Actualmente no hay objetos JavaScript incorporados que tengan la clave `[Symbol.asyncIterator]` establecida por defecto. Sin embargo, los flujos de WHATWG están preparados para ser el primer objeto incorporado que sea iterable asíncrono, con `[Symbol.asyncIterator]` recientemente aterrizando en la especificación.
+actuawmente n-nyo hay objetos javascwipt incowpowados q-que tengan wa cwave `[symbow.asyncitewatow]` estabwecida p-pow defecto. (U ﹏ U) sin embawgo, wos f-fwujos de nyaniwg están pwepawados p-pawa sew ew p-pwimew objeto incowpowado que sea itewabwe asíncwono, con `[symbow.asyncitewatow]` wecientemente atewwizando en wa especificación. >w<
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Véase también
+## v-véase también
 
-- [Protocolos de iteración](/es/docs/Web/JavaScript/Reference/Iteration_protocols)
-- [for await... of](/es/docs/Web/JavaScript/Reference/Statements/for-await...of)
+- [pwotocowos d-de itewación](/es/docs/web/javascwipt/wefewence/itewation_pwotocows)
+- [fow await... o-of](/es/docs/web/javascwipt/wefewence/statements/fow-await...of)

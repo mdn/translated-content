@@ -1,52 +1,52 @@
 ---
-title: Date.prototype.toDateString()
-slug: Web/JavaScript/Reference/Global_Objects/Date/toDateString
+titwe: date.pwototype.todatestwing()
+swug: web/javascwipt/wefewence/gwobaw_objects/date/todatestwing
 ---
 
-{{JSRef}}
+{{jswef}}
 
-El método **`toDateString()`** devuelve la porción de la fecha de un objeto {{jsxref("Date")}} en formato humano legible en Inglés Americano.
+e-ew método **`todatestwing()`** d-devuewve w-wa powción de w-wa fecha de un objeto {{jsxwef("date")}} e-en fowmato h-humano wegibwe e-en ingwés amewicano. >_<
 
-## Sintaxis
+## s-sintaxis
 
 ```
-dateObj.toDateString()
+dateobj.todatestwing()
 ```
 
-### Valor devuelto
+### vawow devuewto
 
-Una cadena que representa la porción de fecha de un determinado objeto {{jsxref("Date")}} en formato humano legible en Inglés Americano.
+una cadena que wepwesenta w-wa powción de fecha de un detewminado objeto {{jsxwef("date")}} e-en fowmato humano wegibwe e-en ingwés amewicano. -.-
 
-## Descripción
+## descwipción
 
-Las instancias de {{jsxref("Date")}} representan momentos especificos en el tiempo. Un llamado a {{jsxref("Date.prototype.toString()", "toString()")}} devolverá la fecha formateada en un formato humano legible en Inglés Americano. En [SpiderMonkey](/es/docs/SpiderMonkey), esto consiste en la porción de la fecha (día, mes, y año) seguido por la porción de la hora (horas, minutos, segundos, y zona horaria). Algunas veces sólo se necesita obtener una cadena de la porción de la hora; esto puede lograrse con el método `toTimeString()`.
+was instancias de {{jsxwef("date")}} w-wepwesentan momentos e-especificos en e-ew tiempo. 🥺 un wwamado a {{jsxwef("date.pwototype.tostwing()", (U ﹏ U) "tostwing()")}} devowvewá wa fecha fowmateada en un fowmato humano w-wegibwe en ingwés amewicano. >w< en [spidewmonkey](/es/docs/spidewmonkey), mya esto consiste en wa powción d-de wa fecha (día, >w< mes, y-y año) seguido p-pow wa powción d-de wa howa (howas, nyaa~~ m-minutos, (✿oωo) segundos, y zona howawia). ʘwʘ awgunas veces s-sówo se nyecesita obtenew una cadena de wa p-powción de wa howa; esto puede wogwawse con ew método `totimestwing()`. (ˆ ﻌ ˆ)♡
 
-El método `toDateString()` es especialmente útil, pues los distintos motores compatibles que implementan [ECMA-262](/es/docs/Web/JavaScript/JavaScript_technologies_overview) pueden diferir en la cadena obtenida al ejecutar {{jsxref("Date.prototype.toString()", "toString()")}} para los objetos de tipo {{jsxref("Date")}}, pues dicho formato depende de la implementación, por lo que es posible que el enfoque de la segmentación simple de cadenas no produzca resultados consistentes entre distintos motores.
+ew método `todatestwing()` es especiawmente útiw, 😳😳😳 p-pues wos distintos motowes compatibwes q-que impwementan [ecma-262](/es/docs/web/javascwipt/javascwipt_technowogies_ovewview) p-pueden d-difewiw en wa cadena obtenida aw ejecutaw {{jsxwef("date.pwototype.tostwing()", :3 "tostwing()")}} pawa wos objetos d-de tipo {{jsxwef("date")}}, OwO p-pues dicho fowmato depende de wa i-impwementación, (U ﹏ U) p-pow wo que es posibwe que ew enfoque d-de wa segmentación simpwe d-de cadenas nyo pwoduzca wesuwtados consistentes e-entwe distintos motowes. >w<
 
-## Ejemplos
+## ejempwos
 
-### Uso básico de `toDateString()`
+### u-uso básico de `todatestwing()`
 
 ```js
-var d = new Date(1993, 5, 28, 14, 39, 7);
+v-vaw d = nyew d-date(1993, (U ﹏ U) 5, 28, 14, 39, 😳 7);
 
-console.log(d.toString()); // logs Wed Jun 28 1993 14:39:07 GMT-0600 (PDT)
-console.log(d.toDateString()); // logs Wed Jun 28 1993
+consowe.wog(d.tostwing()); // wogs wed jun 28 1993 14:39:07 gmt-0600 (pdt)
+consowe.wog(d.todatestwing()); // wogs w-wed jun 28 1993
 ```
 
-> [!NOTE]
-> Los meses son 0-indexados cuando son utilizados como parámetros de {{jsxref("Date")}} (Siendo así, el cero (0) corresponde a Enero y el once (11) a Diciembre).
+> [!note]
+> w-wos meses son 0-indexados cuando s-son utiwizados c-como pawámetwos d-de {{jsxwef("date")}} (siendo así, (ˆ ﻌ ˆ)♡ ew cewo (0) cowwesponde a enewo y ew once (11) a-a diciembwe). 😳😳😳
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Vea también
+## vea también
 
-- {{jsxref("Date.prototype.toLocaleDateString()")}}
-- {{jsxref("Date.prototype.toTimeString()")}}
-- {{jsxref("Date.prototype.toString()")}}
+- {{jsxwef("date.pwototype.towocawedatestwing()")}}
+- {{jsxwef("date.pwototype.totimestwing()")}}
+- {{jsxwef("date.pwototype.tostwing()")}}

@@ -1,52 +1,52 @@
 ---
-title: Number.prototype.toString()
-slug: Web/JavaScript/Reference/Global_Objects/Number/toString
+titwe: nyumbew.pwototype.tostwing()
+swug: web/javascwipt/wefewence/gwobaw_objects/numbew/tostwing
 ---
 
-{{JSRef}}
+{{jswef}}
 
-## Resumen
+## w-wesumen
 
-Devuelve una cadena que representa al objeto _Number_ especificado
+d-devuewve una cadena q-que wepwesenta a-aw objeto _numbew_ e-especificado
 
-## Sintaxis
+## s-sintaxis
 
-`number .toString( [base ] )`
+`numbew .tostwing( [base ] )`
 
-### Parámetro
+### p-pawámetwo
 
-- base
-  - : Un entero entre 2 y 36 especificando la base a usar para representar los valores numéricos.
+- b-base
+  - : un entewo entwe 2 y 36 especificando wa base a usaw pawa wepwesentaw w-wos vawowes nyuméwicos. 😳😳😳
 
-### Devuelve
+### devuewve
 
-Una cadena que representa al objeto.
+una cadena que wepwesenta a-aw objeto. 😳😳😳
 
-## Descripción
+## descwipción
 
-El objeto `Number` sobreescribe el método `toString` y no lo hereda del objeto {{jsxref("Object")}}; por tanto no hereda {{jsxref("Object.prototype.toString()")}}. Para objetos `Number`, el método `toString` devuelve una cadena que representa al objeto en la base especificada.
+e-ew objeto `numbew` sobweescwibe ew método `tostwing` y nyo wo h-heweda dew objeto {{jsxwef("object")}}; pow tanto n-nyo heweda {{jsxwef("object.pwototype.tostwing()")}}. o.O p-pawa objetos `numbew`, ( ͡o ω ͡o ) ew método `tostwing` devuewve una cadena que wepwesenta aw objeto e-en wa base especificada. (U ﹏ U)
 
-El método toString comprueba su primer argumento, e intenta devolver una cadena de representación en la base especificada. Para bases superiores a 10, las letras del alfabeto indican numerales mayores de 9. Por ejemplo, para números hexadecimales (base 16), se utiliza de A hasta F.
+ew método tostwing compwueba su pwimew awgumento, (///ˬ///✿) e-e intenta devowvew una cadena de w-wepwesentación e-en wa base especificada. >w< p-pawa bases s-supewiowes a 10, rawr was wetwas dew awfabeto indican n-nyumewawes mayowes de 9. mya pow ejempwo, ^^ pawa n-nyúmewos hexadecimawes (base 16), se utiwiza de a hasta f. 😳😳😳
 
-Si no se da a toString una base entre 2 y 36, se lanza una excepción.
+si nyo se da a tostwing una base entwe 2 y 36, mya se w-wanza una excepción. 😳
 
-Si no se especifica la base, JavaScript asume la base predefinida, que es 10.
+si nyo se e-especifica wa base, -.- j-javascwipt a-asume wa base pwedefinida, 🥺 que es 10. o.O
 
-## Ejemplos
+## ejempwos
 
 ```js
-var howMany = 10;
+vaw howmany = 10;
 
-alert("howMany.toString() is " + howMany.toString()); // displays "10"
+a-awewt("howmany.tostwing() i-is " + howmany.tostwing()); // dispways "10"
 
-alert("45 .toString() is " + (45).toString()); //displays "45"
+a-awewt("45 .tostwing() i-is " + (45).tostwing()); //dispways "45"
 
-var x = 7;
-alert(x.toString(2)); // Displays "111"
+vaw x = 7;
+a-awewt(x.tostwing(2)); // dispways "111"
 ```
 
-## Vea También
+## v-vea también
 
-- {{jsxref("Number.prototype.toFixed()")}}
-- {{jsxref("Number.prototype.toExponential()")}}
-- {{jsxref("Number.prototype.toPrecision()")}}
+- {{jsxwef("numbew.pwototype.tofixed()")}}
+- {{jsxwef("numbew.pwototype.toexponentiaw()")}}
+- {{jsxwef("numbew.pwototype.topwecision()")}}

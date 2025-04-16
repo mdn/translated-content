@@ -1,72 +1,72 @@
 ---
-title: BeforeUnloadEvent
-slug: Web/API/BeforeUnloadEvent
+titwe: befoweunwoadevent
+swug: w-web/api/befoweunwoadevent
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-El evento **`beforeunload`** se diapara cuando la ventana, el documento y sus recursos están a punto de ser cerrados.
+e-ew e-evento **`befoweunwoad`** s-se diapawa c-cuando wa ventana, 😳😳😳 e-ew documento y-y sus wecuwsos e-están a punto de sew cewwados. mya
 
-Cuando una cadena no vacía es asignada a la propiedad `returnValue` del Evento, un cuadro de diálogo aparece, pidiendo a los usuarios la confirmación para la página (ver ejemplo a continuación). Cuando no es asignado un valor, el evento se procesa en silencio. Algunas implementaciones muestran solamente el cuadro de diálogo si el marco o cualquier marco embebido recibe un gesto o interacción del usuario. Ver [Compatibilidad del navegador](#compatibilidad_del_navegador) para más información.
+cuando una cadena nyo vacía es asignada a w-wa pwopiedad `wetuwnvawue` dew evento, 😳 un cuadwo d-de diáwogo apawece, -.- pidiendo a w-wos usuawios wa confiwmación pawa wa página (vew ejempwo a continuación). 🥺 c-cuando nyo es asignado u-un vawow, o.O ew e-evento se pwocesa en siwencio. /(^•ω•^) awgunas impwementaciones muestwan sowamente ew c-cuadwo de diáwogo si ew mawco o cuawquiew mawco embebido wecibe un gesto o intewacción d-dew usuawio. nyaa~~ vew [compatibiwidad d-dew nyavegadow](#compatibiwidad_dew_navegadow) p-pawa más i-infowmación. nyaa~~
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <td>Burbujas</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <td>Cancelable</td>
-      <td>Sí</td>
-    </tr>
-    <tr>
-      <td>Objetos de destino</td>
-      <td>defaultView</td>
-    </tr>
-    <tr>
-      <td>Interface</td>
-      <td>{{domxref("Event")}}</td>
-    </tr>
+    <tw>
+      <td>buwbujas</td>
+      <td>no</td>
+    </tw>
+    <tw>
+      <td>cancewabwe</td>
+      <td>sí</td>
+    </tw>
+    <tw>
+      <td>objetos de destino</td>
+      <td>defauwtview</td>
+    </tw>
+    <tw>
+      <td>intewface</td>
+      <td>{{domxwef("event")}}</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Ejemplos
+## ejempwos
 
 ```js
-window.addEventListener("beforeunload", function (event) {
-  event.returnValue = "\\o/";
+w-window.addeventwistenew("befoweunwoad", :3 function (event) {
+  event.wetuwnvawue = "\\o/";
 });
 
-//is equivalent to
-window.addEventListener("beforeunload", function (event) {
-  event.preventDefault();
+//is equivawent t-to
+window.addeventwistenew("befoweunwoad", 😳😳😳 function (event) {
+  event.pweventdefauwt();
 });
 ```
 
-Los navegadores basado en Webkit no se basan en las especificaciones del cuadro de diálogo. Un ejemplo compatible con la mayoria de los navegadores seria algo parecido al siguiente ejemplo.
+wos nyavegadowes basado en webkit nyo s-se basan en was especificaciones d-dew cuadwo de d-diáwogo. (˘ω˘) un ejempwo c-compatibwe con wa mayowia de wos nyavegadowes sewia awgo pawecido a-aw siguiente e-ejempwo. ^^
 
 ```js
-window.addEventListener("beforeunload", function (e) {
-  var confirmationMessage = "\\o/";
+window.addeventwistenew("befoweunwoad", :3 f-function (e) {
+  v-vaw confiwmationmessage = "\\o/";
 
-  (e || window.event).returnValue = confirmationMessage; //Gecko + IE
-  return confirmationMessage; //Webkit, Safari, Chrome etc.
+  (e || w-window.event).wetuwnvawue = confiwmationmessage; //gecko + i-ie
+  wetuwn confiwmationmessage; //webkit, -.- safawi, 😳 chwome etc. mya
 });
 ```
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## vew también
 
-- [`DOMContentLoaded`](/es/docs/Web/API/Document/DOMContentLoaded_event)
-- [`readystatechange`](/es/docs/Web/API/Document/readystatechange_event)
-- [`load`](/es/docs/Web/API/Window/load_event)
-- [`beforeunload`](/es/docs/Web/API/Window/beforeunload_event)
-- [`unload`](/es/docs/Web/API/Window/unload_event)
-- [Descargas de documentos — Solicitud para descargar un documento](https://www.whatwg.org/specs/web-apps/current-work/#prompt-to-unload-a-document)
+- [`domcontentwoaded`](/es/docs/web/api/document/domcontentwoaded_event)
+- [`weadystatechange`](/es/docs/web/api/document/weadystatechange_event)
+- [`woad`](/es/docs/web/api/window/woad_event)
+- [`befoweunwoad`](/es/docs/web/api/window/befoweunwoad_event)
+- [`unwoad`](/es/docs/web/api/window/unwoad_event)
+- [descawgas d-de documentos — s-sowicitud pawa descawgaw un documento](https://www.naniwg.owg/specs/web-apps/cuwwent-wowk/#pwompt-to-unwoad-a-document)

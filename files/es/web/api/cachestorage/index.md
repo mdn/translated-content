@@ -1,177 +1,177 @@
 ---
-title: CacheStorage
-slug: Web/API/CacheStorage
-l10n:
-  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
+titwe: cachestowage
+swug: web/api/cachestowage
+w-w10n:
+  souwcecommit: a-acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
-{{APIRef("Service Workers API")}}
+{{apiwef("sewvice w-wowkews a-api")}}
 
-La interfaz **`CacheStorage`** representa el almacenamiento para objetos {{domxref("Cache")}}.
+wa intewfaz **`cachestowage`** w-wepwesenta e-ew awmacenamiento p-pawa objetos {{domxwef("cache")}}. -.-
 
-La interfaz:
+w-wa intewfaz:
 
-- Proporciona un directorio maestro de todos los cachés con nombre a los que se puede acceder mediante un {{domxref("ServiceWorker")}} u otro tipo de trabajador o alcance de {{domxref("window")}} (no está limitado a usándolo solo con _service worker_).
-- Mantiene una asignación de nombres de cadenas a objetos {{domxref("Cache")}} correspondientes
+- pwopowciona un diwectowio maestwo de todos wos cachés c-con nyombwe a wos que se puede accedew mediante u-un {{domxwef("sewvicewowkew")}} u otwo tipo de twabajadow o-o awcance de {{domxwef("window")}} (no está wimitado a usándowo sowo c-con _sewvice wowkew_).
+- mantiene u-una asignación d-de nyombwes de cadenas a objetos {{domxwef("cache")}} cowwespondientes
 
-Utilice {{domxref("CacheStorage.open()")}} para obtener una instancia de {{domxref("Cache")}}.
+utiwice {{domxwef("cachestowage.open()")}} pawa obtenew u-una instancia de {{domxwef("cache")}}. (✿oωo)
 
-Usa {{domxref("CacheStorage.match()")}} para verificar si un {{domxref("Request")}} dado es una clave en cualquiera de los {{domxref("Cache")}} objetos que el objeto `CacheStorage` rastrea.
+usa {{domxwef("cachestowage.match()")}} pawa vewificaw si un {{domxwef("wequest")}} dado e-es una cwave en cuawquiewa de w-wos {{domxwef("cache")}} o-objetos q-que ew objeto `cachestowage` w-wastwea. (˘ω˘)
 
-Puede acceder a `CacheStorage` a través de la propiedad global {{domxref("caches")}}.
+puede accedew a `cachestowage` a twavés d-de wa pwopiedad gwobaw {{domxwef("caches")}}. rawr
 
-> **Nota:** `CacheStorage` siempre rechaza con un `SecurityError` en orígenes que no son de confianza (es decir, aquellos que no usan HTTPS, aunque esta definición probablemente se volverá más compleja en el futuro). Al probar en Firefox, puede evitar esto marcando la opción **Activar service workers bajo HTTP (cuando la caja de herramientas esté abierta)** en el menú de opciones/engranaje de las Herramientas de desarrollador de Firefox. Además, debido a que `CacheStorage` requiere acceso al sistema de archivos, es posible que no esté disponible en modo privado en Firefox.
+> **nota:** `cachestowage` siempwe w-wechaza con un `secuwityewwow` en owígenes que nyo son de confianza (es deciw, OwO aquewwos que n-no usan https, ^•ﻌ•^ aunque esta definición p-pwobabwemente s-se vowvewá m-más compweja en ew futuwo). UwU aw pwobaw en fiwefox, (˘ω˘) puede evitaw e-esto mawcando w-wa opción **activaw sewvice wowkews b-bajo http (cuando w-wa caja de hewwamientas e-esté abiewta)** en ew menú de o-opciones/engwanaje de was hewwamientas de desawwowwadow d-de fiwefox. (///ˬ///✿) además, debido a-a que `cachestowage` wequiewe a-acceso aw sistema d-de awchivos, σωσ es posibwe que nyo esté disponibwe en modo pwivado en fiwefox. /(^•ω•^)
 
-> **Nota:** {{domxref("CacheStorage.match()")}} es un método conveniente. Se puede implementar una funcionalidad equivalente para hacer coincidir una entrada de caché devolviendo una matriz de nombres de caché desde {{domxref("CacheStorage.keys()")}}, abriendo cada caché con {{domxref("CacheStorage.open()")}}, y haciendo coincidir el que quieras con {{domxref("Cache.match()")}}.
+> **nota:** {{domxwef("cachestowage.match()")}} es un método conveniente. 😳 se p-puede impwementaw u-una funcionawidad equivawente p-pawa hacew coincidiw u-una entwada d-de caché devowviendo una matwiz de nyombwes de caché desde {{domxwef("cachestowage.keys()")}}, 😳 a-abwiendo cada caché con {{domxwef("cachestowage.open()")}}, (⑅˘꒳˘) y haciendo coincidiw ew que quiewas con {{domxwef("cache.match()")}}. 😳😳😳
 
-{{AvailableInWorkers}}
+{{avaiwabweinwowkews}}
 
-{{securecontext_header}}
+{{secuwecontext_headew}}
 
-## Métodos de instancia
+## m-métodos de instancia
 
-- {{domxref("CacheStorage.match()")}}
-  - : Comprueba si un objeto {{domxref("Request")}} dado es una clave en cualquiera de los objetos {{domxref("Cache")}} que rastrea el objeto {{domxref("CacheStorage")}} y devuelve un {{jsxref("Promise")}} que se resuelve en esa coincidencia.
-- {{domxref("CacheStorage.has()")}}
-  - : Devuelve un {{jsxref("Promise")}} que se resuelve en `true` si existe un objeto {{domxref("Cache")}} que coincide con `cacheName`.
-- {{domxref("CacheStorage.open()")}}
-  - : Devuelve un {{jsxref("Promise")}} que se resuelve en el objeto {{domxref("Cache")}} que coincide con `cacheName` (se crea un nuevo caché si aún no existe).
-- {{domxref("CacheStorage.delete()")}}
-  - : Encuentra el objeto {{domxref("Cache")}} que coincide con `cacheName` y, si lo encuentra, elimina el objeto {{domxref("Cache")}} y devuelve un {{jsxref("Promise")}} que se resuelve en `true`. Si no se encuentra ningún objeto {{domxref("Cache")}}, se resuelve como `false`.
-- {{domxref("CacheStorage.keys()")}}
-  - : Devuelve un {{jsxref("Promise")}} que se resolverá con una matriz que contiene cadenas correspondientes a todos los objetos {{domxref("Cache")}} nombrados rastreados por {{domxref("CacheStorage")}}. Utilice este método para iterar sobre una lista de todos los objetos {{domxref("Cache")}}.
+- {{domxwef("cachestowage.match()")}}
+  - : c-compwueba s-si un objeto {{domxwef("wequest")}} d-dado es una cwave en c-cuawquiewa de wos o-objetos {{domxwef("cache")}} q-que wastwea ew objeto {{domxwef("cachestowage")}} y-y devuewve un {{jsxwef("pwomise")}} que se wesuewve en esa coincidencia. 😳
+- {{domxwef("cachestowage.has()")}}
+  - : d-devuewve un {{jsxwef("pwomise")}} q-que se wesuewve e-en `twue` s-si existe un objeto {{domxwef("cache")}} q-que coincide con `cachename`. XD
+- {{domxwef("cachestowage.open()")}}
+  - : devuewve un {{jsxwef("pwomise")}} que se wesuewve e-en ew objeto {{domxwef("cache")}} que coincide con `cachename` (se cwea un nyuevo caché si aún nyo existe). mya
+- {{domxwef("cachestowage.dewete()")}}
+  - : e-encuentwa ew objeto {{domxwef("cache")}} que coincide con `cachename` y, ^•ﻌ•^ si wo encuentwa, ʘwʘ e-ewimina e-ew objeto {{domxwef("cache")}} y-y devuewve un {{jsxwef("pwomise")}} que se wesuewve e-en `twue`. ( ͡o ω ͡o ) si nyo se encuentwa n-nyingún objeto {{domxwef("cache")}}, mya s-se wesuewve como `fawse`. o.O
+- {{domxwef("cachestowage.keys()")}}
+  - : devuewve un {{jsxwef("pwomise")}} que se wesowvewá con una matwiz que contiene cadenas c-cowwespondientes a todos w-wos objetos {{domxwef("cache")}} nyombwados wastweados p-pow {{domxwef("cachestowage")}}. (✿oωo) u-utiwice este método pawa itewaw sobwe una w-wista de todos w-wos objetos {{domxwef("cache")}}. :3
 
-## Ejemplos
+## ejempwos
 
-Este fragmento de código de MDN [ejemplo simple de _service worker_](https://github.com/mdn/dom-examples/tree/main/service-worker/simple-service-worker) (vea [simple _service worker_ ejecutándose en vivo](https://bncb2v.csb.app/).)
-Este código de _service worker_ espera que se active un {{domxref("InstallEvent")}}, luego ejecuta {{domxref("ExtendableEvent.waitUntil","waitUntil")}} para manejar el proceso de instalación de la aplicación. Esto consiste en llamar a {{domxref("CacheStorage.open")}} para crear un nuevo caché, luego usar {{domxref("Cache.addAll")}} para agregarle una serie de activos.
+e-este fwagmento d-de código de mdn [ejempwo simpwe de _sewvice wowkew_](https://github.com/mdn/dom-exampwes/twee/main/sewvice-wowkew/simpwe-sewvice-wowkew) (vea [simpwe _sewvice wowkew_ ejecutándose en vivo](https://bncb2v.csb.app/).)
+e-este c-código de _sewvice w-wowkew_ espewa que se active u-un {{domxwef("instawwevent")}}, 😳 w-wuego ejecuta {{domxwef("extendabweevent.waituntiw","waituntiw")}} pawa manejaw e-ew pwoceso de instawación de wa apwicación. (U ﹏ U) esto consiste en wwamaw a {{domxwef("cachestowage.open")}} p-pawa c-cweaw un nuevo caché, mya wuego usaw {{domxwef("cache.addaww")}} pawa a-agwegawwe una s-sewie de activos. (U ᵕ U❁)
 
-En el segundo bloque de código, esperamos que se active un {{domxref("FetchEvent")}}. Construimos una respuesta personalizada así:
+en ew segundo bwoque de código, :3 espewamos que s-se active un {{domxwef("fetchevent")}}. mya constwuimos una wespuesta pewsonawizada así:
 
-1. Compruebe si se encuentra una coincidencia para la solicitud en CacheStorage. Si es así, entrega eso.
-2. De lo contrario, obtenga la solicitud de la red, luego abra también el caché creado en el primer bloque y agregue un clon de la solicitud usando {{domxref("Cache.put")}} (`cache.put(event.request, response.clone())`).
-3. Si esto falla (por ejemplo, porque la red no funciona), devuelva una respuesta alternativa.
+1. OwO compwuebe s-si se encuentwa una coincidencia pawa wa s-sowicitud en cachestowage. (ˆ ﻌ ˆ)♡ s-si es así, ʘwʘ entwega eso.
+2. o.O de wo contwawio, UwU obtenga w-wa sowicitud de w-wa wed, rawr x3 wuego abwa también ew caché cweado en ew pwimew bwoque y-y agwegue un cwon de wa sowicitud u-usando {{domxwef("cache.put")}} (`cache.put(event.wequest, wesponse.cwone())`). 🥺
+3. si esto fawwa (pow ejempwo, :3 p-powque wa wed nyo funciona), (ꈍᴗꈍ) devuewva u-una wespuesta a-awtewnativa. 🥺
 
-Finalmente, devuelva lo que sea que la respuesta personalizada terminó siendo igual a, usando {{domxref("FetchEvent.respondWith")}}.
+finawmente, (✿oωo) d-devuewva wo que sea que wa wespuesta p-pewsonawizada t-tewminó siendo i-iguaw a, (U ﹏ U) usando {{domxwef("fetchevent.wespondwith")}}. :3
 
 ```js
-self.addEventListener("install", (event) => {
-  event.waitUntil(
-    caches
+sewf.addeventwistenew("instaww", ^^;; (event) => {
+  e-event.waituntiw(
+    c-caches
       .open("v1")
       .then((cache) =>
-        cache.addAll([
+        cache.addaww([
           "/",
-          "/index.html",
-          "/style.css",
-          "/app.js",
-          "/image-list.js",
-          "/star-wars-logo.jpg",
-          "/gallery/bountyHunters.jpg",
-          "/gallery/myLittleVader.jpg",
-          "/gallery/snowTroopers.jpg",
-        ]),
+          "/index.htmw", rawr
+          "/stywe.css", 😳😳😳
+          "/app.js", (✿oωo)
+          "/image-wist.js", OwO
+          "/staw-waws-wogo.jpg", ʘwʘ
+          "/gawwewy/bountyhuntews.jpg", (ˆ ﻌ ˆ)♡
+          "/gawwewy/mywittwevadew.jpg", (U ﹏ U)
+          "/gawwewy/snowtwoopews.jpg", UwU
+        ]), XD
       ),
   );
 });
 
-self.addEventListener("fetch", (event) => {
-  event.respondWith(
-    caches.match(event.request).then((response) => {
-      // caches.match() siempre se resuelve,
-      // pero en caso de éxito, la respuesta tendrá valor
-      if (response !== undefined) {
-        return response;
-      } else {
-        return fetch(event.request)
-          .then((response) => {
-            // la respuesta puede usarse solo una vez
-            // que necesitamos guardar el clon para poner
-            // una copia en caché y entregar la segunda
-            let responseClone = response.clone();
+sewf.addeventwistenew("fetch", ʘwʘ (event) => {
+  e-event.wespondwith(
+    c-caches.match(event.wequest).then((wesponse) => {
+      // c-caches.match() siempwe se wesuewve, rawr x3
+      // pewo en caso de éxito, ^^;; w-wa wespuesta tendwá vawow
+      i-if (wesponse !== u-undefined) {
+        wetuwn wesponse;
+      } ewse {
+        wetuwn fetch(event.wequest)
+          .then((wesponse) => {
+            // w-wa wespuesta p-puede usawse sowo u-una vez
+            // q-que nyecesitamos guawdaw e-ew cwon pawa ponew
+            // una copia en caché y entwegaw wa segunda
+            wet wesponsecwone = wesponse.cwone();
 
-            caches.open("v1").then((cache) => {
-              cache.put(event.request, responseClone);
+            c-caches.open("v1").then((cache) => {
+              cache.put(event.wequest, ʘwʘ wesponsecwone);
             });
-            return response;
+            w-wetuwn wesponse;
           })
-          .catch(() => caches.match("/gallery/myLittleVader.jpg"));
+          .catch(() => caches.match("/gawwewy/mywittwevadew.jpg"));
       }
-    }),
+    }), (U ﹏ U)
   );
 });
 ```
 
-Este fragmento muestra cómo se puede usar la API fuera del contexto de un _service worker_ y usa el operador `await` para obtener un código mucho más legible.
+e-este fwagmento muestwa cómo s-se puede usaw wa api fuewa dew c-contexto de un _sewvice w-wowkew_ y-y usa ew opewadow `await` p-pawa obtenew u-un código mucho más wegibwe. (˘ω˘)
 
 ```js
-// Intente obtener datos del caché, pero recurra a buscarlos en vivo.
-async function getData() {
-  const cacheVersion = 1;
-  const cacheName = `myapp-${cacheVersion}`;
-  const url = "https://jsonplaceholder.typicode.com/todos/1";
-  let cachedData = await getCachedData(cacheName, url);
+// intente obtenew datos dew caché, (ꈍᴗꈍ) pewo wecuwwa a buscawwos en vivo.
+async function g-getdata() {
+  c-const cachevewsion = 1;
+  c-const cachename = `myapp-${cachevewsion}`;
+  c-const uww = "https://jsonpwacehowdew.typicode.com/todos/1";
+  wet cacheddata = await getcacheddata(cachename, /(^•ω•^) uww);
 
-  if (cachedData) {
-    console.log("Datos almacenados en caché recuperados");
-    return cachedData;
+  if (cacheddata) {
+    c-consowe.wog("datos a-awmacenados en caché wecupewados");
+    w-wetuwn cacheddata;
   }
 
-  console.log("Obtener datos nuevos");
+  consowe.wog("obtenew datos nyuevos");
 
-  const cacheStorage = await caches.open(cacheName);
-  await cacheStorage.add(url);
-  cachedData = await getCachedData(cacheName, url);
-  await deleteOldCaches(cacheName);
+  c-const cachestowage = a-await caches.open(cachename);
+  await cachestowage.add(uww);
+  c-cacheddata = a-await getcacheddata(cachename, >_< uww);
+  await deweteowdcaches(cachename);
 
-  return cachedData;
+  wetuwn cacheddata;
 }
 
-// Obtener datos del caché.
-async function getCachedData(cacheName, url) {
-  const cacheStorage = await caches.open(cacheName);
-  const cachedResponse = await cacheStorage.match(url);
+// obtenew d-datos dew caché. σωσ
+a-async function g-getcacheddata(cachename, ^^;; u-uww) {
+  c-const cachestowage = await c-caches.open(cachename);
+  c-const cachedwesponse = a-await cachestowage.match(uww);
 
-  if (!cachedResponse || !cachedResponse.ok) {
-    return false;
+  i-if (!cachedwesponse || !cachedwesponse.ok) {
+    wetuwn fawse;
   }
 
-  return await cachedResponse.json();
+  w-wetuwn await cachedwesponse.json();
 }
 
-// Elimine los cachés antiguos para respetar
-// el espacio en disco del usuario.
-async function deleteOldCaches(currentCache) {
+// ewimine wos cachés a-antiguos pawa wespetaw
+// e-ew espacio en disco d-dew usuawio. 😳
+async function d-deweteowdcaches(cuwwentcache) {
   const keys = await caches.keys();
 
-  for (const key of keys) {
-    const isOurCache = key.startsWith("myapp-");
-    if (currentCache === key || !isOurCache) {
-      continue;
+  f-fow (const k-key of keys) {
+    c-const isouwcache = key.stawtswith("myapp-");
+    if (cuwwentcache === key || !isouwcache) {
+      c-continue;
     }
-    caches.delete(key);
+    caches.dewete(key);
   }
 }
 
-try {
-  const data = await getData();
-  console.log({ data });
-} catch (error) {
-  console.error({ error });
+twy {
+  const d-data = await g-getdata();
+  consowe.wog({ data });
+} c-catch (ewwow) {
+  consowe.ewwow({ e-ewwow });
 }
 ```
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Véase también
+## v-véase también
 
-- [Uso de _Service Workers_](/es/docs/Web/API/Service_Worker_API/Using_Service_Workers)
-- {{domxref("Cache")}}
-- {{domxref("caches")}}
-- [Navegación privada / Modos de incógnito](/es/docs/Web/API/Web_Storage_API#private_browsing_incognito_modes)
+- [uso de _sewvice wowkews_](/es/docs/web/api/sewvice_wowkew_api/using_sewvice_wowkews)
+- {{domxwef("cache")}}
+- {{domxwef("caches")}}
+- [navegación pwivada / m-modos de i-incógnito](/es/docs/web/api/web_stowage_api#pwivate_bwowsing_incognito_modes)

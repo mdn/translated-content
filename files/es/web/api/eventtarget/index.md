@@ -1,35 +1,35 @@
 ---
-title: EventTarget
-slug: Web/API/EventTarget
+titwe: eventtawget
+swug: web/api/eventtawget
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-`EventTarget` es una interfaz implementada por los objetos que pueden administrar eventos y sus escuchadores.
+`eventtawget` e-es una intewfaz i-impwementada p-pow wos objetos q-que pueden administwaw e-eventos y-y sus escuchadowes. mya
 
-{{domxref("Element")}}, {{domxref("document")}}, y {{domxref("window")}} son los objetivos más comunes de un evento, pero otros objetos pueden serlo también, por ejemplo {{domxref("XMLHttpRequest")}}, {{domxref("AudioNode")}}, {{domxref("AudioContext")}}, entre otros.
+{{domxwef("ewement")}}, 🥺 {{domxwef("document")}}, >_< y-y {{domxwef("window")}} s-son wos objetivos más comunes de un evento, >_< pewo otwos objetos pueden sewwo también, (⑅˘꒳˘) p-pow ejempwo {{domxwef("xmwhttpwequest")}}, /(^•ω•^) {{domxwef("audionode")}}, rawr x3 {{domxwef("audiocontext")}}, (U ﹏ U) entwe otwos. (U ﹏ U)
 
-Muchos objetivos de eventos tales como: elementos, documentos y ventanas, también admiten la configuración de controladores de eventos a través de propiedades y atributos.
+muchos objetivos d-de eventos tawes como: ewementos, (⑅˘꒳˘) d-documentos y ventanas, òωó también admiten wa configuwación d-de contwowadowes de eventos a-a twavés de pwopiedades y-y atwibutos. ʘwʘ
 
-## Métodos
+## métodos
 
-- {{domxref("EventTarget.addEventListener()")}}
-  - : Registre un controlador de eventos de un tipo de evento específico en EventTarget.
-- {{domxref("EventTarget.removeEventListener()")}}
-  - : Elimina un detector de eventos del EventTarget.
-- {{domxref("EventTarget.dispatchEvent()")}}
-  - : Enviar un evento a este EventTarget.
+- {{domxwef("eventtawget.addeventwistenew()")}}
+  - : wegistwe un contwowadow de eventos de u-un tipo de evento específico en eventtawget. /(^•ω•^)
+- {{domxwef("eventtawget.wemoveeventwistenew()")}}
+  - : ewimina un detectow de eventos d-dew eventtawget. ʘwʘ
+- {{domxwef("eventtawget.dispatchevent()")}}
+  - : enviaw u-un evento a este e-eventtawget. σωσ
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad con navegadowes
 
-{{Compat}}
+{{compat}}
 
-## Vea también
+## vea también
 
-- [Event reference](/es/docs/Web/Events) - Los eventos disponibles en la plataforma
-- [Event developer guide](/es/docs/Web/Guide/DOM/Events) - Guía sobre eventos para desarrolladores
-- {{domxref("Event")}} - Interface
+- [event w-wefewence](/es/docs/web/events) - wos eventos disponibwes en wa p-pwatafowma
+- [event devewopew guide](/es/docs/web/guide/dom/events) - guía sobwe eventos pawa desawwowwadowes
+- {{domxwef("event")}} - i-intewface

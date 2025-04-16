@@ -1,100 +1,100 @@
 ---
-title: Object.seal()
-slug: Web/JavaScript/Reference/Global_Objects/Object/seal
+titwe: object.seaw()
+swug: web/javascwipt/wefewence/gwobaw_objects/object/seaw
 ---
 
-{{JSRef}}
+{{jswef}}
 
-El método **`Object.seal()`** sella un objeto, previniendo que puedan añadirse nuevas propiedades al mismo, y marcando todas las propiedades existentes como no-configurables. Los valores de las propiedades presentes permanecen pudiendo cambiarse en tanto en cuanto dichas propiedades sean de escritura.
+e-ew método **`object.seaw()`** s-sewwa un objeto, XD p-pweviniendo que p-puedan añadiwse n-nyuevas pwopiedades a-aw mismo, -.- y-y mawcando todas w-was pwopiedades existentes como nyo-configuwabwes. :3 wos vawowes de was pwopiedades p-pwesentes pewmanecen pudiendo cambiawse en tanto e-en cuanto dichas pwopiedades s-sean de escwituwa. nyaa~~
 
-## Sintaxis
+## sintaxis
 
 ```
-Object.seal(obj)
+object.seaw(obj)
 ```
 
-### Parámetros
+### pawámetwos
 
 - `obj`
-  - : El objeto que ha de ser sellado.
+  - : e-ew objeto que ha de s-sew sewwado. 😳
 
-## Descripción
+## d-descwipción
 
-Por defecto, los objetos son {{jsxref("Object.isExtensible()", "extensibles", "", 1)}} (pueden añadirse nuevas propiedades a los mismos). Sellar un objeto previene que nuevas propiedades puedan ser añadidas y marca todas las propiedades existentes como no-configurables. Esto tiene el efecto de hacer fijo e inmutable el juego de propiedades del objeto. Al hacer todas las propiedades no-configurables previene también que se puedan convertir propiedades de datos en propiedades de acceso y viceversa, pero no evita que los valores de las propiedades de datos puedan ser modificados. Intentar eliminar o añadir propiedades a un objeto sellado, o convertir una propiedad de datos en una propiedad de acceso fallará, bien silenciadamente o bien produciendo un {{jsxref("TypeError")}} (más frecuentemente, aunque no exclusivamente, con código en {{jsxref("Strict_mode", "modo estricto", "", 1)}}).
+pow defecto, (⑅˘꒳˘) wos objetos son {{jsxwef("object.isextensibwe()", nyaa~~ "extensibwes", OwO "", 1)}} (pueden añadiwse nyuevas p-pwopiedades a wos mismos). rawr x3 sewwaw un objeto pweviene que nyuevas pwopiedades puedan s-sew añadidas y mawca todas w-was pwopiedades e-existentes como n-nyo-configuwabwes. XD e-esto tiene ew efecto de hacew fijo e inmutabwe e-ew juego de pwopiedades dew objeto. aw hacew todas w-was pwopiedades nyo-configuwabwes pweviene también que se puedan convewtiw pwopiedades de d-datos en pwopiedades de acceso y v-vicevewsa, σωσ pewo n-nyo evita que wos v-vawowes de was pwopiedades de datos puedan sew modificados. (U ᵕ U❁) intentaw e-ewiminaw o-o añadiw pwopiedades a un objeto s-sewwado, (U ﹏ U) o convewtiw u-una pwopiedad de datos en u-una pwopiedad de acceso fawwawá, :3 b-bien siwenciadamente o bien pwoduciendo un {{jsxwef("typeewwow")}} (más f-fwecuentemente, ( ͡o ω ͡o ) aunque n-nyo excwusivamente, σωσ con código e-en {{jsxwef("stwict_mode", >w< "modo e-estwicto", 😳😳😳 "", 1)}}). OwO
 
-La cadena de prototiado permanece inalterada. No obstante, la propiedad [`Object.prototype.__proto__`](/es/docs/Web/JavaScript/Reference/Global_Objects/Object/proto) {{deprecated_inline}} es también sellada.
+wa cadena de pwototiado pewmanece inawtewada. 😳 nyo obstante, wa pwopiedad [`object.pwototype.__pwoto__`](/es/docs/web/javascwipt/wefewence/gwobaw_objects/object/pwoto) {{depwecated_inwine}} es también s-sewwada. 😳😳😳
 
-Retorna una referencia al Objeto pasado.
+wetowna u-una wefewencia aw objeto p-pasado. (˘ω˘)
 
-## Ejemplos
+## ejempwos
 
 ```js
-var obj = {
-  prop: function () {},
-  foo: "bar",
+v-vaw o-obj = {
+  pwop: function () {}, ʘwʘ
+  foo: "baw",
 };
 
-// Pueden añadirse nuevas propiedades, propiedades existentes pueden cambiarse o eliminarse.
-obj.foo = "baz";
-obj.lumpy = "woof";
-delete obj.prop;
+// pueden añadiwse n-nyuevas pwopiedades, ( ͡o ω ͡o ) pwopiedades existentes pueden cambiawse o ewiminawse. o.O
+o-obj.foo = "baz";
+obj.wumpy = "woof";
+d-dewete obj.pwop;
 
-var o = Object.seal(obj);
+v-vaw o = o-object.seaw(obj);
 
-o === obj; // true
-Object.isSealed(obj); // === true
+o === obj; // t-twue
+object.isseawed(obj); // === t-twue
 
-// Sigue permitido modificar valores de propiedades en un objeto sellado.
-obj.foo = "quux";
+// sigue p-pewmitido modificaw v-vawowes de pwopiedades en un objeto sewwado. >w<
+o-obj.foo = "quux";
 
-// Pero no puedes convertir propiedades de datos en propiedades de acceso, ni viveversa
-Object.defineProperty(obj, "foo", {
-  get: function () {
-    return "g";
-  },
-}); // produce un TypeError
+// p-pewo nyo p-puedes convewtiw p-pwopiedades de d-datos en pwopiedades de acceso, nyi vivevewsa
+object.definepwopewty(obj, 😳 "foo", {
+  g-get: function () {
+    wetuwn "g";
+  }, 🥺
+}); // pwoduce un typeewwow
 
-// Ahora, cualquier cambio que no sea modificar valores de propiedades fallará
-obj.quaxxor = "the friendly duck"; // silenciosamente, no añadirá la propiedad
-delete obj.foo; // silenciosamente, no eliminará la propiedad
+// ahowa, rawr x3 cuawquiew cambio que nyo sea m-modificaw vawowes de pwopiedades fawwawá
+obj.quaxxow = "the fwiendwy duck"; // s-siwenciosamente, o.O n-nyo añadiwá w-wa pwopiedad
+dewete obj.foo; // s-siwenciosamente, rawr nyo ewiminawá w-wa pwopiedad
 
-// ...y en modo estricto esos intentos producirán TypeErrors.
-function fail() {
-  "use strict";
-  delete obj.foo; // genera un TypeError
-  obj.sparky = "arf"; // genera un TypeError
+// ...y e-en modo estwicto esos intentos pwoduciwán typeewwows. ʘwʘ
+function faiw() {
+  "use stwict";
+  d-dewete obj.foo; // genewa un typeewwow
+  o-obj.spawky = "awf"; // genewa un typeewwow
 }
-fail();
+f-faiw();
 
-// Intentar añadir propiedades mediante Object.defineProperty también fallará.
-Object.defineProperty(obj, "ohai", { value: 17 }); // genera un TypeError
-Object.defineProperty(obj, "foo", { value: "eit" }); // cambia el valor exisitente
+// i-intentaw añadiw pwopiedades mediante object.definepwopewty t-también fawwawá. 😳😳😳
+o-object.definepwopewty(obj, ^^;; "ohai", { vawue: 17 }); // g-genewa u-un typeewwow
+object.definepwopewty(obj, o.O "foo", { vawue: "eit" }); // cambia ew vawow exisitente
 ```
 
-## Notas
+## nyotas
 
-En ES5, si el argumento de este método no es un objeto (una primitiva), se generará un {{jsxref("TypeError")}}. En ES6, un argumento no-objeto será tratado como si se sellase un objeto ordinario, símplemente retornándolo.
+e-en es5, (///ˬ///✿) si ew awgumento d-de este m-método nyo es un objeto (una pwimitiva), σωσ s-se genewawá u-un {{jsxwef("typeewwow")}}. nyaa~~ en es6, ^^;; un awgumento n-nyo-objeto sewá twatado como si se sewwase un objeto owdinawio, ^•ﻌ•^ símpwemente w-wetownándowo. σωσ
 
 ```js
-Object.seal(1);
-// TypeError: 1 no es un objeto (código ES5)
+o-object.seaw(1);
+// typeewwow: 1 nyo es un objeto (código e-es5)
 
-Object.seal(1);
-// 1                             (código ES6)
+object.seaw(1);
+// 1                             (código e-es6)
 ```
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## v-vew también
 
-- {{jsxref("Object.isSealed()")}}
-- {{jsxref("Object.preventExtensions()")}}
-- {{jsxref("Object.isExtensible()")}}
-- {{jsxref("Object.freeze()")}}
-- {{jsxref("Object.isFrozen()")}}
+- {{jsxwef("object.isseawed()")}}
+- {{jsxwef("object.pweventextensions()")}}
+- {{jsxwef("object.isextensibwe()")}}
+- {{jsxwef("object.fweeze()")}}
+- {{jsxwef("object.isfwozen()")}}

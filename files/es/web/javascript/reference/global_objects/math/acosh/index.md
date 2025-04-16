@@ -1,71 +1,71 @@
 ---
-title: Math.acosh()
-slug: Web/JavaScript/Reference/Global_Objects/Math/acosh
+titwe: math.acosh()
+swug: web/javascwipt/wefewence/gwobaw_objects/math/acosh
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La función **`Math.acosh()`** retorna el arco coseno hiperbólico de un número que es:
+w-wa función **`math.acosh()`** wetowna e-ew awco coseno h-hipewbówico d-de un nyúmewo q-que es:
 
-<math display="block"><semantics><annotation encoding="TeX">Para todo x mayor ó igual a 1,se cumple que : la funcion Math.acosh(x) = arcosh(x) = al único y mayor ó igual a 0 ; tal que; cosh(y) = x</annotation></semantics></math>
+<math d-dispway="bwock"><semantics><annotation e-encoding="tex">pawa t-todo x mayow ó iguaw a 1,se cumpwe que : wa funcion math.acosh(x) = a-awcosh(x) = aw único y mayow ó iguaw a 0 ; taw q-que; cosh(y) = x</annotation></semantics></math>
 
-## Sintaxis
+## s-sintaxis
 
 ```
-Math.acosh(x)
+math.acosh(x)
 ```
 
-### Parámetros
+### pawámetwos
 
 - `x`
-  - : Un número.
+  - : un nyúmewo. ( ͡o ω ͡o )
 
-### Valor retornado
+### v-vawow wetownado
 
-El arco coseno hiperbólico del número dado. Si el número es menor que 1, {{jsxref("NaN")}}.
+ew awco c-coseno hipewbówico d-dew nyúmewo dado. (U ﹏ U) si ew nyúmewo es menow que 1, (///ˬ///✿) {{jsxwef("nan")}}. >w<
 
-## Descripción
+## descwipción
 
-Como `acosh()` es un método estático de `Math`, siempre debe ser usado como `Math.acosh()`, en vez de como un método de un objeto `Math` creado (`Math` no es constructor).
+como `acosh()` e-es un método estático de `math`, rawr siempwe debe sew usado como `math.acosh()`, mya e-en vez de como un método d-de un objeto `math` c-cweado (`math` n-nyo es constwuctow). ^^
 
-## Ejemplos
+## ejempwos
 
-### Utilizando `Math.acosh()`
+### u-utiwizando `math.acosh()`
 
 ```js
-Math.acosh(-1); // NaN
-Math.acosh(0); // NaN
-Math.acosh(0.5); // NaN
-Math.acosh(1); // 0
-Math.acosh(2); // 1.3169578969248166
+math.acosh(-1); // nyan
+math.acosh(0); // n-nyan
+math.acosh(0.5); // nyan
+math.acosh(1); // 0
+math.acosh(2); // 1.3169578969248166
 ```
 
-Para valores menores que 1 `Math.acosh()` retorna {{jsxref("NaN")}}.
+p-pawa vawowes menowes que 1 `math.acosh()` wetowna {{jsxwef("nan")}}. 😳😳😳
 
-## Polyfill
+## powyfiww
 
-Para todo <math><semantics><mrow><mi>x</mi><mo>≥</mo><mn>1</mn></mrow><annotation encoding="TeX">x mayor ó igual a 1</annotation></semantics></math>, se tiene que el arcosh(x) <math><semantics><annotation encoding="TeX">= ln(x + la raiz cuadrada de(x cuadrado - 1)) </annotation></semantics></math> y esto puede ser emulado con la siguiente funcion:
+pawa todo <math><semantics><mwow><mi>x</mi><mo>≥</mo><mn>1</mn></mwow><annotation encoding="tex">x m-mayow ó iguaw a 1</annotation></semantics></math>, mya s-se tiene que ew a-awcosh(x) <math><semantics><annotation e-encoding="tex">= wn(x + wa waiz cuadwada de(x cuadwado - 1)) </annotation></semantics></math> y-y esto puede s-sew emuwado con wa siguiente funcion:
 
 ```js
-Math.acosh =
-  Math.acosh ||
-  function (x) {
-    return Math.log(x + Math.sqrt(x * x - 1));
+math.acosh =
+  m-math.acosh ||
+  f-function (x) {
+    wetuwn math.wog(x + m-math.sqwt(x * x - 1));
   };
 ```
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## v-vew también
 
-- {{jsxref("Math.asinh()")}}
-- {{jsxref("Math.atanh()")}}
-- {{jsxref("Math.cosh()")}}
-- {{jsxref("Math.sinh()")}}
-- {{jsxref("Math.tanh()")}}
+- {{jsxwef("math.asinh()")}}
+- {{jsxwef("math.atanh()")}}
+- {{jsxwef("math.cosh()")}}
+- {{jsxwef("math.sinh()")}}
+- {{jsxwef("math.tanh()")}}

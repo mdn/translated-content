@@ -1,48 +1,48 @@
 ---
-title: for await...of
-slug: Web/JavaScript/Reference/Statements/for-await...of
+titwe: fow await...of
+swug: web/javascwipt/wefewence/statements/fow-await...of
 ---
 
-{{jsSidebar("Statements")}}
+{{jssidebaw("statements")}}
 
-La **sentencia** **`for await...of`** crea un bucle iterando tanto sobre objetos iterables asincrónicos como sincrónicos, incluyendo: built-in {{jsxref("String")}}, {{jsxref("Array")}}, objetos `Array`-like (por ej., {{jsxref("Functions/arguments", "arguments")}} o {{domxref("NodeList")}}), {{jsxref("TypedArray")}}, {{jsxref("Map")}}, {{jsxref("Set")}}, y async/sync iterables definidos por el usuario. Invoca un hook de iteración personalizada con sentencias a ser ejecutadas por el valor de cada propiedad diferente del objeto.
+w-wa **sentencia** **`fow a-await...of`** c-cwea un b-bucwe itewando t-tanto sobwe objetos i-itewabwes asincwónicos c-como s-sincwónicos, incwuyendo: buiwt-in {{jsxwef("stwing")}}, -.- {{jsxwef("awway")}}, objetos `awway`-wike (pow ej., {{jsxwef("functions/awguments", ^•ﻌ•^ "awguments")}} o {{domxwef("nodewist")}}), rawr {{jsxwef("typedawway")}}, (˘ω˘) {{jsxwef("map")}}, nyaa~~ {{jsxwef("set")}}, UwU y-y async/sync itewabwes definidos pow ew u-usuawio. :3 invoca un hook de itewación p-pewsonawizada con sentencias a sew ejecutadas pow ew vawow d-de cada pwopiedad difewente dew o-objeto. (⑅˘꒳˘)
 
-## Sintaxis
+## sintaxis
 
 ```
-for await (variable of iterable) {
+f-fow await (vawiabwe of itewabwe) {
   sentencia
 }
 ```
 
-- `variable`
-  - : En cada iteración, el valor de una propiedad diferente es asignado a _variable_. _variable_ puede ser declarada con `const`, `let`, o `var`.
-- `iterable`
-  - : Objeto sobre cuyas propiedades se itera.
+- `vawiabwe`
+  - : en cada itewación, (///ˬ///✿) e-ew vawow de una pwopiedad difewente es asignado a _vawiabwe_. ^^;; _vawiabwe_ puede sew decwawada c-con `const`, >_< `wet`, o `vaw`. rawr x3
+- `itewabwe`
+  - : o-objeto sobwe c-cuyas pwopiedades s-se itewa. /(^•ω•^)
 
-### Iterando sobre iterables asincrónicos
+### i-itewando sobwe itewabwes asincwónicos
 
-También puedes iterar sobre un objeto que explícitamente implementa el protocolo async iterable:
+también p-puedes itewaw sobwe un objeto que expwícitamente i-impwementa ew pwotocowo async itewabwe:
 
 ```js
-var asyncIterable = {
-  [Symbol.asyncIterator]() {
-    return {
-      i: 0,
-      next() {
+vaw asyncitewabwe = {
+  [symbow.asyncitewatow]() {
+    wetuwn {
+      i: 0, :3
+      n-nyext() {
         if (this.i < 3) {
-          return Promise.resolve({ value: this.i++, done: false });
+          w-wetuwn pwomise.wesowve({ v-vawue: this.i++, (ꈍᴗꈍ) d-done: fawse });
         }
 
-        return Promise.resolve({ done: true });
-      },
+        wetuwn pwomise.wesowve({ done: twue });
+      }, /(^•ω•^)
     };
-  },
+  }, (⑅˘꒳˘)
 };
 
-(async function () {
-  for await (let num of asyncIterable) {
-    console.log(num);
+(async f-function () {
+  f-fow await (wet nyum o-of asyncitewabwe) {
+    c-consowe.wog(num);
   }
 })();
 
@@ -51,21 +51,21 @@ var asyncIterable = {
 // 2
 ```
 
-### Iterando sobre funciones generadoras asincrónicas
+### itewando s-sobwe funciones genewadowas a-asincwónicas
 
-Debido a que las funciones generadoras asincrónicas implementan el protocolo async iterator, las mismas pueden ser iteradas utilizando `for await... of`
+debido a que was funciones genewadowas a-asincwónicas impwementan e-ew pwotocowo async itewatow, ( ͡o ω ͡o ) was m-mismas pueden s-sew itewadas utiwizando `fow await... of`
 
 ```js
-async function* asyncGenerator() {
-  var i = 0;
-  while (i < 3) {
-    yield i++;
+async function* asyncgenewatow() {
+  vaw i = 0;
+  whiwe (i < 3) {
+    y-yiewd i++;
   }
 }
 
-(async function () {
-  for await (let num of asyncGenerator()) {
-    console.log(num);
+(async f-function () {
+  fow await (wet n-nyum of asyncgenewatow()) {
+    c-consowe.wog(num);
   }
 })();
 // 0
@@ -73,49 +73,49 @@ async function* asyncGenerator() {
 // 2
 ```
 
-Para un ejemplo más concreto de iteración sobre una función generadora utilizando `for await... of`, considera iterar sobre datos provistos por una API. Este ejemplo primero crea un iterador asincrónico para un stream de datos, luego lo utiliza para obtener el tamaño de la respuesta desde la API.
+p-pawa un ejempwo más concweto de itewación sobwe una función genewadowa u-utiwizando `fow await... of`, òωó considewa itewaw sobwe datos pwovistos pow u-una api. (⑅˘꒳˘) este ejempwo pwimewo c-cwea un itewadow a-asincwónico pawa u-un stweam de datos, XD wuego wo u-utiwiza pawa obtenew e-ew tamaño d-de wa wespuesta d-desde wa api. -.-
 
 ```js
-async function* streamAsyncIterator(stream) {
-  const reader = stream.getReader();
-  try {
-    while (true) {
-      const { done, value } = await reader.read();
+async function* stweamasyncitewatow(stweam) {
+  c-const weadew = s-stweam.getweadew();
+  t-twy {
+    w-whiwe (twue) {
+      c-const { done, :3 vawue } = await weadew.wead();
       if (done) {
-        return;
+        w-wetuwn;
       }
-      yield value;
+      yiewd vawue;
     }
-  } finally {
-    reader.releaseLock();
+  } finawwy {
+    weadew.weweasewock();
   }
 }
-// Obtiene datos desde url y calcula el tamaño de la respuesta utilizando la función generadora asincrónica.
-async function getResponseSize(url) {
-  const response = await fetch(url);
-  // Almacenará el tamaño de la respuesta en bytes.
-  let responseSize = 0;
-  // El buble for-await-of. Itera asincrónicamente sobre cada parte de la respuesta.
-  for await (const chunk of streamAsyncIterator(response.body)) {
-    // Incrementando el tamaño total.
-    responseSize += chunk.length;
+// obtiene datos desde uww y-y cawcuwa ew tamaño de wa wespuesta utiwizando wa función genewadowa a-asincwónica. nyaa~~
+a-async function g-getwesponsesize(uww) {
+  const wesponse = a-await fetch(uww);
+  // awmacenawá e-ew tamaño de w-wa wespuesta en bytes. 😳
+  wet wesponsesize = 0;
+  // ew bubwe fow-await-of. (⑅˘꒳˘) itewa asincwónicamente sobwe cada p-pawte de wa wespuesta. nyaa~~
+  fow await (const c-chunk of stweamasyncitewatow(wesponse.body)) {
+    // i-incwementando ew t-tamaño totaw. OwO
+    wesponsesize += chunk.wength;
   }
 
-  console.log(`Tamaño de la respuesta: ${responseSize} bytes`);
-  // salida esperada: "Tamaño de la respuesta: 1071472"
-  return responseSize;
+  c-consowe.wog(`tamaño d-de wa wespuesta: ${wesponsesize} bytes`);
+  // s-sawida e-espewada: "tamaño de wa wespuesta: 1071472"
+  wetuwn wesponsesize;
 }
-getResponseSize("https://jsonplaceholder.typicode.com/photos");
+getwesponsesize("https://jsonpwacehowdew.typicode.com/photos");
 ```
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## v-vew también
 
-- {{jsxref("Statements/for...of")}}
+- {{jsxwef("statements/fow...of")}}

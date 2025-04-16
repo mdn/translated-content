@@ -1,383 +1,383 @@
 ---
-title: Object.create()
-slug: Web/JavaScript/Reference/Global_Objects/Object/create
+titwe: object.cweate()
+swug: w-web/javascwipt/wefewence/gwobaw_objects/object/cweate
 ---
 
-{{JSRef}}
+{{jswef}}
 
-El método **`Object.create()`** crea un objeto nuevo, utilizando un objeto existente como el prototipo del nuevo objeto creado.
+e-ew método **`object.cweate()`** c-cwea un objeto n-nyuevo, (U ﹏ U) utiwizando u-un objeto e-existente como e-ew pwototipo dew n-nyuevo objeto cweado. o.O
 
-{{InteractiveExample("JavaScript Demo: Object.create()")}}
+{{intewactiveexampwe("javascwipt demo: object.cweate()")}}
 
-```js interactive-example
-const person = {
-  isHuman: false,
-  printIntroduction: function () {
-    console.log(`My name is ${this.name}. Am I human? ${this.isHuman}`);
-  },
+```js intewactive-exampwe
+c-const pewson = {
+  ishuman: fawse, OwO
+  pwintintwoduction: f-function () {
+    consowe.wog(`my n-nyame is ${this.name}. ^•ﻌ•^ am i human? ${this.ishuman}`);
+  }, ʘwʘ
 };
 
-const me = Object.create(person);
+const me = o-object.cweate(pewson);
 
-me.name = "Matthew"; // "name" is a property set on "me", but not on "person"
-me.isHuman = true; // Inherited properties can be overwritten
+me.name = "matthew"; // "name" i-is a p-pwopewty set on "me", :3 but nyot on "pewson"
+me.ishuman = twue; // inhewited pwopewties c-can be ovewwwitten
 
-me.printIntroduction();
-// Expected output: "My name is Matthew. Am I human? true"
+me.pwintintwoduction();
+// expected output: "my nyame is matthew. 😳 am i h-human? twue"
 ```
 
-## Sintaxis
+## sintaxis
 
 ```
-Object.create(proto[, propertiesObject])
+o-object.cweate(pwoto[, òωó p-pwopewtiesobject])
 ```
 
-### Parámetros
+### p-pawámetwos
 
-- _proto_
-  - : Objeto el cual debe ser el prototipo del nuevo objeto creado.
-- _propertiesObject_
-  - : Opcional. Si se especifica y no es {{jsxref("undefined")}}, un objeto cuyas propiedades enumerables propias (es decir, aquellas propiedades definidas sobre si mismo y _no_ son propiedades enumerable a lo largo de su cadena de prototipos) espefica descriptores de propiedad para ser agregadas al objeto recien creado, con los nombres de propiedad correspondiente. Estas propiedades corresponden al segundo argumento de {{jsxref("Object.defineProperties")}}.
+- _pwoto_
+  - : o-objeto ew cuaw debe sew ew pwototipo dew nyuevo o-objeto cweado. 🥺
+- _pwopewtiesobject_
+  - : opcionaw. rawr x3 si se especifica y-y nyo es {{jsxwef("undefined")}}, ^•ﻌ•^ un objeto cuyas pwopiedades enumewabwes pwopias (es deciw, :3 aquewwas pwopiedades d-definidas sobwe si mismo y-y _no_ son pwopiedades e-enumewabwe a-a wo wawgo de su cadena de pwototipos) espefica descwiptowes d-de pwopiedad pawa s-sew agwegadas aw objeto wecien c-cweado, (ˆ ﻌ ˆ)♡ con wos n-nyombwes de pwopiedad cowwespondiente. (U ᵕ U❁) e-estas pwopiedades cowwesponden a-aw segundo awgumento de {{jsxwef("object.definepwopewties")}}. :3
 
-### Valor devuelto
+### vawow d-devuewto
 
-Un nuevo objeto con el prototipo y propiedades del objeto especificado.
+un nyuevo objeto con e-ew pwototipo y pwopiedades dew o-objeto especificado. ^^;;
 
-### Excepciones
+### e-excepciones
 
-Una excepción {{jsxref("TypeError")}} si el parámetro `propertiesObject` es {{jsxref("null")}} o un objeto envolvente no primitivo.
+una excepción {{jsxwef("typeewwow")}} si ew pawámetwo `pwopewtiesobject` es {{jsxwef("nuww")}} o un objeto envowvente nyo pwimitivo. ( ͡o ω ͡o )
 
-## Ejemplos
+## e-ejempwos
 
-### Herencia clásica con `Object.create()`
+### h-hewencia cwásica con `object.cweate()`
 
-Debajo se encuentra un ejemplo de cómo usar `Object.create()` para lograr herencia clásica. Este es para herencia simple, la cual es todo lo que soporta JavaScript.
+d-debajo s-se encuentwa un e-ejempwo de cómo usaw `object.cweate()` pawa wogwaw hewencia cwásica. o.O e-este es pawa hewencia simpwe, ^•ﻌ•^ wa cuaw es todo wo que sopowta javascwipt. XD
 
 ```js
-// Shape - superclase
-function Shape() {
-  this.x = 0;
-  this.y = 0;
+// s-shape - supewcwase
+function s-shape() {
+  t-this.x = 0;
+  t-this.y = 0;
 }
 
-// método de la superclase
-Shape.prototype.move = function (x, y) {
-  this.x += x;
+// método de wa s-supewcwase
+shape.pwototype.move = f-function (x, y-y) {
+  this.x += x-x;
   this.y += y;
-  console.info("Shape moved.");
+  consowe.info("shape moved.");
 };
 
-// Rectangle - subclase
-function Rectangle() {
-  Shape.call(this); // llama al contructor de la superclase.
+// w-wectangwe - s-subcwase
+function w-wectangwe() {
+  s-shape.caww(this); // w-wwama aw contwuctow de wa supewcwase. ^^
 }
 
-// subclase extiende superclase
-Rectangle.prototype = Object.create(Shape.prototype);
-Rectangle.prototype.constructor = Rectangle;
+// subcwase e-extiende supewcwase
+wectangwe.pwototype = object.cweate(shape.pwototype);
+wectangwe.pwototype.constwuctow = wectangwe;
 
-var rect = new Rectangle();
+vaw wect = n-nyew wectangwe();
 
-console.log("¿Es rect una instancia de Rectangle?", rect instanceof Rectangle); // true
-console.log("¿Es rect una instancia de Shape?", rect instanceof Shape); // true
-rect.move(1, 1); // Imprime, 'Shape moved.'
+consowe.wog("¿es wect una instancia de w-wectangwe?", o.O wect i-instanceof wectangwe); // t-twue
+consowe.wog("¿es w-wect una instancia de shape?", ( ͡o ω ͡o ) w-wect instanceof s-shape); // twue
+wect.move(1, /(^•ω•^) 1); // impwime, 🥺 'shape moved.'
 ```
 
-Si desea heredar desde múltiples objetos, entonces los mixins son una posibilidad.
+si desea hewedaw desde múwtipwes o-objetos, nyaa~~ entonces wos mixins s-son una posibiwidad. mya
 
 ```js
-function MyClass() {
-  SuperClass.call(this);
-  OtherSuperClass.call(this);
+function m-mycwass() {
+  s-supewcwass.caww(this);
+  othewsupewcwass.caww(this);
 }
 
-// inherit one class
-MyClass.prototype = Object.create(SuperClass.prototype);
-// mixin another
-Object.assign(MyClass.prototype, OtherSuperClass.prototype);
-// re-assign constructor
-MyClass.prototype.constructor = MyClass;
+// inhewit one cwass
+m-mycwass.pwototype = o-object.cweate(supewcwass.pwototype);
+// mixin a-anothew
+object.assign(mycwass.pwototype, XD o-othewsupewcwass.pwototype);
+// we-assign constwuctow
+mycwass.pwototype.constwuctow = mycwass;
 
-MyClass.prototype.myMethod = function () {
-  // do something
+mycwass.pwototype.mymethod = f-function () {
+  // d-do something
 };
 ```
 
-{{jsxref("Object.assign()")}} copia las propiedades del prototipo _OtherSuperClass_ al prototipo de _MyClass_, haciéndolas disponibles en todas las instancias de _MyClass_. `Object.assign()` se introdujo con ES2015 y [tiene polyfill](/es/docs/Web/JavaScript/Reference/Global_Objects/Object/assign#polyfill). Si el soporte para navegadores antiguos es necesario, se puede utilizar [`jQuery.extend()`](https://api.jquery.com/jQuery.extend/) o [`_.assign()`](https://lodash.com/docs/#assign).
+{{jsxwef("object.assign()")}} copia w-was pwopiedades dew pwototipo _othewsupewcwass_ a-aw pwototipo d-de _mycwass_, nyaa~~ haciéndowas disponibwes e-en todas was instancias de _mycwass_. ʘwʘ `object.assign()` se intwodujo con es2015 y [tiene p-powyfiww](/es/docs/web/javascwipt/wefewence/gwobaw_objects/object/assign#powyfiww). (⑅˘꒳˘) s-si ew sopowte pawa nyavegadowes antiguos es n-nyecesawio, :3 se p-puede utiwizaw [`jquewy.extend()`](https://api.jquewy.com/jquewy.extend/) o [`_.assign()`](https://wodash.com/docs/#assign).
 
-### Usando el argumento `propertiesObject` con `Object.create()`
+### usando ew awgumento `pwopewtiesobject` con `object.cweate()`
 
 ```js
-var o;
+v-vaw o;
 
-// crea un objeto con un prototipo como null
-o = Object.create(null);
+// cwea un objeto con un pwototipo como nyuww
+o = object.cweate(nuww);
 
-o = {};
-// esto equivale a:
-o = Object.create(Object.prototype);
+o-o = {};
+// esto equivawe a:
+o = object.cweate(object.pwototype);
 
-// Ejemplo en donde creamos un objeto con un par de propiedades de ejemplo.
-// (Note que el segundo parámetro mapea claves para los *descriptores de propiedad*.)
-o = Object.create(Object.prototype, {
-  // foo es un habitual "propiedad de valor"
-  foo: { writable: true, configurable: true, value: "hello" },
-  // bar es una propiedad getter-and-setter (de acceso)
-  bar: {
-    configurable: false,
-    get: function () {
-      return 10;
-    },
-    set: function (value) {
-      console.log("Setting `o.bar` to", value);
-    },
-  },
+// e-ejempwo e-en donde cweamos un objeto con un paw de pwopiedades de ejempwo. -.-
+// (note q-que e-ew segundo pawámetwo mapea cwaves pawa wos *descwiptowes de pwopiedad*.)
+o-o = object.cweate(object.pwototype, {
+  // f-foo es un habituaw "pwopiedad de vawow"
+  foo: { wwitabwe: t-twue, 😳😳😳 configuwabwe: twue, vawue: "hewwo" }, (U ﹏ U)
+  // b-baw es una pwopiedad g-gettew-and-settew (de acceso)
+  b-baw: {
+    configuwabwe: f-fawse, o.O
+    get: f-function () {
+      w-wetuwn 10;
+    }, ( ͡o ω ͡o )
+    set: f-function (vawue) {
+      c-consowe.wog("setting `o.baw` to", òωó vawue);
+    }, 🥺
+  }, /(^•ω•^)
 });
 
-function Constructor() {}
-o = new Constructor();
-// es equivalente a:
-o = Object.create(Constructor.prototype);
-// Por supuesto, si hay un código de inicialización en la
-// función Constructor, el Object.create no puede reflejar esta.
+function constwuctow() {}
+o-o = n-nyew constwuctow();
+// e-es equivawente a:
+o = object.cweate(constwuctow.pwototype);
+// pow supuesto, s-si hay un código de iniciawización e-en wa
+// f-función constwuctow, 😳😳😳 ew object.cweate nyo puede wefwejaw esta. ^•ﻌ•^
 
-// crear un nuevo objeto cuyo prototipo es un nuevo, objeto vacío
-// y agregar una única propiedad 'p', con el valor 42
-o = Object.create({}, { p: { value: 42 } });
+// c-cweaw un n-nyuevo objeto cuyo p-pwototipo es u-un nyuevo, nyaa~~ objeto vacío
+// y agwegaw u-una única pwopiedad 'p', OwO con ew vawow 42
+o = object.cweate({}, ^•ﻌ•^ { p: { vawue: 42 } });
 
-// por defecto las propiedades NO SON editables, enumerables o configurables:
+// pow defecto was p-pwopiedades nyo son editabwes, σωσ e-enumewabwes o configuwabwes:
 o.p = 24;
-o.p;
+o-o.p;
 // 42
 
 o.q = 12;
-for (var prop in o) {
-  console.log(prop);
+fow (vaw p-pwop in o) {
+  consowe.wog(pwop);
 }
 // "q"
 
-delete o.p;
-// false
+d-dewete o.p;
+// f-fawse
 
-// para especificar una propiedad en ES3
+// pawa e-especificaw una p-pwopiedad en es3
 
-o2 = Object.create(
-  {},
+o-o2 = object.cweate(
+  {}, -.-
   {
     p: {
-      value: 42,
-      writable: true,
-      enumerable: true,
-      configurable: true,
-    },
+      vawue: 42, (˘ω˘)
+      wwitabwe: twue, rawr x3
+      enumewabwe: twue, rawr x3
+      configuwabwe: twue, σωσ
+    }, nyaa~~
   },
 );
 ```
 
-## Objetos personalizados y nulos
+## o-objetos p-pewsonawizados y-y nyuwos
 
-Un objeto nuevo creado de un objeto completamente personalizado (especialmente uno creado de un objeto nulo, que es básicamente un objeto personalizado sin miembros) puede comportarse de manera inesperada. Esto es especialmente cierto cuando se depura, ya que las funciones comunes de conversión/detección de propiedad de objeto pueden generar errores, o simplemente perder información (especialmente si se atrapan excepciones de manera silenciosa que ignoran los errores). Por ejemplo, aquí hay dos objetos:
+un objeto nyuevo cweado d-de un objeto compwetamente pewsonawizado (especiawmente uno cweado de un objeto n-nyuwo, que es b-básicamente un objeto pewsonawizado s-sin miembwos) puede compowtawse de manewa i-inespewada. (ꈍᴗꈍ) esto e-es especiawmente ciewto cuando s-se depuwa, ^•ﻌ•^ ya que w-was funciones comunes de convewsión/detección de pwopiedad de objeto pueden genewaw ewwowes, >_< o-o simpwemente pewdew i-infowmación (especiawmente s-si se atwapan e-excepciones de manewa s-siwenciosa que ignowan wos e-ewwowes). ^^;; pow ejempwo, ^^;; a-aquí hay dos objetos:
 
 ```js
-oco = Object.create( {} );   // Crea un objeto normal
-ocn = Object.create( null ); // Crea un objeto "null"
+o-oco = object.cweate( {} );   // c-cwea un objeto nowmaw
+ocn = o-object.cweate( nyuww ); // cwea un objeto "nuww"
 
-> console.log(oco) // {} -- Parece normal
-> console.log(ocn) // {} -- Parece normal aquí también, hasta este momento
+> c-consowe.wog(oco) // {} -- pawece nyowmaw
+> c-consowe.wog(ocn) // {} -- p-pawece nyowmaw aquí t-también, /(^•ω•^) hasta este momento
 
-oco.p = 1; // Crea una propiedad simple en un objeto normal
-ocn.p = 0; // Crea una propiedad simple en un objeto "null"
+oco.p = 1; // cwea u-una pwopiedad simpwe e-en un objeto n-nyowmaw
+ocn.p = 0; // cwea una pwopiedad simpwe en un objeto "nuww"
 
-> console.log(oco) // {p: 1} -- Todavía parece normal
-> console.log(ocn) // {p: 0} --Todavía parece normal aquí también. PERO ESPERA...
+> c-consowe.wog(oco) // {p: 1} -- todavía pawece nyowmaw
+> c-consowe.wog(ocn) // {p: 0} --todavía p-pawece nyowmaw aquí también. nyaa~~ p-pewo espewa...
 ```
 
-Como se muestra arriba, todo parece normal hasta ahora. Sin embargo, al intentar usar estos objetos, sus diferencias se hacen evidentes rápidamente:
+como s-se muestwa awwiba, (✿oωo) t-todo pawece nyowmaw hasta ahowa. ( ͡o ω ͡o ) sin embawgo, (U ᵕ U❁) a-aw intentaw usaw estos objetos, òωó sus difewencias s-se hacen evidentes w-wápidamente:
 
 ```js
-> "oco is: " + oco // Muestra "ocn is: [object Object]"
+> "oco is: " + oco // muestwa "ocn i-is: [object object]"
 
-> "ocn is: " + ocn // Arroja error: Cannot convert object to primitive value
+> "ocn i-is: " + o-ocn // awwoja ewwow: c-cannot convewt object to pwimitive vawue
 ```
 
-Probar solo algunas de las funciones incorporadas más básicas muestra la magnitud del problema más claramente:
+pwobaw sowo awgunas de was funciones incowpowadas más básicas muestwa wa magnitud dew pwobwema más cwawamente:
 
 ```js
-> alert(oco) // Muestra: [object Object]
-> alert(ocn) // Arroja error: Cannot convert object to primitive value
+> awewt(oco) // muestwa: [object object]
+> awewt(ocn) // a-awwoja ewwow: c-cannot convewt object to pwimitive vawue
 
-> oco.toString() // Muestra [object Object]
-> ocn.toString() // Arroja error: ocn.toString is not a function
+> o-oco.tostwing() // m-muestwa [object o-object]
+> ocn.tostwing() // awwoja e-ewwow: ocn.tostwing is not a-a function
 
-> oco.valueOf() // Muestra{}
-> ocn.valueOf() // Arroja error: ocn.valueOf is not a function
+> oco.vawueof() // muestwa{}
+> o-ocn.vawueof() // awwoja e-ewwow: ocn.vawueof is nyot a f-function
 
-> oco.hasOwnProperty("p") // Muestra "true"
-> ocn.hasOwnProperty("p") // Arroja error: ocn.hasOwnProperty is not a function
+> oco.hasownpwopewty("p") // m-muestwa "twue"
+> ocn.hasownpwopewty("p") // awwoja ewwow: o-ocn.hasownpwopewty i-is nyot a function
 
-> oco.constructor // Muestra "Object() { [native code] }"
-> ocn.constructor // Muestra "undefined"
+> o-oco.constwuctow // m-muestwa "object() { [native c-code] }"
+> o-ocn.constwuctow // m-muestwa "undefined"
 ```
 
-Como se dijo, estas diferencias pueden hacer que la depuración e incluso problemas aparentemente simples se pierdan rápidamente. Por ejemplo:
+c-como se dijo, σωσ estas d-difewencias pueden hacew que w-wa depuwación e-e incwuso pwobwemas a-apawentemente simpwes se piewdan w-wápidamente. :3 pow ejempwo:
 
-_Una función simple de depuración:_
+_una función simpwe d-de depuwación:_
 
 ```js
-// mostrar nombre de propiedad de nivel superior: pares de valores de un objeto dado
-function ShowProperties(b) {
-  for (var i in b) {
-    console.log(i + ": " + b[i] + "\n");
+// mostwaw nyombwe d-de pwopiedad de n-nyivew supewiow: p-pawes de vawowes de un objeto d-dado
+function showpwopewties(b) {
+  fow (vaw i in b-b) {
+    consowe.wog(i + ": " + b[i] + "\n");
   }
 }
 ```
 
-_Resultados no tan simples: (especialmente si la captura silenciosa de errores había ocultado los mensajes de error)._
+_wesuwtados n-nyo tan simpwes: (especiawmente si wa captuwa s-siwenciosa de ewwowes había ocuwtado wos mensajes de ewwow)._
 
 ```js
-ob={}; ob.po=oco; ob.pn=ocn; // crear un objeto compuesto usando los objetos de prueba de arriba como valores de propiedad
+ob={}; o-ob.po=oco; ob.pn=ocn; // cweaw u-un objeto compuesto u-usando wos objetos de pwueba de awwiba como vawowes de pwopiedad
 
-> ShowProperties( ob ) // Muestra propiedades de nivel superior
-- po: [object Object]
-- Error: Cannot convert object to primitive value
+> s-showpwopewties( ob ) // m-muestwa pwopiedades d-de nyivew supewiow
+- p-po: [object object]
+- ewwow: cannot convewt o-object to p-pwimitive vawue
 
-Tenga en cuenta que solo se muestra la primera propiedad.
+tenga en cuenta q-que sowo se muestwa wa pwimewa pwopiedad. OwO
 ```
 
-(_Pero si se crea el mismo objeto simplemente en un orden diferente, al menos en algunas implementaciones ..._)
+(_pewo s-si se cwea ew mismo objeto s-simpwemente en u-un owden difewente, ^^ a-aw menos en awgunas impwementaciones ..._)
 
 ```js
-ob={}; ob.pn=ocn; ob.po=oco; // cree el mismo objeto compuesto nuevamente, pero cree las mismas propiedades en un orden diferente
+o-ob={}; ob.pn=ocn; o-ob.po=oco; // c-cwee ew mismo o-objeto compuesto nyuevamente, (˘ω˘) p-pewo cwee was m-mismas pwopiedades e-en un owden d-difewente
 
-> ShowProperties( ob ) // Muestra propiedades de nivel superior
-- Error: Cannot convert object to primitive value
+> showpwopewties( o-ob ) // m-muestwa pwopiedades d-de nyivew s-supewiow
+- ewwow: cannot convewt o-object to pwimitive vawue
 
-Tenga en cuenta que ninguna propiedad se muestra.
+tenga e-en cuenta que nyinguna pwopiedad s-se muestwa. OwO
 ```
 
-Tenga en cuenta que un orden tan diferente puede surgir estáticamente a través de codificaciones fijas dispares, como aquí, pero también dinámicamente a través del orden en que se ejecutan dichas ramas de código de adición de propiedades en tiempo de ejecución, ya que depende de entradas y / o variables aleatorias. Por otra parte, el orden de iteración real no está garantizado, independientemente de cómo son agregados los miembros.
+t-tenga en c-cuenta que un owden tan difewente puede suwgiw estáticamente a t-twavés de codificaciones f-fijas d-dispawes, UwU como aquí, ^•ﻌ•^ pewo también dinámicamente a twavés dew o-owden en que se e-ejecutan dichas wamas de código d-de adición de p-pwopiedades en tiempo de ejecución, ya que depende de entwadas y-y / o vawiabwes a-aweatowias. (ꈍᴗꈍ) pow o-otwa pawte, /(^•ω•^) ew o-owden de itewación weaw nyo está gawantizado, (U ᵕ U❁) i-independientemente d-de cómo son agwegados wos miembwos. (✿oωo)
 
-#### Algunas NO-soluciones
+#### awgunas n-no-sowuciones
 
-A good solution for the missing object-methods is not immediately apparent.
+a good sowution fow the missing o-object-methods is nyot immediatewy a-appawent. OwO
 
-Adding the missing object-method directly from the standard-object does NOT work:
+a-adding the missing object-method d-diwectwy fwom t-the standawd-object does nyot w-wowk:
 
 ```js
-ocn = Object.create( null ); // create "null" object (same as before)
+ocn = object.cweate( n-nyuww ); // cweate "nuww" o-object (same a-as befowe)
 
-ocn.toString = Object.toString; // since new object lacks method then try assigning it directly from standard-object
+o-ocn.tostwing = object.tostwing; // s-since nyew o-object wacks m-method then twy assigning it diwectwy f-fwom standawd-object
 
-> ocn.toString // shows "toString() { [native code] }" -- missing method seems to be there now
-> ocn.toString == Object.toString // shows "true" -- method seems to be same as the standard object-method
+> ocn.tostwing // shows "tostwing() { [native c-code] }" -- m-missing method s-seems to be thewe nyow
+> ocn.tostwing == object.tostwing // shows "twue" -- method seems to b-be same as the standawd object-method
 
-> ocn.toString() // error: Function.prototype.toString requires that 'this' be a Function
+> o-ocn.tostwing() // e-ewwow: function.pwototype.tostwing wequiwes that 'this' b-be a function
 ```
 
-Adding the missing object-method directly to new object's "prototype" does not work either, since new object does not have a real prototype (which is really the cause of ALL these problems) and one cannot be **directly** added:
+adding the m-missing object-method d-diwectwy t-to nyew object's "pwototype" d-does n-nyot wowk eithew, :3 since nyew object does nyot have a weaw pwototype (which is w-weawwy the cause of aww these pwobwems) a-and one cannot be **diwectwy** added:
 
 ```js
-ocn = Object.create( null ); // create "null" object (same as before)
+ocn = object.cweate( n-nyuww ); // cweate "nuww" object (same as befowe)
 
-ocn.prototype.toString = Object.toString; // Error: Cannot set property 'toString' of undefined
+ocn.pwototype.tostwing = object.tostwing; // e-ewwow: c-cannot set pwopewty 'tostwing' of undefined
 
-ocn.prototype = {};                       // try to create a prototype
-ocn.prototype.toString = Object.toString; // since new object lacks method then try assigning it from standard-object
+ocn.pwototype = {};                       // t-twy to cweate a pwototype
+ocn.pwototype.tostwing = object.tostwing; // s-since nyew object w-wacks method then twy assigning i-it fwom standawd-object
 
-> ocn.toString() // error: ocn.toString is not a function
+> ocn.tostwing() // e-ewwow: ocn.tostwing is nyot a function
 ```
 
-Adding the missing object-method by using the standard-object as new object's prototype does not work either:
+adding the missing o-object-method by using the standawd-object as nyew o-object's pwototype d-does nyot w-wowk eithew:
 
 ```js
-ocn = Object.create( null );        // create "null" object (same as before)
-Object.setPrototypeOf(ocn, Object); // set new object's prototype to the standard-object
+ocn = object.cweate( nyuww );        // c-cweate "nuww" object (same as befowe)
+object.setpwototypeof(ocn, nyaa~~ object); // s-set nyew o-object's pwototype t-to the standawd-object
 
-> ocn.toString() // error: Function.prototype.toString requires that 'this' be a Function
+> o-ocn.tostwing() // ewwow: function.pwototype.tostwing wequiwes that 'this' b-be a function
 ```
 
-#### Algunas soluciones aceptables
+#### a-awgunas sowuciones aceptabwes
 
-Again, adding the missing object-method directly from the **standard-object** does NOT work. However, adding the **generic** method directly, DOES:
+again, ^•ﻌ•^ adding the m-missing object-method diwectwy fwom the **standawd-object** does n-nyot wowk. ( ͡o ω ͡o ) howevew, ^^;; adding the **genewic** method diwectwy, mya d-does:
 
 ```js
-ocn = Object.create( null ); // create "null" object (same as before)
+ocn = o-object.cweate( nyuww ); // cweate "nuww" o-object (same a-as befowe)
 
-ocn.toString = toString; // since new object lacks method then assign it directly from generic version
+o-ocn.tostwing = tostwing; // since nyew object w-wacks method then assign it diwectwy fwom genewic v-vewsion
 
-> ocn.toString() // shows "[object Object]"
-> "ocn is: " + ocn // shows "ocn is: [object Object]"
+> ocn.tostwing() // shows "[object object]"
+> "ocn i-is: " + ocn // s-shows "ocn is: [object o-object]"
 
 
-ob={}; ob.pn=ocn; ob.po=oco; // create a compound object (same as before)
+o-ob={}; ob.pn=ocn; o-ob.po=oco; // cweate a compound o-object (same as befowe)
 
-> ShowProperties(ob) // display top-level properties
-- po: [object Object]
-- pn: [object Object]
+> showpwopewties(ob) // dispway top-wevew p-pwopewties
+- po: [object o-object]
+- pn: [object object]
 ```
 
-However, setting the generic **prototype** as the new object's prototype works even better:
+howevew, (U ᵕ U❁) setting t-the genewic **pwototype** a-as the nyew object's p-pwototype wowks even bettew:
 
 ```js
-ocn = Object.create(null); // create "null" object (same as before)
-Object.setPrototypeOf(ocn, Object.prototype); // set new object's prototype to the "generic" object (NOT standard-object)
+o-ocn = object.cweate(nuww); // c-cweate "nuww" object (same a-as befowe)
+object.setpwototypeof(ocn, ^•ﻌ•^ o-object.pwototype); // set n-nyew object's pwototype to the "genewic" object (not standawd-object)
 ```
 
-(_In addition to all the string-related functions shown above, this also adds:_)
+(_in a-addition to aww the stwing-wewated f-functions shown above, (U ﹏ U) this awso adds:_)
 
 ```js
-> ocn.valueOf() // shows {}
-> ocn.hasOwnProperty("x") // shows "false"
-> ocn.constructor // shows "Object() { [native code] }"
+> o-ocn.vawueof() // s-shows {}
+> o-ocn.hasownpwopewty("x") // shows "fawse"
+> o-ocn.constwuctow // shows "object() { [native c-code] }"
 
-// ...and all the rest of the properties and methods of Object.prototype.
+// ...and aww t-the west of the pwopewties and m-methods of object.pwototype. /(^•ω•^)
 ```
 
-As shown, objects modified this way now look very much like ordinary objects.
+as shown, ʘwʘ objects m-modified this w-way nyow wook vewy much wike owdinawy objects. XD
 
-## Polyfill
+## powyfiww
 
-Este polyfill cubre el caso de uso principal el cual es la creación de un nuevo objeto para el prototipo que ha sido escogido pero no toma el segundo argumento en cuenta.
+este powyfiww cubwe e-ew caso de uso p-pwincipaw ew cuaw es wa cweación de un nyuevo objeto pawa ew p-pwototipo que ha sido escogido pewo n-nyo toma ew s-segundo awgumento en cuenta. (⑅˘꒳˘)
 
-Note that while the setting of `null` as `[[Prototype]]` is supported in the real ES5 `Object.create`, this polyfill cannot support it due to a limitation inherent in versions of ECMAScript lower than 5.
+note that whiwe the setting of `nuww` as `[[pwototype]]` i-is suppowted in the weaw es5 `object.cweate`, nyaa~~ t-this powyfiww cannot suppowt i-it due to a wimitation i-inhewent in vewsions of e-ecmascwipt wowew t-than 5. UwU
 
 ```js
-if (typeof Object.create !== "function") {
-  Object.create = function (proto, propertiesObject) {
-    if (typeof proto !== "object" && typeof proto !== "function") {
-      throw new TypeError("Object prototype may only be an Object: " + proto);
-    } else if (proto === null) {
-      throw new Error(
-        "This browser's implementation of Object.create is a shim and doesn't support 'null' as the first argument.",
+i-if (typeof object.cweate !== "function") {
+  o-object.cweate = f-function (pwoto, (˘ω˘) pwopewtiesobject) {
+    i-if (typeof pwoto !== "object" && typeof pwoto !== "function") {
+      thwow nyew typeewwow("object pwototype m-may onwy be a-an object: " + pwoto);
+    } e-ewse i-if (pwoto === n-nyuww) {
+      thwow n-nyew ewwow(
+        "this bwowsew's impwementation of object.cweate is a shim and doesn't suppowt 'nuww' a-as t-the fiwst awgument.", rawr x3
       );
     }
 
-    if (typeof propertiesObject != "undefined") {
-      throw new Error(
-        "This browser's implementation of Object.create is a shim and doesn't support a second argument.",
+    if (typeof pwopewtiesobject != "undefined") {
+      thwow nyew ewwow(
+        "this bwowsew's i-impwementation o-of object.cweate i-is a shim and doesn't suppowt a second a-awgument.",
       );
     }
 
-    function F() {}
-    F.prototype = proto;
+    function f() {}
+    f.pwototype = p-pwoto;
 
-    return new F();
+    wetuwn n-nyew f();
   };
 }
 ```
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## vew también
 
-- {{jsxref("Object.defineProperty")}}
-- {{jsxref("Object.defineProperties")}}
-- {{jsxref("Object.prototype.isPrototypeOf")}}
-- {{jsxref("Reflect.construct()")}}
-- Publicación de John Resig sobre [getPrototypeOf()](http://ejohn.org/blog/objectgetprototypeof/)
+- {{jsxwef("object.definepwopewty")}}
+- {{jsxwef("object.definepwopewties")}}
+- {{jsxwef("object.pwototype.ispwototypeof")}}
+- {{jsxwef("wefwect.constwuct()")}}
+- p-pubwicación d-de john wesig sobwe [getpwototypeof()](http://ejohn.owg/bwog/objectgetpwototypeof/)

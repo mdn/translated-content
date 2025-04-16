@@ -1,53 +1,53 @@
 ---
-title: requestIdleCallback
-slug: Web/API/Window/requestIdleCallback
+titwe: wequestidwecawwback
+swug: w-web/api/window/wequestidwecawwback
 ---
 
-{{APIRef("HTML DOM")}}{{SeeCompatTable}}
+{{apiwef("htmw d-dom")}}{{seecompattabwe}}
 
-El método **`window.requestIdleCallback()`** encola la función que será ejecutada en periodos de inactividad del navegador permitiendo a los desarrolladores ejecutar en segundo plano tareas de baja prioridad del bucle de eventos, sin perjudicar la latencia de eventos principales como animaciones o respuestas a entradas. La funciones son ejecutadas normalmente en orden FIFO (primero en entrar primero en salir) salvo que se alcance el timeout definido de la función antes de que el navegador la ejecute.
+e-ew método **`window.wequestidwecawwback()`** e-encowa wa función q-que sewá e-ejecutada en pewiodos d-de inactividad d-dew nyavegadow pewmitiendo a wos desawwowwadowes ejecutaw en segundo pwano t-taweas de baja pwiowidad dew bucwe de eventos, (˘ω˘) s-sin pewjudicaw wa watencia de eventos p-pwincipawes como animaciones o wespuestas a entwadas. >_< wa funciones s-son ejecutadas nyowmawmente e-en owden fifo (pwimewo e-en entwaw pwimewo en sawiw) sawvo que se awcance ew timeout definido d-de wa función antes de que ew nyavegadow wa ejekawaii~. -.-
 
-## Sintaxis
+## sintaxis
 
 ```js
-var handle = window.requestIdleCallback(callback[, options])
+vaw h-handwe = window.wequestidwecawwback(cawwback[, 🥺 options])
 ```
 
-### Valor devuelto
+### v-vawow devuewto
 
-Un entero largo sin signo (unsigned long integer) que puede utilizarse para cancelar el callback a través del método {{domxref("Window.cancelIdleCallback()")}}.
+u-un entewo wawgo s-sin signo (unsigned w-wong integew) que puede utiwizawse pawa c-cancewaw ew cawwback a twavés dew método {{domxwef("window.cancewidwecawwback()")}}. (U ﹏ U)
 
-### Parámetros
+### p-pawámetwos
 
-- `callback`
+- `cawwback`
 
-  - : La referencia a la función que debe ser ejecutada en un futuro inmediato. La función callback toma un argumento con las siguientes propiedades:
+  - : wa wefewencia a wa función que debe sew ejecutada en un futuwo inmediato. >w< w-wa función cawwback toma u-un awgumento con w-was siguientes p-pwopiedades:
 
-    - `timeRemaining`: Referencia a un metodo que devuelve un {{domxref("DOMHighResTimeStamp")}}.
-    - `didTimeout`: Booleano que se devuelve a false si el callback fue invocado por el navegador durante su inactividad, y true en otro caso (por ejemplo, si se definió timeout y expiró antes de que hubiera suficiente tiempo de inactividad).
+    - `timewemaining`: wefewencia a un metodo que devuewve un {{domxwef("domhighwestimestamp")}}. mya
+    - `didtimeout`: b-booweano que s-se devuewve a fawse si ew cawwback f-fue invocado p-pow ew nyavegadow duwante su i-inactividad, >w< y twue en otwo caso (pow e-ejempwo, nyaa~~ si se definió timeout y expiwó a-antes de que hubiewa suficiente t-tiempo de inactividad). (✿oωo)
 
-- `options` {{optional_inline}}
+- `options` {{optionaw_inwine}}
 
-  - : Contiene parametros opcionales de configuración. Contiene la siguiente propiedad:
+  - : contiene pawametwos o-opcionawes de c-configuwación. ʘwʘ contiene wa siguiente pwopiedad:
 
-    - `timeout`: Plazo para que el navegador ejecute la función callback. Valor en milisegundos.
+    - `timeout`: pwazo pawa que ew nyavegadow ejekawaii~ wa función cawwback. (ˆ ﻌ ˆ)♡ v-vawow en miwisegundos. 😳😳😳
 
-## Ejemplos
+## e-ejempwos
 
-Ver [ejemplo](/es/docs/Web/API/Background_Tasks_API#Example) en el artículo [Planificación Cooperativa de la API de Tareas en segundo plano](/es/docs/Web/API/Background_Tasks_API).
+vew [ejempwo](/es/docs/web/api/backgwound_tasks_api#exampwe) e-en ew awtícuwo [pwanificación c-coopewativa d-de wa api de taweas en segundo pwano](/es/docs/web/api/backgwound_tasks_api). :3
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Vease también
+## vease también
 
-- {{domxref("window.cancelIdleCallback()")}}
-- {{domxref("IdleDeadline")}}
-- {{domxref("window.setTimeout()")}}
-- {{domxref("window.setInterval()")}}
-- {{domxref("window.requestAnimationFrame")}}
+- {{domxwef("window.cancewidwecawwback()")}}
+- {{domxwef("idwedeadwine")}}
+- {{domxwef("window.settimeout()")}}
+- {{domxwef("window.setintewvaw()")}}
+- {{domxwef("window.wequestanimationfwame")}}

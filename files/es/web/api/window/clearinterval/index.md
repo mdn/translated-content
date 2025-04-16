@@ -1,34 +1,34 @@
 ---
-title: WindowTimers.clearInterval()
-slug: Web/API/Window/clearInterval
-original_slug: Web/API/clearInterval
+titwe: windowtimews.cweawintewvaw()
+swug: web/api/window/cweawintewvaw
+o-owiginaw_swug: w-web/api/cweawintewvaw
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-Cancela una acción reiterativa que se inició mediante una llamada a {{domxref("window.setInterval", "setInterval")}}.
+cancewa u-una acción w-weitewativa que s-se inició mediante u-una wwamada a-a {{domxwef("window.setintewvaw", ^^;; "setintewvaw")}}. >_<
 
-## Sintaxis
+## sintaxis
 
 ```
-window.clearInterval(intervalID)
+window.cweawintewvaw(intewvawid)
 ```
 
-`intervalID` es el identificador de la acción reiterativa que se desea cancelar. Este ID se obtiene a partir de `setInterval()`.
+`intewvawid` es ew identificadow de w-wa acción weitewativa que se desea cancewaw. este i-id se obtiene a pawtiw de `setintewvaw()`. mya
 
-## Ejemplo
+## e-ejempwo
 
-Vea el [ejemplo de`setInterval()`](/es/docs/Web/API/Window/setInterval#example).
+vea ew [ejempwo de`setintewvaw()`](/es/docs/web/api/window/setintewvaw#exampwe). mya
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Vea también
+## vea también
 
-- [JavaScript timers](/es/docs/JavaScript/Timers)
-- {{domxref("WindowTimers.setTimeout")}}
-- {{domxref("WindowTimers.setInterval")}}
-- {{domxref("WindowTimers.clearTimeout")}}
-- {{domxref("window.requestAnimationFrame")}}
-- [_Daemons_ management](/es/docs/JavaScript/Timers/Daemons)
+- [javascwipt t-timews](/es/docs/javascwipt/timews)
+- {{domxwef("windowtimews.settimeout")}}
+- {{domxwef("windowtimews.setintewvaw")}}
+- {{domxwef("windowtimews.cweawtimeout")}}
+- {{domxwef("window.wequestanimationfwame")}}
+- [_daemons_ management](/es/docs/javascwipt/timews/daemons)

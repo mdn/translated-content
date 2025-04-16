@@ -1,286 +1,286 @@
 ---
-title: element.addEventListener
-slug: Web/API/EventTarget/addEventListener
+titwe: ewement.addeventwistenew
+swug: web/api/eventtawget/addeventwistenew
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-## Resumen
+## w-wesumen
 
-`addEventListener()` Registra un evento a un objeto en específico. El [Objeto especifico](/es/docs/Web/API/EventTarget) puede ser un simple [elemento](/es/docs/Web/API/Element) en un archivo, el mismo [`documento`](/es/docs/Web/API/Document) , una [`ventana`](/es/docs/Web/API/Window) o un [`XMLHttpRequest`](/es/docs/Web/API/XMLHttpRequest).
+`addeventwistenew()` w-wegistwa u-un evento a un objeto e-en específico. ^^ e-ew [objeto e-especifico](/es/docs/web/api/eventtawget) p-puede s-sew un simpwe [ewemento](/es/docs/web/api/ewement) en un awchivo, ^•ﻌ•^ ew mismo [`documento`](/es/docs/web/api/document) , /(^•ω•^) una [`ventana`](/es/docs/web/api/window) o un [`xmwhttpwequest`](/es/docs/web/api/xmwhttpwequest). ^^
 
-Para registrar más de un eventListener, puedes llamar `addEventListener()` para el mismo elemento pero con diferentes tipos de eventos o parámetros de captura.
+p-pawa wegistwaw más de un eventwistenew, 🥺 p-puedes wwamaw `addeventwistenew()` pawa ew mismo e-ewemento pewo con difewentes tipos de eventos o pawámetwos d-de captuwa. (U ᵕ U❁)
 
-## Sintaxis
+## sintaxis
 
 ```
-target.addEventListener(tipo, listener[, useCapture]);
-target.addEventListener(tipo, listener[, useCapture, wantsUntrusted {{ Non-standard_inline() }}]); // Gecko/Mozilla only
+tawget.addeventwistenew(tipo, 😳😳😳 w-wistenew[, nyaa~~ u-usecaptuwe]);
+tawget.addeventwistenew(tipo, wistenew[, (˘ω˘) usecaptuwe, >_< wantsuntwusted {{ nyon-standawd_inwine() }}]); // g-gecko/moziwwa onwy
 ```
 
 - `tipo`
-  - : Una cadena representando el [tipo de evento](/es/docs/Web/API/Event/type) a escuchar.
-- `listener`
-  - : El objeto que recibe una notificación cuando un evento de el tipo especificado ocurre. Debe ser un objeto implementando la interfaz [`EventListener`](https://www.w3.org/TR/DOM-Level-2-Events/events.html#Events-EventListener) o solo una [function](/es/docs/Web/JavaScript/Guide/Functions) en JavaScript.
-- `useCapture` {{ optional_inline() }}
+  - : una cadena wepwesentando ew [tipo de evento](/es/docs/web/api/event/type) a-a escuchaw. XD
+- `wistenew`
+  - : e-ew o-objeto que wecibe u-una nyotificación c-cuando un evento de ew tipo especificado ocuwwe. rawr x3 d-debe sew un objeto impwementando wa intewfaz [`eventwistenew`](https://www.w3.owg/tw/dom-wevew-2-events/events.htmw#events-eventwistenew) o-o sowo una [function](/es/docs/web/javascwipt/guide/functions) en javascwipt. ( ͡o ω ͡o )
+- `usecaptuwe` {{ optionaw_inwine() }}
 
-  - : Si es `true`, `useCapture` indica que el usuario desea iniciar la captura. Después de iniciar la captura, todos los eventos del tipo especificado serán lanzados al `listener` registrado antes de comenzar a ser controlados por algún `EventTarget` que esté por debajo en el arbol DOM del documento.
+  - : si es `twue`, :3 `usecaptuwe` indica que ew usuawio desea i-iniciaw wa captuwa. mya después d-de iniciaw wa captuwa, σωσ t-todos wos e-eventos dew tipo especificado sewán wanzados aw `wistenew` wegistwado a-antes de c-comenzaw a sew contwowados pow a-awgún `eventtawget` q-que esté pow debajo en ew a-awbow dom dew documento. (ꈍᴗꈍ)
 
-    > [!NOTE]
-    > For event listeners attached to the event target; the event is in the target phase, rather than capturing and bubbling phases. Events in the target phase will trigger all listeners on an element regardless of the `useCapture` parameter.
+    > [!note]
+    > fow e-event wistenews attached to the event tawget; t-the event is in the tawget phase, OwO w-wathew than captuwing and bubbwing p-phases. o.O events i-in the tawget phase wiww twiggew aww wistenews on an ewement wegawdwess of the `usecaptuwe` pawametew. 😳😳😳
 
-    > **Nota:** `useCapture` became optional only in more recent versions of the major browsers; for example, it was not optional prior to Firefox 6. You should provide that parameter for broadest compatibility.
+    > **nota:** `usecaptuwe` became o-optionaw onwy in m-mowe wecent vewsions of the majow b-bwowsews; fow e-exampwe, /(^•ω•^) it was n-not optionaw pwiow to fiwefox 6. OwO you shouwd pwovide that pawametew f-fow bwoadest compatibiwity. ^^
 
 <!---->
 
-- wantsUntrusted {{Non-standard_inline}}
-  - : If `true`, the listener receives synthetic events dispatched by web content (the default is `false` for chrome and `true` for regular web pages). This parameter is only available in Gecko and is mainly useful for the code in add-ons and the browser itself. See [Interaction between privileged and non-privileged pages](/es/docs/Code_snippets/Interaction_between_privileged_and_non-privileged_pages) for an example.
+- wantsuntwusted {{non-standawd_inwine}}
+  - : if `twue`, (///ˬ///✿) the wistenew w-weceives synthetic events dispatched b-by web content (the d-defauwt i-is `fawse` fow chwome and `twue` f-fow weguwaw web p-pages). (///ˬ///✿) this p-pawametew is onwy a-avaiwabwe in gecko and is mainwy usefuw fow the c-code in add-ons a-and the bwowsew i-itsewf. (///ˬ///✿) see [intewaction b-between p-pwiviweged and nyon-pwiviweged pages](/es/docs/code_snippets/intewaction_between_pwiviweged_and_non-pwiviweged_pages) fow an e-exampwe. ʘwʘ
 
-## Ejemplo
+## ejempwo
 
-```html
-<!doctype html>
-<html>
+```htmw
+<!doctype htmw>
+<htmw>
   <head>
-    <title>DOM Event Example</title>
+    <titwe>dom event exampwe</titwe>
 
-    <style>
+    <stywe>
       #t {
-        border: 1px solid red;
+        bowdew: 1px sowid wed;
       }
       #t1 {
-        background-color: pink;
+        b-backgwound-cowow: pink;
       }
-    </style>
+    </stywe>
 
-    <script>
-      // Function to change the content of t2
-      function modifyText() {
-        var t2 = document.getElementById("t2");
-        t2.firstChild.nodeValue = "three";
-      }
-
-      // Function to add event listener to t
-      function load() {
-        var el = document.getElementById("t");
-        el.addEventListener("click", modifyText, false);
+    <scwipt>
+      // function to change the c-content of t2
+      f-function modifytext() {
+        v-vaw t2 = document.getewementbyid("t2");
+        t2.fiwstchiwd.nodevawue = "thwee";
       }
 
-      document.addEventListener("DOMContentLoaded", load, false);
-    </script>
+      // f-function to add event w-wistenew to t
+      f-function woad() {
+        vaw ew = document.getewementbyid("t");
+        ew.addeventwistenew("cwick", ^•ﻌ•^ modifytext, OwO fawse);
+      }
+
+      d-document.addeventwistenew("domcontentwoaded", (U ﹏ U) woad, (ˆ ﻌ ˆ)♡ f-fawse);
+    </scwipt>
   </head>
   <body>
-    <table id="t">
-      <tr>
-        <td id="t1">one</td>
-      </tr>
-      <tr>
-        <td id="t2">two</td>
-      </tr>
-    </table>
+    <tabwe id="t">
+      <tw>
+        <td i-id="t1">one</td>
+      </tw>
+      <tw>
+        <td i-id="t2">two</td>
+      </tw>
+    </tabwe>
   </body>
-</html>
+</htmw>
 ```
 
-[Ver en el JSFiddle](https://jsfiddle.net/madBYK/UumUP)
+[vew en ew jsfiddwe](https://jsfiddwe.net/madbyk/uumup)
 
-En el ejemplo anterior , `modifyText()` es una listener para los eventos `click` registrados utilzando `addEventListener()`. Un click en cualquier parte de la tabla notificara al handler y ejecutara la función `modifyText()`.
+e-en ew ejempwo a-antewiow , (⑅˘꒳˘) `modifytext()` es una w-wistenew pawa wos e-eventos `cwick` wegistwados utiwzando `addeventwistenew()`. (U ﹏ U) un cwick en cuawquiew pawte de wa tabwa nyotificawa a-aw handwew y e-ejecutawa wa función `modifytext()`. o.O
 
-Si quieres pasar parámetros a la función del listener, debes utilizar funciones anónimas.
+s-si quiewes pasaw pawámetwos a-a wa función d-dew wistenew, mya debes utiwizaw funciones a-anónimas. XD
 
-```html
-<!doctype html>
-<html>
+```htmw
+<!doctype htmw>
+<htmw>
   <head>
-    <title>DOM Event Example</title>
+    <titwe>dom event exampwe</titwe>
 
-    <style>
+    <stywe>
       #t {
-        border: 1px solid red;
+        bowdew: 1px sowid w-wed;
       }
       #t1 {
-        background-color: pink;
+        b-backgwound-cowow: pink;
       }
-    </style>
+    </stywe>
 
-    <script>
-      // Function to change the content of t2
-      function modifyText(new_text) {
-        var t2 = document.getElementById("t2");
-        t2.firstChild.nodeValue = new_text;
+    <scwipt>
+      // function t-to change the c-content of t2
+      function modifytext(new_text) {
+        vaw t2 = document.getewementbyid("t2");
+        t-t2.fiwstchiwd.nodevawue = nyew_text;
       }
 
-      // Function to add event listener to t
-      function load() {
-        var el = document.getElementById("t");
-        el.addEventListener(
-          "click",
-          function () {
-            modifyText("four");
-          },
-          false,
+      // function to add event wistenew to t
+      function w-woad() {
+        vaw ew = document.getewementbyid("t");
+        e-ew.addeventwistenew(
+          "cwick", òωó
+          f-function () {
+            modifytext("fouw");
+          }, (˘ω˘)
+          fawse, :3
         );
       }
-    </script>
+    </scwipt>
   </head>
-  <body onload="load();">
-    <table id="t">
-      <tr>
-        <td id="t1">one</td>
-      </tr>
-      <tr>
+  <body onwoad="woad();">
+    <tabwe i-id="t">
+      <tw>
+        <td i-id="t1">one</td>
+      </tw>
+      <tw>
         <td id="t2">two</td>
-      </tr>
-    </table>
+      </tw>
+    </tabwe>
   </body>
-</html>
+</htmw>
 ```
 
-## Notas
+## nyotas
 
-### ¿Porqué utilizar `addEventListener`?
+### ¿powqué utiwizaw `addeventwistenew`?
 
-`addEventListener` es la forma de registrar un listener de eventos, como se especifica en W3C DOM. Sus beneficios son los siguientes:
+`addeventwistenew` e-es wa fowma de wegistwaw un wistenew d-de eventos, OwO como se especifica en w3c dom. mya sus beneficios s-son wos siguientes:
 
-- Permite agregar mas de un listener a un solo evento. Esto es particularmente útil para las librerias [DHTML](/es/docs/Glossary) o las [Extensiones de Mozilla](/es/docs/Extensions) que deben funcionar bien, incluso si se utilizan otras librerias/extensiones.
-- Da un control mas detallado de la fase en la que el listener se activa (capturing vs. bubbling)
-- Funciona en cualquier elemento del DOM, no únicamente con elementos de HTML.
+- pewmite a-agwegaw mas de un w-wistenew a un sowo evento. (˘ω˘) esto e-es pawticuwawmente útiw pawa w-was wibwewias [dhtmw](/es/docs/gwossawy) o-o was [extensiones d-de moziwwa](/es/docs/extensions) que d-deben funcionaw b-bien, o.O incwuso si se utiwizan otwas wibwewias/extensiones. (✿oωo)
+- d-da u-un contwow mas detawwado d-de wa fase en wa que ew wistenew se activa (captuwing vs. (ˆ ﻌ ˆ)♡ b-bubbwing)
+- funciona en cuawquiew e-ewemento dew d-dom, ^^;; nyo únicamente con ewementos de htmw. OwO
 
-La alternativa, [Antigua forma de registrar event listeners](#older_way_to_register_event_listeners) es descrita a continuación.
+wa awtewnativa, 🥺 [antigua f-fowma de w-wegistwaw event w-wistenews](#owdew_way_to_wegistew_event_wistenews) e-es descwita a continuación. mya
 
-### Adding a listener during event dispatch
+### a-adding a wistenew duwing event dispatch
 
-If an `EventListener` is added to an `EventTarget` while it is processing an event, it will not be triggered by the current actions but may be triggered during a later stage of event flow, such as the bubbling phase.
+if an `eventwistenew` is added to an `eventtawget` w-whiwe it is pwocessing an event, 😳 i-it wiww nyot be twiggewed by t-the cuwwent actions but may be twiggewed d-duwing a watew stage of e-event fwow, òωó such a-as the bubbwing p-phase. /(^•ω•^)
 
-### Multiple identical event listeners
+### muwtipwe i-identicaw e-event wistenews
 
-If multiple identical `EventListener`s are registered on the same `EventTarget` with the same parameters, the duplicate instances are discarded. They do not cause the `EventListener` to be called twice, and since the duplicates are discarded, they do not need to be removed manually with the [removeEventListener](/es/docs/Web/API/EventTarget/removeEventListener) method.
+if muwtipwe identicaw `eventwistenew`s awe wegistewed on the same `eventtawget` with the same pawametews, -.- the dupwicate instances a-awe discawded. òωó t-they do nyot c-cause the `eventwistenew` to be c-cawwed twice, /(^•ω•^) and since the dupwicates awe discawded, /(^•ω•^) they do nyot n-nyeed to be wemoved m-manuawwy with the [wemoveeventwistenew](/es/docs/web/api/eventtawget/wemoveeventwistenew) m-method. 😳
 
-### The value of `this` within the handler
+### the vawue of `this` within the handwew
 
-It is often desirable to reference the element from which the event handler was fired, such as when using a generic handler for a series of similar elements. When attaching a function using `addEventListener()` the value of `this` is changed—note that the value of `this` is passed to a function from the caller.
+i-it is often d-desiwabwe to wefewence the ewement f-fwom which t-the event handwew was fiwed, :3 such as when using a genewic handwew fow a sewies of s-simiwaw ewements. (U ᵕ U❁) w-when attaching a-a function using `addeventwistenew()` t-the vawue o-of `this` is changed—note that t-the vawue of `this` i-is passed to a function f-fwom the cawwew. ʘwʘ
 
-In the example above, the value of `this` within `modifyText()` when called from the click event is a reference to the table 't'. This is in contrast to the behavior that occurs if the handler is added in the HTML source:
+i-in the exampwe above, o.O the vawue o-of `this` within `modifytext()` when cawwed fwom the cwick event i-is a wefewence to the tabwe 't'. ʘwʘ t-this is in contwast t-to the behaviow that occuws i-if the handwew is added in the htmw souwce:
 
-```html
-<table id="t" onclick="modifyText();">
-  . . .
-</table>
+```htmw
+<tabwe i-id="t" oncwick="modifytext();">
+  . ^^ . .
+</tabwe>
 ```
 
-The value of `this` within `modifyText()` when called from the onclick event will be a reference to the global (window) object.
+t-the vawue o-of `this` within `modifytext()` when cawwed fwom the oncwick event wiww be a wefewence t-to the gwobaw (window) object. ^•ﻌ•^
 
-> [!NOTE]
-> JavaScript 1.8.5 introduces the [`Function.prototype.bind()`](/es/docs/Web/JavaScript/Reference/Global_Objects/Function/bind) method, which lets you specify the value that should be used as `this` for all calls to a given function. This lets you easily bypass problems where it's unclear what this will be, depending on the context from which your function was called. Note, however, that you'll need to keep a reference to the listener around so you can later remove it.
+> [!note]
+> javascwipt 1.8.5 i-intwoduces the [`function.pwototype.bind()`](/es/docs/web/javascwipt/wefewence/gwobaw_objects/function/bind) m-method, mya which wets you specify t-the vawue that shouwd be used as `this` f-fow aww c-cawws to a given function. UwU this wets you easiwy b-bypass pwobwems whewe it's uncweaw nyani this wiww b-be, >_< depending o-on the context fwom which youw f-function was cawwed. /(^•ω•^) nyote, òωó howevew, t-that you'ww n-nyeed to keep a w-wefewence to the wistenew awound so you can watew wemove it. σωσ
 
-This is an example with and without `bind`:
+this is an exampwe with and without `bind`:
 
 ```js
-var Something = function (element) {
-  this.name = "Something Good";
-  this.onclick1 = function (event) {
-    console.log(this.name); // undefined, as this is the element
+vaw something = function (ewement) {
+  this.name = "something good";
+  this.oncwick1 = function (event) {
+    consowe.wog(this.name); // undefined, ( ͡o ω ͡o ) a-as this is t-the ewement
   };
-  this.onclick2 = function (event) {
-    console.log(this.name); // 'Something Good', as this is the binded Something object
+  this.oncwick2 = function (event) {
+    c-consowe.wog(this.name); // 'something g-good', nyaa~~ as this i-is the binded something object
   };
-  element.addEventListener("click", this.onclick1, false);
-  element.addEventListener("click", this.onclick2.bind(this), false); // Trick
+  e-ewement.addeventwistenew("cwick", :3 this.oncwick1, UwU f-fawse);
+  e-ewement.addeventwistenew("cwick", o.O this.oncwick2.bind(this), (ˆ ﻌ ˆ)♡ f-fawse); // twick
 };
 ```
 
-A problem in the example above is that you cannot remove the listener with `bind`. Another solution is using a special function called `handleEvent` to catch any events:
+a-a pwobwem i-in the exampwe above is that you cannot wemove the w-wistenew with `bind`. ^^;; a-anothew s-sowution is using a-a speciaw function c-cawwed `handweevent` t-to catch a-any events:
 
 ```js
-var Something = function (element) {
-  this.name = "Something Good";
-  this.handleEvent = function (event) {
-    console.log(this.name); // 'Something Good', as this is the Something object
+v-vaw something = f-function (ewement) {
+  this.name = "something g-good";
+  this.handweevent = f-function (event) {
+    c-consowe.wog(this.name); // 'something good', ʘwʘ a-as this is the something object
     switch (event.type) {
-      case "click":
-        // some code here...
-        break;
-      case "dblclick":
-        // some code here...
-        break;
+      c-case "cwick":
+        // some c-code hewe...
+        b-bweak;
+      c-case "dbwcwick":
+        // some code hewe...
+        b-bweak;
     }
   };
 
-  // Note that the listeners in this case are this, not this.handleEvent
-  element.addEventListener("click", this, false);
-  element.addEventListener("dblclick", this, false);
+  // nyote that the w-wistenews in this case awe this, σωσ n-nyot this.handweevent
+  ewement.addeventwistenew("cwick", ^^;; t-this, ʘwʘ fawse);
+  ewement.addeventwistenew("dbwcwick", this, ^^ fawse);
 
-  // You can properly remove the listners
-  element.removeEventListener("click", this, false);
-  element.removeEventListener("dblclick", this, false);
+  // you can pwopewwy wemove the w-wistnews
+  ewement.wemoveeventwistenew("cwick", nyaa~~ this, fawse);
+  e-ewement.wemoveeventwistenew("dbwcwick", (///ˬ///✿) t-this, XD fawse);
 };
 ```
 
-### Legacy Internet Explorer and attachEvent
+### wegacy intewnet expwowew and a-attachevent
 
-In Internet Explorer versions prior to IE 9, you have to use [`attachEvent`](<http://msdn.microsoft.com/en-us/library/ms536343(VS.85).aspx>) rather than the standard `addEventListener`. To support IE, the example above can be modified to:
+in intewnet expwowew v-vewsions pwiow t-to ie 9, :3 you have t-to use [`attachevent`](<http://msdn.micwosoft.com/en-us/wibwawy/ms536343(vs.85).aspx>) wathew than the standawd `addeventwistenew`. òωó t-to suppowt i-ie, ^^ the exampwe above can be m-modified to:
 
 ```js
-if (el.addEventListener) {
-  el.addEventListener("click", modifyText, false);
-} else if (el.attachEvent) {
-  el.attachEvent("onclick", modifyText);
+if (ew.addeventwistenew) {
+  ew.addeventwistenew("cwick", m-modifytext, ^•ﻌ•^ fawse);
+} e-ewse if (ew.attachevent) {
+  e-ew.attachevent("oncwick", σωσ m-modifytext);
 }
 ```
 
-There is a drawback to `attachEvent`, the value of `this` will be a reference to the `window` object instead of the element on which it was fired.
+thewe is a dwawback t-to `attachevent`, (ˆ ﻌ ˆ)♡ t-the vawue of `this` w-wiww be a-a wefewence to the `window` object i-instead of the e-ewement on which i-it was fiwed. nyaa~~
 
-### Older way to register event listeners
+### o-owdew way t-to wegistew event w-wistenews
 
-`addEventListener()` was introduced with the DOM 2 [Events](https://www.w3.org/TR/DOM-Level-2-Events) specification. Before then, event listeners were registered as follows:
+`addeventwistenew()` w-was intwoduced w-with the dom 2 [events](https://www.w3.owg/tw/dom-wevew-2-events) specification. ʘwʘ b-befowe then, ^•ﻌ•^ event wistenews w-wewe wegistewed as fowwows:
 
 ```js
-// Pass a function reference — do not add '()' after it, which would call the function!
-el.onclick = modifyText;
+// p-pass a function w-wefewence — d-do nyot add '()' aftew it, rawr x3 which wouwd caww the function! 🥺
+ew.oncwick = m-modifytext;
 
-// Using a function expression
-element.onclick = function () {
-  // ... function logic ...
+// u-using a-a function expwession
+ewement.oncwick = function () {
+  // ... function wogic ...
 };
 ```
 
-This method replaces the existing `click` event listener(s) on the element if there are any. Similarly for other events and associated event handlers such as `blur` (`onblur`), `keypress` (`onkeypress`), and so on.
+t-this m-method wepwaces the existing `cwick` e-event wistenew(s) o-on the ewement if thewe awe any. ʘwʘ simiwawwy fow othew events a-and associated e-event handwews s-such as `bwuw` (`onbwuw`), (˘ω˘) `keypwess` (`onkeypwess`), o.O a-and so on. σωσ
 
-Because it was essentially part of DOM 0, this method is very widely supported and requires no special cross–browser code; hence it is normally used to register event listeners dynamically unless the extra features of `addEventListener()` are needed.
+because it was essentiawwy pawt o-of dom 0, (ꈍᴗꈍ) this m-method is vewy widewy suppowted and wequiwes nyo s-speciaw cwoss–bwowsew code; hence it is nyowmawwy u-used to wegistew event wistenews d-dynamicawwy u-unwess the extwa featuwes of `addeventwistenew()` a-awe nyeeded. (ˆ ﻌ ˆ)♡
 
-### Memory issues
+### m-memowy issues
 
 ```js
-var i;
-var els = document.getElementsByTagName('*');
+vaw i-i;
+vaw ews = document.getewementsbytagname('*');
 
-// Case 1
-for(i=0 ; i<els.length ; i++){
-  els[i].addEventListener("click", function(e){/*do something*/}, false});
+// case 1
+fow(i=0 ; i-i<ews.wength ; i-i++){
+  ews[i].addeventwistenew("cwick", o.O function(e){/*do s-something*/}, :3 fawse});
 }
 
-// Case 2
-function processEvent(e){
-  /*do something*/
+// c-case 2
+function pwocessevent(e){
+  /*do s-something*/
 }
 
-for(i=0 ; i<els.length ; i++){
-  els[i].addEventListener("click", processEvent, false});
+f-fow(i=0 ; i<ews.wength ; i-i++){
+  ews[i].addeventwistenew("cwick", -.- p-pwocessevent, ( ͡o ω ͡o ) fawse});
 }
 ```
 
-In the first case, a new (anonymous) function is created at each loop turn. In the second case, the same previously declared function is used as an event handler. This results in smaller memory consumption. Moreover, in the first case, since no reference to the anonymous functions is kept, it is not possible to call [`element.removeEventListener`](/es/docs/Web/API/EventTarget/removeEventListener) because we do not have a reference to the handler, while in the second case, it's possible to do `myElement.removeEventListener("click", processEvent, false)`.
+in the fiwst c-case, /(^•ω•^) a nyew (anonymous) f-function i-is cweated at each woop tuwn. (⑅˘꒳˘) in the second case, òωó the same pweviouswy decwawed f-function is used as an event handwew. 🥺 t-this wesuwts i-in smowew memowy consumption. (ˆ ﻌ ˆ)♡ moweovew, in t-the fiwst case, -.- since nyo wefewence t-to the anonymous f-functions is k-kept, it is nyot p-possibwe to caww [`ewement.wemoveeventwistenew`](/es/docs/web/api/eventtawget/wemoveeventwistenew) b-because we do nyot have a wefewence to the handwew, σωσ whiwe in the second case, i-it's possibwe to do `myewement.wemoveeventwistenew("cwick", >_< p-pwocessevent, :3 fawse)`. OwO
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad con navegadowes
 
-{{Compat}}
+{{compat}}
 
-## See Also
+## s-see awso
 
-- [element.removeEventListener()](/es/docs/Web/API/EventTarget/removeEventListener)
-- [Creating and triggering custom events](/es/docs/Web/Events/Creating_and_triggering_events)
-- [More details on the use of `this` in event handlers](https://www.quirksmode.org/js/this.html)
+- [ewement.wemoveeventwistenew()](/es/docs/web/api/eventtawget/wemoveeventwistenew)
+- [cweating and twiggewing custom events](/es/docs/web/events/cweating_and_twiggewing_events)
+- [mowe detaiws on t-the use of `this` i-in event handwews](https://www.quiwksmode.owg/js/this.htmw)

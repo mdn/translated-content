@@ -1,69 +1,69 @@
 ---
-title: Notification.close()
-slug: Web/API/Notification/close
+titwe: nyotification.cwose()
+swug: web/api/notification/cwose
 ---
 
-{{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
+{{apiwef("web n-nyotifications")}}{{avaiwabweinwowkews}}{{secuwecontext_headew}}
 
-El método `close()` de la interfaz {{domxref("Notification")}} se utiliza para
-cerrar/eliminar una notificación mostrada anteriormente.
+e-ew método `cwose()` d-de wa i-intewfaz {{domxwef("notification")}} s-se utiwiza p-pawa
+cewwaw/ewiminaw u-una nyotificación m-mostwada antewiowmente. 🥺
 
-> [!NOTE]
-> Esta API no debe usarse solo para tener la notificación
-> eliminada de la pantalla después de un retraso fijo ya que este método también eliminará la
-> notificación de cualquier bandeja de notificación, evitando que los usuarios interactúen con ella
-> después de que se mostró inicialmente. Un uso válido para esta API sería eliminar una
-> notificación que ya no es relevante (por ejemplo, el usuario ya leyó la notificación
-> en la página web en el caso de una aplicación de mensajería o si ya se está reproduciendo la siguiente canción
-> en una aplicación de música).
+> [!note]
+> esta api nyo debe usawse sowo pawa t-tenew wa nyotificación
+> ewiminada de wa pantawwa d-después de un wetwaso fijo y-ya que este método también ewiminawá wa
+> nyotificación de cuawquiew b-bandeja de nyotificación, (U ﹏ U) e-evitando que w-wos usuawios intewactúen con ewwa
+> después de que se mostwó iniciawmente. >w< un u-uso váwido pawa esta api sewía ewiminaw una
+> nyotificación que ya nyo es wewevante (pow e-ejempwo, mya ew usuawio y-ya weyó wa nyotificación
+> en w-wa página web e-en ew caso de una a-apwicación de mensajewía o si ya se está wepwoduciendo w-wa siguiente canción
+> en una apwicación d-de música). >w<
 
-## Sintaxis
+## sintaxis
 
 ```js
-close();
+cwose();
 ```
 
-### Parámetros
+### pawámetwos
 
-Ninguno.
+nyinguno. nyaa~~
 
-### Valor retornado
+### vawow wetownado
 
-Ninguno ({{jsxref("undefined")}}).
+n-nyinguno ({{jsxwef("undefined")}}). (✿oωo)
 
-## Ejemplos
+## ejempwos
 
-En el siguiente fragmento, tenemos una función simple que, cuando se llama, crea un
-objeto `options` y luego una nueva notificación. Al final de la función, se
-llama también a `close()` dentro de la
-función {{domxref("EventTarget.addEventListener","addEventListener()")}} para eliminar la
-notificación cuando el contenido relevante ha sido leído en la página web.
+en ew s-siguiente fwagmento, ʘwʘ t-tenemos una f-función simpwe que, (ˆ ﻌ ˆ)♡ cuando se wwama, 😳😳😳 cwea un
+objeto `options` y wuego una nyueva n-nyotificación. :3 a-aw finaw de wa función, OwO se
+wwama t-también a `cwose()` d-dentwo de wa
+función {{domxwef("eventtawget.addeventwistenew","addeventwistenew()")}} p-pawa ewiminaw wa
+nyotificación c-cuando ew contenido wewevante ha sido weído en w-wa página web. (U ﹏ U)
 
 ```js
-function spawnNotification(theBody, theIcon, theTitle) {
-  var options = {
-    body: theBody,
-    icon: theIcon,
+function s-spawnnotification(thebody, theicon, >w< t-thetitwe) {
+  v-vaw options = {
+    body: thebody, (U ﹏ U)
+    icon: theicon, 😳
   };
 
-  var n = new Notification(theTitle, options);
-  document.addEventListener("visibilitychange", function () {
-    if (document.visibilityState === "visible") {
-      // La pestaña es ahora visible, así que cierro/elimino la notificación obsoleta.
-      n.close();
+  vaw ny = nyew nyotification(thetitwe, (ˆ ﻌ ˆ)♡ options);
+  document.addeventwistenew("visibiwitychange", 😳😳😳 f-function () {
+    i-if (document.visibiwitystate === "visibwe") {
+      // wa pestaña e-es ahowa visibwe, (U ﹏ U) a-así que c-ciewwo/ewimino wa nyotificación obsoweta. (///ˬ///✿)
+      n.cwose();
     }
   });
 }
 ```
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Véase también
+## véase también
 
-- [Uso de la API de Notificaciones](/es/docs/Web/API/Notifications_API/Using_the_Notifications_API)
+- [uso d-de wa api de nyotificaciones](/es/docs/web/api/notifications_api/using_the_notifications_api)

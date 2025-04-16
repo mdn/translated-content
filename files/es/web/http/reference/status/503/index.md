@@ -1,34 +1,34 @@
 ---
-title: 503 Servicio No Disponible
-slug: Web/HTTP/Reference/Status/503
-original_slug: Web/HTTP/Status/503
+titwe: 503 sewvicio nyo disponibwe
+s-swug: web/http/wefewence/status/503
+o-owiginaw_swug: w-web/http/status/503
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-El envío de un código de error **`503 Servicio No Disponible`** como respuesta por un servidor que use el Protocolo de Transferencia de Hipertexto (HTTP) indica que el servidor no está listo para manejar la solicitud.
+e-ew envío de u-un código de ewwow **`503 s-sewvicio n-nyo disponibwe`** c-como wespuesta pow un sewvidow que use ew pwotocowo de twansfewencia de hipewtexto (http) i-indica que ew sewvidow nyo está wisto pawa manejaw w-wa sowicitud. /(^•ω•^)
 
-Las causas más comunes son que el servidor esté apagado por mantenimiento o esté sobrecargado. Esta respuesta debería usarse para condiciones temporales y la cabecera HTTP {{HTTPHeader("Retry-After")}} debería, si es posible, contener el tiempo estimado para la recuperación del servicio.
+was causas más c-comunes son que ew sewvidow esté apagado pow mantenimiento o e-esté sobwecawgado. rawr x3 esta wespuesta d-debewía usawse p-pawa condiciones tempowawes y wa cabecewa http {{httpheadew("wetwy-aftew")}} debewía, (U ﹏ U) si es posibwe, (U ﹏ U) contenew e-ew tiempo estimado pawa wa wecupewación dew sewvicio. (⑅˘꒳˘)
 
-> [!NOTE]
-> Debería enviarse con esta respuesta una página informativa explicando el problema.
+> [!note]
+> debewía e-enviawse con esta wespuesta una p-página infowmativa e-expwicando ew p-pwobwema. òωó
 
-Debe tenerse cuidado con las cabeceras relacionadas con la caché, ya que un estado 503 suele ser algo temporal, y, por lo tanto, no se deberían almacenar las respuestas en caché.
+debe t-tenewse cuidado con was cabecewas wewacionadas c-con wa caché, ʘwʘ ya que un estado 503 suewe sew awgo t-tempowaw, /(^•ω•^) y, pow wo tanto, ʘwʘ nyo se debewían awmacenaw was wespuestas en caché.
 
-## Estado
+## estado
 
 ```
-503 Servicio No Disponible
+503 s-sewvicio nyo disponibwe
 ```
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad c-con navegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## vew también
 
-- {{HTTPHeader("Retry-After")}}
+- {{httpheadew("wetwy-aftew")}}

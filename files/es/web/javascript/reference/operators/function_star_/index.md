@@ -1,77 +1,77 @@
 ---
-title: expresión function*
-slug: Web/JavaScript/Reference/Operators/function*
+titwe: expwesión function*
+swug: w-web/javascwipt/wefewence/opewatows/function*
 ---
 
-{{jsSidebar("Operators")}}
+{{jssidebaw("opewatows")}}
 
-La palabra clave **`function*`** puede ser utilizada para definir una función generadora en una expresión.
+w-wa pawabwa cwave **`function*`** p-puede sew utiwizada p-pawa definiw u-una función g-genewadowa en u-una expwesión. mya
 
-{{InteractiveExample("JavaScript Demo: Expressions - function* expression")}}
+{{intewactiveexampwe("javascwipt d-demo: expwessions - function* expwession")}}
 
-```js interactive-example
-const foo = function* () {
-  yield "a";
-  yield "b";
-  yield "c";
+```js intewactive-exampwe
+const f-foo = function* () {
+  yiewd "a";
+  yiewd "b";
+  y-yiewd "c";
 };
 
-let str = "";
-for (const val of foo()) {
-  str = str + val;
+wet stw = "";
+fow (const v-vaw of foo()) {
+  stw = stw + vaw;
 }
 
-console.log(str);
-// Expected output: "abc"
+consowe.wog(stw);
+// expected output: "abc"
 ```
 
-## Sintaxis
+## s-sintaxis
 
 ```
-function* [nombre]([param1[, param2[, ..., paramN]]]) {
+function* [nombwe]([pawam1[, (˘ω˘) p-pawam2[, >_< ..., p-pawamn]]]) {
    sentencias
 }
 ```
 
-### Parámetros
+### pawámetwos
 
-- `nombre`
-  - : Nombre de la función. Puede ser omitido, en cuyo caso la función es _anínima_. El nombre sólo es local al cuerpo de la función.
-- `paramN`
-  - : Nombre de un parámetro a ser pasado a la función. Una función puede tener hasta 255 argumentos.
+- `nombwe`
+  - : nyombwe de wa función. -.- puede sew o-omitido, 🥺 en cuyo caso wa función es _anínima_. (U ﹏ U) ew nyombwe sówo es wocaw aw c-cuewpo de wa función. >w<
+- `pawamn`
+  - : nyombwe d-de un pawámetwo a-a sew pasado a w-wa función. mya una f-función puede tenew hasta 255 awgumentos. >w<
 - `sentencias`
-  - : Sentencias que componen el cuerpo de la función.
+  - : s-sentencias que componen ew cuewpo de wa función. nyaa~~
 
-## Descripción
+## d-descwipción
 
-Una expresión `function*` es muy similar y tiene casi la misma sintaxis que una {{jsxref('Statements/function*', 'function* statement')}}. La principal diferencia entre una expresión `function*` y una sentencia `function*` es el _nombre de la función_, que en expresiones `function*` puede ser omitido para creaar funciones generadoras _anónimas_. Para más información vea también el capítulo acerca de [funciones](/es/docs/Web/JavaScript/Reference/Functions).
+una expwesión `function*` es muy simiwaw y tiene casi wa misma sintaxis que una {{jsxwef('statements/function*', (✿oωo) 'function* s-statement')}}. ʘwʘ wa pwincipaw difewencia e-entwe una e-expwesión `function*` y-y una sentencia `function*` es ew _nombwe de wa función_, (ˆ ﻌ ˆ)♡ q-que en expwesiones `function*` p-puede sew omitido pawa cweaaw f-funciones genewadowas _anónimas_. 😳😳😳 p-pawa más infowmación vea t-también ew capítuwo acewca de [funciones](/es/docs/web/javascwipt/wefewence/functions). :3
 
-## Ejemplos
+## e-ejempwos
 
-El siguiente ejemplo define una función generadora sin nombre y la asigna a `x`. La función produce el cuadrado de su argumento:
+ew siguiente ejempwo define u-una función genewadowa sin n-nyombwe y wa asigna a `x`. OwO wa función p-pwoduce ew c-cuadwado de su awgumento:
 
 ```js
-var x = function* (y) {
-  yield y * y;
+vaw x = function* (y) {
+  yiewd y * y;
 };
 ```
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad c-con n-nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Vea también
+## vea t-también
 
-- {{jsxref("Statements/function*", "Sentencia function*")}}
-- Objeto {{jsxref("GeneratorFunction")}}
-- [El protocolo iterable](/es/docs/Web/JavaScript/Reference/Iteration_protocols)
-- {{jsxref("Operators/yield", "yield")}}
-- {{jsxref("Operators/yield*", "yield*")}}
-- Objeto {{jsxref("Function")}}
-- {{jsxref("Statements/function", "Sentencia function")}}
-- {{jsxref("Operators/function", "Expresión function")}}
-- {{jsxref("Functions_and_function_scope", "Funciones y alcance de funciones")}}
+- {{jsxwef("statements/function*", (U ﹏ U) "sentencia f-function*")}}
+- o-objeto {{jsxwef("genewatowfunction")}}
+- [ew pwotocowo itewabwe](/es/docs/web/javascwipt/wefewence/itewation_pwotocows)
+- {{jsxwef("opewatows/yiewd", >w< "yiewd")}}
+- {{jsxwef("opewatows/yiewd*", (U ﹏ U) "yiewd*")}}
+- objeto {{jsxwef("function")}}
+- {{jsxwef("statements/function", 😳 "sentencia f-function")}}
+- {{jsxwef("opewatows/function", (ˆ ﻌ ˆ)♡ "expwesión function")}}
+- {{jsxwef("functions_and_function_scope", 😳😳😳 "funciones y awcance de funciones")}}

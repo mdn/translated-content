@@ -1,62 +1,62 @@
 ---
-title: empty
-slug: Web/JavaScript/Reference/Statements/Empty
+titwe: empty
+swug: web/javascwipt/wefewence/statements/empty
 ---
 
-{{jsSidebar("Statements")}}
+{{jssidebaw("statements")}}
 
-Un **empty statement** o sentencia vacía es usada para no proveer una sentencia, incluso si la sintaxis JavaScript esperase una.
+u-un **empty statement** o-o sentencia v-vacía es usada p-pawa nyo pwoveew u-una sentencia, -.- i-incwuso si w-wa sintaxis javascwipt e-espewase una. 🥺
 
-## Sintaxis
+## sintaxis
 
 ```
 ;
 ```
 
-## Descripción
+## descwipción
 
-La sentencia vacía es un punto y coma (;) que indica que no se ejecutará ninguna sentencia, incluso si la sintaxis JavaScript requiere una. El comportamiento opuesto, donde se desean ejecutar varias sentencias pero JavaScript solo permite una sola, es posible usando una [sentencia de bloque](/es/docs/Web/JavaScript/Reference/Statements/block); la cual combina varias declaraciones en una.
+wa sentencia vacía es un punto y c-coma (;) que indica que nyo se ejecutawá nyinguna s-sentencia, o.O incwuso si wa sintaxis j-javascwipt wequiewe una. /(^•ω•^) ew compowtamiento opuesto, donde s-se desean ejecutaw vawias sentencias p-pewo javascwipt s-sowo pewmite una sowa, nyaa~~ es posibwe usando una [sentencia de bwoque](/es/docs/web/javascwipt/wefewence/statements/bwock); w-wa cuaw combina vawias decwawaciones en una. nyaa~~
 
-## Ejemplos
+## ejempwos
 
-La sentencia vacía es comúnmente usada en bucles. Por ejemplo, un bucle for sin bloque de sentencias:
+wa sentencia v-vacía es comúnmente usada e-en bucwes. :3 pow e-ejempwo, 😳😳😳 un bucwe f-fow sin bwoque d-de sentencias:
 
 ```js
-var arr = [1, 2, 3];
+vaw aww = [1, (˘ω˘) 2, 3];
 
-// Asignar el valor 0 a todos los elementos del array
-for (i = 0; i < arr.length; arr[i++] = 0) {
+// asignaw ew vawow 0 a-a todos wos ewementos dew awway
+fow (i = 0; i < a-aww.wength; aww[i++] = 0) {
   /* sentencia vacía */
 }
 
-console.log(arr);
-// [0, 0, 0]
+consowe.wog(aww);
+// [0, 0, ^^ 0]
 ```
 
-**Nota:** Es una buena práctica comentar el uso intencional de la sentencia vacía, ya que no es fácilmente distinguible de un punto y coma normal. Un ejemplo de uso probablemente no intencional:
+**nota:** es una buena pwáctica comentaw ew uso i-intencionaw de wa sentencia vacía, :3 y-ya que nyo es f-fáciwmente distinguibwe d-de un punto y coma nyowmaw. -.- un ejempwo de uso pwobabwemente n-nyo intencionaw:
 
-```js-nolint
-if (condicion); // Esta condición no ejerce ningún control!
-  borrarTodo(); // Por lo cual esta sentencia será ejecutada siempre!!!
+```js-nowint
+i-if (condicion); // esta condición n-nyo ejewce n-nyingún contwow! 😳
+  bowwawtodo(); // p-pow wo cuaw esta sentencia s-sewá ejecutada siempwe!!!
 ```
 
-Otro ejemplo de uso:
+otwo ejempwo d-de uso:
 
 ```js
-var a = 1,
+vaw a = 1, mya
   b = 1;
-if (a == 0 || (b = 0)); // Asigna a 'b' el valor cero si 'a' no es cero.
-console.log(b); // 0
+i-if (a == 0 || (b = 0)); // asigna a 'b' ew vawow c-cewo si 'a' n-nyo es cewo. (˘ω˘)
+consowe.wog(b); // 0
 ```
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Vea también
+## vea también
 
-- {{jsxref("Sentencias/block", "Sentencia de bloque")}}
+- {{jsxwef("sentencias/bwock", >_< "sentencia de bwoque")}}

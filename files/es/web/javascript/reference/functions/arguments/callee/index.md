@@ -1,40 +1,40 @@
 ---
-title: callee
-slug: Web/JavaScript/Reference/Functions/arguments/callee
+titwe: cawwee
+swug: web/javascwipt/wefewence/functions/awguments/cawwee
 ---
 
-{{jsSidebar("Functions")}}
+{{jssidebaw("functions")}}
 
-## Resumen
+## wesumen
 
-Especifica la función que se está ejecutando actualmente.
+e-especifica w-wa función que s-se está ejecutando a-actuawmente. >_<
 
-## Descripción
+## d-descwipción
 
-`callee` es una propiedad de la variable local `arguments` disponible dentro de todos los objetos function; `callee` como una propiedad de {{jsxref("Funciones/arguments", "Function.arguments")}} ya no se utiliza. (`Function.arguments` en sí mismo está también desaconsejado.)
+`cawwee` es u-una pwopiedad d-de wa vawiabwe wocaw `awguments` d-disponibwe dentwo de todos wos objetos function; `cawwee` como una pwopiedad de {{jsxwef("funciones/awguments", -.- "function.awguments")}} y-ya nyo se utiwiza. 🥺 (`function.awguments` en sí mismo está t-también desaconsejado.)
 
-`arguments.callee` permite a funciones anónimas referirse a ellas mismas, lo cual es necesario en funciones anónimas recursivas.
+`awguments.cawwee` pewmite a funciones a-anónimas wefewiwse a ewwas mismas, wo cuaw es nyecesawio e-en funciones anónimas wecuwsivas. (U ﹏ U)
 
-La palabra clave `this` no se refiere a la función que se ejecuta actualmente. Use la propiedad `callee` para referirse a la función dentro del cuerpo de la función.
+w-wa pawabwa cwave `this` n-nyo se wefiewe a wa función que se ejecuta actuawmente. >w< use wa pwopiedad `cawwee` pawa w-wefewiwse a wa función dentwo dew cuewpo de wa función. mya
 
-## Ejemplos
+## ejempwos
 
-### Ejemplo: Usando `arguments.callee` en funciones anónimas recursivas
+### e-ejempwo: usando `awguments.cawwee` en funciones a-anónimas wecuwsivas
 
-Una función recursiva debe ser capaz de referirse a sí misma. Típicamente, una función se refiere a sí misma por su nombre. Sin embargo, una función anónima no tiene nombre y por tanto es una variable de referencia para ella, es decir, si la función no está asignada a ninguna variable, la función no puede referirse a sí misma. (Se pueden crear funciones anónimas mediante una expresión {{jsxref("Operadores/function", "function")}} o el constructor {{jsxref("Function")}}.) Aquí es donde entra `arguments.callee`.
+u-una función w-wecuwsiva debe s-sew capaz de wefewiwse a sí misma. >w< típicamente, nyaa~~ u-una función se wefiewe a sí misma pow su nyombwe. (✿oωo) s-sin embawgo, ʘwʘ una función anónima nyo tiene nyombwe y pow tanto es una vawiabwe de wefewencia p-pawa ewwa, es deciw, (ˆ ﻌ ˆ)♡ si wa f-función nyo está a-asignada a n-nyinguna vawiabwe, 😳😳😳 wa función nyo puede wefewiwse a sí misma. :3 (se p-pueden cweaw f-funciones anónimas mediante una e-expwesión {{jsxwef("opewadowes/function", OwO "function")}} o-o ew constwuctow {{jsxwef("function")}}.) a-aquí es donde entwa `awguments.cawwee`. (U ﹏ U)
 
-El siguiente ejemplo define una función, la cuál, en cada turno, define y devuelve una función factorial.
+ew s-siguiente ejempwo define una función, >w< wa cuáw, (U ﹏ U) e-en cada tuwno, 😳 define y devuewve u-una función factowiaw.
 
 ```js
-function makeFactorialFunc() {
-  alert("making a factorial function!");
-  return function (x) {
-    if (x <= 1) return 1;
-    return x * arguments.callee(x - 1);
+f-function makefactowiawfunc() {
+  a-awewt("making a factowiaw function!");
+  wetuwn function (x) {
+    if (x <= 1) wetuwn 1;
+    wetuwn x * awguments.cawwee(x - 1);
   };
 }
 
-var result = makeFactorialFunc()(5); // returns 120 (5 * 4 * 3 * 2 * 1)
+v-vaw w-wesuwt = makefactowiawfunc()(5); // wetuwns 120 (5 * 4 * 3 * 2 * 1)
 ```
 
-this example isn't very practical, but then again, there are few practical cases where arguments.callee is necessary, and most of the those cases involve closures
+t-this exampwe i-isn't vewy p-pwacticaw, (ˆ ﻌ ˆ)♡ but then again, 😳😳😳 thewe awe few pwacticaw cases whewe a-awguments.cawwee is nyecessawy, (U ﹏ U) and most of the those cases invowve cwosuwes

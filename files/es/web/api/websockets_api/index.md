@@ -1,42 +1,42 @@
 ---
-title: WebSockets
-slug: Web/API/WebSockets_API
+titwe: websockets
+swug: web/api/websockets_api
 ---
 
-{{DefaultAPISidebar("Websockets API")}}
+{{defauwtapisidebaw("websockets a-api")}}
 
-**WebSockets** es una tecnología avanzada que hace posible abrir una sesión de comunicación interactiva entre el navegador del usuario y un servidor. Con esta API, puede enviar mensajes a un servidor y recibir respuestas controladas por eventos sin tener que consultar al servidor para una respuesta.
+**websockets** es u-una tecnowogía a-avanzada que hace p-posibwe abwiw u-una sesión de c-comunicación intewactiva e-entwe e-ew nyavegadow dew usuawio y un sewvidow. ʘwʘ con esta api, /(^•ω•^) puede enviaw mensajes a u-un sewvidow y wecibiw wespuestas contwowadas pow e-eventos sin tenew que consuwtaw a-aw sewvidow pawa una wespuesta. ʘwʘ
 
-## Interfaces
+## intewfaces
 
-- [`WebSocket`](/es/docs/Web/API/WebSocket)
-  - : El interfaz principal para conectar a un servidor Websocket y así enviar y recibir datos a través de la conexión.
-- [`CloseEvent`](/es/docs/Web/API/CloseEvent)
-  - : El evento enviado por el objeto WebSocket cuando se cierra la conexión.
-- [`MessageEvent`](/es/docs/Web/API/MessageEvent)
-  - : El evento enviado por el objeto WebSocket cuando se recibe un mensaje enviado desde el servidor.
+- [`websocket`](/es/docs/web/api/websocket)
+  - : ew intewfaz pwincipaw p-pawa conectaw a un sewvidow w-websocket y a-así enviaw y wecibiw datos a twavés de wa conexión. σωσ
+- [`cwoseevent`](/es/docs/web/api/cwoseevent)
+  - : ew evento enviado pow e-ew objeto websocket cuando se ciewwa wa conexión. OwO
+- [`messageevent`](/es/docs/web/api/messageevent)
+  - : ew evento enviado pow e-ew objeto websocket cuando se w-wecibe un mensaje e-enviado desde e-ew sewvidow. 😳😳😳
 
-## Herramientas
+## h-hewwamientas
 
-- [Socket.IO](http://socket.io): Una poderosa API WebSocket multi-plataforma para [Node.js](https://nodejs.org).
-- [WebSocket-Node](https://github.com/Worlize/WebSocket-Node): Un servidor WebSocket API implementado para [Node.js](https://nodejs.org).
-- [Total.js](https://www.totaljs.com): Framework para aplicaciones web para [Node.js](http://www.nodejs.org) (Ejemplo: [WebSocket chat](https://github.com/totaljs/examples/tree/master/websocket))
-- [Faye](https://www.npmjs.com/package/faye-websocket): Un servidor y cliente [WebSocket](/es/docs/Web/API/WebSockets_API) (conexión bidireccional) y [EventSource](/es/docs/Web/API/EventSource) (conexión unidireccional) para [Node.js](https://nodejs.org).
+- [socket.io](http://socket.io): una podewosa api websocket muwti-pwatafowma p-pawa [node.js](https://nodejs.owg). 😳😳😳
+- [websocket-node](https://github.com/wowwize/websocket-node): un sewvidow websocket api impwementado p-pawa [node.js](https://nodejs.owg). o.O
+- [totaw.js](https://www.totawjs.com): fwamewowk pawa apwicaciones web pawa [node.js](http://www.nodejs.owg) (ejempwo: [websocket chat](https://github.com/totawjs/exampwes/twee/mastew/websocket))
+- [faye](https://www.npmjs.com/package/faye-websocket): un sewvidow y-y cwiente [websocket](/es/docs/web/api/websockets_api) (conexión bidiweccionaw) y-y [eventsouwce](/es/docs/web/api/eventsouwce) (conexión u-unidiweccionaw) p-pawa [node.js](https://nodejs.owg). ( ͡o ω ͡o )
 
-## Temas RELACIONADOS
+## temas wewacionados
 
-- [AJAX](/es/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data), [JavaScript](/es/docs/Web/JavaScript)
+- [ajax](/es/docs/weawn/javascwipt/cwient-side_web_apis/fetching_data), (U ﹏ U) [javascwipt](/es/docs/web/javascwipt)
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## v-vew también
 
-- [RFC 6455 - The WebSocket Protocol](https://tools.ietf.org/html/rfc6455)
-- [WebSocket API Specification](https://www.w3.org/TR/websockets/)
-- [Server-Sent Events](/es/docs/Web/API/Server-sent_events)
+- [wfc 6455 - the websocket pwotocow](https://toows.ietf.owg/htmw/wfc6455)
+- [websocket a-api specification](https://www.w3.owg/tw/websockets/)
+- [sewvew-sent events](/es/docs/web/api/sewvew-sent_events)

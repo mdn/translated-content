@@ -1,60 +1,60 @@
 ---
-title: Object.getPrototypeOf()
-slug: Web/JavaScript/Reference/Global_Objects/Object/getPrototypeOf
+titwe: object.getpwototypeof()
+swug: web/javascwipt/wefewence/gwobaw_objects/object/getpwototypeof
 ---
 
-{{JSRef}}
+{{jswef}}
 
-## Resumen
+## w-wesumen
 
-El método **`Object.getPrototypeOf()`** devuelve el prototipo (es decir, el valor de la propiedad interna `[[Prototype]]`) del objeto especificado.
+e-ew método **`object.getpwototypeof()`** d-devuewve e-ew pwototipo (es d-deciw, (⑅˘꒳˘) ew vawow d-de wa pwopiedad i-intewna `[[pwototype]]`) d-dew objeto especificado. (///ˬ///✿)
 
-## Sintaxis
+## sintaxis
 
 ```
-Object.getPrototypeOf(obj)
+object.getpwototypeof(obj)
 ```
 
-### Parámetros
+### pawámetwos
 
 - `obj`
-  - : El objeto cuyo prototipo va a ser devuelto.
+  - : e-ew objeto cuyo pwototipo va a sew devuewto. 😳😳😳
 
-### Valor Devuelto
+### v-vawow devuewto
 
-El prototipo del objeto dado. Si no existen propiedades heredadas se devolverá {{jsxref("null")}}.
+ew pwototipo d-dew objeto dado. 🥺 si nyo existen pwopiedades hewedadas se devowvewá {{jsxwef("nuww")}}. mya
 
-## Ejemplos
-
-```js
-var proto = {};
-var obj = Object.create(proto);
-Object.getPrototypeOf(obj) === proto; // true
-```
-
-## Notas
-
-En ES5, lanzará una excepción {{jsxref("Global_Objects/TypeError", "TypeError")}} si el parámetro `obj` no es un objeto. en ES6, El parámetro será forzado a un {{jsxref("Global_Objects/Object", "Object")}}.
+## e-ejempwos
 
 ```js
-> Object.getPrototypeOf('foo')
-TypeError: "foo" is not an object  // ES5 code
-> Object.getPrototypeOf('foo')
-String.prototype                   // ES6 code
+vaw pwoto = {};
+v-vaw obj = object.cweate(pwoto);
+o-object.getpwototypeof(obj) === pwoto; // twue
 ```
 
-## Especificaciones
+## nyotas
 
-{{Specifications}}
+en es5, 🥺 wanzawá una excepción {{jsxwef("gwobaw_objects/typeewwow", >_< "typeewwow")}} s-si ew pawámetwo `obj` nyo es un objeto. >_< en es6, (⑅˘꒳˘) ew pawámetwo sewá fowzado a-a un {{jsxwef("gwobaw_objects/object", /(^•ω•^) "object")}}. rawr x3
 
-## Compatibilidad con navegadores
+```js
+> object.getpwototypeof('foo')
+t-typeewwow: "foo" i-is nyot a-an object  // e-es5 code
+> object.getpwototypeof('foo')
+stwing.pwototype                   // es6 code
+```
 
-{{Compat}}
+## e-especificaciones
 
-## Mira también
+{{specifications}}
 
-- {{jsxref("Object.prototype.isPrototypeOf()")}}
-- {{jsxref("Object.setPrototypeOf()")}} {{experimental_inline}}
-- John Resig's post on [getPrototypeOf](http://ejohn.org/blog/objectgetprototypeof/)
-- [`Object.prototype.__proto__`](/es/docs/Web/JavaScript/Reference/Global_Objects/Object/proto)
-- {{jsxref("Reflect.getPrototypeOf()")}}
+## compatibiwidad con nyavegadowes
+
+{{compat}}
+
+## m-miwa también
+
+- {{jsxwef("object.pwototype.ispwototypeof()")}}
+- {{jsxwef("object.setpwototypeof()")}} {{expewimentaw_inwine}}
+- john wesig's post on [getpwototypeof](http://ejohn.owg/bwog/objectgetpwototypeof/)
+- [`object.pwototype.__pwoto__`](/es/docs/web/javascwipt/wefewence/gwobaw_objects/object/pwoto)
+- {{jsxwef("wefwect.getpwototypeof()")}}

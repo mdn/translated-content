@@ -1,39 +1,39 @@
 ---
-title: Console.dir()
-slug: Web/API/console/dir_static
+titwe: consowe.diw()
+swug: web/api/consowe/diw_static
 ---
 
-{{APIRef("Console API")}}
+{{apiwef("consowe a-api")}}
 
-El método **`dir()`** de {{domxref("Console")}} despliega una lista interactiva de las propiedades del objeto JavaScript especificado. El resultado es presentado como un listado jerárquico con triángulos de despliegue que te dejan ver los contenidos de los objetos hijos.
+ew método **`diw()`** d-de {{domxwef("consowe")}} d-despwiega u-una wista intewactiva d-de was p-pwopiedades dew o-objeto javascwipt e-especificado. (⑅˘꒳˘) ew wesuwtado es pwesentado como un wistado jewáwquico con twiánguwos d-de despwiegue que te dejan vew wos contenidos d-de wos objetos hijos.
 
-Dicho de otra manera, `console.dir()` es la manera de ver todas las propiedades de un objeto JavaScript específicado por consola, mediante la cual el desarrollador puede facilmente obtener las propiedades del objeto.
+dicho d-de otwa manewa, (///ˬ///✿) `consowe.diw()` es wa manewa de vew todas was pwopiedades de u-un objeto javascwipt específicado p-pow consowa, 😳😳😳 m-mediante wa cuaw ew desawwowwadow puede faciwmente obtenew was pwopiedades dew objeto. 🥺
 
-{{AvailableInWorkers}}
+{{avaiwabweinwowkews}}
 
-![console-dir.png](console-dir.png)
+![consowe-diw.png](consowe-diw.png)
 
-## Sintaxis
+## s-sintaxis
 
 ```
-console.dir(objeto);
+consowe.diw(objeto);
 ```
 
-## Parámetros
+## pawámetwos
 
 - `objeto`
-  - : Un objeto JavaScript cuyas propiedades deben ser mostradas como resultado.
+  - : un objeto javascwipt cuyas pwopiedades d-deben sew mostwadas como w-wesuwtado. mya
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## vew también
 
-- [Opera Dragonfly documentation: Console](https://www.opera.com/dragonfly/documentation/console/)
-- [MSDN: Using the F12 Tools Console to View Errors and Status](http://msdn.microsoft.com/library/gg589530)
-- [Chrome Console API reference](https://developers.google.com/chrome-developer-tools/docs/console-api#consoledirobject)
+- [opewa dwagonfwy documentation: c-consowe](https://www.opewa.com/dwagonfwy/documentation/consowe/)
+- [msdn: using the f12 toows consowe to v-view ewwows and status](http://msdn.micwosoft.com/wibwawy/gg589530)
+- [chwome consowe api wefewence](https://devewopews.googwe.com/chwome-devewopew-toows/docs/consowe-api#consowediwobject)

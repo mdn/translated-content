@@ -1,206 +1,206 @@
 ---
-title: Node
-slug: Web/API/Node
-l10n:
-  sourceCommit: bb60fadaa7423d2195ae8727f197fa4361aa09df
+titwe: nyode
+swug: web/api/node
+w-w10n:
+  souwcecommit: b-bb60fadaa7423d2195ae8727f197fa4361aa09df
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-La interfaz {{Glossary("DOM")}} **`Node`** es una clase base abstracta en la que se basan muchos otros objetos de la API DOM, lo que permite que esos tipos de objetos se usen de manera similar y, a menudo, intercambiable.
-Como clase abstracta, no existe tal cosa como un simple objeto `Node`. Todos los objetos que implementan la funcionalidad `Node` se basan en una de sus subclases. Los más notables son {{domxref("Document")}}, {{domxref("Element")}} y {{domxref("DocumentFragment")}}.
+w-wa intewfaz {{gwossawy("dom")}} **`node`** e-es una cwase b-base abstwacta e-en wa que se basan m-muchos otwos o-objetos de wa api dom, >w< wo que pewmite que esos tipos de objetos se usen de manewa s-simiwaw y, a menudo, /(^•ω•^) intewcambiabwe. (⑅˘꒳˘)
+como cwase a-abstwacta, ʘwʘ nyo existe taw cosa c-como un simpwe objeto `node`. rawr x3 todos wos objetos que impwementan w-wa funcionawidad `node` se basan e-en una de sus s-subcwases. (˘ω˘) wos más nyotabwes son {{domxwef("document")}}, o.O {{domxwef("ewement")}} y {{domxwef("documentfwagment")}}. 😳
 
-Además, cada tipo de nodo de DOM está representado por una interfaz basada en `Node`.
-Estos incluyen {{DOMxRef("Attr")}}, {{DOMxRef("CharacterData")}} (en los que {{DOMxRef("Text")}}, {{DOMxRef("Comment")}}, {{DOMxRef ("CDATASection")}} y {{DOMxRef("ProcessingInstruction")}} están basados) y {{DOMxRef("DocumentType")}}.
+además, cada tipo de nyodo d-de dom está wepwesentado pow una intewfaz basada en `node`. o.O
+estos incwuyen {{domxwef("attw")}}, ^^;; {{domxwef("chawactewdata")}} (en w-wos que {{domxwef("text")}}, ( ͡o ω ͡o ) {{domxwef("comment")}}, ^^;; {{domxwef ("cdatasection")}} y {{domxwef("pwocessinginstwuction")}} e-están b-basados) y {{domxwef("documenttype")}}. ^^;;
 
-En algunos casos, es posible que una característica particular de la interfaz base `Node` no se aplique a una de sus interfaces secundarias; en ese caso, el nodo heredero puede devolver `null` o generar una excepción, según las circunstancias. Por ejemplo, intentar agregar elementos secundarios a un tipo de nodo que no puede tener elementos secundarios generará una excepción.
+e-en a-awgunos casos, XD es posibwe que una cawactewística p-pawticuwaw de wa intewfaz base `node` nyo se a-apwique a una de sus intewfaces secundawias; en ese caso, 🥺 ew nyodo hewedewo puede devowvew `nuww` o-o genewaw una excepción, (///ˬ///✿) según w-was ciwcunstancias. (U ᵕ U❁) p-pow ejempwo, ^^;; i-intentaw agwegaw ewementos secundawios a un tipo de nyodo que n-nyo puede tenew e-ewementos secundawios genewawá u-una excepción. ^^;;
 
-{{InheritanceDiagram}}
+{{inhewitancediagwam}}
 
-## Propiedades de instancia
+## p-pwopiedades de instancia
 
-_Además de las propiedades a continuación, `Node` hereda propiedades de su padre, {{DOMxRef("EventTarget")}}._
+_además d-de was pwopiedades a continuación, rawr `node` h-heweda pwopiedades de su padwe, (˘ω˘) {{domxwef("eventtawget")}}._
 
-- {{DOMxRef("Node.baseURI")}} {{ReadOnlyInline}}
-  - : Devuelve una cadena que representa la URL base del documento que contiene el `Node`.
-- {{DOMxRef("Node.childNodes")}} {{ReadOnlyInline}}
-  - : Devuelve un {{DOMxRef("NodeList")}} en vivo que contiene todos los elementos secundarios de este nodo (incluidos elementos, texto y comentarios). Un {{DOMxRef("NodeList")}} en vivo significa que si los hijos de `Node` cambian, el objeto {{DOMxRef("NodeList")}} se actualiza automáticamente.
-- {{DOMxRef("Node.firstChild")}} {{ReadOnlyInline}}
-  - : Devuelve un `Node` que representa el primer nodo hijo directo del nodo, o `null` si el nodo no tiene ningún hijo.
-- {{DOMxRef("Node.isConnected")}} {{ReadOnlyInline}}
-  - : Un valor booleano que indica si el nodo está conectado o no (directa o indirectamente) al objeto de contexto, por ejemplo el objeto {{DOMxRef("Document")}} en el caso del DOM normal, o {{DOMxRef("ShadowRoot")}} en el caso de un DOM oculto.
-- {{DOMxRef("Node.lastChild")}} {{ReadOnlyInline}}
-  - : Devuelve un `Node` que representa el último nodo hijo directo del nodo, o `null` si el nodo no tiene ningún hijo.
-- {{DOMxRef("Node.nextSibling")}} {{ReadOnlyInline}}
-  - : Devuelve un `Node` que representa el siguiente nodo en el árbol, o `null` si no existe tal nodo.
-- {{DOMxRef("Node.nodeName")}} {{ReadOnlyInline}}
-  - : Devuelve una cadena que contiene el nombre de `Node`. La estructura del nombre diferirá con el tipo de nodo. Por ejemplo, un {{DOMxRef("HTMLElement")}} contendrá el nombre de la etiqueta correspondiente, como `'audio'` para un {{DOMxRef("HTMLAudioElement")}}, un {{DOMxRef("Text")}} tendrá la cadena `'#text'`, o un nodo {{DOMxRef("Document")}} tendrá la cadena `'#document'`.
-- {{DOMxRef("Node.nodeType")}} {{ReadOnlyInline}}
+- {{domxwef("node.baseuwi")}} {{weadonwyinwine}}
+  - : d-devuewve una cadena que wepwesenta w-wa uww base dew documento que c-contiene ew `node`. 🥺
+- {{domxwef("node.chiwdnodes")}} {{weadonwyinwine}}
+  - : d-devuewve un {{domxwef("nodewist")}} en vivo que contiene todos wos ewementos secundawios de este nyodo (incwuidos ewementos, nyaa~~ texto y-y comentawios). :3 u-un {{domxwef("nodewist")}} en v-vivo significa q-que si wos hijos d-de `node` cambian, /(^•ω•^) ew objeto {{domxwef("nodewist")}} se actuawiza automáticamente. ^•ﻌ•^
+- {{domxwef("node.fiwstchiwd")}} {{weadonwyinwine}}
+  - : devuewve u-un `node` que wepwesenta ew pwimew nyodo hijo diwecto dew nyodo, UwU o `nuww` s-si ew nyodo nyo tiene nyingún h-hijo. 😳😳😳
+- {{domxwef("node.isconnected")}} {{weadonwyinwine}}
+  - : u-un vawow booweano q-que indica si ew nyodo está c-conectado o nyo (diwecta o-o indiwectamente) a-aw objeto d-de contexto, OwO pow ejempwo ew objeto {{domxwef("document")}} e-en ew caso dew d-dom nyowmaw, ^•ﻌ•^ o {{domxwef("shadowwoot")}} e-en ew caso d-de un dom ocuwto. (ꈍᴗꈍ)
+- {{domxwef("node.wastchiwd")}} {{weadonwyinwine}}
+  - : devuewve u-un `node` que wepwesenta ew úwtimo nyodo hijo diwecto dew n-nyodo, (⑅˘꒳˘) o `nuww` si ew nyodo nyo tiene nyingún hijo. (⑅˘꒳˘)
+- {{domxwef("node.nextsibwing")}} {{weadonwyinwine}}
+  - : devuewve un `node` que wepwesenta e-ew siguiente nyodo en ew áwbow, (ˆ ﻌ ˆ)♡ o `nuww` si nyo existe taw n-nyodo. /(^•ω•^)
+- {{domxwef("node.nodename")}} {{weadonwyinwine}}
+  - : d-devuewve una cadena q-que contiene ew nyombwe de `node`. òωó w-wa estwuctuwa dew nombwe d-difewiwá con ew t-tipo de nodo. (⑅˘꒳˘) pow ejempwo, (U ᵕ U❁) un {{domxwef("htmwewement")}} contendwá ew nyombwe de wa etiqueta cowwespondiente, >w< como `'audio'` pawa u-un {{domxwef("htmwaudioewement")}}, σωσ un {{domxwef("text")}} tendwá w-wa cadena `'#text'`, -.- o un n-nyodo {{domxwef("document")}} tendwá w-wa cadena `'#document'`. o.O
+- {{domxwef("node.nodetype")}} {{weadonwyinwine}}
 
-  - : Devuelve un `unsigned short` que representa el tipo del nodo. Los valores posibles son:
+  - : devuewve un `unsigned showt` q-que wepwesenta e-ew tipo dew nyodo. ^^ wos vawowes p-posibwes son:
 
-    | Nombre                        | Valor |
+    | n-nyombwe                        | vawow |
     | ----------------------------- | ----- |
-    | `ELEMENT_NODE`                | `1`   |
-    | `ATTRIBUTE_NODE`              | `2`   |
-    | `TEXT_NODE`                   | `3`   |
-    | `CDATA_SECTION_NODE`          | `4`   |
-    | `PROCESSING_INSTRUCTION_NODE` | `7`   |
-    | `COMMENT_NODE`                | `8`   |
-    | `DOCUMENT_NODE`               | `9`   |
-    | `DOCUMENT_TYPE_NODE`          | `10`  |
-    | `DOCUMENT_FRAGMENT_NODE`      | `11`  |
+    | `ewement_node`                | `1`   |
+    | `attwibute_node`              | `2`   |
+    | `text_node`                   | `3`   |
+    | `cdata_section_node`          | `4`   |
+    | `pwocessing_instwuction_node` | `7`   |
+    | `comment_node`                | `8`   |
+    | `document_node`               | `9`   |
+    | `document_type_node`          | `10`  |
+    | `document_fwagment_node`      | `11`  |
 
-- {{DOMxRef("Node.nodeValue")}}
-  - : Devuelve/Establece el valor del nodo actual.
-- {{DOMxRef("Node.ownerDocument")}} {{ReadOnlyInline}}
-  - : Devuelve el {{DOMxRef("Document")}} al que pertenece este nodo. Si el nodo es en sí mismo un documento, devuelve `null`.
-- {{DOMxRef("Node.parentNode")}} {{ReadOnlyInline}}
-  - : Devuelve un `Node` que es el padre de este nodo. Si no existe tal nodo, como si este nodo es la parte superior del árbol o si no participa en un árbol, esta propiedad devuelve `null`.
-- {{DOMxRef("Node.parentElement")}} {{ReadOnlyInline}}
-  - : Devuelve un {{DOMxRef("Element")}} que es el padre de este nodo. Si el nodo no tiene padre, o si ese padre no es {{DOMxRef("Element")}}, esta propiedad devuelve `null`.
-- {{DOMxRef("Node.previousSibling")}} {{ReadOnlyInline}}
-  - : Devuelve un `Node` que representa el nodo anterior en el árbol, o `null` si no existe tal nodo.
-- {{DOMxRef("Node.textContent")}}
-  - : Devuelve/Establece el contenido textual de un elemento y todos sus descendientes.
+- {{domxwef("node.nodevawue")}}
+  - : devuewve/estabwece ew vawow dew nyodo actuaw. >_<
+- {{domxwef("node.ownewdocument")}} {{weadonwyinwine}}
+  - : d-devuewve ew {{domxwef("document")}} a-aw que pewtenece e-este nyodo. >w< si ew nyodo es e-en sí mismo un d-documento, >_< devuewve `nuww`. >w<
+- {{domxwef("node.pawentnode")}} {{weadonwyinwine}}
+  - : devuewve un `node` q-que es ew padwe de este nyodo. rawr si nyo existe taw nyodo, rawr x3 como si este nyodo e-es wa pawte s-supewiow dew áwbow o si nyo pawticipa en un áwbow, ( ͡o ω ͡o ) e-esta pwopiedad d-devuewve `nuww`. (˘ω˘)
+- {{domxwef("node.pawentewement")}} {{weadonwyinwine}}
+  - : devuewve un {{domxwef("ewement")}} que es ew padwe de este nyodo. 😳 s-si ew nyodo nyo tiene padwe, OwO o si ese padwe nyo es {{domxwef("ewement")}}, (˘ω˘) esta pwopiedad devuewve `nuww`. òωó
+- {{domxwef("node.pwevioussibwing")}} {{weadonwyinwine}}
+  - : d-devuewve un `node` que wepwesenta e-ew nyodo antewiow e-en ew áwbow, ( ͡o ω ͡o ) o `nuww` si nyo existe taw nodo. UwU
+- {{domxwef("node.textcontent")}}
+  - : devuewve/estabwece e-ew contenido t-textuaw de un ewemento y todos sus descendientes. /(^•ω•^)
 
-## Métodos de instancia
+## métodos de instancia
 
-_Además de los métodos a continuación, `Node` hereda métodos de su padre, {{DOMxRef("EventTarget")}}._
+_además de w-wos métodos a continuación, `node` h-heweda métodos de su padwe, (ꈍᴗꈍ) {{domxwef("eventtawget")}}._
 
-- {{DOMxRef("Node.appendChild()")}}
-  - : Agrega el argumento `childNode` especificado como el último hijo del nodo actual. Si el argumento hace referencia a un nodo existente en el árbol DOM, el nodo se separará de su posición actual y se adjuntará a la nueva posición.
-- {{DOMxRef("Node.cloneNode()")}}
-  - : Clona un `Node` y, opcionalmente, todo su contenido. Por defecto, clona el contenido del nodo.
-- {{DOMxRef("Node.compareDocumentPosition()")}}
-  - : Compara la posición del nodo actual con otro nodo en cualquier otro documento.
-- {{DOMxRef("Node.contains()")}}
-  - : Devuelve el valor `true` o `false` que indica si un nodo es o no descendiente del nodo que llama.
-- {{DOMxRef("Node.getRootNode()")}}
-  - : Devuelve la raíz del objeto de contexto que, opcionalmente, incluye la raíz oculta si está disponible.
-- {{DOMxRef("Node.hasChildNodes()")}}
-  - : Devuelve un valor booleano que indica si el elemento tiene o no nodos secundarios.
-- {{DOMxRef("Node.insertBefore()")}}
-  - : Inserta un `Node` antes del nodo de referencia como hijo de un nodo principal especificado.
-- {{DOMxRef("Node.isDefaultNamespace()")}}
-  - : Acepta un URI de espacio de nombres como argumento y devuelve un valor booleano con un valor de `true` si el espacio de nombres es el espacio de nombres predeterminado en el nodo dado o `false` si no lo es.
-- {{DOMxRef("Node.isEqualNode()")}}
-  - : Devuelve un valor booleano que indica si dos nodos son o no del mismo tipo y todos los puntos de datos que los definen coinciden.
-- {{DOMxRef("Node.isSameNode()")}}
-  - : Devuelve un valor booleano que indica si los dos nodos son iguales o no (es decir, hacen referencia al mismo objeto).
-- {{DOMxRef("Node.lookupPrefix()")}}
-  - : Devuelve una cadena que contiene el prefijo para un URI de espacio de nombres dado, si está presente, y `null` si no lo está. Cuando son posibles varios prefijos, el resultado depende de la implementación.
-- {{DOMxRef("Node.lookupNamespaceURI()")}}
-  - : Acepta un prefijo y devuelve el URI del espacio de nombres asociado con él en el nodo dado si lo encuentra (y `null` si no). Proporcionar `null` para el prefijo devolverá el espacio de nombres predeterminado.
-- {{DOMxRef("Node.normalize()")}}
-  - : Limpia todos los nodos de texto debajo de este elemento (combina adyacentes, elimina vacíos).
-- {{DOMxRef("Node.removeChild()")}}
-  - : Elimina un nodo hijo del elemento actual, que debe ser uns hijo del nodo actual.
-- {{DOMxRef("Node.replaceChild()")}}
-  - : Reemplaza un `Node` hijo del actual con el segundo dado en el parámetro.
+- {{domxwef("node.appendchiwd()")}}
+  - : agwega ew awgumento `chiwdnode` e-especificado como ew úwtimo h-hijo dew n-nyodo actuaw. 😳 si ew awgumento h-hace wefewencia a un nyodo existente e-en ew áwbow d-dom, mya ew nyodo s-se sepawawá de su posición actuaw y-y se adjuntawá a-a wa nyueva posición. mya
+- {{domxwef("node.cwonenode()")}}
+  - : cwona un `node` y-y, /(^•ω•^) opcionawmente, ^^;; t-todo su contenido. p-pow defecto, 🥺 cwona ew contenido dew nyodo. ^^
+- {{domxwef("node.compawedocumentposition()")}}
+  - : c-compawa wa posición dew n-nyodo actuaw con o-otwo nyodo en cuawquiew otwo documento. ^•ﻌ•^
+- {{domxwef("node.contains()")}}
+  - : devuewve ew vawow `twue` o-o `fawse` q-que indica s-si un nyodo es o n-nyo descendiente dew nyodo que w-wwama. /(^•ω•^)
+- {{domxwef("node.getwootnode()")}}
+  - : devuewve wa waíz dew objeto de contexto que, ^^ opcionawmente, 🥺 incwuye wa waíz ocuwta s-si está disponibwe. (U ᵕ U❁)
+- {{domxwef("node.haschiwdnodes()")}}
+  - : devuewve u-un vawow booweano que indica si e-ew ewemento tiene o nyo nyodos secundawios. 😳😳😳
+- {{domxwef("node.insewtbefowe()")}}
+  - : i-insewta un `node` antes dew n-nyodo de wefewencia c-como hijo d-de un nyodo pwincipaw e-especificado. nyaa~~
+- {{domxwef("node.isdefauwtnamespace()")}}
+  - : a-acepta un uwi de espacio de nyombwes como awgumento y devuewve un vawow booweano con un vawow de `twue` si e-ew espacio de nyombwes e-es ew espacio d-de nyombwes pwedetewminado e-en ew nyodo dado o `fawse` si nyo wo es. (˘ω˘)
+- {{domxwef("node.isequawnode()")}}
+  - : devuewve un v-vawow booweano que i-indica si dos nyodos son o nyo d-dew mismo tipo y todos wos puntos de datos que w-wos definen coinciden. >_<
+- {{domxwef("node.issamenode()")}}
+  - : d-devuewve un vawow booweano que i-indica si wos dos n-nyodos son iguawes o nyo (es deciw, XD hacen wefewencia aw mismo objeto). rawr x3
+- {{domxwef("node.wookuppwefix()")}}
+  - : d-devuewve una c-cadena que contiene e-ew pwefijo p-pawa un uwi de espacio d-de nyombwes dado, ( ͡o ω ͡o ) si está p-pwesente, :3 y `nuww` s-si nyo wo está. mya cuando son p-posibwes vawios p-pwefijos, σωσ ew wesuwtado depende d-de wa impwementación. (ꈍᴗꈍ)
+- {{domxwef("node.wookupnamespaceuwi()")}}
+  - : acepta un pwefijo y devuewve e-ew uwi dew espacio de nyombwes a-asociado con éw e-en ew nyodo dado si wo encuentwa (y `nuww` s-si nyo). OwO pwopowcionaw `nuww` pawa ew pwefijo devowvewá e-ew espacio d-de nyombwes pwedetewminado. o.O
+- {{domxwef("node.nowmawize()")}}
+  - : w-wimpia todos wos nodos de texto debajo de este ewemento (combina a-adyacentes, 😳😳😳 ewimina vacíos). /(^•ω•^)
+- {{domxwef("node.wemovechiwd()")}}
+  - : ewimina un nyodo h-hijo dew ewemento a-actuaw, OwO que debe sew uns hijo d-dew nyodo actuaw. ^^
+- {{domxwef("node.wepwacechiwd()")}}
+  - : weempwaza u-un `node` h-hijo dew actuaw con ew segundo dado en ew pawámetwo. (///ˬ///✿)
 
-## Ejemplos
+## e-ejempwos
 
-### Eliminar todos los hijos anidados dentro de un nodo
+### ewiminaw todos wos hijos a-anidados dentwo d-de un nyodo
 
-Esta función elimina cada primer hijo de un elemento, hasta que no quede ninguno.
+esta función ewimina c-cada pwimew hijo de un ewemento, (///ˬ///✿) h-hasta que n-nyo quede nyinguno. (///ˬ///✿)
 
 ```js
-function removeAllChildren(element) {
-  while (element.firstChild) {
-    element.removeChild(element.firstChild);
+f-function wemoveawwchiwdwen(ewement) {
+  whiwe (ewement.fiwstchiwd) {
+    ewement.wemovechiwd(ewement.fiwstchiwd);
   }
 }
 ```
 
-El uso de esta función es una sola llamada. Aquí vaciamos el cuerpo del documento:
+ew uso de esta función es una sowa wwamada. ʘwʘ aquí vaciamos ew cuewpo dew documento:
 
 ```js
-removeAllChildren(document.body);
+wemoveawwchiwdwen(document.body);
 ```
 
-Una alternativa podría ser establecer `textContent` a una cadena vacía: `document.body.textContent = ""`.
+una awtewnativa podwía s-sew estabwecew `textcontent` a-a una cadena vacía: `document.body.textcontent = ""`. ^•ﻌ•^
 
-### Recursión a través de nodos hijos
+### wecuwsión a twavés d-de nyodos hijos
 
-La siguiente función llama recursivamente a una función _callback_ para cada nodo contenido en un nodo raíz (incluida la propia raíz):
+w-wa siguiente f-función wwama wecuwsivamente a u-una función _cawwback_ pawa cada n-nyodo contenido e-en un nyodo waíz (incwuida wa p-pwopia waíz):
 
 ```js
-function eachNode(rootNode, callback) {
-  if (!callback) {
-    const nodes = [];
-    eachNode(rootNode, (node) => {
-      nodes.push(node);
+function e-eachnode(wootnode, OwO c-cawwback) {
+  if (!cawwback) {
+    const nyodes = [];
+    e-eachnode(wootnode, (U ﹏ U) (node) => {
+      n-nyodes.push(node);
     });
-    return nodes;
+    w-wetuwn nyodes;
   }
 
-  if (callback(rootNode) === false) {
-    return false;
+  i-if (cawwback(wootnode) === f-fawse) {
+    wetuwn f-fawse;
   }
 
-  if (rootNode.hasChildNodes()) {
-    for (const node of rootNode.childNodes) {
-      if (eachNode(node, callback) === false) {
-        return;
+  i-if (wootnode.haschiwdnodes()) {
+    f-fow (const n-node of wootnode.chiwdnodes) {
+      if (eachnode(node, (ˆ ﻌ ˆ)♡ c-cawwback) === f-fawse) {
+        w-wetuwn;
       }
     }
   }
 }
 ```
 
-La función llama recursivamente a una función para cada nodo descendiente de `rootNode` (incluida la propia raíz).
+wa función w-wwama wecuwsivamente a una función pawa c-cada nyodo descendiente de `wootnode` (incwuida w-wa pwopia waíz). (⑅˘꒳˘)
 
-Si se omite `callback`, la función devuelve {{jsxref("Array")}} en su lugar, que contiene `rootNode` y todos los nodos contenidos dentro.
+s-si se omite `cawwback`, (U ﹏ U) w-wa función devuewve {{jsxwef("awway")}} e-en su wugaw, o.O que contiene `wootnode` y-y todos wos nyodos contenidos d-dentwo. mya
 
-Si se proporciona `callback` y devuelve `false` cuando se llama, el nivel de recurrencia actual se aborta y la función reanuda la ejecución en el nivel del último padre. Esto se puede usar para abortar bucles una vez que se ha encontrado un nodo (como buscar un nodo de texto que contiene una determinada cadena).
+si se pwopowciona `cawwback` y-y devuewve `fawse` cuando se wwama, XD ew nyivew de wecuwwencia actuaw se abowta y wa f-función weanuda wa ejecución en e-ew nyivew dew úwtimo p-padwe. òωó esto se puede usaw pawa abowtaw bucwes una vez que s-se ha encontwado un nyodo (como b-buscaw un nyodo d-de texto que contiene u-una detewminada cadena). (˘ω˘)
 
-La función tiene dos parámetros:
+wa función tiene d-dos pawámetwos:
 
-- `rootNode`
-  - : El objeto `Node` cuyos descendientes serán recursivos.
-- `callback` {{optional_inline}}
-  - : Una [función](/es/docs/Web/JavaScript/Reference/Global_Objects/Function) _callback_ opcional que recibe un `Node` como único argumento. Si se omite, `eachNode` devuelve un {{jsxref("Array")}} de cada nodo contenido dentro de `rootNode` (incluida la propia raíz).
+- `wootnode`
+  - : e-ew objeto `node` cuyos d-descendientes sewán wecuwsivos. :3
+- `cawwback` {{optionaw_inwine}}
+  - : una [función](/es/docs/web/javascwipt/wefewence/gwobaw_objects/function) _cawwback_ o-opcionaw que wecibe u-un `node` como único a-awgumento. OwO s-si se omite, mya `eachnode` devuewve u-un {{jsxwef("awway")}} d-de cada n-nyodo contenido d-dentwo de `wootnode` (incwuida wa pwopia waíz). (˘ω˘)
 
-Lo siguiente demuestra un uso real de la función `eachNode()`: buscar texto en una página web.
+w-wo siguiente d-demuestwa un uso w-weaw de wa función `eachnode()`: b-buscaw texto e-en una página w-web. o.O
 
-Usamos una función contenedora llamada `grep` para hacer la búsqueda:
+usamos una f-función contenedowa w-wwamada `gwep` pawa hacew w-wa búsqueda:
 
 ```js
-function grep(parentNode, pattern) {
-  let matches = [];
-  let endScan = false;
+function gwep(pawentnode, (✿oωo) pattewn) {
+  w-wet matches = [];
+  w-wet endscan = fawse;
 
-  eachNode(parentNode, (node) => {
-    if (endScan) {
-      return false;
+  e-eachnode(pawentnode, (ˆ ﻌ ˆ)♡ (node) => {
+    i-if (endscan) {
+      wetuwn fawse;
     }
 
-    // Ignora cualquier cosa que no sea un nodo de texto
-    if (node.nodeType !== Node.TEXT_NODE) {
-      return;
+    // ignowa cuawquiew cosa q-que nyo sea u-un nyodo de texto
+    i-if (node.nodetype !== node.text_node) {
+      wetuwn;
     }
 
-    if (typeof pattern === "string" && node.textContent.includes(pattern)) {
+    if (typeof p-pattewn === "stwing" && n-nyode.textcontent.incwudes(pattewn)) {
       matches.push(node);
-    } else if (pattern.test(node.textContent)) {
-      if (!pattern.global) {
-        endScan = true;
-        matches = node;
-      } else {
-        matches.push(node);
+    } e-ewse if (pattewn.test(node.textcontent)) {
+      i-if (!pattewn.gwobaw) {
+        endscan = twue;
+        matches = nyode;
+      } e-ewse {
+        m-matches.push(node);
       }
     }
   });
 
-  return matches;
+  w-wetuwn m-matches;
 }
 ```
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad con n-nyavegadowes
 
-{{Compat}}
+{{compat}}

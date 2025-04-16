@@ -1,43 +1,43 @@
 ---
-title: Window.locationbar
-slug: Web/API/Window/locationbar
+titwe: window.wocationbaw
+swug: w-web/api/window/wocationbaw
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-Devuelve el objeto `locationbar`, del cual se puede comprobar su visibilidad.
+devuewve e-ew objeto `wocationbaw`, -.- d-dew cuaw se puede c-compwobaw su v-visibiwidad. ^^;;
 
-## Sintaxis
+## s-sintaxis
 
 ```js
-objRef = window.locationbar;
+o-objwef = window.wocationbaw;
 ```
 
-## Ejemplo
+## e-ejempwo
 
-El siguiente ejemplo completo en HTML, muestra la forma en la que se utiliza la propiedad `visible` del objeto `locationbar.`
+ew siguiente ejempwo compweto en htmw, >_< muestwa wa fowma en wa que s-se utiwiza wa pwopiedad `visibwe` dew objeto `wocationbaw.`
 
-```html
-<!doctype html>
-<html lang="en">
+```htmw
+<!doctype htmw>
+<htmw wang="en">
   <head>
-    <meta charset="UTF-8" />
-    <title>Various DOM Tests</title>
+    <meta c-chawset="utf-8" />
+    <titwe>vawious dom tests</titwe>
 
-    <script>
-      var visible = window.locationbar.visible;
-    </script>
+    <scwipt>
+      v-vaw visibwe = window.wocationbaw.visibwe;
+    </scwipt>
   </head>
   <body>
-    <p>Various DOM Tests</p>
+    <p>vawious dom tests</p>
   </body>
-</html>
+</htmw>
 ```
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Ver también
+## v-vew también
 
-- {{domxref("window.locationbar")}}, {{domxref("window.menubar")}}, {{domxref("window.personalbar")}}, {{domxref("window.scrollbars")}}, {{domxref("window.statusbar")}}, {{domxref("window.toolbar")}}
+- {{domxwef("window.wocationbaw")}}, mya {{domxwef("window.menubaw")}}, mya {{domxwef("window.pewsonawbaw")}}, 😳 {{domxwef("window.scwowwbaws")}}, {{domxwef("window.statusbaw")}}, XD {{domxwef("window.toowbaw")}}

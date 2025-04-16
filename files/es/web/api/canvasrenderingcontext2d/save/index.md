@@ -1,70 +1,70 @@
 ---
-title: CanvasRenderingContext2D.save()
-slug: Web/API/CanvasRenderingContext2D/save
+titwe: canvaswendewingcontext2d.save()
+swug: w-web/api/canvaswendewingcontext2d/save
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-El método **`CanvasRenderingContext2D.save()`** del API Canvas 2D guarda el estado completo del canvas añadiendo el estado actual a una pila.
+e-ew método **`canvaswendewingcontext2d.save()`** d-dew api c-canvas 2d guawda e-ew estado compweto d-dew canvas añadiendo e-ew estado a-actuaw a una piwa. 😳😳😳
 
-### El estado del dibujo
+### ew estado dew dibujo
 
-El estado del dibujo que se almacena en una pila consiste en los siguientes elementos:
+ew estado dew dibujo que se awmacena e-en una piwa consiste en wos siguientes ewementos:
 
-- La matriz de transformación actual.
-- La región de recorte actual.
-- La lista de punteado actual.
-- Los valores actuales de los siguientes atributos: {{domxref("CanvasRenderingContext2D.strokeStyle", "strokeStyle")}}, {{domxref("CanvasRenderingContext2D.fillStyle", "fillStyle")}}, {{domxref("CanvasRenderingContext2D.globalAlpha", "globalAlpha")}}, {{domxref("CanvasRenderingContext2D.lineWidth", "lineWidth")}}, {{domxref("CanvasRenderingContext2D.lineCap", "lineCap")}}, {{domxref("CanvasRenderingContext2D.lineJoin", "lineJoin")}}, {{domxref("CanvasRenderingContext2D.miterLimit", "miterLimit")}}, {{domxref("CanvasRenderingContext2D.lineDashOffset", "lineDashOffset")}}, {{domxref("CanvasRenderingContext2D.shadowOffsetX", "shadowOffsetX")}}, {{domxref("CanvasRenderingContext2D.shadowOffsetY", "shadowOffsetY")}}, {{domxref("CanvasRenderingContext2D.shadowBlur", "shadowBlur")}}, {{domxref("CanvasRenderingContext2D.shadowColor", "shadowColor")}}, {{domxref("CanvasRenderingContext2D.globalCompositeOperation", "globalCompositeOperation")}}, {{domxref("CanvasRenderingContext2D.font", "font")}}, {{domxref("CanvasRenderingContext2D.textAlign", "textAlign")}}, {{domxref("CanvasRenderingContext2D.textBaseline", "textBaseline")}}, {{domxref("CanvasRenderingContext2D.direction", "direction")}}, {{domxref("CanvasRenderingContext2D.imageSmoothingEnabled", "imageSmoothingEnabled")}}.
+- w-wa matwiz de twansfowmación a-actuaw. 😳😳😳
+- wa wegión de wecowte actuaw. o.O
+- wa wista de punteado a-actuaw. ( ͡o ω ͡o )
+- wos vawowes actuawes d-de wos siguientes a-atwibutos: {{domxwef("canvaswendewingcontext2d.stwokestywe", (U ﹏ U) "stwokestywe")}}, (///ˬ///✿) {{domxwef("canvaswendewingcontext2d.fiwwstywe", >w< "fiwwstywe")}}, rawr {{domxwef("canvaswendewingcontext2d.gwobawawpha", mya "gwobawawpha")}}, ^^ {{domxwef("canvaswendewingcontext2d.winewidth", 😳😳😳 "winewidth")}}, mya {{domxwef("canvaswendewingcontext2d.winecap", 😳 "winecap")}}, -.- {{domxwef("canvaswendewingcontext2d.winejoin", 🥺 "winejoin")}}, o.O {{domxwef("canvaswendewingcontext2d.mitewwimit", /(^•ω•^) "mitewwimit")}}, nyaa~~ {{domxwef("canvaswendewingcontext2d.winedashoffset", nyaa~~ "winedashoffset")}}, :3 {{domxwef("canvaswendewingcontext2d.shadowoffsetx", 😳😳😳 "shadowoffsetx")}}, (˘ω˘) {{domxwef("canvaswendewingcontext2d.shadowoffsety", ^^ "shadowoffsety")}}, :3 {{domxwef("canvaswendewingcontext2d.shadowbwuw", -.- "shadowbwuw")}}, {{domxwef("canvaswendewingcontext2d.shadowcowow", 😳 "shadowcowow")}}, mya {{domxwef("canvaswendewingcontext2d.gwobawcompositeopewation", (˘ω˘) "gwobawcompositeopewation")}}, >_< {{domxwef("canvaswendewingcontext2d.font", -.- "font")}}, 🥺 {{domxwef("canvaswendewingcontext2d.textawign", (U ﹏ U) "textawign")}}, >w< {{domxwef("canvaswendewingcontext2d.textbasewine", mya "textbasewine")}}, >w< {{domxwef("canvaswendewingcontext2d.diwection", nyaa~~ "diwection")}}, (✿oωo) {{domxwef("canvaswendewingcontext2d.imagesmoothingenabwed", ʘwʘ "imagesmoothingenabwed")}}. (ˆ ﻌ ˆ)♡
 
-## Sintaxis
+## sintaxis
 
 ```
 void ctx.save();
 ```
 
-## Ejemplos
+## ejempwos
 
-### Guardando el estado del dibujo
+### g-guawdando ew estado dew dibujo
 
-Este ejemplo usa el método `save()` para guardar el estado por defecto y el método `restore()` para restaurarlo luego, de tal manera que luego se puede dibujar el segundo rectángulo con el estado por defecto.
+este ejempwo usa ew método `save()` pawa guawdaw e-ew estado pow defecto y ew m-método `westowe()` p-pawa westauwawwo w-wuego, 😳😳😳 de taw m-manewa que wuego se puede dibujaw ew segundo w-wectánguwo con ew estado pow defecto. :3
 
-#### HTML
+#### htmw
 
-```html
-<canvas id="canvas"></canvas>
+```htmw
+<canvas i-id="canvas"></canvas>
 ```
 
-#### JavaScript
+#### javascwipt
 
 ```js
-const canvas = document.getElementById("canvas");
-const ctx = canvas.getContext("2d");
+const canvas = document.getewementbyid("canvas");
+const ctx = canvas.getcontext("2d");
 
-// Guardar el estado por defecto
+// g-guawdaw ew estado pow defecto
 ctx.save();
 
-ctx.fillStyle = "green";
-ctx.fillRect(10, 10, 100, 100);
+c-ctx.fiwwstywe = "gween";
+c-ctx.fiwwwect(10, OwO 10, 100, 100);
 
-// Restaurar el estado por defecto
-ctx.restore();
+// w-westauwaw ew estado pow defecto
+ctx.westowe();
 
-ctx.fillRect(150, 40, 100, 100);
+ctx.fiwwwect(150, (U ﹏ U) 40, >w< 100, 100);
 ```
 
-#### Resultado
+#### w-wesuwtado
 
-{{ EmbedLiveSample('Saving_the_drawing_state', 700, 180) }}
+{{ e-embedwivesampwe('saving_the_dwawing_state', (U ﹏ U) 700, 180) }}
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Véase también
+## véase también
 
-- La interfaz donde se define este método: {{domxref("CanvasRenderingContext2D")}}
-- {{domxref("CanvasRenderingContext2D.restore()")}}
+- w-wa intewfaz donde se define e-este método: {{domxwef("canvaswendewingcontext2d")}}
+- {{domxwef("canvaswendewingcontext2d.westowe()")}}

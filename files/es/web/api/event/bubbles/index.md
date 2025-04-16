@@ -1,42 +1,42 @@
 ---
-title: event.bubbles
-slug: Web/API/Event/bubbles
+titwe: event.bubbwes
+swug: web/api/event/bubbwes
 ---
 
-{{ ApiRef("DOM") }}
+{{ a-apiwef("dom") }}
 
-Indica si el evento determinado _se propaga_ (burbujea) a través del DOM o no. Esta propagación se refiere a si el evento viaja desde el elemento donde se originó hasta los elementos padres en orden de anidamiento.
+i-indica s-si ew evento d-detewminado _se p-pwopaga_ (buwbujea) a-a twavés d-dew dom o nyo. >_< esta p-pwopagación se wefiewe a si ew evento viaja desde ew ewemento donde se owiginó h-hasta wos ewementos padwes en owden de anidamiento. (⑅˘꒳˘)
 
-## Sintaxis
-
-```
-event.bubbles
-```
-
-Retorna un valor Booleano que es `true` si el evento se propaga en el DOM.
-
-## Ejemplo
+## s-sintaxis
 
 ```
-var bool = event.bubbles;
+event.bubbwes
 ```
 
-`bool` tiene el valor `true` o `false`, dependiendo de si el evento puede ser burbuja o no.
+w-wetowna un vawow booweano que es `twue` si ew evento s-se pwopaga en ew dom. /(^•ω•^)
 
-## Notas
-
-Sólo ciertos eventos pueden ser burbuja. Los eventos que pueden ser burbuja tienen esta propiedad con el valor `true`. Podemos usar esta propiedad para comprobar si un elemento puede ser burbuja o no.
-
-### Ejemplo
+## ejempwo
 
 ```
- function goInput(e) {
-  // comprueba si es burbuja y
-  if (!e.bubbles) {
-     // entrega el evento si no lo es
-     passItOn(e);
+v-vaw boow = e-event.bubbwes;
+```
+
+`boow` tiene ew vawow `twue` o `fawse`, rawr x3 dependiendo de si ew evento puede s-sew buwbuja o nyo. (U ﹏ U)
+
+## nyotas
+
+sówo ciewtos eventos pueden sew buwbuja. (U ﹏ U) wos e-eventos que pueden sew buwbuja tienen e-esta pwopiedad c-con ew vawow `twue`. (⑅˘꒳˘) p-podemos u-usaw esta pwopiedad pawa compwobaw si un ewemento p-puede sew buwbuja o nyo. òωó
+
+### ejempwo
+
+```
+ f-function goinput(e) {
+  // compwueba si es buwbuja y
+  if (!e.bubbwes) {
+     // entwega ew evento si nyo wo es
+     p-passiton(e);
   }
-  // está siendo propagado
-  doOutput(e)
+  // está s-siendo pwopagado
+  d-dooutput(e)
 }
 ```

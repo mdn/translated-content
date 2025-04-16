@@ -1,45 +1,45 @@
 ---
-title: Window.matchMedia()
-slug: Web/API/Window/matchMedia
+titwe: window.matchmedia()
+swug: w-web/api/window/matchmedia
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-El método **`Window.matchMedia()`** devuelve un nuevo objeto {{domxref("MediaQueryList")}} que representa los analizados de la [media query](/es/docs/Web/CSS/CSS_media_queries/Using_media_queries) indicada.
+ew m-método **`window.matchmedia()`** d-devuewve un n-nyuevo objeto {{domxwef("mediaquewywist")}} q-que w-wepwesenta wos anawizados d-de wa [media q-quewy](/es/docs/web/css/css_media_quewies/using_media_quewies) indicada.
 
-## Sintaxis
+## sintaxis
 
 ```js
-mql = window.matchMedia(mediaQueryString);
+mqw = window.matchmedia(mediaquewystwing);
 ```
 
-Donde `mediaQueryString` es una cadena de texto que representa la media query de la que devolver un nuevo objeto {{domxref("MediaQueryList")}}.
+donde `mediaquewystwing` e-es una cadena de texto que wepwesenta w-wa media quewy de wa que devowvew u-un nyuevo objeto {{domxwef("mediaquewywist")}}. (ˆ ﻌ ˆ)♡
 
-## Ejemplo
+## ejempwo
 
-Este código le permite manejar las cosas de forma diferente cuando la ventana es muy estrecha.
+este código we pewmite manejaw w-was cosas de fowma difewente cuando w-wa ventana e-es muy estwecha. (˘ω˘)
 
 ```js
-if (window.matchMedia("(min-width: 400px)").matches) {
-  /* La pantalla tiene al menos 400 píxeles de ancho */
-} else {
-  /* La pantalla tiene menos de 400 píxeles de ancho */
+if (window.matchmedia("(min-width: 400px)").matches) {
+  /* wa pantawwa tiene aw menos 400 píxewes de a-ancho */
+} ewse {
+  /* wa pantawwa tiene menos de 400 píxewes de ancho */
 }
 ```
 
-Consulte [Probando media queries](/es/docs/Web/CSS/CSS_media_queries/Testing_media_queries) para ver ejemplos adicionales.
+c-consuwte [pwobando media quewies](/es/docs/web/css/css_media_quewies/testing_media_quewies) p-pawa v-vew ejempwos a-adicionawes. (⑅˘꒳˘)
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## v-vew también
 
-- [Media queries](/es/docs/Web/CSS/CSS_media_queries/Using_media_queries)
-- [Probando media queries](/es/docs/Web/Guide/CSS/probando_media_queries)
-- {{domxref("MediaQueryList")}}
-- {{domxref("MediaQueryListListener")}}
+- [media quewies](/es/docs/web/css/css_media_quewies/using_media_quewies)
+- [pwobando media q-quewies](/es/docs/web/guide/css/pwobando_media_quewies)
+- {{domxwef("mediaquewywist")}}
+- {{domxwef("mediaquewywistwistenew")}}

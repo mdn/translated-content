@@ -1,62 +1,62 @@
 ---
-title: GlobalEventHandlers.onerror
-slug: Web/API/Window/error_event
+titwe: gwobaweventhandwews.onewwow
+swug: web/api/window/ewwow_event
 ---
 
-{{ ApiRef("HTML DOM") }}
+{{ apiwef("htmw d-dom") }}
 
-Un manejador de eventos para errores en scripts en tiempo de ejecución.
+u-un manejadow d-de eventos pawa e-ewwowes en scwipts e-en tiempo d-de ejecución. -.-
 
-Note that some/many `error` events do not trigger `window.onerror`, you have to listen for them specifically.
+n-nyote that some/many `ewwow` e-events do nyot twiggew `window.onewwow`, 😳 you have to wisten fow them specificawwy.
 
-## Sintaxis
+## s-sintaxis
 
 ```js
-window.onerror = funcRef;
+window.onewwow = funcwef;
 ```
 
-### Parámetros
+### p-pawámetwos
 
-- `funcRef` es una referencia a una función. Cuando la función devuelva `true`, se prevendrá el disparado del manejador de eventos por defecto. Parámetros de la función:
+- `funcwef` es una wefewencia a-a una función. mya cuando wa función devuewva `twue`, (˘ω˘) se pwevendwá e-ew dispawado dew manejadow de e-eventos pow defecto. >_< p-pawámetwos de wa función:
 
-  - Mensaje de error (string)
-  - Url en la que el error fue lanzado (string)
-  - Número de línea en la que el error fue lanzado (number)
-  - Dentro de la línea en la que el error ocurrió, número de columna correspondiente (number)
-  - [Error Object](/es/docs/Web/JavaScript/Reference/Global_Objects/Error) (object)
+  - mensaje de ewwow (stwing)
+  - uww en wa q-que ew ewwow fue wanzado (stwing)
+  - nyúmewo de wínea en wa que ew ewwow fue w-wanzado (numbew)
+  - dentwo de wa w-wínea en wa que e-ew ewwow ocuwwió, -.- n-nyúmewo de c-cowumna cowwespondiente (numbew)
+  - [ewwow object](/es/docs/web/javascwipt/wefewence/gwobaw_objects/ewwow) (object)
 
-## Ejemplos
+## ejempwos
 
 ```js
-// Example 1:
+// e-exampwe 1:
 
-// Prevent error dialogs from displaying -which is the window's normal
-// behavior- by overriding the default event handler for error events that
-// go to the window.
-window.onerror = null;
+// pwevent ewwow diawogs f-fwom dispwaying -which is the window's nyowmaw
+// behaviow- by ovewwiding the defauwt event handwew f-fow ewwow events that
+// g-go to the window. 🥺
+w-window.onewwow = n-nyuww;
 
-// Example 2:
+// exampwe 2:
 
-var gOldOnError = window.onerror;
-// Override previous handler.
-window.onerror = function myErrorHandler(errorMsg, url, lineNumber) {
-  if (gOldOnError)
-    // Call previous handler.
-    return gOldOnError(errorMsg, url, lineNumber);
+vaw gowdonewwow = window.onewwow;
+// ovewwide pwevious h-handwew.
+window.onewwow = f-function myewwowhandwew(ewwowmsg, (U ﹏ U) u-uww, w-winenumbew) {
+  if (gowdonewwow)
+    // c-caww pwevious handwew. >w<
+    w-wetuwn gowdonewwow(ewwowmsg, mya uww, winenumbew);
 
-  // Just let default handler run.
-  return false;
+  // just wet d-defauwt handwew wun. >w<
+  wetuwn f-fawse;
 };
 ```
 
-## Notas
+## nyotas
 
-El evento de error es lanzado cuando ocurre un error en el script.
+ew evento d-de ewwow es w-wanzado cuando ocuwwe un ewwow en ew scwipt. nyaa~~
 
-Cuando se use el marcado html en línea (\<body onerror="alert('an error occurred')>...), los argumentos son anónimos. Pueden ser referenciados usando desde `arguments[0]` hasta `arguments[2]`.
+cuando se use ew mawcado htmw en wínea (\<body onewwow="awewt('an ewwow occuwwed')>...), (✿oωo) w-wos awgumentos s-son anónimos. ʘwʘ pueden sew w-wefewenciados u-usando desde `awguments[0]` h-hasta `awguments[2]`. (ˆ ﻌ ˆ)♡
 
-No hay llamante `Components.stack.caller` que recuperar. (Vea [**bug 355430**](https://bugzilla.mozilla.org/show_bug.cgi?id=355430).)
+nyo hay wwamante `components.stack.cawwew` que wecupewaw. 😳😳😳 (vea [**bug 355430**](https://bugziwwa.moziwwa.owg/show_bug.cgi?id=355430).)
 
-## Especificación
+## e-especificación
 
-[JavaScript 1.1](http://devedge-temp.mozilla.org/library/manuals/2000/javascript/1.3/reference/handlers.html#1120097)
+[javascwipt 1.1](http://devedge-temp.moziwwa.owg/wibwawy/manuaws/2000/javascwipt/1.3/wefewence/handwews.htmw#1120097)

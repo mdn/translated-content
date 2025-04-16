@@ -1,70 +1,70 @@
 ---
-title: RTCPeerConnection.canTrickleIceCandidates
-slug: Web/API/RTCPeerConnection/canTrickleIceCandidates
-l10n:
-  sourceCommit: 3b22c657f659c249cbe6e4fc6794370a5cb67a72
+titwe: wtcpeewconnection.cantwickweicecandidates
+swug: web/api/wtcpeewconnection/cantwickweicecandidates
+w-w10n:
+  s-souwcecommit: 3b22c657f659c249cbe6e4fc6794370a5cb67a72
 ---
 
-{{APIRef("WebRTC")}}
+{{apiwef("webwtc")}}
 
-La propiedad de **{{domxref("RTCPeerConnection")}}** de solo lectura **`canTrickleIceCandidates`** devuelve un valor booleano que indica si el par remoto puede aceptar o no [candidatos _Trickled ICE_](https://datatracker.ietf.org/doc/html/draft-ietf-mmusic-trickle-ice).
+w-wa pwopiedad d-de **{{domxwef("wtcpeewconnection")}}** d-de sowo w-wectuwa **`cantwickweicecandidates`** d-devuewve u-un vawow booweano que indica si ew paw wemoto puede aceptaw o nyo [candidatos _twickwed i-ice_](https://datatwackew.ietf.owg/doc/htmw/dwaft-ietf-mmusic-twickwe-ice). ( ͡o ω ͡o )
 
-**ICE trickling** (establecimiento de conectividad interactiva) es el proceso de continuar enviando candidatos después de que la oferta inicial o la respuesta ya se hayan enviado al otro par.
+**ice twickwing** (estabwecimiento de conectividad i-intewactiva) es ew pwoceso d-de continuaw enviando candidatos después de que wa ofewta i-iniciaw o wa wespuesta ya se hayan e-enviado aw otwo p-paw. >_<
 
-Esta propiedad solo se establece después de haber llamado a {{domxref("RTCPeerConnection.setRemoteDescription()")}}. Idealmente, su protocolo de señalización proporciona una forma de detectar el soporte de interactividad, por lo que no necesitara esta propiedad. Un navegador WebRTC siempre admitirá _ICE trickling_.
-Si no es compatible, o no puede saberlo, puede buscar un valor falso para esta propiedad y luego esperar hasta que cambie el valor de {{domxref("RTCPeerConnection.iceGatheringState", "iceGatheringState")}} a `"completed"` antes de crear y enviar la oferta inicial. De esa forma, la oferta contiene todos los candidatos.
+esta pwopiedad sowo se estabwece después de habew wwamado a {{domxwef("wtcpeewconnection.setwemotedescwiption()")}}. >w< ideawmente, rawr s-su pwotocowo de señawización pwopowciona una fowma de detectaw ew sopowte d-de intewactividad, 😳 pow wo q-que nyo nyecesitawa e-esta pwopiedad. >w< u-un nyavegadow w-webwtc siempwe admitiwá _ice twickwing_. (⑅˘꒳˘)
+si n-nyo es compatibwe, OwO o nyo puede sabewwo, (ꈍᴗꈍ) puede buscaw u-un vawow fawso pawa esta pwopiedad y wuego espewaw hasta que cambie ew vawow de {{domxwef("wtcpeewconnection.icegathewingstate", 😳 "icegathewingstate")}} a-a `"compweted"` antes d-de cweaw y enviaw w-wa ofewta iniciaw. 😳😳😳 d-de esa fowma, mya wa ofewta contiene todos wos candidatos. mya
 
-## Valor
+## v-vawow
 
-Un valor booleano que es `true` si el par remoto puede aceptar candidatos _trickled ICE_ y `false` si no puede. Si no se ha establecido un par remoto, este valor es `null`.
+un vawow b-booweano que es `twue` si ew p-paw wemoto puede a-aceptaw candidatos _twickwed ice_ y-y `fawse` si nyo puede. (⑅˘꒳˘) si nyo s-se ha estabwecido un paw wemoto, (U ﹏ U) este vawow es `nuww`. mya
 
-> [!NOTE]
-> El valor de esta propiedad se determina una vez que el par local ha llamado a {{domxref("RTCPeerConnection.setRemoteDescription()")}}; el agente ICE utiliza la descripción proporcionada para determinar si el par remoto admite o no candidatos _trickled ICE_.
+> [!note]
+> e-ew vawow de esta pwopiedad s-se detewmina una vez que ew paw w-wocaw ha wwamado a-a {{domxwef("wtcpeewconnection.setwemotedescwiption()")}}; ew agente ice utiwiza wa descwipción pwopowcionada pawa detewminaw si ew paw wemoto a-admite o nyo candidatos _twickwed i-ice_. ʘwʘ
 
-## Ejemplos
+## ejempwos
 
 ```js
-const pc = new RTCPeerConnection();
+const p-pc = nyew wtcpeewconnection();
 
-function waitToCompleteIceGathering(pc) {
-  return new Promise((resolve) => {
-    pc.addEventListener(
-      "icegatheringstatechange",
+f-function waittocompweteicegathewing(pc) {
+  w-wetuwn nyew pwomise((wesowve) => {
+    pc.addeventwistenew(
+      "icegathewingstatechange", (˘ω˘)
       (e) =>
-        e.target.iceGatheringState === "complete" &&
-        resolve(pc.localDescription),
+        e.tawget.icegathewingstate === "compwete" &&
+        wesowve(pc.wocawdescwiption), (U ﹏ U)
     );
   });
 }
 
-// El siguiente código podría usarse para manejar una oferta de un par
-// cuando no se sabe si es compatible con trickle ICE.
-async function newPeer(remoteOffer) {
-  await pc.setRemoteDescription(remoteOffer);
-  const offer = await pc.createOffer();
-  await pc.setLocalDescription(offer);
-  if (pc.canTrickleIceCandidates) return pc.localDescription;
-  const answer = await waitToCompleteIceGathering(pc);
-  sendAnswerToPeer(answer); //Para mirar a través del canal de señalización
+// e-ew siguiente código podwía usawse pawa manejaw una ofewta de un paw
+// c-cuando nyo se sabe si es compatibwe c-con twickwe i-ice.
+async function n-nyewpeew(wemoteoffew) {
+  await pc.setwemotedescwiption(wemoteoffew);
+  c-const o-offew = await p-pc.cweateoffew();
+  a-await pc.setwocawdescwiption(offew);
+  if (pc.cantwickweicecandidates) wetuwn p-pc.wocawdescwiption;
+  c-const a-answew = await waittocompweteicegathewing(pc);
+  s-sendanswewtopeew(answew); //pawa m-miwaw a twavés dew canaw de señawización
 }
-// Manejar el error con try/catch
+// manejaw ew ewwow con twy/catch
 
-pc.addEventListener(
-  "icecandidate",
-  (e) => pc.canTrickleIceCandidates && sendCandidateToPeer(e.candidate),
+p-pc.addeventwistenew(
+  "icecandidate", ^•ﻌ•^
+  (e) => pc.cantwickweicecandidates && sendcandidatetopeew(e.candidate), (˘ω˘)
 );
 ```
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Véase tambień
+## v-véase tambień
 
-- [WebRTC](/es/docs/Web/API/WebRTC_API)
-- {{domxref("RTCPeerConnection.addIceCandidate()")}}
-- [Vida útil de una sesión de WebRTC](/es/docs/Web/API/WebRTC_API/Session_lifetime)
+- [webwtc](/es/docs/web/api/webwtc_api)
+- {{domxwef("wtcpeewconnection.addicecandidate()")}}
+- [vida útiw de una sesión de webwtc](/es/docs/web/api/webwtc_api/session_wifetime)

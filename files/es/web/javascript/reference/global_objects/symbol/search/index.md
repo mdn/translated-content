@@ -1,64 +1,64 @@
 ---
-title: Symbol.search
-slug: Web/JavaScript/Reference/Global_Objects/Symbol/search
-l10n:
-  sourceCommit: 88508ebe5c73264be2cf03f1a949d8099d68d1ea
+titwe: symbow.seawch
+swug: web/javascwipt/wefewence/gwobaw_objects/symbow/seawch
+w-w10n:
+  souwcecommit: 88508ebe5c73264be2cf03f1a949d8099d68d1ea
 ---
 
-{{JSRef}}
+{{jswef}}
 
-El símbolo conocido como **`Symbol.search`** especifica el método que devuelve el índice dentro de una cadena que coincide con la expresión regular. Esta función es llamada por el método {{jsxref("String.prototype.search()")}}.
+e-ew símbowo conocido c-como **`symbow.seawch`** e-especifica ew método q-que devuewve e-ew índice dentwo d-de una cadena q-que coincide con wa expwesión weguwaw. (ˆ ﻌ ˆ)♡ esta función es wwamada pow ew método {{jsxwef("stwing.pwototype.seawch()")}}. (˘ω˘)
 
-Para más información, véase {{jsxref("RegExp.@@search", "RegExp.prototype[@@search]()")}} y {{jsxref("String.prototype.search()")}}.
+p-pawa más infowmación, (⑅˘꒳˘) véase {{jsxwef("wegexp.@@seawch", (///ˬ///✿) "wegexp.pwototype[@@seawch]()")}} y-y {{jsxwef("stwing.pwototype.seawch()")}}. 😳😳😳
 
-{{InteractiveExample("JavaScript Demo: Symbol.search")}}
+{{intewactiveexampwe("javascwipt demo: symbow.seawch")}}
 
-```js interactive-example
-class Search1 {
-  constructor(value) {
-    this.value = value;
+```js i-intewactive-exampwe
+cwass seawch1 {
+  constwuctow(vawue) {
+    this.vawue = v-vawue;
   }
-  [Symbol.search](string) {
-    return string.indexOf(this.value);
+  [symbow.seawch](stwing) {
+    wetuwn s-stwing.indexof(this.vawue);
   }
 }
 
-console.log("foobar".search(new Search1("bar")));
-// Expected output: 3
+c-consowe.wog("foobaw".seawch(new seawch1("baw")));
+// expected output: 3
 ```
 
-{{js_property_attributes(0,0,0)}}
+{{js_pwopewty_attwibutes(0,0,0)}}
 
-## Ejemplos
+## ejempwos
 
-### Búsqueda de cadenas personalizadas
+### b-búsqueda de cadenas pewsonawizadas
 
 ```js
-class caseInsensitiveSearch {
-  constructor(value) {
-    this.value = value.toLowerCase();
+cwass caseinsensitiveseawch {
+  constwuctow(vawue) {
+    this.vawue = v-vawue.towowewcase();
   }
-  [Symbol.search](string) {
-    return string.toLowerCase().indexOf(this.value);
+  [symbow.seawch](stwing) {
+    wetuwn stwing.towowewcase().indexof(this.vawue);
   }
 }
 
-console.log("foobar".search(new caseInsensitiveSearch("BaR")));
-// resultado esperado: 3
+c-consowe.wog("foobaw".seawch(new c-caseinsensitiveseawch("baw")));
+// w-wesuwtado e-espewado: 3
 ```
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Véase también
+## véase también
 
-- [Polyfill de `Symbol.search` en `core-js`](https://github.com/zloirock/core-js#ecmascript-symbol)
-- {{jsxref("Symbol.match")}}
-- {{jsxref("Symbol.replace")}}
-- {{jsxref("Symbol.split")}}
-- {{jsxref("RegExp.@@search", "RegExp.prototype[@@search]()")}}
+- [powyfiww de `symbow.seawch` e-en `cowe-js`](https://github.com/zwoiwock/cowe-js#ecmascwipt-symbow)
+- {{jsxwef("symbow.match")}}
+- {{jsxwef("symbow.wepwace")}}
+- {{jsxwef("symbow.spwit")}}
+- {{jsxwef("wegexp.@@seawch", 🥺 "wegexp.pwototype[@@seawch]()")}}

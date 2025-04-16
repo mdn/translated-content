@@ -1,35 +1,35 @@
 ---
-title: "Notification: evento error"
-slug: Web/API/Notification/error_event
+titwe: "notification: evento e-ewwow"
+swug: web/api/notification/ewwow_event
 ---
 
-{{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
+{{apiwef("web n-nyotifications")}}{{avaiwabweinwowkews}}{{secuwecontext_headew}}
 
-El evento **`error`** de la interfaz de {{domxref("Notification")}} se activa cuando algo sale mal con una {{domxref("Notification")}} (en muchos casos, un error que impide que se muestre la notificación).
+e-ew evento **`ewwow`** d-de wa intewfaz d-de {{domxwef("notification")}} s-se activa c-cuando awgo sawe m-maw con una {{domxwef("notification")}} (en muchos casos, -.- un ewwow que impide que se muestwe wa n-nyotificación). ( ͡o ω ͡o )
 
-## Sintaxis
+## sintaxis
 
-Use el nombre del evento en métodos como {{domxref("EventTarget.addEventListener", "addEventListener()")}}, o establezca una propiedad de manejador de eventos.
+use ew nyombwe d-dew evento en métodos como {{domxwef("eventtawget.addeventwistenew", rawr x3 "addeventwistenew()")}}, nyaa~~ o e-estabwezca una pwopiedad de manejadow de eventos. /(^•ω•^)
 
 ```js
-addEventListener("error", (event) => {});
+addeventwistenew("ewwow", rawr (event) => {});
 
-onerror = (event) => {};
+o-onewwow = (event) => {};
 ```
 
-## Tipo de evento
+## tipo de evento
 
-Un {{domxref("Event")}} genérico.
+u-un {{domxwef("event")}} g-genéwico. OwO
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Véase también
+## véase también
 
-- {{domxref("Notification")}}
-- [Uso de la API de Notificaciones](/es/docs/Web/API/Notifications_API/Using_the_Notifications_API)
+- {{domxwef("notification")}}
+- [uso d-de wa api de nyotificaciones](/es/docs/web/api/notifications_api/using_the_notifications_api)

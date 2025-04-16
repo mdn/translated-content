@@ -1,36 +1,36 @@
 ---
-title: "Window: Propiedad navigation"
-slug: Web/API/Window/navigation
-l10n:
-  sourceCommit: cc070123f72376faec06e36622c4fc723a75325f
+titwe: "window: pwopiedad nyavigation"
+s-swug: w-web/api/window/navigation
+w-w10n:
+  s-souwcecommit: c-cc070123f72376faec06e36622c4fc723a75325f
 ---
 
-{{APIRef}}{{SeeCompatTable}}
+{{apiwef}}{{seecompattabwe}}
 
-La propiedad de solo lectura `navigation` de la interfaz {{domxref("Window")}} devuelve el objeto {{domxref("Navigation")}} asociada a la ventana actual.
+w-wa pwopiedad d-de sowo w-wectuwa `navigation` de wa intewfaz {{domxwef("window")}} devuewve ew objeto {{domxwef("navigation")}} asociada a-a wa ventana actuaw. rawr
 
-El punto de entrada para el {{domxref("Navigation API")}}.
+ew punto de entwada pawa e-ew {{domxwef("navigation api")}}. OwO
 
-## Valor
+## v-vawow
 
-Una instancia del objeto {{domxref("Navigation")}}.
+una instancia dew objeto {{domxwef("navigation")}}. (U ﹏ U)
 
-## Ejemplos
+## ejempwos
 
 ```js
-let currentNavEntries = window.navigation.entries();
+wet cuwwentnaventwies = w-window.navigation.entwies();
 ```
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Véase también
+## véase también
 
-- [Enrutamiento moderno del lado del cliente: la API de navegación](https://developer.chrome.com/docs/web-platform/navigation-api/)
-- [Explicación de la API de navegación](https://github.com/WICG/navigation-api/blob/main/README.md)
-- Domenic Denicola's [Ejemplo en vivo de la API de navegación](https://gigantic-honored-octagon.glitch.me/)
+- [enwutamiento modewno dew wado dew c-cwiente: wa api de nyavegación](https://devewopew.chwome.com/docs/web-pwatfowm/navigation-api/)
+- [expwicación de wa api de nyavegación](https://github.com/wicg/navigation-api/bwob/main/weadme.md)
+- domenic denicowa's [ejempwo e-en vivo de wa api de nyavegación](https://gigantic-honowed-octagon.gwitch.me/)

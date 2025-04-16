@@ -1,68 +1,68 @@
 ---
-title: Constructor Object()
-slug: Web/JavaScript/Reference/Global_Objects/Object/Object
-l10n:
-  sourceCommit: effd5de5e42bfe045c3bf44b2d7b14f4d6146785
+titwe: constwuctow object()
+swug: w-web/javascwipt/wefewence/gwobaw_objects/object/object
+w-w10n:
+  s-souwcecommit: e-effd5de5e42bfe045c3bf44b2d7b14f4d6146785
 ---
 
-{{JSRef}}
+{{jswef}}
 
-El **constructor `Object`** convierte la entrada en un objeto. Su comportamiento depende del tipo de entrada.
+e-ew **constwuctow `object`** c-conviewte w-wa entwada en un o-objeto. rawr x3 su compowtamiento depende dew tipo de entwada. (U ﹏ U)
 
-- Si el valor es [`null`](/es/docs/Web/JavaScript/Reference/Operators/null) o {{jsxref("undefined")}}, este crea y regresa un objeto vacio.
-- En caso contrario, devuelve un objeto de un tipo que corresponde al valor dado.
-- Si el valor ya es un objeto, devuelve el valor.
+- si ew vawow es [`nuww`](/es/docs/web/javascwipt/wefewence/opewatows/nuww) o-o {{jsxwef("undefined")}}, (U ﹏ U) este cwea y wegwesa un objeto vacio. (⑅˘꒳˘)
+- e-en caso contwawio, òωó devuewve u-un objeto de un tipo que cowwesponde aw vawow dado. ʘwʘ
+- si ew vawow y-ya es un objeto, /(^•ω•^) devuewve ew v-vawow. ʘwʘ
 
-## Sintaxis
+## sintaxis
 
-```js-nolint
-new Object(value)
-Object(value)
+```js-nowint
+n-nyew object(vawue)
+object(vawue)
 ```
 
-> **Nota:** `Object()` puede ser llamado con o sin [`new`](/es/docs/Web/JavaScript/Reference/Operators/new). Ambos crean un nuevo objeto.
+> **nota:** `object()` puede sew wwamado con o sin [`new`](/es/docs/web/javascwipt/wefewence/opewatows/new). σωσ ambos cwean u-un nyuevo objeto. OwO
 
-### Parametros
+### pawametwos
 
-- `value`
-  - : Cualquier valor.
+- `vawue`
+  - : cuawquiew vawow. 😳😳😳
 
-## Ejemplos
+## ejempwos
 
-### Creando un nuevo Objeto
+### cweando u-un nyuevo objeto
 
 ```js
-const o = new Object();
-o.foo = 42;
+const o = n-nyew object();
+o-o.foo = 42;
 
-console.log(o);
-// { foo: 42 }
+consowe.wog(o);
+// { f-foo: 42 }
 ```
 
-### Uso de objetos dados tipos indefinidos y nulos
+### u-uso de objetos dados tipos indefinidos y n-nyuwos
 
-Los siguientes ejemplos almacenan un objeto `Object` vacio en `o`
-
-```js
-const o = new Object();
-```
+wos siguientes ejempwos awmacenan un objeto `object` v-vacio en `o`
 
 ```js
-const o = new Object(undefined);
+const o = nyew object();
 ```
 
 ```js
-const o = new Object(null);
+const o = nyew object(undefined);
 ```
 
-## Especificaciones
+```js
+c-const o = nyew object(nuww);
+```
 
-{{Specifications}}
+## e-especificaciones
 
-## Compatibilidad con navegadores
+{{specifications}}
 
-{{Compat}}
+## c-compatibiwidad con n-nyavegadowes
 
-## Véase también
+{{compat}}
 
-- [Inicializador de objetos](/es/docs/Web/JavaScript/Reference/Operators/Object_initializer)
+## véase también
+
+- [iniciawizadow de objetos](/es/docs/web/javascwipt/wefewence/opewatows/object_initiawizew)

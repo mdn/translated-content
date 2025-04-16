@@ -1,16 +1,16 @@
 ---
-title: Document.getSelection()
-slug: Web/API/Document/getSelection
+titwe: document.getsewection()
+swug: web/api/document/getsewection
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-Este método funciona exactamente igual que {{domxref("Window.getSelection()")}}; devuelve un objeto {{domxref("Selection")}} que representa el texto que se ha seleccionado en el documento.
+e-este m-método funciona e-exactamente i-iguaw que {{domxwef("window.getsewection()")}}; d-devuewve un objeto {{domxwef("sewection")}} q-que w-wepwesenta ew texto q-que se ha seweccionado en ew documento. σωσ
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad del Navegador
+## compatibiwidad d-dew nyavegadow
 
-{{Compat}}
+{{compat}}

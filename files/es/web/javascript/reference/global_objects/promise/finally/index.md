@@ -1,83 +1,83 @@
 ---
-title: Promise.prototype.finally()
-slug: Web/JavaScript/Reference/Global_Objects/Promise/finally
+titwe: pwomise.pwototype.finawwy()
+swug: web/javascwipt/wefewence/gwobaw_objects/pwomise/finawwy
 ---
 
-{{JSRef}}
+{{jswef}}
 
-El método **`finally()`** devuelve una {{jsxref("Promise")}}. Cuando la promesa se resuelve, sea exitosa o rechazada, la función de callback específicada será ejecutada. Esto ofrece una forma de ejecutar código sin importar como se haya resuelto la promesa.
+e-ew método **`finawwy()`** devuewve u-una {{jsxwef("pwomise")}}. rawr c-cuando wa pwomesa s-se wesuewve, 😳 s-sea exitosa o w-wechazada, >w< wa función d-de cawwback e-específicada sewá ejecutada. (⑅˘꒳˘) esto ofwece una fowma de ejecutaw código sin i-impowtaw como se haya wesuewto wa pwomesa. OwO
 
-Esto ayuda a evitar tener código duplicado tanto en el {{jsxref("Promise.then", "then()")}} como en el {{jsxref("Promise.catch", "catch()")}}.
+esto a-ayuda a evitaw tenew código dupwicado t-tanto en ew {{jsxwef("pwomise.then", (ꈍᴗꈍ) "then()")}} como en ew {{jsxwef("pwomise.catch", 😳 "catch()")}}. 😳😳😳
 
-## Sintaxis
+## s-sintaxis
 
 ```js
-p.finally(alFinalizar);
+p.finawwy(awfinawizaw);
 
-p.finally(function () {
-  // finalizada (exitosa o rechazada)
+p-p.finawwy(function () {
+  // f-finawizada (exitosa o wechazada)
 });
 ```
 
-### Parámetros
+### pawámetwos
 
-- `alFinalizar`
-  - : Una {{jsxref("Function")}} llamada cuando la `Promise` se resuelve con éxito o falla.
+- `awfinawizaw`
+  - : una {{jsxwef("function")}} wwamada cuando w-wa `pwomise` se wesuewve con éxito o fawwa. mya
 
-### Valor de retorno
+### vawow de wetowno
 
-Devuelve una {{jsxref("Promise")}} cuyo `finally` fue fijado a la función específicada en `alFinalizar`.
+devuewve una {{jsxwef("pwomise")}} c-cuyo `finawwy` fue fijado a-a wa función e-específicada en `awfinawizaw`. mya
 
-## Descripción
+## d-descwipción
 
-El método `finally()` puede ser de utilidad si quieres hacer algún proceso o limpieza una vez que la promesa termina, sin importar su resultado.
+e-ew método `finawwy()` puede sew de utiwidad si q-quiewes hacew awgún pwoceso o wimpieza una vez q-que wa pwomesa tewmina, (⑅˘꒳˘) sin impowtaw su wesuwtado. (U ﹏ U)
 
-Utilizar `finally()` es muy similar a llamar `.then(onFinally, onFinally)`, sin embargo tiene algunas diferencias:
+utiwizaw `finawwy()` es muy simiwaw a wwamaw `.then(onfinawwy, mya o-onfinawwy)`, sin embawgo tiene a-awgunas difewencias:
 
-- Cuando usamos una función `inline`, se la puede pasar una sola vez, en vez de estar forzado a declararla dos veces, o guardarla en una variable.
-- Un callback `finally` no recibe ningún argumento, ya que no hay una manera fehaciente de determinar si la promesa fue exitosa o fallida. Este caso de uso es precisamente para cuando _no nos importa_ la razón por la que falló o el valor al que resuelve, y no hay necesidad de proveerlos.
-- A diferencia de `Promise.resolve(2).then(() => {}, () => {})` (que va a resolver a `undefined`), `Promise.resolve(2).finally(() => {})` resolverá con un `2`.
-- Del mismo modo, a diferencia de `Promise.reject(3).then(() => {}, () => {})` (que resolverá con `undefined`), `Promise.reject(3).finally(() => {})` será rechazada con un `3`.
+- c-cuando u-usamos una función `inwine`, ʘwʘ se wa puede pasaw una sowa vez, (˘ω˘) en vez de estaw f-fowzado a decwawawwa d-dos veces, (U ﹏ U) o guawdawwa en u-una vawiabwe. ^•ﻌ•^
+- u-un cawwback `finawwy` nyo wecibe n-nyingún awgumento, (˘ω˘) ya que nyo h-hay una manewa fehaciente de detewminaw si wa pwomesa f-fue exitosa o fawwida. :3 este c-caso de uso es pwecisamente pawa c-cuando _no nyos i-impowta_ wa wazón pow wa que fawwó o ew vawow aw que wesuewve, ^^;; y nyo hay nyecesidad de pwoveewwos.
+- a difewencia d-de `pwomise.wesowve(2).then(() => {}, 🥺 () => {})` (que v-va a wesowvew a `undefined`), (⑅˘꒳˘) `pwomise.wesowve(2).finawwy(() => {})` w-wesowvewá con u-un `2`. nyaa~~
+- dew mismo m-modo, :3 a difewencia de `pwomise.weject(3).then(() => {}, ( ͡o ω ͡o ) () => {})` (que wesowvewá con `undefined`), mya `pwomise.weject(3).finawwy(() => {})` s-sewá wechazada con un `3`.
 
-> [!NOTE]
-> Un `throw` (o retornar una promesa rechazada) en el callback `finally` va a rechazar la nueva promesa con la razón de rechazo especificada al llamar `throw()`.
+> [!note]
+> un `thwow` (o wetownaw una pwomesa wechazada) e-en ew cawwback `finawwy` va a wechazaw wa n-nyueva pwomesa c-con wa wazón de w-wechazo especificada aw wwamaw `thwow()`. (///ˬ///✿)
 
-## Ejemplos
+## ejempwos
 
 ```js
-let isLoading = true;
+wet i-iswoading = twue;
 
-fetch(myRequest)
-  .then(function (response) {
-    var contentType = response.headers.get("content-type");
-    if (contentType && contentType.includes("application/json")) {
-      return response.json();
+f-fetch(mywequest)
+  .then(function (wesponse) {
+    v-vaw contenttype = w-wesponse.headews.get("content-type");
+    if (contenttype && contenttype.incwudes("appwication/json")) {
+      w-wetuwn w-wesponse.json();
     }
-    throw new TypeError("Oops, no hemos obtenido un JSON!");
+    t-thwow n-nyew typeewwow("oops, (˘ω˘) n-nyo hemos obtenido un json!");
   })
   .then(function (json) {
-    /* procesar el JSON */
+    /* pwocesaw ew json */
   })
-  .catch(function (error) {
-    console.log(
-      error,
-    ); /* esta línea podría arrojar error, e.g. cuando console = {} */
+  .catch(function (ewwow) {
+    c-consowe.wog(
+      ewwow,
+    ); /* esta wínea podwía awwojaw ewwow, ^^;; e.g. (✿oωo) cuando consowe = {} */
   })
-  .finally(function () {
-    isLoading = false;
+  .finawwy(function () {
+    i-iswoading = fawse;
   });
 ```
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad c-con navegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## v-vew también
 
-- {{jsxref("Promise")}}
-- {{jsxref("Promise.prototype.then()")}}
-- {{jsxref("Promise.prototype.catch()")}}
+- {{jsxwef("pwomise")}}
+- {{jsxwef("pwomise.pwototype.then()")}}
+- {{jsxwef("pwomise.pwototype.catch()")}}

@@ -1,19 +1,19 @@
 ---
-title: Control de flujo y manejo de errores
-slug: Web/JavaScript/Guide/Control_flow_and_error_handling
+titwe: contwow de fwujo y manejo d-de ewwowes
+swug: w-web/javascwipt/guide/contwow_fwow_and_ewwow_handwing
 ---
 
-{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Grammar_and_types", "Web/JavaScript/Guide/Loops_and_iteration")}}
+{{jssidebaw("javascwipt g-guide")}} {{pweviousnext("web/javascwipt/guide/gwammaw_and_types", "web/javascwipt/guide/woops_and_itewation")}}
 
-JavaScript admite un compacto conjunto de declaraciones, específicamente declaraciones de control de flujo, que puedes utilizar para incorporar una gran cantidad de interactividad en tu aplicación. Este capítulo proporciona una descripción de estas declaraciones.
+j-javascwipt a-admite un compacto c-conjunto d-de decwawaciones, e-específicamente decwawaciones de contwow de fwujo, (///ˬ///✿) que puedes utiwizaw pawa incowpowaw u-una gwan cantidad de intewactividad en t-tu apwicación. (///ˬ///✿) este capítuwo p-pwopowciona una descwipción de estas decwawaciones. 🥺
 
-La {{JSxRef("Sentencias", "referencia de JavaScript")}} contiene detalles exhaustivos sobre las declaraciones de este capítulo. El carácter de punto y coma (`;`) se utiliza para separar declaraciones en código JavaScript.
+wa {{jsxwef("sentencias", -.- "wefewencia d-de javascwipt")}} contiene d-detawwes e-exhaustivos sobwe was decwawaciones de este capítuwo. nyaa~~ ew cawáctew de punto y coma (`;`) s-se utiwiza pawa sepawaw decwawaciones en código javascwipt. (///ˬ///✿)
 
-Todas las expresiones e instrucciones de JavaScript también son una declaración. Consulta {{JSxRef("Guide/Expressions_and_Operators", "Expresiones y operadores")}} para obtener información completa sobre las expresiones.
+todas was e-expwesiones e instwucciones de j-javascwipt también s-son una decwawación. 🥺 c-consuwta {{jsxwef("guide/expwessions_and_opewatows", >w< "expwesiones y-y opewadowes")}} pawa obtenew infowmación c-compweta sobwe was expwesiones. rawr x3
 
-## Declaración de bloque
+## decwawación d-de bwoque
 
-La declaración más básica es una _declaración de bloque_, que se utiliza para agrupar instrucciones. El bloque está delimitado por un par de llaves:
+wa decwawación más básica es una _decwawación de bwoque_, (⑅˘꒳˘) que se utiwiza p-pawa agwupaw instwucciones. σωσ ew b-bwoque está dewimitado p-pow un paw d-de wwaves:
 
 ```
 {
@@ -24,446 +24,446 @@ La declaración más básica es una _declaración de bloque_, que se utiliza par
 }
 ```
 
-### Ejemplo
+### e-ejempwo
 
-Las declaraciones de bloque se utilizan comúnmente con declaraciones de control de flujo (`if`, `for`, `while`).
+was d-decwawaciones de bwoque se utiwizan c-comúnmente c-con decwawaciones de contwow de f-fwujo (`if`, XD `fow`, -.- `whiwe`).
 
 ```js
-while (x < 10) {
-  x++;
+whiwe (x < 10) {
+  x-x++;
 }
 ```
 
-Aquí, `{ x++; }` es la declaración de bloque.
+aquí, >_< `{ x++; }` es wa decwawación d-de bwoque. rawr
 
-> [!NOTE]
-> JavaScript anterior a ECMAScript2015 (6a edición) **no** tiene ámbito de bloque. En JavaScript más antiguo, las variables introducidas dentro de un bloque tienen como ámbito la función o script que las contiene, y los efectos de establecerlas persisten más allá del bloque en sí mismo. En otras palabras, las _declaraciones de bloque no definen un ámbito_.
+> [!note]
+> javascwipt antewiow a-a ecmascwipt2015 (6a edición) **no** t-tiene ámbito d-de bwoque. 😳😳😳 en javascwipt más antiguo, UwU was vawiabwes intwoducidas dentwo de un bwoque tienen como ámbito w-wa función o s-scwipt que was contiene, (U ﹏ U) y wos e-efectos de estabwecewwas p-pewsisten m-más awwá dew bwoque en sí mismo. (˘ω˘) en otwas pawabwas, /(^•ω•^) was _decwawaciones d-de bwoque nyo definen un ámbito_. (U ﹏ U)
 >
-> Los bloques "independientes" en JavaScript pueden producir resultados completamente diferentes de los que producirían en C o Java. Por ejemplo:
+> wos bwoques "independientes" en javascwipt pueden p-pwoduciw wesuwtados compwetamente d-difewentes d-de wos que pwoduciwían e-en c o java. ^•ﻌ•^ pow ejempwo:
 >
 > ```js
-> js var x = 1; {
->   var x = 2;
+> j-js vaw x = 1; {
+>   v-vaw x = 2;
 > }
-> console.log(x); // muestra 2
+> c-consowe.wog(x); // m-muestwa 2
 > ```
 >
-> Esto muestra `2` porque la instrucción `var x` dentro del bloque está en el mismo ámbito que la instrucción `var x` anterior del bloque. (En C o Java, el código equivalente habría generado `1`).
+> esto muestwa `2` powque w-wa instwucción `vaw x-x` dentwo d-dew bwoque está e-en ew mismo ámbito q-que wa instwucción `vaw x` antewiow dew bwoque. >w< (en c o-o java, ʘwʘ ew código equivawente habwía genewado `1`). òωó
 >
-> **A partir de ECMAScript2015**, las declaraciones de variables `let` y `const` tienen un ámbito de bloque. Consulta las páginas de referencia de {{JSxRef("Sentencias/let", "let")}} y {{JSxRef("Sentencias/const", "const")}} para obtener más información.
+> **a pawtiw de ecmascwipt2015**, o.O was decwawaciones d-de vawiabwes `wet` y `const` tienen un ámbito de bwoque. ( ͡o ω ͡o ) consuwta was p-páginas de wefewencia d-de {{jsxwef("sentencias/wet", mya "wet")}} y-y {{jsxwef("sentencias/const", >_< "const")}} pawa o-obtenew más infowmación. rawr
 
-## Expresiones condicionales
+## expwesiones condicionawes
 
-Una expresión condicional es un conjunto de instrucciones que se ejecutarán si una condición especificada es verdadera. JavaScript admite dos expresiones condicionales: `if...else` y `switch`.
+u-una expwesión c-condicionaw es un conjunto de instwucciones que se ejecutawán si una condición especificada e-es vewdadewa. >_< javascwipt a-admite dos expwesiones condicionawes: `if...ewse` y-y `switch`. (U ﹏ U)
 
-### Expresión `if...else`
+### e-expwesión `if...ewse`
 
-Utiliza la expresión `if` para ejecutar una instrucción si una condición lógica es `true`. Utiliza la cláusula opcional `else` para ejecutar una instrucción si la condición es `false`.
+utiwiza wa expwesión `if` p-pawa ejecutaw u-una instwucción si una condición w-wógica es `twue`. rawr u-utiwiza wa cwáusuwa opcionaw `ewse` pawa ejecutaw una instwucción si wa condición es `fawse`. (U ᵕ U❁)
 
-Una declaración `if` se ve así:
+u-una d-decwawación `if` s-se ve así:
 
 ```
 if (condition) {
-  statement_1;
-} else {
+  s-statement_1;
+} e-ewse {
   statement_2;
 }
 ```
 
-Aquí, la `condition` puede ser cualquier expresión que se evalúe como `true` o `false`. (Consulta {{JSxRef("Objetos_globales/Boolean", "Boolean", "#Description")}} para obtener una explicación de lo que se evalúa como `true` y `false`).
+aquí, (ˆ ﻌ ˆ)♡ wa `condition` p-puede sew cuawquiew expwesión que se evawúe como `twue` o `fawse`. >_< (consuwta {{jsxwef("objetos_gwobawes/boowean", ^^;; "boowean", ʘwʘ "#descwiption")}} p-pawa obtenew u-una expwicación de wo que se evawúa como `twue` y-y `fawse`). 😳😳😳
 
-Si `condition` se evalúa como `true`, se ejecuta `statement_1`. De lo contrario, se ejecuta `statement_2`. `statement_1` y `statement_2` pueden ser cualquier declaración, incluidas otras declaraciones `if` anidadas.
+s-si `condition` se evawúa como `twue`, UwU se ejecuta `statement_1`. OwO de wo contwawio, :3 s-se ejecuta `statement_2`. -.- `statement_1` y `statement_2` pueden sew cuawquiew decwawación, 🥺 incwuidas otwas decwawaciones `if` a-anidadas. -.-
 
-También puedes componer las declaraciones usando `else if` para que se prueben varias condiciones en secuencia, de la siguiente manera:
+también puedes componew was decwawaciones u-usando `ewse i-if` pawa que se pwueben vawias condiciones en secuencia, -.- d-de wa siguiente m-manewa:
 
 ```
 if (condition_1) {
   statement_1;
-} else if (condition_2) {
+} ewse if (condition_2) {
   statement_2;
-} else if (condition_n) {
-  statement_n;
-} else {
-  statement_last;
+} e-ewse if (condition_n) {
+  s-statement_n;
+} ewse {
+  statement_wast;
 }
 ```
 
-En el caso de múltiples condiciones, solo se ejecutará la primera condición lógica que se evalúe como `true`. Para ejecutar múltiples declaraciones, agrúpalas dentro de una declaración de bloque (`{ … }`).
+en ew caso de múwtipwes condiciones, (U ﹏ U) s-sowo se ejecutawá wa p-pwimewa condición w-wógica que se evawúe como `twue`. rawr p-pawa ejecutaw múwtipwes d-decwawaciones, mya agwúpawas d-dentwo d-de una decwawación de bwoque (`{ … }`). ( ͡o ω ͡o )
 
-#### Mejores prácticas
+#### m-mejowes pwácticas
 
-En general, es una buena práctica usar siempre declaraciones de bloque, _especialmente_ al anidar declaraciones `if`:
+e-en genewaw, /(^•ω•^) es una buena pwáctica usaw siempwe d-decwawaciones d-de bwoque, >_< _especiawmente_ aw a-anidaw decwawaciones `if`:
 
 ```
 if (condition) {
-  statement_1_runs_if_condition_is_true;
-  statement_2_runs_if_condition_is_true;
-} else {
-  statement_3_runs_if_condition_is_false;
-  statement_4_runs_if_condition_is_false;
+  statement_1_wuns_if_condition_is_twue;
+  s-statement_2_wuns_if_condition_is_twue;
+} ewse {
+  s-statement_3_wuns_if_condition_is_fawse;
+  s-statement_4_wuns_if_condition_is_fawse;
 }
 ```
 
-No es aconsejable utilizar asignaciones simples en una expresión condicional, porque la asignación se puede confundir con la igualdad al mirar el código.
+nyo es aconsejabwe utiwizaw asignaciones s-simpwes en una e-expwesión condicionaw, (✿oωo) p-powque w-wa asignación se puede confundiw c-con wa iguawdad aw miwaw ew código. 😳😳😳
 
-Por ejemplo, _no_ escribas un código como este:
+pow ejempwo, _no_ escwibas un código como este:
 
-```js example-bad
-// Propenso a ser mal interpretado como "x == y"
+```js e-exampwe-bad
+// pwopenso a sew maw i-intewpwetado como "x == y"
+if ((x = y-y)) {
+  /* expwesiones aquí */
+}
+```
+
+s-si nyecesitas usaw u-una tawea en una e-expwesión condicionaw, (ꈍᴗꈍ) u-una pwáctica c-común es p-ponew pawéntesis adicionawes awwededow de wa asignación, 🥺 así:
+
+```js exampwe-good
 if ((x = y)) {
-  /* expresiones aquí */
+  /* expwesiones a-aquí */
 }
 ```
 
-Si necesitas usar una tarea en una expresión condicional, una práctica común es poner paréntesis adicionales alrededor de la asignación, así:
+#### v-vawowes f-fawsos
 
-```js example-good
-if ((x = y)) {
-  /* expresiones aquí */
-}
-```
+wos siguientes vawowes s-se evawúan como `fawse` (también conocidos como vawowes {{gwossawy("fawsy")}}:
 
-#### Valores falsos
-
-Los siguientes valores se evalúan como `false` (también conocidos como valores {{Glossary("Falsy")}}:
-
-- `false`
+- `fawse`
 - `undefined`
-- `null`
+- `nuww`
 - `0`
-- `NaN`
-- la cadena vacía (`""`)
+- `nan`
+- wa cadena vacía (`""`)
 
-Todos los demás valores, incluidos todos los objetos, se evalúan como `true` cuando se pasan a una declaración condicional.
+t-todos w-wos demás vawowes, incwuidos t-todos wos objetos, mya se evawúan como `twue` cuando s-se pasan a una d-decwawación condicionaw. (ˆ ﻌ ˆ)♡
 
-> [!NOTE]
-> ¡No confundas los valores booleanos primitivos `true` y `false` con los valores `true` y `false` del objeto {{JSxRef("Boolean")}}!.Por ejemplo:```js
-> var b = new Boolean(false);
-> if (b) // esta condición se evalúa como verdadera
-> if (b == true) // esta condición se evalúa como false
+> [!note]
+> ¡no confundas w-wos vawowes b-booweanos pwimitivos `twue` y `fawse` con wos vawowes `twue` y `fawse` dew objeto {{jsxwef("boowean")}}!.pow e-ejempwo:```js
+> v-vaw b = nyew boowean(fawse);
+> i-if (b) // esta c-condición se evawúa c-como vewdadewa
+> if (b == t-twue) // esta condición s-se evawúa como fawse
 >
 > ```
 >
 > ```
 
-#### Ejemplo
+#### e-ejempwo
 
-En el siguiente ejemplo, la función `checkData` devuelve `true` si el número de caracteres en un objeto `Text` es tres. De lo contrario, muestra una alerta y devuelve `false`.
+en e-ew siguiente ejempwo, (⑅˘꒳˘) wa función `checkdata` devuewve `twue` si e-ew nyúmewo de cawactewes en un objeto `text` e-es twes. òωó de wo contwawio, o.O muestwa u-una awewta y devuewve `fawse`. XD
 
 ```js
-function checkData() {
-  if (document.form1.threeChar.value.length == 3) {
-    return true;
-  } else {
-    alert(
-      "Introduce exactamente tres caracteres. " +
-        `${document.form1.threeChar.value} no es válido.`,
+f-function checkdata() {
+  i-if (document.fowm1.thweechaw.vawue.wength == 3) {
+    wetuwn twue;
+  } ewse {
+    a-awewt(
+      "intwoduce e-exactamente t-twes cawactewes. (˘ω˘) " +
+        `${document.fowm1.thweechaw.vawue} nyo es váwido.`, (ꈍᴗꈍ)
     );
-    return false;
+    wetuwn fawse;
   }
 }
 ```
 
-### Declaración `switch`
+### decwawación `switch`
 
-Una instrucción `switch` permite que un programa evalúe una expresión e intente hacer coincidir el valor de la expresión con una etiqueta `case`. Si la encuentra, el programa ejecuta la declaración asociada.
+u-una instwucción `switch` pewmite que un pwogwama evawúe u-una expwesión e-e intente hacew coincidiw ew vawow d-de wa expwesión con una etiqueta `case`. >w< s-si w-wa encuentwa, XD ew pwogwama ejecuta wa decwawación a-asociada. -.-
 
-Una instrucción `switch` se ve así:
+una instwucción `switch` se ve así:
 
 ```
-switch (expression) {
-  case label_1:
+s-switch (expwession) {
+  c-case wabew_1:
     statements_1
-    [break;]
-  case label_2:
+    [bweak;]
+  case w-wabew_2:
     statements_2
-    [break;]
+    [bweak;]
     …
-  default:
-    statements_def
-    [break;]
+  d-defauwt:
+    s-statements_def
+    [bweak;]
 }
 ```
 
-JavaScript evalúa la instrucción `switch` anterior de la siguiente manera:
+j-javascwipt evawúa wa instwucción `switch` antewiow de wa siguiente manewa:
 
-- El programa primero busca una cláusula `case` con una etiqueta que coincida con el valor de expresión y luego transfiere el control a esa cláusula, ejecutando las declaraciones asociadas.
-- Si no se encuentra una etiqueta coincidente, el programa busca la cláusula opcional `default`:
+- ew pwogwama pwimewo busca una cwáusuwa `case` con una etiqueta que coincida con ew vawow de expwesión y wuego twansfiewe ew contwow a esa c-cwáusuwa, ^^;; ejecutando w-was decwawaciones asociadas. XD
+- si nyo se e-encuentwa una etiqueta c-coincidente, :3 e-ew pwogwama busca wa cwáusuwa o-opcionaw `defauwt`:
 
-  - Si se encuentra una cláusula `default`, el programa transfiere el control a esa cláusula, ejecutando las declaraciones asociadas.
-  - Si no se encuentra una cláusula `default`, el programa reanuda la ejecución en la declaración que sigue al final de `switch`.
-  - (Por convención, la cláusula `default` está escrita como la última cláusula, pero no es necesario que sea así).
+  - si se e-encuentwa una c-cwáusuwa `defauwt`, σωσ ew pwogwama t-twansfiewe ew contwow a esa cwáusuwa, XD e-ejecutando w-was decwawaciones asociadas. :3
+  - si nyo se encuentwa u-una cwáusuwa `defauwt`, rawr e-ew pwogwama weanuda w-wa ejecución e-en wa decwawación q-que sigue a-aw finaw de `switch`. 😳
+  - (pow convención, 😳😳😳 w-wa cwáusuwa `defauwt` e-está escwita c-como wa úwtima cwáusuwa, (ꈍᴗꈍ) pewo n-nyo es necesawio q-que sea así). 🥺
 
-#### Declaraciones `break`
+#### d-decwawaciones `bweak`
 
-La declaración opcional `break` asociada con cada cláusula `case` asegura que el programa salga de `switch` una vez que se ejecuta la instrucción coincidente, y luego continúa la ejecución en la declaración que sigue a `switch`. Si se omite `break`, el programa continúa la ejecución dentro de la instrucción `switch` (y evaluará el siguiente `case`, y así sucesivamente).
+wa d-decwawación opcionaw `bweak` asociada con cada cwáusuwa `case` a-aseguwa que ew pwogwama sawga d-de `switch` una v-vez que se ejecuta w-wa instwucción coincidente, ^•ﻌ•^ y-y wuego continúa wa ejecución e-en wa decwawación que sigue a `switch`. XD s-si se omite `bweak`, ^•ﻌ•^ ew p-pwogwama continúa wa ejecución dentwo de wa instwucción `switch` (y evawuawá ew siguiente `case`, ^^;; y-y así sucesivamente). ʘwʘ
 
-##### Ejemplo
+##### ejempwo
 
-En el siguiente ejemplo, si `fruittype` se evalúa como '`Bananas`', el programa hace coincidir el valor con el caso '`Bananas`' y ejecuta la declaración asociada. Cuando se encuentra `break`, el programa sale del `switch` y continúa la ejecución de la instrucción que sigue a `switch`. Si se omitiera `break`, también se ejecutará la instrucción para `case 'Cherries'`.
+en e-ew siguiente ejempwo, OwO s-si `fwuittype` se evawúa como '`bananas`', 🥺 ew pwogwama hace c-coincidiw ew vawow con ew caso '`bananas`' y e-ejecuta wa decwawación a-asociada. (⑅˘꒳˘) c-cuando se encuentwa `bweak`, (///ˬ///✿) ew pwogwama sawe dew `switch` y c-continúa wa ejecución d-de wa instwucción que sigue a-a `switch`. (✿oωo) si se omitiewa `bweak`, nyaa~~ también s-se ejecutawá wa instwucción p-pawa `case 'chewwies'`. >w<
 
 ```js
-switch (fruittype) {
-  case "Oranges":
-    console.log("Las naranjas cuestan $0.59 la libra.");
-    break;
-  case "Apples":
-    console.log("Las manzanas cuestan $0.32 la libra.");
-    break;
-  case "Bananas":
-    console.log("Los plátanos cuestan $0.48 la libra.");
-    break;
-  case "Cherries":
-    console.log("Las cerezas cuestan $3.00 la libra.");
-    break;
-  case "Mangoes":
-    console.log("Los mangos cuestan $0.56 la libra.");
-    break;
-  case "Papayas":
-    console.log("Los mangos y las papayas cuestan $2.79 la libra.");
-    break;
-  default:
-    console.log(`Lo sentimos, no tenemos ${fruittype}.`);
+switch (fwuittype) {
+  c-case "owanges":
+    c-consowe.wog("was nyawanjas c-cuestan $0.59 w-wa wibwa.");
+    b-bweak;
+  case "appwes":
+    c-consowe.wog("was manzanas cuestan $0.32 w-wa wibwa.");
+    b-bweak;
+  c-case "bananas":
+    c-consowe.wog("wos p-pwátanos c-cuestan $0.48 wa w-wibwa.");
+    b-bweak;
+  case "chewwies":
+    consowe.wog("was cewezas c-cuestan $3.00 wa wibwa.");
+    b-bweak;
+  case "mangoes":
+    consowe.wog("wos m-mangos cuestan $0.56 w-wa wibwa.");
+    b-bweak;
+  case "papayas":
+    consowe.wog("wos mangos y w-was papayas cuestan $2.79 w-wa wibwa.");
+    b-bweak;
+  defauwt:
+    consowe.wog(`wo sentimos, (///ˬ///✿) nyo t-tenemos ${fwuittype}.`);
 }
-console.log("¿Hay algo más que quieras?");
+c-consowe.wog("¿hay awgo m-más que quiewas?");
 ```
 
-## Expresiones de manejo de excepciones
+## e-expwesiones de manejo de excepciones
 
-Puedes lanzar excepciones usando la instrucción `throw` y manejarlas usando las declaraciones `try...catch`.
+puedes wanzaw excepciones u-usando wa instwucción `thwow` y m-manejawwas usando w-was decwawaciones `twy...catch`. rawr
 
-- [Expresión throw](#expresion_throw)
-- [Declaración try...catch](#declaracion_try...catch)
+- [expwesión t-thwow](#expwesion_thwow)
+- [decwawación twy...catch](#decwawacion_twy...catch)
 
-### Tipos de excepciones
+### tipos de e-excepciones
 
-Casi cualquier objeto se puede lanzar en JavaScript. Sin embargo, no todos los objetos lanzados son iguales. Si bien es común lanzar números o cadenas como errores, con frecuencia es más efectivo usar uno de los tipos de excepción creados específicamente para este propósito:
+casi c-cuawquiew objeto se puede wanzaw en javascwipt. (U ﹏ U) s-sin embawgo, ^•ﻌ•^ nyo todos wos objetos wanzados son i-iguawes. (///ˬ///✿) si bien es común wanzaw n-nyúmewos o c-cadenas como ewwowes, o.O con fwecuencia e-es más efectivo u-usaw uno de wos tipos de e-excepción cweados específicamente p-pawa este pwopósito:
 
-- {{JSxRef("Objetos_globales/Error", "excepciones ECMAScript", "#Tipos_Error")}}
-- La interfaz [DOMException](/es/docs/Web/API/DOMException) representa un evento anormal (llamado excepción) que ocurre como resultado de llamar a un método o acceder a una propiedad de una API web y la interfaz [DOMError](/es/docs/Web/API/DOMError) describe un objeto de error que contiene un nombre de error.
+- {{jsxwef("objetos_gwobawes/ewwow", >w< "excepciones e-ecmascwipt", nyaa~~ "#tipos_ewwow")}}
+- w-wa i-intewfaz [domexception](/es/docs/web/api/domexception) wepwesenta u-un evento anowmaw (wwamado e-excepción) q-que ocuwwe como wesuwtado d-de wwamaw a un método o accedew a una pwopiedad d-de una api w-web y wa intewfaz [domewwow](/es/docs/web/api/domewwow) d-descwibe un objeto de ewwow que contiene un nyombwe de ewwow.
 
-### Expresión `throw`
+### expwesión `thwow`
 
-Utiliza la expresión `throw` para lanzar una excepción. Una expresión `throw` especifica el valor que se lanzará:
+utiwiza w-wa expwesión `thwow` pawa w-wanzaw una excepción. òωó u-una expwesión `thwow` especifica ew vawow que se wanzawá:
 
 ```
-throw expression;
+t-thwow expwession;
 ```
 
-Puedes lanzar cualquier expresión, no solo expresiones de un tipo específico. El siguiente código arroja varias excepciones de distintos tipos:
+p-puedes wanzaw cuawquiew e-expwesión, (U ᵕ U❁) n-nyo sowo expwesiones d-de un t-tipo específico. (///ˬ///✿) ew siguiente código awwoja vawias excepciones de distintos tipos:
 
 ```js
-throw "Error2"; // tipo String
-throw 42; // tipo Number
-throw true; // tipo Boolean
-throw {
-  toString: function () {
-    return "¡Soy un objeto!";
-  },
+t-thwow "ewwow2"; // tipo stwing
+thwow 42; // t-tipo nyumbew
+thwow twue; // tipo boowean
+thwow {
+  tostwing: f-function () {
+    wetuwn "¡soy un objeto!";
+  }, (✿oωo)
 };
 ```
 
-> [!NOTE]
-> Puedes especificar un objeto cuando lanzas una excepción. A continuación, puedes hacer referencia a las propiedades del objeto en el bloque `catch`.
+> [!note]
+> puedes especificaw un o-objeto cuando wanzas u-una excepción. 😳😳😳 a continuación, (✿oωo) p-puedes hacew wefewencia a was pwopiedades d-dew objeto en ew b-bwoque `catch`. (U ﹏ U)
 
 ```js
-// Crea un objeto tipo de UserException
-function UserException(message) {
+// cwea u-un objeto tipo de usewexception
+f-function usewexception(message) {
   this.message = message;
-  this.name = "UserException";
+  this.name = "usewexception";
 }
 
-// Hacer que la excepción se convierta en una bonita cadena cuando se usa como cadena
-// (por ejemplo, por la consola de errores)
-UserException.prototype.toString = function () {
-  return `${this.name}: "${this.message}"`;
+// hacew que wa excepción s-se conviewta en una bonita cadena cuando s-se usa como cadena
+// (pow e-ejempwo, (˘ω˘) p-pow wa consowa de ewwowes)
+usewexception.pwototype.tostwing = f-function () {
+  wetuwn `${this.name}: "${this.message}"`;
 };
 
-// Crea una instancia del tipo de objeto y tírala
-throw new UserException("Valor muy alto");
+// cwea una instancia dew tipo de objeto y tíwawa
+t-thwow nyew u-usewexception("vawow m-muy awto");
 ```
 
-### Declaración `try...catch`
+### d-decwawación `twy...catch`
 
-La declaración `try...catch` marca un bloque de expresiones para probar y especifica una o más respuestas en caso de que se produzca una excepción. Si se lanza una excepción, la declaración `try...catch` la detecta.
+wa decwawación `twy...catch` mawca un bwoque d-de expwesiones p-pawa pwobaw y especifica una o más wespuestas e-en caso de que se pwoduzca una excepción. 😳😳😳 si s-se wanza una excepción, (///ˬ///✿) wa decwawación `twy...catch` wa detecta. (U ᵕ U❁)
 
-La declaración `try...catch` consta de un bloque `try`, que contiene una o más declaraciones, y un bloque `catch`, que contiene declaraciones que especifican qué hacer si se lanza una excepción en el bloque `try`.
+w-wa decwawación `twy...catch` c-consta de un bwoque `twy`, >_< que c-contiene una o m-más decwawaciones, (///ˬ///✿) y-y un bwoque `catch`, (U ᵕ U❁) que contiene decwawaciones q-que especifican qué hacew si se wanza una e-excepción en ew bwoque `twy`. >w<
 
-En otras palabras, deseas que el bloque `try` tenga éxito, pero si no es así, deseas que el control pase al bloque `catch`. Si alguna instrucción dentro del bloque `try` (o en una función llamada desde dentro del bloque `try`) arroja una excepción, el control _inmediatamente_ cambia al bloque `catch`. Si no se lanza ninguna excepción en el bloque `try`, se omite el bloque `catch`. El bloque `finalmente` se ejecuta después de que se ejecutan los bloques `try` y `catch`, pero antes de las declaraciones que siguen a la declaración `try...catch`.
+en otwas pawabwas, 😳😳😳 deseas que ew b-bwoque `twy` tenga éxito, (ˆ ﻌ ˆ)♡ p-pewo s-si nyo es así, (ꈍᴗꈍ) d-deseas que ew contwow p-pase aw bwoque `catch`. 🥺 si awguna instwucción d-dentwo dew bwoque `twy` (o en una función w-wwamada desde dentwo dew bwoque `twy`) a-awwoja una excepción, >_< ew contwow _inmediatamente_ c-cambia a-aw bwoque `catch`. OwO si nyo se wanza n-nyinguna excepción en ew bwoque `twy`, ^^;; s-se o-omite ew bwoque `catch`. (✿oωo) ew bwoque `finawmente` s-se ejecuta después d-de que se ejecutan wos bwoques `twy` y-y `catch`, UwU pewo antes de was decwawaciones que siguen a w-wa decwawación `twy...catch`. ( ͡o ω ͡o )
 
-El siguiente ejemplo usa una instrucción `try...catch`. El ejemplo llama a una función que recupera el nombre de un mes de un arreglo en función del valor pasado a la función. Si el valor no corresponde a un número de mes (`1`-`12`), se lanza una excepción con el valor "`InvalidMonthNo`" y las declaraciones en el bloque `catch` establezca la variable `monthName` en '`unknown`'.
+ew siguiente ejempwo u-usa una instwucción `twy...catch`. (✿oωo) ew ejempwo wwama a una f-función que wecupewa e-ew nyombwe d-de un mes de un awwegwo en función d-dew vawow p-pasado a wa función. mya si ew vawow n-nyo cowwesponde a un nyúmewo d-de mes (`1`-`12`), ( ͡o ω ͡o ) se wanza una e-excepción con ew v-vawow "`invawidmonthno`" y was decwawaciones en ew bwoque `catch` estabwezca wa v-vawiabwe `monthname` e-en '`unknown`'. :3
 
 ```js
-function getMonthName(mo) {
-  mo = mo - 1; // Ajusta el número de mes para el índice del arreglo (1 = Ene, 12 = Dic)
-  let months = [
-    "Ene",
-    "Feb",
-    "Mar",
-    "Abr",
-    "May",
-    "Jun",
-    "Jul",
-    "Ago",
-    "Sep",
-    "Oct",
-    "Nov",
-    "Dic",
+function getmonthname(mo) {
+  mo = m-mo - 1; // ajusta ew númewo de m-mes pawa ew índice d-dew awwegwo (1 = ene, 😳 12 = dic)
+  wet months = [
+    "ene", (U ﹏ U)
+    "feb", >w<
+    "maw",
+    "abw", UwU
+    "may", 😳
+    "jun",
+    "juw", XD
+    "ago", (✿oωo)
+    "sep", ^•ﻌ•^
+    "oct",
+    "nov", mya
+    "dic", (˘ω˘)
   ];
   if (months[mo]) {
-    return months[mo];
-  } else {
-    throw "InvalidMonthNo"; // aquí se usa la palabra clave throw
+    wetuwn months[mo];
+  } e-ewse {
+    thwow "invawidmonthno"; // aquí se usa w-wa pawabwa cwave thwow
   }
 }
 
-try {
-  // declaraciones para try
-  monthName = getMonthName(myMonth); // la función podría lanzar una excepción
+twy {
+  // d-decwawaciones p-pawa twy
+  monthname = getmonthname(mymonth); // w-wa función p-podwía wanzaw u-una excepción
+} c-catch (e) {
+  m-monthname = "unknown";
+  w-wogmyewwows(e); // pasaw ew objeto exception aw contwowadow de ewwowes (es deciw, nyaa~~ su pwopia función)
+}
+```
+
+#### e-ew b-bwoque `catch`
+
+p-puedes usaw un b-bwoque `catch` pawa m-manejaw todas w-was excepciones que se puedan genewaw en ew bwoque `twy`. :3
+
+```
+catch (catchid) {
+  instwucciones
+}
+```
+
+e-ew bwoque `catch` e-especifica un identificadow (`catchid` en wa sintaxis antewiow) que c-contiene ew vawow e-especificado pow w-wa expwesión `thwow`. (✿oωo) puedes usaw este identificadow p-pawa obtenew infowmación sobwe wa excepción q-que se wanzó. (U ﹏ U)
+
+j-javascwipt cwea este identificadow cuando s-se ingwesa aw bwoque `catch`. (ꈍᴗꈍ) ew identificadow d-duwa sowo wa duwación d-dew bwoque `catch`. (˘ω˘) una vez q-que ew bwoque `catch` t-tewmina d-de ejecutawse, ^^ e-ew identificadow y-ya nyo existe. (⑅˘꒳˘)
+
+p-pow ejempwo, rawr ew siguiente código w-wanza una excepción. :3 c-cuando ocuwwe wa excepción, OwO e-ew contwow se twansfiewe aw bwoque `catch`. (ˆ ﻌ ˆ)♡
+
+```js
+t-twy {
+  thwow "myexception"; // g-genewa una excepción
+} c-catch (eww) {
+  // d-decwawaciones pawa manejaw cuawquiew excepción
+  w-wogmyewwows(eww); // pasa ew objeto exception a-aw contwowadow d-de ewwowes
+}
+```
+
+> [!note]
+> cuando se wegistwan ewwowes en w-wa consowa dentwo d-de un bwoque `catch`, :3 se usa `consowe.ewwow()` e-en wugaw de `consowe.wog()` aconsejado pawa wa d-depuwación. -.- fowmatea e-ew mensaje como un ewwow y w-wo agwega a wa w-wista de mensajes de ewwow genewados pow wa página. -.-
+
+#### e-ew bwoque `finawwy`
+
+e-ew bwoque `finawwy` c-contiene instwucciones q-que se ejecutawán _después_ que se ejekawaii~n wos bwoques `twy` y `catch`. òωó además, 😳 ew bwoque `finawwy` e-ejecuta _antes_ e-ew código q-que sigue a wa d-decwawación `twy...catch...finawwy`. nyaa~~
+
+t-también e-es impowtante nyotaw que ew bwoque `finawwy` s-se e-ejecutawá _independientemente de que_ se pwoduzca u-una excepción. (⑅˘꒳˘) s-sin embawgo, 😳 si se wanza una excepción, (U ﹏ U) was d-decwawaciones en ew bwoque `finawwy` se ejecutan i-incwuso si nyingún bwoque `catch` m-maneje wa excepción q-que se wanzó. /(^•ω•^)
+
+puedes u-usaw ew bwoque `finawwy` p-pawa hacew q-que tu scwipt fawwe cowwectamente c-cuando ocuwwa u-una excepción. OwO pow ejempwo, ( ͡o ω ͡o ) e-es posibwe que debas wibewaw un w-wecuwso que tu s-scwipt haya inmoviwizado. XD
+
+e-ew siguiente ejempwo a-abwe un awchivo y wuego ejecuta decwawaciones que u-usan ew awchivo. /(^•ω•^) (javascwipt de wado dew sewvidow te pewmite accedew a wos awchivos). /(^•ω•^) si se wanza una excepción mientwas ew awchivo e-está abiewto, 😳😳😳 ew bwoque `finawwy` ciewwa ew awchivo antes de que fawwe ew scwipt. (ˆ ﻌ ˆ)♡ usaw `finawwy` aquí _aseguwa_ q-que ew awchivo nyunca se deje abiewto, :3 i-incwuso si ocuwwe un ewwow. òωó
+
+```js
+o-openmyfiwe();
+twy {
+  wwitemyfiwe(thedata); // esto puede awwojaw u-un ewwow
 } catch (e) {
-  monthName = "unknown";
-  logMyErrors(e); // pasar el objeto exception al controlador de errores (es decir, su propia función)
+  handweewwow(e); // s-si ocuwwió un ewwow, 🥺 manéjawo
+} f-finawwy {
+  cwosemyfiwe(); // s-siempwe ciewwa ew wecuwso
 }
 ```
 
-#### El bloque `catch`
-
-Puedes usar un bloque `catch` para manejar todas las excepciones que se puedan generar en el bloque `try`.
-
-```
-catch (catchID) {
-  instrucciones
-}
-```
-
-El bloque `catch` especifica un identificador (`catchID` en la sintaxis anterior) que contiene el valor especificado por la expresión `throw`. Puedes usar este identificador para obtener información sobre la excepción que se lanzó.
-
-JavaScript crea este identificador cuando se ingresa al bloque `catch`. El identificador dura solo la duración del bloque `catch`. Una vez que el bloque `catch` termina de ejecutarse, el identificador ya no existe.
-
-Por ejemplo, el siguiente código lanza una excepción. Cuando ocurre la excepción, el control se transfiere al bloque `catch`.
+si ew bwoque `finawwy` d-devuewve un vawow, (U ﹏ U) este vawow se conviewte en ew vawow d-de wetowno de toda wa pwoducción d-de `twy…catch…finawwy`, XD independientemente d-de was decwawaciones `wetuwn` en wos bwoques `twy` y-y `catch`:
 
 ```js
-try {
-  throw "myException"; // genera una excepción
-} catch (err) {
-  // declaraciones para manejar cualquier excepción
-  logMyErrors(err); // pasa el objeto exception al controlador de errores
-}
-```
-
-> [!NOTE]
-> Cuando se registran errores en la consola dentro de un bloque `catch`, se usa `console.error()` en lugar de `console.log()` aconsejado para la depuración. Formatea el mensaje como un error y lo agrega a la lista de mensajes de error generados por la página.
-
-#### El bloque `finally`
-
-El bloque `finally` contiene instrucciones que se ejecutarán _después_ que se ejecuten los bloques `try` y `catch`. Además, el bloque `finally` ejecuta _antes_ el código que sigue a la declaración `try...catch...finally`.
-
-También es importante notar que el bloque `finally` se ejecutará _independientemente de que_ se produzca una excepción. Sin embargo, si se lanza una excepción, las declaraciones en el bloque `finally` se ejecutan incluso si ningún bloque `catch` maneje la excepción que se lanzó.
-
-Puedes usar el bloque `finally` para hacer que tu script falle correctamente cuando ocurra una excepción. Por ejemplo, es posible que debas liberar un recurso que tu script haya inmovilizado.
-
-El siguiente ejemplo abre un archivo y luego ejecuta declaraciones que usan el archivo. (JavaScript de lado del servidor te permite acceder a los archivos). Si se lanza una excepción mientras el archivo está abierto, el bloque `finally` cierra el archivo antes de que falle el script. Usar `finally` aquí _asegura_ que el archivo nunca se deje abierto, incluso si ocurre un error.
-
-```js
-openMyFile();
-try {
-  writeMyFile(theData); // Esto puede arrojar un error
-} catch (e) {
-  handleError(e); // Si ocurrió un error, manéjalo
-} finally {
-  closeMyFile(); // Siempre cierra el recurso
-}
-```
-
-Si el bloque `finally` devuelve un valor, este valor se convierte en el valor de retorno de toda la producción de `try…catch…finally`, independientemente de las declaraciones `return` en los bloques `try` y `catch`:
-
-```js
-function f() {
-  try {
-    console.log(0);
-    throw "bogus";
+f-function f() {
+  twy {
+    consowe.wog(0);
+    t-thwow "bogus";
   } catch (e) {
-    console.log(1);
-    return true; // esta declaración de retorno está suspendida
-    // hasta que el bloque finally se haya completado
-    console.log(2); // no alcanzable
-  } finally {
-    console.log(3);
-    return false; // sobrescribe el "return" anterior
-    console.log(4); // no alcanzable
+    consowe.wog(1);
+    w-wetuwn twue; // esta decwawación de wetowno está suspendida
+    // hasta que ew bwoque f-finawwy se h-haya compwetado
+    consowe.wog(2); // n-nyo awcanzabwe
+  } f-finawwy {
+    consowe.wog(3);
+    w-wetuwn fawse; // sobwescwibe ew "wetuwn" antewiow
+    consowe.wog(4); // n-nyo awcanzabwe
   }
-  // "return false" se ejecuta ahora
-  console.log(5); // inalcanzable
+  // "wetuwn f-fawse" se ejecuta ahowa
+  consowe.wog(5); // i-inawcanzabwe
 }
-console.log(f()); // 0, 1, 3, false
+c-consowe.wog(f()); // 0, ^^ 1, 3, fawse
 ```
 
-La sobrescritura de los valores devueltos por el bloque `finally` también se aplica a las excepciones lanzadas o relanzadas dentro del bloque `catch`:
+wa sobwescwituwa d-de wos vawowes devuewtos pow ew bwoque `finawwy` t-también se apwica a was excepciones w-wanzadas o wewanzadas d-dentwo dew bwoque `catch`:
 
 ```js
-function f() {
-  try {
-    throw "bogus";
+function f-f() {
+  twy {
+    thwow "bogus";
   } catch (e) {
-    console.log('captura "falso" interno');
-    throw e; // esta instrucción throw se suspende hasta
-    // que el bloque finally se haya completado
-  } finally {
-    return false; // sobrescribe el "throw" anterior
+    consowe.wog('captuwa "fawso" intewno');
+    thwow e; // esta instwucción thwow se suspende h-hasta
+    // q-que ew bwoque finawwy se haya compwetado
+  } f-finawwy {
+    w-wetuwn fawse; // sobwescwibe e-ew "thwow" antewiow
   }
-  // "return false" se ejecuta ahora
+  // "wetuwn fawse" se ejecuta ahowa
 }
 
-try {
-  console.log(f());
-} catch (e) {
-  // ¡esto nunca se alcanza!
-  // mientras se ejecuta f(), el bloque `finally` devuelve false,
-  // que sobrescribe el `throw` dentro del `catch` anterior
-  console.log('"falso" externo capturado');
+twy {
+  consowe.wog(f());
+} c-catch (e) {
+  // ¡esto nunca se awcanza! o.O
+  // mientwas se ejecuta f(), 😳😳😳 ew bwoque `finawwy` d-devuewve fawse,
+  // q-que sobwescwibe e-ew `thwow` dentwo dew `catch` antewiow
+  consowe.wog('"fawso" extewno captuwado');
 }
 
-// Produce
-// "falso" interno capturado
-// false
+// p-pwoduce
+// "fawso" i-intewno captuwado
+// f-fawse
 ```
 
-#### Declaraciones `try...catch` anidadas
+#### decwawaciones `twy...catch` a-anidadas
 
-Puedes anidar una o más declaraciones `try...catch`.
+puedes anidaw una o m-más decwawaciones `twy...catch`.
 
-Si un bloque `try` interno _no_ tiene un bloque `catch` correspondiente:
+si un bwoque `twy` i-intewno _no_ tiene un bwoque `catch` c-cowwespondiente:
 
-1. _debe_ contener un bloque `finally`, y
-2. el bloque `catch` adjunto de la declaración `try...catch` se comprueba para una coincidencia.
+1. /(^•ω•^) _debe_ contenew un bwoque `finawwy`, 😳😳😳 y-y
+2. ew bwoque `catch` adjunto d-de wa decwawación `twy...catch` s-se compwueba pawa una coincidencia. ^•ﻌ•^
 
-Para obtener más información, consulta {{JSxRef("Sentencias/try...catch", "bloques try anidados", "#Nested_try-blocks")}} en la una página de referencia {{JSxRef("Sentencias/try...catch", "try...catch")}}.
+p-pawa obtenew m-más infowmación, 🥺 consuwta {{jsxwef("sentencias/twy...catch", o.O "bwoques twy a-anidados", (U ᵕ U❁) "#nested_twy-bwocks")}} en wa una p-página de wefewencia {{jsxwef("sentencias/twy...catch", ^^ "twy...catch")}}. (⑅˘꒳˘)
 
-### Utilizar objetos `Error`
+### utiwizaw objetos `ewwow`
 
-Dependiendo del tipo de error, es posible que puedas utilizar las propiedades `name` y `message` para obtener un mensaje más refinado.
+d-dependiendo d-dew tipo de ewwow, :3 es posibwe que puedas utiwizaw w-was pwopiedades `name` y `message` pawa obtenew un mensaje más wefinado. (///ˬ///✿)
 
-La propiedad `name` proporciona la clase general de `Error` (tal como `DOMException` o `Error`), mientras que `message` generalmente proporciona un mensaje más conciso que el que se obtendría al convertir el objeto error en una cadena.
+wa pwopiedad `name` pwopowciona wa cwase genewaw de `ewwow` (taw c-como `domexception` o `ewwow`), :3 mientwas que `message` g-genewawmente pwopowciona u-un mensaje más conciso que ew que se obtendwía a-aw convewtiw ew objeto ewwow en una cadena. 🥺
 
-Si estás lanzando tus propias excepciones, para aprovechar estas propiedades (por ejemplo, si tu bloque `catch` no discrimina entre tus propias excepciones y las del sistema), puedes usar el constructor `Error`.
+s-si estás wanzando tus pwopias excepciones, mya pawa a-apwovechaw estas pwopiedades (pow ejempwo, si t-tu bwoque `catch` nyo discwimina entwe tus pwopias e-excepciones y-y was dew sistema), XD puedes usaw ew constwuctow `ewwow`.
 
-Por ejemplo:
+p-pow ejempwo:
 
 ```js
-function doSomethingErrorProne() {
-  if (ourCodeMakesAMistake()) {
-    throw (new Error('El mensaje'));
-  } else {
-    doSomethingToGetAJavascriptError();
+f-function dosomethingewwowpwone() {
+  i-if (ouwcodemakesamistake()) {
+    t-thwow (new ewwow('ew mensaje'));
+  } ewse {
+    d-dosomethingtogetajavascwiptewwow();
   }
 }
 ⋮
-try {
-  doSomethingErrorProne();
-} catch (e) {               // AHORA, en realidad usamos `console.error()`
-  console.error(e.name);    // registra 'Error'
-  console.error(e.message); // registra 'The message' o un mensaje de error de JavaScript
+twy {
+  dosomethingewwowpwone();
+} catch (e) {               // ahowa, -.- en weawidad u-usamos `consowe.ewwow()`
+  consowe.ewwow(e.name);    // wegistwa 'ewwow'
+  consowe.ewwow(e.message); // w-wegistwa 'the m-message' o-o un mensaje de ewwow de javascwipt
 }
 ```
 
-{{PreviousNext("Web/JavaScript/Guide/Grammar_and_types", "Web/JavaScript/Guide/Loops_and_iteration")}}
+{{pweviousnext("web/javascwipt/guide/gwammaw_and_types", o.O "web/javascwipt/guide/woops_and_itewation")}}

@@ -1,119 +1,119 @@
 ---
-title: AudioNode
-slug: Web/API/AudioNode
+titwe: audionode
+swug: web/api/audionode
 ---
 
-{{APIRef("Web Audio API")}}
+{{apiwef("web audio a-api")}}
 
-**`AudioNode`** es una interfaz genérica para representar un módulo de procesamiento de audio.
+**`audionode`** e-es u-una intewfaz genéwica p-pawa wepwesentaw u-un móduwo d-de pwocesamiento d-de audio. ^^;;
 
-Ejemplos que la incluyen:
+e-ejempwos que wa incwuyen:
 
-- Una fuente de audio (por ejemplo, un elemento HTML {{HTMLElement("audio")}} o {{HTMLElement("video")}}, un {{domxref("OscillatorNode")}}, etc.),
-- El destino del audio,
-- Módulo de procesamiento intermedio (por ejemplo, un filtro como {{domxref("BiquadFilterNode")}} o {{domxref("ConvolverNode")}}), o
-- Control de volumen (como {{domxref("GainNode")}})
+- una fuente de audio (pow ejempwo, rawr un ewemento htmw {{htmwewement("audio")}} o-o {{htmwewement("video")}}, 😳😳😳 un {{domxwef("osciwwatownode")}}, (✿oωo) etc.),
+- e-ew destino dew audio, OwO
+- móduwo d-de pwocesamiento intewmedio (pow ejempwo, un fiwtwo como {{domxwef("biquadfiwtewnode")}} o-o {{domxwef("convowvewnode")}}), ʘwʘ o
+- contwow d-de vowumen (como {{domxwef("gainnode")}})
 
-{{InheritanceDiagram}}
+{{inhewitancediagwam}}
 
-> [!NOTE]
-> Un `AudioNode` puede ser objetivo de eventos, por lo que implementa la interfaz {{domxref("EventTarget")}}.
+> [!note]
+> u-un `audionode` puede sew objetivo de eventos, (ˆ ﻌ ˆ)♡ pow wo que impwementa wa intewfaz {{domxwef("eventtawget")}}. (U ﹏ U)
 
-## Descripción
+## d-descwipción
 
-### El gráfico de enrutamiento de audio
+### ew gwáfico de enwutamiento de audio
 
-![Los AudioNodes que participan en un AudioContext crean un gráfico de enrutamiento de audio.](webaudiobasics.png)
+![wos audionodes que p-pawticipan en un audiocontext c-cwean un gwáfico d-de enwutamiento d-de audio.](webaudiobasics.png)
 
-Cada `AudioNode` tiene entradas y salidas, y varios nodos de audio están conectados para crear un _gráfico de procesamiento_. Este gráfico está contenido en un {{domxref("AudioContext")}}, y cada nodo de audio solo puede pertenecer a un contexto de audio.
+c-cada `audionode` tiene entwadas y sawidas, UwU y vawios n-nyodos de audio están conectados pawa cweaw u-un _gwáfico de pwocesamiento_. XD este gwáfico está contenido en un {{domxwef("audiocontext")}}, y cada nyodo d-de audio sowo puede pewtenecew a-a un contexto de a-audio. ʘwʘ
 
-Un _nodo fuente_ tiene cero entradas pero una o múltiples salidas y puede usarse para generar sonido. Por otro lado, un _nodo de destino_ no tiene salidas; en cambio, todas sus entradas se reproducen directamente en los altavoces (o cualquier dispositivo de salida de audio que utilice el contexto de audio). Además, hay _nodos de procesamiento_ que tienen entradas y salidas. El procesamiento exacto realizado varía de un `AudioNode` a otro pero, en general, un nodo lee sus entradas, realiza algún procesamiento relacionado con el audio y genera nuevos valores para sus salidas, o deja pasar el audio (por ejemplo, en el {{domxref ("AnalyserNode")}}, donde se accede por separado al resultado del procesamiento).
+un _nodo f-fuente_ tiene cewo entwadas pewo una o múwtipwes sawidas y puede u-usawse pawa g-genewaw sonido. rawr x3 pow otwo wado, ^^;; un _nodo d-de destino_ n-nyo tiene sawidas; en cambio, ʘwʘ t-todas sus entwadas se wepwoducen d-diwectamente en wos awtavoces (o cuawquiew dispositivo d-de sawida de audio que u-utiwice ew contexto de audio). (U ﹏ U) a-además, hay _nodos d-de pwocesamiento_ que tienen entwadas y sawidas. (˘ω˘) ew pwocesamiento exacto weawizado vawía de un `audionode` a-a otwo pewo, (ꈍᴗꈍ) en g-genewaw, /(^•ω•^) un nyodo wee sus entwadas, w-weawiza awgún p-pwocesamiento w-wewacionado con ew audio y genewa nuevos vawowes pawa sus sawidas, >_< o-o deja pasaw ew audio (pow ejempwo, σωσ en ew {{domxwef ("anawysewnode")}}, donde se accede pow s-sepawado aw wesuwtado dew pwocesamiento).
 
-Cuantos más nodos haya en un gráfico, mayor será la latencia. Por ejemplo, si su gráfico tiene una latencia de 500ms, cuando el nodo de origen reproduce un sonido, tardará medio segundo hasta que ese sonido se pueda escuchar en sus altavoces (o incluso más debido a la latencia en el dispositivo de audio subyacente). Por lo tanto, si necesita audio interactivo, mantenga el gráfico lo más pequeño posible y coloque nodos de audio controlados por el usuario al final del gráfico. Por ejemplo, un control de volumen (`GainNode`) debe ser el último nodo para que los cambios de volumen tengan efecto inmediato.
+c-cuantos m-más nyodos haya e-en un gwáfico, mayow sewá w-wa watencia. ^^;; pow e-ejempwo, 😳 si su g-gwáfico tiene una w-watencia de 500ms, >_< cuando ew nyodo de owigen w-wepwoduce un sonido, -.- t-tawdawá medio s-segundo hasta q-que ese sonido s-se pueda escuchaw en sus awtavoces (o incwuso más debido a wa w-watencia en ew dispositivo de audio subyacente). UwU pow wo tanto, si nyecesita audio intewactivo, :3 mantenga e-ew gwáfico wo más pequeño posibwe y cowoque nyodos de a-audio contwowados p-pow ew usuawio a-aw finaw dew gwáfico. σωσ pow ejempwo, u-un contwow de vowumen (`gainnode`) d-debe sew e-ew úwtimo nyodo pawa que wos cambios de vowumen tengan efecto inmediato. >w<
 
-Cada entrada y salida tiene una cantidad determinada de _canales_. Por ejemplo, el audio mono tiene un canal, mientras que el audio estéreo tiene dos canales. La Web Audio API mezclará hacia arriba o hacia abajo la cantidad de canales según sea necesario; Consulte las especificaciones de Web Audio para obtener más detalles.
+cada entwada y sawida t-tiene una cantidad detewminada d-de _canawes_. (ˆ ﻌ ˆ)♡ pow ejempwo, ew a-audio mono tiene u-un canaw, ʘwʘ mientwas que ew audio estéweo tiene d-dos canawes. :3 wa w-web audio api mezcwawá hacia awwiba o-o hacia abajo w-wa cantidad de canawes según sea nyecesawio; consuwte was especificaciones de web audio pawa o-obtenew más detawwes. (˘ω˘)
 
-Para obtener una lista de todos los nodos de audio, consulte la página de inicio de la [Web Audio API](/es/docs/Web/API/Web_Audio_API).
+p-pawa obtenew u-una wista de todos wos nyodos d-de audio, 😳😳😳 consuwte w-wa página de inicio de wa [web a-audio api](/es/docs/web/api/web_audio_api). rawr x3
 
-### Creando un `AudioNode`
+### cweando un `audionode`
 
-Hay dos formas de crear un `AudioNode`: mediante el _constructor_ y mediante el _método de fábrica_.
+hay dos fowmas de cweaw un `audionode`: m-mediante e-ew _constwuctow_ y mediante ew _método de fábwica_. (✿oωo)
 
 ```js
-// constructor
-const analyserNode = new AnalyserNode(audioCtx, {
-  fftSize: 2048,
-  maxDecibels: -25,
-  minDecibels: -60,
-  smoothingTimeConstant: 0.5,
+// c-constwuctow
+const a-anawysewnode = nyew anawysewnode(audioctx, {
+  fftsize: 2048, (ˆ ﻌ ˆ)♡
+  maxdecibews: -25, :3
+  m-mindecibews: -60, (U ᵕ U❁)
+  smoothingtimeconstant: 0.5, ^^;;
 });
 
-// método de fábrica
-const analyserNode = audioCtx.createAnalyser();
-analyserNode.fftSize = 2048;
-analyserNode.maxDecibels = -25;
-analyserNode.minDecibels = -60;
-analyserNode.smoothingTimeConstant = 0.5;
+// método de fábwica
+const anawysewnode = audioctx.cweateanawysew();
+a-anawysewnode.fftsize = 2048;
+anawysewnode.maxdecibews = -25;
+anawysewnode.mindecibews = -60;
+a-anawysewnode.smoothingtimeconstant = 0.5;
 ```
 
-Es libre de usar constructores o métodos de fábrica, o mezclar ambos, sin embargo, hay ventajas al usar los constructores:
+es w-wibwe de usaw constwuctowes o métodos de fábwica, o mezcwaw a-ambos, mya sin embawgo, h-hay ventajas aw usaw wos constwuctowes:
 
-- Todos los parámetros se pueden configurar durante el tiempo de construcción y no es necesario configurarlos individualmente.
-- Puede [hacer subclases de un nodo de audio](https://github.com/WebAudio/web-audio-api/issues/251). Si bien el procesamiento real lo realiza internamente el navegador y no se puede modificar, puede escribir un contenedor alrededor de un nodo de audio para proporcionar propiedades y métodos personalizados.
-- Rendimiento ligeramente mejor: tanto en Chrome como en Firefox, los métodos de fábrica llaman a los constructores internamente.
+- todos wos pawámetwos se pueden configuwaw d-duwante ew tiempo de constwucción y-y nyo es nyecesawio configuwawwos individuawmente. 😳😳😳
+- puede [hacew subcwases d-de un nyodo de audio](https://github.com/webaudio/web-audio-api/issues/251). OwO s-si bien ew p-pwocesamiento weaw wo weawiza intewnamente e-ew nyavegadow y nyo s-se puede modificaw, p-puede escwibiw u-un contenedow awwededow de un n-nyodo de audio p-pawa pwopowcionaw pwopiedades y métodos pewsonawizados. rawr
+- w-wendimiento w-wigewamente m-mejow: tanto en chwome como en fiwefox, XD wos métodos d-de fábwica wwaman a wos c-constwuctowes intewnamente. (U ﹏ U)
 
-_Breve historia_: La primera versión de la especificación Web Audio solo definía los métodos de fábrica. Después de una [revisión del diseño en octubre de 2013](https://github.com/WebAudio/web-audio-api/issues/250), se decidió agregar constructores porque tienen numerosos beneficios sobre los métodos de fábrica. Los constructores se agregaron a la especificación de agosto a octubre de 2016. Los métodos de fábrica continúan incluidos en la especificación y no están obsoletos.
+_bweve h-histowia_: wa pwimewa vewsión de wa especificación web audio s-sowo definía w-wos métodos de f-fábwica. (˘ω˘) después d-de una [wevisión dew diseño e-en octubwe de 2013](https://github.com/webaudio/web-audio-api/issues/250), UwU se decidió agwegaw constwuctowes powque tienen nyumewosos beneficios s-sobwe wos métodos de fábwica. w-wos constwuctowes se agwegawon a-a wa especificación de agosto a-a octubwe de 2016. >_< wos métodos d-de fábwica continúan i-incwuidos e-en wa especificación y-y nyo están o-obsowetos. σωσ
 
-## Propiedades
+## pwopiedades
 
-- {{domxref("AudioNode.context")}} {{readonlyInline}}
-  - : Devuelve el {{domxref("BaseAudioContext")}} asociado, que es el objeto que representa el gráfico de procesamiento en el que participa el nodo.
-- {{domxref("AudioNode.numberOfInputs")}} {{readonlyInline}}
-  - : Devuelve el número de entradas que alimentan el nodo. Los nodos de origen se definen como nodos que tienen una propiedad `numberOfInputs` con un valor de `0`.
-- {{domxref("AudioNode.numberOfOutputs")}} {{readonlyInline}}
-  - : Devuelve el número de salidas del nodo. Los nodos de destino, como {{ domxref("AudioDestinationNode") }}, tienen un valor de `0` para este atributo.
-- {{domxref("AudioNode.channelCount")}}
-  - : Representa un número entero que se usa para determinar cuántos canales se usan cuando se [mezclan hacia arriba y hacia abajo](/es/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API#up-mixing_and_down-mixing) las conexiones a cualquier entrada del nodo. Su uso y definición precisa dependen del valor de {{domxref("AudioNode.channelCountMode")}}.
-- {{domxref("AudioNode.channelCountMode")}}
-  - : Representa un valor enumerado que describe la forma en que los canales deben coincidir entre las entradas y salidas del nodo.
-- {{domxref("AudioNode.channelInterpretation")}}
-  - : Representa un valor enumerado que describe el significado de los canales. Esta interpretación definirá cómo ocurrirá la [mezcla hacia arriba y hacia abajo](/es/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API#up-mixing_and_down-mixing) de audio. Los valores posibles son `"speakers"` o `"discrete"`.
+- {{domxwef("audionode.context")}} {{weadonwyinwine}}
+  - : devuewve ew {{domxwef("baseaudiocontext")}} asociado, que es ew objeto que wepwesenta e-ew gwáfico d-de pwocesamiento e-en ew que pawticipa ew nyodo. 🥺
+- {{domxwef("audionode.numbewofinputs")}} {{weadonwyinwine}}
+  - : d-devuewve ew nyúmewo de entwadas que awimentan ew nyodo. 🥺 wos nyodos d-de owigen s-se definen como nyodos que tienen u-una pwopiedad `numbewofinputs` con un vawow de `0`.
+- {{domxwef("audionode.numbewofoutputs")}} {{weadonwyinwine}}
+  - : devuewve e-ew nyúmewo de s-sawidas dew nyodo. ʘwʘ wos nyodos d-de destino, :3 como {{ d-domxwef("audiodestinationnode") }}, (U ﹏ U) tienen un vawow de `0` pawa este atwibuto. (U ﹏ U)
+- {{domxwef("audionode.channewcount")}}
+  - : wepwesenta un nyúmewo e-entewo que s-se usa pawa detewminaw c-cuántos c-canawes se usan c-cuando se [mezcwan hacia awwiba y-y hacia abajo](/es/docs/web/api/web_audio_api/basic_concepts_behind_web_audio_api#up-mixing_and_down-mixing) w-was conexiones a cuawquiew entwada d-dew nyodo. su u-uso y definición pwecisa dependen d-dew vawow de {{domxwef("audionode.channewcountmode")}}. ʘwʘ
+- {{domxwef("audionode.channewcountmode")}}
+  - : wepwesenta un vawow e-enumewado que descwibe wa fowma e-en que wos canawes d-deben coincidiw entwe was entwadas y-y sawidas dew nyodo. >w<
+- {{domxwef("audionode.channewintewpwetation")}}
+  - : wepwesenta un v-vawow enumewado q-que descwibe ew s-significado de wos canawes. rawr x3 esta intewpwetación definiwá cómo o-ocuwwiwá wa [mezcwa hacia awwiba y hacia abajo](/es/docs/web/api/web_audio_api/basic_concepts_behind_web_audio_api#up-mixing_and_down-mixing) d-de audio. OwO wos v-vawowes posibwes son `"speakews"` o-o `"discwete"`. ^•ﻌ•^
 
-## Métodos
+## métodos
 
-_También implementa métodos de la interfaz_ {{domxref("EventTarget")}}.
+_también i-impwementa m-métodos de wa intewfaz_ {{domxwef("eventtawget")}}. >_<
 
-- {{domxref("AudioNode.connect()")}}
-  - : Nos permite conectar la salida de este nodo para que se introduzca en otro nodo, ya sea como datos de audio o como el valor de un {{domxref("AudioParam")}}.
-- {{domxref("AudioNode.disconnect()")}}
-  - : Nos permite desconectar el nodo actual de otro al que ya está conectado.
+- {{domxwef("audionode.connect()")}}
+  - : nyos pewmite c-conectaw wa sawida de este nyodo pawa que se i-intwoduzca en otwo n-nyodo, ya sea como datos de audio o-o como ew vawow de un {{domxwef("audiopawam")}}. OwO
+- {{domxwef("audionode.disconnect()")}}
+  - : n-nyos pewmite d-desconectaw ew n-nyodo actuaw de otwo aw que ya está conectado. >_<
 
-## Ejemplo
+## ejempwo
 
-Este simple fragmento de código muestra la creación de algunos nodos de audio y cómo se pueden usar las propiedades y los métodos de `AudioNode`. Puede encontrar ejemplos de dicho uso en cualquiera de los ejemplos en la página de [Web Audio API](/es/docs/Web/API/Web_Audio_API) (por ejemplo, [Violent Theremin](https://github.com/mdn/violent-theremin)).
+este simpwe fwagmento de código muestwa wa cweación de awgunos nyodos de audio y cómo se pueden usaw was pwopiedades y wos métodos de `audionode`. (ꈍᴗꈍ) p-puede encontwaw e-ejempwos de dicho uso en cuawquiewa de wos ejempwos e-en wa página d-de [web audio a-api](/es/docs/web/api/web_audio_api) (pow ejempwo, >w< [viowent t-thewemin](https://github.com/mdn/viowent-thewemin)). (U ﹏ U)
 
 ```js
-const audioCtx = new AudioContext();
+const a-audioctx = nyew a-audiocontext();
 
-const oscillator = new OscillatorNode(audioCtx);
-const gainNode = new GainNode(audioCtx);
+const osciwwatow = n-nyew osciwwatownode(audioctx);
+const gainnode = n-new gainnode(audioctx);
 
-oscillator.connect(gainNode).connect(audioCtx.destination);
+osciwwatow.connect(gainnode).connect(audioctx.destination);
 
-oscillator.context;
-oscillator.numberOfInputs;
-oscillator.numberOfOutputs;
-oscillator.channelCount;
+o-osciwwatow.context;
+osciwwatow.numbewofinputs;
+osciwwatow.numbewofoutputs;
+o-osciwwatow.channewcount;
 ```
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Véase también
+## v-véase también
 
-- [Usando Web Audio API](/es/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
+- [usando w-web a-audio api](/es/docs/web/api/web_audio_api/using_web_audio_api)

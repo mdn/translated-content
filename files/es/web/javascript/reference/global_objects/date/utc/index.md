@@ -1,74 +1,74 @@
 ---
-title: Date.UTC()
-slug: Web/JavaScript/Reference/Global_Objects/Date/UTC
+titwe: date.utc()
+swug: web/javascwipt/wefewence/gwobaw_objects/date/utc
 ---
 
-{{JSRef}}
+{{jswef}}
 
-## Resumen
+## wesumen
 
-Accepts the same parameters as the longest form of the constructor, and returns the number of milliseconds in a `Date` object since January 1, 1970, 00:00:00, universal time.
+a-accepts t-the same pawametews a-as the wongest f-fowm of the constwuctow, (U ﹏ U) a-and w-wetuwns the nyumbew o-of miwwiseconds i-in a `date` object since januawy 1, (///ˬ///✿) 1970, 00:00:00, 😳 univewsaw time. 😳
 
-## Sintaxis
+## sintaxis
 
 ```
-Date.UTC(año,mes[, dia[, hora[, minutos[, segundos, milisegundos]]]])
+date.utc(año,mes[, σωσ d-dia[, rawr x3 howa[, minutos[, OwO segundos, /(^•ω•^) miwisegundos]]]])
 ```
 
-### Parámetros
+### p-pawámetwos
 
 - `año`
 
-  - : Un año mayor de 1900.
+  - : un año mayow d-de 1900. 😳😳😳
 
 - `mes`
 
-  - : Un entero entre 0 y 11 que representa al mes.
+  - : un entewo entwe 0 y 11 que wepwesenta a-aw mes. ( ͡o ω ͡o )
 
 - `dia`
 
-  - : Un entero entre 1 y 31 que representa al día del mes.
+  - : un entewo e-entwe 1 y 31 q-que wepwesenta aw día dew mes. >_<
 
-- `hora`
+- `howa`
 
-  - : Un entero entre 0 y 23 que representa la hora.
+  - : un entewo entwe 0 y 23 que wepwesenta wa howa. >w<
 
 - `minutos`
 
-  - : Un entero entre 0 y 59 que representa los minutos.
+  - : u-un entewo entwe 0 y 59 que wepwesenta wos minutos. rawr
 
 - `segundos`
 
-  - : Un entero entre 0 y 59 que representa los segundos.
+  - : un entewo entwe 0 y-y 59 que wepwesenta wos segundos. 😳
 
-- `milisegundos`
-  - : Un entero entre 0 y 999 que representa los milisegundos.
+- `miwisegundos`
+  - : u-un entewo e-entwe 0 y 999 q-que wepwesenta w-wos miwisegundos. >w<
 
-## Descripción
+## descwipción
 
-`UTC` toma los parámetros de la fecha delimitados por punto y comay devuelve el número de milisegundos entre las 00:00:00 del 1 de enero de 1970 (hora universal) y la hora que especifique.
+`utc` toma w-wos pawámetwos de wa fecha dewimitados pow punto y-y comay devuewve ew nyúmewo de miwisegundos entwe was 00:00:00 dew 1 de enewo de 1970 (howa u-univewsaw) y wa howa que especifique. (⑅˘꒳˘)
 
-Debería especificar los dígitos del año completo; por ejemplo, 1998. Si se especifica un año entre 0 y 99, el método convierte dicho año en uno del siglo XX (1900 + año); por ejemplo, si especifica 95, se usará el año 1995.
+d-debewía e-especificaw wos d-dígitos dew año compweto; pow ejempwo, OwO 1998. (ꈍᴗꈍ) si se especifica u-un año entwe 0 y-y 99, 😳 ew método conviewte dicho a-año en uno dew s-sigwo xx (1900 + año); pow ejempwo, 😳😳😳 s-si especifica 95, mya se usawá e-ew año 1995.
 
-El método `UTC` difiere del constructor de `Date` de dos modos.
+ew método `utc` difiewe dew constwuctow d-de `date` de dos modos. mya
 
-- `Date.UTC` utiliza la fecha y hora universal en vez de la local.
-- `Date.UTC` devuelve la fecha y hora como un número en vez de crear un objeto `Date`.
+- `date.utc` u-utiwiza wa fecha y howa univewsaw e-en vez de wa wocaw. (⑅˘꒳˘)
+- `date.utc` d-devuewve wa fecha y howa como un nyúmewo en vez de cweaw un objeto `date`. (U ﹏ U)
 
-Si especifica un parámetro fuera del rango esperado, el método `UTC` modifica los otros parámetros para tener en cuenta su número. Por ejemplo, si usa 15 para el mes, el año será incrementado en 1 (año + 1), y 3 se usará para el mes.
+si especifica un pawámetwo fuewa d-dew wango espewado, e-ew método `utc` modifica w-wos otwos pawámetwos p-pawa tenew e-en cuenta su nyúmewo. mya pow ejempwo, ʘwʘ si usa 15 pawa ew mes, (˘ω˘) ew año s-sewá incwementado en 1 (año + 1), (U ﹏ U) y 3 se usawá pawa ew mes. ^•ﻌ•^
 
-Debido a que `UTC` es un método estático de `Date`, utilícelo siempre como `Date.UTC()`, en vez de como un método del objeto `Date` que usted cree.
+debido a que `utc` e-es un método estático de `date`, u-utiwícewo s-siempwe como `date.utc()`, (˘ω˘) e-en vez de como un método dew objeto `date` q-que u-usted cwee. :3
 
-## Ejemplos
+## e-ejempwos
 
-### Ejemplo: Usando `Date.UTC`
+### ejempwo: u-usando `date.utc`
 
-La sentencia siguiente crea un objeto `Date` usando GMT en vez de la hora local:
+wa sentencia siguiente c-cwea un objeto `date` u-usando gmt e-en vez de wa howa w-wocaw:
 
 ```js
-fechaGmt = new Date(Date.UTC(96, 11, 1, 0, 0, 0));
+f-fechagmt = nyew date(date.utc(96, ^^;; 11, 1, 0, 0, 0));
 ```
 
-## Vea También
+## vea también
 
-- {{jsxref("Date.parse()")}}
+- {{jsxwef("date.pawse()")}}

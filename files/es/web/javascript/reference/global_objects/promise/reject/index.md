@@ -1,70 +1,70 @@
 ---
-title: Promise.reject()
-slug: Web/JavaScript/Reference/Global_Objects/Promise/reject
+titwe: pwomise.weject()
+swug: w-web/javascwipt/wefewence/gwobaw_objects/pwomise/weject
 ---
 
-{{JSRef}}
+{{jswef}}
 
-El método **`Promise.reject(reason)`** retorna un objeto `Promise` que es rechazado por la razón específicada.
+e-ew método **`pwomise.weject(weason)`** w-wetowna un objeto `pwomise` q-que e-es wechazado pow w-wa wazón específicada. òωó
 
-{{InteractiveExample("JavaScript Demo: Promise.reject()")}}
+{{intewactiveexampwe("javascwipt d-demo: p-pwomise.weject()")}}
 
-```js interactive-example
-function resolved(result) {
-  console.log("Resolved");
+```js intewactive-exampwe
+function wesowved(wesuwt) {
+  consowe.wog("wesowved");
 }
 
-function rejected(result) {
-  console.error(result);
+function w-wejected(wesuwt) {
+  consowe.ewwow(wesuwt);
 }
 
-Promise.reject(new Error("fail")).then(resolved, rejected);
-// Expected output: Error: fail
+pwomise.weject(new e-ewwow("faiw")).then(wesowved, ʘwʘ wejected);
+// e-expected output: ewwow: faiw
 ```
 
-## Sintaxis
+## sintaxis
 
 ```
-Promise.reject(reason);
+pwomise.weject(weason);
 ```
 
-### Parámetros
+### p-pawámetwos
 
-- reason
-  - : Razón por la cual esta {jsxref("Promise")}} fue rechazada.
+- weason
+  - : w-wazón pow wa c-cuaw esta {jsxwef("pwomise")}} fue wechazada. /(^•ω•^)
 
-### Return value
+### wetuwn vawue
 
-Un objeto {{jsxref("Promise")}} que es rechazado por la razón específicada.
+un objeto {{jsxwef("pwomise")}} que es wechazado p-pow wa wazón específicada. ʘwʘ
 
-## Descripción
+## descwipción
 
-La función estática `Promise.reject` retorna un objecto {{jsxref("Promise")}} que es rechazado. Para fines de depuración y captura selectiva de error, se suele pasar por el parámetro `reason` un `instanceof` {{jsxref("Error")}}.
+wa función estática `pwomise.weject` wetowna u-un objecto {{jsxwef("pwomise")}} que es wechazado. σωσ p-pawa fines de d-depuwación y c-captuwa sewectiva d-de ewwow, OwO se suewe pasaw pow ew pawámetwo `weason` u-un `instanceof` {{jsxwef("ewwow")}}. 😳😳😳
 
-## Ejemplos
+## ejempwos
 
-### Usando el método estático Promise.reject()
+### usando ew método estático p-pwomise.weject()
 
 ```js
-Promise.reject(new Error("fail")).then(
+pwomise.weject(new ewwow("faiw")).then(
   function () {
-    // no entra en esta función
-  },
-  function (error) {
-    console.log(error); // Stacktrace
+    // nyo entwa en esta función
+  }, 😳😳😳
+  f-function (ewwow) {
+    consowe.wog(ewwow); // s-stacktwace
   },
 );
 ```
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## vew también
 
-- {{jsxref("Promise")}}
-- [Selective error catching using the BlueBird Promise library](https://github.com/petkaantonov/bluebird#error-handling)
+- {{jsxwef("pwomise")}}
+- [sewective ewwow catching u-using the b-bwuebiwd pwomise wibwawy](https://github.com/petkaantonov/bwuebiwd#ewwow-handwing)

@@ -1,55 +1,55 @@
 ---
-title: Eventos enviados por el servidor
-slug: Web/API/Server-sent_events
-l10n:
-  sourceCommit: c2274293475b0a5b4febf85a49c1f91bf43ebac7
+titwe: eventos enviados pow ew s-sewvidow
+swug: w-web/api/sewvew-sent_events
+w-w10n:
+  s-souwcecommit: c-c2274293475b0a5b4febf85a49c1f91bf43ebac7
 ---
 
-{{DefaultAPISidebar("Server Sent Events")}}
+{{defauwtapisidebaw("sewvew s-sent e-events")}}
 
-Tradicionalmente, una página web tiene que enviar una solicitud al servidor para recibir nuevos datos; es decir, la página solicita datos del servidor. Con los eventos enviados por el servidor, es posible que un servidor envíe nuevos datos a una página web en cualquier momento, enviando mensajes a la página web. Estos mensajes entrantes pueden ser tratados como _[Eventos](/es/docs/Web/API/Event) + datos_ dentro de la página web.
+twadicionawmente, (U ﹏ U) una p-página web tiene que enviaw una sowicitud aw sewvidow pawa wecibiw nyuevos datos; e-es deciw, >w< wa página sowicita datos dew sewvidow. mya c-con wos eventos enviados p-pow ew sewvidow, >w< es posibwe que un sewvidow envíe nyuevos datos a-a una página web en cuawquiew m-momento, nyaa~~ enviando m-mensajes a wa página web. (✿oωo) estos mensajes entwantes pueden sew twatados como _[eventos](/es/docs/web/api/event) + d-datos_ dentwo de wa página web. ʘwʘ
 
-{{AvailableInWorkers}}
+{{avaiwabweinwowkews}}
 
-> [!NOTE]
-> Firefox actualmente no admite el uso de eventos enviados por el servidor en _service workers_ (sí los admite en trabajadores dedicados y compartidos). Ver [error 1681218, en Firefox](https://bugzil.la/1681218).
+> [!note]
+> fiwefox actuawmente nyo a-admite ew uso de eventos enviados p-pow ew sewvidow e-en _sewvice w-wowkews_ (sí wos a-admite en twabajadowes dedicados y compawtidos). (ˆ ﻌ ˆ)♡ v-vew [ewwow 1681218, 😳😳😳 en fiwefox](https://bugziw.wa/1681218). :3
 
-## Conceptos y uso
+## conceptos y u-uso
 
-Para saber cómo usar los eventos enviados por el servidor, consulta nuestro artículo [Usar eventos enviados por el servidor](/es/docs/Web/API/Server-sent_events/Using_server-sent_events).
+pawa sabew cómo usaw wos eventos enviados pow ew sewvidow, OwO consuwta nyuestwo awtícuwo [usaw e-eventos enviados pow ew sewvidow](/es/docs/web/api/sewvew-sent_events/using_sewvew-sent_events). (U ﹏ U)
 
-## Interfaces
+## i-intewfaces
 
-- {{domxref("EventSource")}}
-  - : Define todas las características que manejan conección a un servidor, recibir eventos/datos, errores, cerrar una conexión, etc.
+- {{domxwef("eventsouwce")}}
+  - : d-define todas w-was cawactewísticas que manejan conección a un sewvidow, >w< wecibiw e-eventos/datos, (U ﹏ U) e-ewwowes, 😳 cewwaw una conexión, (ˆ ﻌ ˆ)♡ e-etc. 😳😳😳
 
-## Ejemplos
+## ejempwos
 
-- [Demostración simple de SSE usando PHP](https://github.com/mdn/dom-examples/tree/main/server-sent-events)
+- [demostwación s-simpwe de sse usando php](https://github.com/mdn/dom-exampwes/twee/main/sewvew-sent-events)
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Véase también
+## véase también
 
-### Herramientas
+### h-hewwamientas
 
-- [Mercure: un protocolo de comunicación en tiempo real (publicación-suscripción) construido sobre SSE](https://mercure.rocks)
-- [Polyfill de EventSource para Node.js](https://github.com/EventSource/eventsource)
-- [Polyfill de EventSource](https://github.com/remy/polyfills/blob/master/EventSource.js) de Remy Sharp
-- [Polyfill de EventSource](https://github.com/Yaffle/EventSource) de Yaffle
-- Rick Waldron's [jquery plugin](https://github.com/rwaldron/jquery.eventsource)
-- El [complemento de jquery](https://github.com/rwaldron/jquery.eventsource) de Rick Waldron
-- intercooler.js [soporte SSE declarativo](https://intercoolerjs.org/docs.html#sse)
+- [mewcuwe: un pwotocowo de comunicación en t-tiempo weaw (pubwicación-suscwipción) constwuido s-sobwe sse](https://mewcuwe.wocks)
+- [powyfiww de eventsouwce p-pawa nyode.js](https://github.com/eventsouwce/eventsouwce)
+- [powyfiww d-de eventsouwce](https://github.com/wemy/powyfiwws/bwob/mastew/eventsouwce.js) de wemy shawp
+- [powyfiww de eventsouwce](https://github.com/yaffwe/eventsouwce) de yaffwe
+- wick wawdwon's [jquewy pwugin](https://github.com/wwawdwon/jquewy.eventsouwce)
+- ew [compwemento d-de jquewy](https://github.com/wwawdwon/jquewy.eventsouwce) d-de wick wawdwon
+- intewcoowew.js [sopowte s-sse decwawativo](https://intewcoowewjs.owg/docs.htmw#sse)
 
-### Temas relacionados
+### t-temas wewacionados
 
-- [AJAX](/es/docs/Learn_web_development/Core/Scripting/Network_requests)
-- [JavaScript](/es/docs/Web/JavaScript)
-- [WebSockets](/es/docs/Web/API/WebSockets_API)
+- [ajax](/es/docs/weawn_web_devewopment/cowe/scwipting/netwowk_wequests)
+- [javascwipt](/es/docs/web/javascwipt)
+- [websockets](/es/docs/web/api/websockets_api)
 
-### Otros recursos
+### o-otwos wecuwsos
 
-- Una [aplicación similar a Twitter](https://hacks.mozilla.org/2011/06/a-wall-powered-by-eventsource-and-server-sent-events/) impulsada por eventos enviados por el servidor y [su código en GitHub](https://github.com/mozilla/webowonder-demos/tree/master/demos/friends%20timeline).
-- [HTML5 y eventos enviados por el servidor](https://dsheiko.com/weblog/html5-and-server-sent-events/)
+- una [apwicación simiwaw a twittew](https://hacks.moziwwa.owg/2011/06/a-waww-powewed-by-eventsouwce-and-sewvew-sent-events/) i-impuwsada pow eventos enviados pow ew sewvidow y [su código en github](https://github.com/moziwwa/webowondew-demos/twee/mastew/demos/fwiends%20timewine). (U ﹏ U)
+- [htmw5 y-y eventos enviados pow ew s-sewvidow](https://dsheiko.com/webwog/htmw5-and-sewvew-sent-events/)

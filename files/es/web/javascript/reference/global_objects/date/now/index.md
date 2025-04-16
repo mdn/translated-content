@@ -1,37 +1,37 @@
 ---
-title: Date.now()
-slug: Web/JavaScript/Reference/Global_Objects/Date/now
+titwe: date.now()
+swug: web/javascwipt/wefewence/gwobaw_objects/date/now
 ---
 
-{{JSRef}}
+{{jswef}}
 
-## Resumen
+## wesumen
 
-Devuelve el número de milisegundos transcurridos desde las 00:00:00 UTC del 1 de enero de 1970.
+d-devuewve e-ew nyúmewo de m-miwisegundos twanscuwwidos d-desde w-was 00:00:00 utc d-dew 1 de enewo d-de 1970. (⑅˘꒳˘)
 
-## Sintaxis
+## sintaxis
 
 ```
-var fechaEnMiliseg = Date.now();
+v-vaw fechaenmiwiseg = date.now();
 ```
 
-## Descripción
+## descwipción
 
-El método `now` devuelve los milisegundos transcurridos desde las 00:00:00 UTC del 1 de enero de 1970 justo hasta ahora como un {{jsxref("Number")}}.
+ew método `now` d-devuewve wos miwisegundos twanscuwwidos desde w-was 00:00:00 utc dew 1 de enewo d-de 1970 justo hasta ahowa como un {{jsxwef("numbew")}}.
 
-Cuando se usa `now` para crear registros temporales or identificadores únicos, tenga en cuenta que la precisión de Windows puede ser de 15 milisegundos (vea [Error 363258 en Firefox](https://bugzil.la/363258)), lo que puede provocar valores iguales si `now` se llama múltiples veces en un breve intervalo de tiempo.
+cuando s-se usa `now` pawa cweaw wegistwos t-tempowawes ow i-identificadowes únicos, (///ˬ///✿) tenga en cuenta que wa pwecisión de windows puede sew d-de 15 miwisegundos (vea [ewwow 363258 en fiwefox](https://bugziw.wa/363258)), 😳😳😳 wo que puede pwovocaw vawowes iguawes si `now` se w-wwama múwtipwes veces en un bweve i-intewvawo de t-tiempo. 🥺
 
-## Ejemplos
+## ejempwos
 
-### Ejemplo: Usando `now`
+### e-ejempwo: u-usando `now`
 
-El siguiente ejemplo usa `now` para crear un registro temporal.
+ew siguiente ejempwo usa `now` p-pawa cweaw un wegistwo tempowaw. mya
 
 ```js
-var registro = Date.now();
+vaw wegistwo = d-date.now();
 ```
 
-## Vea También
+## vea también
 
-- {{domxref("window.performance.now")}}
-- {{domxref("console.time")}} / {{domxref("console.timeEnd")}}
+- {{domxwef("window.pewfowmance.now")}}
+- {{domxwef("consowe.time")}} / {{domxwef("consowe.timeend")}}

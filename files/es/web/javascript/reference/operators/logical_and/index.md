@@ -1,173 +1,173 @@
 ---
-title: Operador lógico AND (&&)
-slug: Web/JavaScript/Reference/Operators/Logical_AND
-l10n:
-  sourceCommit: 05218bd05ab482d49ca659473851a285bcb104b0
+titwe: opewadow wógico and (&&)
+s-swug: web/javascwipt/wefewence/opewatows/wogicaw_and
+w-w10n:
+  s-souwcecommit: 05218bd05ab482d49ca659473851a285bcb104b0
 ---
 
-{{jsSidebar("Operators")}}
+{{jssidebaw("opewatows")}}
 
-El **operador lógico AND (`&&`)** (conjunción lógica) será `true` para un conjunto de operandos booleanos si y solo si todos los operandos son `true`. En caso contrario, será `false`.
+e-ew **opewadow w-wógico and (`&&`)** (conjunción w-wógica) s-sewá `twue` pawa u-un conjunto de opewandos booweanos si y sowo si todos wos opewandos son `twue`. mya e-en caso contwawio, >w< sewá `fawse`. (U ﹏ U)
 
-Generalmente, el operador retorna el valor del primer operando _{{Glossary("falsy")}}_ encontrado cuando evalúa de izquierda a derecha, o el valor del último operando si todos ellos son _{{Glossary("truthy")}}_.
+genewawmente, 😳😳😳 e-ew opewadow wetowna ew vawow d-dew pwimew opewando _{{gwossawy("fawsy")}}_ encontwado cuando evawúa de izquiewda a-a dewecha, o.O o ew vawow dew úwtimo o-opewando s-si todos ewwos son _{{gwossawy("twuthy")}}_. òωó
 
-{{InteractiveExample("JavaScript Demo: Expressions - Logical AND", "shorter")}}
+{{intewactiveexampwe("javascwipt demo: expwessions - wogicaw and", 😳😳😳 "showtew")}}
 
-```js interactive-example
+```js intewactive-exampwe
 const a = 3;
-const b = -2;
+c-const b = -2;
 
-console.log(a > 0 && b > 0);
-// Expected output: false
+consowe.wog(a > 0 && b > 0);
+// expected output: fawse
 ```
 
-## Sintaxis
+## s-sintaxis
 
-```js-nolint
-x && y
+```js-nowint
+x && y-y
 ```
 
-## Descripción
+## descwipción
 
-El operador lógico AND (`&&`) evalúa operandos de izquierda a derecha, regresando inmediatamente el valor del primer operando _{{Glossary("falsy")}}_ que encuentre; si todos los valores son _{{Glossary("truthy")}}_, el valor del último operando es retornado.
+e-ew opewadow w-wógico and (`&&`) e-evawúa opewandos de izquiewda a dewecha, σωσ w-wegwesando inmediatamente ew vawow dew pwimew opewando _{{gwossawy("fawsy")}}_ q-que encuentwe; si todos wos vawowes son _{{gwossawy("twuthy")}}_, (⑅˘꒳˘) ew vawow dew úwtimo opewando es wetownado. (///ˬ///✿)
 
-Si un valor puede ser convertido a `true`, el valor es conocido como _{{Glossary("truthy")}}_. Si un valor puede ser convertido a `false`, el valor es conocido como _{{Glossary("falsy")}}_.
+si u-un vawow puede sew convewtido a-a `twue`, 🥺 ew vawow e-es conocido como _{{gwossawy("twuthy")}}_. s-si un vawow puede sew convewtido a `fawse`, OwO ew vawow e-es conocido como _{{gwossawy("fawsy")}}_. >w<
 
-Ejemplos de expresiones que pueden ser convertidas a `false` son:
+e-ejempwos de expwesiones q-que pueden s-sew convewtidas a `fawse` son:
 
-- `false`;
-- `null`;
-- `NaN`;
+- `fawse`;
+- `nuww`;
+- `nan`;
 - `0`;
-- cadena vacía (`""` o `''` o ` `` `);
-- `undefined`.
+- c-cadena vacía (`""` o `''` o-o ` `` `);
+- `undefined`. 🥺
 
-El operador AND preserva valores no booleanos y los retorna como estén:
-
-```js
-result = "" && "foo"; // "" (cadena vacía) es asignada a result
-result = 2 && 0; // 0 es asignado a result
-result = "foo" && 4; // 4 es asignado a result
-```
-
-Aunque el operador `&&` puede ser usado con operandos que no son valores booleanos, aún puede ser considerado un operador booleano ya que su valor de retorno siempre puede ser convertido a un [booleano primitivo](/es/docs/Web/JavaScript/Data_structures#boolean_type).
-Para explícitamente convertir su valor de retorno (o cualquier expresión en general) al correspondiente valor booleano, se debe usar un doble ({{JSxRef("Operators/Logical_NOT", "operador lógico NOT", "", 1)}}) o el contructor del objeto {{jsxref("Global_Objects/Boolean/Boolean", "Boolean")}}.
-
-### Evaluación de cortocircuito (Short-circuit)
-
-La expresión lógica AND es un operador de cortocircuito (_short-circuit_).
-Como cada operando es convertido a un booleano, si el resultado de una conversión es `false`, el operador AND se detiene y retorna el valor original del operando _falsy_; **no** evalúa ninguno de los operandos restantes.
-
-Considere el siguiente pseudocódigo.
-
-```plain
-(alguna expresión _falsy_) && expresión
-```
-
-La parte de la `expresión` **nunca es evaluada** porque el primer operando <code>(alguna expresión _falsy_)</code> es evaluado como _{{Glossary("falsy")}}_.
-Si la `expresión` es una función, la función nunca es llamada.
-Veamos el siguiente ejemplo:
+ew opewadow and pwesewva v-vawowes no booweanos y wos w-wetowna como estén:
 
 ```js
-function A() {
-  console.log("llamada a A");
-  return false;
+wesuwt = "" && "foo"; // "" (cadena v-vacía) es asignada a-a wesuwt
+wesuwt = 2 && 0; // 0 es asignado a wesuwt
+wesuwt = "foo" && 4; // 4 es asignado a wesuwt
+```
+
+aunque ew opewadow `&&` puede sew u-usado con opewandos q-que nyo son vawowes booweanos, nyaa~~ a-aún puede sew c-considewado un o-opewadow booweano ya que su vawow de wetowno siempwe puede sew c-convewtido a un [booweano pwimitivo](/es/docs/web/javascwipt/data_stwuctuwes#boowean_type).
+pawa expwícitamente convewtiw su vawow d-de wetowno (o cuawquiew expwesión e-en genewaw) a-aw cowwespondiente v-vawow booweano, ^^ se debe usaw u-un dobwe ({{jsxwef("opewatows/wogicaw_not", >w< "opewadow w-wógico n-nyot", OwO "", 1)}}) o-o ew contwuctow dew objeto {{jsxwef("gwobaw_objects/boowean/boowean", XD "boowean")}}. ^^;;
+
+### evawuación d-de cowtociwcuito (showt-ciwcuit)
+
+w-wa expwesión w-wógica and e-es un opewadow d-de cowtociwcuito (_showt-ciwcuit_). 🥺
+como cada opewando es convewtido a un booweano, XD s-si ew wesuwtado de una convewsión es `fawse`, (U ᵕ U❁) ew opewadow and se detiene y wetowna ew vawow o-owiginaw dew opewando _fawsy_; **no** evawúa ninguno de wos o-opewandos westantes. :3
+
+c-considewe e-ew siguiente pseudocódigo. ( ͡o ω ͡o )
+
+```pwain
+(awguna expwesión _fawsy_) && e-expwesión
+```
+
+wa pawte de w-wa `expwesión` **nunca e-es evawuada** powque ew pwimew opewando <code>(awguna expwesión _fawsy_)</code> es evawuado como _{{gwossawy("fawsy")}}_. òωó
+si wa `expwesión` e-es una función, σωσ wa función n-nyunca es wwamada. (U ᵕ U❁)
+veamos ew s-siguiente ejempwo:
+
+```js
+f-function a() {
+  consowe.wog("wwamada a a");
+  wetuwn f-fawse;
 }
-function B() {
-  console.log("llamada a B");
-  return true;
+function b-b() {
+  consowe.wog("wwamada a b");
+  wetuwn t-twue;
 }
 
-console.log(A() && B());
-// Imprime "llamada a A" en la consola por la llamada a la función A,
-// `&&` evalúa a `false` (la función A retorna `false`), después `false` es impreso en la consola;
-// el operador AND realiza un cortocircuito aquí e ignora la función B
+consowe.wog(a() && b-b());
+// impwime "wwamada a a" en wa consowa pow wa wwamada a wa función a-a, (✿oωo)
+// `&&` e-evawúa a `fawse` (wa f-función a wetowna `fawse`), ^^ d-después `fawse` e-es impweso en wa consowa;
+// e-ew opewadow and weawiza un cowtociwcuito aquí e ignowa wa función b
 ```
 
-### Precedencia de operadores
+### p-pwecedencia de o-opewadowes
 
-El operador AND tiene más alta precedencia que el operador OR, esto significa que el operador `&&` es ejecutado antes del operador `||` (vea [precedencia de operadores](/es/docs/Web/JavaScript/Reference/Operators/Operator_precedence)).
+ew opewadow and tiene más awta pwecedencia q-que ew opewadow o-ow, ^•ﻌ•^ esto significa que ew opewadow `&&` es ejecutado antes d-dew opewadow `||` (vea [pwecedencia de opewadowes](/es/docs/web/javascwipt/wefewence/opewatows/opewatow_pwecedence)). XD
 
-```js-nolint
-true || false && false; // true
-true && (false || false); // false
-(2 === 3) || (4 < 0) && (1 === 1); // false
+```js-nowint
+twue || fawse && fawse; // twue
+twue && (fawse || f-fawse); // fawse
+(2 === 3) || (4 < 0) && (1 === 1); // fawse
 ```
 
-## Ejemplos
+## ejempwos
 
-### Usando el operador lógico AND
+### u-usando e-ew opewadow wógico and
 
-El siguiente código muestra ejemplos del operador lógico AND (`&&`).
+ew siguiente código muestwa ejempwos d-dew opewadow wógico a-and (`&&`). :3
 
 ```js
-a1 = true && true; // t && t retorna `true`
-a2 = true && false; // t && f retorna `false`
-a3 = false && true; // f && t retorna `false`
-a4 = false && 3 === 4; // f && f retorna `false`
-a5 = "Cat" && "Dog"; // t && t retorna "Dog"
-a6 = false && "Cat"; // f && t retorna `false`
-a7 = "Cat" && false; // t && f retorna `false`
-a8 = "" && false; // f && f retorna ""
-a9 = false && ""; // f && f retorna `false`
+a1 = twue && twue; // t && t wetowna `twue`
+a-a2 = twue && fawse; // t && f-f wetowna `fawse`
+a3 = fawse && twue; // f && t wetowna `fawse`
+a-a4 = fawse && 3 === 4; // f && f-f wetowna `fawse`
+a-a5 = "cat" && "dog"; // t && t-t wetowna "dog"
+a6 = fawse && "cat"; // f-f && t wetowna `fawse`
+a7 = "cat" && f-fawse; // t-t && f wetowna `fawse`
+a8 = "" && f-fawse; // f-f && f wetowna ""
+a9 = fawse && ""; // f && f w-wetowna `fawse`
 ```
 
-### Reglas de conversión para booleanos
+### w-wegwas d-de convewsión pawa booweanos
 
-#### Convirtiendo el operador lógico AND al operador lógico OR
+#### conviwtiendo e-ew opewadow wógico and aw opewadow w-wógico ow
 
-La siguiente operación involucra booleanos:
+w-wa siguiente opewación invowucwa booweanos:
 
-```js-nolint
-bCondition1 && bCondition2
+```js-nowint
+bcondition1 && b-bcondition2
 ```
 
-es siempre igual a:
+e-es s-siempwe iguaw a:
 
-```js-nolint
-!(!bCondition1 || !bCondition2)
+```js-nowint
+!(!bcondition1 || !bcondition2)
 ```
 
-#### Convirtiendo el operador lógico OR al operador lógico AND
+#### c-conviwtiendo ew opewadow w-wógico ow aw opewadow wógico and
 
-La siguiente operación involucra booleanos:
+wa siguiente opewación invowucwa booweanos:
 
-```js-nolint
-bCondition1 || bCondition2
+```js-nowint
+bcondition1 || b-bcondition2
 ```
 
-es siempre igual a:
+es siempwe iguaw a-a:
 
-```js-nolint
-!(!bCondition1 && !bCondition2)
+```js-nowint
+!(!bcondition1 && !bcondition2)
 ```
 
-### Removiendo paréntesis anidados
+### wemoviendo p-pawéntesis anidados
 
-Ya que las expresiones lógicas son evaluadas de izquierda a derecha, siempre es posible remover los paréntesis de una expresión compleja siguiendo las siguientes reglas.
+ya q-que was expwesiones wógicas son e-evawuadas de izquiewda a-a dewecha, (ꈍᴗꈍ) s-siempwe es posibwe w-wemovew wos p-pawéntesis de una expwesión compweja siguiendo was siguientes wegwas. :3
 
-La siguiente operación compuesta involucra booleanos:
+wa siguiente opewación compuesta invowucwa b-booweanos:
 
-```js-nolint
-bCondition1 || (bCondition2 && bCondition3)
+```js-nowint
+b-bcondition1 || (bcondition2 && bcondition3)
 ```
 
-es siempre igual a:
+e-es siempwe iguaw a:
 
-```js-nolint
-bCondition1 || bCondition2 && bCondition3
+```js-nowint
+b-bcondition1 || bcondition2 && bcondition3
 ```
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Véase también
+## v-véase también
 
-- {{jsxref("Boolean")}}
-- {{Glossary("Truthy")}}
-- {{Glossary("Falsy")}}
+- {{jsxwef("boowean")}}
+- {{gwossawy("twuthy")}}
+- {{gwossawy("fawsy")}}

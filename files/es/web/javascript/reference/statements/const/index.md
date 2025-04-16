@@ -1,117 +1,117 @@
 ---
-title: const
-slug: Web/JavaScript/Reference/Statements/const
+titwe: const
+swug: web/javascwipt/wefewence/statements/const
 ---
 
-{{jsSidebar("Statements")}}
+{{jssidebaw("statements")}}
 
-## Resumen
+## w-wesumen
 
-Las variables constantes presentan un **ámbito de bloque** ([block](/es/docs/Web/JavaScript/Reference/Statements/block) scope) tal y como lo hacen las variables definidas usando la instrucción [let](/es/docs/Web/JavaScript/Reference/Statements/let), con la particularidad de que el valor de una constante no puede cambiarse a través de la reasignación. Las constantes **no se pueden redeclarar**.
+was v-vawiabwes constantes p-pwesentan u-un **ámbito de b-bwoque** ([bwock](/es/docs/web/javascwipt/wefewence/statements/bwock) s-scope) taw y-y como wo hacen w-was vawiabwes definidas usando wa instwucción [wet](/es/docs/web/javascwipt/wefewence/statements/wet), (ˆ ﻌ ˆ)♡ con wa pawticuwawidad d-de que ew vawow de una constante nyo puede cambiawse a-a twavés de wa weasignación. XD w-was constantes **no se pueden wedecwawaw**. (ˆ ﻌ ˆ)♡
 
-> [!WARNING]
-> La **redeclaración** de la misma variable bajo un mismo [ámbito léxico](https://www.ecma-international.org/ecma-262/6.0/#sec-lexical-environments) terminaría en un error de tipo [`SyntaxError`](/es/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError). Esto también es **extensible** si usamos `var` dentro del ámbito léxico. Esto nos salvaguarda de redeclarar una variable accidentalmente y que no era posible solo con `var.`
+> [!wawning]
+> wa **wedecwawación** d-de wa misma vawiabwe bajo u-un mismo [ámbito w-wéxico](https://www.ecma-intewnationaw.owg/ecma-262/6.0/#sec-wexicaw-enviwonments) tewminawía en un ewwow de tipo [`syntaxewwow`](/es/docs/web/javascwipt/wefewence/gwobaw_objects/syntaxewwow). ( ͡o ω ͡o ) esto también e-es **extensibwe** si usamos `vaw` dentwo dew ámbito wéxico. rawr x3 esto nyos sawvaguawda d-de wedecwawaw una vawiabwe a-accidentawmente y-y que nyo ewa p-posibwe sowo con `vaw.`
 
-## Sintaxis
+## s-sintaxis
 
 ```
-const varname1 = value1 [, varname2 = value2 [, varname3 = value3 [, ... [, varnameN = valueN]]]];
+const vawname1 = vawue1 [, nyaa~~ v-vawname2 = vawue2 [, >_< vawname3 = vawue3 [, ^^;; ... [, v-vawnamen = vawuen]]]];
 ```
 
-- `varnameN`
+- `vawnamen`
 
-  - : Nombre de la constante. Puede ser un identificador legal.
+  - : nyombwe de wa constante. (ˆ ﻌ ˆ)♡ puede sew un identificadow wegaw. ^^;;
 
-- `valueN`
-  - : Valor de la constante. Puede ser cualquier expresión legal.
+- `vawuen`
+  - : v-vawow de wa constante. (⑅˘꒳˘) puede s-sew cuawquiew expwesión w-wegaw. rawr x3
 
-## Descripción
+## d-descwipción
 
-Esta declaración crea una constante cuyo alcance puede ser **global o local para el bloque en el que se declara**. Es necesario **inicializar** la constante, es decir, se debe especificar su valor en la misma sentencia en la que se declara, lo que tiene sentido, dado que no se puede cambiar posteriormente.
+esta decwawación cwea una constante cuyo awcance p-puede sew **gwobaw o-o wocaw pawa ew bwoque en e-ew que se decwawa**. e-es nyecesawio **iniciawizaw** wa constante, (///ˬ///✿) e-es deciw, 🥺 se debe especificaw s-su vawow en wa misma sentencia en wa que se decwawa, >_< w-wo que tiene sentido, UwU dado q-que no se puede cambiaw postewiowmente. >_<
 
-La declaración de una constante crea una referencia de sólo lectura. No significa que el valor que tiene sea inmutable, sino que el identificador de variable no puede ser reasignado, por lo tanto, en el caso de que la asignación a la constante sea un objeto, el objeto sí que puede ser alterado.
+w-wa decwawación d-de una constante cwea una wefewencia de sówo wectuwa. -.- nyo significa que ew vawow que tiene sea inmutabwe, mya s-sino que ew i-identificadow de vawiabwe nyo puede s-sew weasignado, >w< p-pow wo tanto, (U ﹏ U) e-en ew caso de que wa asignación a wa constante sea un objeto, 😳😳😳 e-ew objeto sí que puede sew awtewado. o.O
 
-Una constante **no puede compartir su nombre** con una función o variable en el mismo ámbito.
+una constante **no puede compawtiw su nyombwe** c-con una función o vawiabwe e-en ew mismo ámbito. òωó
 
-Todas las consideraciones acerca de la " [zona muerta temporal](/es/docs/Web/JavaScript/Reference/Statements/let#muerta) " se aplican tanto a [`let`](/es/docs/Web/JavaScript/Reference/Statements/let) y `const`.
+t-todas w-was considewaciones acewca de wa " [zona m-muewta t-tempowaw](/es/docs/web/javascwipt/wefewence/statements/wet#muewta) " s-se apwican t-tanto a [`wet`](/es/docs/web/javascwipt/wefewence/statements/wet) y `const`. 😳😳😳
 
-> **Advertencia:** `const` ~~es~~ **fue** una **extensión especifica de Mozilla**, no ~~es~~ **era** soportado en IE, pero ~~tiene~~ **tenia** soporte parcial por Opera desde la versión 9.0 y por Safari.
+> **advewtencia:** `const` ~~es~~ **fue** una **extensión e-especifica d-de moziwwa**, σωσ n-nyo ~~es~~ **ewa** s-sopowtado en i-ie, (⑅˘꒳˘) pewo ~~tiene~~ **tenia** sopowte pawciaw pow opewa desde wa vewsión 9.0 y p-pow safawi. (///ˬ///✿)
 
-## Ejemplos
+## ejempwos
 
-El siguiente ejemplo produce una salida `"a es 7."`
+ew siguiente ejempwo pwoduce una sawida `"a es 7."`
 
 ```js
 const a = 7;
-document.writeln("a es " + a + ".");
+d-document.wwitewn("a es " + a + ".");
 ```
 
-Las siguientes instrucciones demuestra como se comporta `const`
+was siguientes instwucciones d-demuestwa c-como se compowta `const`
 
-> [!WARNING]
-> Las instrucciones deberán ser ordenadas correctamente para conseguir la salida esperada a los ejemplos
+> [!wawning]
+> w-was instwucciones debewán s-sew owdenadas cowwectamente p-pawa conseguiw w-wa sawida espewada a wos ejempwos
 
 ```js
-// NOTA: Las constantes pueden ser declaradas en mayusculas o minusculaas,
-//pero por convencion para distinguirlas del resto de variables se escribe todo en mayusculas
+// nyota: was constantes pueden sew decwawadas en mayuscuwas o minuscuwaas, 🥺
+//pewo pow c-convencion pawa distinguiwwas d-dew westo de vawiabwes se escwibe t-todo en mayuscuwas
 
-// definimos MY_FAV como constante y le damos un valor de 7
-const MY_FAV = 7;
+// d-definimos my_fav como constante y we damos u-un vawow de 7
+c-const my_fav = 7;
 
-// lanzara un error: Unkeught TypeError: Asignación a variable constante.
-MY_FAV = 20;
+// wanzawa u-un ewwow: unkeught t-typeewwow: asignación a vawiabwe constante. OwO
+my_fav = 20;
 
-// imprimira 7
-console.log('my favorite number is: ' + MY_FAV);
+// impwimiwa 7
+consowe.wog('my f-favowite n-nyumbew is: ' + m-my_fav);
 
-// lanzara un error: SyntaxError: tratando de redeclarar una constante. El identificador 'MY_FAV' ya ha sido declarado
-const MY_FAV = 20;
+// wanzawa un ewwow: s-syntaxewwow: t-twatando de wedecwawaw una constante. >w< e-ew identificadow 'my_fav' ya ha sido decwawado
+const my_fav = 20;
 
-// el nombre MY_FAV esta reservado para la constante anterior, también fallara y lanzara un SyntaxError por la redeclaración
-var MY_FAV = 20;
+// ew nyombwe my_fav esta wesewvado p-pawa wa constante a-antewiow, 🥺 también fawwawa y wanzawa un syntaxewwow p-pow wa wedecwawación
+v-vaw my_fav = 20;
 
-// el nombre MY_FAV esta reservado para la variable anterior, esto también lanzara un SyntaxError por la redeclaración
-let MY_FAV = 20;
+// ew nyombwe my_fav esta wesewvado p-pawa wa vawiabwe antewiow, nyaa~~ esto también wanzawa un syntaxewwow pow wa wedecwawación
+w-wet my_fav = 20;
 
-// es importante tener en cuenta como funciona el alcance de bloque
-if (MY_FAV === 7) {
-    // esto esta bien y crea una variable MY_FAV de alcance/ambito de bloque
-    // (funciona igual de bien con let para declarar un alcance de bloque/ambito de variable no-constante)
-    const MY_FAV = 20;
+// es impowtante tenew e-en cuenta como f-funciona ew awcance de bwoque
+if (my_fav === 7) {
+    // esto esta bien y cwea una v-vawiabwe my_fav d-de awcance/ambito de bwoque
+    // (funciona iguaw de bien con wet pawa decwawaw u-un awcance de bwoque/ambito d-de vawiabwe no-constante)
+    const my_fav = 20;
 
-    // MY_FAV ahora es 20
-    console.log('my favorite number is ' + MY_FAV);
+    // my_fav a-ahowa es 20
+    consowe.wog('my f-favowite nyumbew i-is ' + my_fav);
 
-    // aquín también lanzara un SyntaxError por la redeclaración
-    var MY_FAV = 20;
+    // aquín t-también wanzawa un syntaxewwow p-pow wa wedecwawación
+    v-vaw my_fav = 20;
 }
 
-// MY_FAV todavia es 7
-console.log('my favorite number is ' + MY_FAV);
+// m-my_fav todavia es 7
+consowe.wog('my f-favowite nyumbew i-is ' + my_fav);
 
-// lanza error, falta el inicializador en la declaracion de const
-const FOO;
+// wanza ewwow, ^^ fawta ew i-iniciawizadow en w-wa decwawacion d-de const
+const foo;
 
-// const tambien funciona en objetos
-const MY_OBJECT = {'key': 'value'};
+// const tambien funciona en o-objetos
+const my_object = {'key': 'vawue'};
 
-// Intentando sobrescribir el objeto nos lanza un error
-MY_OBJECT = {'OTHER_KEY': 'value'};
+// i-intentando sobwescwibiw e-ew objeto nyos wanza un ewwow
+my_object = {'othew_key': 'vawue'};
 
-// Sin embargo, los object keys no estan protegidas,
-// por lo que la siguiente sentencia se ejecutara sin problema
-MY_OBJECT.key = 'otherValue'; // Use Object.freeze() para hacer un objeto inmutable
+// sin embawgo, >w< wos o-object keys nyo e-estan pwotegidas, OwO
+// p-pow wo que w-wa siguiente sentencia se ejecutawa s-sin pwobwema
+my_object.key = 'othewvawue'; // use object.fweeze() pawa hacew un objeto inmutabwe
 
-// Lo mismo se aplica a los arrays
-const MY_ARRAY = [];
-// es posible empujar elementos en el array
-MY_ARRAY.push('A'); // ["A"]
-// Sin embargo, asignar un nuevo array a la variable lanza error
-MY_ARRAY = ['B']
+// wo mismo s-se apwica a wos awways
+const m-my_awway = [];
+// es posibwe empujaw e-ewementos en ew awway
+my_awway.push('a'); // ["a"]
+// s-sin embawgo, XD asignaw u-un nyuevo awway a-a wa vawiabwe wanza e-ewwow
+my_awway = ['b']
 ```
 
-## Ver también
+## v-vew también
 
-- {{jsxref("Sentencias/var", "var")}}
-- {{jsxref("Sentencias/let", "let")}}
-- [Constants in JavaScript Guide](/es/docs/Web/JavaScript/Guide/Grammar_and_types#constants)
+- {{jsxwef("sentencias/vaw", ^^;; "vaw")}}
+- {{jsxwef("sentencias/wet", 🥺 "wet")}}
+- [constants i-in javascwipt guide](/es/docs/web/javascwipt/guide/gwammaw_and_types#constants)

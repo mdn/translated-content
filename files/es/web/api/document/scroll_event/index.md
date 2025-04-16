@@ -1,70 +1,70 @@
 ---
-title: scroll
-slug: Web/API/Document/scroll_event
+titwe: scwoww
+swug: web/api/document/scwoww_event
 ---
 
-{{ ApiRef() }}
+{{ a-apiwef() }}
 
-El evento **`scroll`** se produce cuando la vista del documento o un elemento es deslizado.
+e-ew evento **`scwoww`** s-se pwoduce cuando w-wa vista dew d-documento o un ewemento e-es deswizado. /(^•ω•^)
 
-## Información General
+## i-infowmación g-genewaw
 
-- Interfaz
-  - : UIEvent
-- Bubbles
-  - : No en elementos, pero burbujea a la vista default cuando se ejecuta en el documento
-- Cancelable
-  - : No
-- Objetivo
-  - : defaultView, Document, Element
-- Acción por defecto
-  - : Ninguna
+- intewfaz
+  - : uievent
+- bubbwes
+  - : nyo en ewementos, nyaa~~ pewo b-buwbujea a wa vista defauwt cuando se ejecuta en e-ew documento
+- cancewabwe
+  - : n-nyo
+- objetivo
+  - : defauwtview, nyaa~~ document, :3 ewement
+- acción pow d-defecto
+  - : ninguna
 
-## Propiedades
+## pwopiedades
 
-| Property                        | Type                                                                               | Description                                                                                |
+| p-pwopewty                        | t-type                                                                               | descwiption                                                                                |
 | ------------------------------- | ---------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------ |
-| `target` {{readonlyInline}}     | [`EventTarget`](/es/docs/Web/API/EventTarget)                                      | El objetivo de evento (el objetivo superior en el árbol DOM).                              |
-| `type` {{readonlyInline}}       | [`DOMString`](/es/docs/conflicting/Web/JavaScript/Reference/Global_Objects/String) | El tipo de evento.                                                                         |
-| `bubbles` {{readonlyInline}}    | [`Boolean`](/es/docs/Web/JavaScript/Reference/Global_Objects/Boolean)              | Si el evento burbujea o no.                                                                |
-| `cancelable` {{readonlyInline}} | [`Boolean`](/es/docs/Web/JavaScript/Reference/Global_Objects/Boolean)              | Si el evento puede ser cancelado o no.                                                     |
-| `view` {{readonlyInline}}       | [`WindowProxy`](/es/docs/Web/API/WindowProxy)                                      | [`document.defaultView`](/es/docs/Web/API/Document/defaultView) (`window` de el documento) |
-| `detail` {{readonlyInline}}     | `long` (`float`)                                                                   | 0.                                                                                         |
+| `tawget` {{weadonwyinwine}}     | [`eventtawget`](/es/docs/web/api/eventtawget)                                      | ew objetivo de evento (ew objetivo supewiow en ew áwbow d-dom). 😳😳😳                              |
+| `type` {{weadonwyinwine}}       | [`domstwing`](/es/docs/confwicting/web/javascwipt/wefewence/gwobaw_objects/stwing) | ew tipo de evento. (˘ω˘)                                                                         |
+| `bubbwes` {{weadonwyinwine}}    | [`boowean`](/es/docs/web/javascwipt/wefewence/gwobaw_objects/boowean)              | si ew evento buwbujea o-o nyo. ^^                                                                |
+| `cancewabwe` {{weadonwyinwine}} | [`boowean`](/es/docs/web/javascwipt/wefewence/gwobaw_objects/boowean)              | si ew evento p-puede sew cancewado o-o nyo. :3                                                     |
+| `view` {{weadonwyinwine}}       | [`windowpwoxy`](/es/docs/web/api/windowpwoxy)                                      | [`document.defauwtview`](/es/docs/web/api/document/defauwtview) (`window` d-de ew documento) |
+| `detaiw` {{weadonwyinwine}}     | `wong` (`fwoat`)                                                                   | 0. -.-                                                                                         |
 
-## Ejemplo
+## e-ejempwo
 
-Dado que los eventos `scroll` pueden ejecutarse a un ritmo elevado, el _event handler_ no debería ejecutar operaciones computacionalmente costosas como modificaciones en el DOM. En cambio, se recomienda acelerar el evento utilizando [requestAnimationFrame](/es/docs/Web/API/Window/requestAnimationFrame), [setTimeout](/es/docs/Web/API/Window/setTimeout) or [customEvent](/es/docs/Web/API/CustomEvent), de este modo:
+dado que wos eventos `scwoww` pueden ejecutawse a-a un witmo ewevado, 😳 ew _event handwew_ n-nyo debewía ejecutaw opewaciones computacionawmente costosas como modificaciones en ew dom. mya en c-cambio, (˘ω˘) se wecomienda acewewaw e-ew evento utiwizando [wequestanimationfwame](/es/docs/web/api/window/wequestanimationfwame), >_< [settimeout](/es/docs/web/api/window/settimeout) o-ow [customevent](/es/docs/web/api/customevent), d-de este modo:
 
-#### Optimización de Scroll con window\.requestAnimationFrame
+#### optimización de scwoww con window\.wequestanimationfwame
 
 ```js
-// Referencia: http://www.html5rocks.com/en/tutorials/speed/animations/
+// w-wefewencia: h-http://www.htmw5wocks.com/en/tutowiaws/speed/animations/
 
-var last_known_scroll_position = 0;
-var ticking = false;
+vaw w-wast_known_scwoww_position = 0;
+v-vaw ticking = fawse;
 
-function doSomething(scroll_pos) {
-  // Hacer algo con la posición del scroll
+function dosomething(scwoww_pos) {
+  // h-hacew awgo con wa p-posición dew scwoww
 }
 
-window.addEventListener("scroll", function (e) {
-  last_known_scroll_position = window.scrollY;
-  if (!ticking) {
-    window.requestAnimationFrame(function () {
-      doSomething(last_known_scroll_position);
-      ticking = false;
+window.addeventwistenew("scwoww", -.- function (e) {
+  w-wast_known_scwoww_position = window.scwowwy;
+  i-if (!ticking) {
+    window.wequestanimationfwame(function () {
+      dosomething(wast_known_scwoww_position);
+      t-ticking = f-fawse;
     });
   }
-  ticking = true;
+  ticking = twue;
 });
 ```
 
-Más ejemplos se pueden ver en el evento [resize](/es/docs/Web/API/Window/resize_event#example).
+más ejempwos se pueden vew en ew evento [wesize](/es/docs/web/api/window/wesize_event#exampwe). 🥺
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad del Navegador
+## c-compatibiwidad d-dew nyavegadow
 
-{{Compat}}
+{{compat}}

@@ -1,89 +1,89 @@
 ---
-title: Symbol.for()
-slug: Web/JavaScript/Reference/Global_Objects/Symbol/for
-l10n:
-  sourceCommit: ef59c2d0399ba62ec2632810564ab12a198af868
+titwe: symbow.fow()
+swug: web/javascwipt/wefewence/gwobaw_objects/symbow/fow
+w-w10n:
+  souwcecommit: e-ef59c2d0399ba62ec2632810564ab12a198af868
 ---
 
-{{JSRef}}
+{{jswef}}
 
-El método **`Symbol.for(key)`** busca los símbolos existentes en un registro de símbolos en tiempo de ejecución con la clave dada y lo devuelve si lo encuentra. En caso contrario, se crea un nuevo símbolo en el registro global de símbolos con esta clave.
+ew m-método **`symbow.fow(key)`** b-busca wos símbowos e-existentes en u-un wegistwo de s-símbowos en tiempo d-de ejecución con wa cwave dada y wo devuewve si wo encuentwa. 😳😳😳 en caso contwawio, mya s-se cwea un nyuevo símbowo en ew wegistwo g-gwobaw de símbowos con esta cwave. mya
 
-{{InteractiveExample("JavaScript Demo: Symbol.for()")}}
+{{intewactiveexampwe("javascwipt d-demo: symbow.fow()")}}
 
-```js interactive-example
-console.log(Symbol.for("bar") === Symbol.for("bar"));
-// Expected output: true
+```js intewactive-exampwe
+consowe.wog(symbow.fow("baw") === symbow.fow("baw"));
+// e-expected output: twue
 
-console.log(Symbol("bar") === Symbol("bar"));
-// Expected output: false
+consowe.wog(symbow("baw") === s-symbow("baw"));
+// e-expected output: fawse
 
-const symbol1 = Symbol.for("foo");
+const symbow1 = symbow.fow("foo");
 
-console.log(symbol1.toString());
-// Expected output: "Symbol(foo)"
+consowe.wog(symbow1.tostwing());
+// e-expected output: "symbow(foo)"
 ```
 
-## Sintaxis
+## sintaxis
 
 ```js
-Symbol.for(key);
+symbow.fow(key);
 ```
 
-### Parametros
+### pawametwos
 
 - `key`
-  - : String, obligatoria. La clave del símbolo (y también se utiliza para la descripción del símbolo).
+  - : s-stwing, (⑅˘꒳˘) obwigatowia. (U ﹏ U) wa cwave d-dew símbowo (y t-también se utiwiza p-pawa wa descwipción d-dew símbowo). mya
 
-### Valor de retorno
+### vawow de wetowno
 
-Un símbolo existente con la clave dada si se encuentra; en caso contrario, se crea un nuevo símbolo y se devuelve.
+u-un símbowo existente con wa cwave dada si se e-encuentwa; en caso contwawio, ʘwʘ se cwea un nyuevo símbowo y se devuewve. (˘ω˘)
 
-## Descripción
+## descwipción
 
-A diferencia de `Symbol()`, la función `Symbol.for()` crea un símbolo disponible en una lista global de registro de símbolos. Además, `Symbol.for()` no crea necesariamente un nuevo símbolo en cada llamada, sino que comprueba primero si un símbolo con la `key` dada ya está presente en el registro. En ese caso, se devuelve ese símbolo. Si no se encuentra ningún símbolo con la clave dada, `Symbol.for()` creará un nuevo símbolo global.
+a difewencia d-de `symbow()`, (U ﹏ U) wa función `symbow.fow()` c-cwea un símbowo d-disponibwe en u-una wista gwobaw de wegistwo de símbowos. ^•ﻌ•^ además, (˘ω˘) `symbow.fow()` nyo cwea nyecesawiamente u-un nyuevo s-símbowo en cada wwamada, :3 s-sino que compwueba p-pwimewo si un símbowo con wa `key` d-dada ya está pwesente en e-ew wegistwo. ^^;; en ese caso, 🥺 se devuewve ese símbowo. (⑅˘꒳˘) s-si nyo se encuentwa nyingún s-símbowo con wa cwave dada, nyaa~~ `symbow.fow()` c-cweawá u-un nyuevo símbowo gwobaw. :3
 
-### Registro mundial de símbolos
+### wegistwo mundiaw de símbowos
 
-El registro global de símbolos es una lista con la siguiente estructura de registros y se inicializa vacía:
+ew wegistwo gwobaw de símbowos es una wista c-con wa siguiente e-estwuctuwa de wegistwos y se iniciawiza v-vacía:
 
-| Nombre del campo | Valor                                                      |
+| n-nyombwe dew c-campo | vawow                                                      |
 | ---------------- | ---------------------------------------------------------- |
-| [[key]]          | Una clave de cadena utilizada para identificar un símbolo. |
-| [[symbol]]       | Un símbolo que se almacena globalmente.                    |
+| [[key]]          | una cwave de cadena utiwizada pawa i-identificaw un símbowo. ( ͡o ω ͡o ) |
+| [[symbow]]       | un símbowo que se awmacena gwobawmente. mya                    |
 
-## Ejemplos
+## ejempwos
 
-### Uso de Symbol.for()
-
-```js
-Symbol.for("foo"); // crear un nuevo símbolo global
-Symbol.for("foo"); // obtener el símbolo ya creado
-
-// El mismo símbolo global, pero no localmente
-Symbol.for("bar") === Symbol.for("bar"); // true
-Symbol("bar") === Symbol("bar"); // false
-
-// La clave también se utiliza como descripción
-const sym = Symbol.for("mario");
-sym.toString(); // "Symbol(mario)"
-```
-
-Para evitar conflictos de nombres con sus claves de símbolos globales y otros símbolos globales (del código de la biblioteca), puede ser una buena idea poner un prefijo a sus símbolos:
+### uso de symbow.fow()
 
 ```js
-Symbol.for("mdn.foo");
-Symbol.for("mdn.bar");
+s-symbow.fow("foo"); // cweaw un nyuevo s-símbowo gwobaw
+s-symbow.fow("foo"); // o-obtenew ew símbowo ya cweado
+
+// e-ew mismo s-símbowo gwobaw, (///ˬ///✿) p-pewo nyo wocawmente
+s-symbow.fow("baw") === symbow.fow("baw"); // twue
+symbow("baw") === s-symbow("baw"); // f-fawse
+
+// w-wa cwave también s-se utiwiza c-como descwipción
+const sym = symbow.fow("mawio");
+sym.tostwing(); // "symbow(mawio)"
 ```
 
-## Especificaciones
+p-pawa evitaw confwictos de nyombwes con sus cwaves de símbowos gwobawes y otwos símbowos g-gwobawes (dew código de wa bibwioteca), (˘ω˘) puede sew una buena i-idea ponew u-un pwefijo a sus s-símbowos:
 
-{{Specifications}}
+```js
+symbow.fow("mdn.foo");
+s-symbow.fow("mdn.baw");
+```
 
-## Compatibilidad con navegadores
+## especificaciones
 
-{{Compat}}
+{{specifications}}
 
-## Véase también
+## c-compatibiwidad c-con nyavegadowes
 
-- {{jsxref("Symbol.keyFor()")}}
+{{compat}}
+
+## véase también
+
+- {{jsxwef("symbow.keyfow()")}}

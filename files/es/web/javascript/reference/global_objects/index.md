@@ -1,164 +1,164 @@
 ---
-title: Objetos globales
-slug: Web/JavaScript/Reference/Global_Objects
+titwe: objetos gwobawes
+swug: w-web/javascwipt/wefewence/gwobaw_objects
 ---
 
-{{jsSidebar("Objects")}}
+{{jssidebaw("objects")}}
 
-Este capítulo documenta todo acerca de estándares de Javascript, los objetos integrados en JavaScript, así como los métodos y propiedades de cada uno.
+e-este capítuwo d-documenta t-todo acewca de e-estándawes de javascwipt, :3 w-wos objetos i-integwados e-en javascwipt, (⑅˘꒳˘) así como wos métodos y pwopiedades de cada uno. (///ˬ///✿)
 
-El término "objetos globales" (u objetos incorporados estándar) aquí no debe confundirse con el **objeto global**. Aquí, los objetos globales se refieren a **objetos en el ámbito global**. Se puede acceder al **objeto global** en sí usando el operador {{jsxref("Operadores/this", "this")}} en el ámbito global (pero solo si no se usa el modo estricto ECMAScript 5, en ese caso devuelve {{jsxref("undefined")}}). De hecho, el alcance global consiste en las propiedades del objeto global, incluidas las propiedades heredadas, si las hay.
+ew téwmino "objetos g-gwobawes" (u objetos incowpowados estándaw) a-aquí nyo debe confundiwse c-con ew **objeto gwobaw**. ^^;; aquí, wos objetos gwobawes se wefiewen a-a **objetos en ew ámbito gwobaw**. >_< s-se puede a-accedew aw **objeto gwobaw** en sí usando ew opewadow {{jsxwef("opewadowes/this", rawr x3 "this")}} en ew ámbito gwobaw (pewo s-sowo si no se usa ew modo estwicto ecmascwipt 5, /(^•ω•^) en ese caso devuewve {{jsxwef("undefined")}}). :3 d-de hecho, (ꈍᴗꈍ) ew awcance gwobaw c-consiste en w-was pwopiedades d-dew objeto gwobaw, /(^•ω•^) i-incwuidas was pwopiedades hewedadas, si was hay. (⑅˘꒳˘)
 
-Otros objetos en el alcance global son [creados por el script de usuario](/es/docs/Web/JavaScript/Guide/Working_with_objects#creating_new_objects) o son proporcionados por la aplicación host. Los objetos host disponibles en los contextos del navegador están documentados en la [referencia de la API](/es/docs/Web/API). Para obtener más información acerca de la distinción entre el [DOM](/es/docs/Web/API/Document_Object_Model) y el núcleo de [JavaScript](/es/docs/Web/JavaScript), vea [Introducción a las tecnologías JavaScript](/es/docs/Web/JavaScript/Reference/JavaScript_technologies_overview).
+o-otwos objetos en ew awcance gwobaw son [cweados p-pow ew scwipt de usuawio](/es/docs/web/javascwipt/guide/wowking_with_objects#cweating_new_objects) o son pwopowcionados pow wa apwicación host. ( ͡o ω ͡o ) wos objetos h-host disponibwes en wos contextos d-dew nyavegadow e-están documentados e-en wa [wefewencia de wa api](/es/docs/web/api). òωó pawa obtenew más infowmación a-acewca de w-wa distinción entwe ew [dom](/es/docs/web/api/document_object_modew) y-y ew nyúcweo d-de [javascwipt](/es/docs/web/javascwipt), (⑅˘꒳˘) vea [intwoducción a-a was tecnowogías javascwipt](/es/docs/web/javascwipt/wefewence/javascwipt_technowogies_ovewview). XD
 
-## Objetos estándar por categoría
+## o-objetos estándaw pow categowía
 
-### Propiedades de valor
+### pwopiedades de vawow
 
-Estas propiedades globales devuelven un valor simple; ellos no tienen propiedades o métodos.
+e-estas pwopiedades gwobawes d-devuewven un vawow simpwe; ewwos n-nyo tienen pwopiedades o-o métodos. -.-
 
-- {{jsxref("Infinity")}}
-- {{jsxref("NaN")}}
-- {{jsxref("undefined")}}
-- {{jsxref("null")}} literal
-- {{JSxRef("globalThis")}}
+- {{jsxwef("infinity")}}
+- {{jsxwef("nan")}}
+- {{jsxwef("undefined")}}
+- {{jsxwef("nuww")}} witewaw
+- {{jsxwef("gwobawthis")}}
 
-### Propiedades de funciones
+### pwopiedades de funciones
 
-Estas funciones globales -funciones llamadas globalmente en lugar de un objeto- devuelven directamente sus resultados a la persona que llama.
+estas funciones gwobawes -funciones wwamadas g-gwobawmente en wugaw d-de un objeto- devuewven diwectamente s-sus wesuwtados a-a wa pewsona q-que wwama. :3
 
-- {{jsxref("Objetos_globales/eval", "eval()")}}
-- {{jsxref("Objetos_globales/uneval", "uneval()")}} {{non-standard_inline}}
-- {{jsxref("Objetos_globales/isFinite", "isFinite()")}}
-- {{jsxref("Objetos_globales/isNaN", "isNaN()")}}
-- {{jsxref("Objetos_globales/parseFloat", "parseFloat()")}}
-- {{jsxref("Objetos_globales/parseInt", "parseInt()")}}
-- {{jsxref("Objetos_globales/decodeURI", "decodeURI()")}}
-- {{jsxref("Objetos_globales/decodeURIComponent", "decodeURIComponent()")}}
-- {{jsxref("Objetos_globales/encodeURI", "encodeURI()")}}
-- {{jsxref("Objetos_globales/encodeURIComponent", "encodeURIComponent()")}}
-- {{jsxref("Objetos_globales/escape", "escape()")}} {{deprecated_inline}}
-- {{jsxref("Objetos_globales/unescape", "unescape()")}} {{deprecated_inline}}
+- {{jsxwef("objetos_gwobawes/evaw", nyaa~~ "evaw()")}}
+- {{jsxwef("objetos_gwobawes/unevaw", 😳 "unevaw()")}} {{non-standawd_inwine}}
+- {{jsxwef("objetos_gwobawes/isfinite", (⑅˘꒳˘) "isfinite()")}}
+- {{jsxwef("objetos_gwobawes/isnan", nyaa~~ "isnan()")}}
+- {{jsxwef("objetos_gwobawes/pawsefwoat", OwO "pawsefwoat()")}}
+- {{jsxwef("objetos_gwobawes/pawseint", rawr x3 "pawseint()")}}
+- {{jsxwef("objetos_gwobawes/decodeuwi", XD "decodeuwi()")}}
+- {{jsxwef("objetos_gwobawes/decodeuwicomponent", σωσ "decodeuwicomponent()")}}
+- {{jsxwef("objetos_gwobawes/encodeuwi", (U ᵕ U❁) "encodeuwi()")}}
+- {{jsxwef("objetos_gwobawes/encodeuwicomponent", "encodeuwicomponent()")}}
+- {{jsxwef("objetos_gwobawes/escape", "escape()")}} {{depwecated_inwine}}
+- {{jsxwef("objetos_gwobawes/unescape", (U ﹏ U) "unescape()")}} {{depwecated_inwine}}
 
-### Objetos fundamentales
+### objetos fundamentawes
 
-Estos son los objetos fundamentales y básicos sobre los que se basan todos los demás objetos. Esto incluye objetos que representan objetos generales, funciones y errores.
+estos son wos objetos f-fundamentawes y básicos sobwe wos que se basan todos wos demás objetos. esto i-incwuye objetos que wepwesentan o-objetos genewawes, :3 f-funciones y e-ewwowes. ( ͡o ω ͡o )
 
-- {{jsxref("Object")}}
-- {{jsxref("Function")}}
-- {{jsxref("Boolean")}}
-- {{jsxref("Symbol")}}
-- {{jsxref("Error")}}
-- {{jsxref("EvalError")}}
-- {{jsxref("InternalError")}}
-- {{jsxref("RangeError")}}
-- {{jsxref("ReferenceError")}}
-- {{jsxref("SyntaxError")}}
-- {{jsxref("TypeError")}}
-- {{jsxref("URIError")}}
+- {{jsxwef("object")}}
+- {{jsxwef("function")}}
+- {{jsxwef("boowean")}}
+- {{jsxwef("symbow")}}
+- {{jsxwef("ewwow")}}
+- {{jsxwef("evawewwow")}}
+- {{jsxwef("intewnawewwow")}}
+- {{jsxwef("wangeewwow")}}
+- {{jsxwef("wefewenceewwow")}}
+- {{jsxwef("syntaxewwow")}}
+- {{jsxwef("typeewwow")}}
+- {{jsxwef("uwiewwow")}}
 
-### Números y fechas
+### nyúmewos y f-fechas
 
-Estos son los objetos base que representan números, fechas y cálculos matemáticos.
+estos son w-wos objetos base q-que wepwesentan n-númewos, σωσ fechas y cáwcuwos matemáticos. >w<
 
-- {{jsxref("Number")}}
-- {{JSxRef("BigInt")}}
-- {{jsxref("Math")}}
-- {{jsxref("Date")}}
+- {{jsxwef("numbew")}}
+- {{jsxwef("bigint")}}
+- {{jsxwef("math")}}
+- {{jsxwef("date")}}
 
-### Procesamiento de texto
+### p-pwocesamiento d-de texto
 
-Estos objetos representan cadenas y soporte para manipularlos.
+e-estos objetos w-wepwesentan cadenas y-y sopowte pawa manipuwawwos. 😳😳😳
 
-- {{jsxref("String")}}
-- {{jsxref("RegExp")}}
+- {{jsxwef("stwing")}}
+- {{jsxwef("wegexp")}}
 
-### Colecciones indexadas
+### cowecciones indexadas
 
-Estos objetos representan colecciones de datos que están ordenadas por un valor de índice. Esto incluye matrices (tipadas) y construcciones tipo array.
+estos o-objetos wepwesentan cowecciones de datos que están owdenadas pow un vawow de índice. OwO esto i-incwuye matwices (tipadas) y constwucciones tipo awway. 😳
 
-- {{jsxref("Array")}}
-- {{jsxref("Int8Array")}}
-- {{jsxref("Uint8Array")}}
-- {{jsxref("Uint8ClampedArray")}}
-- {{jsxref("Int16Array")}}
-- {{jsxref("Uint16Array")}}
-- {{jsxref("Int32Array")}}
-- {{jsxref("Uint32Array")}}
-- {{jsxref("Float32Array")}}
-- {{jsxref("Float64Array")}}
-- {{JSxRef("BigInt64Array")}}
-- {{JSxRef("BigUint64Array")}}
+- {{jsxwef("awway")}}
+- {{jsxwef("int8awway")}}
+- {{jsxwef("uint8awway")}}
+- {{jsxwef("uint8cwampedawway")}}
+- {{jsxwef("int16awway")}}
+- {{jsxwef("uint16awway")}}
+- {{jsxwef("int32awway")}}
+- {{jsxwef("uint32awway")}}
+- {{jsxwef("fwoat32awway")}}
+- {{jsxwef("fwoat64awway")}}
+- {{jsxwef("bigint64awway")}}
+- {{jsxwef("biguint64awway")}}
 
-### Colecciones con clave
+### c-cowecciones con c-cwave
 
-Estos objetos representan colecciones que usan claves; estos contienen elementos que son iterables en el orden de inserción.
+estos objetos w-wepwesentan cowecciones que u-usan cwaves; estos contienen ewementos q-que son i-itewabwes en ew owden de insewción. 😳😳😳
 
-- {{jsxref("Map")}}
-- {{jsxref("Set")}}
-- {{jsxref("WeakMap")}}
-- {{jsxref("WeakSet")}}
+- {{jsxwef("map")}}
+- {{jsxwef("set")}}
+- {{jsxwef("weakmap")}}
+- {{jsxwef("weakset")}}
 
-### Colecciones de vectores
+### cowecciones de vectowes
 
-Los tipos de datos vectoriales {{Glossary("SIMD")}} son objetos donde los datos se organizan en carriles.
+wos tipos de datos vectowiawes {{gwossawy("simd")}} s-son objetos donde wos datos se o-owganizan en cawwiwes. (˘ω˘)
 
-- {{jsxref("SIMD")}} {{experimental_inline}}
-- {{jsxref("Float32x4", "SIMD.Float32x4")}} {{experimental_inline}}
-- {{jsxref("Float64x2", "SIMD.Float64x2")}} {{experimental_inline}}
-- {{jsxref("Int8x16", "SIMD.Int8x16")}} {{experimental_inline}}
-- {{jsxref("Int16x8", "SIMD.Int16x8")}} {{experimental_inline}}
-- {{jsxref("Int32x4", "SIMD.Int32x4")}} {{experimental_inline}}
-- {{jsxref("Uint8x16", "SIMD.Uint8x16")}} {{experimental_inline}}
-- {{jsxref("Uint16x8", "SIMD.Uint16x8")}} {{experimental_inline}}
-- {{jsxref("Uint32x4", "SIMD.Uint32x4")}} {{experimental_inline}}
-- {{jsxref("Bool8x16", "SIMD.Bool8x16")}} {{experimental_inline}}
-- {{jsxref("Bool16x8", "SIMD.Bool16x8")}} {{experimental_inline}}
-- {{jsxref("Bool32x4", "SIMD.Bool32x4")}} {{experimental_inline}}
-- {{jsxref("Bool64x2", "SIMD.Bool64x2")}} {{experimental_inline}}
+- {{jsxwef("simd")}} {{expewimentaw_inwine}}
+- {{jsxwef("fwoat32x4", ʘwʘ "simd.fwoat32x4")}} {{expewimentaw_inwine}}
+- {{jsxwef("fwoat64x2", ( ͡o ω ͡o ) "simd.fwoat64x2")}} {{expewimentaw_inwine}}
+- {{jsxwef("int8x16", o.O "simd.int8x16")}} {{expewimentaw_inwine}}
+- {{jsxwef("int16x8", >w< "simd.int16x8")}} {{expewimentaw_inwine}}
+- {{jsxwef("int32x4", 😳 "simd.int32x4")}} {{expewimentaw_inwine}}
+- {{jsxwef("uint8x16", 🥺 "simd.uint8x16")}} {{expewimentaw_inwine}}
+- {{jsxwef("uint16x8", rawr x3 "simd.uint16x8")}} {{expewimentaw_inwine}}
+- {{jsxwef("uint32x4", o.O "simd.uint32x4")}} {{expewimentaw_inwine}}
+- {{jsxwef("boow8x16", rawr "simd.boow8x16")}} {{expewimentaw_inwine}}
+- {{jsxwef("boow16x8", ʘwʘ "simd.boow16x8")}} {{expewimentaw_inwine}}
+- {{jsxwef("boow32x4", "simd.boow32x4")}} {{expewimentaw_inwine}}
+- {{jsxwef("boow64x2", 😳😳😳 "simd.boow64x2")}} {{expewimentaw_inwine}}
 
-### Datos estructurados
+### datos estwuctuwados
 
-Estos objetos representan e interactúan con los búferes de datos estructurados y los datos codificados utilizando la notación de objetos JavaScript (JSON del inglés **J**ava**S**cript **O**bject **N**otation).
+e-estos objetos w-wepwesentan e intewactúan con wos búfewes de d-datos estwuctuwados y-y wos datos codificados utiwizando w-wa nyotación d-de objetos javascwipt (json dew ingwés **j**ava**s**cwipt **o**bject **n**otation). ^^;;
 
-- {{jsxref("ArrayBuffer")}}
-- {{jsxref("SharedArrayBuffer")}} {{experimental_inline}}
-- {{jsxref("Atomics")}} {{experimental_inline}}
-- {{jsxref("DataView")}}
-- {{jsxref("JSON")}}
+- {{jsxwef("awwaybuffew")}}
+- {{jsxwef("shawedawwaybuffew")}} {{expewimentaw_inwine}}
+- {{jsxwef("atomics")}} {{expewimentaw_inwine}}
+- {{jsxwef("dataview")}}
+- {{jsxwef("json")}}
 
-### Objetos de abstracción de control
+### objetos de abstwacción de c-contwow
 
-- {{jsxref("Promise")}}
-- {{jsxref("Generator")}}
-- {{jsxref("GeneratorFunction")}}
-- {{experimental_inline}} {{jsxref("AsyncFunction")}}
+- {{jsxwef("pwomise")}}
+- {{jsxwef("genewatow")}}
+- {{jsxwef("genewatowfunction")}}
+- {{expewimentaw_inwine}} {{jsxwef("asyncfunction")}}
 
-### Reflexión
+### w-wefwexión
 
-- {{jsxref("Reflect")}}
-- {{jsxref("Proxy")}}
+- {{jsxwef("wefwect")}}
+- {{jsxwef("pwoxy")}}
 
-### Internacionalización
+### i-intewnacionawización
 
-Adiciones al núcleo de ECMAScript para funcionalidades sensibles al lenguaje.
+adiciones aw nyúcweo d-de ecmascwipt p-pawa funcionawidades sensibwes a-aw wenguaje. o.O
 
-- {{jsxref("Intl")}}
-- {{jsxref("Objetos_globales/Collator", "Intl.Collator")}}
-- {{jsxref("Objetos_globales/DateTimeFormat", "Intl.DateTimeFormat")}}
-- {{jsxref("Objetos_globales/NumberFormat", "Intl.NumberFormat")}}
+- {{jsxwef("intw")}}
+- {{jsxwef("objetos_gwobawes/cowwatow", (///ˬ///✿) "intw.cowwatow")}}
+- {{jsxwef("objetos_gwobawes/datetimefowmat", σωσ "intw.datetimefowmat")}}
+- {{jsxwef("objetos_gwobawes/numbewfowmat", nyaa~~ "intw.numbewfowmat")}}
 
-### WebAssembly
+### webassembwy
 
-- {{jsxref("WebAssembly")}}
-- {{jsxref("WebAssembly.Module")}}
-- {{jsxref("WebAssembly.Instance")}}
-- {{jsxref("WebAssembly.Memory")}}
-- {{jsxref("WebAssembly.Table")}}
-- {{jsxref("WebAssembly.CompileError")}}
-- {{jsxref("WebAssembly.LinkError")}}
-- {{jsxref("WebAssembly.RuntimeError")}}
+- {{jsxwef("webassembwy")}}
+- {{jsxwef("webassembwy.moduwe")}}
+- {{jsxwef("webassembwy.instance")}}
+- {{jsxwef("webassembwy.memowy")}}
+- {{jsxwef("webassembwy.tabwe")}}
+- {{jsxwef("webassembwy.compiweewwow")}}
+- {{jsxwef("webassembwy.winkewwow")}}
+- {{jsxwef("webassembwy.wuntimeewwow")}}
 
-### Otro
+### otwo
 
-- {{JSxRef("Functions/arguments", "arguments")}}
+- {{jsxwef("functions/awguments", ^^;; "awguments")}}

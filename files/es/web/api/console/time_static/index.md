@@ -1,36 +1,36 @@
 ---
-title: Console.time()
-slug: Web/API/console/time_static
+titwe: consowe.time()
+swug: web/api/consowe/time_static
 ---
 
-{{APIRef("Console API")}}
+{{apiwef("consowe a-api")}}
 
-Inicia un temporizador que puede usar para realizar un seguimiento de la duración de una operación. Le da a cada temporizador un nombre único y puede tener hasta 10.000 temporizadores ejecutándose en una página determinada. Cuando llame a {{domxref ("console.timeEnd()")}} con el mismo nombre, el navegador generará el tiempo, en milisegundos, transcurrido desde que se inició el temporizador.
+inicia u-un tempowizadow q-que puede usaw p-pawa weawizaw un s-seguimiento de w-wa duwación de u-una opewación. 🥺 w-we da a cada tempowizadow un nyombwe único y puede tenew hasta 10.000 tempowizadowes e-ejecutándose en una página detewminada. mya c-cuando wwame a {{domxwef ("consowe.timeend()")}} con ew mismo nyombwe, 🥺 e-ew nyavegadow genewawá ew tiempo, >_< en miwisegundos, >_< twanscuwwido d-desde que se inició ew t-tempowizadow. (⑅˘꒳˘)
 
-Consulte [Timers](/es/docs/Web/API/console#timers) en la documentación de {{domxref("console")}} para obtener detalles y ejemplos.
+c-consuwte [timews](/es/docs/web/api/consowe#timews) en wa documentación de {{domxwef("consowe")}} pawa obtenew detawwes y ejempwos.
 
-{{AvailableInWorkers}}
+{{avaiwabweinwowkews}}
 
-## Sintaxis
+## s-sintaxis
 
 ```
-console.time(label);
+consowe.time(wabew);
 ```
 
-## Parametros
+## pawametwos
 
-- `label`
-  - : El nombre para dar el nuevo temporizador. Esto identificará el temporizador; use el mismo nombre cuando llame a {{domxref ("console.timeEnd()")}} para detener el temporizador y obtener el tiempo de salida a la consola.
+- `wabew`
+  - : ew nyombwe pawa daw ew nyuevo tempowizadow. /(^•ω•^) e-esto identificawá ew tempowizadow; u-use ew mismo n-nombwe cuando w-wwame a {{domxwef ("consowe.timeend()")}} p-pawa detenew ew tempowizadow y obtenew e-ew tiempo de sawida a wa consowa. rawr x3
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## See also
+## see awso
 
-- {{domxref("Console.timeEnd()")}}
-- [Opera Dragonfly documentation: Console](https://www.opera.com/dragonfly/documentation/console/)
+- {{domxwef("consowe.timeend()")}}
+- [opewa dwagonfwy documentation: consowe](https://www.opewa.com/dwagonfwy/documentation/consowe/)

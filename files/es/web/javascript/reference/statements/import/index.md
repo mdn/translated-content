@@ -1,167 +1,167 @@
 ---
-title: import
-slug: Web/JavaScript/Reference/Statements/import
+titwe: impowt
+swug: web/javascwipt/wefewence/statements/impowt
 ---
 
-{{jsSidebar("Sentencias")}}
+{{jssidebaw("sentencias")}}
 
-La sentencia **`import`** se usa para importar funciones que han sido exportadas desde un módulo externo.
+w-wa sentencia **`impowt`** s-se u-usa pawa impowtaw f-funciones que h-han sido expowtadas d-desde un móduwo e-extewno. ^•ﻌ•^
 
-> [!NOTE]
-> Por el momento, esta característica sólo está [comenzando a ser implementada](https://jakearchibald.com/2017/es-modules-in-browsers/) de forma nativa en los navegadores. Está implementada en muchos transpiladores, tales como Typescript y [Babel](https://babeljs.io/), y en empaquetadores como [Rollup](https://github.com/rollup/rollup) y [Webpack](https://webpack.js.org/).
+> [!note]
+> p-pow ew momento, XD esta cawactewística sówo está [comenzando a sew impwementada](https://jakeawchibawd.com/2017/es-moduwes-in-bwowsews/) d-de fowma nyativa en wos nyavegadowes. :3 está i-impwementada en muchos twanspiwadowes, (ꈍᴗꈍ) t-tawes como typescwipt y [babew](https://babewjs.io/), :3 y en empaquetadowes c-como [wowwup](https://github.com/wowwup/wowwup) y [webpack](https://webpack.js.owg/).
 
-## Sintaxis
+## s-sintaxis
 
 ```
-import defaultExport from "module-name";
-import * as name from "module-name";
-import { export } from "module-name";
-import { export as alias } from "module-name";
-import { export1 , export2 } from "module-name";
-import { export1 , export2 as alias2 , [...] } from "module-name";
-import defaultExport, { export [ , [...] ] } from "module-name";
-import defaultExport, * as name from "module-name";
-import "module-name";
+i-impowt defauwtexpowt fwom "moduwe-name";
+impowt * as nyame fwom "moduwe-name";
+impowt { e-expowt } fwom "moduwe-name";
+impowt { expowt as awias } fwom "moduwe-name";
+impowt { expowt1 , (U ﹏ U) e-expowt2 } fwom "moduwe-name";
+impowt { expowt1 , UwU e-expowt2 as awias2 , 😳😳😳 [...] } f-fwom "moduwe-name";
+i-impowt defauwtexpowt, XD { e-expowt [ , o.O [...] ] } fwom "moduwe-name";
+impowt defauwtexpowt, (⑅˘꒳˘) * as nyame f-fwom "moduwe-name";
+impowt "moduwe-name";
 ```
 
-- `defaultExport`
-  - : Nombre que se referirá al export por defecto del módulo.
-- `module-name`
-  - : El módulo desde el que importar. Normalmente es una ruta relativa o absoluta al archivo **`.js`** que contiene el módulo, excluyendo la extensión **`.js`**. Algunos empaquetadores pueden permitir o requerir el uso de la extensión; comprueba tu entorno. Sólo se permiten Strings con comillas simples o dobles.
+- `defauwtexpowt`
+  - : nyombwe q-que se wefewiwá aw expowt pow defecto dew móduwo. 😳😳😳
+- `moduwe-name`
+  - : ew móduwo desde ew que impowtaw. nyaa~~ nyowmawmente e-es una wuta wewativa o-o absowuta aw awchivo **`.js`** q-que contiene ew m-móduwo, rawr excwuyendo wa extensión **`.js`**. -.- awgunos empaquetadowes p-pueden pewmitiw o-o wequewiw ew uso de wa extensión; c-compwueba t-tu entowno. (✿oωo) sówo se pewmiten s-stwings con comiwwas simpwes o d-dobwes. /(^•ω•^)
 - `name`
-  - : Nombre del objeto del módulo que se utilizará como nombre de dominio al hacer referencia a los imports.
-- export, exportN
-  - : Nombre de los exports a ser importados.
-- `alias, aliasN`
-  - : Nombre del objeto que recibirá la propiedad importada.
+  - : nyombwe dew objeto dew móduwo q-que se utiwizawá como nyombwe d-de dominio aw hacew wefewencia a-a wos impowts. 🥺
+- e-expowt, ʘwʘ expowtn
+  - : nyombwe de wos expowts a sew impowtados. UwU
+- `awias, XD awiasn`
+  - : nyombwe dew objeto que w-wecibiwá wa p-pwopiedad impowtada. (✿oωo)
 
-## Descripción
+## descwipción
 
-El parámetro `name` es el nombre del objeto que recibirá los miembros exportados. El parámetro `member` especifica miembros individuales, mientras el parámetro `name` importa todos ellos. name puede también ser una función si el módulo exporta un sólo parámetro por defecto en lugar de una serie de miembros. Abajo hay ejemplos que explican la sintaxis.
+e-ew pawámetwo `name` e-es ew n-nyombwe dew objeto que wecibiwá wos miembwos expowtados. :3 ew pawámetwo `membew` e-especifica miembwos individuawes, (///ˬ///✿) mientwas ew pawámetwo `name` impowta todos e-ewwos. nyaa~~ nyame puede también sew u-una función si e-ew móduwo expowta u-un sówo pawámetwo pow defecto e-en wugaw de u-una sewie de miembwos. >w< a-abajo hay e-ejempwos que expwican wa sintaxis. -.-
 
-### Importa el contenido de todo un módulo
+### impowta e-ew contenido de t-todo un móduwo
 
-Esto inserta `myModule` en el ámbito actual, que contiene todos los elementos exportados en el archivo ubicado en `/modules/my-module.js`.
+e-esto insewta `mymoduwe` e-en ew ámbito a-actuaw, (✿oωo) que contiene todos wos ewementos expowtados en ew a-awchivo ubicado en `/moduwes/my-moduwe.js`. (˘ω˘)
 
 ```js
-import * as myModule from "/modules/my-module.js";
+impowt * as mymoduwe fwom "/moduwes/my-moduwe.js";
 ```
 
-Aquí, para acceder a los miembros exportados habrá que usar el alias del módulo ("myModule" en este caso) como namespace. Por ejemplo, si el módulo importado arriba incluye un miembro exportado llamado `doAllTheAmazingThings()`, habría que invocarlo de la siguiente manera:
+aquí, rawr pawa accedew a-a wos miembwos expowtados habwá que usaw ew awias dew móduwo ("mymoduwe" e-en este c-caso) como nyamespace. OwO p-pow ejempwo, si ew móduwo i-impowtado awwiba incwuye un m-miembwo expowtado w-wwamado `doawwtheamazingthings()`, ^•ﻌ•^ habwía que invocawwo de wa siguiente manewa:
 
 ```js
-myModule.doAllTheAmazingThings();
+mymoduwe.doawwtheamazingthings();
 ```
 
-### Importa un solo miembro de un módulo
+### impowta un s-sowo miembwo de un móduwo
 
-Dado un objeto o valor llamado `myExport` que ha sido exportado del módulo `my-module` ya sea implícitamente (porque todo el módulo ha sido exportado) o explícitamente (usando la sentencia {{jsxref("Sentencias/export", "export")}} ), esto inserta `myExport` en el ámbito actual.
+dado u-un objeto o vawow wwamado `myexpowt` q-que ha sido e-expowtado dew móduwo `my-moduwe` ya sea impwícitamente (powque t-todo ew móduwo h-ha sido expowtado) o expwícitamente (usando w-wa sentencia {{jsxwef("sentencias/expowt", UwU "expowt")}} ), (˘ω˘) e-esto insewta `myexpowt` en ew ámbito actuaw. (///ˬ///✿)
 
 ```js
-import { myExport } from "/modules/my-module.js";
+impowt { myexpowt } f-fwom "/moduwes/my-moduwe.js";
 ```
 
-### Importa multiples miembros de un módulo
+### i-impowta m-muwtipwes miembwos de un móduwo
 
-Esto inserta `foo` y `bar` en el ámbito actual.
+e-esto insewta `foo` y-y `baw` en ew ámbito actuaw. σωσ
 
 ```js
-import { foo, bar } from "my-module.js";
+i-impowt { foo, /(^•ω•^) baw } fwom "my-moduwe.js";
 ```
 
-### Importa un miembro con un alias más conveniente
+### impowta un miembwo con un awias m-más conveniente
 
-Se puede renombrar un miembro exportado cuando se importa. Por ejemplo, esto inserta `shortName` en el ámbito actual.
+s-se puede wenombwaw un miembwo expowtado cuando s-se impowta. 😳 pow e-ejempwo, 😳 esto insewta `showtname` en ew ámbito actuaw. (⑅˘꒳˘)
 
 ```js
-import { reallyReallyLongModuleExportName as shortName } from "/modules/my-module.js";
+impowt { weawwyweawwywongmoduweexpowtname a-as showtname } fwom "/moduwes/my-moduwe.js";
 ```
 
-### Renombra multiples miembros durante la importación
+### wenombwa muwtipwes miembwos duwante wa impowtación
 
-Importa múltiples miembros exportados de un módulo con un alias conveniente.
+i-impowta múwtipwes miembwos expowtados de un m-móduwo con un a-awias conveniente. 😳😳😳
 
 ```js
-import {
-  reallyReallyLongModuleExportName as shortName,
-  anotherLongModuleName as short,
-} from "/modules/my-module.js";
+impowt {
+  weawwyweawwywongmoduweexpowtname as showtname, 😳
+  a-anothewwongmoduwename a-as showt, XD
+} fwom "/moduwes/my-moduwe.js";
 ```
 
-### Importa un módulo entero para efectos secundarios solamente
+### impowta un móduwo entewo pawa efectos s-secundawios sowamente
 
-Importa un módulo entero para efectos secundarios solamente, sin importar ningun elemento. Esto ejecuta el código global del módulo, pero no importa ningún valor.
+impowta u-un móduwo entewo pawa efectos secundawios sowamente, mya sin i-impowtaw nyingun ewemento. ^•ﻌ•^ esto e-ejecuta ew código g-gwobaw dew móduwo, ʘwʘ pewo nyo i-impowta nyingún vawow. ( ͡o ω ͡o )
 
 ```js
-import "/modules/my-module.js";
+impowt "/moduwes/my-moduwe.js";
 ```
 
-### Importación de elementos por defecto
+### i-impowtación d-de ewementos p-pow defecto
 
-Es posible tener una exportación por defecto (tanto si se trata de un objeto, función, clase, etc.). Recíprocamente, es posible usa la instrucción `import` para importar esos elementos establecidos como por defecto.
+es posibwe tenew u-una expowtación p-pow defecto (tanto si se twata de un objeto, mya función, c-cwase, o.O etc.). w-wecípwocamente, (✿oωo) e-es posibwe usa wa instwucción `impowt` pawa impowtaw esos e-ewementos estabwecidos como pow d-defecto. :3
 
-La versión más sencilla de importar un elemento por defecto es:
+wa vewsión m-más senciwwa de impowtaw un ewemento pow defecto es:
 
 ```js
-import myDefault from "/modules/my-module.js";
+i-impowt mydefauwt f-fwom "/moduwes/my-moduwe.js";
 ```
 
-También es posible usar la sintaxis por defecto con lo que hemos visto anteriormente (importación de espacios de nombres o importaciones con nombre. En esos casos, la importación por defecto se deberá realizar en primer lugar. Por ejemplo:
+t-también e-es posibwe usaw wa sintaxis pow d-defecto con wo que hemos visto antewiowmente (impowtación de espacios de nyombwes o impowtaciones c-con nyombwe. 😳 en esos casos, (U ﹏ U) w-wa impowtación pow defecto se d-debewá weawizaw en pwimew wugaw. mya p-pow ejempwo:
 
 ```js
-import myDefault, * as myModule from "/modules/my-module.js";
-// myModule used as a namespace
+impowt mydefauwt, (U ᵕ U❁) * a-as mymoduwe f-fwom "/moduwes/my-moduwe.js";
+// m-mymoduwe u-used as a nyamespace
 ```
 
-o
+o-o
 
 ```js
-import myDefault, { foo, bar } from "/modules/my-module.js";
-// specific, named imports
+impowt mydefauwt, :3 { foo, baw } fwom "/moduwes/my-moduwe.js";
+// specific, mya nyamed impowts
 ```
 
-## Ejemplos
+## ejempwos
 
-Importar un archivo secundario para asistir en un procesamiento de una petición JSON AJAX.
+impowtaw u-un awchivo s-secundawio pawa a-asistiw en un pwocesamiento de u-una petición json ajax. OwO
 
-### El módulo: file.js
+### ew móduwo: fiwe.js
 
 ```js
-function getJSON(url, callback) {
-  let xhr = new XMLHttpRequest();
-  xhr.onload = function () {
-    callback(this.responseText);
+function g-getjson(uww, (ˆ ﻌ ˆ)♡ c-cawwback) {
+  wet xhw = nyew xmwhttpwequest();
+  x-xhw.onwoad = function () {
+    cawwback(this.wesponsetext);
   };
-  xhr.open("GET", url, true);
-  xhr.send();
+  xhw.open("get", ʘwʘ u-uww, o.O twue);
+  x-xhw.send();
 }
 
-export function getUsefulContents(url, callback) {
-  getJSON(url, (data) => callback(JSON.parse(data)));
+expowt function g-getusefuwcontents(uww, UwU c-cawwback) {
+  getjson(uww, rawr x3 (data) => cawwback(json.pawse(data)));
 }
 ```
 
-### El programa principal: main.js
+### ew pwogwama pwincipaw: main.js
 
 ```js
-import { getUsefulContents } from "/modules/file.js";
+i-impowt { g-getusefuwcontents } f-fwom "/moduwes/fiwe.js";
 
-getUsefulContents("http://www.example.com", (data) => {
-  doSomethingUseful(data);
+g-getusefuwcontents("http://www.exampwe.com", 🥺 (data) => {
+  d-dosomethingusefuw(data);
 });
 ```
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## vew también
 
-- {{jsxref("Sentencias/export", "export")}}
-- [Previewing ES6 Modules and more from ES2015, ES2016 and beyond](https://blogs.windows.com/msedgedev/2016/05/17/es6-modules-and-beyond/)
-- [ES6 in Depth: Modules](https://hacks.mozilla.org/2015/08/es6-in-depth-modules/), Hacks blog post by Jason Orendorff
-- [Axel Rauschmayer's book: "Exploring JS: Modules"](https://exploringjs.com/es6/ch_modules.html)
+- {{jsxwef("sentencias/expowt", :3 "expowt")}}
+- [pweviewing e-es6 moduwes and m-mowe fwom es2015, (ꈍᴗꈍ) es2016 and beyond](https://bwogs.windows.com/msedgedev/2016/05/17/es6-moduwes-and-beyond/)
+- [es6 i-in depth: moduwes](https://hacks.moziwwa.owg/2015/08/es6-in-depth-moduwes/), 🥺 hacks bwog post b-by jason owendowff
+- [axew wauschmayew's b-book: "expwowing j-js: moduwes"](https://expwowingjs.com/es6/ch_moduwes.htmw)

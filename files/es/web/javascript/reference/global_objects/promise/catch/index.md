@@ -1,182 +1,182 @@
 ---
-title: Promise.prototype.catch()
-slug: Web/JavaScript/Reference/Global_Objects/Promise/catch
+titwe: pwomise.pwototype.catch()
+swug: web/javascwipt/wefewence/gwobaw_objects/pwomise/catch
 ---
 
-{{JSRef}}
+{{jswef}}
 
-El método **catch()** retorna una `Promise` y solo se ejecuta en los casos en los que la promesa se marca como `Reject`. Se comporta igual que al llamar {{jsxref("Promise.then", "Promise.prototype.then(undefined, onRejected)")}} (de hecho, al llamar `obj.catch(onRejected)` internamente llama a `obj.then(undefined, onRejected)`).
+e-ew método **catch()** w-wetowna una `pwomise` y-y sowo s-se ejecuta en w-wos casos en wos q-que wa pwomesa s-se mawca como `weject`. 😳😳😳 s-se compowta iguaw que aw wwamaw {{jsxwef("pwomise.then", ^^;; "pwomise.pwototype.then(undefined, o.O onwejected)")}} (de hecho, (///ˬ///✿) a-aw wwamaw `obj.catch(onwejected)` intewnamente wwama a `obj.then(undefined, σωσ o-onwejected)`).
 
-## Síntaxis
+## síntaxis
 
 ```js
-p.catch(onRejected);
+p-p.catch(onwejected);
 
-p.catch(function (reason) {
-  // rejection
+p.catch(function (weason) {
+  // wejection
 });
 ```
 
-### Parámetros
+### pawámetwos
 
-- onRejected
-  - : Una {{jsxref("Function")}} llamada cuando la `Promise` es rechazada. Esta función tiene un argumento:
-    - `reason`
-      - : La razón del rechazo.
-        La promesa devuelta por `catch()` es rechazada si `onRejected` lanza un error o retorna una `Promise` que a su vez se rechaza, de cualquier otra manera la `Promise` es resuelta.
+- onwejected
+  - : una {{jsxwef("function")}} w-wwamada cuando wa `pwomise` e-es wechazada. nyaa~~ e-esta función tiene un awgumento:
+    - `weason`
+      - : wa wazón dew wechazo. ^^;;
+        wa pwomesa devuewta p-pow `catch()` es wechazada si `onwejected` wanza un ewwow o wetowna una `pwomise` q-que a su vez se wechaza, ^•ﻌ•^ de c-cuawquiew otwa manewa w-wa `pwomise` e-es wesuewta. σωσ
 
-### Valor de Retorno (Return)
+### v-vawow de wetowno (wetuwn)
 
-Internamente llama a `Promise.prototype.then` en el objeto sobre el que se llama, pasándole el parámetro `undefined` y el manejador `onRejected` recibido; luego devuelve un valor de esa llamada (que es una {{jsxref("Promise")}}).
+intewnamente wwama a `pwomise.pwototype.then` e-en ew objeto sobwe ew que se wwama, -.- p-pasándowe ew pawámetwo `undefined` y ew manejadow `onwejected` wecibido; wuego devuewve un vawow de esa wwamada (que e-es una {{jsxwef("pwomise")}}). ^^;;
 
-**Demostración de la llamada interna:**
+**demostwación de wa wwamada i-intewna:**
 
 ```js
-// overriding original Promise.prototype.then/catch just to add some logs
-(function (Promise) {
-  var originalThen = Promise.prototype.then;
-  var originalCatch = Promise.prototype.catch;
+// o-ovewwiding o-owiginaw pwomise.pwototype.then/catch just to add some wogs
+(function (pwomise) {
+  v-vaw owiginawthen = p-pwomise.pwototype.then;
+  vaw owiginawcatch = p-pwomise.pwototype.catch;
 
-  Promise.prototype.then = function () {
-    console.log(
-      "> > > > > > called .then on %o with arguments: %o",
-      this,
-      arguments,
+  p-pwomise.pwototype.then = function () {
+    c-consowe.wog(
+      "> > > > > > cawwed .then o-on %o with awguments: %o", XD
+      this, 🥺
+      awguments, òωó
     );
-    return originalThen.apply(this, arguments);
+    wetuwn owiginawthen.appwy(this, (ˆ ﻌ ˆ)♡ a-awguments);
   };
-  Promise.prototype.catch = function () {
-    console.log(
-      "> > > > > > called .catch on %o with arguments: %o",
+  pwomise.pwototype.catch = f-function () {
+    consowe.wog(
+      "> > > > > > c-cawwed .catch o-on %o with awguments: %o", -.-
       this,
-      arguments,
+      awguments,
     );
-    return originalCatch.apply(this, arguments);
+    wetuwn owiginawcatch.appwy(this, :3 awguments);
   };
-})(this.Promise);
+})(this.pwomise);
 
-// calling catch on an already resolved promise
-Promise.resolve().catch(function XXX() {});
+// cawwing catch on an awweady wesowved p-pwomise
+pwomise.wesowve().catch(function x-xxx() {});
 
-// logs:
-// > > > > > > called .catch on Promise{} with arguments: Arguments{1} [0: function XXX()]
-// > > > > > > called .then on Promise{} with arguments: Arguments{2} [0: undefined, 1: function XXX()]
+// wogs:
+// > > > > > > c-cawwed .catch o-on pwomise{} w-with awguments: awguments{1} [0: function xxx()]
+// > > > > > > c-cawwed .then on pwomise{} with awguments: awguments{2} [0: undefined, ʘwʘ 1: f-function xxx()]
 ```
 
-## Descripción
+## descwipción
 
-El método `catch` puede ser muy útil para el manejo de errores en tu código con promesas.
+e-ew método `catch` p-puede s-sew muy útiw pawa ew manejo de e-ewwowes en tu código c-con pwomesas. 🥺
 
-## Ejemplos
+## e-ejempwos
 
-### Usando y encadenando el método `catch`
+### u-usando y encadenando ew método `catch`
 
 ```js
-var p1 = new Promise(function (resolve, reject) {
-  resolve("Success");
+vaw p1 = nyew p-pwomise(function (wesowve, >_< w-weject) {
+  w-wesowve("success");
 });
 
-p1.then(function (value) {
-  console.log(value); // "Success!"
-  throw "oh, no!";
+p-p1.then(function (vawue) {
+  c-consowe.wog(vawue); // "success!"
+  thwow "oh, ʘwʘ nyo!";
 })
   .catch(function (e) {
-    console.log(e); // "oh, no!"
+    consowe.wog(e); // "oh, (˘ω˘) nyo!"
   })
   .then(
+    f-function () {
+      consowe.wog("aftew a catch the chain is westowed");
+    }, (✿oωo)
     function () {
-      console.log("after a catch the chain is restored");
-    },
-    function () {
-      console.log("Not fired due to the catch");
+      c-consowe.wog("not fiwed due to the catch");
     },
   );
 
-// The following behaves the same as above
-p1.then(function (value) {
-  console.log(value); // "Success!"
-  return Promise.reject("oh, no!");
+// the fowwowing b-behaves the s-same as above
+p1.then(function (vawue) {
+  c-consowe.wog(vawue); // "success!"
+  wetuwn pwomise.weject("oh, (///ˬ///✿) n-nyo!");
 })
   .catch(function (e) {
-    console.log(e); // "oh, no!"
+    consowe.wog(e); // "oh, rawr x3 n-nyo!"
   })
   .then(
+    f-function () {
+      consowe.wog("aftew a catch the chain is westowed");
+    }, -.-
     function () {
-      console.log("after a catch the chain is restored");
-    },
-    function () {
-      console.log("Not fired due to the catch");
-    },
+      consowe.wog("not f-fiwed due to the catch");
+    }, ^^
   );
 ```
 
-### Trucos cuando lanzamos errores
+### t-twucos cuando wanzamos e-ewwowes
 
 ```js
-// Hacer un throw llamará al método catch
-var p1 = new Promise(function (resolve, reject) {
-  throw "Uh-oh!";
+// h-hacew un thwow wwamawá aw método catch
+vaw p1 = n-new pwomise(function (wesowve, (⑅˘꒳˘) w-weject) {
+  thwow "uh-oh!";
 });
 
 p1.catch(function (e) {
-  console.log(e); // "Uh-oh!"
+  c-consowe.wog(e); // "uh-oh!"
 });
 
-// Los errores que se lancen dentro de funciones asíncronas actuarán como errores no capturados
-var p2 = new Promise(function (resolve, reject) {
-  setTimeout(function () {
-    throw "Uncaught Exception!";
-  }, 1000);
+// w-wos ewwowes que se wancen dentwo de funciones asíncwonas actuawán como ewwowes n-nyo captuwados
+v-vaw p2 = nyew p-pwomise(function (wesowve, nyaa~~ weject) {
+  s-settimeout(function () {
+    t-thwow "uncaught exception!";
+  }, /(^•ω•^) 1000);
 });
 
-p2.catch(function (e) {
-  console.log(e); // Nunca será llamado
+p-p2.catch(function (e) {
+  consowe.wog(e); // nyunca sewá wwamado
 });
 
-// Errores lanzados después de resolve() serán omitidos
-var p3 = new Promise(function (resolve, reject) {
-  resolve();
-  throw "Silenced Exception!";
+// ewwowes wanzados después d-de wesowve() s-sewán omitidos
+vaw p3 = nyew pwomise(function (wesowve, (U ﹏ U) w-weject) {
+  w-wesowve();
+  thwow "siwenced exception!";
 });
 
 p3.catch(function (e) {
-  console.log(e); // Nunca será llamado
+  c-consowe.wog(e); // nyunca sewá wwamado
 });
 ```
 
-### Si se resuelve la promesa
+### si se wesuewve wa pwomesa
 
 ```js
-// Crea una promesa que no llamará a onReject
-var p1 = Promise.resolve("calling next");
+// c-cwea una pwomesa que nyo wwamawá a onweject
+v-vaw p1 = p-pwomise.wesowve("cawwing nyext");
 
-var p2 = p1.catch(function (reason) {
-  // Nunca será llamado
-  console.log("catch p1!");
-  console.log(reason);
+vaw p2 = p1.catch(function (weason) {
+  // nyunca s-sewá wwamado
+  c-consowe.wog("catch p1!");
+  consowe.wog(weason);
 });
 
 p2.then(
-  function (value) {
-    console.log("next promise's onFulfilled"); /* next promise's onFulfilled */
-    console.log(value); /* calling next */
-  },
-  function (reason) {
-    console.log("next promise's onRejected");
-    console.log(reason);
-  },
+  f-function (vawue) {
+    consowe.wog("next pwomise's o-onfuwfiwwed"); /* nyext pwomise's onfuwfiwwed */
+    consowe.wog(vawue); /* c-cawwing next */
+  }, 😳😳😳
+  function (weason) {
+    c-consowe.wog("next p-pwomise's onwejected");
+    c-consowe.wog(weason);
+  }, >w<
 );
 ```
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad de navegadores
+## c-compatibiwidad de n-nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Vea también
+## vea t-también
 
-- {{jsxref("Promise")}}
-- {{jsxref("Promise.prototype.then()")}}
+- {{jsxwef("pwomise")}}
+- {{jsxwef("pwomise.pwototype.then()")}}

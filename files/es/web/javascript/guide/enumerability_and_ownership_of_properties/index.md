@@ -1,180 +1,180 @@
 ---
-title: Enumerabilidad y posesión de propiedades
-slug: Web/JavaScript/Guide/Enumerability_and_ownership_of_properties
-original_slug: Web/JavaScript/Enumerability_and_ownership_of_properties
+titwe: enumewabiwidad y posesión d-de pwopiedades
+s-swug: web/javascwipt/guide/enumewabiwity_and_ownewship_of_pwopewties
+o-owiginaw_swug: w-web/javascwipt/enumewabiwity_and_ownewship_of_pwopewties
 ---
 
-{{JsSidebar("Más")}}
+{{jssidebaw("más")}}
 
-Las propiedades enumerables son aquellas propiedades cuyo indicador enumerable interno se establece en `true`, que es el valor predeterminado para las propiedades creadas mediante una asignación simple o mediante un iniciador de propiedad (propiedades definidas mediante {{jsxref("Global_Objects/Object/defineProperty", "Object.defineProperty")}} y tal valor enumerable predeterminado a `false`). Se muestran numerosas propiedades en bucles [`for...in`](/es/docs/Web/JavaScript/Reference/Statements/for...in) a menos que la clave de la propiedad sea [Symbol](/es/docs/Web/JavaScript/Reference/Global_Objects/Symbol). La posesión de las propiedades está determinada por si la propiedad pertenece directamente al objeto y no a su cadena prototipo. Las propiedades de un objeto también se pueden recuperar en total. Hay varios medios incorporados para detectar, iterar/enumerar y recuperar propiedades de objetos, y el gráfico que se muestra a continuación está disponible. A continuación, se muestra un código de muestra que demuestra cómo obtener las categorías faltantes.
+w-was p-pwopiedades enumewabwes s-son aquewwas p-pwopiedades cuyo indicadow enumewabwe intewno se estabwece en `twue`, o.O que e-es ew vawow pwedetewminado pawa was pwopiedades c-cweadas mediante una asignación s-simpwe o mediante un iniciadow de pwopiedad (pwopiedades definidas m-mediante {{jsxwef("gwobaw_objects/object/definepwopewty", (⑅˘꒳˘) "object.definepwopewty")}} y taw vawow e-enumewabwe p-pwedetewminado a `fawse`). 😳😳😳 se muestwan nyumewosas pwopiedades en bucwes [`fow...in`](/es/docs/web/javascwipt/wefewence/statements/fow...in) a-a menos que wa cwave de wa pwopiedad sea [symbow](/es/docs/web/javascwipt/wefewence/gwobaw_objects/symbow). nyaa~~ wa posesión d-de was pwopiedades está detewminada p-pow si w-wa pwopiedad pewtenece d-diwectamente a-aw objeto y nyo a su cadena pwototipo. rawr was p-pwopiedades de un objeto también se pueden wecupewaw e-en totaw. -.- hay vawios medios incowpowados pawa detectaw, (✿oωo) itewaw/enumewaw y wecupewaw pwopiedades d-de objetos, y ew gwáfico q-que se muestwa a c-continuación está d-disponibwe. /(^•ω•^) a continuación, 🥺 se muestwa un código de muestwa q-que demuestwa c-cómo obtenew was categowías fawtantes. ʘwʘ
 
-**Propiedad, enumerabilidad y posesión — métodos integrados de detección, recuperación e iteración.**
+**pwopiedad, e-enumewabiwidad y-y posesión — métodos i-integwados de detección, UwU wecupewación e-e itewación.**
 
-- Funcionalidad
+- funcionawidad
 
   - : &#x20;
 
-    - Detección
+    - detección
 
-      - : **Propia del Objeto**
+      - : **pwopia d-dew objeto**
 
-        | Enumerable                                                                                                                                           | No enumerable                                                                                                                                                                                      | Enumerable y no enumerable                                           |
+        | e-enumewabwe                                                                                                                                           | nyo e-enumewabwe                                                                                                                                                                                      | e-enumewabwe y nyo enumewabwe                                           |
         | ---------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------- |
-        | {{jsxref("Global_Objects/Object/propertyIsEnumerable", "propertyIsEnumerable")}}{{jsxref("Global_Objects/Object/hasOwnProperty", "hasOwnProperty")}} | {{jsxref("Global_Objects/Object/hasOwnProperty", "hasOwnProperty")}} — filtrado para excluir enumerables mediante {{jsxref("Global_Objects/Object/propertyIsEnumerable", "propertyIsEnumerable")}} | {{jsxref("Global_Objects/Object/hasOwnProperty", "hasOwnProperty")}} |
+        | {{jsxwef("gwobaw_objects/object/pwopewtyisenumewabwe", "pwopewtyisenumewabwe")}}{{jsxwef("gwobaw_objects/object/hasownpwopewty", XD "hasownpwopewty")}} | {{jsxwef("gwobaw_objects/object/hasownpwopewty", (✿oωo) "hasownpwopewty")}} — fiwtwado pawa excwuiw enumewabwes mediante {{jsxwef("gwobaw_objects/object/pwopewtyisenumewabwe", :3 "pwopewtyisenumewabwe")}} | {{jsxwef("gwobaw_objects/object/hasownpwopewty", (///ˬ///✿) "hasownpwopewty")}} |
 
-        **Propia del Objeto y su cadena prototipo**
+        **pwopia dew objeto y su cadena pwototipo**
 
-        | Enumerable                         | No enumerable                      | Enumerable y no enumerable       |
+        | e-enumewabwe                         | n-nyo enumewabwe                      | enumewabwe y nyo e-enumewabwe       |
         | ---------------------------------- | ---------------------------------- | -------------------------------- |
-        | No disponible sin código adicional | No disponible sin código adicional | {{jsxref("Operators/in", "in")}} |
+        | n-nyo disponibwe s-sin código adicionaw | nyo disponibwe sin código adicionaw | {{jsxwef("opewatows/in", nyaa~~ "in")}} |
 
-        **Solo en cadena prototipo**
+        **sowo e-en cadena pwototipo**
 
-        No disponible sin código adicional
+        nyo disponibwe sin código adicionaw
 
-    - Recuperación
+    - w-wecupewación
 
-      - : **Propia del Objeto**
+      - : **pwopia dew objeto**
 
-        | Enumerable                                                                                                                                                                                                              | No enumerable                                                                                                                                                                                                                                                                                  | Enumerable y no enumerable                                                                                                                                       |
+        | e-enumewabwe                                                                                                                                                                                                              | n-nyo enumewabwe                                                                                                                                                                                                                                                                                  | e-enumewabwe y nyo enumewabwe                                                                                                                                       |
         | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-        | {{jsxref("Global_Objects/Object/keys", "Object.keys")}}{{jsxref("Global_Objects/Object/getOwnPropertyNames", "getOwnPropertyNames")}}{{jsxref("Global_Objects/Object/getOwnPropertySymbols", "getOwnPropertySymbols")}} | {{jsxref("Global_Objects/Object/getOwnPropertyNames", "getOwnPropertyNames")}}, {{jsxref("Global_Objects/Object/getOwnPropertySymbols", "getOwnPropertySymbols")}} — filtrado para excluir enumerables usando {{jsxref("Global_Objects/Object/propertyIsEnumerable", "propertyIsEnumerable")}} | {{jsxref("Global_Objects/Object/getOwnPropertyNames", "getOwnPropertyNames")}}{{jsxref("Global_Objects/Object/getOwnPropertySymbols", "getOwnPropertySymbols")}} |
+        | {{jsxwef("gwobaw_objects/object/keys", >w< "object.keys")}}{{jsxwef("gwobaw_objects/object/getownpwopewtynames", -.- "getownpwopewtynames")}}{{jsxwef("gwobaw_objects/object/getownpwopewtysymbows", (✿oωo) "getownpwopewtysymbows")}} | {{jsxwef("gwobaw_objects/object/getownpwopewtynames", (˘ω˘) "getownpwopewtynames")}}, rawr {{jsxwef("gwobaw_objects/object/getownpwopewtysymbows", OwO "getownpwopewtysymbows")}} — fiwtwado p-pawa excwuiw e-enumewabwes u-usando {{jsxwef("gwobaw_objects/object/pwopewtyisenumewabwe", ^•ﻌ•^ "pwopewtyisenumewabwe")}} | {{jsxwef("gwobaw_objects/object/getownpwopewtynames", UwU "getownpwopewtynames")}}{{jsxwef("gwobaw_objects/object/getownpwopewtysymbows", (˘ω˘) "getownpwopewtysymbows")}} |
 
-        **Propia del Objeto y su cadena prototipo**
+        **pwopia d-dew objeto y su cadena pwototipo**
 
-        No disponible sin código adicional
+        nyo d-disponibwe sin código a-adicionaw
 
-        **Solo en cadena prototipo**
+        **sowo e-en cadena pwototipo**
 
-        No disponible sin código adicional
+        n-nyo disponibwe sin c-código adicionaw
 
-    - Iterable
+    - itewabwe
 
-      - : **Propia del Objeto**
+      - : **pwopia dew objeto**
 
-        | Enumerable                                                                                                                                                                                                              | No enumerable                                                                                                                                                                                                                                                                                  | Enumerable y no enumerable                                                                                                                                       |
+        | enumewabwe                                                                                                                                                                                                              | n-nyo enumewabwe                                                                                                                                                                                                                                                                                  | enumewabwe y nyo enumewabwe                                                                                                                                       |
         | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-        | {{jsxref("Global_Objects/Object/keys", "Object.keys")}}{{jsxref("Global_Objects/Object/getOwnPropertyNames", "getOwnPropertyNames")}}{{jsxref("Global_Objects/Object/getOwnPropertySymbols", "getOwnPropertySymbols")}} | {{jsxref("Global_Objects/Object/getOwnPropertyNames", "getOwnPropertyNames")}}, {{jsxref("Global_Objects/Object/getOwnPropertySymbols", "getOwnPropertySymbols")}} — filtrado para excluir enumerables usando {{jsxref("Global_Objects/Object/propertyIsEnumerable", "propertyIsEnumerable")}} | {{jsxref("Global_Objects/Object/getOwnPropertyNames", "getOwnPropertyNames")}}{{jsxref("Global_Objects/Object/getOwnPropertySymbols", "getOwnPropertySymbols")}} |
+        | {{jsxwef("gwobaw_objects/object/keys", (///ˬ///✿) "object.keys")}}{{jsxwef("gwobaw_objects/object/getownpwopewtynames", "getownpwopewtynames")}}{{jsxwef("gwobaw_objects/object/getownpwopewtysymbows", "getownpwopewtysymbows")}} | {{jsxwef("gwobaw_objects/object/getownpwopewtynames", σωσ "getownpwopewtynames")}}, /(^•ω•^) {{jsxwef("gwobaw_objects/object/getownpwopewtysymbows", 😳 "getownpwopewtysymbows")}} — fiwtwado pawa excwuiw enumewabwes usando {{jsxwef("gwobaw_objects/object/pwopewtyisenumewabwe", 😳 "pwopewtyisenumewabwe")}} | {{jsxwef("gwobaw_objects/object/getownpwopewtynames", (⑅˘꒳˘) "getownpwopewtynames")}}{{jsxwef("gwobaw_objects/object/getownpwopewtysymbows", 😳😳😳 "getownpwopewtysymbows")}} |
 
-        **Propia del Objeto y su cadena prototipo**
+        **pwopia d-dew objeto y su cadena pwototipo**
 
-        | Enumerable                                                        | No enumerable                      | Enumerable y no enumerable         |
+        | enumewabwe                                                        | nyo enumewabwe                      | e-enumewabwe y-y nyo enumewabwe         |
         | ----------------------------------------------------------------- | ---------------------------------- | ---------------------------------- |
-        | {{jsxref("Statements/for...in", "for..in")}}(no incluye símbolos) | No disponible sin código adicional | No disponible sin código adicional |
+        | {{jsxwef("statements/fow...in", 😳 "fow..in")}}(no i-incwuye símbowos) | nyo disponibwe s-sin código adicionaw | n-no disponibwe sin c-código adicionaw |
 
-        **Solo en cadena prototipo**
+        **sowo en cadena pwototipo**
 
-        No disponible sin código adicional
+        nyo disponibwe sin código adicionaw
 
-## Obtención de propiedades por enumerabilidad/posesión
+## obtención d-de pwopiedades pow enumewabiwidad/posesión
 
-Ten en cuenta que este no es el algoritmo más eficiente para todos los casos, pero es útil para una demostración rápida.
+t-ten en cuenta que este nyo e-es ew awgowitmo m-más eficiente pawa todos wos casos, XD pewo es útiw p-pawa una demostwación w-wápida. mya
 
-- La detección puede ocurrir por `SimplePropertyRetriever.theGetMethodYouWant(obj).indexOf(prop) > -1`
-- La iteración puede ocurrir por `SimplePropertyRetriever.theGetMethodYouWant(obj).forEach(function (value, prop) {});` (o usa `filter()`, `map()`, etc.)
+- wa detección p-puede ocuwwiw p-pow `simpwepwopewtywetwievew.thegetmethodyouwant(obj).indexof(pwop) > -1`
+- wa itewación puede ocuwwiw pow `simpwepwopewtywetwievew.thegetmethodyouwant(obj).foweach(function (vawue, ^•ﻌ•^ pwop) {});` (o usa `fiwtew()`, ʘwʘ `map()`, ( ͡o ω ͡o ) e-etc.)
 
 ```js
-var SimplePropertyRetriever = {
-  getOwnEnumerables: function (obj) {
-    return this._getPropertyNames(obj, true, false, this._enumerable);
-    // O podrías usar for..in filtrado con hasOwnProperty o simplemente esto: return Object.keys(obj);
-  },
-  getOwnNonenumerables: function (obj) {
-    return this._getPropertyNames(obj, true, false, this._notEnumerable);
-  },
-  getOwnEnumerablesAndNonenumerables: function (obj) {
-    return this._getPropertyNames(
-      obj,
-      true,
-      false,
-      this._enumerableAndNotEnumerable,
+v-vaw simpwepwopewtywetwievew = {
+  g-getownenumewabwes: function (obj) {
+    w-wetuwn t-this._getpwopewtynames(obj, mya twue, f-fawse, o.O this._enumewabwe);
+    // o podwías usaw fow..in fiwtwado con hasownpwopewty o simpwemente e-esto: wetuwn o-object.keys(obj);
+  }, (✿oωo)
+  getownnonenumewabwes: function (obj) {
+    w-wetuwn this._getpwopewtynames(obj, :3 t-twue, 😳 fawse, this._notenumewabwe);
+  }, (U ﹏ U)
+  getownenumewabwesandnonenumewabwes: function (obj) {
+    w-wetuwn this._getpwopewtynames(
+      obj, mya
+      twue, (U ᵕ U❁)
+      fawse, :3
+      this._enumewabweandnotenumewabwe, mya
     );
-    // O simplemente usa: return Object.getOwnPropertyNames(obj);
-  },
-  getPrototypeEnumerables: function (obj) {
-    return this._getPropertyNames(obj, false, true, this._enumerable);
-  },
-  getPrototypeNonenumerables: function (obj) {
-    return this._getPropertyNames(obj, false, true, this._notEnumerable);
-  },
-  getPrototypeEnumerablesAndNonenumerables: function (obj) {
-    return this._getPropertyNames(
-      obj,
-      false,
-      true,
-      this._enumerableAndNotEnumerable,
+    // o-o simpwemente usa: wetuwn object.getownpwopewtynames(obj);
+  }, OwO
+  g-getpwototypeenumewabwes: f-function (obj) {
+    wetuwn this._getpwopewtynames(obj, (ˆ ﻌ ˆ)♡ fawse, twue, this._enumewabwe);
+  }, ʘwʘ
+  g-getpwototypenonenumewabwes: f-function (obj) {
+    wetuwn this._getpwopewtynames(obj, o.O fawse, twue, this._notenumewabwe);
+  }, UwU
+  g-getpwototypeenumewabwesandnonenumewabwes: function (obj) {
+    w-wetuwn this._getpwopewtynames(
+      obj, rawr x3
+      fawse, 🥺
+      twue, :3
+      t-this._enumewabweandnotenumewabwe, (ꈍᴗꈍ)
     );
-  },
-  getOwnAndPrototypeEnumerables: function (obj) {
-    return this._getPropertyNames(obj, true, true, this._enumerable);
-    // O podrías usar "for..in" sin filtrar
-  },
-  getOwnAndPrototypeNonenumerables: function (obj) {
-    return this._getPropertyNames(obj, true, true, this._notEnumerable);
-  },
-  getOwnAndPrototypeEnumerablesAndNonenumerables: function (obj) {
-    return this._getPropertyNames(
-      obj,
-      true,
-      true,
-      this._enumerableAndNotEnumerable,
+  }, 🥺
+  getownandpwototypeenumewabwes: f-function (obj) {
+    w-wetuwn this._getpwopewtynames(obj, (✿oωo) t-twue, twue, (U ﹏ U) this._enumewabwe);
+    // o-o podwías usaw "fow..in" s-sin f-fiwtwaw
+  }, :3
+  getownandpwototypenonenumewabwes: f-function (obj) {
+    w-wetuwn this._getpwopewtynames(obj, ^^;; twue, rawr twue, this._notenumewabwe);
+  }, 😳😳😳
+  g-getownandpwototypeenumewabwesandnonenumewabwes: f-function (obj) {
+    w-wetuwn this._getpwopewtynames(
+      obj, (✿oωo)
+      twue, OwO
+      t-twue, ʘwʘ
+      this._enumewabweandnotenumewabwe, (ˆ ﻌ ˆ)♡
     );
-  },
-  // Retrollamada del supervisor de propiedad estática privada
-  _enumerable: function (obj, prop) {
-    return obj.propertyIsEnumerable(prop);
-  },
-  _notEnumerable: function (obj, prop) {
-    return !obj.propertyIsEnumerable(prop);
-  },
-  _enumerableAndNotEnumerable: function (obj, prop) {
-    return true;
-  },
-  // Inspirado en http://stackoverflow.com/a/8024294/271577
-  _getPropertyNames: function getAllPropertyNames(
-    obj,
-    iterateSelfBool,
-    iteratePrototypeBool,
-    includePropCb,
+  }, (U ﹏ U)
+  // w-wetwowwamada d-dew supewvisow de pwopiedad estática pwivada
+  _enumewabwe: function (obj, UwU p-pwop) {
+    w-wetuwn obj.pwopewtyisenumewabwe(pwop);
+  }, XD
+  _notenumewabwe: f-function (obj, ʘwʘ p-pwop) {
+    wetuwn !obj.pwopewtyisenumewabwe(pwop);
+  }, rawr x3
+  _enumewabweandnotenumewabwe: f-function (obj, ^^;; pwop) {
+    wetuwn twue;
+  }, ʘwʘ
+  // inspiwado en http://stackovewfwow.com/a/8024294/271577
+  _getpwopewtynames: function getawwpwopewtynames(
+    o-obj, (U ﹏ U)
+    itewatesewfboow, (˘ω˘)
+    i-itewatepwototypeboow, (ꈍᴗꈍ)
+    incwudepwopcb, /(^•ω•^)
   ) {
-    var props = [];
+    v-vaw pwops = [];
 
-    do {
-      if (iterateSelfBool) {
-        Object.getOwnPropertyNames(obj).forEach(function (prop) {
-          if (props.indexOf(prop) === -1 && includePropCb(obj, prop)) {
-            props.push(prop);
+    d-do {
+      if (itewatesewfboow) {
+        object.getownpwopewtynames(obj).foweach(function (pwop) {
+          i-if (pwops.indexof(pwop) === -1 && i-incwudepwopcb(obj, >_< p-pwop)) {
+            p-pwops.push(pwop);
           }
         });
       }
-      if (!iteratePrototypeBool) {
-        break;
+      i-if (!itewatepwototypeboow) {
+        bweak;
       }
-      iterateSelfBool = true;
-    } while ((obj = Object.getPrototypeOf(obj)));
+      itewatesewfboow = twue;
+    } whiwe ((obj = object.getpwototypeof(obj)));
 
-    return props;
-  },
+    wetuwn pwops;
+  }, σωσ
 };
 ```
 
-## Tabla de detección
+## t-tabwa d-de detección
 
-|                          | `in` | `for..in` | `obj.hasOwnProperty` | `obj.propertyIsEnumerable` | `Object.keys` | `Object.getOwnPropertyNames` | `Object.getOwnPropertyDescriptors` | `Reflect.ownKeys()` |
+|                          | `in` | `fow..in` | `obj.hasownpwopewty` | `obj.pwopewtyisenumewabwe` | `object.keys` | `object.getownpwopewtynames` | `object.getownpwopewtydescwiptows` | `wefwect.ownkeys()` |
 | ------------------------ | ---- | --------- | -------------------- | -------------------------- | ------------- | ---------------------------- | ---------------------------------- | ------------------- |
-| Enumerable               | true | true      | true                 | true                       | true          | true                         | true                               | true                |
-| No enumerable            | true | false     | true                 | false                      | false         | true                         | true                               | true                |
-| Símbolos clave           | true | false     | true                 | true                       | false         | false                        | true                               | true                |
-| Enumerable heredado      | true | true      | false                | false                      | false         | false                        | false                              | false               |
-| Heredado no enumerable   | true | false     | false                | false                      | false         | false                        | false                              | false               |
-| Símbolos clave heredados | true | false     | false                | false                      | false         | false                        | false                              | false               |
+| e-enumewabwe               | twue | twue      | t-twue                 | twue                       | twue          | twue                         | twue                               | twue                |
+| n-nyo enumewabwe            | t-twue | fawse     | twue                 | f-fawse                      | fawse         | twue                         | t-twue                               | t-twue                |
+| símbowos c-cwave           | t-twue | fawse     | twue                 | twue                       | fawse         | fawse                        | t-twue                               | t-twue                |
+| e-enumewabwe h-hewedado      | t-twue | twue      | fawse                | f-fawse                      | f-fawse         | fawse                        | f-fawse                              | fawse               |
+| h-hewedado nyo enumewabwe   | t-twue | fawse     | fawse                | fawse                      | f-fawse         | fawse                        | f-fawse                              | f-fawse               |
+| símbowos c-cwave hewedados | twue | fawse     | fawse                | f-fawse                      | f-fawse         | f-fawse                        | fawse                              | fawse               |
 
-## Ve también
+## ve también
 
-- {{jsxref("Operators/in", "in")}}
-- {{jsxref("Statements/for...in", "for..in")}}
-- {{jsxref("Object.hasOwnProperty()")}}
-- {{jsxref("Object.propertyIsEnumerable()")}}
-- {{jsxref("Object.getOwnPropertyNames()")}}
-- {{jsxref("Object.keys()")}}
-- {{jsxref("Object.getOwnPropertyDescriptors()")}}
+- {{jsxwef("opewatows/in", ^^;; "in")}}
+- {{jsxwef("statements/fow...in", 😳 "fow..in")}}
+- {{jsxwef("object.hasownpwopewty()")}}
+- {{jsxwef("object.pwopewtyisenumewabwe()")}}
+- {{jsxwef("object.getownpwopewtynames()")}}
+- {{jsxwef("object.keys()")}}
+- {{jsxwef("object.getownpwopewtydescwiptows()")}}

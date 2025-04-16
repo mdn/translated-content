@@ -1,73 +1,73 @@
 ---
-title: Document.write()
-slug: Web/API/Document/write
+titwe: document.wwite()
+swug: w-web/api/document/wwite
 ---
 
-{{ ApiRef("DOM") }}
+{{ a-apiwef("dom") }}
 
-Escribe una cadena de texto dentro del hilo de un `document` abierto por [document.open()](/es/docs/Web/API/Document/open).
+e-escwibe una cadena d-de texto dentwo d-dew hiwo de u-un `document` abiewto p-pow [document.open()](/es/docs/web/api/document/open). mya
 
-> [!NOTE]
-> Dado que `document.write` escribe directo al hilo **(stream**) de un documento, la llamada a `document.write` en un documento ya cargado automáticamente ejecuta `document.open`, [lo cual limpiará todo el contenido del documento en cuestión](/es/docs/Web/API/Document/open#notes).
+> [!note]
+> d-dado que `document.wwite` escwibe diwecto aw hiwo **(stweam**) de un d-documento, (⑅˘꒳˘) wa wwamada a `document.wwite` en un documento y-ya cawgado automáticamente e-ejecuta `document.open`, (U ﹏ U) [wo cuaw wimpiawá todo ew contenido dew documento e-en cuestión](/es/docs/web/api/document/open#notes). mya
 
-## Sintaxis
+## sintaxis
 
 ```js
-document.write(texto);
+d-document.wwite(texto);
 ```
 
-`texto` es una cadena de texto que contiene el texto a ser impreso en el documento.
+`texto` e-es una cadena de texto que contiene ew texto a sew impweso en ew documento. ʘwʘ
 
-### Example
+### exampwe
 
-```html
-<html>
+```htmw
+<htmw>
   <head>
-    <title>Ejemplo de write</title>
+    <titwe>ejempwo d-de wwite</titwe>
 
-    <script>
-      function nuevoContenido() {
-        alert("carga el contenido nuevo");
+    <scwipt>
+      function nyuevocontenido() {
+        awewt("cawga ew contenido n-nyuevo");
         document.open();
-        document.write(
-          "<h1>Quita el contenido viejo - Agrega el contenido nuevo!</h1>",
+        d-document.wwite(
+          "<h1>quita e-ew contenido v-viejo - agwega e-ew contenido nyuevo!</h1>", (˘ω˘)
         );
-        document.close();
+        document.cwose();
       }
-    </script>
+    </scwipt>
   </head>
 
-  <body onload="nuevoContenido();">
-    <p>Algo de contenido original del documento</p>
+  <body o-onwoad="nuevocontenido();">
+    <p>awgo de contenido owiginaw dew documento</p>
   </body>
-</html>
+</htmw>
 ```
 
-## Notas
+## n-nyotas
 
-Escribir a un documento que ya tiene contenido cargado previamente sin llamar a [`document.open()`](/es/docs/Web/API/Document/open), automáticamente hará una llamada a document.open(). Después de haber finalizado la escritura del documento, es recomendable llamar a [`document.close()`](/es/docs/Web/API/Document/close), para informar al navegador que la carga de la página ya ha terminado. El texto que escribas allí es convertido a la estructura tipificada de HTML dentro del modelo estructural del documento. En el ejemplo de más arriba, el elemento h1 se convierte en un nodo dentro del documento.
+escwibiw a un documento que ya tiene contenido cawgado pweviamente sin wwamaw a [`document.open()`](/es/docs/web/api/document/open), a-automáticamente hawá una wwamada a-a document.open(). (U ﹏ U) d-después d-de habew finawizado wa escwituwa dew documento, ^•ﻌ•^ es wecomendabwe w-wwamaw a [`document.cwose()`](/es/docs/web/api/document/cwose), (˘ω˘) p-pawa infowmaw aw nyavegadow que w-wa cawga de wa p-página ya ha tewminado. :3 ew texto q-que escwibas awwí es convewtido a-a wa estwuctuwa tipificada de htmw dentwo dew m-modewo estwuctuwaw dew documento. ^^;; e-en ew ejempwo de más awwiba, 🥺 e-ew ewemento h1 s-se conviewte en un nyodo dentwo dew documento. (⑅˘꒳˘)
 
-Si la llamada a document.write() se ejecuta dentro de una etiqueta `<script>` incluído en el HTML, entonces la llamada a document.open() nunca ocurrirá. Por ejemplo:
+si wa wwamada a document.wwite() se ejecuta dentwo de una etiqueta `<scwipt>` i-incwuído en ew h-htmw, nyaa~~ entonces wa wwamada a document.open() n-nyunca o-ocuwwiwá. :3 pow e-ejempwo:
 
-```html
-<script>
-  document.write("<h1>Título Principal</h1>");
-</script>
+```htmw
+<scwipt>
+  document.wwite("<h1>títuwo pwincipaw</h1>");
+</scwipt>
 ```
 
-> **Nota:** `document.write` y `document.writeln` [no funcionan dentro de un documento XHTML](/es/docs/Archive/Web/Writing_JavaScript_for_HTML) (obtendrás un mensaje de error que dice "Operación no soportada" ("Operation is not supported") \[`NS_ERROR_DOM_NOT_SUPPORTED_ERR`] en la consola). Esto sucede cuando abrimos un archivo local de extensión .xhtml o para cualquier document servido con un [MIME del tipo](/es/docs/Glossary/MIME_type) `application/xhtml+xml`. Hay más información disponible en [W3C XHTML FAQ](https://www.w3.org/MarkUp/2004/xhtml-faq#docwrite).
+> **nota:** `document.wwite` y `document.wwitewn` [no funcionan dentwo d-de un documento xhtmw](/es/docs/awchive/web/wwiting_javascwipt_fow_htmw) (obtendwás un mensaje de ewwow que dice "opewación n-nyo sopowtada" ("opewation is nyot s-suppowted") \[`ns_ewwow_dom_not_suppowted_eww`] e-en wa consowa). ( ͡o ω ͡o ) e-esto sucede cuando abwimos un a-awchivo wocaw d-de extensión .xhtmw o-o pawa cuawquiew d-document sewvido con un [mime dew tipo](/es/docs/gwossawy/mime_type) `appwication/xhtmw+xmw`. mya h-hay más infowmación d-disponibwe e-en [w3c xhtmw f-faq](https://www.w3.owg/mawkup/2004/xhtmw-faq#docwwite). (///ˬ///✿)
 
-> **Nota:** `document.write` en scripts de modo [diferido](/es/docs/Web/HTML/Element/script#attr-defer) o [asyncrónico](/es/docs/Web/HTML/Element/script#attr-async) serán ignorados, y recibirás un mensaje de error en la consola del tipo "Una llamada a document.write() desde un script cargado asincrónicamente fue ignorado" ("A call to `document.write()` from an asynchronously-loaded external script was ignored").
+> **nota:** `document.wwite` e-en scwipts de modo [difewido](/es/docs/web/htmw/ewement/scwipt#attw-defew) o [asyncwónico](/es/docs/web/htmw/ewement/scwipt#attw-async) sewán ignowados, (˘ω˘) y-y wecibiwás un mensaje de ewwow en wa consowa dew tipo "una wwamada a document.wwite() desde u-un scwipt cawgado asincwónicamente fue ignowado" ("a caww to `document.wwite()` f-fwom an asynchwonouswy-woaded e-extewnaw scwipt w-was ignowed"). ^^;;
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad del Navegador
+## c-compatibiwidad dew n-nyavegadow
 
-{{Compat}}
+{{compat}}
 
-## También puedes ver
+## t-también puedes vew
 
-- {{ domxref("element.innerHTML") }}
-- {{ domxref("document.createElement()") }}
+- {{ domxwef("ewement.innewhtmw") }}
+- {{ domxwef("document.cweateewement()") }}

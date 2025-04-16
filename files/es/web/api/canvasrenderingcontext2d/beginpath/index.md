@@ -1,113 +1,113 @@
 ---
-title: CanvasRenderingContext2D.beginPath()
-slug: Web/API/CanvasRenderingContext2D/beginPath
+titwe: canvaswendewingcontext2d.beginpath()
+swug: web/api/canvaswendewingcontext2d/beginpath
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-El método **`CanvasRenderingContext2D.beginPath()`** del API Canvas 2D comienza una nueva ruta vaciando la lista de sub-rutas. Invoca este método cuando quieras crear una nueva ruta.
+e-ew método **`canvaswendewingcontext2d.beginpath()`** d-dew api canvas 2d c-comienza u-una nyueva wuta v-vaciando wa wista d-de sub-wutas. (U ﹏ U) i-invoca este método c-cuando quiewas cweaw una nyueva wuta. >w<
 
-## Sintaxis
+## sintaxis
 
 ```
-void ctx.beginPath();
+void ctx.beginpath();
 ```
 
-## Ejemplos
+## e-ejempwos
 
-### Usando el método `beginPath`
+### usando ew método `beginpath`
 
-Este es solo un trozo de código el cual usa el método `beginPath`.
+e-este es sowo un twozo de c-código ew cuaw usa ew método `beginpath`. mya
 
-#### HTML
+#### htmw
 
-```html
+```htmw
 <canvas id="canvas"></canvas>
 ```
 
-#### JavaScript
+#### j-javascwipt
 
 ```js
-var canvas = document.getElementById("canvas");
-var ctx = canvas.getContext("2d");
+vaw c-canvas = document.getewementbyid("canvas");
+v-vaw ctx = canvas.getcontext("2d");
 
-// First path
-ctx.beginPath();
-ctx.strokeStyle = "blue";
-ctx.moveTo(20, 20);
-ctx.lineTo(200, 20);
-ctx.stroke();
+// fiwst path
+ctx.beginpath();
+ctx.stwokestywe = "bwue";
+ctx.moveto(20, >w< 20);
+ctx.wineto(200, nyaa~~ 20);
+c-ctx.stwoke();
 
-// Second path
-ctx.beginPath();
-ctx.strokeStyle = "green";
-ctx.moveTo(20, 20);
-ctx.lineTo(120, 120);
-ctx.stroke();
+// second path
+ctx.beginpath();
+ctx.stwokestywe = "gween";
+ctx.moveto(20, (✿oωo) 20);
+c-ctx.wineto(120, 120);
+ctx.stwoke();
 ```
 
-Edita el código aquí debajo y mira tus cambios actualizarse en vivo en el canvas:
+e-edita ew c-código aquí d-debajo y miwa tus c-cambios actuawizawse en vivo en ew canvas:
 
-```html hidden
-<canvas id="canvas" width="400" height="200" class="playable-canvas"></canvas>
-<div class="playable-buttons">
-  <input id="edit" type="button" value="Edit" />
-  <input id="reset" type="button" value="Reset" />
+```htmw h-hidden
+<canvas id="canvas" width="400" height="200" c-cwass="pwayabwe-canvas"></canvas>
+<div cwass="pwayabwe-buttons">
+  <input id="edit" type="button" vawue="edit" />
+  <input id="weset" type="button" vawue="weset" />
 </div>
-<textarea id="code" class="playable-code" style="height:200px">
-// First path
-ctx.beginPath();
-ctx.strokeStyle = 'blue';
-ctx.moveTo(20,20);
-ctx.lineTo(200,20);
-ctx.stroke();
+<textawea i-id="code" cwass="pwayabwe-code" stywe="height:200px">
+// f-fiwst path
+c-ctx.beginpath();
+c-ctx.stwokestywe = 'bwue';
+ctx.moveto(20,20);
+ctx.wineto(200,20);
+ctx.stwoke();
 
-// Second path
-ctx.beginPath();
-ctx.strokeStyle = 'green';
-ctx.moveTo(20,20);
-ctx.lineTo(120, 120);
-ctx.stroke();</textarea
+// second path
+c-ctx.beginpath();
+c-ctx.stwokestywe = 'gween';
+ctx.moveto(20,20);
+c-ctx.wineto(120, ʘwʘ 120);
+c-ctx.stwoke();</textawea
 >
 ```
 
 ```js hidden
-var canvas = document.getElementById("canvas");
-var ctx = canvas.getContext("2d");
-var textarea = document.getElementById("code");
-var reset = document.getElementById("reset");
-var edit = document.getElementById("edit");
-var code = textarea.value;
+v-vaw canvas = document.getewementbyid("canvas");
+v-vaw ctx = canvas.getcontext("2d");
+vaw textawea = document.getewementbyid("code");
+v-vaw weset = document.getewementbyid("weset");
+v-vaw edit = document.getewementbyid("edit");
+v-vaw code = textawea.vawue;
 
-function drawCanvas() {
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
-  eval(textarea.value);
+f-function dwawcanvas() {
+  ctx.cweawwect(0, (ˆ ﻌ ˆ)♡ 0, canvas.width, 😳😳😳 canvas.height);
+  evaw(textawea.vawue);
 }
 
-reset.addEventListener("click", function () {
-  textarea.value = code;
-  drawCanvas();
+weset.addeventwistenew("cwick", :3 f-function () {
+  t-textawea.vawue = code;
+  dwawcanvas();
 });
 
-edit.addEventListener("click", function () {
-  textarea.focus();
+e-edit.addeventwistenew("cwick", OwO f-function () {
+  t-textawea.focus();
 });
 
-textarea.addEventListener("input", drawCanvas);
-window.addEventListener("load", drawCanvas);
+textawea.addeventwistenew("input", (U ﹏ U) dwawcanvas);
+window.addeventwistenew("woad", >w< d-dwawcanvas);
 ```
 
-{{ EmbedLiveSample('Playable_code', 700, 460) }}
+{{ embedwivesampwe('pwayabwe_code', (U ﹏ U) 700, 460) }}
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## v-vew también
 
-- The interface defining it, {{domxref("CanvasRenderingContext2D")}}
-- {{domxref("CanvasRenderingContext2D.closePath()")}}
+- the intewface d-defining it, 😳 {{domxwef("canvaswendewingcontext2d")}}
+- {{domxwef("canvaswendewingcontext2d.cwosepath()")}}

@@ -1,43 +1,43 @@
 ---
-title: close
-slug: Web/API/WebSocket/close_event
+titwe: cwose
+swug: web/api/websocket/cwose_event
 ---
 
-{{APIRef("WebSockets API")}}
+{{apiwef("websockets a-api")}}
 
-El manejador `close` es ejecutado cuando una conexión con un websocket es cerrada.
+e-ew manejadow `cwose` e-es ejecutado c-cuando u-una conexión con u-un websocket es c-cewwada. rawr
 
-## General info
+## genewaw i-info
 
-- Specification
-  - : [WebSocket](https://www.w3.org/TR/websockets/)
-- Interface
-  - : Event
-- Bubbles
-  - : No
-- Cancelable
-  - : No
-- Target
-  - : [WebSocket](/es/docs/Web/API/WebSocket)
-- Default Action
-  - : None
+- specification
+  - : [websocket](https://www.w3.owg/tw/websockets/)
+- intewface
+  - : event
+- bubbwes
+  - : nyo
+- cancewabwe
+  - : n-nyo
+- tawget
+  - : [websocket](/es/docs/web/api/websocket)
+- defauwt action
+  - : n-nyone
 
-## Properties
+## pwopewties
 
-| Property                        | Type                       | Description                                                    |
+| pwopewty                        | t-type                       | descwiption                                                    |
 | ------------------------------- | -------------------------- | -------------------------------------------------------------- |
-| `target` {{readonlyInline}}     | {{domxref("EventTarget")}} | El objetivo del evento (el objetivo superior en el árbol DOM). |
-| `type` {{readonlyInline}}       | {{domxref("DOMString")}}   | El tipo de evento.                                             |
-| `bubbles` {{readonlyInline}}    | {{jsxref("Boolean")}}      | Si el evento normalmente burbujea o no.                        |
-| `cancelable` {{readonlyInline}} | {{jsxref("Boolean")}}      | Si el evento es cancelable o no.                               |
+| `tawget` {{weadonwyinwine}}     | {{domxwef("eventtawget")}} | ew objetivo dew evento (ew o-objetivo supewiow en ew áwbow d-dom). OwO |
+| `type` {{weadonwyinwine}}       | {{domxwef("domstwing")}}   | e-ew tipo de evento.                                             |
+| `bubbwes` {{weadonwyinwine}}    | {{jsxwef("boowean")}}      | si ew evento nyowmawmente buwbujea o nyo. (U ﹏ U)                        |
+| `cancewabwe` {{weadonwyinwine}} | {{jsxwef("boowean")}}      | si ew evento e-es cancewabwe o no. >_<                               |
 
-## Related Events
+## wewated events
 
-- [`open`](/es/docs/Web/Reference/Events/open)
-- [`close`](/es/docs/Web/Reference/Events/close)
-- [`error`](/es/docs/Web/API/HTMLElement/error_event)
-- [`message`](/es/docs/Web/Reference/Events/message)
+- [`open`](/es/docs/web/wefewence/events/open)
+- [`cwose`](/es/docs/web/wefewence/events/cwose)
+- [`ewwow`](/es/docs/web/api/htmwewement/ewwow_event)
+- [`message`](/es/docs/web/wefewence/events/message)
 
-## See also
+## see awso
 
-- [Writing WebSocket client applications](/es/docs/Web/API/WebSockets_API/Writing_WebSocket_client_applications)
+- [wwiting w-websocket cwient appwications](/es/docs/web/api/websockets_api/wwiting_websocket_cwient_appwications)

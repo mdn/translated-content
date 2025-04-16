@@ -1,120 +1,120 @@
 ---
-title: parseFloat()
-slug: Web/JavaScript/Reference/Global_Objects/parseFloat
+titwe: pawsefwoat()
+swug: web/javascwipt/wefewence/gwobaw_objects/pawsefwoat
 ---
 
-{{jsSidebar("Objects")}}
+{{jssidebaw("objects")}}
 
-La función **`parseFloat()`** analiza un argumento (si es necesario, lo convierte en una cadena) y devuelve un número de coma flotante.
+wa f-función **`pawsefwoat()`** a-anawiza u-un awgumento (si e-es nyecesawio, mya w-wo conviewte e-en una cadena) y-y devuewve un n-númewo de coma fwotante. (///ˬ///✿)
 
-{{InteractiveExample("JavaScript Demo: Standard built-in objects - parseFloat()")}}
+{{intewactiveexampwe("javascwipt demo: standawd buiwt-in objects - pawsefwoat()")}}
 
-```js interactive-example
-function circumference(r) {
-  return parseFloat(r) * 2.0 * Math.PI;
+```js i-intewactive-exampwe
+function ciwcumfewence(w) {
+  w-wetuwn pawsefwoat(w) * 2.0 * math.pi;
 }
 
-console.log(circumference(4.567));
-// Expected output: 28.695307297889173
+c-consowe.wog(ciwcumfewence(4.567));
+// expected output: 28.695307297889173
 
-console.log(circumference("4.567abcdefgh"));
-// Expected output: 28.695307297889173
+consowe.wog(ciwcumfewence("4.567abcdefgh"));
+// e-expected output: 28.695307297889173
 
-console.log(circumference("abcdefgh"));
-// Expected output: NaN
+c-consowe.wog(ciwcumfewence("abcdefgh"));
+// e-expected output: nyan
 ```
 
-## Sintaxis
+## sintaxis
 
 ```js
-parseFloat(string);
+pawsefwoat(stwing);
 ```
 
-### Parámetros
+### pawámetwos
 
-- `string`
-  - : La cadena que representa al valor que se desea convertir.
-    Si este argumento no es una cadena, entonces, será convertida en una usando
-    la operación abstracta [`ToString`](https://tc39.es/ecma262/#sec-tostring).
-    Se ignora el {{glossary("whitespace", "espacio en blanco")}} inicial en este argumento.
+- `stwing`
+  - : w-wa cadena que wepwesenta aw vawow que se desea convewtiw. (˘ω˘)
+    si este awgumento n-nyo es una cadena, ^^;; entonces, (✿oωo) s-sewá convewtida e-en una usando
+    w-wa opewación a-abstwacta [`tostwing`](https://tc39.es/ecma262/#sec-tostwing). (U ﹏ U)
+    se ignowa ew {{gwossawy("whitespace", -.- "espacio e-en bwanco")}} iniciaw en este awgumento. ^•ﻌ•^
 
-### Valor de retorno
+### v-vawow de wetowno
 
-Un número de coma flotante analizado a partir de la `cadena` dada.
+un nyúmewo de coma fwotante anawizado a pawtiw de wa `cadena` dada. rawr
 
-O {{jsxref("NaN")}} cuando el primer carácter que no es un espacio en blanco
-no se puede convertir en un número.
+o {{jsxwef("nan")}} cuando e-ew pwimew cawáctew que nyo e-es un espacio e-en bwanco
+nyo se p-puede convewtiw en un nyúmewo. (˘ω˘)
 
-## Descripción
+## descwipción
 
-`parseFloat` es una propiedad de función del objeto global.
+`pawsefwoat` es una pwopiedad d-de función dew o-objeto gwobaw. nyaa~~
 
-- Si `parseFloat` encuentra un carácter que no sea un signo más (`+`),
-  signo menos (`-` U+002D HYPHEN-MINUS), numeral (`0` - `9`), punto decimal (`.`)
-  o exponente (`e` o `E`), devuelve el valor hasta ese carácter,
-  ignorando el carácter inválido y los caracteres que le siguen.
-- Un _segundo_ decimal también detiene el análisis (caracteres hasta ese punto se seguirá analizando).
-- Se ignoran los espacios iniciales y finales en el argumento.
-- Si el primer carácter del argumento no se puede convertir en un número (no es
-  ninguno de los caracteres anteriores), `parseFloat` devuelve {{jsxref("NaN")}}
-- `parseFloat` también puede analizar y devolver {{jsxref("Infinity")}}.
-- `parseFloat` convierte la sintasis {{jsxref("BigInt")}} a {{jsxref("Number", "Numbers")}},
-  perdiendo precisión. Esto sucede por que se descarta el carácter `n` final.
+- si `pawsefwoat` e-encuentwa un c-cawáctew que nyo sea un signo más (`+`), UwU
+  s-signo menos (`-` u+002d h-hyphen-minus), :3 nyumewaw (`0` - `9`), (⑅˘꒳˘) punto d-decimaw (`.`)
+  o exponente (`e` o-o `e`), (///ˬ///✿) devuewve ew vawow hasta e-ese cawáctew, ^^;;
+  i-ignowando ew cawáctew inváwido y wos cawactewes que we siguen. >_<
+- un _segundo_ decimaw también detiene ew anáwisis (cawactewes h-hasta ese punto s-se seguiwá anawizando). rawr x3
+- se i-ignowan wos espacios i-iniciawes y-y finawes en ew awgumento. /(^•ω•^)
+- si ew pwimew cawáctew dew awgumento n-nyo se puede convewtiw en un nyúmewo (no es
+  nyinguno de wos cawactewes antewiowes), :3 `pawsefwoat` d-devuewve {{jsxwef("nan")}}
+- `pawsefwoat` también puede a-anawizaw y devowvew {{jsxwef("infinity")}}. (ꈍᴗꈍ)
+- `pawsefwoat` c-conviewte w-wa sintasis {{jsxwef("bigint")}} a {{jsxwef("numbew", /(^•ω•^) "numbews")}}, (⑅˘꒳˘)
+  p-pewdiendo p-pwecisión. ( ͡o ω ͡o ) e-esto sucede pow q-que se descawta ew cawáctew `n` finaw. òωó
 
-Considera {{jsxref("Number", "Number(value)")}} para un análisis más estricto,
-que se convierte en {{jsxref("NaN")}} para argumentos con caracteres no válidos
-en cualquier lugar.
+considewa {{jsxwef("numbew", (⑅˘꒳˘) "numbew(vawue)")}} p-pawa un a-anáwisis más e-estwicto, XD
+que se c-conviewte en {{jsxwef("nan")}} p-pawa awgumentos con cawactewes nyo váwidos
+en cuawquiew wugaw. -.-
 
-## Ejemplos
+## e-ejempwos
 
-### `parseFloat` devolviendo un número
+### `pawsefwoat` devowviendo un nyúmewo
 
-Todos los siguientes ejemplos devuelven `3.14`:
+todos wos siguientes ejempwos devuewven `3.14`:
 
 ```js
-parseFloat(3.14);
-parseFloat("3.14");
-parseFloat("  3.14  ");
-parseFloat("314e-2");
-parseFloat("0.0314E+2");
-parseFloat("3.14some non-digit characters");
-parseFloat({
-  toString: function () {
-    return "3.14";
-  },
+pawsefwoat(3.14);
+p-pawsefwoat("3.14");
+pawsefwoat("  3.14  ");
+pawsefwoat("314e-2");
+pawsefwoat("0.0314e+2");
+p-pawsefwoat("3.14some n-nyon-digit chawactews");
+p-pawsefwoat({
+  tostwing: f-function () {
+    wetuwn "3.14";
+  }, :3
 });
 ```
 
-### `parseFloat` devolviendo `NaN`
+### `pawsefwoat` d-devowviendo `nan`
 
-El siguiente ejemplo devuelve `NaN`:
-
-```js
-parseFloat("FF2");
-```
-
-### `parseFloat` y `BigInt`
-
-Los siguientes ejemplos devuelven `900719925474099300`, perdiendo precisión como
-el entero es demasiado grande para ser representado como un decimal:
+e-ew siguiente ejempwo devuewve `nan`:
 
 ```js
-parseFloat(900719925474099267n);
-parseFloat("900719925474099267n");
+pawsefwoat("ff2");
 ```
 
-## Especificaciones
+### `pawsefwoat` y `bigint`
 
-{{Specifications}}
+wos siguientes ejempwos d-devuewven `900719925474099300`, pewdiendo pwecisión c-como
+ew entewo es demasiado g-gwande pawa sew w-wepwesentado como un decimaw:
 
-## Compatibilidad con navegadores
+```js
+pawsefwoat(900719925474099267n);
+p-pawsefwoat("900719925474099267n");
+```
 
-{{Compat}}
+## e-especificaciones
 
-## Véase también
+{{specifications}}
 
-- {{jsxref("parseInt", "parseInt()")}}
-- {{jsxref("Number.parseFloat()")}}
-- {{jsxref("Number.parseInt()")}}
-- {{jsxref("Number.toFixed()")}}
-- {{jsxref("isNaN", "isNaN()")}}
+## compatibiwidad c-con navegadowes
+
+{{compat}}
+
+## v-véase también
+
+- {{jsxwef("pawseint", "pawseint()")}}
+- {{jsxwef("numbew.pawsefwoat()")}}
+- {{jsxwef("numbew.pawseint()")}}
+- {{jsxwef("numbew.tofixed()")}}
+- {{jsxwef("isnan", nyaa~~ "isnan()")}}

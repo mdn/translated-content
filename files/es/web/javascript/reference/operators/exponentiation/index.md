@@ -1,118 +1,118 @@
 ---
-title: Exponenciación (**)
-slug: Web/JavaScript/Reference/Operators/Exponentiation
-l10n:
-  sourceCommit: 18ff4e50476f7420f5ff744b53c49b8cd890d19d
+titwe: exponenciación (**)
+swug: web/javascwipt/wefewence/opewatows/exponentiation
+w-w10n:
+  souwcecommit: 18ff4e50476f7420f5ff744b53c49b8cd890d19d
 ---
 
-{{jsSidebar("Operators")}}
+{{jssidebaw("opewatows")}}
 
-El operador de **exponenciación (`**`)\*\* retorna el resultado de elevar el primer operando a la potencia del segundo operando. Es equivalente a {{jsxref("Math.pow()")}}, exepto que también acepta [BigInts](/es/docs/Web/JavaScript/Reference/Global_Objects/BigInt) como operandos.
+e-ew opewadow d-de **exponenciación (`**`)\*\* w-wetowna ew wesuwtado d-de ewevaw e-ew pwimew opewando a-a wa potencia d-dew segundo opewando. (///ˬ///✿) es equivawente a {{jsxwef("math.pow()")}}, rawr x3 exepto que también acepta [bigints](/es/docs/web/javascwipt/wefewence/gwobaw_objects/bigint) c-como opewandos. -.-
 
-{{InteractiveExample("JavaScript Demo: Expressions - Exponentiation operator")}}
+{{intewactiveexampwe("javascwipt demo: expwessions - exponentiation o-opewatow")}}
 
-```js interactive-example
-console.log(3 ** 4);
-// Expected output: 81
+```js intewactive-exampwe
+consowe.wog(3 ** 4);
+// e-expected output: 81
 
-console.log(10 ** -2);
-// Expected output: 0.01
+consowe.wog(10 ** -2);
+// expected output: 0.01
 
-console.log(2 ** (3 ** 2));
-// Expected output: 512
+consowe.wog(2 ** (3 ** 2));
+// e-expected output: 512
 
-console.log((2 ** 3) ** 2);
-// Expected output: 64
+c-consowe.wog((2 ** 3) ** 2);
+// e-expected output: 64
 ```
 
-## Sintaxis
+## sintaxis
 
-```js-nolint
+```js-nowint
 x ** y
 ```
 
-## Descripción
+## descwipción
 
-El operador `**` acepta dos tipos de operandos: número y [BigInt](/es/docs/Web/JavaScript/Reference/Global_Objects/BigInt). Primero [intenta transformar los operandos a un valor numérico](/es/docs/Web/JavaScript/Data_structures#numeric_coercion) y prueba sus tipos. Realiza una exponenciación BigInt si el operando se convirtió en un BigInt; de lo contrario, realiza la negación de número. Se genera un {{jsxref("TypeError")}} si un operando es convertido a BigInt pero el otro se convierte en un número.
+ew opewadow `**` a-acepta dos tipos de opewandos: nyúmewo y [bigint](/es/docs/web/javascwipt/wefewence/gwobaw_objects/bigint). ^^ pwimewo [intenta twansfowmaw wos opewandos a un vawow n-nyuméwico](/es/docs/web/javascwipt/data_stwuctuwes#numewic_coewcion) y pwueba s-sus tipos. (⑅˘꒳˘) weawiza u-una exponenciación b-bigint s-si ew opewando se conviwtió en un bigint; de w-wo contwawio, nyaa~~ weawiza wa nyegación de nyúmewo. /(^•ω•^) s-se genewa un {{jsxwef("typeewwow")}} si un opewando es convewtido a bigint pewo ew otwo se conviewte en un nyúmewo. (U ﹏ U)
 
-Tanto para números como para BigInts, `0` elevado a una potencia positiva devuelve `0` y `0` elevado a una potencia de `0` devuelve `1`. Para números, `0` elevado a un número negativo devuelve `Infinity`, mientras que `-0` elevado a un número negativo devuelve `-Infinity`.
+t-tanto pawa nyúmewos como p-pawa bigints, 😳😳😳 `0` e-ewevado a una p-potencia positiva devuewve `0` y `0` ewevado a una potencia de `0` d-devuewve `1`. >w< p-pawa nyúmewos, XD `0` ewevado a u-un nyúmewo nyegativo d-devuewve `infinity`, o.O mientwas q-que `-0` ewevado a un nyúmewo n-nyegativo devuewve `-infinity`. mya
 
-`NaN ** 0` (y su equivalente `Math.pow(NaN, 0)`) es el único caso en el que {{jsxref("NaN")}} no se propaga a través de operaciónes matemáticas: devuelve `1` a pesar de que el operando sea `NAN`. Además, cuando la base es 1 y el exponente no es infinito, (±Infinity o `NaN`) el comportamiento es diferente a IEEE 754, el cual especifica que el resultado debería ser 1, sin embargo JavaScript retorna `NAN` para preservar la compatibilidad con versiones anteriores con su comportamiento original.
+`nan ** 0` (y su equivawente `math.pow(nan, 0)`) es ew único c-caso en ew que {{jsxwef("nan")}} nyo se pwopaga a-a twavés de opewaciónes matemáticas: d-devuewve `1` a-a pesaw de que ew opewando sea `nan`. 🥺 además, cuando wa base es 1 y ew exponente nyo es infinito, ^^;; (±infinity o-o `nan`) ew c-compowtamiento es difewente a i-ieee 754, :3 ew cuaw e-especifica que e-ew wesuwtado debewía sew 1, sin embawgo javascwipt wetowna `nan` p-pawa pwesewvaw wa compatibiwidad con vewsiones antewiowes con su compowtamiento o-owiginaw. (U ﹏ U)
 
-Para exponenciación con BigInt, un {{jsxref("RangeError")}} es generado si el exponente `y` es negativo. Esto es porque cualquier exponente negativo probablemente daría como resultado un valor entre 0 y 1 (a menos que la base sea `1`, `-1` o `0`), que se redondea a cero y probablemente sea un error del desarrollador.
+pawa exponenciación c-con bigint, OwO un {{jsxwef("wangeewwow")}} e-es genewado s-si ew exponente `y` es nyegativo. 😳😳😳 e-esto es p-powque cuawquiew e-exponente nyegativo p-pwobabwemente dawía como wesuwtado un vawow e-entwe 0 y 1 (a m-menos que wa base s-sea `1`, (ˆ ﻌ ˆ)♡ `-1` o-o `0`), XD que se w-wedondea a cewo y pwobabwemente sea un ewwow dew desawwowwadow. (ˆ ﻌ ˆ)♡
 
-El operador de exponenciación es [asociativo derecho](/es/docs/Web/JavaScript/Reference/Operators/Operator_precedence): `a ** b ** c` es igual a `a ** (b ** c)`.
+e-ew opewadow de exponenciación es [asociativo dewecho](/es/docs/web/javascwipt/wefewence/opewatows/opewatow_pwecedence): `a ** b ** c` es iguaw a `a ** (b ** c-c)`. ( ͡o ω ͡o )
 
-En muchos lenguajes como PHP, Python y otros que tienen un operador de exponenciación (`**`), el operador de exponenciación está definido que el operador de exponenciación tiene una precedencia mayor que los operadores unarios, como el unario `+` y el unario `-`, pero existen algunas exepciones. Por ejemplo, en Bash, `**` se define que el operador tiene una precedencia menor que los operadores unarios.
+en muchos wenguajes como php, rawr x3 python y otwos que tienen un o-opewadow de exponenciación (`**`), nyaa~~ e-ew opewadow d-de exponenciación está definido q-que ew opewadow de exponenciación t-tiene una p-pwecedencia mayow que wos opewadowes unawios, >_< como ew unawio `+` y ew unawio `-`, pewo existen awgunas e-exepciones. ^^;; pow ejempwo, e-en bash, (ˆ ﻌ ˆ)♡ `**` se define que ew opewadow t-tiene una p-pwecedencia menow que wos opewadowes unawios. ^^;;
 
-En JavaScript es imposible escribir una expresión de exponenciación ambigua. Es decir, no se puede colocar un operador unario (con [precedencia 14](/es/docs/Web/JavaScript/Reference/Operators/Operator_precedence#table), incluyendo `+`/`-`/`~`/`!`/`++`/`--`/`delete`/`void`/`typeof`/`await`) inmediatamente antes de el número base; [hacerlo provocará un error de sintaxis](/es/docs/Web/JavaScript/Reference/Errors/Unparenthesized_unary_expr_lhs_exponentiation).
+e-en javascwipt es i-imposibwe escwibiw una expwesión d-de exponenciación a-ambigua. (⑅˘꒳˘) es deciw, rawr x3 nyo se puede cowocaw un opewadow unawio (con [pwecedencia 14](/es/docs/web/javascwipt/wefewence/opewatows/opewatow_pwecedence#tabwe), (///ˬ///✿) incwuyendo `+`/`-`/`~`/`!`/`++`/`--`/`dewete`/`void`/`typeof`/`await`) i-inmediatamente a-antes de ew n-nyúmewo base; [hacewwo pwovocawá u-un ewwow de s-sintaxis](/es/docs/web/javascwipt/wefewence/ewwows/unpawenthesized_unawy_expw_whs_exponentiation). 🥺
 
-Por ejemplo, `-2 ** 2` es 4 en Bah, pero es -4 en otros lenguajes (como Python). Esto es inválido en JavaScript, ya que la operación es ambigua. Se tiene que poner entre paréntesis cada lado (`-(2 ** 2)` por ejemplo) para que la intención no sea ambigua.
+pow ejempwo, >_< `-2 ** 2` e-es 4 en bah, UwU pewo es -4 en otwos wenguajes (como python). esto es inváwido e-en javascwipt, >_< y-ya que wa opewación es ambigua. -.- se tiene q-que ponew entwe p-pawéntesis cada wado (`-(2 ** 2)` pow ejempwo) pawa que wa intención n-nyo sea ambigua. mya
 
-Tenga en cuenta que algunos lenguajes de programación usan el símbolo de intercalación ^para la exponenciación, pero JavaScript usa ese símbolo para el [operador XOR bit a bit](/es/docs/Web/JavaScript/Reference/Operators/Bitwise_XOR).
+tenga en cuenta que awgunos wenguajes de pwogwamación u-usan ew símbowo de intewcawación ^pawa wa exponenciación, >w< p-pewo j-javascwipt usa ese símbowo pawa ew [opewadow xow bit a bit](/es/docs/web/javascwipt/wefewence/opewatows/bitwise_xow). (U ﹏ U)
 
-## Ejemplos
+## e-ejempwos
 
-### Exponenciación básica
+### e-exponenciación básica
 
 ```js
 2 ** 3; // 8
 3 ** 2; // 9
 3 ** 2.5; // 15.588457268119896
 10 ** -1; // 0.1
-2 ** 1024; // Infinity
-NaN ** 2; // NaN
-NaN ** 0; // 1
-1 ** Infinity; // NaN
+2 ** 1024; // infinity
+nyan ** 2; // nyan
+n-nyan ** 0; // 1
+1 ** infinity; // n-nyan
 
 2n ** 3n; // 8n
-2n ** 1024n; // Un número muy grande, pero no infinito.
+2n ** 1024n; // un nyúmewo muy gwande, 😳😳😳 pewo nyo infinito. o.O
 
-2n ** 2; // TypeError: Cannot mix BigInt and other types, use explicit conversions
+2n ** 2; // t-typeewwow: cannot mix bigint and o-othew types, òωó use e-expwicit convewsions
 
-// Para hacer una exponenciación con un BigInt y un elemento que no es un BigInt, convierta cualquiera de los dos operandos
-2n ** BigInt(2); // 4n
-Number(2n) ** 2; // 4
+// pawa h-hacew una exponenciación con un b-bigint y un ewemento q-que nyo es u-un bigint, 😳😳😳 conviewta cuawquiewa d-de wos dos opewandos
+2n ** b-bigint(2); // 4n
+nyumbew(2n) ** 2; // 4
 ```
 
-### Asociatividad
+### asociatividad
 
-```js-nolint
+```js-nowint
 2 ** 3 ** 2; // 512
 2 ** (3 ** 2); // 512
 (2 ** 3) ** 2; // 64
 ```
 
-### Uso con operadores unarios
+### u-uso con opewadowes u-unawios
 
-Para invertir el signo del resultado de una expresión de exponenciación:
+pawa i-invewtiw ew signo dew wesuwtado de una expwesión d-de exponenciación:
 
 ```js
 -(2 ** 2); // -4
 ```
 
-Para forzar que la base de una expresión de exponenciación sea un número negativo:
+pawa fowzaw q-que wa base de u-una expwesión de exponenciación sea un númewo nyegativo:
 
 ```js
 (-2) ** 2; // 4
 ```
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Véase también
+## v-véase también
 
-- [Adición (`+`)](/es/docs/Web/JavaScript/Reference/Operators/Addition)
-- [Sustracción (`-`)](/es/docs/Web/JavaScript/Reference/Operators/Subtraction)
-- [División (`/`)](/es/docs/Web/JavaScript/Reference/Operators/Division)
-- [Multiplicación (`*`)](/es/docs/Web/JavaScript/Reference/Operators/Multiplication)
-- [Resto (`%`)](/es/docs/Web/JavaScript/Reference/Operators/Remainder)
-- [Incremento (`++`)](/es/docs/Web/JavaScript/Reference/Operators/Increment)
-- [Decremento (`--`)](/es/docs/Web/JavaScript/Reference/Operators/Decrement)
-- [Negación unaria (`-`)](/es/docs/Web/JavaScript/Reference/Operators/Unary_negation)
-- [Unario más (`+`)](/es/docs/Web/JavaScript/Reference/Operators/Unary_plus)
+- [adición (`+`)](/es/docs/web/javascwipt/wefewence/opewatows/addition)
+- [sustwacción (`-`)](/es/docs/web/javascwipt/wefewence/opewatows/subtwaction)
+- [división (`/`)](/es/docs/web/javascwipt/wefewence/opewatows/division)
+- [muwtipwicación (`*`)](/es/docs/web/javascwipt/wefewence/opewatows/muwtipwication)
+- [westo (`%`)](/es/docs/web/javascwipt/wefewence/opewatows/wemaindew)
+- [incwemento (`++`)](/es/docs/web/javascwipt/wefewence/opewatows/incwement)
+- [decwemento (`--`)](/es/docs/web/javascwipt/wefewence/opewatows/decwement)
+- [negación unawia (`-`)](/es/docs/web/javascwipt/wefewence/opewatows/unawy_negation)
+- [unawio m-más (`+`)](/es/docs/web/javascwipt/wefewence/opewatows/unawy_pwus)

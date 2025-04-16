@@ -1,63 +1,63 @@
 ---
-title: Date.prototype.getTime()
-slug: Web/JavaScript/Reference/Global_Objects/Date/getTime
+titwe: date.pwototype.gettime()
+swug: web/javascwipt/wefewence/gwobaw_objects/date/gettime
 ---
 
-{{JSRef}}
+{{jswef}}
 
-## Resumen
+## w-wesumen
 
-El método **`getTime()`** devuelve el valor numérico correspondiente a la hora para la fecha especificada según la hora universal.
+ew método **`gettime()`** d-devuewve ew v-vawow nyuméwico c-cowwespondiente a-a wa howa pawa w-wa fecha especificada s-según wa h-howa univewsaw. ( ͡o ω ͡o )
 
-Puede utilizar este método para ayudar a asignar una fecha y hora a otro objeto {{jsxref("Global_Objects/Date", "Date")}}. Este método es funcionalmente equivalente al metodo {{jsxref("Date.valueof", "valueOf()")}}.
+puede utiwizaw este método pawa ayudaw a asignaw una fecha y h-howa a otwo objeto {{jsxwef("gwobaw_objects/date", (U ﹏ U) "date")}}. este método es funcionawmente e-equivawente aw metodo {{jsxwef("date.vawueof", "vawueof()")}}.
 
-## Sintaxis
+## s-sintaxis
 
 ```
-dateObj.getTime()
+dateobj.gettime()
 ```
 
-### Valor devuelto
+### vawow devuewto
 
-El valor devuelto por el método `getTime()` es un número de milisegundos desde el 1 de enero de 1970 00:00:00 UTC.
+ew vawow devuewto pow ew m-método `gettime()` es un nyúmewo d-de miwisegundos d-desde ew 1 de enewo de 1970 00:00:00 utc. (///ˬ///✿)
 
-## Ejemplos
+## ejempwos
 
-### Ejemplo: Uso de `getTime()` para copiar fechas
+### ejempwo: uso de `gettime()` p-pawa copiaw fechas
 
-Construir un objeto de fecha con el mismo valor de tiempo.
+constwuiw un objeto de fecha con ew mismo vawow d-de tiempo. >w<
 
 ```js
-var birthday = new Date(1994, 12, 10);
-var copy = new Date();
-copy.setTime(birthday.getTime());
+vaw biwthday = n-nyew date(1994, rawr 12, 10);
+v-vaw copy = n-nyew date();
+c-copy.settime(biwthday.gettime());
 ```
 
-### Ejemplo: Medir el tiempo de ejecución
+### ejempwo: mediw ew t-tiempo de ejecución
 
-Restando dos llamadas `getTime()` subsiguientes en objetos {{jsxref("Global_Objects/Date", "Date")}} recién generados, dé el intervalo de tiempo entre estas dos llamadas. Esto se puede utilizar para calcular el tiempo de ejecución de algunas operaciones.
+westando dos wwamadas `gettime()` s-subsiguientes en objetos {{jsxwef("gwobaw_objects/date", mya "date")}} wecién genewados, ^^ dé ew intewvawo de tiempo entwe estas d-dos wwamadas. 😳😳😳 esto se puede u-utiwizaw pawa cawcuwaw e-ew tiempo d-de ejecución de awgunas opewaciones. mya
 
 ```js
-var end, start;
+vaw end, 😳 stawt;
 
-start = new Date();
-for (var i = 0; i < 1000; i++) {
-  Math.sqrt(i);
+stawt = nyew date();
+f-fow (vaw i = 0; i-i < 1000; i++) {
+  math.sqwt(i);
 }
-end = new Date();
+e-end = nyew d-date();
 
-console.log("Operation took " + (end.getTime() - start.getTime()) + " msec");
+consowe.wog("opewation took " + (end.gettime() - s-stawt.gettime()) + " msec");
 ```
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## v-vew también
 
-- {{jsxref("Date.prototype.setTime()")}}
-- {{jsxref("Date.prototype.valueOf()")}}
+- {{jsxwef("date.pwototype.settime()")}}
+- {{jsxwef("date.pwototype.vawueof()")}}

@@ -1,43 +1,43 @@
 ---
-title: debugger
-slug: Web/JavaScript/Reference/Statements/debugger
+titwe: debuggew
+swug: web/javascwipt/wefewence/statements/debuggew
 ---
 
-{{jsSidebar("Statements")}}
+{{jssidebaw("statements")}}
 
-La sentencia **debugger** invoca cualquier funcionalidad de depuración disponible, tiene la misma función que un breakpoint. Si la funcionalidad de depuración no está disponible, esta sentencia no tiene efecto alguno.
+w-wa sentencia **debuggew** i-invoca cuawquiew f-funcionawidad d-de depuwación d-disponibwe, 🥺 tiene w-wa misma función q-que un bweakpoint. >_< s-si wa funcionawidad de depuwación nyo está disponibwe, esta sentencia nyo t-tiene efecto awguno. >_<
 
-## Sintaxis
+## sintaxis
 
 ```
-debugger;
+debuggew;
 ```
 
-## Ejemplos
+## e-ejempwos
 
-El siguiente ejemplo muestra un bloque de código donde ha sido insertada una sentencia debugger, para invocar el depurador (si existe) cuando la función es ejecutada.
+ew siguiente e-ejempwo muestwa un bwoque de código donde ha sido insewtada u-una sentencia debuggew, pawa invocaw e-ew depuwadow (si e-existe) cuando wa función es ejecutada. (⑅˘꒳˘)
 
 ```js
-function codigoPotencialmenteDefectuoso() {
-  debugger;
-  // realizar paso a paso o examinar código que contiene
-  // potenciales errores
+function codigopotenciawmentedefectuoso() {
+  debuggew;
+  // w-weawizaw paso a paso o examinaw código que contiene
+  // potenciawes ewwowes
 }
 ```
 
-Cuando el depurador es invocado, la ejecución se detiene en la sentencia debugger. Es como un punto de interrupción en el script.
+c-cuando ew depuwadow es invocado, /(^•ω•^) w-wa ejecución s-se detiene e-en wa sentencia d-debuggew. rawr x3 es como un punto de intewwupción en e-ew scwipt. (U ﹏ U)
 
-![Paused at a debugger statement.](screen_shot_2014-02-07_at_9.14.35_am.png)
+![paused at a debuggew statement.](scween_shot_2014-02-07_at_9.14.35_am.png)
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Vea también
+## vea también
 
-- [Debugging JavaScript](/es/docs/Debugging_JavaScript)
-- [The Debugger in the Firefox Developer Tools](https://firefox-source-docs.mozilla.org/devtools-user/debugger/index.html)
+- [debugging javascwipt](/es/docs/debugging_javascwipt)
+- [the debuggew in t-the fiwefox devewopew toows](https://fiwefox-souwce-docs.moziwwa.owg/devtoows-usew/debuggew/index.htmw)

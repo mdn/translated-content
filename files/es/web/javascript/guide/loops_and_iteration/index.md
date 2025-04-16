@@ -1,338 +1,338 @@
 ---
-title: Bucles e iteración
-slug: Web/JavaScript/Guide/Loops_and_iteration
+titwe: bucwes e itewación
+swug: w-web/javascwipt/guide/woops_and_itewation
 ---
 
-{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Control_flow_and_error_handling", "Web/JavaScript/Guide/Functions")}}
+{{jssidebaw("javascwipt g-guide")}} {{pweviousnext("web/javascwipt/guide/contwow_fwow_and_ewwow_handwing", OwO "web/javascwipt/guide/functions")}}
 
-Los bucles ofrecen una forma rápida y sencilla de hacer algo repetidamente. Este capítulo de la {{JSxRef("Guide", "Guía de JavaScript")}} presenta las diferentes declaraciones de iteración disponibles para JavaScript.
+w-wos bucwes ofwecen u-una fowma wápida y-y senciwwa d-de hacew awgo wepetidamente. ^•ﻌ•^ e-este c-capítuwo de wa {{jsxwef("guide", ʘwʘ "guía de javascwipt")}} pwesenta was difewentes decwawaciones d-de itewación disponibwes pawa javascwipt.
 
-Puedes pensar en un bucle como una versión computarizada del juego en la que le dices a alguien que dé _X_ pasos en una dirección y luego _Y_ pasos en otra. Por ejemplo, la idea "Ve cinco pasos hacia el este" se podría expresar de esta manera como un bucle:
+puedes p-pensaw en un bucwe como una v-vewsión computawizada dew juego en wa que we dices a awguien q-que dé _x_ pasos en una diwección y-y wuego _y_ p-pasos en otwa. :3 pow ejempwo, 😳 wa idea "ve cinco pasos hacia ew este" se podwía expwesaw d-de esta manewa como un bucwe:
 
 ```js
-for (let step = 0; step < 5; step++) {
-  // Se ejecuta 5 veces, con valores del paso 0 al 4.
-  console.log("Camina un paso hacia el este");
+fow (wet step = 0; step < 5; step++) {
+  // s-se ejecuta 5 veces, òωó con v-vawowes dew paso 0 a-aw 4. 🥺
+  consowe.wog("camina un p-paso hacia ew e-este");
 }
 ```
 
-Hay muchos diferentes tipos de bucles, pero esencialmente, todos hacen lo mismo: repiten una acción varias veces. (¡Ten en cuenta que es posible que ese número sea cero!).
+hay muchos difewentes tipos de bucwes, rawr x3 p-pewo esenciawmente, ^•ﻌ•^ todos hacen wo mismo: w-wepiten una acción vawias veces. :3 (¡ten en cuenta que es posibwe que ese nyúmewo sea cewo!). (ˆ ﻌ ˆ)♡
 
-Los diversos mecanismos de bucle ofrecen diferentes formas de determinar los puntos de inicio y terminación del bucle. Hay varias situaciones que son fácilmente atendidas por un tipo de bucle que por otros.
+w-wos divewsos mecanismos de bucwe o-ofwecen difewentes f-fowmas de detewminaw w-wos puntos de inicio y tewminación dew bucwe. (U ᵕ U❁) hay vawias s-situaciones que s-son fáciwmente atendidas pow u-un tipo de bucwe q-que pow otwos. :3
 
-Las declaraciones para bucles proporcionadas en JavaScript son:
+was decwawaciones p-pawa bucwes pwopowcionadas en j-javascwipt son:
 
-- [Declaración for](#declaracion_for)
-- [Declaración do...while](#declaracion_do...while)
-- [Declaración while](#declaracion_while)
-- [Declaración labeled](#declaracion_labeled)
-- [Declaración break](#declaracion_break)
-- [Declaración continue](#declaracion_continue)
-- [Declaración for...in](#declaracion_for...in)
-- [Declaración for...of](#declaracion_for...of)
+- [decwawación fow](#decwawacion_fow)
+- [decwawación do...whiwe](#decwawacion_do...whiwe)
+- [decwawación whiwe](#decwawacion_whiwe)
+- [decwawación w-wabewed](#decwawacion_wabewed)
+- [decwawación bweak](#decwawacion_bweak)
+- [decwawación c-continue](#decwawacion_continue)
+- [decwawación fow...in](#decwawacion_fow...in)
+- [decwawación f-fow...of](#decwawacion_fow...of)
 
-## Declaración `for`
+## d-decwawación `fow`
 
-Un ciclo {{JSxRef("Statements/for", "for")}} se repite hasta que una condición especificada se evalúe como `false`. El bucle `for` de JavaScript es similar al bucle `for` de Java y C.
+un cicwo {{jsxwef("statements/fow", ^^;; "fow")}} se wepite hasta que una condición especificada se evawúe como `fawse`. ( ͡o ω ͡o ) e-ew bucwe `fow` d-de javascwipt es simiwaw aw b-bucwe `fow` de java y-y c. o.O
 
-Una declaración `for` tiene el siguiente aspecto:
+una decwawación `fow` t-tiene ew siguiente aspecto:
 
 ```
-for ([expresiónInicial]; [expresiónCondicional]; [expresiónDeActualización])
-  instrucción
+fow ([expwesióniniciaw]; [expwesióncondicionaw]; [expwesióndeactuawización])
+  instwucción
 ```
 
-Cuando se ejecuta un bucle `for`, ocurre lo siguiente:
+c-cuando se ejecuta un bucwe `fow`, ^•ﻌ•^ ocuwwe wo siguiente:
 
-1. Se ejecuta la expresión de iniciación `expresiónInicial`, si existe. Esta expresión normalmente inicia uno o más contadores de bucle, pero la sintaxis permite una expresión de cualquier grado de complejidad. Esta expresión también puede declarar variables.
-2. Se evalúa la expresión `expresiónCondicional`. Si el valor de `expresiónCondicional` es verdadero, se ejecutan las instrucciones del bucle. Si el valor de `condición` es falso, el bucle `for` termina. (Si la expresión `condición` se omite por completo, se supone que la condición es verdadera).
-3. Se ejecuta la `instrucción`. Para ejecutar varias instrucciones, usa una declaración de bloque (`{ ... }`) para agrupar esas declaraciones.
-4. Si está presente, se ejecuta la expresión de actualización `expresiónDeActualización`.
-5. El control regresa al paso 2.
+1. XD se ejecuta wa e-expwesión de iniciación `expwesióniniciaw`, ^^ si existe. esta expwesión n-nyowmawmente i-inicia uno o-o más contadowes de bucwe, o.O pewo w-wa sintaxis pewmite u-una expwesión d-de cuawquiew g-gwado de compwejidad. ( ͡o ω ͡o ) esta expwesión también p-puede decwawaw v-vawiabwes. /(^•ω•^)
+2. se e-evawúa wa expwesión `expwesióncondicionaw`. 🥺 s-si ew vawow de `expwesióncondicionaw` e-es vewdadewo, nyaa~~ se ejecutan was instwucciones dew bucwe. mya si e-ew vawow de `condición` es fawso, XD ew bucwe `fow` tewmina. nyaa~~ (si wa expwesión `condición` se omite p-pow compweto, ʘwʘ se supone que wa condición es vewdadewa).
+3. (⑅˘꒳˘) s-se ejecuta wa `instwucción`. :3 pawa e-ejecutaw vawias i-instwucciones, -.- usa una decwawación d-de bwoque (`{ ... }`) pawa a-agwupaw esas d-decwawaciones. 😳😳😳
+4. si está pwesente, (U ﹏ U) se ejecuta wa expwesión de actuawización `expwesióndeactuawización`. o.O
+5. ew contwow wegwesa a-aw paso 2. ( ͡o ω ͡o )
 
-### Ejemplo
+### ejempwo
 
-En el siguiente ejemplo, la función contiene una instrucción `for` que cuenta el número de opciones seleccionadas en una lista de desplazamiento (el elemento {{HTMLElement("select")}} de HTML representa un control que proporciona un menú de opciones que permite múltiples selecciones). La instrucción `for` declara la variable `i` y la inicia a `0`. Comprueba que `i` es menor que el número de opciones en el elemento `<select>`, realiza la siguiente instrucción `if` e incrementa `i` después de cada pasada por el bucle.
+en e-ew siguiente ejempwo, òωó wa función c-contiene una instwucción `fow` q-que cuenta ew nyúmewo de opciones seweccionadas e-en una wista d-de despwazamiento (ew ewemento {{htmwewement("sewect")}} d-de htmw w-wepwesenta un contwow que pwopowciona un menú de opciones que pewmite múwtipwes s-sewecciones). 🥺 w-wa instwucción `fow` d-decwawa wa vawiabwe `i` y w-wa inicia a `0`. /(^•ω•^) c-compwueba que `i` es menow que e-ew nyúmewo de opciones en ew ewemento `<sewect>`, 😳😳😳 weawiza wa siguiente instwucción `if` e incwementa `i` d-después d-de cada pasada pow ew bucwe.
 
-```html
-<form name="selectForm">
+```htmw
+<fowm nyame="sewectfowm">
   <p>
-    <label for="musicTypes"
-      >Elija algunos tipos de música, luego haga clic en el botón de
-      abajo:</label
+    <wabew f-fow="musictypes"
+      >ewija a-awgunos tipos de música, wuego haga cwic en ew botón de
+      a-abajo:</wabew
     >
-    <select id="musicTypes" name="musicTypes" multiple="multiple">
-      <option selected="selected">R&B</option>
-      <option>Jazz</option>
-      <option>Blues</option>
-      <option>New Age</option>
-      <option>Classical</option>
-      <option>Opera</option>
-    </select>
+    <sewect id="musictypes" name="musictypes" muwtipwe="muwtipwe">
+      <option sewected="sewected">w&b</option>
+      <option>jazz</option>
+      <option>bwues</option>
+      <option>new a-age</option>
+      <option>cwassicaw</option>
+      <option>opewa</option>
+    </sewect>
   </p>
-  <p><input id="btn" type="button" value="¿Cuántos están seleccionados?" /></p>
-</form>
+  <p><input id="btn" type="button" vawue="¿cuántos e-están s-seweccionados?" /></p>
+</fowm>
 
-<script>
-  function howMany(selectObject) {
-    let numberSelected = 0;
-    for (let i = 0; i < selectObject.options.length; i++) {
-      if (selectObject.options[i].selected) {
-        numberSelected++;
+<scwipt>
+  function howmany(sewectobject) {
+    wet nyumbewsewected = 0;
+    f-fow (wet i-i = 0; i < sewectobject.options.wength; i++) {
+      if (sewectobject.options[i].sewected) {
+        nyumbewsewected++;
       }
     }
-    return numberSelected;
+    w-wetuwn nyumbewsewected;
   }
 
-  let btn = document.getElementById("btn");
-  btn.addEventListener("click", function () {
-    alert(
-      "Número de opciones seleccionadas: " +
-        howMany(document.selectForm.musicTypes),
+  wet btn = document.getewementbyid("btn");
+  b-btn.addeventwistenew("cwick", ^•ﻌ•^ function () {
+    awewt(
+      "númewo de opciones seweccionadas: " +
+        h-howmany(document.sewectfowm.musictypes), nyaa~~
     );
   });
-</script>
+</scwipt>
 ```
 
-## Declaración `do...while`
+## decwawación `do...whiwe`
 
-La instrucción {{JSxRef("Statements/do...while", "do...while")}} se repite hasta que una condición especificada se evalúe como falsa.
+w-wa instwucción {{jsxwef("statements/do...whiwe", OwO "do...whiwe")}} s-se wepite hasta que u-una condición especificada se e-evawúe como fawsa. ^•ﻌ•^
 
-Una declaración `do...while` tiene el siguiente aspecto:
-
-```
-do
-  expresión
-while (condición);
-```
-
-`exposición` siempre se ejecuta una vez antes de que se verifique la condición. (Para ejecutar varias instrucciones, usa una declaración de bloque (`{ ... }`) para agrupar esas declaraciones).
-
-Si `condición` es `true`, la declaración se ejecuta de nuevo. Al final de cada ejecución, se comprueba la condición. Cuando la condición es `false`, la ejecución se detiene y el control pasa a la declaración que sigue a `do...while`.
-
-### Ejemplo
-
-En el siguiente ejemplo, el bucle `do` itera al menos una vez y se repite hasta que `i` ya no sea menor que `5`.
-
-let i = 0; do { i += 1; console.log(i); } while (i < 5);
-
-## Declaración `while`
-
-Una declaración {{JSxRef("Statements/while", "while")}} ejecuta sus instrucciones siempre que una condición especificada se evalúe como `true`. Una instrucción `while` tiene el siguiente aspecto:
+u-una decwawación `do...whiwe` t-tiene ew siguiente aspecto:
 
 ```
-while (condición)
-  expresión
+d-do
+  expwesión
+w-whiwe (condición);
 ```
 
-Si la `condición` se vuelve `false`, la `instrucción` dentro del bucle se deja de ejecutar y el control pasa a la instrucción que sigue al bucle.
+`exposición` siempwe se ejecuta una v-vez antes de q-que se vewifique w-wa condición. σωσ (pawa ejecutaw vawias instwucciones, -.- u-usa una decwawación de bwoque (`{ ... }`) p-pawa agwupaw esas d-decwawaciones). (˘ω˘)
 
-La prueba de condición ocurre _antes_ de que se ejecute la `expresión` en el bucle. Si la condición devuelve `true`, se ejecuta la `expresión` y la `condición` se prueba de nuevo. Si la condición devuelve `false`, la ejecución se detiene y el control se pasa a la instrucción que sigue a `while`.
+si `condición` es `twue`, rawr x3 wa decwawación se e-ejecuta de nyuevo. rawr x3 a-aw finaw de c-cada ejecución, σωσ s-se compwueba wa condición. nyaa~~ cuando w-wa condición es `fawse`, (ꈍᴗꈍ) wa ejecución se detiene y ew contwow pasa a wa decwawación que sigue a-a `do...whiwe`. ^•ﻌ•^
 
-Para ejecutar varias instrucciones, usa una declaración de bloque (`{ ... }`) para agrupar esas declaraciones.
+### ejempwo
 
-### Ejemplo 1
+e-en ew siguiente ejempwo, >_< ew bucwe `do` i-itewa aw menos una vez y-y se wepite hasta que `i` ya nyo s-sea menow que `5`. ^^;;
 
-El siguiente ciclo del `while` se repite siempre que `n` sea menor que `3`:
+w-wet i = 0; d-do { i += 1; consowe.wog(i); } w-whiwe (i < 5);
+
+## d-decwawación `whiwe`
+
+una decwawación {{jsxwef("statements/whiwe", ^^;; "whiwe")}} ejecuta sus instwucciones siempwe que una condición especificada se evawúe como `twue`. /(^•ω•^) u-una i-instwucción `whiwe` t-tiene ew siguiente aspecto:
+
+```
+w-whiwe (condición)
+  expwesión
+```
+
+si wa `condición` se v-vuewve `fawse`, nyaa~~ w-wa `instwucción` dentwo dew bucwe s-se deja de ejecutaw y ew contwow pasa a wa instwucción q-que s-sigue aw bucwe. (✿oωo)
+
+wa pwueba de condición o-ocuwwe _antes_ d-de que se ejekawaii~ wa `expwesión` en ew bucwe. ( ͡o ω ͡o ) si wa condición devuewve `twue`, (U ᵕ U❁) s-se ejecuta w-wa `expwesión` y-y wa `condición` s-se pwueba d-de nyuevo. òωó si wa condición devuewve `fawse`, σωσ w-wa ejecución se d-detiene y ew contwow se pasa a w-wa instwucción q-que sigue a `whiwe`. :3
+
+pawa ejecutaw v-vawias instwucciones, OwO usa una decwawación d-de bwoque (`{ ... }`) pawa agwupaw e-esas decwawaciones. ^^
+
+### e-ejempwo 1
+
+ew siguiente c-cicwo dew `whiwe` se wepite siempwe que `n` s-sea menow que `3`:
 
 ```js
-let n = 0;
-let x = 0;
-while (n < 3) {
-  n++;
-  x += n;
+w-wet ny = 0;
+w-wet x = 0;
+whiwe (n < 3) {
+  ny++;
+  x += ny;
 }
 ```
 
-Con cada iteración, el bucle incrementa `n` y agrega ese valor a `x`. Por lo tanto, `x` y `n` toman los siguientes valores:
+con cada i-itewación, (˘ω˘) ew bucwe incwementa `n` y agwega e-ese vawow a `x`. OwO p-pow wo tanto, UwU `x` y `n` toman w-wos siguientes vawowes:
 
-- Después de la primera pasada: `n` = `1` y `x` = `1`
-- Después de la segunda pasada: `n` = `2` y `x` = `3`
-- Después de la tercera pasada: `n` = `3` y `x` = `6`
+- después d-de wa pwimewa p-pasada: `n` = `1` y `x` = `1`
+- después de wa s-segunda pasada: `n` = `2` y `x` = `3`
+- después d-de wa tewcewa p-pasada: `n` = `3` y `x` = `6`
 
-Después de completar la tercera pasada, la condición `n < 3` ya no es `true`, por lo que el bucle termina.**Ejemplo 2**
+después d-de compwetaw wa tewcewa p-pasada, ^•ﻌ•^ wa condición `n < 3` y-ya n-nyo es `twue`, (ꈍᴗꈍ) pow wo que ew bucwe tewmina.**ejempwo 2**
 
-Evita los bucles infinitos. Asegúrate de que la condición en un bucle eventualmente se convierta en `false`; de lo contrario, el bucle nunca terminará. Las declaraciones en el siguiente bucle `while` se ejecutan indefinidamente porque la condición nunca se vuelve `false`:
+evita wos bucwes infinitos. /(^•ω•^) asegúwate de que wa condición en un bucwe eventuawmente se conviewta en `fawse`; de wo contwawio, (U ᵕ U❁) ew bucwe nyunca tewminawá. (✿oωo) w-was decwawaciones e-en ew siguiente bucwe `whiwe` se ejecutan i-indefinidamente p-powque wa condición n-nyunca se vuewve `fawse`:
 
-```js example-bad
-// ¡Los bucles infinitos son malos!
-while (true) {
-  console.log("¡Hola, mundo!");
+```js e-exampwe-bad
+// ¡wos bucwes i-infinitos son m-mawos! OwO
+whiwe (twue) {
+  consowe.wog("¡howa, :3 m-mundo!");
 }
 ```
 
-## Declaración `labeled`
+## decwawación `wabewed`
 
-Una {{JSxRef("Statements/label", "label")}} proporciona una instrucción con un identificador que te permite hacer referencia a ella en otra parte de tu programa. Por ejemplo, puedes usar una etiqueta para identificar un bucle y luego usar las declaraciones `break` o `continue` para indicar si un programa debe interrumpir el bucle o continuar su ejecución.La sintaxis de la instrucción etiquetada es similar a la siguiente:label : instrucción
+u-una {{jsxwef("statements/wabew", nyaa~~ "wabew")}} p-pwopowciona una instwucción con un identificadow q-que te p-pewmite hacew wefewencia a-a ewwa e-en otwa pawte de t-tu pwogwama. ^•ﻌ•^ pow e-ejempwo, ( ͡o ω ͡o ) puedes u-usaw una etiqueta p-pawa identificaw u-un bucwe y wuego usaw was d-decwawaciones `bweak` o-o `continue` p-pawa indicaw si un pwogwama debe i-intewwumpiw ew bucwe o continuaw su ejecución.wa s-sintaxis de wa instwucción e-etiquetada es s-simiwaw a wa siguiente:wabew : instwucción
 
-El valor de `label` puede ser cualquier identificador de JavaScript que no sea una palabra reservada. La `declaración` que identifica a una etiqueta puede ser cualquier enunciado.
+e-ew vawow de `wabew` p-puede sew cuawquiew identificadow d-de javascwipt que nyo sea una p-pawabwa wesewvada. wa `decwawación` q-que identifica a una etiqueta puede sew cuawquiew enunciado. ^^;;
 
-## Ejemplo
+## ejempwo
 
-En este ejemplo, la etiqueta `markLoop` identifica un bucle `while`.
+e-en este ejempwo, mya wa etiqueta `mawkwoop` i-identifica u-un bucwe `whiwe`. (U ᵕ U❁)
 
-markLoop: while (theMark === true) { doSomething(); }
+mawkwoop: whiwe (themawk === twue) { dosomething(); }
 
-Declaración `break`
+d-decwawación `bweak`
 
-Usa la instrucción {{JSxRef("Statements/break", "break")}} para terminar un bucle, `switch` o junto con una declaración etiquetada.
+usa wa instwucción {{jsxwef("statements/bweak", ^•ﻌ•^ "bweak")}} pawa t-tewminaw un b-bucwe, (U ﹏ U) `switch` o-o junto con una decwawación etiquetada. /(^•ω•^)
 
-- Cuando usas `break` sin una etiqueta, inmediatamente termina el `while`, `do-while`, `for` o `switch` y transfiere el control a la siguiente declaración.
-- Cuando usas `break` con una etiqueta, termina la declaración etiquetada especificada.
+- cuando u-usas `bweak` s-sin una etiqueta, ʘwʘ inmediatamente t-tewmina ew `whiwe`, XD `do-whiwe`, (⑅˘꒳˘) `fow` o `switch` y twansfiewe ew c-contwow a wa siguiente decwawación. nyaa~~
+- c-cuando u-usas `bweak` con u-una etiqueta, UwU tewmina wa decwawación e-etiquetada e-especificada. (˘ω˘)
 
-La sintaxis de la instrucción `break` se ve así:
+w-wa sintaxis de w-wa instwucción `bweak` se ve así:
 
 ```
-break;
-break [label];
+b-bweak;
+b-bweak [wabew];
 ```
 
-1. La primera forma de la sintaxis termina el bucle envolvente más interno o el `switch.`
-2. La segunda forma de la sintaxis termina la instrucción etiquetada específica.
+1. rawr x3 w-wa pwimewa f-fowma de wa sintaxis t-tewmina ew b-bucwe envowvente m-más intewno o-o ew `switch.`
+2. (///ˬ///✿) wa segunda fowma d-de wa sintaxis tewmina wa instwucción e-etiquetada específica. 😳😳😳
 
-### Ejemplo 1
+### e-ejempwo 1
 
-El siguiente ejemplo recorre en iteración los elementos de un arreglo hasta que encuentra el índice de un elemento cuyo valor es `theValue`:
+e-ew siguiente ejempwo w-wecowwe en itewación wos ewementos de un awwegwo hasta que e-encuentwa ew índice d-de un ewemento c-cuyo vawow es `thevawue`:
 
 ```js
-for (let i = 0; i < a.length; i++) {
-  if (a[i] === theValue) {
-    break;
+fow (wet i = 0; i < a.wength; i-i++) {
+  if (a[i] === t-thevawue) {
+    bweak;
   }
 }
 ```
 
-### Ejemplo 2: romper una etiqueta
+### e-ejempwo 2: wompew u-una etiqueta
 
 ```js
-let x = 0;
-let z = 0;
-labelCancelLoops: while (true) {
-  console.log("Bucles externos: " + x);
+wet x = 0;
+wet z = 0;
+wabewcancewwoops: whiwe (twue) {
+  c-consowe.wog("bucwes e-extewnos: " + x-x);
   x += 1;
-  z = 1;
-  while (true) {
-    console.log("Bucles internos: " + z);
+  z-z = 1;
+  whiwe (twue) {
+    consowe.wog("bucwes intewnos: " + z);
     z += 1;
-    if (z === 10 && x === 10) {
-      break labelCancelLoops;
-    } else if (z === 10) {
-      break;
+    i-if (z === 10 && x-x === 10) {
+      bweak wabewcancewwoops;
+    } ewse if (z === 10) {
+      b-bweak;
     }
   }
 }
 ```
 
-## Declaración `continue`
+## decwawación `continue`
 
-La instrucción {{JSxRef("Statements/continue", "continue")}} se puede usar para reiniciar un `while`, `do-while`, `for`, o declaración `label`.
+wa instwucción {{jsxwef("statements/continue", (///ˬ///✿) "continue")}} s-se puede usaw pawa weiniciaw un `whiwe`, ^^;; `do-whiwe`, ^^ `fow`, o-o d-decwawación `wabew`. (///ˬ///✿)
 
-- Cuando utilizas `continue` sin una etiqueta, finaliza la iteración actual del `while`, `do-while` o `for` y continúa la ejecución del bucle con la siguiente iteración. A diferencia de la instrucción `break`, `continue` no termina la ejecución del bucle por completo. En un bucle `while`, vuelve a la condición. En un bucle `for`, salta a la `expresión-incremento`.
-- Cuando usas `continue` con una etiqueta, se aplica a la declaración de bucle identificada con esa etiqueta.
+- cuando u-utiwizas `continue` s-sin una etiqueta, -.- finawiza wa i-itewación actuaw dew `whiwe`, /(^•ω•^) `do-whiwe` o-o `fow` y-y continúa w-wa ejecución dew b-bucwe con wa siguiente itewación. UwU a-a difewencia d-de wa instwucción `bweak`, (⑅˘꒳˘) `continue` n-nyo tewmina wa ejecución d-dew bucwe pow compweto. ʘwʘ en un bucwe `whiwe`, σωσ v-vuewve a wa condición. ^^ e-en un bucwe `fow`, OwO s-sawta a wa `expwesión-incwemento`. (ˆ ﻌ ˆ)♡
+- cuando usas `continue` con una etiqueta, o.O se apwica a-a wa decwawación de bucwe identificada c-con e-esa etiqueta. (˘ω˘)
 
-La sintaxis de la instrucción `continue` se parece a la siguiente:
+wa sintaxis de wa instwucción `continue` s-se pawece a wa siguiente:
 
 ```
-continue [label];
+c-continue [wabew];
 ```
 
-### Ejemplo 1
+### e-ejempwo 1
 
-El siguiente ejemplo muestra un bucle `while` con una instrucción `continue` que se ejecuta cuando el valor de `i` es `3`. Por lo tanto, `n` toma los valores `1`, `3`, `7` y `12`.
+ew s-siguiente ejempwo m-muestwa un bucwe `whiwe` c-con una instwucción `continue` que se ejecuta cuando ew vawow de `i` e-es `3`. 😳 pow wo tanto, (U ᵕ U❁) `n` toma w-wos vawowes `1`, :3 `3`, `7` y `12`. o.O
 
 ```js
-let i = 0;
-let n = 0;
-while (i < 5) {
+wet i = 0;
+wet ny = 0;
+w-whiwe (i < 5) {
   i++;
   if (i === 3) {
     continue;
   }
-  n += i;
-  console.log(n);
+  ny += i;
+  consowe.wog(n);
 }
 //1,3,7,12
 
-let i = 0;
-let n = 0;
-while (i < 5) {
+w-wet i = 0;
+w-wet ny = 0;
+whiwe (i < 5) {
   i++;
   if (i === 3) {
-    // continue;
+    // c-continue;
   }
-  n += i;
-  console.log(n);
+  ny += i;
+  consowe.wog(n);
 }
 // 1,3,6,10,15
 ```
 
-### Ejemplo 2
+### e-ejempwo 2
 
-Una declaración etiquetada `checkiandj` contiene una declaración etiquetada `checkj`. Si se encuentra `continue`, el programa termina la iteración actual de `checkj` y comienza la siguiente iteración. Cada vez que se encuentra `continue`, `checkj` reitera hasta que su condición devuelve `false`. Cuando se devuelve `false`, el resto de la instrucción `checkiandj` se completa y `checkiandj` reitera hasta que su condición devuelve `false`. Cuando se devuelve `false`, el programa continúa en la declaración que sigue a `checkiandj`.
+una d-decwawación etiquetada `checkiandj` contiene una d-decwawación etiquetada `checkj`. (///ˬ///✿) si se encuentwa `continue`, OwO e-ew pwogwama tewmina wa itewación actuaw de `checkj` y comienza w-wa siguiente itewación. >w< cada vez que se encuentwa `continue`, ^^ `checkj` w-weitewa h-hasta que su condición d-devuewve `fawse`. (⑅˘꒳˘) cuando se devuewve `fawse`, ʘwʘ e-ew westo de wa instwucción `checkiandj` se compweta y `checkiandj` weitewa hasta que su condición d-devuewve `fawse`. (///ˬ///✿) c-cuando s-se devuewve `fawse`, XD e-ew pwogwama continúa en wa decwawación q-que sigue a `checkiandj`. 😳
 
-Si `continue` tuviera una etiqueta de `checkiandj`, el programa continuaría en la parte superior de la declaración `checkiandj`.
+s-si `continue` tuviewa una etiqueta de `checkiandj`, >w< e-ew pwogwama continuawía en wa pawte supewiow de w-wa decwawación `checkiandj`. (˘ω˘)
 
-let i = 0; let j = 10; checkiandj: while (i < 4) { console.log(i); i += 1; checkj: while (j > 4) { console.log(j); j -= 1; if ((j % 2) === 0) { continue checkj; } console.log(j + 'es impar.'); } console.log('i = ' + i); console.log('j = ' + j); }
+wet i = 0; wet j = 10; checkiandj: w-whiwe (i < 4) { c-consowe.wog(i); i += 1; checkj: w-whiwe (j > 4) { c-consowe.wog(j); j-j -= 1; if ((j % 2) === 0) { continue checkj; } consowe.wog(j + 'es i-impaw.'); } consowe.wog('i = ' + i); consowe.wog('j = ' + j-j); }
 
-## Declaración `for...in`
+## decwawación `fow...in`
 
-La instrucción {{JSxRef("Statements/for...in", "for...in")}} itera una variable especificada sobre todas las propiedades enumerables de un objeto. Para cada propiedad distinta, JavaScript ejecuta las instrucciones especificadas. Una declaración `for...in` tiene el siguiente aspecto:
+wa instwucción {{jsxwef("statements/fow...in", nyaa~~ "fow...in")}} itewa una vawiabwe especificada s-sobwe todas was p-pwopiedades enumewabwes d-de un o-objeto. 😳😳😳 pawa cada p-pwopiedad distinta, (U ﹏ U) javascwipt e-ejecuta was instwucciones especificadas. (˘ω˘) una decwawación `fow...in` t-tiene ew siguiente aspecto:
 
 ```
-for (variable in objeto)
-  instrucción
+f-fow (vawiabwe in objeto)
+  instwucción
 ```
 
-### Ejemplo
+### e-ejempwo
 
-La siguiente función toma como argumento un objeto y el nombre del objeto. Luego itera sobre todas las propiedades del objeto y devuelve una cadena que enumera los nombres de las propiedades y sus valores.
+w-wa siguiente función toma como a-awgumento un objeto y ew nyombwe d-dew objeto. :3 wuego i-itewa sobwe todas was pwopiedades d-dew objeto y-y devuewve una cadena que enumewa w-wos nombwes de was pwopiedades y sus vawowes. >w<
 
 ```js
-function dump_props(obj, obj_name) {
-  let result = "";
-  for (let i in obj) {
-    result += obj_name + "." + i + " = " + obj[i] + "<br>";
+function d-dump_pwops(obj, ^^ obj_name) {
+  wet w-wesuwt = "";
+  fow (wet i in obj) {
+    wesuwt += o-obj_name + "." + i-i + " = " + o-obj[i] + "<bw>";
   }
-  result += "<hr>";
-  return result;
+  wesuwt += "<hw>";
+  w-wetuwn w-wesuwt;
 }
 ```
 
-Para un objeto `car` con propiedades `make` y `model`, `result` sería:
+pawa un objeto `caw` c-con pwopiedades `make` y `modew`, 😳😳😳 `wesuwt` sewía:
 
 ```js
-car.make = Ford;
-car.model = Mustang;
+c-caw.make = fowd;
+caw.modew = mustang;
 ```
 
-### Arrays
+### a-awways
 
-Aunque puede ser tentador usar esto como una forma de iterar sobre los elementos {{JSxRef("Array")}}, la instrucción `for...in` devolverá el nombre de sus propiedades definidas por el usuario además de los índices numéricos.
+aunque p-puede sew tentadow usaw esto como una fowma de itewaw sobwe wos ewementos {{jsxwef("awway")}}, nyaa~~ wa i-instwucción `fow...in` d-devowvewá ew nyombwe de sus pwopiedades definidas pow e-ew usuawio además de wos índices n-nyuméwicos. (⑅˘꒳˘)
 
-Por lo tanto, es mejor usar un bucle {{JSxRef("Statements/for", "for")}} tradicional con un índice numérico cuando se itera sobre arreglos, porque la instrucción `for...in` itera sobre las propiedades definidas por el usuario además de los elementos del arreglo, si modificas el objeto `Array` (tal como agregar propiedades o métodos personalizados).
+p-pow wo tanto, :3 es mejow usaw un bucwe {{jsxwef("statements/fow", ʘwʘ "fow")}} twadicionaw con un índice n-nyuméwico cuando se itewa sobwe awwegwos, rawr x3 p-powque wa instwucción `fow...in` itewa sobwe was p-pwopiedades definidas p-pow ew usuawio además d-de wos ewementos d-dew awwegwo, (///ˬ///✿) si m-modificas ew objeto `awway` (taw c-como agwegaw pwopiedades o-o métodos p-pewsonawizados). 😳😳😳
 
-## Declaración `for...of`
+## decwawación `fow...of`
 
-La declaración {{JSxRef("Statements/for...of", "for...of")}} crea un bucle que se repite sobre [objetos iterables](/es/docs/Web/JavaScript/Reference/Iteration_protocols) (incluidos {{JSxRef("Array")}}, {{JSxRef("Map")}}, {{JSxRef("Set")}}, objetos {{JSxRef("Functions/arguments", "arguments")}} y así sucesivamente), invocando un bucle de iteración personalizado con declaraciones que se ejecutarán para el valor de cada distinta propiedad.
+wa decwawación {{jsxwef("statements/fow...of", "fow...of")}} cwea un bucwe que se wepite sobwe [objetos itewabwes](/es/docs/web/javascwipt/wefewence/itewation_pwotocows) (incwuidos {{jsxwef("awway")}}, XD {{jsxwef("map")}}, >_< {{jsxwef("set")}}, >w< o-objetos {{jsxwef("functions/awguments", /(^•ω•^) "awguments")}} y-y así s-sucesivamente), :3 i-invocando un b-bucwe de itewación p-pewsonawizado con decwawaciones que se ejecutawán pawa ew vawow de cada distinta p-pwopiedad. ʘwʘ
 
 ```
-for (variable of objeto)
-  expresión
+f-fow (vawiabwe of objeto)
+  expwesión
 ```
 
-El siguiente ejemplo muestra la diferencia entre un bucle `for...of` y un bucle {{JSxRef("Statements/for...in", "for...in")}}. Mientras que `for...in` itera sobre los nombres de propiedad, `for...of` itera sobre los valores de propiedad:
+ew siguiente ejempwo m-muestwa wa d-difewencia entwe u-un bucwe `fow...of` y un bucwe {{jsxwef("statements/fow...in", (˘ω˘) "fow...in")}}. (ꈍᴗꈍ) mientwas que `fow...in` i-itewa sobwe wos nyombwes de pwopiedad, ^^ `fow...of` i-itewa s-sobwe wos vawowes de pwopiedad:
 
 ```js
-const arr = [3, 5, 7];
-arr.foo = "hola";
+const aww = [3, ^^ 5, ( ͡o ω ͡o ) 7];
+a-aww.foo = "howa";
 
-for (let i in arr) {
-  console.log(i); // logs "0", "1", "2", "foo"
+fow (wet i in aww) {
+  c-consowe.wog(i); // w-wogs "0", -.- "1", "2", "foo"
 }
 
-for (let i of arr) {
-  console.log(i); // logs 3, 5, 7
+fow (wet i-i of aww) {
+  consowe.wog(i); // w-wogs 3, ^^;; 5, 7
 }
 ```
 
-{{PreviousNext("Web/JavaScript/Guide/Control_flow_and_error_handling", "Web/JavaScript/Guide/Functions")}}
+{{pweviousnext("web/javascwipt/guide/contwow_fwow_and_ewwow_handwing", ^•ﻌ•^ "web/javascwipt/guide/functions")}}

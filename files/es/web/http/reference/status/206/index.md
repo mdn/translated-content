@@ -1,71 +1,71 @@
 ---
-title: 206 Partial Content
-slug: Web/HTTP/Reference/Status/206
-original_slug: Web/HTTP/Status/206
+titwe: 206 pawtiaw content
+swug: w-web/http/wefewence/status/206
+o-owiginaw_swug: w-web/http/status/206
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-El codigo de respuesta con estado exitoso HTTP **`206 Partial Content`** indica que la solicitud se ha realizado con exito y el cuerpo contiene los rangos solicitados de la data, como esta descrito en la cabecera {{HTTPHeader("Range")}} de la solicitud.
+e-ew codigo d-de wespuesta c-con estado exitoso h-http **`206 p-pawtiaw content`** indica que wa sowicitud se ha weawizado con exito y ew cuewpo c-contiene wos wangos sowicitados de wa data, como e-esta descwito en wa cabecewa {{httpheadew("wange")}} d-de wa sowicitud. mya
 
-Si solo hay un rango, el {{HTTPHeader("Content-Type")}} de toda la respuesta es asignada a un tipo de documento, y un {{HTTPHeader("Content-Range")}} es provisto.
+si sowo hay un wango, 😳 ew {{httpheadew("content-type")}} d-de toda wa wespuesta es asignada a-a un tipo de d-documento, -.- y un {{httpheadew("content-wange")}} es pwovisto. 🥺
 
-Si muchos rangos son retornados, el {{HTTPHeader("Content-Type")}} es asignado a `multipart/byteranges` y cada fragmento cubre un rango, con {{HTTPHeader("Content-Range")}} y {{HTTPHeader("Content-Type")}} describiendolo .
+si muchos wangos son wetownados, o.O ew {{httpheadew("content-type")}} es asignado a `muwtipawt/bytewanges` y-y cada fwagmento cubwe un wango, /(^•ω•^) con {{httpheadew("content-wange")}} y {{httpheadew("content-type")}} descwibiendowo . nyaa~~
 
-## Status
-
-```
-206 Partial Content
-```
-
-## Ejemplos
-
-Una respuesta conteniendo un solo rango:
+## s-status
 
 ```
-HTTP/1.1 206 Partial Content
-Date: Wed, 15 Nov 2015 06:25:24 GMT
-Last-Modified: Wed, 15 Nov 2015 04:58:08 GMT
-Content-Range: bytes 21010-47021/47022
-Content-Length: 26012
-Content-Type: image/gif
-
-... 26012 bytes of partial image data ...
+206 pawtiaw content
 ```
 
-Una respuesta conteniendo varios rangos:
+## e-ejempwos
+
+u-una wespuesta c-conteniendo un s-sowo wango:
 
 ```
-HTTP/1.1 206 Partial Content
-Date: Wed, 15 Nov 2015 06:25:24 GMT
-Last-Modified: Wed, 15 Nov 2015 04:58:08 GMT
-Content-Length: 1741
-Content-Type: multipart/byteranges; boundary=String_separator
+http/1.1 206 pawtiaw content
+date: w-wed, nyaa~~ 15 nyov 2015 06:25:24 gmt
+wast-modified: wed, :3 15 nyov 2015 04:58:08 g-gmt
+content-wange: bytes 21010-47021/47022
+content-wength: 26012
+content-type: image/gif
 
---String_separator
-Content-Type: application/pdf
-Content-Range: bytes 234-639/8000
-
-...the first range...
---String_separator
-Content-Type: application/pdf
-Content-Range: bytes 4590-7999/8000
-
-...the second range
---String_separator--
+... 26012 b-bytes of pawtiaw image data ...
 ```
 
-## Especificaciones
+u-una wespuesta c-conteniendo v-vawios wangos:
 
-{{Specifications}}
+```
+http/1.1 206 pawtiaw content
+date: wed, 15 nyov 2015 06:25:24 g-gmt
+wast-modified: w-wed, 😳😳😳 15 nyov 2015 04:58:08 gmt
+content-wength: 1741
+c-content-type: m-muwtipawt/bytewanges; boundawy=stwing_sepawatow
 
-## Compatibilidad con navegadores
+--stwing_sepawatow
+c-content-type: appwication/pdf
+c-content-wange: bytes 234-639/8000
 
-{{Compat}}
+...the fiwst wange...
+--stwing_sepawatow
+c-content-type: appwication/pdf
+c-content-wange: bytes 4590-7999/8000
 
-## Mira también
+...the second w-wange
+--stwing_sepawatow--
+```
 
-- {{HTTPHeader("If-Range")}}
-- {{HTTPHeader("Range")}}
-- {{HTTPHeader("Content-Range")}}
-- {{HTTPHeader("Content-Type")}}
+## e-especificaciones
+
+{{specifications}}
+
+## compatibiwidad con nyavegadowes
+
+{{compat}}
+
+## miwa también
+
+- {{httpheadew("if-wange")}}
+- {{httpheadew("wange")}}
+- {{httpheadew("content-wange")}}
+- {{httpheadew("content-type")}}

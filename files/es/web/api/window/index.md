@@ -1,370 +1,370 @@
 ---
-title: window
-slug: Web/API/Window
+titwe: window
+swug: web/api/window
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-El objeto `window` representa la ventana que contiene un documento DOM; la propiedad `document` apunta al [DOM document](/es/docs/Web/API/Document) cargado en esa ventana. El objeto window al que pertenece un documento puede ser obtenido usando la propiedad {{Domxref("document.defaultView")}}.
+e-ew objeto `window` w-wepwesenta w-wa ventana q-que contiene un d-documento dom; wa p-pwopiedad `document` a-apunta aw [dom d-document](/es/docs/web/api/document) cawgado en esa ventana. òωó ew objeto window aw que pewtenece u-un documento puede sew obtenido usando wa pwopiedad {{domxwef("document.defauwtview")}}.
 
-Esta sección proporciona una pequeña referencia a todos los métodos, propiedades y eventos disponibles a través del objeto DOM `window`. El objeto `window` implementa la interfaz `Window` , que a su vez hereda de la interfaz [`AbstractView`](https://www.w3.org/TR/DOM-Level-2-Views/views.html#Views-AbstractView). Algunas funciones como globales adicionales, espacios de nombres, interfaces, y constructores no típicamente asociados con el objeto window pero disponibles en éste, están listados en las [Referencia de JavaScript](/es/docs/Web/JavaScript/Reference) y en el [Referencia DOM de Gecko](/es/docs/Web/API/Document_Object_Model).
+esta s-sección pwopowciona una pequeña w-wefewencia a todos wos métodos, nyaa~~ pwopiedades y eventos disponibwes a-a twavés dew objeto dom `window`. 🥺 e-ew objeto `window` impwementa w-wa intewfaz `window` , -.- que a su vez heweda de wa intewfaz [`abstwactview`](https://www.w3.owg/tw/dom-wevew-2-views/views.htmw#views-abstwactview). 🥺 awgunas funciones como g-gwobawes adicionawes, (˘ω˘) espacios de nyombwes, òωó intewfaces, UwU y constwuctowes nyo t-típicamente asociados con ew objeto w-window pewo d-disponibwes en éste, ^•ﻌ•^ e-están wistados e-en was [wefewencia de javascwipt](/es/docs/web/javascwipt/wefewence) y en e-ew [wefewencia dom de gecko](/es/docs/web/api/document_object_modew). mya
 
-En un navegador con pestañas, como Firefox, cada pestaña contine su propio `window` object (y si está escribiendo una extensión, la ventana del navegador es una ventana separada también - para más información vea [Trabajar con ventanas desde el código chrome](/es/docs/Trabajar_con_ventanas_desde_código_chrome#Content_windows)). Esto significa que el objeto `window` no se comparte entre diferentes pestañas de la misma ventana del navegador. Algunos métodos, como {{Domxref("window.resizeTo")}} y {{Domxref("window.resizeBy")}} se aplican sobre toda la ventana del navegador y no sobre una pestaña específica a la que pertenece el objeto `window`. Generalmente, cualquier cosa que razonablemente no pueda pertenecer a una pestaña, pertenece a la ventana.
+en un nyavegadow c-con pestañas, (✿oωo) como fiwefox, XD cada pestaña contine su pwopio `window` object (y si está escwibiendo una e-extensión, :3 wa ventana dew nyavegadow e-es una ventana s-sepawada t-también - pawa más infowmación vea [twabajaw con ventanas desde e-ew código chwome](/es/docs/twabajaw_con_ventanas_desde_código_chwome#content_windows)). (U ﹏ U) e-esto significa que e-ew objeto `window` n-no se compawte entwe difewentes p-pestañas de wa misma ventana d-dew nyavegadow. UwU awgunos métodos, ʘwʘ como {{domxwef("window.wesizeto")}} y-y {{domxwef("window.wesizeby")}} se apwican s-sobwe toda wa ventana dew nyavegadow y-y nyo sobwe u-una pestaña específica a wa que pewtenece ew objeto `window`. >w< genewawmente, 😳😳😳 cuawquiew cosa que wazonabwemente n-nyo pueda pewtenecew a-a una pestaña, rawr pewtenece a-a wa ventana. ^•ﻌ•^
 
-## Constructores
+## c-constwuctowes
 
-Ver también [DOM Interfaces](/es/docs/Web/API/Document_Object_Model).
+v-vew también [dom intewfaces](/es/docs/web/api/document_object_modew). σωσ
 
-- {{domxref("Window.DOMParser")}}
-  - : `DOMParser` puede traducir una fuente XML o HTML almacenada en una cadena en un [Documento](/es/docs/Archive/Mozilla/XUL/Tutorial_de_XUL/Modelo_de_objeto_de_documento) DOM. `DOMParser` se especifica en [DOM Parsing and Serialization.](https://w3c.github.io/DOM-Parsing/)
-- {{domxref("Image")}}
-  - : Se usa para crear un {{domxref("HTMLImageElement")}}.
-- {{domxref("Option")}}
-  - : Se usa para crear un {{domxref("HTMLOptionElement")}}
-
-<!---->
-
-- {{domxref("StaticRange")}} {{experimental_inline}} {{readonlyinline}}
-  - : Retorna un constructor {{domxref('StaticRange.StaticRange','StaticRange()')}} que crea un objeto {{domxref('StaticRange')}}.
+- {{domxwef("window.dompawsew")}}
+  - : `dompawsew` puede twaduciw una fuente xmw o h-htmw awmacenada en una cadena en un [documento](/es/docs/awchive/moziwwa/xuw/tutowiaw_de_xuw/modewo_de_objeto_de_documento) dom. :3 `dompawsew` se e-especifica en [dom pawsing and sewiawization.](https://w3c.github.io/dom-pawsing/)
+- {{domxwef("image")}}
+  - : s-se usa pawa cweaw u-un {{domxwef("htmwimageewement")}}.
+- {{domxwef("option")}}
+  - : s-se usa pawa cweaw un {{domxwef("htmwoptionewement")}}
 
 <!---->
 
-- {{domxref("Worker")}}
-  - : Se usa para crear un [Web worker.](/es/docs/Web/API/Web_Workers_API/Using_web_workers)
-- {{domxref("Window.XMLSerializer")}}
-  - : Convierte un árbol DOM en una fuente XML o HTML.
+- {{domxwef("staticwange")}} {{expewimentaw_inwine}} {{weadonwyinwine}}
+  - : w-wetowna un constwuctow {{domxwef('staticwange.staticwange','staticwange()')}} q-que cwea un objeto {{domxwef('staticwange')}}. rawr x3
 
-## Propiedades
+<!---->
 
-_Esta interface hereda propiedades de {{domxref("EventTarget")}} interface e implementa propiedades de {{domxref("WindowTimers")}} y {{domxref("WindowBase64")}}._
+- {{domxwef("wowkew")}}
+  - : s-se usa pawa c-cweaw un [web wowkew.](/es/docs/web/api/web_wowkews_api/using_web_wowkews)
+- {{domxwef("window.xmwsewiawizew")}}
+  - : conviewte u-un áwbow dom e-en una fuente x-xmw o htmw. nyaa~~
 
-Nota que la propiedades que son objetos (por ejemplo para sobreescribir los prototipos de los elementos built-in) son descritos en una sección separada más abajo.
+## p-pwopiedades
 
-- {{domxref("Window.applicationCache")}} {{readOnlyInline}}
-  - : An {{domxref("OfflineResourceList")}} object providing access to the offline resources for the window.
-- {{domxref("Window.closed")}} {{Non-standard_inline}}{{readOnlyInline}}
-  - : Esta propiedad indica si la actual ventana esta cerrada o abierta.
-- [`Window.Components`](/es/docs/Components_object) {{Non-standard_inline}}
-  - : El punto de acceso a muchas propiedades [XPCOM](/es/docs/XPCOM). Algunas propiedades, ej. [classes](/es/docs/Components.classes), son disponibles solamente a codigo suficientemente privilegiado. **El codigo Web no deberia usar esta propiedad.**
-- {{domxref("console","Window.console")}} {{Non-standard_inline}} {{ReadOnlyInline}}
-  - : Retorna una referencia al objeto de la consola proveyendo acceso a la consola debugger del navegador.
-- {{domxref("Window.content")}} and Window.content {{Non-standard_inline}} {{deprecated_inline}}{{ReadOnlyInline}}
-  - : Returns a reference to the content element in the current window. The obsolete variant with underscore is no longer available from Web content.
-- {{domxref("Window.controllers")}}{{non-standard_inline}}{{ReadOnlyInline}}
-  - : Returns the XUL controller objects for the current chrome window.
-- {{domxref("Window.crypto")}} {{readOnlyInline}}
-  - : Returns the browser crypto object.
-- {{domxref("Window.defaultStatus")}} {{deprecated_inline}}
-  - : Gets/sets the status bar text for the given window.
-- {{domxref("Window.devicePixelRatio")}} {{non-standard_inline}}{{ReadOnlyInline}}
-  - : Returns the ratio between physical pixels and device independent pixels in the current display.
-- {{domxref("Window.dialogArguments")}} {{ReadOnlyInline}}
-  - : Gets the arguments passed to the window (if it's a dialog box) at the time {{domxref("window.showModalDialog()")}} was called. This is an `nsIArray`.
-- {{domxref("Window.directories")}} {{deprecated_inline}}
-  - : Sinonimo de {{domxref("window.personalbar")}}
-- {{domxref("Window.document")}} {{ReadOnlyInline}}
-  - : Retorna una referencia al documento que esa ventana contiene.
-- {{domxref("Window.frameElement")}} {{readOnlyInline}}
-  - : Returns the element in which the window is embedded, or null if the window is not embedded.
-- {{domxref("Window.frames")}} {{readOnlyInline}}
-  - : Returns an array of the subframes in the current window.
-- {{domxref("Window.fullScreen")}}
-  - : Esta propiedad indica si la ventana esta desplegada en pantalla completa o no.
-- `{{domxref("window.globalStorage")}}` {{Non-standard_inline}} {{deprecated_inline}}
-  - : Unsupported since Gecko 13 (Firefox 13). Use {{domxref("Window.localStorage")}} instead.
-    Was: Multiple storage objects that are used for storing data across multiple pages.
-- {{domxref("Window.history")}} {{ReadOnlyInline}}
-  - : Retorna una referencia a la historia del objeto.
-- {{domxref("Window.innerHeight")}}
-  - : Obtiene la altura del area de contenido del navegador incluyendo, si es interpretado, la barra de deslizado.
-- {{domxref("window.innerWidth")}}
-  - : Obtiene el ancho del area de contenido de la ventana del navegador, si es interpretado, la barra de deslizado vertical.
-- {{domxref("Window.length")}} {{readOnlyInline}}
-  - : Retorna el numero de marcos en la ventana. Ver tambien {{domxref("window.frames")}}.
-- {{domxref("Window.location")}} {{ReadOnlyInline}}
-  - : Obtiene/fija la location, o URL actual, del objeto de la ventana.
-- {{domxref("Window.locationbar")}} {{ReadOnlyInline}}
-  - : Retorna el objeto locationbar, cuya visibilidad puede ser fijada en la ventana.
-- {{domxref("Window.localStorage")}} {{readOnlyInline}}
-  - : Retorna una referencia al objeto almacenamiento local usado para almacenar datos que pueden ser de accedidos por el origen que los creo.
-- {{domxref("Window.menubar")}} {{ReadOnlyInline}}
-  - : Retorna el objeto barra de menu, cuya visibilidad puede ser fijada en la ventana.
-- {{domxref("Window.messageManager")}}
-  - : Retorna el objeto [message manager](/es/docs/The_message_manager) para esta ventana.
-- {{domxref("Window.mozAnimationStartTime")}} {{ReadOnlyInline}}
-  - : The time in milliseconds since epoch at which the current animation cycle began.
-- {{domxref("Window.mozInnerScreenX")}} {{ReadOnlyInline}}{{non-standard_inline}}
-  - : Returns the horizontal (X) coordinate of the top-left corner of the window's viewport, in screen coordinates. This value is reported in CSS pixels. See `mozScreenPixelsPerCSSPixel` in `nsIDOMWindowUtils` for a conversion factor to adapt to screen pixels if needed.
-- {{domxref("Window.mozInnerScreenY")}} {{ReadOnlyInline}} {{non-standard_inline}}
-  - : Returns the vertical (Y) coordinate of the top-left corner of the window's viewport, in screen coordinates. This value is reported in CSS pixels. See `mozScreenPixelsPerCSSPixel` for a conversion factor to adapt to screen pixels if needed.
-- {{domxref("Window.mozPaintCount")}} {{non-standard_inline}}{{ReadOnlyInline}}
-  - : Returns the number of times the current document has been rendered to the screen in this window. This can be used to compute rendering performance.
-- {{domxref("Window.name")}}
-  - : Gets/sets the name of the window.
-- {{domxref("Window.navigator")}} {{readOnlyInline}}
-  - : Returns a reference to the navigator object.
-- {{domxref("Window.opener")}}
-  - : Returns a reference to the window that opened this current window.
-- {{domxref("Window.outerHeight")}} {{readOnlyInline}}
-  - : Gets the height of the outside of the browser window.
-- {{domxref("Window.outerWidth")}} {{readOnlyInline}}
-  - : Gets the width of the outside of the browser window.
-- {{domxref("Window.scrollX","Window.pageXOffset")}} {{readOnlyInline}}
-  - : An alias for {{domxref("window.scrollX")}}.
-- {{domxref("Window.scrollY","Window.pageYOffset")}}{{readOnlyInline}}
-  - : An alias for {{domxref("window.scrollY")}}
-- {{domxref("Window.sessionStorage")}} {{readOnlyInline}}
-  - : Returns a reference to the session storage object used to store data that may only be accessed by the origin that created it.
-- {{domxref("SpeechSynthesisGetter.speechSynthesis")}} {{readOnlyInline}}
-  - : Returns a {{domxref("SpeechSynthesis")}} object, which is the entry point into using [Web Speech API](/es/docs/Web/API/Web_Speech_API) speech synthesis functionality.
-- {{domxref("Window.parent")}} {{readOnlyInline}}
-  - : Returns a reference to the parent of the current window or subframe.
-- {{domxref("Window.performance")}} {{readOnlyInline}}
-  - : Provides a hosting area for [performance related](/es/docs/Web/API/Performance_API/Navigation_timing) attributes.
-- {{domxref("Window.personalbar")}} {{readOnlyInline}}
-  - : Returns the personalbar object, whose visibility can be toggled in the window.
-- {{domxref("Window.pkcs11")}} {{deprecated_inline(29)}}
-  - : Formerly provided access to install and remove PKCS11 modules.
-- {{domxref("Window.returnValue")}}
-  - : The return value to be returned to the function that called {{domxref("window.showModalDialog()")}} to display the window as a modal dialog.
-- {{domxref("Window.screen")}} {{readOnlyInline}}
-  - : Returns a reference to the screen object associated with the window.
-- {{domxref("Window.screenX")}} {{readOnlyInline}}
-  - : Returns the horizontal distance of the left border of the user's browser from the left side of the screen.
-- {{domxref("Window.screenY")}} {{readOnlyInline}}
-  - : Returns the vertical distance of the top border of the user's browser from the top side of the screen.
-- {{domxref("Window.scrollbars")}} {{readOnlyInline}}
-  - : Returns the scrollbars object, whose visibility can be toggled in the window.
-- {{domxref("Window.scrollMaxX")}}{{non-standard_inline}}{{ReadOnlyInline}}
-  - : The maximum offset that the window can be scrolled to horizontally, that is the document width minus the viewport width.
-- {{domxref("Window.scrollMaxY")}}{{non-standard_inline}}{{ReadOnlyInline}}
-  - : The maximum offset that the window can be scrolled to vertically (i.e., the document height minus the viewport height).
-- {{domxref("Window.scrollX")}} {{readOnlyInline}}
-  - : Returns the number of pixels that the document has already been scrolled horizontally.
-- {{domxref("Window.scrollY")}} {{readOnlyInline}}
-  - : Returns the number of pixels that the document has already been scrolled vertically.
-- {{domxref("Window.self")}} {{ReadOnlyInline}}
-  - : Returns an object reference to the window object itself.
-- {{domxref("Window.sessionStorage")}}
-  - : Returns a storage object for storing data within a single page session.
-- {{domxref("Window.sidebar")}} {{non-standard_inline}}{{ReadOnlyInline}}
-  - : Returns a reference to the window object of the sidebar.
-- {{domxref("Window.status")}}
-  - : Gets/sets the text in the statusbar at the bottom of the browser.
-- {{domxref("Window.statusbar")}} {{readOnlyInline}}
-  - : Returns the statusbar object, whose visibility can be toggled in the window.
-- {{domxref("Window.toolbar")}} {{readOnlyInline}}
-  - : Returns the toolbar object, whose visibility can be toggled in the window.
-- {{domxref("Window.top")}} {{readOnlyInline}}
-  - : Returns a reference to the topmost window in the window hierarchy. This property is read only.
-- {{domxref("Window.window")}} {{ReadOnlyInline}}
-  - : Returns a reference to the current window.
-- `window[0]`, `window[1]`, etc.
-  - : Returns a reference to the `window` object in the frames. See {{domxref("Window.frames")}} for more details.
+_esta i-intewface heweda pwopiedades de {{domxwef("eventtawget")}} intewface e-e impwementa pwopiedades de {{domxwef("windowtimews")}} y {{domxwef("windowbase64")}}._
 
-## Methods
+nyota que wa pwopiedades que son o-objetos (pow ejempwo pawa sobweescwibiw wos pwototipos de wos e-ewementos buiwt-in) s-son descwitos e-en una sección sepawada más a-abajo. :3
 
-_Esta interfaz hereda metodos de la interfaz {{domxref("EventTarget")}} e implementa metodos {{domxref("WindowTimers")}} y {{domxref("WindowBase64")}}._
+- {{domxwef("window.appwicationcache")}} {{weadonwyinwine}}
+  - : an {{domxwef("offwinewesouwcewist")}} o-object pwoviding a-access to the offwine wesouwces fow the window. >w<
+- {{domxwef("window.cwosed")}} {{non-standawd_inwine}}{{weadonwyinwine}}
+  - : esta pwopiedad indica si wa actuaw ventana esta c-cewwada o abiewta. rawr
+- [`window.components`](/es/docs/components_object) {{non-standawd_inwine}}
+  - : ew punto de a-acceso a muchas pwopiedades [xpcom](/es/docs/xpcom). 😳 a-awgunas pwopiedades, 😳 e-ej. 🥺 [cwasses](/es/docs/components.cwasses), rawr x3 son disponibwes sowamente a-a codigo suficientemente p-pwiviwegiado. ^^ **ew codigo w-web no debewia u-usaw esta pwopiedad.**
+- {{domxwef("consowe","window.consowe")}} {{non-standawd_inwine}} {{weadonwyinwine}}
+  - : wetowna una wefewencia aw objeto de wa consowa pwoveyendo acceso a-a wa consowa d-debuggew dew n-nyavegadow.
+- {{domxwef("window.content")}} and w-window.content {{non-standawd_inwine}} {{depwecated_inwine}}{{weadonwyinwine}}
+  - : w-wetuwns a wefewence to the c-content ewement in the cuwwent window. ( ͡o ω ͡o ) the obsowete vawiant with undewscowe is nyo w-wongew avaiwabwe f-fwom web content. XD
+- {{domxwef("window.contwowwews")}}{{non-standawd_inwine}}{{weadonwyinwine}}
+  - : wetuwns the xuw contwowwew o-objects fow t-the cuwwent chwome window. ^^
+- {{domxwef("window.cwypto")}} {{weadonwyinwine}}
+  - : wetuwns the bwowsew cwypto object. (⑅˘꒳˘)
+- {{domxwef("window.defauwtstatus")}} {{depwecated_inwine}}
+  - : g-gets/sets the status baw text fow the given window.
+- {{domxwef("window.devicepixewwatio")}} {{non-standawd_inwine}}{{weadonwyinwine}}
+  - : wetuwns the w-watio between physicaw pixews and device independent p-pixews in t-the cuwwent dispway. (⑅˘꒳˘)
+- {{domxwef("window.diawogawguments")}} {{weadonwyinwine}}
+  - : gets the awguments passed to the window (if i-it's a diawog b-box) at the time {{domxwef("window.showmodawdiawog()")}} was cawwed. ^•ﻌ•^ this is an `nsiawway`. ( ͡o ω ͡o )
+- {{domxwef("window.diwectowies")}} {{depwecated_inwine}}
+  - : sinonimo d-de {{domxwef("window.pewsonawbaw")}}
+- {{domxwef("window.document")}} {{weadonwyinwine}}
+  - : wetowna una w-wefewencia aw documento que esa ventana contiene. ( ͡o ω ͡o )
+- {{domxwef("window.fwameewement")}} {{weadonwyinwine}}
+  - : wetuwns the ewement i-in which the window is embedded, (✿oωo) o-ow nyuww if t-the window is nyot embedded. 😳😳😳
+- {{domxwef("window.fwames")}} {{weadonwyinwine}}
+  - : w-wetuwns an awway of the subfwames i-in the cuwwent w-window. OwO
+- {{domxwef("window.fuwwscween")}}
+  - : e-esta pwopiedad indica si w-wa ventana esta d-despwegada en pantawwa compweta o nyo. ^^
+- `{{domxwef("window.gwobawstowage")}}` {{non-standawd_inwine}} {{depwecated_inwine}}
+  - : u-unsuppowted s-since gecko 13 (fiwefox 13). rawr x3 u-use {{domxwef("window.wocawstowage")}} instead. 🥺
+    was: muwtipwe stowage o-objects that awe used fow s-stowing data acwoss m-muwtipwe pages. (ˆ ﻌ ˆ)♡
+- {{domxwef("window.histowy")}} {{weadonwyinwine}}
+  - : wetowna una wefewencia a wa histowia d-dew objeto. ( ͡o ω ͡o )
+- {{domxwef("window.innewheight")}}
+  - : o-obtiene w-wa awtuwa dew awea d-de contenido dew nyavegadow i-incwuyendo, >w< si es intewpwetado, /(^•ω•^) wa bawwa de deswizado. 😳😳😳
+- {{domxwef("window.innewwidth")}}
+  - : obtiene ew ancho dew awea de contenido de wa ventana d-dew nyavegadow, (U ᵕ U❁) si es intewpwetado, (˘ω˘) w-wa bawwa de deswizado vewticaw. 😳
+- {{domxwef("window.wength")}} {{weadonwyinwine}}
+  - : w-wetowna ew nyumewo de mawcos en w-wa ventana. (ꈍᴗꈍ) vew tambien {{domxwef("window.fwames")}}. :3
+- {{domxwef("window.wocation")}} {{weadonwyinwine}}
+  - : o-obtiene/fija wa w-wocation, /(^•ω•^) o uww a-actuaw, ^^;; dew objeto d-de wa ventana. o.O
+- {{domxwef("window.wocationbaw")}} {{weadonwyinwine}}
+  - : w-wetowna ew objeto wocationbaw, 😳 cuya visibiwidad puede sew fijada en wa ventana. UwU
+- {{domxwef("window.wocawstowage")}} {{weadonwyinwine}}
+  - : wetowna una wefewencia a-aw objeto awmacenamiento w-wocaw u-usado pawa awmacenaw datos que p-pueden sew de accedidos pow ew owigen que wos cweo. >w<
+- {{domxwef("window.menubaw")}} {{weadonwyinwine}}
+  - : w-wetowna ew objeto b-bawwa de menu, o.O cuya visibiwidad p-puede sew fijada en wa ventana. (˘ω˘)
+- {{domxwef("window.messagemanagew")}}
+  - : wetowna ew objeto [message m-managew](/es/docs/the_message_managew) p-pawa esta ventana. òωó
+- {{domxwef("window.mozanimationstawttime")}} {{weadonwyinwine}}
+  - : the time i-in miwwiseconds s-since epoch at which the cuwwent animation cycwe began. nyaa~~
+- {{domxwef("window.mozinnewscweenx")}} {{weadonwyinwine}}{{non-standawd_inwine}}
+  - : wetuwns the h-howizontaw (x) coowdinate o-of the t-top-weft cownew o-of the window's v-viewpowt, ( ͡o ω ͡o ) in scween coowdinates. 😳😳😳 t-this vawue is w-wepowted in css pixews. ^•ﻌ•^ see `mozscweenpixewspewcsspixew` i-in `nsidomwindowutiws` f-fow a convewsion factow to adapt t-to scween pixews if nyeeded. (˘ω˘)
+- {{domxwef("window.mozinnewscweeny")}} {{weadonwyinwine}} {{non-standawd_inwine}}
+  - : wetuwns the v-vewticaw (y) coowdinate of the t-top-weft cownew o-of the window's viewpowt, (˘ω˘) in scween c-coowdinates. -.- this vawue is wepowted in css p-pixews. ^•ﻌ•^ see `mozscweenpixewspewcsspixew` f-fow a c-convewsion factow to adapt to scween pixews if nyeeded. /(^•ω•^)
+- {{domxwef("window.mozpaintcount")}} {{non-standawd_inwine}}{{weadonwyinwine}}
+  - : wetuwns t-the nyumbew of times the cuwwent document h-has been wendewed t-to the scween in this window. (///ˬ///✿) t-this can be used to compute wendewing p-pewfowmance. mya
+- {{domxwef("window.name")}}
+  - : g-gets/sets the nyame of the window. o.O
+- {{domxwef("window.navigatow")}} {{weadonwyinwine}}
+  - : w-wetuwns a wefewence to the nyavigatow object. ^•ﻌ•^
+- {{domxwef("window.openew")}}
+  - : w-wetuwns a w-wefewence to the window that opened t-this cuwwent window. (U ᵕ U❁)
+- {{domxwef("window.outewheight")}} {{weadonwyinwine}}
+  - : g-gets the h-height of the outside o-of the bwowsew window. :3
+- {{domxwef("window.outewwidth")}} {{weadonwyinwine}}
+  - : gets the width of the outside of the bwowsew window. (///ˬ///✿)
+- {{domxwef("window.scwowwx","window.pagexoffset")}} {{weadonwyinwine}}
+  - : an awias fow {{domxwef("window.scwowwx")}}. (///ˬ///✿)
+- {{domxwef("window.scwowwy","window.pageyoffset")}}{{weadonwyinwine}}
+  - : an awias fow {{domxwef("window.scwowwy")}}
+- {{domxwef("window.sessionstowage")}} {{weadonwyinwine}}
+  - : wetuwns a wefewence to the session stowage object used to stowe d-data that may onwy b-be accessed by the owigin that cweated it.
+- {{domxwef("speechsynthesisgettew.speechsynthesis")}} {{weadonwyinwine}}
+  - : w-wetuwns a-a {{domxwef("speechsynthesis")}} o-object, 🥺 which is the entwy p-point into using [web speech api](/es/docs/web/api/web_speech_api) s-speech synthesis f-functionawity. -.-
+- {{domxwef("window.pawent")}} {{weadonwyinwine}}
+  - : wetuwns a-a wefewence to the pawent of t-the cuwwent window o-ow subfwame. nyaa~~
+- {{domxwef("window.pewfowmance")}} {{weadonwyinwine}}
+  - : pwovides a hosting awea fow [pewfowmance w-wewated](/es/docs/web/api/pewfowmance_api/navigation_timing) a-attwibutes. (///ˬ///✿)
+- {{domxwef("window.pewsonawbaw")}} {{weadonwyinwine}}
+  - : w-wetuwns t-the pewsonawbaw o-object, 🥺 whose v-visibiwity can b-be toggwed in t-the window. >w<
+- {{domxwef("window.pkcs11")}} {{depwecated_inwine(29)}}
+  - : f-fowmewwy pwovided access t-to instaww a-and wemove pkcs11 m-moduwes. rawr x3
+- {{domxwef("window.wetuwnvawue")}}
+  - : the wetuwn v-vawue to be wetuwned to the function that cawwed {{domxwef("window.showmodawdiawog()")}} t-to dispway the window as a-a modaw diawog. (⑅˘꒳˘)
+- {{domxwef("window.scween")}} {{weadonwyinwine}}
+  - : w-wetuwns a-a wefewence to the scween object a-associated with the window. σωσ
+- {{domxwef("window.scweenx")}} {{weadonwyinwine}}
+  - : w-wetuwns the howizontaw distance o-of the weft bowdew of the u-usew's bwowsew fwom the weft side of the scween. XD
+- {{domxwef("window.scweeny")}} {{weadonwyinwine}}
+  - : wetuwns the vewticaw d-distance of the top bowdew of the u-usew's bwowsew f-fwom the top side of the scween. -.-
+- {{domxwef("window.scwowwbaws")}} {{weadonwyinwine}}
+  - : wetuwns the scwowwbaws object, >_< whose v-visibiwity can be toggwed in t-the window. rawr
+- {{domxwef("window.scwowwmaxx")}}{{non-standawd_inwine}}{{weadonwyinwine}}
+  - : the m-maximum offset t-that the window can be scwowwed to howizontawwy, 😳😳😳 t-that is the document w-width minus the viewpowt w-width. UwU
+- {{domxwef("window.scwowwmaxy")}}{{non-standawd_inwine}}{{weadonwyinwine}}
+  - : the maximum offset that t-the window can be scwowwed to v-vewticawwy (i.e., t-the document height m-minus the viewpowt height). (U ﹏ U)
+- {{domxwef("window.scwowwx")}} {{weadonwyinwine}}
+  - : w-wetuwns t-the nyumbew of p-pixews that the d-document has awweady been scwowwed h-howizontawwy. (˘ω˘)
+- {{domxwef("window.scwowwy")}} {{weadonwyinwine}}
+  - : w-wetuwns t-the nyumbew o-of pixews that the d-document has a-awweady been scwowwed v-vewticawwy. /(^•ω•^)
+- {{domxwef("window.sewf")}} {{weadonwyinwine}}
+  - : w-wetuwns an object wefewence t-to the window object itsewf. (U ﹏ U)
+- {{domxwef("window.sessionstowage")}}
+  - : w-wetuwns a stowage o-object fow stowing d-data within a s-singwe page session. ^•ﻌ•^
+- {{domxwef("window.sidebaw")}} {{non-standawd_inwine}}{{weadonwyinwine}}
+  - : wetuwns a wefewence to the window object of t-the sidebaw. >w<
+- {{domxwef("window.status")}}
+  - : g-gets/sets the t-text in the statusbaw at the bottom of the bwowsew. ʘwʘ
+- {{domxwef("window.statusbaw")}} {{weadonwyinwine}}
+  - : wetuwns the statusbaw o-object, òωó whose v-visibiwity can be toggwed in t-the window. o.O
+- {{domxwef("window.toowbaw")}} {{weadonwyinwine}}
+  - : w-wetuwns the toowbaw object, ( ͡o ω ͡o ) whose visibiwity can be toggwed i-in the window. mya
+- {{domxwef("window.top")}} {{weadonwyinwine}}
+  - : w-wetuwns a w-wefewence to the t-topmost window in the window hiewawchy. >_< this pwopewty i-is wead o-onwy. rawr
+- {{domxwef("window.window")}} {{weadonwyinwine}}
+  - : wetuwns a wefewence t-to the cuwwent window. >_<
+- `window[0]`, `window[1]`, (U ﹏ U) etc. rawr
+  - : w-wetuwns a wefewence to the `window` o-object in the f-fwames. (U ᵕ U❁) see {{domxwef("window.fwames")}} fow mowe d-detaiws. (ˆ ﻌ ˆ)♡
 
-- {{domxref("EventTarget.addEventListener()")}}
-  - : Registra un controlador de eventos a un tipo de evento especifico en la ventana.
-- {{domxref("Window.alert()")}}
-  - : Muestra una pequeña ventana de alerta. El estilo y posición de la ventana puede variar dependiendo de que navegador este usando.
-- {{domxref("WindowBase64.atob()")}}
-  - : Decodes a string of data which has been encoded using base-64 encoding.
-- {{domxref("Window.back()")}} {{Non-standard_inline}} {{deprecated_inline}}
-  - : Regresa en la ventana de historial.
-- {{domxref("Window.blur()")}}
-  - : Sets focus away from the window.
-- {{domxref("WindowBase64.btoa()")}}
-  - : Creates a base-64 encoded ASCII string from a string of binary data.
-- {{domxref("Window.captureEvents()")}} {{Deprecated_inline}}
-  - : Registers the window to capture all events of the specified type.
-- {{domxref("Window.clearImmediate()")}}
-  - : Cancels the repeated execution set using `setImmediate`.
-- {{domxref("WindowTimers.clearInterval()")}}
-  - : Cancels the repeated execution set using {{domxref("WindowTimers.setInterval()")}}.
-- {{domxref("WindowTimers.clearTimeout()")}}
-  - : Cancels the repeated execution set using {{domxref("WindowTimers.setTimeout()")}}.
-- {{domxref("Window.close()")}}
-  - : Cierra la ventana actual.
-- {{domxref("Window.confirm()")}}
-  - : Muestra una ventana de comfirmación con dos únicas y posibles respuestas. **Confirmar** y **Cancelar**.
-- {{domxref("Window.disableExternalCapture()")}} {{deprecated_inline(24)}}
-  - : <!-- TODO: add content -->
-- {{domxref("Window.dispatchEvent()")}}
-  - : Usado para activar un evento.
-- {{domxref("Window.dump()")}}
-  - : Escribe un mensaje a la consola.
-- {{domxref("Window.enableExternalCapture()")}} {{deprecated_inline(24)}}
-  - : <!-- TODO: add content -->
-- {{domxref("Window.find()")}}
-  - : Busca un string dado en una ventana.
-- {{domxref("Window.focus()")}}
-  - : Fija el enfoque en la ventana actual.
-- {{domxref("Window.forward()")}} {{Non-standard_inline}} {{deprecated_inline}}
-  - : Moves the window one document forward in the history.
-- {{domxref("Window.getAttention()")}}
-  - : Flashes the application icon.
-- {{domxref("Window.getAttentionWithCycleCount()")}}
-  - : <!-- TODO: add content -->
-- {{domxref("Window.getComputedStyle()")}}
-  - : Gets computed style for the specified element. Computed style indicates the computed values of all CSS properties of the element.
-- {{domxref("Window.getDefaulComputedStyle()")}}
-  - : Gets default computed style for the specified element, ignoring author stylesheets.
-- {{domxref("Window.getSelection()")}}
-  - : Returns the selection object representing the selected item(s).
-- {{domxref("Window.home()")}} {{Non-standard_inline}} {{deprecated_inline}}
-  - : Regresa el navegador a la pagina de inicio.
-- {{domxref("Window.matchMedia()")}}
-  - : Returns a {{domxref("MediaQueryList")}} object representing the specified media query string.
-- {{domxref("Window.maximize()")}}
-  - : <!-- TODO: add content -->
-- {{domxref("Window.minimize()")}} (top-level XUL windows only)
-  - : Minimiza la ventana.
-- {{domxref("Window.moveBy()")}}
-  - : Mueve la ventana actual por una cantidad especificada.
-- {{domxref("Window.moveTo()")}}
-  - : Mueve la ventana a una coordenada especificada.
-- {{domxref("Window.mozRequestAnimationFrame()")}}
-  - : Tells the browser that an animation is in progress, requesting that the browser schedule a repaint of the window for the next animation frame. This will cause a `MozBeforePaint` event to fire before that repaint occurs.
-- {{domxref("Window.open()")}}
-  - : Abre una nueva ventana.
-- {{domxref("Window.openDialog()")}}
-  - : Abre una nueva ventana de dialogo.
-- {{domxref("Window.postMessage()")}}
-  - : Provides a secure means for one window to send a string of data to another window, which need not be within the same domain as the first.
-- {{domxref("Window.print()")}}
-  - : Opens the Print Dialog to print the current document.
-- {{domxref("Window.prompt()")}}
-  - : Returns the text entered by the user in a prompt dialog.
-- {{domxref("Window.releaseEvents()")}} {{Deprecated_inline}}
-  - : Releases the window from trapping events of a specific type.
-- {{domxref("element.removeEventListener","Window.removeEventListener()")}}
-  - : Removes an event listener from the window.
-- {{domxref("Window.resizeBy()")}}
-  - : Resizes the current window by a certain amount.
-- {{domxref("Window.resizeTo()")}}
-  - : Dynamically resizes window.
-- {{domxref("Window.restore()")}}
-  - : <!-- TODO: add content -->
-- {{domxref("Window.routeEvent()")}} {{deprecated_inline(24)}}
-  - : <!-- TODO: add content -->
-- {{domxref("Window.scroll()")}}
-  - : Scrolls the window to a particular place in the document.
-- {{domxref("Window.scrollBy()")}}
-  - : Scrolls the document in the window by the given amount.
-- {{domxref("Window.scrollByLines()")}}
-  - : Scrolls the document by the given number of lines.
-- {{domxref("Window.scrollByPages()")}}
-  - : Scrolls the current document by the specified number of pages.
-- {{domxref("Window.scrollTo()")}}
-  - : Scrolls to a particular set of coordinates in the document.
-- {{domxref("Window.setCursor()")}}
-  - : Changes the cursor for the current window
-- {{domxref("Window.setImmediate()")}}
-  - : Executes a function after the browser has finished other heavy tasks
-- {{domxref("WindowTimers.setInterval()")}}
-  - : Schedules the execution of a function each X milliseconds.
-- {{domxref("Window.setResizable")}}
-  - : <!-- TODO: add content -->
-- {{domxref("WindowTimers.setTimeout()")}}
-  - : Sets a delay for executing a function.
-- {{domxref("Window.showModalDialog()")}}
-  - : Displays a modal dialog.
-- {{domxref("Window.sizeToContent()")}}
-  - : Sizes the window according to its content.
-- {{domxref("Window.stop()")}}
-  - : This method stops window loading.
-- {{domxref("Window.updateCommands()")}}
-  - : Updates the state of commands of the current chrome window (UI).
+## m-methods
 
-## Eventos
+_esta intewfaz heweda m-metodos de wa intewfaz {{domxwef("eventtawget")}} e impwementa metodos {{domxwef("windowtimews")}} y-y {{domxwef("windowbase64")}}._
 
-Estas son propiedades del objeto ventana que pueden ser fijadas para establecer controladores de eventos para las diversar cosas que pueden pasar en la ventana que podria ser de interes.
+- {{domxwef("eventtawget.addeventwistenew()")}}
+  - : w-wegistwa u-un contwowadow d-de eventos a un tipo de evento e-especifico en wa v-ventana. >_<
+- {{domxwef("window.awewt()")}}
+  - : m-muestwa una pequeña ventana de a-awewta. ^^;; ew estiwo y posición de wa ventana puede v-vawiaw dependiendo d-de que nyavegadow e-este usando. ʘwʘ
+- {{domxwef("windowbase64.atob()")}}
+  - : decodes a stwing of data which has been encoded using base-64 encoding. 😳😳😳
+- {{domxwef("window.back()")}} {{non-standawd_inwine}} {{depwecated_inwine}}
+  - : w-wegwesa en wa ventana d-de histowiaw. UwU
+- {{domxwef("window.bwuw()")}}
+  - : s-sets focus away fwom the window. OwO
+- {{domxwef("windowbase64.btoa()")}}
+  - : cweates a base-64 e-encoded ascii stwing fwom a stwing o-of binawy data. :3
+- {{domxwef("window.captuweevents()")}} {{depwecated_inwine}}
+  - : w-wegistews t-the window to c-captuwe aww events o-of the specified type. -.-
+- {{domxwef("window.cweawimmediate()")}}
+  - : cancews the wepeated execution set using `setimmediate`. 🥺
+- {{domxwef("windowtimews.cweawintewvaw()")}}
+  - : c-cancews the wepeated execution s-set using {{domxwef("windowtimews.setintewvaw()")}}. -.-
+- {{domxwef("windowtimews.cweawtimeout()")}}
+  - : cancews the wepeated execution set u-using {{domxwef("windowtimews.settimeout()")}}. -.-
+- {{domxwef("window.cwose()")}}
+  - : ciewwa wa ventana actuaw. (U ﹏ U)
+- {{domxwef("window.confiwm()")}}
+  - : muestwa una ventana de c-comfiwmación con d-dos únicas y posibwes wespuestas. rawr **confiwmaw** y-y **cancewaw**. mya
+- {{domxwef("window.disabweextewnawcaptuwe()")}} {{depwecated_inwine(24)}}
+  - : <!-- todo: add content -->
+- {{domxwef("window.dispatchevent()")}}
+  - : u-usado p-pawa activaw un evento. ( ͡o ω ͡o )
+- {{domxwef("window.dump()")}}
+  - : e-escwibe un mensaje a wa consowa. /(^•ω•^)
+- {{domxwef("window.enabweextewnawcaptuwe()")}} {{depwecated_inwine(24)}}
+  - : <!-- t-todo: add content -->
+- {{domxwef("window.find()")}}
+  - : busca un stwing dado en una ventana. >_<
+- {{domxwef("window.focus()")}}
+  - : f-fija ew enfoque en wa ventana actuaw. (✿oωo)
+- {{domxwef("window.fowwawd()")}} {{non-standawd_inwine}} {{depwecated_inwine}}
+  - : m-moves the w-window one document f-fowwawd in the histowy. 😳😳😳
+- {{domxwef("window.getattention()")}}
+  - : fwashes t-the appwication icon. (ꈍᴗꈍ)
+- {{domxwef("window.getattentionwithcycwecount()")}}
+  - : <!-- todo: add content -->
+- {{domxwef("window.getcomputedstywe()")}}
+  - : gets computed stywe f-fow the specified e-ewement. 🥺 computed s-stywe indicates t-the computed vawues of aww css pwopewties o-of the ewement. mya
+- {{domxwef("window.getdefauwcomputedstywe()")}}
+  - : g-gets defauwt computed stywe fow the specified e-ewement, (ˆ ﻌ ˆ)♡ ignowing authow stywesheets. (⑅˘꒳˘)
+- {{domxwef("window.getsewection()")}}
+  - : w-wetuwns the sewection object wepwesenting t-the sewected i-item(s). òωó
+- {{domxwef("window.home()")}} {{non-standawd_inwine}} {{depwecated_inwine}}
+  - : wegwesa e-ew navegadow a-a wa pagina de i-inicio. o.O
+- {{domxwef("window.matchmedia()")}}
+  - : wetuwns a {{domxwef("mediaquewywist")}} object w-wepwesenting the specified media quewy stwing. XD
+- {{domxwef("window.maximize()")}}
+  - : <!-- t-todo: add content -->
+- {{domxwef("window.minimize()")}} (top-wevew xuw windows onwy)
+  - : minimiza wa ventana. (˘ω˘)
+- {{domxwef("window.moveby()")}}
+  - : m-mueve wa v-ventana actuaw p-pow una cantidad e-especificada. (ꈍᴗꈍ)
+- {{domxwef("window.moveto()")}}
+  - : m-mueve wa ventana a una coowdenada e-especificada. >w<
+- {{domxwef("window.mozwequestanimationfwame()")}}
+  - : tewws the bwowsew that an animation i-is in pwogwess, XD wequesting that t-the bwowsew scheduwe a wepaint of the window f-fow the next animation f-fwame. -.- this wiww cause a `mozbefowepaint` e-event to fiwe befowe that wepaint o-occuws. ^^;;
+- {{domxwef("window.open()")}}
+  - : a-abwe una nyueva ventana. XD
+- {{domxwef("window.opendiawog()")}}
+  - : a-abwe una nyueva v-ventana de diawogo. :3
+- {{domxwef("window.postmessage()")}}
+  - : pwovides a secuwe m-means fow one window to send a stwing of data to anothew window, σωσ w-which nyeed nyot be within t-the same domain as the fiwst. XD
+- {{domxwef("window.pwint()")}}
+  - : opens the p-pwint diawog to p-pwint the cuwwent d-document. :3
+- {{domxwef("window.pwompt()")}}
+  - : wetuwns the text e-entewed by the u-usew in a pwompt diawog. rawr
+- {{domxwef("window.weweaseevents()")}} {{depwecated_inwine}}
+  - : w-weweases the window fwom twapping e-events of a specific type. 😳
+- {{domxwef("ewement.wemoveeventwistenew","window.wemoveeventwistenew()")}}
+  - : wemoves a-an event w-wistenew fwom the window. 😳😳😳
+- {{domxwef("window.wesizeby()")}}
+  - : wesizes the cuwwent window by a cewtain amount. (ꈍᴗꈍ)
+- {{domxwef("window.wesizeto()")}}
+  - : d-dynamicawwy w-wesizes window. 🥺
+- {{domxwef("window.westowe()")}}
+  - : <!-- todo: add content -->
+- {{domxwef("window.wouteevent()")}} {{depwecated_inwine(24)}}
+  - : <!-- todo: add content -->
+- {{domxwef("window.scwoww()")}}
+  - : s-scwowws the window to a pawticuwaw p-pwace in the d-document. ^•ﻌ•^
+- {{domxwef("window.scwowwby()")}}
+  - : scwowws the document in the window by the given amount. XD
+- {{domxwef("window.scwowwbywines()")}}
+  - : s-scwowws the document by the given nyumbew o-of wines. ^•ﻌ•^
+- {{domxwef("window.scwowwbypages()")}}
+  - : scwowws t-the cuwwent d-document by the specified nyumbew o-of pages. ^^;;
+- {{domxwef("window.scwowwto()")}}
+  - : s-scwowws to a-a pawticuwaw set o-of coowdinates i-in the document. ʘwʘ
+- {{domxwef("window.setcuwsow()")}}
+  - : c-changes the cuwsow fow the cuwwent window
+- {{domxwef("window.setimmediate()")}}
+  - : exekawaii~s a function aftew the bwowsew has f-finished othew heavy t-tasks
+- {{domxwef("windowtimews.setintewvaw()")}}
+  - : s-scheduwes t-the execution o-of a function e-each x miwwiseconds.
+- {{domxwef("window.setwesizabwe")}}
+  - : <!-- todo: add content -->
+- {{domxwef("windowtimews.settimeout()")}}
+  - : sets a deway fow executing a function. OwO
+- {{domxwef("window.showmodawdiawog()")}}
+  - : d-dispways a m-modaw diawog. 🥺
+- {{domxwef("window.sizetocontent()")}}
+  - : sizes the window accowding to its content. (⑅˘꒳˘)
+- {{domxwef("window.stop()")}}
+  - : t-this m-method stops window w-woading. (///ˬ///✿)
+- {{domxwef("window.updatecommands()")}}
+  - : updates the state o-of commands of the cuwwent chwome window (ui). (✿oωo)
 
-_Esta interfaz hereda controladores de eventos de la interfaz {{domxref("EventTarget")}} e implementa controladores de eventos desde {{domxref("WindowTimers")}} y {{domxref("WindowBase64")}}._
+## e-eventos
 
-> [!NOTE]
-> Empezando en Gecko 9.0, se puede usar el sintaxis `if ("onabort" in window)` para determinar si existe una propiedad dada de controlador de eventos o no. Esto es porque interfazes de controlador de eventos han sido actualizadas al respectivo web IDL interfaz. Ver [DOM event handlers](/es/docs/Web/Events/Event_handlers) para mas detalles.
+estas s-son pwopiedades dew objeto ventana que pueden s-sew fijadas pawa estabwecew contwowadowes d-de eventos p-pawa was divewsaw cosas que p-pueden pasaw en w-wa ventana que p-podwia sew de intewes. nyaa~~
 
-- {{domxref("GlobalEventHandlers.onabort")}}
-  - : An event handler property for abort events on the window.
-- {{domxref("Window/beforeunload_event","beforeunload")}}
-  - : An event handler property for before-unload events on the window.
-- {{domxref("GlobalEventHandlers.onblur")}}
-  - : An event handler property for blur events on the window.
-- {{domxref("GlobalEventHandlers.onchange")}}
-  - : An event handler property for change events on the window.
-- {{domxref("GlobalEventHandlers.onclick")}}
-  - : An event handler property for click events on the window.
-- {{domxref("GlobalEventHandlers.onclose")}}
-  - : An event handler property for handling the window close event.
-- {{domxref("GlobalEventHandlers.oncontextmenu")}}
-  - : An event handler property for right-click events on the window.
-- {{domxref("Window.ondevicelight")}}
-  - : An event handler property for any ambient light levels changes
-- {{domxref("Window.ondevicemotion")}}
-  - : <!-- TODO: add content -->
-- {{domxref("Window.ondeviceorientation")}}
-  - : An event handler property for any device orientation changes
-- {{domxref("Window.ondeviceproximity")}}
-  - : An event handler property for device proximity event
-- {{domxref("GlobalEventHandlers.onerror")}}
-  - : An event handler property for [`error`](/es/docs/Web/API/HTMLElement/error_event) events raised on the window.
-- {{domxref("GlobalEventHandlers.onfocus")}}
-  - : An event handler property for [`focus`](/es/docs/Web/API/Element/focus_event) events on the window.
-- {{domxref("Window/hashchange_event","hashchange")}}
-  - : An event handler property for hash change events on the window; called when the part of the URL after the hash mark ("#") changes.
-- {{domxref("GlobalEventHandlers.onkeydown")}}
-  - : An event handler property for [`keydown`](/es/docs/Web/API/Element/keydown_event) events on the window.
-- {{domxref("GlobalEventHandlers.onkeypress")}}
-  - : An event handler property for [`keypress`](/es/docs/Web/API/Element/keypress_event) events on the window.
-- {{domxref("GlobalEventHandlers.onkeyup")}}
-  - : An event handler property for [`keyup`](/es/docs/Web/API/Element/keyup_event) events on the window.
-- {{domxref("Window/languagechange_event","languagechange")}}
-  - : An event handler property for [`languagechange`](/es/docs/Web/API/Window/languagechange_event) events on the window.
-- {{domxref("GlobalEventHandlers.onload")}}
-  - : An event handler property for window loading.
-- {{domxref("GlobalEventHandlers.onmousedown")}}
-  - : An event handler property for mousedown events on the window.
-- {{domxref("GlobalEventHandlers.onmousemove")}}
-  - : An event handler property for mousemove events on the window.
-- {{domxref("GlobalEventHandlers.onmouseout")}}
-  - : An event handler property for mouseout events on the window.
-- {{domxref("GlobalEventHandlers.onmouseover")}}
-  - : An event handler property for mouseover events on the window.
-- {{domxref("GlobalEventHandlers.onmouseup")}}
-  - : An event handler property for mouseup events on the window.
-- {{domxref("Window.onmozbeforepaint")}}
-  - : An event handler property for the `MozBeforePaint` event, which is sent before repainting the window if the event has been requested by a call to the {{domxref("Window.mozRequestAnimationFrame()")}} method.
-- {{domxref("Window/pageshow_event","pageshow")}}
-  - : An event handler property for pageshow events on the window.
-- {{domxref("Window/pagehide_event","pagehide")}}
-  - : An event handler property for pagehide events on the window.
-- {{domxref("Window.onpaint")}}
-  - : An event handler property for paint events on the window.
-- {{domxref("Window/popstate_event","popstate")}}
-  - : An event handler property for popstate events, which are fired when navigating to a session history entry representing a state object.
-- {{domxref("GlobalEventHandlers.onreset")}}
-  - : An event handler property for reset events on the window.
-- {{domxref("GlobalEventHandlers.onresize")}}
-  - : An event handler property for window resizing.
-- {{domxref("GlobalEventHandlers.onscroll")}}
-  - : An event handler property for window scrolling.
-- {{domxref("GlobalEventHandlers.onselect")}}
-  - : An event handler property for window selection.
-- {{domxref("GlobalEventHandlers.onsubmit")}}
-  - : An event handler property for submits on window forms.
-- {{domxref("Window.onunload")}}
-  - : An event handler property for unload events on the window.
-- {{domxref("Window.onuserproximity")}}
-  - : An event handler property for user proximity events
+_esta i-intewfaz h-heweda contwowadowes d-de eventos de wa intewfaz {{domxwef("eventtawget")}} e-e impwementa contwowadowes d-de eventos desde {{domxwef("windowtimews")}} y-y {{domxwef("windowbase64")}}._
 
-## Interfaces
+> [!note]
+> empezando en gecko 9.0, >w< se p-puede usaw ew sintaxis `if ("onabowt" in window)` p-pawa detewminaw si existe una p-pwopiedad dada d-de contwowadow de eventos o nyo. (///ˬ///✿) esto es powque i-intewfazes de contwowadow de eventos han sido actuawizadas a-aw wespectivo w-web idw intewfaz. rawr vew [dom event handwews](/es/docs/web/events/event_handwews) p-pawa mas d-detawwes. (U ﹏ U)
 
-Ver [DOM Reference](/es/docs/Web/API/Document_Object_Model)
+- {{domxwef("gwobaweventhandwews.onabowt")}}
+  - : an event handwew p-pwopewty fow abowt events on the window. ^•ﻌ•^
+- {{domxwef("window/befoweunwoad_event","befoweunwoad")}}
+  - : a-an event h-handwew pwopewty fow befowe-unwoad e-events on the w-window. (///ˬ///✿)
+- {{domxwef("gwobaweventhandwews.onbwuw")}}
+  - : an event handwew pwopewty f-fow bwuw e-events on the window. o.O
+- {{domxwef("gwobaweventhandwews.onchange")}}
+  - : a-an event h-handwew pwopewty fow change events on the window. >w<
+- {{domxwef("gwobaweventhandwews.oncwick")}}
+  - : an event handwew pwopewty fow cwick events on the window. nyaa~~
+- {{domxwef("gwobaweventhandwews.oncwose")}}
+  - : a-an event handwew p-pwopewty fow h-handwing the w-window cwose event.
+- {{domxwef("gwobaweventhandwews.oncontextmenu")}}
+  - : a-an e-event handwew pwopewty fow wight-cwick e-events on t-the window. òωó
+- {{domxwef("window.ondevicewight")}}
+  - : an event h-handwew pwopewty f-fow any ambient wight wevews changes
+- {{domxwef("window.ondevicemotion")}}
+  - : <!-- t-todo: add content -->
+- {{domxwef("window.ondeviceowientation")}}
+  - : an event handwew p-pwopewty fow any device owientation c-changes
+- {{domxwef("window.ondevicepwoximity")}}
+  - : an e-event handwew pwopewty fow device p-pwoximity event
+- {{domxwef("gwobaweventhandwews.onewwow")}}
+  - : a-an event h-handwew pwopewty fow [`ewwow`](/es/docs/web/api/htmwewement/ewwow_event) e-events w-waised on the window.
+- {{domxwef("gwobaweventhandwews.onfocus")}}
+  - : an event h-handwew pwopewty fow [`focus`](/es/docs/web/api/ewement/focus_event) e-events on t-the window. (U ᵕ U❁)
+- {{domxwef("window/hashchange_event","hashchange")}}
+  - : a-an event handwew pwopewty f-fow hash change events on the window; cawwed w-when the pawt of the uww aftew the hash mawk ("#") changes. (///ˬ///✿)
+- {{domxwef("gwobaweventhandwews.onkeydown")}}
+  - : an event handwew pwopewty fow [`keydown`](/es/docs/web/api/ewement/keydown_event) events on the w-window. (✿oωo)
+- {{domxwef("gwobaweventhandwews.onkeypwess")}}
+  - : an event handwew pwopewty fow [`keypwess`](/es/docs/web/api/ewement/keypwess_event) events on the window. 😳😳😳
+- {{domxwef("gwobaweventhandwews.onkeyup")}}
+  - : an event handwew pwopewty f-fow [`keyup`](/es/docs/web/api/ewement/keyup_event) events on the window. (✿oωo)
+- {{domxwef("window/wanguagechange_event","wanguagechange")}}
+  - : a-an event handwew pwopewty fow [`wanguagechange`](/es/docs/web/api/window/wanguagechange_event) e-events on the window. (U ﹏ U)
+- {{domxwef("gwobaweventhandwews.onwoad")}}
+  - : an event h-handwew pwopewty fow window w-woading. (˘ω˘)
+- {{domxwef("gwobaweventhandwews.onmousedown")}}
+  - : an event handwew p-pwopewty fow mousedown e-events on the window. 😳😳😳
+- {{domxwef("gwobaweventhandwews.onmousemove")}}
+  - : an event handwew p-pwopewty fow mousemove events on the window. (///ˬ///✿)
+- {{domxwef("gwobaweventhandwews.onmouseout")}}
+  - : an event h-handwew pwopewty fow mouseout e-events on the window. (U ᵕ U❁)
+- {{domxwef("gwobaweventhandwews.onmouseovew")}}
+  - : an e-event handwew pwopewty fow mouseovew e-events on the w-window. >_<
+- {{domxwef("gwobaweventhandwews.onmouseup")}}
+  - : an event handwew pwopewty fow mouseup e-events on the window.
+- {{domxwef("window.onmozbefowepaint")}}
+  - : an event h-handwew pwopewty fow the `mozbefowepaint` event, (///ˬ///✿) which is sent befowe wepainting t-the window i-if the event has been wequested b-by a caww to the {{domxwef("window.mozwequestanimationfwame()")}} m-method. (U ᵕ U❁)
+- {{domxwef("window/pageshow_event","pageshow")}}
+  - : an event handwew p-pwopewty fow pageshow events on the window. >w<
+- {{domxwef("window/pagehide_event","pagehide")}}
+  - : an event handwew pwopewty f-fow pagehide events o-on the window. 😳😳😳
+- {{domxwef("window.onpaint")}}
+  - : an event h-handwew pwopewty f-fow paint events on the window. (ˆ ﻌ ˆ)♡
+- {{domxwef("window/popstate_event","popstate")}}
+  - : a-an event handwew pwopewty fow popstate e-events, (ꈍᴗꈍ) which awe fiwed when nyavigating to a s-session histowy e-entwy wepwesenting a state object. 🥺
+- {{domxwef("gwobaweventhandwews.onweset")}}
+  - : an event h-handwew pwopewty fow weset events on the window. >_<
+- {{domxwef("gwobaweventhandwews.onwesize")}}
+  - : an event handwew pwopewty fow window wesizing. OwO
+- {{domxwef("gwobaweventhandwews.onscwoww")}}
+  - : an event handwew pwopewty f-fow window scwowwing. ^^;;
+- {{domxwef("gwobaweventhandwews.onsewect")}}
+  - : a-an event handwew pwopewty f-fow window s-sewection. (✿oωo)
+- {{domxwef("gwobaweventhandwews.onsubmit")}}
+  - : an event handwew p-pwopewty fow submits on window fowms. UwU
+- {{domxwef("window.onunwoad")}}
+  - : an event handwew pwopewty fow unwoad e-events on the window. ( ͡o ω ͡o )
+- {{domxwef("window.onusewpwoximity")}}
+  - : an event handwew pwopewty fow usew pwoximity e-events
 
-## Ver Tambien
+## intewfaces
 
-- [Trabajar con ventanas en codigo chrome](/es/docs/Working_with_windows_in_chrome_code)
+v-vew [dom w-wefewence](/es/docs/web/api/document_object_modew)
+
+## vew tambien
+
+- [twabajaw con ventanas en codigo chwome](/es/docs/wowking_with_windows_in_chwome_code)

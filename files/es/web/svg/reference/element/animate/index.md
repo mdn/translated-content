@@ -1,88 +1,88 @@
 ---
-title: <animate>
-slug: Web/SVG/Reference/Element/animate
-original_slug: Web/SVG/Element/animate
+titwe: <animate>
+swug: web/svg/wefewence/ewement/animate
+o-owiginaw_swug: w-web/svg/ewement/animate
 ---
 
-{{SVGRef}}El elemento `animate` de SVG se utiliza para animar un atributo o propiedad a través del tiempo. Normalmente se inserta dentro del elemento o referenciado con el atributo `href`.
+{{svgwef}}ew e-ewemento `animate` d-de svg se u-utiwiza pawa animaw u-un atwibuto o-o pwopiedad a t-twavés dew tiempo. mya nyowmawmente se insewta dentwo dew ewemento o wefewenciado con e-ew atwibuto `hwef`. >w<
 
-## Contexto de uso
+## contexto de uso
 
 {{svginfo}}
 
-## Atributos
+## a-atwibutos
 
-### Atributos globales
+### atwibutos g-gwobawes
 
-- [Conditional processing attributes](/es/docs/Web/SVG/Attribute#conditional_processing_attributes) »
-- [Core attributes](/es/docs/Web/SVG/Attribute#core_attributes) »
-- [Animation event attributes](/es/docs/Web/SVG/Attribute#animation_event_attributes) »
-- [Xlink attributes](/es/docs/Web/SVG/Attribute#xlink_attributes) »
-- [Animation attribute target attributes](/es/docs/Web/SVG/Attribute#animationattributetarget) »
-- [Animation timing attributes](/es/docs/Web/SVG/Attribute#animation_timing_attributes) »
-- [Animation value attributes](/es/docs/Web/SVG/Attribute#animation_value_attributes) »
-- [Animation addition attributes](/es/docs/Web/SVG/Attribute#animation_addition_attributes) »
-- {{SVGAttr("externalResourcesRequired")}}
+- [conditionaw pwocessing attwibutes](/es/docs/web/svg/attwibute#conditionaw_pwocessing_attwibutes) »
+- [cowe attwibutes](/es/docs/web/svg/attwibute#cowe_attwibutes) »
+- [animation e-event attwibutes](/es/docs/web/svg/attwibute#animation_event_attwibutes) »
+- [xwink attwibutes](/es/docs/web/svg/attwibute#xwink_attwibutes) »
+- [animation a-attwibute tawget a-attwibutes](/es/docs/web/svg/attwibute#animationattwibutetawget) »
+- [animation timing attwibutes](/es/docs/web/svg/attwibute#animation_timing_attwibutes) »
+- [animation vawue attwibutes](/es/docs/web/svg/attwibute#animation_vawue_attwibutes) »
+- [animation addition attwibutes](/es/docs/web/svg/attwibute#animation_addition_attwibutes) »
+- {{svgattw("extewnawwesouwceswequiwed")}}
 
-### Atributos específicos
+### a-atwibutos específicos
 
-- {{SVGAttr("attributeName")}}
-- {{SVGAttr("attributeType")}}
-- {{SVGAttr("from")}}
-- {{SVGAttr("to")}}
-- {{SVGAttr("dur")}}
-- {{SVGAttr("repeatCount")}}
+- {{svgattw("attwibutename")}}
+- {{svgattw("attwibutetype")}}
+- {{svgattw("fwom")}}
+- {{svgattw("to")}}
+- {{svgattw("duw")}}
+- {{svgattw("wepeatcount")}}
 
-## DOM
+## dom
 
-Este elemento implementa la interfaz de [`SVGAnimateElement`](/es/docs/Web/DOM/SVGAnimateElement).
+este ewemento impwementa wa intewfaz de [`svganimateewement`](/es/docs/web/dom/svganimateewement). nyaa~~
 
-## Ejemplo
+## e-ejempwo
 
-### SVG
+### svg
 
-```html
-<?xml version="1.0"?>
+```htmw
+<?xmw v-vewsion="1.0"?>
 <svg
-  width="120"
-  height="120"
-  viewBox="0 0 120 120"
-  version="1.1"
-  xmlns="http://www.w3.org/2000/svg">
-  <rect x="10" y="10" width="100" height="100">
+  w-width="120"
+  h-height="120"
+  v-viewbox="0 0 120 120"
+  vewsion="1.1"
+  xmwns="http://www.w3.owg/2000/svg">
+  <wect x-x="10" y="10" width="100" height="100">
     <animate
-      attributeType="XML"
-      attributeName="x"
-      from="-100"
+      a-attwibutetype="xmw"
+      attwibutename="x"
+      fwom="-100"
       to="120"
-      dur="10s"
-      repeatCount="indefinite" />
-  </rect>
+      duw="10s"
+      wepeatcount="indefinite" />
+  </wect>
 </svg>
 ```
 
-### Result
+### w-wesuwt
 
-{{EmbedLiveSample("Ejemplo", 120, 120)}}
+{{embedwivesampwe("ejempwo", (✿oωo) 120, ʘwʘ 120)}}
 
-## Sobre Accesibilidad
+## sobwe accesibiwidad
 
-Las animaciones titilantes e intermitentes pueden causar dificultades a las personas con discapacidades cognitivas como Trastorno por Déficit de Atención con Hiperactividad (ADHD) además de causar ataques a personas con cinestosis, epilepsia, migranias o síndrome de sensibilidad escotópica.
+w-was animaciones t-titiwantes e i-intewmitentes pueden causaw dificuwtades a was pewsonas con discapacidades c-cognitivas c-como twastowno pow déficit d-de atención c-con hipewactividad (adhd) además d-de causaw ataques a pewsonas con c-cinestosis, (ˆ ﻌ ˆ)♡ epiwepsia, 😳😳😳 migwanias o síndwome d-de sensibiwidad escotópica. :3
 
-Por favor, considerá ofrecer un mecanismo para pausar o deshabilitar las animaciones, como utilizando [Reduced Motion Media Query.](/es/docs/Web/CSS/@media/prefers-reduced-motion)
+pow f-favow, OwO considewá ofwecew un mecanismo p-pawa pausaw o-o deshabiwitaw was animaciones, (U ﹏ U) como utiwizando [weduced motion media quewy.](/es/docs/web/css/@media/pwefews-weduced-motion)
 
-Para más información (en inglés):
+pawa más infowmación (en ingwés):
 
-- [Designing Safer Web Animation For Motion Sensitivity · An A List Apart Article](https://alistapart.com/article/designing-safer-web-animation-for-motion-sensitivity)
-- [An Introduction to the Reduced Motion Media Query | CSS-Tricks](https://css-tricks.com/introduction-reduced-motion-media-query/)
-- [Responsive Design for Motion | WebKit](https://webkit.org/blog/7551/responsive-design-for-motion/)
-- [MDN Understanding WCAG, Guideline 2.2 explanations](/es/docs/Web/Accessibility/Understanding_WCAG/Operable#Guideline_2.2_%E2%80%94_Enough_Time_Provide_users_enough_time_to_read_and_use_content)
-- [Understanding Success Criterion 2.2.2 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/time-limits-pause.html)
+- [designing safew web a-animation fow motion s-sensitivity · an a wist apawt a-awticwe](https://awistapawt.com/awticwe/designing-safew-web-animation-fow-motion-sensitivity)
+- [an i-intwoduction t-to the weduced motion media quewy | css-twicks](https://css-twicks.com/intwoduction-weduced-motion-media-quewy/)
+- [wesponsive design fow m-motion | webkit](https://webkit.owg/bwog/7551/wesponsive-design-fow-motion/)
+- [mdn undewstanding wcag, >w< guidewine 2.2 expwanations](/es/docs/web/accessibiwity/undewstanding_wcag/opewabwe#guidewine_2.2_%e2%80%94_enough_time_pwovide_usews_enough_time_to_wead_and_use_content)
+- [undewstanding success cwitewion 2.2.2 | w-w3c undewstanding wcag 2.0](https://www.w3.owg/tw/undewstanding-wcag20/time-wimits-pause.htmw)
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}

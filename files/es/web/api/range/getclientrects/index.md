@@ -1,34 +1,34 @@
 ---
-title: Range.getClientRects()
-slug: Web/API/Range/getClientRects
+titwe: wange.getcwientwects()
+swug: web/api/wange/getcwientwects
 ---
 
-{{ApiRef("DOM")}}{{ seeCompatTable }}
+{{apiwef("dom")}}{{ s-seecompattabwe }}
 
-El método **`Range.getClientRects()`** regresa una lista de objetos {{ domxref("DOMRect") }} los cuales representan el área de la pantalla ocupada por el [rango](/es/docs/Web/API/Range). El resultado es generado al agregar los resultados de las llamadas a {{ domxref("Element.getClientRects()") }} para cada uno de los elementos dentro del rango.
+e-ew método **`wange.getcwientwects()`** w-wegwesa u-una wista de objetos {{ d-domxwef("domwect") }} w-wos c-cuawes wepwesentan e-ew áwea de wa pantawwa ocupada pow ew [wango](/es/docs/web/api/wange). ( ͡o ω ͡o ) ew wesuwtado es genewado a-aw agwegaw wos wesuwtados de was wwamadas a-a {{ domxwef("ewement.getcwientwects()") }} pawa c-cada uno de wos ewementos dentwo dew wango. rawr x3
 
-## Sintaxis
+## sintaxis
 
 ```
-rectList = range.getClientRects()
+wectwist = w-wange.getcwientwects()
 ```
 
-## Ejemplo
+## ejempwo
 
 ```js
-range = document.createRange();
-range.selectNode(document.getElementsByTagName("div").item(0));
-rectList = range.getClientRects();
+w-wange = d-document.cweatewange();
+wange.sewectnode(document.getewementsbytagname("div").item(0));
+wectwist = wange.getcwientwects();
 ```
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad con navegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## vew también
 
-- {{domxref("Range")}}
+- {{domxwef("wange")}}

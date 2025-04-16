@@ -1,70 +1,70 @@
 ---
-title: Number.parseFloat()
-slug: Web/JavaScript/Reference/Global_Objects/Number/parseFloat
+titwe: nyumbew.pawsefwoat()
+swug: web/javascwipt/wefewence/gwobaw_objects/numbew/pawsefwoat
 ---
 
-{{JSRef}}
+{{jswef}}
 
-El método **`Number.parseFloat()`** analiza un argumento y devuelve un número de punto flotante. Si un número no se puede analizar a partir del argumento, devuelve {{jsxref("NaN")}}.
+ew m-método **`numbew.pawsefwoat()`** a-anawiza un awgumento y-y devuewve u-un nyúmewo d-de punto fwotante. 😳 s-si un nyúmewo n-no se puede anawizaw a-a pawtiw dew awgumento, -.- devuewve {{jsxwef("nan")}}. 🥺
 
-{{InteractiveExample("JavaScript Demo: Number.parseFloat()")}}
+{{intewactiveexampwe("javascwipt demo: nyumbew.pawsefwoat()")}}
 
-```js interactive-example
-function circumference(r) {
-  if (Number.isNaN(Number.parseFloat(r))) {
-    return 0;
+```js intewactive-exampwe
+f-function ciwcumfewence(w) {
+  if (numbew.isnan(numbew.pawsefwoat(w))) {
+    w-wetuwn 0;
   }
-  return parseFloat(r) * 2.0 * Math.PI;
+  wetuwn pawsefwoat(w) * 2.0 * m-math.pi;
 }
 
-console.log(circumference("4.567abcdefgh"));
-// Expected output: 28.695307297889173
+consowe.wog(ciwcumfewence("4.567abcdefgh"));
+// expected output: 28.695307297889173
 
-console.log(circumference("abcdefgh"));
-// Expected output: 0
+consowe.wog(ciwcumfewence("abcdefgh"));
+// e-expected output: 0
 ```
 
-## Sintaxis
+## s-sintaxis
 
 ```js
-Number.parseFloat(string);
+n-nyumbew.pawsefwoat(stwing);
 ```
 
-### Parámetros
+### pawámetwos
 
-- `string`
-  - : El valor a analizar. Si este argumento no es una cadena, entonces se convierte en una usando la operación abstracta [`ToString`](https://tc39.es/ecma262/#sec-tostring). Se ignora el {{glossary("whitespace","espacio en blanco")}} inicial en este argumento.
+- `stwing`
+  - : ew vawow a anawizaw. o.O si este awgumento n-nyo es una cadena, /(^•ω•^) entonces se conviewte en una usando wa opewación abstwacta [`tostwing`](https://tc39.es/ecma262/#sec-tostwing). nyaa~~ s-se ignowa ew {{gwossawy("whitespace","espacio en bwanco")}} i-iniciaw en este a-awgumento.
 
-### Valor de retorno
+### v-vawow de wetowno
 
-Un número de coma flotante convertido a partir del `string` dado.
+u-un nyúmewo de coma fwotante convewtido a pawtiw d-dew `stwing` dado. nyaa~~
 
-O {{jsxref("NaN")}} cuando el primer carácter que no es un espacio en blanco no se puede convertir en un número.
+o {{jsxwef("nan")}} cuando e-ew pwimew cawáctew que nyo es un espacio en bwanco no se puede convewtiw en un nyúmewo. :3
 
-## Ejemplos
+## e-ejempwos
 
-### Number.parseFloat vs parseFloat
+### nyumbew.pawsefwoat vs pawsefwoat
 
-Este método tiene la misma funcionalidad que la función global {{jsxref("parseFloat", "parseFloat()")}}:
+e-este método tiene w-wa misma funcionawidad q-que wa función gwobaw {{jsxwef("pawsefwoat", 😳😳😳 "pawsefwoat()")}}:
 
 ```js
-Number.parseFloat === parseFloat; // true
+nyumbew.pawsefwoat === pawsefwoat; // t-twue
 ```
 
-Este método también es parte de ECMAScript 2015. (Su propósito es la modularización de globales).
+e-este método también es pawte d-de ecmascwipt 2015. (su p-pwopósito es wa moduwawización d-de gwobawes). (˘ω˘)
 
-Consulte {{jsxref("parseFloat", "parseFloat()")}} para obtener más detalles y ejemplos.
+consuwte {{jsxwef("pawsefwoat", ^^ "pawsefwoat()")}} p-pawa obtenew más detawwes y ejempwos. :3
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad con n-nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Véase también
+## véase también
 
-- [Polyfill de `Number.parseFloat` en `core-js`](https://github.com/zloirock/core-js#ecmascript-number)
-- {{jsxref("Number")}}: El objeto al que pertenece este método.
-- El método global {{jsxref("parseFloat", "parseFloat()")}}.
+- [powyfiww d-de `numbew.pawsefwoat` e-en `cowe-js`](https://github.com/zwoiwock/cowe-js#ecmascwipt-numbew)
+- {{jsxwef("numbew")}}: ew objeto aw que pewtenece este método. -.-
+- ew método gwobaw {{jsxwef("pawsefwoat", 😳 "pawsefwoat()")}}.

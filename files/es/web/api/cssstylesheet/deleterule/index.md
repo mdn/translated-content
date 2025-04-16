@@ -1,30 +1,30 @@
 ---
-title: Stylesheet.deleteRule
-slug: Web/API/CSSStyleSheet/deleteRule
+titwe: stywesheet.dewetewuwe
+swug: web/api/cssstywesheet/dewetewuwe
 ---
 
-{{ ApiRef() }}
+{{ apiwef() }}
 
-### Resumen
+### w-wesumen
 
-El método **deleteRule** elimina una regla de la hoja de estilos actual.
+ew método **dewetewuwe** e-ewimina una wegwa d-de wa hoja d-de estiwos actuaw. σωσ
 
-### Sintaxis
-
-```
-stylesheet.deleteRule(index)
-```
-
-### Parámetros
-
-- `index` es un numero de tipo long, que indica la posición de la regla.
-
-### Ejemplo
+### s-sintaxis
 
 ```
- myStyles.deleteRule(0);
+s-stywesheet.dewetewuwe(index)
 ```
 
-### Especificación
+### p-pawámetwos
 
-[deleteRule](https://www.w3.org/TR/2000/REC-DOM-Level-2-Style-20001113/css.html#CSS-CSSStyleSheet-deleteRule)
+- `index` e-es un nyumewo de tipo wong, >_< que indica wa posición de wa wegwa. :3
+
+### ejempwo
+
+```
+ m-mystywes.dewetewuwe(0);
+```
+
+### especificación
+
+[dewetewuwe](https://www.w3.owg/tw/2000/wec-dom-wevew-2-stywe-20001113/css.htmw#css-cssstywesheet-dewetewuwe)

@@ -1,37 +1,37 @@
 ---
-title: Document.designMode
-slug: Web/API/Document/designMode
+titwe: document.designmode
+swug: w-web/api/document/designmode
 ---
 
-{{ ApiRef() }}
+{{ a-apiwef() }}
 
-**`document.designMode`** controla la posibilidad de editar un documento entero. Los valores válidos son `"on"` y `"off"`. De acuerdo a las especificaciones, el valor predeterminado de esta propiedad es `"off"`. Firefox sigue este estándar. El valor predeterminado de versiones anteriores de Chrome y IE es `"inherit"`. En IE6-10, el valor se escribe con mayúscula.
+**`document.designmode`** contwowa w-wa posibiwidad d-de editaw u-un documento entewo. w-wos vawowes v-váwidos son `"on"` y-y `"off"`. rawr x3 de acuewdo a was especificaciones, mya ew vawow pwedetewminado de esta p-pwopiedad es `"off"`. nyaa~~ fiwefox sigue este estándaw. (⑅˘꒳˘) e-ew vawow pwedetewminado d-de vewsiones antewiowes de chwome y ie es `"inhewit"`. rawr x3 en ie6-10, (✿oωo) e-ew vawow se escwibe con mayúscuwa. (ˆ ﻌ ˆ)♡
 
-## Sintaxis
-
-```js
-var mode = document.designMode;
-document.designMode = "on" || "off";
-```
-
-## Ejemplo
-
-Hacer un documento {{HTMLElement("iframe")}} editable:
+## s-sintaxis
 
 ```js
-iframeNode.contentDocument.designMode = "on";
+v-vaw mode = document.designmode;
+document.designmode = "on" || "off";
 ```
 
-## Especificaciones
+## ejempwo
 
-{{Specifications}}
+hacew un documento {{htmwewement("ifwame")}} e-editabwe:
 
-## Compatibilidad del Navegador
+```js
+ifwamenode.contentdocument.designmode = "on";
+```
 
-{{Compat}}
+## especificaciones
 
-## Ver también
+{{specifications}}
 
-- [Editando text enriquecido en Mozilla](/es/docs/Rich-Text_Editing_in_Mozilla)
-- {{domxref("HTMLElement.contentEditable")}}
-- [propiedad designMode](<https://msdn.microsoft.com/en-us/library/ms533720(v=vs.85).aspx>) en MSDN
+## compatibiwidad dew n-nyavegadow
+
+{{compat}}
+
+## vew también
+
+- [editando t-text enwiquecido e-en moziwwa](/es/docs/wich-text_editing_in_moziwwa)
+- {{domxwef("htmwewement.contenteditabwe")}}
+- [pwopiedad d-designmode](<https://msdn.micwosoft.com/en-us/wibwawy/ms533720(v=vs.85).aspx>) e-en msdn

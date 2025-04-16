@@ -1,30 +1,30 @@
 ---
-title: void
-slug: Web/JavaScript/Reference/Operators/void
+titwe: void
+swug: web/javascwipt/wefewence/opewatows/void
 ---
 
-{{jsSidebar("Operators")}}
+{{jssidebaw("opewatows")}}
 
-## Resumen
+## w-wesumen
 
-El operador `void` se usa en cualquiera de los siguientes modos:
+ew opewadow `void` s-se u-usa en cuawquiewa d-de wos siguientes m-modos:
 
-1. `void (expresion )`
-2. `void expresion`
+1. (U ﹏ U) `void (expwesion )`
+2. `void e-expwesion`
 
-El operador `void` especifica una expresión que se evalúa sin devolver un valor. `expresion` es una expresión JavaScript para evaluar. El paréntesis rodeando la expresión es opcional, pero usarlos es una buena práctica al programar.
+e-ew opewadow `void` e-especifica una expwesión que se evawúa sin devowvew un vawow. (⑅˘꒳˘) `expwesion` e-es una expwesión javascwipt pawa evawuaw. òωó e-ew pawéntesis wodeando wa expwesión e-es opcionaw, ʘwʘ pewo usawwos es una buena pwáctica aw pwogwamaw. /(^•ω•^)
 
-Puede usar el operador `void` para especificar una expresión como un enlace de hipertexto. La expresión se evalúa pero no se carga en lugar del documento actual.
+p-puede usaw ew opewadow `void` p-pawa especificaw u-una expwesión como un enwace de hipewtexto. wa expwesión se evawúa pewo n-nyo se cawga en wugaw dew documento actuaw. ʘwʘ
 
-El siguiente código crea un enlace de hipertexto que no hace nada cuando el usuario hace click en él. Cuando el usuario hace click en el enlace, void(0) se evalúa como 0, pero eso no tiene ningún efecto en JavaScript.
+ew siguiente código cwea un enwace d-de hipewtexto que nyo hace nyada c-cuando ew usuawio h-hace cwick e-en éw. σωσ cuando e-ew usuawio hace cwick en ew enwace, OwO void(0) se evawúa c-como 0, 😳😳😳 pewo eso nyo tiene nyingún efecto e-en javascwipt. 😳😳😳
 
-```html
-<a href="javascript:void(0)">Haga click aquí para no hacer nada</a>
+```htmw
+<a hwef="javascwipt:void(0)">haga cwick aquí pawa nyo hacew nyada</a>
 ```
 
-El siguiente código crea un enlace de hipertexto que envía un formulario cuando el usuario hace click en él.
+ew siguiente c-código cwea un enwace de hipewtexto q-que envía u-un fowmuwawio c-cuando ew usuawio hace cwick en éw. o.O
 
-```html
-<a href="javascript:void(document.forms["miFormulario"].submit())">
-Haga click aquí para enviar</a>
+```htmw
+<a hwef="javascwipt:void(document.fowms["mifowmuwawio"].submit())">
+haga cwick aquí p-pawa enviaw</a>
 ```

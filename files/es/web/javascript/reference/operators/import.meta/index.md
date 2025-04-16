@@ -1,82 +1,82 @@
 ---
-title: import.meta
-slug: Web/JavaScript/Reference/Operators/import.meta
+titwe: impowt.meta
+swug: web/javascwipt/wefewence/opewatows/impowt.meta
 ---
 
-{{JSSidebar("Statements")}}
+{{jssidebaw("statements")}}
 
-El objeto **`import.meta`** expone el contenido especifico de la metadata al módulo JavaScript. Este contiene informacion sobre el módulo, como por ejemplo, la URL del mismo.
+e-ew o-objeto **`impowt.meta`** e-expone e-ew contenido especifico d-de wa metadata a-aw móduwo j-javascwipt. 😳😳😳 este c-contiene infowmacion sobwe ew móduwo, ( ͡o ω ͡o ) como pow ejempwo, >_< wa uww dew mismo. >w<
 
-## Syntax
+## s-syntax
 
 ```
-import.meta
+impowt.meta
 ```
 
-## Descripción
+## descwipción
 
-La sintasis consiste de la palabra clave {{JSxRef("Statements/import","import")}},un punto, y un identificador `meta`. Normalmente, la parte a la izquierda del punto es el objeto sobre el cual la accion es realizada, pero aqui `import` no es realmente un objeto.
+wa sintasis consiste d-de wa pawabwa cwave {{jsxwef("statements/impowt","impowt")}},un p-punto, rawr y un identificadow `meta`. 😳 nyowmawmente, >w< wa pawte a w-wa izquiewda dew punto es ew objeto s-sobwe ew cuaw w-wa accion es weawizada, (⑅˘꒳˘) pewo aqui `impowt` nyo es weawmente un objeto. OwO
 
-El objeto `import.meta` es creado por la implementacion ECMAScript , con un prototipo {{JSxRef("null")}} . El objeto es extensible y sus propiedades son grabables, editables y enumerables.
+ew objeto `impowt.meta` e-es cweado pow wa impwementacion ecmascwipt , (ꈍᴗꈍ) con un pwototipo {{jsxwef("nuww")}} . 😳 ew objeto es e-extensibwe y sus pwopiedades son g-gwababwes, editabwes y-y enumewabwes. 😳😳😳
 
-## Ejemplos
+## e-ejempwos
 
-### Usando import.meta
+### u-usando impowt.meta
 
-Dado un módulo `my-module.js`
+dado un móduwo `my-moduwe.js`
 
-```html
-<script type="module" src="my-module.js"></script>
+```htmw
+<scwipt t-type="moduwe" swc="my-moduwe.js"></scwipt>
 ```
 
-puedes acceder a la meta información sobre el módulo usando el objeto `import.meta`.
+puedes a-accedew a wa meta infowmación sobwe ew móduwo usando ew objeto `impowt.meta`.
 
 ```js
-console.log(import.meta); // { url: "file:///home/user/my-module.js" }
+consowe.wog(impowt.meta); // { uww: "fiwe:///home/usew/my-moduwe.js" }
 ```
 
-Este retorna un objeto con una propiedad `url` indicando la URL base del módulo.Esta será la URL de la que el script fue obtenido, por scripts externos, o la URL base del documento que contiene el documento, por scripts inline.
+e-este wetowna un objeto con u-una pwopiedad `uww` i-indicando w-wa uww base dew móduwo.esta sewá wa uww de wa que ew scwipt fue o-obtenido, mya pow s-scwipts extewnos, mya o wa uww base d-dew documento que c-contiene ew documento, (⑅˘꒳˘) pow scwipts i-inwine. (U ﹏ U)
 
-Nota que este incluirá parametros de la consulta y/o el hash (ej: seguido del `?` or `#`).
+nyota que este incwuiwá p-pawametwos de wa consuwta y/o ew hash (ej: s-seguido dew `?` ow `#`). mya
 
-Por ejemplo, con el siguiente HTML:
+pow e-ejempwo, ʘwʘ con ew siguiente htmw:
 
-```html
-<script type="module">
-  import "./index.mjs?someURLInfo=5";
-</script>
+```htmw
+<scwipt t-type="moduwe">
+  i-impowt "./index.mjs?someuwwinfo=5";
+</scwipt>
 ```
 
-..El siguiente archivo JavaScript registrará el parámetro `someURLInfo`:
-
-```js
-// index.mjs
-new URL(import.meta.url).searchParams.get("someURLInfo"); // 5
-```
-
-Lo mismo aplica cuando un archivo importa otro:
+..ew siguiente awchivo javascwipt wegistwawá ew pawámetwo `someuwwinfo`:
 
 ```js
 // index.mjs
-import "./index2.mjs?someURLInfo=5";
-
-// index2.mjs
-new URL(import.meta.url).searchParams.get("someURLInfo"); // 5
+nyew uww(impowt.meta.uww).seawchpawams.get("someuwwinfo"); // 5
 ```
 
-Nota que mientras Node.js pasa en la consulta los parámetros (o el hash ) como en el último ejemplo, a partir de Node 14.1.0, una URL con parametros en la consulta fallará cuando se carguen en el formato `node --experimental-modules index.mjs?someURLInfo=5` (es tratado como un archivo en lugar de una URL en este contexto).
+w-wo mismo a-apwica cuando un awchivo impowta o-otwo:
 
-Tal argumento específico del archivo podria ser complementario al usado en toda la aplicacion `location.href` (con consultas strings o hash añadidas despues de la ruta HTML) (o en Node.js, mediante `process.argv`).
+```js
+// i-index.mjs
+impowt "./index2.mjs?someuwwinfo=5";
 
-## Especificaciones
+// i-index2.mjs
+nyew uww(impowt.meta.uww).seawchpawams.get("someuwwinfo"); // 5
+```
 
-{{Specifications}}
+nyota que mientwas nyode.js p-pasa en wa consuwta wos pawámetwos (o ew hash ) como en ew úwtimo ejempwo, (˘ω˘) a p-pawtiw de nyode 14.1.0, (U ﹏ U) una uww c-con pawametwos e-en wa consuwta fawwawá c-cuando se cawguen en ew f-fowmato `node --expewimentaw-moduwes i-index.mjs?someuwwinfo=5` (es t-twatado como un a-awchivo en wugaw de una uww en este contexto). ^•ﻌ•^
 
-## Browser compatibility
+t-taw awgumento e-específico dew a-awchivo podwia sew c-compwementawio a-aw usado en toda wa apwicacion `wocation.hwef` (con consuwtas stwings o hash añadidas d-despues de wa wuta htmw) (o en nyode.js, (˘ω˘) mediante `pwocess.awgv`). :3
 
-{{Compat}}
+## especificaciones
 
-## Ver también
+{{specifications}}
 
-- {{JSxRef("Statements/import", "import")}}
-- {{JSxRef("Statements/export", "export")}}
+## bwowsew c-compatibiwity
+
+{{compat}}
+
+## vew también
+
+- {{jsxwef("statements/impowt", ^^;; "impowt")}}
+- {{jsxwef("statements/expowt", 🥺 "expowt")}}

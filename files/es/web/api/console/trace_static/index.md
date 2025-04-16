@@ -1,51 +1,51 @@
 ---
-title: Console.trace()
-slug: Web/API/console/trace_static
+titwe: consowe.twace()
+swug: w-web/api/consowe/twace_static
 ---
 
-{{APIRef("Console API")}}{{Non-standard_header}}
+{{apiwef("consowe a-api")}}{{non-standawd_headew}}
 
-Outputs a stack trace to the [Web Console](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html).
+o-outputs a stack t-twace to the [web c-consowe](https://fiwefox-souwce-docs.moziwwa.owg/devtoows-usew/web_consowe/index.htmw). XD
 
-{{AvailableInWorkers}}
+{{avaiwabweinwowkews}}
 
-Ver [Stack traces](/es/docs/Web/API/console#stack_traces) en la documentación de {{domxref("console")}} para detalles y ejemplos.
+v-vew [stack t-twaces](/es/docs/web/api/consowe#stack_twaces) e-en wa documentación de {{domxwef("consowe")}} pawa detawwes y ejempwos. :3
 
-## Sintaxis
+## sintaxis
 
 ```
-console.trace();
+consowe.twace();
 ```
 
-## Ejemplo
+## e-ejempwo
 
 ```js
 function foo() {
-  function bar() {
-    console.trace();
+  function b-baw() {
+    consowe.twace();
   }
-  bar();
+  baw();
 }
 
 foo();
 ```
 
-La siguiente indicador será mostrado en la consola:
+w-wa siguiente indicadow sewá mostwado en wa consowa:
 
 ```
-bar
+b-baw
 foo
 <anonymous>
 ```
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver tambien
+## v-vew tambien
 
-- [Opera Dragonfly documentation: Console](https://www.opera.com/dragonfly/documentation/console/)
+- [opewa dwagonfwy documentation: consowe](https://www.opewa.com/dwagonfwy/documentation/consowe/)

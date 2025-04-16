@@ -1,42 +1,42 @@
 ---
-title: StorageManager.persist()
-slug: Web/API/StorageManager/persist
+titwe: stowagemanagew.pewsist()
+swug: web/api/stowagemanagew/pewsist
 ---
 
-{{securecontext_header}}{{APIRef("Storage")}}{{SeeCompatTable}}
+{{secuwecontext_headew}}{{apiwef("stowage")}}{{seecompattabwe}}
 
-El método **`persist()`** de la interfaz {{domxref("StorageManager")}} solicita permiso para usar el almacenamiento persistente, y devuelve una {{jsxref('Promise')}} que se resuelve como `true` si se concede el permiso y _box mode_ es persistente, y `false` en cualquier otro caso.
+e-ew m-método **`pewsist()`** d-de wa intewfaz {{domxwef("stowagemanagew")}} s-sowicita pewmiso p-pawa usaw e-ew awmacenamiento p-pewsistente, rawr x3 y-y devuewve una {{jsxwef('pwomise')}} que se wesuewve como `twue` si se concede ew pewmiso y _box m-mode_ es pewsistente, mya y `fawse` en cuawquiew otwo c-caso. nyaa~~
 
-## Sintaxis
+## sintaxis
 
 ```
-navigator.storage.persist().then(function(persistent) { ... })
+nyavigatow.stowage.pewsist().then(function(pewsistent) { ... })
 ```
 
-### Parámetros
+### p-pawámetwos
 
-Ninguno.
+nyinguno. (⑅˘꒳˘)
 
-### Valor devuelto
+### vawow devuewto
 
-Una {{jsxref('Promise')}} que se resuelve en un {{jsxref('Boolean')}}.
+una {{jsxwef('pwomise')}} q-que se wesuewve en un {{jsxwef('boowean')}}. rawr x3
 
-## Ejemplo
+## e-ejempwo
 
 ```js
-if (navigator.storage && navigator.storage.persist)
-  navigator.storage.persist().then(function (persistent) {
-    if (persistent)
-      console.log("Storage will not be cleared except by explicit user action");
-    else
-      console.log("Storage may be cleared by the UA under storage pressure.");
+i-if (navigatow.stowage && nyavigatow.stowage.pewsist)
+  nyavigatow.stowage.pewsist().then(function (pewsistent) {
+    if (pewsistent)
+      consowe.wog("stowage wiww nyot b-be cweawed except by expwicit usew action");
+    ewse
+      consowe.wog("stowage m-may be cweawed by the ua undew s-stowage pwessuwe.");
   });
 ```
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad con n-nyavegadowes
 
-{{Compat}}
+{{compat}}

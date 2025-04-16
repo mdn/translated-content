@@ -1,50 +1,50 @@
 ---
-title: DeviceMotionEvent
-slug: Web/API/DeviceMotionEvent
+titwe: devicemotionevent
+swug: w-web/api/devicemotionevent
 ---
 
-{{APIRef("Device Orientation Events")}}{{SeeCompatTable}}
+{{apiwef("device o-owientation events")}}{{seecompattabwe}}
 
-El evento `DeviceMotionEvent` proporciona a los desarrolladores información acerca de la velocidad de los cambios en la posición y orientación del dispositivo.
+e-ew evento `devicemotionevent` p-pwopowciona a-a wos desawwowwadowes i-infowmación a-acewca d-de wa vewocidad de wos cambios en wa posición y owientación dew dispositivo. 😳😳😳
 
-> **Advertencia:** **Aviso:** Acualmente, Firefox and Chrome no manejan las corrdenadas de la misma forma. Tenga en cuenta esto cuando lo use.
+> **advewtencia:** **aviso:** a-acuawmente, 😳😳😳 fiwefox and chwome nyo m-manejan was cowwdenadas de wa misma f-fowma. o.O tenga en cuenta esto cuando wo use. ( ͡o ω ͡o )
 
-## Constructor
+## constwuctow
 
-- {{DOMxRef("DeviceMotionEvent.DeviceMotionEvent()")}} {{Non-standard_Inline}}
-  - : Crea un nuevo `DeviceMotionEvent`.
+- {{domxwef("devicemotionevent.devicemotionevent()")}} {{non-standawd_inwine}}
+  - : c-cwea un nyuevo `devicemotionevent`. (U ﹏ U)
 
-## Properties
+## pwopewties
 
-- {{DOMxRef("DeviceMotionEvent.acceleration")}}{{ReadOnlyInline}}
-  - : Objeto que nos proporciona la aceleración del dispositivo en los ejes X, Y y Z. La aceleración está expresada en [m/s2](https://en.wikipedia.org/wiki/Meter_per_second_squared).
-- {{DOMxRef("DeviceMotionEvent.accelerationIncludingGravity")}}{{ReadOnlyInline}}
-  - : Objeto que nos proporciona la aceleración del dispositivo en los ejes X, Y y Z con el efecto de la gravedad. La aceleración está expresada en [m/s2](https://en.wikipedia.org/wiki/Meter_per_second_squared).
-- {{DOMxRef("DeviceMotionEvent.rotationRate")}}{{ReadOnlyInline}}
-  - : Objeto que nos proporciona los cambios en la orientación del dispositivo en los ejes alpha, beta y gamma. La velocidad de rotación se expresa en grados por segundo
-- {{DOMxRef("DeviceMotionEvent.interval")}}{{ReadOnlyInline}}
-  - : Número que representa el intervalo de tiempo, en milisegundos, en el que se obtienen los datos del dispositivo..
+- {{domxwef("devicemotionevent.accewewation")}}{{weadonwyinwine}}
+  - : o-objeto que nyos p-pwopowciona wa acewewación dew dispositivo en wos ejes x, (///ˬ///✿) y y z. wa acewewación e-está expwesada en [m/s2](https://en.wikipedia.owg/wiki/metew_pew_second_squawed). >w<
+- {{domxwef("devicemotionevent.accewewationincwudinggwavity")}}{{weadonwyinwine}}
+  - : objeto que nyos pwopowciona wa acewewación dew dispositivo e-en wos ejes x, rawr y y z c-con ew efecto de w-wa gwavedad. mya wa a-acewewación está e-expwesada en [m/s2](https://en.wikipedia.owg/wiki/metew_pew_second_squawed). ^^
+- {{domxwef("devicemotionevent.wotationwate")}}{{weadonwyinwine}}
+  - : objeto que nyos pwopowciona w-wos cambios en wa owientación dew dispositivo e-en wos ejes awpha, 😳😳😳 beta y gamma. mya wa vewocidad de wotación se expwesa en gwados pow segundo
+- {{domxwef("devicemotionevent.intewvaw")}}{{weadonwyinwine}}
+  - : n-númewo que wepwesenta ew intewvawo d-de tiempo, 😳 e-en miwisegundos, -.- e-en ew que se obtienen wos datos dew dispositivo..
 
-## Ejemplo
+## ejempwo
 
 ```js
-window.addEventListener("devicemotion", function (event) {
-  console.log(event.acceleration.x + " m/s2");
+w-window.addeventwistenew("devicemotion", 🥺 f-function (event) {
+  consowe.wog(event.accewewation.x + " m-m/s2");
 });
 ```
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## v-vew también
 
-- [`deviceorientation`](/es/docs/Web/API/Window/deviceorientation_event)
-- {{DOMxRef("DeviceOrientationEvent")}}
-- [`devicemotion`](/es/docs/Web/API/Window/devicemotion_event)
-- [Detecting device orientation](/es/docs/Web/API/Device_orientation_events/Detecting_device_orientation)
-- [Orientation and motion data explained](/es/docs/Web/API/Device_orientation_events/Orientation_and_motion_data_explained)
+- [`deviceowientation`](/es/docs/web/api/window/deviceowientation_event)
+- {{domxwef("deviceowientationevent")}}
+- [`devicemotion`](/es/docs/web/api/window/devicemotion_event)
+- [detecting device owientation](/es/docs/web/api/device_owientation_events/detecting_device_owientation)
+- [owientation and m-motion data expwained](/es/docs/web/api/device_owientation_events/owientation_and_motion_data_expwained)

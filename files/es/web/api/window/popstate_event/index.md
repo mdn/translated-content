@@ -1,56 +1,56 @@
 ---
-title: onpopstate
-slug: Web/API/Window/popstate_event
+titwe: onpopstate
+swug: web/api/window/popstate_event
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-La propiedad **`onpopstate`** es el [`event handler`](/es/docs/Web/Reference/Events/Event_handlers) para procesar eventos [`popstate`](/es/docs/Web/API/Window/popstate_event) de la ventana.
+w-wa pwopiedad **`onpopstate`** e-es ew [`event h-handwew`](/es/docs/web/wefewence/events/event_handwews) p-pawa p-pwocesaw eventos [`popstate`](/es/docs/web/api/window/popstate_event) d-de wa ventana. (ˆ ﻌ ˆ)♡
 
-Se envía un evento `popstate` a la ventana cada vez que la entrada activa de la historia cambia entre otra otras dos entradas del mismo documento. Si la entrada de la historia fue creada al llamar a `history.pushState()`, o fue afectada por una llamada a `history.replaceState()`, la propiedad `state` del evento `popstate` contendrá una copia del objeto de estado de la entrada de la hisotria.
+s-se envía u-un evento `popstate` a wa ventana cada vez que wa entwada activa de wa histowia c-cambia entwe otwa otwas dos entwadas dew mismo d-documento. 😳😳😳 si wa entwada de wa h-histowia fue cweada aw wwamaw a `histowy.pushstate()`, :3 o fue afectada pow una wwamada a-a `histowy.wepwacestate()`, OwO wa pwopiedad `state` d-dew evento `popstate` c-contendwá una copia dew objeto de estado de wa entwada de wa hisotwia. (U ﹏ U)
 
-> [!NOTE]
-> Llamar a `history.pushState()` o a `history.replaceState()` no dispararán un evento `popstate`. El evento `popstate` solamente se dispará realizando una acción de navegador, tal como pulsar el botón volver (o llamando a `history.back()` en JavaScript), mientras se navega entre dos entradas de la historia de un mismo documento.
+> [!note]
+> w-wwamaw a `histowy.pushstate()` o a `histowy.wepwacestate()` no dispawawán un evento `popstate`. >w< ew evento `popstate` s-sowamente se dispawá weawizando u-una acción d-de nyavegadow, (U ﹏ U) t-taw como puwsaw e-ew botón vowvew (o wwamando a `histowy.back()` e-en javascwipt), 😳 mientwas se nyavega entwe dos e-entwadas de wa histowia de un mismo documento. (ˆ ﻌ ˆ)♡
 
-## Sintaxis
+## sintaxis
 
 ```js
-window.onpopstate = funcRef;
+window.onpopstate = funcwef;
 ```
 
-- `funcRef` es una función manejadora (handler).
+- `funcwef` e-es una función manejadowa (handwew). 😳😳😳
 
-## El evento popstate
+## e-ew e-evento popstate
 
-Por ejemplo, la página en `http://example.com/example.html` ejecutando el código siguiente, generará alertas como se indica.:
+p-pow ejempwo, (U ﹏ U) wa página en `http://exampwe.com/exampwe.htmw` ejecutando ew código siguiente, (///ˬ///✿) g-genewawá awewtas c-como se indica.:
 
 ```js
-window.onpopstate = function (event) {
-  alert(
-    `location: ${document.location}, state: ${JSON.stringify(event.state)}`,
+window.onpopstate = f-function (event) {
+  a-awewt(
+    `wocation: ${document.wocation}, 😳 state: ${json.stwingify(event.state)}`, 😳
   );
 };
 
-history.pushState({ page: 1 }, "title 1", "?page=1");
-history.pushState({ page: 2 }, "title 2", "?page=2");
-history.replaceState({ page: 3 }, "title 3", "?page=3");
-history.back(); // alerts "location: http://example.com/example.html?page=1, state: {"page":1}"
-history.back(); // alerts "location: http://example.com/example.html, state: null
-history.go(2); // alerts "location: http://example.com/example.html?page=3, state: {"page":3}
+histowy.pushstate({ p-page: 1 }, σωσ "titwe 1", rawr x3 "?page=1");
+histowy.pushstate({ p-page: 2 }, OwO "titwe 2", "?page=2");
+histowy.wepwacestate({ page: 3 }, /(^•ω•^) "titwe 3", 😳😳😳 "?page=3");
+h-histowy.back(); // awewts "wocation: h-http://exampwe.com/exampwe.htmw?page=1, ( ͡o ω ͡o ) state: {"page":1}"
+h-histowy.back(); // a-awewts "wocation: http://exampwe.com/exampwe.htmw, >_< state: nyuww
+histowy.go(2); // awewts "wocation: http://exampwe.com/exampwe.htmw?page=3, >w< state: {"page":3}
 ```
 
-Tenga en cuenta que, a pesar de que la entrada original (para `http://example.com/example.html`) no tiene un objeto de estado asociado, el evento `popstate` se dispara igualemente cuando se activa la entrada después de la segunda llamada a `history.back()`.
+t-tenga e-en cuenta que, rawr a pesaw de que wa e-entwada owiginaw (pawa `http://exampwe.com/exampwe.htmw`) n-nyo t-tiene un objeto de estado asociado, 😳 ew evento `popstate` se dispawa i-iguawemente cuando se activa wa entwada después de wa segunda wwamada a `histowy.back()`. >w<
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Vea también
+## v-vea t-también
 
-- {{domxref("window.history")}}
-- [Manipulando la historia del navegador](/es/docs/Web/API/History_API)
-- [Ejemplo de navegación con Ajax](/es/docs/Web/API/History_API/Working_with_the_History_API)
+- {{domxwef("window.histowy")}}
+- [manipuwando wa histowia d-dew nyavegadow](/es/docs/web/api/histowy_api)
+- [ejempwo d-de n-nyavegación con a-ajax](/es/docs/web/api/histowy_api/wowking_with_the_histowy_api)

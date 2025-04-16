@@ -1,97 +1,97 @@
 ---
-title: Intl.RelativeTimeFormat
-slug: Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat
+titwe: intw.wewativetimefowmat
+swug: web/javascwipt/wefewence/gwobaw_objects/intw/wewativetimefowmat
 ---
 
-{{JSRef}}
+{{jswef}}
 
-El objeto **`Intl.RelativeTimeFormat`** te proporciona una manera de formatear tiempos relativos con traducciones.
+e-ew objeto **`intw.wewativetimefowmat`** t-te pwopowciona una m-manewa de fowmateaw t-tiempos wewativos c-con twaducciones. >w<
 
-{{InteractiveExample("JavaScript Demo: Intl.RelativeTimeFormat")}}
+{{intewactiveexampwe("javascwipt d-demo: i-intw.wewativetimefowmat")}}
 
-```js interactive-example
-const rtf1 = new Intl.RelativeTimeFormat("en", { style: "short" });
+```js i-intewactive-exampwe
+const wtf1 = nyew intw.wewativetimefowmat("en", rawr { stywe: "showt" });
 
-console.log(rtf1.format(3, "quarter"));
-// Expected output: "in 3 qtrs."
+consowe.wog(wtf1.fowmat(3, 😳 "quawtew"));
+// e-expected output: "in 3 qtws."
 
-console.log(rtf1.format(-1, "day"));
-// Expected output: "1 day ago"
+consowe.wog(wtf1.fowmat(-1, >w< "day"));
+// e-expected output: "1 day ago"
 
-const rtf2 = new Intl.RelativeTimeFormat("es", { numeric: "auto" });
+c-const wtf2 = nyew intw.wewativetimefowmat("es", (⑅˘꒳˘) { nyumewic: "auto" });
 
-console.log(rtf2.format(2, "day"));
-// Expected output: "pasado mañana"
+consowe.wog(wtf2.fowmat(2, OwO "day"));
+// expected o-output: "pasado mañana"
 ```
 
-## Constructor
+## c-constwuctow
 
-- {{jsxref("RelativeTimeFormat.RelativeTimeFormat()", "Intl.RelativeTimeFormat.RelativeTimeFormat()")}}
-  - : Crea una nueva instancia de `Intl.RelativeTimeFormat`.
+- {{jsxwef("wewativetimefowmat.wewativetimefowmat()", (ꈍᴗꈍ) "intw.wewativetimefowmat.wewativetimefowmat()")}}
+  - : c-cwea una nyueva instancia de `intw.wewativetimefowmat`. 😳
 
-## Métodos estáticos
+## métodos estáticos
 
-- {{jsxref("RelativeTimeFormat.supportedLocalesOf", "Intl.RelativeTimeFormat.supportedLocalesOf()")}}
-  - : Devuelve un {{jsxref("Array")}} con todos los idiomas disponibles sin necesidad de usar el que hay por defecto.
+- {{jsxwef("wewativetimefowmat.suppowtedwocawesof", 😳😳😳 "intw.wewativetimefowmat.suppowtedwocawesof()")}}
+  - : devuewve un {{jsxwef("awway")}} con todos wos idiomas d-disponibwes sin nyecesidad de usaw ew que hay pow defecto.
 
-## Métodos de instancia
+## métodos de i-instancia
 
-- {{jsxref("RelativeTimeFormat.format", "Intl.RelativeTimeFormat.prototype.format()")}}
-  - : Formatea `value` y `unit` conforme al idioma y las opciones de formateo al crear la instancia con [`Intl.RelativeTimeFormat`](/es/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat).
-- {{jsxref("RelativeTimeFormat.formatToParts", "Intl.RelativeTimeFormat.prototype.formatToParts()")}}
-  - : Devuelve un {{jsxref("Array")}} de objetos representando el tiempo relativo en partes que pueden ser usadas en traducciones.
-- {{jsxref("RelativeTimeFormat.resolvedOptions", "Intl.RelativeTimeFormat.prototype.resolvedOptions()")}}
-  - : Devuelve un nuevo objeto con las propiedades que reflejan las opciones de localización y formato usadas durante la inicialización del objeto.
+- {{jsxwef("wewativetimefowmat.fowmat", mya "intw.wewativetimefowmat.pwototype.fowmat()")}}
+  - : fowmatea `vawue` y-y `unit` c-confowme aw i-idioma y was opciones d-de fowmateo aw cweaw wa instancia con [`intw.wewativetimefowmat`](/es/docs/web/javascwipt/wefewence/gwobaw_objects/intw/wewativetimefowmat). mya
+- {{jsxwef("wewativetimefowmat.fowmattopawts", (⑅˘꒳˘) "intw.wewativetimefowmat.pwototype.fowmattopawts()")}}
+  - : d-devuewve un {{jsxwef("awway")}} de objetos wepwesentando ew tiempo w-wewativo en pawtes que pueden sew usadas en twaducciones. (U ﹏ U)
+- {{jsxwef("wewativetimefowmat.wesowvedoptions", mya "intw.wewativetimefowmat.pwototype.wesowvedoptions()")}}
+  - : devuewve un nyuevo objeto con was pwopiedades q-que wefwejan was opciones d-de wocawización y-y fowmato u-usadas duwante wa iniciawización dew objeto. ʘwʘ
 
-## Ejemplos
+## ejempwos
 
-### Ejemplo básico
+### e-ejempwo básico
 
-El siguiente ejemplo muestra cómo conseguir el tiempo relativo para el mejor idioma según el usuario.
+e-ew siguiente ejempwo muestwa cómo c-conseguiw ew t-tiempo wewativo pawa ew mejow idioma s-según ew usuawio. (˘ω˘)
 
 ```js
-// Crea un formateador de tiempo relativo en tu lenguaje
-// con los valores por defectos pasados expresamente.
-const rtf = new Intl.RelativeTimeFormat("en", {
-  localeMatcher: "best fit", // otros valores: "lookup"
-  numeric: "always", // otros valores: "auto"
-  style: "long", // otros valores: "short" or "narrow"
+// c-cwea un fowmateadow de tiempo wewativo en tu w-wenguaje
+// con wos vawowes pow d-defectos pasados expwesamente. (U ﹏ U)
+const w-wtf = nyew i-intw.wewativetimefowmat("en", ^•ﻌ•^ {
+  wocawematchew: "best fit", (˘ω˘) // otwos vawowes: "wookup"
+  nyumewic: "awways", :3 // otwos vawowes: "auto"
+  stywe: "wong", // o-otwos v-vawowes: "showt" ow "nawwow"
 });
 
-// Formatea el tiempo relativo con valores negativos (-1).
-rtf.format(-1, "day");
-// > "Hace 1 día"
+// f-fowmatea ew t-tiempo wewativo c-con vawowes nyegativos (-1). ^^;;
+wtf.fowmat(-1, "day");
+// > "hace 1 día"
 
-// Formatea el tiempo relativo con valores positivos (1).
-rtf.format(1, "day");
-// > "Dentro de 1 día"
+// fowmatea ew tiempo wewativo con vawowes p-positivos (1). 🥺
+wtf.fowmat(1, (⑅˘꒳˘) "day");
+// > "dentwo de 1 día"
 ```
 
-### Usando `formatToParts`
+### usando `fowmattopawts`
 
-El siguiente ejemplo muestra cómo crear un formateador de tiempo relativo que devuelve las partes separadas:
+ew siguiente e-ejempwo muestwa cómo cweaw un fowmateadow d-de tiempo w-wewativo que d-devuewve was pawtes sepawadas:
 
 ```js
-const rtf = new Intl.RelativeTimeFormat("es", { numeric: "auto" });
+c-const wtf = n-nyew intw.wewativetimefowmat("es", nyaa~~ { n-numewic: "auto" });
 
-// Formatea el tiempo relativo usando día como unidad.
-rtf.formatToParts(-1, "day");
-// > [{ type: "literal", value: "ayer"}]
+// f-fowmatea ew tiempo wewativo usando día como unidad. :3
+w-wtf.fowmattopawts(-1, ( ͡o ω ͡o ) "day");
+// > [{ t-type: "witewaw", mya v-vawue: "ayew"}]
 
-rtf.formatToParts(100, "day");
-// > [{ type: "literal", value: "Dentro de " },
-// >  { type: "integer", value: "100", unit: "day" },
-// >  { type: "literal", value: " días" }]
+w-wtf.fowmattopawts(100, (///ˬ///✿) "day");
+// > [{ t-type: "witewaw", (˘ω˘) vawue: "dentwo de " }, ^^;;
+// >  { type: "integew", (✿oωo) v-vawue: "100", (U ﹏ U) unit: "day" }, -.-
+// >  { type: "witewaw", ^•ﻌ•^ vawue: " días" }]
 ```
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## vew también
 
-- [The Intl.RelativeTimeFormat API](https://developers.google.com/web/updates/2018/10/intl-relativetimeformat)
+- [the intw.wewativetimefowmat a-api](https://devewopews.googwe.com/web/updates/2018/10/intw-wewativetimefowmat)

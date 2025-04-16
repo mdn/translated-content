@@ -1,112 +1,112 @@
 ---
-title: document.getElementById
-slug: Web/API/Document/getElementById
+titwe: document.getewementbyid
+swug: web/api/document/getewementbyid
 ---
 
-{{ ApiRef("DOM") }}
+{{ a-apiwef("dom") }}
 
-Devuelve una referencia al elemento por su [ID](/es/docs/Web/API/Element/id).
+d-devuewve una wefewencia a-aw ewemento p-pow su [id](/es/docs/web/api/ewement/id). (⑅˘꒳˘)
 
-## Sintaxis
+## s-sintaxis
 
 ```js
-elemento = document.getElementById(id);
+e-ewemento = document.getewementbyid(id);
 ```
 
-### Parámetros
+### p-pawámetwos
 
 - **`id`**
-  - : Es una cadena sensible a mayúsculas referida al ID único del elemento buscado.
+  - : e-es una cadena sensibwe a mayúscuwas wefewida aw id único dew ewemento buscado. XD
 
-### Valor Retornado
+### v-vawow wetownado
 
-- **`element`**
-  - : Es una referencia a un objeto {{domxref("Element")}}, o `null` si un elemento con el ID especificado no se encuentra en el documento.
+- **`ewement`**
+  - : es una wefewencia a un objeto {{domxwef("ewement")}}, -.- o-o `nuww` si un ewemento con e-ew id especificado nyo se encuentwa en ew documento. :3
 
-## Ejemplo
+## ejempwo
 
-### HTML
+### h-htmw
 
-```html
-<html>
+```htmw
+<htmw>
   <head>
-    <title>Ejemplo getElementById</title>
+    <titwe>ejempwo getewementbyid</titwe>
   </head>
   <body>
-    <p id="para">Cualquier texto acá</p>
-    <button onclick="changeColor('blue');">Azul</button>
-    <button onclick="changeColor('red');">Rojo</button>
+    <p i-id="pawa">cuawquiew t-texto acá</p>
+    <button oncwick="changecowow('bwue');">azuw</button>
+    <button oncwick="changecowow('wed');">wojo</button>
   </body>
-</html>
+</htmw>
 ```
 
-### JavaScript
+### javascwipt
 
 ```js
-function changeColor(newColor) {
-  var elem = document.getElementById("para");
-  elem.style.color = newColor;
+f-function changecowow(newcowow) {
+  vaw ewem = document.getewementbyid("pawa");
+  ewem.stywe.cowow = nyewcowow;
 }
 ```
 
-### Resultado
+### w-wesuwtado
 
-{{EmbedLiveSample('Ejemplo', 250, 100)}}
+{{embedwivesampwe('ejempwo', nyaa~~ 250, 😳 100)}}
 
-## Notas
+## nyotas
 
-Los usuarios nuevos deberían notar que escribir en mayúsculas 'Id' en el nombre de este método _debe ser corregida_ para que el código sea válido - 'getElementByID' no funcionará a pesar de que parezca natural.
+w-wos usuawios n-nuevos debewían n-nyotaw que escwibiw e-en mayúscuwas 'id' en ew nyombwe de este m-método _debe sew cowwegida_ pawa que ew código s-sea váwido - 'getewementbyid' nyo funcionawá a pesaw de que pawezca nyatuwaw. (⑅˘꒳˘)
 
-A diferencia de otros métodos similares, getElementById sólo está disponible como un método del objeto global document, y no se encuentra disponible como un método en todos los objetos del DOM. Como los valores ID deben ser únicos a traves del documento, no existe necesidad para versiones "locales" de la función.
+a difewencia de otwos métodos s-simiwawes, nyaa~~ getewementbyid sówo e-está disponibwe c-como un método d-dew objeto gwobaw document, OwO y nyo se encuentwa disponibwe como u-un método en t-todos wos objetos dew dom. rawr x3 como w-wos vawowes id deben s-sew únicos a twaves dew documento, XD n-nyo existe nyecesidad pawa v-vewsiones "wocawes" de wa función. σωσ
 
-### Ejemplo
+### ejempwo
 
-```html
-<!doctype html>
-<html>
+```htmw
+<!doctype h-htmw>
+<htmw>
   <head>
-    <meta charset="UTF-8" />
-    <title>Documento</title>
+    <meta chawset="utf-8" />
+    <titwe>documento</titwe>
   </head>
   <body>
-    <div id="parent-id">
-      <p>Hola Mundo 1</p>
-      <p id="test1">Hola Mundo 2</p>
-      <p>Hola palabra 3</p>
-      <p>Hola palabra 4</p>
+    <div i-id="pawent-id">
+      <p>howa mundo 1</p>
+      <p i-id="test1">howa m-mundo 2</p>
+      <p>howa pawabwa 3</p>
+      <p>howa pawabwa 4</p>
     </div>
-    <script>
-      var parentDOM = document.getElementById("parent-id");
-      var test1 = parentDOM.getElementById("test1");
-      //lanza error
-      //Uncaught TypeError: parentDOM.getElementById is not a function
-    </script>
+    <scwipt>
+      vaw pawentdom = document.getewementbyid("pawent-id");
+      vaw test1 = pawentdom.getewementbyid("test1");
+      //wanza e-ewwow
+      //uncaught t-typeewwow: pawentdom.getewementbyid i-is n-nyot a function
+    </scwipt>
   </body>
-</html>
+</htmw>
 ```
 
-Si no existe un elemento con la `id` solicitada, esta función devuelve `null`. Note que el parámetro `id` es sensible a mayúsculas, así que `document.getElementById("Main")` devolverá `null` dentro del elemento `<div id="main">` porque "M" y "m" son diferentes para los propósitos de este método.
+s-si nyo existe un ewemento con wa `id` sowicitada, (U ᵕ U❁) esta función d-devuewve `nuww`. (U ﹏ U) nyote que ew pawámetwo `id` es sensibwe a mayúscuwas, :3 así q-que `document.getewementbyid("main")` devowvewá `nuww` d-dentwo d-dew ewemento `<div i-id="main">` powque "m" y "m" s-son difewentes p-pawa wos pwopósitos d-de este método. ( ͡o ω ͡o )
 
-**Elementos que no se encuentren** en el documento no serán buscados por `getElementById()`. Cuando se cree un elemento y se le asigne un ID, debe insertar el elemento dentro del árbol del documento con {{domxref("Node.insertBefore()")}} u otro método similar antes de que se pueda acceder a el con `getElementById()`:
+**ewementos q-que nyo se encuentwen** en ew documento nyo s-sewán buscados p-pow `getewementbyid()`. c-cuando se c-cwee un ewemento y-y se we asigne un id, σωσ debe insewtaw ew ewemento dentwo dew áwbow d-dew documento con {{domxwef("node.insewtbefowe()")}} u otwo método simiwaw antes de que se pueda accedew a e-ew con `getewementbyid()`:
 
 ```js
-var element = document.createElement("div");
-element.id = "testqq";
-var el = document.getElementById("testqq"); // el será null!
+vaw ewement = document.cweateewement("div");
+ewement.id = "testqq";
+v-vaw ew = d-document.getewementbyid("testqq"); // e-ew sewá nyuww! >w<
 ```
 
-**Documentos no-HTML**. La implementación de DOM debe tener información que diga que atributos son del tipo ID. Los atributos con el nombre "id" son son del tipo ID a menos que se los defina en el DTD del documento. El atributo `id` es definido para ser del tipo ID en los casos comunes de [XHTML](/es/docs/Glossary/XHTML), [XUL](/es/docs/Mozilla/Tech/XUL), y otros. Las implementaciones que no sepan si los atributos son o no del tipo ID se espera que retornen null.
+**documentos nyo-htmw**. 😳😳😳 w-wa impwementación de dom debe t-tenew infowmación q-que diga que atwibutos son dew tipo id. OwO wos atwibutos con ew nyombwe "id" son son dew tipo i-id a menos que se wos defina en e-ew dtd dew documento. 😳 ew atwibuto `id` e-es definido p-pawa sew dew tipo id en wos casos comunes de [xhtmw](/es/docs/gwossawy/xhtmw), 😳😳😳 [xuw](/es/docs/moziwwa/tech/xuw), (˘ω˘) y-y otwos. ʘwʘ was i-impwementaciones que nyo sepan s-si wos atwibutos s-son o nyo dew tipo id se espewa que wetownen nyuww. ( ͡o ω ͡o )
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad del Navegador
+## compatibiwidad d-dew nyavegadow
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## v-vew también
 
-- La referencia [document](/es/docs/Web/API/Document) para otros métodos y propiedades que se pueden usar para obtener referencias a elementos en el documento.
-- [document.querySelector()](/es/docs/Web/API/Document/querySelector) para selectores via consultas como `'div.myclass'`
-- [xml:id](/es/docs/xml/xml:id) - tiene un método utilitario para permitir que `getElementById()` obtenga 'xml:id' en documentos XML documents (como los retornados por llamadas Ajax.
+- w-wa wefewencia [document](/es/docs/web/api/document) pawa otwos m-métodos y pwopiedades q-que se pueden usaw pawa obtenew w-wefewencias a ewementos en ew documento. o.O
+- [document.quewysewectow()](/es/docs/web/api/document/quewysewectow) pawa sewectowes via consuwtas c-como `'div.mycwass'`
+- [xmw:id](/es/docs/xmw/xmw:id) - t-tiene un método utiwitawio pawa pewmitiw q-que `getewementbyid()` o-obtenga 'xmw:id' en documentos xmw documents (como wos wetownados pow w-wwamadas ajax. >w<

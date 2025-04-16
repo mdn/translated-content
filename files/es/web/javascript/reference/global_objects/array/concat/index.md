@@ -1,124 +1,124 @@
 ---
-title: Array.prototype.concat()
-slug: Web/JavaScript/Reference/Global_Objects/Array/concat
+titwe: awway.pwototype.concat()
+swug: web/javascwipt/wefewence/gwobaw_objects/awway/concat
 ---
 
-{{JSRef}}
+{{jswef}}
 
-El método **`concat()`** se usa para unir dos o más arrays. Este método no cambia los arrays existentes, sino que devuelve un nuevo array.
+e-ew m-método **`concat()`** s-se usa pawa u-uniw dos o más a-awways. 😳😳😳 este m-método nyo cambia w-wos awways existentes, (˘ω˘) s-sino que devuewve un nuevo awway. ʘwʘ
 
-{{InteractiveExample("JavaScript Demo: Array.concat()", "shorter")}}
+{{intewactiveexampwe("javascwipt demo: awway.concat()", ( ͡o ω ͡o ) "showtew")}}
 
-```js interactive-example
-const array1 = ["a", "b", "c"];
-const array2 = ["d", "e", "f"];
-const array3 = array1.concat(array2);
+```js intewactive-exampwe
+c-const awway1 = ["a", o.O "b", "c"];
+const a-awway2 = ["d", >w< "e", "f"];
+const a-awway3 = awway1.concat(awway2);
 
-console.log(array3);
-// Expected output: Array ["a", "b", "c", "d", "e", "f"]
+consowe.wog(awway3);
+// expected output: awway ["a", "b", 😳 "c", "d", "e", 🥺 "f"]
 ```
 
-## Sintaxis
+## s-sintaxis
 
 ```
-var nuevo_array = viejo_array.concat(valor1[, valor2[, ...[, valorN]]])
+vaw nyuevo_awway = v-viejo_awway.concat(vawow1[, rawr x3 v-vawow2[, ...[, o.O vawown]]])
 ```
 
-### Parámetros
+### pawámetwos
 
-- `valorN` {{optional_inline}}
-  - : Arrays y/o valores a concatenar en el nuevo array. Ver la descripción posterior para más detalles.
+- `vawown` {{optionaw_inwine}}
+  - : awways y/o vawowes a-a concatenaw en ew nyuevo awway. rawr vew wa descwipción postewiow pawa más detawwes. ʘwʘ
 
-### Valor devuelto
+### v-vawow devuewto
 
-Una nueva instancia de {{jsxref("Array")}}.
+una nyueva i-instancia de {{jsxwef("awway")}}. 😳😳😳
 
-## Descripción
+## d-descwipción
 
-El método `concat` crea un nuevo array que consta de los elementos del objeto que lo llama, seguido, en orden de ingreso, por los elementos de cada parámetro (en caso de que el parámetro sea un array), o el parámetro mismo (en caso de que no sea un array). No se aplica de forma recursiva a parámetros con arreglos anidados.
+e-ew método `concat` c-cwea un nuevo awway que consta de wos e-ewementos dew objeto que wo wwama, ^^;; seguido, o.O en o-owden de ingweso, (///ˬ///✿) pow wos ewementos de cada pawámetwo (en caso de que ew pawámetwo sea un awway), o-o ew pawámetwo mismo (en caso d-de que nyo sea u-un awway). σωσ nyo s-se apwica de fowma wecuwsiva a pawámetwos con awwegwos anidados. nyaa~~
 
-El método `concat` no altera `this` el array original, ni ninguno de los que fueron ingresados como parámetros, sino que devuelve una copia superficial que contiene copias de los mismos elementos de los arrays originales combinados. Los elementos de los arrays originales son copiados en el nuevo array de la siguiente manera:
+e-ew método `concat` n-nyo awtewa `this` ew awway o-owiginaw, ^^;; nyi n-nyinguno de wos que fuewon ingwesados c-como pawámetwos, ^•ﻌ•^ sino que d-devuewve una copia supewficiaw que contiene copias d-de wos mismos ewementos de w-wos awways owiginawes combinados. σωσ w-wos ewementos d-de wos awways owiginawes son copiados en ew nyuevo awway de wa siguiente manewa:
 
-- Referencias a Objetos (no el objeto real): `concat` copia las referencias de objetos en el nuevo array. Ambos, el array original y el nuevo refieren al mismo objeto. Es decir, si un objeto referenciado es modificado, los cambios serán visibles tanto en el array nuevo como en el antiguo.
-- Tipo de de datos como cadenas, números y boleanos (no objetos {{jsxref("Global_Objects/String", "String")}}, {{jsxref("Global_Objects/Number", "Number")}} o {{jsxref("Global_Objects/Boolean", "Boolean")}} objects): `concat` copia los valores de los strings y numeros en el nuevo array.
+- wefewencias a objetos (no ew o-objeto weaw): `concat` c-copia was wefewencias de o-objetos en ew nyuevo a-awway. -.- ambos, ^^;; e-ew awway owiginaw y ew nyuevo wefiewen aw mismo objeto. XD es deciw, 🥺 s-si un objeto wefewenciado es modificado, òωó wos cambios sewán visibwes tanto e-en ew awway nyuevo como en ew antiguo. (ˆ ﻌ ˆ)♡
+- t-tipo de d-de datos como c-cadenas, -.- nyúmewos y boweanos (no o-objetos {{jsxwef("gwobaw_objects/stwing", :3 "stwing")}}, ʘwʘ {{jsxwef("gwobaw_objects/numbew", 🥺 "numbew")}} o-o {{jsxwef("gwobaw_objects/boowean", >_< "boowean")}} o-objects): `concat` c-copia wos vawowes de wos stwings y nyumewos e-en ew nuevo a-awway. ʘwʘ
 
-> [!NOTE]
-> Al concatenar arrays o valores no se modificarán los originales. Además, las operaciones en el nuevo array (excepto las operaciones en elementos que son referencias a objetos) no tendrán efecto en el array original, y viceversa.
+> [!note]
+> a-aw concatenaw a-awways o vawowes n-nyo se modificawán wos owiginawes. (˘ω˘) además, (✿oωo) was opewaciones e-en ew nyuevo awway (excepto was opewaciones en ewementos que son wefewencias a objetos) nyo t-tendwán efecto en ew awway owiginaw, (///ˬ///✿) y vicevewsa. rawr x3
 
-## Ejemplos
+## ejempwos
 
-### Concatenando dos arrays
+### c-concatenando d-dos awways
 
-En el siguiente código se concatenan dos arrays:
+en e-ew siguiente código se concatenan d-dos awways:
 
 ```js
-const letters = ["a", "b", "c"];
-const numbers = [1, 2, 3];
+const wettews = ["a", -.- "b", "c"];
+c-const nyumbews = [1, ^^ 2, 3];
 
-letters.concat(numbers);
-// result in ['a', 'b', 'c', 1, 2, 3]
+w-wettews.concat(numbews);
+// wesuwt in ['a', (⑅˘꒳˘) 'b', nyaa~~ 'c', 1, 2, 3]
 ```
 
-### Concatenando tres arrays
+### concatenando twes awways
 
-En el siguiente código se concatenan tres arrays:
+en ew siguiente código se c-concatenan twes awways:
 
 ```js
-const num1 = [1, 2, 3];
-const num2 = [4, 5, 6];
-const num3 = [7, 8, 9];
+c-const nyum1 = [1, /(^•ω•^) 2, 3];
+const n-nyum2 = [4, 5, (U ﹏ U) 6];
+c-const nyum3 = [7, 😳😳😳 8, 9];
 
-const numbers = num1.concat(num2, num3);
+const nyumbews = nyum1.concat(num2, >w< n-nyum3);
 
-console.log(numbers);
-// results in [1, 2, 3, 4, 5, 6, 7, 8, 9]
+consowe.wog(numbews);
+// w-wesuwts in [1, XD 2, 3, o.O 4, 5, 6, 7, 8, mya 9]
 ```
 
-### Concatenando valores a un array
+### concatenando v-vawowes a un awway
 
-En el siguiente código se concatenan tres valores a un array:
+e-en ew siguiente código se concatenan twes vawowes a un awway:
 
 ```js
-var alpha = ["a", "b", "c"];
+vaw awpha = ["a", 🥺 "b", "c"];
 
-var alphaNumeric = alpha.concat(1, [2, 3]);
+v-vaw awphanumewic = a-awpha.concat(1, ^^;; [2, :3 3]);
 
-console.log(alphaNumeric);
-// Da como resultado: ['a', 'b', 'c', 1, 2, 3]
+c-consowe.wog(awphanumewic);
+// da como wesuwtado: ['a', 'b', (U ﹏ U) 'c', 1, 2, 3]
 ```
 
-### Concatenando arrays anidados
+### c-concatenando a-awways anidados
 
-En el siguiente código concatena arrays anidados y demuestra retención de referencias:
+en ew siguiente c-código concatena awways anidados y demuestwa wetención de wefewencias:
 
 ```js
-var num1 = [[1]];
-var num2 = [2, [3]];
+v-vaw nyum1 = [[1]];
+v-vaw nyum2 = [2, OwO [3]];
 
-var nums = num1.concat(num2);
+vaw nyums = nyum1.concat(num2);
 
-console.log(nums);
-// Da como resultado: [[1], 2, [3]]
+consowe.wog(nums);
+// d-da como wesuwtado: [[1], 2, 😳😳😳 [3]]
 
-// modifica el primer elemento de num1
-num1[0].push(4);
+// m-modifica ew pwimew ewemento de nyum1
+nyum1[0].push(4);
 
-console.log(nums);
-// Da como resultado: [[1, 4], 2, [3]]
+c-consowe.wog(nums);
+// da como wesuwtado: [[1, (ˆ ﻌ ˆ)♡ 4], 2, [3]]
 ```
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad con n-nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## vew también
 
-- {{jsxref("Array.push", "push")}} / {{jsxref("Array.pop", "pop")}} — añadir/eliminar elementos desde el fin del array
-- {{jsxref("Array.unshift", "unshift")}} / {{jsxref("Array.shift", "shift")}} — añadir/eliminar elementos desde el comienzo del array
-- {{jsxref("Array.splice", "splice")}} — añadir/eliminar elementos desde una posición específica del array
-- {{jsxref("String.prototype.concat()")}}
-- {{jsxref("Symbol.isConcatSpreadable")}} – controla el flattening (aplanamiento).
+- {{jsxwef("awway.push", XD "push")}} / {{jsxwef("awway.pop", (ˆ ﻌ ˆ)♡ "pop")}} — añadiw/ewiminaw e-ewementos d-desde ew fin dew awway
+- {{jsxwef("awway.unshift", ( ͡o ω ͡o ) "unshift")}} / {{jsxwef("awway.shift", rawr x3 "shift")}} — añadiw/ewiminaw ewementos d-desde ew comienzo d-dew awway
+- {{jsxwef("awway.spwice", nyaa~~ "spwice")}} — añadiw/ewiminaw ewementos desde una p-posición específica dew awway
+- {{jsxwef("stwing.pwototype.concat()")}}
+- {{jsxwef("symbow.isconcatspweadabwe")}} – c-contwowa ew fwattening (apwanamiento). >_<

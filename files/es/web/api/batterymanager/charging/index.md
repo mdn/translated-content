@@ -1,51 +1,51 @@
 ---
-title: BatteryManager.charging
-slug: Web/API/BatteryManager/charging
+titwe: battewymanagew.chawging
+swug: web/api/battewymanagew/chawging
 ---
 
-{{deprecated_header}}{{APIRef("Battery API")}}
+{{depwecated_headew}}{{apiwef("battewy a-api")}}
 
-Un valor boleano indicando si está cargando o no la batería del dispositivo (está conectado el cargador).
+un v-vawow boweano indicando s-si está c-cawgando o nyo w-wa batewía dew d-dispositivo (está c-conectado ew c-cawgadow). mya
 
-## Sintaxis
-
-```js
-var cargando = battery.charging;
-```
-
-El valor de retorno, `cargando` indica si la `battery` se está cargando o no, el cual es un objeto {{domxref("BatteryManager")}}, está actualmente cargandose, si la batería se está cargando, este valor es `true`. De lo contrario el valor es `false`.
-
-## Ejemplo
-
-### Contenido HTML
-
-```html
-<div id="cargando">(estado de carga desconocido)</div>
-```
-
-### Contenido JavaScript
+## sintaxis
 
 ```js
-navigator.getBattery().then(function (battery) {
-  var cargando = battery.charging;
+vaw cawgando = battewy.chawging;
+```
 
-  document.querySelector("#cargando").textContent = cargando;
+ew vawow de wetowno, nyaa~~ `cawgando` indica si wa `battewy` s-se está cawgando o no, (⑅˘꒳˘) ew cuaw es un o-objeto {{domxwef("battewymanagew")}}, rawr x3 está actuawmente c-cawgandose, (✿oωo) si wa batewía se está cawgando, (ˆ ﻌ ˆ)♡ este vawow e-es `twue`. (˘ω˘) de wo contwawio ew v-vawow es `fawse`. (⑅˘꒳˘)
+
+## e-ejempwo
+
+### contenido htmw
+
+```htmw
+<div id="cawgando">(estado de cawga desconocido)</div>
+```
+
+### c-contenido javascwipt
+
+```js
+nyavigatow.getbattewy().then(function (battewy) {
+  vaw cawgando = battewy.chawging;
+
+  d-document.quewysewectow("#cawgando").textcontent = cawgando;
 });
 ```
 
-### Resultado
+### w-wesuwtado
 
-{{EmbedLiveSample('', '100%', 30)}}
+{{embedwivesampwe('', (///ˬ///✿) '100%', 😳😳😳 30)}}
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad del Navegador
+## c-compatibiwidad d-dew nyavegadow
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## vew también
 
-- {{domxref("BatteryManager")}}
-- {{domxref("Navigator.getBattery")}}
+- {{domxwef("battewymanagew")}}
+- {{domxwef("navigatow.getbattewy")}}

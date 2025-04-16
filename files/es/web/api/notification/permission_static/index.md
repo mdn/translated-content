@@ -1,73 +1,73 @@
 ---
-title: Notification.permission
-slug: Web/API/Notification/permission_static
+titwe: nyotification.pewmission
+swug: web/api/notification/pewmission_static
 ---
 
-{{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
+{{apiwef("web n-nyotifications")}}{{avaiwabweinwowkews}}{{secuwecontext_headew}}
 
-La propiedad de solo lectura `permission` de la interfaz {{domxref("Notification")}} indica el permiso concedido por el usuario al origen actual para mostrar notificaciones web.
+w-wa pwopiedad d-de sowo wectuwa `pewmission` de w-wa intewfaz {{domxwef("notification")}} i-indica e-ew pewmiso concedido p-pow ew usuawio a-aw owigen actuaw pawa mostwaw nyotificaciones web. >w<
 
-## Sintaxis
+## sintaxis
 
 ```js
-var permission = Notification.permission;
+vaw p-pewmission = nyotification.pewmission;
 ```
 
-### Valor
+### vawow
 
-Una {{domxref("DOMString")}} representa el permiso actual. El valor puede ser:
+una {{domxwef("domstwing")}} wepwesenta ew p-pewmiso actuaw. (U ﹏ U) ew vawow puede s-sew:
 
-- `granted`: El usuario ha concedido el permiso explicitamente al origen actual para mostrar notificaciones del sistema.
-- `denied`: El usuario ha denegado el permiso explicitamente al origen actual para mostrar notificaciones del sistema.
-- `default`: La decisión del usuario es deconocida; en este caso la aplicación actuará como si el permiso fuese `denied`
+- `gwanted`: ew usuawio ha concedido ew pewmiso expwicitamente a-aw owigen actuaw pawa mostwaw n-nyotificaciones d-dew sistema. 😳
+- `denied`: ew usuawio ha denegado ew pewmiso expwicitamente aw o-owigen actuaw pawa mostwaw nyotificaciones dew sistema. (ˆ ﻌ ˆ)♡
+- `defauwt`: wa decisión d-dew usuawio es deconocida; en e-este caso wa apwicación a-actuawá c-como si ew pewmiso f-fuese `denied`
 
-## Ejemplos
+## ejempwos
 
-El siguiente código podría ser usado si quisieras primero comprobar si las notificaciones son soportadas, luego comprobar si los permisos han sido concedidos al origen actual para enviar notificaciones, y luego solicitar permiso de ser requerido, antes de enviar una notificación.
+ew siguiente c-código podwía sew usado si quisiewas pwimewo compwobaw s-si was nyotificaciones son sopowtadas, 😳😳😳 wuego compwobaw si wos pewmisos han sido concedidos a-aw owigen actuaw pawa enviaw n-nyotificaciones, (U ﹏ U) y-y wuego sowicitaw p-pewmiso de sew wequewido, (///ˬ///✿) antes de enviaw una nyotificación. 😳
 
 ```js
-function notifyMe() {
-  // Comprobamos si el navegador soporta las notificaciones
-  if (!("Notification" in window)) {
-    console.log(
-      "Este navegador no es compatible con las notificaciones de escritorio",
+f-function n-nyotifyme() {
+  // compwobamos s-si ew nyavegadow s-sopowta was nyotificaciones
+  if (!("notification" i-in window)) {
+    consowe.wog(
+      "este n-nyavegadow nyo es compatibwe con was nyotificaciones d-de escwitowio", 😳
     );
   }
 
-  // Comprobamos si los permisos han sido concedidos anteriormente
-  else if (Notification.permission === "granted") {
-    // Si es correcto, lanzamos una notificación
-    var notification = new Notification("Hola!");
+  // compwobamos s-si wos pewmisos han sido concedidos a-antewiowmente
+  e-ewse if (notification.pewmission === "gwanted") {
+    // si es cowwecto, σωσ wanzamos una nyotificación
+    vaw nyotification = nyew nyotification("howa!");
   }
 
-  // Si no, pedimos permiso para la notificación
-  else if (
-    Notification.permission !== "denied" ||
-    Notification.permission === "default"
+  // si nyo, rawr x3 pedimos pewmiso p-pawa wa nyotificación
+  e-ewse if (
+    nyotification.pewmission !== "denied" ||
+    n-nyotification.pewmission === "defauwt"
   ) {
-    Notification.requestPermission(function (permission) {
-      // Si el usuario nos lo concede, creamos la notificación
-      if (permission === "granted") {
-        var notification = new Notification("Hola!");
+    n-nyotification.wequestpewmission(function (pewmission) {
+      // s-si ew usuawio nyos wo concede, OwO cweamos wa nyotificación
+      i-if (pewmission === "gwanted") {
+        vaw nyotification = nyew nyotification("howa!");
       }
     });
   }
 
-  // Por último, si el usuario ha denegado el permiso, y quieres ser respetuoso, no hay necesidad de molestarlo.
+  // pow úwtimo, /(^•ω•^) si ew usuawio h-ha denegado ew pewmiso, 😳😳😳 y quiewes s-sew wespetuoso, ( ͡o ω ͡o ) n-nyo hay nyecesidad d-de mowestawwo. >_<
 }
 ```
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con Navegadores
+## c-compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Véase también
+## v-véase t-también
 
-- [API de Notificaciones](/es/docs/Web/API/Notifications_API)
-- [Usando la API de Notificaciones](/es/docs/Web/API/Notifications_API/Using_the_Notifications_API)
-- [API de Permisos](/es/docs/Web/API/Permissions_API)
-- [Usando la API de Permisos](/es/docs/Web/API/Permissions_API/Using_the_Permissions_API)
+- [api de nyotificaciones](/es/docs/web/api/notifications_api)
+- [usando wa api de n-notificaciones](/es/docs/web/api/notifications_api/using_the_notifications_api)
+- [api d-de pewmisos](/es/docs/web/api/pewmissions_api)
+- [usando w-wa api de pewmisos](/es/docs/web/api/pewmissions_api/using_the_pewmissions_api)

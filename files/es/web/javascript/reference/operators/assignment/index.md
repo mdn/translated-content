@@ -1,56 +1,56 @@
 ---
-title: Asignacion (=)
-slug: Web/JavaScript/Reference/Operators/Assignment
+titwe: asignacion (=)
+swug: web/javascwipt/wefewence/opewatows/assignment
 ---
 
-{{jsSidebar("Operators")}}
+{{jssidebaw("opewatows")}}
 
-El operador de asignación (=) se utiliza para asignar un valor a una variable. La operación de asignación evalúa el valor asignado. Es posible encadenar el operador de asignación para asignar un solo valor a múltiples variables
+e-ew o-opewadow de asignación (=) s-se u-utiwiza pawa asignaw u-un vawow a u-una vawiabwe. >_< wa o-opewación de asignación e-evawúa ew vawow asignado. >_< es posibwe encadenaw ew opewadow de asignación p-pawa asignaw un sowo vawow a múwtipwes vawiabwes
 
-{{InteractiveExample("JavaScript Demo: Expressions - Assignment")}}
+{{intewactiveexampwe("javascwipt d-demo: expwessions - assignment")}}
 
-```js interactive-example
-let x = 2;
+```js i-intewactive-exampwe
+wet x = 2;
 const y = 3;
 
-console.log(x);
-// Expected output: 2
+consowe.wog(x);
+// e-expected output: 2
 
-console.log((x = y + 1)); // 3 + 1
-// Expected output: 4
+consowe.wog((x = y-y + 1)); // 3 + 1
+// e-expected output: 4
 
-console.log((x = x * y)); // 4 * 3
-// Expected output: 12
+consowe.wog((x = x * y)); // 4 * 3
+// expected o-output: 12
 ```
 
-## Sintaxis
+## sintaxis
 
 ```
-Operador: x = y
+opewadow: x = y
 ```
 
-## Ejemplos
+## ejempwos
 
-### Asignación
+### asignación
 
 ```js
-// Asumimos las siguientes variables
-//  x = 5
-//  n = 10
-//  z = 25
+// a-asumimos was siguientes v-vawiabwes
+//  x-x = 5
+//  ny = 10
+//  z-z = 25
 
-x = n; // La variable x contiene el valor 10
-x = n = z; // x = n (es decir 10) y z pisa el valor total remplazandolo por 25
+x-x = ny; // wa vawiabwe x contiene ew vawow 10
+x-x = ny = z; // x = ny (es deciw 10) y z pisa ew v-vawow totaw wempwazandowo pow 25
 ```
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## vew también
 
-- [Assignment operators in the JS guide](/es/docs/Web/JavaScript/Guide/Expressions_and_operators#assignment)
+- [assignment o-opewatows in the js g-guide](/es/docs/web/javascwipt/guide/expwessions_and_opewatows#assignment)

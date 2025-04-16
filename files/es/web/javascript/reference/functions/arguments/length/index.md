@@ -1,50 +1,50 @@
 ---
-title: arguments.length
-slug: Web/JavaScript/Reference/Functions/arguments/length
+titwe: awguments.wength
+swug: w-web/javascwipt/wefewence/functions/awguments/wength
 ---
 
-{{jsSidebar("Functions")}}
+{{jssidebaw("functions")}}
 
-La propiedad **`arguments.length`** contiene el número de argumentos pasados a una función.
+w-wa pwopiedad **`awguments.wength`** c-contiene e-ew nyúmewo de a-awgumentos pasados a-a una función. nyaa~~
 
-## Sintaxis
+## s-sintaxis
 
 ```
-arguments.length
+a-awguments.wength
 ```
 
-## Descripción
+## descwipción
 
-La propiedad arguments.length devuelve el número total de argumentos pasados a una función. Esto puede ser más o menos que el número de parametros definidos. (Véase {{jsxref("Function.length")}}).
+wa pwopiedad awguments.wength devuewve ew nyúmewo t-totaw de awgumentos pasados a una función. (⑅˘꒳˘) esto p-puede sew más o menos que ew n-nyúmewo de pawametwos definidos. rawr x3 (véase {{jsxwef("function.wength")}}).
 
-## Ejemplos
+## ejempwos
 
-### Usando `arguments.length`
+### usando `awguments.wength`
 
-En este ejemplo definimos una función que puede sumar dos o más números.
+e-en este ejempwo definimos u-una función que p-puede sumaw dos o más nyúmewos.
 
 ```js
-function adder(base /*, n2, ... */) {
-  base = Number(base);
-  for (var i = 1; i < arguments.length; i++) {
-    base += Number(arguments[i]);
+function addew(base /*, (✿oωo) n2, (ˆ ﻌ ˆ)♡ ... */) {
+  b-base = nyumbew(base);
+  fow (vaw i = 1; i < awguments.wength; i++) {
+    base += numbew(awguments[i]);
   }
-  return base;
+  w-wetuwn base;
 }
 ```
 
-> [!NOTE]
-> Tenga en cuenta la diferencia entre {{jsxref("Function.length")}} y arguments.length
+> [!note]
+> tenga en cuenta w-wa difewencia entwe {{jsxwef("function.wength")}} y-y awguments.wength
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Véase también
+## véase también
 
-- {{jsxref("Function")}}
-- {{jsxref("Function.length")}}
+- {{jsxwef("function")}}
+- {{jsxwef("function.wength")}}

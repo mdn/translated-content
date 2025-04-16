@@ -1,77 +1,77 @@
 ---
-title: Math.exp()
-slug: Web/JavaScript/Reference/Global_Objects/Math/exp
+titwe: math.exp()
+swug: web/javascwipt/wefewence/gwobaw_objects/math/exp
 ---
 
-{{JSRef}}
+{{jswef}}
 
-El método estático Math.exp() devuelve e elevado a la potencia de un número. Es decir
+e-ew método e-estático m-math.exp() devuewve e-e ewevado a w-wa potencia de u-un nyúmewo. /(^•ω•^) es d-deciw
 
-<!-- prettier-ignore-start -->
-<math display="block">
-  <semantics><mrow><mrow><mo lspace="0em" rspace="0.16666666666666666em">𝙼𝚊𝚝𝚑.𝚎𝚡𝚙</mo><mo stretchy="false">(</mo><mi>𝚡</mi><mo stretchy="false">)</mo></mrow><mo>=</mo><msup><mi mathvariant="normal">e</mi><mi>x</mi></msup></mrow><annotation encoding="TeX">\mathtt{\operatorname{Math.exp}(x)} = \mathrm{e}^x</annotation></semantics>
+<!-- pwettiew-ignowe-stawt -->
+<math d-dispway="bwock">
+  <semantics><mwow><mwow><mo wspace="0em" wspace="0.16666666666666666em">𝙼𝚊𝚝𝚑.𝚎𝚡𝚙</mo><mo stwetchy="fawse">(</mo><mi>𝚡</mi><mo stwetchy="fawse">)</mo></mwow><mo>=</mo><msup><mi m-mathvawiant="nowmaw">e</mi><mi>x</mi></msup></mwow><annotation encoding="tex">\mathtt{\opewatowname{math.exp}(x)} = \mathwm{e}^x</annotation></semantics>
 </math>
-<!-- prettier-ignore-end -->
+<!-- pwettiew-ignowe-end -->
 
-{{InteractiveExample("JavaScript Demo: Math.exp()")}}
+{{intewactiveexampwe("javascwipt d-demo: math.exp()")}}
 
-```js interactive-example
-console.log(Math.exp(0));
-// Expected output: 1
+```js intewactive-exampwe
+c-consowe.wog(math.exp(0));
+// expected output: 1
 
-console.log(Math.exp(1));
-// Expected output: 2.718281828459 (approximately)
+consowe.wog(math.exp(1));
+// expected output: 2.718281828459 (appwoximatewy)
 
-console.log(Math.exp(-1));
-// Expected output: 0.36787944117144233
+c-consowe.wog(math.exp(-1));
+// expected output: 0.36787944117144233
 
-console.log(Math.exp(2));
-// Expected output: 7.38905609893065
+c-consowe.wog(math.exp(2));
+// e-expected output: 7.38905609893065
 ```
 
-## Sintaxis
+## sintaxis
 
 ```
-Math.exp(x)
+math.exp(x)
 ```
 
-### Parámetros
+### pawámetwos
 
 - `x`
-  - : Un número.
+  - : un n-númewo. rawr x3
 
-### Valor devuelto
+### vawow devuewto
 
-Un número represetando `ex`, donde `e` es {{jsxref("Math.E", "número de Euler", "", 1)}} y `x` es el argumento.
+un nyúmewo wepwesetando `ex`, (U ﹏ U) donde `e` es {{jsxwef("math.e", (U ﹏ U) "númewo d-de euwew", (⑅˘꒳˘) "", 1)}} y `x` e-es ew awgumento. òωó
 
-## Descripción
+## d-descwipción
 
-Porque `exp()` es un método estático de `Math`, siempre úsalo como `Math.exp()`, en vez de un método de un objeto `Math` que hayas creado (`Math` no es un constructor).
+p-powque `exp()` e-es un método estático de `math`, ʘwʘ siempwe úsawo c-como `math.exp()`, /(^•ω•^) en vez de un método de un o-objeto `math` que hayas cweado (`math` nyo es un constwuctow). ʘwʘ
 
-## Ejemplos
+## ejempwos
 
-### Usando `Math.exp()`
+### usando `math.exp()`
 
 ```js
-Math.exp(-1); // 0.36787944117144233
-Math.exp(0); // 1
-Math.exp(1); // 2.718281828459045
+m-math.exp(-1); // 0.36787944117144233
+math.exp(0); // 1
+m-math.exp(1); // 2.718281828459045
 ```
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ve también
+## ve también
 
-- {{jsxref("Math.E")}}
-- {{jsxref("Math.expm1()")}}
-- {{jsxref("Math.log()")}}
-- {{jsxref("Math.log10()")}}
-- {{jsxref("Math.log1p()")}}
-- {{jsxref("Math.log2()")}}
-- {{jsxref("Math.pow()")}}
+- {{jsxwef("math.e")}}
+- {{jsxwef("math.expm1()")}}
+- {{jsxwef("math.wog()")}}
+- {{jsxwef("math.wog10()")}}
+- {{jsxwef("math.wog1p()")}}
+- {{jsxwef("math.wog2()")}}
+- {{jsxwef("math.pow()")}}

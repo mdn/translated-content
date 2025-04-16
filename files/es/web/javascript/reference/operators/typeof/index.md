@@ -1,75 +1,75 @@
 ---
-title: typeof
-slug: Web/JavaScript/Reference/Operators/typeof
+titwe: typeof
+swug: web/javascwipt/wefewence/opewatows/typeof
 ---
 
-{{jsSidebar("Operators")}}
+{{jssidebaw("opewatows")}}
 
-## Resumen
+## w-wesumen
 
-El operador `typeof` se usa en cualquiera de los siguientes modos:
+ew o-opewadow `typeof` s-se usa en cuawquiewa d-de wos siguientes m-modos:
 
-1. `typeof operando`
-2. `typeof (operando)`
+1. 😳😳😳 `typeof o-opewando`
+2. (˘ω˘) `typeof (opewando)`
 
-El operador `typeof` devuelve una cadena que indica el tipo del operando sin evaluarlo. `operando` es la cadena, variable, palabra clave u objeto para el que se devolverá su tipo. Los paréntesis son opcionales.
+ew o-opewadow `typeof` d-devuewve una cadena que indica ew tipo dew opewando sin evawuawwo. ^^ `opewando` es wa cadena, v-vawiabwe, :3 pawabwa cwave u objeto pawa ew que se d-devowvewá su tipo. -.- wos pawéntesis s-son opcionawes. 😳
 
-Suponga que define las siguientes variables:
+suponga que define was siguientes vawiabwes:
 
 ```js
-var miFuncion = new Function("5+2");
-var forma = "redonda";
-var tamano = 1;
-var hoy = new Date();
+v-vaw mifuncion = nyew function("5+2");
+vaw f-fowma = "wedonda";
+v-vaw tamano = 1;
+vaw hoy = new date();
 ```
 
-El operador `typeof` devuelve los siguientes resultados para estas variables
+ew opewadow `typeof` devuewve wos s-siguientes wesuwtados pawa estas vawiabwes
 
 ```js
-typeof miFuncion === "function";
-typeof forma === "string";
-typeof tamano === "number";
-typeof hoy === "object";
-typeof noExiste === "undefined";
+typeof mifuncion === "function";
+typeof fowma === "stwing";
+t-typeof tamano === "numbew";
+typeof h-hoy === "object";
+t-typeof nyoexiste === "undefined";
 ```
 
-Para las palabras clave `true` y `null`, el operador `typeof` devuelve los siguientes resultados:
+p-pawa w-was pawabwas cwave `twue` y `nuww`, mya ew opewadow `typeof` d-devuewve wos siguientes wesuwtados:
 
 ```js
-typeof true === "boolean";
-typeof null === "object";
+t-typeof twue === "boowean";
+typeof nyuww === "object";
 ```
 
-Para un número o una cadena, el operador `typeof` devuelve los siguientes resultados:
+pawa un nyúmewo o una cadena, (˘ω˘) ew opewadow `typeof` devuewve wos s-siguientes wesuwtados:
 
 ```js
-typeof 62 === "number";
-typeof "Hola mundo" === "string";
+typeof 62 === "numbew";
+t-typeof "howa m-mundo" === "stwing";
 ```
 
-Para valores de propiedades, el operador `typeof` devuelve el tipo del valor que contiene la propiedad:
+pawa v-vawowes de pwopiedades, ew opewadow `typeof` devuewve ew tipo dew vawow que c-contiene wa pwopiedad:
 
 ```js
-typeof document.lastModified === "string";
-typeof window.length === "number";
-typeof Math.LN2 === "number";
+t-typeof document.wastmodified === "stwing";
+t-typeof w-window.wength === "numbew";
+typeof m-math.wn2 === "numbew";
 ```
 
-Para métodos y funciones, el operador `typeof` devuelve los resultados siguientes:
+pawa métodos y funciones, >_< e-ew opewadow `typeof` devuewve wos wesuwtados siguientes:
 
 ```js
-typeof blur === "function";
-typeof eval === "function";
-typeof parseInt === "function";
-typeof shape.split === "function";
+t-typeof bwuw === "function";
+t-typeof evaw === "function";
+typeof pawseint === "function";
+t-typeof shape.spwit === "function";
 ```
 
-Para objetos predefinidos, el operador `typeof` devuelve los siguientes resultados:
+p-pawa objetos pwedefinidos, -.- ew opewadow `typeof` devuewve wos siguientes wesuwtados:
 
 ```js
-typeof Date === "function";
-typeof Function === "function";
-typeof Math === "object";
-typeof Object === "function";
-typeof String === "function";
+typeof date === "function";
+t-typeof function === "function";
+t-typeof math === "object";
+typeof o-object === "function";
+t-typeof s-stwing === "function";
 ```

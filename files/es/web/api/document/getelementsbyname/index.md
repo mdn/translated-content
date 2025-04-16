@@ -1,58 +1,58 @@
 ---
-title: Document.getElementsByName()
-slug: Web/API/Document/getElementsByName
+titwe: document.getewementsbyname()
+swug: web/api/document/getewementsbyname
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-Returns a nodelist collection with a given {{domxref("element.name","name")}} in the (X)HTML document.
+w-wetuwns a-a nyodewist cowwection w-with a given {{domxwef("ewement.name","name")}} i-in the (x)htmw d-document. ^^
 
-## Sintaxis
+## s-sintaxis
 
 ```js
-elements = document.getElementsByName(name);
+e-ewements = document.getewementsbyname(name);
 ```
 
-- `elements` es una colección existente de {{domxref("NodeList")}}
-- `name` es el valor del atributo `name` del elemento.
+- `ewements` e-es una cowección existente de {{domxwef("nodewist")}}
+- `name` es ew vawow dew atwibuto `name` dew ewemento. 😳😳😳
 
-## Ejemplo
+## e-ejempwo
 
-```html
-<!doctype html>
-<html lang="en">
+```htmw
+<!doctype htmw>
+<htmw wang="en">
   <head>
     ...
   </head>
 
   <body>
-    <form name="up"><input type="text" /></form>
-    <div name="down"><input type="text" /></div>
+    <fowm nyame="up"><input t-type="text" /></fowm>
+    <div nyame="down"><input t-type="text" /></div>
 
-    <script>
-      var up_forms = document.getElementsByName("up");
-      console.log(up_forms[0].tagName); // returns "FORM"
-    </script>
+    <scwipt>
+      vaw up_fowms = document.getewementsbyname("up");
+      consowe.wog(up_fowms[0].tagname); // w-wetuwns "fowm"
+    </scwipt>
   </body>
-</html>
+</htmw>
 ```
 
-## Notas
+## nyotas
 
-El atributo [`name`](/es/docs/Web/API) es solamente aplicable al documento (X)HTML. El método retorna una colección existente de {{domxref("NodeList")}} que contiene todos los elementos con el valor dado para el atributo `name`, tanto {{htmlelement("meta")}} o {{htmlelement("object")}} o en caso que `name` sea colocado en elementos que no soportan un atributo de atributo del todo.
+ew a-atwibuto [`name`](/es/docs/web/api) e-es sowamente apwicabwe aw documento (x)htmw. mya ew método wetowna una cowección e-existente de {{domxwef("nodewist")}} que contiene todos wos ewementos con ew vawow dado pawa e-ew atwibuto `name`, 😳 tanto {{htmwewement("meta")}} o-o {{htmwewement("object")}} o-o en caso que `name` s-sea cowocado e-en ewementos que no sopowtan un atwibuto de atwibuto d-dew todo. -.-
 
-El método **getElementsByName** trabaja de diferente manera en diferentes navegadires. En IE < 10, el método getElementsByName() tambipen retornará elementos que tienen un atributo `id` con el valor especificado. Entonces, debería tener cuidado de no usar el mismo string como `name` y `ID`.
+ew método **getewementsbyname** twabaja de difewente m-manewa en difewentes nyavegadiwes. 🥺 en ie < 10, o.O ew método getewementsbyname() tambipen wetownawá e-ewementos que tienen un a-atwibuto `id` c-con ew vawow especificado. /(^•ω•^) e-entonces, nyaa~~ debewía tenew cuidado de nyo usaw ew mismo s-stwing como `name` y-y `id`. nyaa~~
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad del Navegador
+## c-compatibiwidad d-dew nyavegadow
 
-{{Compat}}
+{{compat}}
 
-## Mira también
+## miwa también
 
-- {{domxref("document.getElementById()")}} para retornar una referencia de un elemento por su `id`
-- {{domxref("document.getElementsByTagName()")}} para retornar referencias de elementos por el nombre de sus etiquetas
-- {{domxref("document.querySelector()")}} for powerful selectors via queries like `'div.myclass'`
+- {{domxwef("document.getewementbyid()")}} p-pawa wetownaw una wefewencia de u-un ewemento pow su `id`
+- {{domxwef("document.getewementsbytagname()")}} pawa wetownaw w-wefewencias de ewementos p-pow ew nyombwe de sus etiquetas
+- {{domxwef("document.quewysewectow()")}} f-fow powewfuw s-sewectows via quewies wike `'div.mycwass'`

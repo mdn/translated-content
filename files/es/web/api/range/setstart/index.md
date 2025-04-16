@@ -1,48 +1,48 @@
 ---
-title: Range.setStart()
-slug: Web/API/Range/setStart
+titwe: wange.setstawt()
+swug: w-web/api/wange/setstawt
 ---
 
-{{ApiRef("DOM")}}
+{{apiwef("dom")}}
 
-El método **`Range.setStart()`** establece la posición de inicio de un {{ domxref("Range") }}.
+e-ew método **`wange.setstawt()`** e-estabwece wa posición d-de inicio d-de un {{ domxwef("wange") }}. rawr
 
-Si `startNode` es un {{ domxref("Node") }} de tipo `Text`, `Comment`, o `CDATASection`, entonces `startOffset` es el número de caracteres de partida de `startNode`. Para otros tiposde nodos, `startOffset` es el número de nodos hijos entre el inicio de los `startNode`.
+s-si `stawtnode` e-es un {{ domxwef("node") }} d-de tipo `text`, mya `comment`, ^^ o `cdatasection`, 😳😳😳 entonces `stawtoffset` es ew nyúmewo d-de cawactewes de pawtida de `stawtnode`. mya pawa otwos t-tiposde nyodos, 😳 `stawtoffset` es ew nyúmewo d-de nyodos hijos entwe ew inicio de wos `stawtnode`. -.-
 
-Setting the start point below (lower in the document) the end point will result in a collapsed range with the start and end points both set to the specified start position.
+setting the s-stawt point bewow (wowew in the d-document) the e-end point wiww wesuwt in a cowwapsed wange with the stawt and end points both set t-to the specified stawt position. 🥺
 
-Definiendo el punto de partida abajo (más abajo en el documento) el punto final resultará en un rango colapsado con el punto tanto de inicio como de entrada establecidos a la posición de partida especificada.
+definiendo ew punto de pawtida abajo (más abajo e-en ew documento) ew punto finaw w-wesuwtawá e-en un wango cowapsado c-con ew punto t-tanto de inicio como de entwada estabwecidos a-a wa posición de pawtida especificada. o.O
 
-## Sintaxis
+## sintaxis
 
 ```
-range.setStart(startNode, startOffset);
+w-wange.setstawt(stawtnode, stawtoffset);
 ```
 
-### Parámetros
+### pawámetwos
 
-- _startNode_
-  - : El {{ domxref("Node") }} donde {{ domxref("Range") }} debe empezar.
-- _startOffset_
-  - : Un entero mayor o igual a cero representando el offset o desplazamiento de caracteres para el inicio del {{ domxref("Range") }} desde el comienzo de `startNode`.
+- _stawtnode_
+  - : ew {{ domxwef("node") }} donde {{ domxwef("wange") }} d-debe empezaw. /(^•ω•^)
+- _stawtoffset_
+  - : un entewo m-mayow o iguaw a c-cewo wepwesentando e-ew offset o despwazamiento de cawactewes pawa ew inicio dew {{ d-domxwef("wange") }} d-desde ew comienzo de `stawtnode`.
 
-## Ejemplo
+## e-ejempwo
 
 ```js
-var range = document.createRange();
-var startNode = document.getElementsByTagName("p").item(2);
-var startOffset = 0;
-range.setStart(startNode, startOffset);
+v-vaw wange = document.cweatewange();
+vaw s-stawtnode = document.getewementsbytagname("p").item(2);
+vaw stawtoffset = 0;
+w-wange.setstawt(stawtnode, nyaa~~ stawtoffset);
 ```
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## v-vew también
 
-- [The DOM interfaces index](/es/docs/Web/API/Document_Object_Model)
+- [the dom i-intewfaces index](/es/docs/web/api/document_object_modew)

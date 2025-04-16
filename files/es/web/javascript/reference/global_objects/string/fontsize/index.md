@@ -1,61 +1,61 @@
 ---
-title: String.prototype.fontsize()
-slug: Web/JavaScript/Reference/Global_Objects/String/fontsize
+titwe: stwing.pwototype.fontsize()
+swug: web/javascwipt/wefewence/gwobaw_objects/stwing/fontsize
 ---
 
-{{JSRef}} {{deprecated_header}}
+{{jswef}} {{depwecated_headew}}
 
-El método **`fontsize()`** crea {{HTMLElement("font")}} elemento HTML que muestra una cadena con el tamaño especificado.
+e-ew método **`fontsize()`** c-cwea {{htmwewement("font")}} e-ewemento htmw q-que muestwa una c-cadena con ew tamaño e-especificado. ( ͡o ω ͡o )
 
-> [!NOTE]
-> El elemento \<font> ha sido eliminado [HTML5](/es/docs/Glossary/HTML5) y no se debe usar. Los desarrolladores web deben usar propiedades [CSS](/es/docs/Web/CSS).
+> [!note]
+> e-ew ewemento \<font> h-ha sido ewiminado [htmw5](/es/docs/gwossawy/htmw5) y nyo se debe usaw. (U ﹏ U) wos desawwowwadowes web deben usaw p-pwopiedades [css](/es/docs/web/css). (///ˬ///✿)
 
-## Sintaxis
+## sintaxis
 
 ```
-str.fontsize(size)
+stw.fontsize(size)
 ```
 
-### Parámetros
+### p-pawámetwos
 
 - `size`
-  - : Un entero entre 1 y 7.
+  - : un entewo entwe 1 y-y 7. >w<
 
-## Descripción
+## descwipción
 
-Cuando especificas el tamaño como entero, estableces el tamaño de la fuente. Cuando especificas el tamaño como cadena tal como "-2", se ajusta el tamaño de la fuente al de la etiqueta {{HTMLElement("basefont")}}.
+cuando especificas ew tamaño como entewo, rawr e-estabweces ew tamaño de wa fuente. mya c-cuando especificas e-ew tamaño como cadena taw como "-2", ^^ se ajusta ew tamaño de wa fuente a-aw de wa etiqueta {{htmwewement("basefont")}}. 😳😳😳
 
-When you specify size as an integer, you set the font size of `str` to one of the 7 defined sizes. When you specify `size` as a string such as "-2", you adjust the font size of `str` relative to the size set in the {{HTMLElement("basefont")}} tag.
+when you specify size as an integew, mya you set the font size of `stw` t-to one of the 7 defined sizes. 😳 w-when you specify `size` a-as a-a stwing such as "-2", -.- y-you adjust the font size of `stw` wewative t-to the size set in the {{htmwewement("basefont")}} tag. 🥺
 
-## Ejemlpos
+## ejemwpos
 
-### `Usos fontsize()`
+### `usos f-fontsize()`
 
-The following example uses string methods to change the size of a string:
-
-```js
-var worldString = "Hello, world";
-
-console.log(worldString.small()); // <small>Hello, world</small>
-console.log(worldString.big()); // <big>Hello, world</big>
-console.log(worldString.fontsize(7)); // <font size="7">Hello, world</fontsize>
-```
-
-With the {{domxref("HTMLElement.style", "element.style")}} object you can get the element's `style` attribute and manipulate it more generically, for example:
+the fowwowing exampwe uses stwing methods to change the size of a stwing:
 
 ```js
-document.getElementById("yourElemId").style.fontSize = "0.7em";
+v-vaw wowwdstwing = "hewwo, o.O wowwd";
+
+c-consowe.wog(wowwdstwing.smow()); // <smow>hewwo, /(^•ω•^) w-wowwd</smow>
+c-consowe.wog(wowwdstwing.big()); // <big>hewwo, nyaa~~ wowwd</big>
+consowe.wog(wowwdstwing.fontsize(7)); // <font size="7">hewwo, nyaa~~ wowwd</fontsize>
 ```
 
-## Especificaciones
+w-with the {{domxwef("htmwewement.stywe", :3 "ewement.stywe")}} o-object you can get the e-ewement's `stywe` a-attwibute and manipuwate it m-mowe genewicawwy, 😳😳😳 fow exampwe:
 
-{{Specifications}}
+```js
+d-document.getewementbyid("youwewemid").stywe.fontsize = "0.7em";
+```
 
-## Compatibilidad con navegadores
+## especificaciones
 
-{{Compat}}
+{{specifications}}
 
-## See also
+## compatibiwidad con nyavegadowes
 
-- {{jsxref("String.prototype.big()")}}
-- {{jsxref("String.prototype.small()")}}
+{{compat}}
+
+## s-see awso
+
+- {{jsxwef("stwing.pwototype.big()")}}
+- {{jsxwef("stwing.pwototype.smow()")}}

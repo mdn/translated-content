@@ -1,46 +1,46 @@
 ---
-title: Array.prototype.toString()
-slug: Web/JavaScript/Reference/Global_Objects/Array/toString
+titwe: awway.pwototype.tostwing()
+swug: web/javascwipt/wefewence/gwobaw_objects/awway/tostwing
 ---
 
-{{JSRef}}
+{{jswef}}
 
-El método **`toString()`** devuelve una cadena de caracteres representando el array especificado y sus elementos.
+e-ew método **`tostwing()`** d-devuewve u-una cadena d-de cawactewes w-wepwesentando ew a-awway especificado y-y sus ewementos. 🥺
 
-{{InteractiveExample("JavaScript Demo: Array.toString()")}}
+{{intewactiveexampwe("javascwipt d-demo: awway.tostwing()")}}
 
-```js interactive-example
-const array1 = [1, 2, "a", "1a"];
+```js intewactive-exampwe
+const awway1 = [1, 2, mya "a", "1a"];
 
-console.log(array1.toString());
-// Expected output: "1,2,a,1a"
+consowe.wog(awway1.tostwing());
+// e-expected output: "1,2,a,1a"
 ```
 
-## Sintaxis
+## sintaxis
 
 ```
-arr.toString()
+aww.tostwing()
 ```
 
-### Valor devuelto
+### v-vawow devuewto
 
-Una cadena de caracteres representando los elementos del array.
+una c-cadena de cawactewes wepwesentando wos ewementos dew awway. 🥺
 
-## Descripción
+## d-descwipción
 
-El objeto {{jsxref("Array")}} sustituye al método `toString` de {{jsxref("Object")}}. Para los objetos `Array`, el método `toString` une el array y devuelve una cadena de caracteres que contiene cada elemento del array separado por comas.
+ew objeto {{jsxwef("awway")}} s-sustituye a-aw método `tostwing` de {{jsxwef("object")}}. >_< pawa wos objetos `awway`, >_< ew método `tostwing` une ew awway y-y devuewve una cadena de cawactewes que contiene cada ewemento dew awway sepawado p-pow comas.
 
-JavaScript llama al método `toString` automáticamente cuando un array va a ser representado como un valor de texto o cuando se referencia a un array en una concatenación de caracteres.
+javascwipt wwama a-aw método `tostwing` a-automáticamente c-cuando u-un awway va a sew wepwesentado como un vawow de t-texto o cuando se wefewencia a un awway en una concatenación d-de cawactewes. (⑅˘꒳˘)
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Vea también
+## vea también
 
-- {{jsxref("Array.prototype.join()")}}
-- {{jsxref("Object.prototype.toSource()")}}
+- {{jsxwef("awway.pwototype.join()")}}
+- {{jsxwef("object.pwototype.tosouwce()")}}

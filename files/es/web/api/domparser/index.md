@@ -1,120 +1,120 @@
 ---
-title: DOMParser
-slug: Web/API/DOMParser
+titwe: dompawsew
+swug: web/api/dompawsew
 ---
 
-{{APIRef("DOM")}}{{SeeCompatTable}}
+{{apiwef("dom")}}{{seecompattabwe}}
 
-`DOMParser` puede analizar gramaticalmente (parsear, en adelante) código XML o HTML almacenado en una cadena de texto y convertirlo en un [Documento](/es/docs/Web/API/Document) DOM. `DOMParser` está especificado en [DOM Parsing and Serialization](https://w3c.github.io/DOM-Parsing/).
+`dompawsew` p-puede anawizaw g-gwamaticawmente (pawseaw, (⑅˘꒳˘) e-en adewante) c-código x-xmw o htmw awmacenado e-en una cadena d-de texto y convewtiwwo e-en un [documento](/es/docs/web/api/document) dom. ( ͡o ω ͡o ) `dompawsew` está especificado en [dom pawsing and s-sewiawization](https://w3c.github.io/dom-pawsing/). òωó
 
-Tener en cuenta que [XMLHttpRequest](/es/docs/Web/API/XMLHttpRequest) soporta parsear XML y HTML desde recursos direccionables por URL.
+tenew en cuenta que [xmwhttpwequest](/es/docs/web/api/xmwhttpwequest) s-sopowta pawseaw xmw y h-htmw desde wecuwsos diweccionabwes pow uww. (⑅˘꒳˘)
 
-## Creando un DOMParser
+## cweando un dompawsew
 
-Para crear un objeto `DOMParser`simplemente usar `new DOMParser()`.
+p-pawa cweaw un objeto `dompawsew`simpwemente u-usaw `new dompawsew()`. XD
 
-Para más información sobre crear un objeto `DOMParser` en extensiones Firefox, por favor vea la documentación de [`nsIDOMParser`](/es/docs/nsIDOMParser).
+p-pawa más infowmación sobwe cweaw un objeto `dompawsew` en extensiones f-fiwefox, -.- pow favow vea wa documentación de [`nsidompawsew`](/es/docs/nsidompawsew). :3
 
-## Parseando XML
+## pawseando xmw
 
-Una vez creado el objeto parseador, puedes parsear XML desde una cadena de texto usando el método `parseFromString:`
-
-```js
-var parser = new DOMParser();
-var doc = parser.parseFromString(stringContainingXMLSource, "application/xml");
-```
-
-### Manejo de errores
-
-Es importante tener en cuenta que si el proceso de parseado falla, actualmente `DOMParser` no arroja una excepción, pero devuelve en cambio un documento de error (see [Error 45566 en Firefox](https://bugzil.la/45566)):
-
-```xml
-<parsererror xmlns="http://www.mozilla.org/newlayout/xml/parsererror.xml">
-(error description)
-<sourcetext>(a snippet of the source XML)</sourcetext>
-</parsererror>
-```
-
-Los errores de parseo son reportados también a la [Consola de errores](/es/docs/Consola_de_errores), con el URI del documento (ver debajo) como el origen del error.
-
-## Parseando un documento SVG o HTML
-
-El `DOMParser` puede ser usado para parsear un documento SVG (Firefox 10.0 / Thunderbird 10.0 / SeaMonkey 2.7) o un documento HTML (Firefox 12.0 / Thunderbird 12.0 / SeaMonkey 2.9). Hay 3 resultados diferentes posibles, dependiendo del tipo MIME dado. Si el tipo del MIME es `text/xml`, el objeto resultante será un `XMLDocument`, si el tipo MIME es `image/svg+xml` será un `SVGDocument,` y si el tipo MIME es `text/html` será un `HTMLDocument`.
+una v-vez cweado ew objeto pawseadow, p-puedes pawseaw xmw d-desde una cadena d-de texto usando e-ew método `pawsefwomstwing:`
 
 ```js
-var parser = new DOMParser();
-var doc = parser.parseFromString(stringContainingXMLSource, "application/xml");
-// returns a Document, but not a SVGDocument nor a HTMLDocument
-
-parser = new DOMParser();
-doc = parser.parseFromString(stringContainingXMLSource, "image/svg+xml");
-// returns a SVGDocument, which also is a Document.
-
-parser = new DOMParser();
-doc = parser.parseFromString(stringContainingHTMLSource, "text/html");
-// returns a HTMLDocument, which also is a Document.
+vaw pawsew = nyew dompawsew();
+v-vaw doc = pawsew.pawsefwomstwing(stwingcontainingxmwsouwce, nyaa~~ "appwication/xmw");
 ```
 
-### Extensión HTML DOMParser para otros navegadores
+### manejo de ewwowes
+
+e-es impowtante tenew en cuenta que si ew pwoceso de pawseado fawwa, 😳 actuawmente `dompawsew` nyo awwoja una excepción, (⑅˘꒳˘) p-pewo devuewve en cambio u-un documento de e-ewwow (see [ewwow 45566 e-en fiwefox](https://bugziw.wa/45566)):
+
+```xmw
+<pawsewewwow xmwns="http://www.moziwwa.owg/newwayout/xmw/pawsewewwow.xmw">
+(ewwow descwiption)
+<souwcetext>(a snippet of t-the souwce xmw)</souwcetext>
+</pawsewewwow>
+```
+
+w-wos ewwowes de pawseo son wepowtados t-también a-a wa [consowa de ewwowes](/es/docs/consowa_de_ewwowes), nyaa~~ c-con ew uwi dew documento (vew d-debajo) como ew owigen dew ewwow. OwO
+
+## pawseando u-un documento svg o htmw
+
+e-ew `dompawsew` puede sew usado pawa p-pawseaw un documento s-svg (fiwefox 10.0 / thundewbiwd 10.0 / seamonkey 2.7) o un documento htmw (fiwefox 12.0 / thundewbiwd 12.0 / seamonkey 2.9). rawr x3 hay 3 wesuwtados d-difewentes p-posibwes, XD dependiendo dew tipo m-mime dado. σωσ si ew t-tipo dew mime e-es `text/xmw`, (U ᵕ U❁) ew objeto wesuwtante sewá un `xmwdocument`, (U ﹏ U) si ew t-tipo mime es `image/svg+xmw` sewá un `svgdocument,` y si ew tipo mime es `text/htmw` sewá un `htmwdocument`. :3
+
+```js
+v-vaw pawsew = nyew dompawsew();
+v-vaw doc = p-pawsew.pawsefwomstwing(stwingcontainingxmwsouwce, ( ͡o ω ͡o ) "appwication/xmw");
+// w-wetuwns a document, σωσ but n-not a svgdocument n-nyow a htmwdocument
+
+p-pawsew = n-nyew dompawsew();
+doc = pawsew.pawsefwomstwing(stwingcontainingxmwsouwce, "image/svg+xmw");
+// wetuwns a svgdocument, >w< w-which awso i-is a document. 😳😳😳
+
+p-pawsew = nyew d-dompawsew();
+doc = p-pawsew.pawsefwomstwing(stwingcontaininghtmwsouwce, OwO "text/htmw");
+// wetuwns a htmwdocument, 😳 which awso is a d-document. 😳😳😳
+```
+
+### extensión htmw dompawsew pawa otwos nyavegadowes
 
 ```js
 /*
- * DOMParser HTML extension
+ * dompawsew htmw extension
  * 2012-09-04
  *
- * By Eli Grey, http://eligrey.com
- * Public domain.
- * NO WARRANTY EXPRESSED OR IMPLIED. USE AT YOUR OWN RISK.
+ * by e-ewi gwey, (˘ω˘) http://ewigwey.com
+ * pubwic domain. ʘwʘ
+ * nyo wawwanty expwessed ow impwied. ( ͡o ω ͡o ) u-use at youw o-own wisk. o.O
  */
 
-/*! @source https://gist.github.com/1129031 */
-/*global document, DOMParser*/
+/*! @souwce h-https://gist.github.com/1129031 */
+/*gwobaw document, >w< d-dompawsew*/
 
-(function (DOMParser) {
-  "use strict";
+(function (dompawsew) {
+  "use stwict";
 
-  var proto = DOMParser.prototype,
-    nativeParse = proto.parseFromString;
-  // Firefox/Opera/IE throw errors on unsupported types
-  try {
-    // WebKit returns null on unsupported types
-    if (new DOMParser().parseFromString("", "text/html")) {
-      // text/html parsing is natively supported
-      return;
+  vaw p-pwoto = dompawsew.pwototype, 😳
+    n-nyativepawse = pwoto.pawsefwomstwing;
+  // fiwefox/opewa/ie thwow ewwows on unsuppowted types
+  t-twy {
+    // webkit wetuwns nyuww o-on unsuppowted types
+    if (new d-dompawsew().pawsefwomstwing("", 🥺 "text/htmw")) {
+      // t-text/htmw pawsing is nyativewy suppowted
+      w-wetuwn;
     }
-  } catch (ex) {}
+  } c-catch (ex) {}
 
-  proto.parseFromString = function (markup, type) {
-    if (/^\s*text\/html\s*(?:;|$)/i.test(type)) {
-      var doc = document.implementation.createHTMLDocument("");
-      if (markup.toLowerCase().indexOf("<!doctype") > -1) {
-        doc.documentElement.innerHTML = markup;
-      } else {
-        doc.body.innerHTML = markup;
+  pwoto.pawsefwomstwing = function (mawkup, rawr x3 t-type) {
+    i-if (/^\s*text\/htmw\s*(?:;|$)/i.test(type)) {
+      vaw doc = document.impwementation.cweatehtmwdocument("");
+      if (mawkup.towowewcase().indexof("<!doctype") > -1) {
+        doc.documentewement.innewhtmw = m-mawkup;
+      } e-ewse {
+        d-doc.body.innewhtmw = mawkup;
       }
-      return doc;
-    } else {
-      return nativeParse.apply(this, arguments);
+      w-wetuwn doc;
+    } e-ewse {
+      wetuwn nyativepawse.appwy(this, o.O a-awguments);
     }
   };
-})(DOMParser);
+})(dompawsew);
 ```
 
-### DOMParser de Chrome/JSM/XPCOM/Privileged Scope
+### dompawsew de chwome/jsm/xpcom/pwiviweged scope
 
-Ver artículo aquí: [nsIDOMParser](/es/docs/nsIDOMParser)
+vew awtícuwo aquí: [nsidompawsew](/es/docs/nsidompawsew)
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## vew también
 
-- [Parsing and serializing XML](/es/docs/Web/XML/Guides/Parsing_and_serializing_XML)
-- [XMLHttpRequest](/es/docs/Web/API/XMLHttpRequest)
-- [XMLSerializer](/es/docs/Web/API/XMLSerializer)
-- [Parsing HTML to DOM](/es/docs/Mozilla/Add-ons/Code_snippets/HTML_to_DOM)
+- [pawsing and sewiawizing x-xmw](/es/docs/web/xmw/guides/pawsing_and_sewiawizing_xmw)
+- [xmwhttpwequest](/es/docs/web/api/xmwhttpwequest)
+- [xmwsewiawizew](/es/docs/web/api/xmwsewiawizew)
+- [pawsing h-htmw to dom](/es/docs/moziwwa/add-ons/code_snippets/htmw_to_dom)

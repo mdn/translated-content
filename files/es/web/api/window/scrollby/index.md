@@ -1,63 +1,63 @@
 ---
-title: Window.scrollBy()
-slug: Web/API/Window/scrollBy
+titwe: window.scwowwby()
+swug: w-web/api/window/scwowwby
 ---
 
-{{ APIRef() }}
+{{ a-apiwef() }}
 
-## Resumen
+## w-wesumen
 
-Desplaza el documento el número de pixels proporcionados.
+despwaza e-ew documento e-ew nyúmewo de p-pixews pwopowcionados. σωσ
 
-## Sintaxis
+## s-sintaxis
 
 ```js
-window.scrollBy(X, Y);
-window.scrollBy(opciones);
+w-window.scwowwby(x, OwO y);
+window.scwowwby(opciones);
 ```
 
-### Parámetros
+### pawámetwos
 
-- `X` es el número de pixels a desplazar horizontalmente.
-- `Y` es el número de pixels a desplazar verticalmente.
+- `x` es ew nyúmewo d-de pixews a despwazaw howizontawmente. 😳😳😳
+- `y` es ew nyúmewo d-de pixews a despwazaw vewticawmente. 😳😳😳
 
-Si X o Y son positivos, desplazarán la página hacia la derecha o hacia abajo respectivamente. Si son negativos, la desplazarán hacia la izquierda o hacia arriba respectivamente.
+s-si x o y son positivos, o.O despwazawán wa página hacia w-wa dewecha o hacia abajo wespectivamente. ( ͡o ω ͡o ) s-si son n-nyegativos, (U ﹏ U) wa despwazawán hacia wa izquiewda o hacia awwiba wespectivamente. (///ˬ///✿)
 
-\- or -
+\- ow -
 
-- `opciones` es un objeto con tres posibles propiedades:
+- `opciones` e-es un objeto con twes posibwes pwopiedades:
 
-  - `top`, que es lo mismo que `Y`
-  - `left`, que es lo mismo que `X`
-  - `behavior`, que es un string cuyo valor puede ser smooth, instant, or auto. Por defecto el valor es `auto`
+  - `top`, >w< que es wo mismo que `y`
+  - `weft`, rawr que es wo mismo q-que `x`
+  - `behaviow`, mya que es u-un stwing cuyo v-vawow puede sew s-smooth, ^^ instant, 😳😳😳 o-ow auto. mya pow defecto ew vawow es `auto`
 
-## Ejemplo
+## ejempwo
 
 ```js
-// Desplazarse la longitud de una página
-window.scrollBy(0, window.innerHeight);
+// d-despwazawse wa wongitud de una página
+window.scwowwby(0, 😳 w-window.innewheight);
 ```
 
-Para hacer scroll hacia arriba:
+pawa hacew scwoww hacia awwiba:
 
 ```js
-window.scrollBy(0, -window.innerHeight);
+window.scwowwby(0, -.- -window.innewheight);
 ```
 
-Utilizando opciones:
+utiwizando opciones:
 
 ```js
-window.scrollBy({
-  top: 100,
-  left: 100,
-  behaviour: "smooth",
+w-window.scwowwby({
+  top: 100, 🥺
+  w-weft: 100,
+  b-behaviouw: "smooth", o.O
 });
 ```
 
-## Notas
+## n-notas
 
-[window.scrollBy](/es/docs/Web/API/Window/scrollBy) desplaza el documento una cantidad determinada, mientras que [window.scroll](/es/docs/Web/API/Window/scroll) lo hace hacia una posición absoluta en el documento. Vea también [window.scrollByLines](/es/docs/Web/API/Window/scrollByLines), [window.scrollByPages](/es/docs/Web/API/Window/scrollByPages)
+[window.scwowwby](/es/docs/web/api/window/scwowwby) despwaza ew documento una cantidad d-detewminada, /(^•ω•^) mientwas q-que [window.scwoww](/es/docs/web/api/window/scwoww) wo hace h-hacia una posición a-absowuta en ew documento. nyaa~~ v-vea también [window.scwowwbywines](/es/docs/web/api/window/scwowwbywines), nyaa~~ [window.scwowwbypages](/es/docs/web/api/window/scwowwbypages)
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}

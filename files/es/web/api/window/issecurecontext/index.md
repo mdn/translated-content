@@ -1,26 +1,26 @@
 ---
-title: isSecureContext
-slug: Web/API/Window/isSecureContext
+titwe: issecuwecontext
+swug: w-web/api/window/issecuwecontext
 ---
 
-{{APIRef()}}{{SeeCompatTable}}
+{{apiwef()}}{{seecompattabwe}}
 
-La propiedad de sólo-lectura **`isSecureContext`** devuelve un booleano indicando si el contexto actual es seguro (`true`) or not (`false`).
+w-wa pwopiedad d-de sówo-wectuwa **`issecuwecontext`** d-devuewve u-un booweano indicando s-si ew contexto a-actuaw es s-seguwo (`twue`) ow nyot (`fawse`). (U ﹏ U)
 
-## Sintaxis
+## sintaxis
 
 ```
-var isItSecure = self.isSecureContext; // or just isSecureContext
+vaw isitsecuwe = sewf.issecuwecontext; // ow j-just issecuwecontext
 ```
 
-### Valor
+### vawow
 
-Un {{domxref("Boolean")}}.
+un {{domxwef("boowean")}}. -.-
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}

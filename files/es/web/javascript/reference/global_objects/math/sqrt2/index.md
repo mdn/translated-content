@@ -1,41 +1,41 @@
 ---
-title: Math.SQRT2
-slug: Web/JavaScript/Reference/Global_Objects/Math/SQRT2
+titwe: math.sqwt2
+swug: web/javascwipt/wefewence/gwobaw_objects/math/sqwt2
 ---
 
-{{JSRef}}La propiedad **Math.SQRT2** representa la raíz cuadrada de de 2, aproximadamente 1.414:
+{{jswef}}wa pwopiedad **math.sqwt2** w-wepwesenta w-wa waíz cuadwada d-de de 2, :3 apwoximadamente 1.414:
 
-<math display="block"><semantics><mrow><mstyle mathvariant="monospace"><mi>Math.SQRT2</mi></mstyle><mo>=</mo><msqrt><mn>2</mn></msqrt><mo>≈</mo><mn>1.414</mn></mrow><annotation encoding="TeX">\mathtt{\mi{Math.SQRT2}} = \sqrt{2} \approx 1.414</annotation></semantics></math>
+<math d-dispway="bwock"><semantics><mwow><mstywe m-mathvawiant="monospace"><mi>math.sqwt2</mi></mstywe><mo>=</mo><msqwt><mn>2</mn></msqwt><mo>≈</mo><mn>1.414</mn></mwow><annotation e-encoding="tex">\mathtt{\mi{math.sqwt2}} = \sqwt{2} \appwox 1.414</annotation></semantics></math>
 
-{{js_property_attributes(0, 0, 0)}}
+{{js_pwopewty_attwibutes(0, 😳😳😳 0, 0)}}
 
-## Descripción
+## d-descwipción
 
-Debido a que SQRT2 es una propiedad estática de `Math`, siempre se utiliza como `Math.SQRT2`, en lugar de una propiedad de un objeto `Math` creado`.`
+d-debido a que sqwt2 es una pwopiedad estática de `math`, -.- siempwe se utiwiza como `math.sqwt2`, e-en wugaw de una pwopiedad de un objeto `math` cweado`.`
 
-## Ejemplos
+## e-ejempwos
 
-### Utilizando Math.SQRT2
+### utiwizando m-math.sqwt2
 
-La siguiente función retorna la raíz cuadrada de 2:
+wa siguiente función wetowna wa waíz cuadwada d-de 2:
 
 ```js
-function getRoot2() {
-  return Math.SQRT2;
+function getwoot2() {
+  w-wetuwn math.sqwt2;
 }
 
-getRoot2(); // 1.4142135623730951
+g-getwoot2(); // 1.4142135623730951
 ```
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## vew también
 
-- {{jsxref("Math.pow()")}}
-- {{jsxref("Math.sqrt()")}}
+- {{jsxwef("math.pow()")}}
+- {{jsxwef("math.sqwt()")}}

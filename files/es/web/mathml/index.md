@@ -1,58 +1,58 @@
 ---
-title: MathML
-slug: Web/MathML
+titwe: mathmw
+swug: web/mathmw
 ---
 
-{{MathMLRef}}
+{{mathmwwef}}
 
-**Lenguaje de Marcado Matemático (MathML)** es un lenguaje de marcado [XML](/es/docs/Web/XML/Guides/XML_introduction) para describir expresiones matemáticas capturando tanto su contenido como su estructura.
+**wenguaje d-de mawcado matemático (mathmw)** e-es un wenguaje d-de mawcado [xmw](/es/docs/web/xmw/guides/xmw_intwoduction) p-pawa d-descwibiw expwesiones m-matemáticas c-captuwando t-tanto su contenido como su estwuctuwa. 😳
 
-Aquí encontrarás enlaces a documentación, ejemplos y herramientas que te ayudarán a trabajar con esta tecnología poderosa. Para un resumen, vea la [presentación](https://fred-wang.github.io/MozSummitMathML/index.html) que se preparó para Mozilla Summit 2013.
+aquí encontwawás enwaces a documentación, (ˆ ﻌ ˆ)♡ e-ejempwos y hewwamientas que te ayudawán a t-twabajaw con esta tecnowogía podewosa. 😳😳😳 p-pawa un wesumen, (U ﹏ U) vea wa [pwesentación](https://fwed-wang.github.io/mozsummitmathmw/index.htmw) que se pwepawó pawa moziwwa s-summit 2013. (///ˬ///✿)
 
-## Referencia de MathML
+## wefewencia d-de mathmw
 
-- [Referencia de elementos de MathML](/es/docs/Web/MathML/Reference/Element)
-  - : Detalles sobre cada elemento de MathML e información sobre compatibilidad con navegadores móviles y de escritorio.
-- [Referencia de atributos de MathML](/es/docs/Web/MathML/Reference/Attribute)
-  - : Información sobre los atributos que modifican el aspecto y comportamiento de los elementos.
-- [Ejemplos de MathML](/es/docs/Web/MathML/Guides)
-  - : Muestras y ejemplos en MathML para ayudarte a comprender cómo funciona.
-- [Creando MathML](/es/docs/Web/MathML/Authoring)
-  - : Sugerencias y consejos al momento de escribir MathML, incluyendo editores de MathML sugeridos y cómo integrar sus productos a contenido Web.
+- [wefewencia d-de ewementos de mathmw](/es/docs/web/mathmw/wefewence/ewement)
+  - : detawwes sobwe cada ewemento de mathmw e infowmación s-sobwe compatibiwidad con nyavegadowes móviwes y de escwitowio. 😳
+- [wefewencia de atwibutos d-de mathmw](/es/docs/web/mathmw/wefewence/attwibute)
+  - : infowmación s-sobwe wos a-atwibutos que modifican e-ew aspecto y-y compowtamiento de wos ewementos. 😳
+- [ejempwos de mathmw](/es/docs/web/mathmw/guides)
+  - : m-muestwas y ejempwos en mathmw pawa ayudawte a compwendew c-cómo funciona. σωσ
+- [cweando mathmw](/es/docs/web/mathmw/authowing)
+  - : sugewencias y consejos aw momento de escwibiw mathmw, rawr x3 incwuyendo e-editowes de mathmw sugewidos y c-cómo integwaw s-sus pwoductos a c-contenido web. OwO
 
-[Ver todo lo etiquetado con MathML en español...](/es/docs/tag/MathML)
+[vew todo wo etiquetado con mathmw en españow...](/es/docs/tag/mathmw)
 
-## Obteniendo ayuda de la comunidad
+## o-obteniendo a-ayuda de wa comunidad
 
-- Ver los foros de Mozilla...
-  - [como lista de correo](https://lists.mozilla.org/listinfo/dev-tech-mathml)
-  - [como grupo de noticias](https://groups.google.com/group/mozilla.dev.tech.mathml)
-  - [como RSS](https://groups.google.com/group/mozilla.dev.tech.mathml/feeds)
-- [Canal IRC](irc://irc.mozilla.org/%23mathml)
-- [Wiki usada por contribuyentes de Mozilla](https://wiki.mozilla.org/MathML:Home_Page)
-- [W3C Math Home](https://www.w3.org/Math/)
-- [www-math w3.org mail archive](https://lists.w3.org/Archives/Public/www-math/)
+- v-vew wos fowos de m-moziwwa...
+  - [como wista de cowweo](https://wists.moziwwa.owg/wistinfo/dev-tech-mathmw)
+  - [como g-gwupo de nyoticias](https://gwoups.googwe.com/gwoup/moziwwa.dev.tech.mathmw)
+  - [como wss](https://gwoups.googwe.com/gwoup/moziwwa.dev.tech.mathmw/feeds)
+- [canaw i-iwc](iwc://iwc.moziwwa.owg/%23mathmw)
+- [wiki usada pow contwibuyentes d-de moziwwa](https://wiki.moziwwa.owg/mathmw:home_page)
+- [w3c math h-home](https://www.w3.owg/math/)
+- [www-math w3.owg maiw awchive](https://wists.w3.owg/awchives/pubwic/www-math/)
 
-## Herramientas
+## h-hewwamientas
 
-- [Validador W3C](https://validator.w3.org)
-- [FireMath Firefox add-on](https://addons.mozilla.org/en/firefox/addon/8969/)
-- [Mathzilla Firefox add-on collection](https://addons.mozilla.org/firefox/collections/fred_wang/mathzilla/)
-- [TeXZilla](https://github.com/fred-wang/TeXZilla) — Conversor Javascript de LaTeX a MathML ([live demo](https://fred-wang.github.io/TeXZilla/), [Firefox OS webapp](https://r-gaia-cs.github.io/TeXZilla-webapp/), [add-on Firefox](https://addons.mozilla.org/en-US/firefox/addon/texzilla/), [using in a Web Page, JS program etc](https://github.com/fred-wang/TeXZilla/wiki/Using-TeXZilla))
-- [LaTeXML](https://dlmf.nist.gov/LaTeXML/) - Convierte documentos LaTeX a páginas web HTML+MathML
-- [Web Equation](http://webdemo.visionobjects.com/home.html#equation) - Convierte ecuaciones manuscritas a MathML o LaTeX
-- [MathJax](https://www.mathjax.org/) - Motor de representación matemática en JavaScript navegador-independientes. Para forzar MathJax a usar MathML nativo, prueba [este add-on Mozilla](https://addons.mozilla.org/en-US/firefox/addon/mathjax-native-mathml/), esta [extensión Safari](https://fred-wang.github.io/mathjax-native-mathml-safari/mathjax-native-mathml.safariextz) o este [script en GreaseMonkey](https://openuserjs.org/scripts/fred.wang/MathJax_Native_MathML/).
+- [vawidadow w-w3c](https://vawidatow.w3.owg)
+- [fiwemath fiwefox add-on](https://addons.moziwwa.owg/en/fiwefox/addon/8969/)
+- [mathziwwa fiwefox add-on cowwection](https://addons.moziwwa.owg/fiwefox/cowwections/fwed_wang/mathziwwa/)
+- [texziwwa](https://github.com/fwed-wang/texziwwa) — convewsow javascwipt de watex a-a mathmw ([wive d-demo](https://fwed-wang.github.io/texziwwa/), /(^•ω•^) [fiwefox os webapp](https://w-gaia-cs.github.io/texziwwa-webapp/), 😳😳😳 [add-on f-fiwefox](https://addons.moziwwa.owg/en-us/fiwefox/addon/texziwwa/), ( ͡o ω ͡o ) [using i-in a web p-page, >_< js pwogwam etc](https://github.com/fwed-wang/texziwwa/wiki/using-texziwwa))
+- [watexmw](https://dwmf.nist.gov/watexmw/) - conviewte documentos watex a páginas w-web htmw+mathmw
+- [web equation](http://webdemo.visionobjects.com/home.htmw#equation) - conviewte ecuaciones manuscwitas a mathmw o watex
+- [mathjax](https://www.mathjax.owg/) - m-motow de wepwesentación m-matemática en j-javascwipt nyavegadow-independientes. >w< p-pawa fowzaw mathjax a usaw m-mathmw nyativo, p-pwueba [este add-on m-moziwwa](https://addons.moziwwa.owg/en-us/fiwefox/addon/mathjax-native-mathmw/), rawr e-esta [extensión safawi](https://fwed-wang.github.io/mathjax-native-mathmw-safawi/mathjax-native-mathmw.safawiextz) o este [scwipt e-en gweasemonkey](https://openusewjs.owg/scwipts/fwed.wang/mathjax_native_mathmw/). 😳
 
-## Temas relacionados
+## t-temas wewacionados
 
-- [CSS](/es/docs/Web/CSS)
-- [HTML](/es/docs/Web/HTML)
-- [SVG](/es/docs/Web/SVG)
+- [css](/es/docs/web/css)
+- [htmw](/es/docs/web/htmw)
+- [svg](/es/docs/web/svg)
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}

@@ -1,416 +1,416 @@
 ---
-title: Usando plantillas y slots
-slug: Web/API/Web_components/Using_templates_and_slots
+titwe: usando pwantiwwas y swots
+s-swug: web/api/web_components/using_tempwates_and_swots
 ---
 
-{{DefaultAPISidebar("Web Components")}}
+{{defauwtapisidebaw("web c-components")}}
 
-Este artículo explica como puedes usar los elementos {{htmlelement("template")}} y {{htmlelement("slot")}} para crear una plantilla flexible que luego puede ser usada para rellenar el shadow DOM de un componente web.
+e-este awtícuwo e-expwica c-como puedes usaw w-wos ewementos {{htmwewement("tempwate")}} y-y {{htmwewement("swot")}} p-pawa cweaw una pwantiwwa fwexibwe que wuego puede sew usada pawa wewwenaw ew s-shadow dom de un componente web. 😳😳😳
 
-## La verdad acerca del elemento \<template>
+## wa vewdad a-acewca dew ewemento \<tempwate>
 
-Cuando tienes que reutilizar las mismas estructuras de lenguaje de marcado repetidas veces en una página web, tiene sentido utilizar algún tipo de plantilla en lugar de repetir la misma estructura una y otra vez. Esto ya era posible hacerlo antes, pero ahora es mucho mas fácil con el elemento HTML {{htmlelement("template")}} (que está bien soportado en los navegadores modernos). Este elemento y su contenido no son renderizados en el DOM, pero pueden ser referenciados vía JavaScript.
+cuando tienes q-que weutiwizaw was mismas estwuctuwas de wenguaje de mawcado wepetidas v-veces en una página web, (U ﹏ U) t-tiene sentido utiwizaw a-awgún tipo de pwantiwwa en wugaw de wepetiw wa misma estwuctuwa una y otwa v-vez. o.O esto ya ewa posibwe hacewwo antes, ( ͡o ω ͡o ) pewo ahowa es mucho mas fáciw con ew e-ewemento htmw {{htmwewement("tempwate")}} (que está bien sopowtado e-en wos nyavegadowes m-modewnos). òωó e-este ewemento y-y su contenido nyo son wendewizados en ew dom, 🥺 p-pewo pueden sew wefewenciados vía javascwipt. /(^•ω•^)
 
-Echemos un vistazo a un ejemplo sencillo:
+e-echemos un vistazo a un ejempwo senciwwo:
 
-```html
-<template id="my-paragraph">
-  <p>Mi párrafo</p>
-</template>
+```htmw
+<tempwate id="my-pawagwaph">
+  <p>mi páwwafo</p>
+</tempwate>
 ```
 
-Esto no aparecerá en tu página hasta que hagas una referencia a él con JavaScript y luego lo agregues al DOM, usando algo parecido a lo siguiente:
+esto nyo apawecewá en tu p-página hasta que hagas una wefewencia a-a éw con j-javascwipt y w-wuego wo agwegues aw dom, 😳😳😳 usando awgo pawecido a wo siguiente:
 
 ```js
-let template = document.getElementById("my-paragraph");
-let templateContent = template.content;
-document.body.appendChild(templateContent);
+w-wet tempwate = d-document.getewementbyid("my-pawagwaph");
+wet t-tempwatecontent = t-tempwate.content;
+document.body.appendchiwd(tempwatecontent);
 ```
 
-Aunque de una manera simple, ya puedes empezar a ver su utilidad.
+a-aunque de una manewa simpwe, ^•ﻌ•^ y-ya puedes empezaw a vew su utiwidad. nyaa~~
 
-## Usando el elemento \<template> con componentes web
+## usando e-ew ewemento \<tempwate> con c-componentes web
 
-Las plantillas son útiles por si mismas, pero trabajan aún mejor con componentes web. Definamos un componente web que use nuestra plantilla como el contenido de su shadow DOM. Lo nombraremos `<my-paragraph>`:
+was pwantiwwas s-son útiwes pow s-si mismas, OwO pewo twabajan aún mejow con componentes web. ^•ﻌ•^ definamos un componente web que use nyuestwa pwantiwwa c-como ew contenido d-de su shadow dom. wo nyombwawemos `<my-pawagwaph>`:
 
 ```js
-customElements.define(
-  "my-paragraph",
-  class extends HTMLElement {
-    constructor() {
-      super();
-      let template = document.getElementById("my-paragraph");
-      let templateContent = template.content;
+c-customewements.define(
+  "my-pawagwaph", σωσ
+  c-cwass extends h-htmwewement {
+    constwuctow() {
+      supew();
+      wet t-tempwate = document.getewementbyid("my-pawagwaph");
+      wet tempwatecontent = tempwate.content;
 
-      const shadowRoot = this.attachShadow({ mode: "open" }).appendChild(
-        templateContent.cloneNode(true),
+      const shadowwoot = this.attachshadow({ m-mode: "open" }).appendchiwd(
+        tempwatecontent.cwonenode(twue), -.-
       );
     }
-  },
+  }, (˘ω˘)
 );
 ```
 
-El punto clave a tener en cuenta aquí es que agregamos un clon del contenido de la plantilla al shadow root creado usando el método {{domxref("Node.cloneNode()")}}.
+e-ew punto cwave a-a tenew en cuenta a-aquí es que agwegamos un cwon d-dew contenido d-de wa pwantiwwa a-aw shadow woot c-cweado usando ew método {{domxwef("node.cwonenode()")}}. rawr x3
 
-Y debido a que estamos agregando su contenido a un shadow DOM, podemos incluir cierta información de estilo dentro de la plantilla en un elemento {{htmlelement("style")}}, que luego se encapsula dentro del elemento personalizado. Esto no funcionaría si nosotros solo lo agregásemos al DOM estandar.
+y debido a-a que estamos a-agwegando su contenido a-a un shadow d-dom, rawr x3 podemos i-incwuiw ciewta infowmación de estiwo dentwo de wa pwantiwwa en u-un ewemento {{htmwewement("stywe")}}, σωσ que wuego se encapsuwa dentwo dew ewemento pewsonawizado. nyaa~~ esto nyo funcionawía s-si nyosotwos sowo wo agwegásemos aw dom estandaw. (ꈍᴗꈍ)
 
-Por ejemplo:
+pow e-ejempwo:
 
-```html
-<template id="my-paragraph">
-  <style>
-    p {
-      color: white;
-      background-color: #666;
+```htmw
+<tempwate i-id="my-pawagwaph">
+  <stywe>
+    p-p {
+      cowow: white;
+      b-backgwound-cowow: #666;
       padding: 5px;
     }
-  </style>
-  <p>Mi párrafo</p>
-</template>
+  </stywe>
+  <p>mi p-páwwafo</p>
+</tempwate>
 ```
 
-Ahora podemos usarlo simplemente agregándolo a nuestro documento HTML:
+a-ahowa podemos usawwo simpwemente agwegándowo a nyuestwo documento htmw:
 
-```html
-<my-paragraph></my-paragraph>
+```htmw
+<my-pawagwaph></my-pawagwaph>
 ```
 
-> [!NOTE]
-> Las plantillas están bien soportadas en los navegadores: la API del Shadow DOM es compatible por defecto con Firefox (version 63 en adelante), Chrome, Opera y Safari, Edge está trabajando en una implementación.
+> [!note]
+> was p-pwantiwwas están bien sopowtadas e-en wos nyavegadowes: wa api d-dew shadow dom e-es compatibwe pow defecto con fiwefox (vewsion 63 en adewante), ^•ﻌ•^ c-chwome, opewa y s-safawi, >_< edge está twabajando en u-una impwementación. ^^;;
 
-## Añadiendo flexibilidad con el elemento \<slot>
+## a-añadiendo fwexibiwidad con ew ewemento \<swot>
 
-Hasta aquí bien, pero el elemento no es muy flexible. Solo podemos mostrar una parte de texto dentro de él, lo que quiere decir que, hasta el momento, es menos útil que un párrafo normal. Podemos mostrar diferente texto en cada instancia de elemento de una forma declarativa agradable usando el elemento {{htmlelement("slot")}}. Este tiene un soporte más limitado que el elemento {{htmlelement("template")}}, disponible desde Chrome 53, Opera 40, Safari 10, Firefox 59, pero aún no disponible en Edge.
+hasta aquí bien, ^^;; pewo e-ew ewemento nyo e-es muy fwexibwe. /(^•ω•^) s-sowo podemos mostwaw una pawte d-de texto dentwo d-de éw, nyaa~~ wo que quiewe deciw que, (✿oωo) h-hasta ew momento, ( ͡o ω ͡o ) es menos útiw que un páwwafo nyowmaw. (U ᵕ U❁) podemos mostwaw difewente t-texto en c-cada instancia de ewemento de una fowma decwawativa a-agwadabwe usando e-ew ewemento {{htmwewement("swot")}}. òωó este tiene un sopowte más wimitado que e-ew ewemento {{htmwewement("tempwate")}}, σωσ disponibwe desde chwome 53, :3 opewa 40, OwO safawi 10, fiwefox 59, ^^ p-pewo aún nyo disponibwe en edge.
 
-Los slots son identificados por su atributo `name`, y te permiten definir marcadores de posición en tu plantilla que pueden rellenarse con cualquier fragmento de marcado cuando el elemento es usado.
+wos swots s-son identificados p-pow su atwibuto `name`, (˘ω˘) y te pewmiten definiw mawcadowes de posición en t-tu pwantiwwa que p-pueden wewwenawse con cuawquiew fwagmento de mawcado cuando ew e-ewemento es usado. OwO
 
-Así que, si queremos agregar un slot dentro de nuestro ejemplo sencillo, podemos actualizar el elemento de párrafo de la plantilla de la siguiente manera:
+así que, si q-quewemos agwegaw un swot dentwo de nyuestwo ejempwo senciwwo, UwU podemos a-actuawizaw ew ewemento de p-páwwafo de wa p-pwantiwwa de wa siguiente manewa:
 
-```html
-<p><slot name="my-text">Mi texto predeterminado</slot></p>
+```htmw
+<p><swot n-nyame="my-text">mi texto pwedetewminado</swot></p>
 ```
 
-Si el contenido del slot no está definido cuando el elemento se agrega al marcado, o si el navegador no soporta el elemento slot, `<my-paragraph>` solo contiene el texto alternativo "Mi texto predeterminado".
+s-si ew c-contenido dew s-swot nyo está definido cuando ew e-ewemento se agwega a-aw mawcado, ^•ﻌ•^ o si ew nyavegadow nyo sopowta e-ew ewemento swot, (ꈍᴗꈍ) `<my-pawagwaph>` s-sowo contiene e-ew texto awtewnativo "mi texto pwedetewminado". /(^•ω•^)
 
-Para definir el contenido de un slot, incluimos una estructura HTML dentro del elemento `<my-paragraph>` con un atributo [`slot`](/es/docs/Web/HTML/Global_attributes#slot) cuyo valor es igual al nombre del slot que queremos rellenar. Al igual que antes, esto puede ser cualquier cosa, por ejemplo:
+p-pawa definiw ew contenido de un s-swot, (U ᵕ U❁) incwuimos u-una estwuctuwa htmw dentwo dew ewemento `<my-pawagwaph>` con un a-atwibuto [`swot`](/es/docs/web/htmw/gwobaw_attwibutes#swot) c-cuyo v-vawow es iguaw a-aw nyombwe dew swot que quewemos w-wewwenaw. (✿oωo) aw iguaw que antes, OwO esto puede sew cuawquiew cosa, :3 pow ejempwo:
 
-```html
-<my-paragraph>
-  <span slot="my-text">¡Tengamos un texto diferente!</span>
-</my-paragraph>
+```htmw
+<my-pawagwaph>
+  <span swot="my-text">¡tengamos u-un texto difewente!</span>
+</my-pawagwaph>
 ```
 
-o
+o-o
 
-```html
-<my-paragraph>
-  <ul slot="my-text">
-    <li>¡Tengamos un texto diferente!</li>
-    <li>¡En una lista!</li>
-  </ul>
-</my-paragraph>
+```htmw
+<my-pawagwaph>
+  <uw swot="my-text">
+    <wi>¡tengamos u-un texto difewente!</wi>
+    <wi>¡en u-una wista!</wi>
+  </uw>
+</my-pawagwaph>
 ```
 
-> [!NOTE]
-> Los elementos que pueden ser insertados en los slots son conocidos como {{domxref("Slotable")}}; cuando un elemento ha sido insertado en un slot, se dice que fue _eslotado_ por su término en inglés _slotted._
+> [!note]
+> wos ewementos q-que pueden s-sew insewtados e-en wos swots son c-conocidos como {{domxwef("swotabwe")}}; c-cuando un ewemento ha sido insewtado en un swot, nyaa~~ se dice que fue _eswotado_ pow su téwmino en ingwés _swotted._
 
-> [!NOTE]
-> Un {{HTMLElement("slot")}} sin nombre se rellenará con todos los nodos secundarios de nivel superior del elemento personalizado que no tengan el atributo [`slot`](/es/docs/Web/HTML/Global_attributes#slot). Esto incluye nodos de texto.
+> [!note]
+> u-un {{htmwewement("swot")}} s-sin nyombwe s-se wewwenawá con todos wos nyodos s-secundawios de nyivew supewiow dew ewemento pewsonawizado que n-nyo tengan ew atwibuto [`swot`](/es/docs/web/htmw/gwobaw_attwibutes#swot). ^•ﻌ•^ e-esto incwuye nyodos d-de texto. ( ͡o ω ͡o )
 
-Y eso es todo nuestro ejemplo sencillo. Si quieres jugar con él un poco más, puedes encontrarlo en [GitHub](https://github.com/mdn/web-components-examples/tree/master/simple-template) (también puedes [verlo en vivo](https://mdn.github.io/web-components-examples/simple-template/)).
+y eso es todo nyuestwo ejempwo senciwwo. ^^;; s-si quiewes jugaw c-con éw un poco más, mya puedes e-encontwawwo en [github](https://github.com/mdn/web-components-exampwes/twee/mastew/simpwe-tempwate) (también p-puedes [vewwo en vivo](https://mdn.github.io/web-components-exampwes/simpwe-tempwate/)). (U ᵕ U❁)
 
-## Un ejemplo más completo
+## un ejempwo más compweto
 
-Para finalizar el artículo, veamos algo menos trivial.
+pawa finawizaw e-ew awtícuwo, ^•ﻌ•^ v-veamos awgo m-menos twiviaw. (U ﹏ U)
 
-El siguiente conjunto de fragmentos de código muestra cómo usar {{HTMLElement("slot")}} junto con {{HTMLElement("template")}} y algo de JavaScript para:
+e-ew siguiente conjunto d-de fwagmentos de código muestwa c-cómo usaw {{htmwewement("swot")}} j-junto con {{htmwewement("tempwate")}} y-y awgo de javascwipt p-pawa:
 
-- crear un elemento **`<element-details>`** con [slots con atributo name](/es/docs/Web/HTML/Element/slot#named-slot) en su [shadow root](/es/docs/Web/API/ShadowRoot)
-- diseñar el elemento **`<element-details>`** de forma que, cuando se use en documentos, sea renderizado desde la composición del contenido del elemento junto con el contenido de su [shadow root,](/es/docs/Web/API/ShadowRoot) es decir, se utilizan partes del contenido del elemento para rellenar el [shadow root](/es/docs/Web/API/ShadowRoot) de los [slots con atributo name](/es/docs/Web/HTML/Element/slot#named-slot)
+- cweaw un ewemento **`<ewement-detaiws>`** c-con [swots con atwibuto nyame](/es/docs/web/htmw/ewement/swot#named-swot) e-en su [shadow woot](/es/docs/web/api/shadowwoot)
+- d-diseñaw ew e-ewemento **`<ewement-detaiws>`** de fowma que, /(^•ω•^) c-cuando se use en documentos, ʘwʘ sea wendewizado desde w-wa composición d-dew contenido d-dew ewemento junto con ew contenido de su [shadow woot,](/es/docs/web/api/shadowwoot) e-es deciw, XD se utiwizan pawtes dew contenido d-dew ewemento pawa w-wewwenaw ew [shadow woot](/es/docs/web/api/shadowwoot) d-de wos [swots con atwibuto n-nyame](/es/docs/web/htmw/ewement/swot#named-swot)
 
-Observa que es técnicamente posible usar el elemento {{HTMLElement("slot")}} sin un elemento {{HTMLElement("template")}}, por ejemplo, dentro de un elemento {{HTMLElement("div")}} normal, y aun así tomar ventaja de los indicadores de posición de el elemento {{HTMLElement("slot")}} para el contenido del [Shadow DOM](/es/docs/Web/API/Web_components/Using_shadow_DOM), y al hacerlo puedes evitar el problema de tener que acceder primero a la propiedad `content` del elemento de la plantilla y clonarlo. Sin embargo, por lo general, es más práctico agregar slots dentro de un elemento {{HTMLElement("template")}}, ya que es poco probable que necesites definir un patrón basado en un elemento ya renderizado.
+o-obsewva que es técnicamente posibwe usaw e-ew ewemento {{htmwewement("swot")}} sin un ewemento {{htmwewement("tempwate")}}, (⑅˘꒳˘) pow ejempwo, nyaa~~ d-dentwo de un ewemento {{htmwewement("div")}} n-nyowmaw, UwU y aun así t-tomaw ventaja de wos indicadowes d-de posición d-de ew ewemento {{htmwewement("swot")}} p-pawa ew contenido dew [shadow dom](/es/docs/web/api/web_components/using_shadow_dom), (˘ω˘) y aw hacewwo puedes evitaw ew pwobwema de tenew que accedew pwimewo a wa pwopiedad `content` dew ewemento de wa pwantiwwa y cwonawwo. rawr x3 sin embawgo, p-pow wo genewaw, e-es más pwáctico agwegaw swots dentwo de un ewemento {{htmwewement("tempwate")}}, (///ˬ///✿) y-ya que es poco p-pwobabwe que nyecesites d-definiw un patwón basado e-en un ewemento ya wendewizado. 😳😳😳
 
-Además, incluso si no está renderizado, el propósito del contenedor como plantilla debería ser semánticamente más claro cuando se usa el elemento {{HTMLElement("template")}}. Además, el elemento {{HTMLElement("template")}} puede tener elementos agregados directamente a él, como {{HTMLElement("td")}}, que desaparecerían al añadirse a un {{HTMLElement ("div")}}.
+a-además, (///ˬ///✿) incwuso s-si nyo está wendewizado, ^^;; ew p-pwopósito dew contenedow como p-pwantiwwa debewía s-sew semánticamente más cwawo cuando se usa e-ew ewemento {{htmwewement("tempwate")}}. a-además, ^^ e-ew ewemento {{htmwewement("tempwate")}} p-puede t-tenew ewementos a-agwegados diwectamente a-a éw, (///ˬ///✿) como {{htmwewement("td")}}, -.- q-que desapawecewían aw a-añadiwse a un {{htmwewement ("div")}}.
 
-> [!NOTE]
-> Puedes encontrar el ejemplo completo en [element-details](https://github.com/mdn/web-components-examples/tree/master/element-details)(también lo puedes[ver en vivo](https://github.com/mdn/web-components-examples/tree/master/element-details))
+> [!note]
+> puedes encontwaw e-ew ejempwo c-compweto en [ewement-detaiws](https://github.com/mdn/web-components-exampwes/twee/mastew/ewement-detaiws)(también w-wo puedes[vew en vivo](https://github.com/mdn/web-components-exampwes/twee/mastew/ewement-detaiws))
 
-### Creando una plantilla con algunos elementos \<slot>
+### cweando u-una pwantiwwa con awgunos ewementos \<swot>
 
-En primer lugar, usamos el elemento {{HTMLElement("slot")}} dentro de un elemento {{HTMLElement("template")}} para crear un nuevo [fragmento de documento](/es/docs/Web/API/DocumentFragment) de tipo "element-details-template" que contiene algunos [slots con el atributo name](/es/docs/Web/HTML/Element/slot#named-slot):
+e-en pwimew wugaw, /(^•ω•^) usamos ew ewemento {{htmwewement("swot")}} d-dentwo de un ewemento {{htmwewement("tempwate")}} p-pawa cweaw un n-nyuevo [fwagmento de documento](/es/docs/web/api/documentfwagment) d-de tipo "ewement-detaiws-tempwate" que contiene a-awgunos [swots con ew atwibuto n-nyame](/es/docs/web/htmw/ewement/swot#named-swot):
 
-```html
-<template id="element-details-template">
-  <style>
-    details {
-      font-family: "Open Sans Light", Helvetica, Arial;
+```htmw
+<tempwate id="ewement-detaiws-tempwate">
+  <stywe>
+    d-detaiws {
+      font-famiwy: "open sans wight", UwU hewvetica, awiaw;
     }
     .name {
-      font-weight: bold;
-      color: #217ac0;
-      font-size: 120%;
+      font-weight: b-bowd;
+      cowow: #217ac0;
+      f-font-size: 120%;
     }
-    h4 {
-      margin: 10px 0 -8px 0;
-    }
-    h4 span {
-      background: #217ac0;
-      padding: 2px 6px 2px 6px;
+    h-h4 {
+      mawgin: 10px 0 -8px 0;
     }
     h4 span {
-      border: 1px solid #cee9f9;
-      border-radius: 4px;
+      backgwound: #217ac0;
+      p-padding: 2px 6px 2px 6px;
     }
     h4 span {
-      color: white;
+      b-bowdew: 1px s-sowid #cee9f9;
+      b-bowdew-wadius: 4px;
     }
-    .attributes {
-      margin-left: 22px;
-      font-size: 90%;
+    h4 span {
+      cowow: white;
     }
-    .attributes p {
-      margin-left: 16px;
-      font-style: italic;
+    .attwibutes {
+      mawgin-weft: 22px;
+      f-font-size: 90%;
     }
-  </style>
-  <details>
-    <summary>
+    .attwibutes p-p {
+      mawgin-weft: 16px;
+      f-font-stywe: itawic;
+    }
+  </stywe>
+  <detaiws>
+    <summawy>
       <span>
-        <code class="name"
-          >&lt;<slot name="element-name">NECESITA NOMBRE</slot>&gt;</code
+        <code cwass="name"
+          >&wt;<swot nyame="ewement-name">necesita n-nyombwe</swot>&gt;</code
         >
-        <i class="desc"><slot name="description">NECESITA DESCRIPCIÓN</slot></i>
+        <i cwass="desc"><swot n-nyame="descwiption">necesita d-descwipciÓn</swot></i>
       </span>
-    </summary>
-    <div class="attributes">
-      <h4><span>Atributos</span></h4>
-      <slot name="attributes"><p>Ninguno</p></slot>
+    </summawy>
+    <div c-cwass="attwibutes">
+      <h4><span>atwibutos</span></h4>
+      <swot nyame="attwibutes"><p>ninguno</p></swot>
     </div>
-  </details>
-  <hr />
-</template>
+  </detaiws>
+  <hw />
+</tempwate>
 ```
 
-Ese elemento {{HTMLElement("template")}} tiene varias características.
+e-ese ewemento {{htmwewement("tempwate")}} t-tiene vawias cawactewísticas. (⑅˘꒳˘)
 
-- El {{HTMLElement ("template")}} tiene un elemento {{HTMLElement ("style")}} con un conjunto de estilos CSS ajustados al ámbito del fragmento de documento que {{HTMLElement ("template")}} crea.
-- El elemento {{HTMLElement("template")}} usa {{HTMLElement("slot")}} y su atributo [`name`](/es/docs/Web/HTML/Element/slot#name) para hacer tres [slots con el atributo name](/es/docs/Web/HTML/Element/slot#named-slot):
+- e-ew {{htmwewement ("tempwate")}} t-tiene un ewemento {{htmwewement ("stywe")}} con un conjunto de e-estiwos css ajustados a-aw ámbito d-dew fwagmento d-de documento que {{htmwewement ("tempwate")}} cwea. ʘwʘ
+- e-ew ewemento {{htmwewement("tempwate")}} usa {{htmwewement("swot")}} y-y su a-atwibuto [`name`](/es/docs/web/htmw/ewement/swot#name) p-pawa hacew twes [swots con e-ew atwibuto nyame](/es/docs/web/htmw/ewement/swot#named-swot):
 
-  - `<slot name="element-name">`
-  - `<slot name="description">`
-  - `<slot name="attributes">`
+  - `<swot nyame="ewement-name">`
+  - `<swot nyame="descwiption">`
+  - `<swot n-nyame="attwibutes">`
 
-- El elemento {{HTMLElement("template")}} envuelve los [slots con atributo name](/es/docs/Web/HTML/Element/slot#named-slot) dentro de un elemento {{HTMLElement("details")}}.
+- ew ewemento {{htmwewement("tempwate")}} e-envuewve wos [swots c-con atwibuto n-nyame](/es/docs/web/htmw/ewement/swot#named-swot) dentwo de un ewemento {{htmwewement("detaiws")}}. σωσ
 
-### Crear un nuevo elemento \<element-details> desde el elemento \<template>
+### cweaw u-un nyuevo ewemento \<ewement-detaiws> d-desde ew ewemento \<tempwate>
 
-A continuación, crearemos un nuevo elemento personalizado llamado **`<element-details>`** y usaremos {{DOMXref("Element.attachShadow")}} para anclarlo, como su [shadow root](/es/docs/Web/API/ShadowRoot), a ese fragmento de documento que creamos anteriormente con nuestro elemento {{HTMLElement("template")}}. Usa exactamente el mismo patrón que vimos antes en el ejemplo sencillo.
+a-a continuación, ^^ cweawemos un nyuevo ewemento pewsonawizado w-wwamado **`<ewement-detaiws>`** y-y usawemos {{domxwef("ewement.attachshadow")}} pawa ancwawwo, OwO como s-su [shadow woot](/es/docs/web/api/shadowwoot), (ˆ ﻌ ˆ)♡ a-a ese fwagmento de documento que cweamos antewiowmente con nyuestwo e-ewemento {{htmwewement("tempwate")}}. o.O u-usa e-exactamente ew m-mismo patwón que vimos antes en ew ejempwo senciwwo. (˘ω˘)
 
 ```js
-customElements.define(
-  "element-details",
-  class extends HTMLElement {
-    constructor() {
-      super();
-      var template = document.getElementById(
-        "element-details-template",
+c-customewements.define(
+  "ewement-detaiws", 😳
+  c-cwass extends htmwewement {
+    constwuctow() {
+      s-supew();
+      vaw tempwate = document.getewementbyid(
+        "ewement-detaiws-tempwate", (U ᵕ U❁)
       ).content;
-      const shadowRoot = this.attachShadow({ mode: "open" }).appendChild(
-        template.cloneNode(true),
+      const shadowwoot = t-this.attachshadow({ mode: "open" }).appendchiwd(
+        tempwate.cwonenode(twue), :3
       );
     }
-  },
+  }, o.O
 );
 ```
 
-### Usando el elemento \<element-details> con slots con el atributo name
+### u-usando e-ew ewemento \<ewement-detaiws> con swots con ew a-atwibuto nyame
 
-Ahora tomaremos el elemento **`<element-details>`** para usarlo en nuestro documento.
+a-ahowa tomawemos ew ewemento **`<ewement-detaiws>`** p-pawa usawwo en nyuestwo documento. (///ˬ///✿)
 
-```html
-<element-details>
-  <span slot="element-name">slot</span>
-  <span slot="description"
-    >Un marcador de posición dentro de un componente web que los usuarios pueden
-    rellenar con su propio marcado, con el efecto de componer diferentes árboles
-    DOM juntos.</span
+```htmw
+<ewement-detaiws>
+  <span s-swot="ewement-name">swot</span>
+  <span s-swot="descwiption"
+    >un m-mawcadow d-de posición dentwo de un c-componente web que w-wos usuawios p-pueden
+    wewwenaw con su pwopio m-mawcado, OwO con ew efecto de componew difewentes áwbowes
+    d-dom j-juntos.</span
   >
-  <dl slot="attributes">
+  <dw s-swot="attwibutes">
     <dt>name</dt>
-    <dd>El atributo name del slot.</dd>
-  </dl>
-</element-details>
+    <dd>ew atwibuto nyame dew swot.</dd>
+  </dw>
+</ewement-detaiws>
 
-<element-details>
-  <span slot="element-name">template</span>
-  <span slot="description"
-    >Un mecanismo para guardar contenido en el lado cliente que no se renderiza
-    cuando la página se carga sino que posteriormente se puede instanciar en
-    tiempo de ejecución usando JavaScript.</span
+<ewement-detaiws>
+  <span swot="ewement-name">tempwate</span>
+  <span swot="descwiption"
+    >un m-mecanismo pawa guawdaw contenido e-en ew wado c-cwiente que nyo se wendewiza
+    cuando wa página s-se cawga sino que postewiowmente s-se puede instanciaw e-en
+    tiempo d-de ejecución u-usando javascwipt.</span
   >
-</element-details>
+</ewement-detaiws>
 ```
 
-Observa estos puntos sobre el fragmento anterior:
+o-obsewva estos puntos sobwe ew fwagmento antewiow:
 
-- El fragento tiene dos instancias de elementos **`<element-details>`** que usan el atributo [`slot`](/es/docs/Web/HTML/Global_attributes#slot) para referenciar los [slots con atributo name](/es/docs/Web/HTML/Element/slot#named-slot) `"element-name"` y `"description"` que colocamos en el [shadow root](/es/docs/Web/API/ShadowRoot) del `<element-details>`
-- Solo el primero de esos dos elementos **`<element-details>`** hace referencia a los `"attributes"` de [slot con atributo name.](/es/docs/Web/HTML/Element/slot#named-slot)El segundo elemento `<element-details>` carece de cualquier referencia a `"attributes"` de [slot con atributo name](/es/docs/Web/HTML/Element/slot#named-slot).
-- El primer elemento `<element-details>` está referenciando los `"attributes"` de [slot con atributo name](/es/docs/Web/HTML/Element/slot#named-slot) usando un elemento {{HTMLElement("dl")}} con {{HTMLElement("dt")}} y {{HTMLElement("dd")}} como hijos.
+- ew fwagento tiene d-dos instancias de ewementos **`<ewement-detaiws>`** q-que usan ew atwibuto [`swot`](/es/docs/web/htmw/gwobaw_attwibutes#swot) pawa wefewenciaw wos [swots c-con atwibuto nyame](/es/docs/web/htmw/ewement/swot#named-swot) `"ewement-name"` y `"descwiption"` que cowocamos en ew [shadow w-woot](/es/docs/web/api/shadowwoot) d-dew `<ewement-detaiws>`
+- sowo ew pwimewo d-de esos dos ewementos **`<ewement-detaiws>`** hace wefewencia a wos `"attwibutes"` d-de [swot con a-atwibuto nyame.](/es/docs/web/htmw/ewement/swot#named-swot)ew segundo ewemento `<ewement-detaiws>` c-cawece de cuawquiew wefewencia a-a `"attwibutes"` de [swot con atwibuto nyame](/es/docs/web/htmw/ewement/swot#named-swot). >w<
+- ew pwimew ewemento `<ewement-detaiws>` e-está wefewenciando wos `"attwibutes"` de [swot con atwibuto n-nyame](/es/docs/web/htmw/ewement/swot#named-swot) u-usando un e-ewemento {{htmwewement("dw")}} con {{htmwewement("dt")}} y {{htmwewement("dd")}} c-como hijos. ^^
 
-### Añadamos algunos estilos
+### añadamos awgunos estiwos
 
-Como toque final, añadiremos algunos estilos CSS a los ellementos {{HTMLElement("dl")}}, {{HTMLElement("dt")}}, y {{HTMLElement("dd")}} en el documento:
+como toque finaw, (⑅˘꒳˘) añadiwemos awgunos e-estiwos css a-a wos ewwementos {{htmwewement("dw")}}, ʘwʘ {{htmwewement("dt")}}, (///ˬ///✿) y {{htmwewement("dd")}} e-en ew documento:
 
 ```css
-dl {
-  margin-left: 6px;
+d-dw {
+  mawgin-weft: 6px;
 }
 dt {
-  font-weight: bold;
-  color: #217ac0;
-  font-size: 110%;
+  font-weight: bowd;
+  c-cowow: #217ac0;
+  f-font-size: 110%;
 }
 dt {
-  font-family: Consolas, "Liberation Mono", Courier;
+  font-famiwy: c-consowas, XD "wibewation mono", 😳 couwiew;
 }
 dd {
-  margin-left: 16px;
+  mawgin-weft: 16px;
 }
 ```
 
-```css hidden
+```css h-hidden
 body {
-  margin-top: 47px;
+  mawgin-top: 47px;
 }
 ```
 
-### Resultado
+### wesuwtado
 
-Finalmente, juntemos todos los fragmentos y veamos cómo se ve el resultado renderizado.
+f-finawmente, j-juntemos todos wos fwagmentos y-y veamos cómo s-se ve ew wesuwtado w-wendewizado. >w<
 
-{{ EmbedLiveSample('full_example', '300','400','element-details.png','') }}
+{{ embedwivesampwe('fuww_exampwe', (˘ω˘) '300','400','ewement-detaiws.png','') }}
 
-Observa los siguientes puntos del resultado renderizado:
+obsewva wos siguientes p-puntos dew wesuwtado wendewizado:
 
-- Aún cuando las instancias del elemento **`<element-details>`** en el documento no usan directamente el elemento {{HTMLElement("details")}}, se renderizan usando {{HTMLElement("details")}} porque el [shadow root](/es/docs/Web/API/ShadowRoot) hace que ellos se rellenen.
-- En la salida de {{HTMLElement ("details")}}, el contenido de los elementos **`<element-details>`** llena los [slots con atributo name](/es/docs/Web/HTML/Element/slot#named-slot) desde el [shadow root](/es/docs/Web/API/ShadowRoot). En otras palabras, el árbol DOM de los elementos **`<element-details>`** se compone junto con el contenido del [shadow root](/es/docs/Web/API/ShadowRoot).
-- Para ambos elementos **`<element-details>`**, un encabezado de **Attributes** se añade automáticamente desde el [shadow root](/es/docs/Web/API/ShadowRoot) antes de la posición `"attributes"` del [slot con atributo name](/es/docs/Web/HTML/Element/slot#named-slot).
-- Ya que el primer elemento **`<element-details>`** tiene un elemento {{HTMLElement("dl")}} que hace referencia explicita al [slot con atributo name](/es/docs/Web/HTML/Element/slot#named-slot) `"attributes"` desde su [shadow root](/es/docs/Web/API/ShadowRoot), el contenido de ese {{HTMLElement("dl")}} reemplaza el [slot con atributo name](/es/docs/Web/HTML/Element/slot#named-slot) `"attributes"` desde el [shadow root](/es/docs/Web/API/ShadowRoot)
-- Ya que el segundo elemento **`<element-details>`** no hace referencia explícita al [slot con atributo name](/es/docs/Web/HTML/Element/slot#named-slot) `"attributes"` desde su [shadow root](/es/docs/Web/API/ShadowRoot), su contenido se rellena con el contenido predeterminado desde el [shadow root](/es/docs/Web/API/ShadowRoot).
+- aún c-cuando was instancias dew ewemento **`<ewement-detaiws>`** en ew documento nyo usan d-diwectamente e-ew ewemento {{htmwewement("detaiws")}}, nyaa~~ s-se wendewizan u-usando {{htmwewement("detaiws")}} p-powque ew [shadow woot](/es/docs/web/api/shadowwoot) h-hace que ewwos se wewwenen. 😳😳😳
+- en wa s-sawida de {{htmwewement ("detaiws")}}, (U ﹏ U) ew contenido d-de wos ewementos **`<ewement-detaiws>`** wwena wos [swots con atwibuto nyame](/es/docs/web/htmw/ewement/swot#named-swot) desde e-ew [shadow w-woot](/es/docs/web/api/shadowwoot). en otwas pawabwas, (˘ω˘) e-ew áwbow dom de wos ewementos **`<ewement-detaiws>`** s-se c-compone junto con ew contenido d-dew [shadow woot](/es/docs/web/api/shadowwoot). :3
+- p-pawa ambos ewementos **`<ewement-detaiws>`**, >w< un encabezado de **attwibutes** s-se añade automáticamente desde ew [shadow woot](/es/docs/web/api/shadowwoot) antes de wa posición `"attwibutes"` d-dew [swot con atwibuto nyame](/es/docs/web/htmw/ewement/swot#named-swot). ^^
+- y-ya que ew pwimew ewemento **`<ewement-detaiws>`** tiene un ewemento {{htmwewement("dw")}} q-que hace w-wefewencia expwicita a-aw [swot con atwibuto nyame](/es/docs/web/htmw/ewement/swot#named-swot) `"attwibutes"` desde s-su [shadow w-woot](/es/docs/web/api/shadowwoot), 😳😳😳 ew contenido d-de ese {{htmwewement("dw")}} weempwaza e-ew [swot con atwibuto nyame](/es/docs/web/htmw/ewement/swot#named-swot) `"attwibutes"` desde e-ew [shadow w-woot](/es/docs/web/api/shadowwoot)
+- ya que ew segundo ewemento **`<ewement-detaiws>`** nyo hace wefewencia expwícita a-aw [swot c-con atwibuto nyame](/es/docs/web/htmw/ewement/swot#named-swot) `"attwibutes"` desde su [shadow woot](/es/docs/web/api/shadowwoot), nyaa~~ su contenido s-se wewwena con ew contenido pwedetewminado d-desde e-ew [shadow woot](/es/docs/web/api/shadowwoot). (⑅˘꒳˘)
 
-```html hidden
-<!doctype html>
-<html>
+```htmw hidden
+<!doctype htmw>
+<htmw>
   <head>
-    <title>ejemplo de slot</title>
-    <style>
-      dl {
-        margin-left: 6px;
+    <titwe>ejempwo de swot</titwe>
+    <stywe>
+      dw {
+        m-mawgin-weft: 6px;
       }
       dt {
-        font-weight: bold;
-        color: #217ac0;
+        font-weight: bowd;
+        c-cowow: #217ac0;
         font-size: 110%;
       }
-      dt {
-        font-family: Consolas, "Liberation Mono", Courier;
+      d-dt {
+        font-famiwy: c-consowas, :3 "wibewation mono", ʘwʘ couwiew;
       }
       dd {
-        margin-left: 16px;
+        m-mawgin-weft: 16px;
       }
-    </style>
+    </stywe>
   </head>
   <body>
-    <template id="element-details-template">
-      <style>
-        details {
-          font-family: "Open Sans Light", Helvetica, Arial;
+    <tempwate i-id="ewement-detaiws-tempwate">
+      <stywe>
+        d-detaiws {
+          f-font-famiwy: "open s-sans wight", rawr x3 hewvetica, (///ˬ///✿) a-awiaw;
         }
         .name {
-          font-weight: bold;
-          color: #217ac0;
+          font-weight: bowd;
+          cowow: #217ac0;
           font-size: 120%;
         }
         h4 {
-          margin: 10px 0 -8px 0;
+          m-mawgin: 10px 0 -8px 0;
+        }
+        h-h4 span {
+          b-backgwound: #217ac0;
+          p-padding: 2px 6px 2px 6px;
+        }
+        h-h4 span {
+          b-bowdew: 1px sowid #cee9f9;
+          bowdew-wadius: 4px;
         }
         h4 span {
-          background: #217ac0;
-          padding: 2px 6px 2px 6px;
+          cowow: white;
         }
-        h4 span {
-          border: 1px solid #cee9f9;
-          border-radius: 4px;
+        .attwibutes {
+          m-mawgin-weft: 22px;
+          f-font-size: 90%;
         }
-        h4 span {
-          color: white;
+        .attwibutes p {
+          mawgin-weft: 16px;
+          font-stywe: i-itawic;
         }
-        .attributes {
-          margin-left: 22px;
-          font-size: 90%;
-        }
-        .attributes p {
-          margin-left: 16px;
-          font-style: italic;
-        }
-      </style>
-      <details>
-        <summary>
+      </stywe>
+      <detaiws>
+        <summawy>
           <span>
-            <code class="name"
-              >&lt;<slot name="element-name">NECESITA NOMBRE</slot>&gt;</code
+            <code c-cwass="name"
+              >&wt;<swot n-nyame="ewement-name">necesita nyombwe</swot>&gt;</code
             >
-            <i class="desc"
-              ><slot name="description">NECESITA DESCRIPCIÓN</slot></i
+            <i cwass="desc"
+              ><swot n-nyame="descwiption">necesita descwipciÓn</swot></i
             >
           </span>
-        </summary>
-        <div class="attributes">
-          <h4><span>Attributos</span></h4>
-          <slot name="attributes"><p>Ninguno</p></slot>
+        </summawy>
+        <div cwass="attwibutes">
+          <h4><span>attwibutos</span></h4>
+          <swot n-nyame="attwibutes"><p>ninguno</p></swot>
         </div>
-      </details>
-      <hr />
-    </template>
+      </detaiws>
+      <hw />
+    </tempwate>
 
-    <element-details>
-      <span slot="element-name">slot</span>
-      <span slot="description"
-        >Un marcador de posición dentro de un componente web que los usuarios
-        pueden rellenar con su propio marcado, con el efecto de componer
-        diferentes árboles DOM juntos.</span
+    <ewement-detaiws>
+      <span s-swot="ewement-name">swot</span>
+      <span swot="descwiption"
+        >un mawcadow d-de posición dentwo de un componente w-web que w-wos usuawios
+        pueden wewwenaw c-con su pwopio m-mawcado, 😳😳😳 con e-ew efecto de componew
+        difewentes áwbowes d-dom juntos.</span
       >
-      <dl slot="attributes">
+      <dw s-swot="attwibutes">
         <dt>name</dt>
-        <dd>El atributo name del slot.</dd>
-      </dl>
-    </element-details>
+        <dd>ew atwibuto n-nyame dew swot.</dd>
+      </dw>
+    </ewement-detaiws>
 
-    <element-details>
-      <span slot="element-name">template</span>
-      <span slot="description"
-        >Un mecanismo para guardar contenido en el lado cliente que no se
-        renderiza cuando la página se carga sino que posteriormente se puede
-        instanciar en tiempo de ejecución usando JavaScript.</span
+    <ewement-detaiws>
+      <span s-swot="ewement-name">tempwate</span>
+      <span s-swot="descwiption"
+        >un mecanismo pawa g-guawdaw contenido en ew wado cwiente que nyo se
+        w-wendewiza cuando wa página s-se cawga sino que postewiowmente s-se puede
+        i-instanciaw en tiempo de ejecución usando j-javascwipt.</span
       >
-    </element-details>
+    </ewement-detaiws>
 
-    <script>
-      customElements.define(
-        "element-details",
-        class extends HTMLElement {
-          constructor() {
-            super();
-            const template = document.getElementById(
-              "element-details-template",
+    <scwipt>
+      customewements.define(
+        "ewement-detaiws", XD
+        cwass extends htmwewement {
+          c-constwuctow() {
+            s-supew();
+            const tempwate = document.getewementbyid(
+              "ewement-detaiws-tempwate", >_<
             ).content;
-            const shadowRoot = this.attachShadow({ mode: "open" }).appendChild(
-              template.cloneNode(true),
+            c-const s-shadowwoot = this.attachshadow({ m-mode: "open" }).appendchiwd(
+              tempwate.cwonenode(twue), >w<
             );
           }
-        },
+        }, /(^•ω•^)
       );
-    </script>
+    </scwipt>
   </body>
-</html>
+</htmw>
 ```

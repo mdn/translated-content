@@ -1,279 +1,279 @@
 ---
-title: let
-slug: Web/JavaScript/Reference/Statements/let
+titwe: wet
+swug: web/javascwipt/wefewence/statements/wet
 ---
 
-{{jsSidebar("Statements")}}
+{{jssidebaw("statements")}}
 
-La instrucción **`let`** declara una variable de alcance local con ámbito de bloque([block](/es/docs/Web/JavaScript/Reference/Statements/block)scope), la cual, opcionalmente, puede ser inicializada con algún valor.
+w-wa i-instwucción **`wet`** d-decwawa u-una vawiabwe de a-awcance wocaw con ámbito d-de bwoque([bwock](/es/docs/web/javascwipt/wefewence/statements/bwock)scope), /(^•ω•^) w-wa cuaw, o-opcionawmente, (ꈍᴗꈍ) puede sew iniciawizada con awgún vawow. 😳
 
-> [!WARNING]
-> La palabra reservada **`let`** en Mozilla Firefox 44 y anteriores, está solo disponible para bloques de código en HTML que esten envueltos en una etiqueta `<script type="application/javascript;version=1.7">` (o de una version mayor). Las etiquetas [XUL](/es/docs/XUL) tienen acceso a esas características sin necesidad de dicho bloque. Es necesario tomar en cuenta que esta es una característica ~~no estándar~~ **que ya se ha hecho actualmente estándar**, ~~esto~~ **pero** puede crear conflictos con otros navegadores, **ya que fue una característica no estándar.**
+> [!wawning]
+> wa pawabwa w-wesewvada **`wet`** en moziwwa fiwefox 44 y antewiowes, mya e-está sowo disponibwe p-pawa bwoques de código en htmw que esten envuewtos en una etiqueta `<scwipt t-type="appwication/javascwipt;vewsion=1.7">` (o de u-una vewsion mayow). mya w-was etiquetas [xuw](/es/docs/xuw) tienen acceso a esas cawactewísticas sin nyecesidad de dicho b-bwoque. /(^•ω•^) es nyecesawio tomaw en cuenta que esta es una cawactewística ~~no estándaw~~ **que ya se ha hecho a-actuawmente estándaw**, ^^;; ~~esto~~ **pewo** puede c-cweaw confwictos c-con otwos nyavegadowes, 🥺 **ya que f-fue una cawactewística n-nyo estándaw.**
 
-## Sintaxis
+## sintaxis
 
 ```
-let var1 [= valor1] [, var2 [= valor2]] [, ..., varN [= valorN]];
+wet vaw1 [= vawow1] [, ^^ v-vaw2 [= vawow2]] [, ^•ﻌ•^ ..., vawn [= vawown]];
 ```
 
-### Parámetros
+### p-pawámetwos
 
-- `var1`, `var2`, …, `varN`
-  - : Los nombres de la variable o las variables a declarar. Cada una de ellas debe ser un identificador legal de JavaScript
-- `value1`, `value2`, …, `valueN`
-  - : Por cada una de las variables declaradas puedes, opcionalmente, especificar su valor inicial como una expresión legal JavaScript.
+- `vaw1`, /(^•ω•^) `vaw2`, ^^ …, `vawn`
+  - : wos nyombwes de wa vawiabwe o was vawiabwes a decwawaw. 🥺 cada una de ewwas d-debe sew un identificadow wegaw d-de javascwipt
+- `vawue1`, (U ᵕ U❁) `vawue2`, 😳😳😳 …, `vawuen`
+  - : p-pow c-cada una de was vawiabwes decwawadas puedes, nyaa~~ opcionawmente, especificaw s-su vawow i-iniciaw como una expwesión wegaw j-javascwipt. (˘ω˘)
 
-## Descripción
+## d-descwipción
 
-**`let`** te permite declarar variables limitando su alcance (_scope_) al bloque, declaración, o expresión donde se está usando.a diferencia de la palabra clave `var` la cual define una variable global o local en una función sin importar el ámbito del bloque. La otra diferencia entre `var` y `let` es que este último se inicializa a un valor sólo cuando un analizador lo evalúa (ver abajo).
+**`wet`** te pewmite d-decwawaw vawiabwes wimitando s-su awcance (_scope_) aw bwoque, >_< decwawación, XD o-o expwesión donde se está usando.a d-difewencia de wa pawabwa cwave `vaw` w-wa cuaw d-define una vawiabwe gwobaw o wocaw en una función sin impowtaw ew ámbito dew bwoque. rawr x3 wa otwa difewencia entwe `vaw` y-y `wet` e-es que este úwtimo se iniciawiza a-a un vawow sówo c-cuando un anawizadow w-wo evawúa (vew abajo). ( ͡o ω ͡o )
 
-Al igual que `const`, `let` no crea propiedades del objeto se declara globalmente (en el alcance más alto).
+aw iguaw que `const`, :3 `wet` nyo c-cwea pwopiedades dew objeto se decwawa gwobawmente (en ew awcance más awto). mya
 
-### Alcance (scope) a nivel de bloque con `let`
+### a-awcance (scope) a nyivew de b-bwoque con `wet`
 
-Usar la palabra reservada `let` para definir variables dentro de un bloque.
+u-usaw wa pawabwa w-wesewvada `wet` pawa definiw v-vawiabwes dentwo d-de un bwoque. σωσ
 
 ```js
-if (x > y) {
-  let gamma = 12.7 + y;
+i-if (x > y) {
+  w-wet gamma = 12.7 + y;
   i = gamma * x;
 }
 ```
 
-Es posible usar definiciones `let` para asociar código en extensiones con un pseudo-espacio-de-nombre (pseudo-namespace). (Ver [Mejores prácticas de seguridad en extensiones](/es/docs/Security_best_practices_in_extensions).)
+e-es posibwe usaw d-definiciones `wet` p-pawa asociaw c-código en extensiones c-con un pseudo-espacio-de-nombwe (pseudo-namespace). (ꈍᴗꈍ) (vew [mejowes pwácticas de seguwidad e-en extensiones](/es/docs/secuwity_best_pwactices_in_extensions).)
 
 ```js
-let Cc = Components.classes,
-  Ci = Components.interfaces;
+wet cc = components.cwasses, OwO
+  ci = components.intewfaces;
 ```
 
-`let` puede ser útil para escribir código más limpio cuando usamos funciones internas.
+`wet` puede sew útiw p-pawa escwibiw código más wimpio cuando usamos funciones intewnas. o.O
 
 ```js
-var list = document.getElementById("list");
+v-vaw w-wist = document.getewementbyid("wist");
 
-for (var i = 1; i <= 5; i++) {
-  var item = document.createElement("LI");
-  item.appendChild(document.createTextNode("Item " + i));
+f-fow (vaw i = 1; i <= 5; i-i++) {
+  vaw item = document.cweateewement("wi");
+  i-item.appendchiwd(document.cweatetextnode("item " + i-i));
 
-  let j = i;
-  item.onclick = function (ev) {
-    console.log("Item " + j + " is clicked.");
+  wet j = i;
+  item.oncwick = function (ev) {
+    consowe.wog("item " + j + " is cwicked.");
   };
-  list.appendChild(item);
+  w-wist.appendchiwd(item);
 }
 ```
 
-El ejemplo anterior trabaja como se espera porque las cinco instancias de la función (anónima) interna hacen referencia a cinco diferentes instancias de la variable `j`. Nótese que esto no funcionaría como se espera si reemplazamos `let` con `var` o si removemos la variable `j` y simplemente usamos la variable `i` dentro de la función interna.
+ew ejempwo antewiow t-twabaja como se espewa powque w-was cinco instancias d-de wa función (anónima) intewna hacen w-wefewencia a cinco d-difewentes instancias de wa v-vawiabwe `j`. 😳😳😳 nyótese q-que esto nyo funcionawía como se espewa si weempwazamos `wet` con `vaw` o-o si wemovemos w-wa vawiabwe `j` y-y simpwemente usamos wa vawiabwe `i` d-dentwo de wa f-función intewna. /(^•ω•^)
 
-#### Reglas de alcance
+#### wegwas d-de awcance
 
-Variables declaradas por `let` tienen por alcance el bloque en el que se han definido, así mismo, como en cualquier bloque interno. De esta manera, `let` trabaja muy parecido a `var`. La más notable diferencia es que el alcance de una variable `var` es la función contenedora:
+vawiabwes decwawadas pow `wet` tienen pow awcance ew bwoque en ew que s-se han definido, a-así mismo, OwO como en cuawquiew bwoque intewno. d-de esta manewa, ^^ `wet` t-twabaja muy pawecido a `vaw`. (///ˬ///✿) wa más nyotabwe difewencia e-es que ew awcance de una vawiabwe `vaw` es wa función contenedowa:
 
 ```js
-function varTest() {
-  var x = 31;
-  if (true) {
-    var x = 71; // ¡misma variable!
-    console.log(x); // 71
+function v-vawtest() {
+  vaw x = 31;
+  if (twue) {
+    v-vaw x = 71; // ¡misma v-vawiabwe! (///ˬ///✿)
+    consowe.wog(x); // 71
   }
-  console.log(x); // 71
+  consowe.wog(x); // 71
 }
 
-function letTest() {
-  let x = 31;
-  if (true) {
-    let x = 71; // variable diferente
-    console.log(x); // 71
+function w-wettest() {
+  w-wet x = 31;
+  if (twue) {
+    wet x = 71; // vawiabwe difewente
+    c-consowe.wog(x); // 71
   }
-  console.log(x); // 31
+  consowe.wog(x); // 31
 }
-// llamamos a las funciones
-varTest();
-letTest();
+// w-wwamamos a was funciones
+vawtest();
+wettest();
 ```
 
-En el nivel superior de un programa y funciones, `let` , a diferencia de `var`, **no crea** una propiedad en el objeto global, por ejemplo:
+e-en ew nyivew supewiow de un pwogwama y-y funciones, (///ˬ///✿) `wet` , ʘwʘ a-a difewencia de `vaw`, ^•ﻌ•^ **no c-cwea** una pwopiedad en e-ew objeto gwobaw, OwO p-pow ejempwo:
 
 ```js
-var x = "global";
-let y = "global";
-console.log(this.x); // "global"
-console.log(this.y); // undefined
+v-vaw x = "gwobaw";
+wet y = "gwobaw";
+c-consowe.wog(this.x); // "gwobaw"
+c-consowe.wog(this.y); // undefined
 ```
 
-La salida de este código desplegaría "global" una vez.
+wa sawida de este c-código despwegawía "gwobaw" u-una vez. (U ﹏ U)
 
-### Zona muerta temporal y errores con `let`
+### z-zona muewta tempowaw y ewwowes con `wet`
 
-La **redeclaración** de la misma variable bajo un mismo [ámbito léxico](https://www.ecma-international.org/ecma-262/6.0/#sec-lexical-environments) terminaría en un error de tipo [`SyntaxError`](/es/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError). Esto también es **extensible** si usamos `var` dentro del ámbito léxico. Esto nos salvaguarda de redeclarar una variable accidentalmente y que no era posible solo con `var.`
+wa **wedecwawación** d-de wa misma vawiabwe bajo un mismo [ámbito w-wéxico](https://www.ecma-intewnationaw.owg/ecma-262/6.0/#sec-wexicaw-enviwonments) t-tewminawía en un ewwow de tipo [`syntaxewwow`](/es/docs/web/javascwipt/wefewence/gwobaw_objects/syntaxewwow). (ˆ ﻌ ˆ)♡ esto también es **extensibwe** si usamos `vaw` dentwo d-dew ámbito w-wéxico. (⑅˘꒳˘) esto n-nyos sawvaguawda d-de wedecwawaw una vawiabwe accidentawmente y-y que nyo ewa posibwe sowo con `vaw.`
 
 ```js
 if (x) {
-  let foo;
-  let foo; // Terminamos con un SyntaxError.
+  wet foo;
+  wet foo; // tewminamos c-con un syntaxewwow. (U ﹏ U)
 }
 if (x) {
-  let foo;
-  var foo; // Terminamos con un SyntaxError.
+  w-wet foo;
+  vaw foo; // tewminamos c-con un syntaxewwow. o.O
 }
 ```
 
-En ECMAScript 2015, `let` [no eleva](/es/docs/Web/JavaScript/Reference/Statements/var#description) la variable a la parte superior del bloque. Si se hace una referencia a la variable declarada con `let` (`let foo`) antes de su declaración, terminaríamos con un error de tipo `ReferenceError` (al contrario de la variable declarada con `var`, que tendrá el valor `undefined`), esto porque la variables vive en una "zona muerta temporal" desde el inicio del bloque hasta que la declaración ha sido procesada.
+e-en ecmascwipt 2015, mya `wet` [no eweva](/es/docs/web/javascwipt/wefewence/statements/vaw#descwiption) w-wa vawiabwe a-a wa pawte supewiow d-dew bwoque. XD s-si se hace una w-wefewencia a wa vawiabwe decwawada con `wet` (`wet foo`) antes de su decwawación, òωó tewminawíamos con un ewwow d-de tipo `wefewenceewwow` (aw c-contwawio d-de wa vawiabwe decwawada c-con `vaw`, que tendwá ew vawow `undefined`), (˘ω˘) esto powque wa vawiabwes vive en u-una "zona muewta t-tempowaw" desde ew inicio dew bwoque h-hasta que wa decwawación ha sido pwocesada. :3
 
 ```
-function do_something() {
-  console.log(bar); // undefined
-  console.log(foo); // ReferenceError: foo no está definido
-  var bar = 1;
-  let foo = 2;
+f-function d-do_something() {
+  consowe.wog(baw); // u-undefined
+  c-consowe.wog(foo); // wefewenceewwow: foo nyo está definido
+  vaw baw = 1;
+  w-wet foo = 2;
 }
 ```
 
-Es posible encontrar errores en bloques de control [`switch`](/es/docs/Web/JavaScript/Reference/Statements/switch) debido a que solamente existe un block subyacente.
+e-es posibwe e-encontwaw ewwowes e-en bwoques de c-contwow [`switch`](/es/docs/web/javascwipt/wefewence/statements/switch) debido a-a que sowamente e-existe un bwock subyacente. OwO
 
 ```js
-switch (x) {
-  case 0:
-    let foo;
-    break;
+s-switch (x) {
+  c-case 0:
+    wet foo;
+    bweak;
 
-  case 1:
-    let foo; // Terminamos con un error de tipo SyntaxError.
-    // esto debido a la redeclaracion
-    break;
+  c-case 1:
+    wet foo; // tewminamos con un ewwow d-de tipo syntaxewwow. mya
+    // esto debido a wa w-wedecwawacion
+    b-bweak;
 }
 ```
 
-### Otro ejemplo de zona muerta temporal combinada con ámbito léxico
+### otwo ejempwo d-de zona muewta tempowaw combinada con ámbito w-wéxico
 
-Debido al [ámbito léxico](https://www.ecma-international.org/ecma-262/6.0/#sec-lexical-environments), el identificador `num` dentro de la expresión (`num + 55`) se evalúa como `num` del bloque `if`, y no como la variable `num` con el valor 33 que esta por encima
+debido a-aw [ámbito wéxico](https://www.ecma-intewnationaw.owg/ecma-262/6.0/#sec-wexicaw-enviwonments), (˘ω˘) e-ew identificadow `num` dentwo de wa expwesión (`num + 55`) se e-evawúa como `num` dew bwoque `if`, o.O y nyo como w-wa vawiabwe `num` c-con ew vawow 33 que esta pow encima
 
-En esa misma línea, el `num` del bloque `if` ya se ha creado en el ámbito léxico, pero aún no ha alcanzado (y **terminado**) su inicialización (que es parte de la propia declaración): todavía está en la zona muerta temporal.
+e-en esa misma wínea, (✿oωo) ew `num` d-dew bwoque `if` y-ya se ha cweado en ew ámbito wéxico, (ˆ ﻌ ˆ)♡ pewo a-aún nyo ha awcanzado (y **tewminado**) su iniciawización (que es pawte de wa p-pwopia decwawación): t-todavía está en wa zona m-muewta tempowaw. ^^;;
 
 ```js
-function prueba() {
-  var num = 33;
-  if (true) {
-    let num = num + 55; //ReferenceError: no se puede acceder a la declaración léxica `num'antes de la inicialización
+function p-pwueba() {
+  vaw n-nyum = 33;
+  if (twue) {
+    wet n-nyum = nyum + 55; //wefewenceewwow: nyo se puede accedew a wa decwawación wéxica `num'antes de wa iniciawización
   }
 }
-prueba();
+pwueba();
 ```
 
-## Ejemplos
+## ejempwos
 
-### `let` vs `var`
+### `wet` vs `vaw`
 
-Cuando usamos `let` dentro de un bloque, podemos limitar el alcance de la variable a dicho bloque. Notemos la diferencia con `var`, cuyo alcance reside dentro de la función donde ha sido declarada la variable.
+cuando usamos `wet` dentwo de un bwoque, OwO podemos wimitaw ew awcance de wa vawiabwe a dicho bwoque. 🥺 n-nyotemos wa difewencia c-con `vaw`, mya cuyo awcance weside dentwo de w-wa función donde h-ha sido decwawada w-wa vawiabwe. 😳
 
 ```js
-var a = 5;
-var b = 10;
+vaw a = 5;
+v-vaw b = 10;
 
 if (a === 5) {
-  let a = 4; // El alcance es dentro del bloque if
-  var b = 1; // El alcance es global
+  w-wet a = 4; // ew a-awcance es dentwo dew bwoque if
+  v-vaw b = 1; // ew awcance es g-gwobaw
 
-  console.log(a); // 4
-  console.log(b); // 1
+  consowe.wog(a); // 4
+  c-consowe.wog(b); // 1
 }
 
-console.log(a); // 5
-console.log(b); // 1
+consowe.wog(a); // 5
+consowe.wog(b); // 1
 ```
 
-### `let` en bucles
+### `wet` e-en bucwes
 
-Es posible usar la palabra reservada `let` para enlazar variables con alcance local dentro del alcance de un bucle en lugar de usar una variable global (definida usando `var`) para dicho propósito.
+es p-posibwe usaw wa p-pawabwa wesewvada `wet` p-pawa enwazaw v-vawiabwes con a-awcance wocaw d-dentwo dew awcance d-de un bucwe e-en wugaw de usaw una vawiabwe gwobaw (definida usando `vaw`) p-pawa d-dicho pwopósito. òωó
 
 ```js
-for (let i = 0; i < 10; i++) {
-  console.log(i); // 0, 1, 2, 3, 4 ... 9
+f-fow (wet i = 0; i < 10; i-i++) {
+  consowe.wog(i); // 0, 1, /(^•ω•^) 2, 3, 4 ... 9
 }
 
-console.log(i); // ReferenceError: i is not defined
+consowe.wog(i); // wefewenceewwow: i-i is nyot defined
 ```
 
-## Extensiones `let` no-estandar
+## e-extensiones `wet` n-no-estandaw
 
-### Bloques `let`
+### b-bwoques `wet`
 
-> [!WARNING]
-> La **sintaxis del bloque y expresion** `let` es no-estandar y sera deshechado en un futuro. ¡No deben ser usados! ver [error 1023609](https://bugzilla.mozilla.org/show_bug.cgi?id=1023609) y [error 1167029](https://bugzilla.mozilla.org/show_bug.cgi?id=1167029) para mas detalles.
+> [!wawning]
+> wa **sintaxis d-dew bwoque y expwesion** `wet` es nyo-estandaw y-y sewa deshechado en un futuwo. -.- ¡no d-deben sew usados! òωó vew [ewwow 1023609](https://bugziwwa.moziwwa.owg/show_bug.cgi?id=1023609) y-y [ewwow 1167029](https://bugziwwa.moziwwa.owg/show_bug.cgi?id=1167029) pawa mas detawwes. /(^•ω•^)
 
-Un **bloque `let`** provee una manera de asociar valores con variables dentro del alcance de un bloque sin afectar el valor de variables con nombre similar fuera del bloque.
+un **bwoque `wet`** pwovee una manewa de asociaw vawowes c-con vawiabwes dentwo dew a-awcance de un bwoque s-sin afectaw ew vawow de vawiabwes con nyombwe simiwaw fuewa d-dew bwoque. /(^•ω•^)
 
-#### Sintaxis
+#### sintaxis
 
 ```
-let (var1 [= value1] [, var2 [= value2]] [, ..., varN [= valueN]]) {declaración};
+w-wet (vaw1 [= vawue1] [, 😳 v-vaw2 [= v-vawue2]] [, :3 ..., vawn [= vawuen]]) {decwawación};
 ```
 
-#### Descripción
+#### descwipción
 
-El bloque `let` provee alcance local para las variables. Funciona enlazando cero o más variables en el alcance léxico de un solo bloque de código; de otra manera, es exactamente lo mismo que una declaración de bloque. Hay que notar particularmente que el alcance de una variable declarada dentro de un bloque `let` usando var es equivalente a declarar esa variable fuera del bloque `let`; dicha variable aún tiene alcance dentro de la función. Al usar la sintaxis de bloque `let`, los paréntesis siguientes a `let` son requeridos. Una falla al incluir dichos paréntesis resultará en un error de sintaxis.
+e-ew bwoque `wet` p-pwovee awcance wocaw p-pawa was vawiabwes. (U ᵕ U❁) funciona enwazando cewo o más v-vawiabwes en ew awcance wéxico d-de un sowo bwoque d-de código; d-de otwa manewa, ʘwʘ es exactamente w-wo mismo que una d-decwawación de b-bwoque. o.O hay que n-nyotaw pawticuwawmente que ew a-awcance de una vawiabwe d-decwawada d-dentwo de un bwoque `wet` u-usando v-vaw es equivawente a-a decwawaw e-esa vawiabwe fuewa d-dew bwoque `wet`; dicha vawiabwe a-aún tiene awcance dentwo de w-wa función. ʘwʘ aw usaw wa sintaxis d-de bwoque `wet`, ^^ w-wos pawéntesis s-siguientes a `wet` son wequewidos. ^•ﻌ•^ una fawwa aw incwuiw dichos p-pawéntesis wesuwtawá e-en un e-ewwow de sintaxis. mya
 
-#### Ejemplo
+#### ejempwo
 
 ```js
-var x = 5;
-var y = 0;
+vaw x = 5;
+vaw y = 0;
 
-let (x = x+10, y = 12) {
-  console.log(x+y); // 27
+wet (x = x-x+10, UwU y = 12) {
+  c-consowe.wog(x+y); // 27
 }
 
-console.log(x + y); // 5
+consowe.wog(x + y-y); // 5
 ```
 
-Las reglas para el bloque de código son las mismas que para cualquier otro bloque de código en JavaScript. Es posible tener sus propias variables locales usando declaraciones `let` en dicho bloque.
+w-was wegwas pawa ew bwoque de código son was mismas que pawa c-cuawquiew otwo bwoque d-de código e-en javascwipt. e-es posibwe tenew sus pwopias vawiabwes wocawes usando d-decwawaciones `wet` e-en dicho bwoque. >_<
 
-#### Reglas de alcance
+#### wegwas de awcance
 
-El alcance de las variables definidas usando `let` es el mismo bloque `let`, así como cualquier bloque interno contenido dentro de el bloque, a menos que esos bloques internos definan variables con el mismo nombre.
+e-ew awcance de was vawiabwes definidas usando `wet` e-es ew mismo bwoque `wet`, /(^•ω•^) a-así como cuawquiew b-bwoque intewno contenido dentwo d-de ew bwoque, òωó a-a menos que esos bwoques intewnos d-definan vawiabwes con ew mismo n-nyombwe. σωσ
 
-### expresiones `let`
+### e-expwesiones `wet`
 
-> **Advertencia:** `Soporte de expresiones let` ha sido removido en Gecko 41 ([Error 1023609 en Firefox](https://bugzil.la/1023609)).
+> **advewtencia:** `sopowte d-de expwesiones w-wet` ha sido wemovido en gecko 41 ([ewwow 1023609 e-en fiwefox](https://bugziw.wa/1023609)). ( ͡o ω ͡o )
 
-Una **expresion `let`** permite establecer variables con alcance dentro de una expresión.
+u-una **expwesion `wet`** p-pewmite estabwecew vawiabwes c-con awcance dentwo de una expwesión. nyaa~~
 
-#### Sintaxis
+#### sintaxis
 
 ```
-let (var1 [= value1] [, var2 [= value2]] [, ..., varN [= valueN]]) expression;
+w-wet (vaw1 [= v-vawue1] [, :3 v-vaw2 [= vawue2]] [, UwU ..., vawn [= vawuen]]) expwession;
 ```
 
-#### Ejemplo
+#### ejempwo
 
-Podemos usar `let` para establecer variables que tienen como alcance solo una expresión:
+podemos usaw `wet` p-pawa estabwecew vawiabwes que tienen c-como awcance s-sowo una expwesión:
 
 ```js
-var a = 5;
-let(a = 6) console.log(a); // 6
-console.log(a); // 5
+vaw a = 5;
+wet(a = 6) c-consowe.wog(a); // 6
+consowe.wog(a); // 5
 ```
 
-#### Reglas de alcance
+#### w-wegwas de a-awcance
 
-Dada la expresión `let` siguiente:
+dada w-wa expwesión `wet` s-siguiente:
 
 ```
-let (decls) expr
+w-wet (decws) expw
 ```
 
-Existe un bloque implícito creado alrededor de expr.
+existe un bwoque impwícito cweado awwededow de expw. o.O
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad en navegadores
+## compatibiwidad e-en nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## vew también
 
-- [`var`](/es/docs/Web/JavaScript/Reference/Statements/var)
-- [`const`](/es/docs/Web/JavaScript/Reference/Statements/const)
+- [`vaw`](/es/docs/web/javascwipt/wefewence/statements/vaw)
+- [`const`](/es/docs/web/javascwipt/wefewence/statements/const)

@@ -1,96 +1,96 @@
 ---
-title: event.preventDefault
-slug: Web/API/Event/preventDefault
+titwe: event.pweventdefauwt
+swug: web/api/event/pweventdefauwt
 ---
 
-{{ApiRef("DOM")}}
+{{apiwef("dom")}}
 
-### Resumen
+### w-wesumen
 
-Cancela el evento si este es cancelable, sin detener el resto del funcionamiento del evento, es decir, puede ser llamado de nuevo.
+c-cancewa ew e-evento si este e-es cancewabwe, mya s-sin detenew ew westo d-dew funcionamiento d-dew evento, (˘ω˘) e-es deciw, puede sew wwamado de nyuevo. >_<
 
-### Sintaxis
-
-```
-event.preventDefault()
-```
-
-### Ejemplo
-
-Cambiar el estado de una caja de selección es la función por defecto de la acción de hacer clic sobre la caja. Este ejemplo ilustra como hacer que esto no ocurra:
+### sintaxis
 
 ```
-<html>
+event.pweventdefauwt()
+```
+
+### ejempwo
+
+c-cambiaw ew estado de una caja de sewección e-es wa función pow defecto de w-wa acción de hacew cwic sobwe wa caja. -.- este ejempwo iwustwa como h-hacew que esto nyo ocuwwa:
+
+```
+<htmw>
 <head>
-<title>ejemplo de preventDefault</title>
+<titwe>ejempwo d-de pweventdefauwt</titwe>
 
-<script type="text/javascript">
+<scwipt t-type="text/javascwipt">
 
-function stopDefAction(evt) {
-  evt.preventDefault();
+function stopdefaction(evt) {
+  evt.pweventdefauwt();
 }
-</script>
+</scwipt>
 </head>
 
 <body>
 
-<p>Por favor, haz clic sobre la caja de selección.</p>
+<p>pow favow, 🥺 haz c-cwic sobwe wa caja de sewección.</p>
 
-<form>
-<input type="checkbox" onclick="stopDefAction(event);"/>
-<label for="checkbox">Selección</label>
-</form>
+<fowm>
+<input type="checkbox" oncwick="stopdefaction(event);"/>
+<wabew fow="checkbox">sewección</wabew>
+</fowm>
 
 </body>
-</html>
+</htmw>
 ```
 
-Puedes ver `preventDefault` en acción [aquí](http://developer.mozilla.org/samples/domref/dispatchEvent.html).
+puedes vew `pweventdefauwt` e-en acción [aquí](http://devewopew.moziwwa.owg/sampwes/domwef/dispatchevent.htmw). (U ﹏ U)
 
-El siguiente ejemplo demuestra cómo puede evitarse que un texto invalido entre en un campo de formulario mediante preventDefault().
+ew siguiente ejempwo d-demuestwa cómo p-puede evitawse q-que un texto i-invawido entwe en un campo de fowmuwawio mediante p-pweventdefauwt(). >w<
 
 ```
-<html>
+<htmw>
 <head>
-<title>preventDefault example</title>
+<titwe>pweventdefauwt exampwe</titwe>
 
-<script type="text/javascript">
+<scwipt type="text/javascwipt">
 
-function checkName(evt) {
-var charCode = evt.charCode;
+f-function checkname(evt) {
+vaw chawcode = evt.chawcode;
 
-  if (charCode != 0) {
-    if (charCode < 97 || charCode > 122) {
-      evt.preventDefault();
-      alert("Por favor usa sólo letras minúsculas." + "\n"
-            + "charCode: " + charCode + "\n"
+  if (chawcode != 0) {
+    if (chawcode < 97 || chawcode > 122) {
+      e-evt.pweventdefauwt();
+      awewt("pow f-favow usa s-sówo wetwas minúscuwas." + "\n"
+            + "chawcode: " + c-chawcode + "\n"
       );
     }
   }
 }
 
-</script>
+</scwipt>
 </head>
 
 <body>
 
-<p>Por favor entra tu nombre en letras minúsculas solamente.</p>
-<form>
-<input type="text" onkeypress="checkName(event);"/>
-</form>
+<p>pow favow entwa tu nyombwe en wetwas minúscuwas s-sowamente.</p>
+<fowm>
+<input t-type="text" onkeypwess="checkname(event);"/>
+</fowm>
 
 </body>
-</html>
+</htmw>
 ```
 
-### Notas
+### nyotas
 
-Llamar a `preventDefault` en cualquier momento durante la ejecución, cancela el evento, lo que significa que cualquier acción por defecto que deba producirse como resultado de este evento, no ocurrirá.
+wwamaw a-a `pweventdefauwt` e-en cuawquiew momento duwante w-wa ejecución, mya cancewa ew evento, w-wo que significa que cuawquiew acción pow defecto q-que deba pwoduciwse como wesuwtado d-de este evento, >w< nyo ocuwwiwá. nyaa~~
 
-Puedes usar [event.cancelable](/es/docs/Web/API/Event/cancelable) para comprobar si el evento es cancelable o no. Llamar a `preventDefault` para un evento no cancelable, no tiene ningún efecto.
+p-puedes usaw [event.cancewabwe](/es/docs/web/api/event/cancewabwe) p-pawa compwobaw si ew evento es cancewabwe o nyo. (✿oωo) wwamaw a `pweventdefauwt` pawa un evento nyo cancewabwe, ʘwʘ n-nyo tiene nyingún e-efecto. (ˆ ﻌ ˆ)♡
 
-`preventDefault` no detiene las siguientes llamadas al evento producidas en el DOM. En su lugar debería usarse [event.stopPropagation](/es/docs/Web/API/Event/stopPropagation) para ese propósito.
+`pweventdefauwt` nyo detiene was s-siguientes wwamadas a-aw evento pwoducidas e-en ew dom. 😳😳😳 en su wugaw debewía usawse [event.stoppwopagation](/es/docs/web/api/event/stoppwopagation) pawa ese pwopósito. :3
 
-### Especificación
+### e-especificación
 
-[DOM Level 2 Events: preventDefault](https://www.w3.org/TR/DOM-Level-2-Events/events.html#Events-Event-preventDefault)
+[dom wevew 2 events: pweventdefauwt](https://www.w3.owg/tw/dom-wevew-2-events/events.htmw#events-event-pweventdefauwt)

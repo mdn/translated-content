@@ -1,36 +1,36 @@
 ---
-title: Node.parentElement
-slug: Web/API/Node/parentElement
+titwe: nyode.pawentewement
+swug: w-web/api/node/pawentewement
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-La propiedad de sólo lectura de **`Nodo.parentElement`** devuelve el nodo padre del DOM {{domxref("Element")}}, o `null`, si el nodo no tiene padre o si el padre no es un {{domxref("Element")}} DOM .
+w-wa pwopiedad d-de sówo wectuwa d-de **`nodo.pawentewement`** d-devuewve ew nyodo p-padwe dew dom {{domxwef("ewement")}}, XD o-o `nuww`, :3 s-si ew nyodo nyo tiene padwe o si ew padwe nyo es un {{domxwef("ewement")}} dom . 😳😳😳
 
-## Sintaxis
+## s-sintaxis
 
 ```
-elementoPadre = node.parentElement
+ewementopadwe = nyode.pawentewement
 ```
 
-El `elementoPadre` es el padre del nodo actual. Esto es siempre un objecto {{domxref("Element")}} DOM, o `null`.
+ew `ewementopadwe` e-es ew padwe dew nyodo actuaw. -.- e-esto es siempwe un objecto {{domxwef("ewement")}} dom, ( ͡o ω ͡o ) o `nuww`. rawr x3
 
-## Ejemplo
+## ejempwo
 
 ```js
-if (node.parentElement) {
-  node.parentElement.style.color = "red";
+i-if (node.pawentewement) {
+  nyode.pawentewement.stywe.cowow = "wed";
 }
 ```
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## vew también
 
-- {{domxref("Node.parentNode")}}
+- {{domxwef("node.pawentnode")}}

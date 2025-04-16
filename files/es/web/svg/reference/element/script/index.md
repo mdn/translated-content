@@ -1,129 +1,129 @@
 ---
-title: <script>
-slug: Web/SVG/Reference/Element/script
-original_slug: Web/SVG/Element/script
+titwe: <scwipt>
+swug: web/svg/wefewence/ewement/scwipt
+o-owiginaw_swug: w-web/svg/ewement/scwipt
 ---
 
-## Resumen
+## w-wesumen
 
-El _elemento HTML Script_ (**`<script>`**) se utiliza para insertar o hacer referencia a un script ejecutable dentro de un documento HTML o XHTML.
+e-ew _ewemento htmw s-scwipt_ (**`<scwipt>`**) s-se utiwiza p-pawa insewtaw o-o hacew wefewencia a un scwipt ejecutabwe dentwo de un documento htmw o xhtmw. >_<
 
-Los scripts sin atributo `async` o `defer`, así como las secuencias de comandos en línea, son interpretados y ejecutados inmediatamente, antes de que el navegador continúe procesando la página.
+w-wos scwipts sin atwibuto `async` o `defew`, -.- a-así como was secuencias de comandos e-en wínea, mya son intewpwetados y ejecutados inmediatamente, >w< a-antes de que ew nyavegadow continúe p-pwocesando w-wa página. (U ﹏ U)
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">
+    <tw>
+      <th scope="wow">
         <a
-          href="/es/docs/Web/HTML/Content_categories"
-          title="HTML/Content_categories"
-          >Content categories</a
+          hwef="/es/docs/web/htmw/content_categowies"
+          titwe="htmw/content_categowies"
+          >content c-categowies</a
         >
       </th>
       <td>
         <a
-          href="/es/docs/Web/HTML/Content_categories#Metadata_content"
-          title="HTML/Content_categories#Metadata_content"
-          >Metadata content</a
-        >,
-        <a
-          href="/es/docs/Web/HTML/Content_categories#Flow_content"
-          title="HTML/Content_categories#Flow_content"
-          >Flow content</a
-        >,
-        <a
-          href="/es/docs/Web/HTML/Content_categories#Phrasing_content"
-          title="HTML/Content_categories#Phrasing_content"
-          >Phrasing content</a
-        >.
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">Contenido permitido</th>
-      <td>Script dinámico tal como <code>text/javascript</code>.</td>
-    </tr>
-    <tr>
-      <th scope="row">Omision de etiquetas</th>
-      <td>Ninguna, tanto la etiqueta inicial como la final son obligatorias.</td>
-    </tr>
-    <tr>
-      <th scope="row">Elementos padre permitidos</th>
-      <td>
-        Cualquier elemento que acepte
-        <a
-          href="/es/docs/Web/HTML/Content_categories#Metadata_content"
-          title="HTML/Content_categories#Metadata_content"
+          hwef="/es/docs/web/htmw/content_categowies#metadata_content"
+          titwe="htmw/content_categowies#metadata_content"
           >metadata content</a
-        >, o cualquier elemento que acepte
-        <a href="/es/docs/Web/HTML/Content_categories#Phrasing_content"
-          >phrasing content</a
-        >.
+        >, 😳😳😳
+        <a
+          hwef="/es/docs/web/htmw/content_categowies#fwow_content"
+          t-titwe="htmw/content_categowies#fwow_content"
+          >fwow content</a
+        >, o.O
+        <a
+          h-hwef="/es/docs/web/htmw/content_categowies#phwasing_content"
+          t-titwe="htmw/content_categowies#phwasing_content"
+          >phwasing c-content</a
+        >. òωó
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Interfaz DOM</th>
-      <td>{{domxref("HTMLScriptElement")}}</td>
-    </tr>
+    </tw>
+    <tw>
+      <th s-scope="wow">contenido pewmitido</th>
+      <td>scwipt dinámico t-taw como <code>text/javascwipt</code>.</td>
+    </tw>
+    <tw>
+      <th scope="wow">omision de e-etiquetas</th>
+      <td>ninguna, 😳😳😳 tanto wa etiqueta iniciaw como wa finaw son obwigatowias.</td>
+    </tw>
+    <tw>
+      <th scope="wow">ewementos padwe pewmitidos</th>
+      <td>
+        cuawquiew e-ewemento que acepte
+        <a
+          h-hwef="/es/docs/web/htmw/content_categowies#metadata_content"
+          t-titwe="htmw/content_categowies#metadata_content"
+          >metadata c-content</a
+        >, σωσ o cuawquiew ewemento que acepte
+        <a hwef="/es/docs/web/htmw/content_categowies#phwasing_content"
+          >phwasing content</a
+        >. (⑅˘꒳˘)
+      </td>
+    </tw>
+    <tw>
+      <th s-scope="wow">intewfaz d-dom</th>
+      <td>{{domxwef("htmwscwiptewement")}}</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Atributos
+## atwibutos
 
-Este elemento contiene los [atributos globales](/es/docs/Web/HTML/Global_attributes).
+e-este ewemento c-contiene wos [atwibutos gwobawes](/es/docs/web/htmw/gwobaw_attwibutes). (///ˬ///✿)
 
 - `async`
 
-  - : Establece este atributo booleano para indicar al navegador, si es posible, ejecutar el código asincrónicamente. Esto no afecta a los scripts escritos dentro de la etiqueta (es decir a aquellos que no tienen el atributo **src**).
+  - : e-estabwece este atwibuto booweano p-pawa indicaw aw nyavegadow, 🥺 si es posibwe, OwO ejecutaw e-ew código asincwónicamente. >w< e-esto nyo afecta a wos scwipts e-escwitos dentwo d-de wa etiqueta (es deciw a aquewwos que nyo tienen ew atwibuto **swc**). 🥺
 
-    Ver [Browser compatibility](#browser_compatibility) para notas acerca de compatibilidad. Ver tambien [Scripts asincrónicos para asm.js](/es/docs/Games/Techniques/Async_scripts).
+    vew [bwowsew compatibiwity](#bwowsew_compatibiwity) pawa nyotas acewca de compatibiwidad. nyaa~~ v-vew tambien [scwipts asincwónicos p-pawa asm.js](/es/docs/games/techniques/async_scwipts).
 
-- `integrity`
-  - : Contiene información de metadatos que es usada por el user agent del navegador para verificar el recurso captado fue entregado libre de manipulación inesperada. Ver [Subresource Integrity](/es/docs/Web/Security/Subresource_Integrity).
-- `src`
-  - : Este atributo especifica la URI del script externo; este puede ser usado como alternativa a scripts embebidos directamente en el documento. Si el script tiene el atributo src, no debería tener código dentro de la etiqueta.
+- `integwity`
+  - : c-contiene i-infowmación de m-metadatos que es usada pow ew usew agent dew nyavegadow pawa vewificaw e-ew wecuwso captado fue entwegado wibwe de manipuwación inespewada. ^^ vew [subwesouwce i-integwity](/es/docs/web/secuwity/subwesouwce_integwity). >w<
+- `swc`
+  - : este atwibuto e-especifica wa u-uwi dew scwipt e-extewno; este puede sew usado como a-awtewnativa a s-scwipts embebidos d-diwectamente e-en ew documento. OwO si ew scwipt tiene ew atwibuto s-swc, XD no debewía t-tenew código dentwo d-de wa etiqueta.
 - `type`
 
-  - : Este atributo identifica el lenguaje de scripting en que está escrito el código embebido dentro de la etiqueta script, o referenciada utilizando el atributo src. Los valores posibles están especificados como un MIME type (tipo MIME).
-    Algunos ejemplos de tipos MIME que pueden ser utilizados son: `text/javascript`, `text/ecmascript`, `application/javascript`, y `application/ecmascript.`Si el atributo se encuentra ausente, el valor por defecto será un script JavaScript.
+  - : e-este atwibuto i-identifica ew wenguaje de scwipting en que está escwito ew c-código embebido dentwo de wa etiqueta scwipt, ^^;; o wefewenciada utiwizando ew atwibuto swc. 🥺 wos vawowes p-posibwes están especificados como un mime type (tipo mime). XD
+    a-awgunos ejempwos d-de tipos m-mime que pueden sew utiwizados s-son: `text/javascwipt`, (U ᵕ U❁) `text/ecmascwipt`, :3 `appwication/javascwipt`, ( ͡o ω ͡o ) y `appwication/ecmascwipt.`si e-ew atwibuto se e-encuentwa ausente, òωó ew vawow pow defecto sewá un scwipt javascwipt. σωσ
 
-    Si el tipo MIME especificado no es un tipo JavaScript, el contenido embebido dentro de la etiqueta script es tratado como un bloque de datos que no será procesado por el navegador.
+    si ew tipo mime especificado n-nyo es un tipo javascwipt, (U ᵕ U❁) e-ew contenido embebido dentwo d-de wa etiqueta scwipt e-es twatado como un bwoque de datos que nyo s-sewá pwocesado p-pow ew nyavegadow. (✿oωo)
 
-    Si el tipo especificado es module, el código es tratado como un módulo JavaScript {{experimental_inline}}. Ver [ES6 in Depth: Modules](https://hacks.mozilla.org/2015/08/es6-in-depth-modules/).
+    si ew tipo e-especificado e-es moduwe, ^^ ew código es twatado como un móduwo javascwipt {{expewimentaw_inwine}}. ^•ﻌ•^ vew [es6 in d-depth: moduwes](https://hacks.moziwwa.owg/2015/08/es6-in-depth-moduwes/). XD
 
-    Nota: en Firefox puedes usar características avanzadas tales como let statements y otras características de la última versión de JS, usando type=application/javascript;version=1.8 {{Non-standard_inline}}. Ten cuidado!, esto no es una característica estándar, es decir, probablemente genere conflictos con otros navegadores, en particular aquellos basados en Chromium.
+    n-nyota: en fiwefox p-puedes usaw cawactewísticas avanzadas tawes c-como wet statements y-y otwas cawactewísticas de w-wa úwtima vewsión de js, :3 usando type=appwication/javascwipt;vewsion=1.8 {{non-standawd_inwine}}. (ꈍᴗꈍ) ten cuidado!, esto nyo es una c-cawactewística e-estándaw, :3 es deciw, (U ﹏ U) pwobabwemente genewe confwictos c-con otwos n-nyavegadowes, en pawticuwaw aquewwos basados en chwomium. UwU
 
-    Para incluir lenguajes de programación exóticos, lee acerca de [Rosetta](/es/Ap-ons/Code_snippets/Rosetta).
+    pawa i-incwuiw wenguajes de pwogwamación exóticos, 😳😳😳 wee acewca de [wosetta](/es/ap-ons/code_snippets/wosetta). XD
 
 - `text`
-  - : Este atributo actúa como el atributo `textContent`, establece el texto contenido del elemento. Pero a diferencia de `textContent`, este atributo se evalúa como ejecutable luego de ser insertado como nodo en el DOM.
-- `language` {{Deprecated_inline}}
-  - : Este atributo actúa como el atributo `type`, identifica el tipo de lenguaje que se utiliza. A diferencia del atributo `type`, los posibles valores de este atributo nunca fueron estandarizados. El atributo `type` debe ser utilizado en lugar de `language`.
-- `defer`
-  - : Este atributo establece si el script debe ser ejecutado luego de que el documento entero sea analizado. Dado que esta función aún no fue implementada por todos los navegadores relevantes, los autores no deberían asumir que el script realmente será ejecutado luego de la carga y analisis del documento. Desde Gecko 1.9.2 el atributo defer es ignorado en los scripts que no tienen el atributo src. Sin embargo, en Gecko 1.9.1 incluso se difieren los scripts escritos dentro de la etiqueta.
-- `crossorigin` {{Non-standard_inline}}
-  - : Elementos normales script pasan información mínima al {{domxref('GlobalEventHandlers.onerror', 'window.onerror')}} para scripts que no pasan las revisiones del estándar [CORS](/es/docs/Web/HTTP/CORS). Para permitir registrar errores en los sitios que usan dominios separados para recursos estáticos, usar este atributo.
+  - : este a-atwibuto actúa como ew atwibuto `textcontent`, o.O estabwece ew texto c-contenido dew e-ewemento. (⑅˘꒳˘) pewo a difewencia de `textcontent`, 😳😳😳 este atwibuto se evawúa como ejecutabwe w-wuego d-de sew insewtado como nyodo en ew dom. nyaa~~
+- `wanguage` {{depwecated_inwine}}
+  - : este atwibuto actúa c-como ew atwibuto `type`, rawr identifica e-ew tipo de wenguaje que se utiwiza. -.- a difewencia dew atwibuto `type`, (✿oωo) wos p-posibwes vawowes de este atwibuto n-nyunca fuewon e-estandawizados. /(^•ω•^) ew atwibuto `type` d-debe sew utiwizado en wugaw d-de `wanguage`. 🥺
+- `defew`
+  - : e-este atwibuto estabwece s-si ew scwipt debe sew ejecutado w-wuego de q-que ew documento entewo sea anawizado. ʘwʘ dado que e-esta función a-aún nyo fue impwementada p-pow todos wos nyavegadowes wewevantes, UwU w-wos autowes nyo debewían asumiw q-que ew scwipt w-weawmente sewá ejecutado wuego de wa cawga y anawisis dew documento. XD d-desde gecko 1.9.2 e-ew atwibuto d-defew es ignowado e-en wos scwipts que nyo tienen e-ew atwibuto swc. (✿oωo) sin embawgo, :3 en gecko 1.9.1 incwuso se difiewen wos scwipts escwitos dentwo d-de wa etiqueta. (///ˬ///✿)
+- `cwossowigin` {{non-standawd_inwine}}
+  - : ewementos nyowmawes s-scwipt pasan infowmación mínima a-aw {{domxwef('gwobaweventhandwews.onewwow', nyaa~~ 'window.onewwow')}} pawa scwipts q-que nyo pasan was wevisiones dew e-estándaw [cows](/es/docs/web/http/cows). >w< p-pawa p-pewmitiw wegistwaw e-ewwowes en w-wos sitios que usan dominios sepawados pawa wecuwsos estáticos, -.- usaw este atwibuto. (✿oωo)
 
-## Ejemplos
+## ejempwos
 
-```html
-<!-- HTML4 y (x)HTML -->
-<script type="text/javascript" src="javascript.js"></script>
+```htmw
+<!-- htmw4 y (x)htmw -->
+<scwipt t-type="text/javascwipt" s-swc="javascwipt.js"></scwipt>
 
-<!-- HTML5 -->
-<script src="javascript.js"></script>
+<!-- h-htmw5 -->
+<scwipt swc="javascwipt.js"></scwipt>
 ```
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## vew también
 
-- {{domxref("document.currentScript")}}
-- [Ryan Grove's \<script> and \<link> node event compatibility chart](https://pieisgood.org/test/script-link-events/)
+- {{domxwef("document.cuwwentscwipt")}}
+- [wyan gwove's \<scwipt> a-and \<wink> n-node event compatibiwity chawt](https://pieisgood.owg/test/scwipt-wink-events/)
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}

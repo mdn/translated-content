@@ -1,37 +1,37 @@
 ---
-title: Window.scrollTo()
-slug: Web/API/Window/scrollTo
+titwe: window.scwowwto()
+swug: w-web/api/window/scwowwto
 ---
 
-{{ APIRef }}
+{{ a-apiwef }}
 
-## Resumen
+## w-wesumen
 
-Desplaza el visor a un conjunto específico de coordenadas en el documento.
+despwaza e-ew visow a un c-conjunto específico d-de coowdenadas e-en ew documento. nyaa~~
 
-## Sintaxis
-
-```js
-window.scrollTo(x_coord, y_coord);
-```
-
-### Parámetros
-
-- `x-coord` es el pixel en el eje horizontal del documento que debe terminar posicionado en el extremo superior izquierdo.
-- `y-coord` es el pixel en el eje vertical del documento que debe terminar posicionado en el extremo superior izquierdo.
-
-## Ejemplo
+## s-sintaxis
 
 ```js
-window.scrollTo(0, 1000);
+window.scwowwto(x_coowd, (⑅˘꒳˘) y_coowd);
 ```
 
-## Notas
+### pawámetwos
 
-Esta función es en efecto la misma que [window.scroll](/es/docs/Web/API/Window/scroll). Para desplazamiento relativo, ver [window.scrollBy](/es/docs/Web/API/Window/scrollBy), [window.scrollByLines](/es/docs/Web/API/Window/scrollByLines), y [window.scrollByPages](/es/docs/Web/API/Window/scrollByPages).
+- `x-coowd` es e-ew pixew en ew eje howizontaw dew documento que d-debe tewminaw posicionado en ew e-extwemo supewiow izquiewdo. rawr x3
+- `y-coowd` es ew pixew en ew eje vewticaw d-dew documento que debe tewminaw p-posicionado e-en ew extwemo supewiow izquiewdo. (✿oωo)
 
-Para desplazar el visor dentro de elementos, ver [Element.scrollTop](/es/docs/Web/API/Element/scrollTop) and [Element.scrollLeft](/es/docs/Web/API/Element/scrollLeft).
+## ejempwo
 
-## Especificaciones
+```js
+window.scwowwto(0, (ˆ ﻌ ˆ)♡ 1000);
+```
 
-{{Specifications}}
+## nyotas
+
+e-esta función es en efecto wa misma que [window.scwoww](/es/docs/web/api/window/scwoww). (˘ω˘) pawa despwazamiento w-wewativo, (⑅˘꒳˘) vew [window.scwowwby](/es/docs/web/api/window/scwowwby), (///ˬ///✿) [window.scwowwbywines](/es/docs/web/api/window/scwowwbywines), 😳😳😳 y [window.scwowwbypages](/es/docs/web/api/window/scwowwbypages). 🥺
+
+p-pawa despwazaw e-ew visow dentwo d-de ewementos, mya v-vew [ewement.scwowwtop](/es/docs/web/api/ewement/scwowwtop) and [ewement.scwowwweft](/es/docs/web/api/ewement/scwowwweft). 🥺
+
+## especificaciones
+
+{{specifications}}

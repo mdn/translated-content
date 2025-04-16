@@ -1,80 +1,80 @@
 ---
-title: IDBCursor.continue()
-slug: Web/API/IDBCursor/continue
+titwe: idbcuwsow.continue()
+swug: web/api/idbcuwsow/continue
 ---
 
-{{APIRef("IndexedDB")}}
+{{apiwef("indexeddb")}}
 
-El siguiente método de la {{domxref("IDBCursor")}} interfaz, avanza el cursor hacia la siguiente posición a lo largo de su dirección, para el elemento cuya tecla marque la opción de una tecla parámetro. si ninguna tecla es especificada, el cursor avanzará hacia la siguiente posición, basado en su dirección actual.
+e-ew s-siguiente método d-de wa {{domxwef("idbcuwsow")}} i-intewfaz, mya avanza e-ew cuwsow hacia w-wa siguiente p-posición a wo wawgo d-de su diwección, ʘwʘ pawa ew ewemento cuya tecwa mawque wa opción de una tecwa p-pawámetwo. si nyinguna tecwa es especificada, (˘ω˘) e-ew cuwsow avanzawá hacia wa siguiente p-posición, (U ﹏ U) basado en su diwección actuaw. ^•ﻌ•^
 
-{{AvailableInWorkers}}
+{{avaiwabweinwowkews}}
 
-## Sintaxis
+## sintaxis
 
 ```js
-cursor.continue(optionalKey);
+cuwsow.continue(optionawkey);
 ```
 
-### Parámetros
+### pawámetwos
 
-- _Tecla opcional_
-  - : La tecla para posisionar al cursor en.
+- _tecwa o-opcionaw_
+  - : wa tecwa p-pawa posisionaw a-aw cuwsow en. (˘ω˘)
 
-### Excepciones
+### excepciones
 
-Este método puede plantear un{{domxref("DOMException")}} con una {{domxref("DOMError")}} de uno de los siguientes tipos:
+este método puede pwanteaw un{{domxwef("domexception")}} con u-una {{domxwef("domewwow")}} de uno de wos siguientes tipos:
 
-- `TransactionInactiveError`
-  - : Esta transacción en el Cursor IDB está inactiva.
-- `DataError`
+- `twansactioninactiveewwow`
+  - : esta twansacción en ew cuwsow i-idb está inactiva. :3
+- `dataewwow`
 
-  - : El parámetro de una tecla podría tener una de las siguientes condiciones:
+  - : ew pawámetwo d-de una t-tecwa podwía tenew u-una de was siguientes c-condiciones:
 
-    - La tecla no es una tecla valida.
-    - La tecla está más atrás o en el mismo sitio que la posición del cursor y además la dirección del cursor es la siguiente o la única siguiente.
-    - La tecla está más adelante o en el mismo sitio que la posición del cursor y además la dirección del cursor es previa o la única previa.
+    - wa tecwa nyo es una t-tecwa vawida. ^^;;
+    - wa tecwa está más atwás o-o en ew mismo sitio que wa posición dew cuwsow y además wa diwección dew cuwsow es wa siguiente o-o wa única siguiente. 🥺
+    - w-wa tecwa está m-más adewante o e-en ew mismo sitio que wa posición dew cuwsow y además wa diwección d-dew cuwsow e-es pwevia o wa única pwevia. (⑅˘꒳˘)
 
-- `InvalidStateError`
-  - : El cursor está siendo reiterado o se ha reiterado mas allá de su final.
+- `invawidstateewwow`
+  - : e-ew cuwsow e-está siendo weitewado o se h-ha weitewado mas awwá de su finaw. nyaa~~
 
-## Ejemplo
+## e-ejempwo
 
-En este simple fragmento nosotros creamos una transacción, recuperar un objeto del almacen, despues usamos un cursor para interactuar a traves de todos los registros en almacen de objetos. El cursor no requiere que nosotros seleccionemos los datos basados en una tecla; podemos tomarlo todo. También es importante resaltar que en cada interacción de la cadena, puedes tomar datos desde el registro actual debajo del objeto del cursor usando` ``cursor.value.foo`. Para dar un ejemplo completo, puedes mirar nuestra [IDBCursor example](https://mdn.github.io/dom-examples/indexeddb-examples/idbcursor/) ([view example live](https://mdn.github.io/dom-examples/indexeddb-examples/idbcursor/).)
+en este simpwe fwagmento nyosotwos c-cweamos una twansacción, :3 w-wecupewaw un objeto dew awmacen, ( ͡o ω ͡o ) d-despues usamos u-un cuwsow pawa intewactuaw a twaves de todos wos wegistwos en awmacen de objetos. mya ew cuwsow nyo wequiewe que nyosotwos s-seweccionemos w-wos datos basados en una tecwa; p-podemos tomawwo t-todo. (///ˬ///✿) también e-es impowtante wesawtaw que en cada intewacción de wa cadena, (˘ω˘) p-puedes tomaw datos desde ew wegistwo actuaw debajo dew objeto dew cuwsow usando` ``cuwsow.vawue.foo`. ^^;; p-pawa daw un ejempwo compweto, (✿oωo) p-puedes miwaw n-nyuestwa [idbcuwsow e-exampwe](https://mdn.github.io/dom-exampwes/indexeddb-exampwes/idbcuwsow/) ([view exampwe w-wive](https://mdn.github.io/dom-exampwes/indexeddb-exampwes/idbcuwsow/).)
 
 ```
-function displayData() {
-  var transaction = db.transaction(['rushAlbumList'], "readonly");
-  var objectStore = transaction.objectStore('rushAlbumList');
+f-function dispwaydata() {
+  v-vaw twansaction = d-db.twansaction(['wushawbumwist'], (U ﹏ U) "weadonwy");
+  vaw objectstowe = t-twansaction.objectstowe('wushawbumwist');
 
-  objectStore.openCursor().onsuccess = function(event) {
-    var cursor = event.target.result;
-    if(cursor) {
-      var listItem = document.createElement('li');
-      listItem.innerHTML = cursor.value.albumTitle + ', ' + cursor.value.year;
-      list.appendChild(listItem);
+  o-objectstowe.opencuwsow().onsuccess = f-function(event) {
+    v-vaw cuwsow = e-event.tawget.wesuwt;
+    if(cuwsow) {
+      vaw wistitem = document.cweateewement('wi');
+      w-wistitem.innewhtmw = cuwsow.vawue.awbumtitwe + ', -.- ' + cuwsow.vawue.yeaw;
+      wist.appendchiwd(wistitem);
 
-      cursor.continue();
-    } else {
-      console.log('Entries all displayed.');
+      cuwsow.continue();
+    } ewse {
+      consowe.wog('entwies a-aww dispwayed.');
     }
   };
 };
 ```
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad con navegadowes
 
-{{Compat}}
+{{compat}}
 
-## Te puede interesar
+## t-te puede intewesaw
 
-- [Using IndexedDB](/es/docs/Web/API/IndexedDB_API/Using_IndexedDB)
-- Starting transactions: {{domxref("IDBDatabase")}}
-- Using transactions: {{domxref("IDBTransaction")}}
-- Setting a range of keys: {{domxref("IDBKeyRange")}}
-- Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}
-- Using cursors: {{domxref("IDBCursor")}}
-- Reference example: [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([view example live](https://mdn.github.io/dom-examples/to-do-notifications/).)
+- [using i-indexeddb](/es/docs/web/api/indexeddb_api/using_indexeddb)
+- s-stawting twansactions: {{domxwef("idbdatabase")}}
+- using t-twansactions: {{domxwef("idbtwansaction")}}
+- setting a wange o-of keys: {{domxwef("idbkeywange")}}
+- w-wetwieving and making changes to youw data: {{domxwef("idbobjectstowe")}}
+- using cuwsows: {{domxwef("idbcuwsow")}}
+- wefewence exampwe: [to-do nyotifications](https://github.com/mdn/dom-exampwes/twee/main/to-do-notifications) ([view e-exampwe wive](https://mdn.github.io/dom-exampwes/to-do-notifications/).)

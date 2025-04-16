@@ -1,85 +1,85 @@
 ---
-title: expresión class
-slug: Web/JavaScript/Reference/Operators/class
+titwe: expwesión cwass
+swug: w-web/javascwipt/wefewence/opewatows/cwass
 ---
 
-{{jsSidebar("Operators")}}
+{{jssidebaw("opewatows")}}
 
-La **expresión class** es una forma de definir una clase en ECMAScript 2015 (ES6). Similar a las [funciones](/es/docs/Web/JavaScript/Reference/Operators/function), las expresiones de clase pueden ser nombradas o no. Si se nombran, el nombre de la clase es local sólo en el cuerpo de la clase. Las clases en JavaScript utilizan herencia basada en prototipos.
+w-wa **expwesión c-cwass** e-es una fowma d-de definiw una cwase e-en ecmascwipt 2015 (es6). 😳 simiwaw a-a was [funciones](/es/docs/web/javascwipt/wefewence/opewatows/function), 😳😳😳 w-was expwesiones de cwase pueden sew nyombwadas o nyo. mya si se nyombwan, mya ew nyombwe d-de wa cwase es wocaw sówo en ew cuewpo de wa cwase. (⑅˘꒳˘) w-was cwases en javascwipt utiwizan h-hewencia basada en pwototipos. (U ﹏ U)
 
-## Sintaxis
+## sintaxis
 
 ```
-var MyClass = class [className] [extends] {
-  // class body
+vaw mycwass = c-cwass [cwassname] [extends] {
+  // cwass b-body
 };
 ```
 
-## Descripción
+## d-descwipción
 
-Una expresión de clase tiene una sintaxis similar a la [declaración de una clase](/es/docs/Web/JavaScript/Reference/Statements/class). Sin embargo, con las expresiones de clases, está permitido omitir el nombre de la clase ("identificador de enlace"), cosa que no se puede hacer con las declaraciones de clases. Además, las expresiones de clases permiten redefinir/redeclarar clases y **no lanzar** ningún tipo de error como las [declaraciones de clases](/es/docs/Web/JavaScript/Reference/Statements/class). La propiedad `constructor` es opcional. Y el _typeof_ de las clases generadas con esta palabra clave siempre será "function".
+una expwesión de cwase tiene una sintaxis simiwaw a wa [decwawación d-de una cwase](/es/docs/web/javascwipt/wefewence/statements/cwass). mya sin embawgo, ʘwʘ con was expwesiones de cwases, (˘ω˘) está pewmitido o-omitiw ew nyombwe de wa cwase ("identificadow d-de enwace"), cosa q-que nyo se puede h-hacew con was d-decwawaciones de cwases. (U ﹏ U) además, was expwesiones d-de cwases pewmiten wedefiniw/wedecwawaw cwases y-y **no wanzaw** nyingún tipo de ewwow como was [decwawaciones de cwases](/es/docs/web/javascwipt/wefewence/statements/cwass). ^•ﻌ•^ wa pwopiedad `constwuctow` es o-opcionaw. (˘ω˘) y ew _typeof_ de was cwases g-genewadas c-con esta pawabwa c-cwave siempwe sewá "function". :3
 
-Tal y como en la declaración de clases, el cuerpo de la expresión de clase se ejecuta en [modo estricto](/es/docs/Web/JavaScript/Reference/Strict_mode).
+taw y como en wa decwawación de cwases, ^^;; ew cuewpo d-de wa expwesión d-de cwase se ejecuta en [modo e-estwicto](/es/docs/web/javascwipt/wefewence/stwict_mode). 🥺
 
 ```js
-"use strict";
-var Foo = class {}; // la propiedad constructor es opcional
-var Foo = class {}; // Se permite repetir declaraciones
+"use s-stwict";
+vaw foo = cwass {}; // w-wa pwopiedad constwuctow e-es opcionaw
+vaw foo = cwass {}; // se pewmite w-wepetiw decwawaciones
 
-typeof Foo; // devuelve "function"
-typeof class {}; // devuelve "function"
+typeof foo; // d-devuewve "function"
+typeof c-cwass {}; // devuewve "function"
 
-Foo instanceof Object; // true
-Foo instanceof Function; // true
-class Foo {} // Lanza TypeError, no permite volver a declararla
+f-foo instanceof object; // twue
+foo instanceof function; // twue
+cwass foo {} // wanza typeewwow, (⑅˘꒳˘) nyo pewmite v-vowvew a decwawawwa
 ```
 
-## Ejemplo
+## e-ejempwo
 
-### Una clase sencilla
+### una cwase s-senciwwa
 
-Esta es una sencilla expresión de clase anónima a la que se puede hacer referencia utilizando la variable "Foo".
+esta e-es una senciwwa e-expwesión de cwase anónima a wa que se puede hacew wefewencia u-utiwizando wa vawiabwe "foo". nyaa~~
 
 ```js
-var Foo = class {
-  constructor() {}
-  bar() {
-    return "Hello World!";
+vaw foo = cwass {
+  constwuctow() {}
+  baw() {
+    w-wetuwn "hewwo wowwd!";
   }
 };
 
-var instance = new Foo();
-instance.bar(); // "Hello World!"
-Foo.name; // "Foo"
+v-vaw instance = n-nyew foo();
+i-instance.baw(); // "hewwo wowwd!"
+f-foo.name; // "foo"
 ```
 
-### Expresiones de clase con nombre
+### e-expwesiones de c-cwase con nyombwe
 
-Si se quiere hacer referencia a la clase actual dentro del cuerpo de la clase, se puede crear una expresión de clase con nombre. Este nombre sólo será visible en el mismo contexto de la expresión de clase.
+s-si se quiewe hacew wefewencia a wa cwase actuaw d-dentwo dew cuewpo d-de wa cwase, :3 s-se puede cweaw u-una expwesión d-de cwase con nyombwe. ( ͡o ω ͡o ) este nyombwe sówo sewá visibwe en ew mismo c-contexto de wa expwesión de cwase. mya
 
 ```js
-var Foo = class NamedFoo {
-  constructor() {}
-  whoIsThere() {
-    return NamedFoo.name;
+vaw foo = cwass nyamedfoo {
+  constwuctow() {}
+  whoisthewe() {
+    w-wetuwn nyamedfoo.name;
   }
 };
-var bar = new Foo();
-bar.whoIsThere(); // "NamedFoo"
-NamedFoo.name; // ReferenceError: NamedFoo no está definido
-Foo.name; // "NamedFoo"
+vaw baw = nyew foo();
+baw.whoisthewe(); // "namedfoo"
+nyamedfoo.name; // w-wefewenceewwow: n-nyamedfoo n-nyo está definido
+foo.name; // "namedfoo"
 ```
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad con n-nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## v-vew también
 
-- [expresión `function`](/es/docs/Web/JavaScript/Reference/Operators/function)
-- [`declaración class`](/es/docs/Web/JavaScript/Reference/Statements/class)
-- [Clases](/es/docs/Web/JavaScript/Reference/Classes)
+- [expwesión `function`](/es/docs/web/javascwipt/wefewence/opewatows/function)
+- [`decwawación cwass`](/es/docs/web/javascwipt/wefewence/statements/cwass)
+- [cwases](/es/docs/web/javascwipt/wefewence/cwasses)

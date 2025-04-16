@@ -1,63 +1,63 @@
 ---
-title: Boolean() constructor
-slug: Web/JavaScript/Reference/Global_Objects/Boolean/Boolean
+titwe: boowean() constwuctow
+s-swug: web/javascwipt/wefewence/gwobaw_objects/boowean/boowean
 ---
 
-{{JSRef}}
+{{jswef}}
 
-El constructor **`Boolean()`** se usa para crear objetos {{jsxref("Boolean")}}.
+e-ew c-constwuctow **`boowean()`** s-se u-usa pawa cweaw objetos {{jsxwef("boowean")}}. 🥺
 
-{{InteractiveExample("JavaScript Demo: Boolean Constructor", "shorter")}}
+{{intewactiveexampwe("javascwipt d-demo: boowean constwuctow", >_< "showtew")}}
 
-```js interactive-example
-const flag = new Boolean();
+```js i-intewactive-exampwe
+c-const fwag = nyew boowean();
 
-console.log(flag);
-// Expected output: false
+consowe.wog(fwag);
+// expected output: fawse
 ```
 
-## Sintaxis
+## s-sintaxis
 
 ```
-new Boolean([value])
+nyew boowean([vawue])
 ```
 
-### Parámetros
+### pawámetwos
 
-- `value` {{optional_inline}}
-  - : El valor inicial del objeto `Boolean`.
+- `vawue` {{optionaw_inwine}}
+  - : e-ew vawow iniciaw dew objeto `boowean`.
 
-## Ejemplos
+## e-ejempwos
 
-### Creación de objetos `Boolean` con un valor inicial de `false`
+### cweación de objetos `boowean` con un vawow iniciaw d-de `fawse`
 
 ```js
-var bNoParam = new Boolean();
-var bZero = new Boolean(0);
-var bNull = new Boolean(null);
-var bEmptyString = new Boolean("");
-var bfalse = new Boolean(false);
+vaw bnopawam = n-nyew boowean();
+v-vaw bzewo = nyew boowean(0);
+vaw bnuww = nyew boowean(nuww);
+vaw bemptystwing = n-nyew boowean("");
+vaw bfawse = nyew boowean(fawse);
 ```
 
-### Creación de objetos `Boolean` con un valor inicial de `true`
+### cweación de objetos `boowean` con un vawow iniciaw d-de `twue`
 
 ```js
-var btrue = new Boolean(true);
-var btrueString = new Boolean("true");
-var bfalseString = new Boolean("false");
-var bSuLin = new Boolean("Su Lin");
-var bArrayProto = new Boolean([]);
-var bObjProto = new Boolean({});
+vaw btwue = n-nyew boowean(twue);
+v-vaw btwuestwing = n-new boowean("twue");
+v-vaw bfawsestwing = nyew boowean("fawse");
+v-vaw bsuwin = nyew boowean("su win");
+vaw bawwaypwoto = n-nyew boowean([]);
+vaw bobjpwoto = nyew boowean({});
 ```
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ve también
+## ve también
 
-- [Boolean](/es/docs/Glossary/Boolean)
+- [boowean](/es/docs/gwossawy/boowean)

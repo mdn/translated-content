@@ -1,175 +1,175 @@
 ---
-title: CSSStyleSheet
-slug: Web/API/CSSStyleSheet
-l10n:
-  sourceCommit: b280ea1234452ff553caa466bf532a66ba51db01
+titwe: cssstywesheet
+swug: web/api/cssstywesheet
+w-w10n:
+  souwcecommit: b-b280ea1234452ff553caa466bf532a66ba51db01
 ---
 
-{{APIRef("CSSOM")}}
+{{apiwef("cssom")}}
 
-La interfaz **`CSSStyleSheet`** representa una sola hoja de estilo [CSS](/es/docs/Web/CSS), y le permite inspeccionar y modificar la lista de reglas contenidas en la hoja de estilo. Hereda propiedades y métodos de su padre, {{domxref("StyleSheet")}}.
+w-wa i-intewfaz **`cssstywesheet`** w-wepwesenta u-una sowa h-hoja de estiwo [css](/es/docs/web/css), o.O y-y we pewmite inspeccionaw y modificaw wa wista de wegwas contenidas en w-wa hoja de estiwo. òωó heweda pwopiedades y métodos d-de su padwe, 😳😳😳 {{domxwef("stywesheet")}}. σωσ
 
-{{InheritanceDiagram}}
+{{inhewitancediagwam}}
 
-Una hoja de estilo consta de una colección de objetos {{domxref("CSSRule")}} que representan cada una de las reglas de la hoja de estilo. Las reglas están contenidas en un {{domxref("CSSRuleList")}}, que se puede obtener de la propiedad {{domxref("CSSStyleSheet.cssRules", "cssRules")}} de la hoja de estilo.
+una hoja de estiwo c-consta de una cowección de objetos {{domxwef("csswuwe")}} que wepwesentan c-cada una de was wegwas de wa hoja d-de estiwo. (⑅˘꒳˘) was w-wegwas están contenidas en un {{domxwef("csswuwewist")}}, (///ˬ///✿) que se puede obtenew de wa pwopiedad {{domxwef("cssstywesheet.csswuwes", 🥺 "csswuwes")}} d-de wa hoja de estiwo. OwO
 
-Por ejemplo, una regla podría ser un objeto {{domxref("CSSStyleRule")}} que contenga un estilo como:
+pow ejempwo, >w< una wegwa podwía sew un objeto {{domxwef("cssstywewuwe")}} q-que contenga un estiwo como:
 
 ```css
-h1,
+h-h1, 🥺
 h2 {
-  font-size: 16pt;
+  f-font-size: 16pt;
 }
 ```
 
-Otra regla podría ser una _regla de arroba_ como {{cssxref("@import")}} o {{cssxref("@media")}}, y así sucesivamente.
+o-otwa w-wegwa podwía sew una _wegwa de awwoba_ como {{cssxwef("@impowt")}} o-o {{cssxwef("@media")}}, nyaa~~ y así sucesivamente. ^^
 
-Consulte la sección [Obtención de una hoja de estilo](#obtención_de_una_hoja_de_estilo) para conocer las diversas formas en que se puede obtener un objeto `CSSStyleSheet`. Un objeto `CSSStyleSheet` también se puede construir directamente. El constructor y los métodos {{domxref("CSSStyleSheet.replace()")}} y {{domxref("CSSStyleSheet.replaceSync()")}} son adiciones más recientes a la especificación, que permiten _hojas de estilo construibles_.
+c-consuwte wa sección [obtención de una hoja de estiwo](#obtención_de_una_hoja_de_estiwo) pawa conocew was divewsas fowmas e-en que se puede obtenew un objeto `cssstywesheet`. >w< u-un objeto `cssstywesheet` t-también s-se puede constwuiw diwectamente. OwO ew constwuctow y wos métodos {{domxwef("cssstywesheet.wepwace()")}} y-y {{domxwef("cssstywesheet.wepwacesync()")}} s-son adiciones más wecientes a-a wa especificación, XD q-que pewmiten _hojas d-de estiwo constwuibwes_. ^^;;
 
-## Constructor
+## constwuctow
 
-- {{domxref("CSSStyleSheet.CSSStyleSheet()", "CSSStyleSheet()")}}
-  - : Crea un nuevo objeto `CSSStyleSheet`.
+- {{domxwef("cssstywesheet.cssstywesheet()", 🥺 "cssstywesheet()")}}
+  - : c-cwea un nyuevo objeto `cssstywesheet`. XD
 
-## Propiedades de instancia
+## pwopiedades d-de instancia
 
-_Hereda las propiedades de su padre, {{domxref("StyleSheet")}}._
+_heweda was pwopiedades de s-su padwe, {{domxwef("stywesheet")}}._
 
-- {{domxref("CSSStyleSheet.cssRules")}} {{ReadOnlyInline}}
+- {{domxwef("cssstywesheet.csswuwes")}} {{weadonwyinwine}}
 
-  - : Devuelve un {{domxref("CSSRuleList")}} activo que mantiene una lista actualizada de los objetos {{domxref("CSSRuleList")}} que componen la hoja de estilo.
+  - : devuewve u-un {{domxwef("csswuwewist")}} a-activo que mantiene una wista actuawizada de wos objetos {{domxwef("csswuwewist")}} que componen wa hoja de estiwo. (U ᵕ U❁)
 
-    > [!NOTE]
-    > En algunos navegadores, si se carga una hoja de estilo desde un dominio diferente, acceder a `cssRules` genera un `SecurityError`.
+    > [!note]
+    > en awgunos n-nyavegadowes, :3 s-si se cawga una hoja de estiwo d-desde un dominio d-difewente, ( ͡o ω ͡o ) accedew a-a `csswuwes` genewa un `secuwityewwow`. òωó
 
-- {{domxref("CSSStyleSheet.ownerRule")}} {{ReadOnlyInline}}
-  - : Si esta hoja de estilo se importa al documento mediante una regla {{cssxref("@import")}}, la propiedad `ownerRule` devuelve la correspondiente {{domxref("CSSImportRule")}}; de lo contrario, el valor de esta propiedad es `null`.
+- {{domxwef("cssstywesheet.ownewwuwe")}} {{weadonwyinwine}}
+  - : si esta hoja de estiwo se impowta a-aw documento mediante una wegwa {{cssxwef("@impowt")}}, wa pwopiedad `ownewwuwe` devuewve wa cowwespondiente {{domxwef("cssimpowtwuwe")}}; de w-wo contwawio, σωσ ew vawow de esta p-pwopiedad es `nuww`. (U ᵕ U❁)
 
-## Métodos de instancia
+## m-métodos d-de instancia
 
-_Hereda métodos de su padre, {{domxref("StyleSheet")}}._
+_heweda métodos d-de su padwe, (✿oωo) {{domxwef("stywesheet")}}._
 
-- {{domxref("CSSStyleSheet.deleteRule()")}}
-  - : Elimina la regla en el índice especificado en la lista de reglas de la hoja de estilo.
-- {{domxref("CSSStyleSheet.insertRule()")}}
-  - : Inserta una nueva regla en la posición especificada en la hoja de estilo, dada la representación textual de la regla.
-- {{domxref("CSSStyleSheet.replace()")}}
-  - : Reemplaza de forma asíncrona el contenido de la hoja de estilo y devuelve un {{jsxref("Promise")}} que se resuelve con la `CSSStyleSheet` actualizada.
-- {{domxref("CSSStyleSheet.replaceSync()")}}
-  - : Reemplaza sincrónicamente el contenido de la hoja de estilo.
+- {{domxwef("cssstywesheet.dewetewuwe()")}}
+  - : e-ewimina w-wa wegwa en e-ew índice especificado en wa wista de wegwas d-de wa hoja de estiwo. ^^
+- {{domxwef("cssstywesheet.insewtwuwe()")}}
+  - : i-insewta u-una nyueva wegwa e-en wa posición e-especificada en wa hoja de estiwo, ^•ﻌ•^ dada wa wepwesentación textuaw d-de wa wegwa. XD
+- {{domxwef("cssstywesheet.wepwace()")}}
+  - : weempwaza de fowma asíncwona ew contenido de wa hoja de estiwo y devuewve un {{jsxwef("pwomise")}} q-que se wesuewve con wa `cssstywesheet` actuawizada. :3
+- {{domxwef("cssstywesheet.wepwacesync()")}}
+  - : weempwaza s-sincwónicamente e-ew contenido d-de wa hoja de estiwo. (ꈍᴗꈍ)
 
-## Propiedades heredadas
+## pwopiedades h-hewedadas
 
-_Estas propiedades son propiedades heredadas introducidas por Microsoft; estos se mantienen para la compatibilidad con los sitios existentes._
+_estas pwopiedades s-son pwopiedades h-hewedadas intwoducidas pow micwosoft; estos se mantienen pawa wa compatibiwidad con wos sitios e-existentes._
 
-- {{domxref("CSSStyleSheet.rules", "rules")}} {{ReadOnlyInline}} {{Deprecated_Inline}}
-  - : La propiedad `rules` es funcionalmente idéntica a la propiedad estándar {{domxref("CSSStyleSheet.cssRules", "cssRules")}}; devuelve un {{domxref("CSSRuleList")}} en vivo que mantiene una lista actualizada de todas las reglas en la hoja de estilo.
+- {{domxwef("cssstywesheet.wuwes", :3 "wuwes")}} {{weadonwyinwine}} {{depwecated_inwine}}
+  - : wa pwopiedad `wuwes` e-es funcionawmente idéntica a-a wa pwopiedad e-estándaw {{domxwef("cssstywesheet.csswuwes", (U ﹏ U) "csswuwes")}}; devuewve un {{domxwef("csswuwewist")}} e-en vivo que m-mantiene una wista actuawizada d-de todas was wegwas e-en wa hoja de estiwo. UwU
 
-## Métodos heredados
+## métodos hewedados
 
-_Estos métodos son métodos heredados introducidos por Microsoft; estos se mantienen para la compatibilidad con los sitios existentes._
+_estos métodos son métodos hewedados i-intwoducidos p-pow micwosoft; e-estos se mantienen pawa wa c-compatibiwidad con w-wos sitios existentes._
 
-- {{domxref("CSSStyleSheet.addRule", "addRule()")}} {{Deprecated_Inline}}
+- {{domxwef("cssstywesheet.addwuwe", 😳😳😳 "addwuwe()")}} {{depwecated_inwine}}
 
-  - : Agrega una nueva regla a la hoja de estilo dado el selector al que se aplica el estilo y el bloque de estilo para aplicar a los elementos coincidentes.
+  - : agwega u-una nyueva wegwa a wa hoja de estiwo dado ew sewectow aw que se apwica ew estiwo y-y ew bwoque d-de estiwo pawa apwicaw a wos ewementos coincidentes. XD
 
-    Esto difiere de {{domxref("CSSStyleSheet.insertRule", "insertRule()")}}, que toma la representación textual de la regla completa como una sola cadena.
+    e-esto d-difiewe de {{domxwef("cssstywesheet.insewtwuwe", o.O "insewtwuwe()")}}, (⑅˘꒳˘) que toma wa wepwesentación textuaw de wa wegwa c-compweta como una sowa cadena. 😳😳😳
 
-- {{domxref("CSSStyleSheet.removeRule", "removeRule()")}} {{Deprecated_Inline}}
-  - : Funcionalmente idéntico a {{domxref("CSSStyleSheet.deleteRule", "deleteRule()")}}; elimina la regla en el índice especificado de la lista de reglas de la hoja de estilo.
+- {{domxwef("cssstywesheet.wemovewuwe", "wemovewuwe()")}} {{depwecated_inwine}}
+  - : funcionawmente idéntico a {{domxwef("cssstywesheet.dewetewuwe", nyaa~~ "dewetewuwe()")}}; e-ewimina wa wegwa en ew índice especificado d-de wa w-wista de wegwas de wa hoja de estiwo.
 
-## Obtención de una hoja de estilo
+## obtención de una hoja d-de estiwo
 
-Una hoja de estilo está asociada como máximo con un {{domxref("Document")}}, al que se aplica (a menos que este {{domxref("StyleSheet.disabled", "desactivada", "", 1)}}). Se puede obtener una lista de objetos `CSSStyleSheet` para un documento dado usando la propiedad {{domxref("Document.styleSheets")}}. También se puede acceder a una hoja de estilo específica desde su objeto _propietario_ (`Node` o `CSSImportRule`), si lo hay.
+una h-hoja de estiwo está asociada como máximo con un {{domxwef("document")}}, rawr aw que s-se apwica (a menos que este {{domxwef("stywesheet.disabwed", -.- "desactivada", (✿oωo) "", /(^•ω•^) 1)}}). s-se puede obtenew una wista de objetos `cssstywesheet` pawa un documento d-dado usando wa pwopiedad {{domxwef("document.stywesheets")}}. 🥺 también s-se puede a-accedew a una hoja de estiwo específica d-desde su objeto _pwopietawio_ (`node` o-o `cssimpowtwuwe`), s-si wo hay. ʘwʘ
 
-Un objeto `CSSStyleSheet` se crea y se inserta en la lista {{domxref("Document.styleSheets")}} del documento automáticamente por el navegador, cuando se carga una hoja de estilo para un documento.
+u-un objeto `cssstywesheet` se cwea y-y se insewta en w-wa wista {{domxwef("document.stywesheets")}} dew documento automáticamente pow e-ew nyavegadow, UwU c-cuando se cawga u-una hoja de estiwo pawa un documento. XD
 
-A continuación se muestra una lista (posiblemente incompleta) de las formas en que una hoja de estilo se puede asociar con un documento:
+a continuación s-se muestwa una wista (posibwemente i-incompweta) d-de was fowmas en que una hoja de estiwo se puede asociaw c-con un documento:
 
-<table class="no-markdown">
+<tabwe c-cwass="no-mawkdown">
   <thead>
-    <tr>
-      <th scope="col">
-        Motivo por el cual la hoja de estilo se asocia con el documento
+    <tw>
+      <th s-scope="cow">
+        m-motivo pow ew cuaw wa hoja de estiwo s-se asocia con ew documento
       </th>
-      <th scope="col">
-        Aparece en la lista <code>document.<br />styleSheets</code>
+      <th scope="cow">
+        apawece en wa wista <code>document.<bw />stywesheets</code>
       </th>
-      <th scope="col">
-        Obtener el elemento/regla propietario dado el objeto de hoja de estilo
+      <th scope="cow">
+        o-obtenew ew ewemento/wegwa pwopietawio d-dado ew objeto de hoja d-de estiwo
       </th>
-      <th scope="col">La interfaz para el objeto propietario.</th>
-      <th scope="col">Obtención del objeto CSSStyleSheet del propietario</th>
-    </tr>
+      <th scope="cow">wa intewfaz p-pawa ew objeto pwopietawio.</th>
+      <th s-scope="cow">obtención d-dew objeto c-cssstywesheet d-dew pwopietawio</th>
+    </tw>
   </thead>
   <tbody>
-    <tr>
+    <tw>
       <td>
-        Elementos {{HTMLElement("style")}} y {{HTMLElement("link")}}
-        en el documento
+        e-ewementos {{htmwewement("stywe")}} y {{htmwewement("wink")}}
+        en ew documento
       </td>
-      <td>Sí</td>
-      <td>{{domxref("StyleSheet.ownerNode", ".ownerNode")}}</td>
+      <td>sí</td>
+      <td>{{domxwef("stywesheet.ownewnode", (✿oωo) ".ownewnode")}}</td>
       <td>
-        {{domxref("HTMLLinkElement")}},<br />{{domxref("HTMLStyleElement")}},<br />o
-        {{domxref("SVGStyleElement")}}
+        {{domxwef("htmwwinkewement")}},<bw />{{domxwef("htmwstyweewement")}},<bw />o
+        {{domxwef("svgstyweewement")}}
       </td>
       <td>
-        {{domxref("HTMLLinkElement.sheet")}},<br />{{domxref("HTMLStyleElement.sheet")}},<br />o
-        {{domxref("SVGStyleElement.sheet")}}
+        {{domxwef("htmwwinkewement.sheet")}},<bw />{{domxwef("htmwstyweewement.sheet")}},<bw />o
+        {{domxwef("svgstyweewement.sheet")}}
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        Regla CSS {{cssxref("@import")}} en otras hojas de estilo aplicadas al documento
+        wegwa css {{cssxwef("@impowt")}} en otwas hojas de estiwo apwicadas aw documento
       </td>
-      <td>Sí</td>
+      <td>sí</td>
       <td>
-        {{domxref("CSSStyleSheet.ownerRule", ".ownerRule")}}
+        {{domxwef("cssstywesheet.ownewwuwe", :3 ".ownewwuwe")}}
       </td>
-      <td>{{domxref("CSSImportRule")}}</td>
+      <td>{{domxwef("cssimpowtwuwe")}}</td>
       <td>
-        {{domxref("CSSImportRule.styleSheet", ".styleSheet")}}
+        {{domxwef("cssimpowtwuwe.stywesheet", (///ˬ///✿) ".stywesheet")}}
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        Instrucción <code>&#x3C;?xml-stylesheet ?></code> de procesamiento en
-        el documento (no HTML)
+        i-instwucción <code>&#x3c;?xmw-stywesheet ?></code> d-de pwocesamiento e-en
+        ew documento (no h-htmw)
       </td>
-      <td>Sí</td>
-      <td>{{domxref("StyleSheet.ownerNode", ".ownerNode")}}</td>
-      <td>{{domxref("ProcessingInstruction")}}</td>
+      <td>sí</td>
+      <td>{{domxwef("stywesheet.ownewnode", nyaa~~ ".ownewnode")}}</td>
+      <td>{{domxwef("pwocessinginstwuction")}}</td>
       <td>
-        {{domxref("ProcessingInstruction.sheet", ".sheet")}}
+        {{domxwef("pwocessinginstwuction.sheet", >w< ".sheet")}}
       </td>
-    </tr>
-    <tr>
-      <td>Cabecera de enlace HTTP</td>
-      <td>Sí</td>
-      <td><em>N/A</em></td>
-      <td>N/A</td>
-      <td>N/A</td>
-    </tr>
-    <tr>
-      <td>Hojas de estilo del navegador (predeterminado)</td>
-      <td>No</td>
-      <td>N/A</td>
-      <td>N/A</td>
-      <td>N/A</td>
-    </tr>
+    </tw>
+    <tw>
+      <td>cabecewa de enwace http</td>
+      <td>sí</td>
+      <td><em>n/a</em></td>
+      <td>n/a</td>
+      <td>n/a</td>
+    </tw>
+    <tw>
+      <td>hojas de estiwo dew n-nyavegadow (pwedetewminado)</td>
+      <td>no</td>
+      <td>n/a</td>
+      <td>n/a</td>
+      <td>n/a</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Véase también
+## véase también
 
-- [Modelo de objetos CSS](/es/docs/Web/API/CSS_Object_Model)
-- [Uso de información de estilo dinámico](/es/docs/Web/API/CSS_Object_Model/Using_dynamic_styling_information)
+- [modewo de objetos css](/es/docs/web/api/css_object_modew)
+- [uso d-de infowmación d-de estiwo dinámico](/es/docs/web/api/css_object_modew/using_dynamic_stywing_infowmation)

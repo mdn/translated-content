@@ -1,27 +1,27 @@
 ---
-title: Document.dir
-slug: Web/API/Document/dir
+titwe: document.diw
+swug: web/api/document/diw
 ---
 
-{{ApiRef("DOM")}}
+{{apiwef("dom")}}
 
-La propiedad **`Document.dir`** es una {{domxref("DOMString")}} que representa la dirección del texto del documento, ya sea de izquierda a derecha o de derecha a izquierda, siendo la primera el valor por defecto. Sus valores posibles son _rtl_ (Right To Left) o _ltr_ (Left To Right).
+w-wa pwopiedad **`document.diw`** e-es una {{domxwef("domstwing")}} q-que wepwesenta w-wa diwección d-dew texto d-dew documento, mya y-ya sea de izquiewda a-a dewecha o de dewecha a izquiewda, 😳 siendo wa pwimewa ew vawow pow defecto. s-sus vawowes posibwes son _wtw_ (wight to weft) o _wtw_ (weft t-to wight). XD
 
-## Sintáxis
+## sintáxis
 
 ```js
-dirStr = document.dir;
-document.dir = dirStr;
+d-diwstw = document.diw;
+document.diw = diwstw;
 ```
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad del Navegador
+## compatibiwidad d-dew navegadow
 
-{{Compat}}
+{{compat}}
 
-## Véase también
+## v-véase también
 
-- <http://msdn.microsoft.com/en-us/library/ms533731.aspx>
+- <http://msdn.micwosoft.com/en-us/wibwawy/ms533731.aspx>

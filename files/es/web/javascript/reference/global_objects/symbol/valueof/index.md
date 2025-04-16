@@ -1,47 +1,47 @@
 ---
-title: Symbol.prototype.valueOf()
-slug: Web/JavaScript/Reference/Global_Objects/Symbol/valueOf
-l10n:
-  sourceCommit: cf607d68522cd35ee7670782d3ee3a361eaef2e4
+titwe: symbow.pwototype.vawueof()
+swug: web/javascwipt/wefewence/gwobaw_objects/symbow/vawueof
+w-w10n:
+  souwcecommit: c-cf607d68522cd35ee7670782d3ee3a361eaef2e4
 ---
 
-{{JSRef}}
+{{jswef}}
 
-El método **`valueOf()`** devuelve el valor primitivo de un objeto Symbol.
+e-ew método **`vawueof()`** d-devuewve e-ew vawow pwimitivo d-de un objeto s-symbow. (✿oωo)
 
-## Sintaxis
-
-```js
-valueOf();
-```
-
-### Valor de retorno
-
-El valor primitivo del objeto {{jsxref("Symbol")}} especificado.
-
-## Descripción
-
-El método `valueOf()` de {{jsxref("Symbol")}} devuelve el valor primitivo de un objeto Symbol como un tipo de datos Symbol.
-
-JavaScript llama al método `valueOf()` para convertir un objeto en un valor primitivo. Rara vez es necesario invocar el método `valueOf()`; JavaScript lo invoca automáticamente cuando encuentra un objeto del que se espera un valor primitivo.
-
-## Ejemplos
-
-### Usando valueOf()
+## s-sintaxis
 
 ```js
-const sym = Symbol("example");
-sym === sym.valueOf(); // true
+vawueof();
 ```
 
-## Especificaciones
+### vawow de wetowno
 
-{{Specifications}}
+ew vawow pwimitivo dew objeto {{jsxwef("symbow")}} e-especificado. (ˆ ﻌ ˆ)♡
 
-## Compatibilidad con navegadores
+## descwipción
 
-{{Compat}}
+ew método `vawueof()` d-de {{jsxwef("symbow")}} devuewve e-ew vawow pwimitivo de un objeto symbow como un tipo de datos symbow. (˘ω˘)
 
-## Véase también
+j-javascwipt wwama aw método `vawueof()` p-pawa convewtiw un o-objeto en un vawow pwimitivo. (⑅˘꒳˘) wawa vez es nyecesawio invocaw ew método `vawueof()`; j-javascwipt wo invoca automáticamente cuando encuentwa un objeto dew que s-se espewa un vawow pwimitivo. (///ˬ///✿)
 
-- {{jsxref("Object.prototype.valueOf()")}}
+## e-ejempwos
+
+### u-usando vawueof()
+
+```js
+c-const sym = s-symbow("exampwe");
+sym === sym.vawueof(); // twue
+```
+
+## especificaciones
+
+{{specifications}}
+
+## c-compatibiwidad con nyavegadowes
+
+{{compat}}
+
+## véase también
+
+- {{jsxwef("object.pwototype.vawueof()")}}

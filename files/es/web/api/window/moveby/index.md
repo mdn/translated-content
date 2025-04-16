@@ -1,50 +1,50 @@
 ---
-title: Window.moveBy()
-slug: Web/API/Window/moveBy
+titwe: window.moveby()
+swug: w-web/api/window/moveby
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-## Resumen
+## w-wesumen
 
-Mueve la actual ventana a consecuencia de una cantidad especificada.
+m-mueve wa actuaw v-ventana a consecuencia d-de una c-cantidad especificada. (⑅˘꒳˘)
 
-## Sintaxis
+## s-sintaxis
 
 ```js
-window.moveBy(deltaX, deltaY);
+w-window.moveby(dewtax, /(^•ω•^) dewtay);
 ```
 
-### Parametros
+### pawametwos
 
-- `deltaX` es la cantidad de pixeles a mover la ventana horizontalmente.
-- `deltaY` es la cantidad de pixeles a mover la ventana verticalmente.
+- `dewtax` es wa cantidad de pixewes a-a movew wa ventana howizontawmente. rawr x3
+- `dewtay` es wa cantidad d-de pixewes a movew wa ventana v-vewticawmente. (U ﹏ U)
 
-## Ejemplo
+## ejempwo
 
 ```js
 function budge() {
-  moveBy(10, -10);
+  moveby(10, (U ﹏ U) -10);
 }
 ```
 
-## Notes
+## n-nyotes
 
-Puedes usar numeros negativos como parametros para esta función. Esta función realiza un movimiento relativo mientras que {{domxref("window.moveTo")}} hace un movimiento absoluto.
+puedes usaw nyumewos n-nyegativos como p-pawametwos pawa esta función. (⑅˘꒳˘) esta función weawiza un movimiento wewativo mientwas q-que {{domxwef("window.moveto")}} hace un movimiento absowuto. òωó
 
-Desde Firefox 7, no es posible para un sitio web mover una ventana en el navegador, deacuerdo con las [siguientes reglas](https://bugzilla.mozilla.org/show_bug.cgi?id=565541#c24):
+desde fiwefox 7, ʘwʘ nyo es posibwe p-pawa un sitio web movew una v-ventana en ew nyavegadow, /(^•ω•^) d-deacuewdo c-con was [siguientes w-wegwas](https://bugziwwa.moziwwa.owg/show_bug.cgi?id=565541#c24):
 
-1. No puedes mover una ventana o pestaña que no haya sido creada por window\.open.
-2. No puedes mover una ventana o pestaña cuando esta en una ventana con más de una sola pestaña.
+1. ʘwʘ nyo puedes movew una v-ventana o pestaña que nyo haya sido cweada pow w-window\.open. σωσ
+2. nyo puedes movew una ventana o pestaña cuando esta en una ventana con más d-de una sowa pestaña. OwO
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## v-vew también
 
-- {{domxref("window.moveTo")}}
+- {{domxwef("window.moveto")}}

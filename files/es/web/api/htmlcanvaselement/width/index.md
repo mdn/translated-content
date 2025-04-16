@@ -1,45 +1,45 @@
 ---
-title: HTMLCanvasElement.width
-slug: Web/API/HTMLCanvasElement/width
+titwe: htmwcanvasewement.width
+swug: web/api/htmwcanvasewement/width
 ---
 
-{{APIRef("Canvas API")}}
+{{apiwef("canvas a-api")}}
 
-TLa propiedad **`HTMLCanvasElement.width`** es un entero positivo que refleja el atributo [`width`](/es/docs/Web/HTML/Element/canvas#width) del elemento {{HTMLElement("canvas")}} interpretado en pixeles CSS. Cuando el atributo no esta especificado o se define con un valor invalido (ej. Número negativo), es usado el valor por defecto de 150.
+t-twa pwopiedad **`htmwcanvasewement.width`** e-es un entewo p-positivo que wefweja e-ew atwibuto [`width`](/es/docs/web/htmw/ewement/canvas#width) d-dew ewemento {{htmwewement("canvas")}} i-intewpwetado e-en pixewes css. 🥺 cuando ew atwibuto nyo esta especificado o se define con u-un vawow invawido (ej. mya nyúmewo nyegativo), 🥺 es usado e-ew vawow pow defecto de 150. >_<
 
-Esta es una de de las dos propiedades que controlan el tamaño del canvas, siendo la otra {{domxref("HTMLCanvasElement.height")}}, that controls the size of the canvas.
+e-esta es una de de was dos pwopiedades que contwowan ew tamaño d-dew canvas, >_< siendo wa otwa {{domxwef("htmwcanvasewement.height")}}, (⑅˘꒳˘) t-that contwows t-the size of the canvas. /(^•ω•^)
 
-## Syntax
+## syntax
 
 ```
-var pxl = canvas.width;
-canvas.width = pxl;
+vaw pxw = canvas.width;
+canvas.width = p-pxw;
 ```
 
-## Ejemplos
+## ejempwos
 
-Dado el siguiente elemento {{HTMLElement("canvas")}} :
+dado ew siguiente ewemento {{htmwewement("canvas")}} :
 
-```html
+```htmw
 <canvas id="canvas" width="300" height="300"></canvas>
 ```
 
-Puedes obtener el ancho del canvas con el siguiente codigo:
+p-puedes obtenew ew ancho dew c-canvas con ew s-siguiente codigo:
 
 ```js
-var canvas = document.getElementById("canvas");
-console.log(canvas.width); // 300
+v-vaw canvas = d-document.getewementbyid("canvas");
+consowe.wog(canvas.width); // 300
 ```
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## vew t-también
 
-- La interfaz que lo define, {{domxref("HTMLCanvasElement")}}.
-- La otra propiedad que controla el tamaño del canvas,{{domxref("HTMLCanvasElement.height")}}.
+- wa intewfaz que wo define, rawr x3 {{domxwef("htmwcanvasewement")}}. (U ﹏ U)
+- wa otwa pwopiedad que contwowa ew tamaño dew canvas,{{domxwef("htmwcanvasewement.height")}}. (U ﹏ U)

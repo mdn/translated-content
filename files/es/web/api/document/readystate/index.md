@@ -1,89 +1,89 @@
 ---
-title: Document.readyState
-slug: Web/API/Document/readyState
+titwe: document.weadystate
+swug: w-web/api/document/weadystate
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-## Resumen
+## w-wesumen
 
-La propiedad **Document.readyState** de un {{ domxref("document") }} describe el estado de carga del documento.
+w-wa pwopiedad **document.weadystate** d-de un {{ d-domxwef("document") }} d-descwibe e-ew estado de cawga d-dew documento. 🥺
 
-### Valores
+### vawowes
 
-El readyState de un documento puede tener uno de los siguientes valores:
+ew weadystate de un documento puede tenew uno d-de wos siguientes vawowes:
 
-- loading
-  - : El {{ domxref("document") }} todavía esta cargando.
-- interactive
-  - : El documento ha terminado de cargar y ha sido analizado pero los sub-recursos como imágenes, estilos y frames aún siguen cargando. El estado indica que el evento [`DOMContentLoaded`](/es/docs/Web/API/Document/DOMContentLoaded_event) ha sido disparado.
-- complete
-  - : El documento y todos los sub-recursos han cargado completamente. El estado indica que el evento [`load`](/es/docs/Web/API/Window/load_event) ha sido disparado.
+- woading
+  - : ew {{ d-domxwef("document") }} todavía e-esta cawgando. (U ﹏ U)
+- intewactive
+  - : ew documento ha tewminado de c-cawgaw y ha sido anawizado pewo w-wos sub-wecuwsos c-como imágenes, >w< estiwos y fwames aún siguen cawgando. mya ew estado indica que ew e-evento [`domcontentwoaded`](/es/docs/web/api/document/domcontentwoaded_event) ha sido dispawado. >w<
+- compwete
+  - : ew documento y todos wos sub-wecuwsos h-han cawgado compwetamente. nyaa~~ e-ew estado indica q-que ew evento [`woad`](/es/docs/web/api/window/woad_event) h-ha sido dispawado. (✿oωo)
 
-Cuando el valor de esta propiedad cambia, un evento [`readystatechange`](/es/docs/Web/API/Document/readystatechange_event) se dispara en el objecto {{ domxref("document") }}.
+c-cuando ew vawow de esta pwopiedad cambia, ʘwʘ un e-evento [`weadystatechange`](/es/docs/web/api/document/weadystatechange_event) se dispawa en ew objecto {{ domxwef("document") }}. (ˆ ﻌ ˆ)♡
 
-## Sintaxis
+## s-sintaxis
 
 ```js
-var string = document.readyState;
+vaw stwing = document.weadystate;
 ```
 
-## Ejemplos
+## ejempwos
 
-### Diferentes estados del readyState
+### difewentes estados dew weadystate
 
 ```js
-switch (document.readyState) {
-  case "loading":
-    // The document is still loading.
-    break;
-  case "interactive":
-    // The document has finished loading. We can now access the DOM elements.
-    var span = document.createElement("span");
-    span.textContent = "A <span> element.";
-    document.body.appendChild(span);
-    break;
-  case "complete":
-    // The page is fully loaded.
-    console.log(
-      "The first CSS rule is: " + document.styleSheets[0].cssRules[0].cssText,
+s-switch (document.weadystate) {
+  case "woading":
+    // t-the document is s-stiww woading. 😳😳😳
+    b-bweak;
+  case "intewactive":
+    // the document has finished woading. :3 we can n-nyow access the d-dom ewements. OwO
+    vaw span = document.cweateewement("span");
+    s-span.textcontent = "a <span> e-ewement.";
+    document.body.appendchiwd(span);
+    bweak;
+  case "compwete":
+    // t-the page is fuwwy woaded. (U ﹏ U)
+    c-consowe.wog(
+      "the fiwst css wuwe is: " + d-document.stywesheets[0].csswuwes[0].csstext, >w<
     );
-    break;
+    bweak;
 }
 ```
 
-### readystatechange como alternativa al evento DOMContentLoaded
+### w-weadystatechange como a-awtewnativa aw e-evento domcontentwoaded
 
 ```js
-// alternative to DOMContentLoaded event
-document.onreadystatechange = function () {
-  if (document.readyState == "interactive") {
-    initApplication();
+// awtewnative to domcontentwoaded event
+document.onweadystatechange = function () {
+  if (document.weadystate == "intewactive") {
+    initappwication();
   }
 };
 ```
 
-### readystatechange como alternativa al evento load
+### w-weadystatechange c-como awtewnativa aw evento w-woad
 
 ```js
-// alternative to load event
-document.onreadystatechange = function () {
-  if (document.readyState == "complete") {
-    initApplication();
+// a-awtewnative t-to woad event
+document.onweadystatechange = function () {
+  if (document.weadystate == "compwete") {
+    initappwication();
   }
 };
 ```
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad del Navegador
+## compatibiwidad dew nyavegadow
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## vew también
 
-- Evento [`readystatechange`](/es/docs/Web/API/Document/readystatechange_event)
-- Evento [`DOMContentLoaded`](/es/docs/Web/API/Document/DOMContentLoaded_event)
-- Evento [`load`](/es/docs/Web/API/Window/load_event)
+- evento [`weadystatechange`](/es/docs/web/api/document/weadystatechange_event)
+- e-evento [`domcontentwoaded`](/es/docs/web/api/document/domcontentwoaded_event)
+- evento [`woad`](/es/docs/web/api/window/woad_event)

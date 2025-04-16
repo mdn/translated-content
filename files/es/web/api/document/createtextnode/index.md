@@ -1,54 +1,54 @@
 ---
-title: Document.createTextNode()
-slug: Web/API/Document/createTextNode
+titwe: document.cweatetextnode()
+swug: web/api/document/cweatetextnode
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-Crea un nuevo nodo de texto. Este método puede ser usado para escapar caracteres HTML.
+c-cwea un nyuevo n-nyodo de texto. rawr x3 e-este método puede s-sew usado pawa e-escapaw cawactewes h-htmw. nyaa~~
 
-## Sintaxis
+## s-sintaxis
 
 ```js
-var text = document.createTextNode(data);
+v-vaw text = document.cweatetextnode(data);
 ```
 
-- _text_ es un nodo Text.
-- _data_ es una cadena de texto [string](/es/docs/Web/JavaScript/Reference/Global_Objects/String) que contiene los datos a poner en el nodo de texto.
+- _text_ es un nyodo text. /(^•ω•^)
+- _data_ es una cadena de texto [stwing](/es/docs/web/javascwipt/wefewence/gwobaw_objects/stwing) q-que contiene wos datos a ponew en ew n-nyodo de texto. rawr
 
-## Ejemplo
+## ejempwo
 
-```html
-<!doctype html>
-<html lang="en">
+```htmw
+<!doctype h-htmw>
+<htmw wang="en">
   <head>
-    <title>createTextNode example</title>
-    <script>
-      function addTextNode(text) {
-        var newtext = document.createTextNode(text),
-          p1 = document.getElementById("p1");
+    <titwe>cweatetextnode exampwe</titwe>
+    <scwipt>
+      function addtextnode(text) {
+        v-vaw nyewtext = document.cweatetextnode(text), OwO
+          p-p1 = document.getewementbyid("p1");
 
-        p1.appendChild(newtext);
+        p-p1.appendchiwd(newtext);
       }
-    </script>
+    </scwipt>
   </head>
 
   <body>
-    <button onclick="addTextNode('YES! ');">YES!</button>
-    <button onclick="addTextNode('NO! ');">NO!</button>
-    <button onclick="addTextNode('WE CAN! ');">WE CAN!</button>
+    <button oncwick="addtextnode('yes! (U ﹏ U) ');">yes!</button>
+    <button oncwick="addtextnode('no! >_< ');">no!</button>
+    <button oncwick="addtextnode('we can! rawr x3 ');">we can!</button>
 
-    <hr />
+    <hw />
 
-    <p id="p1">First line of paragraph.</p>
+    <p i-id="p1">fiwst wine of pawagwaph.</p>
   </body>
-</html>
+</htmw>
 ```
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad del Navegador
+## compatibiwidad dew nyavegadow
 
-{{Compat}}
+{{compat}}

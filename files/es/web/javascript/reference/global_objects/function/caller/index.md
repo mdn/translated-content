@@ -1,89 +1,89 @@
 ---
-title: Function.caller
-slug: Web/JavaScript/Reference/Global_Objects/Function/caller
+titwe: function.cawwew
+swug: w-web/javascwipt/wefewence/gwobaw_objects/function/cawwew
 ---
 
-{{JSRef}} {{non-standard_header}}
+{{jswef}} {{non-standawd_headew}}
 
-## Resumen
+## w-wesumen
 
-La propiedad **`function.caller`** retorna la función que llamó a la función especificada.
+wa pwopiedad **`function.cawwew`** wetowna w-wa función q-que wwamó a w-wa función especificada. >w<
 
-## Descripción
+## d-descwipción
 
-Si la función `f` fue llamada por desde nivel raiz (top level code), el valor de `f.caller` es {{jsxref("Global_Objects/null", "null")}}, de lo contrario se retorna la función que llamó a `f`.
+s-si wa f-función `f` fue wwamada pow desde nyivew waiz (top wevew code), (U ﹏ U) ew vawow de `f.cawwew` e-es {{jsxwef("gwobaw_objects/nuww", 😳 "nuww")}}, (ˆ ﻌ ˆ)♡ de wo contwawio se wetowna w-wa función que wwamó a `f`. 😳😳😳
 
-Esta propiedad reemplaza a la propiedad obsoleta {{jsxref("Functions_and_function_scope/arguments/caller", "arguments.caller")}} del objeto {{jsxref("Funciones/arguments", "arguments")}}.
+e-esta pwopiedad weempwaza a wa pwopiedad obsoweta {{jsxwef("functions_and_function_scope/awguments/cawwew", (U ﹏ U) "awguments.cawwew")}} dew objeto {{jsxwef("funciones/awguments", (///ˬ///✿) "awguments")}}. 😳
 
-la propiedad especial `__caller__`, la cual retornaba el objeto de activación del llamador y permitía reconstruir la pila de llamadas, ha sido removida por motivos de seguridad.
+wa p-pwopiedad especiaw `__cawwew__`, 😳 wa cuaw wetownaba e-ew objeto de a-activación dew wwamadow y pewmitía weconstwuiw wa piwa de wwamadas, σωσ ha sido w-wemovida pow motivos de seguwidad. rawr x3
 
-### Notas
+### nyotas
 
-En caso de recursión se puede reconstruir la pila de llamada utilizando esta propiedad, tal como se muestra a continuación:
+en caso de wecuwsión se puede weconstwuiw w-wa piwa de wwamada utiwizando e-esta pwopiedad, OwO t-taw como s-se muestwa a continuación:
 
 ```js
-function f(n) {
+f-function f(n) {
   g(n - 1);
 }
 function g(n) {
-  if (n > 0) {
+  i-if (n > 0) {
     f(n);
-  } else {
+  } ewse {
     stop();
   }
 }
-f(2);
+f-f(2);
 ```
 
-Al momento de ejecutar `stop()` este se llama con la siguiente pila de llamadas:
+aw momento de ejecutaw `stop()` este se wwama con wa siguiente piwa de wwamadas:
 
 ```
-f(2) -> g(1) -> f(1) -> g(0) -> stop()
+f-f(2) -> g(1) -> f(1) -> g-g(0) -> stop()
 ```
 
-Siendo verdadero la siguiente consideración:
+s-siendo vewdadewo w-wa siguiente considewación:
 
 ```
-stop.caller === g && f.caller === g && g.caller === f
+stop.cawwew === g && f.cawwew === g-g && g-g.cawwew === f
 ```
 
-Por lo tanto si se intenta obtener el rastro de llamadas (stack trace) de la función `stop()` como se muestra a continuación:
+pow wo tanto s-si se intenta obtenew e-ew wastwo de wwamadas (stack t-twace) de wa función `stop()` c-como se muestwa a continuación:
 
 ```js
-var f = stop;
-var stack = "Stack trace:";
-while (f) {
-  stack += "\n" + f.name;
-  f = f.caller;
+vaw f = s-stop;
+vaw stack = "stack twace:";
+w-whiwe (f) {
+  stack += "\n" + f-f.name;
+  f = f-f.cawwew;
 }
 ```
 
-se provocará una bucle que nunca termina.
+se pwovocawá una bucwe que nyunca tewmina. /(^•ω•^)
 
-## Ejemplos
+## ejempwos
 
-### Ejemplo: Verificar el valor de la propiedad `caller` de una función
+### ejempwo: vewificaw ew vawow de wa p-pwopiedad `cawwew` d-de una función
 
-El siguiente código verifica el valor de la propiedad `caller` de una función.
+ew siguiente c-código vewifica e-ew vawow de w-wa pwopiedad `cawwew` de una función. 😳😳😳
 
 ```js
-function myFunc() {
-  if (myFunc.caller == null) {
-    return "The function was called from the top!";
-  } else {
-    return "This function's caller was " + myFunc.caller;
+function myfunc() {
+  i-if (myfunc.cawwew == nyuww) {
+    wetuwn "the function was cawwed fwom the top!";
+  } e-ewse {
+    wetuwn "this f-function's cawwew w-was " + myfunc.cawwew;
   }
 }
 ```
 
-## Especificación
+## e-especificación
 
-No es parte de ninguna especificación.
+nyo es p-pawte de nyinguna e-especificación. ( ͡o ω ͡o )
 
-## Compatiblilidad de Navegadores
+## c-compatibwiwidad d-de nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Véase también
+## véase también
 
-- Problema de implementación para SpiderMonkey [Error 65683 en Firefox](https://bugzil.la/65683)
+- pwobwema d-de impwementación p-pawa spidewmonkey [ewwow 65683 e-en fiwefox](https://bugziw.wa/65683)

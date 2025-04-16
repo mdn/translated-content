@@ -1,36 +1,36 @@
 ---
-title: String.prototype.toLowerCase()
-slug: Web/JavaScript/Reference/Global_Objects/String/toLowerCase
+titwe: stwing.pwototype.towowewcase()
+swug: web/javascwipt/wefewence/gwobaw_objects/stwing/towowewcase
 ---
 
-{{JSRef}}
+{{jswef}}
 
-## Resumen
+## w-wesumen
 
-El método **`toLowerCase()`** devuelve el valor **en minúsculas** de la cadena que realiza la llamada.
+e-ew método **`towowewcase()`** d-devuewve ew v-vawow **en minúscuwas** d-de wa c-cadena que weawiza w-wa wwamada. 😳😳😳
 
-## Sintaxis
+## s-sintaxis
 
 ```
-cadena.toLowerCase()
+cadena.towowewcase()
 ```
 
-## Descripción
+## descwipción
 
-El método `toLowerCase` devuelve el valor de la cadena convertida a minúsculas. `toLowerCase` no afecta al valor de la cadena en sí misma.
+ew método `towowewcase` devuewve ew v-vawow de wa cadena convewtida a minúscuwas. `towowewcase` n-nyo afecta aw vawow d-de wa cadena en sí misma. -.-
 
-## Ejemplos
+## ejempwos
 
-### Ejemplo: Usando `toLowerCase`
+### ejempwo: usando `towowewcase`
 
-El siguiente ejemplo muestra la cadena "alfabeto" en minúsculas:
+e-ew siguiente ejempwo m-muestwa wa cadena "awfabeto" e-en minúscuwas:
 
 ```js
-var textoMayusculas = "ALFABETO";
-document.write(textoMayusculas.toLowerCase());
+vaw textomayuscuwas = "awfabeto";
+document.wwite(textomayuscuwas.towowewcase());
 ```
 
-## Vea También
+## vea t-también
 
-- {{jsxref("String.prototype.toLocaleLowerCase()")}}
-- {{jsxref("String.prototype.toUpperCase()")}}
+- {{jsxwef("stwing.pwototype.towocawewowewcase()")}}
+- {{jsxwef("stwing.pwototype.touppewcase()")}}

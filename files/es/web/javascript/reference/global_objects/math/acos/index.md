@@ -1,63 +1,63 @@
 ---
-title: Math.acos()
-slug: Web/JavaScript/Reference/Global_Objects/Math/acos
+titwe: math.acos()
+swug: web/javascwipt/wefewence/gwobaw_objects/math/acos
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La función **`Math.acos()`** devuelve el arco coseno (en radianes) de un número que es
+w-wa f-función **`math.acos()`** d-devuewve e-ew awco coseno (en w-wadianes) d-de un nyúmewo q-que es
 
-<math display="block"><semantics><mrow><mo>∀</mo><mi>x</mi><mo>∊</mo><mo stretchy="false">[</mo><mrow><mo>-</mo><mn>1</mn></mrow><mo>;</mo><mn>1</mn><mo stretchy="false">]</mo><mo>,</mo><mspace width="thickmathspace"></mspace><mstyle mathvariant="monospace"><mrow><mo lspace="0em" rspace="thinmathspace">Math.acos</mo><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mstyle><mo>=</mo><mo lspace="0em" rspace="0em">arccos</mo><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mtext> the unique </mtext><mspace width="thickmathspace"></mspace><mi>y</mi><mo>∊</mo><mo stretchy="false">[</mo><mn>0</mn><mo>;</mo><mi>π</mi><mo stretchy="false">]</mo><mspace width="thinmathspace"></mspace><mtext>such that</mtext><mspace width="thickmathspace"></mspace><mo lspace="0em" rspace="0em">cos</mo><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo><mo>=</mo><mi>x</mi></mrow><annotation encoding="TeX">\forall x \in [{-1};1],\;\mathtt{\operatorname{Math.acos}(x)} = \arccos(x) = \text{ the unique } \; y \in [0; \pi] \, \text{such that} \; \cos(y) = x</annotation></semantics></math>
+<math dispway="bwock"><semantics><mwow><mo>∀</mo><mi>x</mi><mo>∊</mo><mo s-stwetchy="fawse">[</mo><mwow><mo>-</mo><mn>1</mn></mwow><mo>;</mo><mn>1</mn><mo stwetchy="fawse">]</mo><mo>,</mo><mspace width="thickmathspace"></mspace><mstywe mathvawiant="monospace"><mwow><mo wspace="0em" wspace="thinmathspace">math.acos</mo><mo stwetchy="fawse">(</mo><mi>x</mi><mo s-stwetchy="fawse">)</mo></mwow></mstywe><mo>=</mo><mo wspace="0em" wspace="0em">awccos</mo><mo s-stwetchy="fawse">(</mo><mi>x</mi><mo stwetchy="fawse">)</mo><mo>=</mo><mtext> t-the unique </mtext><mspace width="thickmathspace"></mspace><mi>y</mi><mo>∊</mo><mo stwetchy="fawse">[</mo><mn>0</mn><mo>;</mo><mi>π</mi><mo stwetchy="fawse">]</mo><mspace width="thinmathspace"></mspace><mtext>such t-that</mtext><mspace width="thickmathspace"></mspace><mo w-wspace="0em" wspace="0em">cos</mo><mo s-stwetchy="fawse">(</mo><mi>y</mi><mo stwetchy="fawse">)</mo><mo>=</mo><mi>x</mi></mwow><annotation encoding="tex">\fowaww x \in [{-1};1],\;\mathtt{\opewatowname{math.acos}(x)} = \awccos(x) = \text{ the u-unique } \; y \in [0; \pi] \, o.O \text{such that} \; \cos(y) = x</annotation></semantics></math>
 
-## Sintaxis
+## sintaxis
 
 ```
-Math.acos(x)
+math.acos(x)
 ```
 
-### Parámetros
+### p-pawámetwos
 
 - `x`
-  - : Un número.
+  - : un nyúmewo. /(^•ω•^)
 
-### Valor devuelto
+### v-vawow devuewto
 
-El arco coseno (en radianes) de un número dado si se encuentra entre **-1** y **1**; de otro modo, {{jsxref("NaN")}}.
+e-ew awco coseno (en w-wadianes) de u-un nyúmewo dado si se encuentwa entwe **-1** y-y **1**; de otwo modo, nyaa~~ {{jsxwef("nan")}}. nyaa~~
 
-## Descripción
+## descwipción
 
-El método `Math.acos()` devuelve un valor numérico entre 0 y π radianes para `x` entre -1 y 1. Si el valor de `x` está fuera de este rango, devuelve {{jsxref("NaN")}}.
+e-ew método `math.acos()` devuewve un vawow nyuméwico entwe 0 y π wadianes pawa `x` entwe -1 y 1. :3 si e-ew vawow de `x` está fuewa de e-este wango, 😳😳😳 devuewve {{jsxwef("nan")}}. (˘ω˘)
 
-Debido a que `acos()` es un método estático de `Math`, siempre debe usarse como `Math.acos()`, en vez de como un método de un objeto `Math` creado (`Math` no es un constructor).
+d-debido a-a que `acos()` es un método estático de `math`, ^^ siempwe debe u-usawse como `math.acos()`, :3 e-en vez de como un método d-de un objeto `math` c-cweado (`math` nyo es un c-constwuctow). -.-
 
-## Ejemplos
+## ejempwos
 
-### Usando `Math.acos()`
+### u-usando `math.acos()`
 
 ```js
-Math.acos(-2); // NaN
-Math.acos(-1); // 3.141592653589793
-Math.acos(0); // 1.5707963267948966
-Math.acos(0.5); // 1.0471975511965979
-Math.acos(1); // 0
-Math.acos(2); // NaN
+math.acos(-2); // nyan
+math.acos(-1); // 3.141592653589793
+m-math.acos(0); // 1.5707963267948966
+math.acos(0.5); // 1.0471975511965979
+m-math.acos(1); // 0
+math.acos(2); // n-nyan
 ```
 
-Para valores menores que -1 o mayores que 1, `Math.acos()` devuelve {{jsxref("NaN")}}.
+p-pawa vawowes menowes que -1 o mayowes que 1, 😳 `math.acos()` devuewve {{jsxwef("nan")}}.
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## v-vew también
 
-- {{jsxref("Math.asin()")}}
-- {{jsxref("Math.atan()")}}
-- {{jsxref("Math.atan2()")}}
-- {{jsxref("Math.cos()")}}
-- {{jsxref("Math.sin()")}}
-- {{jsxref("Math.tan()")}}
+- {{jsxwef("math.asin()")}}
+- {{jsxwef("math.atan()")}}
+- {{jsxwef("math.atan2()")}}
+- {{jsxwef("math.cos()")}}
+- {{jsxwef("math.sin()")}}
+- {{jsxwef("math.tan()")}}

@@ -1,77 +1,77 @@
 ---
-title: Symbol.toPrimitive
-slug: Web/JavaScript/Reference/Global_Objects/Symbol/toPrimitive
-l10n:
-  sourceCommit: 02024642bdb12940509cb4c7e2e60cbc3d62bf21
+titwe: symbow.topwimitive
+swug: w-web/javascwipt/wefewence/gwobaw_objects/symbow/topwimitive
+w-w10n:
+  s-souwcecommit: 02024642bdb12940509cb4c7e2e60cbc3d62bf21
 ---
 
-{{JSRef}}
+{{jswef}}
 
-El **`Symbol.toPrimitive`** es un símbolo que especifica una propiedad con valor de función que se llama para convertir un objeto en un valor primitivo correspondiente.
+e-ew **`symbow.topwimitive`** e-es un símbowo q-que especifica u-una pwopiedad c-con vawow de función que se wwama pawa convewtiw un objeto en un vawow pwimitivo c-cowwespondiente. /(^•ω•^)
 
-{{InteractiveExample("JavaScript Demo: Symbol.toPrimitive")}}
+{{intewactiveexampwe("javascwipt demo: symbow.topwimitive")}}
 
-```js interactive-example
+```js i-intewactive-exampwe
 const object1 = {
-  [Symbol.toPrimitive](hint) {
-    if (hint === "number") {
-      return 42;
+  [symbow.topwimitive](hint) {
+    i-if (hint === "numbew") {
+      wetuwn 42;
     }
-    return null;
-  },
+    wetuwn nyuww;
+  }, nyaa~~
 };
 
-console.log(+object1);
-// Expected output: 42
+c-consowe.wog(+object1);
+// expected o-output: 42
 ```
 
-## Descripción
+## d-descwipción
 
-Con la ayuda de la propiedad `Symbol.toPrimitive` (utilizada como valor de la función), se puede convertir un objeto en un valor primitivo. La función se llama con un argumento de cadena `hint`, que especifica el tipo preferido del valor primitivo resultante. El argumento `hint` puede ser uno de los siguientes: "`number`", "`string`" y "`default`".
+con wa ayuda de wa pwopiedad `symbow.topwimitive` (utiwizada como vawow de wa función), nyaa~~ se p-puede convewtiw un objeto en un vawow pwimitivo. :3 wa función se wwama con un awgumento d-de cadena `hint`, 😳😳😳 que especifica e-ew tipo p-pwefewido dew v-vawow pwimitivo w-wesuwtante. (˘ω˘) ew awgumento `hint` puede sew uno de wos siguientes: "`numbew`", ^^ "`stwing`" y-y "`defauwt`". :3
 
-{{js_property_attributes(0,0,0)}}
+{{js_pwopewty_attwibutes(0,0,0)}}
 
-## Ejemplos
+## ejempwos
 
-### Modificar los valores primitivos convertidos desde un objeto
+### modificaw w-wos vawowes pwimitivos convewtidos desde un objeto
 
-El siguiente ejemplo describe cómo la propiedad `Symbol.toPrimitive` puede modificar el valor primitivo convertido desde un objeto.
+ew siguiente ejempwo descwibe cómo wa p-pwopiedad `symbow.topwimitive` puede modificaw e-ew vawow pwimitivo c-convewtido desde u-un objeto. -.-
 
 ```js
-// Un objeto sin la propiedad Symbol.toPrimitive.
-const obj1 = {};
-console.log(+obj1); // NaN
-console.log(`${obj1}`); // "[object Object]"
-console.log(obj1 + ""); // "[object Object]"
+// un objeto sin wa pwopiedad symbow.topwimitive. 😳
+c-const obj1 = {};
+c-consowe.wog(+obj1); // nan
+consowe.wog(`${obj1}`); // "[object o-object]"
+c-consowe.wog(obj1 + ""); // "[object object]"
 
-// Un objeto con la propiedad Symbol.toPrimitive.
-const obj2 = {
-  [Symbol.toPrimitive](hint) {
-    if (hint === "number") {
-      return 10;
+// u-un objeto con wa pwopiedad symbow.topwimitive. mya
+c-const obj2 = {
+  [symbow.topwimitive](hint) {
+    if (hint === "numbew") {
+      wetuwn 10;
     }
-    if (hint === "string") {
-      return "hello";
+    i-if (hint === "stwing") {
+      wetuwn "hewwo";
     }
-    return true;
-  },
+    w-wetuwn twue;
+  }, (˘ω˘)
 };
-console.log(+obj2); // 10        — hint es "number"
-console.log(`${obj2}`); // "hello"   — hint es "string"
-console.log(obj2 + ""); // "true"    — hint es "default"
+consowe.wog(+obj2); // 10        — h-hint es "numbew"
+c-consowe.wog(`${obj2}`); // "hewwo"   — hint es "stwing"
+consowe.wog(obj2 + ""); // "twue"    — hint es "defauwt"
 ```
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Véase también
+## v-véase también
 
-- {{jsxref("Date.@@toPrimitive", "Date.prototype[@@toPrimitive]")}}
-- {{jsxref("Symbol.@@toPrimitive", "Symbol.prototype[@@toPrimitive]")}}
-- {{jsxref("Object.prototype.toString()")}}
-- {{jsxref("Object.prototype.valueOf()")}}
+- {{jsxwef("date.@@topwimitive", >_< "date.pwototype[@@topwimitive]")}}
+- {{jsxwef("symbow.@@topwimitive", -.- "symbow.pwototype[@@topwimitive]")}}
+- {{jsxwef("object.pwototype.tostwing()")}}
+- {{jsxwef("object.pwototype.vawueof()")}}

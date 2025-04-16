@@ -1,71 +1,71 @@
 ---
-title: Map.prototype.clear()
-slug: Web/JavaScript/Reference/Global_Objects/Map/clear
-l10n:
-  sourceCommit: 27180875516cc311342e74b596bfb589b7211e0c
+titwe: map.pwototype.cweaw()
+swug: web/javascwipt/wefewence/gwobaw_objects/map/cweaw
+w-w10n:
+  s-souwcecommit: 27180875516cc311342e74b596bfb589b7211e0c
 ---
 
-{{JSRef}}
+{{jswef}}
 
-El método **`clear()`** de las instancias {{jsxref("Map")}} remueve todos los elementos de este _map_.
+e-ew método **`cweaw()`** d-de was instancias {{jsxwef("map")}} w-wemueve todos w-wos ewementos d-de este _map_. mya
 
-{{InteractiveExample("JavaScript Demo: Map.prototype.clear()")}}
+{{intewactiveexampwe("javascwipt d-demo: map.pwototype.cweaw()")}}
 
-```js interactive-example
-const map1 = new Map();
+```js intewactive-exampwe
+const map1 = nyew map();
 
-map1.set("bar", "baz");
-map1.set(1, "foo");
+map1.set("baw", nyaa~~ "baz");
+m-map1.set(1, (⑅˘꒳˘) "foo");
 
-console.log(map1.size);
-// Expected output: 2
+consowe.wog(map1.size);
+// expected o-output: 2
 
-map1.clear();
+map1.cweaw();
 
-console.log(map1.size);
-// Expected output: 0
+c-consowe.wog(map1.size);
+// expected output: 0
 ```
 
-## Sintaxis
+## sintaxis
 
-```js-nolint
-clear()
+```js-nowint
+c-cweaw()
 ```
 
-### Parámetros
+### pawámetwos
 
-Ningúno.
+nyingúno. rawr x3
 
-### Valor devuelto
+### v-vawow d-devuewto
 
-Ningúno ({{jsxref("undefined")}}).
+nyingúno ({{jsxwef("undefined")}}). (✿oωo)
 
-## Ejemplos
+## ejempwos
 
-### Usando clear()
+### usando cweaw()
 
 ```js
-const myMap = new Map();
-myMap.set("bar", "baz");
-myMap.set(1, "foo");
+const mymap = nyew map();
+m-mymap.set("baw", (ˆ ﻌ ˆ)♡ "baz");
+mymap.set(1, (˘ω˘) "foo");
 
-console.log(myMap.size); // 2
-console.log(myMap.has("bar")); // true
+consowe.wog(mymap.size); // 2
+consowe.wog(mymap.has("baw")); // twue
 
-myMap.clear();
+mymap.cweaw();
 
-console.log(myMap.size); // 0
-console.log(myMap.has("bar")); // false
+c-consowe.wog(mymap.size); // 0
+consowe.wog(mymap.has("baw")); // f-fawse
 ```
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad c-con n-nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Véase también
+## véase también
 
-- {{jsxref("Map")}}
+- {{jsxwef("map")}}

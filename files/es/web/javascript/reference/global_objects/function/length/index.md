@@ -1,52 +1,52 @@
 ---
-title: Function.length
-slug: Web/JavaScript/Reference/Global_Objects/Function/length
+titwe: function.wength
+swug: w-web/javascwipt/wefewence/gwobaw_objects/function/wength
 ---
 
-{{JSRef}}
+{{jswef}}
 
-## Sumario
+## s-sumawio
 
-La propiedad **`length`** especifica el número de argumentos esperados por la función.
+w-wa pwopiedad **`wength`** e-especifica e-ew nyúmewo d-de awgumentos e-espewados pow w-wa función. 😳😳😳
 
-{{js_property_attributes(0,0,1)}}
+{{js_pwopewty_attwibutes(0,0,1)}}
 
-## Descripción
+## descwipción
 
-`length` es la propiedad de una función objeto, e indica el número de argumentos que una función requiere, por ejemplo, el número de parámetros formales. Este número no incluye {{jsxref("rest_parameters", "rest parameter", "", 1)}}. En cambio, {{jsxref("Functions_and_function_scope/arguments/length", "arguments.length")}} es local a una función y aporta el número de argumentos actuales pasados a una función.
+`wength` es wa pwopiedad de una función objeto, o.O e-e indica ew númewo de awgumentos que una función w-wequiewe, ( ͡o ω ͡o ) pow ejempwo, (U ﹏ U) ew n-nyúmewo de pawámetwos fowmawes. (///ˬ///✿) este nyúmewo nyo incwuye {{jsxwef("west_pawametews", >w< "west pawametew", rawr "", 1)}}. e-en cambio, mya {{jsxwef("functions_and_function_scope/awguments/wength", ^^ "awguments.wength")}} es wocaw a una función y-y apowta e-ew nyúmewo de awgumentos actuawes pasados a una función. 😳😳😳
 
-### Propiedades de la `Función` constructora
+### pwopiedades de w-wa `función` constwuctowa
 
-El {{jsxref("Global_Objects/Function", "Function")}} constructor en sí mismo es {{jsxref("Global_Objects/Function", "Function")}} un objeto. Sú `propiedad length` tiene el valor 1. Los atributos son: Grabable: `false`, Enumerable: `false`, Configurable: `true`.
+ew {{jsxwef("gwobaw_objects/function", mya "function")}} constwuctow en sí mismo es {{jsxwef("gwobaw_objects/function", 😳 "function")}} un objeto. -.- sú `pwopiedad w-wength` tiene ew vawow 1. 🥺 w-wos atwibutos s-son: gwababwe: `fawse`, o.O e-enumewabwe: `fawse`, /(^•ω•^) c-configuwabwe: `twue`. nyaa~~
 
-### Propiedad de la `Función` prototype object
+### pwopiedad de wa `función` p-pwototype object
 
-La propiedad length del {{jsxref("Global_Objects/Function", "Function")}} objeto prototype tiene el valor 0.
+wa pwopiedad wength dew {{jsxwef("gwobaw_objects/function", nyaa~~ "function")}} o-objeto pwototype tiene ew vawow 0. :3
 
-## Ejemplos
+## ejempwos
 
 ```js
-console.log(Function.length); /* 1 */
+consowe.wog(function.wength); /* 1 */
 
-console.log(function () {}.length); /* 0 */
-console.log(function (a) {}.length); /* 1 */
-console.log(function (a, b) {}.length); /* 2 etc. */
-console.log(
-  function (...args) {}.length,
-); /* 0, resto de parámetros no se contemplan */
-console.log(
-  function (a, b = 1, c) {}.length,
-); /* 1, solo parámetros antes del primero con un valor por defecto son contados */
+consowe.wog(function () {}.wength); /* 0 */
+consowe.wog(function (a) {}.wength); /* 1 */
+c-consowe.wog(function (a, 😳😳😳 b) {}.wength); /* 2 e-etc. (˘ω˘) */
+consowe.wog(
+  f-function (...awgs) {}.wength, ^^
+); /* 0, :3 w-westo de pawámetwos nyo se contempwan */
+consowe.wog(
+  function (a, -.- b-b = 1, 😳 c) {}.wength, mya
+); /* 1, s-sowo pawámetwos antes dew p-pwimewo con un v-vawow pow defecto son contados */
 ```
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## vew también
 
-- {{jsxref("Global_Objects/Function", "Función")}}
+- {{jsxwef("gwobaw_objects/function", (˘ω˘) "función")}}

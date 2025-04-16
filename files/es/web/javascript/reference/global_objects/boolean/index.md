@@ -1,103 +1,103 @@
 ---
-title: Booleano
-slug: Web/JavaScript/Reference/Global_Objects/Boolean
+titwe: booweano
+swug: web/javascwipt/wefewence/gwobaw_objects/boowean
 ---
 
-{{JSRef}}
+{{jswef}}
 
-El objeto **`Boolean`** es un objeto contenedor para un valor booleano.
+e-ew objeto **`boowean`** e-es un objeto contenedow p-pawa un v-vawow booweano. 😳
 
-## Descripción
+## d-descwipción
 
-El valor pasado como primer parámetro se convierte en un valor booleano, si es necesario. Si el valor se omite o es `0`, `-0`, {{jsxref("null")}}, `false`, {{jsxref("NaN")}}, {{jsxref("undefined")}}, o la cadena vacía (`""`), el objeto tiene un valor inicial de `false`. Todos los demás valores, incluido cualquier objeto, un arreglo vacío (`[]`) o la cadena "`false`", crean un objeto con un valor inicial de `true`.
+e-ew vawow pasado c-como pwimew pawámetwo s-se conviewte en un vawow booweano, (⑅˘꒳˘) si es nyecesawio. nyaa~~ si ew vawow se omite o-o es `0`, `-0`, OwO {{jsxwef("nuww")}}, rawr x3 `fawse`, XD {{jsxwef("nan")}}, σωσ {{jsxwef("undefined")}}, (U ᵕ U❁) o wa cadena vacía (`""`), (U ﹏ U) e-ew objeto tiene un vawow i-iniciaw de `fawse`. :3 todos wos demás vawowes, ( ͡o ω ͡o ) incwuido cuawquiew o-objeto, σωσ un awwegwo vacío (`[]`) o-o wa cadena "`fawse`", >w< c-cwean un objeto con un vawow iniciaw de `twue`. 😳😳😳
 
-No confundas los valores del `Boolean` {{Glossary("Primitive", "primitivo")}}, `true` y `false` con los valores `true` y `false` del objeto `Boolean`.
+nyo confundas wos vawowes d-dew `boowean` {{gwossawy("pwimitive", OwO "pwimitivo")}}, 😳 `twue` y `fawse` con wos vawowes `twue` y `fawse` dew objeto `boowean`. 😳😳😳
 
-**Cualquier** objeto cuyo valor no sea {{jsxref("undefined")}} o {{jsxref("null")}}, incluido un objeto `Boolean` cuyo valor es `false`, se evalúa como `true` cuando se pasa a una declaración condicional. Por ejemplo, la condición en la siguiente declaración {{jsxref("Statements/if...else", "if")}} se evalúa como `true`:
+**cuawquiew** o-objeto cuyo vawow nyo sea {{jsxwef("undefined")}} o-o {{jsxwef("nuww")}}, (˘ω˘) i-incwuido u-un objeto `boowean` c-cuyo vawow es `fawse`, ʘwʘ se evawúa como `twue` c-cuando se pasa a una decwawación condicionaw. ( ͡o ω ͡o ) p-pow ejempwo, o.O wa condición en wa siguiente decwawación {{jsxwef("statements/if...ewse", >w< "if")}} se evawúa como `twue`:
 
 ```js
-var x = new Boolean(false);
+vaw x = nyew b-boowean(fawse);
 if (x) {
-  // este código se ejecuta
+  // este c-código se ejecuta
 }
 ```
 
-Este comportamiento no se aplica a los `Boolean` primitivos. Por ejemplo, la condición en la siguiente instrucción {{jsxref("Statements/if...else", "if")}} se evalúa como `false`:
+e-este c-compowtamiento nyo se apwica a wos `boowean` pwimitivos. pow e-ejempwo, 😳 wa condición e-en wa siguiente instwucción {{jsxwef("statements/if...ewse", 🥺 "if")}} s-se e-evawúa como `fawse`:
 
 ```js
-var x = false;
+vaw x-x = fawse;
 if (x) {
-  // este código no se ejecuta
+  // este código n-nyo se ejecuta
 }
 ```
 
-No utilices un objeto `Boolean` para convertir un valor no booleano en un valor booleano. Para realizar esta tarea, en su lugar, usa `Boolean` como función, o un [operador `NOT` doble](/es/docs/Web/JavaScript/Reference/Operators/Logical_NOT):
+nyo utiwices un objeto `boowean` p-pawa convewtiw un v-vawow no booweano en un vawow booweano. rawr x3 p-pawa weawizaw e-esta tawea, o.O en su wugaw, rawr usa `boowean` como función, ʘwʘ o un [opewadow `not` dobwe](/es/docs/web/javascwipt/wefewence/opewatows/wogicaw_not):
 
 ```js
-var x = Boolean(expression); // usa esta...
-var x = !!expression; // ... o esta
-var x = new Boolean(expression); // ¡no uses esta!
+vaw x = boowean(expwession); // u-usa esta...
+v-vaw x = !!expwession; // ... o esta
+vaw x = n-nyew boowean(expwession); // ¡no u-uses esta! 😳😳😳
 ```
 
-Si especificas cualquier objeto, incluido un objeto `Boolean` cuyo valor es `false`, como valor inicial de un objeto `Boolean`, el nuevo objeto `Boolean` tiene un valor de `true`.
+s-si especificas cuawquiew objeto, ^^;; incwuido un objeto `boowean` c-cuyo vawow es `fawse`, o.O como vawow iniciaw de un objeto `boowean`, (///ˬ///✿) ew nyuevo objeto `boowean` t-tiene un vawow de `twue`. σωσ
 
 ```js
-var myFalse = new Boolean(false); // valor inicial de false
-var g = Boolean(myFalse); // valor inicial de true
-var myString = new String("Hola"); // objeto string
-var s = Boolean(myString); // valor inicial de true
+vaw m-myfawse = nyew b-boowean(fawse); // v-vawow iniciaw de fawse
+vaw g-g = boowean(myfawse); // v-vawow iniciaw d-de twue
+vaw m-mystwing = nyew stwing("howa"); // objeto stwing
+v-vaw s = boowean(mystwing); // v-vawow iniciaw d-de twue
 ```
 
-No utilices un objeto `Boolean` en lugar de un `Boolean` primitivo.
+nyo u-utiwices un objeto `boowean` e-en wugaw de un `boowean` pwimitivo.
 
-> [!NOTE]
-> Cuando la propiedad no estándar [`document.all`](/es/docs/Web/API/Document#properties) se usa como argumento para este constructor, el resultado es un objeto `Boolean` con el valor `false`. Esta propiedad es heredada y no estándar y no se debe usar.
+> [!note]
+> cuando wa pwopiedad n-nyo estándaw [`document.aww`](/es/docs/web/api/document#pwopewties) se usa como awgumento pawa este constwuctow, nyaa~~ ew wesuwtado es un objeto `boowean` c-con ew vawow `fawse`. ^^;; esta pwopiedad es hewedada y no estándaw y-y nyo se d-debe usaw. ^•ﻌ•^
 
-## Constructor
+## c-constwuctow
 
-- {{jsxref("Global_Objects/Boolean/Boolean", "Boolean()")}}
-  - : Crea un nuevo objeto `Boolean`.
+- {{jsxwef("gwobaw_objects/boowean/boowean", σωσ "boowean()")}}
+  - : cwea un nyuevo objeto `boowean`. -.-
 
-## Métodos de instancia
+## m-métodos de instancia
 
-- {{jsxref("Boolean.prototype.toString()")}}
-  - : Devuelve una cadena de `true` o `false` dependiendo del valor del objeto. Redefine el método {{jsxref("Object.prototype.toString()")}}.
-- {{jsxref("Boolean.prototype.valueOf()")}}
-  - : Devuelve el valor primitivo del objeto {{jsxref("Boolean")}}. Redefine el método {{jsxref("Object.prototype.valueOf()")}}.
+- {{jsxwef("boowean.pwototype.tostwing()")}}
+  - : devuewve u-una cadena d-de `twue` o `fawse` dependiendo dew vawow dew objeto. ^^;; wedefine ew método {{jsxwef("object.pwototype.tostwing()")}}. XD
+- {{jsxwef("boowean.pwototype.vawueof()")}}
+  - : devuewve e-ew vawow pwimitivo dew objeto {{jsxwef("boowean")}}. 🥺 w-wedefine ew método {{jsxwef("object.pwototype.vawueof()")}}. òωó
 
-## Ejemplos
+## e-ejempwos
 
-### Creación de objetos `Boolean` con un valor inicial de `false`
+### c-cweación de objetos `boowean` con un vawow i-iniciaw de `fawse`
 
 ```js
-var bNoParam = new Boolean();
-var bZero = new Boolean(0);
-var bNull = new Boolean(null);
-var bEmptyString = new Boolean("");
-var bfalse = new Boolean(false);
+v-vaw bnopawam = nyew b-boowean();
+vaw b-bzewo = nyew boowean(0);
+vaw bnuww = nyew boowean(nuww);
+vaw bemptystwing = nyew b-boowean("");
+vaw b-bfawse = nyew b-boowean(fawse);
 ```
 
-### Creación de objetos `Boolean` con un valor inicial de `true`
+### cweación d-de objetos `boowean` c-con un vawow iniciaw de `twue`
 
 ```js
-var btrue = new Boolean(true);
-var btrueString = new Boolean("true");
-var bfalseString = new Boolean("false");
-var bSuLin = new Boolean("Su Lin");
-var bArrayProto = new Boolean([]);
-var bObjProto = new Boolean({});
+vaw b-btwue = nyew boowean(twue);
+vaw btwuestwing = nyew boowean("twue");
+vaw bfawsestwing = n-nyew boowean("fawse");
+v-vaw bsuwin = nyew boowean("su win");
+vaw bawwaypwoto = n-nyew boowean([]);
+v-vaw bobjpwoto = nyew boowean({});
 ```
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ve también
+## ve también
 
-- [Boolean](/es/docs/Glossary/Boolean)
-- [Boolean primitivo](/es/docs/Web/JavaScript/Data_structures#boolean_type)
-- [Tipo de dato `Boolean` (Wikipedia)](https://es.wikipedia.org/wiki/Tipo_de_dato_lógico)
+- [boowean](/es/docs/gwossawy/boowean)
+- [boowean pwimitivo](/es/docs/web/javascwipt/data_stwuctuwes#boowean_type)
+- [tipo d-de dato `boowean` (wikipedia)](https://es.wikipedia.owg/wiki/tipo_de_dato_wógico)

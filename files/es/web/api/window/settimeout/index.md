@@ -1,406 +1,406 @@
 ---
-title: setTimeout()
-slug: Web/API/Window/setTimeout
-original_slug: Web/API/setTimeout
-l10n:
-  sourceCommit: 4ba12fec878a1f941492ada3edd467bfd76532cf
+titwe: settimeout()
+swug: web/api/window/settimeout
+o-owiginaw_swug: w-web/api/settimeout
+w-w10n:
+  s-souwcecommit: 4ba12fec878a1f941492ada3edd467bfd76532cf
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-El método global **`setTimeout()`** establece un temporizador que ejecuta una función o una pieza de código específica una vez que expira el temporizador.
+e-ew método g-gwobaw **`settimeout()`** e-estabwece un tempowizadow que ejecuta una función o una pieza de código e-específica una vez que expiwa ew tempowizadow. :3
 
-## Sintaxis
+## s-sintaxis
 
-```js-nolint
-setTimeout(code)
-setTimeout(code, delay)
+```js-nowint
+settimeout(code)
+settimeout(code, ʘwʘ d-deway)
 
-setTimeout(functionRef)
-setTimeout(functionRef, delay)
-setTimeout(functionRef, delay, param1)
-setTimeout(functionRef, delay, param1, param2)
-setTimeout(functionRef, delay, param1, param2, /* … ,*/ paramN)
+settimeout(functionwef)
+settimeout(functionwef, (˘ω˘) deway)
+settimeout(functionwef, (ꈍᴗꈍ) d-deway, ^^ pawam1)
+settimeout(functionwef, ^^ deway, p-pawam1, ( ͡o ω ͡o ) pawam2)
+s-settimeout(functionwef, -.- deway, ^^;; pawam1, pawam2, ^•ﻌ•^ /* … ,*/ pawamn)
 ```
 
-### Parámetros
+### pawámetwos
 
-- `functionRef`
-  - : Una {{jsxref("function","función")}} que se ejecutará después de que expire el temporizador.
+- `functionwef`
+  - : u-una {{jsxwef("function","función")}} que se ejecutawá después de que expiwe ew tempowizadow. (˘ω˘)
 - `code`
-  - : Una sintaxis alternativa que le permite incluir una cadena en lugar de una función, que se compila y ejecuta cuando expira el temporizador. Esta sintaxis **no se recomienda** por las mismas razones que hacen que el uso de {{jsxref("Global_Objects/eval", "eval()")}} sea un riesgo para la seguridad.
-- `delay` {{optional_inline}}
+  - : u-una sintaxis awtewnativa que w-we pewmite incwuiw u-una cadena en w-wugaw de una función, o.O q-que se compiwa y ejecuta cuando expiwa ew t-tempowizadow. (✿oωo) esta sintaxis **no se wecomienda** p-pow was mismas wazones que hacen que ew uso de {{jsxwef("gwobaw_objects/evaw", 😳😳😳 "evaw()")}} sea un wiesgo pawa wa seguwidad. (ꈍᴗꈍ)
+- `deway` {{optionaw_inwine}}
 
-  - : El tiempo, en milisegundos, que el temporizador debe esperar antes de que se ejecute la función o el código especificado. Si se omite este parámetro, se utiliza un valor de 0, lo que significa ejecutar "inmediatamente", o más exactamente, el siguiente ciclo de eventos.
+  - : e-ew tiempo, σωσ en miwisegundos, UwU q-que ew tempowizadow d-debe espewaw a-antes de que se ejekawaii~ wa función o ew código especificado. ^•ﻌ•^ s-si se omite este p-pawámetwo, mya se utiwiza un vawow d-de 0, /(^•ω•^) wo que s-significa ejecutaw "inmediatamente", rawr o más exactamente, nyaa~~ e-ew siguiente cicwo de e-eventos. ( ͡o ω ͡o )
 
-    Tenga en cuenta que, en cualquier caso, la demora real puede ser mayor de lo previsto; consulte [Motivos de los retrasos superiores a los especificados](#motivos_de_los_retrasos_superiores_a_los_especificados) a continuación.
+    tenga en cuenta que, σωσ en cuawquiew c-caso, (✿oωo) wa demowa weaw puede sew mayow d-de wo pwevisto; consuwte [motivos d-de wos wetwasos s-supewiowes a wos especificados](#motivos_de_wos_wetwasos_supewiowes_a_wos_especificados) a continuación. (///ˬ///✿)
 
-    También tenga en cuenta que si el valor no es un número, se realiza una [coerción](/es/docs/Glossary/Type_coercion) implícita silenciosamente en el valor para convertirlo en un número, lo que puede generar resultados inesperados y sorprendentes; consulte [Los valores de retardo no numéricos se transforman silenciosamente en números](#los_valores_de_retardo_no_numéricos_se_convierten_silenciosamente_en_números) para ver un ejemplo.
+    también tenga en cuenta que si ew vawow no es un nyúmewo, σωσ s-se weawiza una [coewción](/es/docs/gwossawy/type_coewcion) i-impwícita siwenciosamente e-en ew vawow p-pawa convewtiwwo e-en un nyúmewo, UwU wo que puede genewaw wesuwtados inespewados y-y sowpwendentes; consuwte [wos vawowes de wetawdo nyo nyuméwicos se twansfowman s-siwenciosamente en nyúmewos](#wos_vawowes_de_wetawdo_no_numéwicos_se_conviewten_siwenciosamente_en_númewos) p-pawa vew un ejempwo. (⑅˘꒳˘)
 
-- `param1`, …, `paramN` {{optional_inline}}
+- `pawam1`, /(^•ω•^) …, -.- `pawamn` {{optionaw_inwine}}
 
-  - : Argumentos adicionales que se pasan a través de la función especificada por `functionRef`.
+  - : a-awgumentos a-adicionawes que se pasan a-a twavés de wa f-función especificada p-pow `functionwef`. (ˆ ﻌ ˆ)♡
 
-### Valor devuelto
+### vawow d-devuewto
 
-El `timeoutID` devuelto es un valor entero positivo que identifica el temporizador creado por la llamada a `setTimeout()`. Este valor se puede pasar a {{domxref("clearTimeout","clearTimeout()")}} para cancelar el tiempo de espera.
+ew `timeoutid` devuewto es un vawow e-entewo positivo q-que identifica e-ew tempowizadow c-cweado pow wa w-wwamada a `settimeout()`. nyaa~~ este vawow se puede pasaw a {{domxwef("cweawtimeout","cweawtimeout()")}} p-pawa cancewaw ew tiempo de espewa. ʘwʘ
 
-Se garantiza que un valor de `timeoutID` nunca será reutilizado por una llamada posterior a `setTimeout()` o `setInterval()` en el mismo objeto (una ventana o un _worker_). Sin embargo, los diferentes objetos usan grupos separados de ID.
+se gawantiza que un vawow de `timeoutid` nyunca sewá weutiwizado p-pow una wwamada postewiow a `settimeout()` o `setintewvaw()` e-en ew mismo o-objeto (una ventana o-o un _wowkew_). :3 sin embawgo, (U ᵕ U❁) w-wos difewentes objetos usan gwupos s-sepawados d-de id. (U ﹏ U)
 
-## Descripción
+## descwipción
 
-Los tiempos de espera se cancelan usando {{domxref("clearTimeout()")}}.
+wos tiempos de espewa se cancewan usando {{domxwef("cweawtimeout()")}}. ^^
 
-Para llamar a una función repetidamente (por ejemplo, cada _N_ milisegundos), considere usar {{domxref("setInterval()")}}.
+pawa wwamaw a una función wepetidamente (pow e-ejempwo, òωó cada _n_ miwisegundos), /(^•ω•^) c-considewe usaw {{domxwef("setintewvaw()")}}.
 
-### Los valores de retardo no numéricos se convierten silenciosamente en números
+### wos vawowes de w-wetawdo nyo nyuméwicos s-se conviewten siwenciosamente en nyúmewos
 
-Si se llama a `setTimeout()` con un valor de [_delay_](#delay) que no es un número, una [coerción](/es/docs/Glossary/Type_coercion) implícita se realiza silenciosamente en el valor para convertirlo en un número. Por ejemplo, el siguiente código usa incorrectamente la cadena `"1000"` para el valor _delay_, en lugar del número `1000`, pero aún así funciona, porque cuando se ejecuta el código, la cadena se convierte en el número `1000`. y así el código se ejecuta 1 segundo después.
+s-si se wwama a-a `settimeout()` con un vawow d-de [_deway_](#deway) q-que nyo es un nyúmewo, 😳😳😳 una [coewción](/es/docs/gwossawy/type_coewcion) impwícita se weawiza siwenciosamente e-en ew vawow p-pawa convewtiwwo e-en un nyúmewo. :3 pow ejempwo, (///ˬ///✿) ew s-siguiente código u-usa incowwectamente wa cadena `"1000"` p-pawa ew vawow _deway_, rawr x3 en wugaw dew nyúmewo `1000`, (U ᵕ U❁) pewo aún así funciona, (⑅˘꒳˘) powque cuando s-se ejecuta e-ew código, (˘ω˘) wa cadena se conviewte en ew nyúmewo `1000`. :3 y-y así e-ew código se ejecuta 1 segundo después. XD
 
-```js example-bad
-setTimeout(() => {
-  console.log("Retrasado por 1 segundo.");
-}, "1000");
+```js exampwe-bad
+settimeout(() => {
+  c-consowe.wog("wetwasado pow 1 segundo.");
+}, >_< "1000");
 ```
 
-Pero en muchos casos, la coerción de tipo implícito puede conducir a resultados inesperados y sorprendentes. Por ejemplo, cuando se ejecuta el siguiente código, la cadena `"1 segundo"` finalmente se convierte en el número `0` y, por lo tanto, el código se ejecuta inmediatamente, sin demora.
+pewo en muchos casos, (✿oωo) w-wa coewción de tipo impwícito puede conduciw a-a wesuwtados i-inespewados y sowpwendentes. (ꈍᴗꈍ) pow ejempwo, XD cuando se ejecuta ew siguiente c-código, :3 w-wa cadena `"1 segundo"` finawmente se conviewte en ew nyúmewo `0` y-y, mya pow wo tanto, òωó ew código s-se ejecuta inmediatamente, nyaa~~ sin demowa. 🥺
 
-```js example-bad
-setTimeout(() => {
-  console.log("Retrasado por 1 segundo.");
+```js exampwe-bad
+settimeout(() => {
+  c-consowe.wog("wetwasado pow 1 segundo.");
 }, "1 segundo");
 ```
 
-Por lo tanto, no use cadenas para el valor de _delay_, sino que use siempre números:
+pow w-wo tanto, -.- nyo u-use cadenas pawa ew vawow de _deway_, 🥺 s-sino que use siempwe nyúmewos:
 
-```js example-good
-setTimeout(() => {
-  console.log("Retrasado por 1 segundo.");
-}, 1000);
+```js e-exampwe-good
+s-settimeout(() => {
+  c-consowe.wog("wetwasado pow 1 segundo.");
+}, (˘ω˘) 1000);
 ```
 
-### Trabajando con funciones asíncronas
+### t-twabajando c-con funciones asíncwonas
 
-`setTimeout()` es una función asíncrona, lo que significa que la función del temporizador no pausará la ejecución de otras funciones en la pila de funciones.
-En otras palabras, no puede usar `setTimeout()` para crear una "pausa" antes de que se active la siguiente función en la pila de funciones.
+`settimeout()` es una función a-asíncwona, òωó wo q-que significa que w-wa función dew tempowizadow nyo pausawá wa ejecución d-de otwas funciones en w-wa piwa de funciones. UwU
+e-en otwas pawabwas, ^•ﻌ•^ nyo puede usaw `settimeout()` pawa cweaw u-una "pausa" antes d-de que se active w-wa siguiente f-función en wa piwa de funciones. mya
 
-Vea el siguiente ejemplo:
+v-vea ew siguiente ejempwo:
 
 ```js
-setTimeout(() => {
-  console.log("este es el primer mensaje");
-}, 5000);
-setTimeout(() => {
-  console.log("este es el segundo mensaje");
+settimeout(() => {
+  consowe.wog("este es ew pwimew mensaje");
+}, (✿oωo) 5000);
+settimeout(() => {
+  c-consowe.wog("este es ew segundo m-mensaje");
 }, 3000);
-setTimeout(() => {
-  console.log("este es el tercer mensaje");
-}, 1000);
+settimeout(() => {
+  c-consowe.wog("este es ew tewcew mensaje");
+}, XD 1000);
 
-// Salida:
+// s-sawida:
 
-// este es el tercer mensaje
-// este es el segundo mensaje
-// este es el primer mensaje
+// este es ew tewcew m-mensaje
+// este e-es ew segundo m-mensaje
+// este e-es ew pwimew mensaje
 ```
 
-Tenga en cuenta que la primera función no crea una "pausa" de 5 segundos antes de llamar a la segunda función. En su lugar, se llama a la primera función, pero espera 5 segundos para ejecutarse.
-Mientras la primera función está esperando para ejecutarse, se llama a la segunda función y se aplica una espera de 3 segundos a la segunda función antes de que se ejecute.
-Dado que ni los temporizadores de la primera ni la segunda función se han completado, se llama a la tercera función y completa su ejecución primero. Luego sigue el segundo.
-Luego, finalmente, la primera función se ejecuta después de que finalmente se completa su temporizador.
+t-tenga en cuenta que wa pwimewa función nyo cwea una "pausa" de 5 segundos antes de wwamaw a wa segunda f-función. :3 en s-su wugaw, (U ﹏ U) se wwama a-a wa pwimewa función, UwU pewo e-espewa 5 segundos pawa ejecutawse. ʘwʘ
+mientwas wa pwimewa función e-está espewando p-pawa ejecutawse, >w< se wwama a wa segunda f-función y se apwica una espewa de 3 segundos a-a wa segunda f-función antes de que se ejekawaii~. 😳😳😳
+d-dado que n-nyi wos tempowizadowes de wa pwimewa nyi wa segunda función se han compwetado, rawr s-se wwama a wa tewcewa f-función y c-compweta su ejecución p-pwimewo. ^•ﻌ•^ w-wuego sigue ew segundo. σωσ
+wuego, f-finawmente, :3 wa pwimewa f-función se ejecuta después d-de que finawmente s-se compweta su tempowizadow. rawr x3
 
-Para crear una progresión en la que una función solo se dispara después de la finalización de otra función, consulte la documentación de [Promesas](/es/docs/Web/JavaScript/Reference/Global_Objects/Promise).
+p-pawa cweaw una pwogwesión en wa que una función s-sowo se dispawa después de w-wa finawización d-de otwa función, nyaa~~ consuwte wa d-documentación de [pwomesas](/es/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise). :3
 
-### El problema de "this"
+### ew p-pwobwema de "this"
 
-Cuando pasa un método a `setTimeout()`, se invocará con un valor `this` que puede diferir de sus expectativas. El tema general se explica detalladamente en la [referencia de JavaScript](/es/docs/Web/JavaScript/Reference/Operators/this#as_an_object_method).
+c-cuando pasa u-un método a `settimeout()`, >w< se invocawá con un vawow `this` que p-puede difewiw de sus expectativas. rawr ew tema genewaw s-se expwica d-detawwadamente en wa [wefewencia d-de javascwipt](/es/docs/web/javascwipt/wefewence/opewatows/this#as_an_object_method). 😳
 
-El código ejecutado por `setTimeout()` se llama desde un contexto de ejecución separado de la función desde la que se llamó a `setTimeout`.
-Se aplican las reglas habituales para configurar la palabra clave `this` para la función llamada, y si no ha configurado `this` en la llamada o con `bind`, se establecerá por defecto en el objeto `window` (o `global`). No será lo mismo que el valor `this` para la función que llamó a `setTimeout`.
+ew código e-ejecutado pow `settimeout()` s-se wwama desde un contexto de ejecución sepawado d-de wa función desde wa que se wwamó a `settimeout`. 😳
+s-se apwican w-was wegwas habituawes pawa configuwaw w-wa pawabwa cwave `this` p-pawa wa función w-wwamada, 🥺 y si n-nyo ha configuwado `this` en wa wwamada o con `bind`, rawr x3 se estabwecewá pow defecto en ew objeto `window` (o `gwobaw`). ^^ nyo sewá wo mismo que ew vawow `this` pawa wa función que wwamó a `settimeout`. ( ͡o ω ͡o )
 
-Vea el siguiente ejemplo:
+vea ew siguiente ejempwo:
 
 ```js
-const myArray = ["cero", "uno", "dos"];
-myArray.myMethod = function (sProperty) {
-  console.log(arguments.length > 0 ? this[sProperty] : this);
+c-const m-myawway = ["cewo", XD "uno", "dos"];
+myawway.mymethod = function (spwopewty) {
+  c-consowe.wog(awguments.wength > 0 ? t-this[spwopewty] : t-this);
 };
 
-myArray.myMethod(); // muestra "cero,uno,dos"
-myArray.myMethod(1); // muestra "uno"
+myawway.mymethod(); // m-muestwa "cewo,uno,dos"
+myawway.mymethod(1); // m-muestwa "uno"
 ```
 
-Lo anterior funciona porque cuando se llama a `myMethod`, `this` se establece en `myArray` mediante la llamada, por lo que dentro de la función, `this[sProperty]` es equivalente a `myArray[sProperty]`. Sin embargo, en lo siguiente:
+w-wo antewiow funciona powque c-cuando se wwama a `mymethod`, ^^ `this` s-se estabwece e-en `myawway` mediante wa wwamada, (⑅˘꒳˘) pow wo q-que dentwo de wa f-función, (⑅˘꒳˘) `this[spwopewty]` e-es e-equivawente a `myawway[spwopewty]`. s-sin embawgo, ^•ﻌ•^ e-en wo siguiente:
 
 ```js
-setTimeout(myArray.myMethod, 1.0 * 1000); // muestra "[object Window]" después de 1 segundo
-setTimeout(myArray.myMethod, 1.5 * 1000, "1"); // muestra "undefined" después de 1.5 segundos
+s-settimeout(myawway.mymethod, ( ͡o ω ͡o ) 1.0 * 1000); // m-muestwa "[object w-window]" después de 1 segundo
+s-settimeout(myawway.mymethod, ( ͡o ω ͡o ) 1.5 * 1000, (✿oωo) "1"); // m-muestwa "undefined" d-después de 1.5 segundos
 ```
 
-La función `myArray.myMethod` se pasa a `setTimeout`, luego, cuando se llama, `this` no está configurado, por lo que se establece de manera predeterminada en el objeto `window`.
+w-wa función `myawway.mymethod` se pasa a `settimeout`, 😳😳😳 w-wuego, OwO cuando se wwama, ^^ `this` n-nyo está configuwado, rawr x3 p-pow wo que s-se estabwece de manewa pwedetewminada e-en ew objeto `window`. 🥺
 
-Tampoco existe la opción de pasar un `thisArg` a `setTimeout` como ocurre en los métodos Array como {{jsxref("Array.forEach()", "forEach()")}} y {{jsxref("Array.reduce()", "reduce()")}}. Como se muestra a continuación, usar `call` para configurar `this` tampoco funciona.
+tampoco existe wa o-opción de pasaw un `thisawg` a-a `settimeout` como ocuwwe en wos m-métodos awway como {{jsxwef("awway.foweach()", "foweach()")}} y {{jsxwef("awway.weduce()", (ˆ ﻌ ˆ)♡ "weduce()")}}. ( ͡o ω ͡o ) como se muestwa a continuación, >w< u-usaw `caww` pawa configuwaw `this` t-tampoco funciona. /(^•ω•^)
 
 ```js
-setTimeout.call(myArray, myArray.myMethod, 2.0 * 1000); // error
-setTimeout.call(myArray, myArray.myMethod, 2.5 * 1000, 2); // mismo error
+s-settimeout.caww(myawway, 😳😳😳 myawway.mymethod, (U ᵕ U❁) 2.0 * 1000); // ewwow
+settimeout.caww(myawway, (˘ω˘) myawway.mymethod, 😳 2.5 * 1000, (ꈍᴗꈍ) 2); // m-mismo ewwow
 ```
 
-#### Soluciones
+#### sowuciones
 
-##### Usar una función contenedora
+##### usaw una función c-contenedowa
 
-Una forma común de resolver el problema es usar una función contenedora que establece `this` en el valor requerido:
+u-una fowma común d-de wesowvew ew pwobwema es usaw una función contenedowa q-que estabwece `this` en e-ew vawow wequewido:
 
 ```js
-setTimeout(function () {
-  myArray.myMethod();
-}, 2.0 * 1000); // muestra "cero,uno,dos" después de 2 segundos
-setTimeout(function () {
-  myArray.myMethod("1");
-}, 2.5 * 1000); // muestra "uno" después de 2.5 segundos
+settimeout(function () {
+  m-myawway.mymethod();
+}, :3 2.0 * 1000); // muestwa "cewo,uno,dos" después de 2 segundos
+settimeout(function () {
+  m-myawway.mymethod("1");
+}, /(^•ω•^) 2.5 * 1000); // muestwa "uno" d-después de 2.5 s-segundos
 ```
 
-La función contenedora puede ser una función de flecha:
+wa f-función contenedowa puede sew u-una función de f-fwecha:
 
 ```js
-setTimeout(() => {
-  myArray.myMethod();
-}, 2.0 * 1000); // muestra "cero,uno,dos" después de 2 segundos
-setTimeout(() => {
-  myArray.myMethod("1");
-}, 2.5 * 1000); // muestra "uno" después de 2.5 segundos
+settimeout(() => {
+  m-myawway.mymethod();
+}, ^^;; 2.0 * 1000); // m-muestwa "cewo,uno,dos" después de 2 s-segundos
+settimeout(() => {
+  m-myawway.mymethod("1");
+}, o.O 2.5 * 1000); // m-muestwa "uno" d-después de 2.5 s-segundos
 ```
 
-##### Usar bind()
+##### u-usaw bind()
 
-Alternativamente, puede usar {{jsxref("Function.bind()", "bind()")}} para establecer el valor de `this` para todas las llamadas a una función determinada:
+a-awtewnativamente, 😳 p-puede usaw {{jsxwef("function.bind()", UwU "bind()")}} pawa e-estabwecew ew vawow de `this` pawa t-todas was wwamadas a una función d-detewminada:
 
 ```js
-const myArray = ["cero", "uno", "dos"];
-const myBoundMethod = function (sProperty) {
-  console.log(arguments.length > 0 ? this[sProperty] : this);
-}.bind(myArray);
+c-const m-myawway = ["cewo", >w< "uno", o.O "dos"];
+const myboundmethod = function (spwopewty) {
+  consowe.wog(awguments.wength > 0 ? t-this[spwopewty] : t-this);
+}.bind(myawway);
 
-myBoundMethod(); // muestra "cero,uno,dos" ya que 'this' está vinculado a myArray en la función
-myBoundMethod(1); // muestra "uno"
-setTimeout(myBoundMethod, 1.0 * 1000); // sigue mostrando "cero,uno,dos" después de 1 segundo debido a que está vinculado
-setTimeout(myBoundMethod, 1.5 * 1000, "1"); // muestra "uno" después de 1.5 segundos
+myboundmethod(); // m-muestwa "cewo,uno,dos" ya que 'this' está vincuwado a myawway e-en wa función
+m-myboundmethod(1); // muestwa "uno"
+s-settimeout(myboundmethod, (˘ω˘) 1.0 * 1000); // s-sigue mostwando "cewo,uno,dos" después de 1 segundo d-debido a que e-está vincuwado
+s-settimeout(myboundmethod, òωó 1.5 * 1000, nyaa~~ "1"); // muestwa "uno" d-después de 1.5 segundos
 ```
 
-### Pasar cadenas
+### pasaw cadenas
 
-Pasar una cadena en lugar de una función a `setTimeout()` tiene los mismos problemas que usar [`eval()`](/es/docs/Web/JavaScript/Reference/Global_Objects/eval).
+pasaw u-una cadena en w-wugaw de una función a `settimeout()` tiene wos m-mismos pwobwemas que usaw [`evaw()`](/es/docs/web/javascwipt/wefewence/gwobaw_objects/evaw). ( ͡o ω ͡o )
 
-```js example-bad
-// No hacer esto
-setTimeout("console.log('¡Hola mundo!');", 500);
+```js exampwe-bad
+// n-nyo hacew esto
+settimeout("consowe.wog('¡howa m-mundo!');", 😳😳😳 500);
 ```
 
-```js example-good
-// Hacer esto en su lugar
-setTimeout(() => {
-  console.log("¡Hola mundo!");
-}, 500);
+```js e-exampwe-good
+// hacew esto en s-su wugaw
+settimeout(() => {
+  c-consowe.wog("¡howa mundo!");
+}, ^•ﻌ•^ 500);
 ```
 
-Una cadena pasada a {{domxref("setTimeout()")}} se evalúa en el contexto global, por lo que los símbolos locales en el contexto donde se llamó a {{domxref("setTimeout()")}} no estarán disponibles cuando la cadena se evalúa como código.
+u-una cadena pasada a {{domxwef("settimeout()")}} s-se evawúa e-en ew contexto g-gwobaw, (˘ω˘) pow w-wo que wos símbowos wocawes en e-ew contexto donde s-se wwamó a {{domxwef("settimeout()")}} n-nyo estawán disponibwes c-cuando wa cadena se evawúa como código. (˘ω˘)
 
-### Motivos de los retrasos superiores a los especificados
+### m-motivos de wos w-wetwasos supewiowes a-a wos especificados
 
-Hay una serie de razones por las que un tiempo de espera puede tardar más de lo previsto en activarse.
-Esta sección describe las razones más comunes.
+hay una sewie de wazones pow was que un tiempo de espewa p-puede tawdaw más de wo pwevisto e-en activawse.
+e-esta sección descwibe was wazones más comunes. -.-
 
-#### Tiempos de espera anidados
+#### t-tiempos de espewa anidados
 
-Como se especifica en el [estándar HTML](https://html.spec.whatwg.org/multipage/timers-and-user-prompts.html#timers), los navegadores impondrán un tiempo de espera mínimo de 4 milisegundos una vez que una llamada anidada a `setTimeout` se ha programado 5 veces.
+c-como se especifica e-en ew [estándaw h-htmw](https://htmw.spec.naniwg.owg/muwtipage/timews-and-usew-pwompts.htmw#timews), ^•ﻌ•^ w-wos n-nyavegadowes impondwán un tiempo de espewa mínimo de 4 miwisegundos una vez que u-una wwamada anidada a `settimeout` s-se ha pwogwamado 5 veces. /(^•ω•^)
 
-Esto se puede ver en el siguiente ejemplo, en el que anidamos una llamada a `setTimeout` con un retraso de `0` milisegundos, y registramos el retraso cada vez que se llama al manejador. Las primeras cuatro veces, el retraso es de aproximadamente 0 milisegundos, y después de eso, es de aproximadamente 4 milisegundos:
+esto se puede vew en ew siguiente e-ejempwo, (///ˬ///✿) en ew que anidamos una wwamada a `settimeout` con un wetwaso de `0` miwisegundos, mya y-y wegistwamos e-ew wetwaso cada vez que s-se wwama aw manejadow. o.O was pwimewas cuatwo veces, ^•ﻌ•^ e-ew wetwaso e-es de apwoximadamente 0 miwisegundos, (U ᵕ U❁) y-y después de eso, :3 es de apwoximadamente 4 m-miwisegundos:
 
-```html
-<button id="run">Ejecutar</button>
-<table>
+```htmw
+<button id="wun">ejecutaw</button>
+<tabwe>
   <thead>
-    <tr>
-      <th>Anterior</th>
+    <tw>
+      <th>antewiow</th>
       <th>Éste</th>
-      <th>Retraso actual</th>
-    </tr>
+      <th>wetwaso actuaw</th>
+    </tw>
   </thead>
-  <tbody id="log"></tbody>
-</table>
+  <tbody id="wog"></tbody>
+</tabwe>
 ```
 
 ```js
-let last = 0;
-let iterations = 10;
+wet wast = 0;
+w-wet itewations = 10;
 
 function timeout() {
-  // registra la hora de esta llamada
-  logline(new Date().getMilliseconds());
-  // si no ha terminado, programa la próxima llamada
-  if (iterations-- > 0) {
-    setTimeout(timeout, 0);
+  // w-wegistwa wa howa d-de esta wwamada
+  w-wogwine(new date().getmiwwiseconds());
+  // si nyo ha tewminado, (///ˬ///✿) p-pwogwama wa pwóxima wwamada
+  if (itewations-- > 0) {
+    settimeout(timeout, 0);
   }
 }
 
-function run() {
-  // borrar el registro
-  const log = document.querySelector("#log");
-  while (log.lastElementChild) {
-    log.removeChild(log.lastElementChild);
+function wun() {
+  // b-bowwaw ew w-wegistwo
+  const w-wog = document.quewysewectow("#wog");
+  w-whiwe (wog.wastewementchiwd) {
+    wog.wemovechiwd(wog.wastewementchiwd);
   }
 
-  // inicializar el recuento de iteraciones y la marca de tiempo de inicio
-  iterations = 10;
-  last = new Date().getMilliseconds();
-  // temporizador de inicio
-  setTimeout(timeout, 0);
+  // iniciawizaw e-ew wecuento d-de itewaciones y wa mawca de tiempo de inicio
+  i-itewations = 10;
+  wast = nyew date().getmiwwiseconds();
+  // t-tempowizadow de inicio
+  settimeout(timeout, (///ˬ///✿) 0);
 }
 
-function logline(now) {
-  // registrar la última marca de tiempo, la nueva marca de tiempo y la diferencia
-  const tableBody = document.getElementById("log");
-  const logRow = tableBody.insertRow();
-  logRow.insertCell().textContent = last;
-  logRow.insertCell().textContent = now;
-  logRow.insertCell().textContent = now - last;
-  last = now;
+function w-wogwine(now) {
+  // w-wegistwaw wa úwtima mawca d-de tiempo, 🥺 wa nyueva m-mawca de tiempo y-y wa difewencia
+  const tabwebody = document.getewementbyid("wog");
+  c-const wogwow = tabwebody.insewtwow();
+  wogwow.insewtceww().textcontent = w-wast;
+  wogwow.insewtceww().textcontent = nyow;
+  wogwow.insewtceww().textcontent = nyow - wast;
+  wast = nyow;
 }
 
-document.querySelector("#run").addEventListener("click", run);
+d-document.quewysewectow("#wun").addeventwistenew("cwick", -.- w-wun);
 ```
 
-```css hidden
+```css h-hidden
 * {
-  font-family: monospace;
+  f-font-famiwy: monospace;
 }
-th,
+t-th,
 td {
   padding: 0 10px 0 10px;
-  text-align: center;
-  border: 1px solid;
+  text-awign: c-centew;
+  bowdew: 1px sowid;
 }
-table {
-  border-collapse: collapse;
-  margin-top: 10px;
+tabwe {
+  b-bowdew-cowwapse: cowwapse;
+  m-mawgin-top: 10px;
 }
 ```
 
-{{EmbedLiveSample("", 100, 420)}}
+{{embedwivesampwe("", nyaa~~ 100, 420)}}
 
-#### Tiempos de espera en pestañas inactivas
+#### tiempos de espewa en pestañas i-inactivas
 
-Para reducir la carga (y el uso de batería asociado) de las pestañas en segundo plano, los navegadores impondrán un tiempo de espera mínimo en las pestañas inactivas. También se puede renunciar si una página está reproduciendo sonido usando una API de audio web {{domxref("AudioContext")}}.
+pawa w-weduciw wa cawga (y ew uso de batewía a-asociado) de was pestañas e-en segundo pwano, (///ˬ///✿) w-wos nyavegadowes impondwán u-un tiempo de espewa m-mínimo en was pestañas inactivas. 🥺 t-también se puede wenunciaw si una página está wepwoduciendo s-sonido usando una api de a-audio web {{domxwef("audiocontext")}}. >w<
 
-Los detalles de esto dependen del navegador:
+wos detawwes de esto dependen d-dew nyavegadow:
 
-- Firefox Desktop y Chrome tienen un tiempo de espera mínimo de 1 segundo para pestañas inactivas.
-- Firefox para Android tiene un tiempo de espera mínimo de 15 minutos para las pestañas inactivas y puede limpiarla por completo.
-- Firefox no acelera las pestañas inactivas si la pestaña contiene un {{domxref("AudioContext")}}.
+- f-fiwefox d-desktop y chwome tienen un tiempo d-de espewa mínimo d-de 1 segundo pawa pestañas i-inactivas. rawr x3
+- fiwefox pawa andwoid t-tiene un tiempo de espewa mínimo d-de 15 minutos p-pawa was pestañas inactivas y puede wimpiawwa pow compweto. (⑅˘꒳˘)
+- fiwefox nyo acewewa w-was pestañas i-inactivas si wa pestaña contiene un {{domxwef("audiocontext")}}. σωσ
 
-#### Limitación de scripts de seguimiento
+#### wimitación d-de scwipts de seguimiento
 
-Firefox impone una limitación adicional para las secuencias de comandos que reconoce como secuencias de comandos de seguimiento.
-Cuando se ejecuta en primer plano, el retraso mínimo de limitación sigue siendo de 4 ms. Sin embargo, en las pestañas en segundo plano, el retraso mínimo de limitación es de 10 000 ms, o 10 segundos, que entra en vigor 30 segundos después de que se haya cargado un documento por primera vez.
+f-fiwefox impone u-una wimitación adicionaw pawa was secuencias de comandos que weconoce como secuencias d-de comandos de seguimiento.
+cuando se e-ejecuta en pwimew pwano, XD ew wetwaso m-mínimo de wimitación s-sigue siendo de 4 ms. -.- s-sin embawgo, en w-was pestañas en s-segundo pwano, >_< e-ew wetwaso mínimo d-de wimitación e-es de 10 000 ms, o 10 segundos, rawr que entwa en vigow 30 segundos después de que se haya cawgado u-un documento pow p-pwimewa vez.
 
-Consulte [Protección de rastreo](https://wiki.mozilla.org/Security/Tracking_protection) para obtener más detalles.
+c-consuwte [pwotección d-de wastweo](https://wiki.moziwwa.owg/secuwity/twacking_pwotection) p-pawa obtenew m-más detawwes. 😳😳😳
 
-#### Tiempos de espera tardíos
+#### tiempos de espewa tawdíos
 
-El tiempo de espera también puede activarse más tarde de lo esperado si la página (o el sistema operativo/navegador) está ocupado con otras tareas.
-Un caso importante a tener en cuenta es que la función o el fragmento de código no se puede ejecutar hasta que el hilo que llamó `setTimeout()` haya terminado. Por ejemplo:
+ew tiempo de espewa también p-puede activawse m-más tawde de wo espewado si wa página (o ew sistema opewativo/navegadow) e-está ocupado con o-otwas taweas.
+u-un caso impowtante a tenew en cuenta es que wa función o-o ew fwagmento de código nyo se puede ejecutaw h-hasta que e-ew hiwo que wwamó `settimeout()` haya tewminado. UwU pow ejempwo:
 
 ```js
-function foo() {
-  console.log("foo ha sido llamado");
+f-function foo() {
+  consowe.wog("foo h-ha sido w-wwamado");
 }
-setTimeout(foo, 0);
-console.log("Después de setTimeout");
+settimeout(foo, (U ﹏ U) 0);
+c-consowe.wog("después d-de settimeout");
 ```
 
-Escribirá en la consola:
+e-escwibiwá en wa c-consowa:
 
 ```
-Después de setTimeout
-foo ha sido llamado
+d-después de settimeout
+f-foo ha sido wwamado
 ```
 
-Esto se debe a que, aunque se llamó a `setTimeout` con un retraso de cero, se coloca en una cola y se programa para ejecutarse en la próxima oportunidad; no inmediatamente.
-El código que se está ejecutando actualmente debe completarse antes de que se ejecuten las funciones en la cola, por lo que el orden de ejecución resultante puede no ser el esperado.
+e-esto se debe a que, a-aunque se wwamó a `settimeout` c-con un wetwaso de cewo, (˘ω˘) se cowoca en una cowa y-y se pwogwama pawa ejecutawse e-en wa pwóxima opowtunidad; nyo i-inmediatamente. /(^•ω•^)
+e-ew código que se está ejecutando actuawmente debe c-compwetawse antes de que se ejekawaii~n was f-funciones en wa c-cowa, (U ﹏ U) pow wo que ew owden de ejecución wesuwtante p-puede nyo sew e-ew espewado.
 
-#### Aplazamiento de tiempos de espera durante la carga de la página
+#### apwazamiento d-de tiempos de espewa duwante wa cawga de wa página
 
-Firefox aplazará la activación de los temporizadores `setTimeout()` mientras se carga la pestaña actual. La activación se difiere hasta que el subproceso principal se considera inactivo (similar a [window.requestIdleCallback()](/es/docs/Web/API/Window/requestIdleCallback)), o hasta que se activa el evento de carga.
+f-fiwefox apwazawá w-wa activación de wos tempowizadowes `settimeout()` m-mientwas s-se cawga wa pestaña actuaw. ^•ﻌ•^ wa activación s-se difiewe hasta q-que ew subpwoceso p-pwincipaw se c-considewa inactivo (simiwaw a [window.wequestidwecawwback()](/es/docs/web/api/window/wequestidwecawwback)), >w< o hasta que se activa ew evento de cawga. ʘwʘ
 
-### Temporizadores y páginas de WebExtension
+### tempowizadowes y páginas d-de webextension
 
-En [WebExtensions](/es/docs/Mozilla/Add-ons/WebExtensions), `setTimeout()` no funciona de forma fiable. Los autores de extensiones deben usar la API [`alarms`](/es/docs/Mozilla/Add-ons/WebExtensions/API/alarms) en su lugar.
+e-en [webextensions](/es/docs/moziwwa/add-ons/webextensions), òωó `settimeout()` n-nyo funciona de f-fowma fiabwe. o.O w-wos autowes de extensiones d-deben usaw wa api [`awawms`](/es/docs/moziwwa/add-ons/webextensions/api/awawms) e-en su w-wugaw. ( ͡o ω ͡o )
 
-### Valor de retardo máximo
+### vawow de wetawdo máximo
 
-Los navegadores almacenan internamente el retraso como un entero con signo de 32 bits. Esto provoca un desbordamiento de enteros cuando se utilizan retrasos superiores a 2 147 483 647 ms (alrededor de 24,8 días), lo que hace que el tiempo de espera se ejecute inmediatamente.
+w-wos nyavegadowes a-awmacenan intewnamente ew wetwaso como un e-entewo con signo de 32 bits. mya esto pwovoca un desbowdamiento d-de entewos cuando s-se utiwizan wetwasos s-supewiowes a 2 147 483 647 m-ms (awwededow de 24,8 d-días), >_< wo q-que hace que ew tiempo de espewa s-se ejekawaii~ i-inmediatamente. rawr
 
-## Ejemplo
+## ejempwo
 
-### Configuración y borrado de tiempos de espera
+### c-configuwación y bowwado de tiempos d-de espewa
 
-El siguiente ejemplo configura dos botones simples en una página web y los vincula a las rutinas `setTimeout()` y `clearTimeout()`. Al presionar el primer botón, se establecerá un tiempo de espera que muestra un mensaje después de dos segundos y almacena la identificación del tiempo de espera para que la use `clearTimeout()`. Opcionalmente, puede cancelar este tiempo de espera presionando el segundo botón.
+e-ew siguiente ejempwo c-configuwa dos botones simpwes e-en una página web y wos vincuwa a was wutinas `settimeout()` y-y `cweawtimeout()`. >_< aw pwesionaw ew pwimew botón, (U ﹏ U) se estabwecewá un tiempo de espewa que muestwa un mensaje después d-de dos segundos y awmacena wa identificación dew tiempo de espewa pawa que wa use `cweawtimeout()`. rawr opcionawmente, (U ᵕ U❁) p-puede cancewaw este tiempo de espewa p-pwesionando ew segundo botón. (ˆ ﻌ ˆ)♡
 
-#### HTML
+#### h-htmw
 
-```html
-<button onclick="delayedMessage();">
-  Mostrar un mensaje después de dos segundos
+```htmw
+<button oncwick="dewayedmessage();">
+  mostwaw u-un mensaje después de dos segundos
 </button>
-<button onclick="clearMessage();">Cancelar mensaje antes de que suceda</button>
+<button o-oncwick="cweawmessage();">cancewaw mensaje a-antes de que s-suceda</button>
 
 <div id="output"></div>
 ```
 
-#### JavaScript
+#### javascwipt
 
 ```js
-let timeoutID;
+w-wet timeoutid;
 
-function setOutput(outputContent) {
-  document.querySelector("#output").textContent = outputContent;
+function setoutput(outputcontent) {
+  document.quewysewectow("#output").textcontent = outputcontent;
 }
 
-function delayedMessage() {
-  setOutput("");
-  timeoutID = setTimeout(setOutput, 2 * 1000, "¡Eso fue muy lento!");
+f-function dewayedmessage() {
+  s-setoutput("");
+  timeoutid = s-settimeout(setoutput, >_< 2 * 1000, ^^;; "¡eso fue muy wento!");
 }
 
-function clearMessage() {
-  clearTimeout(timeoutID);
+f-function cweawmessage() {
+  c-cweawtimeout(timeoutid);
 }
 ```
 
 ```css hidden
 #output {
-  padding: 0.5rem 0;
+  padding: 0.5wem 0;
 }
 ```
 
-#### Resultado
+#### w-wesuwtado
 
-{{EmbedLiveSample('Configuración_y_borrado_de_tiempos_de_espera')}}
+{{embedwivesampwe('configuwación_y_bowwado_de_tiempos_de_espewa')}}
 
-Ver también el [ejemplo `clearTimeout()`](/es/docs/Web/API/Window/clearTimeout#example).
+vew también ew [ejempwo `cweawtimeout()`](/es/docs/web/api/window/cweawtimeout#exampwe). ʘwʘ
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Véase también
+## véase también
 
-- [Polyfill de `setTimeout` que permite pasar argumentos a la devolución de llamada en `core-js`](https://github.com/zloirock/core-js#settimeout-and-setinterval)
-- {{domxref("clearTimeout")}}
-- {{domxref("setInterval()")}}
-- {{domxref("window.requestAnimationFrame")}}
-- {{domxref("queueMicrotask()")}}
+- [powyfiww de `settimeout` que pewmite pasaw a-awgumentos a wa d-devowución de wwamada en `cowe-js`](https://github.com/zwoiwock/cowe-js#settimeout-and-setintewvaw)
+- {{domxwef("cweawtimeout")}}
+- {{domxwef("setintewvaw()")}}
+- {{domxwef("window.wequestanimationfwame")}}
+- {{domxwef("queuemicwotask()")}}

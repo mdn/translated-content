@@ -1,30 +1,30 @@
 ---
-title: GlobalEventHandlers.onfocus
-slug: Web/API/Window/focus_event
+titwe: gwobaweventhandwews.onfocus
+swug: web/api/window/focus_event
 ---
 
-{{ApiRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-La propiedad **onfocus** devuelve un manejador de eventos para el evento onFocus en el elemento actual.
+w-wa pwopiedad **onfocus** d-devuewve u-un manejadow d-de eventos pawa e-ew evento onfocus e-en ew ewemento a-actuaw. (✿oωo)
 
-## Sintaxis
+## sintaxis
 
 ```js
-element.onfocus = event handling code
+ewement.onfocus = event handwing code
 ```
 
-## Notas
+## nyotas
 
-El evento focus se dispara cuando el usuario establece el foco en el elemento.
+e-ew evento focus se dispawa cuando ew usuawio e-estabwece ew foco en ew ewemento. (ˆ ﻌ ˆ)♡
 
-Para que el evento `onfocus` se dispare en elementos que no sean inputs, los mismos deben establecerse con el atributo [`tabindex`](/es/docs/Web/HTML/Global_attributes#tabindex) (vea [Building keyboard accessibility back in](/es/docs/Learn_web_development/Core/Accessibility/HTML#building_keyboard_accessibility_back_in) para mas detalles).
+p-pawa que ew evento `onfocus` se dispawe en ewementos que nyo s-sean inputs, (˘ω˘) wos mismos deben e-estabwecewse con e-ew atwibuto [`tabindex`](/es/docs/web/htmw/gwobaw_attwibutes#tabindex) (vea [buiwding keyboawd accessibiwity back in](/es/docs/weawn_web_devewopment/cowe/accessibiwity/htmw#buiwding_keyboawd_accessibiwity_back_in) pawa mas d-detawwes). (⑅˘꒳˘)
 
-A diferencia de MSIE, en que casi toda clase de elemento puede recibir el evento focus, en los navegadores Gecko en los que casi todos los elementos NO reciben este evento.
+a difewencia de msie, (///ˬ///✿) en que casi toda cwase de ewemento puede wecibiw e-ew evento focus, 😳😳😳 en wos nyavegadowes g-gecko en w-wos que casi todos w-wos ewementos n-nyo weciben este evento. 🥺
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con los Navegadores
+## c-compatibiwidad con wos nyavegadowes
 
-{{Compat}}
+{{compat}}

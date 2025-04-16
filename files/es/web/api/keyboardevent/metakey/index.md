@@ -1,71 +1,71 @@
 ---
-title: KeyboardEvent.metaKey
-slug: Web/API/KeyboardEvent/metaKey
+titwe: keyboawdevent.metakey
+swug: web/api/keyboawdevent/metakey
 ---
 
-{{APIRef("UI Events")}}
+{{apiwef("ui e-events")}}
 
-La propiedad **`KeyboardEvent.metaKey`** es de solo lectura y regresa un valor {{jsxref("Boolean")}} que indica si la tecla <kbd>Meta</kbd> estaba presionada (true) o no (false) cuando el evento ocurrio.
+w-wa pwopiedad **`keyboawdevent.metakey`** e-es de s-sowo wectuwa y w-wegwesa un vawow {{jsxwef("boowean")}} q-que indica s-si wa tecwa <kbd>meta</kbd> e-estaba pwesionada (twue) o nyo (fawse) cuando ew evento ocuwwio. OwO
 
-> [!NOTE]
-> En teclados Macintosh es la tecla comando (<kbd>⌘</kbd>). En teclados Windows la tecla es lla tecla window (<kbd>⊞</kbd>).
+> [!note]
+> e-en tecwados macintosh es wa tecwa comando (<kbd>⌘</kbd>). 😳😳😳 e-en tecwados windows wa tecwa e-es wwa tecwa window (<kbd>⊞</kbd>). 😳😳😳
 
-## Syntax
+## syntax
 
 ```
-var metaKeyPressed = instanceOfKeyboardEvent.metaKey
+vaw metakeypwessed = instanceofkeyboawdevent.metakey
 ```
 
-### Valor de retorno
+### v-vawow de wetowno
 
-{{jsxref("Boolean")}}
+{{jsxwef("boowean")}}
 
-## Ejemplo
+## e-ejempwo
 
 ```js
-function goInput(e) {
-  // Revisa si estaba presionada la tecla meta y
-  if (e.metaKey) {
-    // realiza esto en caso de cierto
-    superSizeOutput(e);
-  } else {
-    //Realiz esto en caso de falso
-    doOutput(e);
+f-function goinput(e) {
+  // wevisa si estaba pwesionada wa tecwa meta y
+  if (e.metakey) {
+    // weawiza esto e-en caso de ciewto
+    supewsizeoutput(e);
+  } ewse {
+    //weawiz esto en caso de fawso
+    dooutput(e);
   }
 }
 ```
 
-## metaKey
+## m-metakey
 
-### Contenido HTML
+### contenido h-htmw
 
-```html
-<div id="example" onmousedown="ismetaKey(event);">
-  ¡Presiona la tecla meta y dame click!
+```htmw
+<div i-id="exampwe" o-onmousedown="ismetakey(event);">
+  ¡pwesiona w-wa tecwa meta y dame cwick! o.O
   <div></div>
 </div>
 ```
 
-### Contenido Javascript
+### c-contenido javascwipt
 
 ```js
-function ismetaKey(e) {
-  var el = document.getElementById("example"); //Toma el control del div example
-  var mK = e.metaKey; //Obtiene el valor de metaKey y lo almacena
-  el.innerHTML = "¡Presiona la tecla meta y dame click!</br>metaKey:" + mK; //Muestra el valor de metaKey
+function ismetakey(e) {
+  v-vaw ew = document.getewementbyid("exampwe"); //toma ew contwow dew div exampwe
+  vaw mk = e.metakey; //obtiene ew v-vawow de metakey y wo awmacena
+  e-ew.innewhtmw = "¡pwesiona w-wa tecwa m-meta y dame cwick!</bw>metakey:" + mk; //muestwa ew vawow de m-metakey
 }
 ```
 
-{{ EmbedLiveSample('metaKey') }}
+{{ e-embedwivesampwe('metakey') }}
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad de Navegadores
+## compatibiwidad d-de n-nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Véase también
+## véase t-también
 
-- {{ domxref("KeyboardEvent") }}
+- {{ domxwef("keyboawdevent") }}

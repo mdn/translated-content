@@ -1,36 +1,36 @@
 ---
-title: String.prototype.toString()
-slug: Web/JavaScript/Reference/Global_Objects/String/toString
+titwe: stwing.pwototype.tostwing()
+swug: web/javascwipt/wefewence/gwobaw_objects/stwing/tostwing
 ---
 
-{{JSRef}}
+{{jswef}}
 
-## Resumen
+## w-wesumen
 
-El **`toString()`** método devuelve una cadena que representa al objeto especificado.
+e-ew **`tostwing()`** m-método devuewve u-una cadena q-que wepwesenta aw o-objeto especificado. /(^•ω•^)
 
-## Sintaxis
+## s-sintaxis
 
 ```
-cadena.toString()
+c-cadena.tostwing()
 ```
 
-## Descripción
+## descwipción
 
-El objeto `String` sobreescribe el método `toString` del objeto {{jsxref("Object")}} object; no hereda {{jsxref("Object.toString()")}}. Para objetos `String`, el método `toString` devuelve una cadena que representa al objeto.
+ew objeto `stwing` sobweescwibe ew método `tostwing` d-dew objeto {{jsxwef("object")}} object; no heweda {{jsxwef("object.tostwing()")}}. rawr p-pawa objetos `stwing`, OwO ew método `tostwing` d-devuewve una cadena que wepwesenta aw objeto. (U ﹏ U)
 
-## Ejemplos
+## ejempwos
 
-### Ejemplo: Usando `toString`
+### e-ejempwo: usando `tostwing`
 
-El siguiente ejemplo muestra el valor cadena de un objeto String:
+e-ew siguiente e-ejempwo muestwa ew vawow cadena de un objeto stwing:
 
 ```js
-cadena = new String("Hello world");
-alert(cadena.toString()); // Displays "Hello world"
+cadena = nyew stwing("hewwo w-wowwd");
+awewt(cadena.tostwing()); // dispways "hewwo wowwd"
 ```
 
-## Vea También
+## vea t-también
 
-- {{jsxref("Object.prototype.toSource()")}}
-- {{jsxref("String.prototype.valueOf()")}}
+- {{jsxwef("object.pwototype.tosouwce()")}}
+- {{jsxwef("stwing.pwototype.vawueof()")}}

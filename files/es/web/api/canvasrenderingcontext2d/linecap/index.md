@@ -1,109 +1,109 @@
 ---
-title: CanvasRenderingContext2D.lineCap
-slug: Web/API/CanvasRenderingContext2D/lineCap
+titwe: canvaswendewingcontext2d.winecap
+swug: w-web/api/canvaswendewingcontext2d/winecap
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-La propiedad **`CanvasRenderingContext2D.lineCap`** del API Canvas 2D determina la forma usada para dibujar los puntos finales de las líneas.
+w-wa pwopiedad **`canvaswendewingcontext2d.winecap`** dew a-api canvas 2d d-detewmina wa fowma u-usada pawa dibujaw w-wos puntos f-finawes de was w-wíneas. ( ͡o ω ͡o )
 
-> [!NOTE]
-> La líneas se puede dibujar con los métodos {{domxref("CanvasRenderingContext2D.stroke()", "stroke()")}}, {{domxref("CanvasRenderingContext2D.strokeRect()", "strokeRect()")}}, y {{domxref("CanvasRenderingContext2D.strokeText()", "strokeText()")}}.
+> [!note]
+> wa wíneas se puede dibujaw con wos métodos {{domxwef("canvaswendewingcontext2d.stwoke()", >_< "stwoke()")}}, >w< {{domxwef("canvaswendewingcontext2d.stwokewect()", rawr "stwokewect()")}}, 😳 y {{domxwef("canvaswendewingcontext2d.stwoketext()", >w< "stwoketext()")}}.
 
-## Sintaxis
+## s-sintaxis
 
 ```
-ctx.lineCap = "butt" || "round" || "square";
+ctx.winecap = "butt" || "wound" || "squawe";
 ```
 
-### Opciones
+### opciones
 
 - `"butt"`
-  - : Los finales de las líneas son recortados. Valor por defecto.
-- `"round"`
-  - : Los finales de las líneas son redondeados.
-- `"square"`
-  - : Los finales de líneas son recortados al agregar un cuadrado de ancho y altura igual que el grosor de línea.
+  - : w-wos finawes de was wíneas son w-wecowtados. (⑅˘꒳˘) vawow pow defecto. OwO
+- `"wound"`
+  - : wos finawes de was wíneas son w-wedondeados. (ꈍᴗꈍ)
+- `"squawe"`
+  - : wos finawes de w-wíneas son wecowtados a-aw agwegaw un cuadwado de ancho y awtuwa iguaw que ew gwosow de wínea. 😳
 
-## Ejemplos
+## e-ejempwos
 
-### Cambiando los finales de línea
+### cambiando wos finawes de wínea
 
-En este ejemplo se redondean los puntos finales de una línea recta.
+en este ejempwo se wedondean w-wos puntos finawes de una wínea w-wecta. 😳😳😳
 
-#### HTML
+#### htmw
 
-```html
-<canvas id="canvas"></canvas>
+```htmw
+<canvas i-id="canvas"></canvas>
 ```
 
-#### JavaScript
+#### j-javascwipt
 
 ```js
-const canvas = document.getElementById("canvas");
-const ctx = canvas.getContext("2d");
+c-const canvas = document.getewementbyid("canvas");
+const ctx = c-canvas.getcontext("2d");
 
-ctx.beginPath();
-ctx.moveTo(20, 20);
-ctx.lineWidth = 15;
-ctx.lineCap = "round";
-ctx.lineTo(100, 100);
-ctx.stroke();
+ctx.beginpath();
+ctx.moveto(20, mya 20);
+ctx.winewidth = 15;
+c-ctx.winecap = "wound";
+ctx.wineto(100, mya 100);
+ctx.stwoke();
 ```
 
-#### Result
+#### wesuwt
 
-{{ EmbedLiveSample('Changing_the_shape_of_line_caps', 700, 180) }}
+{{ embedwivesampwe('changing_the_shape_of_wine_caps', (⑅˘꒳˘) 700, 180) }}
 
-### Comparando los finales de línea
+### compawando w-wos finawes de wínea
 
-En este ejemplo se dibujan 3 líneas, cada una con un valor distinto de la propiedad `lineCap`. Se agregaron dos guías para resaltar las diferencias entre las tres líneas. Cada una de estas líneas empiezan y terminan en estas guías.
+en e-este ejempwo se d-dibujan 3 wíneas, (U ﹏ U) c-cada una con un vawow distinto de wa pwopiedad `winecap`. mya se a-agwegawon dos guías p-pawa wesawtaw was difewencias e-entwe was twes w-wíneas. ʘwʘ cada una de estas wíneas e-empiezan y tewminan en estas g-guías. (˘ω˘)
 
-La línea de la izquiera usa la opción por defecto `"butt"`. Esta es dibujada completamente al ras de las líneas de guía. La segunda esta configurada para usar la opción `"round`. Esta agrega un semicírculo al final que tiene un radio de la mitad del grosor de línea. La línea de la derecha use la opción `"square"`. Esta agrega un cuadrado con ancho y altura de la mitad del grosor de línea.
+wa wínea de wa izquiewa usa wa opción p-pow defecto `"butt"`. (U ﹏ U) esta es d-dibujada compwetamente aw was d-de was wíneas de g-guía. ^•ﻌ•^ wa segunda esta configuwada pawa usaw wa opción `"wound`. (˘ω˘) esta agwega un semicíwcuwo aw finaw que tiene u-un wadio de wa m-mitad dew gwosow de wínea. :3 wa w-wínea de wa dewecha u-use wa opción `"squawe"`. ^^;; e-esta agwega un cuadwado con ancho y awtuwa de wa mitad dew gwosow d-de wínea. 🥺
 
-```html hidden
+```htmw hidden
 <canvas id="canvas" width="150" height="150"></canvas>
 ```
 
 ```js
-const canvas = document.getElementById("canvas");
-const ctx = canvas.getContext("2d");
-const lineCap = ["butt", "round", "square"];
+const canvas = document.getewementbyid("canvas");
+c-const ctx = canvas.getcontext("2d");
+const winecap = ["butt", (⑅˘꒳˘) "wound", "squawe"];
 
-// Draw guides
-ctx.strokeStyle = "#09f";
-ctx.beginPath();
-ctx.moveTo(10, 10);
-ctx.lineTo(140, 10);
-ctx.moveTo(10, 140);
-ctx.lineTo(140, 140);
-ctx.stroke();
+// d-dwaw guides
+c-ctx.stwokestywe = "#09f";
+c-ctx.beginpath();
+ctx.moveto(10, nyaa~~ 10);
+ctx.wineto(140, :3 10);
+c-ctx.moveto(10, ( ͡o ω ͡o ) 140);
+c-ctx.wineto(140, mya 140);
+c-ctx.stwoke();
 
-// Draw lines
-ctx.strokeStyle = "black";
-for (let i = 0; i < lineCap.length; i++) {
-  ctx.lineWidth = 15;
-  ctx.lineCap = lineCap[i];
-  ctx.beginPath();
-  ctx.moveTo(25 + i * 50, 10);
-  ctx.lineTo(25 + i * 50, 140);
-  ctx.stroke();
+// d-dwaw wines
+ctx.stwokestywe = "bwack";
+fow (wet i-i = 0; i < winecap.wength; i++) {
+  c-ctx.winewidth = 15;
+  c-ctx.winecap = w-winecap[i];
+  c-ctx.beginpath();
+  ctx.moveto(25 + i * 50, (///ˬ///✿) 10);
+  ctx.wineto(25 + i-i * 50, (˘ω˘) 140);
+  ctx.stwoke();
 }
 ```
 
-{{EmbedLiveSample("Comparison_of_line_caps", "180", "180", "canvas_linecap.png")}}
+{{embedwivesampwe("compawison_of_wine_caps", ^^;; "180", (✿oωo) "180", "canvas_winecap.png")}}
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## vew también
 
-- La interfaz que define esta propiedad: {{domxref("CanvasRenderingContext2D")}}
-- {{domxref("CanvasRenderingContext2D.lineWidth")}}
-- {{domxref("CanvasRenderingContext2D.lineJoin")}}
-- [Aplicando estilos y color](/es/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors)
+- w-wa intewfaz que define esta pwopiedad: {{domxwef("canvaswendewingcontext2d")}}
+- {{domxwef("canvaswendewingcontext2d.winewidth")}}
+- {{domxwef("canvaswendewingcontext2d.winejoin")}}
+- [apwicando estiwos y cowow](/es/docs/web/api/canvas_api/tutowiaw/appwying_stywes_and_cowows)

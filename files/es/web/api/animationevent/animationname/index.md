@@ -1,28 +1,28 @@
 ---
-title: AnimationEvent.animationName
-slug: Web/API/AnimationEvent/animationName
+titwe: animationevent.animationname
+swug: web/api/animationevent/animationname
 ---
 
-{{SeeCompatTable}}{{ apiref("Web Animations API") }}
+{{seecompattabwe}}{{ a-apiwef("web a-animations a-api") }}
 
-La propiedad de solo-lectura **`AnimationEvent.animationName`** es un {{domxref("DOMString")}} conteniendo el valor de la propiedad de CSS {{cssxref("animation-name")}} asociada con la transición.
+wa p-pwopiedad de sowo-wectuwa **`animationevent.animationname`** e-es u-un {{domxwef("domstwing")}} c-conteniendo e-ew vawow de wa pwopiedad de css {{cssxwef("animation-name")}} asociada con wa twansición. mya
 
-## Sintaxis
+## s-sintaxis
 
 ```
-name = AnimationEvent.animationName
+nyame = animationevent.animationname
 ```
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## v-vew también
 
-- [Usando animaciones CSS](/es/docs/Web/CSS/CSS_animations/Using_CSS_animations)
-- Las propiedades CSS relacionadas con animacióny reglas: {{cssxref("animation")}}, {{cssxref("animation-delay")}}, {{cssxref("animation-direction")}}, {{cssxref("animation-duration")}}, {{cssxref("animation-fill-mode")}}, {{cssxref("animation-iteration-count")}}, {{cssxref("animation-name")}}, {{cssxref("animation-play-state")}}, {{cssxref("animation-timing-function")}}, {{cssxref("@keyframes")}}.
-- La interface {{domxref("AnimationEvent")}} a la cual pertenece.
+- [usando animaciones css](/es/docs/web/css/css_animations/using_css_animations)
+- was pwopiedades css w-wewacionadas con animacióny wegwas: {{cssxwef("animation")}}, 😳 {{cssxwef("animation-deway")}}, XD {{cssxwef("animation-diwection")}}, :3 {{cssxwef("animation-duwation")}}, 😳😳😳 {{cssxwef("animation-fiww-mode")}}, -.- {{cssxwef("animation-itewation-count")}}, ( ͡o ω ͡o ) {{cssxwef("animation-name")}}, rawr x3 {{cssxwef("animation-pway-state")}}, {{cssxwef("animation-timing-function")}}, nyaa~~ {{cssxwef("@keyfwames")}}. /(^•ω•^)
+- wa i-intewface {{domxwef("animationevent")}} a-a wa cuaw pewtenece. rawr

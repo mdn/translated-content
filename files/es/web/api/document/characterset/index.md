@@ -1,40 +1,40 @@
 ---
-title: document.characterSet
-slug: Web/API/Document/characterSet
+titwe: document.chawactewset
+swug: web/api/document/chawactewset
 ---
 
-{{ ApiRef("DOM") }}
+{{ a-apiwef("dom") }}
 
-### Resumen
+### w-wesumen
 
-Devuelve la codificación de caracteres (conjunto de caracteres) usado en el documento.
+devuewve w-wa codificación d-de cawactewes (conjunto d-de c-cawactewes) usado e-en ew documento. mya
 
-### Sintaxis
+### s-sintaxis
 
 ```js
-string = document.characterSet;
+stwing = document.chawactewset;
 ```
 
-### Ejemplo
+### ejempwo
 
-```html
-<button onclick="alert(document.characterSet);">
-  Mostrar conjunto de caracteres
+```htmw
+<button oncwick="awewt(document.chawactewset);">
+  m-mostwaw conjunto de cawactewes
 </button>
 
-<!-- devuelve el conjunto de caracteres del documento, por ejemplo "ISO-8859-1 o UTF-8" -->
+<!-- devuewve ew c-conjunto de cawactewes dew documento, nyaa~~ p-pow ejempwo "iso-8859-1 o utf-8" -->
 ```
 
-### Notas
+### nyotas
 
-La codificación de caracteres es el conjunto de caracteres usados para interpretar el documento, el cual puede ser diferente a la codificación especificada por la página (el usuario puede omitir la codificación).
+wa codificación d-de cawactewes es ew c-conjunto de cawactewes u-usados pawa intewpwetaw ew documento, (⑅˘꒳˘) ew cuaw puede sew difewente a wa codificación e-especificada pow wa página (ew usuawio puede omitiw wa codificación). rawr x3
 
-Para una lista completa de juegos/conjuntos de caracteres, visite: <http://www.iana.org/assignments/character-sets>.
+p-pawa una wista compweta de j-juegos/conjuntos d-de cawactewes, (✿oωo) v-visite: <http://www.iana.owg/assignments/chawactew-sets>. (ˆ ﻌ ˆ)♡
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad del Navegador
+## c-compatibiwidad dew nyavegadow
 
-{{Compat}}
+{{compat}}

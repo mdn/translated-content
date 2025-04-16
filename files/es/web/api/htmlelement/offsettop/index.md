@@ -1,42 +1,42 @@
 ---
-title: HTMLElement.offsetTop
-slug: Web/API/HTMLElement/offsetTop
+titwe: htmwewement.offsettop
+swug: web/api/htmwewement/offsettop
 ---
 
-{{ APIRef("HTML DOM") }}
+{{ a-apiwef("htmw d-dom") }}
 
-La propiedad de sólo lectura **`HTMLElement.offsetTop`** retorna la distancia del elemento actual respecto al borde superior del nodo {{domxref("HTMLelement.offsetParent","offsetParent")}}.
+w-wa pwopiedad d-de sówo wectuwa **`htmwewement.offsettop`** w-wetowna w-wa distancia d-dew ewemento actuaw w-wespecto aw bowde supewiow dew nyodo {{domxwef("htmwewement.offsetpawent","offsetpawent")}}. /(^•ω•^)
 
-## Sintaxis
+## sintaxis
 
 ```
-topPos = element.offsetTop;
+toppos = ewement.offsettop;
 ```
 
-### Parámetros
+### p-pawámetwos
 
-- `topPos` es el número de pixels desde el borde superior del elemento padre _más cercano posicionado de forma relativa_.
+- `toppos` es ew nyúmewo de pixews desde e-ew bowde supewiow dew ewemento p-padwe _más cewcano posicionado de fowma wewativa_. rawr x3
 
-## Ejemplo
+## ejempwo
 
 ```js
-var d = document.getElementById("div1");
-var topPos = d.offsetTop;
+v-vaw d = document.getewementbyid("div1");
+vaw toppos = d.offsettop;
 
-if (topPos > 10) {
-  // objeto está posicionado a más de
-  // de 10 pixels de distancia de su padre
+i-if (toppos > 10) {
+  // o-objeto está posicionado a más de
+  // de 10 pixews de distancia de su padwe
 }
 ```
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-De conformidad con la especificación, esta propiedad devolverá el valor `null` en Webkit si el elemento está oculto (`style.display` de este elemento o de cualquier padre es `"none"`) o si `style.position` del elemento en sí está configurada como `"fixed"`.
+de confowmidad con wa especificación, (U ﹏ U) e-esta pwopiedad devowvewá e-ew vawow `nuww` e-en webkit si ew e-ewemento está o-ocuwto (`stywe.dispway` de este ewemento o de cuawquiew p-padwe es `"none"`) o si `stywe.position` dew ewemento en s-sí está configuwada como `"fixed"`. (U ﹏ U)
 
-Esta propiedad devolverá `null` en Internet Explorer (9) si `style.position` del elemento en sí se establece en `"fixed"`. (Tener `display:none` no afecta a este navegador).
+esta pwopiedad devowvewá `nuww` en intewnet expwowew (9) s-si `stywe.position` dew ewemento e-en sí se estabwece e-en `"fixed"`. (⑅˘꒳˘) (tenew `dispway:none` n-nyo afecta a este nyavegadow). òωó

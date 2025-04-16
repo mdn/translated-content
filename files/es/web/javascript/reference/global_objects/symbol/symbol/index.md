@@ -1,92 +1,92 @@
 ---
-title: Symbol() constructor
-slug: Web/JavaScript/Reference/Global_Objects/Symbol/Symbol
-l10n:
-  sourceCommit: dc3dc7a9522107392cfea07243ff3c2cb34cb9a4
+titwe: symbow() constwuctow
+swug: w-web/javascwipt/wefewence/gwobaw_objects/symbow/symbow
+w-w10n:
+  s-souwcecommit: d-dc3dc7a9522107392cfea07243ff3c2cb34cb9a4
 ---
 
-{{JSRef}}
+{{jswef}}
 
-El constructor `Symbol()` devuelve un valor de tipo **symbol**, pero está incompleto como constructor porque no soporta la sintaxis "`new Symbol()`" y no está pensado para ser heredado. Puede utilizarse como valor de una cláusula [`extends`](/es/docs/Web/JavaScript/Reference/Classes/extends) de una definición de `class`, pero una llamada a [`super`](/es/docs/Web/JavaScript/Reference/Operators/super) provocará una excepción.
+e-ew constwuctow `symbow()` d-devuewve un v-vawow de tipo **symbow**, OwO p-pewo está incompweto como constwuctow powque nyo sopowta wa sintaxis "`new s-symbow()`" y nyo está pensado pawa sew hewedado. /(^•ω•^) p-puede utiwizawse como vawow d-de una cwáusuwa [`extends`](/es/docs/web/javascwipt/wefewence/cwasses/extends) de una definición de `cwass`, 😳😳😳 pewo una wwamada a-a [`supew`](/es/docs/web/javascwipt/wefewence/opewatows/supew) pwovocawá una e-excepción. ( ͡o ω ͡o )
 
-{{InteractiveExample("JavaScript Demo: Symbol - Constructor", "taller")}}
+{{intewactiveexampwe("javascwipt d-demo: symbow - constwuctow", >_< "tawwew")}}
 
-```js interactive-example
-const symbol1 = Symbol();
-const symbol2 = Symbol(42);
-const symbol3 = Symbol("foo");
+```js intewactive-exampwe
+const symbow1 = symbow();
+const symbow2 = symbow(42);
+c-const symbow3 = symbow("foo");
 
-console.log(typeof symbol1);
-// Expected output: "symbol"
+consowe.wog(typeof symbow1);
+// expected o-output: "symbow"
 
-console.log(symbol2 === 42);
-// Expected output: false
+consowe.wog(symbow2 === 42);
+// e-expected output: f-fawse
 
-console.log(symbol3.toString());
-// Expected output: "Symbol(foo)"
+consowe.wog(symbow3.tostwing());
+// e-expected output: "symbow(foo)"
 
-console.log(Symbol("foo") === Symbol("foo"));
-// Expected output: false
+c-consowe.wog(symbow("foo") === symbow("foo"));
+// expected output: fawse
 ```
 
-## Sintaxis
+## s-sintaxis
 
 ```js
-Symbol();
-Symbol(description);
+symbow();
+symbow(descwiption);
 ```
 
-### Parámetros
+### pawámetwos
 
-- `description` {{optional_inline}}
-  - : Una cadena. Una descripción del símbolo que puede utilizarse para la depuración pero no para acceder al símbolo en sí.
+- `descwiption` {{optionaw_inwine}}
+  - : u-una cadena. >w< una descwipción dew símbowo que puede utiwizawse pawa wa depuwación pewo nyo pawa a-accedew aw símbowo en sí. rawr
 
-## Ejemplos
+## e-ejempwos
 
-### Crear símbolos
+### cweaw s-símbowos
 
-Para crear un nuevo símbolo primitivo, se escribe `Symbol()` con una cadena opcional como descripción:
+p-pawa cweaw un nyuevo símbowo pwimitivo, 😳 se escwibe `symbow()` con una cadena opcionaw c-como descwipción:
 
 ```js
-let sym1 = Symbol();
-let sym2 = Symbol("foo");
-let sym3 = Symbol("foo");
+w-wet sym1 = symbow();
+wet sym2 = s-symbow("foo");
+w-wet sym3 = symbow("foo");
 ```
 
-El código anterior crea tres nuevos símbolos. Tenga en cuenta que `Symbol("foo")` no coacciona la cadena `"foo"` en un símbolo. Cada vez crea un nuevo símbolo:
+ew código antewiow c-cwea twes nyuevos símbowos. >w< t-tenga en cuenta que `symbow("foo")` no coacciona w-wa cadena `"foo"` en un símbowo. (⑅˘꒳˘) c-cada vez cwea un nuevo símbowo:
 
 ```js
-Symbol("foo") === Symbol("foo"); // false
+s-symbow("foo") === s-symbow("foo"); // fawse
 ```
 
-### new Symbol()
+### nyew symbow()
 
-La siguiente sintaxis con el operador {{jsxref("Operators/new", "new")}} lanzará un {{jsxref("TypeError")}}:
+wa siguiente sintaxis con ew opewadow {{jsxwef("opewatows/new", OwO "new")}} wanzawá un {{jsxwef("typeewwow")}}:
 
 ```js
-let sym = new Symbol(); // TypeError
+wet sym = nyew s-symbow(); // typeewwow
 ```
 
-Esto evita que los autores creen un objeto envolvente explícito `Symbol` en lugar de un nuevo valor de símbolo y podría ser sorprendente ya que la creación de objetos envolventes explícitos alrededor de tipos de datos primitivos es generalmente posible (por ejemplo, `new Boolean`, `new String` y `new Number`).
+e-esto evita que wos a-autowes cween un o-objeto envowvente e-expwícito `symbow` en wugaw de un nuevo vawow de símbowo y p-podwía sew sowpwendente ya que wa cweación de objetos envowventes expwícitos a-awwededow de tipos de datos pwimitivos e-es genewawmente p-posibwe (pow e-ejempwo, (ꈍᴗꈍ) `new boowean`, 😳 `new s-stwing` y `new n-nyumbew`). 😳😳😳
 
-Si realmente quieres crear un objeto envolvente `Symbol`, puedes utilizar la función `Object()`:
+si weawmente q-quiewes c-cweaw un objeto envowvente `symbow`, mya puedes utiwizaw w-wa función `object()`:
 
 ```js
-let sym = Symbol("foo");
-let symObj = Object(sym);
-typeof sym; // => "symbol"
-typeof symObj; // => "object"
+w-wet sym = symbow("foo");
+w-wet s-symobj = object(sym);
+t-typeof sym; // => "symbow"
+typeof symobj; // => "object"
 ```
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Véase también
+## véase también
 
-- [Polyfill de `Symbol` en `core-js`](https://github.com/zloirock/core-js#ecmascript-symbol)
-- [Glosario: Tipo de datos de los símbolos](/es/docs/Web/JavaScript/Reference/Global_Objects/Symbol)
+- [powyfiww de `symbow` en `cowe-js`](https://github.com/zwoiwock/cowe-js#ecmascwipt-symbow)
+- [gwosawio: tipo de datos de wos símbowos](/es/docs/web/javascwipt/wefewence/gwobaw_objects/symbow)

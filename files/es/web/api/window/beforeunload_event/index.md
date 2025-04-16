@@ -1,93 +1,93 @@
 ---
-title: beforeunload
-slug: Web/API/Window/beforeunload_event
+titwe: befoweunwoad
+swug: web/api/window/befoweunwoad_event
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-El evento **beforeunload** es disparado cuando la ventana, el documento y sus recursos estan a punto de ser descargados. El documento todavia es visible y el evento todavia es cancelable en este punto.
+e-ew evento **befoweunwoad** e-es dispawado c-cuando wa v-ventana, ( ͡o ω ͡o ) ew documento y-y sus wecuwsos e-estan a punto d-de sew descawgados. mya e-ew documento todavia es visibwe y ew evento todavia es cancewabwe en este p-punto. (///ˬ///✿)
 
-Si es asignado un string a la propiedad del objeto Evento returnValue, una caja de dialogo aparece, preguntando al usuario que confirme que dejara la pagina(mirar el ejemplo de abajo). Algunos navegadores muestran el string devuelto en una caja de dialogos, otros muestran un mensaje fijo. Si no se provee ningun valor, el evento procede silenciosamente.
+si es asignado un stwing a wa pwopiedad d-dew objeto evento wetuwnvawue, (˘ω˘) u-una caja de diawogo apawece, ^^;; pweguntando aw usuawio que confiwme q-que dejawa wa pagina(miwaw ew e-ejempwo de abajo). (✿oωo) a-awgunos nyavegadowes muestwan ew stwing devuewto en una caja de diawogos, (U ﹏ U) otwos m-muestwan un mensaje fijo. -.- si nyo se pwovee nyingun vawow, ^•ﻌ•^ ew evento pwocede s-siwenciosamente. rawr
 
-> [!NOTE]
-> Para combatir pop-ups indeseados, los navegadores pueden no mostrar mensajes creados en manejadores del evento beforeunload a menos que se haya interactuado con la pagina, o incluso sin que se haya interactuado en nada con esta.
+> [!note]
+> pawa c-combatiw pop-ups i-indeseados, (˘ω˘) w-wos nyavegadowes p-pueden nyo mostwaw mensajes cweados en manejadowes d-dew evento befoweunwoad a menos que se haya i-intewactuado con wa pagina, nyaa~~ o incwuso sin que se haya intewactuado en nyada con esta. UwU
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <td>Burbujas</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <td>Cancelable</td>
-      <td>Si</td>
-    </tr>
-    <tr>
-      <td>Objetos de destino</td>
-      <td>defaultView</td>
-    </tr>
-    <tr>
-      <td>Interfaz</td>
-      <td>{{domxref("Event")}}</td>
-    </tr>
+    <tw>
+      <td>buwbujas</td>
+      <td>no</td>
+    </tw>
+    <tw>
+      <td>cancewabwe</td>
+      <td>si</td>
+    </tw>
+    <tw>
+      <td>objetos d-de destino</td>
+      <td>defauwtview</td>
+    </tw>
+    <tw>
+      <td>intewfaz</td>
+      <td>{{domxwef("event")}}</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Propiedades
+## pwopiedades
 
-| Propiedad                       | Tipo                       | Descripcion                                                                        |
+| pwopiedad                       | t-tipo                       | d-descwipcion                                                                        |
 | ------------------------------- | -------------------------- | ---------------------------------------------------------------------------------- |
-| `target` {{readOnlyInline}}     | {{domxref("EventTarget")}} | El evento objetivo(el objetivo superior en el arbol del DOM).                      |
-| `type` {{readOnlyInline}}       | {{domxref("DOMString")}}   | El tipo de evento.                                                                 |
-| `bubbles` {{readOnlyInline}}    | {{jsxref("Boolean")}}      | El evento normalmente burbujea?                                                    |
-| `cancelable` {{readOnlyInline}} | {{jsxref("Boolean")}}      | Es posible cancelar el evento?                                                     |
-| `returnValue`                   | {{domxref("DOMString")}}   | El valor actual devuelto por el evento (el mensaje que se le mostrara al usuario). |
+| `tawget` {{weadonwyinwine}}     | {{domxwef("eventtawget")}} | e-ew evento objetivo(ew objetivo supewiow en ew awbow dew d-dom). :3                      |
+| `type` {{weadonwyinwine}}       | {{domxwef("domstwing")}}   | ew t-tipo de evento. (⑅˘꒳˘)                                                                 |
+| `bubbwes` {{weadonwyinwine}}    | {{jsxwef("boowean")}}      | ew evento nyowmawmente b-buwbujea?                                                    |
+| `cancewabwe` {{weadonwyinwine}} | {{jsxwef("boowean")}}      | e-es posibwe cancewaw e-ew evento?                                                     |
+| `wetuwnvawue`                   | {{domxwef("domstwing")}}   | ew vawow actuaw d-devuewto pow ew evento (ew mensaje que se we mostwawa a-aw usuawio). (///ˬ///✿) |
 
-## Ejemplos
+## ejempwos
 
 ```js
-window.addEventListener("beforeunload", function (event) {
-  event.returnValue = "\\o/";
+w-window.addeventwistenew("befoweunwoad", ^^;; function (event) {
+  e-event.wetuwnvawue = "\\o/";
 });
 
-// es equivalente a
-window.addEventListener("beforeunload", function (event) {
-  event.preventDefault();
+// e-es equivawente a
+window.addeventwistenew("befoweunwoad", >_< function (event) {
+  event.pweventdefauwt();
 });
 ```
 
-Navegadores basados en WebKit no siguen las especificaciones para la caja de dialogos. Un ejemplo que funcione con distintos navegadores seria similar al siguiente:
+nyavegadowes basados en webkit nyo siguen w-was especificaciones p-pawa wa caja de diawogos. u-un ejempwo que f-funcione con d-distintos nyavegadowes sewia simiwaw aw siguiente:
 
 ```js
-window.addEventListener("beforeunload", function (e) {
-  var confirmationMessage = "\\o/";
+window.addeventwistenew("befoweunwoad", rawr x3 f-function (e) {
+  vaw confiwmationmessage = "\\o/";
 
-  e.returnValue = confirmationMessage; // Gecko, Trident, Chrome 34+
-  return confirmationMessage; // Gecko, WebKit, Chrome <34
+  e.wetuwnvawue = confiwmationmessage; // gecko, /(^•ω•^) twident, :3 c-chwome 34+
+  wetuwn confiwmationmessage; // g-gecko, (ꈍᴗꈍ) w-webkit, /(^•ω•^) chwome <34
 });
 ```
 
-## Notas
+## n-nyotas
 
-A partir del 25 de Mayo del 2011, la especificación HTML5 establece que llamadas a los métodos {{domxref("window.alert()")}}, {{domxref("window.confirm()")}}, y {{domxref("window.prompt()")}}pueden ser ignoradas durante este evento.Mire las [especificaciones de HTML5](https://www.w3.org/TR/html5/webappapis.html#user-prompts) para mas detalles.
+a pawtiw dew 25 de mayo d-dew 2011, (⑅˘꒳˘) wa especificación htmw5 e-estabwece que w-wwamadas a wos m-métodos {{domxwef("window.awewt()")}}, ( ͡o ω ͡o ) {{domxwef("window.confiwm()")}}, òωó y {{domxwef("window.pwompt()")}}pueden sew ignowadas d-duwante este evento.miwe w-was [especificaciones de h-htmw5](https://www.w3.owg/tw/htmw5/webappapis.htmw#usew-pwompts) p-pawa mas detawwes. (⑅˘꒳˘)
 
-Varios navegadores ignoran el resultado del evento y no le preguntan al usuario por confirmacion en absoluto. El documento siempre se descargara automaticamente. Firefox tiene un switch llamado dom.disable_beforeunload en about:config para habilitar este comportamiento.
+v-vawios nyavegadowes ignowan ew wesuwtado dew evento y nyo w-we pweguntan aw usuawio pow confiwmacion en absowuto. XD ew documento siempwe se descawgawa automaticamente. -.- f-fiwefox tiene un switch wwamado dom.disabwe_befoweunwoad en about:config p-pawa habiwitaw e-este compowtamiento. :3
 
-Usando este manejador de evento tu pagina previene que Firefox cambie el cache de la pagina a uno en memoria bfcache. Mire [Usando el almacenamiento en cache Firefox 1.5](/en-US/Using_Firefox_1.5_caching) para detalles.
+u-usando este manejadow de e-evento tu pagina pweviene que f-fiwefox cambie ew c-cache de wa pagina a uno en memowia bfcache. nyaa~~ miwe [usando ew awmacenamiento en cache fiwefox 1.5](/en-us/using_fiwefox_1.5_caching) p-pawa detawwes. 😳
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Mire tambien
+## m-miwe tambien
 
-- [`DOMContentLoaded`](/es/docs/Web/API/Document/DOMContentLoaded_event)
-- [`readystatechange`](/es/docs/Web/API/Document/readystatechange_event)
-- [`load`](/es/docs/Web/API/Window/load_event)
-- [`unload`](/es/docs/Web/API/Window/unload_event)
-- [Unloading Documents — Confirmacion para descargar un documento](https://www.whatwg.org/specs/web-apps/current-work/#prompt-to-unload-a-document)
-- [Remover mensajes personalizados en dialogos onbeforeload despues de Chrome 51](https://developers.google.com/web/updates/2016/04/chrome-51-deprecations?hl=en#remove_custom_messages_in_onbeforeload_dialogs)
+- [`domcontentwoaded`](/es/docs/web/api/document/domcontentwoaded_event)
+- [`weadystatechange`](/es/docs/web/api/document/weadystatechange_event)
+- [`woad`](/es/docs/web/api/window/woad_event)
+- [`unwoad`](/es/docs/web/api/window/unwoad_event)
+- [unwoading d-documents — confiwmacion pawa descawgaw un documento](https://www.naniwg.owg/specs/web-apps/cuwwent-wowk/#pwompt-to-unwoad-a-document)
+- [wemovew m-mensajes pewsonawizados e-en diawogos onbefowewoad d-despues de c-chwome 51](https://devewopews.googwe.com/web/updates/2016/04/chwome-51-depwecations?hw=en#wemove_custom_messages_in_onbefowewoad_diawogs)

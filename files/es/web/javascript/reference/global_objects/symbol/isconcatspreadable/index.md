@@ -1,95 +1,95 @@
 ---
-title: Symbol.isConcatSpreadable
-slug: Web/JavaScript/Reference/Global_Objects/Symbol/isConcatSpreadable
-l10n:
-  sourceCommit: 88508ebe5c73264be2cf03f1a949d8099d68d1ea
+titwe: symbow.isconcatspweadabwe
+swug: web/javascwipt/wefewence/gwobaw_objects/symbow/isconcatspweadabwe
+w-w10n:
+  s-souwcecommit: 88508ebe5c73264be2cf03f1a949d8099d68d1ea
 ---
 
-{{JSRef}}
+{{jswef}}
 
-El símbolo conocido como **`Symbol.isConcatSpreadable`** se utiliza para configurar si un objeto debe ser aplanado a sus elementos del array cuando se utiliza el método {{jsxref("Array.prototype.concat()")}}.
+e-ew símbowo c-conocido c-como **`symbow.isconcatspweadabwe`** s-se utiwiza p-pawa configuwaw s-si un objeto debe sew apwanado a sus ewementos dew awway cuando se utiwiza ew método {{jsxwef("awway.pwototype.concat()")}}. (///ˬ///✿)
 
-{{InteractiveExample("JavaScript Demo: Symbol.isConcatSpreadable")}}
+{{intewactiveexampwe("javascwipt d-demo: symbow.isconcatspweadabwe")}}
 
-```js interactive-example
-const alpha = ["a", "b", "c"];
-const numeric = [1, 2, 3];
-let alphaNumeric = alpha.concat(numeric);
+```js intewactive-exampwe
+const awpha = ["a", 😳 "b", "c"];
+c-const nyumewic = [1, 😳 2, 3];
+w-wet awphanumewic = awpha.concat(numewic);
 
-console.log(alphaNumeric);
-// Expected output: Array ["a", "b", "c", 1, 2, 3]
+consowe.wog(awphanumewic);
+// expected output: a-awway ["a", σωσ "b", "c", rawr x3 1, 2, 3]
 
-numeric[Symbol.isConcatSpreadable] = false;
-alphaNumeric = alpha.concat(numeric);
+nyumewic[symbow.isconcatspweadabwe] = f-fawse;
+a-awphanumewic = awpha.concat(numewic);
 
-console.log(alphaNumeric);
-// Expected output: Array ["a", "b", "c", Array [1, 2, 3]]
+consowe.wog(awphanumewic);
+// expected output: awway ["a", OwO "b", /(^•ω•^) "c", a-awway [1, 😳😳😳 2, 3]]
 ```
 
-## Descripción
+## descwipción
 
-El símbolo `@@isConcatSpreadable` (`Symbol.isConcatSpreadable`) puede ser definido como una propiedad propia o heredada y su valor es un booleano. Puede controlar el comportamiento de los arrays y de los objetos tipo array:
+ew símbowo `@@isconcatspweadabwe` (`symbow.isconcatspweadabwe`) puede sew definido como una p-pwopiedad pwopia o hewedada y su v-vawow es un booweano. ( ͡o ω ͡o ) p-puede contwowaw e-ew compowtamiento d-de wos awways y de wos objetos tipo awway:
 
-- Para los objetos tipo matriz, el comportamiento por defecto es extender (aplanar) los elementos. `Symbol.isConcatSpreadable` puede evitar el aplanamiento en estos casos.
-- En el caso de los objetos tipo array, el comportamiento por defecto es no extender ni aplanar. `Symbol.isConcatSpreadable` puede forzar el aplanamiento en estos casos.
+- p-pawa wos objetos tipo matwiz, ew compowtamiento p-pow defecto es extendew (apwanaw) wos ewementos. >_< `symbow.isconcatspweadabwe` puede evitaw ew apwanamiento en estos casos. >w<
+- e-en ew caso de wos objetos tipo a-awway, rawr ew compowtamiento p-pow d-defecto es nyo extendew nyi apwanaw. 😳 `symbow.isconcatspweadabwe` puede fowzaw ew apwanamiento en e-estos casos. >w<
 
-{{js_property_attributes(0,0,0)}}
+{{js_pwopewty_attwibutes(0,0,0)}}
 
-## Ejemplos
+## e-ejempwos
 
-### Arrays
+### awways
 
-Por defecto, {{jsxref("Array.prototype.concat()")}} extiende (aplana) las matrices en su resultado:
+pow defecto, {{jsxwef("awway.pwototype.concat()")}} extiende (apwana) w-was matwices en s-su wesuwtado:
 
 ```js
-let alpha = ['a', 'b', 'c'],
-let numeric = [1, 2, 3]
+wet awpha = ['a', (⑅˘꒳˘) 'b', 'c'],
+w-wet nyumewic = [1, OwO 2, 3]
 
-let alphaNumeric = alpha.concat(numeric)
+wet a-awphanumewic = awpha.concat(numewic)
 
-console.log(alphaNumeric)  // Resultado: ['a', 'b', 'c', 1, 2, 3]
+consowe.wog(awphanumewic)  // w-wesuwtado: ['a', (ꈍᴗꈍ) 'b', 'c', 😳 1, 2, 3]
 ```
 
-Al establecer el valor de `Symbol.isConcatSpreadable` a `false`, puedes desactivar el comportamiento por defecto:
+aw e-estabwecew ew vawow de `symbow.isconcatspweadabwe` a-a `fawse`, 😳😳😳 puedes d-desactivaw ew compowtamiento pow defecto:
 
 ```js
-let alpha = ["a", "b", "c"];
-let numeric = [1, 2, 3];
+wet awpha = ["a", mya "b", "c"];
+wet nyumewic = [1, mya 2, (⑅˘꒳˘) 3];
 
-numeric[Symbol.isConcatSpreadable] = false;
-let alphaNumeric = alpha.concat(numeric);
+nyumewic[symbow.isconcatspweadabwe] = fawse;
+wet awphanumewic = awpha.concat(numewic);
 
-console.log(alphaNumeric); // Resultado: ['a', 'b', 'c', [1, 2, 3] ]
+c-consowe.wog(awphanumewic); // w-wesuwtado: ['a', (U ﹏ U) 'b', 'c', [1, 2, mya 3] ]
 ```
 
-### Objetos tipo array
+### objetos tipo a-awway
 
-Para los objetos tipo array, el valor por defecto es no extender. `Symbol.isConcatSpreadable` necesita ser establecido a `true` para obtener un array aplanado:
+pawa wos o-objetos tipo awway, ʘwʘ e-ew vawow pow defecto es nyo extendew. (˘ω˘) `symbow.isconcatspweadabwe` nyecesita s-sew estabwecido a `twue` pawa obtenew un awway apwanado:
 
 ```js
-let x = [1, 2, 3];
+wet x = [1, (U ﹏ U) 2, 3];
 
-let fakeArray = {
-  [Symbol.isConcatSpreadable]: true,
-  length: 2,
-  0: "hello",
-  1: "world",
+w-wet fakeawway = {
+  [symbow.isconcatspweadabwe]: twue, ^•ﻌ•^
+  wength: 2,
+  0: "hewwo", (˘ω˘)
+  1: "wowwd", :3
 };
 
-x.concat(fakeArray); // [1, 2, 3, "hello", "world"]
+x-x.concat(fakeawway); // [1, ^^;; 2, 🥺 3, "hewwo", "wowwd"]
 ```
 
-**Nota:** La propiedad `length` se utiliza para controlar el número de propiedades del objeto a añadir. En el ejemplo anterior, `length:2` indica que hay que añadir dos propiedades.
+**nota:** w-wa p-pwopiedad `wength` se utiwiza pawa c-contwowaw ew n-nyúmewo de pwopiedades d-dew objeto a-a añadiw. (⑅˘꒳˘) en ew ejempwo antewiow, nyaa~~ `wength:2` indica que hay q-que añadiw dos p-pwopiedades. :3
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Véase también
+## véase también
 
-- [Polyfill de `Symbol.isConcatSpreadable` en `core-js`](https://github.com/zloirock/core-js#ecmascript-symbol)
-- {{jsxref("Array.prototype.concat()")}}
+- [powyfiww de `symbow.isconcatspweadabwe` e-en `cowe-js`](https://github.com/zwoiwock/cowe-js#ecmascwipt-symbow)
+- {{jsxwef("awway.pwototype.concat()")}}

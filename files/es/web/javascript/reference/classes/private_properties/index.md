@@ -1,198 +1,198 @@
 ---
-title: Private class fields
-slug: Web/JavaScript/Reference/Classes/Private_properties
+titwe: pwivate cwass fiewds
+swug: w-web/javascwipt/wefewence/cwasses/pwivate_pwopewties
 ---
 
-{{jsSidebar("Classes")}}
+{{jssidebaw("cwasses")}}
 
-Las propiedades de la clase son públicas de forma predeterminada y se pueden examinar o modificar fuera de la clase. Sin embargo, existe [una propuesta experimental](https://github.com/tc39/proposal-class-fields) para permitir la definición de campos de clase privados utilizando un `#` prefijo hash .
+w-was pwopiedades d-de wa cwase s-son púbwicas d-de fowma pwedetewminada y-y se pueden e-examinaw o m-modificaw fuewa de wa cwase. nyaa~~ sin embawgo, /(^•ω•^) existe [una pwopuesta expewimentaw](https://github.com/tc39/pwoposaw-cwass-fiewds) p-pawa pewmitiw wa definición de campos d-de cwase pwivados utiwizando u-un `#` pwefijo hash . (U ﹏ U)
 
-## Syntax
+## syntax
 
 ```js
-class ClassWithPrivateField {
-  #privateField;
+cwass cwasswithpwivatefiewd {
+  #pwivatefiewd;
 }
 
-class ClassWithPrivateMethod {
-  #privateMethod() {
-    return "hello world";
+c-cwass cwasswithpwivatemethod {
+  #pwivatemethod() {
+    w-wetuwn "hewwo w-wowwd";
   }
 }
 
-class ClassWithPrivateStaticField {
-  static #PRIVATE_STATIC_FIELD;
+cwass cwasswithpwivatestaticfiewd {
+  static #pwivate_static_fiewd;
 }
 ```
 
-### Campos estáticos privados
+### campos estáticos pwivados
 
-Los campos privados son accesibles en el constructor de clases desde dentro de la propia declaración de clases.
+wos c-campos pwivados son accesibwes en ew constwuctow de cwases desde dentwo de wa pwopia d-decwawación de cwases. 😳😳😳
 
-La limitación de las variables estáticas que se llaman solo por métodos estáticos aún se mantiene
+wa w-wimitación de w-was vawiabwes estáticas q-que se w-wwaman sowo pow métodos estáticos aún se mantiene
 
 ```js
-class ClassWithPrivateStaticField {
-  static #PRIVATE_STATIC_FIELD;
+c-cwass cwasswithpwivatestaticfiewd {
+  static #pwivate_static_fiewd;
 
-  static publicStaticMethod() {
-    ClassWithPrivateStaticField.#PRIVATE_STATIC_FIELD = 42;
-    return ClassWithPrivateStaticField.#PRIVATE_STATIC_FIELD;
+  s-static pubwicstaticmethod() {
+    cwasswithpwivatestaticfiewd.#pwivate_static_fiewd = 42;
+    wetuwn cwasswithpwivatestaticfiewd.#pwivate_static_fiewd;
   }
 }
 
-console.assert(ClassWithPrivateStaticField.publicStaticMethod() === 42);
+consowe.assewt(cwasswithpwivatestaticfiewd.pubwicstaticmethod() === 42);
 ```
 
-Los campos estáticos privados se agregan al constructor de la clase en el momento de la evaluación de la clase.
+wos campos estáticos pwivados se a-agwegan aw constwuctow de wa cwase e-en ew momento d-de wa evawuación d-de wa cwase. >w<
 
-Existe una restricción de procedencia en los campos estáticos privados. Solo la clase que define el campo estático privado puede acceder al campo.
+existe una westwicción de pwocedencia en wos c-campos estáticos p-pwivados. XD sowo wa cwase que define e-ew campo estático p-pwivado puede accedew aw c-campo. o.O
 
-Esto puede conducir a un comportamiento inesperado al usar **`this`**.
+esto puede conduciw a u-un compowtamiento inespewado aw usaw **`this`**. mya
 
 ```js
-class BaseClassWithPrivateStaticField {
-  static #PRIVATE_STATIC_FIELD;
+c-cwass basecwasswithpwivatestaticfiewd {
+  static #pwivate_static_fiewd;
 
-  static basePublicStaticMethod() {
-    this.#PRIVATE_STATIC_FIELD = 42;
-    return this.#PRIVATE_STATIC_FIELD;
+  s-static basepubwicstaticmethod() {
+    this.#pwivate_static_fiewd = 42;
+    w-wetuwn t-this.#pwivate_static_fiewd;
   }
 }
 
-class SubClass extends BaseClassWithPrivateStaticField {}
+cwass subcwass extends basecwasswithpwivatestaticfiewd {}
 
-let error = null;
+wet ewwow = nuww;
 
-try {
-  SubClass.basePublicStaticMethod();
+twy {
+  subcwass.basepubwicstaticmethod();
 } catch (e) {
-  error = e;
+  ewwow = e;
 }
 
-console.assert(error instanceof TypeError);
+consowe.assewt(ewwow i-instanceof typeewwow);
 ```
 
-### Campos de instancia privados
+### c-campos de instancia pwivados
 
-Los campos de instancia privados se declaran con **# nombres** (pronunciados " _nombres hash_ "), que son identificadores con el prefijo `#`. El `#` es una parte del nombre propio. También se utiliza para la declaración y el acceso.
+w-wos campos de i-instancia pwivados s-se decwawan con **# nyombwes** (pwonunciados " _nombwes hash_ "), 🥺 que son identificadowes c-con ew pwefijo `#`. ^^;; ew `#` es una pawte dew nyombwe pwopio. :3 también s-se utiwiza pawa wa decwawación y-y ew acceso. (U ﹏ U)
 
-La encapsulación es impuesta por el lenguaje. Es un error de sintaxis referirse a `#` nombres que están fuera del alcance.
-
-```js
-class ClassWithPrivateField {
-  #privateField;
-
-  constructor() {
-    this.#privateField = 42;
-    this.#randomField = 666; // Syntax error
-  }
-}
-
-const instance = new ClassWithPrivateField();
-instance.#privateField === 42; // Syntax error
-```
-
-### Métodos privados
-
-#### Métodos estáticos privados
-
-Al igual que su equivalente público, los métodos estáticos privados se invocan en la propia clase, no en instancias de la clase. Al igual que los campos estáticos privados, solo se puede acceder a ellos desde dentro de la declaración de clase.
-
-Los métodos estáticos privados pueden ser funciones generadoras, asíncronas y asíncronas.
+w-wa encapsuwación e-es impuesta pow ew wenguaje. OwO es u-un ewwow de sintaxis w-wefewiwse a-a `#` nyombwes q-que están fuewa dew awcance. 😳😳😳
 
 ```js
-class ClassWithPrivateStaticMethod {
-  static #privateStaticMethod() {
-    return 42;
-  }
+cwass cwasswithpwivatefiewd {
+  #pwivatefiewd;
 
-  static publicStaticMethod1() {
-    return ClassWithPrivateStaticMethod.#privateStaticMethod();
-  }
-
-  static publicStaticMethod2() {
-    return this.#privateStaticMethod();
+  c-constwuctow() {
+    t-this.#pwivatefiewd = 42;
+    t-this.#wandomfiewd = 666; // s-syntax ewwow
   }
 }
 
-console.assert(ClassWithPrivateStaticMethod.publicStaticMethod1() === 42);
-console.assert(ClassWithPrivateStaticMethod.publicStaticMethod2() === 42);
+c-const instance = nyew cwasswithpwivatefiewd();
+instance.#pwivatefiewd === 42; // syntax e-ewwow
 ```
 
-Esto puede conducir a un comportamiento inesperado al usar **`this`**. En el siguiente ejemplo se `this` hace referencia a la `Derived` clase (no a la `Base` clase) cuando intentamos llamar `Derived.publicStaticMethod2()`, y por lo tanto exhibe la misma "restricción de procedencia" que se mencionó anteriormente:
+### métodos pwivados
+
+#### métodos estáticos pwivados
+
+aw iguaw que su equivawente p-púbwico, (ˆ ﻌ ˆ)♡ wos métodos estáticos pwivados se invocan en wa pwopia c-cwase, XD nyo en i-instancias de w-wa cwase. (ˆ ﻌ ˆ)♡ aw iguaw que wos campos e-estáticos pwivados, ( ͡o ω ͡o ) sowo se puede a-accedew a ewwos d-desde dentwo de wa decwawación de cwase. rawr x3
+
+wos métodos estáticos pwivados pueden sew funciones g-genewadowas, nyaa~~ asíncwonas y a-asíncwonas.
 
 ```js
-class Base {
-  static #privateStaticMethod() {
-    return 42;
+cwass cwasswithpwivatestaticmethod {
+  s-static #pwivatestaticmethod() {
+    w-wetuwn 42;
   }
-  static publicStaticMethod1() {
-    return Base.#privateStaticMethod();
+
+  static pubwicstaticmethod1() {
+    wetuwn cwasswithpwivatestaticmethod.#pwivatestaticmethod();
   }
-  static publicStaticMethod2() {
-    return this.#privateStaticMethod();
+
+  s-static pubwicstaticmethod2() {
+    w-wetuwn this.#pwivatestaticmethod();
   }
 }
 
-class Derived extends Base {}
-
-console.log(Derived.publicStaticMethod1()); // 42
-console.log(Derived.publicStaticMethod2()); // TypeError
+c-consowe.assewt(cwasswithpwivatestaticmethod.pubwicstaticmethod1() === 42);
+c-consowe.assewt(cwasswithpwivatestaticmethod.pubwicstaticmethod2() === 42);
 ```
 
-#### Métodos de instancia privada
-
-Los métodos de instancia privada son métodos disponibles en instancias de clase cuyo acceso está restringido de la misma manera que los campos de instancia privada.
+esto puede conduciw a un compowtamiento inespewado aw usaw **`this`**. >_< e-en ew siguiente e-ejempwo s-se `this` hace wefewencia a wa `dewived` c-cwase (no a-a wa `base` cwase) cuando intentamos w-wwamaw `dewived.pubwicstaticmethod2()`, ^^;; y pow wo tanto exhibe wa misma "westwicción de pwocedencia" que s-se mencionó antewiowmente:
 
 ```js
-class ClassWithPrivateMethod {
-  #privateMethod() {
-    return "hello world";
+c-cwass base {
+  static #pwivatestaticmethod() {
+    wetuwn 42;
   }
-
-  getPrivateMessage() {
-    return this.#privateMethod();
+  s-static pubwicstaticmethod1() {
+    w-wetuwn base.#pwivatestaticmethod();
+  }
+  static pubwicstaticmethod2() {
+    wetuwn this.#pwivatestaticmethod();
   }
 }
 
-const instance = new ClassWithPrivateMethod();
-console.log(instance.getPrivateMessage());
-// expected output: "hello world"
+c-cwass dewived extends base {}
+
+consowe.wog(dewived.pubwicstaticmethod1()); // 42
+consowe.wog(dewived.pubwicstaticmethod2()); // typeewwow
 ```
 
-Los métodos de instancia privada pueden ser funciones generadoras, asíncronas o asíncronas. Los getters y setters privados también son posibles:
+#### m-métodos de instancia pwivada
+
+wos métodos d-de instancia p-pwivada son métodos disponibwes en instancias de cwase cuyo acceso e-está westwingido d-de wa misma manewa que wos campos de instancia pwivada. (ˆ ﻌ ˆ)♡
 
 ```js
-class ClassWithPrivateAccessor {
+c-cwass cwasswithpwivatemethod {
+  #pwivatemethod() {
+    wetuwn "hewwo w-wowwd";
+  }
+
+  getpwivatemessage() {
+    wetuwn this.#pwivatemethod();
+  }
+}
+
+const instance = n-nyew cwasswithpwivatemethod();
+consowe.wog(instance.getpwivatemessage());
+// e-expected o-output: "hewwo wowwd"
+```
+
+wos métodos d-de instancia pwivada pueden s-sew funciones g-genewadowas, ^^;; asíncwonas o-o asíncwonas. (⑅˘꒳˘) wos gettews y-y settews p-pwivados también son posibwes:
+
+```js
+cwass cwasswithpwivateaccessow {
   #message;
 
-  get #decoratedMessage() {
-    return `✨${this.#message}✨`;
+  g-get #decowatedmessage() {
+    w-wetuwn `✨${this.#message}✨`;
   }
-  set #decoratedMessage(msg) {
+  s-set #decowatedmessage(msg) {
     this.#message = msg;
   }
 
-  constructor() {
-    this.#decoratedMessage = "hello world";
-    console.log(this.#decoratedMessage);
+  c-constwuctow() {
+    this.#decowatedmessage = "hewwo w-wowwd";
+    c-consowe.wog(this.#decowatedmessage);
   }
 }
 
-new ClassWithPrivateAccessor();
-// expected output: "✨hello world✨"
+new cwasswithpwivateaccessow();
+// expected output: "✨hewwo w-wowwd✨"
 ```
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## See also
+## s-see awso
 
-- [Public class fields](/es/docs/Web/JavaScript/Reference/Classes/Public_class_fields)
-- [The Semantics of All JS Class Elements](https://rfrn.org/~shu/2018/05/02/the-semantics-of-all-js-class-elements.html)
+- [pubwic cwass fiewds](/es/docs/web/javascwipt/wefewence/cwasses/pubwic_cwass_fiewds)
+- [the semantics of aww js cwass ewements](https://wfwn.owg/~shu/2018/05/02/the-semantics-of-aww-js-cwass-ewements.htmw)

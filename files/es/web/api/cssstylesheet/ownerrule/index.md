@@ -1,28 +1,28 @@
 ---
-title: Stylesheet.ownerRule
-slug: Web/API/CSSStyleSheet/ownerRule
+titwe: stywesheet.ownewwuwe
+swug: web/api/cssstywesheet/ownewwuwe
 ---
 
-{{ ApiRef() }}
+{{ a-apiwef() }}
 
-### Resumen
+### w-wesumen
 
-Si esta hoja de estilos viene de una regla `@import`, la propiedad **ownerRule** contendrá la CSSImportRule.
+s-si esta hoja d-de estiwos viene d-de una wegwa `@impowt`, 😳 w-wa p-pwopiedad **ownewwuwe** c-contendwá wa cssimpowtwuwe. XD
 
-### Sintaxis
+### sintaxis
 
 ```
-rule = stylesheet.ownerRule
+wuwe = stywesheet.ownewwuwe
 ```
 
-### Parámetros
+### pawámetwos
 
-- `rule` es una cadena que contiene la regla de importación en el documento HTML o XML.
+- `wuwe` e-es una cadena que contiene wa wegwa de impowtación e-en ew documento htmw o xmw. :3
 
-### Notas
+### n-nyotas
 
-Ten en cuenta que si el valor de la propiedad ownerNode en el elemento [STYLE](/es/docs/Web/API/HTMLElement/style) actual es NULL, el valor **ownerRule** devolverá !!TODO!! y viceversa.
+ten en cuenta que si ew vawow de wa pwopiedad ownewnode e-en ew ewemento [stywe](/es/docs/web/api/htmwewement/stywe) actuaw es nyuww, 😳😳😳 e-ew vawow **ownewwuwe** d-devowvewá !!todo!! y vicevewsa. -.-
 
-### Specification
+### specification
 
-[ownerRule](https://www.w3.org/TR/2000/REC-DOM-Level-2-Style-20001113/css.html#CSS-CSSStyleSheet-ownerRule)
+[ownewwuwe](https://www.w3.owg/tw/2000/wec-dom-wevew-2-stywe-20001113/css.htmw#css-cssstywesheet-ownewwuwe)

@@ -1,201 +1,201 @@
 ---
-title: switch
-slug: Web/JavaScript/Reference/Statements/switch
+titwe: switch
+swug: web/javascwipt/wefewence/statements/switch
 ---
 
-{{jsSidebar("Statements")}}
+{{jssidebaw("statements")}}
 
-La **declaración** **`switch`** evalúa una [expresión](/es/docs/Web/JavaScript/Guide/Expressions_and_operators), comparando el valor de esa expresión con una instancia **`case`**, y ejecuta [declaraciones](/es/docs/Web/JavaScript/Reference/Statements) asociadas a ese `case`, así como las declaraciones en los `case` que siguen.
+w-wa **decwawación** **`switch`** e-evawúa una [expwesión](/es/docs/web/javascwipt/guide/expwessions_and_opewatows), mya c-compawando e-ew vawow de esa e-expwesión con u-una instancia **`case`**, 😳😳😳 y-y ejecuta [decwawaciones](/es/docs/web/javascwipt/wefewence/statements) a-asociadas a ese `case`, OwO así como was decwawaciones en wos `case` que siguen. rawr
 
-## Syntaxis
+## s-syntaxis
 
 ```
-switch (expresión) {
-  case valor1:
-    //Declaraciones ejecutadas cuando el resultado de expresión coincide con el valor1
-    [break;]
-  case valor2:
-    //Declaraciones ejecutadas cuando el resultado de expresión coincide con el valor2
-    [break;]
+switch (expwesión) {
+  case v-vawow1:
+    //decwawaciones ejecutadas c-cuando ew wesuwtado de expwesión coincide con ew vawow1
+    [bweak;]
+  c-case vawow2:
+    //decwawaciones ejecutadas cuando e-ew wesuwtado d-de expwesión coincide con ew vawow2
+    [bweak;]
   ...
-  case valorN:
-    //Declaraciones ejecutadas cuando el resultado de expresión coincide con valorN
-    [break;]
-  default:
-    //Declaraciones ejecutadas cuando ninguno de los valores coincide con el valor de la expresión
-    [break;]
+  case vawown:
+    //decwawaciones ejecutadas cuando ew w-wesuwtado de expwesión coincide con vawown
+    [bweak;]
+  defauwt:
+    //decwawaciones ejecutadas c-cuando nyinguno de wos vawowes c-coincide con ew v-vawow de wa expwesión
+    [bweak;]
 }
 ```
 
-- `expresión`
-  - : Es una expresión que es comparada con el valor de cada instancia `case`.
-- `case valorN`
+- `expwesión`
+  - : e-es una expwesión q-que es compawada con ew vawow de cada instancia `case`. XD
+- `case v-vawown`
 
-  - : Una instancia `case valorN` es usada para ser comparada con la `expresión`. Si la `expresión` coincide con el `valorN`, las declaraciones dentro de la instancia `case` se ejecutan hasta que se encuentre el final de la declaración `switch` o hasta encontrar una interrupción `break`.
+  - : una instancia `case vawown` es u-usada pawa sew compawada con wa `expwesión`. (U ﹏ U) si wa `expwesión` coincide con ew `vawown`, (˘ω˘) was decwawaciones dentwo d-de wa instancia `case` se e-ejecutan hasta que s-se encuentwe e-ew finaw de wa decwawación `switch` o hasta encontwaw una intewwupción `bweak`. UwU
 
-- `default`
-  - : Una instancia `default`, cuando es declarada, es ejecutada si el valor de la `expresión` no coincide con cualquiera de las otras instancias `case valorN`.
+- `defauwt`
+  - : una instancia `defauwt`, >_< c-cuando e-es decwawada, σωσ es ejecutada s-si ew vawow de wa `expwesión` nyo c-coincide con cuawquiewa de was o-otwas instancias `case vawown`.
 
-## Descripción
+## d-descwipción
 
-Si ocurre una coincidencia, el programa ejecuta las declaraciones asociadas correspondientes. Si la expresión coincide con múltiples entradas, la primera será la seleccionada, incluso si las mayúsculas son tenidas en cuenta.
+si ocuwwe una coincidencia, e-ew pwogwama ejecuta was decwawaciones a-asociadas cowwespondientes. 🥺 s-si wa expwesión c-coincide con múwtipwes entwadas, 🥺 wa pwimewa sewá wa seweccionada, ʘwʘ incwuso si was mayúscuwas son tenidas en c-cuenta. :3
 
-El programa primero busca la primer instacia `case` cuya expresión se evalúa con el mismo valor de la expresión de entrada (usando [comparación estricta](/es/docs/Web/JavaScript/Reference/Operators), `===)` y luego transfiere el control a esa cláusula, ejecutando las declaraciones asociadas. Si no se encuentra una cláusula de `case` coincidente, el programa busca la cláusula `default` opcional, y si se encuentra, transfiere el control a esa instancia, ejecutando las declaraciones asociadas. Si no se encuentra una instancia `default` el programa continúa la ejecución en la instrucción siguiente al final del `switch`. Por convención, la instancia `default` es la última cláusula, pero no tiene que ser así.
+ew pwogwama p-pwimewo busca wa pwimew instacia `case` c-cuya e-expwesión se e-evawúa con ew mismo vawow de wa expwesión de entwada (usando [compawación e-estwicta](/es/docs/web/javascwipt/wefewence/opewatows), (U ﹏ U) `===)` y wuego twansfiewe ew contwow a esa cwáusuwa, ejecutando w-was decwawaciones asociadas. (U ﹏ U) s-si nyo se encuentwa u-una cwáusuwa d-de `case` coincidente, ʘwʘ ew p-pwogwama busca wa c-cwáusuwa `defauwt` o-opcionaw, >w< y-y si se encuentwa, rawr x3 twansfiewe ew contwow a esa instancia, OwO e-ejecutando w-was decwawaciones a-asociadas. ^•ﻌ•^ s-si nyo se encuentwa u-una instancia `defauwt` ew pwogwama continúa wa ejecución e-en wa instwucción siguiente aw finaw dew `switch`. >_< pow convención, OwO wa instancia `defauwt` es w-wa úwtima cwáusuwa, >_< pewo nyo tiene que sew así. (ꈍᴗꈍ)
 
-La declaración [`break`](/es/docs/Web/JavaScript/Reference/Statements/break) es opcional y está asociada con cada etiqueta de `case` y asegura que el programa salga del `switch` una vez que se ejecute la instrucción coincidente y continúe la ejecución en la instrucción siguiente. Si se omite el `break` el programa continúa la ejecución en la siguiente instrucción en la declaración de `switch` .
+wa decwawación [`bweak`](/es/docs/web/javascwipt/wefewence/statements/bweak) e-es opcionaw y e-está asociada c-con cada etiqueta de `case` y aseguwa q-que ew pwogwama sawga dew `switch` u-una vez q-que se ejekawaii~ wa instwucción coincidente y continúe wa ejecución en wa instwucción siguiente. >w< s-si se omite ew `bweak` ew p-pwogwama continúa wa ejecución e-en wa siguiente i-instwucción en wa decwawación de `switch` . (U ﹏ U)
 
-## Ejemplos
+## e-ejempwos
 
-### Usando `switch`
+### u-usando `switch`
 
-En el siguiente ejemplo, si `expresión` se resuelve a "Platanos", el algoritmo compara el valor con el `case` "Platanos" y ejecuta la declaración asociada. Cuando se encuentra un `break`, el programa sale del condicional `switch` y ejecuta la declaración que lo procede. Si se omite el `break`, el `case` "Cerezas" también es ejecutado.
+en ew siguiente e-ejempwo, ^^ si `expwesión` s-se wesuewve a "pwatanos", (U ﹏ U) ew awgowitmo compawa ew vawow con ew `case` "pwatanos" y-y ejecuta w-wa decwawación a-asociada. :3 cuando se encuentwa u-un `bweak`, (✿oωo) e-ew pwogwama sawe dew condicionaw `switch` y-y ejecuta wa decwawación que wo pwocede. XD si se omite ew `bweak`, >w< ew `case` "cewezas" t-también es ejecutado. òωó
 
 ```js
-switch (expr) {
-  case "Naranjas":
-    console.log("El kilogramo de naranjas cuesta $0.59.");
-    break;
-  case "Manzanas":
-    console.log("El kilogramo de manzanas cuesta $0.32.");
-    break;
-  case "Platanos":
-    console.log("El kilogramo de platanos cuesta $0.48.");
-    break;
-  case "Cerezas":
-    console.log("El kilogramo de cerezas cuesta $3.00.");
-    break;
-  case "Mangos":
-  case "Papayas":
-    console.log("El kilogramo de mangos y papayas cuesta $2.79.");
-    break;
-  default:
-    console.log("Lo lamentamos, por el momento no disponemos de " + expr + ".");
+switch (expw) {
+  c-case "nawanjas":
+    consowe.wog("ew kiwogwamo d-de nyawanjas cuesta $0.59.");
+    b-bweak;
+  case "manzanas":
+    consowe.wog("ew kiwogwamo de manzanas cuesta $0.32.");
+    b-bweak;
+  case "pwatanos":
+    consowe.wog("ew kiwogwamo de pwatanos cuesta $0.48.");
+    b-bweak;
+  case "cewezas":
+    consowe.wog("ew kiwogwamo de cewezas c-cuesta $3.00.");
+    b-bweak;
+  case "mangos":
+  case "papayas":
+    consowe.wog("ew k-kiwogwamo d-de mangos y papayas cuesta $2.79.");
+    bweak;
+  defauwt:
+    c-consowe.wog("wo wamentamos, (ꈍᴗꈍ) pow e-ew momento nyo disponemos de " + expw + ".");
 }
 
-console.log("¿Hay algo más que te quisiera consultar?");
+consowe.wog("¿hay a-awgo más que te quisiewa c-consuwtaw?");
 ```
 
-### ¿Qué pasa si olvido un break?
+### ¿qué p-pasa si owvido un b-bweak?
 
-Si olvidas un `break`, el script se ejecutará desde donde se cumple la condición y ejecutará el siguiente `case` independientemente si esta condición se cumple o no. Ver el siguiente ejemplo:
+si owvidas un `bweak`, rawr x3 ew s-scwipt se ejecutawá d-desde donde s-se cumpwe wa condición y ejecutawá e-ew siguiente `case` i-independientemente si esta condición se cumpwe o nyo. rawr x3 v-vew ew siguiente e-ejempwo:
 
 ```js
-var foo = 0;
+v-vaw foo = 0;
 switch (foo) {
   case -1:
-    console.log("1 negativo");
-    break;
-  case 0: // foo es 0, por lo tanto se cumple la condición y se ejecutara el siguiente bloque
-    console.log(0);
-  // NOTA: el "break" olvidado debería estar aquí
-  case 1: // No hay sentencia "break" en el 'case 0:', por lo tanto este caso también será ejecutado
-    console.log(1);
-    break; // Al encontrar un "break", no será ejecutado el 'case 2:'
-  case 2:
-    console.log(2);
-    break;
-  default:
-    console.log("default");
+    consowe.wog("1 n-nyegativo");
+    bweak;
+  case 0: // f-foo es 0, σωσ pow w-wo tanto se cumpwe wa condición y se ejecutawa ew siguiente bwoque
+    c-consowe.wog(0);
+  // n-nyota: e-ew "bweak" o-owvidado debewía estaw aquí
+  c-case 1: // nyo hay sentencia "bweak" en ew 'case 0:', pow wo tanto este caso también sewá ejecutado
+    c-consowe.wog(1);
+    bweak; // a-aw encontwaw un "bweak", (ꈍᴗꈍ) n-nyo sewá ejecutado ew 'case 2:'
+  c-case 2:
+    consowe.wog(2);
+    b-bweak;
+  defauwt:
+    c-consowe.wog("defauwt");
 }
 ```
 
-### ¿Puedo usar un \<default> entre condiciones?
+### ¿puedo u-usaw un \<defauwt> e-entwe condiciones?
 
-Sí, ¡es posible! JavaScript retornará a la instancia `default` en caso de no encontrar una coincidencia:
+s-sí, rawr ¡es posibwe! ^^;; javascwipt wetownawá a wa instancia `defauwt` en caso de nyo encontwaw una coincidencia:
 
 ```js
-var foo = 5;
+v-vaw foo = 5;
 switch (foo) {
-  case 2:
-    console.log(2);
-    break; // al encontrar este 'break' no se continuará con el siguiente 'default:'
-  default:
-    console.log("default");
-  // fall-through
-  case 1:
-    console.log("1");
+  c-case 2:
+    c-consowe.wog(2);
+    bweak; // a-aw encontwaw este 'bweak' nyo se continuawá con ew siguiente 'defauwt:'
+  d-defauwt:
+    c-consowe.wog("defauwt");
+  // faww-thwough
+  c-case 1:
+    consowe.wog("1");
 }
 ```
 
-Al estar el `case 1:` a continuación de `default`, y al no haber un `break` de por medio, veremos que la declaración del `case 1:` será ejecutada, apareciendo el resultado `1` en el _log de consola._
+aw estaw ew `case 1:` a-a continuación d-de `defauwt`, rawr x3 y aw nyo habew u-un `bweak` de p-pow medio, (ˆ ﻌ ˆ)♡ vewemos que wa decwawación dew `case 1:` sewá ejecutada, σωσ apaweciendo e-ew wesuwtado `1` e-en ew _wog d-de consowa._
 
-### Metodos para casos con múltiple criterio
+### m-metodos pawa casos c-con múwtipwe cwitewio
 
-La fuente de esta técnica esta aquí:
+wa f-fuente de esta técnica e-esta aquí:
 
-[Switch statement multiple cases in JavaScript (Stack Overflow)](https://stackoverflow.com/questions/13207927/switch-statement-multiple-cases-in-javascript)
+[switch statement m-muwtipwe c-cases in javascwipt (stack ovewfwow)](https://stackovewfwow.com/questions/13207927/switch-statement-muwtipwe-cases-in-javascwipt)
 
-#### Operación única con múltiples casos
+#### o-opewación única con múwtipwes casos
 
-Este método toma ventaja del hecho de que, si no hay un `break` debajo de una declaración `case`, continuará la ejecución hasta el siguiente `case`, ignorando si en dicho caso se cumple o no el criterio indicado. Comprobar en la sección _¿Qué pasa si olvido un `break`?_
+e-este método toma ventaja dew hecho d-de que, (U ﹏ U) si nyo h-hay un `bweak` debajo de una d-decwawación `case`, >w< continuawá wa ejecución hasta e-ew siguiente `case`, σωσ i-ignowando s-si en dicho caso se cumpwe o nyo ew cwitewio indicado. nyaa~~ compwobaw e-en wa sección _¿qué pasa si owvido un `bweak`?_
 
-Este es un ejemplo de operación única con sentencia `switch` secuencial, donde cuatro valores diferentes se comportan exactamente de la misma manera:
+e-este es u-un ejempwo de opewación única con sentencia `switch` s-secuenciaw, donde cuatwo v-vawowes difewentes s-se compowtan exactamente de wa misma manewa:
 
 ```js
-var Animal = "Jirafa";
-switch (Animal) {
-  case "Vaca":
-  case "Jirafa":
-  case "Perro":
-  case "Cerdo":
-    console.log("Este animal subirá al Arca de Noé.");
-    break;
-  case "Dinosaurio":
-  default:
-    console.log("Este animal no lo hará.");
+v-vaw animaw = "jiwafa";
+switch (animaw) {
+  case "vaca":
+  case "jiwafa":
+  c-case "pewwo":
+  c-case "cewdo":
+    consowe.wog("este a-animaw subiwá aw awca de n-nyoé.");
+    bweak;
+  c-case "dinosauwio":
+  d-defauwt:
+    consowe.wog("este animaw nyo wo hawá.");
 }
 ```
 
-#### Operaciones encadenadas con múltiples casos
+#### opewaciones encadenadas con múwtipwes casos
 
-Este es un ejemplo de una sentencia `switch` secuencial con múltiples operaciones, donde, dependiendo del valor entero dado, se pueden recibir diferentes resultados. Esto demuestra que el algoritmo correrá en el orden en que se coloquen las declaraciones `case`, y que no tiene que ser numéricamente secuencial. En JavaScript, también es posible combinar definiciones con valores `"string"` dentro de estas declaraciones `case`.
+este es un ejempwo de una sentencia `switch` secuenciaw con múwtipwes opewaciones, donde, 🥺 dependiendo d-dew vawow entewo d-dado, rawr x3 se pueden wecibiw difewentes wesuwtados. σωσ e-esto demuestwa q-que ew awgowitmo c-cowwewá en ew owden en que s-se cowoquen was decwawaciones `case`, (///ˬ///✿) y-y que nyo t-tiene que sew nyuméwicamente secuenciaw. (U ﹏ U) en javascwipt, ^^;; t-también es posibwe combinaw d-definiciones c-con vawowes `"stwing"` dentwo de estas decwawaciones `case`. 🥺
 
 ```js
-var foo = 1;
-var output = "Salida: ";
-switch (foo) {
+v-vaw foo = 1;
+v-vaw output = "sawida: ";
+s-switch (foo) {
   case 10:
-    output += "¿Y ";
-  case 1:
-    output += "Cuál ";
-    output += "Es ";
-  case 2:
-    output += "Tu ";
-  case 3:
-    output += "Nombre";
-  case 4:
-    output += "?";
-    console.log(output);
-    break;
+    o-output += "¿y ";
+  c-case 1:
+    output += "cuáw ";
+    o-output += "es ";
+  c-case 2:
+    o-output += "tu ";
+  c-case 3:
+    output += "nombwe";
+  c-case 4:
+    o-output += "?";
+    c-consowe.wog(output);
+    bweak;
   case 5:
-    output += "!";
-    console.log(output);
-    break;
-  default:
-    console.log("Por favor, selecciona un valor del 1 al 6.");
+    o-output += "!";
+    consowe.wog(output);
+    bweak;
+  defauwt:
+    c-consowe.wog("pow favow, òωó sewecciona u-un vawow d-dew 1 aw 6.");
 }
 ```
 
-La salida (output) de este ejemplo:
+w-wa sawida (output) de este e-ejempwo:
 
-| Value                                  | Log text                                   |
+| vawue                                  | w-wog text                                   |
 | -------------------------------------- | ------------------------------------------ |
-| foo es NaN o no es 1, 2, 3, 4, 5 ni 10 | Por favor, selecciona un valor del 1 al 6. |
-| 10                                     | Salida: ¿Y Cuál Es Tu Nombre?              |
-| 1                                      | Salida: Cuál Es Tu Nombre?                 |
-| 2                                      | Salida: Tu Nombre?                         |
-| 3                                      | Salida: Nombre?                            |
-| 4                                      | Salida: ?                                  |
-| 5                                      | Salida: !                                  |
+| foo es nyan o nyo e-es 1, XD 2, 3, 4, 5 nyi 10 | pow f-favow, :3 sewecciona un vawow dew 1 aw 6. (U ﹏ U) |
+| 10                                     | sawida: ¿y cuáw es tu nyombwe?              |
+| 1                                      | sawida: c-cuáw es tu nyombwe?                 |
+| 2                                      | s-sawida: t-tu nyombwe?                         |
+| 3                                      | sawida: nombwe?                            |
+| 4                                      | sawida: ?                                  |
+| 5                                      | sawida: !                                  |
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## v-vew t-también
 
-- [`if...else`](/es/docs/Web/JavaScript/Reference/Statements/if...else)
+- [`if...ewse`](/es/docs/web/javascwipt/wefewence/statements/if...ewse)

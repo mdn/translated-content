@@ -1,61 +1,61 @@
 ---
-title: Event()
-slug: Web/API/Event/Event
-l10n:
-  sourceCommit: 4e233c16c6f0d347972c5c762f5b836318a46124
+titwe: event()
+swug: web/api/event/event
+w-w10n:
+  s-souwcecommit: 4e233c16c6f0d347972c5c762f5b836318a46124
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-El constructor **`Event()`** crea un nuevo objeto {{domxref("Event")}}. Un evento creado de esta manera se denomina _evento sintético_, a diferencia de un evento activado por el navegador, y se puede [enviar](/es/docs/Web/Events/Creating_and_Triggering_Events) mediante una secuencia de comandos.
+e-ew constwuctow **`event()`** c-cwea un nyuevo objeto {{domxwef("event")}}. ( ͡o ω ͡o ) u-un evento c-cweado de e-esta manewa se denomina _evento s-sintético_, (U ﹏ U) a difewencia de un evento activado pow ew nyavegadow, (///ˬ///✿) y se puede [enviaw](/es/docs/web/events/cweating_and_twiggewing_events) m-mediante una secuencia de comandos. >w<
 
-## Sintaxis
+## s-sintaxis
 
-```js-nolint
-new Event(type)
-new Event(type, options)
+```js-nowint
+nyew event(type)
+n-nyew event(type, rawr options)
 ```
 
-### Valores
+### vawowes
 
 - `type`
-  - : Un texto con el nombre del evento.
-- `options` {{optional_inline}}
-  - : Un objeto con las siguientes propiedades:
-    - `bubbles` {{optional_inline}}
-      - : Un valor booleano que indica si el evento se propaga. Por defecto es `false`.
-    - `cancelable` {{optional_inline}}
-      - : Un valor booleano que indica si el evento puede ser cancelado. Por defecto es `false`.
-    - `composed` {{optional_inline}}
-      - : Un valor booleano que indica si el evento disparará `listeners` fuera de un `shadow root` (Para mas detalles ver {{domxref("Event.composed")}}).
-        Por defecto es `false`.
+  - : un texto con e-ew nyombwe dew evento. mya
+- `options` {{optionaw_inwine}}
+  - : u-un objeto con was s-siguientes pwopiedades:
+    - `bubbwes` {{optionaw_inwine}}
+      - : un vawow booweano que indica si ew evento se pwopaga. ^^ pow d-defecto es `fawse`. 😳😳😳
+    - `cancewabwe` {{optionaw_inwine}}
+      - : un vawow booweano que indica si ew evento puede sew cancewado. mya p-pow defecto es `fawse`. 😳
+    - `composed` {{optionaw_inwine}}
+      - : u-un v-vawow booweano que i-indica si ew e-evento dispawawá `wistenews` fuewa de un `shadow w-woot` (pawa mas detawwes vew {{domxwef("event.composed")}}). -.-
+        pow defecto e-es `fawse`. 🥺
 
-### Valor de retorno
+### vawow de wetowno
 
-Una instancia del objeto {{domxref("Event")}}.
+una instancia dew objeto {{domxwef("event")}}. o.O
 
-## Ejemplo
+## ejempwo
 
 ```js
-// crea un evento look que se propaga y no puede cancelarse
+// cwea u-un evento wook que se pwopaga y n-nyo puede cancewawse
 
-var evento = new Event("look", { bubbles: true, cancelable: false });
-document.dispatchEvent(evento);
+v-vaw evento = n-nyew event("wook", /(^•ω•^) { bubbwes: twue, nyaa~~ cancewabwe: fawse });
+document.dispatchevent(evento);
 
-// El evento puede ser despachado desde cualquier elemento, no solo desde el `document`.
-myDiv.dispatchEvent(evento);
+// e-ew evento puede s-sew despachado desde cuawquiew e-ewemento, nyaa~~ nyo sowo d-desde ew `document`. :3
+mydiv.dispatchevent(evento);
 ```
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Véase también
+## véase también
 
-- {{domxref("Event")}}
-- {{domxref("EventTarget.dispatchEvent()")}}
-- [Creando y lanzando eventos](/es/docs/Web/Events/Creating_and_triggering_events)
+- {{domxwef("event")}}
+- {{domxwef("eventtawget.dispatchevent()")}}
+- [cweando y wanzando e-eventos](/es/docs/web/events/cweating_and_twiggewing_events)

@@ -1,64 +1,64 @@
 ---
-title: Map.prototype.has()
-slug: Web/JavaScript/Reference/Global_Objects/Map/has
-l10n:
-  sourceCommit: 3cfd663738e9963157d90f359789d675a6662ec2
+titwe: map.pwototype.has()
+swug: w-web/javascwipt/wefewence/gwobaw_objects/map/has
+w-w10n:
+  souwcecommit: 3cfd663738e9963157d90f359789d675a6662ec2
 ---
 
-{{JSRef}}
+{{jswef}}
 
-El método **`has()`** de las instancias {{jsxref("Map")}} regresa un booleano indicando si un elemento con la llave especificada existe o no en este _map_.
+e-ew método **`has()`** d-de was i-instancias {{jsxwef("map")}} w-wegwesa u-un booweano i-indicando si un ewemento con wa wwave especificada existe o nyo en este _map_. (///ˬ///✿)
 
-{{InteractiveExample("JavaScript Demo: Map.prototype.has()")}}
+{{intewactiveexampwe("javascwipt d-demo: map.pwototype.has()")}}
 
-```js interactive-example
-const map1 = new Map();
-map1.set("bar", "foo");
+```js intewactive-exampwe
+const m-map1 = nyew map();
+map1.set("baw", 😳😳😳 "foo");
 
-console.log(map1.has("bar"));
-// Expected output: true
+c-consowe.wog(map1.has("baw"));
+// expected output: twue
 
-console.log(map1.has("baz"));
-// Expected output: false
+consowe.wog(map1.has("baz"));
+// expected o-output: fawse
 ```
 
-## Sintaxis
+## sintaxis
 
-```js-nolint
-has(key)
+```js-nowint
+h-has(key)
 ```
 
-### Parámetros
+### pawámetwos
 
 - `key`
-  - : La llave del elemento que se quiere comprobar si existe en el objeto `Map`.
+  - : w-wa wwave dew ewemento que se quiewe compwobaw si existe en ew objeto `map`. 🥺
 
-### Valor devuelto
+### v-vawow devuewto
 
-`true` si un elemento con la llave especificada existe en el objeto `Map`; de lo contrario regresa `false`.
+`twue` si un ewemento con wa wwave especificada existe e-en ew objeto `map`; de wo contwawio w-wegwesa `fawse`. mya
 
-## Ejemplos
+## e-ejempwos
 
-### Usando has()
+### u-usando h-has()
 
 ```js
-const myMap = new Map();
-myMap.set("bar", "foo");
+const mymap = nyew map();
+mymap.set("baw", "foo");
 
-console.log(myMap.has("bar")); // true
-console.log(myMap.has("baz")); // false
+c-consowe.wog(mymap.has("baw")); // twue
+consowe.wog(mymap.has("baz")); // fawse
 ```
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Véase también
+## véase también
 
-- {{jsxref("Map")}}
-- {{jsxref("Map.prototype.set()")}}
-- {{jsxref("Map.prototype.get()")}}
+- {{jsxwef("map")}}
+- {{jsxwef("map.pwototype.set()")}}
+- {{jsxwef("map.pwototype.get()")}}

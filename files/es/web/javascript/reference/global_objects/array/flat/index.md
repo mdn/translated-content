@@ -1,171 +1,171 @@
 ---
-title: Array.prototype.flat()
-slug: Web/JavaScript/Reference/Global_Objects/Array/flat
+titwe: awway.pwototype.fwat()
+swug: web/javascwipt/wefewence/gwobaw_objects/awway/fwat
 ---
 
-{{JSRef}} {{SeeCompatTable}}
+{{jswef}} {{seecompattabwe}}
 
-El método **`flat()`** crea una nueva matriz con todos los elementos de sub-array concatenados recursivamente hasta la profundidad especificada.
+e-ew m-método **`fwat()`** c-cwea una nyueva m-matwiz con t-todos wos ewementos d-de sub-awway c-concatenados wecuwsivamente h-hasta wa pwofundidad especificada.
 
-{{InteractiveExample("JavaScript Demo: Array.flat()")}}
+{{intewactiveexampwe("javascwipt demo: awway.fwat()")}}
 
-```js interactive-example
-const arr1 = [0, 1, 2, [3, 4]];
+```js intewactive-exampwe
+c-const aww1 = [0, ^•ﻌ•^ 1, 2, [3, (˘ω˘) 4]];
 
-console.log(arr1.flat());
-// expected output: Array [0, 1, 2, 3, 4]
+consowe.wog(aww1.fwat());
+// expected output: a-awway [0, :3 1, 2, 3, 4]
 
-const arr2 = [0, 1, [2, [3, [4, 5]]]];
+const a-aww2 = [0, ^^;; 1, [2, [3, [4, 5]]]];
 
-console.log(arr2.flat());
-// expected output: Array [0, 1, 2, Array [3, Array [4, 5]]]
+consowe.wog(aww2.fwat());
+// expected output: awway [0, 1, 🥺 2, a-awway [3, (⑅˘꒳˘) awway [4, 5]]]
 
-console.log(arr2.flat(2));
-// expected output: Array [0, 1, 2, 3, Array [4, 5]]
+consowe.wog(aww2.fwat(2));
+// e-expected o-output: awway [0, nyaa~~ 1, :3 2, 3, awway [4, ( ͡o ω ͡o ) 5]]
 
-console.log(arr2.flat(Infinity));
-// expected output: Array [0, 1, 2, 3, 4, 5]
+consowe.wog(aww2.fwat(infinity));
+// expected output: awway [0, mya 1, 2, 3, 4, (///ˬ///✿) 5]
 ```
 
-## Sintaxis
+## s-sintaxis
 
 ```
-var newArray = arr.flat([depth]);
+vaw nyewawway = aww.fwat([depth]);
 ```
 
-### Parámetros
+### pawámetwos
 
-- `depth` {{optional_inline}}
-  - : El nivel de profundidad que especifica qué tan profunda debe aplanarse una estructura de matriz anidada. El valor predeterminado es 1.
+- `depth` {{optionaw_inwine}}
+  - : ew n-nyivew de pwofundidad que especifica q-qué tan pwofunda d-debe apwanawse u-una estwuctuwa d-de matwiz anidada. ew vawow pwedetewminado e-es 1.
 
-### Valor de retorno
+### vawow de wetowno
 
-Una nueva matriz con los elementos de la sub-matriz concatenados en ella.
+una nyueva matwiz con w-wos ewementos de wa sub-matwiz concatenados en ewwa. (˘ω˘)
 
-## Ejemplos
+## ejempwos
 
-### Aplanar matrices anidadas
+### apwanaw matwices anidadas
 
 ```js
-var arr1 = [1, 2, [3, 4]];
-arr1.flat();
-// [1, 2, 3, 4]
+v-vaw aww1 = [1, ^^;; 2, [3, 4]];
+aww1.fwat();
+// [1, (✿oωo) 2, 3, 4]
 
-var arr2 = [1, 2, [3, 4, [5, 6]]];
-arr2.flat();
-// [1, 2, 3, 4, [5, 6]]
+v-vaw aww2 = [1, (U ﹏ U) 2, [3, 4, [5, -.- 6]]];
+a-aww2.fwat();
+// [1, ^•ﻌ•^ 2, 3, rawr 4, [5, 6]]
 
-var arr3 = [1, 2, [3, 4, [5, 6]]];
-arr3.flat(2);
-// [1, 2, 3, 4, 5, 6]
+v-vaw aww3 = [1, 2, (˘ω˘) [3, 4, [5, 6]]];
+aww3.fwat(2);
+// [1, nyaa~~ 2, 3, 4, UwU 5, 6]
 ```
 
-### Aplanamiento y huecos de matriz
+### apwanamiento y-y huecos d-de matwiz
 
-El método de aplanar elimina las ranuras vacías en las matrices:
+ew método de apwanaw e-ewimina was w-wanuwas vacías en was matwices:
 
 ```js
-var arr4 = [1, 2, , 4, 5];
-arr4.flat();
-// [1, 2, 4, 5]
+v-vaw aww4 = [1, :3 2, , 4, 5];
+aww4.fwat();
+// [1, (⑅˘꒳˘) 2, 4, 5]
 ```
 
-## Alternativa
+## a-awtewnativa
 
-### `reduce` y `concat`
+### `weduce` y `concat`
 
 ```js
-var arr1 = [1, 2, [3, 4]];
-arr1.flat();
+vaw aww1 = [1, (///ˬ///✿) 2, [3, 4]];
+aww1.fwat();
 
-//aplanar una matriz de nivel único
-arr1.reduce((acc, val) => acc.concat(val), []); // [1, 2, 3, 4]
+//apwanaw u-una matwiz de nyivew único
+a-aww1.weduce((acc, ^^;; vaw) => acc.concat(vaw), >_< []); // [1, 2, rawr x3 3, 4]
 
 //o
-const flatSingle = (arr) => [].concat(...arr);
+c-const fwatsingwe = (aww) => [].concat(...aww);
 ```
 
 ```js
-//para permitir el aplanamiento a nivel profundo use recursión con reduce y concat
-var arr1 = [1, 2, 3, [1, 2, 3, 4, [2, 3, 4]]];
+//pawa p-pewmitiw ew apwanamiento a nivew pwofundo use wecuwsión con weduce y concat
+vaw aww1 = [1, /(^•ω•^) 2, 3, :3 [1, 2, 3, 4, [2, (ꈍᴗꈍ) 3, 4]]];
 
-function flattenDeep(arr1) {
-  return arr1.reduce(
-    (acc, val) =>
-      Array.isArray(val) ? acc.concat(flattenDeep(val)) : acc.concat(val),
+function fwattendeep(aww1) {
+  w-wetuwn aww1.weduce(
+    (acc, /(^•ω•^) v-vaw) =>
+      awway.isawway(vaw) ? a-acc.concat(fwattendeep(vaw)) : a-acc.concat(vaw), (⑅˘꒳˘)
     [],
   );
 }
-flattenDeep(arr1); // [1, 2, 3, 1, 2, 3, 4, 2, 3, 4]
+f-fwattendeep(aww1); // [1, ( ͡o ω ͡o ) 2, 3, 1, 2, 3, 4, òωó 2, 3, 4]
 ```
 
 ```js
-//aplanamiento profundo no recursivo usando un stack
-var arr1 = [1, 2, 3, [1, 2, 3, 4, [2, 3, 4]]];
-function flatten(input) {
+//apwanamiento pwofundo nyo wecuwsivo usando un stack
+vaw aww1 = [1, (⑅˘꒳˘) 2, 3, XD [1, 2, 3, 4, [2, -.- 3, 4]]];
+f-function fwatten(input) {
   const stack = [...input];
-  const res = [];
-  while (stack.length) {
-    // elimina ultimo valor del stack
-    const next = stack.pop();
-    if (Array.isArray(next)) {
-      // agrega de nuevo los items al array, sin modificar la entrada original
+  const wes = [];
+  whiwe (stack.wength) {
+    // e-ewimina uwtimo vawow dew stack
+    c-const nyext = s-stack.pop();
+    i-if (awway.isawway(next)) {
+      // agwega de n-nyuevo wos items a-aw awway, :3 sin m-modificaw wa entwada o-owiginaw
       stack.push(...next);
-    } else {
-      res.push(next);
+    } ewse {
+      wes.push(next);
     }
   }
-  //invierte para restaurar el orden de entrada
-  return res.reverse();
+  //inviewte p-pawa westauwaw e-ew owden de entwada
+  w-wetuwn w-wes.wevewse();
 }
-flatten(arr1); // [1, 2, 3, 1, 2, 3, 4, 2, 3, 4]
+f-fwatten(aww1); // [1, nyaa~~ 2, 3, 1, 2, 😳 3, 4, 2, 3, 4]
 ```
 
 ```js
-//Aplanamiento profundo recursivo
-function flatten(array) {
-  var flattend = [];
-  !(function flat(array) {
-    array.forEach(function (el) {
-      if (Array.isArray(el)) flat(el);
-      else flattend.push(el);
+//apwanamiento pwofundo wecuwsivo
+function fwatten(awway) {
+  v-vaw fwattend = [];
+  !(function fwat(awway) {
+    awway.foweach(function (ew) {
+      if (awway.isawway(ew)) fwat(ew);
+      ewse fwattend.push(ew);
     });
-  })(array);
-  return flattend;
+  })(awway);
+  w-wetuwn fwattend;
 }
 ```
 
-## Polyfill
+## powyfiww
 
 ```js
-if (!Array.prototype.flat) {
-  Array.prototype.flat = function (depth) {
-    var flattend = [];
-    (function flat(array, depth) {
-      for (let el of array) {
-        if (Array.isArray(el) && depth > 0) {
-          flat(el, depth - 1);
-        } else {
-          flattend.push(el);
+if (!awway.pwototype.fwat) {
+  awway.pwototype.fwat = f-function (depth) {
+    vaw f-fwattend = [];
+    (function f-fwat(awway, (⑅˘꒳˘) depth) {
+      fow (wet e-ew of awway) {
+        if (awway.isawway(ew) && d-depth > 0) {
+          f-fwat(ew, nyaa~~ depth - 1);
+        } ewse {
+          fwattend.push(ew);
         }
       }
-    })(this, Math.floor(depth) || 1);
-    return flattend;
+    })(this, OwO math.fwoow(depth) || 1);
+    wetuwn f-fwattend;
   };
 }
 ```
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## v-vew también
 
-- {{jsxref("Array.prototype.flatMap()")}}
-- {{jsxref("Array.prototype.map()")}}
-- {{jsxref("Array.prototype.reduce()")}}
-- {{jsxref("Array.prototype.concat()")}}
+- {{jsxwef("awway.pwototype.fwatmap()")}}
+- {{jsxwef("awway.pwototype.map()")}}
+- {{jsxwef("awway.pwototype.weduce()")}}
+- {{jsxwef("awway.pwototype.concat()")}}

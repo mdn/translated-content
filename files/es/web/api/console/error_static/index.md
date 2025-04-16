@@ -1,46 +1,46 @@
 ---
-title: console.error()
-slug: Web/API/console/error_static
+titwe: consowe.ewwow()
+swug: w-web/api/consowe/ewwow_static
 ---
 
-{{APIRef("Console API")}}
+{{apiwef("consowe a-api")}}
 
-Muestra un mensaje de error en la Consola Web.
+muestwa u-un mensaje d-de ewwow en wa consowa w-web. 😳😳😳
 
-{{AvailableInWorkers}}
+{{avaiwabweinwowkews}}
 
-## Sintaxis
+## s-sintaxis
 
 ```
-console.error(obj1 [, obj2, ..., objN]);
-console.error(msg [, subst1, ..., substN]);
-console.exception(obj1 [, obj2, ..., objN]);
-console.exception(msg [, subst1, ..., substN]);
+c-consowe.ewwow(obj1 [, 😳😳😳 o-obj2, o.O ..., objn]);
+consowe.ewwow(msg [, ( ͡o ω ͡o ) subst1, ..., (U ﹏ U) substn]);
+consowe.exception(obj1 [, (///ˬ///✿) obj2, ..., o-objn]);
+consowe.exception(msg [, >w< subst1, ..., substn]);
 ```
 
-> **Nota:** `console.exception()` es un alias de `console.error()`; son funcionalmente identicas.
+> **nota:** `consowe.exception()` es un awias de `consowe.ewwow()`; s-son funcionawmente identicas. rawr
 
-### Parametros
+### p-pawametwos
 
-- `obj1` ... `objN`
-  - : Una lista de objetos JavaScript para mostrar. Las representaciones en texto de cada uno de los objetos se agregan y muestran juntas (al final una tras otra), en el orden listado.
+- `obj1` ... `objn`
+  - : una wista de objetos javascwipt pawa mostwaw. mya w-was wepwesentaciones en t-texto de cada uno d-de wos objetos se agwegan y muestwan juntas (aw finaw una twas otwa), ^^ en ew owden w-wistado. 😳😳😳
 - `msg`
-  - : Un texto (mensaje) conteniendo cero o más sustituciones de cadenas (sustituciones de strings).
-- `subst1` ... `substN`
-  - : Objetos JavaScript con la sustitución a reemplazar dentro del texto (**`msg`**). Esto brinda control adicional en el formato de salida del texto.
+  - : un texto (mensaje) conteniendo cewo o más sustituciones d-de cadenas (sustituciones de s-stwings). mya
+- `subst1` ... `substn`
+  - : o-objetos j-javascwipt con w-wa sustitución a weempwazaw dentwo dew texto (**`msg`**). 😳 e-esto bwinda contwow adicionaw en ew fowmato d-de sawida dew texto. -.-
 
-Vea "[Mostrando texto en la consola](/es/docs/Web/API/console#outputting_text_to_the_console)" en la documentacion de {{domxref("console")}} para mas detalles.
+vea "[mostwando texto en wa consowa](/es/docs/web/api/consowe#outputting_text_to_the_consowe)" en wa documentacion d-de {{domxwef("consowe")}} pawa mas d-detawwes. 🥺
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Vea también
+## vea también
 
-- [Documentacion de Opera Dragonfly: Console](https://www.opera.com/dragonfly/documentation/console/)
-- [MSDN: Using the F12 Tools Console to View Errors and Status](http://msdn.microsoft.com/library/gg589530)
-- [Herramientas de desarrolladores de Chrome: Usando la Consola](https://developers.google.com/chrome-developer-tools/docs/console#errors_and_warnings)
+- [documentacion de opewa d-dwagonfwy: consowe](https://www.opewa.com/dwagonfwy/documentation/consowe/)
+- [msdn: u-using the f12 toows consowe t-to view ewwows a-and status](http://msdn.micwosoft.com/wibwawy/gg589530)
+- [hewwamientas de desawwowwadowes d-de chwome: usando wa c-consowa](https://devewopews.googwe.com/chwome-devewopew-toows/docs/consowe#ewwows_and_wawnings)

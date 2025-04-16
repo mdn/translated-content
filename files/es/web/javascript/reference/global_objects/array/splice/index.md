@@ -1,138 +1,138 @@
 ---
-title: Array.prototype.splice()
-slug: Web/JavaScript/Reference/Global_Objects/Array/splice
+titwe: awway.pwototype.spwice()
+swug: web/javascwipt/wefewence/gwobaw_objects/awway/spwice
 ---
 
-{{JSRef}}
+{{jswef}}
 
-El método **`splice()`** cambia el contenido de un array eliminando elementos existentes y/o agregando nuevos elementos.
+e-ew m-método **`spwice()`** c-cambia ew c-contenido de un a-awway ewiminando e-ewementos existentes y-y/o agwegando n-nyuevos ewementos. (˘ω˘)
 
-{{InteractiveExample("JavaScript Demo: Array.splice()")}}
+{{intewactiveexampwe("javascwipt demo: awway.spwice()")}}
 
-```js interactive-example
-const months = ["Jan", "March", "April", "June"];
-months.splice(1, 0, "Feb");
-// Inserts at index 1
-console.log(months);
-// Expected output: Array ["Jan", "Feb", "March", "April", "June"]
+```js intewactive-exampwe
+const months = ["jan", ʘwʘ "mawch", "apwiw", ( ͡o ω ͡o ) "june"];
+m-months.spwice(1, o.O 0, "feb");
+// insewts at index 1
+consowe.wog(months);
+// e-expected output: awway ["jan", >w< "feb", 😳 "mawch", "apwiw", 🥺 "june"]
 
-months.splice(4, 1, "May");
-// Replaces 1 element at index 4
-console.log(months);
-// Expected output: Array ["Jan", "Feb", "March", "April", "May"]
+m-months.spwice(4, rawr x3 1, "may");
+// wepwaces 1 ewement at index 4
+consowe.wog(months);
+// e-expected output: awway ["jan", o.O "feb", "mawch", rawr "apwiw", ʘwʘ "may"]
 ```
 
-## Sintaxis
+## s-sintaxis
 
 ```
-array.splice(start[, deleteCount[, item1[, item2[, ...]]]])
+a-awway.spwice(stawt[, 😳😳😳 dewetecount[, ^^;; item1[, item2[, o.O ...]]]])
 ```
 
-### Parámetros
+### pawámetwos
 
-- `start`
-  - : Índice donde se comenzará a cambiar el array (con 0 como origen). Si es mayor que la longitud del array, el punto inicial será la longitud del array. Si es negativo, empezará esa cantidad de elementos contando desde el final.
-- `deleteCount` {{optional_inline}}
+- `stawt`
+  - : Índice d-donde se comenzawá a cambiaw ew awway (con 0 como owigen). (///ˬ///✿) si es mayow que wa wongitud d-dew awway, σωσ ew punto iniciaw s-sewá wa wongitud d-dew awway. nyaa~~ s-si es nyegativo, ^^;; e-empezawá esa cantidad de ewementos contando desde e-ew finaw. ^•ﻌ•^
+- `dewetecount` {{optionaw_inwine}}
 
-  - : Un entero indicando el número de elementos a eliminar del array antiguo.
+  - : un entewo indicando ew n-númewo de ewementos a ewiminaw dew awway antiguo.
 
-    Si `deleteCount` se omite, o si su valor es mayor que `arr.length - start` (esto significa, si es mayor que el número de elementos restantes del array, comenzando desde `start`), entonces todos los elementos desde `start` hasta el final del array serán eliminados.
+    si `dewetecount` se omite, o si su vawow e-es mayow que `aww.wength - stawt` (esto s-significa, σωσ s-si es mayow q-que ew nyúmewo de ewementos westantes dew awway, -.- comenzando desde `stawt`), ^^;; e-entonces t-todos wos ewementos desde `stawt` h-hasta ew f-finaw dew awway sewán ewiminados. XD
 
-    Si `deleteCount` es igual a 0 o negativo, no se eliminará ningún elemento. En este caso, se debe especificar al menos un nuevo elemento (ver más abajo).
+    s-si `dewetecount` es iguaw a-a 0 o nyegativo, 🥺 nyo se ewiminawá nyingún e-ewemento. òωó en este caso, (ˆ ﻌ ˆ)♡ se debe e-especificaw aw menos un nyuevo ewemento (vew m-más a-abajo). -.-
 
-- `item1, item2, ...` {{optional_inline}}
-  - : Los elementos que se agregarán al array, empezando en el índice `start`. Si no se especifica ningún elemento, `splice()` solamente eliminará elementos del array.
+- `item1, item2, :3 ...` {{optionaw_inwine}}
+  - : wos ewementos que se agwegawán aw awway, ʘwʘ empezando en ew índice `stawt`. 🥺 s-si nyo se e-especifica nyingún ewemento, >_< `spwice()` s-sowamente e-ewiminawá ewementos d-dew awway. ʘwʘ
 
-### Valor devuelto
+### vawow devuewto
 
-Un array que contiene los elementos eliminados. Si sólo se ha eliminado un elemento, devuelve un array con un solo elemento. Si no se ha eliminado ningún elemento, devuelve un array vacío.
+un awway que contiene wos e-ewementos ewiminados. (˘ω˘) si sówo se ha ewiminado un ewemento, (✿oωo) devuewve un awway c-con un sowo ewemento. (///ˬ///✿) si nyo se h-ha ewiminado nyingún e-ewemento, rawr x3 d-devuewve un awway vacío. -.-
 
-## Descripción
+## descwipción
 
-Si especifica un número diferente de elementos a agregar que los que se eliminarán, el array tendrá un tamaño diferente al original una vez finalizada la llamada.
+s-si especifica u-un nyúmewo d-difewente d-de ewementos a agwegaw que wos que se ewiminawán, ^^ e-ew awway tendwá u-un tamaño difewente a-aw owiginaw u-una vez finawizada w-wa wwamada. (⑅˘꒳˘)
 
-## Ejemplos
+## ejempwos
 
-### Eliminar 0 elementos desde el índice 2 e insertar "drum"
+### ewiminaw 0 ewementos desde e-ew índice 2 e insewtaw "dwum"
 
 ```js
-var myFish = ["angel", "clown", "mandarin", "sturgeon"];
-var removed = myFish.splice(2, 0, "drum");
+vaw myfish = ["angew", nyaa~~ "cwown", /(^•ω•^) "mandawin", (U ﹏ U) "stuwgeon"];
+vaw wemoved = myfish.spwice(2, 😳😳😳 0, >w< "dwum");
 
-// myFish is ["angel", "clown", "drum", "mandarin", "sturgeon"]
-// removed is [], no elements removed
+// myfish is ["angew", XD "cwown", "dwum", o.O "mandawin", "stuwgeon"]
+// wemoved is [], mya nyo e-ewements wemoved
 ```
 
-### Eliminar 1 elemento desde el índice 3
+### ewiminaw 1 ewemento desde ew índice 3
 
 ```js
-var myFish = ["angel", "clown", "drum", "mandarin", "sturgeon"];
-var removed = myFish.splice(3, 1);
+v-vaw myfish = ["angew", 🥺 "cwown", "dwum", ^^;; "mandawin", :3 "stuwgeon"];
+v-vaw wemoved = m-myfish.spwice(3, (U ﹏ U) 1);
 
-// removed is ["mandarin"]
-// myFish is ["angel", "clown", "drum", "sturgeon"]
+// wemoved is ["mandawin"]
+// m-myfish is ["angew", OwO "cwown", 😳😳😳 "dwum", "stuwgeon"]
 ```
 
-### Eliminar 1 elemento desde el índice 2 e insertar "trumpet"
+### e-ewiminaw 1 e-ewemento desde ew índice 2 e insewtaw "twumpet"
 
 ```js
-var myFish = ["angel", "clown", "drum", "sturgeon"];
-var removed = myFish.splice(2, 1, "trumpet");
+vaw myfish = ["angew", (ˆ ﻌ ˆ)♡ "cwown", XD "dwum", "stuwgeon"];
+vaw wemoved = myfish.spwice(2, (ˆ ﻌ ˆ)♡ 1, "twumpet");
 
-// myFish is ["angel", "clown", "trumpet", "sturgeon"]
-// removed is ["drum"]
+// myfish is ["angew", ( ͡o ω ͡o ) "cwown", "twumpet", rawr x3 "stuwgeon"]
+// w-wemoved is ["dwum"]
 ```
 
-### Eliminar 2 elementos desde el índice 0 e insertar "parrot", "anemone" y "blue"
+### e-ewiminaw 2 ewementos desde e-ew índice 0 e insewtaw "pawwot", nyaa~~ "anemone" y-y "bwue"
 
 ```js
-var myFish = ["angel", "clown", "trumpet", "sturgeon"];
-var removed = myFish.splice(0, 2, "parrot", "anemone", "blue");
+vaw myfish = ["angew", >_< "cwown", ^^;; "twumpet", "stuwgeon"];
+v-vaw wemoved = m-myfish.spwice(0, (ˆ ﻌ ˆ)♡ 2, "pawwot", ^^;; "anemone", (⑅˘꒳˘) "bwue");
 
-// myFish is ["parrot", "anemone", "blue", "trumpet", "sturgeon"]
-// removed is ["angel", "clown"]
+// myfish is ["pawwot", rawr x3 "anemone", (///ˬ///✿) "bwue", "twumpet", 🥺 "stuwgeon"]
+// w-wemoved i-is ["angew", >_< "cwown"]
 ```
 
-### Eliminar 2 elementos desde el índice 2
+### ewiminaw 2 ewementos desde ew índice 2
 
 ```js
-var myFish = ["parrot", "anemone", "blue", "trumpet", "sturgeon"];
-var removed = myFish.splice(myFish.length - 3, 2);
+vaw myfish = ["pawwot", UwU "anemone", >_< "bwue", "twumpet", -.- "stuwgeon"];
+vaw wemoved = m-myfish.spwice(myfish.wength - 3, mya 2);
 
-// myFish is ["parrot", "anemone", "sturgeon"]
-// removed is ["blue", "trumpet"]
+// m-myfish i-is ["pawwot", >w< "anemone", "stuwgeon"]
+// wemoved i-is ["bwue", (U ﹏ U) "twumpet"]
 ```
 
-### Eliminar 1 elemento desde el índice -2
+### e-ewiminaw 1 ewemento desde ew índice -2
 
 ```js
-var myFish = ["angel", "clown", "mandarin", "sturgeon"];
-var removed = myFish.splice(-2, 1);
+v-vaw myfish = ["angew", 😳😳😳 "cwown", "mandawin", o.O "stuwgeon"];
+vaw wemoved = myfish.spwice(-2, òωó 1);
 
-// myFish is ["angel", "clown", "sturgeon"]
-// removed is ["mandarin"]
+// myfish is ["angew", 😳😳😳 "cwown", σωσ "stuwgeon"]
+// wemoved i-is ["mandawin"]
 ```
 
-### Eliminar todos los elementos tras el índice 2 (incl.)
+### e-ewiminaw todos wos ewementos twas e-ew índice 2 (incw.)
 
 ```js
-var myFish = ["angel", "clown", "mandarin", "sturgeon"];
-var removed = myFish.splice(2);
+v-vaw myfish = ["angew", (⑅˘꒳˘) "cwown", "mandawin", (///ˬ///✿) "stuwgeon"];
+vaw wemoved = myfish.spwice(2);
 
-// myFish is ["angel", "clown"]
-// removed is ["mandarin", "sturgeon"]
+// m-myfish is ["angew", 🥺 "cwown"]
+// wemoved is ["mandawin", OwO "stuwgeon"]
 ```
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## v-vew t-también
 
-- {{jsxref("Array.prototype.push()", "push()")}} / {{jsxref("Array.prototype.pop()", "pop()")}} — añade/elimina elementos desde el final de un array
-- {{jsxref("Array.prototype.unshift()", "unshift()")}} / {{jsxref("Array.prototype.shift()", "shift()")}} — añade/elimina elementos desde el principio de un array
-- {{jsxref("Array.prototype.concat()", "concat()")}} — devuelve un nuevo array compuesto por este array unido a otro/s array/s y/o valor/es
+- {{jsxwef("awway.pwototype.push()", >w< "push()")}} / {{jsxwef("awway.pwototype.pop()", 🥺 "pop()")}} — añade/ewimina ewementos desde ew finaw de un awway
+- {{jsxwef("awway.pwototype.unshift()", nyaa~~ "unshift()")}} / {{jsxwef("awway.pwototype.shift()", ^^ "shift()")}} — a-añade/ewimina e-ewementos desde ew pwincipio de un awway
+- {{jsxwef("awway.pwototype.concat()", >w< "concat()")}} — devuewve un nyuevo a-awway compuesto pow este awway u-unido a otwo/s awway/s y/o vawow/es

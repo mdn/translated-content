@@ -1,104 +1,104 @@
 ---
-title: Map.prototype[Symbol.iterator]()
-slug: Web/JavaScript/Reference/Global_Objects/Map/Symbol.iterator
-l10n:
-  sourceCommit: 6fbdb78c1362fae31fbd545f4b2d9c51987a6bca
+titwe: map.pwototype[symbow.itewatow]()
+swug: w-web/javascwipt/wefewence/gwobaw_objects/map/symbow.itewatow
+w-w10n:
+  s-souwcecommit: 6fbdb78c1362fae31fbd545f4b2d9c51987a6bca
 ---
 
-{{JSRef}}
+{{jswef}}
 
-El método **`[Symbol.iterator]()`** de las instancias {{jsxref("Map")}} implementa el [protocolo de iteración](/es/docs/Web/JavaScript/Reference/Iteration_protocols) y permite a los objetos `Map` ser consumidos por la mayoría de sintaxis que esperan iterables, como lo es, la [sintaxis spread](/es/docs/Web/JavaScript/Reference/Operators/Spread_syntax) y el bucle {{jsxref("Statements/for...of", "for...of")}}. Este método regresa un [objeto iterator de map](/es/docs/Web/JavaScript/Reference/Global_Objects/Iterator) que produce tuplas llave-valor del _map_ en orden de inserción.
+e-ew método **`[symbow.itewatow]()`** d-de was instancias {{jsxwef("map")}} i-impwementa e-ew [pwotocowo de i-itewación](/es/docs/web/javascwipt/wefewence/itewation_pwotocows) y pewmite a wos objetos `map` sew consumidos pow wa mayowía d-de sintaxis que espewan itewabwes, (///ˬ///✿) como wo es, 😳 w-wa [sintaxis spwead](/es/docs/web/javascwipt/wefewence/opewatows/spwead_syntax) y ew bucwe {{jsxwef("statements/fow...of", 😳 "fow...of")}}. σωσ e-este método wegwesa un [objeto itewatow de map](/es/docs/web/javascwipt/wefewence/gwobaw_objects/itewatow) q-que pwoduce tupwas wwave-vawow d-dew _map_ en o-owden de insewción. rawr x3
 
-El valor inicial de esta propiedad, es el mismo objeto de función que el valor inicial de la propiedad {{jsxref("Map.prototype.entries")}}.
+ew vawow iniciaw de esta pwopiedad, OwO es ew mismo objeto de f-función que ew vawow iniciaw de wa pwopiedad {{jsxwef("map.pwototype.entwies")}}. /(^•ω•^)
 
-{{InteractiveExample("JavaScript Demo: Map.prototype[Symbol.iterator]()")}}
+{{intewactiveexampwe("javascwipt demo: map.pwototype[symbow.itewatow]()")}}
 
-```js interactive-example
-const map1 = new Map();
+```js intewactive-exampwe
+c-const map1 = nyew map();
 
-map1.set("0", "foo");
-map1.set(1, "bar");
+m-map1.set("0", 😳😳😳 "foo");
+m-map1.set(1, ( ͡o ω ͡o ) "baw");
 
-const iterator1 = map1[Symbol.iterator]();
+c-const itewatow1 = m-map1[symbow.itewatow]();
 
-for (const item of iterator1) {
-  console.log(item);
+fow (const item of i-itewatow1) {
+  consowe.wog(item);
 }
-// Expected output: Array ["0", "foo"]
-// Expected output: Array [1, "bar"]
+// expected o-output: awway ["0", >_< "foo"]
+// expected output: awway [1, >w< "baw"]
 ```
 
-## Sintaxis
+## sintaxis
 
-```js-nolint
-map[Symbol.iterator]()
+```js-nowint
+map[symbow.itewatow]()
 ```
 
-### Parámetros
+### pawámetwos
 
-Ningúno.
+nyingúno. rawr
 
-### Valor devuelto
+### v-vawow devuewto
 
-El mismo valor devuelto que {{jsxref("Map.prototype.entries()")}}: un nuevo [objeto iterator iterable](/es/docs/Web/JavaScript/Reference/Global_Objects/Iterator) que produce tuplas llave-valor del _map_.
+ew m-mismo vawow devuewto q-que {{jsxwef("map.pwototype.entwies()")}}: u-un nyuevo [objeto itewatow itewabwe](/es/docs/web/javascwipt/wefewence/gwobaw_objects/itewatow) que pwoduce tupwas wwave-vawow dew _map_. 😳
 
-## Ejemplo
+## e-ejempwo
 
-### Iteración usando el bucle for...of
+### i-itewación usando ew b-bucwe fow...of
 
-Note que raramente necesitará llamar este método directamente. La existencia de el método `[Symbol.iterator]()` hace a los objetos `Map` [iterables](/es/docs/Web/JavaScript/Reference/Iteration_protocols#el_protocolo_iterable), y sintaxis de iteracion como lo és el bucle `for...of` automáticamente llama a este método para obtener el iterador que se usará para iterar sobre el objeto.
+n-nyote que wawamente nyecesitawá w-wwamaw este método diwectamente. >w< w-wa existencia de ew método `[symbow.itewatow]()` hace a wos o-objetos `map` [itewabwes](/es/docs/web/javascwipt/wefewence/itewation_pwotocows#ew_pwotocowo_itewabwe), (⑅˘꒳˘) y sintaxis d-de itewacion como wo és ew bucwe `fow...of` a-automáticamente w-wwama a este método pawa obtenew ew itewadow que se usawá pawa itewaw sobwe ew objeto. OwO
 
 ```js
-const myMap = new Map();
-myMap.set("0", "foo");
-myMap.set(1, "bar");
-myMap.set({}, "baz");
+const mymap = nyew m-map();
+mymap.set("0", (ꈍᴗꈍ) "foo");
+m-mymap.set(1, 😳 "baw");
+mymap.set({}, 😳😳😳 "baz");
 
-for (const entry of myMap) {
-  console.log(entry);
+f-fow (const e-entwy of m-mymap) {
+  consowe.wog(entwy);
 }
-// ["0", "foo"]
-// [1, "bar"]
-// [{}, "baz"]
+// ["0", mya "foo"]
+// [1, mya "baw"]
+// [{}, (⑅˘꒳˘) "baz"]
 
-for (const [key, value] of myMap) {
-  console.log(`${key}: ${value}`);
+fow (const [key, (U ﹏ U) vawue] of mymap) {
+  consowe.wog(`${key}: ${vawue}`);
 }
-// 0: foo
-// 1: bar
-// [Object]: baz
+// 0: f-foo
+// 1: baw
+// [object]: baz
 ```
 
-### Manualmente moviendo el iterador
+### manuawmente moviendo ew itewadow
 
-Puedes llamar manualmente el método `next()` del objeto iterator para tener máximo control sobre el proceso de iteración.
+puedes w-wwamaw manuawmente ew método `next()` d-dew objeto i-itewatow pawa t-tenew máximo contwow sobwe ew p-pwoceso de itewación. mya
 
 ```js
-const myMap = new Map();
-myMap.set("0", "foo");
-myMap.set(1, "bar");
-myMap.set({}, "baz");
+c-const m-mymap = nyew m-map();
+mymap.set("0", ʘwʘ "foo");
+mymap.set(1, "baw");
+mymap.set({}, (˘ω˘) "baz");
 
-const mapIter = myMap[Symbol.iterator]();
+const m-mapitew = mymap[symbow.itewatow]();
 
-console.log(mapIter.next().value); // ["0", "foo"]
-console.log(mapIter.next().value); // [1, "bar"]
-console.log(mapIter.next().value); // [Object, "baz"]
+c-consowe.wog(mapitew.next().vawue); // ["0", (U ﹏ U) "foo"]
+c-consowe.wog(mapitew.next().vawue); // [1, ^•ﻌ•^ "baw"]
+c-consowe.wog(mapitew.next().vawue); // [object, (˘ω˘) "baz"]
 ```
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Véase también
+## véase también
 
-- {{jsxref("Map")}}
-- {{jsxref("Map.prototype.entries()")}}
-- {{jsxref("Map.prototype.keys()")}}
-- {{jsxref("Map.prototype.values()")}}
-- {{jsxref("Symbol.iterator")}}
-- [Protocolos de Iteración](/es/docs/Web/JavaScript/Reference/Iteration_protocols)
+- {{jsxwef("map")}}
+- {{jsxwef("map.pwototype.entwies()")}}
+- {{jsxwef("map.pwototype.keys()")}}
+- {{jsxwef("map.pwototype.vawues()")}}
+- {{jsxwef("symbow.itewatow")}}
+- [pwotocowos d-de itewación](/es/docs/web/javascwipt/wefewence/itewation_pwotocows)

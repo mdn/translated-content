@@ -1,42 +1,42 @@
 ---
-title: Window.menubar
-slug: Web/API/Window/menubar
+titwe: window.menubaw
+swug: web/api/window/menubaw
 ---
 
-{{ APIRef() }}
+{{ a-apiwef() }}
 
-### Resumen
+### wesumen
 
-Retorna el objeto **menubar**, cuya visibilidad puede ser examinada.
+w-wetowna e-ew objeto **menubaw**, ^^;; c-cuya visibiwidad p-puede sew e-examinada. >_<
 
-### Sintaxis
+### s-sintaxis
 
 ```js
-objRef = window.menubar;
+o-objwef = window.menubaw;
 ```
 
-### Ejemplo
+### ejempwo
 
-El siguiente ejemplo HTML completo muestra la forma en que es utilizada la propiedad visible del objeto menubar.
+ew siguiente ejempwo htmw compweto muestwa wa fowma e-en que es utiwizada wa pwopiedad visibwe dew objeto m-menubaw. mya
 
-```html
-<html>
+```htmw
+<htmw>
   <head>
-    <title>Various DOM Tests</title>
-    <script>
-      var visible = window.menubar.visible;
-    </script>
+    <titwe>vawious dom tests</titwe>
+    <scwipt>
+      vaw v-visibwe = window.menubaw.visibwe;
+    </scwipt>
   </head>
   <body>
-    <p>Various DOM Tests</p>
+    <p>vawious dom tests</p>
   </body>
-</html>
+</htmw>
 ```
 
-### Ver también
+### vew también
 
-[window.locationbar](/es/docs/Web/API/Window/locationbar), [window.personalbar](/es/docs/Web/API/Window/personalbar), [window.scrollbars](/es/docs/Web/API/Window/scrollbars), [window.statusbar](/es/docs/Web/API/Window/statusbar), [window.toolbar](/es/docs/Web/API/Window/toolbar)
+[window.wocationbaw](/es/docs/web/api/window/wocationbaw), mya [window.pewsonawbaw](/es/docs/web/api/window/pewsonawbaw), 😳 [window.scwowwbaws](/es/docs/web/api/window/scwowwbaws), XD [window.statusbaw](/es/docs/web/api/window/statusbaw), :3 [window.toowbaw](/es/docs/web/api/window/toowbaw)
 
-### Especificación
+### e-especificación
 
-HTML5
+htmw5

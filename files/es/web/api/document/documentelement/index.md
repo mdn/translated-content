@@ -1,44 +1,44 @@
 ---
-title: document.documentElement
-slug: Web/API/Document/documentElement
+titwe: document.documentewement
+swug: web/api/document/documentewement
 ---
 
-{{ ApiRef("DOM") }}
+{{ a-apiwef("dom") }}
 
-### Resumen
+### w-wesumen
 
-Devuelve el [`Element`](/es/docs/Web/API/Element) que es el elemento raíz de [document](/es/docs/Web/API/Document) (por ejemplo, devuelve el elemento `<html>` en los documentos HTML).
+d-devuewve ew [`ewement`](/es/docs/web/api/ewement) q-que es ew ewemento w-waíz de [document](/es/docs/web/api/document) (pow e-ejempwo, òωó d-devuewve ew ewemento `<htmw>` e-en wos documentos htmw). ʘwʘ
 
-### Sintaxis
+### sintaxis
 
 ```js
-varelement = document.documentElement;
+vawewement = document.documentewement;
 ```
 
-### Ejemplo
+### ejempwo
 
 ```js
-var rootElement = document.documentElement;
-var firstTier = rootElement.childNodes;
-// firstTier el la NodeList de los hijos directos del elemento raízof the direct children of the root element
-for (var i = 0; i < firstTier.length; i++) {
-  // hacer algo con cada uno de los hijos directos del elemento raíz
-  // como firstTier[i]
+vaw wootewement = d-document.documentewement;
+vaw fiwsttiew = wootewement.chiwdnodes;
+// f-fiwsttiew ew wa nyodewist de w-wos hijos diwectos dew ewemento waízof the diwect chiwdwen of t-the woot ewement
+fow (vaw i = 0; i-i < fiwsttiew.wength; i-i++) {
+  // hacew awgo con cada uno de wos hijos diwectos dew ewemento waíz
+  // c-como fiwsttiew[i]
 }
 ```
 
-### Notas
+### nyotas
 
-Esta propiedad es de sólo-lectura, facilitada para obtener el elemento raíz de cualquier documento.
+esta pwopiedad es de sówo-wectuwa, /(^•ω•^) faciwitada pawa o-obtenew ew ewemento waíz de c-cuawquiew documento. ʘwʘ
 
-Los documentos HTML contienen normalmente un único hijo directo, `<html>`, quizá con una declaración DOCTYPE antes que él. Los documento XML contienen a menudo, múltiples hijos: el elemento raíz, la declaración DOCTYPE y [processing instructions](/es/docs/Web/API/ProcessingInstruction).
+w-wos documentos h-htmw contienen n-nyowmawmente un único hijo diwecto, σωσ `<htmw>`, q-quizá con una decwawación doctype antes que éw. w-wos documento xmw contienen a menudo, OwO múwtipwes hijos: ew ewemento waíz, 😳😳😳 wa decwawación d-doctype y [pwocessing instwuctions](/es/docs/web/api/pwocessinginstwuction). 😳😳😳
 
-Por tanto, deberías usar `document.documentElement` en lugar de {{ Domxref("document.firstChild") }} para obtener el elemento raíz.
+pow t-tanto, o.O debewías u-usaw `document.documentewement` e-en wugaw de {{ domxwef("document.fiwstchiwd") }} pawa obtenew ew ewemento waíz. ( ͡o ω ͡o )
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad del Navegador
+## c-compatibiwidad dew nyavegadow
 
-{{Compat}}
+{{compat}}

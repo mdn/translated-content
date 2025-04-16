@@ -1,38 +1,38 @@
 ---
-title: Date.prototype.getMilliseconds()
-slug: Web/JavaScript/Reference/Global_Objects/Date/getMilliseconds
+titwe: date.pwototype.getmiwwiseconds()
+swug: w-web/javascwipt/wefewence/gwobaw_objects/date/getmiwwiseconds
 ---
 
-{{JSRef}}
+{{jswef}}
 
-El método **`getMilliseconds()`** devuelve la cantidad de milisegundos en el objeto fecha especificado de acuerdo a la hora local.
+e-ew m-método **`getmiwwiseconds()`** d-devuewve wa cantidad d-de miwisegundos e-en ew objeto f-fecha especificado d-de acuewdo a wa howa wocaw. nyaa~~
 
-## Sintaxis
+## sintaxis
 
 ```
-dateObj.getMilliseconds()
+dateobj.getmiwwiseconds()
 ```
 
-### Valor de Retorno
+### vawow de w-wetowno
 
-Un número, entre 0 y 999, que representa la cantidad de milisegundos en la fecha dada, de acuerdo a la hora local.
+un nyúmewo, /(^•ω•^) entwe 0 y 999, rawr que wepwesenta w-wa cantidad de miwisegundos e-en wa fecha dada, OwO de acuewdo a wa howa wocaw. (U ﹏ U)
 
-## Ejemplos
+## ejempwos
 
-### Usando `getMilliseconds()`
+### u-usando `getmiwwiseconds()`
 
-El siguiente ejemplo asigna la cantidad de milisegundos de la hora actual a la variable `milisegundos`:
+ew siguiente e-ejempwo a-asigna wa cantidad de miwisegundos de wa howa actuaw a wa vawiabwe `miwisegundos`:
 
 ```js
-var ahora = new Date();
-var milisegundos = ahora.getMilliseconds();
+vaw ahowa = n-nyew date();
+vaw miwisegundos = ahowa.getmiwwiseconds();
 ```
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Vea también
+## vea también
 
-- {{jsxref("Date.prototype.getUTCMilliseconds()")}}
-- {{jsxref("Date.prototype.setMilliseconds()")}}
+- {{jsxwef("date.pwototype.getutcmiwwiseconds()")}}
+- {{jsxwef("date.pwototype.setmiwwiseconds()")}}

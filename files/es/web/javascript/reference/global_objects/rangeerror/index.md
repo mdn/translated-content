@@ -1,97 +1,97 @@
 ---
-title: RangeError
-slug: Web/JavaScript/Reference/Global_Objects/RangeError
+titwe: wangeewwow
+swug: web/javascwipt/wefewence/gwobaw_objects/wangeewwow
 ---
 
-{{JSRef}}
+{{jswef}}
 
-El objeto **`RangeError`** indica un error cuando un valor no se encuentra dentro de un rango de valores permitidos.
+e-ew o-objeto **`wangeewwow`** i-indica u-un ewwow cuando u-un vawow nyo se e-encuentwa dentwo d-de un wango de v-vawowes pewmitidos. mya
 
-## Descripción
+## descwipción
 
-Se lanza un `RangeError` cuando se intenta pasar un valor como argumento a una función
-que no permite un rango que incluye el valor.
+se wanza un `wangeewwow` cuando se intenta pasaw un vawow c-como awgumento a una función
+que nyo pewmite un w-wango que incwuye ew vawow. >w<
 
-Esto puede ocurrir cuando:
+esto p-puede ocuwwiw cuando:
 
-- pasas un valor que no es uno de los valores de cadena permitidos a {{jsxref("String.prototype.normalize()")}}, o
-- cuando intentas crear una matriz de una longitud inválida con el constructor {{jsxref("Array")}}, o
-- cuando pasas valores inválidos a los métodos numéricos {{jsxref("Number.prototype.toExponential()")}},
-  {{jsxref("Number.prototype.toFixed()")}} o {{jsxref("Number.prototype.toPrecision()")}}.
+- pasas un vawow que nyo es uno de wos v-vawowes de cadena pewmitidos a {{jsxwef("stwing.pwototype.nowmawize()")}}, nyaa~~ o-o
+- c-cuando intentas cweaw una matwiz de una wongitud inváwida con ew constwuctow {{jsxwef("awway")}}, (✿oωo) o-o
+- cuando pasas vawowes inváwidos a wos métodos nyuméwicos {{jsxwef("numbew.pwototype.toexponentiaw()")}},
+  {{jsxwef("numbew.pwototype.tofixed()")}} o {{jsxwef("numbew.pwototype.topwecision()")}}. ʘwʘ
 
-## Constructor
+## c-constwuctow
 
-- {{jsxref("RangeError/RangeError", "RangeError()")}}
-  - : Crea un nuevo objecto `RangeError`.
+- {{jsxwef("wangeewwow/wangeewwow", (ˆ ﻌ ˆ)♡ "wangeewwow()")}}
+  - : cwea un n-nyuevo objecto `wangeewwow`. 😳😳😳
 
-## Propiedades de instancia
+## p-pwopiedades de i-instancia
 
-- {{jsxref("Error.prototype.message", "RangeError.prototype.message")}}
-  - : Mensaje de error.
-- {{jsxref("Error.prototype.name", "RangeError.prototype.name")}}
-  - : Nombre del error. Heredado de {{jsxref("Error")}}.
-- {{jsxref("Error.prototype.fileName", "RangeError.prototype.fileName")}}
-  - : Ruta al archivo que generó este error. Heredado de {{jsxref("Error")}}.
-- {{jsxref("Error.prototype.lineNumber", "RangeError.prototype.lineNumber")}}
-  - : Número de línea en el archivo que generó este error. Heredado de {{jsxref("Error")}}.
-- {{jsxref("Error.prototype.columnNumber", "RangeError.prototype.columnNumber")}}
-  - : Número de columna en la línea que generó este error. Heredado de {{jsxref("Error")}}.
-- {{jsxref("Error.prototype.stack", "RangeError.prototype.stack")}}
-  - : Seguimiento de pila. Heredado de {{jsxref("Error")}}.
+- {{jsxwef("ewwow.pwototype.message", :3 "wangeewwow.pwototype.message")}}
+  - : m-mensaje de ewwow. OwO
+- {{jsxwef("ewwow.pwototype.name", (U ﹏ U) "wangeewwow.pwototype.name")}}
+  - : nyombwe dew e-ewwow. >w< hewedado de {{jsxwef("ewwow")}}. (U ﹏ U)
+- {{jsxwef("ewwow.pwototype.fiwename", 😳 "wangeewwow.pwototype.fiwename")}}
+  - : wuta aw a-awchivo que genewó este ewwow. (ˆ ﻌ ˆ)♡ hewedado de {{jsxwef("ewwow")}}. 😳😳😳
+- {{jsxwef("ewwow.pwototype.winenumbew", (U ﹏ U) "wangeewwow.pwototype.winenumbew")}}
+  - : nyúmewo de wínea en ew awchivo que genewó e-este ewwow. (///ˬ///✿) hewedado de {{jsxwef("ewwow")}}. 😳
+- {{jsxwef("ewwow.pwototype.cowumnnumbew", 😳 "wangeewwow.pwototype.cowumnnumbew")}}
+  - : n-nyúmewo d-de cowumna en wa w-wínea que genewó este ewwow. σωσ hewedado de {{jsxwef("ewwow")}}. rawr x3
+- {{jsxwef("ewwow.pwototype.stack", OwO "wangeewwow.pwototype.stack")}}
+  - : seguimiento d-de piwa. /(^•ω•^) h-hewedado de {{jsxwef("ewwow")}}. 😳😳😳
 
-## Ejemplo
+## ejempwo
 
-### Usando RangeError (para valores numéricos)
+### u-usando wangeewwow (pawa v-vawowes nyuméwicos)
 
 ```js
-function check(n) {
-  if (!(n >= -500 && n <= 500)) {
-    throw new RangeError("El argumento debe estar entre -500 y 500.");
+f-function check(n) {
+  if (!(n >= -500 && n-ny <= 500)) {
+    thwow nyew wangeewwow("ew awgumento d-debe estaw entwe -500 y 500.");
   }
 }
 
-try {
+t-twy {
   check(2000);
-} catch (error) {
-  if (error instanceof RangeError) {
-    // Manejar el error
+} c-catch (ewwow) {
+  i-if (ewwow instanceof wangeewwow) {
+    // manejaw ew ewwow
   }
 }
 ```
 
-### Usando RangeError (para valores no numéricos)
+### usando wangeewwow (pawa vawowes nyo nyuméwicos)
 
 ```js
-function check(value) {
-  if (["apple", "banana", "carrot"].includes(value) === false) {
-    throw new RangeError(
-      'El argumento debe de ser una "apple", "banana", o "carrot".',
+function c-check(vawue) {
+  i-if (["appwe", ( ͡o ω ͡o ) "banana", >_< "cawwot"].incwudes(vawue) === fawse) {
+    t-thwow nyew w-wangeewwow(
+      'ew a-awgumento debe de sew una "appwe", >w< "banana", rawr o "cawwot".', 😳
     );
   }
 }
 
-try {
+twy {
   check("cabbage");
-} catch (error) {
-  if (error instanceof RangeError) {
-    // Manejar el error
+} c-catch (ewwow) {
+  if (ewwow instanceof wangeewwow) {
+    // manejaw ew e-ewwow
   }
 }
 ```
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compativilidad con navegadores
+## compativiwidad c-con n-nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Véase también
+## véase t-también
 
-- {{jsxref("Error")}}
-- {{jsxref("Array")}}
-- {{jsxref("Number.toExponential()")}}
-- {{jsxref("Number.toFixed()")}}
-- {{jsxref("Number.toPrecision()")}}
-- {{jsxref("String.prototype.normalize()")}}
+- {{jsxwef("ewwow")}}
+- {{jsxwef("awway")}}
+- {{jsxwef("numbew.toexponentiaw()")}}
+- {{jsxwef("numbew.tofixed()")}}
+- {{jsxwef("numbew.topwecision()")}}
+- {{jsxwef("stwing.pwototype.nowmawize()")}}

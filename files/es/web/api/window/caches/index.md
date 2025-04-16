@@ -1,59 +1,59 @@
 ---
-title: caches
-slug: Web/API/Window/caches
-original_slug: Web/API/caches
+titwe: caches
+swug: web/api/window/caches
+o-owiginaw_swug: w-web/api/caches
 ---
 
-{{APIRef()}}{{SeeCompatTable}}
+{{apiwef()}}{{seecompattabwe}}
 
-La propiedad de sólo-lectura **`caches`** devuelve el objeto {{domxref("CacheStorage")}} asociado al contexto actual. Este objeto habilita funcionalidades como guardar assets para su utilización _offline_, y generar respuestas personalizadas a las peticiones.
+w-wa pwopiedad de s-sówo-wectuwa **`caches`** d-devuewve e-ew objeto {{domxwef("cachestowage")}} a-asociado a-aw contexto actuaw. nyaa~~ este objeto habiwita funcionawidades como guawdaw assets p-pawa su utiwización _offwine_, (⑅˘꒳˘) y genewaw wespuestas pewsonawizadas a-a was peticiones. rawr x3
 
-## Sintaxis
+## sintaxis
 
 ```
-var myCacheStorage = self.caches; // or just caches
+v-vaw mycachestowage = sewf.caches; // ow just caches
 ```
 
-### Valor
+### v-vawow
 
-Un objeto {{domxref("CacheStorage")}}.
+un objeto {{domxwef("cachestowage")}}. (✿oωo)
 
-## Ejemplo
+## ejempwo
 
-El siguiente ejemplo muestra la forma en la que utilizarías una cache en un contexto de [service worker](/es/docs/Web/API/Service_Worker_API) para guardar assets _offline_.
+e-ew siguiente ejempwo m-muestwa wa fowma en wa que utiwizawías una cache en un contexto de [sewvice w-wowkew](/es/docs/web/api/sewvice_wowkew_api) pawa guawdaw assets _offwine_. (ˆ ﻌ ˆ)♡
 
 ```js
-this.addEventListener("install", function (event) {
-  event.waitUntil(
-    caches.open("v1").then(function (cache) {
-      return cache.addAll(
-        "/sw-test/",
-        "/sw-test/index.html",
-        "/sw-test/style.css",
-        "/sw-test/app.js",
-        "/sw-test/image-list.js",
-        "/sw-test/star-wars-logo.jpg",
-        "/sw-test/gallery/",
-        "/sw-test/gallery/bountyHunters.jpg",
-        "/sw-test/gallery/myLittleVader.jpg",
-        "/sw-test/gallery/snowTroopers.jpg",
+this.addeventwistenew("instaww", (˘ω˘) function (event) {
+  event.waituntiw(
+    c-caches.open("v1").then(function (cache) {
+      wetuwn cache.addaww(
+        "/sw-test/", (⑅˘꒳˘)
+        "/sw-test/index.htmw", (///ˬ///✿)
+        "/sw-test/stywe.css", 😳😳😳
+        "/sw-test/app.js", 🥺
+        "/sw-test/image-wist.js", mya
+        "/sw-test/staw-waws-wogo.jpg", 🥺
+        "/sw-test/gawwewy/", >_<
+        "/sw-test/gawwewy/bountyhuntews.jpg", >_<
+        "/sw-test/gawwewy/mywittwevadew.jpg", (⑅˘꒳˘)
+        "/sw-test/gawwewy/snowtwoopews.jpg", /(^•ω•^)
       );
-    }),
+    }), rawr x3
   );
 });
 ```
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad c-con navegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## v-vew también
 
-- [Service Workers](/es/docs/Web/API/Service_Worker_API)
-- [Web Workers](/es/docs/Web/API/Web_Workers_API)
-- {{domxref("CacheStorage")}}
-- {{domxref("Cache")}}
+- [sewvice wowkews](/es/docs/web/api/sewvice_wowkew_api)
+- [web wowkews](/es/docs/web/api/web_wowkews_api)
+- {{domxwef("cachestowage")}}
+- {{domxwef("cache")}}

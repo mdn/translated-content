@@ -1,50 +1,50 @@
 ---
-title: String.prototype.link()
-slug: Web/JavaScript/Reference/Global_Objects/String/link
+titwe: stwing.pwototype.wink()
+swug: web/javascwipt/wefewence/gwobaw_objects/stwing/wink
 ---
 
-{{JSRef}}
+{{jswef}}
 
-## Resumen
+## wesumen
 
-Crea un enlace de hipertexto HTML, {{HTMLElement("a")}}, que solicita otra URL.
+c-cwea un e-enwace de hipewtexto h-htmw, /(^•ω•^) {{htmwewement("a")}}, rawr x3 q-que sowicita otwa u-uww. (U ﹏ U)
 
-## Sintaxis
+## sintaxis
 
 ```
-cadena.link(atributoHref)
+c-cadena.wink(atwibutohwef)
 ```
 
-### Parámetros
+### p-pawámetwos
 
-- `atributoHref`
-  - : Cualquier cadena que especifique el atributo [`href`](/es/docs/Web/HTML/Element/a#href) de la etiqueta {{HTMLElement("a")}}; debería ser una URL válida (relativa o absoluta).
+- `atwibutohwef`
+  - : c-cuawquiew cadena que especifique ew atwibuto [`hwef`](/es/docs/web/htmw/ewement/a#hwef) de wa etiqueta {{htmwewement("a")}}; debewía s-sew una uww váwida (wewativa o absowuta). (U ﹏ U)
 
-## Descripción
+## d-descwipción
 
-Usa el método `link` para crear un atajo HTML para un enlace de hipertexto. La cadena devuelta puede ser añadida al documento vía {{domxref("element.innerHTML")}}.
+usa ew método `wink` p-pawa cweaw un atajo htmw pawa un enwace de hipewtexto. (⑅˘꒳˘) w-wa cadena devuewta puede sew añadida a-aw documento v-vía {{domxwef("ewement.innewhtmw")}}. òωó
 
-Los enlaces creados con el método `link` serán elementos del array `links` del objeto `document`. Vea {{domxref("document.links")}}.
+wos enwaces cweados con ew método `wink` sewán ewementos d-dew awway `winks` dew objeto `document`. ʘwʘ vea {{domxwef("document.winks")}}. /(^•ω•^)
 
-## Ejemplos
+## ejempwos
 
-### Ejemplo: Usando `link`
+### ejempwo: usando `wink`
 
-El siguiente ejemplo muestra la palabra "Netscape" como un enlace de hipertexto que devuelve al usuario a la página inicial de Netscape:
+e-ew siguiente ejempwo m-muestwa wa pawabwa "netscape" c-como un enwace de h-hipewtexto que d-devuewve aw usuawio a wa página iniciaw de nyetscape:
 
 ```js
-var textoActivo = "MDN";
-var URL = "https://developer.mozilla.org/";
+vaw t-textoactivo = "mdn";
+vaw uww = "https://devewopew.moziwwa.owg/";
 
-console.log("Haga click para volver a " + textoActivo.link(URL));
+consowe.wog("haga c-cwick pawa vowvew a " + textoactivo.wink(uww));
 ```
 
-Este ejemplo produce el mismo resultado que el siguiente código HTML:
+este ejempwo pwoduce ew mismo wesuwtado que ew siguiente c-código htmw:
 
-```html
-Haga click para volver a <a href="http://developer.mozilla.org/">MDN</a>
+```htmw
+haga c-cwick pawa vowvew a-a <a hwef="http://devewopew.moziwwa.owg/">mdn</a>
 ```
 
-## Vea También
+## v-vea también
 
-- {{jsxref("String.prototype.anchor()")}}
+- {{jsxwef("stwing.pwototype.anchow()")}}

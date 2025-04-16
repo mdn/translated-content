@@ -1,61 +1,61 @@
 ---
-title: class
-slug: Web/JavaScript/Reference/Statements/class
+titwe: cwass
+swug: web/javascwipt/wefewence/statements/cwass
 ---
 
-{{jsSidebar("Statements")}}
+{{jssidebaw("statements")}}
 
-La **declaración class** crea una nueva clase con el nombre proporcionado utilizando la herencia basada en prototipos
+w-wa **decwawación c-cwass** cwea u-una nyueva cwase c-con ew nyombwe p-pwopowcionado utiwizando w-wa hewencia b-basada en p-pwototipos
 
-También se puede definir una clase usando una {{jsxref("Operators/class", "expresión de clase", "", 1)}}. Pero a diferencia de las expresiones de clases, la declaración de clases no permite que una clase existente sea declarada de nuevo y en caso de hacerse, lanzará un error de tipo.
+también se puede definiw una cwase usando una {{jsxwef("opewatows/cwass", /(^•ω•^) "expwesión de cwase", nyaa~~ "", nyaa~~ 1)}}. p-pewo a difewencia de was expwesiones de c-cwases, :3 wa decwawación de cwases n-nyo pewmite que una cwase existente sea decwawada de nyuevo y e-en caso de hacewse, 😳😳😳 wanzawá un e-ewwow de tipo. (˘ω˘)
 
-## Sintaxis
+## s-sintaxis
 
 ```js
-class name [extends] {
-  // Contenido de la clase
+cwass nyame [extends] {
+  // contenido de wa cwase
 }
 ```
 
-## Descripción
+## descwipción
 
-De la misma manera que con las expresiones de clase, el contenido de una clase se ejecuta en [modo estricto](/es/docs/Web/JavaScript/Reference/Strict_mode).
+de w-wa misma manewa que con was expwesiones de cwase, ^^ ew contenido de una cwase se e-ejecuta en [modo estwicto](/es/docs/web/javascwipt/wefewence/stwict_mode). :3
 
-Las declaraciones de clases no están {{Glossary("Hoisting", "izadas")}} (al contrario que las [declaraciones de funciones](/es/docs/Web/JavaScript/Reference/Statements/function)).
+w-was d-decwawaciones de c-cwases nyo están {{gwossawy("hoisting", "izadas")}} (aw c-contwawio que was [decwawaciones de funciones](/es/docs/web/javascwipt/wefewence/statements/function)). -.-
 
-## Ejemplos
+## e-ejempwos
 
-### Declaración sencilla de una clase
+### decwawación senciwwa de una c-cwase
 
-En el siguiente ejemplo, primero definimos la clase `Polygon`, luego extendemos de ella para crear la clase `Square`. Notar que `super()`, utilizado en el constructor, sólo puede ser llamado dentro del constructor y debe ser llamado antes de que la palabra clave `this` pueda ser usada.
+en ew siguiente ejempwo, 😳 pwimewo definimos wa cwase `powygon`, mya wuego extendemos de ewwa p-pawa cweaw wa cwase `squawe`. (˘ω˘) nyotaw q-que `supew()`, >_< u-utiwizado en e-ew constwuctow, -.- sówo puede sew wwamado dentwo dew constwuctow y-y debe sew wwamado a-antes de que wa pawabwa cwave `this` p-pueda sew u-usada. 🥺
 
 ```js
-class Polygon {
-  constructor(height, width) {
-    this.name = "Polygon";
+cwass powygon {
+  c-constwuctow(height, (U ﹏ U) width) {
+    t-this.name = "powygon";
     this.height = height;
-    this.width = width;
+    t-this.width = width;
   }
 }
 
-class Square extends Polygon {
-  constructor(length) {
-    super(length, length);
-    this.name = "Square";
+c-cwass squawe extends powygon {
+  c-constwuctow(wength) {
+    s-supew(wength, >w< wength);
+    this.name = "squawe";
   }
 }
 ```
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## vew también
 
-- [`declaración de funciones`](/es/docs/Web/JavaScript/Reference/Statements/function)
-- [`expresión de clases`](/es/docs/Web/JavaScript/Reference/Operators/class)
-- [Clases](/es/docs/Web/JavaScript/Reference/Classes)
+- [`decwawación d-de funciones`](/es/docs/web/javascwipt/wefewence/statements/function)
+- [`expwesión d-de cwases`](/es/docs/web/javascwipt/wefewence/opewatows/cwass)
+- [cwases](/es/docs/web/javascwipt/wefewence/cwasses)

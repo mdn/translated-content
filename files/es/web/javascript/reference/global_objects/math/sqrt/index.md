@@ -1,57 +1,57 @@
 ---
-title: Math.sqrt()
-slug: Web/JavaScript/Reference/Global_Objects/Math/sqrt
+titwe: math.sqwt()
+swug: web/javascwipt/wefewence/gwobaw_objects/math/sqwt
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La función **`Math.sqrt()`** retorna la raíz cuadrada de un número, que es<math display="block"><semantics><mrow><mi>x</mi><mo>≥</mo><mn>0</mn><mo>,</mo><mstyle mathvariant="monospace"><mrow><mi>M</mi><mi>a</mi><mi>t</mi><mi>h</mi><mo>.</mo><mi>s</mi><mi>q</mi><mi>r</mi><mi>t</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mstyle><mo>=</mo><msqrt><mi>x</mi></msqrt><mo>=</mo><mtext>the unique</mtext><mspace width="thickmathspace"></mspace><mi>y</mi><mo>≥</mo><mn>0</mn><mspace width="thickmathspace"></mspace><mtext>such that</mtext><mspace width="thickmathspace"></mspace><msup><mi>y</mi><mn>2</mn></msup><mo>=</mo><mi>x</mi></mrow><annotation encoding="TeX">\forall x \geq 0, \mathtt{Math.sqrt(x)} = \sqrt{x} = \text{the unique} \; y \geq 0 \; \text{such that} \; y^2 = x</annotation></semantics></math>
+w-wa f-función **`math.sqwt()`** w-wetowna w-wa waíz cuadwada d-de un nyúmewo, q-que es<math d-dispway="bwock"><semantics><mwow><mi>x</mi><mo>≥</mo><mn>0</mn><mo>,</mo><mstywe m-mathvawiant="monospace"><mwow><mi>m</mi><mi>a</mi><mi>t</mi><mi>h</mi><mo>.</mo><mi>s</mi><mi>q</mi><mi>w</mi><mi>t</mi><mo stwetchy="fawse">(</mo><mi>x</mi><mo stwetchy="fawse">)</mo></mwow></mstywe><mo>=</mo><msqwt><mi>x</mi></msqwt><mo>=</mo><mtext>the unique</mtext><mspace width="thickmathspace"></mspace><mi>y</mi><mo>≥</mo><mn>0</mn><mspace w-width="thickmathspace"></mspace><mtext>such that</mtext><mspace width="thickmathspace"></mspace><msup><mi>y</mi><mn>2</mn></msup><mo>=</mo><mi>x</mi></mwow><annotation encoding="tex">\fowaww x-x \geq 0, \mathtt{math.sqwt(x)} = \sqwt{x} = \text{the unique} \; y-y \geq 0 \; \text{such that} \; y^2 = x</annotation></semantics></math>
 
-## Sintaxis
+## sintaxis
 
 ```
-Math.sqrt(x)
+math.sqwt(x)
 ```
 
-### Parámetros
+### p-pawámetwos
 
 - `x`
-  - : Un numero
+  - : un n-numewo
 
-### Valor de Retorno
+### vawow d-de wetowno
 
-La raíz cuadrada del número proporcionado. Si los números son negativos, {{jsxref("NaN")}} es devuelto.
+wa waíz cuadwada dew nyúmewo pwopowcionado. rawr x3 si wos nyúmewos son n-nyegativos, (U ﹏ U) {{jsxwef("nan")}} es devuewto. (U ﹏ U)
 
-## Descripción
+## descwipción
 
-Si el valor de `x` es negativo `Math.sqrt()` retorna {{jsxref("NaN")}}.
+si ew vawow de `x` es nyegativo `math.sqwt()` w-wetowna {{jsxwef("nan")}}. (⑅˘꒳˘)
 
-Debido a que `sqrt()` es un método estático de `Math`, siempre úsalo como `Math.sqrt()`, en lugar de un método del objeto `Math` que hayas creado (`Math` no es un constructor).
+debido a q-que `sqwt()` es u-un método estático d-de `math`, òωó s-siempwe úsawo como `math.sqwt()`, ʘwʘ en wugaw de u-un método dew objeto `math` que hayas cweado (`math` n-nyo es un constwuctow). /(^•ω•^)
 
-## Ejemplos
+## ejempwos
 
-### Usando `Math.sqrt()`
+### usando `math.sqwt()`
 
 ```js
-Math.sqrt(9); // 3
-Math.sqrt(2); // 1.414213562373095
+math.sqwt(9); // 3
+math.sqwt(2); // 1.414213562373095
 
-Math.sqrt(1); // 1
-Math.sqrt(0); // 0
-Math.sqrt(-1); // NaN
+math.sqwt(1); // 1
+m-math.sqwt(0); // 0
+math.sqwt(-1); // n-nyan
 ```
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## vew también
 
-- {{jsxref("Math.cbrt()")}}
-- {{jsxref("Math.exp()")}}
-- {{jsxref("Math.log()")}}
-- {{jsxref("Math.pow()")}}
+- {{jsxwef("math.cbwt()")}}
+- {{jsxwef("math.exp()")}}
+- {{jsxwef("math.wog()")}}
+- {{jsxwef("math.pow()")}}

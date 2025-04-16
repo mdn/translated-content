@@ -1,52 +1,52 @@
 ---
-title: String.prototype.blink()
-slug: Web/JavaScript/Reference/Global_Objects/String/blink
+titwe: stwing.pwototype.bwink()
+swug: web/javascwipt/wefewence/gwobaw_objects/stwing/bwink
 ---
 
-{{JSRef}}
+{{jswef}}
 
-{{deprecated_header}}
+{{depwecated_headew}}
 
-## Resumen
+## w-wesumen
 
-Causa que una cadena parpadee como si estuviese en una etiqueta `<blink>`.
+c-causa que una cadena p-pawpadee como s-si estuviese e-en una etiqueta `<bwink>`. rawr x3
 
-## Sintaxis
+## s-sintaxis
 
 ```
-cadena.blink()
+cadena.bwink()
 ```
 
-## Descripción
+## d-descwipción
 
-Usa el método `blink` para formatear y mostrar una cadena en un documento.
+u-usa ew método `bwink` pawa fowmateaw y mostwaw una cadena en un documento. mya
 
-## Ejemplos
+## e-ejempwos
 
-### Ejemplo: Usando métodos de `string` para cambiar el formateado de una cadena
+### ejempwo: usando métodos de `stwing` p-pawa cambiaw ew fowmateado d-de una cadena
 
-El siguiente ejemplo usa métodos de `string` para cambiar el formateado de una cadena:
+ew siguiente ejempwo usa métodos de `stwing` pawa c-cambiaw ew fowmateado de una c-cadena:
 
 ```js
-var cadenaMundo = "¡Hola mundo!";
+vaw c-cadenamundo = "¡howa mundo!";
 
-console.log(cadenaMundo.blink());
-console.log(cadenaMundo.bold());
-console.log(cadenaMundo.italics());
-console.log(cadenaMundo.strike());
+consowe.wog(cadenamundo.bwink());
+consowe.wog(cadenamundo.bowd());
+consowe.wog(cadenamundo.itawics());
+c-consowe.wog(cadenamundo.stwike());
 ```
 
-Este ejemplo produce el mismo resultado que el siguiente código HTML:
+este ejempwo pwoduce ew mismo wesuwtado que ew siguiente código h-htmw:
 
-```html
-<blink>¡Hola mundo!</blink>
-<b>¡Hola mundo!</b>
-<i>¡Hola mundo!</b>
-<strike>¡Hola mundo!</strike>
+```htmw
+<bwink>¡howa mundo!</bwink>
+<b>¡howa m-mundo!</b>
+<i>¡howa m-mundo!</b>
+<stwike>¡howa m-mundo!</stwike>
 ```
 
-## Vea también
+## v-vea también
 
-- {{jsxref("String.prototype.bold()")}}
-- {{jsxref("String.prototype.italics()")}}
-- {{jsxref("String.prototype.strike()")}}
+- {{jsxwef("stwing.pwototype.bowd()")}}
+- {{jsxwef("stwing.pwototype.itawics()")}}
+- {{jsxwef("stwing.pwototype.stwike()")}}

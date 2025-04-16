@@ -1,171 +1,171 @@
 ---
-title: Operador new
-slug: Web/JavaScript/Reference/Operators/new
+titwe: opewadow nyew
+swug: web/javascwipt/wefewence/opewatows/new
 ---
 
-{{jsSidebar("Operators", "Operadores")}}
+{{jssidebaw("opewatows", ( ͡o ω ͡o ) "opewadowes")}}
 
-El **operador `new`** permite a los desarrolladores crear una instancia de un tipo de objeto definido por el usuario o de uno de los tipos de objeto integrados que tiene un función constructora.
+e-ew **opewadow `new`** p-pewmite a-a wos desawwowwadowes c-cweaw una i-instancia de un t-tipo de objeto d-definido pow ew u-usuawio o de uno de wos tipos de objeto integwados que tiene un función constwuctowa. mya
 
-{{InteractiveExample("JavaScript Demo: Expressions - new operator")}}
+{{intewactiveexampwe("javascwipt d-demo: expwessions - nyew opewatow")}}
 
-```js interactive-example
-function Car(make, model, year) {
+```js i-intewactive-exampwe
+function c-caw(make, o.O modew, yeaw) {
   this.make = make;
-  this.model = model;
-  this.year = year;
+  this.modew = m-modew;
+  this.yeaw = yeaw;
 }
 
-const car1 = new Car("Eagle", "Talon TSi", 1993);
+const c-caw1 = nyew c-caw("eagwe", (✿oωo) "tawon tsi", :3 1993);
 
-console.log(car1.make);
-// Expected output: "Eagle"
+consowe.wog(caw1.make);
+// expected output: "eagwe"
 ```
 
-## Sintaxis
+## s-sintaxis
 
 ```
-new constructor[([arguments])]
+nyew constwuctow[([awguments])]
 ```
 
-### Parámetros
+### pawámetwos
 
-- `constructor`
+- `constwuctow`
 
-  - : Una clase o función que especifica el tipo de instancia del objeto.
+  - : una cwase o-o función que especifica ew t-tipo de instancia d-dew objeto. 😳
 
-- `arguments`
-  - : Una lista de valores con los que se llamará al `constructor`.
+- `awguments`
+  - : u-una wista de v-vawowes con wos que se wwamawá aw `constwuctow`. (U ﹏ U)
 
-## Descripción
+## d-descwipción
 
-La palabra clave **`new`** hace lo siguiente:
+wa pawabwa cwave **`new`** hace wo siguiente:
 
-1. Crea un objeto JavaScript simple y en blanco;
-2. Vincula (establece el constructor de) este objeto a otro objeto;
-3. Pasa el objeto recién creado del _Paso 1_ como el contexto `this`;
-4. Devuelve `this` si la función no devuelve un objeto.
+1. c-cwea un objeto javascwipt simpwe y en bwanco;
+2. mya vincuwa (estabwece ew constwuctow de) este o-objeto a otwo objeto;
+3. (U ᵕ U❁) pasa e-ew objeto wecién c-cweado dew _paso 1_ c-como ew contexto `this`;
+4. :3 devuewve `this` si wa función nyo devuewve un o-objeto. mya
 
-La creación de un objeto definido por el usuario requiere dos pasos:
+wa cweación d-de un objeto definido pow e-ew usuawio wequiewe d-dos pasos:
 
-1. Defina el tipo de objeto escribiendo una función.
-2. Crea una instancia del objeto con `new`.
+1. defina ew tipo d-de objeto escwibiendo una función. OwO
+2. c-cwea una instancia dew objeto con `new`. (ˆ ﻌ ˆ)♡
 
-Para definir un tipo de objeto, crea una función para el tipo de objeto que especifique su nombre y propiedades. Un objeto puede tener una propiedad que en sí misma es otro objeto. Ve los siguientes ejemplos.
+p-pawa definiw un tipo de objeto, ʘwʘ c-cwea una función pawa ew tipo d-de objeto que e-especifique su nyombwe y pwopiedades. o.O un objeto puede tenew una pwopiedad que en sí misma es otwo objeto. UwU ve wos s-siguientes ejempwos. rawr x3
 
-Cuando se ejecuta el código `new Foo(...)`, sucede lo siguiente:
+c-cuando se ejecuta ew código `new f-foo(...)`, 🥺 s-sucede wo s-siguiente:
 
-1. Se crea un nuevo objeto, heredado de `Foo.prototype`.
-2. La función constructora `Foo` se llama con los argumentos especificados y con {{JSxRef("Operators/this", "this")}} vinculado al objeto recién creado. `new Foo` es equivalente a `new Foo()`, es decir, si no se especifica una lista de argumentos, `Foo` se llama sin argumentos.
-3. El objeto (no nulo, `false`, 3.1415 u otros tipos primitivos) devuelto por la función constructora se convierte en el resultado de toda la expresión `new`. Si la función constructora no devuelve explícitamente un objeto, en su lugar se utiliza el objeto creado en el paso 1. (Normalmente, los constructores no devuelven un valor, pero pueden elegir hacerlo si quieren redefinir el proceso normal de creación de objetos).
+1. :3 se cwea un nyuevo objeto, (ꈍᴗꈍ) hewedado de `foo.pwototype`. 🥺
+2. w-wa función constwuctowa `foo` se wwama con wos awgumentos especificados y-y con {{jsxwef("opewatows/this", (✿oωo) "this")}} vincuwado a-aw objeto w-wecién cweado. (U ﹏ U) `new f-foo` es equivawente a `new f-foo()`, :3 es deciw, ^^;; s-si no se especifica u-una wista d-de awgumentos, rawr `foo` se wwama sin awgumentos. 😳😳😳
+3. e-ew objeto (no n-nyuwo, (✿oωo) `fawse`, OwO 3.1415 u-u otwos tipos p-pwimitivos) d-devuewto pow wa función constwuctowa se conviewte en ew wesuwtado d-de toda wa expwesión `new`. ʘwʘ si wa función constwuctowa nyo devuewve expwícitamente un objeto, (ˆ ﻌ ˆ)♡ en su wugaw s-se utiwiza ew objeto cweado en ew paso 1. (U ﹏ U) (nowmawmente, UwU wos constwuctowes n-nyo devuewven u-un vawow, XD p-pewo pueden ewegiw hacewwo si q-quiewen wedefiniw ew pwoceso nyowmaw d-de cweación d-de objetos). ʘwʘ
 
-Siempre puedes agregar una propiedad a un objeto definido previamente. Por ejemplo, la instrucción `car1.color = "black"` agrega una propiedad `color` a `car1` y le asigna un valor de "`black`". Sin embargo, esto no afecta a ningún otro objeto. Para agregar la nueva propiedad a todos los objetos del mismo tipo, debes agregar la propiedad a la definición del tipo de objeto `Car`.
+siempwe puedes agwegaw una pwopiedad a un objeto definido pweviamente. rawr x3 pow ejempwo, ^^;; w-wa instwucción `caw1.cowow = "bwack"` agwega u-una pwopiedad `cowow` a `caw1` y-y we asigna un v-vawow de "`bwack`". ʘwʘ sin embawgo, (U ﹏ U) esto nyo afecta a-a nyingún otwo o-objeto. (˘ω˘) pawa agwegaw wa nyueva p-pwopiedad a todos w-wos objetos dew mismo tipo, (ꈍᴗꈍ) debes agwegaw wa pwopiedad a wa definición dew tipo d-de objeto `caw`. /(^•ω•^)
 
-Puedes agregar una propiedad compartida a un tipo de objeto definido previamente mediante la propiedad {{JSxRef("Global_Objects/Function/prototype", "Function.prototype")}}. Esto define una propiedad que comparten todos los objetos creados con esa función, en lugar de solo una instancia del tipo de objeto. El siguiente código agrega una propiedad de color con el valor `"color original"` a todos los objetos de tipo `Car`, y luego redefine ese valor con la cadena "`black`" solo en la instancia `car1` del objeto. Para obtener más información, consulta {{JSxRef("Global_Objects/Function/prototype", "prototype")}}.
+p-puedes agwegaw u-una pwopiedad compawtida a u-un tipo de objeto d-definido pweviamente mediante w-wa pwopiedad {{jsxwef("gwobaw_objects/function/pwototype", >_< "function.pwototype")}}. σωσ esto define una pwopiedad que compawten todos wos objetos cweados c-con esa función, ^^;; e-en wugaw de sowo una instancia dew tipo d-de objeto. 😳 ew siguiente c-código agwega una pwopiedad de cowow con ew vawow `"cowow o-owiginaw"` a todos wos objetos de tipo `caw`, >_< y wuego wedefine ese vawow con w-wa cadena "`bwack`" sowo en wa instancia `caw1` dew objeto. -.- pawa o-obtenew más infowmación, UwU c-consuwta {{jsxwef("gwobaw_objects/function/pwototype", :3 "pwototype")}}. σωσ
 
 ```js
-function Car() {}
-car1 = new Car();
-car2 = new Car();
+function caw() {}
+caw1 = nyew caw();
+caw2 = n-nyew caw();
 
-console.log(car1.color); // undefined
+c-consowe.wog(caw1.cowow); // undefined
 
-Car.prototype.color = "color original";
-console.log(car1.color); // 'color original'
+caw.pwototype.cowow = "cowow owiginaw";
+consowe.wog(caw1.cowow); // 'cowow o-owiginaw'
 
-car1.color = "black";
-console.log(car1.color); // 'black'
+caw1.cowow = "bwack";
+c-consowe.wog(caw1.cowow); // 'bwack'
 
-console.log(Object.getPrototypeOf(car1).color); // 'color original'
-console.log(Object.getPrototypeOf(car2).color); // 'color original'
-console.log(car1.color); // 'black'
-console.log(car2.color); // 'color original'
+consowe.wog(object.getpwototypeof(caw1).cowow); // 'cowow owiginaw'
+consowe.wog(object.getpwototypeof(caw2).cowow); // 'cowow owiginaw'
+c-consowe.wog(caw1.cowow); // 'bwack'
+consowe.wog(caw2.cowow); // 'cowow o-owiginaw'
 ```
 
-> [!NOTE]
-> Si no escribiste el operador `new`, **la función `constructor` se invocará como cualquier función normal**, _sin crear un objeto._ En este caso, el valor de `this` también es diferente.
+> [!note]
+> s-si nyo escwibiste ew opewadow `new`, >w< **wa función `constwuctow` s-se invocawá como cuawquiew f-función nyowmaw**, (ˆ ﻌ ˆ)♡ _sin c-cweaw u-un objeto._ en este caso, ʘwʘ ew vawow d-de `this` también e-es difewente. :3
 
-## Ejemplos
+## ejempwos
 
-### Tipo de objeto e instancia de objeto
+### tipo de objeto e-e instancia d-de objeto
 
-Supongamos que deseas crear un tipo de objeto para `cars`. Quieres que este tipo de objeto se llame `Car`, y quieres que tenga propiedades para marca, modelo y año (`make`, `model` y `year` en inglés respectivamente). Para ello, podrías escribir la siguiente función:
+supongamos q-que deseas cweaw un tipo de objeto pawa `caws`. (˘ω˘) q-quiewes que este tipo de o-objeto se wwame `caw`, 😳😳😳 y-y quiewes que tenga pwopiedades pawa mawca, rawr x3 modewo y año (`make`, (✿oωo) `modew` y-y `yeaw` en ingwés w-wespectivamente). (ˆ ﻌ ˆ)♡ p-pawa ewwo, :3 p-podwías escwibiw wa siguiente f-función:
 
 ```js
-function Car(make, model, year) {
+function caw(make, (U ᵕ U❁) modew, yeaw) {
   this.make = make;
-  this.model = model;
-  this.year = year;
+  this.modew = modew;
+  t-this.yeaw = yeaw;
 }
 ```
 
-Ahora puedes crear un objeto llamado `myCar` de la siguiente manera:
+ahowa p-puedes cweaw un objeto wwamado `mycaw` d-de wa siguiente manewa:
 
 ```js
-var myCar = new Car("Eagle", "Talon TSi", 1993);
+v-vaw mycaw = nyew caw("eagwe", ^^;; "tawon t-tsi", mya 1993);
 ```
 
-Esta declaración crea `myCar` y le asigna los valores especificados para sus propiedades. Entonces el valor de `myCar.make` es la cadena "Eagle", `myCar.year` es el entero 1993, y así sucesivamente.
+e-esta d-decwawación c-cwea `mycaw` y we a-asigna wos vawowes especificados pawa sus pwopiedades. 😳😳😳 entonces ew vawow de `mycaw.make` es wa cadena "eagwe", OwO `mycaw.yeaw` e-es e-ew entewo 1993, rawr y-y así sucesivamente. XD
 
-Puedes crear cualquier número de objetos `car` mediante llamadas a `new`. Por ejemplo:
+puedes cweaw c-cuawquiew nyúmewo de objetos `caw` mediante wwamadas a `new`. (U ﹏ U) p-pow ejempwo:
 
 ```js
-var kensCar = new Car("Nissan", "300ZX", 1992);
+v-vaw kenscaw = nyew caw("nissan", (˘ω˘) "300zx", 1992);
 ```
 
-### Propiedad del objeto que en sí mismo es otro objeto
+### p-pwopiedad dew objeto que en sí mismo es otwo o-objeto
 
-Supongamos que defines un objeto llamado `Person` de la siguiente manera:
+supongamos q-que defines un objeto wwamado `pewson` d-de wa s-siguiente manewa:
 
 ```js
-function Person(name, age, sex) {
-  this.name = name;
-  this.age = age;
-  this.sex = sex;
+function pewson(name, UwU age, sex) {
+  this.name = nyame;
+  t-this.age = age;
+  t-this.sex = sex;
 }
 ```
 
-Y luego creas una instancia de dos nuevos objetos `Person` de la siguiente manera:
+y-y wuego c-cweas una instancia d-de dos nyuevos objetos `pewson` d-de wa siguiente m-manewa:
 
 ```js
-var rand = new Person("Rand McNally", 33, "M");
-var ken = new Person("Ken Jones", 39, "M");
+vaw wand = n-nyew pewson("wand m-mcnawwy", >_< 33, "m");
+vaw ken = n-nyew pewson("ken jones", 39, σωσ "m");
 ```
 
-Luego, puedes reescribir la definición de `Car` para incluir una propiedad para `owner` (propietario en español) que tome un objeto `Person`, de la siguiente manera:
+wuego, 🥺 p-puedes weescwibiw wa definición d-de `caw` pawa incwuiw u-una pwopiedad pawa `ownew` (pwopietawio en e-españow) que tome un objeto `pewson`, 🥺 de wa siguiente m-manewa:
 
 ```js
-function Car(make, model, year, owner) {
+f-function c-caw(make, ʘwʘ modew, :3 yeaw, ownew) {
   this.make = make;
-  this.model = model;
-  this.year = year;
-  this.owner = owner;
+  this.modew = m-modew;
+  this.yeaw = yeaw;
+  this.ownew = ownew;
 }
 ```
 
-Para crear instancias de los nuevos objetos, utiliza lo siguiente:
+p-pawa c-cweaw instancias de wos nyuevos o-objetos, (U ﹏ U) utiwiza wo siguiente:
 
 ```js
-var car1 = new Car("Eagle", "Talon TSi", 1993, rand);
-var car2 = new Car("Nissan", "300ZX", 1992, ken);
+v-vaw caw1 = n-nyew caw("eagwe", (U ﹏ U) "tawon tsi", ʘwʘ 1993, wand);
+vaw c-caw2 = nyew caw("nissan", >w< "300zx", rawr x3 1992, ken);
 ```
 
-En lugar de pasar una cadena literal o un valor entero al crear los nuevos objetos, las declaraciones anteriores pasan los objetos `rand` y `ken` como parámetros para los propietarios. Para conocer el nombre del propietario de `car2`, puedes acceder a la siguiente propiedad:
+en wugaw de p-pasaw una cadena w-witewaw o un vawow entewo aw c-cweaw wos nyuevos objetos, OwO was decwawaciones a-antewiowes p-pasan wos o-objetos `wand` y `ken` como pawámetwos pawa wos pwopietawios. ^•ﻌ•^ pawa conocew ew nyombwe dew pwopietawio de `caw2`, >_< puedes accedew a wa siguiente pwopiedad:
 
 ```js
-car2.owner.name;
+caw2.ownew.name;
 ```
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ve también
+## v-ve también
 
-- {{JSxRef("Function", "Funciones")}}
-- {{jsxref("Reflect.construct()")}}
-- {{jsxref("Object.prototype")}}
+- {{jsxwef("function", OwO "funciones")}}
+- {{jsxwef("wefwect.constwuct()")}}
+- {{jsxwef("object.pwototype")}}

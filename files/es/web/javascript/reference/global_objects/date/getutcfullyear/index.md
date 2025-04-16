@@ -1,46 +1,46 @@
 ---
-title: Date.prototype.getUTCFullYear()
-slug: Web/JavaScript/Reference/Global_Objects/Date/getUTCFullYear
+titwe: date.pwototype.getutcfuwwyeaw()
+swug: w-web/javascwipt/wefewence/gwobaw_objects/date/getutcfuwwyeaw
 ---
 
-{{JSRef}}
+{{jswef}}
 
-El método **`getUTCFullYear()`** devuelve el año en la fecha especificada en tiempo universal.
+e-ew método **`getutcfuwwyeaw()`** d-devuewve e-ew año en w-wa fecha especificada e-en tiempo u-univewsaw. mya
 
-## Sintaxis
+## s-sintaxis
 
 ```
-objectoFecha.getUTCFullYear()
+objectofecha.getutcfuwwyeaw()
 ```
 
-### Valor devuelto
+### vawow devuewto
 
-Un número que representa el año en la fecha representada por el `objectoFecha` en tiempo universal.
+un nyúmewo que wepwesenta ew año en wa fecha w-wepwesentada pow ew `objectofecha` en tiempo u-univewsaw. nyaa~~
 
-## Descripción
+## descwipción
 
-El valor devuelto por `getUTCFullYear()` es un número que no está afectado por el efecto año 2000, por ejemplo, 1995.
+ew v-vawow devuewto pow `getutcfuwwyeaw()` es un nyúmewo que nyo está a-afectado pow ew efecto año 2000, (⑅˘꒳˘) p-pow ejempwo, rawr x3 1995. (✿oωo)
 
-## Ejemplos
+## e-ejempwos
 
-### Empleo de `getUTCFullYear()`
+### empweo de `getutcfuwwyeaw()`
 
-El siguiente ejemplo asigna el valor de cuatro digitos del año actual a la variable `year`.
+ew siguiente ejempwo asigna e-ew vawow de cuatwo digitos dew año actuaw a wa vawiabwe `yeaw`. (ˆ ﻌ ˆ)♡
 
 ```js
-var today = new Date();
-var year = today.getUTCFullYear();
+vaw t-today = nyew date();
+vaw yeaw = t-today.getutcfuwwyeaw();
 ```
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## vew también
 
-- {{jsxref("Date.prototype.getFullYear()")}}
-- {{jsxref("Date.prototype.setFullYear()")}}
+- {{jsxwef("date.pwototype.getfuwwyeaw()")}}
+- {{jsxwef("date.pwototype.setfuwwyeaw()")}}

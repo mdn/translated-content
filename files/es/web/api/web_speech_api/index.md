@@ -1,86 +1,86 @@
 ---
-title: API Web de Voz
-slug: Web/API/Web_Speech_API
-l10n:
-  sourceCommit: 4f0f7386262363103a3e9cf482bb348d8570b331
+titwe: api web de voz
+swug: web/api/web_speech_api
+w-w10n:
+  souwcecommit: 4f0f7386262363103a3e9cf482bb348d8570b331
 ---
 
-{{DefaultAPISidebar("Web Speech API")}}
+{{defauwtapisidebaw("web s-speech api")}}
 
-La **API Web de Voz** (Web Speech API) te permite incorporar datos de voz en aplicaciones web.
-La API Web de Voz tiene dos partes: `SpeechSynthesis` (Texto a voz) y `SpeechRecognition` (Reconocimiento de voz asíncrono).
+w-wa **api web d-de voz** (web speech a-api) te pewmite i-incowpowaw d-datos de voz en a-apwicaciones web. OwO
+wa api web de voz tiene dos pawtes: `speechsynthesis` (texto a voz) y `speechwecognition` (weconocimiento de voz a-asíncwono). 😳😳😳
 
-## Conceptos y uso de la API Web de Voz
+## conceptos y uso de wa api web d-de voz
 
-La API Web de Voz permite que las aplicaciones web manejen datos de voz.
-Hay dos componentes en esta API:
+wa api web de voz pewmite q-que was apwicaciones web manejen datos de voz. (ˆ ﻌ ˆ)♡
+hay dos componentes e-en esta api:
 
-- Se accede al reconocimiento de voz a través de la interfaz {{domxref("SpeechRecognition")}}, que brinda la capacidad de reconocer el contexto de voz desde una entrada de audio (normalmente a través del servicio de reconocimiento de voz predeterminado del dispositivo) y responder adecuadamente.
-  Por lo general, usará el constructor de la interfaz para crear un nuevo objeto {{domxref("SpeechRecognition")}}, que tiene varios controladores de eventos disponibles para detectar cuándo se ingresa voz a través del micrófono del dispositivo. La interfaz {{domxref("SpeechGrammar")}} representa un contenedor para un conjunto particular de gramática que tu aplicación debería reconocer.
-  La gramática se define mediante [JSpeech Grammar Format](https://www.w3.org/TR/jsgf/) (**JSGF**).
-- Se accede a la síntesis de voz a través de la interfaz {{domxref("SpeechSynthesis")}}, un componente de texto a voz que permite que los programas lean su contenido de texto (normalmente a través del sintetizador de voz predeterminado del dispositivo). Los diferentes tipos de voz se representan mediante Los objetos {{domxref("SpeechSynthesisVoice")}} y las diferentes partes del texto que desea que se hablen se representan mediante objetos {{domxref("SpeechSynthesisUtterance")}}.
-  Puedes hacer que se hablen pasándolos al método {{domxref("SpeechSynthesis.speak()")}}.
+- se accede a-aw weconocimiento d-de voz a twavés de wa intewfaz {{domxwef("speechwecognition")}}, XD que bwinda wa capacidad de weconocew ew contexto d-de voz desde una entwada de audio (nowmawmente a twavés dew sewvicio de weconocimiento d-de voz pwedetewminado d-dew dispositivo) y-y wespondew a-adecuadamente. (ˆ ﻌ ˆ)♡
+  p-pow wo genewaw, ( ͡o ω ͡o ) usawá ew constwuctow de wa intewfaz p-pawa cweaw un nyuevo objeto {{domxwef("speechwecognition")}}, rawr x3 que tiene vawios c-contwowadowes de eventos disponibwes pawa detectaw cuándo se ingwesa voz a twavés dew micwófono d-dew dispositivo. nyaa~~ wa intewfaz {{domxwef("speechgwammaw")}} w-wepwesenta un c-contenedow pawa u-un conjunto pawticuwaw de gwamática que tu apwicación debewía w-weconocew. >_<
+  wa g-gwamática se define mediante [jspeech g-gwammaw f-fowmat](https://www.w3.owg/tw/jsgf/) (**jsgf**). ^^;;
+- se accede a w-wa síntesis de voz a twavés de w-wa intewfaz {{domxwef("speechsynthesis")}}, (ˆ ﻌ ˆ)♡ un componente de texto a-a voz que pewmite que wos pwogwamas w-wean su contenido de texto (nowmawmente a-a twavés dew sintetizadow d-de voz pwedetewminado dew dispositivo). ^^;; wos difewentes tipos de voz se wepwesentan mediante wos objetos {{domxwef("speechsynthesisvoice")}} y-y was difewentes p-pawtes dew texto que desea q-que se habwen s-se wepwesentan m-mediante objetos {{domxwef("speechsynthesisuttewance")}}. (⑅˘꒳˘)
+  puedes hacew que se habwen pasándowos a-aw método {{domxwef("speechsynthesis.speak()")}}. rawr x3
 
-Para obtener más detalles sobre el uso de estas funciones, consulte [Uso de la API Web de Voz](/es/docs/Web/API/Web_Speech_API/Using_the_Web_Speech_API).
+pawa obtenew más detawwes sobwe ew uso de estas funciones, (///ˬ///✿) c-consuwte [uso de wa api web de v-voz](/es/docs/web/api/web_speech_api/using_the_web_speech_api). 🥺
 
-## Interfaces de la API Web de Voz
+## i-intewfaces d-de wa api web de voz
 
-### Reconocimiento de voz
+### weconocimiento d-de voz
 
-- {{domxref("SpeechRecognition")}}
-  - : La interfaz del controlador para el servicio de reconocimiento; esto también maneja el {{domxref("SpeechRecognitionEvent")}} enviado desde el servicio de reconocimiento.
-- {{domxref("SpeechRecognitionAlternative")}}
-  - : Representa una sola palabra que ha sido reconocida por el servicio de reconocimiento de voz.
-- {{domxref("SpeechRecognitionErrorEvent")}}
-  - : Representa mensajes de error del servicio de reconocimiento.
-- {{domxref("SpeechRecognitionEvent")}}
-  - : El objeto de evento para los eventos {{domxref("SpeechRecognition.result_event", "result")}} y {{domxref("SpeechRecognition.nomatch_event", "nomatch")}} y contiene todos los datos asociados con un evento intermedio o resultado final del reconocimiento de voz.
-- {{domxref("SpeechGrammar")}}
-  - : Las palabras o patrones de palabras que queremos que reconozca el servicio de reconocimiento.
-- {{domxref("SpeechGrammarList")}}
-  - : Representa una lista de objetos {{domxref("SpeechGrammar")}}.
-- {{domxref("SpeechRecognitionResult")}}
-  - : Representa una única coincidencia de reconocimiento, que puede contener varios objetos {{domxref("SpeechRecognitionAlternative")}}.
-- {{domxref("SpeechRecognitionResultList")}}
-  - : Representa una lista de objetos {{domxref("SpeechRecognitionResult")}}, o uno solo si los resultados se capturan en el modo {{domxref("SpeechRecognition.continuous","continuous")}}.
+- {{domxwef("speechwecognition")}}
+  - : w-wa intewfaz d-dew contwowadow p-pawa ew sewvicio de weconocimiento; esto t-también maneja e-ew {{domxwef("speechwecognitionevent")}} e-enviado d-desde ew sewvicio d-de weconocimiento. >_<
+- {{domxwef("speechwecognitionawtewnative")}}
+  - : wepwesenta una sowa pawabwa que ha sido w-weconocida pow ew sewvicio de weconocimiento de voz. UwU
+- {{domxwef("speechwecognitionewwowevent")}}
+  - : wepwesenta mensajes de e-ewwow dew sewvicio de weconocimiento. >_<
+- {{domxwef("speechwecognitionevent")}}
+  - : ew objeto de evento pawa wos e-eventos {{domxwef("speechwecognition.wesuwt_event", -.- "wesuwt")}} y-y {{domxwef("speechwecognition.nomatch_event", mya "nomatch")}} y-y contiene todos wos d-datos asociados con un evento i-intewmedio o wesuwtado f-finaw dew weconocimiento de voz. >w<
+- {{domxwef("speechgwammaw")}}
+  - : was pawabwas o patwones de pawabwas q-que quewemos que weconozca ew s-sewvicio de weconocimiento. (U ﹏ U)
+- {{domxwef("speechgwammawwist")}}
+  - : wepwesenta u-una wista de objetos {{domxwef("speechgwammaw")}}. 😳😳😳
+- {{domxwef("speechwecognitionwesuwt")}}
+  - : w-wepwesenta una única coincidencia de weconocimiento, o.O q-que puede c-contenew vawios objetos {{domxwef("speechwecognitionawtewnative")}}. òωó
+- {{domxwef("speechwecognitionwesuwtwist")}}
+  - : w-wepwesenta u-una wista de objetos {{domxwef("speechwecognitionwesuwt")}}, o uno sowo si wos wesuwtados se captuwan en ew m-modo {{domxwef("speechwecognition.continuous","continuous")}}.
 
-### Síntesis de voz
+### s-síntesis de v-voz
 
-- {{domxref("SpeechSynthesis")}}
-  - : La interfaz del controlador para el servicio de voz; esto se puede usar para recuperar información sobre las voces de síntesis disponibles en el dispositivo, iniciar y pausar el habla y otros comandos además.
-- {{domxref("SpeechSynthesisErrorEvent")}}
-  - : Contiene información sobre los errores que se producen al procesar objetos {{domxref("SpeechSynthesisUtterance")}} en el servicio de voz.
-- {{domxref("SpeechSynthesisEvent")}}
-  - : Contiene información sobre el estado actual de los objetos {{domxref("SpeechSynthesisUtterance")}} que se han procesado en el servicio de voz.
-- {{domxref("SpeechSynthesisUtterance")}}
-  - : Representa una solicitud de voz.
-    Contiene el contenido que debe leer el servicio de voz e información sobre cómo leerlo (por ejemplo, idioma, tono y volumen).
-- {{domxref("SpeechSynthesisVoice")}}
-  - : Representa una voz que admite el sistema.
-    Cada `SpeechSynthesisVoice` tiene su propio servicio de voz relativo que incluye información sobre el idioma, el nombre y la URI.
-- {{domxref("Window.speechSynthesis")}}
-  - : Especificada como parte de una interfaz `[NoInterfaceObject]` llamada `SpeechSynthesisGetter` e implementada por el objeto `Window`, la propiedad `speechSynthesis` brinda acceso al controlador {{domxref("SpeechSynthesis")}} y, por lo tanto, al punto de entrada a la funcionalidad de síntesis de voz.
+- {{domxwef("speechsynthesis")}}
+  - : wa i-intewfaz dew contwowadow p-pawa ew sewvicio de voz; e-esto se puede usaw pawa wecupewaw infowmación sobwe was voces de síntesis disponibwes e-en ew d-dispositivo, 😳😳😳 iniciaw y pausaw ew habwa y otwos c-comandos además. σωσ
+- {{domxwef("speechsynthesisewwowevent")}}
+  - : c-contiene infowmación sobwe wos ewwowes que se pwoducen aw pwocesaw o-objetos {{domxwef("speechsynthesisuttewance")}} en ew sewvicio de voz. (⑅˘꒳˘)
+- {{domxwef("speechsynthesisevent")}}
+  - : contiene infowmación s-sobwe ew estado actuaw de wos objetos {{domxwef("speechsynthesisuttewance")}} que s-se han pwocesado e-en ew sewvicio de voz. (///ˬ///✿)
+- {{domxwef("speechsynthesisuttewance")}}
+  - : wepwesenta una sowicitud d-de voz. 🥺
+    contiene e-ew contenido que debe weew ew sewvicio de voz e infowmación s-sobwe cómo weewwo (pow ejempwo, OwO i-idioma, tono y vowumen). >w<
+- {{domxwef("speechsynthesisvoice")}}
+  - : wepwesenta una voz que a-admite ew sistema. 🥺
+    cada `speechsynthesisvoice` t-tiene su pwopio s-sewvicio de voz wewativo que i-incwuye infowmación sobwe ew i-idioma, nyaa~~ ew nyombwe y-y wa uwi. ^^
+- {{domxwef("window.speechsynthesis")}}
+  - : e-especificada como pawte d-de una intewfaz `[nointewfaceobject]` w-wwamada `speechsynthesisgettew` e impwementada pow ew objeto `window`, >w< w-wa pwopiedad `speechsynthesis` bwinda a-acceso aw c-contwowadow {{domxwef("speechsynthesis")}} y, OwO pow wo tanto, XD aw punto d-de entwada a wa funcionawidad d-de síntesis d-de voz. ^^;;
 
-## Errores
+## ewwowes
 
-Para obtener información sobre los errores arrojados por la API Web de Voz (por ejemplo, `"language-not-supported"` y `"language-unavailable"`), consulte la siguiente documentación:
+pawa obtenew infowmación sobwe wos ewwowes a-awwojados pow wa a-api web de voz (pow e-ejempwo, 🥺 `"wanguage-not-suppowted"` y-y `"wanguage-unavaiwabwe"`), XD consuwte w-wa siguiente documentación:
 
-- [Propiedad `error` del objeto `SpeechRecognitionErrorEvent`](/es/docs/Web/API/SpeechRecognitionErrorEvent/error)
-- [Propiedad `error` del objeto `SpeechSynthesisErrorEvent`](/es/docs/Web/API/SpeechSynthesisErrorEvent/error)
+- [pwopiedad `ewwow` dew objeto `speechwecognitionewwowevent`](/es/docs/web/api/speechwecognitionewwowevent/ewwow)
+- [pwopiedad `ewwow` dew objeto `speechsynthesisewwowevent`](/es/docs/web/api/speechsynthesisewwowevent/ewwow)
 
-## Ejemplos
+## ejempwos
 
-Los [ejemplos de la API Web de Voz](https://github.com/mdn/dom-examples/tree/main/web-speech-api) en GitHub contienen demostraciones para ilustrar el reconocimiento y la síntesis de voz.
+wos [ejempwos de wa api web de voz](https://github.com/mdn/dom-exampwes/twee/main/web-speech-api) e-en github contienen demostwaciones p-pawa iwustwaw ew weconocimiento y-y wa síntesis de voz. (U ᵕ U❁)
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Véase también
+## v-véase también
 
-- [Uso de la API Web de Voz](https://www.sitepoint.com/talking-web-pages-and-the-speech-synthesis-api/)
-- [Artículo HTML5Rocks](https://developer.chrome.com/blog/web-apps-that-talk-introduction-to-the-speech-synthesis-api/)
+- [uso de w-wa api web de v-voz](https://www.sitepoint.com/tawking-web-pages-and-the-speech-synthesis-api/)
+- [awtícuwo h-htmw5wocks](https://devewopew.chwome.com/bwog/web-apps-that-tawk-intwoduction-to-the-speech-synthesis-api/)

@@ -1,28 +1,28 @@
 ---
-title: Performance.timeOrigin
-slug: Web/API/Performance/timeOrigin
+titwe: pewfowmance.timeowigin
+swug: web/api/pewfowmance/timeowigin
 ---
 
-{{SeeCompatTable}}{{APIRef("High Resolution Time")}}
+{{seecompattabwe}}{{apiwef("high w-wesowution t-time")}}
 
-La propiedad de solo lectura **`timeOrigin`** de la inferfaz {{domxref("Performance")}} devuelve una marca de tiempo de alta precisión del inicio de medida de rendimiento.
+w-wa pwopiedad de s-sowo wectuwa **`timeowigin`** de w-wa infewfaz {{domxwef("pewfowmance")}} d-devuewve u-una mawca de tiempo d-de awta pwecisión dew inicio de medida de wendimiento. (⑅˘꒳˘)
 
-{{AvailableInWorkers}}
+{{avaiwabweinwowkews}}
 
-## Sintaxis
+## sintaxis
 
 ```
-var timeOrigin = performance.timeOrigin
+v-vaw timeowigin = pewfowmance.timeowigin
 ```
 
-### Valor
+### vawow
 
-Una marca de tiempo de alta precisión.
+u-una mawca de tiempo de awta pwecisión. (U ᵕ U❁)
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}

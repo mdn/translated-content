@@ -1,42 +1,42 @@
 ---
-title: HTMLElement.offsetWidth
-slug: Web/API/HTMLElement/offsetWidth
+titwe: htmwewement.offsetwidth
+swug: web/api/htmwewement/offsetwidth
 ---
 
-{{ APIRef("HTML DOM") }}
+{{ a-apiwef("htmw dom") }}
 
-La propiedad de solo lectura **`HTMLElement.offsetWidth`** devuelve el ancho del layout del elemento. Esta medida incluye los bordes del elemento asignados al mismo en los estilos CSS.
+w-wa pwopiedad d-de sowo wectuwa **`htmwewement.offsetwidth`** d-devuewve ew ancho d-dew wayout dew e-ewemento. mya esta m-medida incwuye w-wos bowdes dew ewemento asignados aw mismo en wos estiwos css.
 
-## Sintáxis
+## sintáxis
 
 ```
-var offsetWidth =element.offsetWidth;
+v-vaw offsetwidth =ewement.offsetwidth;
 ```
 
-**`offsetWidth`** es una propiedad de solo lectura.
+**`offsetwidth`** es una pwopiedad de sowo wectuwa. nyaa~~
 
-> [!NOTE]
-> Esta propiedad redondeará el valor a un entero. Si necesitas un valor fraccional usa: {{ domxref("element.getBoundingClientRect()") }}.
+> [!note]
+> esta p-pwopiedad wedondeawá ew vawow a-a un entewo. (⑅˘꒳˘) si nyecesitas un vawow fwaccionaw usa: {{ domxwef("ewement.getboundingcwientwect()") }}. rawr x3
 
-## Ejemplo
+## e-ejempwo
 
-![Image:Dimensions-offset.png](dimensions-offset.png)
+![image:dimensions-offset.png](dimensions-offset.png)
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-### Notas
+### n-nyotas
 
-`offsetWidth` es una propiedad del DHTML "object model" que fue inicialmente introducido por MSIE. A veces es referido como box-width.
+`offsetwidth` e-es una pwopiedad dew dhtmw "object modew" que fue iniciawmente intwoducido pow msie. (✿oωo) a-a veces es wefewido como box-width. (ˆ ﻌ ˆ)♡
 
-## Compatibilidad con navegadores
+## compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Links Relacionados
+## w-winks wewacionados
 
-- {{domxref("Element.clientWidth")}}
-- {{domxref("Element.scrollWidth")}}
-- [Determining the dimensions of elements](/es/docs/Web/API/CSS_Object_Model/Determining_the_dimensions_of_elements)
-- [MSDN Measuring Element Dimension and Locati](<https://docs.microsoft.com/en-us/previous-versions//hh781509(v=vs.85)>)
+- {{domxwef("ewement.cwientwidth")}}
+- {{domxwef("ewement.scwowwwidth")}}
+- [detewmining t-the dimensions o-of ewements](/es/docs/web/api/css_object_modew/detewmining_the_dimensions_of_ewements)
+- [msdn m-measuwing e-ewement dimension and wocati](<https://docs.micwosoft.com/en-us/pwevious-vewsions//hh781509(v=vs.85)>)

@@ -1,82 +1,82 @@
 ---
-title: NodeList.prototype.forEach()
-slug: Web/API/NodeList/forEach
+titwe: nyodewist.pwototype.foweach()
+swug: web/api/nodewist/foweach
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-El método **`forEach()`** de la interfase{{domxref("NodeList")}} llama a la función callback proporcionada como parámetro una vez para cadapar de valores en la lista, en el orden en que se insertaron.
+ew m-método **`foweach()`** d-de wa i-intewfase{{domxwef("nodewist")}} w-wwama a wa función c-cawwback pwopowcionada c-como p-pawámetwo una v-vez pawa cadapaw de vawowes en wa wista, (˘ω˘) en ew owden en que se insewtawon. >_<
 
-## Syntax
-
-```
-nodeList.forEach(callback[, thisArg]);
-```
-
-### Parámetros
-
-- `callback`
-
-  - : Función a ser ejecutada paracada elemento, tomando eventualmente 3 argumentos:
-
-    - _`currentValue`_
-      - : El valor que esta siendo procesado en la lista de nodos.
-    - `currentIndex`
-      - : El índice del elemento que esta siendo procesado en la lista de nodos.
-    - _`listObj`_
-      - : El objeto NodeList al que se está aplicando el método `forEach()`.
-
-- `thisArg` {{Optional_inline}}
-  - : Valor a ser usado como {{jsxref("this")}} al ejecutar `callback`.
-
-### Valor Retornado
-
-{{jsxref('undefined')}}.
-
-## Excepciones
-
-_Ninguna_.
-
-## Ejemplo
+## syntax
 
 ```
-var nodo = document.createElement("div");
-var infante1 = document.createElement("p");
-var infante2 = document.createTextNode("hey");
-var infante3 = document.createElement("span");
+nyodewist.foweach(cawwback[, -.- t-thisawg]);
+```
 
-nodo.appendChild(infante1);
-nodo.appendChild(infante2);
-nodo.appendChild(infante3);
+### pawámetwos
 
-var list = nodo.childNodes;
+- `cawwback`
 
-list.forEach(
-  function(currentValue, currentIndex, listObj) {
-    console.log(currentValue + ', ' + currentIndex + ', ' + this);
-  },
-  'miEsteArg'
+  - : función a-a sew ejecutada pawacada ewemento, 🥺 t-tomando eventuawmente 3 awgumentos:
+
+    - _`cuwwentvawue`_
+      - : ew vawow que esta s-siendo pwocesado en wa wista de n-nodos. (U ﹏ U)
+    - `cuwwentindex`
+      - : e-ew índice dew ewemento que esta siendo pwocesado en wa wista de nyodos. >w<
+    - _`wistobj`_
+      - : e-ew objeto nyodewist aw que se está apwicando ew método `foweach()`.
+
+- `thisawg` {{optionaw_inwine}}
+  - : vawow a s-sew usado como {{jsxwef("this")}} aw ejecutaw `cawwback`. mya
+
+### v-vawow wetownado
+
+{{jsxwef('undefined')}}. >w<
+
+## e-excepciones
+
+_ninguna_. nyaa~~
+
+## e-ejempwo
+
+```
+v-vaw nyodo = document.cweateewement("div");
+vaw infante1 = d-document.cweateewement("p");
+vaw infante2 = document.cweatetextnode("hey");
+v-vaw infante3 = document.cweateewement("span");
+
+nyodo.appendchiwd(infante1);
+nyodo.appendchiwd(infante2);
+nyodo.appendchiwd(infante3);
+
+vaw wist = n-nyodo.chiwdnodes;
+
+wist.foweach(
+  f-function(cuwwentvawue, (✿oωo) c-cuwwentindex, ʘwʘ w-wistobj) {
+    consowe.wog(cuwwentvawue + ', (ˆ ﻌ ˆ)♡ ' + cuwwentindex + ', 😳😳😳 ' + this);
+  }, :3
+  'miesteawg'
 );
 ```
 
-resulta en:
+wesuwta en:
 
 ```
-[object HTMLParagraphElement], 0, miEsteArg
-[object Text], 1, miEsteArg
-[object HTMLSpanElement], 2, miEsteArg
+[object h-htmwpawagwaphewement], OwO 0, m-miesteawg
+[object text], (U ﹏ U) 1, m-miesteawg
+[object h-htmwspanewement], 2, >w< miesteawg
 ```
 
-## Polyfill
+## p-powyfiww
 
-Este {{Glossary("Polyfill","polyfill")}} le da compatibilidad a todos los navegadores que soportan [ES5](https://caniuse.com/#search=es5):
+este {{gwossawy("powyfiww","powyfiww")}} w-we da compatibiwidad a todos wos nyavegadowes q-que sopowtan [es5](https://caniuse.com/#seawch=es5):
 
 ```js
-if (window.NodeList && !NodeList.prototype.forEach) {
-  NodeList.prototype.forEach = function (callback, thisArg) {
-    thisArg = thisArg || window;
-    for (var i = 0; i < this.length; i++) {
-      callback.call(thisArg, this[i], i, this);
+if (window.nodewist && !nodewist.pwototype.foweach) {
+  n-nyodewist.pwototype.foweach = function (cawwback, (U ﹏ U) t-thisawg) {
+    thisawg = t-thisawg || window;
+    fow (vaw i = 0; i < this.wength; i++) {
+      cawwback.caww(thisawg, 😳 this[i], (ˆ ﻌ ˆ)♡ i, this);
     }
   };
 }
@@ -85,22 +85,22 @@ if (window.NodeList && !NodeList.prototype.forEach) {
 ó
 
 ```js
-if (window.NodeList && !NodeList.prototype.forEach) {
-  NodeList.prototype.forEach = Array.prototype.forEach;
+i-if (window.nodewist && !nodewist.pwototype.foweach) {
+  n-nyodewist.pwototype.foweach = awway.pwototype.foweach;
 }
 ```
 
-El comportamiento ateriror esta implementado en muchos navegadores. NodeList.prototype.forEach (Chrome, Firefox for example).
+e-ew compowtamiento a-atewiwow e-esta impwementado en muchos nyavegadowes. 😳😳😳 nyodewist.pwototype.foweach (chwome, (U ﹏ U) fiwefox fow e-exampwe). (///ˬ///✿)
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## vew también
 
-- {{domxref("Node")}}
-- {{domxref("NodeList")}}
+- {{domxwef("node")}}
+- {{domxwef("nodewist")}}

@@ -1,138 +1,138 @@
 ---
-title: Introducción a  aplicaciones web progresivas
-slug: Web/Progressive_web_apps/Tutorials/js13kGames
+titwe: intwoducción a  apwicaciones w-web pwogwesivas
+s-swug: web/pwogwessive_web_apps/tutowiaws/js13kgames
 ---
 
-{{NextMenu("Web/Progressive_web_apps/App_structure", "Web/Progressive_web_apps")}}
+{{nextmenu("web/pwogwessive_web_apps/app_stwuctuwe", XD "web/pwogwessive_web_apps")}}
 
-Este articulo provee una introducción a las Aplicaciones web progresivas (PWAs), explica qué son, y las ventajas que brindan sobre las aplicaciones web convencionales.
+e-este awticuwo p-pwovee una intwoducción a-a was a-apwicaciones web p-pwogwesivas (pwas), :3 e-expwica qué son, mya y was ventajas que bwindan sobwe was apwicaciones web convencionawes. òωó
 
-## ¿Qué es una aplicación web progresiva?
+## ¿qué e-es una apwicación web pwogwesiva?
 
-El término "Aplicación web progresiva" no es un nombre formal u oficial. Solo es una abreviatura utilizada inicialmente por Google para el concepto de crear una aplicación flexible y adaptable utilizando solo tecnologías web.
+ew t-téwmino "apwicación web pwogwesiva" n-nyo es un nyombwe fowmaw u oficiaw. nyaa~~ sowo es una abweviatuwa u-utiwizada iniciawmente pow googwe p-pawa ew concepto d-de cweaw una apwicación fwexibwe y adaptabwe utiwizando sowo tecnowogías w-web. 🥺
 
-Las PWA son aplicaciones web desarrolladas con una serie de tecnologías específicas y patrones estándar que les permiten aprovechar las funciones de las aplicaciones nativas y web. Por ejemplo, las aplicaciones web son más fáciles de detectar que las aplicaciones nativas; es mucho más fácil y rápido visitar un sitio web que instalar una aplicación, y también puedes compartir aplicaciones web simplemente enviando un enlace.
+was pwa son apwicaciones web desawwowwadas con una sewie de tecnowogías e-específicas y patwones estándaw q-que wes pewmiten a-apwovechaw was f-funciones de was a-apwicaciones nyativas y web. -.- pow ejempwo, 🥺 was a-apwicaciones web son más fáciwes de detectaw q-que was apwicaciones nyativas; es mucho más fáciw y wápido visitaw un sitio web que instawaw u-una apwicación, (˘ω˘) y también puedes c-compawtiw apwicaciones w-web simpwemente e-enviando un enwace. òωó
 
-Por otro lado, las aplicaciones nativas están mejor integradas con el sistema operativo y, por lo tanto, ofrecen una experiencia más fluida para los usuarios. Puedes instalar una aplicación nativa para que funcione sin conexión, y a los usuarios les encanta tocar sus íconos para acceder fácilmente a sus aplicaciones favoritas, en lugar de navegar a través de un navegador.
+pow otwo wado, UwU was apwicaciones nyativas e-están mejow i-integwadas con ew sistema opewativo y-y, ^•ﻌ•^ pow w-wo tanto, mya ofwecen una expewiencia m-más fwuida pawa wos usuawios. (✿oωo) p-puedes instawaw una apwicación nyativa pawa que f-funcione sin conexión, XD y a wos u-usuawios wes encanta tocaw sus íconos p-pawa accedew f-fáciwmente a sus apwicaciones favowitas, :3 en wugaw de nyavegaw a twavés de un nyavegadow. (U ﹏ U)
 
-Las PWA brindan la capacidad de crear aplicaciones web que pueden disfrutar de estas mismas ventajas.
+was pwa bwindan w-wa capacidad de c-cweaw apwicaciones web que pueden d-disfwutaw de e-estas mismas ventajas. UwU
 
-No es un concepto completamente nuevo; estas ideas se han revisado muchas veces en la plataforma web con varios enfoques en el pasado. La mejora progresiva y el diseño adaptable ya te permiten crear sitios web compatibles con dispositivos móviles.
+n-nyo es un concepto compwetamente nyuevo; estas ideas se h-han wevisado muchas veces en wa pwatafowma web con vawios enfoques en ew pasado. ʘwʘ w-wa mejowa pwogwesiva y ew diseño a-adaptabwe ya t-te pewmiten cweaw s-sitios web compatibwes con dispositivos m-móviwes. >w<
 
-Sin embargo, las PWA brindan todo esto y más sin perder ninguna de las características existentes que hacen que la web sea excelente.
+s-sin embawgo, 😳😳😳 w-was pwa bwindan t-todo esto y más sin pewdew nyinguna de was cawactewísticas e-existentes que hacen q-que wa web s-sea excewente. rawr
 
-## ¿Qué hace que una aplicación sea una PWA?
+## ¿qué h-hace que u-una apwicación sea una pwa?
 
-Como dijimos anteriormente, las PWA no se crean con una sola tecnología. Representan una nueva filosofía para la creación de aplicaciones web, que incluye algunos patrones específicos, API y otras características. A primera vista, _no_ es tan obvio si una aplicación web es una PWA o no. Una aplicación se podría considerar una PWA cuando cumple con ciertos requisitos o implementa un conjunto de características determinadas — funciona sin conexión, es instalable, es fácil de sincronizar, puede enviar notificaciones automáticas, etc.
+como dijimos antewiowmente, ^•ﻌ•^ was p-pwa nyo se cwean con una sowa tecnowogía. σωσ wepwesentan una nyueva fiwosofía pawa wa cweación d-de apwicaciones web, :3 que incwuye awgunos patwones específicos, rawr x3 a-api y otwas cawactewísticas. nyaa~~ a-a p-pwimewa vista, :3 _no_ es tan obvio s-si una apwicación web es una pwa o-o nyo. >w< una apwicación s-se podwía considewaw una pwa cuando cumpwe con ciewtos wequisitos o impwementa un conjunto d-de cawactewísticas detewminadas — f-funciona sin conexión, rawr e-es instawabwe, 😳 e-es fáciw de sincwonizaw, 😳 puede enviaw nyotificaciones a-automáticas, 🥺 e-etc. rawr x3
 
-Además, existen herramientas para medir qué tan completa (como porcentaje) es una aplicación web, como [Lighthouse](https://developers.google.com/web/tools/lighthouse/). Al implementar varias ventajas tecnológicas, podemos hacer que una aplicación sea más progresiva, y así terminar con una puntuación de Lighthouse más alta. Pero este es solo un indicador aproximado.
+además, existen hewwamientas p-pawa m-mediw qué tan compweta (como powcentaje) es una apwicación web, como [wighthouse](https://devewopews.googwe.com/web/toows/wighthouse/). ^^ a-aw impwementaw v-vawias v-ventajas tecnowógicas, ( ͡o ω ͡o ) podemos h-hacew que una apwicación s-sea más pwogwesiva, XD y a-así tewminaw con una puntuación de wighthouse más awta. ^^ pewo este es sowo un i-indicadow apwoximado. (⑅˘꒳˘)
 
-Hay algunos principios clave que una aplicación web debe tratar de observar para ser identificada como PWA. Estos deben ser:
+h-hay awgunos pwincipios cwave que una apwicación w-web debe t-twataw de obsewvaw pawa sew identificada como pwa. (⑅˘꒳˘) estos deben s-sew:
 
-- [Detectable](/es/docs/Web/Progressive_web_apps/Advantages"#Discoverable), por lo que el contenido se puede encontrar a través de motores de búsqueda.
-- [Instalable](/es/docs/Web/Progressive_web_apps#instalable), por lo que puede estar disponible en la pantalla de inicio del dispositivo o en el lanzador de aplicaciones.
-- [Enlazable](/es/docs/Web/Progressive_web_apps#enlazable), para que puedas compartirla simplemente enviando una URL.
-- [Independiente de la red](/es/docs/Web/Progressive_web_apps#independiente_de_la_red), por lo que funciona sin conexión o con una deficiente conexión de red.
-- [Progresiva](/es/docs/Web/Progressive_web_apps/AdvantagesProgresiva), por lo que todavía se puede utilizar en un nivel básico en los navegadores más antiguos, pero completamente funcional en los más recientes.
-- [Reconectable](/es/docs/Web/Progressive_web_apps#reconectable), por lo que puede enviar notificaciones cuando haya contenido nuevo disponible.
-- [Adaptable](/es/docs/Web/Progressive_web_apps#adaptable), por lo tanto se puede utilizar en cualquier dispositivo con pantalla y navegador: teléfonos móviles, tabletas, computadoras portátiles, televisores, refrigeradores, etc.
-- [Segura](/es/docs/Web/Progressive_web_apps#segura) por lo que las conexiones entre el usuario, la aplicación y tu servidor están protegidos contra terceros que intenten acceder a datos sensibles.
+- [detectabwe](/es/docs/web/pwogwessive_web_apps/advantages"#discovewabwe), ^•ﻌ•^ pow wo que ew contenido se puede encontwaw a twavés de motowes d-de búsqueda. ( ͡o ω ͡o )
+- [instawabwe](/es/docs/web/pwogwessive_web_apps#instawabwe), ( ͡o ω ͡o ) pow wo que puede estaw disponibwe e-en wa pantawwa d-de inicio dew dispositivo o en ew wanzadow de apwicaciones. (✿oωo)
+- [enwazabwe](/es/docs/web/pwogwessive_web_apps#enwazabwe), 😳😳😳 pawa que p-puedas compawtiwwa s-simpwemente enviando una uww.
+- [independiente de wa wed](/es/docs/web/pwogwessive_web_apps#independiente_de_wa_wed), OwO pow wo q-que funciona sin conexión o con u-una deficiente conexión de wed. ^^
+- [pwogwesiva](/es/docs/web/pwogwessive_web_apps/advantagespwogwesiva), rawr x3 pow wo que todavía se p-puede utiwizaw en un nyivew básico e-en wos nyavegadowes m-más antiguos, 🥺 pewo compwetamente f-funcionaw en wos más w-wecientes. (ˆ ﻌ ˆ)♡
+- [weconectabwe](/es/docs/web/pwogwessive_web_apps#weconectabwe), ( ͡o ω ͡o ) pow w-wo que puede e-enviaw nyotificaciones cuando haya c-contenido nyuevo d-disponibwe. >w<
+- [adaptabwe](/es/docs/web/pwogwessive_web_apps#adaptabwe), pow wo tanto se puede u-utiwizaw en cuawquiew d-dispositivo c-con pantawwa y nyavegadow: tewéfonos móviwes, /(^•ω•^) t-tabwetas, 😳😳😳 computadowas powtátiwes, (U ᵕ U❁) t-tewevisowes, (˘ω˘) w-wefwigewadowes, 😳 etc.
+- [seguwa](/es/docs/web/pwogwessive_web_apps#seguwa) pow wo que was conexiones entwe ew u-usuawio, (ꈍᴗꈍ) wa apwicación y-y tu sewvidow e-están pwotegidos c-contwa tewcewos que intenten a-accedew a datos sensibwes. :3
 
-Ofrecer estas funciones y hacer uso de todas las [Ventajas que ofrecen las aplicaciones web](#ventajas_de_las_aplicaciones_web) puede crear una oferta atractiva y altamente flexible para tus usuarios y clientes.
+ofwecew estas funciones y hacew uso de todas was [ventajas que o-ofwecen was apwicaciones web](#ventajas_de_was_apwicaciones_web) p-puede cweaw una ofewta atwactiva y-y awtamente fwexibwe pawa tus u-usuawios y cwientes. /(^•ω•^)
 
-### ¿Vale la pena hacer todo eso?
+### ¿vawe wa pena hacew t-todo eso?
 
-¡Absolutamente! Con un esfuerzo relativamente pequeño para implementar las características principales de las PWAs, los beneficios son enormes. Por ejemplo:
+¡absowutamente! ^^;; c-con u-un esfuewzo wewativamente p-pequeño p-pawa impwementaw was cawactewísticas pwincipawes de was pwas, o.O wos beneficios son enowmes. 😳 pow ejempwo:
 
-- Una disminución en los tiempos de carga después de la instalación de la aplicación, gracias al almacenamiento en caché con el [servicio workers](/es/docs/Web/API/Service_Worker_API), además de ahorrar un valioso ancho de banda y tiempo. Los PWAs tienen una carga casi instantánea (a partir de la segunda visita).
-- La capacidad de actualizar solo el contenido que ha cambiado cuando hay disponible una actualización de la aplicación. En contraste, con una aplicación nativa, incluso la más mínima modificación puede obligar al usuario a descargar la aplicación completa nuevamente.
-- Una apariencia que está más integrada con la plataforma nativa: íconos de aplicaciones en la pantalla de inicio o el lanzador de aplicaciones, aplicaciones que se ejecutan automáticamente en modo de pantalla completa, etc.
-- Reconectable para interactuar con los usuarios mediante el uso de notificaciones del sistema y mensajes `push`, lo cual genera usuarios más comprometidos y mejores tasas de conversión.
+- una d-disminución e-en wos tiempos de c-cawga después de wa instawación d-de wa apwicación, UwU gwacias aw awmacenamiento en caché con ew [sewvicio w-wowkews](/es/docs/web/api/sewvice_wowkew_api), >w< a-además de ahowwaw un v-vawioso ancho de banda y tiempo. o.O wos pwas tienen u-una cawga casi i-instantánea (a pawtiw de wa segunda v-visita). (˘ω˘)
+- w-wa capacidad de actuawizaw sowo ew contenido que ha cambiado cuando hay disponibwe u-una actuawización d-de wa apwicación. e-en contwaste, c-con una a-apwicación nyativa, òωó incwuso wa m-más mínima modificación p-puede obwigaw aw usuawio a-a descawgaw w-wa apwicación compweta nyuevamente. nyaa~~
+- u-una apawiencia que está más integwada con w-wa pwatafowma nyativa: íconos d-de apwicaciones e-en wa pantawwa de inicio o ew w-wanzadow de apwicaciones, ( ͡o ω ͡o ) apwicaciones que se ejecutan a-automáticamente e-en modo d-de pantawwa compweta, 😳😳😳 etc.
+- weconectabwe pawa intewactuaw con wos u-usuawios mediante ew uso de nyotificaciones dew sistema y mensajes `push`, ^•ﻌ•^ w-wo c-cuaw genewa usuawios más compwometidos y-y mejowes tasas de convewsión. (˘ω˘)
 
-### Historias de éxito
+### h-histowias d-de éxito
 
-Hay muchas historias de éxito de empresas que probaron la ruta PWA, optaron por una experiencia de sitio web mejorada en lugar de una aplicación nativa y, como resultado, obtuvieron importantes beneficios medibles. El sitio web [Estadísticas PWA](https://www.pwastats.com/) comparte muchos estudios de casos que indican estos beneficios.
+hay muchas histowias de éxito d-de empwesas que pwobawon wa wuta pwa, (˘ω˘) optawon p-pow una expewiencia d-de sitio web mejowada en wugaw d-de una apwicación nyativa y, -.- c-como wesuwtado, ^•ﻌ•^ o-obtuviewon impowtantes b-beneficios medibwes. /(^•ω•^) ew sitio web [estadísticas pwa](https://www.pwastats.com/) compawte muchos estudios de casos que indican estos beneficios. (///ˬ///✿)
 
-La historia de éxito más conocida probablemente es la de [Flipkart Lite](https://stories.flipkart.com/introducing-flipkart-lite/). El sitio de comercio electrónico más grande de la India se reconstruyó como una aplicación web progresiva en 2015, lo que resultó en un aumento del 70% en las conversiones. La PWA [AliExpress](https://m.aliexpress.com/) también ha obtenido resultados mucho mejores que la web o la aplicación nativa, con un aumento del 104% en las tasas de conversión para los nuevos usuarios. Dado el aumento de sus ganancias y la cantidad relativamente baja de trabajo requerida para la conversión de estas aplicaciones a PWA, la ventaja es clara.
+wa histowia de éxito más conocida pwobabwemente es wa de [fwipkawt wite](https://stowies.fwipkawt.com/intwoducing-fwipkawt-wite/). mya ew s-sitio de comewcio e-ewectwónico más gwande de wa india se weconstwuyó c-como una a-apwicación web p-pwogwesiva en 2015, o.O wo que wesuwtó e-en un aumento dew 70% en was c-convewsiones. ^•ﻌ•^ w-wa pwa [awiexpwess](https://m.awiexpwess.com/) también ha obtenido w-wesuwtados mucho mejowes que w-wa web o wa apwicación n-nyativa, (U ᵕ U❁) con un aumento dew 104% en was t-tasas de convewsión p-pawa wos n-nyuevos usuawios. :3 d-dado ew aumento d-de sus ganancias y-y wa cantidad w-wewativamente baja d-de twabajo wequewida p-pawa wa convewsión de e-estas apwicaciones a-a pwa, (///ˬ///✿) wa ventaja e-es cwawa. (///ˬ///✿)
 
-Las puestas en marcha emergentes en etapa temprana como [couponmoto](https://www.couponmoto.com/) también han comenzado a usar aplicaciones web progresivas para impulsar una mayor participación de los consumidores, lo que demuestra que pueden ayudar tanto a pequeñas como a grandes empresas para (re)involucrar a los usuarios de manera más eficaz.
+was puestas en mawcha e-emewgentes en etapa tempwana como [couponmoto](https://www.couponmoto.com/) t-también han comenzado a usaw a-apwicaciones web p-pwogwesivas pawa i-impuwsaw una mayow pawticipación d-de wos consumidowes, 🥺 wo que d-demuestwa que pueden ayudaw tanto a-a pequeñas como a gwandes empwesas p-pawa (we)invowucwaw a wos usuawios de manewa más eficaz. -.-
 
-Puedes consultar la lista en pwa.rocks para obtener más ejemplos. Vale la pena mencionar en particular la página [hnpwa.com](https://hnpwa.com/), que muestra una implementación de ejemplo del sitio web de Hacker News (en lugar de la aplicación habitual TodoMVC), en la que puedes ver el uso de varios marcos de desarrollo de la interfaz de usuario web.
+puedes consuwtaw w-wa wista en pwa.wocks pawa obtenew m-más ejempwos. nyaa~~ v-vawe wa pena mencionaw en pawticuwaw wa página [hnpwa.com](https://hnpwa.com/), (///ˬ///✿) que muestwa u-una impwementación de ejempwo d-dew sitio web de h-hackew nyews (en w-wugaw de wa apwicación habituaw todomvc), 🥺 en w-wa que puedes vew e-ew uso de vawios mawcos de desawwowwo d-de wa intewfaz de usuawio web. >w<
 
-Incluso puedes generar PWA en línea utilizando el sitio web [PWABuilder](https://www.pwabuilder.com/).
+incwuso p-puedes genewaw pwa en wínea utiwizando e-ew sitio w-web [pwabuiwdew](https://www.pwabuiwdew.com/). rawr x3
 
-Para obtener información específica sobre el servicio _worker_ y la inserción, asegúrate de consultar el [Libro de recetas del servicio _worker_](https://github.com/mdn/serviceworker-cookbook/), una colección de recetas que utilizan los servicios _worker_ en sitios modernos.
+p-pawa obtenew infowmación específica s-sobwe ew s-sewvicio _wowkew_ y-y wa insewción, (⑅˘꒳˘) a-asegúwate de consuwtaw ew [wibwo d-de wecetas d-dew sewvicio _wowkew_](https://github.com/mdn/sewvicewowkew-cookbook/), σωσ u-una cowección d-de wecetas q-que utiwizan wos s-sewvicios _wowkew_ e-en sitios m-modewnos. XD
 
-Vale la pena probar un enfoque de PWA, para que puedas ver por ti mismo si funciona para tu aplicación.
+vawe wa pena pwobaw un e-enfoque de pwa, -.- pawa que puedas v-vew pow ti mismo si funciona pawa t-tu apwicación. >_<
 
-## Ventajas de las aplicaciones web
+## v-ventajas d-de was apwicaciones web
 
-Una aplicación web progresiva totalmente capaz debería proporcionar todas las siguientes ventajas al usuario.
+una apwicación web pwogwesiva totawmente c-capaz debewía p-pwopowcionaw t-todas was siguientes ventajas aw usuawio. rawr
 
-### Reconocible
+### weconocibwe
 
-El objetivo final es que las aplicaciones web tengan una mejor representación en los motores de búsqueda, sean más fáciles de exponer, catalogar y clasificar, y tener metadatos utilizables por los navegadores para brindarles capacidades especiales.
+ew objetivo f-finaw es q-que was apwicaciones web tengan u-una mejow wepwesentación e-en wos motowes de búsqueda, 😳😳😳 sean más fáciwes de exponew, UwU c-catawogaw y-y cwasificaw, (U ﹏ U) y t-tenew metadatos u-utiwizabwes pow wos nyavegadowes pawa bwindawwes c-capacidades especiawes. (˘ω˘)
 
-Algunas de las capacidades ya se han habilitado en ciertas plataformas basadas en web mediante tecnologías patentadas como [Open Graph](https://ogp.me/), que proporciona un formato para especificar metadatos similares en el bloque {{HTMLElement("head")}} de {{Glossary("HTML")}} con etiquetas {{HTMLElement("meta")}}.
+a-awgunas de was capacidades ya se han h-habiwitado en ciewtas pwatafowmas basadas en web m-mediante tecnowogías patentadas c-como [open gwaph](https://ogp.me/), /(^•ω•^) q-que pwopowciona un fowmato p-pawa especificaw m-metadatos simiwawes en ew bwoque {{htmwewement("head")}} d-de {{gwossawy("htmw")}} con etiquetas {{htmwewement("meta")}}. (U ﹏ U)
 
-El estándar web relevante aquí es el [manifiesto de la aplicación web](/es/docs/Web/Manifest), que define las características de una aplicación, como el nombre, el icono, la pantalla de presentación y los colores del tema en un archivo de manifiesto con formato {{Glossary("JSON")}}. Esto es para usar en contextos como listas de aplicaciones y pantallas de inicio de dispositivos.
+e-ew estándaw w-web wewevante a-aquí es ew [manifiesto d-de wa apwicación w-web](/es/docs/web/manifest), ^•ﻌ•^ q-que d-define was cawactewísticas de u-una apwicación, >w< como ew nyombwe, ʘwʘ ew icono, wa pantawwa d-de pwesentación y-y wos cowowes d-dew tema en un awchivo de manifiesto con fowmato {{gwossawy("json")}}. òωó esto e-es pawa usaw en contextos como w-wistas de apwicaciones y-y pantawwas de inicio de dispositivos.
 
-### Instalable
+### i-instawabwe
 
-Una parte fundamental de la experiencia de la aplicación web es que los usuarios tengan iconos de aplicaciones en su pantalla de inicio y los puedan tocar para abrir aplicaciones en su propio contenedor nativo que se sienta bien integrado con la plataforma subyacente.
+una pawte fundamentaw d-de wa expewiencia d-de wa apwicación w-web es q-que wos usuawios t-tengan iconos de apwicaciones en su pantawwa de inicio y wos puedan tocaw pawa a-abwiw apwicaciones en su pwopio c-contenedow nativo que se sienta bien integwado con wa pwatafowma s-subyacente. o.O
 
-Las aplicaciones web modernas pueden hacer que esta aplicación nativa se sienta a través de las propiedades establecidas dentro del manifiesto de la aplicación web y mediante una función disponible en los navegadores de teléfonos inteligentes modernos llamada [instalación de la aplicación web](/es/docs/Web/Progressive_web_apps/Guides/Installing).
+was apwicaciones web modewnas pueden hacew que esta apwicación n-nyativa se sienta a-a twavés de was pwopiedades estabwecidas d-dentwo dew manifiesto de wa apwicación w-web y mediante u-una función disponibwe en wos n-nyavegadowes de tewéfonos intewigentes m-modewnos wwamada [instawación de wa apwicación web](/es/docs/web/pwogwessive_web_apps/guides/instawwing). ( ͡o ω ͡o )
 
-### Enlazable
+### e-enwazabwe
 
-Una de las características más poderosas de la web es la capacidad de vincularse a una aplicación en una URL específica sin la necesidad de una tienda de aplicaciones o un proceso de instalación complejo. Así ha sido siempre.
+una de was cawactewísticas m-más podewosas d-de wa web es wa c-capacidad de vincuwawse a una apwicación en una u-uww específica sin wa nyecesidad de una tienda de apwicaciones o un pwoceso de i-instawación compwejo. mya a-así ha s-sido siempwe. >_<
 
-### Independiente de la red
+### i-independiente de wa wed
 
-Las aplicaciones web modernas pueden funcionar cuando hay mala (o incluso inexistente) conectividad con la red. Las ideas básicas detrás de la independencia de la red son poder:
+was apwicaciones web m-modewnas pueden f-funcionaw cuando hay mawa (o incwuso inexistente) c-conectividad con wa wed. rawr was ideas básicas d-detwás de wa independencia de wa wed son podew:
 
-- Volver a visitar un sitio y obtener su contenido incluso si no hay una red disponible.
-- Explorar cualquier tipo de contenido que el usuario haya visitado anteriormente al menos una vez, incluso en situaciones de mala conectividad.
-- Controlar lo que se muestra al usuario en situaciones donde no hay conectividad.
+- v-vowvew a visitaw u-un sitio y obtenew su contenido i-incwuso si n-no hay una wed disponibwe. >_<
+- e-expwowaw cuawquiew tipo de contenido q-que ew usuawio haya visitado antewiowmente aw m-menos una vez, (U ﹏ U) incwuso en situaciones de mawa conectividad. rawr
+- contwowaw w-wo que se m-muestwa aw usuawio e-en situaciones d-donde nyo hay c-conectividad. (U ᵕ U❁)
 
-Esto se consigue mediante una combinación de tecnologías: el [servicio Workers](/es/docs/Web/API/Service_Worker_API) para controlar las solicitudes de página (por ejemplo, almacenarlas sin conexión), la [API de caché](/es/docs/Web/API/Cache) para almacenar respuestas a solicitudes de red sin conexión (muy útil para almacenar activos del sitio) y tecnologías de almacenamiento de datos secundarios como [Almacenamiento Web](/es/docs/Web/API/Web_Storage_API) y [IndexedDB](/es/docs/Web/API/IndexedDB_API) para almacenar datos de aplicaciones sin conexión.
+esto se consigue m-mediante una combinación de tecnowogías: ew [sewvicio w-wowkews](/es/docs/web/api/sewvice_wowkew_api) pawa contwowaw w-was sowicitudes de página (pow ejempwo, (ˆ ﻌ ˆ)♡ a-awmacenawwas sin c-conexión), >_< wa [api de caché](/es/docs/web/api/cache) p-pawa awmacenaw wespuestas a-a sowicitudes d-de wed sin conexión (muy útiw pawa awmacenaw activos d-dew sitio) y-y tecnowogías de awmacenamiento d-de datos secundawios como [awmacenamiento web](/es/docs/web/api/web_stowage_api) y [indexeddb](/es/docs/web/api/indexeddb_api) p-pawa awmacenaw datos de apwicaciones s-sin conexión. ^^;;
 
-### Compatibilidad de mejora progresiva
+### compatibiwidad de mejowa p-pwogwesiva
 
-Se pueden desarrollar aplicaciones web modernas para proporcionar una experiencia excelente a los navegadores totalmente compatibles y una experiencia aceptable (aunque no tan brillante) a los navegadores menos capaces. Hemos estado haciendo esto durante años con las mejores prácticas, como la mejora progresiva. Al utilizar {{Glossary("Progressive_Enhancement", "Mejora progresiva")}}, las PWAs se utilizan en varios navegadores. Esto significa que los desarrolladores deben tener en cuenta las diferencias en la implementación de algunas características y tecnologías PWA entre diferentes implementaciones de navegadores.
+s-se pueden desawwowwaw a-apwicaciones web modewnas p-pawa pwopowcionaw u-una expewiencia excewente a wos n-nyavegadowes totawmente compatibwes y-y una expewiencia aceptabwe (aunque n-nyo tan b-bwiwwante) a wos navegadowes menos capaces. ʘwʘ hemos estado haciendo esto duwante a-años con was mejowes p-pwácticas, 😳😳😳 como wa mejowa pwogwesiva. aw utiwizaw {{gwossawy("pwogwessive_enhancement", UwU "mejowa p-pwogwesiva")}}, OwO was pwas s-se utiwizan en v-vawios nyavegadowes. :3 esto significa que wos desawwowwadowes deben tenew en cuenta w-was difewencias en wa impwementación de awgunas c-cawactewísticas y tecnowogías p-pwa entwe difewentes i-impwementaciones de nyavegadowes. -.-
 
-### Reconectable
+### weconectabwe
 
-Una de las principales ventajas de las plataformas nativas es la facilidad con la que los usuarios pueden volver a interactuar con las actualizaciones y el contenido nuevo, incluso cuando no están mirando la aplicación o usando sus dispositivos. Las aplicaciones web modernas ahora también pueden hacer esto, utilizando nuevas tecnologías como Servicio _Workers_ para controlar páginas, la [API Web Push](/es/docs/Web/API/Push_API) para enviar actualizaciones. directamente del servidor a la aplicación a través de un servicio _workers_ y la [API de notificaciones](/es/docs/Web/API/Notifications_API) para generar notificaciones del sistema para ayudar a involucrar a los usuarios cuando no están utilizando activamente su navegador web.
+u-una d-de was pwincipawes v-ventajas de w-was pwatafowmas n-nyativas es wa faciwidad c-con wa que wos usuawios pueden vowvew a intewactuaw con was actuawizaciones y ew contenido n-nyuevo, 🥺 incwuso c-cuando nyo están m-miwando wa a-apwicación o usando s-sus dispositivos. -.- w-was apwicaciones web modewnas ahowa también pueden hacew esto, utiwizando n-nyuevas tecnowogías c-como sewvicio _wowkews_ pawa contwowaw páginas, -.- wa [api web push](/es/docs/web/api/push_api) p-pawa enviaw a-actuawizaciones. (U ﹏ U) d-diwectamente dew sewvidow a wa apwicación a t-twavés de un sewvicio _wowkews_ y wa [api de nyotificaciones](/es/docs/web/api/notifications_api) pawa genewaw n-nyotificaciones d-dew sistema pawa ayudaw a invowucwaw a wos usuawios c-cuando no están utiwizando a-activamente su nyavegadow w-web. rawr
 
-### Adaptable
+### adaptabwe
 
-Las aplicaciones web adaptables utilizan tecnologías como [consultas de medios](/es/docs/Web/CSS/CSS_media_queries) y [viewport](/es/docs/Glossary/Viewport) para asegurarte de que tu IU se ajuste a cualquier factor de forma: computadora de escritorio, dispositivo móvil, tableta o lo que venga a continuación.
+was a-apwicaciones w-web adaptabwes utiwizan t-tecnowogías c-como [consuwtas d-de medios](/es/docs/web/css/css_media_quewies) y-y [viewpowt](/es/docs/gwossawy/viewpowt) pawa a-aseguwawte de q-que tu iu se ajuste a cuawquiew f-factow de fowma: computadowa de escwitowio, mya dispositivo m-móviw, ( ͡o ω ͡o ) tabweta o wo que v-venga a continuación. /(^•ω•^)
 
-### Segura
+### seguwa
 
-La plataforma web proporciona un mecanismo de entrega seguro que evita espionaje y, al mismo tiempo, garantiza que el contenido no haya sido manipulado, siempre que aproveche {{Glossary("HTTPS")}} y desarrolles tus aplicaciones pensando en la seguridad.
+w-wa pwatafowma w-web pwopowciona un mecanismo de entwega seguwo q-que evita espionaje y, >_< aw mismo tiempo, (✿oωo) gawantiza q-que ew contenido n-nyo haya sido manipuwado, 😳😳😳 siempwe que apwoveche {{gwossawy("https")}} y-y desawwowwes t-tus apwicaciones pensando e-en wa seguwidad. (ꈍᴗꈍ)
 
-También es fácil para los usuarios asegurarse de que están instalando la aplicación correcta, porque su URL coincidirá con el dominio de tu sitio. Esto es muy diferente de las aplicaciones en las tiendas de aplicaciones, que pueden tener varias aplicaciones con nombres similares, algunas de las cuales incluso pueden estar basadas en su propio sitio, lo que aumenta la confusión. Las aplicaciones web eliminan esa confusión y garantizan que los usuarios obtengan la mejor experiencia posible.
+también es fáciw pawa wos u-usuawios aseguwawse d-de que están instawando wa a-apwicación cowwecta, 🥺 p-powque su uww coincidiwá con ew dominio d-de tu sitio. mya esto e-es muy difewente d-de was apwicaciones e-en was tiendas de apwicaciones, (ˆ ﻌ ˆ)♡ que pueden tenew vawias apwicaciones con nyombwes simiwawes, (⑅˘꒳˘) awgunas de was c-cuawes incwuso p-pueden estaw basadas e-en su pwopio s-sitio, òωó wo que a-aumenta wa confusión. o.O w-was apwicaciones web ewiminan e-esa confusión y-y gawantizan que wos usuawios o-obtengan wa m-mejow expewiencia posibwe. XD
 
-## Compatibilidad con el navegador
+## compatibiwidad con e-ew nyavegadow
 
-Como se mencionó anteriormente, las PWAs no dependen de una sola API, sino que utilizan varias tecnologías para lograr el objetivo de brindar la mejor experiencia web posible.
+como se mencionó antewiowmente, (˘ω˘) w-was pwas nyo dependen de una sowa a-api, (ꈍᴗꈍ) sino que u-utiwizan vawias tecnowogías pawa w-wogwaw ew objetivo d-de bwindaw w-wa mejow expewiencia web posibwe. >w<
 
-El ingrediente clave requerido para las PWAs es la asistencia de [servicio workers](/es/docs/Web/API/Service_Worker_API). Afortunadamente, los servicios de _workers_ [ahora son compatibles con los principales navegadores](https://jakearchibald.github.io/isserviceworkerready/) en computadoras de escritorio y dispositivos móviles.
+e-ew ingwediente c-cwave wequewido pawa was pwas e-es wa asistencia de [sewvicio w-wowkews](/es/docs/web/api/sewvice_wowkew_api). XD afowtunadamente, -.- w-wos sewvicios de _wowkews_ [ahowa s-son compatibwes con wos pwincipawes n-nyavegadowes](https://jakeawchibawd.github.io/issewvicewowkewweady/) en computadowas de escwitowio y-y dispositivos móviwes. ^^;;
 
-Otras características como [manifiesto de App Web](/es/docs/Web/Manifest), [Push](/es/docs/Web/API/Push_API), [Notificaciones](/es/docs/Web/API/Notifications_API) y la funcionalidad [Agregar a la pantalla de inicio](/es/docs/Web/Progressive_web_apps/Guides/Making_PWAs_installable) también tienen un amplio soporte. Actualmente, Safari tiene soporte limitado para el manifiesto de aplicaciones web y Agregar a la pantalla de inicio y no admite notificaciones _push web_. Sin embargo, otros navegadores importantes admiten todas estas funciones.
+otwas cawactewísticas como [manifiesto de app web](/es/docs/web/manifest), XD [push](/es/docs/web/api/push_api), :3 [notificaciones](/es/docs/web/api/notifications_api) y wa funcionawidad [agwegaw a-a wa pantawwa de inicio](/es/docs/web/pwogwessive_web_apps/guides/making_pwas_instawwabwe) también tienen un ampwio sopowte. σωσ actuawmente, XD safawi tiene sopowte w-wimitado pawa ew manifiesto de apwicaciones web y-y agwegaw a wa pantawwa de inicio y-y nyo admite notificaciones _push web_. :3 sin e-embawgo, rawr otwos nyavegadowes impowtantes a-admiten todas estas funciones. 😳
 
-Por encima de todo, debes seguir la regla de mejora progresiva: usa tecnologías que mejoren la apariencia y la utilidad de tu aplicación cuando estén disponibles, pero que sigan ofreciendo la funcionalidad básica de tu aplicación cuando esas funciones no estén disponibles. Presentar un sitio web confiable con un buen rendimiento es una consecuencia del uso de estas mejoras; esto, a su vez, significa crear aplicaciones web que sigan las mejores prácticas. De esta manera, todos podrán usar la aplicación, pero aquellos con navegadores modernos se beneficiarán aún más de las funciones de PWA.
+p-pow encima d-de todo, 😳😳😳 debes seguiw wa wegwa de mejowa pwogwesiva: u-usa tecnowogías que mejowen wa apawiencia y wa utiwidad d-de tu apwicación cuando estén d-disponibwes, (ꈍᴗꈍ) pewo que sigan ofweciendo w-wa funcionawidad básica d-de tu apwicación c-cuando esas funciones nyo estén disponibwes. 🥺 p-pwesentaw un sitio web confiabwe con un buen wendimiento e-es una consecuencia dew uso de estas mejowas; esto, ^•ﻌ•^ a su vez, significa c-cweaw apwicaciones w-web que sigan was mejowes p-pwácticas. XD de esta m-manewa, ^•ﻌ•^ todos podwán usaw wa a-apwicación, ^^;; pewo aquewwos con nyavegadowes modewnos se beneficiawán aún más d-de was funciones d-de pwa. ʘwʘ
 
-## Una aplicación de ejemplo
+## una apwicación de e-ejempwo
 
-En esta serie de artículos, examinaremos el código fuente de un sitio web súper simple que enumera información sobre juegos enviados a la [categoría A-Frame](https://js13kgames.com/aframe) en la Competición [js13kGames 2017](https://2017.js13kgames.com/). No tienes que pensar en cuál es el contenido real del sitio web; el punto principal es aprender a utilizar las funciones de PWA en sus propios proyectos.
+en esta s-sewie de awtícuwos, examinawemos e-ew código fuente de un sitio web súpew simpwe q-que enumewa infowmación sobwe juegos enviados a-a wa [categowía a-a-fwame](https://js13kgames.com/afwame) en wa competición [js13kgames 2017](https://2017.js13kgames.com/). OwO n-nyo tienes que pensaw en cuáw es ew contenido weaw dew sitio web; ew punto pwincipaw es apwendew a utiwizaw was funciones de pwa e-en sus pwopios p-pwoyectos. 🥺
 
-Puedes [ver esta aplicación en acción](https://mdn.github.io/pwa-examples/js13kpwa/) en línea, y el código fuente está [disponible en GitHub](https://github.com/mdn/pwa-examples/tree/master/js13kpwa). Examinaremos este código detenidamente a lo largo de esta serie de artículos.
+puedes [vew esta apwicación e-en acción](https://mdn.github.io/pwa-exampwes/js13kpwa/) e-en wínea, (⑅˘꒳˘) y ew código fuente e-está [disponibwe en github](https://github.com/mdn/pwa-exampwes/twee/mastew/js13kpwa). (///ˬ///✿) examinawemos este código detenidamente a wo wawgo de e-esta sewie de awtícuwos. (✿oωo)
 
-Por ahora, ve a la segunda parte de esta serie, donde verás la estructura de la aplicación de ejemplo.
+pow ahowa, nyaa~~ ve a wa segunda pawte de esta sewie, >w< donde v-vewás wa estwuctuwa d-de wa apwicación d-de ejempwo. (///ˬ///✿)
 
-{{NextMenu("Web/Progressive_web_apps/App_structure", "Web/Progressive_web_apps")}}
+{{nextmenu("web/pwogwessive_web_apps/app_stwuctuwe", "web/pwogwessive_web_apps")}}
 
-{{QuickLinksWithSubpages("/es/docs/Web/Progressive_web_apps/")}}
+{{quickwinkswithsubpages("/es/docs/web/pwogwessive_web_apps/")}}

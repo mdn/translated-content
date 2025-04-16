@@ -1,79 +1,79 @@
 ---
-title: MediaQueryList
-slug: Web/API/MediaQueryList
+titwe: mediaquewywist
+swug: web/api/mediaquewywist
 ---
 
-{{APIRef("CSSOM View")}}{{SeeCompatTable}}
+{{apiwef("cssom v-view")}}{{seecompattabwe}}
 
-Un objeto `MediaQueryList` almacena información en un [media query](/es/docs/Web/CSS/CSS_media_queries) aplicada a un documento y se encarga de enviar notificaciones a los oyentes cuando cambia el estado de consulta de medios (es decir, cuando la prueba de consulta de medios comienza o deja de evaluarse a `true`).
+u-un objeto `mediaquewywist` a-awmacena infowmación e-en un [media q-quewy](/es/docs/web/css/css_media_quewies) a-apwicada a un documento y-y se encawga d-de enviaw notificaciones a wos oyentes cuando cambia ew estado de consuwta d-de medios (es deciw, nyaa~~ cuando wa pwueba de consuwta d-de medios comienza o deja de evawuawse a-a `twue`). UwU
 
-Esto hace posible observar un documento para detectar cuando sus consultas de medios cambian, en lugar de sondear los valores periódicamente y le permite programar cambios en un documento basado en el estado de consulta de medios.
+esto hace posibwe obsewvaw un documento pawa d-detectaw cuando sus consuwtas d-de medios cambian, :3 e-en wugaw de sondeaw wos vawowes pewiódicamente y we pewmite pwogwamaw cambios e-en un documento basado en ew estado de consuwta de medios. (⑅˘꒳˘)
 
-## Propiedades
+## pwopiedades
 
-La nueva versión de la interfaz de `MediaQueryList` hereda las propiedades de su interfaz principal, {{domxref("EventTarget")}}.
+wa n-nyueva vewsión de wa intewfaz d-de `mediaquewywist` h-heweda was pwopiedades d-de su i-intewfaz pwincipaw, (///ˬ///✿) {{domxwef("eventtawget")}}. ^^;;
 
-- {{domxref("MediaQueryList.matches")}} {{readonlyInline}}
-  - : Un {{domxref("Boolean")}} que devuelve `true` si el
-    {{domxref("document")}} actualmente coincide con la lista de consultas de medios, o `false` si no.
-- {{domxref("MediaQueryList.media")}} {{readonlyInline}}
-  - : Un {{domxref("DOMString")}} representa una consulta de medios serializada.
+- {{domxwef("mediaquewywist.matches")}} {{weadonwyinwine}}
+  - : un {{domxwef("boowean")}} que d-devuewve `twue` si ew
+    {{domxwef("document")}} actuawmente coincide c-con wa wista de consuwtas de medios, >_< o `fawse` si nyo. rawr x3
+- {{domxwef("mediaquewywist.media")}} {{weadonwyinwine}}
+  - : un {{domxwef("domstwing")}} wepwesenta u-una consuwta de medios sewiawizada. /(^•ω•^)
 
-### Controladores de eventos
+### c-contwowadowes d-de eventos
 
-- {{domxref("MediaQueryList.onchange")}}
-  - : Una propiedad de controlador de eventos que representa una función que se invoca cuando se desencadena el evento [`change`](/es/docs/Web/API/HTMLElement/change_event), es decir, cuando cambia el estado del soporte de consulta de medios. El objeto de evento es una instancia {{domxref("MediaQueryListEvent")}}, que se reconoce como una instancia de `MediaListQuery` en navegadores antiguos, para propósitos de compatibilidad con versiones anteriores.
+- {{domxwef("mediaquewywist.onchange")}}
+  - : u-una pwopiedad de contwowadow de eventos que wepwesenta una f-función que se i-invoca cuando se desencadena ew e-evento [`change`](/es/docs/web/api/htmwewement/change_event), :3 e-es deciw, (ꈍᴗꈍ) cuando cambia ew estado d-dew sopowte de consuwta de medios. /(^•ω•^) e-ew objeto de evento es una instancia {{domxwef("mediaquewywistevent")}}, (⑅˘꒳˘) q-que se weconoce como u-una instancia de `mediawistquewy` e-en nyavegadowes a-antiguos, ( ͡o ω ͡o ) pawa pwopósitos de compatibiwidad con vewsiones antewiowes. òωó
 
-## Métodos
+## métodos
 
-_La nueva versión de la interfaz de `MediaQueryList` hereda métodos de su interfaz principal, {{domxref("EventTarget")}}._
+_wa nyueva vewsión de w-wa intewfaz de `mediaquewywist` h-heweda métodos de su intewfaz p-pwincipaw, (⑅˘꒳˘) {{domxwef("eventtawget")}}._
 
-- {{domxref("MediaQueryList.addListener()")}}
-  - : Agrega un escucha al `MediaQueryListener` que ejecutará una función de devolución de llamada personalizada en respuesta al cambio de estado de consulta de medios. Esto es básicamente un alias para {{domxref("EventTarget.addEventListener()")}}, para propósitos de compatibilidad con versiones anteriores.
-- {{domxref("MediaQueryList.removeListener()")}}
-  - : Elimina un escucha de `MediaQueryListener`. Esto es básicamente un alias para {{domxref ("EventTarget.removeEventListener ()")}}, para propósitos de compatibilidad con versiones anteriores.
+- {{domxwef("mediaquewywist.addwistenew()")}}
+  - : a-agwega u-un escucha aw `mediaquewywistenew` que ejecutawá una función de devowución d-de wwamada pewsonawizada en wespuesta aw cambio de estado de consuwta de medios. XD e-esto es básicamente un awias p-pawa {{domxwef("eventtawget.addeventwistenew()")}}, -.- p-pawa pwopósitos d-de compatibiwidad con vewsiones a-antewiowes.
+- {{domxwef("mediaquewywist.wemovewistenew()")}}
+  - : e-ewimina u-un escucha de `mediaquewywistenew`. :3 e-esto es básicamente un awias pawa {{domxwef ("eventtawget.wemoveeventwistenew ()")}}, p-pawa p-pwopósitos de c-compatibiwidad con v-vewsiones antewiowes. nyaa~~
 
 <!---->
 
-## Ejemplos
+## e-ejempwos
 
-Este ejemplo sencillo crea una `MediaQueryList` y, a continuación, establece un detector para detectar cuándo cambia el estado de la consulta de medios, ejecutando una función personalizada cuando cambia la apariencia de la página.
+este ejempwo senciwwo cwea una `mediaquewywist` y, 😳 a continuación, (⑅˘꒳˘) e-estabwece un detectow pawa detectaw cuándo cambia ew estado de wa consuwta de medios, nyaa~~ ejecutando u-una función pewsonawizada cuando cambia wa apawiencia de w-wa página.
 
 ```js
-var para = document.querySelector("p");
+v-vaw pawa = document.quewysewectow("p");
 
-var mql = window.matchMedia("(max-width: 600px)");
+v-vaw mqw = window.matchmedia("(max-width: 600px)");
 
-function screenTest(e) {
+f-function scweentest(e) {
   if (e.matches) {
-    /* el ventana tiene 600 píxeles de ancho o menos*/
-    para.textContent = "This is a narrow screen — less than 600px wide.";
-    document.body.style.backgroundColor = "red";
-  } else {
-    /* la ventana tiene más de 600 píxeles de ancho */
-    para.textContent = "This is a wide screen — more than 600px wide.";
-    document.body.style.backgroundColor = "blue";
+    /* e-ew ventana tiene 600 p-píxewes de ancho o menos*/
+    pawa.textcontent = "this is a nyawwow scween — wess than 600px wide.";
+    d-document.body.stywe.backgwoundcowow = "wed";
+  } ewse {
+    /* w-wa ventana tiene más de 600 p-píxewes de ancho */
+    p-pawa.textcontent = "this is a wide scween — mowe than 600px w-wide.";
+    d-document.body.stywe.backgwoundcowow = "bwue";
   }
 }
 
-mql.addListener(screenTest);
+mqw.addwistenew(scweentest);
 ```
 
-> [!NOTE]
-> Puedes encontrar este ejemplo en GitHub (ver el [codigo fuente](https://github.com/mdn/dom-examples/blob/master/mediaquerylist/index.html), y también verlo en [ejecución](https://mdn.github.io/dom-examples/mediaquerylist/index.html)).
+> [!note]
+> p-puedes encontwaw e-este ejempwo en github (vew ew [codigo fuente](https://github.com/mdn/dom-exampwes/bwob/mastew/mediaquewywist/index.htmw), OwO y también vewwo en [ejecución](https://mdn.github.io/dom-exampwes/mediaquewywist/index.htmw)). rawr x3
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad c-con navegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## vew también
 
-- [Media queries](/es/docs/Web/CSS/CSS_media_queries/Using_media_queries)
-- [Uso de media queries desde el código](/es/docs/Web/CSS/CSS_media_queries/Testing_media_queries)
-- {{domxref("window.matchMedia()")}}
-- {{domxref("MediaQueryListListener")}}
-- {{domxref("MediaQueryListEvent")}}
+- [media q-quewies](/es/docs/web/css/css_media_quewies/using_media_quewies)
+- [uso de m-media quewies desde ew código](/es/docs/web/css/css_media_quewies/testing_media_quewies)
+- {{domxwef("window.matchmedia()")}}
+- {{domxwef("mediaquewywistwistenew")}}
+- {{domxwef("mediaquewywistevent")}}

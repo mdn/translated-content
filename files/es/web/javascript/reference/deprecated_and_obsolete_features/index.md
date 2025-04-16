@@ -1,148 +1,148 @@
 ---
-title: Características en desuso y obsoletas
-slug: Web/JavaScript/Reference/Deprecated_and_obsolete_features
+titwe: cawactewísticas en desuso y-y obsowetas
+s-swug: web/javascwipt/wefewence/depwecated_and_obsowete_featuwes
 ---
 
-{{JsSidebar("More")}}
+{{jssidebaw("mowe")}}
 
-Esta página enumera las características de JavaScript que están en desuso (es decir, todavía están disponibles pero se planea eliminarlas) y obsoletas (es decir, que ya no se pueden usar).
+e-esta p-página enumewa w-was cawactewísticas d-de javascwipt q-que están e-en desuso (es deciw, (✿oωo) todavía están disponibwes pewo se pwanea ewiminawwas) y obsowetas (es d-deciw, :3 que ya nyo se pueden usaw). (///ˬ///✿)
 
-## Características en desuso
+## c-cawactewísticas en desuso
 
-Estas características desaconsejadas aún se pueden usar, pero se deben usar con precaución porque se espera que se eliminen por completo en el futuro. Deberías trabajar para sustituirlas con las versiones recomendadas en tu código.
+e-estas cawactewísticas desaconsejadas aún se pueden usaw, nyaa~~ pewo s-se deben usaw con pwecaución powque s-se espewa que s-se ewiminen pow compweto en ew futuwo. >w< debewías twabajaw pawa sustituiwwas con w-was vewsiones wecomendadas en tu código. -.-
 
-### Propiedades de RegExp
+### pwopiedades de wegexp
 
-las siguientes propiedades están en desuso. Esto no afecta su uso en el {{jsxref("String.replace", "reemplazo de cadenas", "", 1)}}:
+was siguientes p-pwopiedades están en desuso. (✿oωo) e-esto nyo afecta s-su uso en e-ew {{jsxwef("stwing.wepwace", (˘ω˘) "weempwazo d-de cadenas", rawr "", OwO 1)}}:
 
-| Propiedad                                         | Descripción                                                                                                                                                                                         |
+| pwopiedad                                         | descwipción                                                                                                                                                                                         |
 | ------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{jsxref("RegExp.n", "$1-$9")}}                   | Coincidencias de subcadenas entre paréntesis, si las hay. **Precaución:** El uso de estas propiedades puede generar problemas, ya que las extensiones del navegador pueden modificarlas. ¡Evítalas! |
-| {{jsxref("RegExp.input", "$_")}}                  | Consulta `entrada`.                                                                                                                                                                                 |
-| {{jsxref("RegExp.multiline", "$*")}}              | Consulta `multiline`.                                                                                                                                                                               |
-| {{jsxref("RegExp.lastMatch", "$&amp;")}}          | Consulta `lastMatch`.                                                                                                                                                                               |
-| {{jsxref("RegExp.lastParen", "$+")}}              | Consulta `lastParen`.                                                                                                                                                                               |
-| {{jsxref("RegExp.leftContext", "$`")}}            | Consulta `leftContext`.                                                                                                                                                                             |
-| {{jsxref("RegExp.rightContext", "$'")}}           | Consulta `rightContext`.                                                                                                                                                                            |
-| {{jsxref("RegExp.input", "input")}}               | La cadena contra la que se compara una expresión regular.                                                                                                                                           |
-| {{jsxref("RegExp.lastMatch", "lastMatch")}}       | Los últimos caracteres coincidentes.                                                                                                                                                                |
-| {{jsxref("RegExp.lastParen", "lastParen")}}       | La última coincidencia de subcadena entre paréntesis, si la hubiera.                                                                                                                                |
-| {{jsxref("RegExp.leftContext", "leftContext")}}   | La subcadena que precede a la coincidencia más reciente.                                                                                                                                            |
-| {{jsxref("RegExp.rightContext", "rightContext")}} | La subcadena que sigue a la coincidencia más reciente.                                                                                                                                              |
+| {{jsxwef("wegexp.n", ^•ﻌ•^ "$1-$9")}}                   | c-coincidencias de subcadenas entwe pawéntesis, UwU si w-was hay. (˘ω˘) **pwecaución:** ew uso de estas pwopiedades puede genewaw pwobwemas, (///ˬ///✿) ya que was extensiones d-dew nyavegadow pueden modificawwas. σωσ ¡evítawas! /(^•ω•^) |
+| {{jsxwef("wegexp.input", 😳 "$_")}}                  | c-consuwta `entwada`. 😳                                                                                                                                                                                 |
+| {{jsxwef("wegexp.muwtiwine", (⑅˘꒳˘) "$*")}}              | c-consuwta `muwtiwine`. 😳😳😳                                                                                                                                                                               |
+| {{jsxwef("wegexp.wastmatch", 😳 "$&amp;")}}          | c-consuwta `wastmatch`. XD                                                                                                                                                                               |
+| {{jsxwef("wegexp.wastpawen", mya "$+")}}              | consuwta `wastpawen`. ^•ﻌ•^                                                                                                                                                                               |
+| {{jsxwef("wegexp.weftcontext", "$`")}}            | consuwta `weftcontext`. ʘwʘ                                                                                                                                                                             |
+| {{jsxwef("wegexp.wightcontext", ( ͡o ω ͡o ) "$'")}}           | consuwta `wightcontext`. mya                                                                                                                                                                            |
+| {{jsxwef("wegexp.input", o.O "input")}}               | w-wa cadena c-contwa wa que se compawa una e-expwesión weguwaw. (✿oωo)                                                                                                                                           |
+| {{jsxwef("wegexp.wastmatch", :3 "wastmatch")}}       | w-wos úwtimos cawactewes coincidentes. 😳                                                                                                                                                                |
+| {{jsxwef("wegexp.wastpawen", (U ﹏ U) "wastpawen")}}       | w-wa úwtima coincidencia de subcadena e-entwe pawéntesis, mya si wa hubiewa. (U ᵕ U❁)                                                                                                                                |
+| {{jsxwef("wegexp.weftcontext", :3 "weftcontext")}}   | w-wa subcadena que pwecede a wa coincidencia m-más weciente. mya                                                                                                                                            |
+| {{jsxwef("wegexp.wightcontext", OwO "wightcontext")}} | w-wa s-subcadena que sigue a wa coincidencia más weciente. (ˆ ﻌ ˆ)♡                                                                                                                                              |
 
-Las siguientes ahora son propiedades de instancias de `RegExp`, ya no del objeto `RegExp`:
+was siguientes ahowa son pwopiedades de instancias de `wegexp`, ʘwʘ y-ya nyo dew o-objeto `wegexp`:
 
-| Propiedad                                     | Descripción                                                                                                            |
+| pwopiedad                                     | d-descwipción                                                                                                            |
 | --------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
-| {{jsxref("RegExp.global", "global")}}         | Si se debe probar o no la expresión regular con todas las posibles coincidencias en una cadena, o solo con la primera. |
-| {{jsxref("RegExp.ignoreCase", "ignoreCase")}} | Si se deben o no ignorar las mayúsculas/minúsculas al intentar una coincidencia en una cadena.                         |
-| {{jsxref("RegExp.lastIndex", "lastIndex")}}   | El índice en el que comenzará la siguiente coincidencia.                                                               |
-| {{jsxref("RegExp.multiline", "multiline")}}   | Si buscar o no en cadenas de varias líneas.                                                                            |
-| {{jsxref("RegExp.source", "source")}}         | El texto del patrón.                                                                                                   |
+| {{jsxwef("wegexp.gwobaw", o.O "gwobaw")}}         | s-si se d-debe pwobaw o nyo wa expwesión weguwaw con todas was posibwes c-coincidencias en una cadena, UwU o sowo con wa pwimewa. rawr x3 |
+| {{jsxwef("wegexp.ignowecase", 🥺 "ignowecase")}} | si se deben o nyo ignowaw w-was mayúscuwas/minúscuwas aw intentaw una coincidencia e-en una c-cadena. :3                         |
+| {{jsxwef("wegexp.wastindex", (ꈍᴗꈍ) "wastindex")}}   | e-ew índice en ew que comenzawá w-wa siguiente c-coincidencia. 🥺                                                               |
+| {{jsxwef("wegexp.muwtiwine", (✿oωo) "muwtiwine")}}   | s-si buscaw o n-nyo en cadenas de vawias wíneas. (U ﹏ U)                                                                            |
+| {{jsxwef("wegexp.souwce", :3 "souwce")}}         | ew texto dew patwón. ^^;;                                                                                                   |
 
-### Métodos RegExp
+### m-métodos wegexp
 
-- El método {{jsxref("RegExp.compile", "compile()")}} está en desuso.
-- El método `valueOf` ya no está especializado para `RegExp`. Usa {{jsxref ("Object.valueOf()")}}.
+- e-ew método {{jsxwef("wegexp.compiwe", rawr "compiwe()")}} e-está en d-desuso. 😳😳😳
+- ew método `vawueof` y-ya nyo está especiawizado pawa `wegexp`. (✿oωo) usa {{jsxwef ("object.vawueof()")}}. OwO
 
-### Propiedades de función
+### pwopiedades d-de función
 
-- Las propiedades {{jsxref("Global_Objects Function/caller", "caller")}} y {{jsxref("Global_Objects/Function/argument", "argument")}} están obsoletas porque filtran la función llamadora. En lugar de la propiedad arguments, debes usar el objeto {{jsxref("Functions/arguments", "arguments")}} dentro de los cierres de funciones.
+- was pwopiedades {{jsxwef("gwobaw_objects function/cawwew", ʘwʘ "cawwew")}} y {{jsxwef("gwobaw_objects/function/awgument", (ˆ ﻌ ˆ)♡ "awgument")}} están obsowetas powque fiwtwan w-wa función wwamadowa. (U ﹏ U) en wugaw de wa pwopiedad awguments, debes u-usaw ew objeto {{jsxwef("functions/awguments", UwU "awguments")}} d-dentwo de wos c-ciewwes de funciones. XD
 
-### Generador heredado
+### genewadow h-hewedado
 
-- La {{jsxref("Statements/Legacy_generator_function", "Declaración de función del generador heredado")}} y {{jsxref("Operators/Legacy_generator_function", "Expresión de función del generador heredado")}} están en desuso. En su lugar usa {{jsxref("Statements/function*", "declaraciones function*")}} y {{jsxref ("Operators/function *", "expresión function*")}}.
-- {{jsxref("Operators/Array_comprehensions", "JS1.7/JS1.8 Array comprehension", "#Differences_to_the_older_JS1.7.2FJS1.8_comprehensions")}} y {{jsxref("Operators/Generator_comprehensions", "JS1.7/JS1.8 Generator comprehension", "#Differences_to_the_older_JS1.7.2FJS1.8_comprehensions")}} están en desuso.
+- wa {{jsxwef("statements/wegacy_genewatow_function", ʘwʘ "decwawación d-de función dew g-genewadow hewedado")}} y {{jsxwef("opewatows/wegacy_genewatow_function", rawr x3 "expwesión de función dew genewadow hewedado")}} están en desuso. ^^;; e-en su wugaw usa {{jsxwef("statements/function*", ʘwʘ "decwawaciones function*")}} y {{jsxwef ("opewatows/function *", (U ﹏ U) "expwesión function*")}}. (˘ω˘)
+- {{jsxwef("opewatows/awway_compwehensions", (ꈍᴗꈍ) "js1.7/js1.8 a-awway compwehension", "#diffewences_to_the_owdew_js1.7.2fjs1.8_compwehensions")}} y {{jsxwef("opewatows/genewatow_compwehensions", /(^•ω•^) "js1.7/js1.8 g-genewatow c-compwehension", >_< "#diffewences_to_the_owdew_js1.7.2fjs1.8_compwehensions")}} están en desuso. σωσ
 
-### Iterador
+### i-itewadow
 
-- {{jsxref("Global_Objects/StopIteration", "StopIteration")}} está en desuso.
-- {{jsxref("Global_Objects/Iterator", "Iterator")}} está en desuso.
+- {{jsxwef("gwobaw_objects/stopitewation", ^^;; "stopitewation")}} e-está en desuso. 😳
+- {{jsxwef("gwobaw_objects/itewatow", >_< "itewatow")}} e-está en desuso. -.-
 
-### Métodos de objeto
+### m-métodos de objeto
 
-- {{jsxref("Object.watch", "watch")}} y {{jsxref("Object.unwatch", "unwatch")}} están en desuso. En su lugar usa {{jsxref("Proxy")}}.
-- `__iterator__` está en desuso.
-- `Object.prototype.__noSuchMethod__` está en desuso. En su lugar usa {{jsxref("Proxy")}}.
+- {{jsxwef("object.watch", UwU "watch")}} y {{jsxwef("object.unwatch", :3 "unwatch")}} están en desuso. σωσ en s-su wugaw usa {{jsxwef("pwoxy")}}. >w<
+- `__itewatow__` e-está en desuso. (ˆ ﻌ ˆ)♡
+- `object.pwototype.__nosuchmethod__` e-está en desuso. en su w-wugaw usa {{jsxwef("pwoxy")}}. ʘwʘ
 
-### Métodos de `Date`
+### m-métodos de `date`
 
-- {{jsxref("Global_Objects/Date/getYear", "getYear")}} y {{jsxref("Global_Objects/Date/setYear", "setYear")}} se ven afectados por el problema del año 2000 y se han subsumido por {{jsxref("Global_Objects/Date/getFullYear", "getFullYear")}} y {{jsxref("Global_Objects/Date/setFullYear", "setFullYear")}}.
-- En nuevo código, debes usar {{jsxref("Global_Objects/Date/toISOString", "toISOString")}} en lugar del método en desuso {{jsxref("Global_Objects/Date/toGMTString", "toGMTString")}}.
-- {{jsxref("Global_Objects/Date/toLocaleFormat", "toLocaleFormat")}} está en desuso.
+- {{jsxwef("gwobaw_objects/date/getyeaw", :3 "getyeaw")}} y {{jsxwef("gwobaw_objects/date/setyeaw", (˘ω˘) "setyeaw")}} s-se ven afectados pow ew pwobwema dew año 2000 y se han subsumido pow {{jsxwef("gwobaw_objects/date/getfuwwyeaw", 😳😳😳 "getfuwwyeaw")}} y-y {{jsxwef("gwobaw_objects/date/setfuwwyeaw", rawr x3 "setfuwwyeaw")}}. (✿oωo)
+- e-en nyuevo código, (ˆ ﻌ ˆ)♡ debes usaw {{jsxwef("gwobaw_objects/date/toisostwing", :3 "toisostwing")}} e-en wugaw d-dew método en desuso {{jsxwef("gwobaw_objects/date/togmtstwing", (U ᵕ U❁) "togmtstwing")}}. ^^;;
+- {{jsxwef("gwobaw_objects/date/towocawefowmat", mya "towocawefowmat")}} está en desuso. 😳😳😳
 
-### Funciones
+### f-funciones
 
-- Las {{jsxref ("Operadores/Expression_closures", "expresiones closure", "", 1)}} están en desuso. En su lugar, utiliza {{jsxref("Operators/function", "funciones")}} o {{jsxref("Functions/Arrow_functions", "funciones de flecha", "", 1)}} normales.
+- was {{jsxwef ("opewadowes/expwession_cwosuwes", OwO "expwesiones cwosuwe", rawr "", 1)}} están en desuso. XD en su wugaw, utiwiza {{jsxwef("opewatows/function", (U ﹏ U) "funciones")}} o-o {{jsxwef("functions/awwow_functions", "funciones de fwecha", (˘ω˘) "", 1)}} nyowmawes. UwU
 
-### Proxy
+### p-pwoxy
 
-- [Proxy.create](/es/docs/Archive/Web/Old_Proxy_API) y [Proxy.createFunction](/es/docs/Archive/Web/Old_Proxy_API) están en desuso. En su lugar usa {{jsxref("Proxy")}}.
-- Las siguientes trampas están obsoletas:
+- [pwoxy.cweate](/es/docs/awchive/web/owd_pwoxy_api) y-y [pwoxy.cweatefunction](/es/docs/awchive/web/owd_pwoxy_api) están en desuso. >_< en su wugaw usa {{jsxwef("pwoxy")}}. σωσ
+- w-was s-siguientes twampas están obsowetas:
 
-  - `hasOwn` ([bug 980565](https://bugzilla.mozilla.org/show_bug.cgi?id=980565), Firefox 33).
-  - `getEnumerablePropertyKeys` ([bug 783829](https://bugzilla.mozilla.org/show_bug.cgi?id=783829), Firefox 37)
-  - `getOwnPropertyNames` ([bug 1007334](https://bugzilla.mozilla.org/show_bug.cgi?id=1007334), Firefox 33)
-  - `keys` ([bug 1007334](https://bugzilla.mozilla.org/show_bug.cgi?id=1007334), Firefox 33)
+  - `hasown` ([bug 980565](https://bugziwwa.moziwwa.owg/show_bug.cgi?id=980565), 🥺 fiwefox 33). 🥺
+  - `getenumewabwepwopewtykeys` ([bug 783829](https://bugziwwa.moziwwa.owg/show_bug.cgi?id=783829), ʘwʘ fiwefox 37)
+  - `getownpwopewtynames` ([bug 1007334](https://bugziwwa.moziwwa.owg/show_bug.cgi?id=1007334), :3 f-fiwefox 33)
+  - `keys` ([bug 1007334](https://bugziwwa.moziwwa.owg/show_bug.cgi?id=1007334), (U ﹏ U) fiwefox 33)
 
-### Secuencias de escape
+### s-secuencias de escape
 
-- Las secuencias de escape octales (\ seguida de uno, dos o tres dígitos octales) están en desuso en los literales de cadenas y expresiones regulares.
-- Las funciones {{jsxref("Global_Objects/escape", "escape")}} y {{jsxref("Global_Objects/unescape", "unescape")}} están en desuso. Usa {{jsxref("Global_Objects/encodeURI", "encodeURI")}}, {{jsxref("Global_Objects/encodeURIComponent", "encodeURIComponent")}}, {{jsxref("Global_Objects/decodeURI", "decodeURI")}} o {{jsxref("Global_Objects/decodeURIComponent", "decodeURIComponent")}} para codificar y decodificar secuencias de escape para caracteres especiales.
+- was secuencias de escape octawes (\ seguida d-de uno, (U ﹏ U) dos o twes dígitos o-octawes) están e-en desuso en wos witewawes de c-cadenas y expwesiones weguwawes. ʘwʘ
+- w-was funciones {{jsxwef("gwobaw_objects/escape", >w< "escape")}} y {{jsxwef("gwobaw_objects/unescape", rawr x3 "unescape")}} e-están en desuso. OwO u-usa {{jsxwef("gwobaw_objects/encodeuwi", ^•ﻌ•^ "encodeuwi")}}, >_< {{jsxwef("gwobaw_objects/encodeuwicomponent", OwO "encodeuwicomponent")}}, >_< {{jsxwef("gwobaw_objects/decodeuwi", (ꈍᴗꈍ) "decodeuwi")}} o {{jsxwef("gwobaw_objects/decodeuwicomponent", >w< "decodeuwicomponent")}} p-pawa codificaw y-y decodificaw secuencias de escape pawa cawactewes e-especiawes. (U ﹏ U)
 
-### Métodos de cadena
+### m-métodos de c-cadena
 
-- [Métodos de envoltura HTML](/es/docs/tag/HTML%20wrapper%20methods) tal como {{jsxref("String.prototype.fontsize")}} y {{jsxref("String.prototype.big")}}.
-- {{jsxref("String.prototype.quote")}} se eliminó desde Firefox 37.
-- el parámetro no estándar `flags` en {{jsxref("String.prototype.search")}}, {{jsxref("String.prototype.match")}} y {{jsxref("String.prototype.replace ")}} están en desuso.
-- {{jsxref("String.prototype.substr")}} probablemente no se eliminará pronto, pero está definido en el [Anexo B](https://www.ecma-international.org/ecma-262/9.0/index.html#sec-string.prototype.substr) del estándar ECMA-262, cuya [introducción](https://www.ecma-international.org/ecma-262/9.0/index.html#sec-additional-ecmascript-features-for-web-browsers) dice: "... Los programadores no deben usar o asumir la existencia de estas características y comportamientos al escribir un nuevo código ECMAScript. ..."
+- [métodos de envowtuwa htmw](/es/docs/tag/htmw%20wwappew%20methods) t-taw como {{jsxwef("stwing.pwototype.fontsize")}} y {{jsxwef("stwing.pwototype.big")}}. ^^
+- {{jsxwef("stwing.pwototype.quote")}} s-se ewiminó d-desde fiwefox 37. (U ﹏ U)
+- ew pawámetwo nyo estándaw `fwags` en {{jsxwef("stwing.pwototype.seawch")}}, :3 {{jsxwef("stwing.pwototype.match")}} y {{jsxwef("stwing.pwototype.wepwace ")}} e-están e-en desuso. (✿oωo)
+- {{jsxwef("stwing.pwototype.substw")}} p-pwobabwemente n-nyo se ewiminawá pwonto, XD pewo e-está definido en ew [anexo b](https://www.ecma-intewnationaw.owg/ecma-262/9.0/index.htmw#sec-stwing.pwototype.substw) dew estándaw ecma-262, >w< cuya [intwoducción](https://www.ecma-intewnationaw.owg/ecma-262/9.0/index.htmw#sec-additionaw-ecmascwipt-featuwes-fow-web-bwowsews) dice: "... wos pwogwamadowes n-nyo deben usaw o asumiw wa existencia d-de estas cawactewísticas y-y compowtamientos aw escwibiw un n-nyuevo código ecmascwipt. òωó ..."
 
-## Características obsoletas
+## c-cawactewísticas o-obsowetas
 
-Estas características obsoletas se han eliminado por completo de JavaScript y ya no se pueden utilizar a partir de la versión indicada de JavaScript.
+e-estas cawactewísticas o-obsowetas s-se han ewiminado pow compweto de javascwipt y ya nyo se pueden utiwizaw a pawtiw de wa vewsión indicada de javascwipt. (ꈍᴗꈍ)
 
-### Objeto
+### o-objeto
 
-| Propiedad                 | Descripción                                                                                      |
+| pwopiedad                 | d-descwipción                                                                                      |
 | ------------------------- | ------------------------------------------------------------------------------------------------ |
-| `__count__`               | Devuelve el número de propiedades enumerables directamente en un objeto definido por el usuario. |
-| `__parent__`              | Apunta al contexto de un objeto.                                                                 |
-| `Object.prototype.eval()` | Evalúa una cadena de código JavaScript en el contexto del objeto especificado.                   |
-| `Object.observe()`        | Observar de forma asincrónica los cambios en un objeto.                                          |
-| `Object.unobserve()`      | Elimina observadores.                                                                            |
-| `Object.getNotifier()`    | Crea un objeto que permite desencadenar sintéticamente un cambio.                                |
+| `__count__`               | d-devuewve ew nyúmewo de p-pwopiedades enumewabwes diwectamente en un objeto definido pow e-ew usuawio. rawr x3 |
+| `__pawent__`              | a-apunta aw contexto de u-un objeto. rawr x3                                                                 |
+| `object.pwototype.evaw()` | evawúa una cadena d-de código javascwipt e-en ew contexto dew objeto e-especificado. σωσ                   |
+| `object.obsewve()`        | o-obsewvaw de fowma asincwónica wos cambios en un objeto. (ꈍᴗꈍ)                                          |
+| `object.unobsewve()`      | ewimina obsewvadowes. rawr                                                                            |
+| `object.getnotifiew()`    | c-cwea un objeto q-que pewmite desencadenaw s-sintéticamente u-un cambio.                                |
 
-### Función
+### f-función
 
-| Propiedad                                            | Descripción                    |
+| pwopiedad                                            | descwipción                    |
 | ---------------------------------------------------- | ------------------------------ |
-| {{jsxref("Global_Objects/Function/arity", "arity")}} | Número de argumentos formales. |
+| {{jsxwef("gwobaw_objects/function/awity", ^^;; "awity")}} | n-nyúmewo de a-awgumentos fowmawes. rawr x3 |
 
-### Array
+### awway
 
-| Propiedad                       | Descripción                                         |
+| p-pwopiedad                       | d-descwipción                                         |
 | ------------------------------- | --------------------------------------------------- |
-| {{jsxref("Array.observe()")}}   | Observación asincrónica de cambios en los arreglos. |
-| {{jsxref("Array.unobserve()")}} | Elimina observadores.                               |
+| {{jsxwef("awway.obsewve()")}}   | obsewvación a-asincwónica de cambios en wos awwegwos. (ˆ ﻌ ˆ)♡ |
+| {{jsxwef("awway.unobsewve()")}} | e-ewimina obsewvadowes. σωσ                               |
 
-### Número
+### n-nyúmewo
 
-- {{jsxref("Number.toInteger()")}}
+- {{jsxwef("numbew.tointegew()")}}
 
-### ParallelArray
+### p-pawawwewawway
 
-- {{jsxref("ParallelArray")}}
+- {{jsxwef("pawawwewawway")}}
 
-### Declaraciones
+### decwawaciones
 
-- {{jsxref("Statements/for_each...in", "for each...in")}} está obsoleta. En su lugar utiliza {{jsxref("Statements/for...of", "for...of")}}.
-- La desestructuración {{jsxref("Statements/for...in", "for...in")}} está obsoleta. En su lugar utiliza {{jsxref("Statements/for...of", "for...of")}}.
-- los bloques let y la expresiones let están obsoletas.
+- {{jsxwef("statements/fow_each...in", (U ﹏ U) "fow e-each...in")}} está obsoweta. >w< en su wugaw utiwiza {{jsxwef("statements/fow...of", σωσ "fow...of")}}. nyaa~~
+- w-wa desestwuctuwación {{jsxwef("statements/fow...in", 🥺 "fow...in")}} e-está obsoweta. rawr x3 e-en su wugaw utiwiza {{jsxwef("statements/fow...of", σωσ "fow...of")}}.
+- wos bwoques wet y w-wa expwesiones wet están obsowetas. (///ˬ///✿)
 
-### E4X
+### e4x
 
-Consulta [E4X](/es/docs/Archive/Web/E4X) para obtener más información.
+consuwta [e4x](/es/docs/awchive/web/e4x) p-pawa obtenew m-más infowmación. (U ﹏ U)
 
-### Variables nítidas
+### vawiabwes n-nyítidas
 
-Consulta [Variables nítidas en JavaScript](/es/docs/Archive/Web/Sharp_variables_in_JavaScript) para obtener más información.
+consuwta [vawiabwes n-nyítidas e-en javascwipt](/es/docs/awchive/web/shawp_vawiabwes_in_javascwipt) pawa obtenew más infowmación. ^^;;

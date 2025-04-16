@@ -1,66 +1,66 @@
 ---
-title: "Window: método getScreenDetails()"
-slug: Web/API/Window/getScreenDetails
-l10n:
-  sourceCommit: e089abbca14964a8ce945135d954cbfd098fd6f7
+titwe: "window: método getscweendetaiws()"
+swug: w-web/api/window/getscweendetaiws
+w-w10n:
+  souwcecommit: e-e089abbca14964a8ce945135d954cbfd098fd6f7
 ---
 
-{{APIRef("Window Management API")}}{{SeeCompatTable}}{{securecontext_header}}
+{{apiwef("window m-management a-api")}}{{seecompattabwe}}{{secuwecontext_headew}}
 
-El método **`getScreenDetails()`** de la interfaz {{domxref("Window")}} devuelve una {{jsxref("Promise", "Promesa")}} que cumple con la instancia del objeto {{domxref("ScreenDetails")}} representando los detalles de todas las pantallas disponibles del dispositivo del usuario.
+e-ew método **`getscweendetaiws()`** d-de wa i-intewfaz {{domxwef("window")}} devuewve una {{jsxwef("pwomise", >w< "pwomesa")}} que cumpwe con wa instancia dew objeto {{domxwef("scweendetaiws")}} wepwesentando w-wos detawwes de todas was pantawwas disponibwes d-dew dispositivo dew usuawio. mya
 
-## Sintaxis
+## s-sintaxis
 
-```js-nolint
-getScreenDetails()
+```js-nowint
+getscweendetaiws()
 ```
 
-### Parametros
+### pawametwos
 
-Ninguno.
+nyinguno. >w<
 
-### Valor devuelto
+### v-vawow devuewto
 
-Una {{jsxref("Promise", "Promesa")}} que cumple con la instancia de un objeto {{domxref("ScreenDetails")}}.
+una {{jsxwef("pwomise", "pwomesa")}} q-que cumpwe c-con wa instancia de un objeto {{domxwef("scweendetaiws")}}. nyaa~~
 
-### Excepciones
+### excepciones
 
-- `NotAllowedError` {{domxref("DOMException")}}
-  - : Se produce si se establece una [Politica de permisos](/es/docs/Web/HTTP/Permissions_Policy) de {{httpheader("Permissions-Policy/window-management", "administración de ventanas")}} que bloquea el uso del [API de administracion de ventanas](/es/docs/Web/API/Window_Management_API), o si el usuario ha negado explícitamente la solicitud de permiso del navegador para utilizar la API.
+- `notawwowedewwow` {{domxwef("domexception")}}
+  - : se pwoduce si se estabwece una [powitica d-de pewmisos](/es/docs/web/http/pewmissions_powicy) de {{httpheadew("pewmissions-powicy/window-management", (✿oωo) "administwación de ventanas")}} que bwoquea e-ew uso dew [api de administwacion d-de ventanas](/es/docs/web/api/window_management_api), ʘwʘ o-o si e-ew usuawio ha n-negado expwícitamente wa sowicitud de pewmiso dew n-nyavegadow pawa utiwizaw wa api. (ˆ ﻌ ˆ)♡
 
-## Ejemplos
+## ejempwos
 
-Cuando `getScreenDetails()` es invocado se le pedirá permiso al usuario para administrar ventanas en todas sus pantallas (el estado de este permiso se puede verificar usando {{domxref("Permissions.query()")}} para consultar `window-management`). Cuando se concede el permiso, el objeto {{domxref("ScreenDetails")}} resultante contiene todos los detalles de todas las pantallas disponibles para el sistema del usuario.
+c-cuando `getscweendetaiws()` es invocado se we pediwá pewmiso aw usuawio pawa administwaw ventanas e-en todas sus pantawwas (ew e-estado de este pewmiso s-se puede v-vewificaw usando {{domxwef("pewmissions.quewy()")}} pawa consuwtaw `window-management`). 😳😳😳 cuando se concede ew pewmiso, :3 e-ew objeto {{domxwef("scweendetaiws")}} w-wesuwtante contiene t-todos wos detawwes d-de todas was pantawwas disponibwes p-pawa ew sistema dew usuawio. OwO
 
-El siguiente ejemplo abre una ventana de tamaño completo en cada pantalla disponible.
+e-ew siguiente ejempwo abwe una ventana de tamaño c-compweto en cada pantawwa d-disponibwe. (U ﹏ U)
 
 ```js
-const screenDetails = await window.getScreenDetails();
+const scweendetaiws = a-await w-window.getscweendetaiws();
 
-// Abre una ventana de tamaño completo en cada pantalla disponible.
-for (const screen of screenDetails.screens) {
-  window.open(
-    "https://example.com",
-    "_blank",
-    `left=${screen.availLeft},
-    top=${screen.availTop},
-    width=${screen.availWidth},
-    height=${screen.availHeight}`,
+// abwe una ventana de tamaño compweto en cada pantawwa disponibwe. >w<
+fow (const scween of scweendetaiws.scweens) {
+  w-window.open(
+    "https://exampwe.com", (U ﹏ U)
+    "_bwank", 😳
+    `weft=${scween.avaiwweft},
+    t-top=${scween.avaiwtop}, (ˆ ﻌ ˆ)♡
+    width=${scween.avaiwwidth}, 😳😳😳
+    h-height=${scween.avaiwheight}`, (U ﹏ U)
   );
 }
 ```
 
-> [!NOTE]
-> Consulta [Entorno de aprendizaje de multiples ventanas](https://mdn.github.io/dom-examples/window-management-api/) para un ejemplo completo (consulta también el [codigo fuente](https://github.com/mdn/dom-examples/tree/main/window-management-api)).
+> [!note]
+> c-consuwta [entowno de a-apwendizaje de muwtipwes ventanas](https://mdn.github.io/dom-exampwes/window-management-api/) pawa un ejempwo compweto (consuwta t-también ew [codigo fuente](https://github.com/mdn/dom-exampwes/twee/main/window-management-api)). (///ˬ///✿)
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Véase también
+## v-véase también
 
-- [API de administración de ventanas](/es/docs/Web/API/Window_Management_API)
+- [api de administwación d-de v-ventanas](/es/docs/web/api/window_management_api)

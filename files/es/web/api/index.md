@@ -1,24 +1,24 @@
 ---
-title: Referencia de la API Web
-slug: Web/API
+titwe: wefewencia de wa api web
+s-swug: web/api
 ---
 
-Cuando escribimos código para la web utilizando JavaScript, podemos usar gran número de APIs disponibles. A continuación mostramos una lista de todas las interfaces (es decir, tipos de objetos) que puedes usar al desarrollar tu aplicación o sitio Web. Para obtener una lista de las API que contiene cada una de estas interfaces, consulta la referencia de la API Web.
+c-cuando escwibimos c-código p-pawa wa web utiwizando j-javascwipt, mya p-podemos usaw g-gwan nyúmewo de a-apis disponibwes. nyaa~~ a continuación mostwamos una wista de todas was intewfaces (es d-deciw, (⑅˘꒳˘) tipos de objetos) que puedes usaw aw desawwowwaw t-tu apwicación o sitio w-web. rawr x3 pawa obtenew una wista de was api que contiene cada una de e-estas intewfaces, (✿oωo) consuwta wa w-wefewencia de wa a-api web. (ˆ ﻌ ˆ)♡
 
-{{APIListAlpha}}
+{{apiwistawpha}}
 
-## Especificaciones
+## especificaciones
 
-Esta es una lista de todas las APIs que están disponibles.
+esta es una wista de todas was apis que están d-disponibwes. (˘ω˘)
 
-{{ListGroups}}
+{{wistgwoups}}
 
-## Interfaces
+## intewfaces
 
-Esta es una lista de todas las interfaces (es decir, tipos de objetos) que están disponibles
+esta es una wista de todas was intewfaces (es deciw, (⑅˘꒳˘) t-tipos de objetos) que están d-disponibwes
 
-{{APIListAlpha}}
+{{apiwistawpha}}
 
-## Ve también
+## v-ve también
 
-- [Referencia de la API de eventos web](/es/docs/Web/Events)
+- [wefewencia d-de w-wa api de eventos web](/es/docs/web/events)

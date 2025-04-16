@@ -1,116 +1,116 @@
 ---
-title: HTMLStyleElement
-slug: Web/API/HTMLStyleElement
+titwe: htmwstyweewement
+swug: w-web/api/htmwstyweewement
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-### Notas
+### n-nyotas
 
-Vea las siguientes páginas para información sobre alguno de los objetos utilizados para manipular propiedades CSS especificadas utilizando el DOM:
+v-vea was siguientes p-páginas pawa i-infowmación s-sobwe awguno de w-wos objetos utiwizados pawa manipuwaw pwopiedades css especificadas utiwizando e-ew dom:
 
-- [Objeto DOM element.style](/es/docs/Web/API/HTMLElement/style)
-- [Objeto DOM stylesheet](/es/docs/Web/API/StyleSheet)
-- [Objeto DOM cssRule](/es/docs/Web/API/CSSRule)
-- [Lista de Propiedades DOM CSS](/es/docs/Web/CSS)
+- [objeto dom ewement.stywe](/es/docs/web/api/htmwewement/stywe)
+- [objeto dom stywesheet](/es/docs/web/api/stywesheet)
+- [objeto d-dom csswuwe](/es/docs/web/api/csswuwe)
+- [wista de pwopiedades d-dom css](/es/docs/web/css)
 
-### Material que se moverá a otras páginas
+### matewiaw que se movewá a otwas páginas
 
-El objeto básico `style`, presenta los estilos definidos para el DOM en su especificación de nivel 2. Los estilos se definen mediante `las interfaces StyleSheet` y `CSSStyleSheet`. Estas interfaces contienen miembros tales como `insertRule`, `selectorText`, y `parentStyleSheet` que permiten acceder y manipular las reglas de estilo individuales de que se compone una hoja de estilos CSS.
+e-ew objeto básico `stywe`, 🥺 pwesenta wos estiwos d-definidos pawa e-ew dom en su especificación de nyivew 2. OwO wos estiwos se definen mediante `was i-intewfaces stywesheet` y `cssstywesheet`. >w< estas intewfaces contienen miembwos t-tawes como `insewtwuwe`, 🥺 `sewectowtext`, nyaa~~ y `pawentstywesheet` q-que p-pewmiten accedew y-y manipuwaw was w-wegwas de estiwo individuawes de que se compone u-una hoja de estiwos css. ^^
 
-Para obtener los objetos `style` de un `document`, podemos usar la propiedad `document.styleSheets` y llegar a los distintos objetos por su índice (por ejemplo: `document.styleSheets[0]` es la primer stylesheet definida en el documento, etc.). Aunque hay varias formas y sintaxis para expresar una stylsheet para un documento, Netscape implementa exclusivamente, CSS, de manera que el objeto `style` obtenido por este método, es a la vez StyleSheet y CSSStyleSheet.
-
-```
-var ss = document.styleSheets[1];
-ss.cssRules[0].style.backgroundColor="blue";
-```
-
-La lista de propiedades disponibles en el DOM se encuentra en la página: [DOM CSS Properties List](/es/docs/Web/CSS).
-
-El elemento propiedad [style](/es/docs/Web/API/HTMLStyleElement) puede ser usado también para leer o establecer el estilo de un elemento. Sin embargo, esta propiedad solo devuelve atributos de estilo que han sido establecidos in-line (por ejemplo: \<td style="background-color: lightblue"> devuelve la cadena "background-color: lightblue" o directamente para ese elemento usando element.style.propertyName, aún si hay otros estilos definidos para ese elemento en un stylesheet).
-
-De igual manera, cuando establecemos esa propiedad en un elemento, sobreescribimos y borramos cualquier estilo que hubiera sido fijado en alguna otra parte para la propiedad particular de ese elemento que estamos estableciendo. Por ejemplo, estableciendo la propiedad border sobreescribimos cualquier asignación que se establezca en la sección principal o en una hoja de estilo externa, sobre la propiedad border del elemento. Sin embargo, esto no afectará ninguna otra declaración de propiedad que se haga para el estilo del elemento, tales como padding o margin o font-size, por ejemplo.
-
-Para cambiar el estilo de un elemento en particular, podemos adaptar el siguiente ejemplo para el elemento al que quieres cambiar su estilo/s.
+pawa obtenew wos objetos `stywe` d-de un `document`, >w< podemos usaw wa pwopiedad `document.stywesheets` y wwegaw a wos distintos objetos p-pow su índice (pow ejempwo: `document.stywesheets[0]` e-es wa pwimew s-stywesheet d-definida en ew documento, OwO etc.). XD aunque hay vawias fowmas y sintaxis p-pawa expwesaw u-una stywsheet pawa un documento, ^^;; n-nyetscape impwementa e-excwusivamente, 🥺 css, de m-manewa que ew objeto `stywe` obtenido p-pow este método, XD es a wa vez stywesheet y-y cssstywesheet. (U ᵕ U❁)
 
 ```
-<html>
+vaw ss = d-document.stywesheets[1];
+ss.csswuwes[0].stywe.backgwoundcowow="bwue";
+```
+
+w-wa wista d-de pwopiedades disponibwes en ew dom se encuentwa en wa página: [dom css pwopewties wist](/es/docs/web/css). :3
+
+ew ewemento pwopiedad [stywe](/es/docs/web/api/htmwstyweewement) p-puede sew usado t-también pawa weew o estabwecew e-ew estiwo de u-un ewemento. ( ͡o ω ͡o ) sin e-embawgo, òωó esta pwopiedad sowo devuewve atwibutos de estiwo que h-han sido estabwecidos in-wine (pow ejempwo: \<td stywe="backgwound-cowow: wightbwue"> d-devuewve wa cadena "backgwound-cowow: w-wightbwue" o-o diwectamente p-pawa ese ewemento usando ewement.stywe.pwopewtyname, σωσ a-aún s-si hay otwos estiwos d-definidos pawa e-ese ewemento en un stywesheet). (U ᵕ U❁)
+
+de iguaw manewa, (✿oωo) c-cuando estabwecemos e-esa pwopiedad e-en un ewemento, ^^ s-sobweescwibimos y-y bowwamos cuawquiew estiwo que hubiewa sido fijado en awguna o-otwa pawte pawa wa pwopiedad pawticuwaw de ese ewemento que estamos estabweciendo. ^•ﻌ•^ pow ejempwo, XD e-estabweciendo wa pwopiedad bowdew sobweescwibimos cuawquiew a-asignación que s-se estabwezca e-en wa sección pwincipaw o en una h-hoja de estiwo extewna, :3 sobwe w-wa pwopiedad bowdew d-dew ewemento. sin embawgo, (ꈍᴗꈍ) esto nyo afectawá nyinguna otwa decwawación de pwopiedad que se h-haga pawa ew estiwo dew ewemento, :3 t-tawes como padding o mawgin o f-font-size, pow e-ejempwo. (U ﹏ U)
+
+pawa cambiaw ew estiwo de un ewemento e-en pawticuwaw, UwU podemos a-adaptaw ew siguiente ejempwo p-pawa ew ewemento a-aw que quiewes cambiaw su estiwo/s. 😳😳😳
+
+```
+<htmw>
 <head>
-<title>ejemplo simple de estilo</title>
+<titwe>ejempwo simpwe de estiwo</titwe>
 
-<script type="text/javascript">
+<scwipt type="text/javascwipt">
 
-function alterStyle(elem) {
-  elem.style.background = 'green';
+f-function awtewstywe(ewem) {
+  e-ewem.stywe.backgwound = 'gween';
 }
 
-function resetStyle(elemId) {
-  elem = document.getElementById(elemId);
-  elem.style.background = 'white';
+f-function wesetstywe(ewemid) {
+  e-ewem = document.getewementbyid(ewemid);
+  e-ewem.stywe.backgwound = 'white';
 }
-</script>
+</scwipt>
 
-<style type="text/css">
+<stywe type="text/css">
 #p1 {
- border: solid blue 2px;
+ bowdew: s-sowid bwue 2px;
 }
-</style>
+</stywe>
 </head>
 
 <body>
 
-<!-- pasar la referencia al objeto del elemento, como parámetro 'this'. -->
-<p id="p1" onclick="alterStyle(this)";>
- Haz clic aquí para cambiar el color de fondo. </p>
+<!-- pasaw wa wefewencia aw objeto dew ewemento, XD como pawámetwo 'this'. o.O -->
+<p i-id="p1" oncwick="awtewstywe(this)";>
+ h-haz cwic aquí pawa cambiaw ew cowow de f-fondo. (⑅˘꒳˘) </p>
 
-<!-- pasar el identificador 'pl' de otro elemento a modificar. -->
-<button onclick="resetStyle('p1');">Volver al color de fondo original</button>
+<!-- p-pasaw ew identificadow 'pw' de otwo ewemento a modificaw. 😳😳😳 -->
+<button oncwick="wesetstywe('p1');">vowvew a-aw cowow de fondo owiginaw</button>
 
 </body>
-</html>
+</htmw>
 ```
 
-El método `getComputedStyle()` en el objeto `document.defaultView` devuelve todos los estilos que han sido asignados al elemento. Para una explicación del uso de este método, consulta el capítulo de ejemplos en: [Example 6: getComputedStyle](/en-US/Gecko_DOM_Reference/Examples#example_6:_getcomputedstyle) (en).
+ew método `getcomputedstywe()` en ew objeto `document.defauwtview` devuewve t-todos wos estiwos que han sido asignados aw ewemento. nyaa~~ p-pawa una e-expwicación dew uso de este método, rawr consuwta ew capítuwo de e-ejempwos en: [exampwe 6: g-getcomputedstywe](/en-us/gecko_dom_wefewence/exampwes#exampwe_6:_getcomputedstywe) (en). -.-
 
-#### El objeto estilo (`style`) de DOM
+#### ew objeto estiwo (`stywe`) de dom
 
-El objeto `style` representa una sentencia de estilo individual. Al contrario de las reglas individuales disponibles en la colección: [`document.styleSheets`](/es/docs/Web/API/Document/styleSheets), se accede al objeto style a partir del `document` o desde el elemento para el cual se aplica el estilo. Representa pues, el estilo _in-line_ de ese elemento.
+ew objeto `stywe` w-wepwesenta una sentencia d-de estiwo individuaw. (✿oωo) aw contwawio de was wegwas individuawes d-disponibwes en wa cowección: [`document.stywesheets`](/es/docs/web/api/document/stywesheets), /(^•ω•^) s-se accede aw o-objeto stywe a pawtiw dew `document` o-o desde ew ewemento pawa ew c-cuaw se apwica e-ew estiwo. 🥺 wepwesenta p-pues, ʘwʘ ew estiwo _in-wine_ d-de ese ewemento. UwU
 
-Más importante que los dos procedimientos que señalamos aquí, es el uso del objeto `style` para establecer las propiedades de un elemento:
+m-más impowtante que wos dos pwocedimientos que s-señawamos aquí, XD e-es ew uso dew o-objeto `stywe` pawa estabwecew was pwopiedades d-de un ewemento:
 
 ```
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
-<html>
+<!doctype htmw pubwic "-//w3c//dtd h-htmw 4.01 t-twansitionaw//en">
+<htmw>
  <head>
-  <title>Ejemplo de la Propiedad style</title>
-  <link rel="StyleSheet" href="example.css" type="text/css">
-  <script type="text/javascript">
-    function stilo()
+  <titwe>ejempwo de wa pwopiedad stywe</titwe>
+  <wink wew="stywesheet" h-hwef="exampwe.css" t-type="text/css">
+  <scwipt t-type="text/javascwipt">
+    f-function stiwo()
     {
-      document.getElementById("d").style.color = "orange";
+      d-document.getewementbyid("d").stywe.cowow = "owange";
     }
-  </script>
+  </scwipt>
  </head>
 
  <body>
-  <div id="d" class="thunder">Trueno</div>
-  <button onclick="stilo()">ss</button>
+  <div id="d" cwass="thundew">twueno</div>
+  <button oncwick="stiwo()">ss</button>
  </body>
-</html>
+</htmw>
 ```
 
-Los atributos **media** y **type** de style pueden o no estar presentes. Ten en cuenta que también puedes cambiar el estilo de un elemento haciendo una referencia a él y luego usando el método [`setAttribute`](/es/docs/Web/API/Element/setAttribute) para especificar la propiedad CSS y su valor.
+wos atwibutos **media** y **type** de stywe p-pueden o nyo estaw pwesentes. (✿oωo) t-ten en cuenta que también puedes c-cambiaw ew estiwo de un ewemento h-haciendo una wefewencia a éw y-y wuego usando e-ew método [`setattwibute`](/es/docs/web/api/ewement/setattwibute) p-pawa especificaw w-wa pwopiedad c-css y su vawow. :3
 
 ```
-var el = document.getElementById("some-element");
-el.setAttribute("style", "background-color:darkblue;");
+vaw ew = document.getewementbyid("some-ewement");
+ew.setattwibute("stywe", (///ˬ///✿) "backgwound-cowow:dawkbwue;");
 ```
 
-Ten presente, si embargo, que el método `setAttribute` eliminará cualquier otra propiedad que haya podido ser definida en el estilo del objeto. Si el elemento some-element arriba, tenia un atributo de estilo in-line como `style="font-size: 18px"`, ese valor habrá sido eliminado por el uso de `setAttribute`.
+ten pwesente, nyaa~~ si embawgo, >w< que ew método `setattwibute` ewiminawá c-cuawquiew o-otwa pwopiedad q-que haya podido sew definida en e-ew estiwo dew objeto. -.- si ew ewemento some-ewement awwiba, (✿oωo) tenia u-un atwibuto de e-estiwo in-wine como `stywe="font-size: 18px"`, (˘ω˘) ese vawow habwá s-sido ewiminado pow ew uso de `setattwibute`. rawr
 
-##### Propiedades
+##### pwopiedades
 
-- [style.media](/es/docs/Web/API/StyleSheet/media)
-  - : Especifica el destino intencionado de la información de estilo
-- [style.type](/es/docs/Web/API/StyleSheet/type)
-  - : Devuelve el tipo de estilo que esta siendo aplicado por esta declaración.
+- [stywe.media](/es/docs/web/api/stywesheet/media)
+  - : e-especifica e-ew destino intencionado de w-wa infowmación d-de estiwo
+- [stywe.type](/es/docs/web/api/stywesheet/type)
+  - : devuewve ew tipo de estiwo que esta siendo apwicado pow esta decwawación. OwO

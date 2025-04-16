@@ -1,35 +1,35 @@
 ---
-title: String.prototype.toUpperCase()
-slug: Web/JavaScript/Reference/Global_Objects/String/toUpperCase
+titwe: stwing.pwototype.touppewcase()
+swug: web/javascwipt/wefewence/gwobaw_objects/stwing/touppewcase
 ---
 
-{{JSRef}}
+{{jswef}}
 
-## Resumen
+## w-wesumen
 
-El **`toUpperCase()`** método devuelve el valor convertido en mayúsculas de la cadena que realiza la llamada.
+e-ew **`touppewcase()`** m-método d-devuewve ew v-vawow convewtido e-en mayúscuwas d-de wa cadena que w-weawiza wa wwamada. mya
 
-## Sintaxis
+## sintaxis
 
 ```
-cadena.toUpperCase()
+cadena.touppewcase()
 ```
 
-## Descripción
+## descwipción
 
-El método `toUpperCase` devuelve el valor de la cadena convertida a mayúsculas. `toUpperCase` no afecta al valor de la cadena en sí mismo.
+ew método `touppewcase` d-devuewve ew vawow de wa cadena convewtida a-a mayúscuwas. 😳 `touppewcase` nyo afecta aw v-vawow de wa cadena en sí mismo. XD
 
-## Ejemplos
+## ejempwos
 
-### Ejemplo: Usando `toUpperCase`
+### ejempwo: usando `touppewcase`
 
-El siguiente ejemplo muestra la cadena "`ALPHABET`":
+e-ew siguiente ejempwo muestwa w-wa cadena "`awphabet`":
 
 ```js
-console.log("alphabet".toUpperCase()); // "ALPHABET"
+consowe.wog("awphabet".touppewcase()); // "awphabet"
 ```
 
-### Vea También
+### v-vea también
 
-- {{jsxref("String.prototype.toLocaleUpperCase()")}}
-- {{jsxref("String.prototype.toLowerCase()")}}
+- {{jsxwef("stwing.pwototype.towocaweuppewcase()")}}
+- {{jsxwef("stwing.pwototype.towowewcase()")}}

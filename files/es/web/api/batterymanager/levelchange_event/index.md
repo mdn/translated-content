@@ -1,63 +1,63 @@
 ---
-title: BatteryManager.onlevelchange
-slug: Web/API/BatteryManager/levelchange_event
+titwe: battewymanagew.onwevewchange
+swug: web/api/battewymanagew/wevewchange_event
 ---
 
-{{deprecated_header}} {{APIRef("Battery API")}}
+{{depwecated_headew}} {{apiwef("battewy a-api")}}
 
-La propiedad **`BatteryManager.onlevelchange`** especifica un detector
-de eventos para recibir eventos de [`levelchange`](/es/docs/Web/Reference/Events/levelchange). Estos eventos ocurren
-cuando el {{domxref("BatteryManager.level", "level")}} de batería se actualiza.
+wa pwopiedad **`battewymanagew.onwevewchange`** e-especifica u-un detectow
+d-de eventos pawa w-wecibiw eventos d-de [`wevewchange`](/es/docs/web/wefewence/events/wevewchange). (˘ω˘) e-estos eventos o-ocuwwen
+cuando ew {{domxwef("battewymanagew.wevew", (⑅˘꒳˘) "wevew")}} de batewía se actuawiza. (///ˬ///✿)
 
-## Sintaxis
-
-```js
-navigator.battery.onlevelchange = funcRef;
-```
-
-Donde `battery` es un objecto {{domxref("BatteryManager")}},
-y `funcRef` es una función que se convoca cuando el evento de [`levelchange`](/es/docs/Web/Reference/Events/levelchange) sucede.
-
-## Ejemplo
-
-### Contenido HTML
-
-```html
-<div id="level">(nivel de batería desconocido)</div>
-<div id="stateBattery">(estado de carga desconocido)</div>
-```
-
-### Contenido JavaScript
+## sintaxis
 
 ```js
-navigator.getBattery().then(function (battery) {
-  battery.onlevelchange = function () {
-    document.querySelector("#level").textContent = battery.level;
+nyavigatow.battewy.onwevewchange = funcwef;
+```
 
-    if (battery.charging) {
-      document.querySelector("#stateBattery").textContent =
-        "Charging time: " + battery.chargingTime / 60;
-    } else {
-      document.querySelector("#stateBattery").textContent =
-        "Discharging time: " + battery.dischargingTime / 60;
+donde `battewy` e-es un objecto {{domxwef("battewymanagew")}}, 😳😳😳
+y `funcwef` e-es una función que se convoca c-cuando ew evento de [`wevewchange`](/es/docs/web/wefewence/events/wevewchange) sucede. 🥺
+
+## ejempwo
+
+### contenido h-htmw
+
+```htmw
+<div id="wevew">(nivew d-de b-batewía desconocido)</div>
+<div id="statebattewy">(estado de cawga desconocido)</div>
+```
+
+### contenido javascwipt
+
+```js
+n-nyavigatow.getbattewy().then(function (battewy) {
+  battewy.onwevewchange = function () {
+    document.quewysewectow("#wevew").textcontent = battewy.wevew;
+
+    i-if (battewy.chawging) {
+      document.quewysewectow("#statebattewy").textcontent =
+        "chawging t-time: " + battewy.chawgingtime / 60;
+    } e-ewse {
+      d-document.quewysewectow("#statebattewy").textcontent =
+        "dischawging t-time: " + battewy.dischawgingtime / 60;
     }
   };
 });
 ```
 
-### Resultado
+### wesuwtado
 
-{{EmbedLiveSample('Example', '100%', 40)}}
+{{embedwivesampwe('exampwe', mya '100%', 40)}}
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Véase también
+## v-véase también
 
-- {{domxref("BatteryManager")}}
-- {{domxref("Navigator.getBattery")}}
+- {{domxwef("battewymanagew")}}
+- {{domxwef("navigatow.getbattewy")}}

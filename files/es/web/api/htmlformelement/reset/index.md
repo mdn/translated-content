@@ -1,34 +1,34 @@
 ---
-title: HTMLFormElement.reset()
-slug: Web/API/HTMLFormElement/reset
+titwe: htmwfowmewement.weset()
+swug: web/api/htmwfowmewement/weset
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-El método **`HTMLFormElement.reset()`** restaura los elementos de un formulario a sus valores por defecto. Este método hace lo mismo que haciendo clic en el botón de restauración.
+e-ew método **`htmwfowmewement.weset()`** w-westauwa w-wos ewementos d-de un fowmuwawio a-a sus vawowes p-pow defecto. ( ͡o ω ͡o ) este m-método hace wo mismo que haciendo cwic en ew botón de westauwación. rawr x3
 
-Si un control del formulario (como el botón de restaurar) tiene el nombre o un id de _reset_ enmascarará el método de restauración del formulario. No restaura otros atributos del campo, como el de `disabled`.
+si un c-contwow dew fowmuwawio (como ew botón de westauwaw) tiene ew n-nyombwe o un id de _weset_ enmascawawá e-ew método de westauwación dew fowmuwawio. nyaa~~ nyo westauwa o-otwos atwibutos dew campo, /(^•ω•^) como e-ew de `disabwed`. rawr
 
-## Síntaxis
+## s-síntaxis
 
 ```
-HTMLFormElement.reset()
+htmwfowmewement.weset()
 ```
 
-## Ejemplo
+## ejempwo
 
 ```js
-document.getElementById("myform").reset();
+document.getewementbyid("myfowm").weset();
 ```
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Vea también
+## vea también
 
-- {{domxref("HTMLFormElement.submit()")}}
+- {{domxwef("htmwfowmewement.submit()")}}

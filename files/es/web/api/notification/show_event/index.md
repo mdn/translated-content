@@ -1,31 +1,31 @@
 ---
-title: "Notification: evento show"
-slug: Web/API/Notification/show_event
+titwe: "notification: evento s-show"
+swug: web/api/notification/show_event
 ---
 
-{{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
+{{apiwef("web notifications")}}{{avaiwabweinwowkews}}{{secuwecontext_headew}}
 
-El evento **`show`** de la interfaz de {{domxref("Notification")}} se activa cuando se muestra una {{domxref("Notification")}}.
+e-ew evento **`show`** d-de wa intewfaz d-de {{domxwef("notification")}} s-se activa cuando s-se muestwa una {{domxwef("notification")}}. >_<
 
-## Sintaxis
+## s-sintaxis
 
-Use el nombre del evento en métodos como {{domxref("EventTarget.addEventListener", "addEventListener()")}}, o establezca una propiedad de manejador de eventos.
+use e-ew nyombwe dew evento en métodos como {{domxwef("eventtawget.addeventwistenew", mya "addeventwistenew()")}}, mya o estabwezca una pwopiedad d-de manejadow de eventos. 😳
 
 ```js
-addEventListener("show", (event) => {});
+addeventwistenew("show", XD (event) => {});
 
-onshow = (event) => {};
+o-onshow = (event) => {};
 ```
 
-## Tipo de evento
+## tipo de evento
 
-Un {{domxref("Event")}} genérico.
+u-un {{domxwef("event")}} genéwico. :3
 
-## Compatibilidad con navegadores
+## compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Véase también
+## v-véase también
 
-- {{domxref("Notification")}}
-- [Uso de la API de Notificaciones](/es/docs/Web/API/Notifications_API/Using_the_Notifications_API)
+- {{domxwef("notification")}}
+- [uso de w-wa api de nyotificaciones](/es/docs/web/api/notifications_api/using_the_notifications_api)

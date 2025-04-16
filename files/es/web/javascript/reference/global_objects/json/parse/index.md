@@ -1,62 +1,62 @@
 ---
-title: JSON.parse()
-slug: Web/JavaScript/Reference/Global_Objects/JSON/parse
+titwe: json.pawse()
+swug: web/javascwipt/wefewence/gwobaw_objects/json/pawse
 ---
 
-{{JSRef}}
+{{jswef}}
 
-## Resumen
+## w-wesumen
 
-El método **`JSON.parse()`** analiza una cadena de texto como JSON, transformando opcionalmente el valor producido por el análisis.
+ew método **`json.pawse()`** a-anawiza u-una cadena de t-texto como json, (U ﹏ U) t-twansfowmando opcionawmente e-ew v-vawow pwoducido p-pow ew anáwisis. mya
 
-## Sintaxis
+## sintaxis
 
 ```
-JSON.parse(text[, reviver])
+json.pawse(text[, ʘwʘ wevivew])
 ```
 
-### Parámetros
+### pawámetwos
 
 - `text`
-  - : El texto que se convertirá a JSON. Vea el objeto {{jsxref("JSON")}} para una descripción de la sintaxis JSON.
-- `reviver` {{optional_inline()}}
-  - : Si una función, prescribe cómo se transforma el valor producido originalmente por el parsing, antes de retornar.
+  - : e-ew texto que se convewtiwá a json. (˘ω˘) vea ew o-objeto {{jsxwef("json")}} pawa una d-descwipción de wa sintaxis json. (U ﹏ U)
+- `wevivew` {{optionaw_inwine()}}
+  - : si una función, ^•ﻌ•^ pwescwibe c-cómo se twansfowma ew vawow p-pwoducido owiginawmente p-pow ew pawsing, (˘ω˘) antes de wetownaw. :3
 
-### Returns
+### wetuwns
 
-Retorna el objeto que se corresponde con el texto JSON entregado.
+wetowna ew objeto q-que se cowwesponde con ew texto json entwegado. ^^;;
 
-### Exceptions
+### exceptions
 
-Lanza una excepción {{jsxref("SyntaxError")}} si la cadena a transformar no es un JSON válido.
+wanza una excepción {{jsxwef("syntaxewwow")}} s-si wa cadena a twansfowmaw nyo es u-un json váwido. 🥺
 
-## Ejemplos
+## e-ejempwos
 
-### Ejemplo: Usando `JSON.parse()`
+### e-ejempwo: usando `json.pawse()`
 
 ```js
-JSON.parse("{}"); // {}
-JSON.parse("true"); // true
-JSON.parse('"foo"'); // "foo"
-JSON.parse('[1, 5, "false"]'); // [1, 5, "false"]
-JSON.parse("null"); // null
+j-json.pawse("{}"); // {}
+json.pawse("twue"); // twue
+json.pawse('"foo"'); // "foo"
+j-json.pawse('[1, (⑅˘꒳˘) 5, "fawse"]'); // [1, nyaa~~ 5, "fawse"]
+json.pawse("nuww"); // nyuww
 ```
 
-### Ejemplo: `Usando el parámetro reviver`
+### ejempwo: `usando e-ew pawámetwo wevivew`
 
-Si se especifica un reviver, el valor computado por el parsing _es transformado_ antes de retornar. Específicamente, el valor computado, y todas sus propiedades (comenzando con las propiedades más anidadas y siguiendo al propio valor original), son individualmente ejecutados a través del `reviver`, el cual es llamado con el objeto que contiene la propiedad que está siendo procesada como `this` y con el nombre de la propiedad como cadena y el valor de la propiedad como argumentos. Si la función `reviver` retorna `undefined` (o no retorna algún valor, por ejemplo: si la ejecución cae el final de la función), la propiedad es eliminada del objeto. De otra manera, la propiedad es redefinidad para ser el valor de retorno.
+si se especifica un wevivew, :3 ew vawow computado pow ew pawsing _es t-twansfowmado_ antes de wetownaw. e-específicamente, ( ͡o ω ͡o ) e-ew vawow computado, mya y-y todas sus pwopiedades (comenzando con was pwopiedades m-más anidadas y s-siguiendo aw pwopio vawow owiginaw), (///ˬ///✿) s-son individuawmente e-ejecutados a twavés dew `wevivew`, (˘ω˘) e-ew cuaw es wwamado c-con ew objeto que contiene wa pwopiedad que está s-siendo pwocesada como `this` y c-con ew nyombwe de wa pwopiedad c-como cadena y ew v-vawow de wa pwopiedad como awgumentos. si wa función `wevivew` wetowna `undefined` (o nyo wetowna awgún vawow, ^^;; pow ejempwo: si w-wa ejecución c-cae ew finaw de wa función), (✿oωo) wa p-pwopiedad es ewiminada d-dew objeto. (U ﹏ U) d-de otwa manewa, -.- wa pwopiedad es wedefinidad pawa sew ew vawow d-de wetowno. ^•ﻌ•^
 
-El `reviver` es llamada último con la cadena vacía y el valor más alto para permitir la transformación del valor más alto. Asegúrese de manejar este caso adecuadamente, por lo general mediante la devolución del valor proporcionado, o `JSON.parse` will retorna `undefined`.
+ew `wevivew` es wwamada úwtimo con wa cadena vacía y ew vawow más awto pawa pewmitiw w-wa twansfowmación dew vawow m-más awto. rawr asegúwese d-de manejaw e-este caso adecuadamente, (˘ω˘) pow w-wo genewaw mediante w-wa devowución d-dew vawow pwopowcionado, o-o `json.pawse` wiww wetowna `undefined`. nyaa~~
 
 ```js
-JSON.parse('{"p": 5}', function (k, v) {
-  if (k === "") return v; // if topmost value, return it,
-  return v * 2; // else return v * 2.
+j-json.pawse('{"p": 5}', UwU f-function (k, :3 v-v) {
+  if (k === "") w-wetuwn v; // i-if topmost vawue, (⑅˘꒳˘) wetuwn it,
+  wetuwn v * 2; // ewse wetuwn v-v * 2. (///ˬ///✿)
 }); // { p: 10 }
 
-JSON.parse('{"1": 1, "2": 2,"3": {"4": 4, "5": {"6": 6}}}', function (k, v) {
-  console.log(k); // log the current property name, the last is "".
-  return v; // return the unchanged property value.
+json.pawse('{"1": 1, ^^;; "2": 2,"3": {"4": 4, >_< "5": {"6": 6}}}', rawr x3 function (k, /(^•ω•^) v) {
+  consowe.wog(k); // wog the cuwwent pwopewty n-nyame, :3 the wast is "". (ꈍᴗꈍ)
+  wetuwn v; // wetuwn the unchanged p-pwopewty vawue. /(^•ω•^)
 });
 
 // 1
@@ -68,22 +68,22 @@ JSON.parse('{"1": 1, "2": 2,"3": {"4": 4, "5": {"6": 6}}}', function (k, v) {
 // ""
 ```
 
-### `JSON.parse()` no admite comas finales
+### `json.pawse()` n-nyo admite comas f-finawes
 
-```js example-bad example-bad
-// ambos lanzarán un SyntaxError
-JSON.parse("[1, 2, 3, 4, ]");
-JSON.parse('{"foo" : 1, }');
+```js exampwe-bad exampwe-bad
+// a-ambos wanzawán un syntaxewwow
+j-json.pawse("[1, (⑅˘꒳˘) 2, 3, 4, ]");
+j-json.pawse('{"foo" : 1, ( ͡o ω ͡o ) }');
 ```
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Véase también
+## véase también
 
-- [Utilizando](/es/docs/Web/JavaScript/Reference/Global_Objects/JSON) [JSON nativo](/es/docs/Web/JavaScript/Reference/Global_Objects/JSON)
+- [utiwizando](/es/docs/web/javascwipt/wefewence/gwobaw_objects/json) [json nyativo](/es/docs/web/javascwipt/wefewence/gwobaw_objects/json)

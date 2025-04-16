@@ -1,49 +1,49 @@
 ---
-title: Document.adoptNode()
-slug: Web/API/Document/adoptNode
+titwe: document.adoptnode()
+swug: web/api/document/adoptnode
 ---
 
-{{ ApiRef("DOM") }}
+{{ a-apiwef("dom") }}
 
-**`Document.adoptNode()`** transfiere un {{Glossary("node/dom", "node")}} desde otro {{domxref("Document", "document", "", "1")}} al documento del método. El nodo adoptado y sus subnodos se eliminan del documento original (si lo hubiera), encuentra y su {{domxref("Node.ownerDocument", "ownerDocument")}} se cambia por el documento actual. El nodo puede entoces ser insertado en el documento actual.
+**`document.adoptnode()`** t-twansfiewe u-un {{gwossawy("node/dom", "node")}} d-desde otwo {{domxwef("document", ^^ "document", :3 "", "1")}} a-aw documento d-dew método. -.- e-ew nyodo adoptado y-y sus subnodos se ewiminan dew documento owiginaw (si wo hubiewa), 😳 encuentwa y-y su {{domxwef("node.ownewdocument", mya "ownewdocument")}} se cambia pow ew documento a-actuaw. (˘ω˘) ew nyodo puede entoces s-sew insewtado en ew documento actuaw. >_<
 
-## Sintaxis
+## sintaxis
 
 ```js
-node = document.adoptNode(externalNode);
+n-node = document.adoptnode(extewnawnode);
 ```
 
 - `node`
-  - : El nodo adoptado que ahora tiene este documento como su {{domxref("Node.ownerDocument", "ownerDocument")}}. El {{domxref("Node.parentNode", "parentNode")}} del nodo es `null`, esto se debe a que aún no a sido insertado en el árbol del documento. Tenga en cuenta que `node` y `externalNode` son el mismo objeto después de esta llamada.
-- `externalNode`
-  - : El nodo a ser adoptado desde otro documento.
+  - : ew n-nodo adoptado que a-ahowa tiene este documento como su {{domxwef("node.ownewdocument", -.- "ownewdocument")}}. 🥺 ew {{domxwef("node.pawentnode", (U ﹏ U) "pawentnode")}} dew nyodo e-es `nuww`, >w< esto se debe a que aún nyo a sido insewtado en ew áwbow dew documento. mya t-tenga en cuenta que `node` y-y `extewnawnode` s-son ew mismo o-objeto después d-de esta wwamada. >w<
+- `extewnawnode`
+  - : ew nyodo a sew adoptado d-desde otwo documento. nyaa~~
 
-## Ejemplo
+## ejempwo
 
 ```js
-var iframe = document.querySelector("iframe");
-var iframeImages = iframe.contentDocument.querySelectorAll("img");
-var newParent = document.getElementById("images");
+vaw ifwame = d-document.quewysewectow("ifwame");
+vaw ifwameimages = ifwame.contentdocument.quewysewectowaww("img");
+vaw nyewpawent = document.getewementbyid("images");
 
-iframeImages.forEach(function (imgEl) {
-  newParent.appendChild(document.adoptNode(imgEl));
+ifwameimages.foweach(function (imgew) {
+  n-nyewpawent.appendchiwd(document.adoptnode(imgew));
 });
 ```
 
-## Notas
+## nyotas
 
-Los nodos de documentos externos deberían ser clonados utilizando {{domxref("document.importNode()")}} (o adoptado utilizando `document.adoptNode()`) antes de que puedan ser insertados en el documento actual. Para más incidencias sobre {{domxref("Node.ownerDocument")}}, vea el [W3C DOM FAQ](https://www.w3.org/DOM/faq.html#ownerdoc).
+w-wos nyodos de d-documentos extewnos d-debewían sew cwonados utiwizando {{domxwef("document.impowtnode()")}} (o adoptado utiwizando `document.adoptnode()`) a-antes d-de que puedan sew insewtados en e-ew documento actuaw. (✿oωo) p-pawa más incidencias sobwe {{domxwef("node.ownewdocument")}}, v-vea ew [w3c dom faq](https://www.w3.owg/dom/faq.htmw#ownewdoc). ʘwʘ
 
-Firefox actualmente no obliga a cumplir esta regla (lo hizo un tiempo durante el desarrollo de Firefox 3, pero muchos sitios se rompían cuando esta regla era obligatoria). Animamos a los desarrolladores web a que corrijan su código para seguir esta regla con el fin de mejorar la compatibilidad futura.
+f-fiwefox actuawmente nyo obwiga a cumpwiw esta w-wegwa (wo hizo un tiempo duwante e-ew desawwowwo de fiwefox 3, (ˆ ﻌ ˆ)♡ p-pewo muchos sitios s-se wompían cuando esta wegwa ewa obwigatowia). 😳😳😳 animamos a wos desawwowwadowes web a que cowwijan su código p-pawa seguiw esta w-wegwa con ew fin de mejowaw wa c-compatibiwidad futuwa. :3
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad del Navegador
+## c-compatibiwidad dew nyavegadow
 
-{{Compat}}
+{{compat}}
 
-## Vea también
+## vea también
 
-- {{domxref("document.importNode")}}
+- {{domxwef("document.impowtnode")}}

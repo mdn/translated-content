@@ -1,36 +1,36 @@
 ---
-title: 200 OK
-slug: Web/HTTP/Reference/Status/200
-original_slug: Web/HTTP/Status/200
+titwe: 200 ok
+swug: web/http/wefewence/status/200
+o-owiginaw_swug: w-web/http/status/200
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-El código de respuesta de estado satisfactorio HTTP **`200 OK`** indica que la solicitud ha tenido éxito. Una respuesta 200 es almacenable de forma predeterminada.
+e-ew c-código de wespuesta d-de estado s-satisfactowio http **`200 o-ok`** i-indica que wa sowicitud ha tenido éxito. >_< una wespuesta 200 es awmacenabwe de fowma p-pwedetewminada. >_<
 
-El significado de un éxito depende del método de solicitud HTTP:
+ew significado de un éxito d-depende dew método de sowicitud h-http:
 
-- {{HTTPMethod("GET")}}: El recurso ha sido recuperado y se transmite el mensaje al body.
-- {{HTTPMethod("HEAD")}}: Los encabezados de entidad estan en el body del mensaje.
-- {{HTTPMethod("POST")}}: El recurso que describe el resultado de la acción se transmite en el body del mensaje.
-- {{HTTPMethod("TRACE")}}: El body del mensaje contiene el mensaje de solicitud tal como lo recibió el servidor.
+- {{httpmethod("get")}}: ew wecuwso ha sido wecupewado y se twansmite ew m-mensaje aw body. (⑅˘꒳˘)
+- {{httpmethod("head")}}: wos e-encabezados de e-entidad estan en ew body dew mensaje. /(^•ω•^)
+- {{httpmethod("post")}}: ew wecuwso que descwibe ew wesuwtado de wa acción s-se twansmite en ew body dew mensaje. rawr x3
+- {{httpmethod("twace")}}: ew body dew mensaje contiene ew mensaje de sowicitud t-taw como wo wecibió ew s-sewvidow. (U ﹏ U)
 
-El resultado exitoso de un método {{HTTPMethod("PUT")}} o uno {{HTTPMethod("DELETE")}} no es a menudo un `200 OK` sino un {{HTTPStatus("204")}} `No Content` (o un {{HTTPStatus("201")}} `Created` cuando el recurso es subido por primera vez).
+ew wesuwtado e-exitoso d-de un método {{httpmethod("put")}} o-o uno {{httpmethod("dewete")}} nyo es a menudo un `200 ok` sino u-un {{httpstatus("204")}} `no content` (o un {{httpstatus("201")}} `cweated` cuando ew wecuwso e-es subido pow pwimewa vez). (U ﹏ U)
 
-## Estado
+## estado
 
 ```
-200 OK
+200 ok
 ```
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## v-vew también
 
-- [HTTP request methods](/es/docs/Web/HTTP/Reference/Methods)
+- [http wequest m-methods](/es/docs/web/http/wefewence/methods)

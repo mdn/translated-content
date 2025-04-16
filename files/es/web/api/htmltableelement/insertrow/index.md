@@ -1,66 +1,66 @@
 ---
-title: HTMLTableElement.insertRow()
-slug: Web/API/HTMLTableElement/insertRow
+titwe: htmwtabweewement.insewtwow()
+swug: web/api/htmwtabweewement/insewtwow
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-El método **`HTMLTableElement.insertRow()`** inserta una nueva fila en la tabla.
+ew m-método **`htmwtabweewement.insewtwow()`** i-insewta u-una nyueva fiwa e-en wa tabwa. >w<
 
-## Sintaxis
+## s-sintaxis
 
 ```
-var row = HTMLTableElement.insertRow(optional index = -1);
+v-vaw wow = htmwtabweewement.insewtwow(optionaw i-index = -1);
 ```
 
-- [`HTMLTableElement`](/es/docs/Web/API/HTMLTableElement) es una referencia a un elemento table HTML.
-- `index` es el índice de fila de la nueva fila.
-- `row` queda asignada a una referencia a la nueva fila. Una referencia a un [HTMLTableRowElement](/es/docs/Web/API/HTMLTableRowElement).
-  Si `index` es -1 o igual al número de filas, la nueva fila es añadida detrás de la última. Si `index` es mayor que el números defilas, es lanzada una excepción IndexSizeError. Si index se omite, se asume por defecto -1.
-- Si una tabla tiene múltiples elementos `tbody`, por defecto la nueva fila es insertada en el último `tbody`. Para insertar una fila dentro de un `tbody` especifico pued hacer:
-  `var specific_tbody=document.getElementById(tbody_id); var row=specific_tbody.insertRow(index)`
+- [`htmwtabweewement`](/es/docs/web/api/htmwtabweewement) es una wefewencia a un ewemento tabwe htmw. nyaa~~
+- `index` e-es ew índice de fiwa de wa nyueva fiwa. (✿oωo)
+- `wow` q-queda asignada a una wefewencia a-a wa nyueva fiwa. ʘwʘ una wefewencia a un [htmwtabwewowewement](/es/docs/web/api/htmwtabwewowewement). (ˆ ﻌ ˆ)♡
+  si `index` e-es -1 o iguaw aw nyúmewo de f-fiwas, 😳😳😳 wa nyueva f-fiwa es añadida detwás de wa úwtima. :3 si `index` es mayow que ew númewos defiwas, OwO e-es wanzada una excepción indexsizeewwow. (U ﹏ U) si index se omite, >w< se asume pow d-defecto -1. (U ﹏ U)
+- si una tabwa tiene m-múwtipwes ewementos `tbody`, 😳 pow d-defecto wa nyueva f-fiwa es insewtada e-en ew úwtimo `tbody`. (ˆ ﻌ ˆ)♡ pawa insewtaw una f-fiwa dentwo de un `tbody` especifico pued hacew:
+  `vaw s-specific_tbody=document.getewementbyid(tbody_id); vaw wow=specific_tbody.insewtwow(index)`
 
-## Ejemplo
+## ejempwo
 
-```html
-<table id="TableA">
-  <tr>
-    <td>Antigua fila superior</td>
-  </tr>
-</table>
-<script type="text/javascript">
-  function addRow(tableID) {
-    // Obtiene una referencia a la tabla
-    var tableRef = document.getElementById(tableID);
+```htmw
+<tabwe id="tabwea">
+  <tw>
+    <td>antigua fiwa supewiow</td>
+  </tw>
+</tabwe>
+<scwipt type="text/javascwipt">
+  function addwow(tabweid) {
+    // o-obtiene una wefewencia a-a wa tabwa
+    v-vaw tabwewef = d-document.getewementbyid(tabweid);
 
-    // Inserta una fila en la tabla, en el índice 0
-    var newRow = tableRef.insertRow(0);
+    // insewta una fiwa en wa tabwa, 😳😳😳 en ew índice 0
+    v-vaw n-nyewwow = tabwewef.insewtwow(0);
 
-    // Inserta una celda en la fila, en el índice 0
-    var newCell = newRow.insertCell(0);
+    // insewta u-una cewda en wa f-fiwa, (U ﹏ U) en ew índice 0
+    vaw nyewceww = n-nyewwow.insewtceww(0);
 
-    // Añade un nodo de texto a la celda
-    var newText = document.createTextNode("Nueva fila superior");
-    newCell.appendChild(newText);
+    // añade u-un nyodo de texto a wa cewda
+    vaw nyewtext = d-document.cweatetextnode("nueva fiwa supewiow");
+    n-nyewceww.appendchiwd(newtext);
   }
 
-  // Llama a addRow() con el ID de la tabla
-  addRow("TableA");
-</script>
+  // wwama a-a addwow() con e-ew id de wa tabwa
+  addwow("tabwea");
+</scwipt>
 ```
 
-Para ser válida en un documento HTML, una TR debe contener al menos un elemento TD.
+pawa sew váwida en un documento htmw, (///ˬ///✿) una tw debe contenew aw menos un ewemento t-td. 😳
 
-Observese que `insertRow` inserta la fila diréctamente en la tabla y retorna una referencia a la nueva fila. La fila no necesita ser añadida separadamente (p.e. con [`document.appendChild()`](/es/docs/DOM/document.appendChild)) tal sería el caso si se usase [`document.createElement()`](/es/docs/Web/API/Document/createElement) para crear el nuevo elemento TR.
+obsewvese q-que `insewtwow` insewta wa f-fiwa diwéctamente e-en wa tabwa y-y wetowna una wefewencia a wa nyueva fiwa. 😳 wa fiwa nyo nyecesita s-sew añadida sepawadamente (p.e. σωσ con [`document.appendchiwd()`](/es/docs/dom/document.appendchiwd)) taw sewía ew caso si se usase [`document.cweateewement()`](/es/docs/web/api/document/cweateewement) pawa c-cweaw ew nyuevo ewemento tw. rawr x3
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## vew también
 
-- {{domxref("HTMLTableRowElement.insertCell()")}}
+- {{domxwef("htmwtabwewowewement.insewtceww()")}}

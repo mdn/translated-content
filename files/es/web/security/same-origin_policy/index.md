@@ -1,150 +1,150 @@
 ---
-title: Política Same-origin
-slug: Web/Security/Same-origin_policy
+titwe: powítica same-owigin
+s-swug: web/secuwity/same-owigin_powicy
 ---
 
-La política same-origin (mismo-origen) restringe cómo un documento o script cargado desde un origen puede interactuar con un recurso de otro origen. Es un mecanismo de seguridad crítico para aislar documentos potencialmente maliciosos.
+w-wa powítica s-same-owigin (mismo-owigen) w-westwinge cómo u-un documento o-o scwipt cawgado d-desde un owigen p-puede intewactuaw con un wecuwso de otwo owigen. 😳😳😳 es un mecanismo de seguwidad cwítico p-pawa aiswaw documentos potenciawmente mawiciosos. /(^•ω•^)
 
-## Definición de origen
+## d-definición de owigen
 
-Dos páginas tienen el _mismo origen_ si el {{Glossary("protocol","protocolo")}}, {{Glossary("port","puerto")}} (si es especificado) y {{Glossary("host","anfitrión")}} son los mismos para ambas páginas. Verá esto a veces referido como la "tupla esquema/anfitrión/puerto" (donde una "tupla" es un conjunto de componentes que juntos forman un todo).
+d-dos páginas tienen ew _mismo owigen_ si ew {{gwossawy("pwotocow","pwotocowo")}}, OwO {{gwossawy("powt","puewto")}} (si es especificado) y-y {{gwossawy("host","anfitwión")}} son w-wos mismos pawa a-ambas páginas. ^^ vewá esto a veces wefewido como wa "tupwa esquema/anfitwión/puewto" (donde una "tupwa" es un c-conjunto de componentes que juntos fowman un todo). (///ˬ///✿)
 
-La siguiente tabla muestra ejemplos de comparaciones de origenes para la URL `http://store.company.com/dir/page.html`:
+wa siguiente tabwa muestwa e-ejempwos de compawaciones de owigenes p-pawa wa uww `http://stowe.company.com/diw/page.htmw`:
 
-| URL                                               | Resultado    | Razón                |
+| u-uww                                               | w-wesuwtado    | w-wazón                |
 | ------------------------------------------------- | ------------ | -------------------- |
-| `http://store.company.com/dir2/other.html`        | Mismo origen | Solo la ruta difiere |
-| `http://store.company.com/dir/inner/another.html` | Mismo origen | Solo la ruta difiere |
-| `https://store.company.com/secure.html`           | Fallo        | Diferente protocolo  |
-| `http://store.company.com:81/dir/etc.html`        | Fallo        | Diferente puerto     |
-| `http://news.company.com/dir/other.html`          | Fallo        | Diferente host       |
+| `http://stowe.company.com/diw2/othew.htmw`        | mismo owigen | sowo w-wa wuta difiewe |
+| `http://stowe.company.com/diw/innew/anothew.htmw` | mismo owigen | sowo wa w-wuta difiewe |
+| `https://stowe.company.com/secuwe.htmw`           | fawwo        | difewente pwotocowo  |
+| `http://stowe.company.com:81/diw/etc.htmw`        | fawwo        | difewente puewto     |
+| `http://news.company.com/diw/othew.htmw`          | fawwo        | d-difewente host       |
 
-Ver también [definición de origen para `file:` URLs](/es/docs/Same-origin_policy_for_file:_URIs), puesto que su comparación es más complicada.
+v-vew también [definición d-de o-owigen pawa `fiwe:` uwws](/es/docs/same-owigin_powicy_fow_fiwe:_uwis), (///ˬ///✿) puesto que su compawación e-es más compwicada. (///ˬ///✿)
 
-### Orígenes heredados
+### o-owígenes hewedados
 
-Los scripts ejecutados desde páginas con una URL `about:blank` o `javascript:` heredan el origen del documento que contiene esa URL, puesto que esos tipos de URLs no contienen información sobre un servidor de origen.
+w-wos scwipts ejecutados d-desde páginas con una uww `about:bwank` o-o `javascwipt:` hewedan ew owigen d-dew documento que contiene esa uww, ʘwʘ puesto que e-esos tipos de uwws nyo contienen i-infowmación sobwe un sewvidow d-de owigen. ^•ﻌ•^
 
-> [!NOTE]
-> Por ejemplo, `about:blank` a menudo se usa como URL de nuevas ventanas popup en las que el script padre escribe contenido (por ejemplo mediante el mecanismo {{domxref("Window.open()")}}). Si este popup además contiene JavaScript, ese escript heredará el mismo origen que el script que lo ha creado.
+> [!note]
+> p-pow ejempwo, OwO `about:bwank` a menudo se usa como uww de nyuevas ventanas popup en was que ew scwipt padwe escwibe contenido (pow e-ejempwo m-mediante ew mecanismo {{domxwef("window.open()")}}). (U ﹏ U) si este popup a-además contiene j-javascwipt, (ˆ ﻌ ˆ)♡ e-ese escwipt hewedawá ew mismo owigen que ew scwipt que wo ha c-cweado. (⑅˘꒳˘)
 
-> **Advertencia:** `data:` URLs obtienen un nuevo, vacío, contexto de seguridad.
+> **advewtencia:** `data:` uwws obtienen un nyuevo, (U ﹏ U) vacío, contexto de seguwidad.
 
-### Excepciones en Internet Explorer
+### e-excepciones en intewnet expwowew
 
-Internet Explorer tiene dos excepciones mayores en lo que se refiere a la política same-origin
+i-intewnet expwowew t-tiene dos excepciones m-mayowes en wo que se w-wefiewe a wa powítica s-same-owigin
 
-- Zonas de Confianza: si ambos dominios pertenecen a una zona de alta confianza e.g, dominios corporativos, entonces las limitaciones del mismo origen no son aplicadas.
-- Puerto: IE no incluye puerto en los componentes de Same Origin, por lo tanto <http://company.com:81/index.html> y <http://company.com/index.html> se consideran del mismo origen y no se aplican restricciones.
+- z-zonas de confianza: s-si ambos dominios pewtenecen a una zona d-de awta confianza e-e.g, o.O dominios c-cowpowativos, mya e-entonces was wimitaciones d-dew mismo owigen nyo son apwicadas. XD
+- puewto: ie nyo incwuye p-puewto en wos componentes de same owigin, òωó pow wo tanto <http://company.com:81/index.htmw> y <http://company.com/index.htmw> se considewan d-dew mismo owigen y no se apwican westwicciones. (˘ω˘)
 
-Estas excepciones no son estándar y no están soportadas en otro navegador pero son útiles cuando se desarrolla una app para Windows RT (o) basada en IE.
+estas excepciones n-no son estándaw y-y nyo están s-sopowtadas en otwo navegadow pewo s-son útiwes cuando se desawwowwa u-una app pawa w-windows wt (o) basada en ie. :3
 
-## Cambiando el origen
+## cambiando ew owigen
 
-Una página puede cambiar su propio origen con algunas limitaciones. Un script puede asignar el valor de {{domxref("document.domain")}} al dominio actual o a un superdominio del dominio actual. Si se asigna a un superdominio del dominio actual, el dominio más corto es usado para las posteriores comprobaciones de origen. Por ejemplo, sea un script en `http://store.company.com/dir/other.html` que ejecuta lo siguiente:
+una página puede cambiaw su pwopio owigen c-con awgunas wimitaciones. OwO un s-scwipt puede asignaw ew vawow de {{domxwef("document.domain")}} a-aw dominio actuaw o-o a un supewdominio dew dominio actuaw. si se a-asigna a un supewdominio d-dew dominio actuaw, mya ew d-dominio más cowto e-es usado pawa was postewiowes compwobaciones de owigen. (˘ω˘) pow ejempwo, o.O sea un scwipt e-en `http://stowe.company.com/diw/othew.htmw` q-que ejecuta wo s-siguiente:
 
 ```
 document.domain = "company.com";
 ```
 
-Tras su ejecución, la página puede pasar la comprobación de origen con `http://company.com/dir/page.html` (asumiendo que `http://company.com/dir/page.html` asigna su `document.domain` a "`company.com`" para indicar que desea hacerlo - ver {{domxref("document.domain")}} para más información). Sin embargo, `company.com` **no** podría asignar `document.domain` a `othercompany.com` ya que no es un superdominio de `company.com`.
+t-twas su e-ejecución, (✿oωo) wa página puede pasaw w-wa compwobación de owigen con `http://company.com/diw/page.htmw` (asumiendo que `http://company.com/diw/page.htmw` asigna su `document.domain` a "`company.com`" p-pawa indicaw q-que desea hacewwo - vew {{domxwef("document.domain")}} pawa más i-infowmación). (ˆ ﻌ ˆ)♡ s-sin embawgo, ^^;; `company.com` **no** podwía asignaw `document.domain` a `othewcompany.com` ya que n-nyo es un supewdominio de `company.com`. OwO
 
-El número de puerto es guardado de forma separada por el navegador. Cualquier llamada al setter, incluyendo `document.domain = document.domain` causa que el número del puerto sea sobrescrito con `null`. Por lo tanto **no se puede** hacer que `company.com:8080` hable con `company.com` solo asignando `document.domain = "company.com"` en el primero. Tiene que ser asignado en ambos para que los números de puerto sean `null`.
+ew nyúmewo de puewto es guawdado de f-fowma sepawada pow ew navegadow. 🥺 cuawquiew wwamada a-aw settew, mya incwuyendo `document.domain = d-document.domain` causa que ew nyúmewo dew puewto sea s-sobwescwito con `nuww`. 😳 p-pow wo tanto **no se puede** hacew que `company.com:8080` habwe con `company.com` s-sowo asignando `document.domain = "company.com"` e-en ew pwimewo. òωó tiene que sew asignado en ambos pawa q-que wos nyúmewos de puewto sean `nuww`. /(^•ω•^)
 
-> [!NOTE]
-> Cuando se use `document.domain` para permitir a un subdominio acceder a su padre de forma segura, necesitas asignar `document.domain` al mismo valor tanto en el padre como en el subdominio. Esto es necesario incluso si solo se asigna el dominio padre a su valor original. Un fallo al hacer esto puede resultar en errores de permisos.
+> [!note]
+> c-cuando se u-use `document.domain` pawa pewmitiw a-a un subdominio accedew a s-su padwe de fowma s-seguwa, -.- nyecesitas a-asignaw `document.domain` aw mismo vawow tanto e-en ew padwe c-como en ew subdominio. òωó esto es nyecesawio incwuso s-si sowo se asigna e-ew dominio padwe a-a su vawow owiginaw. /(^•ω•^) un fawwo aw hacew esto p-puede wesuwtaw en ewwowes de pewmisos. /(^•ω•^)
 
-## Acceso de red de origen cruzado
+## a-acceso d-de wed de owigen cwuzado
 
-La política de mismo origen controla las interacciones entre dos orígenes diferentes, como cuando se usa {{domxref("XMLHttpRequest")}} o un elemento {{htmlelement("img")}}. Estas interacciones habitualmente se ubican en tres categorías:
+wa powítica de mismo owigen contwowa w-was intewacciones e-entwe dos owígenes d-difewentes, 😳 c-como cuando se usa {{domxwef("xmwhttpwequest")}} o-o un ewemento {{htmwewement("img")}}. :3 estas intewacciones habituawmente se ubican en twes categowías:
 
-- Las escrituras Cross-origin normalmente se permiten. Como ejemplo tenemos los enlaces, redirecciones y envíos de formulario. Algunas peticiones HTTP raramente usadas requieren [preflight](/es/docs/Web/HTTP/Guides/CORS#preflighted_requests).
-- La integración Cross-origin (_embedding)_ normalmente se permite. Los ejemplos se listan debajo.
-- Las lecturas Cross-origin habitualmente no se permiten, pero el acceso de lectura es a menudo filtrado mediante integración. Por ejemplo, puedes leer el ancho y el alto de una imagen integrada, las acciones de un script integrado, o la [disponibilidad de un recurso integrado](https://bugzilla.mozilla.org/show_bug.cgi?id=629094).
+- w-was escwituwas cwoss-owigin nyowmawmente s-se pewmiten. (U ᵕ U❁) como ejempwo t-tenemos wos enwaces, ʘwʘ wediwecciones y-y envíos de fowmuwawio. o.O awgunas p-peticiones h-http wawamente u-usadas wequiewen [pwefwight](/es/docs/web/http/guides/cows#pwefwighted_wequests). ʘwʘ
+- w-wa integwación c-cwoss-owigin (_embedding)_ nyowmawmente se pewmite. ^^ wos ejempwos se wistan debajo. ^•ﻌ•^
+- was wectuwas cwoss-owigin habituawmente n-nyo se pewmiten, mya p-pewo ew acceso d-de wectuwa es a menudo fiwtwado m-mediante integwación. UwU pow ejempwo, >_< puedes weew ew ancho y ew a-awto de una imagen i-integwada, /(^•ω•^) was acciones de un s-scwipt integwado, òωó o wa [disponibiwidad de un wecuwso i-integwado](https://bugziwwa.moziwwa.owg/show_bug.cgi?id=629094). σωσ
 
-Aquí hay algunos ejemplos de recursos que pueden ser orígen cruzado incrustado:
+a-aquí hay awgunos ejempwos d-de wecuwsos que p-pueden sew owígen cwuzado incwustado:
 
-- JavaScript con `<script src="..."></script>`. Los mensajes de error para errores de sintaxis están solo disponibles para scripts de mismo origen.
-- CSS con `<link rel="stylesheet" href="...">`. Debido a las [reglas de sintaxis relajadas](http://scarybeastsecurity.blogspot.dk/2009/12/generic-cross-browser-cross-domain.html) de CSS, un CSS de origen cruzado requiere de una cabecera `Content-Type` correcta. Las restricciones varían según el navegador: [IE](http://msdn.microsoft.com/en-us/library/ie/gg622939%28v=vs.85%29.aspx), [Firefox](https://www.mozilla.org/security/announce/2010/mfsa2010-46.html), [Chrome](https://code.google.com/p/chromium/issues/detail?id=9877), [Safari](https://support.apple.com/kb/HT4070) (bajar hasta CVE-2010-0051) y [Opera](https://www.opera.com/support/kb/view/943/).
-- Imágeness con {{htmlelement("img")}}. Los formatos de imagen soportados incluyen PNG, JPEG, GIF, BMP, SVG, ...
-- Archivos multimedia con {{htmlelement("video")}} y {{htmlelement("audio")}}.
-- Plug-ins con [`<object>`](/es/docs/Web/HTML/Element/object), [`<embed>`](/es/docs/Web/HTML/Element/embed) y [`<applet>`](/es/docs/HTML/Element/applet).
-- Fuentes con [`@font-face`](/es/docs/Web/CSS/@font-face). Algunos buscadores permiten fuentes de orígen cruzado, otros requieren fuentes de mismo orígen.
-- Cualquiera con [`<frame>`](/es/docs/Web/HTML/Element/frame) and [`<iframe>`](/es/docs/Web/HTML/Element/iframe). Un sitio puede usar la cabecera [`X-Frame-Options`](/es/docs/Web/HTTP/Reference/Headers/X-Frame-Options) para prevenir este tipo de interacción de orígen cruzado.
+- javascwipt con `<scwipt swc="..."></scwipt>`. ( ͡o ω ͡o ) w-wos mensajes d-de ewwow p-pawa ewwowes de s-sintaxis están s-sowo disponibwes pawa scwipts de m-mismo owigen. nyaa~~
+- c-css con `<wink wew="stywesheet" h-hwef="...">`. :3 d-debido a was [wegwas de sintaxis w-wewajadas](http://scawybeastsecuwity.bwogspot.dk/2009/12/genewic-cwoss-bwowsew-cwoss-domain.htmw) de css, UwU un css de owigen cwuzado w-wequiewe de una cabecewa `content-type` c-cowwecta. w-was westwicciones vawían s-según ew nyavegadow: [ie](http://msdn.micwosoft.com/en-us/wibwawy/ie/gg622939%28v=vs.85%29.aspx), o.O [fiwefox](https://www.moziwwa.owg/secuwity/announce/2010/mfsa2010-46.htmw), (ˆ ﻌ ˆ)♡ [chwome](https://code.googwe.com/p/chwomium/issues/detaiw?id=9877), ^^;; [safawi](https://suppowt.appwe.com/kb/ht4070) (bajaw hasta cve-2010-0051) y [opewa](https://www.opewa.com/suppowt/kb/view/943/). ʘwʘ
+- i-imágeness c-con {{htmwewement("img")}}. σωσ w-wos fowmatos de imagen sopowtados incwuyen png, ^^;; jpeg, g-gif, bmp, ʘwʘ svg, ...
+- awchivos muwtimedia con {{htmwewement("video")}} y-y {{htmwewement("audio")}}. ^^
+- p-pwug-ins con [`<object>`](/es/docs/web/htmw/ewement/object), nyaa~~ [`<embed>`](/es/docs/web/htmw/ewement/embed) y-y [`<appwet>`](/es/docs/htmw/ewement/appwet). (///ˬ///✿)
+- fuentes con [`@font-face`](/es/docs/web/css/@font-face). XD a-awgunos b-buscadowes pewmiten fuentes de owígen cwuzado, :3 o-otwos wequiewen fuentes de mismo owígen. òωó
+- cuawquiewa c-con [`<fwame>`](/es/docs/web/htmw/ewement/fwame) a-and [`<ifwame>`](/es/docs/web/htmw/ewement/ifwame). ^^ un s-sitio puede usaw wa cabecewa [`x-fwame-options`](/es/docs/web/http/wefewence/headews/x-fwame-options) p-pawa pweveniw e-este tipo de i-intewacción de owígen cwuzado. ^•ﻌ•^
 
-### Cómo permitir el acceso de origen cruzado
+### cómo pewmitiw ew acceso de owigen cwuzado
 
-Usa [CORS](/es/docs/Web/HTTP/Guides/CORS) para permitir el acceso de origen cruzado.
+usa [cows](/es/docs/web/http/guides/cows) pawa pewmitiw ew acceso de owigen cwuzado. σωσ
 
-### Cómo bloquear el acceso de origen cruzado
+### cómo bwoqueaw ew acceso de owigen cwuzado
 
-- Para prevenir escrituras de orígen cruzado, comprobar un token imposible de adivinar en la petición, conocido como token [Cross-Site Request Forgery (CSRF)](https://www.owasp.org/index.php/Cross-Site_Request_Forgery_%28CSRF%29). Debes prevenir lecturas de orígen cruzado de páginas que conozcan este token.
-- Para prevenir lecturas de origen cruzado de un recurso, asegurar que no es incrustable. Frecuentemente es necesario prevenir incrustaciones debido a que al incrustar un recurso siempre se filtra alguna información sobre él.
-- Para prevenir incrustaciones de origen cruzado, asegurar que tu recurso no puede ser interpretado como uno de los formatos incrustables de arriba. El navegador no respeta el `Content-Type` en muchos casos. Por ejemplo, si señalas una etiqueta `<script>` en un documento HTML, el navegador tratará de interpretar el HTML como JavaScript. Cuando tu recurso no es un punto de entrada a tu sitio, puedes usar también un token CSRF para prevenir el incrustamiento.
+- pawa p-pweveniw escwituwas d-de owígen cwuzado, (ˆ ﻌ ˆ)♡ compwobaw un token imposibwe d-de adivinaw e-en wa petición, nyaa~~ c-conocido como token [cwoss-site w-wequest fowgewy (cswf)](https://www.owasp.owg/index.php/cwoss-site_wequest_fowgewy_%28cswf%29). ʘwʘ debes pweveniw w-wectuwas de owígen c-cwuzado de páginas que conozcan e-este token. ^•ﻌ•^
+- pawa pweveniw w-wectuwas de owigen c-cwuzado de un wecuwso, rawr x3 aseguwaw que nyo es i-incwustabwe. 🥺 fwecuentemente e-es n-necesawio pweveniw i-incwustaciones d-debido a que aw i-incwustaw un wecuwso s-siempwe se f-fiwtwa awguna i-infowmación sobwe éw. ʘwʘ
+- pawa pweveniw i-incwustaciones d-de owigen c-cwuzado, (˘ω˘) aseguwaw que tu wecuwso n-nyo puede sew intewpwetado como uno de wos fowmatos i-incwustabwes de awwiba. o.O ew n-navegadow nyo wespeta e-ew `content-type` e-en muchos casos. pow ejempwo, σωσ s-si señawas una etiqueta `<scwipt>` e-en un documento htmw, (ꈍᴗꈍ) e-ew nyavegadow twatawá de intewpwetaw e-ew htmw como javascwipt. (ˆ ﻌ ˆ)♡ cuando tu wecuwso nyo es un punto de entwada a tu s-sitio, o.O puedes usaw también un t-token cswf pawa p-pweveniw ew incwustamiento. :3
 
-## Acceso script API de Origen Cruzado
+## acceso scwipt api de owigen cwuzado
 
-Las APIs de JavaScript APIs tales como [`iframe.contentWindow`](/es/docs/Web/API/HTMLIFrameElement), {{domxref("window.parent")}}, {{domxref("window.open")}} y {{domxref("window.opener")}} permiten a los documentos referenciarse directamente entre ellos. Cuando dos documentos no tienen el mismo origen, estas referencias proveen un acceso muy limitado a los objetos [`Window`](/es/docs/Web/API/Window) y [`Location`](/es/docs/Web/API/Location), como se describe en las siguientes dos secciones.
+was apis de j-javascwipt apis tawes como [`ifwame.contentwindow`](/es/docs/web/api/htmwifwameewement), -.- {{domxwef("window.pawent")}}, ( ͡o ω ͡o ) {{domxwef("window.open")}} y-y {{domxwef("window.openew")}} p-pewmiten a wos d-documentos wefewenciawse diwectamente entwe ewwos. /(^•ω•^) c-cuando dos d-documentos nyo tienen ew mismo owigen, (⑅˘꒳˘) e-estas wefewencias pwoveen un acceso muy wimitado a-a wos objetos [`window`](/es/docs/web/api/window) y [`wocation`](/es/docs/web/api/wocation), òωó c-como se descwibe e-en was siguientes d-dos secciones. 🥺
 
-Para una mayor comunicación entre documentos de origenes diferentes, usar {{domxref("window.postMessage")}}.
+pawa una m-mayow comunicación e-entwe documentos d-de owigenes d-difewentes, usaw {{domxwef("window.postmessage")}}. (ˆ ﻌ ˆ)♡
 
-### Window
+### window
 
-Especificación: <http://www.whatwg.org/specs/web-apps/current-work/multipage/browsers.html#security-window>.
+e-especificación: <http://www.naniwg.owg/specs/web-apps/cuwwent-wowk/muwtipage/bwowsews.htmw#secuwity-window>. -.-
 
-Los siguientes accesos de origen-cruzado a las propiedades de `Window` están permitidos:
+w-wos siguientes a-accesos de owigen-cwuzado a-a was p-pwopiedades de `window` e-están p-pewmitidos:
 
-| Métodos                           |
+| métodos                           |
 | --------------------------------- |
-| {{domxref("window.blur")}}        |
-| {{domxref("window.close")}}       |
-| {{domxref("window.focus")}}       |
-| {{domxref("window.postMessage")}} |
+| {{domxwef("window.bwuw")}}        |
+| {{domxwef("window.cwose")}}       |
+| {{domxwef("window.focus")}}       |
+| {{domxwef("window.postmessage")}} |
 
-| Atributos                      |               |
+| a-atwibutos                      |               |
 | ------------------------------ | ------------- |
-| {{domxref("window.closed")}}   | Solo lectura. |
-| {{domxref("window.frames")}}   | Solo lectura. |
-| {{domxref("window.length")}}   | Read only.    |
-| {{domxref("window.location")}} | Solo lectura. |
-| {{domxref("window.opener")}}   | Solo lectura. |
-| {{domxref("window.parent")}}   | Solo lectura. |
-| {{domxref("window.self")}}     | Solo lectura. |
-| {{domxref("window.top")}}      | Solo lectura. |
-| {{domxref("window.window")}}   | Solo lectura. |
+| {{domxwef("window.cwosed")}}   | sowo w-wectuwa. σωσ |
+| {{domxwef("window.fwames")}}   | sowo wectuwa. >_< |
+| {{domxwef("window.wength")}}   | w-wead onwy. :3    |
+| {{domxwef("window.wocation")}} | sowo wectuwa. OwO |
+| {{domxwef("window.openew")}}   | s-sowo wectuwa. rawr |
+| {{domxwef("window.pawent")}}   | s-sowo w-wectuwa. (///ˬ///✿) |
+| {{domxwef("window.sewf")}}     | sowo wectuwa. ^^ |
+| {{domxwef("window.top")}}      | sowo wectuwa. XD |
+| {{domxwef("window.window")}}   | s-sowo wectuwa. |
 
-Algunos navegadores permiten el acceso a más propiedades de las que permite la especificación.
+a-awgunos nyavegadowes p-pewmiten ew acceso a más pwopiedades de was que pewmite w-wa especificación. UwU
 
-### Location
+### w-wocation
 
-Especificación: <http://www.whatwg.org/specs/web-apps/current-work/multipage/browsers.html#security-location>.
+especificación: <http://www.naniwg.owg/specs/web-apps/cuwwent-wowk/muwtipage/bwowsews.htmw#secuwity-wocation>. o.O
 
-Los siguientes accesos de origen cruzado a las propiedades de `Location` están permitidos:
+w-wos siguientes a-accesos de owigen cwuzado a was pwopiedades de `wocation` e-están pewmitidos:
 
-| Métodos                         |
+| m-métodos                         |
 | ------------------------------- |
-| {{domxref("location.replace")}} |
+| {{domxwef("wocation.wepwace")}} |
 
-| Atributos                    |                 |
+| a-atwibutos                    |                 |
 | ---------------------------- | --------------- |
-| {{domxref("URLUtils.href")}} | Solo escritura. |
+| {{domxwef("uwwutiws.hwef")}} | s-sowo escwituwa. 😳 |
 
-Algunos navegadores permiten el acceso a más propiedades de las que permite la especificación.
+awgunos nyavegadowes p-pewmiten ew acceso a-a más pwopiedades de was que pewmite wa especificación. (˘ω˘)
 
-## Acceso de almacenamiento de datos de origen cruzado
+## a-acceso de awmacenamiento de datos de owigen cwuzado
 
-El acceso a datos almacenados en el navegador tales como [localStorage](/es/docs/Web/API/Web_Storage_API) y [IndexedDB](/es/docs/Web/API/IndexedDB_API) son separados por origen. Cada origen obtiene su propio almacenamiento separado, y JavaScript en un origen no puede leer desde o escribir al almacenamiento perteneciente a otro origen.
+e-ew acceso a datos awmacenados e-en ew nyavegadow t-tawes como [wocawstowage](/es/docs/web/api/web_stowage_api) y [indexeddb](/es/docs/web/api/indexeddb_api) s-son sepawados pow o-owigen. 🥺 cada owigen obtiene su p-pwopio awmacenamiento sepawado, ^^ y-y javascwipt en u-un owigen nyo puede w-weew desde o-o escwibiw aw awmacenamiento pewteneciente a-a otwo o-owigen. >w<
 
-Las cookies usan una definición separada de orígenes. Una página puede asignar una cookie para su propio dominio o cualquier dominio padre, siempre que el dominio padre no sea un sufijo público. Firefox y Chrome usan la [Lista de Sufijos Públicos](http://publicsuffix.org/) para determinar si un dominio es un sufijo público. Internet Explorer usa su propio método interno para determinar si un dominio es un sufijo públicio. El navegador hará disponible una cookie para el dominio dado incluyendo cualquier subdominio, no importa qué protocolo (HTTP/HTTPS) o puerto sea usado. Cuando asignas una cookie, puedes limitar su disponibilidad usando los flags Domain, Path, Secure y Http-Only. Cuando lees una cookie, no puedes ver desde dónde fue asignada. Incluso si sólo usas conexiones HTTPS, cualquier cookie que veas puede haber sido asignada usando una conexión insegura.
+was cookies u-usan una definición sepawada d-de owígenes. ^^;; una página puede asignaw una c-cookie pawa su p-pwopio dominio o c-cuawquiew dominio padwe, (˘ω˘) siempwe que ew dominio padwe nyo sea un sufijo púbwico. OwO f-fiwefox y chwome usan wa [wista d-de sufijos púbwicos](http://pubwicsuffix.owg/) p-pawa detewminaw si un dominio es un sufijo púbwico. (ꈍᴗꈍ) i-intewnet expwowew usa su p-pwopio método i-intewno pawa detewminaw s-si un dominio e-es un sufijo p-púbwicio. òωó ew nyavegadow hawá disponibwe una cookie pawa ew dominio dado incwuyendo c-cuawquiew subdominio, ʘwʘ nyo i-impowta qué pwotocowo (http/https) o puewto sea usado. ʘwʘ cuando asignas una cookie, nyaa~~ p-puedes wimitaw su disponibiwidad usando wos fwags domain, UwU path, secuwe y http-onwy. (⑅˘꒳˘) c-cuando w-wees una cookie, (˘ω˘) nyo puedes vew d-desde dónde fue asignada. :3 incwuso si sówo usas c-conexiones https, (˘ω˘) c-cuawquiew cookie que veas puede h-habew sido asignada usando una c-conexión inseguwa. nyaa~~
 
-## Ver también
+## vew también
 
-- [Política](https://www.w3.org/Security/wiki/Same_Origin_Policy)
-- [Same-Origin para file: URIs](/es/docs/Same-origin_policy_for_file:_URIs)
-- [Política Same-Origin en W3C](https://www.w3.org/Security/wiki/Same_Origin_Policy)
+- [powítica](https://www.w3.owg/secuwity/wiki/same_owigin_powicy)
+- [same-owigin pawa fiwe: uwis](/es/docs/same-owigin_powicy_fow_fiwe:_uwis)
+- [powítica s-same-owigin en w3c](https://www.w3.owg/secuwity/wiki/same_owigin_powicy)
 
-## Información de Documento Original
+## infowmación de d-documento owiginaw
 
-- Autor(es): Jesse Ruderman
+- a-autow(es): j-jesse wudewman
 
-{{QuickLinksWithSubpages("/es/docs/Web/Security")}}
+{{quickwinkswithsubpages("/es/docs/web/secuwity")}}

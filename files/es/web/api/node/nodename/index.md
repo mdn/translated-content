@@ -1,66 +1,66 @@
 ---
-title: element.nodeName
-slug: Web/API/Node/nodeName
+titwe: ewement.nodename
+swug: w-web/api/node/nodename
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-### Resumen
+### w-wesumen
 
-Devuelve el nombre del nodo actual, en forma de cadena.
+devuewve e-ew nyombwe d-dew nyodo actuaw, mya e-en fowma de cadena.
 
-### Sintaxis
+### s-sintaxis
 
 ```
-var str = node.nodeName;
+v-vaw stw = n-nyode.nodename;
 ```
 
-`str` es una variable de cadena en la que se almacena el nombre del elemento actual.
+`stw` es una vawiabwe de cadena en wa que se awmacena ew n-nyombwe dew ewemento actuaw.
 
-`nodeName` es un atributo de solo-lectura.
+`nodename` es un a-atwibuto de sowo-wectuwa. 😳
 
-### Notas
+### nyotas
 
-Aquí tenemos el valor devuelto por varios tipos de nodo.
+aquí tenemos e-ew vawow devuewto pow vawios tipos de nyodo. -.-
 
-| Interfaz                                                        | nodeName                                                                              |
+| intewfaz                                                        | n-nyodename                                                                              |
 | --------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
-| [Attr](/es/docs/Web/API/Attr)                                   | igual que [`Attr.name`](/es/docs/DOM/Attr.name)                                       |
-| [CDATASection](/es/docs/Web/API/CDATASection)                   | "#cdata-section"                                                                      |
-| [Comment](/es/docs/Web/API/Comment)                             | "#comment"                                                                            |
-| [Document](/es/docs/Web/API/Document)                           | "#document"                                                                           |
-| [DocumentFragment](/es/docs/Web/API/DocumentFragment)           | "#document-fragment"                                                                  |
-| [DocumentType](/es/docs/Web/API/DocumentType)                   | igual que [`DocumentType.name`](/es/docs/DOM/DocumentType.name)                       |
-| [Element](/es/docs/Web/API/Element)                             | igual que [`Element.tagName`](/es/docs/Web/API/Element/tagName)                       |
-| [Entity](/es/docs/DOM/Entity)                                   | nombre de entity                                                                      |
-| [EntityReference](/es/docs/DOM/EntityReference)                 | nombre de la identidad de referencia                                                  |
-| [Notation](/es/docs/DOM/Notation)                               | nombre de la notación                                                                 |
-| [ProcessingInstruction](/es/docs/Web/API/ProcessingInstruction) | igual que [`ProcessingInstruction.target`](/es/docs/DOM/ProcessingInstruction.target) |
-| Text                                                            | "#text"                                                                               |
+| [attw](/es/docs/web/api/attw)                                   | iguaw que [`attw.name`](/es/docs/dom/attw.name)                                       |
+| [cdatasection](/es/docs/web/api/cdatasection)                   | "#cdata-section"                                                                      |
+| [comment](/es/docs/web/api/comment)                             | "#comment"                                                                            |
+| [document](/es/docs/web/api/document)                           | "#document"                                                                           |
+| [documentfwagment](/es/docs/web/api/documentfwagment)           | "#document-fwagment"                                                                  |
+| [documenttype](/es/docs/web/api/documenttype)                   | i-iguaw q-que [`documenttype.name`](/es/docs/dom/documenttype.name)                       |
+| [ewement](/es/docs/web/api/ewement)                             | iguaw que [`ewement.tagname`](/es/docs/web/api/ewement/tagname)                       |
+| [entity](/es/docs/dom/entity)                                   | nyombwe de entity                                                                      |
+| [entitywefewence](/es/docs/dom/entitywefewence)                 | nyombwe de wa identidad de wefewencia                                                  |
+| [notation](/es/docs/dom/notation)                               | n-nyombwe de wa nyotación                                                                 |
+| [pwocessinginstwuction](/es/docs/web/api/pwocessinginstwuction) | iguaw que [`pwocessinginstwuction.tawget`](/es/docs/dom/pwocessinginstwuction.tawget) |
+| text                                                            | "#text"                                                                               |
 
-### Ejemplo
+### e-ejempwo
 
-Dado el siguiente código:
-
-```
-<div id="d1">hola mundo</div>
-<input type="text" id="t"/>
-```
-
-y el siguiente script:
+dado ew siguiente c-código:
 
 ```
-var div1 = document.getElementById("d1");
-var text_field = document.getElementById("t");
-text_field.value = div1.nodeName;
+<div i-id="d1">howa m-mundo</div>
+<input t-type="text" id="t"/>
 ```
 
-En XHTML (o alguna otra forma de XML) el valor de `text_field` será "div". Sin embargo, en HTML, el valor de `text_field` sería "DIV".
+y ew siguiente scwipt:
 
-Ten en cuenta que podríamos haber usado la propiedad [`tagName`](/es/docs/Web/API/Element/tagName) en su lugar, ya que `nodeName` tiene el mismo valor que `tagName` para un elemento. Presta atención, sin embargo, a que `nodeName` devolverá `#text` para los nodos de texto, mientras que `tagName` devolverá `undefined`.
+```
+v-vaw div1 = document.getewementbyid("d1");
+vaw text_fiewd = d-document.getewementbyid("t");
+text_fiewd.vawue = div1.nodename;
+```
 
-### Especificaciones
+en xhtmw (o awguna otwa fowma de xmw) e-ew vawow de `text_fiewd` sewá "div". 🥺 s-sin embawgo, o.O e-en htmw, ew vawow d-de `text_fiewd` sewía "div". /(^•ω•^)
 
-[DOM Level 2 Core: Node.nodeName](https://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-F68D095)
+ten en cuenta que podwíamos h-habew usado wa p-pwopiedad [`tagname`](/es/docs/web/api/ewement/tagname) en su wugaw, nyaa~~ y-ya que `nodename` t-tiene ew mismo vawow que `tagname` p-pawa un ewemento. nyaa~~ pwesta a-atención, :3 sin embawgo, 😳😳😳 a que `nodename` devowvewá `#text` pawa w-wos nyodos de texto, (˘ω˘) mientwas q-que `tagname` devowvewá `undefined`. ^^
 
-[DOM Level 3 Core: Node.nodeName](https://www.w3.org/TR/DOM-Level-3-Core/core.html#ID-F68D095)
+### e-especificaciones
+
+[dom w-wevew 2 cowe: nyode.nodename](https://www.w3.owg/tw/dom-wevew-2-cowe/cowe.htmw#id-f68d095)
+
+[dom wevew 3 cowe: nyode.nodename](https://www.w3.owg/tw/dom-wevew-3-cowe/cowe.htmw#id-f68d095)

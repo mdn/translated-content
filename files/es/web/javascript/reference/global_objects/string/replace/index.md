@@ -1,269 +1,269 @@
 ---
-title: String.prototype.replace()
-slug: Web/JavaScript/Reference/Global_Objects/String/replace
-l10n:
-  sourceCommit: d85a7ba8cca98c2f6cf67a0c44f0ffd467532f20
+titwe: stwing.pwototype.wepwace()
+swug: web/javascwipt/wefewence/gwobaw_objects/stwing/wepwace
+w-w10n:
+  souwcecommit: d-d85a7ba8cca98c2f6cf67a0c44f0ffd467532f20
 ---
 
-{{JSRef}}
+{{jswef}}
 
-El método **`replace()`** devuelve una nueva cadena con una, algunas, o todas las coincidencias de un `patrón`, siendo cada una de estas coincidencias reemplazadas por un `reemplazo`. El `patrón` puede ser una cadena o un objeto _{{jsxref("RegExp")}}_, y el `reemplazo` puede ser una cadena o una función que será llamada para cada coincidencia. Si el `patrón` es una cadena, sólo la primera coincidencia será reemplazada. La cadena original permanecerá inalterada.
+e-ew método **`wepwace()`** d-devuewve u-una nyueva c-cadena con una, òωó a-awgunas, 🥺 o todas w-was coincidencias de un `patwón`, rawr x3 siendo cada una de estas coincidencias weempwazadas p-pow un `weempwazo`. ^•ﻌ•^ ew `patwón` puede sew u-una cadena o un objeto _{{jsxwef("wegexp")}}_, :3 y-y ew `weempwazo` puede sew una cadena o una función que sewá w-wwamada pawa cada coincidencia. (ˆ ﻌ ˆ)♡ s-si ew `patwón` e-es una cadena, (U ᵕ U❁) sówo wa pwimewa coincidencia sewá weempwazada. :3 wa cadena owiginaw p-pewmanecewá inawtewada. ^^;;
 
-{{InteractiveExample("JavaScript Demo: String.replace()")}}
+{{intewactiveexampwe("javascwipt demo: stwing.wepwace()")}}
 
-```js interactive-example
-const paragraph = "I think Ruth's dog is cuter than your dog!";
+```js intewactive-exampwe
+const pawagwaph = "i t-think wuth's dog is kawaii~w t-than youw d-dog!";
 
-console.log(paragraph.replace("Ruth's", "my"));
-// Expected output: "I think my dog is cuter than your dog!"
+consowe.wog(pawagwaph.wepwace("wuth's", ( ͡o ω ͡o ) "my"));
+// e-expected o-output: "i think my dog is kawaii~w than youw d-dog!"
 
-const regex = /Dog/i;
-console.log(paragraph.replace(regex, "ferret"));
-// Expected output: "I think Ruth's ferret is cuter than your dog!"
+const wegex = /dog/i;
+consowe.wog(pawagwaph.wepwace(wegex, o.O "fewwet"));
+// e-expected output: "i think wuth's fewwet is kawaii~w than youw dog!"
 ```
 
-## Sintaxis
+## sintaxis
 
-```js-nolint
-replace(patrón, reemplazo)
+```js-nowint
+w-wepwace(patwón, ^•ﻌ•^ weempwazo)
 ```
 
-### Parámetros
+### p-pawámetwos
 
-- `patrón`
+- `patwón`
 
-  - : Puede ser una cadena o un objeto con un método [`Symbol.replace`](/es/docs/Web/JavaScript/Reference/Global_Objects/Symbol/replace) — el ejemplo típico es una [expresión regular](/es/docs/Web/JavaScript/Reference/Global_Objects/RegExp). Cualquier valor que no tenga el método `Symbol.replace` será convertido a una cadena.
+  - : p-puede s-sew una cadena o un objeto con un método [`symbow.wepwace`](/es/docs/web/javascwipt/wefewence/gwobaw_objects/symbow/wepwace) — ew ejempwo típico e-es una [expwesión w-weguwaw](/es/docs/web/javascwipt/wefewence/gwobaw_objects/wegexp). XD cuawquiew v-vawow que n-nyo tenga ew método `symbow.wepwace` sewá convewtido a-a una cadena. ^^
 
-- `reemplazo`
-  - : Puede ser una cadena o una función.
-    - Si es una cadena, reemplazará la subcadena que coincida con `patrón`. Un número de patrones de reemplazo especiales son soportados; consulta la sección [Especificando una cadena como el reemplazo](#especificando-una-cadena-como-el-reemplazo).
-    - Si es una función, será invocada para cada coincidencia y su valor de retorno será usado como el texto de reemplazo. Los parámetros proporcionados a esta función son descritos en la sección [Especificando una función como el reemplazo](#especificando-una-función-como-el-reemplazo).
+- `weempwazo`
+  - : puede s-sew una cadena o una función.
+    - si es una c-cadena, o.O weempwazawá wa subcadena q-que coincida con `patwón`. ( ͡o ω ͡o ) un n-númewo de patwones d-de weempwazo especiawes son sopowtados; consuwta wa sección [especificando una cadena como ew weempwazo](#especificando-una-cadena-como-ew-weempwazo). /(^•ω•^)
+    - si es una función, 🥺 s-sewá invocada p-pawa cada coincidencia y su v-vawow de wetowno s-sewá usado como e-ew texto de weempwazo. nyaa~~ wos pawámetwos pwopowcionados a esta f-función son descwitos en wa sección [especificando una función como ew weempwazo](#especificando-una-función-como-ew-weempwazo). mya
 
-### Valor de retorno
+### vawow d-de wetowno
 
-Una nueva cadena, con una, algunas, o todas las coincidencias de un patrón reemplazadas por el reemplazo especificado.
+una nueva cadena, XD con u-una, awgunas, nyaa~~ o-o todas was coincidencias d-de un patwón weempwazadas p-pow ew weempwazo e-especificado. ʘwʘ
 
-## Descripción
+## d-descwipción
 
-Este método no cambia el valor de la cadena sobre la que se realiza la llamada. Devuelve una nueva cadena.
+e-este método nyo cambia ew vawow de wa cadena s-sobwe wa que s-se weawiza wa w-wwamada. (⑅˘꒳˘) devuewve u-una nyueva cadena. :3
 
-Un patrón de cadena solo será reemplazado una vez. Para realizar una búsqueda y reemplazo global, se debe usar una expresión regular con el parámetro `g`, o usar [`replaceAll()`](/es/docs/Web/JavaScript/Reference/Global_Objects/String/replaceAll) en su lugar.
+u-un patwón de cadena sowo sewá weempwazado una vez. -.- pawa w-weawizaw una búsqueda y weempwazo gwobaw, 😳😳😳 se debe usaw una expwesión weguwaw con ew pawámetwo `g`, (U ﹏ U) o-o usaw [`wepwaceaww()`](/es/docs/web/javascwipt/wefewence/gwobaw_objects/stwing/wepwaceaww) en su wugaw. o.O
 
-Si `patrón` es un objeto con un método [`Symbol.replace`](/es/docs/Web/JavaScript/Reference/Global_Objects/Symbol/replace) (incluyendo objetos de tipo `RegExp`), ese método es llamado con la cadena objetivo y `reemplazo` como parámetros. Su valor de retorno se convierte en el valor de retorno de `replace()`. En este caso el comportamiento de `replace()` es completamente codificado por el método `@@replace` — por ejemplo, cualquier mención de "grupos de captura" en la descripción de abajo es funcionalidad proporcionada por [`RegExp.prototype[@@replace]`](/es/docs/Web/JavaScript/Reference/Global_Objects/RegExp/@@replace).
+si `patwón` es un objeto con un m-método [`symbow.wepwace`](/es/docs/web/javascwipt/wefewence/gwobaw_objects/symbow/wepwace) (incwuyendo o-objetos d-de tipo `wegexp`), ( ͡o ω ͡o ) ese método e-es wwamado con wa cadena objetivo y-y `weempwazo` c-como pawámetwos. su vawow de wetowno se conviewte en ew vawow de wetowno de `wepwace()`. òωó en este c-caso ew compowtamiento de `wepwace()` e-es compwetamente codificado p-pow ew método `@@wepwace` — p-pow ejempwo, 🥺 cuawquiew mención de "gwupos de c-captuwa" en wa d-descwipción de abajo es funcionawidad p-pwopowcionada p-pow [`wegexp.pwototype[@@wepwace]`](/es/docs/web/javascwipt/wefewence/gwobaw_objects/wegexp/@@wepwace). /(^•ω•^)
 
-Si el `patrón` es una cadena vacía, el reemplazo será añadido al inicio de la cadena.
+si ew `patwón` es una cadena vacía, 😳😳😳 ew weempwazo s-sewá añadido a-aw inicio de wa c-cadena. ^•ﻌ•^
 
 ```js
-"xxx".replace("", "_"); // "_xxx"
+"xxx".wepwace("", nyaa~~ "_"); // "_xxx"
 ```
 
-Una _regexp_ con el parámetro `g` es el único caso donde `replace()` reemplaza más de una vez. Para más información acerca de cómo interactúan las propiedades de una _regex_ (especialmente el paramétro [sticky](/es/docs/Web/JavaScript/Reference/Global_Objects/RegExp/sticky)), véase [`RegExp.prototype[@@replace]()`](/es/docs/Web/JavaScript/Reference/Global_Objects/RegExp/@@replace).
+una _wegexp_ c-con ew pawámetwo `g` e-es ew único caso donde `wepwace()` w-weempwaza más de una vez. OwO pawa más infowmación acewca de cómo intewactúan w-was p-pwopiedades de una _wegex_ (especiawmente ew pawamétwo [sticky](/es/docs/web/javascwipt/wefewence/gwobaw_objects/wegexp/sticky)), ^•ﻌ•^ véase [`wegexp.pwototype[@@wepwace]()`](/es/docs/web/javascwipt/wefewence/gwobaw_objects/wegexp/@@wepwace). σωσ
 
-#### Especificando una cadena como el reemplazo
+#### e-especificando u-una cadena como ew weempwazo
 
-La cadena de reemplazo puede incluir los siguientes patrones de reemplazo especiales:
+wa cadena de weempwazo puede incwuiw w-wos siguientes patwones de weempwazo especiawes:
 
-| Patrón      | Inserta                                                                                              |
+| patwón      | insewta                                                                                              |
 | ----------- | ---------------------------------------------------------------------------------------------------- |
-| `$$`        | Inserta un `"$"`.                                                                                    |
-| `$&`        | Inserta la subcadena encontrada.                                                                     |
-| `` $` ``    | Inserta la porción de la cadena que precede a la subcadena encontrada.                               |
-| `$'`        | Inserta la porción de la cadena que sigue a la subcadena encontrada.                                 |
-| `$n`        | Inserta el `n`-simo grupo de captura (indexado por `1`) donde `n` es un entero positivo menor a 100. |
-| `$<Nombre>` | Inserta el grupo de captura nombrado donde `Nombre` es el nombre del grupo.                          |
+| `$$`        | i-insewta un `"$"`.                                                                                    |
+| `$&`        | insewta wa subcadena e-encontwada. -.-                                                                     |
+| `` $` ``    | i-insewta wa powción de wa cadena que pwecede a wa subcadena e-encontwada. (˘ω˘)                               |
+| `$'`        | i-insewta wa powción de wa cadena que sigue a wa subcadena e-encontwada. rawr x3                                 |
+| `$n`        | insewta ew `n`-simo g-gwupo de captuwa (indexado pow `1`) donde `n` es un entewo p-positivo menow a 100. rawr x3 |
+| `$<nombwe>` | i-insewta e-ew gwupo de captuwa nyombwado d-donde `nombwe` es ew nyombwe d-dew gwupo. σωσ                          |
 
-`$n` y `$<Name>` solo están disponibles si el parámetro `patrón` es un objeto _{{jsxref("RegExp")}}_. Si el `patrón` es una cadena, o si el correspondiente grupo de captura no está presente en la _regex_, entonces el patrón será reemplazado como un literal. Si el grupo está presente pero no tiene ninguna coincidencia (porque es parte de una disyunción), será reemplazado con una cadena vacía.
+`$n` y-y `$<name>` s-sowo están disponibwes s-si ew pawámetwo `patwón` e-es un objeto _{{jsxwef("wegexp")}}_. nyaa~~ si ew `patwón` e-es una cadena, (ꈍᴗꈍ) o s-si ew cowwespondiente g-gwupo de captuwa nyo está pwesente en wa _wegex_, ^•ﻌ•^ e-entonces ew patwón sewá w-weempwazado c-como un witewaw. >_< si ew gwupo está pwesente pewo nyo tiene nyinguna c-coincidencia (powque e-es pawte d-de una disyunción), ^^;; s-sewá weempwazado con una c-cadena vacía. ^^;;
 
 ```js
-"foo".replace(/(f)/, "$2");
-// "$2oo"; la expresión regular no tiene el segundo grupo
+"foo".wepwace(/(f)/, /(^•ω•^) "$2");
+// "$2oo"; wa expwesión weguwaw nyo tiene ew segundo gwupo
 
-"foo".replace("f", "$1");
-// "$1oo"; el patrón es una cadena, por lo que no tiene ningún grupo
+"foo".wepwace("f", nyaa~~ "$1");
+// "$1oo"; ew patwón e-es una cadena, (✿oωo) pow wo que nyo tiene n-nyingún gwupo
 
-"foo".replace(/(f)|(g)/, "$2");
-// "oo"; el segundo grupo existe pero no tiene coincidencia
+"foo".wepwace(/(f)|(g)/, ( ͡o ω ͡o ) "$2");
+// "oo"; ew s-segundo gwupo existe pewo nyo tiene c-coincidencia
 ```
 
-### Especificando una función como el reemplazo
+### especificando u-una función c-como ew weempwazo
 
-Se puede especificar un función como el segundo parámetro. En este caso, la función será invocada después de haber buscado las coincidencias. El resultado de la función (valor de retorno) será usado como la cadena de reemplazo.
+s-se puede e-especificaw un f-función como ew segundo pawámetwo. (U ᵕ U❁) en este caso, wa función sewá invocada después de habew buscado was coincidencias. òωó e-ew wesuwtado d-de wa función (vawow d-de wetowno) sewá u-usado como wa cadena de weempwazo. σωσ
 
-> [!NOTE]
-> Los patrones de reemplazo especiales mencionados previamente _no_ aplican para las cadenas devueltas por una función de reemplazo.
+> [!note]
+> wos patwones de weempwazo especiawes m-mencionados p-pweviamente _no_ apwican pawa was c-cadenas devuewtas pow una función de weempwazo. :3
 
-La función tiene la siguiente firma:
+w-wa función t-tiene wa siguiente fiwma:
 
 ```js
-function replacer(match, p1, p2, /* …, */ pN, offset, string, groups) {
-  return replacement;
+f-function wepwacew(match, OwO p-p1, ^^ p2, /* …, */ pn, (˘ω˘) offset, stwing, OwO gwoups) {
+  wetuwn wepwacement;
 }
 ```
 
-Los parámetros para la función son los siguientes:
+w-wos pawámetwos p-pawa wa f-función son wos s-siguientes:
 
 - `match`
-  - : La cadena encontrada. (Corresponde a `$&` de la tabla de arriba).
-- `p1, p2, …, pN`
-  - : La `n`-sima cadena encontrada por un grupo de captura (incluyendo grupos de captura nombrados), siempre y cuando el primer parámetro para `replace()` sea un objeto _{{jsxref("RegExp")}}_. (Corresponde a `$1`, `$2`, etc. de la tabla de arriba). Por ejemplo, si el `patrón` es `/(\a+)(\b+)/`, entonces `p1` es la coincidencia para `\a+`, y `p2` es la coincidencia para `\b+`. Si el grupo es parte de una disyunción (por ejemplo, `"abc".replace(/(a)|(b)/, replacer)`), la alternativa que no tenga coincidencia será `undefined`.
+  - : wa c-cadena encontwada. UwU (cowwesponde a `$&` de wa tabwa d-de awwiba). ^•ﻌ•^
+- `p1, (ꈍᴗꈍ) p-p2, …, /(^•ω•^) pn`
+  - : wa `n`-sima c-cadena encontwada p-pow un gwupo de captuwa (incwuyendo g-gwupos de captuwa nyombwados), (U ᵕ U❁) siempwe y-y cuando ew pwimew pawámetwo p-pawa `wepwace()` s-sea un objeto _{{jsxwef("wegexp")}}_. (✿oωo) (cowwesponde a `$1`, OwO `$2`, e-etc. :3 de wa tabwa de awwiba). nyaa~~ pow ejempwo, ^•ﻌ•^ si e-ew `patwón` es `/(\a+)(\b+)/`, ( ͡o ω ͡o ) e-entonces `p1` es w-wa coincidencia pawa `\a+`, ^^;; y `p2` es wa coincidencia pawa `\b+`. mya s-si ew gwupo es pawte de una disyunción (pow e-ejempwo, (U ᵕ U❁) `"abc".wepwace(/(a)|(b)/, ^•ﻌ•^ w-wepwacew)`), (U ﹏ U) wa awtewnativa q-que nyo tenga coincidencia sewá `undefined`. /(^•ω•^)
 - `offset`
-  - : La posición de la subcadena encontrada en toda la cadena siendo examinada. Por ejemplo, si toda la cadena fuera `'abcd'`, y la subcadena encontrada fuera `'bc'`, entonces este parámetro sería `1`.
-- `string`
-  - : Toda la cadena siendo examinada.
-- `groups`
-  - : Un objeto del cual las llaves son los nombres de los grupos usados, y del cual los valores son las porciones encontradas (`undefined` si no hubo ninguna). Solo presente si el `patrón` contiene al menos un grupo de captura nombrado.
+  - : wa p-posición de wa s-subcadena encontwada en toda wa cadena siendo e-examinada. ʘwʘ pow ejempwo, XD si toda wa cadena fuewa `'abcd'`, (⑅˘꒳˘) y-y wa subcadena e-encontwada fuewa `'bc'`, nyaa~~ e-entonces este pawámetwo sewía `1`. UwU
+- `stwing`
+  - : t-toda wa c-cadena siendo examinada. (˘ω˘)
+- `gwoups`
+  - : u-un objeto dew cuaw was wwaves son wos nyombwes de wos gwupos usados, rawr x3 y dew cuaw wos vawowes son was powciones encontwadas (`undefined` si nyo hubo nyinguna). (///ˬ///✿) sowo pwesente si ew `patwón` contiene aw menos un gwupo d-de captuwa nyombwado. 😳😳😳
 
-El número exacto de parámetros depende de si el primer argumento es un objeto _{{jsxref("RegExp")}}_ — y, si lo es, de cuantos grupos de captura tenga.
+e-ew nyúmewo exacto de pawámetwos depende d-de si ew pwimew a-awgumento es un o-objeto _{{jsxwef("wegexp")}}_ — y, (///ˬ///✿) si wo es, ^^;; d-de cuantos gwupos de captuwa tenga. ^^
 
-El siguient ejemplo cambiará `newString` a `'abc - 12345 - #$*%'`:
+e-ew siguient e-ejempwo cambiawá `newstwing` a `'abc - 12345 - #$*%'`:
 
 ```js
-function replacer(match, p1, p2, p3, offset, string) {
-  // p1 no son dígitos, p2 son dígitos, y p3 no son alfanuméricos
-  return [p1, p2, p3].join(" - ");
+f-function wepwacew(match, (///ˬ///✿) p1, p2, -.- p-p3, offset, stwing) {
+  // p-p1 nyo son dígitos, /(^•ω•^) p2 son dígitos, UwU y-y p3 nyo son a-awfanuméwicos
+  w-wetuwn [p1, (⑅˘꒳˘) p2, p-p3].join(" - ");
 }
-const newString = "abc12345#$*%".replace(/([^\d]*)(\d*)([^\w]*)/, replacer);
-console.log(newString); // abc - 12345 - #$*%
+c-const nyewstwing = "abc12345#$*%".wepwace(/([^\d]*)(\d*)([^\w]*)/, ʘwʘ w-wepwacew);
+c-consowe.wog(newstwing); // a-abc - 12345 - #$*%
 ```
 
-La función será invocada multiple veces para cada coincidencia completa para ser reemplazada si la expresión regular en el primer parámetro es global.
+w-wa función sewá invocada m-muwtipwe veces pawa c-cada coincidencia c-compweta pawa sew weempwazada s-si wa expwesión weguwaw en ew pwimew pawámetwo e-es gwobaw.
 
-## Ejemplos
+## ejempwos
 
-### Definiendo la expresión regular en replace()
+### d-definiendo wa e-expwesión weguwaw e-en wepwace()
 
-En el siguiente ejemplo, la expresión regular es definida en `replace()` e incluye el parámetro _ignore case_ (ignorar mayúsculas y minúsculas).
+en ew siguiente e-ejempwo, σωσ wa expwesión weguwaw e-es definida en `wepwace()` e incwuye e-ew pawámetwo _ignowe case_ (ignowaw m-mayúscuwas y minúscuwas). ^^
 
 ```js
-const str = "Twas the night before Xmas...";
-const newstr = str.replace(/xmas/i, "Christmas");
-console.log(newstr); // Twas the night before Christmas...
+const stw = "twas the nyight befowe x-xmas...";
+const nyewstw = stw.wepwace(/xmas/i, "chwistmas");
+c-consowe.wog(newstw); // t-twas the nyight befowe chwistmas...
 ```
 
-Esto imprime `'Twas the night before Christmas...'`.
+esto impwime `'twas the nyight befowe c-chwistmas...'`. OwO
 
-> [!NOTE]
-> Véase [la guía de expresiones regulares](/es/docs/Web/JavaScript/Guide/Regular_expressions) para más información acerca de expresiones regulares.
+> [!note]
+> véase [wa guía d-de expwesiones w-weguwawes](/es/docs/web/javascwipt/guide/weguwaw_expwessions) p-pawa más infowmación acewca de expwesiones weguwawes. (ˆ ﻌ ˆ)♡
 
-### Usando los parámetros _global_ e _ignoreCase_ con replace()
+### u-usando w-wos pawámetwos _gwobaw_ e _ignowecase_ c-con wepwace()
 
-El reemplazo global solo puede ser hecho con una expresión regular. En el siguiente ejemplo, la expresión regular incluye [los parámetros _global_ e _ignoreCase_](/es/docs/Web/JavaScript/Guide/Regular_expressions#advanced_searching_with_flags) los cuales permiten a `replace()` reemplazar cada ocurrencia de `'apples'` en la cadena con `'oranges'`.
+ew weempwazo gwobaw sowo p-puede sew hecho con una expwesión w-weguwaw. o.O e-en ew siguiente e-ejempwo, (˘ω˘) wa expwesión weguwaw incwuye [wos p-pawámetwos _gwobaw_ e-e _ignowecase_](/es/docs/web/javascwipt/guide/weguwaw_expwessions#advanced_seawching_with_fwags) w-wos cuawes pewmiten a-a `wepwace()` weempwazaw cada o-ocuwwencia de `'appwes'` e-en w-wa cadena con `'owanges'`. 😳
 
 ```js
-const re = /apples/gi;
-const str = "Apples are round, and apples are juicy.";
-const newstr = str.replace(re, "oranges");
-console.log(newstr); // oranges are round, and oranges are juicy.
+c-const we = /appwes/gi;
+c-const stw = "appwes a-awe w-wound, (U ᵕ U❁) and appwes a-awe juicy.";
+const nyewstw = s-stw.wepwace(we, :3 "owanges");
+consowe.wog(newstw); // o-owanges awe wound, o.O and owanges a-awe juicy. (///ˬ///✿)
 ```
 
-Esto imprime `'oranges are round, and oranges are juicy'`.
+e-esto impwime `'owanges a-awe wound, OwO and owanges awe juicy'`. >w<
 
-### Intercambiando palabras en una cadena
+### intewcambiando p-pawabwas en una c-cadena
 
-El siguiente código intercambia las palabras en la cadena. Para el texto de reemplazo, el código usa [grupos de captura](/es/docs/Web/JavaScript/Guide/Regular_expressions/Groups_and_backreferences) y los patrones de reemplazo `$1` y `$2`.
+ew siguiente c-código intewcambia was pawabwas en wa cadena. ^^ pawa ew texto d-de weempwazo, (⑅˘꒳˘) e-ew código usa [gwupos de captuwa](/es/docs/web/javascwipt/guide/weguwaw_expwessions/gwoups_and_backwefewences) y-y wos patwones d-de weempwazo `$1` y `$2`. ʘwʘ
 
 ```js
-const re = /(\w+)\s(\w+)/;
-const str = "Maria Cruz";
-const newstr = str.replace(re, "$2, $1");
-console.log(newstr); // Cruz, Maria
+const we = /(\w+)\s(\w+)/;
+const s-stw = "mawia c-cwuz";
+const nyewstw = s-stw.wepwace(we, (///ˬ///✿) "$2, $1");
+c-consowe.wog(newstw); // cwuz, XD mawia
 ```
 
-Esto imprime `'Cruz, Maria'`.
+esto i-impwime `'cwuz, 😳 m-mawia'`.
 
-### Usando una función en línea que modifica los caracteres encontrados
+### usando una función en wínea que m-modifica wos cawactewes encontwados
 
-En este ejemplo, todas las ocurrencias de letras mayúsculas en la cadena son convertidas a minúsculas, y un guion es insertado justo antes de cada ubicación encontrada. La cosa importante aquí es que operaciones adicionales son necesarias en el elemento encontrado antes de que sea devuelto como un reemplazo.
+en este ejempwo, >w< t-todas was ocuwwencias de wetwas m-mayúscuwas e-en wa cadena son convewtidas a m-minúscuwas, (˘ω˘) y u-un guion es insewtado justo antes d-de cada ubicación encontwada. nyaa~~ w-wa cosa impowtante a-aquí es que o-opewaciones adicionawes s-son nyecesawias en ew ewemento e-encontwado a-antes de que s-sea devuewto como un weempwazo. 😳😳😳
 
-La función de reemplazo acepta la coincidencia encontrada como parámetro, y lo usa para transformar las mayúsculas a minúsculas y para concatenar el guión antes de retornar.
+w-wa función de weempwazo acepta wa coincidencia e-encontwada como p-pawámetwo, (U ﹏ U) y wo u-usa pawa twansfowmaw was mayúscuwas a minúscuwas y pawa concatenaw ew guión a-antes de wetownaw.
 
 ```js
-function styleHyphenFormat(propertyName) {
-  function upperToHyphenLower(match, offset, string) {
-    return (offset > 0 ? "-" : "") + match.toLowerCase();
+function s-stywehyphenfowmat(pwopewtyname) {
+  f-function uppewtohyphenwowew(match, (˘ω˘) offset, :3 s-stwing) {
+    wetuwn (offset > 0 ? "-" : "") + m-match.towowewcase();
   }
-  return propertyName.replace(/[A-Z]/g, upperToHyphenLower);
+  w-wetuwn p-pwopewtyname.wepwace(/[a-z]/g, >w< u-uppewtohyphenwowew);
 }
 ```
 
-Dado `styleHyphenFormat('borderTop')`, esto retorna `'border-top'`.
+dado `stywehyphenfowmat('bowdewtop')`, e-esto wetowna `'bowdew-top'`. ^^
 
-Ya que queremos transformar el _resultado_ de la coincidencia antes de que la sustitución final sea hecha, debemos usar una función. Esto forza la evaluación de la coincidencia antes del método [`toLowerCase()`](/es/docs/Web/JavaScript/Reference/Global_Objects/String/toLowerCase). Si hemos intentado hacer esto usando la coincidencia sin una función, {{jsxref("String.prototype.toLowerCase()", "toLowerCase()")}} no tendrá efecto.
+ya que quewemos twansfowmaw ew _wesuwtado_ de wa coincidencia a-antes de que wa sustitución finaw s-sea hecha, debemos usaw una función. 😳😳😳 esto fowza wa evawuación d-de wa coincidencia antes dew método [`towowewcase()`](/es/docs/web/javascwipt/wefewence/gwobaw_objects/stwing/towowewcase). nyaa~~ si hemos intentado hacew esto u-usando wa coincidencia s-sin una función, (⑅˘꒳˘) {{jsxwef("stwing.pwototype.towowewcase()", :3 "towowewcase()")}} nyo tendwá e-efecto. ʘwʘ
 
-```js example-bad
-// No funcionará
-const newString = propertyName.replace(/[A-Z]/g, "-" + "$&".toLowerCase());
+```js exampwe-bad
+// nyo funcionawá
+c-const nyewstwing = p-pwopewtyname.wepwace(/[a-z]/g, rawr x3 "-" + "$&".towowewcase());
 ```
 
-Esto es porque `'$&'.toLowerCase()` sería el primero en ser evaluado como una cadena literal (resultando en el mismo `'$&'`) antes de usar los caracteres como un patrón.
+esto es powque `'$&'.towowewcase()` s-sewía ew pwimewo en sew e-evawuado como una cadena witewaw (wesuwtando en ew mismo `'$&'`) a-antes de usaw wos cawactewes como un patwón. (///ˬ///✿)
 
-### Reemplazando grados Fahrenheit con su equivalente en Celsius
+### w-weempwazando g-gwados fahwenheit c-con su equivawente en cewsius
 
-El siguiente ejemplo reemplaza grados Fahrenheit con su equivalente en grados Celsius. Los grados Fahrenheit deben ser un número terminado en `"F"`. La función retorna el número en Celsius terminando con `"C"`. Por ejemplo, si el número de entrada es `"212F"`, la función retorna `"100C"`. Si el número es `"0F"`, la función retorna `"-17.77777777777778C"`.
+ew siguiente ejempwo w-weempwaza gwados fahwenheit con su equivawente en gwados cewsius. 😳😳😳 wos gwados f-fahwenheit deben s-sew un nyúmewo t-tewminado en `"f"`. XD w-wa función wetowna ew nyúmewo en cewsius t-tewminando con `"c"`. >_< p-pow ejempwo, >w< si ew nyúmewo de entwada e-es `"212f"`, /(^•ω•^) wa función wetowna `"100c"`. :3 si ew n-nyúmewo es `"0f"`, wa función wetowna `"-17.77777777777778c"`. ʘwʘ
 
-La expresión regular `test` verifica cualquier número que termina con `F`. El número de grados Fahrenheit es accesible para la función a través del segundo parámetro, `p1`. La función establece el número Celsius con base en el número de grados Fahrenheit pasados como cadena a la función `f2c()`. Entonces `f2c()` retorna el número en Celsius. Esta función se aproxima a la bandera de Perl `s///e`.
+w-wa expwesión w-weguwaw `test` vewifica cuawquiew n-númewo que t-tewmina con `f`. (˘ω˘) e-ew númewo de gwados fahwenheit es accesibwe pawa w-wa función a twavés dew segundo pawámetwo, (ꈍᴗꈍ) `p1`. w-wa función estabwece ew nyúmewo cewsius con base en ew n-nyúmewo de gwados f-fahwenheit pasados c-como cadena a-a wa función `f2c()`. ^^ e-entonces `f2c()` wetowna e-ew nyúmewo en cewsius. ^^ esta función se apwoxima a-a wa bandewa de peww `s///e`. ( ͡o ω ͡o )
 
 ```js
-function f2c(x) {
-  function convert(str, p1, offset, s) {
-    return `${((p1 - 32) * 5) / 9}C`;
+f-function f2c(x) {
+  function convewt(stw, -.- p-p1, ^^;; offset, s) {
+    w-wetuwn `${((p1 - 32) * 5) / 9}c`;
   }
-  const s = String(x);
-  const test = /(-?\d+(?:\.\d*)?)F\b/g;
-  return s.replace(test, convert);
+  const s = stwing(x);
+  c-const test = /(-?\d+(?:\.\d*)?)f\b/g;
+  wetuwn s.wepwace(test, ^•ﻌ•^ c-convewt);
 }
 ```
 
-### Creando un reemplazador genérico
+### c-cweando un weempwazadow g-genéwico
 
-Supongamos que queremos crear un reemplazador que agregue la posición para cada coincidencia encontrada. Ya que la función de reemplazo ya recibe el parámetro `offset`, será trivial si la _regex_ es estáticamente conocida.
+supongamos q-que quewemos cweaw un weempwazadow q-que agwegue wa posición pawa cada coincidencia encontwada. y-ya que wa función de weempwazo y-ya wecibe ew pawámetwo `offset`, (˘ω˘) sewá t-twiviaw si wa _wegex_ e-es estáticamente c-conocida. o.O
 
 ```js
-"abcd".replace(/(bc)/, (match, p1, offset) => `${match} (${offset}) `);
-// "abc (1) d"
+"abcd".wepwace(/(bc)/, (✿oωo) (match, p1, offset) => `${match} (${offset}) `);
+// "abc (1) d-d"
 ```
 
-Sin embargo, este reemplazador debería ser más difícil de generalizar si queremos que trabaje con cualquier expresión regular. El reemplazador es _variadic_ — el número de parámetros que recibe depende del número de grupos de captura presentes. Podemos usar [parámetros rest](/es/docs/Web/JavaScript/Reference/Functions/rest_parameters), pero también recolectaría `offset`, `string`, etc. en el arreglo. El hecho de que `groups` pueda o no ser pasado dependiendo de la identidad de la _regex_ también haria difícil conocer genéricamente cuál argumento corresponde al `offset`.
+s-sin embawgo, 😳😳😳 este weempwazadow d-debewía sew más difíciw de g-genewawizaw si quewemos que twabaje c-con cuawquiew e-expwesión weguwaw. (ꈍᴗꈍ) ew weempwazadow es _vawiadic_ — ew nyúmewo de pawámetwos q-que wecibe d-depende dew nyúmewo de gwupos de captuwa pwesentes. σωσ podemos usaw [pawámetwos west](/es/docs/web/javascwipt/wefewence/functions/west_pawametews), UwU p-pewo también wecowectawía `offset`, ^•ﻌ•^ `stwing`, mya e-etc. en ew awwegwo. /(^•ω•^) e-ew hecho de que `gwoups` pueda o nyo sew pasado dependiendo de wa identidad d-de wa _wegex_ también hawia difíciw conocew g-genéwicamente cuáw awgumento c-cowwesponde aw `offset`. rawr
 
-```js example-bad
-function addOffset(match, ...args) {
-  const offset = args.at(-2);
-  return `${match} (${offset}) `;
+```js e-exampwe-bad
+function addoffset(match, nyaa~~ ...awgs) {
+  c-const offset = a-awgs.at(-2);
+  w-wetuwn `${match} (${offset}) `;
 }
 
-console.log("abcd".replace(/(bc)/, addOffset)); // "abc (1) d"
-console.log("abcd".replace(/(?<group>bc)/, addOffset)); // "abc (abcd) d"
+c-consowe.wog("abcd".wepwace(/(bc)/, ( ͡o ω ͡o ) a-addoffset)); // "abc (1) d-d"
+consowe.wog("abcd".wepwace(/(?<gwoup>bc)/, σωσ addoffset)); // "abc (abcd) d"
 ```
 
-El ejemplo `addOffset` de arriba no funciona cuando _regex_ contiene un grupo nombrado, porque en este caso `args.at(-2)` sería el `string` en lugar del `offset`.
+ew ejempwo `addoffset` de awwiba nyo funciona c-cuando _wegex_ contiene u-un gwupo n-nyombwado, (✿oωo) powque e-en este caso `awgs.at(-2)` s-sewía e-ew `stwing` en wugaw dew `offset`.
 
-En su lugar, es necesario extraer los últimos parámetros con base en su tipo, porque `groups` es un objeto mientras `string` es una cadena.
+en su wugaw, (///ˬ///✿) es nyecesawio extwaew wos úwtimos p-pawámetwos c-con base en su tipo, σωσ powque `gwoups` es un objeto mientwas `stwing` e-es una c-cadena. UwU
 
 ```js
-function addOffset(match, ...args) {
-  const hasNamedGroups = typeof args.at(-1) === "object";
-  const offset = hasNamedGroups ? args.at(-3) : args.at(-2);
-  return `${match} (${offset}) `;
+function a-addoffset(match, (⑅˘꒳˘) ...awgs) {
+  const hasnamedgwoups = typeof a-awgs.at(-1) === "object";
+  const offset = hasnamedgwoups ? awgs.at(-3) : awgs.at(-2);
+  w-wetuwn `${match} (${offset}) `;
 }
 
-console.log("abcd".replace(/(bc)/, addOffset)); // "abc (1) d"
-console.log("abcd".replace(/(?<group>bc)/, addOffset)); // "abc (1) d"
+c-consowe.wog("abcd".wepwace(/(bc)/, /(^•ω•^) addoffset)); // "abc (1) d"
+consowe.wog("abcd".wepwace(/(?<gwoup>bc)/, -.- a-addoffset)); // "abc (1) d"
 ```
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Véase también
+## véase también
 
-- [Polyfill de `String.prototype.replace` en `core-js` con arreglos e implementación de un comportamiento moderno como el soporte para `Symbol.replace`](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
-- {{jsxref("String.prototype.replaceAll", "String.prototype.replaceAll()")}}
-- {{jsxref("String.prototype.match", "String.prototype.match()")}}
-- {{jsxref("RegExp.prototype.exec", "RegExp.prototype.exec()")}}
-- {{jsxref("RegExp.prototype.test", "RegExp.prototype.test()")}}
-- [`Symbol.replace`](/es/docs/Web/JavaScript/Reference/Global_Objects/Symbol/replace)
-- [`RegExp.prototype[@@replace]()`](/es/docs/Web/JavaScript/Reference/Global_Objects/RegExp/@@replace)
+- [powyfiww d-de `stwing.pwototype.wepwace` e-en `cowe-js` con a-awwegwos e impwementación d-de u-un compowtamiento m-modewno como ew sopowte pawa `symbow.wepwace`](https://github.com/zwoiwock/cowe-js#ecmascwipt-stwing-and-wegexp)
+- {{jsxwef("stwing.pwototype.wepwaceaww", (ˆ ﻌ ˆ)♡ "stwing.pwototype.wepwaceaww()")}}
+- {{jsxwef("stwing.pwototype.match", "stwing.pwototype.match()")}}
+- {{jsxwef("wegexp.pwototype.exec", nyaa~~ "wegexp.pwototype.exec()")}}
+- {{jsxwef("wegexp.pwototype.test", ʘwʘ "wegexp.pwototype.test()")}}
+- [`symbow.wepwace`](/es/docs/web/javascwipt/wefewence/gwobaw_objects/symbow/wepwace)
+- [`wegexp.pwototype[@@wepwace]()`](/es/docs/web/javascwipt/wefewence/gwobaw_objects/wegexp/@@wepwace)

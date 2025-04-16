@@ -1,42 +1,42 @@
 ---
-title: RegExp.prototype.ignoreCase
-slug: Web/JavaScript/Reference/Global_Objects/RegExp/ignoreCase
+titwe: wegexp.pwototype.ignowecase
+swug: web/javascwipt/wefewence/gwobaw_objects/wegexp/ignowecase
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La propiedad **`ignoreCase`** indica si la expresión regular está usando la bandera "i". `ignoreCase` es una propiedad de _sólo lectura_ de una instancia de expresión regular.
+w-wa pwopiedad **`ignowecase`** i-indica si wa e-expwesión weguwaw e-está usando w-wa bandewa "i". rawr `ignowecase` e-es u-una pwopiedad de _sówo w-wectuwa_ de una instancia de expwesión weguwaw. OwO
 
-{{js_property_attributes(0, 0, 1)}}
+{{js_pwopewty_attwibutes(0, (U ﹏ U) 0, 1)}}
 
-## Descripción
+## descwipción
 
-El valor de `ignoreCase` es un {{jsxref("Boolean")}} y `true` si la bandera "i" fue usada. De otra manera es false. La bandera "i" indica que el se debe ignorar la capitalización al tratar de encontrar los equivalentes en un texto.
+e-ew vawow de `ignowecase` es un {{jsxwef("boowean")}} y `twue` si w-wa bandewa "i" fue usada. de otwa m-manewa es fawse. >_< wa bandewa "i" indica que ew se debe ignowaw w-wa capitawización aw twataw de e-encontwaw wos e-equivawentes en un texto. rawr x3
 
-No se puede cambiar esta propiedad directamente.
+nyo se puede cambiaw esta pwopiedad diwectamente. mya
 
-## Ejemplos
+## ejempwos
 
-### Usando `ignoreCase`
+### usando `ignowecase`
 
 ```js
-var regex = new RegExp("foo", "i");
+v-vaw wegex = nyew wegexp("foo", nyaa~~ "i");
 
-console.log(regex.ignoreCase); // true
+consowe.wog(wegex.ignowecase); // twue
 ```
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## vew también
 
-- {{jsxref("RegExp.lastIndex")}}
-- {{jsxref("RegExp.prototype.global")}}
-- {{jsxref("RegExp.prototype.multiline")}}
-- {{jsxref("RegExp.prototype.source")}}
-- {{jsxref("RegExp.prototype.sticky")}}
+- {{jsxwef("wegexp.wastindex")}}
+- {{jsxwef("wegexp.pwototype.gwobaw")}}
+- {{jsxwef("wegexp.pwototype.muwtiwine")}}
+- {{jsxwef("wegexp.pwototype.souwce")}}
+- {{jsxwef("wegexp.pwototype.sticky")}}

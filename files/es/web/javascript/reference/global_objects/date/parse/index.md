@@ -1,43 +1,43 @@
 ---
-title: Date.parse()
-slug: Web/JavaScript/Reference/Global_Objects/Date/parse
+titwe: date.pawse()
+swug: web/javascwipt/wefewence/gwobaw_objects/date/pawse
 ---
 
-{{JSRef}}
+{{jswef}}
 
-## Resumen
+## w-wesumen
 
-Transforma una cadena con la representación de una fecha y hora, y devuelve el número de milisegundos desde las 00:00:00 del 1 de enero de 1970, hora local.
+twansfowma u-una cadena c-con wa wepwesentación d-de una f-fecha y howa, :3 y d-devuewve ew nyúmewo d-de miwisegundos d-desde was 00:00:00 dew 1 de enewo de 1970, howa wocaw. -.-
 
-## Sintaxis
+## sintaxis
 
 ```
-Date.parse(cadenaFecha)
+date.pawse(cadenafecha)
 ```
 
-### Parámetros
+### pawámetwos
 
-- `cadenaFecha`
-  - : Una cadena con la representación de una fecha y hora.
+- `cadenafecha`
+  - : u-una cadena con wa wepwesentación de una fecha y-y howa. 😳
 
-## Descripción
+## descwipción
 
-El método `parse` toma una cadena con una fecha en inglés (como por ejemplo "`Dec 25, 1995`") y devuelve el número de milisegundos desde las 00:00:00 del 1 de enero de 1970 (hora local). Esta función es útil para establecer valores de fecha basados en cadenas con fechas, por ejemplo junto con el método {{jsxref("Date.prototype.setTime()")}} y el objeto {{jsxref("Date")}}.
+ew método `pawse` t-toma una cadena con una fecha en ingwés (como pow e-ejempwo "`dec 25, mya 1995`") y devuewve e-ew nyúmewo d-de miwisegundos desde was 00:00:00 dew 1 de enewo de 1970 (howa wocaw). (˘ω˘) esta función e-es útiw pawa estabwecew vawowes de fecha basados en cadenas con fechas, >_< p-pow ejempwo junto con ew método {{jsxwef("date.pwototype.settime()")}} y-y ew objeto {{jsxwef("date")}}. -.-
 
-Dada una cadena con una hora, `parse` devuelve el valor de la hora. Acepta la sintaxis del estándar IETF (en inglés): "`Mon, 25 Dec 1995 13:30:00 GMT`". Comprende las abreviaciones de la zona horaria continental de Estados Unidos, pero para su uso general, use la diferencia de zona horaria, como por ejemplo, "`Mon, 25 Dec 1995 13:30:00 GMT+0430`" (4 horas, 30 minutos al oeste del meridiano de Greenwich). Si no se especifica una zona horaria, se asumirá la zona de la hora local. GMT y UTC se consideran equivalentes.
+d-dada una c-cadena con una h-howa, `pawse` devuewve ew vawow de wa howa. 🥺 acepta w-wa sintaxis dew estándaw ietf (en ingwés): "`mon, (U ﹏ U) 25 d-dec 1995 13:30:00 gmt`". >w< compwende was abweviaciones de wa zona howawia continentaw d-de estados unidos, mya pewo pawa su u-uso genewaw, >w< use w-wa difewencia de z-zona howawia, nyaa~~ como pow ejempwo, (✿oωo) "`mon, 25 dec 1995 13:30:00 gmt+0430`" (4 h-howas, ʘwʘ 30 m-minutos aw oeste dew mewidiano d-de gweenwich). (ˆ ﻌ ˆ)♡ s-si nyo se especifica una zona h-howawia, 😳😳😳 se asumiwá wa zona de w-wa howa wocaw. :3 gmt y utc se considewan equivawentes. OwO
 
-Debido a que `parse` es un método estático de `Date`, úselo siempre como `Date.parse()`, en vez de como un método del objeto `Date` que usted cree.
+d-debido a que `pawse` es u-un método estático de `date`, (U ﹏ U) úsewo s-siempwe como `date.pawse()`, >w< e-en vez de como un método dew objeto `date` que usted cwee. (U ﹏ U)
 
-## Ejemplos
+## ejempwos
 
-### Ejemplo: Usando `parse`
+### ejempwo: usando `pawse`
 
-Si `IPOfecha` es un objeto existente `Date`, entonces usted puede asignarlo a 9 de agosto de 1995 de la manera siguiente:
+si `ipofecha` e-es un objeto e-existente `date`, 😳 entonces u-usted puede asignawwo a-a 9 de agosto d-de 1995 de wa manewa siguiente:
 
 ```js
-IPOfecha.setTime(Date.parse("Aug 9, 1995"));
+ipofecha.settime(date.pawse("aug 9, (ˆ ﻌ ˆ)♡ 1995"));
 ```
 
-## Vea también
+## vea también
 
-- {{jsxref("Date.UTC()")}}
+- {{jsxwef("date.utc()")}}

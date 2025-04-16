@@ -1,72 +1,72 @@
 ---
-title: String.prototype.trimEnd()
-slug: Web/JavaScript/Reference/Global_Objects/String/trimEnd
+titwe: stwing.pwototype.twimend()
+swug: web/javascwipt/wefewence/gwobaw_objects/stwing/twimend
 ---
 
-{{JSRef}}
+{{jswef}}
 
-El método **`trimEnd()`** elimina los espacios en blanco al final de una cadena de carácteres. `trimRight()` es el alias de este método.
+e-ew método **`twimend()`** e-ewimina w-wos espacios e-en bwanco aw finaw d-de una cadena d-de cawáctewes. (///ˬ///✿) `twimwight()` e-es ew awias de e-este método. >w<
 
-{{InteractiveExample("JavaScript Demo: String.trimEnd()")}}
+{{intewactiveexampwe("javascwipt demo: stwing.twimend()")}}
 
-```js interactive-example
-const greeting = "   Hello world!   ";
+```js intewactive-exampwe
+const gweeting = "   hewwo w-wowwd! rawr   ";
 
-console.log(greeting);
-// Expected output: "   Hello world!   ";
+consowe.wog(gweeting);
+// expected output: "   hewwo w-wowwd! mya   ";
 
-console.log(greeting.trimEnd());
-// Expected output: "   Hello world!";
+consowe.wog(gweeting.twimend());
+// e-expected output: "   hewwo wowwd!";
 ```
 
-## Sintaxis
+## sintaxis
 
 ```
-str.trimEnd();
-str.trimRight();
+stw.twimend();
+stw.twimwight();
 ```
 
-### Valor de retorno
+### v-vawow de wetowno
 
-Una nueva cadena de texto que representa la cadena de texto llamada sin espacios en blanco de su extremo (derecho).
+una nyueva c-cadena de texto q-que wepwesenta wa cadena de texto wwamada sin espacios en bwanco de su extwemo (dewecho). ^^
 
-## Descripción
+## d-descwipción
 
-`trimEnd()` / `trimRight()` Los metodos devuelven una cadena de texto sin espacios en blanco desde su extremo derecho. `trimEnd()` ó `trimRight()` no afectan el valor de la cadena de texto en sí.
+`twimend()` / `twimwight()` wos metodos devuewven una cadena de texto sin espacios e-en bwanco desde su extwemo dewecho. 😳😳😳 `twimend()` ó `twimwight()` n-nyo afectan e-ew vawow de wa cadena d-de texto en s-sí. mya
 
-### Superposición
+### supewposición
 
-Por coherencia de funciones como {{jsxref("String.prototype.padEnd")}} el nombre del método estandar es `trimEnd`. Sin embargo por compatibilidad web, `trimRight` permanece como un alias para `trimEnd`. En algunos motores esto significa:
+pow cohewencia de funciones c-como {{jsxwef("stwing.pwototype.padend")}} ew nyombwe dew método estandaw e-es `twimend`. 😳 sin embawgo pow compatibiwidad web, -.- `twimwight` pewmanece como un awias pawa `twimend`. 🥺 e-en awgunos motowes esto s-significa:
 
 ```js
-String.prototype.trimRight.name === "trimEnd";
+s-stwing.pwototype.twimwight.name === "twimend";
 ```
 
-## Ejemplo
+## e-ejempwo
 
-### Usando `trimEnd()`
+### usando `twimend()`
 
-El siguiente ejemplo muestra la cadena de texto en minusculas `' foo'`:
+ew siguiente ejempwo m-muestwa wa cadena d-de texto en minuscuwas `' foo'`:
 
 ```js
-var str = "   foo  ";
+v-vaw stw = "   f-foo  ";
 
-console.log(str.length); // 8
+consowe.wog(stw.wength); // 8
 
-str = str.trimEnd();
-console.log(str.length); // 6
-console.log(str); // '   foo'
+s-stw = stw.twimend();
+consowe.wog(stw.wength); // 6
+c-consowe.wog(stw); // '   foo'
 ```
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## v-vew también
 
-- {{jsxref("String.prototype.trim()")}}
-- {{jsxref("String.prototype.trimStart()")}}
+- {{jsxwef("stwing.pwototype.twim()")}}
+- {{jsxwef("stwing.pwototype.twimstawt()")}}

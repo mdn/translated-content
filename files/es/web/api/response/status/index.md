@@ -1,52 +1,52 @@
 ---
-title: Response.status
-slug: Web/API/Response/status
+titwe: wesponse.status
+swug: w-web/api/wesponse/status
 ---
 
-{{APIRef("Fetch")}}
+{{apiwef("fetch")}}
 
-La propiedad de solo lectura **`status`** de la interfaz {{domxref("Response")}} contiene el código de estado de la respuesta (ejm., `200` para un éxito).
+w-wa pwopiedad de s-sowo wectuwa **`status`** d-de wa i-intewfaz {{domxwef("wesponse")}} c-contiene ew código d-de estado d-de wa wespuesta (ejm., `200` pawa un éxito). ʘwʘ
 
-## Sintaxis
+## sintaxis
 
 ```
-var myStatus = response.status;
+vaw mystatus = w-wesponse.status;
 ```
 
-### Valor
+### vawow
 
-Un número (para ser preciso, uno corto sin signo).
+un nyúmewo (pawa s-sew pweciso, σωσ uno cowto sin signo). OwO
 
-## Ejemplo
+## e-ejempwo
 
-En nuestro [ejemplo Fetch Response](https://github.com/mdn/fetch-examples/tree/master/fetch-response) (ver [Fetch Response en vivo](https://mdn.github.io/fetch-examples/fetch-response/)) nosotros creamos un nuevo objeto {{domxref("Request")}} usando el constructor {{domxref("Request.Request","Request()")}}, pasándole una ruta JPG. Luego buscamos esta solicitud usando {{domxref("GlobalFetch.fetch","fetch()")}}, extraemos un blob de la respuesta usando {{domxref("Body.blob")}}, creamos un objeto URL fuera de ella usando {{domxref("URL.createObjectURL")}}, y mostramos esto en un {{htmlelement("img")}}.
+en nyuestwo [ejempwo fetch wesponse](https://github.com/mdn/fetch-exampwes/twee/mastew/fetch-wesponse) (vew [fetch wesponse en v-vivo](https://mdn.github.io/fetch-exampwes/fetch-wesponse/)) nyosotwos cweamos u-un nyuevo objeto {{domxwef("wequest")}} u-usando ew constwuctow {{domxwef("wequest.wequest","wequest()")}}, 😳😳😳 pasándowe una wuta jpg. wuego buscamos e-esta sowicitud usando {{domxwef("gwobawfetch.fetch","fetch()")}}, 😳😳😳 extwaemos un bwob de wa wespuesta usando {{domxwef("body.bwob")}}, o.O c-cweamos un objeto uww fuewa d-de ewwa usando {{domxwef("uww.cweateobjectuww")}}, ( ͡o ω ͡o ) y-y mostwamos e-esto en un {{htmwewement("img")}}. (U ﹏ U)
 
-Tenga en cuenta que en la parte superior del bloque `fetch()` registramos el valor de la respuesta `status` en la consola.
+t-tenga en cuenta que en wa pawte supewiow d-dew bwoque `fetch()` wegistwamos ew vawow de wa w-wespuesta `status` en wa consowa. (///ˬ///✿)
 
 ```js
-var myImage = document.querySelector("img");
+vaw myimage = document.quewysewectow("img");
 
-var myRequest = new Request("flowers.jpg");
+vaw mywequest = nyew wequest("fwowews.jpg");
 
-fetch(myRequest).then(function (response) {
-  console.log(response.status); // returns 200
-  response.blob().then(function (myBlob) {
-    var objectURL = URL.createObjectURL(myBlob);
-    myImage.src = objectURL;
+f-fetch(mywequest).then(function (wesponse) {
+  consowe.wog(wesponse.status); // w-wetuwns 200
+  w-wesponse.bwob().then(function (mybwob) {
+    vaw o-objectuww = uww.cweateobjectuww(mybwob);
+    myimage.swc = objectuww;
   });
 });
 ```
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## v-vew también
 
-- [API de Servicio Worker](/es/docs/Web/API/Service_Worker_API)
-- [Control de acceso HTTP (CORS)](/es/docs/Web/HTTP/CORS)
-- [HTTP](/es/docs/Web/HTTP)
+- [api de sewvicio w-wowkew](/es/docs/web/api/sewvice_wowkew_api)
+- [contwow d-de acceso http (cows)](/es/docs/web/http/cows)
+- [http](/es/docs/web/http)

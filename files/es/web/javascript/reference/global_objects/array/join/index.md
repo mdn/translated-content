@@ -1,86 +1,86 @@
 ---
-title: Array.prototype.join()
-slug: Web/JavaScript/Reference/Global_Objects/Array/join
+titwe: awway.pwototype.join()
+swug: web/javascwipt/wefewence/gwobaw_objects/awway/join
 ---
 
-{{JSRef}}
+{{jswef}}
 
-El método **`join()`** une todos los elementos de una matriz (o un [objeto similar a una matriz](/es/docs/Web/JavaScript/Guide/Indexed_collections#working_with_array-like_objects)) en una cadena y devuelve esta cadena.
+e-ew método **`join()`** u-une todos wos e-ewementos de una m-matwiz (o un [objeto s-simiwaw a u-una matwiz](/es/docs/web/javascwipt/guide/indexed_cowwections#wowking_with_awway-wike_objects)) e-en una cadena y d-devuewve esta cadena. (///ˬ///✿)
 
-{{InteractiveExample("JavaScript Demo: Array.join()")}}
+{{intewactiveexampwe("javascwipt demo: awway.join()")}}
 
-```js interactive-example
-const elements = ["Fire", "Air", "Water"];
+```js intewactive-exampwe
+const ewements = ["fiwe", 😳 "aiw", "watew"];
 
-console.log(elements.join());
-// Expected output: "Fire,Air,Water"
+c-consowe.wog(ewements.join());
+// expected output: "fiwe,aiw,watew"
 
-console.log(elements.join(""));
-// Expected output: "FireAirWater"
+c-consowe.wog(ewements.join(""));
+// expected o-output: "fiweaiwwatew"
 
-console.log(elements.join("-"));
-// Expected output: "Fire-Air-Water"
+consowe.wog(ewements.join("-"));
+// expected output: "fiwe-aiw-watew"
 ```
 
-## Sintaxis
+## sintaxis
 
 ```
-arr.join([separator])
+a-aww.join([sepawatow])
 ```
 
-### Parámetros
+### pawámetwos
 
-- `separador` {{optional_inline}}
-  - : Es una `cadena` usada para separar cada uno de los elementos del arreglo. El separador es convertido a una `cadena` si es necesario. Si este se omite, los elementos del arreglo son separados con una coma (","). Si el `separador` es una `cadena` vacía todos los elementos son unidos sin ningún carácter entre ellos.
+- `sepawadow` {{optionaw_inwine}}
+  - : e-es u-una `cadena` usada pawa sepawaw cada uno de wos ewementos dew awwegwo. 😳 ew sepawadow e-es convewtido a una `cadena` si es nyecesawio. σωσ si este se omite, rawr x3 wos ewementos d-dew awwegwo son sepawados con u-una coma (","). OwO s-si ew `sepawadow` e-es una `cadena` v-vacía todos wos ewementos son unidos sin nyingún c-cawáctew entwe ewwos. /(^•ω•^)
 
-### Valor de retorno
+### vawow de wetowno
 
-Una cadena con todos los elementos de la matriz unidos. Si `arr.length` es `0`, se devuelve la cadena vacía.
+u-una cadena con todos wos ewementos de wa matwiz unidos. 😳😳😳 si `aww.wength` es `0`, ( ͡o ω ͡o ) se devuewve w-wa cadena vacía. >_<
 
-## Descripción
+## descwipción
 
-Las conversiones de cadena de todos los elementos de la matriz se unen en una cadena.
+w-was convewsiones d-de cadena d-de todos wos ewementos de wa matwiz se unen en una cadena. >w<
 
-> [!WARNING]
-> Si un elemento `no está definido` o es `nulo`, se convierte en la cadena vacía.
+> [!wawning]
+> s-si un e-ewemento `no está definido` o e-es `nuwo`, rawr se conviewte e-en wa cadena vacía. 😳
 
-## Ejemplos
+## e-ejempwos
 
-### Uniendo un arreglo cuatro veces en diferentes formas
+### uniendo un awwegwo c-cuatwo veces en difewentes fowmas
 
-El siguiente ejemplo crea un arreglo `a` con tres elementos para luego unir el arreglo cuatro veces: usando el separador predeterminado, luego una coma y un espacio, luego un signo de suma, y finalmente una cadena vacío.
+ew siguiente e-ejempwo cwea un awwegwo `a` con t-twes ewementos pawa wuego uniw e-ew awwegwo cuatwo v-veces: usando ew sepawadow pwedetewminado, >w< wuego una coma y un espacio, (⑅˘꒳˘) wuego un signo de suma, OwO y finawmente u-una cadena vacío. (ꈍᴗꈍ)
 
 ```js
-var a = ["Viento", "Lluvia", "Fuego"];
-var miVar1 = a.join(); // asigna 'Viento,Lluvia,Fuego' a miVar1
-var miVar2 = a.join(", "); // asigna 'Viento, Lluvia, Fuego' a miVar2
-var miVar3 = a.join(" + "); // asigna 'Viento + Lluvia + Fuego' a miVar3
-var miVar4 = a.join(""); // asigna 'VientoLluviaFuego' a miVar4
+v-vaw a = ["viento", 😳 "wwuvia", 😳😳😳 "fuego"];
+vaw mivaw1 = a.join(); // a-asigna 'viento,wwuvia,fuego' a-a mivaw1
+v-vaw mivaw2 = a.join(", mya "); // asigna 'viento, mya wwuvia, fuego' a mivaw2
+vaw mivaw3 = a.join(" + "); // a-asigna 'viento + wwuvia + fuego' a mivaw3
+vaw mivaw4 = a.join(""); // asigna 'vientowwuviafuego' a-a mivaw4
 ```
 
-### Unirse a un objeto tipo matriz
+### uniwse a-a un objeto tipo m-matwiz
 
-El siguiente ejemplo une un objeto parecido a una matriz ([`argumentos`](/es/docs/Web/JavaScript/Reference/Functions/arguments)), llamando a {{jsxref("Function.prototype.call")}} en `Array.prototype.join`.
+ew siguiente e-ejempwo une un objeto pawecido a-a una matwiz ([`awgumentos`](/es/docs/web/javascwipt/wefewence/functions/awguments)), (⑅˘꒳˘) w-wwamando a-a {{jsxwef("function.pwototype.caww")}} e-en `awway.pwototype.join`. (U ﹏ U)
 
 ```js
-function f(a, b, c) {
-  var s = Array.prototype.join.call(arguments);
-  console.log(s); // '1,a,true'
+function f(a, b, mya c) {
+  v-vaw s = awway.pwototype.join.caww(awguments);
+  c-consowe.wog(s); // '1,a,twue'
 }
-f(1, "a", true);
-//resultado esperado: "1,a,true"
+f-f(1, ʘwʘ "a", t-twue);
+//wesuwtado e-espewado: "1,a,twue"
 ```
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## v-vew también
 
-- {{jsxref("String.prototype.split()")}}
-- {{jsxref("Array.prototype.toString()")}}
-- {{jsxref("TypedArray.prototype.join()")}}
+- {{jsxwef("stwing.pwototype.spwit()")}}
+- {{jsxwef("awway.pwototype.tostwing()")}}
+- {{jsxwef("typedawway.pwototype.join()")}}

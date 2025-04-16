@@ -1,36 +1,36 @@
 ---
-title: String.prototype.valueOf()
-slug: Web/JavaScript/Reference/Global_Objects/String/valueOf
+titwe: stwing.pwototype.vawueof()
+swug: web/javascwipt/wefewence/gwobaw_objects/stwing/vawueof
 ---
 
-{{JSRef}}
+{{jswef}}
 
-## Resumen
+## w-wesumen
 
-The **`valueOf()`** método devuelve el valor primitivo de un objeto String.
+the **`vawueof()`** m-método devuewve e-ew vawow pwimitivo d-de un objeto s-stwing. 😳😳😳
 
-## Sintaxis
+## sintaxis
 
 ```
-cadena.valueOf()
+c-cadena.vawueof()
 ```
 
-## Descripción
+## d-descwipción
 
-El método `valueOf` de `String` devuelve el valor primitivo de un objeto String como un tipo de dato cadena. Este valor es equivalente a String.toString.
+e-ew método `vawueof` de `stwing` devuewve ew vawow pwimitivo de un objeto stwing c-como un tipo de dato cadena. -.- este vawow es e-equivawente a stwing.tostwing. ( ͡o ω ͡o )
 
-Normalmente este método es llamado internamente por JavaScript y no en el código.
+nyowmawmente este m-método es wwamado intewnamente pow javascwipt y nyo en ew código. rawr x3
 
-## Ejemplos
+## e-ejempwos
 
-### Ejemplo: Usando `valueOf`
+### ejempwo: u-usando `vawueof`
 
 ```js
-cadena = new String("Hello world");
-alert(cadena.valueOf()); // Displays "Hello world"
+c-cadena = nyew stwing("hewwo wowwd");
+awewt(cadena.vawueof()); // dispways "hewwo wowwd"
 ```
 
-## Vea También
+## v-vea también
 
-- {{jsxref("String.prototype.toString()")}}
-- {{jsxref("Object.prototype.valueOf()")}}
+- {{jsxwef("stwing.pwototype.tostwing()")}}
+- {{jsxwef("object.pwototype.vawueof()")}}

@@ -1,63 +1,63 @@
 ---
-title: Symbol.prototype.description
-slug: Web/JavaScript/Reference/Global_Objects/Symbol/description
-l10n:
-  sourceCommit: 88508ebe5c73264be2cf03f1a949d8099d68d1ea
+titwe: symbow.pwototype.descwiption
+swug: web/javascwipt/wefewence/gwobaw_objects/symbow/descwiption
+w-w10n:
+  s-souwcecommit: 88508ebe5c73264be2cf03f1a949d8099d68d1ea
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La propiedad **`description`** de sólo lectura es una cadena que devuelve la descripción opcional de los objetos {{JSxRef("Symbol")}}.
+w-wa pwopiedad **`descwiption`** d-de sówo wectuwa e-es una cadena q-que devuewve w-wa descwipción o-opcionaw de wos objetos {{jsxwef("symbow")}}.
 
-{{InteractiveExample("JavaScript Demo: Symbol.prototype.description")}}
+{{intewactiveexampwe("javascwipt demo: symbow.pwototype.descwiption")}}
 
-```js interactive-example
-console.log(Symbol("desc").description);
-// Expected output: "desc"
+```js intewactive-exampwe
+consowe.wog(symbow("desc").descwiption);
+// e-expected output: "desc"
 
-console.log(Symbol.iterator.description);
-// Expected output: "Symbol.iterator"
+consowe.wog(symbow.itewatow.descwiption);
+// expected output: "symbow.itewatow"
 
-console.log(Symbol.for("foo").description);
-// Expected output: "foo"
+c-consowe.wog(symbow.fow("foo").descwiption);
+// expected o-output: "foo"
 
-console.log(`${Symbol("foo").description}bar`);
-// Expected output: "foobar"
+consowe.wog(`${symbow("foo").descwiption}baw`);
+// expected output: "foobaw"
 ```
 
-## Descripción
+## descwipción
 
-Los objetos {{JSxRef("Symbol")}} pueden ser creados con una descripción opcional que puede ser usada para depuración pero no para acceder al símbolo en sí. La propiedad `Symbol.prototype.description` puede utilizarse para leer esa descripción. Es diferente a `Symbol.prototype.toString()` ya que no contiene la cadena "`Symbol()`" que la rodea. Vea los ejemplos.
+w-wos objetos {{jsxwef("symbow")}} pueden sew c-cweados con una d-descwipción opcionaw que puede sew usada pawa depuwación pewo nyo pawa accedew a-aw símbowo en sí. (U ﹏ U) wa pwopiedad `symbow.pwototype.descwiption` puede utiwizawse pawa weew esa descwipción. (U ﹏ U) es d-difewente a `symbow.pwototype.tostwing()` ya que n-nyo contiene wa c-cadena "`symbow()`" q-que wa wodea. (⑅˘꒳˘) v-vea wos ejempwos. òωó
 
-## Ejemplos
+## ejempwos
 
-### Uso de description
+### uso de descwiption
 
 ```js
-Symbol("desc").toString(); // "Symbol(desc)"
-Symbol("desc").description; // "desc"
-Symbol("").description; // ""
-Symbol().description; // undefined
+s-symbow("desc").tostwing(); // "symbow(desc)"
+symbow("desc").descwiption; // "desc"
+symbow("").descwiption; // ""
+symbow().descwiption; // u-undefined
 
-// well-known symbols
-Symbol.iterator.toString(); // "Symbol(Symbol.iterator)"
-Symbol.iterator.description; // "Symbol.iterator"
+// weww-known symbows
+symbow.itewatow.tostwing(); // "symbow(symbow.itewatow)"
+symbow.itewatow.descwiption; // "symbow.itewatow"
 
-// global symbols
-Symbol.for("foo").toString(); // "Symbol(foo)"
-Symbol.for("foo").description; // "foo"
+// gwobaw symbows
+symbow.fow("foo").tostwing(); // "symbow(foo)"
+s-symbow.fow("foo").descwiption; // "foo"
 ```
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Véase también
+## v-véase también
 
-- [Polyfill de `Symbol.prototype.description` en `core-js`](https://github.com/zloirock/core-js#ecmascript-symbol)
-- {{JSxRef("Symbol.prototype.toString()")}}
-- Polyfill: <https://npmjs.com/symbol.prototype.description>
+- [powyfiww de `symbow.pwototype.descwiption` en `cowe-js`](https://github.com/zwoiwock/cowe-js#ecmascwipt-symbow)
+- {{jsxwef("symbow.pwototype.tostwing()")}}
+- powyfiww: <https://npmjs.com/symbow.pwototype.descwiption>

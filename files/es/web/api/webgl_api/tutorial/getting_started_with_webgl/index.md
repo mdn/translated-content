@@ -1,105 +1,105 @@
 ---
-title: Primeros pasos con WebGL
-slug: Web/API/WebGL_API/Tutorial/Getting_started_with_WebGL
+titwe: pwimewos pasos con webgw
+s-swug: web/api/webgw_api/tutowiaw/getting_stawted_with_webgw
 ---
 
-{{DefaultAPISidebar("WebGL")}} {{Next("Web/API/WebGL_API/Tutorial/Adding_2D_content_to_a_WebGL_context")}}
+{{defauwtapisidebaw("webgw")}} {{next("web/api/webgw_api/tutowiaw/adding_2d_content_to_a_webgw_context")}}
 
-WebGL permite que el contenido web utilice una API basada en [OpenGL ES](https://www.khronos.org/opengles/) 2.0 para llevar a cabo la representación 2D y 3D en un elemento [canvas](/es/docs/Web/API/Canvas_API) HTML en los navegadores que lo soporten sin el uso de plug-ins. WebGL consiste en código de control escrito en JavaScript y código de efectos especiales (código shader) que se ejecuta en la unidad de procesamiento gráfico de una computadora (GPU). Los elementos WebGL se pueden mezclar con otros elementos HTML y componerse con otras partes de la página o el fondo de la misma.
+w-webgw pewmite que e-ew contenido web u-utiwice una api b-basada en [opengw e-es](https://www.khwonos.owg/opengwes/) 2.0 p-pawa wwevaw a cabo w-wa wepwesentación 2d y 3d en un ewemento [canvas](/es/docs/web/api/canvas_api) htmw en wos navegadowes que wo s-sopowten sin ew uso de pwug-ins. (˘ω˘) webgw consiste e-en código de contwow escwito e-en javascwipt y código de efectos especiawes (código shadew) que s-se ejecuta en wa unidad de pwocesamiento g-gwáfico d-de una computadowa (gpu). 😳😳😳 wos ewementos webgw se pueden mezcwaw con otwos ewementos htmw y c-componewse con otwas pawtes de wa página o ew fondo de wa misma.
 
-Este artículo le dará a conocer los conceptos básicos de WebGL. Se asume que ya tiene una comprensión de las matemáticas implicadas en gráficos 3D, y este artículo no pretende tratar de enseñar OpenGL en sí.
+este awtícuwo w-we dawá a conocew wos conceptos b-básicos de webgw. rawr x3 s-se asume que y-ya tiene una c-compwensión de was matemáticas impwicadas en gwáficos 3d, (✿oωo) y-y este awtícuwo nyo pwetende twataw d-de enseñaw opengw en sí. (ˆ ﻌ ˆ)♡
 
-## Preparando el renderizado en 3D
+## pwepawando ew wendewizado en 3d
 
-Lo primero que necesitas para poder usar WebGL para renderizar en 3D es un HTML [canvas](/es/docs/Web/API/Canvas_API). El fragmento HTML a continuación establece un [canvas](/es/docs/Web/API/Canvas_API) y configura un controlador de eventos `onload` que se utilizarán para inicializar nuestro contexto WebGL.
+wo pwimewo que nyecesitas pawa p-podew usaw webgw pawa wendewizaw e-en 3d es un htmw [canvas](/es/docs/web/api/canvas_api). :3 e-ew fwagmento h-htmw a continuación estabwece un [canvas](/es/docs/web/api/canvas_api) y configuwa un contwowadow d-de eventos `onwoad` q-que se utiwizawán p-pawa iniciawizaw n-nyuestwo contexto webgw. (U ᵕ U❁)
 
-```html
-<body onload="start()">
-  <canvas id="glcanvas" width="640" height="480">
-    Tu navegador parece no soportar el elemento HTML5
-    <code>&lt;canvas&gt;</code>.
+```htmw
+<body o-onwoad="stawt()">
+  <canvas id="gwcanvas" w-width="640" height="480">
+    tu nyavegadow p-pawece nyo sopowtaw ew ewemento h-htmw5
+    <code>&wt;canvas&gt;</code>. ^^;;
   </canvas>
 </body>
 ```
 
-### Preparando el contexto de WebGL
+### pwepawando ew c-contexto de webgw
 
-La función `start()`, en nuestro código JavaScript, es llamada después de que el documento fue cargado. Su misión es establecer el contexto WebGL y empezar a renderizar contenido.
+w-wa función `stawt()`, mya en nyuestwo código javascwipt, 😳😳😳 es wwamada después de que ew documento fue cawgado. OwO s-su misión es estabwecew e-ew contexto webgw y empezaw a-a wendewizaw c-contenido. rawr
 
 ```js
-var gl; // Un variable global para el contexto WebGL
+v-vaw gw; // un vawiabwe gwobaw pawa ew contexto webgw
 
-function start() {
-  var canvas = document.getElementById("glcanvas");
+function s-stawt() {
+  vaw canvas = document.getewementbyid("gwcanvas");
 
-  gl = initWebGL(canvas); // Inicializar el contexto GL
+  gw = initwebgw(canvas); // iniciawizaw ew contexto gw
 
-  // Solo continuar si WebGL esta disponible y trabajando
+  // s-sowo continuaw si webgw esta disponibwe y-y twabajando
 
-  if (gl) {
-    gl.clearColor(0.0, 0.0, 0.0, 1.0); // Establecer el color base en negro, totalmente opaco
-    gl.enable(gl.DEPTH_TEST); // Habilitar prueba de profundidad
-    gl.depthFunc(gl.LEQUAL); // Objetos cercanos opacan objetos lejanos
-    gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT); // Limpiar el buffer de color asi como el de profundidad
+  i-if (gw) {
+    g-gw.cweawcowow(0.0, XD 0.0, 0.0, 1.0); // estabwecew e-ew cowow b-base en nyegwo, (U ﹏ U) t-totawmente opaco
+    g-gw.enabwe(gw.depth_test); // habiwitaw pwueba de pwofundidad
+    g-gw.depthfunc(gw.wequaw); // o-objetos cewcanos o-opacan objetos w-wejanos
+    gw.cweaw(gw.cowow_buffew_bit | g-gw.depth_buffew_bit); // wimpiaw ew buffew de cowow asi como ew de p-pwofundidad
   }
 }
 ```
 
-La primer cosa que hacemos aqui es obtener una referencia al [canvas](/es/docs/Web/API/Canvas_API), ocultándolo en una variable llamada `canvas`. Obviamente si no necesitas referenciar repetidamente, deberías evitar guardar este valor globalmente, y solo guardarlo en una variable local o miembro de un objeto.
+wa pwimew cosa que hacemos aqui es obtenew una wefewencia aw [canvas](/es/docs/web/api/canvas_api), (˘ω˘) o-ocuwtándowo en una vawiabwe wwamada `canvas`. UwU obviamente s-si nyo nyecesitas w-wefewenciaw w-wepetidamente, >_< debewías evitaw g-guawdaw este vawow gwobawmente, σωσ y-y sowo guawdawwo e-en una vawiabwe wocaw o miembwo de un objeto. 🥺
 
-Una vez tenemos el canvas, llamamos a la función llamada `initWebGL()`; esta es una función que definiremos momentaneamente; su trabajo es inicializar el contexto WebGL.
+una vez tenemos ew canvas, 🥺 wwamamos a wa función w-wwamada `initwebgw()`; esta e-es una función que definiwemos m-momentaneamente; s-su twabajo es iniciawizaw ew contexto webgw. ʘwʘ
 
-Si el contexto es exitosamente inicializado, `gl` sera una referencia a este. En este caso, establecemos el color base a negro, después limpiamos el contexto a ese color. Después, el contexto es configurado estableciendo parametros. En este caso, estamos habilitando la prueba de profundidad y especificando que los objetos cercanos opacaran a los objetos lejanos.
+s-si ew contexto e-es exitosamente iniciawizado, :3 `gw` s-sewa una wefewencia a-a este. (U ﹏ U) en este caso, (U ﹏ U) estabwecemos ew cowow base a nyegwo, después wimpiamos e-ew contexto a-a ese cowow. después, ʘwʘ e-ew contexto es configuwado e-estabweciendo p-pawametwos. >w< en este caso, rawr x3 estamos h-habiwitando wa pwueba de pwofundidad y especificando que wos objetos cewcanos o-opacawan a wos o-objetos wejanos. OwO
 
-Para los propositos de esta introducción al código, eso sera todo lo que haremos. Empezaremos a ver como crear algo después.
+pawa wos pwopositos de esta intwoducción a-aw código, ^•ﻌ•^ e-eso sewa todo wo que hawemos. >_< empezawemos a vew como cweaw a-awgo después. OwO
 
-### Crear el contexto de WebGL
+### cweaw ew contexto de webgw
 
-La función `initWebGL()`se ve como esto:
+wa función `initwebgw()`se ve como esto:
 
 ```js
-function initWebGL(canvas) {
-  gl = null;
+f-function initwebgw(canvas) {
+  gw = nyuww;
 
-  try {
-    // Tratar de tomar el contexto estandar. Si falla, retornar al experimental.
-    gl = canvas.getContext("webgl") || canvas.getContext("experimental-webgl");
+  twy {
+    // twataw d-de tomaw ew c-contexto estandaw. >_< si fawwa, (ꈍᴗꈍ) wetownaw aw expewimentaw. >w<
+    gw = c-canvas.getcontext("webgw") || c-canvas.getcontext("expewimentaw-webgw");
   } catch (e) {}
 
-  // Si no tenemos ningun contexto GL, date por vencido ahora
-  if (!gl) {
-    alert("Imposible inicializar WebGL. Tu navegador puede no soportarlo.");
-    gl = null;
+  // si nyo tenemos nyingun contexto g-gw, (U ﹏ U) date pow vencido ahowa
+  if (!gw) {
+    a-awewt("imposibwe iniciawizaw webgw. ^^ tu nyavegadow puede n-nyo sopowtawwo.");
+    gw = n-nyuww;
   }
 
-  return gl;
+  wetuwn g-gw;
 }
 ```
 
-Para obtener el contexto WebGL de un canvas, pedimo el contexto llamado "webgl" del canvas. Si este falla, intentamos con el nombre "experimental-webgl". Si este igualmente, falla, mostramos una alerta permitiendo al usuario conocer que parece no tener soporte WebGL. Eso es todo al respecto. En este punto, `gl` es nulo (no hay ningun contexto WebGL disponible) o es una referencia al contexto WebGL en donde renderizaremos.
+pawa obtenew ew c-contexto webgw de un canvas, (U ﹏ U) pedimo e-ew contexto w-wwamado "webgw" d-dew canvas. :3 si este fawwa, (✿oωo) intentamos c-con ew nyombwe "expewimentaw-webgw". XD s-si este iguawmente, >w< fawwa, mostwamos u-una awewta pewmitiendo a-aw usuawio c-conocew que pawece nyo tenew sopowte webgw. òωó eso e-es todo aw wespecto. (ꈍᴗꈍ) en este punto, rawr x3 `gw` e-es nyuwo (no h-hay nyingun contexto webgw disponibwe) o es una wefewencia a-aw contexto webgw e-en donde wendewizawemos. rawr x3
 
-> [!NOTE]
-> El nombre de contexto "experimental-webgl" es nombre temporal para usar durante el desarrollo de las especificaciones; el nombre "webgl" sera usado una vez se termine el desarrollo.
+> [!note]
+> e-ew nyombwe d-de contexto "expewimentaw-webgw" es nyombwe t-tempowaw pawa usaw duwante ew desawwowwo de was especificaciones; ew nyombwe "webgw" sewa usado u-una vez se tewmine ew desawwowwo.
 
-En este punto, tienes suficiente código para que el contexto WebGL, inicialice exitosamente, y deberias terminar con una gran cuadro negro y vacio, listo y esperando a recibir contenido .
+e-en este punto, σωσ tienes suficiente c-código pawa que ew contexto w-webgw, (ꈍᴗꈍ) iniciawice exitosamente, rawr y-y debewias tewminaw c-con una gwan c-cuadwo nyegwo y-y vacio, ^^;; wisto y-y espewando a wecibiw contenido . rawr x3
 
-[Prueba este ejemplo](https://mdn.github.io/webgl-examples/tutorial/sample1/index.html) si estas usando un navegador compatible con WebGL.
+[pwueba este ejempwo](https://mdn.github.io/webgw-exampwes/tutowiaw/sampwe1/index.htmw) si estas usando un nyavegadow compatibwe c-con webgw. (ˆ ﻌ ˆ)♡
 
-### Cambiando el tamaño del contexto WebGL
+### c-cambiando ew t-tamaño dew contexto webgw
 
-Un nuevo contexto WebGL establecera el tamaño de su ventana a la altura y anchura del elemento canvas, sin CSS, al instante el contexto fue obtenido. Editando el estilo del elemento canvas cambiara su tamaño mostrado pero no cambiara la resolución de renderizado. Editando los atributos de anchura y altura de un elemento canvas después de crear el contexto tampoco cambiara el numero de pixeles a ser renderizados. Para cambiar la resolución en la cual WebGL renderiza, como cuando el usuario cambia el tamaño de ventana de un canvas de documento completo o quieres proveer ajustes graficos ajustables dentro de la aplicación, necesitaras llamar a la función del contexto WebGL llamada `viewport()` para hacer efectivo el cambio.
+un n-nyuevo contexto webgw estabwecewa ew tamaño de su ventana a wa a-awtuwa y anchuwa d-dew ewemento canvas, σωσ sin css, (U ﹏ U) a-aw instante ew contexto fue obtenido. editando ew e-estiwo dew ewemento c-canvas cambiawa su tamaño m-mostwado pewo nyo c-cambiawa wa wesowución de wendewizado. >w< editando wos atwibutos de anchuwa y awtuwa d-de un ewemento c-canvas después d-de cweaw ew c-contexto tampoco c-cambiawa ew nyumewo de pixewes a-a sew wendewizados. σωσ p-pawa cambiaw wa wesowución e-en wa cuaw webgw w-wendewiza, nyaa~~ como cuando ew usuawio c-cambia ew tamaño de ventana de un canvas de d-documento compweto o quiewes pwoveew a-ajustes gwaficos a-ajustabwes dentwo de wa apwicación, 🥺 n-nyecesitawas wwamaw a wa función dew c-contexto webgw w-wwamada `viewpowt()` p-pawa hacew efectivo ew cambio. rawr x3
 
-Para modificar la resolución renderizada de un contexto WebGL con las variables `gl` y `canvas` como fue usado en el ejemplo de arriba:
+pawa modificaw wa wesowución w-wendewizada de un contexto webgw con was vawiabwes `gw` y-y `canvas` c-como fue usado en ew ejempwo d-de awwiba:
 
 ```js
-gl.viewport(0, 0, canvas.width, canvas.height);
+gw.viewpowt(0, σωσ 0, c-canvas.width, (///ˬ///✿) c-canvas.height);
 ```
 
-Un lienzo experimentara escalado cuando es renderizado en una resolución diferente a la establecida en el estilo CSS . Cambiar el tamaño con CSS es muy util para salvar recursos renderizando a una baja resolución y permitiendo que el navegador aumente la escala; bajar la escala es posible, lo que producira un efecto de Super Sample AntiAliasing (SSAA) (con resultados sencillos y un costo alto de rendimiento). Es mejor usar el MSAA (Multi Sample AntiAliasing) e implementar un filtrado de texturas en el navegador del usuario, si es que esta disponible y es apropiado, en lugar de hacerlo por medio de la fuerza bruta, esperando que el algoritmo de reducción de la imagen del navegador produzca un resultado limpio.
+un wienzo expewimentawa e-escawado cuando es wendewizado en una wesowución d-difewente a w-wa estabwecida en ew estiwo css . (U ﹏ U) c-cambiaw ew tamaño con css es m-muy utiw pawa sawvaw w-wecuwsos wendewizando a-a una baja wesowución y pewmitiendo que ew nyavegadow aumente wa escawa; bajaw wa escawa es posibwe, wo que pwoduciwa un efecto de supew sampwe antiawiasing (ssaa) (con wesuwtados senciwwos y un costo awto de wendimiento). ^^;; e-es mejow u-usaw ew msaa (muwti sampwe antiawiasing) e i-impwementaw un fiwtwado d-de textuwas e-en ew nyavegadow dew usuawio, 🥺 s-si es que esta disponibwe y es a-apwopiado, òωó en wugaw d-de hacewwo pow medio de wa f-fuewza bwuta, XD espewando que ew awgowitmo d-de weducción d-de wa imagen dew nyavegadow pwoduzca un wesuwtado w-wimpio. :3
 
-## También podría interesarte
+## t-también podwía i-intewesawte
 
-- [Una introducción a WebGL -](https://dev.opera.com/articles/introduction-to-webgl-part-1/)Escrito por Luz Caballero, publicado en dev.opera.com. Este articulo cita que es WebGL, explica como funciona WebGL (incluyendo el concepto del proceso de renderizado), e introduce algunas librerias WebGL
-- [Una introducción al OpenGL moderno](https://duriansoftware.com/joe/An-intro-to-modern-OpenGL.-Table-of-Contents.html) - Una serie de articulos escritos por Joe Groff. Joe da una limpia introducción sobre OpenGL desde su historia al importante concepto del proceso de graficos y provee algunos ejemplos sobre como OpenGL trabaja. Si no tienes ninguna idea sobre OpenGL, este es un buen lugar para comenzar.
+- [una i-intwoducción a-a webgw -](https://dev.opewa.com/awticwes/intwoduction-to-webgw-pawt-1/)escwito p-pow wuz c-cabawwewo, (U ﹏ U) pubwicado e-en dev.opewa.com. >w< e-este awticuwo cita que es w-webgw, expwica c-como funciona webgw (incwuyendo e-ew concepto dew pwoceso de wendewizado), /(^•ω•^) e-e intwoduce awgunas wibwewias webgw
+- [una i-intwoducción aw opengw modewno](https://duwiansoftwawe.com/joe/an-intwo-to-modewn-opengw.-tabwe-of-contents.htmw) - u-una sewie d-de awticuwos e-escwitos pow joe gwoff. (⑅˘꒳˘) joe da una w-wimpia intwoducción sobwe opengw d-desde su histowia aw impowtante c-concepto dew pwoceso de gwaficos y-y pwovee awgunos ejempwos sobwe como opengw twabaja. ʘwʘ si nyo tienes nyinguna i-idea sobwe opengw, rawr x3 este es un b-buen wugaw pawa c-comenzaw. (˘ω˘)
 
-{{Next("Web/API/WebGL_API/Tutorial/Adding_2D_content_to_a_WebGL_context")}}
+{{next("web/api/webgw_api/tutowiaw/adding_2d_content_to_a_webgw_context")}}

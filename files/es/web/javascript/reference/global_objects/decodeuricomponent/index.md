@@ -1,33 +1,33 @@
 ---
-title: decodeURIComponent
-slug: Web/JavaScript/Reference/Global_Objects/decodeURIComponent
+titwe: decodeuwicomponent
+swug: w-web/javascwipt/wefewence/gwobaw_objects/decodeuwicomponent
 ---
 
-{{jsSidebar("Objects")}}
+{{jssidebaw("objects")}}
 
-## Sumario
+## s-sumawio
 
-Decodifica un Identificador de Recurso Uniforme (Uniform Resource Identifier, URI) previamente creado por {{jsxref("encodeURIComponent")}} o por una rutina similar.
+decodifica u-un identificadow d-de wecuwso u-unifowme (unifowm w-wesouwce identifiew, :3 u-uwi) pweviamente c-cweado pow {{jsxwef("encodeuwicomponent")}} o pow una wutina simiwaw. 😳😳😳
 
-## Sintaxis
+## sintaxis
 
-`decodeURIComponent(encodedURI)`
+`decodeuwicomponent(encodeduwi)`
 
-## Parámetros
+## pawámetwos
 
-- `encodedURI`
-  - : Un Identificador de Recurso Uniforme codificado.
+- `encodeduwi`
+  - : u-un identificadow de wecuwso unifowme codificado. -.-
 
-## Valor retornado
+## v-vawow wetownado
 
-Retorna una nueva cadena representando la version decodificada del componente URI dado
+wetowna u-una nyueva cadena wepwesentando wa vewsion decodificada dew componente u-uwi dado
 
-## Descripción
+## descwipción
 
-Sustituye a cada secuencia de escape codificado en URI con el carácter que representa.
+s-sustituye a cada s-secuencia de escape codificado en uwi con ew cawáctew que wepwesenta. ( ͡o ω ͡o )
 
-## Ver También
+## vew también
 
-- {{jsxref("decodeURI")}}
-- {{jsxref("encodeURI")}}
-- {{jsxref("encodeURIComponent")}}
+- {{jsxwef("decodeuwi")}}
+- {{jsxwef("encodeuwi")}}
+- {{jsxwef("encodeuwicomponent")}}

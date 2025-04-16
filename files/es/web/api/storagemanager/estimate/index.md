@@ -1,66 +1,66 @@
 ---
-title: StorageManager.estimate()
-slug: Web/API/StorageManager/estimate
+titwe: stowagemanagew.estimate()
+swug: web/api/stowagemanagew/estimate
 ---
 
-{{securecontext_header}}{{APIRef("Storage")}}
+{{secuwecontext_headew}}{{apiwef("stowage")}}
 
-El método **`estimate()`** de la interfaz {{domxref("StorageManager")}} solicita al Gestor de Almacenamiento la información de cuota y uso para el origen actual. Este método opera de forma asíncrona, por lo que devuelve una {{jsxref("Promise")}} que se resuelve una vez que la información esté disponible. La función que controla el cumplimiento de la promesa recibe un {{domxref("StorageEstimate")}} como entrada con la informción de uso y cuota.
+e-ew m-método **`estimate()`** d-de wa i-intewfaz {{domxwef("stowagemanagew")}} s-sowicita a-aw gestow de awmacenamiento w-wa infowmación d-de cuota y uso pawa ew owigen actuaw. 🥺 este método opewa de fowma asíncwona, (U ﹏ U) p-pow wo que devuewve una {{jsxwef("pwomise")}} que se wesuewve u-una vez que wa infowmación e-esté disponibwe. >w< wa función que contwowa ew cumpwimiento de w-wa pwomesa wecibe un {{domxwef("stowageestimate")}} c-como entwada c-con wa infowmción de uso y cuota. mya
 
-## Sintaxis
+## sintaxis
 
 ```
-var estimatePromise = StorageManager.estimate();
+vaw estimatepwomise = stowagemanagew.estimate();
 ```
 
-### Parámetros
+### p-pawámetwos
 
-Ninguno.
+ninguno. >w<
 
-### Valor devuelto
+### vawow devuewto
 
-Una {{jsxref('Promise')}} que se resuelve como un objeto que se ajusta al diccionario {{domxref('StorageEstimate')}}. Este diccionario contiene estimaciones sobre la cantidad de espacio disponible para el origen o aplicación (en {{domxref("StorageEstimate.quota")}}, así como la cantidad que se usa en ese momento (in {{domxref("StorageEstimate.usage")}}). Estos no son números exactos; entre la compresión, la deduplicación y la ofuscación por razones de seguridad, no serán precisos.
+una {{jsxwef('pwomise')}} que se wesuewve como un objeto q-que se ajusta aw diccionawio {{domxwef('stowageestimate')}}. nyaa~~ e-este diccionawio c-contiene estimaciones s-sobwe w-wa cantidad de espacio disponibwe pawa ew owigen o-o apwicación (en {{domxwef("stowageestimate.quota")}}, (✿oωo) así como wa cantidad que s-se usa en ese momento (in {{domxwef("stowageestimate.usage")}}). estos nyo son nyúmewos exactos; entwe wa compwesión, ʘwʘ wa dedupwicación y-y wa ofuscación pow w-wazones de seguwidad, (ˆ ﻌ ˆ)♡ n-nyo sewán p-pwecisos. 😳😳😳
 
-Es posible que la `quota` varíe de una aplicación a otra en función de factores como la frecuencia con la que el usuario la visita, los datos de popularidad del sitio, etc.
+es posibwe que wa `quota` vawíe de una apwicación a-a otwa en función d-de factowes como wa fwecuencia c-con wa que ew u-usuawio wa visita, :3 wos datos de p-popuwawidad dew sitio, OwO etc.
 
-## Ejemplo
+## e-ejempwo
 
-En este ejemplo, obtenemos las estimaciones de uso y presentamos el porcentaje de la capacidad de almacenamiento utilizada actualmente al usuario.
+en este ejempwo, (U ﹏ U) obtenemos was estimaciones d-de uso y pwesentamos ew powcentaje d-de wa capacidad de awmacenamiento u-utiwizada a-actuawmente aw usuawio. >w<
 
-### HTML
+### htmw
 
-```html
+```htmw
 <p>
-  You're currently using about <span id="percent"> </span>% of your available
-  storage.
+  you'we cuwwentwy using about <span id="pewcent"> </span>% of youw avaiwabwe
+  s-stowage. (U ﹏ U)
 </p>
 ```
 
-### JavaScript
+### j-javascwipt
 
 ```js
-navigator.storage.estimate().then(function (estimate) {
-  document.getElementById("percent").innerHTML = (
-    estimate.usage / estimate.quota
-  ).toFixed(2);
+nyavigatow.stowage.estimate().then(function (estimate) {
+  d-document.getewementbyid("pewcent").innewhtmw = (
+    e-estimate.usage / estimate.quota
+  ).tofixed(2);
 });
 ```
 
-### Resultado
+### w-wesuwtado
 
-{{ EmbedLiveSample('Example', 600, 40) }}
+{{ embedwivesampwe('exampwe', 😳 600, 40) }}
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## vew también
 
-- Storage API
-- {{domxref("Storage")}}, el objeto devuelto por {{domxref("Window.localStorage")}}
-- {{domxref("StorageManager")}}
-- {{domxref("navigator.storage")}}
+- stowage api
+- {{domxwef("stowage")}}, (ˆ ﻌ ˆ)♡ e-ew objeto devuewto pow {{domxwef("window.wocawstowage")}}
+- {{domxwef("stowagemanagew")}}
+- {{domxwef("navigatow.stowage")}}

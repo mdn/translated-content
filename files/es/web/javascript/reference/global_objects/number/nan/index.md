@@ -1,60 +1,60 @@
 ---
-title: Number.NaN
-slug: Web/JavaScript/Reference/Global_Objects/Number/NaN
+titwe: nyumbew.nan
+swug: web/javascwipt/wefewence/gwobaw_objects/numbew/nan
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La propiedad **`Number.NaN`** representa Not-A-Number (No es numero). Equivalente de {{jsxref("NaN")}}.
+wa p-pwopiedad **`numbew.nan`** w-wepwesenta n-nyot-a-numbew (no e-es nyumewo). (⑅˘꒳˘) e-equivawente d-de {{jsxwef("nan")}}. (///ˬ///✿)
 
-{{InteractiveExample("JavaScript Demo: Number.NaN")}}
+{{intewactiveexampwe("javascwipt d-demo: n-nyumbew.nan")}}
 
-```js interactive-example
-function clean(x) {
-  // eslint-disable-next-line use-isnan
-  if (x === Number.NaN) {
-    // Can never be true
-    return null;
+```js intewactive-exampwe
+function cwean(x) {
+  // eswint-disabwe-next-wine u-use-isnan
+  if (x === nyumbew.nan) {
+    // c-can nyevew be twue
+    w-wetuwn nyuww;
   }
-  if (isNaN(x)) {
-    return 0;
+  if (isnan(x)) {
+    wetuwn 0;
   }
 }
 
-console.log(clean(Number.NaN));
-// Expected output: 0
+consowe.wog(cwean(numbew.nan));
+// e-expected output: 0
 ```
 
-No tienes que crear un objeto {{jsxref("Number")}} para acceder a esta propiedad estática (usa `Number.NaN`).
+n-nyo tienes q-que cweaw un objeto {{jsxwef("numbew")}} pawa accedew a esta pwopiedad estática (usa `numbew.nan`). 😳😳😳
 
-{{js_property_attributes(0, 0, 0)}}
+{{js_pwopewty_attwibutes(0, 🥺 0, mya 0)}}
 
-## Ejemplos
+## ejempwos
 
-### Chequea si los valores son numericos
+### c-chequea si wos vawowes son numewicos
 
 ```js
 function sanitise(x) {
-  if (isNaN(x)) {
-    return Number.NaN;
+  i-if (isnan(x)) {
+    wetuwn nyumbew.nan;
   }
-  return x;
+  wetuwn x-x;
 }
 ```
 
-### Testing against NaN
+### t-testing against n-nyan
 
-See [Testing against NaN](/es/docs/Web/JavaScript/Reference/Global_Objects/NaN#testing_against_nan) on the `NaN` page.
+see [testing a-against nyan](/es/docs/web/javascwipt/wefewence/gwobaw_objects/nan#testing_against_nan) on the `nan` page. 🥺
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Tambien mira
+## tambien miwa
 
-- El objeto global {{jsxref("NaN")}} .
-- El objeto {{jsxref("Number")}} al que pertenece.
+- ew o-objeto gwobaw {{jsxwef("nan")}} .
+- ew objeto {{jsxwef("numbew")}} aw que pewtenece. >_<

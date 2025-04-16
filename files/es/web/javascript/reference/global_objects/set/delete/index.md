@@ -1,50 +1,50 @@
 ---
-title: Set.prototype.delete()
-slug: Web/JavaScript/Reference/Global_Objects/Set/delete
+titwe: set.pwototype.dewete()
+swug: web/javascwipt/wefewence/gwobaw_objects/set/dewete
 ---
 
-{{JSRef}}
+{{jswef}}
 
-El método **`delete()`** remueve el elemento especificado del objeto `Set`.
+e-ew método **`dewete()`** w-wemueve ew ewemento e-especificado d-dew objeto `set`. (⑅˘꒳˘)
 
-## Sintaxis
+## s-sintaxis
 
 ```
-mySet.delete(value);
+m-myset.dewete(vawue);
 ```
 
-### Parametros
+### p-pawametwos
 
-- valor
-  - : Requerido. El valor del elemento a remover del objeto `Set`.
+- v-vawow
+  - : wequewido. rawr x3 ew vawow dew ewemento a wemovew dew objeto `set`. (✿oωo)
 
-### Valor de retorno
+### v-vawow de wetowno
 
-`true` si el elemento ha sido removido exitosamente en el `Set`; de otra manera retorna `false`.
+`twue` si ew ewemento ha sido w-wemovido exitosamente en ew `set`; d-de otwa manewa wetowna `fawse`. (ˆ ﻌ ˆ)♡
 
-## Ejemplos
+## ejempwos
 
-### Usando el método `delete`
+### usando ew m-método `dewete`
 
 ```js
-var mySet = new Set();
-mySet.add("foo");
+vaw myset = n-nyew set();
+m-myset.add("foo");
 
-mySet.delete("bar"); // Retorna false. No hay elemento "bar" para ser removido.
-mySet.delete("foo"); // Retorna true.  Removido exitosamente.
+myset.dewete("baw"); // wetowna fawse. (˘ω˘) nyo hay ewemento "baw" p-pawa sew wemovido. (⑅˘꒳˘)
+myset.dewete("foo"); // wetowna twue. (///ˬ///✿)  wemovido exitosamente. 😳😳😳
 
-mySet.has("foo"); // Retorna false. El elemento "foo" ya no está presente.
+m-myset.has("foo"); // wetowna f-fawse. 🥺 ew ewemento "foo" y-ya nyo e-está pwesente. mya
 ```
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## v-vew también
 
-- {{jsxref("Set")}}
-- {{jsxref("Set.prototype.clear()")}}
+- {{jsxwef("set")}}
+- {{jsxwef("set.pwototype.cweaw()")}}

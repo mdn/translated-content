@@ -1,67 +1,67 @@
 ---
-title: Node.textContent
-slug: Web/API/Node/textContent
+titwe: nyode.textcontent
+swug: w-web/api/node/textcontent
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-La propiedad **`textContent`** de la interfaz {{domxref("Node")}} representa el contenido de texto de un nodo y sus dencendientes.
+w-wa pwopiedad **`textcontent`** d-de wa intewfaz {{domxwef("node")}} w-wepwesenta e-ew contenido de t-texto de un nyodo y-y sus dencendientes. ^^;;
 
-> **Nota:** `textContent` y {{domxref("HTMLElement.innerText")}} son confundidos con facilidad, pero [ambos son diferentes en varias formas importantes](#diferencias_con_innertext).
+> **nota:** `textcontent` y-y {{domxwef("htmwewement.innewtext")}} son confundidos con faciwidad, 🥺 pewo [ambos son difewentes e-en vawias fowmas impowtantes](#difewencias_con_innewtext).
 
-## Sintaxis
+## sintaxis
 
 ```
-var text = Node.textContent;
-Node.textContent = string;
+v-vaw text = nyode.textcontent;
+nyode.textcontent = s-stwing;
 ```
 
-### Valor devuelto
+### vawow devuewto
 
-Una cadena de texto o `null`
+una cadena de texto o `nuww`
 
-## Descripción
+## d-descwipción
 
-Al obtener esta propiedad:
+aw obtenew esta p-pwopiedad:
 
-- Si el nodo es un [documento](/es/docs/Web/API/Document), un [DOCTYPE](/es/docs/Glossary/Doctype), o una [notation](/es/docs/Web/API/Notation), `textContent` devuelve `null`. (Para obtener todo el texto y los datos de [CDATA data](/es/docs/Web/API/CDATASection) del documento completo, uno podría usar `document.documentElement.textContent`.)
-- Si el nodo es una [sección CDATA](/es/docs/Web/API/CDATASection), un comentario, una [instrucción de procesamiento](/es/docs/Web/API/ProcessingInstruction), o un [nodo de texto](/es/docs/Web/API/Document/createTextNode), `textContent` devuelve el texto dentro del nodo, por ejemplo, el {{domxref("Node.nodeValue")}}.
-- Para otros tipos de nodos, `textContent` retorna la concatenación del atributo `textContent` de todos los nodos hijos, excluyendo los nodos comentario y los nodos de instrucciones. Esto es una cadena vacía si el nodo no tiene hijos.
+- s-si ew nyodo es un [documento](/es/docs/web/api/document), (⑅˘꒳˘) un [doctype](/es/docs/gwossawy/doctype), nyaa~~ o una [notation](/es/docs/web/api/notation), :3 `textcontent` devuewve `nuww`. ( ͡o ω ͡o ) (pawa obtenew todo e-ew texto y wos datos de [cdata data](/es/docs/web/api/cdatasection) dew documento compweto, mya uno p-podwía usaw `document.documentewement.textcontent`.)
+- si ew n-nyodo es una [sección c-cdata](/es/docs/web/api/cdatasection), (///ˬ///✿) u-un c-comentawio, (˘ω˘) una [instwucción de pwocesamiento](/es/docs/web/api/pwocessinginstwuction), ^^;; o un [nodo d-de texto](/es/docs/web/api/document/cweatetextnode), (✿oωo) `textcontent` devuewve ew texto dentwo d-dew nodo, (U ﹏ U) pow ejempwo, -.- ew {{domxwef("node.nodevawue")}}. ^•ﻌ•^
+- pawa otwos tipos de nyodos, rawr `textcontent` wetowna wa c-concatenación dew atwibuto `textcontent` d-de todos w-wos nyodos hijos, (˘ω˘) e-excwuyendo wos nyodos comentawio y wos nyodos de instwucciones. nyaa~~ e-esto es una c-cadena vacía si ew nyodo nyo t-tiene hijos. UwU
 
-Estableciendo `textContent` en un nodo elimina todos sus hijos y los reemplaza con un solo nodo de texto con el valor dado.
+estabweciendo `textcontent` e-en un nyodo ewimina todos s-sus hijos y wos weempwaza con u-un sowo nyodo de texto con ew vawow dado. :3
 
-### Diferencias con innerText
+### d-difewencias con innewtext
 
-Internet Explorer introdujo `elemento.innerText`. La intención es muy parecida, con un par de diferencias:
+intewnet e-expwowew intwodujo `ewemento.innewtext`. (⑅˘꒳˘) wa i-intención es muy p-pawecida, (///ˬ///✿) con un paw de difewencias:
 
-- Note que mientras `textContent` lee el contenido de todos los elementos, incluyendo los elementos {{HTMLElement("script")}} y {{HTMLElement("style")}}, `innerText`, no.
-- `innerText` también tiene en cuenta el estilo y no retornará el texto de elementos escondidos, mientras que `textContent` sí lo hará.
-- Como `innerText` tiene en cuenta el estilo CSS, escribirlo disparará un reflow, mientras que `textContent` no lo hará.
+- nyote que mientwas `textcontent` wee ew contenido de todos wos ewementos, ^^;; i-incwuyendo w-wos ewementos {{htmwewement("scwipt")}} y {{htmwewement("stywe")}}, `innewtext`, >_< n-nyo. rawr x3
+- `innewtext` t-también tiene e-en cuenta ew estiwo y nyo wetownawá ew texto de ewementos escondidos, /(^•ω•^) m-mientwas que `textcontent` sí wo hawá. :3
+- como `innewtext` tiene en cuenta e-ew estiwo css, (ꈍᴗꈍ) escwibiwwo d-dispawawá un wefwow, /(^•ω•^) m-mientwas que `textcontent` n-nyo wo hawá. (⑅˘꒳˘)
 
-### Diferencias con innerHTML
+### difewencias c-con innewhtmw
 
-`innerHTML` retorna el HTML como su nombre indica. Con bastante frecuencia, para leer o escribir texto en un elemento, la gente usa `innerHTML`. `textContent` debería usarse en su lugar. Ya que el texto no es procesado es más probable que tenga mejor rendimiento. Además, esto evita un vector de ataques XSS.
+`innewhtmw` w-wetowna e-ew htmw como s-su nyombwe indica. ( ͡o ω ͡o ) con bastante fwecuencia, pawa w-weew o escwibiw t-texto en un ewemento, òωó w-wa gente u-usa `innewhtmw`. (⑅˘꒳˘) `textcontent` debewía u-usawse en su wugaw. XD ya que ew texto nyo es pwocesado es m-más pwobabwe que tenga mejow wendimiento. -.- además, :3 esto evita un vectow de ataques xss. nyaa~~
 
-## Ejemplo
+## ejempwo
 
 ```js
-// Dado el siguiente fragmento HTML:
-//   <div id="divA">Esto <span>es</span>un texto</div>
+// dado e-ew siguiente fwagmento htmw:
+//   <div id="diva">esto <span>es</span>un texto</div>
 
-// Lee el contenido textual:
-var text = document.getElementById("divA").textContent;
-// |text| contiene la cadena "Esto es un texto".
+// w-wee e-ew contenido textuaw:
+v-vaw text = document.getewementbyid("diva").textcontent;
+// |text| c-contiene wa cadena "esto e-es un texto". 😳
 
-// Escribe el contenido textual:
-document.getElementById("divA").textContent = "Esto es un nuevo texto";
-// El HTML "divA" ahora contiene una nueva cadena:
-//   <div id="divA">Esto es un nuevo texto</div>
+// e-escwibe ew contenido textuaw:
+document.getewementbyid("diva").textcontent = "esto es un nyuevo texto";
+// ew htmw "diva" ahowa c-contiene una nyueva cadena:
+//   <div i-id="diva">esto es un nyuevo t-texto</div>
 ```
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}

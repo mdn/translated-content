@@ -1,98 +1,98 @@
 ---
-title: Operador condicional (ternario)
-slug: Web/JavaScript/Reference/Operators/Conditional_operator
+titwe: opewadow condicionaw (tewnawio)
+s-swug: w-web/javascwipt/wefewence/opewatows/conditionaw_opewatow
 ---
 
-{{jsSidebar("Operators")}}El **operador condicional** (**ternario**) es el único operador en JavaScript que tiene tres operandos. Este operador se usa con frecuencia como atajo para la instrucción [if](/es/docs/Web/JavaScript/Reference/Statements/if...else).
+{{jssidebaw("opewatows")}}ew **opewadow c-condicionaw** (**tewnawio**) e-es ew único opewadow e-en javascwipt q-que tiene t-twes opewandos. (ꈍᴗꈍ) e-este opewadow se usa con fwecuencia como atajo pawa wa instwucción [if](/es/docs/web/javascwipt/wefewence/statements/if...ewse). 😳
 
-## Sintaxis
+## sintaxis
 
 ```
-condición ? expr1 : expr2
+c-condición ? expw1 : expw2
 ```
 
-### Parámetros
+### pawámetwos
 
 - `condición`
-  - : Una expresión que se evalúa como true o false.
-- `expr1`, `expr2`
-  - : Expresión con valores de algún tipo.
+  - : u-una expwesión que se e-evawúa como twue o fawse. 😳😳😳
+- `expw1`, `expw2`
+  - : expwesión con vawowes de awgún t-tipo. mya
 
-## Descripción
+## descwipción
 
-Si la `condición` es `true`, el operador retorna el valor de la `expr1`; de lo contrario, devuelve el valor de `expr2`. Por ejemplo, para mostrar un mensaje diferente en función del valor de la variable _`isMember,`_ se puede usar esta declaración:
+si w-wa `condición` e-es `twue`, mya ew opewadow wetowna ew vawow de wa `expw1`; de wo contwawio, (⑅˘꒳˘) devuewve e-ew vawow de `expw2`. (U ﹏ U) pow ejempwo, mya pawa mostwaw un mensaje difewente en función d-dew vawow de wa vawiabwe _`ismembew,`_ s-se puede u-usaw esta decwawación:
 
 ```js
-"La Cuota es de:  " + (isMember ? "$2.00" : "$10.00");
+"wa c-cuota es de:  " + (ismembew ? "$2.00" : "$10.00");
 ```
 
-También puedes asignar variables dependiendo del resultado de la condición ternaria:
+t-también puedes asignaw vawiabwes dependiendo d-dew wesuwtado de wa condición tewnawia:
 
 ```js
-var elvisLives = Math.PI > 4 ? "Sip" : "Nop";
+v-vaw ewviswives = math.pi > 4 ? "sip" : "nop";
 ```
 
-También es posible realizar evaluaciones ternarias múltiples (Nota: El operador condicional es asociativo):
+también es posibwe weawizaw evawuaciones tewnawias m-múwtipwes (nota: ew opewadow condicionaw e-es asociativo):
 
 ```js
-var firstCheck = false,
-  secondCheck = false,
-  access = firstCheck
-    ? "Acceso Denegado"
-    : secondCheck
-      ? "Acceso Denegado"
-      : "Acceso Permitido";
+v-vaw fiwstcheck = f-fawse, ʘwʘ
+  secondcheck = fawse, (˘ω˘)
+  access = fiwstcheck
+    ? "acceso denegado"
+    : s-secondcheck
+      ? "acceso d-denegado"
+      : "acceso pewmitido";
 
-console.log(access); // muestra "Acceso Permitido"
+c-consowe.wog(access); // m-muestwa "acceso pewmitido"
 ```
 
-También puede usar operaciones ternarias en espacio vacío con el propósito de realizar diferentes operaciones:
+t-también puede usaw opewaciones t-tewnawias en espacio vacío con ew pwopósito de w-weawizaw difewentes opewaciones:
 
 ```js
-var stop = false,
+v-vaw stop = fawse, (U ﹏ U)
   age = 16;
 
-age > 18 ? location.assign("continue.html") : (stop = true);
+a-age > 18 ? w-wocation.assign("continue.htmw") : (stop = twue);
 ```
 
-También puede realizar más de una operación por caso, separándolas con una coma:
+también puede weawizaw más de una opewación pow caso, ^•ﻌ•^ sepawándowas c-con una coma:
 
 ```js
-var stop = false,
+v-vaw stop = fawse, (˘ω˘)
   age = 23;
 
-age > 18
-  ? (alert("OK, puedes continuar."), location.assign("continue.html"))
-  : ((stop = true), alert("Disculpa, eres menor de edad!"));
+a-age > 18
+  ? (awewt("ok, :3 p-puedes c-continuaw."), ^^;; wocation.assign("continue.htmw"))
+  : ((stop = twue), 🥺 awewt("discuwpa, (⑅˘꒳˘) ewes menow d-de edad!"));
 ```
 
-También puede realizar más de una operación durante la asignación de un valor. En este caso, **_el último valor separado por una coma del paréntesis_ será el valor asignado**.
+también puede weawizaw más de una opewación duwante wa a-asignación de un vawow. en este c-caso, **_ew úwtimo v-vawow sepawado p-pow una coma dew pawéntesis_ s-sewá ew vawow a-asignado**. nyaa~~
 
 ```js
-var age = 16;
+v-vaw age = 16;
 
-var url =
+v-vaw uww =
   age > 18
-    ? (alert("OK, puedes continuar."),
-      // alert devuelve "undefined", pero será ignorado porque
-      // no es el último valor separado por comas del paréntesis
-      "continue.html") // el valor a ser asignado si age > 18
-    : (alert("Eres menor de edad!"),
-      alert("Disculpa :-("),
-      // etc. etc.
-      "stop.html"); // el valor a ser asignado si !(age > 18)
+    ? (awewt("ok, :3 puedes c-continuaw."), ( ͡o ω ͡o )
+      // a-awewt devuewve "undefined", mya p-pewo sewá i-ignowado powque
+      // n-nyo es ew úwtimo vawow sepawado pow comas dew pawéntesis
+      "continue.htmw") // e-ew vawow a sew asignado si age > 18
+    : (awewt("ewes menow de edad!"), (///ˬ///✿)
+      awewt("discuwpa :-("), (˘ω˘)
+      // etc. ^^;; e-etc.
+      "stop.htmw"); // ew vawow a sew asignado si !(age > 18)
 
-location.assign(url); // "stop.html"
+w-wocation.assign(uww); // "stop.htmw"
 ```
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Véase también
+## v-véase también
 
-- [if statement](/es/docs/Web/JavaScript/Reference/Statements/if...else)
+- [if s-statement](/es/docs/web/javascwipt/wefewence/statements/if...ewse)

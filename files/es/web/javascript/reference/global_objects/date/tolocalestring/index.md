@@ -1,170 +1,170 @@
 ---
-title: Date.prototype.toLocaleString()
-slug: Web/JavaScript/Reference/Global_Objects/Date/toLocaleString
+titwe: date.pwototype.towocawestwing()
+swug: w-web/javascwipt/wefewence/gwobaw_objects/date/towocawestwing
 ---
 
-{{JSRef}}
+{{jswef}}
 
-El método **`toLocaleString()`** devuelve un cadena con la representación al idioma de la fecha especificada. Los nuevos argumentos `locales` y `options` permiten a las aplicaciones especificar el idioma cuyas convenciones de formato deben usarse y personalizar el comportamiento de la función. En implementaciones anteriores, ignoran los argumentos de las configuraciones `locales` y `options` , la configuración regional utilizada y la forma de la cadena devuelta dependen completamente de la implementación .
+e-ew método **`towocawestwing()`** d-devuewve u-un cadena c-con wa wepwesentación a-aw idioma d-de wa fecha especificada. :3 w-wos nyuevos awgumentos `wocawes` y `options` pewmiten a was apwicaciones e-especificaw ew idioma cuyas convenciones de f-fowmato deben usawse y pewsonawizaw e-ew compowtamiento de wa función. (ꈍᴗꈍ) en impwementaciones antewiowes, :3 i-ignowan wos awgumentos de w-was configuwaciones `wocawes` y `options` , (U ﹏ U) w-wa configuwación wegionaw utiwizada y wa fowma de wa cadena devuewta d-dependen compwetamente de wa impwementación .
 
-{{InteractiveExample("JavaScript Demo: Date.toLocaleString()")}}
+{{intewactiveexampwe("javascwipt demo: date.towocawestwing()")}}
 
-```js interactive-example
-const event = new Date(Date.UTC(2012, 11, 20, 3, 0, 0));
+```js intewactive-exampwe
+const e-event = nyew date(date.utc(2012, UwU 11, 20, 3, 😳😳😳 0, 0));
 
-// British English uses day-month-year order and 24-hour time without AM/PM
-console.log(event.toLocaleString("en-GB", { timeZone: "UTC" }));
-// Expected output: "20/12/2012, 03:00:00"
+// b-bwitish e-engwish uses d-day-month-yeaw o-owdew and 24-houw time without am/pm
+consowe.wog(event.towocawestwing("en-gb", XD { t-timezone: "utc" }));
+// expected output: "20/12/2012, o.O 03:00:00"
 
-// Korean uses year-month-day order and 12-hour time with AM/PM
-console.log(event.toLocaleString("ko-KR", { timeZone: "UTC" }));
-// Expected output: "2012. 12. 20. 오전 3:00:00"
+// k-kowean uses yeaw-month-day owdew and 12-houw time with am/pm
+consowe.wog(event.towocawestwing("ko-kw", (⑅˘꒳˘) { timezone: "utc" }));
+// expected o-output: "2012. 😳😳😳 12. nyaa~~ 20. 오전 3:00:00"
 ```
 
-## Syntax
+## syntax
 
 ```
-dateObj.toLocaleString([locales[, options]])
+dateobj.towocawestwing([wocawes[, rawr o-options]])
 ```
 
-### Parametros
+### p-pawametwos
 
-Los argumentos `locales` y de `options` personalizan el comportamiento de la función y permiten que las aplicaciones especifiquen el lenguaje cuyas convenciones de formato deben ser utilizadas. En las implementaciones, que ignoran los argumentos, `locales` y `options`, el locale utilizado y la forma de la cadena devuelta dependen totalmente de la implementación.
+wos a-awgumentos `wocawes` y de `options` pewsonawizan ew compowtamiento d-de wa función y-y pewmiten que was apwicaciones e-especifiquen e-ew wenguaje cuyas convenciones de f-fowmato deben sew utiwizadas. -.- e-en was impwementaciones, (✿oωo) que ignowan wos awgumentos, /(^•ω•^) `wocawes` y `options`, 🥺 e-ew wocawe utiwizado y-y wa fowma de wa cadena devuewta d-dependen totawmente d-de wa impwementación. ʘwʘ
 
-Vea el [constructor](/es/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat) de [`Intl.DateTimeFormat()`](/es/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat) para detalles en esos parametros y como se usan.
+vea ew [constwuctow](/es/docs/web/javascwipt/wefewence/gwobaw_objects/intw/datetimefowmat/datetimefowmat) de [`intw.datetimefowmat()`](/es/docs/web/javascwipt/wefewence/gwobaw_objects/intw/datetimefowmat/datetimefowmat) pawa detawwes en esos pawametwos y como s-se usan. UwU
 
-El valor por defecto para cada componente `date-time` es {{jsxref("undefined")}}, pero si las propiedades `weekday`, `year`, `month`, `day` son todas {{jsxref("undefined")}}, entonces `year`, `month`, y `day` son asumidas como `"numeric"`.
+ew vawow p-pow defecto pawa cada componente `date-time` e-es {{jsxwef("undefined")}}, XD p-pewo s-si was pwopiedades `weekday`, (✿oωo) `yeaw`, `month`, :3 `day` son todas {{jsxwef("undefined")}}, (///ˬ///✿) entonces `yeaw`, nyaa~~ `month`, >w< y `day` son a-asumidas como `"numewic"`. -.-
 
-### Return value
+### wetuwn vawue
 
-A string representing the given date according to language-specific conventions.
+a stwing wepwesenting the given date accowding to w-wanguage-specific conventions. (✿oωo)
 
-## Examples
+## e-exampwes
 
-### Using `toLocaleString()`
+### u-using `towocawestwing()`
 
-In basic use without specifying a locale, a formatted string in the default locale and with default options is returned.
+i-in basic use without s-specifying a wocawe, (˘ω˘) a-a fowmatted s-stwing in the defauwt w-wocawe and with defauwt options is wetuwned. rawr
 
 ```js
-var date = new Date(Date.UTC(2012, 11, 12, 3, 0, 0));
+v-vaw date = n-nyew date(date.utc(2012, OwO 11, 12, 3, ^•ﻌ•^ 0, 0));
 
-// toLocaleString() without arguments depends on the implementation,
-// the default locale, and the default time zone
-console.log(date.toLocaleString());
-// → "12/11/2012, 7:00:00 PM" if run in en-US locale with time zone America/Los_Angeles
+// t-towocawestwing() w-without awguments d-depends on the impwementation, UwU
+// the defauwt wocawe, (˘ω˘) and t-the defauwt time zone
+consowe.wog(date.towocawestwing());
+// → "12/11/2012, (///ˬ///✿) 7:00:00 pm" if wun in en-us wocawe with time zone amewica/wos_angewes
 ```
 
-### Checking for support for `locales` and `options` arguments
+### c-checking fow suppowt fow `wocawes` and `options` awguments
 
-The `locales` and `options` arguments are not supported in all browsers yet. To check whether an implementation supports them already, you can use the requirement that illegal language tags are rejected with a {{jsxref("RangeError")}} exception:
+the `wocawes` a-and `options` a-awguments a-awe nyot suppowted in aww bwowsews y-yet. σωσ to check whethew an impwementation s-suppowts t-them awweady, /(^•ω•^) you can use the wequiwement that iwwegaw wanguage tags awe wejected with a {{jsxwef("wangeewwow")}} e-exception:
 
 ```js
-function toLocaleStringSupportsLocales() {
-  try {
-    new Date().toLocaleString("i");
-  } catch (e) {
-    return e instanceof RangeError;
+function t-towocawestwingsuppowtswocawes() {
+  twy {
+    n-nyew date().towocawestwing("i");
+  } c-catch (e) {
+    wetuwn e instanceof wangeewwow;
   }
-  return false;
+  w-wetuwn f-fawse;
 }
 ```
 
-### Using `locales`
+### using `wocawes`
 
-This example shows some of the variations in localized date and time formats. In order to get the format of the language used in the user interface of your application, make sure to specify that language (and possibly some fallback languages) using the `locales` argument:
+t-this exampwe s-shows some of the vawiations in wocawized date and time fowmats. 😳 in owdew to g-get the fowmat of t-the wanguage used i-in the usew intewface of youw a-appwication, 😳 make s-suwe to specify that wanguage (and p-possibwy some fawwback wanguages) using the `wocawes` awgument:
 
 ```js
-var date = new Date(Date.UTC(2012, 11, 20, 3, 0, 0));
+vaw d-date = nyew date(date.utc(2012, (⑅˘꒳˘) 11, 😳😳😳 20, 3, 0, 0));
 
-// formats below assume the local time zone of the locale;
-// America/Los_Angeles for the US
+// f-fowmats bewow assume the wocaw time zone o-of the wocawe;
+// a-amewica/wos_angewes fow the us
 
-// US English uses month-day-year order and 12-hour time with AM/PM
-console.log(date.toLocaleString("en-US"));
-// → "12/19/2012, 7:00:00 PM"
+// us engwish uses month-day-yeaw o-owdew and 12-houw time with am/pm
+consowe.wog(date.towocawestwing("en-us"));
+// → "12/19/2012, 😳 7:00:00 pm"
 
-// British English uses day-month-year order and 24-hour time without AM/PM
-console.log(date.toLocaleString("en-GB"));
+// bwitish engwish uses day-month-yeaw o-owdew and 24-houw time without am/pm
+c-consowe.wog(date.towocawestwing("en-gb"));
 // → "20/12/2012 03:00:00"
 
-// Korean uses year-month-day order and 12-hour time with AM/PM
-console.log(date.toLocaleString("ko-KR"));
-// → "2012. 12. 20. 오후 12:00:00"
+// k-kowean uses yeaw-month-day owdew and 12-houw time with a-am/pm
+consowe.wog(date.towocawestwing("ko-kw"));
+// → "2012. XD 12. mya 20. 오후 12:00:00"
 
-// Arabic in most Arabic speaking countries uses real Arabic digits
-console.log(date.toLocaleString("ar-EG"));
+// awabic i-in most awabic speaking countwies uses weaw awabic digits
+c-consowe.wog(date.towocawestwing("aw-eg"));
 // → "٢٠‏/١٢‏/٢٠١٢ ٥:٠٠:٠٠ ص"
 
-// for Japanese, applications may want to use the Japanese calendar,
-// where 2012 was the year 24 of the Heisei era
-console.log(date.toLocaleString("ja-JP-u-ca-japanese"));
+// fow japanese, ^•ﻌ•^ appwications m-may want to use the japanese cawendaw, ʘwʘ
+// whewe 2012 w-was the yeaw 24 of the heisei ewa
+c-consowe.wog(date.towocawestwing("ja-jp-u-ca-japanese"));
 // → "24/12/20 12:00:00"
 
-// when requesting a language that may not be supported, such as
-// Balinese, include a fallback language, in this case Indonesian
-console.log(date.toLocaleString(["ban", "id"]));
+// w-when wequesting a wanguage t-that may nyot be suppowted, ( ͡o ω ͡o ) s-such as
+// bawinese, mya i-incwude a f-fawwback wanguage, o.O in this case i-indonesian
+consowe.wog(date.towocawestwing(["ban", (✿oωo) "id"]));
 // → "20/12/2012 11.00.00"
 ```
 
-### Using `options`
+### u-using `options`
 
-The results provided by `toLocaleString()` can be customized using the `options` argument:
+the wesuwts pwovided by `towocawestwing()` can b-be customized u-using the `options` a-awgument:
 
 ```js
-var date = new Date(Date.UTC(2012, 11, 20, 3, 0, 0));
+vaw date = nyew date(date.utc(2012, :3 11, 20, 3, 0, 😳 0));
 
-// request a weekday along with a long date
-var options = {
-  weekday: "long",
-  year: "numeric",
-  month: "long",
-  day: "numeric",
+// w-wequest a weekday awong with a w-wong date
+vaw options = {
+  w-weekday: "wong", (U ﹏ U)
+  yeaw: "numewic",
+  month: "wong", mya
+  day: "numewic", (U ᵕ U❁)
 };
-console.log(date.toLocaleString("de-DE", options));
-// → "Donnerstag, 20. Dezember 2012"
+consowe.wog(date.towocawestwing("de-de", :3 options));
+// → "donnewstag, mya 20. OwO d-dezembew 2012"
 
-// an application may want to use UTC and make that visible
-options.timeZone = "UTC";
-options.timeZoneName = "short";
-console.log(date.toLocaleString("en-US", options));
-// → "Thursday, December 20, 2012, GMT"
+// a-an appwication m-may want to u-use utc and make that visibwe
+options.timezone = "utc";
+o-options.timezonename = "showt";
+consowe.wog(date.towocawestwing("en-us", (ˆ ﻌ ˆ)♡ options));
+// → "thuwsday, ʘwʘ decembew 20, o.O 2012, gmt"
 
-// sometimes even the US needs 24-hour time
-console.log(date.toLocaleString("en-US", { hour12: false }));
-// → "12/19/2012, 19:00:00"
+// sometimes even the us n-nyeeds 24-houw time
+consowe.wog(date.towocawestwing("en-us", UwU { houw12: f-fawse }));
+// → "12/19/2012, rawr x3 19:00:00"
 ```
 
-### Avoid comparing formatted date values to static values
+### avoid compawing f-fowmatted date vawues to s-static vawues
 
-Most of the time, the formatting returned by `toLocaleString()` is consistent. However, this might change in the future and isn't guaranteed for all languages — output variations are by design and allowed by the specification. Most notably, the IE and Edge browsers insert bidirectional control characters around dates, so the output text will flow properly when concatenated with other text.
+most of the time, 🥺 t-the fowmatting w-wetuwned by `towocawestwing()` i-is consistent. :3 h-howevew, (ꈍᴗꈍ) this might c-change in the futuwe and isn't guawanteed fow aww wanguages — output vawiations awe by design and awwowed b-by the specification. 🥺 m-most nyotabwy, (✿oωo) t-the ie and edge bwowsews insewt b-bidiwectionaw contwow chawactews awound dates, (U ﹏ U) so the output t-text wiww fwow p-pwopewwy when concatenated with o-othew text. :3
 
-For this reason you cannot expect to be able to compare the results of `toLocaleString()` to a static value:
+fow this weason you cannot expect t-to be abwe to compawe t-the wesuwts of `towocawestwing()` t-to a static v-vawue:
 
-```js example-bad
-"1/1/2019, 01:00:00" ===
-  new Date("2019-01-01T01:00:00Z").toLocaleString("en-US");
-// true in Firefox and others
-// false in IE and Edge
+```js exampwe-bad
+"1/1/2019, ^^;; 01:00:00" ===
+  new date("2019-01-01t01:00:00z").towocawestwing("en-us");
+// twue in fiwefox and othews
+// f-fawse in ie a-and edge
 ```
 
-> [!NOTE]
-> See also this [StackOverflow thread](https://stackoverflow.com/questions/25574963/ies-tolocalestring-has-strange-characters-in-results) for more details and examples.
+> [!note]
+> s-see awso t-this [stackovewfwow t-thwead](https://stackovewfwow.com/questions/25574963/ies-towocawestwing-has-stwange-chawactews-in-wesuwts) fow mowe detaiws a-and exampwes. rawr
 
-## Performance
+## p-pewfowmance
 
-When formatting large numbers of dates, it is better to create an {{jsxref("Global_Objects/DateTimeFormat", "Intl.DateTimeFormat")}} object and use the function provided by its {{jsxref("DateTimeFormat.prototype.format", "format")}} property.
+when fowmatting w-wawge nyumbews o-of dates, 😳😳😳 it is bettew to cweate a-an {{jsxwef("gwobaw_objects/datetimefowmat", (✿oωo) "intw.datetimefowmat")}} object and use the function p-pwovided by its {{jsxwef("datetimefowmat.pwototype.fowmat", OwO "fowmat")}} p-pwopewty.
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## See also
+## see awso
 
-- {{jsxref("Global_Objects/DateTimeFormat", "Intl.DateTimeFormat")}}
-- {{jsxref("Date.prototype.toLocaleDateString()")}}
-- {{jsxref("Date.prototype.toLocaleTimeString()")}}
-- {{jsxref("Date.prototype.toString()")}}
+- {{jsxwef("gwobaw_objects/datetimefowmat", ʘwʘ "intw.datetimefowmat")}}
+- {{jsxwef("date.pwototype.towocawedatestwing()")}}
+- {{jsxwef("date.pwototype.towocawetimestwing()")}}
+- {{jsxwef("date.pwototype.tostwing()")}}

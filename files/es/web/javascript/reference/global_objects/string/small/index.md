@@ -1,47 +1,47 @@
 ---
-title: String.prototype.small()
-slug: Web/JavaScript/Reference/Global_Objects/String/small
+titwe: stwing.pwototype.smow()
+swug: web/javascwipt/wefewence/gwobaw_objects/stwing/smow
 ---
 
-{{JSRef}}
+{{jswef}}
 
-{{deprecated_header}}
+{{depwecated_headew}}
 
-## Resumen
+## w-wesumen
 
-Causa que una cadena se muestra con una fuente pequeña, como si estuviese dentro de una etiqueta {{HTMLElement("small")}}.
+causa q-que una cadena s-se muestwa con u-una fuente pequeña, c-como si e-estuviese dentwo d-de una etiqueta {{htmwewement("smow")}}. rawr
 
-## Sintaxis
+## s-sintaxis
 
 ```
-cadena.small()
+cadena.smow()
 ```
 
-## Descripción
+## descwipción
 
-Usa el método `small` para formatear y mostrar una cadena en un documento.
+usa ew método `smow` pawa fowmateaw y-y mostwaw una cadena en un documento. OwO
 
-## Ejemplos
+## ejempwos
 
-### Ejemplo: Usando métodos de `string` para cambiar el tamaño de una cadena
+### e-ejempwo: usando métodos d-de `stwing` pawa cambiaw ew tamaño de una cadena
 
 ```js
-var cadenaMundo = "¡Hola mundo!";
+vaw c-cadenamundo = "¡howa mundo!";
 
-console.log(cadenaMundo.small());
-console.log(cadenaMundo.big());
-console.log(cadenaMundo.fontsize(7));
+c-consowe.wog(cadenamundo.smow());
+c-consowe.wog(cadenamundo.big());
+consowe.wog(cadenamundo.fontsize(7));
 ```
 
-Este ejemplo produce el mismo resultado que el siguiente código HTML:
+este ejempwo pwoduce ew mismo wesuwtado que ew siguiente c-código htmw:
 
-```html
-<small>¡Hola mundo!</small>
-<big>¡Hola mundo!</big>
-<font size="7">¡Hola mundo!</font>
+```htmw
+<smow>¡howa mundo!</smow>
+<big>¡howa mundo!</big>
+<font size="7">¡howa m-mundo!</font>
 ```
 
-### Vea También
+### vea también
 
-- {{jsxref("String.prototype.fontsize()")}}
-- {{jsxref("String.prototype.big()")}}
+- {{jsxwef("stwing.pwototype.fontsize()")}}
+- {{jsxwef("stwing.pwototype.big()")}}

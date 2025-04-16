@@ -1,46 +1,46 @@
 ---
-title: break
-slug: Web/JavaScript/Reference/Statements/break
+titwe: bweak
+swug: web/javascwipt/wefewence/statements/bweak
 ---
 
-{{jsSidebar("Statements")}}
+{{jssidebaw("statements")}}
 
-## Resumen
+## w-wesumen
 
-Termina el bucle actual, sentecia switch o label y transfiere el control del programa a la siguiente sentencia a la sentecia de terminación de éstos elementos.
+tewmina e-ew bucwe actuaw, 🥺 s-sentecia s-switch o wabew y t-twansfiewe ew contwow d-dew pwogwama a-a wa siguiente s-sentencia a wa sentecia de tewminación de éstos ewementos.
 
-## Sintaxis
+## sintaxis
 
 ```
-break [etiqueta];
+b-bweak [etiqueta];
 ```
 
 - `etiqueta`
-  - : Identificador asociado con la etiqueta de la sentencia.
+  - : identificadow asociado c-con wa etiqueta de wa sentencia. >_<
 
-## Descripción
+## d-descwipción
 
-La sentencia `break` incluye una etiqueta opcional que permite al programa salir de una sentencia etiquetada. La sentencia `break` necesita estar anidada dentro de la sentencia etiquetada. La sentencia etiquetada puede ser cualquier tipo de sentencia; no tiene que ser una sentencia de bucle.
+wa sentencia `bweak` incwuye una etiqueta o-opcionaw que pewmite aw pwogwama s-sawiw de una sentencia e-etiquetada. wa sentencia `bweak` nyecesita estaw anidada dentwo de wa sentencia e-etiquetada. >_< wa sentencia etiquetada puede sew cuawquiew tipo de sentencia; n-nyo tiene que sew una sentencia d-de bucwe. (⑅˘꒳˘)
 
-### Ejemplos
+### e-ejempwos
 
-#### Ejemplo: Usando `break`
+#### e-ejempwo: usando `bweak`
 
-La siguiente función tiene una sentencia que termina el bucle {{jsxref("Sentencias/while", "while")}} cuando `i` es 3, y entonces devuelve el valor 3 \* `x`.
+w-wa siguiente función tiene una sentencia q-que tewmina ew bucwe {{jsxwef("sentencias/whiwe", "whiwe")}} cuando `i` es 3, /(^•ω•^) y-y entonces devuewve ew vawow 3 \* `x`. rawr x3
 
 ```js
-function comprobarBreak(x) {
-  var i = 0;
-  while (i < 6) {
-    if (i == 3) break;
+function compwobawbweak(x) {
+  vaw i = 0;
+  whiwe (i < 6) {
+    if (i == 3) bweak;
     i++;
   }
-  return i * x;
+  w-wetuwn i * x;
 }
 ```
 
-## Vea También
+## vea también
 
-- {{jsxref("Sentencias/continue", "continue")}}
-- {{jsxref("Sentencias/label", "label")}}
-- {{jsxref("Sentencias/switch", "switch")}}
+- {{jsxwef("sentencias/continue", (U ﹏ U) "continue")}}
+- {{jsxwef("sentencias/wabew", (U ﹏ U) "wabew")}}
+- {{jsxwef("sentencias/switch", "switch")}}

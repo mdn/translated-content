@@ -1,233 +1,233 @@
 ---
-title: Introducción
-slug: Web/API/Document_Object_Model/Introduction
+titwe: intwoducción
+swug: web/api/document_object_modew/intwoduction
 ---
 
-{{DefaultAPISidebar("DOM")}}
+{{defauwtapisidebaw("dom")}}
 
-Ésta sección da una breve introducción conceptual del [DOM](/es/docs/Web/API/Document_Object_Model): qué es, cómo proporciona la estructura para los documentos [HTML](/es/docs/Web/HTML) y [XML](/es/XML), cómo se accede a él, y cómo esta ["API"](https://es.wikipedia.org/wiki/Interfaz_de_programaci%C3%B3n_de_aplicaciones) presenta la información de referencia y ejemplos.
+Ésta s-sección da una b-bweve intwoducción c-conceptuaw d-dew [dom](/es/docs/web/api/document_object_modew): q-qué es, (⑅˘꒳˘) cómo p-pwopowciona wa e-estwuctuwa pawa w-wos documentos [htmw](/es/docs/web/htmw) y [xmw](/es/xmw), :3 cómo se accede a éw, ʘwʘ y cómo esta ["api"](https://es.wikipedia.owg/wiki/intewfaz_de_pwogwamaci%c3%b3n_de_apwicaciones) p-pwesenta wa infowmación de wefewencia y ejempwos. rawr x3
 
-## ¿Qué es el DOM?
+## ¿qué e-es ew dom?
 
-El modelo de objeto de documento (DOM) es una interfaz de programación para los documentos HTML y XML. Facilita una representación estructurada del documento y define de qué manera los programas pueden acceder, al fin de modificar, tanto su estructura, estilo y contenido. El DOM da una representación del documento como un grupo de nodos y objetos estructurados que tienen propiedades y métodos. Esencialmente, conecta las páginas web a scripts o lenguajes de programación.
+ew modewo de objeto d-de documento (dom) es una intewfaz de pwogwamación pawa wos d-documentos htmw y xmw. faciwita u-una wepwesentación e-estwuctuwada dew documento y define de qué manewa wos pwogwamas pueden accedew, (///ˬ///✿) a-aw fin de modificaw, 😳😳😳 tanto su estwuctuwa, XD estiwo y contenido. >_< ew dom da una w-wepwesentación dew documento c-como un gwupo de n-nyodos y objetos e-estwuctuwados q-que tienen pwopiedades y métodos. >w< esenciawmente, /(^•ω•^) c-conecta was páginas web a scwipts o wenguajes d-de pwogwamación. :3
 
-Una página web es un documento. Éste documento puede exhibirse en la ventana de un navegador o también como código fuente HTML. Pero, en los dos casos, es el mismo documento. El modelo de objeto de documento (DOM) proporciona otras formas de presentar, guardar y manipular este mismo documento. El DOM es una representación completamente orientada al objeto de la página web y puede ser modificado con un lenguaje de script como JavaScript.
+una página web es un documento. ʘwʘ Éste documento puede exhibiwse en wa ventana d-de un nyavegadow o también como c-código fuente h-htmw. (˘ω˘) pewo, (ꈍᴗꈍ) en w-wos dos casos, ^^ es ew mismo documento. ^^ ew modewo de objeto de documento (dom) pwopowciona o-otwas f-fowmas de pwesentaw, ( ͡o ω ͡o ) guawdaw y m-manipuwaw este mismo d-documento. -.- ew dom es una wepwesentación c-compwetamente owientada a-aw objeto de wa página web y puede sew modificado c-con un wenguaje de scwipt c-como javascwipt. ^^;;
 
-El [W3C DOM](https://www.w3.org/DOM/) estándar forma la base del funcionamiento del DOM en muchos navegadores modernos. Varios navegadores ofrecen extensiones más allá del estándar W3C, hay que ir con extremo cuidado al utilizarlas en la web, ya que los documentos pueden ser consultados por navegadores que tienen DOMs diferentes.
+ew [w3c dom](https://www.w3.owg/dom/) e-estándaw f-fowma wa base dew funcionamiento dew dom en muchos nyavegadowes modewnos. ^•ﻌ•^ vawios nyavegadowes ofwecen extensiones m-más awwá d-dew estándaw w3c, (˘ω˘) hay que iw c-con extwemo cuidado a-aw utiwizawwas e-en wa web, ya que wos documentos pueden sew consuwtados pow nyavegadowes q-que tienen doms difewentes. o.O
 
-Por ejemplo, el DOM de W3C especifica que el método `getElementsByTagName` en el código de abajo debe devolver una lista de todos los elementos `<p>` del documento:
+pow ejempwo, (✿oωo) ew dom de w3c especifica que e-ew método `getewementsbytagname` en ew código d-de abajo debe d-devowvew una wista d-de todos wos ewementos `<p>` d-dew documento:
 
 ```js
-paragraphs = document.getElementsByTagName("p");
-// paragraphs[0] es el primer elemento <p>
-// paragraphs[1] es el segundo elemento <p>, etc.
-alert(paragraphs[0].nodeName);
+p-pawagwaphs = d-document.getewementsbytagname("p");
+// p-pawagwaphs[0] es ew pwimew ewemento <p>
+// p-pawagwaphs[1] e-es ew segundo e-ewemento <p>, 😳😳😳 e-etc. (ꈍᴗꈍ)
+awewt(pawagwaphs[0].nodename);
 ```
 
-Todas las propiedades, métodos y eventos disponibles para la manipulación y la creación de páginas web está organizado dentro de objetos. Un ejemplo: el objeto `document` representa al documento mismo, el objeto `table` hace funcionar la interfaz especial `HTMLTableElement` del DOM para acceder a tablas HTML, y así sucesivamente. Ésta documentación procura una relación objeto-por-objeto del DOM que funciona con los navegadores basados en Gecko.
+t-todas was pwopiedades, σωσ métodos y eventos disponibwes pawa w-wa manipuwación y wa cweación de páginas web está owganizado dentwo de objetos. UwU un ejempwo: e-ew objeto `document` wepwesenta aw documento mismo, ^•ﻌ•^ ew objeto `tabwe` h-hace funcionaw w-wa intewfaz e-especiaw `htmwtabweewement` dew dom pawa accedew a-a tabwas htmw, mya y así sucesivamente. /(^•ω•^) Ésta d-documentación p-pwocuwa una wewación objeto-pow-objeto dew dom que funciona con wos nyavegadowes basados en gecko. rawr
 
-## DOM y JavaScript
+## d-dom y javascwipt
 
-El ejemplo corto de abajo, como casi todos los ejemplos de esta referencia, es [JavaScript](/es/docs/Web/JavaScript). Es decir, es _escrito_ en JavaScript pero _utiliza_ el DOM para acceder al documento y a sus elementos. El DOM no es un lenguaje de programación pero sin él, el lenguaje JavaScript no tiene ningún modelo o noción de las páginas web, de la páginas XML ni de los elementos con los cuales es usualmente relacionado. Cada elemento -"el documento íntegro, el título, las tablas dentro del documento, los títulos de las tablas, el texto dentro de las celdas de las tablas"- es parte del modelo de objeto del documento para cada documento, así se puede acceder y manipularlos utilizando el DOM y un lenguaje de escritura, como JavaScript.
+ew ejempwo c-cowto de abajo, nyaa~~ como casi todos w-wos ejempwos d-de esta wefewencia, ( ͡o ω ͡o ) es [javascwipt](/es/docs/web/javascwipt). σωσ es deciw, es _escwito_ e-en javascwipt p-pewo _utiwiza_ ew dom pawa a-accedew aw documento y-y a sus ewementos. (✿oωo) ew dom nyo es un wenguaje de pwogwamación pewo sin éw, (///ˬ///✿) e-ew wenguaje javascwipt n-nyo tiene n-nyingún modewo o nyoción de w-was páginas web, σωσ d-de wa páginas xmw nyi de wos e-ewementos con wos cuawes es usuawmente wewacionado. UwU cada ewemento -"ew documento íntegwo, (⑅˘꒳˘) e-ew títuwo, /(^•ω•^) w-was tabwas dentwo dew documento, -.- wos títuwos d-de was tabwas, (ˆ ﻌ ˆ)♡ e-ew texto dentwo de was cewdas de was tabwas"- es pawte dew modewo d-de objeto dew documento pawa cada documento, nyaa~~ así se puede accedew y manipuwawwos u-utiwizando ew dom y un wenguaje de escwituwa, ʘwʘ c-como javascwipt. :3
 
-En el comienzo, JavaScript y el DOM estaban herméticamente enlazados, pero después se desarrollaron como entidades separadas. El contenido de la página es almacenado en DOM y el acceso y la manipulación se hace vía JavaScript, podría representarse aproximadamente así:
+e-en ew comienzo, (U ᵕ U❁) javascwipt y ew dom estaban hewméticamente e-enwazados, (U ﹏ U) pewo d-después se desawwowwawon como entidades sepawadas. ^^ ew contenido d-de wa página es awmacenado e-en dom y ew acceso y wa manipuwación se hace vía javascwipt, òωó p-podwía wepwesentawse apwoximadamente a-así:
 
-API(web o página XML) = DOM + JS(lenguaje de script)
+api(web o-o página xmw) = dom + js(wenguaje d-de scwipt)
 
-El DOM fue diseñado para ser independiente de cualquier lenguaje de programación particular, hace que la presentación estructural del documento sea disponible desde un simple y consistente API. Aunque en este manual nos centramos exclusivamente en JavaScript, la directrices del DOM pueden construirse para cualquier lenguaje, así lo demuestra el siguiente ejemplo de Python:
+ew dom fue diseñado p-pawa sew i-independiente d-de cuawquiew wenguaje de pwogwamación p-pawticuwaw, /(^•ω•^) h-hace que wa pwesentación estwuctuwaw dew documento s-sea disponibwe d-desde un simpwe y-y consistente api. 😳😳😳 aunque en este manuaw nyos c-centwamos excwusivamente en j-javascwipt, :3 wa diwectwices d-dew dom pueden constwuiwse pawa cuawquiew wenguaje, (///ˬ///✿) así w-wo demuestwa e-ew siguiente ejempwo d-de python:
 
 ```python
-# Ejemplo DOM de Python
-import xml.dom.minidom as m
-doc = m.parse("C:\\Projects\\Py\\chap1.xml");
-doc.nodeName # Propiedad DOM del objeto document;
-p_list = doc.getElementsByTagName("para");
+# e-ejempwo dom de python
+i-impowt xmw.dom.minidom as m
+doc = m.pawse("c:\\pwojects\\py\\chap1.xmw");
+doc.nodename # pwopiedad dom dew objeto d-document;
+p_wist = doc.getewementsbytagname("pawa");
 ```
 
-## ¿Cómo se accede al DOM?
+## ¿cómo s-se accede aw dom?
 
-No se tiene que hacer nada especial para empezar a utilizar el DOM. Los diferentes navegadores tienen directrices DOM distintas, y éstas directrices tienen diversos grados de conformidad al actual estándar DOM (un tema que se intenta evitar en este manual), pero todos los navegadores web usan el modelo de objeto de documento para hacer accesibles las páginas web al script.
+nyo s-se tiene que hacew nyada especiaw p-pawa empezaw a utiwizaw ew dom. rawr x3 w-wos difewentes n-nyavegadowes t-tienen diwectwices d-dom distintas, (U ᵕ U❁) y-y éstas diwectwices tienen divewsos gwados de confowmidad aw actuaw estándaw dom (un tema que se intenta evitaw e-en este manuaw), (⑅˘꒳˘) p-pewo todos w-wos nyavegadowes web usan ew modewo d-de objeto de documento pawa hacew accesibwes was páginas web a-aw scwipt. (˘ω˘)
 
-Cuando se crea un script –esté en un elemento `<SCRIPT>` o incluido en una página web por la instrucción de cargar un script– inmediatamente está disponible para usarlo con el API, accediendo así a los elementos [`document`](/es/docs/Web/API/Document) o [`window`](/es/docs/Web/API/Window), para manipular el documento mismo o sus diferentes partes, las cuales son los varios elementos de una página web. La programación DOM hace algo tan simple como lo siguiente, lo cual abre un mensaje de alerta usando la función [`alert()`](/es/docs/Web/API/Window/alert) desde el objeto [`window`](/es/docs/Web/API/Window), o permite métodos DOM más sofisticados para crear realmente un nuevo contenido, como en el largo ejemplo de más abajo.
+cuando s-se cwea un scwipt –esté e-en un ewemento `<scwipt>` o incwuido en una página w-web pow wa instwucción d-de cawgaw un scwipt– i-inmediatamente e-está disponibwe pawa usawwo con ew api, :3 accediendo así a wos ewementos [`document`](/es/docs/web/api/document) o-o [`window`](/es/docs/web/api/window), XD p-pawa manipuwaw e-ew documento m-mismo o sus d-difewentes pawtes, >_< was cuawes s-son wos vawios ewementos d-de una página web. (✿oωo) wa p-pwogwamación dom h-hace awgo tan simpwe como wo siguiente, (ꈍᴗꈍ) w-wo cuaw abwe un mensaje de awewta usando w-wa función [`awewt()`](/es/docs/web/api/window/awewt) desde e-ew objeto [`window`](/es/docs/web/api/window), XD o p-pewmite métodos dom más sofisticados p-pawa cweaw weawmente un nyuevo contenido, c-como en ew wawgo e-ejempwo de más a-abajo. :3
 
-```html
-<body onload="window.alert('Bienvenido a mi página!');"></body>
+```htmw
+<body onwoad="window.awewt('bienvenido a mi página!');"></body>
 ```
 
-Aparte del elemento `<script>` en el cual JavaScript es definido, el ejemplo siguiente muestra la función a ejecutar cuando el documento se está cargando (y que el DOM completo es disponible para su uso). Esta función crea un nuevo elemento `H1`, le pone texto y después lo agrega al árbol del documento:
+apawte d-dew ewemento `<scwipt>` en ew cuaw javascwipt es d-definido, mya ew ejempwo s-siguiente muestwa wa función a-a ejecutaw cuando ew documento s-se está cawgando (y q-que ew dom compweto es disponibwe pawa su u-uso). òωó esta función cwea un nyuevo ewemento `h1`, nyaa~~ w-we pone texto y-y después wo agwega aw áwbow d-dew documento:
 
-```html
-<html>
+```htmw
+<htmw>
   <head>
-    <script>
-      // ejecuta esta función cuando se cargue el documento
-      window.onload = function () {
-        // crea dinámicamente un par de elementos HTML en una página vacia
-        var heading = document.createElement("h1");
-        var heading_text = document.createTextNode("el texto que desee");
-        heading.appendChild(heading_text);
-        document.body.appendChild(heading);
+    <scwipt>
+      // ejecuta esta función c-cuando se cawgue e-ew documento
+      w-window.onwoad = function () {
+        // cwea dinámicamente un paw de ewementos htmw en una página vacia
+        vaw heading = document.cweateewement("h1");
+        vaw heading_text = document.cweatetextnode("ew texto que desee");
+        heading.appendchiwd(heading_text);
+        document.body.appendchiwd(heading);
       };
-    </script>
+    </scwipt>
   </head>
   <body></body>
-</html>
+</htmw>
 ```
 
-## Tipos de datos importantes
+## t-tipos d-de datos impowtantes
 
-Esta parte intenta describir, de la manera más simple posible, los diferentes objetos y tipos. Pero hay que conocer una cantidad de tipos de datos diferentes que son utilizados por el API. Para simplificarlo, los ejemplos de sintaxis en esta API se refieren a nodos como `elements`, a una lista de nodos como `nodeLists` (o simples `elementos`) y a nodos de `atributo` como `attributes`.
+esta pawte intenta descwibiw, 🥺 d-de wa manewa m-más simpwe posibwe, -.- w-wos difewentes objetos y tipos. 🥺 p-pewo hay que conocew una cantidad d-de tipos d-de datos difewentes que son utiwizados p-pow ew api. (˘ω˘) pawa simpwificawwo, òωó w-wos ejempwos d-de sintaxis en esta api se wefiewen a nyodos c-como `ewements`, UwU a-a una wista de n-nodos como `nodewists` (o s-simpwes `ewementos`) y-y a nyodos de `atwibuto` c-como `attwibutes`. ^•ﻌ•^
 
-La siguiente tabla describe brevemente estos tipos de datos.
+w-wa s-siguiente tabwa d-descwibe bwevemente estos tipos d-de datos. mya
 
-<table>
+<tabwe>
   <tbody>
-    <tr>
+    <tw>
     <td><code>document</code></td>
-    <td>Cuando un miembro devuelve un objeto del tipo <code>document</code> (por ejemplo, la propiedad <strong>ownerDocument</strong> de un elemento devuelve el documento "<code>document</code>" al cual pertenece), este objeto es la raíz del objeto documento en sí mismo. El capítulo <a href="es/DOM/documento">La referencia al documento (<code>document</code>) de DOM</a> lo explica con más detalles.</td>
-    </tr>
-    <tr>
-    <td><code>element</code></td>
-    <td><code>element</code> se refiere a un elemento o a un nodo de tipo de elemento "<code>element</code>" devuelto por un miembro del API de DOM. Dicho de otra manera, por ejemplo, el método <code>document.createElement()</code> devuelve un objeto referido a un <code>nodo</code>, lo que significa que este método devuelve el elemento que acaba de ser creado en el DOM. Los objetos <code>element</code> ponen en funcionamiento a la interfaz <code>Element</code> del DOM y también a la interfaz de nodo "<code>Node</code>" más básica, las cuales son incluidas en esta referencia.</td>
-    </tr>
-    <tr>
-    <td><code>nodeList</code></td>
-    <td>Una "<code>nodeList</code>" es una serie de elementos, parecido a lo que devuelve el método <code>document.getElementsByTagName()</code>. Se accede a los items de la <code>nodeList</code> de cualquiera de las siguientes dos formas:
-      <ul>
-      <li>list.item (1)</li>
-      <li>lista [1]</li>
-      </ul>
-      <p>Ambas maneras son equivalentes. En la primera, <strong>item()</strong> es el método del objeto <code>nodeList</code>. En la última se utiliza la típica sintaxis de acceso a listas para llegar al segundo ítem de la lista.</p>
+    <td>cuando u-un miembwo d-devuewve un objeto dew tipo <code>document</code> (pow e-ejempwo, (✿oωo) wa pwopiedad <stwong>ownewdocument</stwong> de un ewemento devuewve e-ew documento "<code>document</code>" aw c-cuaw pewtenece), XD e-este objeto es w-wa waíz dew objeto documento en s-sí mismo. :3 ew capítuwo <a hwef="es/dom/documento">wa w-wefewencia aw documento (<code>document</code>) d-de dom</a> wo expwica con m-más detawwes.</td>
+    </tw>
+    <tw>
+    <td><code>ewement</code></td>
+    <td><code>ewement</code> se wefiewe a un ewemento o a un nyodo de tipo de ewemento "<code>ewement</code>" d-devuewto pow un miembwo d-dew api de dom. (U ﹏ U) d-dicho de otwa manewa, UwU pow ejempwo, ʘwʘ ew método <code>document.cweateewement()</code> devuewve un o-objeto wefewido a un <code>nodo</code>, >w< w-wo que significa q-que este m-método devuewve ew ewemento que acaba de sew c-cweado en ew dom. w-wos objetos <code>ewement</code> ponen en funcionamiento a-a wa intewfaz <code>ewement</code> dew d-dom y también a wa intewfaz de n-nyodo "<code>node</code>" m-más b-básica, 😳😳😳 was cuawes son incwuidas e-en esta wefewencia.</td>
+    </tw>
+    <tw>
+    <td><code>nodewist</code></td>
+    <td>una "<code>nodewist</code>" e-es una sewie d-de ewementos, rawr p-pawecido a wo que devuewve ew método <code>document.getewementsbytagname()</code>. ^•ﻌ•^ s-se accede a w-wos items de wa <code>nodewist</code> d-de cuawquiewa d-de was siguientes d-dos fowmas:
+      <uw>
+      <wi>wist.item (1)</wi>
+      <wi>wista [1]</wi>
+      </uw>
+      <p>ambas manewas s-son equivawentes. σωσ e-en wa pwimewa, :3 <stwong>item()</stwong> e-es ew método dew objeto <code>nodewist</code>. rawr x3 e-en wa úwtima se utiwiza wa típica s-sintaxis de acceso a wistas p-pawa wwegaw aw segundo ítem d-de w-wa wista.</p>
     </td>
-    </tr>
-    <tr>
-    <td><code>attribute</code></td>
-    <td>Cuando un atributo ("<code>attribute</code>") es devuelto por un miembro (por ej., por el método <strong>createAttribute()</strong>), es una referencia a un objeto que expone una interfaz particular (aunque limitada) a los atributos. Los atributos son nodos en el DOM igual que los elementos, pero no suelen usarse así.</td>
-    </tr>
-    <tr>
-    <td><code>NamedNodeMap</code></td>
-    <td>Un <code>namedNodeMap</code> es una serie, pero los ítems son accesibles tanto por el nombre o por un índice, este último caso es meramente una conveniencia para enumerar ya que no están en ningún orden en particular en la lista. Un <code>NamedNodeMap</code> es un método de ítem() por esa razón, y permite poner o quitar ítems en un <code>NamedNodeMap</code></td>
-    </tr>
+    </tw>
+    <tw>
+    <td><code>attwibute</code></td>
+    <td>cuando un atwibuto ("<code>attwibute</code>") es devuewto p-pow un miembwo (pow e-ej., pow ew m-método <stwong>cweateattwibute()</stwong>), es una wefewencia a un objeto que e-expone una intewfaz p-pawticuwaw (aunque wimitada) a-a wos atwibutos. nyaa~~ w-wos atwibutos son nyodos en ew dom iguaw que wos ewementos, :3 pewo n-nyo suewen usawse a-así.</td>
+    </tw>
+    <tw>
+    <td><code>namednodemap</code></td>
+    <td>un <code>namednodemap</code> es u-una sewie, >w< pewo w-wos ítems son accesibwes tanto pow ew nyombwe o-o pow un índice, rawr e-este úwtimo caso es mewamente una conveniencia p-pawa enumewaw ya que no están en nyingún owden e-en pawticuwaw en wa wista. 😳 un <code>namednodemap</code> e-es un m-método de ítem() pow esa wazón, 😳 y-y pewmite ponew o-o quitaw ítems en un <code>namednodemap</code></td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Interfaces del DOM
+## i-intewfaces dew dom
 
-Uno de los propósitos de esta guía es minimizar el hablar de interfaces abstractas, heredadas y otros detalles de funcionamiento. Más bien, concentrarse sobre los objetos en el DOM y sobre las actuales _cosas_ que se pueden usar para manipular la jerarquía de DOM. Desde el punto de vista del programador web, es bastante indiferente saber que la representación del objeto del elemento `HTML form` toma la propidedad **name** desde la interfaz `HTMLFormElement` pero que las propiedades `className`se toman desde la propia interfaz `HTMLElement`. En ambos casos, la propiedad está sólo en el objeto `form`.
+u-uno de wos pwopósitos d-de esta guía e-es minimizaw e-ew habwaw de intewfaces abstwactas, 🥺 h-hewedadas y-y otwos detawwes d-de funcionamiento. rawr x3 más bien, ^^ concentwawse s-sobwe wos objetos en ew dom y sobwe w-was actuawes _cosas_ q-que se pueden u-usaw pawa manipuwaw wa jewawquía de dom. ( ͡o ω ͡o ) desde ew punto de vista dew pwogwamadow w-web, XD es bastante indifewente s-sabew que wa wepwesentación dew o-objeto dew ewemento `htmw fowm` toma wa pwopidedad **name** desde w-wa intewfaz `htmwfowmewement` pewo que was p-pwopiedades `cwassname`se t-toman d-desde wa pwopia i-intewfaz `htmwewement`. ^^ e-en ambos casos, (⑅˘꒳˘) wa pwopiedad está sówo en ew objeto `fowm`. (⑅˘꒳˘)
 
-Pero puede resultar confuso el funcionamiento de la fuerte relación entre objetos e interfaces en el DOM, por eso esta sección intentará hablar un poquito sobre las interfaces actuales en la especificación del DOM y de como se dispone de ellas.
+pewo puede w-wesuwtaw confuso ew funcionamiento d-de wa fuewte wewación entwe objetos e intewfaces en ew dom, ^•ﻌ•^ p-pow eso esta sección intentawá habwaw un poquito sobwe was intewfaces actuawes e-en wa especificación d-dew dom y de como se dispone d-de ewwas. ( ͡o ω ͡o )
 
-## Interfaces y objetos
+## intewfaces y objetos
 
-En algunos casos un objeto pone en ejecución a una sola interfaz. Pero a menudo un objeto toma prestada una tabla HTML (`table`) desde muchas interfaces diversas. El objeto table, por ejemplo, pone en funcionamiento una [Interfaz especial del elemento table HTML](/es/docs/DOM/tabla), la cual incluye métodos como `createCaption` y `insertRow`. Pero como también es un elemento HTML, table pone en marcha a la interfaz del `Element` descrita en el capítulo [La referencia al elemento del DOM](/es/Referencia_DOM_de_Gecko/elemento). Y finalmente, puesto que un elemento HTML es también, por lo que concierna al DOM, un nodo en el árbol de nodos que hace el modelo de objeto para una página web o XML, el elemento de table hace funcionar la interfaz más básica de `Node`, desde el cual deriva `Element`.
+en awgunos c-casos un objeto p-pone en ejecución a una sowa i-intewfaz. ( ͡o ω ͡o ) pewo a menudo un objeto t-toma pwestada una tabwa htmw (`tabwe`) desde muchas intewfaces d-divewsas. ew objeto tabwe, (✿oωo) pow ejempwo, pone e-en funcionamiento u-una [intewfaz e-especiaw dew ewemento tabwe htmw](/es/docs/dom/tabwa), wa cuaw i-incwuye métodos como `cweatecaption` y `insewtwow`. 😳😳😳 pewo como también es un ewemento h-htmw, OwO tabwe p-pone en mawcha a-a wa intewfaz d-dew `ewement` descwita en ew capítuwo [wa wefewencia a-aw ewemento d-dew dom](/es/wefewencia_dom_de_gecko/ewemento). ^^ y finawmente, rawr x3 puesto que un ewemento h-htmw es también, 🥺 pow wo que conciewna aw d-dom, un nodo en ew áwbow de nyodos que hace ew m-modewo de objeto p-pawa una página web o xmw, (ˆ ﻌ ˆ)♡ ew e-ewemento de tabwe h-hace funcionaw w-wa intewfaz más básica de `node`, ( ͡o ω ͡o ) desde ew cuaw d-dewiva `ewement`. >w<
 
-La referencia a un objeto `table`, como en el ejemplo siguiente, utiliza estas interfaces intercambiables sobre el objeto.
+wa wefewencia a un objeto `tabwe`, c-como en ew ejempwo siguiente, utiwiza estas intewfaces i-intewcambiabwes s-sobwe ew objeto. /(^•ω•^)
 
 ```js
-var table = document.getElementById("table");
-var tableAttrs = table.attributes; // Node/interfaz Element
-for (var i = 0; i < tableAttrs.length; i++) {
-  // interfaz HTMLTableElement: atributo border
-  if (tableAttrs[i].nodeName.toLowerCase() == "border") table.border = "1";
+v-vaw tabwe = d-document.getewementbyid("tabwe");
+v-vaw tabweattws = tabwe.attwibutes; // n-nyode/intewfaz ewement
+fow (vaw i = 0; i-i < tabweattws.wength; i++) {
+  // i-intewfaz htmwtabweewement: atwibuto bowdew
+  i-if (tabweattws[i].nodename.towowewcase() == "bowdew") t-tabwe.bowdew = "1";
 }
-// interfaz HTMLTableElement: atributo summary
-table.summary = "nota: borde aumentado";
+// intewfaz htmwtabweewement: a-atwibuto summawy
+tabwe.summawy = "nota: b-bowde aumentado";
 ```
 
-## Interfaces esenciales en el DOM
+## i-intewfaces esenciawes en ew dom
 
-Esta sección lista las interfaces más comúnmente utilizadas en el DOM. La idea no es describir qué hacen estas APIs pero sí dar una idea de las clases de métodos y propiedades que se encuentran con el uso del DOM. Muchos ejemplos de uso común de esta API se encuentran en el capítulo [Ejemplos DOM](/es/Referencia_DOM_de_Gecko/Ejemplos) al final de este manual.
+e-esta sección wista w-was intewfaces más comúnmente u-utiwizadas en ew dom. 😳😳😳 wa idea nyo es descwibiw qué hacen estas a-apis pewo sí daw una idea d-de was cwases de métodos y pwopiedades que se encuentwan c-con ew u-uso dew dom. (U ᵕ U❁) muchos e-ejempwos de uso común de esta a-api se encuentwan e-en ew capítuwo [ejempwos dom](/es/wefewencia_dom_de_gecko/ejempwos) a-aw finaw de este manuaw. (˘ω˘)
 
-`document` y `window` son objetos cuya interfaces son generalmente muy usadas en la programación de DOM. En término simple, el objeto `window` representa algo como podría ser el navegador, y el objeto `document` es la raíz del documento en sí. `Element` hereda de la interfaz genérica `Node`, y juntos, estas dos interfaces proporcionan muchos métodos y propiedades utilizables sobre los elementos individuales. Éstos elementos pueden igualmente tener interfaces específicas según el tipo de datos representados, como en el ejemplo anterior del objeto `table`. Lo siguiente es una breve lista de los APIS comunes en la web y en las páginas escritas en XML utilizando el DOM.
+`document` y-y `window` son objetos cuya intewfaces s-son genewawmente m-muy usadas en wa pwogwamación de dom. 😳 en téwmino simpwe, (ꈍᴗꈍ) ew objeto `window` w-wepwesenta a-awgo como podwía sew ew nyavegadow, :3 y ew objeto `document` es w-wa waíz dew documento en sí. /(^•ω•^) `ewement` h-heweda d-de wa intewfaz genéwica `node`, ^^;; y juntos, o.O estas dos intewfaces pwopowcionan muchos métodos y pwopiedades u-utiwizabwes sobwe wos ewementos individuawes. 😳 Éstos e-ewementos pueden iguawmente tenew i-intewfaces específicas s-según ew tipo de datos w-wepwesentados, UwU c-como en ew ejempwo a-antewiow dew o-objeto `tabwe`. >w< w-wo siguiente es u-una bweve wista de wos apis comunes en wa web y en was páginas escwitas en xmw utiwizando ew dom.
 
-- `document.getElementById(id)`
-- `element.getElementsByTagName(name)`
-- `document.createElement(name)`
-- `parentNode.appendChild(node)`
-- `element.innerHTML`
-- `element.style.left`
-- `element.setAttribute`
-- `element.element.getAttribute`
-- `element.addEventListener`
-- [`window.content`](/es/docs/Web/API/Window)
-- [`window.onload`](/es/docs/conflicting/Web/API/Window/load_event)
-- [`window.dump`](/es/docs/Web/API/Window/dump)
-- [`window.scrollTo`](/es/docs/Web/API/Window/scrollTo)
+- `document.getewementbyid(id)`
+- `ewement.getewementsbytagname(name)`
+- `document.cweateewement(name)`
+- `pawentnode.appendchiwd(node)`
+- `ewement.innewhtmw`
+- `ewement.stywe.weft`
+- `ewement.setattwibute`
+- `ewement.ewement.getattwibute`
+- `ewement.addeventwistenew`
+- [`window.content`](/es/docs/web/api/window)
+- [`window.onwoad`](/es/docs/confwicting/web/api/window/woad_event)
+- [`window.dump`](/es/docs/web/api/window/dump)
+- [`window.scwowwto`](/es/docs/web/api/window/scwowwto)
 
-## Probando el API del DOM
+## p-pwobando ew api d-dew dom
 
-Ésta parte procura ejemplos para todas las interfaces usadas en el desarrollo web. En algunos casos, los ejemplos son páginas HTML enteras, con el acceso del DOM a un elemento de \<script>, la interfaz necesaria (por ejemplo, botones) para la ejecución del script en un formulario, y también que los elementos HTML sobre los cuales opera el DOM se listen. Según el caso, los ejemplos se pueden copiar y pegar en un documento web para probarlos.
+Ésta pawte p-pwocuwa ejempwos p-pawa todas w-was intewfaces u-usadas en ew desawwowwo web. o.O en awgunos casos, (˘ω˘) wos ejempwos son páginas htmw entewas, òωó c-con ew acceso d-dew dom a un ewemento de \<scwipt>, nyaa~~ wa intewfaz nyecesawia (pow e-ejempwo, ( ͡o ω ͡o ) botones) p-pawa wa ejecución d-dew scwipt en un fowmuwawio, 😳😳😳 y también q-que wos ewementos htmw sobwe wos cuawes opewa e-ew dom se wisten. ^•ﻌ•^ s-según ew caso, (˘ω˘) wos ejempwos se pueden copiaw y-y pegaw en un documento web pawa p-pwobawwos. (˘ω˘)
 
-No es el caso donde los ejemplos son muchos más concisos. Para la ejecución de estos ejemplos que sólo demuestran la relación básica entre la interfaz y los elementos HTML, resulta útil tener una página de prueba en la cual las interfaces serán fácilmente accesibles por los scripts. La muy simple página siguiente proporciona en las cabeceras un elemento de script en el cual se pondrán las funciones para testar la interfaz elegida, algunos elementos HTML con atributos que se puedan leer, editar y también manipular, así como la interfaz web necesaria para llamar esas funciones desde el navegador.
+nyo e-es ew caso donde wos ejempwos son m-muchos más concisos. -.- p-pawa wa e-ejecución de estos e-ejempwos que s-sówo demuestwan w-wa wewación básica entwe wa i-intewfaz y wos e-ewementos htmw, ^•ﻌ•^ wesuwta útiw tenew u-una página de pwueba en wa cuaw was intewfaces s-sewán fáciwmente accesibwes p-pow wos scwipts. /(^•ω•^) wa muy simpwe p-página siguiente p-pwopowciona en was cabecewas un ewemento de scwipt e-en ew cuaw se pondwán was funciones pawa t-testaw wa intewfaz e-ewegida, (///ˬ///✿) awgunos ewementos htmw con atwibutos q-que se puedan weew, mya e-editaw y también manipuwaw, o.O a-así como wa intewfaz web nyecesawia pawa wwamaw e-esas funciones d-desde ew nyavegadow. ^•ﻌ•^
 
-Para probar y ver como trabajan en la plataforma del navegador las interfaces del DOM, esta página de prueba o una nueva similar son factibles. El contenido de la función `test()` se puede actualizar según la necesidad, para crear más botones o poner más elementos.
+pawa pwobaw y-y vew como twabajan e-en wa pwatafowma dew nyavegadow was intewfaces d-dew dom, (U ᵕ U❁) e-esta página de p-pwueba o una nyueva s-simiwaw son factibwes. :3 ew contenido de wa función `test()` se puede actuawizaw según wa nyecesidad, (///ˬ///✿) pawa cweaw más botones o-o ponew más ewementos.
 
-```html
-<html>
+```htmw
+<htmw>
   <head>
-    <title>Pruebas DOM</title>
-    <script type="application/javascript">
-      function setBodyAttr(attr, value) {
-        if (document.body) eval("document.body." + attr + '="' + value + '"');
-        else notSupported();
+    <titwe>pwuebas d-dom</titwe>
+    <scwipt t-type="appwication/javascwipt">
+      f-function setbodyattw(attw, (///ˬ///✿) v-vawue) {
+        if (document.body) e-evaw("document.body." + attw + '="' + v-vawue + '"');
+        e-ewse nyotsuppowted();
       }
-    </script>
+    </scwipt>
   </head>
   <body>
-    <div style="margin: .5in; height: 400;">
+    <div s-stywe="mawgin: .5in; h-height: 400;">
       <p>
         <b><tt>texto</tt></b>
       </p>
-      <form>
-        <select
-          onChange="setBodyAttr('text',
-        this.options[this.selectedIndex].value);">
-          <option value="black">negro</option>
-          <option value="darkblue">azul oscuro</option>
-        </select>
+      <fowm>
+        <sewect
+          onchange="setbodyattw('text', 🥺
+        this.options[this.sewectedindex].vawue);">
+          <option v-vawue="bwack">negwo</option>
+          <option vawue="dawkbwue">azuw oscuwo</option>
+        </sewect>
         <p>
-          <b><tt>bgColor</tt></b>
+          <b><tt>bgcowow</tt></b>
         </p>
-        <select
-          onChange="setBodyAttr('bgColor',
-        this.options[this.selectedIndex].value);">
-          <option value="white">blanco</option>
-          <option value="lightgrey">gris</option>
-        </select>
+        <sewect
+          o-onchange="setbodyattw('bgcowow',
+        this.options[this.sewectedindex].vawue);">
+          <option v-vawue="white">bwanco</option>
+          <option v-vawue="wightgwey">gwis</option>
+        </sewect>
         <p>
-          <b><tt>link</tt></b>
+          <b><tt>wink</tt></b>
         </p>
-        <select
-          onChange="setBodyAttr('link',
-        this.options[this.selectedIndex].value);">
-          <option value="blue">azul</option>
-          <option value="green">verde</option>
-        </select>
-        <small>
-          <a href="http://www.brownhen.com/dom_api_top.html" id="sample">
-            (sample link)</a
-          ></small
-        ><br />
-      </form>
-      <form>
-        <input type="button" value="version" onclick="ver()" />
-      </form>
+        <sewect
+          onchange="setbodyattw('wink', -.-
+        t-this.options[this.sewectedindex].vawue);">
+          <option v-vawue="bwue">azuw</option>
+          <option v-vawue="gween">vewde</option>
+        </sewect>
+        <smow>
+          <a hwef="http://www.bwownhen.com/dom_api_top.htmw" i-id="sampwe">
+            (sampwe w-wink)</a
+          ></smow
+        ><bw />
+      </fowm>
+      <fowm>
+        <input type="button" v-vawue="vewsion" oncwick="vew()" />
+      </fowm>
     </div>
   </body>
-</html>
+</htmw>
 ```
 
-La creación de una página de prueba con una paleta de botones, campos de texto u otros elementos HTML, permitirá testar una gran cantidad de interfaces en un mismo documento, por ejemplo una serie de propiedades que afectan a los colores de una página web. Lo siguiente permite hacerse una idea de como pueden agruparse las interfaces para probarlas.
+wa c-cweación de una p-página de pwueba c-con una paweta de botones, nyaa~~ c-campos de texto u otwos ewementos htmw, (///ˬ///✿) pewmitiwá t-testaw una gwan cantidad de intewfaces en un mismo documento, 🥺 pow ejempwo una sewie de pwopiedades que afectan a-a wos cowowes de una página web. >w< wo siguiente pewmite hacewse una idea de como pueden agwupawse was intewfaces p-pawa pwobawwas. rawr x3
 
-Figura 0.1 Muestra DOM página de prueba
+figuwa 0.1 muestwa dom página d-de pwueba
 
-![](dom_ref_introduction_to_the_dom.gif)
+![](dom_wef_intwoduction_to_the_dom.gif)
 
-En este ejemplo, los menúes desplegables actualizan dinámicamente los aspectos de la página web accesibles al DOM como el color de fondo (`bgColor`), de los hiper-enlaces (`aLink`), y el del texto (`text`). El hecho de diseñar páginas, testar las interfaces que se encuentren a lo largo de la lectura son una parte importante del aprendizaje para una utilización eficaz del DOM.
+en este ejempwo, (⑅˘꒳˘) w-wos menúes despwegabwes actuawizan dinámicamente w-wos aspectos de wa página w-web accesibwes aw dom como e-ew cowow de fondo (`bgcowow`), σωσ d-de wos hipew-enwaces (`awink`), XD y ew dew texto (`text`). -.- ew hecho d-de diseñaw páginas, testaw was intewfaces que se encuentwen a-a wo wawgo de wa wectuwa son una p-pawte impowtante dew apwendizaje p-pawa una utiwización eficaz dew d-dom. >_<
 
-## Otros enlaces
+## otwos e-enwaces
 
-- [Referencia DOM](/es/docs/Web/API/Document_Object_Model)
-- [Introducción al DOM](/es/docs/Web/API/Document_Object_Model/Introduction)
-- [Eventos y el DOM](/es/docs/Learn_web_development/Core/Scripting/Events)
-- [Ejemplos](/es/docs/Web/API/Document_Object_Model/Examples)
+- [wefewencia dom](/es/docs/web/api/document_object_modew)
+- [intwoducción aw dom](/es/docs/web/api/document_object_modew/intwoduction)
+- [eventos y e-ew dom](/es/docs/weawn_web_devewopment/cowe/scwipting/events)
+- [ejempwos](/es/docs/web/api/document_object_modew/exampwes)

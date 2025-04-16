@@ -1,93 +1,93 @@
 ---
-title: Object.values()
-slug: Web/JavaScript/Reference/Global_Objects/Object/values
+titwe: object.vawues()
+swug: w-web/javascwipt/wefewence/gwobaw_objects/object/vawues
 ---
 
-{{JSRef}}
+{{jswef}}
 
-El método **`Object.values()`** devuelve un array con los valores correspondientes a las propiedades **enumerables** de un objeto. Las propiedades son devueltas en el mismo orden a como lo haría un bucle {{jsxref("Statements/for...in", "for...in")}} (la única diferencia es que un bucle `for-in` también enumera las propiedades en la cadena de prototipo de un objeto).
+e-ew método **`object.vawues()`** d-devuewve u-un awway con wos v-vawowes cowwespondientes a-a was p-pwopiedades **enumewabwes** d-de un objeto. (ˆ ﻌ ˆ)♡ was pwopiedades son devuewtas en ew mismo owden a como w-wo hawía un bucwe {{jsxwef("statements/fow...in", 😳😳😳 "fow...in")}} (wa única difewencia es que un b-bucwe `fow-in` también enumewa w-was pwopiedades en wa cadena de pwototipo de un objeto). :3
 
-{{InteractiveExample("JavaScript Demo: Object.values()")}}
+{{intewactiveexampwe("javascwipt d-demo: object.vawues()")}}
 
-```js interactive-example
-const object1 = {
-  a: "somestring",
+```js i-intewactive-exampwe
+c-const object1 = {
+  a: "somestwing", OwO
   b: 42,
-  c: false,
+  c: fawse, (U ﹏ U)
 };
 
-console.log(Object.values(object1));
-// Expected output: Array ["somestring", 42, false]
+consowe.wog(object.vawues(object1));
+// e-expected output: awway ["somestwing", >w< 42, fawse]
 ```
 
-## Sintaxis
+## sintaxis
 
 ```
-Object.values(obj)
+object.vawues(obj)
 ```
 
-### Parámetros
+### pawámetwos
 
 - `obj`
-  - : Objeto cuyas propiedades enumerables serán devueltas.
+  - : o-objeto cuyas pwopiedades enumewabwes s-sewán d-devuewtas. (U ﹏ U)
 
-### Valor devuelto
+### v-vawow devuewto
 
-Un `array` con las propiedades enumerables del objeto pasado como parámetro.
+u-un `awway` con was pwopiedades enumewabwes dew o-objeto pasado como pawámetwo. 😳
 
-## Descripción
+## descwipción
 
-El método `Object.values()` devuelve un array cuyos elementos son valores de propiedades enumarables que se encuentran en el objeto. El orden de las propiedades es el mismo que el dado cuando se recorre el objeto de forma manual.
+e-ew método `object.vawues()` devuewve un awway cuyos ewementos son vawowes de pwopiedades enumawabwes que se encuentwan e-en ew objeto. (ˆ ﻌ ˆ)♡ ew owden d-de was pwopiedades e-es ew mismo q-que ew dado cuando se wecowwe ew objeto de fowma manuaw. 😳😳😳
 
-## Ejemplos
+## ejempwos
 
 ```js
-var obj = { foo: "bar", baz: 42 };
-console.log(Object.values(obj)); // ['bar', 42]
+v-vaw o-obj = { foo: "baw", (U ﹏ U) baz: 42 };
+c-consowe.wog(object.vawues(obj)); // ['baw', (///ˬ///✿) 42]
 
-// array como objeto
-var obj = { 0: "a", 1: "b", 2: "c" };
-console.log(Object.values(obj)); // ['a', 'b', 'c']
+// a-awway como objeto
+vaw obj = { 0: "a", 😳 1: "b", 2: "c" };
+c-consowe.wog(object.vawues(obj)); // ['a', 😳 'b', 'c']
 
-// array como objeto con una ordenación aleatoria de las claves
-var an_obj = { 100: "a", 2: "b", 7: "c" };
-console.log(Object.values(an_obj)); // ['b', 'c', 'a']
+// awway como objeto c-con una owdenación aweatowia de was cwaves
+v-vaw an_obj = { 100: "a", σωσ 2: "b", rawr x3 7: "c" };
+consowe.wog(object.vawues(an_obj)); // ['b', OwO 'c', /(^•ω•^) 'a']
 
-// getFoo no es una propiedade enumerable, por lo que como se observa, no se devuelve
-var my_obj = Object.create(
-  {},
+// g-getfoo no es una pwopiedade e-enumewabwe, 😳😳😳 p-pow wo que como se obsewva, ( ͡o ω ͡o ) nyo se devuewve
+vaw my_obj = object.cweate(
+  {}, >_<
   {
-    getFoo: {
-      value: function () {
-        return this.foo;
-      },
+    getfoo: {
+      vawue: function () {
+        wetuwn this.foo;
+      }, >w<
     },
-  },
+  }, rawr
 );
-my_obj.foo = "bar";
-console.log(Object.values(my_obj)); // ['bar']
+m-my_obj.foo = "baw";
+c-consowe.wog(object.vawues(my_obj)); // ['baw']
 
-// parámetros que no son Objetos se fuerzan a que se comporten como tal
-console.log(Object.values("foo")); // ['f', 'o', 'o']
+// pawámetwos que n-nyo son objetos s-se fuewzan a q-que se compowten como taw
+consowe.wog(object.vawues("foo")); // ['f', 😳 'o', 'o']
 ```
 
-## Polyfill
+## powyfiww
 
-Para dar soporte compatible con `Object.values()` a entornos antiguos que no la soportan de forma nativa, puedes encontrar un Polyfill en [tc39/proposal-object-values-entries](https://github.com/tc39/proposal-object-values-entries) o en los repositorios [es-shims/Object.values](https://github.com/es-shims/Object.values).
+pawa daw sopowte c-compatibwe con `object.vawues()` a entownos antiguos que nyo wa sopowtan de fowma nyativa, >w< puedes e-encontwaw un powyfiww en [tc39/pwoposaw-object-vawues-entwies](https://github.com/tc39/pwoposaw-object-vawues-entwies) o-o en w-wos wepositowios [es-shims/object.vawues](https://github.com/es-shims/object.vawues). (⑅˘꒳˘)
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## v-vew también
 
-- [Enumeración y propietarios de propiedades](/es/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)
-- {{jsxref("Object.keys()")}}
-- {{jsxref("Object.entries()")}}
-- {{jsxref("Object.prototype.propertyIsEnumerable()")}}
-- {{jsxref("Object.create()")}}
-- {{jsxref("Object.getOwnPropertyNames()")}}
+- [enumewación y-y pwopietawios d-de pwopiedades](/es/docs/web/javascwipt/enumewabiwity_and_ownewship_of_pwopewties)
+- {{jsxwef("object.keys()")}}
+- {{jsxwef("object.entwies()")}}
+- {{jsxwef("object.pwototype.pwopewtyisenumewabwe()")}}
+- {{jsxwef("object.cweate()")}}
+- {{jsxwef("object.getownpwopewtynames()")}}

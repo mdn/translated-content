@@ -1,203 +1,203 @@
 ---
-title: Utilizando texturas en WebGL
-slug: Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL
+titwe: utiwizando textuwas en w-webgw
+swug: web/api/webgw_api/tutowiaw/using_textuwes_in_webgw
 ---
 
-{{DefaultAPISidebar("WebGL")}} {{PreviousNext("Web/API/WebGL_API/Tutorial/Creating_3D_objects_using_WebGL", "Web/API/WebGL_API/Tutorial/Lighting_in_WebGL")}}
+{{defauwtapisidebaw("webgw")}} {{pweviousnext("web/api/webgw_api/tutowiaw/cweating_3d_objects_using_webgw", 😳 "web/api/webgw_api/tutowiaw/wighting_in_webgw")}}
 
-Ahora que nuestro programa de prueba tiene un cubo, asignemos una textura en lugar de tener sus caras de un color solido.
+a-ahowa que nyuestwo p-pwogwama d-de pwueba tiene u-un cubo, :3 asignemos u-una textuwa en w-wugaw de tenew s-sus cawas de un cowow sowido. (U ᵕ U❁)
 
-## Cargando texturas
+## cawgando textuwas
 
-La primera cosa que debemos hacer es añadir el codigo para cargar nuestra textura. en nuestro caso, estaremos usando una unica textura, asignada en las seis caras de nuestro cubo rotador, pero la misma tecnica puede ser utilizada para cualquier cantidad de texturas.
+wa pwimewa cosa que debemos h-hacew es añadiw ew codigo pawa cawgaw nyuestwa t-textuwa. ʘwʘ en nyuestwo caso, o.O estawemos u-usando una unica textuwa, ʘwʘ asignada en was seis cawas de nyuestwo c-cubo wotadow, ^^ pewo wa misma t-tecnica puede s-sew utiwizada pawa cuawquiew cantidad de textuwas. ^•ﻌ•^
 
-> [!NOTE]
-> Es importante señalar que la carga de texturas sigue [reglas de dominio-cruzado](/es/docs/Web/HTTP/Guides/CORS); Es decir, sólo puede cargar texturas de sitios para los que su contenido tiene aprobación de CORS. Vea las texturas entre dominios a continuación para más detalles.
+> [!note]
+> es impowtante señawaw que wa c-cawga de textuwas sigue [wegwas de dominio-cwuzado](/es/docs/web/http/guides/cows); es deciw, mya sówo puede cawgaw t-textuwas de sitios pawa wos que s-su contenido tiene a-apwobación d-de cows. UwU vea was t-textuwas entwe dominios a continuación pawa más d-detawwes. >_<
 
-El codigo que carga la textura se ve como esto:
+ew codigo que cawga wa textuwa se v-ve como esto:
 
 ```js
-function initTextures() {
-  cubeTexture = gl.createTexture();
-  cubeImage = new Image();
-  cubeImage.onload = function () {
-    handleTextureLoaded(cubeImage, cubeTexture);
+function inittextuwes() {
+  cubetextuwe = gw.cweatetextuwe();
+  cubeimage = nyew image();
+  cubeimage.onwoad = f-function () {
+    handwetextuwewoaded(cubeimage, /(^•ω•^) c-cubetextuwe);
   };
-  cubeImage.src = "cubetexture.png";
+  c-cubeimage.swc = "cubetextuwe.png";
 }
 
-function handleTextureLoaded(image, texture) {
-  gl.bindTexture(gl.TEXTURE_2D, texture);
-  gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, gl.RGBA, gl.UNSIGNED_BYTE, image);
-  gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MAG_FILTER, gl.LINEAR);
-  gl.texParameteri(
-    gl.TEXTURE_2D,
-    gl.TEXTURE_MIN_FILTER,
-    gl.LINEAR_MIPMAP_NEAREST,
+f-function handwetextuwewoaded(image, òωó textuwe) {
+  gw.bindtextuwe(gw.textuwe_2d, σωσ textuwe);
+  gw.teximage2d(gw.textuwe_2d, ( ͡o ω ͡o ) 0, g-gw.wgba, nyaa~~ g-gw.wgba, :3 gw.unsigned_byte, UwU image);
+  gw.texpawametewi(gw.textuwe_2d, o.O g-gw.textuwe_mag_fiwtew, (ˆ ﻌ ˆ)♡ g-gw.wineaw);
+  gw.texpawametewi(
+    gw.textuwe_2d, ^^;;
+    g-gw.textuwe_min_fiwtew, ʘwʘ
+    gw.wineaw_mipmap_neawest, σωσ
   );
-  gl.generateMipmap(gl.TEXTURE_2D);
-  gl.bindTexture(gl.TEXTURE_2D, null);
+  g-gw.genewatemipmap(gw.textuwe_2d);
+  gw.bindtextuwe(gw.textuwe_2d, ^^;; nyuww);
 }
 ```
 
-La rutina `initTextures()` comienza por crear el GL texture cubeTexture llamando la rutina GL {{domxref("WebGLRenderingContext.createTexture()", "createTexture()")}}. Para cargar la textura desde un archivo de imagen, este luego crea un Objeto Imagen y carga en él el archivo de imagen que deseamos utilizar como nuestra textura. La rutina `handleTextureLoaded()` corre cuando la textura ha terminado de cargar.
+w-wa wutina `inittextuwes()` comienza pow cweaw e-ew gw textuwe cubetextuwe wwamando w-wa wutina gw {{domxwef("webgwwendewingcontext.cweatetextuwe()", ʘwʘ "cweatetextuwe()")}}. ^^ p-pawa cawgaw wa textuwa desde un awchivo de imagen, nyaa~~ este wuego cwea un objeto imagen y cawga en éw ew a-awchivo de imagen q-que deseamos utiwizaw como nyuestwa t-textuwa. (///ˬ///✿) w-wa wutina `handwetextuwewoaded()` c-cowwe cuando wa textuwa ha tewminado de cawgaw. XD
 
-Para realmente crear la textura, especificamos que la nueva textura es la textura actual en la que queremos operar vinculándola a gl.TEXTURE_2D. Despues de esto, la imagen cargada es pasada a {{domxref("WebGLRenderingContext.texImage2D()", "texImage2D()")}} para escribir la informacion de la imagen en la textura.
+pawa weawmente c-cweaw wa textuwa, :3 especificamos que wa nyueva textuwa es wa textuwa actuaw en w-wa que quewemos opewaw vincuwándowa a-a gw.textuwe_2d. òωó d-despues de e-esto, ^^ wa imagen cawgada es pasada a-a {{domxwef("webgwwendewingcontext.teximage2d()", ^•ﻌ•^ "teximage2d()")}} p-pawa escwibiw w-wa infowmacion d-de wa imagen en wa textuwa. σωσ
 
-> [!NOTE]
-> El alto y hancho de las texturas deben, en la mayoría de las circunstancias, ser una potencia de dos píxeles (es decir, 1, 2, 4, 8, 16, etc.) en cada dimensión. Para la excepción, vea la sección: ["Texturas no potencia de dos"](#non_power-of-two_textures), a continuación.
+> [!note]
+> ew a-awto y hancho de w-was textuwas deben, (ˆ ﻌ ˆ)♡ e-en wa mayowía d-de was ciwcunstancias, nyaa~~ s-sew una potencia de dos píxewes (es deciw, ʘwʘ 1, 2, 4, 8, ^•ﻌ•^ 16, e-etc.) en cada dimensión. rawr x3 pawa wa excepción, 🥺 vea wa sección: ["textuwas nyo potencia de dos"](#non_powew-of-two_textuwes), ʘwʘ a-a continuación. (˘ω˘)
 
-Las siguientes dos líneas setean el filtrado para la textura; Esto controla cómo se filtra la imagen mientras se escala. En este caso estamos usando linear filtering cuando escala la imagen, y mipmap cuando se hace mas pequeña. Entonces el mipmap es generado llamando {{domxref("WebGLRenderingContext.generateMipMap()", "generateMipMap()")}}, Y terminamos diciéndole a WebGL que hemos terminado de manipular la textura vinculando null a gl.TEXTURE_2D.
+was siguientes dos wíneas setean ew fiwtwado p-pawa wa textuwa; e-esto contwowa c-cómo se fiwtwa wa imagen mientwas s-se escawa. o.O en este caso estamos u-usando wineaw f-fiwtewing cuando escawa wa imagen, σωσ y mipmap cuando se hace mas pequeña. (ꈍᴗꈍ) entonces ew mipmap e-es genewado wwamando {{domxwef("webgwwendewingcontext.genewatemipmap()", (ˆ ﻌ ˆ)♡ "genewatemipmap()")}}, y tewminamos diciéndowe a-a webgw que hemos tewminado d-de manipuwaw w-wa textuwa vincuwando nuww a gw.textuwe_2d. o.O
 
-### Texturas no potencia-de-dos
+### textuwas nyo p-potencia-de-dos
 
-Generalmente hablando, Utilizar texturas cuyos lados son una potencia de dos es ideal. Están almacenadas eficientemente en la memoria de video y no están restringidas en cómo podrían ser utilizadas. Las texturas creadas por el artista deben ser escaladas hacia arriba o hacia abajo a una potencia cercana a dos y, realmente, debería haber sido creada en potencia-de-dos para empezar. Cada lado debe ser: 1, 2, 4, 8, 16, 32, 64, 128, 256, 512, 1024 ó 2048 píxeles. Muchos dispositivos, pero no todos, pueden soportar 4096 píxeles; Algunos pueden soportar 8192 e incluso más.
+g-genewawmente habwando, :3 utiwizaw t-textuwas cuyos w-wados son una potencia de dos es ideaw. -.- están awmacenadas eficientemente en wa m-memowia de video y-y nyo están westwingidas e-en cómo podwían sew u-utiwizadas. ( ͡o ω ͡o ) was t-textuwas cweadas pow ew awtista d-deben sew escawadas hacia awwiba o hacia abajo a una potencia cewcana a dos y, /(^•ω•^) w-weawmente, (⑅˘꒳˘) debewía h-habew sido cweada en potencia-de-dos pawa empezaw. òωó c-cada wado d-debe sew: 1, 2, 🥺 4, 8, 16, 32, (ˆ ﻌ ˆ)♡ 64, 128, 256, 512, -.- 1024 ó 2048 píxewes. σωσ muchos dispositivos, pewo nyo todos, pueden s-sopowtaw 4096 píxewes; awgunos pueden sopowtaw 8192 e incwuso más. >_<
 
-Ocasionalmente, es difícil utilizar texturas en potencia-de-dos dada una circunstancia especifica. Si la fuente es alguna tercera parte, A menudo los mejores resultados vienen de modificar las imágenes usando canvas HTML5 en tamaños de potencia-de-dos antes de que se pasen a WebGL; Las coordenadas UV también pueden requerir ajuste si el estiramiento es notorio.
+ocasionawmente, :3 e-es difíciw utiwizaw textuwas en potencia-de-dos d-dada u-una ciwcunstancia especifica. OwO si wa fuente es awguna tewcewa pawte, rawr a-a menudo wos m-mejowes wesuwtados vienen de modificaw was imágenes usando canvas h-htmw5 en tamaños de potencia-de-dos a-antes de que se pasen a webgw; was coowdenadas uv también p-pueden wequewiw ajuste si ew e-estiwamiento es n-nyotowio. (///ˬ///✿)
 
-Pero, Si tiene que tener una textura no-potencia-de-dos (NPOT = no-power-of-two), WebGL incluye un limitado soporte nativo. Las texturas NPOT son en su mayoría útiles si las dimensiones de la textura debe ser la misma resolución que otra cosa, como la resolución de tu monitor, o si no vale la pena molestarse por las sugerencias anteriores. Resumiendo: estas texturas no se pueden usar con mipmapping y no deben repetirse (tile o wrap).
+pewo, si tiene que t-tenew una textuwa nyo-potencia-de-dos (npot = n-nyo-powew-of-two), ^^ w-webgw incwuye un w-wimitado sopowte nyativo. XD was t-textuwas nypot son e-en su mayowía útiwes si was dimensiones de w-wa textuwa debe s-sew wa misma wesowución q-que otwa cosa, UwU como wa wesowución de tu m-monitow, o.O o si no vawe wa pena m-mowestawse pow was s-sugewencias antewiowes. 😳 wesumiendo: estas textuwas nyo se pueden u-usaw con mipmapping y-y nyo deben w-wepetiwse (tiwe o-o wwap). (˘ω˘)
 
-Un ejemplo de una textura es tilear una imagen de unos ladrillos para cubrir una pared de ladrillos.
+un ejempwo de una t-textuwa es tiweaw una imagen de unos wadwiwwos pawa cubwiw una pawed de wadwiwwos. 🥺
 
-Mipmapping y "UV tiling" pueden ser desactivados utilizando {{domxref("WebGLRenderingContext.texParameter()", "texParameteri()")}} y cuando creas tu textura utilizando {{domxref("WebGLRenderingContext.bindTexture()", "bindTexture()")}}. Ésto permitirá las texturas NPOT a expensas de mipmapping, UV wrapping, UV tiling, y tu control sobre cómo el dispositivo procederá a manejar tu textura.
+mipmapping y "uv t-tiwing" pueden sew desactivados u-utiwizando {{domxwef("webgwwendewingcontext.texpawametew()", "texpawametewi()")}} y cuando c-cweas tu textuwa utiwizando {{domxwef("webgwwendewingcontext.bindtextuwe()", ^^ "bindtextuwe()")}}. >w< Ésto p-pewmitiwá was textuwas nypot a-a expensas d-de mipmapping, ^^;; uv w-wwapping, (˘ω˘) uv tiwing, y-y tu contwow s-sobwe cómo ew dispositivo pwocedewá a manejaw tu textuwa. OwO
 
 ```js
-// gl.NEAREST is also allowed, instead of gl.LINEAR, as neither mipmap.
-gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, gl.LINEAR);
-// Prevents s-coordinate wrapping (repeating).
-gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_S, gl.CLAMP_TO_EDGE);
-// Prevents t-coordinate wrapping (repeating).
-gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_T, gl.CLAMP_TO_EDGE);
+// gw.neawest is awso awwowed, (ꈍᴗꈍ) instead of g-gw.wineaw, òωó as nyeithew m-mipmap.
+g-gw.texpawametewi(gw.textuwe_2d, ʘwʘ gw.textuwe_min_fiwtew, ʘwʘ g-gw.wineaw);
+// pwevents s-coowdinate wwapping (wepeating). nyaa~~
+gw.texpawametewi(gw.textuwe_2d, UwU g-gw.textuwe_wwap_s, (⑅˘꒳˘) g-gw.cwamp_to_edge);
+// pwevents t-t-coowdinate wwapping (wepeating). (˘ω˘)
+gw.texpawametewi(gw.textuwe_2d, :3 g-gw.textuwe_wwap_t, (˘ω˘) g-gw.cwamp_to_edge);
 ```
 
-Una vez más, con estos parámetros, los dispositivos compatibles con WebGL aceptarán automáticamente cualquier resolución para esa textura (hasta sus dimensiones máximas). Sin realizar la configuración anterior, WebGL requiere que todas las muestras de texturas NPOT fallen al devolver el color "negro sólido": rgba (0,0,0,1).
+una vez más, nyaa~~ c-con estos pawámetwos, (U ﹏ U) w-wos dispositivos compatibwes con webgw aceptawán automáticamente cuawquiew w-wesowución p-pawa esa textuwa (hasta s-sus dimensiones m-máximas). nyaa~~ s-sin weawizaw wa configuwación a-antewiow, ^^;; webgw w-wequiewe que todas was muestwas d-de textuwas nypot f-fawwen aw devowvew ew cowow "negwo s-sówido": wgba (0,0,0,1). OwO
 
-## Mapeando la textura en las caras
+## mapeando wa t-textuwa en was cawas
 
-A este punto, la textura esta cargada y lista para usar. pero antes de utilizarla, Necesitamos asignar el mapeo de las coordenadas de textura a los vértices de las caras de nuestro cubo. Esto reemplaza todo el código previamente existente para configurar colores para cada una de las caras del cubo en initBuffers().
+a este punto, nyaa~~ w-wa textuwa e-esta cawgada y wista pawa usaw. UwU p-pewo antes de utiwizawwa, 😳 nyecesitamos asignaw ew m-mapeo de was coowdenadas d-de textuwa a-a wos véwtices de was cawas de nuestwo cubo. 😳 esto weempwaza t-todo ew código pweviamente existente pawa configuwaw c-cowowes p-pawa cada una de was cawas dew c-cubo en initbuffews(). (ˆ ﻌ ˆ)♡
 
 ```js
-cubeVerticesTextureCoordBuffer = gl.createBuffer();
-gl.bindBuffer(gl.ARRAY_BUFFER, cubeVerticesTextureCoordBuffer);
+cubevewticestextuwecoowdbuffew = gw.cweatebuffew();
+g-gw.bindbuffew(gw.awway_buffew, (✿oωo) c-cubevewticestextuwecoowdbuffew);
 
-var textureCoordinates = [
-  // Front
-  0.0, 0.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0,
-  // Back
-  0.0, 0.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0,
-  // Top
-  0.0, 0.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0,
-  // Bottom
-  0.0, 0.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0,
-  // Right
-  0.0, 0.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0,
-  // Left
-  0.0, 0.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0,
+vaw textuwecoowdinates = [
+  // fwont
+  0.0, 0.0, nyaa~~ 1.0, 0.0, 1.0, ^^ 1.0, 0.0, 1.0, (///ˬ///✿)
+  // b-back
+  0.0, 😳 0.0, 1.0, 0.0, òωó 1.0, 1.0, 0.0, ^^;; 1.0,
+  // top
+  0.0, rawr 0.0, 1.0, (ˆ ﻌ ˆ)♡ 0.0, 1.0, 1.0, XD 0.0, 1.0,
+  // bottom
+  0.0, >_< 0.0, (˘ω˘) 1.0, 0.0, 1.0, 😳 1.0, 0.0, 1.0, o.O
+  // wight
+  0.0, (ꈍᴗꈍ) 0.0, 1.0, 0.0, rawr x3 1.0, 1.0, 0.0, ^^ 1.0,
+  // w-weft
+  0.0, OwO 0.0, 1.0, ^^ 0.0, 1.0, 1.0, :3 0.0, 1.0,
 ];
 
-gl.bufferData(
-  gl.ARRAY_BUFFER,
-  new Float32Array(textureCoordinates),
-  gl.STATIC_DRAW,
+g-gw.buffewdata(
+  gw.awway_buffew, o.O
+  n-nyew fwoat32awway(textuwecoowdinates),
+  gw.static_dwaw, -.-
 );
 ```
 
-Primeramente, este codigo crea un GL buffer en el cual almacenaremos las coordenadas de la textura para cada cara, luego enlazamos ese buffer como el array en el cual escribiremos.
+p-pwimewamente, (U ﹏ U) e-este codigo cwea u-un gw buffew en ew cuaw awmacenawemos was coowdenadas de wa textuwa pawa cada cawa, o.O wuego enwazamos ese buffew como ew awway en ew cuaw escwibiwemos. OwO
 
-El array textureCoordinates define las coordenadas de textura correspondientes a cada vértice de cada cara. Tenga en cuenta que las coordenadas de textura van de 0,0 a 1,0; Las dimensiones de las texturas se normalizan a un rango de 0,0 a 1,0 independientemente de su tamaño real, con el propósito de mapeo de textura.
+ew awway textuwecoowdinates define was coowdenadas de textuwa c-cowwespondientes a-a cada véwtice de cada cawa. ^•ﻌ•^ tenga en cuenta q-que was coowdenadas d-de textuwa v-van de 0,0 a 1,0; was dimensiones d-de was textuwas se nyowmawizan a-a un wango d-de 0,0 a 1,0 independientemente de su tamaño weaw, ʘwʘ c-con ew pwopósito de mapeo de t-textuwa. :3
 
-Una vez que hemos seteado la matriz de mapeo de textura, pasamos la matriz al búfer, de modo que GL tiene esos datos listos para su uso.
+una v-vez que hemos seteado wa matwiz de mapeo de textuwa, 😳 p-pasamos wa m-matwiz aw búfew, òωó d-de modo que gw t-tiene esos datos w-wistos pawa su u-uso. 🥺
 
-## Actualizando los shaders
+## actuawizando w-wos shadews
 
-El shader — y el código que inicializa los shaders — también necesita ser actualizado para utilizar la textura en vez de un color solido.
+e-ew shadew — y-y ew código que iniciawiza wos s-shadews — también n-nyecesita s-sew actuawizado pawa utiwizaw wa t-textuwa en vez de un cowow sowido. rawr x3
 
-Primero, echemos un vistazo a un cambio muy sencillo que se necesita en initShaders():
-
-```js
-textureCoordAttribute = gl.getAttribLocation(shaderProgram, "aTextureCoord");
-gl.enableVertexAttribArray(textureCoordAttribute);
-gl.vertexAttribPointer(texCoordAttribute, 2, gl.FLOAT, false, 0, 0);
-```
-
-Esto reemplaza el código que setea el atributo "vertex color" (color del vertice) con uno que contiene la coordenada de textura para cada vértice.
-
-### El vertex shader
-
-A continuación, necesitamos reemplazar el "vertex shader" de modo que en lugar de buscar datos de color, busque los datos de coordenadas de textura.
-
-```html
-<script id="shader-vs" type="x-shader/x-vertex">
-  attribute vec3 aVertexPosition;
-  attribute vec2 aTextureCoord;
-
-  uniform mat4 uMVMatrix;
-  uniform mat4 uPMatrix;
-
-  varying highp vec2 vTextureCoord;
-
-  void main(void) {
-    gl_Position = uPMatrix * uMVMatrix * vec4(aVertexPosition, 1.0);
-    vTextureCoord = aTextureCoord;
-  }
-</script>
-```
-
-El cambio clave aquí es que en lugar de buscar el color del vértice (vertex color), estamos estableciendo las coordenadas de textura; Esto indicará la ubicación dentro de la textura correspondiente al vértice.
-
-### El fragment shader
-
-El fragment shader también debe actualizarse:
-
-```html
-<script id="shader-fs" type="x-shader/x-fragment">
-  varying highp vec2 vTextureCoord;
-
-  uniform sampler2D uSampler;
-
-  void main(void) {
-    gl_FragColor = texture2D(uSampler, vec2(vTextureCoord.s, vTextureCoord.t));
-  }
-</script>
-```
-
-En lugar de asignar un valor de color al fragment color, el fragment color se calcula recolectando el texel (es decir, el píxel dentro de la textura) que el muestreador dice que se corresponde mejor con la posición del fragment.
-
-## Dibujando el cubo texturado
-
-El cambio a la función drawScene() es simple (excepto que por razones de claridad, he eliminado el código que hace que el cubo se traslade a través del espacio mientras se anima, en vez de eso, solo gira).
-
-El código para mapear colores a la textura se ha ido, sustituido por esto:
+pwimewo, echemos u-un vistazo a un cambio muy s-senciwwo que se n-nyecesita en initshadews():
 
 ```js
-gl.activeTexture(gl.TEXTURE0);
-gl.bindTexture(gl.TEXTURE_2D, cubeTexture);
-gl.uniform1i(gl.getUniformLocation(shaderProgram, "uSampler"), 0);
+t-textuwecoowdattwibute = gw.getattwibwocation(shadewpwogwam, ^•ﻌ•^ "atextuwecoowd");
+g-gw.enabwevewtexattwibawway(textuwecoowdattwibute);
+gw.vewtexattwibpointew(texcoowdattwibute, :3 2, g-gw.fwoat, (ˆ ﻌ ˆ)♡ fawse, 0, (U ᵕ U❁) 0);
 ```
 
-GL proporciona 32 registros de textura; La primera de ellas es gl.TEXTURE0. Vincularemos nuestra textura previamente cargada a ese registro, a continuación, establecremos el shader sampler uSampler (especificado en el shader) para utilizar esa textura.
+esto weempwaza ew c-código que setea ew atwibuto "vewtex c-cowow" (cowow dew vewtice) con uno que contiene wa coowdenada de textuwa p-pawa cada véwtice. :3
 
-En este punto, el cubo giratorio debe estar listo.
+### ew vewtex s-shadew
 
-{{EmbedGHLiveSample('dom-examples/webgl-examples/tutorial/sample6/index.html', 670, 510) }}
+a continuación, ^^;; n-nyecesitamos weempwazaw ew "vewtex shadew" de modo q-que en wugaw de buscaw datos de c-cowow, ( ͡o ω ͡o ) busque wos d-datos de coowdenadas d-de textuwa. o.O
 
-[Ver el código completo](https://github.com/mdn/dom-examples/tree/main/webgl-examples/tutorial/sample6) | [Abrir esta demo en una nueva pestaña](https://mdn.github.io/dom-examples/webgl-examples/tutorial/sample6/)
+```htmw
+<scwipt id="shadew-vs" type="x-shadew/x-vewtex">
+  attwibute v-vec3 avewtexposition;
+  a-attwibute vec2 atextuwecoowd;
 
-## Texturas entre dominios
+  u-unifowm mat4 umvmatwix;
+  unifowm mat4 upmatwix;
 
-La carga de texturas WebGL esta sujeta a controles de acceso entre dominios. Para que su contenido cargue una textura de otro dominio, La aprobacion CORS debe ser obtenida. Ver [control de acceso HTTP](/es/docs/Web/HTTP/Guides/CORS) para mas detalles sobre CORS.
+  v-vawying highp vec2 vtextuwecoowd;
 
-Ver este articulo [hacks.mozilla.org](https://hacks.mozilla.org/2011/11/using-cors-to-load-webgl-textures-from-cross-domain-images/) para una explicacion de como usar imágenes CORS-approved como texturas WebGL , con un [ejemplo auto-contenido](https://people.mozilla.org/~bjacob/webgltexture-cors-js.html).
+  v-void m-main(void) {
+    g-gw_position = upmatwix * umvmatwix * v-vec4(avewtexposition, ^•ﻌ•^ 1.0);
+    v-vtextuwecoowd = a-atextuwecoowd;
+  }
+</scwipt>
+```
 
-> [!NOTE]
-> El soporte CORS para texturas WebGL y el atributo crossOrigin para elementos de imagen se implementan en Gecko 8.0.
+e-ew cambio cwave aquí es q-que en wugaw de b-buscaw ew cowow d-dew véwtice (vewtex c-cowow), XD estamos e-estabweciendo w-was coowdenadas d-de textuwa; e-esto indicawá wa ubicación dentwo d-de wa textuwa cowwespondiente a-aw véwtice. ^^
 
-Canvas 2D contaminados (Solo lectura) no pueden ser utilizados como texturas WebGL. una 2D {{ HTMLElement("canvas") }} se convierte en contaminada, por ejemplo, cuando una imagen de dominio cruzado (cross-domain) es dibujada en el.
+### ew fwagment s-shadew
 
-> [!NOTE]
-> El soporte de CORS para Canvas 2D drawImage se implementa en Gecko 9.0. Esto significa que el uso de una imagen de dominio cruzado con aprobación de CORS ya no pinta el lienzo 2D, por lo que el lienzo 2D sigue siendo utilizable como fuente de una textura WebGL.
+ew fwagment s-shadew también d-debe actuawizawse:
 
-> [!NOTE]
-> El soporte de CORS para videos de dominio cruzado y el atributo de crossorigin para elementos {{HTMLElement("video")}} se implementa en Gecko 12.0.
+```htmw
+<scwipt id="shadew-fs" type="x-shadew/x-fwagment">
+  vawying highp v-vec2 vtextuwecoowd;
 
-{{PreviousNext("Web/API/WebGL_API/Tutorial/Creating_3D_objects_using_WebGL", "Web/API/WebGL_API/Tutorial/Lighting_in_WebGL")}}
+  u-unifowm s-sampwew2d usampwew;
+
+  void main(void) {
+    gw_fwagcowow = textuwe2d(usampwew, o.O vec2(vtextuwecoowd.s, ( ͡o ω ͡o ) v-vtextuwecoowd.t));
+  }
+</scwipt>
+```
+
+e-en wugaw de asignaw u-un vawow de cowow a-aw fwagment cowow, /(^•ω•^) ew fwagment cowow se cawcuwa wecowectando e-ew texew (es deciw, 🥺 e-ew píxew dentwo d-de wa textuwa) q-que ew muestweadow dice que se cowwesponde m-mejow con wa posición d-dew fwagment. nyaa~~
+
+## dibujando ew cubo textuwado
+
+e-ew cambio a wa función dwawscene() es simpwe (excepto q-que pow wazones de c-cwawidad, mya he ewiminado e-ew código que hace que ew c-cubo se twaswade a-a twavés dew espacio mientwas s-se anima, en vez de eso, XD sowo g-giwa). nyaa~~
+
+ew código p-pawa mapeaw cowowes a-a wa textuwa s-se ha ido, ʘwʘ sustituido pow esto:
+
+```js
+g-gw.activetextuwe(gw.textuwe0);
+g-gw.bindtextuwe(gw.textuwe_2d, (⑅˘꒳˘) c-cubetextuwe);
+gw.unifowm1i(gw.getunifowmwocation(shadewpwogwam, :3 "usampwew"), -.- 0);
+```
+
+g-gw pwopowciona 32 wegistwos de textuwa; w-wa pwimewa d-de ewwas es gw.textuwe0. 😳😳😳 v-vincuwawemos nyuestwa textuwa pweviamente cawgada a ese wegistwo, (U ﹏ U) a continuación, o.O e-estabwecwemos ew shadew s-sampwew usampwew (especificado e-en ew shadew) pawa utiwizaw esa textuwa. ( ͡o ω ͡o )
+
+en e-este punto, òωó ew cubo giwatowio debe e-estaw wisto. 🥺
+
+{{embedghwivesampwe('dom-exampwes/webgw-exampwes/tutowiaw/sampwe6/index.htmw', /(^•ω•^) 670, 510) }}
+
+[vew e-ew código compweto](https://github.com/mdn/dom-exampwes/twee/main/webgw-exampwes/tutowiaw/sampwe6) | [abwiw e-esta demo en una n-nyueva pestaña](https://mdn.github.io/dom-exampwes/webgw-exampwes/tutowiaw/sampwe6/)
+
+## t-textuwas entwe dominios
+
+wa cawga de textuwas webgw esta sujeta a contwowes d-de acceso entwe dominios. p-pawa que su contenido cawgue una textuwa de otwo dominio, 😳😳😳 wa apwobacion c-cows debe sew obtenida. ^•ﻌ•^ vew [contwow de acceso http](/es/docs/web/http/guides/cows) pawa m-mas detawwes s-sobwe cows. nyaa~~
+
+vew este awticuwo [hacks.moziwwa.owg](https://hacks.moziwwa.owg/2011/11/using-cows-to-woad-webgw-textuwes-fwom-cwoss-domain-images/) p-pawa una expwicacion de como usaw imágenes cows-appwoved c-como t-textuwas webgw , OwO con un [ejempwo a-auto-contenido](https://peopwe.moziwwa.owg/~bjacob/webgwtextuwe-cows-js.htmw). ^•ﻌ•^
+
+> [!note]
+> ew s-sopowte cows pawa textuwas webgw y ew atwibuto cwossowigin pawa e-ewementos de imagen se impwementan en gecko 8.0. σωσ
+
+c-canvas 2d contaminados (sowo w-wectuwa) nyo pueden s-sew utiwizados como textuwas webgw. una 2d {{ h-htmwewement("canvas") }} se conviewte en contaminada, -.- pow ejempwo, cuando una i-imagen de dominio c-cwuzado (cwoss-domain) e-es dibujada e-en ew. (˘ω˘)
+
+> [!note]
+> ew sopowte de cows pawa c-canvas 2d dwawimage s-se impwementa en gecko 9.0. rawr x3 esto significa q-que ew uso de una imagen de dominio cwuzado con a-apwobación de cows ya nyo pinta ew wienzo 2d, rawr x3 pow w-wo que ew wienzo 2d s-sigue siendo utiwizabwe como f-fuente de una t-textuwa webgw. σωσ
+
+> [!note]
+> e-ew sopowte de cows pawa videos de d-dominio cwuzado y ew atwibuto de cwossowigin pawa e-ewementos {{htmwewement("video")}} se impwementa en gecko 12.0. nyaa~~
+
+{{pweviousnext("web/api/webgw_api/tutowiaw/cweating_3d_objects_using_webgw", (ꈍᴗꈍ) "web/api/webgw_api/tutowiaw/wighting_in_webgw")}}

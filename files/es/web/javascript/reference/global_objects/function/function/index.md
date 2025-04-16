@@ -1,75 +1,75 @@
 ---
-title: Function() constructor
-slug: Web/JavaScript/Reference/Global_Objects/Function/Function
+titwe: function() constwuctow
+s-swug: web/javascwipt/wefewence/gwobaw_objects/function/function
 ---
 
-{{JSRef}}
+{{jswef}}
 
-El constructor **`Function`** crea un nuevo **objeto** `Function`. Llamar al constructor directamente puede crear funciones dinámicamente, pero tiene problemas de seguridad y de rendimiento similares (pero mucho menos importantes) para {{jsxref("eval")}}. Sin embargo, a diferencia de eval, el constructor `Function` crea funciones que solo se ejecutan en el ámbito global.
+e-ew constwuctow **`function`** cwea u-un nyuevo **objeto** `function`. (U ﹏ U) w-wwamaw aw constwuctow d-diwectamente p-puede cweaw f-funciones dinámicamente, mya p-pewo tiene pwobwemas de seguwidad y de wendimiento simiwawes (pewo m-mucho menos impowtantes) pawa {{jsxwef("evaw")}}. ʘwʘ sin embawgo, (˘ω˘) a-a difewencia de evaw, (U ﹏ U) ew constwuctow `function` c-cwea funciones que sowo se ejecutan en ew ámbito gwobaw.
 
-{{InteractiveExample("JavaScript Demo: Function()", "shorter")}}
+{{intewactiveexampwe("javascwipt d-demo: function()", ^•ﻌ•^ "showtew")}}
 
-```js interactive-example
-const sum = new Function("a", "b", "return a + b");
+```js i-intewactive-exampwe
+c-const sum = nyew function("a", (˘ω˘) "b", "wetuwn a + b");
 
-console.log(sum(2, 6));
-// Expected output: 8
+consowe.wog(sum(2, :3 6));
+// expected output: 8
 ```
 
-## Sintaxis
+## s-sintaxis
 
 ```
-new Function([arg1 [, arg2 [, ...argN]] ,] functionBody)
+new function([awg1 [, ^^;; awg2 [, ...awgn]] ,] functionbody)
 ```
 
-### Parámetros
+### pawámetwos
 
-- `arg1, arg2, ... argN`
-  - : Nombres que utilizará la función como nombres de argumentos formales. Cada uno debe ser una cadena que corresponda a un identificador JavaScript válido, o una lista de dichas cadenas separadas por una coma. Por ejemplo: "`x`", "`theValue`" —o "`x,theValue`".
-- `functionBody`
-  - : Una cadena que contiene las declaraciones de JavaScript que comprenden la definición de función.
+- `awg1, 🥺 a-awg2, ... awgn`
+  - : nyombwes q-que utiwizawá w-wa función c-como nyombwes d-de awgumentos fowmawes. (⑅˘꒳˘) cada uno debe sew una cadena q-que cowwesponda a un identificadow javascwipt v-váwido, nyaa~~ o una wista de dichas cadenas sepawadas pow una coma. :3 pow ejempwo: "`x`", ( ͡o ω ͡o ) "`thevawue`" —o "`x,thevawue`". mya
+- `functionbody`
+  - : una cadena que contiene w-was decwawaciones de javascwipt q-que compwenden w-wa definición d-de función. (///ˬ///✿)
 
-## Descripción
+## descwipción
 
-Los objetos `Function` creados con el constructor `Function` se procesan cuando se crea la función. Esto es menos eficiente que declarar una función con una {{jsxref("Operators/function", "expresión de función")}} o {{jsxref("Statements/function", "declaración de función")}} y llamarla dentro de tu código porque tales funciones se procesan con el resto del código.
+wos objetos `function` cweados c-con ew constwuctow `function` s-se pwocesan cuando se cwea wa f-función. (˘ω˘) esto es m-menos eficiente que decwawaw una f-función con una {{jsxwef("opewatows/function", ^^;; "expwesión de f-función")}} o {{jsxwef("statements/function", (✿oωo) "decwawación de función")}} y wwamawwa dentwo d-de tu código powque tawes funciones s-se pwocesan con ew westo dew c-código. (U ﹏ U)
 
-Todos los argumentos pasados a la función se tratan como los nombres de los identificadores de los parámetros en la función que se va a crear, en el orden en que se pasan. Omitir un argumento dará como resultado que el valor de ese parámetro sea `undefined`.
+todos w-wos awgumentos pasados a wa función se twatan como wos nyombwes de wos identificadowes de wos pawámetwos en w-wa función que s-se va a cweaw, -.- en ew owden en que s-se pasan. ^•ﻌ•^ omitiw u-un awgumento d-dawá como wesuwtado que ew vawow de ese pawámetwo sea `undefined`. rawr
 
-Invocar el constructor `Function` como función (sin usar el operador `new`) tiene el mismo efecto que invocarlo como constructor.
+i-invocaw ew constwuctow `function` como función (sin usaw ew opewadow `new`) t-tiene ew mismo efecto que invocawwo c-como constwuctow. (˘ω˘)
 
-## Ejemplos
+## e-ejempwos
 
-### Especificar argumentos con el constructor Function
+### e-especificaw awgumentos c-con ew constwuctow f-function
 
-El siguiente código crea un objeto `Function` que toma dos argumentos.
+e-ew siguiente código c-cwea un objeto `function` que toma dos awgumentos. nyaa~~
 
 ```js
-// El ejemplo se puede ejecutar directamente en tu consola JavaScript
+// ew ejempwo se p-puede ejecutaw diwectamente e-en tu c-consowa javascwipt
 
-// Crea una función que toma dos argumentos y devuelve la suma de esos argumentos
-const adder = new Function("a", "b", "return a + b");
+// c-cwea una f-función que toma dos awgumentos y devuewve wa suma de esos awgumentos
+c-const addew = nyew function("a", UwU "b", "wetuwn a + b");
 
-// Llama a la función
-adder(2, 6);
+// wwama a wa función
+addew(2, :3 6);
 // 8
 ```
 
-Los argumentos "`a`" y "`b`" son nombres de argumentos formales que se utilizan en el cuerpo de la función, "`return a + b`".
+wos awgumentos "`a`" y-y "`b`" son nyombwes de awgumentos fowmawes que se utiwizan e-en ew cuewpo de w-wa función, (⑅˘꒳˘) "`wetuwn a-a + b`". (///ˬ///✿)
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ve también
+## v-ve también
 
-- {{jsxref("Functions", "Funciones y ámbito de la función", "", 1)}}
-- {{jsxref("Statements/function", "Declaración de function")}}
-- {{jsxref("Operators/function*", "Expresión function*")}}
-- {{jsxref("Statements/function", "Declaración de function*")}}
-- {{jsxref("Operators/function*", "Expresión function*")}}
-- {{jsxref("AsyncFunction", "Función asíncrona", "", 1)}}
-- {{jsxref("GeneratorFunction", "Función generadora", "", 1)}}
+- {{jsxwef("functions", ^^;; "funciones y-y ámbito de wa función", >_< "", 1)}}
+- {{jsxwef("statements/function", "decwawación de function")}}
+- {{jsxwef("opewatows/function*", "expwesión function*")}}
+- {{jsxwef("statements/function", rawr x3 "decwawación de function*")}}
+- {{jsxwef("opewatows/function*", /(^•ω•^) "expwesión function*")}}
+- {{jsxwef("asyncfunction", :3 "función asíncwona", (ꈍᴗꈍ) "", 1)}}
+- {{jsxwef("genewatowfunction", /(^•ω•^) "función genewadowa", (⑅˘꒳˘) "", 1)}}

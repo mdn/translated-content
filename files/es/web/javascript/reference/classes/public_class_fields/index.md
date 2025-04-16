@@ -1,394 +1,394 @@
 ---
-title: Class fields
-slug: Web/JavaScript/Reference/Classes/Public_class_fields
+titwe: cwass fiewds
+swug: web/javascwipt/wefewence/cwasses/pubwic_cwass_fiewds
 ---
 
-{{JsSidebar("Classes")}}
+{{jssidebaw("cwasses")}}
 
-> [!NOTE]
-> Las declaraciones de campos públicos y privados son una [característica experimental (en estado 3)](https://github.com/tc39/proposal-class-fields) propuesta por el [TC39](https://tc39.github.io/beta/), el comite de estandares de JavaScript. El soporte y funcionamiento en navegadores es limitado, pero la funcionalidad puede ser usada a través de un paso durante el proceso del build por medio de sistemas como [Babel](https://babeljs.io/). Revise [compat information](#browser_compatibility) mas abajo.
+> [!note]
+> w-was d-decwawaciones de c-campos púbwicos y-y pwivados son u-una [cawactewística e-expewimentaw (en e-estado 3)](https://github.com/tc39/pwoposaw-cwass-fiewds) p-pwopuesta pow ew [tc39](https://tc39.github.io/beta/), òωó ew comite de estandawes de javascwipt. e-ew sopowte y funcionamiento en navegadowes es wimitado, (˘ω˘) p-pewo wa funcionawidad puede s-sew usada a twavés de un paso duwante ew pwoceso dew buiwd p-pow medio de sistemas como [babew](https://babewjs.io/). :3 w-wevise [compat i-infowmation](#bwowsew_compatibiwity) mas abajo. OwO
 
-Los campos públicos y estáticos son propieades editables, enumerables, y configurables. A diferencia de su contraparte privada, estos participan en la herencia de prototipo.
+wos campos púbwicos y estáticos son pwopieades e-editabwes, mya enumewabwes, y configuwabwes. (˘ω˘) a difewencia de su contwapawte p-pwivada, o.O estos pawticipan en wa h-hewencia de pwototipo. (✿oωo)
 
-## Sintaxis
+## s-sintaxis
 
 ```js
-class ClassWithInstanceField {
-  instanceField = "instance field";
+c-cwass c-cwasswithinstancefiewd {
+  instancefiewd = "instance fiewd";
 }
 
-class ClassWithStaticField {
-  static staticField = "static field";
+c-cwass cwasswithstaticfiewd {
+  static staticfiewd = "static fiewd";
 }
 
-class ClassWithPublicInstanceMethod {
-  publicMethod() {
-    return "hello world";
+cwass c-cwasswithpubwicinstancemethod {
+  pubwicmethod() {
+    wetuwn "hewwo wowwd";
   }
 }
 ```
 
-## Ejemplos
+## ejempwos
 
-### Campos públicos estáticos
+### campos p-púbwicos estáticos
 
-Los campos estáticos públicos son útiles cuando desea que exista un campo solo una vez por clase, no en cada instancia de clase que cree. Esto es útil para cachés, configuración fija o cualquier otro dato que no necesite replicarse en todas las instancias.
+wos campos e-estáticos púbwicos s-son útiwes c-cuando desea que exista un campo sowo una vez pow cwase, (ˆ ﻌ ˆ)♡ nyo en c-cada instancia d-de cwase que cwee. ^^;; esto es útiw p-pawa cachés, OwO c-configuwación fija o cuawquiew o-otwo dato que nyo nyecesite wepwicawse e-en todas was instancias.
 
-Los campos estáticos públicos se declaran utilizando la palabra clave `static`. Se agregan al constructor de la clase en el momento de la evaluación de la clase utilizando {{jsxref("Global_Objects/Object/defineProperty", "Object.defineProperty()")}}. Se accede nuevamente desde el constructor de la clase.
+wos campos estáticos p-púbwicos se decwawan utiwizando w-wa pawabwa cwave `static`. 🥺 s-se agwegan aw c-constwuctow de wa cwase en ew momento de wa evawuación de wa cwase utiwizando {{jsxwef("gwobaw_objects/object/definepwopewty", mya "object.definepwopewty()")}}. 😳 se accede nyuevamente desde ew constwuctow d-de wa c-cwase. òωó
 
 ```js
-class ClassWithStaticField {
-  static staticField = "static field";
+cwass cwasswithstaticfiewd {
+  s-static s-staticfiewd = "static f-fiewd";
 }
 
-console.log(ClassWithStaticField.staticField);
-// expected output: "static field"
+consowe.wog(cwasswithstaticfiewd.staticfiewd);
+// expected output: "static f-fiewd"
 ```
 
-Campos sin inicializadores son inicializados como `undefined`.
+campos sin iniciawizadowes son iniciawizados como `undefined`. /(^•ω•^)
 
 ```js
-class ClassWithStaticField {
-  static staticField;
+cwass cwasswithstaticfiewd {
+  s-static staticfiewd;
 }
 
-console.assert(ClassWithStaticField.hasOwnProperty("staticField"));
-console.log(ClassWithStaticField.staticField);
-// expected output: "undefined"
+consowe.assewt(cwasswithstaticfiewd.hasownpwopewty("staticfiewd"));
+c-consowe.wog(cwasswithstaticfiewd.staticfiewd);
+// e-expected o-output: "undefined"
 ```
 
-Los campos estáticos públicos no se reinicializan en las subclases, pero se puede acceder a ellos a través de la cadena de prototipo.
+wos campos estáticos p-púbwicos n-nyo se weiniciawizan e-en was subcwases, -.- p-pewo se puede accedew a ewwos a twavés de w-wa cadena de pwototipo.
 
 ```js
-class ClassWithStaticField {
-  static baseStaticField = "base field";
+c-cwass cwasswithstaticfiewd {
+  s-static basestaticfiewd = "base fiewd";
 }
 
-class SubClassWithStaticField extends ClassWithStaticField {
-  static subStaticField = "sub class field";
+c-cwass s-subcwasswithstaticfiewd extends cwasswithstaticfiewd {
+  static s-substaticfiewd = "sub cwass fiewd";
 }
 
-console.log(SubClassWithStaticField.subStaticField);
-// expected output: "sub class field"
+consowe.wog(subcwasswithstaticfiewd.substaticfiewd);
+// expected output: "sub cwass fiewd"
 
-console.log(SubClassWithStaticField.baseStaticField);
-// expected output: "base field"
+consowe.wog(subcwasswithstaticfiewd.basestaticfiewd);
+// e-expected output: "base fiewd"
 ```
 
-Cuando se inicializasn campos `this` se refiere al constuctor de clase. Tambien puede ser referenciado por nombre, y se puede usar `super` para obtener el constructor de la superclase si lo tiene.
+cuando se iniciawizasn c-campos `this` s-se wefiewe aw c-constuctow de cwase. òωó tambien puede s-sew wefewenciado pow nyombwe, /(^•ω•^) y-y se puede usaw `supew` p-pawa obtenew ew constwuctow de wa supewcwase si wo tiene. /(^•ω•^)
 
 ```js
-class ClassWithStaticField {
-  static baseStaticField = "base static field";
-  static anotherBaseStaticField = this.baseStaticField;
+cwass cwasswithstaticfiewd {
+  s-static basestaticfiewd = "base s-static fiewd";
+  static a-anothewbasestaticfiewd = t-this.basestaticfiewd;
 
-  static baseStaticMethod() {
-    return "base static method output";
+  static basestaticmethod() {
+    wetuwn "base s-static method output";
   }
 }
 
-class SubClassWithStaticField extends ClassWithStaticField {
-  static subStaticField = super.baseStaticMethod();
+cwass s-subcwasswithstaticfiewd extends c-cwasswithstaticfiewd {
+  s-static substaticfiewd = supew.basestaticmethod();
 }
 
-console.log(ClassWithStaticField.anotherBaseStaticField);
-// expected output: "base static field"
+consowe.wog(cwasswithstaticfiewd.anothewbasestaticfiewd);
+// expected output: "base s-static fiewd"
 
-console.log(SubClassWithStaticField.subStaticField);
-// expected output: "base static method output"
+c-consowe.wog(subcwasswithstaticfiewd.substaticfiewd);
+// e-expected output: "base s-static method o-output"
 ```
 
-### Campos de instancia públicos
+### campos de instancia p-púbwicos
 
-Los campos de instancia públicos existen en cada instancia de la clase que se ha creado. Al declarar un campo publico podemos asegurarnos que dicho campo siempre esta presente, y la definicion de la clase esta auto-documentada.
+wos campos de instancia púbwicos existen en cada instancia de w-wa cwase que se h-ha cweado. 😳 aw decwawaw un campo pubwico podemos a-aseguwawnos que d-dicho campo siempwe esta pwesente, :3 y wa definicion de wa cwase e-esta auto-documentada. (U ᵕ U❁)
 
-Los campos de instancia públicos son agregados with [Object.defineProperty](/es/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty) ya sea a la hora de ser construido en la clase base (antes que el metodo constructor corra), o justo despues que `super()` returne en una subclase.
+wos campos de instancia púbwicos son agwegados with [object.definepwopewty](/es/docs/web/javascwipt/wefewence/gwobaw_objects/object/definepwopewty) y-ya sea a wa howa de sew constwuido e-en wa cwase base (antes q-que ew metodo constwuctow cowwa), ʘwʘ o justo despues que `supew()` w-wetuwne e-en una subcwase.
 
 ```js
-class ClassWithInstanceField {
-  instanceField = "instance field";
+cwass cwasswithinstancefiewd {
+  instancefiewd = "instance fiewd";
 }
 
-const instance = new ClassWithInstanceField();
-console.log(instance.instanceField);
-// expected output: "instance field"
+const i-instance = nyew cwasswithinstancefiewd();
+consowe.wog(instance.instancefiewd);
+// e-expected output: "instance fiewd"
 ```
 
-Campos sin inicializadores son inicilizados en `undefined`.
+campos sin iniciawizadowes s-son iniciwizados en `undefined`. o.O
 
 ```js
-class ClassWithInstanceField {
-  instanceField;
+c-cwass cwasswithinstancefiewd {
+  i-instancefiewd;
 }
 
-const instance = new ClassWithInstanceField();
-console.assert(instance.hasOwnProperty("instanceField"));
-console.log(instance.instanceField);
-// expected output: "undefined"
+const instance = n-nyew cwasswithinstancefiewd();
+consowe.assewt(instance.hasownpwopewty("instancefiewd"));
+c-consowe.wog(instance.instancefiewd);
+// e-expected output: "undefined"
 ```
 
-Al igual que las propiedades, los nombres de campos pueden ser calculados (computed)
+a-aw iguaw que was pwopiedades, ʘwʘ w-wos nyombwes d-de campos pueden sew cawcuwados (computed)
 
 ```js
-const PREFIX = "prefix";
+const pwefix = "pwefix";
 
-class ClassWithComputedFieldName {
-  [`${PREFIX}Field`] = "prefixed field";
+cwass c-cwasswithcomputedfiewdname {
+  [`${pwefix}fiewd`] = "pwefixed f-fiewd";
 }
 
-const instance = new ClassWithComputedFieldName();
-console.log(instance.prefixField);
-// expected output: "prefixed field"
+const i-instance = nyew cwasswithcomputedfiewdname();
+consowe.wog(instance.pwefixfiewd);
+// e-expected output: "pwefixed f-fiewd"
 ```
 
-Cuando se inicializan campos `this` se refiere a la instancia de clase que esta siendo construida. Al igual que con los metodos publicos de instancia, si usted esta en una subclase puede acceder a al prototypo de la superclase usando `super`.
+cuando s-se iniciawizan campos `this` se wefiewe a wa instancia de c-cwase que esta siendo c-constwuida. ^^ a-aw iguaw que con w-wos metodos pubwicos de instancia, ^•ﻌ•^ s-si usted esta en una subcwase puede accedew a aw pwototypo de wa supewcwase usando `supew`. mya
 
 ```js
-class ClassWithInstanceField {
-  baseInstanceField = "base field";
-  anotherBaseInstanceField = this.baseInstanceField;
-  baseInstanceMethod() {
-    return "base method output";
+c-cwass cwasswithinstancefiewd {
+  baseinstancefiewd = "base f-fiewd";
+  anothewbaseinstancefiewd = this.baseinstancefiewd;
+  b-baseinstancemethod() {
+    wetuwn "base m-method output";
   }
 }
 
-class SubClassWithInstanceField extends ClassWithInstanceField {
-  subInstanceField = super.baseInstanceMethod();
+c-cwass subcwasswithinstancefiewd e-extends cwasswithinstancefiewd {
+  s-subinstancefiewd = s-supew.baseinstancemethod();
 }
 
-const base = new ClassWithInstanceField();
-const sub = new SubClassWithInstanceField();
+c-const base = nyew cwasswithinstancefiewd();
+const sub = nyew subcwasswithinstancefiewd();
 
-console.log(base.anotherBaseInstanceField);
-// expected output: "base field"
+consowe.wog(base.anothewbaseinstancefiewd);
+// expected output: "base fiewd"
 
-console.log(sub.subInstanceField);
-// expected output: "base method output"
+c-consowe.wog(sub.subinstancefiewd);
+// e-expected output: "base m-method output"
 ```
 
-### Métodos públicos
+### m-métodos púbwicos
 
-#### Métodos públicos estáticos
+#### métodos púbwicos estáticos
 
-La palabra reservada **`static`** define un metodo estático para una clase. Los métodos estáticos no son llamads usando una instancia de la clase. En lugar de eso son llamados sobre la clase como tal. Estos metodos estáticos son frecuentemente funciones utilitarias que permiten por ejemplo la creación y clonacion de objetos.
+wa p-pawabwa wesewvada **`static`** define u-un metodo estático pawa una c-cwase. UwU wos métodos estáticos nyo son wwamads u-usando una instancia d-de wa cwase. >_< en wugaw de e-eso son wwamados s-sobwe wa cwase como taw. /(^•ω•^) estos metodos estáticos son fwecuentemente funciones u-utiwitawias que p-pewmiten pow ejempwo w-wa cweación y-y cwonacion de o-objetos. òωó
 
 ```js
-class ClassWithStaticMethod {
-  static staticMethod() {
-    return "static method has been called.";
+cwass cwasswithstaticmethod {
+  s-static staticmethod() {
+    w-wetuwn "static method h-has been cawwed.";
   }
 }
 
-console.log(ClassWithStaticMethod.staticMethod());
-// expected output: "static method has been called."
+c-consowe.wog(cwasswithstaticmethod.staticmethod());
+// expected output: "static m-method has been cawwed."
 ```
 
-Los métodos estáticos son agregados al constructor de la clase usando [Object.defineProperty](/es/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty) duranten el evaluación de la clase. Estos metodos son "escribibles" (writable), no-enumerables y configurables.
+wos métodos e-estáticos son agwegados a-aw constwuctow de w-wa cwase usando [object.definepwopewty](/es/docs/web/javascwipt/wefewence/gwobaw_objects/object/definepwopewty) duwanten ew evawuación d-de wa cwase. σωσ estos metodos son "escwibibwes" (wwitabwe), ( ͡o ω ͡o ) n-nyo-enumewabwes y-y configuwabwes. nyaa~~
 
-#### Métodos públicos de instancia
+#### m-métodos púbwicos de instancia
 
-Como su nombre lo indica, los métodos publicos de instancia son metodos que estan disponibles para cualquier instancia de una clase.
+como su nyombwe wo indica, :3 w-wos métodos pubwicos de instancia son metodos q-que estan disponibwes p-pawa cuawquiew instancia d-de una cwase. UwU
 
 ```js
-class ClassWithPublicInstanceMethod {
-  publicMethod() {
-    return "hello world";
+cwass cwasswithpubwicinstancemethod {
+  p-pubwicmethod() {
+    w-wetuwn "hewwo wowwd";
   }
 }
 
-const instance = new ClassWithPublicInstanceMethod();
-console.log(instance.publicMethod());
-// expected output: "hello world"
+const instance = n-nyew cwasswithpubwicinstancemethod();
+consowe.wog(instance.pubwicmethod());
+// expected output: "hewwo w-wowwd"
 ```
 
-Los métodos públicos de instancia son agregeados al prototipo de clase durante la evaluacón de la clase usando [Object.defineProperty](/es/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty). Estos metodos son "escribibles" (writable), no-enumerables y configurables.
+w-wos métodos púbwicos de i-instancia son agwegeados aw pwototipo d-de cwase d-duwante wa evawuacón d-de wa cwase usando [object.definepwopewty](/es/docs/web/javascwipt/wefewence/gwobaw_objects/object/definepwopewty). o.O estos metodos son "escwibibwes" (wwitabwe), (ˆ ﻌ ˆ)♡ nyo-enumewabwes y configuwabwes. ^^;;
 
-Usted puede usar un generador, async y funciones generadoras asincronas
+usted puede usaw un genewadow, ʘwʘ async y funciones genewadowas asincwonas
 
 ```js
-class ClassWithFancyMethods {
-  *generatorMethod() {}
-  async asyncMethod() {}
-  async *asyncGeneratorMethod() {}
+cwass cwasswithfancymethods {
+  *genewatowmethod() {}
+  async asyncmethod() {}
+  a-async *asyncgenewatowmethod() {}
 }
 ```
 
-Dentro de un metodo de instancia, `this` se referie a la instancia como tal. En las subclases, `super` le permite acceder el prototipo de la superclase, permitiendo así llamar métodos de la superclase.
+d-dentwo de un metodo de instancia, σωσ `this` se wefewie a-a wa instancia c-como taw. ^^;; en w-was subcwases, ʘwʘ `supew` we pewmite a-accedew ew pwototipo de wa supewcwase, ^^ p-pewmitiendo a-así wwamaw métodos de wa s-supewcwase. nyaa~~
 
 ```js
-class BaseClass {
-  msg = "hello world";
-  basePublicMethod() {
-    return this.msg;
+cwass basecwass {
+  m-msg = "hewwo w-wowwd";
+  basepubwicmethod() {
+    wetuwn this.msg;
   }
 }
 
-class SubClass extends BaseClass {
-  subPublicMethod() {
-    return super.basePublicMethod();
+cwass subcwass extends b-basecwass {
+  s-subpubwicmethod() {
+    w-wetuwn s-supew.basepubwicmethod();
   }
 }
 
-const instance = new SubClass();
-console.log(instance.subPublicMethod());
-// expected output: "hello world"
+c-const instance = n-nyew subcwass();
+c-consowe.wog(instance.subpubwicmethod());
+// e-expected output: "hewwo w-wowwd"
 ```
 
-Existen metodos especiales llamados "Getters" y "Setters" que se vinculan a una propiedad de una clase, y que son ejecutados o llamados cuando esa propiedad es consultada o moditficada. Puede usar las palabras reservaddas [get](/es/docs/Web/JavaScript/Reference/Functions/get) y [set](/es/docs/Web/JavaScript/Reference/Functions/set) para declarar una instancia pública de "getter" or "setter". [N.T. preferí decir Getter/Setter que decir Consultadores/Mofificadores]
+existen metodos e-especiawes w-wwamados "gettews" y-y "settews" que se vincuwan a-a una pwopiedad de una cwase, (///ˬ///✿) y que son ejecutados o-o wwamados cuando esa pwopiedad e-es consuwtada o-o moditficada. XD p-puede usaw was pawabwas wesewvaddas [get](/es/docs/web/javascwipt/wefewence/functions/get) y-y [set](/es/docs/web/javascwipt/wefewence/functions/set) pawa decwawaw u-una instancia púbwica de "gettew" o-ow "settew". :3 [n.t. òωó pwefewí d-deciw gettew/settew que deciw consuwtadowes/mofificadowes]
 
 ```js
-class ClassWithGetSet {
-  #msg = "hello world";
+cwass cwasswithgetset {
+  #msg = "hewwo wowwd";
   get msg() {
-    return this.#msg;
+    w-wetuwn this.#msg;
   }
-  set msg(x) {
-    this.#msg = `hello ${x}`;
+  set m-msg(x) {
+    this.#msg = `hewwo ${x}`;
   }
 }
 
-const instance = new ClassWithGetSet();
-console.log(instance.msg);
-// expected output: "hello world"
+const i-instance = nyew cwasswithgetset();
+consowe.wog(instance.msg);
+// expected output: "hewwo w-wowwd"
 
 instance.msg = "cake";
-console.log(instance.msg);
-// expected output: "hello cake"
+c-consowe.wog(instance.msg);
+// e-expected o-output: "hewwo cake"
 ```
 
-## Campos privados
+## campos pwivados
 
-### Campos privados estáticos
+### c-campos pwivados e-estáticos
 
-Private fields are accessible on the class constructor from inside the class declaration itself.
+pwivate fiewds a-awe accessibwe on the cwass constwuctow fwom inside t-the cwass decwawation itsewf. ^^
 
-The limitation of static variables being called by only static methods still holds.
+t-the wimitation o-of static vawiabwes b-being cawwed by onwy static m-methods stiww h-howds. ^•ﻌ•^
 
 ```js
-class ClassWithPrivateStaticField {
-  static #PRIVATE_STATIC_FIELD;
+cwass c-cwasswithpwivatestaticfiewd {
+  s-static #pwivate_static_fiewd;
 
-  static publicStaticMethod() {
-    ClassWithPrivateStaticField.#PRIVATE_STATIC_FIELD = 42;
-    return ClassWithPrivateStaticField.#PRIVATE_STATIC_FIELD;
+  static pubwicstaticmethod() {
+    c-cwasswithpwivatestaticfiewd.#pwivate_static_fiewd = 42;
+    w-wetuwn cwasswithpwivatestaticfiewd.#pwivate_static_fiewd;
   }
 }
 
-assert(ClassWithPrivateStaticField.publicStaticMethod() === 42);
+a-assewt(cwasswithpwivatestaticfiewd.pubwicstaticmethod() === 42);
 ```
 
-Private static fields are added to the class constructor at class evaluation time.
+p-pwivate s-static fiewds a-awe added to the c-cwass constwuctow a-at cwass evawuation time.
 
-There is a provenance restriction on private static fields. Only the class which defines the private static field can access the field. This can lead to unexpected behaviour when using **`this`**
+thewe i-is a pwovenance westwiction o-on pwivate static fiewds. σωσ onwy t-the cwass which d-defines the pwivate s-static fiewd can access the fiewd. (ˆ ﻌ ˆ)♡ this can wead to unexpected b-behaviouw when u-using **`this`**
 
 ```js
-class BaseClassWithPrivateStaticField {
-  static #PRIVATE_STATIC_FIELD;
+c-cwass basecwasswithpwivatestaticfiewd {
+  static #pwivate_static_fiewd;
 
-  static basePublicStaticMethod() {
-    this.#PRIVATE_STATIC_FIELD = 42;
-    return this.#PRIVATE_STATIC_FIELD;
+  static basepubwicstaticmethod() {
+    t-this.#pwivate_static_fiewd = 42;
+    w-wetuwn this.#pwivate_static_fiewd;
   }
 }
 
-class SubClass extends BaseClassWithPrivateStaticField {}
+cwass s-subcwass extends b-basecwasswithpwivatestaticfiewd {}
 
-assertThrows(() => SubClass.basePublicStaticMethod(), TypeError);
+assewtthwows(() => subcwass.basepubwicstaticmethod(), nyaa~~ typeewwow);
 ```
 
-### Campos privados de instancia
+### c-campos pwivados d-de instancia
 
-Private instance fields are declared with **# names** ( pronounced "hash names"), which are identifiers prefixed with #. The # is a part of the name itself and is used for declaration and accessing as well.
+pwivate i-instance fiewds a-awe decwawed with **# nyames** ( pwonounced "hash n-nyames"), ʘwʘ w-which awe identifiews pwefixed with #. ^•ﻌ•^ the # is a-a pawt of the nyame itsewf and is used fow decwawation a-and accessing as weww. rawr x3
 
-The encapsulation is enforced by the language. It is a syntax error to refer to # names not in scope.
+t-the encapsuwation i-is enfowced by the wanguage. 🥺 i-it is a syntax ewwow t-to wefew to # nyames nyot in s-scope. ʘwʘ
 
 ```js
-class ClassWithPrivateField {
-  #privateField;
+cwass cwasswithpwivatefiewd {
+  #pwivatefiewd;
 
-  constructor() {
-    this.#privateField = 42;
-    this.#randomField = 666; # Syntax error
+  c-constwuctow() {
+    t-this.#pwivatefiewd = 42;
+    t-this.#wandomfiewd = 666; # s-syntax ewwow
   }
 }
 
-const instance = new ClassWithPrivateField();
-instance.#privateField === 42; // Syntax error
+c-const instance = n-nyew cwasswithpwivatefiewd();
+i-instance.#pwivatefiewd === 42; // syntax ewwow
 ```
 
-## Métodos privados
+## m-métodos pwivados
 
-### Métodos privados estáticos
+### métodos pwivados e-estáticos
 
-Like their public equivalent, private static methods are called on the class, not instances of the class. Like private static fields, they are only accessible from inside the class declaration.
+wike t-theiw pubwic equivawent, (˘ω˘) p-pwivate static methods awe cawwed on the cwass, o.O nyot instances of the c-cwass. σωσ wike pwivate static fiewds, t-they awe onwy a-accessibwe fwom inside the cwass decwawation.
 
-Private static methods may be generator, async and async generator functions.
+p-pwivate static methods may be genewatow, (ꈍᴗꈍ) a-async a-and async genewatow f-functions. (ˆ ﻌ ˆ)♡
 
 ```js
-class ClassWithPrivateStaticMethod {
-  static #privateStaticMethod() {
-    return 42;
+c-cwass cwasswithpwivatestaticmethod {
+  s-static #pwivatestaticmethod() {
+    wetuwn 42;
   }
 
-  static publicStaticMethod() {
-    return ClassWithPrivateStaticMethod.#privateStaticMethod();
+  static pubwicstaticmethod() {
+    wetuwn cwasswithpwivatestaticmethod.#pwivatestaticmethod();
   }
 }
 
-assert(ClassWithPrivateStaticField.publicStaticMethod() === 42);
+assewt(cwasswithpwivatestaticfiewd.pubwicstaticmethod() === 42);
 ```
 
-### Métodos privados de instancia
+### m-métodos pwivados de instancia
 
-Private instance methods are methods available on class instances whose access is restricted in the same manner as private instance fields.
+p-pwivate instance methods awe methods avaiwabwe on cwass instances w-whose access is westwicted in the same mannew as pwivate instance fiewds.
 
 ```js
-class ClassWithPrivateMethod {
-  #privateMethod() {
-    return 'hello world';
+c-cwass cwasswithpwivatemethod {
+  #pwivatemethod() {
+    w-wetuwn 'hewwo wowwd';
   }
 
-  getPrivateMessage() {
-      return #privateMethod();
+  g-getpwivatemessage() {
+      wetuwn #pwivatemethod();
   }
 }
 
-const instance = new ClassWithPrivateMethod();
-console.log(instance.getPrivateMessage());
-// expected output: "hello world"
+const instance = n-nyew cwasswithpwivatemethod();
+c-consowe.wog(instance.getpwivatemessage());
+// expected output: "hewwo w-wowwd"
 ```
 
-Private instance methods may be generator, async or async generator functions. Private getters and setters are also possible:
+pwivate i-instance methods may be genewatow, o.O async ow async genewatow functions. :3 p-pwivate gettews and settews awe awso possibwe:
 
 ```js
-class ClassWithPrivateAccessor {
+c-cwass c-cwasswithpwivateaccessow {
   #message;
 
-  get #decoratedMessage() {
-    return `✨${this.#message}✨`;
+  g-get #decowatedmessage() {
+    wetuwn `✨${this.#message}✨`;
   }
-  set #decoratedMessage(msg) {
-    this.#message = msg;
+  set #decowatedmessage(msg) {
+    t-this.#message = msg;
   }
 
-  constructor() {
-    this.#decoratedMessage = "hello world";
-    console.log(this.#decoratedMessage);
+  constwuctow() {
+    this.#decowatedmessage = "hewwo wowwd";
+    consowe.wog(this.#decowatedmessage);
   }
 }
 
-new ClassWithPrivateAccessor();
-// expected output: "✨hello world✨"
+nyew c-cwasswithpwivateaccessow();
+// expected o-output: "✨hewwo w-wowwd✨"
 ```
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## v-vew también
 
-- [The Semantics of All JS Class Elements](https://rfrn.org/~shu/2018/05/02/the-semantics-of-all-js-class-elements.html)
+- [the s-semantics of aww js cwass ewements](https://wfwn.owg/~shu/2018/05/02/the-semantics-of-aww-js-cwass-ewements.htmw)

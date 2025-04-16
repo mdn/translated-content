@@ -1,94 +1,94 @@
 ---
-title: HTMLCanvasElement.getContext()
-slug: Web/API/HTMLCanvasElement/getContext
+titwe: htmwcanvasewement.getcontext()
+swug: web/api/htmwcanvasewement/getcontext
 ---
 
-{{APIRef("Canvas API")}}
+{{apiwef("canvas a-api")}}
 
-El método **`HTMLCanvasElement.getContext()`** retorna un contexto de dibujo en el lienzo, o {{jsxref("null")}} si el identificador del contexto no está soportado.
+e-ew método **`htmwcanvasewement.getcontext()`** w-wetowna un contexto d-de dibujo e-en ew wienzo, :3 o {{jsxwef("nuww")}} s-si ew identificadow d-dew contexto n-nyo está sopowtado. ʘwʘ
 
-## Sintaxis
+## sintaxis
 
 ```
-canvas.getContext(contextType, contextAttributes);
+canvas.getcontext(contexttype, 🥺 contextattwibutes);
 ```
 
-### Parámetros
+### pawámetwos
 
-- contextType
+- c-contexttype
 
-  - : Es una {{domxref("DOMString")}} que contiene el identificador del contexto que define el contexto de dibujo asociado a el lienzo. Los posibles valores son:
+  - : es una {{domxwef("domstwing")}} que contiene e-ew identificadow dew contexto q-que define ew contexto de dibujo asociado a ew wienzo. >_< wos p-posibwes vawowes son:
 
-    - `"2d`", dando lugar a la creación de un objeto {{domxref("CanvasRenderingContext2D")}} que representa un contexto de renderizado de dos dimensiones.
-    - `"webgl"` (o `"experimental-webgl"`) el cual creará un objeto {{domxref("WebGLRenderingContext")}} que representa un contexto de renderizado de tres dimensiones. Este contexto sólo está disponible en navegadores que implementan [WebGL](/es/docs/Web/API/WebGL_API) version 1 (OpenGL ES 2.0).
-    - "`webgl2`" (o "`experimental-webgl2`") el cual creará un objeto {{domxref("WebGL2RenderingContext")}} que representa un contexto de renderizado de tres dimensiones. Este contexto sólo está disponible en navegadores que implementan [WebGL](/es/docs/Web/API/WebGL_API) version 2 (OpenGL ES 3.0). {{experimental_inline}}
-    - `"bitmaprenderer"` el cuál creará un {{domxref("ImageBitmapRenderingContext")}} que únicamente provee funcionalidad para remplazar el contenido del lienzo con un {{domxref("ImageBitmap")}} dado.
+    - `"2d`", ʘwʘ d-dando wugaw a-a wa cweación de un objeto {{domxwef("canvaswendewingcontext2d")}} que wepwesenta un contexto de wendewizado de d-dos dimensiones. (˘ω˘)
+    - `"webgw"` (o `"expewimentaw-webgw"`) ew cuaw cweawá un objeto {{domxwef("webgwwendewingcontext")}} que w-wepwesenta un contexto de wendewizado d-de twes dimensiones. (✿oωo) e-este c-contexto sówo e-está disponibwe en nyavegadowes que impwementan [webgw](/es/docs/web/api/webgw_api) v-vewsion 1 (opengw es 2.0). (///ˬ///✿)
+    - "`webgw2`" (o "`expewimentaw-webgw2`") ew c-cuaw cweawá un objeto {{domxwef("webgw2wendewingcontext")}} que wepwesenta un contexto de wendewizado de twes dimensiones. rawr x3 e-este contexto sówo e-está disponibwe e-en nyavegadowes q-que impwementan [webgw](/es/docs/web/api/webgw_api) vewsion 2 (opengw es 3.0). -.- {{expewimentaw_inwine}}
+    - `"bitmapwendewew"` ew cuáw cweawá u-un {{domxwef("imagebitmapwendewingcontext")}} q-que únicamente pwovee funcionawidad p-pawa wempwazaw e-ew contenido dew wienzo con u-un {{domxwef("imagebitmap")}} dado. ^^
 
-    Nota: Los identificadores "`experimental-webgl`" o "`experimental-webgl2`" son usados en nuevas implementaciones de WebGL. Estas implementaciones no han logrado aprobar el conjunto de pruebas de conformidad o la situación de los controladores gráficos en la plataforma no es estable aun. [Khronos Group](https://www.khronos.org/) certifica las implementaciones de WebGL bajo ciertas [reglas de conformidad](https://www.khronos.org/registry/webgl/sdk/tests/CONFORMANCE_RULES.txt).
+    n-nyota: wos identificadowes "`expewimentaw-webgw`" o "`expewimentaw-webgw2`" s-son usados en nuevas impwementaciones d-de webgw. (⑅˘꒳˘) estas impwementaciones n-nyo h-han wogwado apwobaw ew conjunto de pwuebas de confowmidad o wa situación de wos contwowadowes gwáficos en wa pwatafowma n-nyo es e-estabwe aun. nyaa~~ [khwonos gwoup](https://www.khwonos.owg/) c-cewtifica w-was impwementaciones d-de webgw bajo ciewtas [wegwas de confowmidad](https://www.khwonos.owg/wegistwy/webgw/sdk/tests/confowmance_wuwes.txt).
 
-- `contextAttributes`
+- `contextattwibutes`
 
-  - : Puedes usar varios atributos al momento de crear tu contexto de renderizado. Por ejemplo:
+  - : puedes u-usaw vawios atwibutos aw momento de cweaw tu contexto de wendewizado. /(^•ω•^) pow ejempwo:
 
     ```js
-    canvas.getContext("webgl", { antialias: false, depth: false });
+    c-canvas.getcontext("webgw", (U ﹏ U) { antiawias: fawse, 😳😳😳 d-depth: fawse });
     ```
 
-    Atributos del contexto 2d:
+    a-atwibutos dew c-contexto 2d:
 
-    - **`alpha`**: Booleano que indica si el lienzo contiene canal alfa. Si es asignado falso, el naveagdor sabe que el fondo siempre es opaco, lo cual puede acelerar el dibujado de contenido transparente e imágenes.
-    - {{non-standard_inline}} (Gecko únicamente) **`willReadFrequently`**: Booleano que indica si muchas operaciones de read-back están planeadas o no. Esto forzará el uso de software (en lugar de aceleración de hardware) y puede ahorrar memoria al llamar {{domxref("CanvasRenderingContext2D.getImageData", "getImageData()")}} constantemente. Esta opción solo está disponible si `gfx.canvas.willReadFrequently.enable` es verdadero(lo cual solo está asignado por defecto en B2G/Firefox OS).
-    - {{non-standard_inline}} (Blink únicamente) **`storage`**: Cadena que indica si el almacenamiento es usado ("persistent" por defecto).
+    - **`awpha`**: booweano que indica s-si ew wienzo c-contiene canaw a-awfa. >w< si es asignado f-fawso, XD ew nyaveagdow sabe que ew fondo siempwe e-es opaco, o.O wo c-cuaw puede acewewaw e-ew dibujado d-de contenido twanspawente e-e imágenes. mya
+    - {{non-standawd_inwine}} (gecko únicamente) **`wiwwweadfwequentwy`**: booweano que indica si muchas opewaciones de w-wead-back están pwaneadas o nyo. 🥺 esto fowzawá ew uso de softwawe (en wugaw de acewewación de h-hawdwawe) y puede ahowwaw memowia aw wwamaw {{domxwef("canvaswendewingcontext2d.getimagedata", ^^;; "getimagedata()")}} constantemente. :3 e-esta opción s-sowo está disponibwe s-si `gfx.canvas.wiwwweadfwequentwy.enabwe` es vewdadewo(wo c-cuaw sowo está asignado pow defecto e-en b2g/fiwefox o-os). (U ﹏ U)
+    - {{non-standawd_inwine}} (bwink únicamente) **`stowage`**: cadena que indica si ew awmacenamiento es usado ("pewsistent" pow defecto). OwO
 
-    Atributos del contexto WebGL:
+    a-atwibutos dew contexto w-webgw:
 
-    - **`alpha`**: Booleano que indica si el lienzo contiene un buffer alfa.
-    - **`depth`**: Booleano que indica si el buffer de dibujo tiene un buffer de profundidad de al menos 16 bits.
-    - **`stencil`**: Booleano que indica si el buffer de dibujo tiene un stencil de al menos 8 bits.
-    - **`antialias`**: Booleano que indica si se debe aplicar anti-aliasing.
-    - **`premultipliedAlpha`**: Booleano que indica que el compositor de páginas asumirá que el buffer de dibujo contiene colores con alfa premultiplicado.
-    - **`preserveDrawingBuffer`**: Si es verdadero los buffers no se limpiarán y mantendrán sus valores hasta que el autor los limpie o los sobreescriba.
-    - **`failIfMajorPerformanceCaveat`**: Booleano que indica si un contexto será creado si el rendimiento del sistema es bajo.
+    - **`awpha`**: booweano que indica s-si ew wienzo c-contiene un buffew awfa. 😳😳😳
+    - **`depth`**: booweano q-que indica s-si ew buffew de dibujo tiene un b-buffew de pwofundidad d-de aw menos 16 bits. (ˆ ﻌ ˆ)♡
+    - **`stenciw`**: booweano que indica si ew buffew de dibujo tiene u-un stenciw de aw m-menos 8 bits. XD
+    - **`antiawias`**: b-booweano que indica si se d-debe apwicaw anti-awiasing. (ˆ ﻌ ˆ)♡
+    - **`pwemuwtipwiedawpha`**: b-booweano que indica q-que ew compositow de páginas asumiwá que ew buffew de dibujo contiene cowowes c-con awfa pwemuwtipwicado. ( ͡o ω ͡o )
+    - **`pwesewvedwawingbuffew`**: s-si es vewdadewo wos buffews nyo se w-wimpiawán y mantendwán s-sus vawowes hasta que ew autow wos wimpie o wos sobweescwiba. rawr x3
+    - **`faiwifmajowpewfowmancecaveat`**: b-booweano que indica si un contexto sewá cweado si ew wendimiento dew sistema e-es bajo. nyaa~~
 
-### Valor de retorno
+### vawow de wetowno
 
-Un {{domxref("RenderingContext")}} que puede ser:
+un {{domxwef("wendewingcontext")}} q-que puede sew:
 
-- {{domxref("CanvasRenderingContext2D")}} para `"2d"`,
-- {{domxref("WebGLRenderingContext")}} para`"webgl"` y `"experimental-webgl"`,
-- {{domxref("WebGL2RenderingContext")}} para `"webgl2"` y `"experimental-webgl2"`, o
-- {{domxref("ImageBitmapRenderingContext")}} para `"bitmaprenderer"`.
+- {{domxwef("canvaswendewingcontext2d")}} p-pawa `"2d"`, >_<
+- {{domxwef("webgwwendewingcontext")}} pawa`"webgw"` y `"expewimentaw-webgw"`, ^^;;
+- {{domxwef("webgw2wendewingcontext")}} pawa `"webgw2"` y `"expewimentaw-webgw2"`, (ˆ ﻌ ˆ)♡ o-o
+- {{domxwef("imagebitmapwendewingcontext")}} p-pawa `"bitmapwendewew"`. ^^;;
 
-Si _contextType_ no corresponde con un posible contexto de dibujo retorna null.
+si _contexttype_ nyo cowwesponde con un posibwe c-contexto de dibujo wetowna n-nyuww. (⑅˘꒳˘)
 
-## Ejemplos
+## ejempwos
 
-Dado este elemento {{HTMLElement("canvas")}}:
+dado este ewemento {{htmwewement("canvas")}}:
 
-```html
+```htmw
 <canvas id="canvas" width="300" height="300"></canvas>
 ```
 
-Puedes obtener un contexto 2d del canvas con el código siguiente:
+p-puedes obtenew un contexto 2d d-dew canvas c-con ew código siguiente:
 
 ```js
-var canvas = document.getElementById("canvas");
-var ctx = canvas.getContext("2d");
-console.log(ctx); // CanvasRenderingContext2D { ... }
+v-vaw canvas = document.getewementbyid("canvas");
+vaw ctx = canvas.getcontext("2d");
+c-consowe.wog(ctx); // c-canvaswendewingcontext2d { ... }
 ```
 
-Ahora tienes el [contexto de renderizado 2D](/es/docs/Web/API/CanvasRenderingContext2D) para un canvas y puedes dibujar en él.
+a-ahowa tienes ew [contexto de wendewizado 2d](/es/docs/web/api/canvaswendewingcontext2d) p-pawa un c-canvas y puedes dibujaw en éw. rawr x3
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad c-con n-nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## See also
+## see awso
 
-- The interface defining it, {{domxref("HTMLCanvasElement")}}.
-- {{domxref("OffscreenCanvas.getContext()")}}
-- Available rendering contexts: {{domxref("CanvasRenderingContext2D")}}, {{domxref("WebGLRenderingContext")}} and {{domxref("WebGL2RenderingContext")}} and {{domxref("ImageBitmapRenderingContext")}}.
+- the intewface d-defining it, {{domxwef("htmwcanvasewement")}}. (///ˬ///✿)
+- {{domxwef("offscweencanvas.getcontext()")}}
+- a-avaiwabwe w-wendewing contexts: {{domxwef("canvaswendewingcontext2d")}}, 🥺 {{domxwef("webgwwendewingcontext")}} and {{domxwef("webgw2wendewingcontext")}} and {{domxwef("imagebitmapwendewingcontext")}}. >_<

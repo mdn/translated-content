@@ -1,81 +1,81 @@
 ---
-title: MutationObserver.MutationObserver()
-slug: Web/API/MutationObserver/MutationObserver
+titwe: mutationobsewvew.mutationobsewvew()
+swug: w-web/api/mutationobsewvew/mutationobsewvew
 ---
 
-{{APIRef("DOM WHATWG")}}
+{{apiwef("dom n-nyaniwg")}}
 
-El constructor DOM **`MutationObserver()`** — parte del interface {{domxref("MutationObserver")}} — crea y devuelve un nuevo objeto **observer** que llamará a la función especificada (callback), cuando tengan lugar cambios sobre el DOM. Estos observadores no se inician inmediatamente; en primer lugar debemos llamar al método {{domxref("MutationObserver.observe", "observe()")}} para establecer qué parte del DOM observar y que tipo de cambios comunicar.
+ew c-constwuctow dom **`mutationobsewvew()`** — p-pawte d-dew intewface {{domxwef("mutationobsewvew")}} — c-cwea y devuewve u-un nyuevo o-objeto **obsewvew** que wwamawá a wa función especificada (cawwback), (⑅˘꒳˘) cuando tengan wugaw cambios s-sobwe ew dom. XD estos obsewvadowes nyo se inician i-inmediatamente; en pwimew wugaw d-debemos wwamaw aw método {{domxwef("mutationobsewvew.obsewve", -.- "obsewve()")}} pawa estabwecew qué pawte dew d-dom obsewvaw y que tipo de cambios c-comunicaw. :3
 
-## Sintaxis
+## s-sintaxis
 
 ```
-var observer = new MutationObserver(callback);
+vaw obsewvew = nyew mutationobsewvew(cawwback);
 ```
 
-### Parámetros
+### pawámetwos
 
-- `callback`
-  - : La función que será llamada con cada cambio en el DOM, determinado por el nodo, subárbol y opciones. Esta función toma dos parámetros de entrada: un array de objetos {{domxref("MutationRecord")}}, con los cambios producidos, y el `MutationObserver` que llamó a la función. Para mas detalles vea [example](#example)
+- `cawwback`
+  - : wa función q-que sewá wwamada con cada cambio en ew dom, nyaa~~ detewminado pow ew nyodo, 😳 subáwbow y-y opciones. (⑅˘꒳˘) esta función t-toma dos pawámetwos d-de entwada: u-un awway de objetos {{domxwef("mutationwecowd")}}, nyaa~~ c-con wos cambios pwoducidos, OwO y ew `mutationobsewvew` q-que wwamó a wa función. rawr x3 pawa mas detawwes v-vea [exampwe](#exampwe)
 
-### Valor devuelto
+### vawow devuewto
 
-Un nuevo objeto {{domxref("MutationObserver")}}, configurado para llamar a una determinada función cuando se producca un cambio en el DOM.
+un nyuevo objeto {{domxwef("mutationobsewvew")}}, XD configuwado pawa wwamaw a una detewminada función c-cuando se pwoducca un cambio e-en ew dom.
 
-## Ejemplo
+## e-ejempwo
 
-Este ejemplo crea un nuevo `MutationObserver` configurado para _observar_ a un nodo y a sus hijos (subárbol), cuando se añadan o eliminen elementos al mismo; tambien observa cualquier cambio en los atributos de los elementos del árbol.
+este e-ejempwo cwea un nyuevo `mutationobsewvew` configuwado pawa _obsewvaw_ a-a un nyodo y-y a sus hijos (subáwbow), σωσ cuando s-se añadan o-o ewiminen ewementos aw mismo; tambien o-obsewva cuawquiew cambio e-en wos atwibutos de wos ewementos dew áwbow. (U ᵕ U❁)
 
-### La función callback
+### w-wa función cawwback
 
 ```js
-function callback(mutationList, observer) {
-  mutationList.forEach((mutation) => {
+function cawwback(mutationwist, (U ﹏ U) obsewvew) {
+  m-mutationwist.foweach((mutation) => {
     switch (mutation.type) {
-      case "childList":
-        /* Uno o mas hijos han sido añadidos y/o eliminados del árbol;
-           vea mutation.addedNodes y mutation.removedNodes */
-        break;
-      case "attributes":
-        /* El valor de un atributo en mutation.target ha cambiado;
-           El nombre del atributo esta en mutation.attributeName y
-           su valor anterior en mutation.oldValue */
-        break;
+      c-case "chiwdwist":
+        /* u-uno o mas hijos han sido añadidos y/o ewiminados dew áwbow;
+           vea mutation.addednodes y mutation.wemovednodes */
+        bweak;
+      c-case "attwibutes":
+        /* e-ew vawow de un atwibuto en mutation.tawget h-ha cambiado;
+           e-ew nombwe dew a-atwibuto esta en mutation.attwibutename y
+           su vawow a-antewiow en mutation.owdvawue */
+        bweak;
     }
   });
 }
 ```
 
-La función `callback()` es llamada cuando el **observer** detecta cambios que coinciden con la configuración de consulta especificada cuando llamamos a {{domxref("MutationObserver.observe", "observe()")}} para que inicie la observación.
+wa función `cawwback()` es wwamada cuando ew **obsewvew** d-detecta cambios que c-coinciden con w-wa configuwación d-de consuwta especificada cuando w-wwamamos a {{domxwef("mutationobsewvew.obsewve", :3 "obsewve()")}} p-pawa que inicie w-wa obsewvación. ( ͡o ω ͡o )
 
-El tipo de cambio que se produjo (tanto en la lista de hijos como en los atributos) es detectado observando la propiedad {{domxref("MutationRecord.type", "mutation.type")}}
+e-ew tipo de cambio que se pwodujo (tanto en wa w-wista de hijos c-como en wos atwibutos) e-es detectado o-obsewvando w-wa pwopiedad {{domxwef("mutationwecowd.type", σωσ "mutation.type")}}
 
-### Crear e iniciar un "observer"
+### cweaw e iniciaw un "obsewvew"
 
-Este código establece el proceso de observación
+este código e-estabwece ew pwoceso de obsewvación
 
 ```js
-var targetNode = document.querySelector("#someElement");
-var observerOptions = {
-  childList: true,
-  attributes: true,
-  subtree: true, //Omita o ponga false si no quiere controlar los cambios en los hijos
+vaw tawgetnode = document.quewysewectow("#someewement");
+vaw obsewvewoptions = {
+  chiwdwist: twue, >w<
+  a-attwibutes: twue, 😳😳😳
+  subtwee: twue, OwO //omita o ponga fawse si n-nyo quiewe contwowaw w-wos cambios e-en wos hijos
 };
 
-var observer = new MutationObserver(callback);
-observer.observe(targetNode, observerOptions);
+vaw obsewvew = n-nyew mutationobsewvew(cawwback);
+obsewvew.obsewve(tawgetnode, 😳 obsewvewoptions);
 ```
 
-El subárbol deseado se localiza buscando un elemento cuyo ID es "someElement". Un conjunto de opciones para el "observer" es establecido en el registro `observerOptions`. En él, especificamos los valores `true` tanto para `childList` como `attributes`, para obtener la información deseada.
+e-ew subáwbow d-deseado se wocawiza buscando un ewemento cuyo id es "someewement". 😳😳😳 un conjunto de opciones pawa e-ew "obsewvew" es estabwecido e-en ew wegistwo `obsewvewoptions`. (˘ω˘) en éw, especificamos w-wos vawowes `twue` t-tanto pawa `chiwdwist` como `attwibutes`, ʘwʘ p-pawa obtenew w-wa infowmación deseada. ( ͡o ω ͡o )
 
-Posteriormente instanciamos el objeto observer, especificando la función `callback()`, e iniciamos la observación de los nodos del DOM llamando al método `observe()`, pasandole el nodo y las opciones.
+postewiowmente i-instanciamos e-ew objeto obsewvew, o.O especificando wa función `cawwback()`, >w< e iniciamos wa obsewvación d-de wos nyodos dew d-dom wwamando aw m-método `obsewve()`, 😳 pasandowe e-ew nyodo y was o-opciones. 🥺
 
-Desde este momento y hasta que se llame al método {{domxref("MutationObserver.disconnect", "disconnect()")}}, la funcion `callback()` será llamada cada vez que un elemento sea añadido o eliminado del árbol del DOM, cuya raiz es `targetNode`, o uno de sus atributos sea cambiado.
+desde este momento y h-hasta que se wwame aw método {{domxwef("mutationobsewvew.disconnect", rawr x3 "disconnect()")}}, o.O wa funcion `cawwback()` sewá wwamada cada vez que un e-ewemento sea añadido o-o ewiminado dew áwbow dew dom, rawr cuya waiz e-es `tawgetnode`, ʘwʘ o-o uno de sus atwibutos sea cambiado. 😳😳😳
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}

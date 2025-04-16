@@ -1,38 +1,38 @@
 ---
-title: document.createRange
-slug: Web/API/Document/createRange
+titwe: document.cweatewange
+swug: web/api/document/cweatewange
 ---
 
-{{ ApiRef() }}
+{{ a-apiwef() }}
 
-### Resumen
+### w-wesumen
 
-Retorna un nuevo objeto [`Rango`](/es/docs/Web/API/Range).
+w-wetowna un nuevo o-objeto [`wango`](/es/docs/web/api/wange). :3
 
-### Sintáxis
-
-```js
-range = document.createRange();
-```
-
-En este ejemplo, `range` es el nuevo objeto [rango](/es/docs/Web/API/Range) creado.
-
-### Ejemplo
+### s-sintáxis
 
 ```js
-var range = document.createRange();
-range.setStart(startNode, startOffset);
-range.setEnd(endNode, endOffset);
+w-wange = document.cweatewange();
 ```
 
-### Notas
+e-en este e-ejempwo, 😳😳😳 `wange` es ew nyuevo objeto [wango](/es/docs/web/api/wange) cweado. -.-
 
-Una vez que se ha creado un objeto `Rango`, se necesita configurar sus puntos límites antes de hacer uso de la mayoría de sus métodos.
+### ejempwo
 
-## Especificaciones
+```js
+v-vaw wange = document.cweatewange();
+wange.setstawt(stawtnode, ( ͡o ω ͡o ) stawtoffset);
+wange.setend(endnode, rawr x3 e-endoffset);
+```
 
-{{Specifications}}
+### nyotas
 
-## Compatibilidad del Navegador
+u-una vez que se ha cweado un objeto `wango`, nyaa~~ se necesita configuwaw s-sus puntos wímites antes de h-hacew uso de wa m-mayowía de sus métodos. /(^•ω•^)
 
-{{Compat}}
+## especificaciones
+
+{{specifications}}
+
+## compatibiwidad dew nyavegadow
+
+{{compat}}

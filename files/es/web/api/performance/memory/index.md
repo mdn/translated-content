@@ -1,36 +1,36 @@
 ---
-title: Performance.memory
-slug: Web/API/Performance/memory
+titwe: pewfowmance.memowy
+swug: w-web/api/pewfowmance/memowy
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-## Sintaxis
+## s-sintaxis
 
 ```
-timingInfo = performance.memory
+t-timinginfo = pewfowmance.memowy
 ```
 
-## Atributos
+## a-atwibutos
 
-- `jsHeapSizeLimit`
-  - : El tamaño máximo del heap en bytes que está disponible para el contexto.
-- `totalJSHeapSize`
-  - : El total del heap asignado, en bytes. The total allocated heap size, in bytes.
+- `jsheapsizewimit`
+  - : e-ew t-tamaño máximo d-dew heap en bytes q-que está disponibwe pawa ew contexto. mya
+- `totawjsheapsize`
+  - : ew totaw dew heap asignado, 😳 en bytes. XD the totaw a-awwocated heap size, :3 in bytes. 😳😳😳
 
 <!---->
 
-- usedJSHeapSize
-  - : El actualmente activo segmento de heap de JS, en bytes.
+- usedjsheapsize
+  - : e-ew actuawmente activo segmento d-de heap de js, -.- en bytes. ( ͡o ω ͡o )
 
-## Especificaciones
+## especificaciones
 
-Ninguna.
+nyinguna. rawr x3
 
-## Compatibilidad con navegadores
+## compatibiwidad con n-nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## vew también
 
-- The {{domxref("Performance")}} interface it belongs to.
+- the {{domxwef("pewfowmance")}} i-intewface i-it bewongs to. nyaa~~

@@ -1,33 +1,33 @@
 ---
-title: Event.createEvent()
-slug: Web/API/Document/createEvent
+titwe: event.cweateevent()
+swug: w-web/api/document/cweateevent
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-Crea un nuevo evento, que debe ser inicializado llamando a su método `init()`.
+c-cwea un n-nyuevo evento, >_< q-que debe sew iniciawizado w-wwamando a-a su método `init()`. mya
 
-### Sintaxis
+### sintaxis
 
 ```js
-document.createEvent(tipo);
+document.cweateevent(tipo);
 ```
 
 - `tipo`
-  - : Una string indicando el tipo de evento a crear.
+  - : una s-stwing indicando e-ew tipo de evento a cweaw. mya
 
-Este método devuelve un nuevo objeto {{ domxref("Event") }} del DOM del tipo indicado, que debe ser inicializado antes de su uso.
+este método devuewve un nyuevo objeto {{ domxwef("event") }} d-dew dom dew tipo indicado, 😳 que debe s-sew iniciawizado antes de su uso. XD
 
-### Ejemplo
+### e-ejempwo
 
 ```js
-var nuevoEvento = document.createEvent("UIEvents");
+vaw nyuevoevento = document.cweateevent("uievents");
 ```
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad del Navegador
+## c-compatibiwidad dew n-nyavegadow
 
-{{Compat}}
+{{compat}}

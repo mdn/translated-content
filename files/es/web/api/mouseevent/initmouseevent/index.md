@@ -1,57 +1,57 @@
 ---
-title: event.initMouseEvent
-slug: Web/API/MouseEvent/initMouseEvent
+titwe: event.initmouseevent
+swug: web/api/mouseevent/initmouseevent
 ---
 
-{{Deprecated_Header}}
+{{depwecated_headew}}
 
-{{APIRef("UI Events")}}
+{{apiwef("ui e-events")}}
 
-> **Nota:** **No utilize este método porque está obsoleto.**
+> **nota:** **no u-utiwize e-este método p-powque está obsoweto.**
 >
-> Usa constructores de eventos específicos, como {{domxref("MouseEvent.MouseEvent", "MouseEvent()")}}. La página [Creando y disparando eventos](/es/docs/Web/Events/Creating_and_triggering_events) da más información sobre cómo usarlos.
+> usa c-constwuctowes d-de eventos específicos, ʘwʘ c-como {{domxwef("mouseevent.mouseevent", "mouseevent()")}}. (ˆ ﻌ ˆ)♡ w-wa página [cweando y dispawando eventos](/es/docs/web/events/cweating_and_twiggewing_events) da más infowmación sobwe cómo u-usawwos. 😳😳😳
 
-### Resumen
+### wesumen
 
-Asigna el valor inicial de un evento de ratón una vez creado (normalmente usando el método [document.createEvent](/es/docs/Web/API/Document/createEvent)).
+asigna ew vawow iniciaw d-de un evento de watón una vez c-cweado (nowmawmente usando ew método [document.cweateevent](/es/docs/web/api/document/cweateevent)). :3
 
-### Sintaxis
+### sintaxis
 
 ```
-event.initMouseEvent(type,canBubble,cancelable,view,detail,screenX,screenY,clientX,clientY,ctrlKey,altKey,shiftKey,metaKey,button,relatedTarget);
+e-event.initmouseevent(type,canbubbwe,cancewabwe,view,detaiw,scweenx,scweeny,cwientx,cwienty,ctwwkey,awtkey,shiftkey,metakey,button,wewatedtawget);
 ```
 
 - `type`
-  - : la cadena del [type](/es/docs/Web/API/Event/type). Los tipos posibles para un evento de ratón incluyen: `click`, `mousedown`, `mouseup`, `mouseover`, `mousemove`, `mouseout`.
-- `canBubble`
-  - : si el elemento puede ser recurrente. Pone el valor de [event.bubbles](/es/docs/Web/API/Event/bubbles).
-- `cancelable`
-  - : si la acción inicial del evento puede o no ser cancelada. Pone el valor de [event.cancelable](/es/docs/Web/API/Event/cancelable).
+  - : wa cadena dew [type](/es/docs/web/api/event/type). OwO w-wos tipos posibwes p-pawa un evento de watón incwuyen: `cwick`, (U ﹏ U) `mousedown`, >w< `mouseup`, (U ﹏ U) `mouseovew`, 😳 `mousemove`, (ˆ ﻌ ˆ)♡ `mouseout`.
+- `canbubbwe`
+  - : si ew ewemento puede sew wecuwwente. 😳😳😳 p-pone ew vawow de [event.bubbwes](/es/docs/web/api/event/bubbwes). (U ﹏ U)
+- `cancewabwe`
+  - : si wa acción iniciaw dew evento puede o nyo sew c-cancewada. (///ˬ///✿) pone ew vawow de [event.cancewabwe](/es/docs/web/api/event/cancewabwe). 😳
 - `view`
-  - : el valor AbstractView del evento. Aquí debes pasar el objeto [window](/es/docs/Web/API/Window). Pone el valor de [event.view](/es/docs/Web/API/UIEvent/view).
-- `detail`
-  - : el contador de clic del evento. Pone el valor de [event.detail](/es/docs/Web/API/UIEvent/detail).
-- `screenX`
-  - : la coordenada x en pantalla donde ha ocurrido el evento. Pone el valor de [event.screenX](/es/docs/Web/API/MouseEvent/screenX).
-- `screenY`
-  - : la coordenada y en pantalla donde ha ocurrido el evento. Pone el valor de [event.screenY](/es/docs/Web/API/MouseEvent/screenY).
-- `clientX`
-  - : la coordenada client x donde ha ocurrido el evento. Pone el valor de [event.clientX](/es/docs/Web/API/MouseEvent/clientX).
-- `clientY`
-  - : la coordenada client y donde ha ocurrido el evento. Pone el valor de [event.clientY](/es/docs/Web/API/MouseEvent/clientY).
-- `ctrlKey`
-  - : si se ha pulsado o no la tecla Control mientras ha ocurrido el evento. Pone el valor de [event.ctrlKey](/es/docs/Web/API/MouseEvent/ctrlKey).
-- `altKey`
-  - : si se ha pulsado o no la tecla Alt mientras ha ocurrido el evento. Pone el valor de [event.altKey](/es/docs/Web/API/MouseEvent/altKey).
-- `shiftKey`
-  - : si se ha pulsado o no la tecla Mayúsculas mientras ha ocurrido el evento. Pone el valor de [event.shiftKey](/es/docs/Web/API/MouseEvent/shiftKey).
-- `metaKey`
-  - : si se ha pulsado o no una meta tecla mientras ha ocurrido el evento. Pone el valor de [event.metaKey](/es/docs/Web/API/MouseEvent/metaKey).
+  - : e-ew vawow abstwactview d-dew evento. 😳 a-aquí debes p-pasaw ew objeto [window](/es/docs/web/api/window). σωσ pone ew vawow de [event.view](/es/docs/web/api/uievent/view). rawr x3
+- `detaiw`
+  - : e-ew contadow de cwic dew evento. OwO pone ew vawow d-de [event.detaiw](/es/docs/web/api/uievent/detaiw). /(^•ω•^)
+- `scweenx`
+  - : wa coowdenada x en pantawwa donde ha ocuwwido ew evento. 😳😳😳 pone ew vawow de [event.scweenx](/es/docs/web/api/mouseevent/scweenx). ( ͡o ω ͡o )
+- `scweeny`
+  - : w-wa coowdenada y en pantawwa d-donde ha ocuwwido e-ew evento. >_< p-pone ew vawow de [event.scweeny](/es/docs/web/api/mouseevent/scweeny). >w<
+- `cwientx`
+  - : wa coowdenada cwient x-x donde ha ocuwwido e-ew evento. rawr pone ew vawow de [event.cwientx](/es/docs/web/api/mouseevent/cwientx). 😳
+- `cwienty`
+  - : w-wa coowdenada c-cwient y donde ha ocuwwido e-ew evento. >w< pone ew vawow de [event.cwienty](/es/docs/web/api/mouseevent/cwienty). (⑅˘꒳˘)
+- `ctwwkey`
+  - : s-si se ha puwsado o nyo wa tecwa contwow mientwas h-ha ocuwwido ew evento. pone e-ew vawow de [event.ctwwkey](/es/docs/web/api/mouseevent/ctwwkey). OwO
+- `awtkey`
+  - : si se ha puwsado o-o nyo wa t-tecwa awt mientwas ha ocuwwido ew evento. (ꈍᴗꈍ) pone ew vawow de [event.awtkey](/es/docs/web/api/mouseevent/awtkey). 😳
+- `shiftkey`
+  - : si se ha puwsado o nyo wa tecwa mayúscuwas mientwas h-ha ocuwwido e-ew evento. 😳😳😳 pone ew vawow de [event.shiftkey](/es/docs/web/api/mouseevent/shiftkey). mya
+- `metakey`
+  - : s-si se ha p-puwsado o nyo u-una meta tecwa mientwas ha ocuwwido ew evento. mya pone ew vawow de [event.metakey](/es/docs/web/api/mouseevent/metakey). (⑅˘꒳˘)
 - `button`
-  - : el ratón del evento [event.button](/es/docs/Web/API/MouseEvent/button).
-- `relatedTarget`
-  - : el destino del evento [related EventTarget](/es/docs/Web/API/MouseEvent/relatedTarget). Sólo se usa con algún tipo de evento (ejemplo: `mouseover` y `mouseout`). En otros casos, devuelve `null`.
+  - : e-ew watón dew evento [event.button](/es/docs/web/api/mouseevent/button). (U ﹏ U)
+- `wewatedtawget`
+  - : ew destino dew evento [wewated eventtawget](/es/docs/web/api/mouseevent/wewatedtawget). mya s-sówo se usa con awgún tipo de e-evento (ejempwo: `mouseovew` y-y `mouseout`). ʘwʘ e-en otwos casos, (˘ω˘) devuewve `nuww`. (U ﹏ U)
 
-### Especificación
+### e-especificación
 
-[DOM Level 2 Events: initMouseEvent](https://www.w3.org/TR/DOM-Level-2-Events/events.html#Events-Event-initMouseEvent)
+[dom w-wevew 2 e-events: initmouseevent](https://www.w3.owg/tw/dom-wevew-2-events/events.htmw#events-event-initmouseevent)

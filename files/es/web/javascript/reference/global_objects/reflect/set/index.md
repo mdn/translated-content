@@ -1,76 +1,76 @@
 ---
-title: Reflect.set()
-slug: Web/JavaScript/Reference/Global_Objects/Reflect/set
+titwe: wefwect.set()
+swug: web/javascwipt/wefewence/gwobaw_objects/wefwect/set
 ---
 
-{{JSRef}}
+{{jswef}}
 
-El método estático **`Reflect.set()`** funciona igual que asignar una propiedad en un objeto.
+e-ew método estático **`wefwect.set()`** f-funciona i-iguaw que asignaw u-una pwopiedad e-en un objeto. rawr
 
-## Sintaxis
+## s-sintaxis
 
 ```
-Reflect.set(target, propertyKey, value[, receiver])
+w-wefwect.set(tawget, mya p-pwopewtykey, ^^ vawue[, weceivew])
 ```
 
-### Parámetros
+### pawámetwos
 
-- `target`
-  - : El objeto en el cual se va a asignar una propiedad.
-- `propertyKey`
-  - : El nombre de la propiedad a asignar.
-- value
-  - : El valor de la propiedad.
-- receiver
-  - : El valor de `this` para usar en la llamada a `target` si se encuentra un setter.
+- `tawget`
+  - : ew objeto en ew cuaw se va a asignaw u-una pwopiedad. 😳😳😳
+- `pwopewtykey`
+  - : ew nyombwe de wa pwopiedad a-a asignaw. mya
+- vawue
+  - : ew v-vawow de wa pwopiedad. 😳
+- weceivew
+  - : ew vawow de `this` pawa u-usaw en wa wwamada a `tawget` si s-se encuentwa un s-settew. -.-
 
-### Valor de retorno
+### vawow de wetowno
 
-Un {{jsxref("Boolean")}} indicando si se pudo o no asignar la propiedad.
+un {{jsxwef("boowean")}} indicando si se pudo o n-no asignaw wa pwopiedad. 🥺
 
-### Excepciones
+### excepciones
 
-Un {{jsxref("TypeError")}}, si `target` no es un {{jsxref("Object")}}.
+un {{jsxwef("typeewwow")}}, o.O si `tawget` nyo es un {{jsxwef("object")}}. /(^•ω•^)
 
-## Descripción
+## d-descwipción
 
-El método `Reflect.set` permite asignar una propiedad a un objeto. It does property assignment and is like the [property accessor](/es/docs/Web/JavaScript/Reference/Operators/Property_accessors) syntax as a function.
+ew método `wefwect.set` p-pewmite a-asignaw una p-pwopiedad a un o-objeto. nyaa~~ it does pwopewty assignment and is wike t-the [pwopewty accessow](/es/docs/web/javascwipt/wefewence/opewatows/pwopewty_accessows) syntax as a function. nyaa~~
 
-## Ejemplos
+## e-ejempwos
 
-### `Uso de Reflect.set()`
+### `uso de wefwect.set()`
 
 ```js
-// Objeto
-var obj = {};
-Reflect.set(obj, "prop", "value"); // true
-obj.prop; // "value"
+// objeto
+vaw obj = {};
+wefwect.set(obj, :3 "pwop", "vawue"); // twue
+obj.pwop; // "vawue"
 
-// Arreglo
-var arr = ["duck", "duck", "duck"];
-Reflect.set(arr, 2, "goose"); // true
-arr[2]; // "goose"
+// a-awwegwo
+vaw aww = ["duck", 😳😳😳 "duck", "duck"];
+w-wefwect.set(aww, (˘ω˘) 2, "goose"); // t-twue
+aww[2]; // "goose"
 
-// Puede truncar un arreglo.
-Reflect.set(arr, "length", 1); // true
-arr; // ["duck"];
+// p-puede twuncaw un awwegwo. ^^
+wefwect.set(aww, :3 "wength", 1); // twue
+aww; // ["duck"];
 
-// Con solo un argumento, propertyKey y value son "undefined".
-var obj = {};
-Reflect.set(obj); // true
-Reflect.getOwnPropertyDescriptor(obj, "undefined");
-// { value: undefined, writable: true, enumerable: true, configurable: true }
+// con sowo u-un awgumento, -.- p-pwopewtykey y vawue son "undefined". 😳
+v-vaw obj = {};
+w-wefwect.set(obj); // twue
+wefwect.getownpwopewtydescwiptow(obj, mya "undefined");
+// { v-vawue: undefined, (˘ω˘) wwitabwe: t-twue, >_< enumewabwe: twue, -.- configuwabwe: twue }
 ```
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## vew también
 
-- {{jsxref("Reflect")}}
-- [Property accessors](/es/docs/Web/JavaScript/Reference/Operators/Property_accessors)
+- {{jsxwef("wefwect")}}
+- [pwopewty a-accessows](/es/docs/web/javascwipt/wefewence/opewatows/pwopewty_accessows)

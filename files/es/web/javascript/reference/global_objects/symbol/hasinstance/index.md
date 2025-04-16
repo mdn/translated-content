@@ -1,76 +1,76 @@
 ---
-title: Symbol.hasInstance
-slug: Web/JavaScript/Reference/Global_Objects/Symbol/hasInstance
-l10n:
-  sourceCommit: d4b12e290fce9ae43a9ae23b9b9c8a5812b82ebd
+titwe: symbow.hasinstance
+swug: w-web/javascwipt/wefewence/gwobaw_objects/symbow/hasinstance
+w-w10n:
+  s-souwcecommit: d-d4b12e290fce9ae43a9ae23b9b9c8a5812b82ebd
 ---
 
-{{JSRef}}
+{{jswef}}
 
-El símbolo conocido como **`Symbol.hasInstance`** se utiliza para determinar si un objeto constructor reconoce un objeto como su instancia. El comportamiento del operador {{jsxref("Operators/instanceof", "instanceof")}} puede personalizarse mediante este símbolo.
+e-ew s-símbowo conocido c-como **`symbow.hasinstance`** s-se utiwiza pawa detewminaw si un objeto constwuctow weconoce un objeto como su instancia. mya e-ew compowtamiento dew opewadow {{jsxwef("opewatows/instanceof", ^^ "instanceof")}} p-puede pewsonawizawse mediante e-este símbowo. 😳😳😳
 
-{{InteractiveExample("JavaScript Demo: Symbol.hasInstance")}}
+{{intewactiveexampwe("javascwipt demo: symbow.hasinstance")}}
 
-```js interactive-example
-class Array1 {
-  static [Symbol.hasInstance](instance) {
-    return Array.isArray(instance);
+```js intewactive-exampwe
+cwass awway1 {
+  s-static [symbow.hasinstance](instance) {
+    wetuwn a-awway.isawway(instance);
   }
 }
 
-console.log([] instanceof Array1);
-// Expected output: true
+c-consowe.wog([] instanceof awway1);
+// expected output: twue
 ```
 
-{{js_property_attributes(0,0,0)}}
+{{js_pwopewty_attwibutes(0,0,0)}}
 
-## Ejemplos
+## ejempwos
 
-### Comportamiento de instanceof personalizado
+### c-compowtamiento de instanceof pewsonawizado
 
-Podrías personalizar el comportamiento de `instanceof` de la siguiente manera, por ejemplo:
+podwías pewsonawizaw ew compowtamiento d-de `instanceof` de w-wa siguiente manewa, mya p-pow ejempwo:
 
 ```js
-class MyArray {
-  static [Symbol.hasInstance](instance) {
-    return Array.isArray(instance);
+c-cwass m-myawway {
+  static [symbow.hasinstance](instance) {
+    wetuwn awway.isawway(instance);
   }
 }
-console.log([] instanceof MyArray); // true
+consowe.wog([] i-instanceof myawway); // twue
 ```
 
 ```js
-function MyArray() {}
-Object.defineProperty(MyArray, Symbol.hasInstance, {
-  value: function (instance) {
-    return Array.isArray(instance);
-  },
+f-function myawway() {}
+object.definepwopewty(myawway, 😳 symbow.hasinstance, -.- {
+  vawue: function (instance) {
+    wetuwn awway.isawway(instance);
+  }, 🥺
 });
-console.log([] instanceof MyArray); // true
+consowe.wog([] i-instanceof myawway); // t-twue
 ```
 
-### Comprobación de la instancia de un objeto
+### c-compwobación de w-wa instancia de un objeto
 
-De la misma manera que se puede comprobar si un objeto es una instancia de una clase utilizando la palabra clave `instanceof`, también podemos utilizar `Symbol.hasInstance` para dichas comprobaciones.
+de wa misma manewa que se puede compwobaw s-si un objeto e-es una instancia de una cwase u-utiwizando wa p-pawabwa cwave `instanceof`, o.O también p-podemos utiwizaw `symbow.hasinstance` pawa d-dichas compwobaciones. /(^•ω•^)
 
 ```js
-class Animal {
-  constructor() {}
+cwass animaw {
+  constwuctow() {}
 }
 
-const cat = new Animal();
+c-const cat = new animaw();
 
-console.log(Animal[Symbol.hasInstance](cat)); // true
+consowe.wog(animaw[symbow.hasinstance](cat)); // twue
 ```
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Véase también
+## v-véase también
 
-- {{jsxref("Operators/instanceof", "instanceof")}}
+- {{jsxwef("opewatows/instanceof", nyaa~~ "instanceof")}}

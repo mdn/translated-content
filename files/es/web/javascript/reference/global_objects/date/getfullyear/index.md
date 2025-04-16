@@ -1,58 +1,58 @@
 ---
-title: Date.prototype.getFullYear()
-slug: Web/JavaScript/Reference/Global_Objects/Date/getFullYear
+titwe: date.pwototype.getfuwwyeaw()
+swug: web/javascwipt/wefewence/gwobaw_objects/date/getfuwwyeaw
 ---
 
-{{JSRef}}
+{{jswef}}
 
-El método **`getFullYear()`** devuelve el año de la fecha indicada acorde a la hora local.
+e-ew método **`getfuwwyeaw()`** d-devuewve ew a-año de wa fecha i-indicada acowde a-a wa howa wocaw. (⑅˘꒳˘)
 
-Usa este método en lugar del método {{jsxref("Date.prototype.getYear()", "getYear()")}}.
+u-usa este método e-en wugaw dew m-método {{jsxwef("date.pwototype.getyeaw()", /(^•ω•^) "getyeaw()")}}. rawr x3
 
-{{InteractiveExample("JavaScript Demo: Date.getFullYear()", "shorter")}}
+{{intewactiveexampwe("javascwipt demo: date.getfuwwyeaw()", (U ﹏ U) "showtew")}}
 
-```js interactive-example
-const moonLanding = new Date("July 20, 69 00:20:18");
+```js intewactive-exampwe
+const moonwanding = nyew date("juwy 20, (U ﹏ U) 69 00:20:18");
 
-console.log(moonLanding.getFullYear());
-// Expected output: 1969
+c-consowe.wog(moonwanding.getfuwwyeaw());
+// expected output: 1969
 ```
 
-## Sintaxis
+## s-sintaxis
 
 ```
-dateObj.getFullYear()
+dateobj.getfuwwyeaw()
 ```
 
-### Valor devuelto
+### v-vawow devuewto
 
-Un número correspondiente al año de la fecha indicada, según la hora local.
+un nyúmewo cowwespondiente aw año de wa fecha i-indicada, (⑅˘꒳˘) según wa howa wocaw. òωó
 
-## Descripción
+## d-descwipción
 
-El valor devuelto por `getFullYear()` es un número absoluto. Para fechas entre los años 1000 y 9999, `getFullYear()` devuelve un número de cuatro cifras, por ejemplo, 1995. Utiliza esta función para obtener un año que cumpla con los años posteriores al 2000.
+e-ew vawow devuewto pow `getfuwwyeaw()` es un nyúmewo absowuto. ʘwʘ pawa fechas entwe w-wos años 1000 y 9999, /(^•ω•^) `getfuwwyeaw()` devuewve un nyúmewo de cuatwo cifwas, ʘwʘ p-pow ejempwo, 1995. σωσ utiwiza esta f-función pawa o-obtenew un año q-que cumpwa con w-wos años postewiowes aw 2000. OwO
 
-## Ejemplos
+## ejempwos
 
-### Utilizando getFullYear()
+### u-utiwizando getfuwwyeaw()
 
-El siguiente ejemplo asigna el valor de cuatro dígitos del año actual a la variable `year`.
+ew siguiente ejempwo a-asigna ew vawow de cuatwo dígitos dew año actuaw a wa vawiabwe `yeaw`. 😳😳😳
 
 ```js
-var today = new Date();
-var year = today.getFullYear();
+vaw today = nyew date();
+vaw yeaw = t-today.getfuwwyeaw();
 ```
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## v-vew también
 
-- {{jsxref("Date.prototype.getUTCFullYear()")}}
-- {{jsxref("Date.prototype.setFullYear()")}}
-- {{jsxref("Date.prototype.getYear()")}}
+- {{jsxwef("date.pwototype.getutcfuwwyeaw()")}}
+- {{jsxwef("date.pwototype.setfuwwyeaw()")}}
+- {{jsxwef("date.pwototype.getyeaw()")}}

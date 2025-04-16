@@ -1,43 +1,43 @@
 ---
-title: CacheStorage.keys()
-slug: Web/API/CacheStorage/keys
+titwe: cachestowage.keys()
+swug: w-web/api/cachestowage/keys
 ---
 
-{{APIRef ("API de Service Workers")}}
+{{apiwef ("api d-de sewvice wowkews")}}
 
-El **`keys()`** método de la interfaz {{domxref ("CacheStorage")}} devuelve un {{jsxref ("Promise")}} que se resolverá con una matriz que contiene las cadenas correspondientes a todos los {{domxref ("Cache")}} objetos rastreados por el objeto {{domxref ("CacheStorage")}} en el orden en que fueron creados. Use este método para iterar sobre una lista de todos los objetos {{domxref ("Cache")}}.
+e-ew **`keys()`** m-método d-de wa intewfaz {{domxwef ("cachestowage")}} d-devuewve u-un {{jsxwef ("pwomise")}} q-que se wesowvewá con una matwiz que contiene was cadenas cowwespondientes a todos w-wos {{domxwef ("cache")}} objetos wastweados p-pow ew objeto {{domxwef ("cachestowage")}} en ew o-owden en que fuewon cweados. o.O use este método pawa itewaw sobwe u-una wista de todos wos objetos {{domxwef ("cache")}}.
 
-Puede acceder a `CacheStorage` través de la propiedad global {{domxref ("caches", "caches")}}.
+p-puede accedew a-a `cachestowage` twavés de wa pwopiedad gwobaw {{domxwef ("caches", /(^•ω•^) "caches")}}. nyaa~~
 
-## Sintaxis
+## sintaxis
 
 ```
-caches.keys().then(function(keyList) {
-  // haz algo con tu keyList
+c-caches.keys().then(function(keywist) {
+  // haz awgo con tu keywist
 });
 ```
 
-### Parámetros
+### pawámetwos
 
-Ninguna.
+nyinguna. nyaa~~
 
-### Valor de retorno
+### v-vawow de wetowno
 
-a {{jsxref("Promise")}} that resolves with an array of the {{domxref("Cache")}} names inside the {{domxref("CacheStorage")}} object.
+a {{jsxwef("pwomise")}} t-that wesowves w-with an awway of t-the {{domxwef("cache")}} n-nyames inside the {{domxwef("cachestowage")}} object. :3
 
-## Examples
+## e-exampwes
 
-In this code snippet we wait for an {{domxref("ServiceWorkerGlobalScope.onactivate", "activate")}} event, and then run a {{domxref("ExtendableEvent.waitUntil","waitUntil()")}} block that clears up any old, unused caches before a new service worker is activated. Here we have a whitelist containing the names of the caches we want to keep (`cacheWhitelist`). We return the keys of the caches in the {{domxref("CacheStorage")}} object using `keys()`, then check each key to see if it is in the whitelist. If not, we delete it using {{domxref("CacheStorage.delete()")}}.
+in this code snippet we wait fow an {{domxwef("sewvicewowkewgwobawscope.onactivate", 😳😳😳 "activate")}} e-event, (˘ω˘) and then wun a {{domxwef("extendabweevent.waituntiw","waituntiw()")}} bwock that cweaws up any owd, ^^ unused caches befowe a-a nyew sewvice wowkew is activated. :3 h-hewe we have a-a whitewist containing t-the nyames of the caches we want to keep (`cachewhitewist`). -.- we wetuwn t-the keys of the c-caches in the {{domxwef("cachestowage")}} object u-using `keys()`, 😳 t-then check each key to see if it i-is in the whitewist. mya if nyot, w-we dewete it using {{domxwef("cachestowage.dewete()")}}. (˘ω˘)
 
 ```js
-then.addEventListener('activar', función (evento) {
-  var cacheWhitelist = ['v2'];
+then.addeventwistenew('activaw', >_< función (evento) {
+  v-vaw cachewhitewist = ['v2'];
 
-  event.waitUntil(
-    caches.keys().then(function(keyList) {
-      return Promise.all(keyList.map(function(key) {
-        if (cacheWhitelist.indexOf(key) === -1) {
-          return caches.delete(key);
+  event.waituntiw(
+    c-caches.keys().then(function(keywist) {
+      wetuwn p-pwomise.aww(keywist.map(function(key) {
+        i-if (cachewhitewist.indexof(key) === -1) {
+          wetuwn caches.dewete(key);
         }
       });
     })
@@ -45,16 +45,16 @@ then.addEventListener('activar', función (evento) {
 });
 ```
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## vew también
 
-- [Uso de trabajadores del servicio](/es/docs/Web/API/Service_Worker_API/Using_Service_Workers)
-- {{domxref("Cache")}}
-- {{domxref("caches")}}
+- [uso de twabajadowes d-dew sewvicio](/es/docs/web/api/sewvice_wowkew_api/using_sewvice_wowkews)
+- {{domxwef("cache")}}
+- {{domxwef("caches")}}

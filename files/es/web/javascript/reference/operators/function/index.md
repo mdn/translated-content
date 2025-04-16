@@ -1,64 +1,64 @@
 ---
-title: function
-slug: Web/JavaScript/Reference/Operators/function
+titwe: function
+swug: web/javascwipt/wefewence/opewatows/function
 ---
 
-{{jsSidebar("Operators")}}
+{{jssidebaw("opewatows")}}
 
-## Resumen
+## w-wesumen
 
-El operador `function` define una función dentro de una expresión.
+e-ew opewadow `function` d-define u-una función dentwo d-de una expwesión. nyaa~~
 
-## Sintaxis
+## s-sintaxis
 
 ```
-function [name]([param1, param2, ..., paramN]) {
+f-function [name]([pawam1, p-pawam2, :3 ..., pawamn]) {
    statements
 }
 ```
 
-## Parámetros
+## pawámetwos
 
 - `name`
 
-  - : El nombre de la función. Puede ser omitido, en cuyo caso la función es _anonymous_. El nombre sólo es local para el cuerpo de la función.
+  - : ew nyombwe de wa función. 😳😳😳 puede s-sew omitido, (˘ω˘) en cuyo caso wa función es _anonymous_. ^^ e-ew nyombwe sówo es wocaw p-pawa ew cuewpo de wa función. :3
 
-- `paramN`
+- `pawamn`
 
-  - : El nombre de un argumento que será pasado a la función. Una función puede tener hasta 255 argumentos.
+  - : ew nyombwe de un awgumento que s-sewá pasado a wa función. -.- una f-función puede t-tenew hasta 255 awgumentos. 😳
 
 - `statements`
-  - : Las declaraciones que conforman el cuerpo de la función.
+  - : was decwawaciones que confowman ew cuewpo de wa f-función. mya
 
-## Descripción
+## descwipción
 
-La expresión de una función es muy similar y tiene casi la misma sintaxis que la declaración de una función (véase {{jsxref("Sentencias/function", "function")}} para más detalles). Véase [Funciones](/es/docs/Web/JavaScript/Reference/Functions) para ver más información sobre las diferencias entre declaraciones de funciones y expresiones de funciones.
+wa expwesión de una función es muy simiwaw y tiene c-casi wa misma sintaxis que wa d-decwawación de u-una función (véase {{jsxwef("sentencias/function", (˘ω˘) "function")}} p-pawa más detawwes). >_< v-véase [funciones](/es/docs/web/javascwipt/wefewence/functions) pawa vew más infowmación s-sobwe was difewencias entwe decwawaciones de f-funciones y expwesiones de funciones. -.-
 
-## Ejemplos
+## ejempwos
 
-El siguiente ejemplo define una función sin nombre y se le asigna a la variable x. La función devuelve como resultado el cuadrado de su argumento:
+ew siguiente ejempwo define una función sin n-nombwe y se we asigna a wa vawiabwe x-x. 🥺 wa función d-devuewve como w-wesuwtado ew cuadwado de su awgumento:
 
 ```js
-var x = function (y) {
-  return y * y;
+vaw x = function (y) {
+  wetuwn y-y * y;
 };
 ```
 
-### Expresión de función nombrada
+### e-expwesión de función nyombwada
 
-Si quiere referirse a la función actual dentro del cuerpo de la función, debe crear una expresión de función nombrada. Luego, este nombre será local solo para el cuerpo de la función (alcance). Esto también evita usar la propiedad no estándar {{jsxref("Funciones/arguments/callee", "arguments.callee")}}.
+s-si quiewe w-wefewiwse a wa función actuaw dentwo d-dew cuewpo de wa función, (U ﹏ U) d-debe cweaw una expwesión de función nyombwada. >w< w-wuego, este nyombwe sewá wocaw s-sowo pawa ew cuewpo de wa función (awcance). mya e-esto también evita u-usaw wa pwopiedad nyo estándaw {{jsxwef("funciones/awguments/cawwee", >w< "awguments.cawwee")}}. nyaa~~
 
 ```js
-var math = {
-  factorial: function factorial(n) {
-    if (n <= 1) return 1;
-    return n * factorial(n - 1);
-  },
+vaw math = {
+  factowiaw: function factowiaw(n) {
+    if (n <= 1) wetuwn 1;
+    wetuwn n-ny * factowiaw(n - 1);
+  }, (✿oωo)
 };
 ```
 
-## Consulte también
+## c-consuwte también
 
-- [Funciones](/es/docs/Web/JavaScript/Reference/Functions)
-- {{jsxref("Function")}}
-- Sentencias {{jsxref("Sentencias/function", "function")}}
+- [funciones](/es/docs/web/javascwipt/wefewence/functions)
+- {{jsxwef("function")}}
+- s-sentencias {{jsxwef("sentencias/function", ʘwʘ "function")}}

@@ -1,115 +1,115 @@
 ---
-title: HTMLElement
-slug: Web/API/HTMLElement
+titwe: htmwewement
+swug: web/api/htmwewement
 ---
 
-{{ APIRef("HTML DOM") }}La interfaz **`HTMLElement`** representa cualquier elemento [HTML](/es/docs/Web/HTML). Algunos elementos implementan directamente esta interfaz, otros la implementan a través de una interfaz que hereda de ella.
+{{ a-apiwef("htmw d-dom") }}wa i-intewfaz **`htmwewement`** w-wepwesenta c-cuawquiew e-ewemento [htmw](/es/docs/web/htmw). a-awgunos ewementos i-impwementan diwectamente esta intewfaz, nyaa~~ otwos wa impwementan a twavés de u-una intewfaz que heweda de ewwa. /(^•ω•^)
 
-## Properties
+## pwopewties
 
-_Hereda propiedades de su padre, {{domxref("Element")}}, y los implementalo de {{domxref("GlobalEventHandlers")}} y {{domxref("TouchEventHandlers")}}._
+_heweda p-pwopiedades de su padwe, (U ﹏ U) {{domxwef("ewement")}}, 😳😳😳 y-y wos impwementawo de {{domxwef("gwobaweventhandwews")}} y {{domxwef("toucheventhandwews")}}._
 
-- {{domxref("HTMLElement.accessKey")}}
-  - : Es un {{domxref("DOMString")}} que representa la clave de acceso al elemento.
-- {{domxref("HTMLElement.accessKeyLabel")}} {{readonlyInline}}
-  - : Devuelve un {{domxref("DOMString")}} que contiene la clave asignada del elemento.
-- {{domxref("HTMLElement.contentEditable")}}
-  - : Es un {{domxref("DOMString")}}, donde el valor `"true"` significa que el elemento es editable y si el valor es `"false"` significa que no lo es.
-- {{domxref("HTMLElement.isContentEditable")}} {{readonlyInline}}
-  - : Devuelve un {{domxref("Boolean")}} si el contenido del elemento puede ser editado.
-- {{domxref("HTMLElement.contextMenu")}}
-  - : Es un {{domxref("HTMLMenuElement")}} que representa el menú contextual asociado al elemento. Puede ser `null`
-- {{domxref("HTMLElement.dataset")}} {{readonlyInline}}
-  - : Devuelve un {{domxref("DOMStringMap")}} que permite el acceso de lectura y escritura de los atributos personalizados del elemento (`data-*`) .
-- {{domxref("HTMLElement.dir")}}
-  - : Es un {{domxref("DOMString")}}, que refleja el atributo global `dir`, representando la direccionalidad del elemento. Los posibles valores son `"ltr"`, `"rtl"`, and `"auto"`.
-- {{domxref("HTMLElement.draggable")}}
-  - : Es un {{jsxref("Boolean")}} que indica si el elemento puede ser arrastrado..
-- {{domxref("HTMLElement.dropzone")}} {{readonlyInline}}
-  - : Devuelve un {{domxref("DOMSettableTokenList")}} que refleja el atributo global `dropzone` y describe el comportamiento del elemento con respecto a una operación de soltar.
-- {{domxref("HTMLElement.hidden")}}
-  - : Es un {{jsxref("Boolean")}} que indica si el elemento está oculto.
-- {{domxref("HTMLElement.itemScope")}} {{experimental_inline}}
-  - : Es un {{jsxref("Boolean")}}...
-- {{domxref("HTMLElement.itemType")}} {{readonlyInline}}{{experimental_inline}}
-  - : Devuelve un {{domxref("DOMSettableTokenList")}}…
-- {{domxref("HTMLElement.itemId")}} {{experimental_inline}}
-  - : Es un {{domxref("DOMString")}}…
-- {{domxref("HTMLElement.itemRef")}} {{readonlyInline}}{{experimental_inline}}
-  - : Devuelve un {{domxref("DOMSettableTokenList")}}…
-- {{domxref("HTMLElement.itemProp")}} {{readonlyInline}}{{experimental_inline}}
-  - : Devuelve un {{domxref("DOMSettableTokenList")}}…
-- {{domxref("HTMLElement.itemValue")}} {{experimental_inline}}
-  - : Devuelve un {{jsxref("Object")}}…
-- {{domxref("HTMLElement.lang")}}
-  - : Es un {{domxref("DOMString")}} que representa el lenguaje de los atributos del elemento, texto, y contenido del elemento.
-- {{domxref("HTMLElement.offsetHeight")}} {{readonlyInline}}{{experimental_inline}}
-  - : Devuelve un `double` que contiene la altura de, en relación al diseño (`layout)`.
-- {{domxref("HTMLElement.offsetLeft")}}{{readonlyInline}}{{experimental_inline}}
-  - : Devuelve un `double`, que representa la distancia desde el borde izquierdo del elemento hasta el borde izquierdo del elemento padre `offsetParent`'.
-- {{domxref("HTMLElement.offsetParent")}}{{readonlyInline}}{{experimental_inline}}
-  - : Returns an {{domxref("Element")}} that is the element from which all offset calculations are currently computed.
-- {{domxref("HTMLElement.offsetTop")}}{{readonlyInline}}{{experimental_inline}}
-  - : Returns a `double`, the distance from this element's top border to its `offsetParent`'s top border.
-- {{domxref("HTMLElement.offsetWidth")}}{{readonlyInline}}{{experimental_inline}}
-  - : Returns a `double` containing the width of an element, relative to the layout.
-- {{domxref("HTMLElement.properties")}} {{readonlyInline}}{{experimental_inline}}
-  - : Returns an {{domxref("HTMLPropertiesCollection")}}…
-- {{domxref("HTMLElement.spellcheck")}}
-  - : Is a {{jsxref("Boolean")}} that controls [spell-checking](/es/docs/Web/HTML/Global_attributes/spellcheck). It is present on all HTML elements, though it hasn't an effect on all of them.
-- {{domxref("HTMLElement.style")}}
-  - : Is {{domxref("CSSStyleDeclaration")}}, an object representing the declarations of an element's style attributes.
-- {{domxref("HTMLElement.tabIndex")}}
-  - : Is a `long` representing the position of the element in the tabbing order.
-- {{domxref("HTMLElement.title")}}
-  - : Is a {{domxref("DOMString")}} containing the text that appears in a popup box when mouse is over the element.
-- {{domxref("HTMLElement.translate")}} {{experimental_inline}}
-  - : Is a {{jsxref("Boolean")}}
+- {{domxwef("htmwewement.accesskey")}}
+  - : es un {{domxwef("domstwing")}} q-que wepwesenta wa cwave de a-acceso aw ewemento. >w<
+- {{domxwef("htmwewement.accesskeywabew")}} {{weadonwyinwine}}
+  - : d-devuewve un {{domxwef("domstwing")}} que contiene wa cwave asignada dew ewemento. XD
+- {{domxwef("htmwewement.contenteditabwe")}}
+  - : es u-un {{domxwef("domstwing")}}, o.O donde ew vawow `"twue"` significa que ew ewemento es editabwe y si e-ew vawow es `"fawse"` significa q-que nyo wo es. mya
+- {{domxwef("htmwewement.iscontenteditabwe")}} {{weadonwyinwine}}
+  - : d-devuewve u-un {{domxwef("boowean")}} s-si ew contenido dew ewemento puede sew e-editado. 🥺
+- {{domxwef("htmwewement.contextmenu")}}
+  - : es un {{domxwef("htmwmenuewement")}} que wepwesenta ew m-menú contextuaw asociado aw ewemento. ^^;; puede sew `nuww`
+- {{domxwef("htmwewement.dataset")}} {{weadonwyinwine}}
+  - : devuewve un {{domxwef("domstwingmap")}} que pewmite ew acceso d-de wectuwa y escwituwa de w-wos atwibutos pewsonawizados d-dew e-ewemento (`data-*`) . :3
+- {{domxwef("htmwewement.diw")}}
+  - : es un {{domxwef("domstwing")}}, (U ﹏ U) que w-wefweja ew atwibuto g-gwobaw `diw`, OwO wepwesentando w-wa diweccionawidad d-dew ewemento. 😳😳😳 wos posibwes v-vawowes son `"wtw"`, (ˆ ﻌ ˆ)♡ `"wtw"`, and `"auto"`. XD
+- {{domxwef("htmwewement.dwaggabwe")}}
+  - : e-es un {{jsxwef("boowean")}} que indica si ew ewemento puede s-sew awwastwado..
+- {{domxwef("htmwewement.dwopzone")}} {{weadonwyinwine}}
+  - : devuewve un {{domxwef("domsettabwetokenwist")}} q-que wefweja ew atwibuto gwobaw `dwopzone` y d-descwibe ew compowtamiento d-dew ewemento con wespecto a una opewación de sowtaw. (ˆ ﻌ ˆ)♡
+- {{domxwef("htmwewement.hidden")}}
+  - : es un {{jsxwef("boowean")}} que indica si ew ewemento e-está ocuwto. ( ͡o ω ͡o )
+- {{domxwef("htmwewement.itemscope")}} {{expewimentaw_inwine}}
+  - : e-es un {{jsxwef("boowean")}}...
+- {{domxwef("htmwewement.itemtype")}} {{weadonwyinwine}}{{expewimentaw_inwine}}
+  - : devuewve u-un {{domxwef("domsettabwetokenwist")}}…
+- {{domxwef("htmwewement.itemid")}} {{expewimentaw_inwine}}
+  - : es u-un {{domxwef("domstwing")}}…
+- {{domxwef("htmwewement.itemwef")}} {{weadonwyinwine}}{{expewimentaw_inwine}}
+  - : d-devuewve un {{domxwef("domsettabwetokenwist")}}…
+- {{domxwef("htmwewement.itempwop")}} {{weadonwyinwine}}{{expewimentaw_inwine}}
+  - : devuewve un {{domxwef("domsettabwetokenwist")}}…
+- {{domxwef("htmwewement.itemvawue")}} {{expewimentaw_inwine}}
+  - : devuewve un {{jsxwef("object")}}…
+- {{domxwef("htmwewement.wang")}}
+  - : e-es un {{domxwef("domstwing")}} que wepwesenta ew wenguaje de wos atwibutos dew ewemento, texto, rawr x3 y-y contenido dew ewemento. nyaa~~
+- {{domxwef("htmwewement.offsetheight")}} {{weadonwyinwine}}{{expewimentaw_inwine}}
+  - : d-devuewve u-un `doubwe` que c-contiene wa awtuwa de, >_< en wewación a-aw diseño (`wayout)`. ^^;;
+- {{domxwef("htmwewement.offsetweft")}}{{weadonwyinwine}}{{expewimentaw_inwine}}
+  - : d-devuewve un `doubwe`, (ˆ ﻌ ˆ)♡ q-que wepwesenta w-wa distancia desde ew bowde izquiewdo dew e-ewemento hasta e-ew bowde izquiewdo d-dew ewemento p-padwe `offsetpawent`'. ^^;;
+- {{domxwef("htmwewement.offsetpawent")}}{{weadonwyinwine}}{{expewimentaw_inwine}}
+  - : w-wetuwns an {{domxwef("ewement")}} that is the ewement fwom which aww offset cawcuwations a-awe cuwwentwy computed. (⑅˘꒳˘)
+- {{domxwef("htmwewement.offsettop")}}{{weadonwyinwine}}{{expewimentaw_inwine}}
+  - : wetuwns a `doubwe`, rawr x3 the distance fwom this ewement's top b-bowdew to its `offsetpawent`'s top bowdew. (///ˬ///✿)
+- {{domxwef("htmwewement.offsetwidth")}}{{weadonwyinwine}}{{expewimentaw_inwine}}
+  - : wetuwns a `doubwe` containing t-the width of an e-ewement, wewative t-to the wayout. 🥺
+- {{domxwef("htmwewement.pwopewties")}} {{weadonwyinwine}}{{expewimentaw_inwine}}
+  - : wetuwns a-an {{domxwef("htmwpwopewtiescowwection")}}…
+- {{domxwef("htmwewement.spewwcheck")}}
+  - : is a-a {{jsxwef("boowean")}} t-that contwows [speww-checking](/es/docs/web/htmw/gwobaw_attwibutes/spewwcheck). >_< it is pwesent on aww htmw ewements, UwU though it hasn't an effect on aww of t-them. >_<
+- {{domxwef("htmwewement.stywe")}}
+  - : is {{domxwef("cssstywedecwawation")}}, -.- a-an object wepwesenting the d-decwawations o-of an ewement's stywe attwibutes. mya
+- {{domxwef("htmwewement.tabindex")}}
+  - : is a-a `wong` wepwesenting t-the position of the ewement i-in the tabbing o-owdew. >w<
+- {{domxwef("htmwewement.titwe")}}
+  - : is a {{domxwef("domstwing")}} containing the text that appeaws in a popup box w-when mouse is ovew t-the ewement. (U ﹏ U)
+- {{domxwef("htmwewement.twanswate")}} {{expewimentaw_inwine}}
+  - : i-is a {{jsxwef("boowean")}}
 
-### Event handlers
+### event handwews
 
-La mayoria de las propiedades de los eventos, del formulario `onXYZ`, estan definidas en las interfaces {{domxref("GlobalEventHandlers")}} or {{domxref("TouchEventHandlers")}}, implementadas por `HTMLElement`. Otras pocas son especificas de `HTMLElement`.
+w-wa mayowia d-de was pwopiedades de wos eventos, 😳😳😳 d-dew fowmuwawio `onxyz`, o.O estan definidas en was intewfaces {{domxwef("gwobaweventhandwews")}} ow {{domxwef("toucheventhandwews")}}, i-impwementadas p-pow `htmwewement`. òωó otwas pocas son especificas d-de `htmwewement`. 😳😳😳
 
-- {{ domxref("HTMLElement.oncopy") }} {{ non-standard_inline() }}
-  - : Returns the event handling code for the `copy` event ([Error 280959 en Firefox](https://bugzil.la/280959)).
-- {{ domxref("HTMLElement.oncut") }} {{ non-standard_inline() }}
-  - : Returns the event handling code for the `cut` event ([Error 280959 en Firefox](https://bugzil.la/280959)).
-- {{ domxref("HTMLElement.onpaste") }} {{ non-standard_inline() }}
-  - : Returns the event handling code for the `paste` event ([Error 280959 en Firefox](https://bugzil.la/280959)).
-- {{domxref("TouchEventHandlers.ontouchstart")}} {{non-standard_inline}}
-  - : Returns the event handling code for the [`touchstart`](/es/docs/Web/API/Element/touchstart_event) event.
-- {{domxref("TouchEventHandlers.ontouchend")}} {{non-standard_inline}}
-  - : Returns the event handling code for the [`touchend`](/es/docs/Web/API/Element/touchend_event) event.
-- {{domxref("TouchEventHandlers.ontouchmove")}} {{non-standard_inline}}
-  - : Returns the event handling code for the [`touchmove`](/es/docs/Web/API/Element/touchmove_event) event.
-- {{domxref("TouchEventHandlers.ontouchenter")}} {{non-standard_inline}}
-  - : Returns the event handling code for the [`touchenter`](/es/docs/Web/Reference/Events/touchenter) event.
-- {{domxref("TouchEventHandlers.ontouchleave")}} {{non-standard_inline}}
-  - : Returns the event handling code for the [`touchleave`](/es/docs/Web/Reference/Events/touchleave) event.
-- {{domxref("TouchEventHandlers.ontouchcancel")}} {{non-standard_inline}}
-  - : Returns the event handling code for the [`touchcancel`](/es/docs/Web/API/Element/touchcancel_event) event.
+- {{ d-domxwef("htmwewement.oncopy") }} {{ nyon-standawd_inwine() }}
+  - : wetuwns the event handwing code fow the `copy` event ([ewwow 280959 e-en fiwefox](https://bugziw.wa/280959)). σωσ
+- {{ domxwef("htmwewement.oncut") }} {{ nyon-standawd_inwine() }}
+  - : wetuwns the event handwing code f-fow the `cut` event ([ewwow 280959 en fiwefox](https://bugziw.wa/280959)). (⑅˘꒳˘)
+- {{ d-domxwef("htmwewement.onpaste") }} {{ n-nyon-standawd_inwine() }}
+  - : wetuwns the event handwing code fow the `paste` e-event ([ewwow 280959 e-en fiwefox](https://bugziw.wa/280959)). (///ˬ///✿)
+- {{domxwef("toucheventhandwews.ontouchstawt")}} {{non-standawd_inwine}}
+  - : wetuwns the event handwing code f-fow the [`touchstawt`](/es/docs/web/api/ewement/touchstawt_event) event. 🥺
+- {{domxwef("toucheventhandwews.ontouchend")}} {{non-standawd_inwine}}
+  - : w-wetuwns the event handwing code fow the [`touchend`](/es/docs/web/api/ewement/touchend_event) event. OwO
+- {{domxwef("toucheventhandwews.ontouchmove")}} {{non-standawd_inwine}}
+  - : w-wetuwns the event handwing c-code fow t-the [`touchmove`](/es/docs/web/api/ewement/touchmove_event) event. >w<
+- {{domxwef("toucheventhandwews.ontouchentew")}} {{non-standawd_inwine}}
+  - : w-wetuwns the event handwing code f-fow the [`touchentew`](/es/docs/web/wefewence/events/touchentew) e-event. 🥺
+- {{domxwef("toucheventhandwews.ontouchweave")}} {{non-standawd_inwine}}
+  - : w-wetuwns the event handwing c-code fow the [`touchweave`](/es/docs/web/wefewence/events/touchweave) e-event. nyaa~~
+- {{domxwef("toucheventhandwews.ontouchcancew")}} {{non-standawd_inwine}}
+  - : wetuwns the event handwing code f-fow the [`touchcancew`](/es/docs/web/api/ewement/touchcancew_event) e-event. ^^
 
-## Methods
+## m-methods
 
-_Inherits methods from its parent, {{domxref("Element")}}._
+_inhewits methods fwom its pawent, >w< {{domxwef("ewement")}}._
 
-- {{domxref("HTMLElement.blur()")}}
-  - : Removes keyboard focus from the currently focused element.
-- {{domxref("HTMLElement.click()")}}
-  - : Sends a mouse click event to the element.
-- {{domxref("HTMLElement.focus()")}}
-  - : Makes the element the current keyboard focus.
-- {{domxref("HTMLElement.forceSpellCheck()")}} {{experimental_inline}}
-  - : Makes the spell checker runs on the element.
+- {{domxwef("htmwewement.bwuw()")}}
+  - : w-wemoves keyboawd focus fwom the c-cuwwentwy focused e-ewement. OwO
+- {{domxwef("htmwewement.cwick()")}}
+  - : sends a mouse cwick event to the ewement. XD
+- {{domxwef("htmwewement.focus()")}}
+  - : m-makes t-the ewement the c-cuwwent keyboawd f-focus. ^^;;
+- {{domxwef("htmwewement.fowcespewwcheck()")}} {{expewimentaw_inwine}}
+  - : makes the s-speww checkew wuns on the ewement. 🥺
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## See also
+## see awso
 
-- {{domxref("Element")}}
+- {{domxwef("ewement")}}

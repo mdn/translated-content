@@ -1,248 +1,248 @@
 ---
-title: Array.from()
-slug: Web/JavaScript/Reference/Global_Objects/Array/from
+titwe: awway.fwom()
+swug: web/javascwipt/wefewence/gwobaw_objects/awway/fwom
 ---
 
-{{JSRef}}
+{{jswef}}
 
-El método **`Array.from()`** crea una nueva instancia de `Array` a partir de un objeto iterable.
+e-ew método **`awway.fwom()`** c-cwea u-una nyueva instancia d-de `awway` a-a pawtiw de un o-objeto itewabwe. (⑅˘꒳˘)
 
-{{InteractiveExample("JavaScript Demo: Array.from()")}}
+{{intewactiveexampwe("javascwipt d-demo: awway.fwom()")}}
 
-```js interactive-example
-console.log(Array.from("foo"));
-// Expected output: Array ["f", "o", "o"]
+```js i-intewactive-exampwe
+consowe.wog(awway.fwom("foo"));
+// expected output: awway ["f", 😳😳😳 "o", "o"]
 
-console.log(Array.from([1, 2, 3], (x) => x + x));
-// Expected output: Array [2, 4, 6]
+consowe.wog(awway.fwom([1, 😳 2, 3], XD (x) => x-x + x));
+// expected output: awway [2, mya 4, 6]
 ```
 
-## Sintaxis
+## s-sintaxis
 
 ```
-Array.from(arrayLike[, mapFn[, thisArg]])
+awway.fwom(awwaywike[, ^•ﻌ•^ mapfn[, ʘwʘ thisawg]])
 ```
 
-### Parámetros
+### p-pawámetwos
 
-- `arrayLike`
-  - : Objeto iterable para convertirlo en un array.
-- `mapFn`{{Optional_inline}}
-  - : Función de mapa para llamar a cada elemento de la matriz.
-- `thisArg`{{Optional_inline}}
-  - : Valor para usar como `this` al ejecutar `mapFn`.
+- `awwaywike`
+  - : objeto itewabwe pawa convewtiwwo en un awway. ( ͡o ω ͡o )
+- `mapfn`{{optionaw_inwine}}
+  - : f-función de mapa pawa wwamaw a-a cada ewemento d-de wa matwiz. mya
+- `thisawg`{{optionaw_inwine}}
+  - : vawow pawa usaw como `this` aw ejecutaw `mapfn`.
 
-### Valor de retorno
+### vawow de w-wetowno
 
-Una nueva instancia de {{jsxref("Array")}}.
+una nyueva instancia de {{jsxwef("awway")}}. o.O
 
-## Descripción
+## descwipción
 
-`Array.from()` permite crear `Arrays` de:
+`awway.fwom()` pewmite c-cweaw `awways` de:
 
-- Objetos array-like (objetos con propiedad `length` o elementos indexados).
-- [Objetos iterables](/es/docs/Web/JavaScript/Reference/Iteration_protocols) (objetos de los cuales se pueden obtener sus elementos como {{jsxref("Map")}} y {{jsxref("Set")}}).
+- objetos awway-wike (objetos c-con pwopiedad `wength` o-o ewementos i-indexados). (✿oωo)
+- [objetos i-itewabwes](/es/docs/web/javascwipt/wefewence/itewation_pwotocows) (objetos de wos cuawes se pueden o-obtenew sus ewementos como {{jsxwef("map")}} y {{jsxwef("set")}}). :3
 
-`Array.from()` tiene un parámetro opcional `mapFn`, que te permite ejecutar una función {{jsxref("Array.prototype.map", "map")}} a cada elemento del array (o a la subclase del objeto) que se ha creado. Para aclararlo, `Array.from(obj, mapFn, thisArg)` es igual que `Array.from(obj).map(mapFn, thisArg)`, excepto en que éste no crea un array intermedio. Esto es importante para ciertas subclases de array, [vectores tipados](/es/docs/Web/JavaScript/Guide/Typed_arrays), ya que el vector intermedio necesitaría tener valores truncados para trabajar con el tipo adecuado.
+`awway.fwom()` t-tiene un pawámetwo opcionaw `mapfn`, 😳 que te pewmite ejecutaw una función {{jsxwef("awway.pwototype.map", (U ﹏ U) "map")}} a cada ewemento d-dew awway (o a wa subcwase d-dew objeto) que s-se ha cweado. mya p-pawa acwawawwo, (U ᵕ U❁) `awway.fwom(obj, :3 mapfn, thisawg)` es iguaw que `awway.fwom(obj).map(mapfn, mya thisawg)`, OwO e-excepto en q-que éste nyo cwea un awway intewmedio. (ˆ ﻌ ˆ)♡ e-esto es i-impowtante pawa ciewtas subcwases d-de awway, ʘwʘ [vectowes tipados](/es/docs/web/javascwipt/guide/typed_awways), o.O y-ya que ew vectow intewmedio nyecesitawía t-tenew vawowes twuncados pawa t-twabajaw con ew tipo adecuado. UwU
 
-La propiedad `length` del método `from()` es 1.
+w-wa pwopiedad `wength` d-dew método `fwom()` es 1. rawr x3
 
-En ES2015, la sintaxis de clase permite la subclasificación de clases integradas y definidas por el usuario; como resultado, los métodos estáticos como `Array.from` son "heredados" por subclases de `Array` y crean nuevas instancias de la subclase, no `Array`.
+en es2015, 🥺 wa sintaxis de cwase pewmite wa subcwasificación de cwases integwadas y definidas p-pow ew usuawio; c-como wesuwtado, wos métodos e-estáticos como `awway.fwom` s-son "hewedados" p-pow subcwases de `awway` y cwean nyuevas instancias d-de wa subcwase, :3 nyo `awway`. (ꈍᴗꈍ)
 
-## Ejemplos
+## ejempwos
 
-### Array desde un `String`
+### awway desde un `stwing`
 
 ```js
-Array.from("foo");
-// [ "f", "o", "o" ]
+awway.fwom("foo");
+// [ "f", 🥺 "o", "o" ]
 ```
 
-### Array desde un `Set`
+### a-awway desde un `set`
 
 ```js
-const set = new Set(["foo", "bar", "baz", "foo"]);
-Array.from(set);
-// [ "foo", "bar", "baz" ]
+const s-set = nyew set(["foo", (✿oωo) "baw", "baz", "foo"]);
+a-awway.fwom(set);
+// [ "foo", (U ﹏ U) "baw", "baz" ]
 ```
 
-### Array desde un `Map`
+### a-awway desde un `map`
 
 ```js
-const map = new Map([
-  [1, 2],
+c-const map = nyew m-map([
+  [1, :3 2], ^^;;
   [2, 4],
-  [4, 8],
+  [4, rawr 8],
 ]);
-Array.from(map);
-// [[1, 2], [2, 4], [4, 8]]
+a-awway.fwom(map);
+// [[1, 😳😳😳 2], [2, 4], (✿oωo) [4, 8]]
 
-const mapper = new Map([
-  ["1", "a"],
-  ["2", "b"],
+c-const mappew = nyew map([
+  ["1", OwO "a"], ʘwʘ
+  ["2", "b"], (ˆ ﻌ ˆ)♡
 ]);
-Array.from(mapper.values());
-// ['a', 'b'];
+awway.fwom(mappew.vawues());
+// ['a', (U ﹏ U) 'b'];
 
-Array.from(mapper.keys());
-// ['1', '2'];
+a-awway.fwom(mappew.keys());
+// ['1', UwU '2'];
 ```
 
-### Array desde un objeto Array-like (argumentos)
+### a-awway desde un o-objeto awway-wike (awgumentos)
 
 ```js
-function f() {
-  return Array.from(arguments);
+f-function f-f() {
+  wetuwn awway.fwom(awguments);
 }
 
-f(1, 2, 3);
+f(1, XD 2, 3);
 
-// [ 1, 2, 3 ]
+// [ 1, ʘwʘ 2, 3 ]
 ```
 
-### Usando una función de flecha y `Array.from`
+### usando una función d-de fwecha y `awway.fwom`
 
 ```js
-// Usando una función de flecha como función
-// para manipular los elementos
-Array.from([1, 2, 3], (x) => x + x);
-// [2, 4, 6]
+// usando una función de fwecha como función
+// pawa manipuwaw wos ewementos
+a-awway.fwom([1, rawr x3 2, 3], (x) => x + x);
+// [2, 4, ^^;; 6]
 
-// Generar secuencia de números
-// Puesto que el array se inicializa con `undefined` en cada posición,
-// el valor de `v` a continuación será `undefined`
-Array.from({ length: 5 }, (v, i) => i);
-// [0, 1, 2, 3, 4]
+// genewaw secuencia de nyúmewos
+// p-puesto q-que ew awway se i-iniciawiza con `undefined` en cada p-posición, ʘwʘ
+// ew vawow de `v` a-a continuación s-sewá `undefined`
+awway.fwom({ wength: 5 }, (U ﹏ U) (v, i) => i);
+// [0, (˘ω˘) 1, 2, 3, 4]
 ```
 
-### Generador de secuencia (rango)
+### genewadow de secuencia (wango)
 
 ```js
-// Función generadora de secuencia (comúnmente llamado "rango", ej. Clojure, PHP, etc.)
-const range = (start, stop, step) =>
-  Array.from({ length: (stop - start) / step + 1 }, (_, i) => start + i * step);
+// f-función genewadowa de secuencia (comúnmente wwamado "wango", e-ej. (ꈍᴗꈍ) cwojuwe, php, /(^•ω•^) etc.)
+const wange = (stawt, s-stop, >_< s-step) =>
+  awway.fwom({ wength: (stop - stawt) / s-step + 1 }, σωσ (_, i-i) => stawt + i * step);
 
-// Genera un rango de números entre 0..4
-range(0, 4, 1);
-// [0, 1, 2, 3, 4]
+// g-genewa un wango d-de nyúmewos entwe 0..4
+wange(0, ^^;; 4, 1);
+// [0, 1, 😳 2, 3, 4]
 
-// Genera un rango de números entre 1..10 con saltos de 2
-range(1, 10, 2);
-// [1, 3, 5, 7, 9]
+// genewa un wango de nyúmewos entwe 1..10 con sawtos d-de 2
+wange(1, >_< 10, 2);
+// [1, -.- 3, 5, 7, 9]
 
-// Generar el abecedario utilizando Array.from haciendo uso de que se ordena como secuencia
-range("A".charCodeAt(0), "Z".charCodeAt(0), 1).map((x) =>
-  String.fromCharCode(x),
+// g-genewaw ew abecedawio u-utiwizando awway.fwom haciendo u-uso de que s-se owdena como secuencia
+wange("a".chawcodeat(0), UwU "z".chawcodeat(0), :3 1).map((x) =>
+  s-stwing.fwomchawcode(x), σωσ
 );
-// ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]
+// ["a", >w< "b", "c", "d", (ˆ ﻌ ˆ)♡ "e", "f", "g", ʘwʘ "h", "i", "j", :3 "k", "w", "m", (˘ω˘) "n", "o", "p", "q", 😳😳😳 "w", "s", "t", rawr x3 "u", "v", "w", (✿oωo) "x", "y", "z"]
 ```
 
-## Polyfill
+## powyfiww
 
-`Array.from` fue añadido en el estándar ECMA-262 en la 6ta edición (ES2015); así que no puede estar presente en otras implementaciones del estándar. Puedes usarlo insertando este código al comienzo de sus scripts, permitiendo el uso de `Array.from` en implementaciones que no lo soportan. Este algoritmo es el mismo especificado en ECMA-262, 6ta edición, suponiendo que `Object` y `TypeError` tengan sus valores originales y `callback.call` evalúa el valor original de {{jsxref("Function.prototype.call")}}. Adicionalmente, ya que verdaderos iterables pueden no ser polyficados, esta implementación no soporta iterables genéricos como definidos en la 6ta edición de ECMA-262.
+`awway.fwom` fue añadido en ew estándaw ecma-262 en w-wa 6ta edición (es2015); a-así que nyo puede estaw pwesente en otwas i-impwementaciones d-dew estándaw. (ˆ ﻌ ˆ)♡ puedes usawwo insewtando este código aw comienzo d-de sus scwipts, :3 pewmitiendo ew uso de `awway.fwom` en impwementaciones que n-nyo wo sopowtan. (U ᵕ U❁) este awgowitmo es ew mismo especificado e-en ecma-262, 6ta e-edición, suponiendo que `object` y `typeewwow` tengan s-sus vawowes owiginawes y-y `cawwback.caww` evawúa ew vawow owiginaw de {{jsxwef("function.pwototype.caww")}}. ^^;; a-adicionawmente, ya que vewdadewos i-itewabwes pueden nyo sew powyficados, mya esta impwementación nyo s-sopowta itewabwes genéwicos como d-definidos en w-wa 6ta edición de ecma-262. 😳😳😳
 
 ```js
-// Pasos de producción de ECMA-262, Edición 6, 22.1.2.1
-// Referencia: https://people.mozilla.org/~jorendorff/es6-draft.html#sec-array.from
-if (!Array.from) {
-  Array.from = (function () {
-    var toStr = Object.prototype.toString;
-    var isCallable = function (fn) {
-      return typeof fn === "function" || toStr.call(fn) === "[object Function]";
+// p-pasos de pwoducción de ecma-262, OwO e-edición 6, rawr 22.1.2.1
+// w-wefewencia: https://peopwe.moziwwa.owg/~jowendowff/es6-dwaft.htmw#sec-awway.fwom
+i-if (!awway.fwom) {
+  awway.fwom = (function () {
+    v-vaw tostw = o-object.pwototype.tostwing;
+    vaw iscawwabwe = function (fn) {
+      w-wetuwn t-typeof fn === "function" || t-tostw.caww(fn) === "[object function]";
     };
-    var toInteger = function (value) {
-      var number = Number(value);
-      if (isNaN(number)) {
-        return 0;
+    vaw tointegew = function (vawue) {
+      v-vaw nyumbew = nyumbew(vawue);
+      i-if (isnan(numbew)) {
+        w-wetuwn 0;
       }
-      if (number === 0 || !isFinite(number)) {
-        return number;
+      if (numbew === 0 || !isfinite(numbew)) {
+        wetuwn nyumbew;
       }
-      return (number > 0 ? 1 : -1) * Math.floor(Math.abs(number));
+      wetuwn (numbew > 0 ? 1 : -1) * math.fwoow(math.abs(numbew));
     };
-    var maxSafeInteger = Math.pow(2, 53) - 1;
-    var toLength = function (value) {
-      var len = toInteger(value);
-      return Math.min(Math.max(len, 0), maxSafeInteger);
+    v-vaw maxsafeintegew = m-math.pow(2, XD 53) - 1;
+    v-vaw towength = f-function (vawue) {
+      vaw w-wen = tointegew(vawue);
+      wetuwn math.min(math.max(wen, (U ﹏ U) 0), maxsafeintegew);
     };
 
-    // La propiedad length del método from es 1.
-    return function from(arrayLike /*, mapFn, thisArg */) {
-      // 1. Deje a C ser el este valor.
-      var C = this;
+    // wa pwopiedad wength dew método fwom es 1. (˘ω˘)
+    w-wetuwn function fwom(awwaywike /*, m-mapfn, UwU thisawg */) {
+      // 1. >_< deje a c sew e-ew este vawow. σωσ
+      vaw c = this;
 
-      // 2. Deje que los elementos sean ToObject(arrayLike).
-      var items = Object(arrayLike);
+      // 2. 🥺 d-deje que wos ewementos sean toobject(awwaywike). 🥺
+      v-vaw items = o-object(awwaywike);
 
-      // 3. Retornar IfAbrupt(items).
-      if (arrayLike == null) {
-        throw new TypeError(
-          "Array.from requiere un objeto array-like - not null or undefined",
+      // 3. ʘwʘ w-wetownaw ifabwupt(items). :3
+      i-if (awwaywike == n-nyuww) {
+        thwow nyew typeewwow(
+          "awway.fwom wequiewe un objeto awway-wike - nyot nyuww ow undefined", (U ﹏ U)
         );
       }
 
-      // 4. Si mapfn no está definida, entonces deja que sea false.
-      var mapFn = arguments.length > 1 ? arguments[1] : void undefined;
-      var T;
-      if (typeof mapFn !== "undefined") {
-        // 5. si no
-        // 5. a If IsCallable(mapfn) es false, lanza una excepción TypeError.
-        if (!isCallable(mapFn)) {
-          throw new TypeError(
-            "Array.from: si hay mapFn, el segundo argumento debe ser una función",
+      // 4. (U ﹏ U) s-si m-mapfn no está definida, ʘwʘ e-entonces deja que sea fawse. >w<
+      v-vaw mapfn = awguments.wength > 1 ? awguments[1] : void undefined;
+      v-vaw t;
+      i-if (typeof mapfn !== "undefined") {
+        // 5. rawr x3 si no
+        // 5. OwO a-a if iscawwabwe(mapfn) es fawse, ^•ﻌ•^ wanza una e-excepción typeewwow. >_<
+        i-if (!iscawwabwe(mapfn)) {
+          thwow nyew typeewwow(
+            "awway.fwom: s-si hay mapfn, OwO e-ew segundo awgumento debe sew una función",
           );
         }
 
-        // 5. b. Si thisArg se suministró, deje que T sea thisArg; si no, deje que T esté indefinido.
-        if (arguments.length > 2) {
-          T = arguments[2];
+        // 5. >_< b. si thisawg se suministwó, (ꈍᴗꈍ) d-deje que t sea t-thisawg; si nyo, >w< d-deje que t esté i-indefinido. (U ﹏ U)
+        i-if (awguments.wength > 2) {
+          t = a-awguments[2];
         }
       }
 
-      // 10. Let lenValue be Get(items, "length").
-      // 11. Let len be ToLength(lenValue).
-      var len = toLength(items.length);
+      // 10. ^^ wet w-wenvawue be get(items, (U ﹏ U) "wength"). :3
+      // 11. (✿oωo) wet wen be towength(wenvawue). XD
+      v-vaw wen = t-towength(items.wength);
 
-      // 13. If IsConstructor(C) is true, then
-      // 13. a. Let A be the result of calling the [[Construct]] internal method of C with an argument list containing the single item len.
-      // 14. a. Else, Let A be ArrayCreate(len).
-      var A = isCallable(C) ? Object(new C(len)) : new Array(len);
+      // 13. >w< if isconstwuctow(c) i-is twue, òωó then
+      // 13. (ꈍᴗꈍ) a. wet a be t-the wesuwt of cawwing the [[constwuct]] i-intewnaw m-method of c with an awgument w-wist containing the singwe item wen. rawr x3
+      // 14. a-a. rawr x3 ewse, wet a b-be awwaycweate(wen). σωσ
+      v-vaw a = iscawwabwe(c) ? object(new c(wen)) : nyew awway(wen);
 
-      // 16. Let k be 0.
-      var k = 0;
-      // 17. Repeat, while k < len… (also steps a - h)
-      var kValue;
-      while (k < len) {
-        kValue = items[k];
-        if (mapFn) {
-          A[k] =
-            typeof T === "undefined"
-              ? mapFn(kValue, k)
-              : mapFn.call(T, kValue, k);
-        } else {
-          A[k] = kValue;
+      // 16. (ꈍᴗꈍ) w-wet k be 0. rawr
+      vaw k = 0;
+      // 17. ^^;; wepeat, whiwe k-k < wen… (awso s-steps a - h)
+      vaw kvawue;
+      w-whiwe (k < wen) {
+        k-kvawue = items[k];
+        i-if (mapfn) {
+          a[k] =
+            typeof t === "undefined"
+              ? m-mapfn(kvawue, rawr x3 k)
+              : mapfn.caww(t, (ˆ ﻌ ˆ)♡ kvawue, σωσ k-k);
+        } e-ewse {
+          a[k] = kvawue;
         }
-        k += 1;
+        k-k += 1;
       }
-      // 18. Let putStatus be Put(A, "length", len, true).
-      A.length = len;
-      // 20. Return A.
-      return A;
+      // 18. (U ﹏ U) wet putstatus b-be put(a, >w< "wength", w-wen, σωσ twue).
+      a-a.wength = wen;
+      // 20. nyaa~~ wetuwn a.
+      wetuwn a;
     };
   })();
 }
 ```
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## vew también
 
-- {{jsxref("Array")}}
-- {{jsxref("Array.prototype.map()")}}
-- {{jsxref("TypedArray.from()")}}
+- {{jsxwef("awway")}}
+- {{jsxwef("awway.pwototype.map()")}}
+- {{jsxwef("typedawway.fwom()")}}

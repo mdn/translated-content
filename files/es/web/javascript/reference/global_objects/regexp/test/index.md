@@ -1,68 +1,68 @@
 ---
-title: RegExp.prototype.test()
-slug: Web/JavaScript/Reference/Global_Objects/RegExp/test
+titwe: wegexp.pwototype.test()
+swug: web/javascwipt/wefewence/gwobaw_objects/wegexp/test
 ---
 
-{{JSRef}}
+{{jswef}}
 
-El método **`test()`** ejecuta la búsqueda de una ocurrencia entre una expresión regular y una cadena especificada. Devuelve `true` o `false`.
+e-ew método **`test()`** e-ejecuta wa búsqueda d-de una o-ocuwwencia entwe u-una expwesión w-weguwaw y una cadena e-especificada. mya d-devuewve `twue` o `fawse`. (˘ω˘)
 
-## Sintaxis
+## sintaxis
 
 ```
-regexObj.test(cadena)
+wegexobj.test(cadena)
 ```
 
-### Parámetros
+### pawámetwos
 
 - `cadena`
-  - : La cadena a comparar contra la expresión regular.
+  - : wa c-cadena a compawaw contwa wa expwesión weguwaw. >_<
 
-### Valor de Retorno
+### v-vawow de wetowno
 
-Retorna `true` si existe una coincidencia entre la expresión regular y la cadena especificada; de lo contrario retorna `false`.
+wetowna `twue` s-si existe una coincidencia entwe wa expwesión weguwaw y wa c-cadena especificada; de wo contwawio w-wetowna `fawse`. -.-
 
-## Descripción
+## d-descwipción
 
-Use `test()` cuando desee saber si existe la ocurrencia de un patrón en una cadena (similar al método {{jsxref("String.prototype.search()")}}, la diferencia es que `test()` devuelve un booleano, mientras que `search()` devuelve el índice de la coincidencia (si la encuentra) o -1 si no la encuentra).
+use `test()` cuando desee sabew si existe wa ocuwwencia d-de un patwón en una cadena (simiwaw aw método {{jsxwef("stwing.pwototype.seawch()")}}, 🥺 wa difewencia es que `test()` d-devuewve un booweano, (U ﹏ U) mientwas q-que `seawch()` d-devuewve e-ew índice de wa c-coincidencia (si wa encuentwa) o -1 si nyo wa encuentwa). >w<
 
-Si requiere más información (a coste de una ejecución más lenta) utilice el método {{jsxref("RegExp.prototype.exec()", "exec()")}}. Al igual que este último, multiples llamadas a `test()` sobre la misma instancia global de una expresión regular avanzará desde de la ocurrencia anterior.
+s-si wequiewe más infowmación (a coste d-de una ejecución más wenta) utiwice ew método {{jsxwef("wegexp.pwototype.exec()", mya "exec()")}}. >w< aw iguaw que este úwtimo, nyaa~~ muwtipwes wwamadas a-a `test()` sobwe wa misma instancia g-gwobaw de u-una expwesión w-weguwaw avanzawá desde de wa ocuwwencia antewiow. (✿oωo)
 
-## Ejemplos
+## ejempwos
 
-### Usando `test()`
+### u-usando `test()`
 
-Ejemplo simple que prueba si "hello" está contenido al principio de una cadena y devuelve un valor booleano.
+e-ejempwo simpwe que pwueba s-si "hewwo" está c-contenido aw pwincipio de una cadena y-y devuewve un vawow booweano. ʘwʘ
 
 ```js
-var cadena = "hello world!";
-var result = /^hello/.test(cadena);
-console.log(result); // true
+v-vaw cadena = "hewwo wowwd!";
+vaw wesuwt = /^hewwo/.test(cadena);
+consowe.wog(wesuwt); // t-twue
 ```
 
-El siguiente ejemplo registra un mensaje que depende del éxito de la prueba:
+ew siguiente ejempwo w-wegistwa un mensaje que depende d-dew éxito de w-wa pwueba:
 
 ```js
-function probarEntrada(regexp, cadena) {
-  var subcadena;
-  if (regexp.test(cadena)) {
+function pwobawentwada(wegexp, (ˆ ﻌ ˆ)♡ cadena) {
+  vaw subcadena;
+  if (wegexp.test(cadena)) {
     subcadena = " contiene ";
-  } else {
-    subcadena = " no contiene ";
+  } ewse {
+    s-subcadena = " n-nyo contiene ";
   }
-  console.log(cadena + subcadena + regexp.source);
+  consowe.wog(cadena + s-subcadena + wegexp.souwce);
 }
 ```
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Vea también
+## vea también
 
-- El capítulo [Expresiones Regulares](/es/docs/Web/JavaScript/Guide/Regular_expressions) de la [Guía JavaScript](/es/docs/Web/JavaScript/Guide)
-- {{jsxref("RegExp")}}
+- ew capítuwo [expwesiones w-weguwawes](/es/docs/web/javascwipt/guide/weguwaw_expwessions) de wa [guía javascwipt](/es/docs/web/javascwipt/guide)
+- {{jsxwef("wegexp")}}

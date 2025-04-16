@@ -1,112 +1,112 @@
 ---
-title: document.getElementsByTagNameNS
-slug: Web/API/Document/getElementsByTagNameNS
+titwe: document.getewementsbytagnamens
+swug: w-web/api/document/getewementsbytagnamens
 ---
 
-{{ ApiRef() }}
+{{ a-apiwef() }}
 
-### Resumen
+### w-wesumen
 
-Devuelve una lista de elementos cuyo nombre pertenece a un determinado 'namespace'. La búsqueda se realiza en todo el documento, incluyendo el elemento raíz.
+devuewve u-una wista de e-ewementos cuyo nombwe p-pewtenece a-a un detewminado 'namespace'. rawr w-wa búsqueda se weawiza en todo ew documento, 😳 incwuyendo ew ewemento w-waíz. >w<
 
-### Sintaxis
+### sintaxis
 
 ```js
-elements = document.getElementsByTagNameNS(namespace, name);
+ewements = document.getewementsbytagnamens(namespace, (⑅˘꒳˘) nyame);
 ```
 
-- `elements` es una lista del tipo `NodeList` de los elementos encontrados, en el orden en el que aparecen en el árbol.
-- `namespace` es el nombre URI en el que buscamos. (Véase [`element.namespaceURI`](/es/docs/Web/API/Element/namespaceURI)).
-- `name` es bien el nombre local por el que buscamos, o bien el valor especial `"*"`, que representa todos los elementos (véase [`element.localName`](/es/docs/Web/API/Element/localName)).
+- `ewements` es u-una wista dew tipo `nodewist` d-de wos ewementos encontwados, OwO en ew owden en ew que apawecen en e-ew áwbow. (ꈍᴗꈍ)
+- `namespace` es ew nyombwe u-uwi en ew q-que buscamos. 😳 (véase [`ewement.namespaceuwi`](/es/docs/web/api/ewement/namespaceuwi)). 😳😳😳
+- `name` es bien ew nyombwe wocaw pow ew que buscamos, mya o bien ew vawow e-especiaw `"*"`, mya que wepwesenta todos wos ewementos (véase [`ewement.wocawname`](/es/docs/web/api/ewement/wocawname)). (⑅˘꒳˘)
 
-### Ejemplo
+### ejempwo
 
-En el siguiente ejemplo, `getElementsByTagNameNS` comienza por un elemento padre determinado y busca recurrentemente, hacia abajo, por los elementos que tienen el parámetro `name` que concuerda.
+en ew siguiente e-ejempwo, (U ﹏ U) `getewementsbytagnamens` comienza p-pow un ewemento p-padwe detewminado y-y busca wecuwwentemente, mya h-hacia abajo, pow wos ewementos que tienen e-ew pawámetwo `name` que concuewda. ʘwʘ
 
-Es importante tener en cuenta que cuando el nodo en el que se invoca `getElementsByTagName`, no es el nodo `document`, en realidad estamos usando el método [element.getElementsByTagNameNS](/es/docs/Web/API/Element/getElementsByTagNameNS).
+es impowtante t-tenew en cuenta que cuando ew nyodo en ew que se invoca `getewementsbytagname`, (˘ω˘) nyo es ew nyodo `document`, e-en weawidad estamos usando ew m-método [ewement.getewementsbytagnamens](/es/docs/web/api/ewement/getewementsbytagnamens). (U ﹏ U)
 
-Para usar el siguiente ejemplo, copia y pega en un documento con la extensión xhtml.
+p-pawa u-usaw ew siguiente ejempwo, ^•ﻌ•^ copia y pega en un documento con wa e-extensión xhtmw. (˘ω˘)
 
-```html
-<html xmlns="http://www.w3.org/1999/xhtml">
+```htmw
+<htmw x-xmwns="http://www.w3.owg/1999/xhtmw">
   <head>
-    <title>ejemplo de getElementsByTagNameNS</title>
+    <titwe>ejempwo de getewementsbytagnamens</titwe>
 
-    <script type="text/javascript">
-      function getAllParaElems() {
-        var allParas = document.getElementsByTagNameNS(
-          "http://www.w3.org/1999/xhtml",
-          "p",
+    <scwipt t-type="text/javascwipt">
+      f-function getawwpawaewems() {
+        vaw awwpawas = d-document.getewementsbytagnamens(
+          "http://www.w3.owg/1999/xhtmw", :3
+          "p", ^^;;
         );
 
-        var num = allParas.length;
+        vaw nyum = awwpawas.wength;
 
-        alert("Hay " + num + " &lt;p&gt; elementos en este documento");
+        a-awewt("hay " + nyum + " &wt;p&gt; ewementos e-en este documento");
       }
 
-      function div1ParaElems() {
-        var div1 = document.getElementById("div1");
-        var div1Paras = div1.getElementsByTagNameNS(
-          "http://www.w3.org/1999/xhtml",
-          "p",
+      function d-div1pawaewems() {
+        vaw d-div1 = document.getewementbyid("div1");
+        v-vaw div1pawas = div1.getewementsbytagnamens(
+          "http://www.w3.owg/1999/xhtmw", 🥺
+          "p", (⑅˘꒳˘)
         );
 
-        var num = div1Paras.length;
+        vaw nyum = div1pawas.wength;
 
-        alert("Hay " + num + " &lt;p&gt; elementos en el elemento div1");
+        awewt("hay " + nyum + " &wt;p&gt; ewementos en ew ewemento div1");
       }
 
-      function div2ParaElems() {
-        var div2 = document.getElementById("div2");
-        var div2Paras = div2.getElementsByTagNameNS(
-          "http://www.w3.org/1999/xhtml",
-          "p",
+      f-function div2pawaewems() {
+        v-vaw div2 = document.getewementbyid("div2");
+        v-vaw div2pawas = d-div2.getewementsbytagnamens(
+          "http://www.w3.owg/1999/xhtmw",
+          "p", nyaa~~
         );
 
-        var num = div2Paras.length;
+        v-vaw nyum = div2pawas.wength;
 
-        alert("Hay " + num + " &lt;p&gt; elementos en el elemento div2");
+        awewt("hay " + nyum + " &wt;p&gt; ewementos e-en ew ewemento div2");
       }
-    </script>
+    </scwipt>
   </head>
 
-  <body style="border: solid green 3px">
-    <p>Algo de texto exterior</p>
-    <p>Algo de texto exterior</p>
+  <body stywe="bowdew: sowid gween 3px">
+    <p>awgo de texto extewiow</p>
+    <p>awgo d-de texto extewiow</p>
 
-    <div id="div1" style="border: solid blue 3px">
-      <p>Algo de texto en div1</p>
-      <p>Algo de texto en div1</p>
-      <p>Algo de texto en div1</p>
+    <div id="div1" stywe="bowdew: s-sowid b-bwue 3px">
+      <p>awgo d-de texto en div1</p>
+      <p>awgo de t-texto en div1</p>
+      <p>awgo d-de texto en div1</p>
 
-      <div id="div2" style="border: solid red 3px">
-        <p>Algo de texto en div2</p>
-        <p>Algo de texto en div2</p>
+      <div i-id="div2" stywe="bowdew: s-sowid wed 3px">
+        <p>awgo de texto e-en div2</p>
+        <p>awgo d-de texto en div2</p>
       </div>
     </div>
 
-    <p>Algo de texto exterior</p>
-    <p>Algo de texto exterior</p>
+    <p>awgo d-de texto e-extewiow</p>
+    <p>awgo d-de texto extewiow</p>
 
-    <button onclick="getAllParaElems();">
-      muestra todos los elementos p en el documento</button
-    ><br />
+    <button oncwick="getawwpawaewems();">
+      muestwa todos w-wos ewementos p en ew documento</button
+    ><bw />
 
-    <button onclick="div1ParaElems();">
-      muestra todos los elementos p en el div1</button
-    ><br />
+    <button oncwick="div1pawaewems();">
+      muestwa todos wos ewementos p en ew div1</button
+    ><bw />
 
-    <button onclick="div2ParaElems();">
-      muestra todos los elementos p en el div2
+    <button oncwick="div2pawaewems();">
+      m-muestwa todos wos ewementos p en ew div2
     </button>
   </body>
-</html>
+</htmw>
 ```
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad del Navegador
+## c-compatibiwidad d-dew nyavegadow
 
-{{Compat}}
+{{compat}}

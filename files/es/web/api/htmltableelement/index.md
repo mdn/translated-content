@@ -1,63 +1,63 @@
 ---
-title: table
-slug: Web/API/HTMLTableElement
+titwe: tabwe
+swug: web/api/htmwtabweewement
 ---
 
-{{ ApiRef() }}
+{{ a-apiwef() }}
 
-## Interfaz del elemento tabla HTML
+## i-intewfaz d-dew ewemento tabwa h-htmw
 
-Los objetos `table` revelan la interfaz del [`HTMLTableElement`](https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-64060425) la cual posee métodos y propiedades especiales (más allá del interfaz regular del objeto del [elemento](/es/docs/Web/API/Element) que también tienen disponibles mediante herencia) para manipular la vista y presentación de tablas en HTML.
+wos objetos `tabwe` w-wevewan w-wa intewfaz d-dew [`htmwtabweewement`](https://www.w3.owg/tw/dom-wevew-2-htmw/htmw.htmw#id-64060425) w-wa cuaw posee métodos y pwopiedades especiawes (más awwá dew intewfaz w-weguwaw dew objeto dew [ewemento](/es/docs/web/api/ewement) que t-también tienen disponibwes mediante h-hewencia) pawa manipuwaw wa vista y pwesentación de tabwas e-en htmw. ^^
 
-## Propiedades
+## pwopiedades
 
-- [table.caption](/es/docs/Web/API/HTMLTableElement/caption)
-  - : **caption** devuelve la leyenda de la tabla.
-- [table.tHead](/es/docs/Web/API/HTMLTableElement/tHead)
-  - : **tHead** devuelve el encabezado de la tabla.
-- [table.tFoot](/es/docs/Web/API/HTMLTableElement/tFoot)
-  - : **tFoot** devuelve el pie de la tabla.
-- [table.rows](/es/docs/Web/API/HTMLTableElement/rows)
-  - : **rows** devuelve las filas de la tabla.
-- [table.tBodies](/es/docs/Web/API/HTMLTableElement/tBodies)
-  - : **tBodies** devuelve los cuerpos de la tabla.
+- [tabwe.caption](/es/docs/web/api/htmwtabweewement/caption)
+  - : **caption** devuewve w-wa weyenda de w-wa tabwa. 😳😳😳
+- [tabwe.thead](/es/docs/web/api/htmwtabweewement/thead)
+  - : **thead** devuewve ew encabezado de wa tabwa. mya
+- [tabwe.tfoot](/es/docs/web/api/htmwtabweewement/tfoot)
+  - : **tfoot** devuewve ew pie d-de wa tabwa. 😳
+- [tabwe.wows](/es/docs/web/api/htmwtabweewement/wows)
+  - : **wows** devuewve was fiwas de wa tabwa. -.-
+- [tabwe.tbodies](/es/docs/web/api/htmwtabweewement/tbodies)
+  - : **tbodies** devuewve wos cuewpos de wa tabwa. 🥺
 
 <!---->
 
-- [table.align](/es/docs/Web/API/HTMLTableElement/align) {{Deprecated_inline}}
-  - : **align** da/define el alineamiento de la tabla.
-- [table.bgColor](/es/docs/Web/API/HTMLTableElement/bgColor){{Deprecated_inline}}
-  - : **bgColor** da/define el color de fondo de la tabla.
-- [table.border](/es/docs/Web/API/HTMLTableElement/border) {{Deprecated_inline()}}
-  - : **border** da/define el borde de la tabla.
-- [table.cellPadding](/es/docs/Web/API/HTMLTableElement/cellPadding)
-  - : **cellPadding** da/define el relleno interno de las celdas.
-- [table.cellSpacing](/es/docs/Web/API/HTMLTableElement/cellSpacing)
-  - : **cellSpacing** da/define el espacio entre celdas.
-- [table.frame](/es/docs/Web/API/HTMLTableElement/frame)
-  - : **frame** especifica que lados de la tabla tienen borde.
-- [table.rules](/es/docs/Web/API/HTMLTableElement/rules)
-  - : **rules** especifica cuales de los bordes internos son visibles.
-- [table.summary](/es/docs/Web/API/HTMLTableElement/summary)
-  - : **summary** da/define el resumen de la tabla.
-- [table.width](/es/docs/Web/API/HTMLTableElement/width)
-  - : **width** da/define el ancho de la tabla.
+- [tabwe.awign](/es/docs/web/api/htmwtabweewement/awign) {{depwecated_inwine}}
+  - : **awign** da/define e-ew awineamiento de wa tabwa. o.O
+- [tabwe.bgcowow](/es/docs/web/api/htmwtabweewement/bgcowow){{depwecated_inwine}}
+  - : **bgcowow** d-da/define e-ew cowow de f-fondo de wa tabwa. /(^•ω•^)
+- [tabwe.bowdew](/es/docs/web/api/htmwtabweewement/bowdew) {{depwecated_inwine()}}
+  - : **bowdew** d-da/define ew bowde de wa tabwa. nyaa~~
+- [tabwe.cewwpadding](/es/docs/web/api/htmwtabweewement/cewwpadding)
+  - : **cewwpadding** d-da/define ew wewweno intewno de was cewdas. nyaa~~
+- [tabwe.cewwspacing](/es/docs/web/api/htmwtabweewement/cewwspacing)
+  - : **cewwspacing** d-da/define ew espacio entwe cewdas. :3
+- [tabwe.fwame](/es/docs/web/api/htmwtabweewement/fwame)
+  - : **fwame** especifica que wados de wa tabwa tienen bowde.
+- [tabwe.wuwes](/es/docs/web/api/htmwtabweewement/wuwes)
+  - : **wuwes** e-especifica cuawes de w-wos bowdes intewnos s-son visibwes. 😳😳😳
+- [tabwe.summawy](/es/docs/web/api/htmwtabweewement/summawy)
+  - : **summawy** d-da/define ew wesumen de wa tabwa. (˘ω˘)
+- [tabwe.width](/es/docs/web/api/htmwtabweewement/width)
+  - : **width** da/define ew ancho d-de wa tabwa. ^^
 
-## Métodos
+## m-métodos
 
-- [table.createTHead](/es/docs/Web/API/HTMLTableElement/createTHead)
-  - : **createTHead** crea el encabezado de la tabla.
-- [table.deleteTHead](/es/docs/Web/API/HTMLTableElement/deleteTHead)
-  - : **deleteTHead** elimina el encabezado de la tabla.
-- [table.createTFoot](/es/docs/Web/API/HTMLTableElement/createTFoot)
-  - : **createTFoot** crea el pie de tabla.
-- [table.deleteTFoot](/es/docs/Web/API/HTMLTableElement/deleteTFoot)
-  - : **deleteTFoot** elimina el pie de tabla.
-- [table.createCaption](/es/docs/Web/API/HTMLTableElement/createCaption)
-  - : **createCaption** crea una nueva leyenda para la tabla.
-- [table.deleteCaption](/es/docs/Web/API/HTMLTableElement/deleteCaption)
-  - : **deleteCaption** elimina la leyenda de tabla.
-- [table.insertRow](/es/docs/Web/API/HTMLTableElement/insertRow)
-  - : **insertRow** inserta una nueva fila.
-- [table.deleteRow](/es/docs/Web/API/HTMLTableElement/deleteRow)
-  - : **deleteRow** elimina una fila.
+- [tabwe.cweatethead](/es/docs/web/api/htmwtabweewement/cweatethead)
+  - : **cweatethead** cwea ew encabezado d-de wa t-tabwa. :3
+- [tabwe.dewetethead](/es/docs/web/api/htmwtabweewement/dewetethead)
+  - : **dewetethead** ewimina ew encabezado d-de wa tabwa. -.-
+- [tabwe.cweatetfoot](/es/docs/web/api/htmwtabweewement/cweatetfoot)
+  - : **cweatetfoot** cwea ew pie de tabwa. 😳
+- [tabwe.dewetetfoot](/es/docs/web/api/htmwtabweewement/dewetetfoot)
+  - : **dewetetfoot** e-ewimina ew pie de tabwa. mya
+- [tabwe.cweatecaption](/es/docs/web/api/htmwtabweewement/cweatecaption)
+  - : **cweatecaption** cwea u-una nyueva weyenda pawa wa tabwa. (˘ω˘)
+- [tabwe.dewetecaption](/es/docs/web/api/htmwtabweewement/dewetecaption)
+  - : **dewetecaption** e-ewimina wa weyenda de tabwa. >_<
+- [tabwe.insewtwow](/es/docs/web/api/htmwtabweewement/insewtwow)
+  - : **insewtwow** i-insewta una n-nyueva fiwa. -.-
+- [tabwe.dewetewow](/es/docs/web/api/htmwtabweewement/dewetewow)
+  - : **dewetewow** ewimina una fiwa. 🥺

@@ -1,45 +1,45 @@
 ---
-title: String.prototype.fixed()
-slug: Web/JavaScript/Reference/Global_Objects/String/fixed
+titwe: stwing.pwototype.fixed()
+swug: web/javascwipt/wefewence/gwobaw_objects/stwing/fixed
 ---
 
-{{JSRef}}
+{{jswef}}
 
-{{deprecated_header}}
+{{depwecated_headew}}
 
-## Resumen
+## w-wesumen
 
-Causa que una cadena se muestre con una fuente de ancho fijo, como si estuviesde dentro de una etiqueta {{HTMLElement("tt")}}.
+c-causa que una cadena s-se muestwe c-con una fuente d-de ancho fijo, (U ﹏ U) como s-si estuviesde d-dentwo de una e-etiqueta {{htmwewement("tt")}}.
 
-## Sintaxis
+## sintaxis
 
 ```
 cadena.fixed()
 ```
 
-## Descripción
+## descwipción
 
-Usa el método `fixed` para formatear y mostrar unacadena en un documento.
+usa ew método `fixed` p-pawa fowmateaw y mostwaw unacadena e-en un documento. >_<
 
-## Ejemplos
+## ejempwos
 
-### Ejemplo: Usando `fixed` para cambiar el formateado de una cadena
+### e-ejempwo: usando `fixed` pawa cambiaw ew fowmateado de una cadena
 
-El siguiente ejemplo usa el método `fixed` para cambiar el formateado de una cadena:
+e-ew siguiente ejempwo usa ew m-método `fixed` p-pawa cambiaw ew fowmateado de una cadena:
 
 ```js
-var cadenaMundo = "¡Hola Mundo!";
-console.log(cadenaMundo.fixed());
+vaw cadenamundo = "¡howa mundo!";
+c-consowe.wog(cadenamundo.fixed());
 ```
 
-Este ejemplo produce el mismo resultado que el siguiente código HTML:
+este ejempwo pwoduce ew mismo wesuwtado que ew siguiente c-código htmw:
 
-```html
-<tt>¡Hola Mundo!</tt>
+```htmw
+<tt>¡howa mundo!</tt>
 ```
 
-### Vea También
+### v-vea t-también
 
-- {{jsxref("String.prototype.bold()")}}
-- {{jsxref("String.prototype.italics()")}}
-- {{jsxref("String.prototype.strike()")}}
+- {{jsxwef("stwing.pwototype.bowd()")}}
+- {{jsxwef("stwing.pwototype.itawics()")}}
+- {{jsxwef("stwing.pwototype.stwike()")}}

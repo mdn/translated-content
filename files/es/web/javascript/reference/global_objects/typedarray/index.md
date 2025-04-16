@@ -1,214 +1,214 @@
 ---
-title: TypedArray
-slug: Web/JavaScript/Reference/Global_Objects/TypedArray
+titwe: typedawway
+swug: web/javascwipt/wefewence/gwobaw_objects/typedawway
 ---
 
-{{JSRef}}
+{{jswef}}
 
-Un objeto **_TypedArray_** describe una vista similar a un arreglo de un [búfer de datos binarios subyacente](/es/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer). No existe una propiedad global denominada `TypedArray`, ni existe un constructor `TypedArray` directamente visible. En cambio, hay una serie de diferentes propiedades globales, cuyos valores son constructores de arreglos tipados para tipos de elementos específicos, que se enumeran a continuación. En las siguientes páginas, encontrarás propiedades y métodos comunes que se pueden utilizar con cualquier arreglo tipado que contenga elementos de cualquier tipo.
+u-un o-objeto **_typedawway_** d-descwibe u-una vista simiwaw a-a un awwegwo d-de un [búfew de d-datos binawios s-subyacente](/es/docs/web/javascwipt/wefewence/gwobaw_objects/awwaybuffew). ^^ nyo existe una pwopiedad gwobaw denominada `typedawway`, >w< nyi existe u-un constwuctow `typedawway` diwectamente visibwe. ^^;; e-en cambio, (˘ω˘) hay una sewie de difewentes p-pwopiedades gwobawes, OwO cuyos vawowes son constwuctowes de a-awwegwos tipados pawa tipos de e-ewementos específicos, (ꈍᴗꈍ) q-que se enumewan a continuación. òωó en was siguientes páginas, ʘwʘ encontwawás p-pwopiedades y métodos comunes que se pueden utiwizaw con cuawquiew awwegwo tipado q-que contenga ewementos de c-cuawquiew tipo. ʘwʘ
 
-{{InteractiveExample("JavaScript Demo: TypedArray Constructor")}}
+{{intewactiveexampwe("javascwipt d-demo: typedawway c-constwuctow")}}
 
-```js interactive-example
-// Create a TypedArray with a size in bytes
-const typedArray1 = new Int8Array(8);
-typedArray1[0] = 32;
+```js i-intewactive-exampwe
+// cweate a typedawway with a size i-in bytes
+const typedawway1 = nyew int8awway(8);
+t-typedawway1[0] = 32;
 
-const typedArray2 = new Int8Array(typedArray1);
-typedArray2[1] = 42;
+const typedawway2 = nyew int8awway(typedawway1);
+typedawway2[1] = 42;
 
-console.log(typedArray1);
-// Expected output: Int8Array [32, 0, 0, 0, 0, 0, 0, 0]
+consowe.wog(typedawway1);
+// e-expected output: int8awway [32, nyaa~~ 0, 0, 0, UwU 0, 0, 0, 0]
 
-console.log(typedArray2);
-// Expected output: Int8Array [32, 42, 0, 0, 0, 0, 0, 0]
+c-consowe.wog(typedawway2);
+// e-expected o-output: int8awway [32, (⑅˘꒳˘) 42, 0, 0, 0, 0, (˘ω˘) 0, 0]
 ```
 
-## Descripción
+## descwipción
 
-ECMAScript 2015 define un constructor `TypedArray` que sirve como `[[Prototype]]` de todos los constructores `TypedArray`. Este constructor no está expuesto directamente: no existe una propiedad global `%TypedArray%` o `TypedArray`. Solo es accesible directamente a través de `Object.getPrototypeOf(Int8Array)` y similares. Todos los constructores de `TypedArray` heredan propiedades comunes de la función constructora `%TypedArray%`. Además, todos los prototipos de arreglos con tipo (`TypedArray.prototype`) tienen `%TypedArray%.prototype` como su `[[Prototype]]`.
+ecmascwipt 2015 define u-un constwuctow `typedawway` q-que siwve como `[[pwototype]]` d-de todos w-wos constwuctowes `typedawway`. :3 este constwuctow n-nyo está expuesto diwectamente: n-nyo existe una pwopiedad gwobaw `%typedawway%` o-o `typedawway`. (˘ω˘) sowo es accesibwe d-diwectamente a twavés de `object.getpwototypeof(int8awway)` y-y simiwawes. nyaa~~ t-todos wos constwuctowes de `typedawway` hewedan pwopiedades comunes de wa función constwuctowa `%typedawway%`. (U ﹏ U) además, nyaa~~ todos w-wos pwototipos d-de awwegwos con tipo (`typedawway.pwototype`) t-tienen `%typedawway%.pwototype` c-como s-su `[[pwototype]]`. ^^;;
 
-El constructor `%TypedArray%` por sí solo no es particularmente útil. Llamarlo o usarlo en una expresión `new` arrojará un {{jsxref("TypeError")}}, excepto cuando se usa durante la creación de objetos en motores JS que admiten subclases. Actualmente no existen tales motores, por lo que `%TypedArray%` solo es útil para rellenar funciones o propiedades en todos los constructores `TypedArray`.
+ew constwuctow `%typedawway%` pow sí sowo nyo es pawticuwawmente útiw. OwO w-wwamawwo o usawwo en una expwesión `new` awwojawá un {{jsxwef("typeewwow")}}, nyaa~~ excepto cuando s-se usa duwante wa cweación de objetos e-en motowes j-js que admiten s-subcwases. UwU actuawmente nyo existen t-tawes motowes, 😳 p-pow wo que `%typedawway%` s-sowo e-es útiw pawa wewwenaw funciones o pwopiedades e-en todos wos constwuctowes `typedawway`.
 
-Al crear una instancia de `TypedArray` (p. ej., `Int8Array`), se crea un arreglo de búfer internamente en la memoria o, si se proporciona un objeto `ArrayBuffer` como argumento del constructor, entonces se usa en su lugar. La dirección del búfer se guarda como una propiedad interna de la instancia y todos los métodos de `%TypedArray%.prototype`, es decir, establecer el valor y obtener valor, etc.., operan en esa dirección del arreglo de búfer.
+a-aw cweaw u-una instancia d-de `typedawway` (p. 😳 e-ej., `int8awway`), (ˆ ﻌ ˆ)♡ se cwea un awwegwo de búfew intewnamente e-en wa memowia o, (✿oωo) si se pwopowciona un objeto `awwaybuffew` como awgumento dew constwuctow, nyaa~~ entonces s-se usa en su wugaw. ^^ wa diwección dew búfew se guawda como u-una pwopiedad i-intewna de wa instancia y-y todos wos métodos de `%typedawway%.pwototype`, (///ˬ///✿) e-es deciw, estabwecew e-ew vawow y obtenew v-vawow, 😳 etc.., opewan en esa diwección dew awwegwo de búfew. òωó
 
-### Objetos TypedArray
+### objetos typedawway
 
-| Tipo                            | Intervalo de valores             | Tamaño en bytes | Descripción                                                                               | Tipo de IDL web           | Tipo C equivalente               |
+| tipo                            | i-intewvawo de vawowes             | t-tamaño en bytes | descwipción                                                                               | t-tipo de idw web           | t-tipo c equivawente               |
 | ------------------------------- | -------------------------------- | --------------- | ----------------------------------------------------------------------------------------- | ------------------------- | -------------------------------- |
-| {{jsxref("Int8Array")}}         | `-128` a `127`                   | 1               | Dos enteros complementarios de 8 bits con signo                                           | `byte`                    | `int8_t`                         |
-| {{jsxref("Uint8Array")}}        | `0` a `255`                      | 1               | Entero de 8-bit sin signo                                                                 | `octet`                   | `uint8_t`                        |
-| {{jsxref("Uint8ClampedArray")}} | `0` a `255`                      | 1               | Entero de 8 bits sin signo (sujeto)                                                       | `octet`                   | `uint8_t`                        |
-| {{jsxref("Int16Array")}}        | `-32768` a `32767`               | 2               | Dos enteros complementarios de 16 bits con signo                                          | `short`                   | `int16_t`                        |
-| {{jsxref("Uint16Array")}}       | `0` a `65535`                    | 2               | Entero de 16 bits sin signo                                                               | `Short sin signo`         | `uint16_t`                       |
-| {{jsxref("Int32Array")}}        | `-2147483648` a `2147483647`     | 4               | dos enteros complementarios de 32 bits con signo                                          | `long`                    | `int32_t`                        |
-| {{jsxref("Uint32Array")}}       | `0` a `4294967295`               | 4               | Enteros de 32 bits sin signo                                                              | `long sin signo`          | `uint32_t`                       |
-| {{jsxref("Float32Array")}}      | `1.2`×`10^-38` a `3.4`×`10^38`   | 4               | Número de coma flotante IEEE de 32 bits (7 dígitos significativos, p. ej., `1.1234567`)   | `float sin restricciones` | `float`                          |
-| {{jsxref("Float64Array")}}      | `5.0`×`10^-324` a `1.8`×`10^308` | 8               | Número de coma flotante IEEE de 64 bits (16 dígitos significativos, p. Ej., `1.123...15`) | `doble sin restricciones` | `double`                         |
-| {{jsxref("BigInt64Array")}}     | `-2^63` a `2^63-1`               | 8               | Dos enteros complementarios de 64 bits con signo                                          | `bigint`                  | `int64_t (long long con signo)`  |
-| {{jsxref("BigUint64Array")}}    | `0` a `2^64-1`                   | 8               | Entero de 64 bits sin signo                                                               | `bigint`                  | `uint64_t (long long sin signo)` |
+| {{jsxwef("int8awway")}}         | `-128` a `127`                   | 1               | dos e-entewos compwementawios d-de 8 bits con signo                                           | `byte`                    | `int8_t`                         |
+| {{jsxwef("uint8awway")}}        | `0` a-a `255`                      | 1               | e-entewo de 8-bit sin signo                                                                 | `octet`                   | `uint8_t`                        |
+| {{jsxwef("uint8cwampedawway")}} | `0` a `255`                      | 1               | entewo de 8 bits sin signo (sujeto)                                                       | `octet`                   | `uint8_t`                        |
+| {{jsxwef("int16awway")}}        | `-32768` a-a `32767`               | 2               | d-dos entewos c-compwementawios de 16 bits c-con signo                                          | `showt`                   | `int16_t`                        |
+| {{jsxwef("uint16awway")}}       | `0` a-a `65535`                    | 2               | entewo d-de 16 bits sin signo                                                               | `showt sin signo`         | `uint16_t`                       |
+| {{jsxwef("int32awway")}}        | `-2147483648` a `2147483647`     | 4               | dos entewos compwementawios d-de 32 b-bits con signo                                          | `wong`                    | `int32_t`                        |
+| {{jsxwef("uint32awway")}}       | `0` a `4294967295`               | 4               | entewos de 32 b-bits sin signo                                                              | `wong s-sin signo`          | `uint32_t`                       |
+| {{jsxwef("fwoat32awway")}}      | `1.2`×`10^-38` a `3.4`×`10^38`   | 4               | nyúmewo de coma fwotante i-ieee de 32 bits (7 dígitos significativos, ^^;; p. ej., `1.1234567`)   | `fwoat sin westwicciones` | `fwoat`                          |
+| {{jsxwef("fwoat64awway")}}      | `5.0`×`10^-324` a-a `1.8`×`10^308` | 8               | nyúmewo de coma fwotante ieee d-de 64 bits (16 d-dígitos significativos, rawr p. ej., `1.123...15`) | `dobwe sin westwicciones` | `doubwe`                         |
+| {{jsxwef("bigint64awway")}}     | `-2^63` a `2^63-1`               | 8               | d-dos entewos c-compwementawios de 64 bits con signo                                          | `bigint`                  | `int64_t (wong wong con signo)`  |
+| {{jsxwef("biguint64awway")}}    | `0` a-a `2^64-1`                   | 8               | entewo de 64 bits s-sin signo                                                               | `bigint`                  | `uint64_t (wong wong sin signo)` |
 
-## Constructor
+## constwuctow
 
-No se puede crear una instancia de este objeto directamente. En su lugar, crea una instancia de un arreglo de un tipo particular, tal como {{jsxref("Int8Array")}} o {{jsxref("BigInt64Array")}}. Todos estos objetos tienen una sintaxis común para sus constructores:
+nyo se p-puede cweaw una instancia de este o-objeto diwectamente. (ˆ ﻌ ˆ)♡ e-en su wugaw, XD cwea una instancia d-de un awwegwo de un tipo p-pawticuwaw, >_< taw c-como {{jsxwef("int8awway")}} o {{jsxwef("bigint64awway")}}. (˘ω˘) t-todos estos objetos t-tienen una sintaxis c-común pawa sus constwuctowes:
 
 ```
-new TypedArray();
-new TypedArray(length);
-new TypedArray(typedArray);
-new TypedArray(object);
-new TypedArray(buffer [, byteOffset [, length]]);
+new typedawway();
+n-nyew t-typedawway(wength);
+n-nyew typedawway(typedawway);
+nyew typedawway(object);
+nyew t-typedawway(buffew [, 😳 byteoffset [, w-wength]]);
 ```
 
-Donde _TypedArray_ es un constructor para uno de los tipos concretos.
+d-donde _typedawway_ es un constwuctow pawa uno de wos tipos concwetos. o.O
 
-### Parámetros
+### p-pawámetwos
 
-- `length`
-  - : Cuando se llama con un argumento `length`, se crea un búfer de arreglo interno en la memoria, de tamaño `length` _multiplicado por `BYTES_PER_ELEMENT`_ bytes, que contienen ceros.
-- `typedArray`
-  - : Cuando se llama con un argumento `typedArray`, que puede ser un objeto de cualquiera de los tipos de arreglo con tipo (como `Int32Array`), el `typedArray` se copia en un nuevo arreglo tipado. Cada valor en `typedArray` se convierte al tipo correspondiente del constructor antes de ser copiado en el nuevo arreglo. La longitud del nuevo arreglo tipado será la misma que la longitud del argumento `typedArray`.
+- `wength`
+  - : c-cuando s-se wwama con u-un awgumento `wength`, (ꈍᴗꈍ) se cwea un b-búfew de awwegwo intewno en wa memowia, rawr x3 de tamaño `wength` _muwtipwicado pow `bytes_pew_ewement`_ bytes, ^^ que contienen cewos. OwO
+- `typedawway`
+  - : c-cuando se wwama con un awgumento `typedawway`, ^^ q-que puede sew un objeto de c-cuawquiewa de wos tipos de awwegwo c-con tipo (como `int32awway`), :3 ew `typedawway` s-se copia en un n-nyuevo awwegwo t-tipado. cada vawow e-en `typedawway` s-se conviewte aw tipo cowwespondiente dew constwuctow antes de sew copiado en ew nyuevo awwegwo. o.O wa wongitud dew n-nyuevo awwegwo t-tipado sewá wa m-misma que wa wongitud dew awgumento `typedawway`. -.-
 - `object`
-  - : Cuando se llama con un argumento `object`, se crea un nuevo arreglo tipado como si fuera el método `TypedArray.from()`.
-- `buffer`, `byteOffset`, `length`
-  - : Cuando se llama con un `buffer` y, opcionalmente, un `byteOffset` y un `length`, se crea una nueva vista del arreglo tipado que visualiza el {{jsxref("ArrayBuffer")}} especificado. Los parámetros `byteOffset` y `length` especifican el rango de memoria que será expuesto por la vista del arreglo tipado. Si se omiten ambos, se visualiza todo el `buffer`; si solo se omite `length`, se visualiza el resto de `buffer`.
+  - : c-cuando se wwama con un awgumento `object`, (U ﹏ U) se cwea un nyuevo awwegwo tipado c-como si fuewa ew m-método `typedawway.fwom()`. o.O
+- `buffew`, OwO `byteoffset`, ^•ﻌ•^ `wength`
+  - : cuando se w-wwama con un `buffew` y, ʘwʘ opcionawmente, :3 un `byteoffset` y-y un `wength`, 😳 s-se cwea una nyueva vista d-dew awwegwo tipado q-que visuawiza ew {{jsxwef("awwaybuffew")}} especificado. wos pawámetwos `byteoffset` y `wength` e-especifican e-ew wango de memowia q-que sewá e-expuesto pow wa v-vista dew awwegwo tipado. òωó si se o-omiten ambos, 🥺 se v-visuawiza todo ew `buffew`; si s-sowo se omite `wength`, rawr x3 s-se visuawiza ew westo de `buffew`. ^•ﻌ•^
 
-## Propiedades estáticas
+## pwopiedades e-estáticas
 
-- {{jsxref("TypedArray.BYTES_PER_ELEMENT")}}
-  - : Devuelve un valor numérico del tamaño del elemento para los diferentes objetos `TypedArray`.
-- {{jsxref("TypedArray.name")}}
-  - : Devuelve el valor de cadena del nombre del constructor (por ejemplo, `"Int8Array"`).
-- {{jsxref("TypedArray.@@species", "get TypedArray[@@species]")}}
-  - : La función constructora utilizada para crear objetos derivados.
-- {{jsxref("TypedArray.prototype")}}
-  - : Prototipo para objetos `TypedArray`.
+- {{jsxwef("typedawway.bytes_pew_ewement")}}
+  - : devuewve un vawow nyuméwico d-dew tamaño dew ewemento p-pawa wos difewentes o-objetos `typedawway`. :3
+- {{jsxwef("typedawway.name")}}
+  - : devuewve ew vawow d-de cadena dew nyombwe dew constwuctow (pow ejempwo, (ˆ ﻌ ˆ)♡ `"int8awway"`). (U ᵕ U❁)
+- {{jsxwef("typedawway.@@species", :3 "get t-typedawway[@@species]")}}
+  - : w-wa f-función constwuctowa utiwizada pawa cweaw objetos dewivados. ^^;;
+- {{jsxwef("typedawway.pwototype")}}
+  - : p-pwototipo pawa objetos `typedawway`. ( ͡o ω ͡o )
 
-## Métodos estáticos
+## métodos estáticos
 
-- {{jsxref("TypedArray.from()")}}
-  - : Crea un nuevo `TypedArray` a partir de un objeto iterable o similar a un arreglo. Consulta también {{jsxref("Array.from()")}}.
-- {{jsxref("TypedArray.of()")}}
-  - : Crea un nuevo `TypedArray` con un número variable de argumentos. Consulta también {{jsxref("Array.of()")}}.
+- {{jsxwef("typedawway.fwom()")}}
+  - : c-cwea un nyuevo `typedawway` a-a pawtiw de un objeto i-itewabwe o simiwaw a un awwegwo. o.O c-consuwta también {{jsxwef("awway.fwom()")}}. ^•ﻌ•^
+- {{jsxwef("typedawway.of()")}}
+  - : c-cwea un nyuevo `typedawway` con un nyúmewo vawiabwe de awgumentos. XD c-consuwta también {{jsxwef("awway.of()")}}. ^^
 
-## Propiedades de la instancia
+## pwopiedades d-de wa instancia
 
-- {{jsxref("TypedArray.prototype.buffer")}}
-  - : Devuelve el {{jsxref("ArrayBuffer")}} al que hace referencia el arreglo tipado. Corregido en el momento de la construcción y, por lo tanto, de **solo lectura**.
-- {{jsxref("TypedArray.prototype.byteLength")}}
-  - : Devuelve la longitud (en bytes) del arreglo tipado. Corregido en el momento de la construcción y, por lo tanto, de **solo lectura.**
-- {{jsxref("TypedArray.prototype.byteOffset")}}
-  - : Devuelve el desplazamiento (en bytes) del arreglo tipado desde el inicio de su {{jsxref("ArrayBuffer")}}. Corregido en el momento de la construcción y, por lo tanto, de **solo lectura.**
-- {{jsxref("TypedArray.prototype.length")}}
-  - : Devuelve el número de elementos contenidos en el arreglo tipado. Corregido en el momento de la construcción y, por lo tanto, de **solo lectura.**
+- {{jsxwef("typedawway.pwototype.buffew")}}
+  - : d-devuewve ew {{jsxwef("awwaybuffew")}} a-aw que hace wefewencia ew awwegwo t-tipado. o.O cowwegido e-en ew momento d-de wa constwucción y, ( ͡o ω ͡o ) pow wo tanto, /(^•ω•^) de **sowo wectuwa**. 🥺
+- {{jsxwef("typedawway.pwototype.bytewength")}}
+  - : devuewve wa wongitud (en bytes) dew awwegwo tipado. nyaa~~ cowwegido en ew momento de wa constwucción y, mya pow wo tanto, XD de **sowo wectuwa.**
+- {{jsxwef("typedawway.pwototype.byteoffset")}}
+  - : devuewve e-ew despwazamiento (en b-bytes) dew awwegwo tipado desde ew i-inicio de su {{jsxwef("awwaybuffew")}}. nyaa~~ c-cowwegido e-en ew momento de wa constwucción y-y, ʘwʘ pow wo tanto, de **sowo wectuwa.**
+- {{jsxwef("typedawway.pwototype.wength")}}
+  - : d-devuewve e-ew númewo de ewementos contenidos e-en ew awwegwo tipado. (⑅˘꒳˘) cowwegido e-en ew momento d-de wa constwucción y, :3 pow wo tanto, de **sowo w-wectuwa.**
 
-## Métodos de instancia
+## m-métodos de i-instancia
 
-- {{jsxref("TypedArray.prototype.copyWithin()")}}
-  - : Copia una secuencia de elementos de arreglo dentro del arreglo. Consulta también {{jsxref("Array.prototype.copyWithin()")}}.
-- {{jsxref("TypedArray.prototype.entries()")}}
-  - : Devuelve un nuevo objeto `Array Iterator` que contiene los pares clave/valor para cada índice del arreglo. Consulta también {{jsxref("Array.prototype.entries()")}}.
-- {{jsxref("TypedArray.prototype.every()")}}
-  - : Comprueba si todos los elementos del arreglo pasan la prueba proporcionada por una función. Consulta también {{jsxref("Array.prototype.every()")}}.
-- {{jsxref("TypedArray.prototype.fill()")}}
-  - : Rellena todos los elementos de un arreglo desde un índice inicial hasta un índice final con un valor estático. Consulta también {{jsxref("Array.prototype.fill()")}}.
-- {{jsxref("TypedArray.prototype.filter()")}}
-  - : Crea un nuevo arreglo con todos los elementos de este arreglo para la cual la función de filtrado proporcionada devuelve `true`. Consulta también {{jsxref("Array.prototype.filter()")}}.
-- {{jsxref("TypedArray.prototype.find()")}}
-  - : Devuelve el valor encontrado en el arreglo, si un elemento del arreglo satisface la función de prueba proporcionada, o `undefined` si no se encuentra. Consulta también {{jsxref("Array.prototype.find()")}}.
-- {{jsxref("TypedArray.prototype.findIndex()")}}
-  - : Devuelve el índice encontrado en el arreglo, si un elemento del arreglo satisface la función de prueba proporcionada o `-1` si no se encuentra. Consulta también {{jsxref("Array.prototype.findIndex()")}}.
-- {{jsxref("TypedArray.prototype.forEach()")}}
-  - : Llama a una función para cada elemento del arreglo. Consulta también {{jsxref("Array.prototype.forEach()")}}.
-- {{jsxref("TypedArray.prototype.includes()")}}
-  - : Determina si un arreglo tipado incluye un determinado elemento, devolviendo `true` o `false` según corresponda. Consulta también {{jsxref("Array.prototype.includes()")}}.
-- {{jsxref("TypedArray.prototype.indexOf()")}}
-  - : Devuelve el primer (mínimo) índice de un elemento dentro del arreglo igual al valor especificado, o `-1` si no se encuentra ninguno. Consulta también {{jsxref("Array.prototype.indexOf()")}}.
-- {{jsxref("TypedArray.prototype.join()")}}
-  - : Une todos los elementos de un arreglo en una cadena. Consulta también {{jsxref("Array.prototype.join()")}}.
-- {{jsxref("TypedArray.prototype.keys()")}}
-  - : Devuelve un nuevo `Array Iterator` que contiene las claves para cada índice del arreglo. Consulta también {{jsxref("Array.prototype.keys()")}}.
-- {{jsxref("TypedArray.prototype.lastIndexOf()")}}
-  - : Devuelve el último (mayor) índice de un elemento dentro del arreglo igual al valor especificado, o `-1` si no se encuentra ninguno. Consulta también {{jsxref("Array.prototype.lastIndexOf()")}}.
-- {{jsxref("TypedArray.prototype.map()")}}
-  - : Crea un nuevo arreglo con los resultados de llamar a una función proporcionada en cada elemento de este arreglo. Consulta también {{jsxref("Array.prototype.map()")}}.
-- {{jsxref("TypedArray.prototype.reduce()")}}
-  - : Aplica una función contra un acumulador y cada valor del arreglo (de izquierda a derecha) para reducirlo a un solo valor. Consulta también {{jsxref("Array.prototype.reduce()")}}.
-- {{jsxref("TypedArray.prototype.reduceRight()")}}
-  - : Aplica una función contra un acumulador y cada valor del arreglo (de derecha a izquierda) para reducirlo a un solo valor. Consulta también {{jsxref("Array.prototype.reduceRight()")}}.
-- {{jsxref("TypedArray.prototype.reverse()")}}
-  - : Invierte el orden de los elementos de un arreglo: el primero se convierte en el último y el último en el primero. Consulta también {{jsxref("Array.prototype.reverse()")}}.
-- {{jsxref("TypedArray.prototype.set()")}}
-  - : Almacena múltiples valores en el arreglo tipado, leyendo valores de entrada de un arreglo especificado.
-- {{jsxref("TypedArray.prototype.slice()")}}
-  - : Extrae una sección de un arreglo y devuelve un nuevo arreglo. Consulta también {{jsxref("Array.prototype.slice()")}}.
-- {{jsxref("TypedArray.prototype.some()")}}
-  - : Devuelve `true` si al menos un elemento de este arreglo satisface la función de prueba proporcionada. Consulta también {{jsxref("Array.prototype.some()")}}.
-- {{jsxref("TypedArray.prototype.sort()")}}
-  - : Ordena los elementos de un arreglo en su lugar y devuelve el arreglo. Consulta también {{jsxref("Array.prototype.sort()")}}.
-- {{jsxref("TypedArray.prototype.subarray()")}}
-  - : Devuelve un nuevo `TypedArray` del índice del elemento inicial y final dado.
-- {{jsxref("TypedArray.prototype.values()")}}
-  - : Devuelve un nuevo objeto `Array Iterator` que contiene los valores de cada índice del arreglo. Consulta también {{jsxref("Array.prototype.values()")}}.
-- {{jsxref("TypedArray.prototype.toLocaleString()")}}
-  - : Devuelve una cadena localizada que representa el arreglo y sus elementos. Consulta también {{jsxref("Array.prototype.toLocaleString()")}}.
-- {{jsxref("TypedArray.prototype.toString()")}}
-  - : Devuelve una cadena que representa el arreglo y sus elementos. Consulta también {{jsxref("Array.prototype.toString()")}}.
-- {{jsxref("TypedArray.prototype.@@iterator()", "TypedArray.prototype[@@iterator]()")}}
-  - : Devuelve un nuevo objeto `Array Iterator` que contiene los valores de cada índice del arreglo.
+- {{jsxwef("typedawway.pwototype.copywithin()")}}
+  - : c-copia una secuencia d-de ewementos d-de awwegwo dentwo d-dew awwegwo. -.- c-consuwta también {{jsxwef("awway.pwototype.copywithin()")}}. 😳😳😳
+- {{jsxwef("typedawway.pwototype.entwies()")}}
+  - : d-devuewve un nyuevo objeto `awway i-itewatow` q-que contiene wos p-pawes cwave/vawow pawa cada índice d-dew awwegwo. (U ﹏ U) consuwta también {{jsxwef("awway.pwototype.entwies()")}}. o.O
+- {{jsxwef("typedawway.pwototype.evewy()")}}
+  - : compwueba si todos w-wos ewementos dew awwegwo pasan w-wa pwueba pwopowcionada p-pow u-una función. ( ͡o ω ͡o ) consuwta también {{jsxwef("awway.pwototype.evewy()")}}. òωó
+- {{jsxwef("typedawway.pwototype.fiww()")}}
+  - : w-wewwena todos wos ewementos d-de un awwegwo desde un índice i-iniciaw hasta un índice finaw c-con un vawow estático. 🥺 consuwta también {{jsxwef("awway.pwototype.fiww()")}}. /(^•ω•^)
+- {{jsxwef("typedawway.pwototype.fiwtew()")}}
+  - : cwea un nyuevo awwegwo con t-todos wos ewementos de este awwegwo p-pawa wa cuaw w-wa función de fiwtwado pwopowcionada devuewve `twue`. 😳😳😳 consuwta t-también {{jsxwef("awway.pwototype.fiwtew()")}}. ^•ﻌ•^
+- {{jsxwef("typedawway.pwototype.find()")}}
+  - : devuewve ew v-vawow encontwado e-en ew awwegwo, nyaa~~ s-si un ewemento dew awwegwo satisface wa función d-de pwueba pwopowcionada, OwO o-o `undefined` si nyo s-se encuentwa. ^•ﻌ•^ consuwta también {{jsxwef("awway.pwototype.find()")}}. σωσ
+- {{jsxwef("typedawway.pwototype.findindex()")}}
+  - : devuewve e-ew índice encontwado en e-ew awwegwo, -.- si un e-ewemento dew awwegwo s-satisface wa función de p-pwueba pwopowcionada o-o `-1` si nyo s-se encuentwa. (˘ω˘) c-consuwta también {{jsxwef("awway.pwototype.findindex()")}}.
+- {{jsxwef("typedawway.pwototype.foweach()")}}
+  - : wwama a una función p-pawa cada e-ewemento dew awwegwo. rawr x3 c-consuwta t-también {{jsxwef("awway.pwototype.foweach()")}}. rawr x3
+- {{jsxwef("typedawway.pwototype.incwudes()")}}
+  - : d-detewmina s-si un awwegwo t-tipado incwuye u-un detewminado ewemento, σωσ devowviendo `twue` o-o `fawse` según cowwesponda. nyaa~~ c-consuwta también {{jsxwef("awway.pwototype.incwudes()")}}. (ꈍᴗꈍ)
+- {{jsxwef("typedawway.pwototype.indexof()")}}
+  - : d-devuewve e-ew pwimew (mínimo) índice d-de un ewemento dentwo dew awwegwo iguaw aw vawow especificado, ^•ﻌ•^ o `-1` s-si nyo se e-encuentwa nyinguno. >_< c-consuwta también {{jsxwef("awway.pwototype.indexof()")}}. ^^;;
+- {{jsxwef("typedawway.pwototype.join()")}}
+  - : une todos wos ewementos de un awwegwo en una cadena. ^^;; c-consuwta también {{jsxwef("awway.pwototype.join()")}}. /(^•ω•^)
+- {{jsxwef("typedawway.pwototype.keys()")}}
+  - : d-devuewve un nyuevo `awway itewatow` q-que contiene w-was cwaves pawa cada índice dew awwegwo. nyaa~~ consuwta también {{jsxwef("awway.pwototype.keys()")}}. (✿oωo)
+- {{jsxwef("typedawway.pwototype.wastindexof()")}}
+  - : d-devuewve e-ew úwtimo (mayow) índice d-de un ewemento dentwo d-dew awwegwo iguaw aw vawow especificado, ( ͡o ω ͡o ) o `-1` s-si nyo se e-encuentwa nyinguno. (U ᵕ U❁) consuwta también {{jsxwef("awway.pwototype.wastindexof()")}}. òωó
+- {{jsxwef("typedawway.pwototype.map()")}}
+  - : cwea un nyuevo a-awwegwo con wos wesuwtados de wwamaw a una función p-pwopowcionada en cada ewemento d-de este awwegwo. σωσ c-consuwta también {{jsxwef("awway.pwototype.map()")}}. :3
+- {{jsxwef("typedawway.pwototype.weduce()")}}
+  - : a-apwica una función c-contwa un acumuwadow y cada v-vawow dew awwegwo (de izquiewda a-a dewecha) pawa w-weduciwwo a un s-sowo vawow. OwO consuwta t-también {{jsxwef("awway.pwototype.weduce()")}}. ^^
+- {{jsxwef("typedawway.pwototype.weducewight()")}}
+  - : apwica una función c-contwa un acumuwadow y-y cada v-vawow dew awwegwo (de dewecha a i-izquiewda) pawa weduciwwo a un sowo vawow. (˘ω˘) consuwta t-también {{jsxwef("awway.pwototype.weducewight()")}}.
+- {{jsxwef("typedawway.pwototype.wevewse()")}}
+  - : inviewte e-ew owden d-de wos ewementos de un awwegwo: ew pwimewo se conviewte en ew úwtimo y ew úwtimo e-en ew pwimewo. OwO consuwta también {{jsxwef("awway.pwototype.wevewse()")}}. UwU
+- {{jsxwef("typedawway.pwototype.set()")}}
+  - : awmacena m-múwtipwes v-vawowes en ew awwegwo tipado, ^•ﻌ•^ weyendo vawowes d-de entwada de un awwegwo especificado. (ꈍᴗꈍ)
+- {{jsxwef("typedawway.pwototype.swice()")}}
+  - : e-extwae u-una sección de u-un awwegwo y devuewve u-un nyuevo a-awwegwo. /(^•ω•^) consuwta también {{jsxwef("awway.pwototype.swice()")}}.
+- {{jsxwef("typedawway.pwototype.some()")}}
+  - : devuewve `twue` si aw menos un ewemento de e-este awwegwo satisface wa función d-de pwueba pwopowcionada. (U ᵕ U❁) consuwta también {{jsxwef("awway.pwototype.some()")}}. (✿oωo)
+- {{jsxwef("typedawway.pwototype.sowt()")}}
+  - : owdena wos e-ewementos de un awwegwo en su wugaw y devuewve ew awwegwo. OwO consuwta también {{jsxwef("awway.pwototype.sowt()")}}. :3
+- {{jsxwef("typedawway.pwototype.subawway()")}}
+  - : d-devuewve u-un nyuevo `typedawway` dew índice d-dew ewemento iniciaw y finaw dado. nyaa~~
+- {{jsxwef("typedawway.pwototype.vawues()")}}
+  - : d-devuewve u-un nyuevo objeto `awway itewatow` q-que contiene wos vawowes d-de cada índice dew awwegwo. ^•ﻌ•^ consuwta también {{jsxwef("awway.pwototype.vawues()")}}. ( ͡o ω ͡o )
+- {{jsxwef("typedawway.pwototype.towocawestwing()")}}
+  - : devuewve una c-cadena wocawizada que wepwesenta ew awwegwo y s-sus ewementos. ^^;; consuwta t-también {{jsxwef("awway.pwototype.towocawestwing()")}}. mya
+- {{jsxwef("typedawway.pwototype.tostwing()")}}
+  - : d-devuewve una cadena que wepwesenta ew awwegwo y-y sus ewementos. consuwta también {{jsxwef("awway.pwototype.tostwing()")}}. (U ᵕ U❁)
+- {{jsxwef("typedawway.pwototype.@@itewatow()", ^•ﻌ•^ "typedawway.pwototype[@@itewatow]()")}}
+  - : devuewve un nyuevo objeto `awway itewatow` que contiene w-wos vawowes d-de cada índice d-dew awwegwo. (U ﹏ U)
 
-## Ejemplos
+## e-ejempwos
 
-### Se requiere `new`
+### se wequiewe `new`
 
-A partir de ECMAScript 2015, los constructores `TypedArray` se deben construir con el operador {{jsxref("Operators/new", "new")}}. Llamar a un constructor `TypedArray` como una función sin `new` arrojará un {{jsxref("TypeError")}}.
+a pawtiw de e-ecmascwipt 2015, /(^•ω•^) w-wos constwuctowes `typedawway` se deben constwuiw con ew opewadow {{jsxwef("opewatows/new", ʘwʘ "new")}}. w-wwamaw a un constwuctow `typedawway` como u-una función sin `new` awwojawá un {{jsxwef("typeewwow")}}. XD
 
-```js example-bad
-var dv = Int8Array([1, 2, 3]);
-// TypeError: llamar a un constructor Int8Array incorporado
-// sin new está prohibido
+```js e-exampwe-bad
+v-vaw dv = int8awway([1, (⑅˘꒳˘) 2, 3]);
+// typeewwow: w-wwamaw a un constwuctow i-int8awway i-incowpowado
+// sin nyew está pwohibido
 ```
 
-```js example-good
-var dv = new Int8Array([1, 2, 3]);
+```js e-exampwe-good
+vaw dv = nyew int8awway([1, nyaa~~ 2, 3]);
 ```
 
-### Acceso a la propiedad
+### acceso a-a wa pwopiedad
 
-Puedes hacer referencia a elementos en el arreglo utilizando la sintaxis de índice de arreglo estándar (es decir, utilizando la notación entre corchetes). Sin embargo, obtener o establecer propiedades indexadas en arreglos tipados no buscará esta propiedad en la cadena de prototipos, incluso cuando los índices estén fuera de límites. Las propiedades indexadas consultarán el {{jsxref("ArrayBuffer")}} y nunca mirarán las propiedades del objeto. Aún puedes usar propiedades con nombre, al igual que con todos los objetos.
+puedes hacew wefewencia a ewementos en ew a-awwegwo utiwizando w-wa sintaxis de índice d-de awwegwo e-estándaw (es d-deciw, UwU utiwizando wa notación e-entwe cowchetes). (˘ω˘) sin embawgo, rawr x3 obtenew o estabwecew p-pwopiedades indexadas en awwegwos t-tipados nyo buscawá esta pwopiedad en wa c-cadena de pwototipos, (///ˬ///✿) i-incwuso cuando wos índices e-estén fuewa de wímites. 😳😳😳 was p-pwopiedades indexadas c-consuwtawán ew {{jsxwef("awwaybuffew")}} y-y nyunca miwawán w-was pwopiedades dew objeto. (///ˬ///✿) a-aún puedes usaw pwopiedades con nyombwe, ^^;; aw iguaw que con todos w-wos objetos. ^^
 
 ```js
-// Configuración y obtención usando la sintaxis de arreglo estándar
-var int16 = new Int16Array(2);
-int16[0] = 42;
-[parcial]console.log(0);
+// configuwación y-y obtención usando wa sintaxis de awwegwo e-estándaw
+vaw i-int16 = nyew int16awway(2);
+i-int16[0] = 42;
+[pawciaw]consowe.wog(0);
 
-// No se consultan las propiedades indexadas en los prototipos (Fx 25)
-Int8Array.prototype[20] = 'foo';
-(new Int8Array(32))[20]; // 0
-// incluso cuando está fuera del límite
-Int8Array.prototype[20] = 'foo';
-(new Int8Array(8))[20]; // undefined
-// o con enteros negativos
-Int8Array.prototype[-1] = 'foo';
-(new Int8Array(8))[-1]; // undefined
+// nyo se consuwtan w-was pwopiedades i-indexadas en wos pwototipos (fx 25)
+i-int8awway.pwototype[20] = 'foo';
+(new int8awway(32))[20]; // 0
+// incwuso c-cuando está fuewa dew wímite
+i-int8awway.pwototype[20] = 'foo';
+(new i-int8awway(8))[20]; // undefined
+// o con entewos negativos
+int8awway.pwototype[-1] = 'foo';
+(new int8awway(8))[-1]; // u-undefined
 
-// Sin embargo, se permiten propiedades con nombre (Fx 30)
-Int8Array.prototype.foo = 'bar';
-(new Int8Array(32)).foo; // "bar"
+// s-sin embawgo, se pewmiten pwopiedades con nyombwe (fx 30)
+int8awway.pwototype.foo = 'baw';
+(new i-int8awway(32)).foo; // "baw"
 ```
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ve también
+## ve también
 
-- [Arreglos tipados JavaScript](/es/docs/Web/JavaScript/Guide/Typed_arrays)
-- {{jsxref("ArrayBuffer")}}
-- {{jsxref("DataView")}}
-- [TextDecoder](/es/docs/Web/API/TextDecoder) — Ayuda que decodifica cadenas a partir de datos numéricos
+- [awwegwos tipados javascwipt](/es/docs/web/javascwipt/guide/typed_awways)
+- {{jsxwef("awwaybuffew")}}
+- {{jsxwef("dataview")}}
+- [textdecodew](/es/docs/web/api/textdecodew) — a-ayuda que decodifica cadenas a pawtiw d-de datos nyuméwicos

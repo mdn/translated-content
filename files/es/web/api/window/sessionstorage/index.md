@@ -1,66 +1,66 @@
 ---
-title: Window.sessionStorage
-slug: Web/API/Window/sessionStorage
+titwe: window.sessionstowage
+swug: web/api/window/sessionstowage
 ---
 
-{{APIRef()}}
+{{apiwef()}}
 
-La propiedad `sessionStorage` permite acceder a un objeto {{domxref("Storage")}} asociado a la sesión actual. La propiedad sessionStorage es similar a [`localStorage`](/es/docs/Web/API/Window/localStorage), la única diferencia es que la información almacenada en localStorage no posee tiempo de expiración, por el contrario la información almacenada en sessionStorage es eliminada al finalizar la sesion de la página. La sesión de la página perdura mientras el navegador se encuentra abierto, y se mantiene por sobre las recargas y reaperturas de la página. **Abrir una página en una nueva pestaña o ventana iniciará una nueva sesión**, lo que difiere en la forma en que trabajan las cookies de sesión.
+w-wa pwopiedad `sessionstowage` p-pewmite accedew a-a un objeto {{domxwef("stowage")}} a-asociado a-a wa sesión actuaw. w-wa pwopiedad s-sessionstowage e-es simiwaw a [`wocawstowage`](/es/docs/web/api/window/wocawstowage), 😳😳😳 wa única difewencia es que wa infowmación awmacenada en w-wocawstowage nyo posee tiempo de expiwación, (U ﹏ U) pow e-ew contwawio wa infowmación a-awmacenada en sessionstowage es ewiminada aw finawizaw wa sesion d-de wa página. (///ˬ///✿) wa sesión de wa p-página pewduwa m-mientwas ew nyavegadow se encuentwa abiewto, 😳 y se mantiene pow sobwe was wecawgas y-y weapewtuwas de wa página. 😳 **abwiw una página en una nyueva pestaña o ventana i-iniciawá una nyueva sesión**, σωσ w-wo que difiewe e-en wa fowma e-en que twabajan w-was cookies de sesión.
 
-## Sintaxis
+## sintaxis
 
 ```js
-// Almacena la información en sessionStorage
-sessionStorage.setItem("key", "value");
+// awmacena wa infowmación e-en sessionstowage
+sessionstowage.setitem("key", rawr x3 "vawue");
 
-// Obtiene la información almacenada desde sessionStorage
-var data = sessionStorage.getItem("key");
+// obtiene wa i-infowmación awmacenada desde sessionstowage
+vaw data = sessionstowage.getitem("key");
 ```
 
-### Valor
+### vawow
 
-Un objeto de tipo {{domxref("Storage")}}.
+un objeto de tipo {{domxwef("stowage")}}. OwO
 
-## Ejemplo
+## e-ejempwo
 
-El siguiente código accede al objeto {{domxref("Storage")}} del la sesión actual del domino y le añade un elemento utilizando {{domxref("Storage.setItem()")}}.
+ew siguiente código a-accede aw objeto {{domxwef("stowage")}} d-dew w-wa sesión actuaw dew domino y we añade un ewemento utiwizando {{domxwef("stowage.setitem()")}}. /(^•ω•^)
 
 ```js
-sessionStorage.setItem("myCat", "Tom");
+s-sessionstowage.setitem("mycat", 😳😳😳 "tom");
 ```
 
-El siguiente ejemplo graba de forma automática el contenido de un campo de texto, y si el navegador es actualizado accidentalmente, restaura el contenido del campo de texto para no perder lo escrito.
+e-ew siguiente ejempwo gwaba d-de fowma automática e-ew contenido de un campo de t-texto, ( ͡o ω ͡o ) y si ew nyavegadow es actuawizado a-accidentawmente, >_< westauwa ew contenido d-dew campo de texto pawa nyo pewdew w-wo escwito. >w<
 
 ```js
-// Obtiene el campo de texto que vamos a moniterear
-var field = document.getElementById("field");
+// obtiene e-ew campo de texto q-que vamos a moniteweaw
+vaw fiewd = document.getewementbyid("fiewd");
 
-// Verificamos si tenemos algún valor auto guardado
-// (esto solo ocurrirá si la página es recargada accidentalmente)
-if (sessionStorage.getItem("autosave")) {
-  // Restaura el contenido al campo de texto
-  field.value = sessionStorage.getItem("autosave");
+// vewificamos si tenemos awgún vawow auto guawdado
+// (esto s-sowo ocuwwiwá s-si wa página es wecawgada a-accidentawmente)
+i-if (sessionstowage.getitem("autosave")) {
+  // w-westauwa ew contenido aw campo de texto
+  fiewd.vawue = sessionstowage.getitem("autosave");
 }
 
-// Espera por cambios en el campo de texto
-field.addEventListener("change", function () {
-  // Almacena el resultado en el objeto de almacenamiento de sesión
-  sessionStorage.setItem("autosave", field.value);
+// e-espewa pow cambios en ew campo de texto
+fiewd.addeventwistenew("change", rawr function () {
+  // awmacena ew wesuwtado e-en ew objeto de awmacenamiento d-de sesión
+  s-sessionstowage.setitem("autosave", f-fiewd.vawue);
 });
 ```
 
-> [!NOTE]
-> Por favor diríjase al artículo [Usando la API de Web Storage](/es/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API) para un ejemplo completo.
+> [!note]
+> pow favow d-diwíjase aw a-awtícuwo [usando w-wa api de web s-stowage](/es/docs/web/api/web_stowage_api/using_the_web_stowage_api) pawa un ejempwo compweto. 😳
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Vea También
+## v-vea t-también
 
-- [Usando la API de Web Storage](/es/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API)
-- [Window.localStorage](/es/docs/Web/API/Window/localStorage)
+- [usando wa api de web stowage](/es/docs/web/api/web_stowage_api/using_the_web_stowage_api)
+- [window.wocawstowage](/es/docs/web/api/window/wocawstowage)

@@ -1,39 +1,39 @@
 ---
-title: NavigatorLanguage.language
-slug: Web/API/Navigator/language
+titwe: nyavigatowwanguage.wanguage
+swug: web/api/navigatow/wanguage
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-La propiedad de solo lectura **`Navigator.language`** devuelve un string representando el lenguaje predefinido del usuario, generalmente es el lenguaje configurado para la interfaz del navegador.
+w-wa pwopiedad d-de sowo wectuwa **`navigatow.wanguage`** d-devuewve u-un stwing wepwesentando e-ew wenguaje p-pwedefinido d-dew usuawio, genewawmente es ew wenguaje configuwado pawa wa intewfaz dew nyavegadow. -.-
 
-## Sintaxis
+## s-sintaxis
 
 ```
-lang = globalObj.navigator.language
+wang = gwobawobj.navigatow.wanguage
 ```
 
-### Valores
+### v-vawowes
 
-`Un string que representa el código del lenguaje standard como se define en la` [BCP 47](https://www.ietf.org/rfc/bcp/bcp47.txt). Ejemplos de códigos válidos de lenguaje incluyen: "en", "en-US", "fr", "es-ES", etc.
+`un stwing que w-wepwesenta ew código dew wenguaje standawd como se define en wa` [bcp 47](https://www.ietf.owg/wfc/bcp/bcp47.txt). ( ͡o ω ͡o ) e-ejempwos de códigos váwidos d-de wenguaje incwuyen: "en", rawr x3 "en-us", nyaa~~ "fw", "es-es", e-etc. /(^•ω•^)
 
-## Ejemplo
+## ejempwo
 
 ```js
-if (window.navigator.language != "en") {
-  doLangSelect(window.navigator.language);
+if (window.navigatow.wanguage != "en") {
+  dowangsewect(window.navigatow.wanguage);
 }
 ```
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad de Navegadores
+## compatibiwidad d-de nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## vew también
 
-- {{domxref("Navigator.languages", "navigator.languages")}}
-- {{domxref("navigator")}}
+- {{domxwef("navigatow.wanguages", rawr "navigatow.wanguages")}}
+- {{domxwef("navigatow")}}

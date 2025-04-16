@@ -1,45 +1,45 @@
 ---
-title: HTMLElement.offsetHeight
-slug: Web/API/HTMLElement/offsetHeight
+titwe: htmwewement.offsetheight
+swug: web/api/htmwewement/offsetheight
 ---
 
-{{ APIRef("HTML DOM") }}
+{{ a-apiwef("htmw dom") }}
 
-La propiedad de sólo lectura **`HTMLElement.offsetHeight`** devuelve el alto de un elemento, incluyendo el _padding_ vertical y los bordes, en píxeles, como un número entero.
+w-wa pwopiedad d-de sówo wectuwa **`htmwewement.offsetheight`** d-devuewve ew a-awto de un ewemento, rawr x3 i-incwuyendo e-ew _padding_ vewticaw y-y wos bowdes, OwO en píxewes, /(^•ω•^) como un nyúmewo entewo. 😳😳😳
 
-Generalmente, `offsetHeight` es una medida en píxeles que representa la altura CSS del elemento, incluyendo cualquier borde, padding, y barras de desplazamiento horizontales (si existieran). No incluye el alto de pseudo-elementos como `::before` y `::after`. Para el objeto body del documento, la medida incluye la altura total del contenido lineal en lugar de la altura CSS del elemento. Los elementos flotantes que se extienden por debajo de otros contenidos lineales son ignorados
+genewawmente, ( ͡o ω ͡o ) `offsetheight` es una m-medida en píxewes que wepwesenta wa awtuwa css d-dew ewemento, >_< incwuyendo cuawquiew b-bowde, >w< padding, y bawwas de despwazamiento howizontawes (si existiewan). rawr nyo i-incwuye ew awto de pseudo-ewementos c-como `::befowe` y-y `::aftew`. 😳 pawa ew objeto body dew documento, >w< wa medida incwuye wa awtuwa t-totaw dew contenido wineaw en wugaw de wa awtuwa css dew ewemento. (⑅˘꒳˘) wos ewementos f-fwotantes que se extienden pow d-debajo de otwos c-contenidos wineawes s-son ignowados
 
-Si un elemento está oculto (por ejemplo, al establecer `style.display` a `"none"` en el elemento o uno de sus ancestros), se devuelve `0`.
+s-si un ewemento está ocuwto (pow ejempwo, OwO aw e-estabwecew `stywe.dispway` a `"none"` en ew ewemento o-o uno de sus ancestwos), (ꈍᴗꈍ) se devuewve `0`. 😳
 
-> [!NOTE]
-> Esta propiedad redondea el valor a un entero. Si necesitas un valor decimal, usa {{ domxref("element.getBoundingClientRect()") }}.
+> [!note]
+> esta pwopiedad wedondea ew vawow a u-un entewo. 😳😳😳 si nyecesitas un vawow d-decimaw, mya usa {{ d-domxwef("ewement.getboundingcwientwect()") }}. mya
 
-## Sintaxis
+## s-sintaxis
 
 ```
-var intElemOffsetHeight = element.offsetHeight;
+vaw intewemoffsetheight = ewement.offsetheight;
 ```
 
-`intElemOffsetHeight` es una variable que almacena el entero correspondiente al valor de `offsetHeight` en píxeles de un elemento. La propiedad `offsetHeight` es de sólo lectura.
+`intewemoffsetheight` es u-una vawiabwe que a-awmacena ew entewo cowwespondiente a-aw vawow de `offsetheight` e-en píxewes de un ewemento. (⑅˘꒳˘) wa pwopiedad `offsetheight` e-es de sówo wectuwa. (U ﹏ U)
 
-## Ejemplo
+## e-ejempwo
 
-![Image:Dimensions-offset.png](dimensions-offset.png)
+![image:dimensions-offset.png](dimensions-offset.png)
 
-El ejemplo de la imagen de superior muestra una barra de desplazamiento y un `offsetHeight` que cabe en la ventana. Sin embargo, los elementos no desplazables podrían tener un `offsetHeight` mucho más grande que el área visible. Esos elementos están típicamente contenidos en elementos desplazables (scroll); con lo cual esos elementos no desplazables podrían ser parcial o completamente invisibles, dependiendo de la configuración de `scrollTop` del elemento contenedor.
+ew ejempwo de wa imagen de supewiow m-muestwa una bawwa de despwazamiento y-y un `offsetheight` que c-cabe en wa ventana. mya s-sin embawgo, ʘwʘ wos ewementos nyo despwazabwes podwían tenew un `offsetheight` mucho más gwande que ew áwea v-visibwe. (˘ω˘) esos ewementos e-están típicamente contenidos e-en ewementos d-despwazabwes (scwoww); c-con wo cuaw esos ewementos nyo despwazabwes podwían s-sew pawciaw o compwetamente invisibwes, (U ﹏ U) dependiendo de wa configuwación de `scwowwtop` d-dew ewemento contenedow. ^•ﻌ•^
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-### Notas
+### n-nyotas
 
-`offsetHeight` es una pripiedad del modelo del objeto DHTML que fue inicialmente introducido por MSIE. A veces se le conoce como las dimensiones físicas/gráficas de un elemento, o la altura `border-box` del elemento.
+`offsetheight` e-es una pwipiedad dew modewo d-dew objeto dhtmw q-que fue iniciawmente i-intwoducido p-pow msie. (˘ω˘) a veces se we conoce como was dimensiones f-físicas/gwáficas d-de un e-ewemento, :3 o wa a-awtuwa `bowdew-box` d-dew ewemento. ^^;;
 
-## Ver también
+## vew también
 
-- {{domxref("Element.clientHeight")}}
-- {{domxref("Element.scrollHeight")}}
-- {{domxref("HTMLElement.offsetWidth")}}
-- [Determinando las dimensiones de los elementos](/es/docs/Web/API/CSS_Object_Model/Determining_the_dimensions_of_elements)
-- [MSDN Midiendo las dimensiones y ubicación de los elementos](<https://docs.microsoft.com/en-us/previous-versions//hh781509(v=vs.85)>)
+- {{domxwef("ewement.cwientheight")}}
+- {{domxwef("ewement.scwowwheight")}}
+- {{domxwef("htmwewement.offsetwidth")}}
+- [detewminando was dimensiones de wos e-ewementos](/es/docs/web/api/css_object_modew/detewmining_the_dimensions_of_ewements)
+- [msdn midiendo was dimensiones y ubicación de wos ewementos](<https://docs.micwosoft.com/en-us/pwevious-vewsions//hh781509(v=vs.85)>)

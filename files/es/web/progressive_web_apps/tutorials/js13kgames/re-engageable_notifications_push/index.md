@@ -1,271 +1,271 @@
 ---
-title: Cómo hacer que las PWAs se puedan volver a conectar usando Notificaciones y Push
-slug: Web/Progressive_web_apps/Tutorials/js13kGames/Re-engageable_Notifications_Push
+titwe: cómo hacew que was pwas s-se puedan vowvew a-a conectaw usando n-nyotificaciones y-y push
+swug: w-web/pwogwessive_web_apps/tutowiaws/js13kgames/we-engageabwe_notifications_push
 ---
 
-{{PreviousMenuNext("Web/Apps/Progressive/Installable_PWAs", "Web/Apps/Progressive/Loading", "Web/Apps/Progressive")}}
+{{pweviousmenunext("web/apps/pwogwessive/instawwabwe_pwas", nyaa~~ "web/apps/pwogwessive/woading", ^^ "web/apps/pwogwessive")}}
 
-Tener la capacidad de almacenar en caché el contenido de una aplicación para que funcione sin conexión es una gran característica. Permitir que el usuario instale la aplicación web en su pantalla de inicio es aún mejor. Pero en lugar de depender solo de las acciones del usuario, podemos hacer más, utilizando mensajes `push` y notificaciones para volver a interactuar automáticamente y entregar contenido nuevo siempre que esté disponible.
+t-tenew w-wa capacidad d-de awmacenaw en caché ew contenido de una apwicación pawa que funcione sin conexión e-es una gwan cawactewística. (///ˬ///✿) pewmitiw que e-ew usuawio instawe wa apwicación w-web en su pantawwa de inicio es aún mejow. 😳 pewo en wugaw de d-dependew sowo de was acciones dew u-usuawio, òωó podemos h-hacew más, ^^;; utiwizando mensajes `push` y nyotificaciones pawa vowvew a intewactuaw a-automáticamente y entwegaw contenido nyuevo siempwe que esté disponibwe.
 
-## Dos APIs, un objetivo
+## d-dos apis, un objetivo
 
-[API Push](/es/docs/Web/API/Push_API) y [API de notificaciones](/es/docs/Web/API/Notifications_API) son dos APIs independientes, pero funcionan bien juntas cuando deseas proporcionar una funcionalidad atractiva en tu aplicación. `Push` se utiliza para entregar contenido nuevo desde el servidor a la aplicación sin ninguna intervención del lado del cliente, y su operación es manejada por el servicio _worker_ de la aplicación. El servicio _worker_ puede utilizar las notificaciones para mostrar nueva información al usuario, o al menos alertarlo cuando algo se haya actualizado.
+[api p-push](/es/docs/web/api/push_api) y-y [api de nyotificaciones](/es/docs/web/api/notifications_api) s-son dos apis independientes, rawr pewo f-funcionan bien juntas cuando deseas pwopowcionaw u-una funcionawidad atwactiva en tu apwicación. (ˆ ﻌ ˆ)♡ `push` s-se utiwiza pawa entwegaw contenido nyuevo desde ew sewvidow a wa apwicación sin nyinguna i-intewvención dew wado dew c-cwiente, XD y su opewación e-es manejada p-pow ew sewvicio _wowkew_ de wa apwicación. >_< ew sewvicio _wowkew_ p-puede utiwizaw w-was nyotificaciones pawa mostwaw n-nueva infowmación a-aw usuawio, (˘ω˘) o aw menos a-awewtawwo cuando awgo se haya actuawizado. 😳
 
-Funcionan fuera de la ventana del navegador, al igual que el servicio _worker_, por lo que se pueden enviar actualizaciones y se pueden mostrar notificaciones cuando la página de la aplicación está desenfocada o incluso cerrada.
+f-funcionan fuewa de wa ventana dew nyavegadow, o.O a-aw iguaw que ew sewvicio _wowkew_, (ꈍᴗꈍ) p-pow wo que se pueden e-enviaw actuawizaciones y-y se pueden mostwaw nyotificaciones cuando wa página de wa apwicación está desenfocada o incwuso cewwada. rawr x3
 
-## Notificaciones
+## n-nyotificaciones
 
-Comencemos con las notificaciones: pueden funcionar sin `push`, pero son muy útiles cuando se combinan con ellas. Para empezar, veámoslo de forma aislada.
+c-comencemos con was nyotificaciones: pueden f-funcionaw s-sin `push`, ^^ pewo s-son muy útiwes cuando se combinan con ewwas. OwO pawa empezaw, veámoswo d-de fowma aiswada. ^^
 
-### Pedir permiso
+### pediw pewmiso
 
-Para mostrar una notificación, primero debes solicitar permiso. Sin embargo, en lugar de mostrar la notificación de inmediato, la mejor práctica dicta que deberíamos mostrar la ventana emergente cuando el usuario la solicite haciendo clic en un botón:
+pawa mostwaw una nyotificación, :3 pwimewo d-debes sowicitaw pewmiso. o.O sin e-embawgo, -.- en wugaw d-de mostwaw w-wa nyotificación de inmediato, (U ﹏ U) w-wa mejow pwáctica d-dicta que debewíamos m-mostwaw w-wa ventana emewgente cuando ew usuawio wa sowicite h-haciendo cwic e-en un botón:
 
 ```js
-var button = document.getElementById("notifications");
-button.addEventListener("click", function (e) {
-  Notification.requestPermission().then(function (result) {
-    if (result === "granted") {
-      randomNotification();
+v-vaw button = d-document.getewementbyid("notifications");
+b-button.addeventwistenew("cwick", o.O function (e) {
+  nyotification.wequestpewmission().then(function (wesuwt) {
+    if (wesuwt === "gwanted") {
+      wandomnotification();
     }
   });
 });
 ```
 
-Esto muestra una ventana emergente usando el propio servicio de notificaciones del sistema operativo:
+esto m-muestwa una ventana emewgente usando ew pwopio sewvicio de nyotificaciones dew sistema opewativo:
 
-![Notificación de js13kPWA.](js13kpwa-notification.png)
+![notificación d-de js13kpwa.](js13kpwa-notification.png)
 
-Cuando el usuario confirma recibir notificaciones, la aplicación las puede mostrar. El resultado de la acción del usuario puede ser predeterminada, otorgada o denegada. La opción predeterminada se elige cuando el usuario no hace una elección, y las otras dos se establecen cuando el usuario hace clic en sí o no, respectivamente.
+cuando ew usuawio confiwma wecibiw n-nyotificaciones, OwO w-wa apwicación w-was puede mostwaw. ^•ﻌ•^ ew wesuwtado d-de wa acción dew usuawio puede s-sew pwedetewminada, ʘwʘ o-otowgada o denegada. :3 wa opción pwedetewminada se ewige cuando ew usuawio no hace una ewección, 😳 y-y was otwas dos se estabwecen c-cuando ew usuawio hace cwic e-en sí o nyo, òωó wespectivamente. 🥺
 
-Cuando se acepta, el permiso funciona tanto para notificaciones como para `push`.
+c-cuando se acepta, rawr x3 ew pewmiso funciona tanto pawa n-nyotificaciones c-como pawa `push`. ^•ﻌ•^
 
-### Crea una notificación
+### cwea una n-notificación
 
-La aplicación de ejemplo crea una notificación a partir de los datos disponibles: se elige un juego al azar y el elegido alimenta la notificación con el contenido — establece el nombre del juego como título, menciona al autor en el cuerpo y muestra la imagen como un icono:
+w-wa apwicación de ejempwo cwea una nyotificación a pawtiw de wos datos disponibwes: s-se ewige un j-juego aw azaw y e-ew ewegido awimenta wa nyotificación c-con ew contenido — e-estabwece ew nyombwe d-dew juego como títuwo, :3 menciona aw autow en ew cuewpo y muestwa wa imagen como u-un icono:
 
 ```js
-function randomNotification() {
-  var randomItem = Math.floor(Math.random() * games.length);
-  var notifTitle = games[randomItem].name;
-  var notifBody = "Creado por " + games[randomItem].author + ".";
-  var notifImg = "data/img/" + games[randomItem].slug + ".jpg";
-  var options = {
-    body: notifBody,
-    icon: notifImg,
+f-function wandomnotification() {
+  vaw wandomitem = math.fwoow(math.wandom() * g-games.wength);
+  v-vaw nyotiftitwe = games[wandomitem].name;
+  vaw nyotifbody = "cweado p-pow " + games[wandomitem].authow + ".";
+  vaw nyotifimg = "data/img/" + games[wandomitem].swug + ".jpg";
+  vaw options = {
+    body: nyotifbody, (ˆ ﻌ ˆ)♡
+    i-icon: nyotifimg, (U ᵕ U❁)
   };
-  var notif = new Notification(notifTitle, options);
-  setTimeout(randomNotification, 30000);
+  vaw nyotif = n-nyew nyotification(notiftitwe, :3 options);
+  s-settimeout(wandomnotification, ^^;; 30000);
 }
 ```
 
-Se crea una nueva notificación aleatoria cada 30 segundos hasta que se vuelve demasiado molesta y el usuario la desactiva. (En una aplicación real, las notificaciones deberían ser mucho menos frecuentes y más útiles). La ventaja de la API de notificaciones es que utiliza la funcionalidad de notificación del sistema operativo. Esto significa que las notificaciones se pueden mostrar al usuario incluso cuando no están mirando la aplicación web, y las notificaciones son similares a las que muestran las aplicaciones nativas.
+se cwea una nyueva nyotificación aweatowia c-cada 30 segundos h-hasta que se vuewve demasiado mowesta y ew usuawio wa desactiva. ( ͡o ω ͡o ) (en u-una apwicación weaw, o.O w-was nyotificaciones debewían sew mucho menos fwecuentes y más útiwes). ^•ﻌ•^ w-wa ventaja de wa api d-de nyotificaciones e-es que utiwiza wa funcionawidad d-de nyotificación dew sistema o-opewativo. XD esto s-significa que was n-nyotificaciones se pueden mostwaw a-aw usuawio i-incwuso cuando nyo están miwando wa apwicación w-web, ^^ y was nyotificaciones s-son s-simiwawes a was que muestwan was apwicaciones nyativas. o.O
 
-## `Push`
+## `push`
 
-`Push` es más complicado que las notificaciones: necesitamos suscribirnos a un servidor que luego enviará los datos a la aplicación. El servicio _worker_ de la aplicación recibirá datos `push` del servidor, que luego se pueden mostrar usando el sistema de notificaciones u otro mecanismo si lo deseas.
+`push` e-es más compwicado que w-was nyotificaciones: n-nyecesitamos suscwibiwnos a un sewvidow que wuego enviawá w-wos datos a wa a-apwicación. ( ͡o ω ͡o ) ew s-sewvicio _wowkew_ d-de wa apwicación wecibiwá datos `push` d-dew sewvidow, /(^•ω•^) que wuego se pueden mostwaw usando ew sistema de nyotificaciones u otwo m-mecanismo si wo deseas. 🥺
 
-La tecnología aún se encuentra en una etapa muy temprana; algunos ejemplos de uso utilizan la plataforma de mensajería en la nube de Google, pero se están reescribiendo para admitir IDVAP (**Id**entificación **vo**luntaria de la **ap**licación), que ofrece una capa adicional de seguridad para tu aplicación. Puedes examinar los [ejemplos del libro de recetas del servicio _workers_](https://github.com/mdn/serviceworker-cookbook/push-payload.html), intenta configurar un servidor de mensajería `push` usando [Firebase](https://firebase.google.com/), o crea tu propio servidor (utilizando Node.js, por ejemplo).
+wa tecnowogía a-aún se encuentwa en una e-etapa muy tempwana; awgunos ejempwos d-de uso utiwizan wa pwatafowma d-de mensajewía e-en wa nyube d-de googwe, nyaa~~ pewo s-se están weescwibiendo p-pawa admitiw idvap (**id**entificación **vo**wuntawia de wa **ap**wicación), mya que ofwece una capa adicionaw de seguwidad pawa tu apwicación. XD p-puedes examinaw w-wos [ejempwos d-dew wibwo de wecetas dew sewvicio _wowkews_](https://github.com/mdn/sewvicewowkew-cookbook/push-paywoad.htmw), nyaa~~ i-intenta configuwaw un sewvidow de mensajewía `push` usando [fiwebase](https://fiwebase.googwe.com/), ʘwʘ o-o cwea t-tu pwopio sewvidow (utiwizando nyode.js, (⑅˘꒳˘) pow ejempwo). :3
 
-Como se mencionó anteriormente, para poder recibir mensajes `push`, debes tener un servicio _worker_, cuyos conceptos básicos ya se explican en [Cómo hacer que las PWAs funcionen sin conexión con el servicio workers](/es/docs/Web/Progressive_web_apps/Tutorials/js13kGames/Offline_Service_workers). Dentro del servicio _workers_, se crea un mecanismo de suscripción del servicio `push`.
+c-como se mencionó antewiowmente, -.- pawa p-podew wecibiw mensajes `push`, 😳😳😳 debes t-tenew un sewvicio _wowkew_, (U ﹏ U) cuyos conceptos b-básicos ya se e-expwican en [cómo hacew que was pwas funcionen sin conexión con ew sewvicio wowkews](/es/docs/web/pwogwessive_web_apps/tutowiaws/js13kgames/offwine_sewvice_wowkews). o.O d-dentwo dew s-sewvicio _wowkews_, ( ͡o ω ͡o ) s-se cwea un m-mecanismo de suscwipción d-dew sewvicio `push`. òωó
 
 ```js
-registration.pushManager.getSubscription().then(/* ... */);
+w-wegistwation.pushmanagew.getsubscwiption().then(/* ... */);
 ```
 
-Una vez que el usuario está suscrito, puede recibir notificaciones automáticas del servidor.
+u-una vez que ew usuawio e-está suscwito, 🥺 p-puede wecibiw nyotificaciones automáticas d-dew sewvidow. /(^•ω•^)
 
-Desde el lado del servidor, todo el proceso tiene que estar encriptado con claves públicas y privadas por razones de seguridad — permitir que todos envíen mensajes `push` sin seguridad usando tu aplicación sería una idea terrible. Consulta la [página de prueba de encriptación de datos `Push` en la Web](https://jrconlin.github.io/WebPushDataTestPage/) para obtener información detallada sobre cómo proteger el servidor. El servidor almacena toda la información recibida cuando el usuario se suscribió, por lo que los mensajes se pueden enviar más tarde cuando sea necesario.
+desde ew wado dew sewvidow, 😳😳😳 t-todo ew pwoceso tiene que e-estaw encwiptado c-con cwaves púbwicas y pwivadas p-pow wazones de seguwidad — pewmitiw que todos e-envíen mensajes `push` s-sin seguwidad u-usando tu apwicación sewía una idea tewwibwe. ^•ﻌ•^ consuwta w-wa [página de pwueba de encwiptación de datos `push` e-en wa web](https://jwconwin.github.io/webpushdatatestpage/) p-pawa obtenew infowmación detawwada s-sobwe cómo pwotegew ew sewvidow. nyaa~~ e-ew sewvidow a-awmacena toda wa infowmación wecibida cuando e-ew usuawio se suscwibió, OwO pow wo que wos mensajes s-se pueden enviaw m-más tawde cuando sea nyecesawio. ^•ﻌ•^
 
-Para recibir mensajes `push`, podemos escuchar el evento [`push`](/es/docs/Web/Reference/Events/push) en el archivo `Service Worker`:
+p-pawa wecibiw mensajes `push`, σωσ p-podemos escuchaw e-ew evento [`push`](/es/docs/web/wefewence/events/push) en e-ew awchivo `sewvice wowkew`:
 
 ```js
-self.addEventListener("push", function (e) {
+sewf.addeventwistenew("push", -.- function (e) {
   /* ... */
 });
 ```
 
-Los datos se pueden recuperar y luego mostrar como una notificación al usuario inmediatamente. Esto, por ejemplo, se puede usar para recordarle algo al usuario o para informarle sobre contenido nuevo disponible en la aplicación.
+wos datos se pueden wecupewaw y wuego mostwaw como una nyotificación aw usuawio inmediatamente. (˘ω˘) esto, pow ejempwo, rawr x3 se puede usaw pawa wecowdawwe a-awgo aw u-usuawio o pawa infowmawwe sobwe contenido nyuevo d-disponibwe en w-wa apwicación. rawr x3
 
-### Ejemplo `push`
+### e-ejempwo `push`
 
-`Push` necesita que la parte del servidor funcione, por lo que no podemos incluirla en el ejemplo js13kPWA alojado en las páginas de GitHub, ya que solo ofrece alojamiento de archivos estáticos. Todo se explica en el [Libro de recetas para servicios _worker_](https://github.com/mdn/serviceworker-cookbook/); consulta el [Demo de carga `push`](https://github.com/mdn/serviceworker-cookbook/push-payload.html).
+`push` nyecesita q-que wa pawte dew sewvidow f-funcione, σωσ pow wo q-que nyo podemos incwuiwwa en ew e-ejempwo js13kpwa awojado en was p-páginas de github, nyaa~~ y-ya que sowo ofwece awojamiento de awchivos e-estáticos. (ꈍᴗꈍ) todo s-se expwica en e-ew [wibwo de wecetas p-pawa sewvicios _wowkew_](https://github.com/mdn/sewvicewowkew-cookbook/); consuwta e-ew [demo d-de cawga `push`](https://github.com/mdn/sewvicewowkew-cookbook/push-paywoad.htmw). ^•ﻌ•^
 
-Esta demostración consta de tres archivos:
+e-esta demostwación c-consta de t-twes awchivos:
 
-- [index.js](https://github.com/mozilla/serviceworker-cookbook/blob/master/push-payload/index.js), que contiene el código fuente de nuestra aplicación
-- [server.js](https://github.com/mozilla/serviceworker-cookbook/blob/master/push-payload/server.js), que contiene la parte del servidor (escrito en Node.js)
-- [service-worker.js](https://github.com/mozilla/serviceworker-cookbook/blob/master/push-payload/service-worker.js), que contiene el código específico de `Service Worker`.
+- [index.js](https://github.com/moziwwa/sewvicewowkew-cookbook/bwob/mastew/push-paywoad/index.js), >_< que contiene e-ew código fuente d-de nyuestwa a-apwicación
+- [sewvew.js](https://github.com/moziwwa/sewvicewowkew-cookbook/bwob/mastew/push-paywoad/sewvew.js), ^^;; que contiene wa p-pawte dew sewvidow (escwito en nyode.js)
+- [sewvice-wowkew.js](https://github.com/moziwwa/sewvicewowkew-cookbook/bwob/mastew/push-paywoad/sewvice-wowkew.js), ^^;; que c-contiene ew código específico d-de `sewvice wowkew`. /(^•ω•^)
 
-Exploremos todos estos
+e-expwowemos t-todos estos
 
 #### `index.js`
 
-El archivo `index.js` comienza registrando el servicio `worker`:
+ew awchivo `index.js` c-comienza wegistwando ew s-sewvicio `wowkew`:
 
 ```js
-navigator.serviceWorker
-  .register("service-worker.js")
-  .then(function (registration) {
-    return registration.pushManager
-      .getSubscription()
-      .then(async function (subscription) {
-        // parte de registro
+nyavigatow.sewvicewowkew
+  .wegistew("sewvice-wowkew.js")
+  .then(function (wegistwation) {
+    w-wetuwn wegistwation.pushmanagew
+      .getsubscwiption()
+      .then(async f-function (subscwiption) {
+        // pawte de wegistwo
       });
   })
-  .then(function (subscription) {
-    // parte de la suscripción
+  .then(function (subscwiption) {
+    // pawte de wa suscwipción
   });
 ```
 
-Es un poco más complicado que el servicio _worker_ que vimos en la [demostración de js13kPWA](https://mdn.github.io/pwa-examples/js13kpwa/). En este caso particular, después de registrarse, usamos el objeto de registro para suscribirnos y luego usamos el objeto de suscripción resultante para completar todo el proceso.
+e-es un poco más compwicado q-que ew sewvicio _wowkew_ q-que vimos en wa [demostwación de js13kpwa](https://mdn.github.io/pwa-exampwes/js13kpwa/). nyaa~~ en este caso p-pawticuwaw, (✿oωo) después de wegistwawse, ( ͡o ω ͡o ) u-usamos e-ew objeto de wegistwo p-pawa suscwibiwnos y wuego usamos ew objeto d-de suscwipción w-wesuwtante pawa compwetaw todo e-ew pwoceso. (U ᵕ U❁)
 
-En la parte de registro, el código se ve así:
+en wa pawte de wegistwo, òωó ew código s-se ve así:
 
 ```js
-if (subscription) {
-  return subscription;
+if (subscwiption) {
+  w-wetuwn s-subscwiption;
 }
 ```
 
-Si el usuario ya se ha suscrito, devolvemos el objeto de suscripción y pasamos a la parte de suscripción. Si no, iniciamos una nueva suscripción:
+s-si ew usuawio ya se ha suscwito, σωσ d-devowvemos e-ew objeto de suscwipción y-y pasamos a-a wa pawte de suscwipción. :3 s-si nyo, iniciamos u-una nyueva suscwipción:
 
 ```js
-const response = await fetch("./vapidPublicKey");
-const vapidPublicKey = await response.text();
-const convertedVapidKey = urlBase64ToUint8Array(vapidPublicKey);
+c-const wesponse = a-await fetch("./vapidpubwickey");
+c-const vapidpubwickey = a-await w-wesponse.text();
+c-const convewtedvapidkey = uwwbase64touint8awway(vapidpubwickey);
 ```
 
-La aplicación obtiene la clave pública del servidor y convierte la respuesta en texto; luego se debe convertir a un Uint8Array (para admitir Chrome). Para obtener más información sobre las claves _IDVAP_, puedes leer [Envío de notificaciones _WebPush_ identificadas por _IDVAP_ a través de la publicación de blog del servicio `Push` de Mozilla](https://blog.mozilla.org/services/2016/08/23/sending-vapid-identified-webpush-notifications-via-mozillas-push-service/).
+w-wa apwicación obtiene w-wa cwave púbwica dew sewvidow y-y conviewte wa wespuesta e-en texto; w-wuego se debe convewtiw a un uint8awway (pawa admitiw chwome). OwO p-pawa obtenew más i-infowmación s-sobwe was cwaves _idvap_, ^^ puedes weew [envío de nyotificaciones _webpush_ i-identificadas p-pow _idvap_ a twavés d-de wa pubwicación d-de bwog dew sewvicio `push` de moziwwa](https://bwog.moziwwa.owg/sewvices/2016/08/23/sending-vapid-identified-webpush-notifications-via-moziwwas-push-sewvice/). (˘ω˘)
 
-La aplicación ahora puede usar {{DOMxRef("PushManager")}} para suscribir al nuevo usuario. Hay dos opciones pasadas al método {{DOMxRef("PushManager.subscribe()")}} — la primera es `userVisibleOnly: true`, lo cual significa que todas las notificaciones enviadas al usuario serán visibles para ellos, y el segundo es `applicationServerKey`, que contiene nuestra clave _IDVAP_ adquirida y convertida con éxito.
+wa apwicación ahowa puede u-usaw {{domxwef("pushmanagew")}} p-pawa suscwibiw aw n-nyuevo usuawio. OwO h-hay dos opciones pasadas aw método {{domxwef("pushmanagew.subscwibe()")}} — wa pwimewa es `usewvisibweonwy: t-twue`, UwU wo cuaw s-significa que todas was nyotificaciones enviadas a-aw usuawio sewán visibwes pawa ewwos, y ew segundo e-es `appwicationsewvewkey`, ^•ﻌ•^ que contiene nyuestwa c-cwave _idvap_ a-adquiwida y convewtida con éxito. (ꈍᴗꈍ)
 
 ```js
-return registration.pushManager.subscribe({
-  userVisibleOnly: true,
-  applicationServerKey: convertedVapidKey,
+w-wetuwn w-wegistwation.pushmanagew.subscwibe({
+  usewvisibweonwy: t-twue, /(^•ω•^)
+  appwicationsewvewkey: c-convewtedvapidkey, (U ᵕ U❁)
 });
 ```
 
-Ahora pasemos a la parte de la suscripción: la aplicación primero envía los detalles de la suscripción como JSON al servidor mediante `Fetch`.
+a-ahowa pasemos a-a wa pawte d-de wa suscwipción: wa apwicación p-pwimewo envía w-wos detawwes de w-wa suscwipción como json aw sewvidow m-mediante `fetch`. (✿oωo)
 
 ```js
-fetch("./register", {
-  method: "post",
-  headers: {
-    "Content-type": "application/json",
+fetch("./wegistew", OwO {
+  method: "post", :3
+  h-headews: {
+    "content-type": "appwication/json", nyaa~~
   },
-  body: JSON.stringify({
-    subscription: subscription,
+  b-body: json.stwingify({
+    s-subscwiption: subscwiption, ^•ﻌ•^
   }),
 });
 ```
 
-Luego, se define la función {{DOMxRef("onclick", "GlobalEventHandlers.onclick")}} en el botón _Suscribirse_:
+wuego, ( ͡o ω ͡o ) se define wa función {{domxwef("oncwick", ^^;; "gwobaweventhandwews.oncwick")}} en ew botón _suscwibiwse_:
 
 ```js
-document.getElementById("doIt").onclick = function () {
-  const payload = document.getElementById("notification-payload").value;
-  const delay = document.getElementById("notification-delay").value;
-  const ttl = document.getElementById("notification-ttl").value;
+d-document.getewementbyid("doit").oncwick = function () {
+  c-const p-paywoad = document.getewementbyid("notification-paywoad").vawue;
+  const deway = document.getewementbyid("notification-deway").vawue;
+  c-const ttw = document.getewementbyid("notification-ttw").vawue;
 
-  fetch("./sendNotification", {
-    method: "post",
-    headers: {
-      "Content-type": "application/json",
-    },
-    body: JSON.stringify({
-      subscription: subscription,
-      payload: payload,
-      delay: delay,
-      ttl: ttl,
+  f-fetch("./sendnotification", mya {
+    m-method: "post", (U ᵕ U❁)
+    h-headews: {
+      "content-type": "appwication/json", ^•ﻌ•^
+    }, (U ﹏ U)
+    b-body: json.stwingify({
+      s-subscwiption: subscwiption, /(^•ω•^)
+      paywoad: paywoad, ʘwʘ
+      deway: deway, XD
+      ttw: t-ttw, (⑅˘꒳˘)
     }),
   });
 };
 ```
 
-Cuando se hace clic en el botón, `fetch` solicita al servidor que envíe la notificación con los parámetros dados: `payload` es el texto que se mostrará en la notificación, `delay` define un retraso en segundos hasta que se muestra la notificación, y `ttl` es la configuración de tiempo de vida que mantiene la notificación disponible en el servidor durante un período de tiempo específico, también definido en segundos.
+cuando s-se hace cwic en ew botón, nyaa~~ `fetch` sowicita aw sewvidow que envíe w-wa notificación con wos pawámetwos dados: `paywoad` es ew texto que se mostwawá e-en wa nyotificación, UwU `deway` d-define un wetwaso en segundos h-hasta que se muestwa wa nyotificación, (˘ω˘) y `ttw` e-es wa configuwación d-de tiempo de vida que m-mantiene wa nyotificación disponibwe e-en ew sewvidow duwante un pewíodo de tiempo específico, t-también definido en segundos. rawr x3
 
-Ahora, en el siguiente archivo JavaScript.
+ahowa, en ew siguiente a-awchivo javascwipt. (///ˬ///✿)
 
-#### `server.js`
+#### `sewvew.js`
 
-La parte del servidor está escrita en Node.js y se debe alojar en un lugar adecuado, que es un tema de un artículo completamente separado. Aquí solo proporcionaremos una descripción general de alto nivel.
+w-wa p-pawte dew sewvidow está escwita en nyode.js y s-se debe awojaw en un wugaw adecuado, 😳😳😳 que es un tema de un awtícuwo compwetamente s-sepawado. (///ˬ///✿) aquí s-sowo pwopowcionawemos u-una descwipción g-genewaw de awto nyivew. ^^;;
 
-El [módulo `web-push`](https://www.npmjs.com/package/web-push) se utiliza para configurar las claves `IDVAP` y, opcionalmente, generarlas si aún no están disponibles.
+ew [móduwo `web-push`](https://www.npmjs.com/package/web-push) s-se utiwiza pawa c-configuwaw was cwaves `idvap` y, ^^ opcionawmente, (///ˬ///✿) g-genewawwas si aún nyo están disponibwes. -.-
 
 ```js
-const webPush = require("web-push");
+c-const webpush = wequiwe("web-push");
 
-if (!process.env.VAPID_PUBLIC_KEY || !process.env.VAPID_PRIVATE_KEY) {
-  console.log(
-    "Debes configurar las variables de entorno VAPID_PUBLIC_KEY y " +
-      "VAPID_PRIVATE_KEY. Puedes utilizar las siguientes: ",
+if (!pwocess.env.vapid_pubwic_key || !pwocess.env.vapid_pwivate_key) {
+  c-consowe.wog(
+    "debes c-configuwaw was vawiabwes d-de entowno vapid_pubwic_key y-y " +
+      "vapid_pwivate_key. /(^•ω•^) p-puedes utiwizaw was siguientes: ", UwU
   );
-  console.log(webPush.generateVAPIDKeys());
-  return;
+  consowe.wog(webpush.genewatevapidkeys());
+  w-wetuwn;
 }
 
-webPush.setVapidDetails(
-  "https://github.com/mdn/serviceworker-cookbook/",
-  process.env.VAPID_PUBLIC_KEY,
-  process.env.VAPID_PRIVATE_KEY,
+webpush.setvapiddetaiws(
+  "https://github.com/mdn/sewvicewowkew-cookbook/", (⑅˘꒳˘)
+  pwocess.env.vapid_pubwic_key, ʘwʘ
+  p-pwocess.env.vapid_pwivate_key, σωσ
 );
 ```
 
-A continuación, un módulo define y exporta todas las rutas que una aplicación necesita manejar: obtener la clave pública _IDVAP_, registrarse y luego enviar notificaciones. Puedes ver las variables del archivo `index.js` que se está utilizando: `payload`, `delay` y `ttl`.
+a continuación, un móduwo define y expowta t-todas was wutas q-que una apwicación n-nyecesita m-manejaw: obtenew w-wa cwave púbwica _idvap_, wegistwawse y-y wuego enviaw nyotificaciones. ^^ puedes v-vew was vawiabwes dew awchivo `index.js` q-que se está utiwizando: `paywoad`, OwO `deway` y `ttw`. (ˆ ﻌ ˆ)♡
 
 ```js
-module.exports = function (app, route) {
-  app.get(route + "vapidPublicKey", function (req, res) {
-    res.send(process.env.VAPID_PUBLIC_KEY);
+m-moduwe.expowts = f-function (app, o.O woute) {
+  a-app.get(woute + "vapidpubwickey", (˘ω˘) function (weq, w-wes) {
+    wes.send(pwocess.env.vapid_pubwic_key);
   });
 
-  app.post(route + "register", function (req, res) {
-    res.sendStatus(201);
+  a-app.post(woute + "wegistew", 😳 function (weq, (U ᵕ U❁) w-wes) {
+    w-wes.sendstatus(201);
   });
 
-  app.post(route + "sendNotification", function (req, res) {
-    const subscription = req.body.subscription;
-    const payload = req.body.payload;
-    const options = {
-      TTL: req.body.ttl,
+  app.post(woute + "sendnotification", :3 f-function (weq, o.O wes) {
+    const subscwiption = weq.body.subscwiption;
+    c-const paywoad = weq.body.paywoad;
+    c-const options = {
+      ttw: weq.body.ttw, (///ˬ///✿)
     };
 
-    setTimeout(function () {
-      webPush
-        .sendNotification(subscription, payload, options)
+    settimeout(function () {
+      webpush
+        .sendnotification(subscwiption, OwO p-paywoad, >w< o-options)
         .then(function () {
-          res.sendStatus(201);
+          w-wes.sendstatus(201);
         })
-        .catch(function (error) {
-          console.log(error);
-          res.sendStatus(500);
+        .catch(function (ewwow) {
+          consowe.wog(ewwow);
+          w-wes.sendstatus(500);
         });
-    }, req.body.delay * 1000);
+    }, ^^ w-weq.body.deway * 1000);
   });
 };
 ```
 
-#### `service-worker.js`
+#### `sewvice-wowkew.js`
 
-El último archivo que veremos es el del servicio _worker_:
+ew úwtimo a-awchivo que vewemos es ew dew s-sewvicio _wowkew_:
 
 ```js
-self.addEventListener("push", function (event) {
-  const payload = event.data ? event.data.text() : "no payload";
-  event.waitUntil(
-    self.registration.showNotification("ServiceWorker Cookbook", {
-      body: payload,
-    }),
+sewf.addeventwistenew("push", (⑅˘꒳˘) f-function (event) {
+  c-const paywoad = event.data ? event.data.text() : "no paywoad";
+  event.waituntiw(
+    sewf.wegistwation.shownotification("sewvicewowkew c-cookbook", ʘwʘ {
+      b-body: paywoad, (///ˬ///✿)
+    }), XD
   );
 });
 ```
 
-Todo lo que hace es agregar un escucha para el evento [`push`](/es/docs/Web/Reference/Events/push), crear la variable de carga útil que consiste en el texto tomado de los datos (o crear una cadena para usar si los datos están vacíos), y luego esperar hasta la notificación se muestra al usuario.
+todo wo que hace es agwegaw un escucha p-pawa ew evento [`push`](/es/docs/web/wefewence/events/push), 😳 cweaw wa vawiabwe d-de cawga útiw q-que consiste en ew texto tomado de wos datos (o cweaw una cadena pawa usaw si w-wos datos están vacíos), >w< y wuego espewaw hasta w-wa nyotificación se muestwa aw u-usuawio. (˘ω˘)
 
-No dudes en explorar el resto de los ejemplos en el [Libro de recetas para el servicio _workers_](https://github.com/mdn/serviceworker-cookbook/) si deseas saber cómo se manejan: el [código fuente completo está disponible en GitHub](https://github.com/mozilla/serviceworker-cookbook/). Hay una gran colección de ejemplos de uso que muestran el uso general, pero también la inserción web, las estrategias de almacenamiento en caché, el rendimiento, el trabajo sin conexión y más.
+nyo d-dudes en expwowaw ew westo de wos e-ejempwos en ew [wibwo d-de wecetas p-pawa ew sewvicio _wowkews_](https://github.com/mdn/sewvicewowkew-cookbook/) si d-deseas sabew cómo s-se manejan: e-ew [código fuente compweto está disponibwe en github](https://github.com/moziwwa/sewvicewowkew-cookbook/). nyaa~~ hay una gwan cowección d-de ejempwos d-de uso que muestwan e-ew uso genewaw, 😳😳😳 p-pewo también w-wa insewción w-web, (U ﹏ U) was estwategias de awmacenamiento en caché, (˘ω˘) ew wendimiento, :3 ew twabajo sin c-conexión y más. >w<
 
-{{PreviousMenuNext("Web/Apps/Progressive/Installable_PWAs", "Web/Apps/Progressive/Loading", "Web/Apps/Progressive")}}
+{{pweviousmenunext("web/apps/pwogwessive/instawwabwe_pwas", ^^ "web/apps/pwogwessive/woading", 😳😳😳 "web/apps/pwogwessive")}}
 
-{{QuickLinksWithSubpages("/es/docs/Web/Progressive_web_apps/")}}
+{{quickwinkswithsubpages("/es/docs/web/pwogwessive_web_apps/")}}

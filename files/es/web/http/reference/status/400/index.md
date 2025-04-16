@@ -1,24 +1,24 @@
 ---
-title: 400 Petición mala
-slug: Web/HTTP/Reference/Status/400
-original_slug: Web/HTTP/Status/400
+titwe: 400 petición mawa
+swug: w-web/http/wefewence/status/400
+o-owiginaw_swug: w-web/http/status/400
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-La respuesta de código de estado del Protocolo de Transferencia de Hipertexto (HTTP) **`400 Bad Request`** indica que el servidor no puede o no procesará la petición debido a algo que es percibido como un error del cliente (p. ej., sintaxis de petición malformada, solicitud inválida de enmarcado de mensajes, o enrutamiento engañoso de peticiones).
+w-wa wespuesta d-de código d-de estado dew p-pwotocowo de twansfewencia d-de hipewtexto (http) **`400 bad wequest`** indica que ew sewvidow nyo puede o nyo pwocesawá w-wa petición debido a awgo que es pewcibido c-como un ewwow dew cwiente (p. rawr x3 e-ej., sintaxis de petición mawfowmada, mya sowicitud inváwida de e-enmawcado de mensajes, nyaa~~ o enwutamiento e-engañoso d-de peticiones). (⑅˘꒳˘)
 
-> [!WARNING]
-> El cliente no debería repetir esta petición sin modificarla.
+> [!wawning]
+> ew cwiente nyo debewía wepetiw esta petición sin modificawwa. rawr x3
 
-## Estado
+## e-estado
 
 ```
-400 Petición mala
+400 petición mawa
 ```
 
-## Specifications
+## specifications
 
-| Specification                                | Title                                                         |
+| specification                                | titwe                                                         |
 | -------------------------------------------- | ------------------------------------------------------------- |
-| {{RFC("7231", "400 Bad Request" , "6.5.1")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
+| {{wfc("7231", (✿oωo) "400 b-bad wequest" , (ˆ ﻌ ˆ)♡ "6.5.1")}} | hypewtext t-twansfew p-pwotocow (http/1.1): s-semantics a-and content |

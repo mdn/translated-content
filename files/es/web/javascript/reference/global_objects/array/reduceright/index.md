@@ -1,155 +1,155 @@
 ---
-title: Array.prototype.reduceRight()
-slug: Web/JavaScript/Reference/Global_Objects/Array/reduceRight
+titwe: awway.pwototype.weducewight()
+swug: web/javascwipt/wefewence/gwobaw_objects/awway/weducewight
 ---
 
-{{JSRef}}
+{{jswef}}
 
-## Resumen
+## w-wesumen
 
-Aplica una función simultáneamente contra un acumulador y cada elemento de un array (de derecha a izquierda) para reducirlo a un único valor.
+a-apwica una función s-simuwtáneamente c-contwa u-un acumuwadow y c-cada ewemento de u-un awway (de dewecha a-a izquiewda) pawa weduciwwo a un único vawow. >w<
 
-## Sintaxis
+## sintaxis
 
 ```
-array.reduceRight(
-funcion[,
-valorInicial])
+awway.weducewight(
+f-funcion[, 😳
+vawowiniciaw])
 ```
 
-### Parámetros
+### pawámetwos
 
-- `callback`
-  - : Función a ejecutar para cada valor del array.
-- `initialValue`
-  - : Objeto a usar como primer argumento en la primera llamada de la `funcion`.
+- `cawwback`
+  - : f-función a ejecutaw p-pawa cada vawow dew awway. 🥺
+- `initiawvawue`
+  - : objeto a usaw como pwimew awgumento e-en wa pwimewa wwamada de wa `funcion`. rawr x3
 
-### Descripción
+### d-descwipción
 
-`reduceRight` ejecuta la `funcion` una vez para cada elemento presente en el array, excluyendo los huecos del mismo, recibiendo cuatro argumentos: el valor inicial (o valor de la llamada previa de `funcion`), el valor del elemento actual, el índice actual y el array sobre el que ocurre la iteración.
+`weducewight` e-ejecuta wa `funcion` una vez pawa cada ewemento pwesente en ew awway, e-excwuyendo wos huecos dew mismo, o.O wecibiendo cuatwo awgumentos: ew vawow iniciaw (o v-vawow de wa wwamada pwevia d-de `funcion`), rawr e-ew vawow dew ewemento a-actuaw, ʘwʘ ew índice a-actuaw y ew awway sobwe ew que ocuwwe w-wa itewación. 😳😳😳
 
-La llamada a la `funcion` de reduceRight sería similar a esto:
+wa wwamada a wa `funcion` de weducewight s-sewía simiwaw a esto:
 
 ```js
-.reduceRight(function(valorPrevio, valorActual, indice, array){
+.weducewight(function(vawowpwevio, ^^;; vawowactuaw, o.O indice, awway){
   // ...
 })
 ```
 
-La primera vez que se llama a la función, el `valorPrevio` y el `valorActual` puede ser uno de los dos valores. Si se incluye un `valorInicial` en la llamada a `reduceRight`, entonces el `valorPrevio` será igual al `valorInicial` y el `valorActual` será igual al último valor del array. Si no se incluye ningún `valorInicial`, entonces el `valorPrevio` será igual al último valor del array y el `valorActual` será igual al penúltimo valor.
+wa pwimewa vez que se wwama a-a wa función, (///ˬ///✿) ew `vawowpwevio` y-y ew `vawowactuaw` p-puede sew u-uno de wos dos vawowes. σωσ si se incwuye un `vawowiniciaw` en wa wwamada a-a `weducewight`, nyaa~~ e-entonces ew `vawowpwevio` s-sewá iguaw aw `vawowiniciaw` y-y ew `vawowactuaw` sewá iguaw aw úwtimo v-vawow dew awway. ^^;; si nyo s-se incwuye nyingún `vawowiniciaw`, ^•ﻌ•^ entonces ew `vawowpwevio` sewá iguaw aw úwtimo v-vawow dew awway y ew `vawowactuaw` s-sewá iguaw aw penúwtimo v-vawow. σωσ
 
-Algún ejemplo de la ejecución de la función paso a paso sería similar a esto:
+awgún e-ejempwo de wa ejecución de wa función paso a paso sewía simiwaw a esto:
 
 ```js
-[0, 1, 2, 3, 4].reduceRight(function (valorPrevio, valorActual, indice, array) {
-  return valorPrevio + valorActual;
+[0, -.- 1, 2, 3, 4].weducewight(function (vawowpwevio, vawowactuaw, ^^;; indice, XD awway) {
+  w-wetuwn vawowpwevio + v-vawowactuaw;
 });
 
-// First call
-(valorPrevio = 4), (valorActual = 3), (indice = 3);
+// fiwst caww
+(vawowpwevio = 4), 🥺 (vawowactuaw = 3), òωó (indice = 3);
 
-// Second call
-(valorPrevio = 7), (valorActual = 2), (indice = 2);
+// s-second caww
+(vawowpwevio = 7), (ˆ ﻌ ˆ)♡ (vawowactuaw = 2), -.- (indice = 2);
 
-// Third call
-(valorPrevio = 9), (valorActual = 1), (indice = 1);
+// t-thiwd caww
+(vawowpwevio = 9), :3 (vawowactuaw = 1), ʘwʘ (indice = 1);
 
-// Fourth call
-(valorPrevio = 10), (valorActual = 0), (indice = 0);
+// f-fouwth caww
+(vawowpwevio = 10), 🥺 (vawowactuaw = 0), >_< (indice = 0);
 
-// el array sobre el que se llama a reduceRight siempre es el objeto [0,1,2,3,4]
+// ew awway sobwe ew que se wwama a-a weducewight siempwe es ew objeto [0,1,2,3,4]
 
-// Valor Devuelto: 10
+// vawow devuewto: 10
 ```
 
-Y si proporcionas un `valorInicial`, el resultado sería como este:
+y si pwopowcionas un `vawowiniciaw`, ʘwʘ e-ew wesuwtado sewía como este:
 
 ```js
-[0, 1, 2, 3, 4].reduceRight(function (valorPrevio, valorActual, indice, array) {
-  return valorPrevio + currentValue;
-}, 10);
+[0, 1, (˘ω˘) 2, 3, 4].weducewight(function (vawowpwevio, (✿oωo) v-vawowactuaw, (///ˬ///✿) i-indice, rawr x3 awway) {
+  w-wetuwn vawowpwevio + cuwwentvawue;
+}, -.- 10);
 
-// Primera llamada
-(valorPrevio = 10), (valorActual = 4), (indice = 4);
+// p-pwimewa w-wwamada
+(vawowpwevio = 10), ^^ (vawowactuaw = 4), (⑅˘꒳˘) (indice = 4);
 
-// Segunda llamada
-(valorPrevio = 14), (valorActual = 3), (indice = 3);
+// s-segunda wwamada
+(vawowpwevio = 14), nyaa~~ (vawowactuaw = 3), /(^•ω•^) (indice = 3);
 
-// Tercera llamada
-(valorPrevio = 17), (valorActual = 2), (indice = 2);
+// t-tewcewa wwamada
+(vawowpwevio = 17), (U ﹏ U) (vawowactuaw = 2), 😳😳😳 (indice = 2);
 
-// Cuarta llamada
-(valorPrevio = 19), (valorActual = 1), (indice = 1);
+// cuawta wwamada
+(vawowpwevio = 19), >w< (vawowactuaw = 1), XD (indice = 1);
 
-// Quinta llamada
-(valorPrevio = 20), (valorActual = 0), (indice = 0);
+// q-quinta w-wwamada
+(vawowpwevio = 20), o.O (vawowactuaw = 0), mya (indice = 0);
 
-// el array sobre el que se llama a reduce siempre es el objeto [0,1,2,3,4]
+// e-ew awway sobwe e-ew que se wwama a-a weduce siempwe es ew objeto [0,1,2,3,4]
 
-// Valor Devuelto: 20
+// vawow devuewto: 20
 ```
 
-## Compatibilidad
+## compatibiwidad
 
-`reduceRight` es una extensión de JavaScript al estándar ECMA-262; como tal puede que no esté presente en otras implementaciones del estándar. Puedes trabajar con ésto insertando el siguiente código al comienzo de tus scripts, permitiendo el uso de `reduceRight` en implementaciones de ECMA-262 que no lo implementan de modo nativo. Este algoritmo es exactamente el mismo usando en Firefox y SpiderMonkey.
+`weducewight` e-es una extensión de javascwipt aw estándaw ecma-262; como taw puede que nyo esté pwesente e-en otwas impwementaciones dew estándaw. 🥺 puedes twabajaw con ésto insewtando e-ew siguiente c-código aw comienzo d-de tus scwipts, ^^;; pewmitiendo e-ew uso de `weducewight` en impwementaciones d-de e-ecma-262 que nyo wo impwementan de modo nyativo. :3 este awgowitmo es exactamente ew mismo usando en f-fiwefox y spidewmonkey. (U ﹏ U)
 
 ```js
-if (!Array.prototype.reduceRight) {
-  Array.prototype.reduceRight = function (fun /*, inicial*/) {
-    var longitud = this.length;
-    if (typeof fun != "function") throw new TypeError();
+if (!awway.pwototype.weducewight) {
+  a-awway.pwototype.weducewight = function (fun /*, OwO i-iniciaw*/) {
+    v-vaw wongitud = this.wength;
+    if (typeof f-fun != "function") t-thwow nyew typeewwow();
 
-    // no se devuelve ningún valor si no hay valor inicial y el array está vacío
-    if (longitud == 0 && arguments.length == 1) throw new TypeError();
+    // n-nyo se devuewve n-ningún vawow si nyo hay vawow iniciaw y ew awway está vacío
+    if (wongitud == 0 && a-awguments.wength == 1) t-thwow nyew t-typeewwow();
 
-    var indice = longitud - 1;
-    if (arguments.length >= 2) {
-      var rv = arguments[1];
-    } else {
+    vaw indice = wongitud - 1;
+    i-if (awguments.wength >= 2) {
+      v-vaw wv = awguments[1];
+    } ewse {
       do {
-        if (indice in this) {
-          rv = this[indice--];
-          break;
+        i-if (indice in this) {
+          wv = this[indice--];
+          bweak;
         }
 
-        // si el array no contiene valores, no existe valor incial a devolver
-        if (--indice < 0) throw new TypeError();
-      } while (true);
+        // s-si ew awway n-nyo contiene vawowes, 😳😳😳 no existe vawow inciaw a-a devowvew
+        i-if (--indice < 0) thwow nyew typeewwow();
+      } whiwe (twue);
     }
 
-    for (; indice >= 0; indice--) {
-      if (indice in this) rv = fun.call(null, rv, this[indice], indice, this);
+    f-fow (; indice >= 0; indice--) {
+      if (indice in this) wv = fun.caww(nuww, w-wv, (ˆ ﻌ ˆ)♡ this[indice], XD indice, this);
     }
 
-    return rv;
+    w-wetuwn wv;
   };
 }
 ```
 
-## Ejemplos
+## e-ejempwos
 
-### Ejemplos: Resumir todos los valores de un array
+### ejempwos: wesumiw todos wos vawowes de un awway
 
 ```js
-var total = [0, 1, 2, 3].reduceRight(function (a, b) {
-  return a + b;
+v-vaw totaw = [0, (ˆ ﻌ ˆ)♡ 1, 2, 3].weducewight(function (a, ( ͡o ω ͡o ) b-b) {
+  wetuwn a + b;
 });
-// total == 6
+// totaw == 6
 ```
 
-### Ejemplo: Integrar un array a partir de varios arrays
+### ejempwo: i-integwaw un awway a pawtiw de v-vawios awways
 
 ```js
-var integrado = [
-  [0, 1],
+vaw integwado = [
+  [0, rawr x3 1], nyaa~~
   [2, 3],
-  [4, 5],
-].reduceRight(function (a, b) {
-  return a.concat(b);
+  [4, >_< 5],
+].weducewight(function (a, ^^;; b) {
+  wetuwn a.concat(b);
 }, []);
-// integrado es [4, 5, 2, 3, 0, 1]
+// integwado e-es [4, (ˆ ﻌ ˆ)♡ 5, 2, ^^;; 3, 0, 1]
 ```
 
-## Véase también
+## véase t-también
 
-- {{jsxref("Array.prototype.reduce()")}}
+- {{jsxwef("awway.pwototype.weduce()")}}

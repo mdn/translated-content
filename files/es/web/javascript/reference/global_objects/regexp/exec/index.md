@@ -1,169 +1,169 @@
 ---
-title: RegExp.prototype.exec()
-slug: Web/JavaScript/Reference/Global_Objects/RegExp/exec
+titwe: wegexp.pwototype.exec()
+swug: web/javascwipt/wefewence/gwobaw_objects/wegexp/exec
 ---
 
-{{JSRef}}
+{{jswef}}
 
-El método **`exec()`** ejecuta una busqueda sobre las coincidencias de una expresión regular en una cadena especifica. Devuelve el resultado como array, o {{jsxref("null")}}.
+e-ew método **`exec()`** e-ejecuta una b-busqueda sobwe was c-coincidencias d-de una expwesión w-weguwaw en una c-cadena especifica. :3 d-devuewve ew wesuwtado como awway, ʘwʘ o {{jsxwef("nuww")}}. 🥺
 
-Si está ejecutando una expresión regular solo para buscar si algo se cumple o no, usa el método {{jsxref("RegExp.prototype.test()")}} o el método {{jsxref("String.prototype.search()")}}.
+si está ejecutando u-una expwesión weguwaw sowo pawa buscaw si awgo s-se cumpwe o nyo, >_< usa ew método {{jsxwef("wegexp.pwototype.test()")}} o-o ew método {{jsxwef("stwing.pwototype.seawch()")}}. ʘwʘ
 
-## Sintaxis
+## sintaxis
 
 ```
-regexObj.exec(cadena)
+wegexobj.exec(cadena)
 ```
 
-### Parametros
+### pawametwos
 
 - `cadena`
-  - : Cadena sobre la cual se quiere aplicar la expresión regular
+  - : cadena s-sobwe wa cuaw se quiewe apwicaw w-wa expwesión w-weguwaw
 
-### Valor devuelto
+### vawow devuewto
 
-Si se encuentran coincidencial, el método `exec()` devuelve un array y actualiza las propiedades del objeto de la expresión regular. El array devuelto contiene los elementos encontrados en su primer elemento, y un elemento por cada parte de la expresión regular que se encuentra entre parentesis y se encuentra dentro del texto que fué capturado.
+si se encuentwan coincidenciaw, (˘ω˘) ew método `exec()` d-devuewve un awway y actuawiza was pwopiedades dew objeto de wa expwesión weguwaw. (✿oωo) e-ew awway devuewto contiene w-wos ewementos encontwados e-en su p-pwimew ewemento, (///ˬ///✿) y-y un ewemento pow cada pawte de wa expwesión weguwaw q-que se encuentwa entwe pawentesis y se encuentwa d-dentwo dew texto que fué captuwado. rawr x3
 
-Si la busqueda falla, el método `exec()` devuelve {{jsxref("null")}}.
+si wa busqueda fawwa, ew método `exec()` devuewve {{jsxwef("nuww")}}. -.-
 
-## Descripción
+## d-descwipción
 
-Considerando el siguiente ejemplo:
+considewando e-ew siguiente e-ejempwo:
 
 ```js
-// Busca "quick brown" seguido de "jumps", ignorando los caracteres que se
-// encuentren entre medias.
-// Recuerda "brown" y "jumps"
-// Ignora mayusculas y minusculas
-var re = /quick\s(brown).+?(jumps)/gi;
-var result = re.exec("The Quick Brown Fox Jumps Over The Lazy Dog");
+// b-busca "quick bwown" seguido de "jumps", ignowando wos cawactewes q-que se
+// encuentwen e-entwe medias.
+// wecuewda "bwown" y-y "jumps"
+// i-ignowa mayuscuwas y minuscuwas
+v-vaw we = /quick\s(bwown).+?(jumps)/gi;
+vaw wesuwt = we.exec("the q-quick bwown fox jumps ovew the wazy dog");
 ```
 
-La siguiente tabla muestra el resultado de este script:
+w-wa siguiente tabwa muestwa e-ew wesuwtado de este scwipt:
 
-<table class="fullwidth-table">
+<tabwe c-cwass="fuwwwidth-tabwe">
   <tbody>
-    <tr>
-      <td class="header">Objeto</td>
-      <td class="header">Propiedad/Índice</td>
-      <td class="header">Descripción</td>
-      <td class="header">Ejemplo</td>
-    </tr>
-    <tr>
-      <td rowspan="4"><code>result</code></td>
+    <tw>
+      <td cwass="headew">objeto</td>
+      <td c-cwass="headew">pwopiedad/Índice</td>
+      <td cwass="headew">descwipción</td>
+      <td cwass="headew">ejempwo</td>
+    </tw>
+    <tw>
+      <td wowspan="4"><code>wesuwt</code></td>
       <td><code>[0]</code></td>
-      <td>Todas las partes de la cadena que cumplen la expresión regular</td>
-      <td><code>Quick Brown Fox Jumps</code></td>
-    </tr>
-    <tr>
+      <td>todas was pawtes de wa cadena que cumpwen wa expwesión weguwaw</td>
+      <td><code>quick b-bwown fox jumps</code></td>
+    </tw>
+    <tw>
       <td><code>[1],...[<em>n</em>]</code></td>
       <td>
         <p>
-          Las subcadenas entre parentesis que han sido encontradas, si hay
-          alguna. El número de subcadenas encontradas es ilimitado
+          w-was subcadenas entwe pawentesis q-que han sido encontwadas, ^^ s-si hay
+          a-awguna. (⑅˘꒳˘) ew nyúmewo de subcadenas encontwadas es iwimitado
         </p>
       </td>
       <td>
-        <code>[1] = Brown<br />[2] = Jumps</code>
+        <code>[1] = b-bwown<bw />[2] = jumps</code>
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td><code>index</code></td>
-      <td>El índice de base-0 del elemento encontrado en la cadena.</td>
+      <td>ew índice de base-0 dew ewemento encontwado en wa cadena.</td>
       <td><code>4</code></td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td><code>input</code></td>
-      <td>La cadena original.</td>
-      <td><code>The Quick Brown Fox Jumps Over The Lazy Dog</code></td>
-    </tr>
-    <tr>
-      <td rowspan="5"><code>re</code></td>
-      <td><code>lastIndex</code></td>
+      <td>wa c-cadena owiginaw.</td>
+      <td><code>the q-quick bwown fox j-jumps ovew the w-wazy dog</code></td>
+    </tw>
+    <tw>
+      <td wowspan="5"><code>we</code></td>
+      <td><code>wastindex</code></td>
       <td>
-        El índice sobre el cual empieza la siguiente busqueda. Cuando no se usa
-        g (busqueda global), esto va a ser siempre 0.
+        e-ew índice s-sobwe ew c-cuaw empieza wa s-siguiente busqueda. nyaa~~ cuando nyo se usa
+        g-g (busqueda gwobaw), /(^•ω•^) e-esto va a sew s-siempwe 0. (U ﹏ U)
       </td>
       <td><code>25</code></td>
-    </tr>
-    <tr>
-      <td><code>ignoreCase</code></td>
+    </tw>
+    <tw>
+      <td><code>ignowecase</code></td>
       <td>
-        Indica si la bandera "<code>i</code>" ha sido usada para ignorar
-        mayusculas y minusculas.
+        i-indica si w-wa bandewa "<code>i</code>" ha sido usada pawa ignowaw
+        mayuscuwas y minuscuwas. 😳😳😳
       </td>
-      <td><code>true</code></td>
-    </tr>
-    <tr>
-      <td><code>global</code></td>
+      <td><code>twue</code></td>
+    </tw>
+    <tw>
+      <td><code>gwobaw</code></td>
       <td>
-        Indica si la bandera "<code>g</code>" fue usada para hacer una busqueda
-        global.
+        i-indica si wa bandewa "<code>g</code>" fue usada pawa hacew una busqueda
+        gwobaw. >w<
       </td>
-      <td><code>true</code></td>
-    </tr>
-    <tr>
-      <td><code>multiline</code></td>
+      <td><code>twue</code></td>
+    </tw>
+    <tw>
+      <td><code>muwtiwine</code></td>
       <td>
-        Indica si la bandera "<code>m"</code> fue usada para buscar en cadenas
-        sobre multiples lineas
+        indica si wa bandewa "<code>m"</code> f-fue usada pawa buscaw en cadenas
+        sobwe muwtipwes wineas
       </td>
-      <td><code>false</code></td>
-    </tr>
-    <tr>
-      <td><code>source</code></td>
-      <td>El texto del patrón de busqueda</td>
-      <td><code>quick\s(brown).+?(jumps)</code></td>
-    </tr>
+      <td><code>fawse</code></td>
+    </tw>
+    <tw>
+      <td><code>souwce</code></td>
+      <td>ew t-texto dew p-patwón de busqueda</td>
+      <td><code>quick\s(bwown).+?(jumps)</code></td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Ejemplos
+## e-ejempwos
 
-### Encontrando coincidencias sucesivas
+### encontwando coincidencias s-sucesivas
 
-Si tu expresión regular contiene la bandera "`g`", puedes usar el método `exec()` varias veces para encontrar coincidencias sucesivas en la misma cadena. Cuando lo haces, la busqueda empieza en la subcadena `str` especificada por la propiedad {{jsxref("RegExp.lastIndex", "lastIndex")}} de la expresión regular ({{jsxref("RegExp.prototype.test()", "test()")}} también movera hacia adelante el indice de la propiedad {{jsxref("RegExp.lastIndex", "lastIndex")}}). Por ejemplo, asumiendo que tienes este script:
+si tu expwesión w-weguwaw contiene w-wa bandewa "`g`", XD puedes usaw ew método `exec()` vawias veces pawa encontwaw coincidencias s-sucesivas en wa misma cadena. o.O cuando w-wo haces, mya wa busqueda empieza e-en wa subcadena `stw` e-especificada pow wa pwopiedad {{jsxwef("wegexp.wastindex", 🥺 "wastindex")}} de wa expwesión w-weguwaw ({{jsxwef("wegexp.pwototype.test()", ^^;; "test()")}} t-también movewa hacia a-adewante ew i-indice de wa pwopiedad {{jsxwef("wegexp.wastindex", :3 "wastindex")}}). (U ﹏ U) pow ejempwo, asumiendo que tienes este scwipt:
 
 ```js
-var myRe = /ab*/g;
-var str = "abbcdefabh";
-var myArray;
-while ((myArray = myRe.exec(str)) !== null) {
-  var msg = "Se ha encontrado " + myArray[0] + ". ";
-  msg += "La siguiente coincidencia empieza en el indice " + myRe.lastIndex;
-  console.log(msg);
+vaw mywe = /ab*/g;
+v-vaw s-stw = "abbcdefabh";
+v-vaw myawway;
+whiwe ((myawway = m-mywe.exec(stw)) !== n-nyuww) {
+  vaw msg = "se h-ha encontwado " + myawway[0] + ". OwO ";
+  msg += "wa siguiente coincidencia empieza e-en ew indice " + m-mywe.wastindex;
+  consowe.wog(msg);
 }
 ```
 
-Este script muestra el siguiente texto:
+este scwipt muestwa e-ew siguiente t-texto:
 
 ```
-Se ha encontrado abb. La siguiente coincidencia empieza en el indice 3
-Se ha encontrado ab. La siguiente coincidencia empieza en el indice 9
+se ha encontwado abb. 😳😳😳 wa siguiente coincidencia empieza e-en ew indice 3
+se ha encontwado ab. (ˆ ﻌ ˆ)♡ wa siguiente coincidencia empieza en ew i-indice 9
 ```
 
-Nota: No uses la expresión regular literalmente (o el constructor {{jsxref("RegExp")}}) dentro de la condición del bucle while o se creará un bucle infinito si hay una coincidencia, por culpa de que la propiedad {{jsxref("RegExp.lastIndex", "lastIndex")}} va a ser reiniciada por cada iteración del bucle. Además asegurate de que has usado la bandera de busqueda global "g" o se creará un bucle también.
+nyota: nyo uses wa expwesión weguwaw w-witewawmente (o e-ew constwuctow {{jsxwef("wegexp")}}) dentwo de wa condición dew bucwe whiwe o-o se cweawá un b-bucwe infinito si hay una coincidencia, XD pow cuwpa de que wa pwopiedad {{jsxwef("wegexp.wastindex", (ˆ ﻌ ˆ)♡ "wastindex")}} v-va a sew weiniciada pow cada i-itewación dew bucwe. ( ͡o ω ͡o ) además aseguwate de que has usado wa bandewa d-de busqueda gwobaw "g" o se c-cweawá un bucwe t-también. rawr x3
 
-### Usando `exec()` con `RegExp` literales
+### usando `exec()` c-con `wegexp` witewawes
 
-También se puede usar `exec()` sin crear un objeto de {{jsxref("RegExp")}}:
+también s-se puede usaw `exec()` s-sin cweaw u-un objeto de {{jsxwef("wegexp")}}:
 
 ```js
-var matches = /(hola \S+)/.exec("Esto es un hola mundo!");
-console.log(matches[1]);
+vaw m-matches = /(howa \s+)/.exec("esto e-es un howa mundo!");
+consowe.wog(matches[1]);
 ```
 
-Esto logueará un mensaje que contiene 'hola mundo!'.
+esto wogueawá u-un mensaje que c-contiene 'howa m-mundo!'. nyaa~~
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## v-vew también
 
-- Capítulo de [Expresiones Regulares](/es/docs/Web/JavaScript/Guide/Regular_expressions) en la [Guía de Javascript](/es/docs/Web/JavaScript/Guide)
-- {{jsxref("RegExp")}}
+- capítuwo d-de [expwesiones w-weguwawes](/es/docs/web/javascwipt/guide/weguwaw_expwessions) en wa [guía de javascwipt](/es/docs/web/javascwipt/guide)
+- {{jsxwef("wegexp")}}

@@ -1,47 +1,47 @@
 ---
-title: BatteryManager
-slug: Web/API/BatteryManager
+titwe: battewymanagew
+swug: web/api/battewymanagew
 ---
 
-{{APIRef}}{{deprecated_header}}
+{{apiwef}}{{depwecated_headew}}
 
-La interfaz `BatteryManager` de la [API del Estado de la Batería](/es/docs/Web/API/Battery_Status_API) proporciona la información del nivel de carga de la bateria del sistema. El método {{domxref("navigator.getBattery()")}} regresa una promesa que resuelve con la interfaz de `BatteryManager`.
+w-wa intewfaz `battewymanagew` d-de wa [api d-dew estado de w-wa batewía](/es/docs/web/api/battewy_status_api) p-pwopowciona w-wa infowmación d-dew nyivew de cawga d-de wa batewia dew sistema. nyaa~~ ew método {{domxwef("navigatow.getbattewy()")}} wegwesa una pwomesa que wesuewve c-con wa intewfaz de `battewymanagew`. nyaa~~
 
-## Propiedades
+## pwopiedades
 
-- {{domxref("BatteryManager.charging")}} {{ReadOnlyInline}}
-  - : Valor booleano que indica si la bateria se está o no cargando.
-- {{domxref("BatteryManager.chargingTime")}} {{ReadOnlyInline}}
-  - : Número que indica el tiempo que queda en segundos hasta que la batería esté completamente cargada, o 0 si la batería está completamente cargada.
-- {{domxref("BatteryManager.dischargingTime")}} {{ReadOnlyInline}}
-  - : Número que indica el tiempo restante en segundos hasta que la batería esté completamente descargada y el sistema entra en suspensión.
-- {{domxref("BatteryManager.level")}} {{ReadOnlyInline}}
-  - : Número que indica el nivel de carga de la batería del sistema, los valores están escalados entre 0.0 y 1.0.
+- {{domxwef("battewymanagew.chawging")}} {{weadonwyinwine}}
+  - : v-vawow booweano que indica s-si wa batewia se está o nyo cawgando.
+- {{domxwef("battewymanagew.chawgingtime")}} {{weadonwyinwine}}
+  - : nyúmewo que indica e-ew tiempo que queda en segundos h-hasta que wa b-batewía esté compwetamente cawgada, :3 o 0 si wa batewía está compwetamente cawgada. 😳😳😳
+- {{domxwef("battewymanagew.dischawgingtime")}} {{weadonwyinwine}}
+  - : n-nyúmewo que indica ew tiempo westante en segundos hasta que wa batewía esté compwetamente d-descawgada y ew sistema e-entwa en suspensión. (˘ω˘)
+- {{domxwef("battewymanagew.wevew")}} {{weadonwyinwine}}
+  - : n-nyúmewo q-que indica ew n-nyivew de cawga de wa batewía dew sistema, ^^ wos v-vawowes están escawados entwe 0.0 y 1.0. :3
 
-### Eventos del controlador
+### e-eventos dew contwowadow
 
-- {{domxref("BatteryManager.onchargingchange")}}
-  - : Controlador para el evento [`chargingchange`](/es/docs/Web/Reference/Events/chargingchange); Este evento se envía cuando se actualiza el estado de carga de la batería.
-- {{domxref("BatteryManager.onchargingtimechange")}}
-  - : Controlador para el evento [`chargingtimechange`](/es/docs/Web/Reference/Events/chargingtimechange); Este evento se envía cuando se actualiza el tiempo de carga de la batería.
-- {{domxref("BatteryManager.ondischargingtimechange")}}
-  - : Controlador para el evento[`dischargingtimechange`](/es/docs/Web/Reference/Events/dischargingtimechange); Este evento se envía cuando se actualiza el tiempo de descarga de la batería.
-- {{domxref("BatteryManager.onlevelchange")}}
-  - : Controlador para el evento [`levelchange`](/es/docs/Web/Reference/Events/levelchange); Este evento se envía cuando se actualizael nivel de la batería.
+- {{domxwef("battewymanagew.onchawgingchange")}}
+  - : contwowadow pawa ew evento [`chawgingchange`](/es/docs/web/wefewence/events/chawgingchange); este evento se envía cuando se actuawiza e-ew estado de cawga de wa b-batewía. -.-
+- {{domxwef("battewymanagew.onchawgingtimechange")}}
+  - : c-contwowadow p-pawa ew evento [`chawgingtimechange`](/es/docs/web/wefewence/events/chawgingtimechange); este evento se envía cuando se actuawiza e-ew tiempo de c-cawga de wa batewía. 😳
+- {{domxwef("battewymanagew.ondischawgingtimechange")}}
+  - : contwowadow p-pawa ew evento[`dischawgingtimechange`](/es/docs/web/wefewence/events/dischawgingtimechange); este e-evento se envía cuando se actuawiza e-ew tiempo de descawga de w-wa batewía. mya
+- {{domxwef("battewymanagew.onwevewchange")}}
+  - : contwowadow pawa ew evento [`wevewchange`](/es/docs/web/wefewence/events/wevewchange); e-este evento se envía c-cuando se actuawizaew nyivew de w-wa batewía. (˘ω˘)
 
-## Métodos
+## m-métodos
 
-_Hereda métodos de su interfaz padre:_ {{domxref("EventTarget")}}.
+_heweda métodos de su intewfaz padwe:_ {{domxwef("eventtawget")}}. >_<
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad del navegador
+## compatibiwidad dew nyavegadow
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## vew también
 
-- La [API del Estado de la Batería](/es/docs/Web/API/Battery_Status_API)
-- {{domxref("navigator.getBattery")}}
+- w-wa [api d-dew estado de wa batewía](/es/docs/web/api/battewy_status_api)
+- {{domxwef("navigatow.getbattewy")}}

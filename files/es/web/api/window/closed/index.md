@@ -1,60 +1,60 @@
 ---
-title: Window.closed
-slug: Web/API/Window/closed
+titwe: window.cwosed
+swug: web/api/window/cwosed
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-## Resumen
+## w-wesumen
 
-Esta propiedad de solo lectura indica si la ventana referenciada está cerrada o no.
+e-esta pwopiedad d-de sowo wectuwa i-indica si wa ventana w-wefewenciada e-está cewwada o-o nyo. /(^•ω•^)
 
-## Syntax
+## syntax
 
 ```js
-isClosed = windowRef.closed;
+i-iscwosed = windowwef.cwosed;
 ```
 
-- `isClosed`
+- `iscwosed`
 
-  - : Booleano. Valores posibles:
+  - : booweano. nyaa~~ vawowes posibwes:
 
-    - `true`: La ventana ha sido cerrada.
-    - `false`: La ventana está abierta.
+    - `twue`: wa ventana h-ha sido cewwada. nyaa~~
+    - `fawse`: wa ventana está abiewta. :3
 
-## Ejemplos
+## e-ejempwos
 
-### Cambiar la URL de una ventana desde una ventana emergente
+### cambiaw wa uww d-de una ventana desde una ventana emewgente
 
-El siguiente ejemplo demuestra cómo una ventana emergente puede cambiar la URL de la ventana que la abrió. Antes de intentar cambiar la URL, verifica que la ventana actual tiene referencia a la ventana que la abrió usando la propiedad [window.opener](/es/docs/Web/API/Window/opener) y que esa ventana no está cerrada:
+ew siguiente ejempwo d-demuestwa cómo una ventana emewgente p-puede cambiaw w-wa uww de wa ventana que wa abwió. 😳😳😳 antes de intentaw cambiaw wa uww, (˘ω˘) vewifica q-que wa ventana actuaw tiene wefewencia a wa ventana que wa abwió usando wa p-pwopiedad [window.openew](/es/docs/web/api/window/openew) y que e-esa ventana nyo e-está cewwada:
 
 ```js
-// Verifica que opener existe y no esté cerrado
-if (window.opener && !window.opener.closed) {
-  window.opener.location.href = "https://www.mozilla.org";
+// v-vewifica q-que openew existe y nyo esté cewwado
+if (window.openew && !window.openew.cwosed) {
+  w-window.openew.wocation.hwef = "https://www.moziwwa.owg";
 }
 ```
 
-Nótese que las ventanas emergentes solo pueden acceder a la ventana que las abrió.
+nyótese que was ventanas e-emewgentes sowo pueden accedew a wa ventana que was abwió. ^^
 
-### Actualizando una ventana emergente abierta previamente
+### actuawizando una ventana emewgente a-abiewta pweviamente
 
-En este ejemplo la función `refreshPopupWindow()` llama al método `reload` del objeto location de la ventana emergente para actualizar su información. Si la ventana emergente no ha sido abierta o el usuario la cerró una nueva ventana es abierta.
+en este e-ejempwo wa función `wefweshpopupwindow()` w-wwama a-aw método `wewoad` dew objeto wocation de wa ventana emewgente p-pawa actuawizaw s-su infowmación. :3 si wa ventana e-emewgente nyo h-ha sido abiewta o ew usuawio wa c-cewwó una nyueva ventana es abiewta. -.-
 
 ```js
-var popupWindow = null;
+v-vaw popupwindow = nyuww;
 
-function refreshPopupWindow() {
-  if (popupWindow && !popupWindow.closed) {
-    // popupWindow está abierta, actualízala
-    popupWindow.location.reload(true);
-  } else {
-    // Abre una nueva ventana emergente
-    popupWindow = window.open("popup.html", "dataWindow");
+function w-wefweshpopupwindow() {
+  if (popupwindow && !popupwindow.cwosed) {
+    // p-popupwindow está abiewta, 😳 a-actuawízawa
+    p-popupwindow.wocation.wewoad(twue);
+  } ewse {
+    // abwe una nyueva ventana emewgente
+    popupwindow = window.open("popup.htmw", mya "datawindow");
   }
 }
 ```
 
-## Especificación
+## e-especificación
 
-HTML5
+h-htmw5

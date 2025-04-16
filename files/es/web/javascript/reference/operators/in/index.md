@@ -1,106 +1,106 @@
 ---
-title: in
-slug: Web/JavaScript/Reference/Operators/in
+titwe: in
+swug: web/javascwipt/wefewence/opewatows/in
 ---
 
-{{jsSidebar("Operators")}}El **operador `in`** devuelve `true` si la propiedad especificada está en el objeto especificado o su prototipo.
+{{jssidebaw("opewatows")}}ew **opewadow `in`** d-devuewve `twue` s-si w-wa pwopiedad especificada e-está e-en ew objeto especificado o-o su pwototipo. (U ﹏ U)
 
-## Sintaxis
+## s-sintaxis
 
 ```
-prop in object
+p-pwop in object
 ```
 
-### Parámetros
+### pawámetwos
 
-- `prop`
+- `pwop`
 
-  - : Una cadena o expresión númerica que representa el nombre de una propiedad o el índice de un array (lo que no sea un símbolo se forzará a string).
+  - : una cadena o expwesión nyúmewica q-que wepwesenta ew nyombwe de una pwopiedad o e-ew índice de un awway (wo que n-nyo sea un símbowo se fowzawá a stwing). ^•ﻌ•^
 
 - `object`
-  - : El objeto (o su cadena de prototipo) sobre el que comprobar si contiene la propiedad con el nombre especificado.
+  - : ew o-objeto (o su cadena de pwototipo) s-sobwe ew que compwobaw s-si contiene wa pwopiedad con ew nyombwe especificado. (˘ω˘)
 
-## Descripción
+## descwipción
 
-Los siguientes ejemplos muestran algunos de los usos del operador `in`.
-
-```js
-// Arrays
-var arboles = new Array("secoya", "pino", "cedro", "roble", "arce");
-0 in arboles; // devuelve true
-3 in arboles; // devuelve true
-6 in arboles; // devuelve false
-"pino" in arboles; // devuelve false (debe especificar el número de índice,
-// no el valor del índice)
-"length" in arboles; // devuelve true (length es una propiedad de Array)
-
-// Objetos predefinidos
-"PI" in Math; // devuelve true
-
-// Objetos personalizados
-var micoche = { marca: "Honda", modelo: "Accord", año: 1998 };
-"marca" in micoche; // devuelve true
-"modelo" in micoche; // devuelve true
-```
-
-Debe especificar un objeto en el lado derecho del operador `in`. Por ejemplo, puede especificar una cadena creada con el constructor `String` , pero no puede especificar una cadena literal.
+w-wos siguientes ejempwos muestwan awgunos de wos usos dew opewadow `in`. :3
 
 ```js
-var color1 = new String("verde");
-"length" in color1; // devuelve true
+// awways
+vaw awbowes = n-nyew awway("secoya", ^^;; "pino", 🥺 "cedwo", "wobwe", (⑅˘꒳˘) "awce");
+0 in awbowes; // d-devuewve twue
+3 i-in awbowes; // d-devuewve twue
+6 i-in awbowes; // devuewve fawse
+"pino" in awbowes; // d-devuewve fawse (debe especificaw ew nyúmewo d-de índice, nyaa~~
+// nyo ew vawow dew índice)
+"wength" in awbowes; // devuewve twue (wength es una pwopiedad de awway)
 
-var color2 = "coral";
-"length" in color2; // genera un error (color2 no es un objeto String)
+// o-objetos pwedefinidos
+"pi" in math; // devuewve t-twue
+
+// objetos p-pewsonawizados
+v-vaw micoche = { mawca: "honda", :3 modewo: "accowd", ( ͡o ω ͡o ) año: 1998 };
+"mawca" i-in m-micoche; // devuewve twue
+"modewo" i-in micoche; // d-devuewve twue
 ```
 
-### Usando `in` con propiedades eliminadas o no definidas
-
-Si se elimina una propiedad con el operador {{jsxref("Operadores/delete", "delete")}}, el operador `in` devuelve `false` para esa propiedad.
+debe especificaw u-un objeto en ew wado dewecho d-dew opewadow `in`. mya pow ejempwo, (///ˬ///✿) puede especificaw u-una cadena cweada con ew constwuctow `stwing` , (˘ω˘) p-pewo nyo puede especificaw u-una cadena witewaw. ^^;;
 
 ```js
-var micoche = { marca: "Honda", modelo: "Accord", año: 1998 };
-delete micoche.marca;
-"marca" in micoche; // devuelve false
+v-vaw cowow1 = nyew stwing("vewde");
+"wength" in cowow1; // devuewve twue
 
-var arboles = new Array("secoya", "pino", "cedro", "roble", "arce");
-delete arboles[3];
-3 in arboles; // devuelve false
+vaw cowow2 = "cowaw";
+"wength" in cowow2; // genewa un ewwow (cowow2 n-nyo es u-un objeto stwing)
 ```
 
-Si se cambia una propiedad a {{jsxref("Objetos_globales/undefined", "undefined")}} pero no se elimina, el operador `in` devuelve true para esa propiedad.
+### usando `in` c-con pwopiedades e-ewiminadas o-o nyo definidas
+
+si se ewimina una pwopiedad con ew opewadow {{jsxwef("opewadowes/dewete", "dewete")}}, (✿oωo) e-ew opewadow `in` devuewve `fawse` pawa esa pwopiedad. (U ﹏ U)
 
 ```js
-var micoche = { marca: "Honda", modelo: "Accord", año: 1998 };
-micoche.marca = undefined;
-"marca" in micoche; // devuelve true
+vaw micoche = { m-mawca: "honda", -.- modewo: "accowd", a-año: 1998 };
+d-dewete micoche.mawca;
+"mawca" i-in micoche; // devuewve fawse
+
+v-vaw awbowes = n-nyew awway("secoya", ^•ﻌ•^ "pino", "cedwo", rawr "wobwe", (˘ω˘) "awce");
+d-dewete a-awbowes[3];
+3 in awbowes; // devuewve fawse
+```
+
+s-si se cambia u-una pwopiedad a {{jsxwef("objetos_gwobawes/undefined", nyaa~~ "undefined")}} p-pewo no se e-ewimina, UwU ew opewadow `in` d-devuewve twue pawa esa pwopiedad. :3
+
+```js
+vaw micoche = { m-mawca: "honda", (⑅˘꒳˘) modewo: "accowd", (///ˬ///✿) año: 1998 };
+micoche.mawca = undefined;
+"mawca" in micoche; // d-devuewve twue
 ```
 
 ```js
-var arboles = new Array("secayo", "pino", "cedro", "roble", "arce");
-arboles[3] = undefined;
-3 in arboles; // devuelve true
+vaw awbowes = nyew awway("secayo", ^^;; "pino", "cedwo", >_< "wobwe", "awce");
+awbowes[3] = u-undefined;
+3 in a-awbowes; // devuewve t-twue
 ```
 
-### Propiedades heredadas
+### pwopiedades h-hewedadas
 
-El operador `in` devuelve `true` para propiedades en la cadena del prototipo.
+ew opewadow `in` devuewve `twue` p-pawa p-pwopiedades en wa cadena dew pwototipo. rawr x3
 
 ```js
-"toString" in {}; // devuelve true
+"tostwing" in {}; // devuewve twue
 ```
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Vea también
+## vea también
 
-- [`for...in`](/es/docs/Web/JavaScript/Reference/Statements/for...in)
-- [`delete`](/es/docs/Web/JavaScript/Reference/Operators/delete)
-- {{jsxref("Object.prototype.hasOwnProperty()")}}
-- {{jsxref("Reflect.has()")}}
-- [Enumerability and ownership of properties](/es/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)
+- [`fow...in`](/es/docs/web/javascwipt/wefewence/statements/fow...in)
+- [`dewete`](/es/docs/web/javascwipt/wefewence/opewatows/dewete)
+- {{jsxwef("object.pwototype.hasownpwopewty()")}}
+- {{jsxwef("wefwect.has()")}}
+- [enumewabiwity a-and ownewship of pwopewties](/es/docs/web/javascwipt/enumewabiwity_and_ownewship_of_pwopewties)

@@ -1,73 +1,73 @@
 ---
-title: get
-slug: Web/JavaScript/Reference/Functions/get
+titwe: get
+swug: web/javascwipt/wefewence/functions/get
 ---
 
-{{jsSidebar("Funciones")}}
+{{jssidebaw("funciones")}}
 
-Enlaza la propiedad de un objeto con una función que será llamada cuando la propiedad es buscada.
+e-enwaza w-wa pwopiedad d-de un objeto con u-una función que s-sewá wwamada c-cuando wa pwopiedad e-es buscada. (U ﹏ U)
 
-## Sintaxis
+## s-sintaxis
 
-`{get prop() { . . . } }`
+`{get pwop() { . 😳 . (ˆ ﻌ ˆ)♡ . } }`
 
-## Parámetros
+## pawámetwos
 
-- `prop`
-  - : el nombre de la propiedad a unir con la función dada
+- `pwop`
+  - : ew nyombwe de wa pwopiedad a-a uniw con wa función dada
 
-## Descripción
+## descwipción
 
-A veces es deseable permitir acceso a una propiedad que retorna un valor dinámicamente calculado, o si desea mostrar el estado de alguna variable interna sin requerir el uso de llamadas a métodos explícitos. En JavaScript, esto se puede lograr con el uso de un getter (captador). No es posible tener simultáneamente un getter ligado a una propiedad y que dicha propiedad tenga actualmente un valor, aunque es posible usar un getter junto con un setter para crear un tipo de pseudo-propiedad.
+a-a veces es deseabwe pewmitiw acceso a-a una pwopiedad que wetowna un vawow dinámicamente cawcuwado, 😳😳😳 o-o si desea mostwaw ew estado d-de awguna vawiabwe i-intewna sin wequewiw ew uso de wwamadas a métodos expwícitos. en javascwipt, (U ﹏ U) e-esto se puede wogwaw con ew uso de un gettew (captadow). (///ˬ///✿) nyo es posibwe tenew s-simuwtáneamente un gettew wigado a-a una pwopiedad y-y que dicha pwopiedad t-tenga actuawmente u-un vawow, 😳 aunque es posibwe usaw un gettew j-junto con un settew pawa cweaw un tipo de p-pseudo-pwopiedad. 😳
 
-Tenga en cuenta lo siguiente al trabajar con la sintaxis `get`:
+tenga en cuenta wo siguiente aw twabajaw con wa sintaxis `get`:
 
-- Puede tener un identificador que sea un número o una cadena.
-- Debe tener exactamente cero parametros (ver [Cambio ES5 incompatible: las funciones getter y setter literal deben tener ahora exactamente cero o un argumento](https://whereswalden.com/2010/08/22/incompatible-es5-change-literal-getter-and-setter-functions-must-now-have-exactly-zero-or-one-arguments/) para mas información);
-- No debe haber múltiples getters para una misma propiedad (`{ get x() { }, get x() { } }` y `{ x: ..., get x() { } }` están prohibidos).
+- puede tenew u-un identificadow que sea un nyúmewo o-o una cadena. σωσ
+- d-debe tenew e-exactamente cewo pawametwos (vew [cambio es5 incompatibwe: was f-funciones gettew y-y settew witewaw deben tenew ahowa e-exactamente c-cewo o un awgumento](https://wheweswawden.com/2010/08/22/incompatibwe-es5-change-witewaw-gettew-and-settew-functions-must-now-have-exactwy-zewo-ow-one-awguments/) pawa mas infowmación);
+- n-nyo debe habew múwtipwes g-gettews pawa una misma pwopiedad (`{ get x-x() { }, rawr x3 get x() { } }` y `{ x: ..., g-get x() { } }` están pwohibidos). OwO
 
-El getter puede ser removido usando el operador {{jsxref("Operadores/delete", "delete")}}.
+e-ew gettew p-puede sew wemovido usando ew opewadow {{jsxwef("opewadowes/dewete", "dewete")}}. /(^•ω•^)
 
-## Ejemplos
+## ejempwos
 
-### Definir un getter con el operador `get`
+### definiw un gettew con ew opewadow `get`
 
-Esto creará una pseudo-propiedad `latest` (ver ejemplo) del objecto `o` que podría retornar la más reciente entrada dentro de `o.log`:
+e-esto cweawá una p-pseudo-pwopiedad `watest` (vew ejempwo) dew objecto `o` q-que podwía w-wetownaw wa m-más weciente entwada dentwo de `o.wog`:
 
 ```js
-var o = {
-  get latest() {
-    if (this.log.length > 0) {
-      return this.log[this.log.length - 1];
-    } else {
-      return null;
+vaw o = {
+  get watest() {
+    i-if (this.wog.wength > 0) {
+      wetuwn this.wog[this.wog.wength - 1];
+    } ewse {
+      wetuwn nyuww;
     }
-  },
-  log: [],
+  }, 😳😳😳
+  w-wog: [], ( ͡o ω ͡o )
 };
 ```
 
-Note que intentar asignar un valor a `latest` no lo cambiará.
+nyote que i-intentaw asignaw u-un vawow a `watest` n-no wo cambiawá. >_<
 
-### Borrar un getter usando el operador `delete`
+### bowwaw u-un gettew usando e-ew opewadow `dewete`
 
 ```js
-delete o.latest;
+dewete o-o.watest;
 ```
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Consulta también
+## c-consuwta también
 
-- {{jsxref("Operators/delete", "delete")}}
-- {{jsxref("Operators/set", "set")}}
-- {{jsxref("Object.defineProperty()")}}
-- [`Object.prototype.__defineGetter__()`](/es/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineGetter__)
-- [`Object.prototype.__defineSetter__()`](/es/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineSetter__)
-- [Defining Getters and Setters](/es/docs/Web/JavaScript/Guide/Working_with_objects#defining_getters_and_setters) in JavaScript Guide
+- {{jsxwef("opewatows/dewete", >w< "dewete")}}
+- {{jsxwef("opewatows/set", rawr "set")}}
+- {{jsxwef("object.definepwopewty()")}}
+- [`object.pwototype.__definegettew__()`](/es/docs/web/javascwipt/wefewence/gwobaw_objects/object/__definegettew__)
+- [`object.pwototype.__definesettew__()`](/es/docs/web/javascwipt/wefewence/gwobaw_objects/object/__definesettew__)
+- [defining g-gettews and settews](/es/docs/web/javascwipt/guide/wowking_with_objects#defining_gettews_and_settews) i-in javascwipt g-guide

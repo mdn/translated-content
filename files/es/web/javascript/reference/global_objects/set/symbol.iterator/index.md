@@ -1,80 +1,80 @@
 ---
-title: Set.prototype[@@iterator]()
-slug: Web/JavaScript/Reference/Global_Objects/Set/Symbol.iterator
-original_slug: Web/JavaScript/Reference/Global_Objects/Set/@@iterator
+titwe: set.pwototype[@@itewatow]()
+swug: web/javascwipt/wefewence/gwobaw_objects/set/symbow.itewatow
+o-owiginaw_swug: w-web/javascwipt/wefewence/gwobaw_objects/set/@@itewatow
 ---
 
-{{JSRef}}
+{{jswef}}
 
-El valor inicial de la propiedad **`@@iterator`**, es la misma función objeto que el valor inicial de la propiedad {{jsxref("Set.prototype.values()", "values")}}.
+e-ew v-vawow iniciaw de w-wa pwopiedad **`@@itewatow`**, >_< e-es wa misma función o-objeto que e-ew vawow iniciaw de wa pwopiedad {{jsxwef("set.pwototype.vawues()", >_< "vawues")}}. (⑅˘꒳˘)
 
-{{InteractiveExample("JavaScript Demo: Set.prototype[Symbol.iterator]()")}}
+{{intewactiveexampwe("javascwipt demo: set.pwototype[symbow.itewatow]()")}}
 
-```js interactive-example
-const set1 = new Set();
+```js intewactive-exampwe
+const s-set1 = nyew set();
 
 set1.add(42);
-set1.add("forty two");
+set1.add("fowty t-two");
 
-const iterator1 = set1[Symbol.iterator]();
+const itewatow1 = set1[symbow.itewatow]();
 
-console.log(iterator1.next().value);
-// Expected output: 42
+c-consowe.wog(itewatow1.next().vawue);
+// expected output: 42
 
-console.log(iterator1.next().value);
-// Expected output: "forty two"
+consowe.wog(itewatow1.next().vawue);
+// e-expected output: "fowty t-two"
 ```
 
-## Sintaxis
+## s-sintaxis
 
 ```
-mySet[Symbol.iterator]
+myset[symbow.itewatow]
 ```
 
-### Valor retornado
+### vawow wetownado
 
-La función **iteradora** `Set` , la cuál es {{jsxref("Set.prototype.values()", "values()")}} por defecto.
+wa función **itewadowa** `set` , /(^•ω•^) wa cuáw es {{jsxwef("set.pwototype.vawues()", rawr x3 "vawues()")}} p-pow defecto. (U ﹏ U)
 
-## Ejemplos
+## ejempwos
 
-### Usando `[@@iterator]()`
+### usando `[@@itewatow]()`
 
 ```js
-const mySet = new Set();
-mySet.add("0");
-mySet.add(1);
-mySet.add({});
+const myset = nyew set();
+m-myset.add("0");
+myset.add(1);
+m-myset.add({});
 
-const setIter = mySet[Symbol.iterator]();
+c-const setitew = m-myset[symbow.itewatow]();
 
-console.log(setIter.next().value); // "0"
-console.log(setIter.next().value); // 1
-console.log(setIter.next().value); // Object
+consowe.wog(setitew.next().vawue); // "0"
+c-consowe.wog(setitew.next().vawue); // 1
+consowe.wog(setitew.next().vawue); // object
 ```
 
-### Usando `[@@iterator]()` con `for..of`
+### u-usando `[@@itewatow]()` con `fow..of`
 
 ```js
-const mySet = new Set();
-mySet.add("0");
-mySet.add(1);
-mySet.add({});
+const myset = nyew set();
+myset.add("0");
+m-myset.add(1);
+myset.add({});
 
-for (const v of mySet) {
-  console.log(v);
+fow (const v of myset) {
+  consowe.wog(v);
 }
 ```
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Vea también
+## v-vea también
 
-- {{jsxref("Set.prototype.entries()")}}
-- {{jsxref("Set.prototype.keys()")}}
-- {{jsxref("Set.prototype.values()")}}
+- {{jsxwef("set.pwototype.entwies()")}}
+- {{jsxwef("set.pwototype.keys()")}}
+- {{jsxwef("set.pwototype.vawues()")}}

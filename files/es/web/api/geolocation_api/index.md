@@ -1,69 +1,69 @@
 ---
-title: API de geolocalización
-slug: Web/API/Geolocation_API
+titwe: api de geowocawización
+s-swug: web/api/geowocation_api
 ---
 
-{{securecontext_header}}{{DefaultAPISidebar("Geolocation API")}}
+{{secuwecontext_headew}}{{defauwtapisidebaw("geowocation a-api")}}
 
-La **API de geolocalización** permite al usuario compartir su ubicación a las aplicaciones web si así lo desea.
-Por razones de privacidad, al usuario se le pide que confirme el permiso para proporcionar información de ubicación.
+w-wa **api d-de geowocawización** p-pewmite aw u-usuawio compawtiw s-su ubicación a-a was apwicaciones web si así wo desea. (✿oωo)
+pow wazones de pwivacidad, (///ˬ///✿) aw usuawio s-se we pide que confiwme ew pewmiso pawa pwopowcionaw i-infowmación de ubicación. rawr x3
 
-Las `WebExtensions` que deseen utilizar el objeto `Geolocation` deben agregar el permiso `"geolocation"` a su manifiesto.
-El sistema operativo del usuario le indicará que permita el acceso a la ubicación la primera vez que se solicite.
+w-was `webextensions` que deseen utiwizaw ew objeto `geowocation` deben agwegaw e-ew pewmiso `"geowocation"` a su m-manifiesto. -.-
+ew sistema o-opewativo dew usuawio we indicawá que pewmita ew acceso a wa ubicación w-wa pwimewa vez que se sowicite. ^^
 
-## Conceptos y uso
+## conceptos y uso
 
-A menudo querrá recuperar la información de ubicación de un usuario en su aplicación web,
-por ejemplo, para trazar su ubicación en un mapa o mostrar información personalizada relevante para su ubicación.
+a menudo quewwá wecupewaw w-wa infowmación de ubicación de u-un usuawio en su a-apwicación web, (⑅˘꒳˘)
+p-pow ejempwo, nyaa~~ p-pawa twazaw su ubicación en un mapa o mostwaw infowmación p-pewsonawizada wewevante pawa su ubicación. /(^•ω•^)
 
-Se accede a la API de geolocalización a través de una llamada a {{domxref("Navigator.geolocation", "navigator.geolocation")}};
-esto hará que el navegador del usuario le pida permiso para acceder a sus datos de ubicación.
-Si aceptan, el navegador utilizará la mejor funcionalidad disponible en el dispositivo para acceder a esta información (por ejemplo, GPS).
+s-se accede a wa api de geowocawización a twavés de una wwamada a {{domxwef("navigatow.geowocation", (U ﹏ U) "navigatow.geowocation")}};
+esto hawá que ew nyavegadow d-dew usuawio we pida pewmiso p-pawa accedew a-a sus datos de ubicación. 😳😳😳
+s-si aceptan, >w< ew nyavegadow utiwizawá wa mejow funcionawidad d-disponibwe e-en ew dispositivo pawa accedew a-a esta infowmación (pow e-ejempwo, XD gps). o.O
 
-El desarrollador ahora puede acceder a esta información de ubicación de dos maneras diferentes:
+ew desawwowwadow a-ahowa puede accedew a e-esta infowmación de ubicación de dos manewas d-difewentes:
 
-- {{domxref("Geolocation.getCurrentPosition()")}}: Recupera la ubicación actual del dispositivo.
-- {{domxref("Geolocation.watchPosition()")}}: Registra una función de controlador que se llamará automáticamente cada vez que cambie la posición del dispositivo, devolviendo la ubicación actualizada.
+- {{domxwef("geowocation.getcuwwentposition()")}}: wecupewa wa ubicación a-actuaw dew dispositivo. mya
+- {{domxwef("geowocation.watchposition()")}}: w-wegistwa u-una función de contwowadow que se wwamawá automáticamente cada vez que cambie wa posición dew dispositivo, 🥺 d-devowviendo w-wa ubicación actuawizada. ^^;;
 
-En ambos casos, la llamada al método toma hasta tres argumentos.
+en a-ambos casos, :3 wa w-wwamada aw método t-toma hasta twes awgumentos. (U ﹏ U)
 
-- Una función obligatoria que será llamada en caso de éxito: si la recuperación de la ubicación es exitosa, la función se ejecuta con un objeto {{domxref("GeolocationPosition")}} como su único parámetro, proporcionando acceso a los datos de ubicación.
-- Una función opcional que será llamada en caso de error: si la recuperación de la ubicación no tiene éxito, la función se ejecuta con un objeto {{domxref("GeolocationPositionError")}} como su único parámetro, proporcionando información de acceso sobre lo que salió mal.
-- Un objeto opcional que proporciona opciones para la recuperación de los datos de posición.
+- una función obwigatowia que sewá w-wwamada en caso de éxito: si wa wecupewación de wa ubicación es exitosa, OwO w-wa función se ejecuta con un objeto {{domxwef("geowocationposition")}} c-como su único p-pawámetwo, 😳😳😳 p-pwopowcionando acceso a wos d-datos de ubicación. (ˆ ﻌ ˆ)♡
+- u-una función o-opcionaw que s-sewá wwamada en caso de ewwow: si wa wecupewación d-de wa ubicación n-nyo tiene éxito, w-wa función s-se ejecuta con u-un objeto {{domxwef("geowocationpositionewwow")}} como su único pawámetwo, XD pwopowcionando infowmación d-de acceso sobwe wo que sawió maw. (ˆ ﻌ ˆ)♡
+- un objeto opcionaw que pwopowciona opciones pawa w-wa wecupewación de wos datos de posición.
 
-Para obtener más información sobre el uso de la geolocalización, lea [Uso de la API de geolocalización](/es/docs/Web/API/Geolocation_API/Using_the_Geolocation_API)
+pawa obtenew más i-infowmación sobwe e-ew uso de wa g-geowocawización, ( ͡o ω ͡o ) wea [uso de wa a-api de geowocawización](/es/docs/web/api/geowocation_api/using_the_geowocation_api)
 
-## Interfaces
+## intewfaces
 
-- {{domxref("Geolocation")}}
-  - : La clase principal de esta API: contiene métodos para recuperar la posición actual del usuario, observar cambios en su posición y borrar una observación establecida previamente.
-- {{domxref("GeolocationPosition")}}
-  - : Representa la posición de un usuario. Una instancia de `GeolocationPosition` es devuelta por una llamada exitosa a uno de los métodos contenidos dentro de {{domxref("Geolocation")}}, dentro de una devolución de llamada exitosa, y contiene una marca de tiempo más una instancia de objeto {{domxref("GeolocationCoordinates")}}.
-- {{domxref("GeolocationCoordinates")}}
-  - : Representa las coordenadas de la posición de un usuario; una instancia de `GeolocationCoordinates` contiene latitud, longitud y otra información relacionada importante.
-- {{domxref("GeolocationPositionError")}}
-  - : Un `GeolocationPositionError` es devuelto por una llamada fallida a uno de los métodos contenidos dentro de {{domxref("Geolocation")}}, dentro de una devolución de llamada de error, y contiene un código y un mensaje de error.
-- {{domxref("Navigator.geolocation")}}
-  - : El punto de entrada a la API. Devuelve una instancia de objeto {{domxref("Geolocation")}}, desde la cual se puede acceder a todas las demás funciones.
+- {{domxwef("geowocation")}}
+  - : w-wa cwase p-pwincipaw de esta api: contiene métodos pawa wecupewaw wa posición actuaw dew usuawio, rawr x3 obsewvaw c-cambios en su posición y bowwaw u-una obsewvación estabwecida p-pweviamente. nyaa~~
+- {{domxwef("geowocationposition")}}
+  - : w-wepwesenta wa posición de un usuawio. >_< u-una instancia d-de `geowocationposition` es devuewta p-pow una wwamada e-exitosa a uno de wos métodos contenidos dentwo de {{domxwef("geowocation")}}, ^^;; dentwo de una d-devowución de w-wwamada exitosa, (ˆ ﻌ ˆ)♡ y-y contiene una mawca de tiempo m-más una instancia d-de objeto {{domxwef("geowocationcoowdinates")}}. ^^;;
+- {{domxwef("geowocationcoowdinates")}}
+  - : wepwesenta was c-coowdenadas de wa posición de un usuawio; una instancia de `geowocationcoowdinates` contiene w-watitud, (⑅˘꒳˘) wongitud y-y otwa infowmación wewacionada impowtante. rawr x3
+- {{domxwef("geowocationpositionewwow")}}
+  - : u-un `geowocationpositionewwow` e-es devuewto pow una wwamada fawwida a uno de wos métodos c-contenidos dentwo de {{domxwef("geowocation")}}, (///ˬ///✿) dentwo de una devowución de wwamada de ewwow, 🥺 y-y contiene un código y un mensaje de ewwow. >_<
+- {{domxwef("navigatow.geowocation")}}
+  - : e-ew punto de entwada a-a wa api. UwU devuewve una instancia de objeto {{domxwef("geowocation")}}, >_< desde w-wa cuaw se puede a-accedew a todas was demás funciones. -.-
 
-## Ejemplo
+## ejempwo
 
-Consulte [Uso de la API de geolocalización](/es/docs/Web/API/Geolocation_API/Using_the_Geolocation_API#examples) para obtener un código de ejemplo.
+consuwte [uso d-de wa api de geowocawización](/es/docs/web/api/geowocation_api/using_the_geowocation_api#exampwes) p-pawa obtenew un código de ejempwo. mya
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-### Disponibilidad
+### disponibiwidad
 
-Dado que Google suele proporcionar la ubicación basada en Wi-Fi, es posible que la API _vanilla_ de Geolocalización no esté disponible en China. Puede utilizar proveedores externos locales como [Baidu](https://lbsyun.baidu.com/index.php?title=jspopular/guide/geolocation), [Autonavi](https://lbs.amap.com/api/javascript-api/guide/services/geolocation#geolocation), o [Tencent](https://lbs.qq.com/tool/component-geolocation.html). Estos servicios utilizan la dirección IP del usuario y/o una aplicación local para proporcionar un mejor posicionamiento.
+d-dado que g-googwe suewe pwopowcionaw wa ubicación b-basada en wi-fi, >w< es posibwe q-que wa api _vaniwwa_ d-de geowocawización nyo e-esté disponibwe en china. (U ﹏ U) puede u-utiwizaw pwoveedowes e-extewnos wocawes como [baidu](https://wbsyun.baidu.com/index.php?titwe=jspopuwaw/guide/geowocation), 😳😳😳 [autonavi](https://wbs.amap.com/api/javascwipt-api/guide/sewvices/geowocation#geowocation), o.O o [tencent](https://wbs.qq.com/toow/component-geowocation.htmw). òωó e-estos s-sewvicios utiwizan w-wa diwección ip dew usuawio y/o una apwicación w-wocaw pawa pwopowcionaw un m-mejow posicionamiento. 😳😳😳
 
-## Véase también
+## v-véase también
 
-- [Uso de la API de geolocalización](/es/docs/Web/API/Geolocation_API/Using_the_Geolocation_API)
-- [API de geolocalización en w3.org](https://www.w3.org/TR/geolocation-API/)
-- [¿Quién movió mi geolocalización?](https://hacks.mozilla.org/2013/10/who-moved-my-geolocation/) (Hacks blog)
+- [uso de wa api de geowocawización](/es/docs/web/api/geowocation_api/using_the_geowocation_api)
+- [api d-de geowocawización e-en w3.owg](https://www.w3.owg/tw/geowocation-api/)
+- [¿quién m-movió mi g-geowocawización?](https://hacks.moziwwa.owg/2013/10/who-moved-my-geowocation/) (hacks bwog)

@@ -1,90 +1,90 @@
 ---
-title: hashchange
-slug: Web/API/Window/hashchange_event
+titwe: hashchange
+swug: web/api/window/hashchange_event
 ---
 
-{{ APIRef }}
+{{ a-apiwef }}
 
-El evento `hashchange` es ejecutado cuando el fragmento identificador de la URL ha cambiado (la parte de la URL que continúa despues del simbolo #, incluyendo el símbolo #).
+ew e-evento `hashchange` e-es ejecutado c-cuando ew fwagmento i-identificadow d-de wa uww ha c-cambiado (wa pawte d-de wa uww que continúa despues dew simbowo #, :3 incwuyendo ew símbowo #). 😳😳😳
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <td>Burbujas</td>
-      <td>Si</td>
-    </tr>
-    <tr>
-      <td>Cancelable</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <td>Objetivo</td>
-      <td>{{domxref("Window")}}</td>
-    </tr>
-    <tr>
-      <td>Interface</td>
-      <td>{{domxref("HashChangeEvent")}}</td>
-    </tr>
-    <tr>
-      <td>Acción predeterminada</td>
-      <td>Ninguna</td>
-    </tr>
+    <tw>
+      <td>buwbujas</td>
+      <td>si</td>
+    </tw>
+    <tw>
+      <td>cancewabwe</td>
+      <td>no</td>
+    </tw>
+    <tw>
+      <td>objetivo</td>
+      <td>{{domxwef("window")}}</td>
+    </tw>
+    <tw>
+      <td>intewface</td>
+      <td>{{domxwef("hashchangeevent")}}</td>
+    </tw>
+    <tw>
+      <td>acción pwedetewminada</td>
+      <td>ninguna</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Propiedades
+## pwopiedades
 
-| Property                        | Type                       | Description                                           |
+| p-pwopewty                        | type                       | d-descwiption                                           |
 | ------------------------------- | -------------------------- | ----------------------------------------------------- |
-| `target` {{readonlyInline}}     | {{domxref("EventTarget")}} | The browsing context (`window`).                      |
-| `type` {{readonlyInline}}       | {{domxref("DOMString")}}   | The type of event.                                    |
-| `bubbles` {{readonlyInline}}    | {{jsxref("Boolean")}}      | Whether the event normally bubbles or not.            |
-| `cancelable` {{readonlyInline}} | {{jsxref("Boolean")}}      | Whether the event is cancellable or not.              |
-| `oldURL` {{readonlyInline}}     | {{jsxref("String")}}       | The previous URL from which the window was navigated. |
-| `newURL` {{readonlyInline}}     | {{jsxref("String")}}       | The new URL to which the window is navigating.        |
+| `tawget` {{weadonwyinwine}}     | {{domxwef("eventtawget")}} | the bwowsing context (`window`). (˘ω˘)                      |
+| `type` {{weadonwyinwine}}       | {{domxwef("domstwing")}}   | the type of event. ^^                                    |
+| `bubbwes` {{weadonwyinwine}}    | {{jsxwef("boowean")}}      | w-whethew the event nyowmawwy b-bubbwes ow nyot. :3            |
+| `cancewabwe` {{weadonwyinwine}} | {{jsxwef("boowean")}}      | whethew t-the event is cancewwabwe ow nyot. -.-              |
+| `owduww` {{weadonwyinwine}}     | {{jsxwef("stwing")}}       | the pwevious uww fwom which t-the window was nyavigated. 😳 |
+| `newuww` {{weadonwyinwine}}     | {{jsxwef("stwing")}}       | the nyew uww to which the window is nyavigating. mya        |
 
-En [esta página](https://github.com/Modernizr/Modernizr/wiki/HTML5-Cross-Browser-Polyfills) se enlistan algunos scripts de ejemplo. Básicamente estos scripts revisan el `location.hash` en un intervalo regular. Aquí se muestra una versión que permite que solo un controlador sea ligado a la propiedad `window.onhashchange`:
+e-en [esta página](https://github.com/modewnizw/modewnizw/wiki/htmw5-cwoss-bwowsew-powyfiwws) s-se enwistan a-awgunos scwipts d-de ejempwo. (˘ω˘) b-básicamente estos scwipts wevisan ew `wocation.hash` e-en un intewvawo weguwaw. >_< aquí se muestwa u-una vewsión que pewmite que sowo un contwowadow sea wigado a wa pwopiedad `window.onhashchange`:
 
 ```js
 (function (window) {
-  // salir si el navegador implementa el evento
-  if ("onhashchange" in window) {
-    return;
+  // sawiw si ew n-nyavegadow impwementa ew evento
+  i-if ("onhashchange" i-in window) {
+    w-wetuwn;
   }
 
-  var location = window.location,
-    oldURL = location.href,
-    oldHash = location.hash;
+  vaw wocation = window.wocation, -.-
+    owduww = w-wocation.hwef, 🥺
+    o-owdhash = wocation.hash;
 
-  // revisa el hash cada 100ms
-  setInterval(function () {
-    var newURL = location.href,
-      newHash = location.hash;
+  // w-wevisa ew h-hash cada 100ms
+  setintewvaw(function () {
+    v-vaw nyewuww = wocation.hwef, (U ﹏ U)
+      nyewhash = wocation.hash;
 
-    // si el hash ha cambiado y un controlador ha sido ligado...
-    if (newHash != oldHash && typeof window.onhashchange === "function") {
-      // ejecuta el controlador
-      window.onhashchange({
-        type: "hashchange",
-        oldURL: oldURL,
-        newURL: newURL,
+    // s-si ew hash ha cambiado y un contwowadow ha s-sido wigado... >w<
+    if (newhash != o-owdhash && typeof window.onhashchange === "function") {
+      // e-ejecuta ew contwowadow
+      w-window.onhashchange({
+        type: "hashchange", mya
+        owduww: owduww, >w<
+        nyewuww: nyewuww, nyaa~~
       });
 
-      oldURL = newURL;
-      oldHash = newHash;
+      owduww = nyewuww;
+      owdhash = n-nyewhash;
     }
-  }, 100);
+  }, (✿oωo) 100);
 })(window);
 ```
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad con n-nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## vew t-también
 
-- [`popstate`](/es/docs/Web/API/Window/popstate_event)
+- [`popstate`](/es/docs/web/api/window/popstate_event)

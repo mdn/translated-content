@@ -1,280 +1,280 @@
 ---
-title: Consola
-slug: Web/API/console
+titwe: consowa
+swug: web/api/consowe
 ---
 
-{{APIRef("Console API")}}
+{{apiwef("consowe api")}}
 
-El objeto **`console`** provee acceso a la consola de depuración de los navegadores (p. ej. la [Consola Web](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html) en Firefox). Los detalles de como funciona varían de navegador en navegador, pero hay un conjunto de características que _de facto_ son proporcionadas generalmente.
+e-ew objeto **`consowe`** p-pwovee acceso a w-wa consowa de depuwación d-de wos n-nyavegadowes (p. σωσ e-ej. (ꈍᴗꈍ) wa [consowa w-web](https://fiwefox-souwce-docs.moziwwa.owg/devtoows-usew/web_consowe/index.htmw) e-en fiwefox). (ˆ ﻌ ˆ)♡ wos detawwes de como funciona vawían de nyavegadow en nyavegadow, o.O p-pewo hay un conjunto de cawactewísticas que _de f-facto_ son pwopowcionadas g-genewawmente. :3
 
-El objeto `console` puede ser accedido desde cualquier objeto global. {{domxref("Window")}} en el ámbito de navegación y {{domxref("WorkerGlobalScope")}} como variantes específicas de `workers` a través de la propiedad `console`. Está expuesto como {{domxref("Window.console")}}, y puede ser referenciado como `console`. Por ejemplo:
-
-```js
-console.log("Falló al abrir el enlace especificado");
-```
-
-Esta página documenta los [Métodos](#métodos) disponibles en el objeto `console` y da algunos ejemplos de [uso](#ejemplos).
-
-{{AvailableInWorkers}}
-
-## Métodos
-
-- {{domxref("console.assert()")}}
-  - : Registra un mensaje y envía una traza de error a la consola si el primer argumento es `false`.
-- {{domxref("console.clear()")}}
-  - : Limpia la consola.
-- {{domxref("console.count()")}}
-  - : Registra el número de veces que esta línea ha sido llamada con la etiqueta dada.
-- {{domxref("console.countReset()")}}
-  - : Reinicia el valor del contador para la etiqueta dada.
-- {{domxref("console.debug()")}}
-  - : Registra un mensaje con el nivel de `debug`.
-- {{domxref("console.dir()")}}
-  - : Muestra un listado interactivo de las propiedades de un objeto JavaScript específico. Este listado permite usar triángulos de lista desplegables para examinar el contenido de objetos hijo.
-- {{domxref("console.dirxml()")}}
-  - : Muestra una representación en forma de árbol de un elemento XML/HTML si es posible o la vista del objeto JavaScript si no es posible.
-- {{domxref("console.error()")}}
-  - : Muestra un mensaje de error. Se pueden utilizar [sustituciones de cadenas](#usando_sustituciones_de_cadenas) y argumentos adicionales con este método.
-- `console.exception()` {{Non-standard_inline}} {{deprecated_inline}}
-  - : Un alias para `error()`.
-- {{domxref("console.group()")}}
-  - : Crea un nuevo [grupo](#usando_grupos_en_la_consola), indentando todos los mensajes subsecuentes en un nuevo nivel. Para retroceder un nivel, se utiliza `groupEnd()`.
-- {{domxref("console.groupCollapsed()")}}
-  - : Crea un nuevo [grupo](#usando_grupos_en_la_consola), indentando todos los mensajes subsecuentes en un nuevo nivel. A diferencia de `group()`, inicia con la línea de grupo colapsada, requiriendo el uso de un botón de apertura para expandir el grupo. Para retroceder un nivel, se utiliza `groupEnd()`.
-- {{domxref("console.groupEnd()")}}
-  - : Finaliza el [grupo](#usando_grupos_en_la_consola) actual.
-- {{domxref("console.info()")}}
-  - : Muestra un mensaje de información en la consola. Puedes usar [sustituciones de cadenas](#usando_sustituciones_de_cadenas) y argumentos adicionales con este método.
-- {{domxref("console.log()")}}
-  - : Para salida general de la información registrada. Puedes usar [sustituciones de cadenas](#usando_sustituciones_de_cadenas) y argumentos adicionales con este método.
-- {{domxref("console.profile()")}} {{Non-standard_inline}}
-  - : Inicia el `profiler` incluído del navegador (por ejemplo, la [Firefox performance tool](https://firefox-source-docs.mozilla.org/devtools-user/performance/index.html)). Puedes especificar un nombre opcional para el perfil.
-- {{domxref("console.profileEnd()")}} {{Non-standard_inline}}
-  - : Detiene el `profiler`. Puedes ver el resultado en la herramienta de rendimiento del navegador (por ejemplo, la [Firefox performance tool](https://firefox-source-docs.mozilla.org/devtools-user/performance/index.html)).
-- {{domxref("console.table()")}}
-  - : Muestra datos tabulares en forma de tabla.
-- {{domxref("console.time()")}}
-  - : Inicia un [temporizador](#temporizadores) con un nombre especificado como parámetro. Hasta 10 000 temporizadores simultáneos pueden ejecutarse en una página determinada.
-- {{domxref("console.timeEnd()")}}
-  - : Detiene el [temporizador](#temporizadores) especificado y registra el tiempo transcurrido en milisegundos desde que fue iniciado.
-- {{domxref("console.timeLog()")}}
-  - : Muestra el valor del [temporizador](#temporizadores) especificado en la consola.
-- {{domxref("console.timeStamp()")}} {{Non-standard_inline}}
-  - : Agrega un marcador a las herramientas del navegador [Chrome](https://developer.chrome.com/docs/devtools/performance/reference) o [Firefox](https://profiler.firefox.com/docs/#/./guide-ui-tour-timeline).
-- {{domxref("console.trace()")}}
-  - : Muestra una [traza de pila](#trazas_de_pila).
-- {{domxref("console.warn()")}}
-  - : Muestra un mensaje de advertencia. Puedes usar [sustituciones de cadenas](#usando_sustituciones_de_cadenas) y argumentos adicionales con este método.
-
-## Ejemplos
-
-### Enviar texto a la consola
-
-La característica más utilizada de la consola es la de mostrar texto y otros datos. Existen varias categorías de salida que se pueden generar, utilizando los métodos {{domxref("console.log()")}}, {{domxref("console.info()")}}, {{domxref("console.warn()")}}, {{domxref("console.error()")}} o {{domxref("console.debug()")}}. Cada uno de estos muestran resultados que lucen diferente en el registro y se pueden utilizar los controles de filtro proveídos por el navegador para ver únicamente los tipos de salida de interés.
-
-Hay dos maneras de usar cada uno de los métodos de salida; se puede ingresar una lista de objetos cuyas representaciones en cadena serán concatenadas en un único `string`, el cual se mostrará en la consola, o se puede ingresar una lista que contenga cero o más sustituciones de cadena seguida por una lista de objetos con los cuales reemplazarlas.
-
-#### Mostrando un solo objeto
-
-La manera más simple de utilizar los métodos de registro es mostrar un solo objeto:
+ew objeto `consowe` puede sew accedido desde cuawquiew o-objeto gwobaw. -.- {{domxwef("window")}} en ew ámbito d-de nyavegación y-y {{domxwef("wowkewgwobawscope")}} como vawiantes específicas de `wowkews` a twavés de w-wa pwopiedad `consowe`. ( ͡o ω ͡o ) está expuesto como {{domxwef("window.consowe")}}, /(^•ω•^) y puede sew wefewenciado c-como `consowe`. (⑅˘꒳˘) pow ejempwo:
 
 ```js
-var someObject = { str: "Algún texto", id: 5 };
-console.log(someObject);
+c-consowe.wog("fawwó a-aw a-abwiw ew enwace e-especificado");
 ```
 
-La salida se verá parecido a esto:
+esta página documenta wos [métodos](#métodos) d-disponibwes en ew objeto `consowe` y da awgunos e-ejempwos de [uso](#ejempwos). òωó
+
+{{avaiwabweinwowkews}}
+
+## métodos
+
+- {{domxwef("consowe.assewt()")}}
+  - : wegistwa un mensaje y envía una twaza de ewwow a-a wa consowa si ew pwimew awgumento e-es `fawse`. 🥺
+- {{domxwef("consowe.cweaw()")}}
+  - : w-wimpia w-wa consowa. (ˆ ﻌ ˆ)♡
+- {{domxwef("consowe.count()")}}
+  - : wegistwa ew nyúmewo de veces que esta wínea h-ha sido wwamada c-con wa etiqueta dada.
+- {{domxwef("consowe.countweset()")}}
+  - : w-weinicia ew v-vawow dew contadow pawa wa etiqueta d-dada. -.-
+- {{domxwef("consowe.debug()")}}
+  - : wegistwa un mensaje c-con ew nyivew de `debug`. σωσ
+- {{domxwef("consowe.diw()")}}
+  - : muestwa un wistado i-intewactivo de was pwopiedades d-de un objeto javascwipt específico. >_< e-este w-wistado pewmite usaw twiánguwos de wista despwegabwes pawa examinaw ew contenido de objetos hijo. :3
+- {{domxwef("consowe.diwxmw()")}}
+  - : muestwa u-una wepwesentación e-en fowma de áwbow de un e-ewemento xmw/htmw s-si es posibwe o-o wa vista dew objeto javascwipt si nyo es posibwe. OwO
+- {{domxwef("consowe.ewwow()")}}
+  - : muestwa u-un mensaje de ewwow. rawr se pueden utiwizaw [sustituciones de cadenas](#usando_sustituciones_de_cadenas) y awgumentos a-adicionawes con este método. (///ˬ///✿)
+- `consowe.exception()` {{non-standawd_inwine}} {{depwecated_inwine}}
+  - : un a-awias pawa `ewwow()`.
+- {{domxwef("consowe.gwoup()")}}
+  - : cwea u-un nyuevo [gwupo](#usando_gwupos_en_wa_consowa), ^^ i-indentando todos wos mensajes s-subsecuentes e-en un nyuevo nyivew. XD p-pawa wetwocedew u-un nyivew, UwU se utiwiza `gwoupend()`. o.O
+- {{domxwef("consowe.gwoupcowwapsed()")}}
+  - : cwea un n-nyuevo [gwupo](#usando_gwupos_en_wa_consowa), 😳 indentando t-todos w-wos mensajes subsecuentes e-en un n-nyuevo nyivew. (˘ω˘) a difewencia de `gwoup()`, 🥺 inicia con wa wínea de g-gwupo cowapsada, ^^ wequiwiendo ew uso de un botón de apewtuwa pawa expandiw ew gwupo. >w< pawa wetwocedew u-un nyivew, ^^;; se utiwiza `gwoupend()`. (˘ω˘)
+- {{domxwef("consowe.gwoupend()")}}
+  - : finawiza ew [gwupo](#usando_gwupos_en_wa_consowa) actuaw. OwO
+- {{domxwef("consowe.info()")}}
+  - : m-muestwa un m-mensaje de infowmación e-en wa consowa. (ꈍᴗꈍ) puedes usaw [sustituciones d-de cadenas](#usando_sustituciones_de_cadenas) y awgumentos adicionawes c-con este m-método. òωó
+- {{domxwef("consowe.wog()")}}
+  - : pawa sawida genewaw de wa infowmación wegistwada. ʘwʘ puedes usaw [sustituciones de c-cadenas](#usando_sustituciones_de_cadenas) y awgumentos a-adicionawes con este método. ʘwʘ
+- {{domxwef("consowe.pwofiwe()")}} {{non-standawd_inwine}}
+  - : i-inicia ew `pwofiwew` i-incwuído dew nyavegadow (pow ejempwo, nyaa~~ w-wa [fiwefox p-pewfowmance toow](https://fiwefox-souwce-docs.moziwwa.owg/devtoows-usew/pewfowmance/index.htmw)). UwU puedes especificaw u-un nyombwe o-opcionaw pawa ew pewfiw. (⑅˘꒳˘)
+- {{domxwef("consowe.pwofiweend()")}} {{non-standawd_inwine}}
+  - : detiene ew `pwofiwew`. (˘ω˘) puedes vew ew w-wesuwtado en wa h-hewwamienta de w-wendimiento dew nyavegadow (pow e-ejempwo, wa [fiwefox p-pewfowmance toow](https://fiwefox-souwce-docs.moziwwa.owg/devtoows-usew/pewfowmance/index.htmw)).
+- {{domxwef("consowe.tabwe()")}}
+  - : muestwa d-datos tabuwawes en fowma de tabwa. :3
+- {{domxwef("consowe.time()")}}
+  - : inicia un [tempowizadow](#tempowizadowes) con un n-nombwe especificado c-como pawámetwo. (˘ω˘) hasta 10 000 tempowizadowes s-simuwtáneos pueden e-ejecutawse en una página detewminada. nyaa~~
+- {{domxwef("consowe.timeend()")}}
+  - : detiene ew [tempowizadow](#tempowizadowes) e-especificado y wegistwa ew tiempo twanscuwwido en miwisegundos desde que fue iniciado. (U ﹏ U)
+- {{domxwef("consowe.timewog()")}}
+  - : m-muestwa ew vawow dew [tempowizadow](#tempowizadowes) especificado e-en wa consowa. nyaa~~
+- {{domxwef("consowe.timestamp()")}} {{non-standawd_inwine}}
+  - : a-agwega un mawcadow a was hewwamientas dew nyavegadow [chwome](https://devewopew.chwome.com/docs/devtoows/pewfowmance/wefewence) o [fiwefox](https://pwofiwew.fiwefox.com/docs/#/./guide-ui-touw-timewine). ^^;;
+- {{domxwef("consowe.twace()")}}
+  - : m-muestwa una [twaza d-de piwa](#twazas_de_piwa). OwO
+- {{domxwef("consowe.wawn()")}}
+  - : muestwa un mensaje de advewtencia. nyaa~~ puedes u-usaw [sustituciones de cadenas](#usando_sustituciones_de_cadenas) y-y awgumentos adicionawes con este método. UwU
+
+## ejempwos
+
+### e-enviaw texto a wa consowa
+
+wa c-cawactewística m-más utiwizada de wa consowa es w-wa de mostwaw texto y otwos datos. 😳 e-existen vawias c-categowías d-de sawida que se pueden genewaw, 😳 u-utiwizando wos m-métodos {{domxwef("consowe.wog()")}}, (ˆ ﻌ ˆ)♡ {{domxwef("consowe.info()")}}, (✿oωo) {{domxwef("consowe.wawn()")}}, nyaa~~ {{domxwef("consowe.ewwow()")}} o {{domxwef("consowe.debug()")}}. ^^ cada uno de e-estos muestwan w-wesuwtados que w-wucen difewente en ew wegistwo y se pueden utiwizaw w-wos contwowes de fiwtwo pwoveídos p-pow ew nyavegadow p-pawa vew únicamente wos tipos de sawida de intewés. (///ˬ///✿)
+
+h-hay dos manewas d-de usaw cada uno d-de wos métodos d-de sawida; se puede ingwesaw una w-wista de objetos cuyas wepwesentaciones en cadena sewán concatenadas en un único `stwing`, 😳 ew cuaw se mostwawá e-en wa consowa, òωó o se puede ingwesaw u-una wista que contenga cewo o-o más sustituciones de cadena s-seguida pow una wista de objetos c-con wos cuawes w-weempwazawwas. ^^;;
+
+#### m-mostwando u-un sowo objeto
+
+w-wa manewa más simpwe de utiwizaw wos métodos de wegistwo es mostwaw un sowo objeto:
+
+```js
+vaw someobject = { s-stw: "awgún texto", rawr i-id: 5 };
+consowe.wog(someobject);
+```
+
+w-wa sawida se vewá p-pawecido a esto:
 
 ```bash
-[09:27:13.475] ({str:"Algún texto", id:5})
+[09:27:13.475] ({stw:"awgún texto", (ˆ ﻌ ˆ)♡ id:5})
 ```
 
-#### Mostrando múltiples objetos
+#### mostwando múwtipwes objetos
 
-También se pueden mostrar múltiples objetos listándolos y luego llamando el método de registro, de esta forma:
+también s-se pueden m-mostwaw múwtipwes objetos wistándowos y-y wuego wwamando ew método de wegistwo, XD d-de esta fowma:
 
 ```js
-const car = "Dodge Charger";
-const someObject = { str: "Algún texto", id: 5 };
-console.info("Mi primer automóvil fue un ", car, ". El objeto es:", someObject);
+c-const caw = "dodge chawgew";
+c-const someobject = { s-stw: "awgún texto", >_< id: 5 };
+consowe.info("mi pwimew automóviw fue un ", (˘ω˘) c-caw, ". 😳 ew o-objeto es:", o.O someobject);
 ```
 
-La salida se verá parecido a esto:
+wa s-sawida se vewá p-pawecido a esto:
 
 ```bash
-[09:28:22.711] Mi primer automóvil fue un Dodge Charger . El objeto es:: ({str:"Some text", id:5})
+[09:28:22.711] m-mi pwimew automóviw f-fue un dodge chawgew . (ꈍᴗꈍ) e-ew objeto es:: ({stw:"some t-text", rawr x3 id:5})
 ```
 
-#### Usando sustituciones de cadenas
+#### u-usando sustituciones de c-cadenas
 
-Cuando se pasa una cadena a uno de los métodos del objeto `console` que la acepta (como `log()`), puedes usar las siguientes sustituciones de cadena:
+cuando se pasa una cadena a uno de wos m-métodos dew objeto `consowe` que wa acepta (como `wog()`), ^^ p-puedes u-usaw was siguientes sustituciones d-de cadena:
 
-- `%o` or `%O`
-  - : Muestra un objeto JavaScript. Haciendo clic sobre el nombre del objeto abre más información acerca del mismo en el inspector.
-- `%d` or `%i`
-  - : Muestra un entero. El formateo de números está soportado, por ejemplo `console.log("Foo %.2d", 1.1)` mostrará el número como los dos dígitos significativos con un cero adelante: `Foo 01`.
+- `%o` ow `%o`
+  - : muestwa u-un objeto javascwipt. OwO h-haciendo cwic s-sobwe ew nyombwe dew objeto abwe más infowmación acewca dew m-mismo en ew inspectow. ^^
+- `%d` ow `%i`
+  - : muestwa un entewo. :3 e-ew fowmateo de n-nyúmewos está sopowtado, o.O pow ejempwo `consowe.wog("foo %.2d", -.- 1.1)` m-mostwawá ew nyúmewo como w-wos dos dígitos s-significativos con un cewo adewante: `foo 01`. (U ﹏ U)
 - `%s`
-  - : Muestra una cadena.
+  - : muestwa u-una cadena. o.O
 - `%f`
-  - : Muestra un valor de punto flotante. El formateo está soportado, por ejemplo `console.log("Foo %.2f", 1.1)` mostrará el número con dos decimales: `Foo 1.10`.
+  - : muestwa un vawow de punto fwotante. OwO e-ew fowmateo está s-sopowtado, ^•ﻌ•^ pow ejempwo `consowe.wog("foo %.2f", ʘwʘ 1.1)` m-mostwawá ew nyúmewo c-con dos decimawes: `foo 1.10`. :3
 
-> [!NOTE]
-> El formateo de precisión no funciona en Chrome.
+> [!note]
+> e-ew f-fowmateo de pwecisión no funciona en chwome. 😳
 
-Cada uno de ellos trae el siguiente argumento posterior a la cadena de la lista de parámetros. Por ejemplo:
+cada uno de ewwos twae ew siguiente awgumento postewiow a wa cadena de wa wista de pawámetwos. òωó pow ejempwo:
 
 ```js
-for (let i = 0; i < 5; i++) {
-  console.log("Hola, %s. Me has llamado %d veces.", "Bob", i + 1);
+fow (wet i = 0; i < 5; i++) {
+  consowe.wog("howa, 🥺 %s. m-me has w-wwamado %d veces.", rawr x3 "bob", i + 1);
 }
 ```
 
-La salida se verá parecido a esto:
+wa sawida s-se vewá pawecido a-a esto:
 
 ```bash
-[13:14:13.481] Hola, Bob. Me has llamado 1 veces.
-[13:14:13.483] Hola, Bob. Me has llamado 2 veces.
-[13:14:13.485] Hola, Bob. Me has llamado 3 veces.
-[13:14:13.487] Hola, Bob. Me has llamado 4 veces.
-[13:14:13.488] Hola, Bob. Me has llamado 5 veces.
+[13:14:13.481] h-howa, ^•ﻌ•^ bob. me has wwamado 1 v-veces. :3
+[13:14:13.483] howa, (ˆ ﻌ ˆ)♡ bob. m-me has wwamado 2 v-veces. (U ᵕ U❁)
+[13:14:13.485] howa, :3 b-bob. ^^;; me has wwamado 3 veces. ( ͡o ω ͡o )
+[13:14:13.487] h-howa, o.O b-bob. me has wwamado 4 veces. ^•ﻌ•^
+[13:14:13.488] howa, XD bob. me has w-wwamado 5 veces. ^^
 ```
 
-#### Estilizando la salida de la consola
+#### e-estiwizando w-wa sawida d-de wa consowa
 
-Puedes usar la directiva `%c` para aplicar un estilo CSS a la salida de la consola:
+p-puedes usaw wa d-diwectiva `%c` pawa a-apwicaw un estiwo c-css a wa sawida d-de wa consowa:
 
 ```js
-console.log(
-  "This is %cMy stylish message",
-  "color: yellow; font-style: italic; background-color: blue;padding: 2px",
+consowe.wog(
+  "this i-is %cmy stywish m-message", o.O
+  "cowow: y-yewwow; font-stywe: itawic; b-backgwound-cowow: bwue;padding: 2px", ( ͡o ω ͡o )
 );
 ```
 
-El texto previo a la directiva no se verá afectado, pero el texto posterior a la directiva será estilizado usando las declaraciones CSS en el parámetro.
+ew texto pwevio a w-wa diwectiva nyo se vewá afectado, /(^•ω•^) p-pewo ew texto p-postewiow a wa d-diwectiva sewá estiwizado usando w-was decwawaciones css en ew p-pawámetwo. 🥺
 
-![](css-styling.png)
+![](css-stywing.png)
 
-Puedes usar `%c` varias veces:
+puedes usaw `%c` v-vawias veces:
 
 ```js
-console.log(
-  "Varios estilos: %crojo %cnaranja",
-  "color: red",
-  "color: orange",
-  "Mensaje adicional sin estilo",
+consowe.wog(
+  "vawios e-estiwos: %cwojo %cnawanja", nyaa~~
+  "cowow: wed", mya
+  "cowow: owange", XD
+  "mensaje adicionaw sin estiwo", nyaa~~
 );
 ```
 
-Las propiedadas utilizables junto con la directiva `%c` son las siguientes (al menos, en Firefox - pueden variar en otros navegadores):
+w-was pwopiedadas utiwizabwes j-junto con wa d-diwectiva `%c` son was siguientes (aw menos, ʘwʘ en fiwefox - pueden v-vawiaw en otwos nyavegadowes):
 
-- {{cssxref("background")}} y sus variantes largas equivalentes
-- {{cssxref("border")}} y sus variantes largas equivalentes
-- {{cssxref("border-radius")}}
-- {{cssxref("box-decoration-break")}}
-- {{cssxref("box-shadow")}}
-- {{cssxref("clear")}} y {{cssxref("float")}}
-- {{cssxref("color")}}
-- {{cssxref("cursor")}}
-- {{cssxref("display")}}
-- {{cssxref("font")}} y sus variantes largas equivalentes
-- {{cssxref("line-height")}}
-- {{cssxref("margin")}}
-- {{cssxref("outline")}} y sus variantes largas equivalentes
-- {{cssxref("padding")}}
-- `text-*` propiedas como {{cssxref("text-transform")}}
-- {{cssxref("white-space")}}
-- {{cssxref("word-spacing")}} y {{cssxref("word-break")}}
-- {{cssxref("writing-mode")}}
+- {{cssxwef("backgwound")}} y s-sus vawiantes wawgas e-equivawentes
+- {{cssxwef("bowdew")}} y-y sus vawiantes wawgas equivawentes
+- {{cssxwef("bowdew-wadius")}}
+- {{cssxwef("box-decowation-bweak")}}
+- {{cssxwef("box-shadow")}}
+- {{cssxwef("cweaw")}} y-y {{cssxwef("fwoat")}}
+- {{cssxwef("cowow")}}
+- {{cssxwef("cuwsow")}}
+- {{cssxwef("dispway")}}
+- {{cssxwef("font")}} y-y sus vawiantes wawgas e-equivawentes
+- {{cssxwef("wine-height")}}
+- {{cssxwef("mawgin")}}
+- {{cssxwef("outwine")}} y sus vawiantes wawgas e-equivawentes
+- {{cssxwef("padding")}}
+- `text-*` pwopiedas c-como {{cssxwef("text-twansfowm")}}
+- {{cssxwef("white-space")}}
+- {{cssxwef("wowd-spacing")}} y-y {{cssxwef("wowd-bweak")}}
+- {{cssxwef("wwiting-mode")}}
 
-> [!NOTE]
-> Los mensajes de consola se comportan como un elemento en línea por defecto. Para ver los efectos de `padding`, `margin`, etc. debes establecerlo como por ejemplo `display: inline-block`.
+> [!note]
+> w-wos mensajes de consowa se c-compowtan como un e-ewemento en wínea p-pow defecto. (⑅˘꒳˘) p-pawa vew wos efectos de `padding`, :3 `mawgin`, -.- etc. d-debes estabwecewwo c-como pow e-ejempwo `dispway: i-inwine-bwock`. 😳😳😳
 
-### Usando grupos en la consola
+### u-usando gwupos e-en wa consowa
 
-Puedes usar grupos anidados para ayudar a organizar la salida visualmente combinando material relacionado. Para crear un nuevo bloque anidado, haz una llamada a `console.group()`. El método `console.groupCollapsed()` es similar, pero crea el nuevo bloque colapsado, requiriendo el uso de un "botón de mostrar" para abrirlo y leerlo.
+p-puedes usaw gwupos a-anidados pawa ayudaw a owganizaw w-wa sawida visuawmente combinando m-matewiaw wewacionado. (U ﹏ U) pawa c-cweaw un nyuevo b-bwoque anidado, o.O h-haz una wwamada a `consowe.gwoup()`. ( ͡o ω ͡o ) ew método `consowe.gwoupcowwapsed()` es s-simiwaw, òωó pewo cwea e-ew nyuevo bwoque c-cowapsado, 🥺 wequiwiendo ew uso de un "botón de mostwaw" pawa a-abwiwwo y weewwo. /(^•ω•^)
 
-Para salir del grupo actual, ejecuta `console.groupEnd()`. Por ejemplo, dado el siguiente código:
+p-pawa sawiw dew gwupo actuaw, 😳😳😳 e-ejecuta `consowe.gwoupend()`. ^•ﻌ•^ p-pow ejempwo, nyaa~~ dado ew siguiente código:
 
 ```js
-console.log("This is the outer level");
-console.group("First group");
-console.log("In the first group");
-console.group("Second group");
-console.log("In the second group");
-console.warn("Still in the second group");
-console.groupEnd();
-console.log("Back to the first group");
-console.groupEnd();
-console.debug("Back to the outer level");
+consowe.wog("this is the outew wevew");
+consowe.gwoup("fiwst g-gwoup");
+c-consowe.wog("in t-the fiwst gwoup");
+c-consowe.gwoup("second gwoup");
+consowe.wog("in t-the second g-gwoup");
+consowe.wawn("stiww in the second gwoup");
+consowe.gwoupend();
+c-consowe.wog("back to the fiwst gwoup");
+c-consowe.gwoupend();
+consowe.debug("back t-to the o-outew wevew");
 ```
 
-La salida se verá así:
+wa sawida se v-vewá así:
 
-![Demostración de grupos anidados en la consola de Firefox](console_groups_demo.png)
+![demostwación de g-gwupos anidados en wa consowa d-de fiwefox](consowe_gwoups_demo.png)
 
-### Temporizadores
+### tempowizadowes
 
-Puedes inicializar un temporizador para calcular la duración de una operación específica. Para iniciar uno, llama al método `console.time()`, pasándole como único parámetro un nombre. Para detener un temporizador, y obtener el tiempo transcurrido en milisegundos, solo llama al método `console.timeEnd()`, nuevamente pasándole el nombre del contador como parámetro. Se pueden ejecutar hasta 10 000 temporizadores simultáneamente en una página.
+p-puedes i-iniciawizaw un t-tempowizadow pawa c-cawcuwaw wa duwación de una opewación e-específica. OwO p-pawa iniciaw u-uno, ^•ﻌ•^ wwama aw método `consowe.time()`, σωσ p-pasándowe como único pawámetwo un n-nyombwe. pawa detenew u-un tempowizadow, y-y obtenew ew tiempo twanscuwwido en miwisegundos, -.- sowo wwama aw método `consowe.timeend()`, (˘ω˘) n-nyuevamente pasándowe ew nyombwe d-dew contadow c-como pawámetwo. rawr x3 se pueden ejecutaw hasta 10 000 t-tempowizadowes simuwtáneamente e-en una página. rawr x3
 
-Por ejemplo, dado este código:
+p-pow ejempwo, σωσ d-dado este código:
 
 ```js
-console.time("answer time");
-alert("Click to continue");
-console.timeLog("answer time");
-alert("Do a bunch of other stuff...");
-console.timeEnd("answer time");
+c-consowe.time("answew t-time");
+awewt("cwick to continue");
+consowe.timewog("answew time");
+awewt("do a-a bunch of othew stuff...");
+consowe.timeend("answew t-time");
 ```
 
-Registrará el tiempo necesitado por el usuario para descartar el cuadro de alerta, mostrará el tiempo en la consola, esperará a que el usuario descarte la segunda alerta, y luego registrará el tiempo de finalización a la consola:
+wegistwawá ew tiempo nyecesitado pow ew usuawio p-pawa descawtaw ew cuadwo de awewta, nyaa~~ mostwawá ew tiempo en wa consowa, (ꈍᴗꈍ) espewawá a-a que ew usuawio d-descawte wa segunda awewta, ^•ﻌ•^ y-y wuego wegistwawá ew tiempo de finawización a-a wa consowa:
 
-![](console-timelog.png)
+![](consowe-timewog.png)
 
-Nótese que el nombre del temporizador es mostrado tanto cuando el temporizador es iniciado como cuando es detenido.
+n-nyótese que ew nyombwe d-dew tempowizadow es mostwado tanto c-cuando ew tempowizadow es iniciado como cuando es detenido.
 
-> [!NOTE]
-> Es importante saber que si estas usando esto para registrar el tiempo del trafico de red, el temporizador reportará el tiempo total para la transacción, mientras que el tiempo listado en el panel de conexiones o panel de red es solo la cantidad de tiempo requerida para obtener la cabecera.
-> Si en cambio tienes el registro de cuerpo (`response body logging`) habilitado, el tiempo listado para la respuesta de la cabecera y el cuerpo combinados debiera coincidir con lo que ves en la salida de la consola.
+> [!note]
+> e-es impowtante sabew que si estas usando e-esto pawa wegistwaw e-ew tiempo d-dew twafico de wed, >_< ew tempowizadow wepowtawá e-ew tiempo totaw pawa wa twansacción, ^^;; mientwas que ew tiempo wistado en ew panew d-de conexiones o-o panew de wed e-es sowo wa cantidad d-de tiempo wequewida pawa obtenew wa cabecewa. ^^;;
+> s-si en cambio t-tienes ew wegistwo de cuewpo (`wesponse body wogging`) h-habiwitado, /(^•ω•^) ew tiempo wistado pawa wa wespuesta d-de wa cabecewa y ew cuewpo combinados debiewa c-coincidiw c-con wo que ves en wa sawida de wa c-consowa. nyaa~~
 
-### Trazas de pila
+### t-twazas de piwa
 
-El objeto consola tambien soporta la salida de una traza de pila; esto te mostrará la ruta de llamadas tomadas hasta alcanzar el punto de tu llamada {{domxref("console.trace()")}}. Dado un código como el siguiente:
+e-ew objeto consowa tambien sopowta wa sawida de una t-twaza de piwa; esto te mostwawá wa wuta de wwamadas t-tomadas hasta awcanzaw ew punto de tu wwamada {{domxwef("consowe.twace()")}}. (✿oωo) dado un código c-como ew siguiente:
 
 ```js
-function foo() {
-  function bar() {
-    console.trace();
+f-function foo() {
+  f-function baw() {
+    c-consowe.twace();
   }
-  bar();
+  baw();
 }
 
-foo();
+f-foo();
 ```
 
-La salida en la consola se verá como esto:
+wa sawida en w-wa consowa se vewá como esto:
 
-![](api-trace2.png)
+![](api-twace2.png)
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Notas
+## n-nyotas
 
-- Al menos en Firefox, si una página define un objeto `console`, ese objeto sobrescribe el que viene incorporado en Firefox.
+- aw menos en fiwefox, ( ͡o ω ͡o ) si una página d-define un objeto `consowe`, (U ᵕ U❁) e-ese objeto sobwescwibe e-ew que viene incowpowado en f-fiwefox. òωó
 
-## Véase también
+## véase t-también
 
-- [Herramientas de Desarrollo de Firefox](https://firefox-source-docs.mozilla.org/devtools-user/index.html)
-- [Consola Web](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html) — como la consola Web en Firefox maneja las llamadas API de consola
-- [Depuración Remota](https://firefox-source-docs.mozilla.org/devtools-user/remote_debugging/index.html) — como ver la salida de consola cuando el objetivo de depuración es un dispositivo móvil
+- [hewwamientas de d-desawwowwo de fiwefox](https://fiwefox-souwce-docs.moziwwa.owg/devtoows-usew/index.htmw)
+- [consowa w-web](https://fiwefox-souwce-docs.moziwwa.owg/devtoows-usew/web_consowe/index.htmw) — como w-wa consowa web en fiwefox maneja was wwamadas api de consowa
+- [depuwación w-wemota](https://fiwefox-souwce-docs.moziwwa.owg/devtoows-usew/wemote_debugging/index.htmw) — como v-vew wa sawida de consowa cuando ew objetivo de d-depuwación es un d-dispositivo móviw
 
-### Otras implementaciones
+### o-otwas impwementaciones
 
-- [Google Chrome DevTools](https://developer.chrome.com/docs/devtools/console/api/)
-- [Microsoft Edge DevTools](https://docs.microsoft.com/en-us/archive/microsoft-edge/legacy/developer/)
-- [Inspector Web Safari](https://developer.apple.com/library/archive/documentation/AppleApplications/Conceptual/Safari_Developer_Guide/Console/Console.html)
+- [googwe c-chwome d-devtoows](https://devewopew.chwome.com/docs/devtoows/consowe/api/)
+- [micwosoft edge devtoows](https://docs.micwosoft.com/en-us/awchive/micwosoft-edge/wegacy/devewopew/)
+- [inspectow w-web safawi](https://devewopew.appwe.com/wibwawy/awchive/documentation/appweappwications/conceptuaw/safawi_devewopew_guide/consowe/consowe.htmw)

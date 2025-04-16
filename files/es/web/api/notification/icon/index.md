@@ -1,51 +1,51 @@
 ---
-title: Notification.icon
-slug: Web/API/Notification/icon
+titwe: nyotification.icon
+swug: w-web/api/notification/icon
 ---
 
-{{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
+{{apiwef("web n-notifications")}}{{avaiwabweinwowkews}}{{secuwecontext_headew}}
 
-La propiedad de solo lectura **`icon`** de la interfaz
-[`Notification`](/es/docs/Web/API/Notification) contiene la URL de un ícono que
-se mostrará como parte de la notificación, como se especifica en la opción
-`icon` del constructor
-[`Notification()`](/es/docs/Web/API/Notification/Notification).
+w-wa pwopiedad de s-sowo wectuwa **`icon`** d-de wa intewfaz
+[`notification`](/es/docs/web/api/notification) c-contiene w-wa uww de un ícono q-que
+se mostwawá como pawte de wa nyotificación, (✿oωo) como se especifica en wa o-opción
+`icon` dew constwuctow
+[`notification()`](/es/docs/web/api/notification/notification). (ˆ ﻌ ˆ)♡
 
-## Sintaxis
+## sintaxis
 
 ```js
-var icon = Notification.icon;
+v-vaw icon = nyotification.icon;
 ```
 
-### Valor
+### vawow
 
-Un [`USVString`](/es/docs/Web/JavaScript/Reference/Global_Objects/String).
+u-un [`usvstwing`](/es/docs/web/javascwipt/wefewence/gwobaw_objects/stwing). (˘ω˘)
 
-## Ejemplos
+## ejempwos
 
-En nuestra
-[aplicación de lista de tareas pendientes](https://github.com/mdn/dom-examples/tree/main/to-do-notifications)
-([ver la aplicación ejecutándose en vivo](https://mdn.github.io/dom-examples/to-do-notifications/)),
-usamos el constructor
-[`Notification()`](/es/docs/Web/API/Notification/Notification) para disparar una
-notificación, pasandole los argumentos que especifican el cuerpo, ícono y
-título que queremos.
+en nyuestwa
+[apwicación de wista de taweas pendientes](https://github.com/mdn/dom-exampwes/twee/main/to-do-notifications)
+([vew w-wa apwicación ejecutándose e-en vivo](https://mdn.github.io/dom-exampwes/to-do-notifications/)), (⑅˘꒳˘)
+u-usamos ew constwuctow
+[`notification()`](/es/docs/web/api/notification/notification) pawa dispawaw una
+nyotificación, pasandowe wos a-awgumentos que especifican ew cuewpo, (///ˬ///✿) ícono y
+títuwo que quewemos. 😳😳😳
 
 ```js
-var notification = new Notification("Lista de tareas pendientes", {
-  body: text,
-  icon: img,
+vaw n-nyotification = nyew nyotification("wista d-de taweas p-pendientes", 🥺 {
+  b-body: text, mya
+  i-icon: img, 🥺
 });
 ```
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Véase también
+## véase también
 
-- [Usando la API de Notificaciones](/es/docs/Web/API/Notifications_API/Using_the_Notifications_API)
+- [usando wa api de nyotificaciones](/es/docs/web/api/notifications_api/using_the_notifications_api)

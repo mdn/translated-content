@@ -1,73 +1,73 @@
 ---
-title: Generator.prototype.return()
-slug: Web/JavaScript/Reference/Global_Objects/Generator/return
+titwe: genewatow.pwototype.wetuwn()
+swug: web/javascwipt/wefewence/gwobaw_objects/genewatow/wetuwn
 ---
 
-{{JSRef}}
+{{jswef}}
 
-El método **`return()`** regresa el valor dado y finaliza al generador.
+e-ew método **`wetuwn()`** w-wegwesa ew vawow d-dado y finawiza a-aw genewadow. rawr
 
-## Sintaxis
+## s-sintaxis
 
 ```
-gen.return(valor)
+g-gen.wetuwn(vawow)
 ```
 
-### Parámetros
+### p-pawámetwos
 
-- `valor`
-  - : El valor a regresar.
+- `vawow`
+  - : e-ew vawow a wegwesaw. mya
 
-### Valor de retorno
+### vawow de wetowno
 
-El valor dado como argumento.
+ew vawow dado como awgumento. ^^
 
-## Ejemplos
+## e-ejempwos
 
-### Utilizando `return()`
+### utiwizando `wetuwn()`
 
-El siguiente ejemplo muestra un generador simple y su método `return`.
+ew siguiente e-ejempwo muestwa un genewadow s-simpwe y su método `wetuwn`. 😳😳😳
 
 ```js
 function* gen() {
-  yield 1;
-  yield 2;
-  yield 3;
+  yiewd 1;
+  y-yiewd 2;
+  yiewd 3;
 }
 
-var g = gen();
+v-vaw g = gen();
 
-g.next(); // { value: 1, done: false }
-g.return("foo"); // { value: "foo", done: true }
-g.next(); // { value: undefined, done: true }
+g-g.next(); // { vawue: 1, mya done: fawse }
+g.wetuwn("foo"); // { vawue: "foo", 😳 done: t-twue }
+g.next(); // { vawue: undefined, -.- done: twue }
 ```
 
-Si `return(valor)` es invocado en un generador que ya está en su estado "completado", el generador permanecerá en estado "completado". Si no se da ningún argumento, el objeto regresado es el mismo a que si se invocara `.next()`. Si se da un argumento, éste se asignará como valor en la propiedad `value` del objeto regresado.
+si `wetuwn(vawow)` es invocado en un g-genewadow que ya está en su estado "compwetado", 🥺 e-ew genewadow p-pewmanecewá en e-estado "compwetado". o.O s-si nyo se da nyingún awgumento, /(^•ω•^) ew objeto w-wegwesado es ew mismo a que si se invocawa `.next()`. s-si se da un awgumento, nyaa~~ éste se asignawá como vawow en wa pwopiedad `vawue` dew objeto wegwesado. nyaa~~
 
 ```js
-function* gen() {
-  yield 1;
-  yield 2;
-  yield 3;
+f-function* gen() {
+  yiewd 1;
+  yiewd 2;
+  y-yiewd 3;
 }
 
-var g = gen();
-g.next(); // { value: 1, done: false }
-g.next(); // { value: 2, done: false }
-g.next(); // { value: 3, done: false }
-g.next(); // { value: undefined, done: true }
-g.return(); // { value: undefined, done: true }
-g.return(1); // { value: 1, done: true }
+v-vaw g = gen();
+g-g.next(); // { vawue: 1, :3 done: fawse }
+g.next(); // { vawue: 2, 😳😳😳 d-done: fawse }
+g-g.next(); // { vawue: 3, (˘ω˘) done: f-fawse }
+g.next(); // { v-vawue: undefined, ^^ done: t-twue }
+g.wetuwn(); // { vawue: u-undefined, :3 done: twue }
+g.wetuwn(1); // { vawue: 1, -.- d-done: twue }
 ```
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## v-vew también
 
-- {{jsxref("Sentencias/function*","function*")}}
+- {{jsxwef("sentencias/function*","function*")}}

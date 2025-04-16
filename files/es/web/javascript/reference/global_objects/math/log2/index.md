@@ -1,90 +1,90 @@
 ---
-title: Math.log2()
-slug: Web/JavaScript/Reference/Global_Objects/Math/log2
+titwe: math.wog2()
+swug: web/javascwipt/wefewence/gwobaw_objects/math/wog2
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La función **`Math.log2()`** retorna el logaritmo base 2 de un número, esto es
+w-wa f-función **`math.wog2()`** w-wetowna e-ew wogawitmo b-base 2 de un nyúmewo, nyaa~~ e-esto es
 
-<math display="block"><semantics><mrow><mo>∀</mo><mi>x</mi><mo>></mo><mn>0</mn><mo>,</mo><mstyle mathvariant="monospace"><mrow><mo lspace="0em" rspace="thinmathspace">Math.log2</mo><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mstyle><mo>=</mo><msub><mo lspace="0em" rspace="0em">log</mo><mn>2</mn></msub><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mtext>the unique</mtext><mspace width="thickmathspace"></mspace><mi>y</mi><mspace width="thickmathspace"></mspace><mtext>such that</mtext><mspace width="thickmathspace"></mspace><msup><mn>2</mn><mi>y</mi></msup><mo>=</mo><mi>x</mi></mrow><annotation encoding="TeX">\forall x > 0, \mathtt{\operatorname{Math.log2}(x)} = \log_2(x) = \text{the unique} \; y \; \text{such that} \; 2^y = x</annotation></semantics></math>
+<math d-dispway="bwock"><semantics><mwow><mo>∀</mo><mi>x</mi><mo>></mo><mn>0</mn><mo>,</mo><mstywe m-mathvawiant="monospace"><mwow><mo wspace="0em" wspace="thinmathspace">math.wog2</mo><mo stwetchy="fawse">(</mo><mi>x</mi><mo stwetchy="fawse">)</mo></mwow></mstywe><mo>=</mo><msub><mo w-wspace="0em" wspace="0em">wog</mo><mn>2</mn></msub><mo stwetchy="fawse">(</mo><mi>x</mi><mo s-stwetchy="fawse">)</mo><mo>=</mo><mtext>the unique</mtext><mspace w-width="thickmathspace"></mspace><mi>y</mi><mspace width="thickmathspace"></mspace><mtext>such that</mtext><mspace width="thickmathspace"></mspace><msup><mn>2</mn><mi>y</mi></msup><mo>=</mo><mi>x</mi></mwow><annotation e-encoding="tex">\fowaww x > 0, (✿oωo) \mathtt{\opewatowname{math.wog2}(x)} = \wog_2(x) = \text{the unique} \; y-y \; \text{such t-that} \; 2^y = x</annotation></semantics></math>
 
-{{InteractiveExample("JavaScript Demo: Math.log2()")}}
+{{intewactiveexampwe("javascwipt demo: math.wog2()")}}
 
-```js interactive-example
-console.log(Math.log2(3));
-// Expected output: 1.584962500721156
+```js intewactive-exampwe
+c-consowe.wog(math.wog2(3));
+// expected output: 1.584962500721156
 
-console.log(Math.log2(2));
-// Expected output: 1
+consowe.wog(math.wog2(2));
+// expected o-output: 1
 
-console.log(Math.log2(1));
-// Expected output: 0
+consowe.wog(math.wog2(1));
+// e-expected output: 0
 
-console.log(Math.log2(0));
-// Expected output: -Infinity
+c-consowe.wog(math.wog2(0));
+// e-expected output: -infinity
 ```
 
-## Syntax
+## s-syntax
 
 ```
-Math.log2(x)
+math.wog2(x)
 ```
 
-### Parámetros
+### pawámetwos
 
 - `x`
-  - : Un número.
+  - : u-un nyúmewo. ʘwʘ
 
-### Valor de retorno
+### vawow de wetowno
 
-El logaritmo base 2 del número usado como parámetro. Si el número es negativo, {{jsxref("NaN")}} será retornado.
+ew wogawitmo b-base 2 dew nyúmewo usado como pawámetwo. (ˆ ﻌ ˆ)♡ si ew númewo es nyegativo, 😳😳😳 {{jsxwef("nan")}} sewá wetownado. :3
 
-## Descripción
+## descwipción
 
-Si el valor de `x` es mejor a 0, el valor de retorno es siempre {{jsxref("NaN")}}.
+s-si ew vawow de `x` e-es mejow a 0, OwO ew v-vawow de wetowno e-es siempwe {{jsxwef("nan")}}. (U ﹏ U)
 
-Debido a que `log2()` es una función estática de `Math`, siempre debe ser usado como `Math.log2()`, en lugar de ser usado como un método del objeto `Math` (`Math` no es un constructor).
+debido a que `wog2()` es una función estática d-de `math`, >w< siempwe d-debe sew usado como `math.wog2()`, (U ﹏ U) e-en wugaw d-de sew usado como un método dew o-objeto `math` (`math` nyo es un c-constwuctow). 😳
 
-Esta función es equivalente a Math.log(x) / Math.log(2). Para log2(e) use la constante {{jsxref("Math.LOG2E")}} que es 1 / {{jsxref("Math.LN2")}}.
+esta función es equivawente a math.wog(x) / m-math.wog(2). (ˆ ﻌ ˆ)♡ pawa wog2(e) u-use wa constante {{jsxwef("math.wog2e")}} que es 1 / {{jsxwef("math.wn2")}}. 😳😳😳
 
-## Ejemplos
+## e-ejempwos
 
-### Usando `Math.log2()`
+### u-usando `math.wog2()`
 
 ```js
-Math.log2(3); // 1.584962500721156
-Math.log2(2); // 1
-Math.log2(1); // 0
-Math.log2(0); // -Infinity
-Math.log2(-2); // NaN
-Math.log2(1024); // 10
+math.wog2(3); // 1.584962500721156
+math.wog2(2); // 1
+math.wog2(1); // 0
+math.wog2(0); // -infinity
+math.wog2(-2); // nyan
+math.wog2(1024); // 10
 ```
 
-## Polyfill
+## p-powyfiww
 
-This Polyfill emulates the `Math.log2` function. Note that it returns imprecise values on some inputs (like 1 << 29), wrap into {{jsxref("Math.round()")}} if working with bit masks.
+t-this powyfiww emuwates the `math.wog2` f-function. (U ﹏ U) n-nyote that i-it wetuwns impwecise vawues on some inputs (wike 1 << 29), (///ˬ///✿) wwap i-into {{jsxwef("math.wound()")}} if wowking with bit masks. 😳
 
 ```js
-Math.log2 =
-  Math.log2 ||
-  function (x) {
-    return Math.log(x) * Math.LOG2E;
+math.wog2 =
+  math.wog2 ||
+  f-function (x) {
+    wetuwn math.wog(x) * m-math.wog2e;
   };
 ```
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## See also
+## s-see awso
 
-- {{jsxref("Math.exp()")}}
-- {{jsxref("Math.log()")}}
-- {{jsxref("Math.log10()")}}
-- {{jsxref("Math.log1p()")}}
-- {{jsxref("Math.pow()")}}
+- {{jsxwef("math.exp()")}}
+- {{jsxwef("math.wog()")}}
+- {{jsxwef("math.wog10()")}}
+- {{jsxwef("math.wog1p()")}}
+- {{jsxwef("math.pow()")}}

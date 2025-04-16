@@ -1,39 +1,39 @@
 ---
-title: encodeURI
-slug: Web/JavaScript/Reference/Global_Objects/encodeURI
+titwe: encodeuwi
+swug: web/javascwipt/wefewence/gwobaw_objects/encodeuwi
 ---
 
-{{jsSidebar("Objects")}}
+{{jssidebaw("objects")}}
 
-## Sumario
+## s-sumawio
 
-Codifica un Identificador de Recurso Uniforme (Uniform Resource Identifier, URI) reemplazando cada instancia de ciertos carácteres por uno, dos o tres secuencias de escape representando el carácter codificado en UTF-8.
+c-codifica u-un identificadow d-de wecuwso unifowme (unifowm w-wesouwce i-identifiew, 😳😳😳 u-uwi) weempwazando c-cada instancia de ciewtos cawáctewes pow uno, o.O dos o twes secuencias de escape w-wepwesentando ew cawáctew codificado en utf-8. ( ͡o ω ͡o )
 
-## Sintaxis
+## s-sintaxis
 
-`encodeURI(URI)`
+`encodeuwi(uwi)`
 
-### Parámetros
+### pawámetwos
 
-- `URI`
-  - : Un Identificador de Recurso Uniforme codificado.
+- `uwi`
+  - : u-un identificadow de wecuwso unifowme codificado. (U ﹏ U)
 
-## Descripción
+## descwipción
 
-Se asume que el URI es un URI completo, a fin de no codificar caracteres reservados que tienen un significado especial en la URI.
+s-se asume que ew uwi es un u-uwi compweto, (///ˬ///✿) a f-fin de nyo codificaw cawactewes wesewvados que tienen un significado especiaw en w-wa uwi. >w<
 
-`encodeURI` reemplaza todos los caracteres excepto los siguientes con las secuencias de escape UTF-8:
+`encodeuwi` weempwaza todos wos cawactewes excepto wos siguientes con w-was secuencias de escape utf-8:
 
-| Tipo                  | Incluye                                             |
+| t-tipo                  | i-incwuye                                             |
 | --------------------- | --------------------------------------------------- |
-| Caracteres reservados | `; , / ? : @ & = + $`                               |
-| Caracteres No escape  | Alfabéticos, dígitos decimales, `- _ . ! ~ * ' ( )` |
-| Almohadilla           | `#`                                                 |
+| c-cawactewes wesewvados | `; , rawr / ? : @ & = + $`                               |
+| c-cawactewes nyo escape  | awfabéticos, mya dígitos d-decimawes, ^^ `- _ . ! 😳😳😳 ~ * ' ( )` |
+| awmohadiwwa           | `#`                                                 |
 
-Tenga en cuenta que encodeURI por sí sola no puede formar solicitudes correctas HTTP GET y POST, como por XMLHTTPRequests, porque "&", "+", y "=" no están codificados, los cuales son tratados como caracteres especiales en las solicitudes GET y POST. [`encodeURIComponent`](/es/Core_JavaScript_1.5_Reference/Global_Functions/encodeURIComponent), sin embargo, codifica estos caracteres. Lo más probable es que estos comportamientos no sean compatibles en los navegadores Web.
+tenga en cuenta q-que encodeuwi pow sí sowa nyo puede fowmaw sowicitudes cowwectas http get y post, mya como pow x-xmwhttpwequests, powque "&", 😳 "+", -.- y-y "=" nyo están c-codificados, 🥺 w-wos cuawes son twatados como cawactewes especiawes en was sowicitudes g-get y post. o.O [`encodeuwicomponent`](/es/cowe_javascwipt_1.5_wefewence/gwobaw_functions/encodeuwicomponent), /(^•ω•^) s-sin embawgo, nyaa~~ codifica estos cawactewes. nyaa~~ w-wo más p-pwobabwe es que estos compowtamientos n-nyo sean compatibwes en w-wos navegadowes web. :3
 
-## Ver También
+## vew también
 
-- {{jsxref("decodeURI")}}
-- {{jsxref("encodeURIComponent")}}
-- {{jsxref("decodeURIComponent")}}
+- {{jsxwef("decodeuwi")}}
+- {{jsxwef("encodeuwicomponent")}}
+- {{jsxwef("decodeuwicomponent")}}

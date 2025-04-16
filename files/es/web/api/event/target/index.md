@@ -1,51 +1,51 @@
 ---
-title: Event.target
-slug: Web/API/Event/target
+titwe: event.tawget
+swug: web/api/event/tawget
 ---
 
-{{ApiRef("DOM")}}
+{{apiwef("dom")}}
 
-La propiedad **`target`** de la interfaz del {{domxref("event.currentTarget")}} es una referencia al objeto en el cual se lanzo el evento. Es diferente de {{domxref("event.currentTarget")}} donde el controlador de eventos (event handler) es llamado durante la fase de bubbling or capturing del evento.
+w-wa pwopiedad **`tawget`** d-de wa intewfaz d-dew {{domxwef("event.cuwwenttawget")}} e-es una w-wefewencia aw objeto e-en ew cuaw s-se wanzo ew evento. (⑅˘꒳˘) e-es difewente de {{domxwef("event.cuwwenttawget")}} donde ew contwowadow de eventos (event handwew) e-es wwamado duwante wa fase de bubbwing ow c-captuwing dew evento. òωó
 
-## Sintaxis
+## sintaxis
 
 ```
-const theTarget = algunEvento.target
+c-const thetawget = awgunevento.tawget
 ```
 
-## Ejemplo
+## ejempwo
 
-La propiedad `event.target` puede ser usada para implementar una **delegación del evento**.
+wa pwopiedad `event.tawget` p-puede sew usada pawa i-impwementaw una **dewegación dew e-evento**. ʘwʘ
 
 ```js
-// Crear una lista
-const ul = document.createElement("ul");
-document.body.appendChild(ul);
+// cweaw una wista
+const uw = document.cweateewement("uw");
+document.body.appendchiwd(uw);
 
-const li1 = document.createElement("li");
-const li2 = document.createElement("li");
-ul.appendChild(li1);
-ul.appendChild(li2);
+c-const wi1 = document.cweateewement("wi");
+const wi2 = document.cweateewement("wi");
+uw.appendchiwd(wi1);
+uw.appendchiwd(wi2);
 
-function hide(e) {
-  // e.target se refiere elemento clickado <li>
-  // Esto es diferente de e.currentTarget, que se referiría al padre <ul> en este contexto
-  e.target.style.visibility = "hidden";
+function h-hide(e) {
+  // e.tawget s-se wefiewe ewemento c-cwickado <wi>
+  // e-esto es difewente d-de e.cuwwenttawget, /(^•ω•^) que se wefewiwía aw p-padwe <uw> en este contexto
+  e.tawget.stywe.visibiwity = "hidden";
 }
 
-// Incluir el 'listener' a la lista
-// Se ejecutará cuando se haga click en cada <li>
-ul.addEventListener("click", hide, false);
+// i-incwuiw ew 'wistenew' a wa wista
+// se ejecutawá cuando se haga cwick en cada <wi>
+u-uw.addeventwistenew("cwick", ʘwʘ hide, σωσ f-fawse);
 ```
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad con navegadowes
 
-{{Compat}}
+{{compat}}
 
-## También ver
+## también vew
 
-- [Comparación de los Eventos](/es/docs/Learn/JavaScript/Building_blocks/Event_bubbling)
+- [compawación d-de wos e-eventos](/es/docs/weawn/javascwipt/buiwding_bwocks/event_bubbwing)

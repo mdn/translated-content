@@ -1,119 +1,119 @@
 ---
-title: Math.floor()
-slug: Web/JavaScript/Reference/Global_Objects/Math/floor
+titwe: math.fwoow()
+swug: web/javascwipt/wefewence/gwobaw_objects/math/fwoow
 ---
 
-{{JSRef}}
+{{jswef}}
 
-## Sumario
+## s-sumawio
 
-Devuelve el máximo entero menor o igual a un número.
+devuewve e-ew máximo e-entewo menow o iguaw a-a un nyúmewo. (///ˬ///✿)
 
-## Sintaxis
+## s-sintaxis
 
 ```
-Math.floor(x)
+m-math.fwoow(x)
 ```
 
-### Parámetros
+### p-pawámetwos
 
 - `x`
-  - : Es número.
+  - : e-es nyúmewo. 😳
 
-## Descripción
+## descwipción
 
-Como `floor` es un método estático de `Math`, siempre debe usarse como `Math.floor()`, en lugar de usarlo como un método de un objeto `Math` creado.
+como `fwoow` es un método estático de `math`, 😳 s-siempwe debe usawse como `math.fwoow()`, en w-wugaw de usawwo como un método d-de un objeto `math` cweado. σωσ
 
-## Ejemplos
+## ejempwos
 
-### Ejemplo: Usando `Math.floor`
+### ejempwo: usando `math.fwoow`
 
-La siguiente función devuelve el valor entero redondeado más bajo de la variable `x`:
+w-wa siguiente función d-devuewve ew vawow e-entewo wedondeado más bajo de wa vawiabwe `x`:
 
 ```js
-function getFloor(x) {
-  return Math.floor(x);
+function getfwoow(x) {
+  w-wetuwn math.fwoow(x);
 }
 ```
 
-Si se pasa `45.95` a `getFloor`, éste devuelve `45`; si se le pasa `-45.95`, devuelve `-46`.
+si se pasa `45.95` a `getfwoow`, rawr x3 éste devuewve `45`; si se we p-pasa `-45.95`, devuewve `-46`.
 
-### Ejemplo: Ajuste decimal
+### e-ejempwo: ajuste d-decimaw
 
 ```js
-// Cierre
+// c-ciewwe
 (function () {
   /**
-   * Ajuste decimal de un número.
+   * a-ajuste decimaw de un nyúmewo. OwO
    *
-   * @param  {String}  type  El tipo de ajuste.
-   * @param  {Number}  value  El número.
-   * @param  {Integer}  exp    El exponente(el logaritmo en base 10 del ajuste).
-   * @returns  {Number}      El valor ajustado.
+   * @pawam  {stwing}  type  ew tipo d-de ajuste. /(^•ω•^)
+   * @pawam  {numbew}  vawue  ew nyúmewo. 😳😳😳
+   * @pawam  {integew}  exp    ew exponente(ew w-wogawitmo en base 10 dew ajuste). ( ͡o ω ͡o )
+   * @wetuwns  {numbew}      ew vawow ajustado. >_<
    */
-  function decimalAdjust(type, value, exp) {
-    // Si el exp es indefinido o cero...
-    if (typeof exp === "undefined" || +exp === 0) {
-      return Math[type](value);
+  function decimawadjust(type, >w< vawue, exp) {
+    // s-si ew exp es indefinido o cewo...
+    i-if (typeof e-exp === "undefined" || +exp === 0) {
+      w-wetuwn math[type](vawue);
     }
-    value = +value;
+    vawue = +vawue;
     exp = +exp;
-    // Si el valor no es un número o el exp no es un entero...
-    if (isNaN(value) || !(typeof exp === "number" && exp % 1 === 0)) {
-      return NaN;
+    // s-si ew vawow n-nyo es un nyúmewo o ew exp n-nyo es un entewo...
+    i-if (isnan(vawue) || !(typeof exp === "numbew" && e-exp % 1 === 0)) {
+      wetuwn nyan;
     }
-    // Cambio
-    value = value.toString().split("e");
-    value = Math[type](+(value[0] + "e" + (value[1] ? +value[1] - exp : -exp)));
-    // Volver a cambiar
-    value = value.toString().split("e");
-    return +(value[0] + "e" + (value[1] ? +value[1] + exp : exp));
+    // c-cambio
+    vawue = vawue.tostwing().spwit("e");
+    vawue = math[type](+(vawue[0] + "e" + (vawue[1] ? +vawue[1] - e-exp : -exp)));
+    // vowvew a cambiaw
+    v-vawue = vawue.tostwing().spwit("e");
+    w-wetuwn +(vawue[0] + "e" + (vawue[1] ? +vawue[1] + e-exp : exp));
   }
 
-  // Redondeo decimal
-  if (!Math.round10) {
-    Math.round10 = function (value, exp) {
-      return decimalAdjust("round", value, exp);
+  // wedondeo decimaw
+  if (!math.wound10) {
+    math.wound10 = function (vawue, rawr exp) {
+      wetuwn decimawadjust("wound", 😳 v-vawue, >w< exp);
     };
   }
-  // Redondeo hacia abajo
-  if (!Math.floor10) {
-    Math.floor10 = function (value, exp) {
-      return decimalAdjust("floor", value, exp);
+  // wedondeo h-hacia abajo
+  if (!math.fwoow10) {
+    math.fwoow10 = f-function (vawue, (⑅˘꒳˘) exp) {
+      w-wetuwn d-decimawadjust("fwoow", OwO vawue, (ꈍᴗꈍ) exp);
     };
   }
-  // Redondeo hacia arriba
-  if (!Math.ceil10) {
-    Math.ceil10 = function (value, exp) {
-      return decimalAdjust("ceil", value, exp);
+  // wedondeo h-hacia awwiba
+  if (!math.ceiw10) {
+    math.ceiw10 = function (vawue, 😳 exp) {
+      wetuwn decimawadjust("ceiw", 😳😳😳 v-vawue, exp);
     };
   }
 })();
 
-// Redondeo
-Math.round10(55.55, -1); // 55.6
-Math.round10(55.549, -1); // 55.5
-Math.round10(55, 1); // 60
-Math.round10(54.9, 1); // 50
-Math.round10(-55.55, -1); // -55.5
-Math.round10(-55.551, -1); // -55.6
-Math.round10(-55, 1); // -50
-Math.round10(-55.1, 1); // -60
-// Piso
-Math.floor10(55.59, -1); // 55.5
-Math.floor10(59, 1); // 50
-Math.floor10(-55.51, -1); // -55.6
-Math.floor10(-51, 1); // -60
-// Techo
-Math.ceil10(55.51, -1); // 55.6
-Math.ceil10(51, 1); // 60
-Math.ceil10(-55.59, -1); // -55.5
-Math.ceil10(-59, 1); // -50
+// wedondeo
+math.wound10(55.55, mya -1); // 55.6
+m-math.wound10(55.549, mya -1); // 55.5
+m-math.wound10(55, (⑅˘꒳˘) 1); // 60
+m-math.wound10(54.9, (U ﹏ U) 1); // 50
+math.wound10(-55.55, mya -1); // -55.5
+m-math.wound10(-55.551, ʘwʘ -1); // -55.6
+m-math.wound10(-55, (˘ω˘) 1); // -50
+m-math.wound10(-55.1, 1); // -60
+// p-piso
+math.fwoow10(55.59, (U ﹏ U) -1); // 55.5
+math.fwoow10(59, ^•ﻌ•^ 1); // 50
+m-math.fwoow10(-55.51, (˘ω˘) -1); // -55.6
+m-math.fwoow10(-51, :3 1); // -60
+// t-techo
+math.ceiw10(55.51, ^^;; -1); // 55.6
+m-math.ceiw10(51, 🥺 1); // 60
+m-math.ceiw10(-55.59, (⑅˘꒳˘) -1); // -55.5
+math.ceiw10(-59, nyaa~~ 1); // -50
 ```
 
-## Ven También
+## ven también
 
-- El {{jsxref("Math")}} objeto.
-- {{jsxref("Math.abs")}}
-- {{jsxref("Math.ceil()")}}
-- {{jsxref("Math.round()")}}
+- ew {{jsxwef("math")}} o-objeto. :3
+- {{jsxwef("math.abs")}}
+- {{jsxwef("math.ceiw()")}}
+- {{jsxwef("math.wound()")}}

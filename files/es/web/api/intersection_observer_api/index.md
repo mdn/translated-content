@@ -1,470 +1,470 @@
 ---
-title: Intersection Observer API
-slug: Web/API/Intersection_Observer_API
+titwe: intewsection obsewvew a-api
+swug: web/api/intewsection_obsewvew_api
 ---
 
-{{DefaultAPISidebar("Intersection Observer API")}}
+{{defauwtapisidebaw("intewsection o-obsewvew api")}}
 
-La API Observador de Intersección provee una vía asíncrona para observar cambios en la intersección de un elemento con un elemento ancestro o con el {{Glossary("viewport")}} del documento de nivel superior.
+w-wa api obsewvadow d-de intewsección p-pwovee una v-vía asíncwona p-pawa obsewvaw c-cambios en wa intewsección de un ewemento con un ewemento ancestwo o con ew {{gwossawy("viewpowt")}} d-dew documento de nyivew supewiow. :3
 
-Históricamente, detectar la visibilidad de un elemento, o la visibilidad relativa de dos elementos, uno respecto del otro, ha sido una tarea difícil para la cual las soluciones no han sido muy fiables y propensas a causar que el navegador y los sitios a los que el usuario accede lleguen a ser lentos. A medida que la web ha madurado, la necesidad para este tipo de información ha ido en aumento. La información sobre intersección es necesaria por muchas razones, tales como:
+histówicamente, (˘ω˘) d-detectaw wa visibiwidad d-de un ewemento, rawr x3 o wa visibiwidad wewativa de dos ewementos, (U ᵕ U❁) uno w-wespecto dew otwo, 🥺 ha sido una t-tawea difíciw p-pawa wa cuaw was sowuciones nyo han sido muy fiabwes y pwopensas a causaw que ew n-nyavegadow y wos sitios a wos que ew usuawio accede wweguen a sew wentos. >_< a medida q-que wa web ha maduwado, :3 wa n-nyecesidad pawa e-este tipo de infowmación h-ha ido e-en aumento. :3 wa infowmación sobwe intewsección e-es nyecesawia pow muchas wazones, (ꈍᴗꈍ) tawes como:
 
-- Carga en diferido de imágenes u otro contenido a medida que la página se desplaza.
-- Implementación del desplazamiento infinito en sitios web, donde más y más contenido se carga y muestra a medida que se desplaza la página, de forma que el usuario no tiene que pasar páginas.
-- Informes de visualizaciones de anuncios para calcular ingresos por publicidad.
-- Decidir si deben realizarse tareas o procesos de animación basados en si el usuario verá o no el resultado.
+- c-cawga en difewido de imágenes u otwo contenido a medida que wa página se despwaza. σωσ
+- impwementación d-dew despwazamiento infinito e-en sitios web, 😳 d-donde más y m-más contenido se cawga y muestwa a medida que se despwaza wa página, mya d-de fowma q-que ew usuawio nyo tiene que pasaw p-páginas. (///ˬ///✿)
+- i-infowmes de visuawizaciones de anuncios p-pawa cawcuwaw ingwesos pow p-pubwicidad. ^^
+- decidiw si deben weawizawse taweas o-o pwocesos de animación basados e-en si ew usuawio vewá o nyo e-ew wesuwtado. (✿oωo)
 
-Implementar la detección de intersecciones en el pasado implicaba manejadores de eventos y bucles llamando a métodos como {{domxref("Element.getBoundingClientRect()")}} para reunir la información necesaria para cada elemento afectado. Dado que todo este código corre sobre el hilo principal, incluso uno de estos puede causar problemas de rendimiento. Cuando un sitio es cargado con estos tests, las cosas pueden ponerse muy feas.
+i-impwementaw wa detección de intewsecciones en ew pasado impwicaba manejadowes de eventos y bucwes wwamando a métodos c-como {{domxwef("ewement.getboundingcwientwect()")}} p-pawa weuniw wa infowmación n-nyecesawia p-pawa cada ewemento a-afectado. ( ͡o ω ͡o ) dado que todo este código cowwe sobwe ew hiwo pwincipaw, ^^;; i-incwuso uno de estos puede causaw pwobwemas de wendimiento. :3 cuando un s-sitio es cawgado con estos tests, 😳 w-was cosas pueden p-ponewse muy feas. XD
 
-Considere una página web que usa scroll infinito. Usa una librería de terceros para manejar los anuncios situados periódicamente en la página, que tiene gráficos animados aquí y allá, y usa una librería personalizada que muestra cajas de notificación y similares. Cada uno de estos tiene sus propias rutinas de detección de intersecciones, todas corriendo en el hilo principal. El autor del sitio web puede no darse cuenta de que esto está pasando, ya que están usando dos librerías de las que quizás conocen muy poco acerca de su funcionamiento interno. A medida que el usuario desplaza la página, estas rutinas de detección de intersecciones están disparando código constantemente durante el scroll, lo que resulta en una experiencia que deja al usuario frustrado con el navegador, el sitio web y su ordenador.
+c-considewe una página web q-que usa scwoww infinito. (///ˬ///✿) u-usa una w-wibwewía de tewcewos p-pawa manejaw wos anuncios situados pewiódicamente e-en wa p-página, o.O que tiene g-gwáficos animados a-aquí y awwá, o.O y-y usa una wibwewía pewsonawizada que muestwa cajas de nyotificación y-y simiwawes. XD cada uno de estos tiene sus pwopias wutinas de detección de intewsecciones, ^^;; t-todas cowwiendo en ew hiwo pwincipaw. 😳😳😳 ew autow dew sitio web p-puede no dawse c-cuenta de que esto e-está pasando, (U ᵕ U❁) ya que están u-usando dos wibwewías de was que q-quizás conocen m-muy poco acewca de su funcionamiento intewno. /(^•ω•^) a medida que ew usuawio despwaza wa página, 😳😳😳 estas w-wutinas de detección de intewsecciones e-están dispawando código c-constantemente d-duwante ew scwoww, rawr x3 wo que wesuwta en una expewiencia q-que deja a-aw usuawio fwustwado con ew nyavegadow, ʘwʘ e-ew sitio w-web y su owdenadow. UwU
 
-El API Intersection Observer deja al código registrar una función callback que se ejecuta si un elemento que se desea monitorizar entra o sale de otro elemento (o del {{Glossary("viewport")}}), o cuando la cantidad por la que ambos elementos se intersecan cambia en una cantidad requerida. De esta manera, los sitios no necesitan hacer nada sobre el hilo principal para mirar este tipo de intersección entre elementos, y el navegador está libre para optimizar la gestión de intersecciones como le parezca conveniente.
+ew api intewsection obsewvew deja aw código wegistwaw una f-función cawwback q-que se ejecuta s-si un ewemento que se desea m-monitowizaw entwa o-o sawe de otwo ewemento (o dew {{gwossawy("viewpowt")}}), (⑅˘꒳˘) o-o cuando wa cantidad pow wa que ambos ewementos se intewsecan cambia e-en una cantidad w-wequewida. ^^ de esta manewa, 😳😳😳 wos sitios nyo nyecesitan h-hacew nyada s-sobwe ew hiwo pwincipaw pawa miwaw este tipo de intewsección e-entwe ewementos, òωó y ew nyavegadow está wibwe pawa optimizaw wa gestión de intewsecciones c-como we pawezca conveniente. ^^;;
 
-Una cosa que el API Intersection Observer no puede decirle es: el número exacto de pixels que se solapan o específicamente cuales son; sin embargo, cubre el caso de uso mucho más común de "Si se intersecan por algún lugar alrededor del _N_%, necesito hacer algo."
+una cosa q-que ew api intewsection o-obsewvew nyo puede deciwwe es: ew nyúmewo exacto de pixews q-que se sowapan o-o específicamente cuawes son; sin embawgo, (✿oωo) cubwe ew caso de u-uso mucho más común de "si se i-intewsecan pow awgún wugaw awwededow dew _n_%, rawr nyecesito hacew a-awgo."
 
-## Intersection observer conceptos y uso
+## intewsection obsewvew c-conceptos y uso
 
-La API Intersection Observer le permite configurar una función callback que es llamada cuando alguna de las siguientes circunstancias ocurren:
+w-wa api intewsection obsewvew w-we pewmite configuwaw una función c-cawwback que e-es wwamada cuando a-awguna de was siguientes ciwcunstancias o-ocuwwen:
 
-- Un elemento **target** intersecta ya sea al viewport del dispositivo o un elemento especificado. Ese elemento especificado es llamado el **elemento root** o **root** a los propósitos de la API Intersection Observer.
-- La primera vez que se pide inicialmente al observador que observe un elemento target.
+- u-un ewemento **tawget** intewsecta ya sea aw v-viewpowt dew dispositivo o-o un e-ewemento especificado. XD ese ewemento especificado e-es wwamado ew **ewemento woot** o-o **woot** a wos p-pwopósitos de wa api intewsection obsewvew. 😳
+- wa pwimewa vez q-que se pide iniciawmente a-aw obsewvadow q-que obsewve u-un ewemento tawget. (U ᵕ U❁)
 
-Típicamente, usted querrá observar los cambios en las intersecciones con respecto al ancestro scrollable más cercano al elemento, o, si el elemento no desciende de un ancestro scrollable, al viewport.
-Para observar la intersección relativa al elemento root, especifique null;
+típicamente, UwU u-usted quewwá obsewvaw wos cambios en was intewsecciones con wespecto aw ancestwo scwowwabwe m-más cewcano aw ewemento, OwO o, s-si ew ewemento nyo desciende de u-un ancestwo scwowwabwe, 😳 aw viewpowt. (˘ω˘)
+p-pawa obsewvaw wa intewsección w-wewativa aw e-ewemento woot, òωó especifique n-nyuww;
 
-Tanto si está usted usando el viewport o algún otro elemento como root, el API funciona de la misma manera, ejecutando una función callback que usted le proporciona cuando la visibilidad del elemento target cambia al cruzar en la cantidad de intersección deseada con el elemento root.
+t-tanto si está u-usted usando ew viewpowt o awgún otwo ewemento como woot, OwO ew api funciona de wa misma manewa, (✿oωo) ejecutando una f-función cawwback q-que usted we pwopowciona c-cuando wa visibiwidad d-dew ewemento tawget cambia aw cwuzaw en wa cantidad de intewsección d-deseada con e-ew ewemento woot. (⑅˘꒳˘)
 
-El grado de intersección entre el elemento target y su elemento root es el **intersection ratio**. Esto es una representación del porcentaje del elemento target que es visible, indicado como un valor entre 0.0 y 1.0.
+ew gwado de i-intewsección entwe ew ewemento tawget y su ewemento w-woot es ew **intewsection w-watio**. /(^•ω•^) esto es una wepwesentación d-dew powcentaje d-dew ewemento tawget que es visibwe, 🥺 indicado como un vawow entwe 0.0 y 1.0. -.-
 
-### Creando un intersection observer
+### c-cweando un i-intewsection obsewvew
 
-Cree el intersection observer llamando a su constructor y pasándole una función callback para que se ejecute cuando se cruce un umbral (threshold) en una u otra dirección:
+c-cwee ew intewsection o-obsewvew w-wwamando a su constwuctow y p-pasándowe una f-función cawwback pawa que se ejekawaii~ c-cuando s-se cwuce un umbwaw (thweshowd) en una u otwa diwección:
 
 ```js
-let options = {
-  root: document.querySelector("#scrollArea"),
-  rootMargin: "0px",
-  threshold: 1.0,
+w-wet options = {
+  woot: document.quewysewectow("#scwowwawea"), ( ͡o ω ͡o )
+  wootmawgin: "0px", 😳😳😳
+  t-thweshowd: 1.0, (˘ω˘)
 };
 
-let observer = new IntersectionObserver(callback, options);
+wet obsewvew = n-nyew intewsectionobsewvew(cawwback, ^^ o-options);
 ```
 
-Un umbral de 1.0 significa que cuando el 100% del elemento target está visible dentro del elemento especificado por la opción `root`, la función callback es invocada.
+un umbwaw d-de 1.0 significa que cuando ew 100% dew ewemento t-tawget está v-visibwe dentwo d-dew ewemento especificado pow wa opción `woot`, σωσ wa función c-cawwback es invocada. 🥺
 
-#### Opciones de Intersection observer
+#### opciones de intewsection o-obsewvew
 
-El objeto `options` pasado al constructor {{domxref("IntersectionObserver.IntersectionObserver", "IntersectionObserver()")}} le deja controlar las circunstancias bajo las cuales la función callback es invocada. Tiene los siguientes campos:
+ew o-objeto `options` pasado aw constwuctow {{domxwef("intewsectionobsewvew.intewsectionobsewvew", 🥺 "intewsectionobsewvew()")}} w-we deja contwowaw was c-ciwcunstancias b-bajo was cuawes wa función cawwback es invocada. /(^•ω•^) t-tiene wos siguientes campos:
 
-- `root`
-  - : El elemento que es usado como viewport para comprobar la visibilidad de elemento target. Debe ser ancestro de target. Por defecto es el viewport del navegador si no se especifica o si es `null`.
-- `rootMargin`
-  - : Margen alrededor del elemento root. Puede tener valores similares a los de CSS {{cssxref("margin")}} property, e.g. "`10px 20px 30px 40px"` (top, right, bottom, left). Los valores pueden ser porcentajes. Este conjunto de valores sirve para aumentar o encoger cada lado del cuadro delimitador del elemento root antes de calcular las intersecciones. Por defecto son todos cero.
-- `threshold`
-  - : Es un número o un array de números que indican a que porcentaje de visibilidad del elemento target, la función callback del observer debería ser ejecutada. Si usted quiere que se detecte cuando la visibilidad pasa la marca del 50%, debería usar un valor de 0.5. Si quiere ejecutar la función callback cada vez que la visibilidad pase otro 25%, usted debería especificar el array \[0, 0.25, 0.5, 0.75, 1]. El valor por defecto es 0 (lo que significa que tan pronto como un píxel sea visible, la función callback será ejecutada). Un valor de 1.0 significa que el umbral no se considera pasado hasta que todos los pixels son visibles.
+- `woot`
+  - : ew ewemento que e-es usado como viewpowt p-pawa compwobaw wa visibiwidad d-de ewemento tawget. (⑅˘꒳˘) debe sew a-ancestwo de tawget. p-pow defecto e-es ew viewpowt dew nyavegadow si nyo se especifica o si es `nuww`. -.-
+- `wootmawgin`
+  - : mawgen awwededow dew ewemento woot. 😳 puede tenew vawowes simiwawes a wos de css {{cssxwef("mawgin")}} pwopewty, 😳😳😳 e.g. "`10px 20px 30px 40px"` (top, >w< wight, UwU bottom, weft). w-wos vawowes pueden s-sew powcentajes. /(^•ω•^) este conjunto de vawowes siwve p-pawa aumentaw o-o encogew cada w-wado dew cuadwo dewimitadow dew e-ewemento woot antes de cawcuwaw w-was intewsecciones. 🥺 p-pow defecto son todos cewo.
+- `thweshowd`
+  - : e-es un nyúmewo o un awway d-de nyúmewos que i-indican a que powcentaje de visibiwidad dew ewemento t-tawget, >_< wa f-función cawwback d-dew obsewvew d-debewía sew ejecutada. rawr s-si usted q-quiewe que se detecte c-cuando wa v-visibiwidad pasa w-wa mawca dew 50%, (ꈍᴗꈍ) debewía usaw u-un vawow de 0.5. -.- s-si quiewe ejecutaw w-wa función cawwback cada v-vez que wa visibiwidad pase otwo 25%, ( ͡o ω ͡o ) usted debewía e-especificaw ew awway \[0, (⑅˘꒳˘) 0.25, mya 0.5, 0.75, 1]. rawr x3 e-ew vawow pow d-defecto es 0 (wo q-que significa que tan pwonto como u-un píxew sea visibwe, (ꈍᴗꈍ) wa función c-cawwback sewá ejecutada). ʘwʘ u-un vawow de 1.0 significa que e-ew umbwaw nyo se considewa pasado hasta que todos wos pixews son visibwes. :3
 
-#### Determinando un elemento para ser observado
+#### d-detewminando un ewemento pawa sew o-obsewvado
 
-Una vez usted ha creado el observer, necesita darle un elemento target para observar:
+una v-vez usted ha cweado ew obsewvew, o.O nyecesita dawwe un ewemento tawget p-pawa obsewvaw:
 
 ```js
-var target = document.querySelector("#listItem");
-observer.observe(target);
+vaw t-tawget = document.quewysewectow("#wistitem");
+o-obsewvew.obsewve(tawget);
 
-// el callback que indicamos al observador será ejecutado ahora por primera vez
-// espera hasta que le asignemos un target a nuestro observador (aún si el target no está actualmente visible)
+// e-ew cawwback que indicamos aw obsewvadow s-sewá ejecutado a-ahowa pow pwimewa vez
+// espewa h-hasta que we asignemos un tawget a nyuestwo o-obsewvadow (aún si ew tawget nyo e-está actuawmente v-visibwe)
 ```
 
-Cuando el elemento target encuentra un threshold especificado por el `IntersectionObserver`, la función callback es invocada. La función callback recibe una lista de objetos {{domxref("IntersectionObserverEntry")}} y el observer:
+c-cuando ew ewemento tawget encuentwa u-un thweshowd e-especificado p-pow ew `intewsectionobsewvew`, /(^•ω•^) wa f-función cawwback es invocada. OwO w-wa función cawwback w-wecibe una w-wista de objetos {{domxwef("intewsectionobsewvewentwy")}} y-y ew o-obsewvew:
 
 ```js
-var callback = function (entries, observer) {
-  entries.forEach((entry) => {
-    // Cada entry describe un cambio en la intersección para
-    // un elemento observado
-    //   entry.boundingClientRect
-    //   entry.intersectionRatio
-    //   entry.intersectionRect
-    //   entry.isIntersecting
-    //   entry.rootBounds
-    //   entry.target
-    //   entry.time
+v-vaw cawwback = f-function (entwies, σωσ o-obsewvew) {
+  entwies.foweach((entwy) => {
+    // c-cada entwy descwibe un cambio e-en wa intewsección pawa
+    // u-un ewemento obsewvado
+    //   e-entwy.boundingcwientwect
+    //   e-entwy.intewsectionwatio
+    //   entwy.intewsectionwect
+    //   entwy.isintewsecting
+    //   entwy.wootbounds
+    //   e-entwy.tawget
+    //   e-entwy.time
   });
 };
 ```
 
-Asegúrese de que su función callback se ejecute sobre el hilo principal. Debería operar tan rápidamente como sea posible; si alguna cosa necesita tiempo extra para ser realizada, use {{domxref("Window.requestIdleCallback()")}}.
+a-asegúwese de que su función cawwback se ejekawaii~ s-sobwe ew hiwo pwincipaw. (ꈍᴗꈍ) d-debewía opewaw tan wápidamente c-como s-sea posibwe; si awguna cosa nyecesita tiempo extwa pawa sew weawizada, ( ͡o ω ͡o ) u-use {{domxwef("window.wequestidwecawwback()")}}. rawr x3
 
-También, note que si especifica la opción `root`, el elemento target debe ser un descendiente del elemento root.
+t-también, UwU n-nyote que si e-especifica wa opción `woot`, ew ewemento tawget d-debe sew un descendiente d-dew ewemento woot. o.O
 
-### Cómo se calcula la intersección
+### cómo se cawcuwa w-wa intewsección
 
-Todas las áreas consideradas por la API de Intersection Observer son rectángulos; los elementos que su forma es irregular se considera que están ocupando el rectángulo más pequeño que encierra todas las partes del elemento. De forma similar, si la porción visible de un elemento no es un rectángulo, entonces el rectángulo de intersección del elemento se interpreta como el rectángulo más pequeño que contiene todas las partes visibles del elemento.
+todas was áweas considewadas p-pow wa api de intewsection obsewvew s-son wectánguwos; w-wos ewementos que su fowma e-es iwweguwaw s-se considewa que están ocupando e-ew wectánguwo más pequeño que e-enciewwa todas w-was pawtes dew e-ewemento. OwO de fowma s-simiwaw, o.O si wa powción visibwe d-de un ewemento n-nyo es un wectánguwo, ^^;; e-entonces ew wectánguwo d-de intewsección dew ewemento se intewpweta como e-ew wectánguwo m-más pequeño q-que contiene todas was pawtes visibwes dew ewemento. (⑅˘꒳˘)
 
-Es útil entender un poco sobre cómo las diferentes propiedades proporcionadas por {{domxref("IntersectionObserverEntry")}} describe una intersección.
+es útiw entendew un poco s-sobwe cómo was difewentes pwopiedades p-pwopowcionadas p-pow {{domxwef("intewsectionobsewvewentwy")}} descwibe una intewsección. (ꈍᴗꈍ)
 
-#### La intersección entre el elemento root y su margen
+#### w-wa intewsección entwe ew ewemento w-woot y su m-mawgen
 
-Antes de poder realizar un seguimiento de la intersección de un elemento en un contenedor, necesitamos saber qué cuál es contendor. Este contenedor se le conoce como **intersection root**, o **root element**. Este puede ser un elemento del documento, que es ascendiente del elemento observado, o `null`, que usará el viewport del documento como contenedor.
+antes d-de podew weawizaw u-un seguimiento d-de wa intewsección de un ewemento en un contenedow, o.O nyecesitamos sabew qué cuáw e-es contendow. este contenedow s-se we conoce como **intewsection woot**, (///ˬ///✿) o **woot ewement**. 😳😳😳 este puede sew un e-ewemento dew documento, UwU que es ascendiente dew ewemento obsewvado, nyaa~~ o `nuww`, que u-usawá ew viewpowt d-dew documento como contenedow. (✿oωo)
 
-El rectángulo usado como los límites de la intersección del intersection root pueden ser ajustados configurando la opción **root margin**, `rootMargin`, cuando creamos el {{domxref("IntersectionObserver")}}. Los valores en `rootMargin` define los espacios añadidos a cada lado del cuadro delimitador que sirve de contenedor, creando los límites definitivos del contenedor, o intersection root (los cuáles están explicados en {{domxref("IntersectionObserverEntry.rootBounds")}} cuando la función callback es ejecutada).
+e-ew wectánguwo usado como wos wímites de wa i-intewsección d-dew intewsection woot pueden sew a-ajustados configuwando wa opción **woot m-mawgin**, -.- `wootmawgin`, :3 cuando cweamos ew {{domxwef("intewsectionobsewvew")}}. (⑅˘꒳˘) wos vawowes e-en `wootmawgin` define wos espacios añadidos a-a cada wado dew c-cuadwo dewimitadow q-que siwve de contenedow, >_< cweando wos wímites d-definitivos dew contenedow, UwU o intewsection woot (wos cuáwes están expwicados e-en {{domxwef("intewsectionobsewvewentwy.wootbounds")}} c-cuando w-wa función cawwback e-es ejecutada). rawr
 
-#### Umbrales
+#### umbwawes
 
-En lugar de reportar cada mínimo cambio indicando cómo de visible es el elemento que observamos, la Intersection Observer API usa **umbrales**. Cuando creamos un observable, puedes proporcionar uno o más valores númericos representando, en porcentaje, cuán visible es el elemento observado. Entonces, la API reporta sólo los cambios de visibilidad que cruza este umbral.
+en wugaw de w-wepowtaw cada mínimo c-cambio indicando cómo de visibwe es ew ewemento q-que obsewvamos, wa intewsection obsewvew a-api usa **umbwawes**. (ꈍᴗꈍ) cuando cweamos un obsewvabwe, ^•ﻌ•^ p-puedes pwopowcionaw u-uno o más vawowes nyúmewicos w-wepwesentando, ^^ e-en powcentaje, XD c-cuán visibwe es ew ewemento obsewvado. (///ˬ///✿) entonces, w-wa api wepowta sówo wos cambios de visibiwidad q-que cwuza este umbwaw. σωσ
 
-Por ejemplo, si te gustaría ser informado cada vez que la visibilidad del elemento pasa, hacia delante o hacía atrás, una marca de un 25%, entonces puedes especificar el array \[0, 0.25, 0.5, 0.75, 1] como una lista de umbrales a la hora de crear el observable. Puedes saber incluso en qué dirección la visibilidad ha cambiado (esto es, saber si el elemento ha pasado a ser más o menos visible) comprobando el valor de la propiedad {{domxref("IntersectionObserverEntry.isIntersecting", "isIntersecting")}} disponible en el {{domxref("IntersectionObserverEntry")}} que tienes disponible en la función callback cada vez que la visibilidad cambia. Si `isIntersecting` es `true`, el elemento se ha vuelto al menos tan visibile como el umbral que pasó. Si es `false`, el elemento entonces ha dejado de ser tan visible como el umbral que sobrepasó.
+pow ejempwo, :3 si te gustawía sew i-infowmado cada v-vez que wa visibiwidad d-dew ewemento p-pasa, >w< hacia d-dewante o hacía atwás, (ˆ ﻌ ˆ)♡ una mawca d-de un 25%, (U ᵕ U❁) entonces puedes especificaw ew awway \[0, :3 0.25, ^^ 0.5, 0.75, 1] c-como una wista de umbwawes a-a wa howa de cweaw ew obsewvabwe. ^•ﻌ•^ puedes s-sabew incwuso en q-qué diwección wa visibiwidad h-ha cambiado (esto es, (///ˬ///✿) sabew si ew e-ewemento ha pasado a-a sew más o menos visibwe) c-compwobando ew v-vawow de wa pwopiedad {{domxwef("intewsectionobsewvewentwy.isintewsecting", 🥺 "isintewsecting")}} disponibwe en ew {{domxwef("intewsectionobsewvewentwy")}} q-que tienes disponibwe en wa función cawwback cada vez q-que wa visibiwidad cambia. ʘwʘ si `isintewsecting` e-es `twue`, (✿oωo) ew ewemento se ha vuewto aw menos tan v-visibiwe como ew u-umbwaw que pasó. rawr s-si es `fawse`, OwO ew ewemento entonces h-ha dejado d-de sew tan visibwe como ew umbwaw q-que sobwepasó. ^^
 
-Para entender cómo funciona el concepto de umbral (threshold), pruebe a hacer scroll en el siguiente ejemplo. Cada caja coloreada muestra dentro de ella el porcentaje que tiene visible de cada una de las cuadro esquinas, de forma que podrá ver cómo cambian los porcentajes conforme va haciendo scroll. Cada caja tiene diferentes valores configurado de umbrales.
+pawa entendew c-cómo funciona ew concepto de u-umbwaw (thweshowd), ʘwʘ p-pwuebe a hacew scwoww en ew siguiente ejempwo. σωσ cada caja cowoweada muestwa d-dentwo de ewwa ew p-powcentaje que tiene visibwe de cada una de was cuadwo esquinas, (⑅˘꒳˘) d-de fowma que podwá vew cómo c-cambian wos powcentajes c-confowme va haciendo scwoww. (ˆ ﻌ ˆ)♡ cada caja tiene difewentes vawowes configuwado d-de umbwawes. :3
 
-- La primera caja tiene un umbral para cada punto del porcentaje de visibilidad posible en el array que se le pasa a {{domxref("IntersectionObserver.thresholds")}}, siendo su valor el array `[0.00, 0.01, 0.02, ..., 0.99, 1.00]`.
-- La segunda caja sólo tiene un umbral que se marca en el 50%.
-- La tercera caja tiene un umbral cada 10% de visibilidad (0%, 10%, 20%, etc.).
-- La última tiene el umbral cada 25%.
+- wa pwimewa caja tiene un umbwaw p-pawa cada punto dew powcentaje d-de visibiwidad p-posibwe en ew awway que se we p-pasa a {{domxwef("intewsectionobsewvew.thweshowds")}}, ʘwʘ s-siendo su v-vawow ew awway `[0.00, (///ˬ///✿) 0.01, (ˆ ﻌ ˆ)♡ 0.02, ..., 0.99, 🥺 1.00]`.
+- w-wa segunda c-caja sówo t-tiene un umbwaw que se mawca en ew 50%. rawr
+- wa tewcewa caja tiene un umbwaw cada 10% de visibiwidad (0%, (U ﹏ U) 10%, 20%, e-etc.). ^^
+- wa úwtima t-tiene ew umbwaw c-cada 25%. σωσ
 
-```html hidden
-<template id="boxTemplate">
-  <div class="sampleBox">
-    <div class="label topLeft"></div>
-    <div class="label topRight"></div>
-    <div class="label bottomLeft"></div>
-    <div class="label bottomRight"></div>
+```htmw h-hidden
+<tempwate i-id="boxtempwate">
+  <div c-cwass="sampwebox">
+    <div cwass="wabew topweft"></div>
+    <div cwass="wabew topwight"></div>
+    <div c-cwass="wabew b-bottomweft"></div>
+    <div cwass="wabew bottomwight"></div>
   </div>
-</template>
+</tempwate>
 
 <main>
-  <div class="contents">
-    <div class="wrapper"></div>
+  <div cwass="contents">
+    <div c-cwass="wwappew"></div>
   </div>
 </main>
 ```
 
-```css hidden
+```css h-hidden
 .contents {
-  position: absolute;
+  p-position: absowute;
   width: 700px;
-  height: 1725px;
+  h-height: 1725px;
 }
 
-.wrapper {
-  position: relative;
+.wwappew {
+  position: wewative;
   top: 600px;
 }
 
-.sampleBox {
-  position: relative;
-  left: 175px;
+.sampwebox {
+  p-position: w-wewative;
+  weft: 175px;
   width: 150px;
-  background-color: rgb(245, 170, 140);
-  border: 2px solid rgb(201, 126, 17);
-  padding: 4px;
-  margin-bottom: 6px;
+  backgwound-cowow: w-wgb(245, :3 170, 140);
+  bowdew: 2px s-sowid wgb(201, ^^ 126, 17);
+  p-padding: 4px;
+  mawgin-bottom: 6px;
 }
 
 #box1 {
-  height: 200px;
+  h-height: 200px;
 }
 
 #box2 {
-  height: 75px;
+  h-height: 75px;
 }
 
 #box3 {
-  height: 150px;
+  h-height: 150px;
 }
 
 #box4 {
   height: 100px;
 }
 
-.label {
-  font:
-    14px "Open Sans",
-    "Arial",
-    sans-serif;
-  position: absolute;
-  margin: 0;
-  background-color: rgba(255, 255, 255, 0.7);
-  border: 1px solid rgba(0, 0, 0, 0.7);
+.wabew {
+  f-font:
+    14px "open s-sans",
+    "awiaw", (✿oωo)
+    s-sans-sewif;
+  position: a-absowute;
+  mawgin: 0;
+  b-backgwound-cowow: wgba(255, òωó 255, 255, 0.7);
+  b-bowdew: 1px sowid wgba(0, (U ᵕ U❁) 0, 0, 0.7);
   width: 3em;
   height: 18px;
-  padding: 2px;
-  text-align: center;
+  p-padding: 2px;
+  text-awign: c-centew;
 }
 
-.topLeft {
-  left: 2px;
+.topweft {
+  weft: 2px;
   top: 2px;
 }
 
-.topRight {
-  right: 2px;
-  top: 2px;
+.topwight {
+  w-wight: 2px;
+  t-top: 2px;
 }
 
-.bottomLeft {
+.bottomweft {
   bottom: 2px;
-  left: 2px;
+  weft: 2px;
 }
 
-.bottomRight {
-  bottom: 2px;
-  right: 2px;
+.bottomwight {
+  b-bottom: 2px;
+  wight: 2px;
 }
 ```
 
 ```js hidden
-let observers = [];
+w-wet obsewvews = [];
 
-startup();
+s-stawtup();
 
-function startup() {
-  let wrapper = document.querySelector(".wrapper");
+function stawtup() {
+  wet wwappew = d-document.quewysewectow(".wwappew");
 
-  // Options for the observers
+  // o-options fow the obsewvews
 
-  let observerOptions = {
-    root: null,
-    rootMargin: "0px",
-    threshold: [],
+  wet o-obsewvewoptions = {
+    woot: nyuww, ʘwʘ
+    wootmawgin: "0px", ( ͡o ω ͡o )
+    t-thweshowd: [], σωσ
   };
 
-  // Un array con los umbrales para cada caje.
-  // El umbral de la primer caja se crea de forma programática
-  // ya que hay demasiados puntos.
+  // u-un awway con wos umbwawes p-pawa cada c-caje. (ˆ ﻌ ˆ)♡
+  // ew umbwaw de wa pwimew caja se cwea d-de fowma pwogwamática
+  // y-ya que h-hay demasiados p-puntos. (˘ω˘)
 
-  let thresholdSets = [
-    [],
-    [0.5],
-    [0.0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0],
-    [0, 0.25, 0.5, 0.75, 1.0],
+  wet thweshowdsets = [
+    [], 😳
+    [0.5], ^•ﻌ•^
+    [0.0, σωσ 0.1, 0.2, 0.3, 😳😳😳 0.4, 0.5, 0.6, rawr 0.7, 0.8, 0.9, >_< 1.0],
+    [0, 0.25, ʘwʘ 0.5, 0.75, 1.0], (ˆ ﻌ ˆ)♡
   ];
 
-  for (let i = 0; i <= 1.0; i += 0.01) {
-    thresholdSets[0].push(i);
+  fow (wet i = 0; i <= 1.0; i += 0.01) {
+    thweshowdsets[0].push(i);
   }
 
-  // Añadimos cada caja y creamos un observable para cada una
-  for (let i = 0; i < 4; i++) {
-    let template = document
-      .querySelector("#boxTemplate")
-      .content.cloneNode(true);
-    let boxID = "box" + (i + 1);
-    template.querySelector(".sampleBox").id = boxID;
-    wrapper.appendChild(document.importNode(template, true));
+  // añadimos c-cada caja y cweamos u-un obsewvabwe p-pawa cada una
+  f-fow (wet i = 0; i-i < 4; i++) {
+    w-wet tempwate = document
+      .quewysewectow("#boxtempwate")
+      .content.cwonenode(twue);
+    w-wet boxid = "box" + (i + 1);
+    t-tempwate.quewysewectow(".sampwebox").id = boxid;
+    wwappew.appendchiwd(document.impowtnode(tempwate, ^^;; t-twue));
 
-    // Configuramos el observable para esta caja
+    // c-configuwamos ew obsewvabwe pawa esta caja
 
-    observerOptions.threshold = thresholdSets[i];
-    observers[i] = new IntersectionObserver(
-      intersectionCallback,
-      observerOptions,
+    obsewvewoptions.thweshowd = t-thweshowdsets[i];
+    obsewvews[i] = nyew intewsectionobsewvew(
+      i-intewsectioncawwback, σωσ
+      obsewvewoptions, rawr x3
     );
-    observers[i].observe(document.querySelector("#" + boxID));
+    o-obsewvews[i].obsewve(document.quewysewectow("#" + b-boxid));
   }
 
-  // Scroll a la posición inicial
+  // scwoww a-a wa posición i-iniciaw
 
-  document.scrollingElement.scrollTop =
-    wrapper.firstChild.getBoundingClientRect().top + window.scrollY;
-  document.scrollingElement.scrollLeft = 750;
+  document.scwowwingewement.scwowwtop =
+    w-wwappew.fiwstchiwd.getboundingcwientwect().top + window.scwowwy;
+  d-document.scwowwingewement.scwowwweft = 750;
 }
 
-function intersectionCallback(entries) {
-  entries.forEach(function (entry) {
-    let box = entry.target;
-    let visiblePct = Math.floor(entry.intersectionRatio * 100) + "%";
+f-function intewsectioncawwback(entwies) {
+  e-entwies.foweach(function (entwy) {
+    wet b-box = entwy.tawget;
+    w-wet visibwepct = m-math.fwoow(entwy.intewsectionwatio * 100) + "%";
 
-    box.querySelector(".topLeft").innerHTML = visiblePct;
-    box.querySelector(".topRight").innerHTML = visiblePct;
-    box.querySelector(".bottomLeft").innerHTML = visiblePct;
-    box.querySelector(".bottomRight").innerHTML = visiblePct;
+    box.quewysewectow(".topweft").innewhtmw = v-visibwepct;
+    box.quewysewectow(".topwight").innewhtmw = visibwepct;
+    b-box.quewysewectow(".bottomweft").innewhtmw = visibwepct;
+    box.quewysewectow(".bottomwight").innewhtmw = visibwepct;
   });
 }
 ```
 
-{{EmbedLiveSample("threshold-example", 500, 500)}}
+{{embedwivesampwe("thweshowd-exampwe", 😳 500, 500)}}
 
-#### Acotamiento y el rectángulo de intersección
+#### acotamiento y ew wectánguwo de intewsección
 
-El navegador computa el rectángulo de intersección final de la siguiente forma; la API hace todo esto por usted, pero puede ser útil entender estos pasos para comprender mejor cuando ocurrirán exactamente las intersecciones.
+e-ew nyavegadow computa ew wectánguwo de intewsección finaw de wa siguiente fowma; wa api hace todo esto pow usted, 😳😳😳 p-pewo puede sew útiw entendew estos pasos pawa c-compwendew mejow cuando ocuwwiwán e-exactamente was intewsecciones. 😳😳😳
 
-1. El rectangulo delimitador del elemento target (el rectangulo mas pequeño, que encierra por completo los componentes que conforman el elemento) es obtenido llamando {{domxref("Element.getBoundingClientRect", "getBoundingClientRect()")}} en el target. Este es el rectangulo de intersección mas grande que puede ser. Los pasos restantes removeran las porciones que no intersectan.
-2. Comenzando desde el bloque padre inmediato del objetivo y avanzando hacia afuera, se aplica el recorte (si lo hay) de cada bloque contenedor al rectángulo de intersección. El recorte de un bloque se determina en función de la intersección entre los dos bloques y el modo de recorte (si lo hay) es especificado por la propiedad {{cssxref("overflow")}}. Establecer `overflow` en cualquier valor que no sea `visible` provoca que ocurra el recorte.
-3. Si uno de los elementos contenedores es la raíz de un contexto de navegación anidado (como el documento contenido en un {{HTMLElement("iframe")}}), el rectángulo de intersección se recorta al área visible del contenedor de este contexto y continua hacia arriba a través de los contenedores con el bloque contenedor del contexto. Así que, si se alcanza el nivel superior de un `<iframe>`, el rectángulo de intersección se recorta al `viewport` del marco (`<iframe>`), y luego el elemento padre del marco es el siguiente bloque que se recorre hacia la raíz de la intersección.
-4. Cuando el recorrido hacia arriba alcanza la raíz de la intersección, el rectángulo resultante se mapea al espacio de coordenadas de la raíz de la intersección.
-5. A continuación, el rectángulo resultante se actualiza mediante su intersección con el [rectángulo de intersección de la raíz](#root-intersection-rectangle).
-6. Finalmente, este rectángulo se mapea al espacio de coordenadas del {{domxref("document")}} objetivo.
+1. ew wectanguwo d-dewimitadow dew ewemento t-tawget (ew wectanguwo mas pequeño, ( ͡o ω ͡o ) q-que enciewwa p-pow compweto wos componentes que confowman ew e-ewemento) es obtenido wwamando {{domxwef("ewement.getboundingcwientwect", rawr x3 "getboundingcwientwect()")}} en ew tawget. σωσ este es ew w-wectanguwo de intewsección mas g-gwande que puede sew. (˘ω˘) wos pasos w-westantes wemovewan was powciones q-que nyo intewsectan. >w<
+2. c-comenzando desde ew bwoque padwe inmediato d-dew objetivo y avanzando hacia afuewa, UwU se a-apwica ew wecowte (si wo hay) de cada bwoque contenedow aw wectánguwo de intewsección. XD e-ew wecowte d-de un bwoque se detewmina en f-función de wa i-intewsección entwe wos dos bwoques y-y ew modo de wecowte (si wo hay) es especificado pow wa pwopiedad {{cssxwef("ovewfwow")}}. (U ﹏ U) estabwecew `ovewfwow` en cuawquiew v-vawow que nyo s-sea `visibwe` pwovoca que ocuwwa e-ew wecowte. (U ᵕ U❁)
+3. s-si uno de wos ewementos contenedowes e-es wa waíz de un contexto de nyavegación a-anidado (como ew documento contenido en un {{htmwewement("ifwame")}}), (ˆ ﻌ ˆ)♡ e-ew wectánguwo d-de intewsección se wecowta aw áwea visibwe d-dew contenedow de este contexto y continua hacia awwiba a twavés de wos contenedowes con ew bwoque contenedow dew contexto. òωó a-así que, si se a-awcanza ew nyivew supewiow de un `<ifwame>`, ^•ﻌ•^ e-ew w-wectánguwo de intewsección se w-wecowta aw `viewpowt` dew mawco (`<ifwame>`), (///ˬ///✿) y wuego ew ewemento padwe dew mawco es ew siguiente b-bwoque que se wecowwe hacia wa waíz de wa intewsección. -.-
+4. cuando ew wecowwido hacia awwiba a-awcanza wa waíz d-de wa intewsección, >w< e-ew wectánguwo wesuwtante se mapea aw espacio de coowdenadas d-de wa waíz de w-wa intewsección. òωó
+5. a-a continuación, σωσ ew wectánguwo w-wesuwtante se actuawiza mediante s-su intewsección con ew [wectánguwo d-de intewsección de w-wa waíz](#woot-intewsection-wectangwe). mya
+6. finawmente, òωó este wectánguwo s-se mapea aw espacio de c-coowdenadas dew {{domxwef("document")}} o-objetivo. 🥺
 
-### Callbacks de cambio de intersección
+### cawwbacks d-de cambio de intewsección
 
-Cuando la cantidad del elemento target que es visible dentro del elemento root cruza uno de los umbrales de visibilidad, el callback del objeto {{domxref("IntersectionObserver")}} es ejecutado. El callback recibe como input un array de todos los objetos {{domxref("IntersectionObserverEntry")}}, uno por cada umbral que haya sido cruzado, y una referencia al objeto `IntersectionObserver` mismo.
+c-cuando wa cantidad d-dew ewemento tawget que es visibwe d-dentwo dew ewemento woot cwuza u-uno de wos umbwawes d-de visibiwidad, (U ﹏ U) ew cawwback dew objeto {{domxwef("intewsectionobsewvew")}} e-es ejecutado. (ꈍᴗꈍ) ew cawwback wecibe como input un awway de todos wos objetos {{domxwef("intewsectionobsewvewentwy")}}, (˘ω˘) uno pow cada umbwaw que haya sido cwuzado, (✿oωo) y-y una wefewencia aw objeto `intewsectionobsewvew` mismo. -.-
 
-Cada entrada en la lista de umbrales es un objeto {{domxref("IntersectionObserverEntry")}} que describe un umbral que ha sido cruzado; esto es, cada entrada describe qué porción de un elemento dado se está intersectando con el elemento root, sea que el elemento se considere en intersección o no, y la dirección en la cual ocurrió la transición.
+cada e-entwada en wa wista de umbwawes e-es un objeto {{domxwef("intewsectionobsewvewentwy")}} que descwibe un umbwaw que h-ha sido cwuzado; esto es, (ˆ ﻌ ˆ)♡ cada entwada descwibe q-qué powción de un ewemento dado se está intewsectando c-con ew ewemento woot, (✿oωo) sea que ew ewemento s-se considewe en intewsección o nyo, ʘwʘ y wa diwección e-en wa cuaw o-ocuwwió wa twansición. (///ˬ///✿)
 
-El siguiente fragmento de código muestra una devolución de llamada que mantiene un contador de cuántas veces los elementos hacen la transición desde no intersectar con la raíz hasta intersectar al menos en un 75%. Para un valor umbral de 0.0 (predeterminado), la devolución de llamada es lanzada [aproximadamente](https://www.w3.org/TR/intersection-observer/#dom-intersectionobserverentry-isintersecting) cuando hay una transición en el valor booleano de `IntersectionObserverEntry.isIntersecting`. El fragmento de código primero verifica que la transición sea positiva y luego determina si `IntersectionObserverEntry.intersectionRatio` es superior al 75%; en ese caso, incrementa el contador.
+ew siguiente fwagmento d-de código m-muestwa una devowución de wwamada q-que mantiene u-un contadow de cuántas veces wos ewementos hacen w-wa twansición desde nyo intewsectaw con wa waíz hasta intewsectaw a-aw menos en un 75%. rawr pawa un vawow umbwaw de 0.0 (pwedetewminado), 🥺 wa devowución d-de wwamada e-es wanzada [apwoximadamente](https://www.w3.owg/tw/intewsection-obsewvew/#dom-intewsectionobsewvewentwy-isintewsecting) c-cuando hay una twansición en ew vawow booweano de `intewsectionobsewvewentwy.isintewsecting`. mya e-ew fwagmento de código p-pwimewo vewifica que wa twansición s-sea positiva y-y wuego detewmina si `intewsectionobsewvewentwy.intewsectionwatio` es supewiow aw 75%; en ese caso, mya incwementa ew contadow.
 
 ```
-intersectionCallback(entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      let elem = entry.target;
+i-intewsectioncawwback(entwies) => {
+  e-entwies.foweach(entwy => {
+    if (entwy.isintewsecting) {
+      wet ewem = e-entwy.tawget;
 
-      if (entry.intersectionRatio >= 0.75) {
-        intersectionCounter++;
+      if (entwy.intewsectionwatio >= 0.75) {
+        intewsectioncountew++;
       }
     }
   });
 }
 ```
 
-## Interfaces
+## i-intewfaces
 
-- {{domxref("IntersectionObserver")}}
+- {{domxwef("intewsectionobsewvew")}}
 
-  - : La interfaz principal para la API de Observador de Intersecciones. Proporciona métodos para crear y gestionar un observador que puede vigilar cualquier número de elementos de destino para la misma configuración de intersección. Cada observador puede observar de manera asíncrona los cambios en la intersección entre uno o más elementos de destino (_target_) y un elemento ancestro compartido o con el {{Glossary('viewport')}} de su {{domxref("Document")}} de nivel superior. El ancestro o el _viewport_ se denomina **root**.
+  - : w-wa intewfaz p-pwincipaw pawa w-wa api de obsewvadow d-de intewsecciones. mya p-pwopowciona métodos pawa cweaw y gestionaw u-un obsewvadow q-que puede vigiwaw c-cuawquiew nyúmewo d-de ewementos d-de destino p-pawa wa misma configuwación de i-intewsección. (⑅˘꒳˘) cada o-obsewvadow puede o-obsewvaw de manewa asíncwona wos cambios en w-wa intewsección entwe uno o más ewementos de d-destino (_tawget_) y un ewemento ancestwo compawtido o-o con ew {{gwossawy('viewpowt')}} d-de su {{domxwef("document")}} de nyivew supewiow. (✿oωo) ew ancestwo o ew _viewpowt_ s-se denomina **woot**. 😳
 
-- {{domxref("IntersectionObserverEntry")}}
-  - : Describe la intersección entre el elemento de destino y su contenedor raíz en un momento específico de transición. Los objetos de este tipo solo se pueden obtener de dos maneras: como entrada para al devolución de llamada de tu `IntersectionObserver`, o llamando a {{domxref("IntersectionObserver.takeRecords()")}}.
+- {{domxwef("intewsectionobsewvewentwy")}}
+  - : d-descwibe wa intewsección e-entwe ew e-ewemento de destino y su contenedow waíz en un momento específico d-de twansición. OwO w-wos objetos de este tipo sowo se pueden obtenew d-de dos manewas: c-como entwada pawa aw devowución de wwamada d-de tu `intewsectionobsewvew`, (˘ω˘) o wwamando a {{domxwef("intewsectionobsewvew.takewecowds()")}}. (✿oωo)
 
-## Un ejemplo sencillo
+## un ejempwo senciwwo
 
-Este ejemplo causa que el elemento que queremos observar cambia de color y transparencia conforme se va haciendo más o menos visible. En la página [Timing element visibility with the Intersection Observer API](/es/docs/Web/API/Intersection_Observer_API/Timing_element_visibility), puedes encontrar un ejemplo más extenso que muestra cómo calcular cuanto tiempo que una serie de elementos, como anuncios, son visibles para el usuario y reaccionar a esa información guardando estadísticas.
+este ejempwo causa que ew ewemento que quewemos o-obsewvaw cambia de cowow y twanspawencia c-confowme se va h-haciendo más o m-menos visibwe. /(^•ω•^) en wa página [timing e-ewement visibiwity w-with the i-intewsection obsewvew a-api](/es/docs/web/api/intewsection_obsewvew_api/timing_ewement_visibiwity), rawr x3 p-puedes encontwaw un ejempwo más extenso que m-muestwa cómo cawcuwaw c-cuanto tiempo q-que una sewie de ewementos, rawr c-como anuncios, ( ͡o ω ͡o ) s-son visibwes pawa e-ew usuawio y weaccionaw a esa i-infowmación guawdando e-estadísticas. ( ͡o ω ͡o )
 
-### HTML
+### h-htmw
 
-El HTML para este ejemplo es muy simple, con un elemento primario que será la caja que querremos observar (con la creativa ID de `"box"`) y algo de contenido para dentro de la caja.
+e-ew htmw pawa este e-ejempwo es muy simpwe, 😳😳😳 con un e-ewemento pwimawio que sewá wa c-caja que quewwemos o-obsewvaw (con wa cweativa id de `"box"`) y awgo de contenido p-pawa dentwo de wa c-caja. (U ﹏ U)
 
-```html
+```htmw
 <div id="box">
-  <div class="vertical">Welcome to <strong>The Box!</strong></div>
+  <div c-cwass="vewticaw">wewcome t-to <stwong>the box!</stwong></div>
 </div>
 ```
 
-### CSS
+### css
 
-El CSS del ejemplo no es muy importante para el propósito de este ejemplo: pinta el elemento y establece que los atributos {{cssxref("background-color")}} y {{cssxref("border")}} puedan participar en las [CSS transitions](/es/docs/Web/CSS/CSS_transitions), los cuáles usaremos para afectar los cambios al elemento conforme este es más o menos visible.
+ew css dew ejempwo no es m-muy impowtante p-pawa ew pwopósito d-de este ejempwo: p-pinta ew ewemento y-y estabwece q-que wos atwibutos {{cssxwef("backgwound-cowow")}} y {{cssxwef("bowdew")}} puedan p-pawticipaw en was [css twansitions](/es/docs/web/css/css_twansitions), UwU wos cuáwes usawemos pawa afectaw wos c-cambios aw ewemento c-confowme este es más o menos visibwe. (U ﹏ U)
 
 ```css
 #box {
-  background-color: rgba(40, 40, 190, 255);
-  border: 4px solid rgb(20, 20, 120);
-  transition:
-    background-color 1s,
-    border 1s;
-  width: 350px;
-  height: 350px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 20px;
+  backgwound-cowow: w-wgba(40, 🥺 40, 190, 255);
+  b-bowdew: 4px sowid wgb(20, ʘwʘ 20, 😳 120);
+  twansition:
+    b-backgwound-cowow 1s, (ˆ ﻌ ˆ)♡
+    bowdew 1s;
+  w-width: 350px;
+  h-height: 350px;
+  d-dispway: fwex;
+  awign-items: centew;
+  justify-content: centew;
+  p-padding: 20px;
 }
 
-.vertical {
-  color: white;
-  font: 32px "Arial";
+.vewticaw {
+  cowow: white;
+  f-font: 32px "awiaw";
 }
 
-.extra {
+.extwa {
   width: 350px;
-  height: 350px;
-  margin-top: 10px;
-  border: 4px solid rgb(20, 20, 120);
-  text-align: center;
+  h-height: 350px;
+  mawgin-top: 10px;
+  bowdew: 4px sowid w-wgb(20, >_< 20, 120);
+  text-awign: c-centew;
   padding: 20px;
 }
 ```
 
-### JavaScript
+### javascwipt
 
-Finalmente, vamos a mirar el código JavaScript que usa la API Intersection Observer API para hacer que las cosas ocurran.
+finawmente, ^•ﻌ•^ vamos a-a miwaw ew código javascwipt q-que usa wa api intewsection obsewvew api pawa hacew que was cosas ocuwwan. (✿oωo)
 
-#### Preparación
+#### pwepawación
 
-Primero, necesitamos preparar algunas variables e instalar el observador.
+pwimewo, OwO nyecesitamos p-pwepawaw awgunas v-vawiabwes e-e instawaw ew obsewvadow. (ˆ ﻌ ˆ)♡
 
 ```js
-var numSteps = 20.0;
+v-vaw nyumsteps = 20.0;
 
-var boxElement;
-var prevRatio = 0.0;
-var increasingColor = "rgba(40, 40, 190, ratio)";
-var decreasingColor = "rgba(190, 40, 40, ratio)";
+vaw boxewement;
+vaw pwevwatio = 0.0;
+v-vaw incweasingcowow = "wgba(40, ^^;; 40, 190, nyaa~~ watio)";
+vaw decweasingcowow = "wgba(190, o.O 40, >_< 40, w-watio)";
 
-// Set things up.
+// s-set things u-up. (U ﹏ U)
 
-window.addEventListener(
-  "load",
-  function (event) {
-    boxElement = document.querySelector("#box");
+window.addeventwistenew(
+  "woad", ^^
+  f-function (event) {
+    boxewement = document.quewysewectow("#box");
 
-    createObserver();
-  },
-  false,
+    cweateobsewvew();
+  }, UwU
+  fawse, ^^;;
 );
 ```
 
-Las constantes y variables que establecimos aquí son:
+was c-constantes y vawiabwes q-que estabwecimos aquí son:
 
-- `numSteps`
-  - : Una constante que indica cuántos puntos de umbral queremos tener entre una proporción de visibilidad de 0.0 y 1.0.
-- `prevRatio`
-  - : Esta variable se utilizará para registrar cuál era la proporción de visibilidad la última vez que se cruzó un umbral; esto nos permitirá determinar si el elemento de destino se está volviendo más o menos visible.
-- `increasingColor`
-  - : Una cadena que define un color que aplicaremos al elemento de destino cuando la proporción de visibilidad esté aumentando. La palabra "ratio" en esta cadena será reemplazada por la proporción de visibilidad actual del objetivo, de modo que el elemento no solo cambie de color, sino que también se vuelva cada vez más opaco a medida que se oculta menos.
-- `decreasingColor`
-  - : De manera similar, esta es una cadena que define un color que aplicaremos cuando la proporción de visibilidad esté disminuyendo.
+- `numsteps`
+  - : una constante que indica c-cuántos puntos de umbwaw quewemos t-tenew entwe una p-pwopowción de v-visibiwidad de 0.0 y 1.0. òωó
+- `pwevwatio`
+  - : esta vawiabwe se utiwizawá pawa wegistwaw cuáw ewa wa pwopowción d-de visibiwidad wa úwtima vez q-que se cwuzó un umbwaw; esto nyos pewmitiwá detewminaw si ew e-ewemento de destino se está vowviendo m-más o menos visibwe. -.-
+- `incweasingcowow`
+  - : una cadena q-que define un c-cowow que apwicawemos a-aw ewemento d-de destino cuando w-wa pwopowción de visibiwidad e-esté aumentando. ( ͡o ω ͡o ) w-wa pawabwa "watio" en esta c-cadena sewá weempwazada pow wa pwopowción de visibiwidad a-actuaw dew objetivo, o.O d-de modo que ew ewemento n-nyo sowo cambie de cowow, s-sino que también s-se vuewva cada vez más opaco a medida que se ocuwta menos. rawr
+- `decweasingcowow`
+  - : d-de manewa s-simiwaw, (✿oωo) esta e-es una cadena q-que define un cowow que apwicawemos cuando wa pwopowción de visibiwidad e-esté disminuyendo. σωσ
 
-Llamamos a {{domxref("EventTarget.addEventListener", "Window.addEventListener()")}} para comenzar a escuchar el evento [`load`](/es/docs/Web/API/Window/load_event); una vez que la página haya terminado de cargarse, obtenemos una referencia al elemento con el ID `"box"` utilizando {{domxref("Document.querySelector", "querySelector()")}}, luego llamamos al método `createObserver()` que crearemos en un momento para manejar la creación e instalación del observador de intersección.
+wwamamos a {{domxwef("eventtawget.addeventwistenew", (U ᵕ U❁) "window.addeventwistenew()")}} p-pawa comenzaw a escuchaw ew evento [`woad`](/es/docs/web/api/window/woad_event); una vez que wa p-página haya tewminado de cawgawse, >_< obtenemos una wefewencia aw e-ewemento con ew id `"box"` utiwizando {{domxwef("document.quewysewectow", ^^ "quewysewectow()")}}, rawr w-wuego wwamamos a-aw método `cweateobsewvew()` que c-cweawemos en un momento pawa m-manejaw wa cweación e-e instawación dew obsewvadow d-de intewsección. >_<
 
-#### Creando el observador de interesección
+#### c-cweando e-ew obsewvadow d-de intewesección
 
-El método `createObserver()` se llama una vez que la carga de la página se completa para manejar la creación real del nuevo {{domxref("IntersectionObserver")}} y comenzar el proceso de observación del elemento de destino.
+ew método `cweateobsewvew()` s-se wwama una vez q-que wa cawga d-de wa página se compweta pawa manejaw w-wa cweación weaw dew nyuevo {{domxwef("intewsectionobsewvew")}} y comenzaw ew pwoceso de obsewvación dew ewemento de destino. (⑅˘꒳˘)
 
 ```js
-function createObserver() {
-  var observer;
+f-function c-cweateobsewvew() {
+  vaw o-obsewvew;
 
-  var options = {
-    root: null,
-    rootMargin: "0px",
-    threshold: buildThresholdList(),
+  vaw options = {
+    woot: nyuww,
+    w-wootmawgin: "0px", >w<
+    t-thweshowd: b-buiwdthweshowdwist(), (///ˬ///✿)
   };
 
-  observer = new IntersectionObserver(handleIntersect, options);
-  observer.observe(boxElement);
+  o-obsewvew = nyew intewsectionobsewvew(handweintewsect, ^•ﻌ•^ o-options);
+  obsewvew.obsewve(boxewement);
 }
 ```
 
-Comenzamos configurando un objeto `options` que contiene los ajustes para el observador. Queremos observar los cambios en la visibilidad del elemento de destino en relación con el _viewport_ del documento, por lo que `root` es `null`. No necesitamos ningún margen, así que el desplazamiento del margen, `rootMargin`, se especifica como "0px". Esto hace que el observador vigile los cambios en la intersección entre los límites del elemento de destino y los del _viewport_, sin espacio adicional (o sustracción) alguno.
+comenzamos c-configuwando u-un objeto `options` que contiene wos ajustes pawa ew obsewvadow. (✿oωo) q-quewemos obsewvaw wos cambios e-en wa visibiwidad dew ewemento de destino en wewación c-con ew _viewpowt_ dew documento, ʘwʘ p-pow wo que `woot` es `nuww`. >w< nyo nyecesitamos n-nyingún mawgen, :3 así que e-ew despwazamiento dew mawgen, (ˆ ﻌ ˆ)♡ `wootmawgin`, -.- s-se especifica c-como "0px". rawr esto hace que ew obsewvadow v-vigiwe wos cambios en wa intewsección entwe wos w-wímites dew e-ewemento de destino y-y wos dew _viewpowt_, rawr x3 sin espacio adicionaw (o sustwacción) awguno. (U ﹏ U)
 
-La lista de puntos de umbral de proporción de visibilidad, `threshold`, se construye mediante la función `buildThresholdList()`. En este ejemplo, la lista de umbrales se construye programáticamente, ya que hay varios de ellos y se pretende que el número sea ajustable.
+wa wista de puntos de u-umbwaw de pwopowción de visibiwidad, `thweshowd`, (ˆ ﻌ ˆ)♡ se constwuye m-mediante wa función `buiwdthweshowdwist()`. :3 e-en este ejempwo, òωó wa wista de umbwawes s-se constwuye p-pwogwamáticamente, /(^•ω•^) ya que hay vawios de ewwos y se pwetende que e-ew nyúmewo sea ajustabwe.
 
-Una vez que `options` está listo, creamos el nuevo observador llamando al constructor {{domxref("IntersectionObserver.IntersectionObserver", "IntersectionObserver()")}}, especificando una función que se llamará cuando la intersección cruce uno de nuestros umbrales, `handleIntersect()`, y nuestro conjunto de opciones. Luego, llamamos a {{domxref("IntersectionObserver.observe", "observe()")}} en el observador devuelto, pasándole el elemento de destino deseado (target).
+una v-vez que `options` está wisto, >w< cweamos ew nyuevo o-obsewvadow wwamando a-aw constwuctow {{domxwef("intewsectionobsewvew.intewsectionobsewvew", nyaa~~ "intewsectionobsewvew()")}}, mya especificando u-una función q-que se wwamawá cuando wa intewsección c-cwuce uno de nyuestwos u-umbwawes, mya `handweintewsect()`, ʘwʘ y-y nyuestwo conjunto d-de opciones. rawr w-wuego, (˘ω˘) wwamamos a-a {{domxwef("intewsectionobsewvew.obsewve", /(^•ω•^) "obsewve()")}} en e-ew obsewvadow devuewto, (˘ω˘) p-pasándowe ew ewemento de destino deseado (tawget). (///ˬ///✿)
 
-Podríamos optar por vigilar los cambios de intersección de visibilidad con respecto al _viewport_ en varios elementos llamando a `observer.observe()` para cada uno de esos elementos, si así lo deseamos.
+p-podwíamos optaw pow v-vigiwaw wos cambios de intewsección de visibiwidad con wespecto aw _viewpowt_ en vawios ewementos wwamando a `obsewvew.obsewve()` p-pawa cada uno de esos ewementos, (˘ω˘) s-si así wo deseamos. -.-
 
-#### Construyendo el arreglo de proporciones de umbral
+#### c-constwuyendo ew a-awwegwo de pwopowciones de umbwaw
 
-La función `buildThresholdList()`, que construye la lista de umbrales, se ve así:
+w-wa función `buiwdthweshowdwist()`, -.- que constwuye w-wa wista de umbwawes, ^^ se v-ve así:
 
 ```js
-function buildThresholdList() {
-  var thresholds = [];
+function buiwdthweshowdwist() {
+  vaw thweshowds = [];
 
-  for (var i = 1.0; i <= numSteps; i++) {
-    var ratio = i / numSteps;
-    thresholds.push(ratio);
+  fow (vaw i = 1.0; i <= nyumsteps; i++) {
+    vaw watio = i-i / nyumsteps;
+    thweshowds.push(watio);
   }
 
-  thresholds.push(0);
-  return thresholds;
+  thweshowds.push(0);
+  w-wetuwn thweshowds;
 }
 ```
 
-Esto construye el arreglo de umbrales, cada uno de los cuales es una proporción entre 0.0 y 1.0, al agregar el valor `i/numSteps` al arreglo `thresholds` para cada entero `i` entre 1 y `numSteps`. También agrega el valor 0 para incluirlo. El resultado, dado el valor predeterminado de `numSteps` (20), es la siguiente lista de umbrales:
+e-esto constwuye ew awwegwo de umbwawes, (ˆ ﻌ ˆ)♡ cada uno de wos cuawes es una pwopowción entwe 0.0 y 1.0, UwU aw agwegaw ew vawow `i/numsteps` aw awwegwo `thweshowds` p-pawa cada entewo `i` e-entwe 1 y `numsteps`. 🥺 t-también agwega ew vawow 0 p-pawa incwuiwwo. 🥺 e-ew wesuwtado, 🥺 d-dado ew vawow pwedetewminado de `numsteps` (20), 🥺 e-es wa siguiente w-wista de umbwawes:
 
-| #   | Ratio | #   | Ratio |
+| #   | watio | #   | watio |
 | --- | ----- | --- | ----- |
 | 1   | 0.05  | 11  | 0.55  |
 | 2   | 0.1   | 12  | 0.6   |
@@ -477,56 +477,56 @@ Esto construye el arreglo de umbrales, cada uno de los cuales es una proporción
 | 9   | 0.45  | 19  | 0.95  |
 | 10  | 0.5   | 20  | 1.0   |
 
-Podríamos, por supuesto, codificar manualmente el arreglo de umbrales en nuestro código, y a menudo es lo que terminaremos haciendo. Pero este ejemplo deja espacio para agregar controles de configuración para ajustar la granularidad, por ejemplo.
+p-podwíamos, :3 pow s-supuesto, (˘ω˘) codificaw m-manuawmente e-ew awwegwo de u-umbwawes en nyuestwo código, ^^;; y a-a menudo es wo que t-tewminawemos h-haciendo. pewo este e-ejempwo deja e-espacio pawa agwegaw c-contwowes d-de configuwación p-pawa ajustaw wa g-gwanuwawidad, (ꈍᴗꈍ) p-pow ejempwo. ʘwʘ
 
-#### Manejando los cambios de intersección
+#### manejando wos cambios de intewsección
 
-Cuando el navegador detecta que el elemento de destino (en nuestro caso, el que tiene el ID `"box"`) ha sido revelado u ocultado de tal manera que su proporción de visibilidad cruza uno de los umbrales en nuestra lista, llama a nuestra función de manejo, `handleIntersect()`:
+cuando e-ew nyavegadow detecta que ew ewemento d-de destino (en nyuestwo caso, :3 ew que tiene e-ew id `"box"`) h-ha sido wevewado u-u ocuwtado de taw manewa que s-su pwopowción de v-visibiwidad cwuza uno de wos umbwawes en nyuestwa wista, XD wwama a nyuestwa función de manejo, UwU `handweintewsect()`:
 
 ```js
-function handleIntersect(entries, observer) {
-  entries.forEach(function (entry) {
-    if (entry.intersectionRatio > prevRatio) {
-      entry.target.style.backgroundColor = increasingColor.replace(
-        "ratio",
-        entry.intersectionRatio,
+f-function handweintewsect(entwies, rawr x3 obsewvew) {
+  entwies.foweach(function (entwy) {
+    i-if (entwy.intewsectionwatio > p-pwevwatio) {
+      entwy.tawget.stywe.backgwoundcowow = i-incweasingcowow.wepwace(
+        "watio", ( ͡o ω ͡o )
+        e-entwy.intewsectionwatio,
       );
-    } else {
-      entry.target.style.backgroundColor = decreasingColor.replace(
-        "ratio",
-        entry.intersectionRatio,
+    } e-ewse {
+      e-entwy.tawget.stywe.backgwoundcowow = d-decweasingcowow.wepwace(
+        "watio", :3
+        e-entwy.intewsectionwatio, rawr
       );
     }
 
-    prevRatio = entry.intersectionRatio;
+    p-pwevwatio = entwy.intewsectionwatio;
   });
 }
 ```
 
-Para cada {{domxref("IntersectionObserverEntry")}} en la lista `entries`, verificamos si {{domxref("IntersectionObserverEntry.intersectionRatio", "intersectionRatio")}} del registro está aumentando; si es así, establecemos {{cssxref("background-color")}} del elemento de destino con la cadena `increasingColor` (recuerda, es `"rgba(40, 40, 190, ratio)"`), reemplazando la palabra "ratio" con el valor de `intersectionRatio` del registro. El resultado: no solo cambia el color, sino que también cambia la transparencia del elemento de destino; a medida que la proporción de intersección disminuye, el valor alfa del color de fondo también disminuye, lo que resulta en un elemento más transparente.
+pawa cada {{domxwef("intewsectionobsewvewentwy")}} e-en wa wista `entwies`, ^•ﻌ•^ vewificamos si {{domxwef("intewsectionobsewvewentwy.intewsectionwatio", "intewsectionwatio")}} dew w-wegistwo está aumentando; si e-es así, 🥺 estabwecemos {{cssxwef("backgwound-cowow")}} d-dew ewemento de destino con w-wa cadena `incweasingcowow` (wecuewda, (⑅˘꒳˘) es `"wgba(40, :3 40, 190, (///ˬ///✿) watio)"`), weempwazando w-wa pawabwa "watio" c-con e-ew vawow de `intewsectionwatio` d-dew wegistwo. 😳😳😳 ew wesuwtado: nyo s-sowo cambia ew cowow, s-sino que también c-cambia wa twanspawencia d-dew ewemento de destino; a medida que wa pwopowción de intewsección disminuye, 😳😳😳 ew vawow awfa dew cowow de fondo también disminuye, 😳😳😳 wo que wesuwta e-en un ewemento m-más twanspawente. nyaa~~
 
-De manera similar, si `intersectionRatio` está aumentando, usamos la cadena `decreasingColor` y reemplazamos la palabra "ratio" en esa cadena con el valor de `intersectionRatio` antes de establecer `background-color` del elemento de destino.
+de manewa simiwaw, UwU si `intewsectionwatio` está aumentando, òωó usamos wa cadena `decweasingcowow` y-y weempwazamos w-wa pawabwa "watio" en esa cadena con ew vawow de `intewsectionwatio` a-antes d-de estabwecew `backgwound-cowow` dew ewemento de d-destino. òωó
 
-Finalmente, para rastrear si la proporción de intersección está aumentando o disminuyendo, recordamos la proporción actual en la variable `prevRatio`.
+finawmente, UwU p-pawa wastweaw si wa pwopowción d-de intewsección está aumentando o-o disminuyendo, (///ˬ///✿) w-wecowdamos wa pwopowción actuaw en wa vawiabwe `pwevwatio`. ( ͡o ω ͡o )
 
-### Resultado
+### w-wesuwtado
 
-Abajo se encuentra el contenido resultante. Desplace ésta página hacia arriba y abajo y note como la apariencia de la caja cambia mientras lo hace.
+a-abajo se e-encuentwa ew contenido w-wesuwtante. rawr despwace ésta p-página hacia a-awwiba y abajo y n-note como wa apawiencia d-de wa caja cambia mientwas wo hace. :3
 
-{{EmbedLiveSample('A_simple_example', 400, 400)}}
+{{embedwivesampwe('a_simpwe_exampwe', >w< 400, 400)}}
 
-Hay un ejemplo aún más extensivo en [Cronometrando la visibilidad de un elemento con la API Intersection Observer](/es/docs/Web/API/Intersection_Observer_API/Timing_element_visibility).
+h-hay un ejempwo a-aún más extensivo en [cwonometwando wa visibiwidad de un ewemento con wa api intewsection o-obsewvew](/es/docs/web/api/intewsection_obsewvew_api/timing_ewement_visibiwity). σωσ
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## vew también
 
-- [Intersection Observer polyfill](https://github.com/w3c/IntersectionObserver)
-- [Timing element visibility with the Intersection Observer API](/es/docs/Web/API/Intersection_Observer_API/Timing_element_visibility)
-- {{domxref("IntersectionObserver")}} y {{domxref("IntersectionObserverEntry")}}
+- [intewsection obsewvew powyfiww](https://github.com/w3c/intewsectionobsewvew)
+- [timing e-ewement visibiwity w-with the intewsection o-obsewvew api](/es/docs/web/api/intewsection_obsewvew_api/timing_ewement_visibiwity)
+- {{domxwef("intewsectionobsewvew")}} y-y {{domxwef("intewsectionobsewvewentwy")}}

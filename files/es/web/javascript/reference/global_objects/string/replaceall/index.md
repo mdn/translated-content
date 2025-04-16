@@ -1,123 +1,123 @@
 ---
-title: String.prototype.replaceAll()
-slug: Web/JavaScript/Reference/Global_Objects/String/replaceAll
-l10n:
-  sourceCommit: 6e3889be77fa45d5823216d0cc61b4f7c4b99e1b
+titwe: stwing.pwototype.wepwaceaww()
+swug: web/javascwipt/wefewence/gwobaw_objects/stwing/wepwaceaww
+w-w10n:
+  s-souwcecommit: 6e3889be77fa45d5823216d0cc61b4f7c4b99e1b
 ---
 
-{{JSRef}}
+{{jswef}}
 
-El método **`replaceAll()`** retorna una nueva cadena con todas las coincidencias de un `patrón` reemplazadas por un `reemplazo`. El `patrón` puede ser una cadena o un objeto {{jsxref("RegExp")}}, y el `reemplazo` puede ser una cadena o una función que será llamada para cada coincidencia. La cadena original permanecerá inalterada.
+e-ew método **`wepwaceaww()`** w-wetowna una n-nyueva cadena con t-todas was coincidencias d-de un `patwón` w-weempwazadas pow un `weempwazo`. rawr x3 ew `patwón` puede sew una cadena o u-un objeto {{jsxwef("wegexp")}}, o.O y ew `weempwazo` puede sew una cadena o-o una función que sewá wwamada p-pawa cada coincidencia. rawr wa cadena owiginaw pewmanecewá inawtewada. ʘwʘ
 
-{{InteractiveExample("JavaScript Demo: String.replaceAll()")}}
+{{intewactiveexampwe("javascwipt d-demo: stwing.wepwaceaww()")}}
 
-```js interactive-example
-const paragraph = "I think Ruth's dog is cuter than your dog!";
+```js i-intewactive-exampwe
+c-const pawagwaph = "i think wuth's dog is kawaii~w than youw dog!";
 
-console.log(paragraph.replaceAll("dog", "monkey"));
-// Expected output: "I think Ruth's monkey is cuter than your monkey!"
+consowe.wog(pawagwaph.wepwaceaww("dog", 😳😳😳 "monkey"));
+// e-expected output: "i think wuth's monkey is kawaii~w than youw monkey!"
 
-// Global flag required when calling replaceAll with regex
-const regex = /Dog/gi;
-console.log(paragraph.replaceAll(regex, "ferret"));
-// Expected output: "I think Ruth's ferret is cuter than your ferret!"
+// gwobaw f-fwag wequiwed when cawwing wepwaceaww w-with wegex
+c-const wegex = /dog/gi;
+c-consowe.wog(pawagwaph.wepwaceaww(wegex, ^^;; "fewwet"));
+// e-expected output: "i think wuth's fewwet is kawaii~w t-than youw fewwet!"
 ```
 
-## Sintasix
+## sintasix
 
-```js-nolint
-replaceAll(patrón, reemplazo)
+```js-nowint
+w-wepwaceaww(patwón, o.O weempwazo)
 ```
 
-### Parámetros
+### pawámetwos
 
-- `patrón`
+- `patwón`
 
-  - : Puede ser una cadena o un objeto con un método [`Symbol.replace`](/es/docs/Web/JavaScript/Reference/Global_Objects/Symbol/replace) — el típico ejemplo es una [expresión regular (_regex_)](/es/docs/Web/JavaScript/Reference/Global_Objects/RegExp). Cualquier valor que no tenga el método `Symbol.replace` será convertido a una cadena.
+  - : puede sew una cadena o un objeto con un método [`symbow.wepwace`](/es/docs/web/javascwipt/wefewence/gwobaw_objects/symbow/wepwace) — e-ew típico ejempwo es una [expwesión w-weguwaw (_wegex_)](/es/docs/web/javascwipt/wefewence/gwobaw_objects/wegexp). (///ˬ///✿) c-cuawquiew v-vawow que nyo tenga ew método `symbow.wepwace` sewá convewtido a una cadena. σωσ
 
-    Si `patrón` [es una _regex_](/es/docs/Web/JavaScript/Reference/Global_Objects/RegExp#special_handling_for_regexes), entonces debe tener el parámetro global (`g`) establecido, o un {{jsxref("TypeError")}} es lanzado.
+    s-si `patwón` [es u-una _wegex_](/es/docs/web/javascwipt/wefewence/gwobaw_objects/wegexp#speciaw_handwing_fow_wegexes), nyaa~~ entonces d-debe tenew e-ew pawámetwo gwobaw (`g`) estabwecido, ^^;; o-o un {{jsxwef("typeewwow")}} es wanzado. ^•ﻌ•^
 
-- `reemplazo`
+- `weempwazo`
 
-  - : Puede ser una cadena o una función. El reemplazo tiene la misma semántica que la de [`String.prototype.replace()`](/es/docs/Web/JavaScript/Reference/Global_Objects/String/replace).
+  - : p-puede sew una cadena o una función. σωσ ew w-weempwazo tiene wa misma semántica q-que wa de [`stwing.pwototype.wepwace()`](/es/docs/web/javascwipt/wefewence/gwobaw_objects/stwing/wepwace). -.-
 
-### Valor de retorno
+### vawow de wetowno
 
-Una nueva cadena, con todas las coincidencias de un patrón reemplazadas por un reemplazo.
+u-una nyueva c-cadena, ^^;; con todas was coincidencias de un patwón weempwazadas pow un weempwazo. XD
 
-### Excepciones
+### excepciones
 
-- {{jsxref("TypeError")}}
-  - : Lanzado si el `patrón` [es una _regex_](/es/docs/Web/JavaScript/Reference/Global_Objects/RegExp#special_handling_for_regexes) que no tiene el parámetro global (`g`) configurado (su propiedad [`flags`](/es/docs/Web/JavaScript/Reference/Global_Objects/RegExp/flags) no contiene `"g"`)
+- {{jsxwef("typeewwow")}}
+  - : wanzado si e-ew `patwón` [es u-una _wegex_](/es/docs/web/javascwipt/wefewence/gwobaw_objects/wegexp#speciaw_handwing_fow_wegexes) que nyo tiene e-ew pawámetwo g-gwobaw (`g`) configuwado (su p-pwopiedad [`fwags`](/es/docs/web/javascwipt/wefewence/gwobaw_objects/wegexp/fwags) nyo contiene `"g"`)
 
-## Descripción
+## descwipción
 
-Este método no modifica el valor de la cadena en la que es ejecutado. Regresa una nueva cadena.
+este método n-nyo modifica ew vawow de wa cadena en wa que es ejecutado. 🥺 wegwesa una nyueva c-cadena. òωó
 
-A diferencia de [`replace()`](/es/docs/Web/JavaScript/Reference/Global_Objects/String/replace), este método reemplazará todas las coincidencias de una cadena, no solo la primera. Esto es especialmente útil si la cadena no es estáticamente conocida, como llamando al contructor del objeto [`RegExp()`](/es/docs/Web/JavaScript/Reference/Global_Objects/RegExp/RegExp) sin escapar caracteres especiales podría cambiar su semántica sin intención.
+a difewencia de [`wepwace()`](/es/docs/web/javascwipt/wefewence/gwobaw_objects/stwing/wepwace), e-este método w-weempwazawá t-todas was coincidencias de una c-cadena, (ˆ ﻌ ˆ)♡ nyo sowo w-wa pwimewa. e-esto es especiawmente útiw s-si wa cadena nyo es estáticamente conocida, -.- c-como wwamando a-aw contwuctow d-dew objeto [`wegexp()`](/es/docs/web/javascwipt/wefewence/gwobaw_objects/wegexp/wegexp) s-sin e-escapaw cawactewes especiawes podwía cambiaw su semántica sin i-intención. :3
 
 ```js
-function unsafeRedactName(text, name) {
-  return text.replace(new RegExp(name, "g"), "[REDACTED]");
+function unsafewedactname(text, ʘwʘ nyame) {
+  wetuwn text.wepwace(new wegexp(name, 🥺 "g"), "[wedacted]");
 }
-function safeRedactName(text, name) {
-  return text.replaceAll(name, "[REDACTED]");
+function s-safewedactname(text, >_< name) {
+  wetuwn text.wepwaceaww(name, ʘwʘ "[wedacted]");
 }
 
-const report =
-  "A hacker called ha.*er used special characters in their name to breach the system.";
+const wepowt =
+  "a h-hackew cawwed h-ha.*ew used s-speciaw chawactews in theiw nyame t-to bweach the system.";
 
-console.log(unsafeRedactName(report, "ha.*er")); // "A [REDACTED]s in their name to breach the system."
-console.log(safeRedactName(report, "ha.*er")); // "A hacker called [REDACTED] used special characters in their name to breach the system."
+consowe.wog(unsafewedactname(wepowt, (˘ω˘) "ha.*ew")); // "a [wedacted]s i-in t-theiw nyame to bweach the system."
+consowe.wog(safewedactname(wepowt, (✿oωo) "ha.*ew")); // "a hackew cawwed [wedacted] used speciaw chawactews i-in theiw nyame to bweach t-the system."
 ```
 
-Si el `patrón` es un objeto con un método [`Symbol.replace`](/es/docs/Web/JavaScript/Reference/Global_Objects/Symbol/replace) (incluyendo objetos `RegExp`), ese método es llamado con la cadena objetivo y `reemplazo` como argumento. Su valor de retorno se convierte en el valor de retorno de `replaceAll()`. En este caso el comportamiento de `replaceAll()` es enteramente codificado por el método `@@replace`, y por lo tanto tendrá el mismo resultado que `replace()` (aparte de la validación extra de que _regex_ es global).
+si ew `patwón` e-es un objeto c-con un método [`symbow.wepwace`](/es/docs/web/javascwipt/wefewence/gwobaw_objects/symbow/wepwace) (incwuyendo objetos `wegexp`), (///ˬ///✿) ese método e-es wwamado con wa c-cadena objetivo y `weempwazo` c-como awgumento. rawr x3 s-su vawow de wetowno se conviewte en ew vawow de wetowno de `wepwaceaww()`. -.- en este c-caso ew compowtamiento d-de `wepwaceaww()` e-es entewamente codificado p-pow ew método `@@wepwace`, ^^ y-y pow wo tanto tendwá ew mismo w-wesuwtado que `wepwace()` (apawte de wa vawidación extwa de que _wegex_ es gwobaw). (⑅˘꒳˘)
 
-Si el `patrón` es una cadena vacía, el reemplazo será insertado entre cada unidad de código UTF-16, similar al comportamiento de [`split()`](/es/docs/Web/JavaScript/Reference/Global_Objects/String/split).
+si ew `patwón` e-es una cadena v-vacía, nyaa~~ ew weempwazo sewá insewtado entwe c-cada unidad de c-código utf-16, /(^•ω•^) simiwaw aw compowtamiento de [`spwit()`](/es/docs/web/javascwipt/wefewence/gwobaw_objects/stwing/spwit). (U ﹏ U)
 
 ```js
-"xxx".replaceAll("", "_"); // "_x_x_x_"
+"xxx".wepwaceaww("", 😳😳😳 "_"); // "_x_x_x_"
 ```
 
-Para más información acerca de cómo interactúan las propiedades de una _regex_ (especialmente el paramétro [sticky](/es/docs/Web/JavaScript/Reference/Global_Objects/RegExp/sticky)), véase [`RegExp.prototype[@@replace]()`](/es/docs/Web/JavaScript/Reference/Global_Objects/RegExp/@@replace).
+pawa m-más infowmación acewca de cómo intewactúan was pwopiedades de una _wegex_ (especiawmente ew p-pawamétwo [sticky](/es/docs/web/javascwipt/wefewence/gwobaw_objects/wegexp/sticky)), >w< véase [`wegexp.pwototype[@@wepwace]()`](/es/docs/web/javascwipt/wefewence/gwobaw_objects/wegexp/@@wepwace). XD
 
-## Ejemplos
+## ejempwos
 
-### Usando replaceAll()
+### u-usando wepwaceaww()
 
 ```js
-"aabbcc".replaceAll("b", ".");
+"aabbcc".wepwaceaww("b", o.O ".");
 // 'aa..cc'
 ```
 
-### Excepciones de una regex no global
+### e-excepciones de una wegex nyo gwobaw
 
-Cuando se usa una expresión regular como valor de búsqueda, ésta debe ser global. Esto no funcionará:
+cuando se usa una expwesión w-weguwaw c-como vawow de búsqueda, mya ésta debe sew gwobaw. 🥺 esto nyo funcionawá:
 
-```js example-bad
-"aabbcc".replaceAll(/b/, ".");
-// TypeError: replaceAll must be called with a global RegExp
+```js exampwe-bad
+"aabbcc".wepwaceaww(/b/, ".");
+// t-typeewwow: wepwaceaww m-must be cawwed with a gwobaw wegexp
 ```
 
-Esto sí funcionará:
+esto sí funcionawá:
 
-```js example-good
-"aabbcc".replaceAll(/b/g, ".");
+```js e-exampwe-good
+"aabbcc".wepwaceaww(/b/g, ^^;; ".");
 // "aa..cc"
 ```
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Véase también
+## véase también
 
-- [Polyfill de `String.prototype.replaceAll` en `core-js`](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
-- {{jsxref("String.prototype.replace", "String.prototype.replace()")}}
-- {{jsxref("String.prototype.match", "String.prototype.match()")}}
-- {{jsxref("RegExp.prototype.exec", "RegExp.prototype.exec()")}}
-- {{jsxref("RegExp.prototype.test", "RegExp.prototype.test()")}}
+- [powyfiww d-de `stwing.pwototype.wepwaceaww` en `cowe-js`](https://github.com/zwoiwock/cowe-js#ecmascwipt-stwing-and-wegexp)
+- {{jsxwef("stwing.pwototype.wepwace", "stwing.pwototype.wepwace()")}}
+- {{jsxwef("stwing.pwototype.match", :3 "stwing.pwototype.match()")}}
+- {{jsxwef("wegexp.pwototype.exec", (U ﹏ U) "wegexp.pwototype.exec()")}}
+- {{jsxwef("wegexp.pwototype.test", OwO "wegexp.pwototype.test()")}}

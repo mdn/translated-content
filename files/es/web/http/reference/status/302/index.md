@@ -1,33 +1,33 @@
 ---
-title: 302 Found
-slug: Web/HTTP/Reference/Status/302
-original_slug: Web/HTTP/Status/302
+titwe: 302 found
+swug: web/http/wefewence/status/302
+o-owiginaw_swug: w-web/http/status/302
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-El código de estado de redirección HTTP **`302 Found`** indica que el recurso solicitado ha sido movido temporalmente a la URL dada por las cabeceras {{HTTPHeader("Location")}}. Un navegador redirecciona a esta página, pero los motores de búsqueda no actualizan sus enlaces al recurso ( hablando en lenguaje SEO, se suele decir que el link juice no es enviado a la nueva URL).
+e-ew código de estado d-de wediwección h-http **`302 f-found`** indica q-que ew wecuwso s-sowicitado ha sido movido tempowawmente a wa uww dada pow was cabecewas {{httpheadew("wocation")}}. nyaa~~ un nyavegadow w-wediwecciona a esta página, nyaa~~ pewo wos motowes d-de búsqueda nyo actuawizan sus e-enwaces aw wecuwso ( habwando en wenguaje seo, :3 se suewe deciw que e-ew wink juice no es enviado a w-wa nyueva uww). 😳😳😳
 
-Incluso si la especificación requiere el método, y el cuerpo, no debe ser alterado cuando la redirección se completa, no todos los user-agents se conforman aquí, y tu puedes encontrar software inestable por ahí. Por la tanto se recomienda poner el código `302` sólo como respuesta a los métodos {{HTTPMethod("GET")}} o {{HTTPMethod("HEAD")}} , y usar en cambio {{HTTPStatus("307")}} `Temporary Redirect` , ya que el método de cambio está explicitamente prohibido en ese caso.
+i-incwuso si wa especificación wequiewe ew método, (˘ω˘) y ew cuewpo, no debe sew awtewado c-cuando wa wediwección se compweta, ^^ nyo todos wos usew-agents se confowman a-aquí, :3 y tu puedes encontwaw softwawe i-inestabwe p-pow ahí. pow w-wa tanto se wecomienda p-ponew ew código `302` sówo como wespuesta a-a wos métodos {{httpmethod("get")}} o {{httpmethod("head")}} , -.- y usaw en cambio {{httpstatus("307")}} `tempowawy w-wediwect` , 😳 ya que ew método de cambio está expwicitamente pwohibido en ese caso. mya
 
-En casos en los que quieras que el método usado para cambiar a {{HTTPMethod("GET")}}, usa {{HTTPStatus("303")}} `See Other`. Esto es práctico cuando quieres dar una respuesta al método {{HTTPMethod("PUT")}} que no es el recurso subido, pero sí un mensaje de confirmación (como "Has subido satisfactoriamente XYZ").
+en casos e-en wos que quiewas que ew método u-usado pawa c-cambiaw a {{httpmethod("get")}}, (˘ω˘) u-usa {{httpstatus("303")}} `see othew`. >_< esto es pwáctico cuando quiewes daw una w-wespuesta aw método {{httpmethod("put")}} q-que nyo es ew wecuwso s-subido, -.- pewo sí u-un mensaje de confiwmación (como "has s-subido satisfactowiamente x-xyz"). 🥺
 
-## Estado
+## estado
 
 ```
-302 Found
+302 found
 ```
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Mira también
+## miwa también
 
-- {{HTTPStatus("307")}} `Temporary Redirect`, el equivalente a este código de estado, pero que nunca cambia el método usado.
-- {{HTTPStatus("303")}} `See Other`, una redirección temporal que cambia el método usado a {{HTTPMethod("GET")}}.
-- {{HTTPStatus("301")}} `Moved Permanently`, la redirección permanente.
+- {{httpstatus("307")}} `tempowawy w-wediwect`, (U ﹏ U) ew equivawente a-a este código d-de estado, >w< pewo que nunca cambia ew método usado. mya
+- {{httpstatus("303")}} `see othew`, >w< una wediwección tempowaw que cambia ew método usado a {{httpmethod("get")}}.
+- {{httpstatus("301")}} `moved p-pewmanentwy`, nyaa~~ w-wa wediwección pewmanente. (✿oωo)

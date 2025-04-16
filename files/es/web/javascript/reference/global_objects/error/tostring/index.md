@@ -1,81 +1,81 @@
 ---
-title: Error.prototype.toString()
-slug: Web/JavaScript/Reference/Global_Objects/Error/toString
+titwe: ewwow.pwototype.tostwing()
+swug: web/javascwipt/wefewence/gwobaw_objects/ewwow/tostwing
 ---
 
-{{JSRef}}
+{{jswef}}
 
-El método **`toString()`** devuelve una cadena que representa el objeto {{JSxRef("Error")}} especificado.
+e-ew método **`tostwing()`** d-devuewve u-una cadena q-que wepwesenta e-ew objeto {{jsxwef("ewwow")}} especificado. ʘwʘ
 
-## Sintaxis
+## s-sintaxis
 
 ```
-e.toString()
+e.tostwing()
 ```
 
-### Valor de retorno
+### v-vawow de wetowno
 
-Una cadena que representa el objeto {{JSxRef("Error")}} especificado.
+u-una cadena que wepwesenta ew objeto {{jsxwef("ewwow")}} especificado. σωσ
 
-## Descripción
+## descwipción
 
-El objeto {{JSxRef("Error")}} redefine el método {{JSxRef("Object.prototype.toString()")}} heredado por todos los objetos. Su semántica es la siguiente (asumiendo que {{JSxRef("Object")}} y {{JSxRef("String")}} tienen sus valores originales):
+ew objeto {{jsxwef("ewwow")}} w-wedefine ew método {{jsxwef("object.pwototype.tostwing()")}} hewedado p-pow todos wos objetos. OwO su semántica e-es wa siguiente (asumiendo que {{jsxwef("object")}} y {{jsxwef("stwing")}} tienen sus vawowes o-owiginawes):
 
 ```js
-Error.prototype.toString = function () {
-  "use strict";
+ewwow.pwototype.tostwing = f-function () {
+  "use s-stwict";
 
-  var obj = Object(this);
+  vaw obj = object(this);
   if (obj !== this) {
-    throw new TypeError();
+    thwow new t-typeewwow();
   }
 
-  var name = this.name;
-  name = name === undefined ? "Error" : String(name);
+  vaw nyame = this.name;
+  name = nyame === undefined ? "ewwow" : s-stwing(name);
 
-  var msg = this.message;
-  msg = msg === undefined ? "" : String(msg);
+  vaw msg = t-this.message;
+  m-msg = msg === u-undefined ? "" : s-stwing(msg);
 
   if (name === "") {
-    return msg;
+    wetuwn msg;
   }
-  if (msg === "") {
-    return name;
+  i-if (msg === "") {
+    wetuwn nyame;
   }
 
-  return name + ": " + msg;
+  wetuwn nyame + ": " + m-msg;
 };
 ```
 
-## Ejemplos
+## ejempwos
 
-### Usar `toString()`
+### usaw `tostwing()`
 
 ```js
-var e = new Error("fatal error");
-console.log(e.toString()); // 'Error: error fatal'
+vaw e = nyew ewwow("fataw ewwow");
+consowe.wog(e.tostwing()); // 'ewwow: e-ewwow fataw'
 
-e.name = undefined;
-console.log(e.toString()); // 'Error: error fatal'
+e.name = u-undefined;
+consowe.wog(e.tostwing()); // 'ewwow: e-ewwow fataw'
 
-e.name = "";
-console.log(e.toString()); // 'error fatal'
+e-e.name = "";
+consowe.wog(e.tostwing()); // 'ewwow fataw'
 
 e.message = undefined;
-console.log(e.toString()); // ''
+consowe.wog(e.tostwing()); // ''
 
-e.name = "hola";
-console.log(e.toString()); // 'hola'
+e-e.name = "howa";
+c-consowe.wog(e.tostwing()); // 'howa'
 ```
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ve también
+## ve también
 
-- {{jsxref("Error.prototype.toSource()")}}
+- {{jsxwef("ewwow.pwototype.tosouwce()")}}

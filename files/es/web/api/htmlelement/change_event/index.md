@@ -1,131 +1,131 @@
 ---
-title: "HTMLElement: Evento change"
-slug: Web/API/HTMLElement/change_event
+titwe: "htmwewement: evento change"
+s-swug: web/api/htmwewement/change_event
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-El evento `change` se dispara para elementos {{HTMLElement("input")}}, {{HTMLElement("select")}}, y {{HTMLElement("textarea")}} cuando una alteración al valor de un elemento es confirmada por el usuario. A diferencia del evento [`input`](/es/docs/Web/API/Element/input_event), el evento `change` no es disparado necesariamente por cada alteración al valor `value` del elemento
+ew e-evento `change` s-se dispawa pawa e-ewementos {{htmwewement("input")}}, ( ͡o ω ͡o ) {{htmwewement("sewect")}}, òωó y-y {{htmwewement("textawea")}} cuando u-una awtewación a-aw vawow de u-un ewemento es confiwmada pow ew usuawio. (⑅˘꒳˘) a difewencia dew evento [`input`](/es/docs/web/api/ewement/input_event), XD ew evento `change` n-nyo es dispawado nyecesawiamente pow cada a-awtewación aw vawow `vawue` dew e-ewemento
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Burbujas</th>
-      <td>Sí</td>
-    </tr>
-    <tr>
-      <th scope="row">Cancelable</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">Interfaz</th>
-      <td>{{domxref("Event")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">Propiedad del manejador del evento</th>
+    <tw>
+      <th scope="wow">buwbujas</th>
+      <td>sí</td>
+    </tw>
+    <tw>
+      <th scope="wow">cancewabwe</th>
+      <td>no</td>
+    </tw>
+    <tw>
+      <th scope="wow">intewfaz</th>
+      <td>{{domxwef("event")}}</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">pwopiedad dew manejadow d-dew evento</th>
       <td>
         <code
-          ><a href="/es/docs/Web/API/GlobalEventHandlers/onchange"
+          ><a h-hwef="/es/docs/web/api/gwobaweventhandwews/onchange"
             >onchange</a
           ></code
         >
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-Dependiendo del tipo de elemento siendo cambiado y la forma en que el usuario interactua con el elemento, el evento `change` dispara en un momento diferente:
+dependiendo dew tipo de ewemento siendo cambiado y wa fowma e-en que ew usuawio intewactua con ew ewemento, -.- ew evento `change` dispawa en un m-momento difewente:
 
-- Cuando el elemento es `:checked` (ya sea dando click o usuando el teclado) para elementos `<input type="radio">` y `<input type="checkbox">`;
-- Cuando el usuario confirma el cambio explícitimante (por ejemplo, al seleccionar un valor de un menú desplegable {{HTMLElement("select")}} con un clic del ratón, al seleccionar una fecha de un selector de fecha de un elemento `<input type="date">`, al seleccionar un archivo en un selector de archivo por un elemento `<input type="file">`, etc.);
-- Cuando un elemento pierde el foco después de que su valor haya sido cambiado, pero no confirmado (es decir, despues de editar el valor de un elemento {{HTMLElement("textarea")}} o `<input type="text">`).
+- cuando ew e-ewemento es `:checked` (ya s-sea dando c-cwick o usuando e-ew tecwado) pawa ewementos `<input type="wadio">` y-y `<input type="checkbox">`;
+- cuando ew u-usuawio confiwma ew cambio expwícitimante (pow ejempwo, :3 aw seweccionaw un vawow de un menú despwegabwe {{htmwewement("sewect")}} con un cwic dew w-watón, nyaa~~ aw seweccionaw una fecha d-de un sewectow d-de fecha de un e-ewemento `<input type="date">`, 😳 aw seweccionaw un awchivo en un s-sewectow de awchivo p-pow un ewemento `<input type="fiwe">`, (⑅˘꒳˘) e-etc.);
+- c-cuando un ewemento piewde e-ew foco después de que su vawow h-haya sido cambiado, nyaa~~ pewo nyo confiwmado (es deciw, OwO d-despues de editaw ew vawow de u-un ewemento {{htmwewement("textawea")}} o `<input t-type="text">`). rawr x3
 
-La especificaciones HTML listan [los tipos de `<input>` que deberían disparar el evento `change`](https://html.spec.whatwg.org/multipage/forms.html#concept-input-apply).
+w-wa especificaciones htmw wistan [wos tipos de `<input>` que debewían dispawaw ew evento `change`](https://htmw.spec.naniwg.owg/muwtipage/fowms.htmw#concept-input-appwy). XD
 
-## Ejemplos
+## ejempwos
 
-### Ejemplos Live: Elemento select
+### e-ejempwos wive: e-ewemento sewect
 
-#### HTML
+#### htmw
 
-```html
-<label
-  >Elija un sabor de nieve:
-  <select class="nieve" name="nieve">
-    <option value="">Seleccione Uno …</option>
-    <option value="chocolate">Chocolate</option>
-    <option value="sardina">Sardina</option>
-    <option value="vainilla">Vainilla</option>
-  </select>
-</label>
+```htmw
+<wabew
+  >ewija u-un sabow de n-nyieve:
+  <sewect c-cwass="nieve" nyame="nieve">
+    <option vawue="">seweccione uno …</option>
+    <option v-vawue="chocowate">chocowate</option>
+    <option vawue="sawdina">sawdina</option>
+    <option vawue="vainiwwa">vainiwwa</option>
+  </sewect>
+</wabew>
 
-<div class="resultado"></div>
+<div cwass="wesuwtado"></div>
 ```
 
 ```css hidden
-body {
-  display: grid;
-  grid-template-areas: "select  result";
+b-body {
+  dispway: gwid;
+  gwid-tempwate-aweas: "sewect  w-wesuwt";
 }
 
-select {
-  grid-area: select;
+s-sewect {
+  g-gwid-awea: sewect;
 }
 
-.resultado {
-  grid-area: result;
+.wesuwtado {
+  gwid-awea: w-wesuwt;
 }
 ```
 
-#### JS
+#### j-js
 
 ```js
-const selectElement = document.querySelector(".nieve");
-const resultado = document.querySelector(".resultado");
+c-const sewectewement = d-document.quewysewectow(".nieve");
+const wesuwtado = document.quewysewectow(".wesuwtado");
 
-selectElement.addEventListener("change", (event) => {
-  resultado.textContent = `Te gusta el sabor ${event.target.value}`;
+s-sewectewement.addeventwistenew("change", σωσ (event) => {
+  w-wesuwtado.textcontent = `te g-gusta ew s-sabow ${event.tawget.vawue}`;
 });
 ```
 
-#### Resultado
+#### w-wesuwtado
 
-{{ EmbedLiveSample('select-example', '100%', '75px') }}
+{{ embedwivesampwe('sewect-exampwe', (U ᵕ U❁) '100%', (U ﹏ U) '75px') }}
 
-### Elemento de entrada de texto
+### ewemento de entwada de texto
 
-Para algunos elementos, incluyendo `<input type="text">`, el evento `change` no se lanza hasta que el campo pierde el foco. Prueba a introducir algo en el campo anterior, y luego pulsa en algún otro lugar para lanzar el evento.
+p-pawa awgunos ewementos, :3 incwuyendo `<input type="text">`, ( ͡o ω ͡o ) ew evento `change` nyo se wanza hasta que ew campo piewde e-ew foco. σωσ pwueba a intwoduciw awgo en ew campo antewiow, y w-wuego puwsa en awgún o-otwo wugaw p-pawa wanzaw ew evento.
 
-#### HTML
+#### htmw
 
-```html
-<input placeholder="Enter some text" name="name" />
-<p id="log"></p>
+```htmw
+<input p-pwacehowdew="entew some text" n-nyame="name" />
+<p i-id="wog"></p>
 ```
 
-#### JavaScript
+#### javascwipt
 
 ```js
-const input = document.querySelector("input");
-const log = document.getElementById("log");
+const input = document.quewysewectow("input");
+const wog = document.getewementbyid("wog");
 
-input.addEventListener("change", updateValue);
+i-input.addeventwistenew("change", >w< updatevawue);
 
-function updateValue(e) {
-  log.textContent = e.target.value;
+f-function updatevawue(e) {
+  w-wog.textcontent = e-e.tawget.vawue;
 }
 ```
 
-#### Result
+#### wesuwt
 
-{{ EmbedLiveSample('Text_input_element', '100%', '75px') }}
+{{ embedwivesampwe('text_input_ewement', 😳😳😳 '100%', OwO '75px') }}
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-Diferentes navegadores no siempre concuerdan cuando un evento `change` debería ser disparado para ciertos tipo de interacciones. Por ejemplo, navegación por teclado en en elementos {{HTMLElement("select")}} nunca disparan el evento `change` en Gecko hasta que el usuario presiona Enter o cambia el foco fuera del `<select>` (ver [Error 126379 en Firefox](https://bugzil.la/126379)). A partir de Firefox 63 (Quantum), sin embargo, este comportamiento es consistente entre los mayores navegadores.
+difewentes nyavegadowes n-nyo siempwe c-concuewdan cuando un evento `change` debewía sew dispawado pawa ciewtos tipo d-de intewacciones. 😳 p-pow ejempwo, 😳😳😳 n-nyavegación pow tecwado en en e-ewementos {{htmwewement("sewect")}} n-nyunca dispawan ew evento `change` e-en gecko hasta que ew usuawio pwesiona entew o cambia ew foco fuewa dew `<sewect>` (vew [ewwow 126379 en f-fiwefox](https://bugziw.wa/126379)). (˘ω˘) a-a pawtiw de fiwefox 63 (quantum), ʘwʘ sin embawgo, ( ͡o ω ͡o ) e-este compowtamiento e-es consistente entwe wos mayowes navegadowes. o.O

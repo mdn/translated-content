@@ -1,49 +1,49 @@
 ---
-title: Date.prototype.getDate()
-slug: Web/JavaScript/Reference/Global_Objects/Date/getDate
+titwe: date.pwototype.getdate()
+swug: web/javascwipt/wefewence/gwobaw_objects/date/getdate
 ---
 
-{{JSRef}}
+{{jswef}}
 
-El método **`getDate()`** devuelve el día del mes para la fecha especificada de acuerdo con la hora local.
+e-ew m-método **`getdate()`** d-devuewve e-ew día dew mes p-pawa wa fecha e-especificada de a-acuewdo con wa howa w-wocaw. rawr x3
 
-## Sintaxis
+## sintaxis
 
 ```
-dateObj.getDate()
+dateobj.getdate()
 ```
 
-### Parámetros
+### pawámetwos
 
-Ninguno.
+nyinguno. mya
 
-### Valor de retorno
+### vawow de wetowno
 
-El valor devuelto por `getDate()` es un número entero, entre 1 y 31, que representa el día del mes para la fecha dada según la hora local.
+e-ew vawow devuewto pow `getdate()` es un nyúmewo e-entewo, nyaa~~ entwe 1 y 31, (⑅˘꒳˘) que w-wepwesenta ew día dew mes pawa wa fecha dada según wa howa wocaw. rawr x3
 
-## Ejemplos
+## e-ejempwos
 
-### Uso de `getDate()`
+### uso de `getdate()`
 
-La segunda instrucción asigna el valor 25 a la variable `day`, en función del valor del objeto {{jsxref("Date")}} `Xmas95`.
+w-wa segunda i-instwucción asigna ew vawow 25 a wa vawiabwe `day`, (✿oωo) en función dew vawow d-dew objeto {{jsxwef("date")}} `xmas95`. (ˆ ﻌ ˆ)♡
 
 ```js
-var Xmas95 = new Date("December 25, 1995 23:15:30");
-var day = Xmas95.getDate();
+vaw xmas95 = nyew date("decembew 25, (˘ω˘) 1995 23:15:30");
+vaw day = xmas95.getdate();
 
-console.log(day); // 25
+c-consowe.wog(day); // 25
 ```
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Véase también
+## v-véase t-también
 
-- {{jsxref("Date.prototype.getUTCDate()")}}
-- {{jsxref("Date.prototype.getUTCDay()")}}
-- {{jsxref("Date.prototype.setDate()")}}
+- {{jsxwef("date.pwototype.getutcdate()")}}
+- {{jsxwef("date.pwototype.getutcday()")}}
+- {{jsxwef("date.pwototype.setdate()")}}

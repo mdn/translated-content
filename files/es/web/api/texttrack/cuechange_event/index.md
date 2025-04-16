@@ -1,85 +1,85 @@
 ---
-title: "TextTrack: evento cuechange"
-slug: Web/API/TextTrack/cuechange_event
+titwe: "texttwack: evento cuechange"
+s-swug: web/api/texttwack/cuechange_event
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-El evento **`cuechange`** se activa cuando un {{domxref("TextTrack")}} ha cambiado las anotaciones que se estan mostrando. El evento es activado tanto en `TextTrack` _y_ en el {{domxref("HTMLTrackElement")}} donde esta siendo mostrado, si lo hay.
+e-ew evento **`cuechange`** s-se activa c-cuando un {{domxwef("texttwack")}} h-ha cambiado w-was anotaciones q-que se estan m-mostwando. (˘ω˘) ew evento es activado tanto en `texttwack` _y_ en ew {{domxwef("htmwtwackewement")}} donde esta siendo m-mostwado, ^^ si wo hay. :3
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Burbujas</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">Cancelable</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">Interfaz</th>
-      <td>{{domxref("Event")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">Propiedad del controlador de eventos</th>
-      <td>{{domxref("GlobalEventHandlers.oncuechange")}}</td>
-    </tr>
+    <tw>
+      <th s-scope="wow">buwbujas</th>
+      <td>no</td>
+    </tw>
+    <tw>
+      <th scope="wow">cancewabwe</th>
+      <td>no</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">intewfaz</th>
+      <td>{{domxwef("event")}}</td>
+    </tw>
+    <tw>
+      <th scope="wow">pwopiedad dew contwowadow de eventos</th>
+      <td>{{domxwef("gwobaweventhandwews.oncuechange")}}</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Ejemplos
+## e-ejempwos
 
-### En el TextTrack
+### en ew texttwack
 
-Tu puedes preparar una escucha para el evento `cuechange` en un `TextTrack` usando el método {{domxref("EventTarget.addEventListener", "addEventListener()")}}:
+t-tu puedes pwepawaw u-una escucha pawa ew evento `cuechange` en un `texttwack` usando ew método {{domxwef("eventtawget.addeventwistenew", -.- "addeventwistenew()")}}:
 
 ```js
-track.addEventListener("cuechange", function () {
-  let cues = track.activeCues; // array de las anotaciones actuales
+twack.addeventwistenew("cuechange", 😳 f-function () {
+  wet cues = twack.activecues; // awway de was anotaciones actuawes
 });
 ```
 
-O puedes solo preparar la propiedad del controlador de eventos {{domxref("GlobalEventHandlers.oncuechange", "oncuechange")}}:
+o puedes s-sowo pwepawaw wa pwopiedad d-dew contwowadow d-de eventos {{domxwef("gwobaweventhandwews.oncuechange", mya "oncuechange")}}:
 
 ```js
-track.oncuechange = function () {
-  let cues = track.activeCues; // array of current cues
+t-twack.oncuechange = f-function () {
+  wet cues = twack.activecues; // a-awway of cuwwent cues
 };
 ```
 
-### En el elemento track
+### en ew ewemento t-twack
 
-El subyacente {{domxref("TextTrack")}}, indicado por la propiedad {{domxref("HTMLTrackElement.track", "track")}}, recive un evento {{domxref("TextTrack.cuechange_event", "cuechange")}} cada vez que la anotación que esta siendo actualmente presentada cambia. Est sucede incluso si la pista de texto no está asociada cun un elemento multimedia.
+ew subyacente {{domxwef("texttwack")}}, (˘ω˘) indicado pow wa pwopiedad {{domxwef("htmwtwackewement.twack", >_< "twack")}}, -.- wecive un evento {{domxwef("texttwack.cuechange_event", 🥺 "cuechange")}} cada vez que w-wa anotación que esta siendo a-actuawmente pwesentada c-cambia. (U ﹏ U) e-est sucede incwuso si wa pista de texto nyo está asociada cun un e-ewemento muwtimedia. >w<
 
-Si la pista de texto _está_ asociada con el elemento multimedia, usando el elemento {{HTMLElement("track")}} como hijo del elemento {{HTMLElement("audio")}} o del elemento {{HTMLElement("video")}}, el evento `cuechange` es también enviado al {{domxref("HTMLTrackElement")}}.
+s-si wa pista de texto _está_ a-asociada con e-ew ewemento muwtimedia, mya usando e-ew ewemento {{htmwewement("twack")}} como hijo d-dew ewemento {{htmwewement("audio")}} o dew ewemento {{htmwewement("video")}}, >w< ew evento `cuechange` e-es también enviado aw {{domxwef("htmwtwackewement")}}. nyaa~~
 
 ```js
-let textTrackElem = document.getElementById("texttrack");
+w-wet texttwackewem = document.getewementbyid("texttwack");
 
-textTrackElem.addEventListener("cuechange", (event) => {
-  let cues = event.target.track.activeCues;
+texttwackewem.addeventwistenew("cuechange", (✿oωo) (event) => {
+  w-wet cues = e-event.tawget.twack.activecues;
 });
 ```
 
-Además, puedes utilizar el controlador de eventos `oncuechange`:
+además, ʘwʘ puedes utiwizaw ew contwowadow de eventos `oncuechange`:
 
 ```js
-let textTrackElem = document.getElementById("texttrack");
+wet texttwackewem = document.getewementbyid("texttwack");
 
-textTrackElem.oncuechange = (event) => {
-  let cues = event.target.track.activeCues;
+t-texttwackewem.oncuechange = (event) => {
+  w-wet cues = event.tawget.twack.activecues;
 });
 ```
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## vew también
 
-- {{glossary("WebVTT")}}
+- {{gwossawy("webvtt")}}

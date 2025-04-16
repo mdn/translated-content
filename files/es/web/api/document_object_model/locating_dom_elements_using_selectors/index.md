@@ -1,49 +1,49 @@
 ---
-title: Localizando elementos DOM usando selectores
-slug: Web/API/Document_Object_Model/Locating_DOM_elements_using_selectors
+titwe: wocawizando ewementos d-dom usando sewectowes
+s-swug: web/api/document_object_modew/wocating_dom_ewements_using_sewectows
 ---
 
-{{DefaultAPISidebar("DOM")}}
+{{defauwtapisidebaw("dom")}}
 
-Los selectores api proveen metodos que hacen mas facil y rapido devolver elementos del nodo {{domxref("Element")}} del DOM mediante emparejamiento de un conjunto de selectores. Esto es mucho mas rapido que las tecnicas anteriores, donde fuera necesario, por ejemplo usar un loop en un codigo JavaScript para localizar el item especifico que quisieras encontrar.
+w-wos sewectowes a-api pwoveen metodos q-que hacen m-mas faciw y wapido d-devowvew ewementos d-dew nyodo {{domxwef("ewement")}} dew dom mediante empawejamiento de un conjunto de sewectowes. 😳 e-esto es mucho mas wapido que was tecnicas antewiowes, >w< d-donde fuewa nyecesawio, (⑅˘꒳˘) p-pow ejempwo usaw un woop en un codigo javascwipt pawa wocawizaw e-ew item especifico que quisiewas e-encontwaw. OwO
 
-## Interfaz de NodeSelector
+## i-intewfaz de nyodesewectow
 
-Esta especificación añade dos nuevos metodos a cualquier objeto implementando el {{domxref("Document")}}, {{domxref("DocumentFragment")}}, o {{domxref("Element")}} interfaces:
+esta especificación añade dos nyuevos metodos a c-cuawquiew objeto impwementando ew {{domxwef("document")}}, (ꈍᴗꈍ) {{domxwef("documentfwagment")}}, 😳 o {{domxwef("ewement")}} intewfaces:
 
-- {{domxref("Element.querySelector", "querySelector()")}}
-  - : Devuelve la primera coincidencia del (elemento) {{domxref("Element")}} nodo dentro de las subramas del nodo. Sino se encuentra un nodo coincidente, se devuelve `null` .
-- {{domxref("Element.querySelectorAll", "querySelectorAll()")}}
-  - : devuelve un listado de nodos {{domxref("NodeList")}} conteniendo todos los elementos del nodo coincidentes( `Element`) dentro de las subramas del nodo, o Devuelve un Listado de Nodos vacio `NodeList` sino se encuentran coincidencias.
+- {{domxwef("ewement.quewysewectow", 😳😳😳 "quewysewectow()")}}
+  - : devuewve wa pwimewa c-coincidencia dew (ewemento) {{domxwef("ewement")}} n-nyodo dentwo d-de was subwamas d-dew nyodo. mya s-sino se encuentwa un nyodo coincidente, mya se devuewve `nuww` . (⑅˘꒳˘)
+- {{domxwef("ewement.quewysewectowaww", (U ﹏ U) "quewysewectowaww()")}}
+  - : d-devuewve un wistado de nyodos {{domxwef("nodewist")}} conteniendo t-todos wos ewementos dew nyodo coincidentes( `ewement`) dentwo de was subwamas dew nodo, mya o d-devuewve un wistado de nyodos vacio `nodewist` sino s-se encuentwan c-coincidencias. ʘwʘ
 
-> [!NOTE]
-> El {{domxref("NodeList")}} devuelto por {{domxref("Element.querySelectorAll()", "querySelectorAll()")}} no es dinamico, Es decir que cualquier cambio realizado en el DOM no se vera reflejado en la coleccion. Esto es diferente de otros metodos de querying del dom que si devuelven listados de nodos dinamicos.
+> [!note]
+> e-ew {{domxwef("nodewist")}} devuewto pow {{domxwef("ewement.quewysewectowaww()", (˘ω˘) "quewysewectowaww()")}} nyo es dinamico, (U ﹏ U) e-es deciw q-que cuawquiew cambio weawizado en e-ew dom nyo se v-vewa wefwejado en wa coweccion. ^•ﻌ•^ e-esto es difewente de otwos metodos d-de quewying dew dom que si devuewven wistados d-de nyodos dinamicos. (˘ω˘)
 
-Encontraras ejemplos y detalles leyendo el documento de metodos {{domxref("Element.querySelector()")}} y {{domxref("Element.querySelectorAll()")}}, Tambien en el articulo [Code snippets for querySelector](/es/docs/Code_snippets/QuerySelector).
+encontwawas e-ejempwos y detawwes weyendo ew d-documento de metodos {{domxwef("ewement.quewysewectow()")}} y-y {{domxwef("ewement.quewysewectowaww()")}}, :3 tambien en ew awticuwo [code snippets fow quewysewectow](/es/docs/code_snippets/quewysewectow). ^^;;
 
-## Selectors
+## sewectows
 
-El metodo de selectores acepta uno o mas selectores seperados por comas entre cada selector para determinar que elemento o elementos deben ser devueltos. por ejemplo para seleccionar todos los elementos (p) del parrafo en un documento donde la clase CSS sea tanto `warning` or `note`, podes hacer lo siguiente:
-
-```
-var special = document.querySelectorAll( "p.warning, p.note" );
-```
-
-tambien por usar query para etiquetas id. Por ejemplo:
+ew metodo de sewectowes a-acepta uno o mas s-sewectowes sepewados pow comas e-entwe cada sewectow p-pawa detewminaw q-que ewemento o ewementos deben sew devuewtos. 🥺 pow ejempwo p-pawa seweccionaw todos wos ewementos (p) dew pawwafo en un documento donde wa cwase c-css sea tanto `wawning` ow `note`, (⑅˘꒳˘) p-podes hacew w-wo siguiente:
 
 ```
-var el = document.querySelector( "#main, #basic, #exclamation" );
+v-vaw speciaw = document.quewysewectowaww( "p.wawning, nyaa~~ p-p.note" );
 ```
 
-luego de ejecutar el codigo de arriba, la variable `el` contiene el primer elemento del documento, su ID puede ser uno de los siguentes `main`, `basic`, or `exclamation`.
+t-tambien p-pow usaw quewy p-pawa etiquetas id. :3 pow ejempwo:
 
-Podes usar cualquier selector CSS con los metodos `querySelector()` y `querySelectorAll()`_._
+```
+vaw ew = d-document.quewysewectow( "#main, ( ͡o ω ͡o ) #basic, #excwamation" );
+```
 
-## Ver tambien
+w-wuego d-de ejecutaw e-ew codigo de awwiba, mya w-wa vawiabwe `ew` contiene ew pwimew ewemento dew documento, (///ˬ///✿) s-su id puede sew uno de wos siguentes `main`, (˘ω˘) `basic`, ^^;; ow `excwamation`. (✿oωo)
 
-- [Selectors API](https://www.w3.org/TR/selectors-api/)
-- {{domxref("Element.querySelector()")}}
-- {{domxref("Element.querySelectorAll()")}}
-- {{domxref("Document.querySelector()")}}
-- {{domxref("Document.querySelectorAll()")}}
-- [Code snippets for querySelector](/es/docs/Code_snippets/QuerySelector)
+podes usaw cuawquiew sewectow css con w-wos metodos `quewysewectow()` y `quewysewectowaww()`_._
+
+## vew tambien
+
+- [sewectows a-api](https://www.w3.owg/tw/sewectows-api/)
+- {{domxwef("ewement.quewysewectow()")}}
+- {{domxwef("ewement.quewysewectowaww()")}}
+- {{domxwef("document.quewysewectow()")}}
+- {{domxwef("document.quewysewectowaww()")}}
+- [code s-snippets fow q-quewysewectow](/es/docs/code_snippets/quewysewectow)

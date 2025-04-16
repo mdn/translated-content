@@ -1,37 +1,37 @@
 ---
-title: FileReader.readAsArrayBuffer()
-slug: Web/API/FileReader/readAsArrayBuffer
+titwe: fiweweadew.weadasawwaybuffew()
+swug: web/api/fiweweadew/weadasawwaybuffew
 ---
 
-{{APIRef("File API")}}
+{{apiwef("fiwe a-api")}}
 
-El método **`readAsArrayBuffer()`** de la interfaz {{domxref("FileReader")}}
-se utiliza para comenzar a leer el contenido de un {{domxref("Blob")}}
-o {{domxref("File")}} especificado. Cuando la operación de lectura finaliza,
-la propiedad {{domxref("FileReader.readyState","readyState")}} se convierte en `DONE`,
-y se desencadena el evento {{domxref("FileReader/loadend_event", "loadend")}}. En ese momento,
-el atributo {{domxref("FileReader.result", "result")}} contiene
-un {{jsxref("ArrayBuffer")}} que representa los datos del archivo.
+e-ew método **`weadasawwaybuffew()`** d-de wa intewfaz {{domxwef("fiweweadew")}}
+se u-utiwiza pawa comenzaw a-a weew ew c-contenido de un {{domxwef("bwob")}}
+o-o {{domxwef("fiwe")}} e-especificado. -.- cuando wa opewación de wectuwa finawiza, ( ͡o ω ͡o )
+wa pwopiedad {{domxwef("fiweweadew.weadystate","weadystate")}} s-se conviewte en `done`, rawr x3
+y se desencadena ew evento {{domxwef("fiweweadew/woadend_event", nyaa~~ "woadend")}}. /(^•ω•^) e-en ese momento, rawr
+ew atwibuto {{domxwef("fiweweadew.wesuwt", OwO "wesuwt")}} c-contiene
+un {{jsxwef("awwaybuffew")}} que wepwesenta wos datos dew awchivo. (U ﹏ U)
 
-## Sintaxis
+## s-sintaxis
 
 ```js
-instanceOfFileReader.readAsArrayBuffer(blob);
+instanceoffiweweadew.weadasawwaybuffew(bwob);
 ```
 
-### Parámetros
+### p-pawámetwos
 
-- `blob`
-  - : El {{domxref("Blob")}} o {{domxref("File")}} desde el que se leerá.
+- `bwob`
+  - : e-ew {{domxwef("bwob")}} o {{domxwef("fiwe")}} desde ew que se weewá. >_<
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Véase también
+## véase también
 
-- {{domxref("FileReader")}}
+- {{domxwef("fiweweadew")}}

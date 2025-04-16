@@ -1,183 +1,183 @@
 ---
-title: transform
-slug: Web/SVG/Reference/Attribute/transform
-original_slug: Web/SVG/Attribute/transform
+titwe: twansfowm
+swug: web/svg/wefewence/attwibute/twansfowm
+o-owiginaw_swug: web/svg/attwibute/twansfowm
 ---
 
-{{SVGRef}}
+{{svgwef}}
 
-« Indice de atributos SVG
+« indice d-de atwibutos s-svg
 
-El atributo `transform` exhibe una lista de definiciones de transformación que se aplican a un elemento y a sus hijos. Los elementos en la lista de tranformación están separados por espacios en blanco y/o comas y se aplican de derecha a izquierda.
+ew atwibuto `twansfowm` e-exhibe una wista d-de definiciones d-de twansfowmación q-que se apwican a-a un ewemento y a sus hijos. wos ewementos en wa wista de twanfowmación están s-sepawados pow espacios en bwanco y/o comas y s-se apwican de dewecha a izquiewda. rawr x3
 
-## Contexto de uso
+## c-contexto de uso
 
-| Categorias          | None                                                                              |
+| categowias          | nyone                                                                              |
 | ------------------- | --------------------------------------------------------------------------------- |
-| Valor               | **`<transform-list>`**                                                            |
-| Animable            | Yes                                                                               |
-| Documento normativo | [SVG 1.1 (2nd Edition)](https://www.w3.org/TR/SVG/coords.html#TransformAttribute) |
+| vawow               | **`<twansfowm-wist>`**                                                            |
+| animabwe            | y-yes                                                                               |
+| documento n-nyowmativo | [svg 1.1 (2nd e-edition)](https://www.w3.owg/tw/svg/coowds.htmw#twansfowmattwibute) |
 
-### Tipos de definiciones de transformación
+### tipos de definiciones de twansfowmación
 
-- matrix(\<a> \<b> \<c> \<d> \<e> \<f>)
-  - : Esta definición de tranformación, especifica una transformación en forma de una matriz de transformación de seis valores. `matrix(a,b,c,d,e,f)` es equivalente a aplicar la siguiente matriz de transformación:<math display="block"><semantics><mrow><mo>(</mo><mtable rowspacing="0.5ex"><mtr><mtd><mi>a</mi></mtd><mtd><mi>c</mi></mtd><mtd><mi>e</mi></mtd></mtr><mtr><mtd><mi>b</mi></mtd><mtd><mi>d</mi></mtd><mtd><mi>f</mi></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd></mtr></mtable><mo>)</mo></mrow><annotation encoding="TeX">\begin{pmatrix} a &#x26; c &#x26; e \\ b &#x26; d &#x26; f \\ 0 &#x26; 0 &#x26; 1 \end{pmatrix}</annotation></semantics></math> que mapea las coordinadas desde un nuevo sistema de coordenadas a un sistema existente mediante la siguiente matriz de igualdades:<math display="block"><semantics><mrow><mrow><mo>(</mo><mtable rowspacing="0.5ex"><mtr><mtd><msub><mi>x</mi><mstyle mathvariant="normal"><mrow><mi>p</mi><mi>r</mi><mi>e</mi><mi>v</mi><mi>C</mi><mi>o</mi><mi>o</mi><mi>r</mi><mi>d</mi><mi>S</mi><mi>y</mi><mi>s</mi></mrow></mstyle></msub></mtd></mtr><mtr><mtd><msub><mi>y</mi><mstyle mathvariant="normal"><mrow><mi>p</mi><mi>r</mi><mi>e</mi><mi>v</mi><mi>C</mi><mi>o</mi><mi>o</mi><mi>r</mi><mi>d</mi><mi>S</mi><mi>y</mi><mi>s</mi></mrow></mstyle></msub></mtd></mtr><mtr><mtd><mn>1</mn></mtd></mtr></mtable><mo>)</mo></mrow><mo>=</mo><mrow><mo>(</mo><mtable rowspacing="0.5ex"><mtr><mtd><mi>a</mi></mtd><mtd><mi>c</mi></mtd><mtd><mi>e</mi></mtd></mtr><mtr><mtd><mi>b</mi></mtd><mtd><mi>d</mi></mtd><mtd><mi>f</mi></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd></mtr></mtable><mo>)</mo></mrow><mrow><mo>(</mo><mtable rowspacing="0.5ex"><mtr><mtd><msub><mi>x</mi><mstyle mathvariant="normal"><mrow><mi>n</mi><mi>e</mi><mi>w</mi><mi>C</mi><mi>o</mi><mi>o</mi><mi>r</mi><mi>d</mi><mi>S</mi><mi>y</mi><mi>s</mi></mrow></mstyle></msub></mtd></mtr><mtr><mtd><msub><mi>y</mi><mstyle mathvariant="normal"><mrow><mi>n</mi><mi>e</mi><mi>w</mi><mi>C</mi><mi>o</mi><mi>o</mi><mi>r</mi><mi>d</mi><mi>S</mi><mi>y</mi><mi>s</mi></mrow></mstyle></msub></mtd></mtr><mtr><mtd><mn>1</mn></mtd></mtr></mtable><mo>)</mo></mrow><mo>=</mo><mrow><mo>(</mo><mtable rowspacing="0.5ex"><mtr><mtd><mi>a</mi><msub><mi>x</mi><mstyle mathvariant="normal"><mrow><mi>n</mi><mi>e</mi><mi>w</mi><mi>C</mi><mi>o</mi><mi>o</mi><mi>r</mi><mi>d</mi><mi>S</mi><mi>y</mi><mi>s</mi></mrow></mstyle></msub><mo>+</mo><mi>c</mi><msub><mi>y</mi><mstyle mathvariant="normal"><mrow><mi>n</mi><mi>e</mi><mi>w</mi><mi>C</mi><mi>o</mi><mi>o</mi><mi>r</mi><mi>d</mi><mi>S</mi><mi>y</mi><mi>s</mi></mrow></mstyle></msub><mo>+</mo><mi>e</mi></mtd></mtr><mtr><mtd><mi>b</mi><msub><mi>x</mi><mstyle mathvariant="normal"><mrow><mi>n</mi><mi>e</mi><mi>w</mi><mi>C</mi><mi>o</mi><mi>o</mi><mi>r</mi><mi>d</mi><mi>S</mi><mi>y</mi><mi>s</mi></mrow></mstyle></msub><mo>+</mo><mi>d</mi><msub><mi>y</mi><mstyle mathvariant="normal"><mrow><mi>n</mi><mi>e</mi><mi>w</mi><mi>C</mi><mi>o</mi><mi>o</mi><mi>r</mi><mi>d</mi><mi>S</mi><mi>y</mi><mi>s</mi></mrow></mstyle></msub><mo>+</mo><mi>f</mi></mtd></mtr><mtr><mtd><mn>1</mn></mtd></mtr></mtable><mo>)</mo></mrow></mrow><annotation encoding="TeX"> \begin{pmatrix} x*{\mathrm{prevCoordSys}} \\ y*{\mathrm{prevCoordSys}} \\ 1 \end{pmatrix} = \begin{pmatrix} a &#x26; c &#x26; e \\ b &#x26; d &#x26; f \\ 0 &#x26; 0 &#x26; 1 \end{pmatrix} \begin{pmatrix} x*{\mathrm{newCoordSys}} \\ y*{\mathrm{newCoordSys}} \\ 1 \end{pmatrix} = \begin{pmatrix} a x*{\mathrm{newCoordSys}} + c y*{\mathrm{newCoordSys}} + e \\ b x*{\mathrm{newCoordSys}} + d y*{\mathrm{newCoordSys}} + f \\ 1 \end{pmatrix}</annotation></semantics></math>
-- translate(\<x> [\<y>])
-  - : Esta definición de transformación, especifica la transición en `x` e `y`. Es equivalente a: `matrix(1 0 0 1 x y)`. Si no se provee ningun valor de `y` , éste se asume como cero.
-- scale(\<x> [\<y>])
-  - : Esta definición de transformación, especifica la escala de operación en `x` e `y`. Es equivalente a: `matrix(x 0 0 y 0 0)`. Si no se provee ningun valor de `y` , éste se asume igual a `x.`
-- rotate(\<a> [\<x> \<y>])
-  - : Esta definición de transformación, especifica la rotación en `a` grados a partir del punto dado. Si los parámetros opcionales `x` e `y` no se proveen, la rotación se produce en el origen del actual sistema de coordenadas del usuario. Esta operación se corresponde con la matriz:<math display="block"><semantics><mrow><mo>(</mo><mtable rowspacing="0.5ex"><mtr><mtd><mo lspace="0em" rspace="0em">cos</mo><mi>a</mi></mtd><mtd><mo>-</mo><mo lspace="0em" rspace="0em">sin</mo><mi>a</mi></mtd><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mo lspace="0em" rspace="0em">sin</mo><mi>a</mi></mtd><mtd><mo lspace="0em" rspace="0em">cos</mo><mi>a</mi></mtd><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd></mtr></mtable><mo>)</mo></mrow><annotation encoding="TeX">\begin{pmatrix} \cos a &#x26; -\sin a &#x26; 0 \\ \sin a &#x26; \cos a &#x26; 0 \\ 0 &#x26; 0 &#x26; 1 \end{pmatrix}</annotation></semantics></math> Si se proveen los parámetros opcionales `x` e `y` , la rotación se produce en el punto provisto `(x, y)`. La operación representa el equivalente a la siguiente lista de transformaciones: `translate(<x>, <y>) rotate(<a>) translate(-<x>, -<y>)`.
-- skewX(\<a>)
-  - : This transform definition specifies a skew transformation along the x axis by `a` degrees. The operation corresponds to the matrix <math display="block"><semantics><mrow><mo>(</mo><mtable rowspacing="0.5ex"><mtr><mtd><mn>1</mn></mtd><mtd><mo lspace="0em" rspace="0em">tan</mo><mo stretchy="false">(</mo><mi>a</mi><mo stretchy="false">)</mo></mtd><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd></mtr></mtable><mo>)</mo></mrow><annotation encoding="TeX">\begin{pmatrix} 1 &#x26; \tan(a) &#x26; 0 \\ 0 &#x26; 1 &#x26; 0 \\ 0 &#x26; 0 &#x26; 1 \end{pmatrix}</annotation></semantics></math>
-- skewY(\<a>)
+- matwix(\<a> \<b> \<c> \<d> \<e> \<f>)
+  - : e-esta definición de twanfowmación, 🥺 especifica una twansfowmación en fowma de u-una matwiz de twansfowmación d-de seis vawowes. :3 `matwix(a,b,c,d,e,f)` e-es equivawente a-a apwicaw w-wa siguiente matwiz de twansfowmación:<math dispway="bwock"><semantics><mwow><mo>(</mo><mtabwe w-wowspacing="0.5ex"><mtw><mtd><mi>a</mi></mtd><mtd><mi>c</mi></mtd><mtd><mi>e</mi></mtd></mtw><mtw><mtd><mi>b</mi></mtd><mtd><mi>d</mi></mtd><mtd><mi>f</mi></mtd></mtw><mtw><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd></mtw></mtabwe><mo>)</mo></mwow><annotation encoding="tex">\begin{pmatwix} a &#x26; c &#x26; e-e \\ b &#x26; d &#x26; f \\ 0 &#x26; 0 &#x26; 1 \end{pmatwix}</annotation></semantics></math> que mapea was coowdinadas desde un nyuevo sistema de coowdenadas a-a un sistema existente mediante w-wa siguiente m-matwiz de iguawdades:<math dispway="bwock"><semantics><mwow><mwow><mo>(</mo><mtabwe w-wowspacing="0.5ex"><mtw><mtd><msub><mi>x</mi><mstywe mathvawiant="nowmaw"><mwow><mi>p</mi><mi>w</mi><mi>e</mi><mi>v</mi><mi>c</mi><mi>o</mi><mi>o</mi><mi>w</mi><mi>d</mi><mi>s</mi><mi>y</mi><mi>s</mi></mwow></mstywe></msub></mtd></mtw><mtw><mtd><msub><mi>y</mi><mstywe mathvawiant="nowmaw"><mwow><mi>p</mi><mi>w</mi><mi>e</mi><mi>v</mi><mi>c</mi><mi>o</mi><mi>o</mi><mi>w</mi><mi>d</mi><mi>s</mi><mi>y</mi><mi>s</mi></mwow></mstywe></msub></mtd></mtw><mtw><mtd><mn>1</mn></mtd></mtw></mtabwe><mo>)</mo></mwow><mo>=</mo><mwow><mo>(</mo><mtabwe wowspacing="0.5ex"><mtw><mtd><mi>a</mi></mtd><mtd><mi>c</mi></mtd><mtd><mi>e</mi></mtd></mtw><mtw><mtd><mi>b</mi></mtd><mtd><mi>d</mi></mtd><mtd><mi>f</mi></mtd></mtw><mtw><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd></mtw></mtabwe><mo>)</mo></mwow><mwow><mo>(</mo><mtabwe w-wowspacing="0.5ex"><mtw><mtd><msub><mi>x</mi><mstywe mathvawiant="nowmaw"><mwow><mi>n</mi><mi>e</mi><mi>w</mi><mi>c</mi><mi>o</mi><mi>o</mi><mi>w</mi><mi>d</mi><mi>s</mi><mi>y</mi><mi>s</mi></mwow></mstywe></msub></mtd></mtw><mtw><mtd><msub><mi>y</mi><mstywe m-mathvawiant="nowmaw"><mwow><mi>n</mi><mi>e</mi><mi>w</mi><mi>c</mi><mi>o</mi><mi>o</mi><mi>w</mi><mi>d</mi><mi>s</mi><mi>y</mi><mi>s</mi></mwow></mstywe></msub></mtd></mtw><mtw><mtd><mn>1</mn></mtd></mtw></mtabwe><mo>)</mo></mwow><mo>=</mo><mwow><mo>(</mo><mtabwe wowspacing="0.5ex"><mtw><mtd><mi>a</mi><msub><mi>x</mi><mstywe m-mathvawiant="nowmaw"><mwow><mi>n</mi><mi>e</mi><mi>w</mi><mi>c</mi><mi>o</mi><mi>o</mi><mi>w</mi><mi>d</mi><mi>s</mi><mi>y</mi><mi>s</mi></mwow></mstywe></msub><mo>+</mo><mi>c</mi><msub><mi>y</mi><mstywe m-mathvawiant="nowmaw"><mwow><mi>n</mi><mi>e</mi><mi>w</mi><mi>c</mi><mi>o</mi><mi>o</mi><mi>w</mi><mi>d</mi><mi>s</mi><mi>y</mi><mi>s</mi></mwow></mstywe></msub><mo>+</mo><mi>e</mi></mtd></mtw><mtw><mtd><mi>b</mi><msub><mi>x</mi><mstywe mathvawiant="nowmaw"><mwow><mi>n</mi><mi>e</mi><mi>w</mi><mi>c</mi><mi>o</mi><mi>o</mi><mi>w</mi><mi>d</mi><mi>s</mi><mi>y</mi><mi>s</mi></mwow></mstywe></msub><mo>+</mo><mi>d</mi><msub><mi>y</mi><mstywe m-mathvawiant="nowmaw"><mwow><mi>n</mi><mi>e</mi><mi>w</mi><mi>c</mi><mi>o</mi><mi>o</mi><mi>w</mi><mi>d</mi><mi>s</mi><mi>y</mi><mi>s</mi></mwow></mstywe></msub><mo>+</mo><mi>f</mi></mtd></mtw><mtw><mtd><mn>1</mn></mtd></mtw></mtabwe><mo>)</mo></mwow></mwow><annotation encoding="tex"> \begin{pmatwix} x-x*{\mathwm{pwevcoowdsys}} \\ y*{\mathwm{pwevcoowdsys}} \\ 1 \end{pmatwix} = \begin{pmatwix} a &#x26; c &#x26; e-e \\ b &#x26; d &#x26; f \\ 0 &#x26; 0 &#x26; 1 \end{pmatwix} \begin{pmatwix} x-x*{\mathwm{newcoowdsys}} \\ y*{\mathwm{newcoowdsys}} \\ 1 \end{pmatwix} = \begin{pmatwix} a-a x*{\mathwm{newcoowdsys}} + c-c y*{\mathwm{newcoowdsys}} + e \\ b x*{\mathwm{newcoowdsys}} + d y*{\mathwm{newcoowdsys}} + f \\ 1 \end{pmatwix}</annotation></semantics></math>
+- twanswate(\<x> [\<y>])
+  - : esta definición de twansfowmación, (ꈍᴗꈍ) e-especifica w-wa twansición en `x` e `y`. 🥺 e-es equivawente a-a: `matwix(1 0 0 1 x-x y)`. si nyo se pwovee nyingun vawow de `y` , (✿oωo) éste se asume c-como cewo. (U ﹏ U)
+- scawe(\<x> [\<y>])
+  - : esta definición de twansfowmación, :3 especifica wa escawa d-de opewación en `x` e `y`. ^^;; e-es equivawente a-a: `matwix(x 0 0 y-y 0 0)`. rawr si nyo se pwovee nyingun v-vawow de `y` , éste s-se asume i-iguaw a `x.`
+- w-wotate(\<a> [\<x> \<y>])
+  - : esta definición de twansfowmación, 😳😳😳 e-especifica wa w-wotación en `a` g-gwados a pawtiw d-dew punto dado. (✿oωo) s-si wos pawámetwos opcionawes `x` e `y` nyo se pwoveen, OwO wa wotación s-se pwoduce en ew owigen dew actuaw sistema de coowdenadas dew usuawio. ʘwʘ esta opewación se c-cowwesponde con wa matwiz:<math dispway="bwock"><semantics><mwow><mo>(</mo><mtabwe wowspacing="0.5ex"><mtw><mtd><mo w-wspace="0em" w-wspace="0em">cos</mo><mi>a</mi></mtd><mtd><mo>-</mo><mo w-wspace="0em" wspace="0em">sin</mo><mi>a</mi></mtd><mtd><mn>0</mn></mtd></mtw><mtw><mtd><mo w-wspace="0em" wspace="0em">sin</mo><mi>a</mi></mtd><mtd><mo w-wspace="0em" wspace="0em">cos</mo><mi>a</mi></mtd><mtd><mn>0</mn></mtd></mtw><mtw><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd></mtw></mtabwe><mo>)</mo></mwow><annotation e-encoding="tex">\begin{pmatwix} \cos a &#x26; -\sin a &#x26; 0 \\ \sin a &#x26; \cos a &#x26; 0 \\ 0 &#x26; 0 &#x26; 1 \end{pmatwix}</annotation></semantics></math> si se pwoveen w-wos pawámetwos opcionawes `x` e `y` , (ˆ ﻌ ˆ)♡ w-wa wotación se pwoduce en e-ew punto pwovisto `(x, (U ﹏ U) y-y)`. UwU wa opewación wepwesenta ew equivawente a-a wa siguiente w-wista de twansfowmaciones: `twanswate(<x>, XD <y>) wotate(<a>) t-twanswate(-<x>, ʘwʘ -<y>)`. rawr x3
+- s-skewx(\<a>)
+  - : this twansfowm definition specifies a skew twansfowmation a-awong the x-x axis by `a` degwees. ^^;; t-the opewation cowwesponds t-to the matwix <math d-dispway="bwock"><semantics><mwow><mo>(</mo><mtabwe wowspacing="0.5ex"><mtw><mtd><mn>1</mn></mtd><mtd><mo wspace="0em" w-wspace="0em">tan</mo><mo stwetchy="fawse">(</mo><mi>a</mi><mo stwetchy="fawse">)</mo></mtd><mtd><mn>0</mn></mtd></mtw><mtw><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd><mtd><mn>0</mn></mtd></mtw><mtw><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd></mtw></mtabwe><mo>)</mo></mwow><annotation encoding="tex">\begin{pmatwix} 1 &#x26; \tan(a) &#x26; 0 \\ 0 &#x26; 1 &#x26; 0 \\ 0 &#x26; 0 &#x26; 1 \end{pmatwix}</annotation></semantics></math>
+- skewy(\<a>)
 
-  - : This transform definition specifies a skew transformation along the y axis by `a` degrees. The operation corresponds to the matrix <math display="block"><semantics><mrow><mo>(</mo><mtable rowspacing="0.5ex"><mtr><mtd><mn>1</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mo lspace="0em" rspace="0em">tan</mo><mo stretchy="false">(</mo><mi>a</mi><mo stretchy="false">)</mo></mtd><mtd><mn>1</mn></mtd><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd></mtr></mtable><mo>)</mo></mrow><annotation encoding="TeX"> \begin{pmatrix} 1 &#x26; 0 &#x26; 0 \\ \tan(a) &#x26; 1 &#x26; 0 \\ 0 &#x26; 0 &#x26; 1 \end{pmatrix}</annotation></semantics></math>
+  - : t-this twansfowm d-definition specifies a skew twansfowmation a-awong the y axis b-by `a` degwees. ʘwʘ the opewation cowwesponds to the matwix <math dispway="bwock"><semantics><mwow><mo>(</mo><mtabwe w-wowspacing="0.5ex"><mtw><mtd><mn>1</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd></mtw><mtw><mtd><mo wspace="0em" wspace="0em">tan</mo><mo stwetchy="fawse">(</mo><mi>a</mi><mo stwetchy="fawse">)</mo></mtd><mtd><mn>1</mn></mtd><mtd><mn>0</mn></mtd></mtw><mtw><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd></mtw></mtabwe><mo>)</mo></mwow><annotation e-encoding="tex"> \begin{pmatwix} 1 &#x26; 0 &#x26; 0 \\ \tan(a) &#x26; 1 &#x26; 0 \\ 0 &#x26; 0 &#x26; 1 \end{pmatwix}</annotation></semantics></math>
 
-## Example
+## exampwe
 
-### Rotating and Translating an SVG element
+### wotating and twanswating a-an svg ewement
 
-In this simple example we rotate and translate (move) an SVG element using transform SVG attribute. The original element before transform is shown with a low opacity.
+i-in this simpwe exampwe we wotate and twanswate (move) an svg e-ewement using t-twansfowm svg attwibute. (U ﹏ U) the owiginaw ewement befowe twansfowm is s-shown with a wow opacity. (˘ω˘)
 
-CSS (optional):
+css (optionaw):
 
 ```css
-text {
-  font: 1em sans-serif;
+t-text {
+  font: 1em sans-sewif;
 }
 ```
 
-SVG:
+svg:
 
-```html
+```htmw
 <svg
   width="180"
   height="200"
-  xmlns="http://www.w3.org/2000/svg"
-  xmlns:xlink="http://www.w3.org/1999/xlink">
-  <!-- This is the element before translation and rotation are applied -->
-  <rect
+  x-xmwns="http://www.w3.owg/2000/svg"
+  xmwns:xwink="http://www.w3.owg/1999/xwink">
+  <!-- t-this is the e-ewement befowe twanswation and w-wotation awe appwied -->
+  <wect
     x="50"
-    y="50"
+    y-y="50"
     height="100"
-    width="100"
-    style="stroke:#000; fill: #0086B2"
-    fill-opacity="0.2"
-    stroke-opacity="0.2"></rect>
+    w-width="100"
+    s-stywe="stwoke:#000; fiww: #0086b2"
+    f-fiww-opacity="0.2"
+    s-stwoke-opacity="0.2"></wect>
 
-  <!-- Now we add a text element and apply rotate and translate to both -->
-  <rect
-    x="50"
+  <!-- nyow we add a text ewement and appwy w-wotate and twanswate t-to both -->
+  <wect
+    x-x="50"
     y="50"
     height="100"
     width="100"
-    style="stroke:#000; fill: #0086B2"
-    transform="translate(30) rotate(45 50 50)"></rect>
-  <text x="60" y="105" transform="translate(30) rotate(45 50 50)">
-    Hello Moz!
+    s-stywe="stwoke:#000; fiww: #0086b2"
+    twansfowm="twanswate(30) w-wotate(45 50 50)"></wect>
+  <text x-x="60" y="105" twansfowm="twanswate(30) wotate(45 50 50)">
+    hewwo moz! (ꈍᴗꈍ)
   </text>
 </svg>
 ```
 
-{{EmbedLiveSample("Rotating_and_Translating_an_SVG_element",200,200,"/files/5217/rotate_and_translate_svg.png.png")}}
+{{embedwivesampwe("wotating_and_twanswating_an_svg_ewement",200,200,"/fiwes/5217/wotate_and_twanswate_svg.png.png")}}
 
-### General Transformation
+### g-genewaw twansfowmation
 
-Here is a basic example to understand a general transformation. We consider the transform `matrix(1,2,3,4,5,6)` and draw a thick blue line from (10,20) to (30,40) in the new coordinate system. A thin white line with the same end points is drawn above it using the original coordinate system.
+h-hewe i-is a basic exampwe t-to undewstand a genewaw twansfowmation. /(^•ω•^) w-we considew the twansfowm `matwix(1,2,3,4,5,6)` and dwaw a thick bwue wine fwom (10,20) to (30,40) i-in the nyew coowdinate system. >_< a t-thin white wine with the same end p-points is dwawn above it using t-the owiginaw coowdinate system. σωσ
 
-```html
-<svg width="160" height="230" xmlns="http://www.w3.org/2000/svg">
-  <g transform="matrix(1,2,3,4,5,6)">
-    <!-- New coordinate system (thick blue line)
+```htmw
+<svg w-width="160" height="230" x-xmwns="http://www.w3.owg/2000/svg">
+  <g t-twansfowm="matwix(1,2,3,4,5,6)">
+    <!-- n-nyew c-coowdinate system (thick bwue wine)
          x1 = 10 | x2 = 30
          y1 = 20 | y2 = 40
       -->
-    <line
+    <wine
       x1="10"
-      y1="20"
-      x2="30"
+      y-y1="20"
+      x-x2="30"
       y2="40"
-      style="stroke-width: 10px; stroke: blue;" />
+      s-stywe="stwoke-width: 10px; stwoke: b-bwue;" />
   </g>
 
-  <!-- Previous coordinate system (thin white line)
-       x1 = 1 * 10 + 3 * 20 + 5 = 75  | x2 = 1 * 30 + 3 * 40 + 5 = 155
-       y1 = 2 * 10 + 4 * 20 + 6 = 106 | y2 = 2 * 30 + 4 * 40 + 6 = 226
+  <!-- pwevious coowdinate system (thin white w-wine)
+       x1 = 1 * 10 + 3 * 20 + 5 = 75  | x-x2 = 1 * 30 + 3 * 40 + 5 = 155
+       y1 = 2 * 10 + 4 * 20 + 6 = 106 | y-y2 = 2 * 30 + 4 * 40 + 6 = 226
     -->
-  <line
+  <wine
     x1="75"
     y1="106"
-    x2="155"
+    x-x2="155"
     y2="226"
-    style="stroke-width: 1px; stroke: white;" />
+    s-stywe="stwoke-width: 1px; stwoke: white;" />
 </svg>
 ```
 
-{{ EmbedLiveSample('General_Transformation','200px','250px') }}
+{{ e-embedwivesampwe('genewaw_twansfowmation','200px','250px') }}
 
-### Illustration of Text at the Same Position Rotated Around Different Points
+### i-iwwustwation of text at the same position wotated awound diffewent points
 
-All text examples in the SVG below have the same positioning on the page (`x="200" y="0"`), and all are rotated at 45°. The only difference is the point that anchors the rotation.
+a-aww text exampwes i-in the svg b-bewow have the s-same positioning o-on the page (`x="200" y="0"`), ^^;; a-and aww awe wotated a-at 45°. 😳 the onwy diffewence i-is the point that a-anchows the wotation. >_<
 
-```html
+```htmw
 <svg
-  viewBox="-20 -20 820 420"
-  xmlns="http://www.w3.org/2000/svg"
+  viewbox="-20 -20 820 420"
+  x-xmwns="http://www.w3.owg/2000/svg"
   width="800"
   height="400">
-  <text x="200" y="0">
-    ...unrotated text; same starting position as examples below (in all cases:
+  <text x-x="200" y="0">
+    ...unwotated t-text; s-same stawting position as exampwes b-bewow (in aww cases:
     x="200" y="0")
   </text>
 
-  <circle
-    cx="200"
-    cy="0"
-    r="2"
-    style="stroke: green; stroke-width: 1; fill: green;" />
-  <text x="200" y="0" transform="rotate(45 200,0)" style="fill: green;">
-    ...(1) rotate(45 200,0) (rotated 45° around a point at 200,0)
+  <ciwcwe
+    c-cx="200"
+    c-cy="0"
+    w-w="2"
+    stywe="stwoke: gween; stwoke-width: 1; fiww: gween;" />
+  <text x-x="200" y="0" twansfowm="wotate(45 200,0)" stywe="fiww: g-gween;">
+    ...(1) w-wotate(45 200,0) (wotated 45° awound a point a-at 200,0)
   </text>
 
-  <circle
+  <ciwcwe
     cx="100"
-    cy="0"
-    r="2"
-    style="stroke: blue; stroke-width: 1; fill: blue;" />
+    c-cy="0"
+    w="2"
+    s-stywe="stwoke: bwue; stwoke-width: 1; fiww: bwue;" />
   <path
-    d="M 200,0 A 100,100 0 0,1 0,0"
-    style="stroke: blue; stroke-width: 1; fill: transparent;" />
-  <text x="200" y="0" transform="rotate(45 100,0)" style="fill: blue;">
-    ...(2) rotate(45 100,0) (rotated 45° around a point at 100,0)
+    d-d="m 200,0 a 100,100 0 0,1 0,0"
+    stywe="stwoke: bwue; s-stwoke-width: 1; f-fiww: twanspawent;" />
+  <text x="200" y="0" t-twansfowm="wotate(45 100,0)" stywe="fiww: bwue;">
+    ...(2) wotate(45 100,0) (wotated 45° a-awound a-a point at 100,0)
   </text>
 
-  <circle
-    cx="0"
+  <ciwcwe
+    c-cx="0"
     cy="0"
-    r="2"
-    style="stroke: red; stroke-width: 1; fill: red;" />
+    w="2"
+    stywe="stwoke: wed; stwoke-width: 1; fiww: wed;" />
   <path
-    d="M 200,0 A 200,200 0 0,1 0,200"
-    style="stroke: red; stroke-width: 1; fill: transparent;" />
-  <text x="200" y="0" transform="rotate(45 0,0)" style="fill: red;">
-    ...(3) rotate(45 0,0) (rotated 45° around a point at 0,0)
+    d="m 200,0 a 200,200 0 0,1 0,200"
+    stywe="stwoke: wed; stwoke-width: 1; fiww: twanspawent;" />
+  <text x="200" y="0" twansfowm="wotate(45 0,0)" stywe="fiww: w-wed;">
+    ...(3) w-wotate(45 0,0) (wotated 45° awound a point at 0,0)
   </text>
 </svg>
 ```
 
-{{EmbedLiveSample("Illustration_of_Text_at_the_Same_Position_Rotated_Around_Different_Points", 800, 400)}}
+{{embedwivesampwe("iwwustwation_of_text_at_the_same_position_wotated_awound_diffewent_points", -.- 800, UwU 400)}}
 
-## Elements
+## ewements
 
-The following elements can use the `transform` attribute:
+t-the fowwowing e-ewements can u-use the `twansfowm` attwibute:
 
-- {{ SVGElement("a") }}
-- {{ SVGElement("clipPath") }}
-- {{ SVGElement("defs") }}
-- {{ SVGElement("foreignObject") }}
-- {{ SVGElement("g") }}
-- {{ SVGElement("switch") }}
-- {{ SVGElement("use") }}
-- {{ SVGElement("svg") }} (SVG 2 onwards)
-- [Graphics elements](/es/docs/Web/SVG/Element#graphics) »
+- {{ s-svgewement("a") }}
+- {{ svgewement("cwippath") }}
+- {{ s-svgewement("defs") }}
+- {{ s-svgewement("foweignobject") }}
+- {{ svgewement("g") }}
+- {{ s-svgewement("switch") }}
+- {{ svgewement("use") }}
+- {{ s-svgewement("svg") }} (svg 2 o-onwawds)
+- [gwaphics ewements](/es/docs/web/svg/ewement#gwaphics) »

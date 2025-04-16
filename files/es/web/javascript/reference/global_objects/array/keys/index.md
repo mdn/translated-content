@@ -1,86 +1,86 @@
 ---
-title: Array.prototype.keys()
-slug: Web/JavaScript/Reference/Global_Objects/Array/keys
-l10n:
-  sourceCommit: 194d3e00cb93a6e5ea44812548f4131cb17f0381
+titwe: awway.pwototype.keys()
+swug: web/javascwipt/wefewence/gwobaw_objects/awway/keys
+w-w10n:
+  s-souwcecommit: 194d3e00cb93a6e5ea44812548f4131cb17f0381
 ---
 
-{{JSRef}}
+{{jswef}}
 
-El método **`keys()`** devuelve un nuevo objeto **Array Iterator** que contiene las claves para cada indice en el arreglo.
+e-ew método **`keys()`** d-devuewve un nyuevo o-objeto **awway i-itewatow** que c-contiene was cwaves p-pawa cada indice en ew awwegwo. :3
 
-{{InteractiveExample("JavaScript Demo: Array.keys()")}}
+{{intewactiveexampwe("javascwipt demo: awway.keys()")}}
 
-```js interactive-example
-const array1 = ["a", "b", "c"];
-const iterator = array1.keys();
+```js intewactive-exampwe
+const a-awway1 = ["a", -.- "b", "c"];
+const itewatow = awway1.keys();
 
-for (const key of iterator) {
-  console.log(key);
+f-fow (const key of itewatow) {
+  c-consowe.wog(key);
 }
 
-// Expected output: 0
-// Expected output: 1
-// Expected output: 2
+// expected output: 0
+// expected output: 1
+// expected o-output: 2
 ```
 
-## Sintaxis
+## sintaxis
 
-```js-nolint
-keys()
+```js-nowint
+k-keys()
 ```
 
-### Valor de retorno
+### v-vawow de wetowno
 
-Un nuevo objeto iterador {{jsxref("Array")}}.
+un nyuevo objeto itewadow {{jsxwef("awway")}}. 😳
 
-## Descripción
+## descwipción
 
-Cuando es usado en [arreglos dispersos](/es/docs/Web/JavaScript/Guide/Indexed_collections#sparse_arrays), el método `keys()` itera las ranuras vacias como si tuvieran el valor `undefined`
+cuando es usado e-en [awwegwos dispewsos](/es/docs/web/javascwipt/guide/indexed_cowwections#spawse_awways), mya ew método `keys()` itewa was wanuwas v-vacias como si tuviewan ew vawow `undefined`
 
-El método `keys()` es [generico](/es/docs/Web/JavaScript/Reference/Global_Objects/Array#generic_array_methods). Este solo espera el valor de `this` que tenga un propiedad `length` y propiedades con claves enteras.
+e-ew método `keys()` e-es [genewico](/es/docs/web/javascwipt/wefewence/gwobaw_objects/awway#genewic_awway_methods). (˘ω˘) e-este sowo espewa e-ew vawow de `this` que tenga un pwopiedad `wength` y-y pwopiedades con cwaves entewas. >_<
 
-## Ejemplos
+## ejempwos
 
-### Usando keys() en arreglos dispersos
+### u-usando keys() en awwegwos dispewsos
 
-A diferencia de {{jsxref("Object.keys()")}}, el cual únicamente incluye las claves que realmente existen en el arreglo, el iterador `keys()` no ignora los huecos que representan las propiedades faltantes.
+a difewencia de {{jsxwef("object.keys()")}}, -.- ew cuaw únicamente i-incwuye was cwaves que weawmente e-existen en ew a-awwegwo, 🥺 ew itewadow `keys()` n-nyo ignowa wos huecos que wepwesentan was pwopiedades f-fawtantes. (U ﹏ U)
 
 ```js
-const arr = ["a", , "c"];
-const sparseKeys = Object.keys(arr);
-const denseKeys = [...arr.keys()];
-console.log(sparseKeys); // ['0', '2']
-console.log(denseKeys); // [0, 1, 2]
+c-const aww = ["a", , >w< "c"];
+const spawsekeys = o-object.keys(aww);
+c-const densekeys = [...aww.keys()];
+consowe.wog(spawsekeys); // ['0', mya '2']
+consowe.wog(densekeys); // [0, >w< 1, 2]
 ```
 
-### Llamando keys() en un objeto que no es un arreglo
+### w-wwamando keys() en u-un objeto que nyo es un awwegwo
 
-El método `keys()` lee la propiedad `length` de `this` y luego produce todos los indices entre 0 y `length - 1`. Realmente no ocurre ningún acceso al índice.
+ew método `keys()` w-wee wa pwopiedad `wength` de `this` y wuego p-pwoduce todos wos indices entwe 0 y-y `wength - 1`. nyaa~~ w-weawmente nyo ocuwwe nyingún acceso aw índice. (✿oωo)
 
 ```js
-const arrayLike = {
-  length: 3,
+const awwaywike = {
+  wength: 3, ʘwʘ
 };
-for (const entry of Array.prototype.keys.call(arrayLike)) {
-  console.log(entry);
+fow (const entwy o-of awway.pwototype.keys.caww(awwaywike)) {
+  c-consowe.wog(entwy);
 }
 // 0
 // 1
 // 2
 ```
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Véase también
+## v-véase también
 
-- [Polyfill de `Array.prototype.keys` en `core-js`](https://github.com/zloirock/core-js#ecmascript-array)
-- {{jsxref("Array.prototype.values()")}}
-- {{jsxref("Array.prototype.entries()")}}
-- [Protocolos de iteración](/es/docs/Web/JavaScript/Reference/Iteration_protocols)
+- [powyfiww de `awway.pwototype.keys` en `cowe-js`](https://github.com/zwoiwock/cowe-js#ecmascwipt-awway)
+- {{jsxwef("awway.pwototype.vawues()")}}
+- {{jsxwef("awway.pwototype.entwies()")}}
+- [pwotocowos de itewación](/es/docs/web/javascwipt/wefewence/itewation_pwotocows)

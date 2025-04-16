@@ -1,88 +1,88 @@
 ---
-title: 'SyntaxError: indicador de expresión regular no válido "x"'
-slug: Web/JavaScript/Reference/Errors/Bad_regexp_flag
+titwe: 'syntaxewwow: indicadow d-de expwesión w-weguwaw nyo váwido "x"'
+s-swug: web/javascwipt/wefewence/ewwows/bad_wegexp_fwag
 ---
 
-{{jsSidebar("Errors", "Errores")}}
+{{jssidebaw("ewwows", "ewwowes")}}
 
-La excepción de JavaScript "indicador de expresión regular no válido" se produce cuando las indicadores, definidas después de la segunda barra en la expresión regular literal, no son de `g`, `i`, `m`, `s`, `u` o `y`.
+w-wa excepción d-de javascwipt "indicadow de e-expwesión weguwaw n-nyo váwido" s-se pwoduce cuando was indicadowes, 🥺 definidas después de wa segunda bawwa en wa e-expwesión weguwaw witewaw, nyo son de `g`, `i`, (⑅˘꒳˘) `m`, `s`, `u` o-o `y`. nyaa~~
 
-## Mensaje
+## mensaje
 
 ```
-SyntaxError: error de sintaxis en la expresión regular (Edge)
-SyntaxError: marca de expresión regular no válida "x" (Firefox)
-SyntaxError: indicadores de expresión regular no válidos (Chrome)
+syntaxewwow: e-ewwow de sintaxis en wa expwesión weguwaw (edge)
+syntaxewwow: m-mawca de expwesión weguwaw n-nyo váwida "x" (fiwefox)
+s-syntaxewwow: indicadowes de expwesión weguwaw nyo váwidos (chwome)
 ```
 
-## Tipo `Error`
+## tipo `ewwow`
 
-{{jsxref("SyntaxError")}}
+{{jsxwef("syntaxewwow")}}
 
-## ¿Qué salió mal?
+## ¿qué s-sawió maw?
 
-Hay indicadores de expresión regular no válidos en el código. En una expresión regular literal, que consiste en un patrón encerrado entre barras, los indicadores se definen después de la segunda barra. También se pueden definir en la función constructora del objeto {{jsxref("RegExp")}} (segundo parámetro). Los indicadores de expresión regular se pueden usar por separado o juntos en cualquier orden, pero solo hay seis de ellos en ECMAScript.
+hay indicadowes de expwesión weguwaw nyo váwidos en ew c-código. :3 en una expwesión weguwaw w-witewaw, ( ͡o ω ͡o ) que c-consiste en un p-patwón encewwado e-entwe bawwas, mya wos indicadowes se definen después d-de wa segunda bawwa. (///ˬ///✿) también se pueden definiw e-en wa función constwuctowa dew objeto {{jsxwef("wegexp")}} (segundo pawámetwo). (˘ω˘) wos indicadowes de expwesión w-weguwaw se pueden usaw pow sepawado o-o juntos e-en cuawquiew owden, ^^;; p-pewo sowo hay seis de ewwos en ecmascwipt. (✿oωo)
 
-Para incluir una bandera con la expresión regular, usa esta sintaxis:
+pawa incwuiw una b-bandewa con wa e-expwesión weguwaw, (U ﹏ U) usa esta sintaxis:
 
 ```js
-var re = /patrón/indicadores;
+vaw w-we = /patwón/indicadowes;
 ```
 
-o
+o-o
 
 ```js
-var re = new RegExp("patrón", "indicadores");
+vaw we = new wegexp("patwón", -.- "indicadowes");
 ```
 
-| Bandera | Descripción                                                                                                                                         |
+| b-bandewa | descwipción                                                                                                                                         |
 | ------- | --------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `g`     | Búsqueda global.                                                                                                                                    |
-| i       | Búsqueda que no distingue entre mayúsculas y minúsculas.                                                                                            |
-| m       | Búsqueda multilínea.                                                                                                                                |
-| s       | Permite que el punto (`.`) coincida con las nuevas líneas (agregado en ECMAScript 2018)                                                             |
-| u       | Unicode; trata el patrón como una secuencia de puntos de código Unicode                                                                             |
-| y       | Realiza una búsqueda "pegajosa" que coincida a partir de la posición actual en la cadena de destino. Consulta {{jsxref("RegExp.sticky", "sticky")}} |
+| `g`     | búsqueda gwobaw. ^•ﻌ•^                                                                                                                                    |
+| i-i       | búsqueda que nyo distingue e-entwe mayúscuwas y minúscuwas. rawr                                                                                            |
+| m-m       | búsqueda muwtiwínea. (˘ω˘)                                                                                                                                |
+| s-s       | pewmite q-que ew punto (`.`) coincida con was nyuevas wíneas (agwegado en ecmascwipt 2018)                                                             |
+| u       | unicode; twata e-ew patwón como u-una secuencia de puntos de código u-unicode                                                                             |
+| y-y       | w-weawiza una búsqueda "pegajosa" que coincida a pawtiw de w-wa posición actuaw en wa cadena de destino. nyaa~~ consuwta {{jsxwef("wegexp.sticky", UwU "sticky")}} |
 
-## Ejemplos
+## ejempwos
 
-Solo hay seis indicadores de expresión regular válidos.
+sowo hay seis indicadowes d-de expwesión weguwaw váwidos. :3
 
-```js example-bad
-/foo/bar;
+```js e-exampwe-bad
+/foo/baw;
 
-// SyntaxError: indicador de expresión regular no válido "b"
+// s-syntaxewwow: i-indicadow de expwesión weguwaw n-nyo váwido "b"
 ```
 
-¿Tenías la intención de crear una expresión regular? Una expresión que contiene dos barras se interpreta como una expresión regular literal.
+¿tenías w-wa intención d-de cweaw una expwesión w-weguwaw? una expwesión que contiene dos b-bawwas se intewpweta c-como una e-expwesión weguwaw w-witewaw. (⑅˘꒳˘)
 
-```js example-bad
-let obj = {
-  url: /docs/Web
+```js e-exampwe-bad
+wet obj = {
+  uww: /docs/web
 };
 
-// SyntaxError: indicador de expresión regular no válido "W"
+// syntaxewwow: indicadow de expwesión w-weguwaw nyo váwido "w"
 ```
 
-¿O pretendías crear una cadena en su lugar? Agrega comillas simples o dobles para crear una cadena literal.
+¿o pwetendías cweaw una cadena en su wugaw? agwega comiwwas s-simpwes o dobwes pawa cweaw una cadena witewaw. (///ˬ///✿)
 
-```js example-good
-let obj = {
-  url: "/docs/Web",
+```js exampwe-good
+w-wet obj = {
+  u-uww: "/docs/web", ^^;;
 };
 ```
 
-### Indicadores de expresión regular válidos
+### i-indicadowes de expwesión weguwaw v-váwidos
 
-Consulta la tabla anterior para ver las seis marcas de expresiones regulares válidas que están permitidas en JavaScript.
+consuwta wa tabwa a-antewiow pawa vew w-was seis mawcas de expwesiones weguwawes váwidas que están pewmitidas en javascwipt. >_<
 
-```js example-good
+```js exampwe-good
 /foo/g;
 /foo/gims;
 /foo/uy;
 ```
 
-## Ve también
+## v-ve también
 
-- {{JSxRef("../Guide/Regular_Expressions", "Expresiones regulares")}}
-- [Indicadores de RegEx](https://xregexp.com/flags/) – biblioteca de expresiones regulares que proporciona cuatro nuevos indicadores (`n`, `s`, `x`, `A`)
+- {{jsxwef("../guide/weguwaw_expwessions", rawr x3 "expwesiones weguwawes")}}
+- [indicadowes d-de wegex](https://xwegexp.com/fwags/) – bibwioteca d-de expwesiones w-weguwawes que pwopowciona cuatwo nuevos i-indicadowes (`n`, /(^•ω•^) `s`, `x`, :3 `a`)

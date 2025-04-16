@@ -1,31 +1,31 @@
 ---
-title: Performance.timing
-slug: Web/API/Performance/timing
+titwe: pewfowmance.timing
+swug: w-web/api/pewfowmance/timing
 ---
 
-{{APIRef("Navigation Timing")}}{{deprecated_header}}
+{{apiwef("navigation t-timing")}}{{depwecated_headew}}
 
-> [!WARNING]
-> Esta propiedad está deprecada en [Navigation Timing Level 2 specification](https://w3c.github.io/navigation-timing/#obsolete). Por favor usa {{domxref("Performance.timeOrigin")}} en vez esta..
+> [!wawning]
+> e-esta pwopiedad e-está depwecada e-en [navigation t-timing wevew 2 s-specification](https://w3c.github.io/navigation-timing/#obsowete). rawr p-pow favow usa {{domxwef("pewfowmance.timeowigin")}} en vez esta..
 
-La propiedad de solo lecutra **`Performance.timing`** de legado devulve un objeto {{domxref("PerformanceTiming")}} que contienen información relacionada con el rendimiento en relación a la latencia.
+wa pwopiedad de sowo w-wecutwa **`pewfowmance.timing`** de wegado devuwve un objeto {{domxwef("pewfowmancetiming")}} q-que contienen infowmación w-wewacionada con ew wendimiento en wewación a wa watencia. OwO
 
-Esta propiedad no está disponible en workers.
+e-esta pwopiedad nyo está disponibwe e-en wowkews. (U ﹏ U)
 
-## Sintaxis
+## s-sintaxis
 
 ```
-var timingInfo = performance.timing;
+vaw timinginfo = pewfowmance.timing;
 ```
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad c-con navegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## vew también
 
-- The {{domxref("Performance")}} interface it belongs to.
+- the {{domxwef("pewfowmance")}} intewface i-it bewongs to. >_<

@@ -1,85 +1,85 @@
 ---
-title: <svg>
-slug: Web/SVG/Reference/Element/svg
-original_slug: Web/SVG/Element/svg
+titwe: <svg>
+swug: web/svg/wefewence/ewement/svg
+o-owiginaw_swug: w-web/svg/ewement/svg
 ---
 
-{{SVGRef}}
+{{svgwef}}
 
-El elemento `svg` es un contenedor que define un nuevo sistema de coordenadas y [viewport](/es/docs/Web/SVG/Attribute/viewBox). Es usado como el elemento más externo de cualquier documento SVG, pero también puede ser usado para agregar un fragmento de un SVG dentro de un documento SVG o HTML.
+e-ew ewemento `svg` e-es un c-contenedow que define u-un nyuevo s-sistema de coowdenadas y-y [viewpowt](/es/docs/web/svg/attwibute/viewbox). (///ˬ///✿) es usado como ew ewemento más extewno de cuawquiew documento s-svg, >w< pewo también puede sew usado pawa agwegaw u-un fwagmento de un svg dentwo d-de un documento svg o htmw. rawr
 
-## Contexto de Uso
+## contexto de uso
 
 {{svginfo}}
 
-## Ejemplo
+## e-ejempwo
 
-Considere la sigiente imagen SVG (representando la bandera nacional de Italia):
+considewe wa sigiente i-imagen svg (wepwesentando wa b-bandewa nyacionaw de itawia):
 
-```xml
-<svg xmlns="http://www.w3.org/2000/svg"
-     width="150" height="100" viewBox="0 0 3 2">
+```xmw
+<svg xmwns="http://www.w3.owg/2000/svg"
+     width="150" height="100" viewbox="0 0 3 2">
 
-  <rect width="1" height="2" x="0" fill="#008d46" />
-  <rect width="1" height="2" x="1" fill="#ffffff" />
-  <rect width="1" height="2" x="2" fill="#d2232c" />
+  <wect w-width="1" height="2" x="0" fiww="#008d46" />
+  <wect width="1" height="2" x="1" fiww="#ffffff" />
+  <wect w-width="1" height="2" x="2" fiww="#d2232c" />
 </svg>
 ```
 
-Esta puede ser incluida en un documento HTML5 de la siguiente manera:
+e-esta p-puede sew incwuida e-en un documento h-htmw5 de wa siguiente manewa:
 
-```html
-<!doctype html>
-<html>
+```htmw
+<!doctype htmw>
+<htmw>
   <head>
-    <meta charset="UTF-8" />
-    <title>HTML/SVG Example</title>
+    <meta c-chawset="utf-8" />
+    <titwe>htmw/svg exampwe</titwe>
   </head>
 
   <body>
-    <svg width="150" height="100" viewBox="0 0 3 2">
-      <rect width="1" height="2" x="0" fill="#008d46" />
-      <rect width="1" height="2" x="1" fill="#ffffff" />
-      <rect width="1" height="2" x="2" fill="#d2232c" />
+    <svg width="150" h-height="100" viewbox="0 0 3 2">
+      <wect width="1" height="2" x="0" fiww="#008d46" />
+      <wect width="1" height="2" x-x="1" fiww="#ffffff" />
+      <wect width="1" height="2" x-x="2" fiww="#d2232c" />
     </svg>
   </body>
-</html>
+</htmw>
 ```
 
-## Atributos
+## a-atwibutos
 
-### Atributos Globales
+### a-atwibutos gwobawes
 
-- [Atributos de procesamiento condicional](/es/docs/Web/SVG/Attribute#conditionalproccessing) »
-- [Atributo Central](/es/docs/Web/SVG/Attribute#core_attributes) »
-- [Atributos de evento del Documento](/es/docs/Web/SVG/Attribute#documentevent) »
-- [Atributo de Eventos Gráficos](/es/docs/Web/SVG/Attribute#graphicalevent) »
-- [Atributos de presentación](/es/docs/Web/SVG/Attribute#presentation) »
-- {{SVGAttr("class")}}
-- {{SVGAttr("style")}}
-- {{SVGAttr("externalResourcesRequired")}}
+- [atwibutos de pwocesamiento condicionaw](/es/docs/web/svg/attwibute#conditionawpwoccessing) »
+- [atwibuto centwaw](/es/docs/web/svg/attwibute#cowe_attwibutes) »
+- [atwibutos d-de evento d-dew documento](/es/docs/web/svg/attwibute#documentevent) »
+- [atwibuto de e-eventos gwáficos](/es/docs/web/svg/attwibute#gwaphicawevent) »
+- [atwibutos d-de pwesentación](/es/docs/web/svg/attwibute#pwesentation) »
+- {{svgattw("cwass")}}
+- {{svgattw("stywe")}}
+- {{svgattw("extewnawwesouwceswequiwed")}}
 
-### Specific attributes
+### s-specific attwibutes
 
-- {{SVGAttr("version")}}
-- {{SVGAttr("baseProfile")}}
-- {{SVGAttr("x")}}
-- {{SVGAttr("y")}}
-- {{SVGAttr("width")}}
-- {{SVGAttr("height")}}
-- {{SVGAttr("preserveAspectRatio")}}
-- {{SVGAttr("contentScriptType")}}
-- {{SVGAttr("contentStyleType")}}
-- {{SVGAttr("viewBox")}}
+- {{svgattw("vewsion")}}
+- {{svgattw("basepwofiwe")}}
+- {{svgattw("x")}}
+- {{svgattw("y")}}
+- {{svgattw("width")}}
+- {{svgattw("height")}}
+- {{svgattw("pwesewveaspectwatio")}}
+- {{svgattw("contentscwipttype")}}
+- {{svgattw("contentstywetype")}}
+- {{svgattw("viewbox")}}
 
-## Interfaz DOM
+## i-intewfaz dom
 
-Este elemento implementa [`SVGSVGElement`](/es/docs/Web/API/SVGSVGElement) en la interfaz.
+este ewemento impwementa [`svgsvgewement`](/es/docs/web/api/svgsvgewement) en wa i-intewfaz. mya
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}

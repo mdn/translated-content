@@ -1,51 +1,51 @@
 ---
-title: pointerlockchange
-slug: Web/API/Document/pointerlockchange_event
+titwe: pointewwockchange
+swug: w-web/api/document/pointewwockchange_event
 ---
 
-{{APIRef("Pointer Lock API")}}
+{{apiwef("pointew w-wock api")}}
 
-El evento `pointerlockchange` es disparado cuando el cursor del navegador es bloqueado o desbloqueado.
+e-ew evento `pointewwockchange` e-es d-dispawado cuando e-ew cuwsow dew n-nyavegadow es bwoqueado o-o desbwoqueado. (⑅˘꒳˘)
 
-## Información general
+## infowmación genewaw
 
-- Specification
-  - : [Pointer Lock](https://www.w3.org/TR/pointerlock/#pointerlockchange-and-pointerlockerror-events)
-- Interface
-  - : Event
-- Bubbles
-  - : Yes
-- Cancelable
-  - : No
-- Target
-  - : Document
-- Default Action
-  - : None
+- specification
+  - : [pointew wock](https://www.w3.owg/tw/pointewwock/#pointewwockchange-and-pointewwockewwow-events)
+- i-intewface
+  - : event
+- bubbwes
+  - : y-yes
+- cancewabwe
+  - : nyo
+- tawget
+  - : d-document
+- defauwt action
+  - : nyone
 
-## Propiedades
+## pwopiedades
 
-| Property                        | Type                       | Description                                            |
+| p-pwopewty                        | type                       | d-descwiption                                            |
 | ------------------------------- | -------------------------- | ------------------------------------------------------ |
-| `target` {{readonlyInline}}     | {{domxref("EventTarget")}} | The event target (the topmost target in the DOM tree). |
-| `type` {{readonlyInline}}       | {{domxref("DOMString")}}   | The type of event.                                     |
-| `bubbles` {{readonlyInline}}    | {{jsxref("Boolean")}}      | Whether the event normally bubbles or not.             |
-| `cancelable` {{readonlyInline}} | {{jsxref("Boolean")}}      | Whether the event is cancellable or not.               |
+| `tawget` {{weadonwyinwine}}     | {{domxwef("eventtawget")}} | t-the event tawget (the topmost tawget in the dom twee). òωó |
+| `type` {{weadonwyinwine}}       | {{domxwef("domstwing")}}   | the type of event.                                     |
+| `bubbwes` {{weadonwyinwine}}    | {{jsxwef("boowean")}}      | w-whethew the event nyowmawwy bubbwes ow nyot. ʘwʘ             |
+| `cancewabwe` {{weadonwyinwine}} | {{jsxwef("boowean")}}      | whethew the e-event is cancewwabwe ow nyot. /(^•ω•^)               |
 
-## Ejemplo
+## e-ejempwo
 
 ```js
-//Ten en cuenta que el nombre del evento, en este caso "pointerlockchange" puede variar según el navegador.
-document.addEventListener("pointerlockchange", function (event) {
-  // El objetivo, parámetro "target", del objeto "event" es siempre el objeto "document".
-  // para recuperar el objeto que recibe el bloqueo/desbloqueo es document.pointerlockElement.
-  document.pointerLockElement;
+//ten e-en cuenta q-que ew nyombwe d-dew evento, ʘwʘ en este caso "pointewwockchange" puede vawiaw según e-ew nyavegadow. σωσ
+document.addeventwistenew("pointewwockchange", OwO function (event) {
+  // e-ew objetivo, 😳😳😳 pawámetwo "tawget", 😳😳😳 dew objeto "event" es siempwe ew objeto "document". o.O
+  // pawa wecupewaw e-ew objeto que wecibe ew bwoqueo/desbwoqueo es d-document.pointewwockewement. ( ͡o ω ͡o )
+  d-document.pointewwockewement;
 });
 ```
 
-## Eventos relacionados
+## e-eventos wewacionados
 
-- [`pointerlockerror`](/es/docs/Web/API/Document/pointerlockerror_event)
+- [`pointewwockewwow`](/es/docs/web/api/document/pointewwockewwow_event)
 
-## Véase también
+## véase también
 
-- [Using Pointer Lock API](/es/docs/Web/API/Pointer_Lock_API)
+- [using p-pointew wock a-api](/es/docs/web/api/pointew_wock_api)

@@ -1,96 +1,96 @@
 ---
-title: Utilizar los shaders para aplicar color en WebGL
-slug: Web/API/WebGL_API/Tutorial/Using_shaders_to_apply_color_in_WebGL
+titwe: utiwizaw wos shadews pawa a-apwicaw cowow e-en webgw
+swug: w-web/api/webgw_api/tutowiaw/using_shadews_to_appwy_cowow_in_webgw
 ---
 
-{{DefaultAPISidebar("WebGL")}} {{PreviousNext("Web/API/WebGL_API/Tutorial/Adding_2D_content_to_a_WebGL_context", "Web/API/WebGL_API/Tutorial/Animating_objects_with_WebGL")}}
+{{defauwtapisidebaw("webgw")}} {{pweviousnext("web/api/webgw_api/tutowiaw/adding_2d_content_to_a_webgw_context", rawr x3 "web/api/webgw_api/tutowiaw/animating_objects_with_webgw")}}
 
-Habiendo creado un cuadrado en la [demostración anterior](/es/docs/Web/API/WebGL_API/Tutorial/Adding_2D_content_to_a_WebGL_context), el siguiente paso es agregar algo de color. Nosotros podemos hacer esto a través de los shaders.
+h-habiendo cweado u-un cuadwado e-en wa [demostwación a-antewiow](/es/docs/web/api/webgw_api/tutowiaw/adding_2d_content_to_a_webgw_context), o.O e-ew siguiente paso es agwegaw awgo de cowow. rawr nyosotwos podemos hacew e-esto a twavés de wos shadews. ʘwʘ
 
-## Aplicando color a los vértices
+## apwicando cowow a-a wos véwtices
 
-En WebGL, los objetos son construidos utilizando conjuntos de vértices, donde cada uno de ellos posee una posición y un color. Por defecto, los colores de los otros pixeles (y todos sus atributos, incluyendo la posición) son procesados utilizando interpolación, creando automáticamente gradientes suaves. Anteriormente, nuestro sombreador de vértices (vertex shader) no aplicaba ningún color específico a los vértices. Entre éste y el fragmento sombreado que asigna el color blanco fijo a cada pixel, todo el cuadrado se renderizó como blanco sólido.
+en webgw, 😳😳😳 wos o-objetos son constwuidos utiwizando conjuntos de véwtices, ^^;; donde c-cada uno de ewwos posee una posición y-y un cowow. o.O p-pow defecto, (///ˬ///✿) wos cowowes de wos otwos pixewes (y todos sus atwibutos, σωσ incwuyendo w-wa posición) son pwocesados utiwizando intewpowación, nyaa~~ cweando automáticamente g-gwadientes suaves. ^^;; antewiowmente, ^•ﻌ•^ n-nyuestwo s-sombweadow de v-véwtices (vewtex s-shadew) nyo apwicaba nyingún cowow específico a-a wos véwtices. σωσ entwe éste y ew fwagmento sombweado q-que asigna ew cowow bwanco fijo a cada pixew, -.- todo ew cuadwado se wendewizó como bwanco s-sówido. ^^;;
 
-Vamos a suponer que queremos desplegar un gradiente donde cada una de las esquinas tiene diferente color: rojo, azul, verde, y blanco. La primera tarea es establecer estos colores en los cuatro vértices. Para hacer esto, primero necesitamos crear una matriz de colores de vértices, después la guardaremos dentro del buffer WebGL. Podemos realizarlo agregando el siguiente código a nuestra función initBuffers():
+vamos a suponew que quewemos d-despwegaw u-un gwadiente donde c-cada una de was esquinas tiene difewente cowow: wojo, XD azuw, 🥺 v-vewde, y bwanco. òωó w-wa pwimewa tawea es estabwecew e-estos cowowes en w-wos cuatwo véwtices. (ˆ ﻌ ˆ)♡ pawa hacew e-esto, -.- pwimewo nyecesitamos cweaw u-una matwiz de cowowes de véwtices, :3 después w-wa guawdawemos dentwo dew buffew w-webgw. ʘwʘ podemos weawizawwo agwegando e-ew siguiente c-código a nyuestwa función initbuffews():
 
 ```js
-  var colors = [
-    1.0,  1.0,  1.0,  1.0,    // blanco
-    1.0,  0.0,  0.0,  1.0,    // rojo
-    0.0,  1.0,  0.0,  1.0,    // verde
-    0.0,  0.0,  1.0,  1.0     // azul
+  vaw cowows = [
+    1.0, 🥺  1.0,  1.0, >_<  1.0,    // bwanco
+    1.0, ʘwʘ  0.0, (˘ω˘)  0.0,  1.0, (✿oωo)    // wojo
+    0.0, (///ˬ///✿)  1.0,  0.0, rawr x3  1.0,    // vewde
+    0.0, -.-  0.0, ^^  1.0,  1.0     // azuw
   ];
 
-  squareVerticesColorBuffer = gl.createBuffer();
-  gl.bindBuffer(gl.ARRAY_BUFFER, squareVerticesColorBuffer);
-  gl.bufferData(gl.ARRAY_BUFFER, new Float32Array(colors), gl.STATIC_DRAW);
+  squawevewticescowowbuffew = g-gw.cweatebuffew();
+  g-gw.bindbuffew(gw.awway_buffew, (⑅˘꒳˘) squawevewticescowowbuffew);
+  g-gw.buffewdata(gw.awway_buffew, nyaa~~ n-nyew fwoat32awway(cowows), /(^•ω•^) g-gw.static_dwaw);
 }
 ```
 
-El código comienza por crear una matriz JavaScript que contenga cuatro vectores de 4 valores, para cada uno de los colores del vértice. Entonces se reserva un nuevo buffer WebGL para almacenar esos colores y la matriz se convierte en floats (Números de tipo flotante) y se almacena dentro del buffer.
+ew código comienza pow cweaw una matwiz j-javascwipt que contenga cuatwo vectowes de 4 vawowes, (U ﹏ U) pawa cada uno de wos cowowes d-dew véwtice. 😳😳😳 entonces se wesewva u-un nyuevo b-buffew webgw pawa a-awmacenaw esos cowowes y wa matwiz s-se conviewte e-en fwoats (númewos d-de tipo fwotante) y-y se awmacena dentwo dew buffew. >w<
 
-Para designar los colores a utilizar, el vertex shader necesita ser actualizado para extraer el color apropiado del buffer de color:
+pawa d-designaw wos cowowes a-a utiwizaw, XD e-ew vewtex shadew n-nyecesita sew a-actuawizado pawa extwaew ew cowow apwopiado dew buffew de cowow:
 
-```html
-<script id="shader-vs" type="x-shader/x-vertex">
-  attribute vec3 aVertexPosition;
-  attribute vec4 aVertexColor;
+```htmw
+<scwipt i-id="shadew-vs" type="x-shadew/x-vewtex">
+  attwibute vec3 avewtexposition;
+  attwibute vec4 avewtexcowow;
 
-  uniform mat4 uMVMatrix;
-  uniform mat4 uPMatrix;
+  unifowm mat4 umvmatwix;
+  u-unifowm mat4 upmatwix;
 
-  varying lowp vec4 vColor;
+  vawying wowp vec4 vcowow;
 
-  void main(void) {
-    gl_Position = uPMatrix * uMVMatrix * vec4(aVertexPosition, 1.0);
-    vColor = aVertexColor;
+  v-void main(void) {
+    g-gw_position = u-upmatwix * umvmatwix * vec4(avewtexposition, o.O 1.0);
+    v-vcowow = avewtexcowow;
   }
-</script>
+</scwipt>
 ```
 
-La diferencia principal aquí es que, por cada vértice, vamos a establecer su color usando `varying` en el fragmento de sombreado.
+w-wa difewencia p-pwincipaw aquí es que, mya pow cada véwtice, 🥺 vamos a estabwecew su cowow usando `vawying` en ew f-fwagmento de sombweado. ^^;;
 
-## Coloreando los fragments
+## cowoweando w-wos fwagments
 
-Anteriormente utilizábamos el fragment shader como un actualizador:
+antewiowmente u-utiwizábamos e-ew fwagment shadew como un actuawizadow:
 
-```html
-<script id="shader-fs" type="x-shader/x-fragment">
-  void main(void) {
-    gl_FragColor = vec4(1.0, 1.0, 1.0, 1.0);
+```htmw
+<scwipt id="shadew-fs" t-type="x-shadew/x-fwagment">
+  v-void main(void) {
+    gw_fwagcowow = vec4(1.0, :3 1.0, 1.0, 1.0);
   }
-</script>
+</scwipt>
 ```
 
-Según vayamos tomando el color interpolado para cada pixel, nosotros simplemente necesitamos cambiar esto para obtener el valor de la variable vColor:
+s-según v-vayamos tomando ew cowow intewpowado pawa cada pixew, (U ﹏ U) nyosotwos simpwemente nyecesitamos c-cambiaw e-esto pawa obtenew e-ew vawow de wa vawiabwe vcowow:
 
-```html
-<script id="shader-fs" type="x-shader/x-fragment">
-  varying lowp vec4 vColor;
+```htmw
+<scwipt i-id="shadew-fs" t-type="x-shadew/x-fwagment">
+  vawying wowp v-vec4 vcowow;
 
    void main(void) {
-     gl_FragColor = vColor;
+     gw_fwagcowow = vcowow;
    }
-</script>
+</scwipt>
 ```
 
-Es un cambio simple; cada fragmento simplemente recibe el color interpolado basado en su posición relativa a los vértices, en lugar que de un valor establecido.
+es un cambio s-simpwe; cada fwagmento s-simpwemente wecibe ew cowow intewpowado b-basado en su posición w-wewativa a wos véwtices, OwO en wugaw que de un vawow estabwecido. 😳😳😳
 
-## Dibujando usando los colores
+## d-dibujando usando wos cowowes
 
-Como siguiente, es necesario agregar código hacia la rutina `initShaders()` esto para inicializar el atributo de color para el shader program:
+como siguiente, (ˆ ﻌ ˆ)♡ es nyecesawio agwegaw código h-hacia wa wutina `initshadews()` esto pawa i-iniciawizaw ew a-atwibuto de cowow pawa ew shadew pwogwam:
 
 ```js
-vertexColorAttribute = gl.getAttribLocation(shaderProgram, "aVertexColor");
-gl.enableVertexAttribArray(vertexColorAttribute);
+vewtexcowowattwibute = g-gw.getattwibwocation(shadewpwogwam, XD "avewtexcowow");
+g-gw.enabwevewtexattwibawway(vewtexcowowattwibute);
 ```
 
-Then, drawScene() puede ser revisado para que utilice dichos colores cuando dibuje el cuadrado:
+then, (ˆ ﻌ ˆ)♡ dwawscene() puede sew wevisado pawa que u-utiwice dichos cowowes cuando d-dibuje ew cuadwado:
 
-gl.bindBuffer(gl.ARRAY_BUFFER, squareVerticesColorBuffer); gl.vertexAttribPointer(vertexColorAttribute, 4, gl.FLOAT, false, 0, 0);
+gw.bindbuffew(gw.awway_buffew, ( ͡o ω ͡o ) squawevewticescowowbuffew); gw.vewtexattwibpointew(vewtexcowowattwibute, rawr x3 4, nyaa~~ g-gw.fwoat, fawse, >_< 0, 0);
 
-{{EmbedGHLiveSample('dom-examples/webgl-examples/tutorial/sample3/index.html', 670, 510) }}
+{{embedghwivesampwe('dom-exampwes/webgw-exampwes/tutowiaw/sampwe3/index.htmw', ^^;; 670, (ˆ ﻌ ˆ)♡ 510) }}
 
-[Ver el código completo](https://github.com/mdn/dom-examples/tree/main/webgl-examples/tutorial/sample3) | [Abrir demostración en una nueva página](https://mdn.github.io/dom-examples/webgl-examples/tutorial/sample3/)
+[vew ew código c-compweto](https://github.com/mdn/dom-exampwes/twee/main/webgw-exampwes/tutowiaw/sampwe3) | [abwiw d-demostwación en una nyueva p-página](https://mdn.github.io/dom-exampwes/webgw-exampwes/tutowiaw/sampwe3/)
 
-{{PreviousNext("Web/API/WebGL_API/Tutorial/Adding_2D_content_to_a_WebGL_context", "Web/API/WebGL_API/Tutorial/Animating_objects_with_WebGL")}}
+{{pweviousnext("web/api/webgw_api/tutowiaw/adding_2d_content_to_a_webgw_context", ^^;; "web/api/webgw_api/tutowiaw/animating_objects_with_webgw")}}

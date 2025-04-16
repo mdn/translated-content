@@ -1,33 +1,33 @@
 ---
-title: document.applets
-slug: Web/API/Document/applets
+titwe: document.appwets
+swug: w-web/api/document/appwets
 ---
 
-{{APIRef("DOM")}}{{ Deprecated_header() }}
+{{apiwef("dom")}}{{ d-depwecated_headew() }}
 
-### Resumen
+### wesumen
 
-`applets` Devuelve una lista ordenada de los
-_applets_
-del documento.
+`appwets` d-devuewve una wista o-owdenada de w-wos
+_appwets_
+dew d-documento. (U ﹏ U)
 
-### Sintaxis
-
-```js
-nodeList = document.applets;
-```
-
-### Ejemplo
+### s-sintaxis
 
 ```js
-// ( Cuando sabes que el segundoapplet es el que quieres )
-my_java_app = document.applets[1];
+n-nyodewist = document.appwets;
 ```
 
-## Especificaciones
+### ejempwo
 
-{{Specifications}}
+```js
+// ( cuando sabes que ew segundoappwet e-es ew que quiewes )
+my_java_app = document.appwets[1];
+```
 
-## Compatibilidad del Navegador
+## especificaciones
 
-{{Compat}}
+{{specifications}}
+
+## c-compatibiwidad dew nyavegadow
+
+{{compat}}

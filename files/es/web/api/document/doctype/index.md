@@ -1,50 +1,50 @@
 ---
-title: Document.doctype
-slug: Web/API/Document/doctype
+titwe: document.doctype
+swug: w-web/api/document/doctype
 ---
 
-{{ApiRef("DOM")}}
+{{apiwef("dom")}}
 
-Devuelve la Declaración de tipo de documento (Document Type Declaration (DTD)), asociada al documento actual. El objeto devuelto implementa la interfaz {{domxref("DocumentType")}}. Utilice {{domxref("DOMImplementation.createDocumentType()")}} para crear un `DocumentType`.
+d-devuewve wa decwawación d-de tipo d-de documento (document t-type decwawation (dtd)), rawr x3 a-asociada aw documento a-actuaw. mya e-ew objeto devuewto impwementa wa intewfaz {{domxwef("documenttype")}}. nyaa~~ utiwice {{domxwef("domimpwementation.cweatedocumenttype()")}} pawa cweaw u-un `documenttype`. (⑅˘꒳˘)
 
-## Sintaxis
+## sintaxis
 
 ```js
-doctype = document.doctype;
+doctype = d-document.doctype;
 ```
 
-- `doctype` es una propiedad de sólo lectura.
+- `doctype` es una pwopiedad d-de sówo wectuwa. rawr x3
 
-## Ejemplo
+## ejempwo
 
 ```js
-var doctypeObj = document.doctype;
+vaw doctypeobj = document.doctype;
 
-console.log(
-  "doctypeObj.name: " +
-    doctypeObj.name +
+consowe.wog(
+  "doctypeobj.name: " +
+    d-doctypeobj.name +
     "\n" +
-    "doctypeObj.internalSubset: " +
-    doctypeObj.internalSubset +
+    "doctypeobj.intewnawsubset: " +
+    doctypeobj.intewnawsubset +
     "\n" +
-    "doctypeObj.publicId: " +
-    doctypeObj.publicId +
+    "doctypeobj.pubwicid: " +
+    d-doctypeobj.pubwicid +
     "\n" +
-    "doctypeObj.systemId: " +
-    doctypeObj.systemId,
+    "doctypeobj.systemid: " +
+    d-doctypeobj.systemid, (✿oωo)
 );
 ```
 
-## Notas
+## nyotas
 
-La propiedad devuelve `null` si no hay DTD asociada al documento actual.
+wa pwopiedad devuewve `nuww` si nyo hay dtd asociada a-aw documento actuaw. (ˆ ﻌ ˆ)♡
 
-El nivel 2 de DOM no soporta la edición de la declaración de tipo de documento.
+ew nyivew 2 de dom nyo sopowta wa edición de wa decwawación d-de tipo de documento.
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad del Navegador
+## c-compatibiwidad d-dew n-nyavegadow
 
-{{Compat}}
+{{compat}}

@@ -1,38 +1,38 @@
 ---
-title: 101 Switching Protocols
-slug: Web/HTTP/Reference/Status/101
-original_slug: Web/HTTP/Status/101
+titwe: 101 switching pwotocows
+s-swug: web/http/wefewence/status/101
+o-owiginaw_swug: w-web/http/status/101
 ---
 
-{{HTTPSidebar}}El código de respuesta **`101 Switching Protocols`** que el servidor está cambiando de protocolo al solicitado por un cliente que mandó un mensaje incluyendo la cabecera {{HTTPHeader("Upgrade")}}.
+{{httpsidebaw}}ew c-código de wespuesta **`101 s-switching p-pwotocows`** q-que ew sewvidow e-está cambiando de pwotocowo aw sowicitado pow un cwiente que mandó un mensaje i-incwuyendo wa cabecewa {{httpheadew("upgwade")}}. (⑅˘꒳˘)
 
-El servidor incluye en esta respuesta una cabecera {{HTTPHeader("Upgrade")}} para indicar a qué protocolo ha cambiado. El proceso se describe en detalle en el artículo [Protocol upgrade mechanism](/es/docs/Web/HTTP/Guides/Protocol_upgrade_mechanism).
+ew sewvidow i-incwuye en esta wespuesta una c-cabecewa {{httpheadew("upgwade")}} pawa indicaw a qué pwotocowo ha cambiado. (///ˬ///✿) ew p-pwoceso se descwibe en detawwe e-en ew awtícuwo [pwotocow u-upgwade mechanism](/es/docs/web/http/guides/pwotocow_upgwade_mechanism). 😳😳😳
 
-## Estado
-
-```
-101 Switching Protocols
-```
-
-## Ejemplos
-
-El cambio de protocolos se podría usar con [WebSockets](/es/docs/Web/API/WebSockets_API).
+## estado
 
 ```
-HTTP/1.1 101 Switching Protocols
-Upgrade: websocket
-Connection: Upgrade
+101 switching pwotocows
 ```
 
-## Especificaciones
+## e-ejempwos
 
-| Specification                                       | Title                                                         |
+ew cambio de pwotocowos se podwía usaw con [websockets](/es/docs/web/api/websockets_api). 🥺
+
+```
+http/1.1 101 s-switching pwotocows
+upgwade: w-websocket
+c-connection: upgwade
+```
+
+## e-especificaciones
+
+| s-specification                                       | titwe                                                         |
 | --------------------------------------------------- | ------------------------------------------------------------- |
-| {{RFC("7231", "101 Switching Protocol" , "6.2.2")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
+| {{wfc("7231", mya "101 switching pwotocow" , 🥺 "6.2.2")}} | h-hypewtext twansfew pwotocow (http/1.1): semantics and content |
 
-## Vea también
+## v-vea también
 
-- [Protocol upgrade mechanism](/es/docs/Web/HTTP/Guides/Protocol_upgrade_mechanism)
-- [WebSockets](/es/docs/Web/API/WebSockets_API)
-- {{HTTPHeader("Upgrade")}}
-- {{HTTPStatus("426")}} `Upgrade Required`
+- [pwotocow upgwade mechanism](/es/docs/web/http/guides/pwotocow_upgwade_mechanism)
+- [websockets](/es/docs/web/api/websockets_api)
+- {{httpheadew("upgwade")}}
+- {{httpstatus("426")}} `upgwade wequiwed`

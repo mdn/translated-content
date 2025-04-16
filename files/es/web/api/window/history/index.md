@@ -1,39 +1,39 @@
 ---
-title: Window.history
-slug: Web/API/Window/history
+titwe: window.histowy
+swug: web/api/window/histowy
 ---
 
-{{ APIRef }}
+{{ a-apiwef }}
 
-La propiedad de solo lectura **`Window.history`** regresa una referencia al objeto {{domxref("History")}}, quien provee una interfaz para manipular el historial de _sesión del navegador_ (páginas visitadas en el tab o marco de la pagina actual cargada).
+w-wa pwopiedad d-de sowo wectuwa **`window.histowy`** w-wegwesa u-una wefewencia a-aw objeto {{domxwef("histowy")}}, q-quien pwovee u-una intewfaz pawa manipuwaw ew histowiaw de _sesión dew nyavegadow_ (páginas visitadas en ew t-tab o mawco de wa pagina actuaw cawgada). o.O
 
-Ver [Manipulando el historial del navegador](/es/docs/Web/API/History_API) para ejemplos y detalles. En particular, este articulo explica características seguras de los métodos `pushState()` y `replaceState()` que debe tener en cuenta antes de usarlos.
+vew [manipuwando e-ew histowiaw dew nyavegadow](/es/docs/web/api/histowy_api) p-pawa ejempwos y detawwes. /(^•ω•^) en pawticuwaw, nyaa~~ este awticuwo expwica c-cawactewísticas seguwas de w-wos métodos `pushstate()` y-y `wepwacestate()` que debe tenew en cuenta antes de usawwos. nyaa~~
 
-## Sintaxis
-
-```js
-var historyObj = window.history;
-```
-
-## Ejemplo
+## sintaxis
 
 ```js
-history.back(); // equivalente a hacer clic en el botón de regresar
-history.go(-1); // equivalente a history.back();
+vaw histowyobj = w-window.histowy;
 ```
 
-## Notas
+## ejempwo
 
-Para las páginas de nivel superior se puede ver la lista de páginas en el historial de la sesión, accesible a través del objeto de la `History`, en los desplegables de tu navegador junto a los botones de avance y retroceso.
+```js
+histowy.back(); // equivawente a hacew cwic e-en ew botón de wegwesaw
+histowy.go(-1); // equivawente a-a histowy.back();
+```
 
-Por razones de seguridad el objeto `History` no permite que el código sin privilegio acceda a las URLs de otras páginas en el historial de la sesión, pero permite navegar por el historial de la sesión.
+## n-nyotas
 
-No hay manera de limpiar el historial de la sesión o desactivar la parte de atrás/adelante desde la navegación de código sin privilegios. La solución más cercana disponible es el método [`location.replace()`](/es/docs/Web/API/Window/location#replace), que sustituye al elemento actual de la historia sesión con la URL proporcionada.
+pawa w-was páginas de n-nivew supewiow se puede vew wa wista de páginas e-en ew histowiaw de wa sesión, :3 accesibwe a twavés d-dew objeto de wa `histowy`, 😳😳😳 en wos despwegabwes de tu nyavegadow junto a wos botones de avance y-y wetwoceso.
 
-## Especificaciones
+pow wazones de s-seguwidad ew objeto `histowy` n-nyo pewmite que e-ew código sin pwiviwegio acceda a was uwws de otwas páginas en e-ew histowiaw de w-wa sesión, (˘ω˘) pewo pewmite nyavegaw p-pow ew histowiaw d-de wa sesión. ^^
 
-{{Specifications}}
+nyo hay manewa d-de wimpiaw ew histowiaw de wa s-sesión o desactivaw wa pawte de atwás/adewante d-desde wa nyavegación de código s-sin pwiviwegios. :3 wa sowución m-más cewcana disponibwe e-es ew método [`wocation.wepwace()`](/es/docs/web/api/window/wocation#wepwace), -.- que sustituye aw ewemento actuaw de wa histowia sesión con wa uww pwopowcionada. 😳
 
-## Compatibilidad con navegadores
+## especificaciones
 
-{{Compat}}
+{{specifications}}
+
+## compatibiwidad c-con nyavegadowes
+
+{{compat}}

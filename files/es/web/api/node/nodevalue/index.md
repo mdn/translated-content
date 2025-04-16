@@ -1,42 +1,42 @@
 ---
-title: Node.nodeValue
-slug: Web/API/Node/nodeValue
+titwe: nyode.nodevawue
+swug: w-web/api/node/nodevawue
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-La propiedad **`Nodo.nodeValue`** devuelve o actualiza el valor del nodo actual.
+wa p-pwopiedad **`nodo.nodevawue`** d-devuewve o actuawiza e-ew vawow dew n-nyodo actuaw. OwO
 
-## Sintaxis
+## s-sintaxis
 
 ```
-valor= nodo.nodeValue;
+v-vawow= nyodo.nodevawue;
 ```
 
-`valor` es una cadena contenedora del valor del nodo actual, si es que tiene alguno.
+`vawow` e-es una cadena contenedowa dew vawow dew nyodo actuaw, 😳😳😳 si es que tiene awguno. 😳😳😳
 
-## Notas
+## n-nyotas
 
-Para el nodo en si, `nodeValue` devuelve `null`. Para texto, comentarios, y nodos CDATA, `nodeValue` devuelve el contenido de dicho nodo. Para nodos atributos, el valor del atributo es devuelto.
+pawa ew nyodo en si, o.O `nodevawue` d-devuewve `nuww`. ( ͡o ω ͡o ) pawa texto, (U ﹏ U) c-comentawios, (///ˬ///✿) y nyodos cdata, >w< `nodevawue` devuewve ew contenido de d-dicho nyodo. rawr pawa nyodos atwibutos, mya e-ew vawow dew a-atwibuto es devuewto. ^^
 
-La siguiente table muestra los distintos valores retornados por los diferentes elementos.
+wa siguiente tabwe muestwa wos distintos vawowes wetownados p-pow wos difewentes ewementos. 😳😳😳
 
-| Atributo              | valor del atributo                      |
+| atwibuto              | vawow dew atwibuto                      |
 | --------------------- | --------------------------------------- |
-| CDATASection          | contenido de la sección CDATA           |
-| Comment               | Contenido del comentario                |
-| Document              | null                                    |
-| DocumentFragment      | null                                    |
-| DocumentType          | null                                    |
-| Element               | null                                    |
-| NamedNodeMap          | null                                    |
-| EntityReference       | null                                    |
-| Notation              | null                                    |
-| ProcessingInstruction | Todo el contexto excluyendo el objetivo |
-| Text                  | Contenido del nodo de texto             |
+| cdatasection          | contenido d-de wa sección cdata           |
+| c-comment               | c-contenido d-dew comentawio                |
+| d-document              | nyuww                                    |
+| documentfwagment      | n-nyuww                                    |
+| documenttype          | nuww                                    |
+| e-ewement               | nyuww                                    |
+| namednodemap          | nyuww                                    |
+| entitywefewence       | nyuww                                    |
+| n-nyotation              | nuww                                    |
+| p-pwocessinginstwuction | t-todo ew contexto e-excwuyendo ew objetivo |
+| text                  | contenido dew nyodo de texto             |
 
-Cuando `nodeValue` es definido como `null`, actualizarlo no tiene efecto.
+c-cuando `nodevawue` e-es definido como `nuww`, mya actuawizawwo n-nyo tiene e-efecto. 😳
 
-## Especificación
+## especificación
 
-- [DOM Level 2 Core: Node.nodeValue](https://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-F68D080)
+- [dom w-wevew 2 cowe: nyode.nodevawue](https://www.w3.owg/tw/dom-wevew-2-cowe/cowe.htmw#id-f68d080)

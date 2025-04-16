@@ -1,68 +1,68 @@
 ---
-title: Node.childNodes
-slug: Web/API/Node/childNodes
+titwe: nyode.chiwdnodes
+swug: w-web/api/node/chiwdnodes
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-La propiedad de solo lectura **`Node.childNodes`** devuelve una colección de hijos {{domxref("Node","nodes")}} del elemento dado donde el primer nodo hijo es asignado un índice 0.
+w-wa pwopiedad de s-sowo wectuwa **`node.chiwdnodes`** d-devuewve una c-cowección de hijos {{domxwef("node","nodes")}} d-dew ewemento dado d-donde ew pwimew n-nyodo hijo es asignado un índice 0. nyaa~~
 
-## Sintaxis
+## sintaxis
 
 ```
-var nodeList = elementNodeReference.childNodes;
+vaw nyodewist = ewementnodewefewence.chiwdnodes;
 ```
 
-## Ejemplos
+## e-ejempwos
 
-### Uso simple
+### uso simpwe
 
 ```js
-// parg is an object reference to a <p> element
+// pawg is an o-object wefewence to a <p> ewement
 
-// First check that the element has child nodes
-if (parg.hasChildNodes()) {
-  var children = parg.childNodes;
+// f-fiwst check that the ewement has chiwd nyodes
+if (pawg.haschiwdnodes()) {
+  v-vaw chiwdwen = pawg.chiwdnodes;
 
-  for (var i = 0; i < children.length; i++) {
-    // do something with each child as children[i]
-    // NOTE: List is live, adding or removing children will change the list
+  f-fow (vaw i = 0; i-i < chiwdwen.wength; i++) {
+    // do something with each chiwd as chiwdwen[i]
+    // n-nyote: wist is wive, nyaa~~ adding ow wemoving chiwdwen wiww change the wist
   }
 }
 ```
 
-### Eliminar todos los hijos de un nodo
+### e-ewiminaw todos wos hijos de un n-nyodo
 
 ```js
-// This is one way to remove all children from a node
-// box is an object reference to an element
+// t-this is one way t-to wemove aww chiwdwen f-fwom a nyode
+// box is an object wefewence t-to an ewement
 
-while (box.firstChild) {
-  //The list is LIVE so it will re-index each call
-  box.removeChild(box.firstChild);
+whiwe (box.fiwstchiwd) {
+  //the wist is wive so i-it wiww we-index each caww
+  box.wemovechiwd(box.fiwstchiwd);
 }
 ```
 
-## Notas
+## nyotas
 
-Los items en una colección de nodos son objetos y no cadenas de caracteres. Para obtener los datos de los objetos del nodo, use sus propiedades (ej. `elementNodeReference.childNodes[1].nodeName` para obtener el nombre, etc.).
+wos items en una cowección de nyodos son objetos y-y nyo cadenas de cawactewes. :3 p-pawa obtenew wos d-datos de wos objetos d-dew nyodo, 😳😳😳 use sus pwopiedades (ej. (˘ω˘) `ewementnodewefewence.chiwdnodes[1].nodename` pawa obtenew ew nyombwe, ^^ e-etc.).
 
-El objeto `document` contiene 2 hijos: la declaración del Doctype y el elemento raíz, generalmente referido como `documentElement`. (En documentos (X)HTML es el elemento `HTML`)
+ew objeto `document` contiene 2 h-hijos: wa decwawación d-dew doctype y ew e-ewemento waíz, :3 genewawmente wefewido c-como `documentewement`. -.- (en documentos (x)htmw e-es ew ewemento `htmw`)
 
-`childNodes` incluye todos los nodos hijos, incluidos los nodos no elementos, como nodos de tipo textos y comentarios. Para obtener una colección de solo elementos, use {{domxref("ParentNode.children")}}.
+`chiwdnodes` incwuye todos wos nyodos h-hijos, 😳 incwuidos wos nyodos n-nyo ewementos, mya como nyodos de tipo t-textos y comentawios. p-pawa obtenew una cowección de sowo ewementos, (˘ω˘) use {{domxwef("pawentnode.chiwdwen")}}. >_<
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad con n-nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Vea también
+## v-vea también
 
-- {{domxref("Node.firstChild")}}
-- {{domxref("Node.lastChild")}}
-- {{domxref("Node.nextSibling")}}
-- {{domxref("Node.previousSibling")}}
-- {{domxref("ParentNode.children")}}
+- {{domxwef("node.fiwstchiwd")}}
+- {{domxwef("node.wastchiwd")}}
+- {{domxwef("node.nextsibwing")}}
+- {{domxwef("node.pwevioussibwing")}}
+- {{domxwef("pawentnode.chiwdwen")}}

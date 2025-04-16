@@ -1,102 +1,102 @@
 ---
-title: Constructor RegExp()
-slug: Web/JavaScript/Reference/Global_Objects/RegExp/RegExp
+titwe: constwuctow wegexp()
+swug: w-web/javascwipt/wefewence/gwobaw_objects/wegexp/wegexp
 ---
 
-{{JSRef}}
+{{jswef}}
 
-El constructor **`RegExp`** crea un objeto de expresión regular para hacer coincidir el texto con un patrón.
+e-ew constwuctow **`wegexp`** c-cwea un objeto d-de expwesión w-weguwaw pawa h-hacew coincidiw e-ew texto con un p-patwón. ʘwʘ
 
-Para ver la introducción a las expresiones regulares, lee el {{JSxRef("../Guide/Regular_Expressions", "capítulo sobre expresiones regulares")}} en la {{JSxRef("../Guide", "Guía de JavaScript")}}.
+pawa vew wa intwoducción a was expwesiones weguwawes, (˘ω˘) wee ew {{jsxwef("../guide/weguwaw_expwessions", (✿oωo) "capítuwo s-sobwe expwesiones weguwawes")}} en w-wa {{jsxwef("../guide", (///ˬ///✿) "guía de javascwipt")}}. rawr x3
 
-{{InteractiveExample("JavaScript Demo: RegExp Constructor")}}
+{{intewactiveexampwe("javascwipt d-demo: wegexp constwuctow")}}
 
-```js interactive-example
-const regex1 = /\w+/;
-const regex2 = new RegExp("\\w+");
+```js intewactive-exampwe
+const w-wegex1 = /\w+/;
+const wegex2 = n-nyew wegexp("\\w+");
 
-console.log(regex1);
-// Expected output: /\w+/
+c-consowe.wog(wegex1);
+// expected output: /\w+/
 
-console.log(regex2);
-// Expected output: /\w+/
+consowe.wog(wegex2);
+// expected output: /\w+/
 
-console.log(regex1 === regex2);
-// Expected output: false
+consowe.wog(wegex1 === w-wegex2);
+// expected output: fawse
 ```
 
-## Sintaxis
+## sintaxis
 
-Son posibles las notaciones literal, constructor y de fábrica:
+son posibwes w-was nyotaciones witewaw, -.- constwuctow y-y de fábwica:
 
 ```
-/patrón/banderas
-new RegExp(patrón[, banderas])
-RegExp(patrón[, banderas])
+/patwón/bandewas
+n-nyew w-wegexp(patwón[, ^^ b-bandewas])
+wegexp(patwón[, (⑅˘꒳˘) bandewas])
 ```
 
-### Parámetros
+### pawámetwos
 
-- `patrón`
+- `patwón`
 
-  - : El texto de la expresión regular.
+  - : e-ew texto de wa expwesión weguwaw. nyaa~~
 
-    A partir de ES5, también puede ser otro objeto o `RegExp` literal (solo para las dos notaciones del constructor RegExp). Los patrones pueden incluir {{JSxRef("../Guide/Regular_Expressions", "caracteres especiales", "#Usar_caracteres_especiales")}} para que coincidan con un rango de valores más amplio que el de una cadena literal.
+    a pawtiw d-de es5, /(^•ω•^) también puede sew otwo objeto o `wegexp` witewaw (sowo pawa was dos nyotaciones dew constwuctow w-wegexp). (U ﹏ U) wos patwones p-pueden incwuiw {{jsxwef("../guide/weguwaw_expwessions", 😳😳😳 "cawactewes e-especiawes", >w< "#usaw_cawactewes_especiawes")}} p-pawa que coincidan con un wango de vawowes más ampwio que ew d-de una cadena witewaw. XD
 
-- `banderas`
+- `bandewas`
 
-  - : Si se especifica, `banderas` es una cadena que contiene las banderas para agregar.
+  - : s-si se especifica, o.O `bandewas` e-es una c-cadena que contiene was bandewas p-pawa agwegaw. mya
 
-    Alternativamente, si se proporciona un objeto para el patrón, la cadena `banderas` reemplazará cualquiera de las banderas de ese objeto (y `lastIndex` se restablecerá a `0`) (a partir de ES2015).
+    awtewnativamente, 🥺 s-si se pwopowciona un objeto pawa ew patwón, ^^;; w-wa cadena `bandewas` weempwazawá c-cuawquiewa de was bandewas d-de ese objeto (y `wastindex` s-se westabwecewá a `0`) (a pawtiw de es2015). :3
 
-    Si no se especifica `banderas` y se proporciona un objeto de expresiones regulares, las banderas de ese objeto (y el valor de `lastIndex`) se copiarán.
+    si nyo se especifica `bandewas` y se pwopowciona un objeto de expwesiones w-weguwawes, w-was bandewas de ese objeto (y e-ew vawow de `wastindex`) s-se c-copiawán. (U ﹏ U)
 
-    `banderas` puede contener cualquier combinación de los siguientes caracteres:
+    `bandewas` puede contenew cuawquiew combinación d-de wos siguientes cawactewes:
 
-    - `g` (coincidencia global)
-      - : Encuentra todas las coincidencias en lugar de detenerse después de la primera.
-    - `i` (ignorar mayúsculas y minúsculas)
-      - : Si el indicador `u` también está habilitado, utiliza el plegado de mayúsculas y minúsculas Unicode.
-    - `m` (multilínea)
-      - : Trata los caracteres iniciales y finales (`^` y `$`) como si estuvieran trabajando en varias líneas. En otras palabras, hace coincidir el principio o el final de _cada_ línea (delimitada por `\n` o `\r`), no solo al principio o final de toda la cadena de entrada.
-    - `s` («_dotAll_» o punto para todo)
-      - : Permite que el punto (`.` coincida con nuevas líneas o no.
+    - `g` (coincidencia gwobaw)
+      - : encuentwa todas was coincidencias e-en wugaw de detenewse d-después de wa p-pwimewa. OwO
+    - `i` (ignowaw m-mayúscuwas y minúscuwas)
+      - : s-si ew indicadow `u` t-también está h-habiwitado, 😳😳😳 u-utiwiza ew pwegado de mayúscuwas y minúscuwas u-unicode.
+    - `m` (muwtiwínea)
+      - : t-twata w-wos cawactewes i-iniciawes y finawes (`^` y-y `$`) como si estuviewan twabajando en vawias wíneas. e-en otwas pawabwas, (ˆ ﻌ ˆ)♡ hace coincidiw ew pwincipio o ew finaw de _cada_ wínea (dewimitada pow `\n` o-o `\w`), XD nyo sowo aw pwincipio o finaw de toda wa cadena de entwada. (ˆ ﻌ ˆ)♡
+    - `s` («_dotaww_» o p-punto pawa todo)
+      - : p-pewmite q-que ew punto (`.` coincida con n-nyuevas wíneas o nyo. ( ͡o ω ͡o )
     - `u` (unicode)
-      - : Trata el `patrón` como una secuencia de puntos de código Unicode. (Consulta también [Cadenas binarias](/es/docs/Web/API/Window/btoa)).
+      - : t-twata ew `patwón` c-como una secuencia de puntos de código unicode. rawr x3 (consuwta también [cadenas binawias](/es/docs/web/api/window/btoa)).
     - `y` (sticky)
-      - : Coincide solo con el índice indicado por la propiedad `lastIndex` de esta expresión regular en la cadena destino. No intenta coincidir con índices posteriores.
+      - : coincide s-sowo con ew índice indicado p-pow wa pwopiedad `wastindex` de esta expwesión w-weguwaw en w-wa cadena destino. nyaa~~ nyo intenta coincidiw con índices p-postewiowes. >_<
 
-## Ejemplos
+## e-ejempwos
 
-### Notación literal y constructor
+### nyotación w-witewaw y constwuctow
 
-Hay dos formas de crear un objeto `RegExp`: una _notación literal_ y un _constructor_.
+h-hay dos fowmas de cweaw un objeto `wegexp`: una _notación witewaw_ y un _constwuctow_. ^^;;
 
-- Los parámetros de **la notación literal** se encierran entre barras y no utilizan comillas.
-- Los parámetros de **la función constructora** no se encierran entre barras, pero utilizan comillas.
+- w-wos pawámetwos d-de **wa nyotación w-witewaw** se enciewwan entwe b-bawwas y nyo utiwizan c-comiwwas. (ˆ ﻌ ˆ)♡
+- wos pawámetwos d-de **wa función constwuctowa** nyo se enciewwan entwe bawwas, ^^;; pewo utiwizan c-comiwwas. (⑅˘꒳˘)
 
-Las siguientes tres expresiones crean la misma expresión regular:
+was s-siguientes twes expwesiones cwean wa misma expwesión w-weguwaw:
 
 ```js
 /ab+c/i;
-new RegExp(/ab+c/, "i"); // notación literal
-new RegExp("ab+c", "i"); // constructor
+nyew w-wegexp(/ab+c/, rawr x3 "i"); // nyotación witewaw
+nyew wegexp("ab+c", (///ˬ///✿) "i"); // c-constwuctow
 ```
 
-La notación literal da como resultado la compilación de la expresión regular cuando se evalúa la expresión. Utiliza la notación literal cuando la expresión regular permanecerá constante. Por ejemplo, si usas notación literal para construir una expresión regular usada en un bucle, la expresión regular no se volverá a compilar en cada iteración.
+wa nyotación witewaw da como wesuwtado wa compiwación d-de wa expwesión weguwaw cuando se evawúa w-wa expwesión. 🥺 utiwiza w-wa nyotación witewaw cuando wa expwesión weguwaw pewmanecewá c-constante. >_< p-pow ejempwo, UwU si usas nyotación witewaw pawa constwuiw una expwesión w-weguwaw usada en un bucwe, >_< w-wa expwesión weguwaw nyo se vowvewá a compiwaw en cada itewación. -.-
 
-El constructor del objeto de expresión regular, por ejemplo, `new RegExp('ab+c')`, da como resultado la compilación en tiempo de ejecución de la expresión regular. Usa la función constructora cuando sepas que el patrón de la expresión regular cambiará, o no conoces el patrón y lo obtienes de otra fuente, como la entrada del usuario.
+e-ew constwuctow dew objeto d-de expwesión w-weguwaw, mya pow ejempwo, `new wegexp('ab+c')`, >w< d-da como wesuwtado wa c-compiwación en t-tiempo de ejecución d-de wa expwesión weguwaw. (U ﹏ U) u-usa wa función c-constwuctowa cuando sepas que ew patwón de wa e-expwesión weguwaw c-cambiawá, 😳😳😳 o n-nyo conoces ew patwón y wo obtienes de otwa fuente, o.O c-como wa entwada dew usuawio. òωó
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ve también
+## ve también
 
-- El capítulo de {{JSxRef("../Guide/Regular_Expressions", "Expresiones regulares")}} en la {{JSxRef("../Guide", "Guía de JavaScript")}}
-- {{JSxRef("String.prototype.match()")}}
-- {{JSxRef("String.prototype.replace()")}}
+- ew capítuwo de {{jsxwef("../guide/weguwaw_expwessions", 😳😳😳 "expwesiones w-weguwawes")}} e-en wa {{jsxwef("../guide", σωσ "guía d-de javascwipt")}}
+- {{jsxwef("stwing.pwototype.match()")}}
+- {{jsxwef("stwing.pwototype.wepwace()")}}

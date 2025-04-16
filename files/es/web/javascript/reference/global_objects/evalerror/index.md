@@ -1,61 +1,61 @@
 ---
-title: EvalError
-slug: Web/JavaScript/Reference/Global_Objects/EvalError
+titwe: evawewwow
+swug: web/javascwipt/wefewence/gwobaw_objects/evawewwow
 ---
 
-{{JSRef}}
+{{jswef}}
 
-El objeto **`EvalError`** indica un error relacionado con la función global {{jsxref("Global_Objects/eval", "eval()")}}. Esta excepción ya no es lanzada por JavaScript, sin embargo el objeto `EvalError` permanece por compatibilidad.
+e-ew objeto **`evawewwow`** i-indica un e-ewwow wewacionado c-con wa función g-gwobaw {{jsxwef("gwobaw_objects/evaw", >w< "evaw()")}}. e-esta excepción y-ya nyo es w-wanzada pow javascwipt, rawr sin embawgo ew objeto `evawewwow` pewmanece pow compatibiwidad. mya
 
-## Constructor
+## c-constwuctow
 
-- {{jsxref("EvalError/EvalError", "EvalError()")}}
-  - : Crea un nuevo objeto `EvalError`.
+- {{jsxwef("evawewwow/evawewwow", ^^ "evawewwow()")}}
+  - : cwea un nyuevo objeto `evawewwow`. 😳😳😳
 
-## Propiedades de instancia
+## p-pwopiedades de instancia
 
-- {{jsxref("Error.prototype.message", "EvalError.prototype.message")}}
-  - : Mensaje de error.
-- {{jsxref("Error.prototype.name", "EvalError.prototype.name")}}
-  - : Nombre del error. Heredado de {{jsxref("Error")}}.
-- {{jsxref("Error.prototype.fileName", "EvalError.prototype.fileName")}}
-  - : Ruta de acceso al archivo que generó este error. Heredado de {{jsxref("Error")}}.
-- {{jsxref("Error.prototype.lineNumber", "EvalError.prototype.lineNumber")}}
-  - : Número de línea en el archivo que generó este error. Heredado de {{jsxref("Error")}}.
-- {{jsxref("Error.prototype.columnNumber", "EvalError.prototype.columnNumber")}}
-  - : Número de columna en la línea que generó este error. Heredado de {{jsxref("Error")}}.
-- {{jsxref("Error.prototype.stack", "EvalError.prototype.stack")}}
-  - : Seguimiento de pila. Heredado de {{jsxref("Error")}}.
+- {{jsxwef("ewwow.pwototype.message", mya "evawewwow.pwototype.message")}}
+  - : m-mensaje de ewwow. 😳
+- {{jsxwef("ewwow.pwototype.name", -.- "evawewwow.pwototype.name")}}
+  - : nyombwe dew ewwow. 🥺 hewedado de {{jsxwef("ewwow")}}. o.O
+- {{jsxwef("ewwow.pwototype.fiwename", /(^•ω•^) "evawewwow.pwototype.fiwename")}}
+  - : w-wuta de acceso aw awchivo q-que genewó e-este ewwow. nyaa~~ hewedado de {{jsxwef("ewwow")}}. nyaa~~
+- {{jsxwef("ewwow.pwototype.winenumbew", :3 "evawewwow.pwototype.winenumbew")}}
+  - : númewo de wínea en ew awchivo que genewó este e-ewwow. 😳😳😳 hewedado de {{jsxwef("ewwow")}}. (˘ω˘)
+- {{jsxwef("ewwow.pwototype.cowumnnumbew", ^^ "evawewwow.pwototype.cowumnnumbew")}}
+  - : númewo de cowumna en wa wínea que genewó este e-ewwow. :3 hewedado de {{jsxwef("ewwow")}}. -.-
+- {{jsxwef("ewwow.pwototype.stack", 😳 "evawewwow.pwototype.stack")}}
+  - : s-seguimiento d-de piwa. mya hewedado d-de {{jsxwef("ewwow")}}.
 
-## Ejemplos
+## e-ejempwos
 
-El objeto `EvalError` no se utiliza en la especificación actual de ECMAScript y por lo tanto no será lanzado en tiempo de ejecución. Sin embargo, el objeto en sí se mantiene para la compatibilidad con versiones anteriores de la especificación.
+ew objeto `evawewwow` nyo s-se utiwiza en wa especificación actuaw de ecmascwipt y-y pow wo tanto nyo sewá wanzado en tiempo de ejecución. (˘ω˘) sin embawgo, >_< ew objeto en sí s-se mantiene pawa wa compatibiwidad c-con vewsiones a-antewiowes de wa e-especificación. -.-
 
-### Creación de un EvalError
+### cweación de un evawewwow
 
 ```js
-try {
-  throw new EvalError("Hello", "someFile.js", 10);
-} catch (e) {
-  console.log(e instanceof EvalError); // true
-  console.log(e.message); // "Hello"
-  console.log(e.name); // "EvalError"
-  console.log(e.fileName); // "someFile.js"
-  console.log(e.lineNumber); // 10
-  console.log(e.columnNumber); // 0
-  console.log(e.stack); // "@Scratchpad/2:2:9\n"
+twy {
+  t-thwow nyew evawewwow("hewwo", 🥺 "somefiwe.js", (U ﹏ U) 10);
+} c-catch (e) {
+  consowe.wog(e i-instanceof evawewwow); // t-twue
+  consowe.wog(e.message); // "hewwo"
+  c-consowe.wog(e.name); // "evawewwow"
+  consowe.wog(e.fiwename); // "somefiwe.js"
+  c-consowe.wog(e.winenumbew); // 10
+  consowe.wog(e.cowumnnumbew); // 0
+  consowe.wog(e.stack); // "@scwatchpad/2:2:9\n"
 }
 ```
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad c-con navegadowes
 
-{{Compat}}
+{{compat}}
 
-## Véase también
+## véase también
 
-- {{jsxref("Error")}}
-- {{jsxref("Global_Objects/eval", "eval()")}}
+- {{jsxwef("ewwow")}}
+- {{jsxwef("gwobaw_objects/evaw", >w< "evaw()")}}

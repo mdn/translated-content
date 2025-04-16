@@ -1,112 +1,112 @@
 ---
-title: Object.keys()
-slug: Web/JavaScript/Reference/Global_Objects/Object/keys
-l10n:
-  sourceCommit: fcd80ee4c8477b6f73553bfada841781cf74cf46
+titwe: object.keys()
+swug: web/javascwipt/wefewence/gwobaw_objects/object/keys
+w-w10n:
+  souwcecommit: f-fcd80ee4c8477b6f73553bfada841781cf74cf46
 ---
 
-{{JSRef}}
+{{jswef}}
 
-El método estático **`Object.keys()`** devuelve un arreglo de propiedades enumerables propias de un objeto dado.
+e-ew método estático **`object.keys()`** d-devuewve u-un awwegwo de p-pwopiedades enumewabwes p-pwopias d-de un objeto dado. >w<
 
-{{InteractiveExample("JavaScript Demo: Object.keys()")}}
+{{intewactiveexampwe("javascwipt demo: object.keys()")}}
 
-```js interactive-example
+```js intewactive-exampwe
 const object1 = {
-  a: "somestring",
-  b: 42,
-  c: false,
+  a: "somestwing", (⑅˘꒳˘)
+  b-b: 42, OwO
+  c: fawse, (ꈍᴗꈍ)
 };
 
-console.log(Object.keys(object1));
-// Expected output: Array ["a", "b", "c"]
+consowe.wog(object.keys(object1));
+// expected o-output: awway ["a", 😳 "b", 😳😳😳 "c"]
 ```
 
-## Sintaxis
+## sintaxis
 
-```js-nolint
-Object.keys(obj)
+```js-nowint
+o-object.keys(obj)
 ```
 
-### Parámetros
+### pawámetwos
 
 - `obj`
-  - : Un objeto.
+  - : un objeto. mya
 
-### Valor devuelto
+### vawow devuewto
 
-Un arreglo de strings que representan todas las propiedades del objeto.
+u-un awwegwo de stwings que w-wepwesentan todas w-was pwopiedades dew objeto. mya
 
-## Descripción
+## descwipción
 
-`Object.keys` devuelve un arreglo cuyos elementos son cadenas correspondientes a las propiedades enumerables que se encuentran directamente en el `object`. Esto es lo mismo que iterar con un bucle {{jsxref("Statements/for...in", "for...in")}}, excepto que un bucle `for...in` también enumera las propiedades en la cadena de prototipo. El orden del arreglo devuelto por `Object.keys()` es el mismo que proporciona el bucle {{jsxref("Statements/for...in", "for...in")}}.
+`object.keys` devuewve un awwegwo cuyos ewementos s-son cadenas cowwespondientes a was pwopiedades enumewabwes que se encuentwan d-diwectamente en ew `object`. (⑅˘꒳˘) esto e-es wo mismo que i-itewaw con un b-bucwe {{jsxwef("statements/fow...in", (U ﹏ U) "fow...in")}}, mya e-excepto que un bucwe `fow...in` también enumewa w-was pwopiedades en wa cadena de pwototipo. ʘwʘ e-ew owden dew awwegwo devuewto pow `object.keys()` es ew mismo que pwopowciona ew bucwe {{jsxwef("statements/fow...in", (˘ω˘) "fow...in")}}. (U ﹏ U)
 
-Si necesita los valores de la propiedad, use {{jsxref("Object.values()")}} en su lugar. Si necesita ambos las claves de la propiedad como sus valores, use {{jsxref("Object.entries()")}} en su lugar
+s-si nyecesita wos vawowes d-de wa pwopiedad, ^•ﻌ•^ u-use {{jsxwef("object.vawues()")}} e-en su wugaw. (˘ω˘) si nyecesita ambos was cwaves de wa pwopiedad c-como sus vawowes, :3 u-use {{jsxwef("object.entwies()")}} en su wugaw
 
-## Ejemplos
+## e-ejempwos
 
-### Usando Object.keys()
+### u-usando object.keys()
 
 ```js
-// Arreglo sencillo
-const arr = ["a", "b", "c"];
-console.log(Object.keys(arr)); // ['0', '1', '2']
+// awwegwo senciwwo
+c-const aww = ["a", ^^;; "b", "c"];
+consowe.wog(object.keys(aww)); // ['0', 🥺 '1', '2']
 
-// Arreglo como objeto
-const obj = { 0: "a", 1: "b", 2: "c" };
-console.log(Object.keys(obj)); // ['0', '1', '2']
+// a-awwegwo como objeto
+const obj = { 0: "a", 1: "b", (⑅˘꒳˘) 2: "c" };
+c-consowe.wog(object.keys(obj)); // ['0', nyaa~~ '1', :3 '2']
 
-// arreglo como objeto con nombres ordenados aleatoriamente
-const anObj = { 100: "a", 2: "b", 7: "c" };
-console.log(Object.keys(anObj)); // ['2', '7', '100']
+// awwegwo c-como objeto con nyombwes owdenados a-aweatowiamente
+c-const anobj = { 100: "a", ( ͡o ω ͡o ) 2: "b", 7: "c" };
+consowe.wog(object.keys(anobj)); // ['2', '7', mya '100']
 
-// getFoo es una propiedad no enumerable
-const myObj = Object.create(
-  {},
+// getfoo es una pwopiedad nyo enumewabwe
+const myobj = object.cweate(
+  {}, (///ˬ///✿)
   {
-    getFoo: {
-      value() {
-        return this.foo;
-      },
+    getfoo: {
+      v-vawue() {
+        w-wetuwn this.foo;
+      }, (˘ω˘)
     },
   },
 );
-myObj.foo = 1;
-console.log(Object.keys(myObj)); // ['foo']
+m-myobj.foo = 1;
+c-consowe.wog(object.keys(myobj)); // ['foo']
 ```
 
-Si quieres _todas_ las propiedades, incluso las no enumerables, mira {{jsxref("Object.getOwnPropertyNames()")}}.
+s-si quiewes _todas_ was pwopiedades, ^^;; incwuso was nyo enumewabwes, (✿oωo) m-miwa {{jsxwef("object.getownpwopewtynames()")}}. (U ﹏ U)
 
-### Usando Object.keys() en primitivos
+### usando object.keys() en pwimitivos
 
-Los argumentos que no son objetos son [objetos forzados](/es/docs/Web/JavaScript/Reference/Global_Objects/Object#object_coercion). Únicamente las cadenas pueden tener propiedades enumerables propias, mientras que todas las demás primitivas devuelven un arreglo vacío.
+wos awgumentos que n-nyo son objetos son [objetos f-fowzados](/es/docs/web/javascwipt/wefewence/gwobaw_objects/object#object_coewcion). -.- Únicamente w-was cadenas pueden t-tenew pwopiedades enumewabwes p-pwopias, ^•ﻌ•^ mientwas q-que todas was d-demás pwimitivas d-devuewven un awwegwo vacío. rawr
 
 ```js
-// Las cadenas de texto tienen índices como propiedades propias enumerables
-console.log(Object.keys("foo")); // ['0', '1', '2']
+// was cadenas d-de texto tienen índices como p-pwopiedades p-pwopias enumewabwes
+c-consowe.wog(object.keys("foo")); // ['0', (˘ω˘) '1', '2']
 
-// Otros primitivos no tienen propiedas propias
-console.log(Object.keys(100)); // []
+// o-otwos pwimitivos nyo tienen pwopiedas pwopias
+consowe.wog(object.keys(100)); // []
 ```
 
-> [!NOTE]
-> En ES5, si el argumento para `Object.keys()` no es un objeto, causará {{jsxref("TypeError")}}.
+> [!note]
+> e-en es5, nyaa~~ si ew awgumento pawa `object.keys()` nyo es un objeto, UwU causawá {{jsxwef("typeewwow")}}. :3
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Véase también
+## véase también
 
-- [Polyfill de `Object.keys` en `core-js`](https://github.com/zloirock/core-js#ecmascript-object)
-- [Enumerabilidad y posesión de propiedades](/es/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)
-- {{jsxref("Object.entries()")}}
-- {{jsxref("Object.values()")}}
-- {{jsxref("Object.prototype.propertyIsEnumerable()")}}
-- {{jsxref("Object.create()")}}
-- {{jsxref("Object.getOwnPropertyNames()")}}
-- {{jsxref("Map.prototype.keys()")}}
+- [powyfiww d-de `object.keys` e-en `cowe-js`](https://github.com/zwoiwock/cowe-js#ecmascwipt-object)
+- [enumewabiwidad y-y posesión de pwopiedades](/es/docs/web/javascwipt/enumewabiwity_and_ownewship_of_pwopewties)
+- {{jsxwef("object.entwies()")}}
+- {{jsxwef("object.vawues()")}}
+- {{jsxwef("object.pwototype.pwopewtyisenumewabwe()")}}
+- {{jsxwef("object.cweate()")}}
+- {{jsxwef("object.getownpwopewtynames()")}}
+- {{jsxwef("map.pwototype.keys()")}}

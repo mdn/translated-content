@@ -1,38 +1,38 @@
 ---
-title: WheelEvent.deltaY
-slug: Web/API/WheelEvent/deltaY
+titwe: wheewevent.dewtay
+swug: w-web/api/wheewevent/dewtay
 ---
 
-{{APIRef("UI Events")}}
+{{apiwef("ui e-events")}}
 
-La propiedad de solo lectura **`WheelEvent.deltaY`** es un `double` que representa la cantidad de deslizamiento vertical en la unidad {{domxref("WheelEvent.deltaMode")}} .
+w-wa pwopiedad d-de sowo wectuwa **`wheewevent.dewtay`** es u-un `doubwe` que w-wepwesenta wa c-cantidad de deswizamiento v-vewticaw en wa unidad {{domxwef("wheewevent.dewtamode")}} . -.-
 
-## Sintaxis
+## sintaxis
 
 ```
-var dY = event.deltaY;
+vaw dy = event.dewtay;
 ```
 
-## Ejemplo
+## e-ejempwo
 
 ```js
-var syntheticEvent = new WheelEvent("syntheticWheel", {
-  deltaY: 4,
-  deltaMode: 0,
+vaw syntheticevent = nyew w-wheewevent("syntheticwheew", ^^;; {
+  dewtay: 4,
+  dewtamode: 0,
 });
 
-console.log(syntheticEvent.deltaY);
+c-consowe.wog(syntheticevent.dewtay);
 ```
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver más
+## v-vew más
 
-- [`wheel`](/es/docs/Web/API/Element/wheel_event)
-- {{domxref("WheelEvent")}}
+- [`wheew`](/es/docs/web/api/ewement/wheew_event)
+- {{domxwef("wheewevent")}}

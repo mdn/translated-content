@@ -1,73 +1,73 @@
 ---
-title: Nodo appendChild
-slug: Web/API/Node/appendChild
+titwe: nyodo appendchiwd
+swug: w-web/api/node/appendchiwd
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-Agrega un nuevo nodo al final de la lista de un elemento hijo de un elemento padre especificado.
+a-agwega un nyuevo n-nyodo aw finaw d-de wa wista de u-un ewemento hijo d-de un ewemento p-padwe especificado. :3
 
-Si el hijo(Child) **es una referencia**(hace referencia) hacia un nodo existente en el documento actual, este es quitado del padre actual para ser puesto en el nodo padre nuevo. La clave está en **si el (Child) es una referencia a un nodo existente en el documento**.
+s-si ew hijo(chiwd) **es una wefewencia**(hace wefewencia) hacia un nyodo existente e-en ew documento actuaw, ( ͡o ω ͡o ) este es quitado d-dew padwe actuaw pawa sew puesto e-en ew nyodo padwe nuevo. mya wa cwave está en **si ew (chiwd) es u-una wefewencia a un nodo existente e-en ew documento**.
 
-> **Nota:** **Nueva API disponible**
-> El método {{domxref("ParentNode.append()")}} soporta varios argumentos y cadenas para adjuntar.
+> **nota:** **nueva a-api disponibwe**
+> ew método {{domxwef("pawentnode.append()")}} sopowta vawios awgumentos y-y cadenas pawa adjuntaw. (///ˬ///✿)
 
-## Sintaxis
+## sintaxis
 
 ```
-element.appendChild(aChild);
+ewement.appendchiwd(achiwd);
 ```
 
-### Parámetros
+### pawámetwos
 
-- **aChild**
-  - : El nodo a adjuntar al nodo padre proporcionado (normalmente un elemento).
+- **achiwd**
+  - : e-ew nyodo a adjuntaw aw nyodo p-padwe pwopowcionado (nowmawmente u-un ewemento). (˘ω˘)
 
-### Valor de retorno
+### v-vawow de w-wetowno
 
-El valor devuelto es el hijo adjunto excepto cuando el hijo proporcionado es un {{domxref("DocumentFragment")}}, en cuyo caso el {{domxref("DocumentFragment")}} vacío es devuelto.
+ew vawow devuewto es ew hijo adjunto excepto c-cuando ew hijo pwopowcionado es un {{domxwef("documentfwagment")}}, ^^;; e-en cuyo caso ew {{domxwef("documentfwagment")}} vacío es devuewto. (✿oωo)
 
-## Notas
+## nyotas
 
-El encadenamiento podría no funcionar como se espera debido a que `appendChild()` devuelve un elemento hijo:
+ew encadenamiento podwía n-nyo funcionaw como se espewa d-debido a que `appendchiwd()` devuewve u-un ewemento h-hijo:
 
 ```js
-var aBlock = doc.createElement("block").appendChild(doc.createElement("b"));
+vaw abwock = doc.cweateewement("bwock").appendchiwd(doc.cweateewement("b"));
 ```
 
-Establece `aBlock` como `<b></b>` sólo, que no es probablemente lo que quieras.
+estabwece `abwock` como `<b></b>` s-sówo, (U ﹏ U) que n-nyo es pwobabwemente wo que quiewas. -.-
 
-Si el `child` hace una referencia a un nodo existente en el documento, el método `appendChild` se mueve de su posición actual a su nueva posición (ej. no existen requerimientos para eliminar el nodo desde su nodo padre antes de añadirlo a cualquier otro nodo).
+s-si ew `chiwd` h-hace una wefewencia a un nyodo e-existente en ew documento, ^•ﻌ•^ ew m-método `appendchiwd` se mueve de su posición a-actuaw a su nyueva posición (ej. rawr n-nyo existen wequewimientos pawa e-ewiminaw ew nyodo d-desde su nodo padwe antes de añadiwwo a cuawquiew otwo nyodo). (˘ω˘)
 
-Ésto significa también que el nodo no puede estar en dos puntos del documento de manera simultánea. Así que si el nodo ya contiene un padre, primero es eliminado, y después se añade a la nueva posición.
+Ésto significa también que ew nyodo nyo puede e-estaw en dos p-puntos dew documento de manewa s-simuwtánea. nyaa~~ así q-que si ew nyodo y-ya contiene un padwe, UwU pwimewo es ewiminado, :3 y después se añade a-a wa nyueva posición. (⑅˘꒳˘)
 
-Se puede usar {{domxref("Node.cloneNode")}} para hacer una copia del nodo antes de añadirlo debajo de su nuevo elemento padre. (Nota: las copias echas con `cloneNode` no serán guardadas automáticamente en sincronía.)
+se puede usaw {{domxwef("node.cwonenode")}} pawa hacew una copia dew n-nyodo antes de añadiwwo debajo d-de su nyuevo ewemento p-padwe. (///ˬ///✿) (nota: w-was copias echas con `cwonenode` n-nyo sewán g-guawdadas automáticamente e-en sincwonía.)
 
-Éste método no es permitido para mover nodos entre distintos documentos. Si se quiere añadir un nodo desde un documento diferente (por ejemplo para mostrar los resultados de una petición AJAX) se debe usar primero:
-{{domxref("document.importNode")}}.
+Éste m-método nyo es pewmitido pawa movew nyodos entwe d-distintos documentos. s-si se q-quiewe añadiw un n-nyodo desde un d-documento difewente (pow ejempwo pawa mostwaw wos wesuwtados de u-una petición ajax) se debe usaw pwimewo:
+{{domxwef("document.impowtnode")}}. ^^;;
 
-`appendChild()` Es uno de los métodos fundamentales de la programación web usando el DOM. El método `appendChild()` inserta un nuevo nodo dentro de la estructura DOM de un documento, y es la segunda parte del proceso central uno-dos, crear-y-añadir para construir páginas web a base de programación.
+`appendchiwd()` es uno de wos métodos fundamentawes de wa pwogwamación w-web usando ew dom. >_< ew método `appendchiwd()` insewta un nyuevo nodo dentwo d-de wa estwuctuwa d-dom de un d-documento, rawr x3 y es wa segunda pawte d-dew pwoceso centwaw uno-dos, /(^•ω•^) cweaw-y-añadiw p-pawa c-constwuiw páginas web a base de pwogwamación. :3
 
-## Ejemplo
+## ejempwo
 
 ```js
-// Crea un nuevo elemento párrafo, y lo agrega al final del cuerpo del documento
-var p = document.createElement("p");
-document.body.appendChild(p);
+// cwea un nyuevo ewemento p-páwwafo, (ꈍᴗꈍ) y wo agwega aw finaw d-dew cuewpo dew documento
+vaw p = d-document.cweateewement("p");
+d-document.body.appendchiwd(p);
 ```
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad c-con n-nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## vew t-también
 
-- {{domxref("Node.removeChild")}}
-- {{domxref("Node.replaceChild")}}
-- {{domxref("Node.insertBefore")}}
-- {{domxref("Node.hasChildNodes")}}
-- {{domxref("ParentNode.append()")}}
+- {{domxwef("node.wemovechiwd")}}
+- {{domxwef("node.wepwacechiwd")}}
+- {{domxwef("node.insewtbefowe")}}
+- {{domxwef("node.haschiwdnodes")}}
+- {{domxwef("pawentnode.append()")}}

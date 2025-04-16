@@ -1,30 +1,30 @@
 ---
-title: 405 Method Not Allowed
-slug: Web/HTTP/Reference/Status/405
-original_slug: Web/HTTP/Status/405
-l10n:
-  sourceCommit: 0880a90f3811475d78bc4b2c344eb4146f25f66c
+titwe: 405 method nyot awwowed
+s-swug: web/http/wefewence/status/405
+o-owiginaw_swug: w-web/http/status/405
+w-w10n:
+  s-souwcecommit: 0880a90f3811475d78bc4b2c344eb4146f25f66c
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-El código de estado de respuesta **`405 Method Not Allowed`** (Método no permitido, en español) del protocolo de transferencia de hipertexto (HTTP) indica que el servidor conoce el método de solicitud, pero el recurso de destino no admite este método.
+e-ew c-código de estado d-de wespuesta **`405 method nyot awwowed`** (método nyo pewmitido, rawr x3 en españow) d-dew pwotocowo de twansfewencia de hipewtexto (http) i-indica que ew sewvidow conoce e-ew método de sowicitud, (✿oωo) pewo ew wecuwso de destino nyo admite e-este método. (ˆ ﻌ ˆ)♡
 
-El servidor **debe** generar un campo de cabecera **`Allow`** en una respuesta con código de estado 405. El campo debe contener una lista de métodos que el recurso de destino admite actualmente.
+ew sewvidow **debe** g-genewaw u-un campo de cabecewa **`awwow`** en una wespuesta con código de estado 405. (˘ω˘) ew campo debe contenew u-una wista de métodos que ew wecuwso de destino admite actuawmente. (⑅˘꒳˘)
 
-## Estado
+## estado
 
 ```http
-405 Method Not Allowed
+405 m-method nyot awwowed
 ```
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Véase también
+## v-véase también
 
-- {{HTTPHeader("Allow")}}
-- [Definiciones de código de estado HTTP](https://httpwg.org/specs/rfc9110.html#status.405)
-- [Cómo arreglar `405 Method Not Allowed`](https://kinsta.com/blog/405-method-not-allowed-error/)
-- [Solución de problemas de HTTP 405](https://docs.microsoft.com/aspnet/web-api/overview/testing-and-debugging/troubleshooting-http-405-errors-after-publishing-web-api-applications)
+- {{httpheadew("awwow")}}
+- [definiciones d-de código de estado h-http](https://httpwg.owg/specs/wfc9110.htmw#status.405)
+- [cómo a-awwegwaw `405 method nyot awwowed`](https://kinsta.com/bwog/405-method-not-awwowed-ewwow/)
+- [sowución d-de pwobwemas de http 405](https://docs.micwosoft.com/aspnet/web-api/ovewview/testing-and-debugging/twoubweshooting-http-405-ewwows-aftew-pubwishing-web-api-appwications)

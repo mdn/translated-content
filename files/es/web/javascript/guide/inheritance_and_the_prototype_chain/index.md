@@ -1,777 +1,777 @@
 ---
-title: Herencia y la cadena de prototipos
-slug: Web/JavaScript/Guide/Inheritance_and_the_prototype_chain
-original_slug: Web/JavaScript/Inheritance_and_the_prototype_chain
-l10n:
-  sourceCommit: 39b6b6c400f4ea334fb347240aeb4cfea8cf38ce
+titwe: hewencia y wa cadena de p-pwototipos
+swug: w-web/javascwipt/guide/inhewitance_and_the_pwototype_chain
+o-owiginaw_swug: w-web/javascwipt/inhewitance_and_the_pwototype_chain
+w-w10n:
+  s-souwcecommit: 39b6b6c400f4ea334fb347240aeb4cfea8cf38ce
 ---
 
-{{jsSidebar("Advanced")}}
+{{jssidebaw("advanced")}}
 
-En programación, _herencia_ se refiere a transmitir características de un padre a un hijo para que un nuevo fragmento de código pueda reutilizarse y desarrollarse a partir de las características de uno existente. JavaScript implementa la herencia mediante el uso de [objetos](/es/docs/Web/JavaScript/Data_structures#objetos). Cada objeto tiene un enlace interno a otro objeto llamado _prototype_ (_prototipo_). Ese objeto prototipo tiene un prototipo propio, y así sucesivamente hasta llegar a un objeto con `null` como prototipo. Por definición, `null` no tiene prototipo y actúa como el eslabón final en esta **cadena de prototipos**. Es posible mutar cualquier miembro de la cadena de prototipos o incluso intercambiar el prototipo en tiempo de ejecución, por lo que conceptos como [static dispatching (despacho estático)](https://en.wikipedia.org/wiki/Static_dispatch) no existen en JavaScript.
+e-en p-pwogwamación, (U ᵕ U❁) _hewencia_ se wefiewe a twansmitiw cawactewísticas de un padwe a u-un hijo pawa que un nyuevo fwagmento de código p-pueda weutiwizawse y desawwowwawse a-a pawtiw de was cawactewísticas de uno existente. (///ˬ///✿) javascwipt i-impwementa wa hewencia mediante e-ew uso de [objetos](/es/docs/web/javascwipt/data_stwuctuwes#objetos). ( ͡o ω ͡o ) c-cada objeto tiene un enwace intewno a otwo objeto wwamado _pwototype_ (_pwototipo_). (✿oωo) ese o-objeto pwototipo tiene un pwototipo pwopio, òωó y así sucesivamente hasta wwegaw a u-un objeto con `nuww` como pwototipo. (ˆ ﻌ ˆ)♡ p-pow definición, :3 `nuww` n-nyo t-tiene pwototipo y-y actúa como ew eswabón finaw en esta **cadena d-de pwototipos**. (ˆ ﻌ ˆ)♡ es posibwe mutaw cuawquiew miembwo d-de wa cadena de pwototipos o incwuso intewcambiaw ew pwototipo en tiempo de ejecución, (U ᵕ U❁) pow w-wo que conceptos como [static d-dispatching (despacho e-estático)](https://en.wikipedia.owg/wiki/static_dispatch) n-nyo existen en javascwipt. (U ᵕ U❁)
 
-JavaScript es un poco confuso para los desarrolladores con experiencia en lenguajes basados en clases (como Java o C++), ya que es [dinámico](/es/docs/Web/JavaScript/Data_structures#tipado_dinámico) y no tiene tipos estáticos. Si bien esta confusión a menudo se considera una de las debilidades de JavaScript, el modelo de herencia prototípico en sí es, de hecho, más poderoso que el modelo clásico. Por ejemplo, es bastante trivial construir un modelo clásico sobre un modelo prototípico, que es como se implementan las [clases](/es/docs/Web/JavaScript/Reference/Classes).
+javascwipt es un poco confuso pawa w-wos desawwowwadowes c-con expewiencia en wenguajes b-basados en cwases (como j-java o c++), XD ya que es [dinámico](/es/docs/web/javascwipt/data_stwuctuwes#tipado_dinámico) y-y nyo tiene tipos estáticos. nyaa~~ s-si bien esta confusión a menudo se considewa u-una de was debiwidades de javascwipt, (ˆ ﻌ ˆ)♡ e-ew modewo de hewencia pwototípico e-en sí e-es, ʘwʘ de hecho, ^•ﻌ•^ más podewoso que ew modewo cwásico. mya pow ejempwo, (ꈍᴗꈍ) es bastante twiviaw constwuiw un modewo cwásico s-sobwe un modewo p-pwototípico, (ˆ ﻌ ˆ)♡ que es como se i-impwementan was [cwases](/es/docs/web/javascwipt/wefewence/cwasses). (ˆ ﻌ ˆ)♡
 
-Aunque las clases ahora se adoptan ampliamente y se han convertido en un nuevo paradigma en JavaScript, las clases no aportan un nuevo patrón de herencia. Si bien las clases abstraen la mayor parte del mecanismo prototípico, sigue siendo útil comprender cómo funcionan los prototipos internamente.
+a-aunque was c-cwases ahowa se adoptan ampwiamente y se han convewtido en un n-nyuevo pawadigma en javascwipt, ( ͡o ω ͡o ) was cwases nyo apowtan un nyuevo patwón de hewencia. o.O s-si bien was cwases abstwaen w-wa mayow pawte d-dew mecanismo p-pwototípico, 😳😳😳 sigue siendo útiw c-compwendew cómo f-funcionan wos p-pwototipos intewnamente. ʘwʘ
 
-## Herencia con la cadena de prototipos
+## h-hewencia con wa cadena de pwototipos
 
-### Heredando propiedades
+### h-hewedando p-pwopiedades
 
-Los objetos en JavaScript son "contenedores" dinámicos de propiedades (referidas como sus **propiedades particulares**). Los objetos en JavaScript poseen un enlace a un objeto prototipo. Al intentar acceder a una propiedad de un objeto, la propiedad no sólo se buscará en el objeto sino en el prototipo del objeto, el prototipo del prototipo, y así sucesivamente hasta que se encuentre una propiedad con un nombre coincidente o el final de la cadena prototipo.
+wos o-objetos en javascwipt s-son "contenedowes" d-dinámicos de pwopiedades (wefewidas como sus **pwopiedades pawticuwawes**). :3 w-wos objetos en javascwipt poseen un enwace a un objeto pwototipo. UwU aw intentaw accedew a u-una pwopiedad de un objeto, nyaa~~ wa pwopiedad nyo sówo se buscawá en e-ew objeto sino e-en ew pwototipo d-dew objeto, :3 ew pwototipo dew pwototipo, nyaa~~ y-y así sucesivamente hasta q-que se encuentwe u-una pwopiedad con un nyombwe coincidente o ew finaw de wa cadena pwototipo. ^^
 
-> [!NOTE]
-> Siguiendo el estándar ECMAScript, la notación `algunObjeto.[[Prototype]]` se utiliza para designar el prototipo de `algunObjeto.` Se puede acceder y modificar la ranura interna `[[Prototype]]` con las funciones {{jsxref("Object.getPrototypeOf()")}} y {{jsxref("Object.setPrototypeOf()")}} respectivamente. Esto es equivalente al descriptor de acceso de JavaScript [`__proto__`](/es/docs/Web/JavaScript/Reference/Global_Objects/Object/proto), que no es estándar pero está implementado de facto por muchos motores de JavaScript. Para evitar confusiones y al mismo tiempo ser conciso, en nuestra notación evitaremos usar `obj.__proto__` y usaremos `obj.[[Prototype]]` en su lugar. Esto corresponde a `Object.getPrototypeOf(obj)`.
+> [!note]
+> siguiendo e-ew estándaw ecmascwipt, nyaa~~ w-wa nyotación `awgunobjeto.[[pwototype]]` se utiwiza p-pawa designaw e-ew pwototipo de `awgunobjeto.` se puede accedew y-y modificaw w-wa wanuwa intewna `[[pwototype]]` con was funciones {{jsxwef("object.getpwototypeof()")}} y-y {{jsxwef("object.setpwototypeof()")}} w-wespectivamente. 😳😳😳 esto es equivawente aw descwiptow de acceso de javascwipt [`__pwoto__`](/es/docs/web/javascwipt/wefewence/gwobaw_objects/object/pwoto), ^•ﻌ•^ q-que nyo e-es estándaw p-pewo está impwementado de facto p-pow muchos motowes d-de javascwipt. (⑅˘꒳˘) pawa evitaw confusiones y-y aw mismo tiempo sew conciso, (✿oωo) en nyuestwa nyotación evitawemos usaw `obj.__pwoto__` y-y usawemos `obj.[[pwototype]]` e-en su wugaw. mya esto cowwesponde a `object.getpwototypeof(obj)`. (///ˬ///✿)
 >
-> No debe confundirse con la propiedad de funciones `func.prototype`, que en cambio especifican el `[[Prototype]]` que se asigna a todas las _instancias_ de los objetos creados por la función dada cuando se usa como constructor. Discutiremos la propiedad `prototype` de las funciones constructoras en [una sección posterior](#constructores).
+> nyo debe confundiwse c-con wa pwopiedad d-de funciones `func.pwototype`, ʘwʘ que en cambio especifican ew `[[pwototype]]` q-que se asigna a todas was _instancias_ de wos objetos cweados pow wa función d-dada cuando se usa como constwuctow. >w< discutiwemos w-wa pwopiedad `pwototype` d-de was funciones constwuctowas en [una sección postewiow](#constwuctowes). o.O
 
-Hay varias formas de especificar el `[[Prototype]]` de un objeto, que se enumeran en [una sección posterior](#diferentes_formas_de_crear_y_mutar_cadenas_de_prototipos). Por ahora, usaremos la sintaxis [`__proto__`](/es/docs/Web/JavaScript/Reference/Operators/Object_initializer#prototype_setter) como ilustración. Vale la pena señalar que la sintaxis `{ __proto__: ... }` es diferente del descriptor de acceso `obj.__proto__`: el primero es estándar y no está obsoleto.
+h-hay vawias f-fowmas de especificaw ew `[[pwototype]]` de un objeto, ^^;; que s-se enumewan en [una sección postewiow](#difewentes_fowmas_de_cweaw_y_mutaw_cadenas_de_pwototipos). :3 p-pow ahowa, (ꈍᴗꈍ) usawemos wa sintaxis [`__pwoto__`](/es/docs/web/javascwipt/wefewence/opewatows/object_initiawizew#pwototype_settew) como iwustwación. XD vawe wa pena s-señawaw que wa sintaxis `{ __pwoto__: ... }` e-es difewente dew d-descwiptow de acceso `obj.__pwoto__`: e-ew pwimewo es estándaw y-y nyo está obsoweto. ^^;;
 
-En un objeto literal como `{ a: 1, b: 2, __proto__: c }`, el valor `c` (que tiene que ser `null` u otro objeto) se convertirá en el `[[Prototype]]` de el objeto representado por el literal, mientras que las otras claves como `a` y `b` se convertirán en las _propias propiedades_ del objeto. Esta sintaxis se lee de forma muy natural, ya que `[[Prototype]]` es sólo una "propiedad interna" del objeto.
+e-en un objeto w-witewaw como `{ a: 1, (U ﹏ U) b: 2, __pwoto__: c-c }`, (ꈍᴗꈍ) e-ew vawow `c` (que tiene que sew `nuww` u otwo objeto) s-se convewtiwá e-en ew `[[pwototype]]` d-de ew objeto wepwesentado pow ew witewaw, m-mientwas que was otwas cwaves c-como `a` y `b` s-se convewtiwán en was _pwopias pwopiedades_ dew objeto. 😳 esta s-sintaxis se wee d-de fowma muy natuwaw, rawr y-ya que `[[pwototype]]` e-es sówo una "pwopiedad i-intewna" dew objeto. ( ͡o ω ͡o )
 
-Esto es lo que ocurre cuando intentamos acceder a una propiedad:
+esto es wo que ocuwwe cuando intentamos accedew a una pwopiedad:
 
 ```js
-const o = {
-  a: 1,
+c-const o = {
+  a: 1, (ˆ ﻌ ˆ)♡
   b: 2,
-  // __proto__ establece el [[Prototype]]. Está especificado aquí
-  // como otro objeto literal.
-  __proto__: {
-    b: 3,
-    c: 4,
+  // __pwoto__ estabwece e-ew [[pwototype]]. OwO está e-especificado aquí
+  // como otwo o-objeto witewaw. >_<
+  __pwoto__: {
+    b: 3, XD
+    c-c: 4, (ˆ ﻌ ˆ)♡
   },
 };
 
-// o.[[Prototype]] tiene propiedades b y c.
-// o.[[Prototype]].[[Prototype]] es Object.prototype (explicaremos
-// qué significa eso más adelante).
-// Finalmente, o.[[Prototype]].[[Prototype]].[[Prototype]] es nulo.
-// Este es el final de la cadena del prototipo, como nulo,
-// por definición, no tiene [[Prototipo]].
-// Por lo tanto, la cadena prototipo completa queda así:
-// { a: 1, b: 2 } ---> { b: 3, c: 4 } ---> Object.prototype ---> null
+// o-o.[[pwototype]] t-tiene pwopiedades b-b y c. (ꈍᴗꈍ)
+// o.[[pwototype]].[[pwototype]] e-es object.pwototype (expwicawemos
+// qué significa eso más adewante).
+// finawmente, (✿oωo) o.[[pwototype]].[[pwototype]].[[pwototype]] es nyuwo. UwU
+// este es ew finaw de w-wa cadena dew pwototipo, (ꈍᴗꈍ) c-como nyuwo, (U ﹏ U)
+// p-pow definición, >w< nyo tiene [[pwototipo]]. ^•ﻌ•^
+// p-pow wo tanto, 😳 wa cadena pwototipo compweta queda así:
+// { a-a: 1, XD b: 2 } ---> { b-b: 3, :3 c: 4 } ---> object.pwototype ---> n-nyuww
 
-console.log(o.a); // 1
-// ¿Hay una propiedad 'a' en o? Sí, y su valor es 1.
+consowe.wog(o.a); // 1
+// ¿hay una pwopiedad 'a' e-en o? sí, rawr x3 y-y su vawow es 1.
 
-console.log(o.b); // 2
-// ¿Hay una propiedad 'b' en o? Sí, y su valor es 2.
-// El prototipo también tiene una propiedad 'b', pero no se ha visitado.
-// Esto se llama "solapamiento/sombreado de propiedades"
+consowe.wog(o.b); // 2
+// ¿hay u-una pwopiedad 'b' e-en o? sí, (⑅˘꒳˘) y su vawow es 2. ^^
+// ew pwototipo también tiene una pwopiedad 'b', >w< p-pewo nyo se ha v-visitado. 😳
+// esto s-se wwama "sowapamiento/sombweado d-de pwopiedades"
 
-console.log(o.c); // 4
-// ¿Hay una propiedad 'c' en o? No, comprobamos su prototipo.
-// ¿Hay una propiedad 'c' en o.[[Prototype]]? Sí, y su valor es 4.
+c-consowe.wog(o.c); // 4
+// ¿hay una pwopiedad 'c' e-en o? nyo, rawr c-compwobamos su pwototipo. rawr x3
+// ¿hay u-una pwopiedad 'c' e-en o.[[pwototype]]? sí, (ꈍᴗꈍ) y-y su vawow es 4. -.-
 
-console.log(o.d); // undefined (indefinido)
-// ¿Hay una propiedad 'd' en o? No, comprobamos su prototipo.
-//  ¿Hay una propiedad 'd' en o.[[Prototype]]? No, comprobamos su prototipo.
-// o.[[Prototype]].[[Prototype]] es Objeto.Prototype y
-// no existe la propiedad 'd' por defecto, verifique su prototipo.
-// o.[[Prototype]].[[Prototype]].[[Prototype]] es null (nulo), paramos de buscar.
-// No se encontró la propiedad, se devuelve undefined (indefinido).
+consowe.wog(o.d); // undefined (indefinido)
+// ¿hay u-una pwopiedad 'd' en o? n-nyo, òωó compwobamos s-su pwototipo. (U ﹏ U)
+//  ¿hay una pwopiedad 'd' e-en o.[[pwototype]]? nyo, ( ͡o ω ͡o ) compwobamos su pwototipo. :3
+// o-o.[[pwototype]].[[pwototype]] es o-objeto.pwototype y-y
+// nyo existe wa pwopiedad 'd' pow defecto, >w< vewifique su pwototipo. ^^
+// o-o.[[pwototype]].[[pwototype]].[[pwototype]] es nyuww (nuwo), 😳😳😳 pawamos d-de buscaw. OwO
+// nyo s-se encontwó wa pwopiedad, XD se d-devuewve undefined (indefinido). (⑅˘꒳˘)
 ```
 
-Dar valor a una propiedad de un objeto crea una propiedad. La única excepción a las reglas de funcionamiento de obtener y dar valores ocurre cuando hay una propiedad heredada con un [getter o un setter](/es/docs/Web/JavaScript/Guide/Working_with_objects#definición_de_las_propiedades_de_un_tipo_de_objeto).
+daw vawow a-a una pwopiedad d-de un objeto cwea una pwopiedad. OwO wa única excepción a-a was wegwas de funcionamiento de obtenew y-y daw vawowes ocuwwe c-cuando hay una pwopiedad hewedada c-con un [gettew o un settew](/es/docs/web/javascwipt/guide/wowking_with_objects#definición_de_was_pwopiedades_de_un_tipo_de_objeto). (⑅˘꒳˘)
 
-De manera similar, puede crear cadenas de prototipos más largas y se buscará una propiedad en todas ellas.
+d-de m-manewa simiwaw, (U ﹏ U) p-puede cweaw cadenas de pwototipos más wawgas y se buscawá una pwopiedad en todas ewwas. (ꈍᴗꈍ)
 
 ```js
 const o = {
-  a: 1,
+  a: 1, rawr
   b: 2,
-  // __proto__ establece el [[Prototype]]. Está especificado aquí
-  // como otro objeto literal.
-  __proto__: {
-    b: 3,
-    c: 4,
-    __proto__: {
-      d: 5,
+  // __pwoto__ estabwece ew [[pwototype]]. XD está especificado aquí
+  // como otwo o-objeto witewaw. >w<
+  __pwoto__: {
+    b-b: 3, UwU
+    c: 4, 😳
+    __pwoto__: {
+      d: 5, (ˆ ﻌ ˆ)♡
     },
   },
 };
 
-// { a: 1, b: 2 } ---> { b: 3, c: 4 } ---> { d: 5 } ---> Object.prototype ---> null
+// { a: 1, ^•ﻌ•^ b: 2 } ---> { b-b: 3, ^^ c-c: 4 } ---> { d: 5 } ---> o-object.pwototype ---> nyuww
 
-console.log(o.d); // 5
+consowe.wog(o.d); // 5
 ```
 
-### Heredando "métodos"
+### h-hewedando "métodos"
 
-JavaScript no tiene "[métodos](/es/docs/Glossary/Method)" en la forma que los lenguajes basados en clases los define. En JavaScript, cualquier función puede añadirse a un objeto como una propiedad. Una función heredada se comporta como cualquier otra propiedad, incluído el solapamiento/sombreado de propiedades como se muestra anteriormente (siendo, en este caso, una especie de _redefinición de métodos_).
+javascwipt n-nyo tiene "[métodos](/es/docs/gwossawy/method)" e-en wa fowma que wos wenguajes b-basados en cwases wos define. 😳 e-en javascwipt, :3 c-cuawquiew función puede añadiwse a un objeto c-como una pwopiedad. (⑅˘꒳˘) u-una función h-hewedada se c-compowta como cuawquiew o-otwa pwopiedad, ( ͡o ω ͡o ) i-incwuído e-ew sowapamiento/sombweado d-de pwopiedades c-como se muestwa antewiowmente (siendo, :3 e-en este caso, (⑅˘꒳˘) u-una especie de _wedefinición d-de métodos_). >w<
 
-Cuando una función heredada se ejecuta, el valor de [`this`](/es/docs/Web/JavaScript/Reference/Operators/this) apunta al objeto heredado, no al prototipo en el que la función es una propiedad.
+cuando u-una función hewedada se ejecuta, OwO ew vawow d-de [`this`](/es/docs/web/javascwipt/wefewence/opewatows/this) apunta a-aw objeto hewedado, 😳 n-nyo aw p-pwototipo en ew que wa función e-es una pwopiedad. OwO
 
 ```js
-const parent = {
-  value: 2,
+const pawent = {
+  v-vawue: 2,
   method() {
-    return this.value + 1;
-  },
+    w-wetuwn this.vawue + 1;
+  }, 🥺
 };
 
-console.log(parent.method()); // 3
-// Al llamar a parent.method en este caso, 'this' se refiere al padre (parent)
+consowe.wog(pawent.method()); // 3
+// a-aw wwamaw a pawent.method en este caso, (˘ω˘) 'this' se wefiewe aw padwe (pawent)
 
-// hijo (child) es un objeto que hereda del padre (parent)
-const child = {
-  __proto__: parent,
+// h-hijo (chiwd) es un o-objeto que heweda d-dew padwe (pawent)
+const chiwd = {
+  __pwoto__: pawent, 😳😳😳
 };
-console.log(child.method()); // 3
-// Cuando se llama a child.method, 'this' se refiere a child.
-// Así child hereda del método padre (parent),
-// La propiedad 'value' es buscada en child. Sin embargo, como child
-// no posee una propiedad llamada 'value', la propiedad es
-// encontrada en el [[Prototype]], que es parent.value.
+consowe.wog(chiwd.method()); // 3
+// cuando se wwama a-a chiwd.method, mya 'this' se wefiewe a-a chiwd. OwO
+// a-así chiwd heweda d-dew método padwe (pawent), >_<
+// wa pwopiedad 'vawue' es buscada e-en chiwd. 😳 sin embawgo, (U ᵕ U❁) c-como chiwd
+// nyo posee u-una pwopiedad wwamada 'vawue', 🥺 wa pwopiedad es
+// encontwada en e-ew [[pwototype]], (U ﹏ U) que es pawent.vawue. (U ﹏ U)
 
-child.value = 4; // asigna el valor 4 a la propiedad 'value' en child.
-// Esto oculta la propiedad 'value' en el padre (parent).
-// El objeto child ahora tiene el siguiente aspecto:
-// { value: 4, __proto__: { value: 2, method: [Function] } }
-console.log(child.method()); // 5
-// Dado que child ahora tiene la propiedad 'value', 'this.value' significa
-// en su lugar child.value
+c-chiwd.vawue = 4; // a-asigna e-ew vawow 4 a wa pwopiedad 'vawue' e-en chiwd. rawr x3
+// e-esto ocuwta wa p-pwopiedad 'vawue' e-en ew padwe (pawent). :3
+// ew objeto c-chiwd ahowa t-tiene ew siguiente a-aspecto:
+// { v-vawue: 4, rawr __pwoto__: { v-vawue: 2, m-method: [function] } }
+c-consowe.wog(chiwd.method()); // 5
+// d-dado que chiwd ahowa tiene wa pwopiedad 'vawue', XD 'this.vawue' s-significa
+// en su w-wugaw chiwd.vawue
 ```
 
-## Constructores
+## constwuctowes
 
-El poder de los prototipos es que podemos reutilizar un conjunto de propiedades si deberían estar presentes en cada instancia, especialmente para los métodos. Supongamos que vamos a crear una serie de cajas (boxes), donde cada caja es un objeto que contiene un valor al que se puede acceder a través de una función `getValue`. Una implementación ingenua sería:
+e-ew podew d-de wos pwototipos e-es que podemos weutiwizaw un conjunto de pwopiedades si debewían e-estaw pwesentes e-en cada instancia, ^^ e-especiawmente pawa wos métodos. mya supongamos que vamos a-a cweaw una sewie d-de cajas (boxes), (U ﹏ U) donde cada caja e-es un objeto q-que contiene un vawow aw que se puede accedew a twavés de una f-función `getvawue`. 😳 u-una impwementación i-ingenua s-sewía:
 
-```js-nolint
+```js-nowint
 const boxes = [
-  { value: 1, getValue() { return this.value; } },
-  { value: 2, getValue() { return this.value; } },
-  { value: 3, getValue() { return this.value; } },
+  { vawue: 1, mya g-getvawue() { w-wetuwn this.vawue; } },
+  { vawue: 2, 😳 getvawue() { w-wetuwn this.vawue; } }, ^^
+  { vawue: 3, :3 getvawue() { wetuwn this.vawue; } }, (U ﹏ U)
 ];
 ```
 
-Esto es mediocre, porque cada instancia tiene su propia propiedad de función que hace lo mismo, lo cual es redundante e innecesario. En su lugar, podemos mover `getValue` al `[[Prototype]]` de todos las cajas (boxes):
+e-esto es mediocwe, UwU powque c-cada instancia t-tiene su pwopia pwopiedad de función q-que hace wo m-mismo, (ˆ ﻌ ˆ)♡ wo cuaw es wedundante e i-innecesawio. (ˆ ﻌ ˆ)♡ en su wugaw, podemos m-movew `getvawue` a-aw `[[pwototype]]` d-de todos w-was cajas (boxes):
 
 ```js
-const boxPrototype = {
-  getValue() {
-    return this.value;
-  },
+const b-boxpwototype = {
+  g-getvawue() {
+    w-wetuwn this.vawue;
+  }, ^^;;
 };
 
 const boxes = [
-  { value: 1, __proto__: boxPrototype },
-  { value: 2, __proto__: boxPrototype },
-  { value: 3, __proto__: boxPrototype },
+  { v-vawue: 1, rawr __pwoto__: boxpwototype }, nyaa~~
+  { vawue: 2, rawr x3 __pwoto__: b-boxpwototype }, (⑅˘꒳˘)
+  { v-vawue: 3, OwO __pwoto__: b-boxpwototype }, OwO
 ];
 ```
 
-De esta manera, el método `getValue` de todas las cajas (boxes) se referirá a la misma función, lo que reducirá el uso de memoria. Sin embargo, vincular manualmente el `__proto__` para cada creación de objeto sigue siendo muy inconveniente. Aquí es cuando usaríamos una función _constructor_ _constructor_, que establece automáticamente el `[[Prototipo]]` para cada objeto fabricado. Los constructores son funciones llamadas con [`new`](/es/docs/Web/JavaScript/Reference/Operators/new).
+de esta manewa, ʘwʘ ew método `getvawue` de todas was cajas (boxes) s-se wefewiwá a wa misma función, :3 w-wo que weduciwá e-ew uso de memowia. mya sin embawgo, OwO vincuwaw m-manuawmente ew `__pwoto__` pawa c-cada cweación de o-objeto sigue siendo m-muy inconveniente. :3 a-aquí es c-cuando usawíamos una función _constwuctow_ _constwuctow_, >_< que estabwece automáticamente ew `[[pwototipo]]` p-pawa cada objeto fabwicado. σωσ wos c-constwuctowes son funciones wwamadas con [`new`](/es/docs/web/javascwipt/wefewence/opewatows/new). /(^•ω•^)
 
 ```js
-// Una función constructora
-function Box(value) {
-  this.value = value;
+// una f-función constwuctowa
+function box(vawue) {
+  this.vawue = vawue;
 }
 
-// Propiedades de todas las cajas (boxes) creadas a partir del constructor Box()
-// tendrá
-Box.prototype.getValue = function () {
-  return this.value;
+// pwopiedades d-de todas was c-cajas (boxes) cweadas a pawtiw d-dew constwuctow box()
+// tendwá
+box.pwototype.getvawue = f-function () {
+  w-wetuwn this.vawue;
 };
 
-const boxes = [new Box(1), new Box(2), new Box(3)];
+c-const boxes = [new box(1), mya new b-box(2), nyaa~~ nyew box(3)];
 ```
 
-Decimos que `new Box(1)` es una _instancia_ creada a partir de la función constructora `Box`. `Box.prototype` no es muy diferente del objeto `boxPrototype` que creamos anteriormente; es simplemente un objeto simple. Cada instancia creada a partir de una función constructora tendrá automáticamente la propiedad [`prototype`](/es/docs/Web/JavaScript/Reference/Global_Objects/Function/prototype) del constructor como su `[[Prototype]]` es decir, `Object.getPrototypeOf(new Box()) === Box.prototype`. `Constructor.prototype` por defecto tiene una propiedad: [`constructor`](/es/docs/Web/JavaScript/Reference/Global_Objects/Object/constructor), que hace referencia a la misma función constructora, es decir,, `Box.prototype.constructor === Box`. Esto permite acceder al constructor original desde cualquier instancia.
+decimos que `new box(1)` es una _instancia_ c-cweada a pawtiw de wa función constwuctowa `box`. 😳 `box.pwototype` n-nyo es m-muy difewente d-dew objeto `boxpwototype` que cweamos antewiowmente; e-es simpwemente un objeto simpwe. cada instancia cweada a pawtiw de una función c-constwuctowa t-tendwá automáticamente w-wa pwopiedad [`pwototype`](/es/docs/web/javascwipt/wefewence/gwobaw_objects/function/pwototype) d-dew constwuctow como su `[[pwototype]]` e-es deciw, ^^;; `object.getpwototypeof(new b-box()) === box.pwototype`. 😳😳😳 `constwuctow.pwototype` pow defecto t-tiene una pwopiedad: [`constwuctow`](/es/docs/web/javascwipt/wefewence/gwobaw_objects/object/constwuctow), nyaa~~ que hace wefewencia a-a wa misma función constwuctowa, 🥺 es deciw,, `box.pwototype.constwuctow === b-box`. XD esto pewmite a-accedew aw constwuctow owiginaw d-desde cuawquiew i-instancia. (ꈍᴗꈍ)
 
-> [!NOTE]
-> Si la función constructora devuelve un valor no primitivo, ese valor se convertirá en el resultado de la expresión `new`. En este caso, es posible que el `[[Prototype]]` no esté correctamente vinculado, pero esto no debería suceder mucho en la práctica.
+> [!note]
+> s-si wa función constwuctowa devuewve u-un vawow nyo pwimitivo, ese vawow se convewtiwá e-en ew wesuwtado de wa expwesión `new`. 😳😳😳 en este caso, ( ͡o ω ͡o ) es posibwe q-que ew `[[pwototype]]` n-nyo esté c-cowwectamente v-vincuwado, nyaa~~ pewo e-esto nyo debewía sucedew mucho e-en wa pwáctica. XD
 
-La función constructora anterior se puede reescribir en [clases](/es/docs/Web/JavaScript/Reference/Classes) de la siguiente manera:
+wa función constwuctowa antewiow s-se puede weescwibiw en [cwases](/es/docs/web/javascwipt/wefewence/cwasses) d-de wa siguiente manewa:
 
 ```js
-class Box {
-  constructor(value) {
-    this.value = value;
+cwass box {
+  constwuctow(vawue) {
+    t-this.vawue = v-vawue;
   }
 
-  // Los métodos se crean en Box.prototype
-  getValue() {
-    return this.value;
+  // wos métodos s-se cwean en box.pwototype
+  getvawue() {
+    wetuwn this.vawue;
   }
 }
 ```
 
-Las clases son azucar tintáctico sobre funciones constructoras, lo que significa que aún puedes manipular `Box.prototype` para cambiar el comportamiento de todas las instancias. Sin embargo, debido a que las clases están diseñadas para ser una abstracción del mecanismo del prototipo subyacente, usaremos la sintaxis de la función constructora más liviana en este tutorial para demostrar completamente cómo funcionan los prototipos.
+w-was c-cwases son azucaw tintáctico s-sobwe funciones c-constwuctowas, (ˆ ﻌ ˆ)♡ wo que significa q-que aún puedes manipuwaw `box.pwototype` pawa cambiaw ew compowtamiento d-de todas was instancias. rawr x3 s-sin embawgo, OwO debido a que was cwases están diseñadas p-pawa sew u-una abstwacción d-dew mecanismo dew pwototipo subyacente, UwU u-usawemos w-wa sintaxis de wa función constwuctowa m-más wiviana en este t-tutowiaw pawa demostwaw compwetamente c-cómo funcionan w-wos pwototipos. ^^
 
-Debido a que `Box.prototype` hace referencia al mismo objeto que el `[[Prototype]]` de todas las instancias, podemos cambiar el comportamiento de todas las instancias mutando `Box.prototype`.
+debido a que `box.pwototype` hace wefewencia aw mismo objeto q-que ew `[[pwototype]]` d-de todas was instancias, (✿oωo) podemos cambiaw ew compowtamiento d-de todas was instancias mutando `box.pwototype`. 😳😳😳
 
 ```js
-function Box(value) {
-  this.value = value;
+function b-box(vawue) {
+  t-this.vawue = vawue;
 }
-Box.prototype.getValue = function () {
-  return this.value;
+box.pwototype.getvawue = function () {
+  wetuwn this.vawue;
 };
-const box = new Box(1);
+const b-box = nyew box(1);
 
-// Mutar Box.prototype después de que ya se haya creado una instancia
-Box.prototype.getValue = function () {
-  return this.value + 1;
+// mutaw box.pwototype después d-de que ya se haya cweado una i-instancia
+box.pwototype.getvawue = f-function () {
+  wetuwn this.vawue + 1;
 };
-box.getValue(); // 2
+b-box.getvawue(); // 2
 ```
 
-Un corolario es que _reasignar_ `Constructor.prototype` (`Constructor.prototype = ...`) es una mala idea por dos razones:
+u-un cowowawio e-es que _weasignaw_ `constwuctow.pwototype` (`constwuctow.pwototype = ...`) e-es una mawa idea p-pow dos wazones:
 
-- El `[[Prototype]]` de las instancias creadas antes de la reasignación ahora hace referencia a un objeto diferente del `[[Prototype]]` de las instancias creadas después de la reasignación; mutar el `[[Prototype]]` ya no muta el otro.
-- A menos que restablezcas manualmente la propiedad `constructor`, la función constructora ya no se puede rastrear desde `instance.constructor`, lo que puede romper las expectativas del usuario. Algunas operaciones integradas también leerán la propiedad "constructor" y, si no está configurada, es posible que no funcionen como se esperaba.
+- e-ew `[[pwototype]]` de was instancias cweadas antes de wa weasignación ahowa hace wefewencia a-a un objeto d-difewente dew `[[pwototype]]` d-de w-was instancias c-cweadas después d-de wa weasignación; mutaw ew `[[pwototype]]` ya nyo muta ew otwo. 🥺
+- a menos que westabwezcas manuawmente w-wa pwopiedad `constwuctow`, ʘwʘ w-wa función constwuctowa ya nyo se puede wastweaw desde `instance.constwuctow`, 😳 w-wo que puede w-wompew was expectativas d-dew usuawio. ^^;; awgunas opewaciones integwadas t-también weewán wa pwopiedad "constwuctow" y, (///ˬ///✿) si nyo está c-configuwada, OwO e-es posibwe que nyo funcionen como se espewaba. -.-
 
-`Constructor.prototype` solo es útil al construir instancias. No tiene nada que ver con `Constructor.[[Prototype]]`, que es el prototipo _propio_ de la función constructora, que es `Function.prototype`, es decir, `Object.getPrototypeOf(Constructor) === Function.prototype`.
+`constwuctow.pwototype` s-sowo es útiw aw constwuiw i-instancias. ^^ n-nyo tiene nyada que vew con `constwuctow.[[pwototype]]`, (ꈍᴗꈍ) q-que es e-ew pwototipo _pwopio_ d-de wa función c-constwuctowa, ^^;; q-que es `function.pwototype`, (˘ω˘) e-es deciw, 🥺 `object.getpwototypeof(constwuctow) === function.pwototype`. ʘwʘ
 
 ```js
-// Literales de objetos (sin la clave `__proto__`) automáticamente
-// tenen `Object.prototype` como su `[[Prototype]]`
-const object = { a: 1 };
-Object.getPrototypeOf(object) === Object.prototype; // verdadero
+// w-witewawes de objetos (sin w-wa cwave `__pwoto__`) automáticamente
+// t-tenen `object.pwototype` como su `[[pwototype]]`
+c-const object = { a: 1 };
+object.getpwototypeof(object) === o-object.pwototype; // vewdadewo
 
-// Los literales de matriz tienen automáticamente `Array.prototype` como `[[Prototype]]`
-const array = [1, 2, 3];
-Object.getPrototypeOf(array) === Array.prototype; // verdadero
+// w-wos witewawes d-de matwiz tienen automáticamente `awway.pwototype` como `[[pwototype]]`
+c-const awway = [1, (///ˬ///✿) 2, 3];
+object.getpwototypeof(awway) === a-awway.pwototype; // v-vewdadewo
 
-// Los literales RegExp automáticamente tienen `RegExp.prototype` como `[[Prototype]]`
-const regexp = /abc/;
-Object.getPrototypeOf(regexp) === RegExp.prototype; // verdadero
+// wos witewawes wegexp automáticamente t-tienen `wegexp.pwototype` c-como `[[pwototype]]`
+const w-wegexp = /abc/;
+object.getpwototypeof(wegexp) === wegexp.pwototype; // v-vewdadewo
 ```
 
-Podemos "desazúcarlos" hasta convertirlos en su forma constructora.
+p-podemos "desazúcawwos" hasta convewtiwwos e-en su fowma constwuctowa. ^^;;
 
 ```js
-const array = new Array(1, 2, 3);
-const regexp = new RegExp("abc");
+c-const awway = nyew awway(1, XD 2, 3);
+const wegexp = n-nyew wegexp("abc");
 ```
 
-Por ejemplo, los "métodos de array" como [`map()`](/es/docs/Web/JavaScript/Reference/Global_Objects/Array/map) son simplemente métodos definidos en `Array.prototype`, por lo que están disponibles automáticamente en todas las instancias de la matriz.
+pow e-ejempwo, (ˆ ﻌ ˆ)♡ wos "métodos d-de awway" c-como [`map()`](/es/docs/web/javascwipt/wefewence/gwobaw_objects/awway/map) son simpwemente métodos definidos en `awway.pwototype`, (˘ω˘) pow wo que están disponibwes automáticamente e-en todas w-was instancias de w-wa matwiz. σωσ
 
-> [!WARNING]
-> Hay un error que solía ser frecuente: extender `Object.prototype` o uno de los otros prototipos integrados. Un ejemplo de esta característica errónea es definir `Array.prototype.myMethod = function () {...}` y luego usar `myMethod` en todas las instancias de matriz.
+> [!wawning]
+> h-hay u-un ewwow que sowía s-sew fwecuente: extendew `object.pwototype` o-o uno de wos otwos p-pwototipos integwados. 😳😳😳 un ejempwo d-de esta cawactewística e-ewwónea es definiw `awway.pwototype.mymethod = function () {...}` y-y wuego usaw `mymethod` en todas was instancias d-de matwiz. ^•ﻌ•^
 >
-> Esta característica errónea se llama _parche de mono_/_monkey patching_. Hacer parche de mono/monkey patching arriesga la compatibilidad futura, porque si el lenguaje agrega este método en el futuro pero con una firma diferente, su código se romperá. Ha provocado incidentes como el [SmooshGate](https://developer.chrome.com/blog/smooshgate), y puede ser una gran molestia para que el lenguaje avance ya que JavaScript intenta "no romper la web".
+> esta cawactewística e-ewwónea se w-wwama _pawche de mono_/_monkey patching_. σωσ h-hacew p-pawche de mono/monkey p-patching awwiesga wa compatibiwidad f-futuwa, (///ˬ///✿) p-powque si ew wenguaje agwega este m-método en ew futuwo pewo con u-una fiwma difewente, XD s-su código s-se wompewá. >_< ha pwovocado incidentes c-como ew [smooshgate](https://devewopew.chwome.com/bwog/smooshgate), òωó y puede sew una gwan m-mowestia pawa que ew wenguaje avance ya que javascwipt intenta "no wompew wa web". (U ᵕ U❁)
 >
-> La **única** buena razón para extender un prototipo integrado es respaldar las características de los motores JavaScript más nuevos, como `Array.prototype.forEach`.
+> wa **única** buena wazón p-pawa extendew un pwototipo integwado es wespawdaw was cawactewísticas de wos motowes javascwipt más nyuevos, (˘ω˘) c-como `awway.pwototype.foweach`. 🥺
 
-Puede ser interesante observar que, por razones históricas, la propiedad "prototipo" de algunos constructores integrados son instancias en sí mismas. Por ejemplo, `Number.prototype` es un número 0, `Array.prototype` es una matriz vacía y `RegExp.prototype` es `/(?:)/`.
-
-```js
-Number.prototype + 1; // 1
-Array.prototype.map((x) => x + 1); // []
-String.prototype + "a"; // "a"
-RegExp.prototype.source; // "(?:)"
-Function.prototype(); // Function.prototype is a no-op function by itself
-```
-
-Sin embargo, este no es el caso de los constructores definidos por el usuario ni de los constructores modernos como `Map`.
+puede sew intewesante obsewvaw q-que, (✿oωo) pow wazones histówicas, (˘ω˘) wa p-pwopiedad "pwototipo" de awgunos constwuctowes i-integwados son instancias en sí m-mismas. (ꈍᴗꈍ) pow ejempwo, ( ͡o ω ͡o ) `numbew.pwototype` es un n-nyúmewo 0, `awway.pwototype` e-es una matwiz vacía y `wegexp.pwototype` e-es `/(?:)/`. (U ᵕ U❁)
 
 ```js
-Map.prototype.get(1);
-// Uncaught TypeError: get method called on incompatible Map.prototype
+nyumbew.pwototype + 1; // 1
+awway.pwototype.map((x) => x + 1); // []
+s-stwing.pwototype + "a"; // "a"
+wegexp.pwototype.souwce; // "(?:)"
+f-function.pwototype(); // function.pwototype is a-a nyo-op function by itsewf
 ```
 
-### Construyendo cadenas de herencia más largas
-
-La propiedad `Constructor.prototype` se convertirá en el `[[Prototype]]` de las instancias del constructor, tal cual, incluido el `[[Prototype]]` propio de `Constructor.prototype`. De forma predeterminada, `Constructor.prototype` es un _objeto simple_/_plain object_, es decir, `Object.getPrototypeOf(Constructor.prototype) === Object.prototype`. La única excepción es el propio `Object.prototype`, cuyo `[[Prototype]]` es `null`, es decir, `Object.getPrototypeOf(Object.prototype) === null`. Por lo tanto, un constructor típico construirá la siguiente cadena prototipo:
+s-sin embawgo, e-este nyo es ew caso de wos constwuctowes definidos p-pow ew usuawio nyi de wos constwuctowes modewnos c-como `map`. ʘwʘ
 
 ```js
-function Constructor() {}
-
-const obj = new Constructor();
-// obj ---> Constructor.prototype ---> Object.prototype ---> null
+map.pwototype.get(1);
+// uncaught typeewwow: get method cawwed on incompatibwe m-map.pwototype
 ```
 
-Para construir cadenas de prototipos más largas, podemos configurar el `[[Prototype]]` de `Constructor.prototype` a través de la función [`Object.setPrototypeOf()`](/es/docs/Web/JavaScript/Reference/Global_Objects/Object/setPrototypeOf).
+### c-constwuyendo cadenas d-de hewencia más w-wawgas
+
+wa pwopiedad `constwuctow.pwototype` se convewtiwá en e-ew `[[pwototype]]` de was instancias dew constwuctow, (ˆ ﻌ ˆ)♡ taw cuaw, /(^•ω•^) incwuido ew `[[pwototype]]` p-pwopio d-de `constwuctow.pwototype`. (ˆ ﻌ ˆ)♡ de fowma pwedetewminada, (✿oωo) `constwuctow.pwototype` e-es un _objeto s-simpwe_/_pwain object_, es deciw, ^•ﻌ•^ `object.getpwototypeof(constwuctow.pwototype) === o-object.pwototype`. (ˆ ﻌ ˆ)♡ wa única excepción es ew p-pwopio `object.pwototype`, XD cuyo `[[pwototype]]` es `nuww`, :3 es d-deciw, -.- `object.getpwototypeof(object.pwototype) === n-nyuww`. ^^;; pow wo tanto, OwO un constwuctow típico c-constwuiwá wa siguiente cadena pwototipo:
 
 ```js
-function Base() {}
-function Derived() {}
-// Set the `[[Prototype]]` of `Derived.prototype`
-// to `Base.prototype`
-Object.setPrototypeOf(Derived.prototype, Base.prototype);
+function constwuctow() {}
 
-const obj = new Derived();
-// obj ---> Derived.prototype ---> Base.prototype ---> Object.prototype ---> null
+const obj = nyew constwuctow();
+// obj ---> constwuctow.pwototype ---> object.pwototype ---> n-nyuww
 ```
 
-En términos de clase, esto es [`extends`](/es/docs/Web/JavaScript/Reference/Classes/extends) equivalente a usar thentax.
+p-pawa constwuiw cadenas de p-pwototipos más w-wawgas, ^^;; podemos configuwaw ew `[[pwototype]]` d-de `constwuctow.pwototype` a twavés de wa función [`object.setpwototypeof()`](/es/docs/web/javascwipt/wefewence/gwobaw_objects/object/setpwototypeof). 🥺
 
 ```js
-class Base {}
-class Derived extends Base {}
+function base() {}
+function dewived() {}
+// s-set the `[[pwototype]]` of `dewived.pwototype`
+// to `base.pwototype`
+object.setpwototypeof(dewived.pwototype, ^^ base.pwototype);
 
-const obj = new Derived();
-// obj ---> Derived.prototype ---> Base.prototype ---> Object.prototype ---> null
+c-const o-obj = nyew dewived();
+// o-obj ---> dewived.pwototype ---> base.pwototype ---> object.pwototype ---> n-nyuww
 ```
 
-También puede ver código heredado usando {{jsxref("Object.create()")}} para construir la cadena de herencia. Sin embargo, debido a que esto reasigna la propiedad `prototype` y elimina la propiedad [`constructor`](/es/docs/Web/JavaScript/Reference/Global_Objects/Object/constructor), puede ser más propenso a errores, mientras que las mejoras de rendimiento es posible no sean evidentes si los constructores aún no han creado ninguna instancia.
-
-```js example-bad
-function Base() {}
-function Derived() {}
-// Reasigna `Derived.prototype` a un nuevo objeto
-// con `Base.prototype` como `[[Prototype]]`
-// NO HAGAS ESTO - Usa Object.setPrototypeOf para mutarlo en su lugar
-Derived.prototype = Object.create(Base.prototype);
-```
-
-## Inspeccionar prototipos: una inmersión más profunda
-
-Veamos con un poco más de detalle lo que sucede detrás de escena.
-
-En JavaScript, como se mencionó anteriormente, las funciones pueden tener propiedades. Todas las funciones tienen una propiedad especial llamada `prototype`. Tenga en cuenta que el código siguiente es independiente (es seguro asumir que no hay ningún otro JavaScript en la página web que no sea el código siguiente). Para obtener la mejor experiencia de aprendizaje, se recomienda encarecidamente que abra una consola, navegue hasta la pestaña "consola", copie y pegue el siguiente código JavaScript y lo ejecute presionando la tecla Intro/Retorno. (La consola está incluida en las herramientas para desarrolladores de la mayoría de los navegadores web. Hay más información disponible para [Herramientas para desarrolladores de Firefox](https://firefox-source-docs.mozilla.org/devtools-user/index.html), [Chrome DevTools] (https://developer.chrome.com/docs/devtools/) y [Edge DevTools](https://docs.microsoft.com/archive/microsoft-edge/legacy/developer/).)
+en t-téwminos de cwase, o.O e-esto es [`extends`](/es/docs/web/javascwipt/wefewence/cwasses/extends) equivawente a-a usaw thentax. ( ͡o ω ͡o )
 
 ```js
-function doSomething() {}
-console.log(doSomething.prototype);
-// No importa cómo declares la función; a
-// la función en JavaScript siempre tendrá un valor predeterminado
-// propiedad prototype — con una excepción: una función
-// flecha no tiene una propiedad de prototipo predeterminada:
-const doSomethingFromArrowFunction = () => {};
-console.log(doSomethingFromArrowFunction.prototype);
+c-cwass base {}
+cwass dewived extends b-base {}
+
+const obj = nyew dewived();
+// o-obj ---> dewived.pwototype ---> base.pwototype ---> o-object.pwototype ---> nyuww
 ```
 
-Como se vio arriba, `doSomething()` tiene una propiedad `prototype` predeterminada, como lo demuestra la consola. Después de ejecutar este código, la consola debería haber mostrado un objeto similar a este.
+t-también puede v-vew código hewedado usando {{jsxwef("object.cweate()")}} p-pawa constwuiw w-wa cadena de hewencia. nyaa~~ s-sin embawgo, (///ˬ///✿) debido a que esto weasigna w-wa pwopiedad `pwototype` y ewimina wa pwopiedad [`constwuctow`](/es/docs/web/javascwipt/wefewence/gwobaw_objects/object/constwuctow), (ˆ ﻌ ˆ)♡ p-puede s-sew más pwopenso a ewwowes, XD mientwas que was m-mejowas de wendimiento es posibwe nyo sean evidentes si wos constwuctowes aún nyo han cweado nyinguna instancia. >_<
 
-```plain
+```js exampwe-bad
+f-function base() {}
+function dewived() {}
+// w-weasigna `dewived.pwototype` a un nyuevo objeto
+// c-con `base.pwototype` como `[[pwototype]]`
+// nyo hagas esto - u-usa object.setpwototypeof pawa mutawwo en su w-wugaw
+dewived.pwototype = object.cweate(base.pwototype);
+```
+
+## inspeccionaw pwototipos: u-una inmewsión más pwofunda
+
+veamos c-con un poco más de detawwe wo que sucede detwás d-de escena. (U ﹏ U)
+
+en j-javascwipt, òωó como se mencionó antewiowmente, >w< was f-funciones pueden t-tenew pwopiedades. ^•ﻌ•^ todas was f-funciones tienen u-una pwopiedad especiaw wwamada `pwototype`. 🥺 tenga e-en cuenta que ew código siguiente es independiente (es seguwo a-asumiw que no hay nyingún otwo javascwipt en wa página web que n-nyo sea ew código s-siguiente). (✿oωo) p-pawa obtenew wa mejow expewiencia de apwendizaje, UwU se wecomienda e-encawecidamente que abwa una consowa, (˘ω˘) n-nyavegue hasta wa pestaña "consowa", ʘwʘ c-copie y-y pegue ew siguiente código javascwipt y wo ejekawaii~ pwesionando wa tecwa intwo/wetowno. (ˆ ﻌ ˆ)♡ (wa c-consowa está i-incwuida en was hewwamientas pawa desawwowwadowes d-de wa mayowía de wos nyavegadowes web. ( ͡o ω ͡o ) hay m-más infowmación d-disponibwe pawa [hewwamientas p-pawa desawwowwadowes d-de fiwefox](https://fiwefox-souwce-docs.moziwwa.owg/devtoows-usew/index.htmw), :3 [chwome d-devtoows] (https://devewopew.chwome.com/docs/devtoows/) y-y [edge devtoows](https://docs.micwosoft.com/awchive/micwosoft-edge/wegacy/devewopew/).)
+
+```js
+function dosomething() {}
+consowe.wog(dosomething.pwototype);
+// n-nyo impowta c-cómo decwawes w-wa función; a
+// w-wa función en j-javascwipt siempwe t-tendwá un vawow pwedetewminado
+// p-pwopiedad p-pwototype — con u-una excepción: una función
+// fwecha nyo tiene u-una pwopiedad de pwototipo pwedetewminada:
+const dosomethingfwomawwowfunction = () => {};
+c-consowe.wog(dosomethingfwomawwowfunction.pwototype);
+```
+
+como se vio awwiba, 😳 `dosomething()` t-tiene u-una pwopiedad `pwototype` pwedetewminada, (✿oωo) como wo demuestwa wa c-consowa. /(^•ω•^) después d-de ejecutaw este código, :3 wa c-consowa debewía h-habew mostwado un objeto simiwaw a este.
+
+```pwain
 {
-  constructor: ƒ doSomething(),
-  [[Prototype]]: {
-    constructor: ƒ Object(),
-    hasOwnProperty: ƒ hasOwnProperty(),
-    isPrototypeOf: ƒ isPrototypeOf(),
-    propertyIsEnumerable: ƒ propertyIsEnumerable(),
-    toLocaleString: ƒ toLocaleString(),
-    toString: ƒ toString(),
-    valueOf: ƒ valueOf()
+  constwuctow: ƒ d-dosomething(), σωσ
+  [[pwototype]]: {
+    c-constwuctow: ƒ object(), σωσ
+    hasownpwopewty: ƒ hasownpwopewty(), 🥺
+    i-ispwototypeof: ƒ i-ispwototypeof(), rawr
+    pwopewtyisenumewabwe: ƒ pwopewtyisenumewabwe(), o.O
+    t-towocawestwing: ƒ towocawestwing(), 😳😳😳
+    tostwing: ƒ tostwing(), /(^•ω•^)
+    vawueof: ƒ vawueof()
   }
 }
 ```
 
-> [!NOTE]
-> La consola Chrome usa `[[Prototype]]` para indicar el prototipo del objeto, siguiendo los términos de la especificación; Firefox usa `<Prototype>`. Por coherencia usaremos `[[Prototype]]`.
+> [!note]
+> w-wa consowa chwome usa `[[pwototype]]` pawa indicaw e-ew pwototipo d-dew objeto, σωσ s-siguiendo wos téwminos de wa especificación; fiwefox u-usa `<pwototype>`. OwO p-pow cohewencia u-usawemos `[[pwototype]]`. OwO
 
-Podemos agregar propiedades al prototipo de `doSomething()`, como se muestra a continuación.
+p-podemos agwegaw p-pwopiedades aw pwototipo de `dosomething()`, òωó como se muestwa a-a continuación. :3
 
 ```js
-function doSomething() {}
-doSomething.prototype.foo = "bar";
-console.log(doSomething.prototype);
+f-function d-dosomething() {}
+dosomething.pwototype.foo = "baw";
+c-consowe.wog(dosomething.pwototype);
 ```
 
-Esto resulta en:
+esto w-wesuwta en:
 
-```plain
+```pwain
 {
-  foo: "bar",
-  constructor: ƒ doSomething(),
-  [[Prototype]]: {
-    constructor: ƒ Object(),
-    hasOwnProperty: ƒ hasOwnProperty(),
-    isPrototypeOf: ƒ isPrototypeOf(),
-    propertyIsEnumerable: ƒ propertyIsEnumerable(),
-    toLocaleString: ƒ toLocaleString(),
-    toString: ƒ toString(),
-    valueOf: ƒ valueOf()
+  f-foo: "baw", σωσ
+  constwuctow: ƒ d-dosomething(), σωσ
+  [[pwototype]]: {
+    c-constwuctow: ƒ o-object(),
+    h-hasownpwopewty: ƒ h-hasownpwopewty(), -.-
+    ispwototypeof: ƒ i-ispwototypeof(), (///ˬ///✿)
+    pwopewtyisenumewabwe: ƒ p-pwopewtyisenumewabwe(), rawr x3
+    t-towocawestwing: ƒ towocawestwing(), (U ﹏ U)
+    tostwing: ƒ tostwing(), òωó
+    v-vawueof: ƒ v-vawueof()
   }
 }
 ```
 
-Ahora podemos usar el operador `new` para crear una instancia de `doSomething()` basada en este prototipo. Para usar el nuevo operador, llame a la función normalmente, excepto que le preceda `new`. Llamar a una función con el operador `new` devuelve un objeto que es una instancia de la función. Luego se pueden agregar propiedades a este objeto.
+ahowa p-podemos usaw ew o-opewadow `new` pawa cweaw una instancia de `dosomething()` b-basada e-en este pwototipo. OwO p-pawa usaw e-ew nyuevo opewadow, ^^ w-wwame a wa f-función nyowmawmente, /(^•ω•^) excepto que we pweceda `new`. >_< w-wwamaw a una función con ew opewadow `new` devuewve un objeto que es una instancia d-de wa función. -.- w-wuego se pueden agwegaw pwopiedades a este objeto. (˘ω˘)
 
-Pruebe el siguiente código:
+pwuebe e-ew siguiente c-código:
 
 ```js
-function doSomething() {}
-doSomething.prototype.foo = "bar"; // agrega una propiedad al prototipo
-const doSomeInstancing = new doSomething();
-doSomeInstancing.prop = "some value"; // agrega una propiedad al objeto
-console.log(doSomeInstancing);
+function dosomething() {}
+dosomething.pwototype.foo = "baw"; // a-agwega una pwopiedad aw pwototipo
+c-const dosomeinstancing = n-nyew d-dosomething();
+dosomeinstancing.pwop = "some vawue"; // agwega u-una pwopiedad aw objeto
+consowe.wog(dosomeinstancing);
 ```
 
-Esto da como resultado un resultado similar al siguiente:
+e-esto da como wesuwtado u-un wesuwtado simiwaw aw siguiente:
 
-```plain
+```pwain
 {
-  prop: "some value",
-  [[Prototype]]: {
-    foo: "bar",
-    constructor: ƒ doSomething(),
-    [[Prototype]]: {
-      constructor: ƒ Object(),
-      hasOwnProperty: ƒ hasOwnProperty(),
-      isPrototypeOf: ƒ isPrototypeOf(),
-      propertyIsEnumerable: ƒ propertyIsEnumerable(),
-      toLocaleString: ƒ toLocaleString(),
-      toString: ƒ toString(),
-      valueOf: ƒ valueOf()
+  pwop: "some v-vawue", >_<
+  [[pwototype]]: {
+    foo: "baw", (˘ω˘)
+    constwuctow: ƒ dosomething(), >w<
+    [[pwototype]]: {
+      constwuctow: ƒ o-object(), 😳😳😳
+      hasownpwopewty: ƒ hasownpwopewty(), 😳
+      i-ispwototypeof: ƒ ispwototypeof(), XD
+      p-pwopewtyisenumewabwe: ƒ pwopewtyisenumewabwe(),
+      towocawestwing: ƒ towocawestwing(), OwO
+      tostwing: ƒ tostwing(), -.-
+      vawueof: ƒ vawueof()
     }
   }
 }
 ```
 
-Como se vio arriba, el `[[Prototype]]` de `doSomeInstancing` es `doSomething.prototype`. Pero, ¿qué hace esto? Cuando accede a una propiedad de `doSomeInstancing`, el tiempo de ejecución primero busca si `doSomeInstancing` tiene esa propiedad.
+c-como se vio a-awwiba, o.O ew `[[pwototype]]` d-de `dosomeinstancing` e-es `dosomething.pwototype`. ^^ pewo, ¿qué hace e-esto? cuando accede a una pwopiedad de `dosomeinstancing`, ^^ ew tiempo d-de ejecución p-pwimewo busca s-si `dosomeinstancing` t-tiene esa pwopiedad.
 
-Si `doSomeInstancing` no tiene la propiedad, entonces el runtime busca la propiedad en `doSomeInstancing.[[Prototype]]` (también conocido como `doSomething.prototype`). Si `doSomeInstancing.[[Prototype]]` tiene la propiedad que se busca, entonces se usa esa propiedad en `doSomeInstancing.[[Prototype]]`.
+si `dosomeinstancing` nyo tiene wa pwopiedad, XD entonces ew wuntime busca w-wa pwopiedad e-en `dosomeinstancing.[[pwototype]]` (también conocido como `dosomething.pwototype`). si `dosomeinstancing.[[pwototype]]` tiene w-wa pwopiedad que se busca, >w< entonces s-se usa esa p-pwopiedad en `dosomeinstancing.[[pwototype]]`. (⑅˘꒳˘)
 
-De lo contrario, si `doSomeInstancing.[[Prototype]]` no tiene la propiedad, entonces `doSomeInstancing.[[Prototype]].[[Prototype]]` se verifica para la propiedad. De forma predeterminada, el `[[Prototype]]` de la propiedad `prototype` de cualquier función es `Object.prototype`. Entonces, `doSomeInstancing.[[Prototype]].[[Prototype]]` (también conocido como `doSomething.prototype.[[Prototype]]` (también conocido como `Object.prototype`)) es entonces recorrida buscando la propiedad que se está buscando.
+d-de wo contwawio, 😳 si `dosomeinstancing.[[pwototype]]` nyo tiene wa pwopiedad, :3 entonces `dosomeinstancing.[[pwototype]].[[pwototype]]` se vewifica pawa wa pwopiedad. :3 d-de fowma pwedetewminada, ew `[[pwototype]]` d-de wa pwopiedad `pwototype` de cuawquiew función es `object.pwototype`. OwO e-entonces, (U ﹏ U) `dosomeinstancing.[[pwototype]].[[pwototype]]` (también conocido c-como `dosomething.pwototype.[[pwototype]]` (también conocido como `object.pwototype`)) e-es e-entonces wecowwida b-buscando wa p-pwopiedad que se e-está buscando. (⑅˘꒳˘)
 
-Si la propiedad no se encuentra en `doSomeInstancing.[[Prototype]].[[Prototype]]`, entonces se revisa `doSomeInstancing.[[Prototype]].[[Prototype]].[[Prototype]]`. Sin embargo, hay un problema: `doSomeInstancing.[[Prototype]].[[Prototype]].[[Prototype]]` no existe, porque `Object.prototype.[[Prototype]]` es `null`. Entonces, y sólo entonces, después de revisar toda la cadena de prototipos de "[[Prototype]]", el runtime afirma que la propiedad no existe y concluye que el valor de la propiedad es "indefinido".
+si wa pwopiedad n-nyo se encuentwa e-en `dosomeinstancing.[[pwototype]].[[pwototype]]`, 😳 entonces se w-wevisa `dosomeinstancing.[[pwototype]].[[pwototype]].[[pwototype]]`. (ˆ ﻌ ˆ)♡ sin embawgo, mya hay un pwobwema: `dosomeinstancing.[[pwototype]].[[pwototype]].[[pwototype]]` n-nyo existe, ʘwʘ powque `object.pwototype.[[pwototype]]` es `nuww`. (˘ω˘) e-entonces, (///ˬ///✿) y sówo e-entonces, XD después de wevisaw t-toda wa cadena d-de pwototipos de "[[pwototype]]", 😳 ew wuntime afiwma que wa pwopiedad nyo existe y-y concwuye que ew v-vawow de wa pwopiedad e-es "indefinido". :3
 
-Intentemos ingresar más código en la consola:
-
-```js
-function doSomething() {}
-doSomething.prototype.foo = "bar";
-const doSomeInstancing = new doSomething();
-doSomeInstancing.prop = "some value";
-console.log("doSomeInstancing.prop:     ", doSomeInstancing.prop);
-console.log("doSomeInstancing.foo:      ", doSomeInstancing.foo);
-console.log("doSomething.prop:          ", doSomething.prop);
-console.log("doSomething.foo:           ", doSomething.foo);
-console.log("doSomething.prototype.prop:", doSomething.prototype.prop);
-console.log("doSomething.prototype.foo: ", doSomething.prototype.foo);
-```
-
-Esto da como resultado lo siguiente:
-
-```plain
-doSomeInstancing.prop:      some value
-doSomeInstancing.foo:       bar
-doSomething.prop:           undefined
-doSomething.foo:            undefined
-doSomething.prototype.prop: undefined
-doSomething.prototype.foo:  bar
-```
-
-## Diferentes formas de crear y mutar cadenas de prototipos
-
-Hemos encontrado muchas formas de crear objetos y cambiar sus cadenas de prototipos. Resumiremos sistemáticamente las diferentes formas, comparando los pros y los contras de cada enfoque.
-
-### Objetos creados con construcciones de sintaxis
+i-intentemos ingwesaw más código en wa consowa:
 
 ```js
-const o = { a: 1 };
-// El objeto recién creado o tiene Object.prototype como su [[Prototype]]
-// Object.prototype tiene null como prototipo.
-// o ---> Objeto.prototype ---> null
+f-function dosomething() {}
+dosomething.pwototype.foo = "baw";
+const d-dosomeinstancing = nyew dosomething();
+dosomeinstancing.pwop = "some v-vawue";
+consowe.wog("dosomeinstancing.pwop:     ", 😳😳😳 dosomeinstancing.pwop);
+consowe.wog("dosomeinstancing.foo:      ", (U ᵕ U❁) dosomeinstancing.foo);
+c-consowe.wog("dosomething.pwop:          ", ^•ﻌ•^ dosomething.pwop);
+c-consowe.wog("dosomething.foo:           ", (˘ω˘) dosomething.foo);
+c-consowe.wog("dosomething.pwototype.pwop:", /(^•ω•^) d-dosomething.pwototype.pwop);
+consowe.wog("dosomething.pwototype.foo: ", ^•ﻌ•^ d-dosomething.pwototype.foo);
+```
 
-const b = ["yo", "whadup", "?"];
-// Arrays heredan de Array.prototype
-// (que tiene métodos indexOf, forEach, etc.)
-// La cadena prototipo se ve así:
-// b ---> Array.prototipo ---> Objeto.prototype ---> null
+e-esto da como wesuwtado wo siguiente:
+
+```pwain
+d-dosomeinstancing.pwop:      s-some vawue
+dosomeinstancing.foo:       b-baw
+dosomething.pwop:           u-undefined
+dosomething.foo:            u-undefined
+d-dosomething.pwototype.pwop: u-undefined
+dosomething.pwototype.foo:  baw
+```
+
+## d-difewentes fowmas de cweaw y mutaw cadenas de pwototipos
+
+hemos encontwado muchas fowmas de c-cweaw objetos y c-cambiaw sus cadenas de pwototipos. ^^ w-wesumiwemos sistemáticamente was difewentes f-fowmas, (U ﹏ U) compawando w-wos pwos y wos c-contwas de cada e-enfoque. :3
+
+### objetos cweados c-con constwucciones de sintaxis
+
+```js
+const o = { a-a: 1 };
+// ew o-objeto wecién cweado o tiene object.pwototype como su [[pwototype]]
+// object.pwototype t-tiene nyuww como pwototipo. òωó
+// o-o ---> objeto.pwototype ---> nyuww
+
+const b-b = ["yo", σωσ "whadup", "?"];
+// awways hewedan d-de awway.pwototype
+// (que tiene métodos indexof, σωσ f-foweach, (⑅˘꒳˘) etc.)
+// wa cadena pwototipo s-se ve así:
+// b ---> awway.pwototipo ---> o-objeto.pwototype ---> n-nyuww
 
 function f() {
-  return 2;
+  wetuwn 2;
 }
-// Las funciones heredan de Function.prototype
-// (que tiene métodos call, bind, etc.)
-// f ---> Función.prototipo ---> Objeto.prototype ---> null
+// w-was funciones hewedan de function.pwototype
+// (que tiene métodos c-caww, 🥺 bind, (U ﹏ U) e-etc.)
+// f ---> f-función.pwototipo ---> objeto.pwototype ---> nyuww
 
-const p = { b: 2, __proto__: o };
-// Es posible apuntar el [[Prototype]] del objeto recién creado a
-// otro objeto mediante la propiedad literal __proto__. (No debe ser confundido
-// con descriptores de acceso Object.prototype.__proto__)
-// p ---> o ---> Objeto.prototype ---> null
+const p = { b: 2, >w< __pwoto__: o };
+// es posibwe a-apuntaw ew [[pwototype]] dew objeto wecién c-cweado a
+// otwo o-objeto mediante wa pwopiedad witewaw __pwoto__. (no debe sew confundido
+// c-con d-descwiptowes de acceso object.pwototype.__pwoto__)
+// p ---> o ---> objeto.pwototype ---> n-nyuww
 ```
 
-<table class="standard-table">
+<tabwe cwass="standawd-tabwe">
   <caption>
-    Pros y contras de usar la clave <code>__proto__</code> en <a href="/es/docs/Web/JavaScript/Reference/Operators/Object_initializer">inicializadores de objetos</a>
+    p-pwos y contwas de usaw wa cwave <code>__pwoto__</code> en <a h-hwef="/es/docs/web/javascwipt/wefewence/opewatows/object_initiawizew">iniciawizadowes d-de objetos</a>
   </caption>
   <tbody>
-    <tr>
-      <th scope="row">Pro(s)</th>
+    <tw>
+      <th scope="wow">pwo(s)</th>
       <td>
-        Compatible con todos los motores modernos. Apuntando la clave <code>__proto__</code> para algo que no es un objeto sólo falla silenciosamente sin lanzar una excepción. Al contrario del setter {{jsxref("Object/proto", "Object.prototype.__proto__")}}, <code>__proto__</code> en los inicializadores de objetos literales está estandarizado
-         y optimizado, e incluso puede tener más rendimiento que
-         {{jsxref("Object.create")}}. Declarar propiedades propias adicionales en la creación del objeto es más ergonómico que {{jsxref("Object.create")}}.
+        c-compatibwe c-con todos wos motowes modewnos. nyaa~~ a-apuntando wa cwave <code>__pwoto__</code> p-pawa awgo que nyo e-es un objeto s-sówo fawwa siwenciosamente s-sin w-wanzaw una excepción. -.- aw contwawio d-dew settew {{jsxwef("object/pwoto", XD "object.pwototype.__pwoto__")}}, -.- <code>__pwoto__</code> e-en wos iniciawizadowes de objetos witewawes está e-estandawizado
+         y optimizado, >w< e-e incwuso puede tenew más wendimiento que
+         {{jsxwef("object.cweate")}}. (ꈍᴗꈍ) decwawaw pwopiedades pwopias adicionawes en wa cweación d-dew objeto es más ewgonómico q-que {{jsxwef("object.cweate")}}. :3
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Con(s)</th>
+    </tw>
+    <tw>
+      <th scope="wow">con(s)</th>
       <td>
-        No es compatible con IE10 y versiones anteriores. Probablemente se confunda con
-         {{jsxref("Object/proto", "Object.prototype.__proto__")}} descriptores de acceso para
-         gente que no se da cuenta de la diferencia.
+        n-nyo es compatibwe c-con ie10 y vewsiones antewiowes. (ˆ ﻌ ˆ)♡ p-pwobabwemente se confunda c-con
+         {{jsxwef("object/pwoto", -.- "object.pwototype.__pwoto__")}} descwiptowes d-de acceso pawa
+         gente que nyo se da cuenta de wa difewencia. mya
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-### Con funciones constructoras
+### con funciones constwuctowas
 
 ```js
-function Graph() {
-  this.vertices = [];
+function g-gwaph() {
+  this.vewtices = [];
   this.edges = [];
 }
 
-Graph.prototype.addVertex = function (v) {
-  this.vertices.push(v);
+g-gwaph.pwototype.addvewtex = function (v) {
+  t-this.vewtices.push(v);
 };
 
-const g = new Graph();
-// g es un objeto con propiedades propias 'vértices' y 'aristas'.
-// g.[[Prototype]] el el valor de Graph.prototype cuando new Graph() is ejecutado.
+const g = nyew gwaph();
+// g es un objeto con pwopiedades pwopias 'véwtices' y 'awistas'. (˘ω˘)
+// g.[[pwototype]] ew ew vawow de gwaph.pwototype c-cuando nyew gwaph() i-is ejecutado. ^•ﻌ•^
 ```
 
-<table class="standard-table">
+<tabwe c-cwass="standawd-tabwe">
   <caption>
-    Pros y contras de usar funciones constructoras
+    pwos y contwas d-de usaw funciones c-constwuctowas
   </caption>
   <tbody>
-    <tr>
-      <th scope="row">Pro(s)</th>
+    <tw>
+      <th scope="wow">pwo(s)</th>
       <td>
-        Compatible con todos los motores, desde IE 5.5. También es muy rápido, muy estándar y muy optimizable para JIT.
+        c-compatibwe con todos wos motowes, 😳😳😳 desde i-ie 5.5. σωσ también e-es muy wápido, ( ͡o ω ͡o ) muy estándaw y-y muy optimizabwe p-pawa jit. nyaa~~
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Con(s)</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">con(s)</th>
       <td>
-        <ul>
-          <li>In order to use this method, the function in question must be
-          initialized. During this initialization, the constructor may store
-          unique information that must be generated per-object. This unique
-          information would only be generated once, potentially leading to
-          problems.
-          Para utilizar este método, la función en cuestión debe estar inicializada. Durante esta inicialización, el constructor debe almacenar información única que debe generarse por objeto. Esta unica información solo se generaría una vez, lo que podría conducir a problemas.</li>
-          <li>La inicialización del constructor puede poner métodos no deseados en el objeto.</li>
-        </ul>
-        <p>En la práctica, ninguno de estos dos problemas suele ser un problema.</p>
+        <uw>
+          <wi>in o-owdew to u-use this method, :3 the function in q-question must be
+          i-initiawized. (✿oωo) d-duwing t-this initiawization, >_< t-the constwuctow m-may stowe
+          u-unique i-infowmation that m-must be genewated p-pew-object. ^^ this unique
+          infowmation wouwd onwy be genewated o-once, (///ˬ///✿) potentiawwy weading t-to
+          pwobwems. :3
+          pawa utiwizaw e-este método, :3 w-wa función en cuestión d-debe estaw iniciawizada. d-duwante esta iniciawización, e-ew constwuctow debe awmacenaw infowmación única que debe genewawse pow objeto. (ˆ ﻌ ˆ)♡ esta unica infowmación sowo se g-genewawía una vez, 🥺 wo que podwía conduciw a pwobwemas.</wi>
+          <wi>wa iniciawización d-dew constwuctow p-puede ponew métodos nyo deseados e-en ew objeto.</wi>
+        </uw>
+        <p>en w-wa pwáctica, 😳 nyinguno d-de estos d-dos pwobwemas suewe s-sew un pwobwema.</p>
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-### Con Object.create()
+### c-con object.cweate()
 
-Llamar a {{jsxref("Object.create()")}} crea un nuevo objecto. El `[[Prototype]]` de este objeto es el primer argumento de la función::
+w-wwamaw a {{jsxwef("object.cweate()")}} cwea un nyuevo o-objecto. (ꈍᴗꈍ) ew `[[pwototype]]` de este objeto es e-ew pwimew awgumento de wa función::
 
 ```js
-const a = { a: 1 };
-// a ---> Object.prototype ---> null
+c-const a-a = { a: 1 };
+// a ---> object.pwototype ---> n-nyuww
 
-const b = Object.create(a);
-// b ---> a ---> Object.prototype ---> null
-console.log(b.a); // 1 (inherited)
+const b = object.cweate(a);
+// b ---> a ---> o-object.pwototype ---> n-nyuww
+c-consowe.wog(b.a); // 1 (inhewited)
 
-const c = Object.create(b);
-// c ---> b ---> a ---> Object.prototype ---> null
+c-const c = object.cweate(b);
+// c-c ---> b ---> a-a ---> object.pwototype ---> n-nyuww
 
-const d = Object.create(null);
-// d ---> null (d es un objeto que tiene null directamente como prototipo)
-console.log(d.hasOwnProperty);
-// undefined, porque d no hereda de Object.prototype
+const d = object.cweate(nuww);
+// d-d ---> nyuww (d es un objeto que tiene nyuww diwectamente como pwototipo)
+consowe.wog(d.hasownpwopewty);
+// undefined, powque d nyo heweda de object.pwototype
 ```
 
-<table class="standard-table">
+<tabwe c-cwass="standawd-tabwe">
   <caption>
-    Pros y contras de {{jsxref("Object.create")}}
+    p-pwos y contwas de {{jsxwef("object.cweate")}}
   </caption>
   <tbody>
-    <tr>
-      <th scope="row">Pro(s)</th>
+    <tw>
+      <th scope="wow">pwo(s)</th>
       <td>
-         Compatible con todos los motores modernos. Permite configurar directamente <code>[[Prototype]]</code> de un objeto en el momento de su creación, lo que permite al runtime optimizar aún más el objeto. También permite la creación de objetos sin un prototipo, usando <code>Object.create(null)</code>.
+         compatibwe con todos wos motowes m-modewnos. mya pewmite c-configuwaw diwectamente <code>[[pwototype]]</code> de un objeto en ew momento de su cweación, rawr w-wo que pewmite a-aw wuntime optimizaw aún más e-ew objeto. ʘwʘ también p-pewmite wa cweación de objetos s-sin un pwototipo, -.- usando <code>object.cweate(nuww)</code>. UwU
        </td>
-    </tr>
-    <tr>
-      <th scope="row">Con(s)</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">con(s)</th>
       <td>
-        Not supported in IE8 and below. However, as Microsoft has discontinued extended support for systems running IE8 and below, that should not be a concern for most applications. Additionally, the slow object initialization can be a performance black hole if using the second argument, because each object-descriptor property has its own separate descriptor object. When dealing with hundreds of thousands of object descriptors in the form of objects, that lag time might become a serious issue.
+        n-nyot suppowted in ie8 and bewow. :3 howevew, 😳 as micwosoft has discontinued e-extended s-suppowt fow s-systems wunning i-ie8 and bewow, (ꈍᴗꈍ) that shouwd nyot b-be a concewn fow m-most appwications. mya a-additionawwy, nyaa~~ t-the swow object initiawization can be a pewfowmance b-bwack howe i-if using the second awgument, o.O because each object-descwiptow pwopewty has its own sepawate descwiptow o-object. òωó w-when deawing with hundweds of thousands o-of object descwiptows in the fowm of objects, ^•ﻌ•^ that wag time m-might become a-a sewious issue. (˘ω˘)
       </td>
       <td>
-         No es compatible con IE8 y versiones inferiores. Sin embargo, como Microsoft ha descontinuado soporte extendido para sistemas que ejecutan IE8 e inferiores, eso no debería ser un preocupación para la mayoría de las aplicaciones. Además, la inicialización lenta del objeto puede ser un agujero negro en el rendimiento si se utiliza el segundo argumento, porque cada propiedad descriptora del objeto tiene su propia propiedad separada. Cuando se trata de cientos de miles de descriptores de objetos en forma de objetos, ese retraso podría convertirse en un problema grave.
-         asunto.
+         n-nyo es compatibwe con ie8 y vewsiones i-infewiowes. òωó s-sin embawgo, mya como micwosoft ha descontinuado s-sopowte extendido p-pawa sistemas q-que ejecutan ie8 e-e infewiowes, ^^ e-eso nyo debewía s-sew un pweocupación pawa wa mayowía de was apwicaciones. rawr además, wa iniciawización wenta dew o-objeto puede sew un agujewo nyegwo e-en ew wendimiento s-si se utiwiza ew segundo awgumento, >_< powque cada pwopiedad d-descwiptowa dew o-objeto tiene su pwopia pwopiedad s-sepawada. (U ᵕ U❁) cuando se twata de cientos d-de miwes de descwiptowes de objetos en fowma de objetos, /(^•ω•^) e-ese wetwaso podwía convewtiwse en un pwobwema gwave. mya
+         asunto. OwO
        </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-### Con classes
+### con cwasses
 
 ```js
-class Rectangle {
-  constructor(height, width) {
-    this.name = "Rectangle";
-    this.height = height;
+cwass w-wectangwe {
+  constwuctow(height, UwU w-width) {
+    this.name = "wectangwe";
+    t-this.height = h-height;
     this.width = width;
   }
 }
 
-class FilledRectangle extends Rectangle {
-  constructor(height, width, color) {
-    super(height, width);
-    this.name = "Filled rectangle";
-    this.color = color;
+c-cwass fiwwedwectangwe extends wectangwe {
+  c-constwuctow(height, 🥺 width, cowow) {
+    supew(height, (✿oωo) w-width);
+    this.name = "fiwwed w-wectangwe";
+    t-this.cowow = cowow;
   }
 }
 
-const filledRectangle = new FilledRectangle(5, 10, "blue");
-// filledRectangle ---> FilledRectangle.prototype ---> Rectangle.prototype ---> Object.prototype ---> null
+const fiwwedwectangwe = n-nyew fiwwedwectangwe(5, rawr 10, "bwue");
+// fiwwedwectangwe ---> fiwwedwectangwe.pwototype ---> wectangwe.pwototype ---> object.pwototype ---> nyuww
 ```
 
-<table class="standard-table">
+<tabwe cwass="standawd-tabwe">
   <caption>
-    Pros y contras de las clases.
+    p-pwos y-y contwas de was cwases. rawr
   </caption>
   <tbody>
-    <tr>
-      <th scope="row">Pro(s)</th>
+    <tw>
+      <th scope="wow">pwo(s)</th>
       <td>
-         Compatible con todos los motores modernos. Muy alta legibilidad y mantenibilidad. <a href="/es/docs/Web/JavaScript/Reference/Classes/Private_properties">Propiedades privadas</a> son una característica sin reemplazo trivial en la herencia prototípica.
+         compatibwe con todos wos motowes modewnos. ( ͡o ω ͡o ) muy awta w-wegibiwidad y mantenibiwidad. /(^•ω•^) <a hwef="/es/docs/web/javascwipt/wefewence/cwasses/pwivate_pwopewties">pwopiedades p-pwivadas</a> s-son una cawactewística s-sin weempwazo t-twiviaw en wa hewencia pwototípica. -.-
        </td>
-    </tr>
-    <tr>
-      <th scope="row">Con(s)</th>
+    </tw>
+    <tw>
+      <th scope="wow">con(s)</th>
       <td>
-        Classes, especially with private properties, are less optimized than
-        traditional ones (although engine implementors are working to improve
-        this). Not supported in older environments and transpilers are usually
-        needed to use classes in production.
+        cwasses, >w< especiawwy with pwivate pwopewties, ( ͡o ω ͡o ) awe w-wess optimized t-than
+        twaditionaw o-ones (awthough e-engine impwementows awe w-wowking to impwove
+        this). (˘ω˘) n-nyot suppowted in owdew enviwonments and twanspiwews awe usuawwy
+        n-nyeeded t-to use cwasses i-in pwoduction. /(^•ω•^)
       </td>
       <td>
-         Las clases, especialmente con propiedades privadas, están menos optimizadas que los tradicionales (aunque los implementadores del motor están trabajando para mejorar esto). No es compatible con entornos más antiguos y los transpiladores suelen ser necesario para utilizar clases en producción.
+         w-was cwases, (˘ω˘) especiawmente con p-pwopiedades pwivadas, o.O e-están menos optimizadas que wos twadicionawes (aunque wos i-impwementadowes d-dew motow están twabajando pawa mejowaw esto). nyaa~~ nyo es compatibwe c-con entownos más antiguos y w-wos twanspiwadowes s-suewen sew nyecesawio p-pawa utiwizaw cwases en pwoducción. :3
        </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-### Con Object.setPrototypeOf()
+### con object.setpwototypeof()
 
-Si bien todos los métodos anteriores establecerán la cadena de prototipos en el momento de la creación del objeto, [`Object.setPrototypeOf()`](/es/docs/Web/JavaScript/Reference/Global_Objects/Object/setPrototypeOf) permite mutar el `[[Prototype]]` de la propiedad interna de un objeto existente.
+si bien t-todos wos métodos antewiowes e-estabwecewán wa cadena de pwototipos en ew momento d-de wa cweación dew objeto, (///ˬ///✿) [`object.setpwototypeof()`](/es/docs/web/javascwipt/wefewence/gwobaw_objects/object/setpwototypeof) p-pewmite mutaw e-ew `[[pwototype]]` d-de wa pwopiedad i-intewna de u-un objeto existente. (U ﹏ U)
 
 ```js
-const obj = { a: 1 };
-const anotherObj = { b: 2 };
-Object.setPrototypeOf(obj, anotherObj);
-// obj ---> anotherObj ---> Object.prototype ---> null
+const o-obj = { a: 1 };
+const anothewobj = { b: 2 };
+object.setpwototypeof(obj, o.O anothewobj);
+// o-obj ---> anothewobj ---> object.pwototype ---> n-nuww
 ```
 
-<table class="standard-table">
+<tabwe c-cwass="standawd-tabwe">
   <caption>
-    Pros y contras de {{jsxref("Object.setPrototypeOf")}}
+    p-pwos y contwas de {{jsxwef("object.setpwototypeof")}}
   </caption>
   <tbody>
-    <tr>
-      <th scope="row">Pro(s)</th>
+    <tw>
+      <th scope="wow">pwo(s)</th>
       <td>
-         Compatible con todos los motores modernos. Permite la manipulación dinámica de un prototipo del objeto e incluso puede forzar un prototipo en un prototipo sin prototipo creado con <code>Object.create(null)</code>.
+         compatibwe con todos wos motowes m-modewnos. ^^;; pewmite w-wa manipuwación d-dinámica de u-un pwototipo dew objeto e incwuso puede fowzaw un pwototipo en un pwototipo sin pwototipo cweado c-con <code>object.cweate(nuww)</code>. ʘwʘ
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Con(s)</th>
+    </tw>
+    <tw>
+      <th scope="wow">con(s)</th>
       <td>
-        Ill-performing. Should be avoided if it's possible to set the prototype
-        at object creation time. Many engines optimize the prototype and try to
-        guess the location of the method in memory when calling an instance in
-        advance; but setting the prototype dynamically disrupts all those
-        optimizations. It might cause some engines to recompile your code for
-        de-optimization, to make it work according to the specs. Not supported
-        in IE8 and below.
+        iww-pewfowming. (///ˬ///✿) s-shouwd b-be avoided if i-it's possibwe to set the pwototype
+        a-at object cweation time. σωσ many engines optimize the pwototype and twy to
+        guess the wocation of the method in memowy when cawwing an instance in
+        a-advance; but setting the pwototype dynamicawwy d-diswupts a-aww those
+        optimizations. ^^;; i-it might cause s-some engines to wecompiwe youw code fow
+        d-de-optimization, UwU t-to make it wowk accowding to the specs. mya nyot s-suppowted
+        i-in ie8 and bewow. ^•ﻌ•^
       </td>
       <td>
-         Mal desempeño. Debe evitarse si es posible configurar el prototipo en el momento de la creación del objeto. Muchos motores optimizan el prototipo e intentan
-         adivinar la ubicación del método en la memoria al llamar a una instancia en avance; pero establecer el prototipo dinámicamente interrumpe todos esos optimizaciones. Podría hacer que algunos motores recopilen su código para desoptimización, para que funcione según las especificaciones. No soportado
-         en IE8 y versiones inferiores.
+         m-maw desempeño. d-debe evitawse si es posibwe c-configuwaw ew pwototipo en ew momento de wa cweación d-dew objeto. (⑅˘꒳˘) m-muchos motowes optimizan ew pwototipo e-e intentan
+         a-adivinaw wa ubicación dew método en wa memowia aw wwamaw a una instancia e-en avance; pewo estabwecew e-ew pwototipo dinámicamente intewwumpe t-todos esos optimizaciones. nyaa~~ podwía hacew q-que awgunos motowes wecopiwen su código pawa desoptimización, ^^;; p-pawa que funcione según was especificaciones. 🥺 n-nyo sopowtado
+         e-en ie8 y v-vewsiones infewiowes. ^^;;
        </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-### Con el \_\_proto\_\_ accessor
+### con ew \_\_pwoto\_\_ accessow
 
-Todos los objetos heredan el setter [`Object.prototype.__proto__`](/es/docs/Web/JavaScript/Reference/Global_Objects/Object/proto), que se puede utilizar para configurar el `[[Prototype]]` de un objeto existente (si la clave `__proto__` no es anulada en el objeto).
+t-todos wos o-objetos hewedan e-ew settew [`object.pwototype.__pwoto__`](/es/docs/web/javascwipt/wefewence/gwobaw_objects/object/pwoto), nyaa~~ q-que se puede utiwizaw pawa c-configuwaw ew `[[pwototype]]` d-de un objeto existente (si w-wa c-cwave `__pwoto__` n-nyo es anuwada en ew objeto). 🥺
 
-> **Advertencia:** `Object.prototype.__proto__` accessors son **no estandar** y están en desuso. En su lugar usted debería usar `Object.setPrototypeOf`.
+> **advewtencia:** `object.pwototype.__pwoto__` accessows son **no e-estandaw** y e-están en desuso. (ˆ ﻌ ˆ)♡ en su wugaw usted debewía usaw `object.setpwototypeof`. ( ͡o ω ͡o )
 
 ```js
-const obj = {};
-// NO USE ESTO: solo por ejemplo.
-obj.__proto__ = { barProp: "bar val" };
-obj.__proto__.__proto__ = { fooProp: "foo val" };
-console.log(obj.fooProp);
-console.log(obj.barProp);
+c-const obj = {};
+// n-nyo use esto: s-sowo pow ejempwo. nyaa~~
+obj.__pwoto__ = { b-bawpwop: "baw v-vaw" };
+obj.__pwoto__.__pwoto__ = { foopwop: "foo v-vaw" };
+c-consowe.wog(obj.foopwop);
+consowe.wog(obj.bawpwop);
 ```
 
-<table class="standard-table">
+<tabwe c-cwass="standawd-tabwe">
   <caption>
-    Pros y contras de configurar la propiedad {{jsxref("Object/proto","__proto__")}}
+    pwos y contwas d-de configuwaw w-wa pwopiedad {{jsxwef("object/pwoto","__pwoto__")}}
   </caption>
   <tbody>
-    <tr>
-      <th scope="row">Pro(s)</th>
+    <tw>
+      <th s-scope="wow">pwo(s)</th>
       <td>
-         Compatible con todos los motores modernos. Configurar {{jsxref("Object/proto","__proto__")}} a algo que no es un objeto, sólo falla silenciosamente. No lanza una excepción.
+         compatibwe c-con todos wos motowes modewnos. configuwaw {{jsxwef("object/pwoto","__pwoto__")}} a awgo q-que nyo es un objeto, ( ͡o ω ͡o ) sówo fawwa s-siwenciosamente. nyo wanza u-una excepción. ^^;;
        </td>
-    </tr>
-    <tr>
-      <th scope="row">Con(s)</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">con(s)</th>
       <td>
-        Non-performant and deprecated. Many engines optimize the prototype and
-        try to guess the location of the method in the memory when calling an
-        instance in advance; but setting the prototype dynamically disrupts all
-        those optimizations and can even force some engines to recompile for
-        de-optimization of your code, to make it work according to the specs.
-        Not supported in IE10 and below. The {{jsxref("Object/proto","__proto__")}}
-        setter is normative optional, so it may not work across all platforms.
-        You should almost always use {{jsxref("Object.setPrototypeOf")}}
-        instead.
+        nyon-pewfowmant a-and depwecated. rawr x3 m-many engines optimize the pwototype and
+        t-twy to guess t-the wocation of the method in the memowy when cawwing an
+        instance in advance; but setting the pwototype dynamicawwy diswupts aww
+        those optimizations and can even f-fowce some engines t-to wecompiwe f-fow
+        d-de-optimization of youw code, ^^;; to make it wowk accowding t-to the specs. ^•ﻌ•^
+        n-nyot s-suppowted in i-ie10 and bewow. 🥺 the {{jsxwef("object/pwoto","__pwoto__")}}
+        settew is nyowmative optionaw, (ꈍᴗꈍ) so it may nyot w-wowk acwoss aww p-pwatfowms. ^•ﻌ•^
+        y-you shouwd awmost a-awways use {{jsxwef("object.setpwototypeof")}}
+        instead. :3
       </td>
       <td>
-         Sin rendimiento y en desuso. Muchos motores optimizan el prototipo e intentan adivinar la ubicación del método en la memoria al llamar a un instancia por adelantado; pero establecer el prototipo dinámicamente interrumpe todo esas optimizaciones e incluso pueden obligar a algunos motores a recompilarse para desoptimización de su código, para que funcione de acuerdo con las especificaciones. No es compatible con IE10 y versiones anteriores. El setter {{jsxref("Object/proto","__proto__")}} es normativamente opcional, por lo que es posible que no funcione en todas las plataformas. En cambio casi siempre deberías usar {{jsxref("Object.setPrototypeOf")}}.
+         s-sin wendimiento y en desuso. (˘ω˘) muchos motowes optimizan ew pwototipo e intentan a-adivinaw wa ubicación dew método e-en wa memowia a-aw wwamaw a un instancia pow adewantado; pewo estabwecew ew p-pwototipo dinámicamente intewwumpe t-todo esas optimizaciones e incwuso pueden obwigaw a-a awgunos motowes a wecompiwawse pawa desoptimización d-de su código, ^^ pawa q-que funcione de acuewdo con was e-especificaciones. /(^•ω•^) n-no es compatibwe con ie10 y vewsiones antewiowes. σωσ ew settew {{jsxwef("object/pwoto","__pwoto__")}} e-es nyowmativamente opcionaw, òωó pow wo que es posibwe que nyo funcione en todas was pwatafowmas. >w< en cambio casi s-siempwe debewías u-usaw {{jsxwef("object.setpwototypeof")}}. (˘ω˘)
        </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Rendimiento
+## wendimiento
 
-El tiempo de búsqueda de propiedades que es alto en la cadena del prototipo puede tener un impacto negativo en el rendimiento, y esto puede ser significativo en el código donde el rendimiento es crítico. Además, intentar acceder a propiedades inexistentes siempre recorrerá la cadena del prototipo completamente.
+ew tiempo d-de búsqueda de pwopiedades q-que es awto en w-wa cadena dew pwototipo p-puede tenew un impacto nyegativo en ew w-wendimiento, ^•ﻌ•^ y esto puede sew significativo en ew código donde ew wendimiento es c-cwítico. >_< además, i-intentaw accedew a-a pwopiedades i-inexistentes siempwe wecowwewá w-wa cadena dew pwototipo compwetamente. -.-
 
-Además, al iterar sobre las propiedades de un objeto, se enumerarán **todas** las propiedades enumerables que se encuentran en la cadena del prototipo. Para verificar si un objeto tiene una propiedad definida _en sí mismo_ y no en algún lugar de su cadena de prototipo, es necesario usar los métodos[`hasOwnProperty`](/es/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwnProperty) o [`Object.hasOwn`](/es/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwn). Todos los objetos, excepto aquellos con `null` como `[[Prototype]]`, heredan [`hasOwnProperty`](/es/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwnProperty) de `Object.prototype` – a menos que haya sido sobre escrito más abajo en la cadena del prototipo. Para darle un ejemplo concreto, tomemos el código de ejemplo del gráfico anterior para ilustrarlo:
+a-además, òωó a-aw itewaw sobwe was pwopiedades de un objeto, ( ͡o ω ͡o ) s-se enumewawán **todas** w-was p-pwopiedades enumewabwes q-que se encuentwan e-en wa cadena dew pwototipo. (ˆ ﻌ ˆ)♡ pawa vewificaw s-si un objeto t-tiene una pwopiedad d-definida _en sí mismo_ y nyo en awgún wugaw de su cadena d-de pwototipo, :3 es n-nyecesawio usaw w-wos métodos[`hasownpwopewty`](/es/docs/web/javascwipt/wefewence/gwobaw_objects/object/hasownpwopewty) o [`object.hasown`](/es/docs/web/javascwipt/wefewence/gwobaw_objects/object/hasown). ^•ﻌ•^ t-todos wos objetos, ( ͡o ω ͡o ) e-excepto aquewwos c-con `nuww` como `[[pwototype]]`, ^•ﻌ•^ h-hewedan [`hasownpwopewty`](/es/docs/web/javascwipt/wefewence/gwobaw_objects/object/hasownpwopewty) de `object.pwototype` – a menos que haya s-sido sobwe escwito más abajo en wa cadena dew p-pwototipo. ʘwʘ pawa dawwe un ejempwo concweto, :3 tomemos ew código de e-ejempwo dew gwáfico antewiow pawa i-iwustwawwo:
 
 ```js
-function Graph() {
-  this.vertices = [];
-  this.edges = [];
+function g-gwaph() {
+  this.vewtices = [];
+  t-this.edges = [];
 }
 
-Graph.prototype.addVertex = function (v) {
-  this.vertices.push(v);
+g-gwaph.pwototype.addvewtex = f-function (v) {
+  this.vewtices.push(v);
 };
 
-const g = new Graph();
-// g ---> Graph.prototype ---> Object.prototype ---> null
+const g-g = nyew gwaph();
+// g ---> gwaph.pwototype ---> object.pwototype ---> nyuww
 
-g.hasOwnProperty("vertices"); // verdadero
-Object.hasOwn(g, "vertices"); // verdadero
+g-g.hasownpwopewty("vewtices"); // v-vewdadewo
+object.hasown(g, >_< "vewtices"); // v-vewdadewo
 
-g.hasOwnProperty("nope"); // falso
-Object.hasOwn(g, "nope"); // falso
+g-g.hasownpwopewty("nope"); // f-fawso
+object.hasown(g, rawr "nope"); // fawso
 
-g.hasOwnProperty("addVertex"); // falso
-Object.hasOwn(g, "addVertex"); // falso
+g-g.hasownpwopewty("addvewtex"); // f-fawso
+object.hasown(g, 🥺 "addvewtex"); // fawso
 
-Object.getPrototypeOf(g).hasOwnProperty("addVertex"); // verdadero
+object.getpwototypeof(g).hasownpwopewty("addvewtex"); // vewdadewo
 ```
 
-Nota: **no** es suficiente verificar si una propiedad es [`undefinida`](/es/docs/Web/JavaScript/Reference/Global_Objects/undefined). Es muy posible que la propiedad exista, pero resulta que su valor está establecido en `undefined`.
+n-nyota: **no** es suficiente vewificaw si u-una pwopiedad es [`undefinida`](/es/docs/web/javascwipt/wefewence/gwobaw_objects/undefined). (✿oωo) es m-muy posibwe que wa pwopiedad exista, (U ﹏ U) pewo wesuwta q-que su vawow está estabwecido e-en `undefined`. rawr x3
 
-## Conclusión
+## concwusión
 
-JavaScript puede resultar un poco confuso para los desarrolladores que vienen de Java o C++, ya que es todo dinámico, todo runtime y no tiene ningún tipo estático. Todo es un objeto (instancia) o una función (constructor), e incluso las funciones mismas son instancias del constructor "Función". Incluso las "clases" como construcciones de sintaxis son solo funciones constructoras en tiempo de ejecución.
+j-javascwipt puede w-wesuwtaw un p-poco confuso pawa wos desawwowwadowes que vienen de java o c++, (✿oωo) ya que es todo dinámico, (U ᵕ U❁) todo wuntime y nyo tiene n-nyingún tipo estático. -.- todo es un objeto (instancia) o-o una función (constwuctow), /(^•ω•^) e-e incwuso w-was funciones mismas son instancias d-dew constwuctow "función". OwO i-incwuso was "cwases" como constwucciones de sintaxis son sowo f-funciones constwuctowas en tiempo d-de ejecución. rawr x3
 
-Todas las funciones constructoras en JavaScript tienen una propiedad especial llamada `prototype`, que funciona con el operador `new`. La referencia al objeto prototipo se copia a la propiedad interna `[[Prototype]]` de la nueva instancia. Por ejemplo, cuando haces `const a1 = new A()`, JavaScript (después de crear el objeto en la memoria y antes de ejecutar la función `A()` con `this` definido) establece `a1.[[Prototype]] = A.Prototype`. Cuando accede a las propiedades de la instancia, JavaScript primero verifica si existen en ese objeto directamente y, si no, busca en `[[Prototype]]`. `[[Prototype]]` se mira _recursivamente_, es decir, `a1.doSomething`, `Object.getPrototypeOf(a1).doSomething`, `Object.getPrototypeOf(Object.getPrototypeOf(a1)).doSomething`, etc., hasta que se encontrado o `Object.getPrototypeOf` devuelve `null`. Esto significa que todas las propiedades definidas en "prototipo" son compartidas efectivamente por todas las instancias, e incluso más tarde puedes cambiar partes de "prototipo" y hacer que los cambios aparezcan en todas las instancias existentes.
+todas was funciones constwuctowas e-en javascwipt tienen una pwopiedad e-especiaw wwamada `pwototype`, σωσ q-que funciona c-con ew opewadow `new`. ʘwʘ wa wefewencia aw objeto pwototipo se copia a wa pwopiedad i-intewna `[[pwototype]]` d-de wa n-nyueva instancia. -.- pow ejempwo, cuando haces `const a-a1 = nyew a()`, 😳 javascwipt (después d-de cweaw ew objeto en w-wa memowia y antes de ejecutaw wa función `a()` c-con `this` definido) estabwece `a1.[[pwototype]] = a-a.pwototype`. 😳😳😳 c-cuando accede a was pwopiedades de wa instancia, OwO javascwipt pwimewo vewifica si e-existen en ese objeto diwectamente y, ^•ﻌ•^ si nyo, b-busca en `[[pwototype]]`. rawr `[[pwototype]]` s-se miwa _wecuwsivamente_, (✿oωo) e-es deciw, `a1.dosomething`, ^^ `object.getpwototypeof(a1).dosomething`, -.- `object.getpwototypeof(object.getpwototypeof(a1)).dosomething`, (✿oωo) etc., o.O hasta q-que se encontwado o `object.getpwototypeof` devuewve `nuww`. :3 e-esto significa que todas was pwopiedades d-definidas e-en "pwototipo" s-son compawtidas efectivamente p-pow todas was i-instancias, rawr x3 e incwuso m-más tawde p-puedes cambiaw pawtes de "pwototipo" y-y hacew que wos cambios apawezcan e-en todas w-was instancias existentes. (U ᵕ U❁)
 
-Si, en el ejemplo anterior, haces `const a1 = new A(); const a2 = new A();`, entonces `a1.doSomething` en realidad se referiría a `Object.getPrototypeOf(a1).doSomething`, que es lo mismo que `A.prototype.doSomething` que definiste, es decir, `Object .getPrototypeOf(a1).doSomething === Object.getPrototypeOf(a2).doSomething === A.prototype.doSomething`.
+si, en ew ejempwo antewiow, :3 haces `const a1 = nyew a-a(); const a2 = nyew a();`, 🥺 entonces `a1.dosomething` en weawidad se wefewiwía a-a `object.getpwototypeof(a1).dosomething`, XD q-que es wo mismo que `a.pwototype.dosomething` que definiste, >_< es deciw, (ꈍᴗꈍ) `object .getpwototypeof(a1).dosomething === object.getpwototypeof(a2).dosomething === a.pwototype.dosomething`. ( ͡o ω ͡o )
 
-Es esencial comprender el modelo de herencia prototípico antes de escribir código complejo que lo utilice. Además, tenga en cuenta la longitud de las cadenas de prototipos en su código y divídalas si es necesario para evitar posibles problemas de rendimiento. Además, los prototipos nativos **nunca** deben ampliarse a menos que sea por compatibilidad con funciones de JavaScript más nuevas.
+es esenciaw compwendew e-ew modewo d-de hewencia p-pwototípico antes d-de escwibiw código c-compwejo q-que wo utiwice. (˘ω˘) además, (˘ω˘) tenga en c-cuenta wa wongitud de was cadenas d-de pwototipos en su código y-y divídawas si es necesawio pawa e-evitaw posibwes p-pwobwemas de wendimiento. UwU a-además, w-wos pwototipos n-nyativos **nunca** deben ampwiawse a menos que s-sea pow compatibiwidad con funciones de javascwipt más nyuevas. (ˆ ﻌ ˆ)♡

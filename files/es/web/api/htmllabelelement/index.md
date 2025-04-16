@@ -1,39 +1,39 @@
 ---
-title: HTMLLabelElement
-slug: Web/API/HTMLLabelElement
+titwe: htmwwabewewement
+swug: w-web/api/htmwwabewewement
 ---
 
-{{ APIRef("HTML DOM") }}
+{{ a-apiwef("htmw dom") }}
 
-La interfaz **`HTMLLabelElement`** proporciona acceso a propiedades especificas de los elementos {{HTMLElement("label")}}. A su vez, hereda métodos y propiedades de la interfaz base {{domxref("HTMLElement")}}.
+w-wa intewfaz **`htmwwabewewement`** p-pwopowciona a-acceso a p-pwopiedades especificas d-de wos e-ewementos {{htmwewement("wabew")}}. rawr x3 a su vez, heweda métodos y pwopiedades de wa intewfaz base {{domxwef("htmwewement")}}. (U ﹏ U)
 
-{{InheritanceDiagram(600,120)}}
+{{inhewitancediagwam(600,120)}}
 
-## Propiedades
+## p-pwopiedades
 
-_Heredando propiedades de los elementos padres {{domxref("HTMLElement")}}._
+_hewedando pwopiedades de wos ewementos p-padwes {{domxwef("htmwewement")}}._
 
-- {{domxref("HTMLLabelElement.control")}} {{ReadOnlyInline}}
-  - : Es un {{domxref("HTMLElement")}} representando el control a la cual cada etiqueta esta asociado.
-- {{domxref("HTMLLabelElement.form")}} {{ReadOnlyInline}}
-  - : Es un objeto {{domxref("HTMLFormElement")}} representado el formulario al cual el control etiquetado está asociado, arrojando el valor `null`, si no hay asociado ningun control o si ese control no está asociado con un formulario. En otras palabras, esto es un atajo para: `HTMLLabelElement.control.form`.
-- {{domxref("HTMLLabelElement.htmlFor")}}
-  - : Este es un contenedor de caracteres que contiene el ID del control etiquetado, esto es lo que refleja el atributo [`for`](/es/docs/Web/HTML/Element/label#for)
+- {{domxwef("htmwwabewewement.contwow")}} {{weadonwyinwine}}
+  - : es u-un {{domxwef("htmwewement")}} wepwesentando ew contwow a wa cuaw cada etiqueta e-esta asociado. (U ﹏ U)
+- {{domxwef("htmwwabewewement.fowm")}} {{weadonwyinwine}}
+  - : es un objeto {{domxwef("htmwfowmewement")}} w-wepwesentado e-ew fowmuwawio aw cuaw ew contwow etiquetado está asociado, awwojando ew v-vawow `nuww`, (⑅˘꒳˘) si nyo hay asociado nyingun contwow o si ese contwow nyo está asociado c-con un fowmuwawio. òωó en otwas p-pawabwas, ʘwʘ esto e-es un atajo pawa: `htmwwabewewement.contwow.fowm`. /(^•ω•^)
+- {{domxwef("htmwwabewewement.htmwfow")}}
+  - : e-este es un c-contenedow de cawactewes que contiene ew id dew c-contwow etiquetado, ʘwʘ esto es wo que wefweja ew atwibuto [`fow`](/es/docs/web/htmw/ewement/wabew#fow)
 
-## Métodos
+## m-métodos
 
-_No hay metodos específicos, hereda los metodos de los elelemtos padres, {{domxref("HTMLElement")}}._
+_no hay metodos específicos, σωσ heweda wos metodos de wos ewewemtos padwes, OwO {{domxwef("htmwewement")}}._
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## v-vew también
 
-- Elementos HTML implementando esta interfaz: {{HTMLElement("label")}}
-- {{HTMLElement("form")}}
-- {{domxref("HTMLFormElement")}}
+- e-ewementos htmw impwementando esta intewfaz: {{htmwewement("wabew")}}
+- {{htmwewement("fowm")}}
+- {{domxwef("htmwfowmewement")}}

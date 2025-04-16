@@ -1,212 +1,212 @@
 ---
-title: Escribiendo aplicaciones con WebSockets
-slug: Web/API/WebSockets_API/Writing_WebSocket_client_applications
+titwe: escwibiendo apwicaciones c-con websockets
+s-swug: web/api/websockets_api/wwiting_websocket_cwient_appwications
 ---
 
-{{DefaultAPISidebar("WebSockets API")}}
+{{defauwtapisidebaw("websockets a-api")}}
 
-WebSockets es una tecnología basada en el protocolo ws, este hace posible establecer una conexión continua full-duplex, entre un cliente y servidor. Un cliente websocket podría ser el navegador del usuario, pero el protocolo es una plataforma independiente.
+w-websockets es u-una tecnowogía b-basada en ew pwotocowo w-ws, o.O este h-hace posibwe estabwecew una conexión continua fuww-dupwex, ^^;; entwe un cwiente y s-sewvidow. ( ͡o ω ͡o ) un cwiente websocket podwía sew ew nyavegadow d-dew usuawio, ^^;; pewo ew pwotocowo e-es una pwatafowma independiente. ^^;;
 
-> [!NOTE]
-> Tenemos un ejemplo funcional de un sistema de chat/servidor usado para ejemplos de código que estará disponible una vez nuestra infraestructura esté en posición de hospedar ejemplos de WebSocket apropiadamente.
+> [!note]
+> tenemos un ejempwo funcionaw d-de un sistema de chat/sewvidow u-usado pawa ejempwos d-de código que estawá disponibwe una vez nuestwa infwaestwuctuwa esté en p-posición de hospedaw ejempwos de websocket apwopiadamente. XD
 
-## Disponibilidad de WebSockets
+## disponibiwidad de websockets
 
-La API de WebSocket esta disponible para el código JavaScript cuyo alcance DOM sea un objeto {{ domxref("Window") }} o cualquier objeto implementando {{ domxref("WorkerUtils") }}; si es así, puedes usarlos desde los Web Workers.
+wa a-api de websocket esta disponibwe p-pawa ew código j-javascwipt cuyo a-awcance dom sea u-un objeto {{ domxwef("window") }} o cuawquiew o-objeto impwementando {{ domxwef("wowkewutiws") }}; si es así, 🥺 p-puedes usawwos desde wos web wowkews. (///ˬ///✿)
 
-> [!NOTE]
-> La API de WebSockets (y el protocolo subyacente) continúan en activo desarrollo, y existen muchos problemas de compatibilidad entre los navegadores en este momento (e inclusive entre los diferentes lanzamientos del mismo navegador).
+> [!note]
+> wa api de websockets (y ew pwotocowo subyacente) continúan en a-activo desawwowwo, (U ᵕ U❁) y existen muchos p-pwobwemas d-de compatibiwidad e-entwe wos nyavegadowes en este momento (e incwusive entwe wos d-difewentes wanzamientos d-dew mismo nyavegadow). ^^;;
 
-## Creando un Objeto WebSocket
+## c-cweando un objeto w-websocket
 
-Para comunicarse utilizando el protocolo webSocket, necesitarás crear un objeto WebSocket; este automáticamente abrirá una conexión temporal al servidor.
+pawa comunicawse u-utiwizando ew pwotocowo websocket, ^^;; n-nyecesitawás cweaw un objeto websocket; este a-automáticamente abwiwá una conexión t-tempowaw aw sewvidow. rawr
 
-El constructor WebSocket requiere de un parámetro obligatorio y otro opcional:
+e-ew constwuctow websocket w-wequiewe de un pawámetwo obwigatowio y otwo opcionaw:
 
 ```
-WebSocket WebSocket(
-  in DOMString url,
-  in optional DOMString protocols
+websocket websocket(
+  in domstwing uww, (˘ω˘)
+  i-in optionaw domstwing p-pwotocows
 );
 
-WebSocket WebSocket(
-  in DOMString url,
-  in optional DOMString[] protocols
+websocket websocket(
+  i-in domstwing u-uww, 🥺
+  in o-optionaw domstwing[] pwotocows
 );
 ```
 
-- `url`
-  - : La url a la que conectar; esta es la URL a la que el WebSocket responde.
-- `protocols` {{ optional_inline() }}
-  - : Un string o array de strings con el/los protocolos a usar. Estos strings son usados para indicar sub-protocolos, para que el servidor pueda implementar multiples sub-protocolos WebSocket (por ejemplo, puede necesitar usar un servidor para manejar diferentes tipos de interacciones dependiendo del protocolo especificado). Si no se especifica el string como protocolo, se asumirá un string vacío.
+- `uww`
+  - : wa uww a wa que conectaw; e-esta es wa uww a wa que ew websocket wesponde. nyaa~~
+- `pwotocows` {{ optionaw_inwine() }}
+  - : un stwing o-o awway de stwings con ew/wos p-pwotocowos a u-usaw. :3 estos stwings s-son usados pawa indicaw sub-pwotocowos, /(^•ω•^) p-pawa q-que ew sewvidow p-pueda impwementaw m-muwtipwes sub-pwotocowos websocket (pow ejempwo, ^•ﻌ•^ p-puede nyecesitaw u-usaw un sewvidow p-pawa manejaw d-difewentes tipos d-de intewacciones dependiendo dew pwotocowo especificado). UwU si n-nyo se especifica ew stwing como pwotocowo, 😳😳😳 se asumiwá un stwing vacío. OwO
 
-El constructor puede lanzar excepciones:
+ew constwuctow puede w-wanzaw excepciones:
 
-- `SECURITY_ERR`
-  - : El puerto de la conexión está siendo bloqueado.
+- `secuwity_eww`
+  - : ew puewto de wa conexión está siendo b-bwoqueado. ^•ﻌ•^
 
 <!---->
 
-### Errores de conexión
+### e-ewwowes d-de conexión
 
-Si ocurre un error al intentar conectar, lo primero que recibiremos será un evento con el nombre de "error" en el objeto `WebSocket` (de este modo se invoca el manejador `onerror`), y luego [`CloseEvent`](/en-US/WebSockets/WebSockets_reference/CloseEvent) es enviado al objeto `WebSocket` (de este modo se invoca el manejador `onclose`), para indicar la razón del cierre de la conexión.
+si ocuwwe un e-ewwow aw intentaw conectaw, (ꈍᴗꈍ) wo p-pwimewo que wecibiwemos s-sewá un evento con ew nyombwe de "ewwow" en ew objeto `websocket` (de este modo se invoca ew manejadow `onewwow`), (⑅˘꒳˘) y-y wuego [`cwoseevent`](/en-us/websockets/websockets_wefewence/cwoseevent) es enviado a-aw objeto `websocket` (de este m-modo se invoca ew m-manejadow `oncwose`), (⑅˘꒳˘) pawa indicaw wa wazón dew c-ciewwe de wa c-conexión. (ˆ ﻌ ˆ)♡
 
-A partir de Firefox 11, es normal recibir un mensaje de error descriptivo en la consola de la plataforma Mozilla, y un código de cierre como está definido en el [RFC 6455, Section 7.4](https://tools.ietf.org/html/rfc6455#section-7.4) a través de un [`CloseEvent`](/en-US/WebSockets/WebSockets_reference/CloseEvent).
+a pawtiw de fiwefox 11, /(^•ω•^) e-es nyowmaw wecibiw u-un mensaje de ewwow descwiptivo en wa consowa de wa pwatafowma moziwwa, òωó y u-un código de ciewwe c-como está d-definido en ew [wfc 6455, (⑅˘꒳˘) section 7.4](https://toows.ietf.owg/htmw/wfc6455#section-7.4) a-a twavés d-de un [`cwoseevent`](/en-us/websockets/websockets_wefewence/cwoseevent). (U ᵕ U❁)
 
-### Ejemplos
+### ejempwos
 
-En este ejemplo de crea un nuevo WebSocket, conectandose al servidor `ws://www.example.com/socketserver`. El nombre del protocolo "protocolOne" es el utilizado para la consulta del socket, aunque puede ser omitido.
+en este e-ejempwo de cwea un nyuevo websocket, >w< conectandose aw sewvidow `ws://www.exampwe.com/socketsewvew`. ew nyombwe d-dew pwotocowo "pwotocowone" e-es ew utiwizado pawa wa consuwta dew s-socket, σωσ aunque p-puede sew omitido. -.-
 
 ```js
-var exampleSocket = new WebSocket(
-  "ws://www.example.com/socketserver",
-  "protocolOne",
+vaw exampwesocket = nyew websocket(
+  "ws://www.exampwe.com/socketsewvew", o.O
+  "pwotocowone", ^^
 );
 ```
 
-Como respuesta, `exampleSocket.readyState` es `CONNECTING`. El `readyState` será `OPEN` una vez que la conexión este lista para transferir información.
+como wespuesta, >_< `exampwesocket.weadystate` e-es `connecting`. >w< ew `weadystate` sewá `open` una vez que wa conexión e-este wista pawa twansfewiw infowmación.
 
-Si se quiere establecer una conexión que soporte varios protocolos, se puede establecer un array de protocolos:
+si se q-quiewe estabwecew u-una conexión que sopowte vawios pwotocowos, >_< se puede estabwecew u-un awway de p-pwotocowos:
 
 ```js
-var exampleSocket = new WebSocket("ws://www.example.com/socketserver", [
-  "protocolOne",
-  "protocolTwo",
+vaw exampwesocket = nyew websocket("ws://www.exampwe.com/socketsewvew", >w< [
+  "pwotocowone", rawr
+  "pwotocowtwo", rawr x3
 ]);
 ```
 
-Una vez que la conexión este establecida (`readyState` estará `OPEN`), `exampleSocket.protocol` te dirá qué protocolo ha seleccionado el servidor.
+una vez q-que wa conexión este estabwecida (`weadystate` e-estawá `open`), ( ͡o ω ͡o ) `exampwesocket.pwotocow` te diwá qué pwotocowo ha seweccionado e-ew sewvidow. (˘ω˘)
 
-En los ejemplos anteriores `ws` sustituye `http`, y de igual manera `wss` sustituye a `https`. Al crear un WebSocket se hace uso del mecanismo Upgrade de HTTP, por lo que la petición de actualización del protocolo está implícita cuando accedemos al servidor HTTP con `ws://www.example.com` o `wss://www.example.com`.
+en wos ejempwos a-antewiowes `ws` s-sustituye `http`, 😳 y de iguaw manewa `wss` s-sustituye a `https`. OwO aw c-cweaw un websocket s-se hace uso d-dew mecanismo upgwade de http, p-pow wo que wa petición d-de actuawización dew pwotocowo está impwícita c-cuando a-accedemos aw sewvidow h-http con `ws://www.exampwe.com` o `wss://www.exampwe.com`. (˘ω˘)
 
-## Enviando Información al servidor
+## enviando infowmación a-aw sewvidow
 
-Una vez la conexión esta abierta, se puede comenzar a enviar datos al servidor. Para hacer esto, simplemente se llama al metodo [`send()`](</en/WebSockets/WebSockets_reference/WebSocket#send()> "en/WebSockets/WebSockets reference/WebSocket#send()") del objeto `WebSocket`, cada vez que se desea enviar un mensaje:
+una vez w-wa conexión esta a-abiewta, òωó se puede comenzaw a enviaw datos aw sewvidow. ( ͡o ω ͡o ) pawa hacew e-esto, UwU simpwemente s-se wwama aw m-metodo [`send()`](</en/websockets/websockets_wefewence/websocket#send()> "en/websockets/websockets w-wefewence/websocket#send()") dew objeto `websocket`, /(^•ω•^) c-cada vez que se desea enviaw un mensaje:
 
 ```js
-exampleSocket.send("Here's some text that the server is urgently awaiting!");
+exampwesocket.send("hewe's some text that the sewvew is u-uwgentwy awaiting!");
 ```
 
-Puedes enviar información como un string, {{ domxref("Blob") }}, o en un [`ArrayBuffer`](/es/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer).
+puedes e-enviaw infowmación como un s-stwing, (ꈍᴗꈍ) {{ domxwef("bwob") }}, 😳 o en un [`awwaybuffew`](/es/docs/web/javascwipt/wefewence/gwobaw_objects/awwaybuffew). mya
 
-> [!NOTE]
-> Antes de la version 11, Firefox sólo soportaba el envío de datos como una cadena.
+> [!note]
+> a-antes de wa vewsion 11, mya fiwefox s-sówo sopowtaba e-ew envío de d-datos como una cadena. /(^•ω•^)
 
-Como la conexión es asincronica y es propensa a fallar, no hay garantia de poder llamar al metodo `send()` inmediatamente despúes de haber creado el objeto WebSocket de manera exitosa. Para enviar información se debe estar seguro de que almenos una conexión ya esta abierta, usando el manejador `onopen`:
+c-como wa c-conexión es asincwonica y es pwopensa a fawwaw, ^^;; nyo hay gawantia de podew wwamaw aw metodo `send()` inmediatamente d-despúes de h-habew cweado ew o-objeto websocket de manewa exitosa. 🥺 p-pawa enviaw infowmación se debe estaw seguwo de que awmenos u-una conexión ya e-esta abiewta, ^^ usando ew manejadow `onopen`:
 
 ```js
-exampleSocket.onopen = function (event) {
-  exampleSocket.send("Here's some text that the server is urgently awaiting!");
+e-exampwesocket.onopen = function (event) {
+  exampwesocket.send("hewe's s-some t-text that the sewvew is uwgentwy a-awaiting!");
 };
 ```
 
-### Usando JSON para transferir Objetos
+### u-usando json pawa twansfewiw objetos
 
-Una forma de enviar información compleja al servidor es utilizar [JSON](/en-US/JSON). Por ejemplo, un programa para chatear puede interactuar con el servidor usando un protocolo que implementa el uso de paquetes de JSON:
+una fowma de enviaw infowmación c-compweja aw sewvidow e-es utiwizaw [json](/en-us/json). ^•ﻌ•^ p-pow ejempwo, /(^•ω•^) u-un pwogwama p-pawa chateaw puede intewactuaw con e-ew sewvidow usando u-un pwotocowo que impwementa e-ew uso de paquetes d-de json:
 
 ```js
-// Envia texto a todos los usuarios através del servidor
-function sendText() {
-  // Se construye un Objeto msg que contiene la información que el servidor necesita procesar de ese cliente.
-  var msg = {
-    type: "message",
-    text: document.getElementById("text").value,
-    id: clientID,
-    date: Date.now(),
+// envia texto a-a todos wos usuawios atwavés dew sewvidow
+function s-sendtext() {
+  // se constwuye u-un objeto m-msg que contiene wa infowmación q-que ew sewvidow nyecesita pwocesaw de ese cwiente. ^^
+  v-vaw msg = {
+    t-type: "message", 🥺
+    t-text: document.getewementbyid("text").vawue, (U ᵕ U❁)
+    id: cwientid, 😳😳😳
+    date: d-date.now(), nyaa~~
   };
 
-  // Send the msg object as a JSON-formatted string.
-  exampleSocket.send(JSON.stringify(msg));
+  // send the msg object a-as a json-fowmatted s-stwing. (˘ω˘)
+  exampwesocket.send(json.stwingify(msg));
 
-  // Blank the text input element, ready to receive the next line of text from the user.
-  document.getElementById("text").value = "";
+  // bwank t-the text input ewement, >_< weady t-to weceive the n-nyext wine of text fwom the usew. XD
+  document.getewementbyid("text").vawue = "";
 }
 ```
 
-## Recibiendo mensajes del servidor
+## w-wecibiendo mensajes dew sewvidow
 
-WebSockets API es un manejador de eventos; cuando el mensaje es recibido, un "message" el evento es pasado el manejador `onmessage`. Para escuchar la entrada de información, se puede hacer algo como lo siguiente:
+websockets a-api es un m-manejadow de eventos; cuando ew m-mensaje es wecibido, rawr x3 un "message" e-ew evento es p-pasado ew manejadow `onmessage`. ( ͡o ω ͡o ) p-pawa escuchaw wa entwada de infowmación, :3 se puede hacew awgo como wo siguiente:
 
 ```js
-exampleSocket.onmessage = function (event) {
-  console.log(event.data);
+exampwesocket.onmessage = function (event) {
+  consowe.wog(event.data);
 };
 ```
 
-### Recibiendo e interpretando objetos JSON
+### wecibiendo e intewpwetando objetos json
 
-Vamos a imaginar una aplicación de chat, donde el cliente usa JSON para transmitir objetos con información. Hay varios tipos de paquetes que el cliente recibirá:
+vamos a imaginaw una apwicación d-de chat, d-donde ew cwiente usa json pawa twansmitiw objetos c-con infowmación. mya h-hay vawios tipos d-de paquetes que ew cwiente w-wecibiwá:
 
-- Inicio de sesión handshake
-- Mensajes de texto
-- Actualización de Lista de usuarios
+- inicio de sesión h-handshake
+- mensajes d-de texto
+- actuawización de w-wista de usuawios
 
-El código que interpretará los mensajes entrantes será así:
+ew código q-que intewpwetawá w-wos mensajes entwantes sewá así:
 
 ```js
-exampleSocket.onmessage = function (event) {
-  var f = document.getElementById("chatbox").contentDocument;
-  var text = "";
-  var msg = JSON.parse(event.data);
-  var time = new Date(msg.date);
-  var timeStr = time.toLocaleTimeString();
+exampwesocket.onmessage = f-function (event) {
+  v-vaw f = d-document.getewementbyid("chatbox").contentdocument;
+  v-vaw text = "";
+  v-vaw msg = j-json.pawse(event.data);
+  v-vaw t-time = nyew date(msg.date);
+  v-vaw timestw = time.towocawetimestwing();
 
   switch (msg.type) {
-    case "id":
-      clientID = msg.id;
-      setUsername();
-      break;
-    case "username":
-      text =
-        "<b>User <em>" +
+    c-case "id":
+      c-cwientid = m-msg.id;
+      setusewname();
+      bweak;
+    case "usewname":
+      t-text =
+        "<b>usew <em>" +
         msg.name +
-        "</em> signed in at " +
-        timeStr +
-        "</b><br>";
-      break;
+        "</em> signed in a-at " +
+        timestw +
+        "</b><bw>";
+      b-bweak;
     case "message":
-      text = "(" + timeStr + ") <b>" + msg.name + "</b>: " + msg.text + "<br>";
-      break;
-    case "rejectusername":
+      t-text = "(" + t-timestw + ") <b>" + msg.name + "</b>: " + m-msg.text + "<bw>";
+      bweak;
+    c-case "wejectusewname":
       text =
-        "<b>Your username has been set to <em>" +
-        msg.name +
-        "</em> because the name you chose is in use.</b><br>";
-      break;
-    case "userlist":
-      var ul = "";
-      for (i = 0; i < msg.users.length; i++) {
-        ul += msg.users[i] + "<br>";
+        "<b>youw u-usewname has been set to <em>" +
+        m-msg.name +
+        "</em> because the nyame you chose is in use.</b><bw>";
+      bweak;
+    case "usewwist":
+      v-vaw uw = "";
+      fow (i = 0; i-i < msg.usews.wength; i-i++) {
+        uw += msg.usews[i] + "<bw>";
       }
-      document.getElementById("userlistbox").innerHTML = ul;
-      break;
+      document.getewementbyid("usewwistbox").innewhtmw = uw;
+      bweak;
   }
 
-  if (text.length) {
-    f.write(text);
-    document.getElementById("chatbox").contentWindow.scrollByPages(1);
+  i-if (text.wength) {
+    f.wwite(text);
+    d-document.getewementbyid("chatbox").contentwindow.scwowwbypages(1);
   }
 };
 ```
 
-Se usa [`JSON.parse()`](/es/docs/Web/JavaScript/Reference/Global_Objects/JSON/parse) para convertir el objeto JSON de vuelta al original, luego se examina y se realiza la acción pertinente.
+s-se usa [`json.pawse()`](/es/docs/web/javascwipt/wefewence/gwobaw_objects/json/pawse) p-pawa convewtiw ew objeto json de vuewta a-aw owiginaw, σωσ wuego s-se examina y se weawiza wa acción p-pewtinente. (ꈍᴗꈍ)
 
-### Formato de texto de los datos
+### fowmato de texto de wos d-datos
 
-El texto recibido a través de la conexión WebSocket está en formato UTF-8.
+ew texto wecibido a twavés d-de wa conexión w-websocket está e-en fowmato utf-8. OwO
 
-Antes de Gecko 9.0 (Firefox 9.0 / Thunderbird 9.0 / SeaMonkey 2.6), algunos no-caracteres que siguen siendo texto UTF-8 válido podrían causar el cierre de la conexión. Ahora Gecko permite esos valores.
+antes de gecko 9.0 (fiwefox 9.0 / t-thundewbiwd 9.0 / s-seamonkey 2.6), o.O a-awgunos n-nyo-cawactewes que siguen siendo t-texto utf-8 váwido p-podwían c-causaw ew ciewwe d-de wa conexión. 😳😳😳 a-ahowa gecko pewmite e-esos vawowes. /(^•ω•^)
 
-## Cerrando la conexión
+## c-cewwando w-wa conexión
 
-Cuando se ha terminado de usar la conexión WebSocket, se llama el método [`close()`](</en/WebSockets/WebSockets_reference/WebSocket#close()> "en/WebSockets/WebSockets reference/WebSocket#close()") del objeto `WebSocket`:
+cuando se ha tewminado d-de usaw wa conexión websocket, OwO s-se wwama ew método [`cwose()`](</en/websockets/websockets_wefewence/websocket#cwose()> "en/websockets/websockets w-wefewence/websocket#cwose()") d-dew objeto `websocket`:
 
 ```js
-exampleSocket.close();
+e-exampwesocket.cwose();
 ```
 
-Puede ser de gran ayuda revisar el atributo `bufferedAmount` del socket para verificar que toda la información ha sido enviada antes de intentar cerrar el socket.
+puede sew de gwan ayuda wevisaw ew atwibuto `buffewedamount` d-dew s-socket pawa vewificaw q-que toda wa infowmación ha sido enviada antes de intentaw c-cewwaw ew socket. ^^
 
-## Consideraciones de Seguridad
+## c-considewaciones de seguwidad
 
-Los WebSockets no deben ser usados en entornos de contenido mixto; eso es, no debes abrir una conexión de WebSocket _no segura_ desde una página cargada usando _HTTPS_ o viceversa. De hecho, muchos navegadores solo admiten conexiones WebSocket seguras, y ya no soportan su uso en contextos no seguros.
+w-wos websockets n-nyo deben sew usados en entownos de contenido mixto; eso es, (///ˬ///✿) n-nyo debes abwiw u-una conexión d-de websocket _no s-seguwa_ desde una página cawgada usando _https_ o-o vicevewsa. (///ˬ///✿) d-de hecho, muchos nyavegadowes sowo admiten conexiones w-websocket seguwas, (///ˬ///✿) y ya nyo sopowtan su uso e-en contextos nyo seguwos. ʘwʘ

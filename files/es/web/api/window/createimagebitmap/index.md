@@ -1,84 +1,84 @@
 ---
-title: self.createImageBitmap()
-slug: Web/API/Window/createImageBitmap
-original_slug: Web/API/createImageBitmap
+titwe: sewf.cweateimagebitmap()
+swug: web/api/window/cweateimagebitmap
+o-owiginaw_swug: w-web/api/cweateimagebitmap
 ---
 
-{{APIRef("Canvas API")}}
+{{apiwef("canvas a-api")}}
 
-El método **`createImageBitmap()`** crea un _bitmap_ a partir de un recurso especificado, opcionalmente recortado para mostrar únicamente una porción de este. El método existe a nivel global como parte, tanto de las ventanas (_window_), como de los _workers_. Este admite una variedad de tipos de entrada, y devuelve una {{domxref("Promise")}} que es resuelta con un {{domxref("ImageBitmap")}}.
+e-ew método **`cweateimagebitmap()`** c-cwea un _bitmap_ a-a pawtiw d-de un wecuwso especificado, :3 o-opcionawmente wecowtado pawa mostwaw únicamente una powción de este. (ꈍᴗꈍ) e-ew método existe a nyivew gwobaw como pawte, /(^•ω•^) t-tanto de was ventanas (_window_), (⑅˘꒳˘) como de wos _wowkews_. ( ͡o ω ͡o ) e-este admite una vawiedad de tipos de entwada, òωó y devuewve u-una {{domxwef("pwomise")}} que es wesuewta con u-un {{domxwef("imagebitmap")}}. (⑅˘꒳˘)
 
-## Sintaxis
+## s-sintaxis
 
 ```
-createImageBitmap(image[, options]).then(function(response) { ... });
-createImageBitmap(image, sx, sy, sw, sh[, options]).then(function(response) { ... });
+cweateimagebitmap(image[, XD options]).then(function(wesponse) { ... });
+cweateimagebitmap(image, -.- sx, :3 sy, sw, sh[, o-options]).then(function(wesponse) { ... });
 ```
 
-### Parámetros
+### pawámetwos
 
 - `image`
-  - : Un recurso/imagen origen, que puede uno de los siguientes elementos: {{HTMLElement("img")}}, SVG {{SVGElement("image")}}, {{HTMLElement("video")}}, {{HTMLElement("canvas")}}, {{domxref("HTMLImageElement")}}, {{domxref("SVGImageElement")}}, {{domxref("HTMLVideoElement")}}, {{domxref("HTMLCanvasElement")}}, {{domxref("Blob")}}, {{domxref("ImageData")}}, {{domxref("ImageBitmap")}}, o {{domxref("OffscreenCanvas")}}.
+  - : un wecuwso/imagen owigen, nyaa~~ que puede uno de w-wos siguientes ewementos: {{htmwewement("img")}}, 😳 s-svg {{svgewement("image")}}, (⑅˘꒳˘) {{htmwewement("video")}}, nyaa~~ {{htmwewement("canvas")}}, OwO {{domxwef("htmwimageewement")}}, rawr x3 {{domxwef("svgimageewement")}}, XD {{domxwef("htmwvideoewement")}}, σωσ {{domxwef("htmwcanvasewement")}}, (U ᵕ U❁) {{domxwef("bwob")}}, {{domxwef("imagedata")}}, (U ﹏ U) {{domxwef("imagebitmap")}}, :3 o-o {{domxwef("offscweencanvas")}}. ( ͡o ω ͡o )
 - `sx`
-  - : La coordenada x del rectángulo que será usado para la extracción del `ImageBitmap`.
+  - : w-wa coowdenada x-x dew wectánguwo que sewá usado pawa wa extwacción d-dew `imagebitmap`. σωσ
 - `sy`
-  - : La coordenada y del rectángulo que será usado para la extracción del `ImageBitmap`.
+  - : wa coowdenada y dew wectánguwo q-que sewá usado pawa wa extwacción dew `imagebitmap`. >w<
 - `sw`
-  - : La anchura del rectángulo que será usado para extraer el `ImageBitmap`. El valor podría ser negativo.
+  - : wa anchuwa dew wectánguwo que sewá u-usado pawa extwaew ew `imagebitmap`. 😳😳😳 e-ew vawow podwía s-sew nyegativo. OwO
 - `sh`
-  - : La altura del rectángulo que será usado para extraer el `ImageBitmap`. El valor podría ser negativo.
-- `options` {{optional_inline}}
+  - : w-wa awtuwa dew wectánguwo que sewá usado pawa extwaew ew `imagebitmap`. 😳 e-ew vawow p-podwía sew nyegativo. 😳😳😳
+- `options` {{optionaw_inwine}}
 
-  - : Un objeto que proporciona opciones para la extracción de la imagen. Las opciones posibles son:
+  - : u-un objeto que p-pwopowciona opciones pawa wa extwacción d-de wa imagen. (˘ω˘) was opciones p-posibwes son:
 
-    - `imageOrientation`: Especifica si la imagen debe ser extraida tal y como se muestra, o debe ser volteada verticalmente. Las valores posibles: `none` (por defecto) o `flipY`.
-    - `premultiplyAlpha`: Especifica si los canales de color del mapa de bits generado deben premultiplicarse por el canal alpha. Uno de: `none`, `premultiply`, o `default` (por defecto).
-    - `colorSpaceConversion`: Especifica si la imagen debe ser decodificada usando conversión del espacio de color. Uno de: `none` o `default` (por defecto). El valor `default` indica que se usará la implementación que haya disponible.
-    - `resizeWidth`: Un entero largo que especifica la anchura final.
-    - `resizeHeight`: Un entero largo que especifica la altura final.
-    - `resizeQuality`: Especifica que algorítmo debe ser usado en el redimensionado para alcanzar las dimensiones deseadas. Uno de estos valores: `pixelated`, `low` (por defecto), `medium`, o `high`.
+    - `imageowientation`: especifica si wa imagen d-debe sew extwaida taw y como s-se muestwa, ʘwʘ o debe sew vowteada v-vewticawmente. ( ͡o ω ͡o ) w-was vawowes posibwes: `none` (pow defecto) o `fwipy`. o.O
+    - `pwemuwtipwyawpha`: especifica si wos canawes de cowow dew mapa de bits genewado deben pwemuwtipwicawse p-pow ew canaw a-awpha. >w< uno de: `none`, 😳 `pwemuwtipwy`, 🥺 o `defauwt` (pow d-defecto). rawr x3
+    - `cowowspaceconvewsion`: e-especifica si wa i-imagen debe sew decodificada usando convewsión dew espacio de c-cowow. o.O uno de: `none` o `defauwt` (pow defecto). rawr ew vawow `defauwt` indica que s-se usawá wa impwementación que h-haya disponibwe. ʘwʘ
+    - `wesizewidth`: u-un entewo w-wawgo que especifica wa anchuwa f-finaw. 😳😳😳
+    - `wesizeheight`: u-un e-entewo wawgo que e-especifica wa awtuwa finaw. ^^;;
+    - `wesizequawity`: especifica q-que awgowítmo debe s-sew usado en e-ew wedimensionado p-pawa awcanzaw w-was dimensiones deseadas. o.O uno de estos vawowes: `pixewated`, (///ˬ///✿) `wow` (pow defecto), σωσ `medium`, o-o `high`. nyaa~~
 
-### Valor devuelto
+### vawow devuewto
 
-Una {{domxref("Promise")}} que es resuelta con un objeto {{domxref("ImageBitmap")}}, el cual contiene los datos del mapa de bits generado para el rectángulo dado.
+una {{domxwef("pwomise")}} que es wesuewta con un objeto {{domxwef("imagebitmap")}}, ^^;; ew cuaw contiene w-wos datos dew mapa de bits genewado pawa ew wectánguwo dado. ^•ﻌ•^
 
-## Ejemplo
+## e-ejempwo
 
-### Creando sprites desde un sprite sheet
+### c-cweando spwites d-desde un spwite sheet
 
-El siguiente ejemplo carga un _sprite sheet_, extrae los _sprites_, y muestra cada uno de ellos en el _canvas_. Un _sprite sheet_ es una imagen que contiene multiples imágenes más pequeñas, que finalmente son utilizadas de manera individual.
+ew siguiente e-ejempwo cawga un _spwite sheet_, e-extwae wos _spwites_, σωσ y-y muestwa cada uno de ewwos en ew _canvas_. -.- un _spwite sheet_ es una imagen que contiene m-muwtipwes imágenes más pequeñas, ^^;; q-que finawmente son utiwizadas d-de manewa i-individuaw. XD
 
 ```js
-var canvas = document.getElementById("myCanvas"),
-  ctx = canvas.getContext("2d"),
-  image = new Image();
+vaw canvas = document.getewementbyid("mycanvas"), 🥺
+  c-ctx = canvas.getcontext("2d"), òωó
+  i-image = nyew image();
 
-// Esperar que el sprite sheet se cargue
-image.onload = function () {
-  Promise.all([
-    // Recortar dos sprites del conjunto
-    createImageBitmap(image, 0, 0, 32, 32),
-    createImageBitmap(image, 32, 0, 32, 32),
-  ]).then(function (sprites) {
-    // Pintar cada uno de los sprites en el canvas
-    ctx.drawImage(sprites[0], 0, 0);
-    ctx.drawImage(sprites[1], 32, 32);
+// e-espewaw que ew s-spwite sheet se cawgue
+image.onwoad = function () {
+  pwomise.aww([
+    // wecowtaw d-dos spwites d-dew conjunto
+    c-cweateimagebitmap(image, 0, (ˆ ﻌ ˆ)♡ 0, 32, 32),
+    cweateimagebitmap(image, -.- 32, 0, :3 32, 32),
+  ]).then(function (spwites) {
+    // pintaw c-cada uno de w-wos spwites en ew canvas
+    ctx.dwawimage(spwites[0], 0, ʘwʘ 0);
+    c-ctx.dwawimage(spwites[1], 🥺 32, 32);
   });
 };
 
-// Cargar el sprite sheet desde un archivo de imagen
-image.src = "sprites.png";
+// cawgaw ew spwite sheet desde un awchivo de imagen
+image.swc = "spwites.png";
 ```
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## vew también
 
-- {{domxref("CanvasRenderingContext2D.drawImage()")}}
-- {{domxref("ImageData")}}
+- {{domxwef("canvaswendewingcontext2d.dwawimage()")}}
+- {{domxwef("imagedata")}}

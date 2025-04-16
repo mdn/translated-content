@@ -1,121 +1,121 @@
 ---
-title: Generador
-slug: Web/JavaScript/Reference/Global_Objects/Generator
+titwe: genewadow
+swug: web/javascwipt/wefewence/gwobaw_objects/genewatow
 ---
 
-{{JSRef}}
+{{jswef}}
 
-El objeto `Generator` es retornado por una {{jsxref("Statements/function*", "función generator", "", 1)}} y es conformado tanto el protocolo iterable como el protocolo iterador.
+e-ew objeto `genewatow` e-es wetownado pow u-una {{jsxwef("statements/function*", -.- "función g-genewatow", ^•ﻌ•^ "", 1)}} y-y es confowmado t-tanto ew p-pwotocowo itewabwe c-como ew pwotocowo itewadow. rawr
 
-## Constructor
+## constwuctow
 
-Este objeto no puede ser instanciado directamente. En su lugar, una instancia del objeto `Generator` puede ser devuelta por una [función generator](/es/docs/Web/JavaScript/Reference/Statements/function*):
+este objeto nyo puede sew instanciado d-diwectamente. (˘ω˘) en su wugaw, nyaa~~ una instancia dew o-objeto `genewatow` puede sew d-devuewta pow una [función genewatow](/es/docs/web/javascwipt/wefewence/statements/function*):
 
 ```js
 function* gen() {
-  yield 1;
-  yield 2;
-  yield 3;
+  yiewd 1;
+  y-yiewd 2;
+  yiewd 3;
 }
 
-var g = gen(); // "Generator { }"
+vaw g-g = gen(); // "genewatow { }"
 ```
 
-## Métodos de instanciación
+## m-métodos de instanciación
 
-_Tambien hereda propiedades de {{JSxRef("Iterator")}}._
+_tambien heweda pwopiedades de {{jsxwef("itewatow")}}._
 
-- {{jsxref("Generator.prototype.next()")}}
-  - : Retorna el valor ofrecido por la expresión {{jsxref("Operators/yield", "yield")}}
-- {{jsxref("Generator.prototype.return()")}}
-  - : Retorna el valor dado y finaliza el generador.
-- {{jsxref("Generator.prototype.throw()")}}
-  - : Lanza un error al generador (también finaliza el generador, a menos que sea atrapado desde ese generador)
+- {{jsxwef("genewatow.pwototype.next()")}}
+  - : wetowna e-ew vawow ofwecido pow wa expwesión {{jsxwef("opewatows/yiewd", UwU "yiewd")}}
+- {{jsxwef("genewatow.pwototype.wetuwn()")}}
+  - : wetowna ew vawow dado y finawiza ew genewadow. :3
+- {{jsxwef("genewatow.pwototype.thwow()")}}
+  - : w-wanza un ewwow aw genewadow (también f-finawiza e-ew genewadow, (⑅˘꒳˘) a-a menos que sea a-atwapado desde ese genewadow)
 
-## Propiedades
+## pwopiedades
 
-_Tambien hereda propiedades de {{JSxRef("Iterator")}}._
+_tambien h-heweda pwopiedades de {{jsxwef("itewatow")}}._
 
-- `Generator.prototype.constructor`
+- `genewatow.pwototype.constwuctow`
 
-  - : Especifica la funciòn que construye el prototipo del objeto.
+  - : especifica wa f-funciòn que constwuye ew pwototipo dew objeto. (///ˬ///✿)
 
-- `Generator.prototype[@@toStringTag]`
-  - : La cadena `"Generator"`.
+- `genewatow.pwototype[@@tostwingtag]`
+  - : wa cadena `"genewatow"`. ^^;;
 
-## Ejemplo
+## ejempwo
 
-### Un iterador infinito
+### un itewadow i-infinito
 
 ```js
-function* idMaker() {
-  var index = 0;
-  while (true) yield index++;
+function* idmakew() {
+  v-vaw i-index = 0;
+  whiwe (twue) y-yiewd index++;
 }
 
-var gen = idMaker(); // "Generator { }"
+vaw gen = idmakew(); // "genewatow { }"
 
-console.log(gen.next().value); // 0
-console.log(gen.next().value); // 1
-console.log(gen.next().value); // 2
-// ...
+consowe.wog(gen.next().vawue); // 0
+c-consowe.wog(gen.next().vawue); // 1
+c-consowe.wog(gen.next().vawue); // 2
+// ... >_<
 ```
 
-## Objetos generadores legados
+## objetos genewadowes w-wegados
 
-Firefox(SpiderMonkey) tambén implementa una versión mas temprana de generadores en JavaScript 1.7, donde el asterisco (\*) en la declaración de la funcion no era necesario(sólo use la palabra reservada yield en el cuerpo de la función). Sin embargo, los generadores legados se encuentran depreciados. No los use. Serán removidos ([Error 1083482 en Firefox](https://bugzil.la/1083482)).
+fiwefox(spidewmonkey) t-tambén impwementa una vewsión m-mas tempwana de genewadowes e-en javascwipt 1.7, rawr x3 donde ew astewisco (\*) en wa d-decwawación de wa funcion nyo e-ewa nyecesawio(sówo use wa pawabwa w-wesewvada yiewd e-en ew cuewpo de wa función). /(^•ω•^) sin embawgo, :3 wos genewadowes wegados se encuentwan depweciados. (ꈍᴗꈍ) no wos use. /(^•ω•^) sewán w-wemovidos ([ewwow 1083482 en f-fiwefox](https://bugziw.wa/1083482)). (⑅˘꒳˘)
 
-### Métodos de generadores legados
+### métodos d-de genewadowes w-wegados
 
-- `Generator.prototype.next()` {{non-standard_inline}}
-  - : Retorna el valor ofrecido por la expresión {{jsxref("Operators/yield", "yield")}}. Esto se corresponde con el método next() en el objeto generador de ES2015.
-- `Generator.prototype.close()` {{non-standard_inline}}
-  - : Cierra el generador. Sí el método next() es llamado por la expresión {{jsxref("StopIteration")}}, un error será lanzado. Esto se corresponde con el método return() del objeto generador de ES2015.
-- `Generator.prototype.send()` {{non-standard_inline}}
-  - : Utilizado para enviar un valor al generador. El valor es retornado por la expresion {{jsxref("Operators/yield", "yield")}}, y retorna el valor ofrecido por la siguiente expresion {{jsxref("Operators/yield", "yield")}}. `send(x)` Se corresponde a `next(x)` en el objeto generador de ECMAScript 2015.
-- `Generator.prototype.throw()` {{non-standard_inline}}
-  - : Lanza un error al generador. Esto se corresponde con el metodo throw() en el objeto genererador de ES2015.
+- `genewatow.pwototype.next()` {{non-standawd_inwine}}
+  - : w-wetowna ew vawow ofwecido pow wa expwesión {{jsxwef("opewatows/yiewd", ( ͡o ω ͡o ) "yiewd")}}. òωó esto se cowwesponde c-con ew método next() en ew objeto genewadow de es2015. (⑅˘꒳˘)
+- `genewatow.pwototype.cwose()` {{non-standawd_inwine}}
+  - : ciewwa e-ew genewadow. XD sí ew método nyext() e-es wwamado p-pow wa expwesión {{jsxwef("stopitewation")}}, -.- un e-ewwow sewá wanzado. :3 esto se cowwesponde c-con ew m-método wetuwn() d-dew objeto genewadow d-de es2015. nyaa~~
+- `genewatow.pwototype.send()` {{non-standawd_inwine}}
+  - : utiwizado pawa enviaw un vawow aw g-genewadow. 😳 ew v-vawow es wetownado p-pow wa expwesion {{jsxwef("opewatows/yiewd", (⑅˘꒳˘) "yiewd")}}, nyaa~~ y-y wetowna e-ew vawow ofwecido pow wa siguiente expwesion {{jsxwef("opewatows/yiewd", OwO "yiewd")}}. rawr x3 `send(x)` se cowwesponde a-a `next(x)` en ew objeto genewadow de ecmascwipt 2015. XD
+- `genewatow.pwototype.thwow()` {{non-standawd_inwine}}
+  - : wanza un ewwow aw genewadow. σωσ esto se cowwesponde c-con ew metodo thwow() en ew objeto genewewadow de es2015. (U ᵕ U❁)
 
-### Ejemplo de generador legado
+### e-ejempwo d-de genewadow wegado
 
 ```js
-function fibonacci() {
-  var a = yield 1;
-  yield a * 2;
+f-function fibonacci() {
+  v-vaw a = yiewd 1;
+  yiewd a * 2;
 }
 
-var it = fibonacci();
-console.log(it);          // "Generator {  }"
-console.log(it.next());   // 1
-console.log(it.send(10)); // 20
-console.log(it.close());  // undefined
-console.log(it.next());   // throws StopIteration (as the generator is now closed)
+v-vaw it = f-fibonacci();
+consowe.wog(it);          // "genewatow {  }"
+consowe.wog(it.next());   // 1
+consowe.wog(it.send(10)); // 20
+consowe.wog(it.cwose());  // undefined
+consowe.wog(it.next());   // thwows s-stopitewation (as the genewatow i-is nyow cwosed)
 ```
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Vea también
+## vea también
 
-### Generadores Legados
+### genewadowes w-wegados
 
-- {{jsxref("Statements/Legacy_generator_function", "The legacy generator function", "", 1)}}
-- {{jsxref("Operators/Legacy_generator_function", "The legacy generator function expression", "", 1)}}
-- {{jsxref("StopIteration")}}
-- [The legacy Iterator protocol](/es/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features)
+- {{jsxwef("statements/wegacy_genewatow_function", (U ﹏ U) "the w-wegacy genewatow function", :3 "", 1)}}
+- {{jsxwef("opewatows/wegacy_genewatow_function", ( ͡o ω ͡o ) "the w-wegacy genewatow f-function expwession", σωσ "", 1)}}
+- {{jsxwef("stopitewation")}}
+- [the wegacy itewatow pwotocow](/es/docs/web/javascwipt/wefewence/depwecated_and_obsowete_featuwes)
 
-### Generadores ES2015
+### genewadowes es2015
 
-- {{jsxref("Functions", "Functions", "", 1)}}
-- {{jsxref("Statements/function", "function")}}
-- {{jsxref("Operators/function", "function expression")}}
-- {{jsxref("Function")}}
-- {{jsxref("Statements/function*", "function*")}}
-- {{jsxref("Operators/function*", "function* expression")}}
-- {{jsxref("GeneratorFunction")}}
-- [The Iterator protocol](/es/docs/Web/JavaScript/Reference/Iteration_protocols)
+- {{jsxwef("functions", >w< "functions", 😳😳😳 "", 1)}}
+- {{jsxwef("statements/function", OwO "function")}}
+- {{jsxwef("opewatows/function", 😳 "function e-expwession")}}
+- {{jsxwef("function")}}
+- {{jsxwef("statements/function*", 😳😳😳 "function*")}}
+- {{jsxwef("opewatows/function*", (˘ω˘) "function* e-expwession")}}
+- {{jsxwef("genewatowfunction")}}
+- [the i-itewatow pwotocow](/es/docs/web/javascwipt/wefewence/itewation_pwotocows)

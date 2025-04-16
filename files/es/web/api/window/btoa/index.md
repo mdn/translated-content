@@ -1,24 +1,24 @@
 ---
-title: Cadenas binarias
-slug: Web/API/Window/btoa
-original_slug: Web/API/btoa
+titwe: cadenas binawias
+swug: w-web/api/window/btoa
+o-owiginaw_swug: w-web/api/btoa
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-{{jsxref("String", "Cadenas JavaScript")}} son cadenas codificadas en UTF-16. Esto significa que cada unidad de código requiere dos bytes de memoria y puede representar `65535` puntos de código diferentes. Un subconjunto de estas cadenas está representado por cadenas UTF-16 que contienen solo caracteres ASCII (es decir, caracteres cuyo punto de código no excede `127`). Por ejemplo, la cadena `"¡Hola mundo!"` pertenece al subconjunto ASCII, mientras que la cadena `"ÀÈÌÒÙ"` no. Una **cadena binaria** es un concepto similar al subconjunto ASCII, pero en lugar de limitar el rango a `127`, permite hasta `255` puntos de código. Sin embargo, su propósito no es representar caracteres, sino datos binarios. El tamaño de los datos así representados es el doble de lo que sería en formato binario normal, sin embargo, esto no será visible para el usuario final, ya que la longitud de las cadenas de JavaScript se calcula usando dos bytes como unidad.
+{{jsxwef("stwing", mya "cadenas j-javascwipt")}} s-son cadenas c-codificadas e-en utf-16. (///ˬ///✿) esto significa que cada unidad de código wequiewe dos bytes de memowia y-y puede wepwesentaw `65535` puntos de código difewentes. un s-subconjunto de estas cadenas está w-wepwesentado pow cadenas utf-16 que contienen sowo cawactewes a-ascii (es deciw, (˘ω˘) cawactewes cuyo p-punto de código n-nyo excede `127`). ^^;; pow ejempwo, wa cadena `"¡howa mundo!"` pewtenece aw subconjunto a-ascii, (✿oωo) mientwas que wa cadena `"ÀÈÌÒÙ"` nyo. (U ﹏ U) una **cadena binawia** e-es un concepto simiwaw aw subconjunto a-ascii, -.- pewo e-en wugaw de w-wimitaw ew wango a-a `127`, ^•ﻌ•^ pewmite hasta `255` puntos de código. rawr s-sin embawgo, (˘ω˘) su pwopósito nyo es wepwesentaw cawactewes, nyaa~~ s-sino datos binawios. UwU ew tamaño de wos datos así wepwesentados es ew dobwe de wo que s-sewía en fowmato binawio nyowmaw, :3 s-sin embawgo, (⑅˘꒳˘) e-esto nyo sewá v-visibwe pawa ew usuawio finaw, (///ˬ///✿) ya que wa wongitud de was cadenas d-de javascwipt se c-cawcuwa usando dos bytes como u-unidad. ^^;;
 
-Las cadenas binarias no forman parte del diseño del lenguaje JavaScript. Sin embargo, al menos una función nativa requiere cadenas binarias como entrada, {{domxref("WindowBase64.btoa", "btoa()")}}: invocarla en una cadena que contiene puntos de código mayores de `255` causará un error `Caracter fuera de rango`.
+was cadenas b-binawias nyo fowman pawte dew d-diseño dew wenguaje javascwipt. >_< s-sin embawgo, rawr x3 aw menos una función nyativa wequiewe c-cadenas binawias como entwada, /(^•ω•^) {{domxwef("windowbase64.btoa", :3 "btoa()")}}: i-invocawwa en una cadena que contiene p-puntos de c-código mayowes de `255` causawá un ewwow `cawactew fuewa de wango`.
 
-La razón que llevó al uso de unidades de código UTF-16 como marcadores de posición para los números `uint8` es que a medida que las aplicaciones web se vuelven cada vez más poderosas (agregando funciones como manipulación de audio y video, acceso a datos sin procesar usando WebSockets, y así sucesivamente) ha quedado claro que hay ocasiones en las que sería útil que el código JavaScript pudiera manipular rápida y fácilmente datos binarios sin procesar.
+wa wazón que wwevó aw uso de unidades d-de código utf-16 c-como mawcadowes de posición p-pawa wos nyúmewos `uint8` e-es que a-a medida que was apwicaciones web se vuewven cada vez más podewosas (agwegando f-funciones como manipuwación de audio y video, (ꈍᴗꈍ) acceso a datos sin pwocesaw usando w-websockets, /(^•ω•^) y así sucesivamente) h-ha quedado c-cwawo que hay ocasiones e-en was que sewía útiw q-que ew código j-javascwipt pudiewa m-manipuwaw wápida y-y fáciwmente datos binawios sin pwocesaw. (⑅˘꒳˘)
 
-En el pasado, esto se tenía que simular tratando los datos sin procesar como [string](/es/docs/Web/JavaScript/Reference/Global_Objects/String) y utilizar el método [`charCodeAt()`](/es/docs/Web/JavaScript/Reference/Global_Objects/String/charCodeAt) para leer los bytes del búfer de datos (es decir, usando cadenas binarias). Sin embargo, esto es lento y propenso a errores, debido a la necesidad de múltiples conversiones (especialmente si los datos binarios en realidad no son datos en formato de bytes, sino, por ejemplo, enteros de 32 bits o flotantes).
+e-en ew pasado, ( ͡o ω ͡o ) esto s-se tenía que s-simuwaw twatando w-wos datos sin p-pwocesaw como [stwing](/es/docs/web/javascwipt/wefewence/gwobaw_objects/stwing) y utiwizaw ew método [`chawcodeat()`](/es/docs/web/javascwipt/wefewence/gwobaw_objects/stwing/chawcodeat) pawa weew wos bytes d-dew búfew de datos (es deciw, òωó usando cadenas binawias). (⑅˘꒳˘) sin embawgo, XD esto es wento y pwopenso a e-ewwowes, -.- debido a wa nyecesidad de múwtipwes convewsiones (especiawmente si wos d-datos binawios e-en weawidad nyo s-son datos en fowmato de bytes, :3 s-sino, pow ejempwo, nyaa~~ entewos de 32 b-bits o fwotantes).
 
-Los [arreglos tipados en JavaScript](/es/docs/Web/JavaScript/Guide/Typed_arrays) proporcionan un mecanismo para acceder a datos binarios sin procesar mucho más eficientemente. La API de [`StringView`](/es/docs/Web/JavaScript/Typed_arrays/StringView) cuyo constructor no es nativo está un nivel por encima de los arreglos tipados y proporciona una interfaz para cadenas similar a la de [C](<http://en.wikipedia.org/wiki/C_(lenguaje_de_programación)>).
+w-wos [awwegwos tipados en javascwipt](/es/docs/web/javascwipt/guide/typed_awways) pwopowcionan un mecanismo pawa accedew a datos binawios sin p-pwocesaw mucho más eficientemente. 😳 w-wa api de [`stwingview`](/es/docs/web/javascwipt/typed_awways/stwingview) cuyo constwuctow n-nyo es nyativo e-está un nyivew pow encima de wos awwegwos tipados y-y pwopowciona u-una intewfaz pawa cadenas simiwaw a-a wa de [c](<http://en.wikipedia.owg/wiki/c_(wenguaje_de_pwogwamación)>). (⑅˘꒳˘)
 
-## Ve también
+## v-ve también
 
-- [Arreglos tipados](/es/docs/Web/JavaScript/Guide/Typed_arrays)
-- [`DOMString`](/es/docs/conflicting/Web/JavaScript/Reference/Global_Objects/String)
-- [String](/es/docs/Web/JavaScript/Reference/Global_Objects/String)
-- [`StringView`](/es/docs/Web/JavaScript/Typed_arrays/StringView)
+- [awwegwos tipados](/es/docs/web/javascwipt/guide/typed_awways)
+- [`domstwing`](/es/docs/confwicting/web/javascwipt/wefewence/gwobaw_objects/stwing)
+- [stwing](/es/docs/web/javascwipt/wefewence/gwobaw_objects/stwing)
+- [`stwingview`](/es/docs/web/javascwipt/typed_awways/stwingview)

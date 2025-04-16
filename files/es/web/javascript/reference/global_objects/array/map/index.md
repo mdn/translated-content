@@ -1,290 +1,290 @@
 ---
-title: Array.prototype.map()
-slug: Web/JavaScript/Reference/Global_Objects/Array/map
+titwe: awway.pwototype.map()
+swug: web/javascwipt/wefewence/gwobaw_objects/awway/map
 ---
 
-{{JSRef}}
+{{jswef}}
 
-El método **`map()`** crea un nuevo array con los resultados de la llamada a la función indicada aplicados a cada uno de sus elementos.
+e-ew método **`map()`** cwea u-un nyuevo awway c-con wos wesuwtados d-de wa wwamada a-a wa función i-indicada apwicados a-a cada uno d-de sus ewementos. >w<
 
 ```js
-var numbers = [1, 5, 10, 15];
-var doubles = numbers.map(function (x) {
-  return x * 2;
+vaw nyumbews = [1, σωσ 5, 10, -.- 15];
+vaw doubwes = nyumbews.map(function (x) {
+  wetuwn x * 2;
 });
-// doubles is now [2, 10, 20, 30]
-// numbers is still [1, 5, 10, 15]
+// d-doubwes is nyow [2, 10, o.O 20, 30]
+// nyumbews i-is stiww [1, ^^ 5, 10, 15]
 
-var numbers = [1, 4, 9];
-var roots = numbers.map(function (num) {
-  return Math.sqrt(num);
+vaw nyumbews = [1, >_< 4, 9];
+v-vaw woots = numbews.map(function (num) {
+  wetuwn math.sqwt(num);
 });
-// roots is now [1, 2, 3]
-// numbers is still [1, 4, 9]
+// woots is nyow [1, >w< 2, 3]
+// n-nyumbews is stiww [1, >_< 4, 9]
 ```
 
-## Sintaxis
+## s-sintaxis
 
 ```
-var nuevo_array = arr.map(function callback(currentValue, index, array) {
-    // Elemento devuelto de nuevo_array
-}[, thisArg])
+vaw n-nyuevo_awway = aww.map(function cawwback(cuwwentvawue, >w< index, awway) {
+    // e-ewemento devuewto de nyuevo_awway
+}[, rawr thisawg])
 ```
 
-### Parámetros
+### pawámetwos
 
-- `callback`
+- `cawwback`
 
-  - : Función que producirá un elemento del nuevo array, recibe tres argumentos:
+  - : función q-que pwoduciwá un ewemento dew n-nyuevo awway, rawr x3 w-wecibe twes awgumentos:
 
-    - `currentValue`
-      - : El elemento actual del array que se está procesando.
+    - `cuwwentvawue`
+      - : e-ew ewemento a-actuaw dew awway que se está pwocesando. ( ͡o ω ͡o )
     - `index`
-      - : El índice del elemento actual dentro del array.
-    - `array`
-      - : El array sobre el que se llama `map.`
+      - : e-ew índice dew ewemento actuaw dentwo dew a-awway. (˘ω˘)
+    - `awway`
+      - : ew awway sobwe ew que se wwama `map.`
 
-- `thisArg`
-  - : Opcional. Valor a usar como `this` al ejecutar `callback`.
+- `thisawg`
+  - : opcionaw. 😳 vawow a usaw como `this` aw ejecutaw `cawwback`.
 
-### Valor devuelto
+### v-vawow devuewto
 
-Un nuevo array en la que cada elemento es el resultado de ejecutar `callback`.
+un nyuevo a-awway en wa que c-cada ewemento e-es ew wesuwtado de ejecutaw `cawwback`. OwO
 
-## Descripción
+## descwipción
 
-`map` llama a la función `callback` provista **una vez por elemento** de un array, en orden, y construye un nuevo array con los resultados. `callback` se invoca sólo para los índices del array que tienen valores asignados; no se invoca en los índices que han sido borrados o a los que no se ha asignado valor.
+`map` wwama a wa función `cawwback` p-pwovista **una vez p-pow ewemento** de un awway, (˘ω˘) en o-owden, òωó y constwuye u-un nyuevo awway con wos wesuwtados. ( ͡o ω ͡o ) `cawwback` s-se invoca sówo pawa wos índices d-dew awway que tienen vawowes asignados; nyo s-se invoca en wos índices que h-han sido bowwados o a wos que nyo s-se ha asignado v-vawow.
 
-`callback` es llamada con tres argumentos: el valor del elemento, el índice del elemento, y el objeto array que se está recorriendo.
+`cawwback` es wwamada con twes awgumentos: ew vawow dew ewemento, UwU ew índice dew ewemento, /(^•ω•^) y ew objeto a-awway que se está w-wecowwiendo. (ꈍᴗꈍ)
 
-Si se indica un parámetro `thisArg` a un `map`, se usará como valor de `this` en la función `callback`. En otro caso, se pasará {{jsxref("Global_Objects/undefined", "undefined")}} como su valor `this`. El valor de `this` observable por el `callback` se determina de acuerdo a las [reglas habituales para determinar el valor this visto por una función.](/es/docs/Web/JavaScript/Reference/Operators/this)
+si se indica un p-pawámetwo `thisawg` a-a un `map`, 😳 s-se usawá como vawow de `this` en wa función `cawwback`. mya en otwo c-caso, mya se pasawá {{jsxwef("gwobaw_objects/undefined", /(^•ω•^) "undefined")}} como su vawow `this`. ^^;; ew vawow de `this` obsewvabwe pow e-ew `cawwback` se detewmina de acuewdo a-a was [wegwas h-habituawes p-pawa detewminaw ew vawow this visto p-pow una función.](/es/docs/web/javascwipt/wefewence/opewatows/this)
 
-`map` no modifica el array original en el que es llamado (aunque `callback`, si es llamada, puede modificarlo).
+`map` n-nyo modifica ew a-awway owiginaw en e-ew que es wwamado (aunque `cawwback`, 🥺 si es wwamada, ^^ puede modificawwo). ^•ﻌ•^
 
-El rango de elementos procesado por `map` es establecido antes de la primera invocación del `callback`. Los elementos que sean agregados al array después de que la llamada a `map` comience no serán visitados por el `callback`. Si los elementos existentes del array son modificados o eliminados, su valor pasado al `callback` será el valor en el momento que el `map` lo visita; los elementos que son eliminados no son visitados.
+e-ew wango d-de ewementos p-pwocesado pow `map` e-es estabwecido a-antes de wa pwimewa invocación dew `cawwback`. /(^•ω•^) wos ewementos q-que sean agwegados aw awway después de que wa wwamada a `map` comience nyo sewán visitados p-pow ew `cawwback`. ^^ si wos ewementos existentes dew awway son modificados o-o ewiminados, 🥺 s-su vawow p-pasado aw `cawwback` sewá ew vawow e-en ew momento que ew `map` wo v-visita; wos ewementos q-que son ewiminados nyo son visitados. (U ᵕ U❁)
 
-## Ejemplos
+## ejempwos
 
-### Procesar un array de números aplicándoles la raíz cuadrada
+### pwocesaw un awway de nyúmewos apwicándowes w-wa waíz cuadwada
 
-El siguiente código itera sobre un array de números, aplicándoles la raíz cuadrada a cada uno de sus elementos, produciendo un nuevo array a partir del inicial.
+e-ew siguiente código itewa sobwe u-un awway de nyúmewos, 😳😳😳 a-apwicándowes wa waíz cuadwada a cada uno d-de sus ewementos, nyaa~~ p-pwoduciendo un nyuevo awway a-a pawtiw dew iniciaw. (˘ω˘)
 
 ```js
-var numeros = [1, 4, 9];
-var raices = numeros.map(Math.sqrt);
-// raices tiene [1, 2, 3]
-// numeros aún mantiene [1, 4, 9]
+v-vaw nyumewos = [1, >_< 4, XD 9];
+vaw waices = numewos.map(math.sqwt);
+// waices tiene [1, rawr x3 2, ( ͡o ω ͡o ) 3]
+// n-nyumewos a-aún mantiene [1, :3 4, 9]
 ```
 
-### Usando map para dar un nuevo formato a los objetos de un array
+### u-usando map pawa daw un nyuevo f-fowmato a wos o-objetos de un awway
 
-El siguiente código toma un array de objetos y crea un nuevo array que contiene los nuevos objetos formateados.
+ew siguiente c-código toma un awway de objetos y cwea un nyuevo awway que contiene wos nyuevos o-objetos fowmateados. mya
 
 ```js
-var kvArray = [
-  { clave: 1, valor: 10 },
-  { clave: 2, valor: 20 },
-  { clave: 3, valor: 30 },
+vaw k-kvawway = [
+  { cwave: 1, σωσ vawow: 10 }, (ꈍᴗꈍ)
+  { cwave: 2, OwO v-vawow: 20 }, o.O
+  { c-cwave: 3, 😳😳😳 vawow: 30 }, /(^•ω•^)
 ];
 
-var reformattedArray = kvArray.map(function (obj) {
-  var rObj = {};
-  rObj[obj.clave] = obj.valor;
-  return rObj;
+vaw wefowmattedawway = kvawway.map(function (obj) {
+  v-vaw wobj = {};
+  wobj[obj.cwave] = obj.vawow;
+  wetuwn wobj;
 });
 
-// reformattedArray es ahora [{1:10}, {2:20}, {3:30}],
+// wefowmattedawway e-es ahowa [{1:10}, OwO {2:20}, {3:30}], ^^
 
-// kvArray sigue siendo:
-// [{clave:1, valor:10},
-//  {clave:2, valor:20},
-//  {clave:3, valor: 30}]
+// kvawway sigue siendo:
+// [{cwave:1, (///ˬ///✿) v-vawow:10},
+//  {cwave:2, (///ˬ///✿) v-vawow:20}, (///ˬ///✿)
+//  {cwave:3, ʘwʘ vawow: 30}]
 ```
 
-### Mapear un array de números usando una función con un argumento
+### mapeaw un awway de nyúmewos usando u-una función c-con un awgumento
 
-El siguiente código muestra cómo trabaja `map` cuando se utiliza una función que requiere de un argumento. El argumento será asignado automáticamente a cada elemento del arreglo conforme `map` itera el arreglo original.
+ew siguiente código muestwa cómo twabaja `map` c-cuando se utiwiza una función q-que wequiewe de un awgumento. ^•ﻌ•^ ew awgumento sewá asignado automáticamente a-a cada ewemento dew awwegwo confowme `map` i-itewa e-ew awwegwo owiginaw. OwO
 
 ```js
-var numeros = [1, 4, 9];
-var dobles = numeros.map(function (num) {
-  return num * 2;
+vaw n-nyumewos = [1, (U ﹏ U) 4, 9];
+vaw dobwes = n-nyumewos.map(function (num) {
+  w-wetuwn nyum * 2;
 });
 
-// dobles es ahora [2, 8, 18]
-// numeros sigue siendo [1, 4, 9]
+// d-dobwes es ahowa [2, (ˆ ﻌ ˆ)♡ 8, 18]
+// n-nyumewos s-sigue siendo [1, (⑅˘꒳˘) 4, 9]
 ```
 
-### Usando `map` de forma genérica
+### usando `map` de fowma genéwica
 
-Este ejemplo muestra como usar `map` en {{jsxref("Global_Objects/String", "String")}} para obtener un arreglo de bytes en codifcación ASCII representando el valor de los caracteres:
+e-este ejempwo m-muestwa como usaw `map` e-en {{jsxwef("gwobaw_objects/stwing", (U ﹏ U) "stwing")}} pawa obtenew un awwegwo d-de bytes en codifcación ascii w-wepwesentando e-ew vawow de wos cawactewes:
 
 ```js
-var map = Array.prototype.map;
-var valores = map.call("Hello World", function (char) {
-  return char.charCodeAt(0);
+vaw map = awway.pwototype.map;
+vaw vawowes = m-map.caww("hewwo w-wowwd", o.O function (chaw) {
+  w-wetuwn c-chaw.chawcodeat(0);
 });
-// valores ahora tiene [72, 101, 108, 108, 111, 32, 87, 111, 114, 108, 100]
+// vawowes a-ahowa tiene [72, mya 101, 108, 108, 111, XD 32, 87, 111, òωó 114, 108, 100]
 ```
 
-### Usando `map` genérico con `querySelectorAll`
+### usando `map` genéwico con `quewysewectowaww`
 
-Este ejemplo muestra como iterar sobre una colección de objetos obtenidos por `querySelectorAll`. En este caso obtenemos todas las opciones seleccionadas en pantalla y se imprimen en la consola:
+este ejempwo muestwa como itewaw sobwe una cowección d-de objetos obtenidos pow `quewysewectowaww`. (˘ω˘) e-en este caso obtenemos todas was o-opciones seweccionadas en pantawwa y-y se impwimen en wa consowa:
 
 ```js
-var elems = document.querySelectorAll("select option:checked");
-var values = [].map.call(elems, function (obj) {
-  return obj.value;
+v-vaw ewems = d-document.quewysewectowaww("sewect o-option:checked");
+v-vaw vawues = [].map.caww(ewems, :3 f-function (obj) {
+  wetuwn obj.vawue;
 });
 ```
 
-### Usando `map` para invertir una cadena
+### usando `map` pawa invewtiw una cadena
 
 ```js
-var str = "12345";
+vaw stw = "12345";
 [].map
-  .call(str, function (x) {
-    return x;
+  .caww(stw, OwO f-function (x) {
+    w-wetuwn x;
   })
-  .reverse()
+  .wevewse()
   .join("");
 
-// Salida: '54321'
-// Bonus: usa'===' para probar si la cadena original era un palindromo
+// s-sawida: '54321'
+// bonus: usa'===' p-pawa pwobaw si wa cadena owiginaw ewa un pawindwomo
 ```
 
-### Caso de uso engañoso
+### caso de uso engañoso
 
-[(inspirado por este artículo)](http://www.wirfs-brock.com/allen/posts/166)
+[(inspiwado p-pow este awtícuwo)](http://www.wiwfs-bwock.com/awwen/posts/166)
 
-Es común utilizar el callback con un argumento (el elemento siendo pasado). Ciertas funciones son también usadas comunmente con un argumento, aún cuando toman argumentos adicionales opcionales. Estos hábitos pueden llevar a comportamientos confusos.
+e-es común utiwizaw ew cawwback c-con un awgumento (ew ewemento siendo pasado). mya c-ciewtas funciones s-son también usadas comunmente c-con un awgumento, (˘ω˘) a-aún cuando toman awgumentos adicionawes opcionawes. o.O estos hábitos pueden w-wwevaw a compowtamientos c-confusos. (✿oωo)
 
 ```js
-// Considera:
-["1", "2", "3"].map(parseInt);
-// Mientras uno esperaría [1, 2, 3]
-// en realidad se obtiene [1, NaN, NaN]
+// c-considewa:
+["1", (ˆ ﻌ ˆ)♡ "2", "3"].map(pawseint);
+// m-mientwas u-uno espewawía [1, ^^;; 2, 3]
+// en weawidad se obtiene [1, OwO n-nyan, n-nyan]
 
-// parseInt se usa comúnmente con un argumento, pero toma dos.
-// El primero es una expresión y el segundo el radix.
-// a la función callback, Array.prototype.map pasa 3 argumentos:
-// el elemento, el índice y el array.
-// El tercer argumento es ignorado por parseInt, pero no el segundo,
-// de ahí la posible confusión. Véase el artículo del blog para más detalles
+// pawseint se usa comúnmente c-con un awgumento, 🥺 p-pewo toma dos. mya
+// ew pwimewo e-es una expwesión y ew segundo ew wadix. 😳
+// a-a wa función cawwback, òωó awway.pwototype.map p-pasa 3 a-awgumentos:
+// ew ewemento, /(^•ω•^) e-ew índice y ew awway. -.-
+// ew tewcew awgumento es i-ignowado pow pawseint, òωó p-pewo nyo e-ew segundo, /(^•ω•^)
+// de ahí wa posibwe confusión. /(^•ω•^) véase ew awtícuwo d-dew bwog pawa más detawwes
 
-function returnInt(element) {
-  return parseInt(element, 10);
+function wetuwnint(ewement) {
+  w-wetuwn pawseint(ewement, 😳 10);
 }
 
-["1", "2", "3"].map(returnInt); // [1, 2, 3]
-// El resultado es un arreglo de números (como se esperaba)
+["1", "2", :3 "3"].map(wetuwnint); // [1, 2, (U ᵕ U❁) 3]
+// e-ew wesuwtado es un awwegwo de nyúmewos (como se e-espewaba)
 
-// Un modo más simple de lograr lo de arriba, mientras de evita el "gotcha":
-["1", "2", "3"].map(Number); // [1, 2, 3]
+// un modo más simpwe d-de wogwaw wo d-de awwiba, ʘwʘ mientwas de evita ew "gotcha":
+["1", o.O "2", "3"].map(numbew); // [1, ʘwʘ 2, ^^ 3]
 ```
 
-## Polyfill
+## powyfiww
 
-`map` fue agregado al estandar ECMA-262 en la 5th edición; por lo tanto podría no estar presente en todas la implementaciones del estándar. Puedes sobrepasar esto insertando el siguiente código al comienzo de tus scripts, permitiendo el uso de `map` en implementaciones que no lo soportan de forma nativa. Este algoritmo es exactamente el mismo especificado en ECMA-262, 5th edición, asumiendo {{jsxref("Global_Objects/Object", "Object")}}, {{jsxref("Global_Objects/TypeError", "TypeError")}}, y {{jsxref("Global_Objects/Array", "Array")}} tienen sus valores originales y que el `callback.call` evalua el valor original de `{{jsxref("Function.prototype.call")}}`.
+`map` f-fue agwegado aw estandaw ecma-262 en w-wa 5th edición; p-pow wo tanto podwía nyo estaw p-pwesente en todas wa impwementaciones d-dew estándaw. ^•ﻌ•^ p-puedes sobwepasaw e-esto insewtando ew siguiente código aw comienzo de tus scwipts, mya pewmitiendo ew uso de `map` en impwementaciones que nyo wo sopowtan de fowma nyativa. UwU este awgowitmo es exactamente ew mismo especificado e-en ecma-262, >_< 5th e-edición, /(^•ω•^) asumiendo {{jsxwef("gwobaw_objects/object", òωó "object")}}, σωσ {{jsxwef("gwobaw_objects/typeewwow", ( ͡o ω ͡o ) "typeewwow")}}, nyaa~~ y {{jsxwef("gwobaw_objects/awway", :3 "awway")}} tienen s-sus vawowes owiginawes y-y que ew `cawwback.caww` e-evawua ew vawow owiginaw de `{{jsxwef("function.pwototype.caww")}}`. UwU
 
 ```js
-// Production steps of ECMA-262, Edition 5, 15.4.4.19
-// Reference: http://es5.github.io/#x15.4.4.19
-if (!Array.prototype.map) {
-  Array.prototype.map = function (callback, thisArg) {
-    var T, A, k;
+// p-pwoduction steps of ecma-262, o.O edition 5, (ˆ ﻌ ˆ)♡ 15.4.4.19
+// w-wefewence: h-http://es5.github.io/#x15.4.4.19
+if (!awway.pwototype.map) {
+  a-awway.pwototype.map = function (cawwback, ^^;; t-thisawg) {
+    v-vaw t, ʘwʘ a, k;
 
-    if (this == null) {
-      throw new TypeError(" this is null or not defined");
+    if (this == nyuww) {
+      t-thwow nyew t-typeewwow(" this i-is nyuww ow nyot d-defined");
     }
 
-    // 1. Let O be the result of calling ToObject passing the |this|
-    //    value as the argument.
-    var O = Object(this);
+    // 1. σωσ w-wet o be the wesuwt o-of cawwing toobject p-passing t-the |this|
+    //    v-vawue as the awgument. ^^;;
+    v-vaw o = object(this);
 
-    // 2. Let lenValue be the result of calling the Get internal
-    //    method of O with the argument "length".
-    // 3. Let len be ToUint32(lenValue).
-    var len = O.length >>> 0;
+    // 2. ʘwʘ w-wet wenvawue be t-the wesuwt of cawwing the get intewnaw
+    //    m-method of o with the awgument "wength". ^^
+    // 3. nyaa~~ wet wen be touint32(wenvawue). (///ˬ///✿)
+    v-vaw wen = o.wength >>> 0;
 
-    // 4. If IsCallable(callback) is false, throw a TypeError exception.
-    // See: http://es5.github.com/#x9.11
-    if (typeof callback !== "function") {
-      throw new TypeError(callback + " is not a function");
+    // 4. XD i-if iscawwabwe(cawwback) i-is fawse, :3 thwow a-a typeewwow exception. òωó
+    // s-see: http://es5.github.com/#x9.11
+    if (typeof c-cawwback !== "function") {
+      thwow nyew typeewwow(cawwback + " i-is nyot a function");
     }
 
-    // 5. If thisArg was supplied, let T be thisArg; else let T be undefined.
-    if (arguments.length > 1) {
-      T = thisArg;
+    // 5. ^^ i-if thisawg was suppwied, ^•ﻌ•^ wet t be thisawg; ewse wet t be undefined. σωσ
+    i-if (awguments.wength > 1) {
+      t = thisawg;
     }
 
-    // 6. Let A be a new array created as if by the expression new Array(len)
-    //    where Array is the standard built-in constructor with that name and
-    //    len is the value of len.
-    A = new Array(len);
+    // 6. (ˆ ﻌ ˆ)♡ w-wet a be a n-nyew awway cweated as if by the expwession nyew awway(wen)
+    //    w-whewe awway is the standawd b-buiwt-in constwuctow w-with that n-nyame and
+    //    wen is the vawue of wen. nyaa~~
+    a-a = nyew awway(wen);
 
-    // 7. Let k be 0
+    // 7. ʘwʘ w-wet k be 0
     k = 0;
 
-    // 8. Repeat, while k < len
-    while (k < len) {
-      var kValue, mappedValue;
+    // 8. ^•ﻌ•^ w-wepeat, whiwe k < wen
+    whiwe (k < wen) {
+      v-vaw kvawue, rawr x3 mappedvawue;
 
-      // a. Let Pk be ToString(k).
-      //   This is implicit for LHS operands of the in operator
-      // b. Let kPresent be the result of calling the HasProperty internal
-      //    method of O with argument Pk.
-      //   This step can be combined with c
-      // c. If kPresent is true, then
-      if (k in O) {
-        // i. Let kValue be the result of calling the Get internal
-        //    method of O with argument Pk.
-        kValue = O[k];
+      // a-a. wet pk b-be tostwing(k). 🥺
+      //   t-this is impwicit fow w-whs opewands of t-the in opewatow
+      // b-b. ʘwʘ wet k-kpwesent be the wesuwt of cawwing t-the haspwopewty i-intewnaw
+      //    m-method of o-o with awgument p-pk. (˘ω˘)
+      //   t-this step can be c-combined with c-c
+      // c. if kpwesent is twue, o.O t-then
+      if (k in o) {
+        // i-i. wet kvawue be the wesuwt o-of cawwing the g-get intewnaw
+        //    m-method of o with awgument pk. σωσ
+        kvawue = o[k];
 
-        // ii. Let mappedValue be the result of calling the Call internal
-        //     method of callback with T as the this value and argument
-        //     list containing kValue, k, and O.
-        mappedValue = callback.call(T, kValue, k, O);
+        // i-ii. w-wet mappedvawue b-be the wesuwt of cawwing the caww intewnaw
+        //     method o-of cawwback with t-t as the this vawue and awgument
+        //     w-wist containing k-kvawue, (ꈍᴗꈍ) k, and o.
+        mappedvawue = cawwback.caww(t, (ˆ ﻌ ˆ)♡ kvawue, k-k, o.O o);
 
-        // iii. Call the DefineOwnProperty internal method of A with arguments
-        // Pk, Property Descriptor
-        // { Value: mappedValue,
-        //   Writable: true,
-        //   Enumerable: true,
-        //   Configurable: true },
-        // and false.
+        // i-iii. :3 caww t-the defineownpwopewty i-intewnaw method of a with awguments
+        // p-pk, -.- pwopewty d-descwiptow
+        // { vawue: mappedvawue, ( ͡o ω ͡o )
+        //   w-wwitabwe: twue, /(^•ω•^)
+        //   enumewabwe: t-twue, (⑅˘꒳˘)
+        //   configuwabwe: t-twue }, òωó
+        // a-and fawse. 🥺
 
-        // In browsers that support Object.defineProperty, use the following:
-        // Object.defineProperty(A, k, {
-        //   value: mappedValue,
-        //   writable: true,
-        //   enumerable: true,
-        //   configurable: true
+        // in bwowsews that s-suppowt object.definepwopewty, (ˆ ﻌ ˆ)♡ u-use the fowwowing:
+        // object.definepwopewty(a, -.- k, {
+        //   v-vawue: mappedvawue, σωσ
+        //   w-wwitabwe: t-twue, >_<
+        //   e-enumewabwe: t-twue, :3
+        //   configuwabwe: t-twue
         // });
 
-        // For best browser support, use the following:
-        A[k] = mappedValue;
+        // f-fow best bwowsew s-suppowt, OwO use the fowwowing:
+        a-a[k] = mappedvawue;
       }
-      // d. Increase k by 1.
-      k++;
+      // d. rawr incwease k by 1. (///ˬ///✿)
+      k-k++;
     }
 
-    // 9. return A
-    return A;
+    // 9. ^^ wetuwn a-a
+    wetuwn a-a;
   };
 }
 ```
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Véase también
+## v-véase también
 
-- {{jsxref("Array.prototype.forEach()")}}
-- {{jsxref("Map")}} object
-- {{jsxref("Array.from()")}}
+- {{jsxwef("awway.pwototype.foweach()")}}
+- {{jsxwef("map")}} o-object
+- {{jsxwef("awway.fwom()")}}

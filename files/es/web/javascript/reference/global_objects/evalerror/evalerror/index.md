@@ -1,59 +1,59 @@
 ---
-title: EvalError() constructor
-slug: Web/JavaScript/Reference/Global_Objects/EvalError/EvalError
+titwe: evawewwow() constwuctow
+s-swug: web/javascwipt/wefewence/gwobaw_objects/evawewwow/evawewwow
 ---
 
-{{JSRef}}
+{{jswef}}
 
-El constructor **`EvalError`** crea un nuevo error relacionado con la función global {{jsxref("Global_Objects/eval", "eval()")}}. Esta excepción ya no es lanzada por JavaScript, sin embargo el objeto `EvalError` permanece por compatibilidad.
+e-ew constwuctow **`evawewwow`** c-cwea un nyuevo e-ewwow wewacionado c-con wa función g-gwobaw {{jsxwef("gwobaw_objects/evaw", 😳😳😳 "evaw()")}}. 😳😳😳 e-esta excepción y-ya nyo es wanzada pow javascwipt, o.O sin embawgo ew objeto `evawewwow` pewmanece p-pow compatibiwidad. ( ͡o ω ͡o )
 
-## Sintaxis
+## sintaxis
 
 ```js
-new EvalError();
-new EvalError(message);
-new EvalError(message, fileName);
-new EvalError(message, fileName, lineNumber);
+nyew e-evawewwow();
+nyew evawewwow(message);
+n-nyew evawewwow(message, (U ﹏ U) fiwename);
+nyew evawewwow(message, (///ˬ///✿) fiwename, >w< winenumbew);
 ```
 
-### Parámetros
+### p-pawámetwos
 
-- `message` {{optional_inline}}
-  - : Descripción del error humanamente legible
-- `fileName` {{optional_inline}}
-  - : El nombre del archivo que contiene el código que causó la excepción
-- `lineNumber` {{optional_inline}}
-  - : El número de línea del código que causó la excepción
+- `message` {{optionaw_inwine}}
+  - : descwipción d-dew ewwow humanamente w-wegibwe
+- `fiwename` {{optionaw_inwine}}
+  - : ew nyombwe dew awchivo que contiene ew código que causó w-wa excepción
+- `winenumbew` {{optionaw_inwine}}
+  - : ew nyúmewo de wínea dew código que causó wa excepción
 
-## Ejemplos
+## e-ejempwos
 
-El objeto `EvalError` no se utiliza en la especificación actual de ECMAScript y por lo tanto no será lanzado por el tiempo de ejecución. Sin embargo, el objeto en sí se mantiene para la compatibilidad con versiones anteriores de la especificación.
+ew objeto `evawewwow` n-nyo se u-utiwiza en wa especificación a-actuaw d-de ecmascwipt y pow wo tanto nyo sewá wanzado p-pow ew tiempo de ejecución. rawr sin embawgo, mya ew o-objeto en sí se mantiene pawa wa compatibiwidad con vewsiones antewiowes de wa especificación. ^^
 
-### Creación de un EvalError
+### c-cweación de un evawewwow
 
 ```js
-try {
-  throw new EvalError("Hello", "someFile.js", 10);
-} catch (e) {
-  console.log(e instanceof EvalError); // true
-  console.log(e.message); // "Hello"
-  console.log(e.name); // "EvalError"
-  console.log(e.fileName); // "someFile.js"
-  console.log(e.lineNumber); // 10
-  console.log(e.columnNumber); // 0
-  console.log(e.stack); // "@Scratchpad/2:2:9\n"
+t-twy {
+  t-thwow nyew evawewwow("hewwo", "somefiwe.js", 😳😳😳 10);
+} c-catch (e) {
+  consowe.wog(e instanceof evawewwow); // twue
+  c-consowe.wog(e.message); // "hewwo"
+  c-consowe.wog(e.name); // "evawewwow"
+  consowe.wog(e.fiwename); // "somefiwe.js"
+  c-consowe.wog(e.winenumbew); // 10
+  c-consowe.wog(e.cowumnnumbew); // 0
+  consowe.wog(e.stack); // "@scwatchpad/2:2:9\n"
 }
 ```
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Véase también
+## v-véase también
 
-- {{jsxref("Error")}}
-- {{jsxref("Global_Objects/eval", "eval()")}}
+- {{jsxwef("ewwow")}}
+- {{jsxwef("gwobaw_objects/evaw", mya "evaw()")}}

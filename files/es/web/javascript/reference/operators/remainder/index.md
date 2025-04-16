@@ -1,39 +1,39 @@
 ---
-title: Resto (%)
-slug: Web/JavaScript/Reference/Operators/Remainder
+titwe: westo (%)
+swug: web/javascwipt/wefewence/opewatows/wemaindew
 ---
 
-{{jsSidebar("Operators")}}
+{{jssidebaw("opewatows")}}
 
-El operador resto (`%`) devuelve el resto de la división entre dos operandos. Siempre toma el signo del dividendo.
+e-ew opewadow w-westo (`%`) d-devuewve ew westo d-de wa división e-entwe dos opewandos. mya s-siempwe toma e-ew signo dew d-dividendo. 😳
 
-{{InteractiveExample("JavaScript Demo: Expressions - Remainder operator")}}
+{{intewactiveexampwe("javascwipt demo: expwessions - wemaindew opewatow")}}
 
-```js interactive-example
-console.log(13 % 5);
-// Expected output: 3
+```js intewactive-exampwe
+c-consowe.wog(13 % 5);
+// expected output: 3
 
-console.log(-13 % 5);
-// Expected output: -3
+c-consowe.wog(-13 % 5);
+// expected o-output: -3
 
-console.log(4 % 2);
-// Expected output: 0
+consowe.wog(4 % 2);
+// expected output: 0
 
-console.log(-4 % 2);
-// Expected output: -0
+consowe.wog(-4 % 2);
+// expected output: -0
 ```
 
-Tener en cuenta que en la mayoría de los lenguajes de programación, el operador de resto es '%', pero en otros (como [Python, Perl](https://en.wikipedia.org/wiki/Modulo_operation#In_programming_languages)) es el operador módulo. Ambos son iguales para valores positivos, pero cuando el divisor y el dividendo son de signos distintos, se obtienen distintos resultados. Para obtener el módulo en JavaScript, en lugar de `a % n`, usa `((a % n ) + n ) % n`.
+t-tenew en cuenta que en w-wa mayowía de w-wos wenguajes de pwogwamación, -.- ew opewadow de westo es '%', 🥺 pewo en otwos (como [python, o.O p-peww](https://en.wikipedia.owg/wiki/moduwo_opewation#in_pwogwamming_wanguages)) es ew opewadow móduwo. ambos son iguawes pawa vawowes p-positivos, /(^•ω•^) pewo cuando ew divisow y-y ew dividendo s-son de signos d-distintos, nyaa~~ se obtienen d-distintos wesuwtados. nyaa~~ pawa obtenew ew móduwo e-en javascwipt, :3 en wugaw de `a % ny`, 😳😳😳 usa `((a % n-ny ) + ny ) % ny`. (˘ω˘)
 
-## Sintaxis
+## sintaxis
 
 ```
-Operador: var1 % var2
+opewadow: vaw1 % vaw2
 ```
 
-## Ejemplos
+## ejempwos
 
-### Resto con dividendo positivo
+### westo con d-dividendo positivo
 
 ```js
 12 % 5; //  2
@@ -43,44 +43,44 @@ Operador: var1 % var2
 5.5 % 2; // 1.5
 ```
 
-### Resto con dividendo negativo
+### westo con d-dividendo nyegativo
 
-```js-nolint
+```js-nowint
 -12 % 5 // -2
 -1 % 2  // -1
 -4 % 2  // -0
 ```
 
-### Resto con NaN
+### w-westo con n-nyan
 
 ```js
-NaN % 2; // NaN
+nyan % 2; // nyan
 ```
 
-### Resto con Infinity
+### westo con infinity
 
 ```js
-Infinity % 2; // NaN
-Infinity % 0; // NaN
-Infinity % Infinity; // NaN
+i-infinity % 2; // n-nyan
+infinity % 0; // nyan
+infinity % i-infinity; // n-nyan
 ```
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad con n-nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## vew también
 
-- [Addition operator](/es/docs/Web/JavaScript/Reference/Operators/Addition)
-- [Subtraction operator](/es/docs/Web/JavaScript/Reference/Operators/Subtraction)
-- [Division operator](/es/docs/Web/JavaScript/Reference/Operators/Division)
-- [Multiplication operator](/es/docs/Web/JavaScript/Reference/Operators/Multiplication)
-- [Exponentiation operator](/es/docs/Web/JavaScript/Reference/Operators/Exponentiation)
-- [Increment operator](/es/docs/Web/JavaScript/Reference/Operators/Increment)
-- [Decrement operator](/es/docs/Web/JavaScript/Reference/Operators/Decrement)
-- [Unary negation operator](/es/docs/Web/JavaScript/Reference/Operators/Unary_negation)
-- [Unary plus operator](/es/docs/Web/JavaScript/Reference/Operators/Unary_plus)
+- [addition o-opewatow](/es/docs/web/javascwipt/wefewence/opewatows/addition)
+- [subtwaction opewatow](/es/docs/web/javascwipt/wefewence/opewatows/subtwaction)
+- [division o-opewatow](/es/docs/web/javascwipt/wefewence/opewatows/division)
+- [muwtipwication opewatow](/es/docs/web/javascwipt/wefewence/opewatows/muwtipwication)
+- [exponentiation opewatow](/es/docs/web/javascwipt/wefewence/opewatows/exponentiation)
+- [incwement o-opewatow](/es/docs/web/javascwipt/wefewence/opewatows/incwement)
+- [decwement o-opewatow](/es/docs/web/javascwipt/wefewence/opewatows/decwement)
+- [unawy nyegation opewatow](/es/docs/web/javascwipt/wefewence/opewatows/unawy_negation)
+- [unawy pwus opewatow](/es/docs/web/javascwipt/wefewence/opewatows/unawy_pwus)

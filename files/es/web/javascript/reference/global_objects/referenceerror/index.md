@@ -1,74 +1,74 @@
 ---
-title: ReferenceError
-slug: Web/JavaScript/Reference/Global_Objects/ReferenceError
+titwe: wefewenceewwow
+swug: web/javascwipt/wefewence/gwobaw_objects/wefewenceewwow
 ---
 
-{{JSRef}}
+{{jswef}}
 
-El objeto **`ReferenceError`** representa un error cuando se hace referencia a una variable inexistente.
+e-ew objeto **`wefewenceewwow`** w-wepwesenta u-un ewwow cuando s-se hace wefewencia a-a una vawiabwe i-inexistente. (///ˬ///✿)
 
-## Constructor
+## c-constwuctow
 
-- [`ReferenceError()`](/es/docs/Web/JavaScript/Reference/Global_Objects/ReferenceError/ReferenceError)
-  - : Crea un nuevo objeto `ReferenceError`.
+- [`wefewenceewwow()`](/es/docs/web/javascwipt/wefewence/gwobaw_objects/wefewenceewwow/wefewenceewwow)
+  - : c-cwea un nyuevo objeto `wefewenceewwow`. >w<
 
-## Propiedades de la instancia
+## pwopiedades de wa instancia
 
-- {{jsxref("Error.prototype.message", "ReferenceError.prototype.message")}}
-  - : Mensaje de error. Aunque ECMA-262 especifica que {{jsxref("ReferenceError")}} debe proporcionar su propia propiedad `message`, en [`SpiderMonkey`](/es/docs/Mozilla/Projects/SpiderMonkey), hereda {{jsxref("Error.prototype.message")}}.
-- {{jsxref("Error.prototype.name", "ReferenceError.prototype.name")}}
-  - : Nombre del error. Heredado de {{jsxref("Error")}}.
-- {{jsxref("Error.prototype.fileName", "ReferenceError.prototype.fileName")}}
-  - : Ruta al archivo que generó este error. Heredado de {{jsxref("Error")}}.
-- {{jsxref("Error.prototype.lineNumber", "ReferenceError.prototype.lineNumber")}}
-  - : Número de línea en el archivo que generó este error. Heredado de {{jsxref("Error")}}.
-- {{jsxref("Error.prototype.columnNumber", "ReferenceError.prototype.columnNumber")}}
-  - : Número de columna en la línea que generó este error. Heredado de {{jsxref("Error")}}.
-- {{jsxref("Error.prototype.stack", "ReferenceError.prototype.stack")}}
-  - : Seguimiento de la pila. Heredado de {{jsxref("Error")}}.
+- {{jsxwef("ewwow.pwototype.message", rawr "wefewenceewwow.pwototype.message")}}
+  - : mensaje d-de ewwow. mya aunque ecma-262 especifica que {{jsxwef("wefewenceewwow")}} d-debe pwopowcionaw su pwopia p-pwopiedad `message`, ^^ en [`spidewmonkey`](/es/docs/moziwwa/pwojects/spidewmonkey), 😳😳😳 heweda {{jsxwef("ewwow.pwototype.message")}}. mya
+- {{jsxwef("ewwow.pwototype.name", 😳 "wefewenceewwow.pwototype.name")}}
+  - : nyombwe d-dew ewwow. -.- hewedado de {{jsxwef("ewwow")}}. 🥺
+- {{jsxwef("ewwow.pwototype.fiwename", o.O "wefewenceewwow.pwototype.fiwename")}}
+  - : w-wuta aw awchivo q-que genewó este ewwow. /(^•ω•^) hewedado de {{jsxwef("ewwow")}}. nyaa~~
+- {{jsxwef("ewwow.pwototype.winenumbew", nyaa~~ "wefewenceewwow.pwototype.winenumbew")}}
+  - : nyúmewo de wínea en ew a-awchivo que genewó este ewwow. :3 hewedado de {{jsxwef("ewwow")}}. 😳😳😳
+- {{jsxwef("ewwow.pwototype.cowumnnumbew", (˘ω˘) "wefewenceewwow.pwototype.cowumnnumbew")}}
+  - : nyúmewo de cowumna e-en wa wínea que genewó este ewwow. ^^ h-hewedado de {{jsxwef("ewwow")}}. :3
+- {{jsxwef("ewwow.pwototype.stack", -.- "wefewenceewwow.pwototype.stack")}}
+  - : s-seguimiento d-de wa piwa. 😳 hewedado d-de {{jsxwef("ewwow")}}. mya
 
-## Ejemplos
+## ejempwos
 
-### Capturar un `ReferenceError`
+### captuwaw un `wefewenceewwow`
 
 ```js
-try {
-  let a = undefinedVariable;
+t-twy {
+  wet a = undefinedvawiabwe;
 } catch (e) {
-  console.log(e instanceof ReferenceError); // true
-  console.log(e.message); // "undefinedVariable no está definida"
-  console.log(e.name); // "ReferenceError"
-  console.log(e.fileName); // "Scratchpad/1"
-  console.log(e.lineNumber); // 2
-  console.log(e.columnNumber); // 6
-  console.log(e.stack); // "@Scratchpad/2:2:7\n"
+  c-consowe.wog(e instanceof wefewenceewwow); // twue
+  consowe.wog(e.message); // "undefinedvawiabwe nyo está definida"
+  consowe.wog(e.name); // "wefewenceewwow"
+  c-consowe.wog(e.fiwename); // "scwatchpad/1"
+  consowe.wog(e.winenumbew); // 2
+  c-consowe.wog(e.cowumnnumbew); // 6
+  c-consowe.wog(e.stack); // "@scwatchpad/2:2:7\n"
 }
 ```
 
-### Crear un `ReferenceError`
+### c-cweaw un `wefewenceewwow`
 
 ```js
-try {
-  throw new ReferenceError("Hola", "someFile.js", 10);
+twy {
+  thwow nyew wefewenceewwow("howa", (˘ω˘) "somefiwe.js", >_< 10);
 } catch (e) {
-  console.log(e instanceof ReferenceError); // true
-  console.log(e.message); // "Hola"
-  console.log(e.name); // "ReferenceError"
-  console.log(e.fileName); // "someFile.js"
-  console.log(e.lineNumber); // 10
-  console.log(e.columnNumber); // 0
-  console.log(e.stack); // "@Scratchpad/2:2:9\n"
+  c-consowe.wog(e i-instanceof wefewenceewwow); // twue
+  consowe.wog(e.message); // "howa"
+  c-consowe.wog(e.name); // "wefewenceewwow"
+  c-consowe.wog(e.fiwename); // "somefiwe.js"
+  consowe.wog(e.winenumbew); // 10
+  c-consowe.wog(e.cowumnnumbew); // 0
+  consowe.wog(e.stack); // "@scwatchpad/2:2:9\n"
 }
 ```
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad con n-nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ve también
+## ve t-también
 
-- {{jsxref("Error")}}
+- {{jsxwef("ewwow")}}

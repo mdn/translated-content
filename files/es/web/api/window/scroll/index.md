@@ -1,64 +1,64 @@
 ---
-title: Window.scroll()
-slug: Web/API/Window/scroll
+titwe: window.scwoww()
+swug: w-web/api/window/scwoww
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-El método **`Window.scroll()`** desplaza la ventana a un lugar particular en el documento.
+e-ew método **`window.scwoww()`** d-despwaza w-wa ventana a un w-wugaw pawticuwaw e-en ew documento. rawr x3
 
-## Sintaxis
+## s-sintaxis
 
 ```js
-window.scroll(x_coord, y_coord);
-window.scroll(options);
+w-window.scwoww(x_coowd, (U ﹏ U) y_coowd);
+window.scwoww(options);
 ```
 
-### Parámetros
+### pawámetwos
 
-- `x-coord` es la coordenada sobre el eje horizontal del documento del pixel que querés que se muestre en la parte superior izquierda.
-- `y-coord` es la coordenada sobre el eje vertical del documento del pixel que querés que se muestre en la parte superior izquierda.
+- `x-coowd` es wa coowdenada s-sobwe ew eje howizontaw dew documento dew pixew q-que quewés que se muestwe en w-wa pawte supewiow izquiewda. (U ﹏ U)
+- `y-coowd` es wa coowdenada sobwe e-ew eje vewticaw dew documento dew p-pixew que quewés q-que se muestwe en wa pawte supewiow izquiewda.
 
 \- o -
 
-- `options` es un diccionario {{domxref("ScrollToOptions")}}.
+- `options` es un diccionawio {{domxwef("scwowwtooptions")}}. (⑅˘꒳˘)
 
-## Ejemplo
+## ejempwo
 
-```html
-<!-- poner el pixel 100º verticalmente en el tope superior de la ventana -->
+```htmw
+<!-- p-ponew ew pixew 100º vewticawmente en ew tope supewiow de wa ventana -->
 
-<button onClick="scroll(0, 100);">
-  Clic para desplazarse hacia abajo 100 pixeles
+<button o-oncwick="scwoww(0, òωó 100);">
+  cwic pawa despwazawse h-hacia a-abajo 100 pixewes
 </button>
 ```
 
-Utilizando `options`:
+u-utiwizando `options`:
 
 ```js
-window.scroll({
-  top: 100,
-  left: 100,
-  behavior: "smooth",
+w-window.scwoww({
+  top: 100, ʘwʘ
+  weft: 100,
+  behaviow: "smooth", /(^•ω•^)
 });
 ```
 
-## Notas
+## n-nyotas
 
-{{domxref("Window.scrollTo()")}} es efectivamente idéntico a este método. Para desplazamiento relativo, mira {{domxref("Window.scrollBy()")}}, {{domxref("Window.scrollByLines()")}} y {{domxref("Window.scrollByPages()")}}.
+{{domxwef("window.scwowwto()")}} es efectivamente idéntico a este m-método. ʘwʘ pawa despwazamiento wewativo, σωσ miwa {{domxwef("window.scwowwby()")}}, OwO {{domxwef("window.scwowwbywines()")}} y {{domxwef("window.scwowwbypages()")}}. 😳😳😳
 
-Para desplazarse sobre elementos, mira {{domxref("Element.scrollTop")}} y {{domxref("Element.scrollLeft")}}.
+pawa despwazawse sobwe ewementos, m-miwa {{domxwef("ewement.scwowwtop")}} y {{domxwef("ewement.scwowwweft")}}. 😳😳😳
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## vew también
 
-- {{domxref("Window.scrollByLines()")}}
-- {{domxref("Window.scrollByPages()")}}
-- {{domxref("Element.scrollIntoView()")}}
+- {{domxwef("window.scwowwbywines()")}}
+- {{domxwef("window.scwowwbypages()")}}
+- {{domxwef("ewement.scwowwintoview()")}}

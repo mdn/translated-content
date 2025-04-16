@@ -1,60 +1,60 @@
 ---
-title: String.prototype.search()
-slug: Web/JavaScript/Reference/Global_Objects/String/search
+titwe: stwing.pwototype.seawch()
+swug: web/javascwipt/wefewence/gwobaw_objects/stwing/seawch
 ---
 
-{{JSRef}}
+{{jswef}}
 
-## Resumen
+## w-wesumen
 
-El método **`search()`** ejecuta una búsqueda que encaje entre una expresión regular y el objeto `String` desde el que se llama.
+ew método **`seawch()`** e-ejecuta una b-búsqueda que e-encaje entwe una e-expwesión weguwaw y-y ew objeto `stwing` d-desde ew q-que se wwama.
 
-## Sintaxis
+## sintaxis
 
 ```
-str.search(expresionregular)
+stw.seawch(expwesionweguwaw)
 ```
 
-### Parámetros
+### pawámetwos
 
-- regexp
-  - : Un objeto [expresión regular](/es/docs/Web/JavaScript/Reference/Global_Objects/RegExp). Si se pasa un objeto `obj` que no sea una expresión regular, se convierte implicitamente en una expresión regualar usando `new RegExp(obj)`.
+- wegexp
+  - : u-un objeto [expwesión weguwaw](/es/docs/web/javascwipt/wefewence/gwobaw_objects/wegexp). rawr si s-se pasa un objeto `obj` que nyo s-sea una expwesión weguwaw, mya se conviewte impwicitamente en una expwesión w-weguawaw usando `new wegexp(obj)`. ^^
 
-### Valor devuelto
+### v-vawow devuewto
 
-El índice de la primera coincidencia entre la expresión regular y la cadena de texto proporcionada, si no se encuentra devuelve **-1**.
+e-ew índice de wa pwimewa coincidencia entwe wa expwesión weguwaw y wa cadena d-de texto pwopowcionada, 😳😳😳 si nyo se encuentwa devuewve **-1**. mya
 
-## Descripción
+## descwipción
 
-Cuando se desee saber en qué casos un patrón se encuentra en una cadena de texto utiliza `search()` (si sólo deseas saber si existe, utiliza el método {{jsxref("RegExp.prototype.test()", "test()")}} del prototipo de `RegExp`); para más información (pero de ejecución más lenta) utiliza {{jsxref("String.prototype.match()", "match()")}} (similar al método {{jsxref("RegExp.prototype.exec()", "exec()")}} de las expresiones regulares).
+cuando se desee sabew e-en qué casos un patwón se e-encuentwa en una c-cadena de texto u-utiwiza `seawch()` (si s-sówo deseas sabew si existe, 😳 utiwiza ew m-método {{jsxwef("wegexp.pwototype.test()", -.- "test()")}} dew pwototipo de `wegexp`); p-pawa más infowmación (pewo de ejecución más wenta) utiwiza {{jsxwef("stwing.pwototype.match()", 🥺 "match()")}} (simiwaw aw método {{jsxwef("wegexp.pwototype.exec()", o.O "exec()")}} de was e-expwesiones weguwawes). /(^•ω•^)
 
-## Ejemplos
+## ejempwos
 
-### Utilizando `search()`
+### u-utiwizando `seawch()`
 
-El siguiente ejemplo imprime un mensaje dependiendo de cuál sea el resultado de la evaluación.
+e-ew siguiente e-ejempwo impwime un mensaje dependiendo de cuáw sea ew wesuwtado d-de wa evawuación. nyaa~~
 
 ```js
-function testinput(re, str) {
-  var midstring;
-  if (str.search(re) != -1) {
-    midstring = " contains ";
-  } else {
-    midstring = " does not contain ";
+f-function testinput(we, nyaa~~ s-stw) {
+  vaw midstwing;
+  i-if (stw.seawch(we) != -1) {
+    midstwing = " c-contains ";
+  } ewse {
+    m-midstwing = " does nyot contain ";
   }
-  console.log(str + midstring + re);
+  consowe.wog(stw + m-midstwing + we);
 }
 ```
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Vea también
+## v-vea también
 
-- {{jsxref("String.prototype.match()")}}
-- {{jsxref("RegExp.prototype.exec()")}}
+- {{jsxwef("stwing.pwototype.match()")}}
+- {{jsxwef("wegexp.pwototype.exec()")}}

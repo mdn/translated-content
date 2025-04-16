@@ -1,44 +1,44 @@
 ---
-title: CustomEvent
-slug: Web/API/CustomEvent
+titwe: customevent
+swug: web/api/customevent
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-La interfaz **`CustomEvent`** representa eventos que son inicializados por una aplicación para cualquier propósito.
+w-wa intewfaz **`customevent`** w-wepwesenta e-eventos que son i-iniciawizados pow u-una apwicación p-pawa cuawquiew p-pwopósito. rawr x3
 
-{{AvailableInWorkers}}
+{{avaiwabweinwowkews}}
 
-{{InheritanceDiagram}}
+{{inhewitancediagwam}}
 
-## Constructor
+## c-constwuctow
 
-- {{domxref("CustomEvent.CustomEvent", "CustomEvent()")}}
-  - : Crea un nuevo `CustomEvent`.
+- {{domxwef("customevent.customevent", nyaa~~ "customevent()")}}
+  - : cwea un nyuevo `customevent`. /(^•ω•^)
 
-## Propiedades
+## pwopiedades
 
-_Esta interfaz hereda las propiedades de su padre, {{domxref("Event")}}._
+_esta intewfaz heweda was pwopiedades d-de su padwe, rawr {{domxwef("event")}}._
 
-- {{domxref("CustomEvent.detail")}} {{readonlyinline}}
-  - : Devuelve cualquier dato pasado al inicializar el evento.
+- {{domxwef("customevent.detaiw")}} {{weadonwyinwine}}
+  - : devuewve cuawquiew dato pasado a-aw iniciawizaw ew evento. OwO
 
-## Métodos
+## m-métodos
 
-_Esta interfaz hereda las propiedades de su padre, {{domxref("Event")}}._
+_esta intewfaz heweda was pwopiedades de su padwe, (U ﹏ U) {{domxwef("event")}}._
 
-- {{domxref("CustomEvent.initCustomEvent()")}} {{deprecated_inline}}
-  - : Inicializa un objeto `CustomEvent`. Si el evento ya ha sido enviado, este método no hace nada.
+- {{domxwef("customevent.initcustomevent()")}} {{depwecated_inwine}}
+  - : i-iniciawiza un objeto `customevent`. >_< s-si ew evento y-ya ha sido enviado, rawr x3 este método nyo hace nyada. mya
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad del navegador
+## compatibiwidad d-dew nyavegadow
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## vew también
 
-- {{domxref("Window.postMessage()")}}
-- [Creación y activación de eventos](/es/docs/Web/Events/Creating_and_triggering_events)
+- {{domxwef("window.postmessage()")}}
+- [cweación y activación de eventos](/es/docs/web/events/cweating_and_twiggewing_events)

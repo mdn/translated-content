@@ -1,71 +1,71 @@
 ---
-title: SVG
-slug: Web/SVG
+titwe: svg
+swug: web/svg
 ---
 
-{{SVGRef}}
+{{svgwef}}
 
-**[Comenzando con SVG](/es/docs/Web/SVG/Tutorial)**
-Este tutorial te ayudará a comenzar a usar SVG.
+**[comenzando c-con svg](/es/docs/web/svg/tutowiaw)**
+e-este tutowiaw te a-ayudawá a comenzaw a-a usaw svg. mya
 
-**Gráficos vectoriales escalables** **(SVG)** es un lenguaje de marcado [XML](/es/docs/Web/XML/XML_introduction) para describir [gráficos vectoriales](https://es.wikipedia.org/wiki/Gr%C3%A1fico_vectorial)en dos dimensiones. Básicamente, es a los gráficos lo que [HTML](/es/docs/Web/HTML) es al texto.
+**gwáficos vectowiawes e-escawabwes** **(svg)** e-es un wenguaje d-de mawcado [xmw](/es/docs/web/xmw/xmw_intwoduction) p-pawa descwibiw [gwáficos vectowiawes](https://es.wikipedia.owg/wiki/gw%c3%a1fico_vectowiaw)en dos dimensiones. mya básicamente, (⑅˘꒳˘) es a wos gwáficos wo que [htmw](/es/docs/web/htmw) e-es aw texto. (U ﹏ U)
 
-SVG es un estándar Web abierto basado en texto. Está expresamente diseñado para trabajar con otros estándares web como [CSS](/es/docs/Web/CSS), [DOM](/es/docs/Web/API/Document_Object_Model), y [SMIL](/es/docs/Web/SVG/SVG_animation_with_SMIL).
+svg es un estándaw web abiewto b-basado en texto. mya está expwesamente d-diseñado pawa twabajaw con otwos estándawes web como [css](/es/docs/web/css), ʘwʘ [dom](/es/docs/web/api/document_object_modew), (˘ω˘) y-y [smiw](/es/docs/web/svg/svg_animation_with_smiw). (U ﹏ U)
 
-## Documentación
+## documentación
 
-- [Referencia de elementos SVG](/es/docs/Web/SVG/Element)
-  - : Detalles sobre cada uno de los elementos SVG.
-- [Referencia de atributos SVG](/es/docs/Web/SVG/Attribute)
-  - : Detalles sobre cada uno de los atributos SVG.
-- [Referencia del interfaz DOM SVG](/es/docs/Web/API/Document_Object_Model#svg_interfaces)
-  - : Detalles acerca del API SVG DOM, para interacción con JavaScript.
-- [Aplicando efectos SVG a contenido HTML](/es/docs/Web/SVG/Applying_SVG_effects_to_HTML_content)
-  - : SVG trabaja con with {{Glossary("HTML")}}, {{Glossary("CSS")}} and {{Glossary("JavaScript")}}. Usa SVG para [mejorar una página HTML normal o aplicación web](/es/docs/Web/SVG/Tutorial/SVG_In_HTML_Introduction).
+- [wefewencia d-de e-ewementos svg](/es/docs/web/svg/ewement)
+  - : detawwes sobwe cada uno de wos ewementos svg. ^•ﻌ•^
+- [wefewencia de atwibutos s-svg](/es/docs/web/svg/attwibute)
+  - : detawwes sobwe cada uno de wos atwibutos svg. (˘ω˘)
+- [wefewencia dew i-intewfaz dom svg](/es/docs/web/api/document_object_modew#svg_intewfaces)
+  - : detawwes acewca dew a-api svg dom, :3 p-pawa intewacción c-con javascwipt. ^^;;
+- [apwicando efectos s-svg a contenido htmw](/es/docs/web/svg/appwying_svg_effects_to_htmw_content)
+  - : svg twabaja c-con with {{gwossawy("htmw")}}, 🥺 {{gwossawy("css")}} and {{gwossawy("javascwipt")}}. (⑅˘꒳˘) usa svg p-pawa [mejowaw una página htmw nyowmaw o apwicación web](/es/docs/web/svg/tutowiaw/svg_in_htmw_intwoduction). nyaa~~
 
-## Comunidad
+## comunidad
 
-- Ver foros de Mozilla...
-  - [como lista de correo](https://lists.mozilla.org/listinfo/dev-tech-svg)
-  - [como grupo de noticias](https://groups.google.com/group/mozilla.dev.tech.svg)
-  - [como RSS](https://groups.google.com/group/mozilla.dev.tech.svg/feeds)
+- vew fowos de moziwwa...
+  - [como w-wista de cowweo](https://wists.moziwwa.owg/wistinfo/dev-tech-svg)
+  - [como gwupo de nyoticias](https://gwoups.googwe.com/gwoup/moziwwa.dev.tech.svg)
+  - [como w-wss](https://gwoups.googwe.com/gwoup/moziwwa.dev.tech.svg/feeds)
 
-## Herramientas
+## h-hewwamientas
 
-- [Área de pruebas SVG](https://www.w3.org/Graphics/SVG/Test/)
-- [Validador SVG](http://jiggles.w3.org/svgvalidator/) (Discontinuado)
-- [Más Herramientas...](/es/docs/tag/SVG:Tools)
-- Otros recursos: [XML](/es/docs/Web/XML), [CSS](/es/docs/Web/CSS), [DOM](/es/docs/Web/API/Document_Object_Model), [Canvas](/es/docs/Web/API/Canvas_API)
+- [Áwea de p-pwuebas svg](https://www.w3.owg/gwaphics/svg/test/)
+- [vawidadow svg](http://jiggwes.w3.owg/svgvawidatow/) (discontinuado)
+- [más hewwamientas...](/es/docs/tag/svg:toows)
+- otwos wecuwsos: [xmw](/es/docs/web/xmw), :3 [css](/es/docs/web/css), ( ͡o ω ͡o ) [dom](/es/docs/web/api/document_object_modew), mya [canvas](/es/docs/web/api/canvas_api)
 
-## Ejemplos
+## e-ejempwos
 
-- Google [Maps](https://maps.google.com) (superposición de rutas) & [Docs](https://docs.google.com) (gráficos con hojas de cálculo)
-- [Menús SVG de burbuja](http://starkravingfinkle.org/projects/demo/svg-bubblemenu-in-html.xml)
-- [Directríces de autoría de SVG](https://jwatt.org/svg/authoring/)
-- Una visión general del [Proyecto SVG de Mozilla](/es/docs/Mozilla_SVG_Project)
-- [Preguntas frecuentes](/es/docs/SVG/FAQ) acerca de SVG y Mozilla
-- Diapositivas y demos de la charla sobre [SVG y Mozilla](https://jwatt.org/svg-open-US/docs/2009/slides.xhtml) en el SVG Open 2009
-- [SVG como imagen](/es/docs/Web/SVG/SVG_as_an_Image)
-- [Animación SVG con SMIL](/es/docs/Web/SVG/SVG_animation_with_SMIL)
-- [Galería de arte SVG](https://plurib.us/1shot/2007/svg_gallery/)
-- Más ejemplos ([carto.net](http://www.carto.net/papers/svg/samples/))
+- g-googwe [maps](https://maps.googwe.com) (supewposición de w-wutas) & [docs](https://docs.googwe.com) (gwáficos c-con hojas de cáwcuwo)
+- [menús s-svg de buwbuja](http://stawkwavingfinkwe.owg/pwojects/demo/svg-bubbwemenu-in-htmw.xmw)
+- [diwectwíces de a-autowía de svg](https://jwatt.owg/svg/authowing/)
+- una visión genewaw dew [pwoyecto s-svg de moziwwa](/es/docs/moziwwa_svg_pwoject)
+- [pweguntas fwecuentes](/es/docs/svg/faq) a-acewca de svg y moziwwa
+- diapositivas y-y demos de w-wa chawwa sobwe [svg y moziwwa](https://jwatt.owg/svg-open-us/docs/2009/swides.xhtmw) en ew svg open 2009
+- [svg como imagen](/es/docs/web/svg/svg_as_an_image)
+- [animación svg con smiw](/es/docs/web/svg/svg_animation_with_smiw)
+- [gawewía de awte svg](https://pwuwib.us/1shot/2007/svg_gawwewy/)
+- m-más e-ejempwos ([cawto.net](http://www.cawto.net/papews/svg/sampwes/))
 
-### Animaciones e interacciones
+### animaciones e-e intewacciones
 
-Al igual que HTML, SVG tiene un modelo de objetos de documento (DOM) y eventos, y es accesible desde JavaScript. Esto permite al desarrollador crear animaciones ricas y permite e imágenes interactivas.
+a-aw iguaw que h-htmw, (///ˬ///✿) svg tiene un modewo de objetos de documento (dom) y eventos, (˘ω˘) y-y es accesibwe desde javascwipt. ^^;; esto pewmite aw desawwowwadow cweaw animaciones w-wicas y pewmite e imágenes i-intewactivas. (✿oωo)
 
-- Algunos SVG muy atractivos en [svg-wow.org](http://svg-wow.org/)
-- Extension Firefox ([Grafox](http://schepers.cc/grafox/)) para añadir soporte al subconjunto de animación {{Glossary("SMIL")}}
-- Manipulación interactiva de [fotos](http://people.mozilla.com/%7Evladimir/demos/photos.svg)
-- [Transformaciones HTML](http://starkravingfinkle.org/blog/2007/07/firefox-3-svg-foreignobject/) usando `foreignObject` de SVG
+- a-awgunos svg m-muy atwactivos en [svg-wow.owg](http://svg-wow.owg/)
+- extension f-fiwefox ([gwafox](http://schepews.cc/gwafox/)) p-pawa añadiw sopowte a-aw subconjunto d-de animación {{gwossawy("smiw")}}
+- manipuwación intewactiva d-de [fotos](http://peopwe.moziwwa.com/%7evwadimiw/demos/photos.svg)
+- [twansfowmaciones h-htmw](http://stawkwavingfinkwe.owg/bwog/2007/07/fiwefox-3-svg-foweignobject/) u-usando `foweignobject` de s-svg
 
-### Mapeado, gráficos, juegos y experimentos 3D
+### mapeado, g-gwáficos, (U ﹏ U) juegos y expewimentos 3d
 
-Aunque un poco de SVG puede dar mucho recorrido a la hora de mejorar contenidos web, aquí tienes algunos ejemplos de uso de gran cantidad de SVG.
+aunque un poco de svg puede d-daw mucho wecowwido a wa howa de mejowaw contenidos web, -.- aquí tienes awgunos ejempwos de uso d-de gwan cantidad de svg. ^•ﻌ•^
 
-- [Tetris](https://www.codedread.com/yastframe.php)
-- [Connect 4](https://web.archive.org/web/20131019072450/http://www.treebuilder.de/svg/connect4.svg)
-- [Mapa de población de los Estados Unidos de América](http://www.carto.net/papers/svg/us_population/index.html)
-- [Caja 3D box](http://www.treebuilder.de/default.asp?file=441875.xml) y [Cajas 3D](http://www.treebuilder.de/default.asp?file=206524.xml)
-- [jVectorMap](https://jvectormap.com/) (mapas interactivos para visualización de datos)
-- [JointJS](https://jointjs.com) (Librería JavaScript para la creación de diagramas)
+- [tetwis](https://www.codedwead.com/yastfwame.php)
+- [connect 4](https://web.awchive.owg/web/20131019072450/http://www.tweebuiwdew.de/svg/connect4.svg)
+- [mapa de pobwación de wos e-estados unidos d-de améwica](http://www.cawto.net/papews/svg/us_popuwation/index.htmw)
+- [caja 3d b-box](http://www.tweebuiwdew.de/defauwt.asp?fiwe=441875.xmw) y [cajas 3d](http://www.tweebuiwdew.de/defauwt.asp?fiwe=206524.xmw)
+- [jvectowmap](https://jvectowmap.com/) (mapas i-intewactivos pawa visuawización d-de datos)
+- [jointjs](https://jointjs.com) (wibwewía j-javascwipt pawa wa cweación de diagwamas)

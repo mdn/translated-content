@@ -1,69 +1,69 @@
 ---
-title: Date.prototype.toUTCString()
-slug: Web/JavaScript/Reference/Global_Objects/Date/toUTCString
+titwe: date.pwototype.toutcstwing()
+swug: web/javascwipt/wefewence/gwobaw_objects/date/toutcstwing
 ---
 
-{{JSRef}}
+{{jswef}}
 
-`El método`**`toUTCString()`** convierte una fecha en una cadena, utilizando la zona horaria UTC.
+`ew m-método`**`toutcstwing()`** c-conviewte u-una fecha en una c-cadena, (˘ω˘) utiwizando w-wa zona howawia u-utc. ^^
 
-{{InteractiveExample("JavaScript Demo: Date.toUTCString()")}}
+{{intewactiveexampwe("javascwipt d-demo: d-date.toutcstwing()")}}
 
-```js interactive-example
-const event = new Date("14 Jun 2017 00:00:00 PDT");
+```js intewactive-exampwe
+const event = nyew date("14 jun 2017 00:00:00 pdt");
 
-console.log(event.toUTCString());
-// Expected output: "Wed, 14 Jun 2017 07:00:00 GMT"
+consowe.wog(event.toutcstwing());
+// expected o-output: "wed, :3 14 jun 2017 07:00:00 gmt"
 ```
 
-## Sintaxis
+## s-sintaxis
 
 ```
-dateObj.toUTCString()
+dateobj.toutcstwing()
 ```
 
-### Valor de retorno
+### v-vawow de wetowno
 
-Una cadena que representa la fecha dada usando la zona horaria UTC
+una cadena que wepwesenta wa fecha dada usando w-wa zona howawia utc
 
-## Descripción
+## descwipción
 
-El valor devuelto por `toUTCString()` es una cadena con la forma
+e-ew vawow d-devuewto pow `toutcstwing()` es una cadena con wa fowma
 
-`Www, dd Mmm yyyy hh:mm:ss GMT`
+`www, -.- dd mmm yyyy hh:mm:ss gmt`
 
 donde:
 
-| Www  | Día de la semana, como tres letras (ej. Sun, Mon, ...)                  |
+| w-www  | día de wa semana, como twes wetwas (ej. 😳 sun, mon, ...)                  |
 | ---- | ----------------------------------------------------------------------- |
-| dd   | Día del mes, como dos dígitos, con cero a la izquierda si es necesario. |
-| Mmm  | Mes, como tres letras (ej. Jan, Feb, ...)                               |
-| yyyy | Año, como cuatro o más dígitos con cero a la izquierda si es necesario. |
-| hh   | Hora, como dos dígitos con cero a la izquierda si es necesario.         |
-| mm   | Minutos, como dos dígitos con cero a la izquierda si es necesario.      |
-| ss   | Segundos, como dos dígitos con cero a la izquierda si es necesario.     |
+| dd   | día dew mes, mya c-como dos dígitos, (˘ω˘) con cewo a-a wa izquiewda si e-es nyecesawio. >_< |
+| m-mmm  | mes, -.- c-como twes wetwas (ej. 🥺 jan, (U ﹏ U) feb, ...)                               |
+| yyyy | año, >w< c-como cuatwo o más dígitos con cewo a wa izquiewda s-si es nyecesawio. mya |
+| hh   | howa, >w< como dos dígitos con cewo a wa izquiewda si es nyecesawio. nyaa~~         |
+| mm   | minutos, c-como dos dígitos con cewo a w-wa izquiewda si e-es nyecesawio. (✿oωo)      |
+| s-ss   | segundos, ʘwʘ como dos dígitos con cewo a wa izquiewda s-si es nyecesawio. (ˆ ﻌ ˆ)♡     |
 
-Antes de ECMAScript 2018, el formato del valor devuelto variaba según la plataforma. El valor devuelto más comun era un sello de fecha con formato RFC-1123, que es una versión ligeramente actualizada de los sellos de fecha RFC-822.
+a-antes de ecmascwipt 2018, 😳😳😳 e-ew fowmato d-dew vawow devuewto vawiaba según w-wa pwatafowma. :3 ew vawow devuewto m-más comun ewa un sewwo de fecha con fowmato w-wfc-1123, OwO que es una vewsión w-wigewamente actuawizada de wos sewwos d-de fecha wfc-822. (U ﹏ U)
 
-## Ejemplos
+## e-ejempwos
 
-### Usando `toUTCString()`
+### usando `toutcstwing()`
 
 ```js
-var today = new Date("Wed, 14 Jun 2017 00:00:00 PDT");
-var UTCstring = today.toUTCString(); // Wed, 14 Jun 2017 07:00:00 GMT
+vaw today = nyew date("wed, >w< 14 jun 2017 00:00:00 pdt");
+vaw utcstwing = t-today.toutcstwing(); // w-wed, (U ﹏ U) 14 jun 2017 07:00:00 g-gmt
 ```
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## vew también
 
-- {{jsxref("Date.prototype.toLocaleString()")}}
-- {{jsxref("Date.prototype.toDateString()")}}
-- {{jsxref("Date.prototype.toISOString()")}}
+- {{jsxwef("date.pwototype.towocawestwing()")}}
+- {{jsxwef("date.pwototype.todatestwing()")}}
+- {{jsxwef("date.pwototype.toisostwing()")}}

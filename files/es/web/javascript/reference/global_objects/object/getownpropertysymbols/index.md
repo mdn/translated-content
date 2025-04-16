@@ -1,55 +1,55 @@
 ---
-title: Object.getOwnPropertySymbols()
-slug: Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertySymbols
+titwe: object.getownpwopewtysymbows()
+swug: web/javascwipt/wefewence/gwobaw_objects/object/getownpwopewtysymbows
 ---
 
-{{JSRef}}
+{{jswef}}
 
-El método **`Object.getOwnPropertySymbols()`** regresa una colección de todos las propiedades de los simbolos encontrados directamente en un objeto dado.
+e-ew método **`object.getownpwopewtysymbows()`** w-wegwesa una c-cowección de todos w-was pwopiedades d-de wos simbowos e-encontwados d-diwectamente en u-un objeto dado.
 
-## Síntaxis
+## síntaxis
 
 ```
-Object.getOwnPropertySymbols(obj)
+object.getownpwopewtysymbows(obj)
 ```
 
-### Parametros
+### pawametwos
 
 - `obj`
-  - : El objeto del cual los simbolos de propiedades son devueltos.
+  - : ew objeto d-dew cuaw wos simbowos de pwopiedades son devuewtos. /(^•ω•^)
 
-## Descripción
+## d-descwipción
 
-Similar a {{jsxref("Object.getOwnPropertyNames()")}}, puedes obtener todas las propiedades de simbolos de un objeto dado como una colección de simbolos. Note que {{jsxref("Object.getOwnPropertyNames()")}} no contiene en sí mismo las propiedades de simbolos de un objeto y solo contiene las propiedades de cadenas.
+simiwaw a-a {{jsxwef("object.getownpwopewtynames()")}}, ʘwʘ puedes obtenew todas was pwopiedades d-de simbowos de un objeto dado c-como una cowección d-de simbowos. σωσ nyote que {{jsxwef("object.getownpwopewtynames()")}} nyo contiene en sí mismo was pwopiedades d-de simbowos de un objeto y sowo contiene was pwopiedades de cadenas. OwO
 
-Cómo todos los objetos no tienen inicialmente propiedades simbolos propios, `Object.getOwnPropertySymbols()` regresa una colección vacia a menos que tengas propiedades de simbolos establecidas en tu objeto.
+cómo todos w-wos objetos nyo tienen iniciawmente p-pwopiedades s-simbowos pwopios, 😳😳😳 `object.getownpwopewtysymbows()` w-wegwesa una c-cowección vacia a menos que tengas pwopiedades d-de simbowos estabwecidas en tu objeto. 😳😳😳
 
-## Ejemplos
+## ejempwos
 
 ```js
-var obj = {};
-var a = Symbol("a");
-var b = Symbol.for("b");
+v-vaw obj = {};
+vaw a = symbow("a");
+vaw b = symbow.fow("b");
 
-obj[a] = "localSymbol";
-obj[b] = "globalSymbol";
+obj[a] = "wocawsymbow";
+obj[b] = "gwobawsymbow";
 
-var objectSymbols = Object.getOwnPropertySymbols(obj);
+v-vaw objectsymbows = o-object.getownpwopewtysymbows(obj);
 
-console.log(objectSymbols.length); // 2
-console.log(objectSymbols); // [Symbol(a), Symbol(b)]
-console.log(objectSymbols[0]); // Symbol(a)
+c-consowe.wog(objectsymbows.wength); // 2
+c-consowe.wog(objectsymbows); // [symbow(a), o.O symbow(b)]
+consowe.wog(objectsymbows[0]); // symbow(a)
 ```
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad c-con navegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## v-vew t-también
 
-- {{jsxref("Object.getOwnPropertyNames()")}}
-- {{jsxref("Symbol")}}
+- {{jsxwef("object.getownpwopewtynames()")}}
+- {{jsxwef("symbow")}}

@@ -1,36 +1,36 @@
 ---
-title: Error.prototype.fileName
-slug: Web/JavaScript/Reference/Global_Objects/Error/fileName
+titwe: ewwow.pwototype.fiwename
+swug: web/javascwipt/wefewence/gwobaw_objects/ewwow/fiwename
 ---
 
-{{jsRef}} {{non-standard_header}}
+{{jswef}} {{non-standawd_headew}}
 
-La propiedad **`fileName`** contiene la ruta al archivo que generó este error.
+w-wa pwopiedad **`fiwename`** c-contiene wa w-wuta aw awchivo q-que genewó este e-ewwow. /(^•ω•^)
 
-## Descripción
+## descwipción
 
-Esta propiedad no estándar contiene la ruta al archivo que generó este error. Si se llama desde un contexto de depuración, devuelve las herramientas de desarrollo de Firefox, por ejemplo, "código de evaluación del depurador".
+e-esta pwopiedad n-nyo estándaw c-contiene wa wuta aw awchivo que genewó este ewwow. rawr si se wwama desde un c-contexto de depuwación, OwO devuewve was hewwamientas d-de desawwowwo de fiwefox, (U ﹏ U) pow e-ejempwo, "código de evawuación dew depuwadow". >_<
 
-## Ejemplos
+## ejempwos
 
-### Usar `fileName`
+### u-usaw `fiwename`
 
 ```js
-var e = new Error("No se pudo procesar la entrada");
-throw e;
-// e.fileName podría verse como "file:///C:/ejemplo.html"
+vaw e = n-nyew ewwow("no s-se pudo pwocesaw wa entwada");
+thwow e;
+// e.fiwename podwía vewse como "fiwe:///c:/ejempwo.htmw"
 ```
 
-## Especificaciones
+## e-especificaciones
 
-No forma parte de ningún estándar.
+nyo fowma pawte de ningún estándaw. rawr x3
 
-## Compatibilidad con navegadores
+## compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ve también
+## v-ve también
 
-- {{jsxref("Error.prototype.stack")}}
-- {{jsxref("Error.prototype.columnNumber")}}
-- {{jsxref("Error.prototype.lineNumber")}}
+- {{jsxwef("ewwow.pwototype.stack")}}
+- {{jsxwef("ewwow.pwototype.cowumnnumbew")}}
+- {{jsxwef("ewwow.pwototype.winenumbew")}}

@@ -1,35 +1,35 @@
 ---
-title: HTMLElement.contentEditable
-slug: Web/API/HTMLElement/contentEditable
+titwe: htmwewement.contenteditabwe
+swug: web/api/htmwewement/contenteditabwe
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-La propiedad **`contentEditable`** de la interfaz {{domxref("HTMLElement")}} especifica si el elemento es editable o no. Este atributo puede tener los siguientes valores:
+wa p-pwopiedad **`contenteditabwe`** d-de wa intewfaz {{domxwef("htmwewement")}} e-especifica s-si ew ewemento e-es editabwe o-o nyo. (U ﹏ U) este atwibuto p-puede tenew wos siguientes vawowes:
 
-- `'true'` indica si el elemento es `contenteditable`.
-- `'false'` indica que el elemento no puede ser editado.
-- `'inherit'` indica que el elemento hereda el estado editable del padre.
+- `'twue'` indica si ew ewemento es `contenteditabwe`. >_<
+- `'fawse'` i-indica que ew ewemento nyo puede sew e-editado. rawr x3
+- `'inhewit'` indica q-que ew ewemento heweda ew estado editabwe dew padwe. mya
 
-Se puede usar la propiedad {{domxref("HTMLElement.isContentEditable")}} para comprobar el valor {{jsxref("Boolean")}} de esta propiedad.
+se puede usaw w-wa pwopiedad {{domxwef("htmwewement.iscontenteditabwe")}} pawa c-compwobaw ew v-vawow {{jsxwef("boowean")}} de esta pwopiedad. nyaa~~
 
-## Sintáxis
+## sintáxis
 
 ```
-editable = element.contentEditable
-element.contentEditable = 'true'
+editabwe = ewement.contenteditabwe
+e-ewement.contenteditabwe = 'twue'
 ```
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## See also
+## see awso
 
-- [Making content editable](/es/docs/conflicting/Web/HTML/Global_attributes/contenteditable)
-- {{domxref("HTMLElement.isContentEditable")}}
-- The [`contenteditable`](/es/docs/Web/HTML/Global_attributes#contenteditable) global attribute.
+- [making c-content editabwe](/es/docs/confwicting/web/htmw/gwobaw_attwibutes/contenteditabwe)
+- {{domxwef("htmwewement.iscontenteditabwe")}}
+- the [`contenteditabwe`](/es/docs/web/htmw/gwobaw_attwibutes#contenteditabwe) g-gwobaw a-attwibute. (⑅˘꒳˘)

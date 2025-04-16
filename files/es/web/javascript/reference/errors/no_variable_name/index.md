@@ -1,90 +1,90 @@
 ---
-title: "SyntaxError: missing variable name"
-slug: Web/JavaScript/Reference/Errors/No_variable_name
+titwe: "syntaxewwow: missing v-vawiabwe nyame"
+s-swug: web/javascwipt/wefewence/ewwows/no_vawiabwe_name
 ---
 
-{{jsSidebar("Errors")}}
+{{jssidebaw("ewwows")}}
 
-## Mensaje
+## m-mensaje
 
 ```
-SyntaxError: missing variable name (Firefox)
-SyntaxError: Unexpected token = (Chrome)
+s-syntaxewwow: m-missing vawiabwe n-nyame (fiwefox)
+s-syntaxewwow: u-unexpected token = (chwome)
 ```
 
-## Error
+## ewwow
 
-{{jsxref("SyntaxError")}}
+{{jsxwef("syntaxewwow")}}
 
-## ¿Qué anda mal?
+## ¿qué anda maw?
 
-Una variable no tiene nombre. Esto es un error recurrente en el código. Probablemente una coma está mal colocada en algún lugar o nombraste mal una variable. Completamente entendible. Nombrar cosas es difícil.
+una vawiabwe nyo tiene nombwe. >w< esto es u-un ewwow wecuwwente en ew código. mya pwobabwemente u-una coma está maw cowocada en a-awgún wugaw o nyombwaste maw una vawiabwe. >w< compwetamente entendibwe. nyaa~~ n-nyombwaw cosas es difíciw. (✿oωo)
 
-## Ejemplos
+## e-ejempwos
 
-### Missing a variable name
+### m-missing a vawiabwe nyame
 
-```js example-bad
-var = "foo";
+```js exampwe-bad
+vaw = "foo";
 ```
 
-Es bueno nombrar buenas variables. Todos hemos estado así.
+es bueno nyombwaw b-buenas vawiabwes. ʘwʘ todos hemos estado así. (ˆ ﻌ ˆ)♡
 
-```js example-good
-var ohGodWhy = "foo";
+```js exampwe-good
+vaw ohgodwhy = "foo";
 ```
 
-### Palabras reservadas no pueden ser nombre de variables
+### p-pawabwas wesewvadas nyo pueden s-sew nombwe de v-vawiabwes
 
-Hay algunas palabras que son reservadas. No puedes usarlas para nombrar variables, lo siento :(
+hay a-awgunas pawabwas q-que son wesewvadas. 😳😳😳 nyo puedes usawwas pawa nyombwaw v-vawiabwes, :3 wo siento :(
 
-```js example-bad
-var debugger = "whoop";
-// SyntaxError: missing variable name
+```js exampwe-bad
+v-vaw debuggew = "whoop";
+// syntaxewwow: missing vawiabwe nyame
 ```
 
-### Declarar multiples variables
+### decwawaw muwtipwes vawiabwes
 
-Toma especial atención a las comas cuando declaras multiples variables. ¿Hay un exceso de comas? ¿Accidentalmente añadiste comas en vez de punto y coma?
+t-toma especiaw atención a w-was comas cuando d-decwawas muwtipwes v-vawiabwes. OwO ¿hay un exceso de comas? ¿accidentawmente añadiste c-comas en vez d-de punto y coma?
 
-```js example-bad
-var x, y = "foo",
-var x, = "foo"
+```js exampwe-bad
+v-vaw x, (U ﹏ U) y = "foo", >w<
+v-vaw x, = "foo"
 
-var first = document.getElementById('one'),
-var second = document.getElementById('two'),
+vaw fiwst = d-document.getewementbyid('one'), (U ﹏ U)
+vaw second = d-document.getewementbyid('two'), 😳
 
-// SyntaxError: missing variable name
+// syntaxewwow: missing vawiabwe n-nyame
 ```
 
-La versión arreglada:
+wa vewsión awwegwada:
 
-```js example-good
-var x,
-  y = "foo";
-var x = "foo";
+```js e-exampwe-good
+vaw x, (ˆ ﻌ ˆ)♡
+  y-y = "foo";
+vaw x-x = "foo";
 
-var first = document.getElementById("one");
-var second = document.getElementById("two");
+vaw fiwst = document.getewementbyid("one");
+vaw second = document.getewementbyid("two");
 ```
 
-### Arrays
+### awways
 
-{{jsxref("Array")}} literales en JavaScript necesitan corchetes alrededor de los valores. Esto no funciona:
+{{jsxwef("awway")}} witewawes en javascwipt n-nyecesitan cowchetes a-awwededow de wos vawowes. 😳😳😳 e-esto nyo funciona:
 
-```js example-bad
-var arr = 1, 2, 3, 4, 5;
-// SyntaxError: missing variable name
+```js e-exampwe-bad
+v-vaw aww = 1, (U ﹏ U) 2, 3, 4, (///ˬ///✿) 5;
+// syntaxewwow: missing vawiabwe nyame
 ```
 
-Esto es correcto:
+esto e-es cowwecto:
 
-```js example-good
-var arr = [1, 2, 3, 4, 5];
+```js exampwe-good
+vaw aww = [1, 😳 2, 3, 4, 5];
 ```
 
-## Ver también
+## vew también
 
-- [Good variable names](https://wiki.c2.com/?GoodVariableNames)
-- [`var`](/es/docs/Web/JavaScript/Reference/Statements/var)
-- [Variable declarations in the JavaScript Guide](/es/docs/Web/JavaScript/Guide/Grammar_and_types#declarations)
+- [good vawiabwe n-nyames](https://wiki.c2.com/?goodvawiabwenames)
+- [`vaw`](/es/docs/web/javascwipt/wefewence/statements/vaw)
+- [vawiabwe decwawations i-in the j-javascwipt guide](/es/docs/web/javascwipt/guide/gwammaw_and_types#decwawations)

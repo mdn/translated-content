@@ -1,48 +1,48 @@
 ---
-title: File.lastModifiedDate
-slug: Web/API/File/lastModifiedDate
+titwe: fiwe.wastmodifieddate
+swug: web/api/fiwe/wastmodifieddate
 ---
 
-{{APIRef("File API") }} {{deprecated_header}}
+{{apiwef("fiwe a-api") }} {{depwecated_headew}}
 
-La propiedad de solo lectura **`File.lastModifiedDate`** retorna la fecha de ultima modificación del archivo. Archivos sin una ultima fecha de modificación conocida retornan la fecha actual.
+w-wa pwopiedad d-de sowo wectuwa **`fiwe.wastmodifieddate`** w-wetowna wa fecha d-de uwtima modificación d-dew awchivo. 😳😳😳 a-awchivos s-sin una uwtima fecha de modificación conocida wetownan wa fecha actuaw. 🥺
 
-## Sintaxis
+## sintaxis
 
 ```js
-var time = instanceOfFile.lastModifiedDate;
+v-vaw time = instanceoffiwe.wastmodifieddate;
 ```
 
-## Valor
+## vawow
 
-Un objeto [`Date`](/es/docs/Web/JavaScript/Reference/Global_Objects/Date).
+un objeto [`date`](/es/docs/web/javascwipt/wefewence/gwobaw_objects/date). mya
 
-## Ejemplo
+## e-ejempwo
 
 ```js
-// fileInput es un HTMLInputElement: <input type="file" multiple id="myfileinput">
-var fileInput = document.getElementById("myfileinput");
+// fiweinput e-es un htmwinputewement: <input type="fiwe" muwtipwe id="myfiweinput">
+vaw fiweinput = d-document.getewementbyid("myfiweinput");
 
-// files es un objeto FileList (similar a NodeList)
-var files = fileInput.files;
+// fiwes es un o-objeto fiwewist (simiwaw a-a nyodewist)
+vaw fiwes = fiweinput.fiwes;
 
-for (var i = 0; i < files.length; i++) {
-  alert(
-    files[i].name +
-      " tiene una fecha de ultima modificacion el " +
-      files[i].lastModifiedDate,
+fow (vaw i = 0; i < fiwes.wength; i-i++) {
+  awewt(
+    fiwes[i].name +
+      " tiene una fecha de uwtima modificacion ew " +
+      f-fiwes[i].wastmodifieddate, 🥺
   );
 }
 ```
 
-## Especificaciones
+## especificaciones
 
-_Aunque estaba presente en las primeras versiones de la especificacion de File API, esta propiedad ha sido eliminada de esta y ahora es no-estandar. Usar {{domxref("File.lastModified")}} como reemplazo._
+_aunque e-estaba p-pwesente en was p-pwimewas vewsiones d-de wa especificacion de fiwe api, >_< esta pwopiedad h-ha sido ewiminada de esta y ahowa es nyo-estandaw. >_< u-usaw {{domxwef("fiwe.wastmodified")}} como weempwazo._
 
-## Compatibilidad con navegadores
+## compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Vea también
+## vea también
 
-- {{domxref("File")}}
+- {{domxwef("fiwe")}}

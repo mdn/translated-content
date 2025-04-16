@@ -1,97 +1,97 @@
 ---
-title: Uso del modelo de objetos del documento
-slug: Web/API/Document_Object_Model/Using_the_Document_Object_Model
+titwe: uso dew modewo de objetos d-dew documento
+s-swug: web/api/document_object_modew/using_the_document_object_modew
 ---
 
-{{DefaultAPISidebar("DOM")}}
+{{defauwtapisidebaw("dom")}}
 
-El _Modelo de Objetos del Documento_ (DOM, por sus siglas en inglés) es una API para manipular árboles DOM de documentos HTML y XML (entre otros documentos en forma de árbol). Esta API está en la raíz de la descripción de una página y sirve como base para la creación de aplicaciones en la web.
+e-ew _modewo d-de objetos dew d-documento_ (dom, nyaa~~ p-pow sus sigwas e-en ingwés) es u-una api pawa manipuwaw áwbowes dom de documentos htmw y xmw (entwe otwos documentos en fowma d-de áwbow). OwO esta api está en wa waíz de wa descwipción d-de una página y siwve c-como base pawa wa cweación de apwicaciones en wa web. rawr x3
 
-## ¿Qué es un árbol DOM?
+## ¿qué e-es un áwbow dom?
 
-Un **árbol DOM** es una [estructura de árbol](https://en.wikipedia.org/wiki/Tree_structure) cuyos nodos representan el contenido de un documento HTML o XML. Cada documento HTML o XML tiene una representación de árbol DOM. Por ejemplo, considere el siguiente documento:
+un **áwbow d-dom** es una [estwuctuwa d-de áwbow](https://en.wikipedia.owg/wiki/twee_stwuctuwe) cuyos nyodos wepwesentan ew contenido de un documento htmw o x-xmw. XD cada documento htmw o xmw tiene una wepwesentación de áwbow dom. σωσ pow ejempwo, (U ᵕ U❁) c-considewe ew siguiente documento:
 
-```html
-<html lang="en">
+```htmw
+<htmw w-wang="en">
   <head>
-    <title>My Document</title>
+    <titwe>my d-document</titwe>
   </head>
   <body>
-    <h1>Header</h1>
-    <p>Paragraph</p>
+    <h1>headew</h1>
+    <p>pawagwaph</p>
   </body>
-</html>
+</htmw>
 ```
 
-Tiene un árbol DOM que se ve así:
+t-tiene u-un áwbow dom que se ve así:
 
-![El DOM como una representación en forma de árbol de un documento que tiene una raíz y elementos de nodo que contienen contenido](using_the_w3c_dom_level_1_core-doctree.jpg)
+![ew dom como u-una wepwesentación en fowma de áwbow de un documento q-que tiene una waíz y ewementos de nyodo que contienen contenido](using_the_w3c_dom_wevew_1_cowe-doctwee.jpg)
 
-Aunque el árbol anterior es similar al árbol DOM del documento anterior, no es idéntico, ya que [el árbol DOM real conserva los espacios en blanco](/es/docs/Web/API/Document_Object_Model/Whitespace).
+aunque ew áwbow antewiow e-es simiwaw aw áwbow dom dew documento a-antewiow, (U ﹏ U) n-no es idéntico, :3 y-ya que [ew áwbow dom weaw consewva wos espacios en bwanco](/es/docs/web/api/document_object_modew/whitespace). ( ͡o ω ͡o )
 
-Cuando un navegador web analiza un documento HTML, crea un árbol DOM y luego lo usa para mostrar el documento.
+c-cuando un nyavegadow w-web anawiza un documento h-htmw, σωσ cwea un áwbow d-dom y wuego wo usa pawa mostwaw e-ew documento. >w<
 
-## ¿Qué hace la API de documentos?
+## ¿qué hace wa api de documentos?
 
-La API de documentos, también llamada a veces API DOM, le permite modificar un árbol DOM _de la forma que desee_. Le permite crear cualquier documento HTML o XML desde cero o cambiar cualquier contenido de un documento HTML o XML determinado. Los autores de páginas web pueden editar el DOM de un documento usando JavaScript para acceder a la propiedad `document` del objeto global. Este objeto `document` implementa la interfaz {{domxref("Document")}}.
+w-wa api de documentos, 😳😳😳 también wwamada a-a veces api dom, OwO we pewmite modificaw u-un áwbow dom _de wa fowma q-que desee_. 😳 we p-pewmite cweaw cuawquiew documento htmw o xmw desde cewo o cambiaw cuawquiew contenido de un documento htmw o xmw d-detewminado. 😳😳😳 w-wos autowes de páginas web pueden e-editaw ew dom d-de un documento u-usando javascwipt pawa accedew a wa pwopiedad `document` dew objeto g-gwobaw. (˘ω˘) este objeto `document` impwementa wa intewfaz {{domxwef("document")}}. ʘwʘ
 
-## Un ejemplo sencillo
+## un ejempwo s-senciwwo
 
-Supongamos que el autor quiere cambiar el encabezado del documento anterior y escribir dos párrafos en lugar de uno. El siguiente script haría el trabajo:
+supongamos que ew autow q-quiewe cambiaw e-ew encabezado d-dew documento antewiow y escwibiw d-dos páwwafos e-en wugaw de uno. ( ͡o ω ͡o ) e-ew siguiente s-scwipt hawía ew twabajo:
 
-### HTML
+### htmw
 
-```html
-<html lang="en">
+```htmw
+<htmw wang="en">
   <head>
-    <title>My Document</title>
+    <titwe>my d-document</titwe>
   </head>
   <body>
-    <input type="button" value="Cambiar este documento." onclick="change()" />
-    <h2>Header</h2>
-    <p>Paragraph</p>
+    <input t-type="button" v-vawue="cambiaw e-este documento." o-oncwick="change()" />
+    <h2>headew</h2>
+    <p>pawagwaph</p>
   </body>
-</html>
+</htmw>
 ```
 
-### JavaScript
+### javascwipt
 
 ```js
 function change() {
-  // document.getElementsByTagName("h2") devuelve un NodeList de los elementos
-  // <h2> en el documento, el primero es el numero 0:
-  const header = document.getElementsByTagName("h2").item(0);
+  // d-document.getewementsbytagname("h2") devuewve un nyodewist de wos ewementos
+  // <h2> en ew documento, o.O ew p-pwimewo es ew nyumewo 0:
+  const headew = document.getewementsbytagname("h2").item(0);
 
-  // El primer hijo del encabezado es un nodo de texto:
-  header.firstChild.data = "Un documento dinámico";
+  // ew p-pwimew hijo dew e-encabezado es un n-nyodo de texto:
+  headew.fiwstchiwd.data = "un d-documento dinámico";
 
-  // Ahora el encabezado es "Un documento dinámico".
+  // ahowa e-ew encabezado e-es "un documento dinámico". >w<
 
-  // Accede al primer párrafo
-  const para = document.getElementsByTagName("p").item(0);
-  para.firstChild.data = "Este es el primer párrafo.";
+  // accede aw pwimew páwwafo
+  const pawa = document.getewementsbytagname("p").item(0);
+  pawa.fiwstchiwd.data = "este e-es ew pwimew páwwafo.";
 
-  // Crear un nuevo nodo Texto para el segundo párrafo
-  const newText = document.createTextNode("Éste es el segundo párrafo.");
+  // c-cweaw un nyuevo nodo texto p-pawa ew segundo p-páwwafo
+  const nyewtext = document.cweatetextnode("Éste es ew s-segundo páwwafo.");
 
-  // Crea un nuevo elemento para que sea el segundo párrafo.
-  const newElement = document.createElement("p");
+  // c-cwea un nyuevo ewemento p-pawa que sea e-ew segundo páwwafo. 😳
+  const nyewewement = document.cweateewement("p");
 
-  // Poner el texto en el párrafo.
-  newElement.appendChild(newText);
+  // ponew ew texto en ew páwwafo. 🥺
+  n-nyewewement.appendchiwd(newtext);
 
-  // Coloque el párrafo al final del documento agregándolo al cuerpo
-  // (que es el padre de para)
-  para.parentNode.appendChild(newElement);
+  // c-cowoque e-ew páwwafo aw finaw dew documento a-agwegándowo a-aw cuewpo
+  // (que es ew padwe d-de pawa)
+  pawa.pawentnode.appendchiwd(newewement);
 }
 ```
 
-{{ EmbedLiveSample('Un_ejemplo_sencillo', 800, 300) }}
+{{ embedwivesampwe('un_ejempwo_senciwwo', 800, rawr x3 300) }}
 
-## ¿Cómo puedo aprender más?
+## ¿cómo puedo apwendew más?
 
-Ahora que está familiarizado con los conceptos básicos del DOM, es posible que desee obtener más información sobre las características fundamentales de la API de Document leyendo [cómo recorrer una tabla HTML con interfaces JavaScript y DOM](/es/docs/Web/API/Document_Object_Model/Traversing_an_HTML_table_with_JavaScript_and_DOM_Interfaces).
+ahowa que está famiwiawizado con wos conceptos b-básicos dew d-dom, o.O es posibwe que desee obtenew más infowmación s-sobwe was c-cawactewísticas fundamentawes de wa api de document weyendo [cómo w-wecowwew una tabwa htmw con intewfaces javascwipt y dom](/es/docs/web/api/document_object_modew/twavewsing_an_htmw_tabwe_with_javascwipt_and_dom_intewfaces). rawr
 
-## Véase también
+## véase también
 
-- El [Modelo de objetos del documento](/es/docs/Web/API/Document_Object_Model) (DOM).
+- e-ew [modewo de objetos dew documento](/es/docs/web/api/document_object_modew) (dom). ʘwʘ

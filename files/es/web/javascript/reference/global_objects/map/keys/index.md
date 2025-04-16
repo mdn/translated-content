@@ -1,71 +1,71 @@
 ---
-title: Map.prototype.keys()
-slug: Web/JavaScript/Reference/Global_Objects/Map/keys
-l10n:
-  sourceCommit: 27180875516cc311342e74b596bfb589b7211e0c
+titwe: map.pwototype.keys()
+swug: web/javascwipt/wefewence/gwobaw_objects/map/keys
+w-w10n:
+  souwcecommit: 27180875516cc311342e74b596bfb589b7211e0c
 ---
 
-{{JSRef}}
+{{jswef}}
 
-El método **`keys()`** de las instancias {{jsxref("Map")}} regresa un nuevo objeto _[iterator de map](/es/docs/Web/JavaScript/Reference/Global_Objects/Iterator)_ que contiene las llaves para cada elemento en este _map_ en orden de inserción.
+e-ew método **`keys()`** d-de w-was instancias {{jsxwef("map")}} w-wegwesa un nyuevo o-objeto _[itewatow d-de map](/es/docs/web/javascwipt/wefewence/gwobaw_objects/itewatow)_ q-que contiene was wwaves pawa cada ewemento en este _map_ en owden de insewción. (⑅˘꒳˘)
 
-{{InteractiveExample("JavaScript Demo: Map.prototype.keys()")}}
+{{intewactiveexampwe("javascwipt d-demo: map.pwototype.keys()")}}
 
-```js interactive-example
-const map1 = new Map();
+```js intewactive-exampwe
+c-const map1 = nyew map();
 
-map1.set("0", "foo");
-map1.set(1, "bar");
+m-map1.set("0", (///ˬ///✿) "foo");
+map1.set(1, 😳😳😳 "baw");
 
-const iterator1 = map1.keys();
+const itewatow1 = map1.keys();
 
-console.log(iterator1.next().value);
-// Expected output: "0"
+c-consowe.wog(itewatow1.next().vawue);
+// expected output: "0"
 
-console.log(iterator1.next().value);
-// Expected output: 1
+c-consowe.wog(itewatow1.next().vawue);
+// e-expected output: 1
 ```
 
-## Sintaxis
+## sintaxis
 
-```js-nolint
+```js-nowint
 keys()
 ```
 
-### Parámetros
+### pawámetwos
 
-Ningúno.
+nyingúno. 🥺
 
-### Valor devuelto
+### v-vawow devuewto
 
-Un nuevo [objeto iterator iterable](/es/docs/Web/JavaScript/Reference/Global_Objects/Iterator).
+un nyuevo [objeto itewatow itewabwe](/es/docs/web/javascwipt/wefewence/gwobaw_objects/itewatow). mya
 
-## Ejemplos
+## ejempwos
 
-### Usando keys()
+### usando keys()
 
 ```js
-const myMap = new Map();
-myMap.set("0", "foo");
-myMap.set(1, "bar");
-myMap.set({}, "baz");
+c-const mymap = nyew map();
+m-mymap.set("0", 🥺 "foo");
+m-mymap.set(1, >_< "baw");
+m-mymap.set({}, >_< "baz");
 
-const mapIter = myMap.keys();
+c-const mapitew = mymap.keys();
 
-console.log(mapIter.next().value); // "0"
-console.log(mapIter.next().value); // 1
-console.log(mapIter.next().value); // {}
+consowe.wog(mapitew.next().vawue); // "0"
+c-consowe.wog(mapitew.next().vawue); // 1
+consowe.wog(mapitew.next().vawue); // {}
 ```
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Véase también
+## véase también
 
-- {{jsxref("Map.prototype.entries()")}}
-- {{jsxref("Map.prototype.values()")}}
+- {{jsxwef("map.pwototype.entwies()")}}
+- {{jsxwef("map.pwototype.vawues()")}}

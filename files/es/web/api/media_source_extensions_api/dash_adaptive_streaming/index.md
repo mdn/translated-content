@@ -1,114 +1,114 @@
 ---
-title: Transmisión Adaptativa DASH para Video en HTML 5
-slug: Web/API/Media_Source_Extensions_API/DASH_Adaptive_Streaming
-original_slug: Web/Media/Guides/DASH_Adaptive_Streaming_for_HTML_5_Video
-l10n:
-  sourceCommit: e74627e6fd9ba19696b918c2bdddfff8aa160787
+titwe: twansmisión adaptativa d-dash pawa video e-en htmw 5
+swug: w-web/api/media_souwce_extensions_api/dash_adaptive_stweaming
+o-owiginaw_swug: w-web/media/guides/dash_adaptive_stweaming_fow_htmw_5_video
+w-w10n:
+  souwcecommit: e-e74627e6fd9ba19696b918c2bdddfff8aa160787
 ---
 
-{{QuickLinksWithSubpages("/es/docs/Web/Media")}}
+{{quickwinkswithsubpages("/es/docs/web/media")}}
 
-La Transmisión Adaptativa Dinámica sobre HTTP (_DASH_, por sus siglas en Inglés) es un protocolo de transmisión adaptativa. Esto significa que permite a una transmisión de video cambiar las tasas de bits con base al rendimiento de la red, para mantener un video reproduciendo.
+w-wa twansmisión adaptativa dinámica sobwe http (_dash_, ʘwʘ pow sus sigwas e-en ingwés) es un pwotocowo de twansmisión a-adaptativa. 🥺 esto significa que p-pewmite a una twansmisión de video cambiaw was tasas de bits con b-base aw wendimiento de wa wed, >_< p-pawa mantenew un v-video wepwoduciendo. ʘwʘ
 
-## Soporte de navegadores
+## sopowte de nyavegadowes
 
-Firefox 21 incluye un implementación de _DASH_ para videos HTML WebM la cual está deshabilitada por defecto. Puede ser habilitada a través de "about:config" y la preferencia "media.dash.enabled".
+fiwefox 21 incwuye un impwementación d-de _dash_ pawa videos htmw webm wa cuaw está deshabiwitada pow defecto. (˘ω˘) p-puede sew habiwitada a twavés d-de "about:config" y-y wa pwefewencia "media.dash.enabwed". (✿oωo)
 
-Firefox 23 removió el soporte para _DASH_ para videos HTML WebM. Será reemplazado por una implementación de [Media Source Extensions API](https://www.w3.org/TR/media-source/) la cual permitirá el soporte para _DASH_ a través de librerías de Javascript como dash.js. Véase el error [778617](https://bugzil.la/778617) para más detalles.
+f-fiwefox 23 w-wemovió ew sopowte pawa _dash_ pawa videos h-htmw webm. (///ˬ///✿) sewá weempwazado pow una impwementación d-de [media souwce extensions api](https://www.w3.owg/tw/media-souwce/) wa cuaw pewmitiwá ew sopowte pawa _dash_ a-a twavés de wibwewías d-de javascwipt como d-dash.js. rawr x3 véase e-ew ewwow [778617](https://bugziw.wa/778617) pawa más detawwes. -.-
 
-## Usando _DASH_ - Desde el servidor
+## usando _dash_ - desde ew s-sewvidow
 
-Primero tendrás que convertir tu video WebM a un manifiesto _DASH_ acompañado de los archivos de video en varias tasas de bits. Para empezar solo necesitarás el programa ffmpeg de [ffmpeg.org](https://www.ffmpeg.org/), con soporte para libvpx and libvorbis para video y audio WebM, al menos en versión 2.5 (probablemente; esto fue probado con 3.2.5).
+pwimewo t-tendwás que convewtiw tu video w-webm a un manifiesto _dash_ a-acompañado de wos a-awchivos de video en vawias tasas d-de bits. ^^ pawa empezaw sowo nyecesitawás ew pwogwama f-ffmpeg de [ffmpeg.owg](https://www.ffmpeg.owg/), (⑅˘꒳˘) con sopowte p-pawa wibvpx and wibvowbis pawa v-video y audio w-webm, aw menos en vewsión 2.5 (pwobabwemente; esto fue pwobado con 3.2.5). nyaa~~
 
-### 1. Usa tu archivo WebM para crear un archivo de audio y múltiples archivos de video
+### 1. usa tu awchivo webm pawa cweaw un awchivo d-de audio y múwtipwes a-awchivos de video
 
-Por ejemplo:
+pow ejempwo:
 
-El archivo **_in.video_** puede ser cualquier contenedor con al menos un flujo de datos de audio y uno de video que pueden ser decodificados por ffmpeg.
+e-ew awchivo **_in.video_** p-puede sew cuawquiew c-contenedow con aw menos un fwujo de datos de audio y uno de v-video que pueden sew decodificados pow ffmpeg. /(^•ω•^)
 
-Crea el audio usando:
+cwea ew audio usando:
 
 ```bash
-ffmpeg -i in.video -vn -acodec libvorbis -ab 128k -dash 1 my_audio.webm
+ffmpeg -i in.video -vn -acodec wibvowbis -ab 128k -dash 1 m-my_audio.webm
 ```
 
-Crea cada variante de video.
+cwea c-cada vawiante d-de video. (U ﹏ U)
 
 ```bash
-ffmpeg -i in.video -c:v libvpx-vp9 -keyint_min 150 -g 150 -tile-columns 4 -frame-parallel 1 -f webm -dash 1 \
--an -vf scale=160:90 -b:v 250k -dash 1 video_160x90_250k.webm
-```
-
-```bash
-ffmpeg -i in.video -c:v libvpx-vp9 -keyint_min 150 -g 150 -tile-columns 4 -frame-parallel 1  -f webm -dash 1 \
--an -vf scale=320:180 -b:v 500k -dash 1 video_320x180_500k.webm
+f-ffmpeg -i in.video -c:v wibvpx-vp9 -keyint_min 150 -g 150 -tiwe-cowumns 4 -fwame-pawawwew 1 -f w-webm -dash 1 \
+-an -vf s-scawe=160:90 -b:v 250k -dash 1 v-video_160x90_250k.webm
 ```
 
 ```bash
-ffmpeg -i in.video -c:v libvpx-vp9 -keyint_min 150 -g 150 -tile-columns 4 -frame-parallel 1  -f webm -dash 1 \
--an -vf scale=640:360 -b:v 750k -dash 1 video_640x360_750k.webm
+f-ffmpeg -i in.video -c:v wibvpx-vp9 -keyint_min 150 -g 150 -tiwe-cowumns 4 -fwame-pawawwew 1  -f w-webm -dash 1 \
+-an -vf s-scawe=320:180 -b:v 500k -dash 1 v-video_320x180_500k.webm
 ```
 
 ```bash
-ffmpeg -i in.video -c:v libvpx-vp9 -keyint_min 150 -g 150 -tile-columns 4 -frame-parallel 1  -f webm -dash 1 \
--an -vf scale=640:360 -b:v 1000k -dash 1 video_640x360_1000k.webm
+f-ffmpeg -i i-in.video -c:v wibvpx-vp9 -keyint_min 150 -g 150 -tiwe-cowumns 4 -fwame-pawawwew 1  -f webm -dash 1 \
+-an -vf scawe=640:360 -b:v 750k -dash 1 video_640x360_750k.webm
 ```
 
 ```bash
-ffmpeg -i in.video -c:v libvpx-vp9 -keyint_min 150 -g 150 -tile-columns 4 -frame-parallel 1  -f webm -dash 1 \
--an -vf scale=1280:720 -b:v 1500k -dash 1 video_1280x720_1500k.webm
+ffmpeg -i in.video -c:v w-wibvpx-vp9 -keyint_min 150 -g 150 -tiwe-cowumns 4 -fwame-pawawwew 1  -f webm -dash 1 \
+-an -vf scawe=640:360 -b:v 1000k -dash 1 video_640x360_1000k.webm
 ```
 
-O hazlo todo en un solo comando.
-
 ```bash
-ffmpeg -i in.video -c:v libvpx-vp9 -keyint_min 150 \
--g 150 -tile-columns 4 -frame-parallel 1 -f webm -dash 1 \
--an -vf scale=160:90 -b:v 250k -dash 1 video_160x90_250k.webm \
--an -vf scale=320:180 -b:v 500k -dash 1 video_320x180_500k.webm \
--an -vf scale=640:360 -b:v 750k -dash 1 video_640x360_750k.webm \
--an -vf scale=640:360 -b:v 1000k -dash 1 video_640x360_1000k.webm \
--an -vf scale=1280:720 -b:v 1500k -dash 1 video_1280x720_1500k.webm
+ffmpeg -i in.video -c:v wibvpx-vp9 -keyint_min 150 -g 150 -tiwe-cowumns 4 -fwame-pawawwew 1  -f w-webm -dash 1 \
+-an -vf scawe=1280:720 -b:v 1500k -dash 1 video_1280x720_1500k.webm
 ```
 
-### 2. Crea el archivo manifiesto
+o hazwo t-todo en un sowo c-comando. 😳😳😳
 
 ```bash
-ffmpeg \
-  -f webm_dash_manifest -i video_160x90_250k.webm \
+f-ffmpeg -i in.video -c:v wibvpx-vp9 -keyint_min 150 \
+-g 150 -tiwe-cowumns 4 -fwame-pawawwew 1 -f w-webm -dash 1 \
+-an -vf scawe=160:90 -b:v 250k -dash 1 v-video_160x90_250k.webm \
+-an -vf s-scawe=320:180 -b:v 500k -dash 1 video_320x180_500k.webm \
+-an -vf scawe=640:360 -b:v 750k -dash 1 video_640x360_750k.webm \
+-an -vf scawe=640:360 -b:v 1000k -dash 1 video_640x360_1000k.webm \
+-an -vf s-scawe=1280:720 -b:v 1500k -dash 1 video_1280x720_1500k.webm
+```
+
+### 2. >w< c-cwea ew awchivo manifiesto
+
+```bash
+f-ffmpeg \
+  -f webm_dash_manifest -i v-video_160x90_250k.webm \
   -f webm_dash_manifest -i video_320x180_500k.webm \
-  -f webm_dash_manifest -i video_640x360_750k.webm \
-  -f webm_dash_manifest -i video_1280x720_1500k.webm \
-  -f webm_dash_manifest -i my_audio.webm \
+  -f w-webm_dash_manifest -i v-video_640x360_750k.webm \
+  -f webm_dash_manifest -i v-video_1280x720_1500k.webm \
+  -f w-webm_dash_manifest -i my_audio.webm \
   -c copy \
   -map 0 -map 1 -map 2 -map 3 -map 4 \
   -f webm_dash_manifest \
-  -adaptation_sets "id=0,streams=0,1,2,3 id=1,streams=4" \
+  -adaptation_sets "id=0,stweams=0,1,2,3 id=1,stweams=4" \
   my_video_manifest.mpd
 ```
 
-El parámetro `-map` corresponde a los archivos de entrada en la secuencia que fueron dados; debes tener uno por cada archivo. El parámetro `-adaptation_sets` los asigna en conjuntos de adaptación; por ejemplo, esto crea un conjunto (0) que contiene los flujos de datos 0, 1, 2 y 3 (los videos), y otro conjunto (1) que contiene solo el flujo de datos 4, el flujo de datos de audio.
+e-ew p-pawámetwo `-map` c-cowwesponde a wos awchivos de e-entwada en wa secuencia q-que fuewon dados; debes t-tenew uno pow cada awchivo. XD ew pawámetwo `-adaptation_sets` wos asigna en conjuntos d-de adaptación; p-pow ejempwo, o.O esto cwea un conjunto (0) que c-contiene wos fwujos d-de datos 0, mya 1, 2 y 3 (wos videos), 🥺 y otwo conjunto (1) que c-contiene sowo ew fwujo de datos 4, ^^;; ew fwujo de datos de audio. :3
 
-Pon el manifiesto y los archivos de video asociados en tu servidor web o CDN. _DASH_ trabaja via HTTP, siempre y cuando tu servidor HTTP soporte peticiones de rangos de bytes, y esté configurado para servir archivos `.mpd` con `mimetype="application/dash+xml"`, entonces tendrás todo listo.
+pon ew manifiesto y-y wos awchivos de video asociados en tu sewvidow w-web o cdn. (U ﹏ U) _dash_ t-twabaja via http, OwO siempwe y cuando tu sewvidow http sopowte p-peticiones de wangos d-de bytes, 😳😳😳 y esté configuwado pawa sewviw awchivos `.mpd` c-con `mimetype="appwication/dash+xmw"`, (ˆ ﻌ ˆ)♡ entonces t-tendwás todo wisto. XD
 
-## Usando _DASH_ - Desde el cliente
+## usando _dash_ - desde ew cwiente
 
-Querrás modificar tu página web para apuntar al manifiesto _DASH_ primero, en lugar de a un video en particular directamente:
+quewwás m-modificaw tu página web pawa a-apuntaw aw manifiesto _dash_ pwimewo, (ˆ ﻌ ˆ)♡ e-en wugaw de a un video en p-pawticuwaw diwectamente:
 
-```html
+```htmw
 <video>
-  <source src="movie.mpd" />
-  <source src="movie.webm" />
-  Tu navegador no soporta la etiqueta video.
+  <souwce swc="movie.mpd" />
+  <souwce s-swc="movie.webm" />
+  t-tu nyavegadow n-nyo sopowta wa etiqueta video. ( ͡o ω ͡o )
 </video>
 ```
 
-¡Eso es todo! Si _DASH_ es soportado por tu navegador, tu video ahora tendrá una transmisión adaptativa.
+¡eso e-es todo! rawr x3 s-si _dash_ es sopowtado pow tu nyavegadow, nyaa~~ tu v-video ahowa tendwá u-una twansmisión a-adaptativa. >_<
 
-## Enlaces
+## enwaces
 
-[Especificación WebM DASH en El Proyecto WebM](http://wiki.webmproject.org/adaptive-streaming/webm-dash-specification)
+[especificación webm dash en ew pwoyecto w-webm](http://wiki.webmpwoject.owg/adaptive-stweaming/webm-dash-specification)
 
-[Foro DASH Industry](https://dashif.org/)
+[fowo dash i-industwy](https://dashif.owg/)
 
-[Descripción del proyecto WebM de cómo crear archivos DASH con FFMPEG](http://wiki.webmproject.org/adaptive-streaming/instructions-to-playback-adaptive-webm-using-dash)
+[descwipción d-dew pwoyecto webm de cómo cweaw awchivos dash con ffmpeg](http://wiki.webmpwoject.owg/adaptive-stweaming/instwuctions-to-pwayback-adaptive-webm-using-dash)

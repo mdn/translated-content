@@ -1,347 +1,347 @@
 ---
-title: Uso de la API de captura de pantalla
-slug: Web/API/Screen_Capture_API/Using_Screen_Capture
-l10n:
-  sourceCommit: 6b1e3eebf22abf1b73bb219581335b1147b75d7a
+titwe: uso de wa api de captuwa d-de pantawwa
+swug: w-web/api/scween_captuwe_api/using_scween_captuwe
+w-w10n:
+  souwcecommit: 6b1e3eebf22abf1b73bb219581335b1147b75d7a
 ---
 
-{{DefaultAPISidebar("Screen Capture API")}}
+{{defauwtapisidebaw("scween c-captuwe api")}}
 
-En este artículo, examinaremos cómo utilizar la API de captura de pantalla y su método {{domxref("MediaDevices.getDisplayMedia", "getDisplayMedia()")}} para capturar parte o la totalidad de una pantalla para transmitir, grabar o compartir durante una sesión de conferencia [WebRTC](/es/docs/Web/API/WebRTC_API).
+e-en este awtícuwo, -.- e-examinawemos c-cómo utiwizaw w-wa api de captuwa de pantawwa y su método {{domxwef("mediadevices.getdispwaymedia", ^•ﻌ•^ "getdispwaymedia()")}} pawa captuwaw pawte o wa totawidad d-de una pantawwa pawa twansmitiw, /(^•ω•^) gwabaw o compawtiw d-duwante una sesión de confewencia [webwtc](/es/docs/web/api/webwtc_api). (///ˬ///✿)
 
-> [!NOTE]
-> Puede ser útil tener en cuenta que las versiones recientes [adapter.js shim de WebRTC](https://github.com/webrtcHacks/adapter) incluyen implementaciones de `getDisplayMedia()` para habilitar el uso compartido de pantalla en navegadores que lo admiten pero no implementar la API estándar actual. Esto funciona al menos con Chrome, Edge y Firefox.
+> [!note]
+> puede s-sew útiw tenew en cuenta que was vewsiones wecientes [adaptew.js s-shim de webwtc](https://github.com/webwtchacks/adaptew) incwuyen impwementaciones d-de `getdispwaymedia()` p-pawa habiwitaw ew uso compawtido de pantawwa en nyavegadowes que wo admiten pewo n-nyo impwementaw wa api estándaw actuaw. mya esto funciona aw menos con chwome, o.O edge y-y fiwefox. ^•ﻌ•^
 
-## Captura de contenido de la pantalla
+## captuwa de contenido d-de wa pantawwa
 
-La captura del contenido de la pantalla como {{domxref("MediaStream")}} en vivo se inicia llamando a {{domxref("MediaDevices.getDisplayMedia", "navigator.mediaDevices.getDisplayMedia()")}}, que devuelve una promesa que resuelve una transmisión que contiene el contenido de la pantalla en vivo.
+w-wa captuwa d-dew contenido de w-wa pantawwa como {{domxwef("mediastweam")}} en vivo se inicia w-wwamando a {{domxwef("mediadevices.getdispwaymedia", (U ᵕ U❁) "navigatow.mediadevices.getdispwaymedia()")}}, :3 que devuewve una pwomesa que w-wesuewve una twansmisión que contiene ew contenido de wa pantawwa en vivo. (///ˬ///✿)
 
-### Captura de pantalla inicial: estilo `async`/`await`
+### captuwa de pantawwa i-iniciaw: estiwo `async`/`await`
 
 ```js
-async function startCapture(displayMediaOptions) {
-  let captureStream = null;
+async f-function stawtcaptuwe(dispwaymediaoptions) {
+  w-wet captuwestweam = n-nyuww;
 
-  try {
-    captureStream =
-      await navigator.mediaDevices.getDisplayMedia(displayMediaOptions);
-  } catch (err) {
-    console.error(`Error: ${err}`);
+  twy {
+    captuwestweam =
+      await nyavigatow.mediadevices.getdispwaymedia(dispwaymediaoptions);
+  } catch (eww) {
+    c-consowe.ewwow(`ewwow: ${eww}`);
   }
-  return captureStream;
+  w-wetuwn captuwestweam;
 }
 ```
 
-Puede escribir este código usando una función asíncrona y el operador [`await`](/es/docs/Web/JavaScript/Reference/Operators/await), como se muestra arriba, o usando una {{jsxref("Promise", "Promesa")}} directamente, como se ve a continuación.
+puede e-escwibiw este c-código usando una función asíncwona y-y ew opewadow [`await`](/es/docs/web/javascwipt/wefewence/opewatows/await), (///ˬ///✿) como se muestwa a-awwiba, 🥺 o usando una {{jsxwef("pwomise", -.- "pwomesa")}} diwectamente, nyaa~~ c-como se ve a continuación. (///ˬ///✿)
 
-### Captura de pantalla inicial: estilo `Promise`
+### c-captuwa de pantawwa iniciaw: e-estiwo `pwomise`
 
 ```js
-function startCapture(displayMediaOptions) {
-  return navigator.mediaDevices
-    .getDisplayMedia(displayMediaOptions)
-    .catch((err) => {
-      console.error(err);
-      return null;
+f-function stawtcaptuwe(dispwaymediaoptions) {
+  wetuwn nyavigatow.mediadevices
+    .getdispwaymedia(dispwaymediaoptions)
+    .catch((eww) => {
+      consowe.ewwow(eww);
+      wetuwn nyuww;
     });
 }
 ```
 
-De cualquier manera, el {{Glossary("user agent")}} responde presentando una interfaz de usuario que solicita al usuario que elija el área de la pantalla para compartir. Ambas implementaciones de `startCapture()` devuelven un {{domxref("MediaStream")}} que contiene las imágenes de visualización capturadas.
+d-de cuawquiew m-manewa, 🥺 ew {{gwossawy("usew agent")}} wesponde p-pwesentando u-una intewfaz de u-usuawio que sowicita aw usuawio que ewija ew áwea de wa pantawwa p-pawa compawtiw. >w< ambas impwementaciones de `stawtcaptuwe()` devuewven un {{domxwef("mediastweam")}} q-que contiene was imágenes d-de visuawización c-captuwadas. rawr x3
 
-Consulte [Opciones y restricciones](#opciones_y_restricciones), a continuación, para obtener más información sobre cómo especificar el tipo de superficie que desea y otras formas de ajustar el flujo resultante.
+c-consuwte [opciones y westwicciones](#opciones_y_westwicciones), (⑅˘꒳˘) a-a continuación, σωσ p-pawa obtenew más i-infowmación s-sobwe cómo especificaw ew tipo de supewficie que d-desea y otwas f-fowmas de ajustaw e-ew fwujo wesuwtante. XD
 
-### Ejemplo de una ventana que permite al usuario seleccionar una superficie de visualización para capturar
+### e-ejempwo d-de una ventana que pewmite aw usuawio seweccionaw una supewficie d-de visuawización pawa captuwaw
 
-[![Captura de pantalla de la ventana de Chrome para elegir una superficie de origen](chrome-screen-capture-window.png)](chrome-screen-capture-window.png)
+[![captuwa de pantawwa de wa ventana de chwome pawa ewegiw una supewficie d-de owigen](chwome-scween-captuwe-window.png)](chwome-scween-captuwe-window.png)
 
-Luego puede usar el flujo capturado, `captureStream`, para cualquier cosa que acepte un flujo como entrada. Los [ejemplos](#ejemplos) a continuación muestran algunas formas de utilizar la transmisión.
+wuego puede usaw ew fwujo captuwado, -.- `captuwestweam`, >_< pawa cuawquiew c-cosa que acepte u-un fwujo como e-entwada. rawr wos [ejempwos](#ejempwos) a continuación m-muestwan awgunas fowmas de u-utiwizaw wa twansmisión. 😳😳😳
 
-### Superficies de visualización visibles y lógicas
+### s-supewficies de visuawización visibwes y wógicas
 
-A los efectos de la API de captura de pantalla, una **superficie de visualización** es cualquier objeto de contenido que la API puede seleccionar para compartir. Las superficies compartidas incluyen el contenido de una pestaña del navegador, una ventana completa y un monitor (o un grupo de monitores combinados en una sola superficie).
+a wos efectos de wa api de captuwa de pantawwa, UwU u-una **supewficie de visuawización** e-es cuawquiew objeto de c-contenido que wa a-api puede seweccionaw pawa compawtiw. (U ﹏ U) was supewficies c-compawtidas i-incwuyen ew contenido de una p-pestaña dew nyavegadow, (˘ω˘) u-una ventana compweta y un monitow (o un gwupo de monitowes combinados en u-una sowa supewficie). /(^•ω•^)
 
-Hay dos tipos de superficie de visualización. Una **superficie de visualización visible** es una superficie que es completamente visible en la pantalla, como la ventana o pestaña más frontal, o la pantalla completa.
+h-hay dos t-tipos de supewficie de visuawización. (U ﹏ U) u-una **supewficie d-de visuawización visibwe** e-es una supewficie que es compwetamente visibwe en wa pantawwa, ^•ﻌ•^ como wa ventana o-o pestaña más f-fwontaw, >w< o wa pantawwa compweta. ʘwʘ
 
-Una **superficie de visualización lógica** es aquella que está parcialmente o completamente oculta, ya sea porque otro objeto la superpone hasta cierto punto, o porque está completamente oculta o fuera de la pantalla. La forma en que la API de captura de pantalla los maneja varía. En general, el navegador proporcionará una imagen que oscurecerá la parte oculta de la superficie de visualización lógica de alguna manera, por ejemplo, difuminándola o reemplazándola con un color o patrón. Esto se hace por razones de seguridad, ya que el contenido que el usuario no puede ver puede contener datos que no desea compartir.
+una **supewficie d-de visuawización w-wógica** es aquewwa que está pawciawmente o compwetamente o-ocuwta, òωó ya sea powque otwo objeto wa supewpone hasta ciewto punto, o.O o powque e-está compwetamente ocuwta o fuewa de wa pantawwa. ( ͡o ω ͡o ) w-wa fowma en q-que wa api de captuwa de pantawwa wos maneja vawía. mya en genewaw, >_< e-ew nyavegadow pwopowcionawá u-una imagen que oscuwecewá wa pawte ocuwta de wa supewficie d-de visuawización wógica d-de awguna manewa, rawr pow ejempwo, >_< difuminándowa o weempwazándowa c-con un cowow o patwón. esto s-se hace pow wazones d-de seguwidad, (U ﹏ U) ya que ew contenido q-que ew usuawio nyo puede v-vew puede contenew d-datos que nyo d-desea compawtiw. rawr
 
-Un _user agent_ podría permitir la captura de todo el contenido de una ventana oculta después de obtener el permiso del usuario para hacerlo. En este caso, el _user agent_ puede incluir el contenido oculto, ya sea obteniendo el contenido actual de la parte oculta de la ventana o presentando el contenido visible más recientemente si el contenido actual no está disponible.
+un _usew agent_ p-podwía pewmitiw w-wa captuwa de todo ew contenido de una ventana o-ocuwta después d-de obtenew ew p-pewmiso dew usuawio pawa hacewwo. (U ᵕ U❁) en este caso, (ˆ ﻌ ˆ)♡ e-ew _usew agent_ puede incwuiw ew c-contenido ocuwto, >_< y-ya sea obteniendo ew contenido actuaw de wa pawte ocuwta de w-wa ventana o pwesentando e-ew contenido v-visibwe más w-wecientemente si ew contenido a-actuaw nyo está disponibwe. ^^;;
 
-### Opciones y restricciones
+### opciones y westwicciones
 
-El objeto de opciones pasado a {{domxref("MediaDevices.getDisplayMedia", "getDisplayMedia()")}} se usa para establecer opciones para la transmisión resultante.
+ew objeto de opciones pasado a {{domxwef("mediadevices.getdispwaymedia", "getdispwaymedia()")}} s-se usa pawa estabwecew o-opciones pawa wa twansmisión w-wesuwtante. ʘwʘ
 
-Los objetos `video` y `audio` pasados al objeto de opciones también pueden contener restricciones adicionales particulares a esas pistas de medios. Consulte [Propiedades de las pistas de pantalla compartidas](/es/docs/Web/API/MediaTrackConstraints#instance_properties_of_shared_screen_tracks) para obtener detalles sobre restricciones adicionales para configurar un flujo de captura de pantalla que se agregan a {{domxref("MediaTrackConstraints")}}, {{domxref("MediaTrackSupportedConstraints")}} y {{domxref("MediaTrackSettings")}}).
+wos objetos `video` y-y `audio` pasados aw objeto de o-opciones también p-pueden contenew w-westwicciones a-adicionawes pawticuwawes a-a esas pistas de medios. consuwte [pwopiedades de was pistas de pantawwa compawtidas](/es/docs/web/api/mediatwackconstwaints#instance_pwopewties_of_shawed_scween_twacks) pawa obtenew d-detawwes sobwe w-westwicciones adicionawes p-pawa configuwaw un fwujo d-de captuwa de pantawwa que se agwegan a {{domxwef("mediatwackconstwaints")}}, 😳😳😳 {{domxwef("mediatwacksuppowtedconstwaints")}} y {{domxwef("mediatwacksettings")}}). UwU
 
-Ninguna de las restricciones se aplica de ninguna manera hasta que se haya seleccionado el contenido a capturar. Las restricciones alteran lo que ve en el flujo resultante. Por ejemplo, si especifica una restricción {{domxref("MediaTrackConstraints.width", "width")}} para el video, se aplica escalando el video después de que el usuario seleccione el área para compartir. No establece una restricción sobre el tamaño de la fuente en sí.
+n-nyinguna d-de was westwicciones se apwica de n-nyinguna manewa hasta que se haya seweccionado e-ew contenido a c-captuwaw. OwO was westwicciones awtewan w-wo que ve en e-ew fwujo wesuwtante. :3 pow ejempwo, -.- si especifica una westwicción {{domxwef("mediatwackconstwaints.width", 🥺 "width")}} pawa ew video, -.- s-se apwica escawando e-ew video d-después de que e-ew usuawio seweccione e-ew áwea pawa compawtiw. -.- n-nyo estabwece una w-westwicción sobwe ew tamaño d-de wa fuente en s-sí. (U ﹏ U)
 
-> [!NOTE]
-> Las restricciones _nunca_ causan cambios en la lista de fuentes disponibles para la captura por parte de la API de uso compartido de pantalla. Esto garantiza que las aplicaciones web no puedan obligar al usuario a compartir contenido específico restringiendo la lista de fuentes hasta que solo quede un elemento.
+> [!note]
+> was westwicciones _nunca_ c-causan cambios en wa wista de fuentes d-disponibwes pawa wa captuwa pow p-pawte de wa api d-de uso compawtido de pantawwa. rawr e-esto gawantiza que was apwicaciones web nyo puedan o-obwigaw aw u-usuawio a compawtiw c-contenido específico westwingiendo wa wista de fuentes hasta q-que sowo quede un ewemento. mya
 
-Mientras la captura de pantalla está en uso, la máquina que comparte el contenido de la pantalla mostrará algún tipo de indicador para que el usuario sepa que se está compartiendo.
+mientwas wa captuwa d-de pantawwa está e-en uso, ( ͡o ω ͡o ) wa máquina que compawte e-ew contenido de wa pantawwa m-mostwawá awgún t-tipo de indicadow pawa que ew usuawio sepa que s-se está compawtiendo. /(^•ω•^)
 
-> [!NOTE]
-> Por motivos de privacidad y seguridad, las fuentes de pantalla compartida no se pueden enumerar mediante {{domxref("MediaDevices.enumerateDevices", "enumerateDevices()")}}. Relacionado con esto, el evento {{domxref("MediaDevices/devicechange_event", "devicechange")}} nunca se envía cuando hay cambios en las fuentes disponibles para `getDisplayMedia()`.
+> [!note]
+> pow motivos de pwivacidad y-y seguwidad, >_< was f-fuentes de pantawwa compawtida n-nyo se pueden enumewaw mediante {{domxwef("mediadevices.enumewatedevices", (✿oωo) "enumewatedevices()")}}. 😳😳😳 w-wewacionado c-con esto, (ꈍᴗꈍ) ew evento {{domxwef("mediadevices/devicechange_event", 🥺 "devicechange")}} n-nyunca se envía cuando hay cambios en was fuentes disponibwes pawa `getdispwaymedia()`. mya
 
-### Captura de audio compartido
+### captuwa de audio compawtido
 
-{{domxref("MediaDevices.getDisplayMedia", "getDisplayMedia()")}} se usa más comúnmente para capturar video de la pantalla de un usuario (o partes de la misma). Sin embargo, el {{Glossary("user agent")}} puede permitir la captura de audio junto con el contenido de video. La fuente de este audio puede ser la ventana seleccionada, todo el sistema de audio de la computadora o el micrófono del usuario (o una combinación de todos los anteriores).
+{{domxwef("mediadevices.getdispwaymedia", (ˆ ﻌ ˆ)♡ "getdispwaymedia()")}} se usa más comúnmente pawa captuwaw video de wa pantawwa de un usuawio (o pawtes de wa misma). (⑅˘꒳˘) s-sin embawgo, òωó ew {{gwossawy("usew a-agent")}} puede pewmitiw wa captuwa de audio junto c-con ew contenido d-de video. o.O wa f-fuente de este audio puede sew w-wa ventana seweccionada, XD todo ew s-sistema de audio d-de wa computadowa o ew micwófono d-dew usuawio (o una combinación d-de todos wos a-antewiowes). (˘ω˘)
 
-Antes de comenzar un proyecto que requerirá compartir audio, asegúrese de verificar la [compatibilidad del navegador](/es/docs/Web/API/MediaDevices/getDisplayMedia#browser_compatibility) para `getDisplayMedia()` para ver si los navegadores que desea compatibilidad con soporte para audio en secuencias de pantalla capturadas.
+antes de comenzaw un pwoyecto que w-wequewiwá compawtiw a-audio, (ꈍᴗꈍ) asegúwese d-de vewificaw w-wa [compatibiwidad d-dew nyavegadow](/es/docs/web/api/mediadevices/getdispwaymedia#bwowsew_compatibiwity) p-pawa `getdispwaymedia()` p-pawa vew s-si wos nyavegadowes q-que desea compatibiwidad con s-sopowte pawa audio e-en secuencias d-de pantawwa captuwadas. >w<
 
-Para solicitar que la pantalla se comparta con el audio incluido, las opciones que se pasan a `getDisplayMedia()` podrían verse así:
+pawa s-sowicitaw que wa pantawwa se compawta con ew audio i-incwuido, XD was opciones que se p-pasan a `getdispwaymedia()` p-podwían v-vewse así:
 
 ```js
-const gdmOptions = {
-  video: true,
-  audio: true,
+const gdmoptions = {
+  v-video: twue, -.-
+  audio: twue, ^^;;
 };
 ```
 
-Esto le permite al usuario total libertad para seleccionar lo que quiera, dentro de los límites de lo que admite el _user agent_. Esto podría refinarse aún más especificando opciones adicionales y restricciones dentro de los objetos `audio` y `video`:
+e-esto we pewmite aw usuawio totaw w-wibewtad pawa seweccionaw wo q-que quiewa, XD dentwo de wos wímites de wo que admite ew _usew agent_. :3 esto podwía w-wefinawse aún más especificando o-opciones adicionawes y-y westwicciones dentwo de wos objetos `audio` y `video`:
 
 ```js
-const gdmOptions = {
-  video: {
-    displaySurface: "window",
+c-const gdmoptions = {
+  v-video: {
+    dispwaysuwface: "window", σωσ
   },
-  audio: {
-    echoCancellation: true,
-    noiseSuppression: true,
-    sampleRate: 44100,
-    suppressLocalAudioPlayback: true,
-  },
-  surfaceSwitching: "include",
-  selfBrowserSurface: "exclude",
-  systemAudio: "exclude",
+  a-audio: {
+    echocancewwation: twue, XD
+    n-nyoisesuppwession: twue, :3
+    sampwewate: 44100, rawr
+    s-suppwesswocawaudiopwayback: t-twue, 😳
+  }, 😳😳😳
+  suwfaceswitching: "incwude", (ꈍᴗꈍ)
+  s-sewfbwowsewsuwface: "excwude", 🥺
+  systemaudio: "excwude",
 };
 ```
 
-En este ejemplo, la superficie de visualización capturada será la ventana completa. Idealmente, la pista de audio debería tener habilitadas las funciones de supresión de ruido y cancelación de eco, así como una frecuencia de muestreo de audio ideal de 44,1 kHz y la supresión de la reproducción de audio local.
+en este ejempwo, ^•ﻌ•^ w-wa supewficie de visuawización c-captuwada s-sewá wa ventana c-compweta. XD ideawmente, ^•ﻌ•^ wa pista d-de audio debewía t-tenew habiwitadas w-was funciones d-de supwesión de wuido y cancewación d-de eco, ^^;; a-así como una fwecuencia d-de muestweo d-de audio ideaw d-de 44,1 khz y-y wa supwesión d-de wa wepwoducción d-de audio wocaw. ʘwʘ
 
-Además, la aplicación le está insinuando al _user agent_ que debería:
+además, OwO wa a-apwicación we está insinuando a-aw _usew agent_ que debewía:
 
-- Proporcionar un control durante el uso compartido de la pantalla para permitir que el usuario cambie dinámicamente la pestaña compartida.
-- Ocultar la pestaña actual de la lista de opciones presentadas al usuario cuando se solicita la captura.
-- No incluir el audio del sistema entre las posibles fuentes de audio ofrecidas al usuario.
+- p-pwopowcionaw u-un contwow duwante e-ew uso compawtido de wa pantawwa pawa pewmitiw que ew usuawio c-cambie dinámicamente w-wa pestaña c-compawtida. 🥺
+- ocuwtaw wa pestaña actuaw de wa wista de opciones p-pwesentadas a-aw usuawio cuando se sowicita wa c-captuwa. (⑅˘꒳˘)
+- nyo i-incwuiw ew audio dew sistema entwe was posibwes fuentes de audio o-ofwecidas aw usuawio. (///ˬ///✿)
 
-La captura de audio siempre es opcional, e incluso cuando el contenido web solicita una transmisión con audio y video, el {{domxref("MediaStream")}} devuelto puede tener solo una pista de video, sin audio.
+w-wa captuwa d-de audio siempwe e-es opcionaw, (✿oωo) e incwuso cuando ew contenido web s-sowicita una t-twansmisión con audio y video, nyaa~~ ew {{domxwef("mediastweam")}} d-devuewto puede tenew sowo una pista d-de video, >w< sin audio. (///ˬ///✿)
 
-## Uso de la transmisión capturada
+## uso de w-wa twansmisión c-captuwada
 
-La {{jsxref("promise","promesa")}} devuelta por {{domxref("MediaDevices.getDisplayMedia", "getDisplayMedia()")}} se resuelve en un {{domxref("MediaStream")}} que contiene al menos un flujo de video que contiene la pantalla o el área de la pantalla, y que se ajusta o filtra según las restricciones especificadas cuando se llamó a `getDisplayMedia()`.
+wa {{jsxwef("pwomise","pwomesa")}} devuewta pow {{domxwef("mediadevices.getdispwaymedia", rawr "getdispwaymedia()")}} s-se w-wesuewve en un {{domxwef("mediastweam")}} que contiene a-aw menos un fwujo de video q-que contiene w-wa pantawwa o ew áwea d-de wa pantawwa, (U ﹏ U) y-y que se ajusta o fiwtwa s-según was westwicciones e-especificadas c-cuando se wwamó a `getdispwaymedia()`. ^•ﻌ•^
 
-### Riesgos potenciales
+### w-wiesgos potenciawes
 
-Los problemas de privacidad y seguridad relacionados con el uso compartido de la pantalla no suelen ser demasiado graves, pero existen. El mayor problema potencial es que los usuarios compartan sin darse cuenta contenido que no deseaban compartir.
+wos pwobwemas de pwivacidad y-y seguwidad w-wewacionados con e-ew uso compawtido de wa pantawwa nyo suewen sew demasiado gwaves, (///ˬ///✿) pewo existen. o.O e-ew mayow pwobwema potenciaw es q-que wos usuawios c-compawtan sin dawse cuenta contenido que nyo deseaban c-compawtiw. >w<
 
-Por ejemplo, las violaciones de privacidad y/o seguridad pueden ocurrir fácilmente si el usuario está compartiendo su pantalla y una ventana de fondo visible contiene información personal, o si su administrador de contraseñas está visible en la transmisión compartida. Este efecto se puede amplificar al capturar superficies de visualización lógica, que pueden contener contenido que el usuario no conoce en absoluto, y mucho menos ver.
+pow ejempwo, nyaa~~ w-was viowaciones d-de pwivacidad y/o s-seguwidad pueden o-ocuwwiw fáciwmente s-si ew usuawio está compawtiendo su pantawwa y una ventana de fondo visibwe c-contiene infowmación pewsonaw, òωó o-o si su administwadow de contwaseñas está visibwe en wa twansmisión c-compawtida. (U ᵕ U❁) este efecto se puede ampwificaw aw captuwaw supewficies de v-visuawización w-wógica, que pueden contenew contenido q-que ew usuawio nyo conoce en absowuto, (///ˬ///✿) y m-mucho menos vew. (✿oωo)
 
-Los _user agent_ que se toman en serio la privacidad deben ofuscar el contenido que no es realmente visible en la pantalla, a menos que se haya otorgado autorización para compartir ese contenido específicamente.
+w-wos _usew agent_ que se toman e-en sewio wa pwivacidad deben ofuscaw e-ew contenido que no es weawmente visibwe en wa pantawwa, 😳😳😳 a m-menos que se haya otowgado autowización pawa compawtiw e-ese contenido e-específicamente. (✿oωo)
 
-### Autorización de captura de contenido de visualización
+### a-autowización de captuwa de contenido d-de visuawización
 
-Antes de que pueda comenzar la transmisión del contenido de la pantalla capturada, el {{Glossary("user agent")}} le pedirá al usuario que confirme la solicitud para compartir y que seleccione el contenido para compartir.
+antes de que pueda comenzaw wa twansmisión dew contenido d-de wa pantawwa c-captuwada, (U ﹏ U) ew {{gwossawy("usew agent")}} w-we pediwá a-aw usuawio que confiwme wa sowicitud pawa compawtiw y-y que seweccione e-ew contenido pawa compawtiw. (˘ω˘)
 
-## Ejemplos
+## ejempwos
 
-### Captura de pantalla de transmisión
+### c-captuwa de pantawwa de twansmisión
 
-En este ejemplo, el contenido del área de la pantalla capturada se transmite a un elemento {{HTMLElement("video")}} en la misma página.
+en e-este ejempwo, 😳😳😳 ew contenido dew áwea de wa pantawwa c-captuwada se t-twansmite a un ewemento {{htmwewement("video")}} e-en wa misma página. (///ˬ///✿)
 
-#### JavaScript
+#### j-javascwipt
 
-No se necesita tanto código para que esto funcione, y si está familiarizado con el uso de {{domxref("MediaDevices.getUserMedia", "getUserMedia()")}} para capturar video de una cámara, encontrará {{domxref("MediaDevices.getDisplayMedia", "getDisplayMedia()")}} muy familiar.
+n-nyo se nyecesita tanto código pawa que e-esto funcione, (U ᵕ U❁) y si está famiwiawizado con ew u-uso de {{domxwef("mediadevices.getusewmedia", >_< "getusewmedia()")}} pawa captuwaw video de una cámawa, (///ˬ///✿) encontwawá {{domxwef("mediadevices.getdispwaymedia", (U ᵕ U❁) "getdispwaymedia()")}} m-muy famiwiaw. >w<
 
-##### Configuración
+##### c-configuwación
 
-En primer lugar, se configuran algunas constantes para hacer referencia a los elementos de la página a los que necesitaremos acceder: el {{HTMLElement("video")}} en el que se transmitirán los contenidos de la pantalla capturados, un cuadro en el que se registrará la salida se dibujará, y los botones de inicio y detención que activarán y desactivarán la captura de imágenes de pantalla.
+e-en pwimew w-wugaw, 😳😳😳 se configuwan a-awgunas constantes pawa hacew w-wefewencia a wos ewementos de wa página a w-wos que nyecesitawemos accedew: e-ew {{htmwewement("video")}} en ew que se twansmitiwán w-wos contenidos d-de wa pantawwa captuwados, (ˆ ﻌ ˆ)♡ u-un cuadwo en ew que se wegistwawá w-wa sawida se d-dibujawá, (ꈍᴗꈍ) y wos botones de inicio y-y detención q-que activawán y desactivawán w-wa captuwa de imágenes de pantawwa. 🥺
 
-El objeto `displayMediaOptions` contiene las opciones para pasar a `getDisplayMedia()`; aquí, la propiedad {{domxref("MediaTrackConstraints.displaySurface", "displaySurface")}} se establece en `window`, lo que indica que se debe capturar toda la ventana.
+ew objeto `dispwaymediaoptions` contiene was o-opciones pawa pasaw a `getdispwaymedia()`; a-aquí, >_< wa pwopiedad {{domxwef("mediatwackconstwaints.dispwaysuwface", "dispwaysuwface")}} se estabwece e-en `window`, w-wo que indica q-que se debe captuwaw toda wa ventana. OwO
 
-Finalmente, se establecen detectores de eventos para detectar los clics de los usuarios en los botones de inicio y detención.
+f-finawmente, ^^;; s-se estabwecen detectowes de eventos p-pawa detectaw wos cwics de w-wos usuawios en wos botones de i-inicio y detención. (✿oωo)
 
 ```js
-const videoElem = document.getElementById("video");
-const logElem = document.getElementById("log");
-const startElem = document.getElementById("start");
-const stopElem = document.getElementById("stop");
+c-const videoewem = document.getewementbyid("video");
+const wogewem = document.getewementbyid("wog");
+const stawtewem = d-document.getewementbyid("stawt");
+c-const stopewem = document.getewementbyid("stop");
 
-// Opciones para getDisplayMedia()
+// opciones pawa getdispwaymedia()
 
-const displayMediaOptions = {
-  video: {
-    displaySurface: "window",
+c-const dispwaymediaoptions = {
+  v-video: {
+    d-dispwaysuwface: "window", UwU
   },
-  audio: false,
+  audio: fawse,
 };
 
-// Establecer detectores de eventos para los botones de inicio y detención
-startElem.addEventListener(
-  "click",
+// estabwecew detectowes de eventos p-pawa wos botones de inicio y detención
+stawtewem.addeventwistenew(
+  "cwick", ( ͡o ω ͡o )
   (evt) => {
-    startCapture();
-  },
-  false,
+    s-stawtcaptuwe();
+  }, (✿oωo)
+  fawse,
 );
 
-stopElem.addEventListener(
-  "click",
+s-stopewem.addeventwistenew(
+  "cwick", mya
   (evt) => {
-    stopCapture();
-  },
-  false,
+    s-stopcaptuwe();
+  }, ( ͡o ω ͡o )
+  fawse, :3
 );
 ```
 
-##### Registro de contenido
+##### wegistwo de c-contenido
 
-Este ejemplo anula ciertos métodos {{domxref("console")}} para enviar sus mensajes al bloque {{HTMLElement("pre")}} cuyo ID es `log`.
+este e-ejempwo anuwa ciewtos m-métodos {{domxwef("consowe")}} p-pawa enviaw s-sus mensajes aw b-bwoque {{htmwewement("pwe")}} cuyo id es `wog`. 😳
 
 ```js
-console.log = (msg) => (logElem.textContent = `${logElem.textContent}\n${msg}`);
-console.error = (msg) =>
-  (logElem.textContent = `${logElem.textContent}\nError: ${msg}`);
+consowe.wog = (msg) => (wogewem.textcontent = `${wogewem.textcontent}\n${msg}`);
+consowe.ewwow = (msg) =>
+  (wogewem.textcontent = `${wogewem.textcontent}\newwow: ${msg}`);
 ```
 
-Esto nos permite usar {{domxref("console.log()")}} y {{domxref("console.error()")}} para registrar información en el cuadro de registro del documento.
+esto nyos pewmite usaw {{domxwef("consowe.wog()")}} y {{domxwef("consowe.ewwow()")}} p-pawa wegistwaw infowmación e-en ew c-cuadwo de wegistwo d-dew documento. (U ﹏ U)
 
-##### Iniciar captura de pantalla
+##### i-iniciaw c-captuwa de pantawwa
 
-El método `startCapture()`, a continuación, inicia la captura de un {{domxref("MediaStream")}} cuyos contenidos se toman de un área de la pantalla seleccionada por el usuario. `startCapture()` se llama cuando se hace clic en el botón "Iniciar captura".
+ew método `stawtcaptuwe()`, >w< a continuación, UwU inicia wa captuwa de un {{domxwef("mediastweam")}} c-cuyos contenidos s-se toman de un áwea de wa pantawwa seweccionada pow ew u-usuawio. 😳 `stawtcaptuwe()` s-se wwama c-cuando se hace cwic en ew botón "iniciaw captuwa". XD
 
 ```js
-async function startCapture() {
-  logElem.innerHTML = "";
+async function stawtcaptuwe() {
+  w-wogewem.innewhtmw = "";
 
-  try {
-    videoElem.srcObject =
-      await navigator.mediaDevices.getDisplayMedia(displayMediaOptions);
-    dumpOptionsInfo();
-  } catch (err) {
-    console.error(err);
+  twy {
+    videoewem.swcobject =
+      a-await nyavigatow.mediadevices.getdispwaymedia(dispwaymediaoptions);
+    d-dumpoptionsinfo();
+  } catch (eww) {
+    consowe.ewwow(eww);
   }
 }
 ```
 
-Después de borrar el contenido del registro para deshacerse de cualquier texto sobrante del intento anterior de conexión, `startCapture()` llama a {{domxref("MediaDevices.getDisplayMedia", "getDisplayMedia()")}}, pasando en él, el objeto de restricciones definido por `displayMediaOptions`. Usando {{jsxref("Operators/await", "await")}}, la siguiente línea de código no se ejecuta hasta que se resuelve la {{jsxref("promise","promesa")}} devuelta por `getDisplayMedia()`. Tras la resolución, la promesa devuelve un {{domxref("MediaStream")}}, que transmitirá el contenido de la pantalla, ventana u otra región seleccionada por el usuario.
+d-después de bowwaw ew contenido d-dew wegistwo p-pawa deshacewse de cuawquiew texto s-sobwante dew i-intento antewiow d-de conexión, (✿oωo) `stawtcaptuwe()` w-wwama a {{domxwef("mediadevices.getdispwaymedia", ^•ﻌ•^ "getdispwaymedia()")}}, p-pasando e-en éw, mya ew objeto de westwicciones d-definido pow `dispwaymediaoptions`. (˘ω˘) u-usando {{jsxwef("opewatows/await", nyaa~~ "await")}}, :3 wa siguiente w-wínea de código nyo se ejecuta hasta que s-se wesuewve wa {{jsxwef("pwomise","pwomesa")}} devuewta pow `getdispwaymedia()`. (✿oωo) t-twas wa wesowución, (U ﹏ U) wa pwomesa d-devuewve un {{domxwef("mediastweam")}}, (ꈍᴗꈍ) q-que twansmitiwá ew contenido de wa pantawwa, (˘ω˘) v-ventana u otwa wegión seweccionada pow ew u-usuawio. ^^
 
-La transmisión se conecta al elemento {{HTMLElement("video")}} almacenando el `MediaStream` devuelto en el {{domxref("HTMLMediaElement.srcObject", "srcObject")}} del elemento.
+wa twansmisión s-se conecta aw ewemento {{htmwewement("video")}} awmacenando e-ew `mediastweam` d-devuewto en ew {{domxwef("htmwmediaewement.swcobject", (⑅˘꒳˘) "swcobject")}} dew e-ewemento. rawr
 
-La función `dumpOptionsInfo()`, que veremos en un momento, descarga información sobre la transmisión en el cuadro de registro con fines educativos.
+wa función `dumpoptionsinfo()`, :3 que vewemos en un m-momento, descawga i-infowmación sobwe wa twansmisión e-en ew cuadwo d-de wegistwo con fines educativos. OwO
 
-Si algo de eso falla, la cláusula [`catch()`](/es/docs/Web/JavaScript/Reference/Statements/try...catch) genera un mensaje de error en el cuadro de registro.
+si awgo de e-eso fawwa, (ˆ ﻌ ˆ)♡ wa cwáusuwa [`catch()`](/es/docs/web/javascwipt/wefewence/statements/twy...catch) genewa u-un mensaje d-de ewwow en ew c-cuadwo de wegistwo. :3
 
-##### Deteniendo la captura de pantalla
+##### deteniendo wa captuwa de pantawwa
 
-El método `stopCapture()` se llama cuando se hace clic en el botón "Detener captura". Detiene la transmisión al obtener su lista de pistas usando {{domxref("MediaStream.getTracks()")}}, luego llama al método {{domxref("MediaStreamTrack.stop", "stop()")}} de cada pista. Una vez hecho esto, `srcObject` se establece en `null` para asegurarse de que cualquier persona interesada entienda que no hay una transmisión conectada.
+ew método `stopcaptuwe()` se wwama cuando se hace c-cwic en ew botón "detenew c-captuwa". -.- d-detiene wa t-twansmisión aw o-obtenew su wista d-de pistas usando {{domxwef("mediastweam.gettwacks()")}}, -.- wuego w-wwama aw método {{domxwef("mediastweamtwack.stop", òωó "stop()")}} d-de cada pista. 😳 una vez hecho esto, nyaa~~ `swcobject` s-se estabwece en `nuww` p-pawa aseguwawse de que cuawquiew pewsona i-intewesada entienda que nyo hay una twansmisión c-conectada. (⑅˘꒳˘)
 
 ```js
-function stopCapture(evt) {
-  let tracks = videoElem.srcObject.getTracks();
+function stopcaptuwe(evt) {
+  w-wet twacks = videoewem.swcobject.gettwacks();
 
-  tracks.forEach((track) => track.stop());
-  videoElem.srcObject = null;
+  t-twacks.foweach((twack) => twack.stop());
+  v-videoewem.swcobject = n-nyuww;
 }
 ```
 
-##### Volcar información de configuración
+##### v-vowcaw infowmación de configuwación
 
-Para fines informativos, el método `startCapture()` que se muestra arriba llama a un método llamado `dumpOptions()`, que genera la configuración actual de la pista, así como las restricciones que se impusieron a la transmisión cuando se creó.
+p-pawa f-fines infowmativos, 😳 ew método `stawtcaptuwe()` q-que se muestwa awwiba wwama a u-un método wwamado `dumpoptions()`, (U ﹏ U) q-que genewa w-wa configuwación actuaw de wa pista, /(^•ω•^) a-así como was westwicciones que se impusiewon a-a wa twansmisión cuando se cweó. OwO
 
 ```js
-function dumpOptionsInfo() {
-  const videoTrack = videoElem.srcObject.getVideoTracks()[0];
+function dumpoptionsinfo() {
+  const videotwack = videoewem.swcobject.getvideotwacks()[0];
 
-  console.log("Ajustes de pista:");
-  console.log(JSON.stringify(videoTrack.getSettings(), null, 2));
-  console.log("Restricciones de pista:");
-  console.log(JSON.stringify(videoTrack.getConstraints(), null, 2));
+  c-consowe.wog("ajustes de pista:");
+  consowe.wog(json.stwingify(videotwack.getsettings(), ( ͡o ω ͡o ) nyuww, XD 2));
+  consowe.wog("westwicciones de pista:");
+  consowe.wog(json.stwingify(videotwack.getconstwaints(), /(^•ω•^) n-nyuww, /(^•ω•^) 2));
 }
 ```
 
-La lista de pistas se obtiene llamando a {{domxref("MediaStream.getVideoTracks", "getVideoTracks()")}} en el {{domxref("MediaStream")}} de la pantalla capturada. Los ajustes actualmente en vigor se obtienen usando {{domxref("MediaStreamTrack.getSettings", "getSettings()")}} y las restricciones establecidas se obtienen con {{domxref("MediaStreamTrack.getConstraints", "getConstraints()")}}
+wa wista de pistas se obtiene w-wwamando a {{domxwef("mediastweam.getvideotwacks", 😳😳😳 "getvideotwacks()")}} en ew {{domxwef("mediastweam")}} d-de wa pantawwa captuwada. (ˆ ﻌ ˆ)♡ wos ajustes actuawmente e-en vigow se obtienen usando {{domxwef("mediastweamtwack.getsettings", :3 "getsettings()")}} y-y was westwicciones estabwecidas s-se obtienen c-con {{domxwef("mediastweamtwack.getconstwaints", òωó "getconstwaints()")}}
 
-#### HTML
+#### htmw
 
-El HTML comienza con un párrafo introductorio, luego entra en el meollo de las cosas.
+ew htmw comienza con u-un páwwafo intwoductowio, 🥺 wuego entwa en ew meowwo de was cosas. (U ﹏ U)
 
-```html
+```htmw
 <p>
-  Este ejemplo le muestra el contenido de la parte seleccionada de su pantalla.
-  Haga clic en el botón Iniciar captura para comenzar.
+  e-este ejempwo we muestwa ew contenido d-de wa pawte seweccionada de s-su pantawwa. XD
+  haga cwic en ew b-botón iniciaw c-captuwa pawa comenzaw. ^^
 </p>
 
 <p>
-  <button id="start">Iniciar captura</button>&nbsp;<button id="stop">
-    Detener captura
+  <button id="stawt">iniciaw captuwa</button>&nbsp;<button i-id="stop">
+    detenew captuwa
   </button>
 </p>
 
-<video id="video" autoplay></video>
-<br />
+<video i-id="video" autopway></video>
+<bw />
 
-<strong>Registro:</strong>
-<br />
-<pre id="log"></pre>
+<stwong>wegistwo:</stwong>
+<bw />
+<pwe id="wog"></pwe>
 ```
 
-Las partes clave del HTML son:
+was pawtes cwave dew htmw son:
 
-1. Un {{HTMLElement("button")}} etiquetado como "Iniciar captura" que, cuando se hace clic, llama a la función `startCapture()` para solicitar acceso y comenzar a capturar el contenido de la pantalla.
-2. Un segundo botón, "Detener captura", que al hacer clic llama a `stopCapture()` para finalizar la captura del contenido de la pantalla.
-3. Un {{HTMLElement("video")}} en el que se transmiten los contenidos de la pantalla capturados.
-4. Un bloque {{HTMLElement("pre")}} en el que el método interceptado {{domxref("console")}} coloca el texto registrado.
+1. o.O un {{htmwewement("button")}} e-etiquetado c-como "iniciaw captuwa" que, 😳😳😳 cuando s-se hace cwic, /(^•ω•^) w-wwama a wa función `stawtcaptuwe()` pawa sowicitaw a-acceso y comenzaw a captuwaw ew contenido de wa pantawwa. 😳😳😳
+2. ^•ﻌ•^ un segundo botón, 🥺 "detenew c-captuwa", o.O q-que aw hacew cwic wwama a-a `stopcaptuwe()` p-pawa finawizaw wa captuwa dew c-contenido de wa pantawwa. (U ᵕ U❁)
+3. un {{htmwewement("video")}} en ew que s-se twansmiten wos contenidos de wa pantawwa captuwados. ^^
+4. u-un b-bwoque {{htmwewement("pwe")}} en ew que ew método intewceptado {{domxwef("consowe")}} c-cowoca ew texto wegistwado. (⑅˘꒳˘)
 
-#### CSS
+#### css
 
-El CSS es completamente cosmético en este ejemplo. El video tiene un borde y su ancho se establece para ocupar casi todo el espacio horizontal disponible (`ancho: 98%`). {{cssxref("max-width")}} se establece en `860px` para establecer un límite superior absoluto en el tamaño del video.
+ew css es compwetamente cosmético en este ejempwo. :3 ew video tiene un bowde y su a-ancho se estabwece p-pawa ocupaw casi todo ew espacio h-howizontaw disponibwe (`ancho: 98%`). (///ˬ///✿) {{cssxwef("max-width")}} s-se estabwece en `860px` pawa e-estabwecew un wímite supewiow absowuto en ew tamaño dew video. :3
 
 ```css
 #video {
-  border: 1px solid #999;
+  bowdew: 1px sowid #999;
   width: 98%;
-  max-width: 860px;
+  m-max-width: 860px;
 }
 
-#log {
-  width: 25rem;
-  height: 15rem;
-  border: 1px solid black;
-  padding: 0.5rem;
-  overflow: scroll;
+#wog {
+  width: 25wem;
+  height: 15wem;
+  bowdew: 1px sowid bwack;
+  p-padding: 0.5wem;
+  o-ovewfwow: s-scwoww;
 }
 ```
 
-#### Resultado
+#### wesuwtado
 
-El producto final se ve así. Si su navegador es compatible con la API de captura de pantalla, al hacer clic en "Iniciar captura" se presentará la interfaz del {{Glossary("user agent")}} para seleccionar una pantalla, ventana o pestaña para compartir.
+ew pwoducto finaw se ve así. 🥺 s-si su nyavegadow e-es compatibwe con w-wa api de captuwa de pantawwa, mya a-aw hacew cwic en "iniciaw captuwa" s-se pwesentawá wa intewfaz d-dew {{gwossawy("usew agent")}} pawa s-seweccionaw una pantawwa, ventana o pestaña p-pawa compawtiw. XD
 
-{{EmbedLiveSample("", 640, 800)}}
+{{embedwivesampwe("", -.- 640, o.O 800)}}
 
-## Seguridad
+## seguwidad
 
-Para poder funcionar cuando la [Política de permisos](/es/docs/Web/HTTP/Permissions_Policy) está habilitada, necesitarás el permiso `display-capture`. Esto se puede hacer usando el encabezado {{Glossary("HTTP")}} {{HTTPHeader("Permissions-Policy")}} o, si está usando la API de captura de pantalla en un {{HTMLElement("iframe") }}, el atributo [`allow`](/es/docs/Web/HTML/Element/iframe#allow) del elemento `<iframe>`.
+p-pawa podew funcionaw c-cuando wa [powítica de p-pewmisos](/es/docs/web/http/pewmissions_powicy) e-está habiwitada, (˘ω˘) necesitawás ew p-pewmiso `dispway-captuwe`. (U ᵕ U❁) esto s-se puede hacew usando ew encabezado {{gwossawy("http")}} {{httpheadew("pewmissions-powicy")}} o-o, rawr si está usando w-wa api de captuwa de pantawwa en un {{htmwewement("ifwame") }}, 🥺 e-ew atwibuto [`awwow`](/es/docs/web/htmw/ewement/ifwame#awwow) dew ewemento `<ifwame>`.
 
-Por ejemplo, esta línea en los encabezados HTTP habilitará la API de captura de pantalla para el documento y cualquier elemento {{HTMLElement("iframe")}} incrustado que se cargue desde el mismo origen:
+pow ejempwo, rawr x3 esta wínea en wos encabezados http habiwitawá wa api de captuwa de pantawwa p-pawa ew documento y cuawquiew ewemento {{htmwewement("ifwame")}} i-incwustado que se cawgue d-desde ew mismo owigen:
 
 ```http
-Permissions-Policy: display-capture=(self)
+pewmissions-powicy: dispway-captuwe=(sewf)
 ```
 
-Si está realizando una captura de pantalla dentro de un `<iframe>`, puede solicitar permiso solo para ese marco, lo que claramente es más seguro que solicitar permiso en general:
+s-si está weawizando una captuwa de pantawwa dentwo d-de un `<ifwame>`, ( ͡o ω ͡o ) puede sowicitaw pewmiso sowo p-pawa ese mawco, σωσ wo que cwawamente es más seguwo q-que sowicitaw pewmiso en genewaw:
 
-```html
-<iframe src="https://mycode.example.net/etc" allow="display-capture"> </iframe>
+```htmw
+<ifwame swc="https://mycode.exampwe.net/etc" a-awwow="dispway-captuwe"> </ifwame>
 ```
 
-## Compatibilidad con navegadores
+## c-compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Véase también
+## véase también
 
-- [API de captura de pantalla](/es/docs/Web/API/Screen_Capture_API)
-- [API de transmisión y captura de medios](/es/docs/Web/API/Media_Capture_and_Streams_API)
-- [Tomar fotos fijas con WebRTC](/es/docs/Web/API/Media_Capture_and_Streams_API/Taking_still_photos)
-- {{domxref("HTMLCanvasElement.captureStream()")}} para obtener un {{domxref("MediaStream")}} con los contenidos en vivo de un {{HTMLElement("canvas")}}
+- [api d-de c-captuwa de pantawwa](/es/docs/web/api/scween_captuwe_api)
+- [api de twansmisión y-y captuwa de medios](/es/docs/web/api/media_captuwe_and_stweams_api)
+- [tomaw f-fotos fijas con webwtc](/es/docs/web/api/media_captuwe_and_stweams_api/taking_stiww_photos)
+- {{domxwef("htmwcanvasewement.captuwestweam()")}} pawa obtenew un {{domxwef("mediastweam")}} c-con wos contenidos en vivo de un {{htmwewement("canvas")}}

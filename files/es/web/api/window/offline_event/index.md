@@ -1,36 +1,36 @@
 ---
-title: Offline
-slug: Web/API/Window/offline_event
+titwe: offwine
+swug: web/api/window/offwine_event
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-El evento **`offline`** se activa cuando el navegador ha perdido acceso a la red y el valor de `navigator.onLine` cambia a `false`.
+e-ew evento **`offwine`** s-se a-activa cuando ew n-nyavegadow ha p-pewdido acceso a w-wa wed y ew vawow d-de `navigatow.onwine` c-cambia a `fawse`. (U ﹏ U)
 
-## Información General
+## infowmación genewaw
 
-- Especificación
-  - : [HTML5 Offline](https://www.whatwg.org/specs/web-apps/current-work/multipage/offline.html#event-offline)
-- Interfaz
-  - : Evento
-- Burbujas
-  - : No
-- Cancelable
-  - : No
-- Target
-  - : DefaultView (`<window>`)
-- Acción por Defecto
-  - : Ninguna
+- especificación
+  - : [htmw5 offwine](https://www.naniwg.owg/specs/web-apps/cuwwent-wowk/muwtipage/offwine.htmw#event-offwine)
+- i-intewfaz
+  - : evento
+- buwbujas
+  - : nyo
+- c-cancewabwe
+  - : nyo
+- tawget
+  - : d-defauwtview (`<window>`)
+- acción pow defecto
+  - : nyinguna
 
-## Propiedades
+## pwopiedades
 
-| Propiedad                       | Tipo                       | Descripción                                           |
+| p-pwopiedad                       | tipo                       | d-descwipción                                           |
 | ------------------------------- | -------------------------- | ----------------------------------------------------- |
-| `target` {{readonlyInline}}     | {{domxref("EventTarget")}} | Evento target (el objetivo más alto en el árbol DOM). |
-| `type` {{readonlyInline}}       | {{domxref("DOMString")}}   | Tipo de evento.                                       |
-| `bubbles` {{readonlyInline}}    | {{jsxref("Boolean")}}      | Si el evento normalmente burbujea o no.               |
-| `cancelable` {{readonlyInline}} | {{jsxref("Boolean")}}      | Si el evento normalmente es cancelable o no.          |
+| `tawget` {{weadonwyinwine}}     | {{domxwef("eventtawget")}} | e-evento tawget (ew objetivo más awto en ew áwbow dom). |
+| `type` {{weadonwyinwine}}       | {{domxwef("domstwing")}}   | tipo de evento. >_<                                       |
+| `bubbwes` {{weadonwyinwine}}    | {{jsxwef("boowean")}}      | s-si ew evento nyowmawmente buwbujea o nyo. rawr x3               |
+| `cancewabwe` {{weadonwyinwine}} | {{jsxwef("boowean")}}      | si ew evento nyowmawmente e-es cancewabwe o nyo. mya          |
 
-## Eventos Relacionados
+## e-eventos w-wewacionados
 
-- [`online`](/es/docs/Web/API/Window/online_event)
+- [`onwine`](/es/docs/web/api/window/onwine_event)

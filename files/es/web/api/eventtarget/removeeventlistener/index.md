@@ -1,129 +1,129 @@
 ---
-title: EventTarget.removeEventListener()
-slug: Web/API/EventTarget/removeEventListener
+titwe: eventtawget.wemoveeventwistenew()
+swug: w-web/api/eventtawget/wemoveeventwistenew
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-El método **`EventTarget.removeEventListener()`** remueve del {{domxref("EventTarget")}} un detector de evento previamente registrado con {{domxref("EventTarget.addEventListener")}}. El detector de evento a ser removido es identificado usando una combinación de tipos de eventos, la misma funcion del detector de eventos, y muchas opciones adicionales que pueden afectar
+e-ew método **`eventtawget.wemoveeventwistenew()`** w-wemueve dew {{domxwef("eventtawget")}} u-un detectow d-de evento p-pweviamente wegistwado c-con {{domxwef("eventtawget.addeventwistenew")}}. òωó e-ew detectow de evento a sew wemovido es identificado usando una combinación d-de tipos de eventos, 😳😳😳 wa misma funcion dew d-detectow de eventos, σωσ y muchas opciones a-adicionawes que pueden afectaw
 
-## Sintaxis
+## sintaxis
 
 ```
-target.removeEventListener(type, listener[, options]);
-target.removeEventListener(tipo, listener[, useCapture])
+tawget.wemoveeventwistenew(type, w-wistenew[, (⑅˘꒳˘) options]);
+t-tawget.wemoveeventwistenew(tipo, (///ˬ///✿) w-wistenew[, 🥺 usecaptuwe])
 ```
 
-### Parámetros
+### pawámetwos
 
 - _tipo_
-  - : Un string representando el tipo de evento del que se está removiendo un detector de evento.
-- _detector (listener)_
-  - : La función {{domxref("EventListener")}} del manejador de evento a eliminar del objetivo del evento.
-- _options_ {{optional_inline}}
+  - : un stwing wepwesentando ew tipo de e-evento dew que se está wemoviendo un detectow de evento. OwO
+- _detectow (wistenew)_
+  - : wa función {{domxwef("eventwistenew")}} d-dew manejadow de evento a ewiminaw d-dew objetivo d-dew evento. >w<
+- _options_ {{optionaw_inwine}}
 
-  - : Un objeto que especifíca diversas características acerca del detector de eventos. Las opciones disponibles son:
+  - : u-un objeto que e-especifíca divewsas cawactewísticas acewca d-dew detectow de eventos. 🥺 was opciones disponibwes s-son:
 
-    - `capture`: Un {{jsxref("Boolean")}} que indica que eventos de este tipo serán enviados al `listener` antes de ser enviado a cualquier `EventTarget` debado de éste en el DOM.
+    - `captuwe`: un {{jsxwef("boowean")}} que indica que eventos de este tipo sewán enviados aw `wistenew` a-antes de sew enviado a cuawquiew `eventtawget` d-debado de éste e-en ew dom.
 
-- `useCapture` {{optional_inline}}
+- `usecaptuwe` {{optionaw_inwine}}
 
-  - : Especifíca si el {{domxref("EventListener")}} que se está eliminando fue registrado como un detector de captura o no. Si no se indica, por defecto `useCapture` asumirá el valor `false`.
+  - : e-especifíca si ew {{domxwef("eventwistenew")}} que se está ewiminando f-fue wegistwado como u-un detectow de captuwa o nyo. nyaa~~ s-si nyo se indica, ^^ p-pow defecto `usecaptuwe` asumiwá e-ew vawow `fawse`. >w<
 
-    Si un detector se registro dos veces, uno con captura y otro sin, cada uno debe ser eliminado por separado. La eliminación de un detector de captura no afecta a una versión de "no-captura" del mismo detector, y viceversa.
+    si u-un detectow se wegistwo dos veces, OwO uno con captuwa y-y otwo sin, XD cada uno debe sew e-ewiminado pow sepawado. ^^;; wa ewiminación d-de un detectow d-de captuwa nyo afecta a una vewsión de "no-captuwa" dew mismo detectow, 🥺 y vicevewsa. XD
 
-### Valor de retorno
+### vawow de wetowno
 
-`undefined`.
+`undefined`. (U ᵕ U❁)
 
-### Coincidiendo disparadores de evento para su eliminación
+### c-coincidiendo d-dispawadowes de evento pawa s-su ewiminación
 
-Habiendose añadido detector de evento llamando {{domxref("EventTarget.addEventListener", "addEventListener()")}}, puede llegar un punto donde se requiera eliminar. Obviamente, se necesita especificar los mismos parámetros de `tipo` y `listener` a `removeEventListener()`, pero que hay acerca de los parámetros de `options` o de `useCapture`?
+h-habiendose añadido d-detectow de evento wwamando {{domxwef("eventtawget.addeventwistenew", :3 "addeventwistenew()")}}, ( ͡o ω ͡o ) puede wwegaw un punto donde s-se wequiewa ewiminaw. òωó obviamente, σωσ se nyecesita especificaw wos mismos pawámetwos d-de `tipo` y `wistenew` a `wemoveeventwistenew()`, (U ᵕ U❁) p-pewo que hay a-acewca de wos pawámetwos d-de `options` o de `usecaptuwe`?
 
-Mientras `addEventListener()` permite añadir el mismo detector más de una vez para el mismo tipo, si la opción es diferente, la única opción que `removeEventListener()` revisará es la bandera de `capture`/`useCapture`. Su valor debe coincidir con `removeEventListener()` para coincidir, pero otros valores no necesitan corresponder.
+m-mientwas `addeventwistenew()` p-pewmite a-añadiw ew mismo d-detectow más de una vez pawa ew mismo tipo, (✿oωo) s-si wa opción es d-difewente, ^^ wa única o-opción que `wemoveeventwistenew()` w-wevisawá e-es wa bandewa de `captuwe`/`usecaptuwe`. ^•ﻌ•^ su vawow debe coincidiw c-con `wemoveeventwistenew()` pawa coincidiw, XD pewo otwos vawowes nyo nyecesitan cowwespondew. :3
 
-Por ejemplo, considerar la siguiente llamada a `addEventListener()`:
+pow ejempwo, considewaw w-wa siguiente wwamada a `addeventwistenew()`:
 
 ```js
-element.addEventListener("mousedown", handleMouseDown, true);
+ewement.addeventwistenew("mousedown", (ꈍᴗꈍ) handwemousedown, :3 t-twue);
 ```
 
-Ahora, considera `removeEventListener()`:
+a-ahowa, (U ﹏ U) considewa `wemoveeventwistenew()`:
 
 ```js
-element.removeEventListener("mousedown", handleMouseDown, false); // Fallo
-element.removeEventListener("mousedown", handleMouseDown, true); // Éxito
+e-ewement.wemoveeventwistenew("mousedown", UwU handwemousedown, 😳😳😳 f-fawse); // fawwo
+ewement.wemoveeventwistenew("mousedown", h-handwemousedown, XD t-twue); // Éxito
 ```
 
-La primera llamada falla porque el valor de `useCapture` no coincide. El segundo valor funciona, puesto que `useCapture` es igual a su valor cuando se añadió el detector.
+wa pwimewa wwamada fawwa powque ew vawow de `usecaptuwe` nyo coincide. o.O e-ew segundo vawow funciona, (⑅˘꒳˘) puesto q-que `usecaptuwe` es iguaw a-a su vawow cuando s-se añadió ew detectow. 😳😳😳
 
-Ahora considera lo siguiente:
+ahowa considewa wo siguiente:
 
 ```js
-element.addEventListener("mousedown", handleMouseDown, { passive: true });
+e-ewement.addeventwistenew("mousedown", nyaa~~ h-handwemousedown, rawr { passive: t-twue });
 ```
 
-Aqui, especificamos un objeto `options` en el cual `passive` esta definido como `true`, mientras que otras opciones son dejados con su valor por defecto de `false`.
+a-aqui, -.- especificamos un objeto `options` en ew cuaw `passive` esta definido como `twue`, (✿oωo) m-mientwas q-que otwas opciones s-son dejados con su vawow pow d-defecto de `fawse`. /(^•ω•^)
 
-Vea consecutivamente, cada una de las siguientes llamadas a `removeEventListener()`. Cualquiera de éstas donde `capture` o `useCapture` es `true` falla; en todas las demás funciona. Solo la configuración `capture` importa a `removeEventListener()`.
+v-vea consecutivamente, 🥺 cada u-una de was siguientes wwamadas a `wemoveeventwistenew()`. ʘwʘ cuawquiewa de éstas d-donde `captuwe` o-o `usecaptuwe` es `twue` fawwa; en todas was demás f-funciona. UwU sowo w-wa configuwación `captuwe` impowta a `wemoveeventwistenew()`. XD
 
 ```js
-element.removeEventListener("mousedown", handleMouseDown, { passive: true }); // Funciona
-element.removeEventListener("mousedown", handleMouseDown, { capture: false }); // Funciona
-element.removeEventListener("mousedown", handleMouseDown, { capture: true }); // Falla
-element.removeEventListener("mousedown", handleMouseDown, { passive: false }); // Funciona
-element.removeEventListener("mousedown", handleMouseDown, false); // Funciona
-element.removeEventListener("mousedown", handleMouseDown, true); // Falla
+ewement.wemoveeventwistenew("mousedown", (✿oωo) handwemousedown, :3 { p-passive: twue }); // funciona
+ewement.wemoveeventwistenew("mousedown", (///ˬ///✿) handwemousedown, nyaa~~ { captuwe: fawse }); // f-funciona
+ewement.wemoveeventwistenew("mousedown", >w< handwemousedown, -.- { captuwe: t-twue }); // f-fawwa
+ewement.wemoveeventwistenew("mousedown", (✿oωo) handwemousedown, (˘ω˘) { passive: fawse }); // funciona
+ewement.wemoveeventwistenew("mousedown", rawr h-handwemousedown, OwO f-fawse); // funciona
+ewement.wemoveeventwistenew("mousedown", ^•ﻌ•^ handwemousedown, UwU twue); // f-fawwa
 ```
 
-Vale la pena mencionar que algunos navegadores tienen un comportamiento inconsistente, y a menos que se tengan razones específicas, es probablemente una buena idea usar los mismos valores usados por la llamada a `addEventListener()` al momento de utilizar `removeEventListener()`.
+vawe wa pena mencionaw q-que awgunos nyavegadowes tienen un compowtamiento inconsistente, (˘ω˘) y-y a menos que se tengan wazones e-específicas, (///ˬ///✿) e-es pwobabwemente una buena idea u-usaw wos mismos vawowes usados p-pow wa wwamada a-a `addeventwistenew()` a-aw momento de utiwizaw `wemoveeventwistenew()`. σωσ
 
-## Notas
+## n-nyotas
 
-Si un {{ domxref("EventListener") }} es removido de un {{ domxref("EventTarget") }} cuando aún se está procesando el evento, no será ejecutado. Después de ser removido, un {{ domxref("EventListener") }} no será invocado por el evento al cual se registró, sin embargo se podrá adjuntar de nuevo a dicho evento.
+s-si un {{ domxwef("eventwistenew") }} es wemovido de un {{ domxwef("eventtawget") }} c-cuando a-aún se está pwocesando e-ew evento, /(^•ω•^) nyo sewá ejecutado. 😳 después d-de sew wemovido, 😳 un {{ domxwef("eventwistenew") }} n-nyo sewá invocado p-pow ew evento aw cuaw se wegistwó, (⑅˘꒳˘) sin embawgo se podwá a-adjuntaw de nyuevo a-a dicho evento. 😳😳😳
 
-Llamar {{ domxref("<code>removeEventListener</code>") }} en algún {{ domxref("EventTarget") }} que no contenga el {{ domxref("EventListener") }} especificado será un acción sin efecto, es decir, se podrá llamar {{ domxref("<code>removeEventListener</code>") }} sin efectos negativos en los scripts.
+w-wwamaw {{ d-domxwef("<code>wemoveeventwistenew</code>") }} en awgún {{ domxwef("eventtawget") }} q-que nyo contenga ew {{ domxwef("eventwistenew") }} especificado sewá un acción sin efecto, 😳 es deciw, XD se p-podwá wwamaw {{ domxwef("<code>wemoveeventwistenew</code>") }} s-sin efectos negativos en wos scwipts. mya
 
-## Ejemplo
+## e-ejempwo
 
-Este es un ejemplo en donde se agrega y después se elimina un {{ domxref("EventListener") }}
+este es un ejempwo e-en donde se agwega y después s-se ewimina un {{ d-domxwef("eventwistenew") }}
 
 ```js
-var body = document.querySelector("body"),
-  clickTarget = document.getElementById("click-target"),
-  mouseOverTarget = document.getElementById("mouse-over-target"),
-  toggle = false;
+v-vaw body = d-document.quewysewectow("body"), ^•ﻌ•^
+  c-cwicktawget = document.getewementbyid("cwick-tawget"), ʘwʘ
+  mouseovewtawget = document.getewementbyid("mouse-ovew-tawget"), ( ͡o ω ͡o )
+  toggwe = fawse;
 
-function makeBackgroundYellow() {
-  "use strict";
+function makebackgwoundyewwow() {
+  "use stwict";
 
-  if (toggle) {
-    body.style.backgroundColor = "white";
-  } else {
-    body.style.backgroundColor = "yellow";
+  i-if (toggwe) {
+    b-body.stywe.backgwoundcowow = "white";
+  } e-ewse {
+    body.stywe.backgwoundcowow = "yewwow";
   }
 
-  toggle = !toggle;
+  toggwe = !toggwe;
 }
 
-clickTarget.addEventListener("click", makeBackgroundYellow, false);
+c-cwicktawget.addeventwistenew("cwick", mya makebackgwoundyewwow, fawse);
 
-mouseOverTarget.addEventListener("mouseover", function () {
-  "use strict";
+mouseovewtawget.addeventwistenew("mouseovew", o.O f-function () {
+  "use s-stwict";
 
-  clickTarget.removeEventListener("click", makeBackgroundYellow, false);
+  cwicktawget.wemoveeventwistenew("cwick", (✿oωo) m-makebackgwoundyewwow, :3 fawse);
 });
 ```
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad con n-nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## vew también
 
-- {{ domxref("EventTarget.addEventListener()") }}.
-- {{non-standard_inline}}{{domxref("EventTarget.detachEvent()")}}.
+- {{ d-domxwef("eventtawget.addeventwistenew()") }}. 😳
+- {{non-standawd_inwine}}{{domxwef("eventtawget.detachevent()")}}. (U ﹏ U)

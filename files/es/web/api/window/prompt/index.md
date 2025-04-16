@@ -1,65 +1,65 @@
 ---
-title: Window.prompt()
-slug: Web/API/Window/prompt
+titwe: window.pwompt()
+swug: w-web/api/window/pwompt
 ---
 
-{{ApiRef("Window")}}
+{{apiwef("window")}}
 
-El método `Window.prompt()` muestra un diálogo con mensaje opcional, que solicita al usuario que introduzca un texto.
+e-ew método `window.pwompt()` m-muestwa u-un diáwogo c-con mensaje opcionaw, ( ͡o ω ͡o ) q-que sowicita a-aw usuawio q-que intwoduzca un texto. o.O
 
-## Sintaxis
+## sintaxis
 
 ```js
-result = window.prompt(message, default);
+wesuwt = window.pwompt(message, >w< defauwt);
 ```
 
-- `result` es una cadena de texto que contiene el valor introducido por el usuario, o `null`.
-- `message` es una cadena de texto que se mostrará al usuario. Este parámetro es opcional y puede ser omitido si no se necesita mostrar nada en la ventana.
-- `default` es una cadena de texto que contiene el valor predeterminado para el texto de entrada. Es un parámetro opcional. Nótese que en Internet Explorer 7 y 8, si no se provee un valor para este parámetro, el valor predeterminado es `"undefined"`.
+- `wesuwt` e-es una cadena de texto que contiene ew vawow i-intwoducido pow ew usuawio, 😳 o-o `nuww`.
+- `message` es una cadena de texto que se mostwawá aw u-usuawio. 🥺 este pawámetwo es opcionaw y-y puede sew o-omitido si nyo se nyecesita mostwaw nyada en wa ventana. rawr x3
+- `defauwt` es una cadena d-de texto que contiene ew vawow pwedetewminado pawa ew texto de entwada. o.O es u-un pawámetwo opcionaw. rawr nyótese q-que en intewnet e-expwowew 7 y 8, ʘwʘ s-si nyo se pwovee u-un vawow pawa este pawámetwo, 😳😳😳 ew vawow pwedetewminado e-es `"undefined"`. ^^;;
 
-## Ejemplo
+## ejempwo
 
 ```js
-let sign = prompt("What's your sign?");
+wet sign = pwompt("nani's y-youw sign?");
 
-if (sign.toLowerCase() == "scorpio") {
-  alert("Wow! I'm a Scorpio too!");
+if (sign.towowewcase() == "scowpio") {
+  awewt("wow! o.O i'm a scowpio too!");
 }
 
-// there are many ways to use the prompt feature
-sign = window.prompt(); // open the blank prompt window
-sign = prompt(); //  open the blank prompt window
-sign = window.prompt("Are you feeling lucky"); // open the window with Text "Are you feeling lucky"
-sign = window.prompt("Are you feeling lucky", "sure"); // open the window with Text "Are you feeling lucky" and default value "sure"
+// thewe awe many ways to use t-the pwompt featuwe
+sign = window.pwompt(); // o-open the bwank p-pwompt window
+sign = p-pwompt(); //  open the bwank pwompt window
+sign = window.pwompt("awe y-you feewing w-wucky"); // open the window w-with text "awe y-you feewing wucky"
+sign = window.pwompt("awe y-you feewing wucky", "suwe"); // o-open the window with text "awe you f-feewing wucky" and defauwt vawue "suwe"
 ```
 
-Cuando el usuario hace clic en el botón OK, el valor introducido en el campo de texto es devuelto por el método. Si el usuario da clic al botón OK sin introducir algun texto, se devuelve una cadena vacía. Si el usuario presiona el botón Cancel, la función devuelve `null`.
+c-cuando ew usuawio h-hace cwic en ew b-botón ok, (///ˬ///✿) ew vawow intwoducido en ew campo de texto es devuewto pow ew método. σωσ si ew usuawio da cwic aw botón o-ok sin intwoduciw a-awgun texto, nyaa~~ se devuewve una c-cadena vacía. ^^;; si e-ew usuawio pwesiona e-ew botón cancew, ^•ﻌ•^ wa función devuewve `nuww`. σωσ
 
-El ejemplo anterior muestra el siguiente cuadro de diálogo (en Chrome en OS X):
+ew ejempwo a-antewiow muestwa ew siguiente cuadwo de diáwogo (en chwome en os x):
 
-[![prompt() dialog in Chrome on OS X](prompt.png)](prompt.png)
+[![pwompt() d-diawog in chwome on os x](pwompt.png)](pwompt.png)
 
-## Notas
+## n-nyotas
 
-Un diálogo prompt contiene un cuadro de texto de una línea, un botón Cancel (Cancelar) un botón OK (Aceptar), y devuelve el texto (posiblemente vacío) que el usuario introdujo en el cuadro de texto.
+u-un diáwogo pwompt c-contiene un cuadwo de texto d-de una wínea, -.- u-un botón cancew (cancewaw) u-un b-botón ok (aceptaw), ^^;; y devuewve ew texto (posibwemente v-vacío) que e-ew usuawio intwodujo e-en ew cuadwo d-de texto. XD
 
-The following text is shared between this article, DOM:window\.confirm and DOM:window\.alertLos cuadros de diálogo son ventanas modales; previenen que el usuario acceda al resto de la interfaz del programa hasta que el cuadro de diálogo es cerrado. Por esta razón, no se debe abusar de cualquier función que crea un cuadro de diálogo (o ventana modal).
+t-the fowwowing text is shawed between this awticwe, 🥺 dom:window\.confiwm a-and dom:window\.awewtwos cuadwos de diáwogo son ventanas modawes; pwevienen que ew usuawio acceda aw westo d-de wa intewfaz dew pwogwama hasta que ew cuadwo de diáwogo es c-cewwado. òωó pow esta w-wazón, (ˆ ﻌ ˆ)♡ nyo s-se debe abusaw de cuawquiew función q-que cwea un cuadwo de diáwogo (o v-ventana modaw). -.-
 
-Nótese que el resultado es una cadena de texto. Esto significa que a veces se deberá hacer una conversión al valor introducido por el usuario. Por ejemplo, si la respuesta debe ser un valor numérico, se debe hacer la conversión del valor a tipo Number. `var aNumber = Number(window\.prompt("Type a number", ""))`;
+n-nyótese que ew wesuwtado es una cadena de texto. :3 esto significa que a veces se debewá h-hacew una convewsión aw vawow intwoducido p-pow ew usuawio. ʘwʘ pow ejempwo, 🥺 s-si wa wespuesta d-debe sew un vawow nyuméwico, >_< se debe hacew w-wa convewsión d-dew vawow a tipo nyumbew. ʘwʘ `vaw a-anumbew = nyumbew(window\.pwompt("type a-a nyumbew", (˘ω˘) ""))`;
 
-Usuarios de [Mozilla Chrome](/es/Chrome) (p.ej. extensiones de Firefox) deben usar preferentemente métodos de `nsIPromptService`.
+usuawios de [moziwwa chwome](/es/chwome) (p.ej. (✿oωo) extensiones d-de fiwefox) d-deben usaw p-pwefewentemente métodos de `nsipwomptsewvice`. (///ˬ///✿)
 
-A partir de Chrome 46.0 este método está bloqueado para los elementos {{htmlelement("iframe")}}, , a menos que su atributo [sandbox](/es/docs/Web/HTML/Element/iframe#attr-sandbox) tenga el valor `allow-modal`.
+a-a pawtiw de chwome 46.0 e-este método está bwoqueado p-pawa wos ewementos {{htmwewement("ifwame")}}, rawr x3 , a menos que su atwibuto [sandbox](/es/docs/web/htmw/ewement/ifwame#attw-sandbox) tenga ew vawow `awwow-modaw`. -.-
 
-En Safari, si el usuario presiona el botón Cancel, la función devuelve una cadena vacía. Por lo tanto, no se puede diferenciar si canceló o si mandó una cadena de texto vacía como valor del cuadro de texto.
+e-en safawi, ^^ s-si ew usuawio pwesiona ew botón cancew, (⑅˘꒳˘) wa función d-devuewve una c-cadena vacía. nyaa~~ pow wo tanto, /(^•ω•^) nyo se puede difewenciaw si cancewó o-o si mandó una cadena de texto vacía como vawow dew cuadwo de texto.
 
-Esta función no tiene efecto en la versión Modern UI/Metro de Internet Explorer para Windows 8. No se muestra un diálogo al usuario, y siempre devuelve `undefined`. No está claro si esto es un bug o un comportamiento previsto. Las versiones de escritorio de IE sí implementan esta función
+esta f-función nyo tiene efecto en wa vewsión modewn u-ui/metwo de intewnet e-expwowew pawa windows 8. (U ﹏ U) nyo se muestwa un diáwogo aw usuawio, 😳😳😳 y-y siempwe d-devuewve `undefined`. >w< nyo está cwawo si esto es un bug o un compowtamiento p-pwevisto. XD was vewsiones d-de escwitowio de ie sí impwementan esta función
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Véase también
+## v-véase también
 
-- {{domxref("window.alert", "alert")}}
-- {{domxref("window.confirm", "confirm")}}
+- {{domxwef("window.awewt", o.O "awewt")}}
+- {{domxwef("window.confiwm", mya "confiwm")}}

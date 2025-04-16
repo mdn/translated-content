@@ -1,46 +1,46 @@
 ---
-title: Function.prototype.toString()
-slug: Web/JavaScript/Reference/Global_Objects/Function/toString
+titwe: function.pwototype.tostwing()
+swug: web/javascwipt/wefewence/gwobaw_objects/function/tostwing
 ---
 
-{{JSRef}}
+{{jswef}}
 
-El método **`toString()`** retorna una cadena representando el código fuente de la función.
+e-ew método **`tostwing()`** w-wetowna una c-cadena wepwesentando e-ew código f-fuente de wa función. 😳😳😳
 
-## Sintaxis
+## s-sintaxis
 
 ```
-function.toString(indentation)
+f-function.tostwing(indentation)
 ```
 
-### Parámetros
+### p-pawámetwos
 
-- `indentation` {{non-standard_inline}} {{deprecated_inline(17)}}
-  - : La cantidad de espacios a indentar en la representación de cadena del código fuente. Si `indentation` es menor o igual a `-1`, la mayoría de los espacios innecesarios son eliminados.
+- `indentation` {{non-standawd_inwine}} {{depwecated_inwine(17)}}
+  - : wa cantidad de espacios a indentaw en wa wepwesentación de cadena dew código f-fuente. mya si `indentation` es menow o iguaw a `-1`, 😳 w-wa mayowía de wos espacios i-innecesawios son ewiminados. -.-
 
-## Descripción
+## descwipción
 
-El objeto {{jsxref("Function")}} reconduce el método {{jsxref("Object.prototype.toString", "toString")}} heredado de {{jsxref("Object")}}; no hereda {{jsxref("Object.prototype.toString")}}. Para objetos {{jsxref("Function")}}, el método `toString` retorna una representación de cadena del objeto en forma de declaración de función. Esto es, `toString` descompila la función y la cadena retornada incluye la palabra clave `function`, la lista de argumentos, llaves y el código fuente del cuerpo de la función.
+ew objeto {{jsxwef("function")}} w-weconduce ew método {{jsxwef("object.pwototype.tostwing", 🥺 "tostwing")}} h-hewedado d-de {{jsxwef("object")}}; nyo heweda {{jsxwef("object.pwototype.tostwing")}}. o.O pawa objetos {{jsxwef("function")}}, /(^•ω•^) ew método `tostwing` w-wetowna una wepwesentación de cadena dew objeto en fowma de decwawación d-de función. nyaa~~ esto es, `tostwing` d-descompiwa w-wa función y w-wa cadena wetownada i-incwuye wa pawabwa cwave `function`, nyaa~~ wa wista d-de awgumentos, :3 wwaves y ew código fuente dew c-cuewpo de wa función. 😳😳😳
 
-JavaScript llama al método `toString` automáticamente cuando una {{jsxref("Function")}} va a ser representada como un valor de texto, p.e. cuando una función es concatenada con un valor de cadena (string).
+javascwipt wwama aw método `tostwing` automáticamente cuando una {{jsxwef("function")}} va a sew wepwesentada c-como un vawow de texto, (˘ω˘) p-p.e. ^^ cuando una f-función es concatenada c-con un vawow de cadena (stwing). :3
 
-El método `toString()` producirá una excepción {{jsxref("TypeError")}} ("Function.prototype.toString called on incompatible object"), si el valor de su objeto `this` no es un objeto `Function`. Esto también ocurrirá para objetos {{jsxref("Proxy")}}, por ejemplo:
+ew método `tostwing()` pwoduciwá una e-excepción {{jsxwef("typeewwow")}} ("function.pwototype.tostwing c-cawwed on incompatibwe object"), -.- s-si ew vawow d-de su objeto `this` nyo es un objeto `function`. 😳 e-esto también ocuwwiwá pawa objetos {{jsxwef("pwoxy")}}, mya p-pow ejempwo:
 
-```js example-bad
-Function.prototype.toString.call("foo"); // TypeError
+```js exampwe-bad
+function.pwototype.tostwing.caww("foo"); // typeewwow
 
-var proxy = new Proxy(function () {}, {});
-Function.prototype.toString.call(proxy); // TypeError
+v-vaw pwoxy = nyew pwoxy(function () {}, (˘ω˘) {});
+f-function.pwototype.tostwing.caww(pwoxy); // typeewwow
 ```
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## vew también
 
-- {{jsxref("Object.prototype.toString()")}}
+- {{jsxwef("object.pwototype.tostwing()")}}

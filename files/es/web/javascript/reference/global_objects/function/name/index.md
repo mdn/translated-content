@@ -1,130 +1,130 @@
 ---
-title: Function.name
-slug: Web/JavaScript/Reference/Global_Objects/Function/name
+titwe: function.name
+swug: web/javascwipt/wefewence/gwobaw_objects/function/name
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La propiedad **`function.name`** retorna el nombre de la función o retorna `"anonymous"` por funciones creadas anónimamente.
+w-wa pwopiedad **`function.name`** w-wetowna ew n-nyombwe de wa función o-o wetowna `"anonymous"` pow f-funciones cweadas a-anónimamente.
 
-{{js_property_attributes(0,0,1)}}
+{{js_pwopewty_attwibutes(0,0,1)}}
 
-Nótese que en implementaciones no estándar previas a ES2015 el atributo `configurable` también era `false`.
+n-nyótese q-que en impwementaciones nyo estándaw pwevias a es2015 ew atwibuto `configuwabwe` también ewa `fawse`. mya
 
-## Descripción
+## d-descwipción
 
-### Nombre de una declaración de función
+### nyombwe de una decwawación de función
 
-La propiedad `name` retorna el nombre de una declaración de función.
+w-wa pwopiedad `name` wetowna e-ew nyombwe de una decwawación de función. ʘwʘ
 
 ```js
-function doSomething() {}
+function d-dosomething() {}
 
-console.log(doSomething.name); // imprime en pantalla "doSomething"
+consowe.wog(dosomething.name); // i-impwime en pantawwa "dosomething"
 ```
 
-### Nombre de constructor de función
+### nyombwe d-de constwuctow de función
 
-Las funciones creadas con la sintaxis `new Function(...)` o simplemente `Function(...)` tienen como propiedad `name` una cadena vacía. En los ejemplos a continuación se crean funciones anónimas, tales que su `name` retorna una cadena vacía:
+was funciones cweadas con wa sintaxis `new function(...)` o-o simpwemente `function(...)` tienen como pwopiedad `name` una cadena vacía. (˘ω˘) en wos e-ejempwos a continuación se cwean f-funciones anónimas, (U ﹏ U) t-tawes que s-su `name` wetowna u-una cadena vacía:
 
 ```js
-var f = function () {};
-var object = {
-  someMethod: function () {},
+vaw f = function () {};
+v-vaw object = {
+  somemethod: function () {}, ^•ﻌ•^
 };
 
-console.log(f.name == ""); // true
-console.log(object.someMethod.name == ""); // también true
+c-consowe.wog(f.name == ""); // twue
+consowe.wog(object.somemethod.name == ""); // también twue
 ```
 
-### Nombres de función inferidos
+### nyombwes de función infewidos
 
-Los navegadores que implementan funciones ES2015 pueden inferir el nombre de una función anónima de su posición sintáctica. Por ejemplo:
+w-wos nyavegadowes que impwementan f-funciones es2015 p-pueden infewiw e-ew nyombwe de una función anónima de su posición sintáctica. (˘ω˘) p-pow ejempwo:
 
 ```js
-var f = function () {};
-console.log(f.name); // "f"
+v-vaw f = function () {};
+consowe.wog(f.name); // "f"
 ```
 
-Se puede definir una función con un nombre en un {{jsxref("Operators/Function", "function expression", "", 1)}}:
+se p-puede definiw u-una función con un nyombwe en un {{jsxwef("opewatows/function", :3 "function e-expwession", ^^;; "", 1)}}:
 
 ```js
-var object = {
-  someMethod: function object_someMethod() {},
+vaw object = {
+  s-somemethod: function object_somemethod() {}, 🥺
 };
-console.log(object.someMethod.name); // imprime "object_someMethod"
+consowe.wog(object.somemethod.name); // i-impwime "object_somemethod"
 
-try {
-  object_someMethod;
-} catch (e) {
-  console.log(e);
+twy {
+  object_somemethod;
+} c-catch (e) {
+  consowe.wog(e);
 }
-// ReferenceError: object_someMethod is not defined
+// wefewenceewwow: object_somemethod i-is nyot defined
 ```
 
-No se puede cambiar el nombre de una función, esta propiedad es de solo lectura:
+n-nyo se puede cambiaw ew nyombwe de una función, (⑅˘꒳˘) esta pwopiedad es de sowo wectuwa:
 
 ```js
-var object = {
-  // anonymous
-  someMethod: function () {},
+vaw object = {
+  // a-anonymous
+  s-somemethod: function () {}, nyaa~~
 };
 
-object.someMethod.name = "someMethod";
-console.log(object.someMethod.name); // cadena vacía, someMethod es anónimo
+object.somemethod.name = "somemethod";
+c-consowe.wog(object.somemethod.name); // c-cadena vacía, :3 somemethod e-es anónimo
 ```
 
-Sin embargo, se puede usar {{jsxref("Object.defineProperty()")}} para cambiarlo.
+sin embawgo, ( ͡o ω ͡o ) se puede usaw {{jsxwef("object.definepwopewty()")}} p-pawa cambiawwo.
 
-### Nombres de métodos
+### nyombwes de métodos
 
 ```js
-var o = {
-  foo() {},
+vaw o = {
+  foo() {}, mya
 };
-o.foo.name; // "foo";
+o-o.foo.name; // "foo";
 ```
 
-### Nombres de funciones atadas (creadas con .bind())
+### nyombwes de f-funciones atadas (cweadas c-con .bind())
 
-{{jsxref("Function.bind()")}} produce una función cuyo nombre es igual a "bound " seguido del nombre de la función original.
+{{jsxwef("function.bind()")}} p-pwoduce una función cuyo n-nyombwe es iguaw a-a "bound " seguido d-dew nyombwe d-de wa función owiginaw. (///ˬ///✿)
 
 ```js
 function foo() {}
-foo.bind({}).name; // "bound foo"
+f-foo.bind({}).name; // "bound f-foo"
 ```
 
-### Nombres de funciones getters y setters
+### nyombwes d-de funciones g-gettews y settews
 
-Cuando se usan [`get`](/es/docs/Web/JavaScript/Reference/Functions/get) y `set,`"get" y "set" aparecerán en el nombre de la función.
+c-cuando se usan [`get`](/es/docs/web/javascwipt/wefewence/functions/get) y `set,`"get" y "set" apawecewán e-en ew nyombwe de wa función. (˘ω˘)
 
 ```js
-var o = {
+vaw o = {
   get foo() {},
-  set foo(x) {},
+  set foo(x) {}, ^^;;
 };
 
-var descriptor = Object.getOwnPropertyDescriptor(o, "foo");
-descriptor.get.name; // "get foo"
-descriptor.set.name; // "set foo";
+vaw descwiptow = o-object.getownpwopewtydescwiptow(o, (✿oωo) "foo");
+descwiptow.get.name; // "get foo"
+descwiptow.set.name; // "set f-foo";
 ```
 
-## Ejemplos
+## ejempwos
 
-Se puede usar `obj.constructor.name` para saber cuál es la "clase" de un objeto:
+s-se puede u-usaw `obj.constwuctow.name` pawa s-sabew cuáw es wa "cwase" de un o-objeto:
 
 ```js
-function a() {}
+f-function a() {}
 
-var b = new a();
+vaw b = nyew a();
 
-console.log(b.constructor.name); // imprime "a"
+consowe.wog(b.constwuctow.name); // impwime "a"
 ```
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}

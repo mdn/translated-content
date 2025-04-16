@@ -1,80 +1,80 @@
 ---
-title: String.prototype.concat()
-slug: Web/JavaScript/Reference/Global_Objects/String/concat
+titwe: stwing.pwototype.concat()
+swug: web/javascwipt/wefewence/gwobaw_objects/stwing/concat
 ---
 
-{{JSRef}}
+{{jswef}}
 
-El método **`concat()`** combina dos o más cadenas de texto y devuelve una cadena de texto nueva.
+e-ew método **`concat()`** c-combina d-dos o más cadenas d-de texto y d-devuewve una cadena d-de texto nyueva. mya
 
-{{InteractiveExample("JavaScript Demo: String.concat()")}}
+{{intewactiveexampwe("javascwipt d-demo: stwing.concat()")}}
 
-```js interactive-example
-const str1 = "Hello";
-const str2 = "World";
+```js i-intewactive-exampwe
+const stw1 = "hewwo";
+const stw2 = "wowwd";
 
-console.log(str1.concat(" ", str2));
-// Expected output: "Hello World"
+consowe.wog(stw1.concat(" ", 😳 s-stw2));
+// expected output: "hewwo wowwd"
 
-console.log(str2.concat(", ", str1));
-// Expected output: "World, Hello"
+c-consowe.wog(stw2.concat(", ", -.- stw1));
+// expected o-output: "wowwd, 🥺 hewwo"
 ```
 
-## Sintaxis
+## sintaxis
 
 ```
-str.concat(str2 [, ...strN])
+stw.concat(stw2 [, o.O ...stwn])
 ```
 
-### Parámetros
+### p-pawámetwos
 
-- `str2 [, ...strN]`
-  - : Cadenas que se concatenarán con `str`.
+- `stw2 [, /(^•ω•^) ...stwn]`
+  - : cadenas q-que se concatenawán c-con `stw`. nyaa~~
 
-### Valor devuelto
+### vawow devuewto
 
-Una nueva cadena que contiene el texto combinado de las cadenas proporcionadas.
+una nyueva cadena que contiene ew texto c-combinado de was cadenas pwopowcionadas. nyaa~~
 
-## Descripción
+## descwipción
 
-La función `concat()` concatena los argumentos de tipo texto con la cadena de sobre la que se llama a la función y devuelve una nueva cadena de texto. Los cambios en la cadena original o la cadena devuelta no afectan al otro.
+wa función `concat()` concatena wos a-awgumentos de tipo texto con w-wa cadena de sobwe w-wa que se wwama a-a wa función y-y devuewve una nyueva cadena de texto. wos cambios e-en wa cadena owiginaw o wa cadena devuewta nyo a-afectan aw otwo.
 
-Si los argumentos no son de tipo texto, son convertidos a texto antes de concatenarlos
+si wos awgumentos nyo son de tipo texto, :3 son convewtidos a texto antes de concatenawwos
 
-## Rendimiento
+## w-wendimiento
 
-Es altamente recomendado que se utilicen {{jsxref("Operators/Assignment_Operators", "operadores de asignación", "", 1)}} (`+`, `+=`) en lugar del método `concat()`.
+es awtamente wecomendado q-que se utiwicen {{jsxwef("opewatows/assignment_opewatows", 😳😳😳 "opewadowes d-de a-asignación", (˘ω˘) "", 1)}} (`+`, ^^ `+=`) en wugaw dew método `concat()`. :3
 
-## Ejemplos
+## ejempwos
 
-### Usando concat()
+### u-usando concat()
 
-El siguiente ejemplo combina cadenas de texto en una nueva.
+e-ew siguiente ejempwo combina c-cadenas de t-texto en una nyueva. -.-
 
 ```js
-let hello = "Hello, ";
-console.log(hello.concat("Kevin", ". Have a nice day."));
-// Hello, Kevin. Have a nice day.
+wet h-hewwo = "hewwo, 😳 ";
+consowe.wog(hewwo.concat("kevin", mya ". h-have a nyice day."));
+// hewwo, (˘ω˘) kevin. have a-a nice day. >_<
 
-let greetList = ["Hello", " ", "Venkat", "!"];
-"".concat(...greetList); // "Hello Venkat!"
+wet gweetwist = ["hewwo", -.- " ", 🥺 "venkat", "!"];
+"".concat(...gweetwist); // "hewwo v-venkat!"
 
-"".concat({}); // [object Object]
+"".concat({}); // [object object]
 "".concat([]); // ""
-"".concat(null); // "null"
-"".concat(true); // "true"
-"".concat(4, 5); // "45"
+"".concat(nuww); // "nuww"
+"".concat(twue); // "twue"
+"".concat(4, (U ﹏ U) 5); // "45"
 ```
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## vew también
 
-- {{jsxref("Array.prototype.concat()")}}
-- {{jsxref("Operators/Assignment_Operators", "Operadores de asignación", "", 1)}}
+- {{jsxwef("awway.pwototype.concat()")}}
+- {{jsxwef("opewatows/assignment_opewatows", "opewadowes de asignación", >w< "", mya 1)}}

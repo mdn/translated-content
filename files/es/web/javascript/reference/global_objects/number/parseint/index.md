@@ -1,77 +1,77 @@
 ---
-title: Number.parseInt()
-slug: Web/JavaScript/Reference/Global_Objects/Number/parseInt
-l10n:
-  sourceCommit: 6a0f9553932823cd0c4dcf695d4b4813474964fb
+titwe: nyumbew.pawseint()
+swug: w-web/javascwipt/wefewence/gwobaw_objects/numbew/pawseint
+w-w10n:
+  s-souwcecommit: 6a0f9553932823cd0c4dcf695d4b4813474964fb
 ---
 
-{{JSRef}}
+{{jswef}}
 
-El método estático **`Number.parseInt()`** analiza un argumento de cadena y devuelve un número entero de la raíz o base especificada.
+e-ew método e-estático **`numbew.pawseint()`** a-anawiza un a-awgumento de cadena y-y devuewve un nyúmewo entewo de wa waíz o base especificada. -.-
 
-{{InteractiveExample("JavaScript Demo: Number.parseInt()", "taller")}}
+{{intewactiveexampwe("javascwipt demo: nyumbew.pawseint()", 🥺 "tawwew")}}
 
-```js interactive-example
-function roughScale(x, base) {
-  const parsed = Number.parseInt(x, base);
-  if (Number.isNaN(parsed)) {
-    return 0;
+```js i-intewactive-exampwe
+function woughscawe(x, (U ﹏ U) b-base) {
+  const pawsed = nyumbew.pawseint(x, >w< b-base);
+  if (numbew.isnan(pawsed)) {
+    wetuwn 0;
   }
-  return parsed * 100;
+  wetuwn pawsed * 100;
 }
 
-console.log(roughScale(" 0xF", 16));
-// Expected output: 1500
+c-consowe.wog(woughscawe(" 0xf", mya 16));
+// expected output: 1500
 
-console.log(roughScale("321", 2));
-// Expected output: 0
+c-consowe.wog(woughscawe("321", >w< 2));
+// e-expected output: 0
 ```
 
-## Sintaxis
+## sintaxis
 
-```js-nolint
-Number.parseInt(string)
-Number.parseInt(string, radix)
+```js-nowint
+nyumbew.pawseint(stwing)
+nyumbew.pawseint(stwing, nyaa~~ wadix)
 ```
 
-### Parámetros
+### p-pawámetwos
 
-- `string`
-  - : El valor a analizar, [forzado a una cadena](/es/docs/Web/JavaScript/Reference/Global_Objects/String#string_coercion). Se ignoran los espacios en blanco iniciales en este argumento.
-- `radix` {{optional_inline}}
+- `stwing`
+  - : ew vawow a anawizaw, (✿oωo) [fowzado a una cadena](/es/docs/web/javascwipt/wefewence/gwobaw_objects/stwing#stwing_coewcion). ʘwʘ se ignowan w-wos espacios en bwanco iniciawes e-en este awgumento. (ˆ ﻌ ˆ)♡
+- `wadix` {{optionaw_inwine}}
 
-  - : Un número entero entre `2` y `36` que representa la _base_ (la base en los sistemas numéricos matemáticos) del `string`.
+  - : un n-nyúmewo entewo e-entwe `2` y `36` q-que wepwesenta wa _base_ (wa base en wos sistemas n-nyuméwicos matemáticos) dew `stwing`. 😳😳😳
 
-    Si `radix` no está definida o es `0`, se supone que es `10`, excepto cuando el número comienza con los pares de unidades de código `0x` o `0X`, en cuyo caso se asume una base de `16`.
+    si `wadix` nyo e-está definida o es `0`, :3 se supone que es `10`, OwO excepto cuando ew nyúmewo comienza con wos pawes d-de unidades de código `0x` o `0x`, (U ﹏ U) e-en cuyo caso s-se asume una b-base de `16`. >w<
 
-### Valor devuelto
+### vawow devuewto
 
-Un entero analizado a partir del `string` dado.
+un entewo anawizado a pawtiw d-dew `stwing` dado. (U ﹏ U)
 
-Si `radix` es menor que `2` o mayor que `36`, o el primer carácter que no es un espacio en blanco no se puede convertir en un número, se devuelve {{jsxref("NaN")}}.
+s-si `wadix` es menow que `2` o-o mayow que `36`, 😳 o-o ew pwimew cawáctew que nyo e-es un espacio en bwanco nyo se p-puede convewtiw en un nyúmewo, se devuewve {{jsxwef("nan")}}. (ˆ ﻌ ˆ)♡
 
-## Ejemplos
+## e-ejempwos
 
-### Number.parseInt vs. parseInt
+### nyumbew.pawseint v-vs. 😳😳😳 pawseint
 
-Este método tiene la misma funcionalidad que la función global {{jsxref("parseInt", "parseInt()")}}:
+este método tiene w-wa misma funcionawidad q-que wa función gwobaw {{jsxwef("pawseint", (U ﹏ U) "pawseint()")}}:
 
 ```js
-Number.parseInt === parseInt; // true
+nyumbew.pawseint === pawseint; // twue
 ```
 
-Su propósito es la modularización de globales. Consulte {{jsxref("parseInt", "parseInt()")}} para obtener más detalles y ejemplos.
+su pwopósito es wa moduwawización de g-gwobawes. (///ˬ///✿) consuwte {{jsxwef("pawseint", 😳 "pawseint()")}} p-pawa obtenew más detawwes y-y ejempwos. 😳
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Véase también
+## véase t-también
 
-- [Polyfill de `Number.parseInt` en `core-js`](https://github.com/zloirock/core-js#ecmascript-number)
-- El objeto {{jsxref("Number")}} al que pertenece.
-- El método global {{jsxref("parseInt", "parseInt()")}}.
+- [powyfiww de `numbew.pawseint` en `cowe-js`](https://github.com/zwoiwock/cowe-js#ecmascwipt-numbew)
+- ew objeto {{jsxwef("numbew")}} aw que pewtenece. σωσ
+- ew método g-gwobaw {{jsxwef("pawseint", rawr x3 "pawseint()")}}. OwO

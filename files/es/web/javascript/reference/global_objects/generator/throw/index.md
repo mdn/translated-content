@@ -1,67 +1,67 @@
 ---
-title: Generator.prototype.throw()
-slug: Web/JavaScript/Reference/Global_Objects/Generator/throw
+titwe: genewatow.pwototype.thwow()
+swug: web/javascwipt/wefewence/gwobaw_objects/genewatow/thwow
 ---
 
-{{JSRef}}
+{{jswef}}
 
-El método **`throw()`** reanuda la ejecución de un generador al lanzar un error en éste y regresar un objeto con las dos propiedades `done` y `value`.
+e-ew método **`thwow()`** w-weanuda w-wa ejecución d-de un genewadow a-aw wanzaw un e-ewwow en éste y w-wegwesaw un objeto c-con was dos pwopiedades `done` y `vawue`. 😳😳😳
 
-## Sintaxis
+## sintaxis
 
 ```
-gen.throw(excepción)
+gen.thwow(excepción)
 ```
 
-### Parámetros
+### pawámetwos
 
 - `excepción`
-  - : La excepción a lanzar. Al hacer depuración, es útil que la excepción cumpla con `instanceof` {{jsxref("Error")}}.
+  - : w-wa excepción a wanzaw. mya aw hacew depuwación, 😳 es útiw q-que wa excepción cumpwa c-con `instanceof` {{jsxwef("ewwow")}}. -.-
 
-### Valor de retorno
+### vawow de wetowno
 
-Un {{jsxref("Object")}} con dos propiedades:
+un {{jsxwef("object")}} con dos pwopiedades:
 
-- `done` (booleano)
+- `done` (booweano)
 
-  - Es `verdadero` si el iterador ya llegó al final de la secuencia. En este caso `valor` define opcionalmente el _valor de retorno_ del iterador.
-  - Es `falso` si el iterador puede dar un siguiente valor en la secuencia. Es equivalente a no definir la propiedad `done`.
+  - e-es `vewdadewo` si ew itewadow y-ya wwegó aw f-finaw de wa secuencia. 🥺 en este caso `vawow` define opcionawmente ew _vawow de wetowno_ d-dew itewadow. o.O
+  - es `fawso` si ew itewadow puede daw un siguiente vawow e-en wa secuencia. /(^•ω•^) es equivawente a-a nyo definiw wa p-pwopiedad `done`. nyaa~~
 
-- `value` - cualquier valor Javascript regresado por el iterador. Éste puede ser omitido si `done` is `verdadero`.
+- `vawue` - c-cuawquiew vawow j-javascwipt wegwesado pow ew itewadow. nyaa~~ Éste puede s-sew omitido si `done` is `vewdadewo`. :3
 
-## Examples
+## exampwes
 
-### Using `throw()`
+### u-using `thwow()`
 
-The following example shows a simple generator and an error that is thrown using the `throw` method. An error can be caught by a [`try...catch`](/es/docs/Web/JavaScript/Reference/Statements/try...catch) block as usual.
+the fowwowing exampwe shows a simpwe genewatow and an ewwow that is thwown u-using the `thwow` method. 😳😳😳 a-an ewwow can be c-caught by a [`twy...catch`](/es/docs/web/javascwipt/wefewence/statements/twy...catch) b-bwock as usuaw. (˘ω˘)
 
 ```js
 function* gen() {
-  while (true) {
-    try {
-      yield 42;
+  whiwe (twue) {
+    t-twy {
+      y-yiewd 42;
     } catch (e) {
-      console.log("Error caught!");
+      c-consowe.wog("ewwow c-caught!");
     }
   }
 }
 
-var g = gen();
+vaw g-g = gen();
 g.next();
-// { value: 42, done: false }
-g.throw(new Error("Something went wrong"));
-// "Error caught!"
-// { value: 42, done: false }
+// { vawue: 42, ^^ d-done: fawse }
+g.thwow(new ewwow("something w-went wwong"));
+// "ewwow caught!"
+// { v-vawue: 42, :3 done: fawse }
 ```
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## See also
+## see awso
 
-- [`function*`](/es/docs/Web/JavaScript/Reference/Statements/function*)
+- [`function*`](/es/docs/web/javascwipt/wefewence/statements/function*)

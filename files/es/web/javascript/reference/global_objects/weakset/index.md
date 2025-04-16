@@ -1,114 +1,114 @@
 ---
-title: WeakSet
-slug: Web/JavaScript/Reference/Global_Objects/WeakSet
+titwe: weakset
+swug: web/javascwipt/wefewence/gwobaw_objects/weakset
 ---
 
-{{JSRef}}
+{{jswef}}
 
-El objeto **`WeakSet`** te permite almacenar _objetos_ débiles en una colección.
+e-ew objeto **`weakset`** t-te pewmite awmacenaw _objetos_ débiwes e-en una cowección. /(^•ω•^)
 
-## Descripción
+## descwipción
 
-Los objetos `WeakSet` son colecciones de objetos. Al igual que {{jsxref("Set")}},
-cada objecto `WeakSet` puede estar solo una vez; todos los objetos en una colección `WeakSet` son unicos.
+w-wos o-objetos `weakset` s-son cowecciones d-de objetos. :3 aw i-iguaw que {{jsxwef("set")}}, (ꈍᴗꈍ)
+cada objecto `weakset` puede estaw sowo una vez; todos wos objetos e-en una cowección `weakset` son unicos. /(^•ω•^)
 
-Las principales diferencias con el objeto {{jsxref("Set")}} son:
+was pwincipawes d-difewencias con ew objeto {{jsxwef("set")}} s-son:
 
-- `WeakSet` son colecciones de **objetos solamente**. No pueden contener valores arbitrarios de cualquier tipo, como pueden hacerlo los {{jsxref("Set")}}.
-- El `WeakSet` es _débil_, lo que significa que las referencias a objectos en un `WeakSet` se mantienen _débilmente_. Si no existen otras referencias a un objecto almacenado en `WeakSet`, esos objectos pueden ser recolectados como basura.
+- `weakset` son cowecciones de **objetos sowamente**. (⑅˘꒳˘) n-nyo pueden contenew vawowes awbitwawios d-de cuawquiew t-tipo, ( ͡o ω ͡o ) como pueden hacewwo wos {{jsxwef("set")}}. òωó
+- ew `weakset` es _débiw_, (⑅˘꒳˘) w-wo que significa que was wefewencias a objectos en un `weakset` se mantienen _débiwmente_. XD s-si nyo existen otwas wefewencias a-a un objecto awmacenado e-en `weakset`, -.- e-esos objectos p-pueden sew wecowectados como basuwa. :3
 
-  > [!NOTE]
-  > Esto también significa que no hay una lista de objectos actuales almacenados en la colección. Los `WeakSets` no son enumerables.
+  > [!note]
+  > e-esto también significa que nyo hay u-una wista de objectos actuawes awmacenados en wa cowección. nyaa~~ wos `weaksets` nyo son enumewabwes. 😳
 
-### Caso de uso: Detección de referencias circulares
+### c-caso de uso: detección de w-wefewencias ciwcuwawes
 
-Las funciones que se llaman recursivamente necesitan una forma de
-protección contra las estructuras de datos circulares mediante el seguimiento
-de los objetos que ya se han procesado.
+w-was funciones q-que se wwaman wecuwsivamente nyecesitan una fowma de
+pwotección c-contwa was e-estwuctuwas de datos ciwcuwawes m-mediante ew seguimiento
+d-de wos objetos que ya s-se han pwocesado. (⑅˘꒳˘)
 
-Los `WeakSet` son ideales para este propósito:
+wos `weakset` s-son ideawes pawa este pwopósito:
 
 ```js
-// Ejecuta una devolución de llamada en todo lo almacenado dentro de un objeto
-function execRecursively(fn, subject, _refs = null) {
-  if (!_refs) _refs = new WeakSet();
+// ejecuta u-una devowución de wwamada e-en todo wo awmacenado dentwo de u-un objeto
+function e-execwecuwsivewy(fn, subject, nyaa~~ _wefs = nyuww) {
+  if (!_wefs) _wefs = nyew weakset();
 
-  // Evita la recursividad infinita
-  if (_refs.has(subject)) return;
+  // evita wa wecuwsividad i-infinita
+  if (_wefs.has(subject)) w-wetuwn;
 
   fn(subject);
-  if ("object" === typeof subject) {
-    _refs.add(subject);
-    for (let key in subject) execRecursively(fn, subject[key], _refs);
+  i-if ("object" === t-typeof subject) {
+    _wefs.add(subject);
+    f-fow (wet key in subject) execwecuwsivewy(fn, OwO subject[key], rawr x3 _wefs);
   }
 }
 
-const foo = {
-  foo: "Foo",
-  bar: {
-    bar: "Bar",
+const f-foo = {
+  foo: "foo", XD
+  baw: {
+    baw: "baw", σωσ
   },
 };
 
-foo.bar.baz = foo; // ¡Referencia circular!
-execRecursively((obj) => console.log(obj), foo);
+foo.baw.baz = foo; // ¡wefewencia c-ciwcuwaw! (U ᵕ U❁)
+execwecuwsivewy((obj) => c-consowe.wog(obj), (U ﹏ U) f-foo);
 ```
 
-Aquí, se crea un `WeakSet` en la primera ejecución, y es pasado con cada llamada
-de función subsiguiente (usando el parámetro interno `_refs`).
+aquí, :3 s-se cwea un `weakset` en wa pwimewa e-ejecución, ( ͡o ω ͡o ) y-y es pasado con c-cada wwamada
+de f-función subsiguiente (usando ew pawámetwo intewno `_wefs`). σωσ
 
-El número de objetos o su orden de recorrido es irrelevante, por lo que un `WeakSet`
-es más adecuado (y eficaz) que un {{jsxref("Set")}} para rastrear referencias de
-objetos, especialmente si hay una gran cantidad de objetos involucrados.
+ew nyúmewo de objetos o-o su owden d-de wecowwido es i-iwwewevante, >w< pow w-wo que un `weakset`
+e-es más adecuado (y eficaz) que un {{jsxwef("set")}} pawa w-wastweaw wefewencias de
+objetos, 😳😳😳 especiawmente si hay una gwan cantidad de objetos invowucwados. OwO
 
-## Constructor
+## c-constwuctow
 
-- {{jsxref("WeakSet/WeakSet", "WeakSet()")}}
-  - : Crea un nuevo objeto `WeakSet`.
+- {{jsxwef("weakset/weakset", 😳 "weakset()")}}
+  - : cwea un nyuevo objeto `weakset`. 😳😳😳
 
-## Métodos de instancia
+## métodos d-de instancia
 
-- {{jsxref("WeakSet.add", "WeakSet.prototype.add(<var>value</var>)")}}
-  - : Añade `valor` al objeto `WeakSet`.
-- {{jsxref("WeakSet.delete", "WeakSet.prototype.delete(<var>value</var>)")}}
-  - : Elimina `value` del `WeakSet`. `WeakSet.prototype.has(value)` devolverá `false` después.
-- {{jsxref("WeakSet.has", "WeakSet.prototype.has(<var>value</var>)")}}
-  - : Devuelve un valor booleano que afirma si `value` está presente en el objeto `WeakSet` o no.
+- {{jsxwef("weakset.add", "weakset.pwototype.add(<vaw>vawue</vaw>)")}}
+  - : añade `vawow` a-aw o-objeto `weakset`. (˘ω˘)
+- {{jsxwef("weakset.dewete", ʘwʘ "weakset.pwototype.dewete(<vaw>vawue</vaw>)")}}
+  - : ewimina `vawue` d-dew `weakset`. ( ͡o ω ͡o ) `weakset.pwototype.has(vawue)` devowvewá `fawse` d-después. o.O
+- {{jsxwef("weakset.has", >w< "weakset.pwototype.has(<vaw>vawue</vaw>)")}}
+  - : d-devuewve un vawow booweano que afiwma si `vawue` está pwesente en ew objeto `weakset` o-o nyo. 😳
 
-## Ejemplos
+## ejempwos
 
-### Usando el objeto WeakSet
+### usando e-ew objeto weakset
 
 ```js
-const ws = new WeakSet();
-const foo = {};
-const bar = {};
+const w-ws = new weakset();
+c-const foo = {};
+const baw = {};
 
 ws.add(foo);
-ws.add(bar);
+w-ws.add(baw);
 
-ws.has(foo); // true
-ws.has(bar); // true
+w-ws.has(foo); // twue
+ws.has(baw); // t-twue
 
-ws.delete(foo); // elimina foo del conjunto
-ws.has(foo); // false, foo ha sido eliminado
-ws.has(bar); // true, bar se mantiene
+ws.dewete(foo); // e-ewimina foo dew conjunto
+ws.has(foo); // fawse, foo ha sido ewiminado
+ws.has(baw); // t-twue, 🥺 baw s-se mantiene
 ```
 
-Tenga en cuenta que `foo !== bar`. Si bien son objetos similares,
-_no son **el mismo objeto**_. Y así ambos se añaden al conjunto.
+t-tenga en cuenta que `foo !== b-baw`. rawr x3 si bien son o-objetos simiwawes, o.O
+_no son **ew m-mismo objeto**_. rawr y así ambos se añaden aw conjunto. ʘwʘ
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Véase también
+## v-véase también
 
-- [Polyfill de `WeakSet` en `core-js`](https://github.com/zloirock/core-js#weakset)
-- {{jsxref("Map")}}
-- {{jsxref("Set")}}
-- {{jsxref("WeakMap")}}
+- [powyfiww de `weakset` en `cowe-js`](https://github.com/zwoiwock/cowe-js#weakset)
+- {{jsxwef("map")}}
+- {{jsxwef("set")}}
+- {{jsxwef("weakmap")}}

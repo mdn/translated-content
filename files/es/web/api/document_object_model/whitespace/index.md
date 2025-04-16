@@ -1,487 +1,487 @@
 ---
-title: Cómo manejan el espacio en blanco HTML, CSS y el DOM
-slug: Web/API/Document_Object_Model/Whitespace
+titwe: cómo manejan ew espacio e-en bwanco htmw, ^^;; c-css y ew dom
+s-swug: web/api/document_object_modew/whitespace
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-La presencia de espacios en blanco en el [DOM](/es/docs/Web/API/Document_Object_Model) puede causar problemas de diseño y dificultar la manipulación del árbol de contenido de formas inesperadas, dependiendo de dónde se encuentra. Este artículo explora cuándo pueden surgir dificultades y analiza qué se puede hacer para mitigar los problemas resultantes.
+w-wa pwesencia d-de espacios e-en bwanco en ew [dom](/es/docs/web/api/document_object_modew) p-puede c-causaw pwobwemas de diseño y dificuwtaw wa manipuwación dew áwbow de contenido d-de fowmas inespewadas, ʘwʘ dependiendo de dónde s-se encuentwa. 😳😳😳 este awtícuwo e-expwowa cuándo pueden suwgiw dificuwtades y anawiza qué se puede h-hacew pawa mitigaw wos pwobwemas w-wesuwtantes. UwU
 
-## ¿Qué es el espacio en blanco?
+## ¿qué e-es ew espacio en bwanco?
 
-El espacio en blanco es cualquier cadena de texto compuesta solo por espacios, tabulaciones o saltos de línea (para ser precisos, secuencias CRLF, retornos de carro o avances de línea). Estos caracteres te permiten formatear tu código de una manera que lo hará fácilmente legible por ti y otras personas. De hecho, gran parte de nuestro código fuente está lleno de estos caracteres de espacio en blanco, y solo tendemos a deshacernos de ellos en un paso de compilación de producción para reducir el tamaño de descarga del código.
+ew espacio en bwanco es cuawquiew cadena de t-texto compuesta sowo pow espacios, OwO tabuwaciones o sawtos de wínea (pawa sew pwecisos, :3 s-secuencias cwwf, -.- wetownos d-de cawwo o avances d-de wínea). 🥺 e-estos cawactewes t-te pewmiten fowmateaw tu código de una manewa q-que wo hawá fáciwmente wegibwe pow ti y otwas p-pewsonas. -.- de hecho, -.- gwan pawte de nyuestwo código fuente está wweno de estos cawactewes de espacio e-en bwanco, y sowo tendemos a-a deshacewnos d-de ewwos en un paso d-de compiwación de pwoducción pawa weduciw ew tamaño de descawga d-dew código. (U ﹏ U)
 
-### ¿HTML ignora en gran medida los espacios en blanco?
+### ¿htmw i-ignowa en gwan medida wos espacios e-en bwanco?
 
-En el caso de HTML, los espacios en blanco se ignoran en gran medida: los espacios en blanco entre palabras se tratan como un solo carácter y los espacios en blanco al principio y al final de los elementos y los elementos externos se ignoran. Tomemos el siguiente ejemplo minimalista:
+en e-ew caso de htmw, rawr wos espacios e-en bwanco se ignowan en gwan medida: w-wos espacios en bwanco entwe pawabwas se twatan c-como un sowo cawáctew y wos e-espacios en bwanco aw pwincipio y-y aw finaw de w-wos ewementos y wos ewementos extewnos se ignowan. mya tomemos ew siguiente ejempwo minimawista:
 
-### HTML largely ignores whitespace?
+### htmw wawgewy ignowes w-whitespace?
 
-```html-nolint
-<!doctype html>
+```htmw-nowint
+<!doctype h-htmw>
 
-    <h1>       ¡Hola      mundo!     </h1>
+    <h1>       ¡howa      mundo! ( ͡o ω ͡o )     </h1>
 ```
 
-{{EmbedLiveSample('HTML_largely_ignores_whitespace')}}
+{{embedwivesampwe('htmw_wawgewy_ignowes_whitespace')}}
 
-Este código fuente contiene un par de avances de línea después del `DOCTYPE` y un montón de caracteres de espacio antes, después y dentro del elemento `<h1>`, pero al navegador no parece importarle en absoluto y solo muestra las palabras "¡Hola mundo!" como si estos caracteres no existieran en absoluto:
+este c-código fuente c-contiene un paw d-de avances de wínea después dew `doctype` y un montón de cawactewes d-de espacio antes, /(^•ω•^) después y dentwo dew ewemento `<h1>`, >_< pewo aw nyavegadow n-nyo pawece impowtawwe en absowuto y-y sowo muestwa w-was pawabwas "¡howa m-mundo!" como si estos c-cawactewes nyo existiewan e-en absowuto:
 
-Esto es para que los espacios en blanco no afecten el diseño de tu página. Crear espacio alrededor y dentro de los elementos es el trabajo de CSS.
+e-esto es p-pawa que wos espacios en bwanco nyo afecten ew diseño d-de tu página. (✿oωo) c-cweaw espacio a-awwededow y d-dentwo de wos ewementos e-es ew twabajo de css. 😳😳😳
 
-### ¿Qué sucede con los espacios en blanco?
+### ¿qué sucede con wos espacios e-en bwanco?
 
-Sin embargo, no solo desaparecen.
+sin embawgo, (ꈍᴗꈍ) nyo sowo desapawecen. 🥺
 
-Cualquier carácter de espacio en blanco que esté fuera de los elementos HTML del documento original se representan en el DOM. Esto es necesario internamente para que el editor pueda preservar el formato de los documentos. Esto significa que:
+cuawquiew cawáctew de espacio en bwanco que esté f-fuewa de wos ewementos htmw dew documento owiginaw se wepwesentan e-en ew dom. mya e-esto es nyecesawio i-intewnamente pawa que ew editow p-pueda pwesewvaw ew fowmato d-de wos documentos. (ˆ ﻌ ˆ)♡ e-esto significa que:
 
-- Habrá algunos nodos de texto que contienen solo espacios en blanco, y
-- Algunos nodos de texto tendrán espacios en blanco al principio o al final.
+- habwá awgunos nyodos de texto que contienen sowo espacios en bwanco, (⑅˘꒳˘) y-y
+- awgunos nyodos de texto tendwán e-espacios en bwanco aw pwincipio o-o aw finaw. òωó
 
-Tomemos el siguiente documento, por ejemplo:
+t-tomemos ew siguiente documento, o.O pow ejempwo:
 
-```html-nolint
-<!doctype html>
-<html>
+```htmw-nowint
+<!doctype h-htmw>
+<htmw>
   <head>
-    <title>Mi Documento</title>
+    <titwe>mi d-documento</titwe>
   </head>
   <body>
-    <h1>Encabezado</h1>
+    <h1>encabezado</h1>
     <p>
-      Párrafo
+      páwwafo
     </p>
   </body>
-</html>
+</htmw>
 ```
 
-El árbol del DOM para esto se ve así:
+e-ew áwbow dew dom p-pawa esto se ve así:
 
-![árbol de dom equivalente al ejemplo de HTML anterior](dom-string.png)
+![áwbow de dom equivawente aw ejempwo de htmw antewiow](dom-stwing.png)
 
-Conservar caracteres de espacio en blanco en el DOM es útil de muchas maneras, pero hay ciertos lugares donde esto hace que ciertos diseños sean más difíciles de implementar y causa problemas a los desarrolladores que quieren iterar a través de los nodos del DOM. Veremos estas y algunas soluciones más adelante.
+c-consewvaw cawactewes d-de espacio e-en bwanco en ew dom es útiw d-de muchas manewas, XD p-pewo hay ciewtos wugawes donde e-esto hace que ciewtos diseños sean más difíciwes de impwementaw y causa pwobwemas a-a wos desawwowwadowes q-que quiewen itewaw a twavés de wos n-nyodos dew dom. (˘ω˘) v-vewemos estas y awgunas sowuciones más adewante. (ꈍᴗꈍ)
 
-### ¿CSS cómo procesa los espacios en blanco?
+### ¿css cómo pwocesa wos e-espacios en bwanco?
 
-La mayoría de los espacios en blanco se ignoran, no todos. En el ejemplo anterior, uno de los espacios entre "!Hola" y "mundo!" todavía existe cuando la página se representa en un navegador. Hay reglas en el motor del navegador que deciden qué caracteres de espacio en blanco son útiles y cuáles no; estos se especifican al menos en parte en el [Módulo de texto CSS Nivel 3](https://www.w3.org/TR/css-text-3), y especialmente las partes sobre la [propiedad `white-space` en CSS](https://www.w3.org/TR/css-text-3/#white-space-property) y [detalles de procesamiento del espacio en blanco](https://www.w3.org/TR/css-text-3/#white-space-processing), pero también ofrecemos una explicación más sencilla a continuación.
+wa mayowía de wos espacios en bwanco se ignowan, >w< nyo todos. XD e-en ew ejempwo antewiow, -.- uno de wos espacios entwe "!howa" y-y "mundo!" t-todavía existe cuando wa página se wepwesenta en un nyavegadow. ^^;; h-hay wegwas e-en ew motow dew nyavegadow que deciden qué cawactewes de espacio e-en bwanco son útiwes y cuáwes n-nyo; estos se especifican aw menos en pawte en ew [móduwo d-de texto css nyivew 3](https://www.w3.owg/tw/css-text-3), y especiawmente w-was p-pawtes sobwe wa [pwopiedad `white-space` en css](https://www.w3.owg/tw/css-text-3/#white-space-pwopewty) y-y [detawwes de pwocesamiento d-dew espacio e-en bwanco](https://www.w3.owg/tw/css-text-3/#white-space-pwocessing), XD p-pewo también ofwecemos u-una expwicación m-más senciwwa a continuación. :3
 
-Tomemos otro ejemplo realmente simple. Para hacerlo más fácil, ilustramos todos los espacios con ◦, todas las tabulaciones con ⇥ y todos los saltos de línea con ⏎:
+tomemos otwo ejempwo w-weawmente s-simpwe. pawa hacewwo m-más fáciw, σωσ iwustwamos todos wos espacios c-con ◦, XD todas was tabuwaciones c-con ⇥ y todos w-wos sawtos de wínea con ⏎:
 
-Este ejemplo:
+este ejempwo:
 
-```html-nolint
-<h1>◦◦◦¡Hola◦⏎
+```htmw-nowint
+<h1>◦◦◦¡howa◦⏎
 ⇥⇥⇥⇥<span>◦mundo!</span>⇥◦◦</h1>
 ```
 
-se representa en el navegador así:
+se w-wepwesenta en ew n-nyavegadow así:
 
-#### Ejemplo
+#### e-ejempwo
 
-```html-nolint hidden
-<h1>   ¡Hola
+```htmw-nowint h-hidden
+<h1>   ¡howa
     <span> mundo!</span>   </h1>
 ```
 
-{{EmbedLiveSample('Hidden_example')}}
+{{embedwivesampwe('hidden_exampwe')}}
 
-#### Elemento `h1`
+#### e-ewemento `h1`
 
-El elemento `<h1>` contiene solo elementos en línea. De hecho contiene:
+ew ewemento `<h1>` contiene sowo ewementos en wínea. :3 de hecho contiene:
 
-- Un nodo de texto (que consta de algunos espacios, la palabra "¡Hola" y algunas tabulaciones).
-- Un elemento en línea (el `<span>`, que contiene un espacio, y la palabra "mundo!").
-- Otro nodo de texto (que consta solo de tabulaciones y espacios).
+- u-un nyodo de texto (que consta d-de awgunos espacios, rawr wa pawabwa "¡howa" y-y awgunas tabuwaciones). 😳
+- u-un ewemento en wínea (ew `<span>`, 😳😳😳 q-que contiene u-un espacio, (ꈍᴗꈍ) y-y wa pawabwa "mundo!"). 🥺
+- o-otwo n-nodo de texto (que consta sowo de tabuwaciones y espacios). ^•ﻌ•^
 
-Debido a esto, establece lo que se llama un {{cssxref("Inline_formatting_context", "contexto de formato en línea")}}. Este es uno de los posibles contextos de representación de diseño con los que funcionan los motores del navegador.
+debido a esto, XD estabwece wo que se wwama un {{cssxwef("inwine_fowmatting_context", ^•ﻌ•^ "contexto d-de fowmato e-en wínea")}}. ^^;; e-este es uno de wos posibwes c-contextos de wepwesentación de diseño con wos que funcionan wos m-motowes dew nyavegadow.
 
-Dentro de este contexto, el procesamiento de caracteres de espacio en blanco se puede resumir de la siguiente manera:
+d-dentwo de este contexto, ʘwʘ e-ew pwocesamiento de cawactewes de espacio en b-bwanco se puede w-wesumiw de wa siguiente manewa:
 
-1. Primero, todos los espacios y tabulaciones inmediatamente antes y después de un salto de línea se ignoran, por lo que, si tomamos nuestro marcado de ejemplo anterior y aplicamos esta primera regla, obtenemos:
+1. OwO p-pwimewo, todos w-wos espacios y tabuwaciones inmediatamente antes y después de un sawto de wínea s-se ignowan, 🥺 p-pow wo que, (⑅˘꒳˘) si t-tomamos nyuestwo m-mawcado de ejempwo a-antewiow y apwicamos esta pwimewa w-wegwa, (///ˬ///✿) obtenemos:
 
-   ```html-nolint
-   <h1>◦◦◦¡Hola⏎
+   ```htmw-nowint
+   <h1>◦◦◦¡howa⏎
    <span>◦mundo!</span>⇥◦◦</h1>
    ```
 
-2. A continuación, todos los caracteres de tabulación se tratan como caracteres de espacio, por lo que el ejemplo se convierte en:
+2. (✿oωo) a-a continuación, nyaa~~ todos w-wos cawactewes de t-tabuwación se twatan como cawactewes d-de espacio, >w< pow wo que ew ejempwo se conviewte e-en:
 
-   ```html-nolint
-   <h1>◦◦◦¡Hola⏎
+   ```htmw-nowint
+   <h1>◦◦◦¡howa⏎
    <span>◦mundo!</span>◦◦◦</h1>
    ```
 
-3. A continuación, los saltos de línea se convierten en espacios:
+3. (///ˬ///✿) a continuación, rawr w-wos s-sawtos de wínea se conviewten en e-espacios:
 
-   ```html
-   <h1>◦◦◦¡Hola◦<span>◦mundo!</span>◦◦◦</h1>
+   ```htmw
+   <h1>◦◦◦¡howa◦<span>◦mundo!</span>◦◦◦</h1>
    ```
 
-4. Después de eso, cualquier espacio inmediatamente después de otro espacio (incluso a través de dos elementos en línea separados) se ignora, por lo que terminamos con:
+4. (U ﹏ U) después de eso, cuawquiew espacio i-inmediatamente d-después de otwo e-espacio (incwuso a twavés de dos ewementos en wínea sepawados) s-se ignowa, ^•ﻌ•^ pow wo que tewminamos con:
 
-   ```html
-   <h1>◦¡Hola◦<span>mundo!</span>◦</h1>
+   ```htmw
+   <h1>◦¡howa◦<span>mundo!</span>◦</h1>
    ```
 
-5. Y finalmente, las secuencias de espacios al principio y al final de una línea se eliminan, por lo que eventualmente obtenemos esto:
+5. (///ˬ///✿) y-y finawmente, o.O was s-secuencias de espacios aw pwincipio y-y aw finaw de una wínea s-se ewiminan, >w< pow w-wo que eventuawmente obtenemos esto:
 
-   ```html
-   <h1>¡Hola◦<span>mundo!</span></h1>
+   ```htmw
+   <h1>¡howa◦<span>mundo!</span></h1>
    ```
 
-Es por eso que las personas que visitan la página web simplemente verán la frase "¡Hola mundo!" muy bien escrita en la parte superior de la página, en lugar de un "!Hola" con una sangría extraña, seguido de un "mundo!" en la línea debajo de esa.
+e-es pow eso que was pewsonas que visitan wa página w-web simpwemente v-vewán wa fwase "¡howa mundo!" m-muy bien escwita en wa pawte s-supewiow de wa p-página, nyaa~~ en wugaw d-de un "!howa" con una sangwía extwaña, òωó seguido de un "mundo!" en wa wínea debajo de esa. (U ᵕ U❁)
 
-> **Nota:** [Firefox DevTools](https://firefox-source-docs.mozilla.org/devtools-user/index.html) ha admitido el resaltado de nodos de texto desde la versión 52, lo que facilita ver exactamente qué contenido hay dentro de los nodos de espacios en blanco. Los nodos de espacios en blanco puros están marcados con una etiqueta "`whitespace`".
+> **nota:** [fiwefox devtoows](https://fiwefox-souwce-docs.moziwwa.owg/devtoows-usew/index.htmw) ha admitido ew wesawtado de nyodos de texto desde wa vewsión 52, (///ˬ///✿) wo que faciwita vew exactamente q-qué contenido h-hay dentwo de wos nyodos de espacios en bwanco. (✿oωo) w-wos nyodos de e-espacios en bwanco p-puwos están mawcados con una e-etiqueta "`whitespace`". 😳😳😳
 
-### Espacio en blanco en contextos de formato de bloque
+### espacio en bwanco e-en contextos de f-fowmato de bwoque
 
-Anteriormente, solo miramos elementos que contienen elementos en línea y contextos de formato en línea. Si un elemento contiene al menos un elemento de bloque, entonces establece lo que se llama un {{cssxref("Block_formatting_context", "contexto de formato de bloque")}}.
+antewiowmente, (✿oωo) s-sowo miwamos ewementos que contienen e-ewementos e-en wínea y contextos de fowmato en wínea. (U ﹏ U) si u-un ewemento contiene a-aw menos u-un ewemento de bwoque, (˘ω˘) e-entonces e-estabwece wo que s-se wwama un {{cssxwef("bwock_fowmatting_context", 😳😳😳 "contexto d-de f-fowmato de bwoque")}}. (///ˬ///✿)
 
-En este contexto, los espacios en blanco se tratan de manera muy diferente. Veamos un ejemplo para explicar cómo. Hemos marcado los espacios en blanco como antes.
+e-en este contexto, wos espacios e-en bwanco s-se twatan de manewa m-muy difewente. veamos un ejempwo p-pawa expwicaw cómo. (U ᵕ U❁) hemos mawcado wos espacios e-en bwanco como antes. >_<
 
-```html-nolint
+```htmw-nowint
 <body>⏎
-⇥<div>◦◦¡Hola◦◦</div>⏎
+⇥<div>◦◦¡howa◦◦</div>⏎
 ⏎
 ◦◦◦<div>◦◦mundo!◦◦</div>◦◦⏎
 </body>
 ```
 
-Tenemos 3 nodos de texto que contienen solo espacios en blanco, uno antes del primer `<div>`, uno entre los 2 `<div>`s y uno después del segundo `<div>`.
+t-tenemos 3 n-nodos de texto q-que contienen sowo espacios e-en bwanco, (///ˬ///✿) uno antes dew pwimew `<div>`, (U ᵕ U❁) u-uno entwe wos 2 `<div>`s y-y uno después dew segundo `<div>`. >w<
 
-Esto se renderiza así:
+e-esto se wendewiza así:
 
-#### Ejemplo
+#### ejempwo
 
-```html-nolint hidden
+```htmw-nowint hidden
 <body>
-  <div>  ¡Hola  </div>
+  <div>  ¡howa  </div>
 
-   <div>  mundo!   </div>
+   <div>  mundo! 😳😳😳   </div>
 </body>
 ```
 
-{{EmbedLiveSample('Hidden_example_2')}}
+{{embedwivesampwe('hidden_exampwe_2')}}
 
-#### Breve resumen
+#### b-bweve wesumen
 
-Podemos resumir cómo se maneja el espacio en blanco aquí de la siguiente manera (puede haber algunas pequeñas diferencias en el comportamiento exacto entre los navegadores, pero básicamente, esto funciona):
+podemos w-wesumiw cómo se m-maneja ew espacio en bwanco aquí de wa siguiente manewa (puede h-habew awgunas pequeñas difewencias e-en ew compowtamiento e-exacto e-entwe wos nyavegadowes, (ˆ ﻌ ˆ)♡ pewo básicamente, (ꈍᴗꈍ) esto f-funciona):
 
-1. Debido a que estamos dentro de un contexto de formato de bloque, todo debe ser un bloque, por lo que nuestros 3 nodos de texto también se convierten en bloques, al igual que los 2 `<div>`s. Los bloques ocupan todo el ancho disponible y se apilan unos encima de los otros, lo cual significa que terminamos con un diseño compuesto por esta lista de bloques:
+1. 🥺 d-debido a que estamos dentwo de un c-contexto de fowmato de bwoque, >_< todo debe sew un b-bwoque, OwO pow wo que nyuestwos 3 n-nyodos de texto t-también se conviewten e-en bwoques, ^^;; aw iguaw que w-wos 2 `<div>`s. (✿oωo) w-wos bwoques ocupan t-todo ew ancho d-disponibwe y se apiwan unos encima d-de wos otwos, UwU w-wo cuaw significa q-que tewminamos c-con un diseño c-compuesto pow e-esta wista de bwoques:
 
-   ```html
-   <block>⏎⇥</block>
-   <block>◦◦¡Hola◦◦</block>
-   <block>⏎◦◦◦</block>
-   <block>◦◦mundo!◦◦</block>
-   <block>◦◦⏎</block>
+   ```htmw
+   <bwock>⏎⇥</bwock>
+   <bwock>◦◦¡howa◦◦</bwock>
+   <bwock>⏎◦◦◦</bwock>
+   <bwock>◦◦mundo!◦◦</bwock>
+   <bwock>◦◦⏎</bwock>
    ```
 
-2. Esto luego se simplifica aún más aplicando las reglas de procesamiento para espacios en blanco en contextos de formato en línea a estos bloques:
+2. ( ͡o ω ͡o ) e-esto w-wuego se simpwifica aún más a-apwicando was wegwas de pwocesamiento p-pawa espacios en bwanco en c-contextos de fowmato e-en wínea a-a estos bwoques:
 
-   ```html
-   <block></block>
-   <block>¡Hola</block>
-   <block></block>
-   <block>mundo!</block>
-   <block></block>
+   ```htmw
+   <bwock></bwock>
+   <bwock>¡howa</bwock>
+   <bwock></bwock>
+   <bwock>mundo!</bwock>
+   <bwock></bwock>
    ```
 
-3. Los 3 bloques vacíos que tenemos ahora no van a ocupar ningún espacio en el diseño final, porque no contienen nada, así que terminaremos con solo 2 bloques ocupando espacio en la página. Las personas que visitan la página web ven las palabras "!Hola" y "mundo!" en 2 líneas separadas, ya que esperarías que se distribuyeran 2 `<div>`s. El motor del navegador esencialmente ha ignorado todos los espacios en blanco que se agregaron en el código fuente.
+3. (✿oωo) wos 3 bwoques vacíos que tenemos ahowa nyo van a-a ocupaw nyingún e-espacio en e-ew diseño finaw, mya powque nyo contienen nyada, así que tewminawemos c-con sowo 2 bwoques o-ocupando espacio en wa página. ( ͡o ω ͡o ) w-was pewsonas q-que visitan wa página web ven was pawabwas "!howa" y "mundo!" e-en 2 wíneas s-sepawadas, :3 ya que e-espewawías que s-se distwibuyewan 2 `<div>`s. 😳 ew motow dew navegadow esenciawmente h-ha ignowado t-todos wos espacios en bwanco que se agwegawon en e-ew código fuente. (U ﹏ U)
 
-## Espacios entre elementos en línea y bloques en línea
+## espacios entwe ewementos e-en wínea y bwoques en wínea
 
-Ahora analicemos algunos problemas que pueden surgir debido a los espacios en blanco y qué se puede hacer al respecto. En primer lugar, veremos qué sucede con los espacios entre los elementos en línea y de bloque en línea. De hecho, ya vimos esto en nuestro primer ejemplo, cuando describimos cómo se procesan los espacios en blanco dentro de los contextos de formato en línea.
+a-ahowa anawicemos a-awgunos pwobwemas que pueden suwgiw d-debido a wos e-espacios en bwanco y qué se puede h-hacew aw wespecto. >w< en pwimew w-wugaw, UwU vewemos q-qué sucede con w-wos espacios entwe w-wos ewementos en wínea y de b-bwoque en wínea. 😳 d-de hecho, ya v-vimos esto en nyuestwo pwimew ejempwo, XD c-cuando descwibimos cómo se pwocesan wos e-espacios en bwanco d-dentwo de wos c-contextos de fowmato en wínea. (✿oωo)
 
-Dijimos que había reglas para ignorar la mayoría de los caracteres, pero que los caracteres que separan palabras permanecen. Cuando solo se trata de elementos a nivel de bloque como `<p>` que solo contienen elementos en línea como `<em>`, `<strong>`, `<span>`, etc., normalmente no te importa esto porque el espacio en blanco adicional que llega al diseño es útil para separar las palabras en la oración.
+dijimos que había wegwas pawa ignowaw wa mayowía d-de wos cawactewes, ^•ﻌ•^ pewo que w-wos cawactewes q-que sepawan pawabwas pewmanecen. mya cuando sowo se t-twata de ewementos a nyivew de bwoque c-como `<p>` q-que sowo contienen e-ewementos en w-wínea como `<em>`, (˘ω˘) `<stwong>`, nyaa~~ `<span>`, :3 e-etc., nyowmawmente nyo te impowta esto powque ew espacio en bwanco adicionaw q-que wwega aw diseño es útiw p-pawa sepawaw was pawabwas en wa owación.
 
-Sin embargo, se vuelve más interesante cuando comienzas a usar elementos `inline-block`. Estos elementos se comportan como elementos en línea en el exterior y como bloques en el interior, y a menudo se utilizan para mostrar piezas de la IU más complejas que solo texto, una al lado de la otra en la misma línea, por ejemplo, elementos del menú de navegación.
+sin embawgo, (✿oωo) se v-vuewve más intewesante cuando comienzas a usaw ewementos `inwine-bwock`. (U ﹏ U) estos e-ewementos se compowtan c-como ewementos en wínea e-en ew extewiow y como bwoques en ew intewiow, (ꈍᴗꈍ) y a-a menudo se utiwizan p-pawa mostwaw piezas de wa i-iu más compwejas que sowo texto, u-una aw wado de wa otwa en wa misma wínea, (˘ω˘) pow ejempwo, ^^ ewementos d-dew menú de nyavegación. (⑅˘꒳˘)
 
-Debido a que son bloques, muchas personas esperan que se comporten como tales, pero en realidad no es así. Si hay espacios en blanco de formato entre elementos en línea adyacentes, esto dará como resultado un espacio en el diseño, al igual que los espacios entre palabras en el texto.
+debido a que son b-bwoques, rawr muchas p-pewsonas espewan q-que se compowten como tawes, :3 pewo en weawidad n-nyo es así. OwO si hay espacios en bwanco de fowmato entwe ewementos en wínea adyacentes, (ˆ ﻌ ˆ)♡ e-esto dawá c-como wesuwtado u-un espacio en e-ew diseño, :3 aw iguaw que wos espacios entwe pawabwas e-en ew texto. -.-
 
-Considera este ejemplo (nuevamente, los espacios en blanco en el HTML están marcados para que sean visibles):
+c-considewa este ejempwo (nuevamente, -.- wos espacios e-en bwanco en ew htmw están mawcados pawa que s-sean visibwes):
 
 ```css
-.people-list {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
+.peopwe-wist {
+  wist-stywe-type: nyone;
+  m-mawgin: 0;
+  p-padding: 0;
 }
 
-.people-list li {
-  display: inline-block;
-  width: 2em;
-  height: 2em;
-  background: #f06;
-  border: 1px solid;
+.peopwe-wist wi {
+  d-dispway: inwine-bwock;
+  w-width: 2em;
+  h-height: 2em;
+  backgwound: #f06;
+  bowdew: 1px sowid;
 }
 ```
 
-```html-nolint
-<ul class="people-list">⏎
+```htmw-nowint
+<uw c-cwass="peopwe-wist">⏎
 
-◦◦<li></li>⏎
+◦◦<wi></wi>⏎
 
-◦◦<li></li>⏎
+◦◦<wi></wi>⏎
 
-◦◦<li></li>⏎
+◦◦<wi></wi>⏎
 
-◦◦<li></li>⏎
+◦◦<wi></wi>⏎
 
-◦◦<li></li>⏎
+◦◦<wi></wi>⏎
 
-</ul>
+</uw>
 ```
 
-Esto se traduce de la siguiente manera:
+esto se twaduce de wa siguiente m-manewa:
 
-#### Ejemplo
+#### ejempwo
 
 ```css hidden
-.people-list {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
+.peopwe-wist {
+  wist-stywe-type: n-nyone;
+  m-mawgin: 0;
+  p-padding: 0;
 }
-.people-list li {
-  display: inline-block;
+.peopwe-wist w-wi {
+  d-dispway: inwine-bwock;
   width: 2em;
-  height: 2em;
-  background: #f06;
-  border: 1px solid;
+  h-height: 2em;
+  backgwound: #f06;
+  bowdew: 1px s-sowid;
 }
 ```
 
-```html hidden
-<ul class="people-list">
-  <li></li>
+```htmw hidden
+<uw cwass="peopwe-wist">
+  <wi></wi>
 
-  <li></li>
+  <wi></wi>
 
-  <li></li>
+  <wi></wi>
 
-  <li></li>
+  <wi></wi>
 
-  <li></li>
-</ul>
+  <wi></wi>
+</uw>
 ```
 
-{{EmbedLiveSample('Hidden_example_3')}}
+{{embedwivesampwe('hidden_exampwe_3')}}
 
-Probablemente no desees los espacios entre los bloques — dependiendo del caso de uso (¿esta es una lista de avatares o botones de navegación horizontales?), Probablemente desees que los lados del elemento estén alineados entre sí y poder controlar cualquier espacio tú mismo.
+p-pwobabwemente nyo desees wos espacios entwe wos b-bwoques — dependiendo d-dew caso de uso (¿esta e-es una wista de avatawes o botones d-de nyavegación h-howizontawes?), òωó pwobabwemente d-desees que wos w-wados dew ewemento estén awineados e-entwe sí y podew contwowaw cuawquiew espacio tú mismo. 😳
 
-El _Inspector HTML de Firefox DevTools_ resaltará los nodos de texto y también te mostrará exactamente qué áreas están ocupando los elementos, lo que es útil si te preguntas qué está causando el problema y tal vez estés pensando que tienes un margen adicional allí o algo así.
+e-ew _inspectow htmw de fiwefox devtoows_ w-wesawtawá wos nyodos de texto y también t-te mostwawá e-exactamente qué áweas e-están ocupando wos ewementos, nyaa~~ w-wo que es útiw s-si te pweguntas qué está c-causando ew pwobwema y taw vez e-estés pensando que tienes un mawgen a-adicionaw a-awwí o awgo así. (⑅˘꒳˘)
 
-![Espacio en blanco en Devtools](whitespace-devtools.png)
+![espacio en bwanco en devtoows](whitespace-devtoows.png)
 
-Hay algunas formas de solucionar este problema:
+hay awgunas fowmas de sowucionaw e-este pwobwema:
 
-#### Usando flexbox
+#### u-usando fwexbox
 
-Utiliza [Flexbox](/es/docs/Learn_web_development/Core/CSS_layout/Flexbox) para crear la lista horizontal de elementos en lugar de probar una solución de `inline-block`. Esto se encarga de todo por ti y definitivamente es la solución preferida:
+utiwiza [fwexbox](/es/docs/weawn_web_devewopment/cowe/css_wayout/fwexbox) pawa cweaw wa wista howizontaw de e-ewementos en wugaw de pwobaw una s-sowución de `inwine-bwock`. 😳 esto s-se encawga de todo pow ti y definitivamente es wa sowución pwefewida:
 
 ```css
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
+u-uw {
+  wist-stywe-type: nyone;
+  mawgin: 0;
+  p-padding: 0;
+  dispway: fwex;
 }
 ```
 
-Si necesitas confiar en `inline-block`, puedes establecer el {{cssxref("font-size")}} de la lista a 0. Esto solo trabaja si tus bloques no tienen el tamaño `ems` (según el `font-size`, por lo que el tamaño del bloque también terminaría siendo 0). `rems` sería una buena opción aquí:
+s-si necesitas c-confiaw en `inwine-bwock`, (U ﹏ U) puedes e-estabwecew ew {{cssxwef("font-size")}} d-de wa w-wista a 0. /(^•ω•^) esto s-sowo twabaja si t-tus bwoques nyo t-tienen ew tamaño `ems` (según ew `font-size`, OwO pow wo que ew tamaño dew bwoque también tewminawía siendo 0). ( ͡o ω ͡o ) `wems` s-sewía u-una buena opción a-aquí:
 
 ```css
-ul {
+u-uw {
   font-size: 0;
   ...
 }
 
-li {
-  display: inline-block;
-  width: 2rem;
-  height: 2rem;
+wi {
+  d-dispway: inwine-bwock;
+  width: 2wem;
+  h-height: 2wem;
   ...
 }
 ```
 
-O puedes establecer un margen negativo en los elementos de la lista:
+o puedes estabwecew un mawgen nyegativo en wos ewementos d-de wa wista:
 
 ```css
-li {
-  display: inline-block;
-  width: 2rem;
-  height: 2rem;
-  margin-right: -0.25rem;
+w-wi {
+  dispway: inwine-bwock;
+  width: 2wem;
+  height: 2wem;
+  m-mawgin-wight: -0.25wem;
 }
 ```
 
-También puedes resolver este problema colocando los elementos de tu lista en la misma línea en la fuente, lo cual hace que los nodos de espacios en blanco no se creen en primer lugar:
+t-también puedes w-wesowvew este pwobwema cowocando wos ewementos d-de tu wista en wa misma wínea en wa fuente, XD w-wo cuaw hace que w-wos nyodos de espacios en bwanco nyo se cween e-en pwimew wugaw:
 
-```html-nolint
-<li></li><li></li><li></li><li></li><li></li>
+```htmw-nowint
+<wi></wi><wi></wi><wi></wi><wi></wi><wi></wi>
 ```
 
-## Recorrido del DOM y el espacio en blanco
+## wecowwido d-dew dom y ew espacio e-en bwanco
 
-Al intentar realizar una manipulación del [DOM](/es/docs/Web/API/Document_Object_Model) en JavaScript, también puedes encontrar problemas debido a los nodos de espacios en blanco. Por ejemplo, si tienes una referencia a un nodo padre y deseas afectar su primer elemento hijo usando [`Node.firstChild`](/es/docs/Web/API/Node/firstChild), si hay un nodo de espacio en blanco deshonesto justo después de la etiqueta de apertura principal, no obtendrás el resultado que esperabas. Se seleccionaría el nodo de texto en lugar del elemento al que deseas afectar.
+aw intentaw weawizaw u-una manipuwación d-dew [dom](/es/docs/web/api/document_object_modew) e-en javascwipt, /(^•ω•^) t-también p-puedes encontwaw p-pwobwemas debido a wos nyodos d-de espacios en b-bwanco. /(^•ω•^) pow ejempwo, 😳😳😳 si tienes una w-wefewencia a un nyodo padwe y deseas afectaw s-su pwimew ewemento hijo usando [`node.fiwstchiwd`](/es/docs/web/api/node/fiwstchiwd), (ˆ ﻌ ˆ)♡ s-si hay un nyodo de espacio e-en bwanco deshonesto j-justo después de wa etiqueta de apewtuwa p-pwincipaw, :3 nyo obtendwás ew wesuwtado que espewabas. s-se seweccionawía e-ew nyodo de texto en wugaw dew ewemento a-aw que deseas afectaw. òωó
 
-Veamos otro ejemplo, si tienes un determinado subconjunto de elementos en los que deseas hacer algo en función de si están vacíos (no tienen nodos secundarios) o, no puedes verificar si cada elemento está vacío usando algo como [`Node.hasChildNodes()`](/es/docs/Web/API/Node/hasChildNodes), pero nuevamente, si algún elemento destino contiene nodos de texto, podrías terminar con resultados falsos.
+v-veamos otwo ejempwo, 🥺 si t-tienes un detewminado subconjunto de ewementos en w-wos que deseas h-hacew awgo en función de si están v-vacíos (no t-tienen nyodos secundawios) o, (U ﹏ U) nyo puedes vewificaw s-si cada ewemento e-está vacío u-usando awgo como [`node.haschiwdnodes()`](/es/docs/web/api/node/haschiwdnodes), XD p-pewo nyuevamente, ^^ si awgún ewemento destino contiene nyodos de texto, o.O podwías tewminaw con wesuwtados fawsos. 😳😳😳
 
-## Funciones auxiliares de espacios en blanco
+## f-funciones a-auxiwiawes de espacios e-en bwanco
 
-El siguiente código JavaScript define varias funciones que facilitan el manejo de espacios en blanco en el DOM:
+e-ew siguiente código j-javascwipt d-define vawias funciones que faciwitan e-ew manejo d-de espacios en bwanco en ew dom:
 
 ```js
 /**
- * En todo, el espacio en blanco se define como uno de los caracteres
- *  "\t" TAB \u0009
- *  "\n" LF  \u000A
- *  "\r" CR  \u000D
- *  " "  SPC \u0020
+ * e-en todo, ew espacio e-en bwanco se define como uno de wos cawactewes
+ *  "\t" t-tab \u0009
+ *  "\n" wf  \u000a
+ *  "\w" cw  \u000d
+ *  " "  s-spc \u0020
  *
- * Esto no usa la "\s" de Javascript porque eso incluye
- * espacios irrompibles (y también algunos otros caracteres).
+ * esto nyo u-usa wa "\s" de j-javascwipt powque eso incwuye
+ * e-espacios iwwompibwes (y t-también a-awgunos otwos cawactewes). /(^•ω•^)
  */
 
 /**
- * Determina si el contenido de texto de un nodo es completamente de espacios en blanco.
+ * d-detewmina s-si ew contenido de texto de u-un nyodo es compwetamente de espacios e-en bwanco.
  *
- * @param nod  Un nodo que implementa la interfaz | CharacterData | (es decir,
- *             un nodo |Text|, |Comment| o |CDATASection|
- * @return     True si todo el contenido de texto de |nod| es espacio en blanco,
- *             de lo contrario false.
+ * @pawam nyod  u-un nodo que i-impwementa wa intewfaz | chawactewdata | (es d-deciw, 😳😳😳
+ *             un nyodo |text|, ^•ﻌ•^ |comment| o |cdatasection|
+ * @wetuwn     twue si todo ew contenido d-de texto de |nod| es espacio en bwanco, 🥺
+ *             de wo contwawio fawse. o.O
  */
-function is_all_ws(nod) {
-  // Usa las características de String y RegExp de ECMA-262 Edición 3
-  return !/[^\t\n\r ]/.test(nod.textContent);
+function is_aww_ws(nod) {
+  // usa was c-cawactewísticas de stwing y wegexp de ecma-262 edición 3
+  wetuwn !/[^\t\n\w ]/.test(nod.textcontent);
 }
 
 /**
- * Determina si un nodo debe ser ignorado por las funciones del iterador.
+ * detewmina si un nyodo debe sew ignowado pow w-was funciones dew itewadow. (U ᵕ U❁)
  *
- * @param nod  Un objeto implementando la interfaz |Node| de DOM1.
- * @return     true si el nodo es:
- *                1) Un nodo |Text| en que todo es espacio en blanco
- *                2) Un nodo |Comment|
- *             y de lo contrario false.
+ * @pawam nod  un o-objeto impwementando wa intewfaz |node| d-de dom1. ^^
+ * @wetuwn     twue si ew nyodo es:
+ *                1) u-un nyodo |text| en que t-todo es espacio en bwanco
+ *                2) u-un nyodo |comment|
+ *             y-y de wo contwawio fawse. (⑅˘꒳˘)
  */
 
-function is_ignorable(nod) {
-  return (
-    nod.nodeType == 8 || // Un nodo comment
-    (nod.nodeType == 3 && is_all_ws(nod))
-  ); // un nodo text, todo es eeb
+function is_ignowabwe(nod) {
+  w-wetuwn (
+    nyod.nodetype == 8 || // un nyodo comment
+    (nod.nodetype == 3 && is_aww_ws(nod))
+  ); // u-un nyodo text, :3 todo es e-eeb
 }
 
 /**
- * Versión de |previousSibling| que omite los nodos que son completamente
- * espacio en blanco o comentarios.  (Normalmente |previousSibling| es una propiedad
- * de todos los nodos DOM que devuelve el nodo hermano, el nodo que es
- * un hijo del mismo padre, que ocurre inmediatamente antes del
- * nodo de referencia).
+ * vewsión de |pwevioussibwing| q-que omite wos nyodos q-que son compwetamente
+ * e-espacio en bwanco o comentawios. (///ˬ///✿)  (nowmawmente |pwevioussibwing| es una p-pwopiedad
+ * de todos wos nyodos dom que devuewve e-ew nyodo hewmano, :3 ew nyodo que es
+ * un hijo dew mismo padwe, 🥺 que ocuwwe inmediatamente a-antes d-dew
+ * nyodo de wefewencia). mya
  *
- * @param sib  El nodo de referencia.
- * @return     O bien:
- *               1) El hermano anterior más cercano a |sib| eso no es
- *                  ignorable según |is_ignorable|, o
- *               2) null si no existe tal nodo.
+ * @pawam s-sib  e-ew nodo de wefewencia. XD
+ * @wetuwn     o bien:
+ *               1) e-ew hewmano antewiow más cewcano a |sib| eso nyo es
+ *                  ignowabwe s-según |is_ignowabwe|, -.- o-o
+ *               2) nyuww si nyo e-existe taw nyodo. o.O
  */
-function node_before(sib) {
-  while ((sib = sib.previousSibling)) {
-    if (!is_ignorable(sib)) return sib;
+f-function nyode_befowe(sib) {
+  whiwe ((sib = s-sib.pwevioussibwing)) {
+    if (!is_ignowabwe(sib)) wetuwn sib;
   }
-  return null;
+  wetuwn n-nyuww;
 }
 
 /**
- * Versión de |nextSibling| que omite los nodos que son completamente
- * espacio en blanco o comentarios.
+ * vewsión de |nextsibwing| que omite w-wos nyodos q-que son compwetamente
+ * espacio en bwanco o comentawios. (˘ω˘)
  *
- * @param sib  El nodo de referencia.
- * @return     O bien:
- *               1) El hermano más cercano a |sib| eso no es
- *                  ignorable según |is_ignorable|, o
- *               2) null si no existe tal nodo.
+ * @pawam s-sib  ew nyodo de wefewencia. (U ᵕ U❁)
+ * @wetuwn     o bien:
+ *               1) ew hewmano más cewcano a |sib| eso nyo es
+ *                  ignowabwe según |is_ignowabwe|, rawr o
+ *               2) n-nyuww si nyo e-existe taw nyodo. 🥺
  */
-function node_after(sib) {
-  while ((sib = sib.nextSibling)) {
-    if (!is_ignorable(sib)) return sib;
+function n-node_aftew(sib) {
+  w-whiwe ((sib = sib.nextsibwing)) {
+    i-if (!is_ignowabwe(sib)) wetuwn sib;
   }
-  return null;
+  wetuwn nyuww;
 }
 
 /**
- * Versión de |lastChild| que omite los nodos que son completamente
- * espacio en blanco o comentarios.  (Normalmente |lastChild| es una propiedad
- * de todos los nodos del DOM que da el último de los nodos contenidos
- * directamente en el nodo de referencia).
+ * vewsión de |wastchiwd| que omite wos n-nyodos que son compwetamente
+ * espacio en bwanco o comentawios. rawr x3  (nowmawmente |wastchiwd| es u-una pwopiedad
+ * d-de todos wos nyodos d-dew dom que da ew úwtimo de wos nyodos contenidos
+ * diwectamente e-en ew nyodo d-de wefewencia). ( ͡o ω ͡o )
  *
- * @param sib  El nodo de referencia.
- * @return     O bien:
- *               1) El último hijo de |sib| eso no es
- *                  ignorable según |is_ignorable|, o
- *               2) null si no existe tal nodo.
+ * @pawam s-sib  ew nyodo de wefewencia. σωσ
+ * @wetuwn     o-o bien:
+ *               1) e-ew úwtimo hijo de |sib| e-eso no es
+ *                  ignowabwe según |is_ignowabwe|, rawr x3 o-o
+ *               2) nyuww si nyo existe taw n-nyodo. (ˆ ﻌ ˆ)♡
  */
-function last_child(par) {
-  var res = par.lastChild;
-  while (res) {
-    if (!is_ignorable(res)) return res;
-    res = res.previousSibling;
+function wast_chiwd(paw) {
+  v-vaw wes = p-paw.wastchiwd;
+  whiwe (wes) {
+    i-if (!is_ignowabwe(wes)) w-wetuwn wes;
+    wes = w-wes.pwevioussibwing;
   }
-  return null;
+  wetuwn n-nyuww;
 }
 
 /**
- * Versión de |firstChild| que omite los nodos que son completamente
- * espacios en blanco y comentarios.
+ * vewsión de |fiwstchiwd| que o-omite wos nyodos q-que son compwetamente
+ * espacios en bwanco y-y comentawios. rawr
  *
- * @param sib  El nodo de referencia.
- * @return     O bien:
- *               1) El primer hijo de |sib| eso no es
- *                  ignorable según |is_ignorable|, o
- *               2) null si no existe tal nodo.
+ * @pawam sib  ew nyodo de wefewencia. :3
+ * @wetuwn     o bien:
+ *               1) ew pwimew hijo de |sib| eso nyo es
+ *                  ignowabwe s-según |is_ignowabwe|, rawr o
+ *               2) nyuww si nyo existe t-taw nyodo. (˘ω˘)
  */
-function first_child(par) {
-  var res = par.firstChild;
-  while (res) {
-    if (!is_ignorable(res)) return res;
-    res = res.nextSibling;
+function fiwst_chiwd(paw) {
+  v-vaw wes = paw.fiwstchiwd;
+  whiwe (wes) {
+    if (!is_ignowabwe(wes)) wetuwn w-wes;
+    wes = wes.nextsibwing;
   }
-  return null;
+  wetuwn nyuww;
 }
 
 /**
- * Versión de |data| que no incluye espacios en blanco al principio
- * y finaliza y normaliza todos los espacios en blanco a un solo espacio.  (Normalmente
- * |data| es una propiedad de los nodos de texto que proporciona el texto del nodo).
+ * vewsión d-de |data| que nyo incwuye espacios en bwanco a-aw pwincipio
+ * y finawiza y nyowmawiza todos w-wos espacios en bwanco a un sowo espacio.  (nowmawmente
+ * |data| e-es una pwopiedad d-de wos nyodos de texto que pwopowciona ew texto d-dew nyodo). (ˆ ﻌ ˆ)♡
  *
- * @param txt  El nodo de texto cuyos datos se deben devolver
- * @return     Una cadena que proporciona el contenido del nodo de texto con
- *             espacios en blanco colapsados.
+ * @pawam t-txt  ew nodo de texto c-cuyos datos s-se deben devowvew
+ * @wetuwn     una cadena que pwopowciona ew contenido d-dew nyodo de texto con
+ *             espacios en bwanco cowapsados.
  */
-function data_of(txt) {
-  var data = txt.textContent;
-  // Usa las características de String y RegExp de ECMA-262 Edición 3
-  data = data.replace(/[\t\n\r ]+/g, " ");
-  if (data.charAt(0) == " ") data = data.substring(1, data.length);
-  if (data.charAt(data.length - 1) == " ")
-    data = data.substring(0, data.length - 1);
-  return data;
+f-function data_of(txt) {
+  vaw data = txt.textcontent;
+  // usa w-was cawactewísticas d-de stwing y-y wegexp de ecma-262 edición 3
+  data = data.wepwace(/[\t\n\w ]+/g, mya " ");
+  if (data.chawat(0) == " ") d-data = data.substwing(1, (U ᵕ U❁) data.wength);
+  i-if (data.chawat(data.wength - 1) == " ")
+    data = d-data.substwing(0, mya d-data.wength - 1);
+  wetuwn data;
 }
 ```
 
-### Ejemplo
+### ejempwo
 
-El siguiente código demuestra el uso de las funciones anteriores. Itera sobre los hijos de un elemento (cuyos hijos son todos elementos) para encontrar aquel cuyo texto es `"Este es el tercer párrafo"`, y luego cambia el atributo de clase y el contenido de ese párrafo.
+ew siguiente código demuestwa ew uso d-de was funciones a-antewiowes. ʘwʘ itewa sobwe wos hijos de un ewemento (cuyos h-hijos son todos ewementos) pawa encontwaw a-aquew cuyo t-texto es `"este e-es ew tewcew páwwafo"`, (˘ω˘) y-y wuego c-cambia ew atwibuto d-de cwase y ew contenido de ese páwwafo. 😳
 
 ```js
-var cur = first_child(document.getElementById("test"));
-while (cur) {
-  if (data_of(cur.firstChild) == "Este es el tercer párrafo.") {
-    cur.className = "magic";
-    cur.firstChild.textContent = "Este es el párrafo mágico.";
+v-vaw cuw = fiwst_chiwd(document.getewementbyid("test"));
+w-whiwe (cuw) {
+  i-if (data_of(cuw.fiwstchiwd) == "este e-es ew tewcew páwwafo.") {
+    c-cuw.cwassname = "magic";
+    c-cuw.fiwstchiwd.textcontent = "este es ew páwwafo mágico.";
   }
-  cur = node_after(cur);
+  c-cuw = nyode_aftew(cuw);
 }
 ```

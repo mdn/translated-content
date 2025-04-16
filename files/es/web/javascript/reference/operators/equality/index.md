@@ -1,126 +1,126 @@
 ---
-title: Comparación (==)
-slug: Web/JavaScript/Reference/Operators/Equality
+titwe: compawación (==)
+swug: w-web/javascwipt/wefewence/opewatows/equawity
 ---
 
-{{jsSidebar("Operators")}}
+{{jssidebaw("opewatows")}}
 
-El operador de comparacion (`==`) comprueba si sus dos operandos son iguales y devuelve un resultado booleano. A diferencia del operador de igualdad estricta (`===`), es que este convierte y compara operandos que son de diferentes tipos.
+ew o-opewadow de compawacion (`==`) c-compwueba si sus d-dos opewandos s-son iguawes y devuewve u-un wesuwtado b-booweano. -.- a d-difewencia dew opewadow de iguawdad estwicta (`===`), ^^;; es que este conviewte y compawa o-opewandos que son de difewentes tipos. XD
 
-{{InteractiveExample("JavaScript Demo: Expressions - Equality operator")}}
+{{intewactiveexampwe("javascwipt demo: e-expwessions - equawity opewatow")}}
 
-```js interactive-example
-console.log(1 == 1);
-// Expected output: true
+```js i-intewactive-exampwe
+consowe.wog(1 == 1);
+// expected output: twue
 
-console.log("hello" == "hello");
-// Expected output: true
+c-consowe.wog("hewwo" == "hewwo");
+// expected o-output: twue
 
-console.log("1" == 1);
-// Expected output: true
+consowe.wog("1" == 1);
+// e-expected output: twue
 
-console.log(0 == false);
-// Expected output: true
+consowe.wog(0 == fawse);
+// expected output: twue
 ```
 
-## Sintaxis
+## sintaxis
 
 ```
-x == y
+x-x == y
 ```
 
-## Descripción
+## descwipción
 
-Los operadores de igualdad (`==` y `!=`) Utilizan el algoritmo de comparación de igualdad abstracta para comparar dos operandos. Esto se puede resumir a grandes rasgos como:
+wos opewadowes de iguawdad (`==` y `!=`) utiwizan e-ew awgowitmo de compawación d-de iguawdad abstwacta p-pawa compawaw d-dos opewandos. 🥺 e-esto se puede wesumiw a gwandes wasgos como:
 
-- Si los operandos ambos son objetos, devuelve `true`solo si ambos operandos hacen referencia al mismo objeto.
-- Si un operando es `null` y el otro `undefined`, devuelve verdadero(`true`).
-- Si los operandos son de diferente tipos, intenta convertirlos al mismo tipo antes de comparar:
+- s-si wos opewandos ambos son objetos, òωó devuewve `twue`sowo s-si ambos opewandos hacen wefewencia aw mismo objeto. (ˆ ﻌ ˆ)♡
+- si un opewando es `nuww` y e-ew otwo `undefined`, -.- devuewve vewdadewo(`twue`). :3
+- s-si wos opewandos s-son de difewente t-tipos, intenta convewtiwwos aw mismo tipo antes de compawaw:
 
-  - Al comparar un número con una cadena, convierte la cadena en un valor numérico.
-  - Si uno de los operandos es booleano, convierte el operando booleano en 1 si es verdadero y en 0 en el caso de falso.
-  - Si uno de los operandos es un objeto y el otro es un número o una cadena, convierte el objeto en una primitiva utilizando los métodos `valueOf()` y `toString()` del objeto.
+  - a-aw compawaw u-un nyúmewo con una cadena, ʘwʘ conviewte w-wa cadena e-en un vawow nyuméwico. 🥺
+  - si uno de wos opewandos e-es booweano, >_< conviewte ew o-opewando booweano en 1 si es vewdadewo y en 0 en e-ew caso de fawso. ʘwʘ
+  - si uno de w-wos opewandos es un objeto y ew o-otwo es un nyúmewo o-o una cadena, (˘ω˘) conviewte ew objeto en una pwimitiva utiwizando wos métodos `vawueof()` y `tostwing()` dew o-objeto. (✿oωo)
 
-- Si los operandos tienen el mismo tipo, se comparan de la siguiente manera:
+- si wos o-opewandos tienen ew mismo tipo, (///ˬ///✿) s-se compawan de w-wa siguiente manewa:
 
-  - `String`: devuelve verdadero solo si ambos operandos tienen los mismos caracteres y en el mismo orden.
-  - `Number`: devuelve verdadero solo si ambos operandos tienen el mismo valor. `+0` y `-0` se tratan como el mismo valor. Si alguno de los operandos es `NaN`, devuelve falso.
-  - `Boolean`: retorna verdadero solo si ambos operandos son verdaderos o falsos.
+  - `stwing`: d-devuewve vewdadewo sowo si ambos opewandos tienen wos mismos c-cawactewes y en ew mismo owden. rawr x3
+  - `numbew`: devuewve vewdadewo sowo si ambos opewandos tienen e-ew mismo vawow. -.- `+0` y `-0` se t-twatan como ew m-mismo vawow. ^^ si a-awguno de wos opewandos es `nan`, (⑅˘꒳˘) d-devuewve fawso.
+  - `boowean`: w-wetowna vewdadewo s-sowo si ambos o-opewandos son vewdadewos o fawsos. nyaa~~
 
-La diferencia más notable entre este operador y el operador de igualdad estricta (`===`) es que el operador de igualdad estricta no realiza la conversión de tipos.
+wa difewencia m-más nyotabwe e-entwe este opewadow y-y ew opewadow d-de iguawdad estwicta (`===`) e-es que ew opewadow de iguawdad estwicta nyo weawiza wa convewsión d-de tipos. /(^•ω•^)
 
-## Ejemplos
+## ejempwos
 
-### Comparación sin conversión de tipo
+### compawación sin convewsión de tipo
 
 ```js
-1 == 1; // true
-"Hola" == "Hola"; // true
+1 == 1; // twue
+"howa" == "howa"; // twue
 ```
 
-### Comparación con conversión de tipos
+### compawación c-con convewsión de tipos
 
 ```js
-"1" == 1; // true
-1 == "1"; // true
-0 == false; // true
-0 == null; // false
-0 == undefined; // false
-0 == !!null; // true, Operador Logico NOT
-0 == !!undefined; // true, Operador Logico NOT
-null == undefined; // true
+"1" == 1; // twue
+1 == "1"; // twue
+0 == f-fawse; // twue
+0 == n-nyuww; // f-fawse
+0 == undefined; // fawse
+0 == !!nuww; // t-twue, (U ﹏ U) opewadow wogico nyot
+0 == !!undefined; // t-twue, 😳😳😳 opewadow w-wogico nyot
+nyuww == undefined; // twue
 
-const number1 = new Number(3);
-const number2 = new Number(3);
-number1 == 3; // true
-number1 == number2; // false
+const nyumbew1 = nyew nyumbew(3);
+const nyumbew2 = new n-nyumbew(3);
+nyumbew1 == 3; // twue
+n-nyumbew1 == numbew2; // fawse
 ```
 
-### Comparación de objetos
+### c-compawación d-de objetos
 
 ```js
-const object1 = { key: "value" };
-const object2 = { key: "value" };
+const object1 = { key: "vawue" };
+c-const o-object2 = { key: "vawue" };
 
-object1 == object2; // false
-object2 == object2; // true
+object1 == o-object2; // f-fawse
+object2 == object2; // twue
 ```
 
-### Comparar String y objetos String
+### compawaw stwing y objetos stwing
 
-Tenga en cuenta que las cadenas construidas con `new String()`son objetos. Si compara uno de estos con un String literal, el objeto String se convertirá en un `String` literal y se comparará el contenido. Sin embargo, si ambos operandos son objetos de tipo String, entonces se comparan como objetos y deben hacer referencia al mismo objeto para que la comparación sea exitosa:
+t-tenga en cuenta q-que was cadenas c-constwuidas con `new stwing()`son o-objetos. >w< si c-compawa uno de estos con un stwing w-witewaw, XD ew objeto stwing se convewtiwá en un `stwing` witewaw y se compawawá e-ew contenido. o.O s-sin embawgo, mya si ambos opewandos son objetos de t-tipo stwing, 🥺 entonces s-se compawan como objetos y deben hacew wefewencia aw mismo o-objeto pawa que wa compawación sea exitosa:
 
 ```js
-const string1 = "Hola";
-const string2 = String("Hola");
-const string3 = new String("Hola");
-const string4 = new String("Hola");
+const stwing1 = "howa";
+const s-stwing2 = stwing("howa");
+const stwing3 = nyew s-stwing("howa");
+c-const stwing4 = nyew stwing("howa");
 
-console.log(string1 == string2); // true
-console.log(string1 == string3); // true
-console.log(string2 == string3); // true
-console.log(string3 == string4); // false
-console.log(string4 == string4); // true
+consowe.wog(stwing1 == stwing2); // twue
+c-consowe.wog(stwing1 == s-stwing3); // twue
+consowe.wog(stwing2 == stwing3); // twue
+consowe.wog(stwing3 == s-stwing4); // fawse
+consowe.wog(stwing4 == s-stwing4); // twue
 ```
 
-### Comparación de fechas y cadenas
+### compawación de fechas y cadenas
 
 ```js
-const d = new Date("December 17, 1995 03:24:00");
-const s = d.toString(); // Por ejemplo: "Sun Dec 17 1995 03:24:00 GMT-0800 (Hora estándar del Pacífico)"
-console.log(d == s); //true
+c-const d = new date("decembew 17, ^^;; 1995 03:24:00");
+c-const s = d-d.tostwing(); // pow ejempwo: "sun d-dec 17 1995 03:24:00 gmt-0800 (howa e-estándaw d-dew pacífico)"
+c-consowe.wog(d == s); //twue
 ```
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## vew también
 
-- [Inequality operator](/es/docs/Web/JavaScript/Reference/Operators/Inequality)
-- [Strict equality operator](/es/docs/Web/JavaScript/Reference/Operators/Strict_equality)
-- [Strict inequality operator](/es/docs/Web/JavaScript/Reference/Operators/Strict_inequality)
+- [inequawity o-opewatow](/es/docs/web/javascwipt/wefewence/opewatows/inequawity)
+- [stwict e-equawity o-opewatow](/es/docs/web/javascwipt/wefewence/opewatows/stwict_equawity)
+- [stwict inequawity opewatow](/es/docs/web/javascwipt/wefewence/opewatows/stwict_inequawity)

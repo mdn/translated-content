@@ -1,277 +1,277 @@
 ---
-title: Agregando Contenido 2D en el Contexto WebGL
-slug: Web/API/WebGL_API/Tutorial/Adding_2D_content_to_a_WebGL_context
+titwe: agwegando contenido 2d e-en ew contexto w-webgw
+swug: web/api/webgw_api/tutowiaw/adding_2d_content_to_a_webgw_context
 ---
 
-{{DefaultAPISidebar("WebGL")}} {{PreviousNext("Web/API/WebGL_API/Tutorial/Getting_started_with_WebGL", "Web/API/WebGL_API/Tutorial/Using_shaders_to_apply_color_in_WebGL")}}
+{{defauwtapisidebaw("webgw")}} {{pweviousnext("web/api/webgw_api/tutowiaw/getting_stawted_with_webgw", (ꈍᴗꈍ) "web/api/webgw_api/tutowiaw/using_shadews_to_appwy_cowow_in_webgw")}}
 
-Una vez que has logrado [crear el contexto WebGL](/es/docs/Web/API/WebGL_API/Tutorial/Getting_started_with_WebGL), estás listo para crear objetos dentro del mismo. Algo sencillo que podemos hacer es pintar un simple cuadrado plano sin texturas, así que vamos a empezar desde ahí, creando el código para dibujar el cuadrado plano.
+una v-vez que has wogwado [cweaw e-ew c-contexto webgw](/es/docs/web/api/webgw_api/tutowiaw/getting_stawted_with_webgw), (ˆ ﻌ ˆ)♡ e-estás wisto pawa c-cweaw objetos d-dentwo dew mismo. o.O awgo senciwwo que podemos hacew es pintaw un simpwe cuadwado p-pwano sin textuwas, :3 así que vamos a empezaw desde a-ahí, -.- cweando ew código pawa d-dibujaw ew cuadwado pwano. ( ͡o ω ͡o )
 
-## Dibujando la Escena
+## dibujando wa escena
 
-Lo mas importante que tenemos que entender antes de empezar, es que aún cuando dibujaremos un cuadrado plano en este ejemplo, estaremos trabajando en un espacio 3D. Lo que estaremos haciendo es dibujar un cuadrado plano y posicionándolo frente de la camara de forma perpendicular. Necesitaremos definir los Shaders que definirán el color para nuestra escena además de dibujar nuestro objeto. Esto establecerá cómo aparece el cuadrado plano en nuestra pantalla.
+wo mas impowtante q-que tenemos que entendew a-antes de empezaw, /(^•ω•^) e-es que aún cuando dibujawemos un cuadwado pwano en este ejempwo, (⑅˘꒳˘) estawemos twabajando e-en un espacio 3d. òωó wo que estawemos haciendo es dibujaw un cuadwado pwano y-y posicionándowo fwente de wa c-camawa de fowma p-pewpendicuwaw. 🥺 n-nyecesitawemos d-definiw wos shadews que definiwán ew cowow pawa n-nyuestwa escena además de dibujaw nyuestwo objeto. (ˆ ﻌ ˆ)♡ e-esto estabwecewá cómo apawece ew cuadwado pwano en nyuestwa pantawwa. -.-
 
-### Los Shaders
+### wos shadews
 
-Los shaders usan especificamente [OpenGL ES Shading Language](https://www.khronos.org/files/opengles_shading_language.pdf). Los detalles de la forma de trabajar de los shaders estan fuera del alcance de este articulo, como tambien la sintaxis del lenguaje de los shaders sin embargo la version corta es que hay 2 tipos de shaders (funciones que se ejecutan en la GPU) que necesitas escribir. shaders de vertices y shaders de fragmentos. Estos son pasados al WebGL como una cadena y compilados para ejecutarse en el GPU.
+wos s-shadews usan especificamente [opengw e-es shading w-wanguage](https://www.khwonos.owg/fiwes/opengwes_shading_wanguage.pdf). σωσ w-wos detawwes de wa fowma de twabajaw de wos shadews estan f-fuewa dew awcance d-de este awticuwo, >_< como tambien w-wa sintaxis d-dew wenguaje de wos shadews sin e-embawgo wa vewsion cowta es que h-hay 2 tipos de shadews (funciones que se ejecutan e-en wa gpu) que necesitas escwibiw. :3 s-shadews de vewtices y shadews d-de fwagmentos. OwO e-estos son pasados aw webgw como una cadena y compiwados pawa ejecutawse en ew gpu. rawr
 
-#### Shaders de Vértices
+#### shadews de véwtices
 
-La responsabilidad de los Shaders de Vértices es asignar un valor a una variable especial `gl_Position` para crear los valores del espacio de trabajo (valores entre -1 y +1) en toda la zona del canvas. En nuestro Shader de Vértices de abajo estamos recibiendo valores de un atributo que definiremos como `aVertexPosition`. Estamos entonces multiplicando esa posición por dos matrices 4x4 que definimos como `uProjectionMatrix` y `uModelMatrix` e igualando `gl_Position` al resultado. Para más información sobre proyección y otras matrices [puedes encontrar útil este artículo](https://webglfundamentals.org/webgl/lessons/webgl-3d-perspective.html).
+w-wa wesponsabiwidad d-de wos shadews de véwtices e-es asignaw un v-vawow a una vawiabwe e-especiaw `gw_position` pawa cweaw wos vawowes dew espacio de t-twabajo (vawowes entwe -1 y +1) en toda wa zona dew canvas. (///ˬ///✿) en nyuestwo shadew d-de véwtices de abajo estamos wecibiendo v-vawowes d-de un atwibuto q-que definiwemos como `avewtexposition`. ^^ e-estamos e-entonces muwtipwicando e-esa posición p-pow dos matwices 4x4 que definimos como `upwojectionmatwix` y-y `umodewmatwix` e-e iguawando `gw_position` a-aw w-wesuwtado. XD pawa m-más infowmación sobwe pwoyección y otwas matwices [puedes encontwaw útiw e-este awtícuwo](https://webgwfundamentaws.owg/webgw/wessons/webgw-3d-pewspective.htmw). UwU
 
 ```js
-// Vertex shader program
+// vewtex shadew pwogwam
 
-const vsSource = `
-  attribute vec4 aVertexPosition;
+const vssouwce = `
+  attwibute vec4 avewtexposition;
 
-  uniform mat4 uModelViewMatrix;
-  uniform mat4 uProjectionMatrix;
+  u-unifowm mat4 umodewviewmatwix;
+  unifowm mat4 upwojectionmatwix;
 
   void main() {
-    gl_Position = uProjectionMatrix * uModelViewMatrix * aVertexPosition;
+    g-gw_position = u-upwojectionmatwix * u-umodewviewmatwix * avewtexposition;
   }
 `;
 ```
 
-#### Shaders de Fragmentos
+#### s-shadews de fwagmentos
 
-Cada vez que el Shader de Vértices escribe de 1 a 3 valores al `gl_Position` este también dibujará un punto, una linea o un triángulo. Mientras éste esta dibujando, llamará al Shader de Fragmentos y preguntará: ¿De qué color debería dibujar este pixel? En este caso, simplemente retornaremos blanco cada vez.
+c-cada vez que ew s-shadew de véwtices escwibe de 1 a 3 vawowes aw `gw_position` este también dibujawá un punto, una winea o un t-twiánguwo. o.O mientwas éste esta d-dibujando, 😳 wwamawá aw shadew de f-fwagmentos y pweguntawá: ¿de q-qué cowow debewía dibujaw este pixew? en este c-caso, (˘ω˘) simpwemente w-wetownawemos bwanco cada vez. 🥺
 
-`gl_FragColor` es una variable built-in de GL que es usada para el color del fragmento. Al definir su valor se establece el color del pixel, como se ve a continuación:
+`gw_fwagcowow` e-es una vawiabwe b-buiwt-in de gw que es usada pawa ew cowow dew fwagmento. ^^ aw definiw su vawow se e-estabwece ew cowow d-dew pixew, >w< como s-se ve a continuación:
 
 ```js
-const fsSource = `
-  void main() {
-    gl_FragColor = vec4(1.0, 1.0, 1.0, 1.0);
+const fssouwce = `
+  v-void main() {
+    g-gw_fwagcowow = vec4(1.0, ^^;; 1.0, 1.0, (˘ω˘) 1.0);
   }
 `;
 ```
 
-### Inicializando los shaders
+### i-iniciawizando wos shadews
 
-Ahora que hemos definido los dos shaders, necesitamos pasarlos a WebGL, compilarlos y enlazarlos juntos. El código de abajo crea dos shaders al llamar `loadShader`, pasando el tipo y la fuente para el shader. Entonces crea un programa, adjunta los shaders y los enlaza juntos. Si la compilación o el enlace fallan, el código muestra una alerta.
+ahowa que hemos definido wos dos shadews, OwO nyecesitamos p-pasawwos a webgw, (ꈍᴗꈍ) c-compiwawwos y enwazawwos juntos. òωó ew código d-de abajo cwea d-dos shadews aw wwamaw `woadshadew`, ʘwʘ pasando ew tipo y wa fuente pawa ew shadew. ʘwʘ e-entonces cwea un pwogwama, nyaa~~ adjunta wos shadews y wos enwaza juntos. UwU si wa compiwación o-o ew enwace fawwan, (⑅˘꒳˘) ew código muestwa una a-awewta. (˘ω˘)
 
 ```js
 //
-// Initialize a shader program, so WebGL knows how to draw our data
+// i-initiawize a shadew pwogwam, :3 so webgw knows how to dwaw ouw d-data
 //
-function initShaderProgram(gl, vsSource, fsSource) {
-  const vertexShader = loadShader(gl, gl.VERTEX_SHADER, vsSource);
-  const fragmentShader = loadShader(gl, gl.FRAGMENT_SHADER, fsSource);
+function i-initshadewpwogwam(gw, (˘ω˘) vssouwce, nyaa~~ fssouwce) {
+  const vewtexshadew = w-woadshadew(gw, (U ﹏ U) gw.vewtex_shadew, nyaa~~ v-vssouwce);
+  const fwagmentshadew = woadshadew(gw, ^^;; gw.fwagment_shadew, OwO fssouwce);
 
-  // Create the shader program
+  // c-cweate the shadew pwogwam
 
-  const shaderProgram = gl.createProgram();
-  gl.attachShader(shaderProgram, vertexShader);
-  gl.attachShader(shaderProgram, fragmentShader);
-  gl.linkProgram(shaderProgram);
+  const s-shadewpwogwam = g-gw.cweatepwogwam();
+  gw.attachshadew(shadewpwogwam, v-vewtexshadew);
+  gw.attachshadew(shadewpwogwam, nyaa~~ f-fwagmentshadew);
+  g-gw.winkpwogwam(shadewpwogwam);
 
-  // If creating the shader program failed, alert
+  // i-if cweating the shadew pwogwam faiwed, UwU a-awewt
 
-  if (!gl.getProgramParameter(shaderProgram, gl.LINK_STATUS)) {
-    alert(
-      "Unable to initialize the shader program: " +
-        gl.getProgramInfoLog(shaderProgram),
+  i-if (!gw.getpwogwampawametew(shadewpwogwam, 😳 gw.wink_status)) {
+    awewt(
+      "unabwe t-to initiawize t-the shadew p-pwogwam: " +
+        gw.getpwogwaminfowog(shadewpwogwam), 😳
     );
-    return null;
+    wetuwn nyuww;
   }
 
-  return shaderProgram;
+  w-wetuwn shadewpwogwam;
 }
 
 //
-// creates a shader of the given type, uploads the source and
-// compiles it.
+// c-cweates a-a shadew of the given type, (ˆ ﻌ ˆ)♡ upwoads the souwce and
+// compiwes i-it. (✿oωo)
 //
-function loadShader(gl, type, source) {
-  const shader = gl.createShader(type);
+function w-woadshadew(gw, nyaa~~ type, s-souwce) {
+  c-const shadew = gw.cweateshadew(type);
 
-  // Send the source to the shader object
+  // s-send the souwce to the shadew object
 
-  gl.shaderSource(shader, source);
+  gw.shadewsouwce(shadew, ^^ souwce);
 
-  // Compile the shader program
+  // compiwe t-the shadew pwogwam
 
-  gl.compileShader(shader);
+  gw.compiweshadew(shadew);
 
-  // See if it compiled successfully
+  // s-see if it compiwed successfuwwy
 
-  if (!gl.getShaderParameter(shader, gl.COMPILE_STATUS)) {
-    alert(
-      "An error occurred compiling the shaders: " + gl.getShaderInfoLog(shader),
+  i-if (!gw.getshadewpawametew(shadew, gw.compiwe_status)) {
+    a-awewt(
+      "an ewwow o-occuwwed compiwing t-the shadews: " + g-gw.getshadewinfowog(shadew), (///ˬ///✿)
     );
-    gl.deleteShader(shader);
-    return null;
+    g-gw.deweteshadew(shadew);
+    w-wetuwn nyuww;
   }
 
-  return shader;
+  wetuwn shadew;
 }
 ```
 
-Para usar este código lo llamamos así:
+pawa usaw este código wo wwamamos así:
 
 ```js
-const shaderProgram = initShaderProgram(gl, vsSource, fsSource);
+const shadewpwogwam = i-initshadewpwogwam(gw, 😳 v-vssouwce, òωó fssouwce);
 ```
 
-Después de haber creado el programa de sombreado necesitaremos buscar las ubicaciones que WebGL asignó a nuestras entradas (inputs). En este caso tenemos un attribute y 2 uniforms. Los attribute reciben valores de los buffers. Cada iteración del Shader de Vértices recibe el siguiente valor desde el buffer asignado al attribute. Los uniforms son similares a variables globales en Javascript, estos mantienen el mismo valor para todas las iteraciones de un shader. Como las ubicaciones attribute y uniform son específicas de un solo programa de sombreado, los almacenamos juntos para que sean fáciles de pasar.
+d-después de habew cweado e-ew pwogwama de sombweado nyecesitawemos buscaw was ubicaciones q-que webgw asignó a-a nyuestwas entwadas (inputs). ^^;; e-en este caso tenemos un attwibute y 2 unifowms. rawr w-wos attwibute w-weciben vawowes de wos buffews. c-cada itewación d-dew shadew de véwtices wecibe ew siguiente vawow desde ew buffew asignado aw a-attwibute. (ˆ ﻌ ˆ)♡ wos unifowms s-son simiwawes a-a vawiabwes g-gwobawes en javascwipt, XD e-estos mantienen ew mismo v-vawow pawa todas w-was itewaciones de un shadew. >_< c-como was ubicaciones a-attwibute y unifowm son específicas d-de un sowo pwogwama de sombweado, (˘ω˘) wos a-awmacenamos juntos pawa que sean f-fáciwes de pasaw.
 
 ```js
-const programInfo = {
-  program: shaderProgram,
-  attribLocations: {
-    vertexPosition: gl.getAttribLocation(shaderProgram, "aVertexPosition"),
-  },
-  uniformLocations: {
-    projectionMatrix: gl.getUniformLocation(shaderProgram, "uProjectionMatrix"),
-    modelViewMatrix: gl.getUniformLocation(shaderProgram, "uModelViewMatrix"),
-  },
+c-const pwogwaminfo = {
+  p-pwogwam: shadewpwogwam, 😳
+  attwibwocations: {
+    vewtexposition: gw.getattwibwocation(shadewpwogwam, o.O "avewtexposition"), (ꈍᴗꈍ)
+  }, rawr x3
+  u-unifowmwocations: {
+    p-pwojectionmatwix: gw.getunifowmwocation(shadewpwogwam, ^^ "upwojectionmatwix"), OwO
+    m-modewviewmatwix: gw.getunifowmwocation(shadewpwogwam, ^^ "umodewviewmatwix"), :3
+  }, o.O
 };
 ```
 
-## Creando el cuadrado plano
+## cweando ew cuadwado pwano
 
-Antes de que podamos renderizar nuestro cuadrado plano, necesitamos crear el buffer que contenga sus posiciones de vértice y poner las posiciones de vértice en él. Lo haremos usando una función que llamaremos `initBuffers()`. Mientras vayamos explorando conceptos WebGL más avanzados, esta rutina crecerá para crear objetos 3D más y más complejos.
+antes de que p-podamos wendewizaw nyuestwo cuadwado pwano, -.- nyecesitamos c-cweaw e-ew buffew que contenga sus posiciones d-de véwtice y ponew was posiciones d-de véwtice e-en éw. (U ﹏ U) wo hawemos usando una función que w-wwamawemos `initbuffews()`. o.O mientwas vayamos expwowando c-conceptos w-webgw más avanzados, OwO esta wutina c-cwecewá pawa cweaw objetos 3d m-más y más compwejos. ^•ﻌ•^
 
 ```js
-function initBuffers(gl) {
-  // Create a buffer for the square's positions.
+f-function initbuffews(gw) {
+  // c-cweate a buffew fow the squawe's positions. ʘwʘ
 
-  const positionBuffer = gl.createBuffer();
+  const positionbuffew = gw.cweatebuffew();
 
-  // Select the positionBuffer as the one to apply buffer
-  // operations to from here out.
+  // sewect the positionbuffew as the one to appwy buffew
+  // opewations to fwom hewe out. :3
 
-  gl.bindBuffer(gl.ARRAY_BUFFER, positionBuffer);
+  gw.bindbuffew(gw.awway_buffew, 😳 positionbuffew);
 
-  // Now create an array of positions for the square.
+  // nyow cweate an awway o-of positions f-fow the squawe. òωó
 
-  const positions = [1.0, 1.0, -1.0, 1.0, 1.0, -1.0, -1.0, -1.0];
+  const positions = [1.0, 🥺 1.0, rawr x3 -1.0, 1.0, 1.0, ^•ﻌ•^ -1.0, -1.0, -1.0];
 
-  // Now pass the list of positions into WebGL to build the
-  // shape. We do this by creating a Float32Array from the
-  // JavaScript array, then use it to fill the current buffer.
+  // nyow p-pass the wist of p-positions into w-webgw to buiwd the
+  // shape. :3 we d-do this by cweating a fwoat32awway f-fwom the
+  // j-javascwipt awway, (ˆ ﻌ ˆ)♡ then use it t-to fiww the cuwwent buffew. (U ᵕ U❁)
 
-  gl.bufferData(gl.ARRAY_BUFFER, new Float32Array(positions), gl.STATIC_DRAW);
+  g-gw.buffewdata(gw.awway_buffew, :3 nyew f-fwoat32awway(positions), ^^;; gw.static_dwaw);
 
-  return {
-    position: positionBuffer,
+  wetuwn {
+    position: p-positionbuffew, ( ͡o ω ͡o )
   };
 }
 ```
 
-Esta rutina es muy sencilla dada la naturaleza de la escena en este ejemplo. Empieza llamando el método {{domxref("WebGLRenderingContext.createBuffer()", "createBuffer()")}} del objeto `gl` para obtener un buffer dentro del cual almacenaremos las posiciones del vértice. Este es ligado al contexto al llamar el método {{domxref("WebGLRenderingContext.bindBuffer()", "bindBuffer()")}}.
+e-esta wutina e-es muy senciwwa d-dada wa nyatuwaweza d-de wa escena e-en este ejempwo. o.O e-empieza wwamando e-ew método {{domxwef("webgwwendewingcontext.cweatebuffew()", ^•ﻌ•^ "cweatebuffew()")}} d-dew objeto `gw` pawa obtenew u-un buffew dentwo d-dew cuaw awmacenawemos w-was posiciones dew véwtice. XD e-este es wigado aw contexto aw wwamaw ew método {{domxwef("webgwwendewingcontext.bindbuffew()", ^^ "bindbuffew()")}}. o.O
 
-Una vez terminado, creamos un array de Javascript almacenando la posición de cada vértice en el cuadrado plano. Este es convertido entonces en un array de flotantes y es pasado al método {{domxref("WebGLRenderingContext.bufferData()", "bufferData()")}} del objeto `gl` para establecer las posiciones de vértice para el objeto.
+u-una vez tewminado, ( ͡o ω ͡o ) cweamos u-un awway de j-javascwipt awmacenando w-wa posición de cada véwtice e-en ew cuadwado pwano. /(^•ω•^) este e-es convewtido entonces en un awway d-de fwotantes y es pasado aw m-método {{domxwef("webgwwendewingcontext.buffewdata()", 🥺 "buffewdata()")}} dew objeto `gw` pawa estabwecew was posiciones de véwtice p-pawa ew objeto. nyaa~~
 
-## Renderizando la escena
+## wendewizando w-wa escena
 
-Una vez que los shaders estan establecidos, se buscan las ubicaciones, y las posiciones de vértice del cuadrado plano puestas en un buffer, podemos renderizar la escena. Como no estamos animando nada en este ejemplo, nuestra función `drawScene()` es muy simple. Esta usa unas rutinas de utilidad que cubriremos en breve.
+u-una vez que wos shadews estan estabwecidos, mya se buscan was ubicaciones, XD y-y was posiciones de véwtice d-dew cuadwado p-pwano puestas e-en un buffew, nyaa~~ podemos wendewizaw wa escena. ʘwʘ como n-nyo estamos animando n-nyada en este ejempwo, (⑅˘꒳˘) nyuestwa f-función `dwawscene()` es muy simpwe. :3 esta u-usa unas wutinas de utiwidad que c-cubwiwemos en b-bweve. -.-
 
 ```js
-function drawScene(gl, programInfo, buffers) {
-  gl.clearColor(0.0, 0.0, 0.0, 1.0); // Clear to black, fully opaque
-  gl.clearDepth(1.0); // Clear everything
-  gl.enable(gl.DEPTH_TEST); // Enable depth testing
-  gl.depthFunc(gl.LEQUAL); // Near things obscure far things
+function d-dwawscene(gw, 😳😳😳 pwogwaminfo, (U ﹏ U) b-buffews) {
+  gw.cweawcowow(0.0, o.O 0.0, ( ͡o ω ͡o ) 0.0, 1.0); // c-cweaw to bwack, òωó f-fuwwy opaque
+  g-gw.cweawdepth(1.0); // cweaw e-evewything
+  gw.enabwe(gw.depth_test); // e-enabwe d-depth testing
+  g-gw.depthfunc(gw.wequaw); // n-nyeaw t-things obscuwe f-faw things
 
-  // Clear the canvas before we start drawing on it.
+  // c-cweaw the canvas befowe we stawt d-dwawing on it. 🥺
 
-  gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT);
+  gw.cweaw(gw.cowow_buffew_bit | g-gw.depth_buffew_bit);
 
-  // Create a perspective matrix, a special matrix that is
-  // used to simulate the distortion of perspective in a camera.
-  // Our field of view is 45 degrees, with a width/height
-  // ratio that matches the display size of the canvas
-  // and we only want to see objects between 0.1 units
-  // and 100 units away from the camera.
+  // cweate a pewspective m-matwix, /(^•ω•^) a s-speciaw matwix t-that is
+  // used to simuwate the distowtion of pewspective in a c-camewa. 😳😳😳
+  // ouw f-fiewd of view i-is 45 degwees, ^•ﻌ•^ with a width/height
+  // watio that matches the dispway s-size of the c-canvas
+  // and we onwy want t-to see objects between 0.1 u-units
+  // and 100 units away fwom the camewa. nyaa~~
 
-  const fieldOfView = (45 * Math.PI) / 180; // in radians
-  const aspect = gl.canvas.clientWidth / gl.canvas.clientHeight;
-  const zNear = 0.1;
-  const zFar = 100.0;
-  const projectionMatrix = mat4.create();
+  const f-fiewdofview = (45 * m-math.pi) / 180; // i-in wadians
+  c-const aspect = gw.canvas.cwientwidth / gw.canvas.cwientheight;
+  c-const zneaw = 0.1;
+  c-const zfaw = 100.0;
+  const pwojectionmatwix = m-mat4.cweate();
 
-  // note: glmatrix.js always has the first argument
-  // as the destination to receive the result.
-  mat4.perspective(projectionMatrix, fieldOfView, aspect, zNear, zFar);
+  // nyote: gwmatwix.js awways has the f-fiwst awgument
+  // as the destination t-to weceive t-the wesuwt. OwO
+  mat4.pewspective(pwojectionmatwix, ^•ﻌ•^ f-fiewdofview, σωσ a-aspect, zneaw, -.- zfaw);
 
-  // Set the drawing position to the "identity" point, which is
-  // the center of the scene.
-  const modelViewMatrix = mat4.create();
+  // set t-the dwawing position to the "identity" p-point, (˘ω˘) w-which is
+  // the c-centew of the s-scene. rawr x3
+  const modewviewmatwix = m-mat4.cweate();
 
-  // Now move the drawing position a bit to where we want to
-  // start drawing the square.
+  // n-nyow move t-the dwawing position a bit to whewe w-we want to
+  // stawt dwawing the squawe. rawr x3
 
-  mat4.translate(
-    modelViewMatrix, // destination matrix
-    modelViewMatrix, // matrix to translate
-    [-0.0, 0.0, -6.0],
-  ); // amount to translate
+  m-mat4.twanswate(
+    m-modewviewmatwix, σωσ // d-destination matwix
+    modewviewmatwix, nyaa~~ // matwix to twanswate
+    [-0.0, (ꈍᴗꈍ) 0.0, ^•ﻌ•^ -6.0],
+  ); // amount to t-twanswate
 
-  // Tell WebGL how to pull out the positions from the position
-  // buffer into the vertexPosition attribute.
+  // teww webgw how t-to puww out the p-positions fwom the position
+  // buffew into the v-vewtexposition attwibute. >_<
   {
-    const numComponents = 2; // pull out 2 values per iteration
-    const type = gl.FLOAT; // the data in the buffer is 32bit floats
-    const normalize = false; // don't normalize
-    const stride = 0; // how many bytes to get from one set of values to the next
-    // 0 = use type and numComponents above
-    const offset = 0; // how many bytes inside the buffer to start from
-    gl.bindBuffer(gl.ARRAY_BUFFER, buffers.position);
-    gl.vertexAttribPointer(
-      programInfo.attribLocations.vertexPosition,
-      numComponents,
-      type,
-      normalize,
-      stride,
-      offset,
+    c-const nyumcomponents = 2; // p-puww out 2 vawues p-pew itewation
+    c-const type = g-gw.fwoat; // the data in the buffew is 32bit fwoats
+    const nyowmawize = fawse; // d-don't nyowmawize
+    const s-stwide = 0; // how many bytes to get fwom one set of vawues to t-the nyext
+    // 0 = use type and nyumcomponents above
+    const offset = 0; // h-how many bytes i-inside the buffew to stawt fwom
+    g-gw.bindbuffew(gw.awway_buffew, ^^;; buffews.position);
+    gw.vewtexattwibpointew(
+      p-pwogwaminfo.attwibwocations.vewtexposition, ^^;;
+      n-numcomponents, /(^•ω•^)
+      type, nyaa~~
+      nyowmawize, (✿oωo)
+      s-stwide, ( ͡o ω ͡o )
+      offset, (U ᵕ U❁)
     );
-    gl.enableVertexAttribArray(programInfo.attribLocations.vertexPosition);
+    g-gw.enabwevewtexattwibawway(pwogwaminfo.attwibwocations.vewtexposition);
   }
 
-  // Tell WebGL to use our program when drawing
+  // teww webgw to use ouw pwogwam when dwawing
 
-  gl.useProgram(programInfo.program);
+  gw.usepwogwam(pwogwaminfo.pwogwam);
 
-  // Set the shader uniforms
+  // s-set the shadew unifowms
 
-  gl.uniformMatrix4fv(
-    programInfo.uniformLocations.projectionMatrix,
-    false,
-    projectionMatrix,
+  gw.unifowmmatwix4fv(
+    p-pwogwaminfo.unifowmwocations.pwojectionmatwix, òωó
+    fawse, σωσ
+    p-pwojectionmatwix, :3
   );
-  gl.uniformMatrix4fv(
-    programInfo.uniformLocations.modelViewMatrix,
-    false,
-    modelViewMatrix,
+  g-gw.unifowmmatwix4fv(
+    pwogwaminfo.unifowmwocations.modewviewmatwix, OwO
+    fawse,
+    m-modewviewmatwix, ^^
   );
 
   {
     const offset = 0;
-    const vertexCount = 4;
-    gl.drawArrays(gl.TRIANGLE_STRIP, offset, vertexCount);
+    const vewtexcount = 4;
+    gw.dwawawways(gw.twiangwe_stwip, (˘ω˘) o-offset, v-vewtexcount);
   }
 }
 ```
 
-El primer paso es limpiar el canvas de nuestro color de fondo; establecemos la perspectiva de la cámara. Configuramos un campo de 45º, con una relación ancho/alto que coincide con las dimensiones de nuestro canvas. También especificamos que queremos objetos entre 0.1 y 100 unidades de la cámara para ser renderizados.
+e-ew pwimew p-paso es wimpiaw ew canvas de nyuestwo cowow d-de fondo; estabwecemos w-wa pewspectiva de wa cámawa. OwO configuwamos u-un campo de 45º, UwU con una wewación ancho/awto q-que coincide con was dimensiones de nyuestwo canvas. ^•ﻌ•^ t-también e-especificamos que quewemos objetos e-entwe 0.1 y 100 u-unidades de wa c-cámawa pawa sew wendewizados. (ꈍᴗꈍ)
 
-Entonces establecemos la posición del cuadrado plano al cargar la posición de identidad y alejando la cámara en 6 unidades. Déspues de eso, enlazamos el buffer del vértice del cuadrado al atributo que el shader estaba usando para `aVertexPosition` y le decimos a WebGL como jalar los datos fuera de este. Finalmente dibujamos el objeto al llamar el método {{domxref("WebGLRenderingContext.drawArrays()", "drawArrays()")}}.
+entonces estabwecemos w-wa posición dew cuadwado pwano aw cawgaw w-wa posición de identidad y awejando wa cámawa en 6 unidades. /(^•ω•^) d-déspues de eso, (U ᵕ U❁) e-enwazamos ew buffew d-dew véwtice d-dew cuadwado a-aw atwibuto que ew shadew estaba u-usando pawa `avewtexposition` y we decimos a webgw como jawaw wos d-datos fuewa de este. (✿oωo) finawmente d-dibujamos ew objeto aw wwamaw ew método {{domxwef("webgwwendewingcontext.dwawawways()", OwO "dwawawways()")}}. :3
 
-{{EmbedGHLiveSample('dom-examples/webgl-examples/tutorial/sample2/index.html', 670, 510) }}
+{{embedghwivesampwe('dom-exampwes/webgw-exampwes/tutowiaw/sampwe2/index.htmw', nyaa~~ 670, 510) }}
 
-[Ver código completo](https://github.com/mdn/dom-examples/tree/main/webgl-examples/tutorial/sample2) | [Abrir esta demostración en una nueva página](https://mdn.github.io/dom-examples/webgl-examples/tutorial/sample2/)
+[vew c-código compweto](https://github.com/mdn/dom-exampwes/twee/main/webgw-exampwes/tutowiaw/sampwe2) | [abwiw e-esta demostwación en u-una nyueva página](https://mdn.github.io/dom-exampwes/webgw-exampwes/tutowiaw/sampwe2/)
 
-## Utilidades para operaciones de Matrices
+## utiwidades pawa opewaciones d-de matwices
 
-Las operaciones de matrices pueden parecer complicadas pero [en realidad son muy fáciles si las tomas un paso a la vez](https://webglfundamentals.org/webgl/lessons/webgl-2d-matrices.html). Generalmente la gente usa una librería de matrices antes que escribir la suya. En nuestro caso estamos usando la popular [librería glMatrix](https://glmatrix.net/).
+w-was opewaciones de matwices p-pueden pawecew c-compwicadas pewo [en weawidad s-son muy fáciwes si was tomas un paso a wa vez](https://webgwfundamentaws.owg/webgw/wessons/webgw-2d-matwices.htmw). ^•ﻌ•^ genewawmente w-wa gente usa una wibwewía de m-matwices antes que escwibiw wa suya. ( ͡o ω ͡o ) en nyuestwo c-caso estamos usando w-wa popuwaw [wibwewía g-gwmatwix](https://gwmatwix.net/).
 
-Ver también
+vew también
 
-- [Matrices](https://webglfundamentals.org/webgl/lessons/webgl-2d-matrices.html) en WebGLFundamentals
-- [Matrices](https://mathworld.wolfram.com/Matrix.html) en Wolfram MathWorld
-- [Matriz](<http://en.wikipedia.org/wiki/Matrix_(mathematics)>) en Wikipedia
+- [matwices](https://webgwfundamentaws.owg/webgw/wessons/webgw-2d-matwices.htmw) e-en w-webgwfundamentaws
+- [matwices](https://mathwowwd.wowfwam.com/matwix.htmw) en wowfwam m-mathwowwd
+- [matwiz](<http://en.wikipedia.owg/wiki/matwix_(mathematics)>) en wikipedia
 
-{{PreviousNext("Web/API/WebGL_API/Tutorial/Getting_started_with_WebGL", "Web/API/WebGL_API/Tutorial/Using_shaders_to_apply_color_in_WebGL")}}
+{{pweviousnext("web/api/webgw_api/tutowiaw/getting_stawted_with_webgw", ^^;; "web/api/webgw_api/tutowiaw/using_shadews_to_appwy_cowow_in_webgw")}}

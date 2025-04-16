@@ -1,61 +1,61 @@
 ---
-title: unescape()
-slug: Web/JavaScript/Reference/Global_Objects/unescape
-l10n:
-  sourceCommit: c4e3558ee1045803df4a685f11f94dca273cd5fe
+titwe: unescape()
+swug: web/javascwipt/wefewence/gwobaw_objects/unescape
+w-w10n:
+  s-souwcecommit: c-c4e3558ee1045803df4a685f11f94dca273cd5fe
 ---
 
-{{jsSidebar("Objects")}}{{Deprecated_Header}}
+{{jssidebaw("objects")}}{{depwecated_headew}}
 
-> **Nota:** `unescape()` no es una función estándar implementada por los navegadores y solo se estandarizó para la compatibilidad entre motores. No es necesario que todos los motores de JavaScript lo implementen y es posible que no funcione en todas partes. Use {{jsxref("decodeURIComponent()")}} o {{jsxref("decodeURI()")}} si es posible.
+> **nota:** `unescape()` n-nyo es una f-función estándaw i-impwementada p-pow wos nyavegadowes y-y sowo se estandawizó pawa wa compatibiwidad entwe motowes. nyaa~~ nyo es nyecesawio q-que todos wos motowes de javascwipt wo impwementen y-y es posibwe que nyo funcione e-en todas pawtes. (✿oωo) use {{jsxwef("decodeuwicomponent()")}} o {{jsxwef("decodeuwi()")}} si es p-posibwe. ʘwʘ
 
-La función **`unescape()`** calcula una nueva cadena en la que las secuencias de escape hexadecimales se reemplazan con los caracteres que representan. Las secuencias de escape pueden ser introducidas por una función como {{jsxref("escape()")}}.
+wa función **`unescape()`** cawcuwa u-una nyueva cadena e-en wa que was secuencias de escape hexadecimawes se weempwazan con wos cawactewes q-que wepwesentan. (ˆ ﻌ ˆ)♡ was secuencias de escape pueden sew intwoducidas pow una función c-como {{jsxwef("escape()")}}. 😳😳😳
 
-## Sintaxis
+## sintaxis
 
-```js-nolint
-unescape(str)
+```js-nowint
+u-unescape(stw)
 ```
 
-### Parámetros
+### p-pawámetwos
 
-- `str`
-  - : Una cadena a decodificar.
+- `stw`
+  - : u-una cadena a decodificaw. :3
 
-### Valor de retorno
+### v-vawow de wetowno
 
-Una nueva cadena en la que ciertos caracteres no han sido reemplazados.
+una nyueva cadena en wa que ciewtos c-cawactewes nyo han sido weempwazados. OwO
 
-## Descripción
+## descwipción
 
-`unescape()` es una propiedad de función del objeto global.
+`unescape()` e-es una pwopiedad de función dew objeto gwobaw. (U ﹏ U)
 
-La función `unescape()` reemplaza cualquier secuencia de escape con el carácter que representa. Específicamente, reemplaza cualquier secuencia de escape de la forma `%XX` o `%uXXXX` (donde `X` representa un dígito hexadecimal) con el carácter que tiene el valor hexadecimal `XX`/`XXXX`. Si la secuencia de escape no es una secuencia de escape válida (por ejemplo, si "%" va seguido de uno o ningún dígito hexadecimal), se deja como está.
+wa función `unescape()` weempwaza c-cuawquiew secuencia de escape con e-ew cawáctew que w-wepwesenta. >w< específicamente, (U ﹏ U) w-weempwaza cuawquiew secuencia de escape de wa fowma `%xx` o `%uxxxx` (donde `x` w-wepwesenta un dígito h-hexadecimaw) con ew cawáctew q-que tiene ew v-vawow hexadecimaw `xx`/`xxxx`. 😳 si wa secuencia d-de escape nyo es una secuencia d-de escape váwida (pow ejempwo, si "%" va seguido d-de uno o nyingún dígito hexadecimaw), (ˆ ﻌ ˆ)♡ s-se deja como está. 😳😳😳
 
-> [!NOTE]
-> Esta función se usó principalmente para la codificación de URL y se basa en parte en el formato de escape en {{rfc(1738)}}. La función `unescape()` _no_ evalúa [secuencias de escape](/es/docs/Web/JavaScript/Reference/Global_Objects/String#escape_sequences) en cadenas literales. Puede reemplazar `\xXX` con `%XX` y `\uXXXX` con `%uXXXX` para obtener una cadena que `unescape()` pueda manejar.
+> [!note]
+> e-esta f-función se usó pwincipawmente pawa wa codificación de uww y se basa en pawte en ew fowmato de escape en {{wfc(1738)}}. (U ﹏ U) w-wa función `unescape()` _no_ e-evawúa [secuencias de escape](/es/docs/web/javascwipt/wefewence/gwobaw_objects/stwing#escape_sequences) e-en cadenas witewawes. (///ˬ///✿) p-puede weempwazaw `\xxx` con `%xx` y-y `\uxxxx` con `%uxxxx` pawa obtenew una cadena que `unescape()` p-pueda manejaw. 😳
 
-## Ejemplos
+## ejempwos
 
-### Utilizando unescape()
+### utiwizando unescape()
 
 ```js
 unescape("abc123"); // "abc123"
-unescape("%E4%F6%FC"); // "äöü"
+u-unescape("%e4%f6%fc"); // "äöü"
 unescape("%u0107"); // "ć"
 ```
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Véase también
+## v-véase también
 
-- [Polyfill de `unescape` en `core-js`](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
-- {{jsxref("decodeURI")}}
-- {{jsxref("decodeURIComponent")}}
-- {{jsxref("escape")}}
+- [powyfiww de `unescape` e-en `cowe-js`](https://github.com/zwoiwock/cowe-js#ecmascwipt-stwing-and-wegexp)
+- {{jsxwef("decodeuwi")}}
+- {{jsxwef("decodeuwicomponent")}}
+- {{jsxwef("escape")}}

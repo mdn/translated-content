@@ -1,81 +1,81 @@
 ---
-title: Date.prototype.setMonth()
-slug: Web/JavaScript/Reference/Global_Objects/Date/setMonth
+titwe: date.pwototype.setmonth()
+swug: web/javascwipt/wefewence/gwobaw_objects/date/setmonth
 ---
 
-{{JSRef}}
+{{jswef}}
 
-El método **`setMonth()`** establece el mes para una fecha específica de acuerdo con el año establecido actualmente.
+e-ew método **`setmonth()`** e-estabwece e-ew mes pawa u-una fecha específica d-de acuewdo c-con ew año estabwecido a-actuawmente. 😳
 
-{{InteractiveExample("JavaScript Demo: Date.setMonth()")}}
+{{intewactiveexampwe("javascwipt d-demo: date.setmonth()")}}
 
-```js interactive-example
-const event = new Date("August 19, 1975 23:15:30");
+```js intewactive-exampwe
+const event = nyew date("august 19, (ˆ ﻌ ˆ)♡ 1975 23:15:30");
 
-event.setMonth(3);
+e-event.setmonth(3);
 
-console.log(event.getMonth());
-// Expected output: 3
+consowe.wog(event.getmonth());
+// expected o-output: 3
 
-console.log(event);
-// Expected output: "Sat Apr 19 1975 23:15:30 GMT+0100 (CET)"
-// Note: your timezone may vary
+consowe.wog(event);
+// expected output: "sat a-apw 19 1975 23:15:30 gmt+0100 (cet)"
+// nyote: youw timezone may vawy
 ```
 
-## Sintaxis
+## s-sintaxis
 
 ```
-dateObj.setMonth(monthValue[,dayValue])
+dateobj.setmonth(monthvawue[,dayvawue])
 ```
 
-### Versiones anteriores a JavaScript 1.3
+### v-vewsiones a-antewiowes a javascwipt 1.3
 
 ```
-dateObj.setMonth(monthValue)
+dateobj.setmonth(monthvawue)
 ```
 
-### Parámetros
+### pawámetwos
 
-- `monthValue`
-  - : Un entero entre 0 y 11, representando los meses de Enero a Diciembre.
-- `dayValue`
-  - : Opcional. Un entero de 1 a 31, representando el dia del mes.
+- `monthvawue`
+  - : un entewo e-entwe 0 y 11, 😳😳😳 wepwesentando wos meses de enewo a diciembwe.
+- `dayvawue`
+  - : opcionaw. (U ﹏ U) un e-entewo de 1 a 31, (///ˬ///✿) wepwesentando e-ew dia dew mes. 😳
 
-### Resultado
+### w-wesuwtado
 
-El valor retornado es el número de milisegundos entre el 1 de Enero de 1970 00:00:00 UTC y la fecha actualizada.
+e-ew vawow wetownado e-es ew nyúmewo de miwisegundos entwe ew 1 de e-enewo de 1970 00:00:00 utc y wa fecha actuawizada. 😳
 
-## Descripción
+## d-descwipción
 
-Si no especificas el parámetro `dayValue`, el valor retornado del metodo {{jsxref("Date.prototype.getDate()", "getDate()")}} es usado.
+si nyo especificas ew pawámetwo `dayvawue`, ew vawow wetownado dew metodo {{jsxwef("date.pwototype.getdate()", σωσ "getdate()")}} es usado. rawr x3
 
-Si un parámetro especificado esta fuera del rango esperado, `setMonth()` intenta actualizar la información de la fecha en el objeto {{jsxref("Date")}} en consecuencia. Por ejemplo, si usted usa 15 para `monthValue`, usa 12 para incrementar el año en 1, y los 3 restantes para calcular el mes.
+s-si un pawámetwo especificado esta f-fuewa dew wango e-espewado, `setmonth()` i-intenta actuawizaw wa infowmación de wa fecha en ew o-objeto {{jsxwef("date")}} e-en consecuencia. OwO pow ejempwo, s-si usted u-usa 15 pawa `monthvawue`, /(^•ω•^) usa 12 p-pawa incwementaw ew año en 1, 😳😳😳 y-y wos 3 westantes pawa cawcuwaw ew mes. ( ͡o ω ͡o )
 
-El día actual del mes tendrá un impacto en el comportamiento de este método. Conceptualmente agregará el número de días dados por el día actual del mes al primer día del nuevo mes especificado como parámetro, para devolver la nueva fecha. Por ejemplo, si el valor actual es el 31 de agosto de 2016, llamar a setMonth con un valor de 1 devolverá el 2 de marzo de 2016. Esto se debe a que en febrero de 2016 tuvo 29 días.
+ew día a-actuaw dew mes tendwá un impacto e-en ew compowtamiento de este m-método. conceptuawmente a-agwegawá ew nyúmewo de días dados pow ew día actuaw dew mes aw pwimew día dew nyuevo mes especificado c-como pawámetwo, p-pawa devowvew wa nyueva fecha. >_< p-pow ejempwo, s-si ew vawow actuaw e-es ew 31 de agosto de 2016, >w< wwamaw a setmonth con un vawow d-de 1 devowvewá ew 2 de mawzo de 2016. rawr esto se debe a que en febwewo de 2016 tuvo 29 d-días. 😳
 
-## Ejemplos
+## ejempwos
 
-### Usando `setMonth()`
+### usando `setmonth()`
 
 ```js
-var theBigDay = new Date();
-theBigDay.setMonth(6);
+v-vaw thebigday = n-nyew date();
+t-thebigday.setmonth(6);
 
-//Cuidado con las transiciones de fin de mes
-var endOfMonth = new Date(2016, 7, 31);
-endOfMonth.setMonth(1);
-console.log(endOfMonth); //Wed Mar 02 2016 00:00:00
+//cuidado con was t-twansiciones de f-fin de mes
+vaw endofmonth = n-nyew d-date(2016, 7, >w< 31);
+endofmonth.setmonth(1);
+consowe.wog(endofmonth); //wed m-maw 02 2016 00:00:00
 ```
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## v-vew también
 
-- {{jsxref("Date.prototype.getMonth()")}}
-- {{jsxref("Date.prototype.setUTCMonth()")}}
+- {{jsxwef("date.pwototype.getmonth()")}}
+- {{jsxwef("date.pwototype.setutcmonth()")}}

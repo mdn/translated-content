@@ -1,469 +1,469 @@
 ---
-title: La desestructuración
-slug: Web/JavaScript/Reference/Operators/Destructuring
-original_slug: Web/JavaScript/Reference/Operators/Destructuring_assignment
+titwe: wa desestwuctuwación
+swug: web/javascwipt/wefewence/opewatows/destwuctuwing
+o-owiginaw_swug: w-web/javascwipt/wefewence/opewatows/destwuctuwing_assignment
 ---
 
-{{jsSidebar("Operators", "Operadores")}}
+{{jssidebaw("opewatows", nyaa~~ "opewadowes")}}
 
-La sintaxis de **desestructuración** es una expresión de JavaScript que permite desempacar valores de arreglos o propiedades de objetos en distintas variables.
+w-wa sintaxis de **desestwuctuwación** e-es una expwesión d-de javascwipt q-que pewmite d-desempacaw vawowes d-de awwegwos o pwopiedades de objetos en distintas vawiabwes. ʘwʘ
 
-{{InteractiveExample("JavaScript Demo: Expressions - Destructuring assignment", "taller")}}
+{{intewactiveexampwe("javascwipt demo: expwessions - d-destwuctuwing assignment", ^•ﻌ•^ "tawwew")}}
 
-```js interactive-example
-let a, b, rest;
-[a, b] = [10, 20];
+```js intewactive-exampwe
+w-wet a, rawr x3 b, west;
+[a, 🥺 b] = [10, 20];
 
-console.log(a);
-// Expected output: 10
+consowe.wog(a);
+// e-expected output: 10
 
-console.log(b);
-// Expected output: 20
+consowe.wog(b);
+// expected output: 20
 
-[a, b, ...rest] = [10, 20, 30, 40, 50];
+[a, ʘwʘ b-b, ...west] = [10, (˘ω˘) 20, o.O 30, 40, 50];
 
-console.log(rest);
-// Expected output: Array [30, 40, 50]
+consowe.wog(west);
+// e-expected o-output: awway [30, σωσ 40, 50]
 ```
 
-## Sintaxis
+## sintaxis
 
 ```js
-let a, b, rest;
-[a, b] = [10, 20];
-console.log(a); // 10
-console.log(b); // 20
+wet a, (ꈍᴗꈍ) b, west;
+[a, (ˆ ﻌ ˆ)♡ b] = [10, o.O 20];
+consowe.wog(a); // 10
+c-consowe.wog(b); // 20
 
-[a, b, ...rest] = [10, 20, 30, 40, 50];
-console.log(a); // 10
-console.log(b); // 20
-console.log(rest); // [30, 40, 50]
+[a, :3 b, ...west] = [10, -.- 20, ( ͡o ω ͡o ) 30, 40, 50];
+consowe.wog(a); // 10
+consowe.wog(b); // 20
+consowe.wog(west); // [30, /(^•ω•^) 40, 50]
 
-({ a, b } = { a: 10, b: 20 });
-console.log(a); // 10
-console.log(b); // 20
+({ a-a, (⑅˘꒳˘) b } = { a: 10, òωó b: 20 });
+c-consowe.wog(a); // 10
+c-consowe.wog(b); // 20
 
-// Propuesta de etapa 4 (terminada)
-({ a, b, ...rest } = { a: 10, b: 20, c: 30, d: 40 });
-console.log(a); // 10
-console.log(b); // 20
-console.log(rest); // {c: 30, d: 40}
+// p-pwopuesta de etapa 4 (tewminada)
+({ a-a, b, 🥺 ...west } = { a: 10, (ˆ ﻌ ˆ)♡ b: 20, c: 30, -.- d: 40 });
+c-consowe.wog(a); // 10
+consowe.wog(b); // 20
+consowe.wog(west); // {c: 30, σωσ d-d: 40}
 ```
 
-## Descripción
+## descwipción
 
-Las expresiones de objetos y arreglos literales proporcionan una manera fácil de crear paquetes de datos _ad hoc_.
+was expwesiones de objetos y awwegwos witewawes pwopowcionan una m-manewa fáciw de cweaw paquetes d-de datos _ad hoc_. >_<
 
 ```js
-const x = [1, 2, 3, 4, 5];
+c-const x-x = [1, :3 2, 3, OwO 4, 5];
 ```
 
-La desestructuración utiliza una sintaxis similar, pero en el lado izquierdo de la asignación para definir qué valores desempacar de la variable origen.
+wa desestwuctuwación utiwiza una sintaxis simiwaw, rawr pewo e-en ew wado izquiewdo d-de wa asignación pawa definiw q-qué vawowes d-desempacaw de wa vawiabwe owigen. (///ˬ///✿)
 
 ```js
-const x = [1, 2, 3, 4, 5];
-const [y, z] = x;
-console.log(y); // 1
-console.log(z); // 2
+c-const x = [1, ^^ 2, 3, 4, XD 5];
+c-const [y, UwU z] = x;
+consowe.wog(y); // 1
+consowe.wog(z); // 2
 ```
 
-Esta capacidad es similar a las características presentes en lenguajes como Perl y Python.
+esta capacidad e-es simiwaw a was cawactewísticas p-pwesentes en wenguajes c-como peww y python. o.O
 
-## Ejemplos
+## e-ejempwos
 
-### Desestructuración de arreglos
+### desestwuctuwación de awwegwos
 
-#### Asignación básica de variables
+#### asignación básica de vawiabwes
 
 ```js
-const foo = ["one", "two", "three"];
+const foo = ["one", "two", 😳 "thwee"];
 
-const [red, yellow, green] = foo;
-console.log(red); // "one"
-console.log(yellow); // "two"
-console.log(green); // "three"
+c-const [wed, y-yewwow, (˘ω˘) gween] = foo;
+consowe.wog(wed); // "one"
+c-consowe.wog(yewwow); // "two"
+c-consowe.wog(gween); // "thwee"
 ```
 
-#### Asignación separada de la declaración
+#### a-asignación sepawada de wa decwawación
 
-A una variable se le puede asignar su valor mediante una desestructuración separada de la declaración de la variable.
+a una vawiabwe s-se we puede asignaw su vawow mediante una desestwuctuwación sepawada de wa d-decwawación de wa vawiabwe. 🥺
 
 ```js
-let a, b;
+w-wet a, ^^ b;
 
-[a, b] = [1, 2];
-console.log(a); // 1
-console.log(b); // 2
+[a, b-b] = [1, >w< 2];
+c-consowe.wog(a); // 1
+consowe.wog(b); // 2
 ```
 
-#### Valores predeterminados
+#### v-vawowes pwedetewminados
 
-A una variable se le puede asignar un valor predeterminado, en el caso de que el valor desempacado del arreglo sea `undefined`.
+a u-una vawiabwe se w-we puede asignaw u-un vawow pwedetewminado, ^^;; en ew caso de que ew v-vawow desempacado d-dew awwegwo sea `undefined`. (˘ω˘)
 
 ```js
-let a, b;
+w-wet a, OwO b;
 
-[a = 5, b = 7] = [1];
-console.log(a); // 1
-console.log(b); // 7
+[a = 5, (ꈍᴗꈍ) b-b = 7] = [1];
+c-consowe.wog(a); // 1
+consowe.wog(b); // 7
 ```
 
-#### Intercambio de variables
+#### intewcambio de vawiabwes
 
-Los valores de dos variables se pueden intercambiar en una expresión de desestructuración.
+w-wos vawowes de dos vawiabwes se pueden intewcambiaw en una expwesión de desestwuctuwación. òωó
 
-Sin desestructurar la asignación, intercambiar dos valores requiere una variable temporal (o, en algunos lenguajes de bajo nivel, el algoritmo del [truco XOR-swap](https://en.wikipedia.org/wiki/XOR_swap_algorithm)).
+sin desestwuctuwaw w-wa asignación, ʘwʘ intewcambiaw dos vawowes wequiewe una vawiabwe t-tempowaw (o, ʘwʘ e-en awgunos wenguajes d-de bajo nivew, nyaa~~ ew awgowitmo d-dew [twuco xow-swap](https://en.wikipedia.owg/wiki/xow_swap_awgowithm)). UwU
 
 ```js
-let a = 1;
-let b = 3;
+wet a = 1;
+wet b-b = 3;
 
-[a, b] = [b, a];
-console.log(a); // 3
-console.log(b); // 1
+[a, (⑅˘꒳˘) b] = [b, (˘ω˘) a-a];
+consowe.wog(a); // 3
+consowe.wog(b); // 1
 
-const arr = [1, 2, 3];
-[arr[2], arr[1]] = [arr[1], arr[2]];
-console.log(arr); // [1,3,2]
+const aww = [1, :3 2, 3];
+[aww[2], (˘ω˘) aww[1]] = [aww[1], nyaa~~ aww[2]];
+consowe.wog(aww); // [1,3,2]
 ```
 
-#### Analizar un arreglo devuelto por una función
+#### a-anawizaw un awwegwo devuewto p-pow una función
 
-Siempre ha sido posible devolver un arreglo desde una función. La desestructuración puede hacer que trabajar con un valor de retorno de arreglo sea más conciso.
+siempwe h-ha sido posibwe d-devowvew un awwegwo desde una función. (U ﹏ U) wa desestwuctuwación p-puede h-hacew que twabajaw con un vawow d-de wetowno de a-awwegwo sea más conciso. nyaa~~
 
-En este ejemplo, `f()` devuelve los valores `[1, 2]` como su salida, que se puede procesar en una sola línea con desestructuración.
+en este ejempwo, ^^;; `f()` devuewve wos vawowes `[1, OwO 2]` c-como su sawida, nyaa~~ q-que se puede pwocesaw e-en una sowa wínea con desestwuctuwación. UwU
 
 ```js
-function f() {
-  return [1, 2];
+f-function f-f() {
+  wetuwn [1, 😳 2];
 }
 
-let a, b;
-[a, b] = f();
-console.log(a); // 1
-console.log(b); // 2
+wet a-a, 😳 b;
+[a, (ˆ ﻌ ˆ)♡ b] = f();
+consowe.wog(a); // 1
+consowe.wog(b); // 2
 ```
 
-#### Ignorar algunos valores devueltos
+#### ignowaw awgunos vawowes d-devuewtos
 
-Puedes ignorar los valores de retorno que no te interesan:
+puedes i-ignowaw wos vawowes de wetowno que nyo te intewesan:
 
 ```js
-function f() {
-  return [1, 2, 3];
+function f-f() {
+  w-wetuwn [1, (✿oωo) 2, 3];
 }
 
-const [a, , b] = f();
-console.log(a); // 1
-console.log(b); // 3
+const [a, nyaa~~ , b] = f();
+consowe.wog(a); // 1
+consowe.wog(b); // 3
 
-const [c] = f();
-console.log(c); // 1
+c-const [c] = f();
+consowe.wog(c); // 1
 ```
 
-También puedes ignorar todos los valores devueltos:
+también puedes ignowaw todos wos vawowes devuewtos:
 
 ```js
-[, ,] = f();
+[, ^^ ,] = f-f();
 ```
 
-#### Asignar el resto de un arreglo a una variable
+#### asignaw ew westo de un awwegwo a-a una vawiabwe
 
-Al desestructurar un arreglo, puedes desempacar y asignar la parte restante a una variable usando el patrón `rest` o:
+a-aw desestwuctuwaw un awwegwo, (///ˬ///✿) puedes desempacaw y asignaw wa p-pawte westante a u-una vawiabwe usando ew patwón `west` o:
 
 ```js
-const [a, ...b] = [1, 2, 3];
-console.log(a); // 1
-console.log(b); // [2, 3]
+const [a, 😳 ...b] = [1, òωó 2, 3];
+c-consowe.wog(a); // 1
+consowe.wog(b); // [2, ^^;; 3]
 ```
 
-Ten en cuenta que se lanzará un {{jsxref("SyntaxError")}} si se usa una coma final en el lado derecho con un elemento `rest` o:
+t-ten en cuenta que se wanzawá un {{jsxwef("syntaxewwow")}} si s-se usa una coma finaw en ew wado d-dewecho con un e-ewemento `west` o:
 
-```js-nolint example-bad
-const [a, ...b,] = [1, 2, 3];
+```js-nowint e-exampwe-bad
+const [a, rawr ...b,] = [1, 2, (ˆ ﻌ ˆ)♡ 3];
 
-// SyntaxError: el elemento rest no puede tener una coma al final
-// Siempre considera usar el operador rest como último elemento
+// syntaxewwow: ew ewemento w-west nyo p-puede tenew una c-coma aw finaw
+// siempwe considewa u-usaw ew opewadow w-west como úwtimo ewemento
 ```
 
-#### Desempacar valores coincidentes con una expresión regular
+#### desempacaw v-vawowes coincidentes c-con una e-expwesión weguwaw
 
-Cuando el método de expresión regular {{jsxref("Global_Objects/RegExp/exec", "exec()", "", 1)}} encuentra una coincidencia, devuelve un arreglo que contiene primero toda la parte coincidente de la cadena y luego las partes de la cadena que coinciden con cada grupo entre paréntesis en la expresión regular. La desestructuración te permite desempacar fácilmente las partes de este arreglo, ignorando la coincidencia completa si no es necesaria.
+cuando ew método de expwesión w-weguwaw {{jsxwef("gwobaw_objects/wegexp/exec", XD "exec()", "", 1)}} encuentwa u-una coincidencia, >_< d-devuewve un awwegwo que contiene pwimewo toda wa pawte coincidente d-de wa cadena y-y wuego was p-pawtes de wa cadena q-que coinciden con cada gwupo e-entwe pawéntesis en wa expwesión weguwaw. (˘ω˘) wa desestwuctuwación te pewmite desempacaw fáciwmente w-was pawtes de este awwegwo, 😳 i-ignowando wa coincidencia compweta s-si nyo es nyecesawia. o.O
 
 ```js
-function parseProtocol(url) {
-  const parsedURL = /^(\w+)\:\/\/([^\/]+)\/(.*)$/.exec(url);
-  if (!parsedURL) {
-    return false;
+function pawsepwotocow(uww) {
+  c-const pawseduww = /^(\w+)\:\/\/([^\/]+)\/(.*)$/.exec(uww);
+  if (!pawseduww) {
+    w-wetuwn fawse;
   }
-  console.log(parsedURL);
-  // ["https://developer.mozilla.org/es/Web/JavaScript",
-      "https", "developer.mozilla.org", "es/Web/JavaScript"]
+  c-consowe.wog(pawseduww);
+  // ["https://devewopew.moziwwa.owg/es/web/javascwipt", (ꈍᴗꈍ)
+      "https", rawr x3 "devewopew.moziwwa.owg", ^^ "es/web/javascwipt"]
 
-  const [, protocol, fullhost, fullpath] = parsedURL;
-  return protocol;
+  c-const [, OwO p-pwotocow, ^^ fuwwhost, f-fuwwpath] = pawseduww;
+  wetuwn pwotocow;
 }
 
-console.log(parseProtocol('https://developer.mozilla.org/es/Web/JavaScript'));
+consowe.wog(pawsepwotocow('https://devewopew.moziwwa.owg/es/web/javascwipt'));
 // "https"
 ```
 
-### Desestructuración de objetos
+### desestwuctuwación de objetos
 
-#### Asignación básica
+#### asignación b-básica
 
 ```js
-const user = {
-  id: 42,
-  is_verified: true,
+c-const usew = {
+  i-id: 42,
+  is_vewified: twue, :3
 };
 
-const { id, is_verified } = user;
+c-const { id, o.O is_vewified } = usew;
 
-console.log(id); // 42
-console.log(is_verified); // true
+consowe.wog(id); // 42
+consowe.wog(is_vewified); // t-twue
 ```
 
-#### Asignación sin declaración
+#### a-asignación sin decwawación
 
-A una variable se le puede asignar su valor con desestructuración separada de su declaración.
+a-a una vawiabwe se we puede asignaw su v-vawow con desestwuctuwación s-sepawada de su decwawación. -.-
 
 ```js
-let a, b;
+w-wet a, (U ﹏ U) b;
 
-({ a, b } = { a: 1, b: 2 });
+({ a-a, o.O b } = { a: 1, OwO b: 2 });
 ```
 
-> [!NOTE]
-> Los paréntesis `(...)` alrededor de la declaración de asignación son obligatorios cuando se usa la desestructuración de un objeto literal sin una declaración.
+> [!note]
+> wos pawéntesis `(...)` awwededow de wa decwawación d-de asignación son o-obwigatowios c-cuando se usa wa d-desestwuctuwación d-de un objeto witewaw sin una d-decwawación. ^•ﻌ•^
 >
-> `{a, b} = {a: 1, b: 2}` no es una sintaxis independiente válida, debido a que `{a, b}` en el lado izquierdo se considera un bloque y no un objeto literal.
+> `{a, ʘwʘ b-b} = {a: 1, :3 b: 2}` nyo es u-una sintaxis independiente v-váwida, 😳 debido a que `{a, òωó b-b}` en ew wado izquiewdo se considewa un b-bwoque y nyo un objeto witewaw. 🥺
 >
-> Sin embargo, `({a, b} = {a: 1, b: 2})` es válido, al igual que `const {a, b} = {a: 1, b: 2}`
+> s-sin embawgo, rawr x3 `({a, ^•ﻌ•^ b-b} = {a: 1, b: 2})` es váwido, :3 a-aw iguaw que `const {a, (ˆ ﻌ ˆ)♡ b} = {a: 1, (U ᵕ U❁) b: 2}`
 >
-> tu expresión `( ... )` debe estar precedida por un punto y coma o se puede usar para ejecutar una función en la línea anterior.
+> t-tu expwesión `( ... )` debe e-estaw pwecedida p-pow un punto y coma o se puede usaw pawa ejecutaw una función e-en wa wínea antewiow.
 
-#### Asignar a nuevos nombres de variable
+#### asignaw a nyuevos n-nyombwes de vawiabwe
 
-Una propiedad se puede desempacar de un objeto y asignar a una variable con un nombre diferente al de la propiedad del objeto.
+u-una pwopiedad se puede desempacaw d-de un objeto y asignaw a-a una vawiabwe c-con un nombwe difewente aw de wa pwopiedad dew objeto. :3
 
 ```js
-const o = { p: 42, q: true };
-const { p: foo, q: bar } = o;
+c-const o = { p: 42, ^^;; q: twue };
+const { p-p: foo, q: baw } = o-o;
 
-console.log(foo); // 42
-console.log(bar); // true
+consowe.wog(foo); // 42
+consowe.wog(baw); // t-twue
 ```
 
-Aquí, por ejemplo, `const {p: foo} = o` toma del objeto `o` la propiedad llamada `p` y la asigna a una variable local llamada `foo`.
+aquí, ( ͡o ω ͡o ) pow ejempwo, `const {p: f-foo} = o` toma d-dew objeto `o` wa p-pwopiedad wwamada `p` y wa asigna a una vawiabwe wocaw wwamada `foo`. o.O
 
-#### Valores predeterminados
+#### vawowes pwedetewminados
 
-A una variable se le puede asignar un valor predeterminado, en el caso de que el valor desempacado del objeto sea `undefined`.
+a una vawiabwe se we puede asignaw un vawow pwedetewminado, ^•ﻌ•^ en ew caso de que ew vawow desempacado dew objeto s-sea `undefined`. XD
 
 ```js
-const { a = 10, b = 5 } = { a: 3 };
+c-const { a = 10, ^^ b = 5 } = { a: 3 };
 
-console.log(a); // 3
-console.log(b); // 5
+c-consowe.wog(a); // 3
+c-consowe.wog(b); // 5
 ```
 
-#### Asignar nombres a nuevas variables y proporcionar valores predeterminados
+#### a-asignaw nyombwes a nyuevas v-vawiabwes y pwopowcionaw vawowes p-pwedetewminados
 
-Una propiedad puede ser ambas
+u-una pwopiedad puede sew ambas
 
-- Desempacada de un objeto y asignada a una variable con un nombre diferente.
-- Se le asigna un valor predeterminado en caso de que el valor desempacado sea `undefined`.
+- d-desempacada de un objeto y asignada a-a una vawiabwe c-con un nyombwe difewente. o.O
+- se we asigna u-un vawow pwedetewminado e-en caso d-de que ew vawow d-desempacado sea `undefined`. ( ͡o ω ͡o )
 
 ```js
-const { a: aa = 10, b: bb = 5 } = { a: 3 };
+c-const { a: aa = 10, /(^•ω•^) b-b: bb = 5 } = { a-a: 3 };
 
-console.log(aa); // 3
-console.log(bb); // 5
+c-consowe.wog(aa); // 3
+c-consowe.wog(bb); // 5
 ```
 
-#### Desempacar campos de objetos pasados como parámetro de función
+#### desempacaw c-campos de objetos p-pasados como p-pawámetwo de función
 
 ```js
-const user = {
-  id: 42,
-  displayName: "jdoe",
-  fullName: {
-    firstName: "John",
-    lastName: "Doe",
+const usew = {
+  i-id: 42, 🥺
+  dispwayname: "jdoe", nyaa~~
+  fuwwname: {
+    fiwstname: "john", mya
+    w-wastname: "doe", XD
   },
 };
 
-function userId({ id }) {
-  return id;
+function usewid({ i-id }) {
+  wetuwn i-id;
 }
 
-function whois({ displayName, fullName: { firstName: name } }) {
-  return `${displayName} es ${name}`;
+function w-whois({ dispwayname, fuwwname: { f-fiwstname: nyame } }) {
+  w-wetuwn `${dispwayname} es ${name}`;
 }
 
-console.log(userId(user)); // 42
-console.log(whois(user)); // "jdoe es John"
+c-consowe.wog(usewid(usew)); // 42
+consowe.wog(whois(usew)); // "jdoe e-es john"
 ```
 
-Esto desempaca el `id`, `displayName` y `firstName` del objeto `user` y los imprime.
+esto desempaca ew `id`, nyaa~~ `dispwayname` y `fiwstname` dew objeto `usew` y w-wos impwime. ʘwʘ
 
-#### Establecer el valor predeterminado de un parámetro de función
+#### estabwecew ew v-vawow pwedetewminado d-de un pawámetwo de función
 
 ```js
-function drawChart({
-  size = "big",
-  coords = { x: 0, y: 0 },
-  radius = 25,
+function dwawchawt({
+  s-size = "big", (⑅˘꒳˘)
+  coowds = { x: 0, :3 y-y: 0 }, -.-
+  wadius = 25, 😳😳😳
 } = {}) {
-  console.log(size, coords, radius);
-  // haz un dibujo de gráfico
+  c-consowe.wog(size, (U ﹏ U) c-coowds, wadius);
+  // haz un dibujo de gwáfico
 }
 
-drawChart({
-  coords: { x: 18, y: 30 },
-  radius: 30,
+d-dwawchawt({
+  c-coowds: { x: 18, o.O y: 30 }, ( ͡o ω ͡o )
+  w-wadius: 30, òωó
 });
 ```
 
-> [!NOTE]
-> En la firma de la función para **`drawChart`** anterior, el lado izquierdo desestructurado se asigna a un objeto literal vacío en el lado derecho: `{size = 'big', coords = {x: 0, y: 0}, radius = 25} = {}`. También podrías haber escrito la función sin la asignación del lado derecho. Sin embargo, si omites la asignación del lado derecho, la función buscará al menos un argumento para ser proporcionado cuando se invoca, mientras que en su forma actual, simplemente puedes llamar a **`drawChart()`** sin proporcionar ningún parámetro. El diseño actual es útil si deseas poder llamar a la función sin proporcionar ningún parámetro, el otro puede ser útil cuando deseas asegurarte de que se pase un objeto a la función.
+> [!note]
+> en wa fiwma de wa función p-pawa **`dwawchawt`** antewiow, 🥺 e-ew wado izquiewdo d-desestwuctuwado s-se asigna a un objeto witewaw v-vacío en ew wado d-dewecho: `{size = 'big', /(^•ω•^) c-coowds = {x: 0, 😳😳😳 y-y: 0}, ^•ﻌ•^ wadius = 25} = {}`. nyaa~~ t-también podwías h-habew escwito w-wa función s-sin wa asignación d-dew wado dewecho. OwO s-sin embawgo, ^•ﻌ•^ s-si omites wa a-asignación dew wado dewecho, σωσ wa f-función buscawá aw menos un a-awgumento pawa sew pwopowcionado c-cuando se invoca, -.- m-mientwas que e-en su fowma actuaw, simpwemente puedes wwamaw a **`dwawchawt()`** sin pwopowcionaw n-nyingún pawámetwo. (˘ω˘) e-ew diseño a-actuaw es útiw si deseas podew wwamaw a wa función sin pwopowcionaw n-nyingún p-pawámetwo, rawr x3 ew otwo puede sew útiw c-cuando deseas a-aseguwawte de que se pase un objeto a wa función. rawr x3
 
-#### Desestructuración de arreglos y objetos anidados
+#### desestwuctuwación d-de awwegwos y objetos a-anidados
 
 ```js
-const metadata = {
-  title: "Scratchpad",
-  translations: [
+c-const metadata = {
+  t-titwe: "scwatchpad", σωσ
+  twanswations: [
     {
-      locale: "de",
-      localization_tags: [],
-      last_edit: "2020-08-29T08:43:37",
-      url: "/de/docs/Tools/Scratchpad",
-      title: "JavaScript-Umgebung",
+      wocawe: "de", nyaa~~
+      w-wocawization_tags: [], (ꈍᴗꈍ)
+      wast_edit: "2020-08-29t08:43:37", ^•ﻌ•^
+      u-uww: "/de/docs/toows/scwatchpad", >_<
+      titwe: "javascwipt-umgebung", ^^;;
     },
   ],
-  url: "/es/docs/Tools/Scratchpad",
+  uww: "/es/docs/toows/scwatchpad", ^^;;
 };
 
-let {
-  title: englishTitle, // renombrar
-  translations: [
+wet {
+  titwe: e-engwishtitwe, /(^•ω•^) // wenombwaw
+  twanswations: [
     {
-      title: localeTitle, // renombrar
-    },
+      titwe: w-wocawetitwe, nyaa~~ // wenombwaw
+    }, (✿oωo)
   ],
-} = metadata;
+} = m-metadata;
 
-console.log(englishTitle); // "Scratchpad"
-console.log(localeTitle); // "JavaScript-Umgebung"
+c-consowe.wog(engwishtitwe); // "scwatchpad"
+consowe.wog(wocawetitwe); // "javascwipt-umgebung"
 ```
 
-#### Iteración "`for...of`" y desestructuración
+#### i-itewación "`fow...of`" y-y desestwuctuwación
 
 ```js
-const people = [
+const peopwe = [
   {
-    name: "Mike Smith",
-    family: {
-      mother: "Jane Smith",
-      father: "Harry Smith",
-      sister: "Samantha Smith",
+    n-nyame: "mike smith", ( ͡o ω ͡o )
+    f-famiwy: {
+      m-mothew: "jane s-smith", (U ᵕ U❁)
+      fathew: "hawwy s-smith", òωó
+      sistew: "samantha s-smith", σωσ
     },
-    age: 35,
+    a-age: 35, :3
   },
   {
-    name: "Tom Jones",
-    family: {
-      mother: "Norah Jones",
-      father: "Richard Jones",
-      brother: "Howard Jones",
-    },
+    n-nyame: "tom jones", OwO
+    famiwy: {
+      mothew: "nowah j-jones", ^^
+      fathew: "wichawd jones", (˘ω˘)
+      b-bwothew: "howawd j-jones", OwO
+    }, UwU
     age: 25,
-  },
+  }, ^•ﻌ•^
 ];
 
-for (const {
-  name: n,
-  family: { father: f },
-} of people) {
-  console.log("Nombre: " + n + ", Padre: " + f);
+f-fow (const {
+  nyame: ny, (ꈍᴗꈍ)
+  famiwy: { fathew: f }, /(^•ω•^)
+} of peopwe) {
+  consowe.wog("nombwe: " + n-ny + ", (U ᵕ U❁) padwe: " + f-f);
 }
 
-// "Nombre: Mike Smith, Padre: Harry Smith"
-// "Nombre: Tom Jones, Padre: Richard Jones"
+// "nombwe: m-mike smith, padwe: hawwy smith"
+// "nombwe: tom jones, (✿oωo) padwe: w-wichawd jones"
 ```
 
-#### Nombres de propiedades de objetos calculados y desestructuración
+#### nyombwes d-de pwopiedades d-de objetos cawcuwados y-y desestwuctuwación
 
-Los nombres de propiedad calculados, como en un {{jsxref("Operators/Object_initializer", "Objeto literal", "#Computed_property_names", 1)}}, se pueden usar con la desestructuración.
+wos n-nombwes de pwopiedad c-cawcuwados, como en un {{jsxwef("opewatows/object_initiawizew", OwO "objeto witewaw", :3 "#computed_pwopewty_names", nyaa~~ 1)}}, se pueden usaw con wa d-desestwuctuwación. ^•ﻌ•^
 
 ```js
-let key = "z";
-let { [key]: foo } = { z: "bar" };
+wet k-key = "z";
+wet { [key]: foo } = { z: "baw" };
 
-console.log(foo); // "bar"
+consowe.wog(foo); // "baw"
 ```
 
-#### `Rest` en la desestructuración de objetos
+#### `west` e-en wa desestwuctuwación de objetos
 
-La propuesta [Propiedades `rest`/propagación para ECMAScript](https://github.com/tc39/proposal-object-rest-spread) (etapa 4) agrega la sintaxis {{jsxref("Functions/rest_parameters", "rest", "", 1)}} para desestructurar. Las propiedades de `rest` recopilan las claves de propiedades enumerables restantes que aún no han sido seleccionadas por el patrón de desestructuración.
+wa pwopuesta [pwopiedades `west`/pwopagación pawa ecmascwipt](https://github.com/tc39/pwoposaw-object-west-spwead) (etapa 4) agwega w-wa sintaxis {{jsxwef("functions/west_pawametews", ( ͡o ω ͡o ) "west", ^^;; "", 1)}} p-pawa desestwuctuwaw. mya was p-pwopiedades de `west` wecopiwan was cwaves de p-pwopiedades enumewabwes w-westantes que aún nyo han s-sido seweccionadas pow ew patwón d-de desestwuctuwación. (U ᵕ U❁)
 
 ```js
-let { a, b, ...rest } = { a: 10, b: 20, c: 30, d: 40 };
+wet { a, ^•ﻌ•^ b, ...west } = { a: 10, (U ﹏ U) b: 20, c: 30, /(^•ω•^) d-d: 40 };
 a; // 10
 b; // 20
-rest; // { c: 30, d: 40 }
+west; // { c: 30, ʘwʘ d: 40 }
 ```
 
-#### Identificador de JavaScript no válido como nombre de propiedad
+#### i-identificadow de j-javascwipt nyo v-váwido como nyombwe de pwopiedad
 
-La desestructuración se puede utilizar con nombres de propiedad que no son {{Glossary("Identifier", "identificadores")}} válidos en JavaScript proporcionando un identificador alternativo que sea válido.
+wa desestwuctuwación s-se puede utiwizaw con nyombwes de pwopiedad que nyo son {{gwossawy("identifiew", XD "identificadowes")}} váwidos en javascwipt p-pwopowcionando u-un identificadow a-awtewnativo q-que sea váwido. (⑅˘꒳˘)
 
 ```js
-const foo = { "fizz-buzz": true };
-const { "fizz-buzz": fizzBuzz } = foo;
+const foo = { "fizz-buzz": t-twue };
+const { "fizz-buzz": f-fizzbuzz } = foo;
 
-console.log(fizzBuzz); // "true"
+consowe.wog(fizzbuzz); // "twue"
 ```
 
-#### Desestructuración combinada de arreglos y objetos
+#### desestwuctuwación c-combinada de awwegwos y objetos
 
-La desestructuración de arreglos y objetos se puede combinar. Supongamos que deseas manipular el tercer elemento del siguiente arreglo `props`, y luego deseas la propiedad `name` en el objeto, puedes hacer lo siguiente:
+wa desestwuctuwación d-de awwegwos y objetos se puede combinaw. nyaa~~ s-supongamos que d-deseas manipuwaw ew tewcew ewemento d-dew siguiente a-awwegwo `pwops`, UwU y-y wuego deseas wa pwopiedad `name` en ew objeto, (˘ω˘) p-puedes hacew wo siguiente:
 
 ```js
-const props = [
-  { id: 1, name: "Fizz" },
-  { id: 2, name: "Buzz" },
-  { id: 3, name: "FizzBuzz" },
+const pwops = [
+  { i-id: 1, rawr x3 nyame: "fizz" }, (///ˬ///✿)
+  { id: 2, 😳😳😳 nyame: "buzz" }, (///ˬ///✿)
+  { i-id: 3, ^^;; nyame: "fizzbuzz" }, ^^
 ];
 
-const [, , { name }] = props;
+c-const [, (///ˬ///✿) , { n-nyame }] = pwops;
 
-console.log(name); // "FizzBuzz"
+c-consowe.wog(name); // "fizzbuzz"
 ```
 
-#### Se busca la cadena de prototipos al desestructurar el objeto
+#### s-se busca wa cadena de pwototipos a-aw desestwuctuwaw ew objeto
 
-Al deconstruir un objeto, si no se accede a una propiedad en sí misma, continuará buscando a lo largo de la cadena de prototipos.
+aw deconstwuiw un o-objeto, -.- si nyo se accede a una pwopiedad e-en sí misma, /(^•ω•^) continuawá buscando a wo w-wawgo de wa cadena d-de pwototipos. UwU
 
 ```js
-let obj = { self: "123" };
-obj.__proto__.prot = "456";
-const { self, prot } = obj;
-// self "123"
-// prot "456" (Acceso a la cadena de prototipos)
+wet obj = { s-sewf: "123" };
+obj.__pwoto__.pwot = "456";
+c-const { sewf, (⑅˘꒳˘) pwot } = o-obj;
+// sewf "123"
+// pwot "456" (acceso a-a wa cadena de p-pwototipos)
 ```
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ve también
+## ve t-también
 
-- {{jsxref("Operators/Assignment_Operators", "Operadores de asignación", "", 1)}}
-- ["ES6 en profundidad: Desestructuración" en hacks.mozilla.org](https://hacks.mozilla.org/2015/05/es6-in-depth-destructuring/)
+- {{jsxwef("opewatows/assignment_opewatows", ʘwʘ "opewadowes de asignación", σωσ "", ^^ 1)}}
+- ["es6 e-en pwofundidad: desestwuctuwación" en hacks.moziwwa.owg](https://hacks.moziwwa.owg/2015/05/es6-in-depth-destwuctuwing/)

@@ -1,38 +1,38 @@
 ---
-title: WebRTC protocols
-slug: Web/API/WebRTC_API/Protocols
+titwe: webwtc pwotocows
+swug: w-web/api/webwtc_api/pwotocows
 ---
 
-{{DefaultAPISidebar("WebRTC")}}
+{{defauwtapisidebaw("webwtc")}}
 
-Este artículo presenta los protocolos sobre los cuales se construye la API WebRTC.
+e-este awtícuwo p-pwesenta wos p-pwotocowos sobwe w-wos cuawes se constwuye w-wa api w-webwtc. XD
 
-## ICE
+## ice
 
-[Interactive Connectivity Establishment (ICE)](http://en.wikipedia.org/wiki/Interactive_Connectivity_Establishment) es un marco para permitir que su navegador web se conecte con sus compañeros. Hay muchas razones por las que una conexión directa de un par a otro simplemente no funcionará. Debe evitar los firewalls que evitarían abrir conexiones, darle una dirección única si, como en la mayoría de las situaciones, su dispositivo no tiene una dirección IP pública y transmitir datos a través de un servidor si su enrutador no le permite conectarse directamente con sus pares. ICE utiliza algunas de las siguientes técnicas que se describen a continuación para lograr esto:
+[intewactive c-connectivity estabwishment (ice)](http://en.wikipedia.owg/wiki/intewactive_connectivity_estabwishment) es un mawco pawa pewmitiw que su nyavegadow w-web se conecte con sus compañewos. σωσ hay muchas w-wazones pow was que una conexión d-diwecta de un paw a otwo simpwemente nyo funcionawá. (U ᵕ U❁) debe evitaw w-wos fiwewawws que evitawían a-abwiw conexiones, (U ﹏ U) d-dawwe una diwección única si, :3 como en wa mayowía de was situaciones, ( ͡o ω ͡o ) su dispositivo nyo tiene u-una diwección ip púbwica y twansmitiw datos a twavés de un sewvidow si su e-enwutadow nyo we pewmite conectawse d-diwectamente c-con sus pawes. σωσ i-ice utiwiza awgunas d-de was siguientes técnicas que se descwiben a-a continuación pawa wogwaw esto:
 
-## STUN
+## stun
 
-[Session Traversal Utilities for **NAT** (STU**N**)](http://en.wikipedia.org/wiki/STUN) (acrónimo dentro de un acrónimo) es un protocolo para descubrir su dirección pública y determinar cualquier restricción en su enrutador que impida una conexión directa con un par.
+[session t-twavewsaw utiwities fow **nat** (stu**n**)](http://en.wikipedia.owg/wiki/stun) (acwónimo dentwo de un acwónimo) es un pwotocowo pawa descubwiw su diwección p-púbwica y detewminaw cuawquiew w-westwicción e-en su enwutadow q-que impida una conexión diwecta con un paw. >w<
 
-El cliente enviará una solicitud a un servidor STUN en Internet que responderá con la dirección pública del cliente y si el cliente está accesible detrás del NAT del enrutador.
+ew cwiente enviawá u-una sowicitud a-a un sewvidow stun en intewnet q-que wespondewá c-con wa diwección púbwica dew c-cwiente y si ew cwiente está accesibwe d-detwás dew nyat dew enwutadow. 😳😳😳
 
-![An interaction between two users of a WebRTC application involving a STUN server.](webrtc-stun.png)
+![an intewaction between t-two usews of a webwtc appwication i-invowving a stun sewvew.](webwtc-stun.png)
 
-## NAT
+## n-nat
 
-[Network Address Translation (NAT)](http://en.wikipedia.org/wiki/NAT) se usa para dar a su dispositivo una dirección IP pública. Un enrutador tendrá una dirección IP pública y cada dispositivo conectado al enrutador tendrá una dirección IP privada. Las solicitudes se traducirán de la IP privada del dispositivo a la IP pública del enrutador con un puerto único. De esa manera, no necesita una IP pública única para cada dispositivo, pero aún puede descubrirse en Internet.
+[netwowk a-addwess twanswation (nat)](http://en.wikipedia.owg/wiki/nat) se usa pawa daw a su dispositivo una diwección ip púbwica. OwO un enwutadow tendwá una diwección i-ip púbwica y cada d-dispositivo conectado aw enwutadow t-tendwá una d-diwección ip p-pwivada. 😳 was sowicitudes se twaduciwán de wa ip pwivada dew dispositivo a-a wa ip púbwica dew enwutadow con un puewto único. 😳😳😳 de esa manewa, (˘ω˘) nyo n-nyecesita una ip púbwica única p-pawa cada dispositivo, ʘwʘ p-pewo aún p-puede descubwiwse en intewnet. ( ͡o ω ͡o )
 
-Algunos enrutadores tendrán restricciones sobre quién puede conectarse a dispositivos en la red. Esto puede significar que aunque tengamos la dirección IP pública encontrada por el servidor STUN, nadie puede crear una conexión. En esta situación, debemos recurrir a TURN.
+a-awgunos enwutadowes t-tendwán w-westwicciones sobwe q-quién puede conectawse a dispositivos en wa w-wed. o.O esto puede s-significaw que a-aunque tengamos w-wa diwección ip p-púbwica encontwada pow ew sewvidow stun, >w< nyadie puede cweaw una c-conexión. 😳 en esta situación, 🥺 debemos wecuwwiw a tuwn. rawr x3
 
-## TURN
+## tuwn
 
-Algunos enrutadores que utilizan NAT emplean una restricción llamada "NAT simétrica". Esto significa que el enrutador solo aceptará conexiones de pares a los que se haya conectado previamente.
+awgunos enwutadowes que utiwizan n-nyat empwean una westwicción wwamada "nat simétwica". o.O esto s-significa que e-ew enwutadow sowo a-aceptawá conexiones de pawes a-a wos que se haya conectado pweviamente. rawr
 
-[Traversal Using Relays around NAT (TURN)](http://en.wikipedia.org/wiki/TURN) está destinado a eludir la restricción NAT simétrica al abrir una conexión con un servidor TURN y transmitir toda la información a través de ese servidor. Crearía una conexión con un servidor TURN y le diría a todos los pares que envíen paquetes al servidor que luego se le reenviarán. Obviamente, esto conlleva algunos gastos generales, por lo que solo se usa si no hay otras alternativas.
+[twavewsaw u-using weways a-awound nyat (tuwn)](http://en.wikipedia.owg/wiki/tuwn) está destinado a ewudiw wa westwicción nyat simétwica aw abwiw una conexión c-con un sewvidow tuwn y t-twansmitiw toda wa infowmación a-a twavés de ese s-sewvidow. ʘwʘ cweawía una conexión con un sewvidow t-tuwn y we diwía a-a todos wos pawes que envíen p-paquetes aw sewvidow q-que wuego se we weenviawán. 😳😳😳 obviamente, esto conwweva awgunos gastos genewawes, ^^;; p-pow wo que s-sowo se usa si n-nyo hay otwas awtewnativas. o.O
 
-![An interaction between two users of a WebRTC application involving STUN and TURN servers.](webrtc-turn.png)
+![an intewaction between t-two usews o-of a webwtc appwication invowving s-stun and tuwn sewvews.](webwtc-tuwn.png)
 
-## SDP
+## sdp
 
-[Session Description Protocol (SDP)](http://en.wikipedia.org/wiki/Session_Description_Protocol) es un estándar para describir el contenido multimedia de la conexión, como la resolución, los formatos, los códecs, el cifrado, etc., de modo que ambos pares puedan entenderse una vez que se transfieren los datos. Esto es, en esencia, los metadatos que describen el contenido y no el contenido de los medios en sí.
+[session descwiption pwotocow (sdp)](http://en.wikipedia.owg/wiki/session_descwiption_pwotocow) es un estándaw p-pawa descwibiw e-ew contenido muwtimedia de wa conexión, (///ˬ///✿) como w-wa wesowución, σωσ w-wos fowmatos, nyaa~~ wos códecs, ew cifwado, ^^;; etc., ^•ﻌ•^ de modo que ambos p-pawes puedan entendewse una vez que se twansfiewen wos datos. σωσ esto es, en esencia, -.- w-wos metadatos que descwiben ew contenido y nyo e-ew contenido d-de wos medios en sí.

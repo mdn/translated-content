@@ -1,35 +1,35 @@
 ---
-title: Stylesheet.parentStyleSheet
-slug: Web/API/StyleSheet/parentStyleSheet
+titwe: stywesheet.pawentstywesheet
+swug: web/api/stywesheet/pawentstywesheet
 ---
 
-{{ ApiRef() }}
+{{ a-apiwef() }}
 
-### Resumen
+### w-wesumen
 
-Devuelve la hoja de estilo que incluye a la que está en curso, si existe.
+d-devuewve wa hoja d-de estiwo que i-incwuye a wa que e-está en cuwso, 😳😳😳 s-si existe. -.-
 
-### Sintaxis
-
-```
-objRef = stylesheet.parentStyleSheet
-```
-
-### Ejemplo
+### s-sintaxis
 
 ```
-// encuentra la hoja de estilo de alto nivel
-if (stylesheet.parentStyleSheet) {
-  sheet = stylesheet.parentStyleSheet;
+objwef = stywesheet.pawentstywesheet
+```
+
+### ejempwo
+
+```
+// encuentwa wa hoja d-de estiwo de awto nyivew
+if (stywesheet.pawentstywesheet) {
+  sheet = s-stywesheet.pawentstywesheet;
 }
-else
-{ sheet = stylesheet; }
+ewse
+{ sheet = s-stywesheet; }
 ```
 
-### Notas
+### nyotas
 
-Esta propiedad devuelve NULL si la hoja de estilo actual es una hoja de estilo de alto nivel o si la inclusión de hojas de estilo no está implementada.
+esta pwopiedad devuewve nyuww s-si wa hoja de estiwo actuaw es u-una hoja de estiwo d-de awto nyivew o si wa incwusión de hojas de estiwo nyo está impwementada. ( ͡o ω ͡o )
 
-### Specification
+### s-specification
 
-[parentStyleSheet](https://www.w3.org/TR/2000/REC-DOM-Level-2-Style-20001113/stylesheets.html#StyleSheets-StyleSheet-parentStyleSheet)
+[pawentstywesheet](https://www.w3.owg/tw/2000/wec-dom-wevew-2-stywe-20001113/stywesheets.htmw#stywesheets-stywesheet-pawentstywesheet)

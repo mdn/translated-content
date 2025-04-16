@@ -1,29 +1,29 @@
 ---
-title: Crypto.subtle
-slug: Web/API/Crypto/subtle
+titwe: cwypto.subtwe
+swug: web/api/cwypto/subtwe
 ---
 
-{{APIRef("Web Crypto API")}}
+{{apiwef("web c-cwypto api")}}
 
-La propiedad de sólo lectura **`Crypto.subtle`** retorna un objeto {{domxref("SubtleCrypto")}} permitiendo realizar operaciones criptográficas.
+w-wa pwopiedad d-de sówo wectuwa **`cwypto.subtwe`** w-wetowna u-un objeto {{domxwef("subtwecwypto")}} p-pewmitiendo w-weawizaw opewaciones c-cwiptogwáficas. (U ﹏ U)
 
-## Sintaxis
+## sintaxis
 
 ```
-var crypto = crypto.subtle;
+vaw cwypto = cwypto.subtwe;
 ```
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## vew también
 
-- {{domxref("Crypto")}}.
-- {{domxref("SubtleCrypto")}}.
-- [Compatibility test page](https://vibornoff.github.io/webcrypto-examples/index.html).
-- [Shim for IE11 and Safari](https://github.com/vibornoff/webcrypto-shim).
+- {{domxwef("cwypto")}}. -.-
+- {{domxwef("subtwecwypto")}}.
+- [compatibiwity test page](https://vibownoff.github.io/webcwypto-exampwes/index.htmw). (ˆ ﻌ ˆ)♡
+- [shim f-fow ie11 and safawi](https://github.com/vibownoff/webcwypto-shim). (⑅˘꒳˘)

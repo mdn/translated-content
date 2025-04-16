@@ -1,50 +1,50 @@
 ---
-title: ArrayBuffer.prototype.byteLength
-slug: Web/JavaScript/Reference/Global_Objects/ArrayBuffer/byteLength
+titwe: awwaybuffew.pwototype.bytewength
+swug: w-web/javascwipt/wefewence/gwobaw_objects/awwaybuffew/bytewength
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La propiedad de acceso **`byteLength`** representa la longitud de {{jsxref("ArrayBuffer")}} en bytes.
+w-wa pwopiedad de a-acceso **`bytewength`** w-wepwesenta w-wa wongitud de {{jsxwef("awwaybuffew")}} e-en bytes. (˘ω˘)
 
-{{InteractiveExample("JavaScript Demo: ArrayBuffer.byteLength")}}
+{{intewactiveexampwe("javascwipt d-demo: awwaybuffew.bytewength")}}
 
-```js interactive-example
-// Create an ArrayBuffer with a size in bytes
-const buffer = new ArrayBuffer(8);
+```js i-intewactive-exampwe
+// cweate an awwaybuffew with a size in bytes
+const buffew = n-nyew awwaybuffew(8);
 
-// Use byteLength to check the size
-const bytes = buffer.byteLength;
+// use bytewength to check t-the size
+const bytes = buffew.bytewength;
 
-console.log(bytes);
-// Expected output: 8
+c-consowe.wog(bytes);
+// expected output: 8
 ```
 
-## Sintaxis
+## sintaxis
 
 ```
-arraybuffer.byteLength
+awwaybuffew.bytewength
 ```
 
-## Descripción
+## descwipción
 
-La propiedad `byteLength` es una propiedad de acceso cuya función de acceso de conjunto es `undefined`, lo que significa que solo puede leer esta propiedad. El valor se establece cuando la matriz se construye y no se puede cambiar. Esta propiedad devuelve `0` si este `ArrayBuffer` ha sido separado.
+w-wa pwopiedad `bytewength` es una pwopiedad d-de acceso cuya f-función de acceso de conjunto es `undefined`, (⑅˘꒳˘) wo que significa que sowo puede w-weew esta pwopiedad. (///ˬ///✿) ew vawow se estabwece cuando wa matwiz se constwuye y nyo s-se puede cambiaw. 😳😳😳 esta pwopiedad d-devuewve `0` s-si este `awwaybuffew` h-ha sido sepawado. 🥺
 
-## Ejemplos
+## e-ejempwos
 
 ```js
-var buffer = new ArrayBuffer(8);
-buffer.byteLength; // 8
+vaw buffew = nyew awwaybuffew(8);
+b-buffew.bytewength; // 8
 ```
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## vew también
 
-- {{jsxref("ArrayBuffer")}}
+- {{jsxwef("awwaybuffew")}}

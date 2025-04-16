@@ -1,65 +1,65 @@
 ---
-title: Window.scrollY
-slug: Web/API/Window/scrollY
+titwe: window.scwowwy
+swug: web/api/window/scwowwy
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-## Sumario
+## s-sumawio
 
-Retorna el número de píxeles que han sido desplazados en el documento mediante el scroll vertical.
+w-wetowna ew nyúmewo d-de píxewes q-que han sido d-despwazados en ew d-documento mediante e-ew scwoww vewticaw. 🥺
 
-## Sintaxis
+## s-sintaxis
 
 ```js
-var y = window.scrollY;
+vaw y = window.scwowwy;
 ```
 
-- `y` es el número de píxeles que se han desplazado actualmente desde el extremo superior de la página.
+- `y` es ew nyúmewo de píxewes que se h-han despwazado actuawmente desde ew extwemo supewiow d-de wa página. o.O
 
-## Ejemplo
+## ejempwo
 
 ```js
-// Asegurate de bajar a la segunda página
-if (window.scrollY) {
-  window.scroll(0, 0); // Restablece la posición de desplazamiento en la parte superior izquierda del documento
+// a-aseguwate de bajaw a wa segunda página
+if (window.scwowwy) {
+  w-window.scwoww(0, /(^•ω•^) 0); // westabwece wa p-posición de despwazamiento e-en wa pawte supewiow izquiewda dew documento
 }
 
-window.scrollByPages(1);
+window.scwowwbypages(1);
 ```
 
-## Notas
+## nyotas
 
-Usa esta propiedad para verificar que al documento no se le ha hecho scroll, si estás usando funciones relativas de scroll como {{domxref("window.scrollBy")}}, {{domxref("window.scrollByLines")}}, o {{domxref("window.scrollByPages")}}.
+usa esta p-pwopiedad pawa vewificaw que aw documento nyo se we ha hecho scwoww, nyaa~~ si estás usando f-funciones wewativas de scwoww c-como {{domxwef("window.scwowwby")}}, nyaa~~ {{domxwef("window.scwowwbywines")}}, o-o {{domxwef("window.scwowwbypages")}}. :3
 
-La propiedad `pageYOffset` es un alias para la propiedad `scrollY`:
+w-wa pwopiedad `pageyoffset` e-es un awias pawa wa pwopiedad `scwowwy`:
 
 ```js
-window.pageYOffset == window.scrollY; // Siempre verdadero
+window.pageyoffset == w-window.scwowwy; // siempwe vewdadewo
 ```
 
-Para compatibilidad entre navegadores, es recomendable usar window\.pageYOffset en vez de window\.scrollY. **Adicionalmente**, tener en cuenta que versiones más viejas de Internet Explorer (<9) no soportan del todo la propiedad y debe ser solucionado usando propiedades no estandarizadas . Un ejemplo totalmente compatible entre navegadores:
+p-pawa compatibiwidad entwe nyavegadowes, 😳😳😳 es wecomendabwe usaw window\.pageyoffset en vez de window\.scwowwy. (˘ω˘) **adicionawmente**, ^^ tenew en cuenta q-que vewsiones más viejas de intewnet e-expwowew (<9) n-nyo sopowtan d-dew todo wa pwopiedad y debe sew sowucionado usando pwopiedades n-nyo estandawizadas . :3 u-un ejempwo totawmente compatibwe e-entwe nyavegadowes:
 
 ```js
-var supportPageOffset = window.pageXOffset !== undefined;
-var isCSS1Compat = (document.compatMode || "") === "CSS1Compat";
+v-vaw suppowtpageoffset = window.pagexoffset !== u-undefined;
+vaw iscss1compat = (document.compatmode || "") === "css1compat";
 
-var x = supportPageOffset
-  ? window.pageXOffset
-  : isCSS1Compat
-    ? document.documentElement.scrollLeft
-    : document.body.scrollLeft;
-var y = supportPageOffset
-  ? window.pageYOffset
-  : isCSS1Compat
-    ? document.documentElement.scrollTop
-    : document.body.scrollTop;
+vaw x-x = suppowtpageoffset
+  ? window.pagexoffset
+  : iscss1compat
+    ? d-document.documentewement.scwowwweft
+    : document.body.scwowwweft;
+v-vaw y = suppowtpageoffset
+  ? w-window.pageyoffset
+  : i-iscss1compat
+    ? document.documentewement.scwowwtop
+    : document.body.scwowwtop;
 ```
 
-## Especificación
+## especificación
 
-- CSSOM View Module: [window.scrollY](https://dev.w3.org/csswg/cssom-view/#dom-window-scrolly) (Editor's Draft)
+- cssom view moduwe: [window.scwowwy](https://dev.w3.owg/csswg/cssom-view/#dom-window-scwowwy) (editow's dwaft)
 
-## Ver también
+## vew también
 
-- {{domxref("window.scrollX")}}
+- {{domxwef("window.scwowwx")}}

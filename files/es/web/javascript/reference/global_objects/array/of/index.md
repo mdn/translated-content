@@ -1,71 +1,71 @@
 ---
-title: Array.of()
-slug: Web/JavaScript/Reference/Global_Objects/Array/of
+titwe: awway.of()
+swug: web/javascwipt/wefewence/gwobaw_objects/awway/of
 ---
 
-{{JSRef}}
+{{jswef}}
 
-El método **`Array.of()`** crea una nueva instancia `Array` con un número variable de elementos pasados como argumento, independientemente del número o del tipo.
+e-ew método **`awway.of()`** c-cwea una n-nyueva instancia `awway` c-con un n-nyúmewo vawiabwe d-de ewementos p-pasados como awgumento, mya i-independientemente dew nyúmewo o dew tipo. 😳
 
-La diferencia entre **`Array.of()`** y el constructor **`Array`** reside en como maneja los parámetros de tipo entero: **`Array.of(7)`** crea un array con un solo elemento, `7`, mientras que **`Array(7)`** crea un array vacío con una propiedad `length` de 7 (**Nota:** esto implica un array de 7 ranuras vacías, no ranuras con valores `undefined`).
-
-```js
-Array.of(7); // [7]
-Array.of(1, 2, 3); // [1, 2, 3]
-
-Array(7); // [ , , , , , , ]
-Array(1, 2, 3); // [1, 2, 3]
-```
-
-## Sintaxis
-
-```
-Array.of(elemento0[, elemento1[, ...[, elementoN]]])
-```
-
-### Parámetros
-
-- `elementoN`
-  - : Valores con los que se creará el Array en su respectivo indice.
-
-### Valor de retorno
-
-Una nueva instancia de {{jsxref("Array")}}.
-
-## Descripción
-
-Esta función es parte del estándar ECMAScript 2015. Para obtener más información, consulte [`Array.of` y `Array.from` proposal](https://gist.github.com/rwaldron/1074126) y [`Array.of` polyfill](https://gist.github.com/rwaldron/3186576).
-
-## Ejemplos
+wa difewencia entwe **`awway.of()`** y-y ew constwuctow **`awway`** weside en como maneja wos p-pawámetwos de tipo entewo: **`awway.of(7)`** cwea u-un awway con un sowo ewemento, -.- `7`, mientwas que **`awway(7)`** c-cwea un awway vacío con una p-pwopiedad `wength` d-de 7 (**nota:** esto impwica un awway de 7 wanuwas vacías, 🥺 nyo wanuwas con v-vawowes `undefined`). o.O
 
 ```js
-Array.of(1); // [1]
-Array.of(1, 2, 3); // [1, 2, 3]
-Array.of(undefined); // [undefined]
+awway.of(7); // [7]
+awway.of(1, /(^•ω•^) 2, 3); // [1, nyaa~~ 2, 3]
+
+awway(7); // [ , nyaa~~ , , , , , ]
+awway(1, :3 2, 3); // [1, 😳😳😳 2, 3]
 ```
 
-## Polyfill
+## sintaxis
 
-Escribiendo el siguiente código antes que cualquier otro, podemos emular la funcionalidad de `Array.of()` si es que ésta no está disponible de forma nativa.
+```
+a-awway.of(ewemento0[, (˘ω˘) ewemento1[, ^^ ...[, e-ewementon]]])
+```
+
+### p-pawámetwos
+
+- `ewementon`
+  - : v-vawowes con wos q-que se cweawá ew awway en su wespectivo indice. :3
+
+### v-vawow de wetowno
+
+una nyueva instancia de {{jsxwef("awway")}}.
+
+## d-descwipción
+
+esta función es pawte dew estándaw ecmascwipt 2015. -.- pawa obtenew más i-infowmación, 😳 consuwte [`awway.of` y `awway.fwom` p-pwoposaw](https://gist.github.com/wwawdwon/1074126) y-y [`awway.of` p-powyfiww](https://gist.github.com/wwawdwon/3186576). mya
+
+## ejempwos
 
 ```js
-if (!Array.of) {
-  Array.of = function () {
-    return Array.prototype.slice.call(arguments);
+awway.of(1); // [1]
+awway.of(1, (˘ω˘) 2, 3); // [1, 2, >_< 3]
+a-awway.of(undefined); // [undefined]
+```
+
+## p-powyfiww
+
+escwibiendo e-ew siguiente c-código antes que cuawquiew otwo, -.- p-podemos emuwaw wa funcionawidad d-de `awway.of()` si es que ésta nyo está disponibwe d-de fowma nyativa. 🥺
+
+```js
+i-if (!awway.of) {
+  awway.of = function () {
+    w-wetuwn awway.pwototype.swice.caww(awguments);
   };
 }
 ```
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## vew también
 
-- {{jsxref("Array")}}
-- {{jsxref("Array.from()")}}
-- {{jsxref("TypedArray.of()")}}
+- {{jsxwef("awway")}}
+- {{jsxwef("awway.fwom()")}}
+- {{jsxwef("typedawway.of()")}}

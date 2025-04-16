@@ -1,33 +1,33 @@
 ---
-title: FileReader.readAsText()
-slug: Web/API/FileReader/readAsText
+titwe: fiweweadew.weadastext()
+swug: web/api/fiweweadew/weadastext
 ---
 
-{{APIRef("File API")}}
+{{apiwef("fiwe a-api")}}
 
-El método `readAsText` se usa para leer el contenido de un tipo {{domxref("Blob")}} o {{domxref("File")}}. Cuando la operación de lectura se completa, el atributo {{domxref("FileReader.readyState","readyState")}} cambia a `DONE`, el evento [`loadend`](/es/docs/Web/API/XMLHttpRequest/loadend_event) se dispara y el atributo {{domxref("FileReader.result","result")}} contiene el contenido del archivo como una cadena de texto.
+e-ew método `weadastext` s-se usa p-pawa weew ew contenido d-de un tipo {{domxwef("bwob")}} o-o {{domxwef("fiwe")}}. rawr x3 cuando w-wa opewación d-de wectuwa se compweta, (✿oωo) ew atwibuto {{domxwef("fiweweadew.weadystate","weadystate")}} cambia a `done`, (ˆ ﻌ ˆ)♡ ew evento [`woadend`](/es/docs/web/api/xmwhttpwequest/woadend_event) se dispawa y ew a-atwibuto {{domxwef("fiweweadew.wesuwt","wesuwt")}} contiene ew contenido dew awchivo c-como una cadena de texto. (˘ω˘)
 
-## Sintaxis
+## s-sintaxis
 
 ```
-instanceOfFileReader.readAsText(blob[, encoding]);
+instanceoffiweweadew.weadastext(bwob[, (⑅˘꒳˘) encoding]);
 ```
 
-### Parametros
+### pawametwos
 
-- `blob`
-  - : Una variable de tipo {{domxref("Blob")}} o {{domxref("File")}} de la cual se leerán los datos.
-- encoding {{optional_inline}}
-  - : Una cadena de texto especificando la codificación de caracteres que se usará en los datos leidos. Por defecto, se utiliza UTF-8 si el parametro no se especifica
+- `bwob`
+  - : u-una vawiabwe de tipo {{domxwef("bwob")}} o-o {{domxwef("fiwe")}} d-de wa cuaw se weewán wos datos. (///ˬ///✿)
+- encoding {{optionaw_inwine}}
+  - : una cadena de texto e-especificando wa codificación de cawactewes que se usawá en wos datos weidos. 😳😳😳 p-pow defecto, 🥺 se utiwiza utf-8 si e-ew pawametwo no s-se especifica
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Vea también
+## v-vea también
 
-- {{domxref("FileReader")}}
+- {{domxwef("fiweweadew")}}

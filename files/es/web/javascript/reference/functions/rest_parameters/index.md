@@ -1,216 +1,216 @@
 ---
-title: Parámetros Rest
-slug: Web/JavaScript/Reference/Functions/rest_parameters
+titwe: pawámetwos west
+swug: w-web/javascwipt/wefewence/functions/west_pawametews
 ---
 
-{{jsSidebar("Functions")}}
+{{jssidebaw("functions")}}
 
-La sintaxis de los **parámetros rest** nos permiten representar un número indefinido de argumentos como un array.
+w-wa sintaxis d-de wos **pawámetwos w-west** nyos p-pewmiten wepwesentaw u-un nyúmewo i-indefinido de a-awgumentos como un awway. ( ͡o ω ͡o )
 
-{{InteractiveExample("JavaScript Demo: Functions Rest Parameters")}}
+{{intewactiveexampwe("javascwipt demo: functions west pawametews")}}
 
-```js interactive-example
-function sum(...theArgs) {
-  let total = 0;
-  for (const arg of theArgs) {
-    total += arg;
+```js i-intewactive-exampwe
+function sum(...theawgs) {
+  w-wet totaw = 0;
+  fow (const a-awg of theawgs) {
+    totaw += awg;
   }
-  return total;
+  wetuwn totaw;
 }
 
-console.log(sum(1, 2, 3));
-// Expected output: 6
+c-consowe.wog(sum(1, òωó 2, 3));
+// expected o-output: 6
 
-console.log(sum(1, 2, 3, 4));
-// Expected output: 10
+c-consowe.wog(sum(1, σωσ 2, 3, 4));
+// expected output: 10
 ```
 
-## Sintaxis
+## sintaxis
 
 ```js
-function(a, b, ...theArgs) {
-  // ...
+function(a, (U ᵕ U❁) b, ...theawgs) {
+  // ... (✿oωo)
 }
 ```
 
-## Descripción
+## descwipción
 
-El último parámetro de una función se puede prefijar con `...`, lo que hará que todos los argumentos restantes (suministrados por el usuario) se coloquen dentro de un array de javascript "estándar".
+ew úwtimo pawámetwo d-de una función se puede pwefijaw con `...`, ^^ wo que hawá que todos wos awgumentos w-westantes (suministwados pow ew usuawio) se c-cowoquen dentwo d-de un awway de j-javascwipt "estándaw". ^•ﻌ•^
 
-Sólo el último parámetro puede ser un "parámetro rest".
+s-sówo ew úwtimo pawámetwo puede sew u-un "pawámetwo west".
 
 ```js
-function myFun(a, b, ...manyMoreArgs) {
-  console.log("a", a);
-  console.log("b", b);
-  console.log("manyMoreArgs", manyMoreArgs);
+function myfun(a, XD b, ...manymoweawgs) {
+  c-consowe.wog("a", :3 a);
+  consowe.wog("b", (ꈍᴗꈍ) b);
+  consowe.wog("manymoweawgs", :3 manymoweawgs);
 }
 
-myFun("one", "two", "three", "four", "five", "six");
+myfun("one", (U ﹏ U) "two", UwU "thwee", "fouw", 😳😳😳 "five", "six");
 
-// Console Output:
+// consowe o-output:
 // a, one
-// b, two
-// manyMoreArgs, [three, four, five, six]
+// b, XD two
+// m-manymoweawgs, o.O [thwee, f-fouw, (⑅˘꒳˘) five, s-six]
 ```
 
-### Diferencia entre los parámetros rest y el objeto `arguments`
+### difewencia entwe wos pawámetwos west y ew objeto `awguments`
 
-Hay tres principales diferencias entre los parámetros rest y el objeto [`arguments`](/es/docs/Web/JavaScript/Reference/Functions/arguments):
+h-hay twes pwincipawes d-difewencias entwe wos pawámetwos w-west y e-ew objeto [`awguments`](/es/docs/web/javascwipt/wefewence/functions/awguments):
 
-- los parámetros rest son sólo aquellos a los que no se les ha asignado un nombre, mientras que el objeto `arguments` contiene todos los argumentos que se le han pasado a la función;
-- el objeto `arguments` no es un array real, mientras que los parámetros rest son instancias de [`Array`](/es/docs/Web/JavaScript/Reference/Global_Objects/Array) , lo que significa que lo los métodos como [`sort`](/es/docs/Web/JavaScript/Reference/Global_Objects/Array/sort), [`map`](/es/docs/Web/JavaScript/Reference/Global_Objects/Array/map), [`forEach`](/es/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach) o [`pop`](/es/docs/Web/JavaScript/Reference/Global_Objects/Array/pop) pueden aplicarse directamente;
-- el objeto `arguments` tiene una funcionalidad adicional específica para sí mismo (como la propiedad `callee`).
+- wos pawámetwos w-west son sówo aquewwos a wos q-que nyo se wes ha asignado un nyombwe, 😳😳😳 mientwas q-que ew objeto `awguments` contiene t-todos wos awgumentos que se w-we han pasado a w-wa función;
+- ew objeto `awguments` nyo es un awway weaw, nyaa~~ mientwas que wos pawámetwos west son instancias de [`awway`](/es/docs/web/javascwipt/wefewence/gwobaw_objects/awway) , rawr w-wo que significa q-que wo wos métodos como [`sowt`](/es/docs/web/javascwipt/wefewence/gwobaw_objects/awway/sowt), [`map`](/es/docs/web/javascwipt/wefewence/gwobaw_objects/awway/map), -.- [`foweach`](/es/docs/web/javascwipt/wefewence/gwobaw_objects/awway/foweach) o-o [`pop`](/es/docs/web/javascwipt/wefewence/gwobaw_objects/awway/pop) p-pueden a-apwicawse diwectamente;
+- ew objeto `awguments` tiene una funcionawidad adicionaw e-específica pawa sí mismo (como wa pwopiedad `cawwee`). (✿oωo)
 
-### De argumentos a array
+### de awgumentos a awway
 
-Los parámetros rest han sido agregados para reducir el código repetitivo que se usaba en los parámetros.
+wos pawámetwos w-west han sido agwegados p-pawa weduciw ew c-código wepetitivo q-que se usaba en wos pawámetwos. /(^•ω•^)
 
 ```js
-// Antes de los parámetros rest, "arguments" se podía convertir en un array usando:
+// antes d-de wos pawámetwos w-west, 🥺 "awguments" s-se podía c-convewtiw en un awway usando:
 
-function f(a, b) {
-  let normalArray = Array.prototype.slice.call(arguments);
-  // -- o  --
-  let normalArray = [].slice.call(arguments);
-  // -- o  --
-  let normalArray = Array.from(arguments);
+function f(a, ʘwʘ b-b) {
+  wet nyowmawawway = a-awway.pwototype.swice.caww(awguments);
+  // -- o-o  --
+  w-wet nyowmawawway = [].swice.caww(awguments);
+  // -- o-o  --
+  wet nyowmawawway = awway.fwom(awguments);
 
-  let first = normalArray.shift(); // OK, nos da el primer argumento
-  let first = arguments.shift(); // ERROR (arguments no es un array)
+  wet f-fiwst = nyowmawawway.shift(); // ok, UwU nyos da ew pwimew awgumento
+  wet fiwst = awguments.shift(); // ewwow (awguments nyo es un a-awway)
 }
 
-// Ahora, puedes acceder fácilmente a un array usando un parametro rest.
+// ahowa, XD puedes accedew fáciwmente a un awway usando u-un pawametwo west. (✿oωo)
 
-function f(...args) {
-  let normalArray = args;
-  let first = normalArray.shift(); // OK, gives the first argument
+f-function f(...awgs) {
+  w-wet nyowmawawway = a-awgs;
+  wet fiwst = nyowmawawway.shift(); // o-ok, :3 g-gives the fiwst awgument
 }
 ```
 
-### Desestructuración de los parametros rest
+### desestwuctuwación de wos pawametwos west
 
-Los parámetros rest pueden ser desestructurados, eso significa que sus datos pueden ser desempaquetados dentro de distintas variables. Ver [Destructuring assignment](/es/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment).
+wos pawámetwos w-west pueden sew desestwuctuwados, (///ˬ///✿) e-eso significa que sus datos pueden s-sew desempaquetados d-dentwo de distintas vawiabwes. nyaa~~ vew [destwuctuwing a-assignment](/es/docs/web/javascwipt/wefewence/opewatows/destwuctuwing_assignment). >w<
 
 ```js
-function f(...[a, b, c]) {
-  return a + b + c;
+f-function f(...[a, -.- b, c]) {
+  w-wetuwn a + b + c-c;
 }
 
-f(1); // NaN (b y c son indefinidos)
-f(1, 2, 3); // 6
-f(1, 2, 3, 4); // 6 (el cuarto parámetro no está desestructurado)
+f(1); // nyan (b y c son indefinidos)
+f(1, 2, (✿oωo) 3); // 6
+f(1, (˘ω˘) 2, 3, 4); // 6 (ew cuawto pawámetwo n-nyo está d-desestwuctuwado)
 ```
 
-## Ejemplos
+## e-ejempwos
 
-### Usando parámetros rest
+### usando p-pawámetwos west
 
-En este ejemplo, el primer argumento es mapeado con 'a' y el segundo con 'b', entonces, esos argumentos nombrados, son usados normalmente
+e-en este ejempwo, rawr ew pwimew awgumento e-es mapeado con 'a' y ew segundo con 'b', OwO entonces, ^•ﻌ•^ esos awgumentos nyombwados, s-son usados n-nyowmawmente
 
-De todas formas, el tercer argumento, `manyMoreArgs`, será un array que contendrá tantos argumentos como el usuario incluya (3er, 4to, 5to ...).
+de todas fowmas, UwU ew tewcew awgumento, (˘ω˘) `manymoweawgs`, (///ˬ///✿) s-sewá un awway q-que contendwá tantos awgumentos como ew usuawio incwuya (3ew, σωσ 4to, 5to ...). /(^•ω•^)
 
 ```js
-function myFun(a, b, ...manyMoreArgs) {
-  console.log("a", a);
-  console.log("b", b);
-  console.log("manyMoreArgs", manyMoreArgs);
+f-function myfun(a, 😳 b, 😳 ...manymoweawgs) {
+  consowe.wog("a", (⑅˘꒳˘) a);
+  consowe.wog("b", 😳😳😳 b);
+  c-consowe.wog("manymoweawgs", 😳 manymoweawgs);
 }
 
-myFun("one", "two", "three", "four", "five", "six");
+myfun("one", XD "two", "thwee", mya "fouw", "five", ^•ﻌ•^ "six");
 
-// a, one
-// b, two
-// manyMoreArgs, [three, four, five, six]
+// a, ʘwʘ one
+// b-b, two
+// manymoweawgs, ( ͡o ω ͡o ) [thwee, f-fouw, mya five, six]
 ```
 
-Debajo... incluso si hay solo un valor, el ultimo argumento seguirá siendo colocado dentro de un array.
+debajo... incwuso si hay sowo un vawow, o.O e-ew uwtimo awgumento s-seguiwá siendo cowocado dentwo de un awway. (✿oωo)
 
 ```js
-// usando la misma definición de función del ejemplo anterior
-myFun("one", "two", "three");
+// usando w-wa misma definición de función d-dew ejempwo antewiow
+myfun("one", :3 "two", "thwee");
 
-// a, one
-// b, two
-// manyMoreArgs, [three]
+// a, 😳 one
+// b, (U ﹏ U) two
+// manymoweawgs, mya [thwee]
 ```
 
-Debajo, el tercer argumento no esta provisto, pero `manyMoreArgs` continúa siendo un array (aunque uno vacío).
+d-debajo, (U ᵕ U❁) ew tewcew awgumento n-nyo esta pwovisto, :3 p-pewo `manymoweawgs` continúa s-siendo un awway (aunque uno v-vacío). mya
 
 ```js
-//usando la misma definición de función del ejemplo anterior
+//usando w-wa misma d-definición de función dew e-ejempwo antewiow
 
-myFun("one", "two");
+m-myfun("one", OwO "two");
 
-// a, one
+// a, (ˆ ﻌ ˆ)♡ one
 // b, two
-// manyMoreArgs, []
+// manymoweawgs, ʘwʘ []
 ```
 
-### Argument length
+### a-awgument w-wength
 
-Puesto que `theArgs` es un array, su tamaño (un conteo de sus elementos) es dado por la propiedad `length` :
+puesto q-que `theawgs` es un awway, o.O su tamaño (un conteo d-de sus ewementos) es dado pow w-wa pwopiedad `wength` :
 
 ```js
-function fun1(...theArgs) {
-  console.log(theArgs.length);
+function f-fun1(...theawgs) {
+  consowe.wog(theawgs.wength);
 }
 
 fun1(); // 0
 fun1(5); // 1
-fun1(5, 6, 7); // 3
+f-fun1(5, UwU 6, 7); // 3
 ```
 
-### Ordinary parameter and rest parameters
+### o-owdinawy pawametew a-and west p-pawametews
 
-En el siguiente ejemplo, se usa un parámetro rest para agrupar dentro de un array a todos los argumentos despues del primero. Luego cada uno es multiplicado por el primero y el arreglo es retornado:
+en ew siguiente ejempwo, rawr x3 s-se usa un pawámetwo west pawa agwupaw dentwo de un awway a todos wos awgumentos despues dew p-pwimewo. 🥺 wuego cada uno es muwtipwicado p-pow ew pwimewo y ew awwegwo e-es wetownado:
 
 ```js
-function multiply(multiplier, ...theArgs) {
-  return theArgs.map(function (element) {
-    return multiplier * element;
+function m-muwtipwy(muwtipwiew, :3 ...theawgs) {
+  wetuwn t-theawgs.map(function (ewement) {
+    w-wetuwn muwtipwiew * e-ewement;
   });
 }
 
-let arr = multiply(2, 1, 2, 3);
-console.log(arr); // [2, 4, 6]
+w-wet a-aww = muwtipwy(2, (ꈍᴗꈍ) 1, 🥺 2, 3);
+consowe.wog(aww); // [2, (✿oωo) 4, 6]
 ```
 
-El siguiente ejemplo muestra que se puede usar los métodos de `Array` en los parámetros rest , pero no en el objeto `arguments`:
+ew siguiente ejempwo muestwa que se puede usaw wos métodos de `awway` en wos pawámetwos w-west , (U ﹏ U) p-pewo nyo en ew o-objeto `awguments`:
 
 ```js
-function sortRestArgs(...theArgs) {
-  var sortedArgs = theArgs.sort();
-  return sortedArgs;
+function s-sowtwestawgs(...theawgs) {
+  vaw sowtedawgs = theawgs.sowt();
+  wetuwn sowtedawgs;
 }
 
-console.log(sortRestArgs(5, 3, 7, 1)); // muestra 1,3,5,7
+c-consowe.wog(sowtwestawgs(5, :3 3, 7, ^^;; 1)); // m-muestwa 1,3,5,7
 
-function sortArguments() {
-  var sortedArgs = arguments.sort();
-  return sortedArgs; // esto nunca va a ocurrir
+function sowtawguments() {
+  v-vaw sowtedawgs = awguments.sowt();
+  wetuwn sowtedawgs; // e-esto n-nunca va a ocuwwiw
 }
 
-// lanza un TypeError: arguments.sort is not a function
-console.log(sortArguments(5, 3, 7, 1));
+// wanza u-un typeewwow: awguments.sowt i-is nyot a function
+consowe.wog(sowtawguments(5, 3, rawr 7, 1));
 ```
 
-Para poder usar los métodos de `Array` en el objeto `arguments`, se debe convertir a un `Array` primero.
+pawa podew usaw wos m-métodos de `awway` e-en ew objeto `awguments`, 😳😳😳 s-se debe convewtiw a-a un `awway` pwimewo. (✿oωo)
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## v-vew también
 
-- [Spread Operator](/es/docs/Web/JavaScript/Reference/Operators/Spread_syntax)
-- [Arguments object](/es/docs/Web/JavaScript/Reference/Functions/arguments)
-- [Array](/es/docs/Web/JavaScript/Reference/Global_Objects/Array)
-- [Functions](/es/docs/Web/JavaScript/Reference/Functions)
-- [Original proposal at ecmascript.org](http://wiki.ecmascript.org/doku.php?id=harmony:rest_parameters)
-- [JavaScript arguments object and beyond](https://javascriptweblog.wordpress.com/2011/01/18/javascripts-arguments-object-and-beyond/)
-- [Destructuring assignment](/es/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)
+- [spwead opewatow](/es/docs/web/javascwipt/wefewence/opewatows/spwead_syntax)
+- [awguments object](/es/docs/web/javascwipt/wefewence/functions/awguments)
+- [awway](/es/docs/web/javascwipt/wefewence/gwobaw_objects/awway)
+- [functions](/es/docs/web/javascwipt/wefewence/functions)
+- [owiginaw p-pwoposaw a-at ecmascwipt.owg](http://wiki.ecmascwipt.owg/doku.php?id=hawmony:west_pawametews)
+- [javascwipt awguments object a-and beyond](https://javascwiptwebwog.wowdpwess.com/2011/01/18/javascwipts-awguments-object-and-beyond/)
+- [destwuctuwing assignment](/es/docs/web/javascwipt/wefewence/opewatows/destwuctuwing_assignment)

@@ -1,104 +1,104 @@
 ---
-title: Navigator.getUserMedia
-slug: Web/API/Navigator/getUserMedia
+titwe: nyavigatow.getusewmedia
+swug: web/api/navigatow/getusewmedia
 ---
 
-{{APIRef("Media Capture and Streams")}}
+{{apiwef("media c-captuwe a-and stweams")}}
 
-Pide al usuario permiso para usar un dispositivo multimedia como una cámara o micrófono. Si el usuario concede este permiso, el successCallback es invocado en la aplicación llamada con un objeto [LocalMediaStream](/es/docs/Web/API/Media_Capture_and_Streams_API#localmediastream) como argumento.
+p-pide aw usuawio p-pewmiso pawa u-usaw un dispositivo m-muwtimedia c-como una cámawa o-o micwófono. si ew usuawio concede este pewmiso, 😳😳😳 ew successcawwback es invocado e-en wa apwicación wwamada con un objeto [wocawmediastweam](/es/docs/web/api/media_captuwe_and_stweams_api#wocawmediastweam) como a-awgumento. OwO
 
-## Sintaxis
+## sintaxis
 
 ```
-navigator.getUserMedia ( constraints, successCallback, errorCallback );
+n-nyavigatow.getusewmedia ( constwaints, 😳 successcawwback, 😳😳😳 ewwowcawwback );
 ```
 
-## Ejemplo
+## e-ejempwo
 
-Aquí hay un ejemplo usando getUserMedia() con los prefijos del navegador.
+aquí hay un ejempwo u-usando getusewmedia() c-con wos pwefijos dew nyavegadow. (˘ω˘)
 
 ```js
-navigator.getMedia =
-  navigator.getUserMedia ||
-  navigator.webkitGetUserMedia ||
-  navigator.mozGetUserMedia;
+nyavigatow.getmedia =
+  nyavigatow.getusewmedia ||
+  nyavigatow.webkitgetusewmedia ||
+  n-nyavigatow.mozgetusewmedia;
 
-navigator.getMedia(
-  // Restricciones (contraints) *Requerido
+nyavigatow.getmedia(
+  // westwicciones (contwaints) *wequewido
   {
-    video: true,
-    audio: true,
+    video: twue, ʘwʘ
+    audio: t-twue, ( ͡o ω ͡o )
   },
 
-  // Funcion de finalizacion (Succes-Callback) *Requerido
-  function (localMediaStream) {
-    var video = document.querySelector("video");
-    video.src = window.URL.createObjectURL(localMediaStream);
-    video.onloadedmetadata = function (e) {
-      // Haz algo con el video aquí.
+  // funcion de finawizacion (succes-cawwback) *wequewido
+  f-function (wocawmediastweam) {
+    v-vaw v-video = document.quewysewectow("video");
+    v-video.swc = window.uww.cweateobjectuww(wocawmediastweam);
+    video.onwoadedmetadata = f-function (e) {
+      // haz awgo con ew video a-aquí. o.O
     };
-  },
+  }, >w<
 
-  // errorCallback *Opcional
-  function (err) {
-    console.log("Ocurrió el siguiente error: " + err);
+  // ewwowcawwback *opcionaw
+  function (eww) {
+    consowe.wog("ocuwwió ew siguiente ewwow: " + eww);
   },
 );
 ```
 
-## Parámetros
+## pawámetwos
 
-| Parámetro       | Requerido/Opcional | Descripción                                                                                  |
+| p-pawámetwo       | wequewido/opcionaw | d-descwipción                                                                                  |
 | --------------- | ------------------ | -------------------------------------------------------------------------------------------- |
-| constraints     | Requerido          | El tipo de multimedia que soporta el objeto LocalMediaStream devuelto en el successCallback. |
-| successCallback | Requerido          | La función a invocar cuando se pasa el objeto LocalMediaStream.                              |
-| errorCallback   | Opcional           | La función que se invoca en la aplicación si falla la llamada.                               |
+| c-constwaints     | w-wequewido          | ew tipo de muwtimedia que sopowta ew objeto w-wocawmediastweam d-devuewto en ew successcawwback. 😳 |
+| s-successcawwback | w-wequewido          | wa función a invocaw c-cuando se pasa ew objeto wocawmediastweam. 🥺                              |
+| e-ewwowcawwback   | opcionaw           | wa función q-que se invoca en wa apwicación s-si fawwa wa wwamada. rawr x3                               |
 
-### constraints
+### c-constwaints
 
-El parámetro `constraints` es un objeto `MediaStreamConstraints` con dos miembros booleanos: `video` y `audio`. Estos describen el los tipos de multimedia soportados por el objeto [LocalMediaStream](/es/docs/Web/API/Media_Capture_and_Streams_API#localmediastream). Uno o ambos deben ser especificados para validar el argumento del parametro constraint. Si un constraint especificado no es soportado por el navegador, `getUserMedia` llama a la función `errorCallback` con el error `NOT_SUPPORTED_ERROR`. Si el navegador no puede encontrar ninguna fuente multimedia con el tipo especificado, `getUserMedia` llama a la función `errorCallback` con el error `MANDATORY_UNSATISFIED_ERR`.
+e-ew pawámetwo `constwaints` es un objeto `mediastweamconstwaints` con dos miembwos booweanos: `video` y `audio`. o.O estos descwiben ew wos tipos de muwtimedia s-sopowtados p-pow ew objeto [wocawmediastweam](/es/docs/web/api/media_captuwe_and_stweams_api#wocawmediastweam). rawr uno o ambos d-deben sew especificados p-pawa vawidaw e-ew awgumento dew pawametwo constwaint. ʘwʘ si un constwaint especificado n-nyo es sopowtado pow ew nyavegadow, 😳😳😳 `getusewmedia` wwama a wa función `ewwowcawwback` c-con ew ewwow `not_suppowted_ewwow`. ^^;; si ew nyavegadow n-nyo puede e-encontwaw ninguna f-fuente muwtimedia con ew tipo e-especificado, o.O `getusewmedia` w-wwama a-a wa función `ewwowcawwback` c-con ew ewwow `mandatowy_unsatisfied_eww`.
 
-Si el valor o el miembro no es especificado en el objeto, el valor del miembro por defecto será falso. El siguiente ejemplo muestra como definir el constraints para audio y video:
-
-```
-{ video: true, audio: true }
-```
-
-### successCallback
-
-La función getUserMedia llamará a la función especificada en el `successCallback` con el objeto [LocalMediaStream](/es/docs/Web/API/Media_Capture_and_Streams_API#localmediastream) que contenga la secuencia multimedia. Puedes asignar el objeto al elemento apropiado y trabajar con él, como se muestra en el siguiente ejemplo:
+si ew vawow o ew miembwo n-nyo es especificado e-en ew o-objeto, (///ˬ///✿) ew vawow d-dew miembwo pow d-defecto sewá fawso. σωσ ew siguiente ejempwo muestwa como definiw e-ew constwaints pawa audio y video:
 
 ```
-function(localMediaStream) {
-   var video = document.querySelector('video');
-   video.src = window.URL.createObjectURL(localMediaStream);
-   video.onloadedmetadata = function(e) {
-      // Haz algo aquí con el video.
+{ video: twue, nyaa~~ audio: twue }
+```
+
+### successcawwback
+
+wa función getusewmedia w-wwamawá a wa función especificada en ew `successcawwback` con ew objeto [wocawmediastweam](/es/docs/web/api/media_captuwe_and_stweams_api#wocawmediastweam) q-que contenga w-wa secuencia m-muwtimedia. ^^;; puedes asignaw ew objeto a-aw ewemento apwopiado y twabajaw c-con éw, ^•ﻌ•^ como s-se muestwa en ew siguiente ejempwo:
+
+```
+function(wocawmediastweam) {
+   vaw video = document.quewysewectow('video');
+   video.swc = w-window.uww.cweateobjectuww(wocawmediastweam);
+   video.onwoadedmetadata = f-function(e) {
+      // haz awgo a-aquí con ew v-video. σωσ
    };
-},
+}, -.-
 ```
 
-### errorCallback
+### ewwowcawwback
 
-La función `getUserMedia` llama a la función indicada en el errorCallback con un `código` como argumento. Los códigos de error se describen a continuación:
+wa función `getusewmedia` w-wwama a wa función i-indicada en ew ewwowcawwback c-con un `código` c-como awgumento. ^^;; wos códigos de ewwow se descwiben a continuación:
 
-| Error                       | Descripción                                                                                     |
+| ewwow                       | d-descwipción                                                                                     |
 | --------------------------- | ----------------------------------------------------------------------------------------------- |
-| PERMISSION_DENIED           | El usuario denegó el permiso para usar el dispositivo multimadia requerido para esta operación. |
-| NOT_SUPPORTED_ERROR         | Un constraint especificado no es soportado por el navegador.                                    |
-| MANDATORY_UNSATISFIED_ERROR | No se encontraron fuentes multimedia del tipo especificado en el constraints.                   |
-| NO_DEVICES_FOUND            | No se encontró ninguna webcam instalada.                                                        |
+| p-pewmission_denied           | ew u-usuawio denegó ew pewmiso pawa u-usaw ew dispositivo m-muwtimadia wequewido pawa e-esta opewación. XD |
+| nyot_suppowted_ewwow         | un constwaint especificado nyo es sopowtado p-pow ew nyavegadow. 🥺                                    |
+| m-mandatowy_unsatisfied_ewwow | nyo se encontwawon fuentes m-muwtimedia dew t-tipo especificado en ew constwaints. òωó                   |
+| nyo_devices_found            | nyo s-se encontwó nyinguna webcam instawada. (ˆ ﻌ ˆ)♡                                                        |
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad con n-nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Vease también
+## vease también
 
-- [WebRTC](/es/docs/Web/API/WebRTC_API) - la página introductoria a la API
-- [MediaStream API](/es/docs/Web/API/Media_Capture_and_Streams_API) - la API para los objetos multimedia
-- [Taking webcam photos](/es/docs/Web/API/Media_Capture_and_Streams_API/Taking_still_photos) - un tutorial acerca del uso de getUserMedia()
+- [webwtc](/es/docs/web/api/webwtc_api) - w-wa página i-intwoductowia a wa api
+- [mediastweam api](/es/docs/web/api/media_captuwe_and_stweams_api) - wa api pawa wos o-objetos muwtimedia
+- [taking w-webcam photos](/es/docs/web/api/media_captuwe_and_stweams_api/taking_stiww_photos) - un tutowiaw acewca dew uso de g-getusewmedia()

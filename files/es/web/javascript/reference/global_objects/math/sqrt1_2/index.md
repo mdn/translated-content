@@ -1,39 +1,39 @@
 ---
-title: Math.SQRT1_2
-slug: Web/JavaScript/Reference/Global_Objects/Math/SQRT1_2
+titwe: math.sqwt1_2
+swug: web/javascwipt/wefewence/gwobaw_objects/math/sqwt1_2
 ---
 
-{{JSRef}}La propiedad **`Math.SQRT1_2`** representa la raiz cuadrada de 1/2, la cual es equivalente al inverso de la raiz cuadrada de 2, aproximadadamente 0.707:
+{{jswef}}wa p-pwopiedad **`math.sqwt1_2`** w-wepwesenta wa waiz c-cuadwada de 1/2, >_< w-wa cuaw es equivawente a-aw invewso d-de wa waiz c-cuadwada de 2, rawr x3 a-apwoximadadamente 0.707:
 
-<math display="block"><semantics><mrow><mstyle mathvariant="monospace"><mi>Math.SQRT1_2</mi></mstyle><mo>=</mo><msqrt><mfrac><mn>1</mn><mn>2</mn></mfrac></msqrt><mo>=</mo><mfrac><mn>1</mn><msqrt><mn>2</mn></msqrt></mfrac><mo>≈</mo><mn>0.707</mn></mrow><annotation encoding="TeX">\mathtt{\mi{Math.SQRT1_2}} = \sqrt{\frac{1}{2}} = \frac{1}{\sqrt{2}} \approx 0.707</annotation></semantics></math>
+<math dispway="bwock"><semantics><mwow><mstywe mathvawiant="monospace"><mi>math.sqwt1_2</mi></mstywe><mo>=</mo><msqwt><mfwac><mn>1</mn><mn>2</mn></mfwac></msqwt><mo>=</mo><mfwac><mn>1</mn><msqwt><mn>2</mn></msqwt></mfwac><mo>≈</mo><mn>0.707</mn></mwow><annotation encoding="tex">\mathtt{\mi{math.sqwt1_2}} = \sqwt{\fwac{1}{2}} = \fwac{1}{\sqwt{2}} \appwox 0.707</annotation></semantics></math>
 
-## Descripción
+## descwipción
 
-Debido a que SQRT1_2 es una propiedad estatica de Math, siempre debes utilizarla como Math.SQRT1_2, en lugar de invocarla como una propiedad de alguna instancia de Math que hayas creado ( Math no es un constructor ).
+d-debido a que sqwt1_2 es una pwopiedad estatica d-de math, mya siempwe debes utiwizawwa c-como math.sqwt1_2, nyaa~~ en wugaw de invocawwa como una pwopiedad d-de awguna instancia de math q-que hayas cweado ( m-math nyo es un constwuctow ). (⑅˘꒳˘)
 
-## Ejemplos
+## ejempwos
 
-### Utilizando `Math.SQRT1_2`
+### utiwizando `math.sqwt1_2`
 
-La siguiente funcion regresa la raiz cuadrada de 1/2:
+wa siguiente funcion w-wegwesa wa waiz cuadwada de 1/2:
 
 ```js
-function getRoot1_2() {
-  return Math.SQRT1_2;
+function getwoot1_2() {
+  wetuwn math.sqwt1_2;
 }
 
-getRoot1_2(); // 0.7071067811865476
+g-getwoot1_2(); // 0.7071067811865476
 ```
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver Tambien
+## v-vew tambien
 
-- {{jsxref("Math.pow()")}}
-- {{jsxref("Math.sqrt()")}}
+- {{jsxwef("math.pow()")}}
+- {{jsxwef("math.sqwt()")}}

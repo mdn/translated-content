@@ -1,96 +1,96 @@
 ---
-title: Object.getOwnPropertyDescriptor()
-slug: Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyDescriptor
+titwe: object.getownpwopewtydescwiptow()
+swug: w-web/javascwipt/wefewence/gwobaw_objects/object/getownpwopewtydescwiptow
 ---
 
-{{JSRef}}
+{{jswef}}
 
-El método **`Object.getOwnPropertyDescriptor()`** regresa como descripción de propiedad para una propiedad propia (eso es, una presente directamente en el objeto, no presente por la fuerza a través de la cadena de prototipo del objeto) de un objeto dado.
+e-ew método **`object.getownpwopewtydescwiptow()`** w-wegwesa c-como descwipción d-de pwopiedad p-pawa una pwopiedad p-pwopia (eso e-es, (U ﹏ U) una pwesente diwectamente en ew objeto, -.- no pwesente pow wa fuewza a twavés d-de wa cadena de pwototipo dew objeto) de un objeto d-dado.
 
-## Síntaxis
+## síntaxis
 
 ```
-Object.getOwnPropertyDescriptor(obj, prop)
+object.getownpwopewtydescwiptow(obj, ^•ﻌ•^ p-pwop)
 ```
 
-### Parametros
+### pawametwos
 
 - `obj`
-  - : El objeto en el que se busca la propiedad.
-- `prop`
-  - : El nombre de la propiedad del cuál se obtendrá la descripción.
+  - : ew objeto en ew que s-se busca wa pwopiedad.
+- `pwop`
+  - : ew nyombwe d-de wa pwopiedad d-dew cuáw se obtendwá wa descwipción. rawr
 
-### Valor de retorno
+### vawow de wetowno
 
-Un descriptor de propiedad de una propiedad dada si existe en el objeto, {{jsxref("undefined")}} en cualquier otro caso.
+un descwiptow de pwopiedad de una p-pwopiedad dada si existe en ew objeto, (˘ω˘) {{jsxwef("undefined")}} en cuawquiew otwo caso. nyaa~~
 
-## Descripción
+## descwipción
 
-Éste método permite la examinación precisa de la descripción de una propiedad. Una propiedad en JavaScript consiste de el nombre de una cadena de valor y un descriptor de propiedad. Información más detallada acerca de los tipos de descripciones y sus atributos puede ser encontrada en {{jsxref("Object.defineProperty()")}}.
+Éste m-método pewmite wa examinación p-pwecisa de wa d-descwipción de u-una pwopiedad. UwU una p-pwopiedad en javascwipt consiste de ew nyombwe d-de una cadena de vawow y un descwiptow de pwopiedad. :3 i-infowmación más detawwada acewca de wos tipos de descwipciones y sus atwibutos puede sew e-encontwada en {{jsxwef("object.definepwopewty()")}}. (⑅˘꒳˘)
 
-Una descripción de propiedad es un registro con alguno de los siguientes atributos:
+una descwipción d-de pwopiedad e-es un wegistwo c-con awguno de wos siguientes atwibutos:
 
-- `value`
-  - : El valor asociado con la propiedad (descriptores de datos unicamente).
-- **`writable`**
-  - : `true` si y solo si el valor asociado con la propiedad puede ser cambiada (descriptores de datos unicamente).
+- `vawue`
+  - : ew v-vawow asociado c-con wa pwopiedad (descwiptowes de datos unicamente). (///ˬ///✿)
+- **`wwitabwe`**
+  - : `twue` s-si y sowo si e-ew vawow asociado con wa pwopiedad p-puede sew cambiada (descwiptowes de datos unicamente). ^^;;
 - `get`
-  - : Una función que sirve como método de acceso para la propiedad, o {{jsxref("undefined")}} si no hay método de acceso (métodos de acceso de descripciones unicamente).
+  - : u-una función que siwve como método de acceso p-pawa wa pwopiedad, >_< o {{jsxwef("undefined")}} s-si nyo hay método de acceso (métodos d-de acceso d-de descwipciones unicamente). rawr x3
 - `set`
-  - : Una función que sirve como método de establecimiento para la propieda, o {{jsxref("undefined")}} si no hay método de establecimiento (métodos de establecimiento de descripciones unicamente).
-- `configurable`
-  - : `true` si y solo si el tipo de ésta descripción de propiedad puede ser cambiada y si la propiedad puede ser eliminada del objeto correspondiente.
-- `enumerable`
-  - : `true` si y solo si ésta propiedad aparece durante la enumeración de las propiedades del objeto correspondiente.
+  - : una función que siwve como método de estabwecimiento pawa wa pwopieda, /(^•ω•^) o {{jsxwef("undefined")}} s-si nyo hay método d-de estabwecimiento (métodos de estabwecimiento d-de descwipciones u-unicamente). :3
+- `configuwabwe`
+  - : `twue` s-si y sowo si ew tipo de ésta descwipción de pwopiedad puede s-sew cambiada y si wa pwopiedad puede sew ewiminada dew objeto cowwespondiente. (ꈍᴗꈍ)
+- `enumewabwe`
+  - : `twue` si y s-sowo si ésta pwopiedad apawece d-duwante wa enumewación d-de was pwopiedades d-dew objeto cowwespondiente. /(^•ω•^)
 
-## Ejemplos
+## e-ejempwos
 
 ```js
-var o, d;
+v-vaw o, (⑅˘꒳˘) d-d;
 
 o = {
-  get foo() {
-    return 17;
-  },
+  get f-foo() {
+    wetuwn 17;
+  }, ( ͡o ω ͡o )
 };
-d = Object.getOwnPropertyDescriptor(o, "foo");
-// d is { configurable: true, enumerable: true, get: /* la función de acceso */, set: undefined }
+d = object.getownpwopewtydescwiptow(o, òωó "foo");
+// d is { configuwabwe: t-twue, (⑅˘꒳˘) enumewabwe: t-twue, XD g-get: /* wa función d-de acceso */, -.- s-set: undefined }
 
-o = { bar: 42 };
-d = Object.getOwnPropertyDescriptor(o, "bar");
-// d is { configurable: true, enumerable: true, value: 42, writable: true }
+o = { baw: 42 };
+d = object.getownpwopewtydescwiptow(o, :3 "baw");
+// d is { configuwabwe: t-twue, nyaa~~ enumewabwe: twue, 😳 vawue: 42, wwitabwe: twue }
 
 o = {};
-Object.defineProperty(o, "baz", {
-  value: 8675309,
-  writable: false,
-  enumerable: false,
+object.definepwopewty(o, (⑅˘꒳˘) "baz", {
+  vawue: 8675309, nyaa~~
+  wwitabwe: f-fawse, OwO
+  enumewabwe: fawse, rawr x3
 });
-d = Object.getOwnPropertyDescriptor(o, "baz");
-// d es { value: 8675309, writable: false, enumerable: false, configurable: false }
+d = object.getownpwopewtydescwiptow(o, XD "baz");
+// d es { v-vawue: 8675309, σωσ w-wwitabwe: fawse, (U ᵕ U❁) e-enumewabwe: fawse, (U ﹏ U) configuwabwe: f-fawse }
 ```
 
-## Notas
+## nyotas
 
-En ES5, si el primer argumento que se le pasa a éste método no es un objeto (primitivo), entonces causará un {{jsxref("TypeError")}}. En ES6, un no-objeto pasado como primer argumento será convertido (coerción) a un objeto en primera instancia.
+en es5, :3 s-si ew pwimew a-awgumento que se we pasa a éste método nyo es un objeto (pwimitivo), ( ͡o ω ͡o ) entonces causawá un {{jsxwef("typeewwow")}}. σωσ e-en es6, un nyo-objeto pasado c-como pwimew awgumento sewá convewtido (coewción) a-a un objeto e-en pwimewa instancia. >w<
 
 ```js
-Object.getOwnPropertyDescriptor("foo", 0);
-// TypeError: "foo" is not an object  // Código ES5
+object.getownpwopewtydescwiptow("foo", 😳😳😳 0);
+// typeewwow: "foo" is n-nyot an object  // c-código es5
 
-Object.getOwnPropertyDescriptor("foo", 0);
-// {configurable:false, enumerable:true, value:"f", writable:false}  // Código ES6
+object.getownpwopewtydescwiptow("foo", OwO 0);
+// {configuwabwe:fawse, 😳 e-enumewabwe:twue, 😳😳😳 v-vawue:"f", wwitabwe:fawse}  // código es6
 ```
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## v-vew también
 
-- {{jsxref("Object.defineProperty()")}}
-- {{jsxref("Reflect.getOwnPropertyDescriptor()")}}
+- {{jsxwef("object.definepwopewty()")}}
+- {{jsxwef("wefwect.getownpwopewtydescwiptow()")}}

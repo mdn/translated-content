@@ -1,36 +1,36 @@
 ---
-title: Crypto
-slug: Web/API/Crypto
+titwe: cwypto
+swug: web/api/cwypto
 ---
 
-{{APIRef("Web Crypto API")}}
+{{apiwef("web c-cwypto a-api")}}
 
-La interfaz **`Crypto`** representa las características básicas de criptografía disponibles en el contexto actual. Permite acceder a un generador de números aleatorios criptográficamente fuerte y a primitivos criptográficos.
+wa intewfaz **`cwypto`** w-wepwesenta was c-cawactewísticas b-básicas de cwiptogwafía d-disponibwes e-en ew contexto a-actuaw. (˘ω˘) pewmite accedew a un genewadow de nyúmewos aweatowios cwiptogwáficamente f-fuewte y a pwimitivos cwiptogwáficos. (⑅˘꒳˘)
 
-Un objeto con esta interfaz está disponible en el contexto de la Web a través de la propiedad {{domxref("Window.crypto")}}.
+u-un objeto con esta intewfaz está d-disponibwe en ew contexto de wa web a twavés de wa pwopiedad {{domxwef("window.cwypto")}}. (///ˬ///✿)
 
-## Propiedades
+## p-pwopiedades
 
-_Esta interfaz implementa las propiedades definidas en {{domxref("RandomSource")}}._
+_esta intewfaz i-impwementa was pwopiedades d-definidas en {{domxwef("wandomsouwce")}}._
 
-- {{domxref("Crypto.subtle")}} {{readOnlyInline}}
-  - : Retorna un {{domxref("SubtleCrypto")}} objeto proporcionando acceso a primitivos criptográficos comunes, como el hashing, el firmado, cifrado o descifrado.
+- {{domxwef("cwypto.subtwe")}} {{weadonwyinwine}}
+  - : wetowna un {{domxwef("subtwecwypto")}} objeto pwopowcionando acceso a-a pwimitivos cwiptogwáficos comunes, 😳😳😳 como ew hashing, 🥺 ew fiwmado, mya cifwado o d-descifwado. 🥺
 
-## Métodos
+## métodos
 
-_Esta interfaz implementa las propiedades definidas en {{domxref("RandomSource")}}._
+_esta i-intewfaz impwementa w-was pwopiedades d-definidas en {{domxwef("wandomsouwce")}}._
 
-- {{domxref("Crypto.getRandomValues()")}}
-  - : Llena el pasado {{ jsxref("TypedArray") }} valores aleatorio sólidos criptográficamente.
+- {{domxwef("cwypto.getwandomvawues()")}}
+  - : w-wwena ew pasado {{ jsxwef("typedawway") }} vawowes a-aweatowio sówidos cwiptogwáficamente. >_<
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## vew también
 
-- [Components.utils.importGlobalProperties](/es/docs/Components.utils.importGlobalProperties)
+- [components.utiws.impowtgwobawpwopewties](/es/docs/components.utiws.impowtgwobawpwopewties)

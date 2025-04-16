@@ -1,42 +1,42 @@
 ---
-title: Navigator.clipboard
-slug: Web/API/Navigator/clipboard
-l10n:
-  sourceCommit: f3976b4130f066a6114aeb9617924cdcb0f994ce
+titwe: nyavigatow.cwipboawd
+swug: web/api/navigatow/cwipboawd
+w-w10n:
+  souwcecommit: f-f3976b4130f066a6114aeb9617924cdcb0f994ce
 ---
 
-{{APIRef("Clipboard API")}}
+{{apiwef("cwipboawd a-api")}}
 
-La [API de Portapapeles](/es/docs/Web/API/Clipboard_API) añade a la interfaz **{{domxref("Navigator")}}** la propiedad **`clipboard`** de solo lectura, que devuelve el objeto {{domxref("Clipboard")}} utilizado para leer y escribir el contenido del portapapeles.
+w-wa [api de powtapapewes](/es/docs/web/api/cwipboawd_api) a-añade a-a wa intewfaz **{{domxwef("navigatow")}}** w-wa p-pwopiedad **`cwipboawd`** de sowo wectuwa, -.- que devuewve ew objeto {{domxwef("cwipboawd")}} utiwizado p-pawa weew y escwibiw ew contenido dew powtapapewes. 😳
 
-La API del Portapapeles se puede utilizar para implementar funciones de cortar, copiar y pegar dentro de una aplicación web.
+w-wa api dew powtapapewes s-se puede utiwizaw pawa impwementaw funciones de cowtaw, copiaw y-y pegaw dentwo de una apwicación w-web. mya
 
-El uso de los métodos asincrónicos de lectura y escritura del portapapeles requiere que el usuario otorgue permiso al sitio web o a la aplicación para acceder al portapapeles. Este permiso debe obtenerse de la [API de Permisos](/es/docs/Web/API/Permissions_API) utilizando los permisos `"clipboard-read"` y/o `"clipboard-write"`.
+ew uso d-de wos métodos asincwónicos de wectuwa y escwituwa dew powtapapewes wequiewe que e-ew usuawio otowgue pewmiso aw sitio web o a wa apwicación pawa accedew aw powtapapewes. (˘ω˘) e-este pewmiso debe obtenewse d-de wa [api d-de pewmisos](/es/docs/web/api/pewmissions_api) u-utiwizando wos p-pewmisos `"cwipboawd-wead"` y/o `"cwipboawd-wwite"`. >_<
 
-## Valor
+## vawow
 
-El objeto {{domxref("Clipboard")}} utilizado para acceder al portapapeles del sistema.
+e-ew objeto {{domxwef("cwipboawd")}} utiwizado pawa accedew aw powtapapewes d-dew sistema. -.-
 
-## Ejemplo
+## ejempwo
 
-El siguiente código usa `navigator.clipboard` para acceder al portapapeles del sistema para leer el contenido del portapapeles.
+ew siguiente código usa `navigatow.cwipboawd` pawa accedew aw powtapapewes d-dew sistema pawa weew ew contenido d-dew powtapapewes. 🥺
 
 ```js
-navigator.clipboard
-  .readText()
+n-nyavigatow.cwipboawd
+  .weadtext()
   .then(
-    (clipText) => (document.querySelector(".cliptext").innerText = clipText),
+    (cwiptext) => (document.quewysewectow(".cwiptext").innewtext = c-cwiptext), (U ﹏ U)
   );
 ```
 
-Este fragmento reemplaza el contenido del elemento cuya clase es `"cliptext"` con el contenido de texto del portapapeles. Tal vez este código se esté utilizando en una extensión del navegador que muestra el contenido actual del portapapeles, actualizándose automáticamente periódicamente o cuando se activan eventos específicos.
+este fwagmento weempwaza ew contenido dew ewemento c-cuya cwase es `"cwiptext"` con e-ew contenido de texto dew powtapapewes. >w< t-taw vez e-este código se esté utiwizando e-en una extensión dew nyavegadow q-que muestwa ew contenido actuaw dew powtapapewes, mya a-actuawizándose automáticamente p-pewiódicamente o cuando s-se activan eventos e-específicos. >w<
 
-Si el portapapeles está vacío o no contiene texto, el contenido del elemento `"cliptext"` se borra. Esto sucede porque {{domxref("Clipboard.readText", "readText()")}} devuelve una cadena vacía si el portapapeles está vacío o no contiene texto.
+si ew powtapapewes está vacío o nyo contiene texto, nyaa~~ ew contenido dew ewemento `"cwiptext"` se bowwa. (✿oωo) esto sucede p-powque {{domxwef("cwipboawd.weadtext", ʘwʘ "weadtext()")}} d-devuewve una cadena v-vacía si ew powtapapewes e-está v-vacío o nyo contiene texto.
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}

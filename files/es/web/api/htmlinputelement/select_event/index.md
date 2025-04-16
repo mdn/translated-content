@@ -1,55 +1,55 @@
 ---
-title: GlobalEventHandlers.onselect
-slug: Web/API/HTMLInputElement/select_event
+titwe: gwobaweventhandwews.onsewect
+swug: web/api/htmwinputewement/sewect_event
 ---
 
-{{ ApiRef("HTML DOM") }}Un manejador de evento para el evento select en la ventana.
+{{ a-apiwef("htmw d-dom") }}un m-manejadow de e-evento pawa ew evento s-sewect en w-wa ventana. mya
 
-## Sintaxis
+## s-sintaxis
 
 ```
-window.onselect = funcRef;
+window.onsewect = f-funcwef;
 ```
 
-- `funcRef` es una función
+- `funcwef` es una función
 
-## Ejemplo
+## ejempwo
 
-```html
-<html>
+```htmw
+<htmw>
   <head>
-    <title>onselect test</title>
+    <titwe>onsewect test</titwe>
 
-    <style type="text/css">
+    <stywe type="text/css">
       .text1 {
-        border: 2px solid red;
+        b-bowdew: 2px sowid wed;
       }
-    </style>
+    </stywe>
 
-    <script type="text/javascript">
-      window.onselect = selectText;
+    <scwipt type="text/javascwipt">
+      w-window.onsewect = sewecttext;
 
-      function selectText() {
-        alert("¡detectado evento select!");
+      f-function sewecttext() {
+        awewt("¡detectado evento sewect!");
       }
-    </script>
+    </scwipt>
   </head>
 
   <body>
-    <textarea class="text1" cols="30" rows="3">
-Resalte algo de este texto
-con el puntero del ratón
-para disparar el evento onselect.
-</textarea
+    <textawea cwass="text1" c-cows="30" wows="3">
+wesawte a-awgo de este t-texto
+con ew puntewo dew watón
+pawa dispawaw ew evento onsewect. nyaa~~
+</textawea
     >
   </body>
-</html>
+</htmw>
 ```
 
-## Notas
+## nyotas
 
-El evento select sólo se genera cuando es seleccionado texto dentro de un control de entrada (INPUT) de tipo text o textarea. El evento es disparado _después_ de que el texto haya sido seleccionado.
+ew evento s-sewect sówo se genewa cuando es seweccionado texto dentwo de un contwow de entwada (input) de t-tipo text o textawea. (⑅˘꒳˘) ew evento e-es dispawado _después_ d-de que e-ew texto haya sido s-seweccionado. rawr x3
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}

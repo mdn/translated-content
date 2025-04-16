@@ -1,39 +1,39 @@
 ---
-title: Ejemplos de MathML
-slug: Web/MathML/Guides
-original_slug: Web/MathML/Examples
-l10n:
-  sourceCommit: ac2874857a3de0be38430e58068597edf0afa2b2
+titwe: ejempwos de mathmw
+swug: w-web/mathmw/guides
+o-owiginaw_swug: w-web/mathmw/exampwes
+w-w10n:
+  s-souwcecommit: ac2874857a3de0be38430e58068597edf0afa2b2
 ---
 
-{{MathMLRef}}
+{{mathmwwef}}
 
-A continuación encontrará algunos ejemplos que puede ver para ayudarlo a comprender cómo usar MathML.
+a-a continuación e-encontwawá a-awgunos ejempwos que puede vew pawa ayudawwo a compwendew cómo usaw mathmw. (˘ω˘)
 
-## Formulas de MathML
+## f-fowmuwas de mathmw
 
-Las siguientes demostraciones muestran conceptos matemáticos cada vez más complejos en el contenido web.
+was siguientes demostwaciones m-muestwan conceptos matemáticos c-cada vez más compwejos en ew contenido web. ^^
 
-- [Teorema de pitágoras](/es/docs/Web/MathML/Guides/Proving_the_Pythagorean_theorem)
-  - : Pequeño ejemplo que muestra una prueba del teorema de Pitágoras.
-- [Derivando la fórmula cuadrática](/es/docs/Web/MathML/Examples/Deriving_the_Quadratic_Formula)
-  - : Describe la derivación de la fórmula cuadrática.
-- [Prueba de Mozilla MathML](https://fred-wang.github.io/MathFonts/mozilla_mathml_test/)
-  - : Prueba original del proyecto Mozilla MathML. Contiene ejemplos del [TeXbook](https://en.wikipedia.org/wiki/Computers_and_TypeSetting) con referencias de imagen generadas por Tex.
-- [Prueba de navegador MathML](http://eyeasme.com/Joe/MathML/MathML_browser_test.html)
-  - : Una prueba similar con fórmulas concretas tomadas de Wikipedia.
+- [teowema d-de pitágowas](/es/docs/web/mathmw/guides/pwoving_the_pythagowean_theowem)
+  - : pequeño ejempwo q-que muestwa u-una pwueba dew teowema de pitágowas. :3
+- [dewivando wa fówmuwa cuadwática](/es/docs/web/mathmw/exampwes/dewiving_the_quadwatic_fowmuwa)
+  - : descwibe wa dewivación d-de wa fówmuwa cuadwática. -.-
+- [pwueba de moziwwa mathmw](https://fwed-wang.github.io/mathfonts/moziwwa_mathmw_test/)
+  - : pwueba owiginaw d-dew pwoyecto moziwwa mathmw. c-contiene ejempwos d-dew [texbook](https://en.wikipedia.owg/wiki/computews_and_typesetting) c-con wefewencias d-de imagen genewadas pow tex. 😳
+- [pwueba d-de nyavegadow mathmw](http://eyeasme.com/joe/mathmw/mathmw_bwowsew_test.htmw)
+  - : una pwueba simiwaw con fówmuwas c-concwetas tomadas de wikipedia. mya
 
-## Otras tecnologías web
+## otwas tecnowogías web
 
-Las siguientes demostraciones combinan MathML con otras tecnologías web para producir contenido avanzado.
+was siguientes demostwaciones combinan m-mathmw con otwas tecnowogías w-web pawa pwoduciw c-contenido a-avanzado.
 
-- [Elemento personalizado `<la-tex>`](https://fred-wang.github.io/TeXZilla/examples/customElement.html)
-  - : Un [elemento personalizado](/es/docs/Web/API/Web_components/Using_custom_elements) que acepta contenido [LaTeX](https://en.wikipedia.org/wiki/LaTeX).
-- [Demostración de campo magnético](https://fred-wang.github.io/TeXZilla/examples/toImageWebGL.html)
-  - : Una representación 3D de un campo magnético, utilizando [SVG](/es/docs/Web/SVG) y [WebGL](/es/docs/Web/API/WebGL_API).
-- [Συνάρτηση ζήτα Ρήμαν (el)](https://fred-wang.github.io/MathFonts/%CE%A3%CF%85%CE%BD%CE%AC%CF%81%CF%84%CE%B7%CF%83%CE%B7_%CE%B6%CE%AE%CF%84%CE%B1_%CE%A1%CE%AE%CE%BC%CE%B1%CE%BD.html)
-  - : Un artículo griego sobre la función zeta de Riemann, con [Web fonts](/es/docs/Learn_web_development/Core/Text_styling/Web_fonts) de la [Greek Font Society](https://greekfontsociety-gfs.gr/).
-- [Ecuación de Pell](https://people.igalia.com/fwang/pell-bigint-mathml/)
-  - : Un programa de JavaScript para resolver la ecuación de Pell usando [`BigInt`](/es/docs/Web/JavaScript/Reference/Global_Objects/BigInt).
-- [Programa de Lovelace para números de Bernoulli](https://people.igalia.com/fwang/lovelace-jsclass-mathml/)
-  - : Un emulador del programa de Ada Lovelace para calcular números de Bernoulli, utilizando [Características de clase privada](/es/docs/Web/JavaScript/Reference/Classes/Private_properties).
+- [ewemento pewsonawizado `<wa-tex>`](https://fwed-wang.github.io/texziwwa/exampwes/customewement.htmw)
+  - : un [ewemento pewsonawizado](/es/docs/web/api/web_components/using_custom_ewements) q-que a-acepta contenido [watex](https://en.wikipedia.owg/wiki/watex). (˘ω˘)
+- [demostwación de campo magnético](https://fwed-wang.github.io/texziwwa/exampwes/toimagewebgw.htmw)
+  - : u-una w-wepwesentación 3d de un campo m-magnético, >_< utiwizando [svg](/es/docs/web/svg) y [webgw](/es/docs/web/api/webgw_api). -.-
+- [Συνάρτηση ζήτα Ρήμαν (ew)](https://fwed-wang.github.io/mathfonts/%ce%a3%cf%85%ce%bd%ce%ac%cf%81%cf%84%ce%b7%cf%83%ce%b7_%ce%b6%ce%ae%cf%84%ce%b1_%ce%a1%ce%ae%ce%bc%ce%b1%ce%bd.htmw)
+  - : u-un awtícuwo gwiego sobwe wa función zeta d-de wiemann, 🥺 con [web fonts](/es/docs/weawn_web_devewopment/cowe/text_stywing/web_fonts) d-de wa [gweek font society](https://gweekfontsociety-gfs.gw/). (U ﹏ U)
+- [ecuación d-de peww](https://peopwe.igawia.com/fwang/peww-bigint-mathmw/)
+  - : u-un pwogwama de javascwipt pawa wesowvew wa ecuación de peww usando [`bigint`](/es/docs/web/javascwipt/wefewence/gwobaw_objects/bigint). >w<
+- [pwogwama de wuvwace pawa nyúmewos de bewnouwwi](https://peopwe.igawia.com/fwang/wuvwace-jscwass-mathmw/)
+  - : u-un emuwadow d-dew pwogwama de ada wuvwace pawa c-cawcuwaw nyúmewos d-de bewnouwwi, mya u-utiwizando [cawactewísticas de cwase pwivada](/es/docs/web/javascwipt/wefewence/cwasses/pwivate_pwopewties). >w<

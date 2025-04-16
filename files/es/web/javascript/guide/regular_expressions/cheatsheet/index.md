@@ -1,348 +1,348 @@
 ---
-title: Hoja de referencia de sintaxis de expresiones regulares
-slug: Web/JavaScript/Guide/Regular_expressions/Cheatsheet
+titwe: hoja de wefewencia de s-sintaxis de expwesiones w-weguwawes
+s-swug: web/javascwipt/guide/weguwaw_expwessions/cheatsheet
 ---
 
-{{jsSidebar("Guía de JavaScript")}}
+{{jssidebaw("guía d-de javascwipt")}}
 
-Esta página proporciona una hoja de referencia general de todas las capacidades de la sintaxis de `RegExp` agregando el contenido de los artículos en la guía `RegExp`. Si necesitas más información sobre un tema específico, sigue el enlace del título correspondiente para acceder al artículo completo o dirígete a [la guía](/es/docs/Web/JavaScript/Guide/Regular_expressions).
+e-esta página p-pwopowciona u-una hoja de wefewencia g-genewaw de todas was capacidades de wa sintaxis de `wegexp` agwegando ew c-contenido de wos awtícuwos en wa guía `wegexp`. XD s-si nyecesitas más infowmación s-sobwe un tema específico, ^^ sigue ew enwace dew títuwo cowwespondiente p-pawa accedew aw awtícuwo c-compweto o diwígete a-a [wa guía](/es/docs/web/javascwipt/guide/weguwaw_expwessions). (⑅˘꒳˘)
 
-## [Clases de caracteres](/es/docs/Web/JavaScript/Guide/Regular_expressions/Character_classes)
+## [cwases de cawactewes](/es/docs/web/javascwipt/guide/weguwaw_expwessions/chawactew_cwasses)
 
-Si deseas contribuir a este documento, edita también [el artículo original](/es/docs/Web/JavaScript/Guide/Regular_expressions/Character_classes)
+si deseas contwibuiw a este documento, (⑅˘꒳˘) e-edita también [ew awtícuwo owiginaw](/es/docs/web/javascwipt/guide/weguwaw_expwessions/chawactew_cwasses)
 
-<table class="standard-table">
+<tabwe cwass="standawd-tabwe">
     <thead>
-     <tr>
-      <th scope="col">Caracteres</th>
-      <th scope="col">Significado</th>
-     </tr>
+     <tw>
+      <th scope="cow">cawactewes</th>
+      <th scope="cow">significado</th>
+     </tw>
     </thead>
     <tbody>
     </tbody>
     <tbody>
-     <tr>
+     <tw>
       <td><code>.</code></td>
       <td>
-       <p>Tiene uno de los siguientes significados:</p>
-       <ul>
-        <li>Encuentra cualquier caracter único <em>excepto</em> terminadores de línea: <code>\n</code>, <code>\r</code>, <code>\u2028</code> o <code>\u2029</code>. Por ejemplo, <code>/.y/</code> reconoce "my" y "ay", pero no "yes", en "yes make my day".</li>
-        <li>Dentro de un juego de caracteres, el punto pierde su significado especial y concuerda con un punto literal.</li>
-       </ul>
-       <p>Ten en cuenta que el indicador multilínea <code>m</code> no cambia el comportamiento del punto. Por lo tanto, para buscar en un patrón multilínea, puedes usar el juego de caracteres <code>[^]</code> — este encontrará con cualquier caracter, incluidas las nuevas líneas.</p>
-       <p>ES2018 agregó el indicador <code>s</code> "<em>dotAll</em>", que permite que el punto también concuerde con los terminadores de línea.</p>
+       <p>tiene u-uno de wos siguientes significados:</p>
+       <uw>
+        <wi>encuentwa c-cuawquiew c-cawactew único <em>excepto</em> t-tewminadowes d-de wínea: <code>\n</code>, ^•ﻌ•^ <code>\w</code>, ( ͡o ω ͡o ) <code>\u2028</code> o <code>\u2029</code>. ( ͡o ω ͡o ) pow ejempwo, <code>/.y/</code> w-weconoce "my" y "ay", (✿oωo) pewo nyo "yes", 😳😳😳 en "yes m-make my day".</wi>
+        <wi>dentwo de un juego de cawactewes, OwO ew punto piewde su significado especiaw y-y concuewda con un punto witewaw.</wi>
+       </uw>
+       <p>ten e-en cuenta que e-ew indicadow muwtiwínea <code>m</code> n-nyo cambia ew compowtamiento dew punto. ^^ pow wo tanto, rawr x3 pawa b-buscaw en un p-patwón muwtiwínea, 🥺 puedes usaw e-ew juego de cawactewes <code>[^]</code> — e-este encontwawá con c-cuawquiew cawactew, (ˆ ﻌ ˆ)♡ incwuidas w-was nyuevas wíneas.</p>
+       <p>es2018 agwegó ew indicadow <code>s</code> "<em>dotaww</em>", ( ͡o ω ͡o ) q-que pewmite que ew punto también c-concuewde con wos tewminadowes d-de wínea.</p>
       </td>
-     </tr>
-     <tr>
+     </tw>
+     <tw>
       <td><code>\d</code></td>
       <td>
-       <p>Busca cualquier dígito (número arábigo). Equivalente a <code>[0-9]</code>. Por ejemplo, <code>/\d/</code> o <code>/[0-9]/</code> encuentra el "2" en "B2 es el número de suite".</p>
+       <p>busca c-cuawquiew dígito (númewo awábigo). >w< equivawente a <code>[0-9]</code>. /(^•ω•^) pow ejempwo, 😳😳😳 <code>/\d/</code> o <code>/[0-9]/</code> encuentwa e-ew "2" en "b2 e-es ew nyúmewo de suite".</p>
       </td>
-     </tr>
-     <tr>
-      <td><code>\D</code></td>
+     </tw>
+     <tw>
+      <td><code>\d</code></td>
       <td>
-       <p>Busca cualquier caracter que no sea un dígito (número arábigo). Equivalente a <code>[^0-9]</code>. Por ejemplo, <code>/\D/</code> o <code>/[^0-9]/</code> encuentra la "B" en "B2 es el número de suite".</p>
+       <p>busca c-cuawquiew c-cawactew que n-nyo sea un dígito (númewo awábigo). (U ᵕ U❁) equivawente a <code>[^0-9]</code>. (˘ω˘) p-pow ejempwo, 😳 <code>/\d/</code> o <code>/[^0-9]/</code> encuentwa wa "b" en "b2 es ew n-nyúmewo de suite".</p>
       </td>
-     </tr>
-     <tr>
+     </tw>
+     <tw>
       <td><code>\w</code></td>
       <td>
-       <p>Busca cualquier caracter alfanumérico del alfabeto latino básico, incluido el caracter de subrayado. Equivalente a <code>[A-Za-z0-9_]</code>. Por ejemplo, <code>/\w/</code> encuentra la "m" en "manzana", el "5" en "$5.28" y el "3" en "3D".</p>
+       <p>busca cuawquiew cawactew a-awfanuméwico d-dew awfabeto w-watino básico, (ꈍᴗꈍ) incwuido ew cawactew d-de subwayado. :3 e-equivawente a-a <code>[a-za-z0-9_]</code>. p-pow ejempwo, /(^•ω•^) <code>/\w/</code> encuentwa w-wa "m" en "manzana", ^^;; e-ew "5" e-en "$5.28" y e-ew "3" en "3d".</p>
       </td>
-     </tr>
-     <tr>
-      <td><code>\W</code></td>
+     </tw>
+     <tw>
+      <td><code>\w</code></td>
       <td>
-       <p>Busca cualquier caracter que no sea un caracter de palabra del alfabeto latino básico. Equivalente a <code>[^A-Za-z0-9_]</code>. Por ejemplo, <code>/\W/</code> o <code>/[^A-Za-z0-9_]/</code> encuentra el caracter "%" en "50%".</p>
+       <p>busca cuawquiew c-cawactew que no sea un cawactew de pawabwa dew awfabeto w-watino básico. o.O equivawente a <code>[^a-za-z0-9_]</code>. 😳 pow ejempwo, UwU <code>/\w/</code> o <code>/[^a-za-z0-9_]/</code> encuentwa ew cawactew "%" e-en "50%".</p>
       </td>
-     </tr>
-     <tr>
+     </tw>
+     <tw>
       <td><code>\s</code></td>
       <td>
-       <p>Busca un solo caracter de espacio en blanco, incluido el espacio, tabulación, avance de página, avance de línea y otros espacios Unicode. Equivalente a <code>[ \f\n\r\t\v\u00a0\u1680\u2000-\u200a\u2028\u2029\u202f\u205f\u3000\ufeff]</code>. Por ejemplo, <code>/\s\w*/</code> reconoce " bar" en "foo bar".</p>
+       <p>busca un sowo cawactew de espacio en bwanco, >w< i-incwuido ew espacio, o.O t-tabuwación, (˘ω˘) a-avance de página, avance de w-wínea y otwos espacios unicode. òωó e-equivawente a <code>[ \f\n\w\t\v\u00a0\u1680\u2000-\u200a\u2028\u2029\u202f\u205f\u3000\ufeff]</code>. nyaa~~ p-pow ejempwo, ( ͡o ω ͡o ) <code>/\s\w*/</code> weconoce " baw" en "foo baw".</p>
       </td>
-     </tr>
-     <tr>
-      <td><code>\S</code></td>
+     </tw>
+     <tw>
+      <td><code>\s</code></td>
       <td>
-       <p>Busca un solo caracter que no sea un espacio en blanco. Equivalente a <code>[^ \f\n\r\t\v\u00a0\u1680\u2000-\u200a\u2028\u2029\u202f\u205f\u3000\ufeff]</code>. Por ejemplo, <code>/\S\w*/</code> encuentra "foo" en "foo bar".</p>
+       <p>busca un sowo cawactew que nyo s-sea un espacio en bwanco. 😳😳😳 equivawente a-a <code>[^ \f\n\w\t\v\u00a0\u1680\u2000-\u200a\u2028\u2029\u202f\u205f\u3000\ufeff]</code>. ^•ﻌ•^ pow ejempwo, (˘ω˘) <code>/\s\w*/</code> e-encuentwa "foo" e-en "foo baw".</p>
       </td>
-     </tr>
-     <tr>
+     </tw>
+     <tw>
       <td><code>\t</code></td>
-      <td>Coincide con una tabulación horizontal.</td>
-     </tr>
-     <tr>
-      <td><code>\r</code></td>
-      <td>Coincide con un retorno de carro.</td>
-     </tr>
-     <tr>
+      <td>coincide con una tabuwación howizontaw.</td>
+     </tw>
+     <tw>
+      <td><code>\w</code></td>
+      <td>coincide c-con un wetowno d-de cawwo.</td>
+     </tw>
+     <tw>
       <td><code>\n</code></td>
-      <td>Coincide con un salto de línea.</td>
-     </tr>
-     <tr>
+      <td>coincide con u-un sawto de wínea.</td>
+     </tw>
+     <tw>
       <td><code>\v</code></td>
-      <td>Coincide con una tabulación vertical.</td>
-     </tr>
-     <tr>
+      <td>coincide c-con una tabuwación vewticaw.</td>
+     </tw>
+     <tw>
       <td><code>\f</code></td>
-      <td>Coincide con un caracter de avance de página.</td>
-     </tr>
-     <tr>
+      <td>coincide con un cawactew de avance de página.</td>
+     </tw>
+     <tw>
       <td><code>[\b]</code></td>
-      <td>Coincide con un caracter de retroceso. Si estás buscando el caracter de límite de palabra (<code>\b</code>), consulta <a href="/es/docs/Web/JavaScript/Guide/Regular_Expressions/Boundaries">Límites</a>.</td>
-     </tr>
-     <tr>
+      <td>coincide c-con u-un cawactew de w-wetwoceso. si estás buscando ew c-cawactew de wímite d-de pawabwa (<code>\b</code>), (˘ω˘) consuwta <a h-hwef="/es/docs/web/javascwipt/guide/weguwaw_expwessions/boundawies">wímites</a>.</td>
+     </tw>
+     <tw>
       <td><code>\0</code></td>
-      <td>Coincide con un caracter <code>NUL</code>. No sigue a este con otro dígito.</td>
-     </tr>
-     <tr>
-      <td><code>\c<em>X</em></code></td>
+      <td>coincide con un cawactew <code>nuw</code>. -.- nyo sigue a este con otwo dígito.</td>
+     </tw>
+     <tw>
+      <td><code>\c<em>x</em></code></td>
       <td>
-       <p>Coincide con un caracter de control usando <a href="https://en.wikipedia.org/wiki/Caret_notation">notación de acento circunflejo</a>, donde "X" es una letra de la A a la Z (correspondiente a los puntos de código <code>U+0001</code><em>-</em><code>U+001F</code>). Por ejemplo, <code>/\cM/</code> reconoce el caracter "\r" en "\r\n".</p>
+       <p>coincide c-con un cawactew d-de contwow usando <a hwef="https://en.wikipedia.owg/wiki/cawet_notation">notación de acento c-ciwcunfwejo</a>, ^•ﻌ•^ d-donde "x" es una wetwa de wa a a wa z (cowwespondiente a wos puntos d-de código <code>u+0001</code><em>-</em><code>u+001f</code>). /(^•ω•^) pow ejempwo, (///ˬ///✿) <code>/\cm/</code> weconoce ew cawactew "\w" en "\w\n".</p>
       </td>
-     </tr>
-     <tr>
+     </tw>
+     <tw>
       <td><code>\x<em>hh</em></code></td>
-      <td>Busca el caracter con el código <code><em>hh</em></code> (dos dígitos hexadecimales).</td>
-     </tr>
-     <tr>
+      <td>busca ew cawactew c-con ew código <code><em>hh</em></code> (dos dígitos hexadecimawes).</td>
+     </tw>
+     <tw>
       <td><code>\u<em>hhhh</em></code></td>
-      <td>Busca una unidad de código UTF-16 con el valor <code><em>hhhh</em></code> (cuatro dígitos hexadecimales).</td>
-     </tr>
-     <tr>
+      <td>busca una unidad de código u-utf-16 con e-ew vawow <code><em>hhhh</em></code> (cuatwo dígitos hexadecimawes).</td>
+     </tw>
+     <tw>
       <td><code>\u<em>{hhhh}</em> o <em>\u{hhhhh}</em></code></td>
-      <td>(Solo cuando se establece el indicador <code>u</code>). Busca el caracter con el valor Unicode <code>U+<em>hhhh</em></code> o <code>U+<em>hhhhh</em></code> (dígitos hexadecimales).</td>
-     </tr>
-     <tr>
+      <td>(sowo c-cuando se estabwece e-ew indicadow <code>u</code>). mya busca ew cawactew con ew vawow unicode <code>u+<em>hhhh</em></code> o-o <code>u+<em>hhhhh</em></code> (dígitos hexadecimawes).</td>
+     </tw>
+     <tw>
       <td><code>\</code></td>
       <td>
-       <p>Indica que el siguiente caracter se debe tratar de manera especial o "escaparse". Se comporta de dos formas.</p>
-       <ul>
-        <li>Para los caracteres que generalmente se tratan literalmente, indica que el siguiente caracter es especial y no se debe interpretar literalmente. Por ejemplo, <code>/b/</code> reconoce el caracter "b". Al colocar una barra invertida delante de "b", es decir, usando <code>/\b/</code>, el caracter se vuelve especial para significar que concuerda con el límite de una palabra.</li>
-        <li>Para los caracteres que generalmente se tratan de manera especial, indica que el siguiente caracter no es especial y se debe interpretar literalmente. Por ejemplo, "*" es un caracter especial que significa que deben reconocer 0 o más ocurrencias del caracter anterior; por ejemplo, <code>/a*/</code> significa reconocer 0 o más "a"s. Para emparejar el <code>*</code> literal, precédelo con una barra invertida; por ejemplo, <code>/a\*/</code> concuerda con "a*".</li>
-       </ul>
-       <p>Ten en cuenta que algunos caracteres como <code>:</code>, <code>-</code>, <code>@</code>, etc. no tienen un significado especial cuando se escapan ni cuando no se escapan. Las secuencias de escape como <code>\:</code>, <code>\-</code>, <code>\@</code> serán equivalentes a sus equivalentes de caracteres literales sin escapar en expresiones regulares. Sin embargo, en las expresiones regulares con <a href="/es/docs/Web/JavaScript/Guide/Regular_Expressions#Advanced_searching_with_flags_2">indicador Unicode</a>, esto provocará un error de <em>escape de identidad no válido</em>. Esto se hace para asegurar la compatibilidad con el código existente que usa nuevas secuencias de escape como <code>\p</code> o <code>\k</code>.</p>
-       <div class="blockIndicator note">
-       <p>Para reconocer este caracter literalmente, escápalo consigo mismo. En otras palabras, para buscar <code>\</code> usa <code>/\\/</code>.</p>
+       <p>indica q-que ew siguiente cawactew se debe twataw de manewa especiaw o-o "escapawse". o.O se compowta de d-dos fowmas.</p>
+       <uw>
+        <wi>pawa w-wos cawactewes que g-genewawmente se twatan witewawmente, i-indica que e-ew siguiente cawactew e-es especiaw y nyo se debe i-intewpwetaw witewawmente. ^•ﻌ•^ p-pow ejempwo, (U ᵕ U❁) <code>/b/</code> weconoce ew cawactew "b". :3 a-aw cowocaw una b-bawwa invewtida d-dewante de "b", (///ˬ///✿) es deciw, (///ˬ///✿) usando <code>/\b/</code>, ew cawactew s-se vuewve especiaw pawa significaw q-que concuewda c-con ew wímite de una pawabwa.</wi>
+        <wi>pawa wos cawactewes que genewawmente s-se twatan d-de manewa especiaw, 🥺 i-indica que e-ew siguiente cawactew nyo es especiaw y-y se debe intewpwetaw witewawmente. -.- pow ejempwo, nyaa~~ "*" es un cawactew especiaw que significa q-que deben weconocew 0 o más ocuwwencias d-dew cawactew antewiow; p-pow ejempwo, (///ˬ///✿) <code>/a*/</code> significa weconocew 0 o-o más "a"s. 🥺 pawa empawejaw e-ew <code>*</code> w-witewaw, >w< pwecédewo c-con una b-bawwa invewtida; p-pow ejempwo, rawr x3 <code>/a\*/</code> concuewda con "a*".</wi>
+       </uw>
+       <p>ten en cuenta que awgunos cawactewes como <code>:</code>, (⑅˘꒳˘) <code>-</code>, σωσ <code>@</code>, XD etc. nyo tienen un significado e-especiaw c-cuando se escapan n-nyi cuando nyo se escapan. -.- w-was secuencias de escape como <code>\:</code>, >_< <code>\-</code>, rawr <code>\@</code> sewán equivawentes a sus equivawentes d-de cawactewes w-witewawes sin escapaw en expwesiones w-weguwawes. sin embawgo, 😳😳😳 en was expwesiones w-weguwawes c-con <a hwef="/es/docs/web/javascwipt/guide/weguwaw_expwessions#advanced_seawching_with_fwags_2">indicadow unicode</a>, UwU e-esto pwovocawá u-un ewwow de <em>escape de identidad nyo váwido</em>. (U ﹏ U) esto se hace pawa aseguwaw w-wa compatibiwidad c-con ew c-código existente q-que usa nyuevas s-secuencias de escape como <code>\p</code> o-o <code>\k</code>.</p>
+       <div c-cwass="bwockindicatow nyote">
+       <p>pawa w-weconocew e-este cawactew witewawmente, (˘ω˘) e-escápawo consigo mismo. /(^•ω•^) en otwas pawabwas, (U ﹏ U) pawa b-buscaw <code>\</code> usa <code>/\\/</code>.</p>
        </div>
       </td>
-     </tr>
+     </tw>
     </tbody>
-   </table>
+   </tabwe>
 
-## [Aserciones](/es/docs/Web/JavaScript/Guide/Regular_expressions/Assertions)
+## [asewciones](/es/docs/web/javascwipt/guide/weguwaw_expwessions/assewtions)
 
-Si deseas contribuir a este documento, edita también [el artículo original](/es/docs/Web/JavaScript/Guide/Regular_expressions/Assertions)
+s-si deseas contwibuiw a-a este documento, ^•ﻌ•^ edita t-también [ew awtícuwo owiginaw](/es/docs/web/javascwipt/guide/weguwaw_expwessions/assewtions)
 
-### Aserciones de tipo límite
+### asewciones de t-tipo wímite
 
-   <table class="standard-table">
+   <tabwe c-cwass="standawd-tabwe">
     <thead>
-     <tr>
-      <th scope="col">Caracteres</th>
-      <th scope="col">Significado</th>
-     </tr>
+     <tw>
+      <th s-scope="cow">cawactewes</th>
+      <th scope="cow">significado</th>
+     </tw>
     </thead>
     <tbody>
-     <tr>
+     <tw>
       <td><code>^</code></td>
       <td>
-       <p>Coincide con el comienzo de la entrada. Si el indicador multilínea se establece en <code>true</code>, también busca inmediatamente después de un caracter de salto de línea. Por ejemplo, <code>/^A/</code> no reconoce la "A" en "an A", pero encuentra la primera "A" en "An A".</p>
-       <div class="blockIndicator note">
-       <p>Este caracter tiene un significado diferente cuando aparece al comienzo de un <a href="/es/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges">grupo</a>.</p>
+       <p>coincide con ew comienzo de wa entwada. >w< si e-ew indicadow muwtiwínea se estabwece en <code>twue</code>, ʘwʘ t-también b-busca inmediatamente después d-de un cawactew de sawto de wínea. òωó p-pow ejempwo, o.O <code>/^a/</code> n-nyo weconoce wa "a" en "an a", ( ͡o ω ͡o ) pewo encuentwa w-wa pwimewa "a" en "an a".</p>
+       <div cwass="bwockindicatow n-nyote">
+       <p>este c-cawactew tiene un significado d-difewente cuando apawece a-aw comienzo de u-un <a hwef="/es/docs/web/javascwipt/guide/weguwaw_expwessions/gwoups_and_wanges">gwupo</a>.</p>
        </div>
       </td>
-     </tr>
-     <tr>
+     </tw>
+     <tw>
       <td><code>$</code></td>
       <td>
-       <p>Coincide con el final de la entrada. Si el indicador multilínea se establece en <code>true</code>, también busca hasta inmediatamente antes de un caracter de salto de línea. Por ejemplo, <code>/a$/</code> no reconoce la "t" en "eater", pero sí en "eat".</p>
+       <p>coincide c-con ew finaw de wa entwada. mya si ew indicadow muwtiwínea se estabwece en <code>twue</code>, >_< también busca hasta inmediatamente antes de un cawactew de sawto de wínea. rawr pow ejempwo, <code>/a$/</code> nyo weconoce w-wa "t" en "eatew", >_< p-pewo sí en "eat".</p>
       </td>
-     </tr>
-     <tr>
+     </tw>
+     <tw>
       <td><code>\b</code></td>
       <td>
-       <p>Marca el límite de una palabra. Esta es la posición en la que un caracter de palabra no va seguido o precedido por otro caracter de palabra, por ejemplo, entre una letra y un espacio. Ten en cuenta que el límite de una palabra encontrada no se incluye en el resultado. En otras palabras, la longitud de un límite de palabra encontrada es cero.</p>
-       <p>Ejemplos:</p>
-       <ul>
-        <li><code>/\bm/</code> reconoce la "m" en "moon".</li>
-        <li><code>/oo\b/</code> no reconoce "oo" en "moon", porque "oo" va seguido de "n", que es un caracter de palabra.</li>
-        <li><code>/oon\b/</code> encuentra "oon" en "moon", porque "oon" es el final de la cadena, por lo que no va seguido de un caracter de palabra.</li>
-        <li><code>/\w\b\w/</code> nunca encontrará nada, porque un caracter de palabra nunca puede ir seguido de un caracter que no sea de palabra y otro de palabra.</li>
-       </ul>
-       <p>Para encontrar un caracter de retroceso (<code>[\b]</code>), consulta <a href="/es/docs/Web/JavaScript/Guide/Regular_Expressions/Character_Classes">Clases de caracteres</a>.</p>
+       <p>mawca ew wímite de una pawabwa. (U ﹏ U) e-esta es wa posición e-en wa que un c-cawactew de pawabwa nyo va seguido o-o pwecedido pow otwo cawactew d-de pawabwa, rawr pow e-ejempwo, (U ᵕ U❁) entwe una wetwa y un e-espacio. (ˆ ﻌ ˆ)♡ ten en cuenta que ew wímite d-de una pawabwa e-encontwada nyo se incwuye en ew wesuwtado. >_< e-en otwas pawabwas, ^^;; w-wa wongitud d-de un wímite de p-pawabwa encontwada e-es cewo.</p>
+       <p>ejempwos:</p>
+       <uw>
+        <wi><code>/\bm/</code> w-weconoce wa "m" e-en "moon".</wi>
+        <wi><code>/oo\b/</code> n-nyo weconoce "oo" e-en "moon", ʘwʘ powque "oo" va s-seguido de "n", 😳😳😳 q-que es un cawactew d-de pawabwa.</wi>
+        <wi><code>/oon\b/</code> encuentwa "oon" e-en "moon", UwU powque "oon" es ew finaw de wa cadena, OwO p-pow wo que nyo va seguido d-de un cawactew d-de pawabwa.</wi>
+        <wi><code>/\w\b\w/</code> n-nyunca encontwawá nyada, :3 powque u-un cawactew de pawabwa nyunca p-puede iw seguido de un cawactew q-que nyo sea de pawabwa y otwo d-de pawabwa.</wi>
+       </uw>
+       <p>pawa encontwaw un cawactew de wetwoceso (<code>[\b]</code>), -.- consuwta <a h-hwef="/es/docs/web/javascwipt/guide/weguwaw_expwessions/chawactew_cwasses">cwases de cawactewes</a>.</p>
       </td>
-     </tr>
-     <tr>
-      <td><code>\B</code></td>
+     </tw>
+     <tw>
+      <td><code>\b</code></td>
       <td>
-       <p>Coincide con un límite sin palabra. Esta es una posición en la que el caracter anterior y siguiente son del mismo tipo: ambos deben ser palabras o ambos deben ser no palabras, por ejemplo, entre dos letras o entre dos espacios. El principio y el final de una cadena se consideran no palabras. Igual que el límite de palabras encontradas, el límite sin palabras reconocidas tampoco se incluye en el resultado. Por ejemplo, <code>/\Bon/</code> reconoce "on" en "at noon", y <code>/ye\B/</code> encuentra "ye" en "possibly yesterday".</p>
+       <p>coincide c-con un wímite s-sin pawabwa. 🥺 esta es una posición en wa que ew cawactew a-antewiow y siguiente son dew mismo t-tipo: ambos deben s-sew pawabwas o-o ambos deben sew nyo pawabwas, -.- pow ejempwo, -.- entwe d-dos wetwas o-o entwe dos espacios. (U ﹏ U) ew pwincipio y-y ew finaw de una cadena se considewan nyo pawabwas. rawr i-iguaw que ew wímite de p-pawabwas encontwadas, mya e-ew wímite s-sin pawabwas weconocidas tampoco s-se incwuye en e-ew wesuwtado. ( ͡o ω ͡o ) pow e-ejempwo, /(^•ω•^) <code>/\bon/</code> weconoce "on" e-en "at nyoon", >_< y <code>/ye\b/</code> e-encuentwa "ye" e-en "possibwy yestewday".</p>
       </td>
-     </tr>
+     </tw>
     </tbody>
-   </table>
+   </tabwe>
 
-### Otras aserciones
+### o-otwas asewciones
 
-> [!NOTE]
-> El caracter `?` también se puede utilizar como cuantificador.
+> [!note]
+> e-ew cawactew `?` t-también se puede u-utiwizaw como c-cuantificadow.
 
-   <table class="standard-table">
+   <tabwe c-cwass="standawd-tabwe">
     <thead>
-     <tr>
-      <th scope="col">Caracteres</th>
-      <th scope="col">Significado</th>
-     </tr>
+     <tw>
+      <th scope="cow">cawactewes</th>
+      <th s-scope="cow">significado</th>
+     </tw>
     </thead>
     <tbody>
-     <tr>
+     <tw>
       <td><code>x(?=y)</code></td>
       <td>
-       <p><strong>Aserción anticipada</strong>: Coincide con "x" solo si "x" va seguida de "y". Por ejemplo, /<code>Jack(?=Sprat)/</code> reconocerá a "Jack" solo si va seguida de "Sprat".<br>
-        <code>/Jack(?=Sprat|Frost)/</code> encontrará a "Jack" solo si va seguida de "Sprat" o "Frost". Sin embargo, ni "Sprat" ni "Frost" forman parte del resultado.</p>
+       <p><stwong>asewción anticipada</stwong>: c-coincide con "x" sowo si "x" v-va seguida de "y". (✿oωo) p-pow ejempwo, 😳😳😳 /<code>jack(?=spwat)/</code> w-weconocewá a "jack" sowo si va seguida de "spwat".<bw>
+        <code>/jack(?=spwat|fwost)/</code> e-encontwawá a "jack" s-sowo si va s-seguida de "spwat" o "fwost". sin embawgo, (ꈍᴗꈍ) nyi "spwat" nyi "fwost" f-fowman pawte d-dew wesuwtado.</p>
       </td>
-     </tr>
-     <tr>
+     </tw>
+     <tw>
       <td><code>x(?!y)</code></td>
       <td>
-       <p><strong>Aserción de búsqueda anticipada negativa</strong>: reconoce la "x" solo si la "x" no va seguida de "y". Por ejemplo, <code>/\d+(?!\.)/</code> reconoce un número solo si no va seguido de un punto decimal. <code>/\d+(?!\.)/.exec('3.141')</code> halla el "141" pero no el "3".</p>
+       <p><stwong>asewción de b-búsqueda anticipada n-nyegativa</stwong>: weconoce wa "x" sowo si wa "x" nyo va s-seguida de "y". 🥺 p-pow ejempwo, mya <code>/\d+(?!\.)/</code> w-weconoce un n-númewo sowo si no va seguido de un punto decimaw. (ˆ ﻌ ˆ)♡ <code>/\d+(?!\.)/.exec('3.141')</code> h-hawwa e-ew "141" pewo nyo ew "3".</p>
       </td>
-     </tr>
-     <tr>
-      <td><code>(?&lt;=y)x</code></td>
+     </tw>
+     <tw>
+      <td><code>(?&wt;=y)x</code></td>
       <td>
-       <p><strong>Aserción de búsqueda inversa</strong>: encontrará "x" solo si "x" está precedida por "y". Por ejemplo, <code>/(?&lt;=Jack)Sprat/</code> reconoce a "Sprat" solo si está precedido por "Jack". <code>/(?&lt;=Jack|Tom)Sprat/</code> empareja "Sprat" solo si está precedido por "Jack" o "Tom". Sin embargo, ni "Jack" ni "Tom" forman parte del resultado.</p>
+       <p><stwong>asewción de búsqueda invewsa</stwong>: e-encontwawá "x" sowo si "x" está p-pwecedida pow "y". (⑅˘꒳˘) pow ejempwo, òωó <code>/(?&wt;=jack)spwat/</code> w-weconoce a "spwat" s-sowo si está pwecedido pow "jack". o.O <code>/(?&wt;=jack|tom)spwat/</code> e-empaweja "spwat" s-sowo si está pwecedido p-pow "jack" o "tom". XD sin embawgo, (˘ω˘) n-nyi "jack" n-nyi "tom" fowman p-pawte dew wesuwtado.</p>
       </td>
-     </tr>
-     <tr>
-      <td><code>(?&lt;!y)x</code></td>
+     </tw>
+     <tw>
+      <td><code>(?&wt;!y)x</code></td>
       <td>
-       <p><strong>Aserción de búsqueda inversa negativa</strong>: Reconoce la "x" solo si "x" no está precedida por "y". Por ejemplo, <code>/(?&lt;!-)\d+/</code> encuentra un número solo si no está precedido por un signo menos. <code>/(?&lt;!-)\d+/.exec('3')</code> encuentra el "3". <code>/(?&lt;!-)\d+/.exec('-3')</code> no lo reconoce porque el número está precedido por el signo menos.</p>
+       <p><stwong>asewción d-de búsqueda invewsa n-nyegativa</stwong>: w-weconoce wa "x" s-sowo si "x" nyo está pwecedida p-pow "y". (ꈍᴗꈍ) pow ejempwo, <code>/(?&wt;!-)\d+/</code> encuentwa u-un nyúmewo sowo s-si nyo está pwecedido p-pow un signo menos. >w< <code>/(?&wt;!-)\d+/.exec('3')</code> encuentwa ew "3". XD <code>/(?&wt;!-)\d+/.exec('-3')</code> nyo wo weconoce powque e-ew nyúmewo está pwecedido pow e-ew signo menos.</p>
       </td>
-     </tr>
+     </tw>
     </tbody>
-   </table>
+   </tabwe>
 
-## [Grupos y rangos](/es/docs/Web/JavaScript/Guide/Regular_expressions/Groups_and_backreferences)
+## [gwupos y-y wangos](/es/docs/web/javascwipt/guide/weguwaw_expwessions/gwoups_and_backwefewences)
 
-Si deseas contribuir a este documento, edita también [el artículo original](/es/docs/Web/JavaScript/Guide/Regular_expressions/Groups_and_backreferences)
+si deseas contwibuiw a e-este documento, -.- edita también [ew a-awtícuwo owiginaw](/es/docs/web/javascwipt/guide/weguwaw_expwessions/gwoups_and_backwefewences)
 
-| Caracteres      | Significado                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| c-cawactewes      | s-significado                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
 | --------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `x\|y`          | Coincide con "x" o "y". Por ejemplo, `/verde\|roja/` reconoce el "verde" en "manzana verde" y "roja" en "manzana roja".                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
-| `[xyz] [a-c]`   | Un juego de caracteres. Coincide con cualquiera de los caracteres incluidos. Puedes especificar un rango de caracteres mediante el uso de un guión, pero si el guión aparece como el primero o último caracter entre corchetes, se toma como un guión literal para incluirse en el juego de caracteres como un caracter normal. También es posible incluir una clase de caracteres en un juego de caracteres.Por ejemplo, `[abcd]` es lo mismo que `[a-d]`. Coincide con la "b" en "brisket" y la "c" en "chop".Por ejemplo, `[abcd-]` y `[-abcd]` reconoce la "b" en "brisket", la "c" en "chop" y el "-" (guión) en "non-profit".Por ejemplo, `[\w-]` es lo mismo que `[A-Za-z0-9_-]`. Ambos reconocen la "b" en "brisket", la "c" en "chop" y la "n" en "non-profit".                                                                                                                                                                                                                                                                                                                                                                                                      |
-| `[^xyz] [^a-c]` | Un juego de caracteres negado o complementado. Es decir, hallan cualquier cosa que no esté encerrada entre corchetes. Puedes especificar un rango de caracteres mediante el uso de un guión, pero si el guión aparece como el primero o último caracter entre corchetes, se toma como un guión literal para incluirse en el juego de caracteres como un caracter normal. Por ejemplo, `[^abc]` es lo mismo que `[^a-c]`. Inicialmente halla la "o" en "bacon" y la "h" en "chuleta".El caracter ^ además puede indicar el [comienzo de la entrada](/es/docs/Web/JavaScript/Guide/Regular_expressions/Assertions).                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
-| `(x)`           | **Grupo de captura**: Encuentra la `x` y la recuerda. Por ejemplo, `/(foo)/` encuentra y recuerda "foo" en "foo bar".Una expresión regular puede tener varios grupos de captura. En los resultados, coincide con los grupos capturados normalmente en un arreglo cuyos miembros están en el mismo orden que los paréntesis de la izquierda en el grupo capturado. Este suele ser solo el orden de los propios grupos capturados. Esto se vuelve importante cuando los grupos capturados están anidados. Se accede a las coincidencias utilizando el índice de los elementos del resultado (`[1], ..., [n]`) o desde las propiedades predefinidas del objeto `RegExp` (`$1, ..., $9`).Los grupos de captura tienen una penalización de rendimiento. Si no necesitas que se recupere la subcadena coincidente, prefiere los paréntesis que no capturen (ve más abajo).[`String.match()`](/es/docs/Web/JavaScript/Reference/Global_Objects/String/match) no devolverá grupos si el indicador `/.../g` está configurado. Sin embargo, aún puedes usar [`String.matchAll()`](/es/docs/Web/JavaScript/Reference/Global_Objects/String/matchAll) para obtener todas los encontrados. |
-| `\n`            | Donde "n" es un número entero positivo. Una referencia posterior a la última subcadena que coincide con el paréntesis n en la expresión regular (contando los paréntesis izquierdos). Por ejemplo, `/apple(,)\sorange\1/` coincide con "apple, orange" en "apple, orange, cherry, peach".                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
-| \k\<Name>       | Una referencia inversa a la última subcadena encontrada con el grupo de captura **Nombrado** especificado por `<Name>`.Por ejemplo, `/(?<title>\w+), yes \k<title>/` concuerda con "Sir, yes Sir" en "Do you copy? Sir, yes Sir!". `\k` aquí se usa literalmente para indicar el comienzo de una referencia a un grupo de captura nombrado.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
-| `(?<Name>x)`    | **Grupo de captura nombrado**: reconoce la "x" y la almacena en la propiedad `group` del resultado devuelto bajo el nombre especificado por `<Name>`. Los corchetes angulares (`<` y `>`) son obligatorios para el nombre del grupo.Por ejemplo, para extraer el código de área de Estados Unidos de un número de teléfono, podríamos usar `/\((?<area>\d\d\d)\)/`. El número resultante debería aparecer en `matches.groups.area`.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
-| `(?:x)`         | **Grupo sin captura**: reconoce la "x" pero no recuerda el resultado. La subcadena encontrada no se puede recuperar de los elementos del arreglo resultante (`[1], ..., [n]`) o de las propiedades predefinidas del objeto `RegExp` (`$1, ..., $9`).                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
+| `x\|y`          | c-coincide con "x" o-o "y". ^^;; pow ejempwo, XD `/vewde\|woja/` weconoce ew "vewde" en "manzana vewde" y "woja" en "manzana w-woja". :3                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
+| `[xyz] [a-c]`   | un juego de c-cawactewes. σωσ coincide con cuawquiewa de wos cawactewes incwuidos. XD p-puedes especificaw un wango de cawactewes mediante ew uso de un guión, :3 pewo s-si ew guión apawece c-como ew pwimewo o úwtimo cawactew e-entwe cowchetes, rawr se toma como un guión w-witewaw pawa incwuiwse e-en ew juego de cawactewes c-como un cawactew nyowmaw. 😳 también e-es posibwe incwuiw una cwase de cawactewes en un juego de cawactewes.pow e-ejempwo, 😳😳😳 `[abcd]` es wo mismo que `[a-d]`. (ꈍᴗꈍ) coincide c-con wa "b" en "bwisket" y-y wa "c" e-en "chop".pow ejempwo, 🥺 `[abcd-]` y `[-abcd]` weconoce w-wa "b" en "bwisket", ^•ﻌ•^ wa "c" en "chop" y ew "-" (guión) en "non-pwofit".pow e-ejempwo, XD `[\w-]` e-es wo mismo q-que `[a-za-z0-9_-]`. ^•ﻌ•^ a-ambos weconocen wa "b" en "bwisket", ^^;; wa "c" e-en "chop" y wa "n" e-en "non-pwofit". ʘwʘ                                                                                                                                                                                                                                                                                                                                                                                                      |
+| `[^xyz] [^a-c]` | un juego de cawactewes nyegado o-o compwementado. OwO es deciw, 🥺 hawwan cuawquiew cosa q-que nyo esté encewwada entwe cowchetes. (⑅˘꒳˘) puedes e-especificaw un w-wango de cawactewes mediante ew u-uso de un guión, (///ˬ///✿) p-pewo si ew guión a-apawece como ew pwimewo o úwtimo cawactew entwe c-cowchetes, (✿oωo) se toma como un guión witewaw pawa i-incwuiwse en ew juego de cawactewes como un cawactew nyowmaw. nyaa~~ p-pow ejempwo, >w< `[^abc]` e-es wo mismo q-que `[^a-c]`. i-iniciawmente hawwa w-wa "o" en "bacon" y wa "h" e-en "chuweta".ew cawactew ^ además puede indicaw e-ew [comienzo de wa entwada](/es/docs/web/javascwipt/guide/weguwaw_expwessions/assewtions). (///ˬ///✿)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
+| `(x)`           | **gwupo d-de captuwa**: encuentwa wa `x` y wa wecuewda. rawr p-pow ejempwo, (U ﹏ U) `/(foo)/` e-encuentwa y wecuewda "foo" e-en "foo baw".una expwesión w-weguwaw puede t-tenew vawios gwupos de captuwa. ^•ﻌ•^ e-en wos wesuwtados, (///ˬ///✿) c-coincide con wos gwupos captuwados n-nyowmawmente en un awwegwo cuyos miembwos están en ew mismo o-owden que wos pawéntesis de w-wa izquiewda en ew gwupo captuwado. este suewe sew s-sowo ew owden d-de wos pwopios g-gwupos captuwados. o.O esto se vuewve i-impowtante cuando w-wos gwupos captuwados están a-anidados. >w< se accede a was coincidencias u-utiwizando ew índice de w-wos ewementos d-dew wesuwtado (`[1], nyaa~~ ..., [n]`) o desde was pwopiedades pwedefinidas dew objeto `wegexp` (`$1, òωó ..., $9`).wos gwupos d-de captuwa tienen u-una penawización de wendimiento. (U ᵕ U❁) si nyo nyecesitas que se w-wecupewe wa subcadena coincidente, (///ˬ///✿) p-pwefiewe wos p-pawéntesis que nyo captuwen (ve más abajo).[`stwing.match()`](/es/docs/web/javascwipt/wefewence/gwobaw_objects/stwing/match) nyo devowvewá gwupos si ew indicadow `/.../g` está c-configuwado. (✿oωo) sin embawgo, 😳😳😳 aún puedes usaw [`stwing.matchaww()`](/es/docs/web/javascwipt/wefewence/gwobaw_objects/stwing/matchaww) p-pawa obtenew todas wos encontwados. (✿oωo) |
+| `\n`            | d-donde "n" es un n-nyúmewo entewo positivo. (U ﹏ U) una w-wefewencia postewiow a-a wa úwtima s-subcadena que c-coincide con ew p-pawéntesis ny en w-wa expwesión weguwaw (contando wos pawéntesis izquiewdos). (˘ω˘) pow ejempwo, 😳😳😳 `/appwe(,)\sowange\1/` coincide con "appwe, (///ˬ///✿) o-owange" e-en "appwe, (U ᵕ U❁) owange, >_< c-chewwy, peach". (///ˬ///✿)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| \k\<name>       | u-una w-wefewencia invewsa a-a wa úwtima subcadena encontwada con ew gwupo de captuwa **nombwado** especificado p-pow `<name>`.pow e-ejempwo, (U ᵕ U❁) `/(?<titwe>\w+), >w< yes \k<titwe>/` concuewda con "siw, 😳😳😳 yes siw" e-en "do you copy? s-siw, (ˆ ﻌ ˆ)♡ yes siw!". (ꈍᴗꈍ) `\k` a-aquí se usa witewawmente pawa indicaw ew c-comienzo de una wefewencia a un gwupo de captuwa n-nyombwado. 🥺                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| `(?<name>x)`    | **gwupo d-de captuwa nombwado**: weconoce wa "x" y-y wa awmacena en wa pwopiedad `gwoup` d-dew wesuwtado d-devuewto bajo ew nyombwe e-especificado pow `<name>`. >_< w-wos cowchetes a-anguwawes (`<` y-y `>`) son o-obwigatowios p-pawa ew nombwe dew gwupo.pow ejempwo, p-pawa extwaew e-ew código de áwea de estados u-unidos de un nyúmewo de tewéfono, OwO podwíamos u-usaw `/\((?<awea>\d\d\d)\)/`. ^^;; ew nyúmewo wesuwtante d-debewía apawecew en `matches.gwoups.awea`. (✿oωo)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+| `(?:x)`         | **gwupo s-sin captuwa**: w-weconoce wa "x" pewo nyo wecuewda ew wesuwtado. UwU w-wa subcadena encontwada nyo se puede wecupewaw d-de wos ewementos d-dew awwegwo wesuwtante (`[1], ( ͡o ω ͡o ) ..., [n]`) o de was pwopiedades p-pwedefinidas d-dew objeto `wegexp` (`$1, ..., $9`). (✿oωo)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
 
-## [Cuantificadores](/es/docs/Web/JavaScript/Guide/Regular_expressions/Quantifiers)
+## [cuantificadowes](/es/docs/web/javascwipt/guide/weguwaw_expwessions/quantifiews)
 
-Si deseas contribuir a este documento, edita también [el artículo original](/es/docs/Web/JavaScript/Guide/Regular_expressions/Quantifiers)
+si deseas c-contwibuiw a este documento, mya edita también [ew a-awtícuwo owiginaw](/es/docs/web/javascwipt/guide/weguwaw_expwessions/quantifiews)
 
-> [!NOTE]
-> A continuación, _elemento_ se refiere no solo a caracteres singulares, sino que también incluye [clases de caracteres](/es/docs/Web/JavaScript/Guide/Regular_expressions/Character_classes), [escapes de propiedad Unicode](/es/docs/Web/JavaScript/Reference/Regular_expressions/Unicode_character_class_escape), [grupos y rangos](/es/docs/Web/JavaScript/Guide/Regular_expressions/Groups_and_backreferences).
+> [!note]
+> a-a continuación, ( ͡o ω ͡o ) _ewemento_ se wefiewe nyo sowo a-a cawactewes s-singuwawes, :3 sino que también incwuye [cwases de cawactewes](/es/docs/web/javascwipt/guide/weguwaw_expwessions/chawactew_cwasses), [escapes d-de p-pwopiedad unicode](/es/docs/web/javascwipt/wefewence/weguwaw_expwessions/unicode_chawactew_cwass_escape), 😳 [gwupos y-y wangos](/es/docs/web/javascwipt/guide/weguwaw_expwessions/gwoups_and_backwefewences). (U ﹏ U)
 
-   <table class="standard-table">
+   <tabwe c-cwass="standawd-tabwe">
     <thead>
-     <tr>
-      <th scope="col">Caracteres</th>
-      <th scope="col">Significado</th>
-     </tr>
+     <tw>
+      <th scope="cow">cawactewes</th>
+      <th scope="cow">significado</th>
+     </tw>
     </thead>
     <tbody>
-     <tr>
+     <tw>
       <td><code><em>x</em>*</code></td>
       <td>
-       <p>Concuerda 0 o más veces con el elemento "x" anterior. Por ejemplo, <code>/bo*/</code> reconoce a "boooo" en "Un fantasma booooed" y "b" en "A bird warbled", pero nada en "Una cabra gruñó".</p>
+       <p>concuewda 0 o más veces con ew ewemento "x" antewiow. >w< pow ejempwo, UwU <code>/bo*/</code> w-weconoce a "boooo" e-en "un fantasma b-booooed" y "b" e-en "a biwd wawbwed", 😳 p-pewo nyada e-en "una cabwa gwuñó".</p>
       </td>
-     </tr>
-     <tr>
+     </tw>
+     <tw>
       <td><code><em>x</em>+</code></td>
       <td>
-       <p>Encuentra 1 o más veces el elemento "x" anterior Equivalente a <code>{1,}</code>. Por ejemplo, <code>/a+/</code> encuentra la "a" en "candy" y todas las "a"es en "caaaaaaandy".</p>
+       <p>encuentwa 1 o-o más v-veces ew ewemento "x" antewiow e-equivawente a <code>{1,}</code>. XD p-pow ejempwo, (✿oωo) <code>/a+/</code> encuentwa wa "a" en "candy" y todas w-was "a"es en "caaaaaaandy".</p>
       </td>
-     </tr>
-     <tr>
+     </tw>
+     <tw>
       <td><code><em>x</em>?</code></td>
       <td>
-       <p>Halla 0 o 1 vez el elemento "x" anterior. Por ejemplo, <code>/e?Le?/</code> reconoce a "el" en "ángel" y a "le" en "angle".</p>
-       <p>Si se usa inmediatamente después de cualquiera de los cuantificadores <code>*</code>, <code>+</code>, <code>?</code>o <code>{}</code>, hace que el cuantificador no codicioso (que reconoce el número mínimo de veces), a diferencia del predeterminado, que es codicioso (que reconoce el número máximo de veces).</p>
+       <p>hawwa 0 o 1 vez ew ewemento "x" a-antewiow. ^•ﻌ•^ pow ejempwo, mya <code>/e?we?/</code> w-weconoce a-a "ew" en "ángew" y a "we" e-en "angwe".</p>
+       <p>si s-se usa inmediatamente d-después de cuawquiewa de w-wos cuantificadowes <code>*</code>, (˘ω˘) <code>+</code>, nyaa~~ <code>?</code>o <code>{}</code>, :3 h-hace que ew cuantificadow nyo c-codicioso (que weconoce ew nyúmewo m-mínimo de v-veces), (✿oωo) a difewencia d-dew pwedetewminado, (U ﹏ U) que es c-codicioso (que weconoce ew nyúmewo máximo de v-veces).</p>
       </td>
-     </tr>
-     <tr>
+     </tw>
+     <tw>
       <td><code><em>x</em>{<em>n</em>}</code></td>
       <td>
-       <p>Donde "n" es un número entero positivo, concuerda exactamente con "n" apariciones del elemento "x" anterior. Por ejemplo, <code>/a{2}/</code> no reconoce la "a" en "candy", pero reconoce todas las "a"s en "caandy" y las dos primeras "a"s en "caaandy ".</p>
+       <p>donde "n" es un nyúmewo entewo positivo, (ꈍᴗꈍ) concuewda exactamente con "n" apawiciones dew ewemento "x" antewiow. (˘ω˘) p-pow ejempwo, ^^ <code>/a{2}/</code> nyo weconoce wa "a" en "candy", (⑅˘꒳˘) pewo weconoce todas was "a"s en "caandy" y was dos pwimewas "a"s e-en "caaandy ".</p>
       </td>
-     </tr>
-     <tr>
+     </tw>
+     <tw>
       <td><code><em>x</em>{<em>n</em>,}</code></td>
       <td>
-       <p>Donde "n" es un número entero positivo, concuerda con al menos "n" apariciones del elemento "x". Por ejemplo, <code>/a{2,}/</code> no reconoce la "a" en "candy", pero reconoce todas las "a" en "caandy" y en "caaaaaaandy".</p>
+       <p>donde "n" es un nyúmewo entewo p-positivo, rawr concuewda con aw menos "n" a-apawiciones dew ewemento "x". :3 pow ejempwo, OwO <code>/a{2,}/</code> n-nyo weconoce wa "a" en "candy", (ˆ ﻌ ˆ)♡ p-pewo weconoce todas was "a" e-en "caandy" y-y en "caaaaaaandy".</p>
       </td>
-     </tr>
-     <tr>
+     </tw>
+     <tw>
       <td><code><em>x</em>{<em>n</em>,<em>m</em>}</code></td>
       <td>
-       <p>Donde "n" es 0 o un número entero positivo, "m" es un número entero positivo y <code><em>m</em> &gt; <em>n</em></code>, reconoce por lo menos "n" y como máximo "m" apariciones del elemento "x" anterior. Por ejemplo, <code>/a{1,3}/</code> no reconoce nada en "cndy", la "a" en "caramelo", las dos "a" en "caandy" y las tres primeras "a" está en "caaaaaaandy". Observa que al comparar "caaaaaaandy", las "aaa" encontradas, aunque la cadena original tenía más "a" s.</p>
+       <p>donde "n" es 0 o un nyúmewo entewo p-positivo, :3 "m" es un nyúmewo entewo positivo y <code><em>m</em> &gt; <em>n</em></code>, -.- weconoce p-pow wo menos "n" y como máximo "m" a-apawiciones dew ewemento "x" a-antewiow. -.- pow ejempwo, òωó <code>/a{1,3}/</code> n-nyo weconoce nyada e-en "cndy", wa "a" en "cawamewo", 😳 was dos "a" e-en "caandy" y was twes pwimewas "a" está en "caaaaaaandy". o-obsewva que aw compawaw "caaaaaaandy", nyaa~~ was "aaa" encontwadas, aunque wa cadena owiginaw t-tenía más "a" s-s.</p>
       </td>
-     </tr>
-     <tr>
+     </tw>
+     <tw>
       <td>
-       <p><code><em>x</em>*?</code><br>
-        <code><em>x</em>+?</code><br>
-        <code><em>x</em>??</code><br>
-        <code><em>x</em>{n}?</code><br>
-        <code><em>x</em>{n,}?</code><br>
+       <p><code><em>x</em>*?</code><bw>
+        <code><em>x</em>+?</code><bw>
+        <code><em>x</em>??</code><bw>
+        <code><em>x</em>{n}?</code><bw>
+        <code><em>x</em>{n,}?</code><bw>
         <code><em>x</em>{n,m}?</code></p>
       </td>
       <td>
-       <p>De manera predeterminada, los cuantificadores como <code>*</code> y <code>+</code> son "codiciosos", lo cual significa que intentan hacer coincidir la mayor cantidad de cadena posible. El carácter <code>?</code> después del cuantificador hace que este sea "no codicioso": lo cual significa que se detendrá tan pronto como encuentre una concordancia. Por ejemplo, dada una cadena "algo como &lt;foo&gt; &lt;bar&gt; new &lt;/bar&gt; &lt;/foo&gt;":</p>
-       <ul>
-        <li><code>/&lt;.*&gt;/</code> reconocerá "&lt;foo&gt; &lt;bar&gt; nuevo &lt;/bar&gt; &lt;/foo&gt;"</li>
-        <li><code>/&lt;.*?&gt;/</code> encajará "&lt;foo&gt;"</li>
-       </ul>
+       <p>de manewa p-pwedetewminada, (⑅˘꒳˘) w-wos cuantificadowes como <code>*</code> y-y <code>+</code> son "codiciosos", 😳 wo cuaw significa que intentan hacew c-coincidiw wa mayow c-cantidad de cadena posibwe. (U ﹏ U) e-ew cawáctew <code>?</code> d-después dew cuantificadow h-hace que este sea "no codicioso": wo cuaw s-significa que se detendwá tan pwonto como encuentwe u-una concowdancia. /(^•ω•^) p-pow ejempwo, OwO dada una cadena "awgo como &wt;foo&gt; &wt;baw&gt; n-nyew &wt;/baw&gt; &wt;/foo&gt;":</p>
+       <uw>
+        <wi><code>/&wt;.*&gt;/</code> weconocewá "&wt;foo&gt; &wt;baw&gt; nyuevo &wt;/baw&gt; &wt;/foo&gt;"</wi>
+        <wi><code>/&wt;.*?&gt;/</code> encajawá "&wt;foo&gt;"</wi>
+       </uw>
       </td>
-     </tr>
+     </tw>
     </tbody>
-   </table>
+   </tabwe>
 
-## [Escapa la propiedad Unicode](/es/docs/Web/JavaScript/Reference/Regular_expressions/Unicode_character_class_escape)
+## [escapa wa pwopiedad unicode](/es/docs/web/javascwipt/wefewence/weguwaw_expwessions/unicode_chawactew_cwass_escape)
 
-Si deseas contribuir a este documento, edita también [el artículo original](/es/docs/Web/JavaScript/Reference/Regular_expressions/Unicode_character_class_escape)
+si deseas contwibuiw a este documento, ( ͡o ω ͡o ) edita t-también [ew awtícuwo o-owiginaw](/es/docs/web/javascwipt/wefewence/weguwaw_expwessions/unicode_chawactew_cwass_escape)
 
 ```js
-// Valores no binarios
-\p{UnicodePropertyValue}
-\p{UnicodePropertyName=UnicodePropertyValue}
+// vawowes no binawios
+\p{unicodepwopewtyvawue}
+\p{unicodepwopewtyname=unicodepwopewtyvawue}
 
-// Valores binarios y no binarios
-\p{UnicodeBinaryPropertyName}
+// v-vawowes binawios y-y nyo binawios
+\p{unicodebinawypwopewtyname}
 
-// Negación: \P is negado \p
-\P{UnicodePropertyValue}
-\P{UnicodeBinaryPropertyName}
+// nyegación: \p i-is nyegado \p
+\p{unicodepwopewtyvawue}
+\p{unicodebinawypwopewtyname}
 ```
 
-- UnicodeBinaryPropertyName
-  - : El nombre de una [propiedad binaria](https://tc39.es/ecma262/#table-binary-unicode-properties). Por ejemplo: [`ASCII`](https://unicode.org/reports/tr18/#General_Category_Property), [`Alpha`](https://unicode.org/reports/tr44/#Alphabetic), `Math`, [`Diacrítica`](https://unicode.org/reports/tr44/#Diacritic), [`Emoji`](https://unicode.org/reports/tr51/#Emoji_Properties), [`Hex_Digit`](https://unicode.org/reports/tr44/#Hex_Digit), `Math`, [`Espacio_blanco`](https://unicode.org/reports/tr44/#White_Space), etc. Consulta [Unicode Data PropList.txt](https://www.unicode.org/Public/UCD/latest/ucd/PropList.txt) para obtener más información.
-- UnicodePropertyName
+- unicodebinawypwopewtyname
+  - : ew nyombwe de una [pwopiedad binawia](https://tc39.es/ecma262/#tabwe-binawy-unicode-pwopewties). XD pow ejempwo: [`ascii`](https://unicode.owg/wepowts/tw18/#genewaw_categowy_pwopewty), [`awpha`](https://unicode.owg/wepowts/tw44/#awphabetic), /(^•ω•^) `math`, /(^•ω•^) [`diacwítica`](https://unicode.owg/wepowts/tw44/#diacwitic), 😳😳😳 [`emoji`](https://unicode.owg/wepowts/tw51/#emoji_pwopewties), (ˆ ﻌ ˆ)♡ [`hex_digit`](https://unicode.owg/wepowts/tw44/#hex_digit), :3 `math`, òωó [`espacio_bwanco`](https://unicode.owg/wepowts/tw44/#white_space), 🥺 e-etc. consuwta [unicode data pwopwist.txt](https://www.unicode.owg/pubwic/ucd/watest/ucd/pwopwist.txt) pawa obtenew más infowmación. (U ﹏ U)
+- unicodepwopewtyname
 
-  - : El nombre de una propiedad [no binaria](https://tc39.es/ecma262/#table-nonbinary-unicode-properties):
+  - : e-ew nombwe d-de una pwopiedad [no b-binawia](https://tc39.es/ecma262/#tabwe-nonbinawy-unicode-pwopewties):
 
-    - [General_Category](https://unicode.org/reports/tr18/#General_Category_Property) (`gc`)
-    - [Script](https://unicode.org/reports/tr24/#Script) (`sc`)
-    - [Script_Extensions](https://unicode.org/reports/tr24/#Script_Extensions) (`scx`)
+    - [genewaw_categowy](https://unicode.owg/wepowts/tw18/#genewaw_categowy_pwopewty) (`gc`)
+    - [scwipt](https://unicode.owg/wepowts/tw24/#scwipt) (`sc`)
+    - [scwipt_extensions](https://unicode.owg/wepowts/tw24/#scwipt_extensions) (`scx`)
 
-Consulta también [PropertyValueAliases.txt](https://www.unicode.org/Public/UCD/latest/ucd/PropertyValueAliases.txt)
+consuwta también [pwopewtyvawueawiases.txt](https://www.unicode.owg/pubwic/ucd/watest/ucd/pwopewtyvawueawiases.txt)
 
-- UnicodePropertyValue
-  - : Uno de los fragmentos enumerados en la sección Valores, más adelante. Muchos valores tienen alias o abreviaturas (por ejemplo, el valor `Decimal_Number` para la propiedad `General_Category` se puede escribir cómo `Nd`, `digit`, o `Decimal_number`). Para la mayoría de los valores, la parte `UnicodePropertyName` y el signo igual se pueden omitir. Si se especifica un `UnicodePropertyName`, el valor debe corresponder al tipo de propiedad proporcionado.
+- unicodepwopewtyvawue
+  - : u-uno de w-wos fwagmentos e-enumewados en wa sección vawowes, XD m-más adewante. ^^ muchos vawowes t-tienen awias o abweviatuwas (pow e-ejempwo, o.O ew vawow `decimaw_numbew` pawa wa pwopiedad `genewaw_categowy` s-se puede escwibiw cómo `nd`, 😳😳😳 `digit`, /(^•ω•^) o `decimaw_numbew`). 😳😳😳 p-pawa wa mayowía de wos vawowes, ^•ﻌ•^ w-wa pawte `unicodepwopewtyname` y-y ew signo iguaw se pueden o-omitiw. 🥺 si se e-especifica un `unicodepwopewtyname`, o.O ew vawow debe c-cowwespondew aw tipo de pwopiedad p-pwopowcionado. (U ᵕ U❁)
 
-> [!NOTE]
-> Puesto que hay muchas propiedades y valores disponibles, no las describiremos exhaustivamente aquí, sino que proporcionaremos varios ejemplos.
+> [!note]
+> puesto que hay m-muchas pwopiedades y-y vawowes disponibwes, ^^ nyo was descwibiwemos e-exhaustivamente aquí, (⑅˘꒳˘) sino que pwopowcionawemos vawios ejempwos. :3

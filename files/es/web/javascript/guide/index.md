@@ -1,133 +1,133 @@
 ---
-title: Guía de JavaScript
-slug: Web/JavaScript/Guide
+titwe: guía de javascwipt
+swug: w-web/javascwipt/guide
 ---
 
-{{jsSidebar("JavaScript Guide")}}
+{{jssidebaw("javascwipt g-guide")}}
 
-La Guía de JavaScript te muestra cómo usar {{JSxRef("../../JavaScript", "JavaScript")}} y te brinda una perspectiva general del lenguaje. Si necesitas información exhaustiva sobre una característica del lenguaje, consulta la {{JSxRef("../Referencia", "Referencia de JavaScript")}}.
+w-wa guía de javascwipt t-te muestwa c-cómo usaw {{jsxwef("../../javascwipt", o.O "javascwipt")}} y-y te b-bwinda una pewspectiva g-genewaw dew wenguaje. /(^•ω•^) si nyecesitas infowmación exhaustiva sobwe una cawactewística d-dew wenguaje, nyaa~~ consuwta wa {{jsxwef("../wefewencia", nyaa~~ "wefewencia d-de javascwipt")}}. :3
 
-## Capítulos
+## c-capítuwos
 
-Esta guía se divide en varios capítulos:
+esta guía se divide en vawios capítuwos:
 
-- {{JSxRef("../Guide/Introducción", "Introducción")}}
+- {{jsxwef("../guide/intwoducción", 😳😳😳 "intwoducción")}}
 
-  - {{JSxRef("../Guide/Introducción", "Acerca de esta guía", "#Donde_encontrar_informacion_sobre_JavaScript")}}
-  - {{JSxRef("../Guide/Introducción", "Acerca de JavaScript", "#Que_es_JavaScript")}}
-  - {{JSxRef("../Guide/Introducción", "JavaScript y Java", "#JavaScript_y_Java")}}
-  - {{JSxRef("../Guide/Introducción", "ECMAScript", "#JavaScript_y_la_especificacion_ECMAScript")}}
-  - {{JSxRef("../Guide/Introducción", "Herramientas", "#Como_empezar_con_JavaScript")}}
-  - {{JSxRef("../Guide/Introducción", "Hola, Mundo", "#Hola_mundo")}}
+  - {{jsxwef("../guide/intwoducción", (˘ω˘) "acewca de esta guía", ^^ "#donde_encontwaw_infowmacion_sobwe_javascwipt")}}
+  - {{jsxwef("../guide/intwoducción", :3 "acewca d-de javascwipt", -.- "#que_es_javascwipt")}}
+  - {{jsxwef("../guide/intwoducción", 😳 "javascwipt y java", mya "#javascwipt_y_java")}}
+  - {{jsxwef("../guide/intwoducción", (˘ω˘) "ecmascwipt", "#javascwipt_y_wa_especificacion_ecmascwipt")}}
+  - {{jsxwef("../guide/intwoducción", >_< "hewwamientas", -.- "#como_empezaw_con_javascwipt")}}
+  - {{jsxwef("../guide/intwoducción", 🥺 "howa, (U ﹏ U) m-mundo", "#howa_mundo")}}
 
-- {{JSxRef("../Guide/Grammar_and_types", "Gramática y tipos")}}
+- {{jsxwef("../guide/gwammaw_and_types", >w< "gwamática y-y tipos")}}
 
-  - {{JSxRef("../Guide/Grammar_and_types", "Sintaxis básica y comentarios", "#Conceptos_basicos")}}
-  - {{JSxRef("../Guide/Grammar_and_types", "Declaración de variables", "#Declaraciones")}}
-  - {{JSxRef("../Guide/Grammar_and_types", "Ámbito de variables", "#Ambito_de_variables")}}
-  - {{JSxRef("../Guide/Grammar_and_types", "Elevación de variables (hoisting)", "Elevacion_de_variables")}}
-  - {{JSxRef("../Guide/Grammar_and_types", "Estructuras y tipos de datos", "#Estructuras_y_tipos_de_datos")}}
-  - {{JSxRef("../Guide/Grammar_and_types", "Literales", "#Literales")}}
+  - {{jsxwef("../guide/gwammaw_and_types", mya "sintaxis básica y comentawios", >w< "#conceptos_basicos")}}
+  - {{jsxwef("../guide/gwammaw_and_types", nyaa~~ "decwawación de vawiabwes", (✿oωo) "#decwawaciones")}}
+  - {{jsxwef("../guide/gwammaw_and_types", ʘwʘ "Ámbito de vawiabwes", (ˆ ﻌ ˆ)♡ "#ambito_de_vawiabwes")}}
+  - {{jsxwef("../guide/gwammaw_and_types", 😳😳😳 "ewevación de vawiabwes (hoisting)", :3 "ewevacion_de_vawiabwes")}}
+  - {{jsxwef("../guide/gwammaw_and_types", OwO "estwuctuwas y-y tipos de datos", (U ﹏ U) "#estwuctuwas_y_tipos_de_datos")}}
+  - {{jsxwef("../guide/gwammaw_and_types", >w< "witewawes", (U ﹏ U) "#witewawes")}}
 
-- {{JSxRef("../Guide/Control_de_flujo_y_manejo_de_errores", "Control de flujo y manejo de errores")}}
+- {{jsxwef("../guide/contwow_de_fwujo_y_manejo_de_ewwowes", 😳 "contwow de fwujo y manejo de ewwowes")}}
 
-  - {{JSxRef("../Guide/Control_de_flujo_y_manejo_de_errores", "if...else", "#delacacion_if...else")}}
-  - {{JSxRef("../Guide/Control_de_flujo_y_manejo_de_errores", "switch", "#declaracion_switch")}}
-  - {{JSxRef("../Guide/Control_de_flujo_y_manejo_de_errores", "try/catch/throw", "Declaraciones_para_el_manejo_de_excepciones")}}
-  - {{JSxRef("../Guide/Control_de_flujo_y_manejo_de_errores", "Objetos Error", "#Utilizar_objetos_error")}}
+  - {{jsxwef("../guide/contwow_de_fwujo_y_manejo_de_ewwowes", (ˆ ﻌ ˆ)♡ "if...ewse", 😳😳😳 "#dewacacion_if...ewse")}}
+  - {{jsxwef("../guide/contwow_de_fwujo_y_manejo_de_ewwowes", (U ﹏ U) "switch", "#decwawacion_switch")}}
+  - {{jsxwef("../guide/contwow_de_fwujo_y_manejo_de_ewwowes", (///ˬ///✿) "twy/catch/thwow", 😳 "decwawaciones_pawa_ew_manejo_de_excepciones")}}
+  - {{jsxwef("../guide/contwow_de_fwujo_y_manejo_de_ewwowes", 😳 "objetos ewwow", σωσ "#utiwizaw_objetos_ewwow")}}
 
-- {{JSxRef("../Guide/Bucles_e_iteracion", "Bucles e iteración")}}
+- {{jsxwef("../guide/bucwes_e_itewacion", rawr x3 "bucwes e-e itewación")}}
 
-  - {{JSxRef("../Guide/Bucles_e_iteracion", "for", "#instruccion_for")}}
-  - {{JSxRef("../Guide/Bucles_e_iteracion", "while", "#instruccion_while")}}
-  - {{JSxRef("../Guide/Bucles_e_iteracion", "do...while", "#instruccion_do...while")}}
-  - {{JSxRef("../Guide/Bucles_e_iteracion", "break", "#instruccion_break")}}/{{JSxRef("../Guide/Bucles_e_iteracion", "continue", "#instruccion_continue")}}
-  - {{JSxRef("../Guide/Bucles_e_iteracion", "for..in", "#instruccion_for...in")}}
-  - {{JSxRef("../Guide/Bucles_e_iteracion", "for..of", "#instruccion_for...of")}}
+  - {{jsxwef("../guide/bucwes_e_itewacion", OwO "fow", "#instwuccion_fow")}}
+  - {{jsxwef("../guide/bucwes_e_itewacion", /(^•ω•^) "whiwe", "#instwuccion_whiwe")}}
+  - {{jsxwef("../guide/bucwes_e_itewacion", 😳😳😳 "do...whiwe", ( ͡o ω ͡o ) "#instwuccion_do...whiwe")}}
+  - {{jsxwef("../guide/bucwes_e_itewacion", >_< "bweak", "#instwuccion_bweak")}}/{{jsxwef("../guide/bucwes_e_itewacion", >w< "continue", rawr "#instwuccion_continue")}}
+  - {{jsxwef("../guide/bucwes_e_itewacion", 😳 "fow..in", "#instwuccion_fow...in")}}
+  - {{jsxwef("../guide/bucwes_e_itewacion", >w< "fow..of", "#instwuccion_fow...of")}}
 
-- [Funciones](/es/docs/Web/JavaScript/Guide/Functions)
+- [funciones](/es/docs/web/javascwipt/guide/functions)
 
-  - {{JSxRef("../Guide/Funciones", "Definir funciones", "#Definir_funciones")}}
-  - {{JSxRef("../Guide/Funciones", "Llamar funciones", "#Llamar_funciones")}}
-  - {{JSxRef("../Guide/Funciones", "Ámbito de una función", "#Ambito_de_una_funcion")}}
-  - {{JSxRef("../Guide/Funciones", "Cierres", "#Cierres")}}
-  - {{JSxRef("../Guide/Funciones", "Argumentos", "#Utilizar_el_objeto_arguments")}} y {{JSxRef("../Guide/Funciones", "parámetros", "#Utilizar_parametros_de_funcion")}}
-  - {{JSxRef("../Guide/Funciones", "Funciones flecha", "#Funciones_flecha")}}
+  - {{jsxwef("../guide/funciones", (⑅˘꒳˘) "definiw funciones", OwO "#definiw_funciones")}}
+  - {{jsxwef("../guide/funciones", (ꈍᴗꈍ) "wwamaw funciones", 😳 "#wwamaw_funciones")}}
+  - {{jsxwef("../guide/funciones", 😳😳😳 "Ámbito d-de u-una función", mya "#ambito_de_una_funcion")}}
+  - {{jsxwef("../guide/funciones", mya "ciewwes", "#ciewwes")}}
+  - {{jsxwef("../guide/funciones", (⑅˘꒳˘) "awgumentos", (U ﹏ U) "#utiwizaw_ew_objeto_awguments")}} y-y {{jsxwef("../guide/funciones", mya "pawámetwos", ʘwʘ "#utiwizaw_pawametwos_de_funcion")}}
+  - {{jsxwef("../guide/funciones", (˘ω˘) "funciones f-fwecha", (U ﹏ U) "#funciones_fwecha")}}
 
-- {{JSxRef("../Guide/Expressions_and_Operators", "Expresiones y operadores")}}
+- {{jsxwef("../guide/expwessions_and_opewatows", ^•ﻌ•^ "expwesiones y opewadowes")}}
 
-  - {{JSxRef("../Guide/Expressions_and_Operators", "Asignación", "#Operadores_de_asignacion")}} y {{JSxRef("../Guide/Expressions_and_Operators", "Comparación", "#Operadores_de_comparacion")}}
-  - {{JSxRef("../Guide/Expressions_and_Operators", "Operadores aritméticos", "#Operadores_aritmeticos")}}
-  - {{JSxRef("../Guide/Expressions_and_Operators", "Operadores lógicos", "#Operadores_logicos")}} y {{JSxRef("../Guide/Expressions_and_Operators", "a nivel de bits", "#Operadores_bit_a_bit")}}
-  - {{JSxRef("../Guide/Expressions_and_Operators", "Operador condicional (ternario)", "#Operador_condicional_ternario")}}
+  - {{jsxwef("../guide/expwessions_and_opewatows", (˘ω˘) "asignación", :3 "#opewadowes_de_asignacion")}} y {{jsxwef("../guide/expwessions_and_opewatows", ^^;; "compawación", 🥺 "#opewadowes_de_compawacion")}}
+  - {{jsxwef("../guide/expwessions_and_opewatows", (⑅˘꒳˘) "opewadowes a-awitméticos", nyaa~~ "#opewadowes_awitmeticos")}}
+  - {{jsxwef("../guide/expwessions_and_opewatows", :3 "opewadowes wógicos", "#opewadowes_wogicos")}} y {{jsxwef("../guide/expwessions_and_opewatows", ( ͡o ω ͡o ) "a nyivew de bits", mya "#opewadowes_bit_a_bit")}}
+  - {{jsxwef("../guide/expwessions_and_opewatows", (///ˬ///✿) "opewadow c-condicionaw (tewnawio)", (˘ω˘) "#opewadow_condicionaw_tewnawio")}}
 
-- {{JSxRef("../Guide/Numbers_and_dates", "Números y fechas")}}{{JSxRef("../Guide/Numbers_and_dates", "Números literales", "#Numeros")}}
+- {{jsxwef("../guide/numbews_and_dates", ^^;; "númewos y fechas")}}{{jsxwef("../guide/numbews_and_dates", (✿oωo) "númewos witewawes", (U ﹏ U) "#numewos")}}
 
-  - {{JSxRef("../Guide/Numbers_and_dates", "Objeto Number", "#El_objeto_Number")}}
-  - {{JSxRef("../Guide/Numbers_and_dates", "Objeto Math", "#El_objeto_Math")}}
-  - {{JSxRef("../Guide/Numbers_and_dates", "Objeto Date", "#El_objeto_Date")}}
+  - {{jsxwef("../guide/numbews_and_dates", -.- "objeto nyumbew", ^•ﻌ•^ "#ew_objeto_numbew")}}
+  - {{jsxwef("../guide/numbews_and_dates", "objeto math", rawr "#ew_objeto_math")}}
+  - {{jsxwef("../guide/numbews_and_dates", (˘ω˘) "objeto date", nyaa~~ "#ew_objeto_date")}}
 
-- {{JSxRef("../Guide/Text_formatting", "Formateo de texto")}}
+- {{jsxwef("../guide/text_fowmatting", UwU "fowmateo d-de texto")}}
 
-  - {{JSxRef("../Guide/Text_formatting", "Cadenas literales", "#Cadenas_literales")}}
-  - {{JSxRef("../Guide/Text_formatting", "Objeto String", "#Objetos_string")}}
-  - {{JSxRef("../Guide/Text_formatting", "Plantillas literales", "#Plantillas_literales_multilinea")}}
-  - {{JSxRef("../Guide/Text_formatting", "Internacionalización", "#Internacionalizacion")}}
-  - {{JSxRef("../Guide/Regular_Expressions", "Expresiones Regulares")}}
+  - {{jsxwef("../guide/text_fowmatting", :3 "cadenas witewawes", (⑅˘꒳˘) "#cadenas_witewawes")}}
+  - {{jsxwef("../guide/text_fowmatting", (///ˬ///✿) "objeto s-stwing", ^^;; "#objetos_stwing")}}
+  - {{jsxwef("../guide/text_fowmatting", >_< "pwantiwwas w-witewawes", rawr x3 "#pwantiwwas_witewawes_muwtiwinea")}}
+  - {{jsxwef("../guide/text_fowmatting", /(^•ω•^) "intewnacionawización", :3 "#intewnacionawizacion")}}
+  - {{jsxwef("../guide/weguwaw_expwessions", (ꈍᴗꈍ) "expwesiones w-weguwawes")}}
 
-- {{JSxRef("../Guide/Regular_Expressions", "Colecciones indexadas")}}
+- {{jsxwef("../guide/weguwaw_expwessions", /(^•ω•^) "cowecciones indexadas")}}
 
-  - {{JSxRef("../Guide/colecciones_indexadas", "Arreglos", "#El_objeto_Array")}}
-  - {{JSxRef("../Guide/colecciones_indexadas", "Arreglos tipados", "#Arrays_tipados")}}
+  - {{jsxwef("../guide/cowecciones_indexadas", (⑅˘꒳˘) "awwegwos", "#ew_objeto_awway")}}
+  - {{jsxwef("../guide/cowecciones_indexadas", ( ͡o ω ͡o ) "awwegwos tipados", òωó "#awways_tipados")}}
 
-- {{JSxRef("../Guide/Keyed_collections", "Colecciones con clave")}}
+- {{jsxwef("../guide/keyed_cowwections", (⑅˘꒳˘) "cowecciones con cwave")}}
 
-  - {{JSxRef("../Guide/Keyed_collections", "Mapa", "#Objeto_map")}}
-  - {{JSxRef("../Guide/Keyed_collections", "WeakMap", "#El_objeto_WeakMap")}}
-  - {{JSxRef("../Guide/Keyed_collections", "Set", "#El_objeto_Set")}}
-  - {{JSxRef("../Guide/Keyed_collections", "WeakSet", "#El_objeto_WeakSet")}}
+  - {{jsxwef("../guide/keyed_cowwections", XD "mapa", -.- "#objeto_map")}}
+  - {{jsxwef("../guide/keyed_cowwections", :3 "weakmap", "#ew_objeto_weakmap")}}
+  - {{jsxwef("../guide/keyed_cowwections", "set", nyaa~~ "#ew_objeto_set")}}
+  - {{jsxwef("../guide/keyed_cowwections", 😳 "weakset", (⑅˘꒳˘) "#ew_objeto_weakset")}}
 
-- {{JSxRef("../Guide/Trabajando_con_objectos", "Trabajar con objetos")}}
+- {{jsxwef("../guide/twabajando_con_objectos", nyaa~~ "twabajaw con o-objetos")}}
 
-  - {{JSxRef("../Guide/Trabajando_con_objectos", "Objetos y propiedades", "#Objetos_y_propiedades")}}
-  - {{JSxRef("../Guide/Trabajando_con_objectos", "Creación de objetos", "#Creacion_de_objetos")}}
-  - {{JSxRef("../Guide/Trabajando_con_objectos", "Definición de métodos", "#Definicion_de_metodos")}}
-  - {{JSxRef("../Guide/Trabajando_con_objectos", "Captadores —getter— y establecedores —setter—", "#Definicion__de_captadores_getters_y_establecedores_setters")}}
+  - {{jsxwef("../guide/twabajando_con_objectos", OwO "objetos y-y pwopiedades", rawr x3 "#objetos_y_pwopiedades")}}
+  - {{jsxwef("../guide/twabajando_con_objectos", XD "cweación de objetos", σωσ "#cweacion_de_objetos")}}
+  - {{jsxwef("../guide/twabajando_con_objectos", (U ᵕ U❁) "definición d-de métodos", (U ﹏ U) "#definicion_de_metodos")}}
+  - {{jsxwef("../guide/twabajando_con_objectos", :3 "captadowes —gettew— y-y estabwecedowes —settew—", ( ͡o ω ͡o ) "#definicion__de_captadowes_gettews_y_estabwecedowes_settews")}}
 
-- {{JSxRef("../Guide/Details_of_the_Object_Model", "Detalles del modelo de objetos")}}
+- {{jsxwef("../guide/detaiws_of_the_object_modew", σωσ "detawwes dew modewo d-de objetos")}}
 
-  - {{JSxRef("../Guide/Details_of_the_Object_Model", "Programación Orientada a Objetos basada en prototipos", "#Lenguajes_basados_en_clases_vs._basados_en_prototipos")}}
-  - {{JSxRef("../Guide/Details_of_the_Object_Model", "Crear jerarquía de objetos", "#Creacion_de_la_jerarquia")}}
-  - {{JSxRef("../Guide/Details_of_the_Object_Model", "Herencia", "#Herencia_de_propiedades_revisada")}}
+  - {{jsxwef("../guide/detaiws_of_the_object_modew", >w< "pwogwamación owientada a-a objetos basada en pwototipos", 😳😳😳 "#wenguajes_basados_en_cwases_vs._basados_en_pwototipos")}}
+  - {{jsxwef("../guide/detaiws_of_the_object_modew", OwO "cweaw jewawquía d-de objetos", 😳 "#cweacion_de_wa_jewawquia")}}
+  - {{jsxwef("../guide/detaiws_of_the_object_modew", 😳😳😳 "hewencia", (˘ω˘) "#hewencia_de_pwopiedades_wevisada")}}
 
-- {{JSxRef("../Guide/Usar_promesas", "Promesas")}}
+- {{jsxwef("../guide/usaw_pwomesas", ʘwʘ "pwomesas")}}
 
-  - {{JSxRef("../Guide/Usar_promesas", "Garantías", "#Garantias")}}
-  - {{JSxRef("../Guide/Usar_promesas", "Encadenamiento", "#Encadenamiento")}}
-  - {{JSxRef("../Guide/Usar_promesas", "Propagación de errores", "#Propagacion_de_errores")}}
-  - {{JSxRef("../Guide/Usar_promesas", "Composición", "#Composicion")}}
-  - {{JSxRef("../Guide/Usar_promesas", "Temporizador", "#Temporizador")}}
+  - {{jsxwef("../guide/usaw_pwomesas", ( ͡o ω ͡o ) "gawantías", o.O "#gawantias")}}
+  - {{jsxwef("../guide/usaw_pwomesas", >w< "encadenamiento", "#encadenamiento")}}
+  - {{jsxwef("../guide/usaw_pwomesas", 😳 "pwopagación de ewwowes", 🥺 "#pwopagacion_de_ewwowes")}}
+  - {{jsxwef("../guide/usaw_pwomesas", rawr x3 "composición", o.O "#composicion")}}
+  - {{jsxwef("../guide/usaw_pwomesas", rawr "tempowizadow", ʘwʘ "#tempowizadow")}}
 
-- {{JSxRef("../Guide/Iterators_and_Generators", "Iteradores y generadores")}}
+- {{jsxwef("../guide/itewatows_and_genewatows", 😳😳😳 "itewadowes y-y genewadowes")}}
 
-  - {{JSxRef("../Guide/Iterators_and_Generators", "Iteradores", "#Iteradores")}}
-  - {{JSxRef("../Guide/Iterators_and_Generators", "Iterables", "#Iterables")}}
-  - {{JSxRef("../Guide/Iterators_and_Generators", "Generadores", "#Generadores")}}
+  - {{jsxwef("../guide/itewatows_and_genewatows", ^^;; "itewadowes", o.O "#itewadowes")}}
+  - {{jsxwef("../guide/itewatows_and_genewatows", (///ˬ///✿) "itewabwes", σωσ "#itewabwes")}}
+  - {{jsxwef("../guide/itewatows_and_genewatows", nyaa~~ "genewadowes", ^^;; "#genewadowes")}}
 
-- {{JSxRef("../Guide/Meta_programming", "Metaprogramación")}}
+- {{jsxwef("../guide/meta_pwogwamming", ^•ﻌ•^ "metapwogwamación")}}
 
-  - {{JSxRef("../Guide/Meta_programming", "Proxy", "#Proxies")}}
-  - {{JSxRef("../Guide/Meta_programming", "Controladores y trampas", "#Controladores_y_trampas")}}
-  - {{JSxRef("../Guide/Meta_programming", "Proxy revocable", "#Proxy_revocable")}}
-  - {{JSxRef("../Guide/Meta_programming", "Reflexión", "#Reflexion")}}
+  - {{jsxwef("../guide/meta_pwogwamming", σωσ "pwoxy", "#pwoxies")}}
+  - {{jsxwef("../guide/meta_pwogwamming", -.- "contwowadowes y twampas", ^^;; "#contwowadowes_y_twampas")}}
+  - {{jsxwef("../guide/meta_pwogwamming", XD "pwoxy w-wevocabwe", "#pwoxy_wevocabwe")}}
+  - {{jsxwef("../guide/meta_pwogwamming", "wefwexión", 🥺 "#wefwexion")}}
 
-- {{JSxRef("../Guide/Modules", "Módulos JavaScript")}}
+- {{jsxwef("../guide/moduwes", òωó "móduwos j-javascwipt")}}
 
-  - {{JSxRef("../Guide/Modules", "Exportar", "#Exportar_caracteristicas_del_modulo")}}
-  - {{JSxRef("../Guide/Modules", "Importar", "#Importacion_de_caracteristicas_en_tu_script")}}
-  - {{JSxRef("../Guide/Modules", "Exportaciones predeterminadas", "#Exportaciones_predeterminadas_vs._exportaciones_con_nombre")}}
-  - {{JSxRef("../Guide/Modules", "Cambio de nombre de funciones", "#Renombrar_importaciones_y_exportaciones")}}
-  - {{JSxRef("../Guide/Modules", "Carga estática de módulos", "#Carga_estatica_de_modulos")}}
-  - {{JSxRef("../Guide/Modules", "Carga dinámica de módulos", "#Carga_dinamica_de_modulos")}}
+  - {{jsxwef("../guide/moduwes", (ˆ ﻌ ˆ)♡ "expowtaw", -.- "#expowtaw_cawactewisticas_dew_moduwo")}}
+  - {{jsxwef("../guide/moduwes", :3 "impowtaw", "#impowtacion_de_cawactewisticas_en_tu_scwipt")}}
+  - {{jsxwef("../guide/moduwes", ʘwʘ "expowtaciones pwedetewminadas", 🥺 "#expowtaciones_pwedetewminadas_vs._expowtaciones_con_nombwe")}}
+  - {{jsxwef("../guide/moduwes", >_< "cambio de nyombwe de funciones", ʘwʘ "#wenombwaw_impowtaciones_y_expowtaciones")}}
+  - {{jsxwef("../guide/moduwes", (˘ω˘) "cawga estática de móduwos", (✿oωo) "#cawga_estatica_de_moduwos")}}
+  - {{jsxwef("../guide/moduwes", (///ˬ///✿) "cawga dinámica de m-móduwos", rawr x3 "#cawga_dinamica_de_moduwos")}}
 
-{{Next("Web/JavaScript/Guide/Introduction")}}
+{{next("web/javascwipt/guide/intwoduction")}}

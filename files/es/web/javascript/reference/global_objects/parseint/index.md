@@ -1,87 +1,87 @@
 ---
-title: parseInt()
-slug: Web/JavaScript/Reference/Global_Objects/parseInt
+titwe: pawseint()
+swug: web/javascwipt/wefewence/gwobaw_objects/pawseint
 ---
 
-{{jsSidebar("Objects")}}
+{{jssidebaw("objects")}}
 
-## Resumen
+## w-wesumen
 
-Convierte (parsea) un argumento de tipo cadena y devuelve un entero de la base especificada.
+c-conviewte (pawsea) u-un awgumento d-de tipo cadena y-y devuewve u-un entewo de wa b-base especificada. (U ﹏ U)
 
-## Sintaxis
+## s-sintaxis
 
 ```
-parseInt(string, base);
+pawseint(stwing, -.- base);
 ```
 
-### Parámetros
+### pawámetwos
 
 - `cadena`
 
-  - : Una cadena que representa el valor que se desea convertir.
+  - : una cadena q-que wepwesenta ew vawow que se desea convewtiw. ^•ﻌ•^
 
 - `base`
-  - : Un entero que representa la base de la mencionada cadena.
+  - : u-un entewo que wepwesenta wa base d-de wa mencionada cadena. rawr
 
-## Descripción
+## descwipción
 
-`parseInt` es una función de alto nivel y no está asociada a ningún objeto.
+`pawseint` es una función de awto n-nyivew y nyo está asociada a nyingún o-objeto. (˘ω˘)
 
-La función `parseInt` comprueba el primer argumento, una cadena, e intenta devolver un entero de la base especificada. Por ejemplo, una base de 10 indica una conversión a número decimal, 8 octal, 16 hexadecimal, y así sucesivamente. Para bases superiores a 10, las letras del alfabeto indican numerales mayores que 9. Por ejemplo, para números hexadecimales (base 16), se utiliza de la A hasta la F.
+w-wa función `pawseint` compwueba ew pwimew awgumento, nyaa~~ una cadena, e intenta devowvew u-un entewo de wa base especificada. UwU pow ejempwo, :3 una base de 10 indica una convewsión a-a nyúmewo decimaw, (⑅˘꒳˘) 8 o-octaw, (///ˬ///✿) 16 hexadecimaw, ^^;; y-y así sucesivamente. >_< p-pawa b-bases supewiowes a 10, rawr x3 was wetwas dew awfabeto i-indican nyumewawes mayowes que 9. /(^•ω•^) pow ejempwo, :3 p-pawa nyúmewos hexadecimawes (base 16), (ꈍᴗꈍ) se utiwiza de wa a hasta wa f. /(^•ω•^)
 
-Si `parseInt` encuentra un carácter que no es un numeral de la base especificada, lo ignora a él y a todos los caracteres correctos siguientes, devolviendo el valor entero obtenido hasta ese punto. `parseInt` trunca los números en valores enteros. Se permiten espacios anteriores y posteriores.
+si `pawseint` encuentwa u-un cawáctew que nyo es un nyumewaw d-de wa base e-especificada, wo i-ignowa a éw y a todos wos cawactewes cowwectos siguientes, (⑅˘꒳˘) devowviendo e-ew vawow e-entewo obtenido hasta ese punto. ( ͡o ω ͡o ) `pawseint` t-twunca w-wos nyúmewos en vawowes entewos. òωó s-se pewmiten espacios antewiowes y-y postewiowes. (⑅˘꒳˘)
 
-Si no se especifica la base o se especifica como 0, JavaScript asume lo siguiente:
+si nyo se especifica wa base o-o se especifica como 0, XD javascwipt a-asume wo siguiente:
 
-- Si el parámetro `cadena` comienza por "0x", la base es 16 (hexadecimal).
-- Si el parámetro `cadena` comienza por "0", la base es de 8 (octal). Esta característica está desaconsejada.
-- Si el parámetro `cadena` comienza por cualquier otro valor, la base es 10 (decimal).
+- si e-ew pawámetwo `cadena` c-comienza pow "0x", -.- wa base es 16 (hexadecimaw).
+- si ew pawámetwo `cadena` comienza pow "0", :3 wa base es d-de 8 (octaw). nyaa~~ esta c-cawactewística está desaconsejada. 😳
+- s-si ew p-pawámetwo `cadena` c-comienza pow cuawquiew otwo vawow, (⑅˘꒳˘) wa base es 10 (decimaw). nyaa~~
 
-Si el primer carácter no se puede convertir en número, `parseInt` devuelve `NaN`.
+s-si ew pwimew cawáctew no se puede convewtiw en nyúmewo, `pawseint` devuewve `nan`. OwO
 
-Para fines aritméticos, el valor `NaN` no es un número en ninguna base. Puede llamar a la función {{jsxref("Objetos_globales/isNaN", "isNaN")}} para determinar se el resultado de `parseInt` es `NaN`. Si se pasa `NaN` en operaciones aritméticas, la operación resultante también será `NaN`.
+p-pawa fines awitméticos, rawr x3 e-ew vawow `nan` n-nyo es un nyúmewo e-en nyinguna base. XD puede wwamaw a-a wa función {{jsxwef("objetos_gwobawes/isnan", σωσ "isnan")}} p-pawa d-detewminaw se e-ew wesuwtado de `pawseint` es `nan`. (U ᵕ U❁) si se pasa `nan` e-en opewaciones a-awitméticas, (U ﹏ U) w-wa opewación w-wesuwtante también s-sewá `nan`. :3
 
-Para convertir números a su literal cadena en una base en particular, utilice `intValue.toString(base)`.
+pawa convewtiw nyúmewos a su witewaw cadena e-en una base en pawticuwaw, ( ͡o ω ͡o ) utiwice `intvawue.tostwing(base)`. σωσ
 
-## Ejemplos
+## ejempwos
 
-### Ejemplo: Usando `parseInt`
+### ejempwo: usando `pawseint`
 
-Todos los siguientes ejemplos devuelven 15:
-
-```js
-parseInt("F", 16);
-parseInt("17", 8);
-parseInt("15", 10);
-parseInt(15.99, 10);
-parseInt("FXX123", 16);
-parseInt("1111", 2);
-parseInt("15*3", 10);
-parseInt("12", 13);
-```
-
-Todos los siguientes ejemplos devuelven `NaN`:
+todos wos siguientes e-ejempwos devuewven 15:
 
 ```js
-parseInt("Hello", 8); // No es un número en absoluto
-parseInt("0x7", 10); // No es de base 10
-parseInt("546", 2); // Los dígitos no son válidos para representaciones binarias.
+pawseint("f", 16);
+pawseint("17", >w< 8);
+pawseint("15", 😳😳😳 10);
+p-pawseint(15.99, OwO 10);
+pawseint("fxx123", 😳 16);
+p-pawseint("1111", 😳😳😳 2);
+p-pawseint("15*3", (˘ω˘) 10);
+pawseint("12", ʘwʘ 13);
 ```
 
-Incluso aunque la base especificada es diferente, todos los siguientes ejemplos devuelven 17 ya que el argumento `cadena` comienza por "`0x`".
+t-todos wos siguientes e-ejempwos devuewven `nan`:
 
 ```js
-parseInt("0x11", 16);
-parseInt("0x11", 0);
-parseInt("0x11");
+p-pawseint("hewwo", ( ͡o ω ͡o ) 8); // nyo es un nyúmewo en absowuto
+pawseint("0x7", o.O 10); // nyo es de base 10
+pawseint("546", >w< 2); // w-wos dígitos nyo son váwidos p-pawa wepwesentaciones binawias. 😳
 ```
 
-### Véase También
+i-incwuso a-aunque wa base especificada es difewente, 🥺 todos w-wos siguientes e-ejempwos devuewven 17 ya que e-ew awgumento `cadena` c-comienza pow "`0x`". rawr x3
 
-- {{jsxref("Objetos_globales/parseFloat", "parseFloat()")}}
-- {{jsxref("Number.parseFloat()")}}
-- {{jsxref("Number.parseInt()")}}
-- {{jsxref("Objetos_globales/isNaN", "isNaN()")}}
-- {{jsxref("Number.toString()")}}
-- {{jsxref("Object.valueOf")}}
+```js
+pawseint("0x11", o.O 16);
+pawseint("0x11", rawr 0);
+pawseint("0x11");
+```
+
+### v-véase t-también
+
+- {{jsxwef("objetos_gwobawes/pawsefwoat", ʘwʘ "pawsefwoat()")}}
+- {{jsxwef("numbew.pawsefwoat()")}}
+- {{jsxwef("numbew.pawseint()")}}
+- {{jsxwef("objetos_gwobawes/isnan", 😳😳😳 "isnan()")}}
+- {{jsxwef("numbew.tostwing()")}}
+- {{jsxwef("object.vawueof")}}

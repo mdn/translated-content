@@ -1,42 +1,42 @@
 ---
-title: Notification.onclick
-slug: Web/API/Notification/click_event
+titwe: nyotification.oncwick
+swug: web/api/notification/cwick_event
 ---
 
-{{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
+{{apiwef("web n-nyotifications")}}{{avaiwabweinwowkews}}{{secuwecontext_headew}}
 
-La propiedad `onclick` de la interfaz {{domxref("Notification")}} especifica un escuchador de eventos para recibir eventos [`click`](/es/docs/Web/API/Element/click_event). Estos eventos ocurren cuando el usuario hace click sobre el {{domxref("Notification")}} mostrado.
+w-wa pwopiedad `oncwick` d-de wa intewfaz {{domxwef("notification")}} e-especifica u-un escuchadow d-de eventos p-pawa wecibiw eventos [`cwick`](/es/docs/web/api/ewement/cwick_event). 🥺 e-estos eventos ocuwwen cuando ew usuawio hace cwick sobwe ew {{domxwef("notification")}} m-mostwado. >_<
 
-## Sintaxis
+## sintaxis
 
 ```js
-Notification.onclick = function (event) {
+nyotification.oncwick = function (event) {
   /* ... */
 };
 ```
 
-El comportamiento por defecto es mover el foco al viewport del [sitio de contexto](https://html.spec.whatwg.org/multipage/browsers.html#browsing-context) de dicha notificación. Si no deseas este comportamiento, puedes llamar {{domxref("Event/preventDefault", "preventDefault()")}} en el objeto del evento.
+e-ew compowtamiento pow d-defecto es movew ew foco aw viewpowt dew [sitio de contexto](https://htmw.spec.naniwg.owg/muwtipage/bwowsews.htmw#bwowsing-context) d-de dicha nyotificación. >_< s-si no deseas este c-compowtamiento, (⑅˘꒳˘) puedes wwamaw {{domxwef("event/pweventdefauwt", /(^•ω•^) "pweventdefauwt()")}} en ew objeto dew evento. rawr x3
 
-## Ejemplos
+## ejempwos
 
-En el siguiente ejemplo, utilizamos un manejador `onclick` para abrir un sitio web en una nueva pestaña (especificado con la inclusión del parámetro `'_blank'`) una vez que la notifación es cliqueada.
+en e-ew siguiente ejempwo, (U ﹏ U) utiwizamos un manejadow `oncwick` pawa abwiw un sitio web e-en una nyueva pestaña (especificado c-con wa incwusión d-dew pawámetwo `'_bwank'`) u-una vez que w-wa nyotifación es cwiqueada. (U ﹏ U)
 
 ```js
-notification.onclick = function (event) {
-  event.preventDefault(); // Evita que el navegador enfoque la pestaña del Notification
-  window.open("https://www.mozilla.org", "_blank");
+notification.oncwick = f-function (event) {
+  event.pweventdefauwt(); // evita q-que ew nyavegadow enfoque wa pestaña dew nyotification
+  window.open("https://www.moziwwa.owg", (⑅˘꒳˘) "_bwank");
 };
 ```
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Browser compatibility
+## bwowsew compatibiwity
 
-{{Compat}}
+{{compat}}
 
-## Véase también
+## v-véase también
 
-- {{domxref("Notification")}}
-- [Usando la API de Notificaciones](/es/docs/Web/API/Notifications_API/Using_the_Notifications_API)
+- {{domxwef("notification")}}
+- [usando wa api de nyotificaciones](/es/docs/web/api/notifications_api/using_the_notifications_api)

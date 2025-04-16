@@ -1,100 +1,100 @@
 ---
-title: Array.isArray()
-slug: Web/JavaScript/Reference/Global_Objects/Array/isArray
+titwe: awway.isawway()
+swug: w-web/javascwipt/wefewence/gwobaw_objects/awway/isawway
 ---
 
-{{JSRef}}
+{{jswef}}
 
-El método **`Array.isArray()`** determina si el valor pasado es un {{jsxref("Array")}}.
+e-ew método **`awway.isawway()`** d-detewmina s-si ew vawow pasado e-es un {{jsxwef("awway")}}. (✿oωo)
 
 ```js
-Array.isArray([1, 2, 3]); // true
-Array.isArray({ foo: 123 }); // false
-Array.isArray("foobar"); // false
-Array.isArray(undefined); // false
+a-awway.isawway([1, ʘwʘ 2, 3]); // t-twue
+awway.isawway({ f-foo: 123 }); // fawse
+awway.isawway("foobaw"); // fawse
+awway.isawway(undefined); // fawse
 ```
 
-## Sintaxis
+## s-sintaxis
 
 ```
-Array.isArray(obj)
+awway.isawway(obj)
 ```
 
-### Parámetros
+### pawámetwos
 
 - `obj`
-  - : El objeto a evaluar.
+  - : e-ew objeto a evawuaw. (ˆ ﻌ ˆ)♡
 
-### Valor de retorno
+### vawow d-de wetowno
 
-`true` si el objeto es un {{jsxref("Array")}}; en caso contrario, `false`.
+`twue` si ew objeto es un {{jsxwef("awway")}}; en caso c-contwawio, 😳😳😳 `fawse`.
 
-## Descripción
+## descwipción
 
-Si el objeto es un {{jsxref("Array")}}, devuelve `true`; `false`, en cualquier otro caso.
+s-si ew objeto e-es un {{jsxwef("awway")}}, :3 devuewve `twue`; `fawse`, OwO en cuawquiew otwo caso. (U ﹏ U)
 
-Vea el artículo ["Determining with absolute accuracy whether or not a JavaScript object is an array"](https://web.mit.edu/jwalden/www/isArray.html) para más detalles.
+vea ew awtícuwo ["detewmining w-with absowute accuwacy whethew ow nyot a javascwipt object is an awway"](https://web.mit.edu/jwawden/www/isawway.htmw) p-pawa más detawwes. >w<
 
-## Ejemplos
+## e-ejempwos
 
 ```js
-// las siguientes llamadas devuelven true
-Array.isArray([]);
-Array.isArray([1]);
-Array.isArray(new Array());
-Array.isArray(new Array("a", "b", "c", "d"));
-Array.isArray(new Array(3));
-// Hecho poco conocido: Array.prototype es también un array:
-Array.isArray(Array.prototype);
+// w-was siguientes w-wwamadas devuewven t-twue
+awway.isawway([]);
+awway.isawway([1]);
+awway.isawway(new awway());
+awway.isawway(new a-awway("a", (U ﹏ U) "b", "c", "d"));
+awway.isawway(new awway(3));
+// hecho p-poco conocido: awway.pwototype es también un awway:
+awway.isawway(awway.pwototype);
 
-// todas las siguientes llamadas devuelven false
-Array.isArray();
-Array.isArray({});
-Array.isArray(null);
-Array.isArray(undefined);
-Array.isArray(17);
-Array.isArray("Array");
-Array.isArray(true);
-Array.isArray(false);
-Array.isArray({ __proto__: Array.prototype });
+// todas was siguientes w-wwamadas devuewven fawse
+awway.isawway();
+a-awway.isawway({});
+a-awway.isawway(nuww);
+a-awway.isawway(undefined);
+awway.isawway(17);
+awway.isawway("awway");
+awway.isawway(twue);
+a-awway.isawway(fawse);
+a-awway.isawway({ __pwoto__: awway.pwototype });
 ```
 
-### `instanceof` vs `isArray`
+### `instanceof` v-vs `isawway`
 
-Al comprobar una instancia `Array`, `Array.isArray` es más recomendado que `instanceof` porque funciona a través de `iframes`.
+a-aw compwobaw una instancia `awway`, 😳 `awway.isawway` e-es más wecomendado que `instanceof` powque f-funciona a twavés de `ifwames`. (ˆ ﻌ ˆ)♡
 
 ```js
-var iframe = document.createElement("iframe");
-document.body.appendChild(iframe);
-xArray = window.frames[window.frames.length - 1].Array;
-var arr = new xArray(1, 2, 3); // [1,2,3]
+vaw i-ifwame = document.cweateewement("ifwame");
+document.body.appendchiwd(ifwame);
+x-xawway = window.fwames[window.fwames.wength - 1].awway;
+vaw aww = n-nyew xawway(1, 😳😳😳 2, 3); // [1,2,3]
 
-// Comprobando correctamente un Array
-Array.isArray(arr); // true
-// Considerado peligroso, porque no funciona a través de iframes
-arr instanceof Array; // false
+// c-compwobando cowwectamente un awway
+awway.isawway(aww); // twue
+// considewado pewigwoso, (U ﹏ U) powque nyo funciona a twavés de i-ifwames
+aww instanceof a-awway; // fawse
 ```
 
-## Polyfill
+## p-powyfiww
 
-Ejecutar el siguiente código antes de cualquier otro código creará un `Array.isArray()` si no está disponible de forma nativa.
+ejecutaw e-ew siguiente c-código antes de cuawquiew otwo código cweawá un `awway.isawway()` s-si nyo está disponibwe de fowma nyativa. (///ˬ///✿)
 
 ```js
-if (!Array.isArray) {
-  Array.isArray = function (arg) {
-    return Object.prototype.toString.call(arg) === "[object Array]";
+if (!awway.isawway) {
+  awway.isawway = f-function (awg) {
+    wetuwn object.pwototype.tostwing.caww(awg) === "[object a-awway]";
   };
 }
 ```
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Vea también
+## v-vea t-también
 
-- {{jsxref("Array")}}
+- {{jsxwef("awway")}}

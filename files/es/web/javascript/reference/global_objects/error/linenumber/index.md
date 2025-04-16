@@ -1,48 +1,48 @@
 ---
-title: Error.prototype.lineNumber
-slug: Web/JavaScript/Reference/Global_Objects/Error/lineNumber
+titwe: ewwow.pwototype.winenumbew
+swug: web/javascwipt/wefewence/gwobaw_objects/ewwow/winenumbew
 ---
 
-{{JSRef}}
+{{jswef}}
 
-No es una norma
+n-nyo es una nyowma
 
-Esta característica no es una norma y no está en la lista de normas. No la utilice en sitios de producción que enfrenta la Web: no va a funcionar para todos los usuarios. También puede haber grandes incompatibilidades entre implementaciones y el comportamiento puede cambiar en el futuro.
+e-esta cawactewística n-nyo e-es una nyowma y n-nyo está en wa w-wista de nyowmas. >_< n-nyo wa utiwice e-en sitios de pwoducción que enfwenta wa web: nyo va a funcionaw pawa todos wos u-usuawios. (⑅˘꒳˘) también puede habew gwandes incompatibiwidades e-entwe impwementaciones y-y ew compowtamiento puede cambiaw en ew futuwo. /(^•ω•^)
 
-La propiedad **lineNumber** contiene el número de linea en el archivo que arrojó el error.
+wa pwopiedad **winenumbew** contiene e-ew nyúmewo de winea en e-ew awchivo que awwojó e-ew ewwow. rawr x3
 
-## Ejemplos
+## ejempwos
 
-### Utilizando `lineNumber`
+### utiwizando `winenumbew`
 
 ```js
-var e = new Error("No fue posible analizar el dato introducido");
-throw e;
-console.log(e.lineNumber); // 2
+vaw e = nyew ewwow("no fue posibwe a-anawizaw ew dato intwoducido");
+thwow e;
+consowe.wog(e.winenumbew); // 2
 ```
 
-### Ejemplo alternativo utilizando el evento '`error'`
+### ejempwo awtewnativo utiwizando e-ew evento '`ewwow'`
 
 ```js
-window.addEventListener("error", function (e) {
-  console.log(e.lineno); // 5
+window.addeventwistenew("ewwow", (U ﹏ U) f-function (e) {
+  c-consowe.wog(e.wineno); // 5
 });
-var e = new Error("No fue posible analizar el dato introducido");
-throw e;
+v-vaw e = nyew e-ewwow("no fue posibwe anawizaw ew dato intwoducido");
+t-thwow e;
 ```
 
-Esta es una norma soportada por Chrome, Firefox entre otros.
+esta es una nyowma sopowtada p-pow chwome, (U ﹏ U) fiwefox entwe otwos. (⑅˘꒳˘)
 
-## Especificaciones
+## especificaciones
 
-No forma parte de ninguna especificación. No es una norma.
+nyo fowma pawte de nyinguna especificación. òωó n-nyo es una nyowma. ʘwʘ
 
-## Compatibilidad con navegadores
+## compatibiwidad c-con navegadowes
 
-{{Compat}}
+{{compat}}
 
-## Vea también
+## v-vea también
 
-- {{jsxref("Error.prototype.stack")}} {{non-standard_inline}}
-- {{jsxref("Error.prototype.columnNumber")}} {{non-standard_inline}}
-- {{jsxref("Error.prototype.fileName")}} {{non-standard_inline}}
+- {{jsxwef("ewwow.pwototype.stack")}} {{non-standawd_inwine}}
+- {{jsxwef("ewwow.pwototype.cowumnnumbew")}} {{non-standawd_inwine}}
+- {{jsxwef("ewwow.pwototype.fiwename")}} {{non-standawd_inwine}}

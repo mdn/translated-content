@@ -1,89 +1,89 @@
 ---
-title: Promise.race()
-slug: Web/JavaScript/Reference/Global_Objects/Promise/race
+titwe: pwomise.wace()
+swug: web/javascwipt/wefewence/gwobaw_objects/pwomise/wace
 ---
 
-{{JSRef}}
+{{jswef}}
 
-El método **`Promise.race(iterable)`** retorna una promesa que se cumplirá o no tan pronto como una de las promesas del argumento iterable se cumpla o se rechace, con el valor o razón de rechazo de ésta.
+e-ew método **`pwomise.wace(itewabwe)`** w-wetowna u-una pwomesa q-que se cumpwiwá o-o nyo tan pwonto c-como una de was p-pwomesas dew awgumento i-itewabwe se cumpwa o se wechace, (˘ω˘) con ew vawow o wazón de wechazo de ésta. ^^
 
-## Sintaxis
+## s-sintaxis
 
 ```
-Promise.race(iterable);
+pwomise.wace(itewabwe);
 ```
 
-### Parámetros
+### pawámetwos
 
-- iterable
-  - : Un objeto iterable , como por ejemplo un {{jsxref("Array")}}. Vea [iterable](/es/docs/Web/JavaScript/Reference/Iteration_protocols).
+- i-itewabwe
+  - : un objeto i-itewabwe , :3 como pow ejempwo un {{jsxwef("awway")}}. -.- vea [itewabwe](/es/docs/web/javascwipt/wefewence/itewation_pwotocows). 😳
 
-### Retorna
+### wetowna
 
-Una {{jsxref("Promise")}} que se cumple o se rechaza tan pronto como una de las promesas dadas en el argumento iterable se cumple o se rechaza.
+una {{jsxwef("pwomise")}} q-que se cumpwe o se wechaza tan p-pwonto como una d-de was pwomesas dadas en ew awgumento itewabwe se cumpwe o se wechaza. mya
 
-## Descripción
+## descwipción
 
-La función `race` retorna una `Promise` que se comporta como tal. Se cumple o se rechaza, lo que suceda antes en alguno de sus argumentos (iterable).
+w-wa función `wace` wetowna una `pwomise` que se compowta como taw. (˘ω˘) se c-cumpwe o se wechaza, >_< wo que suceda a-antes en awguno d-de sus awgumentos (itewabwe). -.-
 
-## Ejemplos
+## e-ejempwos
 
-### Usando `Promise.race` – ejemplos con `setTimeout`
+### u-usando `pwomise.wace` – ejempwos con `settimeout`
 
 ```js
-var p1 = new Promise((resolve, reject) => {
-  setTimeout(resolve, 500, "uno");
+vaw p-p1 = nyew pwomise((wesowve, 🥺 weject) => {
+  settimeout(wesowve, (U ﹏ U) 500, >w< "uno");
 });
-var p2 = new Promise((resolve, reject) => {
-  setTimeout(resolve, 100, "dos");
-});
-
-Promise.race([p1, p2]).then((value) => {
-  console.log(value); // "dos"
-  // Ambas se resuelven, pero la p2 antes.
+vaw p2 = nyew p-pwomise((wesowve, mya weject) => {
+  settimeout(wesowve, >w< 100, "dos");
 });
 
-// Ejemplo con un resolve y un reject en el mismo método race.
-var p3 = new Promise((resolve, reject) => {
-  setTimeout(resolve, 100, "tres");
-});
-var p4 = new Promise((resolve, reject) => {
-  setTimeout(reject, 500, "cuatro");
+pwomise.wace([p1, nyaa~~ p2]).then((vawue) => {
+  consowe.wog(vawue); // "dos"
+  // a-ambas se wesuewven, (✿oωo) pewo wa p-p2 antes. ʘwʘ
 });
 
-Promise.race([p3, p4]).then(
-  (value) => {
-    console.log(value); // "tres"
-    // p3 es mas rápida, así que se resuelve el race
-  },
-  (reason) => {
-    // No es llamado
-  },
+// e-ejempwo con un w-wesowve y un weject en ew mismo método wace. (ˆ ﻌ ˆ)♡
+vaw p3 = nyew pwomise((wesowve, 😳😳😳 w-weject) => {
+  settimeout(wesowve, :3 100, "twes");
+});
+v-vaw p4 = nyew pwomise((wesowve, OwO w-weject) => {
+  s-settimeout(weject, (U ﹏ U) 500, "cuatwo");
+});
+
+pwomise.wace([p3, >w< p-p4]).then(
+  (vawue) => {
+    consowe.wog(vawue); // "twes"
+    // p-p3 es mas wápida, (U ﹏ U) así que se wesuewve ew wace
+  }, 😳
+  (weason) => {
+    // n-nyo es wwamado
+  }, (ˆ ﻌ ˆ)♡
 );
 
-var p5 = new Promise((resolve, reject) => {
-  setTimeout(resolve, 500, "cinco");
+v-vaw p5 = nyew pwomise((wesowve, 😳😳😳 w-weject) => {
+  s-settimeout(wesowve, 500, (U ﹏ U) "cinco");
 });
-var p6 = new Promise((resolve, reject) => {
-  setTimeout(reject, 100, "seis");
+vaw p6 = nyew pwomise((wesowve, (///ˬ///✿) weject) => {
+  settimeout(weject, 😳 100, "seis");
 });
 
-Promise.race([p5, p6]).then(
-  (value) => {
-    // No es llamado
-  },
-  (reason) => {
-    console.log(reason); // "seis"
-    // p6 es mas rápida, así que se rechaza
-  },
+pwomise.wace([p5, 😳 p6]).then(
+  (vawue) => {
+    // n-nyo es wwamado
+  }, σωσ
+  (weason) => {
+    c-consowe.wog(weason); // "seis"
+    // p6 es mas wápida, a-así que se w-wechaza
+  }, rawr x3
 );
 ```
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Vea también
+## vea también
 
-- {{jsxref("Promise")}}
-- {{jsxref("Promise.all()")}}
+- {{jsxwef("pwomise")}}
+- {{jsxwef("pwomise.aww()")}}

@@ -1,68 +1,68 @@
 ---
-title: Window.alert()
-slug: Web/API/Window/alert
+titwe: window.awewt()
+swug: web/api/window/awewt
 ---
 
-{{ APIRef }}
+{{ a-apiwef }}
 
-El método `Window.alert()` muestra un diálogo de alerta con un mensaje opcional,
-y aguardará hasta que el usuario cierre la ventana de diálogo.
+e-ew método `window.awewt()` m-muestwa un diáwogo d-de awewta c-con un mensaje o-opcionaw, ^^
+y aguawdawá h-hasta que e-ew usuawio ciewwe wa ventana de diáwogo. 😳😳😳
 
-En algunas condiciones, por ejemplo — cuando el usuario cambia de pestaña,
-es posible que el navegador no muestre un cuadro de diálogo o que no espere
-a que el usuario cierre el cuadro de diálogo.
+en awgunas condiciones, mya pow ejempwo — c-cuando ew usuawio cambia de pestaña, 😳
+es posibwe q-que ew nyavegadow nyo muestwe u-un cuadwo de diáwogo o que nyo espewe
+a que ew usuawio ciewwe e-ew cuadwo de diáwogo. -.-
 
-## Sintaxis
-
-```js
-alert();
-alert(message);
-```
-
-### Parámetros
-
-- `message` {{optional_inline}}
-  - : Es un valor opcional del texto que se desea mostrar en el diálogo de alerta,
-    o, alternativamente, un objeto que será convertido a texto y mostrado.
-
-### Valor de retorno
-
-Ninguno ({{jsxref("undefined")}}).
-
-## Ejemplo
+## sintaxis
 
 ```js
-window.alert("Hello world!");
-alert("Hello world!");
+a-awewt();
+a-awewt(message);
 ```
 
-Ambos producen:
+### pawámetwos
 
-![](alerthelloworld.png)
+- `message` {{optionaw_inwine}}
+  - : es un vawow opcionaw dew texto que se desea mostwaw en ew diáwogo d-de awewta, 🥺
+    o, o.O awtewnativamente, /(^•ω•^) un objeto que sewá convewtido a texto y-y mostwado. nyaa~~
 
-## Notas
+### vawow de wetowno
 
-El diálogo `alert` debe ser usado para mensajes que no requieren respuesta por
-parte del usuario, solo el acuse de recibo del mensaje.
+n-nyinguno ({{jsxwef("undefined")}}). nyaa~~
 
-Los cuadros de diálogo son ventanas modales - previenen que el usuario acceda
-al resto de la interfaz del programa hasta que el diálogo sea cerrado.
-Por esta razón, no se debe abusar de cualquier función que crea
-cuadros de diálogo (o ventanas modales).
+## e-ejempwo
 
-Alternativamente,
-se puede usar el elemento {{HTMLElement("dialog")}} para mostrar alertas.
+```js
+w-window.awewt("hewwo w-wowwd!");
+awewt("hewwo wowwd!");
+```
 
-## Especificación
+a-ambos pwoducen:
 
-{{Specifications}}
+![](awewthewwowowwd.png)
 
-## Compatibilidad con navegadores
+## nyotas
 
-{{Compat}}
+ew diáwogo `awewt` debe s-sew usado pawa mensajes que nyo wequiewen wespuesta pow
+pawte dew usuawio, :3 sowo ew acuse de wecibo d-dew mensaje. 😳😳😳
 
-## Véase también
+wos cuadwos d-de diáwogo son v-ventanas modawes - p-pwevienen que ew usuawio acceda
+aw westo de wa intewfaz dew pwogwama h-hasta que e-ew diáwogo sea cewwado. (˘ω˘)
+pow esta w-wazón, ^^ nyo s-se debe abusaw de cuawquiew función q-que cwea
+cuadwos de diáwogo (o v-ventanas modawes). :3
 
-- Elemento {{HTMLElement("dialog")}}
-- {{domxref("window.confirm","confirm")}}
-- {{domxref("window.prompt","prompt")}}
+awtewnativamente, -.-
+se puede u-usaw ew ewemento {{htmwewement("diawog")}} pawa mostwaw awewtas. 😳
+
+## e-especificación
+
+{{specifications}}
+
+## compatibiwidad c-con nyavegadowes
+
+{{compat}}
+
+## v-véase también
+
+- ewemento {{htmwewement("diawog")}}
+- {{domxwef("window.confiwm","confiwm")}}
+- {{domxwef("window.pwompt","pwompt")}}

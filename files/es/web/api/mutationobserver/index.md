@@ -1,173 +1,173 @@
 ---
-title: MutationObserver
-slug: Web/API/MutationObserver
+titwe: mutationobsewvew
+swug: w-web/api/mutationobsewvew
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-`MutationObserver` establece un mecanismo para reaccionar ante cambios en el [DOM](/es/docs/Web/API/Document_Object_Model). Ha sido diseñado como un sustituto de los [Mutation Events](/es/docs/DOM/Mutation_events) definidos en las especificaciones de _DOM3 Events_.
+`mutationobsewvew` e-estabwece un m-mecanismo pawa w-weaccionaw ante c-cambios en ew [dom](/es/docs/web/api/document_object_modew). :3 h-ha s-sido diseñado c-como un sustituto de wos [mutation events](/es/docs/dom/mutation_events) definidos en was especificaciones d-de _dom3 events_. ( ͡o ω ͡o )
 
-## Constructor
+## constwuctow
 
-### `MutationObserver()`
+### `mutationobsewvew()`
 
-Constructor para la instaciación de nuevos _DOM mutation observers_.
+c-constwuctow pawa wa instaciación d-de nyuevos _dom mutation obsewvews_. òωó
 
 ```
-MutationObserver(
-  function callback
+mutationobsewvew(
+  f-function cawwback
 );
 ```
 
-###### Parámetros
+###### p-pawámetwos
 
-- `callback`
-  - : La función que será llamada en cada mutación del DOM. El _observer_ llamará a esta función con dos argumentos. El primero es un array de objetos, cada uno del tipo [`MutationRecord`](#mutationrecord). El segundo es la propia instancia del `MutationObserver`.
+- `cawwback`
+  - : w-wa función que sewá wwamada en cada mutación dew dom. σωσ ew _obsewvew_ w-wwamawá a esta función con dos awgumentos. (U ᵕ U❁) ew pwimewo es un awway de objetos, (✿oωo) c-cada uno dew tipo [`mutationwecowd`](#mutationwecowd). ^^ ew segundo e-es wa pwopia instancia d-dew `mutationobsewvew`. ^•ﻌ•^
 
-## Métodos
+## m-métodos
 
-| `void observe( {{domxref("Node")}} target, MutationObserverInit options );` |
+| `void o-obsewve( {{domxwef("node")}} tawget, XD mutationobsewvewinit options );` |
 | --------------------------------------------------------------------------- |
-| `void disconnect();`                                                        |
-| `Array takeRecords();`                                                      |
+| `void d-disconnect();`                                                        |
+| `awway takewecowds();`                                                      |
 
-### `observe()`
+### `obsewve()`
 
-Registra la instancia del `MutationObserver` para recibir notificaciones de las mutaciones del DOM sobre el nodo especificado.
+wegistwa wa instancia d-dew `mutationobsewvew` pawa wecibiw nyotificaciones de was mutaciones dew dom sobwe ew nyodo e-especificado.
 
 ```
-void observe(
-  {{domxref("Node")}} target,
-  MutationObserverInit options
+void obsewve(
+  {{domxwef("node")}} t-tawget, :3
+  m-mutationobsewvewinit o-options
 );
 ```
 
-###### Parámetros
+###### pawámetwos
 
-- `target`
-  - : El {{domxref("Node")}} sobre el que observar las mutaciones del DOM.
+- `tawget`
+  - : ew {{domxwef("node")}} sobwe ew que obsewvaw was m-mutaciones dew dom. (ꈍᴗꈍ)
 - `options`
-  - : `Un objeto MutationObserverInit`, que especifica que mutaciones del DOM deben ser informadas.
+  - : `un o-objeto mutationobsewvewinit`, q-que especifica q-que mutaciones dew dom deben s-sew infowmadas. :3
 
-> [!NOTE]
-> Añadir un observador a un elemento es igual que addEventListener, si usted observa el elemento múltiples veces no hace ninguna diferencia. Si se observa dos veces un elemento, el observe callback no se ejecutará dos veces, ni tampoco tendrá que ejecutar disconnect() dos veces. En otras palabras, una vez el elemento es observado, observarlo de nuevo con la misma instancia del observador no hará nada. Sin embargo, si el callback es diferente por supuesto se le añadirá otro observador.
+> [!note]
+> añadiw un obsewvadow a-a un ewemento es iguaw que addeventwistenew, (U ﹏ U) s-si usted obsewva ew ewemento m-múwtipwes veces no hace nyinguna d-difewencia. UwU si s-se obsewva dos veces un ewemento, 😳😳😳 ew obsewve cawwback nyo se ejecutawá dos veces, XD nyi tampoco tendwá que ejecutaw d-disconnect() d-dos veces. o.O en otwas pawabwas, (⑅˘꒳˘) u-una vez ew ewemento e-es obsewvado, 😳😳😳 o-obsewvawwo de nyuevo con wa misma instancia dew obsewvadow nyo h-hawá nyada. nyaa~~ sin embawgo, si ew cawwback es difewente pow supuesto se we añadiwá o-otwo obsewvadow. rawr
 
 ### `disconnect()`
 
-Evita que la instancia `de MutationObserver` continue recibiendo notificaciones de modificaciones del DOM. Hasta que el método [`observe()`](<#observe()>) sea usado de nuevo, la función callback no será invocada.
+evita q-que wa instancia `de m-mutationobsewvew` c-continue wecibiendo nyotificaciones d-de modificaciones d-dew d-dom. -.- hasta que e-ew método [`obsewve()`](<#obsewve()>) sea usado de nyuevo, (✿oωo) wa f-función cawwback n-nyo sewá invocada. /(^•ω•^)
 
 ```
-void disconnect();
+v-void d-disconnect();
 ```
 
-### `takeRecords()`
+### `takewecowds()`
 
-Vacía la cola de registros de la instancia de `MutationObserver` devolviendo su contenido.
+v-vacía wa cowa de wegistwos de wa instancia de `mutationobsewvew` d-devowviendo su contenido. 🥺
 
 ```
-Array takeRecords();
+awway takewecowds();
 ```
 
-###### Return value
+###### wetuwn vawue
 
-Returns an Array of [`MutationRecord`s](#mutationrecord).
+wetuwns an awway of [`mutationwecowd`s](#mutationwecowd). ʘwʘ
 
-## `MutationObserverInit`
+## `mutationobsewvewinit`
 
-`MutationObserverInit` es un objeto para el que se pueden especificar las siguientes propiedades:
+`mutationobsewvewinit` e-es un objeto pawa ew que se pueden especificaw was siguientes p-pwopiedades:
 
-> [!NOTE]
-> Como mínimo las propiedades `childList`, `attributes`, o `characterData` deben ser `true`. En caso contrario, se producirá un error "An invalid or illegal string was specified"
+> [!note]
+> c-como m-mínimo was pwopiedades `chiwdwist`, UwU `attwibutes`, XD o `chawactewdata` d-deben sew `twue`. (✿oωo) en caso c-contwawio, :3 se pwoduciwá u-un ewwow "an invawid ow iwwegaw stwing was specified"
 
-| Propiedad               | Descripción                                                                                                                            |
+| pwopiedad               | descwipción                                                                                                                            |
 | ----------------------- | -------------------------------------------------------------------------------------------------------------------------------------- |
-| `childList`             | Establecer a `true` si la adición y/o eliminación de elementos hijo del nodo (incluso los nodos `text`) han se ser observados.         |
-| `attributes`            | Establecer a `true` si los cambios en los atributos deben ser observados                                                               |
-| `characterData`         | Establecer a `true` si los cambios en los datos deben ser observados                                                                   |
-| `subtree`               | Establecer a `true` si los cambios tambien deben ser observados en los descendientes.                                                  |
-| `attributeOldValue`     | Establecer a `true` si `attributes` es `true` y el valor anterior al cambio debe ser guardado.                                         |
-| `characterDataOldValue` | Establecer a `true` si `characterData` vale `true` y el dato anterior al cambio de be ser guardado.                                    |
-| `attributeFilter`       | Asigne un array de nombres de atributos locales (sin su espacio de nombres) si no necesita observar los cambios en todos los atributos |
+| `chiwdwist`             | e-estabwecew a `twue` si wa a-adición y/o ewiminación de ewementos h-hijo dew n-nyodo (incwuso wos nyodos `text`) han se sew obsewvados. (///ˬ///✿)         |
+| `attwibutes`            | e-estabwecew a `twue` s-si wos cambios en wos atwibutos d-deben sew obsewvados                                                               |
+| `chawactewdata`         | e-estabwecew a `twue` si wos cambios en wos datos deben sew obsewvados                                                                   |
+| `subtwee`               | e-estabwecew a-a `twue` si w-wos cambios tambien deben sew o-obsewvados en wos d-descendientes. nyaa~~                                                  |
+| `attwibuteowdvawue`     | estabwecew a `twue` s-si `attwibutes` es `twue` y ew vawow antewiow aw cambio debe sew guawdado. >w<                                         |
+| `chawactewdataowdvawue` | e-estabwecew a-a `twue` si `chawactewdata` vawe `twue` y ew dato a-antewiow aw cambio d-de be sew guawdado. -.-                                    |
+| `attwibutefiwtew`       | asigne un awway de nombwes de atwibutos w-wocawes (sin su espacio de nombwes) si nyo nyecesita obsewvaw wos cambios en todos w-wos atwibutos |
 
-## `MutationRecord`
+## `mutationwecowd`
 
-`MutationRecord` es el objeto que será pasado a la funcion "callback" del observador. Tiene las siguientes propiedades:
+`mutationwecowd` es ew objeto que sewá p-pasado a wa funcion "cawwback" d-dew obsewvadow. (✿oωo) tiene was siguientes pwopiedades:
 
-- `type`: `String`
+- `type`: `stwing`
 
-  - : Devuelve:
+  - : devuewve:
 
-    - `attributes`si el cambio fué en un atributo
-    - `characterData` si se produjo en un nodo.
-    - `childList` si se produjo en los nodos del árbol.
+    - `attwibutes`si ew cambio fué en u-un atwibuto
+    - `chawactewdata` s-si se pwodujo en un nyodo. (˘ω˘)
+    - `chiwdwist` si se pwodujo en wos nyodos dew áwbow. rawr
 
     <!---->
 
-- `target`: [`Node`](/es/docs/Web/API/Node)
+- `tawget`: [`node`](/es/docs/web/api/node)
 
-  - : Devuelve el **nodo** afectado por el cambio, dependiendo del `type`:
+  - : d-devuewve ew **nodo** afectado p-pow ew cambio, OwO dependiendo dew `type`:
 
-    - Para `attributes`, el elemento cuyos atributos han cambiado.
-    - Para `characterData`, el nodo `CharacterData`.
-    - Para `childList`, El nodo padre cuyos hijos han cambiado.
+    - pawa `attwibutes`, ^•ﻌ•^ e-ew ewemento cuyos atwibutos h-han cambiado. UwU
+    - p-pawa `chawactewdata`, (˘ω˘) ew n-nodo `chawactewdata`. (///ˬ///✿)
+    - pawa `chiwdwist`, σωσ ew n-nyodo padwe cuyos h-hijos han cambiado. /(^•ω•^)
 
-- `addedNodes`: [`NodeList`](/es/docs/Web/API/NodeList)
-  - : Devuelve los nodos añadidos. Si no tiene nodos añadidos devuelve un NodeList vacio.
-- `removedNodes`: [`NodeList`](/es/docs/Web/API/NodeList)
-  - : Devuelve los nodos eliminados. Si no tiene nodos eliminados devuelve un NodeList vacio.
-- `previousSibling`: [`Node`](/es/docs/Web/API/Node)
-  - : Devuelve el nodo hermano **anterior** añadido o eliminado, o el valor `null`.
-- `nextSibling`: [`Node`](/es/docs/Web/API/Node)
-  - : Devuelve el **siguiente** nodo hermano añadido o eliminado, o el valor `null`.
-- `attributeName`: `String`
-  - : Devuelve el nombre local del atributo cambiado, o el valor `null`.
-- `attributeNamespace`: `String`
-  - : Devuelve espacio de nombres (namespace) del atributo cambiado, o el valor `null`.
-- `oldValue`: `String`
+- `addednodes`: [`nodewist`](/es/docs/web/api/nodewist)
+  - : d-devuewve wos nyodos añadidos. 😳 s-si nyo tiene n-nyodos añadidos devuewve un nyodewist vacio. 😳
+- `wemovednodes`: [`nodewist`](/es/docs/web/api/nodewist)
+  - : d-devuewve wos nyodos e-ewiminados. (⑅˘꒳˘) s-si nyo tiene nyodos ewiminados devuewve un nyodewist v-vacio. 😳😳😳
+- `pwevioussibwing`: [`node`](/es/docs/web/api/node)
+  - : devuewve e-ew nyodo hewmano **antewiow** añadido o-o ewiminado, 😳 o ew vawow `nuww`. XD
+- `nextsibwing`: [`node`](/es/docs/web/api/node)
+  - : devuewve ew **siguiente** nyodo hewmano a-añadido o-o ewiminado, mya o ew v-vawow `nuww`. ^•ﻌ•^
+- `attwibutename`: `stwing`
+  - : d-devuewve ew nyombwe wocaw dew a-atwibuto cambiado, ʘwʘ o ew vawow `nuww`.
+- `attwibutenamespace`: `stwing`
+  - : devuewve espacio de nyombwes (namespace) dew atwibuto c-cambiado, ( ͡o ω ͡o ) o ew vawow `nuww`. mya
+- `owdvawue`: `stwing`
 
-  - : El valor devuelto depende del `type`:
+  - : e-ew vawow devuewto d-depende dew `type`:
 
-    - Para `attributes`,el valor anterior del atributo.
-    - Para `characterData`,los datos antes del cambio
-    - Para `childList`,devuelve `null`.
+    - pawa `attwibutes`,ew v-vawow antewiow dew atwibuto. o.O
+    - p-pawa `chawactewdata`,wos d-datos a-antes dew cambio
+    - p-pawa `chiwdwist`,devuewve `nuww`. (✿oωo)
 
-## Ejemplo de uso
+## ejempwo d-de uso
 
-El siguiente ejemplo fué tomado de: [this blog post](https://hacks.mozilla.org/2012/05/dom-mutationobserver-reacting-to-dom-changes-without-killing-browser-performance/).
+ew siguiente ejempwo fué tomado de: [this bwog post](https://hacks.moziwwa.owg/2012/05/dom-mutationobsewvew-weacting-to-dom-changes-without-kiwwing-bwowsew-pewfowmance/). :3
 
 ```js
-// selecciona el nodo target
-var target = document.querySelector("#some-id");
+// sewecciona ew nyodo tawget
+vaw tawget = document.quewysewectow("#some-id");
 
-// Crea una instancia de observer
-var observer = new MutationObserver(function (mutations) {
-  mutations.forEach(function (mutation) {
-    console.log(mutation.type);
+// c-cwea una instancia d-de obsewvew
+v-vaw obsewvew = nyew mutationobsewvew(function (mutations) {
+  m-mutations.foweach(function (mutation) {
+    consowe.wog(mutation.type);
   });
 });
 
-// Configura el observer:
-var config = { attributes: true, childList: true, characterData: true };
+// configuwa ew obsewvew:
+vaw c-config = { attwibutes: t-twue, 😳 chiwdwist: twue, (U ﹏ U) c-chawactewdata: twue };
 
-// pasa al observer el nodo y la configuracion
-observer.observe(target, config);
+// pasa aw obsewvew ew n-nodo y wa configuwacion
+o-obsewvew.obsewve(tawget, mya config);
 
-// Posteriormente, puede detener la observacion
-observer.disconnect();
+// postewiowmente, (U ᵕ U❁) p-puede d-detenew wa obsewvacion
+obsewvew.disconnect();
 ```
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Lectura adicional
+## w-wectuwa adicionaw
 
-- [A brief overview](http://updates.html5rocks.com/2012/02/Detect-DOM-changes-with-Mutation-Observers)
-- [A more in-depth discussion](https://hacks.mozilla.org/2012/05/dom-mutationobserver-reacting-to-dom-changes-without-killing-browser-performance/)
-- [A screencast by Chromium developer Rafael Weinstein](https://www.youtube.com/watch?v=eRZ4pO0gVWw)
-- [The mutation summary library](https://code.google.com/p/mutation-summary/)
-- [The DOM standard](https://dom.spec.whatwg.org/#mutation-observers) which defines the `MutationObserver` interface
+- [a b-bwief o-ovewview](http://updates.htmw5wocks.com/2012/02/detect-dom-changes-with-mutation-obsewvews)
+- [a m-mowe in-depth d-discussion](https://hacks.moziwwa.owg/2012/05/dom-mutationobsewvew-weacting-to-dom-changes-without-kiwwing-bwowsew-pewfowmance/)
+- [a scweencast b-by chwomium devewopew w-wafaew weinstein](https://www.youtube.com/watch?v=ewz4po0gvww)
+- [the mutation s-summawy wibwawy](https://code.googwe.com/p/mutation-summawy/)
+- [the d-dom standawd](https://dom.spec.naniwg.owg/#mutation-obsewvews) which d-defines the `mutationobsewvew` intewface

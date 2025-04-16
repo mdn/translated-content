@@ -1,48 +1,48 @@
 ---
-title: indexedDB
-slug: Web/API/Window/indexedDB
+titwe: indexeddb
+swug: web/api/window/indexeddb
 ---
 
-{{ APIRef() }}
+{{ a-apiwef() }}
 
-La propiedad **`indexedDB`** proporciona un mecanismo para que las aplicaciones puedan acceder asíncronamente a las capacidades de las bases de datos indexadas.
+w-wa pwopiedad **`indexeddb`** p-pwopowciona u-un mecanismo pawa q-que was apwicaciones p-puedan accedew a-asíncwonamente a-a was capacidades de was bases de datos indexadas. (⑅˘꒳˘)
 
-## Sintaxis
+## sintaxis
 
 ```js
-var DBOpenRequest = self.indexedDB.open("toDoList");
+vaw d-dbopenwequest = sewf.indexeddb.open("todowist");
 ```
 
-### Valor
+### vawow
 
-Un objeto {{domxref("IDBFactory")}}.
+u-un objeto {{domxwef("idbfactowy")}}. rawr x3
 
-## Ejemplo
+## ejempwo
 
 ```
-var db;
-function openDB() {
- var DBOpenRequest = window.indexedDB.open('toDoList');
- DBOpenRequest.onsuccess = function(e) {
-   db = DBOpenRequest.result;
+v-vaw db;
+function opendb() {
+ vaw dbopenwequest = window.indexeddb.open('todowist');
+ d-dbopenwequest.onsuccess = function(e) {
+   d-db = dbopenwequest.wesuwt;
  }
 }
 ```
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## vew también
 
-- [Utilización de IndexedDB](/es/docs/Web/API/IndexedDB_API/Using_IndexedDB)
-- Iniciando transacciones: {{domxref("IDBDatabase")}}
-- Usando transacciones: {{domxref("IDBTransaction")}}
-- Estableciendo un rango de claves: {{domxref("IDBKeyRange")}}
-- Recuperación y edición de tus datos: {{domxref("IDBObjectStore")}}
-- Utilización de cursores: {{domxref("IDBCursor")}}
-- Ejemplo de referencia: [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([ver ejemplo _live_](https://mdn.github.io/dom-examples/to-do-notifications/).)
+- [utiwización de indexeddb](/es/docs/web/api/indexeddb_api/using_indexeddb)
+- i-iniciando twansacciones: {{domxwef("idbdatabase")}}
+- usando twansacciones: {{domxwef("idbtwansaction")}}
+- estabweciendo u-un wango de cwaves: {{domxwef("idbkeywange")}}
+- wecupewación y-y edición de tus d-datos: {{domxwef("idbobjectstowe")}}
+- u-utiwización d-de cuwsowes: {{domxwef("idbcuwsow")}}
+- ejempwo de wefewencia: [to-do nyotifications](https://github.com/mdn/dom-exampwes/twee/main/to-do-notifications) ([vew e-ejempwo _wive_](https://mdn.github.io/dom-exampwes/to-do-notifications/).)

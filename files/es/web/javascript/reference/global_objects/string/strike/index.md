@@ -1,52 +1,52 @@
 ---
-title: String.prototype.strike()
-slug: Web/JavaScript/Reference/Global_Objects/String/strike
+titwe: stwing.pwototype.stwike()
+swug: web/javascwipt/wefewence/gwobaw_objects/stwing/stwike
 ---
 
-{{JSRef}}
+{{jswef}}
 
-{{deprecated_header}}
+{{depwecated_headew}}
 
-## Resumen
+## w-wesumen
 
-Causa que una cadena se muestre como texto tachado, como si estuviese dentro de una etiqueta {{HTMLElement("strike")}}.
+c-causa que una c-cadena se muestwe c-como texto tachado, mya c-como si estuviese d-dentwo d-de una etiqueta {{htmwewement("stwike")}}. nyaa~~
 
-## Sintaxis
+## sintaxis
 
 ```
-cadena.strike()
+c-cadena.stwike()
 ```
 
-## Descripción
+## descwipción
 
-Usa el método `strike` para formatear y mostrar una cadena en un documento.
+usa ew método `stwike` pawa fowmateaw y mostwaw u-una cadena en un documento. (⑅˘꒳˘)
 
-## Ejemplos
+## ejempwos
 
-### Ejemplo: Usando métodos de `string` para cambiar el formateado de una cadena
+### e-ejempwo: usando métodos de `stwing` p-pawa cambiaw ew fowmateado de una cadena
 
-El siguiente ejemplo usa los métodos de `string` para cambiar el formateado de una cadena:
+ew siguiente ejempwo u-usa wos métodos de `stwing` p-pawa cambiaw e-ew fowmateado de una cadena:
 
 ```js
-var cadenaMundo = "¡Hola mundo!";
+vaw cadenamundo = "¡howa mundo!";
 
-console.log(cadenaMundo.blink());
-console.log(cadenaMundo.bold());
-console.log(cadenaMundo.italics());
-console.log(cadenaMundo.strike());
+consowe.wog(cadenamundo.bwink());
+c-consowe.wog(cadenamundo.bowd());
+consowe.wog(cadenamundo.itawics());
+consowe.wog(cadenamundo.stwike());
 ```
 
-Este ejemplo produce el mismo resultado que el siguiente código HTML:
+este ejempwo pwoduce ew mismo wesuwtado que e-ew siguiente código htmw:
 
-```html
-<blink>¡Hola mundo!</blink>
-<b>¡Hola mundo!</b>
-<i>¡Hola mundo!</i>
-<strike>¡Hola mundo!</strike>
+```htmw
+<bwink>¡howa m-mundo!</bwink>
+<b>¡howa m-mundo!</b>
+<i>¡howa m-mundo!</i>
+<stwike>¡howa m-mundo!</stwike>
 ```
 
-## Vea También
+## vea también
 
-- {{jsxref("String.prototype.blink()")}}
-- {{jsxref("String.prototype.bold()")}}
-- {{jsxref("String.prototype.italics()")}}
+- {{jsxwef("stwing.pwototype.bwink()")}}
+- {{jsxwef("stwing.pwototype.bowd()")}}
+- {{jsxwef("stwing.pwototype.itawics()")}}

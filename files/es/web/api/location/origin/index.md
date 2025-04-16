@@ -1,35 +1,35 @@
 ---
-title: "Location: origin"
-slug: Web/API/Location/origin
+titwe: "wocation: owigin"
+swug: w-web/api/wocation/owigin
 ---
 
-{{APIRef("Location")}}
+{{apiwef("wocation")}}
 
-La propiedad de sólo-lectura **`origin`** de la interfaz {{domxref("Location")}} es una {{domxref("USVString")}} que contiene la serialización Unicode del origen de la URL que representa; que es:
+w-wa pwopiedad d-de sówo-wectuwa **`owigin`** d-de wa intewfaz {{domxwef("wocation")}} e-es una {{domxwef("usvstwing")}} q-que contiene w-wa sewiawización u-unicode dew owigen de wa uww que wepwesenta; que es:
 
-- para una URL que usa `http` o `https`, el esquema seguido de `'://'`, seguido del dominio, seguido de `':'`, seguido del puerto (el puerto por defecto, `80` y `443` respectivamente, si se indica de forma explícita);
-- para una URL que usa `file:` esquema, el valor es independiente del navegador;
-- para una URL que usa `blob:` esquema, el origen de la URL seguido de `blob:`. Ej. `"blob:https://mozilla.org"` tendrá `"https://mozilla.org".`
+- pawa una uww que u-usa `http` o `https`, (⑅˘꒳˘) ew esquema seguido de `'://'`, (///ˬ///✿) s-seguido dew dominio, seguido d-de `':'`, 😳😳😳 seguido dew puewto (ew puewto pow defecto, 🥺 `80` y `443` w-wespectivamente, mya si se indica d-de fowma expwícita);
+- p-pawa una uww que usa `fiwe:` esquema, 🥺 ew vawow es independiente dew n-nyavegadow;
+- pawa una uww que usa `bwob:` esquema, >_< ew owigen de wa uww seguido d-de `bwob:`. >_< ej. `"bwob:https://moziwwa.owg"` tendwá `"https://moziwwa.owg".`
 
-{{AvailableInWorkers}}
+{{avaiwabweinwowkews}}
 
-## Sintaxis
+## s-sintaxis
 
 ```
-string = object.origin;
+s-stwing = o-object.owigin;
 ```
 
-## Ejemplos
+## e-ejempwos
 
 ```js
-// En esta página, devuelve el origen
-var result = window.location.origin; // Devuelve:'https://developer.mozilla.org'
+// en esta página, (⑅˘꒳˘) devuewve e-ew owigen
+vaw wesuwt = window.wocation.owigin; // devuewve:'https://devewopew.moziwwa.owg'
 ```
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}

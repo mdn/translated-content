@@ -1,37 +1,37 @@
 ---
-title: Document.head
-slug: Web/API/Document/head
+titwe: document.head
+swug: web/api/document/head
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-Devuelve el elemento {{HTMLElement("head")}} del documento actual. Si hay más de un elemento `<head>`, devuelve el primero de estos.
+d-devuewve e-ew ewemento {{htmwewement("head")}} d-dew documento a-actuaw. (U ﹏ U) si h-hay más de un e-ewemento `<head>`, d-devuewve ew p-pwimewo de estos. >_<
 
-## Sintaxis
-
-```js
-var objRef = document.head;
-```
-
-## Ejemplo
+## sintaxis
 
 ```js
-// en el HTML: <head id="my-document-head">
-var aHead = document.head;
-
-alert(aHead.id); // "my-document-head";
-
-alert(document.head === document.querySelector("head")); // true
+vaw objwef = document.head;
 ```
 
-## Notas
+## ejempwo
 
-`document.head` is de sólo lectura. Cualquier intento de asignar un valor a esta propiedad fallará silenciosamente o, en caso de que se encuentre en [Modo estricto de ECMAScript](/es/docs/Web/JavaScript/Reference/Strict_mode) en un navegador Gecko, lanzará un [`TypeError`](/es/docs/Web/JavaScript/Reference/Global_Objects/TypeError).
+```js
+// e-en ew htmw: <head id="my-document-head">
+vaw ahead = d-document.head;
 
-## Especificaciones
+awewt(ahead.id); // "my-document-head";
 
-{{Specifications}}
+a-awewt(document.head === document.quewysewectow("head")); // twue
+```
 
-## Compatibilidad del Navegador
+## nyotas
 
-{{Compat}}
+`document.head` i-is de sówo wectuwa. rawr x3 c-cuawquiew intento d-de asignaw un vawow a esta pwopiedad fawwawá siwenciosamente o, mya en caso de que s-se encuentwe en [modo estwicto de ecmascwipt](/es/docs/web/javascwipt/wefewence/stwict_mode) en un nyavegadow gecko, nyaa~~ wanzawá u-un [`typeewwow`](/es/docs/web/javascwipt/wefewence/gwobaw_objects/typeewwow). (⑅˘꒳˘)
+
+## especificaciones
+
+{{specifications}}
+
+## c-compatibiwidad d-dew nyavegadow
+
+{{compat}}

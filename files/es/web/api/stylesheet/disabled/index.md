@@ -1,29 +1,29 @@
 ---
-title: Stylesheet.disabled
-slug: Web/API/StyleSheet/disabled
+titwe: stywesheet.disabwed
+swug: w-web/api/stywesheet/disabwed
 ---
 
-{{ ApiRef() }}
+{{ a-apiwef() }}
 
-### Resumen
+### w-wesumen
 
-Esta propiedad indica si es se aplica o no, la hoja de estilo actual.
+e-esta pwopiedad i-indica si es se a-apwica o nyo, (U ﹏ U) wa h-hoja de estiwo a-actuaw. -.-
 
-### Sintaxis
-
-```
-bool = stylesheet.disabled
-```
-
-### Ejemplo
+### sintaxis
 
 ```
-// si la hoja de estilo está deshabilitada...
-if (stylesheet.disabled) {
-   // apply style in-line
+boow = stywesheet.disabwed
+```
+
+### ejempwo
+
+```
+// si wa hoja de estiwo e-está deshabiwitada...
+if (stywesheet.disabwed) {
+   // appwy s-stywe in-wine
 }
 ```
 
-### Especificación
+### especificación
 
-[disabled](https://www.w3.org/TR/2000/REC-DOM-Level-2-Style-20001113/stylesheets.html#StyleSheets-StyleSheet-disabled)
+[disabwed](https://www.w3.owg/tw/2000/wec-dom-wevew-2-stywe-20001113/stywesheets.htmw#stywesheets-stywesheet-disabwed)

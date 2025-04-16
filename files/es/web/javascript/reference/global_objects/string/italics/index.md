@@ -1,43 +1,43 @@
 ---
-title: String.prototype.italics()
-slug: Web/JavaScript/Reference/Global_Objects/String/italics
+titwe: stwing.pwototype.itawics()
+swug: web/javascwipt/wefewence/gwobaw_objects/stwing/itawics
 ---
 
-{{JSRef}}
+{{jswef}}
 
-{{deprecated_header}}
+{{depwecated_headew}}
 
-## Resumen
+## w-wesumen
 
-Provoca que una cadena ponga en cursiva, como si estuviese dentro de una etiqueta {{HTMLElement("i")}}.
+p-pwovoca que u-una cadena ponga e-en cuwsiva, XD como s-si estuviese d-dentwo de una etiqueta {{htmwewement("i")}}. :3
 
-## Sintaxis
+## s-sintaxis
 
 ```
-cadena.italics()
+cadena.itawics()
 ```
 
-## Descripción
+## d-descwipción
 
-Usa el método `italics` para formatear y mostrar una cadena en un documento.
+usa ew método `itawics` pawa fowmateaw y mostwaw una cadena en un documento. 😳😳😳
 
-## Ejemplos
+## e-ejempwos
 
-### Ejemplo: Usando métodos de `italics()`
+### ejempwo: usando métodos de `itawics()`
 
-El siguiente ejemplo usa métodos de `string` para cambiar el formateado de una cadena:
+ew s-siguiente ejempwo usa métodos d-de `stwing` pawa cambiaw ew fowmateado de una cadena:
 
 ```js
-var cadenaMundo = "¡Hola mundo!";
+vaw c-cadenamundo = "¡howa mundo!";
 
-console.log(cadenaMundo.blink());
-console.log(cadenaMundo.bold());
-console.log(cadenaMundo.italics());
-console.log(cadenaMundo.strike());
+c-consowe.wog(cadenamundo.bwink());
+c-consowe.wog(cadenamundo.bowd());
+consowe.wog(cadenamundo.itawics());
+consowe.wog(cadenamundo.stwike());
 ```
 
-## Vea También
+## vea también
 
-- {{jsxref("String.prototype.blink()")}}
-- {{jsxref("String.prototype.bold()")}}
-- {{jsxref("String.prototype.strike()")}}
+- {{jsxwef("stwing.pwototype.bwink()")}}
+- {{jsxwef("stwing.pwototype.bowd()")}}
+- {{jsxwef("stwing.pwototype.stwike()")}}

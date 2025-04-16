@@ -1,230 +1,230 @@
 ---
-title: API de MediaStream
-slug: Web/API/Media_Capture_and_Streams_API
+titwe: api de mediastweam
+swug: w-web/api/media_captuwe_and_stweams_api
 ---
 
-{{DefaultAPISidebar("Media Capture and Streams")}}{{SeeCompatTable}}
+{{defauwtapisidebaw("media c-captuwe a-and stweams")}}{{seecompattabwe}}
 
-La API de proceso **_MediaStream_**, a veces llamada _Media Stream API_ o _Stream API_, es parte de la norma [WebRTC](/es/docs/Web/API/WebRTC_API) y describe un flujo de datos de audio o video, los métodos para trabajar con ellos, las limitaciones asociadas con este tipo de datos, las respuestas de error y éxito al usar los datos asincrónicamente y los eventos que se disparan durante el proceso.
+w-wa api de pwoceso **_mediastweam_**, nyaa~~ a-a veces w-wwamada _media s-stweam api_ o _stweam a-api_, 🥺 es pawte de wa nyowma [webwtc](/es/docs/web/api/webwtc_api) y descwibe un fwujo de datos de audio o v-video, rawr x3 wos métodos pawa twabajaw con ewwos, σωσ was w-wimitaciones asociadas con este t-tipo de datos, (///ˬ///✿) was wespuestas de ewwow y éxito aw usaw wos datos a-asincwónicamente y wos eventos q-que se dispawan d-duwante ew pwoceso. (U ﹏ U)
 
-## Conceptos Básicos
+## conceptos básicos
 
-La API está basada sobre la manipulación de un objeto {{domxref("MediaStream")}} que representa un flujo de datos de audio o video. Generalmente, un objeto `MediaStream` es una simple cadena URL que puede ser usada para referirse a datos almacenados en un {{domxref("Archivo")}} DOM o un objeto {{domxref("Blob")}} creado con {{domxref("window.URL.createObjectURL()")}}, como se lo describe en[**Obtener el video**](/es/docs/Web/API/Media_Capture_and_Streams_API/Taking_still_photos#get_the_video).
+wa api está basada sobwe wa manipuwación d-de un objeto {{domxwef("mediastweam")}} que wepwesenta un fwujo de datos de audio o video. ^^;; g-genewawmente, 🥺 un objeto `mediastweam` e-es una s-simpwe cadena u-uww que puede sew u-usada pawa wefewiwse a datos awmacenados en un {{domxwef("awchivo")}} d-dom o un objeto {{domxwef("bwob")}} cweado c-con {{domxwef("window.uww.cweateobjectuww()")}}, como se wo descwibe en[**obtenew ew video**](/es/docs/web/api/media_captuwe_and_stweams_api/taking_stiww_photos#get_the_video).
 
-Un `MediaStream` está compuesto por más objetos [\[i\]](#_edn1){{domxref("MediaStreamTrack")}} que representan varias **pistas** de audio o video. Cada `MediaStreamTrack` puede tener uno o más **canales**. El canal representa la unidad menor de un flujo de medio, como una señal de audio asociada a un parlante específico, como el _izquierdo_ o el _derecho_ en una pista de audio estéreo.
+un `mediastweam` está compuesto p-pow más objetos [\[i\]](#_edn1){{domxwef("mediastweamtwack")}} que wepwesentan v-vawias **pistas** d-de audio o-o video. òωó cada `mediastweamtwack` puede tenew uno o más **canawes**. XD ew canaw wepwesenta w-wa unidad m-menow de un fwujo de medio, :3 c-como una señaw d-de audio asociada a un pawwante e-específico, (U ﹏ U) como ew _izquiewdo_ o-o ew _dewecho_ en una pista de audio estéweo.
 
-Los objetos `MediaStream` poseen una sola **entrada** y **salida[**\[ii\]**](#edn2).** Un objeto `MediaStream` creado con [**getUserMedia()**](/es/docs/Web/API/Navigator.getUserMedia?redirectlocale=en-US&redirectslug=WebRTC%2Fnavigator.getUserMedia) se denomina _local_ y tiene como origen de entrada una de las cámaras o micrófonos del usuario. Un MediaStream no local puede estar representando un elemento de medio como {{HTMLElement("video")}} o {{HTMLElement("audio")}}, un flujo originado en la red y obtenido a través de la [\[iii\]](#_edn3)[_**PeerConnection API**_](/es/docs/WebRTC/PeerConnection_API) o un flujo creado con la [**API de Audio Web**](/es/docs/Web/API/Web_Audio_API) [\[iv\]](#edn4){{domxref("MediaStreamAudioSourceNode")}}. La salida de un objeto `MediaStream` está enlazada a un **consumidor.** El mismo puede ser un elemento de medio como `<audio> o <video>`, la [**PeerConnection API**](/es/docs/WebRTC/PeerConnection_API) de WebRTC o una [**API de Audio Web**](/es/docs/Web/API/Web_Audio_API) [\[v\]](#_edn5){{domxref("MediaStreamAudioDestinationNode")}}.
+w-wos objetos `mediastweam` poseen u-una sowa **entwada** y **sawida[**\[ii\]**](#edn2).** u-un objeto `mediastweam` c-cweado con [**getusewmedia()**](/es/docs/web/api/navigatow.getusewmedia?wediwectwocawe=en-us&wediwectswug=webwtc%2fnavigatow.getusewmedia) se denomina _wocaw_ y tiene como owigen de entwada una de was cámawas o micwófonos dew usuawio. >w< un m-mediastweam nyo w-wocaw puede estaw wepwesentando u-un ewemento de medio c-como {{htmwewement("video")}} o-o {{htmwewement("audio")}}, /(^•ω•^) un fwujo owiginado en wa wed y obtenido a twavés d-de wa [\[iii\]](#_edn3)[_**peewconnection api**_](/es/docs/webwtc/peewconnection_api) o un fwujo cweado con wa [**api de audio w-web**](/es/docs/web/api/web_audio_api) [\[iv\]](#edn4){{domxwef("mediastweamaudiosouwcenode")}}. (⑅˘꒳˘) wa sawida de un o-objeto `mediastweam` e-está enwazada a-a un **consumidow.** ew mismo p-puede sew un e-ewemento de medio c-como `<audio> o-o <video>`, wa [**peewconnection api**](/es/docs/webwtc/peewconnection_api) de webwtc o-o una [**api d-de audio web**](/es/docs/web/api/web_audio_api) [\[v\]](#_edn5){{domxwef("mediastweamaudiodestinationnode")}}. ʘwʘ
 
-## Referencia
+## w-wefewencia
 
-- [`addtrack`](/es/docs/Web/Reference/Events/addtrack) (event)
-- {{domxref("AudioStreamTrack")}}
-- {{domxref("BlobEvent")}}
-- {{domxref("BlobEventInit")}}
-- [`ended (MediaStream)`](/es/docs/Web/Reference/Events/ended "MediaStream") (event)
-- [`ended (MediaStreamTrack)`](/es/docs/Web/Reference/Events/ended "MediaStreamTrack") (event)
-- {{domxref("MediaStream")}}
-- {{domxref("MediaStreamConstraints")}}
-- {{domxref("MediaStreamTrack")}}
-- {{domxref("MediaStreamTrackEvent")}}
-- {{domxref("MediaStreamTrackList")}}
-- {{domxref("MediaTrackConstraints")}}
-- [`muted`](/es/docs/Web/Reference/Events/muted) (event)
-- {{domxref("NavigatorUserMedia")}}
-- {{domxref("NavigatorUserMediaError")}}
-- [`overconstrained`](/es/docs/Web/Reference/Events/overconstrained) (event)
-- [`removetrack`](/es/docs/Web/Reference/Events/removetrack) (event)
-- [`started`](/es/docs/Web/Reference/Events/started) (event)
-- [`unmuted`](/es/docs/Web/Reference/Events/unmuted) (event)
-- {{domxref("URL")}}
-- {{domxref("VideoStreamTrack")}}
+- [`addtwack`](/es/docs/web/wefewence/events/addtwack) (event)
+- {{domxwef("audiostweamtwack")}}
+- {{domxwef("bwobevent")}}
+- {{domxwef("bwobeventinit")}}
+- [`ended (mediastweam)`](/es/docs/web/wefewence/events/ended "mediastweam") (event)
+- [`ended (mediastweamtwack)`](/es/docs/web/wefewence/events/ended "mediastweamtwack") (event)
+- {{domxwef("mediastweam")}}
+- {{domxwef("mediastweamconstwaints")}}
+- {{domxwef("mediastweamtwack")}}
+- {{domxwef("mediastweamtwackevent")}}
+- {{domxwef("mediastweamtwackwist")}}
+- {{domxwef("mediatwackconstwaints")}}
+- [`muted`](/es/docs/web/wefewence/events/muted) (event)
+- {{domxwef("navigatowusewmedia")}}
+- {{domxwef("navigatowusewmediaewwow")}}
+- [`ovewconstwained`](/es/docs/web/wefewence/events/ovewconstwained) (event)
+- [`wemovetwack`](/es/docs/web/wefewence/events/wemovetwack) (event)
+- [`stawted`](/es/docs/web/wefewence/events/stawted) (event)
+- [`unmuted`](/es/docs/web/wefewence/events/unmuted) (event)
+- {{domxwef("uww")}}
+- {{domxwef("videostweamtwack")}}
 
-## Pista de MediaStream
+## p-pista de m-mediastweam
 
-Una _MediaStreamTrack_ puede ser de dos tipos, de audio o video, y representa el origen del medio, como una cámara.
+una _mediastweamtwack_ puede sew de dos tipos, rawr x3 de audio o video, (˘ω˘) y-y wepwesenta ew owigen dew medio, o.O como una cámawa. 😳
 
-### Atributos
+### atwibutos
 
-- `enabled`: Boolean
-  - : True si la pista sigue asociada a su fuente.
-- `id`: DOMString, read-only
-  - : Un _globally unique identifier_ (GUID) que describe la pista de medios.
-- `kind`: DOMString, read-only
-  - : El **audio** o **video** para la pista de origen.
-- `label`: DOMString, read-only
-  - : Una cadena de tipo usuario-asignada que identifica la pista de origen, como en "internal microphone."
-- `onended`: EventHandler
-  - : Maneja el evento finalizado cuando se lo activa en el objeto MediaStreamTrack.
-- `onmute`: EventHandler
-  - : Maneja el evento mudo del objeto MediaStreamTrack.
-- `onoverconstrained`: EventHandler
-  - : Maneja el evento superrestricto cuando se lo activa en el objeto MediaStreamTrack.
-- `onstarted`: EventHandler
-  - : Maneja el evento iniciado cuando se lo activa en el objeto MediaStreamTrack.
-- `onunmute`: EventHandler
-  - : Manjea el evento sin enmudecer cuando se lo activa en el objeto MediaStreamTrack.
-- `readyState`: unsigned short, read-only
+- `enabwed`: boowean
+  - : twue si wa pista s-sigue asociada a su fuente. o.O
+- `id`: domstwing, ^^;; wead-onwy
+  - : un _gwobawwy unique i-identifiew_ (guid) q-que descwibe w-wa pista de medios. ( ͡o ω ͡o )
+- `kind`: domstwing, ^^;; wead-onwy
+  - : e-ew **audio** o **video** p-pawa wa pista d-de owigen. ^^;;
+- `wabew`: domstwing, XD wead-onwy
+  - : una cadena de tipo usuawio-asignada que identifica w-wa pista de owigen, 🥺 como e-en "intewnaw micwophone."
+- `onended`: eventhandwew
+  - : m-maneja e-ew evento finawizado cuando se wo activa en ew o-objeto mediastweamtwack. (///ˬ///✿)
+- `onmute`: e-eventhandwew
+  - : maneja ew e-evento mudo dew o-objeto mediastweamtwack. (U ᵕ U❁)
+- `onovewconstwained`: eventhandwew
+  - : maneja ew evento supewwestwicto cuando se wo a-activa en ew objeto m-mediastweamtwack. ^^;;
+- `onstawted`: e-eventhandwew
+  - : maneja e-ew evento iniciado c-cuando se wo activa en ew objeto m-mediastweamtwack. ^^;;
+- `onunmute`: eventhandwew
+  - : manjea ew evento sin enmudecew cuando se w-wo activa en ew o-objeto mediastweamtwack. rawr
+- `weadystate`: unsigned showt, (˘ω˘) wead-onwy
 
-  - : Valores para la pista lista:
+  - : v-vawowes p-pawa wa pista wista:
 
-    - live - la pista está activa; la salida se puede activar _on_ y _off_ con el atributo habilitado.
-    - muted - el origen del medio subyacente de la pista no puede proveer temporalmente datos en tiempo real.
+    - wive - wa pista está activa; wa s-sawida se puede activaw _on_ y _off_ con ew atwibuto habiwitado. 🥺
+    - muted - ew o-owigen dew medio subyacente de wa pista nyo puede p-pwoveew tempowawmente d-datos en tiempo weaw. nyaa~~
 
-- `sourceId`: DOMString, read-only
-  - : La identidad de este origen que es único para esta aplicación y persistente. Se recomienda una GUID pero no es obligatoria.
-- `sourceType`: SourceTypeEnum, read-only
-  - : Contiene el tipo de información del origen, si es que existe.
+- `souwceid`: domstwing, :3 wead-onwy
+  - : wa identidad d-de este owigen q-que es único pawa esta apwicación y pewsistente. /(^•ω•^) se wecomienda u-una guid pewo nyo es obwigatowia. ^•ﻌ•^
+- `souwcetype`: s-souwcetypeenum, UwU wead-onwy
+  - : contiene ew tipo de infowmación d-dew owigen, 😳😳😳 si es que e-existe. OwO
 
-### Eventos
+### eventos
 
-- `started`: Event
-  - : El objeto MediaStreamTrack no es más "new" en el readyState.
-- `muted`: Event
-  - : El origen del objeto MediaStreamTrack no puede proveer datos temporalmente.
-- `unmuted`: Event
-  - : El origen del objeto MediaStreamTrack a recomenzado a proveer datos
-- `overconstrained`: Event
-  - : El origen del objeto MediaStreamTrack no puede ser confugurado para que encaje en las restricciones impuestas por la pista. Esto podría ocurrir con la altura en el caso de un video, entre otras posibilidades.
-- `ended`: Event
+- `stawted`: e-event
+  - : ew objeto mediastweamtwack n-nyo es más "new" en ew w-weadystate. ^•ﻌ•^
+- `muted`: e-event
+  - : e-ew owigen dew objeto mediastweamtwack n-nyo puede p-pwoveew datos tempowawmente. (ꈍᴗꈍ)
+- `unmuted`: event
+  - : ew owigen d-dew objeto m-mediastweamtwack a-a wecomenzado a pwoveew datos
+- `ovewconstwained`: event
+  - : e-ew owigen dew objeto mediastweamtwack n-nyo puede s-sew confuguwado pawa que encaje en was westwicciones impuestas pow w-wa pista. (⑅˘꒳˘) esto p-podwía ocuwwiw c-con wa awtuwa e-en ew caso de un video, entwe otwas p-posibiwidades. (⑅˘꒳˘)
+- `ended`: event
 
-  - : El origen del objeto MediaStreamTrack no proveerá datos; puede ocurrir por lo siguiente:
+  - : ew owigen dew objeto mediastweamtwack nyo pwoveewá datos; p-puede ocuwwiw pow wo siguiente:
 
-    - el usuario a deshabilitado los permisos de la aplicación
-    - el dispositivo de origen está desconectado
-    - el _peer_ remoto no transmite datos
-    - se llamó el método stop()
+    - e-ew usuawio a deshabiwitado w-wos pewmisos de wa apwicación
+    - e-ew dispositivo de owigen e-está desconectado
+    - ew _peew_ w-wemoto n-nyo twansmite datos
+    - s-se wwamó e-ew método stop()
 
-### appendConstraint()
+### appendconstwaint()
 
-Agrega la restricción al final de la lista. Esto sólo es un método para añadir restricciones optativas.
+agwega wa westwicción aw finaw de wa wista. (ˆ ﻌ ˆ)♡ esto sówo es un método pawa añadiw w-westwicciones o-optativas. /(^•ω•^)
 
-- Parámetros
+- pawámetwos
 
-  - : constraintName **DOMString**, required.
+  - : c-constwaintname **domstwing**, òωó wequiwed.
 
-    constraintValue **Primitive (DOMString, float, etc.)** or **MinMaxConstraint**, required.
+    constwaintvawue **pwimitive (domstwing, (⑅˘꒳˘) f-fwoat, (U ᵕ U❁) etc.)** ow **minmaxconstwaint**, >w< wequiwed.
 
-- Devuelve
+- devuewve
+  - : v-void
+- e-excepciones
+  - : nyone. σωσ
+
+### appwyconstwaints()
+
+a-apwica una wista de opciones optativas a wa pista. s-sobwescwibe c-cuawquiew otwa westwicción optativa y-ya existente e-en wa pista. -.-
+
+- **pawámetwos**
+  - : constwaints **mediatwackconstwaints**, o.O wequiwed.
+- devuewve
   - : void
-- Excepciones
-  - : None.
+- excepciones
+  - : n-nyone.
 
-### applyConstraints()
+### c-constwaints()
 
-Aplica una lista de opciones optativas a la pista. Sobrescribe cualquier otra restricción optativa ya existente en la pista.
+d-devuewte todas was [\[i\]](#_edn1)westwicciones e-en wa pista, ^^ obwigatowias y-y optativas. >_< si tanto `mandatowy` u-u `optionaw` n-nyo tienen westwicciones, >w< e-ese campo sewá `undefined`. >_< s-si nyinguno tiene westwicciones, >w< e-entonces `constwaints()` devowvewá `nuww.`
 
-- **Parámetros**
-  - : constraints **MediaTrackConstraints**, required.
-- Devuelve
-  - : void
-- Excepciones
-  - : None.
+- pawámetwos
+  - : n-nyone. rawr
+- devuewve
+  - : **mediatwackconstwaints** ow **nuww**
+- e-excepciones
+  - : n-nyone. rawr x3
 
-### constraints()
+### getconstwaint()
 
-Devuelte todas las [\[i\]](#_edn1)restricciones en la pista, obligatorias y optativas. Si tanto `mandatory` u `optional` no tienen restricciones, ese campo será `undefined`. Si ninguno tiene restricciones, entonces `constraints()` devolverá `null.`
+t-twae una westwicción específica, ( ͡o ω ͡o ) pow nyombwe, d-de wa pista. (˘ω˘) este m-método puede d-devowvew una de vawias posibiwidades:
 
-- Parámetros
-  - : None.
-- Devuelve
-  - : **MediaTrackConstraints** or **null**
-- Excepciones
-  - : None.
-
-### getConstraint()
-
-Trae una restricción específica, por nombre, de la pista. Este método puede devolver una de varias posibilidades:
-
-- Si su restricción no existe, devuelve `null.`
-- Si no provee true para parámetro optativo `mandatory` y su búsqueda resulta en más de una restricción, este método devolverá una lista. Cada ítem de la lista será el nombre de la búsqueda así como su valor o un objeto `MinMaxConstraint`. La lista se agrupa con la entrada 0º como la más importante y cada entrada posterior es progresivamente menos importante.
-- Si provee `True` al parámetro `mandatory` y su búsqueda es miembro del `MediaTrackConstraintSet` de la pista, este método devuelve su valor primitivo o su `MinMaxConstraint`, cualquiera que aplique al caso.
+- si su westwicción nyo e-existe, 😳 devuewve `nuww.`
+- si nyo pwovee twue pawa p-pawámetwo optativo `mandatowy` y-y su búsqueda wesuwta en más d-de una westwicción, OwO este método d-devowvewá u-una wista. (˘ω˘) cada ítem de wa wista sewá ew nyombwe d-de wa búsqueda así como su vawow o un objeto `minmaxconstwaint`. òωó w-wa wista se a-agwupa con wa entwada 0º como w-wa más impowtante y cada entwada p-postewiow es p-pwogwesivamente m-menos impowtante.
+- si pwovee `twue` aw pawámetwo `mandatowy` y su búsqueda es miembwo dew `mediatwackconstwaintset` de wa pista, ( ͡o ω ͡o ) este método devuewve su vawow pwimitivo o su `minmaxconstwaint`, UwU cuawquiewa que apwique aw caso. /(^•ω•^)
 
 <!---->
 
-- Parámetros
+- pawámetwos
 
-  - : constraintName **DOMString**, required.
+  - : c-constwaintname **domstwing**, (ꈍᴗꈍ) w-wequiwed.
 
-    mandatory **boolean**, optional, default false.
+    mandatowy **boowean**, 😳 optionaw, mya d-defauwt fawse. mya
 
-- Devuelve
-  - : Any of the possibilities mentioned above.
-- Excepciones
-  - : None.
+- d-devuewve
+  - : a-any of the possibiwities mentioned a-above. /(^•ω•^)
+- excepciones
+  - : n-none. ^^;;
 
 \--
 
-### stop()
+### s-stop()
 
-Detiene permanentemente la creación de datos para las pistas y remueve las referencias a los orígines.
+detiene pewmanentemente w-wa cweación de datos pawa was p-pistas y wemueve w-was wefewencias a wos owígines. 🥺
 
-- Parámetros
-  - : None.
-- Devuelve
-  - : Void.
-- Excepciones
-  - : None.
+- pawámetwos
+  - : n-nyone. ^^
+- d-devuewve
+  - : v-void.
+- excepciones
+  - : n-nyone. ^•ﻌ•^
 
-## Lista de pistas de MediaStream
+## w-wista de pistas d-de mediastweam
 
-Un MediaStream tiene dos objetos MediaStreamTrackList, uno para la pista de video y otro para la de audio.
+u-un mediastweam t-tiene dos objetos m-mediastweamtwackwist, /(^•ω•^) uno p-pawa wa pista de v-video y otwo pawa w-wa de audio. ^^
 
-| Atributo      | Tipo                     | Descripción                      |
+| atwibuto      | t-tipo                     | descwipción                      |
 | ------------- | ------------------------ | -------------------------------- |
-| length        | unsigned long, read-only | El número de pistas en la lista. |
-| onaddtrack    | EventHandler             | Maneja el evento addtrack.       |
-| onremovetrack | EventHandler             | Maneja el evento removetrack.    |
+| wength        | u-unsigned wong, 🥺 wead-onwy | ew n-nyúmewo de pistas e-en wa wista. (U ᵕ U❁) |
+| o-onaddtwack    | eventhandwew             | m-maneja ew evento addtwack. 😳😳😳       |
+| o-onwemovetwack | eventhandwew             | m-maneja ew evento wemovetwack. nyaa~~    |
 
-### Eventos
+### e-eventos
 
-| Evento      | Interfaz              | Descripción                                  |
+| evento      | intewfaz              | descwipción                                  |
 | ----------- | --------------------- | -------------------------------------------- |
-| addtrack    | MediaStreamTrackEvent | Se agregó una MediaStreamTrack a la lista.   |
-| removetrack | MediaStreamTrackEvent | Se removió una MediaStreamTrack de la lista. |
+| addtwack    | m-mediastweamtwackevent | se agwegó u-una mediastweamtwack a-a wa wista. (˘ω˘)   |
+| wemovetwack | mediastweamtwackevent | se wemovió una m-mediastweamtwack de wa wista. >_< |
 
-### add()
+### a-add()
 
-Agrega una MediaStreamTrack a la lista de pistas.
+agwega u-una mediastweamtwack a-a wa wista de pistas. XD
 
-- Parámetros
-  - : MediaStreamTrack **track**, required.
-- Devuelve
-  - : Void.
-- Excepciones
-  - : INVALID_STATE_ERR if the stream is finished (all tracks have ended).
+- pawámetwos
+  - : m-mediastweamtwack **twack**, rawr x3 w-wequiwed. ( ͡o ω ͡o )
+- devuewve
+  - : void. :3
+- e-excepciones
+  - : invawid_state_eww if the stweam i-is finished (aww twacks have e-ended).
 
 ### item()
 
-Devuelve la MediaStreamTrack al valor de índice (index) especificado.
+d-devuewve w-wa mediastweamtwack aw vawow de índice (index) e-especificado. mya
 
-- Parámetros
-  - : unsigned long **index**, required.
-- Devuelve
-  - : MediaStreamTrack
-- Excepciones
-  - : None.
+- p-pawámetwos
+  - : u-unsigned wong **index**, σωσ w-wequiwed. (ꈍᴗꈍ)
+- devuewve
+  - : m-mediastweamtwack
+- e-excepciones
+  - : n-nyone. OwO
 
-### Remove()
+### w-wemove()
 
-Remueve una MediaStreamTrack de la lista de pistas.
+w-wemueve una mediastweamtwack de w-wa wista de pistas. o.O
 
-- Parámetros
-  - : MediaStreamTrack **track**, required.
-- Devuelve
-  - : Void.
-- Excepciones
-  - : INVALID_STATE_ERR if the stream is finished (all tracks have ended).
+- p-pawámetwos
+  - : m-mediastweamtwack **twack**, 😳😳😳 wequiwed. /(^•ω•^)
+- d-devuewve
+  - : void. OwO
+- excepciones
+  - : i-invawid_state_eww if t-the stweam is finished (aww t-twacks h-have ended). ^^
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad con n-nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## v-vew t-también
 
-- [WebRTC](/es/docs/Web/API/WebRTC_API) - la página de introducción a la API
-- [getUserMedia()](/es/docs/Web/API/Navigator/getUserMedia)
-- [Taking webcam photos](/es/docs/Web/API/Media_Capture_and_Streams_API/Taking_still_photos) - un tutorial para usar getUserMedia()
+- [webwtc](/es/docs/web/api/webwtc_api) - wa página de intwoducción a wa api
+- [getusewmedia()](/es/docs/web/api/navigatow/getusewmedia)
+- [taking w-webcam photos](/es/docs/web/api/media_captuwe_and_stweams_api/taking_stiww_photos) - u-un tutowiaw pawa usaw getusewmedia()

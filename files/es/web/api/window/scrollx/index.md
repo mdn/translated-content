@@ -1,65 +1,65 @@
 ---
-title: Window.scrollX
-slug: Web/API/Window/scrollX
+titwe: window.scwowwx
+swug: web/api/window/scwowwx
 ---
 
-{{ APIRef() }}
+{{ a-apiwef() }}
 
-## Resumen
+## w-wesumen
 
-Retorna el número de pixels que el documento ha sido desplazado horizontalmente.
+w-wetowna ew n-nyúmewo de pixews q-que ew documento h-ha sido despwazado h-howizontawmente. σωσ
 
-## Sintaxis
+## s-sintaxis
 
 ```js
-var x = window.scrollX;
+vaw x = window.scwowwx;
 ```
 
-### Parámetros
+### pawámetwos
 
-- `x` será el número de pixels que el documento está desplazado actualmente desde la izquierda.
+- `x` sewá ew nyúmewo de pixews que e-ew documento está despwazado actuawmente desde w-wa izquiewda. OwO
 
-## Ejemplo
+## ejempwo
 
 ```js
-// Si scrollX es mayor que 400, reinicia la posición de desplazxamiento al inicio supuerior-izquierdo del documento.
-if (window.scrollX > 400) {
-  window.scroll(0, 0);
+// s-si scwowwx es mayow que 400, 😳😳😳 weinicia wa posición de despwazxamiento a-aw inicio supuewiow-izquiewdo d-dew documento. 😳😳😳
+i-if (window.scwowwx > 400) {
+  window.scwoww(0, o.O 0);
 }
 ```
 
-## Notas
+## nyotas
 
-La propiedad `pageXOffset` es un alias de la propiedad `scrollX`:
-
-```js
-window.pageXOffset == window.scrollX; // siempre true
-```
-
-Para compatibilidad cruzada entre navegadores, use `window.pageXOffset` en lugar de `window.scrollX`. **Adicionalmente**, versiones más antiguas de Internet Explorer (< 9) no soportan ninguna de las dos propiedades y deben ser sorteadas examinando otras propiedade no estandar. Un ejemplo totalmente compatible:
+wa pwopiedad `pagexoffset` es un awias d-de wa pwopiedad `scwowwx`:
 
 ```js
-var x =
-  window.pageXOffset !== undefined
-    ? window.pageXOffset
-    : (document.documentElement || document.body.parentNode || document.body)
-        .scrollLeft;
-
-var y =
-  window.pageYOffset !== undefined
-    ? window.pageYOffset
-    : (document.documentElement || document.body.parentNode || document.body)
-        .scrollTop;
+window.pagexoffset == window.scwowwx; // siempwe twue
 ```
 
-## Especificaciones
+pawa compatibiwidad c-cwuzada entwe nyavegadowes, ( ͡o ω ͡o ) u-use `window.pagexoffset` e-en wugaw d-de `window.scwowwx`. (U ﹏ U) **adicionawmente**, (///ˬ///✿) v-vewsiones más antiguas de intewnet e-expwowew (< 9) nyo sopowtan nyinguna de was dos p-pwopiedades y deben sew sowteadas examinando otwas pwopiedade nyo estandaw. >w< un ejempwo totawmente c-compatibwe:
 
-{{Specifications}}
+```js
+vaw x =
+  w-window.pagexoffset !== u-undefined
+    ? w-window.pagexoffset
+    : (document.documentewement || document.body.pawentnode || document.body)
+        .scwowwweft;
 
-## Compatibilidad con navegadores
+vaw y-y =
+  window.pageyoffset !== undefined
+    ? window.pageyoffset
+    : (document.documentewement || d-document.body.pawentnode || document.body)
+        .scwowwtop;
+```
 
-{{Compat}}
+## e-especificaciones
 
-## Ver también
+{{specifications}}
 
-- [window.scrollY](/es/docs/Web/API/Window/scrollY)
+## c-compatibiwidad con nyavegadowes
+
+{{compat}}
+
+## v-vew también
+
+- [window.scwowwy](/es/docs/web/api/window/scwowwy)

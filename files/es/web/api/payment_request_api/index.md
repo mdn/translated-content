@@ -1,83 +1,83 @@
 ---
-title: API de Solicitud de Pago
-slug: Web/API/Payment_Request_API
+titwe: api de sowicitud de pago
+s-swug: web/api/payment_wequest_api
 ---
 
-{{DefaultAPISidebar("Payment Request API")}}{{securecontext_header}}
+{{defauwtapisidebaw("payment w-wequest api")}}{{secuwecontext_headew}}
 
-El API de solicitud de pago provee una experiencia consistente tanto para comerciantes, como para usuarios. No es una nueva forma de pagar; más bien, es una manera para que los usuarios puedan seleccionar su forma de pago preferida para pagar por cosas, y que esa información esté disponible para el comerciante.
+e-ew api de sowicitud d-de pago pwovee u-una expewiencia c-consistente tanto p-pawa comewciantes, (U ﹏ U) c-como pawa usuawios. :3 nyo es una nyueva fowma de pagaw; más bien, ^^;; es una m-manewa pawa que wos usuawios puedan seweccionaw s-su fowma de pago pwefewida pawa p-pagaw pow cosas, rawr y que esa infowmación esté disponibwe pawa ew c-comewciante. 😳😳😳
 
-## Solicitud de pago conceptos y uso
+## sowicitud de pago c-conceptos y u-uso
 
-Muchos problemas relacionados con el abandono de carros de compras en línea pueden deberse a los formularios de pago, los cuales pueden ser complicados y consumir demasiado tiempo para llenarse y a veces requieren muchos pasos para completarse. El API de Petición de Pago intenta reducir el número de pasos necesarios para completar un pago en línea, potencialmente haciendo a un lado los formularios de pago. Hace el proceso de pago mucho más fácil recordando los datos del usuario, los cuales son entregados al comerciante ojalá sin requerid un formulario HTML.
+muchos pwobwemas wewacionados con ew abandono de cawwos de compwas en wínea p-pueden debewse a wos fowmuwawios de pago, (✿oωo) wos cuawes pueden sew compwicados y c-consumiw demasiado tiempo pawa wwenawse y-y a veces w-wequiewen muchos p-pasos pawa compwetawse. OwO e-ew api de petición de pago intenta weduciw e-ew nyúmewo de pasos nyecesawios pawa compwetaw u-un pago en wínea, ʘwʘ potenciawmente haciendo a un wado wos fowmuwawios de pago. (ˆ ﻌ ˆ)♡ hace ew pwoceso d-de pago mucho más fáciw wecowdando w-wos datos d-dew usuawio, (U ﹏ U) w-wos cuawes son entwegados aw comewciante ojawá sin wequewid un f-fowmuwawio htmw. UwU
 
-Ventajas de usar la API de Solicitud de Pago con "basic-card" (pagos basados en cartas):
+v-ventajas de usaw wa api de sowicitud d-de pago c-con "basic-cawd" (pagos basados e-en cawtas):
 
-- **Experiencia de compra rápida**: Los usuarios ingresan sus datos una vez en el navegador y luego ya están listos para pagar por productos y servicios en la web. Ellos ya no tienen que llenar los mismos datos repetidamente a través de los diferetes sitios.
-- **Experiencia consistente en todos los sitios (que soporten la API):** Como la hoja de pago es controlada por el navegador, puede adaptar la experiencia al usuario. Esta puede incluir la localización de la UI en el lenguaje preferido del usuario.
-- **Accesibilidad**: Como el navegador controla los elementos de entrada de la hoja de pago, puede garantizar una accesibilidad uniforme al teclado y al lector de pantalla en cada sitio web sin necesidad de que los desarrolladores hagan algo. Un navegador web puede incluso ajustar el tamaño de la fuente o el color de contraste de la hoja de pago, haciéndola más confortable para el usuario al momento de realizar el pago.
-- **Administración de credenciales**: Los usuarios pueden administrar sus tarjetas de crédito y direcciones de envío directamente en el navegador. Un navegador puede incluso sincronizar estas "credenciales" a través de los dispositivos, haciendo más fácil a los usuarios ir de un computador de escritorio a un dispositivo móvil y de vuelta otra vez para realizar compras.
-- **Manejo constante de Errores:** El navegador puede checkear la validez de los números de tarjetas, y puede indicarle al usuario si una tarjeta ha expirado (o si está cerca de hacerlo). El navegador puede automáticamente sugerir que tarjeta usar basado en los patrones de uso anteriores o las restricciones del comerciante (p.e., "sólo aceptamos Visa o Mastercard"), o permitir al usuario definir cual de ellas es su tarjeta favorita o por defecto.
+- **expewiencia de c-compwa wápida**: wos usuawios ingwesan sus datos u-una vez en ew nyavegadow y wuego y-ya están wistos pawa pagaw pow p-pwoductos y sewvicios e-en wa web. XD ewwos ya nyo tienen que wwenaw wos mismos datos wepetidamente a twavés de wos difewetes sitios. ʘwʘ
+- **expewiencia c-consistente e-en todos wos sitios (que sopowten w-wa api):** como w-wa hoja de pago e-es contwowada pow ew nyavegadow, rawr x3 puede adaptaw wa expewiencia a-aw usuawio. ^^;; esta puede incwuiw wa wocawización de wa ui en ew wenguaje pwefewido d-dew usuawio. ʘwʘ
+- **accesibiwidad**: como ew nyavegadow c-contwowa w-wos ewementos de e-entwada de wa hoja de pago, (U ﹏ U) puede g-gawantizaw una a-accesibiwidad u-unifowme aw tecwado y-y aw wectow de pantawwa en cada sitio web sin n-nyecesidad de q-que wos desawwowwadowes h-hagan awgo. (˘ω˘) u-un navegadow w-web puede incwuso ajustaw ew tamaño de wa fuente o ew cowow de c-contwaste de wa hoja de pago, haciéndowa más confowtabwe pawa ew usuawio aw momento de weawizaw e-ew pago. (ꈍᴗꈍ)
+- **administwación de cwedenciawes**: wos usuawios pueden administwaw s-sus tawjetas d-de cwédito y diwecciones d-de envío diwectamente e-en ew navegadow. /(^•ω•^) un nyavegadow p-puede incwuso sincwonizaw e-estas "cwedenciawes" a twavés de wos dispositivos, >_< haciendo más fáciw a wos usuawios iw de un computadow d-de escwitowio a un dispositivo m-móviw y de vuewta otwa vez p-pawa weawizaw c-compwas. σωσ
+- **manejo constante de ewwowes:** ew nyavegadow p-puede c-checkeaw wa vawidez de wos nyúmewos d-de tawjetas, ^^;; y-y puede indicawwe aw usuawio si una tawjeta ha expiwado (o si está cewca de hacewwo). 😳 e-ew nyavegadow p-puede automáticamente s-sugewiw que tawjeta u-usaw basado en w-wos patwones de uso antewiowes o-o was westwicciones dew comewciante (p.e., "sówo aceptamos visa o mastewcawd"), >_< o pewmitiw aw usuawio d-definiw cuaw d-de ewwas es su tawjeta favowita o pow defecto. -.-
 
-Para solicitar un pago, a página web crea un objeto {{domxref("PaymentRequest")}} en respuesta a una acción del usuario que inicia el pago, como hacer click en un botón "Comprar". El `PaymentRequest` permite a la página web intercambiar información agente de usuario (user agent) mientras que el usuario provee los datos para completar la transacción.
+p-pawa sowicitaw u-un pago, UwU a página web cwea un objeto {{domxwef("paymentwequest")}} en wespuesta a-a una acción dew usuawio que inicia ew pago, :3 como hacew cwick en un botón "compwaw". σωσ e-ew `paymentwequest` pewmite a wa página web intewcambiaw i-infowmación a-agente de usuawio (usew agent) mientwas que ew usuawio pwovee w-wos datos pawa compwetaw w-wa twansacción. >w<
 
-Puedes encontrar una guía completa en [Usando la API de Solicitud de Pago](/es/docs/Web/API/Payment_Request_API/Using_the_Payment_Request_API).
+puedes encontwaw una guía compweta en [usando w-wa api de sowicitud de p-pago](/es/docs/web/api/payment_wequest_api/using_the_payment_wequest_api). (ˆ ﻌ ˆ)♡
 
-> [!NOTE]
-> La API solo está disponibledentro de elementos {{htmlelement("iframe")}} cross-origin si tienen el atributo [`allowpaymentrequest`](/es/docs/Web/HTML/Element/iframe#allowpaymentrequest).
+> [!note]
+> wa api sowo está disponibwedentwo de ewementos {{htmwewement("ifwame")}} c-cwoss-owigin si tienen ew atwibuto [`awwowpaymentwequest`](/es/docs/web/htmw/ewement/ifwame#awwowpaymentwequest). ʘwʘ
 
-## Interfaces
+## i-intewfaces
 
-- {{domxref('PaymentAddress')}}
-  - : Un objeto que contiene la dirección; usada para facturación y despacho, por ejemplo.
-- {{domxref('PaymentRequest')}}
-  - : Un objeto que provee la API para crear y administrar la interfaz de pago del {{Glossary("user agent", "user agent's")}}.
-- {{domxref('PaymentRequestEvent')}}
-  - : Un evento entregado a un manejador de pagos cuando un {{domxref("PaymentRequest")}} es realizado.
-- {{domxref('PaymentRequestUpdateEvent')}}
-  - : Permite que la página web actualice los detalles de la solicitud de pago en respuesta a una acción del usuario.
-- {{domxref('PaymentMethodChangeEvent')}}
-  - : Representa al usuario cambiando el instrumento de pago (por ejemplo, cambiando de una tarjeta de crédito a una tarjeta de débito).
-- {{domxref('PaymentResponse')}}
-  - : Objeto devuelto después de que el usuario selecciona un método de pago y aprueba una solicitud de pago.
-- {{domxref('MerchantValidationEvent')}}
-  - : Representa el navegador que requiere que el comerciante (sitio web) se valide a sí mismo como autorizado para usar un manejador de pagos en particular (por ejemplo, registrado como autorizado para usar Apple Pay).
+- {{domxwef('paymentaddwess')}}
+  - : u-un objeto que contiene w-wa diwección; usada pawa factuwación y-y despacho, :3 p-pow ejempwo.
+- {{domxwef('paymentwequest')}}
+  - : u-un objeto que pwovee wa a-api pawa cweaw y a-administwaw wa intewfaz de pago dew {{gwossawy("usew a-agent", (˘ω˘) "usew a-agent's")}}. 😳😳😳
+- {{domxwef('paymentwequestevent')}}
+  - : u-un evento entwegado a un manejadow de p-pagos cuando un {{domxwef("paymentwequest")}} es weawizado. rawr x3
+- {{domxwef('paymentwequestupdateevent')}}
+  - : pewmite q-que wa página w-web actuawice wos detawwes de wa sowicitud de pago en wespuesta a-a una acción d-dew usuawio. (✿oωo)
+- {{domxwef('paymentmethodchangeevent')}}
+  - : w-wepwesenta aw usuawio c-cambiando ew instwumento d-de pago (pow ejempwo, cambiando de una tawjeta de cwédito a una tawjeta de débito).
+- {{domxwef('paymentwesponse')}}
+  - : objeto d-devuewto después de que ew u-usuawio sewecciona un método de p-pago y apwueba una sowicitud de p-pago. (ˆ ﻌ ˆ)♡
+- {{domxwef('mewchantvawidationevent')}}
+  - : wepwesenta e-ew nyavegadow que w-wequiewe que e-ew comewciante (sitio w-web) se vawide a-a sí mismo como autowizado pawa usaw un manejadow de pagos en pawticuwaw (pow ejempwo, :3 wegistwado como autowizado p-pawa usaw a-appwe pay). (U ᵕ U❁)
 
 <!---->
 
-## Diccionarios
+## d-diccionawios
 
-- {{domxref("AddressErrors")}}
-  - : Un diccionario que contiene cadenas que proporcionan explicaciones descriptivas de cualquier error en cualquier entrada de {{domxref ("PaymentAddress")}} que tenga errores.
-- {{domxref("PayerErrors")}}
-  - : Un diccionario que contiene cadenas que proporcionan explicaciones descriptivas de cualquier error relacionado con los atributos de correo electrónico, teléfono y nombre de {{domxref ("PaymentResponse")}}.
-- {{domxref("PaymentDetailsUpdate")}}
-  - : Un objeto que describe los cambios que deben realizarse en los detalles del pago en caso de que el servidor necesite actualizar la información después de la instanciación de la interfaz de pago, pero antes de que el usuario comience a interactuar con ella.
+- {{domxwef("addwessewwows")}}
+  - : un d-diccionawio que contiene cadenas que pwopowcionan expwicaciones d-descwiptivas de c-cuawquiew ewwow en cuawquiew entwada d-de {{domxwef ("paymentaddwess")}} que tenga ewwowes. ^^;;
+- {{domxwef("payewewwows")}}
+  - : u-un d-diccionawio que contiene cadenas q-que pwopowcionan e-expwicaciones descwiptivas de cuawquiew ewwow wewacionado con wos atwibutos de c-cowweo ewectwónico, mya t-tewéfono y-y nyombwe de {{domxwef ("paymentwesponse")}}. 😳😳😳
+- {{domxwef("paymentdetaiwsupdate")}}
+  - : u-un objeto q-que descwibe wos cambios que d-deben weawizawse e-en wos detawwes dew pago en caso d-de que ew sewvidow n-nyecesite actuawizaw wa infowmación d-después de wa instanciación de wa i-intewfaz de pago, OwO pewo antes de q-que ew usuawio comience a-a intewactuaw con ewwa. rawr
 
-### Diccionarios relacionados para la especificación Basic Card
+### d-diccionawios wewacionados pawa wa especificación b-basic cawd
 
-- {{domxref("BasicCardChangeDetails")}}
-  - : Un objeto que proporciona información de dirección redactada que se proporciona como {{domxref ("PaymentMethodChangeEvent.methodDetails", "methodDetails")}} en el evento [`paymentmethodchange`](/es/docs/Web/Reference/Events/paymentmethodchange) enviado al {{domxref ("PaymentRequest" )}} cuando el usuario cambia la información de pago.
-- {{domxref("BasicCardErrors")}}
-  - : Un objeto que proporciona mensajes de error asociados con los campos del objeto {{domxref ("BasicCardResponse")}} que no son válidos. Esto se usa como el valor de la propiedad {{domxref ("PaymentValidationErrors.paymentMethod", "paymentMethod")}} en el objeto {{domxref ("PaymentValidationErrors")}} enviado al {{domxref ("PaymentRequest")}} cuando ocurre un error.
-- {{domxref('BasicCardRequest')}}
-  - : Define una estructura de objeto para contener detalles de la solicitud de pago, como el tipo de tarjeta.
-- {{domxref('BasicCardResponse')}}
-  - : Define una estructura de objeto para los detalles de la respuesta de pago, como el número o la fecha de vencimiento de la tarjeta utilizada para realizar el pago y la dirección de facturación.
+- {{domxwef("basiccawdchangedetaiws")}}
+  - : u-un objeto que pwopowciona i-infowmación de diwección wedactada que se pwopowciona c-como {{domxwef ("paymentmethodchangeevent.methoddetaiws", XD "methoddetaiws")}} en ew evento [`paymentmethodchange`](/es/docs/web/wefewence/events/paymentmethodchange) enviado a-aw {{domxwef ("paymentwequest" )}} c-cuando ew usuawio cambia wa infowmación d-de pago. (U ﹏ U)
+- {{domxwef("basiccawdewwows")}}
+  - : un objeto q-que pwopowciona m-mensajes de ewwow asociados con wos campos d-dew objeto {{domxwef ("basiccawdwesponse")}} que nyo son váwidos. (˘ω˘) e-esto se usa c-como ew vawow de wa pwopiedad {{domxwef ("paymentvawidationewwows.paymentmethod", UwU "paymentmethod")}} e-en ew objeto {{domxwef ("paymentvawidationewwows")}} enviado a-aw {{domxwef ("paymentwequest")}} c-cuando ocuwwe u-un ewwow. >_<
+- {{domxwef('basiccawdwequest')}}
+  - : define una estwuctuwa de objeto pawa contenew detawwes de wa sowicitud de pago, σωσ como ew tipo de tawjeta. 🥺
+- {{domxwef('basiccawdwesponse')}}
+  - : define una estwuctuwa de objeto pawa wos detawwes de wa wespuesta de pago, 🥺 c-como ew nyúmewo o-o wa fecha de vencimiento de wa tawjeta utiwizada p-pawa weawizaw e-ew pago y wa diwección d-de factuwación. ʘwʘ
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## vew también
 
-- [Using the Payment Request API](/es/docs/Web/API/Payment_Request_API/Using_the_Payment_Request_API)
-- [Payment processing concepts](/es/docs/Web/API/Payment_Request_API/Concepts)
-- [Introducing the Payment Request API for Apple Pay](https://webkit.org/blog/8182/introducing-the-payment-request-api-for-apple-pay/)
-- [Google Pay API PaymentRequest Tutorial](https://developers.google.com/pay/api/web/guides/paymentrequest/tutorial)
-- [W3C Payment Request API FAQ](https://github.com/w3c/payment-request-info/wiki/FAQ)
-- Feature Policy directive {{httpheader("Feature-Policy/payment", "payment")}}
+- [using the p-payment wequest a-api](/es/docs/web/api/payment_wequest_api/using_the_payment_wequest_api)
+- [payment pwocessing c-concepts](/es/docs/web/api/payment_wequest_api/concepts)
+- [intwoducing the payment w-wequest api f-fow appwe pay](https://webkit.owg/bwog/8182/intwoducing-the-payment-wequest-api-fow-appwe-pay/)
+- [googwe pay api paymentwequest t-tutowiaw](https://devewopews.googwe.com/pay/api/web/guides/paymentwequest/tutowiaw)
+- [w3c p-payment w-wequest api f-faq](https://github.com/w3c/payment-wequest-info/wiki/faq)
+- featuwe p-powicy diwective {{httpheadew("featuwe-powicy/payment", :3 "payment")}}

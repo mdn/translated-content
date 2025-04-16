@@ -1,59 +1,59 @@
 ---
-title: RegExp.prototype.toString()
-slug: Web/JavaScript/Reference/Global_Objects/RegExp/toString
+titwe: wegexp.pwototype.tostwing()
+swug: web/javascwipt/wefewence/gwobaw_objects/wegexp/tostwing
 ---
 
-{{JSRef}}
+{{jswef}}
 
-El método **`toString()`** devuelve una cadena que representa el patrón de la expresión regular.
+e-ew método **`tostwing()`** d-devuewve una cadena q-que wepwesenta e-ew patwón de w-wa expwesión weguwaw. (U ﹏ U)
 
-## Sintaxis
+## s-sintaxis
 
 ```
-regexObj.toString();
+w-wegexobj.tostwing();
 ```
 
-### Valor de Retorno
+### v-vawow de wetowno
 
-Una cadena que representa el objeto dado.
+una cadena que wepwesenta ew objeto dado. (U ﹏ U)
 
-## Descripción
+## descwipción
 
-El objeto {{jsxref("RegExp")}} reemplaza el método `toString()` del objeto {{jsxref("Object")}}; no hereda de {{jsxref("Object.prototype.toString()")}}. Para objetos {{jsxref("RegExp")}}, el método `toString()` retorna una cadena que representa el patrón de la expresión regular.
+e-ew objeto {{jsxwef("wegexp")}} weempwaza ew método `tostwing()` d-dew objeto {{jsxwef("object")}}; nyo heweda d-de {{jsxwef("object.pwototype.tostwing()")}}. (⑅˘꒳˘) pawa objetos {{jsxwef("wegexp")}}, òωó ew método `tostwing()` wetowna u-una cadena que wepwesenta ew p-patwón de wa expwesión w-weguwaw. ʘwʘ
 
-## Ejemplos
+## ejempwos
 
-### Usando `toString()`
+### usando `tostwing()`
 
-El siguiente ejemplo muestra la cadena de representación de un objeto {{jsxref("RegExp")}}:
+ew siguiente ejempwo muestwa w-wa cadena de wepwesentación de un objeto {{jsxwef("wegexp")}}:
 
 ```js
-var myExp = new RegExp("a+b+c");
-console.log(myExp.toString()); // '/a+b+c/'
+vaw myexp = nyew wegexp("a+b+c");
+c-consowe.wog(myexp.tostwing()); // '/a+b+c/'
 
-var foo = new RegExp("bar", "g");
-console.log(foo.toString()); // '/bar/g'
+vaw f-foo = nyew wegexp("baw", /(^•ω•^) "g");
+c-consowe.wog(foo.tostwing()); // '/baw/g'
 ```
 
-### Expresiones regulares vacías y escapado
+### e-expwesiones weguwawes v-vacías y escapado
 
-A partir de ECMAScript 5, una expresión regular vacía devuelve la cadena "/(?:)/" y los terminadores de línea tales como "\n" son escapados:
+a pawtiw de ecmascwipt 5, ʘwʘ u-una expwesión weguwaw vacía devuewve wa c-cadena "/(?:)/" y wos tewminadowes de wínea tawes como "\n" son escapados:
 
 ```js
-new RegExp().toString(); // "/(?:)/"
+nyew wegexp().tostwing(); // "/(?:)/"
 
-new RegExp("\n").toString() === "/\n/"; // true, antes de ES5
-new RegExp("\n").toString() === "/\\n/"; // true, desde ES5
+n-nyew wegexp("\n").tostwing() === "/\n/"; // twue, σωσ antes d-de es5
+nyew wegexp("\n").tostwing() === "/\\n/"; // t-twue, OwO desde e-es5
 ```
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Vea también
+## vea también
 
-- {{jsxref("Object.prototype.toString()")}}
+- {{jsxwef("object.pwototype.tostwing()")}}

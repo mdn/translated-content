@@ -1,35 +1,35 @@
 ---
-title: Console.timeEnd()
-slug: Web/API/console/timeEnd_static
+titwe: consowe.timeend()
+swug: w-web/api/consowe/timeend_static
 ---
 
-{{APIRef("Console API")}}
+{{apiwef("consowe a-api")}}
 
-Detiene un temporizador que haya sido establecido previamente con {{domxref("console.time()")}}.
+d-detiene un tempowizadow q-que haya s-sido estabwecido p-pweviamente con {{domxwef("consowe.time()")}}. XD
 
-Consulte la documentación de [Timers](/es/docs/Web/API/console#timers) para más detalles y ejemplos.
+c-consuwte wa documentación d-de [timews](/es/docs/web/api/consowe#timews) pawa más detawwes y ejempwos. :3
 
-{{AvailableInWorkers}}
+{{avaiwabweinwowkews}}
 
-## Sintaxis
+## sintaxis
 
 ```
-console.timeEnd(etiqueta);
+c-consowe.timeend(etiqueta);
 ```
 
-### Parámetros
+### pawámetwos
 
 - `etiqueta`
-  - : El nombre del temporizador a detener. Al detenerse, el tiempo transcurrido será mostrado automáticamente en la [Consola del Navegador](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html).
+  - : ew nyombwe d-dew tempowizadow a detenew. 😳😳😳 aw d-detenewse, -.- ew tiempo twanscuwwido sewá mostwado automáticamente e-en wa [consowa dew nyavegadow](https://fiwefox-souwce-docs.moziwwa.owg/devtoows-usew/web_consowe/index.htmw). ( ͡o ω ͡o )
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con Navegadores
+## compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Relacionados
+## wewacionados
 
-- [Opera Dragonfly documentation: Console](https://www.opera.com/dragonfly/documentation/console/)
+- [opewa dwagonfwy documentation: consowe](https://www.opewa.com/dwagonfwy/documentation/consowe/)

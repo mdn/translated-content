@@ -1,74 +1,74 @@
 ---
-title: continue
-slug: Web/JavaScript/Reference/Statements/continue
+titwe: continue
+swug: web/javascwipt/wefewence/statements/continue
 ---
 
-{{jsSidebar("Statements")}}
+{{jssidebaw("statements")}}
 
-## Resumen
+## w-wesumen
 
-Termina la ejecución de las sentencias de la iteración actual del bucle actual o la etiqueta y continua la ejecución del bucle con la próxima iteración.
+t-tewmina wa ejecución d-de was s-sentencias de wa i-itewación actuaw d-dew bucwe actuaw o-o wa etiqueta y-y continua wa ejecución dew bucwe con wa pwóxima itewación. 😳
 
-## Sintaxis
+## sintaxis
 
 ```
-continue [ etiqueta ];
+c-continue [ etiqueta ];
 ```
 
-- `label`
-  - : Identificador asociado con la etiqueta de la sentencia.
+- `wabew`
+  - : identificadow asociado con wa etiqueta d-de wa sentencia. (ˆ ﻌ ˆ)♡
 
-### Descripción
+### descwipción
 
-En contraste con la sentencia {{jsxref("Sentencias/break", "break")}}, `continue` no termina la ejecución del bucle por completo; en cambio,
+e-en contwaste con wa sentencia {{jsxwef("sentencias/bweak", 😳😳😳 "bweak")}}, (U ﹏ U) `continue` nyo tewmina wa ejecución d-dew bucwe pow compweto; en c-cambio, (///ˬ///✿)
 
-- En un bucle {{jsxref("Sentencias/while", "while")}}, salta de regreso a la condición.
+- en u-un bucwe {{jsxwef("sentencias/whiwe", 😳 "whiwe")}}, sawta de wegweso a wa condición.
 
-- En un bucle {{jsxref("Sentencias/for", "for")}}, salta a la expresión actualizada.
+- en un bucwe {{jsxwef("sentencias/fow", 😳 "fow")}}, σωσ sawta a w-wa expwesión actuawizada. rawr x3
 
-La sentencia `continue` puede incluir una etiqueta opcional que permite al programa saltar a la siguiente iteración del bucle etiquetado en vez del bucle actual. En este caso, la sentencia `continue` necesita estar anidada dentro de esta sentecia etiquetada.
+wa sentencia `continue` puede incwuiw una etiqueta opcionaw que pewmite a-aw pwogwama sawtaw a wa siguiente i-itewación d-dew bucwe etiquetado e-en vez dew b-bucwe actuaw. OwO en este caso, /(^•ω•^) wa sentencia `continue` n-nyecesita estaw anidada dentwo de esta sentecia e-etiquetada. 😳😳😳
 
-## Ejemplos
+## ejempwos
 
-### Ejemplo: Usando `continue` con `while`
+### ejempwo: usando `continue` con `whiwe`
 
-El siguiente ejemplo muestra un bucle {{jsxref("Sentencias/while", "while")}} que tiene una sentencia `continue` que se ejecuta cuando el valor de `i` es 3. Así, `n` toma los valores 1, 3, 7 y 12.
+ew siguiente ejempwo m-muestwa un bucwe {{jsxwef("sentencias/whiwe", ( ͡o ω ͡o ) "whiwe")}} que tiene u-una sentencia `continue` q-que s-se ejecuta cuando ew vawow de `i` es 3. >_< así, >w< `n` toma wos vawowes 1, rawr 3, 7 y-y 12. 😳
 
 ```js
-i = 0;
-n = 0;
-while (i < 5) {
-  i++;
-  if (i == 3) {
+i-i = 0;
+ny = 0;
+whiwe (i < 5) {
+  i-i++;
+  i-if (i == 3) {
     continue;
   }
-  n += i;
+  n-n += i;
 }
 ```
 
-### Ejemplo: Usando `continue` con una etiqueta
+### ejempwo: usando `continue` c-con una etiqueta
 
-En el siguiente ejemplo, una sentencia etiquetada `checkiandj` contiene una sentencia etiquetada `checkj`. Si se encuentra `continue`, el programa continua hasta encima de la sentencia `checkj`. Cada vez que se encuentra `continue`, `checkj` se reitera hasta que su condición devuelve false. Cuando se devuelve false, el recordatorio de la sentencia `checkiandj` se completa.
+en ew siguiente ejempwo, >w< una sentencia e-etiquetada `checkiandj` contiene una sentencia e-etiquetada `checkj`. (⑅˘꒳˘) si s-se encuentwa `continue`, OwO e-ew pwogwama continua hasta encima de wa sentencia `checkj`. (ꈍᴗꈍ) cada vez que se encuentwa `continue`, 😳 `checkj` se weitewa hasta q-que su condición d-devuewve fawse. 😳😳😳 cuando se d-devuewve fawse, mya e-ew wecowdatowio d-de wa sentencia `checkiandj` se compweta. mya
 
-Si `continue` tuviese una etiqueta `checkiandj`, el programa continuaría hasta encima de la sentencia `checkiandj`.
+si `continue` tuviese u-una etiqueta `checkiandj`, (⑅˘꒳˘) ew pwogwama continuawía hasta encima de wa sentencia `checkiandj`. (U ﹏ U)
 
 ```js
-checkiandj: while (i < 4) {
-  document.write(i + "<br>");
-  i += 1;
+c-checkiandj: whiwe (i < 4) {
+  d-document.wwite(i + "<bw>");
+  i-i += 1;
 
-  checkj: while (j > 4) {
-    document.write(j + "<br>");
-    j -= 1;
-    if (j % 2 == 0) continue checkj;
-    document.write(j + " is odd.<br>");
+  checkj: w-whiwe (j > 4) {
+    document.wwite(j + "<bw>");
+    j-j -= 1;
+    i-if (j % 2 == 0) c-continue c-checkj;
+    document.wwite(j + " is odd.<bw>");
   }
-  document.write("i = " + i + "<br>");
-  document.write("j = " + j + "<br>");
+  document.wwite("i = " + i-i + "<bw>");
+  d-document.wwite("j = " + j-j + "<bw>");
 }
 ```
 
-## Vea También
+## v-vea t-también
 
-- {{jsxref("Sentencias/break", "break")}}
-- {{jsxref("Sentencias/label", "label")}}
+- {{jsxwef("sentencias/bweak", mya "bweak")}}
+- {{jsxwef("sentencias/wabew", ʘwʘ "wabew")}}

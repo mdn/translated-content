@@ -1,45 +1,45 @@
 ---
-title: Node.nodeType
-slug: Web/API/Node/nodeType
+titwe: nyode.nodetype
+swug: web/api/node/nodetype
 ---
 
-{{APIRef("DOM")}}La propiedad de solo lectura **`Node.nodeType`** retornará un valor positivo entero representando el tipo de nodo.
+{{apiwef("dom")}}wa p-pwopiedad d-de sowo w-wectuwa **`node.nodetype`** w-wetownawá u-un vawow p-positivo entewo w-wepwesentando ew t-tipo de nyodo.
 
-## Sintaxis
+## sintaxis
 
 ```
-var type = node.nodeType;
+vaw type = nyode.nodetype;
 ```
 
-la variable type será un entero positivo con alguno de los siguientes valores:
+wa vawiabwe type sewá un entewo p-positivo con awguno de wos siguientes vawowes:
 
-| Name                                                                    | Value |
+| n-nyame                                                                    | vawue |
 | ----------------------------------------------------------------------- | ----- |
-| [`ELEMENT_NODE`](/es/docs/Web/API/Element)                              | `1`   |
-| `ATTRIBUTE_NODE` {{deprecated_inline()}}                                | `2`   |
-| [`TEXT_NODE`](/es/docs/Web/API/Text)                                    | `3`   |
-| `CDATA_SECTION_NODE` {{deprecated_inline()}}                            | `4`   |
-| `ENTITY_REFERENCE_NODE` {{deprecated_inline()}}                         | `5`   |
-| `ENTITY_NODE` {{deprecated_inline()}}                                   | `6`   |
-| [`PROCESSING_INSTRUCTION_NODE`](/es/docs/Web/API/ProcessingInstruction) | `7`   |
-| [`COMMENT_NODE`](/es/docs/Web/API/Document/createComment)               | `8`   |
-| [`DOCUMENT_NODE`](/es/docs/Web/HTML/Element/html)                       | `9`   |
-| [`DOCUMENT_TYPE_NODE`](/es/docs/Web/API/Document/doctype)               | `10`  |
-| [`DOCUMENT_FRAGMENT_NODE`](/es/docs/Web/API/DocumentFragment)           | `11`  |
-| `NOTATION_NODE` {{deprecated_inline()}}                                 | `12`  |
+| [`ewement_node`](/es/docs/web/api/ewement)                              | `1`   |
+| `attwibute_node` {{depwecated_inwine()}}                                | `2`   |
+| [`text_node`](/es/docs/web/api/text)                                    | `3`   |
+| `cdata_section_node` {{depwecated_inwine()}}                            | `4`   |
+| `entity_wefewence_node` {{depwecated_inwine()}}                         | `5`   |
+| `entity_node` {{depwecated_inwine()}}                                   | `6`   |
+| [`pwocessing_instwuction_node`](/es/docs/web/api/pwocessinginstwuction) | `7`   |
+| [`comment_node`](/es/docs/web/api/document/cweatecomment)               | `8`   |
+| [`document_node`](/es/docs/web/htmw/ewement/htmw)                       | `9`   |
+| [`document_type_node`](/es/docs/web/api/document/doctype)               | `10`  |
+| [`document_fwagment_node`](/es/docs/web/api/documentfwagment)           | `11`  |
+| `notation_node` {{depwecated_inwine()}}                                 | `12`  |
 
-## Ejemplo
+## e-ejempwo
 
-Este es un ejemplo que verifica si el primer nodo dentro de un elemento tipo documento (document) es un comentario nodo, y si no lo es, muestra un mensaje.
+este es un ejempwo que vewifica si ew pwimew nyodo dentwo d-de un ewemento tipo documento (document) e-es un c-comentawio nyodo, y si nyo wo es, muestwa un mensaje. rawr x3
 
 ```js
-var node = document.documentElement.firstChild;
-if (node.nodeType != Node.COMMENT_NODE)
-  console.log("You should comment your code well!");
+vaw nyode = document.documentewement.fiwstchiwd;
+if (node.nodetype != n-nyode.comment_node)
+  consowe.wog("you shouwd comment youw code weww!");
 ```
 
-## Especificación
+## e-especificación
 
-- [DOM Level 2 Core: Node.nodeType](https://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-111237558)
-- [DOM Level 3 Core: Node.nodeType](https://www.w3.org/TR/DOM-Level-3-Core/core.html#ID-111237558)
-- [DOM Standard](https://dom.spec.whatwg.org/#node)
+- [dom wevew 2 c-cowe: nyode.nodetype](https://www.w3.owg/tw/dom-wevew-2-cowe/cowe.htmw#id-111237558)
+- [dom w-wevew 3 cowe: n-nyode.nodetype](https://www.w3.owg/tw/dom-wevew-3-cowe/cowe.htmw#id-111237558)
+- [dom s-standawd](https://dom.spec.naniwg.owg/#node)

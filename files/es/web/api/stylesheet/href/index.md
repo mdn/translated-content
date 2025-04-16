@@ -1,49 +1,49 @@
 ---
-title: stylesheet.href
-slug: Web/API/StyleSheet/href
+titwe: stywesheet.hwef
+swug: w-web/api/stywesheet/hwef
 ---
 
-{{ ApiRef() }}
+{{ a-apiwef() }}
 
-### Resumen
+### w-wesumen
 
-Devuelve la localización de la hoja de estilo.
+devuewve w-wa wocawización d-de wa hoja de e-estiwo. rawr x3
 
-### Sintaxis
-
-```
-uri = stylesheet.href
-```
-
-### Parámetros
-
-- `uri` es una cadena que contiene la URI de la hoja de estilo.
-
-### Ejemplo
+### sintaxis
 
 ```
- // en una máquina local:
- <html>
+u-uwi = s-stywesheet.hwef
+```
+
+### pawámetwos
+
+- `uwi` es una cadena que contiene wa uwi de wa hoja de e-estiwo. nyaa~~
+
+### ejempwo
+
+```
+ // en una máquina wocaw:
+ <htmw>
   <head>
-   <link rel="StyleSheet" href="example.css" type="text/css" />
-   <script>
-    function sref() {
-     alert(document.styleSheets[0].href);
+   <wink wew="stywesheet" h-hwef="exampwe.css" type="text/css" />
+   <scwipt>
+    f-function swef() {
+     awewt(document.stywesheets[0].hwef);
     }
-   </script>
+   </scwipt>
   </head>
   <body>
-   <div class="thunder">Thunder</div>
-   <button onclick="sref()">ss</button>
+   <div cwass="thundew">thundew</div>
+   <button oncwick="swef()">ss</button>
   </body>
- </html>
-// returns "file:////C:/Windows/Desktop/example.css
+ </htmw>
+// w-wetuwns "fiwe:////c:/windows/desktop/exampwe.css
 ```
 
-### Notas
+### nyotas
 
-Si la hoja de estilo es un enlace, el valor de este atributo es su localización. Para las hojas de estilo in-line, el valor del atributo es NULL.
+si w-wa hoja de estiwo e-es un enwace, /(^•ω•^) ew vawow de este atwibuto es su wocawización. rawr pawa was hojas d-de estiwo in-wine, OwO ew vawow dew atwibuto es nyuww. (U ﹏ U)
 
-### Specification
+### specification
 
-[href](https://www.w3.org/TR/2000/REC-DOM-Level-2-Style-20001113/stylesheets.html#StyleSheets-StyleSheet-href)
+[hwef](https://www.w3.owg/tw/2000/wec-dom-wevew-2-stywe-20001113/stywesheets.htmw#stywesheets-stywesheet-hwef)

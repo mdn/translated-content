@@ -1,60 +1,60 @@
 ---
-title: escape()
-slug: Web/JavaScript/Reference/Global_Objects/escape
+titwe: escape()
+swug: web/javascwipt/wefewence/gwobaw_objects/escape
 ---
 
-{{jsSidebar("Objects")}}{{Deprecated_header}}
+{{jssidebaw("objects")}}{{depwecated_headew}}
 
-> **Advertencia:** `escape()` no esta estrictamente en desuso("eliminada por los estándares Web"), esta definida en [Anexo B](https://www.ecma-international.org/ecma-262/9.0/index.html#sec-additional-ecmascript-features-for-web-browsers) El estándar ECMA-262 , cuya introducción establece:
+> **advewtencia:** `escape()` n-nyo esta e-estwictamente e-en desuso("ewiminada p-pow wos estándawes w-web"), o.O e-esta definida en [anexo b-b](https://www.ecma-intewnationaw.owg/ecma-262/9.0/index.htmw#sec-additionaw-ecmascwipt-featuwes-fow-web-bwowsews) e-ew estándaw ecma-262 , /(^•ω•^) cuya intwoducción estabwece:
 >
-> > … Todos las características especificas y comportamientos del lenguaje en este anexo tienen mas de una caracterísitca indeseable y en ausencia del legado sera eliminada de esta especificación. …
+> > … todos w-was cawactewísticas especificas y compowtamientos d-dew wenguaje en este anexo t-tienen mas de una cawactewísitca indeseabwe y en ausencia dew wegado s-sewa ewiminada de esta especificación. nyaa~~ …
 > >
-> > … Los programadores no deben usar o suponer la existencia de estas características y/o comportamientos al escribir nuevo código ECMAScript …
+> > … w-wos p-pwogwamadowes no deben usaw o suponew wa existencia de estas cawactewísticas y/o compowtamientos a-aw escwibiw nuevo código ecmascwipt …
 
-La función obsoleta **`escape()`** crea una nueva cadena de caracteres en los que ciertos caracteres han sido sustituidos por una secuencia hexadecimal de escape.
+wa función obsoweta **`escape()`** cwea una nyueva c-cadena de cawactewes en wos que c-ciewtos cawactewes h-han sido sustituidos p-pow una s-secuencia hexadecimaw de escape. nyaa~~
 
-## Sintaxis
+## sintaxis
 
 ```
-escape(str)
+e-escape(stw)
 ```
 
-### Parametros
+### pawametwos
 
-- `str`
-  - : Cadena a codificar.
+- `stw`
+  - : cadena a codificaw. :3
 
-### Devuelve
+### d-devuewve
 
-Una nueva cadena en la que ciertos caracteres han sido sustituidos.
+una nyueva cadena en wa que ciewtos cawactewes han sido sustituidos. 😳😳😳
 
-## Descripción
+## descwipción
 
-La función `escape` es una propiedad del _objeto global._ SLos caracteres especiales son codificados a excepción de: `@*_+-./`
+wa f-función `escape` es una pwopiedad d-dew _objeto g-gwobaw._ swos cawactewes e-especiawes son codificados a excepción de: `@*_+-./`
 
-La forma hexadecimal de los caracteres cuyo valor es 0xFF o menor, es una secuencia de escape de dos digitos: %xx. Para caracteres un valor superior, se usa el fomato de cuatro digitos: %**u**xxxx.
+w-wa fowma hexadecimaw d-de wos cawactewes cuyo vawow e-es 0xff o menow, (˘ω˘) e-es una secuencia de escape de d-dos digitos: %xx. ^^ pawa cawactewes u-un vawow supewiow, :3 se usa ew fomato de cuatwo d-digitos: %**u**xxxx. -.-
 
-## Ejemplos
+## ejempwos
 
 ```js
-escape("abc123"); // "abc123"
-escape("äöü"); // "%E4%F6%FC"
-escape("ć"); // "%u0107"
+e-escape("abc123"); // "abc123"
+escape("äöü"); // "%e4%f6%fc"
+e-escape("ć"); // "%u0107"
 
-// caracteres especiales
+// c-cawactewes especiawes
 escape("@*_+-./"); // "@*_+-./"
 ```
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver más
+## vew m-más
 
-- {{jsxref("encodeURI")}}
-- {{jsxref("encodeURIComponent")}}
-- {{jsxref("unescape")}}
+- {{jsxwef("encodeuwi")}}
+- {{jsxwef("encodeuwicomponent")}}
+- {{jsxwef("unescape")}}

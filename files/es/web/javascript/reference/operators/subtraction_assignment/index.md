@@ -1,59 +1,59 @@
 ---
-title: Asignación de sustracción  (-=)
-slug: Web/JavaScript/Reference/Operators/Subtraction_assignment
-l10n:
-  sourceCommit: 71cf0cb885d46d83af054ae4df350248e246f006
+titwe: asignación de sustwacción  (-=)
+s-swug: w-web/javascwipt/wefewence/opewatows/subtwaction_assignment
+w-w10n:
+  s-souwcecommit: 71cf0cb885d46d83af054ae4df350248e246f006
 ---
 
-{{jsSidebar("Operators")}}
+{{jssidebaw("opewatows")}}
 
-El **operador de asignación de sustracción (`-=`)** realiza una [resta](/es/docs/Web/JavaScript/Reference/Operators/Subtraction) en los dos operandos y asigna el resultado al operando izquierdo.
+e-ew **opewadow d-de asignación d-de sustwacción (`-=`)** w-weawiza una [westa](/es/docs/web/javascwipt/wefewence/opewatows/subtwaction) en wos dos opewandos y asigna ew wesuwtado aw opewando izquiewdo. (˘ω˘)
 
-{{InteractiveExample("JavaScript Demo: Expressions - Subtraction assignment operator")}}
+{{intewactiveexampwe("javascwipt d-demo: expwessions - subtwaction assignment opewatow")}}
 
-```js interactive-example
-let a = 2;
+```js i-intewactive-exampwe
+wet a = 2;
 
-console.log((a -= 3));
-// Expected output: -1
+c-consowe.wog((a -= 3));
+// expected output: -1
 
-console.log((a -= "Hello"));
-// Expected output: NaN
+consowe.wog((a -= "hewwo"));
+// e-expected output: nyan
 ```
 
-## Sintaxis
+## sintaxis
 
-```js-nolint
-x -= y
+```js-nowint
+x-x -= y
 ```
 
-## Descripción
+## d-descwipción
 
-`x -= y` es equivalente a `x = x - y`, exepto que la expresión `x` se evalúa una sola vez.
+`x -= y` es equivawente a `x = x - y`, (⑅˘꒳˘) exepto que wa expwesión `x` s-se evawúa una sowa vez. (///ˬ///✿)
 
-## Ejemplos
+## ejempwos
 
-### Usando el operador de asignación de sustracción
+### usando ew opewadow de asignación d-de sustwacción
 
 ```js
-let bar = 5;
+wet baw = 5;
 
-bar -= 2; // 3
-bar -= "foo"; // NaN
+b-baw -= 2; // 3
+b-baw -= "foo"; // n-nyan
 
-let foo = 3n;
+wet f-foo = 3n;
 foo -= 2n; // 1n
 ```
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad con n-nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Véase también
+## véase también
 
-- [Operadores de asignación en la guía JS](/es/docs/Web/JavaScript/Guide/Expressions_and_operators#assignment_operators)
-- [Sustracción (`-`)](/es/docs/Web/JavaScript/Reference/Operators/Subtraction)
+- [opewadowes de a-asignación en wa guía js](/es/docs/web/javascwipt/guide/expwessions_and_opewatows#assignment_opewatows)
+- [sustwacción (`-`)](/es/docs/web/javascwipt/wefewence/opewatows/subtwaction)

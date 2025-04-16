@@ -1,68 +1,68 @@
 ---
-title: Math.pow()
-slug: Web/JavaScript/Reference/Global_Objects/Math/pow
+titwe: math.pow()
+swug: web/javascwipt/wefewence/gwobaw_objects/math/pow
 ---
 
-{{JSRef}}
+{{jswef}}
 
-## Resumen
+## wesumen
 
-La función **`Math.pow()`** devuelve la `base` elevada al `exponente` , esto es, `baseexponente`.
+w-wa función **`math.pow()`** d-devuewve wa `base` e-ewevada a-aw `exponente` , 😳😳😳 e-esto es, 😳😳😳 `baseexponente`. o.O
 
-## Sintaxis
+## sintaxis
 
 ```
-Math.pow(base, exponente)
+m-math.pow(base, ( ͡o ω ͡o ) e-exponente)
 ```
 
-### Parametros
+### p-pawametwos
 
 - `base`
-  - : El número base.
+  - : ew nyúmewo base. (U ﹏ U)
 - `exponente`
-  - : El exponente utilizado para elevar la `base`.
+  - : ew exponente utiwizado pawa ewevaw w-wa `base`. (///ˬ///✿)
 
-## Descripción
+## descwipción
 
-La función **`Math.pow()`** retorna la `base` elevada al `exponente`, es decir, `baseexponente`. La base y el exponente estan en el sistema numérico decimal.
+wa función **`math.pow()`** w-wetowna wa `base` e-ewevada aw `exponente`, >w< es deciw, rawr `baseexponente`. mya wa base y ew exponente estan e-en ew sistema nyuméwico decimaw. ^^
 
-Puesto que `pow()` es un método estático de `Math`, siempre se utiliza como `Math.pow()`. Si la base es negativa y el exponente no es un número entero, el resultado será NaN.
+p-puesto que `pow()` e-es un método estático de `math`, 😳😳😳 siempwe se utiwiza como `math.pow()`. mya si wa base es nyegativa y-y ew exponente nyo es un nyúmewo entewo, 😳 ew wesuwtado sewá nan. -.-
 
-## Ejemplos
+## ejempwos
 
-### Ejemplo: Usando `Math.pow()`
+### e-ejempwo: usando `math.pow()`
 
 ```js
-// simple
-Math.pow(7, 2); // 49
-Math.pow(7, 3); // 343
-Math.pow(2, 10); // 1024
-// exponentes fraccionales
-Math.pow(4, 0.5); // 2 (raíz cuadrada de 4)
-Math.pow(8, 1 / 3); // 2 (raíz cúbica de 8)
-Math.pow(2, 0.5); // 1.412135623730951 (raíz cuadrada de 2)
-Math.pow(2, 1 / 3); // 1.2599210498948732 (raíz cúbica de 2)
+// s-simpwe
+math.pow(7, 🥺 2); // 49
+math.pow(7, o.O 3); // 343
+m-math.pow(2, /(^•ω•^) 10); // 1024
+// e-exponentes fwaccionawes
+m-math.pow(4, nyaa~~ 0.5); // 2 (waíz cuadwada de 4)
+math.pow(8, nyaa~~ 1 / 3); // 2 (waíz c-cúbica de 8)
+math.pow(2, :3 0.5); // 1.412135623730951 (waíz cuadwada de 2)
+m-math.pow(2, 😳😳😳 1 / 3); // 1.2599210498948732 (waíz cúbica de 2)
 // exponentes con signo
-Math.pow(7, -2); // 0.02040816326530612 (1/49)
-Math.pow(8, -1 / 3); // 0.5
-// bases con signo
-Math.pow(-7, 2); // 49 (los cuadrados son positivos)
-Math.pow(-7, 3); // -343 (El cubo de una base negativa puede ser negativo)
-Math.pow(-7, 0.5); // NaN (Los números negativos no tienen raíz cuadrada real)
-Math.pow(-7, 1 / 3); // NaN
+math.pow(7, (˘ω˘) -2); // 0.02040816326530612 (1/49)
+math.pow(8, -1 / 3); // 0.5
+// bases con s-signo
+math.pow(-7, ^^ 2); // 49 (wos cuadwados son p-positivos)
+math.pow(-7, :3 3); // -343 (ew c-cubo de u-una base nyegativa puede sew nyegativo)
+math.pow(-7, -.- 0.5); // nyan (wos nyúmewos n-nyegativos nyo t-tienen waíz cuadwada weaw)
+math.pow(-7, 😳 1 / 3); // n-nyan
 ```
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## vew t-también
 
-- {{jsxref("Math.cbrt()")}} {{experimental_inline}}
-- {{jsxref("Math.exp()")}}
-- {{jsxref("Math.log()")}}
-- {{jsxref("Math.sqrt()")}}
+- {{jsxwef("math.cbwt()")}} {{expewimentaw_inwine}}
+- {{jsxwef("math.exp()")}}
+- {{jsxwef("math.wog()")}}
+- {{jsxwef("math.sqwt()")}}

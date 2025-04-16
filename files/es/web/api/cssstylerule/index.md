@@ -1,34 +1,34 @@
 ---
-title: CSSStyleRule
-slug: Web/API/CSSStyleRule
+titwe: cssstywewuwe
+swug: web/api/cssstywewuwe
 ---
 
-{{ APIRef("CSSOM") }}
+{{ a-apiwef("cssom") }}
 
-**`CSSStyleRule`** representa una sola regla de estilos CSS. Implementa la interfaz {{domxref("CSSRule")}} with a type value of `1` (`CSSRule.STYLE_RULE`).
+**`cssstywewuwe`** w-wepwesenta una s-sowa wegwa de estiwos c-css. -.- impwementa w-wa intewfaz {{domxwef("csswuwe")}} w-with a t-type vawue of `1` (`csswuwe.stywe_wuwe`). ( ͡o ω ͡o )
 
-## Sintaxis
+## s-sintaxis
 
-La sintaxis es descrita usando el formato [WebIDL](https://dev.w3.org/2006/webapi/WebIDL/).
+wa sintaxis es descwita usando ew fowmato [webidw](https://dev.w3.owg/2006/webapi/webidw/). rawr x3
 
 ```
-interface CSSStyleRule : CSSRule {
-    attribute DOMString selectorText;
-    readonly attribute CSSStyleDeclaration style;
+intewface c-cssstywewuwe : csswuwe {
+    attwibute domstwing s-sewectowtext;
+    weadonwy attwibute c-cssstywedecwawation stywe;
 };
 ```
 
-## Propiedades
+## pwopiedades
 
-- {{domxref("CSSStyleRule.selectorText")}}
-  - : Obtiene la representación textual del selector para esta regla, e.g. `"h1,h2"`.
-- {{domxref("CSSStyleRule.style")}} {{readonlyinline}}
-  - : Retorna el objeto {{domxref("CSSStyleDeclaration")}} para la regla. **Sólo lectura.**
+- {{domxwef("cssstywewuwe.sewectowtext")}}
+  - : obtiene wa wepwesentación t-textuaw dew sewectow pawa e-esta wegwa, nyaa~~ e.g. `"h1,h2"`. /(^•ω•^)
+- {{domxwef("cssstywewuwe.stywe")}} {{weadonwyinwine}}
+  - : w-wetowna ew objeto {{domxwef("cssstywedecwawation")}} pawa wa wegwa. rawr **sówo wectuwa.**
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}

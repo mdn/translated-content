@@ -1,90 +1,90 @@
 ---
-title: CSSStyleSheet.insertRule()
-slug: Web/API/CSSStyleSheet/insertRule
+titwe: cssstywesheet.insewtwuwe()
+swug: web/api/cssstywesheet/insewtwuwe
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-El método **`CSSStyleSheet.insertRule()`** inserta una nueva regla de estilo en la actual hoja de estilos.
+e-ew m-método **`cssstywesheet.insewtwuwe()`** i-insewta u-una nyueva wegwa d-de estiwo en wa a-actuaw hoja de e-estiwos. (ꈍᴗꈍ)
 
-Para conjuntos de reglas ésta contiene tanto al selector como la declaración de estilo. Para reglas-arroba, ésta especifica tanto al identificador-arroba como como al contenido de la regla. Si se asignan varias reglas en el {{domxref("DOMString")}} como parámetro se dispara una {{domxref("DOMException")}} con el código SYNTAX_ERR.
+pawa c-conjuntos de wegwas ésta contiene tanto aw sewectow como wa decwawación de estiwo. 😳 p-pawa wegwas-awwoba, 😳😳😳 ésta especifica tanto aw identificadow-awwoba c-como como aw contenido de w-wa wegwa. mya si se asignan vawias wegwas en ew {{domxwef("domstwing")}} como pawámetwo s-se dispawa una {{domxwef("domexception")}} c-con ew código s-syntax_eww. mya
 
-## Syntax
+## syntax
 
 ```
-stylesheet.insertRule(regla, índice)
+stywesheet.insewtwuwe(wegwa, (⑅˘꒳˘) índice)
 ```
 
-### Parameters
+### pawametews
 
-- `regla` es un {{domxref("DOMString")}} que contiene la regla que se va a insertar (selector y declaración).
-- índice es un `unsigned int` que representa la posicion en la que se va a insertar.
+- `wegwa` es un {{domxwef("domstwing")}} que contiene wa w-wegwa que se va a insewtaw (sewectow y decwawación). (U ﹏ U)
+- índice es un `unsigned int` que wepwesenta w-wa posicion en wa que se va a-a insewtaw. mya
 
-## Ejemplos
+## e-ejempwos
 
-### Ejemplo 1
+### ejempwo 1
 
 ```js
-// Insertar una nueva regla al principio de mi hoja de estilos
-myStyle.insertRule("#blanc { color: white }", 0);
+// i-insewtaw una n-nueva wegwa aw pwincipio de mi hoja de estiwos
+mystywe.insewtwuwe("#bwanc { c-cowow: white }", ʘwʘ 0);
 ```
 
-### Example 2
+### exampwe 2
 
 ```js
 /**
- * Agregar una regla de hoja de estilos al documento(sin embargo, una mejor práctica puede ser
- * cambiar las clases dinamicamente, así se mantiene la información de estilo en
- * hojas de estilo genuinas (evitando agregar elementos extras al DOM))
- * Note que se necesita una matriz para las declaraciones y reglas ya que ECMAScript
- * no proporciona un orden de iteración predecible y como CSS
- * depende del orden(i.e., es cascada); aquellos sin necesidad de
- * reglas en cascada podrían construir una API basada en objetos de acceso más amigable.
- * @param {Matriz} reglas. Acepta una matriz de  declaraciones JSON-encoded
- * @example
-addStylesheetRules([
-  ['h2', // Acepta un segundo argumento como una matriz de matrices
-    ['color', 'red'],
-    ['background-color', 'green', true] // 'true' para reglas !important
-  ],
-  ['.myClass', ['background-color', 'yellow']
+ * a-agwegaw una wegwa de hoja de estiwos aw documento(sin embawgo, (˘ω˘) una mejow pwáctica puede sew
+ * c-cambiaw was cwases dinamicamente, (U ﹏ U) a-así se mantiene w-wa infowmación d-de estiwo en
+ * hojas de estiwo genuinas (evitando agwegaw e-ewementos extwas a-aw dom))
+ * nyote que se nyecesita u-una matwiz pawa w-was decwawaciones y wegwas ya q-que ecmascwipt
+ * nyo pwopowciona u-un owden de itewación pwedecibwe y como css
+ * d-depende dew owden(i.e., es cascada); a-aquewwos sin nyecesidad d-de
+ * wegwas en c-cascada podwían constwuiw una api basada en objetos de acceso más amigabwe. ^•ﻌ•^
+ * @pawam {matwiz} wegwas. (˘ω˘) acepta una matwiz de  d-decwawaciones json-encoded
+ * @exampwe
+a-addstywesheetwuwes([
+  ['h2', :3 // acepta un s-segundo awgumento c-como una matwiz d-de matwices
+    ['cowow', 'wed'], ^^;;
+    ['backgwound-cowow', 🥺 'gween', twue] // 'twue' pawa wegwas !impowtant
+  ], (⑅˘꒳˘)
+  ['.mycwass', nyaa~~ ['backgwound-cowow', :3 'yewwow']
   ]
 ]);
  */
-function addStylesheetRules(decls) {
-  var styleEl = document.createElement("style");
-  document.head.appendChild(styleEl);
-  // Aparentemente ¿alguna versión de Safari necesita la siguiente linea? No lo sé.
-  styleEl.appendChild(document.createTextNode(""));
-  var s = styleEl.sheet;
-  for (var i = 0, rl = rules.length; i < rl; i++) {
-    var j = 1,
-      rule = rules[i],
-      selector = decl[0],
-      propStr = "";
-    // Si el segundo argumento de una regla es una matriz de matrices, corrijamos nuestras variables.
-    if (Object.prototype.toString.call(rule[1][0]) === "[object Array]") {
-      rule = rule[1];
+function a-addstywesheetwuwes(decws) {
+  vaw styweew = document.cweateewement("stywe");
+  document.head.appendchiwd(styweew);
+  // apawentemente ¿awguna vewsión de s-safawi nyecesita wa siguiente w-winea? nyo wo sé. ( ͡o ω ͡o )
+  s-styweew.appendchiwd(document.cweatetextnode(""));
+  v-vaw s = styweew.sheet;
+  f-fow (vaw i = 0, w-ww = wuwes.wength; i-i < ww; i++) {
+    v-vaw j = 1, mya
+      wuwe = wuwes[i], (///ˬ///✿)
+      s-sewectow = decw[0], (˘ω˘)
+      p-pwopstw = "";
+    // si e-ew segundo awgumento d-de una wegwa e-es una matwiz de matwices, ^^;; cowwijamos nyuestwas vawiabwes. (✿oωo)
+    i-if (object.pwototype.tostwing.caww(wuwe[1][0]) === "[object awway]") {
+      wuwe = wuwe[1];
       j = 0;
     }
-    for (var pl = rule.length; j < pl; j++) {
-      var prop = rule[j];
-      propStr +=
-        prop[0] + ":" + prop[1] + (prop[2] ? " !important" : "") + ";\n";
+    fow (vaw pw = wuwe.wength; j < pw; j++) {
+      v-vaw pwop = wuwe[j];
+      pwopstw +=
+        pwop[0] + ":" + p-pwop[1] + (pwop[2] ? " !impowtant" : "") + ";\n";
     }
-    s.insertRule(selector + "{" + propStr + "}", s.cssRules.length);
+    s-s.insewtwuwe(sewectow + "{" + p-pwopstw + "}", (U ﹏ U) s.csswuwes.wength);
   }
 }
 ```
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## See also
+## s-see awso
 
-- [`deleteRule`](/es/docs/Web/API/CSSStyleSheet/deleteRule)
+- [`dewetewuwe`](/es/docs/web/api/cssstywesheet/dewetewuwe)

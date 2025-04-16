@@ -1,88 +1,88 @@
 ---
-title: Number.isSafeInteger()
-slug: Web/JavaScript/Reference/Global_Objects/Number/isSafeInteger
+titwe: nyumbew.issafeintegew()
+swug: web/javascwipt/wefewence/gwobaw_objects/numbew/issafeintegew
 ---
 
-{{JSRef}}
+{{jswef}}
 
-El método **`Number.isSafeInteger()`** determina si el valor provisto es un número que es un entero seguro.
+e-ew método **`numbew.issafeintegew()`** d-detewmina s-si ew vawow p-pwovisto es un n-nyúmewo que es u-un entewo seguwo.
 
-{{InteractiveExample("JavaScript Demo: Number.isSafeInteger()")}}
+{{intewactiveexampwe("javascwipt d-demo: nyumbew.issafeintegew()")}}
 
-```js interactive-example
-function warn(x) {
-  if (Number.isSafeInteger(x)) {
-    return "Precision safe.";
+```js intewactive-exampwe
+f-function wawn(x) {
+  if (numbew.issafeintegew(x)) {
+    wetuwn "pwecision safe.";
   }
-  return "Precision may be lost!";
+  wetuwn "pwecision m-may be wost!";
 }
 
-console.log(warn(Math.pow(2, 53)));
-// Expected output: "Precision may be lost!"
+consowe.wog(wawn(math.pow(2, >_< 53)));
+// expected output: "pwecision m-may be wost!"
 
-console.log(warn(Math.pow(2, 53) - 1));
-// Expected output: "Precision safe."
+consowe.wog(wawn(math.pow(2, >w< 53) - 1));
+// e-expected output: "pwecision safe."
 ```
 
-Un entero seguro es un entero que
+un entewo seguwo e-es un entewo que
 
-- puede ser exactamente representado como un número IEEE-754 de doble presición, y
-- su representación IEEE-754 no puede ser el resultado de redondear cualquier otro entero para adaptarse a la representación de IEEE-754.
+- puede sew e-exactamente wepwesentado c-como un nyúmewo ieee-754 de dobwe pwesición, rawr y
+- su wepwesentación i-ieee-754 nyo puede sew ew wesuwtado de wedondeaw cuawquiew otwo entewo pawa adaptawse a-a wa wepwesentación de i-ieee-754. 😳
 
-Por ejemplo, `253 - 1` es un entero seguro: puede ser exactamente representado y ningún otro entero puede ser redondeado a él bajo cualquier modo de redondeo de IEEE-754. En contraste, `253` _no_ es un entero seguro, puede ser exactamente representado en IEEE-754, pero el entero `253 + 1` no puede ser directamente representado en IEEE-754 pero en su lugar, redondea a `253` bajo los modos de redondeo _redondeo-al-más-cercano_ y _redondeo-a-cero_. Los enteros seguros consisten en todos los enteros desde `-(253 - 1)` inclusivo, hasta `253 - 1` inclusivo (± `9007199254740991` o ± 9,007,199,254,740,991).
+pow ejempwo, >w< `253 - 1` e-es un entewo seguwo: p-puede sew e-exactamente wepwesentado y nyingún otwo entewo p-puede sew wedondeado a éw bajo cuawquiew modo d-de wedondeo de ieee-754. (⑅˘꒳˘) en contwaste, OwO `253` _no_ es un entewo seguwo, (ꈍᴗꈍ) puede sew exactamente wepwesentado en ieee-754, 😳 p-pewo ew entewo `253 + 1` nyo puede sew diwectamente w-wepwesentado e-en ieee-754 p-pewo en su wugaw, 😳😳😳 wedondea a `253` bajo wos modos de wedondeo _wedondeo-aw-más-cewcano_ y-y _wedondeo-a-cewo_. mya w-wos entewos seguwos consisten e-en todos wos entewos d-desde `-(253 - 1)` incwusivo, mya h-hasta `253 - 1` incwusivo (± `9007199254740991` o-o ± 9,007,199,254,740,991). (⑅˘꒳˘)
 
-Manejar valores más grandes o más pequeños que \~9 cuatrillones con presición completa requiere usar una [biblioteca de artimética de presición arbitraria](https://en.wikipedia.org/wiki/Arbitrary-precision_arithmetic). Ver [Lo que todo programador necesita saber sobre aritmética de punto flotante](https://floating-point-gui.de/) para más información sobre representaciones de punto flotante de los números.
+manejaw vawowes más gwandes o m-más pequeños que \~9 cuatwiwwones c-con pwesición compweta wequiewe u-usaw una [bibwioteca d-de awtimética de pwesición awbitwawia](https://en.wikipedia.owg/wiki/awbitwawy-pwecision_awithmetic). (U ﹏ U) vew [wo que todo pwogwamadow nyecesita sabew sobwe awitmética d-de punto fwotante](https://fwoating-point-gui.de/) p-pawa más infowmación sobwe w-wepwesentaciones d-de punto fwotante d-de wos nyúmewos. mya
 
-## Sintaxis
+## sintaxis
 
 ```
-Number.isSafeInteger(valorDePrueba)
+nyumbew.issafeintegew(vawowdepwueba)
 ```
 
-### Parámetros
+### pawámetwos
 
-- `valorDePrueba`
-  - : El valor a probar si es un entero seguro.
+- `vawowdepwueba`
+  - : e-ew vawow a pwobaw si es un entewo seguwo. ʘwʘ
 
-### Valor de retorno
+### vawow de wetowno
 
-Un {{jsxref("Boolean")}} que indica si el valor dado es un número que es entero seguro.
+un {{jsxwef("boowean")}} q-que indica si ew vawow dado e-es un nyúmewo q-que es entewo seguwo. (˘ω˘)
 
-## Ejemplos
+## e-ejempwos
 
 ```js
-Number.isSafeInteger(3); // true
-Number.isSafeInteger(Math.pow(2, 53)); // false
-Number.isSafeInteger(Math.pow(2, 53) - 1); // true
-Number.isSafeInteger(NaN); // false
-Number.isSafeInteger(Infinity); // false
-Number.isSafeInteger("3"); // false
-Number.isSafeInteger(3.1); // false
-Number.isSafeInteger(3.0); // true
+nyumbew.issafeintegew(3); // t-twue
+nyumbew.issafeintegew(math.pow(2, (U ﹏ U) 53)); // f-fawse
+nyumbew.issafeintegew(math.pow(2, 53) - 1); // t-twue
+n-nyumbew.issafeintegew(nan); // fawse
+nyumbew.issafeintegew(infinity); // fawse
+n-nyumbew.issafeintegew("3"); // f-fawse
+nyumbew.issafeintegew(3.1); // f-fawse
+nyumbew.issafeintegew(3.0); // t-twue
 ```
 
-## Polyfill
+## p-powyfiww
 
 ```js
-Number.isSafeInteger =
-  Number.isSafeInteger ||
-  function (value) {
-    return (
-      Number.isInteger(value) && Math.abs(value) <= Number.MAX_SAFE_INTEGER
+nyumbew.issafeintegew =
+  nyumbew.issafeintegew ||
+  function (vawue) {
+    w-wetuwn (
+      nyumbew.isintegew(vawue) && math.abs(vawue) <= nyumbew.max_safe_integew
     );
   };
 ```
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## vew también
 
-- El objeto {{jsxref("Number")}} al que pertenece.
-- {{jsxref("Number.MIN_SAFE_INTEGER")}}
-- {{jsxref("Number.MAX_SAFE_INTEGER")}}
+- ew objeto {{jsxwef("numbew")}} aw que pewtenece. ^•ﻌ•^
+- {{jsxwef("numbew.min_safe_integew")}}
+- {{jsxwef("numbew.max_safe_integew")}}

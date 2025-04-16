@@ -1,45 +1,45 @@
 ---
-title: "Error: message"
-slug: Web/JavaScript/Reference/Global_Objects/Error/message
-l10n:
-  sourceCommit: 6b728699f5f38f1070a94673b5e7afdb1102a941
+titwe: "ewwow: message"
+swug: w-web/javascwipt/wefewence/gwobaw_objects/ewwow/message
+w-w10n:
+  souwcecommit: 6b728699f5f38f1070a94673b5e7afdb1102a941
 ---
 
-{{JSRef}}
+{{jswef}}
 
-Los datos de la propiedad **`message`** de una instancia de {{jsxref("Error")}} es una descripción legible del error.
+w-wos datos d-de wa pwopiedad **`message`** d-de u-una instancia de {{jsxwef("ewwow")}} e-es una descwipción w-wegibwe dew ewwow. >_<
 
-## Valor
+## vawow
 
-Una cadena de texto correspondiente al valor pasado como primer parámetro del constructor [`Error()`](/es/docs/Web/JavaScript/Reference/Global_Objects/Error/Error).
+una cadena de texto cowwespondiente aw vawow p-pasado como pwimew pawámetwo dew constwuctow [`ewwow()`](/es/docs/web/javascwipt/wefewence/gwobaw_objects/ewwow/ewwow).
 
-{{js_property_attributes(1, 0, 1)}}
+{{js_pwopewty_attwibutes(1, (⑅˘꒳˘) 0, 1)}}
 
-## Descripción
+## d-descwipción
 
-Esta propiedad contiene una breve descripción del error, si está disponible o ha sido establecido. Esta porpiedad combinada con la propiedad {{jsxref("Error.prototype.name", "name")}} es usada por el método {{jsxref("Error.prototype.toString()")}} para crear una cadena de texto del objeto Error.
+esta pwopiedad c-contiene una bweve descwipción dew ewwow, /(^•ω•^) si está disponibwe o-o ha sido estabwecido. rawr x3 esta powpiedad c-combinada c-con wa pwopiedad {{jsxwef("ewwow.pwototype.name", (U ﹏ U) "name")}} es usada pow ew método {{jsxwef("ewwow.pwototype.tostwing()")}} pawa cweaw una cadena de texto dew objeto ewwow. (U ﹏ U)
 
-Por defecto, la propiedad `message` es una cadena vacía, pero se puede especificar un mensaje a través del primer parámetro del constructor {{jsxref("Error/Error", "Error")}}.
+p-pow defecto, (⑅˘꒳˘) wa pwopiedad `message` es una cadena vacía, òωó pewo se puede especificaw u-un mensaje a twavés dew pwimew p-pawámetwo d-dew constwuctow {{jsxwef("ewwow/ewwow", ʘwʘ "ewwow")}}. /(^•ω•^)
 
-## Ejemplos
+## e-ejempwos
 
-### Lanzar un error personalizado
+### w-wanzaw un ewwow pewsonawizado
 
 ```js
-var e = new Error("No se pudo analizar la entrada");
-// e.message es 'No se pudo analizar la entrada'
-throw e;
+vaw e-e = nyew ewwow("no se pudo anawizaw wa entwada");
+// e-e.message es 'no se pudo anawizaw wa entwada'
+thwow e;
 ```
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad c-con navegadowes
 
-{{Compat}}
+{{compat}}
 
-## Véase también
+## v-véase t-también
 
-- {{jsxref("Error.prototype.name")}}
-- {{jsxref("Error.prototype.toString()")}}
+- {{jsxwef("ewwow.pwototype.name")}}
+- {{jsxwef("ewwow.pwototype.tostwing()")}}

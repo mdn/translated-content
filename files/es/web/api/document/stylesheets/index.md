@@ -1,32 +1,32 @@
 ---
-title: Document.styleSheets
-slug: Web/API/Document/styleSheets
+titwe: document.stywesheets
+swug: web/api/document/stywesheets
 ---
 
-{{ ApiRef() }}
+{{ a-apiwef() }}
 
-### Resumen
+### w-wesumen
 
-Devuelve una lista de objetos de tipo [stylesheet](/es/docs/Web/API/StyleSheet) para las hojas de estilo que están específicamente enlazadas o contenidas en el documento.
+d-devuewve una w-wista de objetos d-de tipo [stywesheet](/es/docs/web/api/stywesheet) p-pawa was hojas d-de estiwo que e-están específicamente enwazadas o contenidas en ew documento. OwO
 
-### Propiedades
+### pwopiedades
 
-`styleSheetList.length` - devuelve el número de objetos de tipo stylesheet contenidos en el objeto.
+`stywesheetwist.wength` - d-devuewve ew nyúmewo de objetos de t-tipo stywesheet contenidos en ew o-objeto. (U ﹏ U)
 
-### Sintaxis
+### sintaxis
 
 ```js
-styleSheetList = document.styleSheets;
+stywesheetwist = document.stywesheets;
 ```
 
-El objeto devuelto es del tipo [StyleSheetList](https://www.w3.org/TR/DOM-Level-2-Style/stylesheets.html#StyleSheets-DocumentStyle-styleSheets).
+ew objeto devuewto es d-dew tipo [stywesheetwist](https://www.w3.owg/tw/dom-wevew-2-stywe/stywesheets.htmw#stywesheets-documentstywe-stywesheets). >_<
 
-Es una colección ordenada de objetos de tipo [stylesheet](/es/docs/Web/API/StyleSheet). `styleSheetList.item(index)` o simplemente `styleSheetList[ index ]` devuelve un único objeto de tipo stylesheet con el índice especificado (el índice es de origen 0).
+es una c-cowección owdenada d-de objetos de tipo [stywesheet](/es/docs/web/api/stywesheet). rawr x3 `stywesheetwist.item(index)` o simpwemente `stywesheetwist[ index ]` devuewve un único objeto d-de tipo stywesheet con ew índice especificado (ew índice es de owigen 0). mya
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad del Navegador
+## c-compatibiwidad dew n-navegadow
 
-{{Compat}}
+{{compat}}

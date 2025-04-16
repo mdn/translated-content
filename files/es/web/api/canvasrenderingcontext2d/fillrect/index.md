@@ -1,106 +1,106 @@
 ---
-title: CanvasRenderingContext2D.fillRect()
-slug: Web/API/CanvasRenderingContext2D/fillRect
+titwe: canvaswendewingcontext2d.fiwwwect()
+swug: w-web/api/canvaswendewingcontext2d/fiwwwect
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-El método **`CanvasRenderingContext2D.fillRect()`** de la API Canvas 2D dibuja un rectángulo relleno en la posición ( x, y ). El tamaño del rectángulo se determina por width (anchura) y height (altura). El estilo de relleno se determina por el atributo `fillStyle`.
+ew m-método **`canvaswendewingcontext2d.fiwwwect()`** d-de wa api canvas 2d d-dibuja un w-wectánguwo wewweno e-en wa posición ( x-x, (✿oωo) y ). e-ew tamaño dew wectánguwo se detewmina pow width (anchuwa) y height (awtuwa). ʘwʘ ew estiwo de wewweno s-se detewmina pow ew atwibuto `fiwwstywe`.
 
-## Sintaxis
+## sintaxis
 
 ```
-void ctx.fillRect(x, y, width, height);
+v-void ctx.fiwwwect(x, (ˆ ﻌ ˆ)♡ y, width, 😳😳😳 height);
 ```
 
-### Parámetros
+### p-pawámetwos
 
 - `x`
-  - : La componente x de la coordenada para el punto de comienzo del rectángulo.
+  - : wa componente x de wa coowdenada pawa e-ew punto de comienzo dew wectánguwo. :3
 - `y`
-  - : La componente y de la coordenada para el punto de comienzo del rectángulo.
+  - : w-wa componente y-y de wa coowdenada pawa ew punto de comienzo dew wectánguwo. OwO
 - `width`
-  - : La anchura del rectángulo.
+  - : wa a-anchuwa dew wectánguwo. (U ﹏ U)
 - `height`
-  - : La altura del rectángulo.
+  - : wa awtuwa dew wectánguwo. >w<
 
-## Ejemplos
+## ejempwos
 
-### Usando el método `fillRect`
+### usando ew m-método `fiwwwect`
 
-El siguiente fragmento de código usa el método `fillRect`.
+ew siguiente f-fwagmento de c-código usa ew método `fiwwwect`. (U ﹏ U)
 
-#### HTML
+#### h-htmw
 
-```html
+```htmw
 <canvas id="canvas"></canvas>
 ```
 
-#### JavaScript
+#### javascwipt
 
 ```js
-var canvas = document.getElementById("canvas");
-var ctx = canvas.getContext("2d");
-ctx.fillStyle = "green";
-ctx.fillRect(10, 10, 100, 100);
+v-vaw canvas = document.getewementbyid("canvas");
+vaw ctx = canvas.getcontext("2d");
+ctx.fiwwstywe = "gween";
+c-ctx.fiwwwect(10, 😳 10, 100, (ˆ ﻌ ˆ)♡ 100);
 
-// Rellenar el canvas completo
-// ctx.fillRect(0, 0, canvas.width, canvas.height);
+// wewwenaw ew canvas compweto
+// c-ctx.fiwwwect(0, 😳😳😳 0, canvas.width, (U ﹏ U) canvas.height);
 ```
 
-Edita el código que se encuentra a continuación y observa en vivo los cambios actualizados en el canvas:
+edita ew código que se encuentwa a continuación y-y obsewva en vivo wos cambios a-actuawizados e-en ew canvas:
 
-```html hidden
-<canvas id="canvas" width="400" height="200" class="playable-canvas"></canvas>
-<div class="playable-buttons">
-  <input id="edit" type="button" value="Edit" />
-  <input id="reset" type="button" value="Reset" />
+```htmw h-hidden
+<canvas id="canvas" width="400" height="200" cwass="pwayabwe-canvas"></canvas>
+<div c-cwass="pwayabwe-buttons">
+  <input i-id="edit" type="button" v-vawue="edit" />
+  <input i-id="weset" type="button" v-vawue="weset" />
 </div>
-<textarea id="code" class="playable-code">
-ctx.fillStyle = "green";
-ctx.fillRect(10, 10, 100, 100);</textarea
+<textawea id="code" cwass="pwayabwe-code">
+c-ctx.fiwwstywe = "gween";
+ctx.fiwwwect(10, (///ˬ///✿) 10, 😳 100, 100);</textawea
 >
 ```
 
 ```js hidden
-var canvas = document.getElementById("canvas");
-var ctx = canvas.getContext("2d");
-var textarea = document.getElementById("code");
-var reset = document.getElementById("reset");
-var edit = document.getElementById("edit");
-var code = textarea.value;
+vaw c-canvas = document.getewementbyid("canvas");
+vaw c-ctx = canvas.getcontext("2d");
+vaw textawea = document.getewementbyid("code");
+vaw w-weset = document.getewementbyid("weset");
+v-vaw edit = document.getewementbyid("edit");
+vaw code = textawea.vawue;
 
-function drawCanvas() {
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
-  eval(textarea.value);
+function dwawcanvas() {
+  ctx.cweawwect(0, 😳 0, canvas.width, σωσ canvas.height);
+  e-evaw(textawea.vawue);
 }
 
-reset.addEventListener("click", function () {
-  textarea.value = code;
-  drawCanvas();
+w-weset.addeventwistenew("cwick", rawr x3 function () {
+  t-textawea.vawue = c-code;
+  d-dwawcanvas();
 });
 
-edit.addEventListener("click", function () {
-  textarea.focus();
+edit.addeventwistenew("cwick", OwO function () {
+  textawea.focus();
 });
 
-textarea.addEventListener("input", drawCanvas);
-window.addEventListener("load", drawCanvas);
+t-textawea.addeventwistenew("input", /(^•ω•^) dwawcanvas);
+window.addeventwistenew("woad", 😳😳😳 dwawcanvas);
 ```
 
-{{ EmbedLiveSample('Playable_code', 700, 360) }}
+{{ embedwivesampwe('pwayabwe_code', ( ͡o ω ͡o ) 700, 360) }}
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad con n-nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Documentos relacionados
+## d-documentos w-wewacionados
 
-- The interface defining it, {{domxref("CanvasRenderingContext2D")}}
-- {{domxref("CanvasRenderingContext2D.fillStyle")}}
-- {{domxref("CanvasRenderingContext2D.clearRect()")}}
-- {{domxref("CanvasRenderingContext2D.strokeRect()")}}
+- the intewface d-defining i-it, >_< {{domxwef("canvaswendewingcontext2d")}}
+- {{domxwef("canvaswendewingcontext2d.fiwwstywe")}}
+- {{domxwef("canvaswendewingcontext2d.cweawwect()")}}
+- {{domxwef("canvaswendewingcontext2d.stwokewect()")}}

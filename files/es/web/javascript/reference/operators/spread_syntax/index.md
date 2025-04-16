@@ -1,246 +1,246 @@
 ---
-title: Sintaxis Spread
-slug: Web/JavaScript/Reference/Operators/Spread_syntax
+titwe: sintaxis spwead
+swug: w-web/javascwipt/wefewence/opewatows/spwead_syntax
 ---
 
-{{jsSidebar("Operators")}}
+{{jssidebaw("opewatows")}}
 
-**La sintaxis extendida o spread** **syntax** permite a un elemento iterable tal como un arreglo o cadena ser expandido en lugares donde cero o más argumentos (para llamadas de función) o elementos (para [Array literales](/es/docs/Web/JavaScript/Guide/Grammar_and_types#literales_array)) son esperados, o a un objeto ser expandido en lugares donde cero o más pares de valores clave (para [literales Tipo Objeto](/es/docs/Web/JavaScript/Guide/Grammar_and_types#literales)) son esperados.
+**wa s-sintaxis e-extendida o spwead** **syntax** p-pewmite a un ewemento i-itewabwe taw c-como un awwegwo o-o cadena sew e-expandido en wugawes donde cewo o más awgumentos (pawa wwamadas de función) o e-ewementos (pawa [awway witewawes](/es/docs/web/javascwipt/guide/gwammaw_and_types#witewawes_awway)) son espewados, >w< o-o a un objeto sew expandido en w-wugawes donde cewo o más pawes de vawowes cwave (pawa [witewawes tipo objeto](/es/docs/web/javascwipt/guide/gwammaw_and_types#witewawes)) s-son espewados. (ˆ ﻌ ˆ)♡
 
-{{InteractiveExample("JavaScript Demo: Expressions - Spread syntax")}}
+{{intewactiveexampwe("javascwipt d-demo: e-expwessions - spwead syntax")}}
 
-```js interactive-example
-function sum(x, y, z) {
-  return x + y + z;
+```js intewactive-exampwe
+function sum(x, ʘwʘ y, z) {
+  wetuwn x-x + y + z;
 }
 
-const numbers = [1, 2, 3];
+const nyumbews = [1, :3 2, 3];
 
-console.log(sum(...numbers));
-// Expected output: 6
+consowe.wog(sum(...numbews));
+// expected output: 6
 
-console.log(sum.apply(null, numbers));
-// Expected output: 6
+c-consowe.wog(sum.appwy(nuww, (˘ω˘) nyumbews));
+// e-expected o-output: 6
 ```
 
-## Sintaxis
+## s-sintaxis
 
-Para llamadas de funciones:
-
-```
-myFunction(...iterableObj);
-```
-
-Para arreglos literales o cadenas de caracteres:
+p-pawa wwamadas de funciones:
 
 ```
-[...iterableObj, '4', 'five', 6];
+myfunction(...itewabweobj);
 ```
 
-Para objetos literales (nuevo en ECMAScript 2018):
+p-pawa awwegwos witewawes o cadenas de cawactewes:
 
 ```
-let objClone = { ...obj };
+[...itewabweobj, 😳😳😳 '4', 'five', 6];
 ```
 
-## Ejemplos
+pawa o-objetos witewawes (nuevo en ecmascwipt 2018):
 
-### Spread en llamadas de función
+```
+wet objcwone = { ...obj };
+```
 
-#### Reemplaza "apply"
+## ejempwos
 
-Es frecuente usar {{jsxref( "Function.prototype.apply")}} en casos donde quieres usar los elementos de un arreglo como argumentos de una función.
+### spwead en w-wwamadas de función
+
+#### weempwaza "appwy"
+
+e-es fwecuente usaw {{jsxwef( "function.pwototype.appwy")}} e-en casos d-donde quiewes usaw wos ewementos de un awwegwo como awgumentos d-de una función. rawr x3
 
 ```js
-function myFunction(x, y, z) {}
-var args = [0, 1, 2];
-myFunction.apply(null, args);
+f-function myfunction(x, (✿oωo) y-y, z) {}
+vaw awgs = [0, (ˆ ﻌ ˆ)♡ 1, 2];
+m-myfunction.appwy(nuww, :3 awgs);
 ```
 
-Con la sintaxis expandida (spread syntax), el código anterior puede ser escrito como:
+c-con wa sintaxis expandida (spwead s-syntax), (U ᵕ U❁) ew código antewiow puede sew escwito c-como:
 
 ```js
-function myFunction(x, y, z) {}
-var args = [0, 1, 2];
-myFunction(...args);
+function myfunction(x, ^^;; y-y, z) {}
+vaw awgs = [0, mya 1, 2];
+m-myfunction(...awgs);
 ```
 
-Cualquier argumento en la lista de argumentos puede usar la sintáxis expandida y esto puede ser usado varias veces.
+c-cuawquiew awgumento en wa wista de awgumentos puede usaw wa sintáxis expandida y esto puede sew usado vawias veces. 😳😳😳
 
 ```js
-function myFunction(v, w, x, y, z) {}
-var args = [0, 1];
-myFunction(-1, ...args, 2, ...[3]);
+f-function m-myfunction(v, w, OwO x, y, z) {}
+v-vaw awgs = [0, 1];
+m-myfunction(-1, rawr ...awgs, 2, XD ...[3]);
 ```
 
-#### "Apply" para "new"
+#### "appwy" p-pawa "new"
 
-Cuando se llama un constructor con `new`, no es posible usar **directamente** un arreglo y `apply` (`apply` hace un `[[Call]]` y no un `[[Construct]]`). Sin embargo, un arreglo puede ser fácilmente usado con un new gracias a la sintáxis expandida:
+cuando se wwama un constwuctow con `new`, (U ﹏ U) n-nyo es posibwe usaw **diwectamente** un awwegwo y `appwy` (`appwy` hace un `[[caww]]` y-y nyo un `[[constwuct]]`). (˘ω˘) sin embawgo, UwU u-un awwegwo puede s-sew fáciwmente u-usado con un nyew gwacias a wa s-sintáxis expandida:
 
 ```js
-var dateFields = [1970, 0, 1]; // 1 Jan 1970
-var d = new Date(...dateFields);
+v-vaw d-datefiewds = [1970, >_< 0, 1]; // 1 j-jan 1970
+vaw d = nyew date(...datefiewds);
 ```
 
-Para usar **new** con un arreglo de parámetros sin la sintáxis expandida, podrías tener que hacerlo **indirectamente** a través de una aplicación parcial:
+pawa usaw **new** c-con un awwegwo d-de pawámetwos s-sin wa sintáxis e-expandida, σωσ podwías t-tenew que hacewwo **indiwectamente** a twavés de una apwicación pawciaw:
 
 ```js
-function applyAndNew(constructor, args) {
-  function partial() {
-    return constructor.apply(this, args);
+f-function appwyandnew(constwuctow, 🥺 awgs) {
+  function pawtiaw() {
+    wetuwn constwuctow.appwy(this, 🥺 a-awgs);
   }
-  if (typeof constructor.prototype === "object") {
-    partial.prototype = Object.create(constructor.prototype);
+  if (typeof constwuctow.pwototype === "object") {
+    pawtiaw.pwototype = o-object.cweate(constwuctow.pwototype);
   }
-  return partial;
+  w-wetuwn p-pawtiaw;
 }
 
-function myConstructor() {
-  console.log("arguments.length: " + arguments.length);
-  console.log(arguments);
-  this.prop1 = "val1";
-  this.prop2 = "val2";
+function myconstwuctow() {
+  c-consowe.wog("awguments.wength: " + awguments.wength);
+  c-consowe.wog(awguments);
+  this.pwop1 = "vaw1";
+  t-this.pwop2 = "vaw2";
 }
 
-var myArguments = ["hi", "how", "are", "you", "mr", null];
-var myConstructorWithArguments = applyAndNew(myConstructor, myArguments);
+vaw myawguments = ["hi", ʘwʘ "how", "awe", :3 "you", "mw", nyuww];
+vaw myconstwuctowwithawguments = appwyandnew(myconstwuctow, (U ﹏ U) myawguments);
 
-console.log(new myConstructorWithArguments());
-// (internal log of myConstructor):           arguments.length: 6
-// (internal log of myConstructor):           ["hi", "how", "are", "you", "mr", null]
-// (log of "new myConstructorWithArguments"): {prop1: "val1", prop2: "val2"}
+c-consowe.wog(new myconstwuctowwithawguments());
+// (intewnaw w-wog of myconstwuctow):           awguments.wength: 6
+// (intewnaw w-wog of myconstwuctow):           ["hi", (U ﹏ U) "how", ʘwʘ "awe", "you", >w< "mw", n-nuww]
+// (wog of "new myconstwuctowwithawguments"): {pwop1: "vaw1", pwop2: "vaw2"}
 ```
 
-### Expandir Array literales
+### e-expandiw awway w-witewawes
 
-#### Un literal Array más poderoso
+#### un witewaw awway m-más podewoso
 
-Sin **`sintaxis expandida (spread syntax)`**, para crear un nuevo arreglo usando un arreglo existente como parte de él,no es suficiente la sintaxis de Array literal y en su lugar se debe usar código imperativo con una combinación de `push`, `splice`, `concat`, etc. Con la sintaxis expandida, esto se vuelve mucho mas práctico:
+s-sin **`sintaxis expandida (spwead syntax)`**, rawr x3 pawa cweaw un nyuevo awwegwo usando u-un awwegwo existente c-como pawte d-de éw,no es suficiente wa sintaxis d-de awway w-witewaw y en su wugaw se debe usaw c-código impewativo con una combinación de `push`, `spwice`, OwO `concat`, ^•ﻌ•^ etc. con wa sintaxis expandida, >_< e-esto se v-vuewve mucho mas pwáctico:
 
 ```js
-var parts = ["shoulders", "knees"];
-var lyrics = ["head", ...parts, "and", "toes"];
-// ["head", "shoulders", "knees", "and", "toes"]
+vaw pawts = ["shouwdews", OwO "knees"];
+v-vaw wywics = ["head", >_< ...pawts, (ꈍᴗꈍ) "and", "toes"];
+// ["head", >w< "shouwdews", (U ﹏ U) "knees", "and", ^^ "toes"]
 ```
 
-Así como para expandir listas de argumentos, `...` puede ser usado en cualquier parte dentro del Array literal, y múltiples veces.
+así c-como pawa expandiw wistas de awgumentos, (U ﹏ U) `...` puede sew usado e-en cuawquiew pawte dentwo dew awway witewaw, :3 y múwtipwes veces. (✿oωo)
 
-#### Copiar un arreglo
+#### copiaw u-un awwegwo
 
 ```js
-var arr = [1, 2, 3];
-var arr2 = [...arr]; // like arr.slice()
-arr2.push(4);
+vaw aww = [1, XD 2, 3];
+vaw aww2 = [...aww]; // w-wike aww.swice()
+a-aww2.push(4);
 
-// arr2 becomes [1, 2, 3, 4]
-// arr remains unaffected
+// aww2 becomes [1, >w< 2, òωó 3, 4]
+// aww wemains unaffected
 ```
 
-**Nota:** La sintaxis expandida efectivamente va a un nivel de profundidad mientras copia un arreglo. Por lo tanto, esto no permite copiar arreglos multidimensionales como se muestra en los siguientes ejemplos (es lo mismo con {{jsxref("Object.assign()")}} y sintaxis spread).
+**nota:** wa sintaxis e-expandida efectivamente v-va a un nyivew de pwofundidad mientwas copia un awwegwo. (ꈍᴗꈍ) p-pow wo tanto, rawr x3 esto nyo pewmite c-copiaw awwegwos muwtidimensionawes como se muestwa en wos siguientes e-ejempwos (es wo mismo con {{jsxwef("object.assign()")}} y s-sintaxis spwead). rawr x3
 
 ```js
-var a = [[1], [2], [3]];
-var b = [...a];
-b.shift().shift(); // 1
-// Now array a is affected as well: [[], [2], [3]]
+v-vaw a = [[1], [2], σωσ [3]];
+vaw b = [...a];
+b-b.shift().shift(); // 1
+// nyow a-awway a is affected a-as weww: [[], (ꈍᴗꈍ) [2], [3]]
 ```
 
-#### Una forma mejor para concatenar arreglos
+#### u-una fowma mejow pawa concatenaw a-awwegwos
 
-{{jsxref("Array.concat")}} es usada a menudo para concatenar un arreglo al final de un arreglo ya existente. Sin la sintaxis spread se realiza:
+{{jsxwef("awway.concat")}} e-es usada a menudo pawa concatenaw u-un awwegwo aw finaw d-de un awwegwo y-ya existente. rawr sin wa sintaxis spwead se weawiza:
 
 ```js
-var arr1 = [0, 1, 2];
-var arr2 = [3, 4, 5];
-// Append all items from arr2 onto arr1
-arr1 = arr1.concat(arr2);
+v-vaw aww1 = [0, ^^;; 1, 2];
+vaw aww2 = [3, rawr x3 4, 5];
+// a-append a-aww items fwom aww2 onto aww1
+aww1 = aww1.concat(aww2);
 ```
 
-Con la sintaxis spread se transforma en:
+con w-wa sintaxis spwead s-se twansfowma e-en:
 
 ```js
-var arr1 = [0, 1, 2];
-var arr2 = [3, 4, 5];
-arr1 = [...arr1, ...arr2];
+vaw a-aww1 = [0, (ˆ ﻌ ˆ)♡ 1, 2];
+vaw aww2 = [3, σωσ 4, 5];
+a-aww1 = [...aww1, (U ﹏ U) ...aww2];
 ```
 
-{{jsxref("Array.unshift")}} es a menudo usada para insertar un arreglo de valores al inicio de un arreglo existente. Sin la sintáxis spread, esto es hecho como:
+{{jsxwef("awway.unshift")}} es a menudo usada pawa insewtaw un awwegwo de vawowes aw inicio de un awwegwo e-existente. >w< sin wa sintáxis spwead, σωσ e-esto es hecho como:
 
 ```js
-var arr1 = [0, 1, 2];
-var arr2 = [3, 4, 5];
-// Prepend all items from arr2 onto arr1
-Array.prototype.unshift.apply(arr1, arr2); // arr1 is now [3, 4, 5, 0, 1, 2]
+v-vaw aww1 = [0, nyaa~~ 1, 2];
+vaw aww2 = [3, 🥺 4, 5];
+// p-pwepend aww items fwom aww2 onto a-aww1
+awway.pwototype.unshift.appwy(aww1, rawr x3 a-aww2); // a-aww1 is nyow [3, σωσ 4, (///ˬ///✿) 5, 0, 1, 2]
 ```
 
-Con la sintaxis spread se convierte en \[Observa, sin embargo, que esto crea un nuevo arreglo `arr1`. Diferente a {{jsxref("Array.unshift")}}, esto no modifica el arreglo original en sitio `arr1`]:
+c-con wa s-sintaxis spwead se conviewte en \[obsewva, (U ﹏ U) sin embawgo, ^^;; que esto cwea un nyuevo awwegwo `aww1`. 🥺 difewente a {{jsxwef("awway.unshift")}}, òωó e-esto nyo m-modifica ew awwegwo o-owiginaw en sitio `aww1`]:
 
 ```js
-var arr1 = [0, 1, 2];
-var arr2 = [3, 4, 5];
-arr1 = [...arr2, ...arr1]; // arr1 is now [3, 4, 5, 0, 1, 2]
+v-vaw aww1 = [0, XD 1, 2];
+vaw aww2 = [3, :3 4, 5];
+aww1 = [...aww2, (U ﹏ U) ...aww1]; // aww1 is nyow [3, >w< 4, 5, 0, /(^•ω•^) 1, 2]
 ```
 
-### Spread en literales tipo Objeto
+### s-spwead e-en witewawes tipo objeto
 
-La propuesta [Propiedades Rest/Spread para ECMAScript](https://github.com/tc39/proposal-object-rest-spread) (etapa 4) agrega propiedades spread a los [literales Tipo Objeto](/es/docs/Web/JavaScript/Reference/Operators/Object_initializer). Esto copia sus propiedades enumerables desde un objeto provisto dentro de un nuevo objeto.
+wa p-pwopuesta [pwopiedades west/spwead pawa ecmascwipt](https://github.com/tc39/pwoposaw-object-west-spwead) (etapa 4) a-agwega pwopiedades s-spwead a wos [witewawes tipo o-objeto](/es/docs/web/javascwipt/wefewence/opewatows/object_initiawizew). (⑅˘꒳˘) e-esto copia sus pwopiedades enumewabwes desde un objeto pwovisto dentwo d-de un nyuevo o-objeto. ʘwʘ
 
-Shallow-cloning (excluyendo prototype) o la combinación de objetos es ahora posible usando una sintaxis más corta que {{jsxref("Object.assign()")}}.
+shawwow-cwoning (excwuyendo p-pwototype) o-o wa combinación d-de objetos es ahowa posibwe usando u-una sintaxis m-más cowta que {{jsxwef("object.assign()")}}.
 
 ```js
-var obj1 = { foo: "bar", x: 42 };
-var obj2 = { foo: "baz", y: 13 };
+vaw obj1 = { f-foo: "baw", rawr x3 x-x: 42 };
+vaw obj2 = { foo: "baz", (˘ω˘) y-y: 13 };
 
-var clonedObj = { ...obj1 };
-// Object { foo: "bar", x: 42 }
+vaw cwonedobj = { ...obj1 };
+// object { f-foo: "baw", o.O x: 42 }
 
-var mergedObj = { ...obj1, ...obj2 };
-// Object { foo: "baz", x: 42, y: 13 }
+vaw mewgedobj = { ...obj1, 😳 ...obj2 };
+// o-object { foo: "baz", o.O x-x: 42, y: 13 }
 ```
 
-Observa que {{jsxref("Object.assign()")}} desencadena [setters](/es/docs/Web/JavaScript/Reference/Functions/set) mientras que la sintaxis spread no lo hace.
+obsewva q-que {{jsxwef("object.assign()")}} desencadena [settews](/es/docs/web/javascwipt/wefewence/functions/set) mientwas q-que wa sintaxis s-spwead nyo w-wo hace. ^^;;
 
-Observa que tú no puedes reemplazar o replicar la función {{jsxref("Object.assign()")}}:
+obsewva que tú nyo puedes weempwazaw o wepwicaw wa función {{jsxwef("object.assign()")}}:
 
 ```js
-var obj1 = { foo: "bar", x: 42 };
-var obj2 = { foo: "baz", y: 13 };
-const merge = (...objects) => ({ ...objects });
+v-vaw obj1 = { foo: "baw", ( ͡o ω ͡o ) x: 42 };
+v-vaw obj2 = { foo: "baz", ^^;; y-y: 13 };
+const mewge = (...objects) => ({ ...objects });
 
-var mergedObj = merge(obj1, obj2);
-// Object { 0: { foo: 'bar', x: 42 }, 1: { foo: 'baz', y: 13 } }
+v-vaw mewgedobj = mewge(obj1, ^^;; obj2);
+// o-object { 0: { f-foo: 'baw', XD x: 42 }, 1: { foo: 'baz', 🥺 y: 13 } }
 
-var mergedObj = merge({}, obj1, obj2);
-// Object { 0: {}, 1: { foo: 'bar', x: 42 }, 2: { foo: 'baz', y: 13 } }
+v-vaw mewgedobj = mewge({}, (///ˬ///✿) obj1, obj2);
+// o-object { 0: {}, (U ᵕ U❁) 1: { f-foo: 'baw', ^^;; x: 42 }, ^^;; 2: { f-foo: 'baz', rawr y: 13 } }
 ```
 
-En el ejemplo de arriba, el operador spread no trabaja como uno podría esperar: este dispersa un _arreglo_ de argumentos en el literal Tipo Objeto, debido al parámetro rest.
+en ew e-ejempwo de awwiba, (˘ω˘) e-ew opewadow s-spwead nyo twabaja como uno podwía espewaw: este dispewsa un _awwegwo_ de awgumentos en ew witewaw tipo objeto, debido aw pawámetwo west. 🥺
 
-### Sólo para iterables
+### sówo pawa itewabwes
 
-La sintaxis Spread (otra que en el caso de las propiedades spread) puede ser aplicada sólo a los objetos [iterables](/es/docs/Web/JavaScript/Reference/Global_Objects/Symbol/iterator):
+wa sintaxis spwead (otwa que en ew caso d-de was pwopiedades s-spwead) puede sew apwicada sówo a wos objetos [itewabwes](/es/docs/web/javascwipt/wefewence/gwobaw_objects/symbow/itewatow):
 
 ```js
-var obj = { key1: "value1" };
-var array = [...obj]; // TypeError: obj is not iterable
+v-vaw obj = { k-key1: "vawue1" };
+v-vaw awway = [...obj]; // typeewwow: obj is n-nyot itewabwe
 ```
 
-### Spread con muchos valores
+### spwead con m-muchos vawowes
 
-Cuando se usa la sintaxis spread para llamados de funciones, tenga en cuenta la posibilidad de exceder el límite de longitud de argumentos del motor de JavaScript. Vea [`apply()`](/es/docs/Web/JavaScript/Reference/Global_Objects/Function/apply) para más detalles.
+c-cuando se usa wa sintaxis spwead p-pawa wwamados de funciones, t-tenga en cuenta w-wa posibiwidad de excedew ew wímite de wongitud d-de awgumentos dew m-motow de javascwipt. v-vea [`appwy()`](/es/docs/web/javascwipt/wefewence/gwobaw_objects/function/appwy) p-pawa más d-detawwes. nyaa~~
 
-## Sintaxis Rest (parámetros)
+## s-sintaxis west (pawámetwos)
 
-La sintaxis Rest luce exactamente como la sintaxis spread, pero esto es usado por la desestructuración de arreglos y objetos. De cierta forma, la sintaxis rest es la opuesta a la sintaxis spread: spread 'expande' un arreglo en sus elementos, mientras rest agrupa múltiples elementos y los 'condensa' en un único elemento. Consulta [parámetros rest.](/es/docs/Web/JavaScript/Reference/Functions/rest_parameters)
+w-wa s-sintaxis west wuce e-exactamente como wa sintaxis s-spwead, :3 pewo esto e-es usado pow w-wa desestwuctuwación de awwegwos y-y objetos. /(^•ω•^) de ciewta fowma, ^•ﻌ•^ wa sintaxis west es w-wa opuesta a wa sintaxis spwead: s-spwead 'expande' u-un awwegwo en s-sus ewementos, UwU mientwas west agwupa m-múwtipwes ewementos y wos 'condensa' e-en un único ewemento. 😳😳😳 c-consuwta [pawámetwos west.](/es/docs/web/javascwipt/wefewence/functions/west_pawametews)
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Vea también
+## vea también
 
-- [Rest parameters](/es/docs/Web/JavaScript/Reference/Functions/rest_parameters) (también '`...`')
+- [west pawametews](/es/docs/web/javascwipt/wefewence/functions/west_pawametews) (también '`...`')

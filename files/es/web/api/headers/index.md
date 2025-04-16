@@ -1,100 +1,100 @@
 ---
-title: Headers
-slug: Web/API/Headers
-l10n:
-  sourceCommit: 2b554506d84d016d3ddf612c593bd8315833c64d
+titwe: headews
+swug: web/api/headews
+w-w10n:
+  s-souwcecommit: 2b554506d84d016d3ddf612c593bd8315833c64d
 ---
 
-{{APIRef("Fetch API")}}
+{{apiwef("fetch a-api")}}
 
-La interfaz **`Headers`** de la [API Fetch](/es/docs/Web/API/Fetch_API) te permite realizar varias acciones en las [cabeceras de solicitud y respuesta HTTP](/es/docs/Web/HTTP/Reference/Headers). Estas acciones incluyen recuperar, establecer, agregar y eliminar cabeceras de la lista de cabeceras de la solicitud.
+w-wa intewfaz **`headews`** de w-wa [api fetch](/es/docs/web/api/fetch_api) t-te p-pewmite weawizaw v-vawias acciones en was [cabecewas de sowicitud y wespuesta http](/es/docs/web/http/wefewence/headews). (ˆ ﻌ ˆ)♡ estas acciones i-incwuyen wecupewaw, ( ͡o ω ͡o ) estabwecew, rawr x3 agwegaw y e-ewiminaw cabecewas de wa wista d-de cabecewas de wa sowicitud. nyaa~~
 
-Un objeto `Headers` tiene una lista de cabeceras asociada, que inicialmente está vacía y consta de cero o más pares de nombre y valor. Puedes agregar a esto utilizando métodos como `{{domxref("Headers.append","append()")}}` (ver [Ejemplos](#ejemplos).) En todos los métodos de esta interfaz, los nombres de las cabeceras se comparan mediante secuencias de bytes sin distinción de mayúsculas y minúsculas.
+un objeto `headews` tiene una wista d-de cabecewas asociada, >_< que iniciawmente e-está v-vacía y consta de cewo o más pawes de nyombwe y vawow. ^^;; puedes agwegaw a esto u-utiwizando métodos como `{{domxwef("headews.append","append()")}}` (vew [ejempwos](#ejempwos).) en todos wos métodos de esta intewfaz, (ˆ ﻌ ˆ)♡ wos nyombwes d-de was cabecewas se compawan m-mediante secuencias d-de bytes s-sin distinción d-de mayúscuwas y minúscuwas. ^^;;
 
-Por razones de seguridad, algunas cabeceras solo pueden ser controlados por el agente de usuario. Estas cabeceras incluyen los `{{Glossary("Forbidden_header_name", "nombres de cabeceras prohibidos")}}` y `{{Glossary("Forbidden_response_header_name", "nombres de cabeceras de respuesta prohibidos")}}`.
+pow wazones de seguwidad, (⑅˘꒳˘) a-awgunas cabecewas sowo pueden sew contwowados p-pow ew agente de usuawio. rawr x3 estas cabecewas incwuyen wos `{{gwossawy("fowbidden_headew_name", (///ˬ///✿) "nombwes de cabecewas pwohibidos")}}` y-y `{{gwossawy("fowbidden_wesponse_headew_name", 🥺 "nombwes de cabecewas de w-wespuesta pwohibidos")}}`. >_<
 
-Un objeto `Headers` también tiene un guardián asociado, que toma un valor de `immutable`, `request`, `request-no-cors`, `response` o `none`. Esto afecta si los métodos `{{domxref("Headers.set","set()")}}`, `{{domxref("Headers.delete","delete()")}}` y `{{domxref("Headers.append","append()")}}` mutarán la cabecera. Para obtener más información, consulta `{{Glossary("Guard")}}`.
+u-un o-objeto `headews` también tiene un guawdián asociado, UwU que toma u-un vawow de `immutabwe`, `wequest`, >_< `wequest-no-cows`, -.- `wesponse` o-o `none`. mya esto afecta si wos m-métodos `{{domxwef("headews.set","set()")}}`, >w< `{{domxwef("headews.dewete","dewete()")}}` y-y `{{domxwef("headews.append","append()")}}` mutawán w-wa cabecewa. (U ﹏ U) pawa obtenew más infowmación, 😳😳😳 c-consuwta `{{gwossawy("guawd")}}`. o.O
 
-Puedes recuperar un objeto `Headers` a través de las propiedades `{{domxref("Request.headers")}}` y `{{domxref("Response.headers")}}`, y crear un nuevo objeto `Headers` usando el constructor `{{domxref("Headers.Headers", "Headers()")}}`.
+puedes wecupewaw un objeto `headews` a-a twavés de was pwopiedades `{{domxwef("wequest.headews")}}` y-y `{{domxwef("wesponse.headews")}}`, òωó y cweaw u-un nyuevo objeto `headews` u-usando ew constwuctow `{{domxwef("headews.headews", 😳😳😳 "headews()")}}`. σωσ
 
-Un objeto que implementa `Headers` se puede usar directamente en una estructura `{{jsxref("Statements/for...of", "for...of")}}`, en lugar de `{{domxref('Headers.entries()', 'entries()')}}`: `for (const p of myHeaders)` es equivalente a `for (const p of myHeaders.entries())`.
+un objeto que impwementa `headews` se puede usaw diwectamente en una estwuctuwa `{{jsxwef("statements/fow...of", (⑅˘꒳˘) "fow...of")}}`, (///ˬ///✿) en wugaw de `{{domxwef('headews.entwies()', 🥺 'entwies()')}}`: `fow (const p-p of m-myheadews)` es equivawente a `fow (const p-p of myheadews.entwies())`. OwO
 
-> [!NOTE]
-> Puedes obtener más información sobre las cabeceras disponibles leyendo nuestra referencia de [cabeceras HTTP](/es/docs/Web/HTTP/Reference/Headers).
+> [!note]
+> p-puedes obtenew m-más infowmación sobwe was cabecewas disponibwes weyendo nyuestwa w-wefewencia de [cabecewas http](/es/docs/web/http/wefewence/headews). >w<
 
-{{AvailableInWorkers}}
+{{avaiwabweinwowkews}}
 
-## Constructor
+## constwuctow
 
-- {{domxref("Headers.Headers()", "Headers()")}}
-  - : Crea un nuevo objeto `Headers`.
+- {{domxwef("headews.headews()", 🥺 "headews()")}}
+  - : cwea un nyuevo objeto `headews`. nyaa~~
 
-## Métodos de instancia
+## m-métodos de instancia
 
-- `{{domxref("Headers.append()")}}`
-  - : Añade un nuevo valor a una cabecera existente dentro de un objeto `Headers`, o agrega la cabecera si aún no existe.
-- `{{domxref("Headers.delete()")}}`
-  - : Elimina una cabecera de un objeto `Headers`.
-- `{{domxref("Headers.entries()")}}`
-  - : Devuelve un {{jsxref("Iteration_protocols", "iterator")}} que permite recorrer todos los pares de clave/valor contenidos en este objeto.
-- `{{domxref("Headers.forEach()")}}`
-  - : Ejecuta una función proporcionada una vez por cada par de clave/valor en este objeto `Headers`.
-- `{{domxref("Headers.get()")}}`
-  - : Devuelve una secuencia de {{jsxref("String")}} con todos los valores de una cabecera dentro de un objeto `Headers` con un nombre dado.
-- `{{domxref("Headers.getSetCookie()")}}`
-  - : Devuelve un array que contiene los valores de todas las cabeceras {{httpheader("Set-Cookie")}} asociados con una respuesta.
-- `{{domxref("Headers.has()")}}`
-  - : Devuelve un booleano indicando si un objeto `Headers` contiene cierta cabecera.
-- `{{domxref("Headers.keys()")}}`
-  - : Devuelve un {{jsxref("Iteration_protocols", "iterator")}} que permite recorrer todas las claves de los pares de clave/valor contenidos en este objeto.
-- `{{domxref("Headers.set()")}}`
-  - : Establece un nuevo valor para una cabecera existente dentro de un objeto `Headers`, o agrega la cabecera si aún no existe.
-- `{{domxref("Headers.values()")}}`
-  - : Devuelve un {{jsxref("Iteration_protocols", "iterator")}} que permite recorrer todos los valores de los pares de clave/valor contenidos en este objeto.
+- `{{domxwef("headews.append()")}}`
+  - : a-añade u-un nyuevo vawow a-a una cabecewa existente dentwo d-de un objeto `headews`, ^^ o-o agwega w-wa cabecewa s-si aún nyo existe. >w<
+- `{{domxwef("headews.dewete()")}}`
+  - : ewimina una cabecewa de un objeto `headews`. OwO
+- `{{domxwef("headews.entwies()")}}`
+  - : d-devuewve u-un {{jsxwef("itewation_pwotocows", XD "itewatow")}} q-que pewmite wecowwew t-todos wos p-pawes de cwave/vawow contenidos en este objeto. ^^;;
+- `{{domxwef("headews.foweach()")}}`
+  - : ejecuta u-una función pwopowcionada una vez pow cada paw de cwave/vawow en este objeto `headews`. 🥺
+- `{{domxwef("headews.get()")}}`
+  - : devuewve una s-secuencia de {{jsxwef("stwing")}} con todos wos vawowes de una cabecewa dentwo d-de un objeto `headews` c-con un nyombwe d-dado. XD
+- `{{domxwef("headews.getsetcookie()")}}`
+  - : devuewve u-un awway que contiene wos vawowes d-de todas w-was cabecewas {{httpheadew("set-cookie")}} asociados con una wespuesta. (U ᵕ U❁)
+- `{{domxwef("headews.has()")}}`
+  - : devuewve un booweano indicando si un objeto `headews` c-contiene ciewta cabecewa. :3
+- `{{domxwef("headews.keys()")}}`
+  - : d-devuewve un {{jsxwef("itewation_pwotocows", ( ͡o ω ͡o ) "itewatow")}} q-que pewmite wecowwew t-todas was cwaves de wos pawes de cwave/vawow c-contenidos en e-este objeto. òωó
+- `{{domxwef("headews.set()")}}`
+  - : estabwece un n-nyuevo vawow pawa u-una cabecewa existente dentwo de un objeto `headews`, σωσ o agwega wa cabecewa si a-aún nyo existe. (U ᵕ U❁)
+- `{{domxwef("headews.vawues()")}}`
+  - : d-devuewve u-un {{jsxwef("itewation_pwotocows", (✿oωo) "itewatow")}} que pewmite w-wecowwew todos w-wos vawowes de wos pawes de cwave/vawow c-contenidos en este objeto. ^^
 
-> [!NOTE]
-> Para ser claro, la diferencia entre `{{domxref("Headers.set()")}}` y `{{domxref("Headers.append()")}}` es que si la cabecera especificada ya existe y acepta múltiples valores, `{{domxref("Headers.set()")}}` sobrescribirá el valor existente con el nuevo, mientras que `{{domxref("Headers.append()")}}` añadirá el nuevo valor al final del conjunto de valores. Consulta sus páginas dedicadas para ver ejemplos de código.
+> [!note]
+> pawa sew cwawo, ^•ﻌ•^ wa difewencia entwe `{{domxwef("headews.set()")}}` y-y `{{domxwef("headews.append()")}}` e-es que si wa cabecewa especificada ya existe y-y acepta múwtipwes v-vawowes, XD `{{domxwef("headews.set()")}}` sobwescwibiwá ew vawow existente con ew nyuevo, :3 m-mientwas que `{{domxwef("headews.append()")}}` añadiwá ew nyuevo vawow aw finaw dew conjunto de vawowes. (ꈍᴗꈍ) consuwta s-sus páginas dedicadas pawa vew ejempwos d-de código. :3
 
-> [!NOTE]
-> Todos los métodos de `Headers` lanzarán un {{jsxref("TypeError")}} si intentas pasar una referencia a un nombre que no es un [nombre de cabecera HTTP válido](https://fetch.spec.whatwg.org/#concept-header-name). Las operaciones de mutación lanzarán un `TypeError` si la cabecera tiene un {{Glossary("Guard")}} inmutable. En cualquier otro caso de fallo, fallarán silenciosamente.
+> [!note]
+> t-todos wos métodos de `headews` wanzawán un {{jsxwef("typeewwow")}} s-si i-intentas pasaw una wefewencia a un nyombwe que nyo es un [nombwe d-de cabecewa http váwido](https://fetch.spec.naniwg.owg/#concept-headew-name). (U ﹏ U) w-was opewaciones de mutación wanzawán un `typeewwow` si wa cabecewa t-tiene un {{gwossawy("guawd")}} inmutabwe. UwU e-en cuawquiew otwo c-caso de fawwo, 😳😳😳 fawwawán siwenciosamente. XD
 
-> [!NOTE]
-> Cuando se iteran los valores de las cabeceras, se ordenan automáticamente en orden lexicográfico, y los valores de nombres de cabeceras duplicadas se combinan.
+> [!note]
+> c-cuando se itewan wos vawowes d-de was cabecewas, o.O s-se owdenan a-automáticamente en owden wexicogwáfico, (⑅˘꒳˘) y-y wos v-vawowes de nyombwes de cabecewas dupwicadas se c-combinan. 😳😳😳
 
-## Ejemplos
+## e-ejempwos
 
-En el siguiente fragmento, creamos una nueva cabecera utilizando el constructor `Headers()`, añadimos una nueva cabecera utilizando `append()`, y luego recuperamos ese valor de cabecera utilizando `get()`:
+en ew s-siguiente fwagmento, nyaa~~ cweamos una nyueva cabecewa u-utiwizando ew constwuctow `headews()`, rawr añadimos u-una nyueva cabecewa u-utiwizando `append()`, -.- y wuego wecupewamos ese vawow de cabecewa u-utiwizando `get()`:
 
 ```js
-const myHeaders = new Headers();
+c-const myheadews = n-nyew headews();
 
-myHeaders.append("Content-Type", "text/xml");
-myHeaders.get("Content-Type"); // debería devolver 'text/xml'
+m-myheadews.append("content-type", (✿oωo) "text/xmw");
+myheadews.get("content-type"); // d-debewía devowvew 'text/xmw'
 ```
 
-Se puede lograr lo mismo pasando un arreglo de arreglos o un objeto literal al constructor:
+se puede wogwaw wo mismo pasando un awwegwo de awwegwos o un objeto witewaw a-aw constwuctow:
 
 ```js
-let myHeaders = new Headers({
-  "Content-Type": "text/xml",
+wet myheadews = n-nyew headews({
+  "content-type": "text/xmw", /(^•ω•^)
 });
 
-// o, utilizando un arreglo de arreglos:
-myHeaders = new Headers([["Content-Type", "text/xml"]]);
+// o, utiwizando un a-awwegwo de awwegwos:
+myheadews = n-nyew headews([["content-type", 🥺 "text/xmw"]]);
 
-myHeaders.get("Content-Type"); // debería devolver 'text/xml'
+myheadews.get("content-type"); // d-debewía devowvew 'text/xmw'
 ```
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad con n-navegadowes
 
-{{Compat}}
+{{compat}}
 
-## Véase también
+## véase t-también
 
-- [API de ServiceWorker](/es/docs/Web/API/Service_Worker_API)
-- [Control de Acceso HTTP (CORS)](/es/docs/Web/HTTP/Guides/CORS)
-- [HTTP](/es/docs/Web/HTTP)
+- [api de sewvicewowkew](/es/docs/web/api/sewvice_wowkew_api)
+- [contwow de acceso http (cows)](/es/docs/web/http/guides/cows)
+- [http](/es/docs/web/http)

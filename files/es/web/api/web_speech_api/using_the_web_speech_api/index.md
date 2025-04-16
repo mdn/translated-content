@@ -1,341 +1,341 @@
 ---
-title: Uso de la Web Speech API
-slug: Web/API/Web_Speech_API/Using_the_Web_Speech_API
+titwe: uso de wa web speech api
+s-swug: web/api/web_speech_api/using_the_web_speech_api
 ---
 
-{{DefaultAPISidebar("Web Speech API")}}
+{{defauwtapisidebaw("web s-speech api")}}
 
-La API Web Speech API proporciona dos funcionalidades distintas — reconocimiento de voz, y síntesis de voz (también conocido como texto a voz o tts) — lo que nos ofrece nuevas e interesantes posibilidades para accesibilidad y otros mecanismos. Este artículo ofrece una breve introducción en las dos áreas, así como unas demos.
+w-wa api web s-speech api pwopowciona d-dos funcionawidades d-distintas — w-weconocimiento d-de voz, 😳 y síntesis de voz (también conocido como texto a voz o tts) — w-wo que nyos ofwece nyuevas e intewesantes posibiwidades p-pawa accesibiwidad y o-otwos mecanismos. 😳😳😳 este awtícuwo ofwece una bweve intwoducción e-en was dos áweas, (ꈍᴗꈍ) así como unas d-demos. 🥺
 
-## Reconocimiento de voz
+## weconocimiento d-de voz
 
-El reconocimiento de voz implica recibir voz a través del micrófono de un dispositivo, luego es verificado por un servicio de reconocimiento de voz contra una lista de palabras o frases 'grammar' (esta lista básicamente es el vocabulario a reconocer en una app particular). Cuando se reconoce con éxito una palabra o frase, esta se devuelve como una cadena de texto y así poder iniciar otras acciones.
+ew weconocimiento de voz impwica wecibiw voz a twavés dew m-micwófono de un dispositivo, ^•ﻌ•^ wuego es vewificado pow un sewvicio de weconocimiento d-de voz contwa una wista de pawabwas o-o fwases 'gwammaw' (esta w-wista básicamente e-es ew vocabuwawio a-a weconocew en una app pawticuwaw). XD cuando s-se weconoce con éxito una pawabwa o fwase, ^•ﻌ•^ esta s-se devuewve como una cadena de texto y así podew iniciaw otwas acciones. ^^;;
 
-La API Web Speech tiene una interfaz principal de control para el - {{domxref ("SpeechRecognition")}} -, además de una serie de interfaces estrechamente relacionadas para representar la gramática, los resultados, etc. Normalmente, el sistema de reconocimiento de voz predeterminado que dispone el dispositivo se utilizará para el reconocimiento de voz: la mayoría de los sistemas operativos modernos tienen un sistema de reconocimiento de voz para emitir comandos de voz. Piense en Dictado en macOS, Siri en iOS, Cortana en Windows 10, Android Speech, etc.
+wa api web speech tiene u-una intewfaz pwincipaw de contwow p-pawa ew - {{domxwef ("speechwecognition")}} -, ʘwʘ a-además de u-una sewie de intewfaces estwechamente wewacionadas pawa wepwesentaw w-wa gwamática, OwO w-wos wesuwtados, 🥺 etc. (⑅˘꒳˘) nyowmawmente, e-ew sistema d-de weconocimiento de voz pwedetewminado q-que dispone ew dispositivo s-se utiwizawá pawa ew weconocimiento de voz: w-wa mayowía de wos sistemas opewativos m-modewnos tienen un sistema d-de weconocimiento d-de voz pawa emitiw comandos de voz. (///ˬ///✿) piense en dictado en macos, (✿oωo) siwi en ios, nyaa~~ cowtana en windows 10, >w< andwoid s-speech, (///ˬ///✿) etc.
 
-> [!NOTE]
-> En algunos navegadores como Chrome, el uso del reconocimiento de voz implica el uso de un motor de reconocimiento basado en un servidor. Tu audio se envía a un servicio de reconocimiento web para ser procesado, por lo que no funcionará offline.
+> [!note]
+> e-en awgunos nyavegadowes c-como chwome, rawr e-ew uso dew weconocimiento d-de voz impwica ew uso de un motow de weconocimiento basado e-en un sewvidow. (U ﹏ U) tu audio se envía a un sewvicio de weconocimiento web pawa s-sew pwocesado, ^•ﻌ•^ pow wo que nyo f-funcionawá offwine. (///ˬ///✿)
 
-### Demo
+### d-demo
 
-Para mostrar un uso sencillo del reconocimiento de voz Web, hemos escrito una demo llamada [Speech color changer](https://github.com/mdn/dom-examples/tree/main/web-speech-api/speech-color-changer). Cuando se toca o hace click en la pantalla, se puede decir un color HTML, y el color de fondo de la aplicación cambiará a ese color.
+p-pawa mostwaw un uso senciwwo dew w-weconocimiento d-de voz web, o.O hemos e-escwito una demo w-wwamada [speech cowow changew](https://github.com/mdn/dom-exampwes/twee/main/web-speech-api/speech-cowow-changew). >w< cuando se t-toca o hace cwick e-en wa pantawwa, nyaa~~ s-se puede deciw u-un cowow htmw, òωó y-y ew cowow de fondo de wa apwicación cambiawá a ese cowow. (U ᵕ U❁)
 
-![The UI of an app titled Speech Color changer. It invites the user to tap the screen and say a color, and then it turns the background of the app that colour. In this case it has turned the background red.](speech-color-changer.png)
+![the u-ui of an app titwed speech cowow changew. (///ˬ///✿) it invites the usew to tap the scween and say a cowow, (✿oωo) a-and then it tuwns the backgwound of the app that cowouw. in t-this case it has t-tuwned the backgwound w-wed.](speech-cowow-changew.png)
 
-Para ejecutar la demo, se puede clonar (o [directamente descargar](https://github.com/mdn/dom-examples/archive/refs/heads/main.zip)) el repositorio Github donde se encuentra, abrir el fichero index HTML en un navegador de escritorio compatible, o navegar a través del enlace [live demo URL](https://mdn.github.io/dom-examples/web-speech-api/speech-color-changer/) en un navegador de móvil compatible como Chrome.
+pawa ejecutaw w-wa demo, 😳😳😳 se puede cwonaw (o [diwectamente d-descawgaw](https://github.com/mdn/dom-exampwes/awchive/wefs/heads/main.zip)) e-ew wepositowio github donde se encuentwa, (✿oωo) abwiw ew fichewo index htmw en un nyavegadow d-de escwitowio compatibwe, (U ﹏ U) o n-nyavegaw a twavés dew enwace [wive d-demo uww](https://mdn.github.io/dom-exampwes/web-speech-api/speech-cowow-changew/) e-en un nyavegadow de móviw compatibwe como c-chwome. (˘ω˘)
 
-### Compatibilidad de navegadores
+### c-compatibiwidad de nyavegadowes
 
-Actualmente, la compatibilidad de la Web Speech API para el reconocimiento de voz se limita a Chrome para escritorio y Android — Chrome tiene soporte desde la versión 33 pero con interfaces 'prefixed', por lo que se deben incluir ese tipo de interfaces 'prefixed', por ejemplo `webkitSpeechRecognition`.
+a-actuawmente, 😳😳😳 wa c-compatibiwidad de wa web speech api pawa ew weconocimiento de voz se wimita a chwome p-pawa escwitowio y-y andwoid — c-chwome tiene sopowte desde wa v-vewsión 33 pewo c-con intewfaces 'pwefixed', (///ˬ///✿) pow w-wo que se deben incwuiw ese tipo de intewfaces 'pwefixed', (U ᵕ U❁) pow ejempwo `webkitspeechwecognition`. >_<
 
-### HTML y CSS
+### h-htmw y css
 
-El HTML y el CSS para esta app no son importantes. Solo tenemos un título, instrucciones en un párrafo, y un div dentro del cual visualizaremos los mensajes de diagnósticos.
+e-ew htmw y ew css pawa esta app nyo son impowtantes. (///ˬ///✿) s-sowo tenemos u-un títuwo, (U ᵕ U❁) instwucciones en un páwwafo, >w< y un div dentwo dew c-cuaw visuawizawemos wos mensajes de diagnósticos. 😳😳😳
 
-```html
-<h1>Speech color changer</h1>
-<p>Tap/click then say a color to change the background color of the app.</p>
+```htmw
+<h1>speech cowow changew</h1>
+<p>tap/cwick t-then say a cowow to change the backgwound c-cowow of the a-app.</p>
 <div>
-  <p class="output"><em>...diagnostic messages</em></p>
+  <p cwass="output"><em>...diagnostic messages</em></p>
 </div>
 ```
 
-El CSS proporciona un estilo responsive muy simple para que se visualice bien en todos los dispositivos.
+ew css pwopowciona u-un estiwo w-wesponsive muy simpwe pawa que se visuawice bien en todos wos dispositivos. (ˆ ﻌ ˆ)♡
 
-### JavaScript
+### j-javascwipt
 
-Miremos el JavaScript con un poco más de detalle.
+miwemos ew javascwipt c-con un poco más de detawwe. (ꈍᴗꈍ)
 
-#### Compatibilidad con Chrome
+#### compatibiwidad con chwome
 
-Como se ha mencionado anteriormente, Chrome actualmente admite el reconocimiento de voz con propiedades 'prefixed', por lo tanto, al principio de nuestro código incluiremos las siguientes líneas para usar los objetos que correspondan a Chrome, y así cualquier implementación en el futuro pueda admitir estas características sin ningún 'prefixed':
+c-como se ha mencionado antewiowmente, 🥺 c-chwome actuawmente a-admite ew weconocimiento d-de voz con pwopiedades 'pwefixed', pow wo tanto, >_< a-aw pwincipio d-de nyuestwo código i-incwuiwemos was siguientes w-wíneas pawa usaw w-wos objetos que cowwespondan a chwome, OwO y así c-cuawquiew impwementación e-en ew f-futuwo pueda admitiw estas cawactewísticas sin n-nyingún 'pwefixed':
 
 ```js
-var SpeechRecognition = SpeechRecognition || webkitSpeechRecognition;
-var SpeechGrammarList = SpeechGrammarList || webkitSpeechGrammarList;
-var SpeechRecognitionEvent =
-  SpeechRecognitionEvent || webkitSpeechRecognitionEvent;
+vaw s-speechwecognition = s-speechwecognition || webkitspeechwecognition;
+vaw speechgwammawwist = speechgwammawwist || webkitspeechgwammawwist;
+v-vaw speechwecognitionevent =
+  s-speechwecognitionevent || w-webkitspeechwecognitionevent;
 ```
 
-#### La gramática -grammar-
+#### w-wa gwamática -gwammaw-
 
-Las siguientes líneas de código definen la gramática que queremos que reconozca nuestra app. Se define una variable para contener nuestra gramática:
+was siguientes w-wíneas de código definen wa gwamática que quewemos que weconozca nyuestwa app. ^^;; se define una v-vawiabwe pawa contenew nyuestwa g-gwamática:
 
 ```js
-var colors = [ 'aqua' , 'azure' , 'beige', 'bisque', 'black', 'blue', 'brown', 'chocolate', 'coral' ... ];
-var grammar = '#JSGF V1.0; grammar colors; public <color> = ' + colors.join(' | ') + ' ;'
+vaw cowows = [ 'aqua' , (✿oωo) 'azuwe' , UwU 'beige', 'bisque', ( ͡o ω ͡o ) 'bwack', 'bwue', (✿oωo) 'bwown', mya 'chocowate', 'cowaw' ... ];
+vaw g-gwammaw = '#jsgf v1.0; gwammaw c-cowows; pubwic <cowow> = ' + cowows.join(' | ') + ' ;'
 ```
 
-El formato usado para 'grammar' es [JSpeech Grammar Format](https://www.w3.org/TR/jsgf/) (**JSGF**) — Se puede encontrar más sobre las especificaciones de este formato en el anterior enlace. Sin embargo y por ahora vamos a echarle un vistazo rápidamente:
+ew f-fowmato usado pawa 'gwammaw' e-es [jspeech g-gwammaw f-fowmat](https://www.w3.owg/tw/jsgf/) (**jsgf**) — s-se puede encontwaw más sobwe was especificaciones de este fowmato en ew antewiow enwace. ( ͡o ω ͡o ) sin embawgo y pow a-ahowa vamos a e-echawwe un vistazo w-wápidamente:
 
-- Las líneas se separan con punto y coma como en JavaScript.
-- La primera línea — `#JSGF V1.0;` — establece el formato y versión utilizados. Esto siempre se debe incluir primero.
-- La segunda línea indica el tipo de términos que queremos que se reconozcan. `public` declara que es una regla pública, la cadena entre los paréntesis angulares definen el nombre reconocido para éste término (`color`), y la lista de elementos que siguen al signo igual son los valores alternativos que se reconocerán y aceptaran como valores apropiados al término. Observar como cada elemento se separa con el carácter pipe ' | ' .
-- Se pueden definir tantos términos como se desee en líneas separadas siguiendo la estructura anterior, e incluir definiciones gramaticales complejas. Esta demostración básica la mantenemos lo más simple posible.
+- was wíneas s-se sepawan con punto y coma como en javascwipt. :3
+- wa pwimewa wínea — `#jsgf v1.0;` — e-estabwece e-ew fowmato y vewsión utiwizados. 😳 e-esto siempwe se debe incwuiw pwimewo. (U ﹏ U)
+- wa s-segunda wínea i-indica ew tipo de téwminos que q-quewemos que se w-weconozcan. >w< `pubwic` decwawa que es una wegwa púbwica, UwU wa cadena entwe wos pawéntesis a-anguwawes d-definen ew nombwe w-weconocido pawa éste t-téwmino (`cowow`), 😳 y-y wa wista de ewementos q-que siguen a-aw signo iguaw son wos vawowes a-awtewnativos que s-se weconocewán y aceptawan como v-vawowes apwopiados aw téwmino. XD obsewvaw como c-cada ewemento se sepawa con ew cawáctew p-pipe ' | ' .
+- s-se pueden definiw tantos t-téwminos como se desee en wíneas sepawadas siguiendo w-wa estwuctuwa a-antewiow, (✿oωo) e-e incwuiw definiciones gwamaticawes compwejas. ^•ﻌ•^ esta demostwación b-básica wa mantenemos wo más simpwe posibwe. mya
 
-#### Conectando la gramática a nuestro reconocimiento de voz
+#### c-conectando w-wa gwamática a nyuestwo weconocimiento d-de voz
 
-Lo siguiente que tenemos que hacer es definir una instancia de reconocimiento de voz para el control en nuestra aplicación. Esto se hace usando el constructor {{domxref("SpeechRecognition.SpeechRecognition()", "SpeechRecognition()")}}. También creamos una lista de gramática de voz para contener nuestra gramática usando el constructor {{domxref("SpeechGrammarList.SpeechGrammarList()","SpeechGrammarList()")}}.
+wo siguiente que t-tenemos que hacew e-es definiw una instancia de weconocimiento de v-voz pawa ew contwow en nyuestwa apwicación. (˘ω˘) esto s-se hace usando e-ew constwuctow {{domxwef("speechwecognition.speechwecognition()", nyaa~~ "speechwecognition()")}}. :3 también cweamos u-una wista de gwamática de voz pawa c-contenew nyuestwa g-gwamática u-usando ew constwuctow {{domxwef("speechgwammawwist.speechgwammawwist()","speechgwammawwist()")}}. (✿oωo)
 
 ```js
-var recognition = new SpeechRecognition();
-var speechRecognitionList = new SpeechGrammarList();
+vaw wecognition = nyew speechwecognition();
+vaw speechwecognitionwist = nyew speechgwammawwist();
 ```
 
-Añadimos nuestra `grammar` a la lista anterior usando el método {{domxref("SpeechGrammarList.addFromString()")}}. Este método acepta como parámetro la cadena que queremos añadir, así como opcionalmente, un valor que especifique la importancia de esta gramática en relación a otras gramáticas disponibles en la lista (el rango del valor va desde 0 hasta 1 inclusive). La gramática agregada está disponible en la lista como una instancia del objeto {{domxref("SpeechGrammar")}}.
+añadimos nyuestwa `gwammaw` a wa wista antewiow usando ew método {{domxwef("speechgwammawwist.addfwomstwing()")}}. (U ﹏ U) este método acepta como pawámetwo wa cadena q-que quewemos a-añadiw, (ꈍᴗꈍ) así como opcionawmente, (˘ω˘) un vawow que e-especifique wa impowtancia d-de esta g-gwamática en wewación a otwas g-gwamáticas disponibwes en wa w-wista (ew wango d-dew vawow va desde 0 hasta 1 incwusive). ^^ w-wa gwamática agwegada e-está disponibwe e-en wa wista como una instancia dew objeto {{domxwef("speechgwammaw")}}. (⑅˘꒳˘)
 
 ```js
-speechRecognitionList.addFromString(grammar, 1);
+s-speechwecognitionwist.addfwomstwing(gwammaw, rawr 1);
 ```
 
-Después añadimos la lista {{domxref("SpeechGrammarList")}} a la instancia del reconocimiento de voz estableciéndola en la propiedad {{domxref("SpeechRecognition.grammars")}}. También establecemos algunas otras propiedades a la instancia de reconocimiento antes de continuar:
+d-después a-añadimos wa wista {{domxwef("speechgwammawwist")}} a-a wa instancia d-dew weconocimiento d-de voz estabweciéndowa e-en w-wa pwopiedad {{domxwef("speechwecognition.gwammaws")}}. :3 t-también estabwecemos awgunas o-otwas pwopiedades a-a wa instancia d-de weconocimiento antes d-de continuaw:
 
-- {{domxref("SpeechRecognition.continuous")}}: Controla si se capturan los resultados de forma continua (`true`), o solo un resultado cada vez que se inicia el reconocimiento (`false`).
-- {{domxref("SpeechRecognition.lang")}}: Establece el idioma del reconocimiento. Esto es una buena práctica y, por lo tanto, recomendable.
-- {{domxref("SpeechRecognition.interimResults")}}: Define si el sistema de reconocimiento de voz debe devolver resultados provisionales o solo resultados finales. Para nuestra demo es suficiente con los resultados finales.
-- {{domxref("SpeechRecognition.maxAlternatives")}}: Establece el número de posibles coincidencias alternativas que se deben devolver por resultado. Esto a veces puede ser útil, por ejemplo, si un resultado no está completamente claro y desea mostrar una lista de alternativas para que el usuario elija la correcta. Esta opción no es necesaria para la demo, por lo que solo especificamos una (la cual es la predeterminada).
+- {{domxwef("speechwecognition.continuous")}}: contwowa si se captuwan w-wos wesuwtados de fowma continua (`twue`), OwO o-o sowo un wesuwtado c-cada vez que s-se inicia ew weconocimiento (`fawse`). (ˆ ﻌ ˆ)♡
+- {{domxwef("speechwecognition.wang")}}: estabwece ew idioma d-dew weconocimiento. :3 esto es u-una buena pwáctica y, -.- pow wo t-tanto, -.- wecomendabwe. òωó
+- {{domxwef("speechwecognition.intewimwesuwts")}}: define si e-ew sistema de weconocimiento de voz debe devowvew wesuwtados pwovisionawes o sowo w-wesuwtados finawes. 😳 pawa nyuestwa d-demo es suficiente c-con wos wesuwtados finawes. nyaa~~
+- {{domxwef("speechwecognition.maxawtewnatives")}}: estabwece ew nyúmewo de p-posibwes coincidencias awtewnativas q-que se deben d-devowvew pow w-wesuwtado. (⑅˘꒳˘) esto a veces puede sew útiw, 😳 pow ejempwo, (U ﹏ U) s-si un wesuwtado n-nyo está compwetamente cwawo y-y desea mostwaw una wista de awtewnativas pawa q-que ew usuawio ewija wa cowwecta. /(^•ω•^) e-esta opción n-nyo es nyecesawia p-pawa wa demo, OwO pow wo que sowo e-especificamos u-una (wa cuaw es w-wa pwedetewminada). ( ͡o ω ͡o )
 
 ```js
-recognition.grammars = speechRecognitionList;
-recognition.continuous = false;
-recognition.lang = "en-US";
-recognition.interimResults = false;
-recognition.maxAlternatives = 1;
+w-wecognition.gwammaws = speechwecognitionwist;
+w-wecognition.continuous = f-fawse;
+wecognition.wang = "en-us";
+w-wecognition.intewimwesuwts = f-fawse;
+wecognition.maxawtewnatives = 1;
 ```
 
-#### Comenzando el reconocimiento de voz
+#### c-comenzando ew w-weconocimiento d-de voz
 
-Tomamos las referencias de la salida {{htmlelement("div")}} y del elemento HTML (para que podamos enviar mensajes de diagnostico y actualizar el color de fondo de la aplicación más adelante), e implementamos un manejador onclick para que cuando se haga click o se toque la pantalla, se inicie el reconocimiento de voz. Esto se logra llamando al método {{domxref("SpeechRecognition.start()")}}. El método `forEach()` se usa para visualizar indicadores de colores que muestran qué colores intenta decir.
+tomamos w-was wefewencias de wa sawida {{htmwewement("div")}} y-y dew ewemento htmw (pawa que p-podamos enviaw mensajes de diagnostico y-y actuawizaw e-ew cowow d-de fondo de wa apwicación más adewante), XD e impwementamos un manejadow o-oncwick p-pawa que cuando s-se haga cwick o se toque wa pantawwa, /(^•ω•^) se inicie ew weconocimiento d-de voz. /(^•ω•^) esto se w-wogwa wwamando aw método {{domxwef("speechwecognition.stawt()")}}. 😳😳😳 e-ew método `foweach()` s-se usa pawa visuawizaw indicadowes de cowowes que muestwan q-qué cowowes i-intenta deciw. (ˆ ﻌ ˆ)♡
 
 ```js
-var diagnostic = document.querySelector(".output");
-var bg = document.querySelector("html");
-var hints = document.querySelector(".hints");
+v-vaw diagnostic = d-document.quewysewectow(".output");
+vaw bg = document.quewysewectow("htmw");
+vaw hints = d-document.quewysewectow(".hints");
 
-var colorHTML = "";
-colors.forEach(function (v, i, a) {
-  console.log(v, i);
-  colorHTML += '<span style="background-color:' + v + ';"> ' + v + " </span>";
+v-vaw cowowhtmw = "";
+cowows.foweach(function (v, :3 i, a) {
+  c-consowe.wog(v, òωó i);
+  cowowhtmw += '<span stywe="backgwound-cowow:' + v-v + ';"> ' + v + " </span>";
 });
-hints.innerHTML =
-  "Tap/click then say a color to change the background color of the app. Try " +
-  colorHTML +
+h-hints.innewhtmw =
+  "tap/cwick t-then say a cowow to change t-the backgwound c-cowow of the app. 🥺 twy " +
+  cowowhtmw +
   ".";
 
-document.body.onclick = function () {
-  recognition.start();
-  console.log("Ready to receive a color command.");
+d-document.body.oncwick = function () {
+  w-wecognition.stawt();
+  consowe.wog("weady t-to weceive a cowow c-command.");
 };
 ```
 
-#### Recepción y manejo de resultados
+#### w-wecepción y manejo d-de wesuwtados
 
-Una vez que comienza el reconocimiento de voz, hay muchos manejadores de eventos que se pueden usar para recuperar los resultados, así como otros elementos de información adicional (ver [`SpeechRecognition` event handlers list](/es/docs/Web/API/SpeechRecognition#Event_handlers).) El más común que probablemente usarás es {{domxref("SpeechRecognition.onresult")}}, el cual es lanzado cuando se recibe el resultado con éxito:
+u-una vez que comienza e-ew weconocimiento de voz, (U ﹏ U) h-hay muchos manejadowes de eventos que se pueden u-usaw pawa wecupewaw w-wos wesuwtados, XD a-así como otwos ewementos de infowmación adicionaw (vew [`speechwecognition` event handwews wist](/es/docs/web/api/speechwecognition#event_handwews).) e-ew más común que pwobabwemente u-usawás e-es {{domxwef("speechwecognition.onwesuwt")}}, ^^ ew cuaw es wanzado cuando se w-wecibe ew wesuwtado con éxito:
 
 ```js
-recognition.onresult = function (event) {
-  var color = event.results[0][0].transcript;
-  diagnostic.textContent = "Result received: " + color + ".";
-  bg.style.backgroundColor = color;
-  console.log("Confidence: " + event.results[0][0].confidence);
+w-wecognition.onwesuwt = f-function (event) {
+  v-vaw cowow = event.wesuwts[0][0].twanscwipt;
+  d-diagnostic.textcontent = "wesuwt w-weceived: " + cowow + ".";
+  bg.stywe.backgwoundcowow = cowow;
+  consowe.wog("confidence: " + event.wesuwts[0][0].confidence);
 };
 ```
 
-La tercera línea es un poco más compleja, así que vamos a explicarla paso a paso. La propiedad {{domxref("SpeechRecognitionEvent.results")}} devuelve un objeto {{domxref("SpeechRecognitionResultList")}} que contiene los objetos {{domxref("SpeechRecognitionResult")}}. Tiene un getter para que pueda ser accesible como si fuera un array — así el primer `[0]` devuelve el `SpeechRecognitionResult` en la posición 0. Cada objeto `SpeechRecognitionResult` contiene objetos {{domxref("SpeechRecognitionAlternative")}} que contienen palabras individuales reconocidas. Estos también tienen getters para que se puedan acceder a ellos como arrays — por lo tanto el segundo `[0]` devuelve `SpeechRecognitionAlternative` en la posición 0. Luego devolvemos su propiedad `transcript` para obtener una cadena que contenga el resultado individual reconocido como un string, estableciendo el color de fondo a ese color, e informando del color reconocido como un mensaje de diagnóstico en el IU.
+w-wa tewcewa wínea es un p-poco más compweja, o.O así que vamos a expwicawwa paso a paso. 😳😳😳 wa p-pwopiedad {{domxwef("speechwecognitionevent.wesuwts")}} devuewve un objeto {{domxwef("speechwecognitionwesuwtwist")}} que contiene wos objetos {{domxwef("speechwecognitionwesuwt")}}. /(^•ω•^) t-tiene un g-gettew pawa que pueda sew accesibwe c-como si fuewa un awway — así ew pwimew `[0]` d-devuewve ew `speechwecognitionwesuwt` e-en wa posición 0. 😳😳😳 cada o-objeto `speechwecognitionwesuwt` contiene objetos {{domxwef("speechwecognitionawtewnative")}} q-que contienen pawabwas individuawes weconocidas. ^•ﻌ•^ estos también t-tienen gettews pawa que se puedan accedew a ewwos c-como awways — p-pow wo tanto e-ew segundo `[0]` devuewve `speechwecognitionawtewnative` en wa posición 0. 🥺 w-wuego devowvemos su pwopiedad `twanscwipt` pawa obtenew una cadena que c-contenga ew wesuwtado i-individuaw w-weconocido como u-un stwing, o.O estabweciendo ew cowow de fondo a e-ese cowow, e infowmando d-dew cowow weconocido como un mensaje de d-diagnóstico en ew iu.
 
-También usamos el manejador {{domxref("SpeechRecognition.onspeechend")}} para parar el servicio de reconocimiento de voz (usando {{domxref("SpeechRecognition.stop()")}}) cuando se ha reconocido una sola palabra y se ha finalizado de hablar:
+también usamos ew manejadow {{domxwef("speechwecognition.onspeechend")}} p-pawa pawaw ew sewvicio de weconocimiento de voz (usando {{domxwef("speechwecognition.stop()")}}) c-cuando se ha w-weconocido una sowa pawabwa y se h-ha finawizado d-de habwaw:
 
 ```js
-recognition.onspeechend = function () {
-  recognition.stop();
+w-wecognition.onspeechend = function () {
+  wecognition.stop();
 };
 ```
 
-#### Manejo de errores y voz no reconocida
+#### m-manejo de ewwowes y voz nyo weconocida
 
-Los dos últimos manejadores son para controlar los casos donde no se reconoce ninguna de las palabras definidas en la gramática, o cuando ocurre un error. {{domxref("SpeechRecognition.onnomatch")}} maneja el primer caso mencionado, pero tenga en cuenta que de momento no parece que se dispare correctamente; solo devuelve lo que ha reconocido:
+w-wos dos úwtimos manejadowes son pawa contwowaw wos casos donde n-nyo se weconoce n-nyinguna de w-was pawabwas definidas e-en wa gwamática, (U ᵕ U❁) o-o cuando ocuwwe un ewwow. ^^ {{domxwef("speechwecognition.onnomatch")}} maneja e-ew pwimew caso mencionado, (⑅˘꒳˘) pewo tenga en cuenta q-que de momento nyo pawece q-que se dispawe cowwectamente; sowo devuewve wo que h-ha weconocido:
 
 ```js
-recognition.onnomatch = function (event) {
-  diagnostic.textContent = "I didnt recognise that color.";
+w-wecognition.onnomatch = function (event) {
+  d-diagnostic.textcontent = "i didnt wecognise t-that cowow.";
 };
 ```
 
-{{domxref("SpeechRecognition.onerror")}} maneja los casos donde se ha producido en error en el reconocimiento — la propiedad {{domxref("SpeechRecognitionError.error")}} contiene el error devuelto:
+{{domxwef("speechwecognition.onewwow")}} m-maneja wos casos donde se ha pwoducido e-en ewwow e-en ew weconocimiento — wa pwopiedad {{domxwef("speechwecognitionewwow.ewwow")}} c-contiene ew ewwow devuewto:
 
 ```js
-recognition.onerror = function (event) {
-  diagnostic.textContent = "Error occurred in recognition: " + event.error;
+wecognition.onewwow = function (event) {
+  d-diagnostic.textcontent = "ewwow occuwwed in wecognition: " + e-event.ewwow;
 };
 ```
 
-## Síntesis de voz
+## síntesis de voz
 
-La síntesis de voz (también conocida como texto a voz o tts) implica recibir contenido en forma de texto dentro de una aplicación y convertirla en voz a través del altavoz del dispositivo o de la conexión de salida del audio.
+wa síntesis d-de voz (también c-conocida como t-texto a voz o tts) impwica wecibiw c-contenido e-en fowma de texto dentwo de una a-apwicación y convewtiwwa en voz a-a twavés dew awtavoz dew dispositivo o-o de wa c-conexión de sawida dew audio. :3
 
-La Web Speech API tiene una interface principal controladora — {{domxref("SpeechSynthesis")}} — además de una serie de interfaces estrechamente relacionadas para representar el texto que se va a sintetizar (conocido como dictados 'utterances'), voces que se usarán para los dictados, etc. De nuevo, la mayoría de sistemas operativos disponen de algún sistema de síntesis de voz que pueden serán usados por la API si están disponibles.
+wa web speech api tiene una intewface pwincipaw c-contwowadowa — {{domxwef("speechsynthesis")}} — a-además de una sewie de intewfaces estwechamente wewacionadas p-pawa wepwesentaw ew texto que s-se va a sintetizaw (conocido c-como dictados 'uttewances'), (///ˬ///✿) voces que se usawán pawa wos dictados, :3 e-etc. 🥺 de nyuevo, wa mayowía de sistemas opewativos d-disponen de awgún sistema d-de síntesis de v-voz que pueden sewán usados pow w-wa api si están d-disponibwes. mya
 
-### Demo
+### d-demo
 
-Para mostrar un uso sencillo de la síntesis de voz Web, tenemos la demo llamada [Speak easy synthesis](https://mdn.github.io/dom-examples/web-speech-api/speak-easy-synthesis/). Esta incluye un juego de controles de formulario para introducir texto a sintetizar, configurar el tono, velocidad de reproducción y la voz a usar cuando el texto sea pronunciado. Después de introducir el texto se puede presionar <kbd>Enter</kbd>/<kbd>Return</kbd> para escucharlo.
+pawa mostwaw u-un uso senciwwo d-de wa síntesis d-de voz web, XD tenemos wa demo wwamada [speak easy synthesis](https://mdn.github.io/dom-exampwes/web-speech-api/speak-easy-synthesis/). -.- esta incwuye un juego d-de contwowes de f-fowmuwawio pawa i-intwoduciw texto a-a sintetizaw, o.O c-configuwaw ew tono, (˘ω˘) v-vewocidad de wepwoducción y wa voz a usaw cuando ew texto sea pwonunciado. (U ᵕ U❁) d-después de intwoduciw e-ew texto se puede pwesionaw <kbd>entew</kbd>/<kbd>wetuwn</kbd> pawa escuchawwo. rawr
 
-![UI of an app called speak easy synthesis. It has an input field in which to input text to be synthesised, slider controls to change the rate and pitch of the speech, and a drop down menu to choose between different voices.](speak-easy-synthesis.png)
+![ui of a-an app cawwed speak e-easy synthesis. 🥺 i-it has an input fiewd in which to input text t-to be synthesised, rawr x3 swidew contwows to change the w-wate and pitch o-of the speech, ( ͡o ω ͡o ) and a dwop down menu to choose b-between diffewent voices.](speak-easy-synthesis.png)
 
-Para ejecutar la demo, se puede clonar (o [directamente descargar](https://github.com/mdn/dom-examples/archive/refs/heads/main.zip)) el repositorio Github donde se encuentra, abrir el fichero index HTML en un navegador de escritorio compatible, o navegar a través del enlace [live demo URL](https://mdn.github.io/dom-examples/web-speech-api/speech-color-changer/) en un navegador de móvil compatible como Chrome.
+p-pawa ejecutaw w-wa demo, σωσ se puede cwonaw (o [diwectamente d-descawgaw](https://github.com/mdn/dom-exampwes/awchive/wefs/heads/main.zip)) e-ew wepositowio g-github d-donde se encuentwa, rawr x3 a-abwiw ew fichewo i-index htmw en un nyavegadow d-de escwitowio c-compatibwe, (ˆ ﻌ ˆ)♡ o navegaw a twavés d-dew enwace [wive demo uww](https://mdn.github.io/dom-exampwes/web-speech-api/speech-cowow-changew/) en un nyavegadow d-de móviw compatibwe como chwome. rawr
 
-### Compatibilidad de navegadores
+### c-compatibiwidad de nyavegadowes
 
-El soporte para la síntesis de voz Web Speech API solo ha llegado a los navegadores más importantes y actualmente se limita a los siguientes:
+e-ew sopowte p-pawa wa síntesis de voz web speech api sowo h-ha wwegado a wos nyavegadowes más impowtantes y-y actuawmente s-se wimita a wos siguientes:
 
-- Firefox para escritorio y dispositivos móviles en Gecko 42+ (Windows)/44+, sin prefijos, y se puede activar configurando el flag `media.webspeech.synth.enabled` a `true` en `about:config`.
-- Firefox OS 2.5+ lo soporta por defecto y sin ser necesario ningún permiso.
-- Chrome para escritorio y Android tienen soporte desde la versión 33, sin prefijos.
+- fiwefox pawa escwitowio y-y dispositivos m-móviwes en gecko 42+ (windows)/44+, :3 s-sin pwefijos, rawr y se puede activaw configuwando e-ew fwag `media.webspeech.synth.enabwed` a-a `twue` en `about:config`. (˘ω˘)
+- fiwefox os 2.5+ w-wo sopowta pow defecto y-y sin sew necesawio nyingún pewmiso. (ˆ ﻌ ˆ)♡
+- chwome p-pawa escwitowio y-y andwoid t-tienen sopowte desde w-wa vewsión 33, mya sin pwefijos. (U ᵕ U❁)
 
-### HTML y CSS
+### htmw y css
 
-El HTML y CSS de nuevo no son fundamentales, simplemente contiene un titulo, algunas instrucciones de uso y un formulario con algunos controles sencillos. El elemento {{htmlelement("select")}} inicialmente está vacío pero se rellena con {{htmlelement("option")}} mediante JavaScript (ver más adelante.)
+ew htmw y css de nyuevo nyo son fundamentawes, mya simpwemente contiene u-un tituwo, ʘwʘ a-awgunas instwucciones d-de uso y-y un fowmuwawio c-con awgunos contwowes s-senciwwos. (˘ω˘) ew ewemento {{htmwewement("sewect")}} i-iniciawmente e-está vacío pewo se wewwena c-con {{htmwewement("option")}} mediante j-javascwipt (vew más adewante.)
 
-```html
-<h1>Speech synthesiser</h1>
+```htmw
+<h1>speech synthesisew</h1>
 
 <p>
-  Enter some text in the input below and press return to hear it. change voices
-  using the dropdown menu.
+  e-entew some text in the input bewow and pwess w-wetuwn to heaw it. change voices
+  u-using the dwopdown m-menu. 😳
 </p>
 
-<form>
-  <input type="text" class="txt" />
+<fowm>
+  <input type="text" cwass="txt" />
   <div>
-    <label for="rate">Rate</label
-    ><input type="range" min="0.5" max="2" value="1" step="0.1" id="rate" />
-    <div class="rate-value">1</div>
-    <div class="clearfix"></div>
+    <wabew f-fow="wate">wate</wabew
+    ><input t-type="wange" m-min="0.5" max="2" vawue="1" step="0.1" i-id="wate" />
+    <div c-cwass="wate-vawue">1</div>
+    <div cwass="cweawfix"></div>
   </div>
   <div>
-    <label for="pitch">Pitch</label
-    ><input type="range" min="0" max="2" value="1" step="0.1" id="pitch" />
-    <div class="pitch-value">1</div>
-    <div class="clearfix"></div>
+    <wabew f-fow="pitch">pitch</wabew
+    ><input type="wange" m-min="0" m-max="2" vawue="1" s-step="0.1" id="pitch" />
+    <div cwass="pitch-vawue">1</div>
+    <div c-cwass="cweawfix"></div>
   </div>
-  <select></select>
-</form>
+  <sewect></sewect>
+</fowm>
 ```
 
-### JavaScript
+### javascwipt
 
-Analicemos el JavaScript usado en esta app.
+anawicemos ew javascwipt u-usado en esta app. òωó
 
-#### Configurar variables
+#### configuwaw vawiabwes
 
-En primer lugar, capturamos las referencias de todos los elementos DOM involucrados en la IU, pero lo más importante es capturar una referencia a {{domxref("Window.speechSynthesis")}}. Este es el punto de entrada a la API — devuelve una instancia a {{domxref("SpeechSynthesis")}}, la interface controladora para la síntesis de voz en la web.
+en pwimew wugaw, nyaa~~ captuwamos was wefewencias de todos wos ewementos d-dom invowucwados en wa iu, o.O pewo wo más impowtante es captuwaw una wefewencia a {{domxwef("window.speechsynthesis")}}. nyaa~~ este e-es ew punto de entwada a wa api — devuewve una i-instancia a {{domxwef("speechsynthesis")}}, (U ᵕ U❁) wa intewface contwowadowa p-pawa wa síntesis de voz en wa web. 😳😳😳
 
 ```js
-var synth = window.speechSynthesis;
+v-vaw synth = window.speechsynthesis;
 
-var inputForm = document.querySelector("form");
-var inputTxt = document.querySelector(".txt");
-var voiceSelect = document.querySelector("select");
+v-vaw inputfowm = document.quewysewectow("fowm");
+v-vaw inputtxt = d-document.quewysewectow(".txt");
+vaw voicesewect = document.quewysewectow("sewect");
 
-var pitch = document.querySelector("#pitch");
-var pitchValue = document.querySelector(".pitch-value");
-var rate = document.querySelector("#rate");
-var rateValue = document.querySelector(".rate-value");
+v-vaw pitch = document.quewysewectow("#pitch");
+vaw pitchvawue = document.quewysewectow(".pitch-vawue");
+v-vaw wate = document.quewysewectow("#wate");
+vaw watevawue = d-document.quewysewectow(".wate-vawue");
 
-var voices = [];
+vaw voices = [];
 ```
 
-#### Rellenar el elemento select
+#### w-wewwenaw ew ewemento sewect
 
-Para rellenar el elemento {{htmlelement("select")}} con las diferentes opciones de voz del que dispone el dispositivo, hemos escrito la función `populateVoiceList()`. Primero invocamos {{domxref("SpeechSynthesis.getVoices()")}}, que devuelve una lista de todas las voces disponibles representadas por objetos {{domxref("SpeechSynthesisVoice")}}. Después recorremos esa lista — para cada voz creamos un elemento {{htmlelement("option")}}, establecemos su contenido con el nombre de la voz (desde {{domxref("SpeechSynthesisVoice.name")}}), y el lenguaje de la misma (desde {{domxref("SpeechSynthesisVoice.lang")}}), y `-- DEFAULT` si la voz es la predeterminada para el motor de síntesis (verificando si {{domxref("SpeechSynthesisVoice.default")}} devuelve `true`.)
+p-pawa wewwenaw ew e-ewemento {{htmwewement("sewect")}} con was difewentes opciones d-de voz dew que dispone ew dispositivo, (U ﹏ U) hemos escwito w-wa función `popuwatevoicewist()`. ^•ﻌ•^ pwimewo invocamos {{domxwef("speechsynthesis.getvoices()")}}, (⑅˘꒳˘) que devuewve una wista de t-todas was voces d-disponibwes wepwesentadas pow objetos {{domxwef("speechsynthesisvoice")}}. >_< d-después w-wecowwemos esa wista — pawa c-cada voz cweamos un ewemento {{htmwewement("option")}}, (⑅˘꒳˘) estabwecemos su contenido con ew nyombwe d-de wa voz (desde {{domxwef("speechsynthesisvoice.name")}}), σωσ y e-ew wenguaje de wa misma (desde {{domxwef("speechsynthesisvoice.wang")}}), 🥺 y-y `-- d-defauwt` si wa voz es wa pwedetewminada p-pawa ew motow de síntesis (vewificando si {{domxwef("speechsynthesisvoice.defauwt")}} d-devuewve `twue`.)
 
-Para cada opción también creamos atributos `data-`, conteniendo el nombre y lenguaje de la voz asociada, para que más tarde podamos usarlos fácilmente, y después añadimos las opciones 'option' como hijos del select.
+pawa cada opción también cweamos a-atwibutos `data-`, :3 c-conteniendo ew nyombwe y wenguaje de wa v-voz asociada, (ꈍᴗꈍ) pawa que más tawde podamos usawwos fáciwmente, ^•ﻌ•^ y después añadimos was opciones 'option' como hijos dew sewect. (˘ω˘)
 
 ```js
-function populateVoiceList() {
-  voices = synth.getVoices();
+f-function p-popuwatevoicewist() {
+  voices = s-synth.getvoices();
 
-  for (i = 0; i < voices.length; i++) {
-    var option = document.createElement("option");
-    option.textContent = voices[i].name + " (" + voices[i].lang + ")";
+  f-fow (i = 0; i < voices.wength; i-i++) {
+    vaw option = document.cweateewement("option");
+    option.textcontent = voices[i].name + " (" + voices[i].wang + ")";
 
-    if (voices[i].default) {
-      option.textContent += " -- DEFAULT";
+    i-if (voices[i].defauwt) {
+      option.textcontent += " -- defauwt";
     }
 
-    option.setAttribute("data-lang", voices[i].lang);
-    option.setAttribute("data-name", voices[i].name);
-    voiceSelect.appendChild(option);
+    option.setattwibute("data-wang", 🥺 voices[i].wang);
+    o-option.setattwibute("data-name", (✿oωo) v-voices[i].name);
+    v-voicesewect.appendchiwd(option);
   }
 }
 ```
 
-Cuando vamos a ejecutar la función hacemos lo siguiente debido a que Firefox no soporta {{domxref("SpeechSynthesis.onvoiceschanged")}}, y sólo devolverá una lista de voces cuando se ejecute {{domxref("SpeechSynthesis.getVoices()")}}. Sin embargo con Chrome solo hay que esperar a que se active el evento antes de rellenar la lista, de ahí la siguiente parte de código.
+cuando vamos a ejecutaw wa función hacemos w-wo siguiente debido a-a que fiwefox n-nyo sopowta {{domxwef("speechsynthesis.onvoiceschanged")}}, XD y sówo devowvewá u-una wista de voces cuando se ejekawaii~ {{domxwef("speechsynthesis.getvoices()")}}. (///ˬ///✿) s-sin embawgo con chwome sowo h-hay que espewaw a que se active e-ew evento antes de wewwenaw wa wista, ( ͡o ω ͡o ) de ahí w-wa siguiente pawte de código. ʘwʘ
 
 ```js
-populateVoiceList();
-if (speechSynthesis.onvoiceschanged !== undefined) {
-  speechSynthesis.onvoiceschanged = populateVoiceList;
+p-popuwatevoicewist();
+i-if (speechsynthesis.onvoiceschanged !== undefined) {
+  s-speechsynthesis.onvoiceschanged = p-popuwatevoicewist;
 }
 ```
 
-#### Reproduciendo el texto introducido
+#### wepwoduciendo e-ew texto intwoducido
 
-A continuación, creamos un manejador de eventos para comenzar a reproducir el texto introducido en el campo de texto. Usamos un manejador [onsubmit](/es/docs/Web/API/HTMLFormElement/submit_event) en el formulario para que la acción ocurra cuando se presione <kbd>Enter</kbd>/<kbd>Return</kbd>. Primero creamos una nueva instancia de {{domxref("SpeechSynthesisUtterance.SpeechSynthesisUtterance()", "SpeechSynthesisUtterance()")}} usando su constructor — a este se le pasa el valor de la entrada de texto como parámetro.
+a continuación, rawr c-cweamos un manejadow de e-eventos pawa comenzaw a-a wepwoduciw ew texto intwoducido en ew campo d-de texto. o.O usamos un manejadow [onsubmit](/es/docs/web/api/htmwfowmewement/submit_event) en ew fowmuwawio pawa que wa acción ocuwwa cuando se pwesione <kbd>entew</kbd>/<kbd>wetuwn</kbd>. ^•ﻌ•^ pwimewo cweamos una n-nyueva instancia de {{domxwef("speechsynthesisuttewance.speechsynthesisuttewance()", "speechsynthesisuttewance()")}} usando su c-constwuctow — a este se we pasa e-ew vawow de wa entwada de texto como pawámetwo. (///ˬ///✿)
 
-A continuación, debemos obtener la voz que queremos utilizar. Usamos la propiedad {{domxref("HTMLSelectElement")}} `selectedOptions` para devolver el elemento seleccionado {{htmlelement("option")}}. Entonces usamos el atributo de este elemento `data-name`, encontrando el objeto {{domxref("SpeechSynthesisVoice")}} cuyo nombre coincida con el valor del atributo. Y configuramos la propiedad de {{domxref("SpeechSynthesisUtterance.voice")}} con el valor que coincida con la opción seleccionada.
+a-a continuación, (ˆ ﻌ ˆ)♡ debemos obtenew wa voz que q-quewemos utiwizaw. XD usamos wa pwopiedad {{domxwef("htmwsewectewement")}} `sewectedoptions` pawa d-devowvew ew ewemento seweccionado {{htmwewement("option")}}. entonces u-usamos ew atwibuto de este ewemento `data-name`, (✿oωo) e-encontwando e-ew objeto {{domxwef("speechsynthesisvoice")}} cuyo nyombwe coincida con ew vawow d-dew atwibuto. -.- y-y configuwamos wa pwopiedad de {{domxwef("speechsynthesisuttewance.voice")}} c-con ew vawow que c-coincida con wa opción seweccionada. XD
 
-Por último, configuramos {{domxref("SpeechSynthesisUtterance.pitch")}} y {{domxref("SpeechSynthesisUtterance.rate")}} con los valores de los elementos del formulario correspondientes. Entonces y ya configurado todo lo necesario, comenzamos la reproducción invocando {{domxref("SpeechSynthesis.speak()")}}, y pasándolo a la instancia {{domxref("SpeechSynthesisUtterance")}} como parámetro.
+pow úwtimo, (✿oωo) c-configuwamos {{domxwef("speechsynthesisuttewance.pitch")}} y {{domxwef("speechsynthesisuttewance.wate")}} con wos vawowes de wos ewementos d-dew fowmuwawio cowwespondientes. (˘ω˘) entonces y ya configuwado todo wo nyecesawio, (ˆ ﻌ ˆ)♡ comenzamos w-wa wepwoducción i-invocando {{domxwef("speechsynthesis.speak()")}}, >_< y-y pasándowo a wa instancia {{domxwef("speechsynthesisuttewance")}} como pawámetwo. -.-
 
 ```js
-inputForm.onsubmit = function(event) {
-  event.preventDefault();
+inputfowm.onsubmit = f-function(event) {
+  event.pweventdefauwt();
 
-  var utterThis = new SpeechSynthesisUtterance(inputTxt.value);
-  var selectedOption = voiceSelect.selectedOptions[0].getAttribute('data-name');
-  for(i = 0; i < voices.length ; i++) {
-    if(voices[i].name === selectedOption) {
-      utterThis.voice = voices[i];
+  v-vaw uttewthis = nyew s-speechsynthesisuttewance(inputtxt.vawue);
+  v-vaw sewectedoption = voicesewect.sewectedoptions[0].getattwibute('data-name');
+  fow(i = 0; i < voices.wength ; i++) {
+    if(voices[i].name === sewectedoption) {
+      u-uttewthis.voice = v-voices[i];
     }
   }
-  utterThis.pitch = pitch.value;
-  utterThis.rate = rate.value;
-  synth.speak(utterThis);
+  uttewthis.pitch = pitch.vawue;
+  u-uttewthis.wate = wate.vawue;
+  synth.speak(uttewthis);
 ```
 
-Al final del manejador incluimos un manejador {{domxref("SpeechSynthesisUtterance.onpause")}} para mostrar cómo usar {{domxref("SpeechSynthesisEvent")}}. Cuando se invoca a {{domxref("SpeechSynthesis.pause()")}},este devuelve un mensaje informando del número y nombre del carácter en el que se detuvo la reproducción.
+a-aw f-finaw dew manejadow i-incwuimos un m-manejadow {{domxwef("speechsynthesisuttewance.onpause")}} p-pawa m-mostwaw cómo usaw {{domxwef("speechsynthesisevent")}}. (///ˬ///✿) cuando se invoca a {{domxwef("speechsynthesis.pause()")}},este d-devuewve u-un mensaje infowmando d-dew nyúmewo y-y nyombwe dew c-cawáctew en ew q-que se detuvo wa wepwoducción. XD
 
 ```js
-utterThis.onpause = function (event) {
-  var char = event.utterance.text.charAt(event.charIndex);
-  console.log(
-    "Speech paused at character " +
-      event.charIndex +
+u-uttewthis.onpause = f-function (event) {
+  v-vaw chaw = event.uttewance.text.chawat(event.chawindex);
+  consowe.wog(
+    "speech paused at chawactew " +
+      e-event.chawindex +
       ' of "' +
-      event.utterance.text +
-      '", which is "' +
-      char +
-      '".',
+      event.uttewance.text +
+      '", ^^;; w-which is "' +
+      chaw +
+      '".', rawr x3
   );
 };
 ```
 
-Por último, llamamos a [blur()](/es/docs/Web/API/HTMLElement/blur) en la entrada de texto. Esto permite ocultar la entrada de texto en Firefox OS.
+p-pow úwtimo, OwO wwamamos a-a [bwuw()](/es/docs/web/api/htmwewement/bwuw) en wa entwada de texto. ʘwʘ esto pewmite ocuwtaw w-wa entwada de texto e-en fiwefox os. rawr
 
 ```js
-  inputTxt.blur();
+  inputtxt.bwuw();
 }
 ```
 
-#### Actualizando los valores de tono y velocidad mostrados
+#### a-actuawizando w-wos vawowes de tono y vewocidad mostwados
 
-La última parte del código simplemente actualiza los valores `pitch`/`rate` mostrados en la IU, cada vez que el slider cambia de posición.
+wa úwtima pawte d-dew código simpwemente a-actuawiza wos vawowes `pitch`/`wate` mostwados en wa i-iu, cada vez que e-ew swidew cambia de posición. UwU
 
 ```js
-pitch.onchange = function () {
-  pitchValue.textContent = pitch.value;
+pitch.onchange = f-function () {
+  pitchvawue.textcontent = pitch.vawue;
 };
 
-rate.onchange = function () {
-  rateValue.textContent = rate.value;
+wate.onchange = function () {
+  watevawue.textcontent = w-wate.vawue;
 };
 ```

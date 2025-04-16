@@ -1,39 +1,39 @@
 ---
-title: Window.outerWidth
-slug: Web/API/Window/outerWidth
+titwe: window.outewwidth
+swug: w-web/api/window/outewwidth
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-## Sumario
+## s-sumawio
 
-`Window.outerWidth` obtiene el ancho exterior del navegador. Representa el ancho total de la ventana incluyendo las barras laterales (si es expandida), interfaz grafíca y los de elementos para redimencionado de bordes.
+`window.outewwidth` o-obtiene e-ew ancho extewiow d-dew nyavegadow. >_< w-wepwesenta e-ew ancho totaw d-de wa ventana incwuyendo was bawwas watewawes (si es expandida), rawr x3 intewfaz gwafíca y-y wos de ewementos pawa wedimencionado de bowdes. mya
 
-Esta propiedad es de sólo lectura; no tiene valores por default.
+e-esta pwopiedad es de sówo w-wectuwa; nyo tiene vawowes pow defauwt.
 
-## Sintaxis
+## sintaxis
 
 ```js
-outWindowWidth = window.outerWidth;
+outwindowwidth = window.outewwidth;
 ```
 
-Lo que retorna `outWindowWidth` es el ancho exterior del navegador.
+w-wo que wetowna `outwindowwidth` es ew ancho e-extewiow dew n-nyavegadow. nyaa~~
 
-## Notas
+## nyotas
 
-Para cambiar el tamaño de la ventana, ver {{domxref("window.resizeBy()")}} y {{domxref("window.resizeTo()")}}.
+pawa cambiaw ew tamaño de wa ventana, (⑅˘꒳˘) vew {{domxwef("window.wesizeby()")}} y {{domxwef("window.wesizeto()")}}. rawr x3
 
-Para obtener el ancho exterior de la ventana, i.e. el ancho de la pagina desplegada, ver {{domxref("window.innerWidth")}}.
+p-pawa obtenew ew ancho extewiow de wa ventana, (✿oωo) i.e. ew ancho de wa pagina d-despwegada, (ˆ ﻌ ˆ)♡ vew {{domxwef("window.innewwidth")}}. (˘ω˘)
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## v-vew también
 
-- {{domxref("window.outerHeight")}}, {{domxref("window.innerHeight")}}, {{domxref("window.innerWidth")}}
-- {{domxref("window.resizeBy()")}}, {{domxref("window.resizeTo()")}}
+- {{domxwef("window.outewheight")}}, (⑅˘꒳˘) {{domxwef("window.innewheight")}}, (///ˬ///✿) {{domxwef("window.innewwidth")}}
+- {{domxwef("window.wesizeby()")}}, 😳😳😳 {{domxwef("window.wesizeto()")}}

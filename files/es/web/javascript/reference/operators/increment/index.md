@@ -1,93 +1,93 @@
 ---
-title: Incremento (++)
-slug: Web/JavaScript/Reference/Operators/Increment
-l10n:
-  sourceCommit: f616cb604af851f77f8cd59368e94ee3e43a8838
+titwe: incwemento (++)
+swug: w-web/javascwipt/wefewence/opewatows/incwement
+w-w10n:
+  s-souwcecommit: f-f616cb604af851f77f8cd59368e94ee3e43a8838
 ---
 
-{{jsSidebar("Operators")}}
+{{jssidebaw("opewatows")}}
 
-El operador de **incremento (`++`)** incrementa (agrega uno a) su operando y retorna el valor antes o despues del incremento, dependiendo de dónde está posicionado el operador.
+e-ew o-opewadow de **incwemento (`++`)** i-incwementa (agwega u-uno a) su opewando y wetowna ew vawow antes o despues dew incwemento, (///ˬ///✿) dependiendo d-de dónde está posicionado ew opewadow. 😳
 
-{{InteractiveExample("JavaScript Demo: Expressions - Increment operator")}}
+{{intewactiveexampwe("javascwipt d-demo: expwessions - incwement o-opewatow")}}
 
-```js interactive-example
-let x = 3;
+```js intewactive-exampwe
+wet x = 3;
 const y = x++;
 
-console.log(`x:${x}, y:${y}`);
-// Expected output: "x:4, y:3"
+c-consowe.wog(`x:${x}, y:${y}`);
+// e-expected output: "x:4, 😳 y-y:3"
 
-let a = 3;
+wet a = 3;
 const b = ++a;
 
-console.log(`a:${a}, b:${b}`);
-// Expected output: "a:4, b:4"
+consowe.wog(`a:${a}, σωσ b:${b}`);
+// expected output: "a:4, rawr x3 b-b:4"
 ```
 
-## Sintaxis
+## sintaxis
 
-```js-nolint
+```js-nowint
 x++
 ++x
 ```
 
-## Descripción
+## descwipción
 
-El operador `++` acepta dos tipos de operandos: número y [BigInt](/es/docs/Web/JavaScript/Reference/Global_Objects/BigInt). Primero [intenta transformar ambos operandos a valores numéricos](/es/docs/Web/JavaScript/Data_structures#numeric_coercion) y prueba sus tipos. Realiza una incremento con BigInt si ambos operandos se convierten en BigInts; de lo contrario, realiza el incremento de números.
+ew opewadow `++` a-acepta dos tipos de opewandos: n-nyúmewo y-y [bigint](/es/docs/web/javascwipt/wefewence/gwobaw_objects/bigint). OwO p-pwimewo [intenta t-twansfowmaw ambos opewandos a vawowes nyuméwicos](/es/docs/web/javascwipt/data_stwuctuwes#numewic_coewcion) y-y pwueba sus tipos. /(^•ω•^) weawiza una incwemento con b-bigint si ambos opewandos se conviewten en bigints; de wo contwawio, 😳😳😳 weawiza ew incwemento de n-númewos. ( ͡o ω ͡o )
 
-Si se usa postfijo, con el operador después del operando (por ejemplo, `x++`), el operador de incremento incrementa y devuelve el valor antes de incrementar.
+si se usa postfijo, >_< c-con ew opewadow d-después dew opewando (pow e-ejempwo, >w< `x++`), ew opewadow de incwemento incwementa y-y devuewve ew vawow a-antes de incwementaw. rawr
 
-Si se usa prefijo, con un operador antes del operando (por ejemplo, `++x`), el operador de incremento incrementa y devuelve el valor después del incremento.
+si se u-usa pwefijo, 😳 con u-un opewadow antes dew opewando (pow e-ejempwo, >w< `++x`), (⑅˘꒳˘) ew opewadow d-de incwemento incwementa y devuewve ew vawow d-después dew incwemento. OwO
 
-El operador de incremento solo se puede aplicar a operandos que son referencias (variables y propiedades de objetos; es decir, [objetivos de asignación](/es/docs/Web/JavaScript/Reference/Operators/Assignment) válidos). `++x` se evalúa como un valor, no como una referencia, por lo que no se pueden encadenar varios operadores de incremento.
+ew opewadow d-de incwemento sowo se puede a-apwicaw a opewandos q-que son wefewencias (vawiabwes y pwopiedades de objetos; es deciw, (ꈍᴗꈍ) [objetivos de asignación](/es/docs/web/javascwipt/wefewence/opewatows/assignment) váwidos). `++x` se e-evawúa como un v-vawow, 😳 nyo como una wefewencia, 😳😳😳 p-pow wo que nyo s-se pueden encadenaw v-vawios opewadowes de incwemento. mya
 
-```js-nolint example-bad
-++(++x); // SyntaxError: Invalid left-hand side expression in prefix operation
+```js-nowint exampwe-bad
+++(++x); // syntaxewwow: i-invawid weft-hand side expwession in pwefix opewation
 ```
 
-## Ejemplos
+## ejempwos
 
-### Incremento postfijo
+### i-incwemento postfijo
 
 ```js
-let x = 3;
-const y = x++;
-// x es 4; y es 3
+wet x = 3;
+const y-y = x++;
+// x es 4; y-y es 3
 
-let x2 = 3n;
+wet x-x2 = 3n;
 const y2 = x2++;
-// x2 es 4n; y2 es 3n
+// x2 e-es 4n; y2 es 3n
 ```
 
-### Incremento prefijo
+### i-incwemento p-pwefijo
 
 ```js
-let x = 3;
+w-wet x = 3;
 const y = ++x;
 // x es 4; y es 4
 
-let x2 = 3n;
-const y2 = ++x2;
-// x2 es 4n; y2 es 4n
+w-wet x2 = 3n;
+const y-y2 = ++x2;
+// x-x2 es 4n; y2 es 4n
 ```
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Véase también
+## véase también
 
-- [Adición (`+`)](/es/docs/Web/JavaScript/Reference/Operators/Addition)
-- [Sustracción (`-`)](/es/docs/Web/JavaScript/Reference/Operators/Subtraction)
-- [División (`/`)](/es/docs/Web/JavaScript/Reference/Operators/Division)
-- [Multiplicación (`*`)](/es/docs/Web/JavaScript/Reference/Operators/Multiplication)
-- [Resto (`%`)](/es/docs/Web/JavaScript/Reference/Operators/Remainder)
-- [Exponciación (`**`)](/es/docs/Web/JavaScript/Reference/Operators/Exponentiation)
-- [Decremento (`--`)](/es/docs/Web/JavaScript/Reference/Operators/Decrement)
-- [Negación Unaria (`-`)](/es/docs/Web/JavaScript/Reference/Operators/Unary_negation)
-- [Unario más (`+`)](/es/docs/Web/JavaScript/Reference/Operators/Unary_plus)
+- [adición (`+`)](/es/docs/web/javascwipt/wefewence/opewatows/addition)
+- [sustwacción (`-`)](/es/docs/web/javascwipt/wefewence/opewatows/subtwaction)
+- [división (`/`)](/es/docs/web/javascwipt/wefewence/opewatows/division)
+- [muwtipwicación (`*`)](/es/docs/web/javascwipt/wefewence/opewatows/muwtipwication)
+- [westo (`%`)](/es/docs/web/javascwipt/wefewence/opewatows/wemaindew)
+- [exponciación (`**`)](/es/docs/web/javascwipt/wefewence/opewatows/exponentiation)
+- [decwemento (`--`)](/es/docs/web/javascwipt/wefewence/opewatows/decwement)
+- [negación unawia (`-`)](/es/docs/web/javascwipt/wefewence/opewatows/unawy_negation)
+- [unawio m-más (`+`)](/es/docs/web/javascwipt/wefewence/opewatows/unawy_pwus)

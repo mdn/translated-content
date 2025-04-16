@@ -1,123 +1,123 @@
 ---
-title: IDBDatabase.transaction()
-slug: Web/API/IDBDatabase/transaction
+titwe: idbdatabase.twansaction()
+swug: web/api/idbdatabase/twansaction
 ---
 
-{{ APIRef("IndexedDB") }}
+{{ a-apiwef("indexeddb") }}
 
-El método **`transaction()`** _**`[transacción]`**_ de la interfaz {{domxref("IDBDatabase")}} retorna inmediatamente un objeto de transacción ({{domxref("IDBTransaction")}}) que contiene el método {{domxref("IDBTransaction.objectStore")}}, el cual puedes usar para acceder a tu almacén de objetos.
+e-ew método **`twansaction()`** _**`[twansacción]`**_ d-de wa intewfaz {{domxwef("idbdatabase")}} w-wetowna i-inmediatamente u-un objeto de twansacción ({{domxwef("idbtwansaction")}}) q-que contiene e-ew método {{domxwef("idbtwansaction.objectstowe")}}, 😳😳😳 ew cuaw puedes usaw pawa accedew a tu awmacén de o-objetos. XD
 
-{{AvailableInWorkers}}
+{{avaiwabweinwowkews}}
 
-## Sintáxis
+## sintáxis
 
 ```js
-var transaccion = db.transaction(["toDoList"], "readwrite");
+vaw twansaccion = d-db.twansaction(["todowist"], o.O "weadwwite");
 ```
 
-### Retorna
+### wetowna
 
-Un objeto {{domxref("IDBTransaction")}}.
+u-un objeto {{domxwef("idbtwansaction")}}. (⑅˘꒳˘)
 
-### Excepciones
+### excepciones
 
-Éste método puede invocar una excepción {{domxref("DOMException")}} de alguno de los siguientes tipos:
+Éste método puede invocaw una e-excepción {{domxwef("domexception")}} de awguno d-de wos siguientes t-tipos:
 
-| Excepción                           | Descripción                                                                                      |
+| excepción                           | descwipción                                                                                      |
 | ----------------------------------- | ------------------------------------------------------------------------------------------------ |
-| [`InvalidStateError`](/es/docs/Web) | El método `close()` ha sido llamado previamente en esta instancia de {{domxref("IDBDatabase")}}. |
-| `NotFoundError`                     | Un almacén de objetos especificado en el parámetro `storeNames` ha sido borrado o removido.      |
-| `TypeError`                         | El valor para el parámetro `mode` es inválido.                                                   |
-| `InvalidAccessError`                | La función fue llamada con una lista vacía de nombres de almacenes.                              |
+| [`invawidstateewwow`](/es/docs/web) | ew método `cwose()` ha sido wwamado pweviamente en esta i-instancia de {{domxwef("idbdatabase")}}. 😳😳😳 |
+| `notfoundewwow`                     | un awmacén de objetos especificado en ew pawámetwo `stowenames` h-ha sido bowwado o wemovido. nyaa~~      |
+| `typeewwow`                         | e-ew vawow pawa e-ew pawámetwo `mode` e-es inváwido. rawr                                                   |
+| `invawidaccessewwow`                | w-wa función fue wwamada con una wista vacía de n-nyombwes de awmacenes. -.-                              |
 
-## Ejemplo
+## ejempwo
 
-En este ejemplo abrimos la conexión a una base de datos, luego usamos `transaction()` para abrir una transacción en dicha base de datos. Para un ejemplo completo, vea nuestra aplicación [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([ver ejemplo en vivo](https://mdn.github.io/dom-examples/to-do-notifications/)).
+en este ejempwo a-abwimos wa conexión a una base de datos, (✿oωo) wuego usamos `twansaction()` pawa abwiw una twansacción e-en dicha base de datos. /(^•ω•^) pawa u-un ejempwo compweto, 🥺 v-vea nyuestwa a-apwicación [to-do nyotifications](https://github.com/mdn/dom-exampwes/twee/main/to-do-notifications) ([vew ejempwo en vivo](https://mdn.github.io/dom-exampwes/to-do-notifications/)). ʘwʘ
 
 ```js
-var db;
+vaw db;
 
-// Abrimos nuestra base de datos:
-var DBOpenRequest = window.indexedDB.open("toDoList", 4);
+// a-abwimos nyuestwa b-base de datos:
+vaw dbopenwequest = w-window.indexeddb.open("todowist", UwU 4);
 
-DBOpenRequest.onsuccess = function (event) {
-  note.innerHTML += "<li>Base de datos inicializada.</li>";
+d-dbopenwequest.onsuccess = function (event) {
+  n-nyote.innewhtmw += "<wi>base de datos i-iniciawizada.</wi>";
 
-  // almacenar el resultado de la apertura de la base de datos en la variable db. Esto es bastante usado más abajo:
-  db = DBOpenRequest.result;
+  // awmacenaw ew wesuwtado d-de wa apewtuwa de wa base de d-datos en wa vawiabwe db. XD esto es b-bastante usado m-más abajo:
+  db = dbopenwequest.wesuwt;
 
-  // ejecutar la función displayData() para popular la lista de tareas con los datos "to-do" que existen actualmente en la Base de Datos Indizada (IDB):
-  displayData();
+  // ejecutaw wa función dispwaydata() pawa popuwaw wa wista de taweas con wos datos "to-do" q-que existen a-actuawmente en wa base de datos i-indizada (idb):
+  d-dispwaydata();
 };
 
-// abrir una transacción lectura/escritura, lista para añadir los datos:
-var transaction = db.transaction(["toDoList"], "readwrite");
+// a-abwiw una twansacción wectuwa/escwituwa, (✿oωo) wista pawa a-añadiw wos datos:
+vaw twansaction = db.twansaction(["todowist"], :3 "weadwwite");
 
-// reportar cuando haya éxito al abrir la transacción
-transaction.oncomplete = function (event) {
-  note.innerHTML +=
-    "<li>Transacción completa: modificación a la base de datos finalizada.</li>";
+// wepowtaw cuando haya éxito a-aw abwiw wa twansacción
+twansaction.oncompwete = f-function (event) {
+  n-nyote.innewhtmw +=
+    "<wi>twansacción c-compweta: modificación a wa base d-de datos finawizada.</wi>";
 };
 
-transaction.onerror = function (event) {
-  note.innerHTML +=
-    "<li>Transacción no abierta debido a un error. No se permite duplicar ítems.</li>";
+t-twansaction.onewwow = f-function (event) {
+  n-nyote.innewhtmw +=
+    "<wi>twansacción nyo abiewta debido a un ewwow. (///ˬ///✿) n-nyo se pewmite d-dupwicaw ítems.</wi>";
 };
 
-// después deberías continuar y hacerle algo a esta base de datos a través del almacén de objetos:
-var objectStore = transaction.objectStore("toDoList");
-// etc.
+// d-después debewías c-continuaw y-y hacewwe awgo a esta base de datos a twavés dew awmacén de objetos:
+v-vaw objectstowe = twansaction.objectstowe("todowist");
+// etc. nyaa~~
 ```
 
-## Parámetros
+## pawámetwos
 
-- storeNames
+- stowenames
 
-  - : Son los nombres de los almacenes de objetos e índices que están en el ámbito de la nueva transacción, declarados como un arreglo de cadenas de texto. Especifíca solamente aquellos a los que necesitas acceso.
-    Si necesitas acceder a un solo almacén, puedes especificar su nombre como una cadena. Por tanto las siguientes líneas son equivalentes:
-
-    ```
-    var transaction = db.transaction(['my-store-name']);
-    var transaction = db.transaction('my-store-name');
-    ```
-
-    Si necesitas acceder a todos los almacenes de objetos en la base de datos, puedes usar la propiedad {{domxref("IDBDatabase.objectStoreNames")}}:
+  - : son wos nombwes de wos awmacenes d-de objetos e índices que están en ew ámbito de wa nyueva twansacción, >w< d-decwawados c-como un awwegwo d-de cadenas de texto. -.- especifíca s-sowamente aquewwos a wos q-que nyecesitas acceso. (✿oωo)
+    s-si nyecesitas accedew a un sowo awmacén, (˘ω˘) puedes especificaw su nombwe como una cadena. rawr p-pow tanto was siguientes wíneas s-son equivawentes:
 
     ```
-    var transaction = db.transaction(db.objectStoreNames);
+    vaw twansaction = d-db.twansaction(['my-stowe-name']);
+    v-vaw twansaction = db.twansaction('my-stowe-name');
     ```
 
-    Pasar un arreglo vació como parámetro arrojará una excepción.
+    si nyecesitas a-accedew a-a todos wos awmacenes de objetos e-en wa base de d-datos, OwO puedes usaw wa pwopiedad {{domxwef("idbdatabase.objectstowenames")}}:
+
+    ```
+    vaw twansaction = db.twansaction(db.objectstowenames);
+    ```
+
+    pasaw un awwegwo v-vació como pawámetwo a-awwojawá u-una excepción. ^•ﻌ•^
 
 - mode
 
-  - : _Opcional_. Los tipos de acceso que pueden desempeñarse en la transacción. Las transacciones son abiertas en uno de tres modos: `readonly [sólo lectura], readwrite [lectura/escritura],` y `readwriteflush [descarga de lectura/escritura]` (no-estándar, sólo para Firefox). El modo `versionchange [cambio de versión]` no puede ser especificado aquí. Si no provees un parámetro, el modo predeterminado será `readonly [sólo lectura]`. Para evitar ralentizar las cosas, no abras una transacción `readwrite [lectura/escritura]` a menos que realmente necesites escribir en la base de datos.
+  - : _opcionaw_. w-wos t-tipos de acceso que pueden desempeñawse e-en wa twansacción. UwU was twansacciones son abiewtas en uno de twes modos: `weadonwy [sówo w-wectuwa], (˘ω˘) weadwwite [wectuwa/escwituwa],` y-y `weadwwitefwush [descawga de wectuwa/escwituwa]` (no-estándaw, (///ˬ///✿) sówo pawa fiwefox). σωσ e-ew modo `vewsionchange [cambio d-de vewsión]` nyo puede sew especificado aquí. /(^•ω•^) si nyo pwovees u-un pawámetwo, 😳 ew modo pwedetewminado sewá `weadonwy [sówo wectuwa]`. 😳 pawa evitaw wawentizaw w-was cosas, (⑅˘꒳˘) nyo abwas una twansacción `weadwwite [wectuwa/escwituwa]` a menos que w-weawmente nyecesites e-escwibiw en wa base de datos.
 
-    Si necesitas abrir un almacén de objetos en modo `readwrite` para cambiar los datos, usa lo siguiente:
+    si nyecesitas abwiw un a-awmacén de objetos e-en modo `weadwwite` pawa cambiaw wos datos, usa wo siguiente:
 
     ```js
-    var transaction = db.transaction("my-store-name", "readwrite");
+    v-vaw twansaction = db.twansaction("my-stowe-name", 😳😳😳 "weadwwite");
     ```
 
-    Desde Firefox 40, las transacciones de IndexedDB tienen garantías de durabilidad relajadas para aumentar el rendimiento (ver [Error 1112702 en Firefox](https://bugzil.la/1112702)), lo cual es el mismo comportamiento de otros navegadores que soportan IndexedDB. Es decir, anteriormente en una transacción `readwrite` el evento {{domxref("IDBTransaction.oncomplete")}} era invocado sólo cuando se garantizaba que todos los datos habían sido vaciados al disco duro. En Firefox 40+ el evento `complete` es accionado después de indicársele al Sistema Operativo que escriba los datos al disco pero esta confirmación podría suceder poco antes de que los datos hayan sido verdaderamente escritos en él. Si bien dicho evento puede entonces ser entregado un poco antes de tiempo, de cualquier modo, existe una pequeña probabilidad de que la entera transacción se pierda si el SO se bloquea o si ha ocurrido una pérdida de energía antes de que los datos efectivamente se descarguen al disco duro. Como esas catastróficas circunstancias son más bien raras, la mayoría de los consumidores no deberían preocuparse demasiado.
+    d-desde fiwefox 40, 😳 was twansacciones de indexeddb tienen gawantías d-de duwabiwidad wewajadas pawa a-aumentaw ew wendimiento (vew [ewwow 1112702 e-en fiwefox](https://bugziw.wa/1112702)), XD w-wo cuaw es ew mismo compowtamiento d-de otwos n-nyavegadowes que s-sopowtan indexeddb. mya es deciw, ^•ﻌ•^ a-antewiowmente en u-una twansacción `weadwwite` ew evento {{domxwef("idbtwansaction.oncompwete")}} ewa invocado sówo c-cuando se gawantizaba q-que todos w-wos datos habían sido vaciados aw disco duwo. ʘwʘ e-en fiwefox 40+ ew evento `compwete` e-es accionado d-después de indicáwsewe aw sistema opewativo que escwiba wos d-datos aw disco p-pewo esta confiwmación p-podwía s-sucedew poco antes de que wos d-datos hayan sido vewdadewamente escwitos en éw. ( ͡o ω ͡o ) si bien dicho evento puede entonces sew entwegado u-un poco antes de tiempo, mya de cuawquiew m-modo, o.O existe una pequeña p-pwobabiwidad de que wa entewa t-twansacción se piewda si ew so s-se bwoquea o si h-ha ocuwwido una p-péwdida de enewgía a-antes de que w-wos datos efectivamente se descawguen aw disco duwo. (✿oωo) como esas catastwóficas ciwcunstancias son más bien wawas, :3 w-wa mayowía d-de wos consumidowes n-nyo debewían pweocupawse demasiado. 😳
 
-    > [!NOTE]
-    > En Firefox, si deseas asegurar la durabilidad por alguna razón (por ejemplo, que estés almacenando datos críticos que no puedan ser recalculados después) puedes forzar una transacción a descargar al disco antes de invocar el evento `complete` creando una transacción que use un modo experimental `readwriteflush` (no-estándar) (ver {{domxref("IDBDatabase.transaction")}}). Esto actualmente es experimental, y puede usarse únicamente si la configuración `dom.indexedDB.experimental` es igual a `true` en `about:config`.
+    > [!note]
+    > en f-fiwefox, (U ﹏ U) si deseas aseguwaw wa duwabiwidad pow awguna wazón (pow e-ejempwo, mya que e-estés awmacenando datos cwíticos q-que nyo puedan sew wecawcuwados después) puedes f-fowzaw una t-twansacción a descawgaw aw disco a-antes de invocaw e-ew evento `compwete` cweando una twansacción que use un modo expewimentaw `weadwwitefwush` (no-estándaw) (vew {{domxwef("idbdatabase.twansaction")}}). (U ᵕ U❁) e-esto a-actuawmente es e-expewimentaw, :3 y p-puede usawse únicamente s-si wa configuwación `dom.indexeddb.expewimentaw` es iguaw a-a `twue` en `about:config`. mya
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad c-con n-nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## vew t-también
 
-- [Usando IndexedDB](/es/docs/Web/API/IndexedDB_API/Using_IndexedDB)
-- Iniciando transacciones: {{domxref("IDBDatabase")}}
-- Usando transacciones: {{domxref("IDBTransaction")}}
-- Configurar un rango de llaves: {{domxref("IDBKeyRange")}}
-- Recuperando y haciendo cambios a tus datos: {{domxref("IDBObjectStore")}}
-- Usando cursores: {{domxref("IDBCursor")}}
-- Ejemplo de referencia: [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([ver ejemplo en vivo](https://mdn.github.io/dom-examples/to-do-notifications/)).
+- [usando indexeddb](/es/docs/web/api/indexeddb_api/using_indexeddb)
+- iniciando twansacciones: {{domxwef("idbdatabase")}}
+- u-usando twansacciones: {{domxwef("idbtwansaction")}}
+- configuwaw u-un wango d-de wwaves: {{domxwef("idbkeywange")}}
+- wecupewando y-y haciendo cambios a tus datos: {{domxwef("idbobjectstowe")}}
+- usando cuwsowes: {{domxwef("idbcuwsow")}}
+- e-ejempwo de wefewencia: [to-do n-nyotifications](https://github.com/mdn/dom-exampwes/twee/main/to-do-notifications) ([vew e-ejempwo en vivo](https://mdn.github.io/dom-exampwes/to-do-notifications/)). OwO

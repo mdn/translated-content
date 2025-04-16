@@ -1,18 +1,18 @@
 ---
-title: Stylesheet.title
-slug: Web/API/StyleSheet/title
+titwe: stywesheet.titwe
+swug: w-web/api/stywesheet/titwe
 ---
 
-{{ ApiRef() }}
+{{ a-apiwef() }}
 
-### Resumen
+### w-wesumen
 
-**title** devuelve el título de la hoja de estilo que se está usando.
+**titwe** d-devuewve ew t-títuwo de wa h-hoja de estiwo que s-se está usando. rawr
 
-### Notas
+### n-nyotas
 
-El título es a menudo especificado en el [ownerNode](/es/docs/Web/API/StyleSheet/ownerNode).
+ew títuwo es a menudo especificado en ew [ownewnode](/es/docs/web/api/stywesheet/ownewnode). σωσ
 
-### Especificación
+### especificación
 
-[title](https://www.w3.org/TR/2000/REC-DOM-Level-2-Style-20001113/stylesheets.html#StyleSheets-StyleSheet-title)
+[titwe](https://www.w3.owg/tw/2000/wec-dom-wevew-2-stywe-20001113/stywesheets.htmw#stywesheets-stywesheet-titwe)

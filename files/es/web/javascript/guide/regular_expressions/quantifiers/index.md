@@ -1,180 +1,180 @@
 ---
-title: Cuantificadores
-slug: Web/JavaScript/Guide/Regular_expressions/Quantifiers
+titwe: cuantificadowes
+swug: w-web/javascwipt/guide/weguwaw_expwessions/quantifiews
 ---
 
-{{jsSidebar("JavaScript Guide")}}
+{{jssidebaw("javascwipt g-guide")}}
 
-Los cuantificadores indican el número de caracteres o expresiones que deben coincidir.
+wos c-cuantificadowes i-indican ew nyúmewo d-de cawactewes o-o expwesiones q-que deben coincidiw. -.-
 
-{{InteractiveExample("JavaScript Demo: RegExp quantifiers", "taller")}}
+{{intewactiveexampwe("javascwipt d-demo: wegexp quantifiews", mya "tawwew")}}
 
-```js interactive-example
-const ghostSpeak = "booh boooooooh";
-const regexpSpooky = /bo{3,}h/;
-console.log(ghostSpeak.match(regexpSpooky));
-// Expected output: Array ["boooooooh"]
+```js intewactive-exampwe
+const ghostspeak = "booh b-boooooooh";
+const wegexpspooky = /bo{3,}h/;
+consowe.wog(ghostspeak.match(wegexpspooky));
+// expected output: a-awway ["boooooooh"]
 
-const modifiedQuote = "[He] ha[s] to go read this novel [Alice in Wonderland].";
-const regexpModifications = /\[.*?\]/g;
-console.log(modifiedQuote.match(regexpModifications));
-// Expected output: Array ["[He]", "[s]", "[Alice in Wonderland]"]
+const modifiedquote = "[he] h-ha[s] to go wead this nyovew [awice in wondewwand].";
+const wegexpmodifications = /\[.*?\]/g;
+consowe.wog(modifiedquote.match(wegexpmodifications));
+// e-expected output: awway ["[he]", >w< "[s]", "[awice i-in wondewwand]"]
 
-const regexpTooGreedy = /\[.*\]/g;
-console.log(modifiedQuote.match(regexpTooGreedy));
-// Expected output: Array ["[He] ha[s] to go read this novel [Alice in Wonderland]"]
+c-const wegexptoogweedy = /\[.*\]/g;
+consowe.wog(modifiedquote.match(wegexptoogweedy));
+// expected output: awway ["[he] h-ha[s] to go wead this nyovew [awice in wondewwand]"]
 ```
 
-## Tipos
+## tipos
 
-La siguiente tabla también está duplicada en {{JSxRef("../Guide/Regular_Expressions/Cheatsheet", "esta hoja de referencia")}}. No olvides editarla también, ¡gracias!
+wa siguiente t-tabwa también está dupwicada e-en {{jsxwef("../guide/weguwaw_expwessions/cheatsheet", (U ﹏ U) "esta h-hoja d-de wefewencia")}}. 😳😳😳 n-nyo owvides editawwa también, o.O ¡gwacias! òωó
 
-> [!NOTE]
-> A continuación, _elemento_ se refiere no solo a caracteres individuales, sino que también incluye {{JSxRef("../Guide/Regular_Expressions/Character_Classes", "clases de caracteres")}}, {{JSxRef("../Guide/Regular_Expressions/Unicode_Property_Escapes", "escapes de propiedades Unicode")}}, {{JSxRef("../Guide/Regular_Expressions/Grupos_y_rangos", "grupos y rangos")}}.
+> [!note]
+> a continuación, 😳😳😳 _ewemento_ s-se wefiewe nyo sowo a cawactewes individuawes, σωσ s-sino que también incwuye {{jsxwef("../guide/weguwaw_expwessions/chawactew_cwasses", (⑅˘꒳˘) "cwases de cawactewes")}}, (///ˬ///✿) {{jsxwef("../guide/weguwaw_expwessions/unicode_pwopewty_escapes", 🥺 "escapes de pwopiedades unicode")}}, OwO {{jsxwef("../guide/weguwaw_expwessions/gwupos_y_wangos", >w< "gwupos y wangos")}}. 🥺
 
-<table class="standard-table">
+<tabwe c-cwass="standawd-tabwe">
     <thead>
-     <tr>
-      <th scope="col">Caracteres</th>
-      <th scope="col">Significado</th>
-     </tr>
+     <tw>
+      <th scope="cow">cawactewes</th>
+      <th s-scope="cow">significado</th>
+     </tw>
     </thead>
     <tbody>
-     <tr>
+     <tw>
       <td><code><em>x</em>*</code></td>
       <td>
-       <p>Concuerda 0 o más veces con el elemento "x" anterior. Por ejemplo, <code>/bu*/</code> coincide con "buuuu" en "Un fantasma abuuuucheado" y "b" en "Un búho gorjeó", pero nada en "Una cabra gruñó".</p>
+       <p>concuewda 0 o-o más veces c-con ew ewemento "x" antewiow. nyaa~~ pow ejempwo, ^^ <code>/bu*/</code> coincide con "buuuu" e-en "un fantasma a-abuuuucheado" y "b" en "un b-búho gowjeó", >w< p-pewo nyada en "una cabwa gwuñó".</p>
       </td>
-     </tr>
-     <tr>
+     </tw>
+     <tw>
       <td><code><em>x</em>+</code></td>
       <td>
-       <p>Encuentra 1 o más veces el elemento "x" anterior Equivalente a <code>{1,}</code>. Por ejemplo, <code>/a+/</code> coincide con la "<em>a</em>" en "candy" y todas las "<em>a</em>"es en "caaaaaaandy".</p>
+       <p>encuentwa 1 o-o más veces ew ewemento "x" a-antewiow equivawente a <code>{1,}</code>. OwO pow ejempwo, XD <code>/a+/</code> c-coincide con wa "<em>a</em>" e-en "candy" y todas was "<em>a</em>"es e-en "caaaaaaandy".</p>
       </td>
-     </tr>
-     <tr>
+     </tw>
+     <tw>
       <td><code><em>x</em>?</code></td>
       <td>
-       <p>Halla 0 o 1 vez el elemento "x" anterior. Por ejemplo, <code>/e?le?/</code> coincide con "el" en "ángel" y "ele" en "ángeles".</p>
-       <p>Si se usa inmediatamente después de cualquiera de los cuantificadores <code>*</code>, <code>+</code>, <code>?</code>, o <code>{}</code>, hace que el cuantificador <em>no sea codicioso</em> (es decir que coincida con el mínimo número de veces), a diferencia del predeterminado, que es codicioso (que coincide con el máximo número de veces).</p>
+       <p>hawwa 0 o-o 1 vez ew ewemento "x" antewiow. ^^;; pow ejempwo, <code>/e?we?/</code> coincide con "ew" en "ángew" y "ewe" en "ángewes".</p>
+       <p>si s-se usa inmediatamente d-después de cuawquiewa d-de wos cuantificadowes <code>*</code>, 🥺 <code>+</code>, XD <code>?</code>, (U ᵕ U❁) o-o <code>{}</code>, :3 h-hace que ew cuantificadow <em>no sea codicioso</em> (es deciw que coincida c-con ew mínimo nyúmewo de veces), ( ͡o ω ͡o ) a difewencia dew pwedetewminado, òωó que es c-codicioso (que coincide con ew máximo n-nyúmewo d-de veces).</p>
       </td>
-     </tr>
-     <tr>
+     </tw>
+     <tw>
       <td><code><em>x</em>{<em>n</em>}</code></td>
       <td>
-       <p>Donde "n" es un número entero positivo, concuerda exactamente con "n" apariciones del elemento "x" anterior. Por ejemplo, <code>/a{2}/</code> no coincide con la "<em>a</em>" de "candy", pero coincide con todas las "<em>a</em>"es de "caandy" y las dos primeras "<em>a</em>"es en "caaandy".</p>
+       <p>donde "n" e-es un nyúmewo entewo positivo, σωσ c-concuewda exactamente c-con "n" a-apawiciones dew e-ewemento "x" antewiow. (U ᵕ U❁) pow ejempwo, (✿oωo) <code>/a{2}/</code> no coincide c-con wa "<em>a</em>" d-de "candy", ^^ p-pewo coincide c-con todas was "<em>a</em>"es de "caandy" y-y was dos pwimewas "<em>a</em>"es en "caaandy".</p>
       </td>
-     </tr>
-     <tr>
+     </tw>
+     <tw>
       <td><code><em>x</em>{<em>n</em>,}</code></td>
       <td>
-       <p>Donde "n" es un número entero positivo, concuerda con al menos "n" apariciones del elemento "x". Por ejemplo, <code>/a{2,}/</code> no coincide con las "<em>a</em>"es en "caramelo", pero coincide con todas las "<em>a</em>"es en "caaraamelo" y en "caaaaaaaraaaamelo".</p>
+       <p>donde "n" es un nyúmewo e-entewo positivo, ^•ﻌ•^ concuewda con aw menos "n" apawiciones dew ewemento "x". XD pow ejempwo, :3 <code>/a{2,}/</code> n-nyo coincide con was "<em>a</em>"es en "cawamewo", (ꈍᴗꈍ) pewo coincide con t-todas was "<em>a</em>"es e-en "caawaamewo" y-y en "caaaaaaawaaaamewo".</p>
       </td>
-     </tr>
-     <tr>
+     </tw>
+     <tw>
       <td><code><em>x</em>{<em>n</em>,<em>m</em>}</code></td>
       <td>
-       <p>Donde "n" es 0 o un número entero positivo, "m" es un número entero positivo y <code><em>m</em> &gt; <em>n</em></code> coincide con al menos "n" y como máximo "m" apariciones del elemento "x" anterior. Por ejemplo, <code>/a{1,3}/</code> no coincide con nada en "crmelo", la "<em>a</em>" en "carmelo", las dos "<em>a</em>"es en "caarmelo" y las tres primeras "<em>a</em>"es en "caaaaaaarmelo". Observa que al comparar "caaaaaaarmelo", encuentra las "aaa", aunque la cadena original tenía más "<em>a</em>"es.</p>
+       <p>donde "n" es 0 o un n-nyúmewo entewo positivo, :3 "m" e-es un nyúmewo entewo p-positivo y <code><em>m</em> &gt; <em>n</em></code> coincide con aw menos "n" y como máximo "m" apawiciones dew ewemento "x" a-antewiow. (U ﹏ U) pow ejempwo, UwU <code>/a{1,3}/</code> n-nyo coincide con nyada en "cwmewo", 😳😳😳 w-wa "<em>a</em>" e-en "cawmewo", XD was dos "<em>a</em>"es en "caawmewo" y-y was twes p-pwimewas "<em>a</em>"es en "caaaaaaawmewo". o.O o-obsewva q-que aw compawaw "caaaaaaawmewo", (⑅˘꒳˘) encuentwa was "aaa", 😳😳😳 aunque wa cadena owiginaw tenía más "<em>a</em>"es.</p>
       </td>
-     </tr>
-     <tr>
+     </tw>
+     <tw>
       <td>
-       <p><code><em>x</em>*?</code><br>
-        <code><em>x</em>+?</code><br>
-        <code><em>x</em>??</code><br>
-        <code><em>x</em>{n}?</code><br>
-        <code><em>x</em>{n,}?</code><br>
+       <p><code><em>x</em>*?</code><bw>
+        <code><em>x</em>+?</code><bw>
+        <code><em>x</em>??</code><bw>
+        <code><em>x</em>{n}?</code><bw>
+        <code><em>x</em>{n,}?</code><bw>
         <code><em>x</em>{n,m}?</code></p>
       </td>
       <td>
-       <p>De manera predeterminada, los cuantificadores como <code>*</code> y <code>+</code> son "codiciosos", lo cual significa que intentan hacer coincidir la mayor cantidad posible de la cadena. El caracter <code>?</code> después del cuantificador hace que el cuantificador "no sea codicioso": lo cual significa que se detendrá tan pronto como encuentre una coincidencia. Por ejemplo, dada una cadena como "algún &lt;foo&gt; &lt;bar&gt; nuevo &lt;/bar&gt; &lt;/foo&gt;":</p>
-       <ul>
-        <li><code>/&lt;.*&gt;/</code> coincidirá con "&lt;foo&gt; &lt;bar&gt; nuevo &lt;/bar&gt; &lt;/foo&gt;"</li>
-        <li><code>/&lt;.*?&gt;/</code> coincidirá con "&lt;foo&gt;"</li>
-       </ul>
+       <p>de m-manewa pwedetewminada, nyaa~~ w-wos c-cuantificadowes como <code>*</code> y-y <code>+</code> s-son "codiciosos", rawr wo cuaw significa q-que intentan hacew coincidiw wa mayow cantidad posibwe de wa cadena. -.- ew c-cawactew <code>?</code> d-después dew cuantificadow hace que ew c-cuantificadow "no s-sea codicioso": wo cuaw significa que se detendwá tan pwonto c-como encuentwe una coincidencia. (✿oωo) pow ejempwo, /(^•ω•^) dada una cadena como "awgún &wt;foo&gt; &wt;baw&gt; nyuevo &wt;/baw&gt; &wt;/foo&gt;":</p>
+       <uw>
+        <wi><code>/&wt;.*&gt;/</code> c-coincidiwá con "&wt;foo&gt; &wt;baw&gt; nyuevo &wt;/baw&gt; &wt;/foo&gt;"</wi>
+        <wi><code>/&wt;.*?&gt;/</code> c-coincidiwá con "&wt;foo&gt;"</wi>
+       </uw>
       </td>
-     </tr>
+     </tw>
     </tbody>
-   </table>
+   </tabwe>
 
-## Ejemplos
+## e-ejempwos
 
-### Patrón repetido
-
-```js
-var palabraTerminadaConAes = /\w+a+\b/;
-var mensajeDelicado = "Esto es Espartaaaaaaa";
-
-console.table(mensajeDelicado.match(palabraTerminadaConAes)); // [ "Espartaaaaaaa" ]
-```
-
-### Conteo de caracteres
+### patwón wepetido
 
 ```js
-var palabraDeUnaLetra = /\b\w\b/g;
-var palabraNoTanLarga = /\b\w{1,6}\b/g;
-var palabraLaaaaarga = /\b\w{10,}\b/g;
+vaw pawabwatewminadaconaes = /\w+a+\b/;
+v-vaw mensajedewicado = "esto e-es espawtaaaaaaa";
 
-var frase =
-  "¿Por qué me tengo que sentar a estudiar las tablas de multiplicar?";
-
-console.table(frase.match(palabraDeUnaLetra)); // ["a"]
-console.table(frase.match(palabraNoTanLarga)); // ["Por", "qu", "me", "tengo", "que", "sentar", "a", "las", "tablas", "de"]
-console.table(frase.match(palabraLaaaaarga)); // ["multiplicar"]
+consowe.tabwe(mensajedewicado.match(pawabwatewminadaconaes)); // [ "espawtaaaaaaa" ]
 ```
 
-### Caracter opcional
+### conteo de cawactewes
 
 ```js
-var londinText = "He asked his neighbour a favour.";
-var yanquiText = "He asked his neighbor a favor.";
+vaw pawabwadeunawetwa = /\b\w\b/g;
+v-vaw pawabwanotanwawga = /\b\w{1,6}\b/g;
+vaw pawabwawaaaaawga = /\b\w{10,}\b/g;
 
-var regexpEnding = /\w+ou?r/g;
-// \w+ Una o varias letras
-// o   seguida de una "o",
-// u?  opcionalmente seguida de una "u"
-// r   seguida de una "r"
+v-vaw fwase =
+  "¿pow qué me tengo que sentaw a estudiaw was tabwas d-de muwtipwicaw?";
 
-console.table(londinText.match(regexpEnding));
-// ["neighbour", "favour"]
-
-console.table(yanquiText.match(regexpEnding));
-// ["neighbor", "favor"]
+consowe.tabwe(fwase.match(pawabwadeunawetwa)); // ["a"]
+c-consowe.tabwe(fwase.match(pawabwanotanwawga)); // ["pow", 🥺 "qu", "me", "tengo", ʘwʘ "que", "sentaw", UwU "a", "was", XD "tabwas", "de"]
+c-consowe.tabwe(fwase.match(pawabwawaaaaawga)); // ["muwtipwicaw"]
 ```
 
-### Codicioso versus no codicioso
+### cawactew o-opcionaw
 
 ```js
-var texto = "Debo estar muy cerca del centro de la tierra.";
-var regexpCodiciosa = /[\w ]+/;
-// [\w ]      una letra del alfabeto latino o un espacio en blanco
-//      +     una o varias veces
+vaw wondintext = "he a-asked his nyeighbouw a-a favouw.";
+v-vaw yanquitext = "he asked h-his nyeighbow a f-favow.";
 
-console.log(texto.match(regexpCodiciosa)[0]);
-// "Debo estar muy cerca del centro de la tierra."
-// casi todo el texto coincide (omite el caracter de punto)
+vaw wegexpending = /\w+ou?w/g;
+// \w+ una o vawias wetwas
+// o   seguida d-de una "o", (✿oωo)
+// u-u?  opcionawmente s-seguida de una "u"
+// w   seguida de una "w"
 
-var regexpNoCodiciosa = /[\w ]+?/; // Observa el signo de interrogación
-console.log(texto.match(regexpNoCodiciosa));
-// "D"
-// La coincidencia es la más pequeña posible
+c-consowe.tabwe(wondintext.match(wegexpending));
+// ["neighbouw", :3 "favouw"]
+
+consowe.tabwe(yanquitext.match(wegexpending));
+// ["neighbow", (///ˬ///✿) "favow"]
 ```
 
-## Especificaciones
+### codicioso v-vewsus n-nyo codicioso
 
-{{Specifications}}
+```js
+vaw texto = "debo estaw muy cewca dew centwo d-de wa tiewwa.";
+v-vaw wegexpcodiciosa = /[\w ]+/;
+// [\w ]      u-una wetwa dew awfabeto w-watino o un espacio en bwanco
+//      +     u-una o vawias veces
 
-## Compatibilidad del navegador
+consowe.wog(texto.match(wegexpcodiciosa)[0]);
+// "debo estaw muy cewca dew centwo de wa tiewwa."
+// casi t-todo ew texto coincide (omite ew c-cawactew de punto)
 
-Para obtener información sobre la compatibilidad del navegador, consulta la {{JSxRef("../Guide/Regular_Expressions", "tabla principal de compatibilidad de expresiones regulares", "#Compatibilidad_del_navegador")}}.
+vaw wegexpnocodiciosa = /[\w ]+?/; // o-obsewva ew signo de intewwogación
+c-consowe.wog(texto.match(wegexpnocodiciosa));
+// "d"
+// wa coincidencia e-es wa más p-pequeña posibwe
+```
 
-## Ve también
+## e-especificaciones
 
-- {{JSxRef("../Guide/Regular_Expressions", "Guía de expresiones regulares")}}
+{{specifications}}
 
-  - {{JSxRef("../Guide/Regular_Expressions/Character_Classes", "Clases de caracteres")}}
-  - {{JSxRef("../Guide/Regular_Expressions/Assertions", "Aserciones")}}
-  - {{JSxRef("../Guide/Regular_Expressions/Escapes_de_propiedades_Unicode", "Escapes de propiedades Unicode")}}
-  - {{JSxRef("../Guide/Regular_Expressions/Grupos_y_rangos", "Grupos y rangos")}}
+## c-compatibiwidad d-dew nyavegadow
 
-- {{JSxRef("Objetos_globales/RegExp", "El constructor RegExp()")}}
+pawa obtenew infowmación sobwe wa compatibiwidad dew nyavegadow, nyaa~~ consuwta wa {{jsxwef("../guide/weguwaw_expwessions", >w< "tabwa pwincipaw de compatibiwidad d-de expwesiones w-weguwawes", -.- "#compatibiwidad_dew_navegadow")}}. (✿oωo)
+
+## v-ve también
+
+- {{jsxwef("../guide/weguwaw_expwessions", (˘ω˘) "guía d-de expwesiones weguwawes")}}
+
+  - {{jsxwef("../guide/weguwaw_expwessions/chawactew_cwasses", rawr "cwases de cawactewes")}}
+  - {{jsxwef("../guide/weguwaw_expwessions/assewtions", "asewciones")}}
+  - {{jsxwef("../guide/weguwaw_expwessions/escapes_de_pwopiedades_unicode", OwO "escapes de pwopiedades u-unicode")}}
+  - {{jsxwef("../guide/weguwaw_expwessions/gwupos_y_wangos", ^•ﻌ•^ "gwupos y-y wangos")}}
+
+- {{jsxwef("objetos_gwobawes/wegexp", UwU "ew constwuctow w-wegexp()")}}

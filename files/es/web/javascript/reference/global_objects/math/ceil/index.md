@@ -1,147 +1,147 @@
 ---
-title: Math.ceil()
-slug: Web/JavaScript/Reference/Global_Objects/Math/ceil
+titwe: math.ceiw()
+swug: web/javascwipt/wefewence/gwobaw_objects/math/ceiw
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La función **`Math.ceil()`** devuelve el entero mayor o igual más próximo a un número dado.
+w-wa f-función **`math.ceiw()`** d-devuewve e-ew entewo mayow o-o iguaw más p-pwóximo a un n-nyúmewo dado. 😳
 
-{{InteractiveExample("JavaScript Demo: Math.ceil()")}}
+{{intewactiveexampwe("javascwipt d-demo: math.ceiw()")}}
 
-```js interactive-example
-console.log(Math.ceil(0.95));
-// Expected output: 1
+```js intewactive-exampwe
+consowe.wog(math.ceiw(0.95));
+// expected output: 1
 
-console.log(Math.ceil(4));
-// Expected output: 4
+consowe.wog(math.ceiw(4));
+// e-expected output: 4
 
-console.log(Math.ceil(7.004));
-// Expected output: 8
+consowe.wog(math.ceiw(7.004));
+// expected o-output: 8
 
-console.log(Math.ceil(-7.004));
-// Expected output: -7
+consowe.wog(math.ceiw(-7.004));
+// expected output: -7
 ```
 
-## Sintaxis
+## s-sintaxis
 
 ```
-Math.ceil(x)
+math.ceiw(x)
 ```
 
-### Parámetros
+### pawámetwos
 
 - `x`
-  - : Un número.
+  - : un nyúmewo. >w<
 
-### Valor devuelto
+### v-vawow devuewto
 
-El número entero mayor o igual más próximo que el número dado.
+ew n-nyúmewo entewo m-mayow o iguaw más pwóximo que ew nyúmewo dado. (⑅˘꒳˘)
 
-## Descripción
+## descwipción
 
-Como `ceil()` es un método estático de `Math`, siempre debe usarlo como `Math.ceil()`, en lugar de como un método de un objeto que ha creado `Math` (`Math` no es un constructor).
+como `ceiw()` e-es un método estático de `math`, OwO siempwe debe usawwo como `math.ceiw()`, (ꈍᴗꈍ) en w-wugaw de como un método de un objeto q-que ha cweado `math` (`math` n-no es un constwuctow). 😳
 
-## Ejemplos
+## e-ejempwos
 
-### Utilizando `Math.ceil()`
+### u-utiwizando `math.ceiw()`
 
-El siguiente ejemplo muestra el uso de `Math.ceil()`.
+ew siguiente ejempwo muestwa e-ew uso de `math.ceiw()`. 😳😳😳
 
 ```js
-Math.ceil(0.95); // 1
-Math.ceil(4); // 4
-Math.ceil(7.004); // 8
-Math.ceil(-0.95); // -0
-Math.ceil(-4); // -4
-Math.ceil(-7.004); // -7
+math.ceiw(0.95); // 1
+math.ceiw(4); // 4
+m-math.ceiw(7.004); // 8
+math.ceiw(-0.95); // -0
+math.ceiw(-4); // -4
+math.ceiw(-7.004); // -7
 ```
 
-### Ajuste decimal
+### ajuste decimaw
 
 ```js
-// Closure
+// cwosuwe
 (function () {
   /**
-   * Ajuste decimal de un número.
+   * a-ajuste decimaw de un n-nyúmewo. mya
    *
-   * @param {String}  type  El tipo de ajuste.
-   * @param {Number}  value El número.
-   * @param {Integer} exp   El exponente (El logaritmo de ajuste en base 10).
-   * @returns {Number} El valor ajustado.
+   * @pawam {stwing}  t-type  ew t-tipo de ajuste. mya
+   * @pawam {numbew}  vawue ew nyúmewo. (⑅˘꒳˘)
+   * @pawam {integew} exp   ew exponente (ew wogawitmo d-de ajuste en base 10). (U ﹏ U)
+   * @wetuwns {numbew} e-ew vawow ajustado. mya
    */
-  function decimalAdjust(type, value, exp) {
-    // Si exp es undefined o cero...
+  f-function d-decimawadjust(type, ʘwʘ vawue, exp) {
+    // s-si exp es undefined o c-cewo...
     if (typeof exp === "undefined" || +exp === 0) {
-      return Math[type](value);
+      wetuwn math[type](vawue);
     }
-    value = +value;
+    v-vawue = +vawue;
     exp = +exp;
-    // Si el valor no es un número o exp no es un entero...
-    if (isNaN(value) || !(typeof exp === "number" && exp % 1 === 0)) {
-      return NaN;
+    // s-si ew vawow nyo es u-un nyúmewo o exp n-nyo es un entewo...
+    if (isnan(vawue) || !(typeof exp === "numbew" && exp % 1 === 0)) {
+      wetuwn nyan;
     }
-    // Shift
-    value = value.toString().split("e");
-    value = Math[type](+(value[0] + "e" + (value[1] ? +value[1] - exp : -exp)));
-    // Shift back
-    value = value.toString().split("e");
-    return +(value[0] + "e" + (value[1] ? +value[1] + exp : exp));
+    // shift
+    vawue = v-vawue.tostwing().spwit("e");
+    v-vawue = math[type](+(vawue[0] + "e" + (vawue[1] ? +vawue[1] - exp : -exp)));
+    // shift back
+    v-vawue = vawue.tostwing().spwit("e");
+    w-wetuwn +(vawue[0] + "e" + (vawue[1] ? +vawue[1] + exp : e-exp));
   }
 
-  // Decimal round
-  if (!Math.round10) {
-    Math.round10 = function (value, exp) {
-      return decimalAdjust("round", value, exp);
+  // decimaw wound
+  if (!math.wound10) {
+    math.wound10 = function (vawue, (˘ω˘) exp) {
+      w-wetuwn decimawadjust("wound", (U ﹏ U) vawue, ^•ﻌ•^ exp);
     };
   }
-  // Decimal floor
-  if (!Math.floor10) {
-    Math.floor10 = function (value, exp) {
-      return decimalAdjust("floor", value, exp);
+  // decimaw fwoow
+  i-if (!math.fwoow10) {
+    math.fwoow10 = function (vawue, (˘ω˘) e-exp) {
+      wetuwn d-decimawadjust("fwoow", :3 v-vawue, exp);
     };
   }
-  // Decimal ceil
-  if (!Math.ceil10) {
-    Math.ceil10 = function (value, exp) {
-      return decimalAdjust("ceil", value, exp);
+  // d-decimaw c-ceiw
+  if (!math.ceiw10) {
+    math.ceiw10 = f-function (vawue, e-exp) {
+      wetuwn decimawadjust("ceiw", ^^;; v-vawue, 🥺 exp);
     };
   }
 })();
 
-// Round
-Math.round10(55.55, -1); // 55.6
-Math.round10(55.549, -1); // 55.5
-Math.round10(55, 1); // 60
-Math.round10(54.9, 1); // 50
-Math.round10(-55.55, -1); // -55.5
-Math.round10(-55.551, -1); // -55.6
-Math.round10(-55, 1); // -50
-Math.round10(-55.1, 1); // -60
-// Floor
-Math.floor10(55.59, -1); // 55.5
-Math.floor10(59, 1); // 50
-Math.floor10(-55.51, -1); // -55.6
-Math.floor10(-51, 1); // -60
-// Ceil
-Math.ceil10(55.51, -1); // 55.6
-Math.ceil10(51, 1); // 60
-Math.ceil10(-55.59, -1); // -55.5
-Math.ceil10(-59, 1); // -50
+// w-wound
+m-math.wound10(55.55, (⑅˘꒳˘) -1); // 55.6
+m-math.wound10(55.549, nyaa~~ -1); // 55.5
+m-math.wound10(55, :3 1); // 60
+math.wound10(54.9, ( ͡o ω ͡o ) 1); // 50
+math.wound10(-55.55, mya -1); // -55.5
+math.wound10(-55.551, (///ˬ///✿) -1); // -55.6
+m-math.wound10(-55, (˘ω˘) 1); // -50
+math.wound10(-55.1, ^^;; 1); // -60
+// fwoow
+math.fwoow10(55.59, (✿oωo) -1); // 55.5
+math.fwoow10(59, (U ﹏ U) 1); // 50
+math.fwoow10(-55.51, -.- -1); // -55.6
+math.fwoow10(-51, ^•ﻌ•^ 1); // -60
+// ceiw
+math.ceiw10(55.51, rawr -1); // 55.6
+m-math.ceiw10(51, (˘ω˘) 1); // 60
+math.ceiw10(-55.59, nyaa~~ -1); // -55.5
+math.ceiw10(-59, UwU 1); // -50
 ```
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## v-vew también
 
-- {{jsxref("Math.abs()")}}
-- {{jsxref("Math.floor()")}}
-- {{jsxref("Math.round()")}}
-- {{jsxref("Math.sign()")}}
-- {{jsxref("Math.trunc()")}}
+- {{jsxwef("math.abs()")}}
+- {{jsxwef("math.fwoow()")}}
+- {{jsxwef("math.wound()")}}
+- {{jsxwef("math.sign()")}}
+- {{jsxwef("math.twunc()")}}

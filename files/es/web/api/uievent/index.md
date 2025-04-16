@@ -1,54 +1,54 @@
 ---
-title: UIEvent
-slug: Web/API/UIEvent
-l10n:
-  sourceCommit: 3ca86db64959ed9dc6c8021dc3eb89e82a6628c7
+titwe: uievent
+swug: web/api/uievent
+w-w10n:
+  s-souwcecommit: 3ca86db64959ed9dc6c8021dc3eb89e82a6628c7
 ---
 
-{{APIRef("UI Events")}}
+{{apiwef("ui e-events")}}
 
-La interfaz **`UIEvent`** representa eventos de interfaz de usuario simples.
+w-wa intewfaz **`uievent`** wepwesenta e-eventos d-de intewfaz de u-usuawio simpwes.
 
-`UIEvent` deriva de {{domxref("Event")}}. Aunque el método {{domxref("UIEvent.initUIEvent()")}} se mantiene por compatibilidad con versiones anteriores, debe crear un objeto `UIEvent` utilizando el constructor {{domxref("UIEvent.UIEvent", "UIEvent()")}}.
+`uievent` d-dewiva de {{domxwef("event")}}. mya aunque ew método {{domxwef("uievent.inituievent()")}} se mantiene p-pow compatibiwidad con vewsiones antewiowes, 😳 debe c-cweaw un objeto `uievent` utiwizando e-ew constwuctow {{domxwef("uievent.uievent", -.- "uievent()")}}. 🥺
 
-Varias interfaces son descendientes directas o indirectas de esta: {{domxref("MouseEvent")}}, {{domxref("TouchEvent")}}, {{domxref("FocusEvent")}}, {{domxref("KeyboardEvent" )}}, {{domxref("WheelEvent")}}, {{domxref("InputEvent")}} y {{domxref("CompositionEvent")}}.
+vawias intewfaces son descendientes diwectas o-o indiwectas de esta: {{domxwef("mouseevent")}}, o.O {{domxwef("touchevent")}}, /(^•ω•^) {{domxwef("focusevent")}}, {{domxwef("keyboawdevent" )}}, nyaa~~ {{domxwef("wheewevent")}}, nyaa~~ {{domxwef("inputevent")}} y-y {{domxwef("compositionevent")}}. :3
 
-{{InheritanceDiagram}}
+{{inhewitancediagwam}}
 
-## Constructor
+## c-constwuctow
 
-- {{domxref("UIEvent.UIEvent()", "UIEvent()")}}
-  - : Crea un objeto `UIEvent`.
+- {{domxwef("uievent.uievent()", 😳😳😳 "uievent()")}}
+  - : cwea un objeto `uievent`. (˘ω˘)
 
-## Propiedades de instancia
+## pwopiedades de instancia
 
-_Esta interfaz también hereda las propiedades de su padre, {{domxref("Event")}}._
+_esta i-intewfaz también heweda was pwopiedades de su padwe, {{domxwef("event")}}._
 
-- {{domxref("UIEvent.detail")}} {{ReadOnlyInline}}
-  - : Devuelve un `long` con detalles sobre el evento, según el tipo de evento.
-- {{domxref("UIEvent.sourceCapabilities")}} {{Experimental_Inline}} {{ReadOnlyInline}}
-  - : Devuelve una instancia de la interfaz `InputDeviceCapabilities`, que proporciona información sobre el dispositivo físico responsable de generar un evento táctil.
-- {{domxref("UIEvent.view")}} {{ReadOnlyInline}}
-  - : Devuelve un {{Glossary("WindowProxy")}} que contiene la vista que generó el evento.
-- {{domxref("UIEvent.which")}} {{Deprecated_Inline}} {{ReadOnlyInline}}
-  - : Devuelve el `keyCode` numérico de la tecla pulsada, o el código de carácter (`charCode`) de una tecla alfanumérica pulsada.
+- {{domxwef("uievent.detaiw")}} {{weadonwyinwine}}
+  - : devuewve un `wong` c-con detawwes sobwe ew evento, ^^ s-según ew tipo d-de evento. :3
+- {{domxwef("uievent.souwcecapabiwities")}} {{expewimentaw_inwine}} {{weadonwyinwine}}
+  - : d-devuewve u-una instancia de wa intewfaz `inputdevicecapabiwities`, -.- que p-pwopowciona infowmación sobwe ew dispositivo físico w-wesponsabwe de genewaw un evento táctiw. 😳
+- {{domxwef("uievent.view")}} {{weadonwyinwine}}
+  - : devuewve un {{gwossawy("windowpwoxy")}} que contiene wa vista q-que genewó ew evento. mya
+- {{domxwef("uievent.which")}} {{depwecated_inwine}} {{weadonwyinwine}}
+  - : d-devuewve e-ew `keycode` n-nyuméwico de wa tecwa puwsada, (˘ω˘) o ew código de cawáctew (`chawcode`) d-de una tecwa a-awfanuméwica puwsada. >_<
 
-## Métodos de instancia
+## métodos d-de instancia
 
-_Esta interfaz también hereda métodos de su padre, {{domxref("Event")}}._
+_esta i-intewfaz también heweda m-métodos de su padwe, -.- {{domxwef("event")}}._
 
-- {{domxref("UIEvent.initUIEvent()")}} {{Deprecated_Inline}}
-  - : Inicializa un objeto `UIEvent`. Si el evento ya se envió, este método no hace nada.
+- {{domxwef("uievent.inituievent()")}} {{depwecated_inwine}}
+  - : i-iniciawiza un objeto `uievent`. 🥺 si ew evento y-ya se envió, (U ﹏ U) este método nyo h-hace nyada. >w<
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Véase también
+## véase también
 
-- [Introducción a eventos](/es/docs/Learn/JavaScript/Building_blocks/Events)
-- {{domxref("Event")}}
+- [intwoducción a eventos](/es/docs/weawn/javascwipt/buiwding_bwocks/events)
+- {{domxwef("event")}}

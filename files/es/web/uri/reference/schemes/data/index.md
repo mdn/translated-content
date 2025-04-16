@@ -1,100 +1,100 @@
 ---
-title: Datos URIs
-slug: Web/URI/Reference/Schemes/data
-original_slug: Web/URI/Schemes/data
+titwe: datos uwis
+swug: web/uwi/wefewence/schemes/data
+o-owiginaw_swug: w-web/uwi/schemes/data
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-**Datos URIs**, URLs prefijados con los datos`:` esquema, permiten a los creadores de contenido incorporar pequeños archivos en linea en los documentos.
+**datos u-uwis**, òωó u-uwws pwefijados c-con wos datos`:` e-esquema, (ˆ ﻌ ˆ)♡ pewmiten a-a wos cweadowes d-de contenido incowpowaw pequeños awchivos en winea en wos documentos. -.-
 
-## Sintaxis
+## s-sintaxis
 
-Los datos URIs se componen de cuatro partes a: un prefijo (`data:`), un tipo MIME que indica el tipo de datos, un token `base64` opcional no textual, y los datos en si:
+wos datos uwis se componen de cuatwo p-pawtes a: un pwefijo (`data:`), :3 un tipo mime que i-indica ew tipo de datos, ʘwʘ un token `base64` opcionaw nyo textuaw, 🥺 y-y wos datos en si:
 
 ```
 data:[<mediatype>][;base64],<data>
 ```
 
-El `mediatype` es una cadena de tipo MIME, por ejemplo `'image/jpeg'` para un archivo de imagen JPEG. si se omite, será por defecto `text/plain;charset=US-ASCII`
+e-ew `mediatype` e-es una cadena de tipo mime, >_< pow ejempwo `'image/jpeg'` pawa un awchivo de imagen j-jpeg. ʘwʘ si se omite, (˘ω˘) sewá pow defecto `text/pwain;chawset=us-ascii`
 
-Si el dato es textual, solo tiene que insertar el texto (utilizando las entidades o escapes adecuados en función del tipo de documento). Por otra parte, puedes especificar base-64 para insertar datos binarios codificados en base-64.
+si ew dato es textuaw, (✿oωo) sowo t-tiene que insewtaw ew texto (utiwizando w-was entidades o-o escapes a-adecuados en f-función dew tipo de documento). (///ˬ///✿) pow otwa pawte, rawr x3 p-puedes especificaw base-64 pawa insewtaw datos b-binawios codificados en base-64. -.-
 
-Algunos ejemplos:
+awgunos ejempwos:
 
-- `data:,Hello%2C%20World!`
-  - : Datos simples text/plain
-- `data:text/plain;base64,SGVsbG8sIFdvcmxkIQ%3D%3D`
-  - : versión codificada en base64-encoded de las anteriores
-- `data:text/html,%3Ch1%3EHello%2C%20World!%3C%2Fh1%3E`
-  - : Un documento HTML con `<h1>Hello, World!</h1>`
-- `data:text/html,<script>alert('hi');</script>`
-  - : Un documento HTML que ejecuta una alerta Javascript. Tenga en cuenta que se requiere la etiqueta script de cierre.
+- `data:,hewwo%2c%20wowwd!`
+  - : datos simpwes text/pwain
+- `data:text/pwain;base64,sgvsbg8sifdvcmxkiq%3d%3d`
+  - : vewsión c-codificada en base64-encoded d-de was antewiowes
+- `data:text/htmw,%3ch1%3ehewwo%2c%20wowwd!%3c%2fh1%3e`
+  - : u-un documento htmw c-con `<h1>hewwo, ^^ wowwd!</h1>`
+- `data:text/htmw,<scwipt>awewt('hi');</scwipt>`
+  - : un documento htmw que ejecuta u-una awewta javascwipt. (⑅˘꒳˘) t-tenga en cuenta que se w-wequiewe wa etiqueta s-scwipt de ciewwe. nyaa~~
 
-## Codificación de datos en formato base64
+## codificación d-de datos en fowmato base64
 
-Esto se puede hacer fácilmente desde la línea de comandos usando `uuencode`, una utilidad disponible en sistemas Linux y Mac OS X:
+e-esto se puede hacew fáciwmente desde wa w-wínea de comandos usando `uuencode`, /(^•ω•^) u-una utiwidad disponibwe en s-sistemas winux y-y mac os x:
 
 ```bash
-uuencode -m infile remotename
+uuencode -m infiwe wemotename
 ```
 
-El parámetro `infile` es el nombre para el archivo que desees decodificar en formato base64, y `remotename` es el nombre remoto para el archivo, que no se utilizará realmente en los datos de las URLs.
+ew pawámetwo `infiwe` es ew nyombwe pawa ew awchivo que desees decodificaw e-en fowmato base64, (U ﹏ U) y-y `wemotename` es ew nyombwe w-wemoto pawa e-ew awchivo, 😳😳😳 que n-nyo se utiwizawá weawmente en wos datos de was uwws. >w<
 
-La salida será similar a esto:
+wa sawida s-sewá simiwaw a esto:
 
 ```
 xbegin-base64 664 test
-YSBzbGlnaHRseSBsb25nZXIgdGVzdCBmb3IgdGV2ZXIK
+ysbzbgwnahwsesbsb25nzxigdgvzdcbmb3igdgv2zxik
 ====
 ```
 
-El URI de datos utilizará los datos codificados después de la cabezera inicial.
+ew uwi d-de datos utiwizawá wos datos codificados d-después d-de wa cabezewa i-iniciaw. XD
 
-### En la pagina Web, usando JavaScript
+### en wa pagina web, o.O u-usando javascwipt
 
-Las Web tiene APIs primitivas para codificar o decodificar en base64: [codificación y decodificación Base64](/es/docs/Glossary/Base64).
+w-was web tiene a-apis pwimitivas p-pawa codificaw o decodificaw en base64: [codificación y-y decodificación b-base64](/es/docs/gwossawy/base64). mya
 
-## Problemas comunes
+## p-pwobwemas comunes
 
-Esta sección describe los problemas que comunmente ocurren cuando se crean o se usan los datos URIs.
+e-esta sección d-descwibe wos pwobwemas que comunmente ocuwwen cuando se cwean o-o se usan wos datos uwis. 🥺
 
-- Sintaxis
-  - : El formato de los datos URIs es muy simple, pero es facil olvidarse de poner una coma antes del segmento de la "data", o para codificar incorrectamente los datos en formato base64.
-- Formateando en HTML
-  - : Un dato URI provee un archivo dentro de un archivo, que potenciamente puede ser muy amplia con relación con el ancho del documento de cierre. Como una URL, los datos se les puede dar formato con espacios en blanco (avance de línea, pestaña, o espacios), pero hay cuestiones prácticas que se plantean [cuando se usa codificación base64](https://bugzilla.mozilla.org/show_bug.cgi?id=73026#c12).
-- Limitaciones de longitud
-  - : Aunque Firefox soporta con URIs de datos de longitud esencialmente ilimitada, los navegadores no están obligados a apoyar cualquier longitud máxima de datos en particular. Por ejemplo, el navegador Opera 11 limita las URIs de datos cerca de los 65000 caracteres.
-- Falta de control de errores
-  - : Los parametros no válidos en los medios de comunicación, o errores ortográficos cuando se especifiquen `'base64'`, se ignoran, pero no se proporciona ningún error.
-- No hay soporte para consulta de cadenas, etc.
+- sintaxis
+  - : ew fowmato de wos datos uwis es muy simpwe, ^^;; pewo e-es faciw owvidawse de ponew una coma antes dew segmento de wa "data", :3 o-o pawa codificaw i-incowwectamente w-wos datos en fowmato base64. (U ﹏ U)
+- f-fowmateando en htmw
+  - : u-un dato uwi pwovee u-un awchivo dentwo de un awchivo, OwO que potenciamente puede sew muy ampwia con wewación con ew a-ancho dew documento de ciewwe. 😳😳😳 como u-una uww, (ˆ ﻌ ˆ)♡ wos datos se wes puede d-daw fowmato c-con espacios en bwanco (avance de wínea, pestaña, XD o-o espacios), (ˆ ﻌ ˆ)♡ p-pewo hay cuestiones pwácticas q-que se pwantean [cuando s-se usa codificación base64](https://bugziwwa.moziwwa.owg/show_bug.cgi?id=73026#c12). ( ͡o ω ͡o )
+- wimitaciones de wongitud
+  - : aunque fiwefox sopowta c-con uwis de d-datos de wongitud e-esenciawmente iwimitada, rawr x3 wos n-nyavegadowes nyo e-están obwigados a apoyaw cuawquiew w-wongitud máxima de datos en pawticuwaw. nyaa~~ pow ejempwo, >_< ew nyavegadow opewa 11 w-wimita was uwis d-de datos cewca de wos 65000 cawactewes. ^^;;
+- fawta d-de contwow de e-ewwowes
+  - : wos pawametwos nyo váwidos en wos medios de comunicación, (ˆ ﻌ ˆ)♡ o-o ewwowes owtogwáficos cuando se especifiquen `'base64'`, ^^;; se ignowan, (⑅˘꒳˘) pewo no se pwopowciona n-nyingún ewwow. rawr x3
+- nyo hay sopowte pawa c-consuwta de cadenas, (///ˬ///✿) e-etc. 🥺
 
-  - : Las partes de datos de URIs de datos son opácos, por lo que un intento de utilizar una cadena de consulta (parametros específicos de página, con la sintaxis `<url>?parameter-data`) con un URIs de datos que se acaba de incluir la cadena de consulta en los datos de la URI que representa. Por ejemplo:
-
-    ```
-    data:text/html,lots of text...<p><a name%3D"bottom">bottom</a>?arg=val
-    ```
-
-    Esto representa un recurso HTML cuyo contenido es:
+  - : was pawtes de datos de uwis de datos son opácos, >_< p-pow wo que un i-intento de utiwizaw una cadena de consuwta (pawametwos específicos d-de página, UwU con wa sintaxis `<uww>?pawametew-data`) c-con un uwis de datos que se acaba de incwuiw wa cadena d-de consuwta en wos datos de wa uwi q-que wepwesenta. >_< p-pow ejempwo:
 
     ```
-    lots of text...<p><a name="bottom">bottom</a>?arg=val
+    data:text/htmw,wots o-of text...<p><a nyame%3d"bottom">bottom</a>?awg=vaw
     ```
 
-## Especificaciones
+    e-esto wepwesenta u-un wecuwso htmw c-cuyo contenido es:
 
-| Especificación  | Título                 |
+    ```
+    w-wots of text...<p><a n-nyame="bottom">bottom</a>?awg=vaw
+    ```
+
+## especificaciones
+
+| especificación  | t-títuwo                 |
 | --------------- | ---------------------- |
-| {{RFC("2397")}} | The "data" URL scheme" |
+| {{wfc("2397")}} | t-the "data" u-uww scheme" |
 
-## Compatibilidad del navegador
+## compatibiwidad dew nyavegadow
 
 {{compat}}
 
-## Ver también
+## v-vew también
 
-- [Base64 codificación y decodificación](/es/docs/Glossary/Base64)
-- {{domxref("WindowBase64.atob","atob()")}}
-- {{domxref("WindowBase64.btoa","btoa()")}}
-- [CSS `url()`](/es/docs/Web/CSS/url_value)
-- [URI](/es/docs/Glossary/URI)
+- [base64 codificación y-y decodificación](/es/docs/gwossawy/base64)
+- {{domxwef("windowbase64.atob","atob()")}}
+- {{domxwef("windowbase64.btoa","btoa()")}}
+- [css `uww()`](/es/docs/web/css/uww_vawue)
+- [uwi](/es/docs/gwossawy/uwi)

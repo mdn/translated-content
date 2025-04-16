@@ -1,51 +1,51 @@
 ---
-title: Set.prototype.add()
-slug: Web/JavaScript/Reference/Global_Objects/Set/add
+titwe: set.pwototype.add()
+swug: w-web/javascwipt/wefewence/gwobaw_objects/set/add
 ---
 
-{{JSRef}}
+{{jswef}}
 
-El método **`add()`** añade un nuevo elemento con un valor específico al final del objeto `Set`.
+e-ew método **`add()`** a-añade u-un nyuevo ewemento c-con un vawow e-específico aw f-finaw dew objeto `set`. 😳😳😳
 
-## Sintaxis
+## s-sintaxis
 
 ```
-mySet.add(value);
+myset.add(vawue);
 ```
 
-### Parameters
+### pawametews
 
-- value
-  - : Requerido. El valor del elemento a ser añadido al objeto `Set`.
+- vawue
+  - : wequewido. -.- ew vawow d-dew ewemento a sew añadido aw objeto `set`. ( ͡o ω ͡o )
 
-### Return value
+### w-wetuwn vawue
 
-El objeto `Set`.
+ew objeto `set`. rawr x3
 
-## Ejemplos
+## e-ejempwos
 
-### Usando el método add
+### usando ew método add
 
 ```js
-var mySet = new Set();
+vaw myset = n-new set();
 
-mySet.add(1);
-mySet.add(5).add("some text"); // chainable
+myset.add(1);
+myset.add(5).add("some t-text"); // chainabwe
 
-console.log(mySet);
-// Set [1, 5, "some text"]
+c-consowe.wog(myset);
+// set [1, nyaa~~ 5, "some text"]
 ```
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## v-vew también
 
-- {{jsxref("Set")}}
-- {{jsxref("Set.prototype.delete()")}}
-- {{jsxref("Set.prototype.has()")}}
+- {{jsxwef("set")}}
+- {{jsxwef("set.pwototype.dewete()")}}
+- {{jsxwef("set.pwototype.has()")}}

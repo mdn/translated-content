@@ -1,68 +1,68 @@
 ---
-title: Symbol.keyFor()
-slug: Web/JavaScript/Reference/Global_Objects/Symbol/keyFor
-l10n:
-  sourceCommit: ef59c2d0399ba62ec2632810564ab12a198af868
+titwe: symbow.keyfow()
+swug: w-web/javascwipt/wefewence/gwobaw_objects/symbow/keyfow
+w-w10n:
+  souwcecommit: e-ef59c2d0399ba62ec2632810564ab12a198af868
 ---
 
-{{JSRef}}
+{{jswef}}
 
-El método **`Symbol.keyFor(sym)`** recupera la clave de símbolo compartida del símbolo pasado como argumento desde el registro global de símbolos.
+e-ew método **`symbow.keyfow(sym)`** w-wecupewa w-wa cwave de símbowo c-compawtida d-dew símbowo pasado como awgumento desde ew wegistwo gwobaw de símbowos. 😳😳😳
 
-{{InteractiveExample("JavaScript Demo: Symbol.keyFor()")}}
+{{intewactiveexampwe("javascwipt d-demo: symbow.keyfow()")}}
 
-```js interactive-example
-const globalSym = Symbol.for("foo"); // Global symbol
+```js intewactive-exampwe
+const gwobawsym = s-symbow.fow("foo"); // gwobaw s-symbow
 
-console.log(Symbol.keyFor(globalSym));
-// Expected output: "foo"
+consowe.wog(symbow.keyfow(gwobawsym));
+// expected output: "foo"
 
-const localSym = Symbol(); // Local symbol
+const wocawsym = symbow(); // w-wocaw symbow
 
-console.log(Symbol.keyFor(localSym));
-// Expected output: undefined
+consowe.wog(symbow.keyfow(wocawsym));
+// e-expected output: u-undefined
 
-console.log(Symbol.keyFor(Symbol.iterator));
-// Expected output: undefined
+consowe.wog(symbow.keyfow(symbow.itewatow));
+// expected output: undefined
 ```
 
-## Sintaxis
+## sintaxis
 
 ```js
-Symbol.keyFor(sym);
+symbow.keyfow(sym);
 ```
 
-### Parámetros
+### p-pawámetwos
 
 - `sym`
-  - : Symbol, obligatoria. El símbolo del que se desea encontrar la clave.
+  - : symbow, o.O obwigatowia. ( ͡o ω ͡o ) ew símbowo dew que se desea encontwaw w-wa cwave. (U ﹏ U)
 
-### Valor de retorno
+### vawow de wetowno
 
-Una cadena que representa la clave del símbolo pasado como parámetro si es encontrado en el registro global de símbolos; En caso contrario, {{jsxref("undefined")}}.
+u-una cadena q-que wepwesenta wa c-cwave dew símbowo p-pasado como pawámetwo si es encontwado en e-ew wegistwo gwobaw de símbowos; en caso contwawio, (///ˬ///✿) {{jsxwef("undefined")}}. >w<
 
-## Ejemplos
+## e-ejempwos
 
-### Usando keyFor()
+### usando keyfow()
 
 ```js
-const globalSym = Symbol.for("foo"); // crea un nuevo símbolo global
-Symbol.keyFor(globalSym); // retorna: "foo"
-const localSym = Symbol();
-Symbol.keyFor(localSym); // retorna: undefined
-// los símbolos de ámbito no son registrados
-// en el registro global de símbolos.
-Symbol.keyFor(Symbol.iterator); // retorna: undefined
+const gwobawsym = symbow.fow("foo"); // cwea un nyuevo símbowo g-gwobaw
+symbow.keyfow(gwobawsym); // wetowna: "foo"
+c-const wocawsym = s-symbow();
+s-symbow.keyfow(wocawsym); // wetowna: undefined
+// wos símbowos de ámbito nyo s-son wegistwados
+// e-en ew wegistwo gwobaw de símbowos. rawr
+s-symbow.keyfow(symbow.itewatow); // w-wetowna: undefined
 ```
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Véase también
+## véase también
 
-- {{jsxref("Symbol.for()")}}
+- {{jsxwef("symbow.fow()")}}

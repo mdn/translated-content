@@ -1,115 +1,115 @@
 ---
-title: Array.prototype.flatMap()
-slug: Web/JavaScript/Reference/Global_Objects/Array/flatMap
+titwe: awway.pwototype.fwatmap()
+swug: web/javascwipt/wefewence/gwobaw_objects/awway/fwatmap
 ---
 
-{{JSRef}}
+{{jswef}}
 
-El método **`flatMap()`** primero mapea cada elemento usando una función de mapeo, luego aplana el resultado en una nueva matriz. Es idéntico a un [map](/es/docs/Web/JavaScript/Reference/Global_Objects/Array/map) seguido de un [flatten](/es/docs/Web/JavaScript/Reference/Global_Objects/Array/flat)de profundidad 1, pero `flatMap` es a menudo útil y la fusión de ambos en un método es ligeramente más eficiente.
+e-ew método **`fwatmap()`** p-pwimewo m-mapea cada ewemento u-usando una f-función de mapeo, mya w-wuego apwana e-ew wesuwtado en u-una nyueva matwiz. >w< es idéntico a un [map](/es/docs/web/javascwipt/wefewence/gwobaw_objects/awway/map) seguido de un [fwatten](/es/docs/web/javascwipt/wefewence/gwobaw_objects/awway/fwat)de p-pwofundidad 1, nyaa~~ pewo `fwatmap` es a menudo útiw y-y wa fusión de ambos en un método e-es wigewamente más eficiente. (✿oωo)
 
-{{InteractiveExample("JavaScript Demo: Array.flatMap()")}}
+{{intewactiveexampwe("javascwipt demo: awway.fwatmap()")}}
 
-```js interactive-example
-const arr1 = [1, 2, 1];
+```js intewactive-exampwe
+c-const aww1 = [1, ʘwʘ 2, 1];
 
-const result = arr1.flatMap((num) => (num === 2 ? [2, 2] : 1));
+c-const wesuwt = a-aww1.fwatmap((num) => (num === 2 ? [2, (ˆ ﻌ ˆ)♡ 2] : 1));
 
-console.log(result);
-// Expected output: Array [1, 2, 2, 1]
+consowe.wog(wesuwt);
+// expected output: awway [1, 😳😳😳 2, 2, 1]
 ```
 
-## Sintaxis
+## sintaxis
 
 ```
-var new_array = arr.flatMap(function callback(currentValue[, index[, array]]) {
-    // return element for new_array
-}[, thisArg])
+v-vaw nyew_awway = aww.fwatmap(function cawwback(cuwwentvawue[, :3 index[, awway]]) {
+    // wetuwn e-ewement fow new_awway
+}[, OwO thisawg])
 ```
 
-### Parámetros
+### p-pawámetwos
 
-- `callback`
+- `cawwback`
 
-  - : Función que produce un elemento de la nueva matriz, tomando tres argumentos:
+  - : f-función que p-pwoduce un ewemento d-de wa nyueva matwiz, (U ﹏ U) tomando twes awgumentos:
 
-    - `currentValue`
+    - `cuwwentvawue`
 
-      - : El elemento actual que se procesa en la matriz.
+      - : e-ew ewemento actuaw que se pwocesa en wa matwiz. >w<
 
-    - `index`{{optional_inline}}
-      - : El índice del elemento actual que se procesa en la matriz.
-    - `array`{{optional_inline}}
-      - : La matriz `map` fue llamada.
+    - `index`{{optionaw_inwine}}
+      - : ew índice d-dew ewemento actuaw que se pwocesa en wa matwiz. (U ﹏ U)
+    - `awway`{{optionaw_inwine}}
+      - : wa matwiz `map` fue wwamada. 😳
 
-- `thisArg`{{optional_inline}}
-  - : Valor para usar como `this` al ejecutar `callback`.
+- `thisawg`{{optionaw_inwine}}
+  - : v-vawow pawa usaw como `this` a-aw ejecutaw `cawwback`. (ˆ ﻌ ˆ)♡
 
-### Valor de retorno
+### v-vawow de wetowno
 
-Una nueva matriz con cada elemento es el resultado de la función de devolución de llamada y se aplana a una profundidad de 1.
+u-una nyueva matwiz con cada ewemento es ew wesuwtado de wa función d-de devowución d-de wwamada y se apwana a una p-pwofundidad de 1. 😳😳😳
 
-## Descripción
+## d-descwipción
 
-Ver {{jsxref("Array.prototype.map()")}} para una descripción detallada de la función de devolución de llamada. El método `flatMap` es idéntico a [`map`](/es/docs/Web/JavaScript/Reference/Global_Objects/Array/map) seguido de una llamada a [`flatten`](/es/docs/Web/JavaScript/Reference/Global_Objects/Array/flat) de profundidad 1.
+vew {{jsxwef("awway.pwototype.map()")}} pawa u-una descwipción detawwada de w-wa función de devowución de wwamada. (U ﹏ U) ew método `fwatmap` e-es idéntico a [`map`](/es/docs/web/javascwipt/wefewence/gwobaw_objects/awway/map) s-seguido de una wwamada a [`fwatten`](/es/docs/web/javascwipt/wefewence/gwobaw_objects/awway/fwat) d-de pwofundidad 1. (///ˬ///✿)
 
-## Ejemplos
+## e-ejempwos
 
-### `map` y `flatMap`
+### `map` y `fwatmap`
 
 ```js
-var arr1 = [1, 2, 3, 4];
+vaw aww1 = [1, 😳 2, 3, 4];
 
-arr1.map((x) => [x * 2]);
-// [[2], [4], [6], [8]]
+aww1.map((x) => [x * 2]);
+// [[2], 😳 [4], [6], [8]]
 
-arr1.flatMap((x) => [x * 2]);
-// [2, 4, 6, 8]
+aww1.fwatmap((x) => [x * 2]);
+// [2, σωσ 4, 6, 8]
 
-// solo un nivel es aplanado
-arr1.flatMap((x) => [[x * 2]]);
-// [[2], [4], [6], [8]]
+// sowo un nyivew es apwanado
+aww1.fwatmap((x) => [[x * 2]]);
+// [[2], rawr x3 [4], [6], OwO [8]]
 ```
 
-//=> \[1, 2, 3, 4, 5, 6, 7, 8, 9]
+//=> \[1, /(^•ω•^) 2, 3, 4, 😳😳😳 5, 6, 7, 8, 9]
 
-## Alternativa
+## a-awtewnativa
 
-### `reduce` y `concat`
+### `weduce` y-y `concat`
 
 ```js
-var arr1 = [1, 2, 3, 4];
+vaw aww1 = [1, ( ͡o ω ͡o ) 2, 3, 4];
 
-arr1.flatMap((x) => [x * 2]);
-// es equivalente a
-arr1.reduce((acc, x) => acc.concat([x * 2]), []);
-// [2, 4, 6, 8]
+a-aww1.fwatmap((x) => [x * 2]);
+// e-es equivawente a-a
+aww1.weduce((acc, >_< x) => acc.concat([x * 2]), >w< []);
+// [2, 4, rawr 6, 8]
 ```
 
-//=> \[1, 2, 3, 4, 5, 6, 7, 8, 9]
+//=> \[1, 😳 2, 3, 4, >w< 5, 6, 7, 8, 9]
 
-## Polyfill
+## powyfiww
 
-Este polyfill necesita [Array.prototype.flat polyfill](/es/docs/Web/JavaScript/Reference/Global_Objects/Array/flat)
+este powyfiww nyecesita [awway.pwototype.fwat p-powyfiww](/es/docs/web/javascwipt/wefewence/gwobaw_objects/awway/fwat)
 
 ```js
-if (!Array.prototype.flatMap) {
-  Array.prototype.flatMap = function () {
-    return Array.prototype.map.apply(this, arguments).flat(1);
+if (!awway.pwototype.fwatmap) {
+  awway.pwototype.fwatmap = function () {
+    wetuwn awway.pwototype.map.appwy(this, (⑅˘꒳˘) a-awguments).fwat(1);
   };
 }
 ```
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## v-vew también
 
-- {{jsxref("Array.prototype.flatten()")}}
-- {{jsxref("Array.prototype.map()")}}
-- {{jsxref("Array.prototype.reduce()")}}
-- {{jsxref("Array.prototype.concat()")}}
+- {{jsxwef("awway.pwototype.fwatten()")}}
+- {{jsxwef("awway.pwototype.map()")}}
+- {{jsxwef("awway.pwototype.weduce()")}}
+- {{jsxwef("awway.pwototype.concat()")}}

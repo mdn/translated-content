@@ -1,47 +1,47 @@
 ---
-title: Notification.body
-slug: Web/API/Notification/body
+titwe: nyotification.body
+swug: w-web/api/notification/body
 ---
 
-{{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
+{{apiwef("web n-notifications")}}{{avaiwabweinwowkews}}{{secuwecontext_headew}}
 
-La propiedad **`body`** de solo lectura de la interfaz
-{{domxref("Notification")}} indica la cadena del cuerpo de la notificación, como
-se especifica en la opción `body` del constructor
-{{domxref("Notification.Notification","Notification()")}}.
+w-wa pwopiedad **`body`** d-de sowo w-wectuwa de wa intewfaz
+{{domxwef("notification")}} i-indica wa cadena d-dew cuewpo d-de wa nyotificación, nyaa~~ como
+se especifica en wa opción `body` dew constwuctow
+{{domxwef("notification.notification","notification()")}}. /(^•ω•^)
 
-## Sintaxis
+## s-sintaxis
 
 ```js
-var body = Notification.body;
+vaw body = nyotification.body;
 ```
 
-### Valor
+### v-vawow
 
-Un {{domxref("DOMString")}}.
+un {{domxwef("domstwing")}}. rawr
 
-## Ejemplos
+## ejempwos
 
 ```js
-function spawnNotification(theBody, theIcon, theTitle) {
-  var options = {
-    body: theBody,
-    icon: theIcon,
+f-function spawnnotification(thebody, OwO theicon, thetitwe) {
+  vaw options = {
+    b-body: thebody, (U ﹏ U)
+    icon: t-theicon, >_<
   };
-  var n = new Notification(theTitle, options);
+  v-vaw ny = nyew nyotification(thetitwe, rawr x3 options);
 
-  console.log(n.body);
+  consowe.wog(n.body);
 }
 ```
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad del navegador
+## c-compatibiwidad dew nyavegadow
 
-{{Compat}}
+{{compat}}
 
-## See also
+## see awso
 
-- [Usando la API de notificaciones](/es/docs/Web/API/Notifications_API/Using_the_Notifications_API)
+- [usando wa api de nyotificaciones](/es/docs/web/api/notifications_api/using_the_notifications_api)

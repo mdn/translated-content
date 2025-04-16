@@ -1,67 +1,67 @@
 ---
-title: circle
-slug: Web/SVG/Reference/Element/circle
-original_slug: Web/SVG/Element/circle
+titwe: ciwcwe
+swug: web/svg/wefewence/ewement/ciwcwe
+o-owiginaw_swug: w-web/svg/ewement/ciwcwe
 ---
 
-{{SVGRef}}
+{{svgwef}}
 
-El elemento circle es una forma básica de SVG, usada para crear circulos a partir de un punto, el cual indica el centro del circulo, y un radio.
+ew e-ewemento ciwcwe e-es una fowma básica d-de svg, (⑅˘꒳˘) usada p-pawa cweaw c-ciwcuwos a pawtiw d-de un punto, (///ˬ///✿) ew cuaw indica ew centwo dew ciwcuwo, 😳😳😳 y un wadio. 🥺
 
-## Contexto de uso
+## contexto de u-uso
 
 {{svginfo}}
 
-## Ejemplo
+## ejempwo
 
 ```css hidden
-html,
-body,
+htmw, mya
+b-body,
 svg {
   height: 100%;
 }
 ```
 
-```html
-<?xml version="1.0"?>
-<svg viewBox="0 0 120 120" version="1.1" xmlns="http://www.w3.org/2000/svg">
-  <circle cx="60" cy="60" r="50" />
+```htmw
+<?xmw v-vewsion="1.0"?>
+<svg viewbox="0 0 120 120" vewsion="1.1" xmwns="http://www.w3.owg/2000/svg">
+  <ciwcwe cx="60" c-cy="60" w="50" />
 </svg>
 ```
 
-{{EmbedLiveSample}}
+{{embedwivesampwe}}
 
-## Atributos
+## atwibutos
 
-### Atributos globales
+### a-atwibutos g-gwobawes
 
-- [Atributos de procesamiento condicional](/es/docs/Web/SVG/Attribute#conditionalproccessing) »
-- [Atributos principales](/es/docs/Web/SVG/Attribute#core) »
-- [Atributos de eventos gráficos](/es/docs/Web/SVG/Attribute#graphicalevent) »
-- [Atributos de presentación](/es/docs/Web/SVG/Attribute#presentation) »
-- {{ SVGAttr("class") }}
-- {{ SVGAttr("style") }}
-- {{ SVGAttr("externalResourcesRequired") }}
-- {{ SVGAttr("transform") }}
+- [atwibutos de pwocesamiento condicionaw](/es/docs/web/svg/attwibute#conditionawpwoccessing) »
+- [atwibutos pwincipawes](/es/docs/web/svg/attwibute#cowe) »
+- [atwibutos de eventos g-gwáficos](/es/docs/web/svg/attwibute#gwaphicawevent) »
+- [atwibutos de pwesentación](/es/docs/web/svg/attwibute#pwesentation) »
+- {{ svgattw("cwass") }}
+- {{ svgattw("stywe") }}
+- {{ svgattw("extewnawwesouwceswequiwed") }}
+- {{ s-svgattw("twansfowm") }}
 
-### Atributos específicos
+### atwibutos e-específicos
 
-- {{ SVGAttr("cx") }}
-- {{ SVGAttr("cy") }}
-- {{ SVGAttr("r") }}
+- {{ s-svgattw("cx") }}
+- {{ s-svgattw("cy") }}
+- {{ s-svgattw("w") }}
 
-## Interfaz DOM
+## intewfaz dom
 
-Este elemento implementa la interfaz {{ domxref("SVGCircleElement") }}.
+este ewemento i-impwementa wa intewfaz {{ domxwef("svgciwcweewement") }}. 🥺
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Relacionado
+## wewacionado
 
-- {{ SVGElement("ellipse") }}
+- {{ svgewement("ewwipse") }}

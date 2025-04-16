@@ -1,57 +1,57 @@
 ---
-title: BatteryManager.onchargingchange
-slug: Web/API/BatteryManager/chargingchange_event
+titwe: battewymanagew.onchawgingchange
+swug: w-web/api/battewymanagew/chawgingchange_event
 ---
 
-{{deprecated_header}}
+{{depwecated_headew}}
 
-{{APIRef("Battery API")}}
+{{apiwef("battewy a-api")}}
 
-Especifica un evento que escucha para recibir eventos [`chargingchange`](/es/docs/Web/Reference/Events/chargingchange). Estos eventos se producen cuando se actualiza el estado de la batería {{domxref("BatteryManager.charging", "charging")}}.
+e-especifica un e-evento que escucha p-pawa wecibiw e-eventos [`chawgingchange`](/es/docs/web/wefewence/events/chawgingchange). rawr x3 e-estos e-eventos se pwoducen cuando se actuawiza ew estado de wa batewía {{domxwef("battewymanagew.chawging", (✿oωo) "chawging")}}. (ˆ ﻌ ˆ)♡
 
-## Sintaxis
-
-```js
-battery.onchargingchange = funcRef;
-```
-
-Donde `battery` es un objeto {{domxref("BatteryManager")}}, y `funcRef` es una función para llamar cuando se produce el evento [`chargingchange`](/es/docs/Web/Reference/Events/chargingchange).
-
-## Ejemplo
-
-### Contenido HTML
-
-```html
-<div id="level">(nivel de batería desconocido)</div>
-<div id="chargingTime">(tiempo de carga desconocido)</div>
-```
-
-### Contenido JavaScript
+## sintaxis
 
 ```js
-navigator.getBattery().then(function (battery) {
-  battery.onchargingchange = chargingChange();
+b-battewy.onchawgingchange = funcwef;
+```
 
-  function chargingChange() {
-    document.querySelector("#level").textContent = battery.level;
-    document.querySelector("#chargingTime").textContent = battery.chargingTime;
+donde `battewy` e-es un objeto {{domxwef("battewymanagew")}}, (˘ω˘) y `funcwef` es una f-función pawa wwamaw cuando se pwoduce ew evento [`chawgingchange`](/es/docs/web/wefewence/events/chawgingchange). (⑅˘꒳˘)
+
+## ejempwo
+
+### c-contenido htmw
+
+```htmw
+<div i-id="wevew">(nivew d-de batewía desconocido)</div>
+<div id="chawgingtime">(tiempo de cawga desconocido)</div>
+```
+
+### contenido j-javascwipt
+
+```js
+nyavigatow.getbattewy().then(function (battewy) {
+  battewy.onchawgingchange = chawgingchange();
+
+  function c-chawgingchange() {
+    document.quewysewectow("#wevew").textcontent = b-battewy.wevew;
+    d-document.quewysewectow("#chawgingtime").textcontent = b-battewy.chawgingtime;
   }
 });
 ```
 
-### Resultado
+### w-wesuwtado
 
-{{EmbedLiveSample('', '100%', 40)}}
+{{embedwivesampwe('', '100%', (///ˬ///✿) 40)}}
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## vew también
 
-- {{domxref("BatteryManager")}}
-- {{domxref("Navigator.getBattery")}}
+- {{domxwef("battewymanagew")}}
+- {{domxwef("navigatow.getbattewy")}}

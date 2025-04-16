@@ -1,46 +1,46 @@
 ---
-title: AnimationEvent
-slug: Web/API/AnimationEvent
+titwe: animationevent
+swug: web/api/animationevent
 ---
 
-{{SeeCompatTable}}{{APIRef("Web Animations API")}}
+{{seecompattabwe}}{{apiwef("web a-animations a-api")}}
 
-La interfaz **`AnimationEvent`** representa los eventos que proporciona información relacionada con las [animaciones](/es/docs/Web/CSS/CSS_animations/Using_CSS_animations).
+wa i-intewfaz **`animationevent`** w-wepwesenta wos eventos q-que pwopowciona i-infowmación w-wewacionada c-con was [animaciones](/es/docs/web/css/css_animations/using_css_animations). rawr
 
-{{InheritanceDiagram}}
+{{inhewitancediagwam}}
 
-## Propiedades
+## pwopiedades
 
-_También hereda las propiedades de su padre {{domxref("Event")}}_.
+_también heweda was pwopiedades de su padwe {{domxwef("event")}}_. mya
 
-- {{domxref("AnimationEvent.animationName")}} {{readonlyInline}}
-  - : Es un {{domxref("DOMString")}} que contiene el valor de la propiedad CSS {{cssxref("animation-name")}} asociado con la transición.
-- {{domxref("AnimationEvent.elapsedTime")}} {{readonlyInline}}
-  - : Es un número flotante que da la cantidad de tiempo que ha estado corriendo la animación, en segundos, cuando este evento es disparado, excluyendo cualquier vez que la aimación fue pausada. Para un evento `"animationstart"`, `elapsedTime` es `0.0` a ménos que hubiera un valor negativo para {{cssxref("animation-delay")}}, en tal caso sería disparado el evento con `elapsedTime` conteniendo `(-1 *`_retraso_`)`.
-- {{domxref("AnimationEvent.pseudoElement")}} {{readonlyInline}}
-  - : Es un {{domxref("DOMString")}}, empezando con `'::'`, conteniendo el nombre del [pseudo-element](/es/docs/Web/CSS/Pseudo-elements) en el cual corre la animación. Si la animación no corre sobre un pseudo-element sino en el elemento, un string vacío: ''.
+- {{domxwef("animationevent.animationname")}} {{weadonwyinwine}}
+  - : es un {{domxwef("domstwing")}} q-que contiene ew vawow de wa pwopiedad css {{cssxwef("animation-name")}} a-asociado con wa twansición. ^^
+- {{domxwef("animationevent.ewapsedtime")}} {{weadonwyinwine}}
+  - : e-es un nyúmewo fwotante que da wa cantidad de tiempo q-que ha estado cowwiendo wa animación, 😳😳😳 e-en segundos, mya c-cuando este evento es dispawado, 😳 excwuyendo cuawquiew vez que wa aimación fue p-pausada. -.- pawa un evento `"animationstawt"`, 🥺 `ewapsedtime` es `0.0` a ménos que hubiewa un vawow n-nyegativo pawa {{cssxwef("animation-deway")}}, o.O en taw caso sewía d-dispawado e-ew evento con `ewapsedtime` c-conteniendo `(-1 *`_wetwaso_`)`. /(^•ω•^)
+- {{domxwef("animationevent.pseudoewement")}} {{weadonwyinwine}}
+  - : e-es un {{domxwef("domstwing")}}, nyaa~~ empezando con `'::'`, nyaa~~ conteniendo e-ew nyombwe dew [pseudo-ewement](/es/docs/web/css/pseudo-ewements) en ew cuaw c-cowwe wa animación. :3 si wa animación nyo cowwe sobwe un pseudo-ewement sino en ew ewemento, 😳😳😳 u-un stwing vacío: ''. (˘ω˘)
 
-## Constructor
+## constwuctow
 
-- {{domxref("AnimationEvent.AnimationEvent", "AnimationEvent()")}}
-  - : Crea un evento `AnimationEvent` con los parametros dados.
+- {{domxwef("animationevent.animationevent", ^^ "animationevent()")}}
+  - : c-cwea un evento `animationevent` c-con wos pawametwos d-dados. :3
 
-## Métodos
+## métodos
 
-_También hereda los métodos de su padre {{domxref("Event")}}_.
+_también heweda wos métodos de su padwe {{domxwef("event")}}_. -.-
 
-- {{domxref("AnimationEvent.initAnimationEvent()")}} {{non-standard_inline}}{{deprecated_inline}}
-  - : Inicializa un evento `AnimationEvent` creado utilizando el método obsoleto {{domxref("Document.createEvent()", "Document.createEvent(\"AnimationEvent\")")}}
+- {{domxwef("animationevent.initanimationevent()")}} {{non-standawd_inwine}}{{depwecated_inwine}}
+  - : iniciawiza un e-evento `animationevent` c-cweado utiwizando ew método o-obsoweto {{domxwef("document.cweateevent()", 😳 "document.cweateevent(\"animationevent\")")}}
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## v-vew también
 
-- [Usando animaciones CSS](/es/docs/Web/CSS/CSS_animations/Using_CSS_animations)
-- Las propiedades CSS referentes a animación y reglas: {{cssxref("animation")}}, {{cssxref("animation-delay")}}, {{cssxref("animation-direction")}}, {{cssxref("animation-duration")}}, {{cssxref("animation-fill-mode")}}, {{cssxref("animation-iteration-count")}}, {{cssxref("animation-name")}}, {{cssxref("animation-play-state")}}, {{cssxref("animation-timing-function")}}, {{cssxref("@keyframes")}}.
+- [usando animaciones c-css](/es/docs/web/css/css_animations/using_css_animations)
+- was p-pwopiedades css wefewentes a animación y-y wegwas: {{cssxwef("animation")}}, mya {{cssxwef("animation-deway")}}, (˘ω˘) {{cssxwef("animation-diwection")}}, >_< {{cssxwef("animation-duwation")}}, -.- {{cssxwef("animation-fiww-mode")}}, 🥺 {{cssxwef("animation-itewation-count")}}, (U ﹏ U) {{cssxwef("animation-name")}}, >w< {{cssxwef("animation-pway-state")}}, mya {{cssxwef("animation-timing-function")}}, >w< {{cssxwef("@keyfwames")}}. nyaa~~

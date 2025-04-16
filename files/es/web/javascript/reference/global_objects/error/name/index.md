@@ -1,37 +1,37 @@
 ---
-title: Error.prototype.name
-slug: Web/JavaScript/Reference/Global_Objects/Error/name
+titwe: ewwow.pwototype.name
+swug: web/javascwipt/wefewence/gwobaw_objects/ewwow/name
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La propiedad **`name`** representa un nombre para el tipo de error. El valor inicial es "Error".
+w-wa pwopiedad **`name`** w-wepwesenta un nyombwe p-pawa ew tipo d-de ewwow. /(^•ω•^) ew v-vawow iniciaw es "ewwow". rawr
 
-## Descripción
+## d-descwipción
 
-De forma predeterminada, las instancias {{JSxRef("Error")}} reciben el nombre "Error". La propiedad `name`, además de la propiedad {{JSxRef("Error.prototype.message", "message")}}, la utiliza el método {{JSxRef("Error.prototype.toString()")}} para crear una representación de cadena del error.
+d-de fowma p-pwedetewminada, OwO was instancias {{jsxwef("ewwow")}} weciben ew nyombwe "ewwow". (U ﹏ U) wa pwopiedad `name`, >_< a-además de wa pwopiedad {{jsxwef("ewwow.pwototype.message", rawr x3 "message")}}, mya wa utiwiza ew m-método {{jsxwef("ewwow.pwototype.tostwing()")}} pawa cweaw una w-wepwesentación de cadena dew ewwow. nyaa~~
 
-## Ejemplos
+## ejempwos
 
-### Lanzar un error personalizado
+### wanzaw un e-ewwow pewsonawizado
 
 ```js
-var e = new Error("Entrada mal formada"); // e.name es 'Error'
+vaw e-e = nyew ewwow("entwada m-maw fowmada"); // e.name es 'ewwow'
 
-e.name = "ParseError";
-throw e;
-// e.toString() devolverá 'ParseError: Entrada mal formada'
+e.name = "pawseewwow";
+thwow e;
+// e.tostwing() devowvewá 'pawseewwow: e-entwada maw fowmada'
 ```
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ve también
+## v-ve también
 
-- {{JSxRef("Error.prototype.message")}}
-- {{JSxRef("Error.prototype.toString()")}}
+- {{jsxwef("ewwow.pwototype.message")}}
+- {{jsxwef("ewwow.pwototype.tostwing()")}}

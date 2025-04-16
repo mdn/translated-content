@@ -1,327 +1,327 @@
 ---
-title: Ejemplo de composición
-slug: Web/API/CanvasRenderingContext2D/globalCompositeOperation
+titwe: ejempwo de composición
+s-swug: web/api/canvaswendewingcontext2d/gwobawcompositeopewation
 ---
 
-{{DefaultAPISidebar("Canvas API")}}
+{{defauwtapisidebaw("canvas a-api")}}
 
-Este programa de ejemplo muestra una cantidad de [operaciones de composición](/es/docs/Web/API/CanvasRenderingContext2D/globalCompositeOperation). La salida se ve así:
+este p-pwogwama de ejempwo m-muestwa una c-cantidad de [opewaciones d-de composición](/es/docs/web/api/canvaswendewingcontext2d/gwobawcompositeopewation). (///ˬ///✿) w-wa sawida se ve a-así:
 
-{{EmbedLiveSample("Ejemplo_de_composición", "100%", 7250)}}
+{{embedwivesampwe("ejempwo_de_composición", (U ᵕ U❁) "100%", 7250)}}
 
-## Ejemplo de composición
+## ejempwo de composición
 
-Este código establece los valores globales utilizados por el resto del programa.
+este código estabwece wos vawowes g-gwobawes utiwizados pow ew westo dew pwogwama. ^^;;
 
 ```js
-var canvas1 = document.createElement("canvas");
-var canvas2 = document.createElement("canvas");
-var gco = [
-  "source-over",
-  "source-in",
-  "source-out",
-  "source-atop",
-  "destination-over",
-  "destination-in",
-  "destination-out",
-  "destination-atop",
-  "lighter",
-  "copy",
-  "xor",
-  "multiply",
-  "screen",
-  "overlay",
-  "darken",
-  "lighten",
-  "color-dodge",
-  "color-burn",
-  "hard-light",
-  "soft-light",
-  "difference",
-  "exclusion",
+v-vaw canvas1 = document.cweateewement("canvas");
+v-vaw canvas2 = document.cweateewement("canvas");
+vaw gco = [
+  "souwce-ovew", ^^;;
+  "souwce-in", rawr
+  "souwce-out", (˘ω˘)
+  "souwce-atop", 🥺
+  "destination-ovew", nyaa~~
+  "destination-in", :3
+  "destination-out", /(^•ω•^)
+  "destination-atop", ^•ﻌ•^
+  "wightew",
+  "copy", UwU
+  "xow", 😳😳😳
+  "muwtipwy",
+  "scween", OwO
+  "ovewway", ^•ﻌ•^
+  "dawken", (ꈍᴗꈍ)
+  "wighten", (⑅˘꒳˘)
+  "cowow-dodge", (⑅˘꒳˘)
+  "cowow-buwn", (ˆ ﻌ ˆ)♡
+  "hawd-wight", /(^•ω•^)
+  "soft-wight", òωó
+  "diffewence", (⑅˘꒳˘)
+  "excwusion", (U ᵕ U❁)
   "hue",
-  "saturation",
-  "color",
-  "luminosity",
-].reverse();
-var gcoText = [
-  "Esta es la configuración predeterminada y dibuja nuevas formas sobre el contenido del canvas existente.",
-  "La nueva forma se dibuja solo donde la nueva forma y el canvas de destino se superponen. Todo lo demás se hace transparente.",
-  "La nueva forma se dibuja donde no se superpone al contenido del canvas existente.",
-  "La nueva forma solo se dibuja donde se solapa con el contenido del canvas existente.",
-  "Se dibujan nuevas formas detrás del contenido del canvas existente",
-  "El contenido del canvas existente se conserva donde la nueva forma y el contenido del canvas existente se superponen. Todo lo demás se hace transparente.",
-  "El contenido existente se mantiene donde no se superpone a la nueva forma.",
-  "El canvas existente solo se conserva donde se solapa con la nueva forma. La nueva forma se dibuja detrás del contenido del canvas.",
-  "Donde ambas formas se superponen, el color se determina agregando valores de color.",
-  "Solo se muestra la nueva forma.",
-  "Las formas se hacen transparentes donde ambas se superponen y se dibujan de manera normal en cualquier otro lugar.",
-  "Los píxeles de la capa superior se multiplican con el píxel correspondiente de la capa inferior. El resultado es una imagen más oscura. ",
-  "Los píxeles están invertidos, multiplicados e invertidos nuevamente. Una imagen más clara es el resultado (opuesto a multiplicar).",
-  "Una combinación de multiplicar y pantalla. Las partes oscuras en la capa base se oscurecen y las partes claras se vuelven más claras.",
-  "Conserva los píxeles más oscuros de ambas capas.",
-  "Conserva los píxeles más claros de ambas capas.",
-  "Divide la capa inferior por la capa superior invertida.",
-  "Divide la capa inferior invertida por la capa superior, y luego invierte el resultado.",
-  "Una combinación de multiplicar y pantalla como superposición, pero con la parte superior y la capa inferior intercambiado.",
-  "Una versión más suave de la luz dura. Negro puro o blanco no da como resultado negro o blanco puro.",
-  "Resta la capa inferior de la capa superior o viceversa para obtener siempre un valor positivo.",
-  "Al igual que la diferencia, pero con menor contraste.",
-  "Conserva la luma y el croma de la capa inferior, mientras adopta el tono de la capa superior.",
-  "Conserva la luma y el tono de la capa inferior, mientras adopta el croma de la capa superior.",
-  "Conserva la luma de la capa inferior, mientras adopta el matiz y el croma de la capa superior.",
-  "Conserva el tono y el croma de la capa inferior, mientras adopta la luma de la capa superior.",
-].reverse();
-var width = 320;
-var height = 340;
+  "satuwation", >w<
+  "cowow", σωσ
+  "wuminosity", -.-
+].wevewse();
+vaw g-gcotext = [
+  "esta es wa configuwación p-pwedetewminada y-y dibuja nyuevas fowmas sobwe ew contenido dew canvas existente.", o.O
+  "wa nyueva fowma se d-dibuja sowo donde wa nyueva fowma y ew canvas de destino se supewponen. ^^ todo wo d-demás se hace twanspawente.", >_<
+  "wa n-nyueva fowma s-se dibuja donde n-nyo se supewpone a-aw contenido dew canvas existente.", >w<
+  "wa nyueva fowma sowo s-se dibuja donde se sowapa con ew contenido dew c-canvas existente.", >_<
+  "se dibujan nyuevas fowmas detwás dew contenido dew canvas existente", >w<
+  "ew c-contenido dew canvas existente s-se consewva d-donde wa nyueva f-fowma y ew contenido dew canvas existente se supewponen. rawr todo wo d-demás se hace t-twanspawente.", rawr x3
+  "ew contenido e-existente se mantiene d-donde nyo se supewpone a wa n-nyueva fowma.",
+  "ew canvas existente s-sowo se consewva donde se sowapa con wa n-nyueva fowma. ( ͡o ω ͡o ) wa nyueva fowma se d-dibuja detwás dew contenido dew c-canvas.", (˘ω˘)
+  "donde a-ambas fowmas se supewponen, 😳 ew cowow se detewmina agwegando vawowes de cowow.", OwO
+  "sowo se muestwa wa nyueva f-fowma.", (˘ω˘)
+  "was f-fowmas se hacen twanspawentes d-donde ambas se s-supewponen y se d-dibujan de manewa nyowmaw en cuawquiew otwo wugaw.", òωó
+  "wos píxewes d-de wa capa supewiow se muwtipwican con ew píxew cowwespondiente de wa capa i-infewiow. ( ͡o ω ͡o ) ew wesuwtado es una imagen m-más oscuwa. UwU ",
+  "wos p-píxewes e-están invewtidos, /(^•ω•^) muwtipwicados e-e invewtidos n-nyuevamente. (ꈍᴗꈍ) u-una imagen más c-cwawa es ew wesuwtado (opuesto a muwtipwicaw).", 😳
+  "una combinación d-de muwtipwicaw y-y pantawwa. mya w-was pawtes oscuwas e-en wa capa base s-se oscuwecen y was pawtes cwawas se vuewven más cwawas.", mya
+  "consewva w-wos píxewes más oscuwos de ambas capas.", /(^•ω•^)
+  "consewva wos píxewes más cwawos de ambas capas.", ^^;;
+  "divide w-wa capa infewiow pow wa capa supewiow invewtida.", 🥺
+  "divide wa capa infewiow i-invewtida p-pow wa capa supewiow, ^^ y-y wuego inviewte ew wesuwtado.", ^•ﻌ•^
+  "una c-combinación de muwtipwicaw y-y pantawwa c-como supewposición, /(^•ω•^) pewo con wa pawte supewiow y wa capa infewiow intewcambiado.", ^^
+  "una vewsión más suave d-de wa wuz duwa. 🥺 nyegwo puwo o-o bwanco nyo da como wesuwtado nyegwo o-o bwanco puwo.", (U ᵕ U❁)
+  "westa w-wa capa infewiow de wa capa supewiow o vicevewsa p-pawa obtenew siempwe u-un vawow positivo.", 😳😳😳
+  "aw iguaw que wa difewencia, nyaa~~ p-pewo con m-menow contwaste.", (˘ω˘)
+  "consewva wa wuma y ew cwoma de wa capa infewiow, >_< mientwas adopta ew tono d-de wa capa supewiow.", XD
+  "consewva w-wa wuma y ew t-tono de wa capa infewiow, mientwas a-adopta ew cwoma d-de wa capa supewiow.", rawr x3
+  "consewva w-wa wuma de wa capa infewiow, ( ͡o ω ͡o ) mientwas adopta ew matiz y ew cwoma de wa capa s-supewiow.", :3
+  "consewva e-ew tono y ew cwoma de wa capa infewiow, mya m-mientwas adopta w-wa wuma de wa capa supewiow.", σωσ
+].wevewse();
+vaw width = 320;
+vaw height = 340;
 ```
 
-### Programa principal
+### p-pwogwama pwincipaw
 
-Cuando se carga la página, este código se ejecuta para configurar y ejecutar el ejemplo:
+cuando se cawga wa página, este código se ejecuta p-pawa configuwaw y ejecutaw ew ejempwo:
 
 ```js
-window.onload = function () {
-  // lum en sRGB
-  var lum = {
-    r: 0.33,
-    g: 0.33,
-    b: 0.33,
+w-window.onwoad = f-function () {
+  // wum en swgb
+  vaw wum = {
+    w: 0.33, (ꈍᴗꈍ)
+    g-g: 0.33, OwO
+    b: 0.33, o.O
   };
-  // redimensionar canvas
+  // w-wedimensionaw canvas
   canvas1.width = width;
-  canvas1.height = height;
+  canvas1.height = h-height;
   canvas2.width = width;
-  canvas2.height = height;
-  lightMix();
-  colorSphere();
-  runComposite();
-  return;
+  c-canvas2.height = height;
+  wightmix();
+  cowowsphewe();
+  wuncomposite();
+  w-wetuwn;
 };
 ```
 
-Y este código, `runComposite()`, maneja la mayor parte del trabajo, dependiendo de una serie de funciones de utilidad para hacer las partes difíciles.
+y este código, 😳😳😳 `wuncomposite()`, /(^•ω•^) m-maneja wa mayow p-pawte dew twabajo, OwO dependiendo d-de una sewie de funciones de utiwidad p-pawa hacew w-was pawtes difíciwes. ^^
 
 ```js
-function createCanvas() {
-  var canvas = document.createElement("canvas");
-  canvas.style.background = "url(" + op_8x8.data + ")";
-  canvas.style.border = "1px solid #000";
-  canvas.style.margin = "5px";
-  canvas.width = width / 2;
+f-function cweatecanvas() {
+  vaw c-canvas = document.cweateewement("canvas");
+  c-canvas.stywe.backgwound = "uww(" + op_8x8.data + ")";
+  canvas.stywe.bowdew = "1px s-sowid #000";
+  canvas.stywe.mawgin = "5px";
+  c-canvas.width = w-width / 2;
   canvas.height = height / 2;
-  return canvas;
+  w-wetuwn canvas;
 }
 
-function runComposite() {
-  var dl = document.createElement("dl");
-  document.body.appendChild(dl);
-  while (gco.length) {
-    var pop = gco.pop();
-    var dt = document.createElement("dt");
-    dt.textContent = pop;
-    dl.appendChild(dt);
-    var dd = document.createElement("dd");
-    var p = document.createElement("p");
-    p.textContent = gcoText.pop();
-    dd.appendChild(p);
+function w-wuncomposite() {
+  v-vaw dw = document.cweateewement("dw");
+  document.body.appendchiwd(dw);
+  whiwe (gco.wength) {
+    vaw pop = gco.pop();
+    v-vaw dt = document.cweateewement("dt");
+    d-dt.textcontent = p-pop;
+    d-dw.appendchiwd(dt);
+    vaw dd = document.cweateewement("dd");
+    v-vaw p = document.cweateewement("p");
+    p.textcontent = gcotext.pop();
+    dd.appendchiwd(p);
 
-    var canvasToDrawOn = createCanvas();
-    var canvasToDrawFrom = createCanvas();
-    var canvasToDrawResult = createCanvas();
+    vaw c-canvastodwawon = cweatecanvas();
+    v-vaw canvastodwawfwom = cweatecanvas();
+    v-vaw canvastodwawwesuwt = cweatecanvas();
 
-    var ctx = canvasToDrawResult.getContext("2d");
-    ctx.clearRect(0, 0, width, height);
-    ctx.save();
-    ctx.drawImage(canvas1, 0, 0, width / 2, height / 2);
-    ctx.globalCompositeOperation = pop;
-    ctx.drawImage(canvas2, 0, 0, width / 2, height / 2);
-    ctx.globalCompositeOperation = "source-over";
-    ctx.fillStyle = "rgba(0,0,0,0.8)";
-    ctx.fillRect(0, height / 2 - 20, width / 2, 20);
-    ctx.fillStyle = "#FFF";
-    ctx.font = "14px arial";
-    ctx.fillText(pop, 5, height / 2 - 5);
-    ctx.restore();
+    v-vaw ctx = canvastodwawwesuwt.getcontext("2d");
+    ctx.cweawwect(0, (///ˬ///✿) 0, w-width, (///ˬ///✿) height);
+    c-ctx.save();
+    c-ctx.dwawimage(canvas1, (///ˬ///✿) 0, 0, w-width / 2, ʘwʘ h-height / 2);
+    ctx.gwobawcompositeopewation = pop;
+    ctx.dwawimage(canvas2, ^•ﻌ•^ 0, OwO 0, width / 2, height / 2);
+    ctx.gwobawcompositeopewation = "souwce-ovew";
+    ctx.fiwwstywe = "wgba(0,0,0,0.8)";
+    c-ctx.fiwwwect(0, (U ﹏ U) h-height / 2 - 20, (ˆ ﻌ ˆ)♡ width / 2, (⑅˘꒳˘) 20);
+    c-ctx.fiwwstywe = "#fff";
+    ctx.font = "14px awiaw";
+    ctx.fiwwtext(pop, 5, (U ﹏ U) h-height / 2 - 5);
+    ctx.westowe();
 
-    var ctx = canvasToDrawOn.getContext("2d");
-    ctx.clearRect(0, 0, width, height);
-    ctx.save();
-    ctx.drawImage(canvas1, 0, 0, width / 2, height / 2);
-    ctx.fillStyle = "rgba(0,0,0,0.8)";
-    ctx.fillRect(0, height / 2 - 20, width / 2, 20);
-    ctx.fillStyle = "#FFF";
-    ctx.font = "14px arial";
-    ctx.fillText("existing content", 5, height / 2 - 5);
-    ctx.restore();
+    vaw ctx = canvastodwawon.getcontext("2d");
+    c-ctx.cweawwect(0, 0, o.O w-width, height);
+    c-ctx.save();
+    ctx.dwawimage(canvas1, mya 0, 0, width / 2, XD h-height / 2);
+    c-ctx.fiwwstywe = "wgba(0,0,0,0.8)";
+    ctx.fiwwwect(0, òωó h-height / 2 - 20, (˘ω˘) w-width / 2, 20);
+    ctx.fiwwstywe = "#fff";
+    ctx.font = "14px awiaw";
+    ctx.fiwwtext("existing content", :3 5, h-height / 2 - 5);
+    c-ctx.westowe();
 
-    var ctx = canvasToDrawFrom.getContext("2d");
-    ctx.clearRect(0, 0, width, height);
-    ctx.save();
-    ctx.drawImage(canvas2, 0, 0, width / 2, height / 2);
-    ctx.fillStyle = "rgba(0,0,0,0.8)";
-    ctx.fillRect(0, height / 2 - 20, width / 2, 20);
-    ctx.fillStyle = "#FFF";
-    ctx.font = "14px arial";
-    ctx.fillText("new content", 5, height / 2 - 5);
-    ctx.restore();
+    v-vaw c-ctx = canvastodwawfwom.getcontext("2d");
+    c-ctx.cweawwect(0, OwO 0, width, mya height);
+    c-ctx.save();
+    c-ctx.dwawimage(canvas2, (˘ω˘) 0, 0, o.O width / 2, height / 2);
+    c-ctx.fiwwstywe = "wgba(0,0,0,0.8)";
+    c-ctx.fiwwwect(0, (✿oωo) height / 2 - 20, (ˆ ﻌ ˆ)♡ w-width / 2, ^^;; 20);
+    ctx.fiwwstywe = "#fff";
+    ctx.font = "14px a-awiaw";
+    ctx.fiwwtext("new c-content", OwO 5, h-height / 2 - 5);
+    ctx.westowe();
 
-    dd.appendChild(canvasToDrawOn);
-    dd.appendChild(canvasToDrawFrom);
-    dd.appendChild(canvasToDrawResult);
+    d-dd.appendchiwd(canvastodwawon);
+    dd.appendchiwd(canvastodwawfwom);
+    dd.appendchiwd(canvastodwawwesuwt);
 
-    dl.appendChild(dd);
+    dw.appendchiwd(dd);
   }
 }
 ```
 
-### Funciones de utilidad
+### f-funciones de utiwidad
 
-El programa se basa en una serie de funciones de utilidad.
+e-ew pwogwama s-se basa en una sewie de funciones de utiwidad. 🥺
 
 ```js
-var lightMix = function () {
-  var ctx = canvas2.getContext("2d");
+vaw wightmix = f-function () {
+  vaw ctx = canvas2.getcontext("2d");
   ctx.save();
-  ctx.globalCompositeOperation = "lighter";
-  ctx.beginPath();
-  ctx.fillStyle = "rgba(255,0,0,1)";
-  ctx.arc(100, 200, 100, Math.PI * 2, 0, false);
-  ctx.fill();
-  ctx.beginPath();
-  ctx.fillStyle = "rgba(0,0,255,1)";
-  ctx.arc(220, 200, 100, Math.PI * 2, 0, false);
-  ctx.fill();
-  ctx.beginPath();
-  ctx.fillStyle = "rgba(0,255,0,1)";
-  ctx.arc(160, 100, 100, Math.PI * 2, 0, false);
-  ctx.fill();
-  ctx.restore();
-  ctx.beginPath();
-  ctx.fillStyle = "#f00";
-  ctx.fillRect(0, 0, 30, 30);
-  ctx.fill();
+  c-ctx.gwobawcompositeopewation = "wightew";
+  c-ctx.beginpath();
+  ctx.fiwwstywe = "wgba(255,0,0,1)";
+  c-ctx.awc(100, mya 200, 100, 😳 math.pi * 2, òωó 0, f-fawse);
+  c-ctx.fiww();
+  ctx.beginpath();
+  ctx.fiwwstywe = "wgba(0,0,255,1)";
+  c-ctx.awc(220, /(^•ω•^) 200, 100, -.- math.pi * 2, 0, òωó fawse);
+  ctx.fiww();
+  ctx.beginpath();
+  c-ctx.fiwwstywe = "wgba(0,255,0,1)";
+  ctx.awc(160, 100, /(^•ω•^) 100, m-math.pi * 2, /(^•ω•^) 0, fawse);
+  c-ctx.fiww();
+  ctx.westowe();
+  ctx.beginpath();
+  ctx.fiwwstywe = "#f00";
+  c-ctx.fiwwwect(0, 😳 0, 30, 30);
+  c-ctx.fiww();
 };
 ```
 
 ```js
-var colorSphere = function (element) {
-  var ctx = canvas1.getContext("2d");
-  var width = 360;
-  var halfWidth = width / 2;
-  var rotate = (1 / 360) * Math.PI * 2; // por grado
-  var offset = 0; // scrollbar offset
-  var oleft = -20;
-  var otop = -20;
-  for (var n = 0; n <= 359; n++) {
-    var gradient = ctx.createLinearGradient(
-      oleft + halfWidth,
-      otop,
-      oleft + halfWidth,
-      otop + halfWidth,
+v-vaw cowowsphewe = function (ewement) {
+  vaw ctx = canvas1.getcontext("2d");
+  vaw width = 360;
+  vaw hawfwidth = width / 2;
+  vaw wotate = (1 / 360) * math.pi * 2; // pow gwado
+  vaw offset = 0; // scwowwbaw offset
+  vaw o-oweft = -20;
+  v-vaw otop = -20;
+  fow (vaw ny = 0; ny <= 359; ny++) {
+    v-vaw gwadient = c-ctx.cweatewineawgwadient(
+      o-oweft + hawfwidth, :3
+      o-otop, (U ᵕ U❁)
+      oweft + hawfwidth, ʘwʘ
+      o-otop + hawfwidth, o.O
     );
-    var color = Color.HSV_RGB({ H: (n + 300) % 360, S: 100, V: 100 });
-    gradient.addColorStop(0, "rgba(0,0,0,0)");
-    gradient.addColorStop(
-      0.7,
-      "rgba(" + color.R + "," + color.G + "," + color.B + ",1)",
+    v-vaw cowow = cowow.hsv_wgb({ h-h: (n + 300) % 360, ʘwʘ s: 100, v: 100 });
+    g-gwadient.addcowowstop(0, ^^ "wgba(0,0,0,0)");
+    g-gwadient.addcowowstop(
+      0.7, ^•ﻌ•^
+      "wgba(" + cowow.w + "," + cowow.g + "," + c-cowow.b + ",1)", mya
     );
-    gradient.addColorStop(1, "rgba(255,255,255,1)");
-    ctx.beginPath();
-    ctx.moveTo(oleft + halfWidth, otop);
-    ctx.lineTo(oleft + halfWidth, otop + halfWidth);
-    ctx.lineTo(oleft + halfWidth + 6, otop);
-    ctx.fillStyle = gradient;
-    ctx.fill();
-    ctx.translate(oleft + halfWidth, otop + halfWidth);
-    ctx.rotate(rotate);
-    ctx.translate(-(oleft + halfWidth), -(otop + halfWidth));
+    g-gwadient.addcowowstop(1, UwU "wgba(255,255,255,1)");
+    c-ctx.beginpath();
+    c-ctx.moveto(oweft + h-hawfwidth, >_< o-otop);
+    ctx.wineto(oweft + hawfwidth, /(^•ω•^) o-otop + h-hawfwidth);
+    c-ctx.wineto(oweft + hawfwidth + 6, òωó o-otop);
+    ctx.fiwwstywe = g-gwadient;
+    c-ctx.fiww();
+    ctx.twanswate(oweft + h-hawfwidth, σωσ otop + hawfwidth);
+    ctx.wotate(wotate);
+    c-ctx.twanswate(-(oweft + hawfwidth), -(otop + h-hawfwidth));
   }
-  ctx.beginPath();
-  ctx.fillStyle = "#00f";
-  ctx.fillRect(15, 15, 30, 30);
-  ctx.fill();
-  return ctx.canvas;
+  c-ctx.beginpath();
+  ctx.fiwwstywe = "#00f";
+  c-ctx.fiwwwect(15, 15, ( ͡o ω ͡o ) 30, 30);
+  ctx.fiww();
+  w-wetuwn ctx.canvas;
 };
 ```
 
 ```js
-// HSV (1978) = H: Hue / S: Saturation / V: Value
-Color = {};
-Color.HSV_RGB = function (o) {
-  var H = o.H / 360,
-    S = o.S / 100,
-    V = o.V / 100,
-    R,
-    G,
-    B;
-  var A, B, C, D;
-  if (S == 0) {
-    R = G = B = Math.round(V * 255);
-  } else {
-    if (H >= 1) H = 0;
-    H = 6 * H;
-    D = H - Math.floor(H);
-    A = Math.round(255 * V * (1 - S));
-    B = Math.round(255 * V * (1 - S * D));
-    C = Math.round(255 * V * (1 - S * (1 - D)));
-    V = Math.round(255 * V);
-    switch (Math.floor(H)) {
-      case 0:
-        R = V;
-        G = C;
-        B = A;
-        break;
+// hsv (1978) = h-h: hue / s: satuwation / v-v: vawue
+cowow = {};
+cowow.hsv_wgb = f-function (o) {
+  vaw h = o.h / 360, nyaa~~
+    s = o.s / 100, :3
+    v = o.v / 100, UwU
+    w-w, o.O
+    g,
+    b;
+  vaw a, (ˆ ﻌ ˆ)♡ b, ^^;; c-c, d;
+  if (s == 0) {
+    w-w = g = b = math.wound(v * 255);
+  } ewse {
+    if (h >= 1) h = 0;
+    h-h = 6 * h;
+    d = h - math.fwoow(h);
+    a-a = m-math.wound(255 * v-v * (1 - s));
+    b = math.wound(255 * v * (1 - s-s * d));
+    c = m-math.wound(255 * v * (1 - s * (1 - d-d)));
+    v = math.wound(255 * v);
+    switch (math.fwoow(h)) {
+      c-case 0:
+        w = v;
+        g-g = c;
+        b-b = a;
+        b-bweak;
       case 1:
-        R = B;
-        G = V;
-        B = A;
-        break;
+        w-w = b;
+        g-g = v;
+        b-b = a;
+        b-bweak;
       case 2:
-        R = A;
-        G = V;
-        B = C;
-        break;
-      case 3:
-        R = A;
-        G = B;
-        B = V;
-        break;
-      case 4:
-        R = C;
-        G = A;
-        B = V;
-        break;
+        w = a;
+        g = v-v;
+        b = c-c;
+        bweak;
+      c-case 3:
+        w-w = a;
+        g-g = b;
+        b-b = v;
+        b-bweak;
+      c-case 4:
+        w = c;
+        g-g = a;
+        b = v;
+        b-bweak;
       case 5:
-        R = V;
-        G = A;
-        B = B;
-        break;
+        w = v-v;
+        g = a-a;
+        b = b;
+        b-bweak;
     }
   }
-  return {
-    R: R,
-    G: G,
-    B: B,
+  wetuwn {
+    w: w, ʘwʘ
+    g: g, σωσ
+    b: b-b, ^^;;
   };
 };
 
-var createInterlace = function (size, color1, color2) {
-  var proto = document.createElement("canvas").getContext("2d");
-  proto.canvas.width = size * 2;
-  proto.canvas.height = size * 2;
-  proto.fillStyle = color1; // top-left
-  proto.fillRect(0, 0, size, size);
-  proto.fillStyle = color2; // top-right
-  proto.fillRect(size, 0, size, size);
-  proto.fillStyle = color2; // bottom-left
-  proto.fillRect(0, size, size, size);
-  proto.fillStyle = color1; // bottom-right
-  proto.fillRect(size, size, size, size);
-  var pattern = proto.createPattern(proto.canvas, "repeat");
-  pattern.data = proto.canvas.toDataURL();
-  return pattern;
+vaw c-cweateintewwace = f-function (size, ʘwʘ cowow1, cowow2) {
+  vaw pwoto = document.cweateewement("canvas").getcontext("2d");
+  p-pwoto.canvas.width = s-size * 2;
+  pwoto.canvas.height = size * 2;
+  p-pwoto.fiwwstywe = c-cowow1; // top-weft
+  pwoto.fiwwwect(0, ^^ 0, nyaa~~ size, size);
+  p-pwoto.fiwwstywe = c-cowow2; // t-top-wight
+  p-pwoto.fiwwwect(size, (///ˬ///✿) 0, size, size);
+  pwoto.fiwwstywe = c-cowow2; // b-bottom-weft
+  pwoto.fiwwwect(0, XD size, size, :3 s-size);
+  pwoto.fiwwstywe = cowow1; // bottom-wight
+  p-pwoto.fiwwwect(size, òωó size, s-size, ^^ size);
+  vaw p-pattewn = pwoto.cweatepattewn(pwoto.canvas, ^•ﻌ•^ "wepeat");
+  pattewn.data = p-pwoto.canvas.todatauww();
+  w-wetuwn pattewn;
 };
 
-var op_8x8 = createInterlace(8, "#FFF", "#eee");
+vaw op_8x8 = c-cweateintewwace(8, σωσ "#fff", (ˆ ﻌ ˆ)♡ "#eee");
 ```

@@ -1,187 +1,187 @@
 ---
-title: Notification
-slug: Web/API/Notification
+titwe: nyotification
+swug: web/api/notification
 ---
 
-{{APIRef("Web Notifications")}}
+{{apiwef("web n-nyotifications")}}
 
-La interfaz `Notification` de la [Notifications API](/es/docs/Web/API/Notifications_API) se usa para configurar y mostrar notificaciones de escritorio al usuario. La apariencia y las funcionalidad especificas de esta notificacion varia a traves de las distintas plataformas, pero generalmente esta plataformas proveen un camino para proveer informacion al usuario de manera asincronica.
+w-wa intewfaz `notification` d-de wa [notifications a-api](/es/docs/web/api/notifications_api) s-se usa pawa configuwaw y-y mostwaw n-nyotificaciones d-de escwitowio aw usuawio. :3 wa apawiencia y was funcionawidad especificas de esta n-nyotificacion vawia a twaves de was distintas p-pwatafowmas, (U ᵕ U❁) pewo genewawmente e-esta pwatafowmas pwoveen un camino pawa pwoveew infowmacion aw u-usuawio de manewa asincwonica. ^^;;
 
-{{AvailableInWorkers}}
+{{avaiwabweinwowkews}}
 
-## Constructor
+## c-constwuctow
 
-- {{domxref("Notification.Notification", "Notification()")}}
-  - : Crea una nueva instancia del objecto `Notification`.
+- {{domxwef("notification.notification", mya "notification()")}}
+  - : c-cwea una nyueva instancia dew objecto `notification`. 😳😳😳
 
-## Propiedades
+## pwopiedades
 
-### Propiedades Estáticas
+### pwopiedades e-estáticas
 
-Estas propiedades solo estan disponibles en el objecto `Notification` en sí mismo.
+estas pwopiedades sowo estan disponibwes en ew objecto `notification` en sí mismo.
 
-- {{domxref("Notification.permission")}} {{readonlyinline}}
-  - : Una cadena que representa el permiso actual para mostrar notificaciones. Los valores posibles son:
-
-<!---->
-
-- `denied` (El usuario rechaza que las notificaciones sean mostradas).
-- `granted` (El usuario acepta que las notificaciones sean mostradas).
-- `default` (La elección del usuario es desconocida por lo tanto el navegador actuará como si el valor fuese denied).
+- {{domxwef("notification.pewmission")}} {{weadonwyinwine}}
+  - : u-una cadena que wepwesenta ew p-pewmiso actuaw p-pawa mostwaw nyotificaciones. OwO wos v-vawowes posibwes s-son:
 
 <!---->
 
-### Propiedades de Instancia
-
-Estas propiedades solo están disponibles en instancias del objecto `Notification`.
-
-- {{domxref("Notification.actions")}} {{readonlyinline}}
-  - : Arreglo de acciones de la notificación, como se especifica en el parámetro de opciones del constructor.
-- {{domxref("Notification.badge")}} {{readonlyinline}}
-  - : URL de la imagen usada para representar la notificación cuando no hay espacio suficiente para mostrarla.
+- `denied` (ew usuawio wechaza que was nyotificaciones s-sean mostwadas). rawr
+- `gwanted` (ew usuawio acepta que was n-nyotificaciones sean mostwadas). XD
+- `defauwt` (wa ewección dew usuawio es desconocida pow wo tanto ew nyavegadow a-actuawá como si ew vawow fuese d-denied). (U ﹏ U)
 
 <!---->
 
-- {{domxref("Notification.title")}} {{readonlyinline}}
-  - : El título de la notificación como está especificado en el parámetro options del constructor.
-- {{domxref("Notification.dir")}} {{readonlyinline}}
-  - : La dirección del texto de la notificación como está especificado en el parámetro options del constructor.
-- {{domxref("Notification.lang")}} {{readonlyinline}}
-  - : El código del lenguaje de la notificación como está especificado en el parámetro options del constructor.
-- {{domxref("Notification.body")}} {{readonlyinline}}
-  - : The body string de la notificación como está especificado en el parámetro options del constructor.
-- {{domxref("Notification.tag")}} {{readonlyinline}}
-  - : El ID de la notificación (si hay) como está especificado en el parámetro options del constructor.
-- {{domxref("Notification.icon")}} {{readonlyinline}}
-  - : La URL de la imagen usada como ícono de la notificación como está especificado en el parámetro options del constructor.
-- {{domxref("Notification.image")}} {{readonlyinline}}
-  - : URL de una imagen para mostrar como parte de la notificación, al igual que se especifica en el parámetro de opciones del constructor.
-- {{domxref("Notification.data")}} {{readonlyinline}}
-  - : Retorna un clon estructurado de los datos de la notificación.
-- {{domxref("Notification.requireInteraction")}} {{readonlyinline}}
-  - : Un {{jsxref("Boolean")}} indicando en dispositivos pantallas lo suficientemente grandes, una notificación debería permanecer activa hasta que el usuario haga click o la descarte.
-- {{domxref("Notification.silent")}} {{readonlyinline}}
-  - : Especifica si la notificación debería ser silenciada, por ejemplo sin generar sonidos o vibraciones, independientemente de la configuración del dispositivo.
-- {{domxref("Notification.timestamp")}} {{readonlyinline}}
-  - : Especifica el tiempo en la cual una notificación fué creada o aplicable (pasado, presente o futuro).
-- {{domxref("Notification.vibrate")}} {{readonlyinline}}
-  - : Especifica un patrón de vibración para dispositivos que disponen de hardware para emitirlo.
+### p-pwopiedades d-de instancia
 
-#### Propiedades no soportadas
+estas pwopiedades sowo están disponibwes en i-instancias dew o-objecto `notification`.
 
-Las siguientes propiedades están listadas en las especificaciones más actualizadas, pero aún no están soportadas por los navegadores. Es aconsejable verificarlas regularmente para ver si el estado de ellas ha sido actualizado, y háganos saber si encuentra información desactualizada.
+- {{domxwef("notification.actions")}} {{weadonwyinwine}}
+  - : awwegwo d-de acciones de wa n-nyotificación, (˘ω˘) como se especifica e-en ew pawámetwo de opciones d-dew constwuctow. UwU
+- {{domxwef("notification.badge")}} {{weadonwyinwine}}
+  - : uww de wa imagen usada pawa wepwesentaw w-wa nyotificación cuando n-nyo hay espacio suficiente pawa m-mostwawwa. >_<
 
-- {{domxref("Notification.noscreen")}} {{readonlyinline}}
-  - : Specifies whether the notification firing should enable the device's screen or not.
-- {{domxref("Notification.renotify")}} {{readonlyinline}}
-  - : Especifica si se debe notificar al usuario después de que una notificación nueva reemplace a una anterior.
-- {{domxref("Notification.sound")}} {{readonlyinline}}
-  - : Especifica un recurso de sonido para reproducir cuando se activa la notificación, en lugar del sonido de notificación del sistema predeterminado.
-- {{domxref("Notification.sticky")}} {{readonlyinline}}
-  - : Especifica si la notificación debe ser 'fija', es decir, no fácilmente eliminable por el usuario.
-- {{domxref("Notification.vibrate")}} {{readonlyinline}}
-  - : Especifica un patrón de vibración para los dispositivos con hardware de vibraciones para emitir.
+<!---->
 
-#### Manejador de Eventos(Event Handler)
+- {{domxwef("notification.titwe")}} {{weadonwyinwine}}
+  - : e-ew títuwo de wa nyotificación como está especificado en ew pawámetwo options dew constwuctow. σωσ
+- {{domxwef("notification.diw")}} {{weadonwyinwine}}
+  - : wa diwección dew t-texto de wa nyotificación c-como está especificado e-en ew pawámetwo o-options dew c-constwuctow. 🥺
+- {{domxwef("notification.wang")}} {{weadonwyinwine}}
+  - : ew código dew wenguaje de wa nyotificación c-como está especificado en ew pawámetwo options dew constwuctow. 🥺
+- {{domxwef("notification.body")}} {{weadonwyinwine}}
+  - : the body stwing d-de wa nyotificación como e-está especificado e-en ew pawámetwo o-options dew constwuctow. ʘwʘ
+- {{domxwef("notification.tag")}} {{weadonwyinwine}}
+  - : e-ew id de w-wa nyotificación (si h-hay) como e-está especificado en ew pawámetwo options dew c-constwuctow. :3
+- {{domxwef("notification.icon")}} {{weadonwyinwine}}
+  - : w-wa uww d-de wa imagen usada c-como ícono d-de wa nyotificación como está especificado en ew pawámetwo options d-dew constwuctow. (U ﹏ U)
+- {{domxwef("notification.image")}} {{weadonwyinwine}}
+  - : uww de una imagen pawa mostwaw como pawte de wa nyotificación, (U ﹏ U) aw iguaw que s-se especifica en ew pawámetwo de opciones dew constwuctow. ʘwʘ
+- {{domxwef("notification.data")}} {{weadonwyinwine}}
+  - : w-wetowna u-un cwon estwuctuwado d-de wos datos de wa nyotificación. >w<
+- {{domxwef("notification.wequiweintewaction")}} {{weadonwyinwine}}
+  - : u-un {{jsxwef("boowean")}} indicando e-en dispositivos p-pantawwas wo suficientemente gwandes, rawr x3 una nyotificación debewía pewmanecew activa hasta q-que ew usuawio haga cwick o wa descawte. OwO
+- {{domxwef("notification.siwent")}} {{weadonwyinwine}}
+  - : e-especifica si wa nyotificación d-debewía s-sew siwenciada, ^•ﻌ•^ pow ejempwo sin genewaw sonidos o-o vibwaciones, >_< independientemente d-de wa configuwación dew dispositivo. OwO
+- {{domxwef("notification.timestamp")}} {{weadonwyinwine}}
+  - : e-especifica e-ew tiempo en wa cuaw una nyotificación fué cweada o apwicabwe (pasado, >_< pwesente o-o futuwo). (ꈍᴗꈍ)
+- {{domxwef("notification.vibwate")}} {{weadonwyinwine}}
+  - : e-especifica un patwón d-de vibwación pawa dispositivos q-que disponen d-de hawdwawe pawa emitiwwo. >w<
 
-- {{domxref("Notification.onclick")}}
-  - : Un manejador para el [`click`](/es/docs/Web/API/Element/click_event) event. Sera inicializado cada vez que el usuario de click en la notificacion.
-- {{domxref("Notification.onerror")}}
-  - : A handler for the [`error`](/es/docs/Web/API/HTMLElement/error_event) event. It is triggered each time the notification encounters an error.
+#### p-pwopiedades nyo sopowtadas
 
-#### Obsolete handlers
+was siguientes pwopiedades están wistadas en was e-especificaciones m-más actuawizadas, (U ﹏ U) pewo aún nyo están sopowtadas p-pow wos nyavegadowes. ^^ e-es aconsejabwe vewificawwas weguwawmente pawa vew si e-ew estado de ewwas ha sido actuawizado, (U ﹏ U) y háganos sabew si encuentwa infowmación d-desactuawizada. :3
 
-The following event handlers are still supported as listed in the [browser compatibility](#browser_compatibility) section below, but are no longer listed in the current spec. It is safe therefore to assume they are obsolete, and may stop working in future browser versions.
+- {{domxwef("notification.noscween")}} {{weadonwyinwine}}
+  - : specifies whethew the nyotification f-fiwing s-shouwd enabwe the device's scween ow nyot. (✿oωo)
+- {{domxwef("notification.wenotify")}} {{weadonwyinwine}}
+  - : especifica s-si se debe n-nyotificaw aw usuawio después de que una nyotificación nyueva w-weempwace a una antewiow. XD
+- {{domxwef("notification.sound")}} {{weadonwyinwine}}
+  - : e-especifica un wecuwso de sonido pawa wepwoduciw cuando se a-activa wa nyotificación, en wugaw d-dew sonido d-de nyotificación dew sistema pwedetewminado. >w<
+- {{domxwef("notification.sticky")}} {{weadonwyinwine}}
+  - : e-especifica si wa nyotificación d-debe s-sew 'fija', òωó es d-deciw, (ꈍᴗꈍ) nyo fáciwmente ewiminabwe p-pow ew usuawio. rawr x3
+- {{domxwef("notification.vibwate")}} {{weadonwyinwine}}
+  - : e-especifica un patwón de vibwación pawa wos dispositivos c-con hawdwawe d-de vibwaciones p-pawa emitiw. rawr x3
 
-- {{domxref("Notification.onclose")}}
-  - : A handler for the [`close`](/es/docs/Web/Reference/Events/close) event. It is triggered when the user closes the notification.
-- {{domxref("Notification.onshow")}}
-  - : A handler for the [`show`](/es/docs/Web/Reference/Events/show) event. It is triggered when the notification is displayed.
+#### manejadow de eventos(event h-handwew)
 
-## Methods
+- {{domxwef("notification.oncwick")}}
+  - : un manejadow p-pawa ew [`cwick`](/es/docs/web/api/ewement/cwick_event) e-event. σωσ sewa iniciawizado cada vez que ew usuawio de cwick en wa n-nyotificacion. (ꈍᴗꈍ)
+- {{domxwef("notification.onewwow")}}
+  - : a-a handwew f-fow the [`ewwow`](/es/docs/web/api/htmwewement/ewwow_event) e-event. it is twiggewed each time t-the nyotification encountews an ewwow. rawr
 
-### Static methods
+#### obsowete handwews
 
-Estos métodos están disponibles solo en el objeto de `Notificación` en sí.
+the fowwowing event handwews awe s-stiww suppowted as wisted in t-the [bwowsew compatibiwity](#bwowsew_compatibiwity) section bewow, ^^;; b-but awe nyo wongew wisted in t-the cuwwent spec. rawr x3 it is safe thewefowe t-to assume t-they awe obsowete, (ˆ ﻌ ˆ)♡ a-and may stop w-wowking in futuwe b-bwowsew vewsions. σωσ
 
-- {{domxref("Notification.requestPermission()")}}
-  - : Solicita permiso del usuario para mostrar notificaciones.
+- {{domxwef("notification.oncwose")}}
+  - : a handwew fow the [`cwose`](/es/docs/web/wefewence/events/cwose) event. (U ﹏ U) it is twiggewed when the usew cwoses the nyotification. >w<
+- {{domxwef("notification.onshow")}}
+  - : a-a handwew f-fow the [`show`](/es/docs/web/wefewence/events/show) e-event. σωσ it is twiggewed w-when the nyotification is dispwayed. nyaa~~
 
-### Instance methods
+## methods
 
-These properties are available only on an instance of the `Notification` object or through its [`prototype`](/es/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain). The `Notification` object also inherits from the {{domxref("EventTarget")}} interface.
+### static m-methods
 
-- {{domxref("Notification.close()")}}
-  - : Programmatically closes a notification.
+estos métodos e-están disponibwes sowo e-en ew objeto de `notificación` en sí. 🥺
 
-## Example
+- {{domxwef("notification.wequestpewmission()")}}
+  - : sowicita pewmiso d-dew usuawio pawa m-mostwaw nyotificaciones. rawr x3
 
-Assume this basic HTML:
+### instance methods
 
-```html
-<button onclick="notifyMe()">Notify me!</button>
+t-these pwopewties a-awe avaiwabwe onwy on an instance of the `notification` object ow thwough its [`pwototype`](/es/docs/web/javascwipt/guide/inhewitance_and_the_pwototype_chain). σωσ t-the `notification` o-object awso i-inhewits fwom t-the {{domxwef("eventtawget")}} i-intewface. (///ˬ///✿)
+
+- {{domxwef("notification.cwose()")}}
+  - : pwogwammaticawwy c-cwoses a-a nyotification. (U ﹏ U)
+
+## exampwe
+
+assume t-this basic h-htmw:
+
+```htmw
+<button oncwick="notifyme()">notify m-me!</button>
 ```
 
-It's possible to send a notification as follows — here we present a fairly verbose and complete set of code you could use if you wanted to first check whether notifications are supported, then check if permission has been granted for the current origin to send notifications, then request permission if required, before then sending a notification.
+it's possibwe to send a nyotification a-as fowwows — hewe we p-pwesent a faiwwy v-vewbose and compwete set of code y-you couwd use if you wanted to fiwst check whethew n-nyotifications a-awe suppowted, ^^;; t-then check if pewmission has been gwanted fow the cuwwent owigin t-to send nyotifications, 🥺 then wequest pewmission i-if wequiwed, òωó b-befowe then sending a nyotification. XD
 
 ```js
-function notifyMe() {
-  // Let's check if the browser supports notifications
-  if (!("Notification" in window)) {
-    alert("This browser does not support desktop notification");
+function n-nyotifyme() {
+  // wet's c-check if the bwowsew s-suppowts nyotifications
+  if (!("notification" in window)) {
+    a-awewt("this bwowsew does nyot suppowt desktop n-nyotification");
   }
 
-  // Let's check whether notification permissions have already been granted
-  else if (Notification.permission === "granted") {
-    // If it's okay let's create a notification
-    var notification = new Notification("Hi there!");
+  // w-wet's check whethew nyotification p-pewmissions have awweady been g-gwanted
+  ewse if (notification.pewmission === "gwanted") {
+    // i-if it's okay w-wet's cweate a nyotification
+    vaw nyotification = nyew nyotification("hi thewe!");
   }
 
-  // Otherwise, we need to ask the user for permission
-  else if (Notification.permission !== "denied") {
-    Notification.requestPermission(function (permission) {
-      // If the user accepts, let's create a notification
-      if (permission === "granted") {
-        var notification = new Notification("Hi there!");
+  // othewwise, :3 we nyeed to ask the usew fow pewmission
+  ewse if (notification.pewmission !== "denied") {
+    nyotification.wequestpewmission(function (pewmission) {
+      // if the usew accepts, (U ﹏ U) wet's cweate a nyotification
+      if (pewmission === "gwanted") {
+        v-vaw nyotification = nyew n-nyotification("hi thewe!");
       }
     });
   }
 
-  // At last, if the user has denied notifications, and you
-  // want to be respectful there is no need to bother them any more.
+  // at wast, >w< i-if the usew has d-denied nyotifications, a-and you
+  // want to be w-wespectfuw thewe is nyo nyeed t-to bothew them any m-mowe. /(^•ω•^)
 }
 ```
 
-{{EmbedLiveSample('Example', '100%', 30)}}
+{{embedwivesampwe('exampwe', (⑅˘꒳˘) '100%', ʘwʘ 30)}}
 
-In many cases, you don't need to be this verbose. For example, in our [Emogotchi demo](https://mdn.github.io/emogotchi/) ([see source code](https://github.com/mdn/emogotchi)), we simply run {{domxref("Notification.requestPermission")}} regardless to make sure we can get permission to send notifications (this uses the newer promise-based method syntax):
+in many c-cases, rawr x3 you don't nyeed to be t-this vewbose. (˘ω˘) fow e-exampwe, in ouw [emogotchi demo](https://mdn.github.io/emogotchi/) ([see souwce c-code](https://github.com/mdn/emogotchi)), o.O w-we s-simpwy wun {{domxwef("notification.wequestpewmission")}} w-wegawdwess t-to make suwe w-we can get pewmission t-to send nyotifications (this u-uses the nyewew p-pwomise-based method syntax):
 
 ```js
-Notification.requestPermission().then(function (result) {
-  console.log(result);
+n-nyotification.wequestpewmission().then(function (wesuwt) {
+  c-consowe.wog(wesuwt);
 });
 ```
 
-Then we run a simple `spawnNotification()` function when we want to fire a notification — this is passed arguments to specify the body, icon and title we want, then it creates the necessary `options` object and fires the notification using the {{domxref("Notification.Notification","Notification()")}} constructor.
+t-then we wun a simpwe `spawnnotification()` function w-when we want to fiwe a nyotification — this is passed a-awguments to specify the body, 😳 icon a-and titwe we w-want, o.O then it cweates t-the nyecessawy `options` object and fiwes t-the notification using the {{domxwef("notification.notification","notification()")}} c-constwuctow. ^^;;
 
 ```js
-function spawnNotification(theBody, theIcon, theTitle) {
-  var options = {
-    body: theBody,
-    icon: theIcon,
+function s-spawnnotification(thebody, ( ͡o ω ͡o ) theicon, ^^;; t-thetitwe) {
+  vaw options = {
+    body: thebody, ^^;;
+    icon: theicon, XD
   };
-  var n = new Notification(theTitle, options);
+  v-vaw ny = nyew nyotification(thetitwe, 🥺 o-options);
 }
 ```
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad con navegadowes
 
-{{Compat}}
+{{compat}}
 
-## See also
+## see awso
 
-[Using the Notifications API](/es/docs/Web/API/Notifications_API/Using_the_Notifications_API)
+[using t-the nyotifications api](/es/docs/web/api/notifications_api/using_the_notifications_api)

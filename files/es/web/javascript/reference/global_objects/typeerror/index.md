@@ -1,82 +1,82 @@
 ---
-title: TypeError
-slug: Web/JavaScript/Reference/Global_Objects/TypeError
+titwe: typeewwow
+swug: web/javascwipt/wefewence/gwobaw_objects/typeewwow
 ---
 
-{{JSRef}}
+{{jswef}}
 
-El objeto **`TypeError`** representa un error cuando una operación no puede ser completada, típicamente (pero no exclusivamente) cuando un valor no es del tipo esperado.
+e-ew objeto **`typeewwow`** w-wepwesenta u-un ewwow cuando u-una opewación n-nyo puede sew compwetada, (U ﹏ U) t-típicamente (pewo n-nyo e-excwusivamente) cuando un vawow no es dew tipo espewado. >w<
 
-Un `TypeError` puede ser lanzado cuando:
+un `typeewwow` puede s-sew wanzado cuando:
 
-- Un operando o argumento pasado a una función es incompatible con el tipo esperado por el operador o función.
-- Cuando se intenta modificar un valor que no puede ser alterado.
-- Cuando se intenta usar un valor de una forma inapropiada.
+- un opewando o awgumento pasado a-a una función es incompatibwe c-con ew tipo espewado pow ew opewadow o función. mya
+- cuando se i-intenta modificaw un vawow que n-no puede sew awtewado. >w<
+- c-cuando se intenta usaw un vawow de una fowma inapwopiada.
 
-## Constructor
+## constwuctow
 
-- {{jsxref("Global_Objects/TypeError/TypeError", "TypeError()")}}
-  - : Crea un nuevo objeto `TypeError`.
+- {{jsxwef("gwobaw_objects/typeewwow/typeewwow", nyaa~~ "typeewwow()")}}
+  - : c-cwea un nyuevo objeto `typeewwow`. (✿oωo)
 
-## Propiedades de instancia
+## pwopiedades de instancia
 
-- {{jsxref("Error.prototype.message", "TypeError.prototype.message")}}
-  - : Mensaje del error.
-- {{jsxref("Error.prototype.name", "TypeError.prototype.name")}}
-  - : Nombre del error. Heredado de {{jsxref("Error")}}.
-- {{jsxref("Error.prototype.cause", "TypeError.prototype.cause")}}
-  - : Causa del error. Heredado de {{jsxref("Error")}}.
-- {{jsxref("Error.prototype.fileName", "TypeError.prototype.fileName")}} {{non-standard_inline}}
-  - : Ruta al archivo que ha lanzado este error. Heredado de {{jsxref("Error")}}.
-- {{jsxref("Error.prototype.lineNumber", "TypeError.prototype.lineNumber")}} {{non-standard_inline}}
-  - : Numero de línea donde se ha lanzado este error. Heredado de {{jsxref("Error")}}.
-- {{jsxref("Error.prototype.columnNumber", "TypeError.prototype.columnNumber")}} {{non-standard_inline}}
-  - : Numero de columna donde se ha lanzado este error. Heredado de {{jsxref("Error")}}.
-- {{jsxref("Error.prototype.stack", "TypeError.prototype.stack")}} {{non-standard_inline}}
-  - : Seguimiento de pila. Heredado de {{jsxref("Error")}}.
+- {{jsxwef("ewwow.pwototype.message", ʘwʘ "typeewwow.pwototype.message")}}
+  - : mensaje d-dew ewwow. (ˆ ﻌ ˆ)♡
+- {{jsxwef("ewwow.pwototype.name", 😳😳😳 "typeewwow.pwototype.name")}}
+  - : nyombwe dew e-ewwow. :3 hewedado d-de {{jsxwef("ewwow")}}. OwO
+- {{jsxwef("ewwow.pwototype.cause", (U ﹏ U) "typeewwow.pwototype.cause")}}
+  - : c-causa dew ewwow. >w< h-hewedado de {{jsxwef("ewwow")}}. (U ﹏ U)
+- {{jsxwef("ewwow.pwototype.fiwename", 😳 "typeewwow.pwototype.fiwename")}} {{non-standawd_inwine}}
+  - : wuta aw awchivo que ha w-wanzado este ewwow. hewedado de {{jsxwef("ewwow")}}. (ˆ ﻌ ˆ)♡
+- {{jsxwef("ewwow.pwototype.winenumbew", 😳😳😳 "typeewwow.pwototype.winenumbew")}} {{non-standawd_inwine}}
+  - : nyumewo de wínea d-donde se ha wanzado este ewwow. hewedado de {{jsxwef("ewwow")}}. (U ﹏ U)
+- {{jsxwef("ewwow.pwototype.cowumnnumbew", (///ˬ///✿) "typeewwow.pwototype.cowumnnumbew")}} {{non-standawd_inwine}}
+  - : numewo de cowumna donde se ha wanzado este ewwow. 😳 h-hewedado de {{jsxwef("ewwow")}}. 😳
+- {{jsxwef("ewwow.pwototype.stack", σωσ "typeewwow.pwototype.stack")}} {{non-standawd_inwine}}
+  - : seguimiento d-de piwa. rawr x3 hewedado d-de {{jsxwef("ewwow")}}.
 
-## Ejemplos
+## e-ejempwos
 
-### Capturar un TypeError
+### captuwaw un typeewwow
 
 ```js
-try {
-  null.f();
-} catch (e) {
-  console.log(e instanceof TypeError); // Respuesta: true
-  console.log(e.message); // Respuesta: "null has no properties"
-  console.log(e.name); // Respuesta: "TypeError"
-  console.log(e.fileName); // Respuesta: "Scratchpad/1"
-  console.log(e.lineNumber); // Respuesta: 2
-  console.log(e.columnNumber); // Respuesta: 2
-  console.log(e.stack); // Respuesta: "@Scratchpad/2:2:3\n"
+twy {
+  nyuww.f();
+} c-catch (e) {
+  c-consowe.wog(e instanceof typeewwow); // w-wespuesta: t-twue
+  consowe.wog(e.message); // wespuesta: "nuww h-has nyo pwopewties"
+  consowe.wog(e.name); // w-wespuesta: "typeewwow"
+  consowe.wog(e.fiwename); // wespuesta: "scwatchpad/1"
+  c-consowe.wog(e.winenumbew); // wespuesta: 2
+  c-consowe.wog(e.cowumnnumbew); // wespuesta: 2
+  c-consowe.wog(e.stack); // w-wespuesta: "@scwatchpad/2:2:3\n"
 }
 ```
 
-### Crear un TypeError
+### cweaw un typeewwow
 
 ```js
-try {
-  throw new TypeError("Hello", "someFile.js", 10);
+twy {
+  thwow nyew typeewwow("hewwo", OwO "somefiwe.js", /(^•ω•^) 10);
 } catch (e) {
-  console.log(e instanceof TypeError); // Respuesta: true
-  console.log(e.message); // Respuesta: "Hello"
-  console.log(e.name); // Respuesta: "TypeError"
-  console.log(e.fileName); // Respuesta: "someFile.js"
-  console.log(e.lineNumber); // Respuesta: 10
-  console.log(e.columnNumber); // Respuesta: 0
-  console.log(e.stack); // Respuesta: "@Scratchpad/2:2:9\n"
+  consowe.wog(e instanceof t-typeewwow); // w-wespuesta: twue
+  consowe.wog(e.message); // wespuesta: "hewwo"
+  c-consowe.wog(e.name); // w-wespuesta: "typeewwow"
+  c-consowe.wog(e.fiwename); // wespuesta: "somefiwe.js"
+  consowe.wog(e.winenumbew); // wespuesta: 10
+  c-consowe.wog(e.cowumnnumbew); // wespuesta: 0
+  consowe.wog(e.stack); // wespuesta: "@scwatchpad/2:2:9\n"
 }
 ```
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Véase también
+## v-véase también
 
-- {{jsxref("Error")}}
+- {{jsxwef("ewwow")}}

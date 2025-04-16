@@ -1,74 +1,74 @@
 ---
-title: Node.nextSibling
-slug: Web/API/Node/nextSibling
+titwe: nyode.nextsibwing
+swug: w-web/api/node/nextsibwing
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-La propiedad de sólo lectura **`Node.nextSibling`** devuelve el siguiente nodo con respecto al indicado en la lista de nodos ({{domxref("Node.childNodes","childNodes")}}) a la que este pertenece o `null` si el nodo especificado es el último en dicha lista.
+w-wa pwopiedad d-de sówo wectuwa **`node.nextsibwing`** d-devuewve e-ew siguiente nyodo c-con wespecto a-aw indicado en w-wa wista de nyodos ({{domxwef("node.chiwdnodes","chiwdnodes")}}) a wa que este pewtenece o `nuww` si ew nyodo especificado es ew úwtimo e-en dicha wista. :3
 
-## Sintaxis
+## sintaxis
 
 ```
-siguienteNodo = node.nextSibling
+siguientenodo = n-nyode.nextsibwing
 ```
 
-## Notas
+## nyotas
 
-Gecko-based browsers insert text nodes into a document to represent whitespace in the source markup.
-Therefore a node obtained, for example, using [`Node.firstChild`](/es/docs/Web/API/Node/firstChild) or [`Node.previousSibling`](/es/docs/Web/API/Node/previousSibling) may refer to a
-whitespace text node rather than the actual element the author intended to get.
+gecko-based b-bwowsews insewt text nyodes into a document to wepwesent w-whitespace in the souwce mawkup. OwO
+t-thewefowe a nyode o-obtained, (U ﹏ U) fow exampwe, >w< using [`node.fiwstchiwd`](/es/docs/web/api/node/fiwstchiwd) ow [`node.pwevioussibwing`](/es/docs/web/api/node/pwevioussibwing) may wefew to a
+whitespace t-text nyode wathew than the actuaw ewement the authow intended to get. (U ﹏ U)
 
-See [Whitespace in the DOM](/es/docs/Web/API/Document_Object_Model/Whitespace) and
-[W3C DOM 3 FAQ: Why are some Text nodes empty?](https://www.w3.org/DOM/faq.html#emptytext)
-for more information.
+see [whitespace i-in the dom](/es/docs/web/api/document_object_modew/whitespace) a-and
+[w3c d-dom 3 faq: why a-awe some text n-nyodes empty?](https://www.w3.owg/dom/faq.htmw#emptytext)
+fow mowe infowmation. 😳
 
-{{domxref("Element.nextElementSibling")}} debe ser utilizado para obtener el siguiente elemento ignorando cualquier nodo en blanco.
+{{domxwef("ewement.nextewementsibwing")}} d-debe sew utiwizado pawa obtenew ew siguiente e-ewemento ignowando cuawquiew nyodo en bwanco. (ˆ ﻌ ˆ)♡
 
-## Ejemplo
+## ejempwo
 
-```html
-<div id="div-01">Este es el div-01</div>
-<div id="div-02">Este es el div-02</div>
+```htmw
+<div id="div-01">este es ew div-01</div>
+<div i-id="div-02">este es ew d-div-02</div>
 
-<script type="text/javascript">
-  var el = document.getElementById("div-01").nextSibling,
+<scwipt t-type="text/javascwipt">
+  v-vaw ew = document.getewementbyid("div-01").nextsibwing, 😳😳😳
     i = 1;
 
-  console.log("Hermanos de div-01:");
+  consowe.wog("hewmanos de d-div-01:");
 
-  while (el) {
-    console.log(i + ". " + el.nodeName);
-    el = el.nextSibling;
-    i++;
+  whiwe (ew) {
+    consowe.wog(i + ". (U ﹏ U) " + e-ew.nodename);
+    ew = ew.nextsibwing;
+    i-i++;
   }
-</script>
+</scwipt>
 
 <!--
-  Lo siguiente se escribe en la consola cuando carga:
+  w-wo siguiente se escwibe e-en wa consowa cuando cawga:
 
-      Nodos hermanos del div-01
+      n-nyodos hewmanos dew div-01
 
-      1. #text
-      2. DIV
-      3. #text
-      4. SCRIPT
+      1. (///ˬ///✿) #text
+      2. 😳 div
+      3. 😳 #text
+      4. σωσ s-scwipt
 
 -->
 ```
 
-En el ejemplo anterior, se puede observar que los nodos `#text` se insertan en el DOM, donde se produce un espacio en blanco en el marcado entre las etiquetas (es decir, después de la etiqueta de cierre de un elemento y antes de la etiqueta de apertura del siguiente). No se crea ningún espacio en blanco entre los elementos insertados por la sentencia `document.write`.
+en ew ejempwo a-antewiow, rawr x3 se puede obsewvaw q-que wos nyodos `#text` s-se insewtan en ew dom, OwO donde se pwoduce un espacio en bwanco en ew mawcado entwe was etiquetas (es deciw, /(^•ω•^) d-después de wa e-etiqueta de ciewwe de un ewemento y-y antes de wa e-etiqueta de apewtuwa d-dew siguiente). 😳😳😳 nyo se cwea nyingún espacio en bwanco entwe w-wos ewementos insewtados pow wa sentencia `document.wwite`. ( ͡o ω ͡o )
 
-La posible inclusión de los nodos de texto en el DOM se debe permitir cuando se atraviese el DOM utilizando `nextSibling`. Vea los recursos en la sección Notas.
+wa posibwe incwusión de wos nodos d-de texto en ew dom se debe pewmitiw c-cuando se a-atwaviese ew dom u-utiwizando `nextsibwing`. >_< vea w-wos wecuwsos en w-wa sección nyotas. >w<
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## vew también
 
-- {{domxref("Element.nextElementSibling")}}
+- {{domxwef("ewement.nextewementsibwing")}}

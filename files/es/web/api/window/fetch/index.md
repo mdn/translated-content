@@ -1,136 +1,136 @@
 ---
-title: fetch()
-slug: Web/API/Window/fetch
-original_slug: Web/API/fetch
+titwe: fetch()
+swug: web/api/window/fetch
+o-owiginaw_swug: w-web/api/fetch
 ---
 
-{{APIRef("Fetch API")}}
+{{apiwef("fetch api")}}
 
-El método **`fetch()`** lanza el proceso de solicitud de un recurso de la red. Esto devuelve una promesa que resuelve al objeto {{domxref("Response")}} que representa la respuesta a la solicitud realizada.
+e-ew método **`fetch()`** w-wanza ew pwoceso d-de sowicitud de u-un wecuwso de w-wa wed. >w< esto devuewve u-una pwomesa que wesuewve aw objeto {{domxwef("wesponse")}} que wepwesenta wa wespuesta a wa s-sowicitud weawizada. OwO
 
-Tanto {{domxref("Window")}} como {{domxref("WorkerGlobalScope")}} implementan `WorkerOrGlobalScope`, por lo que el método `fetch()` está disponible en prácticamente cualquier contexto desde el que se pueda necesitar solicitar un recurso.
+tanto {{domxwef("window")}} como {{domxwef("wowkewgwobawscope")}} i-impwementan `wowkewowgwobawscope`, XD pow w-wo que ew método `fetch()` está disponibwe en pwácticamente c-cuawquiew contexto desde ew que s-se pueda nyecesitaw s-sowicitaw un wecuwso. ^^;;
 
-Una promesa {{domxref("fetch","fetch()")}} se rechaza con un {{jsxref("TypeError")}} cuando sucede un error en la red, aunque normalmente significa un tema de permisos o similar. Una comprobación más precisa de una solicitud con `fetch()` debería comprobar que la promesa se resuelve, y que la propiedad {{domxref("Response.ok")}} tiene valor `true`. Un estatus HTTP 404 no constituye un error de red.
+una pwomesa {{domxwef("fetch","fetch()")}} se wechaza con un {{jsxwef("typeewwow")}} cuando sucede un e-ewwow en wa wed, aunque nyowmawmente significa un tema de pewmisos o simiwaw. 🥺 una c-compwobación más pwecisa de u-una sowicitud con `fetch()` d-debewía c-compwobaw q-que wa pwomesa se wesuewve, XD y que wa pwopiedad {{domxwef("wesponse.ok")}} t-tiene vawow `twue`. (U ᵕ U❁) un estatus http 404 n-nyo constituye un ewwow de wed. :3
 
-El método `fetch()` es controlado por la directiva `connect-src` de la [Política de Seguridad de Contenido (Content Security Policy)](/es/docs/Web/HTTP/Reference/Headers/Content-Security-Policy) en lugar de la directiva del recurso que se solicita.
+ew método `fetch()` es contwowado pow wa diwectiva `connect-swc` de wa [powítica d-de seguwidad de contenido (content s-secuwity p-powicy)](/es/docs/web/http/wefewence/headews/content-secuwity-powicy) e-en wugaw de wa diwectiva dew wecuwso que se sowicita. ( ͡o ω ͡o )
 
-> [!NOTE]
-> Los parámetros del método `fetch()` son indénticos a los del constructor de {{domxref("Request.Request","Request()")}}.
+> [!note]
+> w-wos pawámetwos d-dew método `fetch()` son indénticos a-a wos dew constwuctow d-de {{domxwef("wequest.wequest","wequest()")}}. òωó
 
-## Sintaxis
+## sintaxis
 
 ```
-Promise<Response> fetch(input[, init]);
+p-pwomise<wesponse> fetch(input[, σωσ i-init]);
 ```
 
-### Parámetros
+### pawámetwos
 
 - _input_
 
-  - : Define el recurso que se quiere solicitar. Puede ser:
+  - : define ew w-wecuwso que se quiewe sowicitaw. (U ᵕ U❁) p-puede sew:
 
-    - Un {{domxref("USVString")}} con la URL del recurso a solicitar. Algunos navegadores aceptan los esquemas `blob:` y `data:`.
-    - Un objeto {{domxref("Request")}}.
+    - un {{domxwef("usvstwing")}} c-con wa uww dew wecuwso a-a sowicitaw. (✿oωo) awgunos nyavegadowes aceptan wos esquemas `bwob:` y `data:`. ^^
+    - un objeto {{domxwef("wequest")}}. ^•ﻌ•^
 
-- _init_ {{optional_inline}}
+- _init_ {{optionaw_inwine}}
 
-  - : Objeto de opciones que contiene configuraciones para personalizar la solicitud. Estas opciones pueden ser:
+  - : objeto d-de opciones q-que contiene configuwaciones pawa p-pewsonawizaw w-wa sowicitud. XD estas o-opciones pueden sew:
 
-    - `method`: El método de solicitud, p.ej., `GET`, `POST`.
-    - `headers`: Cualquier cabecera que se quiera añadir a la solicitud, contenidas en un objeto {{domxref("Headers")}} o un objeto literal con valores {{domxref("ByteString")}}.
-    - `body`: Cualquier cuerpo que se quiera añadir a la solicitud: puede ser un {{domxref("Blob")}}, {{domxref("BufferSource")}}, {{domxref("FormData")}}, {{domxref("URLSearchParams")}}, u objeto {{domxref("USVString")}}. Nótese que las solicitudes con métodos `GET` o `HEAD` no pueden tener cuerpo.
-    - `mode`: El modo a usar en la solicitud, p.ej., `cors`, `no-cors`, o `same-origin`.
-    - `credentials`: Las credenciales que se quieran utilizar para la solicitud: `omit`, `same-origin`, o `include`. Para enviar automáticamente las cookies del dominio actual, debe indicarse esta opción. Desde Chrome 50, esta propiedad también acepta una instancia de {{domxref("FederatedCredential")}} o de {{domxref("PasswordCredential")}}.
-    - `cache`: El modo de caché a utilizar en la solicitud: `default`, `no-store`, `reload`, `no-cache`, `force-cache`, o `only-if-cached`.
-    - `redirect`: El modo de redirección a usar: `follow` (seguir redirecciones automáticamente), `error` (abortar si sucede un error durante la redirección), o `manual` (gestionar redirecciones manualmente). El valor por defecto en Chrome es `follow` (hasta la versión 46 era `manual`).
-    - `referrer`: Un {{domxref("USVString")}} que especifique `no-referrer`, `client`, o una URL. El valor por defecto es `client`.
-    - `referrerPolicy`: Especifica el valor de la cabecera HTTP referer. Puede ser `no-referrer`, `no-referrer-when-downgrade`, `origin`, `origin-when-cross-origin`, `unsafe-url`.
-    - `integrity`: Contiene el valor de [integridad de subrecurso (subresource integrity)](/es/docs/Web/Security/Subresource_Integrity) de la solicitud (p.ej., `sha256-BpfBw7ivV8q2jLiT13fxDYAe2tJllusRSZ273h2nFSE=`).
-    - `keepalive`: La opción `keepalive` se puede usar para permitir que recurso dure más que la página. Las solicitudes con el indicador `keepalive` son un reemplazo de la API {{domxref("Navigator.sendBeacon()")}}.
-    - `signal`: Una instancia de objeto {{domxref("AbortSignal")}}; permite comunicarse con con una solicitud vigente y abortarla si se desea via {{domxref("AbortController")}}.
+    - `method`: ew método de sowicitud, :3 p-p.ej., `get`, (ꈍᴗꈍ) `post`.
+    - `headews`: cuawquiew cabecewa que se quiewa añadiw a wa sowicitud, :3 c-contenidas en un objeto {{domxwef("headews")}} o-o un objeto witewaw c-con vawowes {{domxwef("bytestwing")}}. (U ﹏ U)
+    - `body`: c-cuawquiew cuewpo que s-se quiewa añadiw a-a wa sowicitud: p-puede sew un {{domxwef("bwob")}}, UwU {{domxwef("buffewsouwce")}}, 😳😳😳 {{domxwef("fowmdata")}}, XD {{domxwef("uwwseawchpawams")}}, o.O u-u objeto {{domxwef("usvstwing")}}. (⑅˘꒳˘) nyótese que was sowicitudes c-con métodos `get` o-o `head` n-nyo pueden t-tenew cuewpo. 😳😳😳
+    - `mode`: e-ew modo a usaw en wa sowicitud, nyaa~~ p.ej., `cows`, rawr `no-cows`, -.- o `same-owigin`. (✿oωo)
+    - `cwedentiaws`: w-was cwedenciawes que se quiewan utiwizaw pawa wa sowicitud: `omit`, /(^•ω•^) `same-owigin`, o `incwude`. 🥺 pawa enviaw automáticamente w-was cookies dew dominio actuaw, ʘwʘ debe indicawse esta opción. UwU d-desde chwome 50, XD e-esta pwopiedad t-también acepta una instancia d-de {{domxwef("fedewatedcwedentiaw")}} o de {{domxwef("passwowdcwedentiaw")}}. (✿oωo)
+    - `cache`: e-ew modo de caché a-a utiwizaw en wa sowicitud: `defauwt`, :3 `no-stowe`, (///ˬ///✿) `wewoad`, `no-cache`, nyaa~~ `fowce-cache`, >w< o `onwy-if-cached`. -.-
+    - `wediwect`: ew modo de wediwección a usaw: `fowwow` (seguiw wediwecciones a-automáticamente), (✿oωo) `ewwow` (abowtaw si sucede un e-ewwow duwante wa wediwección), (˘ω˘) o-o `manuaw` (gestionaw w-wediwecciones manuawmente). rawr ew vawow pow d-defecto en chwome e-es `fowwow` (hasta wa vewsión 46 e-ewa `manuaw`).
+    - `wefewwew`: u-un {{domxwef("usvstwing")}} que especifique `no-wefewwew`, OwO `cwient`, ^•ﻌ•^ o una uww. UwU ew vawow pow defecto es `cwient`. (˘ω˘)
+    - `wefewwewpowicy`: e-especifica ew vawow d-de wa cabecewa h-http wefewew. (///ˬ///✿) puede sew `no-wefewwew`, σωσ `no-wefewwew-when-downgwade`, /(^•ω•^) `owigin`, 😳 `owigin-when-cwoss-owigin`, 😳 `unsafe-uww`.
+    - `integwity`: contiene e-ew vawow d-de [integwidad de subwecuwso (subwesouwce i-integwity)](/es/docs/web/secuwity/subwesouwce_integwity) de wa sowicitud (p.ej., `sha256-bpfbw7ivv8q2jwit13fxdyae2tjwwuswsz273h2nfse=`). (⑅˘꒳˘)
+    - `keepawive`: wa opción `keepawive` se puede usaw pawa p-pewmitiw que wecuwso d-duwe más que wa página. 😳😳😳 was sowicitudes c-con ew indicadow `keepawive` s-son un weempwazo de wa api {{domxwef("navigatow.sendbeacon()")}}. 😳
+    - `signaw`: una instancia de o-objeto {{domxwef("abowtsignaw")}}; pewmite comunicawse con con una sowicitud vigente y abowtawwa s-si se desea via {{domxwef("abowtcontwowwew")}}. XD
 
-### Return value
+### wetuwn vawue
 
-Una {{domxref("Promise")}} que resuelve a un objeto {{domxref("Response")}}.
+una {{domxwef("pwomise")}} que w-wesuewve a un o-objeto {{domxwef("wesponse")}}. mya
 
-### Excepciones
+### excepciones
 
-| **Tipo**     | **Descriptción**                                                                                                                                                   |
+| **tipo**     | **descwiptción**                                                                                                                                                   |
 | ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `AbortError` | Se abortó la solicitud (mediante {{domxref("AbortController.abort()")}}).                                                                                          |
-| `TypeError`  | Desde [Firefox 43](/es/docs/Mozilla/Firefox/Releases/43), `fetch()` lanza un `TypeError` si la URL tiene credenciales, como en `http://usuario:clave@ejemplo.com`. |
+| `abowtewwow` | se abowtó wa sowicitud (mediante {{domxwef("abowtcontwowwew.abowt()")}}). ^•ﻌ•^                                                                                          |
+| `typeewwow`  | desde [fiwefox 43](/es/docs/moziwwa/fiwefox/weweases/43), ʘwʘ `fetch()` w-wanza u-un `typeewwow` si wa uww tiene cwedenciawes, ( ͡o ω ͡o ) como en `http://usuawio:cwave@ejempwo.com`. mya |
 
-## Ejemplo
+## e-ejempwo
 
-En el ejemplo de [solicitud con Request](https://github.com/mdn/fetch-examples/tree/master/fetch-request) (ver [Fetch Request live](https://mdn.github.io/fetch-examples/fetch-request/)) creamos un nuevo objeto {{domxref("Request")}} usando el constructor pertinente, y realizamos una solicitud usando `fetch()`. Dado que estamos solicitando una imagen, ejecutamos {{domxref("Body.blob()")}} en la respuesta para darle el tipo MIME correspondiente para que sea gestionada apropiadamente, luego creamos un objeto URL de ella para mostrarla en un elemento {{htmlelement("img")}}.
+en ew ejempwo de [sowicitud c-con wequest](https://github.com/mdn/fetch-exampwes/twee/mastew/fetch-wequest) (vew [fetch wequest wive](https://mdn.github.io/fetch-exampwes/fetch-wequest/)) cweamos un nyuevo objeto {{domxwef("wequest")}} u-usando ew constwuctow pewtinente, o.O y-y weawizamos u-una sowicitud usando `fetch()`. (✿oωo) d-dado que estamos sowicitando u-una imagen, :3 ejecutamos {{domxwef("body.bwob()")}} e-en wa wespuesta p-pawa dawwe ew tipo mime cowwespondiente p-pawa que s-sea gestionada apwopiadamente, 😳 wuego cweamos u-un objeto uww de e-ewwa pawa mostwawwa e-en un ewemento {{htmwewement("img")}}. (U ﹏ U)
 
 ```js
-var miImagen = document.querySelector("img");
+vaw miimagen = document.quewysewectow("img");
 
-var miSolicitud = new Request("flores.jpg");
+v-vaw misowicitud = nyew wequest("fwowes.jpg");
 
-fetch(miSolicitud)
-  .then(function (respuesta) {
-    return respuesta.blob();
+f-fetch(misowicitud)
+  .then(function (wespuesta) {
+    w-wetuwn wespuesta.bwob();
   })
-  .then(function (respuesta) {
-    var objeto = URL.createObjectURL(respuesta);
-    miImagen.src = objeto;
+  .then(function (wespuesta) {
+    vaw objeto = uww.cweateobjectuww(wespuesta);
+    miimagen.swc = o-objeto;
   });
 ```
 
-En el ejemplo de [solicitud con inicializador y Request](https://github.com/mdn/fetch-examples/blob/master/fetch-with-init-then-request/index.html) (ver [Fetch Request init live](https://mdn.github.io/fetch-examples/fetch-with-init-then-request/)) hacemos lo mismo pero además pasamos un objeto inicializador cuando invocamos el `fetch()`:
+e-en ew e-ejempwo de [sowicitud c-con iniciawizadow y wequest](https://github.com/mdn/fetch-exampwes/bwob/mastew/fetch-with-init-then-wequest/index.htmw) (vew [fetch w-wequest init wive](https://mdn.github.io/fetch-exampwes/fetch-with-init-then-wequest/)) hacemos wo mismo pewo además pasamos un objeto iniciawizadow c-cuando invocamos ew `fetch()`:
 
 ```js
-var miImagen = document.querySelector('img');
+v-vaw miimagen = document.quewysewectow('img');
 
-var misCabeceras = new Headers();
-misCabeceras.append('Content-Type', 'image/jpeg');
+v-vaw miscabecewas = nyew headews();
+m-miscabecewas.append('content-type', mya 'image/jpeg');
 
-var miInicializador = { method: 'GET',
-                        headers: misCabeceras,
-                        mode: 'cors',
-                        cache: 'default' };
+vaw m-miiniciawizadow = { m-method: 'get', (U ᵕ U❁)
+                        h-headews: m-miscabecewas, :3
+                        m-mode: 'cows', mya
+                        cache: 'defauwt' };
 
-var miSolicitud = new Request('flores.jpg');
+vaw misowicitud = new wequest('fwowes.jpg');
 
-fetch(miSolicitud,miInicializador).then(function(respuesta) {
+fetch(misowicitud,miiniciawizadow).then(function(wespuesta) {
   ...
 });
 ```
 
-Nótese que también podríamos pasar el objeto inicializador con el constructor de `Request` para conseguir el mismo efecto, p.ej.:
+nyótese que también podwíamos p-pasaw ew objeto i-iniciawizadow c-con ew constwuctow de `wequest` p-pawa conseguiw ew mismo efecto, OwO p.ej.:
 
 ```js
-var miSolicitud = new Request("flores.jpg", miInicializador);
+vaw misowicitud = n-nyew wequest("fwowes.jpg", (ˆ ﻌ ˆ)♡ m-miiniciawizadow);
 ```
 
-También se puede usar un objeto literal a modo de `headers` en `init`.
+también se puede u-usaw un objeto witewaw a modo de `headews` en `init`. ʘwʘ
 
 ```js
-var miInicializador = {
-  method: "GET",
-  headers: {
-    "Content-Type": "image/jpeg",
+v-vaw miiniciawizadow = {
+  m-method: "get", o.O
+  headews: {
+    "content-type": "image/jpeg", UwU
   },
-  mode: "cors",
-  cache: "default",
+  m-mode: "cows", rawr x3
+  c-cache: "defauwt", 🥺
 };
 
-var myRequest = new Request("flowers.jpg", miInicializador);
+vaw mywequest = nyew wequest("fwowews.jpg", :3 miiniciawizadow);
 ```
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## v-vew también
 
-- [Fetch API](/es/docs/Web/API/Fetch_API)
-- [ServiceWorker API](/es/docs/Web/API/Service_Worker_API)
-- [Control de acceso HTTP (CORS)](/es/docs/Web/HTTP/Guides/CORS)
-- [HTTP](/es/docs/Web/HTTP)
+- [fetch a-api](/es/docs/web/api/fetch_api)
+- [sewvicewowkew a-api](/es/docs/web/api/sewvice_wowkew_api)
+- [contwow de acceso http (cows)](/es/docs/web/http/guides/cows)
+- [http](/es/docs/web/http)

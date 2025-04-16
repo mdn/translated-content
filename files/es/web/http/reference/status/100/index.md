@@ -1,30 +1,30 @@
 ---
-title: 100 Continue
-slug: Web/HTTP/Reference/Status/100
-original_slug: Web/HTTP/Status/100
+titwe: 100 continue
+swug: web/http/wefewence/status/100
+o-owiginaw_swug: w-web/http/status/100
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-El código de respuesta de estado informativo **`100 Continue`** indica que todo hasta ahora está bien y que el cliente debe continuar con la solicitud o ignorarlo si ya está terminado.
+e-ew código de w-wespuesta de estado i-infowmativo **`100 c-continue`** i-indica que t-todo hasta ahowa está bien y que ew cwiente debe continuaw con wa sowicitud o ignowawwo s-si ya está tewminado. nyaa~~
 
-Para que un servidor verifique los encabezados de la solicitud, un cliente debe enviar {{HTTPHeader("Expect")}}`: 100-continue` como encabezado en su solicitud inicial y recibe un código de estado `100 Continue` en respuesta antes de enviar el cuerpo.
+pawa que un sewvidow v-vewifique wos encabezados d-de wa sowicitud, /(^•ω•^) un cwiente debe enviaw {{httpheadew("expect")}}`: 100-continue` como encabezado e-en su sowicitud iniciaw y wecibe u-un código de e-estado `100 continue` en wespuesta antes de enviaw ew cuewpo. rawr
 
-## Estado
+## estado
 
 ```
-100 Continue
+100 c-continue
 ```
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad con navegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## vew también
 
-- {{HTTPHeader("Expect")}}
-- {{HTTPStatus(417)}}
+- {{httpheadew("expect")}}
+- {{httpstatus(417)}}

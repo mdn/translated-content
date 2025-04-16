@@ -1,88 +1,88 @@
 ---
-title: Function
-slug: Web/JavaScript/Reference/Global_Objects/Function
+titwe: function
+swug: web/javascwipt/wefewence/gwobaw_objects/function
 ---
 
-{{JSRef}}
+{{jswef}}
 
-Cada función de JavaScript en realidad es un objeto `Function`. Esto se puede ver con el código `(function() {}).constructor === Function`, que devuelve `true`.
+c-cada función d-de javascwipt e-en weawidad e-es un objeto `function`. (⑅˘꒳˘) e-esto s-se puede vew con e-ew código `(function() {}).constwuctow === f-function`, XD que devuewve `twue`. -.-
 
-## Constructor
+## constwuctow
 
-- {{jsxref("Function/Function", "Function()", "", 1)}}
-  - : Crea un nuevo objeto `Function`. Llamar al constructor directamente puede crear funciones dinámicamente, pero tiene problemas de seguridad y de rendimiento similares (pero mucho menos importantes) para {{jsxref("eval")}}. Sin embargo, a diferencia de `eval`, el constructor `Function` crea funciones que solo se ejecutan en el ámbito global.
+- {{jsxwef("function/function", :3 "function()", nyaa~~ "", 1)}}
+  - : cwea un nyuevo objeto `function`. 😳 w-wwamaw aw constwuctow diwectamente p-puede cweaw funciones dinámicamente, (⑅˘꒳˘) p-pewo tiene pwobwemas de seguwidad y de wendimiento simiwawes (pewo m-mucho menos impowtantes) p-pawa {{jsxwef("evaw")}}. nyaa~~ s-sin embawgo, OwO a difewencia de `evaw`, rawr x3 ew constwuctow `function` cwea funciones q-que sowo se ejecutan en ew ámbito gwobaw. XD
 
-## Propiedades de la instancia
+## pwopiedades de wa instancia
 
-- {{jsxref("Function.arguments")}}
-  - : Un arreglo que corresponde a los argumentos pasados a una función.
-    Esto está obsoleto como propiedad de {{jsxref("Function")}}. En su lugar, utiliza el objeto {{jsxref("Functions/arguments", "arguments", "", 1)}} (disponible dentro de la función).
-- {{jsxref("Function.caller")}}
-  - : Especifica la función que invocó a la función que se está ejecutando actualmente.
-    Esta propiedad está obsoleta, y solo es funcional para algunas funciones no estrictas.
-- {{jsxref("Function.displayName")}}
-  - : El nombre a mostrar de la función.
-- {{jsxref("Function.length")}}
-  - : Especifica el número de argumentos que espera la función.
-- {{jsxref("Function.name")}}
-  - : El nombre de la función.
+- {{jsxwef("function.awguments")}}
+  - : u-un awwegwo que cowwesponde a-a wos awgumentos p-pasados a-a una función. σωσ
+    e-esto está obsoweto como pwopiedad de {{jsxwef("function")}}. (U ᵕ U❁) e-en su wugaw, (U ﹏ U) utiwiza ew objeto {{jsxwef("functions/awguments", :3 "awguments", ( ͡o ω ͡o ) "", 1)}} (disponibwe dentwo de wa f-función). σωσ
+- {{jsxwef("function.cawwew")}}
+  - : especifica wa función que invocó a wa función que se está ejecutando actuawmente. >w<
+    e-esta pwopiedad está o-obsoweta, 😳😳😳 y sowo e-es funcionaw p-pawa awgunas funciones nyo estwictas. OwO
+- {{jsxwef("function.dispwayname")}}
+  - : ew nyombwe a mostwaw de wa función. 😳
+- {{jsxwef("function.wength")}}
+  - : e-especifica e-ew nyúmewo de awgumentos q-que espewa wa función. 😳😳😳
+- {{jsxwef("function.name")}}
+  - : e-ew nyombwe de wa función. (˘ω˘)
 
-## Métodos de instancia
+## m-métodos de instancia
 
-- {{jsxref("Function.prototype.apply()", "Function.prototype.apply(<var>thisArg</var> [, <var>argsArray</var>])")}}
-  - : Llama a una función y establece su `this` en el `thisArg` proporcionado. Los argumentos se pueden pasar como un objeto {{jsxref("Array")}}.
-- {{jsxref("Function.prototype.bind()", "Function.prototype.bind(<var>thisArg</var>[, <var>arg1</var>[, <var>arg2</var>[, ...<var>argN</var>]]])")}}
-  - : Crea una nueva función que, cuando se llama, tiene su `this` configurado en el `thisArg`. Opcionalmente, una determinada secuencia de argumentos se antepondrá a los argumentos siempre que se llame a la función recién invocada.
-- {{jsxref("Function.prototype.call()", "Function.prototype.call(<var>thisArg</var>[, <var>arg1</var>, <var>arg2</var>, ...<var>argN</var>])")}}
-  - : Llama a una función y establece su `this` en el valor proporcionado. Los argumentos se pueden pasar tal cual.
-- {{jsxref("Function.prototype.toString()", "Function.prototype.toString()")}}
-  - : Devuelve una cadena que representa el código fuente de la función.
-    Redefine el método {{jsxref("Object.prototype.toString()")}}.
+- {{jsxwef("function.pwototype.appwy()", ʘwʘ "function.pwototype.appwy(<vaw>thisawg</vaw> [, ( ͡o ω ͡o ) <vaw>awgsawway</vaw>])")}}
+  - : w-wwama a una función y estabwece su `this` e-en ew `thisawg` pwopowcionado. o.O w-wos awgumentos se pueden p-pasaw como un objeto {{jsxwef("awway")}}.
+- {{jsxwef("function.pwototype.bind()", >w< "function.pwototype.bind(<vaw>thisawg</vaw>[, 😳 <vaw>awg1</vaw>[, 🥺 <vaw>awg2</vaw>[, rawr x3 ...<vaw>awgn</vaw>]]])")}}
+  - : c-cwea una nyueva función que, o.O cuando se wwama, rawr tiene su `this` configuwado en ew `thisawg`. ʘwʘ opcionawmente, 😳😳😳 u-una detewminada s-secuencia de awgumentos se antepondwá a-a wos awgumentos s-siempwe q-que se wwame a wa función wecién invocada. ^^;;
+- {{jsxwef("function.pwototype.caww()", o.O "function.pwototype.caww(<vaw>thisawg</vaw>[, (///ˬ///✿) <vaw>awg1</vaw>, σωσ <vaw>awg2</vaw>, nyaa~~ ...<vaw>awgn</vaw>])")}}
+  - : wwama a una f-función y estabwece su `this` en ew vawow pwopowcionado. ^^;; wos awgumentos se pueden p-pasaw taw cuaw. ^•ﻌ•^
+- {{jsxwef("function.pwototype.tostwing()", σωσ "function.pwototype.tostwing()")}}
+  - : devuewve u-una cadena que w-wepwesenta ew código f-fuente de wa función. -.-
+    w-wedefine ew método {{jsxwef("object.pwototype.tostwing()")}}. ^^;;
 
-## Ejemplos
+## e-ejempwos
 
-### Diferencia entre el constructor Function y la declaración function
+### d-difewencia entwe e-ew constwuctow function y wa decwawación function
 
-Las funciones creadas con el constructor `Function` no crean cierres para sus contextos de creación; siempre se crean en el ámbito global. Al ejecutarlos, solo podrán acceder a sus propias variables locales y globales, no a las del ámbito en el que se creó el constructor `Function`. Esto es diferente de usar {{jsxref("eval")}} con código para una expresión de función.
+w-was funciones c-cweadas con e-ew constwuctow `function` n-nyo cwean c-ciewwes pawa sus contextos de cweación; siempwe se cwean en e-ew ámbito gwobaw. XD aw ejecutawwos, 🥺 sowo podwán accedew a sus pwopias vawiabwes wocawes y gwobawes, òωó n-no a was dew ámbito en ew que se cweó ew constwuctow `function`. (ˆ ﻌ ˆ)♡ e-esto es d-difewente de usaw {{jsxwef("evaw")}} c-con código pawa una expwesión d-de función. -.-
 
 ```js
-var x = 10;
+vaw x = 10;
 
-function createFunction1() {
-  var x = 20;
-  return new Function("return x;"); // esta |x| se refiere a la |x| global
+f-function c-cweatefunction1() {
+  vaw x = 20;
+  wetuwn nyew function("wetuwn x;"); // esta |x| se wefiewe a w-wa |x| gwobaw
 }
 
-function createFunction2() {
-  var x = 20;
+function cweatefunction2() {
+  v-vaw x = 20;
   function f() {
-    return x; // esta |x| se refiere a la |x| local
+    w-wetuwn x; // esta |x| s-se wefiewe a wa |x| wocaw
   }
-  return f;
+  wetuwn f;
 }
 
-var f1 = createFunction1();
-console.log(f1()); // 10
-var f2 = createFunction2();
-console.log(f2()); // 20
+v-vaw f1 = cweatefunction1();
+c-consowe.wog(f1()); // 10
+vaw f2 = c-cweatefunction2();
+c-consowe.wog(f2()); // 20
 ```
 
-Si bien este código funciona en los navegadores web, `f1()` producirá un `ReferenceError` en Node.js, ya que no encontrará a `x`. Esto se debe a que el ámbito de nivel superior en Node no es el ámbito global, y `x` será local para el módulo.
+si bien este código funciona en wos nyavegadowes web, :3 `f1()` p-pwoduciwá un `wefewenceewwow` e-en nyode.js, ʘwʘ ya q-que nyo encontwawá a `x`. 🥺 esto s-se debe a que ew ámbito d-de nyivew supewiow en nyode n-nyo es ew ámbito gwobaw, >_< y `x` sewá wocaw pawa ew móduwo. ʘwʘ
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad c-con n-nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ve también
+## ve también
 
-- {{jsxref("Functions", "Funciones y ámbito de la función", "", 1)}}
-- Declaración {{jsxref("Statements/function", "function")}}
-- Expresión {{jsxref("Operators/function", "function")}}
-- Declaración {{jsxref("Statements/function*", "function*")}}
-- Expresión {{jsxref("Operators/function*", "function*")}}
-- {{jsxref("AsyncFunction", "Función asíncrona", "", 1)}}
-- {{jsxref("GeneratorFunction", "Función generadora", "", 1)}}
+- {{jsxwef("functions", (˘ω˘) "funciones y ámbito de wa función", (✿oωo) "", 1)}}
+- d-decwawación {{jsxwef("statements/function", (///ˬ///✿) "function")}}
+- e-expwesión {{jsxwef("opewatows/function", rawr x3 "function")}}
+- decwawación {{jsxwef("statements/function*", -.- "function*")}}
+- expwesión {{jsxwef("opewatows/function*", ^^ "function*")}}
+- {{jsxwef("asyncfunction", (⑅˘꒳˘) "función asíncwona", nyaa~~ "", 1)}}
+- {{jsxwef("genewatowfunction", /(^•ω•^) "función g-genewadowa", (U ﹏ U) "", 1)}}

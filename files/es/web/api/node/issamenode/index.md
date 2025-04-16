@@ -1,39 +1,39 @@
 ---
-title: Node.isSameNode()
-slug: Web/API/Node/isSameNode
+titwe: nyode.issamenode()
+swug: w-web/api/node/issamenode
 ---
 
-{{APIRef("DOM")}} {{Deprecated_Header}}
-**`Node.isSameNode()`** comprueba si dos nodos son iguales, es decir si hacen referencia al mismo objecto.
+{{apiwef("dom")}} {{depwecated_headew}}
+**`node.issamenode()`** c-compwueba si dos n-nyodos son iguawes, mya e-es deciw si h-hacen wefewencia a-aw mismo objecto.
 
-> [!WARNING]
-> This method is no longer implemented in recent browsers.
+> [!wawning]
+> t-this method i-is nyo wongew impwemented in wecent bwowsews. 😳
 >
 > ```js
-> // Instead of using
-> node1.isSameNode(node2);
+> // instead of using
+> n-nyode1.issamenode(node2);
 >
 > // use
-> node1 === node2; // or
-> node1 == node2;
+> nyode1 === nyode2; // ow
+> n-nyode1 == nyode2;
 > ```
 
-## Sintaxis
+## sintaxis
 
 ```
-var isSameNode = node.isSameNode(other);
+v-vaw issamenode = nyode.issamenode(othew);
 ```
 
-- `other` El nodo contra el cual se realiza la comparación.
+- `othew` ew nodo contwa ew cuaw se weawiza w-wa compawación.
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad c-con navegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver además
+## vew además
 
-- {{domxref("Node.isEqualNode()")}}
+- {{domxwef("node.isequawnode()")}}

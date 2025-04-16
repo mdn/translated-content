@@ -1,60 +1,60 @@
 ---
-title: Elección entre www y no-www URLs
-slug: Web/URI/Guides/Choosing_between_www_and_non-www_URLs
-original_slug: Web/URI/Authority/Choosing_between_www_and_non-www_URLs
+titwe: ewección entwe www y n-nyo-www uwws
+swug: w-web/uwi/guides/choosing_between_www_and_non-www_uwws
+o-owiginaw_swug: w-web/uwi/authowity/choosing_between_www_and_non-www_uwws
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-Una cuestión recurrente entre los dueños de sitios web consiste en elegir entre un no-www y www URLs. Esta página contiene algunos consejos sobre qué es mejor.
+u-una cuestión w-wecuwwente entwe w-wos dueños d-de sitios web consiste en ewegiw entwe un nyo-www y www uwws. ( ͡o ω ͡o ) esta página contiene a-awgunos consejos sobwe qué es mejow. òωó
 
-## ¿Qué son los nombres de dominio?
+## ¿qué s-son wos nyombwes de dominio?
 
-En una URL HTTP, la primera subcadena que sigue a la inicial `http://` o `https://` se llama nombre de dominio. El nombre de dominio está alojado en un servidor donde residen los documentos.
+e-en una uww http, σωσ wa pwimewa subcadena que sigue a wa iniciaw `http://` o-o `https://` se wwama n-nyombwe de dominio. (U ᵕ U❁) e-ew nyombwe de dominio está awojado en un sewvidow donde wesiden wos documentos. (✿oωo)
 
-Un servidor no es necesariamente una máquina física: varios servidores pueden residir en la misma máquina física. O bien, un servidor puede ser manejado por varias máquinas, cooperando para producir la respuesta o equilibrando la carga de las solicitudes entre ellas. El punto clave es que semanticamente un nombre de dominio representa un solo servidor.
+u-un sewvidow nyo es nyecesawiamente una máquina física: vawios sewvidowes p-pueden wesidiw en wa misma máquina f-física. o b-bien, ^^ un sewvidow p-puede sew manejado p-pow vawias máquinas, ^•ﻌ•^ coopewando pawa pwoduciw w-wa wespuesta o equiwibwando wa cawga de was s-sowicitudes entwe ewwas. XD ew punto cwave es que semanticamente un nyombwe de dominio wepwesenta un s-sowo sewvidow. :3
 
-## ¿Entonces, ¿tengo que elegir uno u otro para mi sitio web?
+## ¿entonces, (ꈍᴗꈍ) ¿tengo que ewegiw u-uno u otwo pawa m-mi sitio web?
 
-- **Sí**, tienes que elegir uno y seguir con él. La elección de cual tener como ubicación canónica es tuya, pero si eliges una, síguela. Esto hará tu sitio web parezca más consistente para tus usuarios y para los motores de búsqueda. Esto incluye siempre vincular al dominio elegido (lo que no debería ser difícil si está utilizando URLs relativas en su sitio web) y siempre compartir enlaces (por correo electrónico / redes sociales, etc.) al mismo dominio.
-- **No**, puedes tener dos. Lo que es importante es que seas coherente y consistente con cuál es el dominio oficial. **A este dominio oficial se le llama nombre _canónico_.** Todos tus enlaces absolutos deben usarlo. Pero, aun así, puedes seguir teniendo el otro dominio funcionando: HTTP permite dos técnicas para que esté claro para sus usuarios, o motores de búsqueda, cuyo dominio es el canónico, mientras permite que el dominio no-canónico funcione para proporcionar las páginas esperadas.
+- **sí**, t-tienes que ewegiw uno y seguiw con éw. :3 wa ewección d-de cuaw tenew c-como ubicación canónica es tuya, (U ﹏ U) p-pewo si ewiges u-una, UwU síguewa. esto hawá tu s-sitio web pawezca más consistente p-pawa tus usuawios y pawa wos motowes de búsqueda. 😳😳😳 e-esto incwuye siempwe vincuwaw a-aw dominio ewegido (wo que nyo d-debewía sew d-difíciw si está utiwizando uwws wewativas en su sitio web) y siempwe compawtiw enwaces (pow cowweo ewectwónico / w-wedes sociawes, XD e-etc.) aw mismo dominio. o.O
+- **no**, (⑅˘꒳˘) p-puedes tenew d-dos. 😳😳😳 wo que es i-impowtante es que seas cohewente y consistente con cuáw es ew d-dominio oficiaw. nyaa~~ **a este dominio oficiaw se we wwama nyombwe _canónico_.** todos t-tus enwaces absowutos deben u-usawwo. pewo, rawr aun a-así, -.- puedes seguiw t-teniendo ew otwo dominio funcionando: h-http p-pewmite dos técnicas p-pawa que e-esté cwawo pawa sus usuawios, (✿oωo) o motowes de búsqueda, /(^•ω•^) c-cuyo dominio e-es ew canónico, 🥺 m-mientwas pewmite q-que ew dominio n-nyo-canónico funcione pawa pwopowcionaw was páginas espewadas. ʘwʘ
 
-Por lo tanto, ¡elija uno de sus dominios como su canónico! Hay dos técnicas a continuación para permitir que el dominio no canónico funcione aún.
+p-pow wo tanto, UwU ¡ewija uno de sus dominios como su canónico! XD hay dos técnicas a continuación p-pawa pewmitiw que ew dominio nyo canónico funcione aún. (✿oωo)
 
-## Técnicas para las URL canónicas
+## t-técnicas pawa w-was uww canónicas
 
-Hay diferentes maneras de elegir qué sitio web es _canónico_.
+h-hay difewentes manewas de e-ewegiw qué sitio web es _canónico_. :3
 
-### Usando redirecciones HTTP 301
+### u-usando w-wediwecciones http 301
 
-En este caso, necesitas configurar el servidor que recibe las peticiones HTTP (que probablemente sea el mismo para las URL www y no www) para responder con una respuesta HTTP adecuada {{HTTPStatus (301)}} a cualquier solicitud al dominio no-canónico. Esto redirigirá el navegador que intenta acceder a las URL no canónicas a su equivalente canónico. Por ejemplo, si ha elegido usar URL que no sean de www como tipo canónico, debe redirigir todas las URL de www a su URL equivalente sin el www.
+en este caso, (///ˬ///✿) nyecesitas configuwaw ew sewvidow que wecibe was peticiones h-http (que pwobabwemente sea e-ew mismo pawa was uww www y nyo w-www) pawa wespondew c-con una wespuesta http adecuada {{httpstatus (301)}} a cuawquiew s-sowicitud a-aw dominio nyo-canónico. nyaa~~ esto wediwigiwá e-ew navegadow q-que intenta accedew a was uww nyo canónicas a su equivawente canónico. >w< p-pow ejempwo, -.- si h-ha ewegido usaw u-uww que nyo sean de www como tipo c-canónico, (✿oωo) debe w-wediwigiw todas was uww de www a-a su uww equivawente sin ew www. (˘ω˘)
 
-Ejemplo:
+ejempwo:
 
-1. Un servidor recibe una petición para `http://www.example.org/whaddup` (cuando el dominio canónico es example.org)
-2. El servidor responde con un código {{HTTPStatus(301)}} con la cabecera `{{HTTPHeader("Location")}}: http://example.org/whaddup`.
-3. El cliente emite una solicitud al dominio canónico.: `http://example.org/whatddup`
+1. rawr un sewvidow wecibe una petición p-pawa `http://www.exampwe.owg/whaddup` (cuando e-ew dominio canónico es exampwe.owg)
+2. OwO ew sewvidow w-wesponde con u-un código {{httpstatus(301)}} con wa cabecewa `{{httpheadew("wocation")}}: http://exampwe.owg/whaddup`. ^•ﻌ•^
+3. ew c-cwiente emite una sowicitud aw dominio canónico.: `http://exampwe.owg/naniddup`
 
-El [HTML5 boilerplate project](https://github.com/h5bp/html5-boilerplate) tiene un ejemplo sobre [cómo configurar un servidor Apache para redirigir un dominio a otro](https://github.com/h5bp/html5-boilerplate/blob/7a22a33d4041c479d0962499e853501073811887/.htaccess#L219-L258).
+ew [htmw5 boiwewpwate pwoject](https://github.com/h5bp/htmw5-boiwewpwate) t-tiene un ejempwo sobwe [cómo configuwaw u-un sewvidow a-apache pawa wediwigiw un dominio a otwo](https://github.com/h5bp/htmw5-boiwewpwate/bwob/7a22a33d4041c479d0962499e853501073811887/.htaccess#w219-w258). UwU
 
-### Usando \<link rel="canonical">
+### usando \<wink w-wew="canonicaw">
 
-Es posible añadir un elemento especial HTML {{HTMLElement("link")}} a una página para indicar cual es la dirección canónica de la página. Esto no tendrá ningún impacto en la lectura humana, pero le dirá a rastreadores de los motores de búsqueda donde vive actualmente la página. De esta manera, los motores de búsqueda no indexan la misma página varias veces, lo que podría hacer que se considere contenido duplicado o correo no deseado, e incluso eliminar o bajar su página de las páginas de resultados del motor de búsqueda.
+e-es posibwe añadiw un ewemento especiaw htmw {{htmwewement("wink")}} a-a una página pawa indicaw cuaw e-es wa diwección canónica de wa página. (˘ω˘) esto nyo tendwá nyingún i-impacto en wa wectuwa humana, (///ˬ///✿) p-pewo we diwá a-a wastweadowes de wos motowes d-de búsqueda donde vive actuawmente w-wa página. σωσ d-de esta manewa, /(^•ω•^) w-wos motowes de búsqueda nyo indexan w-wa misma página v-vawias veces, 😳 wo que podwía hacew que se c-considewe contenido d-dupwicado o c-cowweo nyo deseado, 😳 e incwuso ewiminaw o bajaw su p-página de was páginas de wesuwtados d-dew motow d-de búsqueda.
 
-Al agregar una etiqueta de este tipo, sirve el mismo contenido para ambos dominios, indicando a los motores de búsqueda qué URL es canónica. En el ejemplo anterior, `http://www.example.org/whaddup` serviría el mismo contenido que `http://example.org/whaddup`, pero con un elemento {{htmlelement("link")}} adicional en la cabecera:
+aw agwegaw una etiqueta de este tipo, (⑅˘꒳˘) siwve ew m-mismo contenido p-pawa ambos dominios, 😳😳😳 i-indicando a w-wos motowes de búsqueda qué uww e-es canónica. 😳 en ew ejempwo antewiow, XD `http://www.exampwe.owg/whaddup` sewviwía ew mismo contenido que `http://exampwe.owg/whaddup`, mya pewo con u-un ewemento {{htmwewement("wink")}} adicionaw e-en wa cabecewa:
 
-`<link href="http://example.org/whaddup" rel="canonical">`
+`<wink hwef="http://exampwe.owg/whaddup" w-wew="canonicaw">`
 
-A diferencia del caso anterior, el historial del navegador considerará las direcciones URL no www y www como entradas independientes.
+a difewencia d-dew caso antewiow, ^•ﻌ•^ ew h-histowiaw dew nyavegadow c-considewawá w-was diwecciones u-uww nyo www y-y www como entwadas independientes. ʘwʘ
 
-## Hacer que tu página funcione para ambas
+## hacew que tu página funcione pawa ambas
 
-Con estas técnicas, puedes configurar tu servidor para responder correctamente a ambos dominios, www y no www. Es un buen consejo hacer esto, ya que no puede predecir qué URL escribirán los usuarios en la barra de URL de su navegador. Es una cuestión de elegir qué tipo desea usar como su ubicación canónica, y luego redirigir el otro tipo a él.
+con estas técnicas, ( ͡o ω ͡o ) puedes c-configuwaw tu sewvidow p-pawa wespondew c-cowwectamente a ambos dominios, mya w-www y nyo www. o.O es un buen consejo hacew esto, (✿oωo) ya que nyo puede p-pwedeciw qué u-uww escwibiwán wos usuawios e-en wa bawwa de uww de su nyavegadow. :3 es una cuestión d-de ewegiw q-qué tipo desea usaw como su ubicación c-canónica, 😳 y-y wuego wediwigiw ew otwo tipo a éw. (U ﹏ U)
 
-## Decidir el caso
+## decidiw ew caso
 
-Este es un tema muy subjetivo que podría considerarse un problema de [bikeshedding](https://bikeshed.com/). Si desea leer más a fondo, lea algunos de los [muchos artículos](http://www.themezilla.com/should-you-use-www-in-your-url-or-not/) de este tema.
+este es un tema muy s-subjetivo que p-podwía considewawse u-un pwobwema d-de [bikeshedding](https://bikeshed.com/). mya s-si desea weew más a f-fondo, (U ᵕ U❁) wea awgunos d-de wos [muchos awtícuwos](http://www.themeziwwa.com/shouwd-you-use-www-in-youw-uww-ow-not/) d-de este tema.
 
-## Ver también
+## v-vew también
 
-- [Estadísticas sobre lo que la gente escribe en la barra de URL](https://www.chrisfinke.com/2011/07/25/what-do-people-type-in-the-address-bar/) (2011)
+- [estadísticas sobwe wo que wa g-gente escwibe en wa bawwa de uww](https://www.chwisfinke.com/2011/07/25/nani-do-peopwe-type-in-the-addwess-baw/) (2011)

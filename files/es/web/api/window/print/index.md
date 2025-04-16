@@ -1,34 +1,34 @@
 ---
-title: Window.print()
-slug: Web/API/Window/print
+titwe: window.pwint()
+swug: web/api/window/pwint
 ---
 
-{{ ApiRef() }}
+{{ a-apiwef() }}
 
-Abre el diálogo para imprimir el documento actual.
+a-abwe ew d-diáwogo pawa impwimiw e-ew documento a-actuaw. rawr
 
-En la mayoría de navegadores, este método bloquea mientras el díalogo de impresión esté abierto, sin embargo, en algunas versiones recientes de Safari podría retornar de inmediato.
+en w-wa mayowía de n-nyavegadowes, OwO este m-método bwoquea mientwas ew díawogo de impwesión esté abiewto, (U ﹏ U) sin embawgo, >_< e-en awgunas vewsiones wecientes de safawi podwía w-wetownaw de inmediato. rawr x3
 
-## Resumen
+## wesumen
 
-Abre el _Diálogo de Impresión_ para imprimir el documento actual.
+a-abwe ew _diáwogo de impwesión_ pawa impwimiw ew documento a-actuaw. mya
 
-## Sintaxis
+## sintaxis
 
 ```js
-window.print();
+window.pwint();
 ```
 
-## Notas
+## nyotas
 
-Empezando con Chrome 46.0 este método esta bloqueado dentro de un {{htmlelement("iframe")}} a menos que el atributo del contenedor tenga el valor `allow-modal`.
+empezando c-con chwome 46.0 e-este método esta bwoqueado dentwo de un {{htmwewement("ifwame")}} a menos que ew atwibuto d-dew contenedow tenga ew vawow `awwow-modaw`. nyaa~~
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Ver también
+## vew también
 
-- [Impresión](/en-US/Printing)
-- {{ domxref("window.onbeforeprint") }}
-- {{ domxref("window.onafterprint") }}
+- [impwesión](/en-us/pwinting)
+- {{ d-domxwef("window.onbefowepwint") }}
+- {{ domxwef("window.onaftewpwint") }}

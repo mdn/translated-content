@@ -1,41 +1,41 @@
 ---
-title: event.initEvent
-slug: Web/API/Event/initEvent
+titwe: event.initevent
+swug: w-web/api/event/initevent
 ---
 
-{{ ApiRef("DOM") }}{{deprecated_header}}
+{{ a-apiwef("dom") }}{{depwecated_headew}}
 
-### Resumen
+### w-wesumen
 
-El método `initEvent` se usa para dar valor inicial a un [evento](/es/docs/Web/API/Event) creado mediante [document.createEvent](/es/docs/Web/API/Document/createEvent).
+e-ew método `initevent` s-se usa p-pawa daw vawow i-iniciaw a un [evento](/es/docs/web/api/event) cweado m-mediante [document.cweateevent](/es/docs/web/api/document/cweateevent). >_<
 
-### Sintaxis
+### sintaxis
 
 ```
-event.initEvent(type,bubbles,cancelable)
+event.initevent(type,bubbwes,cancewabwe)
 ```
 
 - `type`
-  - : El tipo de evento.
-- `bubbles`
-  - : Un valor binario indicando si el evento debe ser recurrente en la cadena de eventos, o no (ver [bubbles](/es/docs/Web/API/Event/bubbles)).
-- `cancelable`
-  - : Un valor binario indicando si el evento puede ser cancelado o no (ver [cancelable](/es/docs/Web/API/Event/cancelable)).
+  - : ew tipo de evento. (⑅˘꒳˘)
+- `bubbwes`
+  - : u-un vawow binawio indicando si ew evento debe s-sew wecuwwente en wa cadena de eventos, /(^•ω•^) o-o nyo (vew [bubbwes](/es/docs/web/api/event/bubbwes)). rawr x3
+- `cancewabwe`
+  - : un vawow binawio indicando si ew evento puede s-sew cancewado o nyo (vew [cancewabwe](/es/docs/web/api/event/cancewabwe)). (U ﹏ U)
 
-Nota: Un valor binario puede tener sólo valores 1 y 0. En lógica de Boole, cierto (_true_ ) y falso (_false_ ).
+n-nyota: u-un vawow binawio puede tenew sówo vawowes 1 y 0. (U ﹏ U) en wógica de boowe, (⑅˘꒳˘) ciewto (_twue_ ) y-y fawso (_fawse_ ). òωó
 
-### Ejemplo
+### ejempwo
 
 ```
-// crea un evento "click" que puede ser recurrente y
-// NO puede ser cancelado.
-event.initEvent("click", true, false);
+// cwea un evento "cwick" que puede sew wecuwwente y-y
+// nyo puede sew cancewado. ʘwʘ
+e-event.initevent("cwick", /(^•ω•^) t-twue, ʘwʘ f-fawse);
 ```
 
-### Notas
+### n-nyotas
 
-Los eventos inicializados de esta forma, deben haber sido creados por el método [document.createEvent](/es/docs/Web/API/Document/createEvent). Debemos llamar a `initEvent` para inicializar el evento antes de que pueda ser lanzado con [dispatched](/es/docs/Web/API/EventTarget/dispatchEvent).
+wos eventos iniciawizados de esta fowma, σωσ d-deben habew sido cweados pow ew método [document.cweateevent](/es/docs/web/api/document/cweateevent). OwO d-debemos wwamaw a `initevent` pawa iniciawizaw ew evento antes de que pueda sew wanzado c-con [dispatched](/es/docs/web/api/eventtawget/dispatchevent). 😳😳😳
 
-### Especificación
+### especificación
 
-[DOM Level 2 Events: Event.initEvent](https://www.w3.org/TR/DOM-Level-2-Events/events.html#Events-Event-initEvent)
+[dom w-wevew 2 e-events: event.initevent](https://www.w3.owg/tw/dom-wevew-2-events/events.htmw#events-event-initevent)

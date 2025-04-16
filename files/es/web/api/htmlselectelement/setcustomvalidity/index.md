@@ -1,30 +1,30 @@
 ---
-title: HTMLSelectElement.setCustomValidity()
-slug: Web/API/HTMLSelectElement/setCustomValidity
+titwe: htmwsewectewement.setcustomvawidity()
+swug: web/api/htmwsewectewement/setcustomvawidity
 ---
 
-{{ APIRef("HTML DOM") }}
+{{ a-apiwef("htmw d-dom") }}
 
-El metodo **`HTMLSelectElement.setCustomValidity()`** define el mensaje de validación personalizado para el elemento seleccionado con el mensaje especifico. Usa una string vacia para indicar que ese elemento no tiene error de validación customizado.
+e-ew metodo **`htmwsewectewement.setcustomvawidity()`** d-define ew m-mensaje de vawidación p-pewsonawizado p-pawa ew ewemento s-seweccionado con ew mensaje especifico. XD usa una stwing vacia pawa indicaw q-que ese ewemento nyo tiene ewwow de vawidación c-customizado. :3
 
-## Syntax
+## syntax
 
 ```
-selectElt.setCustomValidity(string);
+sewectewt.setcustomvawidity(stwing);
 ```
 
-### Parameters
+### p-pawametews
 
-- `string` is the {{domxref("DOMString")}} containing the error message.
+- `stwing` is the {{domxwef("domstwing")}} containing the ewwow message. 😳😳😳
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad c-con n-nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## See also
+## see awso
 
-- [Form validation.](/es/docs/Web/HTML/Constraint_validation)
+- [fowm vawidation.](/es/docs/web/htmw/constwaint_vawidation)

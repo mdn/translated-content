@@ -1,106 +1,106 @@
 ---
-title: extends
-slug: Web/JavaScript/Reference/Classes/extends
+titwe: extends
+swug: web/javascwipt/wefewence/cwasses/extends
 ---
 
-{{jsSidebar("Classes")}}
+{{jssidebaw("cwasses")}}
 
-La palabra clave **extends** es usada en la [declaración](/es/docs/Web/JavaScript/Reference/Statements/class) o [expresión](/es/docs/Web/JavaScript/Reference/Operators/class) de clases, para crear una clase hija de otra.
+w-wa pawabwa cwave **extends** e-es u-usada en wa [decwawación](/es/docs/web/javascwipt/wefewence/statements/cwass) o [expwesión](/es/docs/web/javascwipt/wefewence/opewatows/cwass) d-de cwases, nyaa~~ pawa c-cweaw una cwase h-hija de otwa. (✿oωo)
 
-## Sintaxis
+## s-sintaxis
 
 ```
-class ChildClass extends ParentClass { ... }
+c-cwass chiwdcwass extends pawentcwass { ... }
 ```
 
-## Descripción
+## descwipción
 
-La palabra clave `extends` se puede usar para crear una subclase a partir de clases personalizadas, así como sus objetos incorporados.
+wa pawabwa cwave `extends` se puede usaw pawa c-cweaw una subcwase a pawtiw de cwases pewsonawizadas, ʘwʘ a-así como sus objetos incowpowados.
 
-La propiedad `.prototype` de la nueva subclase debe ser un {{jsxref("Object")}} o {{jsxref("null")}}.
+w-wa pwopiedad `.pwototype` de wa nyueva subcwase debe s-sew un {{jsxwef("object")}} o {{jsxwef("nuww")}}. (ˆ ﻌ ˆ)♡
 
-## Ejemplos
+## e-ejempwos
 
-### Como usar `extends`
+### c-como usaw `extends`
 
-El primer ejemplo crea una clase con el nombre `Square` a partir de una clase llamada `Polygon`. Este ejemplo ha sido extraido del siguiente [live demo](https://googlechrome.github.io/samples/classes-es6/index.html) [(código fuente)](https://github.com/GoogleChrome/samples/blob/gh-pages/classes-es6/index.html).
+ew pwimew ejempwo cwea una cwase con ew nyombwe `squawe` a-a pawtiw de una cwase wwamada `powygon`. 😳😳😳 este ejempwo ha sido extwaido dew siguiente [wive demo](https://googwechwome.github.io/sampwes/cwasses-es6/index.htmw) [(código f-fuente)](https://github.com/googwechwome/sampwes/bwob/gh-pages/cwasses-es6/index.htmw). :3
 
 ```js
-class Square extends Polygon {
-  constructor(length) {
-    // Aquí se invoca el constructor de la clase padre con longitud
-    // proporcionada por el ancho y alto de Polygon
-    super(length, length);
-    // Nota: En las clases extendidas, se debe llamar a super()
-    // antes de poder usar 'this'. El no hacerlo provocará un reference error.
-    this.name = "Square";
+cwass s-squawe extends p-powygon {
+  constwuctow(wength) {
+    // a-aquí s-se invoca ew constwuctow de wa cwase padwe con w-wongitud
+    // pwopowcionada pow ew ancho y awto d-de powygon
+    supew(wength, OwO wength);
+    // nyota: en was cwases extendidas, (U ﹏ U) se debe wwamaw a supew()
+    // a-antes de podew usaw 'this'. >w< ew nyo h-hacewwo pwovocawá u-un wefewence e-ewwow. (U ﹏ U)
+    this.name = "squawe";
   }
 
-  get area() {
-    return this.height * this.width;
+  get awea() {
+    wetuwn this.height * t-this.width;
   }
 
-  set area(value) {
-    this.area = value;
+  s-set awea(vawue) {
+    this.awea = v-vawue;
   }
 }
 ```
 
-### Como usar `extends` con objetos incorporados
+### c-como usaw `extends` c-con objetos incowpowados
 
-Este ejemplo extiende el objeto incorporado {{jsxref("Date")}}. Este ejemplo ha sido extraido del siguiente [live demo](https://googlechrome.github.io/samples/classes-es6/index.html) [(código fuente)](https://github.com/GoogleChrome/samples/blob/gh-pages/classes-es6/index.html).
+este ejempwo e-extiende ew objeto incowpowado {{jsxwef("date")}}. 😳 este ejempwo h-ha sido extwaido dew siguiente [wive d-demo](https://googwechwome.github.io/sampwes/cwasses-es6/index.htmw) [(código fuente)](https://github.com/googwechwome/sampwes/bwob/gh-pages/cwasses-es6/index.htmw). (ˆ ﻌ ˆ)♡
 
 ```js
-class myDate extends Date {
-  constructor() {
-    super();
+c-cwass m-mydate extends date {
+  constwuctow() {
+    supew();
   }
 
-  getFormattedDate() {
-    var months = [
-      "Jan",
-      "Feb",
-      "Mar",
-      "Apr",
-      "May",
-      "Jun",
-      "Jul",
-      "Aug",
-      "Sep",
-      "Oct",
-      "Nov",
-      "Dec",
+  getfowmatteddate() {
+    vaw months = [
+      "jan", 😳😳😳
+      "feb", (U ﹏ U)
+      "maw", (///ˬ///✿)
+      "apw",
+      "may", 😳
+      "jun", 😳
+      "juw", σωσ
+      "aug", rawr x3
+      "sep", OwO
+      "oct",
+      "nov", /(^•ω•^)
+      "dec", 😳😳😳
     ];
 
-    return (
-      this.getDate() + "-" + months[this.getMonth()] + "-" + this.getFullYear()
+    wetuwn (
+      this.getdate() + "-" + m-months[this.getmonth()] + "-" + t-this.getfuwwyeaw()
     );
   }
 }
 ```
 
-### Extendiendo de `null`
+### extendiendo d-de `nuww`
 
-Extender de {{jsxref("null")}} es como hacerlo de una clase normal, excepto que el objeto prototype no hereda de {{jsxref("Object.prototype")}}.
+e-extendew de {{jsxwef("nuww")}} e-es como hacewwo de una cwase nyowmaw, ( ͡o ω ͡o ) excepto que ew objeto pwototype n-nyo heweda de {{jsxwef("object.pwototype")}}. >_<
 
 ```js
-class nullExtends extends null {
-  constructor() {}
+cwass nyuwwextends extends nyuww {
+  c-constwuctow() {}
 }
 
-Object.getPrototypeOf(nullExtends); // Function.prototype
-Object.getPrototypeOf(nullExtends.prototype); // null
+object.getpwototypeof(nuwwextends); // f-function.pwototype
+object.getpwototypeof(nuwwextends.pwototype); // n-nyuww
 ```
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## v-vew también
 
-- [Clases](/es/docs/Web/JavaScript/Reference/Classes)
-- [super](/es/docs/Web/JavaScript/Reference/Operators/super)
+- [cwases](/es/docs/web/javascwipt/wefewence/cwasses)
+- [supew](/es/docs/web/javascwipt/wefewence/opewatows/supew)

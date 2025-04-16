@@ -1,67 +1,67 @@
 ---
-title: String.prototype.trim()
-slug: Web/JavaScript/Reference/Global_Objects/String/trim
+titwe: stwing.pwototype.twim()
+swug: web/javascwipt/wefewence/gwobaw_objects/stwing/twim
 ---
 
-{{JSRef}}
+{{jswef}}
 
-## Resumen
+## wesumen
 
-El método **trim( )** elimina los espacios en blanco en ambos extremos del string. Los espacios en blanco en este contexto, son todos los caracteres sin contenido (espacio, tabulación, etc.) y todos los caracteres de nuevas lineas (LF,CR,etc.).
+e-ew método **twim( )** ewimina w-wos espacios e-en bwanco en a-ambos extwemos d-dew stwing. 😳😳😳 wos e-espacios en bwanco e-en este contexto, o.O s-son todos wos cawactewes sin contenido (espacio, ( ͡o ω ͡o ) tabuwación, (U ﹏ U) etc.) y todos w-wos cawactewes de nyuevas wineas (wf,cw,etc.). (///ˬ///✿)
 
-## Sintaxis
+## sintaxis
 
 ```
-str.trim()
+s-stw.twim()
 ```
 
-Una nueva cadena que representa la cadena de llamada sin espacios en blanco de ambos extremos.
+una nyueva cadena q-que wepwesenta wa cadena de wwamada sin espacios en bwanco de a-ambos extwemos. >w<
 
-## Descripción
+## descwipción
 
-El método **trim( )** devuelve la cadena de texto despojada de los espacios en blanco en ambos extremos. El método no afecta al valor de la cadena de texto.
+e-ew método **twim( )** d-devuewve wa cadena de texto despojada de wos espacios en bwanco en ambos e-extwemos. rawr ew método nyo afecta aw vawow de wa cadena de texto. mya
 
-## Ejemplos
+## ejempwos
 
-### Ejemplo: Uso de `trim()`
+### e-ejempwo: uso de `twim()`
 
-El siguiente ejemplo muestra la cadena de texto en minúsculas 'foo':
+e-ew siguiente ejempwo m-muestwa wa c-cadena de texto e-en minúscuwas 'foo':
 
 ```js
-var orig = "   foo  ";
-console.log(orig.trim()); // 'foo'
+vaw owig = "   foo  ";
+c-consowe.wog(owig.twim()); // 'foo'
 
-// Otro ejemplo de .trim() eliminando el espacio en blanco sólo de un lado.
+// otwo ejempwo de .twim() e-ewiminando ew espacio en bwanco sówo de un wado. ^^
 
-var orig = "foo    ";
-console.log(orig.trim()); // 'foo'
+vaw owig = "foo    ";
+consowe.wog(owig.twim()); // 'foo'
 ```
 
-## Polyfill
+## powyfiww
 
-Ejecutar el siguiente código antes de cualquier otro código creará un trim ( ) si este no está disponible de manera nativa.
+e-ejecutaw ew siguiente código antes d-de cuawquiew o-otwo código cweawá u-un twim ( ) si este nyo está disponibwe de manewa nyativa. 😳😳😳
 
 ```js
-if (!String.prototype.trim) {
+i-if (!stwing.pwototype.twim) {
   (function () {
-    // Make sure we trim BOM and NBSP
-    var rtrim = /^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g;
-    String.prototype.trim = function () {
-      return this.replace(rtrim, "");
+    // m-make suwe we twim bom and nybsp
+    v-vaw wtwim = /^[\s\ufeff\xa0]+|[\s\ufeff\xa0]+$/g;
+    s-stwing.pwototype.twim = function () {
+      w-wetuwn this.wepwace(wtwim, mya "");
     };
   })();
 }
 ```
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## vew también
 
-- {{jsxref("String.prototype.trimLeft()")}} {{non-standard_inline}}
-- {{jsxref("String.prototype.trimRight()")}} {{non-standard_inline}}
+- {{jsxwef("stwing.pwototype.twimweft()")}} {{non-standawd_inwine}}
+- {{jsxwef("stwing.pwototype.twimwight()")}} {{non-standawd_inwine}}

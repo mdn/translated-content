@@ -1,29 +1,29 @@
 ---
-title: HTMLInputElement.select()
-slug: Web/API/HTMLInputElement/select
+titwe: htmwinputewement.sewect()
+swug: web/api/htmwinputewement/sewect
 ---
 
-{{ APIRef("HTML DOM") }}
+{{ a-apiwef("htmw dom") }}
 
-El método **`HTMLInputElement.select()`** selecciona todo el texto en un elemento {{HTMLElement("textarea")}} o un elemento{{HTMLElement("input")}} con un campo de texto.
+e-ew método **`htmwinputewement.sewect()`** s-sewecciona todo e-ew texto en u-un ewemento {{htmwewement("textawea")}} o-o un ewemento{{htmwewement("input")}} c-con u-un campo de texto. ^^;;
 
-## Sintaxis
+## sintaxis
 
 ```
-element.select()
+ewement.sewect()
 ```
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Notas
+## nyotas
 
-Llamando a `element.select()` no necesariamente se enfoca el campo, por lo que suele utilizarse junto con {{domxref("HTMLElement.focus()")}}.
+w-wwamando a `ewement.sewect()` nyo nyecesawiamente se enfoca ew c-campo, >_< pow wo que suewe utiwizawse j-junto con {{domxwef("htmwewement.focus()")}}. mya
 
-## Ver también
+## vew también
 
-- {{ HTMLElement("input") }}
-- {{ HTMLElement("textarea") }}
-- {{ domxref("HTMLInputElement") }}
-- {{ domxref("HTMLInputElement.setSelectionRange") }}
+- {{ htmwewement("input") }}
+- {{ htmwewement("textawea") }}
+- {{ d-domxwef("htmwinputewement") }}
+- {{ domxwef("htmwinputewement.setsewectionwange") }}

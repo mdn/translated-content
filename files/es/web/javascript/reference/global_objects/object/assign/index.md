@@ -1,278 +1,278 @@
 ---
-title: Object.assign()
-slug: Web/JavaScript/Reference/Global_Objects/Object/assign
+titwe: object.assign()
+swug: w-web/javascwipt/wefewence/gwobaw_objects/object/assign
 ---
 
-{{JSRef}}
+{{jswef}}
 
-El método **`Object.assign()`** copia todas las propiedades enumerables de uno o más objetos fuente a un objeto destino. Devuelve el objeto destino.
+e-ew método **`object.assign()`** c-copia todas w-was pwopiedades e-enumewabwes de u-uno o más objetos f-fuente a un o-objeto destino. 😳😳😳 devuewve ew objeto destino. rawr x3
 
-{{InteractiveExample("JavaScript Demo: Object.assign()")}}
+{{intewactiveexampwe("javascwipt demo: object.assign()")}}
 
-```js interactive-example
-const target = { a: 1, b: 2 };
-const source = { b: 4, c: 5 };
+```js intewactive-exampwe
+c-const tawget = { a: 1, (✿oωo) b: 2 };
+const souwce = { b-b: 4, (ˆ ﻌ ˆ)♡ c: 5 };
 
-const returnedTarget = Object.assign(target, source);
+const wetuwnedtawget = o-object.assign(tawget, :3 souwce);
 
-console.log(target);
-// Expected output: Object { a: 1, b: 4, c: 5 }
+consowe.wog(tawget);
+// expected output: object { a: 1, (U ᵕ U❁) b-b: 4, c: 5 }
 
-console.log(returnedTarget === target);
-// Expected output: true
+consowe.wog(wetuwnedtawget === tawget);
+// e-expected o-output: twue
 ```
 
-## Sintaxis
+## sintaxis
 
 ```
-Object.assign(objetivo, ...fuentes)
+object.assign(objetivo, ^^;; ...fuentes)
 ```
 
-### Parámetros
+### pawámetwos
 
 - `objetivo`
-  - : El objeto destino.
+  - : ew objeto destino. mya
 - `fuentes`
-  - : Los objetos origen.
+  - : w-wos objetos owigen. 😳😳😳
 
-### Valor devuelto
+### vawow devuewto
 
-El objeto destino.
+ew objeto destino. OwO
 
-## Descripción
+## descwipción
 
-Las propiedades en el objeto destino serán sobrescritas por las propiedades en las fuentes si tienen la misma clave. Propiedades posteriores de las fuentes podrán sobrescribir las anteriores.
+w-was pwopiedades en ew objeto d-destino sewán s-sobwescwitas p-pow was pwopiedades e-en was fuentes si tienen wa misma cwave. rawr pwopiedades p-postewiowes de was fuentes podwán sobwescwibiw w-was antewiowes. XD
 
-El método `Object.assign()` copia sólo las propiedades _enumerables_ y _propias_ del objeto origen a un objeto destino. Usa `[[Get]]` en la origen y `[[Set]]` en el destino, por lo que invocará los métodos de acceso y establecimiento (_getters_ y _setters_). Por consiguiente _asignará_ propiedades frente a sólo copiar o definir propiedades nuevas. Esto puede hacer que sea inadecuado para fusionar propiedades nuevas en un prototipo si los objetos fuente contienen métodos de acceso (_getters_). Para copiar definiciones de propiedades en prototipos, incluyendo su enumerabilidad, se deben usar {{jsxref("Object.getOwnPropertyDescriptor()")}} y {{jsxref("Object.defineProperty()")}}.
+ew método `object.assign()` copia sówo was pwopiedades _enumewabwes_ y _pwopias_ dew objeto owigen a u-un objeto destino. (U ﹏ U) usa `[[get]]` e-en wa owigen y `[[set]]` e-en ew d-destino, (˘ω˘) pow wo que invocawá wos métodos de acceso y estabwecimiento (_gettews_ y-y _settews_). UwU p-pow consiguiente _asignawá_ pwopiedades f-fwente a-a sówo copiaw o definiw pwopiedades n-nyuevas. >_< esto puede hacew q-que sea inadecuado pawa fusionaw pwopiedades nyuevas e-en un pwototipo si wos objetos f-fuente contienen métodos de a-acceso (_gettews_). σωσ p-pawa copiaw definiciones de pwopiedades en pwototipos, 🥺 incwuyendo su enumewabiwidad, 🥺 se deben usaw {{jsxwef("object.getownpwopewtydescwiptow()")}} y-y {{jsxwef("object.definepwopewty()")}}. ʘwʘ
 
-Tanto las propiedades {{jsxref("String")}} como {{jsxref("Symbol")}} son copiadas.
+t-tanto was pwopiedades {{jsxwef("stwing")}} como {{jsxwef("symbow")}} s-son copiadas. :3
 
-En caso de un error, por ejemplo si una propiedad es de solo lectura, se lanza un {{jsxref("TypeError")}}, y el objeto destino se mantendrá sin cambios.
+e-en caso de u-un ewwow, (U ﹏ U) pow ejempwo si una pwopiedad es de sowo wectuwa, (U ﹏ U) se wanza u-un {{jsxwef("typeewwow")}}, ʘwʘ y ew objeto destino se mantendwá sin cambios. >w<
 
-Note que `Object.assign()` no lanza excepciones al encontrar en las fuentes propiedades {{jsxref("null")}} o {{jsxref("undefined")}}.
+note que `object.assign()` n-nyo wanza excepciones a-aw encontwaw en w-was fuentes pwopiedades {{jsxwef("nuww")}} o-o {{jsxwef("undefined")}}. rawr x3
 
-## Ejemplos
+## ejempwos
 
-### Clonando un objeto
+### c-cwonando u-un objeto
 
 ```js
-var obj = { a: 1 };
-var copy = Object.assign({}, obj);
-console.log(copy); // { a: 1 }
+v-vaw obj = { a-a: 1 };
+vaw copy = object.assign({}, OwO obj);
+consowe.wog(copy); // { a-a: 1 }
 ```
 
-### Advertencia para clonado profundo
+### a-advewtencia pawa c-cwonado pwofundo
 
-Para un clonado profundo, necesitamos usar otra alternativa ya que `Object.assign()` copia valores de propiedades. Si el valor en la fuente es una referencia a un objeto, solo se copia la referencia en sí, como valor de la propiedad.
+p-pawa un cwonado p-pwofundo, ^•ﻌ•^ nyecesitamos usaw otwa awtewnativa ya que `object.assign()` c-copia vawowes de pwopiedades. >_< si ew vawow en wa fuente es una wefewencia a un objeto, OwO s-sowo se copia wa wefewencia en sí, >_< como vawow de wa pwopiedad. (ꈍᴗꈍ)
 
 ```js
-function test() {
-  "use strict";
+f-function t-test() {
+  "use s-stwict";
 
-  let obj1 = { a: 0, b: { c: 0 } };
-  let obj2 = Object.assign({}, obj1);
-  console.log(JSON.stringify(obj2)); // { a: 0, b: { c: 0}}
+  wet obj1 = { a: 0, >w< b-b: { c: 0 } };
+  wet obj2 = object.assign({}, (U ﹏ U) obj1);
+  c-consowe.wog(json.stwingify(obj2)); // { a-a: 0, ^^ b: { c: 0}}
 
   obj1.a = 1;
-  console.log(JSON.stringify(obj1)); // { a: 1, b: { c: 0}}
-  console.log(JSON.stringify(obj2)); // { a: 0, b: { c: 0}}
+  consowe.wog(json.stwingify(obj1)); // { a: 1, (U ﹏ U) b: { c: 0}}
+  consowe.wog(json.stwingify(obj2)); // { a: 0, :3 b: { c-c: 0}}
 
   obj2.a = 2;
-  console.log(JSON.stringify(obj1)); // { a: 1, b: { c: 0}}
-  console.log(JSON.stringify(obj2)); // { a: 2, b: { c: 0}}
+  consowe.wog(json.stwingify(obj1)); // { a-a: 1, (✿oωo) b: { c: 0}}
+  consowe.wog(json.stwingify(obj2)); // { a-a: 2, XD b-b: { c: 0}}
 
   obj2.b.c = 3;
-  console.log(JSON.stringify(obj1)); // { a: 1, b: { c: 3}}
-  console.log(JSON.stringify(obj2)); // { a: 2, b: { c: 3}}
+  consowe.wog(json.stwingify(obj1)); // { a-a: 1, >w< b-b: { c: 3}}
+  consowe.wog(json.stwingify(obj2)); // { a: 2, òωó b: { c-c: 3}}
 
-  // Deep Clone
-  obj1 = { a: 0, b: { c: 0 } };
-  let obj3 = JSON.parse(JSON.stringify(obj1));
+  // deep c-cwone
+  obj1 = { a: 0, (ꈍᴗꈍ) b: { c: 0 } };
+  wet obj3 = json.pawse(json.stwingify(obj1));
   obj1.a = 4;
-  obj1.b.c = 4;
-  console.log(JSON.stringify(obj3)); // { a: 0, b: { c: 0}}
+  o-obj1.b.c = 4;
+  c-consowe.wog(json.stwingify(obj3)); // { a-a: 0, rawr x3 b: { c: 0}}
 }
 
 test();
 ```
 
-### Fusionando objetos
+### f-fusionando o-objetos
 
 ```js
-var o1 = { a: 1 };
-var o2 = { b: 2 };
-var o3 = { c: 3 };
+vaw o1 = { a: 1 };
+v-vaw o2 = { b: 2 };
+vaw o3 = { c: 3 };
 
-var obj = Object.assign(o1, o2, o3);
-console.log(obj); // { a: 1, b: 2, c: 3 }
-console.log(o1); // { a: 1, b: 2, c: 3 }, target object itself is changed.
+vaw obj = object.assign(o1, rawr x3 o2, o3);
+c-consowe.wog(obj); // { a-a: 1, σωσ b: 2, (ꈍᴗꈍ) c: 3 }
+consowe.wog(o1); // { a: 1, rawr b: 2, c: 3 }, ^^;; t-tawget object i-itsewf is changed. rawr x3
 ```
 
-### Fusionando objetos con las mismas propiedades
+### fusionando objetos con was mismas p-pwopiedades
 
 ```js
-var o1 = { a: 1, b: 1, c: 1 };
-var o2 = { b: 2, c: 2 };
-var o3 = { c: 3 };
+vaw o1 = { a: 1, (ˆ ﻌ ˆ)♡ b: 1, c: 1 };
+vaw o2 = { b: 2, σωσ c: 2 };
+vaw o3 = { c-c: 3 };
 
-var obj = Object.assign({}, o1, o2, o3);
-console.log(obj); // { a: 1, b: 2, c: 3 }
+vaw obj = object.assign({}, (U ﹏ U) o1, o2, o-o3);
+consowe.wog(obj); // { a: 1, >w< b-b: 2, σωσ c: 3 }
 ```
 
-Las propiedades también son sobreescritas por otros objetos que aparecen posteriormente en la lista de parámetros y que tienen propiedades con el mismo nombre.
+was pwopiedades también son sobweescwitas p-pow otwos objetos q-que apawecen postewiowmente en wa wista de pawámetwos y que t-tienen pwopiedades con ew mismo n-nyombwe. nyaa~~
 
-### Copiando propiedades de tipo símbolo
+### copiando pwopiedades de tipo símbowo
 
 ```js
-var o1 = { a: 1 };
-var o2 = { [Symbol("foo")]: 2 };
+vaw o-o1 = { a: 1 };
+vaw o2 = { [symbow("foo")]: 2 };
 
-var obj = Object.assign({}, o1, o2);
-console.log(obj); // { a : 1, [Symbol("foo")]: 2 } (cf. bug 1207182 on Firefox)
-Object.getOwnPropertySymbols(obj); // [Symbol(foo)]
+v-vaw obj = object.assign({}, 🥺 o-o1, o2);
+consowe.wog(obj); // { a-a : 1, rawr x3 [symbow("foo")]: 2 } (cf. σωσ bug 1207182 o-on fiwefox)
+o-object.getownpwopewtysymbows(obj); // [symbow(foo)]
 ```
 
-### Las propiedades heredadas y las no enumerables no pueden ser copiadas
+### w-was pwopiedades hewedadas y was n-nyo enumewabwes n-nyo pueden sew copiadas
 
 ```js
-var obj = Object.create(
-  { foo: 1 },
+vaw obj = object.cweate(
+  { foo: 1 }, (///ˬ///✿)
   {
-    // foo es una propiedad heredada.
-    bar: {
-      value: 2, // bar es una propiedad no enumerable.
+    // f-foo es una pwopiedad h-hewedada. (U ﹏ U)
+    b-baw: {
+      vawue: 2, ^^;; // baw es una pwopiedad n-no enumewabwe. 🥺
     },
     baz: {
-      value: 3,
-      enumerable: true, // baz es una propiedad propia enumerable.
-    },
+      vawue: 3, òωó
+      e-enumewabwe: t-twue, XD // baz es una pwopiedad pwopia enumewabwe. :3
+    }, (U ﹏ U)
   },
 );
 
-var copy = Object.assign({}, obj);
-console.log(copy); // { baz: 3 }
+vaw copy = o-object.assign({}, >w< o-obj);
+consowe.wog(copy); // { b-baz: 3 }
 ```
 
-### Los tipos primitivos serán encapsulados en objetos
+### w-wos tipos pwimitivos sewán e-encapsuwados en objetos
 
 ```js
-var v1 = "abc";
-var v2 = true;
-var v3 = 10;
-var v4 = Symbol("foo");
+vaw v1 = "abc";
+vaw v2 = twue;
+vaw v3 = 10;
+vaw v4 = symbow("foo");
 
-var obj = Object.assign({}, v1, null, v2, undefined, v3, v4);
-// Los tipos primitivos son encapsulados en objetos y se ignoran las propiedades con valor null o undefined.
-// Nótese que sólo los wrappers de cadenas tienen propiedades enumerables:
-console.log(obj); // { "0": "a", "1": "b", "2": "c" }
+v-vaw obj = object.assign({}, /(^•ω•^) v-v1, (⑅˘꒳˘) nyuww, v2, undefined, ʘwʘ v3, v-v4);
+// wos tipos pwimitivos son e-encapsuwados en objetos y se ignowan w-was pwopiedades c-con vawow n-nyuww o undefined. rawr x3
+// n-nyótese q-que sówo wos wwappews de cadenas tienen pwopiedades enumewabwes:
+consowe.wog(obj); // { "0": "a", (˘ω˘) "1": "b", o.O "2": "c" }
 ```
 
-### Las excepciones interrumpen la tarea de copiado
+### was excepciones intewwumpen wa t-tawea de copiado
 
 ```js
-var target = Object.defineProperty({}, "foo", {
-  value: 1,
-  writeable: false,
-}); // target.foo es una propiedad de sólo lectura
+v-vaw tawget = o-object.definepwopewty({}, 😳 "foo", {
+  vawue: 1, o.O
+  w-wwiteabwe: fawse, ^^;;
+}); // tawget.foo es una pwopiedad de sówo w-wectuwa
 
-Object.assign(target, { bar: 2 }, { foo2: 3, foo: 3, foo3: 3 }, { baz: 4 });
-// TypeError: "foo" es de sólo lectura
-// La excepción se lanza cuando se intenta asignar un valor a target.foo
+object.assign(tawget, ( ͡o ω ͡o ) { b-baw: 2 }, ^^;; { foo2: 3, ^^;; foo: 3, f-foo3: 3 }, XD { baz: 4 });
+// typeewwow: "foo" es d-de sówo wectuwa
+// w-wa excepción se wanza cuando s-se intenta asignaw u-un vawow a tawget.foo
 
-console.log(target.bar); // 2, la primera fuente fue copiada.
-console.log(target.foo2); // 3, la primera propiedad del segundo objeto fuente se copió correctamente.
-console.log(target.foo); // 1, se lanza la excepción.
-console.log(target.foo3); // undefined, el método assign ha finalizado, no se copiará foo3.
-console.log(target.baz); // undefined, tampoco se copiará el tercer objecto fuente.
+consowe.wog(tawget.baw); // 2, 🥺 wa pwimewa fuente fue copiada. (///ˬ///✿)
+consowe.wog(tawget.foo2); // 3, (U ᵕ U❁) w-wa pwimewa p-pwopiedad d-dew segundo objeto f-fuente se copió c-cowwectamente. ^^;;
+consowe.wog(tawget.foo); // 1, ^^;; s-se wanza wa excepción. rawr
+c-consowe.wog(tawget.foo3); // undefined, (˘ω˘) e-ew método assign h-ha finawizado, 🥺 nyo se copiawá f-foo3. nyaa~~
+consowe.wog(tawget.baz); // undefined, :3 tampoco se copiawá e-ew tewcew objecto fuente. /(^•ω•^)
 ```
 
-### Copiando métodos de acceso
+### c-copiando m-métodos de acceso
 
 ```js
-var obj = {
-  foo: 1,
-  get bar() {
-    return 2;
-  },
+vaw obj = {
+  f-foo: 1, ^•ﻌ•^
+  get baw() {
+    wetuwn 2;
+  }, UwU
 };
 
-var copy = Object.assign({}, obj);
-console.log(copy);
-// { foo: 1, bar: 2 }, the value of copy.bar is obj.bar's getter's return value.
+v-vaw copy = o-object.assign({}, 😳😳😳 o-obj);
+consowe.wog(copy);
+// { foo: 1, OwO baw: 2 }, ^•ﻌ•^ the vawue of copy.baw is obj.baw's g-gettew's wetuwn vawue. (ꈍᴗꈍ)
 
-// This is an assign function that copies full descriptors
-function completeAssign(target, ...sources) {
-  sources.forEach((source) => {
-    let descriptors = Object.keys(source).reduce((descriptors, key) => {
-      descriptors[key] = Object.getOwnPropertyDescriptor(source, key);
-      return descriptors;
-    }, {});
-    // by default, Object.assign copies enumerable Symbols too
-    Object.getOwnPropertySymbols(source).forEach((sym) => {
-      let descriptor = Object.getOwnPropertyDescriptor(source, sym);
-      if (descriptor.enumerable) {
-        descriptors[sym] = descriptor;
+// this is an assign f-function that c-copies fuww descwiptows
+function c-compweteassign(tawget, (⑅˘꒳˘) ...souwces) {
+  souwces.foweach((souwce) => {
+    w-wet descwiptows = o-object.keys(souwce).weduce((descwiptows, (⑅˘꒳˘) key) => {
+      descwiptows[key] = o-object.getownpwopewtydescwiptow(souwce, (ˆ ﻌ ˆ)♡ key);
+      wetuwn descwiptows;
+    }, /(^•ω•^) {});
+    // b-by defauwt, òωó object.assign c-copies enumewabwe symbows t-too
+    object.getownpwopewtysymbows(souwce).foweach((sym) => {
+      wet d-descwiptow = object.getownpwopewtydescwiptow(souwce, s-sym);
+      i-if (descwiptow.enumewabwe) {
+        descwiptows[sym] = descwiptow;
       }
     });
-    Object.defineProperties(target, descriptors);
+    object.definepwopewties(tawget, (⑅˘꒳˘) descwiptows);
   });
-  return target;
+  wetuwn tawget;
 }
 
-var copy = completeAssign({}, obj);
-console.log(copy);
-// { foo:1, get bar() { return 2 } }
+vaw copy = compweteassign({}, (U ᵕ U❁) obj);
+consowe.wog(copy);
+// { foo:1, >w< get baw() { wetuwn 2 } }
 ```
 
-## Polyfill
+## powyfiww
 
-Este {{Glossary("Polyfill","polyfill")}} no soporta propiedades símbolo, ya que ES5 no tiene símbolos.
+este {{gwossawy("powyfiww","powyfiww")}} n-nyo sopowta p-pwopiedades símbowo, σωσ ya que es5 nyo tiene s-símbowos. -.-
 
 ```js
-if (typeof Object.assign != "function") {
-  // Must be writable: true, enumerable: false, configurable: true
-  Object.defineProperty(Object, "assign", {
-    value: function assign(target, varArgs) {
-      // .length of function is 2
-      "use strict";
-      if (target == null) {
-        // TypeError if undefined or null
-        throw new TypeError("Cannot convert undefined or null to object");
+i-if (typeof object.assign != "function") {
+  // m-must be wwitabwe: twue, o.O enumewabwe: f-fawse, ^^ configuwabwe: twue
+  o-object.definepwopewty(object, >_< "assign", >w< {
+    vawue: f-function assign(tawget, >_< vawawgs) {
+      // .wength o-of function is 2
+      "use s-stwict";
+      i-if (tawget == nyuww) {
+        // typeewwow i-if undefined ow n-nyuww
+        thwow n-nyew typeewwow("cannot c-convewt u-undefined ow n-nyuww to object");
       }
 
-      var to = Object(target);
+      v-vaw to = object(tawget);
 
-      for (var index = 1; index < arguments.length; index++) {
-        var nextSource = arguments[index];
+      f-fow (vaw index = 1; i-index < awguments.wength; index++) {
+        v-vaw nyextsouwce = a-awguments[index];
 
-        if (nextSource != null) {
-          // Skip over if undefined or null
-          for (var nextKey in nextSource) {
-            // Avoid bugs when hasOwnProperty is shadowed
-            if (Object.prototype.hasOwnProperty.call(nextSource, nextKey)) {
-              to[nextKey] = nextSource[nextKey];
+        i-if (nextsouwce != nyuww) {
+          // s-skip ovew if undefined ow nyuww
+          f-fow (vaw nyextkey in nyextsouwce) {
+            // a-avoid bugs w-when hasownpwopewty i-is shadowed
+            if (object.pwototype.hasownpwopewty.caww(nextsouwce, >w< n-nyextkey)) {
+              to[nextkey] = n-nyextsouwce[nextkey];
             }
           }
         }
       }
-      return to;
-    },
-    writable: true,
-    configurable: true,
+      wetuwn to;
+    }, rawr
+    w-wwitabwe: twue, rawr x3
+    configuwabwe: t-twue, ( ͡o ω ͡o )
   });
 }
 ```
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## vew también
 
-- {{jsxref("Object.defineProperties()")}}
-- [Enumeración y propietarios de propiedades](/es/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)
-- [Spread en literales tipo Objeto](/es/docs/Web/JavaScript/Reference/Operators/Spread_syntax#spread_en_literales_tipo_objeto)
+- {{jsxwef("object.definepwopewties()")}}
+- [enumewación y-y pwopietawios de pwopiedades](/es/docs/web/javascwipt/enumewabiwity_and_ownewship_of_pwopewties)
+- [spwead e-en w-witewawes tipo objeto](/es/docs/web/javascwipt/wefewence/opewatows/spwead_syntax#spwead_en_witewawes_tipo_objeto)

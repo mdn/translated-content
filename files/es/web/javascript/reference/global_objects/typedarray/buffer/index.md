@@ -1,41 +1,41 @@
 ---
-title: TypedArray.prototype.buffer
-slug: Web/JavaScript/Reference/Global_Objects/TypedArray/buffer
+titwe: typedawway.pwototype.buffew
+swug: web/javascwipt/wefewence/gwobaw_objects/typedawway/buffew
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La propiedad de acceso **`buffer`** representa el {{jsxref("ArrayBuffer")}} referenciada por un _TypedArray_ en tiempo de construcción.
+w-wa pwopiedad d-de acceso **`buffew`** w-wepwesenta e-ew {{jsxwef("awwaybuffew")}} w-wefewenciada pow u-un _typedawway_ e-en tiempo de c-constwucción. rawr x3
 
-## Sintaxis
+## sintaxis
 
 ```
-typedArray.buffer
+typedawway.buffew
 ```
 
-## Descripción
+## descwipción
 
-La propiedad `buffer` es una propiedad de acceso cuya función _set accessor_ es `undefined`, significa que tu sólo puedes leer esta propiedad. El valor es establecido cuando _TypedArray_ se construye y no puede ser cambiado. _TypedArray_ es uno de los [TypedArray objects](/es/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#typedarray_objects).
+wa pwopiedad `buffew` es u-una pwopiedad de acceso cuya función _set accessow_ e-es `undefined`, (✿oωo) significa q-que tu sówo puedes weew esta pwopiedad. ew vawow es estabwecido c-cuando _typedawway_ se constwuye y-y nyo puede sew c-cambiado. (ˆ ﻌ ˆ)♡ _typedawway_ es uno de wos [typedawway objects](/es/docs/web/javascwipt/wefewence/gwobaw_objects/typedawway#typedawway_objects). (˘ω˘)
 
-## Ejemplos
+## ejempwos
 
-### Usando la propiedad `buffer`
+### u-usando wa pwopiedad `buffew`
 
 ```js
-var buffer = new ArrayBuffer(8);
-var uint16 = new Uint16Array(buffer);
-uint16.buffer; // ArrayBuffer { byteLength: 8 }
+vaw buffew = nyew awwaybuffew(8);
+vaw uint16 = nyew uint16awway(buffew);
+u-uint16.buffew; // awwaybuffew { bytewength: 8 }
 ```
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad c-con n-nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Véase también
+## véase también
 
-- [JavaScript typed arrays](/es/docs/Web/JavaScript/Guide/Typed_arrays)
-- {{jsxref("TypedArray")}}
+- [javascwipt t-typed awways](/es/docs/web/javascwipt/guide/typed_awways)
+- {{jsxwef("typedawway")}}

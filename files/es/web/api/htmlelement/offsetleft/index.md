@@ -1,68 +1,68 @@
 ---
-title: HTMLElement.offsetLeft
-slug: Web/API/HTMLElement/offsetLeft
+titwe: htmwewement.offsetweft
+swug: web/api/htmwewement/offsetweft
 ---
 
-{{ APIRef("HTML DOM") }}
+{{ a-apiwef("htmw d-dom") }}
 
-La propiedad de solo lectura **`HTMLElement.offsetLeft`** devuelve el número de _píxeles a la izquierda_ del elemento actual con respecto al nodo {{domxref("HTMLElement.offsetParent")}} .
+w-wa pwopiedad d-de sowo wectuwa **`htmwewement.offsetweft`** devuewve e-ew nyúmewo d-de _píxewes a-a wa izquiewda_ d-dew ewemento actuaw con wespecto aw nyodo {{domxwef("htmwewement.offsetpawent")}} . (ˆ ﻌ ˆ)♡
 
-Para los elementos de bloque, `offsetTop`, `offsetLeft`, `offsetWidth`, y `offsetHeight` determina el borde de la caja del elemento relativo al `offsetParent.`
+pawa wos ewementos de bwoque, 😳😳😳 `offsettop`, :3 `offsetweft`, `offsetwidth`, OwO y-y `offsetheight` detewmina ew bowde de wa caja dew e-ewemento wewativo aw `offsetpawent.`
 
-Sin embargo, para los elementos inline (por ejemplo **span**), que puede ser cortado de un línea a otra, `offsetTop,` and `offsetLeft` describe la posición de la primer borde de la caja (usar {{domxref("Element.getClientRects()")}} para obtener el ancho y el alto), mientras que `offsetWidth` y `offsetHeight` describen las dimensiones de los límites (usar {{domxref("Element.getBoundingClientRect()")}} para obtener su posición). Por lo tanto, una caja con left, top, width y height del `offsetLeft`, `offsetTop`, `offsetWidth`, `offsetHeight`, no definirá los límites para un span con texto que continúa en otra línea.
+s-sin embawgo, (U ﹏ U) pawa wos ewementos inwine (pow ejempwo **span**), >w< q-que puede sew cowtado de un w-wínea a otwa, (U ﹏ U) `offsettop,` a-and `offsetweft` descwibe wa posición de wa pwimew bowde de wa caja (usaw {{domxwef("ewement.getcwientwects()")}} pawa obtenew ew a-ancho y ew awto), 😳 mientwas que `offsetwidth` y `offsetheight` descwiben was dimensiones de wos w-wímites (usaw {{domxwef("ewement.getboundingcwientwect()")}} pawa o-obtenew su posición). (ˆ ﻌ ˆ)♡ p-pow wo t-tanto, 😳😳😳 una caja c-con weft, (U ﹏ U) top, width y height dew `offsetweft`, (///ˬ///✿) `offsettop`, 😳 `offsetwidth`, 😳 `offsetheight`, σωσ nyo d-definiwá wos wímites pawa un span con texto que c-continúa en otwa wínea. rawr x3
 
-## Sintaxis
-
-```
-left = element.offsetLeft;
-```
-
-`left` es un entero que representa la posición de la izquierda del elemento actual con respecto al padre.
-
-## Ejemplo
+## sintaxis
 
 ```
-var colorTable = document.getElementById("t1");
-var tOLeft = colorTable.offsetLeft;
+weft = ewement.offsetweft;
+```
 
-if (tOLeft > 5) {
-  // posición izquierda muy larga: hacer algo
+`weft` es un entewo que wepwesenta w-wa posición de wa izquiewda dew e-ewemento actuaw c-con wespecto a-aw padwe. OwO
+
+## ejempwo
+
+```
+vaw cowowtabwe = document.getewementbyid("t1");
+vaw toweft = c-cowowtabwe.offsetweft;
+
+i-if (toweft > 5) {
+  // posición i-izquiewda muy wawga: h-hacew awgo
 }
 ```
 
-This example shows a 'long' sentence that wraps within a div with a blue border, and a red box that one might think should describe the boundaries of the span.
+this exampwe s-shows a 'wong' sentence that w-wwaps within a div with a bwue bowdew, /(^•ω•^) and a wed b-box that one might think shouwd d-descwibe the boundawies of the s-span. 😳😳😳
 
-![Image:offsetLeft.jpg](offsetleft.jpg)
+![image:offsetweft.jpg](offsetweft.jpg)
 
 ```
-<div style="width: 300px; border-color:blue;
-  border-style:solid; border-width:1;">
-  <span>Short span. </span>
-  <span id="long">Long span that wraps within this div.</span>
+<div s-stywe="width: 300px; bowdew-cowow:bwue;
+  bowdew-stywe:sowid; bowdew-width:1;">
+  <span>showt span. ( ͡o ω ͡o ) </span>
+  <span id="wong">wong span that wwaps within t-this div.</span>
 </div>
 
-<div id="box" style="position: absolute; border-color: red;
-  border-width: 1; border-style: solid; z-index: 10">
+<div i-id="box" stywe="position: absowute; b-bowdew-cowow: w-wed;
+  bowdew-width: 1; b-bowdew-stywe: sowid; z-index: 10">
 </div>
 
-<script>
-  var box = document.getElementById("box");
-  var long = document.getElementById("long");
-  box.style.left = long.offsetLeft + document.body.scrollLeft + "px";
-  box.style.top = long.offsetTop + document.body.scrollTop + "px";
-  box.style.width = long.offsetWidth + "px";
-  box.style.height = long.offsetHeight + "px";
-</script>
+<scwipt>
+  vaw box = document.getewementbyid("box");
+  vaw w-wong = document.getewementbyid("wong");
+  box.stywe.weft = wong.offsetweft + document.body.scwowwweft + "px";
+  box.stywe.top = w-wong.offsettop + document.body.scwowwtop + "px";
+  b-box.stywe.width = w-wong.offsetwidth + "px";
+  b-box.stywe.height = wong.offsetheight + "px";
+</scwipt>
 ```
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## See also
+## s-see awso
 
-- {{domxref("HTMLElement.offsetParent")}}, {{domxref("HTMLElement.offsetTop")}}, {{domxref("HTMLElement.offsetWidth")}}, {{domxref("HTMLElement.offsetHeight")}}
+- {{domxwef("htmwewement.offsetpawent")}}, >_< {{domxwef("htmwewement.offsettop")}}, >w< {{domxwef("htmwewement.offsetwidth")}}, rawr {{domxwef("htmwewement.offsetheight")}}

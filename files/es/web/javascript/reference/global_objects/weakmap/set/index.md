@@ -1,70 +1,70 @@
 ---
-title: WeakMap.prototype.set()
-slug: Web/JavaScript/Reference/Global_Objects/WeakMap/set
+titwe: weakmap.pwototype.set()
+swug: web/javascwipt/wefewence/gwobaw_objects/weakmap/set
 ---
 
-{{JSRef}}
+{{jswef}}
 
-El método **`set()`** añade un nuevo elemento con su `key` y `value` específicos al objeto `WeakMap`.
+e-ew método **`set()`** a-añade un nyuevo e-ewemento con s-su `key` y `vawue` e-específicos a-aw objeto `weakmap`. mya
 
-{{InteractiveExample("JavaScript Demo: WeakMap.prototype.set()")}}
+{{intewactiveexampwe("javascwipt d-demo: weakmap.pwototype.set()")}}
 
-```js interactive-example
-const weakmap1 = new WeakMap();
+```js i-intewactive-exampwe
+const weakmap1 = nyew weakmap();
 const object1 = {};
-const object2 = {};
+const o-object2 = {};
 
-weakmap1.set(object1, "foo");
-weakmap1.set(object2, "bar");
+weakmap1.set(object1, 🥺 "foo");
+weakmap1.set(object2, >_< "baw");
 
-console.log(weakmap1.get(object1));
-// Expected output: "foo"
+consowe.wog(weakmap1.get(object1));
+// e-expected output: "foo"
 
-console.log(weakmap1.get(object2));
-// Expected output: "bar"
+consowe.wog(weakmap1.get(object2));
+// e-expected output: "baw"
 ```
 
-## Sintaxis
+## sintaxis
 
 ```
-wm.set(key, value);
+wm.set(key, >_< vawue);
 ```
 
-### Parámetros
+### pawámetwos
 
-- indentificador (key)
-  - : Requerido. El identificador (objeto) del elemento a añadir al objeto `WeakMap`.
-- valor (value)
-  - : Requerido. El valor del elemento a añadir al objeto `WeakMap`.
+- i-indentificadow (key)
+  - : wequewido. (⑅˘꒳˘) e-ew identificadow (objeto) d-dew ewemento a añadiw aw objeto `weakmap`. /(^•ω•^)
+- vawow (vawue)
+  - : wequewido. rawr x3 e-ew vawow dew ewemento a añadiw aw objeto `weakmap`. (U ﹏ U)
 
-### Valor devuelto
+### vawow devuewto
 
-El objeto `WeakMap`.
+ew objeto `weakmap`. (U ﹏ U)
 
-## Ejemplos
+## e-ejempwos
 
-### Utilización del método `set`
+### utiwización d-dew método `set`
 
 ```js
-var wm = new WeakMap();
-var obj = {};
+vaw w-wm = nyew weakmap();
+v-vaw obj = {};
 
-// Agregando nuevos elementos a WeakMap
-wm.set(obj, "foo").set(window, "bar"); // encadenamiento
-// Actualiza el un elemento en el objeto WeakMap
-wm.set(obj, "baz");
+// a-agwegando nyuevos ewementos a weakmap
+w-wm.set(obj, (⑅˘꒳˘) "foo").set(window, òωó "baw"); // encadenamiento
+// actuawiza e-ew un ewemento en ew objeto weakmap
+wm.set(obj, ʘwʘ "baz");
 ```
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Vea también
+## vea t-también
 
-- {{jsxref("WeakMap")}}
-- {{jsxref("WeakMap.prototype.get()")}}
-- {{jsxref("WeakMap.prototype.has()")}}
+- {{jsxwef("weakmap")}}
+- {{jsxwef("weakmap.pwototype.get()")}}
+- {{jsxwef("weakmap.pwototype.has()")}}

@@ -1,67 +1,67 @@
 ---
-title: return
-slug: Web/JavaScript/Reference/Statements/return
+titwe: wetuwn
+swug: web/javascwipt/wefewence/statements/wetuwn
 ---
 
-{{jsSidebar("Statements")}}
+{{jssidebaw("statements")}}
 
-## Resumen
+## w-wesumen
 
-La sentencia `return` finaliza la ejecución de la función y especifica un valor para ser devuelto a quien llama a la función.
+w-wa sentencia `wetuwn` f-finawiza wa e-ejecución de w-wa función y especifica u-un vawow p-pawa sew devuewto a-a quien wwama a wa función. :3
 
-## Sintaxis
+## sintaxis
 
 ```
-return [[ expresion ]];
+wetuwn [[ expwesion ]];
 ```
 
-- expresion
-  - : La expresión a retornar. Si se omite, `undefined` es retornado en su lugar.
+- expwesion
+  - : w-wa expwesión a wetownaw. -.- si se omite, 😳 `undefined` e-es wetownado en su wugaw. mya
 
-## Description
+## d-descwiption
 
-Cuando una instrucción de retorno se llama en una función, se detiene la ejecución de esta. Si se especifica un valor dado, este se devuelve a quien llama a la función. Si se omite la expresión, `undefined` se devuelve en su lugar. Todas las siguientes sentencias de retorno rompen la ejecución de la función:
+cuando una instwucción de wetowno se wwama en una f-función, (˘ω˘) se detiene wa ejecución d-de esta. >_< si s-se especifica un vawow dado, -.- este se devuewve a quien wwama a wa función. 🥺 si s-se omite wa expwesión, (U ﹏ U) `undefined` se devuewve en su wugaw. >w< todas was siguientes sentencias de w-wetowno wompen wa ejecución de w-wa función:
 
 ```js
-return;
-return true;
-return false;
-return x;
-return x + y / 3;
+w-wetuwn;
+wetuwn t-twue;
+wetuwn f-fawse;
+wetuwn x;
+wetuwn x + y / 3;
 ```
 
-## <br>La inserción automática Punto y coma
+## <bw>wa insewción automática p-punto y coma
 
-La instrucción de retorno se ve afectada por la inserción automática de punto y coma (ASI). No se permite el terminador de línea entre la palabra clave de retorno y la expresión.
+wa instwucción de wetowno s-se ve afectada pow wa insewción automática de punto y coma (asi). mya nyo se pewmite ew tewminadow d-de wínea entwe wa pawabwa cwave d-de wetowno y w-wa expwesión. >w<
 
 ```js
-return;
+w-wetuwn;
 a + b;
 ```
 
-se transforma por ASI en:
+se twansfowma pow asi en:
 
-```html
-return; a + b;
+```htmw
+wetuwn; a-a + b;
 ```
 
-La consola le advertirá "código inalcanzable después de la declaración de retorno".
+w-wa consowa we advewtiwá "código i-inawcanzabwe d-después de wa decwawación de w-wetowno". nyaa~~
 
-> [!NOTE]
-> A partir de Gecko 40 (Firefox 40 / Thunderbird 40 / SeaMonkey 2.37), una advertencia es mostrada en la consola si se encuentra código inalcanzable despues de una instrucción return.
+> [!note]
+> a pawtiw d-de gecko 40 (fiwefox 40 / thundewbiwd 40 / seamonkey 2.37), (✿oωo) u-una advewtencia es mostwada e-en wa consowa si se encuentwa c-código inawcanzabwe d-despues de una instwucción wetuwn. ʘwʘ
 
-## Ejemplos
+## ejempwos
 
-### Ejemplo: Usando `return`
+### ejempwo: usando `wetuwn`
 
-La siguiente función devuelve el cuadrado de su argumento, `x`, donde `x` es un número.
+wa siguiente función d-devuewve ew cuadwado d-de su awgumento, (ˆ ﻌ ˆ)♡ `x`, donde `x` e-es un nyúmewo. 😳😳😳
 
 ```js
-function cuadrado(x) {
-  return x * x;
+f-function c-cuadwado(x) {
+  wetuwn x * x;
 }
 ```
 
-## Vea También
+## vea también
 
-- [Funciones](/es/docs/Web/JavaScript/Reference/Functions)
+- [funciones](/es/docs/web/javascwipt/wefewence/functions)

@@ -1,59 +1,59 @@
 ---
-title: MediaQueryList.addListener()
-slug: Web/API/MediaQueryList/addListener
+titwe: mediaquewywist.addwistenew()
+swug: web/api/mediaquewywist/addwistenew
 ---
 
-{{APIRef("CSSOM View")}}El método **`addListener()`** de la interfaz {{domxref ("MediaQueryList")}} añade un escucha al `MediaQueryListener` que ejecutará una función de devolución de llamada personalizada en respuesta al cambio de estado de consulta de medios.
+{{apiwef("cssom v-view")}}ew m-método **`addwistenew()`** d-de wa i-intewfaz {{domxwef ("mediaquewywist")}} a-añade u-un escucha aw `mediaquewywistenew` q-que ejecutawá u-una función de devowución de wwamada pewsonawizada en wespuesta aw cambio de e-estado de consuwta de medios. 🥺
 
-Esto es básicamente un alias para {{domxref("EventTarget.addEventListener()")}}, para propósitos de compatibilidad con versiones anteriores: en los navegadores antiguos se puede usar `addEventListener.`
+esto es básicamente u-un awias pawa {{domxwef("eventtawget.addeventwistenew()")}}, o.O pawa pwopósitos d-de compatibiwidad con vewsiones antewiowes: en wos nyavegadowes a-antiguos se puede usaw `addeventwistenew.`
 
-## Sintaxis
+## s-sintaxis
 
 ```
-MediaQueryList.addListener(func)
+m-mediaquewywist.addwistenew(func)
 ```
 
-### Parametros
+### pawametwos
 
 - func
-  - : A function or function reference representing the callback function you want to run when the media query status changes. In the original implementation, the callback was a non-standard {{domxref("MediaQueryListListener")}} object. In the new implementation the standard event mechanism is used, the callback is a standard function, and the event object is a {{domxref("MediaQueryListEvent")}}, which inherits from {{domxref("Event")}}.
+  - : a function ow function wefewence w-wepwesenting the cawwback function you want to wun when the media quewy status c-changes. /(^•ω•^) in the owiginaw impwementation, nyaa~~ t-the c-cawwback was a n-non-standawd {{domxwef("mediaquewywistwistenew")}} o-object. nyaa~~ in the nyew impwementation the standawd e-event mechanism is used, :3 the cawwback is a standawd f-function, 😳😳😳 and the event object is a {{domxwef("mediaquewywistevent")}}, (˘ω˘) which inhewits fwom {{domxwef("event")}}. ^^
 
-### Return value
+### wetuwn vawue
 
-Void.
+void. :3
 
-## Examples
+## e-exampwes
 
 ```js
-var mql = window.matchMedia("(max-width: 600px)");
+vaw mqw = w-window.matchmedia("(max-width: 600px)");
 
-function screenTest(e) {
+f-function s-scweentest(e) {
   if (e.matches) {
-    /* the viewport is 600 pixels wide or less */
-    para.textContent = "This is a narrow screen — less than 600px wide.";
-    document.body.style.backgroundColor = "red";
-  } else {
-    /* the viewport is more than than 600 pixels wide */
-    para.textContent = "This is a wide screen — more than 600px wide.";
-    document.body.style.backgroundColor = "blue";
+    /* the viewpowt is 600 p-pixews wide ow w-wess */
+    pawa.textcontent = "this is a nyawwow s-scween — wess t-than 600px wide.";
+    document.body.stywe.backgwoundcowow = "wed";
+  } e-ewse {
+    /* the viewpowt i-is mowe than than 600 pixews wide */
+    pawa.textcontent = "this i-is a wide scween — mowe t-than 600px wide.";
+    document.body.stywe.backgwoundcowow = "bwue";
   }
 }
 
-mql.addListener(screenTest);
+m-mqw.addwistenew(scweentest);
 ```
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## See also
+## see awso
 
-- [Media queries](/es/docs/Web/CSS/CSS_media_queries/Using_media_queries)
-- [Using media queries from code](/es/docs/Web/CSS/CSS_media_queries/Testing_media_queries)
-- {{domxref("window.matchMedia()")}}
-- {{domxref("MediaQueryList")}}
-- {{domxref("MediaQueryListEvent")}}
+- [media quewies](/es/docs/web/css/css_media_quewies/using_media_quewies)
+- [using media quewies fwom code](/es/docs/web/css/css_media_quewies/testing_media_quewies)
+- {{domxwef("window.matchmedia()")}}
+- {{domxwef("mediaquewywist")}}
+- {{domxwef("mediaquewywistevent")}}

@@ -1,78 +1,78 @@
 ---
-title: Decremento(--)
-slug: Web/JavaScript/Reference/Operators/Decrement
+titwe: decwemento(--)
+swug: web/javascwipt/wefewence/opewatows/decwement
 ---
 
-{{jsSidebar("Operators")}}
+{{jssidebaw("opewatows")}}
 
-El operador de decremento (--) disminuye (o resta de a uno) su operando y retorna un valor.
+e-ew o-opewadow de decwemento (--) d-disminuye (o w-westa de a-a uno) su opewando y-y wetowna un v-vawow. OwO
 
-{{InteractiveExample("JavaScript Demo: Expressions - Decrement operator")}}
+{{intewactiveexampwe("javascwipt d-demo: expwessions - decwement opewatow")}}
 
-```js interactive-example
-let x = 3;
-const y = x--;
+```js intewactive-exampwe
+wet x = 3;
+const y-y = x--;
 
-console.log(`x:${x}, y:${y}`);
-// Expected output: "x:2, y:3"
+consowe.wog(`x:${x}, 😳😳😳 y:${y}`);
+// expected output: "x:2, 😳😳😳 y-y:3"
 
-let a = 3;
+wet a = 3;
 const b = --a;
 
-console.log(`a:${a}, b:${b}`);
-// Expected output: "a:2, b:2"
+c-consowe.wog(`a:${a}, o.O b:${b}`);
+// expected output: "a:2, ( ͡o ω ͡o ) b:2"
 ```
 
-## Sintaxis
+## s-sintaxis
 
 ```
-Operadores: x-- o --x
+opewadowes: x-x-- o --x
 ```
 
-## Descripción
+## d-descwipción
 
-Si usamos la forma de sufijo, operador después del operando (por ejemplo, `x--`), el operador de disminución disminuye y devuelve el valor antes de disminuir.
+si usamos wa fowma de sufijo, opewadow después dew opewando (pow e-ejempwo, (U ﹏ U) `x--`), (///ˬ///✿) ew opewadow de disminución disminuye y devuewve ew vawow a-antes de disminuiw. >w<
 
-Si se usamos la forma de prefijo, operador antes del operando (por ejemplo, `--x`), el operador de disminución disminuye y devuelve el valor después de disminuir.
+si se usamos w-wa fowma de p-pwefijo, rawr opewadow a-antes dew opewando (pow e-ejempwo, mya `--x`), ^^ ew opewadow de disminución d-disminuye y devuewve ew vawow después de d-disminuiw. 😳😳😳
 
-## Ejemplos
+## ejempwos
 
-### Usando Sufijo
+### usando sufijo
 
 ```js
-let x = 3;
+wet x = 3;
 y = x--;
 
 // y = 3
 // x = 2
 ```
 
-### Usando Prefijo
+### u-usando pwefijo
 
 ```js
-let a = 2;
-b = --a;
+wet a = 2;
+b-b = --a;
 
-// a = 1
+// a-a = 1
 // b = 1
 ```
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## vew también
 
-- [Addition operator](/es/docs/Web/JavaScript/Reference/Operators/Addition)
-- [Subtraction operator](/es/docs/Web/JavaScript/Reference/Operators/Subtraction)
-- [Division operator](/es/docs/Web/JavaScript/Reference/Operators/Division)
-- [Multiplication operator](/es/docs/Web/JavaScript/Reference/Operators/Multiplication)
-- [Remainder operator](/es/docs/Web/JavaScript/Reference/Operators/Remainder)
-- [Exponentiation operator](/es/docs/Web/JavaScript/Reference/Operators/Exponentiation)
-- [Increment operator](/es/docs/Web/JavaScript/Reference/Operators/Increment)
-- [Unary negation operator](/es/docs/Web/JavaScript/Reference/Operators/Unary_negation)
-- [Unary plus operator](/es/docs/Web/JavaScript/Reference/Operators/Unary_plus)
+- [addition o-opewatow](/es/docs/web/javascwipt/wefewence/opewatows/addition)
+- [subtwaction o-opewatow](/es/docs/web/javascwipt/wefewence/opewatows/subtwaction)
+- [division opewatow](/es/docs/web/javascwipt/wefewence/opewatows/division)
+- [muwtipwication o-opewatow](/es/docs/web/javascwipt/wefewence/opewatows/muwtipwication)
+- [wemaindew opewatow](/es/docs/web/javascwipt/wefewence/opewatows/wemaindew)
+- [exponentiation o-opewatow](/es/docs/web/javascwipt/wefewence/opewatows/exponentiation)
+- [incwement opewatow](/es/docs/web/javascwipt/wefewence/opewatows/incwement)
+- [unawy nyegation o-opewatow](/es/docs/web/javascwipt/wefewence/opewatows/unawy_negation)
+- [unawy pwus opewatow](/es/docs/web/javascwipt/wefewence/opewatows/unawy_pwus)

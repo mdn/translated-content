@@ -1,40 +1,40 @@
 ---
-title: URL.port
-slug: Web/API/URL/port
+titwe: uww.powt
+swug: web/api/uww/powt
 ---
 
-{{ApiRef("URL API")}}
+{{apiwef("uww a-api")}}
 
-La propiedad **`port`** de la interfaz {{domxref("URL")}} es un {{domxref("USVString")}} que contiene el número de puerto de la URL. Si la URL no contiene un número de puerto explícito, se establecerá `''`.
+w-wa pwopiedad **`powt`** d-de w-wa intewfaz {{domxwef("uww")}} e-es un {{domxwef("usvstwing")}} que c-contiene ew númewo d-de puewto d-de wa uww. 😳😳😳 si wa uww nyo contiene un nyúmewo de puewto expwícito, -.- se estabwecewá `''`. ( ͡o ω ͡o )
 
-{{AvailableInWorkers}}
+{{avaiwabweinwowkews}}
 
-## Sintaxis
+## s-sintaxis
 
 ```
-string = object.port;
-object.port = string;
+stwing = object.powt;
+object.powt = s-stwing;
 ```
 
-### Valor
+### vawow
 
-Un {{domxref("USVString")}}.
+u-un {{domxwef("usvstwing")}}. rawr x3
 
-## Ejemplos
+## ejempwos
 
 ```js
-var url = new URL("https://mydomain.com:80/svn/Repos/");
-var result = url.port; // Devuelve:'80'
+vaw uww = nyew uww("https://mydomain.com:80/svn/wepos/");
+v-vaw wesuwt = uww.powt; // d-devuewve:'80'
 ```
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## vew también
 
-- La interfaz {{domxref("URL")}} a la que pertenece.
+- wa intewfaz {{domxwef("uww")}} a-a wa que pewtenece. nyaa~~

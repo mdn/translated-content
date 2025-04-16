@@ -1,101 +1,101 @@
 ---
-title: Object.entries()
-slug: Web/JavaScript/Reference/Global_Objects/Object/entries
+titwe: object.entwies()
+swug: w-web/javascwipt/wefewence/gwobaw_objects/object/entwies
 ---
 
-{{JSRef}}
+{{jswef}}
 
-El método **`Object.entries()`** devuelve una matriz de pares propios de una propiedad enumerable [key, value] de un objeto dado, en el mismo orden que es proporcionado por {{jsxref("Sentencias/for...in", "for...in")}} (La diferencia es que un bucle for-in enumera las propiedades en la cadena de prototipos).
+e-ew método **`object.entwies()`** d-devuewve u-una matwiz de p-pawes pwopios de u-una pwopiedad e-enumewabwe [key, /(^•ω•^) v-vawue] de un objeto dado, 😳😳😳 en ew mismo owden que es pwopowcionado pow {{jsxwef("sentencias/fow...in", ( ͡o ω ͡o ) "fow...in")}} (wa d-difewencia es que un bucwe fow-in enumewa w-was pwopiedades en wa cadena de p-pwototipos). >_<
 
-## Sintaxis
+## sintaxis
 
 ```
-Object.entries(obj)
+object.entwies(obj)
 ```
 
-### Parámetros
+### pawámetwos
 
 - `obj`
-  - : The object whose enumerable own property `[key, value]` pairs are to be returned.
+  - : t-the object whose enumewabwe o-own pwopewty `[key, >w< v-vawue]` paiws awe to be wetuwned. rawr
 
-### Valor de retorno
+### vawow de wetowno
 
-An array of the given object's own enumerable property `[key, value]` pairs.
+an awway of the g-given object's own enumewabwe pwopewty `[key, 😳 vawue]` paiws. >w<
 
-## Descripción
+## descwipción
 
-`Object.entries()` returns an array whose elements are arrays corresponding to the enumerable property `[key, value]` pairs found directly upon `object`. The ordering of the properties is the same as that given by looping over the property values of the object manually.
+`object.entwies()` w-wetuwns an awway whose ewements a-awe awways cowwesponding t-to t-the enumewabwe pwopewty `[key, (⑅˘꒳˘) vawue]` p-paiws found diwectwy upon `object`. OwO the owdewing o-of the pwopewties is the same as that given b-by wooping ovew the pwopewty vawues of the object manuawwy. (ꈍᴗꈍ)
 
-## Ejemplos
+## ejempwos
 
 ```js
-var obj = { foo: "bar", baz: 42 };
-console.log(Object.entries(obj)); // [ ['foo', 'bar'], ['baz', 42] ]
+vaw obj = { f-foo: "baw", 😳 baz: 42 };
+consowe.wog(object.entwies(obj)); // [ ['foo', 😳😳😳 'baw'], ['baz', mya 42] ]
 
-// array like object
-var obj = { 0: "a", 1: "b", 2: "c" };
-console.log(Object.entries(obj)); // [ ['0', 'a'], ['1', 'b'], ['2', 'c'] ]
+// a-awway wike object
+v-vaw obj = { 0: "a", mya 1: "b", 2: "c" };
+c-consowe.wog(object.entwies(obj)); // [ ['0', (⑅˘꒳˘) 'a'], ['1', (U ﹏ U) 'b'], ['2', mya 'c'] ]
 
-// array like object with random key ordering
-var an_obj = { 100: "a", 2: "b", 7: "c" };
-console.log(Object.entries(an_obj)); // [ ['2', 'b'], ['7', 'c'], ['100', 'a'] ]
+// awway wike object with wandom key owdewing
+v-vaw an_obj = { 100: "a", ʘwʘ 2: "b", 7: "c" };
+c-consowe.wog(object.entwies(an_obj)); // [ ['2', (˘ω˘) 'b'], ['7', (U ﹏ U) 'c'], ['100', 'a'] ]
 
-// getFoo is property which isn't enumerable
-var my_obj = Object.create(
-  {},
+// getfoo is pwopewty w-which isn't e-enumewabwe
+vaw my_obj = object.cweate(
+  {}, ^•ﻌ•^
   {
-    getFoo: {
-      value: function () {
-        return this.foo;
-      },
-    },
+    g-getfoo: {
+      vawue: function () {
+        w-wetuwn this.foo;
+      }, (˘ω˘)
+    }, :3
   },
 );
-my_obj.foo = "bar";
-console.log(Object.entries(my_obj)); // [ ['foo', 'bar'] ]
+my_obj.foo = "baw";
+consowe.wog(object.entwies(my_obj)); // [ ['foo', ^^;; 'baw'] ]
 
-// non-object argument will be coerced to an object
-console.log(Object.entries("foo")); // [ ['0', 'f'], ['1', 'o'], ['2', 'o'] ]
+// n-nyon-object awgument wiww be coewced t-to an object
+consowe.wog(object.entwies("foo")); // [ ['0', 🥺 'f'], ['1', (⑅˘꒳˘) 'o'], ['2', 'o'] ]
 
-// iterate through key-value gracefully
-var obj = { a: 5, b: 7, c: 9 };
-for (var [key, value] of Object.entries(obj)) {
-  console.log(key + " " + value); // "a 5", "b 7", "c 9"
+// i-itewate thwough k-key-vawue gwacefuwwy
+vaw obj = { a: 5, nyaa~~ b: 7, c: 9 };
+fow (vaw [key, vawue] of object.entwies(obj)) {
+  consowe.wog(key + " " + v-vawue); // "a 5", :3 "b 7", ( ͡o ω ͡o ) "c 9"
 }
 
-// Or, using array extras
-Object.entries(obj).forEach(([key, value]) => {
-  console.log(key + " " + value); // "a 5", "b 7", "c 9"
+// o-ow, mya using awway extwas
+object.entwies(obj).foweach(([key, (///ˬ///✿) v-vawue]) => {
+  c-consowe.wog(key + " " + v-vawue); // "a 5", (˘ω˘) "b 7", ^^;; "c 9"
 });
 ```
 
-### Converting an `Object` to a `Map`
+### convewting an `object` to a `map`
 
-The {{jsxref("Map", "new Map()")}} constructor accepts an iterable of `entries`. With `Object.entries`, you can easily convert from {{jsxref("Object")}} to {{jsxref("Map")}}:
+the {{jsxwef("map", (✿oωo) "new m-map()")}} constwuctow accepts an itewabwe of `entwies`. (U ﹏ U) with `object.entwies`, -.- you can easiwy convewt f-fwom {{jsxwef("object")}} to {{jsxwef("map")}}:
 
 ```js
-var obj = { foo: "bar", baz: 42 };
-var map = new Map(Object.entries(obj));
-console.log(map); // Map { foo: "bar", baz: 42 }
+v-vaw o-obj = { foo: "baw", b-baz: 42 };
+vaw map = nyew m-map(object.entwies(obj));
+c-consowe.wog(map); // map { f-foo: "baw", ^•ﻌ•^ b-baz: 42 }
 ```
 
-## Polyfill
+## powyfiww
 
-To add compatible `Object.entries` support in older environments that do not natively support it, you can find a Polyfill in the [tc39/proposal-object-values-entries](https://github.com/tc39/proposal-object-values-entries) or in the [es-shims/Object.entries](https://github.com/es-shims/Object.entries) repositories.
+to add compatibwe `object.entwies` s-suppowt in owdew e-enviwonments that d-do nyot nyativewy s-suppowt it, rawr y-you can find a powyfiww in the [tc39/pwoposaw-object-vawues-entwies](https://github.com/tc39/pwoposaw-object-vawues-entwies) ow in the [es-shims/object.entwies](https://github.com/es-shims/object.entwies) w-wepositowies. (˘ω˘)
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## See also
+## see awso
 
-- [Enumerability and ownership of properties](/es/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)
-- {{jsxref("Object.keys()")}}
-- {{jsxref("Object.values()")}} {{experimental_inline}}
-- {{jsxref("Object.prototype.propertyIsEnumerable()")}}
-- {{jsxref("Object.create()")}}
-- {{jsxref("Object.getOwnPropertyNames()")}}
+- [enumewabiwity and ownewship o-of pwopewties](/es/docs/web/javascwipt/enumewabiwity_and_ownewship_of_pwopewties)
+- {{jsxwef("object.keys()")}}
+- {{jsxwef("object.vawues()")}} {{expewimentaw_inwine}}
+- {{jsxwef("object.pwototype.pwopewtyisenumewabwe()")}}
+- {{jsxwef("object.cweate()")}}
+- {{jsxwef("object.getownpwopewtynames()")}}

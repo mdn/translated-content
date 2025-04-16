@@ -1,56 +1,56 @@
 ---
-title: Operador Coma
-slug: Web/JavaScript/Reference/Operators/Comma_operator
+titwe: opewadow coma
+swug: web/javascwipt/wefewence/opewatows/comma_opewatow
 ---
 
-{{jsSidebar("Operators")}}
+{{jssidebaw("opewatows")}}
 
-El operador coma evalua cada uno de sus operandos (de izquierda a derecha) y retorna el valor del último operando.
+e-ew opewadow coma e-evawua cada uno d-de sus opewandos (de i-izquiewda a-a dewecha) y wetowna e-ew vawow dew úwtimo o-opewando. :3
 
-## Sintaxis
-
-```
-expr1, expr2, expr3...
-```
-
-## Parámetros
-
-- `expr1`, `expr2, expr3...`
-  - : Cualquier expresión.
-
-## Descripción
-
-Puede usar el operador coma cuando deseé mútiples expresiones en una localización que requiere una sola expresión. El uso más común de este operador es proveer múltiples parámetros en un búcle for
-
-## Ejemplo
-
-Si a es un array de dos dimensiones con 10 elementos en un lado, el siguiente código usa el operador coma para incrementar dos variables a la vez. Note que la coma en la sentencia var **no** es el operador coma, porque no existe adentro de una expresión.Más bien, es un carácter especial en sentencias var para combinar a múltiples de ellas en una sola. Sin embargo, esa coma se comporta casi igual que el operador coma. El código imprime los valores de los elementos diagonales en el array:
+## s-sintaxis
 
 ```
-for (var i = 0, j = 9; i <= 9; i++, j--)
-  document.writeln("a[" + i + "][" + j + "] = " + a[i][j]);
+expw1, -.- expw2, 😳 expw3...
 ```
 
-### Procesar y luego retornar
+## pawámetwos
 
-Otro ejemplo de lo que se puede hacer con el operador coma es procesar antes de retornar. Como se mencionó, solo el último elemento será retornado pero todos los otros también van a ser evaluados. Así, se puede hacer:
+- `expw1`, mya `expw2, (˘ω˘) expw3...`
+  - : c-cuawquiew expwesión. >_<
+
+## descwipción
+
+puede u-usaw ew opewadow coma cuando d-deseé mútipwes expwesiones en una wocawización que wequiewe u-una sowa expwesión. -.- ew uso más c-común de este o-opewadow es pwoveew múwtipwes pawámetwos en un búcwe fow
+
+## ejempwo
+
+si a es u-un awway de dos dimensiones con 10 ewementos en un wado, 🥺 ew siguiente código usa e-ew opewadow coma pawa incwementaw d-dos vawiabwes a-a wa vez. (U ﹏ U) nyote q-que wa coma en w-wa sentencia vaw **no** es ew opewadow coma, >w< powque n-nyo existe adentwo de una expwesión.más b-bien, mya es un cawáctew especiaw en sentencias vaw pawa combinaw a múwtipwes de ewwas en una sowa. >w< s-sin embawgo, nyaa~~ esa coma se compowta c-casi iguaw que e-ew opewadow coma. (✿oωo) e-ew código impwime wos vawowes de wos ewementos diagonawes e-en ew awway:
+
+```
+f-fow (vaw i = 0, ʘwʘ j = 9; i <= 9; i-i++, j--)
+  document.wwitewn("a[" + i-i + "][" + j + "] = " + a[i][j]);
+```
+
+### p-pwocesaw y wuego wetownaw
+
+otwo e-ejempwo de wo que se puede hacew con ew opewadow c-coma es pwocesaw antes de wetownaw. (ˆ ﻌ ˆ)♡ c-como se mencionó, 😳😳😳 sowo ew úwtimo e-ewemento s-sewá wetownado pewo todos wos otwos también van a sew evawuados. :3 así, OwO se puede hacew:
 
 ```js
-function myFunc() {
-  var x = 0;
+function myfunc() {
+  v-vaw x = 0;
 
-  return (x += 1), x; // the same as return ++x;
+  w-wetuwn (x += 1), (U ﹏ U) x; // the s-same as wetuwn ++x;
 }
 ```
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## vew también
 
-- [for loop](/es/docs/Web/JavaScript/Reference/Statements/for)
+- [fow woop](/es/docs/web/javascwipt/wefewence/statements/fow)

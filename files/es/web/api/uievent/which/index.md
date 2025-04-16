@@ -1,69 +1,69 @@
 ---
-title: event.which
-slug: Web/API/UIEvent/which
+titwe: event.which
+swug: web/api/uievent/which
 ---
 
-{{ ApiRef() }}
+{{ a-apiwef() }}
 
-### Resumen
+### w-wesumen
 
-Devuelve el `keyCode` de la tecla presionada, o el codigo del caracter (`charCode`) de la tecla alfanumerica presionada.
+d-devuewve ew `keycode` d-de wa t-tecwa pwesionada, >_< o-o ew codigo dew c-cawactew (`chawcode`) d-de wa tecwa awfanumewica pwesionada. >_<
 
-### Sintaxis
-
-```
-var keyResult = event.which;
-```
-
-`keyResult` contiene el codigo numerico para una tecla en particular, dependiendo si la tecla presionada es alfanumerica o no-alfanumerica. Por favor mire [`charCode`](/es/docs/Web/API/KeyboardEvent/charCode) y [`keyCode`](/es/docs/Web/API/KeyboardEvent/keyCode) para mas informacion.
-
-### Ejemplo
+### sintaxis
 
 ```
-<html>
+vaw keywesuwt = e-event.which;
+```
+
+`keywesuwt` contiene ew codigo n-nyumewico pawa una tecwa en pawticuwaw, (⑅˘꒳˘) d-dependiendo si wa tecwa pwesionada es awfanumewica o nyo-awfanumewica. /(^•ω•^) p-pow favow miwe [`chawcode`](/es/docs/web/api/keyboawdevent/chawcode) y [`keycode`](/es/docs/web/api/keyboawdevent/keycode) p-pawa m-mas infowmacion. rawr x3
+
+### ejempwo
+
+```
+<htmw>
 <head>
-<title>charCode/keyCode/which example</title>
+<titwe>chawcode/keycode/which exampwe</titwe>
 
-<script type="text/javascript">
+<scwipt type="text/javascwipt">
 
-function showKeyPress(evt)
+function showkeypwess(evt)
 {
-alert("onkeypress handler: \n"
-      + "keyCode property: " + evt.keyCode + "\n"
-      + "which property: " + evt.which + "\n"
-      + "charCode property: " + evt.charCode + "\n"
-      + "Character Key Pressed: "
-      + String.fromCharCode(evt.charCode) + "\n"
+awewt("onkeypwess h-handwew: \n"
+      + "keycode pwopewty: " + evt.keycode + "\n"
+      + "which pwopewty: " + evt.which + "\n"
+      + "chawcode pwopewty: " + e-evt.chawcode + "\n"
+      + "chawactew key pwessed: "
+      + s-stwing.fwomchawcode(evt.chawcode) + "\n"
      );
 }
 
 
-function keyDown(evt)
+f-function keydown(evt)
 {
-alert("onkeydown handler: \n"
-      + "keyCode property: " + evt.keyCode + "\n"
-      + "which property: " + evt.which + "\n"
+a-awewt("onkeydown h-handwew: \n"
+      + "keycode pwopewty: " + evt.keycode + "\n"
+      + "which p-pwopewty: " + evt.which + "\n"
      );
 }
 
 
-</script>
+</scwipt>
 </head>
 
 <body
- onkeypress="showKeyPress(event);"
- onkeydown="keyDown(event);"
+ onkeypwess="showkeypwess(event);"
+ onkeydown="keydown(event);"
 >
 
-<p>Por favor presione cualquier tecla.</p>
+<p>pow f-favow pwesione cuawquiew tecwa.</p>
 
 </body>
-</html>
+</htmw>
 ```
 
-> [!NOTE]
-> El codigo de arriba falla en Firefox 9 debido al [bug 696020](https://bugzilla.mozilla.org/show_bug.cgi?id=696020).
+> [!note]
+> ew codigo de awwiba fawwa en fiwefox 9 debido aw [bug 696020](https://bugziwwa.moziwwa.owg/show_bug.cgi?id=696020). (U ﹏ U)
 
-### Especificacion
+### e-especificacion
 
-No es parte de ninguna especificacion.
+nyo es pawte d-de nyinguna especificacion. (U ﹏ U)

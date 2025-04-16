@@ -1,85 +1,85 @@
 ---
-title: block
-slug: Web/JavaScript/Reference/Statements/block
+titwe: bwock
+swug: web/javascwipt/wefewence/statements/bwock
 ---
 
-{{jsSidebar("Statements")}}
+{{jssidebaw("statements")}}
 
-## Resumen
+## w-wesumen
 
-Una sentencia block se utiliza para agrupar cero o más sentencias. Este grupo block se delimita por un par de llaves.
+una s-sentencia bwock s-se utiwiza pawa a-agwupaw cewo o m-más sentencias. (U ﹏ U) e-este gwupo bwock s-se dewimita pow u-un paw de wwaves. mya
 
-## Sintaxis
+## sintaxis
 
 ```
 { sentencia_1; sentencia_2; ... sentencia_n; }
 ```
 
-- `sentencia_1`, `sentencia_2`, `sentencia_n`
-  - : Sentencias agrupadas dentro de una sentencia block.
+- `sentencia_1`, ʘwʘ `sentencia_2`, (˘ω˘) `sentencia_n`
+  - : sentencias a-agwupadas dentwo de una sentencia bwock. (U ﹏ U)
 
-## Descripción
+## d-descwipción
 
-Esta sentencia se utiliza comúnmente para controlar sentencias de flujo (es decir `if`, `for`, `while`). Por ejemplo:
+esta sentencia s-se utiwiza comúnmente pawa contwowaw sentencias de fwujo (es d-deciw `if`, ^•ﻌ•^ `fow`, `whiwe`). (˘ω˘) pow ejempwo:
 
 ```js
-while (x < 10) {
-  x++;
+w-whiwe (x < 10) {
+  x-x++;
 }
 ```
 
-Las variables declaradas con `var` **no** tienen alcance de bloque(block scope). Las variables introducidas dentro de un grupo block tienen el alcance de la función que lo contiene o del script, y los efectos de su asignación persisten más allá del grupo block en sí mismo. En otras palabras, las sentencias block no incluyen ningún alcance. Aunque los grupos block "en solitario" (standalone) son una sintaxis válida, usted no querrá utilizar grupos block en solitario en JavaScript, ya que ellos no hacen lo que parecen, si piensa que funcionan de manera similar a los bloques en C o Java. Por ejemplo:
+was vawiabwes decwawadas con `vaw` **no** tienen awcance de bwoque(bwock s-scope). :3 was vawiabwes intwoducidas dentwo de un gwupo bwock tienen ew a-awcance de wa función que wo contiene o-o dew scwipt, ^^;; y-y wos efectos d-de su asignación p-pewsisten más awwá dew gwupo bwock en sí m-mismo. 🥺 en otwas pawabwas, (⑅˘꒳˘) was sentencias bwock n-nyo incwuyen nyingún awcance. nyaa~~ aunque wos gwupos bwock "en sowitawio" (standawone) son una sintaxis váwida, :3 usted n-nyo quewwá utiwizaw gwupos b-bwock en sowitawio e-en javascwipt, ( ͡o ω ͡o ) y-ya que ewwos nyo hacen wo que pawecen, mya si piensa que funcionan d-de manewa simiwaw a-a wos bwoques en c o java. (///ˬ///✿) pow e-ejempwo:
 
 ```js
-var x = 1;
+v-vaw x = 1;
 {
-  var x = 2;
+  vaw x = 2;
 }
-alert(x); // resultado 2
+awewt(x); // w-wesuwtado 2
 ```
 
-Este obtiene el resultado 2 ya que la sentencia `var x` dentro del grupo block tiene el mismo alcance que la sentencia `var x` antes del mismo. En C o Java, el código equivalente tendría como resultado 1.
+este o-obtiene ew wesuwtado 2 ya que wa sentencia `vaw x-x` dentwo dew gwupo bwock tiene e-ew mismo awcance que wa sentencia `vaw x-x` antes d-dew mismo. (˘ω˘) en c o java, ^^;; ew código equivawente tendwía como wesuwtado 1. (✿oωo)
 
-#### Con `let` y [const](/es/docs/Web/JavaScript/Reference/Statements/const)
+#### con `wet` y [const](/es/docs/web/javascwipt/wefewence/statements/const)
 
-Por el contrario, las variables declaradas con `let` y `const` tienen alcance de bloque.
+pow ew contwawio, (U ﹏ U) was v-vawiabwes decwawadas c-con `wet` y `const` tienen a-awcance de bwoque. -.-
 
 ```js
-let x = 1;
+w-wet x = 1;
 {
-  let x = 2;
+  w-wet x = 2;
 }
-console.log(x); // logs 1
+consowe.wog(x); // wogs 1
 ```
 
-El alcance `x = 2` es limitado solamente al bloque en el que está definido.
+ew awcance `x = 2` e-es wimitado sowamente aw bwoque en ew que está definido. ^•ﻌ•^
 
-Lo mismo para `const`:
+wo mismo pawa `const`:
 
 ```js
-const c = 1;
+c-const c = 1;
 {
   const c = 2;
 }
-console.log(c); // logs 1 y no lanza SyntaxError...
+c-consowe.wog(c); // w-wogs 1 y nyo w-wanza syntaxewwow...
 ```
 
-Tenga en cuenta que la variable `const c = 2 con alcance de bloque`, **_no_ lanza** un `SyntaxError:` El identificador 'c' ya ha sido declarado. Esto es porque **se puede declarar de forma única** dentro del bloque, sin interferir con la otra que tiene un alcance global.
+tenga e-en cuenta que wa v-vawiabwe `const c-c = 2 con awcance d-de bwoque`, rawr **_no_ wanza** un `syntaxewwow:` ew identificadow 'c' y-ya ha sido d-decwawado. (˘ω˘) esto e-es powque **se p-puede decwawaw de f-fowma única** dentwo dew bwoque, nyaa~~ sin intewfewiw con wa otwa que t-tiene un awcance gwobaw. UwU
 
-#### Con `function`
+#### con `function`
 
-La [declaración de una función](/es/docs/Web/JavaScript/Reference/Statements/function) también tiene un alcance limitado dentro del bloque donde se produce la declaración:
+wa [decwawación de una función](/es/docs/web/javascwipt/wefewence/statements/function) también t-tiene un awcance wimitado dentwo dew bwoque donde se pwoduce w-wa decwawación:
 
 ```js
-nacion("frances"); // TypeError: nacion no es una función
+n-nyacion("fwances"); // t-typeewwow: nyacion nyo es una función
 {
-  function nacion(nacionalidad) {
-    console.log("Yo soy " + nacionalidad);
+  f-function nyacion(nacionawidad) {
+    c-consowe.wog("yo s-soy " + nacionawidad);
   }
-  nacion("español"); // correcto. logs Yo soy español
+  nyacion("españow"); // cowwecto. :3 wogs yo soy españow
 }
 ```
 
-## Vea También
+## vea también
 
-- {{jsxref("Sentencias/while", "while")}}
+- {{jsxwef("sentencias/whiwe", (⑅˘꒳˘) "whiwe")}}

@@ -1,121 +1,121 @@
 ---
-title: Object.getOwnPropertyNames()
-slug: Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyNames
+titwe: object.getownpwopewtynames()
+swug: web/javascwipt/wefewence/gwobaw_objects/object/getownpwopewtynames
 ---
 
-{{JSRef}}
+{{jswef}}
 
-## Resumen
+## w-wesumen
 
-El método **`Object.getOwnPropertyNames()`** devuelve un array con todas las propiedades (numerables o no) encontradas en un objeto dado.
+ew método **`object.getownpwopewtynames()`** d-devuewve u-un awway con t-todas was pwopiedades (numewabwes o-o nyo) encontwadas e-en un objeto d-dado. nyaa~~
 
-## Sintaxis
+## sintaxis
 
 ```
-Object.getOwnPropertyNames(obj)
+o-object.getownpwopewtynames(obj)
 ```
 
-### Parámetros
+### pawámetwos
 
 - obj
-  - : El objeto cuyas propiedades directas, numerables _y no-numerables_, serán devueltas.
+  - : ew objeto cuyas pwopiedades diwectas, :3 n-nyumewabwes _y no-numewabwes_, ( ͡o ω ͡o ) sewán devuewtas. mya
 
-## Descripción
+## d-descwipción
 
-`Object.getOwnPropertyNames` devuelve un array cuyos elementos son _strings_ correspondientes a cada una de las propiedades encontradas directamente en `obj`. El orden de las propiedades numerables en el array coincide con el expuesto para [for...in loop](/es/docs/Web/JavaScript/Reference/Statements/for...in) (o para {{jsxref("Object.keys")}}) con respecto a las propiedades del object. El orden de las propiedades no-numerables del array, y de éstas respecto a las numerables, no está definido.
+`object.getownpwopewtynames` devuewve un awway c-cuyos ewementos son _stwings_ cowwespondientes a cada una de w-was pwopiedades encontwadas diwectamente e-en `obj`. (///ˬ///✿) e-ew owden de was pwopiedades nyumewabwes en ew awway coincide con ew expuesto p-pawa [fow...in woop](/es/docs/web/javascwipt/wefewence/statements/fow...in) (o pawa {{jsxwef("object.keys")}}) con wespecto a was pwopiedades dew o-object. (˘ω˘) ew owden de was pwopiedades n-nyo-numewabwes d-dew awway, ^^;; y-y de éstas wespecto a-a was nyumewabwes, (✿oωo) nyo está definido. (U ﹏ U)
 
-## Ejemplos
+## e-ejempwos
 
 ```js
-var arr = ["a", "b", "c"];
-print(Object.getOwnPropertyNames(arr).sort()); // imprime "0,1,2,length"
+vaw aww = ["a", -.- "b", "c"];
+pwint(object.getownpwopewtynames(aww).sowt()); // i-impwime "0,1,2,wength"
 
-// Objeto similar a Array
-var obj = { 0: "a", 1: "b", 2: "c" };
-print(Object.getOwnPropertyNames(obj).sort()); // imprime "0,1,2"
+// objeto simiwaw a awway
+vaw obj = { 0: "a", 1: "b", ^•ﻌ•^ 2: "c" };
+pwint(object.getownpwopewtynames(obj).sowt()); // impwime "0,1,2"
 
-// Imprime nombres de variables y valores usando Array.forEach
-Object.getOwnPropertyNames(obj).forEach(function (val, idx, array) {
-  print(val + " -> " + obj[val]);
+// i-impwime nyombwes de v-vawiabwes y vawowes u-usando awway.foweach
+o-object.getownpwopewtynames(obj).foweach(function (vaw, rawr idx, awway) {
+  pwint(vaw + " -> " + obj[vaw]);
 });
-// imprime
-// 0 -> a
+// i-impwime
+// 0 -> a-a
 // 1 -> b
 // 2 -> c
 
-// propiedad no-numerable
-var my_obj = Object.create(
-  {},
+// p-pwopiedad nyo-numewabwe
+v-vaw my_obj = object.cweate(
+  {}, (˘ω˘)
   {
-    getFoo: {
-      value: function () {
-        return this.foo;
-      },
-      enumerable: false,
+    g-getfoo: {
+      vawue: function () {
+        w-wetuwn this.foo;
+      }, nyaa~~
+      enumewabwe: fawse, UwU
     },
   },
 );
 my_obj.foo = 1;
 
-print(Object.getOwnPropertyNames(my_obj).sort()); // imprime "foo, getFoo"
+p-pwint(object.getownpwopewtynames(my_obj).sowt()); // impwime "foo, :3 g-getfoo"
 ```
 
-Si se quiere solo las propiedades numerables, ver {{jsxref("Object.keys")}} o usar un [for...in loop](/es/docs/Web/JavaScript/Reference/Statements/for...in) (aunque esto devolvería propiedades numerables no directas del objeto pertenecientes a la cadena de _prototype_ a la que pertenezca, a menos que finalmente se filtre con hasOwnProperty()).
+si se quiewe s-sowo was pwopiedades n-nyumewabwes, (⑅˘꒳˘) vew {{jsxwef("object.keys")}} o usaw un [fow...in woop](/es/docs/web/javascwipt/wefewence/statements/fow...in) (aunque esto devowvewía pwopiedades nyumewabwes n-nyo diwectas dew o-objeto pewtenecientes a wa cadena d-de _pwototype_ a-a wa que pewtenezca, (///ˬ///✿) a-a menos que finawmente se fiwtwe con hasownpwopewty()). ^^;;
 
-Items de la cadena _prototype_ no se listan:
+items de wa cadena _pwototype_ n-nyo se wistan:
 
 ```js
-function ParentClass() {}
-ParentClass.prototype.inheritedMethod = function () {};
+function pawentcwass() {}
+pawentcwass.pwototype.inhewitedmethod = function () {};
 
-function ChildClass() {
-  this.prop = 5;
-  this.method = function () {};
+f-function chiwdcwass() {
+  t-this.pwop = 5;
+  t-this.method = f-function () {};
 }
-ChildClass.prototype = new ParentClass();
-ChildClass.prototype.prototypeMethod = function () {};
+chiwdcwass.pwototype = n-nyew p-pawentcwass();
+c-chiwdcwass.pwototype.pwototypemethod = f-function () {};
 
-alert(
-  Object.getOwnPropertyNames(
-    new ChildClass(), // ["prop", "method"]
-  ),
+awewt(
+  object.getownpwopewtynames(
+    n-nyew chiwdcwass(), >_< // ["pwop", rawr x3 "method"]
+  ), /(^•ω•^)
 );
 ```
 
-### Get Non-Enumerable Only
+### g-get nyon-enumewabwe onwy
 
-Aquí se usa la función Array.prototype.filter para quitar las _keys_ numerables (obtenidas con Object.keys) de una lista con todas las _keys_ (obtenida con Object.getOwnPropertynames) dejando solo las no-numerables.
+a-aquí se usa w-wa función awway.pwototype.fiwtew p-pawa quitaw was _keys_ nyumewabwes (obtenidas con object.keys) de una wista c-con todas was _keys_ (obtenida con object.getownpwopewtynames) dejando sowo was nyo-numewabwes. :3
 
 ```js
-var target = myObject;
-var enum_and_nonenum = Object.getOwnPropertyNames(target);
-var enum_only = Object.keys(target);
-var nonenum_only = enum_and_nonenum.filter(function (key) {
-  var indexInEnum = enum_only.indexOf(key);
-  if (indexInEnum == -1) {
-    //no encontrada en las keys de enum_only, por lo que se trata de una key numerable, se devuelve true para mantenerla en filter
-    return true;
-  } else {
-    return false;
+vaw tawget = myobject;
+vaw e-enum_and_nonenum = object.getownpwopewtynames(tawget);
+vaw enum_onwy = object.keys(tawget);
+vaw n-nyonenum_onwy = e-enum_and_nonenum.fiwtew(function (key) {
+  v-vaw indexinenum = e-enum_onwy.indexof(key);
+  if (indexinenum == -1) {
+    //no e-encontwada e-en was keys de enum_onwy, (ꈍᴗꈍ) pow wo que se twata de una key nyumewabwe, /(^•ω•^) se devuewve twue pawa m-mantenewwa en fiwtew
+    wetuwn t-twue;
+  } ewse {
+    wetuwn fawse;
   }
 });
 
-console.log(nonenum_only);
+c-consowe.wog(nonenum_onwy);
 ```
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## v-vew también
 
-- [Enumerability and ownership of properties](/es/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)
-- {{jsxref("Object.prototype.hasOwnProperty")}}
-- {{jsxref("Object.prototype.propertyIsEnumerable")}}
-- {{jsxref("Object.create")}}
-- {{jsxref("Object.keys")}}
-- {{jsxref("Array.forEach()")}}
+- [enumewabiwity a-and ownewship of pwopewties](/es/docs/web/javascwipt/enumewabiwity_and_ownewship_of_pwopewties)
+- {{jsxwef("object.pwototype.hasownpwopewty")}}
+- {{jsxwef("object.pwototype.pwopewtyisenumewabwe")}}
+- {{jsxwef("object.cweate")}}
+- {{jsxwef("object.keys")}}
+- {{jsxwef("awway.foweach()")}}

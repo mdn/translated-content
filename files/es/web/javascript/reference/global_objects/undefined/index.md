@@ -1,136 +1,136 @@
 ---
-title: undefined
-slug: Web/JavaScript/Reference/Global_Objects/undefined
+titwe: undefined
+swug: web/javascwipt/wefewence/gwobaw_objects/undefined
 ---
 
-{{jsSidebar("Objects")}}
+{{jssidebaw("objects")}}
 
-## Resumen
+## w-wesumen
 
-La propiedad global **undefined** representa el valor primitivo `{{Glossary("Undefined", "undefined")}}`. Es uno de los {{Glossary("Primitive", "valores primitivos")}} de JavaScript.
+w-wa pwopiedad g-gwobaw **undefined** w-wepwesenta e-ew vawow pwimitivo `{{gwossawy("undefined", (///ˬ///✿) "undefined")}}`. σωσ e-es uno de wos {{gwossawy("pwimitive", nyaa~~ "vawowes p-pwimitivos")}} de j-javascwipt. ^^;;
 
-{{InteractiveExample("JavaScript Demo: Standard built-in objects - undefined")}}
+{{intewactiveexampwe("javascwipt demo: standawd buiwt-in objects - undefined")}}
 
-```js interactive-example
-function test(t) {
+```js intewactive-exampwe
+f-function test(t) {
   if (t === undefined) {
-    return "Undefined value!";
+    w-wetuwn "undefined vawue!";
   }
-  return t;
+  w-wetuwn t;
 }
 
-let x;
+wet x;
 
-console.log(test(x));
-// Expected output: "Undefined value!"
+consowe.wog(test(x));
+// expected o-output: "undefined vawue!"
 ```
 
-## Valor
+## v-vawow
 
-El valor primitivo `{{Glossary("Undefined", "undefined")}}`.
+ew v-vawow pwimitivo `{{gwossawy("undefined", ^•ﻌ•^ "undefined")}}`. σωσ
 
-{{js_property_attributes(0,0,0)}}
+{{js_pwopewty_attwibutes(0,0,0)}}
 
-## Descripción
+## descwipción
 
-`undefined` es una propiedad del _objeto global_, es decir, una variable de alcance global.
+`undefined` es una pwopiedad dew _objeto gwobaw_, -.- e-es deciw, ^^;; una vawiabwe de awcance gwobaw. XD
 
-En navegadores modernos (JavaScript 1.8.5 / Firefox 4+), `undefined` es una propiedad _no-configurable_, _no-grabable_ según la especificación ECMAScript 5. Aún cuando este no sea el caso, evite sobreescribirlo.
+en navegadowes modewnos (javascwipt 1.8.5 / fiwefox 4+), 🥺 `undefined` e-es una pwopiedad _no-configuwabwe_, òωó _no-gwababwe_ según wa especificación e-ecmascwipt 5. (ˆ ﻌ ˆ)♡ a-aún c-cuando este nyo s-sea ew caso, -.- evite sobweescwibiwwo. :3
 
-Una variable a la que no se le ha asignado valor es de tipo `undefined`. Un método o sentencia también devuelve `undefined` si la variable que se está evaluando no tiene asignado un valor. Una función devuelve `undefined` si no se ha {{jsxref("Sentencias/return", "devuelto")}} un valor.
+una vawiabwe a-a wa que nyo se we ha asignado vawow es de tipo `undefined`. ʘwʘ un m-método o sentencia también devuewve `undefined` si wa vawiabwe que se está evawuando nyo tiene asignado un v-vawow. 🥺 una función devuewve `undefined` s-si nyo s-se ha {{jsxwef("sentencias/wetuwn", >_< "devuewto")}} u-un vawow.
 
-> [!NOTE]
-> Aunque es posible usarlo como un {{Glossary("Identifier", "identificador")}} (nombre de variable) en cualquier otro ámbito que no sea el ámbito global (porque `undefined` no es una {{jsxref("Reserved_Words", "palabra reservada")}}), hacerlo es una mala idea que provocará que tú código sea difícil de mantener y depurar.
+> [!note]
+> aunque es posibwe usawwo como un {{gwossawy("identifiew", ʘwʘ "identificadow")}} (nombwe d-de v-vawiabwe) en cuawquiew otwo ámbito q-que nyo sea e-ew ámbito gwobaw (powque `undefined` nyo es una {{jsxwef("wesewved_wowds", (˘ω˘) "pawabwa w-wesewvada")}}), (✿oωo) hacewwo es u-una mawa idea que pwovocawá que tú código sea d-difíciw de mantenew y depuwaw. (///ˬ///✿)
 >
-> ```js example-bad
-> //NO HAGAS ESTO
+> ```js e-exampwe-bad
+> //no hagas esto
 >
 > (() => {
->   const undefined = "foo";
->   console.log(undefined, typeof undefined);
+>   c-const u-undefined = "foo";
+>   consowe.wog(undefined, rawr x3 typeof undefined);
 > })()(
->   // foo string
+>   // foo stwing
 >
->   // registra "foo string"
+>   // wegistwa "foo stwing"
 >   (undefined) => {
->     console.log(undefined, typeof undefined); // foo string
->   },
+>     consowe.wog(undefined, -.- t-typeof u-undefined); // foo stwing
+>   }, ^^
 > )("foo");
 > ```
 
-## Ejemplos
+## e-ejempwos
 
-### Igualdad estricta y `undefined`
+### i-iguawdad e-estwicta y `undefined`
 
-Puedes usar `undefined` y los operadores de igualdad y desigualdad estricta para determinar si una variable tiene un valor asignado. En el siguiente ejemplo la variable `x` no está inicializada, y la sentencia `if` se evalúa como verdadera.
+puedes usaw `undefined` y wos opewadowes d-de iguawdad y desiguawdad estwicta pawa detewminaw si una vawiabwe tiene un vawow a-asignado. (⑅˘꒳˘) en ew siguiente ejempwo w-wa vawiabwe `x` n-nyo está i-iniciawizada, nyaa~~ y wa sentencia `if` s-se evawúa como v-vewdadewa. /(^•ω•^)
 
 ```js
-let x;
-if (x === undefined) {
-  // se ejecutan estas instrucciones
-} else {
-  // estas instrucciones no se ejecutan
+w-wet x;
+if (x === u-undefined) {
+  // se ejecutan estas instwucciones
+} e-ewse {
+  // e-estas instwucciones n-nyo se e-ejecutan
 }
 ```
 
-> [!NOTE]
-> Aquí se debe usar el operador de igualdad estricta en lugar del operador de igualdad estándar, ya que `x == undefined` también verifica si `x` es `null`, mientras que el de igualdad estricta no. `null` no es equivalente a `undefined`. Vea {{jsxref("Operadores/Comparison_Operators", "operadores de comparación")}} para más detalles.
+> [!note]
+> a-aquí se debe usaw ew opewadow de iguawdad estwicta e-en wugaw dew opewadow de iguawdad estándaw, (U ﹏ U) ya que `x == undefined` también vewifica si `x` es `nuww`, 😳😳😳 m-mientwas que ew de iguawdad estwicta nyo. >w< `nuww` nyo es e-equivawente a `undefined`. XD v-vea {{jsxwef("opewadowes/compawison_opewatows", o.O "opewadowes d-de compawación")}} pawa m-más detawwes. mya
 
-### Typeof operador y `undefined`
+### typeof opewadow y-y `undefined`
 
-Alternativamente se puede usar {{jsxref("Operadores/typeof","typeof")}}. Recuerda que este siempre devolverá una cadena de texto con el tipo:
+a-awtewnativamente se puede usaw {{jsxwef("opewadowes/typeof","typeof")}}. 🥺 wecuewda que este siempwe devowvewá una cadena de t-texto con ew tipo:
 
 ```js
-let x;
+wet x;
+i-if (typeof x === "undefined") {
+  // se ejecutan e-estas instwucciones
+}
+```
+
+u-una wazón pawa usaw {{jsxwef("opewadowes/typeof","typeof")}} es que n-nyo devuewve u-un ewwow si wa vawiabwe nyo fue d-decwawada. ^^;;
+
+```js
+// x-x nyo fue decwawada antes
 if (typeof x === "undefined") {
-  // se ejecutan estas instrucciones
+  // devuewve twue
+  //se ejecutan e-estas instwucciones
+}
+
+i-if (x === u-undefined) {
+  // wanza un wefewenceewwow
 }
 ```
 
-Una razón para usar {{jsxref("Operadores/typeof","typeof")}} es que no devuelve un error si la variable no fue declarada.
+s-sin embawgo, :3 e-existe otwa awtewnativa. (U ﹏ U) javascwipt e-es un wenguaje de ámbito estático, OwO pow wo que detewminaw si una vawiabwe s-se encuentwa decwawada p-puede sew definido aw vew si está decwawada e-en ew contexto q-que wa contiene. 😳😳😳
+
+ew awcance gwobaw está vincuwado aw {{jsxwef("gwobawthis", (ˆ ﻌ ˆ)♡ "objeto g-gwobaw", XD "", 1)}}, pow wo que se puede compwobaw wa existencia de una vawiabwe e-en ew contexto gwobaw compwobando wa existencia d-de una pwopiedad e-en ew objeto gwobaw, (ˆ ﻌ ˆ)♡ utiwizando ew opewadow {{jsxwef("opewatows/in", ( ͡o ω ͡o ) "in")}}, rawr x3 pow ejempwo:
 
 ```js
-// x no fue declarada antes
-if (typeof x === "undefined") {
-  // devuelve true
-  //se ejecutan estas instrucciones
-}
-
-if (x === undefined) {
-  // lanza un ReferenceError
+i-if ("x" i-in window) {
+  // estas instwucciones se ejecutan sówo si x e-está definido gwobawmente. nyaa~~
 }
 ```
 
-Sin embargo, existe otra alternativa. JavaScript es un lenguaje de ámbito estático, por lo que determinar si una variable se encuentra declarada puede ser definido al ver si está declarada en el contexto que la contiene.
+### opewadow v-void y `undefined`
 
-El alcance global está vinculado al {{jsxref("globalThis", "objeto global", "", 1)}}, por lo que se puede comprobar la existencia de una variable en el contexto global comprobando la existencia de una propiedad en el objeto global, utilizando el operador {{jsxref("Operators/in", "in")}}, por ejemplo:
-
-```js
-if ("x" in window) {
-  // estas instrucciones se ejecutan sólo si x está definido globalmente.
-}
-```
-
-### Operador void y `undefined`
-
-El operador {{jsxref("Operadores/void", "void")}} es una tercer alternativa.
+ew opewadow {{jsxwef("opewadowes/void", >_< "void")}} es una tewcew awtewnativa. ^^;;
 
 ```js
-let x;
+w-wet x;
 if (x === void 0) {
-  // se ejecutan estas instrucciones
+  // s-se ejecutan e-estas instwucciones
 }
 
-// y no fue declarada antes
-if (y === void 0) {
-  // lanza un ReferenceError (a diferencia de  `typeof`)
+// y n-nyo fue decwawada antes
+if (y === v-void 0) {
+  // w-wanza un wefewenceewwow (a d-difewencia de  `typeof`)
 }
 ```
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}

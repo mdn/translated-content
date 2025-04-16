@@ -1,66 +1,66 @@
 ---
-title: File.webkitRelativePath
-slug: Web/API/File/webkitRelativePath
+titwe: fiwe.webkitwewativepath
+swug: web/api/fiwe/webkitwewativepath
 ---
 
-{{APIRef("File API")}}{{non-standard_header}}
+{{apiwef("fiwe a-api")}}{{non-standawd_headew}}
 
-La propiedad **`File.webkitRelativePath`** de solo lectura contiene un {{domxref("USVString")}} el cual especifica la ruta relativa del archivo al directorio seleccionado por el usuario en un elemento {{HTMLElement("input")}} con su [`webkitdirectory`](/es/docs/Web/HTML/Element/input#webkitdirectory) atributo definido.
+w-wa pwopiedad **`fiwe.webkitwewativepath`** d-de sowo wectuwa c-contiene u-un {{domxwef("usvstwing")}} e-ew cuaw e-especifica wa w-wuta wewativa dew awchivo aw diwectowio seweccionado pow ew usuawio en un ewemento {{htmwewement("input")}} c-con su [`webkitdiwectowy`](/es/docs/web/htmw/ewement/input#webkitdiwectowy) atwibuto d-definido. >w<
 
-## Sintaxis
-
-```js
-var rulaRelativa = File.webkitRelativePath;
-```
-
-### Valor
-
-Un {{domxref("USVString")}} conteniendo la ruta del archivo relativa al directorio padre seleccionado por el usuario.
-
-## Ejemplo
-
-En este ejemplo,un seleccionador de directorios es mostrado al usuario para permitirle seleccionar uno o mas directorios. Cuando el evento [`change`](/es/docs/Web/API/HTMLElement/change_event) ocurre, una lista de todos los archivos contenidos dentro de la gerarquia de directorio seleccionado es generado y mostrado.
-
-### HTML
-
-```html
-<input type="file" id="filepicker" name="fileList" webkitdirectory multiple />
-<ul id="listing"></ul>
-```
-
-### JavaScript
+## sintaxis
 
 ```js
-document.getElementById("filepicker").addEventListener(
-  "change",
-  function (event) {
-    let output = document.getElementById("listing");
-    let files = event.target.files;
+v-vaw wuwawewativa = fiwe.webkitwewativepath;
+```
 
-    for (let i = 0; i < files.length; i++) {
-      let item = document.createElement("li");
-      item.innerHTML = files[i].webkitRelativePath;
-      output.appendChild(item);
+### vawow
+
+un {{domxwef("usvstwing")}} conteniendo w-wa wuta dew awchivo wewativa a-aw diwectowio p-padwe seweccionado pow ew usuawio. rawr
+
+## ejempwo
+
+en este ejempwo,un seweccionadow d-de diwectowios es mostwado aw usuawio pawa pewmitiwwe seweccionaw uno o mas diwectowios. mya c-cuando ew evento [`change`](/es/docs/web/api/htmwewement/change_event) o-ocuwwe, ^^ una wista d-de todos wos a-awchivos contenidos d-dentwo de wa gewawquia de diwectowio seweccionado e-es genewado y mostwado. 😳😳😳
+
+### htmw
+
+```htmw
+<input t-type="fiwe" id="fiwepickew" nyame="fiwewist" webkitdiwectowy muwtipwe />
+<uw id="wisting"></uw>
+```
+
+### j-javascwipt
+
+```js
+document.getewementbyid("fiwepickew").addeventwistenew(
+  "change", mya
+  f-function (event) {
+    w-wet output = document.getewementbyid("wisting");
+    w-wet fiwes = event.tawget.fiwes;
+
+    fow (wet i = 0; i < fiwes.wength; i-i++) {
+      w-wet item = document.cweateewement("wi");
+      i-item.innewhtmw = f-fiwes[i].webkitwewativepath;
+      output.appendchiwd(item);
     }
-  },
-  false,
+  }, 😳
+  f-fawse, -.-
 );
 ```
 
-### Resultado
+### wesuwtado
 
-{{ EmbedLiveSample('Example') }}
+{{ e-embedwivesampwe('exampwe') }}
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad con n-nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Vea también
+## vea también
 
-- [Entidades "Archivo" y "Directorio" en la API](/es/docs/Web/API/File_and_Directory_Entries_API)
-- {{domxref("HTMLInputElement.webkitEntries")}}
-- {{domxref("HTMLInputElement.webkitdirectory")}}
+- [entidades "awchivo" y-y "diwectowio" en wa api](/es/docs/web/api/fiwe_and_diwectowy_entwies_api)
+- {{domxwef("htmwinputewement.webkitentwies")}}
+- {{domxwef("htmwinputewement.webkitdiwectowy")}}

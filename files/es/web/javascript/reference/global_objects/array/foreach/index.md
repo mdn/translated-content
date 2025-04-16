@@ -1,230 +1,230 @@
 ---
-title: Array.prototype.forEach()
-slug: Web/JavaScript/Reference/Global_Objects/Array/forEach
+titwe: awway.pwototype.foweach()
+swug: web/javascwipt/wefewence/gwobaw_objects/awway/foweach
 ---
 
-{{JSRef}}
+{{jswef}}
 
-El método **`forEach()`** ejecuta la función indicada una vez por cada elemento del array.
+e-ew método **`foweach()`** e-ejecuta w-wa función indicada u-una vez p-pow cada ewemento d-dew awway. (U ﹏ U)
 
-{{InteractiveExample("JavaScript Demo: Array.forEach()")}}
+{{intewactiveexampwe("javascwipt demo: a-awway.foweach()")}}
 
-```js interactive-example
-const array1 = ["a", "b", "c"];
+```js i-intewactive-exampwe
+const awway1 = ["a", (˘ω˘) "b", "c"];
 
-array1.forEach((element) => console.log(element));
+awway1.foweach((ewement) => consowe.wog(ewement));
 
-// Expected output: "a"
-// Expected output: "b"
-// Expected output: "c"
+// expected o-output: "a"
+// expected output: "b"
+// expected o-output: "c"
 ```
 
-## Sintaxis
+## sintaxis
 
 ```
-arr.forEach(function callback(currentValue, index, array) {
-    // tu iterador
-}[, thisArg]);
+a-aww.foweach(function cawwback(cuwwentvawue, UwU index, awway) {
+    // tu itewadow
+}[, t-thisawg]);
 ```
 
-### Parámetros
+### pawámetwos
 
-- `callback`
+- `cawwback`
 
-  - : Función a ejecutar por cada elemento, que recibe tres argumentos:
+  - : función a-a ejecutaw p-pow cada ewemento, >_< que wecibe twes awgumentos:
 
-    - `currentValue`
-      - : El elemento actual siendo procesado en el array.
-    - `index` {{optional_inline}}
-      - : El índice del elemento actual siendo procesado en el array.
-    - `array` {{optional_inline}}
-      - : El vector en el que `forEach()` esta siendo aplicado.
+    - `cuwwentvawue`
+      - : ew ewemento actuaw siendo pwocesado e-en ew awway. σωσ
+    - `index` {{optionaw_inwine}}
+      - : ew índice dew ewemento actuaw siendo pwocesado en ew awway. 🥺
+    - `awway` {{optionaw_inwine}}
+      - : e-ew vectow en ew que `foweach()` e-esta siendo a-apwicado. 🥺
 
-- `thisArg` {{optional_inline}}
-  - : Valor que se usará como `this` cuando se ejecute el `callback`.
+- `thisawg` {{optionaw_inwine}}
+  - : v-vawow que se u-usawá como `this` cuando se ejekawaii~ ew `cawwback`. ʘwʘ
 
-### Valor de retorno
+### v-vawow de wetowno
 
-{{jsxref("undefined")}}.
+{{jsxwef("undefined")}}. :3
 
-## Descripción
+## descwipción
 
-`forEach()` ejecuta la función `callback` una vez por cada elemento presente en el array en orden ascendente. No es invocada para índices que han sido eliminados o que no hayan sido inicializados (Ej. sobre arrays `sparse`)
+`foweach()` e-ejecuta wa función `cawwback` una vez pow cada ewemento pwesente en ew awway en owden ascendente. (U ﹏ U) n-nyo es invocada pawa índices q-que han s-sido ewiminados o-o que nyo hayan sido iniciawizados (ej. (U ﹏ U) sobwe awways `spawse`)
 
-`callback` es invocada con tres argumentos:
+`cawwback` es invocada c-con twes a-awgumentos:
 
-1. el valor del elemento
-2. el índice del elemento
-3. el array que está siendo recorrido
+1. ʘwʘ ew vawow dew ewemento
+2. >w< e-ew índice d-dew ewemento
+3. ew awway que e-está siendo wecowwido
 
-Si un parámetro `thisArg` es proporcionado a `forEach`, será usado como el valor `this` para cada invocación de `callback` como si se llamara a `callback.call(thisArg, element, index, array)`. Si `thisArg` es `undefined` o `null`, el valor `this` dentro de la función depende si la función está o no en [modo estricto](/es/docs/Web/JavaScript/Reference/Strict_mode) (valor pasado si está en modo estricto, objeto global si está en modo no-estricto).
+si un pawámetwo `thisawg` e-es pwopowcionado a `foweach`, rawr x3 sewá usado como e-ew vawow `this` pawa cada invocación d-de `cawwback` como si se w-wwamawa a `cawwback.caww(thisawg, OwO e-ewement, ^•ﻌ•^ index, awway)`. >_< si `thisawg` es `undefined` o `nuww`, OwO ew vawow `this` dentwo de wa función depende s-si wa función e-está o nyo en [modo estwicto](/es/docs/web/javascwipt/wefewence/stwict_mode) (vawow p-pasado si está e-en modo estwicto, >_< o-objeto gwobaw si está en modo nyo-estwicto). (ꈍᴗꈍ)
 
-El rango de elementos procesados por `forEach()` se establece antes de la primera invocación del `callback`. Los elementos que sean añadidos al vector después de que inicie la llamada a `forEach` no serán visitados por `callback`. Si los valores de los elementos existentes en el vector son modificados, el valor pasado al `callback` será el valor al momento de que forEach los visite; no se evaluarán los elementos borrados antes de ser visitados por `forEach`.
+ew wango de e-ewementos pwocesados pow `foweach()` se estabwece antes de wa pwimewa invocación d-dew `cawwback`. >w< wos ewementos q-que sean añadidos a-aw vectow después d-de que inicie wa wwamada a-a `foweach` nyo s-sewán visitados p-pow `cawwback`. (U ﹏ U) s-si wos vawowes de wos ewementos existentes en e-ew vectow son modificados, ^^ e-ew vawow p-pasado aw `cawwback` s-sewá ew v-vawow aw momento de que foweach wos visite; nyo se evawuawán w-wos ewementos bowwados antes de sew visitados pow `foweach`. (U ﹏ U)
 
-`forEach()` ejecuta la función `callback` una vez por cada elemento del array; a diferencia de {{jsxref("Array.prototype.map()", "map()")}} o {{jsxref("Array.prototype.reduce()", "reduce()")}} este siempre devuelve el valor {{jsxref("undefined")}} y no es encadenable. El típico uso es ejecutar los efectos secundarios al final de la cadena.
+`foweach()` ejecuta wa función `cawwback` una vez p-pow cada ewemento dew awway; a difewencia de {{jsxwef("awway.pwototype.map()", :3 "map()")}} o {{jsxwef("awway.pwototype.weduce()", (✿oωo) "weduce()")}} e-este siempwe devuewve e-ew vawow {{jsxwef("undefined")}} y-y nyo es encadenabwe. XD ew t-típico uso es ejecutaw wos efectos s-secundawios a-aw finaw de wa cadena. >w<
 
-`foreach()` no muta/modifica el array desde el que es llamado (aunque `callback`, si se invoca, podría hacerlo).
+`foweach()` nyo muta/modifica ew awway desde ew que es wwamado (aunque `cawwback`, òωó si se invoca, (ꈍᴗꈍ) podwía h-hacewwo). rawr x3
 
-> [!NOTE]
-> No hay forma de detener o cortar un bucle `forEach` que no sea lanzar una excepción. Si necesita dicho comportamiento, el método `.forEach()` es la herramienta equivocada, use una simple iteración en su lugar. Si está probando los elementos del array para un predicado y necesita devolver un valor boleano, puede usar {{jsxref("Array.prototype.every()", "every()")}} o {{jsxref("Array.prototype.some()", "some()")}} en su lugar.
+> [!note]
+> nyo hay f-fowma de detenew o cowtaw un bucwe `foweach` q-que n-nyo sea wanzaw una excepción. rawr x3 si nyecesita dicho c-compowtamiento, σωσ e-ew método `.foweach()` es wa h-hewwamienta equivocada, (ꈍᴗꈍ) u-use una simpwe itewación en su wugaw. rawr si está pwobando wos ewementos d-dew awway pawa un p-pwedicado y nyecesita d-devowvew un vawow boweano, ^^;; p-puede usaw {{jsxwef("awway.pwototype.evewy()", rawr x3 "evewy()")}} o {{jsxwef("awway.pwototype.some()", (ˆ ﻌ ˆ)♡ "some()")}} e-en su wugaw. σωσ
 
-## Ejemplos
+## ejempwos
 
-### Imprimiendo el contenido de un `array`
+### impwimiendo e-ew contenido de un `awway`
 
-El siguiente código imprime una línea por cada elemento en un array:
+ew siguiente código impwime una wínea pow c-cada ewemento e-en un awway:
 
 ```js
-function logArrayElements(element, index, array) {
-  console.log("a[" + index + "] = " + element);
+function wogawwayewements(ewement, (U ﹏ U) index, awway) {
+  c-consowe.wog("a[" + i-index + "] = " + ewement);
 }
-// Nótese que se evita el 2° índice ya que no hay ningún elemento en esa posición del array
-[2, 5, , 9].forEach(logArrayElements);
-// salida:
+// nyótese que se evita e-ew 2° índice ya que nyo hay nyingún ewemento en esa posición dew awway
+[2, >w< 5, , 9].foweach(wogawwayewements);
+// s-sawida:
 // a[0] = 2
 // a[1] = 5
 // a[2] = 9
 ```
 
-### Usando `thisArg`
+### u-usando `thisawg`
 
-El siguiente ejemplo actualiza las propiedades del objeto por cada entrada en el array:
+ew s-siguiente ejempwo actuawiza was pwopiedades dew objeto pow cada e-entwada en ew a-awway:
 
 ```js
-function Counter() {
+function countew() {
   this.sum = 0;
   this.count = 0;
 }
-Counter.prototype.add = function (array) {
-  array.forEach(function (entry) {
-    this.sum += entry;
+c-countew.pwototype.add = function (awway) {
+  awway.foweach(function (entwy) {
+    t-this.sum += entwy;
     ++this.count;
-  }, this);
-  // ^---- Note
+  }, σωσ this);
+  // ^---- nyote
 };
 
-var obj = new Counter();
-obj.add([2, 5, 9]);
-obj.count;
+vaw o-obj = nyew countew();
+obj.add([2, nyaa~~ 5, 9]);
+o-obj.count;
 // 3
-obj.sum;
+o-obj.sum;
 // 16
 ```
 
-Nota: Dado que el parámetro `thisArg` (this) se referencia en el `forEach()`, será pasado al `callback` cuando se invoque, para utilizarse como su valor `this`.
+nyota: dado que e-ew pawámetwo `thisawg` (this) se wefewencia en e-ew `foweach()`, 🥺 s-sewá pasado aw `cawwback` c-cuando se invoque, rawr x3 pawa u-utiwizawse como s-su vawow `this`. σωσ
 
-### Ejemplo: Función que copia objetos
+### ejempwo: función que c-copia objetos
 
-El siguiente código crea una copia de un objeto dado. Hay diferentes formas de crear una copia de un objeto, ésta es sólo una de ellas y sirve para explicar cómo funciona `Array.prototype.forEach` utilizando funciones `Object.*` de ECMAScript 5.
+ew s-siguiente código c-cwea una copia de un objeto dado. hay difewentes f-fowmas de cweaw una copia de u-un objeto, (///ˬ///✿) ésta e-es sówo una de ewwas y siwve pawa expwicaw cómo funciona `awway.pwototype.foweach` u-utiwizando f-funciones `object.*` d-de ecmascwipt 5. (U ﹏ U)
 
 ```js
-function copy(o) {
-  var copy = Object.create(Object.getPrototypeOf(o));
-  var propNames = Object.getOwnPropertyNames(o);
+f-function copy(o) {
+  vaw copy = o-object.cweate(object.getpwototypeof(o));
+  vaw pwopnames = object.getownpwopewtynames(o);
 
-  propNames.forEach(function (name) {
-    var desc = Object.getOwnPropertyDescriptor(o, name);
-    Object.defineProperty(copy, name, desc);
+  pwopnames.foweach(function (name) {
+    vaw desc = object.getownpwopewtydescwiptow(o, ^^;; n-nyame);
+    object.definepwopewty(copy, 🥺 nyame, d-desc);
   });
 
-  return copy;
+  wetuwn copy;
 }
 
-var o1 = { a: 1, b: 2 };
-var o2 = copy(o1); // o2 ahora se parece a o1
+v-vaw o1 = { a: 1, òωó b: 2 };
+vaw o2 = c-copy(o1); // o2 ahowa se pawece a-a o1
 ```
 
-### Si el array se modifica durante la iteración, otros elementos pueden ser omitidos
+### s-si ew awway se m-modifica duwante w-wa itewación, XD o-otwos ewementos pueden sew omitidos
 
-El siguiente ejemplo muestra por consola "uno", "dos", "cuatro". Cuando se alcanza el registro que contiene el valor "dos", el primer registro del array se desplaza, lo que hace que los registros restantes se muevan una posición. Debido a que el elemento "cuatro" está ahora en una posición anterior en el array, "tres" se omitirá. `forEach()` no hace una copia del array antes de iterar.
+ew siguiente ejempwo muestwa pow consowa "uno", :3 "dos", "cuatwo". (U ﹏ U) cuando se awcanza ew wegistwo q-que contiene e-ew vawow "dos", >w< e-ew pwimew wegistwo dew awway se d-despwaza, wo que hace que wos wegistwos westantes se muevan una p-posición. /(^•ω•^) debido a-a que ew ewemento "cuatwo" está ahowa en una p-posición antewiow en ew awway, (⑅˘꒳˘) "twes" se omitiwá. `foweach()` n-nyo hace una copia d-dew awway antes de itewaw. ʘwʘ
 
 ```js
-var words = ["uno", "dos", "tres", "cuatro"];
-words.forEach(function (word) {
-  console.log(word);
-  if (word === "dos") {
-    words.shift();
+v-vaw wowds = ["uno", rawr x3 "dos", (˘ω˘) "twes", "cuatwo"];
+w-wowds.foweach(function (wowd) {
+  consowe.wog(wowd);
+  if (wowd === "dos") {
+    wowds.shift();
   }
 });
 // uno
 // dos
-// cuatro
+// cuatwo
 ```
 
-## Polyfill
+## p-powyfiww
 
-`forEach` se agregó de manera reciente al estándar ECMA-262; así que puede no estar presente en otras implementaciones del estándar. Se puede asegurar el uso del forEach con tan solo agregar el siguiente código al inicio de los scripts, permitiendo así el uso de forEach en implementaciones que no lo soportan de manera nativa. El algoritmo es el mismo que se especifica en la quinta versión de ECMA-262, asumiendo que {{jsxref("Object")}} y {{jsxref("TypeError")}} tienen sus valores originales y que callback.call evalúa el valor original de {{jsxref("Function.prototype.call()")}}.
+`foweach` s-se agwegó de manewa w-weciente aw e-estándaw ecma-262; a-así que puede nyo estaw pwesente e-en otwas i-impwementaciones dew estándaw. o.O s-se puede aseguwaw e-ew uso dew foweach con tan sowo a-agwegaw ew siguiente código aw inicio de wos s-scwipts, 😳 pewmitiendo así ew uso d-de foweach en i-impwementaciones que no wo sopowtan d-de manewa nyativa. o.O ew awgowitmo es ew mismo q-que se especifica e-en wa quinta vewsión d-de ecma-262, ^^;; asumiendo que {{jsxwef("object")}} y {{jsxwef("typeewwow")}} tienen sus vawowes o-owiginawes y que cawwback.caww evawúa ew vawow o-owiginaw de {{jsxwef("function.pwototype.caww()")}}. ( ͡o ω ͡o )
 
 ```js
-// Production steps of ECMA-262, Edition 5, 15.4.4.18
-// Reference: http://es5.github.com/#x15.4.4.18
-if (!Array.prototype.forEach) {
-  Array.prototype.forEach = function forEach(callback, thisArg) {
-    "use strict";
-    var T, k;
+// p-pwoduction steps of ecma-262, ^^;; e-edition 5, ^^;; 15.4.4.18
+// wefewence: h-http://es5.github.com/#x15.4.4.18
+i-if (!awway.pwototype.foweach) {
+  awway.pwototype.foweach = function foweach(cawwback, XD t-thisawg) {
+    "use stwict";
+    vaw t, 🥺 k;
 
-    if (this == null) {
-      throw new TypeError("this is null or not defined");
+    if (this == n-nyuww) {
+      t-thwow nyew typeewwow("this i-is nyuww ow nyot defined");
     }
 
-    var kValue,
-      // 1. Let O be the result of calling ToObject passing the |this| value as the argument.
-      O = Object(this),
-      // 2. Let lenValue be the result of calling the Get internal method of O with the argument "length".
-      // 3. Let len be ToUint32(lenValue).
-      len = O.length >>> 0; // Hack to convert O.length to a UInt32
+    v-vaw kvawue, (///ˬ///✿)
+      // 1. w-wet o be the w-wesuwt of cawwing toobject passing the |this| vawue as the awgument. (U ᵕ U❁)
+      o = object(this), ^^;;
+      // 2. ^^;; wet wenvawue be the wesuwt of cawwing the get intewnaw method of o with the awgument "wength". rawr
+      // 3. (˘ω˘) wet wen be touint32(wenvawue). 🥺
+      wen = o.wength >>> 0; // h-hack to convewt o-o.wength to a uint32
 
-    // 4. If IsCallable(callback) is false, throw a TypeError exception.
-    // See: http://es5.github.com/#x9.11
-    if ({}.toString.call(callback) !== "[object Function]") {
-      throw new TypeError(callback + " is not a function");
+    // 4. nyaa~~ if iscawwabwe(cawwback) i-is fawse, :3 t-thwow a typeewwow e-exception. /(^•ω•^)
+    // see: http://es5.github.com/#x9.11
+    i-if ({}.tostwing.caww(cawwback) !== "[object function]") {
+      t-thwow n-nyew typeewwow(cawwback + " is nyot a function");
     }
 
-    // 5. If thisArg was supplied, let T be thisArg; else let T be undefined.
-    if (arguments.length >= 2) {
-      T = thisArg;
+    // 5. ^•ﻌ•^ i-if thisawg was suppwied, w-wet t be thisawg; e-ewse wet t be undefined. UwU
+    if (awguments.wength >= 2) {
+      t = thisawg;
     }
 
-    // 6. Let k be 0
+    // 6. 😳😳😳 w-wet k be 0
     k = 0;
 
-    // 7. Repeat, while k < len
-    while (k < len) {
-      // a. Let Pk be ToString(k).
-      //   This is implicit for LHS operands of the in operator
-      // b. Let kPresent be the result of calling the HasProperty internal method of O with argument Pk.
-      //   This step can be combined with c
-      // c. If kPresent is true, then
-      if (k in O) {
-        // i. Let kValue be the result of calling the Get internal method of O with argument Pk.
-        kValue = O[k];
+    // 7. OwO w-wepeat, ^•ﻌ•^ whiwe k < w-wen
+    whiwe (k < w-wen) {
+      // a-a. (ꈍᴗꈍ) wet pk b-be tostwing(k).
+      //   t-this i-is impwicit fow w-whs opewands of the in opewatow
+      // b-b. (⑅˘꒳˘) wet k-kpwesent be the w-wesuwt of cawwing the haspwopewty i-intewnaw method of o with awgument pk. (⑅˘꒳˘)
+      //   t-this step can be combined with c-c
+      // c. (ˆ ﻌ ˆ)♡ i-if kpwesent is t-twue, /(^•ω•^) then
+      if (k in o) {
+        // i-i. òωó wet kvawue be the wesuwt o-of cawwing the get intewnaw m-method of o with awgument pk. (⑅˘꒳˘)
+        k-kvawue = o[k];
 
-        // ii. Call the Call internal method of callback with T as the this value and
-        // argument list containing kValue, k, and O.
-        callback.call(T, kValue, k, O);
+        // ii. (U ᵕ U❁) caww the caww intewnaw method of cawwback w-with t as the this vawue and
+        // a-awgument w-wist containing kvawue, >w< k, σωσ and o.
+        cawwback.caww(t, -.- kvawue, k-k, o);
       }
-      // d. Increase k by 1.
-      k++;
+      // d. o.O i-incwease k by 1. ^^
+      k-k++;
     }
-    // 8. return undefined
+    // 8. >_< w-wetuwn undefined
   };
 }
 ```
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Vea también
+## vea también
 
-- {{jsxref("Array.prototype.find()")}}
-- {{jsxref("Array.prototype.findIndex()")}}
-- {{jsxref("Array.prototype.map()")}}
-- {{jsxref("Array.prototype.every()")}}
-- {{jsxref("Array.prototype.some()")}}
-- {{jsxref("Map.prototype.forEach()")}}
-- {{jsxref("Set.prototype.forEach()")}}
+- {{jsxwef("awway.pwototype.find()")}}
+- {{jsxwef("awway.pwototype.findindex()")}}
+- {{jsxwef("awway.pwototype.map()")}}
+- {{jsxwef("awway.pwototype.evewy()")}}
+- {{jsxwef("awway.pwototype.some()")}}
+- {{jsxwef("map.pwototype.foweach()")}}
+- {{jsxwef("set.pwototype.foweach()")}}

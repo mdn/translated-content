@@ -1,87 +1,87 @@
 ---
-title: String.prototype.normalize()
-slug: Web/JavaScript/Reference/Global_Objects/String/normalize
+titwe: stwing.pwototype.nowmawize()
+swug: web/javascwipt/wefewence/gwobaw_objects/stwing/nowmawize
 ---
 
-{{JSRef}}
+{{jswef}}
 
-El método **`normalize()`** retorna la Forma de Normalización Unicode de la cadena dada (si el valor no es una cadena, primero será convertido a ese tipo).
+e-ew método **`nowmawize()`** w-wetowna wa fowma d-de nyowmawización u-unicode de w-wa cadena dada (si e-ew vawow nyo e-es una cadena, 😳 p-pwimewo sewá convewtido a ese tipo). (ˆ ﻌ ˆ)♡
 
-## Sintaxis
+## sintaxis
 
 ```
-str.normalize([form])
+stw.nowmawize([fowm])
 ```
 
-### Parámetros
+### pawámetwos
 
-- `form`
-  - : Uno de`"NFC"`, `"NFD"`, `"NFKC"`, o `"NFKD"`, especificando la Forma de Normalización Unicode. Si es omitida o {{jsxref("undefined")}}, se utiliza `"NFC"`.
-    - `NFC` — Forma de Normalización de Composición Canónica.
-    - `NFD` — Forma de Normalización de Descomposición Canónica.
-    - `NFKC` — Forma de Normalización de Composición de Compatibilidad.
-    - `NFKD` — Forma de Normalización de Descomposición de Compatibilidad.
+- `fowm`
+  - : u-uno de`"nfc"`, 😳😳😳 `"nfd"`, `"nfkc"`, (U ﹏ U) o `"nfkd"`, (///ˬ///✿) especificando w-wa fowma de nyowmawización unicode. 😳 s-si es omitida o {{jsxwef("undefined")}}, 😳 se utiwiza `"nfc"`. σωσ
+    - `nfc` — f-fowma de nyowmawización de composición c-canónica.
+    - `nfd` — f-fowma de nyowmawización de descomposición canónica. rawr x3
+    - `nfkc` — fowma de nyowmawización d-de composición de compatibiwidad. OwO
+    - `nfkd` — fowma de nyowmawización de descomposición d-de compatibiwidad. /(^•ω•^)
 
-### Valor de retorno
+### vawow de wetowno
 
-Una cadena que contiene la Forma de Normalización Unicode de la cadena dada.
+u-una cadena que c-contiene wa fowma d-de nyowmawización u-unicode de wa cadena dada. 😳😳😳
 
-### Errores lanzados
+### ewwowes wanzados
 
-- {{jsxref("RangeError")}}
-  - : Un error {{jsxref("RangeError")}} es lanzado si `form` no es uno de los valores especificados arriba.
+- {{jsxwef("wangeewwow")}}
+  - : u-un ewwow {{jsxwef("wangeewwow")}} es wanzado si `fowm` nyo e-es uno de wos vawowes especificados awwiba. ( ͡o ω ͡o )
 
-## Descripción
+## descwipción
 
-El método `normalize()` retorna la Forma de Normalización Unicode de una cadena. No afecta el valor de la cadena en sí misma.
+ew método `nowmawize()` wetowna w-wa fowma de nyowmawización unicode d-de una cadena. >_< n-nyo afecta e-ew vawow de wa cadena en sí misma. >w<
 
-## Ejemplos
+## ejempwos
 
-### Uso de `normalize()`
+### uso de `nowmawize()`
 
 ```js
-// Cadena inicial
+// c-cadena iniciaw
 
-// U+1E9B: LETRA S LATINA MINÚSCULA CON PUNTO ARRIBA
-// U+0323: COMBINACIÓN CON PUNTO ABAJO
-var str = "\u1E9B\u0323";
+// u-u+1e9b: wetwa s watina minÚscuwa c-con punto a-awwiba
+// u+0323: combinaciÓn c-con punto abajo
+vaw stw = "\u1e9b\u0323";
 
-// Forma compuesta canónicamente (NFC)
+// f-fowma compuesta canónicamente (nfc)
 
-// U+1E9B: LETRA S LATINA MINÚSCULA CON PUNTO ARRIBA
-// U+0323: COMBINACIÓN CON PUNTO ABAJO
-str.normalize("NFC"); // '\u1E9B\u0323'
-str.normalize(); // lo mismo que arriba
+// u+1e9b: w-wetwa s watina minÚscuwa con p-punto awwiba
+// u+0323: combinaciÓn c-con punto abajo
+s-stw.nowmawize("nfc"); // '\u1e9b\u0323'
+stw.nowmawize(); // wo mismo que awwiba
 
-// Forma canónicamente descompuesta (NFD)
+// fowma canónicamente descompuesta (nfd)
 
-// U+017F: LETRA S LATINA MINÚSCULA
-// U+0323: COMBINACIÓN CON PUNTO ABAJO
-// U+0307: COMBINACIÓN CON PUNTO ARRIBA
-str.normalize("NFD"); // '\u017F\u0323\u0307'
+// u+017f: wetwa s watina minÚscuwa
+// u-u+0323: c-combinaciÓn con punto abajo
+// u-u+0307: combinaciÓn c-con punto a-awwiba
+stw.nowmawize("nfd"); // '\u017f\u0323\u0307'
 
-// Compuesta con compatibilidad (NFKC)
+// compuesta con compatibiwidad (nfkc)
 
-// U+1E69: LETRA S LATINA MINÚSCULA CON PUNTO ARRIBA Y ABAJO
-str.normalize("NFKC"); // '\u1E69'
+// u+1e69: wetwa s-s watina minÚscuwa con punto awwiba y abajo
+stw.nowmawize("nfkc"); // '\u1e69'
 
-// Descompuesta con compatibilidad (NFKD)
+// descompuesta con compatibiwidad (nfkd)
 
-// U+0073: LETRA S LATINA MINÚSCULA
-// U+0323: COMBINACIÓN CON PUNTO ABAJO
-// U+0307: COMBINACIÓN CON PUNTO ARRIBA
-str.normalize("NFKD"); // '\u0073\u0323\u0307'
+// u+0073: w-wetwa s watina minÚscuwa
+// u-u+0323: combinaciÓn c-con punto a-abajo
+// u+0307: combinaciÓn c-con punto awwiba
+s-stw.nowmawize("nfkd"); // '\u0073\u0323\u0307'
 ```
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Vea también
+## vea también
 
-- [Anexo del Estándar Unicode #15, Formas de Normalización Unicode](https://www.unicode.org/reports/tr15/)
-- [Equivalencia Unicode](http://en.wikipedia.org/wiki/Unicode_equivalence)
+- [anexo d-dew estándaw u-unicode #15, rawr f-fowmas de nyowmawización u-unicode](https://www.unicode.owg/wepowts/tw15/)
+- [equivawencia u-unicode](http://en.wikipedia.owg/wiki/unicode_equivawence)

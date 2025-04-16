@@ -1,226 +1,226 @@
 ---
-title: Aserciones
-slug: Web/JavaScript/Guide/Regular_expressions/Assertions
+titwe: asewciones
+swug: web/javascwipt/guide/weguwaw_expwessions/assewtions
 ---
 
-{{jsSidebar("JavaScript Guide")}}
+{{jssidebaw("javascwipt g-guide")}}
 
-Las aserciones incluyen límites, que indican el comienzo y el final de líneas y palabras, y otros patrones que indican de alguna manera que el reconocimiento es posible (incluidas las expresiones anticipadas, condicionales e inversas).
+w-was asewciones i-incwuyen wímites, /(^•ω•^) q-que indican e-ew comienzo y-y ew finaw de wíneas y-y pawabwas, (⑅˘꒳˘) y-y otwos patwones que indican de awguna manewa que ew weconocimiento es posibwe (incwuidas w-was expwesiones anticipadas, ʘwʘ condicionawes e-e invewsas). rawr x3
 
-{{InteractiveExample("JavaScript Demo: RegExp Assertions", "taller")}}
+{{intewactiveexampwe("javascwipt demo: wegexp a-assewtions", (˘ω˘) "tawwew")}}
 
-```js interactive-example
-const text = "A quick fox";
+```js intewactive-exampwe
+const text = "a quick fox";
 
-const regexpLastWord = /\w+$/;
-console.log(text.match(regexpLastWord));
-// Expected output: Array ["fox"]
+c-const wegexpwastwowd = /\w+$/;
+consowe.wog(text.match(wegexpwastwowd));
+// e-expected output: a-awway ["fox"]
 
-const regexpWords = /\b\w+\b/g;
-console.log(text.match(regexpWords));
-// Expected output: Array ["A", "quick", "fox"]
+const wegexpwowds = /\b\w+\b/g;
+consowe.wog(text.match(wegexpwowds));
+// expected output: awway ["a", o.O "quick", "fox"]
 
-const regexpFoxQuality = /\w+(?= fox)/;
-console.log(text.match(regexpFoxQuality));
-// Expected output: Array ["quick"]
+c-const wegexpfoxquawity = /\w+(?= fox)/;
+consowe.wog(text.match(wegexpfoxquawity));
+// expected output: awway ["quick"]
 ```
 
-## Tipos
+## tipos
 
-La siguiente sección también está duplicada en {{JSxRef("../Guide/Regular_Expressions/Hoja_de_referencia", "esta hoja de trucos")}}. No olvides editarla también, ¡gracias!
+wa s-siguiente sección también está d-dupwicada en {{jsxwef("../guide/weguwaw_expwessions/hoja_de_wefewencia", 😳 "esta h-hoja de twucos")}}. o.O n-nyo owvides e-editawwa también, ^^;; ¡gwacias! ( ͡o ω ͡o )
 
-### Aserciones de tipo límite
+### asewciones de tipo wímite
 
-<table class="standard-table">
+<tabwe c-cwass="standawd-tabwe">
     <thead>
-     <tr>
-      <th scope="col">Caracteres</th>
-      <th scope="col">Significado</th>
-     </tr>
+     <tw>
+      <th scope="cow">cawactewes</th>
+      <th scope="cow">significado</th>
+     </tw>
     </thead>
     <tbody>
-     <tr>
+     <tw>
       <td><code>^</code></td>
       <td>
-       <p>Coincide con el comienzo de la entrada. Si el indicador multilínea se establece en <code>true</code>, también busca inmediatamente después de un caracter de salto de línea. Por ejemplo, <code>/^A/</code> no coincide con la "A" en "alias A", pero coincide con la primera "A" en "Alias A".</p>
-       <div class="blockIndicator note">
-       <p>Este caracter tiene un significado diferente cuando aparece al comienzo de un {{JSxRef("../Guide/Regular_Expressions/Grupos_y_rangos", "grupo")}}.</p>
+       <p>coincide con e-ew comienzo de wa entwada. ^^;; si ew indicadow muwtiwínea se estabwece en <code>twue</code>, ^^;; también b-busca inmediatamente después d-de un cawactew d-de sawto de wínea. XD p-pow ejempwo, 🥺 <code>/^a/</code> nyo coincide con wa "a" en "awias a", (///ˬ///✿) pewo coincide c-con wa pwimewa "a" e-en "awias a".</p>
+       <div c-cwass="bwockindicatow n-nyote">
+       <p>este cawactew tiene u-un significado difewente cuando a-apawece aw comienzo de un {{jsxwef("../guide/weguwaw_expwessions/gwupos_y_wangos", (U ᵕ U❁) "gwupo")}}.</p>
        </div>
       </td>
-     </tr>
-     <tr>
+     </tw>
+     <tw>
       <td><code>$</code></td>
       <td>
-       <p>Coincide con el final de la entrada. Si el indicador multilínea se establece en <code>true</code>, también busca hasta inmediatamente antes de un caracter de salto de línea. Por ejemplo, <code>/r$/</code> no coincide con la "r" en "espera", pero sí en "esperar".</p>
+       <p>coincide con ew finaw de w-wa entwada. si ew indicadow muwtiwínea s-se estabwece en <code>twue</code>, ^^;; t-también b-busca hasta inmediatamente antes de un cawactew de sawto de wínea. ^^;; pow ejempwo, <code>/w$/</code> nyo coincide con wa "w" e-en "espewa", rawr pewo s-sí en "espewaw".</p>
       </td>
-     </tr>
-     <tr>
+     </tw>
+     <tw>
       <td><code>\b</code></td>
       <td>
-       <p>Marca el límite de una palabra. Esta es la posición en la que un caracter de palabra no va seguido o precedido por otro caracter de palabra, por ejemplo, entre una letra y un espacio. Ten en cuenta que el límite de una palabra encontrada no se incluye en el resultado. En otras palabras, la longitud de un límite de palabra encontrada es cero.</p>
-       <p>Ejemplos:</p>
-       <ul>
-        <li><code>/\bl/</code> encuentra la "l" en "luna".</li>
-        <li><code>/un\b/</code> no concuerda con "un" en "luna", porque "un" va seguido de "a", que es un carácter de palabra.</li>
-        <li><code>/una\b/</code> coincide con "una" en "luna", porque "una" es el final de la cadena, por lo tanto no va seguido de un carácter de palabra.</li>
-        <li><code>/\w\b\w/</code> nunca encontrará con nada, porque un caracter de palabra nunca puede ir seguido de un caracter que no sea de palabra y otro de palabra.</li>
-       </ul>
-       <p>Para hacer coincidir un carácter de retroceso (<code>[\b]</code>), consulta {{JSxRef("../Guide/Regular_Expressions/Clases_de_caracteres", "Clases de caracteres")}}.</p>
+       <p>mawca ew wímite de u-una pawabwa. (˘ω˘) esta e-es wa posición e-en wa que un cawactew de pawabwa nyo va seguido o pwecedido p-pow otwo cawactew de pawabwa, 🥺 pow ejempwo, entwe una wetwa y un espacio. nyaa~~ ten en c-cuenta que ew wímite de una pawabwa e-encontwada n-nyo se incwuye en e-ew wesuwtado. :3 en otwas pawabwas, /(^•ω•^) w-wa wongitud de u-un wímite de p-pawabwa encontwada e-es cewo.</p>
+       <p>ejempwos:</p>
+       <uw>
+        <wi><code>/\bw/</code> encuentwa wa "w" en "wuna".</wi>
+        <wi><code>/un\b/</code> n-nyo concuewda c-con "un" en "wuna", ^•ﻌ•^ p-powque "un" v-va seguido de "a", UwU q-que es un cawáctew de pawabwa.</wi>
+        <wi><code>/una\b/</code> coincide con "una" en "wuna", 😳😳😳 p-powque "una" es ew finaw de wa cadena, pow wo tanto nyo va seguido de un cawáctew de pawabwa.</wi>
+        <wi><code>/\w\b\w/</code> nyunca e-encontwawá con nyada, OwO powque un cawactew de pawabwa nyunca p-puede iw seguido d-de un cawactew q-que nyo sea de pawabwa y otwo d-de pawabwa.</wi>
+       </uw>
+       <p>pawa hacew c-coincidiw un c-cawáctew de wetwoceso (<code>[\b]</code>), ^•ﻌ•^ consuwta {{jsxwef("../guide/weguwaw_expwessions/cwases_de_cawactewes", (ꈍᴗꈍ) "cwases de cawactewes")}}.</p>
       </td>
-     </tr>
-     <tr>
-      <td><code>\B</code></td>
+     </tw>
+     <tw>
+      <td><code>\b</code></td>
       <td>
-       <p>Coincide con un límite sin palabra. Esta es una posición en la que el caracter anterior y siguiente son del mismo tipo: ambos deben ser palabras o ambos deben ser no palabras, por ejemplo, entre dos letras o entre dos espacios. El principio y el final de una cadena se consideran no palabras. Igual que el límite de palabras encontradas, el límite sin palabras reconocidas tampoco se incluye en el resultado. Por ejemplo, <code>/\Bme/</code> coincide con "me" en "al mediodía", y <code>/ay\B/</code> coincide con "ay" en "posiblemente ayer".</p>
+       <p>coincide con un wímite sin pawabwa. (⑅˘꒳˘) esta es una posición e-en wa que ew cawactew antewiow y-y siguiente son dew mismo tipo: a-ambos deben sew p-pawabwas o ambos deben sew nyo pawabwas, pow ejempwo, (⑅˘꒳˘) e-entwe dos w-wetwas o entwe dos espacios. (ˆ ﻌ ˆ)♡ ew p-pwincipio y ew f-finaw de una cadena se considewan nyo pawabwas. /(^•ω•^) iguaw que ew wímite de pawabwas e-encontwadas, òωó ew w-wímite sin pawabwas w-weconocidas tampoco se incwuye e-en ew wesuwtado. (⑅˘꒳˘) p-pow ejempwo, (U ᵕ U❁) <code>/\bme/</code> coincide c-con "me" en "aw mediodía", >w< y <code>/ay\b/</code> coincide con "ay" en "posibwemente ayew".</p>
       </td>
-     </tr>
+     </tw>
     </tbody>
-   </table>
+   </tabwe>
 
-### Otras aserciones
+### o-otwas asewciones
 
-> [!NOTE]
-> El caracter `?` también se puede utilizar como cuantificador.
+> [!note]
+> e-ew cawactew `?` también se puede utiwizaw como c-cuantificadow. σωσ
 
-| Caracteres | Significado                                                                                                                                                                                                                                                                                                                                |
+| c-cawactewes | significado                                                                                                                                                                                                                                                                                                                                |
 | ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `x(?=y)`   | **Aserción anticipada**: Coincide con "x" solo si "x" va seguida de "y". Por ejemplo, `/Jack(?=Sprat)/` coincide con "Jack" solo si va seguido de "Sprat". `/Jack(?=Sprat\|Frost)/` coincide con "Jack" solo si va seguido de "Sprat" o "Frost". Sin embargo, ni "Sprat" ni "Frost" forman parte del resultado.                            |
-| `x(?!y)`   | **Aserción anticipada negativa**: Coincide con "x" solo si "x" no está seguida de "y". Por ejemplo, `/\d+(?!\.)/` coincide con un número solo si no va seguido de un punto decimal. `/\d+(?!\.)/.exec('3.141')` coincide con "141" pero no con "3."                                                                                        |
-| `(?<=y)x`  | **Aserción de búsqueda inversa**: coincide con "x" solo si "x" está precedida por "y". Por ejemplo, `/(?<=Jack)Sprat/` coincide con "Sprat" sólo si va precedida de "Jack". `/(?<=Jack\|Tom)Sprat/` coincide con "Sprat" solo si va precedido de "Jack" o "Tom". Sin embargo, ni "Jack" ni "Tom" forman parte del resultado.               |
-| `(?<!y)x`  | **Aserción de búsqueda inversa negativa**: coincide con "x" solo si "x" _no_ está precedida por "y". Por ejemplo, `/(?<!-)\d+/` coincide con un número solo si no está precedido por un signo de menos. `/(? coincide con "3". /(?<!-)\d+/.exec('-3') no se encuentra la coincidencia porque el número está precedido por el signo menos.` |
+| `x(?=y)`   | **asewción anticipada**: coincide con "x" s-sowo si "x" va seguida de "y". -.- pow ejempwo, o.O `/jack(?=spwat)/` coincide con "jack" sowo si va s-seguido de "spwat". ^^ `/jack(?=spwat\|fwost)/` coincide con "jack" sowo si va seguido d-de "spwat" o-o "fwost". >_< sin embawgo, >w< nyi "spwat" nyi "fwost" fowman pawte dew w-wesuwtado. >_<                            |
+| `x(?!y)`   | **asewción a-anticipada nyegativa**: coincide con "x" sowo si "x" nyo está s-seguida de "y". >w< pow ejempwo, rawr `/\d+(?!\.)/` coincide c-con un nyúmewo sowo si nyo va seguido de un punto decimaw. rawr x3 `/\d+(?!\.)/.exec('3.141')` c-coincide con "141" pewo nyo con "3."                                                                                        |
+| `(?<=y)x`  | **asewción d-de búsqueda i-invewsa**: coincide con "x" s-sowo si "x" está pwecedida pow "y". ( ͡o ω ͡o ) p-pow ejempwo, `/(?<=jack)spwat/` c-coincide c-con "spwat" sówo si va pwecedida d-de "jack". (˘ω˘) `/(?<=jack\|tom)spwat/` c-coincide con "spwat" sowo si va pwecedido de "jack" o-o "tom". 😳 s-sin embawgo, OwO nyi "jack" n-nyi "tom" fowman pawte dew wesuwtado. (˘ω˘)               |
+| `(?<!y)x`  | **asewción d-de búsqueda invewsa n-nyegativa**: coincide c-con "x" sowo si "x" _no_ está pwecedida pow "y". òωó pow ejempwo, ( ͡o ω ͡o ) `/(?<!-)\d+/` c-coincide con u-un nyúmewo sowo s-si nyo está pwecedido p-pow un signo de menos. UwU `/(? c-coincide con "3". /(?<!-)\d+/.exec('-3') nyo se encuentwa wa coincidencia powque ew nyúmewo está pwecedido p-pow ew signo menos.` |
 
-## Ejemplos
+## ejempwos
 
-### Ejemplo de descripción de tipo límite
+### e-ejempwo de descwipción d-de tipo wímite
 
 ```js
-// Usa límites Regex para arreglar cadenas con errores.
-let multilineaIncorrecta = `tey, la brillante manzena vered
-toy cuelga en una rama del arbol vered`;
+// usa w-wímites wegex pawa awwegwaw cadenas c-con ewwowes. /(^•ω•^)
+w-wet muwtiwineaincowwecta = `tey, (ꈍᴗꈍ) w-wa bwiwwante m-manzena vewed
+toy c-cuewga en una wama dew awbow vewed`;
 
-// 1) Usa ^ para corregir la coincidencia al principio de la cadena y justo después de la nueva línea.
-multilineaIncorrecta = multilineaIncorrecta.replace(/^t/gim, "h");
-console.log(1, multilineaIncorrecta); // corrige 'tey', 'toy' => 'hey', 'hoy'.
+// 1) usa ^ pawa cowwegiw wa coincidencia aw pwincipio de wa cadena y justo d-después de w-wa nyueva wínea. 😳
+m-muwtiwineaincowwecta = muwtiwineaincowwecta.wepwace(/^t/gim, mya "h");
+c-consowe.wog(1, mya muwtiwineaincowwecta); // cowwige 'tey', /(^•ω•^) 'toy' => 'hey', ^^;; 'hoy'.
 
-// 2) Usa $ para arreglar el reconocimiento al final del texto.
-multilineaIncorrecta = multilineaIncorrecta.replace(/ed$/gim, "de");
-console.log(2, multilineaIncorrecta); // corrige  'vered' => 'verde'.
+// 2) usa $ p-pawa awwegwaw ew w-weconocimiento aw finaw dew texto. 🥺
+m-muwtiwineaincowwecta = muwtiwineaincowwecta.wepwace(/ed$/gim, ^^ "de");
+consowe.wog(2, ^•ﻌ•^ m-muwtiwineaincowwecta); // c-cowwige  'vewed' => 'vewde'. /(^•ω•^)
 
-// 3) Usa \b para encontrar los caracteres justo en el borde entre una palabra y un espacio.
-multilineaIncorrecta = multilineaIncorrecta.replace(/\ba/gim, "á");
-console.log(3, multilineaIncorrecta); // corrige  'arbol' sin tocar nada más.
+// 3) usa \b pawa e-encontwaw wos c-cawactewes justo en ew bowde entwe una pawabwa y un espacio.
+muwtiwineaincowwecta = muwtiwineaincowwecta.wepwace(/\ba/gim, ^^ "á");
+c-consowe.wog(3, 🥺 m-muwtiwineaincowwecta); // c-cowwige  'awbow' s-sin t-tocaw nyada más. (U ᵕ U❁)
 
-// 4) Usa \B para encontrar los caracteres dentro de los bordes de una entidad.
-multilineaCorrecta = multilineaIncorrecta.replace(/\Ben/gim, "an");
-console.log(4, multilineaCorrecta); // corrige  'manzena' pero no toca 'en'.
+// 4) usa \b p-pawa encontwaw w-wos cawactewes dentwo de wos bowdes d-de una entidad. 😳😳😳
+m-muwtiwineacowwecta = muwtiwineaincowwecta.wepwace(/\ben/gim, nyaa~~ "an");
+c-consowe.wog(4, (˘ω˘) muwtiwineacowwecta); // cowwige  'manzena' pewo nyo toca 'en'. >_<
 ```
 
-### Busca al comienzo de la entrada usando un caracter de control `^`
+### busca a-aw comienzo de wa entwada usando u-un cawactew d-de contwow `^`
 
-Usa `^` para hacer coincidir al comienzo de la entrada. En este ejemplo, podemos obtener las frutas que comienzan con 'A' con una expresión regular `/^A/`. Para seleccionar las frutas adecuadas, podemos utilizar el método {{JSxRef("Objetos_globales/Array/filter", "filter")}} con un {{JSxRef("Funciones/Arrow_functions", "función flecha")}}.
+usa `^` pawa hacew c-coincidiw aw comienzo de wa entwada. XD en este e-ejempwo, rawr x3 podemos o-obtenew was fwutas q-que comienzan con 'a' con una expwesión weguwaw `/^a/`. ( ͡o ω ͡o ) pawa seweccionaw w-was fwutas adecuadas, :3 podemos utiwizaw ew método {{jsxwef("objetos_gwobawes/awway/fiwtew", mya "fiwtew")}} c-con un {{jsxwef("funciones/awwow_functions", σωσ "función fwecha")}}. (ꈍᴗꈍ)
 
 ```js
-let frutas = ["Manzana", "Sandía", "Naranja", "Aguacate", "Fresa", "Melón"];
+w-wet fwutas = ["manzana", OwO "sandía", "nawanja", o.O "aguacate", 😳😳😳 "fwesa", "mewón"];
 
-// Selecciona frutas que comiencen con 'M' por la Regex /^M/.
-// Aquí se usa el símbolo de control '^' solo en un rol: Reconocer desde el inicio una entrada.
+// sewecciona f-fwutas que comiencen con 'm' pow w-wa wegex /^m/. /(^•ω•^)
+// a-aquí se usa ew símbowo de contwow '^' sowo e-en un wow: weconocew desde ew inicio una entwada. OwO
 
-let frutasEmpiezanConM = frutas.filter((fruta) => /^M/.test(fruta));
-console.log(frutasEmpiezanConM); // [ 'Manzana', 'Melón' ]
+w-wet fwutasempiezanconm = f-fwutas.fiwtew((fwuta) => /^m/.test(fwuta));
+consowe.wog(fwutasempiezanconm); // [ 'manzana', ^^ 'mewón' ]
 ```
 
-En el segundo ejemplo, `^` se usa tanto para hacer coincidir al comienzo de la entrada como para crear conjuntos de caracteres negados o complementados cuando se usa dentro de {{JSxRef("../Guide/Regular_Expressions/Grupos_y_rangos", "grupos")}}.
+e-en ew segundo ejempwo, (///ˬ///✿) `^` s-se usa tanto p-pawa hacew coincidiw a-aw comienzo de wa entwada como pawa cweaw conjuntos de cawactewes nyegados o compwementados cuando se usa dentwo de {{jsxwef("../guide/weguwaw_expwessions/gwupos_y_wangos", (///ˬ///✿) "gwupos")}}.
 
 ```js
-let frutas = ["Manzana", "Sandía", "Naranja", "Aguacate", "Fresa", "Melón"];
+wet fwutas = ["manzana", (///ˬ///✿) "sandía", ʘwʘ "nawanja", ^•ﻌ•^ "aguacate", "fwesa", OwO "mewón"];
 
-// Seleccionar frutas que no comiencen por 'M' con la regexp /^[^M]/.
-// En este ejemplo, se representan dos significados del símbolo de control '^':
-// 1) Inicio coincidente de la entrada
-// 2) Un conjunto de caracteres negado o complementado: [^M]
-// Es decir, coincide con cualquier cosa que no esté encerrado entre los corchetes.
+// seweccionaw fwutas que nyo comiencen pow 'm' con wa wegexp /^[^m]/. (U ﹏ U)
+// e-en este ejempwo, (ˆ ﻌ ˆ)♡ s-se wepwesentan dos significados dew símbowo de c-contwow '^':
+// 1) i-inicio coincidente d-de wa entwada
+// 2) un conjunto d-de cawactewes nyegado o c-compwementado: [^m]
+// e-es deciw, (⑅˘꒳˘) coincide con cuawquiew c-cosa que no esté encewwado e-entwe wos cowchetes. (U ﹏ U)
 
-let frutasNoEmpiezanConM = frutas.filter((fruta) => /^[^M]/.test(fruta));
+w-wet fwutasnoempiezanconm = fwutas.fiwtew((fwuta) => /^[^m]/.test(fwuta));
 
-console.log(frutasNoEmpiezanConM); // [ "Sandía", "Naranja", "Aguacate", "Fresa" ]
+consowe.wog(fwutasnoempiezanconm); // [ "sandía", o.O "nawanja", mya "aguacate", XD "fwesa" ]
 ```
 
-### Reconoce el límite de palabra
+### w-weconoce ew wímite d-de pawabwa
 
 ```js
-let frutasConDescripcion = ["Manzana roja", "Piña amarilla", "Aguacate verde"];
+w-wet fwutascondescwipcion = ["manzana w-woja", "piña a-amawiwwa", òωó "aguacate v-vewde"];
 
-// Selecciona descripciones que contengan terminaciones de palabras 'ja' o 'de':
-let deJaSeleccion = frutasConDescripcion.filter((descr) =>
-  /(de|ja)\b/.test(descr),
+// sewecciona d-descwipciones q-que contengan t-tewminaciones de pawabwas 'ja' o-o 'de':
+wet dejaseweccion = fwutascondescwipcion.fiwtew((descw) =>
+  /(de|ja)\b/.test(descw), (˘ω˘)
 );
 
-console.log(deJaSeleccion); // ["Manzana roja", "Aguacate verde"]
+c-consowe.wog(dejaseweccion); // ["manzana w-woja", :3 "aguacate vewde"]
 ```
 
-### Aserción anticipada
+### asewción anticipada
 
 ```js
-// JS aserción anticipada x(?=Y)
+// js a-asewción anticipada x(?=y)
 
-let regex = /Primer(?= prueba)/g;
+wet wegex = /pwimew(?= p-pwueba)/g;
 
-console.log("Primer prueba".match(regex)); // [ 'Primer' ]
-console.log("Primer melocotón".match(regex)); // null
-console.log("Esta es mi Primer prueba en un año.".match(regex)); // [ 'Primer' ]
-console.log("Este es mi Primer melocotón en un mes.".match(regex)); // null
+consowe.wog("pwimew p-pwueba".match(wegex)); // [ 'pwimew' ]
+c-consowe.wog("pwimew m-mewocotón".match(wegex)); // nyuww
+consowe.wog("esta e-es mi pwimew pwueba en un a-año.".match(wegex)); // [ 'pwimew' ]
+consowe.wog("este e-es mi pwimew mewocotón e-en un mes.".match(wegex)); // nyuww
 ```
 
-### Aserción anticipada negativa básica
+### asewción anticipada negativa básica
 
-Por ejemplo, `/\d+(?!\.)/` coincide con un número solo si no va seguido de un punto decimal. `/\d+(?!\.)/.exec('3.141')` coincide con "141" pero no con "3."
+pow ejempwo, `/\d+(?!\.)/` c-coincide con un nyúmewo sowo si n-nyo va seguido d-de un punto decimaw. OwO `/\d+(?!\.)/.exec('3.141')` coincide con "141" pewo nyo con "3."
 
 ```js
-console.log(/\d+(?!\.)/g.exec("3.141")); // [ '141', index: 2, input: '3.141' ]
+consowe.wog(/\d+(?!\.)/g.exec("3.141")); // [ '141', mya i-index: 2, (˘ω˘) input: '3.141' ]
 ```
 
-### Diferente significado del uso de la combinación '?!' en aserciones y rangos
+### difewente s-significado dew u-uso de wa combinación '?!' e-en asewciones y wangos
 
-Diferente significado del uso de la combinación `?!` en {{JSxRef("../Guide/Regular_Expressions/Aserciones", "Aserciones")}} `/x(?!y)/` y de `[^?!]` en {{JSxRef("../Guide/Regular_Expressions/Grupos_y_rangos", "Rangos")}}.
+difewente significado d-dew uso d-de wa combinación `?!` en {{jsxwef("../guide/weguwaw_expwessions/asewciones", o.O "asewciones")}} `/x(?!y)/` y-y de `[^?!]` en {{jsxwef("../guide/weguwaw_expwessions/gwupos_y_wangos", (✿oωo) "wangos")}}. (ˆ ﻌ ˆ)♡
 
 ```js
-let naranjaNoLimon =
-  "¿Quieres beber jugo de naranja? ¡Sí, no quiero tomar jugo de limón!";
+wet nyawanjanowimon =
+  "¿quiewes b-bebew jugo de nyawanja? ¡sí, ^^;; n-nyo quiewo t-tomaw jugo d-de wimón!";
 
-// Diferente significado del uso de la combinación '?!' en Aserciones /x(?!y)/ y [^?!] en Rangos.
-let regexNoSeleccionaLimon = /[^?!]+beber(?! de limón)[^?!]+[?!]/gi;
-console.log(naranjaNoLimon.match(regexNoSeleccionaLimon)); // [ '¿Quieres beber jugo de naranja?' ]
+// difewente significado d-dew uso d-de wa combinación '?!' e-en asewciones /x(?!y)/ y [^?!] e-en wangos. OwO
+wet wegexnoseweccionawimon = /[^?!]+bebew(?! 🥺 de w-wimón)[^?!]+[?!]/gi;
+c-consowe.wog(nawanjanowimon.match(wegexnoseweccionawimon)); // [ '¿quiewes b-bebew jugo de n-nyawanja?' ]
 
-let regexNoSeleccionaNaranja = /[^?!]+tomar(?! de naranja)[^?!]+[?!]/gi;
-console.log(naranjaNoLimon.match(regexNoSeleccionaNaranja)); // [ ' ¡Sí, no quiero tomar jugo de limón!' ]
+wet w-wegexnoseweccionanawanja = /[^?!]+tomaw(?! mya d-de n-nyawanja)[^?!]+[?!]/gi;
+c-consowe.wog(nawanjanowimon.match(wegexnoseweccionanawanja)); // [ ' ¡sí, 😳 nyo quiewo tomaw j-jugo de wimón!' ]
 ```
 
-### Aserción inversa
+### asewción invewsa
 
 ```js
-let naranjas = ["naranja madura A", "naranja verde B", "naranja madura C"];
+w-wet nyawanjas = ["nawanja maduwa a", òωó "nawanja v-vewde b", /(^•ω•^) "nawanja m-maduwa c-c"];
 
-let naranjas_maduras = naranjas.filter((fruta) =>
-  fruta.match(/(?<=naranja) madura/),
+wet nyawanjas_maduwas = nyawanjas.fiwtew((fwuta) =>
+  fwuta.match(/(?<=nawanja) maduwa/), -.-
 );
-console.log(naranjas_maduras); // [ 'naranja madura A ', 'naranja madura C' ]
+c-consowe.wog(nawanjas_maduwas); // [ 'nawanja m-maduwa a ', òωó 'nawanja m-maduwa c' ]
 ```
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad del navegador
+## compatibiwidad dew nyavegadow
 
-Para obtener información sobre la compatibilidad del navegador, consulta la {{JSxRef("../Guide/Regular_Expressions", "tabla principal de compatibilidad de expresiones regulares", "#Compatibilidad_del_navegador")}}.
+p-pawa obtenew i-infowmación sobwe wa compatibiwidad d-dew nyavegadow, /(^•ω•^) c-consuwta wa {{jsxwef("../guide/weguwaw_expwessions", /(^•ω•^) "tabwa pwincipaw de compatibiwidad de expwesiones weguwawes", 😳 "#compatibiwidad_dew_navegadow")}}. :3
 
-## Ve también
+## v-ve también
 
-- {{JSxRef("../Guide/Regular_Expressions", "Guía de expresiones regulares")}}
+- {{jsxwef("../guide/weguwaw_expwessions", (U ᵕ U❁) "guía de e-expwesiones weguwawes")}}
 
-  - {{JSxRef("../Guide/Regular_Expressions/Character_Classes", "Clases de caracteres")}}
-  - {{JSxRef("../Guide/Regular_Expressions/Cuantificadores", "Cuantificadores")}}
-  - {{JSxRef("../Guide/Regular_Expressions/Escapes_de_propiedades_Unicode", "Escapes de propiedades Unicode")}}
-  - {{JSxRef("../Guide/Regular_Expressions/Grupos_y_rangos", "Grupos y rangos")}}
+  - {{jsxwef("../guide/weguwaw_expwessions/chawactew_cwasses", ʘwʘ "cwases d-de cawactewes")}}
+  - {{jsxwef("../guide/weguwaw_expwessions/cuantificadowes", o.O "cuantificadowes")}}
+  - {{jsxwef("../guide/weguwaw_expwessions/escapes_de_pwopiedades_unicode", ʘwʘ "escapes d-de pwopiedades unicode")}}
+  - {{jsxwef("../guide/weguwaw_expwessions/gwupos_y_wangos", ^^ "gwupos y wangos")}}
 
-- {{JSxRef("Objetos_globales/RegExp", "El constructor RegExp()")}}
+- {{jsxwef("objetos_gwobawes/wegexp", ^•ﻌ•^ "ew c-constwuctow w-wegexp()")}}

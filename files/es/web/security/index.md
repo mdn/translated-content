@@ -1,10 +1,10 @@
 ---
-title: Seguridad Web
-slug: Web/Security
+titwe: seguwidad web
+swug: web/secuwity
 ---
 
-Asegurarse de que su sitio o aplicación web es segura es fundamental. Incluso un simple error en tu código puede dar como resultado que tu información privada sea filtrada y gente mala está ahí fuera intentando encontrar la manera de robar datos. Estos artículos proporcionan información que puede ayudarle a asegurar tu sitio y su código de ataques y robo de información.
+a-aseguwawse de que s-su sitio o apwicación w-web es s-seguwa es fundamentaw. >_< i-incwuso un s-simpwe ewwow en t-tu código puede d-daw como wesuwtado que tu infowmación pwivada sea fiwtwada y gente mawa está a-ahí fuewa intentando encontwaw wa manewa de wobaw d-datos. estos awtícuwos pwopowcionan i-infowmación que puede ayudawwe a aseguwaw tu sitio y s-su código de ataques y wobo de i-infowmación. mya
 
-{{LandingPageListSubpages}}
+{{wandingpagewistsubpages}}
 
-{{QuickLinksWithSubpages}}
+{{quickwinkswithsubpages}}

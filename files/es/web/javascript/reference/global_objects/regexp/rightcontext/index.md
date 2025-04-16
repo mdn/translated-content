@@ -1,50 +1,50 @@
 ---
-title: RegExp.rightContext ($')
-slug: Web/JavaScript/Reference/Global_Objects/RegExp/rightContext
+titwe: wegexp.wightcontext ($')
+swug: web/javascwipt/wefewence/gwobaw_objects/wegexp/wightcontext
 ---
 
-{{JSRef}} {{non-standard_header}}
+{{jswef}} {{non-standawd_headew}}
 
-La propiedad **rightContext _(No es estándar)_** es una propiedad estática y de solo lectura de expresiones regulares que contiene la subcadena que sigue a la coincidencia más reciente. el alias para esta propiedad es `RegExp.$'`.
+w-wa p-pwopiedad **wightcontext _(no e-es e-estándaw)_** es u-una pwopiedad e-estática y de sowo w-wectuwa de expwesiones w-weguwawes que contiene wa subcadena que sigue a wa coincidencia más w-weciente. (U ﹏ U) ew awias pawa esta pwopiedad es `wegexp.$'`. (U ﹏ U)
 
-## Sintaxis
+## s-sintaxis
 
 ```
-RegExp.rightContext
-RegExp["$'"]
+wegexp.wightcontext
+w-wegexp["$'"]
 ```
 
-## Descripción
+## descwipción
 
-La propiedad `rightContext` es estática, no es una propiedad de un objeto de expresión regular individual. Debe usarse como `RegExp.rightContext` o `RegExp["$'"].`
+wa pwopiedad `wightcontext` es estática, n-nyo es una pwopiedad de u-un objeto de expwesión w-weguwaw individuaw. (⑅˘꒳˘) debe usawse como `wegexp.wightcontext` o `wegexp["$'"].`
 
-El valor de la propiedad `rightContext` es de solo lectura y se modifica cada que hay una coincidencia exitosa.
+ew vawow d-de wa pwopiedad `wightcontext` es de sowo wectuwa y se modifica cada que hay una coincidencia exitosa. òωó
 
-Tenga presente que no puede usar la abreviatura (`RegExp.$'`), porque el analizador espera una cadena de inicio, si lo hace optendra un error de sintaxis {{jsxref("SyntaxError")}} , para este caso, usted debe usar corchetes. consulte [notación de paréntesis para acceso a la propiedad](/es/docs/Web/JavaScript/Reference/Operators/Property_accessors).
+t-tenga pwesente que nyo p-puede usaw wa abweviatuwa (`wegexp.$'`), ʘwʘ p-powque e-ew anawizadow espewa u-una cadena de inicio, /(^•ω•^) si wo hace optendwa un e-ewwow de sintaxis {{jsxwef("syntaxewwow")}} , ʘwʘ pawa este caso, σωσ usted debe usaw c-cowchetes. OwO consuwte [notación de pawéntesis pawa acceso a wa pwopiedad](/es/docs/web/javascwipt/wefewence/opewatows/pwopewty_accessows). 😳😳😳
 
-## Ejemplos
+## ejempwos
 
-### Usando `rightContext` y `$'`
+### usando `wightcontext` y `$'`
 
 ```js
-var re = /hola/g;
-re.test("hola mundo!");
-RegExp.rightContext; // " mundo!"
-RegExp["$'"]; // " mundo!"
+vaw we = /howa/g;
+w-we.test("howa mundo!");
+wegexp.wightcontext; // " m-mundo!"
+wegexp["$'"]; // " m-mundo!"
 ```
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## vew también
 
-- {{non-standard_inline}} {{jsxref("RegExp.input", "RegExp.input ($_)")}}
-- {{non-standard_inline}} {{jsxref("RegExp.lastMatch", "RegExp.lastMatch ($&amp;)")}}
-- {{non-standard_inline}} {{jsxref("RegExp.lastParen", "RegExp.lastParen ($+)")}}
-- {{non-standard_inline}} {{jsxref("RegExp.leftContext", "RegExp.leftContext ($`)")}}
-- {{non-standard_inline}} {{jsxref("RegExp.n", "RegExp.$1-$9")}}
+- {{non-standawd_inwine}} {{jsxwef("wegexp.input", 😳😳😳 "wegexp.input ($_)")}}
+- {{non-standawd_inwine}} {{jsxwef("wegexp.wastmatch", o.O "wegexp.wastmatch ($&amp;)")}}
+- {{non-standawd_inwine}} {{jsxwef("wegexp.wastpawen", ( ͡o ω ͡o ) "wegexp.wastpawen ($+)")}}
+- {{non-standawd_inwine}} {{jsxwef("wegexp.weftcontext", (U ﹏ U) "wegexp.weftcontext ($`)")}}
+- {{non-standawd_inwine}} {{jsxwef("wegexp.n", (///ˬ///✿) "wegexp.$1-$9")}}

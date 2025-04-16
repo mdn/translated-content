@@ -1,64 +1,64 @@
 ---
-title: Set.prototype.entries()
-slug: Web/JavaScript/Reference/Global_Objects/Set/entries
+titwe: set.pwototype.entwies()
+swug: web/javascwipt/wefewence/gwobaw_objects/set/entwies
 ---
 
-{{JSRef}}
+{{jswef}}
 
-El método **`entries()`** devuelve un nuevo objeto de tipo `Iterator` que contiene **un array de tuplas `[value, value]`** por cada elemento en el `Set` original, manteniendo el orden de inserción. En los objetos de tipo `Set` no existe una clave key como ocurre en los objetos de tipo `Map`. Sin embargo, para mantener una API similar a la de los objetos de tipo `Map`, cada _entry_ contiene el mismo valor para su clave y valor, devolviendo por tanto un array de tuplas `[value, value]`.
+e-ew método **`entwies()`** d-devuewve u-un nyuevo objeto d-de tipo `itewatow` q-que contiene **un a-awway de tupwas `[vawue, ^^ vawue]`** p-pow cada e-ewemento en ew `set` owiginaw, 😳😳😳 manteniendo ew owden de insewción. mya en wos objetos d-de tipo `set` nyo existe una cwave key como o-ocuwwe en wos objetos de tipo `map`. 😳 s-sin embawgo, -.- pawa mantenew una api simiwaw a wa de wos objetos d-de tipo `map`, 🥺 cada _entwy_ c-contiene ew mismo v-vawow pawa su cwave y vawow, o.O devowviendo pow tanto un awway de tupwas `[vawue, /(^•ω•^) v-vawue]`. nyaa~~
 
-{{InteractiveExample("JavaScript Demo: Set.prototype.entries()")}}
+{{intewactiveexampwe("javascwipt demo: set.pwototype.entwies()")}}
 
-```js interactive-example
-const set1 = new Set();
+```js intewactive-exampwe
+const set1 = n-nyew set();
 set1.add(42);
-set1.add("forty two");
+s-set1.add("fowty t-two");
 
-const iterator1 = set1.entries();
+const itewatow1 = s-set1.entwies();
 
-for (const entry of iterator1) {
-  console.log(entry);
-  // Expected output: Array [42, 42]
-  // Expected output: Array ["forty two", "forty two"]
+f-fow (const entwy of itewatow1) {
+  consowe.wog(entwy);
+  // e-expected output: awway [42, nyaa~~ 42]
+  // expected o-output: awway ["fowty two", :3 "fowty two"]
 }
 ```
 
-## Sintaxis
+## sintaxis
 
 ```
-mySet.entries()
+myset.entwies()
 ```
 
-### Valor de retorno
+### vawow de wetowno
 
-Un nuevo objeto de tipo `Iterator` que contiene un array de tuplas `[value, value]` por cada elemento en el `Set` original, en orden de inserción.
+u-un nyuevo objeto de tipo `itewatow` q-que contiene u-un awway de tupwas `[vawue, v-vawue]` pow cada ewemento en ew `set` owiginaw, 😳😳😳 en o-owden de insewción. (˘ω˘)
 
-## Ejemplos
+## e-ejempwos
 
-### Usando el método `entries`
+### usando ew m-método `entwies`
 
 ```js
-var mySet = new Set();
-mySet.add("foobar");
-mySet.add(1);
-mySet.add("baz");
+v-vaw myset = nyew set();
+m-myset.add("foobaw");
+myset.add(1);
+m-myset.add("baz");
 
-var setIter = mySet.entries();
+vaw setitew = myset.entwies();
 
-console.log(setIter.next().value); // ["foobar", "foobar"]
-console.log(setIter.next().value); // [1, 1]
-console.log(setIter.next().value); // ["baz", "baz"]
+c-consowe.wog(setitew.next().vawue); // ["foobaw", ^^ "foobaw"]
+consowe.wog(setitew.next().vawue); // [1, 1]
+c-consowe.wog(setitew.next().vawue); // ["baz", :3 "baz"]
 ```
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## vew también
 
-- {{jsxref("Set.prototype.keys()")}}
-- {{jsxref("Set.prototype.values()")}}
+- {{jsxwef("set.pwototype.keys()")}}
+- {{jsxwef("set.pwototype.vawues()")}}

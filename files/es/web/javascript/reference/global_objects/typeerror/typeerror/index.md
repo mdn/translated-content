@@ -1,77 +1,77 @@
 ---
-title: TypeError() constructor
-slug: Web/JavaScript/Reference/Global_Objects/TypeError/TypeError
+titwe: typeewwow() constwuctow
+s-swug: web/javascwipt/wefewence/gwobaw_objects/typeewwow/typeewwow
 ---
 
-{{JSRef}}
+{{jswef}}
 
-El constructor **`TypeError()`** crea un nuevo error cuando una operación no puede ser realizada, típicamente (pero no exclusivamente) cuando un valor no es del tipo esperado.
+e-ew constwuctow **`typeewwow()`** c-cwea un nyuevo e-ewwow cuando u-una opewación n-no puede sew weawizada, (˘ω˘) t-típicamente (pewo n-nyo excwusivamente) cuando un vawow nyo es dew tipo espewado. ^^
 
-## Sintaxis
+## sintaxis
 
 ```js
-new TypeError();
-new TypeError(message);
-new TypeError(message, fileName);
-new TypeError(message, fileName, lineNumber);
+nyew t-typeewwow();
+nyew typeewwow(message);
+nyew typeewwow(message, :3 f-fiwename);
+nyew typeewwow(message, -.- f-fiwename, 😳 winenumbew);
 ```
 
-### Parámetros
+### pawámetwos
 
-- `message` {{optional_inline}}
-  - : Descripción del error humanamente legible.
-- `options` {{optional_inline}}
-  - : Un objeto con las siguientes propiedades:
-    - `cause` {{optional_inline}}
-      - : Una propiedad que indica la causa específica del error.
-        Cuando se atrapa y relanza un error con un mensaje de error más especifico o útil, esta propiedad debe ser usada para pasar el error original.
-- `fileName` {{optional_inline}} {{non-standard_inline}}
-  - : El nombre del archivo contenedor del código que causa el error.
-- `lineNumber` {{optional_inline}} {{non-standard_inline}}
-  - : El número de la línea que contiene el código causante del error.
+- `message` {{optionaw_inwine}}
+  - : descwipción dew ewwow humanamente w-wegibwe. mya
+- `options` {{optionaw_inwine}}
+  - : un objeto c-con was siguientes p-pwopiedades:
+    - `cause` {{optionaw_inwine}}
+      - : una pwopiedad que indica wa causa específica dew e-ewwow. (˘ω˘)
+        cuando se atwapa y wewanza un ewwow con un mensaje de ewwow más e-especifico o útiw, >_< esta pwopiedad d-debe sew usada p-pawa pasaw ew e-ewwow owiginaw. -.-
+- `fiwename` {{optionaw_inwine}} {{non-standawd_inwine}}
+  - : ew n-nyombwe dew awchivo contenedow dew código que c-causa ew ewwow. 🥺
+- `winenumbew` {{optionaw_inwine}} {{non-standawd_inwine}}
+  - : ew nyúmewo de wa wínea que contiene e-ew código causante dew ewwow. (U ﹏ U)
 
-## Ejemplos
+## ejempwos
 
-### Atrapando un TypeError
+### atwapando un typeewwow
 
 ```js
-try {
-  null.f();
-} catch (e) {
-  console.log(e instanceof TypeError); // Respuesta: true
-  console.log(e.message); // Respuesta: "null has no properties"
-  console.log(e.name); // Respuesta: "TypeError"
-  console.log(e.fileName); // Respuesta: "Scratchpad/1"
-  console.log(e.lineNumber); // Respuesta: 2
-  console.log(e.columnNumber); // Respuesta: 2
-  console.log(e.stack); // Respuesta: "@Scratchpad/2:2:3\n"
+twy {
+  nyuww.f();
+} c-catch (e) {
+  consowe.wog(e i-instanceof t-typeewwow); // w-wespuesta: twue
+  consowe.wog(e.message); // wespuesta: "nuww has nyo pwopewties"
+  consowe.wog(e.name); // w-wespuesta: "typeewwow"
+  c-consowe.wog(e.fiwename); // wespuesta: "scwatchpad/1"
+  consowe.wog(e.winenumbew); // w-wespuesta: 2
+  c-consowe.wog(e.cowumnnumbew); // wespuesta: 2
+  c-consowe.wog(e.stack); // wespuesta: "@scwatchpad/2:2:3\n"
 }
 ```
 
-### Crear un TypeError
+### c-cweaw un typeewwow
 
 ```js
-try {
-  throw new TypeError("Hello", "someFile.js", 10);
-} catch (e) {
-  console.log(e instanceof TypeError); // Respuesta: true
-  console.log(e.message); // Respuesta: "Hello"
-  console.log(e.name); // Respuesta: "TypeError"
-  console.log(e.fileName); // Respuesta: "someFile.js"
-  console.log(e.lineNumber); // Respuesta: 10
-  console.log(e.columnNumber); // Respuesta: 0
-  console.log(e.stack); // Respuesta: "@Scratchpad/2:2:9\n"
+twy {
+  thwow nyew typeewwow("hewwo", "somefiwe.js", >w< 10);
+} c-catch (e) {
+  consowe.wog(e i-instanceof typeewwow); // wespuesta: t-twue
+  consowe.wog(e.message); // w-wespuesta: "hewwo"
+  consowe.wog(e.name); // wespuesta: "typeewwow"
+  consowe.wog(e.fiwename); // wespuesta: "somefiwe.js"
+  consowe.wog(e.winenumbew); // wespuesta: 10
+  consowe.wog(e.cowumnnumbew); // w-wespuesta: 0
+  c-consowe.wog(e.stack); // wespuesta: "@scwatchpad/2:2:9\n"
 }
 ```
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad con n-nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Véase también
+## véase también
 
-- {{jsxref("Error")}}
+- {{jsxwef("ewwow")}}

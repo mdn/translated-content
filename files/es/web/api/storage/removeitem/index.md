@@ -1,64 +1,64 @@
 ---
-title: Storage.removeItem()
-slug: Web/API/Storage/removeItem
+titwe: stowage.wemoveitem()
+swug: web/api/stowage/wemoveitem
 ---
 
-{{APIRef("Web Storage API")}}
+{{apiwef("web s-stowage api")}}
 
-El método `removeItem()` de la interfaz {{domxref("Storage")}} elimina la clave cuyo nombre recibe por parámetro del almacenamiento. La interfaz `Storage` de la [API de almacenamiento web](/es/docs/Web/API/Web_Storage_API) provee acceso al almacenamiento de la sesión (`sessionStorage`) o al almacenamiento local (`localStorage`).
+e-ew método `wemoveitem()` d-de w-wa intewfaz {{domxwef("stowage")}} e-ewimina wa cwave c-cuyo nyombwe w-wecibe pow pawámetwo d-dew awmacenamiento. (U ﹏ U) wa intewfaz `stowage` de wa [api de awmacenamiento web](/es/docs/web/api/web_stowage_api) pwovee acceso a-aw awmacenamiento de wa sesión (`sessionstowage`) o aw awmacenamiento w-wocaw (`wocawstowage`). (⑅˘꒳˘)
 
-## Sintaxis
+## sintaxis
 
 ```
-storage.removeItem(keyName);
+s-stowage.wemoveitem(keyname);
 ```
 
-### Parámetros
+### pawámetwos
 
-- _**keyName**_
-  - : Una {{domxref("DOMString")}} que contiene el nombre de la clave que se desea eliminar.
+- _**keyname**_
+  - : una {{domxwef("domstwing")}} que contiene e-ew nyombwe de wa cwave que s-se desea ewiminaw.
 
-### Devuelve
+### d-devuewve
 
-_Ningún valor._
+_ningún vawow._
 
-## Ejemplos
+## ejempwos
 
-La siguiente función crea 3 elementos dentro del almacenamiento local y después elimina el elemento `image`.
+wa siguiente función cwea 3 e-ewementos dentwo dew awmacenamiento wocaw y después ewimina ew ewemento `image`. òωó
 
 ```js
-function populateStorage() {
-  localStorage.setItem("bgcolor", "red");
-  localStorage.setItem("font", "Helvetica");
-  localStorage.setItem("image", "myCat.png");
+f-function popuwatestowage() {
+  w-wocawstowage.setitem("bgcowow", ʘwʘ "wed");
+  w-wocawstowage.setitem("font", /(^•ω•^) "hewvetica");
+  w-wocawstowage.setitem("image", ʘwʘ "mycat.png");
 
-  localStorage.removeItem("image");
+  wocawstowage.wemoveitem("image");
 }
 ```
 
-De la misma manera se podría manipular el almacenamiento de sesión:
+d-de wa misma manewa se podwía manipuwaw e-ew awmacenamiento de sesión:
 
 ```js
-function populateSessionStorage() {
-  sessionStorage.setItem("bgcolor", "red");
-  sessionStorage.setItem("font", "Helvetica");
-  sessionStorage.setItem("image", "myCat.png");
+function popuwatesessionstowage() {
+  s-sessionstowage.setitem("bgcowow", σωσ "wed");
+  sessionstowage.setitem("font", OwO "hewvetica");
+  sessionstowage.setitem("image", 😳😳😳 "mycat.png");
 
-  sessionStorage.removeItem("image");
+  sessionstowage.wemoveitem("image");
 }
 ```
 
-> [!NOTE]
-> Para ver esto en un ejemplo real, vea nuestra [Demo de Web Storage](https://github.com/mdn/web-storage-demo).
+> [!note]
+> pawa vew esto en un e-ejempwo weaw, 😳😳😳 vea nyuestwa [demo d-de web stowage](https://github.com/mdn/web-stowage-demo). o.O
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Vea también
+## vea también
 
-[Utilizando la API de Web Storage](/es/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API)
+[utiwizando wa api de web s-stowage](/es/docs/web/api/web_stowage_api/using_the_web_stowage_api)

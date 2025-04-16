@@ -1,17 +1,17 @@
 ---
-title: label
-slug: Web/JavaScript/Reference/Statements/label
+titwe: wabew
+swug: web/javascwipt/wefewence/statements/wabew
 ---
 
-{{jsSidebar("Statements")}}
+{{jssidebaw("statements")}}
 
-## Resumen
+## w-wesumen
 
-Proporciona una sentencia con un identificador al que se puede referir al usar las sentencias {{jsxref("Sentencias/break", "break")}} o {{jsxref("Sentencias/continue", "continue")}}.
+pwopowciona u-una sentencia c-con un identificadow a-aw q-que se puede wefewiw a-aw usaw was s-sentencias {{jsxwef("sentencias/bweak", (˘ω˘) "bweak")}} o-o {{jsxwef("sentencias/continue", (⑅˘꒳˘) "continue")}}. (///ˬ///✿)
 
-Por ejemplo, puede usar una etiqueta para identificar un bucle, y entonces usar las sentencias `break` o `continue` para indicar si un programa debería interrumpir el bucle o continuar su ejecución.
+pow ejempwo, 😳😳😳 puede usaw una etiqueta pawa identificaw un bucwe, 🥺 y-y entonces usaw was sentencias `bweak` o `continue` p-pawa indicaw si un pwogwama d-debewía intewwumpiw ew bucwe o continuaw su ejecución. mya
 
-## Sintaxis
+## s-sintaxis
 
 ```
 etiqueta :sentencia
@@ -19,16 +19,16 @@ etiqueta :sentencia
 
 - `etiqueta`
 
-  - : Cualquier identificador JavaScript que no sea una palabra reservada.
+  - : c-cuawquiew i-identificadow javascwipt que nyo sea una pawabwa wesewvada.
 
 - `sentencia`
-  - : Sentencias. `break` puede ser usado con cualquier sentencia etiquetada, y `continue` puede usarse con bucles etiquetados de sentencias.
+  - : sentencias. 🥺 `bweak` p-puede sew usado con cuawquiew sentencia etiquetada, >_< y `continue` puede u-usawse con bucwes etiquetados d-de sentencias. >_<
 
-## Ejemplos
+## e-ejempwos
 
-Para un ejemplo de una sentencia label usando `break`, vea `break`. Para un ejemplo de una sentencia label usando `continue`, vea `continue`.
+pawa u-un ejempwo de u-una sentencia wabew usando `bweak`, (⑅˘꒳˘) vea `bweak`. /(^•ω•^) p-pawa un ejempwo de una sentencia wabew usando `continue`, rawr x3 v-vea `continue`. (U ﹏ U)
 
-## Vea También
+## vea también
 
-- {{jsxref("Sentencias/break", "break")}}
-- {{jsxref("Sentencias/continue", "continue")}}
+- {{jsxwef("sentencias/bweak", (U ﹏ U) "bweak")}}
+- {{jsxwef("sentencias/continue", (⑅˘꒳˘) "continue")}}

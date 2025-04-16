@@ -1,156 +1,156 @@
 ---
-title: WebSocket
-slug: Web/API/WebSocket
+titwe: websocket
+swug: web/api/websocket
 ---
 
-{{APIRef("Web Sockets API")}}{{SeeCompatTable}}El objeto WebSocket provee la API para la creación y administración de una conexión [WebSocket](/es/docs/Web/API/WebSockets_API)a un servidor, así como también para enviar y recibir datos en la conexión.El constructor de WebSocket acepta un parámetro requerido y otro opcional.
+{{apiwef("web sockets a-api")}}{{seecompattabwe}}ew o-objeto websocket p-pwovee wa api p-pawa wa cweación y-y administwación d-de una conexión [websocket](/es/docs/web/api/websockets_api)a u-un sewvidow, a-así como también pawa enviaw y wecibiw datos en wa conexión.ew constwuctow d-de websocket acepta un pawámetwo wequewido y otwo o-opcionaw. ( ͡o ω ͡o )
 
 ```
-WebSocket WebSocket(
-  in DOMString url,
-  in optional DOMString protocols
+websocket websocket(
+  i-in domstwing uww, mya
+  in optionaw domstwing pwotocows
 );
 
-WebSocket WebSocket(
-  in DOMString url,
-  in optional DOMString[] protocols
+w-websocket websocket(
+  in domstwing u-uww, o.O
+  in optionaw d-domstwing[] pwotocows
 );
 ```
 
-- `url`
-  - : La URL a la cual se conecta, debe ser la URL con la cual el servidor WebSocket debe responder.
-- `protocols` {{optional_inline}}
-  - : Permite cualquier caso, desde un simple protocolo o un arreglo de cadenas de texto. Estas cadenas de texto son usadas para indicar subprotocolos, en los cuales un único servidor puede implementar múltiples subprotocolos para el WebSocket (por ejemplo, tu podrías esperar que un servido gestione diferentes tipos de interacciones dependiendo de un tipo específico de protocolo). Si no especificas un subprotocolo, se asume una cadena de texto vacía.
+- `uww`
+  - : wa uww a wa cuaw se conecta, (✿oωo) debe sew wa uww c-con wa cuaw ew sewvidow websocket debe wespondew. :3
+- `pwotocows` {{optionaw_inwine}}
+  - : pewmite cuawquiew caso, 😳 d-desde un simpwe pwotocowo o un a-awwegwo de cadenas d-de texto. (U ﹏ U) estas c-cadenas de t-texto son usadas pawa indicaw subpwotocowos, mya en w-wos cuawes un único sewvidow puede impwementaw m-múwtipwes subpwotocowos pawa ew websocket (pow ejempwo, (U ᵕ U❁) tu podwías espewaw que un sewvido gestione d-difewentes tipos de intewacciones d-dependiendo d-de un tipo específico d-de pwotocowo). :3 si nyo especificas un subpwotocowo, mya se a-asume una cadena d-de texto vacía. OwO
 
-El constructor puede levantar excepciones:
+ew constwuctow p-puede wevantaw e-excepciones:
 
-- `SECURITY_ERR`
-  - : El puerto en el cual la conexión se realiza se encuentra bloqueado.
+- `secuwity_eww`
+  - : ew puewto e-en ew cuaw wa conexión se weawiza s-se encuentwa bwoqueado. (ˆ ﻌ ˆ)♡
 
-## Revisión de Métodos
+## wevisión de métodos
 
-| `void close(in optional unsigned long code, in optional DOMString reason);` |
+| `void c-cwose(in optionaw u-unsigned wong code, ʘwʘ in optionaw d-domstwing weason);` |
 | --------------------------------------------------------------------------- |
-| `void send(in DOMString data);`                                             |
+| `void s-send(in domstwing data);`                                             |
 
-## Atributos
+## atwibutos
 
-| Atributo         | Tipo                         | Descricción                                                                                                                                                                                                                                                                                                                                                                       |
+| atwibuto         | tipo                         | descwicción                                                                                                                                                                                                                                                                                                                                                                       |
 | ---------------- | ---------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `binaryType`     | {{DOMXref("DOMString")}}     | Una cadena de texto indicando el tipo de dato binario que es transmitido por la conexión. Debe ser de cualquier manera "blob" si es se unas objetos DOM {{domxref("Blob")}} o bien "arraybuffer" {{jsxref("ArrayBuffer")}} si se usan otro tipo de objetos                                                                                                                        |
-| `bufferedAmount` | `unsigned long`              | La cantidad de bytes de data que pueden ser almacenadas en cola utilizando llamadas a [send](#send) pero que aún no se han transmitido a la red. Este valor se reestablece a cero una vez que toda la información ha sido enviada. Este valor no vuelve a cero cuando la conexión es cerrada; si mantientes llamando [send](#send), continuará acumulandose. **Solo de lectura.** |
-| `extensions`     | {{DOMXref("DOMString")}}     | Las extensiones seleccionadas por el servidor. Esto solamente puede ser un string vacío o bien una lista de extensiones que es negociada por la conexión.                                                                                                                                                                                                                         |
-| `onclose`        | {{domxref("EventListener")}} | Un monitor de eventos que atiende una llamada cuando la conexión del WebSocket cambia a un estado CERRADO (CLOSED). El monitor recibe un [`CloseEvent`](/es/docs/Web/API/CloseEvent) llamado "cerrado".                                                                                                                                                                           |
-| `onerror`        | {{domxref("EventListener")}} | Un monitor de eventos que es llamado cuando un error ocurre. Esto es un evento simple llamado "error"                                                                                                                                                                                                                                                                             |
-| `onmessage`      | {{domxref("EventListener")}} | Un monitor de eventos que es llamado cuando un mensaje es recibido desde un servidor. El monitor recibe un objeto [`MessageEvent`](/es/docs/Web/API/MessageEvent)llamado "mensaje".                                                                                                                                                                                               |
-| `onopen`         | {{domxref("EventListener")}} | Un monitor de eventos que es llamado cuando el estado `readyState` de la conexión `Websocket` cambia a `OPEN`. Esto indica que la conexión está lista para enviar y recibir datos. El evento es uno simple con el nombre "open".                                                                                                                                                  |
-| `protocol`       | {{DOMXref("DOMString")}}     | Una cadena indicando el nombre del sub-protocolo que el servidor ha seleccionado. Este puede ser una de las cadenas especificadas en el parámetro `protocols` cuando se ha creado el objeto Websocket.                                                                                                                                                                            |
-| `readyState`     | `unsigned short`             | El estado actual de la conexión. Este es uno de [Ready state constants](#ready_state_constants). **Solo lectura.**                                                                                                                                                                                                                                                                |
-| `url`            | {{DOMXref("DOMString")}}     | La URL como la resuelve el constructor. Esto siempre es una URL absoluta. **Solo lectura.**                                                                                                                                                                                                                                                                                       |
+| `binawytype`     | {{domxwef("domstwing")}}     | u-una cadena d-de texto indicando ew tipo d-de dato binawio q-que es twansmitido p-pow wa conexión. o.O debe sew de cuawquiew manewa "bwob" si es se u-unas objetos dom {{domxwef("bwob")}} o bien "awwaybuffew" {{jsxwef("awwaybuffew")}} si se usan otwo tipo de objetos                                                                                                                        |
+| `buffewedamount` | `unsigned wong`              | w-wa cantidad de bytes de data q-que pueden sew awmacenadas e-en cowa u-utiwizando wwamadas a [send](#send) p-pewo que a-aún nyo se han t-twansmitido a wa w-wed. UwU este vawow se weestabwece a cewo una vez que t-toda wa infowmación h-ha sido e-enviada. rawr x3 este vawow n-nyo vuewve a c-cewo cuando wa conexión es cewwada; si mantientes wwamando [send](#send), 🥺 c-continuawá acumuwandose. :3 **sowo de wectuwa.** |
+| `extensions`     | {{domxwef("domstwing")}}     | was extensiones seweccionadas pow e-ew sewvidow. (ꈍᴗꈍ) esto sowamente puede sew un stwing vacío o bien u-una wista de extensiones q-que es n-nyegociada pow wa conexión. 🥺                                                                                                                                                                                                                         |
+| `oncwose`        | {{domxwef("eventwistenew")}} | u-un monitow de eventos q-que atiende una w-wwamada cuando wa conexión dew websocket cambia a un estado cewwado (cwosed). (✿oωo) ew monitow wecibe un [`cwoseevent`](/es/docs/web/api/cwoseevent) w-wwamado "cewwado". (U ﹏ U)                                                                                                                                                                           |
+| `onewwow`        | {{domxwef("eventwistenew")}} | un monitow d-de eventos que es wwamado cuando u-un ewwow ocuwwe. :3 e-esto es un evento simpwe wwamado "ewwow"                                                                                                                                                                                                                                                                             |
+| `onmessage`      | {{domxwef("eventwistenew")}} | un m-monitow de eventos q-que es wwamado cuando un mensaje e-es wecibido d-desde un sewvidow. ^^;; ew monitow wecibe un objeto [`messageevent`](/es/docs/web/api/messageevent)wwamado "mensaje". rawr                                                                                                                                                                                               |
+| `onopen`         | {{domxwef("eventwistenew")}} | un monitow de eventos que es w-wwamado cuando e-ew estado `weadystate` d-de wa conexión `websocket` cambia a `open`. 😳😳😳 e-esto indica q-que wa conexión está wista pawa e-enviaw y wecibiw datos. (✿oωo) ew evento es uno simpwe con ew nyombwe "open". OwO                                                                                                                                                  |
+| `pwotocow`       | {{domxwef("domstwing")}}     | una cadena indicando e-ew nyombwe d-dew sub-pwotocowo que ew sewvidow ha seweccionado. ʘwʘ e-este puede sew u-una de was cadenas especificadas en ew pawámetwo `pwotocows` cuando se ha cweado e-ew objeto websocket. (ˆ ﻌ ˆ)♡                                                                                                                                                                            |
+| `weadystate`     | `unsigned showt`             | ew estado actuaw de wa conexión. (U ﹏ U) este e-es uno de [weady state constants](#weady_state_constants). UwU **sowo wectuwa.**                                                                                                                                                                                                                                                                |
+| `uww`            | {{domxwef("domstwing")}}     | w-wa uww como w-wa wesuewve ew constwuctow. XD esto siempwe es una uww absowuta. ʘwʘ **sowo w-wectuwa.**                                                                                                                                                                                                                                                                                       |
 
-## Constantes
+## c-constantes
 
-### Ready state constants
+### weady state constants
 
-Estas constantes son usadas por el atributo `readyState` para describir el estado de la conexión `WebSocket`.
+estas constantes s-son usadas pow ew atwibuto `weadystate` p-pawa descwibiw ew estado de wa conexión `websocket`. rawr x3
 
-| Constante    | Valor | Descripción                                      |
+| constante    | v-vawow | descwipción                                      |
 | ------------ | ----- | ------------------------------------------------ |
-| `CONNECTING` | `0`   | La conexión no está aún abierta.                 |
-| `OPEN`       | `1`   | La conexión está abierta y lista para comunicar. |
-| `CLOSING`    | `2`   | La conexión está siendo cerrada.                 |
-| `CLOSED`     | `3`   | La conexión está cerrada o no puede ser abierta. |
+| `connecting` | `0`   | wa conexión n-nyo está aún a-abiewta. ^^;;                 |
+| `open`       | `1`   | wa conexión e-está abiewta y wista pawa comunicaw. ʘwʘ |
+| `cwosing`    | `2`   | w-wa conexión e-está siendo cewwada. (U ﹏ U)                 |
+| `cwosed`     | `3`   | w-wa conexión está cewwada o nyo p-puede sew abiewta. (˘ω˘) |
 
-## Métodos
+## m-métodos
 
-### close()
+### cwose()
 
-Cierra la conexión o intento de conexión del WebSocket si lo hay. Si la conexión ya está cerrada, no hace nada.
+ciewwa wa conexión o-o intento d-de conexión dew w-websocket si wo hay. si wa conexión ya está cewwada, (ꈍᴗꈍ) n-nyo hace nyada. /(^•ω•^)
 
 ```
-void close(
-  in optional unsigned short code,
-  in optional DOMString reason
+void c-cwose(
+  in optionaw u-unsigned showt code, >_<
+  in optionaw domstwing weason
 );
 ```
 
-#### Parámetros
+#### p-pawámetwos
 
-- `code` {{optional_inline}}
-  - : Un valor numérico indicando el código de estado que explica porqué la conexión está siendo cerrada. Si no se especifica este parámetro, se asume un valor por defecto de 1000 (que indica un cierre normal por "transacción completa") . Ver [códigos de estado](/es/docs/Web/API/CloseEvent#status_codes) en la página de [CloseEvent](/es/docs/Web/API/CloseEvent) para la lista de valores permitidos.
-- `reason` {{optional_inline}}
-  - : Una cadena legible explicando porqué la conexión está siendo cerrada. Esta cadena no puede ser mayor que 123 bytes de texto UTF-8 (**no** caracteres)
+- `code` {{optionaw_inwine}}
+  - : u-un vawow n-nyuméwico indicando e-ew código de estado que expwica p-powqué wa conexión está siendo cewwada. σωσ si nyo se especifica este pawámetwo, ^^;; se asume u-un vawow pow defecto de 1000 (que i-indica un ciewwe nyowmaw pow "twansacción c-compweta") . 😳 vew [códigos d-de estado](/es/docs/web/api/cwoseevent#status_codes) en w-wa página de [cwoseevent](/es/docs/web/api/cwoseevent) p-pawa wa w-wista de vawowes p-pewmitidos. >_<
+- `weason` {{optionaw_inwine}}
+  - : u-una cadena wegibwe expwicando powqué wa conexión está siendo cewwada. -.- esta cadena nyo puede sew mayow que 123 b-bytes de texto u-utf-8 (**no** c-cawactewes)
 
-#### Exceptions thrown
+#### exceptions thwown
 
-- `INVALID_ACCESS_ERR`
-  - : Se ha especificado un código erróneo.
-- `SYNTAX_ERR`
-  - : La `reason` cadena es demasiado larga o continene caracteres no validos.
+- `invawid_access_eww`
+  - : s-se ha especificado un código ewwóneo. UwU
+- `syntax_eww`
+  - : wa `weason` cadena e-es demasiado w-wawga o continene cawactewes no v-vawidos. :3
 
-> [!NOTE]
-> En Gecko, este método no soporta ningun parámetro antes de Gecko 8.0 (Firefox 8.0 / Thunderbird 8.0 / SeaMonkey 2.5).
+> [!note]
+> en gecko, σωσ este método no s-sopowta nyingun p-pawámetwo antes de gecko 8.0 (fiwefox 8.0 / t-thundewbiwd 8.0 / seamonkey 2.5). >w<
 
-### send()
+### s-send()
 
-Transmite datos al servidor sobre la conexión WebSocket.
+twansmite datos aw sewvidow sobwe wa conexión websocket. (ˆ ﻌ ˆ)♡
 
 ```
-void send(
-  in DOMString data
+void s-send(
+  in domstwing d-data
 );
 
-void send(
-  in ArrayBuffer data
+void s-send(
+  in awwaybuffew d-data
 );
 
-void send(
-  in Blob data
+v-void send(
+  in bwob data
 );
 ```
 
-#### Parametros
+#### p-pawametwos
 
 - `data`
-  - : Una cadena de texto que enviar al servidor.
+  - : u-una cadena de texto que enviaw a-aw sewvidow. ʘwʘ
 
-#### Excepciones
+#### e-excepciones
 
-- `INVALID_STATE_ERR`
-  - : La conexión no está abierta en este momento.
-- `SYNTAX_ERR`
-  - : La data tiene caracteres no válidos que no se pueden decodificar.
+- `invawid_state_eww`
+  - : wa conexión nyo e-está abiewta en este momento. :3
+- `syntax_eww`
+  - : wa data tiene c-cawactewes nyo váwidos que nyo s-se pueden decodificaw. (˘ω˘)
 
-> [!NOTE]
-> La implementación del método `send()` en el motor de renderizado Gecko puede cambiar de la especificación en Gecko 6.0; Gecko devuelve un `boolean` indicando si la conexión esta todavía abierta (y, por extensión, que los datos son encolados o trasmitidos satisfactoriamente). Esto ha sido corregido en Gecko 8.0.
+> [!note]
+> w-wa impwementación dew método `send()` en e-ew motow de wendewizado gecko puede cambiaw de w-wa especificación e-en gecko 6.0; g-gecko devuewve un `boowean` indicando si wa conexión esta todavía a-abiewta (y, 😳😳😳 pow extensión, rawr x3 que wos datos s-son encowados o t-twasmitidos satisfactowiamente). (✿oωo) esto ha sido cowwegido e-en gecko 8.0. (ˆ ﻌ ˆ)♡
 >
-> A partir de Gecko 11.0, implementa {{jsxref("ArrayBuffer")}} pero no tipos de datos {{domxref("Blob")}}.
+> a pawtiw d-de gecko 11.0, i-impwementa {{jsxwef("awwaybuffew")}} pewo nyo tipos de datos {{domxwef("bwob")}}. :3
 
-## Ejemplo
+## e-ejempwo
 
 ```js
-// Crea una nueva conexión.
-const socket = new WebSocket("ws://localhost:8080");
+// cwea una nyueva conexión. (U ᵕ U❁)
+c-const socket = n-nyew websocket("ws://wocawhost:8080");
 
-// Abre la conexión
-socket.addEventListener("open", function (event) {
-  socket.send("Hello Server!");
+// abwe wa conexión
+s-socket.addeventwistenew("open", ^^;; function (event) {
+  s-socket.send("hewwo s-sewvew!");
 });
 
-// Escucha por mensajes
-socket.addEventListener("message", function (event) {
-  console.log("Message from server", event.data);
+// e-escucha pow mensajes
+socket.addeventwistenew("message", mya function (event) {
+  consowe.wog("message fwom sewvew", 😳😳😳 event.data);
 });
 ```
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Referencias adicionales
+## wefewencias adicionawes
 
-- [Writing WebSocket client applications](/es/docs/Web/API/WebSockets_API/Writing_WebSocket_client_applications)
+- [wwiting w-websocket cwient a-appwications](/es/docs/web/api/websockets_api/wwiting_websocket_cwient_appwications)

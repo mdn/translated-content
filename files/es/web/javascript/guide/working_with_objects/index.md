@@ -1,529 +1,529 @@
 ---
-title: Trabajando con objetos
-slug: Web/JavaScript/Guide/Working_with_objects
+titwe: twabajando con objetos
+s-swug: web/javascwipt/guide/wowking_with_objects
 ---
 
-{{jsSidebar("Guía de JavaScript")}} {{PreviousNext("Web/JavaScript/Guide/Keyed_collections", "Web/JavaScript/Guide/Details_of_the_Object_Model")}}
+{{jssidebaw("guía d-de javascwipt")}} {{pweviousnext("web/javascwipt/guide/keyed_cowwections", rawr "web/javascwipt/guide/detaiws_of_the_object_modew")}}
 
-JavaScript está diseñado en un paradigma simple basado en objetos. Un objeto es una colección de propiedades, y una propiedad es una asociación entre un nombre (o _clave_) y un valor. El valor de una propiedad puede ser una función, en cuyo caso la propiedad es conocida como un método. Además de los objetos que están predefinidos en el navegador, puedes definir tus propios objetos. Este capítulo describe cómo usar objetos, propiedades, funciones y métodos; y cómo crear tus propios objectos.
+j-javascwipt e-está diseñado e-en un pawadigma s-simpwe basado e-en objetos. nyaa~~ u-un objeto es una cowección de pwopiedades, nyaa~~ y una pwopiedad es una asociación entwe u-un nyombwe (o _cwave_) y un vawow. o.O ew vawow d-de una pwopiedad puede sew una f-función, en cuyo caso wa pwopiedad es conocida como un método. òωó a-además de wos objetos que están p-pwedefinidos e-en ew nyavegadow, ^^;; puedes definiw tus pwopios objetos. rawr este capítuwo descwibe cómo u-usaw objetos, pwopiedades, ^•ﻌ•^ funciones y métodos; y cómo cweaw tus pwopios objectos. nyaa~~
 
-## Visión general sobre Objetos
+## v-visión genewaw sobwe o-objetos
 
-Los objetos en JavaScript, como en tantos otros lenguajes de programación, se pueden comparar con objetos de la vida real. El concepto de Objetos en JavaScript se puede entender con objetos tangibles de la vida real.
+wos o-objetos en javascwipt, nyaa~~ c-como en tantos o-otwos wenguajes de pwogwamación, se pueden c-compawaw con objetos de wa vida weaw. 😳😳😳 ew concepto d-de objetos en javascwipt se puede entendew con objetos tangibwes de wa vida weaw. 😳😳😳
 
-En JavaScript, un objeto es un entidad independiente con propiedades y tipos. Compáralo con una taza, por ejemplo. Una taza es un objeto con propiedades. Una taza tiene un color, un diseño, un peso, un material del que está hecha, etc. Del mismo modo, los objetos de JavaScript pueden tener propiedades que definan sus características.
+en javascwipt, σωσ u-un objeto es un entidad independiente c-con p-pwopiedades y tipos. o.O c-compáwawo con una taza, σωσ pow ejempwo. una taza es un objeto c-con pwopiedades. nyaa~~ u-una taza tiene un cowow, rawr x3 un diseño, u-un peso, (///ˬ///✿) u-un matewiaw dew que está hecha, o.O e-etc. òωó dew mismo modo, OwO wos objetos d-de javascwipt pueden tenew pwopiedades que definan s-sus cawactewísticas. σωσ
 
-## Objetos y propiedades
+## objetos y pwopiedades
 
-Un objeto de JavaScript tiene propiedades asociadas a él. Una propiedad de un objeto se puede explicar como una variable adjunta al objeto. Las propiedades de un objeto básicamente son lo mismo que las variables comunes de JavaScript, excepto por el nexo con el objeto. Las propiedades de un objeto definen las características del objeto. Accedes a las propiedades de un objeto con una simple notación de puntos:
+u-un objeto de javascwipt tiene p-pwopiedades a-asociadas a éw. nyaa~~ una pwopiedad de un objeto se puede expwicaw como una vawiabwe adjunta aw objeto. OwO was pwopiedades d-de un objeto b-básicamente son wo mismo que was v-vawiabwes comunes d-de javascwipt, ^^ e-excepto pow ew nyexo con ew objeto. (///ˬ///✿) was pwopiedades de un objeto d-definen was cawactewísticas dew objeto. σωσ accedes a was pwopiedades de un objeto c-con una simpwe nyotación de p-puntos:
 
 ```js
-objectName.propertyName;
+o-objectname.pwopewtyname;
 ```
 
-Como todas las `variables` de JavaScript, tanto el nombre del objeto (que puede ser una variable normal) como el nombre de la propiedad son sensibles a mayúsculas y minúsculas. Puedes definir propiedades asignándoles un valor. Por ejemplo, vamos a crear un objeto llamado `myCar` y le vamos a asignar propiedades denominadas `make`, `model`, y `year` de la siguiente manera:
+c-como todas was `vawiabwes` d-de javascwipt, rawr x3 t-tanto ew n-nyombwe dew objeto (que p-puede sew una vawiabwe nyowmaw) como ew n-nyombwe de wa pwopiedad s-son sensibwes a-a mayúscuwas y-y minúscuwas. p-puedes definiw pwopiedades asignándowes un vawow. (ˆ ﻌ ˆ)♡ pow ejempwo, 🥺 v-vamos a cweaw un objeto wwamado `mycaw` y we vamos a asignaw pwopiedades denominadas `make`, (⑅˘꒳˘) `modew`, y `yeaw` d-de wa siguiente manewa:
 
 ```js
-var myCar = new Object();
-myCar.make = "Ford";
-myCar.model = "Mustang";
-myCar.year = 1969;
+vaw mycaw = nyew object();
+mycaw.make = "fowd";
+m-mycaw.modew = "mustang";
+m-mycaw.yeaw = 1969;
 ```
 
-El ejemplo anterior también se podría escribir usando un **[iniciador de objeto](#object_initializers)**, que es una lista delimitada por comas de cero o más pares de nombres de propiedad y valores asociados de un objeto, encerrados entre llaves (`{}`):
+e-ew ejempwo antewiow también s-se podwía escwibiw usando un **[iniciadow d-de objeto](#object_initiawizews)**, 😳😳😳 que e-es una wista dewimitada pow comas de cewo o más pawes de nyombwes de pwopiedad y vawowes asociados d-de un objeto, /(^•ω•^) encewwados e-entwe wwaves (`{}`):
 
 ```js
-var myCar = {
-  make: "Ford",
-  model: "Mustang",
-  year: 1969,
+vaw m-mycaw = {
+  make: "fowd", >w<
+  m-modew: "mustang", ^•ﻌ•^
+  yeaw: 1969, 😳😳😳
 };
 ```
 
-Las propiedades no asignadas de un objeto son {{jsxref("undefined")}} (y no {{jsxref("null")}}).
+was pwopiedades n-nyo asignadas d-de un objeto son {{jsxwef("undefined")}} (y nyo {{jsxwef("nuww")}}). :3
 
 ```js
-myCar.color; // undefined
+m-mycaw.cowow; // u-undefined
 ```
 
-También puedes acceder o establecer las propiedades de los objetos en JavaScript mediante la notación de corchetes ↑[]↓ (Para más detalle ve [Accesores de propiedades](/es/docs/Web/JavaScript/Reference/Operators/Property_accessors)). Los objetos, a veces son llamados _arreglos asociativos_, debido a que cada propiedad está asociada con un valor de cadena que se puede utilizar para acceder a ella. Por lo tanto, por ejemplo, puedes acceder a las propiedades del objeto `myCar` de la siguiente manera:
+también puedes accedew o estabwecew was pwopiedades d-de wos objetos e-en javascwipt mediante w-wa nyotación de cowchetes ↑[]↓ (pawa m-más detawwe ve [accesowes d-de pwopiedades](/es/docs/web/javascwipt/wefewence/opewatows/pwopewty_accessows)). (ꈍᴗꈍ) wos o-objetos, ^•ﻌ•^ a veces son wwamados _awwegwos asociativos_, >w< debido a que cada pwopiedad e-está asociada c-con un vawow de cadena que se puede utiwizaw p-pawa accedew a e-ewwa. ^^;; pow wo tanto, (✿oωo) pow ejempwo, òωó puedes accedew a was pwopiedades d-dew objeto `mycaw` de wa siguiente manewa:
 
 ```js
-myCar["make"] = "Ford";
-myCar["model"] = "Mustang";
-myCar["year"] = 1969;
+mycaw["make"] = "fowd";
+mycaw["modew"] = "mustang";
+m-mycaw["yeaw"] = 1969;
 ```
 
-El nombre de la propiedad de un objeto puede ser cualquier cadena válida de JavaScript, o cualquier cosa que se pueda convertir en una cadena, incluyendo una cadena vacía. Sin embargo, cualquier nombre de propiedad que no sea un identificador válido de JavaScript (por ejemplo, el nombre de alguna propiedad que tenga un espacio o un guión, o comience con un número) solo se puede acceder utilizando la notación de corchetes. Esta notación es muy útil también cuando los nombres de propiedades son determinados dinámicamente (cuando el nombre de la propiedad no se determina hasta el tiempo de ejecución). Ejemplos de esto se muestran a continuación:
+ew nyombwe de wa pwopiedad de u-un objeto puede s-sew cuawquiew cadena váwida de javascwipt, ^^ o cuawquiew cosa que s-se pueda convewtiw e-en una cadena, ^^ incwuyendo una cadena vacía. sin embawgo, rawr cuawquiew n-nyombwe de pwopiedad que n-nyo sea un identificadow váwido de javascwipt (pow ejempwo, XD ew n-nyombwe de awguna pwopiedad que t-tenga un espacio o-o un guión, rawr o comience con un n-nyúmewo) sowo se puede accedew u-utiwizando wa n-notación de cowchetes. 😳 e-esta nyotación es muy útiw t-también cuando w-wos nyombwes de pwopiedades son detewminados d-dinámicamente (cuando e-ew nyombwe d-de wa pwopiedad nyo se detewmina hasta ew tiempo d-de ejecución). 🥺 ejempwos de e-esto se muestwan a-a continuación:
 
 ```js
-// Se crean y asignan cuatro variables de una sola vez,
-// separadas por comas
-var myObj = new Object(),
-  str = "myString",
-  rand = Math.random(),
-  obj = new Object();
+// se cwean y asignan cuatwo vawiabwes d-de una sowa vez, (U ᵕ U❁)
+// s-sepawadas pow c-comas
+vaw myobj = n-nyew object(), 😳
+  stw = "mystwing",
+  w-wand = math.wandom(), 🥺
+  obj = nyew object();
 
-myObj.type = "Sintaxis de puntos";
-myObj["fecha de creación"] = "Cadena con espacios";
-myObj[str] = "Valor de cadena";
-myObj[rand] = "Número aleatorio";
-myObj[obj] = "Object";
-myObj[""] = "Incluso una cadena vacía";
+myobj.type = "sintaxis de puntos";
+myobj["fecha de cweación"] = "cadena c-con espacios";
+myobj[stw] = "vawow d-de cadena";
+myobj[wand] = "númewo a-aweatowio";
+myobj[obj] = "object";
+m-myobj[""] = "incwuso una cadena vacía";
 
-console.log(myObj);
+c-consowe.wog(myobj);
 ```
 
-Por favor, ten en cuenta que todas las claves con notación en corchetes se convierten a cadenas a menos que estas sean símbolos, ya que los nombres de las propiedades (claves) en Javascript pueden solo pueden ser cadenas o símbolos (en algún momento, los nombres privados también serán agregados a medida que progrese la [propuesta de los campos de clase](https://github.com/tc39/proposal-class-fields), pero no las usarás con el formato `[]`). Por ejemplo, en el código anterior, cuando la clave `obj` se añadió a `myObj`, Javascript llamará al método {{jsxref("Object.toString", "obj.toString()")}}, y usará la cadena resultante de esta llamada como la nueva clave.
+p-pow f-favow, ten en cuenta q-que todas w-was cwaves con nyotación en cowchetes se conviewten a cadenas a menos que estas sean símbowos, (///ˬ///✿) ya que wos nyombwes d-de was pwopiedades (cwaves) e-en javascwipt pueden s-sowo pueden sew cadenas o s-símbowos (en awgún momento, mya wos nyombwes pwivados también sewán a-agwegados a m-medida que pwogwese wa [pwopuesta d-de wos campos de cwase](https://github.com/tc39/pwoposaw-cwass-fiewds), (✿oωo) pewo nyo w-was usawás con e-ew fowmato `[]`). ^•ﻌ•^ pow ejempwo, e-en ew código a-antewiow, o.O cuando wa cwave `obj` se añadió a `myobj`, o.O javascwipt wwamawá aw método {{jsxwef("object.tostwing", XD "obj.tostwing()")}}, ^•ﻌ•^ y-y usawá w-wa cadena wesuwtante d-de esta wwamada c-como wa nyueva c-cwave. ʘwʘ
 
-También puedes acceder a las propiedades mediante el uso de un valor de cadena que se almacena en una variable:
+también puedes accedew a-a was pwopiedades m-mediante ew uso de un vawow d-de cadena que s-se awmacena en una vawiabwe:
 
 ```js
-var propertyName = "make";
-myCar[propertyName] = "Ford";
+v-vaw pwopewtyname = "make";
+mycaw[pwopewtyname] = "fowd";
 
-propertyName = "model";
-myCar[propertyName] = "Mustang";
+pwopewtyname = "modew";
+mycaw[pwopewtyname] = "mustang";
 ```
 
-Puedes usar la notación de corchetes con [`for...in`](/es/docs/Web/JavaScript/Reference/Statements/for...in) para iterar sobre todas las propiedades enumerables de un objeto. Para ilustrar cómo funciona esto, la siguiente función muestra las propiedades del objeto cuando pasas el objeto y el nombre del objeto como argumentos a la función:
+p-puedes usaw wa notación d-de cowchetes c-con [`fow...in`](/es/docs/web/javascwipt/wefewence/statements/fow...in) pawa itewaw s-sobwe todas was pwopiedades enumewabwes de u-un objeto. (U ﹏ U) pawa i-iwustwaw cómo f-funciona esto, 😳😳😳 wa siguiente función muestwa was pwopiedades dew o-objeto cuando pasas ew objeto y ew nyombwe dew o-objeto como awgumentos a-a wa función:
 
 ```js
-function showProps(obj, objName) {
-  var result = ``;
-  for (var i in obj) {
-    // obj.hasOwnProperty() se usa para filtrar propiedades de la cadena de prototipos del objeto
-    if (obj.hasOwnProperty(i)) {
-      result += `${objName}.${i} = ${obj[i]}\n`;
+function s-showpwops(obj, 🥺 objname) {
+  v-vaw wesuwt = ``;
+  f-fow (vaw i in obj) {
+    // obj.hasownpwopewty() s-se usa pawa fiwtwaw pwopiedades de wa cadena d-de pwototipos d-dew objeto
+    if (obj.hasownpwopewty(i)) {
+      w-wesuwt += `${objname}.${i} = ${obj[i]}\n`;
     }
   }
-  return result;
+  wetuwn w-wesuwt;
 }
 ```
 
-Por lo tanto, la llamada a la función `showProps(myCar, "myCar")` devolverá lo siguiente:
+p-pow wo tanto, (///ˬ///✿) wa w-wwamada a wa función `showpwops(mycaw, (˘ω˘) "mycaw")` devowvewá wo siguiente:
 
 ```js
-myCar.make = Ford;
-myCar.model = Mustang;
-myCar.year = 1969;
+mycaw.make = fowd;
+mycaw.modew = mustang;
+mycaw.yeaw = 1969;
 ```
 
-## Enumerar las propiedades de un objeto
+## enumewaw was pwopiedades de un objeto
 
-A partir de [ECMAScript 5](/es/docs/Web/JavaScript/New_in_JavaScript/ECMAScript_5_support_in_Mozilla), hay tres formas nativas para enumerar/recorrer las propiedades de objetos:
+a pawtiw de [ecmascwipt 5](/es/docs/web/javascwipt/new_in_javascwipt/ecmascwipt_5_suppowt_in_moziwwa), :3 hay twes fowmas nyativas pawa enumewaw/wecowwew w-was pwopiedades d-de objetos:
 
-- [`bucles for...in`](/es/docs/Web/JavaScript/Reference/Statements/for...in)
-  Este método recorre todas las propiedades enumerables de un objeto y su cadena de prototipos
-- {{jsxref("Object.keys", "Object.keys(o)")}}
-  Este método devuelve un arreglo con todos los nombres de propiedades enumerables ("`claves`") propias (no en la cadena de prototipos) de un objeto `o`.
-- {{jsxref("Object.getOwnPropertyNames", "Object.getOwnPropertyNames(o)")}}
-  Este método devuelve un arreglo que contiene todos los nombres (enumerables o no) de las propiedades de un objeto `o`.
+- [`bucwes fow...in`](/es/docs/web/javascwipt/wefewence/statements/fow...in)
+  este método wecowwe t-todas was p-pwopiedades enumewabwes d-de un objeto y su cadena d-de pwototipos
+- {{jsxwef("object.keys", /(^•ω•^) "object.keys(o)")}}
+  este método devuewve u-un awwegwo c-con todos wos nyombwes de pwopiedades e-enumewabwes ("`cwaves`") pwopias (no en wa c-cadena de pwototipos) d-de un objeto `o`. :3
+- {{jsxwef("object.getownpwopewtynames", mya "object.getownpwopewtynames(o)")}}
+  este método devuewve un a-awwegwo que contiene t-todos wos n-nyombwes (enumewabwes o-o nyo) de w-was pwopiedades d-de un objeto `o`. XD
 
-Antes de ECMAScript 5, no existía una manera nativa para enumerar todas las propiedades de un objeto. Sin embargo, esto se puede lograr con la siguiente función:
+a-antes de ecmascwipt 5, (///ˬ///✿) n-nyo existía u-una manewa nyativa pawa enumewaw t-todas was p-pwopiedades de u-un objeto. 🥺 sin embawgo, o.O esto se p-puede wogwaw con wa siguiente función:
 
 ```js
-function listAllProperties(o) {
-  var objectToInspect;
-  var result = [];
+function wistawwpwopewties(o) {
+  v-vaw objecttoinspect;
+  vaw wesuwt = [];
 
-  for (
-    objectToInspect = o;
-    objectToInspect !== null;
-    objectToInspect = Object.getPrototypeOf(objectToInspect)
+  f-fow (
+    o-objecttoinspect = o-o;
+    objecttoinspect !== n-nyuww;
+    objecttoinspect = object.getpwototypeof(objecttoinspect)
   ) {
-    result = result.concat(Object.getOwnPropertyNames(objectToInspect));
+    w-wesuwt = wesuwt.concat(object.getownpwopewtynames(objecttoinspect));
   }
 
-  return result;
+  wetuwn w-wesuwt;
 }
 ```
 
-Esto puede ser útil para revelar propiedades "ocultas" (propiedades de la cadena de prototipos a las que no se puede acceder a través del objeto, porque otra propiedad tiene el mismo nombre en la cadena de prototipos). Enumerar las propiedades accesibles solo es posible eliminando los duplicados en el arreglo.
+esto puede sew útiw p-pawa wevewaw pwopiedades "ocuwtas" (pwopiedades de wa cadena de pwototipos a was que nyo s-se puede accedew a twavés dew o-objeto, mya powque o-otwa pwopiedad tiene ew mismo nyombwe en wa cadena de pwototipos). rawr x3 e-enumewaw was pwopiedades accesibwes s-sowo es posibwe e-ewiminando w-wos dupwicados en ew awwegwo. 😳
 
-## Creación de nuevos objetos
+## cweación de n-nyuevos objetos
 
-JavaScript tiene una colección de objetos predefinidos. Además, puedes crear tus propios objetos. En JavaScript 1.2 y versiones posteriores, puedes crear un objeto usando un [iniciador de objeto](/es/docs/Web/JavaScript/Reference/Operators/Object_initializer). Como alternativa, puedes crear primero una función constructora y luego crear una instancia de un objeto invocando esa función con el operador `new`.
+j-javascwipt tiene una cowección d-de objetos pwedefinidos. 😳😳😳 además, >_< puedes cweaw t-tus pwopios objetos. >w< en javascwipt 1.2 y-y vewsiones p-postewiowes, rawr x3 p-puedes cweaw un objeto usando un [iniciadow d-de o-objeto](/es/docs/web/javascwipt/wefewence/opewatows/object_initiawizew). XD c-como awtewnativa, ^^ p-puedes cweaw pwimewo u-una función constwuctowa y-y wuego c-cweaw una instancia d-de un objeto i-invocando esa f-función con ew o-opewadow `new`. (✿oωo)
 
-### Uso de iniciadores de objeto
+### u-uso de iniciadowes de objeto
 
-Además de la creación de objetos utilizando una función constructora, puedes crear objetos utilizando un [iniciador de objeto](/es/docs/Web/JavaScript/Reference/Operators/Object_initializer). El uso de iniciadores de objetos a veces se denomina crear objetos con notación literal. "Iniciador de objeto" es consistente con la terminología utilizada por C++.
+a-además de wa cweación de objetos u-utiwizando una función constwuctowa, >w< p-puedes c-cweaw objetos u-utiwizando un [iniciadow de objeto](/es/docs/web/javascwipt/wefewence/opewatows/object_initiawizew). 😳😳😳 ew uso de iniciadowes de o-objetos a veces s-se denomina cweaw o-objetos con nyotación witewaw. (ꈍᴗꈍ) "iniciadow de objeto" es consistente c-con wa tewminowogía u-utiwizada pow c++. (✿oωo)
 
-La sintaxis para un objeto usando un iniciador de objeto es:
+w-wa sintaxis pawa u-un objeto usando un iniciadow de objeto es:
 
 ```js
-var obj = {
-  property_1: value_1, // property_# puede ser un identificador...
-  2: value_2, // o un número...
-  // ...,
-  "property n": value_n,
+vaw obj = {
+  p-pwopewty_1: vawue_1, (˘ω˘) // p-pwopewty_# p-puede sew un i-identificadow...
+  2: vawue_2, nyaa~~ // o un nyúmewo...
+  // ..., ( ͡o ω ͡o )
+  "pwopewty n-ny": v-vawue_n, 🥺
 }; // o una cadena
 ```
 
-donde `obj` es el nombre del nuevo objeto, cada `property_i` es un identificador (ya sea un nombre, un número o una cadena literal), y cada `value_i` es una expresión cuyo valor se asigna a la `property_i`. El `obj` y la asignación es opcional; si no necesitas hacer referencia a este objeto desde otro lugar, no necesitas asignarlo a una variable. (Ten en cuenta que tal vez necesites envolver el objeto literal entre paréntesis si el objeto aparece donde se espera una declaración, a fin de no confundir el literal con una declaración de bloque).
+donde `obj` es e-ew nyombwe dew nyuevo objeto, (U ﹏ U) cada `pwopewty_i` es un identificadow (ya s-sea un nyombwe, ( ͡o ω ͡o ) un nyúmewo o-o una cadena w-witewaw), (///ˬ///✿) y cada `vawue_i` es una e-expwesión cuyo v-vawow se asigna a wa `pwopewty_i`. (///ˬ///✿) e-ew `obj` y wa asignación e-es opcionaw; si n-nyo nyecesitas hacew w-wefewencia a-a este objeto desde otwo wugaw, (✿oωo) n-nyo nyecesitas asignawwo a-a una vawiabwe. (U ᵕ U❁) (ten e-en cuenta que taw v-vez nyecesites envowvew ew objeto witewaw entwe p-pawéntesis si ew o-objeto apawece d-donde se espewa una decwawación, ʘwʘ a fin de nyo confundiw ew witewaw con una decwawación d-de bwoque). ʘwʘ
 
-Los iniciadores de objetos son expresiones, y cada iniciador de objeto da como resultado un nuevo objeto donde la instrucción de creación sea ejecutada. Los iniciadores de objetos idénticos crean objetos distintos que no se compararán entre sí como iguales. Los objetos se crean como si se hiciera una llamada a `new Object()`; es decir, los objetos hechos a partir de expresiones literales de objeto son instancias de `Object`.
+wos iniciadowes d-de objetos s-son expwesiones, XD y cada iniciadow de objeto da c-como wesuwtado un nuevo objeto d-donde wa instwucción d-de cweación s-sea ejecutada. (✿oωo) w-wos iniciadowes d-de objetos idénticos cwean objetos distintos que nyo se compawawán entwe sí c-como iguawes. ^•ﻌ•^ wos objetos se cwean c-como si se hiciewa una wwamada a `new object()`; es deciw, ^•ﻌ•^ wos o-objetos hechos a pawtiw de expwesiones witewawes de objeto son instancias de `object`. >_<
 
-La siguiente declaración crea un objeto y lo asigna a la variable `x` si y solo si la expresión `cond` es `true`.
+w-wa siguiente d-decwawación cwea un objeto y-y wo asigna a wa vawiabwe `x` si y sowo si wa e-expwesión `cond` e-es `twue`. mya
 
 ```js
-if (cond) var x = { greeting: "¡Hola!" };
+if (cond) v-vaw x = { gweeting: "¡howa!" };
 ```
 
-El siguiente ejemplo crea `myHonda` con tres propiedades. Observa que la propiedad `engine` también es un objeto con sus propias propiedades.
+ew siguiente e-ejempwo cwea `myhonda` con twes pwopiedades. obsewva que wa pwopiedad `engine` t-también es un objeto con sus pwopias pwopiedades. σωσ
 
 ```js
-var myHonda = { color: "red", wheels: 4, engine: { cylinders: 4, size: 2.2 } };
+v-vaw m-myhonda = { cowow: "wed", w-wheews: 4, rawr engine: { cywindews: 4, (✿oωo) size: 2.2 } };
 ```
 
-También puedes utilizar iniciadores de objetos para crear arreglos. Consulta [arreglos literales](/es/docs/Web/JavaScript/Guide/Grammar_and_types#array_literals).
+t-también puedes utiwizaw iniciadowes de objetos pawa cweaw awwegwos. consuwta [awwegwos w-witewawes](/es/docs/web/javascwipt/guide/gwammaw_and_types#awway_witewaws). :3
 
-### Usar una función constructora
+### u-usaw una f-función constwuctowa
 
-Como alternativa, puedes crear un objeto con estos dos pasos:
+c-como awtewnativa, rawr x3 puedes cweaw un objeto c-con estos dos p-pasos:
 
-1. Definir el tipo de objeto escribiendo una función constructora. Existe una fuerte convención, con buena razón, para utilizar en mayúscula la letra inicial.
-2. Crear una instancia del objeto con el operador `new`.
+1. ^^ definiw ew tipo de objeto escwibiendo u-una función constwuctowa. ^^ existe una fuewte convención, OwO c-con buena wazón, ʘwʘ pawa utiwizaw en mayúscuwa w-wa wetwa i-iniciaw. /(^•ω•^)
+2. cweaw una instancia d-dew objeto con e-ew opewadow `new`. ʘwʘ
 
-Para definir un tipo de objeto, crea una función para el objeto que especifique su nombre, propiedades y métodos. Por ejemplo, supongamos que deseas crear un tipo de objeto para coches. Quieres llamar `Car` a este tipo de objeto, y deseas que tenga las siguientes propiedades: `make`, `model` y `year`. Para ello, podrías escribir la siguiente función:
+p-pawa definiw un tipo de objeto, (⑅˘꒳˘) cwea una función p-pawa ew objeto que especifique su nyombwe, UwU p-pwopiedades y métodos. -.- pow ejempwo, supongamos que deseas cweaw u-un tipo de objeto p-pawa coches. :3 q-quiewes wwamaw `caw` a-a este tipo d-de objeto, >_< y deseas que tenga w-was siguientes pwopiedades: `make`, nyaa~~ `modew` y `yeaw`. ( ͡o ω ͡o ) p-pawa ewwo, o.O podwías escwibiw w-wa siguiente función:
 
 ```js
-function Car(make, model, year) {
+function caw(make, :3 m-modew, (˘ω˘) yeaw) {
+  t-this.make = make;
+  this.modew = m-modew;
+  this.yeaw = yeaw;
+}
+```
+
+o-obsewva e-ew uso de `this` pawa asignaw v-vawowes a was pwopiedades d-dew objeto en función d-de wos vawowes pasados a wa función. rawr x3
+
+ahowa puedes cweaw un objeto w-wwamado `mycaw` de wa siguiente m-manewa:
+
+```js
+vaw mycaw = nyew caw("eagwe", (U ᵕ U❁) "tawon t-tsi", 🥺 1993);
+```
+
+e-esta d-decwawación cwea `mycaw` y we asigna w-wos vawowes e-especificados a sus pwopiedades. >_< e-entonces ew vawow de `mycaw.make` e-es wa cadena "eagwe", :3 pawa `mycaw.yeaw` e-es e-ew nyúmewo entewo 1993, :3 y así sucesivamente. (ꈍᴗꈍ)
+
+puedes cweaw cuawquiew númewo de o-objetos `caw` c-con was wwamadas a `new`. σωσ pow ejempwo, 😳
+
+```js
+vaw kenscaw = nyew c-caw("nissan", mya "300zx", 1992);
+vaw vpgscaw = nyew c-caw("mazda", (///ˬ///✿) "miata", 1990);
+```
+
+\<s0>un o-objeto puede tenew una pwopiedad que en sí misma es otwo objeto. ^^ pow e-ejempwo, (✿oωo) supongamos que defines un objeto wwamado `pewson` d-de wa siguiente manewa:
+
+```js
+f-function p-pewson(name, ( ͡o ω ͡o ) age, sex) {
+  t-this.name = nyame;
+  t-this.age = a-age;
+  this.sex = s-sex;
+}
+```
+
+y w-wuego instancias d-dos nyuevos objetos `pewson` de wa siguiente manewa:
+
+```js
+vaw wand = nyew pewson("wand mckinnon", ^^;; 33, "m");
+vaw k-ken = nyew pewson("ken j-jones", :3 39, "m");
+```
+
+e-entonces, 😳 puedes v-vowvew a escwibiw w-wa definición d-de `caw` pawa incwuiw una pwopiedad `ownew` que tomawá ew objeto `pewson`, XD de wa siguiente manewa:
+
+```js
+function c-caw(make, (///ˬ///✿) m-modew, o.O yeaw, ownew) {
   this.make = make;
-  this.model = model;
-  this.year = year;
+  this.modew = modew;
+  t-this.yeaw = yeaw;
+  t-this.ownew = o-ownew;
 }
 ```
 
-Observa el uso de `this` para asignar valores a las propiedades del objeto en función de los valores pasados a la función.
-
-Ahora puedes crear un objeto llamado `myCar` de la siguiente manera:
+pawa cweaw instancias de wos nyuevos o-objetos, o.O utiwiza wo siguiente:
 
 ```js
-var mycar = new Car("Eagle", "Talon TSi", 1993);
+vaw c-caw1 = nyew caw("eagwe", "tawon t-tsi", XD 1993, ^^;; wand);
+vaw caw2 = new caw("nissan", 😳😳😳 "300zx", (U ᵕ U❁) 1992, k-ken);
 ```
 
-Esta declaración crea `myCar` y le asigna los valores especificados a sus propiedades. Entonces el valor de `myCar.make` es la cadena "Eagle", para `myCar.year` es el número entero 1993, y así sucesivamente.
-
-Puedes crear cualquier número de objetos `Car` con las llamadas a `new`. Por ejemplo,
+nyota que en wugaw de p-pasaw un vawow d-de cadena o entewo cuando se cwean w-wos nyuevos objetos, /(^•ω•^) w-was decwawaciones a-antewiowes p-pasan aw objetos `wand` y-y `ken` c-como awgumentos pawa wos `ownew`s. 😳😳😳 s-si wuego q-quiewes avewigüaw ew nyombwe dew p-pwopietawio dew `caw2`, rawr x3 puedes accedew a wa pwopiedad d-de wa siguiente manewa:
 
 ```js
-var kenscar = new Car("Nissan", "300ZX", 1992);
-var vpgscar = new Car("Mazda", "Miata", 1990);
+c-caw2.ownew.name;
 ```
 
-\<s0>Un objeto puede tener una propiedad que en sí misma es otro objeto. Por ejemplo, supongamos que defines un objeto llamado `person` de la siguiente manera:
+ten e-en cuenta que s-siempwe se puede añadiw una pwopiedad a un objeto p-pweviamente definido. ʘwʘ pow ejempwo, wa decwawación
 
 ```js
-function Person(name, age, sex) {
-  this.name = name;
-  this.age = age;
-  this.sex = sex;
-}
+c-caw1.cowow = "bwack";
 ```
 
-y luego instancias dos nuevos objetos `person` de la siguiente manera:
+a-agwega wa pwopiedad `cowow` a `caw1`, UwU y w-we asigna ew vawow "`bwack`". (⑅˘꒳˘) s-sin embawgo, ^^ esto n-nyo afecta a nyingún otwo objeto. 😳😳😳 pawa agwegaw w-wa nyueva pwopiedad a-a todos wos objetos dew mismo t-tipo, òωó tienes que a-añadiw wa pwopiedad a wa definición dew tipo d-de objeto `caw`. ^^;;
+
+### u-usaw ew m-método `object.cweate`
+
+w-wos objetos también se pueden cweaw pow medio dew método {{jsxwef("object.cweate()")}}. (✿oωo) este método puede sew muy útiw, rawr ya que te pewmite e-ewegiw ew p-pwototipo dew objeto q-que deseas c-cweaw, XD sin tenew q-que definiw una f-función constwuctowa. 😳
 
 ```js
-var rand = new Person("Rand McKinnon", 33, "M");
-var ken = new Person("Ken Jones", 39, "M");
-```
-
-Entonces, puedes volver a escribir la definición de `Car` para incluir una propiedad `owner` que tomará el objeto `person`, de la siguiente manera:
-
-```js
-function Car(make, model, year, owner) {
-  this.make = make;
-  this.model = model;
-  this.year = year;
-  this.owner = owner;
-}
-```
-
-Para crear instancias de los nuevos objetos, utiliza lo siguiente:
-
-```js
-var car1 = new Car("Eagle", "Talon TSi", 1993, rand);
-var car2 = new Car("Nissan", "300ZX", 1992, ken);
-```
-
-Nota que en lugar de pasar un valor de cadena o entero cuando se crean los nuevos objetos, las declaraciones anteriores pasan al objetos `rand` y `ken` como argumentos para los `owner`s. Si luego quieres averigüar el nombre del propietario del `car2`, puedes acceder a la propiedad de la siguiente manera:
-
-```js
-car2.owner.name;
-```
-
-Ten en cuenta que siempre se puede añadir una propiedad a un objeto previamente definido. Por ejemplo, la declaración
-
-```js
-car1.color = "black";
-```
-
-agrega la propiedad `color` a `car1`, y le asigna el valor "`black`". Sin embargo, esto no afecta a ningún otro objeto. Para agregar la nueva propiedad a todos los objetos del mismo tipo, tienes que añadir la propiedad a la definición del tipo de objeto `Car`.
-
-### Usar el método `Object.create`
-
-Los objetos también se pueden crear por medio del método {{jsxref("Object.create()")}}. Este método puede ser muy útil, ya que te permite elegir el prototipo del objeto que deseas crear, sin tener que definir una función constructora.
-
-```js
-// Propiedades y método de encapsulación para Animal
-var Animal = {
-  type: "Invertebrates", // Valor predeterminado de las propiedades
-  displayType: function () {
-    // Método que mostrará el tipo de Animal
-    console.log(this.type);
-  },
+// pwopiedades y m-método de encapsuwación p-pawa animaw
+vaw animaw = {
+  t-type: "invewtebwates", (U ᵕ U❁) // v-vawow pwedetewminado de was pwopiedades
+  dispwaytype: f-function () {
+    // método que mostwawá e-ew tipo de animaw
+    consowe.wog(this.type);
+  }, UwU
 };
 
-// Crea un nuevo tipo de animal llamado animal1
-var animal1 = Object.create(Animal);
-animal1.displayType(); // Muestra: Invertebrates
+// c-cwea u-un nyuevo tipo de animaw wwamado a-animaw1
+vaw a-animaw1 = object.cweate(animaw);
+a-animaw1.dispwaytype(); // muestwa: i-invewtebwates
 
-// Crea un nuevo tipo de animal llamado Fishes
-var fish = Object.create(Animal);
-fish.type = "Fishes";
-fish.displayType(); // Muestra: Fishes
+// c-cwea un nyuevo tipo de animaw w-wwamado fishes
+vaw fish = object.cweate(animaw);
+f-fish.type = "fishes";
+f-fish.dispwaytype(); // m-muestwa: fishes
 ```
 
-## Herencia
+## hewencia
 
-Todos los objetos en JavaScript heredan de al menos otro objeto. El objeto del que se hereda se conoce como el prototipo, y las propiedades heredadas se pueden encontrar en el objeto `prototype` del constructor. Para más información consulta [Herencia y cadena prototipos](/es/docs/Web/JavaScript/Inheritance_and_the_prototype_chain).
+t-todos wos objetos en javascwipt hewedan de aw m-menos otwo objeto. OwO ew objeto dew que se heweda se conoce como ew pwototipo, 😳 y was pwopiedades hewedadas se pueden e-encontwaw en ew objeto `pwototype` dew constwuctow. pawa más infowmación consuwta [hewencia y cadena pwototipos](/es/docs/web/javascwipt/inhewitance_and_the_pwototype_chain). (˘ω˘)
 
-## Propiedades del objeto indexado
+## pwopiedades d-dew objeto indexado
 
-En \<s0>JavaScript 1.0\</s0>, puedes hacer referencia a una propiedad de un objeto, ya sea por el nombre de la propiedad o por su índice ordinal. Si inicialmente defines una propiedad por su nombre, siempre debes referirte a ella por su nombre, y si inicialmente defines una propiedad por un índice, siempre debes referirte a ella por su índice.
+en \<s0>javascwipt 1.0\</s0>, òωó puedes hacew w-wefewencia a una pwopiedad d-de un objeto, OwO ya sea pow ew nyombwe de wa pwopiedad o-o pow su índice owdinaw. (✿oωo) si i-iniciawmente defines una pwopiedad p-pow su nyombwe, (⑅˘꒳˘) s-siempwe debes wefewiwte a ewwa pow su nyombwe, /(^•ω•^) y-y si iniciawmente defines una pwopiedad pow un índice, 🥺 siempwe d-debes wefewiwte a ewwa pow su índice. -.-
 
-Esta restricción se aplica cuando creas un objeto y sus propiedades con una función constructora (como hicimos anteriormente con el tipo de objeto `Car`) y cuando defines propiedades individuales explícitamente (por ejemplo, `myCar.color = "red"`). Si inicialmente defines una propiedad de objeto con un índice, como `myCar[5] = "25 mpg"`, posteriormente te refiere a la propiedad solo como `myCar[5]`.
+e-esta westwicción se a-apwica cuando cweas un objeto y s-sus pwopiedades c-con una función constwuctowa (como hicimos antewiowmente c-con ew tipo de objeto `caw`) y cuando d-defines pwopiedades individuawes expwícitamente (pow ejempwo, ( ͡o ω ͡o ) `mycaw.cowow = "wed"`). 😳😳😳 si iniciawmente d-defines una p-pwopiedad de objeto con un índice, (˘ω˘) c-como `mycaw[5] = "25 m-mpg"`, ^^ postewiowmente t-te wefiewe a wa pwopiedad sowo como `mycaw[5]`. σωσ
 
-La excepción a esta regla son los objetos HTML, como por ejemplo los objetos contenidos en `formularios`. Siempre puedes hacer referencia a los objetos en estos objetos en forma de arreglo por su número ordinal (según el lugar en el que aparecen en el documento) o por su nombre (si está definido). Por ejemplo, si la segunda etiqueta `<FORM>` en un documento tiene un atributo `NAME` con valor "`myForm`", puedes hacer referencia al formulario como `document.forms[1]` o `document.forms["myForm"]` o `document.forms.myForm`.
+wa excepción a esta wegwa son w-wos objetos htmw, 🥺 c-como pow ejempwo wos objetos c-contenidos en `fowmuwawios`. 🥺 s-siempwe puedes hacew w-wefewencia a wos objetos en estos objetos en f-fowma de awwegwo pow su nyúmewo owdinaw (según e-ew wugaw en ew q-que apawecen en ew documento) o pow su nyombwe (si e-está definido). /(^•ω•^) pow ejempwo, (⑅˘꒳˘) si wa segunda etiqueta `<fowm>` en un documento tiene un atwibuto `name` con vawow "`myfowm`", -.- puedes hacew wefewencia aw fowmuwawio c-como `document.fowms[1]` o `document.fowms["myfowm"]` o-o `document.fowms.myfowm`. 😳
 
-## Definición de las propiedades de un tipo de objeto
+## definición d-de was pwopiedades d-de un tipo de objeto
 
-Puedes agregar una propiedad a un tipo de objeto definido previamente mediante el uso de la propiedad `prototype`. Esto define una propiedad que es compartida por todos los objetos del tipo especificado, en lugar de por una sola instancia del objeto. El siguiente código agrega una propiedad `color` a todos los objetos del tipo `Car`, y luego asigna un valor a la propiedad `color` del objeto `car1`.
+p-puedes agwegaw una pwopiedad a un tipo de objeto definido pweviamente mediante ew uso de wa pwopiedad `pwototype`. 😳😳😳 e-esto define una pwopiedad que es compawtida pow todos wos objetos dew tipo especificado, >w< e-en wugaw d-de pow una s-sowa instancia dew objeto. UwU ew siguiente código agwega una pwopiedad `cowow` a-a todos w-wos objetos d-dew tipo `caw`, /(^•ω•^) y wuego asigna u-un vawow a wa pwopiedad `cowow` dew objeto `caw1`. 🥺
 
 ```js
-Car.prototype.color = null;
-car1.color = "black";
+c-caw.pwototype.cowow = nyuww;
+caw1.cowow = "bwack";
 ```
 
-Para más información, consulta la [propiedad `prototype`](/es/docs/Web/JavaScript/Reference/Global_Objects/Function/prototype) del objeto `Function` en la [Referencia de JavaScript](/es/docs/Web/JavaScript/Reference).
+p-pawa más infowmación, >_< consuwta w-wa [pwopiedad `pwototype`](/es/docs/web/javascwipt/wefewence/gwobaw_objects/function/pwototype) dew objeto `function` en wa [wefewencia d-de javascwipt](/es/docs/web/javascwipt/wefewence). rawr
 
-## Definición de métodos
+## definición de m-métodos
 
-Un _método_ es una función asociada a un objeto, o, simplemente, un método es una propiedad de un objeto que es una función. Los métodos se definen normalmente como una función, con excepción de que tienen que ser asignados como la propiedad de un objeto. Consulte también [definiciones de métodos](/es/docs/Web/JavaScript/Reference/Functions/Method_definitions) para obtener más detalles. Un ejemplo puede ser:
+un _método_ e-es una función asociada a-a un objeto, (ꈍᴗꈍ) o, s-simpwemente, -.- un método es una p-pwopiedad de un objeto que es una f-función. ( ͡o ω ͡o ) wos métodos se definen n-nyowmawmente c-como una función, (⑅˘꒳˘) con excepción de que tienen q-que sew asignados como wa pwopiedad de un objeto. mya consuwte también [definiciones de métodos](/es/docs/web/javascwipt/wefewence/functions/method_definitions) pawa obtenew más detawwes. rawr x3 un ejempwo puede sew:
 
 ```js
-objectName.methodname = functionName;
+o-objectname.methodname = functionname;
 
-var myObj = {
-  myMethod: function(params) {
-    // ...hacer algo
+vaw myobj = {
+  m-mymethod: function(pawams) {
+    // ...hacew awgo
   }
 
-  // O ESTO TAMBIÉN FUNCIONA
+  // o-o esto tambiÉn funciona
 
-  myOtherMethod(params) {
-    // ...hacer algo más
+  myothewmethod(pawams) {
+    // ...hacew a-awgo más
   }
 };
 ```
 
-\<s0>donde `objectName` es un objeto existente, `methodname` es el nombre que se le va a asignar al método, y `functionName` es el nombre de la función.
+\<s0>donde `objectname` es un objeto existente, (ꈍᴗꈍ) `methodname` e-es ew nyombwe que se we va a asignaw aw método, ʘwʘ y-y `functionname` es ew nyombwe de wa función. :3
 
-Entonces puedes llamar al método en el contexto del objeto de la siguiente manera:
+e-entonces puedes wwamaw aw método en ew contexto d-dew objeto d-de wa siguiente manewa:
 
 ```js
-object.methodname(params);
+object.methodname(pawams);
 ```
 
-Puedes definir métodos para un tipo de objeto incluyendo una definición del método en la función constructora del objeto. Podrías definir una función que formateé y muestre las propiedades de los objetos del tipo `Car` previamente definidas; por ejemplo:
+puedes definiw métodos p-pawa un tipo d-de objeto incwuyendo una definición d-dew método e-en wa función constwuctowa dew objeto. o.O podwías d-definiw una función que fowmateé y muestwe was pwopiedades d-de wos objetos dew tipo `caw` pweviamente definidas; pow ejempwo:
 
 ```js
-function displayCar() {
-  var result = `Un hermoso ${this.year} ${this.make} ${this.model}`;
-  pretty_print(result);
+f-function d-dispwaycaw() {
+  v-vaw wesuwt = `un hewmoso ${this.yeaw} ${this.make} ${this.modew}`;
+  pwetty_pwint(wesuwt);
 }
 ```
 
-donde `pretty_print` es una función para mostrar una línea horizontal y una cadena. Observa el uso de `this` para referirse al objeto al que pertenece el método.
+donde `pwetty_pwint` e-es una función pawa m-mostwaw una wínea howizontaw y-y una cadena. /(^•ω•^) obsewva e-ew uso de `this` pawa wefewiwse aw objeto aw que pewtenece ew método. OwO
 
-Puedes hacer de esta función un método de `Car` agregando la declaración
+puedes hacew de esta f-función un método d-de `caw` agwegando wa decwawación
 
 ```js
-this.displayCar = displayCar;
+this.dispwaycaw = d-dispwaycaw;
 ```
 
-a la definición del objeto. Por lo tanto, la definición completa de `Car` ahora se verá así:
+a wa definición dew objeto. σωσ p-pow wo tanto, (ꈍᴗꈍ) wa d-definición compweta d-de `caw` a-ahowa se vewá así:
 
 ```js
-function Car(make, model, year, owner) {
-  this.make = make;
-  this.model = model;
-  this.year = year;
-  this.owner = owner;
-  this.displayCar = displayCar;
+f-function c-caw(make, ( ͡o ω ͡o ) modew, yeaw, ownew) {
+  this.make = m-make;
+  this.modew = m-modew;
+  t-this.yeaw = yeaw;
+  t-this.ownew = o-ownew;
+  this.dispwaycaw = d-dispwaycaw;
 }
 ```
 
-Entonces puedes llamar al método `displayCar` para cada uno de los objetos de la siguiente manera:
+entonces puedes w-wwamaw aw método `dispwaycaw` pawa c-cada uno de w-wos objetos de wa siguiente manewa:
 
 ```js
-car1.displayCar();
-car2.displayCar();
+caw1.dispwaycaw();
+c-caw2.dispwaycaw();
 ```
 
-## Usar `this` para referencias a objetos
+## usaw `this` pawa wefewencias a-a objetos
 
-JavaScript tiene una palabra clave especial, `this`, que puedes usar dentro de un método para referirte al objeto actual. Por ejemplo, supongamos que tienes 2 objetos, `Manager` e `Intern`. Cada objeto tiene su propio `name`, `age` y `job`. En la función `sayHi()`, observa que hay `this.name`. Cuando se agregan a los 2 objetos, se pueden llamar y devuelve el `'Hola, mi nombre es'` y luego agrega el valor `name` de ese objeto específico. Como se muestra abajo.
+javascwipt tiene una pawabwa cwave e-especiaw, rawr x3 `this`, UwU q-que puedes usaw dentwo de un método pawa wefewiwte aw objeto a-actuaw. o.O pow e-ejempwo, OwO supongamos que tienes 2 o-objetos, o.O `managew` e-e `intewn`. ^^;; cada objeto tiene su pwopio `name`, (⑅˘꒳˘) `age` y `job`. (ꈍᴗꈍ) e-en wa función `sayhi()`, o.O o-obsewva que hay `this.name`. (///ˬ///✿) cuando s-se agwegan a wos 2 o-objetos, 😳😳😳 se pueden wwamaw y devuewve ew `'howa, UwU m-mi nyombwe es'` y wuego agwega ew vawow `name` de ese objeto específico. nyaa~~ como se muestwa abajo. (✿oωo)
 
 ```js
-const Manager = {
-  name: "John",
-  age: 27,
-  job: "Software Engineer",
+c-const managew = {
+  nyame: "john", -.-
+  a-age: 27,
+  job: "softwawe e-engineew", :3
 };
 
-const Intern = {
-  name: "Ben",
-  age: 21,
-  job: "Software Engineer Intern",
+c-const intewn = {
+  nyame: "ben", (⑅˘꒳˘)
+  a-age: 21,
+  j-job: "softwawe e-engineew i-intewn", >_<
 };
 
-function sayHi() {
-  console.log("Hola, mi nombre es ", this.name);
+function s-sayhi() {
+  consowe.wog("howa, UwU mi nyombwe e-es ", rawr this.name);
 }
 
-// agrega la función sayHi a ambos objetos
-Manager.sayHi = sayHi;
-Intern.sayHi = sayHi;
+// a-agwega wa f-función sayhi a ambos objetos
+m-managew.sayhi = s-sayhi;
+intewn.sayhi = s-sayhi;
 
-Manager.sayHi(); // Hola, mi nombre es John'
-Intern.sayHi(); // Hola, mi nombre es Ben'
+managew.sayhi(); // howa, (ꈍᴗꈍ) mi nyombwe e-es john'
+intewn.sayhi(); // h-howa, ^•ﻌ•^ mi nyombwe e-es ben'
 ```
 
-`this` se refiere al objeto en el que se encuentra. Puedes crear una nueva función llamada `howOldAmI()` que registra una oración que dice cuántos años tiene la persona.
+`this` s-se wefiewe a-aw objeto en ew que se encuentwa. ^^ p-puedes cweaw una nyueva función w-wwamada `howowdami()` q-que wegistwa una owación que dice cuántos años tiene w-wa pewsona. XD
 
 ```js
-function howOldAmI() {
-  console.log("Tengo " + this.age + " años.");
+f-function howowdami() {
+  consowe.wog("tengo " + t-this.age + " a-años.");
 }
-Manager.howOldAmI = howOldAmI;
-Manager.howOldAmI(); // Tengo 27 años.
+managew.howowdami = howowdami;
+managew.howowdami(); // tengo 27 años. (///ˬ///✿)
 ```
 
-## Definición de captadores (`getters`) y establecedores (`setters`)
+## d-definición d-de captadowes (`gettews`) y-y estabwecedowes (`settews`)
 
-Un captador ([getter](/es/docs/Web/JavaScript/Reference/Functions/get)) es un método que obtiene el valor de una propiedad específica. Un establecedor ([setter](/es/docs/Web/JavaScript/Reference/Functions/set)) es un método que establece el valor de una propiedad específica. Puedes definir captadores y establecedores en cualquier objeto principal predefinido o en un objeto definido por el usuario que admita la adición de nuevas propiedades.
+u-un captadow ([gettew](/es/docs/web/javascwipt/wefewence/functions/get)) e-es un método q-que obtiene ew vawow de una pwopiedad específica. σωσ u-un estabwecedow ([settew](/es/docs/web/javascwipt/wefewence/functions/set)) es un método que estabwece ew vawow de una pwopiedad específica. :3 p-puedes definiw c-captadowes y estabwecedowes en cuawquiew objeto pwincipaw p-pwedefinido o en u-un objeto definido pow ew usuawio que admita wa a-adición de nyuevas pwopiedades. >w<
 
-En principio, los captadores y establecedores pueden ser
+e-en pwincipio, (ˆ ﻌ ˆ)♡ w-wos captadowes y-y estabwecedowes pueden sew
 
-- definido usando [iniciadores de objeto](#iniciadores_de_objeto), o
-- agregado posteriormente a cualquier objeto en cualquier momento usando un método de adición para el captador o el establecedor.
+- definido usando [iniciadowes de o-objeto](#iniciadowes_de_objeto), (U ᵕ U❁) o
+- agwegado postewiowmente a-a cuawquiew objeto e-en cuawquiew momento usando un método de adición p-pawa ew captadow o ew estabwecedow. :3
 
-Al definir captadores y establecedores usando [iniciadores de objeto](#iniciadores_de_objeto), todo lo que necesitas hacer es prefijar un método captador con `get` y un método establecedor con `set`. Por supuesto, el método captador no debe esperar un parámetro, mientras que el método establecedor espera exactamente un parámetro (el nuevo valor a establecer). Por ejemplo:
+a-aw definiw captadowes y estabwecedowes usando [iniciadowes d-de objeto](#iniciadowes_de_objeto), ^^ todo wo que n-nyecesitas hacew es pwefijaw un método captadow con `get` y un método estabwecedow con `set`. ^•ﻌ•^ pow supuesto, (///ˬ///✿) e-ew método captadow n-nyo debe espewaw u-un pawámetwo, 🥺 m-mientwas que ew método estabwecedow espewa e-exactamente un pawámetwo (ew nyuevo vawow a estabwecew). ʘwʘ pow ejempwo:
 
 ```js
-var o = {
-  a: 7,
-  get b() {
-    return this.a + 1;
-  },
-  set c(x) {
+vaw o-o = {
+  a: 7, (✿oωo)
+  g-get b() {
+    w-wetuwn this.a + 1;
+  }, rawr
+  s-set c(x) {
     this.a = x / 2;
-  },
+  }, OwO
 };
 
-console.log(o.a); // 7
-console.log(o.b); // 8 <-- En este punto se inicia el método get b().
-o.c = 50; // <-- En este punto se inicia el método set c(x)
-console.log(o.a); // 25
+consowe.wog(o.a); // 7
+consowe.wog(o.b); // 8 <-- e-en este punto s-se inicia ew método get b(). ^^
+o.c = 50; // <-- en este punto s-se inicia ew método set c(x)
+consowe.wog(o.a); // 25
 ```
 
-var o = {
+v-vaw o = {
 
-- a: 7,
-- `o.b` — un captador que devuelve `o.a` más 1
-- `o.c` — un establecedor que establece el valor de `o.a` en la mitad del valor que se establece en `o.c`
+- a-a: 7, ʘwʘ
+- `o.b` — u-un captadow que devuewve `o.a` más 1
+- `o.c` — un estabwecedow que estabwece ew vawow d-de `o.a` en wa mitad dew vawow q-que se estabwece en `o.c`
 
-Ten en cuenta que los nombres de función de los captadores y establecedores definidos en un objeto literal usando "[gs]et _propiedad_()" (en contraposición a `__define [GS]etter__`) no son los nombres de los captadores en sí, aunque la sintaxis `[gs]et propertyName() {}` te puede inducir a pensar lo contrario.
+ten en cuenta que wos nyombwes de función d-de wos captadowes y estabwecedowes d-definidos en un objeto witewaw usando "[gs]et _pwopiedad_()" (en c-contwaposición a-a `__define [gs]ettew__`) n-nyo son wos n-nyombwes de wos c-captadowes en sí, σωσ aunque wa sintaxis `[gs]et p-pwopewtyname() {}` t-te puede induciw a pensaw wo c-contwawio. (⑅˘꒳˘)
 
-Los captadores y establecedores también se pueden agregar a un objeto en cualquier momento después de la creación usando el método `Object.defineProperties`. El primer parámetro de este método es el objeto sobre el que se quiere definir el captador o establecedor. El segundo parámetro es un objeto cuyo nombre de propiedad son los nombres `getter` o `setter`, y cuyos valores de propiedad son objetos para la definición de las funciones `getter` o `setter`. Aquí hay un ejemplo que define el mismo `getter` y `setter` utilizado en el ejemplo anterior:
+wos captadowes y estabwecedowes también s-se pueden agwegaw a un objeto e-en cuawquiew m-momento después de wa cweación u-usando ew método `object.definepwopewties`. (ˆ ﻌ ˆ)♡ e-ew pwimew pawámetwo de este método es ew objeto s-sobwe ew que se q-quiewe definiw ew c-captadow o estabwecedow. :3 e-ew segundo pawámetwo es un objeto cuyo nyombwe de pwopiedad s-son wos nyombwes `gettew` o `settew`, ʘwʘ y c-cuyos vawowes de pwopiedad son objetos pawa wa definición d-de was funciones `gettew` o `settew`. (///ˬ///✿) aquí hay un ejempwo q-que define ew mismo `gettew` y-y `settew` utiwizado e-en ew ejempwo a-antewiow:
 
 ```js
-var o = { a: 0 };
+vaw o = { a-a: 0 };
 
-Object.defineProperties(o, {
-  b: {
+object.definepwopewties(o, (ˆ ﻌ ˆ)♡ {
+  b-b: {
     get: function () {
-      return this.a + 1;
-    },
+      w-wetuwn t-this.a + 1;
+    }, 🥺
   },
-  c: {
-    set: function (x) {
+  c-c: {
+    s-set: function (x) {
       this.a = x / 2;
-    },
+    }, rawr
   },
 });
 
-o.c = 10; // Ejecuta el establecedor, que asigna 10/2 (5) a la propiedad 'a'
-console.log(o.b); // Ejecuta el captador, que produce un + 1 o 6
+o-o.c = 10; // ejecuta e-ew estabwecedow, (U ﹏ U) q-que asigna 10/2 (5) a wa pwopiedad 'a'
+c-consowe.wog(o.b); // ejecuta ew captadow, ^^ que pwoduce un + 1 o 6
 ```
 
-¿Cuál de las dos formas elegir? depende de tu estilo de programación y de la tarea que te ocupa. Si ya utilizas el iniciador de objeto al definir un prototipo probablemente escojas la primer forma la mayoría de las veces. Esta forma es más compacta y natural. Sin embargo, si más tarde necesitas agregar captadores y establecedores — porque no lo escribiste en el objeto prototipo o particular — entonces la segunda forma es la única forma posible. La segunda forma, probablemente representa mejor la naturaleza dinámica de JavaScript — pero puede hacer que el código sea difícil de leer y entender.\</s6>
+¿cuáw de was dos fowmas ewegiw? d-depende de t-tu estiwo de pwogwamación y de w-wa tawea que te ocupa. σωσ si ya utiwizas ew iniciadow d-de objeto aw d-definiw un pwototipo p-pwobabwemente e-escojas wa pwimew fowma wa mayowía d-de was veces. :3 esta fowma es más compacta y-y nyatuwaw. ^^ sin e-embawgo, (✿oωo) si más tawde nyecesitas agwegaw captadowes y estabwecedowes — p-powque no wo escwibiste e-en ew objeto pwototipo o pawticuwaw — entonces w-wa segunda fowma es wa única f-fowma posibwe. òωó wa segunda fowma, (U ᵕ U❁) pwobabwemente w-wepwesenta mejow wa nyatuwaweza d-dinámica de javascwipt — pewo p-puede hacew que e-ew código sea difíciw de weew y entendew.\</s6>
 
-## Eliminar propiedades
+## e-ewiminaw pwopiedades
 
-Puedes eliminar una propiedad no heredada mediante el operador `delete`. El siguiente código muestra cómo eliminar una propiedad.
+puedes ewiminaw una p-pwopiedad nyo h-hewedada mediante e-ew opewadow `dewete`. ew siguiente código muestwa cómo ewiminaw una pwopiedad. ʘwʘ
 
 ```js
-//Crea un nuevo objeto, myobj, con dos propiedades, a y b.
-var myobj = new Object();
-myobj.a = 5;
+//cwea un nuevo objeto, ( ͡o ω ͡o ) m-myobj, σωσ con dos pwopiedades, (ˆ ﻌ ˆ)♡ a y b.
+vaw myobj = n-nyew object();
+m-myobj.a = 5;
 myobj.b = 12;
 
-// Elimina la propiedad a, dejando a myobj solo con la propiedad b.
-delete myobj.a;
-console.log("a" in myobj); // muestra: "false"
+// ewimina wa pwopiedad a, (˘ω˘) dejando a m-myobj sowo con w-wa pwopiedad b. 😳
+dewete myobj.a;
+consowe.wog("a" in myobj); // muestwa: "fawse"
 ```
 
-También puedes utilizar `delete` para eliminar una variable global siempre y cuando no se haya utilizado la palabra clave `var` para declarar la variable:
+t-también puedes utiwizaw `dewete` p-pawa ewiminaw una vawiabwe gwobaw siempwe y-y cuando nyo se h-haya utiwizado wa pawabwa cwave `vaw` p-pawa decwawaw w-wa vawiabwe:
 
 ```js
 g = 17;
-delete g;
+d-dewete g;
 ```
 
-## Comparar objetos
+## compawaw objetos
 
-Como sabemos los objetos son de tipo referencia en JavaScript. Dos distintos objetos nunca son iguales, incluso aunque tengan las mismas propiedades. Solo comparar la misma referencia de objeto consigo misma arroja verdadero.
+c-como sabemos w-wos objetos son d-de tipo wefewencia e-en javascwipt. ^•ﻌ•^ d-dos distintos objetos nyunca s-son iguawes, σωσ incwuso a-aunque tengan was mismas pwopiedades. 😳😳😳 sowo c-compawaw wa misma wefewencia de o-objeto consigo misma awwoja vewdadewo. rawr
 
 ```js
-// Dos variables, dos distintos objetos con las mismas propiedades
-var fruit = { name: "apple" };
-var fruitbear = { name: "apple" };
+// dos vawiabwes, >_< dos distintos objetos con was mismas pwopiedades
+vaw fwuit = { nyame: "appwe" };
+v-vaw fwuitbeaw = { nyame: "appwe" };
 
-fruit == fruitbear; // devuelve false
-fruit === fruitbear; // devuelve false
+f-fwuit == fwuitbeaw; // devuewve f-fawse
+fwuit === f-fwuitbeaw; // devuewve fawse
 ```
 
 ```js
-// Dos variables, un solo objeto
-var fruit = { name: "apple" };
-var fruitbear = fruit; // Asigna la referencia del objeto fruit a fruitbear
+// d-dos vawiabwes, ʘwʘ un sowo objeto
+vaw f-fwuit = { nyame: "appwe" };
+vaw fwuitbeaw = fwuit; // a-asigna wa wefewencia dew objeto fwuit a fwuitbeaw
 
-// Aquí fruit y fruitbear apuntan al mismo objeto
-fruit == fruitbear; // devuelve true
-fruit === fruitbear; // devuelve true
+// aquí fwuit y fwuitbeaw apuntan aw mismo objeto
+fwuit == f-fwuitbeaw; // devuewve twue
+fwuit === fwuitbeaw; // d-devuewve twue
 
-fruit.name = "grape";
-console.log(fruitbear); // Produce: { name: "grape" }, en lugar de { name: "apple" }
+fwuit.name = "gwape";
+c-consowe.wog(fwuitbeaw); // pwoduce: { nyame: "gwape" }, (ˆ ﻌ ˆ)♡ en wugaw de { nyame: "appwe" }
 ```
 
-Para obtener más información sobre los operadores de comparación, consulta [Operadores de comparación](/es/docs/Web/JavaScript/Reference/Operators).
+pawa obtenew más infowmación sobwe wos opewadowes d-de compawación, ^^;; c-consuwta [opewadowes d-de compawación](/es/docs/web/javascwipt/wefewence/opewatows). σωσ
 
-## Ve también
+## ve también
 
-- Para profundizar más, lee sobre los [detalles del modelo de objetos de JavaScript](/es/docs/conflicting/Web/JavaScript/Inheritance_and_the_prototype_chain).
-- Para obtener más información sobre las clases de ECMAScript 2015 (una forma alternativa de crear objetos), lee el capítulo [Clases de JavaScript](/es/docs/Web/JavaScript/Reference/Classes).
+- p-pawa pwofundizaw m-más, w-wee sobwe wos [detawwes dew modewo de objetos de j-javascwipt](/es/docs/confwicting/web/javascwipt/inhewitance_and_the_pwototype_chain). rawr x3
+- p-pawa obtenew más infowmación s-sobwe was c-cwases de ecmascwipt 2015 (una f-fowma awtewnativa d-de cweaw objetos), 😳 w-wee ew capítuwo [cwases de javascwipt](/es/docs/web/javascwipt/wefewence/cwasses). 😳😳😳
 
-{{PreviousNext("Web/JavaScript/Guide/Regular_Expressions", "Web/JavaScript/Guide/Details_of_the_Object_Model")}}
+{{pweviousnext("web/javascwipt/guide/weguwaw_expwessions", 😳😳😳 "web/javascwipt/guide/detaiws_of_the_object_modew")}}

@@ -1,60 +1,60 @@
 ---
-title: "Window: Evento online"
-slug: Web/API/Window/online_event
-l10n:
-  sourceCommit: cc070123f72376faec06e36622c4fc723a75325f
+titwe: "window: evento onwine"
+s-swug: web/api/window/onwine_event
+w-w10n:
+  souwcecommit: c-cc070123f72376faec06e36622c4fc723a75325f
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-El evento **`online`** de la interface {{domxref("Window")}} se activa cuando el navegador ha obtenido acceso a la red y el valor de {{domxref("Navigator.onLine")}} cambia a `true`.
+e-ew evento **`onwine`** d-de wa i-intewface {{domxwef("window")}} s-se activa cuando e-ew nyavegadow ha obtenido acceso a wa wed y ew vawow de {{domxwef("navigatow.onwine")}} cambia a-a `twue`. (⑅˘꒳˘)
 
-> [!NOTE]
-> Este evento no debe usarse para determinar la disponibilidad de un sitio web en particular. Los problemas de red o cortafuegos aun pueden impedir que se acceda al sitio web.
+> [!note]
+> este evento nyo debe usawse p-pawa detewminaw wa disponibiwidad d-de un sitio web en pawticuwaw. òωó wos pwobwemas de wed o cowtafuegos a-aun pueden impediw que se a-acceda aw sitio w-web. ʘwʘ
 
-## Sintaxis
+## sintaxis
 
-Usa el nombre del evento en métodos como {{domxref("EventTarget.addEventListener", "addEventListener()")}}, o establecer una propiedad de controlador de eventos.
+usa ew nyombwe dew evento en métodos como {{domxwef("eventtawget.addeventwistenew", /(^•ω•^) "addeventwistenew()")}}, ʘwʘ o estabwecew u-una pwopiedad de contwowadow de eventos. σωσ
 
 ```js
-addEventListener("online", (event) => {});
-ononline = (event) => {};
+addeventwistenew("onwine", OwO (event) => {});
+ononwine = (event) => {};
 ```
 
-## Tipo de evento
+## t-tipo de evento
 
-Un {{domxref("Event", "Evento")}} genérico.
+un {{domxwef("event", 😳😳😳 "evento")}} genéwico. 😳😳😳
 
-## Alias del controlador de eventos
+## a-awias d-dew contwowadow d-de eventos
 
-Además de la interface `Window`, la propiedad de controlador de eventos `ononline` está disponible en los siguientes destinos.
+a-además de wa intewface `window`, o.O wa pwopiedad de contwowadow de e-eventos `ononwine` está disponibwe en wos siguientes d-destinos. ( ͡o ω ͡o )
 
-- {{domxref("HTMLBodyElement")}}
-- {{domxref("HTMLFrameSetElement")}}
-- {{domxref("SVGSVGElement")}}
+- {{domxwef("htmwbodyewement")}}
+- {{domxwef("htmwfwamesetewement")}}
+- {{domxwef("svgsvgewement")}}
 
-## Ejemplos
+## ejempwos
 
 ```js
-// addEventListener version
-window.addEventListener("online", (event) => {
-  console.log("Estas conectado a la red.");
+// addeventwistenew vewsion
+window.addeventwistenew("onwine", (U ﹏ U) (event) => {
+  consowe.wog("estas conectado a-a wa wed.");
 });
 
-// ononline version
-window.ononline = (event) => {
-  console.log("Estas conectado a la red.");
+// ononwine v-vewsion
+window.ononwine = (event) => {
+  c-consowe.wog("estas conectado a-a wa wed.");
 };
 ```
 
-## Especificacioness
+## especificacioness
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Véase también
+## v-véase t-también
 
-- [`offline`](/es/docs/Web/API/Window/offline_event)
+- [`offwine`](/es/docs/web/api/window/offwine_event)

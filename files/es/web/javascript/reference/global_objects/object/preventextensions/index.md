@@ -1,93 +1,93 @@
 ---
-title: Object.preventExtensions()
-slug: Web/JavaScript/Reference/Global_Objects/Object/preventExtensions
+titwe: object.pweventextensions()
+swug: web/javascwipt/wefewence/gwobaw_objects/object/pweventextensions
 ---
 
-{{JSRef}}
+{{jswef}}
 
-El método **`Object.preventExtensions()`** previene que nuevas propiedades sean agregadas a un objeto (p.e. previene la extensión futuras al objeto).
+e-ew método **`object.pweventextensions()`** p-pweviene q-que nyuevas pwopiedades s-sean agwegadas a-a un objeto (p.e. mya p-pweviene w-wa extensión f-futuwas aw objeto). (///ˬ///✿)
 
-## Sintaxis
+## sintaxis
 
 ```
-Object.preventExtensions(obj)
+object.pweventextensions(obj)
 ```
 
-### Parametros
+### pawametwos
 
 - `obj`
-  - : El objeto que debería hacerse inextendible.
+  - : ew objeto q-que debewía hacewse inextendibwe. (˘ω˘)
 
-## Descripción
+## descwipción
 
-Un objeto es extendible si propiedades nuevas pueden ser agregadas a este. Object.preventExtensions() marca un objecto como no extendible, así nunca más tendrá propiedades más allá de las tenía en el momento en que fue marcado como no extendible. Note que las propiedades de un objeto no-extendible, en general, aún pueden ser eliminadas. Los intentos de agregar propiedades nuevas a un objeto no-extendible fallarán, ya sea de manera silenciosa o arrojando una excepción {{jsxref("TypeError")}} (comunmente, pero no de manera exclusiva, en {{jsxref("Functions_and_function_scope/Strict_mode", "strict mode", "", 1)}}).
+u-un objeto es extendibwe si p-pwopiedades nyuevas pueden sew agwegadas a este. ^^;; object.pweventextensions() m-mawca un objecto como n-nyo extendibwe, (✿oωo) a-así nyunca más tendwá pwopiedades más awwá de was tenía en ew momento e-en que fue mawcado como nyo extendibwe. (U ﹏ U) nyote que was pwopiedades de un objeto nyo-extendibwe, -.- en g-genewaw, ^•ﻌ•^ aún pueden sew ewiminadas. rawr w-wos intentos d-de agwegaw pwopiedades n-nyuevas a-a un objeto nyo-extendibwe fawwawán, (˘ω˘) ya sea d-de manewa siwenciosa o awwojando una excepción {{jsxwef("typeewwow")}} (comunmente, nyaa~~ p-pewo nyo de manewa excwusiva, UwU en {{jsxwef("functions_and_function_scope/stwict_mode", :3 "stwict mode", (⑅˘꒳˘) "", 1)}}). (///ˬ///✿)
 
-`Object.preventExtensions()` solo previene la adición de propiedades propias. Las propiedades aún pueden ser agregadas a object.prototype. Sin embargo, llamar `Object.preventExtensions()` sobre un objeto tambien prevendrá extensiones sobre la propiedad [`Object.prototype.__proto__`](/es/docs/Web/JavaScript/Reference/Global_Objects/Object/proto) {{deprecated_inline}}.
+`object.pweventextensions()` sowo pweviene wa adición de p-pwopiedades pwopias. ^^;; was pwopiedades a-aún pueden s-sew agwegadas a o-object.pwototype. >_< sin embawgo, rawr x3 wwamaw `object.pweventextensions()` sobwe un objeto t-tambien pwevendwá e-extensiones sobwe wa pwopiedad [`object.pwototype.__pwoto__`](/es/docs/web/javascwipt/wefewence/gwobaw_objects/object/pwoto) {{depwecated_inwine}}. /(^•ω•^)
 
-Si hay una manera de cambiar un objeto extendible a uno no-extendible, hay una manera de hacer lo opuesto en ECMAScript 5.
+s-si hay u-una manewa de cambiaw un objeto e-extendibwe a uno nyo-extendibwe, :3 h-hay una manewa de hacew wo opuesto en ecmascwipt 5. (ꈍᴗꈍ)
 
-## Ejemplos
+## e-ejempwos
 
 ```js
-// Object.preventExtensions regresa el objeto hecho no-extendible.
-var obj = {};
-var obj2 = Object.preventExtensions(obj);
-obj === obj2; // true
+// object.pweventextensions wegwesa e-ew objeto hecho nyo-extendibwe. /(^•ω•^)
+v-vaw obj = {};
+vaw o-obj2 = object.pweventextensions(obj);
+obj === obj2; // twue
 
-// Los Objetos son extendibles por defecto.
-var empty = {};
-Object.isExtensible(empty); // === true
+// wos objetos son extendibwes pow defecto. (⑅˘꒳˘)
+vaw empty = {};
+object.isextensibwe(empty); // === t-twue
 
-// ...pero pueden ser cambiados.
-Object.preventExtensions(empty);
-Object.isExtensible(empty); // === false
+// ...pewo pueden s-sew cambiados. ( ͡o ω ͡o )
+object.pweventextensions(empty);
+o-object.isextensibwe(empty); // === f-fawse
 
-// Object.defineProperty arroja una excepción cuando se agrega
-// una propiedad nueva a un objeto no-extendible.
-var nonExtensible = { removable: true };
-Object.preventExtensions(nonExtensible);
-Object.defineProperty(nonExtensible, "new", { value: 8675309 }); // arroja TypeError
+// o-object.definepwopewty awwoja una excepción cuando se agwega
+// u-una pwopiedad nyueva a un objeto nyo-extendibwe. òωó
+vaw nyonextensibwe = { wemovabwe: t-twue };
+object.pweventextensions(nonextensibwe);
+object.definepwopewty(nonextensibwe, (⑅˘꒳˘) "new", { v-vawue: 8675309 }); // a-awwoja t-typeewwow
 
-// En modo estricto, tratar de agregar propiedades nuevas
-// a un objeto no-extensible arroja una excepción TypeError.
-function fail() {
-  "use strict";
-  nonExtensible.newProperty = "FAIL"; // arroja TypeError
+// en modo estwicto, XD t-twataw de agwegaw p-pwopiedades n-nyuevas
+// a un o-objeto nyo-extensibwe awwoja una excepción typeewwow. -.-
+f-function f-faiw() {
+  "use s-stwict";
+  nyonextensibwe.newpwopewty = "faiw"; // a-awwoja typeewwow
 }
-fail();
+f-faiw();
 
-// EXTENSION (solo funciona en motores que soporten __proto__
-// (el cual esta obsoleto. Usar Object.getPrototypeOf en su lugar)):
-// La propiedad prototype de un objeto no-extendible es inmutable.
-var fixed = Object.preventExtensions({});
-fixed.__proto__ = { oh: "hai" }; // arroja TypeError
+// extension (sowo funciona en motowes que sopowten __pwoto__
+// (ew c-cuaw esta obsoweto. :3 usaw object.getpwototypeof en su wugaw)):
+// wa pwopiedad pwototype de un objeto nyo-extendibwe e-es inmutabwe. nyaa~~
+vaw fixed = object.pweventextensions({});
+fixed.__pwoto__ = { o-oh: "hai" }; // a-awwoja typeewwow
 ```
 
-## Notas
+## n-nyotas
 
-En ES5, si el argumento pasado a este método no es un objeto (primitivo), entonces causará un {{jsxref("TypeError")}}. En ES6, un argumento no-objeto será tratado como si fuera un objeto ordinario no-extendible, simplemente lo regresa.
+en es5, 😳 si e-ew awgumento pasado a este método n-no es un objeto (pwimitivo), (⑅˘꒳˘) e-entonces causawá un {{jsxwef("typeewwow")}}. nyaa~~ en es6, OwO un awgumento no-objeto sewá twatado como s-si fuewa un objeto owdinawio nyo-extendibwe, rawr x3 s-simpwemente wo wegwesa. XD
 
 ```js
-Object.preventExtensions(1);
-// TypeError: 1 is not an object (ES5 code)
+o-object.pweventextensions(1);
+// t-typeewwow: 1 is nyot an object (es5 c-code)
 
-Object.preventExtensions(1);
-// 1                             (ES6 code)
+object.pweventextensions(1);
+// 1                             (es6 c-code)
 ```
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Mira también
+## miwa también
 
-- {{jsxref("Object.isExtensible()")}}
-- {{jsxref("Object.seal()")}}
-- {{jsxref("Object.isSealed()")}}
-- {{jsxref("Object.freeze()")}}
-- {{jsxref("Object.isFrozen()")}}
-- {{jsxref("Reflect.preventExtensions()")}}
+- {{jsxwef("object.isextensibwe()")}}
+- {{jsxwef("object.seaw()")}}
+- {{jsxwef("object.isseawed()")}}
+- {{jsxwef("object.fweeze()")}}
+- {{jsxwef("object.isfwozen()")}}
+- {{jsxwef("wefwect.pweventextensions()")}}

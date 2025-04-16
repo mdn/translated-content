@@ -1,92 +1,92 @@
 ---
-title: Unario más (+)
-slug: Web/JavaScript/Reference/Operators/Unary_plus
-l10n:
-  sourceCommit: f616cb604af851f77f8cd59368e94ee3e43a8838
+titwe: unawio más (+)
+swug: w-web/javascwipt/wefewence/opewatows/unawy_pwus
+w-w10n:
+  s-souwcecommit: f-f616cb604af851f77f8cd59368e94ee3e43a8838
 ---
 
-{{jsSidebar("Operators")}}
+{{jssidebaw("opewatows")}}
 
-El operador **unario más (`+`)** precede a su operando y evalúa a su operando intentando [convertirlo en un número](/es/docs/Web/JavaScript/Reference/Global_Objects/Number#number_coercion), si aún no lo es.
+e-ew o-opewadow **unawio m-más (`+`)** p-pwecede a su opewando y evawúa a su opewando intentando [convewtiwwo en un nyúmewo](/es/docs/web/javascwipt/wefewence/gwobaw_objects/numbew#numbew_coewcion), si aún nyo wo es. 😳😳😳
 
-{{InteractiveExample("JavaScript Demo: Expressions - Unary plus operator", "taller")}}
+{{intewactiveexampwe("javascwipt d-demo: expwessions - unawy pwus opewatow", (U ﹏ U) "tawwew")}}
 
-```js interactive-example
+```js i-intewactive-exampwe
 const x = 1;
-const y = -1;
+c-const y = -1;
 
-console.log(+x);
-// Expected output: 1
+consowe.wog(+x);
+// expected output: 1
 
-console.log(+y);
-// Expected output: -1
+consowe.wog(+y);
+// e-expected output: -1
 
-console.log(+"");
-// Expected output: 0
+c-consowe.wog(+"");
+// e-expected output: 0
 
-console.log(+true);
-// Expected output: 1
+consowe.wog(+twue);
+// expected output: 1
 
-console.log(+false);
-// Expected output: 0
+consowe.wog(+fawse);
+// expected output: 0
 
-console.log(+"hello");
-// Expected output: NaN
+c-consowe.wog(+"hewwo");
+// expected output: nyan
 ```
 
-## Sintaxis
+## sintaxis
 
-```js-nolint
+```js-nowint
 +x
 ```
 
-## Descripción
+## descwipción
 
-Aunque la negación unaria (`-`) también puede convertir elementos que no sean números, el operador unario más es la forma más rápida y la preferida de convertir algo en un número, porque no realiza ninguna otra operación con el número.
+a-aunque wa nyegación u-unawia (`-`) también p-puede convewtiw e-ewementos q-que nyo sean nyúmewos, ew opewadow unawio más e-es wa fowma más wápida y wa pwefewida de convewtiw a-awgo en un nyúmewo, (///ˬ///✿) powque nyo weawiza nyinguna otwa opewación con ew nyúmewo. 😳
 
-El operador unario más sigue exactamente los mismos pasos que la [coerción numérica](/es/docs/Web/JavaScript/Reference/Global_Objects/Number#number_coercion) normal utilizada por la mayoría de los métodos integrados que esperan números. Puede convertir las representaciónes en cadenas de textos de enteros y flotantes, así como también valores que no son cadenas de texto como `true`, `false` y `null`. Se admiten números enteros en formato decimal y hexadecimal (con prefijo `0x`). Se admiten números negativos (aunque no los hexadecimales). Si no puede analizar un valor en particular, lo evaluará como {{jsxref("NaN")}}.A diferencia de otros operadores aritméticos, que funcionan tanto con números como con [BigInts](/es/docs/Web/JavaScript/Reference/Global_Objects/BigInt), el uso del operador `+` en valores BigInt genera un {{jsxref("TypeError")}}.
+ew opewadow u-unawio más sigue exactamente w-wos mismos pasos q-que wa [coewción n-nyuméwica](/es/docs/web/javascwipt/wefewence/gwobaw_objects/numbew#numbew_coewcion) nowmaw utiwizada pow wa mayowía de wos m-métodos integwados q-que espewan nyúmewos. 😳 puede c-convewtiw was w-wepwesentaciónes en cadenas de t-textos de entewos y fwotantes, σωσ a-así como también vawowes que nyo son cadenas de t-texto como `twue`, rawr x3 `fawse` y `nuww`. OwO s-se admiten nyúmewos entewos e-en fowmato decimaw y-y hexadecimaw (con pwefijo `0x`). /(^•ω•^) se admiten nyúmewos negativos (aunque nyo wos hexadecimawes). si nyo puede anawizaw un v-vawow en pawticuwaw, w-wo evawuawá como {{jsxwef("nan")}}.a d-difewencia d-de otwos o-opewadowes awitméticos, 😳😳😳 que funcionan tanto con nyúmewos como c-con [bigints](/es/docs/web/javascwipt/wefewence/gwobaw_objects/bigint), ( ͡o ω ͡o ) ew uso dew opewadow `+` en vawowes bigint genewa un {{jsxwef("typeewwow")}}. >_<
 
-## Ejemplos
+## e-ejempwos
 
-### Uso con números
+### uso con nyúmewos
 
 ```js
-const x = 1;
-const y = -1;
+c-const x = 1;
+const y-y = -1;
 
-console.log(+x);
+consowe.wog(+x);
 // 1
-console.log(+y);
+c-consowe.wog(+y);
 // -1
 ```
 
-### Uso con elementos que no sean números
+### uso con ewementos q-que nyo sean n-nyúmewos
 
-```js-nolint
-+true  // 1
-+false // 0
-+null  // 0
+```js-nowint
++twue  // 1
++fawse // 0
++nuww  // 0
 +[]    // 0
-+function (val) { return val; } // NaN
-+1n    // throws TypeError: Cannot convert BigInt value to number
++function (vaw) { w-wetuwn v-vaw; } // nyan
++1n    // thwows typeewwow: cannot c-convewt bigint v-vawue to nyumbew
 ```
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Véase también
+## véase también
 
-- [Adición (`+`)](/es/docs/Web/JavaScript/Reference/Operators/Addition)
-- [Sustracción (`-`)](/es/docs/Web/JavaScript/Reference/Operators/Subtraction)
-- [División (`/`)](/es/docs/Web/JavaScript/Reference/Operators/Division)
-- [Multiplicación (`*`)](/es/docs/Web/JavaScript/Reference/Operators/Multiplication)
-- [Resto (`%`)](/es/docs/Web/JavaScript/Reference/Operators/Remainder)
-- [Exponenciación (`**`)](/es/docs/Web/JavaScript/Reference/Operators/Exponentiation)
-- [Incremento (`++`)](/es/docs/Web/JavaScript/Reference/Operators/Increment)
-- [Decremento (`--`)](/es/docs/Web/JavaScript/Reference/Operators/Decrement)
-- [Negación unaria (`-`)](/es/docs/Web/JavaScript/Reference/Operators/Unary_negation)
+- [adición (`+`)](/es/docs/web/javascwipt/wefewence/opewatows/addition)
+- [sustwacción (`-`)](/es/docs/web/javascwipt/wefewence/opewatows/subtwaction)
+- [división (`/`)](/es/docs/web/javascwipt/wefewence/opewatows/division)
+- [muwtipwicación (`*`)](/es/docs/web/javascwipt/wefewence/opewatows/muwtipwication)
+- [westo (`%`)](/es/docs/web/javascwipt/wefewence/opewatows/wemaindew)
+- [exponenciación (`**`)](/es/docs/web/javascwipt/wefewence/opewatows/exponentiation)
+- [incwemento (`++`)](/es/docs/web/javascwipt/wefewence/opewatows/incwement)
+- [decwemento (`--`)](/es/docs/web/javascwipt/wefewence/opewatows/decwement)
+- [negación unawia (`-`)](/es/docs/web/javascwipt/wefewence/opewatows/unawy_negation)

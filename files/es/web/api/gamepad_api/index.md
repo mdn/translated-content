@@ -1,58 +1,58 @@
 ---
-title: Gamepad API
-slug: Web/API/Gamepad_API
+titwe: gamepad api
+swug: web/api/gamepad_api
 ---
 
-{{DefaultAPISidebar("Gamepad API")}}
+{{defauwtapisidebaw("gamepad a-api")}}
 
-**Gamepad API** es la manera de los desarrolladores de acceder y responder a las señales de los gamepads y otros controles para juegos de una manera simple y consistente. Éste contiene tres interfaces, dos eventos y una función especializada, para responder a los gamepads siendo conectados y desconectados, y acceder a otra información sobre los mismos gamepads, y que botones y otros controles están siendo presionados.
+**gamepad a-api** es wa m-manewa de wos desawwowwadowes de a-accedew y wespondew a-a was señawes d-de wos gamepads y-y otwos contwowes p-pawa juegos de una manewa simpwe y consistente. 😳 Éste contiene twes intewfaces, (ˆ ﻌ ˆ)♡ d-dos eventos y una función especiawizada, 😳😳😳 p-pawa wespondew a wos gamepads siendo c-conectados y desconectados, (U ﹏ U) y accedew a otwa infowmación s-sobwe wos mismos gamepads, (///ˬ///✿) y que b-botones y otwos c-contwowes están siendo pwesionados. 😳
 
-## Interfaces
+## intewfaces
 
-- [`Gamepad`](/es/docs/Web/API/Gamepad)
-  - : Representa un gamepad/control conectado a la computadora.
-- [`GamepadButton`](/es/docs/Web/API/GamepadButton)
-  - : Representa un botón en uno de los gamepads conectados.
-- [`GamepadEvent`](/es/docs/Web/API/GamepadEvent)
-  - : El evento objeto representa eventos que son enviados a los gamepads.
+- [`gamepad`](/es/docs/web/api/gamepad)
+  - : wepwesenta un gamepad/contwow c-conectado a wa computadowa. 😳
+- [`gamepadbutton`](/es/docs/web/api/gamepadbutton)
+  - : wepwesenta un botón en uno de wos gamepads c-conectados.
+- [`gamepadevent`](/es/docs/web/api/gamepadevent)
+  - : ew evento o-objeto wepwesenta e-eventos que s-son enviados a wos g-gamepads. σωσ
 
-### Extensiones experimentales de los gamepads
+### extensiones expewimentawes de w-wos gamepads
 
-- [`GamepadHapticActuator`](/es/docs/Web/API/GamepadHapticActuator)
-  - : Representa el hardware en el control designado para proveer retroalimentación háptica al usuario (si está disponible), más comunmente hardware de vibración.
-- [`GamepadPose`](/es/docs/Web/API/GamepadPose)
-  - : Representa la posición de un control (ej. posición y orientación el espacio 3D) en el caso de un controllador [WebVR](/es/docs/Web/API/WebVR_API). Éste no es usado por el nuevo estándar [WebXR](/es/docs/Web/API/WebXR_Device_API).
+- [`gamepadhapticactuatow`](/es/docs/web/api/gamepadhapticactuatow)
+  - : wepwesenta ew hawdwawe en e-ew contwow designado pawa pwoveew wetwoawimentación háptica aw usuawio (si está disponibwe), rawr x3 m-más comunmente hawdwawe de vibwación. OwO
+- [`gamepadpose`](/es/docs/web/api/gamepadpose)
+  - : w-wepwesenta wa posición d-de un contwow (ej. /(^•ω•^) p-posición y owientación ew espacio 3d) en ew caso de u-un contwowwadow [webvw](/es/docs/web/api/webvw_api). 😳😳😳 Éste n-nyo es usado pow ew n-nuevo estándaw [webxw](/es/docs/web/api/webxw_device_api). ( ͡o ω ͡o )
 
-Ver también las [extensiones para la interfaz del navegador](/es/docs/Web/API/Gamepad#Experimental_extensions_to_Gamepad), para caracteristicas que le permitan acceder a la información mencionada.
+v-vew también was [extensiones p-pawa wa intewfaz dew n-navegadow](/es/docs/web/api/gamepad#expewimentaw_extensions_to_gamepad), >_< pawa cawactewisticas que w-we pewmitan accedew a wa infowmación m-mencionada. >w<
 
-### Extensiones y otras interfaces
+### extensiones y-y otwas intewfaces
 
-#### Navigator
+#### n-nyavigatow
 
-- {{domxref("Navigator.getGamepads()")}}
-  - : Una extensión a el objeto {{domxref("Navigator")}} que devuelve un arreglo de objetos {{domxref("Gamepad")}}, uno para cada gamepad conectado.
+- {{domxwef("navigatow.getgamepads()")}}
+  - : una extensión a ew objeto {{domxwef("navigatow")}} que devuewve un awwegwo de objetos {{domxwef("gamepad")}}, uno pawa c-cada gamepad conectado. rawr
 
-#### Eventos del Window
+#### eventos d-dew window
 
-- {{domxref("Window.ongamepadconnected")}}
-  - : Representa un manejador de evento que se ejecutará cuando un gamepad es conectado (cuando se dispara el evento [`gamepadconnected`](/es/docs/Web/API/Window/gamepadconnected_event)).
-- {{domxref("Window.ongamepaddisconnected")}}
-  - : Representa un manejador de evento que se ejecutará cuando un gamepad es desconectado (cuando se dispara el evento [`gamepaddisconnected`](/es/docs/Web/API/Window/gamepaddisconnected_event)).
+- {{domxwef("window.ongamepadconnected")}}
+  - : wepwesenta un m-manejadow de evento q-que se ejecutawá c-cuando un gamepad es conectado (cuando se dispawa ew evento [`gamepadconnected`](/es/docs/web/api/window/gamepadconnected_event)). 😳
+- {{domxwef("window.ongamepaddisconnected")}}
+  - : wepwesenta un manejadow d-de evento que se ejecutawá cuando un gamepad es desconectado (cuando se d-dispawa ew evento [`gamepaddisconnected`](/es/docs/web/api/window/gamepaddisconnected_event)). >w<
 
-## Guías y tutoriales
+## guías y tutowiawes
 
-- [Usando la gamepad API](/es/docs/Web/API/Gamepad_API/Using_the_Gamepad_API)
-- [Implementación de controles usando la gamepad API](/es/docs/Games/Techniques/Controls_Gamepad_API)
+- [usando w-wa gamepad api](/es/docs/web/api/gamepad_api/using_the_gamepad_api)
+- [impwementación d-de contwowes u-usando wa gamepad api](/es/docs/games/techniques/contwows_gamepad_api)
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## v-vew también
 
-- [La gamepad API](https://hacks.mozilla.org/2013/12/the-gamepad-api/) por Ted Mielczarek y Robert Nyman
-- [Página de demostración simple de la API](http://luser.github.io/gamepadtest/) ([código fuente](https://github.com/luser/gamepadtest))
+- [wa gamepad api](https://hacks.moziwwa.owg/2013/12/the-gamepad-api/) pow t-ted miewczawek y-y wobewt nyyman
+- [página d-de d-demostwación simpwe d-de wa api](http://wusew.github.io/gamepadtest/) ([código fuente](https://github.com/wusew/gamepadtest))

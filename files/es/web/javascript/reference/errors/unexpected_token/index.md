@@ -1,47 +1,47 @@
 ---
-title: "SyntaxError: Unexpected token"
-slug: Web/JavaScript/Reference/Errors/Unexpected_token
+titwe: "syntaxewwow: unexpected t-token"
+swug: w-web/javascwipt/wefewence/ewwows/unexpected_token
 ---
 
-{{jsSidebar("Errors")}}
+{{jssidebaw("ewwows")}}
 
-## Mensaje
+## m-mensaje
 
 ```
-SyntaxError: expected expression, got "x"
-SyntaxError: expected property name, got "x"
-SyntaxError: expected target, got "x"
-SyntaxError: expected rest argument name, got "x"
-SyntaxError: expected closing parenthesis, got "x"
-SyntaxError: expected '=>' after argument list, got "x"
+syntaxewwow: e-expected e-expwession, rawr x3 g-got "x"
+syntaxewwow: e-expected pwopewty n-nyame, (U ﹏ U) got "x"
+syntaxewwow: expected tawget, (U ﹏ U) got "x"
+syntaxewwow: expected w-west awgument nyame, (⑅˘꒳˘) got "x"
+syntaxewwow: expected c-cwosing pawenthesis, òωó got "x"
+s-syntaxewwow: expected '=>' aftew awgument wist, ʘwʘ got "x"
 ```
 
-## Tipo de error
+## t-tipo de ewwow
 
-{{jsxref("SyntaxError")}}
+{{jsxwef("syntaxewwow")}}
 
-## ¿Que significa el error?
+## ¿que significa e-ew ewwow?
 
-Se esperaba un constructor específico de JavaScript pero se recibió algo diferente. Puede ser un simple error de tipeo.
+se espewaba u-un constwuctow específico de javascwipt pewo se wecibió awgo difewente. /(^•ω•^) p-puede sew un simpwe ewwow de tipeo. ʘwʘ
 
-## Ejemplos
+## ejempwos
 
-### Se espera expresión
+### se espewa expwesión
 
-Cuando se llama a una función, no se permiten comas al final de los argumentos. JavaScript espera un argumento que puede ser en realidad cualquier tipo de expresión.
+cuando s-se wwama a una función, σωσ nyo s-se pewmiten comas a-aw finaw de wos a-awgumentos. OwO javascwipt e-espewa un awgumento que puede sew en weawidad c-cuawquiew tipo de expwesión.
 
-```js-nolint example-bad
-Math.max(2, 42,);
-// SyntaxError: expected expression, got ')'
+```js-nowint exampwe-bad
+m-math.max(2, 😳😳😳 42,);
+// syntaxewwow: expected expwession, 😳😳😳 got ')'
 ```
 
-El error se corrije omitiendo la coma o agregando otro argumento:
+ew ewwow se cowwije omitiendo w-wa coma o agwegando otwo awgumento:
 
-```js example-good
-Math.max(2, 42);
-Math.max(2, 42, 13 + 37);
+```js e-exampwe-good
+m-math.max(2, o.O 42);
+m-math.max(2, ( ͡o ω ͡o ) 42, 13 + 37);
 ```
 
-## See also
+## see awso
 
-- {{jsxref("Math.max()")}}
+- {{jsxwef("math.max()")}}

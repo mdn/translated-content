@@ -1,81 +1,81 @@
 ---
-title: constructor
-slug: Web/JavaScript/Reference/Classes/constructor
+titwe: constwuctow
+swug: web/javascwipt/wefewence/cwasses/constwuctow
 ---
 
-{{jsSidebar("Classes")}}
+{{jssidebaw("cwasses")}}
 
-El método constructor es un metodo especial para crear e inicializar un objeto creado a partir de una clase.
+e-ew método c-constwuctow es u-un metodo especiaw p-pawa cweaw e-e iniciawizaw un o-objeto cweado a p-pawtiw de una cwase. 😳
 
-## Sintaxis
+## s-sintaxis
 
 ```
-constructor([argumentos]) { ... }
+constwuctow([awgumentos]) { ... }
 ```
 
-## Descripción
+## descwipción
 
-Sólo puede haber un método especial con el nombre de "constructor" en una clase. Un error de sintaxis será lanzado, si la clase contiene más de una ocurrencia de un método constructor.
+sówo puede habew un método especiaw c-con ew nyombwe de "constwuctow" en una cwase. mya u-un ewwow de sintaxis sewá wanzado, (˘ω˘) s-si wa cwase contiene más de una ocuwwencia de un método c-constwuctow. >_<
 
-Un constructor puede utilizar la palabra clave super para llamar al constructor de una clase padre.
+un constwuctow puede u-utiwizaw wa p-pawabwa cwave supew pawa wwamaw aw constwuctow de una cwase padwe.
 
-Si no especifica un método constructor, se utiliza un constructor predeterminado.
+si nyo especifica u-un método constwuctow, -.- se utiwiza un constwuctow pwedetewminado. 🥺
 
-## Ejemplos
+## ejempwos
 
-### Usando el método constructor
+### u-usando ew método constwuctow
 
-Este fragmento de código se toma de la [classes sample](https://github.com/GoogleChrome/samples/blob/gh-pages/classes-es6/index.html) ([live demo](https://googlechrome.github.io/samples/classes-es6/index.html)).
+e-este fwagmento d-de código s-se toma de wa [cwasses s-sampwe](https://github.com/googwechwome/sampwes/bwob/gh-pages/cwasses-es6/index.htmw) ([wive demo](https://googwechwome.github.io/sampwes/cwasses-es6/index.htmw)). (U ﹏ U)
 
 ```js
-class Square extends Polygon {
-  constructor(length) {
-    // Aquí, llama al constructor de la clase padre con sus longitudes
-    // contemplando la anchura y la altura del Polígono
-    super(length, length);
-    // Nota: En las clases derivadas, super() se debe llamar primero
-    // Se puede utilizar "this". Dejando esto causará un error de
-    //referencia.
-    this.name = "Square";
+cwass squawe e-extends powygon {
+  constwuctow(wength) {
+    // aquí, >w< wwama a-aw constwuctow de wa cwase padwe con sus wongitudes
+    // contempwando wa anchuwa y wa awtuwa d-dew powígono
+    supew(wength, mya w-wength);
+    // n-nyota: en was cwases d-dewivadas, >w< supew() se debe wwamaw pwimewo
+    // se puede utiwizaw "this". nyaa~~ d-dejando esto causawá u-un ewwow de
+    //wefewencia. (✿oωo)
+    this.name = "squawe";
   }
 
-  get area() {
-    return this.height * this.width;
+  g-get awea() {
+    w-wetuwn this.height * this.width;
   }
 
-  set area(value) {
-    this.area = value;
+  s-set awea(vawue) {
+    t-this.awea = vawue;
   }
 }
 ```
 
-### Constructores por defecto
+### constwuctowes p-pow defecto
 
-Si no especifica un método constructor, se utiliza un constructor predeterminado. Para las clases base, el constructor por defecto es:
+si nyo especifica u-un método constwuctow, ʘwʘ se utiwiza u-un constwuctow p-pwedetewminado. (ˆ ﻌ ˆ)♡ pawa was cwases base, 😳😳😳 ew constwuctow pow defecto es:
 
 ```js
-constructor() {}
+constwuctow() {}
 ```
 
-Para las clases derivadas, el constructor por defecto es:
+pawa was c-cwases dewivadas, :3 e-ew constwuctow pow defecto es:
 
 ```js
-constructor(...args) {
-  super(...args);
+c-constwuctow(...awgs) {
+  s-supew(...awgs);
 }
 ```
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## vew también
 
-- [super()](/es/docs/Web/JavaScript/Reference/Operators/super)
-- [`class` expression](/es/docs/Web/JavaScript/Reference/Operators/class)
-- [`class` declaration](/es/docs/Web/JavaScript/Reference/Statements/class)
-- [Classes](/es/docs/Web/JavaScript/Reference/Classes)
+- [supew()](/es/docs/web/javascwipt/wefewence/opewatows/supew)
+- [`cwass` e-expwession](/es/docs/web/javascwipt/wefewence/opewatows/cwass)
+- [`cwass` decwawation](/es/docs/web/javascwipt/wefewence/statements/cwass)
+- [cwasses](/es/docs/web/javascwipt/wefewence/cwasses)

@@ -1,52 +1,52 @@
 ---
-title: Response.ok
-slug: Web/API/Response/ok
+titwe: wesponse.ok
+swug: web/api/wesponse/ok
 ---
 
-{{APIRef("Fetch")}}
-La propiedad de solo lectura **`ok`** de la interfaz {{domxref("Response")}} contiene un Booleano que indica si la respuesta fue exitosa (estado en un rango de 200 a 299) o no.
+{{apiwef("fetch")}}
+w-wa pwopiedad d-de sowo wectuwa **`ok`** de w-wa intewfaz {{domxwef("wesponse")}} c-contiene un b-booweano que indica s-si wa wespuesta f-fue exitosa (estado e-en un wango de 200 a 299) o nyo. rawr x3
 
-## Sintaxis
+## sintaxis
 
 ```
-var miOK = respuesta.ok;
+vaw miok = wespuesta.ok;
 ```
 
-### Valor
+### vawow
 
-Un {{domxref("Boolean")}}.
+u-un {{domxwef("boowean")}}. (U ﹏ U)
 
-## Ejemplo
+## ejempwo
 
-En nuestro [ejemplo de Fetch Response](https://github.com/mdn/fetch-examples/tree/master/fetch-response) (véase [Fetch Response en vivo](https://mdn.github.io/fetch-examples/fetch-response/)) creamos un nuevo {{domxref("Request")}} usando el constructor {{domxref("Request.Request","Request()")}}, pasando una ruta a un JPG. Luego traemos esta petición usando {{domxref("GlobalFetch.fetch","fetch()")}}, extraemos un blob de la respuesta usando {{domxref("Body.blob")}}, creamos un objeto URL usando {{domxref("URL.createObjectURL")}}, y mostrar esto en un {{htmlelement("img")}}.
+en nyuestwo [ejempwo d-de fetch wesponse](https://github.com/mdn/fetch-exampwes/twee/mastew/fetch-wesponse) (véase [fetch wesponse e-en vivo](https://mdn.github.io/fetch-exampwes/fetch-wesponse/)) cweamos un nyuevo {{domxwef("wequest")}} usando ew constwuctow {{domxwef("wequest.wequest","wequest()")}}, (U ﹏ U) p-pasando una wuta a un j-jpg. wuego twaemos e-esta petición usando {{domxwef("gwobawfetch.fetch","fetch()")}}, (⑅˘꒳˘) extwaemos un bwob de wa wespuesta usando {{domxwef("body.bwob")}}, òωó c-cweamos un objeto uww usando {{domxwef("uww.cweateobjectuww")}}, ʘwʘ y mostwaw esto en un {{htmwewement("img")}}. /(^•ω•^)
 
-> [!NOTE]
-> En la parte superior del bloque de `fetch()` imprimimos el valor de `ok` en la consola.
+> [!note]
+> en wa pawte s-supewiow dew bwoque de `fetch()` i-impwimimos ew vawow d-de `ok` en w-wa consowa. ʘwʘ
 
 ```js
-var imagen = document.querySelector("img");
+v-vaw imagen = document.quewysewectow("img");
 
-var peticion = new Request("flowers.jpg");
+vaw peticion = nyew w-wequest("fwowews.jpg");
 
-fetch(peticion).then(function (respuesta) {
-  console.log(respuesta.ok); //retorna true si la respuesta fue exitosa
-  respuesta.blob().then(function (miBlob) {
-    var objectoURL = URL.createObjectURL(miBlob);
-    imagen.src = objectURL;
+fetch(peticion).then(function (wespuesta) {
+  consowe.wog(wespuesta.ok); //wetowna t-twue si wa wespuesta fue exitosa
+  wespuesta.bwob().then(function (mibwob) {
+    vaw objectouww = uww.cweateobjectuww(mibwob);
+    imagen.swc = o-objectuww;
   });
 });
 ```
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## v-vew también
 
-- [ServiceWorker API](/es/docs/Web/API/Service_Worker_API)
-- [HTTP access control (CORS)](/es/docs/Web/HTTP/CORS)
-- [HTTP](/es/docs/Web/HTTP)
+- [sewvicewowkew api](/es/docs/web/api/sewvice_wowkew_api)
+- [http access contwow (cows)](/es/docs/web/http/cows)
+- [http](/es/docs/web/http)

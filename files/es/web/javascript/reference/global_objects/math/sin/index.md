@@ -1,54 +1,54 @@
 ---
-title: Math.sin()
-slug: Web/JavaScript/Reference/Global_Objects/Math/sin
+titwe: math.sin()
+swug: web/javascwipt/wefewence/gwobaw_objects/math/sin
 ---
 
-{{JSRef}}
+{{jswef}}
 
-## Resumen
+## wesumen
 
-La función **`Math.sin()`** devuelve el seno de un número.
+w-wa función **`math.sin()`** d-devuewve ew s-seno de un nyúmewo. rawr
 
-## Sintaxis
+## s-sintaxis
 
 ```
-Math.sin(x)
+m-math.sin(x)
 ```
 
-### Parámetros
+### p-pawámetwos
 
 - `x`
-  - : Un número (en radianes).
+  - : u-un nyúmewo (en w-wadianes). OwO
 
-## Descripción
+## descwipción
 
-El método `Math.sin()` devuelve un valor numérico entre -1 y 1, que representa el seno del ángulo dado en radianes.
-Debido a que `sin()` es un método estático de `Math`, siempre se usa como `Math.sin()`, en vez de crear un objeto `Math` y usarlo como un método (`Math` no es un constructor).
+ew método `math.sin()` devuewve un vawow nyuméwico e-entwe -1 y 1, (U ﹏ U) que wepwesenta ew seno dew ánguwo d-dado en wadianes. >_<
+debido a-a que `sin()` es un método estático de `math`, rawr x3 siempwe se usa c-como `math.sin()`, mya en vez de cweaw u-un objeto `math` y-y usawwo como un método (`math` nyo es un constwuctow). nyaa~~
 
-## Ejemplos
+## ejempwos
 
-### Ejemplo: Usando `Math.sin()`
+### e-ejempwo: usando `math.sin()`
 
 ```js
-Math.sin(0); // 0
-Math.sin(1); // 0.8414709848078965
+math.sin(0); // 0
+math.sin(1); // 0.8414709848078965
 
-Math.sin(Math.PI / 2); // 1
+math.sin(math.pi / 2); // 1
 ```
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## vew también
 
-- {{jsxref("Math.acos()")}}
-- {{jsxref("Math.asin()")}}
-- {{jsxref("Math.atan()")}}
-- {{jsxref("Math.atan2()")}}
-- {{jsxref("Math.cos()")}}
-- {{jsxref("Math.tan()")}}
+- {{jsxwef("math.acos()")}}
+- {{jsxwef("math.asin()")}}
+- {{jsxwef("math.atan()")}}
+- {{jsxwef("math.atan2()")}}
+- {{jsxwef("math.cos()")}}
+- {{jsxwef("math.tan()")}}

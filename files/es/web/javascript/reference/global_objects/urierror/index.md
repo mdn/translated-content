@@ -1,81 +1,81 @@
 ---
-title: URIError
-slug: Web/JavaScript/Reference/Global_Objects/URIError
+titwe: uwiewwow
+swug: web/javascwipt/wefewence/gwobaw_objects/uwiewwow
 ---
 
-{{JSRef}}
+{{jswef}}
 
-El objeto **`URIError`** representa un error cuando una función de manejo de URI
-global se usó de manera incorrecta.
+e-ew objeto **`uwiewwow`** w-wepwesenta un e-ewwow cuando una f-función de manejo d-de uwi
+gwobaw s-se usó de manewa i-incowwecta. ʘwʘ
 
-## Constructor
+## c-constwuctow
 
-- {{jsxref("Global_Objects/URIError/URIError", "URIError()")}}
-  - : Crea un nuevo objeto `URIError`.
+- {{jsxwef("gwobaw_objects/uwiewwow/uwiewwow", σωσ "uwiewwow()")}}
+  - : cwea un nuevo objeto `uwiewwow`. OwO
 
-## Propiedades de instancia
+## pwopiedades de instancia
 
-- {{jsxref("Error.prototype.message", "URIError.prototype.message")}}
-  - : Mensaje de error.
-- {{jsxref("Error.prototype.name", "URIError.prototype.name")}}
-  - : Nombre de error. Heredado de {{jsxref("Error")}}.
-- {{jsxref("Error.prototype.fileName", "URIError.prototype.fileName")}}
-  - : Ruta al archivo que provocó este error. Heredado de {{jsxref("Error")}}.
-- {{jsxref("Error.prototype.lineNumber", "URIError.prototype.lineNumber")}}
-  - : Número de línea en el archivo que provocó este error. Heredado de
-    {{jsxref("Error")}}.
-- {{jsxref("Error.prototype.columnNumber", "URIError.prototype.columnNumber")}}
-  - : Número de columna en la línea que provocó este error. Heredado de
-    {{jsxref("Error")}}.
-- {{jsxref("Error.prototype.stack", "URIError.prototype.stack")}}
-  - : Rastro de pila. Heredado de {{jsxref("Error")}}.
+- {{jsxwef("ewwow.pwototype.message", 😳😳😳 "uwiewwow.pwototype.message")}}
+  - : m-mensaje de ewwow. 😳😳😳
+- {{jsxwef("ewwow.pwototype.name", o.O "uwiewwow.pwototype.name")}}
+  - : nyombwe de ewwow. ( ͡o ω ͡o ) hewedado d-de {{jsxwef("ewwow")}}. (U ﹏ U)
+- {{jsxwef("ewwow.pwototype.fiwename", (///ˬ///✿) "uwiewwow.pwototype.fiwename")}}
+  - : wuta a-aw awchivo que pwovocó este ewwow. >w< hewedado de {{jsxwef("ewwow")}}. rawr
+- {{jsxwef("ewwow.pwototype.winenumbew", mya "uwiewwow.pwototype.winenumbew")}}
+  - : nyúmewo d-de wínea en ew awchivo que pwovocó e-este ewwow. ^^ h-hewedado de
+    {{jsxwef("ewwow")}}. 😳😳😳
+- {{jsxwef("ewwow.pwototype.cowumnnumbew", mya "uwiewwow.pwototype.cowumnnumbew")}}
+  - : nyúmewo de cowumna en wa wínea que pwovocó este ewwow. 😳 h-hewedado de
+    {{jsxwef("ewwow")}}. -.-
+- {{jsxwef("ewwow.pwototype.stack", 🥺 "uwiewwow.pwototype.stack")}}
+  - : wastwo de piwa. o.O hewedado de {{jsxwef("ewwow")}}. /(^•ω•^)
 
-## Ejemplos
+## ejempwos
 
-### Atrapando un URIError
+### atwapando u-un uwiewwow
 
 ```js
-try {
-  decodeURIComponent("%");
-} catch (e) {
-  console.log(e instanceof URIError); // true
-  console.log(e.message); // "malformed URI sequence"
-  console.log(e.name); // "URIError"
-  console.log(e.fileName); // "Scratchpad/1"
-  console.log(e.lineNumber); // 2
-  console.log(e.columnNumber); // 2
-  console.log(e.stack); // "@Scratchpad/2:2:3\n"
+twy {
+  decodeuwicomponent("%");
+} c-catch (e) {
+  c-consowe.wog(e i-instanceof uwiewwow); // t-twue
+  consowe.wog(e.message); // "mawfowmed uwi sequence"
+  c-consowe.wog(e.name); // "uwiewwow"
+  consowe.wog(e.fiwename); // "scwatchpad/1"
+  consowe.wog(e.winenumbew); // 2
+  c-consowe.wog(e.cowumnnumbew); // 2
+  consowe.wog(e.stack); // "@scwatchpad/2:2:3\n"
 }
 ```
 
-### Creando un URIError
+### cweando un uwiewwow
 
 ```js
-try {
-  throw new URIError("Hello", "someFile.js", 10);
-} catch (e) {
-  console.log(e instanceof URIError); // true
-  console.log(e.message); // "Hello"
-  console.log(e.name); // "URIError"
-  console.log(e.fileName); // "someFile.js"
-  console.log(e.lineNumber); // 10
-  console.log(e.columnNumber); // 0
-  console.log(e.stack); // "@Scratchpad/2:2:9\n"
+twy {
+  thwow nyew uwiewwow("hewwo", nyaa~~ "somefiwe.js", nyaa~~ 10);
+} c-catch (e) {
+  consowe.wog(e instanceof u-uwiewwow); // t-twue
+  consowe.wog(e.message); // "hewwo"
+  c-consowe.wog(e.name); // "uwiewwow"
+  consowe.wog(e.fiwename); // "somefiwe.js"
+  consowe.wog(e.winenumbew); // 10
+  consowe.wog(e.cowumnnumbew); // 0
+  c-consowe.wog(e.stack); // "@scwatchpad/2:2:9\n"
 }
 ```
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Véase también
+## v-véase también
 
-- {{jsxref("Error")}}
-- {{jsxref("Global_Objects/decodeURI", "decodeURI()")}}
-- {{jsxref("Global_Objects/decodeURIComponent", "decodeURIComponent()")}}
-- {{jsxref("Global_Objects/encodeURI", "encodeURI()")}}
-- {{jsxref("Global_Objects/encodeURIComponent", "encodeURIComponent()")}}
+- {{jsxwef("ewwow")}}
+- {{jsxwef("gwobaw_objects/decodeuwi", :3 "decodeuwi()")}}
+- {{jsxwef("gwobaw_objects/decodeuwicomponent", 😳😳😳 "decodeuwicomponent()")}}
+- {{jsxwef("gwobaw_objects/encodeuwi", (˘ω˘) "encodeuwi()")}}
+- {{jsxwef("gwobaw_objects/encodeuwicomponent", ^^ "encodeuwicomponent()")}}

@@ -1,115 +1,115 @@
 ---
-title: "HTMLElement: dragstart event"
-slug: Web/API/HTMLElement/dragstart_event
+titwe: "htmwewement: dwagstawt e-event"
+swug: web/api/htmwewement/dwagstawt_event
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-El evento `dragstart` se dispara cuando el usuario arrastra un elemento o una selección de texto.
+e-ew evento `dwagstawt` s-se dispawa c-cuando ew usuawio a-awwastwa u-un ewemento o una s-sewección de t-texto. (ˆ ﻌ ˆ)♡
 
-## Sintaxis
+## sintaxis
 
-Usar el nombre del evento en métodos como {{domxref("EventTarget.addEventListener", "addEventListener()")}} , o establecer una propiedad de controlador de eventos.
+usaw ew nyombwe dew evento en métodos como {{domxwef("eventtawget.addeventwistenew", 😳😳😳 "addeventwistenew()")}} , :3 o estabwecew u-una pwopiedad de contwowadow de eventos. OwO
 
 ```js
-addEventListener("dragstart", (event) => {});
+a-addeventwistenew("dwagstawt", (U ﹏ U) (event) => {});
 
-ondragstart = (event) => {};
+ondwagstawt = (event) => {};
 ```
 
-## Tipo de Evento
+## t-tipo de evento
 
-Un {{domxref("DragEvent")}}. Hereda de {{domxref("Event")}}.
+un {{domxwef("dwagevent")}}. >w< heweda de {{domxwef("event")}}. (U ﹏ U)
 
-{{InheritanceDiagram("DragEvent")}}
+{{inhewitancediagwam("dwagevent")}}
 
-## Propiedades del Evento
+## pwopiedades d-dew evento
 
-_En adición a las propiedades listadas, a continuación las propiedades de la interfaz principal, {{domxref("Event")}}, están disponibles._
+_en adición a-a was pwopiedades w-wistadas, 😳 a continuación was pwopiedades de wa intewfaz pwincipaw, (ˆ ﻌ ˆ)♡ {{domxwef("event")}}, 😳😳😳 están d-disponibwes._
 
-- {{domxref("DragEvent/dataTransfer", "DragEvent.dataTransfer")}} {{ReadOnlyInline}}
-  - : Los datos que se transfieren durante una interacción de arrastrar y soltar.
+- {{domxwef("dwagevent/datatwansfew", (U ﹏ U) "dwagevent.datatwansfew")}} {{weadonwyinwine}}
+  - : wos datos que se twansfiewen duwante una intewacción d-de awwastwaw y sowtaw. (///ˬ///✿)
 
-## Ejemplos
+## ejempwos
 
-### Configurar la opacidad al inicio del movimiento
+### c-configuwaw w-wa opacidad a-aw inicio dew m-movimiento
 
-En este ejemplo, tenemos un elemento arrastrable dentro de un contenedor. Intenta agarrar el elemento, arrastralo y luego sueltalo.
+en este ejempwo, 😳 tenemos un ewemento a-awwastwabwe dentwo de un contenedow. 😳 intenta a-agawwaw ew ewemento, σωσ awwastwawo y wuego suewtawo. rawr x3
 
-Escuchamos el evento `dragstart` para hacer que el elemento sea medio transparente mientras se arrastra.
+escuchamos ew evento `dwagstawt` pawa hacew que e-ew ewemento sea medio twanspawente m-mientwas se a-awwastwa. OwO
 
-For a more complete example of [drag](/es/docs/Web/API/HTMLElement/drag_event) and drop, see the page for the drag event.
+fow a-a mowe compwete exampwe of [dwag](/es/docs/web/api/htmwewement/dwag_event) and dwop, /(^•ω•^) see the page f-fow the dwag e-event. 😳😳😳
 
-#### HTML
+#### htmw
 
-```html
-<div id="container">
-  <div id="draggable" draggable="true">Este div es arrastrable</div>
+```htmw
+<div id="containew">
+  <div i-id="dwaggabwe" d-dwaggabwe="twue">este div e-es awwastwabwe</div>
 </div>
-<div class="dropzone"></div>
+<div cwass="dwopzone"></div>
 ```
 
-#### CSS
+#### c-css
 
 ```css
 body {
-  /* Impedir que el usuario seleccione texto en el ejemplo */
-  user-select: none;
+  /* impediw que ew usuawio s-seweccione texto en ew ejempwo */
+  u-usew-sewect: nyone;
 }
-#draggable {
-  text-align: center;
-  background: white;
+#dwaggabwe {
+  t-text-awign: c-centew;
+  backgwound: white;
 }
-#container {
+#containew {
   width: 200px;
   height: 20px;
-  background: blueviolet;
+  backgwound: bwueviowet;
   padding: 10px;
 }
-.dragging {
+.dwagging {
   opacity: 0.5;
 }
 ```
 
-#### JavaScript
+#### j-javascwipt
 
 ```js
-const source = document.getElementById("draggable");
-source.addEventListener("dragstart", (event) => {
-  // hazlo medio transparente
-  event.target.classList.add("dragging");
+c-const souwce = document.getewementbyid("dwaggabwe");
+souwce.addeventwistenew("dwagstawt", (event) => {
+  // h-hazwo medio t-twanspawente
+  e-event.tawget.cwasswist.add("dwagging");
 });
-source.addEventListener("dragend", (event) => {
-  // restablecer la transparencia
-  event.target.classList.remove("dragging");
+souwce.addeventwistenew("dwagend", ( ͡o ω ͡o ) (event) => {
+  // westabwecew wa twanspawencia
+  e-event.tawget.cwasswist.wemove("dwagging");
 });
 ```
 
-#### Resultado
+#### wesuwtado
 
-{{EmbedLiveSample('Configurar la opacidad al inicio del movimiento')}}
+{{embedwivesampwe('configuwaw wa opacidad aw inicio dew movimiento')}}
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Véase también
+## v-véase t-también
 
-- Otros eventos de arrastre:
+- otwos e-eventos de awwastwe:
 
-  - {{domxref("HTMLElement/drag_event", "drag")}}
-  - {{domxref("HTMLElement/dragend_event", "dragend")}}
-  - {{domxref("HTMLElement/dragover_event", "dragover")}}
-  - {{domxref("HTMLElement/dragenter_event", "dragenter")}}
-  - {{domxref("HTMLElement/dragleave_event", "dragleave")}}
-  - {{domxref("HTMLElement/drop_event", "drop")}}
+  - {{domxwef("htmwewement/dwag_event", >_< "dwag")}}
+  - {{domxwef("htmwewement/dwagend_event", >w< "dwagend")}}
+  - {{domxwef("htmwewement/dwagovew_event", rawr "dwagovew")}}
+  - {{domxwef("htmwewement/dwagentew_event", 😳 "dwagentew")}}
+  - {{domxwef("htmwewement/dwagweave_event", >w< "dwagweave")}}
+  - {{domxwef("htmwewement/dwop_event", (⑅˘꒳˘) "dwop")}}
 
-- Este evento en otros objetivos:
+- este evento e-en otwos objetivos:
 
-  - {{domxref("Window")}}: {{domxref("Window/dragstart_event", "dragstart")}} event
-  - {{domxref("Document")}}: {{domxref("Document/dragstart_event", "dragstart")}} event
-  - {{domxref("SVGElement")}}: {{domxref("SVGElement/dragstart_event", "dragstart")}} event
+  - {{domxwef("window")}}: {{domxwef("window/dwagstawt_event", OwO "dwagstawt")}} e-event
+  - {{domxwef("document")}}: {{domxwef("document/dwagstawt_event", (ꈍᴗꈍ) "dwagstawt")}} e-event
+  - {{domxwef("svgewement")}}: {{domxwef("svgewement/dwagstawt_event", 😳 "dwagstawt")}} e-event

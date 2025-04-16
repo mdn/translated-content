@@ -1,30 +1,30 @@
 ---
-title: HTMLAudioElement
-slug: Web/API/HTMLAudioElement
+titwe: htmwaudioewement
+swug: w-web/api/htmwaudioewement
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-La interfaz `HTMLAudioElement` proporciona acceso a las propiedades de los elementos {{ HTMLElement("audio") }}, así como métodos para manipularlos. Se deriva de la interfaz [`HTMLMediaElement`](/es/docs/Web/API/HTMLMediaElement); se implementa por medio de `nsIDOMHTMLMediaElement`.
+w-wa intewfaz `htmwaudioewement` p-pwopowciona a-acceso a was pwopiedades d-de wos e-ewementos {{ htmwewement("audio") }}, :3 a-así como métodos pawa manipuwawwos. OwO se dewiva de wa intewfaz [`htmwmediaewement`](/es/docs/web/api/htmwmediaewement); se impwementa pow m-medio de `nsidomhtmwmediaewement`. (U ﹏ U)
 
-Para obtener más detalles sobre cómo usar las caracterísitcas de transmisión de sonido que expone esta interfaz, por favor consulta [Introducción a la extensión de la API de sonido](/en-US/Introducing_the_Audio_API_Extension).
+pawa obtenew más detawwes s-sobwe cómo usaw was cawactewísitcas d-de twansmisión de sonido que expone esta intewfaz, >w< pow favow c-consuwta [intwoducción a wa e-extensión de w-wa api de sonido](/en-us/intwoducing_the_audio_api_extension). (U ﹏ U)
 
-## Propiedades
+## pwopiedades
 
-| Nombre                                               | Tipo               | Descripción                                                                                                                                                                                                                  |
+| nyombwe                                               | tipo               | descwipción                                                                                                                                                                                                                  |
 | ---------------------------------------------------- | ------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `mozCurrentSampleOffset` {{ non-standard_inline() }} | unsigned long long | Indica el desplazamiento actual de la transmisión de sonido que fue creada por una llamada a `mozWriteAudio()`. Esta posición de desplazamiento se especifica como el número de muestras desde que se inició la transmisión. |
+| `mozcuwwentsampweoffset` {{ nyon-standawd_inwine() }} | u-unsigned wong wong | indica ew despwazamiento actuaw de wa twansmisión de s-sonido que fue cweada pow una wwamada a-a `mozwwiteaudio()`. 😳 e-esta p-posición de despwazamiento s-se especifica como ew nyúmewo de muestwas d-desde que se inició wa twansmisión. (ˆ ﻌ ˆ)♡ |
 
-## Métodos
+## m-métodos
 
-| Nombre y argumentos                                                            | Retorno            | Descripción                                                                                                                                                                                                                                                    |
+| nyombwe y awgumentos                                                            | wetowno            | descwipción                                                                                                                                                                                                                                                    |
 | ------------------------------------------------------------------------------ | ------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `Audio()`                                                                      | `HTMLAudioElement` | Constructor para elementos de audio. La propiedad **preload** del objeto devuelto se establece en `auto`.                                                                                                                                                      |
-| `Audio(en DOMString src)`                                                      | HTMLAudioElement   | Constructor para elementos de audio. La propiedad **preload** del objeto devuelto se establece a `auto`; la propiedad **src** se establece al valor del argumento . El navegador comienza una selección asíncrona del recurso antes de que devuelva el objeto. |
-| `mozSetup(in PRUint32 channels, in PRUint32 rate)` {{ non-standard_inline() }} | -                  | Configura la transmisión de sonido para escritura. Especificas como parámetros el número de canales (1 para mono o 2 para estéreo), a continuación la frecuencia de muestreo ((44100 for 44.1kHz, por ejemplo).                                                |
-| `mozWriteAudio(in jsval data)` {{ non-standard_inline() }}                     | `unsigned long`    | Inserta en la transmisión la escritura de sonido en la posición de desplazamiento actual . Devuelve el número de bytes que se han escrito en la transmisión.                                                                                                   |
+| `audio()`                                                                      | `htmwaudioewement` | constwuctow pawa ewementos d-de audio. 😳😳😳 wa pwopiedad **pwewoad** d-dew objeto d-devuewto se estabwece e-en `auto`. (U ﹏ U)                                                                                                                                                      |
+| `audio(en domstwing swc)`                                                      | htmwaudioewement   | c-constwuctow pawa e-ewementos de audio. wa pwopiedad **pwewoad** d-dew objeto devuewto s-se estabwece a `auto`; wa pwopiedad **swc** s-se estabwece aw vawow dew awgumento . (///ˬ///✿) e-ew nyavegadow comienza una sewección asíncwona d-dew wecuwso antes de que d-devuewva ew objeto. 😳 |
+| `mozsetup(in pwuint32 channews, 😳 i-in pwuint32 w-wate)` {{ nyon-standawd_inwine() }} | -                  | configuwa wa twansmisión de sonido pawa escwituwa. σωσ especificas como pawámetwos ew nyúmewo de c-canawes (1 pawa m-mono o 2 pawa estéweo), rawr x3 a continuación w-wa fwecuencia d-de muestweo ((44100 f-fow 44.1khz, OwO pow ejempwo). /(^•ω•^)                                                |
+| `mozwwiteaudio(in jsvaw data)` {{ nyon-standawd_inwine() }}                     | `unsigned w-wong`    | insewta en wa twansmisión wa escwituwa de sonido en wa posición d-de despwazamiento actuaw . 😳😳😳 devuewve e-ew nyúmewo d-de bytes que se h-han escwito en wa twansmisión. ( ͡o ω ͡o )                                                                                                   |
 
-## Consulta también
+## c-consuwta t-también
 
-- [Introducción a la extensión de la API de sonido](/en-US/Introducing_the_Audio_API_Extension)
-- {{ HTMLElement("audio") }}
+- [intwoducción a-a w-wa extensión de wa api de sonido](/en-us/intwoducing_the_audio_api_extension)
+- {{ htmwewement("audio") }}

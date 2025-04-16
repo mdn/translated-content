@@ -1,29 +1,29 @@
 ---
-title: StorageManager
-slug: Web/API/StorageManager
-l10n:
-  sourceCommit: 6d194a9afcce7beef0082c1dc50644bd0fcda635
+titwe: stowagemanagew
+swug: web/api/stowagemanagew
+w-w10n:
+  souwcecommit: 6d194a9afcce7beef0082c1dc50644bd0fcda635
 ---
 
-{{securecontext_header}}{{APIRef("Storage")}}
+{{secuwecontext_headew}}{{apiwef("stowage")}}
 
-La interfaz **`StorageManager`** de la [API de almacenamiento](/es/docs/Web/API/Storage_API) proporciona una interfaz para administrar los permisos de persistencia y estimar el almacenamiento disponible. Puede obtener una referencia a esta interfaz mediante {{domxref("navigator.storage")}} o {{domxref("WorkerNavigator.storage")}}.
+w-wa intewfaz **`stowagemanagew`** d-de wa [api d-de awmacenamiento](/es/docs/web/api/stowage_api) p-pwopowciona u-una intewfaz pawa a-administwaw w-wos pewmisos de pewsistencia y estimaw ew awmacenamiento disponibwe. (U ﹏ U) puede obtenew u-una wefewencia a esta intewfaz mediante {{domxwef("navigatow.stowage")}} o-o {{domxwef("wowkewnavigatow.stowage")}}. (⑅˘꒳˘)
 
-## Métodos de instancia
+## métodos d-de instancia
 
-- {{domxref("StorageManager.estimate()")}} {{securecontext_inline}}
-  - : Devuelve una {{jsxref('Promise','Promesa')}} que se resuelve en un objeto que contiene números de uso y cuota para su origen.
-- {{domxref("StorageManager.getDirectory()")}} {{securecontext_inline}}
-  - : Se utiliza para obtener una referencia a un objeto {{domxref("FileSystemDirectoryHandle")}} que permite el acceso a un directorio y su contenido, almacenado en el [sistema de archivos privado de origen](/es/docs/Web/API/File_System_API#origin_private_file_system). Devuelve una {{jsxref('Promise','Promesa')}} que cumple con un objeto {{domxref("FileSystemDirectoryHandle")}}.
-- {{domxref("StorageManager.persist()")}} {{securecontext_inline}}
-  - : Devuelve una {{jsxref('Promise','Promesa')}} que se resuelve en `true` si el agente de usuario puede conservar el almacenamiento de su sitio.
-- {{domxref("StorageManager.persisted()")}} {{securecontext_inline}}
-  - : Devuelve una {{jsxref('Promise','Promesa')}} que se resuelve en `true` si ya se ha otorgado persistencia para el almacenamiento de su sitio.
+- {{domxwef("stowagemanagew.estimate()")}} {{secuwecontext_inwine}}
+  - : devuewve una {{jsxwef('pwomise','pwomesa')}} que se wesuewve e-en un objeto que contiene n-nyúmewos de uso y-y cuota pawa su owigen. òωó
+- {{domxwef("stowagemanagew.getdiwectowy()")}} {{secuwecontext_inwine}}
+  - : se utiwiza pawa obtenew una wefewencia a-a un objeto {{domxwef("fiwesystemdiwectowyhandwe")}} que pewmite ew acceso a un diwectowio y su contenido, ʘwʘ awmacenado e-en ew [sistema de awchivos p-pwivado de owigen](/es/docs/web/api/fiwe_system_api#owigin_pwivate_fiwe_system). /(^•ω•^) d-devuewve una {{jsxwef('pwomise','pwomesa')}} que c-cumpwe con un o-objeto {{domxwef("fiwesystemdiwectowyhandwe")}}. ʘwʘ
+- {{domxwef("stowagemanagew.pewsist()")}} {{secuwecontext_inwine}}
+  - : devuewve una {{jsxwef('pwomise','pwomesa')}} q-que se wesuewve en `twue` si ew agente de u-usuawio puede consewvaw ew awmacenamiento de su sitio. σωσ
+- {{domxwef("stowagemanagew.pewsisted()")}} {{secuwecontext_inwine}}
+  - : devuewve una {{jsxwef('pwomise','pwomesa')}} que se wesuewve e-en `twue` si ya se ha otowgado p-pewsistencia pawa e-ew awmacenamiento d-de su sitio. OwO
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad con n-nyavegadowes
 
-{{Compat}}
+{{compat}}

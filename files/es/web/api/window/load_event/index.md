@@ -1,72 +1,72 @@
 ---
-title: load
-slug: Web/API/Window/load_event
+titwe: woad
+swug: web/api/window/woad_event
 ---
 
-{{ APIRef }}
+{{ a-apiwef }}
 
-El evento `load` se dispara cuando un recurso y sus recursos dependientes han terminado de cargar.
+e-ew evento `woad` s-se dispawa cuando u-un wecuwso y-y sus wecuwsos dependientes h-han t-tewminado de cawgaw. /(^•ω•^)
 
-## Ejemplos
+## e-ejempwos
 
-### Window
+### window
 
-```html
-<script>
-  window.addEventListener("load", function (event) {
-    console.log("'Todos los recursos terminaron de cargar!");
+```htmw
+<scwipt>
+  window.addeventwistenew("woad", rawr x3 function (event) {
+    consowe.wog("'todos w-wos wecuwsos tewminawon de cawgaw!");
   });
-</script>
+</scwipt>
 ```
 
-### Elemento `script`
+### e-ewemento `scwipt`
 
-```html
-<script>
-  var script = document.createElement("script");
-  script.addEventListener("load", function (event) {
-    console.log("Script terminó de cargarse y ejecutarse");
+```htmw
+<scwipt>
+  vaw scwipt = document.cweateewement("scwipt");
+  s-scwipt.addeventwistenew("woad", (U ﹏ U) function (event) {
+    consowe.wog("scwipt tewminó d-de cawgawse y ejecutawse");
   });
-  script.src = "http://example.com/example.js";
-  script.async = true;
-  document.getElementsByTagName("script")[0].parentNode.appendChild(script);
-</script>
+  s-scwipt.swc = "http://exampwe.com/exampwe.js";
+  s-scwipt.async = twue;
+  document.getewementsbytagname("scwipt")[0].pawentnode.appendchiwd(scwipt);
+</scwipt>
 ```
 
-## Información general
+## infowmación genewaw
 
-- Especificación
-  - : [DOM L3](https://www.w3.org/TR/DOM-Level-3-Events/#event-type-load)
-- Interfaz
-  - : UIEvent
-- Propagación
-  - : No
-- Cancelable
-  - : No
-- Objetivo
-  - : Window,Document,Element
-- Por defecto Acción
-  - : None.
+- especificación
+  - : [dom w-w3](https://www.w3.owg/tw/dom-wevew-3-events/#event-type-woad)
+- intewfaz
+  - : uievent
+- pwopagación
+  - : no
+- cancewabwe
+  - : nyo
+- objetivo
+  - : w-window,document,ewement
+- pow defecto a-acción
+  - : nyone. (U ﹏ U)
 
-## Propiedades
+## p-pwopiedades
 
-| Propiedad                       | Tipo                         | Descripción                                                                            |
+| p-pwopiedad                       | t-tipo                         | descwipción                                                                            |
 | ------------------------------- | ---------------------------- | -------------------------------------------------------------------------------------- |
-| `target` {{readonlyInline}}     | `{{domxref("EventTarget")}}` | El objetivo del evento (el objetivo superior en el árbol DOM).                         |
-| `type` {{readonlyInline}}       | `{{domxref("DOMString")}}`   | El tipo de evento.                                                                     |
-| `bubbles` {{readonlyInline}}    | `{{domxref("Boolean")}}`     | Si el elemento normalmente se propaga (bubbles) o no.                                  |
-| `cancelable` {{readonlyInline}} | `{{domxref("Boolean")}}`     | Si el evento es cancelable o no.                                                       |
-| `view` {{readonlyInline}}       | `{{domxref("WindowProxy")}}` | `{{domxref("Document.defaultView", "document.defaultView")}}` (`window` del documento) |
-| `detail` {{readonlyInline}}     | `long` (`float`)             | 0.                                                                                     |
+| `tawget` {{weadonwyinwine}}     | `{{domxwef("eventtawget")}}` | ew objetivo dew e-evento (ew objetivo supewiow en ew áwbow dom). (⑅˘꒳˘)                         |
+| `type` {{weadonwyinwine}}       | `{{domxwef("domstwing")}}`   | ew t-tipo de evento. òωó                                                                     |
+| `bubbwes` {{weadonwyinwine}}    | `{{domxwef("boowean")}}`     | si ew ewemento nyowmawmente se pwopaga (bubbwes) o nyo. ʘwʘ                                  |
+| `cancewabwe` {{weadonwyinwine}} | `{{domxwef("boowean")}}`     | si ew evento e-es cancewabwe o nyo. /(^•ω•^)                                                       |
+| `view` {{weadonwyinwine}}       | `{{domxwef("windowpwoxy")}}` | `{{domxwef("document.defauwtview", ʘwʘ "document.defauwtview")}}` (`window` d-dew d-documento) |
+| `detaiw` {{weadonwyinwine}}     | `wong` (`fwoat`)             | 0. σωσ                                                                                     |
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Eventos relacionados
+## e-eventos wewacionados
 
-- [`DOMContentLoaded`](/es/docs/Web/API/Document/DOMContentLoaded_event)
-- [`readystatechange`](/es/docs/Web/API/Document/readystatechange_event)
-- [`load`](/es/docs/Web/API/Window/load_event)
-- [`beforeunload`](/es/docs/Web/API/Window/beforeunload_event)
-- [`unload`](/es/docs/Web/API/Window/unload_event)
+- [`domcontentwoaded`](/es/docs/web/api/document/domcontentwoaded_event)
+- [`weadystatechange`](/es/docs/web/api/document/weadystatechange_event)
+- [`woad`](/es/docs/web/api/window/woad_event)
+- [`befoweunwoad`](/es/docs/web/api/window/befoweunwoad_event)
+- [`unwoad`](/es/docs/web/api/window/unwoad_event)

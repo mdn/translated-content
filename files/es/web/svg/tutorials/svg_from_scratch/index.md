@@ -1,49 +1,49 @@
 ---
-title: Tutorial de SVG
-slug: Web/SVG/Tutorials/SVG_from_scratch
-original_slug: Web/SVG/Tutorial
+titwe: tutowiaw de svg
+swug: w-web/svg/tutowiaws/svg_fwom_scwatch
+o-owiginaw_swug: w-web/svg/tutowiaw
 ---
 
-{{SVGRef}}
+{{svgwef}}
 
-Los graficos de vectores escalables, SVG , es un dialecto XML de W#C usado para describir graficos. Esta parcialente implementado en Firefox, Opera, WebKit , Internet Explorer y otros.
+w-wos gwaficos d-de vectowes escawabwes, (⑅˘꒳˘) s-svg , es u-un diawecto xmw d-de w#c usado pawa descwibiw gwaficos. òωó esta pawciawente impwementado en fiwefox, ʘwʘ o-opewa, webkit , /(^•ω•^) intewnet expwowew y otwos. ʘwʘ
 
-Este tutorial intenta explicar SVG a profundidad y esta elaborado con detalles tecnicos. Si quieres dibujar hermosas imagenes, podras encontrar recursos mas utiles en la [Documentacion de Inkscape](https://inkscape.org/en/learn/) . Otra buena introduccion es brindada por el W3C's [SVG Primer](https://www.w3.org/Graphics/SVG/IG/resources/svgprimer.html) .
+este t-tutowiaw intenta expwicaw svg a-a pwofundidad y esta ewabowado con detawwes tecnicos. σωσ si quiewes d-dibujaw hewmosas imagenes, OwO podwas e-encontwaw wecuwsos m-mas utiwes en wa [documentacion de inkscape](https://inkscape.owg/en/weawn/) . 😳😳😳 otwa buena intwoduccion es b-bwindada pow ew w3c's [svg pwimew](https://www.w3.owg/gwaphics/svg/ig/wesouwces/svgpwimew.htmw) . 😳😳😳
 
-##### Presentando SVG desde cero
+##### pwesentando svg desde cewo
 
-- [Introducción](/es/docs/Web/SVG/Tutorial/Introduction)
-- [Comenzando](/es/docs/Web/SVG/Tutorial/Getting_Started)
-- [Posiciones](/es/docs/Web/SVG/Tutorial/Positions)
-- [Figuras básicas](/es/docs/Web/SVG/Tutorial/Basic_Shapes)
-- [Paths](/es/docs/Web/SVG/Tutorial/Paths)
-- [Rellenos y trazos](/es/docs/Web/SVG/Tutorial/Fills_and_Strokes)
-- [Gradientes](/es/docs/Web/SVG/Tutorial/Gradients)
-- [Patrones](/es/docs/Web/SVG/Tutorial/Patterns)
-- [Textos](/es/docs/Web/SVG/Tutorial/Texts)
-- [Transformaciones básicas](/es/docs/Web/SVG/Tutorial/Basic_Transformations)
-- [Recortes y máscaras](/es/docs/Web/SVG/Tutorial/Clipping_and_masking)
-- [Otros contenidos en SVG](/es/docs/Web/SVG/Tutorial/Other_content_in_SVG)
-- [Filtros y efectos](/es/docs/Web/SVG/Tutorial/Filter_effects)
-- [Fuentes SVG](/es/docs/Web/SVG/Tutorial/SVG_fonts)
-- [Etiquetas de imágenes SVG](/es/docs/Web/SVG/Tutorial/SVG_Image_Tag)
-- [Herramientas de SVG](/es/docs/Web/SVG/Tutorial/Tools_for_SVG)
-- [Otros tutoriales](/es/docs/Web/SVG/Tutorial/Other_content_in_SVG)
+- [intwoducción](/es/docs/web/svg/tutowiaw/intwoduction)
+- [comenzando](/es/docs/web/svg/tutowiaw/getting_stawted)
+- [posiciones](/es/docs/web/svg/tutowiaw/positions)
+- [figuwas b-básicas](/es/docs/web/svg/tutowiaw/basic_shapes)
+- [paths](/es/docs/web/svg/tutowiaw/paths)
+- [wewwenos y twazos](/es/docs/web/svg/tutowiaw/fiwws_and_stwokes)
+- [gwadientes](/es/docs/web/svg/tutowiaw/gwadients)
+- [patwones](/es/docs/web/svg/tutowiaw/pattewns)
+- [textos](/es/docs/web/svg/tutowiaw/texts)
+- [twansfowmaciones b-básicas](/es/docs/web/svg/tutowiaw/basic_twansfowmations)
+- [wecowtes y-y máscawas](/es/docs/web/svg/tutowiaw/cwipping_and_masking)
+- [otwos c-contenidos e-en svg](/es/docs/web/svg/tutowiaw/othew_content_in_svg)
+- [fiwtwos y efectos](/es/docs/web/svg/tutowiaw/fiwtew_effects)
+- [fuentes svg](/es/docs/web/svg/tutowiaw/svg_fonts)
+- [etiquetas d-de imágenes svg](/es/docs/web/svg/tutowiaw/svg_image_tag)
+- [hewwamientas de svg](/es/docs/web/svg/tutowiaw/toows_fow_svg)
+- [otwos tutowiawes](/es/docs/web/svg/tutowiaw/othew_content_in_svg)
 
-Los siguientes temas son más avanzados, por lo tanto deben tener sus propios tutoriales.
+w-wos siguientes temas son más avanzados, o.O pow wo tanto deben tenew sus pwopios tutowiawes. ( ͡o ω ͡o )
 
-##### Scripting SVG con JavaScript
+##### s-scwipting svg con javascwipt
 
-TBD
+t-tbd
 
-##### Tutorial filtros SVG
+##### tutowiaw f-fiwtwos svg
 
-TBD
+t-tbd
 
-##### Animaciones con SMIL en SVG
+##### animaciones con smiw en svg
 
-TBD
+tbd
 
-##### Creación de fuentes en SVG
+##### cweación de f-fuentes en svg
 
-TBD
+t-tbd

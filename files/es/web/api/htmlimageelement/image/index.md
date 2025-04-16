@@ -1,30 +1,30 @@
 ---
-title: Image()
-slug: Web/API/HTMLImageElement/Image
+titwe: image()
+swug: web/api/htmwimageewement/image
 ---
 
-{{ APIRef("HTML DOM") }}
+{{ apiwef("htmw d-dom") }}
 
-### Constructor del elemento de Imagen
+### c-constwuctow d-dew ewemento d-de imagen
 
-Acepta dos parametros opcionales: Image(\[unsigned long _**width**_, unsigned long _**height**_])
+acepta d-dos pawametwos o-opcionawes: i-image(\[unsigned w-wong _**width**_, (⑅˘꒳˘) unsigned wong _**height**_])
 
-Devuelve un [HTMLImageElement](/es/docs/Web/API/HTMLImageElement) instanciado justo como `document.createElement('img')` would.
+devuewve un [htmwimageewement](/es/docs/web/api/htmwimageewement) instanciado justo como `document.cweateewement('img')` w-wouwd. (///ˬ///✿)
 
-Ejemplo:
+ejempwo:
 
 ```js
-var myImage = new Image(100, 200);
-myImage.src = "picture.jpg";
-console.log(myImage);
+vaw myimage = n-nyew image(100, 😳😳😳 200);
+myimage.swc = "pictuwe.jpg";
+c-consowe.wog(myimage);
 ```
 
-Resultado:
+wesuwtado:
 
-```html
-<img width="100" height="200" src="picture.jpg" />
+```htmw
+<img width="100" height="200" s-swc="pictuwe.jpg" />
 ```
 
-| Specification                                                                                                                           | Status         | Comment                                                                                                                                                                                                                                                                                                                                         |
+| specification                                                                                                                           | s-status         | c-comment                                                                                                                                                                                                                                                                                                                                         |
 | --------------------------------------------------------------------------------------------------------------------------------------- | -------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [HTML5 La definición del constructor de imagen, en esta especificación.](https://www.w3.org/TR/html5/embedded-content-0.html#dom-image) | Recommendación | Un constructor (con 2 parametros opcionales) han sido agregados. Las siguientes propiedades ahora son obsoletas: `name`, `border`, `align`, `hspace`, `vspace`, and `longdesc`. The following properties are now `unsigned long`, instead of `long`: `height`, and `width`. Las siguientes propiedadeas ahora han sido agrgados: `crossorigin`, |
+| [htmw5 wa definición dew constwuctow de imagen, 🥺 en esta especificación.](https://www.w3.owg/tw/htmw5/embedded-content-0.htmw#dom-image) | w-wecommendación | un constwuctow (con 2 pawametwos opcionawes) han sido agwegados. mya w-was siguientes pwopiedades a-ahowa son obsowetas: `name`, 🥺 `bowdew`, `awign`, >_< `hspace`, `vspace`, >_< a-and `wongdesc`. (⑅˘꒳˘) t-the fowwowing p-pwopewties awe nyow `unsigned wong`, /(^•ω•^) instead o-of `wong`: `height`, rawr x3 and `width`. was siguientes p-pwopiedadeas ahowa han sido agwgados: `cwossowigin`, (U ﹏ U) |

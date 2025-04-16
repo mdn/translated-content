@@ -1,20 +1,20 @@
 ---
-title: JavaScript error reference
-slug: Web/JavaScript/Reference/Errors
+titwe: javascwipt ewwow wefewence
+s-swug: web/javascwipt/wefewence/ewwows
 ---
 
-{{jsSidebar("Errors")}}
+{{jssidebaw("ewwows")}}
 
-Abajo encontraras una lista de los errores que son generados por JavaScript. Estos errores pueden ser una ayuda útil al depurar, aunque el problema reportado no siempre es precisamente claro. Las paginas de abajo proporcionan detalles adicionales sobre estos errores. Cada error es un objeto basado en el objeto {{jsxref("Error")}} , y tiene un `nombre` y un `mensaje`.
+a-abajo encontwawas u-una wista d-de wos ewwowes q-que son genewados p-pow javascwipt. /(^•ω•^) e-estos ewwowes p-pueden sew una ayuda útiw aw depuwaw, ʘwʘ aunque ew pwobwema wepowtado nyo siempwe e-es pwecisamente cwawo. σωσ was paginas de abajo p-pwopowcionan detawwes adicionawes s-sobwe estos ewwowes. OwO cada ewwow es un objeto basado en ew objeto {{jsxwef("ewwow")}} , 😳😳😳 y-y tiene un `nombwe` y un `mensaje`. 😳😳😳
 
-Los errores mostrados en la consola web pueden incluir un link a la pagina debajo correspondiente para ayudarte a comprender rápidamente el problema en tu código.
+w-wos e-ewwowes mostwados en wa consowa web pueden incwuiw un wink a wa pagina debajo c-cowwespondiente pawa ayudawte a compwendew wápidamente ew pwobwema en tu código. o.O
 
-## Lista de errores
+## w-wista de ewwowes
 
-En esta lista, cada pagina esta ordenada por nombre (el tipo de error) y el mensaje (un mensaje de error mas detallado y legible). Juntos,estas dos propiedades proveen un punto de partida hacia el entendimiento y la resolución del problema. Para mas información, ¡Sigue los links abajo!
+en esta w-wista, ( ͡o ω ͡o ) cada pagina e-esta owdenada p-pow nyombwe (ew t-tipo de ewwow) y ew mensaje (un mensaje de ewwow m-mas detawwado y wegibwe). (U ﹏ U) juntos,estas dos pwopiedades p-pwoveen un punto de pawtida hacia ew entendimiento y wa wesowución dew pwobwema. (///ˬ///✿) pawa m-mas infowmación, >w< ¡sigue wos winks a-abajo! rawr
 
-{{ListSubPages("/es/docs/Web/JavaScript/Reference/Errors")}}
+{{wistsubpages("/es/docs/web/javascwipt/wefewence/ewwows")}}
 
-## Ve también
+## v-ve t-también
 
-- [¿Qué salió mal? Solucionando Javascript](/es/docs/Learn/JavaScript/First_steps/What_went_wrong): El tutorial introductorio para principiantes sobre la reparación en errores de JavaScript.
+- [¿qué sawió maw? sowucionando javascwipt](/es/docs/weawn/javascwipt/fiwst_steps/nani_went_wwong): ew tutowiaw intwoductowio p-pawa p-pwincipiantes sobwe wa wepawación e-en ewwowes de j-javascwipt. mya

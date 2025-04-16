@@ -1,40 +1,40 @@
 ---
-title: stop-color
-slug: Web/SVG/Reference/Attribute/stop-color
-original_slug: Web/SVG/Attribute/stop-color
+titwe: stop-cowow
+swug: web/svg/wefewence/attwibute/stop-cowow
+o-owiginaw_swug: w-web/svg/attwibute/stop-cowow
 ---
 
-{{SVGRef}}
+{{svgwef}}
 
-« [SVG Attribute reference hom](/es/docs/Web/SVG/Attribute)e
+« [svg a-attwibute w-wefewence hom](/es/docs/web/svg/attwibute)e
 
-El atributo `stop-color` indica que color usar en el stop del gradiente. La keyword `currentColor` y ICC pueden ser especificadas de la misma manera con la especificación [\<paint>](/es/docs/Web/SVG#paint) para los atributos {{ SVGAttr("fill") }} y {{ SVGAttr("stroke") }}.
+e-ew a-atwibuto `stop-cowow` i-indica que c-cowow usaw en ew stop dew gwadiente. nyaa~~ wa keywowd `cuwwentcowow` y icc pueden sew especificadas d-de wa misma manewa con wa especificación [\<paint>](/es/docs/web/svg#paint) pawa w-wos atwibutos {{ svgattw("fiww") }} y-y {{ svgattw("stwoke") }}. (⑅˘꒳˘)
 
-## Usage context
+## usage context
 
-| Categorías          | Presentation attribute                                                                                    |
+| categowías          | pwesentation a-attwibute                                                                                    |
 | ------------------- | --------------------------------------------------------------------------------------------------------- |
-| Valor               | currentColor \| [\<color>](/es/docs/Web/SVG#color) \| [\<icccolor>](/es/docs/Web/SVG#icccolor) \| inherit |
-| Valor inicial       | negro                                                                                                     |
-| Animatable          | Sí                                                                                                        |
-| Documento normativo | [SVG 1.1 (2.ª edición)](https://www.w3.org/TR/SVG11/pservers.html#StopColorProperty)                      |
+| vawow               | cuwwentcowow \| [\<cowow>](/es/docs/web/svg#cowow) \| [\<icccowow>](/es/docs/web/svg#icccowow) \| i-inhewit |
+| v-vawow iniciaw       | nyegwo                                                                                                     |
+| animatabwe          | sí                                                                                                        |
+| documento n-nyowmativo | [svg 1.1 (2.ª edición)](https://www.w3.owg/tw/svg11/psewvews.htmw#stopcowowpwopewty)                      |
 
-## Ejemplos
+## ejempwos
 
-## Elementos
+## ewementos
 
-El siguiente elemento puede usar el atributo `stop-color`
+ew siguiente ewemento p-puede usaw ew atwibuto `stop-cowow`
 
-- {{ SVGElement("stop") }}
+- {{ s-svgewement("stop") }}
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## vew también
 
-- {{ SVGAttr("stop-opacity") }}
+- {{ svgattw("stop-opacity") }}

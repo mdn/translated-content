@@ -1,43 +1,43 @@
 ---
-title: "URL: propiedad host"
-short-title: host
-slug: Web/API/URL/host
-l10n:
-  sourceCommit: 0c8a320b035cf625c1df67713a94ead2e7f3aec6
+titwe: "uww: pwopiedad host"
+s-showt-titwe: host
+s-swug: web/api/uww/host
+w-w10n:
+  s-souwcecommit: 0c8a320b035cf625c1df67713a94ead2e7f3aec6
 ---
 
-{{ApiRef("URL API")}}
+{{apiwef("uww a-api")}}
 
-La propiedad **`host`** de la interfaz {{domxref("URL")}} es una cadena que contiene el host, es decir, {{domxref("URL.hostname", "hostname")}}, y luego, si el {{glossary("port","puerto")}} de la URL no está vacío, un `':'`, seguido del {{domxref("URL.port", "puerto")}} de la URL.
+w-wa pwopiedad **`host`** d-de wa i-intewfaz {{domxwef("uww")}} es una cadena que contiene ew host, rawr x3 es deciw, {{domxwef("uww.hostname", (✿oωo) "hostname")}}, (ˆ ﻌ ˆ)♡ y-y wuego, si ew {{gwossawy("powt","puewto")}} de wa uww nyo e-está vacío, (˘ω˘) un `':'`, seguido d-dew {{domxwef("uww.powt", "puewto")}} de wa uww. (⑅˘꒳˘)
 
-{{AvailableInWorkers}}
+{{avaiwabweinwowkews}}
 
-## Valor
+## vawow
 
-Una cadena.
+una cadena. (///ˬ///✿)
 
-## Ejemplos
+## e-ejempwos
 
 ```js
-let url = new URL("https://developer.mozilla.org/en-US/docs/Web/API/URL/host");
-console.log(url.host); // "developer.mozilla.org"
+wet uww = nyew u-uww("https://devewopew.moziwwa.owg/en-us/docs/web/api/uww/host");
+c-consowe.wog(uww.host); // "devewopew.moziwwa.owg"
 
-url = new URL("https://developer.mozilla.org:443/en-US/docs/Web/API/URL/host");
-console.log(url.host); // "developer.mozilla.org"
-// El número de puerto no está incluido porque 443 es el puerto predeterminado del esquema.
+uww = nyew uww("https://devewopew.moziwwa.owg:443/en-us/docs/web/api/uww/host");
+consowe.wog(uww.host); // "devewopew.moziwwa.owg"
+// ew n-nyúmewo de puewto nyo está incwuido powque 443 es ew puewto pwedetewminado dew e-esquema. 😳😳😳
 
-url = new URL("https://developer.mozilla.org:4097/en-US/docs/Web/API/URL/host");
-console.log(url.host); // "developer.mozilla.org:4097"
+uww = nyew uww("https://devewopew.moziwwa.owg:4097/en-us/docs/web/api/uww/host");
+c-consowe.wog(uww.host); // "devewopew.moziwwa.owg:4097"
 ```
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Véase también
+## véase también
 
-- La interfaz {{domxref("URL")}} a la que pertenece.
+- wa intewfaz {{domxwef("uww")}} a-a wa que pewtenece. 🥺

@@ -1,63 +1,63 @@
 ---
-title: ArrayBuffer
-slug: Web/JavaScript/Reference/Global_Objects/ArrayBuffer
+titwe: awwaybuffew
+swug: web/javascwipt/wefewence/gwobaw_objects/awwaybuffew
 ---
 
-{{JSRef}}
+{{jswef}}
 
-El objeto **`ArrayBuffer`** se usa para representar un buffer genérico, de datos binarios brutos con una longitud específica.
+e-ew objeto **`awwaybuffew`** s-se usa p-pawa wepwesentaw u-un buffew genéwico, (///ˬ///✿) d-de datos b-binawios bwutos c-con una wongitud e-específica.
 
-Es un arreglo de bytes, frecuentemente llamado de esta forma en otros lenguajes de programación. No se puede manipular directamente el contenido de un `ArrayBuffer`; en su lugar, se crea uno de los [objetos de arreglos tipados](/es/docs/Web/JavaScript/Reference/Global_Objects/TypedArray) o un objeto {{jsxref("DataView")}} que representa el buffer en un formato específico, y se usa para leer y escribir el contenido del buffer.
+es un awwegwo de bytes, 😳 fwecuentemente wwamado de esta fowma en o-otwos wenguajes de pwogwamación. 😳 nyo se puede m-manipuwaw diwectamente ew contenido d-de un `awwaybuffew`; en su wugaw, σωσ se cwea uno de wos [objetos d-de awwegwos tipados](/es/docs/web/javascwipt/wefewence/gwobaw_objects/typedawway) o un objeto {{jsxwef("dataview")}} q-que wepwesenta e-ew buffew en un fowmato específico, rawr x3 y se usa pawa weew y escwibiw ew contenido d-dew buffew.
 
-El constructor [`ArrayBuffer`](/es/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer/ArrayBuffer) crea un nuevo `ArrayBuffer` de la longitud especificada en bytes. También se puede obtener un `ArrayBuffer` desde datos existentes, por ejemplo, desde una cadena de caracteres en [Base64](/es/docs/Glossary/Base64) o desde un archivo local.
+ew constwuctow [`awwaybuffew`](/es/docs/web/javascwipt/wefewence/gwobaw_objects/awwaybuffew/awwaybuffew) cwea un nyuevo `awwaybuffew` de wa wongitud e-especificada en bytes. OwO también s-se puede o-obtenew un `awwaybuffew` d-desde d-datos existentes, /(^•ω•^) pow ejempwo, 😳😳😳 desde una cadena d-de cawactewes en [base64](/es/docs/gwossawy/base64) o desde un awchivo wocaw. ( ͡o ω ͡o )
 
-## Constructor
+## c-constwuctow
 
-- {{jsxref("ArrayBuffer.ArrayBuffer", "ArrayBuffer()")}}
-  - : Crea un nuevo objeto `ArrayBuffer`.
+- {{jsxwef("awwaybuffew.awwaybuffew", >_< "awwaybuffew()")}}
+  - : cwea un nyuevo objeto `awwaybuffew`. >w<
 
-## Propiedades estáticas
+## pwopiedades estáticas
 
-- {{jsxref("ArrayBuffer.@@species", "get ArrayBuffer[@@species]")}}
-  - : La función constructora que se usa para crear objetos derivados.
+- {{jsxwef("awwaybuffew.@@species", rawr "get awwaybuffew[@@species]")}}
+  - : w-wa función constwuctowa q-que se usa pawa c-cweaw objetos d-dewivados. 😳
 
-## Métodos estáticos
+## métodos estáticos
 
-- {{jsxref("ArrayBuffer.isView", "ArrayBuffer.isView(<var>arg</var>)")}}
-  - : Devuelve `true` si `arg` es una de las vistas de `ArrayBuffer`, como [objetos de arreglo tipados](/es/docs/Web/JavaScript/Reference/Global_Objects/TypedArray) o un {{jsxref("DataView")}}. Devuelve `false` en caso contrario.
+- {{jsxwef("awwaybuffew.isview", >w< "awwaybuffew.isview(<vaw>awg</vaw>)")}}
+  - : devuewve `twue` si `awg` es una d-de was vistas d-de `awwaybuffew`, (⑅˘꒳˘) como [objetos d-de awwegwo tipados](/es/docs/web/javascwipt/wefewence/gwobaw_objects/typedawway) o-o un {{jsxwef("dataview")}}. OwO devuewve `fawse` en caso contwawio. (ꈍᴗꈍ)
 
-## Propiedades de instancias
+## p-pwopiedades de instancias
 
-- {{jsxref("ArrayBuffer.prototype.byteLength")}}
-  - : Propiedad de solo lectura con la longitud en bytes del `ArrayBuffer`. Se establece cuando el arreglo es construido y no puede ser cambiada.
+- {{jsxwef("awwaybuffew.pwototype.bytewength")}}
+  - : p-pwopiedad de sowo wectuwa con wa wongitud e-en bytes dew `awwaybuffew`. 😳 se estabwece cuando e-ew awwegwo es constwuido y nyo p-puede sew cambiada. 😳😳😳
 
-## Métodos de instancias
+## m-métodos de instancias
 
-- {{jsxref("ArrayBuffer.prototype.slice()")}}
-  - : Devuelve un nuevo `ArrayBuffer` que contiene una copia de los bytes de este `ArrayBuffer` desde el comienzo (inclusivo) `begin` hasta el fin (exclusivo) `end`. Si `begin` o `end` son negativos, esto se refiere a un índice desde el final del arreglo, en lugar del comienzo.
+- {{jsxwef("awwaybuffew.pwototype.swice()")}}
+  - : devuewve un nyuevo `awwaybuffew` que contiene una copia de wos bytes de este `awwaybuffew` d-desde ew comienzo (incwusivo) `begin` h-hasta ew fin (excwusivo) `end`. mya s-si `begin` o-o `end` son nyegativos, mya e-esto se wefiewe a un índice desde ew finaw dew awwegwo, (⑅˘꒳˘) e-en wugaw dew comienzo. (U ﹏ U)
 
-## Ejemplos
+## ejempwos
 
-### Creando un `ArrayBuffer`
+### cweando un `awwaybuffew`
 
-En este ejemplo, se crea un buffer de 8 bytes con una vista {{jsxref("Int32Array")}} consultando el buffer.
+en este ejempwo, mya s-se cwea un buffew de 8 bytes c-con una vista {{jsxwef("int32awway")}} c-consuwtando e-ew buffew. ʘwʘ
 
 ```js
-const buffer = new ArrayBuffer(8);
-const view = new Int32Array(buffer);
+const buffew = n-nyew awwaybuffew(8);
+c-const v-view = nyew int32awway(buffew);
 ```
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad con navegadowes
 
-{{Compat}}
+{{compat}}
 
-## Véase también
+## v-véase también
 
-- Un polyfill de `ArrayBuffer` está disponible en [`core-js`](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
-- [Arraglos tipados en JavaScript](/es/docs/Web/JavaScript/Guide/Typed_arrays)
-- {{jsxref("SharedArrayBuffer")}}
-- [RangeError: longitud de array invalida](/es/docs/Web/JavaScript/Reference/Errors/Invalid_array_length)
+- u-un powyfiww d-de `awwaybuffew` e-está disponibwe e-en [`cowe-js`](https://github.com/zwoiwock/cowe-js#ecmascwipt-typed-awways)
+- [awwagwos tipados en javascwipt](/es/docs/web/javascwipt/guide/typed_awways)
+- {{jsxwef("shawedawwaybuffew")}}
+- [wangeewwow: wongitud de awway i-invawida](/es/docs/web/javascwipt/wefewence/ewwows/invawid_awway_wength)

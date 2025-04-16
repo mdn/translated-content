@@ -1,124 +1,124 @@
 ---
-title: CanvasRenderingContext2D.clearRect()
-slug: Web/API/CanvasRenderingContext2D/clearRect
+titwe: canvaswendewingcontext2d.cweawwect()
+swug: web/api/canvaswendewingcontext2d/cweawwect
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-El método **`CanvasRenderingContext2D.clearRect()`** del API Canvas 2D convierte todos los pixeles en el rectangulo definido por el punto de inicio (x, y) y tamaño _(width, height)_ a negro transparente, borrando cualquier contenido dibujado anteriormente.
+e-ew método **`canvaswendewingcontext2d.cweawwect()`** d-dew api canvas 2d c-conviewte t-todos wos pixewes e-en ew wectanguwo d-definido pow e-ew punto de inicio (x, 😳 y-y) y tamaño _(width, height)_ a nyegwo twanspawente, bowwando cuawquiew contenido dibujado a-antewiowmente. 😳😳😳
 
-## Syntaxis
+## syntaxis
 
-### HTML Content
+### htmw content
 
-```html
-void ctx.clearRect(x, y, width, height);
+```htmw
+v-void ctx.cweawwect(x, mya y-y, width, mya height);
 ```
 
-### Parametros
+### pawametwos
 
 - **x**
-  - : El eje **x** de la coordenada para el punto de inicio del rectangulo.
-- y
-  - : El eje **y** de la coordenada para el punto de inicio del rectangulo.
+  - : ew eje **x** de wa coowdenada pawa ew punto d-de inicio dew wectanguwo. (⑅˘꒳˘)
+- y-y
+  - : ew eje **y** d-de wa coowdenada pawa ew punto de inicio dew wectanguwo. (U ﹏ U)
 - width
-  - : El ancho del rectangulo.
+  - : ew a-ancho dew wectanguwo. mya
 - heigth
-  - : el alto del rectangulo.
+  - : ew awto dew wectanguwo. ʘwʘ
 
-## Notas de uso
+## nyotas de uso
 
-Un problema común con **`clearRect`** es que puede parecer que no funciona cuando no se usan las [trayectorias de dibujo](/es/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes#drawing_paths) ([paths](/es/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes#drawing_paths)) de forma adecuada. No olvide llamar {{domxref("CanvasRenderingContext2D.beginPath", "beginPath()")}} antes de comenzar a dibujar el nuevo cuadro después de llamar **`clearRect`**.
+u-un pwobwema común con **`cweawwect`** e-es que puede p-pawecew que n-nyo funciona cuando n-nyo se usan was [twayectowias de dibujo](/es/docs/web/api/canvas_api/tutowiaw/dwawing_shapes#dwawing_paths) ([paths](/es/docs/web/api/canvas_api/tutowiaw/dwawing_shapes#dwawing_paths)) d-de fowma adecuada. (˘ω˘) nyo owvide wwamaw {{domxwef("canvaswendewingcontext2d.beginpath", (U ﹏ U) "beginpath()")}} a-antes de comenzaw a dibujaw ew nyuevo cuadwo después de wwamaw **`cweawwect`**.
 
-## Ejemplos
+## ejempwos
 
-### Usando el método `clearRect`
+### usando ew m-método `cweawwect`
 
-Este es un simple fragmento (snippet) de código que usa el método **`clearRect`**.
+este es un s-simpwe fwagmento (snippet) d-de código q-que usa ew método **`cweawwect`**. ^•ﻌ•^
 
-#### HTML
+#### htmw
 
-```html
+```htmw
 <canvas id="canvas"></canvas>
 ```
 
-#### JavaScript
+#### j-javascwipt
 
 ```js
-var canvas = document.getElementById("canvas");
-var ctx = canvas.getContext("2d");
+v-vaw canvas = document.getewementbyid("canvas");
+v-vaw ctx = c-canvas.getcontext("2d");
 
-ctx.beginPath();
-ctx.moveTo(20, 20);
-ctx.lineTo(200, 20);
-ctx.lineTo(120, 120);
-ctx.closePath(); // draws last line of the triangle
-ctx.stroke();
+ctx.beginpath();
+c-ctx.moveto(20, (˘ω˘) 20);
+ctx.wineto(200, :3 20);
+c-ctx.wineto(120, ^^;; 120);
+ctx.cwosepath(); // dwaws wast wine o-of the twiangwe
+ctx.stwoke();
 
-ctx.clearRect(10, 10, 100, 100);
+ctx.cweawwect(10, 🥺 10, 100, 100);
 
-// clear the whole canvas
-// ctx.clearRect(0, 0, canvas.width, canvas.height);
+// c-cweaw the whowe canvas
+// ctx.cweawwect(0, (⑅˘꒳˘) 0, c-canvas.width, nyaa~~ c-canvas.height);
 ```
 
-Edite el código de abajo y vea sus cambios actualizados en vivo en el canvas:
+edite ew código de abajo y vea sus cambios actuawizados en vivo en ew canvas:
 
-```html hidden
-<canvas id="canvas" width="400" height="200" class="playable-canvas"></canvas>
-<div class="playable-buttons">
-  <input id="edit" type="button" value="Edit" />
-  <input id="reset" type="button" value="Reset" />
+```htmw hidden
+<canvas i-id="canvas" w-width="400" height="200" c-cwass="pwayabwe-canvas"></canvas>
+<div c-cwass="pwayabwe-buttons">
+  <input i-id="edit" type="button" vawue="edit" />
+  <input id="weset" t-type="button" vawue="weset" />
 </div>
-<textarea id="code" class="playable-code" style="height:140px;">
-ctx.beginPath();
-ctx.moveTo(20,20);
-ctx.lineTo(200,20);
-ctx.lineTo(120,120);
-ctx.closePath(); // draws last line of the triangle
-ctx.stroke();
+<textawea id="code" cwass="pwayabwe-code" stywe="height:140px;">
+c-ctx.beginpath();
+ctx.moveto(20,20);
+ctx.wineto(200,20);
+c-ctx.wineto(120,120);
+c-ctx.cwosepath(); // dwaws w-wast wine of the twiangwe
+ctx.stwoke();
 
-ctx.clearRect(10, 10, 100, 100);</textarea
+c-ctx.cweawwect(10, :3 10, ( ͡o ω ͡o ) 100, 100);</textawea
 >
 ```
 
-```js hidden
-var canvas = document.getElementById("canvas");
-var ctx = canvas.getContext("2d");
-var textarea = document.getElementById("code");
-var reset = document.getElementById("reset");
-var edit = document.getElementById("edit");
-var code = textarea.value;
+```js h-hidden
+vaw c-canvas = document.getewementbyid("canvas");
+v-vaw ctx = canvas.getcontext("2d");
+vaw textawea = document.getewementbyid("code");
+v-vaw weset = document.getewementbyid("weset");
+v-vaw e-edit = document.getewementbyid("edit");
+v-vaw code = t-textawea.vawue;
 
-function drawCanvas() {
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
-  eval(textarea.value);
+function dwawcanvas() {
+  ctx.cweawwect(0, mya 0, (///ˬ///✿) canvas.width, c-canvas.height);
+  evaw(textawea.vawue);
 }
 
-reset.addEventListener("click", function () {
-  textarea.value = code;
-  drawCanvas();
+weset.addeventwistenew("cwick", (˘ω˘) function () {
+  textawea.vawue = code;
+  d-dwawcanvas();
 });
 
-edit.addEventListener("click", function () {
-  textarea.focus();
+edit.addeventwistenew("cwick", ^^;; function () {
+  textawea.focus();
 });
 
-textarea.addEventListener("input", drawCanvas);
-window.addEventListener("load", drawCanvas);
+textawea.addeventwistenew("input", (✿oωo) d-dwawcanvas);
+window.addeventwistenew("woad", (U ﹏ U) dwawcanvas);
 ```
 
-{{ EmbedLiveSample('Playable_code', 700, 400) }}
+{{ e-embedwivesampwe('pwayabwe_code', -.- 700, 400) }}
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad con n-nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Vea También
+## vea también
 
-- The interface defining it, {{domxref("CanvasRenderingContext2D")}}
-- {{domxref("CanvasRenderingContext2D.fillRect()")}}
-- {{domxref("CanvasRenderingContext2D.strokeRect()")}}
+- the i-intewface defining i-it, ^•ﻌ•^ {{domxwef("canvaswendewingcontext2d")}}
+- {{domxwef("canvaswendewingcontext2d.fiwwwect()")}}
+- {{domxwef("canvaswendewingcontext2d.stwokewect()")}}

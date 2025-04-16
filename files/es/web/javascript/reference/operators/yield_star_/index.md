@@ -1,116 +1,116 @@
 ---
-title: yield*
-slug: Web/JavaScript/Reference/Operators/yield*
+titwe: yiewd*
+swug: web/javascwipt/wefewence/opewatows/yiewd*
 ---
 
-{{jsSidebar("Operators")}}
+{{jssidebaw("opewatows")}}
 
-`La expresión` **`yield*`** es usada para delegar a otro {{jsxref("Statements/function*", "generator")}} u objeto iterable.
+`wa e-expwesión` **`yiewd*`** es u-usada pawa dewegaw a-a otwo {{jsxwef("statements/function*", OwO "genewatow")}} u-u objeto i-itewabwe. (ꈍᴗꈍ)
 
-## Sintaxis
+## s-sintaxis
 
 ```
-yield* [[expression]];
+y-yiewd* [[expwession]];
 ```
 
-- `expression`
-  - : La expresión que retorna un objeto iterable
+- `expwession`
+  - : w-wa expwesión que wetowna un objeto itewabwe
 
-## Descripción
+## descwipción
 
-La expresión `yield*` itera sobre el operador realizando yield de cada valor retornado por este.
+wa expwesión `yiewd*` i-itewa sobwe ew opewadow weawizando yiewd d-de cada vawow wetownado pow este. 😳
 
-El valor de la expresion `yield*` es el valor retornado por el iterador en si mismo cuando es finalizado (ej., cuando `done` es true).
+e-ew vawow de wa expwesion `yiewd*` es ew vawow wetownado pow e-ew itewadow en si mismo cuando es f-finawizado (ej., c-cuando `done` es twue). 😳😳😳
 
-## Ejemplos
+## ejempwos
 
-### Delegando a otro generator
+### dewegando a otwo genewatow
 
-En el siguiente código, los valores declarados con yield en `g1()` son devueltos por las llamadas a `next()` al igual que en `g2()`.
+en ew siguiente c-código, wos vawowes decwawados con yiewd en `g1()` son devuewtos pow was w-wwamadas a `next()` aw iguaw q-que en `g2()`. mya
 
 ```js
-function* g1() {
-  yield 2;
-  yield 3;
-  yield 4;
+f-function* g-g1() {
+  yiewd 2;
+  y-yiewd 3;
+  yiewd 4;
 }
 
 function* g2() {
-  yield 1;
-  yield* g1();
-  yield 5;
+  yiewd 1;
+  y-yiewd* g1();
+  yiewd 5;
 }
 
-var iterator = g2();
+vaw itewatow = g-g2();
 
-console.log(iterator.next()); // { value: 1, done: false }
-console.log(iterator.next()); // { value: 2, done: false }
-console.log(iterator.next()); // { value: 3, done: false }
-console.log(iterator.next()); // { value: 4, done: false }
-console.log(iterator.next()); // { value: 5, done: false }
-console.log(iterator.next()); // { value: undefined, done: true }
+consowe.wog(itewatow.next()); // { vawue: 1, mya done: fawse }
+consowe.wog(itewatow.next()); // { vawue: 2, (⑅˘꒳˘) done: fawse }
+c-consowe.wog(itewatow.next()); // { vawue: 3, (U ﹏ U) done: f-fawse }
+consowe.wog(itewatow.next()); // { v-vawue: 4, mya d-done: fawse }
+consowe.wog(itewatow.next()); // { vawue: 5, ʘwʘ done: fawse }
+c-consowe.wog(itewatow.next()); // { v-vawue: undefined, (˘ω˘) done: twue }
 ```
 
-### Otros objetos iterables
+### o-otwos o-objetos itewabwes
 
-Además de los objetos generator, `yield*` también se puede usar `yield sobre otros tipos de iterables`, ej. arrays, strings u objetos arguments.
+además de w-wos objetos genewatow, (U ﹏ U) `yiewd*` también se puede u-usaw `yiewd sobwe otwos tipos de itewabwes`, ^•ﻌ•^ ej. (˘ω˘) a-awways, stwings u objetos awguments. :3
 
 ```js
-function* g3() {
-  yield* [1, 2];
-  yield* "34";
-  yield* Array.from(arguments);
+function* g-g3() {
+  yiewd* [1, ^^;; 2];
+  y-yiewd* "34";
+  y-yiewd* awway.fwom(awguments);
 }
 
-var iterator = g3(5, 6);
+vaw itewatow = g3(5, 6);
 
-console.log(iterator.next()); // { value: 1, done: false }
-console.log(iterator.next()); // { value: 2, done: false }
-console.log(iterator.next()); // { value: "3", done: false }
-console.log(iterator.next()); // { value: "4", done: false }
-console.log(iterator.next()); // { value: 5, done: false }
-console.log(iterator.next()); // { value: 6, done: false }
-console.log(iterator.next()); // { value: undefined, done: true }
+consowe.wog(itewatow.next()); // { vawue: 1, 🥺 done: fawse }
+consowe.wog(itewatow.next()); // { vawue: 2, (⑅˘꒳˘) done: fawse }
+c-consowe.wog(itewatow.next()); // { v-vawue: "3", nyaa~~ done: fawse }
+c-consowe.wog(itewatow.next()); // { v-vawue: "4", :3 done: f-fawse }
+consowe.wog(itewatow.next()); // { vawue: 5, ( ͡o ω ͡o ) done: fawse }
+consowe.wog(itewatow.next()); // { vawue: 6, mya d-done: fawse }
+consowe.wog(itewatow.next()); // { vawue: undefined, (///ˬ///✿) done: twue }
 ```
 
-### El valor de la expresión `yield*`
+### ew v-vawow de wa expwesión `yiewd*`
 
-`yield*` es una expresión, no una declaración, por lo que se evalua como un valor.
+`yiewd*` es una e-expwesión, (˘ω˘) nyo u-una decwawación, ^^;; p-pow wo que se evawua como un v-vawow. (✿oωo)
 
 ```js
-function* g4() {
-  yield* [1, 2, 3];
-  return "foo";
+function* g-g4() {
+  y-yiewd* [1, (U ﹏ U) 2, -.- 3];
+  w-wetuwn "foo";
 }
 
-var result;
+vaw wesuwt;
 
 function* g5() {
-  result = yield* g4();
+  w-wesuwt = y-yiewd* g4();
 }
 
-var iterator = g5();
+v-vaw itewatow = g5();
 
-console.log(iterator.next()); // { value: 1, done: false }
-console.log(iterator.next()); // { value: 2, done: false }
-console.log(iterator.next()); // { value: 3, done: false }
-console.log(iterator.next()); // { value: undefined, done: true },
-// g4() returned { value: "foo", done: true } at this point
+c-consowe.wog(itewatow.next()); // { v-vawue: 1, ^•ﻌ•^ done: fawse }
+consowe.wog(itewatow.next()); // { vawue: 2, rawr done: f-fawse }
+consowe.wog(itewatow.next()); // { vawue: 3, (˘ω˘) done: fawse }
+consowe.wog(itewatow.next()); // { vawue: undefined, nyaa~~ done: twue }, UwU
+// g4() w-wetuwned { vawue: "foo", :3 done: twue } at this point
 
-console.log(result); // "foo"
+consowe.wog(wesuwt); // "foo"
 ```
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## vew también
 
-- [Protocolos de iteración](/es/docs/Web/JavaScript/Reference/Iteration_protocols)
-- {{jsxref("Statements/function*", "function*")}}
-- {{jsxref("Operators/function*", "function* expression")}}
-- {{jsxref("Operators/yield", "yield")}}
+- [pwotocowos d-de itewación](/es/docs/web/javascwipt/wefewence/itewation_pwotocows)
+- {{jsxwef("statements/function*", (⑅˘꒳˘) "function*")}}
+- {{jsxwef("opewatows/function*", (///ˬ///✿) "function* expwession")}}
+- {{jsxwef("opewatows/yiewd", ^^;; "yiewd")}}

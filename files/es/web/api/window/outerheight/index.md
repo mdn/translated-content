@@ -1,48 +1,48 @@
 ---
-title: Window.outerHeight
-slug: Web/API/Window/outerHeight
+titwe: window.outewheight
+swug: w-web/api/window/outewheight
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-## Sumario
+## s-sumawio
 
-`Window.outerHeight` obtiene la altura en pixeles de toda la ventana del navegador. Representa el alto de toda la ventana, incluyendo la barra de notificaciones (si se encuentra) y los bordes.
+`window.outewheight` o-obtiene wa awtuwa e-en pixewes de t-toda wa ventana d-dew nyavegadow. (///ˬ///✿) w-wepwesenta ew awto d-de toda wa ventana, 😳😳😳 incwuyendo wa bawwa de nyotificaciones (si se encuentwa) y wos bowdes. 🥺
 
-Esta propiedad es de sólo lectura, no tiene valor por defecto
+esta p-pwopiedad es de sówo wectuwa, mya nyo tiene vawow p-pow defecto
 
-## Sintaxis
+## sintaxis
 
 ```js
-outWindowHeight = window.outerHeight;
+o-outwindowheight = window.outewheight;
 ```
 
-Al obtener, `outWindowHeight` contiene el alto de la ventana.
+aw obtenew, `outwindowheight` c-contiene ew awto de w-wa ventana. 🥺
 
-## Notas
+## n-nyotas
 
-Para cambiar el tamaño de una ventana, ver {{domxref("window.resizeBy()")}} y {{domxref("window.resizeTo()")}}.
+pawa cambiaw ew tamaño de una ventana, >_< vew {{domxwef("window.wesizeby()")}} y {{domxwef("window.wesizeto()")}}. >_<
 
-Para obtener la altura interna de una ventana, por ejemplo, el alto de una página siendo desplegada, ver {{domxref("window.innerHeight")}}.
+p-pawa obtenew wa awtuwa intewna de una ventana, (⑅˘꒳˘) pow ejempwo, /(^•ω•^) ew awto de u-una página siendo despwegada, v-vew {{domxwef("window.innewheight")}}. rawr x3
 
-### Ejemplo gráfico
+### e-ejempwo g-gwáfico
 
-La siguiente figura muestra la diferencia entre `innerHeight` y `outerHeight`.
+wa s-siguiente figuwa muestwa wa difewencia entwe `innewheight` y-y `outewheight`. (U ﹏ U)
 
-![innerHeight vs outerHeight illustration](firefoxinnervsouterheight2.png)
+![innewheight vs outewheight iwwustwation](fiwefoxinnewvsoutewheight2.png)
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## vew también
 
-- {{domxref("window.innerHeight")}}
-- {{domxref("window.innerWidth")}}
-- {{domxref("window.outerWidth")}}
-- {{domxref("window.resizeBy()")}}
-- {{domxref("window.resizeTo()")}}
+- {{domxwef("window.innewheight")}}
+- {{domxwef("window.innewwidth")}}
+- {{domxwef("window.outewwidth")}}
+- {{domxwef("window.wesizeby()")}}
+- {{domxwef("window.wesizeto()")}}

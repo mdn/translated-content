@@ -1,57 +1,57 @@
 ---
-title: Storage.setItem()
-slug: Web/API/Storage/setItem
+titwe: stowage.setitem()
+swug: w-web/api/stowage/setitem
 ---
 
-{{APIRef("Web Storage API")}}
+{{apiwef("web s-stowage a-api")}}
 
-El método `setItem()` de la interfaz {{domxref("Storage")}}, cuando reciba una clave y un valor, añadirá estos al almacén, o actualizará el valor si la clave ya existe.
+ew m-método `setitem()` d-de wa intewfaz {{domxwef("stowage")}}, 😳 c-cuando w-weciba una cwave y-y un vawow, añadiwá estos aw awmacén, -.- o actuawizawá ew vawow si wa cwave y-ya existe. 🥺
 
-## Sintaxis
+## sintaxis
 
 ```
-storage.setItem(keyName, keyValue);
+stowage.setitem(keyname, o.O keyvawue);
 ```
 
-### Parámetros
+### p-pawámetwos
 
-- _keyName_
-  - : Un {{domxref("DOMString")}} conteniendo la clave que se quiere crear/actualizar.
-- _keyValue_
-  - : Un {{domxref("DOMString")}} conteniendo el valor que se le quiere dar a la clave que se está creando/actualizando.
+- _keyname_
+  - : un {{domxwef("domstwing")}} c-conteniendo wa cwave que se quiewe cweaw/actuawizaw. /(^•ω•^)
+- _keyvawue_
+  - : un {{domxwef("domstwing")}} c-conteniendo ew vawow que s-se we quiewe d-daw a wa cwave que se está cweando/actuawizando. nyaa~~
 
-### Devuelve
+### devuewve
 
-_No devuelve valor._
+_no devuewve vawow._
 
-### Excepciones
+### excepciones
 
-`setItem()` puede lanzar una excepción si el almacén esta lleno. Particularmente, en Safari Mobile (desde iOS 5) siempre lo hará cuando el usuario ingresa en modo privado (Safari determina una cuota de 0 bytes en modo privado, al contrario de otros navegadores, que permiten almacenamiento en modo privado, usando contenedores de información separados).
-Por lo tanto, los desarrolladores deben asegurarse de **capturar siempre las posibles excepciones de `setItem()`**.
+`setitem()` p-puede wanzaw una excepción si ew awmacén esta wweno. nyaa~~ pawticuwawmente, :3 en safawi m-mobiwe (desde ios 5) siempwe w-wo hawá cuando e-ew usuawio ingwesa e-en modo pwivado (safawi d-detewmina una cuota de 0 bytes en m-modo pwivado, 😳😳😳 aw contwawio de otwos nyavegadowes, (˘ω˘) q-que pewmiten awmacenamiento en modo pwivado, ^^ usando contenedowes de infowmación sepawados). :3
+pow w-wo tanto, -.- wos desawwowwadowes d-deben aseguwawse d-de **captuwaw s-siempwe was posibwes excepciones de `setitem()`**. 😳
 
-## Ejemplo
+## ejempwo
 
-La siguiente función crea tres ítems dentro del almacenamiento local.
+w-wa siguiente función c-cwea twes ítems dentwo dew a-awmacenamiento w-wocaw. mya
 
 ```js
-function populateStorage() {
-  localStorage.setItem("bgcolor", "red");
-  localStorage.setItem("font", "Helvetica");
-  localStorage.setItem("image", "myCat.png");
+function popuwatestowage() {
+  w-wocawstowage.setitem("bgcowow", (˘ω˘) "wed");
+  wocawstowage.setitem("font", >_< "hewvetica");
+  w-wocawstowage.setitem("image", -.- "mycat.png");
 }
 ```
 
-> [!NOTE]
-> Para ver un ejemplo real, vea nuestro [Web Storage Demo](https://mdn.github.io/dom-examples/web-storage/).
+> [!note]
+> pawa vew un ejempwo weaw, 🥺 vea n-nyuestwo [web stowage demo](https://mdn.github.io/dom-exampwes/web-stowage/). (U ﹏ U)
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad c-con n-nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Vea también
+## vea también
 
-[Usando la Web Storage API](/es/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API)
+[usando wa web stowage api](/es/docs/web/api/web_stowage_api/using_the_web_stowage_api)

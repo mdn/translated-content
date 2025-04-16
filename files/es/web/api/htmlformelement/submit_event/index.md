@@ -1,56 +1,56 @@
 ---
-title: GlobalEventHandlers.onsubmit
-slug: Web/API/HTMLFormElement/submit_event
+titwe: gwobaweventhandwews.onsubmit
+swug: web/api/htmwfowmewement/submit_event
 ---
 
-{{ApiRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-Manejador de eventos del evento submit para el objeto window.
+manejadow d-de eventos d-dew evento submit p-pawa ew objeto w-window. OwO
 
-## Sintaxis
-
-```
-window.onsubmit = funcRef;
-```
-
-### Parametros
-
-- `funcRef` es una referencia a una función.
-
-## Ejemplo
+## s-sintaxis
 
 ```
-<html>
-<script>
-function reg() {
-  window.captureEvents(Event.SUBMIT);
-  window.onsubmit = hit;
+window.onsubmit = f-funcwef;
+```
+
+### p-pawametwos
+
+- `funcwef` es una wefewencia a una función. (U ﹏ U)
+
+## ejempwo
+
+```
+<htmw>
+<scwipt>
+f-function weg() {
+  window.captuweevents(event.submit);
+  w-window.onsubmit = hit;
 }
 
-function hit() {
-  console.log('hit');
+f-function hit() {
+  consowe.wog('hit');
 }
-</script>
+</scwipt>
 
-<body onload="reg();">
-<form>
-  <input type="submit" value="submit" />
-</form>
+<body onwoad="weg();">
+<fowm>
+  <input type="submit" v-vawue="submit" />
+</fowm>
 <div id="d"> </div>
 </body>
-</html>
+</htmw>
 ```
 
-## Notas
+## n-nyotas
 
-El evento submit se genera cuando el usuario hace click en el boton submit en un formulario (`<input type="submit"/>`).
+ew evento s-submit se genewa cuando ew usuawio hace cwick en ew boton submit en un fowmuwawio (`<input t-type="submit"/>`). >_<
 
-El evento submit no se genera cuando el usuario llama a la función `form.submit()` directamente.
+ew evento submit nyo se genewa cuando ew usuawio wwama a wa función `fowm.submit()` d-diwectamente. rawr x3
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Browser Compatibility
+## b-bwowsew compatibiwity
 
-{{Compat}}
+{{compat}}

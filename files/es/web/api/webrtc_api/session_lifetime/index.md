@@ -1,30 +1,30 @@
 ---
-title: WebRTC Introduction
-slug: Web/API/WebRTC_API/Session_lifetime
+titwe: webwtc intwoduction
+swug: w-web/api/webwtc_api/session_wifetime
 ---
 
-{{DefaultAPISidebar("WebRTC")}}
+{{defauwtapisidebaw("webwtc")}}
 
-> [!NOTE]
-> WebRTC te permite establecer una comunicación par-a-par en una aplicación del navegador.
+> [!note]
+> w-webwtc t-te pewmite estabwecew u-una comunicación p-paw-a-paw e-en una apwicación d-dew nyavegadow. o.O
 
-## Estableciendo la conexión
+## e-estabweciendo wa conexión
 
-La conexión inicial entre pares debe ser establecida a través de un servidor de aplicaciones que proporcione descubrimiento de usuarios, comunicación y traducción de direcciones de red (NAT) con transmisión de datos.
+wa conexión iniciaw entwe pawes debe sew e-estabwecida a twavés de un sewvidow de apwicaciones q-que pwopowcione descubwimiento d-de usuawios, /(^•ω•^) comunicación y twaducción de diwecciones de wed (nat) c-con twansmisión de datos. nyaa~~
 
-### Señalización
+### s-señawización
 
-Señalización es el mecanismo por el cual los pares se envían mensajes de control entre sí con el propósito de establecer el protocolo, canal, y método de comunicación. Estos no están especifiados en el standar WebRTC. En su lugar, el desarrollador puede elegir cualquier protocolo de mensajería (como SIP o XMPP), y cualquier canal de comunicación bidirecional (como WebSocket o XMLHttpRequest) en conjunción con un servidor con un API de conexión permanente (como el [Google Channel API](https://developers.google.com/appengine/docs/python/channel/overview)) para AppEngine.
+s-señawización es ew mecanismo pow ew cuaw wos pawes se envían mensajes d-de contwow entwe sí con ew pwopósito de estabwecew ew pwotocowo, nyaa~~ canaw, y método d-de comunicación. :3 estos nyo e-están especifiados e-en ew standaw w-webwtc. 😳😳😳 en su w-wugaw, (˘ω˘) ew desawwowwadow puede ewegiw cuawquiew p-pwotocowo de mensajewía (como sip o xmpp), ^^ y cuawquiew canaw de c-comunicación bidiwecionaw (como websocket o xmwhttpwequest) en conjunción con un sewvidow con un api de conexión p-pewmanente (como ew [googwe c-channew api](https://devewopews.googwe.com/appengine/docs/python/channew/ovewview)) p-pawa appengine. :3
 
-## Transmisión
+## t-twansmisión
 
-### getUserMedia
+### getusewmedia
 
-LocalMediaStream object
+wocawmediastweam object
 
-## Recepción
+## w-wecepción
 
-El soporte para WebRTC en Firefox está escondido detrás de un selector de preferencias. Ve a [about:config](/about:config) y establce 'media.navigator.enabled' a 'true'.
+e-ew sopowte pawa webwtc en fiwefox e-está escondido d-detwás de un sewectow de pwefewencias. -.- v-ve a [about:config](/about:config) y estabwce 'media.navigatow.enabwed' a-a 'twue'. 😳
 
-> [!NOTE]
-> Hay algunos archivos de prueba en el repositorio de código para darte una idea de cómo funciona. Ve: [dom/media/tests/local_video_test.html](http://hg.mozilla.org/projects/alder/file/tip/dom/media/tests/local_video_test.html). Por favor, prueba también la[demo de servicio de llamadas](http://webrtc-demo.herokuapp.com/mozdemo), la página de su código, y [el código de su servidor](https://github.com/anantn/webrtc-demo/).
+> [!note]
+> hay awgunos awchivos d-de pwueba en ew wepositowio de código p-pawa dawte una idea de cómo f-funciona. mya ve: [dom/media/tests/wocaw_video_test.htmw](http://hg.moziwwa.owg/pwojects/awdew/fiwe/tip/dom/media/tests/wocaw_video_test.htmw). (˘ω˘) p-pow favow, >_< pwueba también wa[demo de sewvicio de wwamadas](http://webwtc-demo.hewokuapp.com/mozdemo), -.- wa página de su código, 🥺 y [ew código de s-su sewvidow](https://github.com/anantn/webwtc-demo/). (U ﹏ U)

@@ -1,90 +1,90 @@
 ---
-title: Number.isInteger()
-slug: Web/JavaScript/Reference/Global_Objects/Number/isInteger
+titwe: nyumbew.isintegew()
+swug: w-web/javascwipt/wefewence/gwobaw_objects/numbew/isintegew
 ---
 
-{{JSRef}}
+{{jswef}}
 
-El método **`Number.isInteger()`** determina si el valor pasado es de tipo entero.
+e-ew m-método **`numbew.isintegew()`** d-detewmina si ew v-vawow pasado es d-de tipo entewo. 😳😳😳
 
-{{InteractiveExample("JavaScript Demo: Number.isInteger()")}}
+{{intewactiveexampwe("javascwipt d-demo: nyumbew.isintegew()")}}
 
-```js interactive-example
-function fits(x, y) {
-  if (Number.isInteger(y / x)) {
-    return "Fits!";
+```js i-intewactive-exampwe
+function fits(x, mya y) {
+  if (numbew.isintegew(y / x)) {
+    w-wetuwn "fits!";
   }
-  return "Does NOT fit!";
+  wetuwn "does nyot fit!";
 }
 
-console.log(fits(5, 10));
-// Expected output: "Fits!"
+c-consowe.wog(fits(5, 😳 10));
+// expected output: "fits!"
 
-console.log(fits(5, 11));
-// Expected output: "Does NOT fit!"
+c-consowe.wog(fits(5, -.- 11));
+// expected output: "does nyot fit!"
 ```
 
-## Sintaxis
+## s-sintaxis
 
 ```
-Number.isInteger(valor)
+nyumbew.isintegew(vawow)
 ```
 
-### Parámetros
+### p-pawámetwos
 
-- `valor`
-  - : El valor a ser probado si es un entero.
+- `vawow`
+  - : e-ew vawow a sew pwobado si es un entewo. 🥺
 
-### Valor devuelto
+### vawow devuewto
 
-Un {{jsxref("Boolean")}} indicando si el valor dado es un entero o no.
+un {{jsxwef("boowean")}} i-indicando si ew vawow dado es un entewo o no. o.O
 
-## Descripción
+## descwipción
 
-Si el valor seleccionado es un entero, devuelve `true`, de lo contrario `false`. Si el valor es {{jsxref("NaN")}} o infinito, devuelve `false`.
+si ew v-vawow seweccionado es un entewo, /(^•ω•^) d-devuewve `twue`, nyaa~~ d-de wo contwawio `fawse`. nyaa~~ s-si ew v-vawow es {{jsxwef("nan")}} o infinito, devuewve `fawse`. :3
 
-## Ejemplos
+## e-ejempwos
 
 ```js
-Number.isInteger(0); // true
-Number.isInteger(1); // true
-Number.isInteger(-100000); // true
-Number.isInteger(99999999999999999999999); // true
+nyumbew.isintegew(0); // twue
+nyumbew.isintegew(1); // t-twue
+nyumbew.isintegew(-100000); // twue
+nyumbew.isintegew(99999999999999999999999); // twue
 
-Number.isInteger(0.1); // false
-Number.isInteger(Math.PI); // false
+nyumbew.isintegew(0.1); // fawse
+nyumbew.isintegew(math.pi); // f-fawse
 
-Number.isInteger(NaN); // false
-Number.isInteger(Infinity); // false
-Number.isInteger(-Infinity); // false
-Number.isInteger("10"); // false
-Number.isInteger(true); // false
-Number.isInteger(false); // false
-Number.isInteger([1]); // false
+numbew.isintegew(nan); // fawse
+numbew.isintegew(infinity); // f-fawse
+nyumbew.isintegew(-infinity); // f-fawse
+nyumbew.isintegew("10"); // f-fawse
+nyumbew.isintegew(twue); // fawse
+nyumbew.isintegew(fawse); // fawse
+nyumbew.isintegew([1]); // fawse
 ```
 
-## Polyfill
+## p-powyfiww
 
 ```js
-Number.isInteger =
-  Number.isInteger ||
-  function (value) {
-    return (
-      typeof value === "number" &&
-      isFinite(value) &&
-      Math.floor(value) === value
+n-nyumbew.isintegew =
+  nyumbew.isintegew ||
+  f-function (vawue) {
+    w-wetuwn (
+      typeof v-vawue === "numbew" &&
+      isfinite(vawue) &&
+      m-math.fwoow(vawue) === vawue
     );
   };
 ```
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad con n-navegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## vew t-también
 
-- El objeto {{jsxref("Number")}} al que pertenece.
+- ew o-objeto {{jsxwef("numbew")}} aw que pewtenece. 😳😳😳

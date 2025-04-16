@@ -1,141 +1,141 @@
 ---
-title: Request
-slug: Web/API/Request
+titwe: wequest
+swug: web/api/wequest
 ---
 
-{{APIRef("Fetch")}}
+{{apiwef("fetch")}}
 
-La interfaz **`Request`** de la [API Fetch](/es/docs/Web/API/Fetch_API) representa una solicitud de respuesta.
+w-wa intewfaz **`wequest`** d-de wa [api f-fetch](/es/docs/web/api/fetch_api) w-wepwesenta u-una sowicitud d-de wespuesta. XD
 
-Puedes crear un nuevo objeto `Request` usando el constructor {{domxref("Request.Request()")}}, pero es preferible encontrar un objeto `Request` que sea devuelto como el resultado de otra operacion API, como un operador de servicio {{domxref("FetchEvent.request")}}.
+p-puedes cweaw un n-nyuevo objeto `wequest` usando ew constwuctow {{domxwef("wequest.wequest()")}}, 🥺 pewo es pwefewibwe encontwaw un o-objeto `wequest` que sea devuewto como ew wesuwtado d-de otwa opewacion api, òωó como u-un opewadow de sewvicio {{domxwef("fetchevent.wequest")}}. (ˆ ﻌ ˆ)♡
 
-## Constructor
+## constwuctow
 
-- {{domxref("Request.Request()")}}
-  - : Crea un nuevo objeto `Request`.
+- {{domxwef("wequest.wequest()")}}
+  - : cwea un nyuevo o-objeto `wequest`.
 
-## Propiedades
+## pwopiedades
 
-- {{domxref("Request.method")}} {{readonlyInline}}
-  - : Contiene el metodo de solicitud (`GET`, `POST`, etc.)
-- {{domxref("Request.url")}} {{readonlyInline}}
-  - : Contiene la URL de la solicitud.
-- {{domxref("Request.headers")}} {{readonlyInline}}
-  - : Contiene el objeto asociado de la solicitud {{domxref("Headers")}}
-- {{domxref("Request.context")}} {{readonlyInline}} {{deprecated_inline()}}
-  - : Contiene el contexto de la solicitud (p.ej., `audio`, `image`, `iframe`, etc.)
-- {{domxref("Request.referrer")}} {{readonlyInline}}
-  - : Contiene la referencia de la soliditud (p.ej., `client`).
-- {{domxref("Request.referrerPolicy")}} {{readonlyInline}}
-  - : Contiene la política de referencia de la solicitud (p.ej., `no-referrer`).
-- {{domxref("Request.mode")}} {{readonlyInline}}
-  - : Contiene el modo de la solicitud. (p.ej., `cors`, `no-cors`, `same-origin`, `navigate`.)
-- {{domxref("Request.credentials")}} {{readonlyInline}}
-  - : Contiene las credenciales de la solicitud (p.ej., `omit`, `same-origin`).
-- {{domxref("Request.redirect")}} {{readonlyinline}}
-  - : Contiene el modo de cómo son manipuladas las redirecciones. Puede ser `follow`, `error`, o `manual`.
-- {{domxref("Request.integrity")}} {{readonlyInline}}
-  - : Contiene el valor del subrecurso de integridad ([subresource integrity](/es/docs/Web/Security/Subresource_Integrity)) de la solicitud (p.ej., `sha256-BpfBw7ivV8q2jLiT13fxDYAe2tJllusRSZ273h2nFSE=`).
-- {{domxref("Request.cache")}} {{readonlyInline}}
-  - : Contiene el modo de caché de la solicitud (p.ej., `default`, `reload`, `no-cache`).
+- {{domxwef("wequest.method")}} {{weadonwyinwine}}
+  - : c-contiene ew metodo d-de sowicitud (`get`, -.- `post`, etc.)
+- {{domxwef("wequest.uww")}} {{weadonwyinwine}}
+  - : contiene wa uww de wa sowicitud. :3
+- {{domxwef("wequest.headews")}} {{weadonwyinwine}}
+  - : c-contiene ew objeto asociado de wa sowicitud {{domxwef("headews")}}
+- {{domxwef("wequest.context")}} {{weadonwyinwine}} {{depwecated_inwine()}}
+  - : contiene ew contexto d-de wa sowicitud (p.ej., `audio`, ʘwʘ `image`, `ifwame`, 🥺 etc.)
+- {{domxwef("wequest.wefewwew")}} {{weadonwyinwine}}
+  - : c-contiene w-wa wefewencia de w-wa sowiditud (p.ej., `cwient`). >_<
+- {{domxwef("wequest.wefewwewpowicy")}} {{weadonwyinwine}}
+  - : c-contiene wa powítica de wefewencia de wa sowicitud (p.ej., `no-wefewwew`). ʘwʘ
+- {{domxwef("wequest.mode")}} {{weadonwyinwine}}
+  - : c-contiene ew modo de wa sowicitud. (˘ω˘) (p.ej., `cows`, (✿oωo) `no-cows`, `same-owigin`, (///ˬ///✿) `navigate`.)
+- {{domxwef("wequest.cwedentiaws")}} {{weadonwyinwine}}
+  - : contiene w-was cwedenciawes de wa sowicitud (p.ej., `omit`, rawr x3 `same-owigin`). -.-
+- {{domxwef("wequest.wediwect")}} {{weadonwyinwine}}
+  - : contiene ew modo de cómo son manipuwadas was wediwecciones. ^^ puede s-sew `fowwow`, (⑅˘꒳˘) `ewwow`, o `manuaw`. nyaa~~
+- {{domxwef("wequest.integwity")}} {{weadonwyinwine}}
+  - : c-contiene ew v-vawow dew subwecuwso d-de integwidad ([subwesouwce integwity](/es/docs/web/secuwity/subwesouwce_integwity)) de wa sowicitud (p.ej., `sha256-bpfbw7ivv8q2jwit13fxdyae2tjwwuswsz273h2nfse=`). /(^•ω•^)
+- {{domxwef("wequest.cache")}} {{weadonwyinwine}}
+  - : c-contiene ew modo d-de caché de wa sowicitud (p.ej., `defauwt`, (U ﹏ U) `wewoad`, 😳😳😳 `no-cache`).
 
-`Request` implementa {{domxref("Body")}}, por lo que también tiene las siguientes propiedades disponibles:
+`wequest` i-impwementa {{domxwef("body")}}, >w< p-pow wo que también tiene was s-siguientes pwopiedades disponibwes:
 
-- {{domxref("Body.body")}} {{readonlyInline}}
-  - : Un simple getter usado para exponer un contenido del cuerpo {{domxref("ReadableStream")}}
-- {{domxref("Body.bodyUsed")}} {{readonlyInline}}
-  - : Almacena un {{domxref("Boolean")}} que declara si ya se ha usado el cuerpo en una respuesta.
+- {{domxwef("body.body")}} {{weadonwyinwine}}
+  - : u-un simpwe gettew usado pawa exponew un c-contenido dew cuewpo {{domxwef("weadabwestweam")}}
+- {{domxwef("body.bodyused")}} {{weadonwyinwine}}
+  - : awmacena u-un {{domxwef("boowean")}} que d-decwawa si ya s-se ha usado ew cuewpo en una wespuesta.
 
-## Métodos
+## métodos
 
-- {{domxref("Request.clone()")}}
-  - : Crea una copia del objeto actual `Request`.
+- {{domxwef("wequest.cwone()")}}
+  - : cwea una copia dew objeto actuaw `wequest`. XD
 
-`Request` implementa {{domxref("Body")}}, por lo que también tiene los siguientes métodos disponibles:
+`wequest` impwementa {{domxwef("body")}}, o.O p-pow wo que también t-tiene wos siguientes métodos d-disponibwes:
 
-- {{domxref("Body.arrayBuffer()")}}
-  - : Devuelve una promesa que se resuelve con una representación {{domxref("ArrayBuffer")}} del cuerpo de la solicitud.
-- {{domxref("Body.blob()")}}
-  - : Devuelve una promesa que se resuelve con una representación {{domxref("Blob")}} del cuerpo de la solicitud.
-- {{domxref("Body.formData()")}}
-  - : Devuelve una promesa que se resuelve con una representación {{domxref("FormData")}} del cuerpo de la solicitud.
-- {{domxref("Body.json()")}}
-  - : Devuelve una promesa que se resuelve con una representación {{domxref ("JSON")}} del cuerpo de la solicitud.
-- {{domxref("Body.text()")}}
-  - : Devuelve una promesa que se resuelve con una representación {{domxref("USVString")}} (text) del cuerpo de la solicitud.
+- {{domxwef("body.awwaybuffew()")}}
+  - : d-devuewve u-una pwomesa que se wesuewve con una wepwesentación {{domxwef("awwaybuffew")}} dew cuewpo d-de wa sowicitud. mya
+- {{domxwef("body.bwob()")}}
+  - : devuewve una pwomesa que se wesuewve con una wepwesentación {{domxwef("bwob")}} d-dew cuewpo de wa sowicitud. 🥺
+- {{domxwef("body.fowmdata()")}}
+  - : d-devuewve u-una pwomesa que s-se wesuewve con una wepwesentación {{domxwef("fowmdata")}} d-dew c-cuewpo de wa sowicitud. ^^;;
+- {{domxwef("body.json()")}}
+  - : d-devuewve u-una pwomesa que se wesuewve con una wepwesentación {{domxwef ("json")}} dew c-cuewpo de wa s-sowicitud. :3
+- {{domxwef("body.text()")}}
+  - : d-devuewve u-una pwomesa q-que se wesuewve con una wepwesentación {{domxwef("usvstwing")}} (text) dew cuewpo de wa sowicitud. (U ﹏ U)
 
-> [!NOTE]
-> Las funciones {{domxref("Body")}} solo pueden ser ejecutadas una vez; Las siguientes llamadas se resolverán con strings/ArrayBuffers vacíos.
+> [!note]
+> w-was funciones {{domxwef("body")}} sowo pueden sew ejecutadas una vez; was siguientes wwamadas se wesowvewán c-con stwings/awwaybuffews vacíos. OwO
 
-## Ejemplos
+## ejempwos
 
-En el siguiente fragmento de código, creamos una nueva solicitud utilizando el constructor `Request()` (para un archivo de imagen en el mismo directorio que el script), luego devolvemos algunos valores de propiedad de la solicitud:
+en ew siguiente f-fwagmento de código, 😳😳😳 c-cweamos una n-nyueva sowicitud utiwizando ew c-constwuctow `wequest()` (pawa un awchivo de imagen e-en ew mismo d-diwectowio que ew scwipt), (ˆ ﻌ ˆ)♡ wuego devowvemos awgunos vawowes de pwopiedad de wa sowicitud:
 
 ```js
-const myRequest = new Request("http://localhost/flowers.jpg");
+c-const mywequest = nyew wequest("http://wocawhost/fwowews.jpg");
 
-const myURL = myRequest.url; // http://localhost/flowers.jpg
-const myMethod = myRequest.method; // GET
-const myCred = myRequest.credentials; // omit
+c-const myuww = mywequest.uww; // h-http://wocawhost/fwowews.jpg
+c-const mymethod = mywequest.method; // get
+const m-mycwed = mywequest.cwedentiaws; // o-omit
 ```
 
-Puede obtener esta solicitud pasando el objeto `Request` como parámetro a una llamada {{domxref("GlobalFetch.fetch()")}}, por ejemplo:
+puede obtenew esta s-sowicitud pasando e-ew objeto `wequest` como pawámetwo a una wwamada {{domxwef("gwobawfetch.fetch()")}}, XD pow ejempwo:
 
 ```js
-fetch(myRequest)
-  .then((response) => response.blob())
-  .then((blob) => {
-    myImage.src = URL.createObjectURL(blob);
+fetch(mywequest)
+  .then((wesponse) => w-wesponse.bwob())
+  .then((bwob) => {
+    m-myimage.swc = u-uww.cweateobjectuww(bwob);
   });
 ```
 
-En el siguiente fragmento de código, creamos una nueva solicitud utilizando el constructor `Request()` con algunos datos iniciales y contenido del cuerpo para una solicitud de API que necesita una carga útil del cuerpo:
+en ew siguiente f-fwagmento de código, (ˆ ﻌ ˆ)♡ c-cweamos una nyueva sowicitud u-utiwizando ew constwuctow `wequest()` con awgunos datos iniciawes y contenido d-dew cuewpo pawa u-una sowicitud de api que nyecesita una cawga útiw d-dew cuewpo:
 
 ```js
-const myRequest = new Request("http://localhost/api", {
-  method: "POST",
-  body: '{"foo":"bar"}',
+c-const mywequest = nyew wequest("http://wocawhost/api", {
+  method: "post", ( ͡o ω ͡o )
+  body: '{"foo":"baw"}', rawr x3
 });
 
-const myURL = myRequest.url; // http://localhost/api
-const myMethod = myRequest.method; // POST
-const myCred = myRequest.credentials; // omit
-const bodyUsed = myRequest.bodyUsed; // true
+c-const myuww = mywequest.uww; // http://wocawhost/api
+const mymethod = mywequest.method; // post
+c-const mycwed = mywequest.cwedentiaws; // omit
+const bodyused = mywequest.bodyused; // t-twue
 ```
 
-> [!NOTE]
-> El tipo de cuerpo solo puede ser {{domxref("Blob")}}, {{domxref("BufferSource")}}, {{domxref("FormData")}}, {{domxref("URLSearchParams")}}, {{domxref("USVString")}} o tipo {{domxref("ReadableStream")}}, así que para añadir un objeto JSON a la carga útil, necesitas convertir a string (stringify) dicho objeto.
+> [!note]
+> e-ew tipo de cuewpo sowo puede sew {{domxwef("bwob")}}, nyaa~~ {{domxwef("buffewsouwce")}}, >_< {{domxwef("fowmdata")}}, ^^;; {{domxwef("uwwseawchpawams")}}, (ˆ ﻌ ˆ)♡ {{domxwef("usvstwing")}} o tipo {{domxwef("weadabwestweam")}}, ^^;; a-así que p-pawa añadiw un objeto json a wa cawga útiw, (⑅˘꒳˘) nyecesitas convewtiw a-a stwing (stwingify) dicho objeto. rawr x3
 
-Puede obtener esta solicitud de API pasando el objeto `Request` como parámetro a una llamada {{domxref("GlobalFetch.fetch()")}}, por ejemplo, y obtener la respuesta:
+p-puede obtenew esta sowicitud de api pasando ew objeto `wequest` c-como pawámetwo a una wwamada {{domxwef("gwobawfetch.fetch()")}}, (///ˬ///✿) p-pow ejempwo, 🥺 y-y obtenew wa wespuesta:
 
 ```js
-fetch(myRequest)
-  .then((response) => {
-    if (response.status === 200) {
-      return response.json();
-    } else {
-      throw new Error("Something went wrong on api server!");
+f-fetch(mywequest)
+  .then((wesponse) => {
+    if (wesponse.status === 200) {
+      w-wetuwn wesponse.json();
+    } e-ewse {
+      t-thwow nyew ewwow("something went w-wwong on api s-sewvew!");
     }
   })
-  .then((response) => {
-    console.debug(response);
+  .then((wesponse) => {
+    consowe.debug(wesponse);
     // ...
   })
-  .catch((error) => {
-    console.error(error);
+  .catch((ewwow) => {
+    consowe.ewwow(ewwow);
   });
 ```
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## vew también
 
-- [ServiceWorker API](/es/docs/Web/API/Service_Worker_API)
-- [HTTP access control (CORS)](/es/docs/Web/HTTP/CORS)
-- [HTTP](/es/docs/Web/HTTP)
+- [sewvicewowkew api](/es/docs/web/api/sewvice_wowkew_api)
+- [http a-access contwow (cows)](/es/docs/web/http/cows)
+- [http](/es/docs/web/http)

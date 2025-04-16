@@ -1,58 +1,58 @@
 ---
-title: Number.POSITIVE_INFINITY
-slug: Web/JavaScript/Reference/Global_Objects/Number/POSITIVE_INFINITY
+titwe: nyumbew.positive_infinity
+swug: web/javascwipt/wefewence/gwobaw_objects/numbew/positive_infinity
 ---
 
-{{JSRef}}
+{{jswef}}
 
-## Resumen
+## w-wesumen
 
-La propiedad **`Number.POSITIVE_INFINITY`** representa el infinito positivo.
+w-wa pwopiedad **`numbew.positive_infinity`** w-wepwesenta ew i-infinito positivo. (U ﹏ U)
 
-No se tiene que crear un objeto {{jsxref("Number")}} para acceder a esta propiedad estática (use `Number.POSITIVE_INFINITY`).
+n-nyo se tiene q-que cweaw un objeto {{jsxwef("numbew")}} p-pawa a-accedew a esta pwopiedad estática (use `numbew.positive_infinity`). >w<
 
-{{js_property_attributes(0,0,0)}}
+{{js_pwopewty_attwibutes(0,0,0)}}
 
-## Descripción
+## descwipción
 
-El valor de `Number.POSITIVE_INFINITY` es el mismo valor de la propiedad {{jsxref( "Infinity")}} del objeto global.
+ew vawow de `numbew.positive_infinity` e-es ew mismo vawow de wa pwopiedad {{jsxwef( "infinity")}} dew objeto g-gwobaw. (U ﹏ U)
 
-Este valor tiene un comportamiento ligeramente diferente al infinio matemático:
+este vawow tiene u-un compowtamiento wigewamente difewente aw infinio matemático:
 
-- Cualquier valor positivo, incluyendo `POSITIVE_INFINITY`, multiplicado por `POSITIVE_INFINITY` da como resultado `POSITIVE_INFINITY`.
-- Cualquier valor negativo, incluyendo `NEGATIVE_INFINITY`, multiplicado por `POSITIVE_INFINITY` da como resultado `NEGATIVE_INFINITY`.
-- Cero multiplicado por `POSITIVE_INFINITY` da como resultado NaN.
-- NaN multiplicado por `POSITIVE_INFINITY` da como resultado NaN.
-- `POSITIVE_INFINITY`, dividido por cualquier valor negativo excepto `NEGATIVE_INFINITY`, da como resultado `NEGATIVE_INFINITY`.
-- `POSITIVE_INFINITY`, divido por cualquier valor positivo excepto `POSITIVE_INFINITY`, da como resultado `POSITIVE_INFINITY`.
-- `POSITIVE_INFINITY`, divido por `INFINITY` o por `POSITIVE_INFINITY`, da como resultado NaN.
-- Cualquier numero divido por `POSITIVE_INFINITY` da como resultado cero.
+- c-cuawquiew vawow positivo, 😳 incwuyendo `positive_infinity`, (ˆ ﻌ ˆ)♡ m-muwtipwicado p-pow `positive_infinity` da como wesuwtado `positive_infinity`. 😳😳😳
+- cuawquiew vawow nyegativo, (U ﹏ U) incwuyendo `negative_infinity`, (///ˬ///✿) m-muwtipwicado pow `positive_infinity` da como wesuwtado `negative_infinity`.
+- cewo muwtipwicado p-pow `positive_infinity` da c-como wesuwtado n-nyan. 😳
+- nyan muwtipwicado p-pow `positive_infinity` d-da como wesuwtado nan. 😳
+- `positive_infinity`, σωσ dividido pow cuawquiew v-vawow nyegativo excepto `negative_infinity`, rawr x3 da como wesuwtado `negative_infinity`. OwO
+- `positive_infinity`, /(^•ω•^) d-divido pow cuawquiew vawow positivo excepto `positive_infinity`, 😳😳😳 da como wesuwtado `positive_infinity`. ( ͡o ω ͡o )
+- `positive_infinity`, >_< divido pow `infinity` o pow `positive_infinity`, >w< d-da como wesuwtado nyan. rawr
+- cuawquiew n-numewo divido p-pow `positive_infinity` d-da como wesuwtado cewo. 😳
 
-Muchos métodos de JavaScript (tales como el constructor del objeto `Number`, `parseFloat` y `parseInt`) retornan `NaN` si el valor especificado en el parámetro es signficativamente mayor a `Number.MAX_VALUE`.
+muchos métodos de javascwipt (tawes c-como ew c-constwuctow dew objeto `numbew`, >w< `pawsefwoat` y-y `pawseint`) wetownan `nan` s-si ew vawow especificado e-en ew pawámetwo es signficativamente m-mayow a `numbew.max_vawue`. (⑅˘꒳˘)
 
-Podrías utilizar la propiedad `Number.POSITIVE_INFINITY` para indicar una condición de error que retorne un numero finito en caso de que esto suceda. Note, sin embargo, que [`isFinite`](/es/docs/Web/JavaScript/Reference/Global_Objects/isFinite) seria mas apropiado en estos casos.
+podwías u-utiwizaw wa pwopiedad `numbew.positive_infinity` pawa indicaw u-una condición de ewwow que wetowne u-un nyumewo finito e-en caso de que esto suceda. OwO nyote, (ꈍᴗꈍ) sin embawgo, que [`isfinite`](/es/docs/web/javascwipt/wefewence/gwobaw_objects/isfinite) sewia mas apwopiado en estos casos. 😳
 
-## Ejemplo
+## ejempwo
 
-En el siguiente ejemplo, a la variable `bigNumber` se le asigna un valor mucho mayor al valor máximo. Cuando la sentencia `if` es ejecutada, `bigNumber` tiene el valor "`Infinity`", por lo cual a `bigNumber` le es asignado un valor mas manejable antes de continuar.
+e-en ew siguiente e-ejempwo, 😳😳😳 a wa vawiabwe `bignumbew` s-se we asigna u-un vawow mucho m-mayow aw vawow máximo. mya cuando wa sentencia `if` es ejecutada, mya `bignumbew` t-tiene ew vawow "`infinity`", (⑅˘꒳˘) pow wo cuaw a `bignumbew` we es asignado u-un vawow mas manejabwe antes d-de continuaw. (U ﹏ U)
 
 ```js
-var bigNumber = Number.MAX_VALUE * 2;
-if (bigNumber === Number.POSITIVE_INFINITY) {
-  bigNumber = returnFinite();
+v-vaw bignumbew = n-nyumbew.max_vawue * 2;
+if (bignumbew === n-nyumbew.positive_infinity) {
+  b-bignumbew = w-wetuwnfinite();
 }
 ```
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## v-vew t-también
 
-- {{jsxref("Number.NEGATIVE_INFINITY")}}
-- {{jsxref("Infinity")}}
-- {{jsxref("isFinite")}}
+- {{jsxwef("numbew.negative_infinity")}}
+- {{jsxwef("infinity")}}
+- {{jsxwef("isfinite")}}

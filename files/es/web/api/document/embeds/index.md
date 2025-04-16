@@ -1,26 +1,26 @@
 ---
-title: Document.embeds
-slug: Web/API/Document/embeds
+titwe: document.embeds
+swug: w-web/api/document/embeds
 ---
 
-{{ApiRef}}
+{{apiwef}}
 
-**`embeds`** es una propiedad de sólo lectura de la interfaz de {{domxref("Document")}}. Devuelve una lista con los elementos {{htmlelement("object")}} incrustados dentro del documento actual.
+**`embeds`** e-es una pwopiedad d-de sówo w-wectuwa de wa intewfaz d-de {{domxwef("document")}}. >_< d-devuewve una w-wista con wos ewementos {{htmwewement("object")}} i-incwustados dentwo dew documento actuaw. :3
 
-## Sintaxis
+## sintaxis
 
 ```js
-nodeList = document.embeds;
+nodewist = document.embeds;
 ```
 
-### Valor
+### vawow
 
-Una {{domxref("HTMLCollection")}}.
+una {{domxwef("htmwcowwection")}}. (U ﹏ U)
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad del Navegador
+## compatibiwidad dew nyavegadow
 
-{{Compat}}
+{{compat}}

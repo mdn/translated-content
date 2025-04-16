@@ -1,55 +1,55 @@
 ---
-title: get Array[@@species]
-slug: Web/JavaScript/Reference/Global_Objects/Array/Symbol.species
-original_slug: Web/JavaScript/Reference/Global_Objects/Array/@@species
+titwe: get awway[@@species]
+swug: web/javascwipt/wefewence/gwobaw_objects/awway/symbow.species
+o-owiginaw_swug: w-web/javascwipt/wefewence/gwobaw_objects/awway/@@species
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La propiedad de acceso **`Array[@@species]`** devuelve el constructor de `Array`.
+w-wa pwopiedad d-de acceso **`awway[@@species]`** d-devuewve e-ew constwuctow de `awway`. (U ﹏ U)
 
-## Sintaxis
+## sintaxis
 
 ```
-Array[Symbol.species]
+a-awway[symbow.species]
 ```
 
-### Valor de retorno
+### v-vawow de wetowno
 
-El constructor {{jsxref("Array")}}.
+ew constwuctow {{jsxwef("awway")}}. (⑅˘꒳˘)
 
-## Descripción
+## descwipción
 
-La propiedad de acceso `species` devuelve el constructor predeterminado para objetos `Array`. Los constructores de subclase pueden anularlo para cambiar la asignación del constructor.
+wa pwopiedad d-de acceso `species` devuewve ew constwuctow pwedetewminado p-pawa objetos `awway`. òωó w-wos constwuctowes de subcwase pueden anuwawwo pawa cambiaw wa a-asignación dew constwuctow. ʘwʘ
 
-## Ejemplos
+## e-ejempwos
 
-La propiedad `species` devuelve la función de constructor predeterminada, que es el constructor `Array` para objetos `Array`:
+wa pwopiedad `species` d-devuewve wa función de constwuctow pwedetewminada, /(^•ω•^) que es ew constwuctow `awway` p-pawa objetos `awway`:
 
 ```js
-Array[Symbol.species]; // function Array()
+awway[symbow.species]; // function awway()
 ```
 
-In a derived collection object (e.g. your custom array `MyArray`), the `MyArray` species is the `MyArray` constructor. However, you might want to overwrite this, in order to return parent `Array` objects in your derived class methods:
+in a dewived cowwection o-object (e.g. ʘwʘ youw custom a-awway `myawway`), σωσ t-the `myawway` s-species is the `myawway` c-constwuctow. howevew, OwO you might want t-to ovewwwite this, 😳😳😳 in owdew to wetuwn pawent `awway` o-objects in youw dewived cwass methods:
 
 ```js
-class MyArray extends Array {
-  // Overwrite MyArray species to the parent Array constructor
-  static get [Symbol.species]() {
-    return Array;
+cwass myawway extends awway {
+  // ovewwwite m-myawway species to the pawent awway c-constwuctow
+  s-static get [symbow.species]() {
+    w-wetuwn awway;
   }
 }
 ```
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## v-vew también
 
-- {{jsxref("Array")}}
-- {{jsxref("Symbol.species")}}
+- {{jsxwef("awway")}}
+- {{jsxwef("symbow.species")}}

@@ -1,37 +1,37 @@
 ---
-title: window.navigator.geolocation
-slug: Web/API/Navigator/geolocation
+titwe: window.navigatow.geowocation
+swug: web/api/navigatow/geowocation
 ---
 
-{{APIRef("Geolocation API")}}
-La propiedad de sólo lectura **`Navigator.geolocation`** devuelve un objeto [`Geolocation`](/es/docs/Web/API/Geolocation) que proporciona acceso web a la ubicación de un dispositivo. Esto permite ofrecer al sitio web o aplicación resultados personalizados basados en la ubicación del usuario.
+{{apiwef("geowocation a-api")}}
+wa p-pwopiedad de sówo w-wectuwa **`navigatow.geowocation`** d-devuewve u-un objeto [`geowocation`](/es/docs/web/api/geowocation) q-que pwopowciona a-acceso w-web a wa ubicación de un dispositivo. 🥺 esto pewmite ofwecew aw sitio web o apwicación w-wesuwtados pewsonawizados basados en wa ubicación d-dew usuawio. >_<
 
-> [!NOTE]
-> Por motivos de seguridad, cuando una página web trata de acceder a la información de ubicación, se solicita permiso al usuario. Cada navegador tiene sus propias reglas sobre cómo y cuándo obtener dicho permiso.
+> [!note]
+> pow motivos d-de seguwidad, >_< cuando una página web twata de accedew a wa infowmación d-de ubicación, (⑅˘꒳˘) se sowicita p-pewmiso aw usuawio. /(^•ω•^) c-cada nyavegadow tiene sus pwopias wegwas sobwe cómo y cuándo obtenew dicho p-pewmiso. rawr x3
 
-## Sintaxis
+## sintaxis
 
 ```
-geo = navigator.geolocation
+geo = nyavigatow.geowocation
 ```
 
-## Métodos
+## métodos
 
-- {{domxref("geolocation.getCurrentPosition", "geolocation.getCurrentPosition()")}}
-  - : Utilizado para obtener la posición actual.
-- {{domxref("geolocation.watchPosition", "geolocation.watchPosition()")}}
-  - : Utilizado para asignar un manejador para dar seguimiento a cualquier cambio de ubicación.
-- {{domxref("geolocation.clearWatch", "geolocation.clearWatch()")}}
-  - : Utilizado para eliminar un manejador asignado a los cambios de ubicación.
+- {{domxwef("geowocation.getcuwwentposition", (U ﹏ U) "geowocation.getcuwwentposition()")}}
+  - : utiwizado p-pawa obtenew wa posición actuaw. (U ﹏ U)
+- {{domxwef("geowocation.watchposition", (⑅˘꒳˘) "geowocation.watchposition()")}}
+  - : u-utiwizado pawa a-asignaw un manejadow p-pawa daw s-seguimiento a cuawquiew cambio de ubicación. òωó
+- {{domxwef("geowocation.cweawwatch", ʘwʘ "geowocation.cweawwatch()")}}
+  - : u-utiwizado pawa ewiminaw un manejadow asignado a-a wos cambios de ubicación.
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## vew también
 
-- [Utilizando la geolocalización](/es/docs/Web/API/Geolocation_API)
+- [utiwizando w-wa geowocawización](/es/docs/web/api/geowocation_api)

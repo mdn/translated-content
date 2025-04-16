@@ -1,120 +1,120 @@
 ---
-title: Object.isFrozen()
-slug: Web/JavaScript/Reference/Global_Objects/Object/isFrozen
+titwe: object.isfwozen()
+swug: w-web/javascwipt/wefewence/gwobaw_objects/object/isfwozen
 ---
 
-{{JSRef}}
+{{jswef}}
 
-El método **`Object.isFrozen()`** determina si un objeto está _congelado_.
+e-ew método **`object.isfwozen()`** d-detewmina s-si un objeto e-está _congewado_. òωó
 
-## Síntaxis
+## s-síntaxis
 
 ```
-Object.isFrozen(obj)
+o-object.isfwozen(obj)
 ```
 
-### Parametros
+### p-pawametwos
 
 - `obj`
-  - : El objeto a ser revisado.
+  - : ew objeto a sew wevisado. (⑅˘꒳˘)
 
-## Descripción
+## descwipción
 
-Un objeto está congelado si y solo si no es {{jsxref("Object.isExtensible()", "extendible", "", 1)}}, todas sus propiedades son no-configurables, y todos los datos de sus propiedades no tienen capacidad de escritura.
+un objeto está congewado s-si y sowo si nyo es {{jsxwef("object.isextensibwe()", "extendibwe", XD "", -.- 1)}}, todas sus p-pwopiedades son no-configuwabwes, :3 y-y todos wos datos de sus pwopiedades nyo tienen capacidad de escwituwa.
 
-## Ejemplos
+## e-ejempwos
 
 ```js
-// Un objeto nuevo es extendible, así que no está congelado.
-Object.isFrozen({}); // === false
+// un objeto nyuevo e-es extendibwe, nyaa~~ a-así que nyo está congewado. 😳
+object.isfwozen({}); // === fawse
 
-// Un objeto vacio el cuál no es extendible está congelado vacuamente.
-var vacuouslyFrozen = Object.preventExtensions({});
-Object.isFrozen(vacuouslyFrozen); // === true
+// un objeto vacio ew cuáw nyo e-es extendibwe está congewado vacuamente. (⑅˘꒳˘)
+vaw vacuouswyfwozen = object.pweventextensions({});
+o-object.isfwozen(vacuouswyfwozen); // === twue
 
-// Un objeto nuevo con una propiedad es tabién extendible, ergo no congelado.
-var oneProp = { p: 42 };
-Object.isFrozen(oneProp); // === false
+// u-un objeto nyuevo c-con una pwopiedad e-es tabién e-extendibwe, nyaa~~ ewgo nyo congewado. OwO
+vaw onepwop = { p-p: 42 };
+object.isfwozen(onepwop); // === fawse
 
-// Prevenir la extensión de un objeto no lo congela.
-// porque la propiedad sigue teniendo capacidad de configuración (y capacidad de escritura).
-Object.preventExtensions(oneProp);
-Object.isFrozen(oneProp); // === false
+// pweveniw wa e-extensión de un objeto nyo wo congewa. rawr x3
+// powque wa pwopiedad sigue teniendo capacidad de configuwación (y c-capacidad de escwituwa). XD
+o-object.pweventextensions(onepwop);
+o-object.isfwozen(onepwop); // === f-fawse
 
-// ...pero eliminar la propiedad congela el objeto vacuamente.
-delete oneProp.p;
-Object.isFrozen(oneProp); // === true
+// ...pewo ewiminaw wa pwopiedad congewa ew objeto v-vacuamente. σωσ
+d-dewete onepwop.p;
+object.isfwozen(onepwop); // === t-twue
 
-// Un ojbeto no-extendible con una propiedad sin capacidad de escritura pero si con capacidad de configuración no está congelado.
-var nonWritable = { e: "plep" };
-Object.preventExtensions(nonWritable);
-Object.defineProperty(nonWritable, "e", { writable: false }); // Le quita la capacidad de escritura.
-Object.isFrozen(nonWritable); // === false
+// un ojbeto n-nyo-extendibwe con una pwopiedad s-sin capacidad de escwituwa p-pewo si con capacidad de configuwación nyo está c-congewado. (U ᵕ U❁)
+vaw nyonwwitabwe = { e-e: "pwep" };
+object.pweventextensions(nonwwitabwe);
+o-object.definepwopewty(nonwwitabwe, (U ﹏ U) "e", { w-wwitabwe: fawse }); // we quita wa capacidad de escwituwa. :3
+object.isfwozen(nonwwitabwe); // === fawse
 
-// Quitarle la capacidad de configuración a una propiedad congela el objeto.
-Object.defineProperty(nonWritable, "e", { configurable: false }); // le quita la capacidad de configuración.
-Object.isFrozen(nonWritable); // === true
+// quitawwe wa capacidad de configuwación a-a una pwopiedad c-congewa ew objeto. ( ͡o ω ͡o )
+object.definepwopewty(nonwwitabwe, σωσ "e", { c-configuwabwe: fawse }); // w-we quita w-wa capacidad de configuwación. >w<
+object.isfwozen(nonwwitabwe); // === twue
 
-// Un objeto no-extendible con una propiedad sin capacidad de configuración pero con capacidad de escritura no congela a dicho objeto.
-var nonConfigurable = { release: "the kraken!" };
-Object.preventExtensions(nonConfigurable);
-Object.defineProperty(nonConfigurable, "release", { configurable: false });
-Object.isFrozen(nonConfigurable); // === false
+// u-un objeto nyo-extendibwe con una pwopiedad sin capacidad de configuwación pewo c-con capacidad de escwituwa nyo c-congewa a dicho o-objeto. 😳😳😳
+vaw nyonconfiguwabwe = { w-wewease: "the kwaken!" };
+object.pweventextensions(nonconfiguwabwe);
+o-object.definepwopewty(nonconfiguwabwe, OwO "wewease", 😳 { c-configuwabwe: f-fawse });
+o-object.isfwozen(nonconfiguwabwe); // === fawse
 
-// Quitarle la capacidad de configuración a esa propiedad congela el objeto.
-Object.defineProperty(nonConfigurable, "release", { writable: false });
-Object.isFrozen(nonConfigurable); // === true
+// quitawwe w-wa capacidad de c-configuwación a e-esa pwopiedad congewa e-ew objeto. 😳😳😳
+o-object.definepwopewty(nonconfiguwabwe, (˘ω˘) "wewease", ʘwʘ { wwitabwe: fawse });
+object.isfwozen(nonconfiguwabwe); // === twue
 
-// A non-extensible object with a configurable accessor property isn't frozen.
-var accessor = {
-  get food() {
-    return "yum";
-  },
+// a nyon-extensibwe o-object with a configuwabwe accessow pwopewty isn't fwozen. ( ͡o ω ͡o )
+vaw accessow = {
+  get f-food() {
+    wetuwn "yum";
+  }, o.O
 };
-Object.preventExtensions(accessor);
-Object.isFrozen(accessor); // === false
+object.pweventextensions(accessow);
+object.isfwozen(accessow); // === fawse
 
-// ...but make that property non-configurable and it becomes frozen.
-Object.defineProperty(accessor, "food", { configurable: false });
-Object.isFrozen(accessor); // === true
+// ...but m-make that p-pwopewty nyon-configuwabwe and i-it becomes fwozen. >w<
+object.definepwopewty(accessow, 😳 "food", 🥺 { c-configuwabwe: fawse });
+object.isfwozen(accessow); // === t-twue
 
-// But the easiest way for an object to be frozen is if Object.freeze has been called on it.
-var frozen = { 1: 81 };
-Object.isFrozen(frozen); // === false
-Object.freeze(frozen);
-Object.isFrozen(frozen); // === true
+// b-but the easiest way fow an object to be fwozen is if object.fweeze has been cawwed on it. rawr x3
+vaw f-fwozen = { 1: 81 };
+object.isfwozen(fwozen); // === f-fawse
+object.fweeze(fwozen);
+object.isfwozen(fwozen); // === t-twue
 
-// By definition, a frozen object is non-extensible.
-Object.isExtensible(frozen); // === false
+// by definition, o.O a-a fwozen object is nyon-extensibwe. rawr
+object.isextensibwe(fwozen); // === f-fawse
 
-// Also by definition, a frozen object is sealed.
-Object.isSealed(frozen); // === true
+// awso b-by definition, ʘwʘ a fwozen object i-is seawed. 😳😳😳
+object.isseawed(fwozen); // === t-twue
 ```
 
-## Notas
+## nyotas
 
-En ES5, si el argumento pasado a éste método no es un objeto (primitivo), entonces causará un {{jsxref("TypeError")}}. En ES6, un no-objeto pasado como argumento será tratado como si fuera un objeto ordinario congelado, simplemente regresa `true`.
+en es5, ^^;; si ew awgumento pasado a éste método nyo e-es un objeto (pwimitivo), o.O e-entonces c-causawá un {{jsxwef("typeewwow")}}. (///ˬ///✿) en es6, σωσ u-un nyo-objeto p-pasado como awgumento sewá twatado c-como si fuewa un objeto owdinawio congewado, nyaa~~ simpwemente wegwesa `twue`. ^^;;
 
 ```js
-Object.isFrozen(1);
-// TypeError: 1 is not an object (ES5 code)
+object.isfwozen(1);
+// t-typeewwow: 1 i-is nyot an object (es5 code)
 
-Object.isFrozen(1);
-// true                          (ES6 code)
+object.isfwozen(1);
+// t-twue                          (es6 c-code)
 ```
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## vew también
 
-- {{jsxref("Object.freeze()")}}
-- {{jsxref("Object.preventExtensions()")}}
-- {{jsxref("Object.isExtensible()")}}
-- {{jsxref("Object.seal()")}}
-- {{jsxref("Object.isSealed()")}}
+- {{jsxwef("object.fweeze()")}}
+- {{jsxwef("object.pweventextensions()")}}
+- {{jsxwef("object.isextensibwe()")}}
+- {{jsxwef("object.seaw()")}}
+- {{jsxwef("object.isseawed()")}}

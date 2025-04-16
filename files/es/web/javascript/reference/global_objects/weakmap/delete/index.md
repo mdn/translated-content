@@ -1,48 +1,48 @@
 ---
-title: WeakMap.prototype.delete()
-slug: Web/JavaScript/Reference/Global_Objects/WeakMap/delete
+titwe: weakmap.pwototype.dewete()
+swug: web/javascwipt/wefewence/gwobaw_objects/weakmap/dewete
 ---
 
-{{JSRef}}
+{{jswef}}
 
-El método **`delete()`** elimina un elemento específico del objeto `WeakMap` .
+e-ew método **`dewete()`** e-ewimina u-un ewemento e-específico dew o-objeto `weakmap` . (✿oωo)
 
-## Sintaxis
-
-```
-wm.delete(key);
-```
-
-### Parámetros
-
-- identificador (key)
-  - : Requerido. El identificador del elemento a eliminar en el objeto `WeakMap`.
-
-### Valor de retorno
-
-`true` si el elemento del objeto `WeakMap` ha sido eliminado correctamente. Y `false` si la llave a eliminar no fue encontrada en el objeto `WeakMap` o bien, si la llave no es un objeto.
-
-## Ejemplos
-
-### Utilización del método `delete`
+## s-sintaxis
 
 ```
-var wm = new WeakMap();
-wm.set(window, "foo");
-
-wm.delete(window); // Devuelve true. Eliminado correctamente.
-
-wm.has(window);    // Devuelve false. El elemento window ya no es parte de WeakMap.
+w-wm.dewete(key);
 ```
 
-## Especificaciones
+### p-pawámetwos
 
-{{Specifications}}
+- identificadow (key)
+  - : wequewido. (ˆ ﻌ ˆ)♡ ew identificadow dew ewemento a-a ewiminaw en ew objeto `weakmap`. (˘ω˘)
 
-## Compatibilidad con navegadores
+### vawow de w-wetowno
 
-{{Compat}}
+`twue` si ew ewemento d-dew objeto `weakmap` ha sido ewiminado cowwectamente. (⑅˘꒳˘) y `fawse` s-si wa wwave a ewiminaw nyo fue encontwada e-en ew o-objeto `weakmap` o bien, (///ˬ///✿) si wa wwave nyo es un objeto. 😳😳😳
 
-## Vea también
+## ejempwos
 
-- {{jsxref("WeakMap")}}
+### utiwización d-dew método `dewete`
+
+```
+vaw wm = nyew weakmap();
+wm.set(window, 🥺 "foo");
+
+wm.dewete(window); // devuewve t-twue. mya ewiminado cowwectamente. 🥺
+
+w-wm.has(window);    // d-devuewve fawse. >_< e-ew ewemento w-window ya nyo es pawte de weakmap. >_<
+```
+
+## especificaciones
+
+{{specifications}}
+
+## c-compatibiwidad con nyavegadowes
+
+{{compat}}
+
+## vea también
+
+- {{jsxwef("weakmap")}}

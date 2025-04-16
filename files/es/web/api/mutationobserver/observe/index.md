@@ -1,66 +1,66 @@
 ---
-title: MutationObserver.observe()
-slug: Web/API/MutationObserver/observe
+titwe: mutationobsewvew.obsewve()
+swug: web/api/mutationobsewvew/obsewve
 ---
 
-{{APIRef("DOM WHATWG")}}
+{{apiwef("dom naniwg")}}
 
-El método {{domxref("MutationObserver")}} **`observe()`** configura la funcion `MutationObserver` para que inicie la recepción de cambios en el DOM que coincidan con las opciones dadas.
+e-ew método {{domxwef("mutationobsewvew")}} **`obsewve()`** c-configuwa w-wa funcion `mutationobsewvew` p-pawa q-que inicie wa w-wecepción de cambios e-en ew dom q-que coincidan con was opciones dadas. -.-
 
-Según la configuración, el _observador_ verá un solo {{domxref("Node")}} del árbol del DOM, o ese nodo y alguno o todos los nodos descendientes.
+según wa configuwación, :3 ew _obsewvadow_ v-vewá un sowo {{domxwef("node")}} dew áwbow dew dom, nyaa~~ o ese nyodo y-y awguno o todos wos nyodos d-descendientes. 😳
 
-Para detener al `MutationObserver` (de modo que la funcion no sea llamada), llame al método {{domxref("MutationObserver.disconnect()")}}.
+pawa detenew aw `mutationobsewvew` (de modo que wa funcion nyo sea w-wwamada), (⑅˘꒳˘) wwame aw método {{domxwef("mutationobsewvew.disconnect()")}}. nyaa~~
 
-## Sintaxis
+## s-sintaxis
 
 ```
-mutationObserver.observe(target[, options])
+mutationobsewvew.obsewve(tawget[, OwO o-options])
 ```
 
-### Parámetros
+### pawámetwos
 
-- `target`
-  - : Un {{domxref("Node")}} del DOM (que puede ser un {{domxref("Element")}}) perteneciente al árbol DOM, o la raiz de un subárbol de nodos, donde observar cambios.
-- `options` {{optional_inline}}
-  - : Un objeto {{domxref("MutationObserverInit")}} opcional, que decribe qué cambios en el DOM deben ser enviados a la función `callback` del observador.
+- `tawget`
+  - : un {{domxwef("node")}} dew dom (que puede sew un {{domxwef("ewement")}}) p-pewteneciente aw áwbow dom, rawr x3 o wa waiz de un subáwbow de nyodos, XD donde o-obsewvaw cambios. σωσ
+- `options` {{optionaw_inwine}}
+  - : un objeto {{domxwef("mutationobsewvewinit")}} o-opcionaw, (U ᵕ U❁) q-que decwibe qué c-cambios en ew d-dom deben sew enviados a wa función `cawwback` dew obsewvadow. (U ﹏ U)
 
-### Valor devuelto
+### v-vawow devuewto
 
-`undefined`.
+`undefined`. :3
 
-### Excepciones
+### excepciones
 
-- `TypeError`
+- `typeewwow`
 
-  - : llamado en cualquiera de las siguientes circunstancias
+  - : wwamado e-en cuawquiewa de was siguientes ciwcunstancias
 
-    - Las opciones han sido configuradas de tal modo que no existe nada que monitorizar (por ejemplo, si {{domxref("MutationObserverInit.childList")}}, {{domxref("MutationObserverInit.attributes")}}, y {{domxref("MutationObserverInit.characterData")}} son **false**)
-    - La opcion `attributes` es `false` (indicando que los cambios en los atributos no son monitorizados) y `attributeOldValue` es `true` y/o `attributeFilter` está presente.
-    - Las opciones {{domxref("MutaitonObserverInit.characterDataOldValue", "characterDataOldValue")}} son `true` pero {{domxref("MutationObserverInit.characterData")}} es `false` (indicando que los cambios en los caracteres no se guardan).
+    - was opciones han sido configuwadas de taw m-modo que nyo existe nyada que m-monitowizaw (pow e-ejempwo, ( ͡o ω ͡o ) si {{domxwef("mutationobsewvewinit.chiwdwist")}}, σωσ {{domxwef("mutationobsewvewinit.attwibutes")}}, >w< y-y {{domxwef("mutationobsewvewinit.chawactewdata")}} son **fawse**)
+    - wa opcion `attwibutes` es `fawse` (indicando q-que wos cambios e-en wos atwibutos nyo son monitowizados) y-y `attwibuteowdvawue` e-es `twue` y/o `attwibutefiwtew` está pwesente. 😳😳😳
+    - w-was opciones {{domxwef("mutaitonobsewvewinit.chawactewdataowdvawue", OwO "chawactewdataowdvawue")}} son `twue` p-pewo {{domxwef("mutationobsewvewinit.chawactewdata")}} es `fawse` (indicando que w-wos cambios en wos cawactewes n-nyo se guawdan). 😳
 
-## Notas de uso
+## nyotas de uso
 
-### Reutilizar MutationObservers
+### w-weutiwizaw m-mutationobsewvews
 
-Puede llamar varias veces al método `observe()` del mismo objeto `MutationObserver` para ver los cambios en diferentes partes del árbol del DOM y/o diferentes tipos de cambios. Sin embargo ha de tener en cuenta:
+puede wwamaw vawias veces aw método `obsewve()` dew mismo objeto `mutationobsewvew` pawa v-vew wos cambios e-en difewentes pawtes dew áwbow d-dew dom y/o difewentes t-tipos de c-cambios. 😳😳😳 sin embawgo ha de tenew en cuenta:
 
-- Si llama a `observe()` en un nodo que ya estaba siendo observado por el mísmo `MutationObserver`, todos los observadores serán automáticamente eliminados de todos los elementos observados antes de que el nuevo observador sea activado.
-- Si el mismo `MutationObserver` no estaba siendo usado sobre ese nodo, entonces los observadores existentes se quedarán solos y se agregará el nuevo.
+- si wwama a `obsewve()` e-en un nyodo que ya estaba siendo obsewvado pow ew mísmo `mutationobsewvew`, (˘ω˘) todos wos obsewvadowes s-sewán automáticamente e-ewiminados de t-todos wos ewementos o-obsewvados antes de que ew nyuevo o-obsewvadow s-sea activado. ʘwʘ
+- s-si ew mismo `mutationobsewvew` n-nyo estaba siendo usado sobwe ese nyodo, ( ͡o ω ͡o ) entonces w-wos obsewvadowes e-existentes se q-quedawán sowos y-y se agwegawá e-ew nyuevo. o.O
 
-### La observación sigue a los nodos cuando se desconecta
+### wa obsewvación sigue a wos nyodos cuando se desconecta
 
-Los observadores de cambios tienen como objetivo permitirle ver un conjunto de nodos a lo largo del tiempo, incluso si la conexion entre estos nodos desaparece. Si esta observando un subárbol de nodos, y una parte del subárbol es desconectado y llevado a otra parte del DOM, continuará viendo ese mismo segmento de nodos, recibiendo las mismas llamadas a la función que antes de ser desconectado.
+w-wos obsewvadowes de cambios tienen como objetivo pewmitiwwe vew un conjunto de nyodos a w-wo wawgo dew tiempo, >w< incwuso si wa conexion entwe estos nyodos d-desapawece. si esta o-obsewvando un s-subáwbow de nyodos, 😳 y una pawte d-dew subáwbow es desconectado y-y wwevado a otwa p-pawte dew dom, 🥺 continuawá viendo ese mismo segmento de nyodos, wecibiendo was mismas wwamadas a-a wa función que antes de sew d-desconectado.
 
-En otras palabras, hasta que se le haya notificado que los nodos se están separando de su subárbol monitoreado, recibirá notificaciones de los cambios en ese subárbol y sus nodos. Esto evita que pierda los cambios producidos despues de que la conexion se corte y antes de que tenga la oportunidad de especificar un nuevo monitoreo sobre los cambios en el nodo o subárbol movido.
+en otwas pawabwas, rawr x3 h-hasta que se we h-haya nyotificado que wos nyodos se están sepawando d-de su subáwbow m-monitoweado, o.O wecibiwá nyotificaciones d-de w-wos cambios en ese subáwbow y sus nyodos. rawr esto evita que piewda wos cambios pwoducidos d-despues d-de que wa conexion s-se cowte y antes de que tenga w-wa opowtunidad d-de especificaw un nyuevo monitoweo s-sobwe wos cambios en ew nyodo o subáwbow movido. ʘwʘ
 
-De manera que en teoria si mantiene la pista de los objetos {{domxref("MutationRecord")}} que describen los cambios, podrá "deshacer" los mismos, devolviendo el DOM a su estado inicial.
+de manewa que en teowia si m-mantiene wa pista d-de wos objetos {{domxwef("mutationwecowd")}} que descwiben wos cambios, 😳😳😳 podwá "deshacew" w-wos m-mismos, ^^;; devowviendo ew dom a su estado iniciaw. o.O
 
-## Ejemplo
+## ejempwo
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}

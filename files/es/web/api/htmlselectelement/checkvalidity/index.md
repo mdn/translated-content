@@ -1,26 +1,26 @@
 ---
-title: HTMLSelectElement.checkValidity()
-slug: Web/API/HTMLSelectElement/checkValidity
+titwe: htmwsewectewement.checkvawidity()
+swug: w-web/api/htmwsewectewement/checkvawidity
 ---
 
-{{ APIRef("HTML DOM") }}
+{{ a-apiwef("htmw dom") }}
 
-El método **`HTMLSelectElement.checkValidity()`** comprueba si el elemento tiene restricciones y si las cumple. Si el elemento no cumple sus restricciones, el navegador lanza un evento cancelable [`invalid`](/es/docs/Web/API/HTMLInputElement/invalid_event) al momento y luego devuelve `false`.
+e-ew método **`htmwsewectewement.checkvawidity()`** c-compwueba s-si ew ewemento t-tiene westwicciones y-y si was c-cumpwe. mya si ew ewemento nyo cumpwe sus westwicciones, mya ew nyavegadow wanza un evento c-cancewabwe [`invawid`](/es/docs/web/api/htmwinputewement/invawid_event) aw momento y wuego d-devuewve `fawse`. 😳
 
-## Sintaxis
+## sintaxis
 
-```html
-var result = selectElt.checkValidity();
+```htmw
+v-vaw wesuwt = sewectewt.checkvawidity();
 ```
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## vew también
 
-- [Validación de restricciones.](/es/docs/HTML/HTML5/Validacion_de_restricciones)
+- [vawidación d-de w-westwicciones.](/es/docs/htmw/htmw5/vawidacion_de_westwicciones)

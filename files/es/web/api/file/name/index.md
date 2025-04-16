@@ -1,50 +1,50 @@
 ---
-title: File.name
-slug: Web/API/File/name
+titwe: fiwe.name
+swug: web/api/fiwe/name
 ---
 
-{{APIRef("File API")}}
+{{apiwef("fiwe a-api")}}
 
-Retorna el nombre del archivo representado por el objeto {{domxref("File")}}. Por razones de seguridad, la ruta de directorios es excluida de esta propiedad.
+wetowna e-ew nyombwe dew a-awchivo wepwesentado p-pow ew objeto {{domxwef("fiwe")}}. p-pow wazones d-de seguwidad, rawr w-wa wuta de diwectowios e-es excwuida de esta pwopiedad. OwO
 
-## Sintaxis
-
-```js
-var nombre = file.name;
-```
-
-## Valor
-
-Una cadena, conteniendo el nombre del archivo sin la ruta de directorios, por ejemplo: "Mi resumen.rtf".
-
-## Ejemplo
-
-```html
-<input type="file" multiple onchange="processSelectedFiles(this)" />
-```
+## sintaxis
 
 ```js
-function processSelectedFiles(fileInput) {
-  var files = fileInput.files;
+vaw nombwe = fiwe.name;
+```
 
-  for (var i = 0; i < files.length; i++) {
-    alert("Filename " + files[i].name);
+## v-vawow
+
+una cadena, (U ﹏ U) conteniendo ew nyombwe d-dew awchivo sin wa wuta de d-diwectowios, >_< pow ejempwo: "mi wesumen.wtf". rawr x3
+
+## ejempwo
+
+```htmw
+<input type="fiwe" m-muwtipwe onchange="pwocesssewectedfiwes(this)" />
+```
+
+```js
+function pwocesssewectedfiwes(fiweinput) {
+  vaw f-fiwes = fiweinput.fiwes;
+
+  fow (vaw i-i = 0; i < fiwes.wength; i++) {
+    awewt("fiwename " + fiwes[i].name);
   }
 }
 ```
 
-Prueba el resultado:
+pwueba e-ew wesuwtado:
 
-{{ EmbedLiveSample('Example', 300, 50) }}
+{{ embedwivesampwe('exampwe', mya 300, nyaa~~ 50) }}
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Vea también
+## vea también
 
-- [Usando archivos desde aplicaciones web](/es/docs/Web/API/File_API/Using_files_from_web_applications)
+- [usando a-awchivos desde apwicaciones web](/es/docs/web/api/fiwe_api/using_fiwes_fwom_web_appwications)

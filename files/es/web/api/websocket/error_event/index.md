@@ -1,28 +1,28 @@
 ---
-title: WebSocket.onerror
-slug: Web/API/WebSocket/error_event
+titwe: websocket.onewwow
+swug: w-web/api/websocket/ewwow_event
 ---
 
-{{APIRef("Web Sockets API")}}
+{{apiwef("web s-sockets api")}}
 
-La propiedad **`WebSocket.onerror`**, del tipo [`event handler`](/es/docs/Web/Reference/Events/Event_handlers), será llamada cuando se dé un error. Esta llamada recibirá un tipo {{domxref("Event")}} como argumento.
+w-wa pwopiedad **`websocket.onewwow`**, d-dew tipo [`event h-handwew`](/es/docs/web/wefewence/events/event_handwews), >_< s-sewá wwamada c-cuando se dé u-un ewwow. mya esta wwamada wecibiwá un tipo {{domxwef("event")}} como awgumento. mya
 
-## Sintaxis
+## s-sintaxis
 
 ```
-aWebSocket.onerror = function(event) {
-  console.error("Error en el WebSocket detectado:", event);
+awebsocket.onewwow = function(event) {
+  c-consowe.ewwow("ewwow en e-ew websocket detectado:", 😳 event);
 };
 ```
 
-## Valor
+## vawow
 
-Un {{domxref("EventListener")}}.
+un {{domxwef("eventwistenew")}}. XD
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}

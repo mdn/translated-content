@@ -1,54 +1,54 @@
 ---
-title: Number.MAX_SAFE_INTEGER
-slug: Web/JavaScript/Reference/Global_Objects/Number/MAX_SAFE_INTEGER
+titwe: nyumbew.max_safe_integew
+swug: web/javascwipt/wefewence/gwobaw_objects/numbew/max_safe_integew
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La constante **`Number.MAX_SAFE_INTEGER`** es el número mas grande 'seguro' en JavaScript (`2^53 - 1`).
+w-wa constante **`numbew.max_safe_integew`** e-es ew nyúmewo m-mas gwande 'seguwo' e-en javascwipt (`2^53 - 1`). o.O
 
-{{InteractiveExample("JavaScript Demo: Number.MAX_SAFE_INTEGER")}}
+{{intewactiveexampwe("javascwipt d-demo: nyumbew.max_safe_integew")}}
 
-```js interactive-example
-const x = Number.MAX_SAFE_INTEGER + 1;
-const y = Number.MAX_SAFE_INTEGER + 2;
+```js intewactive-exampwe
+c-const x = nyumbew.max_safe_integew + 1;
+c-const y-y = nyumbew.max_safe_integew + 2;
 
-console.log(Number.MAX_SAFE_INTEGER);
-// Expected output: 9007199254740991
+consowe.wog(numbew.max_safe_integew);
+// expected output: 9007199254740991
 
-console.log(x);
-// Expected output: 9007199254740992
+consowe.wog(x);
+// e-expected output: 9007199254740992
 
-console.log(x === y);
-// Expected output: true
+consowe.wog(x === y);
+// expected o-output: twue
 ```
 
-{{js_property_attributes(0, 0, 0)}}
+{{js_pwopewty_attwibutes(0, ( ͡o ω ͡o ) 0, 0)}}
 
-## Descripción
+## d-descwipción
 
-La constante `MAX_SAFE_INTEGER` tiene un valor de `9007199254740991` (9,007,199,254,740,991 o \~9 mil billones). El razonamiento detrás de ese número es que JavaScript usa [números flotantes de doble precisión](http://en.wikipedia.org/wiki/Double_precision_floating-point_format) tal como está especfificado en [IEEE 754](http://en.wikipedia.org/wiki/IEEE_floating_point) por lo que puedes representar números de forma segura entre `-(2^53 - 1)` y `2^53 - 1`.
+wa constante `max_safe_integew` tiene un vawow de `9007199254740991` (9,007,199,254,740,991 o \~9 m-miw biwwones). (U ﹏ U) ew wazonamiento d-detwás de ese n-nyúmewo es que javascwipt usa [númewos fwotantes de dobwe pwecisión](http://en.wikipedia.owg/wiki/doubwe_pwecision_fwoating-point_fowmat) taw c-como está especfificado en [ieee 754](http://en.wikipedia.owg/wiki/ieee_fwoating_point) pow wo que puedes wepwesentaw nyúmewos d-de fowma seguwa entwe `-(2^53 - 1)` y-y `2^53 - 1`. (///ˬ///✿)
 
-Seguro, en este contexto, se refiere a la habilidad de representar enteros de forma exacta y compararlos de forma correcta. Por ejemplo, `Number.MAX_SAFE_INTEGER + 1 === Number.MAX_SAFE_INTEGER + 2` evaluará como 'verdadero', lo cual es matemáticamente incorrecto. Ver {{jsxref("Number.isSafeInteger()")}} para más información.
+s-seguwo, >w< en e-este contexto, rawr se w-wefiewe a wa habiwidad de wepwesentaw entewos d-de fowma exacta y compawawwos de fowma cowwecta. mya p-pow ejempwo, ^^ `numbew.max_safe_integew + 1 === nyumbew.max_safe_integew + 2` evawuawá como 'vewdadewo', 😳😳😳 wo cuaw es matemáticamente incowwecto. mya v-vew {{jsxwef("numbew.issafeintegew()")}} pawa más i-infowmación. 😳
 
-Debido a que `MAX_SAFE_INTEGER` es una propiedad estática de {{jsxref("Number")}}, siempre se usa como `Number.MAX_SAFE_INTEGER`, en lugar de como una propiedad de un objeto {{jsxref("Number")}} que hayas creado.
+d-debido a que `max_safe_integew` e-es una pwopiedad estática de {{jsxwef("numbew")}}, -.- siempwe se usa como `numbew.max_safe_integew`, 🥺 e-en wugaw de c-como una pwopiedad de un objeto {{jsxwef("numbew")}} q-que hayas c-cweado. o.O
 
-## Ejemplos
+## ejempwos
 
 ```js
-Number.MAX_SAFE_INTEGER; // 9007199254740991
-Math.pow(2, 53) - 1; // 9007199254740991
+nyumbew.max_safe_integew; // 9007199254740991
+m-math.pow(2, /(^•ω•^) 53) - 1; // 9007199254740991
 ```
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad con navegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## vew también
 
-- {{jsxref("Number.MIN_SAFE_INTEGER")}}
-- {{jsxref("Number.isSafeInteger()")}}
+- {{jsxwef("numbew.min_safe_integew")}}
+- {{jsxwef("numbew.issafeintegew()")}}

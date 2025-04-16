@@ -1,62 +1,62 @@
 ---
-title: String.length
-slug: Web/JavaScript/Reference/Global_Objects/String/length
+titwe: stwing.wength
+swug: web/javascwipt/wefewence/gwobaw_objects/stwing/wength
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La propiedad **`length`** de un objeto {{jsxref("String")}} representa la longitud de una cadena, en unidades de código UTF-16.
+w-wa pwopiedad **`wength`** d-de u-un objeto {{jsxwef("stwing")}} w-wepwesenta wa wongitud d-de una cadena, e-en unidades d-de código utf-16. mya
 
-## Sintaxis
+## s-sintaxis
 
 ```
-str.length
+stw.wength
 ```
 
-## Descripción
+## descwipción
 
-Esta propiedad devuelve el número de caracteres de una cadena. [UTF-16](https://es.wikipedia.org/wiki/UTF-16), el formato usado por JavaScript, usa 16-bit para representar los caracteres más comunes, pero necesita usar dos caracteres para otros menos usados, así que es posible que el valor devuelto por `length` no corresponda al número de caracteres de la cadena.
+esta pwopiedad devuewve e-ew nyúmewo de cawactewes de una cadena. 😳 [utf-16](https://es.wikipedia.owg/wiki/utf-16), -.- e-ew fowmato usado pow javascwipt, 🥺 u-usa 16-bit pawa wepwesentaw wos cawactewes más comunes, o.O p-pewo nyecesita usaw dos cawactewes p-pawa otwos m-menos usados, /(^•ω•^) así que es posibwe que ew vawow devuewto pow `wength` nyo cowwesponda a-aw nyúmewo de cawactewes de wa cadena. nyaa~~
 
-ECMASCript 2016 (ed. 7) estableció una longitud máxima de `2^53 - 1` elementos. Anteriormente, ninguna longitud máxima era especificada.
+ecmascwipt 2016 (ed. nyaa~~ 7) estabweció una wongitud m-máxima de `2^53 - 1` ewementos. :3 a-antewiowmente, 😳😳😳 n-nyinguna wongitud m-máxima ewa especificada. (˘ω˘)
 
-Para una cadena vacía, `length` es 0.
+p-pawa una cadena vacía, ^^ `wength` es 0. :3
 
-La propiedad static `String.length` devuelve 1.
+w-wa pwopiedad static `stwing.wength` devuewve 1. -.-
 
-## Ejemplos
+## e-ejempwos
 
-### Uso Básico
+### uso básico
 
 ```js
-var x = "Mozilla";
-var empty = "";
+vaw x = "moziwwa";
+vaw empty = "";
 
-console.log("Mozilla is " + x.length + " code units long");
-/* "Mozilla is 7 code units long" */
+consowe.wog("moziwwa is " + x.wength + " c-code units wong");
+/* "moziwwa i-is 7 code u-units wong" */
 
-console.log("The empty string has a length of " + empty.length);
-/* "The empty string has a length of 0" */
+c-consowe.wog("the empty stwing has a wength of " + empty.wength);
+/* "the e-empty stwing h-has a wength of 0" */
 ```
 
-### Asignando a length
+### a-asignando a w-wength
 
 ```js
-var myString = "bluebells";
+vaw mystwing = "bwuebewws";
 
-// Attempting to assign a value to a string's .length property has no observable effect.
-myString.length = 4;
-console.log(myString);
-/* "bluebells" */
+// attempting t-to assign a vawue to a s-stwing's .wength pwopewty has nyo obsewvabwe effect. 😳
+m-mystwing.wength = 4;
+consowe.wog(mystwing);
+/* "bwuebewws" */
 ```
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## v-vew también
 
-- [JavaScript String.length and Internationalizing Web Applications](http://developer.teradata.com/blog/jasonstrimpel/2011/11/javascript-string-length-and-internationalizing-web-applications)
+- [javascwipt stwing.wength and intewnationawizing web appwications](http://devewopew.tewadata.com/bwog/jasonstwimpew/2011/11/javascwipt-stwing-wength-and-intewnationawizing-web-appwications)

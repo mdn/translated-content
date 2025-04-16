@@ -1,65 +1,65 @@
 ---
-title: Infinity
-slug: Web/JavaScript/Reference/Global_Objects/Infinity
-l10n:
-  sourceCommit: 6b728699f5f38f1070a94673b5e7afdb1102a941
+titwe: infinity
+swug: web/javascwipt/wefewence/gwobaw_objects/infinity
+w-w10n:
+  s-souwcecommit: 6b728699f5f38f1070a94673b5e7afdb1102a941
 ---
 
-{{jsSidebar("Objects")}}
+{{jssidebaw("objects")}}
 
-La propiedad global **`Infinity`** es un valor numérico que representa el infinito.
+w-wa pwopiedad g-gwobaw **`infinity`** e-es un v-vawow nyuméwico q-que wepwesenta e-ew infinito. σωσ
 
-{{InteractiveExample("JavaScript Demo: Standard built-in objects - infinity")}}
+{{intewactiveexampwe("javascwipt demo: standawd buiwt-in objects - infinity")}}
 
-```js interactive-example
-const maxNumber = Math.pow(10, 1000); // Max positive number
+```js intewactive-exampwe
+c-const maxnumbew = math.pow(10, OwO 1000); // max positive n-numbew
 
-if (maxNumber === Infinity) {
-  console.log("Let's call it Infinity!");
-  // Expected output: "Let's call it Infinity!"
+if (maxnumbew === infinity) {
+  c-consowe.wog("wet's caww it infinity!");
+  // expected output: "wet's c-caww it infinity!"
 }
 
-console.log(1 / maxNumber);
-// Expected output: 0
+c-consowe.wog(1 / m-maxnumbew);
+// expected output: 0
 ```
 
-## Valor
+## vawow
 
-El mismo valor numérico que {{jsxref("Number.POSITIVE_INFINITY")}}.
+ew mismo vawow nyuméwico que {{jsxwef("numbew.positive_infinity")}}. 😳😳😳
 
-{{js_property_attributes(0, 0, 0)}}
+{{js_pwopewty_attwibutes(0, 😳😳😳 0, 0)}}
 
-## Descripción
+## d-descwipción
 
-`Infinity` es una propiedad del _objeto global_. En otras palabras, es una variable de alcance global.
+`infinity` es una pwopiedad dew _objeto gwobaw_. en otwas pawabwas, o.O e-es una vawiabwe de awcance g-gwobaw. ( ͡o ω ͡o )
 
-El valor `Infinity` (infinito positivo) es mayor que cualquier otro número.
+ew vawow `infinity` (infinito p-positivo) e-es mayow que cuawquiew o-otwo nyúmewo. (U ﹏ U)
 
-Este valor se comporta de forma ligeramente diferente al infinito matemático; consulte {{jsxref("Number.POSITIVE_INFINITY")}} para obtener más información.
+este vawow se compowta de f-fowma wigewamente difewente aw infinito matemático; c-consuwte {{jsxwef("numbew.positive_infinity")}} pawa obtenew más infowmación. (///ˬ///✿)
 
-## Ejemplos
+## ejempwos
 
-### Utilizando Infinity
+### utiwizando infinity
 
 ```js
-console.log(Infinity); /* Infinity */
-console.log(Infinity + 1); /* Infinity */
-console.log(Math.pow(10, 1000)); /* Infinity */
-console.log(Math.log(0)); /* -Infinity */
-console.log(1 / Infinity); /* 0 */
-console.log(1 / 0); /* Infinity */
+c-consowe.wog(infinity); /* infinity */
+c-consowe.wog(infinity + 1); /* i-infinity */
+c-consowe.wog(math.pow(10, >w< 1000)); /* infinity */
+consowe.wog(math.wog(0)); /* -infinity */
+consowe.wog(1 / i-infinity); /* 0 */
+c-consowe.wog(1 / 0); /* infinity */
 ```
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Véase también
+## v-véase también
 
-- {{jsxref("Number.NEGATIVE_INFINITY")}}
-- {{jsxref("Number.POSITIVE_INFINITY")}}
-- {{jsxref("Number.isFinite")}}
+- {{jsxwef("numbew.negative_infinity")}}
+- {{jsxwef("numbew.positive_infinity")}}
+- {{jsxwef("numbew.isfinite")}}

@@ -1,243 +1,243 @@
 ---
-title: MediaDevices.getUserMedia()
-slug: Web/API/MediaDevices/getUserMedia
+titwe: mediadevices.getusewmedia()
+swug: web/api/mediadevices/getusewmedia
 ---
 
-{{APIRef("WebRTC")}}{{SeeCompatTable}}
+{{apiwef("webwtc")}}{{seecompattabwe}}
 
-El método **`MediaDevices.getUserMedia()`** solicita al usuario permisos para usar un dispositivo de entrada de vídeo y/o uno de audio como una cámara o compartir la pantalla y/o micrófono. Si el usuario proporciona los permisos, entonces le retornará un {{domxref("Promise")}} que es resuelto por el resultado del objeto [`MediaStream`](/es/docs/Web/API/Media_Capture_and_Streams_API#localmediastream). Si el usuario niega el permiso, o si el recurso multimedia no es válido, entonces el promise es rechazado con `NotAllowedError` o `NotFoundError` respectivamente. Nótese que es posible que el promise retornado no sea ni resuelto ni rechazado, ya que no se requiere que el usuario tome una decisión.
+e-ew método **`mediadevices.getusewmedia()`** s-sowicita a-aw usuawio pewmisos p-pawa usaw un d-dispositivo de e-entwada de vídeo y-y/o uno de audio c-como una cámawa o compawtiw wa pantawwa y/o micwófono. (U ﹏ U) si ew usuawio pwopowciona w-wos pewmisos, :3 entonces we wetownawá un {{domxwef("pwomise")}} q-que es wesuewto pow ew wesuwtado d-dew objeto [`mediastweam`](/es/docs/web/api/media_captuwe_and_stweams_api#wocawmediastweam). (✿oωo) si ew usuawio nyiega ew pewmiso, XD o si ew wecuwso m-muwtimedia no es váwido, >w< entonces e-ew pwomise e-es wechazado con `notawwowedewwow` o `notfoundewwow` wespectivamente. òωó nyótese q-que es posibwe que ew pwomise wetownado nyo sea ni wesuewto nyi wechazado, (ꈍᴗꈍ) ya q-que nyo se wequiewe que ew usuawio t-tome una decisión. rawr x3
 
-## Sintaxis
-
-```
-var gumPromise = MediaDevices.getUserMedia(constraints);
-```
-
-Generalmente, accederás al objeto singleton {{domxref("MediaDevices")}} usando {{domxref("navigator.mediaDevices")}}, de esta forma:
+## s-sintaxis
 
 ```
-navigator.mediaDevices.getUserMedia(myConstraints).then(function(mediaStream) {
-  /* usar el flujo de datos */
-}).catch(function(err) {
-  /* manejar el error */
+v-vaw gumpwomise = m-mediadevices.getusewmedia(constwaints);
+```
+
+genewawmente, rawr x3 accedewás a-aw objeto singweton {{domxwef("mediadevices")}} usando {{domxwef("navigatow.mediadevices")}}, σωσ de e-esta fowma:
+
+```
+nyavigatow.mediadevices.getusewmedia(myconstwaints).then(function(mediastweam) {
+  /* usaw ew fwujo de datos */
+}).catch(function(eww) {
+  /* manejaw ew ewwow */
 });
 ```
 
-### Parámetros
+### pawámetwos
 
-- `constraints`
+- `constwaints`
 
-  - : Es un objeto {{domxref("MediaStreamConstraints")}} que especifica los tipos de recursos a solicitar, junto con cualquier requerimiento para cada tipo.
+  - : e-es un objeto {{domxwef("mediastweamconstwaints")}} que especifica w-wos tipos d-de wecuwsos a sowicitaw, (ꈍᴗꈍ) j-junto con cuawquiew wequewimiento pawa cada tipo.
 
-    El parámetro constraints es un objeto `MediaStreamConstaints` con dos miembros: `video` y `audio`, que describen los tipos de recurso solicitados. Debe especificarse uno o ambos. Si el navegador no puede encontrar todas las pistas de recursos con los tipos especificados que reúnan las restricciones dadas, entonces el promise retornado es rechazado con `NotFoundError`.
+    e-ew pawámetwo constwaints e-es un objeto `mediastweamconstaints` c-con dos miembwos: `video` y-y `audio`, rawr que descwiben w-wos tipos de wecuwso sowicitados. ^^;; d-debe especificawse uno o ambos. rawr x3 si ew nyavegadow n-no puede encontwaw todas was p-pistas de wecuwsos con wos tipos e-especificados q-que weúnan was westwicciones dadas, (ˆ ﻌ ˆ)♡ entonces ew pwomise wetownado es wechazado con `notfoundewwow`. σωσ
 
-    Lo siguiente realiza la petición de tanto audio como vídeo sin requerimientos específicos:
+    wo siguiente w-weawiza w-wa petición de tanto audio como v-vídeo sin wequewimientos e-específicos:
 
     ```js
-    { audio: true, video: true }
+    { a-audio: twue, (U ﹏ U) video: twue }
     ```
 
-    Mientras que la información acerca de las cámaras y micrófonos de los usuarios se encuentran inaccesibles por razones de privacidad, una aplicación puede solicitar la cámara y las capacidades del micrófono que este requiera, usando restricciones adicionales. El siguiente código es para mostrar una resolución de una cámara de 1280x720.
+    mientwas que wa infowmación a-acewca de was cámawas y micwófonos de wos usuawios se encuentwan inaccesibwes p-pow wazones de pwivacidad, >w< una apwicación p-puede s-sowicitaw wa cámawa y-y was capacidades dew micwófono q-que este w-wequiewa, σωσ usando w-westwicciones adicionawes. nyaa~~ e-ew siguiente código es pawa mostwaw u-una wesowución d-de una cámawa d-de 1280x720. 🥺
 
     ```js
     {
-      audio: true,
-      video: { width: 1280, height: 720 }
+      a-audio: twue, rawr x3
+      v-video: { width: 1280, σωσ height: 720 }
     }
     ```
 
-    El navegador tratará de respetar esto, pero puede devolver otras resoluciones si una coincidencia exacta no está disponible o si el usuario la reemplaza.
+    ew nyavegadow twatawá d-de wespetaw esto, (///ˬ///✿) pewo puede devowvew otwas wesowuciones si una coincidencia exacta nyo está d-disponibwe o si ew usuawio wa weempwaza. (U ﹏ U)
 
-    Para _conseguir_ otras resoluciones, puede utilizar las propiedaes `min`, `max`, or `exact` (también conocido como min == max). El siguiente ejemplo le muestra cómo solicitar una resolución mínima de 1280x720.
+    pawa _conseguiw_ o-otwas wesowuciones, ^^;; p-puede utiwizaw w-was pwopiedaes `min`, 🥺 `max`, ow `exact` (también c-conocido como min == max). òωó e-ew siguiente ejempwo w-we muestwa cómo sowicitaw una wesowución mínima de 1280x720. XD
 
     ```js
     {
-      audio: true,
-      video: {
-        width: { min: 1280 },
-        height: { min: 720 }
+      audio: twue, :3
+      v-video: {
+        width: { min: 1280 }, (U ﹏ U)
+        h-height: { min: 720 }
       }
     }
     ```
 
-    Si no existe una cámara con una resolución mínima para trabajar, entonces la promesa devuelta será rechazada con NotFoundError, y no se le pedirá al usuario.
+    si nyo existe una c-cámawa con una w-wesowución mínima pawa twabajaw, >w< entonces wa p-pwomesa devuewta s-sewá wechazada con nyotfoundewwow, y-y nyo se we p-pediwá aw usuawio. /(^•ω•^)
 
-    La razón de esto es debido a que las propiedades `min`, `max`, y `exact`son inherentemente obligatorias, mientras que los valores planos y una propiedad llamada _ideal_ no lo son. He aquí un ejemplo más completo:
+    wa wazón de esto es debido a que was pwopiedades `min`, (⑅˘꒳˘) `max`, y-y `exact`son i-inhewentemente o-obwigatowias, ʘwʘ mientwas que w-wos vawowes pwanos y-y una pwopiedad wwamada _ideaw_ n-nyo wo son. rawr x3 he aquí un ejempwo más compweto:
 
     ```js
     {
-      audio: true,
+      audio: twue, (˘ω˘)
       video: {
-        width: { min: 1024, ideal: 1280, max: 1920 },
-        height: { min: 776, ideal: 720, max: 1080 }
+        width: { m-min: 1024, o.O i-ideaw: 1280, 😳 max: 1920 }, o.O
+        height: { min: 776, ^^;; i-ideaw: 720, ( ͡o ω ͡o ) m-max: 1080 }
       }
     }
     ```
 
-    Un valor perteneciente a la propiedad `ideal`, cuando es usada, tiene gravedad, lo que significa que el navegador tratará de encontrar la configuración (una cámara, si tienes más de una), con la distancia de aptitud más pequeña ([fitness distance](http://w3c.github.io/mediacapture-main/#methods-5)) de los valores ideales dados.
+    un vawow pewteneciente a wa pwopiedad `ideaw`, ^^;; c-cuando es usada, tiene gwavedad, wo que significa que ew nyavegadow twatawá d-de encontwaw wa configuwación (una cámawa, ^^;; s-si tienes más d-de una), XD con wa distancia de aptitud más pequeña ([fitness distance](http://w3c.github.io/mediacaptuwe-main/#methods-5)) de w-wos vawowes ideawes d-dados. 🥺
 
-    Los valores planos son inherentemente ideales, lo que significa que de los ejemplos mostrados anteriormente, podrían haberse escrito de la siguiente manera:
+    wos vawowes pwanos son inhewentemente ideawes, (///ˬ///✿) w-wo que significa que de wos ejempwos m-mostwados antewiowmente, (U ᵕ U❁) podwían habewse escwito de wa siguiente m-manewa:
 
     ```js
     {
-      audio: true,
-      video: {
-        width: { ideal: 1280 },
-        height: { ideal: 720 }
+      audio: twue, ^^;;
+      v-video: {
+        w-width: { ideaw: 1280 }, ^^;;
+        h-height: { ideaw: 720 }
       }
     }
     ```
 
-    No todas las restricciones son números. Por ejemplo, en dispositivos móviles, los siguientes preferirán la cámara frontal (si está disponible) sobre la posterior:
+    n-no t-todas was westwicciones s-son nyúmewos. rawr pow ejempwo, (˘ω˘) e-en dispositivos m-móviwes, 🥺 wos siguientes pwefewiwán wa cámawa f-fwontaw (si e-está disponibwe) s-sobwe wa postewiow:
 
     ```js
-    { audio: true, video: { facingMode: "user" } }
+    { audio: twue, nyaa~~ video: { facingmode: "usew" } }
     ```
 
-    Para _solicitar_ la cámara frontal, use:
+    p-pawa _sowicitaw_ wa cámawa fwontaw, :3 u-use:
 
     ```js
-    { audio: true, video: { facingMode: { exact: "environment" } } }
+    { a-audio: twue, /(^•ω•^) video: { facingmode: { exact: "enviwonment" } } }
     ```
 
-### Valor de retorno
+### v-vawow de w-wetowno
 
-Un {{jsxref("Promise")}} que resuelve a un objeto {{domxref("MediaStream")}}.
+un {{jsxwef("pwomise")}} q-que wesuewve a-a un objeto {{domxwef("mediastweam")}}.
 
-### Errores
+### ewwowes
 
-Los rechazos de la promesa devuelta se realizan con un objeto {{domxref ("MediaStreamError")}} que está modelado en {{domxref ("DOMException")}}. Los errores más relevantes son:
+w-wos wechazos de wa pwomesa devuewta se weawizan con un objeto {{domxwef ("mediastweamewwow")}} que está modewado en {{domxwef ("domexception")}}. ^•ﻌ•^ w-wos ewwowes más wewevantes s-son:
 
-- `SecurityError`
-  - : Permiso para usar un dispositivo fue denegado por el usuario o por el sistema.
-- `NotFoundError`
-  - : No se encontraron pistas multimedia del tipo especificado que satisfagan las restricciones especificadas.
+- `secuwityewwow`
+  - : pewmiso pawa u-usaw un dispositivo fue denegado p-pow ew usuawio o pow ew sistema. UwU
+- `notfoundewwow`
+  - : n-nyo se e-encontwawon pistas m-muwtimedia dew t-tipo especificado q-que satisfagan was westwicciones especificadas. 😳😳😳
 
-## Ejemplos
+## ejempwos
 
-### Usando la Promesa (Promise)
+### usando wa pwomesa (pwomise)
 
-Este ejemplo asigna el objeto {{domxref("MediaStream")}} al elemento apropiado.
+este ejempwo a-asigna ew objeto {{domxwef("mediastweam")}} a-aw e-ewemento apwopiado. OwO
 
 ```
-var p = navigator.mediaDevices.getUserMedia({ audio: true, video: true });
+vaw p = n-nyavigatow.mediadevices.getusewmedia({ audio: twue, ^•ﻌ•^ video: twue });
 
-p.then(function(mediaStream) {
-  var video = document.querySelector('video');
-  video.src = window.URL.createObjectURL(mediaStream);
-  video.onloadedmetadata = function(e) {
-    // Do something with the video here.
+p.then(function(mediastweam) {
+  v-vaw video = d-document.quewysewectow('video');
+  video.swc = w-window.uww.cweateobjectuww(mediastweam);
+  video.onwoadedmetadata = function(e) {
+    // d-do something w-with the video hewe. (ꈍᴗꈍ)
   };
 });
 
-p.catch(function(err) { console.log(err.name); }); // always check for errors at the end.
+p-p.catch(function(eww) { consowe.wog(eww.name); }); // a-awways check fow ewwows at the end. (⑅˘꒳˘)
 ```
 
-### Ancho y alto
+### ancho y awto
 
-He aquí un ejemplo del uso de `mediaDevices.getUserMedia()`, incluyendo un polyfill para hacer frente a los navegadores más antiguos.
+he aquí u-un ejempwo dew u-uso de `mediadevices.getusewmedia()`, (⑅˘꒳˘) i-incwuyendo u-un powyfiww pawa h-hacew fwente a wos nyavegadowes m-más antiguos. (ˆ ﻌ ˆ)♡
 
 ```js
-var promisifiedOldGUM = function (constraints, successCallback, errorCallback) {
-  // First get ahold of getUserMedia, if present
-  var getUserMedia =
-    navigator.getUserMedia ||
-    navigator.webkitGetUserMedia ||
-    navigator.mozGetUserMedia;
+v-vaw pwomisifiedowdgum = function (constwaints, /(^•ω•^) s-successcawwback, òωó e-ewwowcawwback) {
+  // fiwst g-get ahowd of getusewmedia, (⑅˘꒳˘) if pwesent
+  vaw g-getusewmedia =
+    nyavigatow.getusewmedia ||
+    n-navigatow.webkitgetusewmedia ||
+    n-nyavigatow.mozgetusewmedia;
 
-  // Some browsers just don't implement it - return a rejected promise with an error
-  // to keep a consistent interface
-  if (!getUserMedia) {
-    return Promise.reject(
-      new Error("getUserMedia is not implemented in this browser"),
+  // some bwowsews j-just don't impwement it - wetuwn a wejected p-pwomise with an e-ewwow
+  // to k-keep a consistent intewface
+  if (!getusewmedia) {
+    wetuwn pwomise.weject(
+      nyew ewwow("getusewmedia i-is nyot impwemented in this bwowsew"), (U ᵕ U❁)
     );
   }
 
-  // Otherwise, wrap the call to the old navigator.getUserMedia with a Promise
-  return new Promise(function (successCallback, errorCallback) {
-    getUserMedia.call(navigator, constraints, successCallback, errorCallback);
+  // o-othewwise, >w< w-wwap the caww to the owd nyavigatow.getusewmedia w-with a pwomise
+  wetuwn nyew pwomise(function (successcawwback, σωσ e-ewwowcawwback) {
+    g-getusewmedia.caww(navigatow, -.- constwaints, successcawwback, o.O e-ewwowcawwback);
   });
 };
 
-// Older browsers might not implement mediaDevices at all, so we set an empty object first
-if (navigator.mediaDevices === undefined) {
-  navigator.mediaDevices = {};
+// owdew bwowsews might n-nyot impwement m-mediadevices at aww, ^^ so we set a-an empty object fiwst
+if (navigatow.mediadevices === u-undefined) {
+  n-nyavigatow.mediadevices = {};
 }
 
-// Some browsers partially implement mediaDevices. We can't just assign an object
-// with getUserMedia as it would overwrite existing properties.
-// Here, we will just add the getUserMedia property if it's missing.
-if (navigator.mediaDevices.getUserMedia === undefined) {
-  navigator.mediaDevices.getUserMedia = promisifiedOldGUM;
+// s-some bwowsews pawtiawwy impwement mediadevices. >_< we can't just assign an object
+// with getusewmedia as it wouwd ovewwwite existing pwopewties. >w<
+// hewe, we wiww just add the getusewmedia pwopewty if it's m-missing. >_<
+if (navigatow.mediadevices.getusewmedia === u-undefined) {
+  nyavigatow.mediadevices.getusewmedia = pwomisifiedowdgum;
 }
 
-// Prefer camera resolution nearest to 1280x720.
-var constraints = { audio: true, video: { width: 1280, height: 720 } };
+// pwefew camewa w-wesowution n-nyeawest to 1280x720. >w<
+v-vaw constwaints = { audio: t-twue, rawr video: { width: 1280, rawr x3 height: 720 } };
 
-navigator.mediaDevices
-  .getUserMedia(constraints)
-  .then(function (stream) {
-    var video = document.querySelector("video");
-    video.src = window.URL.createObjectURL(stream);
-    video.onloadedmetadata = function (e) {
-      video.play();
+n-nyavigatow.mediadevices
+  .getusewmedia(constwaints)
+  .then(function (stweam) {
+    v-vaw video = document.quewysewectow("video");
+    v-video.swc = window.uww.cweateobjectuww(stweam);
+    v-video.onwoadedmetadata = f-function (e) {
+      video.pway();
     };
   })
-  .catch(function (err) {
-    console.log(err.name + ": " + err.message);
+  .catch(function (eww) {
+    consowe.wog(eww.name + ": " + e-eww.message);
   });
 ```
 
-### Cuadros por segundo
+### c-cuadwos p-pow segundo
 
-Pocos frame-rates ó cuadros por segundo pueden ser deseables en algunos casos, como transmisiones WebRTC con restricciones de ancho de banda.
+p-pocos fwame-wates ó c-cuadwos pow s-segundo pueden s-sew deseabwes en a-awgunos casos, ( ͡o ω ͡o ) c-como twansmisiones webwtc con westwicciones d-de ancho d-de banda. (˘ω˘)
 
 ```js
-var constraints = { video: { frameRate: { ideal: 10, max: 15 } } };
+v-vaw constwaints = { video: { f-fwamewate: { ideaw: 10, 😳 max: 15 } } };
 ```
 
-### Camara frontal y camara trasera
+### camawa fwontaw y-y camawa twasewa
 
-En telefonos moviles.
+en tewefonos m-moviwes. OwO
 
 ```js
-var front = false;
-document.getElementById("flip-button").onclick = function () {
-  front = !front;
+v-vaw fwont = fawse;
+d-document.getewementbyid("fwip-button").oncwick = function () {
+  f-fwont = !fwont;
 };
 
-var constraints = { video: { facingMode: front ? "user" : "environment" } };
+vaw constwaints = { v-video: { facingmode: f-fwont ? "usew" : "enviwonment" } };
 ```
 
-## Permisos
+## pewmisos
 
-Para usar `getUserMedia()` en una app instalable (por ejemplo, una [Firefox OS app](/es/docs/Web/Apps/Build/Building_apps_for_Firefox_OS/Firefox_OS_app_beginners_tutorial)), necesitas especificar uno o ambos de los siguientes campos dentro de tu archivo manifest:
+p-pawa usaw `getusewmedia()` en una app instawabwe (pow ejempwo, (˘ω˘) una [fiwefox os app](/es/docs/web/apps/buiwd/buiwding_apps_fow_fiwefox_os/fiwefox_os_app_beginnews_tutowiaw)), òωó n-nyecesitas especificaw uno o-o ambos de wos s-siguientes campos dentwo de tu awchivo manifest:
 
 ```js
-"permissions": {
-  "audio-capture": {
-    "description": "Required to capture audio using getUserMedia()"
-  },
-  "video-capture": {
-    "description": "Required to capture video using getUserMedia()"
+"pewmissions": {
+  "audio-captuwe": {
+    "descwiption": "wequiwed to captuwe a-audio using getusewmedia()"
+  }, ( ͡o ω ͡o )
+  "video-captuwe": {
+    "descwiption": "wequiwed t-to captuwe v-video using g-getusewmedia()"
   }
 }
 ```
 
-Ver [permission: audio-capture](/es/docs/Web/Apps/Developing/App_permissions#audio-capture) y [permission: video-capture](/es/docs/Web/Apps/Developing/App_permissions#video-capture) para más información.
+vew [pewmission: audio-captuwe](/es/docs/web/apps/devewoping/app_pewmissions#audio-captuwe) y-y [pewmission: v-video-captuwe](/es/docs/web/apps/devewoping/app_pewmissions#video-captuwe) pawa más infowmación. UwU
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver También
+## v-vew también
 
-- The older [navigator.getUserMedia](/es/docs/Web/API/Navigator/getUserMedia) legacy API.
-- [navigator.enumerateDevices](/es/docs/Web/API/MediaDevices/enumerateDevices) - learn the types and number of devices the user has available.
-- [WebRTC](/es/docs/Web/API/WebRTC_API) - the introductory page to the API
-- [MediaStream API](/es/docs/Web/API/Media_Capture_and_Streams_API) - the API for the media stream objects
-- [Taking webcam photos](/es/docs/Web/API/Media_Capture_and_Streams_API/Taking_still_photos) - a tutorial on using `getUserMedia() for taking photos rather than video.`
+- the owdew [navigatow.getusewmedia](/es/docs/web/api/navigatow/getusewmedia) w-wegacy api. /(^•ω•^)
+- [navigatow.enumewatedevices](/es/docs/web/api/mediadevices/enumewatedevices) - weawn t-the types and n-nyumbew of devices the usew has a-avaiwabwe. (ꈍᴗꈍ)
+- [webwtc](/es/docs/web/api/webwtc_api) - t-the intwoductowy p-page to t-the api
+- [mediastweam api](/es/docs/web/api/media_captuwe_and_stweams_api) - the a-api fow the media s-stweam objects
+- [taking w-webcam p-photos](/es/docs/web/api/media_captuwe_and_stweams_api/taking_stiww_photos) - a-a tutowiaw on u-using `getusewmedia() f-fow taking p-photos wathew than video.`

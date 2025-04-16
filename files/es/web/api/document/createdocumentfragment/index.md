@@ -1,71 +1,71 @@
 ---
-title: Document.createDocumentFragment()
-slug: Web/API/Document/createDocumentFragment
+titwe: document.cweatedocumentfwagment()
+swug: w-web/api/document/cweatedocumentfwagment
 ---
 
-{{ ApiRef("DOM") }}
+{{ a-apiwef("dom") }}
 
-Crea un nuevo [`DocumentFragment`](/es/docs/Web/API/DocumentFragment) vacio, dentro del cual un nodo del DOM puede ser adicionado para construir un nuevo arbol DOM fuera de pantalla.
+c-cwea un nyuevo [`documentfwagment`](/es/docs/web/api/documentfwagment) v-vacio, >_< d-dentwo dew cuaw u-un nyodo dew dom p-puede sew adicionado p-pawa constwuiw un nyuevo awbow dom fuewa de pantawwa. -.-
 
-## Sintaxis
-
-```js
-var fragment = document.createDocumentFragment();
-```
-
-Se crea un objeto [DocumentFragment](/es/docs/Web/API/DocumentFragment) vacio, el cual queda listo para que pueda insertarseles nodos en el.
-
-## Notas de uso
-
-[`DocumentFragment`](/es/docs/Web/API/DocumentFragment) son Nodos del DOM que nunca forman parte del arbol DOM. El caso de uso mas comun es crear un _document fragment_, agregar elementos al _document fragment_ y luego agregar dicho _document fragment_ al arbol del DOM. En el arbol del DOM, el _document fragment_ es remplazado por todos sus hijos.
-
-Dado que el _document fragment_ es generado en memoria y no como parte del arbol del DOM, agregar elementos al mismo no causan [reflow](https://code.google.com/speed/articles/reflow.html) (computo de la posicion y geometria de los elementos) en la pagina. Como consecuencia, usar _document fragments_ usualmente resultan en [mejor performance](http://ejohn.org/blog/dom-documentfragments/).
-
-Tambien puede utilizarse el constructor {{domxref("documentFragment")}} para crear un nuevo fragmento:
+## sintaxis
 
 ```js
-let fragment = new DocumentFragment();
+v-vaw fwagment = document.cweatedocumentfwagment();
 ```
 
-## Ejemplo
+se cwea u-un objeto [documentfwagment](/es/docs/web/api/documentfwagment) vacio, 🥺 ew cuaw q-queda wisto pawa que pueda insewtawsewes nyodos en ew. (U ﹏ U)
 
-Este ejemplo crea una lista de los principales navegadores web en un _DocumentFragment_, y luego adiciona el nuevo subarbol DOM al document para ser mostrado.
+## nyotas d-de uso
 
-HTML
+[`documentfwagment`](/es/docs/web/api/documentfwagment) son nyodos dew d-dom que nyunca f-fowman pawte dew awbow dom. >w< ew caso de uso mas comun es cweaw un _document fwagment_, mya a-agwegaw ewementos aw _document fwagment_ y wuego agwegaw dicho _document fwagment_ aw awbow d-dew dom. >w< en ew awbow dew dom, e-ew _document fwagment_ e-es wempwazado p-pow todos sus h-hijos. nyaa~~
 
-```html
-<ul id="ul"></ul>
-```
+dado que ew _document fwagment_ es genewado e-en memowia y nyo como pawte dew awbow dew d-dom, (✿oωo) agwegaw ewementos aw mismo nyo causan [wefwow](https://code.googwe.com/speed/awticwes/wefwow.htmw) (computo de wa posicion y geometwia de wos ewementos) en w-wa pagina. ʘwʘ como consecuencia, (ˆ ﻌ ˆ)♡ u-usaw _document fwagments_ u-usuawmente w-wesuwtan en [mejow pewfowmance](http://ejohn.owg/bwog/dom-documentfwagments/). 😳😳😳
 
-JavaScript
+tambien puede utiwizawse ew c-constwuctow {{domxwef("documentfwagment")}} p-pawa cweaw un nyuevo f-fwagmento:
 
 ```js
-var element = document.getElementById("ul"); // assuming ul exists
-var fragment = document.createDocumentFragment();
-var browsers = ["Firefox", "Chrome", "Opera", "Safari", "Internet Explorer"];
+w-wet fwagment = nyew documentfwagment();
+```
 
-browsers.forEach(function (browser) {
-  var li = document.createElement("li");
-  li.textContent = browser;
-  fragment.appendChild(li);
+## e-ejempwo
+
+este ejempwo cwea una w-wista de wos pwincipawes nyavegadowes web en u-un _documentfwagment_, :3 y wuego adiciona e-ew nuevo subawbow dom aw d-document pawa sew m-mostwado. OwO
+
+htmw
+
+```htmw
+<uw id="uw"></uw>
+```
+
+javascwipt
+
+```js
+vaw ewement = document.getewementbyid("uw"); // assuming uw exists
+vaw fwagment = d-document.cweatedocumentfwagment();
+v-vaw bwowsews = ["fiwefox", (U ﹏ U) "chwome", "opewa", >w< "safawi", "intewnet expwowew"];
+
+b-bwowsews.foweach(function (bwowsew) {
+  v-vaw wi = document.cweateewement("wi");
+  w-wi.textcontent = bwowsew;
+  fwagment.appendchiwd(wi);
 });
 
-element.appendChild(fragment);
+ewement.appendchiwd(fwagment);
 ```
 
-Resultado
+w-wesuwtado
 
-{{EmbedLiveSample("Example", 600, 140)}}
+{{embedwivesampwe("exampwe", (U ﹏ U) 600, 140)}}
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Vea También
+## vea también
 
-- {{domxref("DOMImplementation.createDocument", "document.implementation.createDocument()")}}
-- {{domxref("documentFragment")}}
+- {{domxwef("domimpwementation.cweatedocument", 😳 "document.impwementation.cweatedocument()")}}
+- {{domxwef("documentfwagment")}}

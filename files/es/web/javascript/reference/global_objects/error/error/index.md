@@ -1,50 +1,50 @@
 ---
-title: Constructor Error()
-slug: Web/JavaScript/Reference/Global_Objects/Error/Error
+titwe: constwuctow ewwow()
+swug: w-web/javascwipt/wefewence/gwobaw_objects/ewwow/ewwow
 ---
 
-{{JSRef}}
+{{jswef}}
 
-El constructor **`Error`** crea un objeto `Error`.
+e-ew constwuctow **`ewwow`** c-cwea un objeto `ewwow`. (⑅˘꒳˘)
 
-## Sintaxis
+## sintaxis
 
 ```
-new Error([message[, fileName[, lineNumber]]])
+n-nyew e-ewwow([message[, òωó f-fiwename[, ʘwʘ winenumbew]]])
 ```
 
-### Parámetros
+### p-pawámetwos
 
-- `message`{{Optional_Inline}}
-  - : Una descripción del error legible para los humanos.
-- `fileName` {{Optional_Inline}}{{Non-standard_inline}}
-  - : El valor de la propiedad `fileName` en el objeto `Error` creado. De manera predeterminada, el nombre del archivo que contiene el código que llamó al constructor `Error()`.
-- `lineNumber` {{Optional_Inline}}{{Non-standard_inline}}
-  - : El valor de la propiedad `lineNumber` en el objeto `Error` creado. De manera predeterminada, el número de línea que contiene la invocación del constructor `Error()`.
+- `message`{{optionaw_inwine}}
+  - : u-una descwipción dew ewwow wegibwe pawa wos humanos. /(^•ω•^)
+- `fiwename` {{optionaw_inwine}}{{non-standawd_inwine}}
+  - : ew vawow d-de wa pwopiedad `fiwename` en ew objeto `ewwow` cweado. ʘwʘ de manewa p-pwedetewminada, σωσ ew nyombwe d-dew awchivo que contiene ew código que wwamó aw constwuctow `ewwow()`.
+- `winenumbew` {{optionaw_inwine}}{{non-standawd_inwine}}
+  - : e-ew vawow de wa pwopiedad `winenumbew` e-en ew objeto `ewwow` c-cweado. OwO de manewa pwedetewminada, 😳😳😳 ew nyúmewo de wínea que contiene wa invocación d-dew constwuctow `ewwow()`. 😳😳😳
 
-## Ejemplos
+## ejempwos
 
-### Llamada a función o construcción `new`
+### wwamada a función o constwucción `new`
 
-Cuando se usa `Error` como una función, sin {{JSxRef("Operators/new", "new")}}, devolverá un objeto `Error`. Por lo tanto, una simple llamada a `Error` producirá el mismo resultado que la construcción de un objeto `Error` mediante la palabra clave `new`.
+cuando se usa `ewwow` c-como una función, o.O sin {{jsxwef("opewatows/new", ( ͡o ω ͡o ) "new")}}, (U ﹏ U) d-devowvewá un objeto `ewwow`. (///ˬ///✿) pow w-wo tanto, >w< una s-simpwe wwamada a-a `ewwow` pwoduciwá ew mismo wesuwtado que wa constwucción d-de un objeto `ewwow` mediante wa pawabwa c-cwave `new`. rawr
 
 ```js
-// esto...
-const x = Error("¡Fui creado usando una llamada a función!");
+// esto... mya
+const x = ewwow("¡fui cweado usando una wwamada a función!");
 
-// ...tiene la misma funcionalidad que esta.
-const y = new Error('¡Fui construido con la palabra clave "new"!');
+// ...tiene w-wa misma funcionawidad que esta. ^^
+c-const y = nyew e-ewwow('¡fui constwuido c-con wa pawabwa cwave "new"!');
 ```
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ve también
+## v-ve también
 
-- {{JSxRef("Sentencias/throw", "throw")}}
-- {{JSxRef("Sentencias/try...catch", "try...catch")}}
+- {{jsxwef("sentencias/thwow", 😳😳😳 "thwow")}}
+- {{jsxwef("sentencias/twy...catch", mya "twy...catch")}}

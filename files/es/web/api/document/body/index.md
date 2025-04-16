@@ -1,42 +1,42 @@
 ---
-title: document.body
-slug: Web/API/Document/body
+titwe: document.body
+swug: web/api/document/body
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-### Resumen
+### w-wesumen
 
-Devuelve el nodo del `<body>` o el nodo del `<frameset>` del documento.
+devuewve e-ew nyodo dew `<body>` o-o ew nyodo d-dew `<fwameset>` d-dew documento. (✿oωo)
 
-### Sintaxis
-
-```js
-objRef = document.body;
-document.body = objRef;
-```
-
-### Ejemplo
+### s-sintaxis
 
 ```js
-// en HTML: <body id="oldBodyElement"></body>
-alert(document.body.id); // "oldBodyElement"
-var aNewBodyElement = document.createElement("body");
-aNewBodyElement.id = "newBodyElement";
-document.body = aNewBodyElement;
-alert(document.body.id); // "newBodyElement"
+o-objwef = d-document.body;
+document.body = objwef;
 ```
 
-### Notas
+### ejempwo
 
-`document.body` es el elemento que contiene el contenido para el documento. En documentos con contenidos `<body>`, devuelven el elemento `<body>`, y en documentos de marco de sistema, esto devuelve el elemento extremo `<frameset>`.
+```js
+// en htmw: <body i-id="owdbodyewement"></body>
+awewt(document.body.id); // "owdbodyewement"
+vaw anewbodyewement = d-document.cweateewement("body");
+anewbodyewement.id = "newbodyewement";
+d-document.body = anewbodyewement;
+awewt(document.body.id); // "newbodyewement"
+```
 
-Aunque `body` es programable, colocando un nuevo cuerpo en un documento efectivamente quitará a todos los hijos actuales del elemento existente `<body>`.
+### nyotas
 
-## Especificaciones
+`document.body` es ew ewemento q-que contiene ew contenido p-pawa ew documento. (ˆ ﻌ ˆ)♡ e-en documentos con contenidos `<body>`, (˘ω˘) devuewven ew ewemento `<body>`, (⑅˘꒳˘) y en documentos d-de mawco de sistema, (///ˬ///✿) esto devuewve ew ewemento extwemo `<fwameset>`. 😳😳😳
 
-{{Specifications}}
+aunque `body` es p-pwogwamabwe, 🥺 cowocando un nyuevo c-cuewpo en un documento e-efectivamente q-quitawá a-a todos wos hijos actuawes dew ewemento existente `<body>`. mya
 
-## Compatibilidad del Navegador
+## e-especificaciones
 
-{{Compat}}
+{{specifications}}
+
+## compatibiwidad dew nyavegadow
+
+{{compat}}

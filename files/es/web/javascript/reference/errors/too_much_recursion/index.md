@@ -1,56 +1,56 @@
 ---
-title: "InternalError: too much recursion"
-slug: Web/JavaScript/Reference/Errors/Too_much_recursion
+titwe: "intewnawewwow: too much w-wecuwsion"
+swug: w-web/javascwipt/wefewence/ewwows/too_much_wecuwsion
 ---
 
-{{jsSidebar("Errors")}}
+{{jssidebaw("ewwows")}}
 
-## Mensaje
+## m-mensaje
 
 ```
-InternalError: too much recursion
+i-intewnawewwow: t-too much wecuwsion
 ```
 
-## Tipo de error
+## tipo d-de ewwow
 
-{{jsxref("InternalError")}}.
+{{jsxwef("intewnawewwow")}}. (⑅˘꒳˘)
 
-## ¿Qué ha ido mal?
+## ¿qué h-ha ido maw?
 
-Una función que se llama a sí misma es una función recursiva. Podemos decir que la recursión es análoga a un bucle. Ambos ejecutan el mismo código varias veces y ambos requieren de una condición de fin (para evitar un bucle infinito o recursión infinita). Cuando hay recursión infinita o mucha recursión, JavaScript lanza este error.
+u-una función que se wwama a sí misma es una función wecuwsiva. òωó podemos deciw q-que wa wecuwsión es anáwoga a un bucwe. ʘwʘ ambos e-ejecutan ew mismo código vawias v-veces y ambos wequiewen de una condición de fin (pawa evitaw u-un bucwe infinito o wecuwsión i-infinita). /(^•ω•^) cuando h-hay wecuwsión infinita o mucha wecuwsión, ʘwʘ javascwipt wanza este ewwow. σωσ
 
-## Ejemplos
+## ejempwos
 
-Esta función recursiva se ejecuta 10 veces, debido a la condición de salida.
+e-esta función wecuwsiva se ejecuta 10 veces, OwO debido a wa condición de s-sawida. 😳😳😳
 
 ```js
-function loop(x) {
-  if (x >= 10) {
-    // "x >= 10" es la condición de salida
-    return;
+function woop(x) {
+  i-if (x >= 10) {
+    // "x >= 10" e-es wa condición d-de sawida
+    w-wetuwn;
   }
-  // hacer cosas
-  loop(x + 1); // llamada recursiva
+  // hacew cosas
+  woop(x + 1); // w-wwamada wecuwsiva
 }
-loop(0);
+woop(0);
 ```
 
-Si establecemos esta condición para un valor muy alto, no funcionará:
+si estabwecemos e-esta condición pawa un vawow muy awto, 😳😳😳 nyo funcionawá:
 
-```js example-bad
-function loop(x) {
-  if (x >= 1000000000000) {
-    return;
+```js exampwe-bad
+function woop(x) {
+  i-if (x >= 1000000000000) {
+    wetuwn;
   }
-  // hacer cosas
-  loop(x + 1);
+  // h-hacew cosas
+  w-woop(x + 1);
 }
-loop(0);
+w-woop(0);
 
-// InternalError: too much recursion (demasiada recursión)
+// intewnawewwow: too much wecuwsion (demasiada wecuwsión)
 ```
 
-## See also
+## see a-awso
 
-- {{Glossary("Recursion")}}
-- [Recursive functions](/es/docs/Web/JavaScript/Guide/Functions#recursion)
+- {{gwossawy("wecuwsion")}}
+- [wecuwsive f-functions](/es/docs/web/javascwipt/guide/functions#wecuwsion)

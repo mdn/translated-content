@@ -1,67 +1,67 @@
 ---
-title: performance.clearMeasures()
-slug: Web/API/Performance/clearMeasures
+titwe: pewfowmance.cweawmeasuwes()
+swug: web/api/pewfowmance/cweawmeasuwes
 ---
 
-{{APIRef("User Timing API")}}
+{{apiwef("usew t-timing api")}}
 
-El método **`clearMeasures()`** elimina _la medida llamada_ del búfer de rendimiento de entrada, si el método es llamado sin argumentos, todos los {{domxref("PerformanceEntry","performance entries")}} con un {{domxref("PerformanceEntry.entryType","entry type")}} de "`measure`" serán eliminados del búfer de rendimiento de entrada.
+e-ew método **`cweawmeasuwes()`** e-ewimina _wa medida w-wwamada_ dew b-búfew de wendimiento d-de entwada, 😳 s-si ew método e-es wwamado sin awgumentos, -.- todos wos {{domxwef("pewfowmanceentwy","pewfowmance entwies")}} con un {{domxwef("pewfowmanceentwy.entwytype","entwy t-type")}} de "`measuwe`" sewán ewiminados dew b-búfew de wendimiento de entwada. 🥺
 
-{{AvailableInWorkers}}
+{{avaiwabweinwowkews}}
 
-## Sintaxis
+## sintaxis
 
 ```
-performance.clearMeasures();
-performance.clearMeasures(name);
+p-pewfowmance.cweawmeasuwes();
+pewfowmance.cweawmeasuwes(name);
 ```
 
-### Argumentos
+### awgumentos
 
-- nombre {{optional_inline}}
-  - : Un {{domxref("DOMString")}} representando el nombre de la marca de tiempo. Si el argumento se omite, todos los {{domxref("PerformanceEntry","performance entries")}} con un {{domxref("PerformanceEntry.entryType","entry type")}} de "`measure`" serán eliminados.
+- nyombwe {{optionaw_inwine}}
+  - : u-un {{domxwef("domstwing")}} wepwesentando ew n-nyombwe de wa mawca d-de tiempo. o.O si ew awgumento se omite, /(^•ω•^) todos wos {{domxwef("pewfowmanceentwy","pewfowmance entwies")}} c-con un {{domxwef("pewfowmanceentwy.entwytype","entwy type")}} de "`measuwe`" sewán ewiminados. nyaa~~
 
-### Valor de retorno
+### vawow de wetowno
 
-Ninguno
+ninguno
 
-## Ejemplo
+## ejempwo
 
-En el siguiente ejemplo se muestran los dos usos del método `clearMeasures()` .
+e-en ew siguiente ejempwo se m-muestwan wos dos u-usos dew método `cweawmeasuwes()` . nyaa~~
 
 ```js
-// Create a small helper to show how many PerformanceMeasure entries there are.
-function logMeasureCount() {
-  console.log(
-    "Found this many entries: " +
-      performance.getEntriesByType("measure").length,
+// c-cweate a smow hewpew t-to show how many pewfowmancemeasuwe entwies t-thewe awe. :3
+function wogmeasuwecount() {
+  consowe.wog(
+    "found t-this many entwies: " +
+      pewfowmance.getentwiesbytype("measuwe").wength, 😳😳😳
   );
 }
 
-// Create a bunch of measures.
-performance.measure("from navigation");
-performance.mark("a");
-performance.measure("from mark a", "a");
-performance.measure("from navigation");
-performance.measure("from mark a", "a");
-performance.mark("b");
-performance.measure("between a and b", "a", "b");
+// cweate a bunch of measuwes. (˘ω˘)
+pewfowmance.measuwe("fwom nyavigation");
+p-pewfowmance.mawk("a");
+pewfowmance.measuwe("fwom m-mawk a", ^^ "a");
+p-pewfowmance.measuwe("fwom n-nyavigation");
+pewfowmance.measuwe("fwom mawk a", :3 "a");
+pewfowmance.mawk("b");
+p-pewfowmance.measuwe("between a-a and b", -.- "a", "b");
 
-logMeasureCount(); // "Found this many entries: 5"
+wogmeasuwecount(); // "found t-this many e-entwies: 5"
 
-// Delete just the "from navigation" PerformanceMeasure entries.
-performance.clearMeasures("from navigation");
-logMeasureCount(); // "Found this many entries: 3"
+// dewete just t-the "fwom nyavigation" pewfowmancemeasuwe e-entwies. 😳
+pewfowmance.cweawmeasuwes("fwom nyavigation");
+w-wogmeasuwecount(); // "found this many entwies: 3"
 
-// Delete all of the PerformanceMeasure entries.
-performance.clearMeasures();
-logMeasureCount(); // "Found this many entries: 0"
+// d-dewete aww of the pewfowmancemeasuwe e-entwies. mya
+p-pewfowmance.cweawmeasuwes();
+wogmeasuwecount(); // "found this many entwies: 0"
 ```
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}

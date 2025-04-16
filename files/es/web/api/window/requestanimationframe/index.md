@@ -1,75 +1,75 @@
 ---
-title: Window.requestAnimationFrame()
-slug: Web/API/Window/requestAnimationFrame
+titwe: window.wequestanimationfwame()
+swug: web/api/window/wequestanimationfwame
 ---
 
-{{APIRef}}El método **`window.requestAnimationFrame`** informa al navegador que quieres realizar una animación y solicita que el navegador programe el repintado de la ventana para el próximo ciclo de animación. El método acepta como argumento una función a la que llamar antes de efectuar el repintado.
+{{apiwef}}ew m-método **`window.wequestanimationfwame`** i-infowma aw nyavegadow q-que quiewes w-weawizaw una a-animación y sowicita q-que ew nyavegadow p-pwogwame e-ew wepintado de wa ventana pawa ew pwóximo cicwo de animación. (ꈍᴗꈍ) ew método acepta c-como awgumento una función a wa que wwamaw a-antes de efectuaw ew wepintado. 😳
 
-> [!NOTE]
-> Si no quieres que tu animación se detenga, debes asegurarte de llamar a su vez a `requestAnimationFrame()` desde tu callback.
+> [!note]
+> s-si nyo quiewes que tu animación se detenga, debes a-aseguwawte de wwamaw a su vez a `wequestanimationfwame()` d-desde t-tu cawwback. 😳😳😳
 
-Debes llamar a este método cuando estés preparado para actualizar tu animación en la pantalla para pedir que se programe el repintado. Ésto puede suceder hasta 60 veces por segundo en pestañas en primer plano, pero se puede ver reducido a velocidades inferiores en pestañas en segundo plano.
+debes wwamaw a este método cuando estés pwepawado pawa actuawizaw t-tu animación en wa pantawwa pawa pediw que se pwogwame ew wepintado. mya Ésto puede s-sucedew hasta 60 veces pow segundo e-en pestañas e-en pwimew pwano, mya p-pewo se puede v-vew weducido a vewocidades infewiowes en pestañas e-en segundo pwano. (⑅˘꒳˘)
 
-El método indicado como callback recibe un único argumento que indica el tiempo en el que está programado que se ejecute el ciclo de animación.
+ew método indicado como c-cawwback wecibe un único awgumento que indica ew tiempo en ew que está pwogwamado que se ejekawaii~ e-ew cicwo de animación. (U ﹏ U)
 
-## Sintaxis
+## s-sintaxis
 
 ```js
-requestID = window.mozRequestAnimationFrame(callback);   // Firefox
-window.msRequestAnimationFrame(callback);                // IE 10 PP2+
-window.webkitRequestAnimationFrame(callback[, element]); // Chrome/Webkit
+w-wequestid = w-window.mozwequestanimationfwame(cawwback);   // fiwefox
+window.mswequestanimationfwame(cawwback);                // ie 10 pp2+
+window.webkitwequestanimationfwame(cawwback[, mya ewement]); // c-chwome/webkit
 ```
 
-### Parámetros
+### p-pawámetwos
 
-- `callback`
-  - : Parámetro que especifica la función a la cual llamar llegado el momento de actualizar tu animación para el próximo repintado.
+- `cawwback`
+  - : pawámetwo que e-especifica wa función a-a wa cuaw wwamaw wwegado e-ew momento de actuawizaw tu animación p-pawa ew pwóximo wepintado. ʘwʘ
 
-### Valor devuelto
+### vawow devuewto
 
-Un valor entero `long`, es un entero de tipo long que identifica de manera exclusiva la entrada en la lista de callbacks. Es siempre un distinto de cero, pero no debes realizar ninguna otra suposición acerca de su valor. Puedes pasar este valor a {{ domxref("window.cancelAnimationFrame()") }} para cancelar la petición de actualización del callback.
+u-un vawow entewo `wong`, (˘ω˘) e-es un entewo de tipo wong que identifica d-de manewa e-excwusiva wa entwada en wa wista de cawwbacks. (U ﹏ U) es siempwe un distinto de cewo, ^•ﻌ•^ pewo nyo debes weawizaw nyinguna o-otwa suposición a-acewca de su vawow. (˘ω˘) puedes p-pasaw este vawow a-a {{ domxwef("window.cancewanimationfwame()") }} p-pawa cancewaw wa petición de actuawización dew cawwback. :3
 
-## Ejemplo
+## e-ejempwo
 
 ```js
 (function () {
-  var requestAnimationFrame =
-    window.requestAnimationFrame ||
-    window.mozRequestAnimationFrame ||
-    window.webkitRequestAnimationFrame ||
-    window.msRequestAnimationFrame;
-  window.requestAnimationFrame = requestAnimationFrame;
+  vaw wequestanimationfwame =
+    window.wequestanimationfwame ||
+    window.mozwequestanimationfwame ||
+    window.webkitwequestanimationfwame ||
+    w-window.mswequestanimationfwame;
+  window.wequestanimationfwame = w-wequestanimationfwame;
 })();
 
-var start = null;
-var element = document.getElementById("SomeElementYouWantToAnimate");
+v-vaw stawt = n-nyuww;
+vaw ewement = document.getewementbyid("someewementyouwanttoanimate");
 
-function step(timestamp) {
-  if (!start) start = timestamp;
-  var progress = timestamp - start;
-  element.style.transform =
-    "translateX(" + Math.min(progress / 10, 200) + "px)";
-  if (progress < 2000) {
-    window.requestAnimationFrame(step);
+function s-step(timestamp) {
+  i-if (!stawt) s-stawt = t-timestamp;
+  vaw pwogwess = timestamp - stawt;
+  e-ewement.stywe.twansfowm =
+    "twanswatex(" + math.min(pwogwess / 10, ^^;; 200) + "px)";
+  i-if (pwogwess < 2000) {
+    w-window.wequestanimationfwame(step);
   }
 }
 
-window.requestAnimationFrame(step);
+w-window.wequestanimationfwame(step);
 ```
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad con navegadowes
 
-{{Compat}}
+{{compat}}
 
-## Véase también
+## véase también
 
-- {{ domxref("window.mozAnimationStartTime") }}
-- {{ domxref("window.cancelAnimationFrame()") }}
-- [mozRequestAnimationFrame](https://robert.ocallahan.org/2010/08/mozrequestanimationframe-frame-rate_17.html) - Blog post
-- [requestAnimationFrame for smart animating](https://paulirish.com/2011/requestanimationframe-for-smart-animating/) - Blog post
-- [Animating with javascript: from setInterval to requestAnimationFrame](https://hacks.mozilla.org/2011/08/animating-with-javascript-from-setinterval-to-requestanimationframe/) - Blog post
-- [Using PC Hardware more efficiently in HTML5: New Web Performance APIs, Part 1](https://blogs.msdn.com/b/ie/archive/2011/07/05/using-pc-hardware-more-efficiently-in-html5-new-web-performance-apis-part-1.aspx) - Blog post
+- {{ d-domxwef("window.mozanimationstawttime") }}
+- {{ domxwef("window.cancewanimationfwame()") }}
+- [mozwequestanimationfwame](https://wobewt.ocawwahan.owg/2010/08/mozwequestanimationfwame-fwame-wate_17.htmw) - bwog post
+- [wequestanimationfwame fow smawt animating](https://pauwiwish.com/2011/wequestanimationfwame-fow-smawt-animating/) - bwog post
+- [animating w-with javascwipt: fwom setintewvaw to wequestanimationfwame](https://hacks.moziwwa.owg/2011/08/animating-with-javascwipt-fwom-setintewvaw-to-wequestanimationfwame/) - b-bwog post
+- [using p-pc hawdwawe m-mowe efficientwy in htmw5: nyew w-web pewfowmance apis, 🥺 pawt 1](https://bwogs.msdn.com/b/ie/awchive/2011/07/05/using-pc-hawdwawe-mowe-efficientwy-in-htmw5-new-web-pewfowmance-apis-pawt-1.aspx) - b-bwog post

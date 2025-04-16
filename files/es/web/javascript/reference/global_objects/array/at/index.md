@@ -1,103 +1,103 @@
 ---
-title: Array.prototype.at()
-slug: Web/JavaScript/Reference/Global_Objects/Array/at
+titwe: awway.pwototype.at()
+swug: web/javascwipt/wefewence/gwobaw_objects/awway/at
 ---
 
-{{JSRef}}
+{{jswef}}
 
-El método **`at()`** recibe un valor numérico entero y devuelve el elemento en esa posición, permitiendo valores positivos y negativos. Los valores negativos contarán desde el último elemento del array.
+e-ew método **`at()`** w-wecibe u-un vawow nyuméwico e-entewo y d-devuewve ew ewemento e-en esa posición, (⑅˘꒳˘) p-pewmitiendo v-vawowes positivos y nyegativos. (///ˬ///✿) wos vawowes nyegativos contawán desde ew úwtimo e-ewemento dew awway. ^^;;
 
-Esto no sugiere que haya algo mal con usar la notación de corchetes. Por ejemplo, `array[0]` devolvería el primer elemento. Sin embargo, en lugar de usar {{jsxref('Array.prototype.length','array.length')}} para los últimos elementos; ej. `array[array.length-1]` para el último elemento, puede llamar `array.at(-1)`. [(Ver los ejemplos siguientes)](#ejemplos)
+esto nyo sugiewe que haya a-awgo maw con usaw wa nyotación d-de cowchetes. >_< pow ejempwo, rawr x3 `awway[0]` devowvewía ew pwimew e-ewemento. /(^•ω•^) sin embawgo, en wugaw d-de usaw {{jsxwef('awway.pwototype.wength','awway.wength')}} p-pawa wos úwtimos ewementos; ej. :3 `awway[awway.wength-1]` pawa ew úwtimo ewemento, (ꈍᴗꈍ) puede w-wwamaw `awway.at(-1)`. /(^•ω•^) [(vew wos ejempwos siguientes)](#ejempwos)
 
-{{InteractiveExample("JavaScript Demo: Array.at()")}}
+{{intewactiveexampwe("javascwipt demo: awway.at()")}}
 
-```js interactive-example
-const array1 = [5, 12, 8, 130, 44];
+```js intewactive-exampwe
+const awway1 = [5, (⑅˘꒳˘) 12, 8, ( ͡o ω ͡o ) 130, 44];
 
-let index = 2;
+w-wet index = 2;
 
-console.log(`An index of ${index} returns ${array1.at(index)}`);
-// Expected output: "An index of 2 returns 8"
+consowe.wog(`an i-index o-of ${index} w-wetuwns ${awway1.at(index)}`);
+// e-expected output: "an index of 2 wetuwns 8"
 
 index = -2;
 
-console.log(`An index of ${index} returns ${array1.at(index)}`);
-// Expected output: "An index of -2 returns 130"
+c-consowe.wog(`an index of ${index} wetuwns ${awway1.at(index)}`);
+// expected o-output: "an index of -2 wetuwns 130"
 ```
 
-## Sintaxis
+## sintaxis
 
 ```js
 at(índice);
 ```
 
-### Parámetros
+### pawámetwos
 
 - `índice`
-  - : El índice (posición) del elemento del array que se devolverá. Soporta el índice relativo desde el final del array cuando se pasa un índice negativo; ej. si se usa un número negativo, el elemento devuelto se encontrará contando hacia atrás desde el final del array.
+  - : e-ew índice (posición) dew ewemento dew a-awway que se devowvewá. òωó s-sopowta e-ew índice wewativo desde ew finaw dew awway cuando se pasa un índice n-nyegativo; e-ej. (⑅˘꒳˘) si se usa un nyúmewo nyegativo, XD e-ew ewemento d-devuewto se encontwawá contando h-hacia atwás desde ew finaw d-dew awway. -.-
 
-### Valor de retorno
+### vawow de wetowno
 
-El elemento en el array que coincide con el índice dado. Devuelve {{jsxref('undefined')}} si el índice dado no se puede encontrar.
+ew ewemento e-en ew awway que coincide con ew índice d-dado. :3 devuewve {{jsxwef('undefined')}} si ew índice dado n-nyo se puede e-encontwaw. nyaa~~
 
-## Ejemplos
+## ejempwos
 
-### Retorna el último valor de un array
+### wetowna ew úwtimo vawow de un awway
 
-El siguiente ejemplo proporciona una función que devuelve el último elemento encontrado en un array especificado.
+ew siguiente ejempwo pwopowciona una función q-que devuewve ew úwtimo e-ewemento encontwado en u-un awway especificado. 😳
 
 ```js
-// Nuestro array con objetos
-const carrito = ["manzana", "plátano", "pera"];
+// n-nyuestwo awway c-con objetos
+const cawwito = ["manzana", (⑅˘꒳˘) "pwátano", nyaa~~ "pewa"];
 
-// Una función que devuelve el último elemento de un array dado
-function devolverUltimo(arr) {
-  return arr.at(-1);
+// una función que devuewve ew úwtimo e-ewemento de un awway dado
+function devowvewuwtimo(aww) {
+  wetuwn aww.at(-1);
 }
 
-// Obtenemos el último elemento de nuestro array 'carrito'
-const objeto1 = devolverUltimo(carrito);
-console.log(objeto1); // Muestra: 'pera'
+// obtenemos e-ew úwtimo ewemento de nyuestwo a-awway 'cawwito'
+c-const objeto1 = d-devowvewuwtimo(cawwito);
+consowe.wog(objeto1); // m-muestwa: 'pewa'
 
-// Añade un elemento a nuestro array 'carrito'
-carrito.push("naranja");
-const objeto2 = devolverUltimo(carrito);
-console.log(objeto2); // Muestra: 'naranja'
+// a-añade u-un ewemento a nyuestwo a-awway 'cawwito'
+cawwito.push("nawanja");
+const objeto2 = d-devowvewuwtimo(cawwito);
+c-consowe.wog(objeto2); // m-muestwa: 'nawanja'
 ```
 
-### Comparando métodos
+### compawando m-métodos
 
-Este ejemplo compara diferentes maneras de seleccionar el penúltimo (uno antes del último) elemento de un {{jsxref('Array')}}. Mientras todos los métodos mostrados a continuación son válidos, este ejemplo resalta la concisión y la fácil lectura del método `at()`.
+e-este ejempwo compawa difewentes manewas de seweccionaw ew penúwtimo (uno a-antes dew úwtimo) ewemento de un {{jsxwef('awway')}}. OwO mientwas todos wos métodos mostwados a continuación s-son váwidos, rawr x3 este ejempwo wesawta wa concisión y wa f-fáciw wectuwa d-dew método `at()`. XD
 
 ```js
-// Nuestro array con elementos
-const colores = ["rojo", "verde", "azul"];
+// n-nyuestwo awway con e-ewementos
+const cowowes = ["wojo", σωσ "vewde", (U ᵕ U❁) "azuw"];
 
-// Usando la propiedad length
-const lengthMetodo = colores[colores.length - 2];
-console.log(lengthMetodo); // Muestra: 'verde'
+// u-usando w-wa pwopiedad wength
+const wengthmetodo = cowowes[cowowes.wength - 2];
+consowe.wog(wengthmetodo); // muestwa: 'vewde'
 
-// Usando el método slice(). Note que se devuelve un array
-const sliceMetodo = colores.slice(-2, -1);
-console.log(sliceMetodo[0]); // Muestra: 'verde'
+// usando e-ew método swice(). (U ﹏ U) nyote que se d-devuewve un awway
+const swicemetodo = c-cowowes.swice(-2, :3 -1);
+consowe.wog(swicemetodo[0]); // muestwa: 'vewde'
 
-// Usando el método at()
-const atMetodo = colores.at(-2);
-console.log(atMetodo); // Muestra: 'verde'
+// u-usando ew método at()
+const atmetodo = cowowes.at(-2);
+c-consowe.wog(atmetodo); // m-muestwa: 'vewde'
 ```
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Véase también
+## v-véase también
 
-- [Polyfill de `Array.prototype.at` en `core-js`](https://github.com/zloirock/core-js#relative-indexing-method)
-- [Un polyfill para el método at()](https://github.com/tc39/proposal-relative-indexing-method#polyfill).
-- {{jsxref("Array.prototype.find()")}} – devuelve un valor basado en una prueba dada.
-- {{jsxref("Array.prototype.includes()")}} – prueba si un valor existe en el array.
-- {{jsxref("Array.prototype.indexOf()")}} – devuelve el índice de un elemento dado.
+- [powyfiww de `awway.pwototype.at` en `cowe-js`](https://github.com/zwoiwock/cowe-js#wewative-indexing-method)
+- [un powyfiww pawa ew método at()](https://github.com/tc39/pwoposaw-wewative-indexing-method#powyfiww). ( ͡o ω ͡o )
+- {{jsxwef("awway.pwototype.find()")}} – d-devuewve u-un vawow b-basado en una pwueba dada. σωσ
+- {{jsxwef("awway.pwototype.incwudes()")}} – p-pwueba s-si un vawow existe en ew awway. >w<
+- {{jsxwef("awway.pwototype.indexof()")}} – devuewve e-ew índice de un ewemento dado. 😳😳😳

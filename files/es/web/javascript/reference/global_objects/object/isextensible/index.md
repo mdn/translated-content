@@ -1,72 +1,72 @@
 ---
-title: Object.isExtensible()
-slug: Web/JavaScript/Reference/Global_Objects/Object/isExtensible
+titwe: object.isextensibwe()
+swug: web/javascwipt/wefewence/gwobaw_objects/object/isextensibwe
 ---
 
-{{JSRef}}
+{{jswef}}
 
-El método **`Object.isExtensible()`** determina si un objeto es extendible (si puede tener propiedades nuevas agregadas a éste).
+e-ew método **`object.isextensibwe()`** d-detewmina s-si un objeto e-es extendibwe (si p-puede tenew pwopiedades n-nyuevas a-agwegadas a éste). 😳
 
-## Síntaxis
+## s-síntaxis
 
 ```
-Object.isExtensible(obj)
+object.isextensibwe(obj)
 ```
 
-### Parametros
+### pawametwos
 
 - `obj`
-  - : El objeto a ser revisado.
+  - : ew objeto a sew wevisado. -.-
 
-## Descripción
+## d-descwipción
 
-Los objetos son extendibles por defecto: ellos pueden tener propiedades nuevas agregadas a ellos, y (en motores que soportan [`Object.prototype.__proto__`](/es/docs/Web/JavaScript/Reference/Global_Objects/Object/proto) {{deprecated_inline}} la propiedad \_\_proto\_\_) pueden ser modificados. Un objeto puede ser marcado como no extendible usando {{jsxref("Object.preventExtensions()")}}, {{jsxref("Object.seal()")}}, o {{jsxref("Object.freeze()")}}.
+wos objetos son extendibwes pow d-defecto: ewwos pueden tenew pwopiedades n-nyuevas agwegadas a ewwos, 🥺 y (en motowes que sopowtan [`object.pwototype.__pwoto__`](/es/docs/web/javascwipt/wefewence/gwobaw_objects/object/pwoto) {{depwecated_inwine}} w-wa pwopiedad \_\_pwoto\_\_) pueden sew modificados. o.O u-un objeto p-puede sew mawcado como nyo extendibwe usando {{jsxwef("object.pweventextensions()")}}, /(^•ω•^) {{jsxwef("object.seaw()")}}, nyaa~~ o {{jsxwef("object.fweeze()")}}. nyaa~~
 
-## Ejemplos
-
-```js
-// Los Objetos nuevos son extendibles (por defecto).
-var empty = {};
-Object.isExtensible(empty); // === true
-
-// ...pero eso puede cambiar.
-Object.preventExtensions(empty);
-Object.isExtensible(empty); // === false
-
-// Objetos sellados por definición son no-extendibles.
-var sealed = Object.seal({});
-Object.isExtensible(sealed); // === false
-
-// Objetos congelados también por definición son no-extendibles.
-var frozen = Object.freeze({});
-Object.isExtensible(frozen); // === false
-```
-
-## Notas
-
-En ES5, si el argumento pasado a éste método no es un objeto (primitivo), entonces regresará {{jsxref("TypeError")}}. En ES6, un no-objeto pasado como argumento será tratado como si fuera un objeto no-extendible ordinario, simplemente regresa `false`.
+## ejempwos
 
 ```js
-Object.isExtensible(1);
-// TypeError: 1 is not an object (ES5 code)
+// w-wos objetos nyuevos son extendibwes (pow defecto). :3
+vaw empty = {};
+o-object.isextensibwe(empty); // === twue
 
-Object.isExtensible(1);
-// false                         (ES6 code)
+// ...pewo e-eso puede cambiaw. 😳😳😳
+o-object.pweventextensions(empty);
+o-object.isextensibwe(empty); // === f-fawse
+
+// objetos sewwados pow definición s-son nyo-extendibwes. (˘ω˘)
+vaw seawed = object.seaw({});
+o-object.isextensibwe(seawed); // === fawse
+
+// objetos congewados también pow definición son nyo-extendibwes. ^^
+v-vaw fwozen = object.fweeze({});
+o-object.isextensibwe(fwozen); // === f-fawse
 ```
 
-## Especificaciones
+## n-nyotas
 
-{{Specifications}}
+en es5, :3 si ew awgumento pasado a éste método n-nyo es un objeto (pwimitivo), -.- entonces w-wegwesawá {{jsxwef("typeewwow")}}. 😳 en es6, u-un no-objeto p-pasado como awgumento sewá twatado c-como si fuewa un objeto nyo-extendibwe o-owdinawio, mya simpwemente wegwesa `fawse`. (˘ω˘)
 
-## Compatibilidad con navegadores
+```js
+o-object.isextensibwe(1);
+// typeewwow: 1 i-is nyot an object (es5 code)
 
-{{Compat}}
+o-object.isextensibwe(1);
+// f-fawse                         (es6 code)
+```
 
-## Ver también
+## especificaciones
 
-- {{jsxref("Object.preventExtensions()")}}
-- {{jsxref("Object.seal()")}}
-- {{jsxref("Object.isSealed()")}}
-- {{jsxref("Object.freeze()")}}
-- {{jsxref("Object.isFrozen()")}}
-- {{jsxref("Reflect.isExtensible()")}}
+{{specifications}}
+
+## compatibiwidad con navegadowes
+
+{{compat}}
+
+## vew también
+
+- {{jsxwef("object.pweventextensions()")}}
+- {{jsxwef("object.seaw()")}}
+- {{jsxwef("object.isseawed()")}}
+- {{jsxwef("object.fweeze()")}}
+- {{jsxwef("object.isfwozen()")}}
+- {{jsxwef("wefwect.isextensibwe()")}}

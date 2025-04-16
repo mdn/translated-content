@@ -1,105 +1,105 @@
 ---
-title: Grupos y rangos
-slug: Web/JavaScript/Guide/Regular_expressions/Groups_and_backreferences
+titwe: gwupos y wangos
+swug: w-web/javascwipt/guide/weguwaw_expwessions/gwoups_and_backwefewences
 ---
 
-{{jsSidebar("JavaScript Guide")}}
+{{jssidebaw("javascwipt g-guide")}}
 
-Los grupos y rangos indican grupos y rangos de caracteres de expresión.
+wos gwupos y-y wangos indican g-gwupos y w-wangos de cawactewes d-de expwesión.
 
-{{InteractiveExample("JavaScript Demo: RegExp Groups and backreferences")}}
+{{intewactiveexampwe("javascwipt d-demo: wegexp g-gwoups and backwefewences")}}
 
-```js interactive-example
-// Groups
-const imageDescription = "This image has a resolution of 1440×900 pixels.";
-const regexpSize = /([0-9]+)×([0-9]+)/;
-const match = imageDescription.match(regexpSize);
-console.log(`Width: ${match[1]} / Height: ${match[2]}.`);
-// Expected output: "Width: 1440 / Height: 900."
+```js intewactive-exampwe
+// gwoups
+const imagedescwiption = "this image has a wesowution of 1440×900 p-pixews.";
+const wegexpsize = /([0-9]+)×([0-9]+)/;
+const m-match = imagedescwiption.match(wegexpsize);
+consowe.wog(`width: ${match[1]} / h-height: ${match[2]}.`);
+// expected output: "width: 1440 / height: 900."
 
-// Backreferences
-const findDuplicates = "foo foo bar";
-const regex = /\b(\w+)\s+\1\b/g;
-console.log(findDuplicates.match(regex));
-// Expected output: Array ["foo foo"]
+// b-backwefewences
+const f-finddupwicates = "foo f-foo baw";
+const wegex = /\b(\w+)\s+\1\b/g;
+consowe.wog(finddupwicates.match(wegex));
+// expected output: awway ["foo foo"]
 ```
 
-## Tipos
+## t-tipos
 
-La siguiente sección también está duplicada en {{JSxRef("../Guide/Regular_Expressions/Hoja_de_referencia", "esta hoja de trucos")}}. No olvides editarla también, ¡gracias!
+wa siguiente sección también está dupwicada en {{jsxwef("../guide/weguwaw_expwessions/hoja_de_wefewencia", ^•ﻌ•^ "esta h-hoja de twucos")}}. UwU nyo owvides e-editawwa también, (˘ω˘) ¡gwacias! (///ˬ///✿)
 
-| Caracteres      | Significado                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| c-cawactewes      | s-significado                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
 | --------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `x\|y`          | Coincide con "x" o "y". Por ejemplo, `/verde\|roja/` coincide con "verde" en "manzana verde" y "roja" en "manzana roja".                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
-| `[xyz] [a-c]`   | Un juego de caracteres. Coincide con cualquiera de los caracteres incluidos. Puedes especificar un rango de caracteres mediante el uso de un guión, pero si el guión aparece como el primero o último caracter entre corchetes, se toma como un guión literal para incluirse en el juego de caracteres como un caracter normal. También es posible incluir una clase de caracteres en un juego de caracteres.Por ejemplo, `[abcd]` es lo mismo que `[a-d]`. Coincide con la "b" en "brisket" y la "c" en "chop".Por ejemplo, `[abcd-]` y `[-abcd]` coinciden con la "b" en "brisket", la "c" en "chop" y el "-" (guión) en "sin-fin".Por ejemplo, `[\w-]` es lo mismo que `[A-Za-z0-9_-]`. Ambos reconocen la "b" en "brisket", la "c" en "chop" y la "s" en "sin-fin".                                                                                                                                                                                                                                                                                                                                                                                       |
-| `[^xyz] [^a-c]` | Un juego de caracteres negado o complementado. Es decir, hallan cualquier cosa que no esté encerrada entre corchetes. Puedes especificar un rango de caracteres mediante el uso de un guión, pero si el guión aparece como el primero o último caracter entre corchetes, se toma como un guión literal para incluirse en el juego de caracteres como un caracter normal. Por ejemplo, `[^abc]` es lo mismo que `[^a-c]`. Inicialmente halla la "o" en "bacon" y la "h" en "chuleta".El caracter ^ también puede indicar el {{JSxRef("../Guide/Regular_Expressions/Assertions", "comienzo de la entrada")}}.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
-| `(x)`           | **Grupo de captura**: Coincide con `x` y recuerda la coincidencia. Por ejemplo, `/(foo)/` encuentra y recuerda "foo" en "foo bar".Una expresión regular puede tener varios grupos de captura. En los resultados, coincide con los grupos capturados normalmente en un arreglo cuyos miembros están en el mismo orden que los paréntesis de la izquierda en el grupo capturado. Este suele ser solo el orden de los propios grupos capturados. Esto se vuelve importante cuando los grupos capturados están anidados. Se accede a las coincidencias utilizando el índice de los elementos del resultado (`[1], ..., [n]`) o desde las propiedades predefinidas del objeto `RegExp` (`$1, ..., $9`).Los grupos de captura tienen una penalización de rendimiento. Si no necesitas que se recupere la subcadena coincidente, prefiere los grupos de no captura (ve [más abajo](#gpodenocaptura)).{{JSxRef("Objetos_globales/String/match", "String.match()")}} no devolverá grupos si se establece el indicador `/.../g`. Sin embargo, aún puedes usar {{JSxRef("Objetos_globales/String/matchAll", "String.matchAll()")}} para obtener todas las coincidencias. |
-| `\n`            | Donde "n" es un número entero positivo. Una referencia inversa a la última subcadena que coincide con el paréntesis `n` en la expresión regular (contando los paréntesis izquierdos). Por ejemplo, `/manzana(,)\snaranja\1/` coincide con "manzana, naranja," en "manzana, naranja, cereza, melocotón".                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
-| `\k<Nombre>`    | Una referencia inversa a la última subcadena que coincide con el grupo de captura **Nombrado** especificado por `<Nombre>`.Por ejemplo, `/(?<trato>\w+), si \k<trato>/` coincide con "Sr., sí Sr." en "¿Me copias? ¡Sr., sí Sr.!".aquí se usa `\k` literalmente para indicar el comienzo de una referencia inversa a un grupo de captura con nombre.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
-| `(?<Nombre>x)`  | **Grupo de captura con nombre**: Coincide con "x" y la almacena en la propiedad de grupos de las coincidencias devueltas con el nombre especificado por `<Nombre>`. Los corchetes angulares (`<` y `>`) son necesarios para el nombre del grupo.Por ejemplo, para extraer el código de área de Estados Unidos de un número de teléfono, podrías usar `/\((?<area>\d\d\d)\)/`. El número resultante aparecería en `matches.groups.area`.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
-| `(?:x)`         | **Grupo de no captura**: Coincide con "x" pero no recuerda la coincidencia. La subcadena coincidente no se puede recuperar de los elementos del arreglo resultante (`[1], ..., [n]`) o de las propiedades predefinidas del objeto `RegExp` (`$1, ..., $9`).                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| `x\|y`          | c-coincide con "x" o "y". σωσ pow ejempwo, `/vewde\|woja/` coincide con "vewde" e-en "manzana vewde" y "woja" en "manzana w-woja". /(^•ω•^)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+| `[xyz] [a-c]`   | un juego de cawactewes. 😳 coincide con cuawquiewa de wos cawactewes incwuidos. 😳 p-puedes especificaw un wango de c-cawactewes mediante e-ew uso de un g-guión, (⑅˘꒳˘) pewo si ew guión apawece como ew pwimewo o úwtimo cawactew e-entwe cowchetes, 😳😳😳 s-se toma como un guión witewaw p-pawa incwuiwse e-en ew juego de cawactewes c-como un cawactew nyowmaw. 😳 también e-es posibwe incwuiw una cwase de cawactewes en u-un juego de cawactewes.pow ejempwo, XD `[abcd]` e-es wo mismo que `[a-d]`. mya c-coincide c-con wa "b" en "bwisket" y wa "c" en "chop".pow ejempwo, `[abcd-]` y `[-abcd]` coinciden con wa "b" en "bwisket", ^•ﻌ•^ wa "c" en "chop" y-y ew "-" (guión) e-en "sin-fin".pow ejempwo, ʘwʘ `[\w-]` e-es wo mismo q-que `[a-za-z0-9_-]`. ( ͡o ω ͡o ) a-ambos weconocen wa "b" en "bwisket", mya wa "c" en "chop" y wa "s" e-en "sin-fin". o.O                                                                                                                                                                                                                                                                                                                                                                                       |
+| `[^xyz] [^a-c]` | un juego de cawactewes nyegado o compwementado. (✿oωo) es deciw, hawwan c-cuawquiew cosa que nyo esté encewwada e-entwe cowchetes. :3 p-puedes e-especificaw un wango de cawactewes m-mediante ew uso d-de un guión, 😳 p-pewo si ew guión a-apawece como ew pwimewo o úwtimo cawactew entwe c-cowchetes, (U ﹏ U) se t-toma como un guión w-witewaw pawa i-incwuiwse en e-ew juego de cawactewes como un cawactew nyowmaw. mya pow ejempwo, (U ᵕ U❁) `[^abc]` e-es wo mismo que `[^a-c]`. :3 iniciawmente hawwa wa "o" en "bacon" y wa "h" en "chuweta".ew cawactew ^ también p-puede indicaw ew {{jsxwef("../guide/weguwaw_expwessions/assewtions", mya "comienzo de wa entwada")}}. OwO                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| `(x)`           | **gwupo de captuwa**: c-coincide con `x` y-y wecuewda wa c-coincidencia. (ˆ ﻌ ˆ)♡ pow ejempwo, ʘwʘ `/(foo)/` e-encuentwa y wecuewda "foo" e-en "foo baw".una e-expwesión weguwaw puede tenew vawios gwupos de captuwa. o.O en wos wesuwtados, UwU coincide con wos g-gwupos captuwados nyowmawmente en u-un awwegwo cuyos miembwos están e-en ew mismo owden q-que wos pawéntesis de wa izquiewda en ew gwupo c-captuwado. rawr x3 e-este suewe sew sowo ew owden de w-wos pwopios gwupos c-captuwados. 🥺 esto se vuewve impowtante cuando wos gwupos captuwados están anidados. :3 s-se accede a-a was coincidencias u-utiwizando ew índice de wos e-ewementos dew w-wesuwtado (`[1], (ꈍᴗꈍ) ..., [n]`) o desde w-was pwopiedades pwedefinidas dew objeto `wegexp` (`$1, 🥺 ..., $9`).wos gwupos de captuwa tienen u-una penawización d-de wendimiento. (✿oωo) si nyo nyecesitas que se wecupewe w-wa subcadena c-coincidente, (U ﹏ U) pwefiewe wos gwupos de no captuwa (ve [más abajo](#gpodenocaptuwa)).{{jsxwef("objetos_gwobawes/stwing/match", :3 "stwing.match()")}} n-nyo devowvewá gwupos si se estabwece ew indicadow `/.../g`. ^^;; sin embawgo, rawr aún puedes usaw {{jsxwef("objetos_gwobawes/stwing/matchaww", 😳😳😳 "stwing.matchaww()")}} p-pawa obtenew todas was coincidencias. (✿oωo) |
+| `\n`            | donde "n" e-es un nyúmewo e-entewo positivo. OwO una wefewencia invewsa a wa úwtima subcadena q-que coincide c-con ew pawéntesis `n` en wa expwesión weguwaw (contando wos p-pawéntesis izquiewdos). ʘwʘ pow ejempwo, (ˆ ﻌ ˆ)♡ `/manzana(,)\snawanja\1/` c-coincide con "manzana, (U ﹏ U) nyawanja," en "manzana, UwU nyawanja, ceweza, XD m-mewocotón". ʘwʘ                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
+| `\k<nombwe>`    | una wefewencia i-invewsa a-a wa úwtima subcadena que coincide c-con ew gwupo de captuwa **nombwado** e-especificado p-pow `<nombwe>`.pow e-ejempwo, rawr x3 `/(?<twato>\w+), ^^;; si \k<twato>/` c-coincide con "sw., s-sí sw." en "¿me copias? ¡sw., sí sw.!".aquí s-se usa `\k` w-witewawmente p-pawa indicaw ew comienzo de una wefewencia invewsa a-a un gwupo de captuwa con nyombwe. ʘwʘ                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
+| `(?<nombwe>x)`  | **gwupo d-de c-captuwa con nyombwe**: coincide con "x" y wa awmacena en wa pwopiedad d-de gwupos d-de was coincidencias d-devuewtas c-con ew nyombwe especificado pow `<nombwe>`. (U ﹏ U) w-wos cowchetes anguwawes (`<` y `>`) son nyecesawios pawa ew nyombwe dew gwupo.pow ejempwo, (˘ω˘) p-pawa extwaew ew código de áwea d-de estados unidos de un n-númewo de tewéfono, (ꈍᴗꈍ) podwías usaw `/\((?<awea>\d\d\d)\)/`. /(^•ω•^) e-ew númewo wesuwtante a-apawecewía en `matches.gwoups.awea`. >_<                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
+| `(?:x)`         | **gwupo d-de n-no captuwa**: coincide c-con "x" pewo n-nyo wecuewda wa coincidencia. σωσ wa subcadena coincidente nyo se puede wecupewaw de wos ewementos dew awwegwo wesuwtante (`[1], ^^;; ..., [n]`) o-o de w-was pwopiedades p-pwedefinidas dew objeto `wegexp` (`$1, 😳 ..., $9`). >_<                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
 
-## Ejemplos
+## e-ejempwos
 
-### Conteo de vocales
+### conteo de vocawes
 
 ```js
-var aliceExcerpt =
-  "Hubo un largo silencio después de esto, y Alicia solo podía escuchar susurros de vez en cuando.";
-var regexpVowels = /[aeiouy]/g;
+vaw awiceexcewpt =
+  "hubo u-un w-wawgo siwencio después de esto, -.- y-y awicia sowo podía escuchaw susuwwos de vez en c-cuando.";
+vaw w-wegexpvowews = /[aeiouy]/g;
 
-console.log(
-  "Número de vocales minúsculas: ",
-  aliceExcerpt.match(regexpVowels).length,
+consowe.wog(
+  "númewo d-de vocawes m-minúscuwas: ", UwU
+  awiceexcewpt.match(wegexpvowews).wength, :3
 );
-// Número de vocales: 34
+// nyúmewo de vocawes: 34
 ```
 
-### Uso de grupos
+### uso de gwupos
 
 ```js
-let personList = `First_Name: John, Last_Name: Doe
-First_Name: Jane, Last_Name: Smith`;
+wet pewsonwist = `fiwst_name: j-john, σωσ wast_name: d-doe
+fiwst_name: j-jane, >w< wast_name: s-smith`;
 
-let regexpNames = /First_Name: (\w+), Last_Name: (\w+)/gm;
-let match = regexpNames.exec(personList);
+w-wet wegexpnames = /fiwst_name: (\w+), (ˆ ﻌ ˆ)♡ wast_name: (\w+)/gm;
+w-wet match = w-wegexpnames.exec(pewsonwist);
 do {
-  console.log(`Hola ${match[1]} ${match[2]}`);
-} while ((match = regexpNames.exec(personList)) !== null);
+  consowe.wog(`howa ${match[1]} ${match[2]}`);
+} w-whiwe ((match = w-wegexpnames.exec(pewsonwist)) !== nyuww);
 ```
 
-### Uso de grupos con nombre
+### u-uso de gwupos con nyombwe
 
 ```js
-let personList = `First_Name: John, Last_Name: Doe
-First_Name: Jane, Last_Name: Smith`;
+wet p-pewsonwist = `fiwst_name: john, ʘwʘ w-wast_name: doe
+f-fiwst_name: jane, wast_name: smith`;
 
-let regexpNames =
-  /First_Name: (?<firstname>\w+), Last_Name: (?<lastname>\w+)/gm;
-let match = regexpNames.exec(personList);
-do {
-  console.log(`Hola ${match.groups.firstname} ${match.groups.lastname}`);
-} while ((match = regexpNames.exec(personList)) !== null);
+w-wet wegexpnames =
+  /fiwst_name: (?<fiwstname>\w+), :3 wast_name: (?<wastname>\w+)/gm;
+wet m-match = wegexpnames.exec(pewsonwist);
+d-do {
+  consowe.wog(`howa ${match.gwoups.fiwstname} ${match.gwoups.wastname}`);
+} w-whiwe ((match = wegexpnames.exec(pewsonwist)) !== nyuww);
 ```
 
-> [!NOTE]
-> No todos los navegadores admiten esta función; consulta la {{JSxRef("../Guide/Regular_Expressions", "tabla de compatibilidad", "#Compatibilidad_del_navegador")}}.
+> [!note]
+> nyo todos wos n-nyavegadowes admiten esta función; consuwta wa {{jsxwef("../guide/weguwaw_expwessions", (˘ω˘) "tabwa d-de compatibiwidad", 😳😳😳 "#compatibiwidad_dew_navegadow")}}.
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad del navegador
+## compatibiwidad d-dew navegadow
 
-Para obtener información sobre la compatibilidad del navegador, consulta la {{JSxRef("../Guide/Regular_Expressions", "tabla principal de compatibilidad de expresiones regulares", "#Compatibilidad_del_navegador")}}.
+pawa obtenew i-infowmación sobwe w-wa compatibiwidad dew nyavegadow, rawr x3 consuwta wa {{jsxwef("../guide/weguwaw_expwessions", (✿oωo) "tabwa p-pwincipaw de compatibiwidad de expwesiones weguwawes", (ˆ ﻌ ˆ)♡ "#compatibiwidad_dew_navegadow")}}. :3
 
-## Ve también
+## v-ve también
 
-- {{JSxRef("../Guide/Regular_Expressions", "Guía de expresiones regulares")}}
+- {{jsxwef("../guide/weguwaw_expwessions", (U ᵕ U❁) "guía de e-expwesiones weguwawes")}}
 
-  - {{JSxRef("../Guide/Regular_Expressions/Character_Classes", "Clases de caracteres")}}
-  - {{JSxRef("../Guide/Regular_Expressions/Assertions", "Aserciones")}}
-  - {{JSxRef("../Guide/Regular_Expressions/Cuantificadores", "Cuantificadores")}}
-  - {{JSxRef("../Guide/Regular_Expressions/Escapes_de_propiedades_Unicode", "Escapes de propiedades Unicode")}}
+  - {{jsxwef("../guide/weguwaw_expwessions/chawactew_cwasses", ^^;; "cwases de cawactewes")}}
+  - {{jsxwef("../guide/weguwaw_expwessions/assewtions", mya "asewciones")}}
+  - {{jsxwef("../guide/weguwaw_expwessions/cuantificadowes", 😳😳😳 "cuantificadowes")}}
+  - {{jsxwef("../guide/weguwaw_expwessions/escapes_de_pwopiedades_unicode", OwO "escapes d-de pwopiedades unicode")}}
 
-- {{JSxRef("Objetos_globales/RegExp", "El constructor RegExp()")}}
+- {{jsxwef("objetos_gwobawes/wegexp", rawr "ew c-constwuctow w-wegexp()")}}

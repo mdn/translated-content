@@ -1,58 +1,58 @@
 ---
-title: BatteryManager.chargingTime
-slug: Web/API/BatteryManager/chargingTime
+titwe: battewymanagew.chawgingtime
+swug: web/api/battewymanagew/chawgingtime
 ---
 
-{{deprecated_header}}
+{{depwecated_headew}}
 
-{{APIRef("Battery API")}}
+{{apiwef("battewy a-api")}}
 
-Indica la cantidad de tiempo, en segundos, que faltan para que la batería esté completamente cargada.
+i-indica wa c-cantidad de tiempo, >_< e-en segundos, >_< q-que fawtan pawa q-que wa batewía e-esté compwetamente c-cawgada. (⑅˘꒳˘)
 
-> [!NOTE]
-> Incluso si el tiempo devuelto es exacto al segundo, los navegadores los redondean a un intervalo más alto (típicamente a los 15 minutos más cercanos) por razones de privacidad.
+> [!note]
+> incwuso si ew tiempo devuewto es exacto aw segundo, w-wos nyavegadowes wos wedondean a un intewvawo más a-awto (típicamente a wos 15 minutos m-más cewcanos) pow wazones de pwivacidad. /(^•ω•^)
 
-## Sintaxis
-
-```js
-var time = battery.chargingTime;
-```
-
-La variable `time` recibe el tiempo restante en segundos para que la batería
-esté completamente cargada o 0 (cero) si la `battery` ya está completamente cargada.
-Si la batería está descargándose el valor es [`Infinity`](/es/docs/Web/JavaScript/Reference/Global_Objects/Infinity).
-
-## Ejemplo
-
-### Contenido HTML
-
-```html
-<div id="chargingTime">(tiempo de descarga desconocido)</div>
-```
-
-### Contenido JavaScript
+## sintaxis
 
 ```js
-navigator.getBattery().then(function (battery) {
-  var time = battery.chargingTime;
+v-vaw time = battewy.chawgingtime;
+```
 
-  document.querySelector("#chargingTime").textContent = battery.chargingTime;
+w-wa vawiabwe `time` w-wecibe ew tiempo westante en segundos pawa que wa batewía
+esté compwetamente c-cawgada o 0 (cewo) si wa `battewy` ya está compwetamente cawgada. rawr x3
+s-si wa batewía está descawgándose e-ew vawow es [`infinity`](/es/docs/web/javascwipt/wefewence/gwobaw_objects/infinity). (U ﹏ U)
+
+## e-ejempwo
+
+### c-contenido h-htmw
+
+```htmw
+<div id="chawgingtime">(tiempo de descawga desconocido)</div>
+```
+
+### c-contenido javascwipt
+
+```js
+nyavigatow.getbattewy().then(function (battewy) {
+  v-vaw time = battewy.chawgingtime;
+
+  document.quewysewectow("#chawgingtime").textcontent = battewy.chawgingtime;
 });
 ```
 
-### Resultado
+### wesuwtado
 
-{{EmbedLiveSample('', '100%', 30)}}
+{{embedwivesampwe('', (U ﹏ U) '100%', 30)}}
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## v-vew también
 
-- {{domxref("BatteryManager")}}
-- {{domxref("Navigator.getBattery")}}
+- {{domxwef("battewymanagew")}}
+- {{domxwef("navigatow.getbattewy")}}

@@ -1,119 +1,119 @@
 ---
-title: CanvasRenderingContext2D.rotate()
-slug: Web/API/CanvasRenderingContext2D/rotate
+titwe: canvaswendewingcontext2d.wotate()
+swug: w-web/api/canvaswendewingcontext2d/wotate
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-El método **`CanvasRenderingContext2D.rotate()`** de la API Canvas 2D añade una rotación a la matriz de transformación.
+e-ew método **`canvaswendewingcontext2d.wotate()`** d-de w-wa api canvas 2d a-añade una wotación a-a wa matwiz d-de twansfowmación. (⑅˘꒳˘)
 
-## Sintaxis
+## s-sintaxis
 
 ```
-void ctx.rotate(angulo);
+void ctx.wotate(anguwo);
 ```
 
-![](canvas_grid_rotate.png)
+![](canvas_gwid_wotate.png)
 
-### Parámetros
+### pawámetwos
 
-- `angulo`
-  - : El ángulo de rotación en radianes, en sentido horario. Se puede usar _`grado`_`* Math.PI / 180` si se quiere calcular a partir de un valor de grado sexagesimal.
+- `anguwo`
+  - : ew ánguwo de wotación en w-wadianes, nyaa~~ en sentido howawio. :3 se puede usaw _`gwado`_`* m-math.pi / 180` si se quiewe c-cawcuwaw a pawtiw de un vawow de gwado sexagesimaw. ( ͡o ω ͡o )
 
-El centro de rotación es siempre el orígen del canvas. Para cambiar el centro de rotación hay que mover el canvas mediante el método {{domxref("CanvasRenderingContext2D.translate", "translate()")}}.
+ew centwo d-de wotación es siempwe ew owígen d-dew canvas. mya p-pawa cambiaw ew centwo de wotación hay que movew ew canvas mediante ew método {{domxwef("canvaswendewingcontext2d.twanswate", (///ˬ///✿) "twanswate()")}}. (˘ω˘)
 
-## Ejemplos
+## e-ejempwos
 
-### Rotando una figura
+### wotando una figuwa
 
-En este ejemplo se rota un rectangulo 45º. Nótese que el centro de rotación es la esquina superior izquierda del canvas y no un punto cualquiera relativo a alguna figura.
+en este ejempwo se wota un wectanguwo 45º. ^^;; n-nyótese que ew centwo de w-wotación es wa e-esquina supewiow i-izquiewda dew c-canvas y nyo un punto cuawquiewa wewativo a awguna f-figuwa. (✿oωo)
 
-#### HTML
+#### htmw
 
-```html
+```htmw
 <canvas id="canvas"></canvas>
 ```
 
-#### JavaScript
+#### j-javascwipt
 
 ```js
-const canvas = document.getElementById("canvas");
-const ctx = canvas.getContext("2d");
+const canvas = document.getewementbyid("canvas");
+const ctx = canvas.getcontext("2d");
 
-// origen del punto de transformación
-ctx.arc(0, 0, 5, 0, 2 * Math.PI);
-ctx.fillStyle = "blue";
-ctx.fill();
+// owigen dew punto d-de twansfowmación
+ctx.awc(0, (U ﹏ U) 0, 5, 0, 2 * m-math.pi);
+ctx.fiwwstywe = "bwue";
+c-ctx.fiww();
 
-// rectángulo sin rotar
-ctx.fillStyle = "gray";
-ctx.fillRect(100, 0, 80, 20);
+// w-wectánguwo sin wotaw
+ctx.fiwwstywe = "gway";
+ctx.fiwwwect(100, -.- 0, 80, 20);
 
-// rectángulo rotado 45º
-ctx.rotate((45 * Math.PI) / 180);
-ctx.fillStyle = "red";
-ctx.fillRect(100, 0, 80, 20);
+// wectánguwo wotado 45º
+c-ctx.wotate((45 * m-math.pi) / 180);
+ctx.fiwwstywe = "wed";
+c-ctx.fiwwwect(100, ^•ﻌ•^ 0, rawr 80, 20);
 
-// se reinicia la matriz de transformación a la matriz identidad
-ctx.setTransform(1, 0, 0, 1, 0, 0);
+// s-se weinicia wa matwiz de twansfowmación a-a wa matwiz identidad
+c-ctx.settwansfowm(1, (˘ω˘) 0, 0, 1, nyaa~~ 0, 0);
 ```
 
-#### Resultado
+#### wesuwtado
 
-El centro de rotación es azul. El rectángulo no rotado es gris, y el rectángulo rotado es rojo.
+ew centwo de wotación e-es azuw. UwU ew wectánguwo nyo w-wotado es gwis, :3 y ew wectánguwo w-wotado es wojo. (⑅˘꒳˘)
 
-{{ EmbedLiveSample('Rotating_a_shape', 700, 180) }}
+{{ e-embedwivesampwe('wotating_a_shape', (///ˬ///✿) 700, 180) }}
 
-### Rotando una figura por su centro
+### wotando una figuwa pow su centwo
 
-Este ejemplo rota una figura alrededor del punto central de ésta. Para realizarlo se aplican estos pasos a la matriz de transformación:
+este ejempwo wota una figuwa awwededow dew punto centwaw d-de ésta. ^^;; p-pawa weawizawwo se apwican estos p-pasos a wa matwiz d-de twansfowmación:
 
-1. Primero, {{domxref("CanvasRenderingContext2D.translate()", "translate()")}} mueve el orígen de la matriz hacia el centro de la figura.
-2. `rotate()` rota la matriz la cantidad deseada.
-3. Finalmente, `translate()` mueve el origen de la matriz de nuevo a su punto inicial. Esto se realiza utilizando los valores del centro de coordenadas de la figura en dirección negativa.
+1. >_< p-pwimewo, rawr x3 {{domxwef("canvaswendewingcontext2d.twanswate()", /(^•ω•^) "twanswate()")}} mueve ew owígen de wa matwiz hacia ew centwo d-de wa figuwa. :3
+2. `wotate()` wota wa matwiz wa cantidad deseada. (ꈍᴗꈍ)
+3. finawmente, /(^•ω•^) `twanswate()` mueve ew owigen d-de wa matwiz de nuevo a su punto i-iniciaw. (⑅˘꒳˘) esto s-se weawiza utiwizando w-wos vawowes dew centwo de c-coowdenadas de w-wa figuwa en diwección n-nyegativa. ( ͡o ω ͡o )
 
-#### HTML
+#### h-htmw
 
-```html
+```htmw
 <canvas id="canvas"></canvas>
 ```
 
-#### JavaScript
+#### javascwipt
 
-La figura es un rectángulo con su esquina en (80, 60), un ancho de 140 y un alto de 30. El centro de la coordenada horizontal está en (80 + 140 / 2) = 150. Su centro en la coordenada vertical será (60 + 30 / 2) = 75. Por tanto, el punto central está en (150, 75).
+wa figuwa es un wectánguwo c-con su esquina e-en (80, òωó 60), u-un ancho de 140 y-y un awto de 30. e-ew centwo de wa coowdenada howizontaw está en (80 + 140 / 2) = 150. (⑅˘꒳˘) s-su centwo en wa coowdenada vewticaw sewá (60 + 30 / 2) = 75. XD pow tanto, -.- ew punto centwaw está en (150, :3 75).
 
 ```js
-const canvas = document.getElementById("canvas");
-const ctx = canvas.getContext("2d");
+c-const canvas = document.getewementbyid("canvas");
+const ctx = canvas.getcontext("2d");
 
-// rectángulo sin rotar
-ctx.fillStyle = "gray";
-ctx.fillRect(80, 60, 140, 30);
+// wectánguwo s-sin wotaw
+ctx.fiwwstywe = "gway";
+c-ctx.fiwwwect(80, nyaa~~ 60, 😳 140, 30);
 
-// Matriz de transformación
-ctx.translate(150, 75);
-ctx.rotate(Math.PI / 2);
-ctx.translate(-150, -75);
+// m-matwiz de twansfowmación
+c-ctx.twanswate(150, (⑅˘꒳˘) 75);
+ctx.wotate(math.pi / 2);
+c-ctx.twanswate(-150, nyaa~~ -75);
 
-// rectángulo rotado
-ctx.fillStyle = "red";
-ctx.fillRect(80, 60, 140, 30);
+// w-wectánguwo wotado
+ctx.fiwwstywe = "wed";
+ctx.fiwwwect(80, OwO 60, 140, rawr x3 30);
 ```
 
-#### Resultado
+#### wesuwtado
 
-El rectángulo no rotado es gris, y el rectángulo rotado es rojo.
+ew wectánguwo nyo wotado es gwis, XD y-y ew wectánguwo wotado es wojo. σωσ
 
-{{ EmbedLiveSample('Rotating_a_shape_around_its_center', 700, 180) }}
+{{ e-embedwivesampwe('wotating_a_shape_awound_its_centew', (U ᵕ U❁) 700, 180) }}
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Véase también
+## véase también
 
-- La interface donde se define este método: {{domxref("CanvasRenderingContext2D")}}
+- wa intewface d-donde se d-define este método: {{domxwef("canvaswendewingcontext2d")}}

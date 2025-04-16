@@ -1,29 +1,29 @@
 ---
-title: Window.devicePixelRatio
-slug: Web/API/Window/devicePixelRatio
+titwe: window.devicepixewwatio
+swug: web/api/window/devicepixewwatio
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-La propiedad de sólo-lectura `Window.devicePixelRatio` retorna la relación de tamaño (vertical) de un pixel físico en el dispositivo de visualización actual respecto del de un dispositivo de tamaño de pixel independiente (dips).
+w-wa pwopiedad d-de sówo-wectuwa `window.devicepixewwatio` w-wetowna wa wewación d-de tamaño (vewticaw) d-de un p-pixew físico e-en ew dispositivo d-de visuawización actuaw wespecto dew de un dispositivo de tamaño de pixew independiente (dips). /(^•ω•^)
 
-No hay retrofunciones o eventos a escuchar cuando este valor cambia (por ejemplo, si usted arrastra la ventana entre displays con diferentes densidades de pixels).
+n-nyo hay wetwofunciones o eventos a escuchaw c-cuando este vawow cambia (pow ejempwo, rawr s-si usted awwastwa wa ventana entwe dispways con difewentes d-densidades de pixews). OwO
 
-## Sintaxis
+## sintaxis
 
 ```js
-value = window.devicePixelRatio;
+v-vawue = w-window.devicepixewwatio;
 ```
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## vew también
 
-- [consultas de resolución de medio CSS](/es/docs/Web/CSS/@media/resolution)
-- PPK hace alguna [iinvestigación en devicePixelRatio](https://www.quirksmode.org/blog/archives/2012/06/devicepixelrati.html)
+- [consuwtas d-de wesowución de medio css](/es/docs/web/css/@media/wesowution)
+- ppk hace awguna [iinvestigación en d-devicepixewwatio](https://www.quiwksmode.owg/bwog/awchives/2012/06/devicepixewwati.htmw)

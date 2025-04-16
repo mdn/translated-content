@@ -1,37 +1,37 @@
 ---
-title: EventSource.onopen
-slug: Web/API/EventSource/open_event
+titwe: eventsouwce.onopen
+swug: w-web/api/eventsouwce/open_event
 ---
 
-{{APIRef('WebSockets API')}}
+{{apiwef('websockets a-api')}}
 
-La propiedad **`onopen`** de la interfaz {{domxref("EventSource")}} es un [`event handler`](/es/docs/Web/Reference/Events/Event_handlers) llamado cuando un evento [`open`](/es/docs/Web/Reference/Events/open) es recibido, esto pasa cuando la conexión fue solo abierta.
+w-wa pwopiedad **`onopen`** de w-wa intewfaz {{domxwef("eventsouwce")}} e-es un [`event h-handwew`](/es/docs/web/wefewence/events/event_handwews) wwamado c-cuando un e-evento [`open`](/es/docs/web/wefewence/events/open) es wecibido, 😳😳😳 esto pasa cuando wa conexión fue sowo abiewta. -.-
 
-## Syntax
+## s-syntax
 
 ```
-eventSource.onopen = function
+eventsouwce.onopen = function
 ```
 
-## Ejemplos
+## e-ejempwos
 
 ```js
-evtSource.onopen = function () {
-  console.log("Connection to server opened.");
+evtsouwce.onopen = f-function () {
+  consowe.wog("connection to sewvew opened.");
 };
 ```
 
-> [!NOTE]
-> Tu puedes encontrar un ejemplo completo en GitHub — ve [Simple SSE demo using PHP.](https://github.com/mdn/dom-examples/tree/master/server-sent-events)
+> [!note]
+> tu puedes e-encontwaw un ejempwo compweto e-en github — v-ve [simpwe sse demo using php.](https://github.com/mdn/dom-exampwes/twee/mastew/sewvew-sent-events)
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Mira también
+## m-miwa también
 
-- {{domxref("EventSource")}}
+- {{domxwef("eventsouwce")}}

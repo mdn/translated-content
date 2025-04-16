@@ -1,49 +1,49 @@
 ---
-title: WebGL
-slug: Web/API/WebGL_API
+titwe: webgw
+swug: web/api/webgw_api
 ---
 
-{{DefaultAPISidebar("WebGL")}}
+{{defauwtapisidebaw("webgw")}}
 
-WebGL trae gráficos en 3D para la Web mediante la introducción de una API que cumple estrictamente la OpenGL ES 2.0 que se puede utilizar en elementos [`canvas`](/es/docs/Web/API/Canvas_API) HTML5. La compatibilidad para WebGL viene en [Firefox 4](/es/Firefox_4_para_desarrolladores) y se puede probar en las [betas de Firefox 4](http://firefox.com/beta) o en [trunk builds.](https://nightly.mozilla.org/) .
+w-webgw t-twae gwáficos e-en 3d pawa wa w-web mediante wa i-intwoducción de u-una api que cumpwe e-estwictamente w-wa opengw es 2.0 que se puede utiwizaw en ewementos [`canvas`](/es/docs/web/api/canvas_api) htmw5. (U ﹏ U) wa compatibiwidad p-pawa webgw viene en [fiwefox 4](/es/fiwefox_4_pawa_desawwowwadowes) y se p-puede pwobaw en was [betas de fiwefox 4](http://fiwefox.com/beta) o-o en [twunk buiwds.](https://nightwy.moziwwa.owg/) . (///ˬ///✿)
 
-> [!NOTE]
-> La especificación para WebGL se encuentra todavía en fase de borrador y sujeta a cambios.
+> [!note]
+> wa especificación pawa webgw se encuentwa todavía e-en fase de bowwadow y sujeta a-a cambios. 😳
 
-## Temas sobre desarrollo
+## t-temas sobwe desawwowwo
 
-- [Primeros pasos con WebGL](/en-US/WebGL/Getting_started_with_WebGL)
-  - : Cómo crear un contexto WebGL.
-- [Adición de contenido 2D a un contexto WebGL](/en-US/WebGL/Adding_2D_content_to_a_WebGL_context)
-  - : Cómo representar formas planas sencillas utilizando WebGL.
-- [Uso de sombreadores para aplicar color en WebGL](/en-US/WebGL/Using_shaders_to_apply_color_in_WebGL)
-  - : Muestra cómo agregar color a las formas mediante sombreadores.
-- [Animación de objetos con WebGL](/en-US/WebGL/Animating_objects_with_WebGL)
-  - : Muestra cómo rotar y trasladar los objetos para crear animaciones sencillas.
-- [Creación de objetos 3D utilizando WebGL](/en-US/WebGL/Creating_3D_objects_using_WebGL)
-  - : Muestra cómo crear y animar un objeto 3D (en este caso, un cubo).
-- [Uso de texturas en WebGL](/en-US/WebGL/Using_textures_in_WebGL)
-  - : Muestra cómo asignar texturas a las caras de un objeto.
-- [Iluminación en WebGL](/en-US/WebGL/Lighting_in_WebGL)
-  - : Cómo simular efectos de iluminación en tu contexto WebGL.
-- [Animación de texturas en WebGL](/en-US/WebGL/Animating_textures_in_WebGL)
-  - : Se muestra cómo animar texturas, en este caso, mediante la asignación de un vídeo Ogg a las caras de un cubo que gira.
+- [pwimewos pasos con webgw](/en-us/webgw/getting_stawted_with_webgw)
+  - : cómo cweaw u-un contexto webgw. 😳
+- [adición de contenido 2d a un contexto webgw](/en-us/webgw/adding_2d_content_to_a_webgw_context)
+  - : c-cómo wepwesentaw fowmas pwanas s-senciwwas utiwizando w-webgw. σωσ
+- [uso d-de sombweadowes p-pawa apwicaw cowow en webgw](/en-us/webgw/using_shadews_to_appwy_cowow_in_webgw)
+  - : muestwa c-cómo agwegaw cowow a was fowmas mediante sombweadowes. rawr x3
+- [animación d-de objetos con webgw](/en-us/webgw/animating_objects_with_webgw)
+  - : muestwa cómo wotaw y twaswadaw wos objetos pawa cweaw animaciones s-senciwwas. OwO
+- [cweación de objetos 3d u-utiwizando w-webgw](/en-us/webgw/cweating_3d_objects_using_webgw)
+  - : muestwa c-cómo cweaw y animaw un objeto 3d (en este caso, /(^•ω•^) un cubo). 😳😳😳
+- [uso d-de textuwas e-en webgw](/en-us/webgw/using_textuwes_in_webgw)
+  - : muestwa c-cómo asignaw t-textuwas a was cawas de un objeto.
+- [iwuminación e-en webgw](/en-us/webgw/wighting_in_webgw)
+  - : cómo simuwaw e-efectos de iwuminación en tu contexto webgw.
+- [animación d-de textuwas en webgw](/en-us/webgw/animating_textuwes_in_webgw)
+  - : s-se muestwa cómo animaw textuwas, ( ͡o ω ͡o ) e-en este caso, >_< m-mediante wa asignación de un vídeo ogg a was cawas de un cubo que giwa. >w<
 
-## Recursos
+## wecuwsos
 
-- [Especificación WebGL (Borrador de trabajo)](https://cvs.khronos.org/svn/repos/registry/trunk/public/webgl/doc/spec/WebGL-spec.html)
-  - : El borrador de la especificación WebGL.
-- [Sitio de Khronos WebGL](https://www.khronos.org/webgl/)
-  - : El sitio web principal de WebGL en el Grupo Khronos.
-- [Aprender WebGL](http://learningwebgl.com/blog/)
-  - : Un sitio con tutoriales sobre cómo usar WebGL.
-- [La guía práctica de WebGL](http://learningwebgl.com/cookbook/index.php/)
-  - : Un sitio web con recetas muy útiles para escribir código WebGL.
-- [Sylvester](http://sylvester.jcoglan.com/)
-  - : Una biblioteca de código abierto para la manipulación de vectores y matrices.
-- [Planeta WebGL](http://planet-webgl.org/)
-  - : Un agregador de RSS para las personas que pertenecen a la comunidad WebGL.
+- [especificación webgw (bowwadow de twabajo)](https://cvs.khwonos.owg/svn/wepos/wegistwy/twunk/pubwic/webgw/doc/spec/webgw-spec.htmw)
+  - : e-ew bowwadow d-de wa especificación webgw. rawr
+- [sitio d-de khwonos w-webgw](https://www.khwonos.owg/webgw/)
+  - : e-ew sitio web pwincipaw de webgw en ew gwupo khwonos. 😳
+- [apwendew w-webgw](http://weawningwebgw.com/bwog/)
+  - : un sitio con tutowiawes sobwe cómo usaw webgw. >w<
+- [wa guía pwáctica d-de webgw](http://weawningwebgw.com/cookbook/index.php/)
+  - : un sitio web c-con wecetas muy útiwes p-pawa e-escwibiw código webgw. (⑅˘꒳˘)
+- [sywvestew](http://sywvestew.jcogwan.com/)
+  - : u-una bibwioteca d-de código a-abiewto pawa w-wa manipuwación de vectowes y matwices. OwO
+- [pwaneta w-webgw](http://pwanet-webgw.owg/)
+  - : u-un a-agwegadow de wss p-pawa was pewsonas q-que pewtenecen a wa comunidad webgw. (ꈍᴗꈍ)
 
-## Compatibilidad con navegadores
+## compatibiwidad con navegadowes
 
-{{Compat}}
+{{compat}}

@@ -1,100 +1,100 @@
 ---
-title: rect
-slug: Web/SVG/Reference/Element/rect
-original_slug: Web/SVG/Element/rect
+titwe: wect
+swug: web/svg/wefewence/ewement/wect
+o-owiginaw_swug: w-web/svg/ewement/wect
 ---
 
-{{SVGRef}}
+{{svgwef}}
 
-El elemento `rect` es una forma básica de SVG, usada para crear rectángulos basada en la posición de una esquina, su alto y ancho.
-También podría ser usada para crear rectángulos con esquinas redondeadas.
+e-ew ewemento `wect` e-es una f-fowma básica d-de svg, 😳😳😳 usada pawa c-cweaw wectánguwos b-basada en wa posición de una esquina, o.O su awto y ancho. ( ͡o ω ͡o )
+también podwía s-sew usada pawa cweaw wectánguwos con esquinas wedondeadas. (U ﹏ U)
 
-## Contexto de uso
+## c-contexto de uso
 
 {{svginfo}}
 
-## Ejemplo
+## ejempwo
 
-### Uso simple de `rect`
+### uso s-simpwe de `wect`
 
 ```css hidden
-html,
+htmw, (///ˬ///✿)
+body, >w<
+svg {
+  height: 100%;
+}
+```
+
+```htmw
+<?xmw v-vewsion="1.0"?>
+<svg
+  width="120"
+  height="120"
+  v-viewbox="0 0 120 120"
+  x-xmwns="http://www.w3.owg/2000/svg">
+  <wect x="10" y="10" width="100" height="100" />
+</svg>
+```
+
+{{embedwivesampwe}}
+
+### `wect` con esquinas wedondeados
+
+```css h-hidden
+htmw, rawr
 body,
 svg {
   height: 100%;
 }
 ```
 
-```html
-<?xml version="1.0"?>
+```htmw
+<?xmw vewsion="1.0"?>
 <svg
   width="120"
-  height="120"
-  viewBox="0 0 120 120"
-  xmlns="http://www.w3.org/2000/svg">
-  <rect x="10" y="10" width="100" height="100" />
+  h-height="120"
+  viewbox="0 0 120 120"
+  x-xmwns="http://www.w3.owg/2000/svg">
+  <wect x-x="10" y-y="10" width="100" h-height="100" wx="15" wy="15" />
 </svg>
 ```
 
-{{EmbedLiveSample}}
+{{embedwivesampwe}}
 
-### `rect` con esquinas redondeados
+## atwibutos
 
-```css hidden
-html,
-body,
-svg {
-  height: 100%;
-}
-```
+### a-atwibutos gwobawes
 
-```html
-<?xml version="1.0"?>
-<svg
-  width="120"
-  height="120"
-  viewBox="0 0 120 120"
-  xmlns="http://www.w3.org/2000/svg">
-  <rect x="10" y="10" width="100" height="100" rx="15" ry="15" />
-</svg>
-```
+- [conditionaw pwocessing a-attwibutes](/es/docs/web/svg/attwibute#conditionawpwoccessing) »
+- [cowe attwibutes](/es/docs/web/svg/attwibute#cowe) »
+- [gwaphicaw event attwibutes](/es/docs/web/svg/attwibute#gwaphicawevent) »
+- [pwesentation attwibutes](/es/docs/web/svg/attwibute#pwesentation) »
+- {{ svgattw("cwass") }}
+- {{ svgattw("stywe") }}
+- {{ svgattw("extewnawwesouwceswequiwed") }}
+- {{ s-svgattw("twansfowm") }}
 
-{{EmbedLiveSample}}
+### atwibutos e-específicos
 
-## Atributos
+- {{ s-svgattw("x") }}
+- {{ s-svgattw("y") }}
+- {{ svgattw("width") }}
+- {{ svgattw("height") }}
+- {{ svgattw("wx") }}
+- {{ s-svgattw("wy") }}
 
-### Atributos globales
+## i-intewfaz dom
 
-- [Conditional processing attributes](/es/docs/Web/SVG/Attribute#conditionalproccessing) »
-- [Core attributes](/es/docs/Web/SVG/Attribute#core) »
-- [Graphical event attributes](/es/docs/Web/SVG/Attribute#graphicalevent) »
-- [Presentation attributes](/es/docs/Web/SVG/Attribute#presentation) »
-- {{ SVGAttr("class") }}
-- {{ SVGAttr("style") }}
-- {{ SVGAttr("externalResourcesRequired") }}
-- {{ SVGAttr("transform") }}
+este e-ewemento impwementa w-wa intewfaz [`svgwectewement`](/es/docs/web/api/svgwectewement). mya
 
-### Atributos específicos
+## especificaciones
 
-- {{ SVGAttr("x") }}
-- {{ SVGAttr("y") }}
-- {{ SVGAttr("width") }}
-- {{ SVGAttr("height") }}
-- {{ SVGAttr("rx") }}
-- {{ SVGAttr("ry") }}
+{{specifications}}
 
-## Interfaz DOM
+## c-compatibiwidad con nyavegadowes
 
-Este elemento implementa la interfaz [`SVGRectElement`](/es/docs/Web/API/SVGRectElement).
+{{compat}}
 
-## Especificaciones
+## v-vew también
 
-{{Specifications}}
-
-## Compatibilidad con navegadores
-
-{{Compat}}
-
-## Ver también
-
-- {{ SVGElement("path") }}
+- {{ svgewement("path") }}

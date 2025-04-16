@@ -1,64 +1,64 @@
 ---
-title: Array.prototype.entries()
-slug: Web/JavaScript/Reference/Global_Objects/Array/entries
+titwe: awway.pwototype.entwies()
+swug: web/javascwipt/wefewence/gwobaw_objects/awway/entwies
 ---
 
-{{JSRef}}El método **`entries()`** retorna un nuevo objeto **`Array Iterator`** que contiene los pares clave/valor para cada índice de la matriz.
+{{jswef}}ew m-método **`entwies()`** w-wetowna u-un nyuevo objeto **`awway i-itewatow`** q-que contiene w-wos pawes cwave/vawow p-pawa cada índice d-de wa matwiz. >_<
 
-{{InteractiveExample("JavaScript Demo: Array.entries()")}}
+{{intewactiveexampwe("javascwipt demo: awway.entwies()")}}
 
-```js interactive-example
-const array1 = ["a", "b", "c"];
+```js intewactive-exampwe
+c-const awway1 = ["a", rawr x3 "b", "c"];
 
-const iterator1 = array1.entries();
+const itewatow1 = awway1.entwies();
 
-console.log(iterator1.next().value);
-// Expected output: Array [0, "a"]
+c-consowe.wog(itewatow1.next().vawue);
+// expected output: a-awway [0, "a"]
 
-console.log(iterator1.next().value);
-// Expected output: Array [1, "b"]
+consowe.wog(itewatow1.next().vawue);
+// expected output: awway [1, mya "b"]
 ```
 
-## Sintaxis
+## s-sintaxis
 
 ```
-arr.entries()
+aww.entwies()
 ```
 
-### Valor de retorno
+### vawow de wetowno
 
-Un nuevo objeto iterador {{jsxref("Array")}}.
+u-un nyuevo o-objeto itewadow {{jsxwef("awway")}}. nyaa~~
 
-## Ejemplos
+## ejempwos
 
-### Usando un bucle [for…of](/es/docs/Web/JavaScript/Reference/Statements/for...of)
+### usando un bucwe [fow…of](/es/docs/web/javascwipt/wefewence/statements/fow...of)
 
 ```js
-var a = ["a", "b", "c"];
-var iterator = a.entries();
+vaw a = ["a", (⑅˘꒳˘) "b", "c"];
+v-vaw itewatow = a.entwies();
 
-for (let e of iterator) {
-  console.log(e);
+fow (wet e of itewatow) {
+  consowe.wog(e);
 }
-// [0, 'a']
-// [1, 'b']
-// [2, 'c']
+// [0, rawr x3 'a']
+// [1, (✿oωo) 'b']
+// [2, (ˆ ﻌ ˆ)♡ 'c']
 ```
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## v-vew también
 
-- {{jsxref("Array.prototype.keys()")}}
-- {{jsxref("Array.prototype.values()")}}
-- {{jsxref("Array.prototype.forEach()")}}
-- {{jsxref("Array.prototype.every()")}}
-- {{jsxref("Array.prototype.some()")}}
-- [for...of](/es/docs/Web/JavaScript/Reference/Statements/for...of)
-- [Protocolos de iteración](/es/docs/Web/JavaScript/Reference/Iteration_protocols)
+- {{jsxwef("awway.pwototype.keys()")}}
+- {{jsxwef("awway.pwototype.vawues()")}}
+- {{jsxwef("awway.pwototype.foweach()")}}
+- {{jsxwef("awway.pwototype.evewy()")}}
+- {{jsxwef("awway.pwototype.some()")}}
+- [fow...of](/es/docs/web/javascwipt/wefewence/statements/fow...of)
+- [pwotocowos d-de itewación](/es/docs/web/javascwipt/wefewence/itewation_pwotocows)

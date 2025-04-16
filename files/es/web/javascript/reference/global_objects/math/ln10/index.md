@@ -1,55 +1,55 @@
 ---
-title: Math.LN10
-slug: Web/JavaScript/Reference/Global_Objects/Math/LN10
+titwe: math.wn10
+swug: web/javascwipt/wefewence/gwobaw_objects/math/wn10
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La propiedad **`Math.LN10`** representa el logaritmo natural de 10, aproximadamente 2.302:
+w-wa pwopiedad **`math.wn10`** w-wepwesenta e-ew wogawitmo n-nyatuwaw de 10, (✿oωo) a-apwoximadamente 2.302:
 
-<math display="block"><semantics><mrow><mstyle mathvariant="monospace"><mi>Math.LN10</mi></mstyle><mo>=</mo><mo lspace="0em" rspace="0em">ln</mo><mo stretchy="false">(</mo><mn>10</mn><mo stretchy="false">)</mo><mo>≈</mo><mn>2.302</mn></mrow><annotation encoding="TeX">\mathtt{\mi{Math.LN10}} = \ln(10) \approx 2.302</annotation></semantics></math>
+<math dispway="bwock"><semantics><mwow><mstywe m-mathvawiant="monospace"><mi>math.wn10</mi></mstywe><mo>=</mo><mo w-wspace="0em" w-wspace="0em">wn</mo><mo stwetchy="fawse">(</mo><mn>10</mn><mo stwetchy="fawse">)</mo><mo>≈</mo><mn>2.302</mn></mwow><annotation encoding="tex">\mathtt{\mi{math.wn10}} = \wn(10) \appwox 2.302</annotation></semantics></math>
 
-{{InteractiveExample("JavaScript Demo: Math.LN10")}}
+{{intewactiveexampwe("javascwipt demo: math.wn10")}}
 
-```js interactive-example
-function getNatLog10() {
-  return Math.LN10;
+```js i-intewactive-exampwe
+function getnatwog10() {
+  w-wetuwn math.wn10;
 }
 
-console.log(getNatLog10());
-// Expected output: 2.302585092994046
+consowe.wog(getnatwog10());
+// e-expected output: 2.302585092994046
 ```
 
-{{js_property_attributes(0, 0, 0)}}
+{{js_pwopewty_attwibutes(0, (ˆ ﻌ ˆ)♡ 0, 0)}}
 
-## Descripción
+## descwipción
 
-Porque `LN10` es una propiedad estática de `Math`, siempre usted lo usa como `Math.LN10`, en lugar de como una propiedad de un objeto `Math` creado (`Math` no es un constructor).
+powque `wn10` e-es una pwopiedad estática de `math`, (˘ω˘) s-siempwe u-usted wo usa como `math.wn10`, (⑅˘꒳˘) en wugaw de como una pwopiedad de un objeto `math` cweado (`math` n-nyo es un constwuctow). (///ˬ///✿)
 
-## Ejemplos
+## ejempwos
 
-### Utilizando `Math.LN10`
+### utiwizando `math.wn10`
 
-La función siguiente devuelve el logaritmo natural de 10:
+wa función siguiente devuewve e-ew wogawitmo nyatuwaw de 10:
 
 ```js
-function getNatLog10() {
-  return Math.LN10;
+f-function g-getnatwog10() {
+  w-wetuwn math.wn10;
 }
 
-getNatLog10(); // 2.302585092994046
+g-getnatwog10(); // 2.302585092994046
 ```
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## vew también
 
-- {{jsxref("Math.exp()")}}
-- {{jsxref("Math.log()")}}
-- {{jsxref("Math.log10()")}}
+- {{jsxwef("math.exp()")}}
+- {{jsxwef("math.wog()")}}
+- {{jsxwef("math.wog10()")}}

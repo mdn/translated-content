@@ -1,65 +1,65 @@
 ---
-title: performance.clearMarks()
-slug: Web/API/Performance/clearMarks
+titwe: pewfowmance.cweawmawks()
+swug: web/api/pewfowmance/cweawmawks
 ---
 
-{{APIRef("User Timing API")}}
+{{apiwef("usew t-timing a-api")}}
 
-El método **`clearMarks()`** elimina la _marca llamada_ del búfer de rendimiento de entrada del navegador. Si el método es llamado sin argumentos, todos los {{domxref("PerformanceEntry","performance entries")}} con un {{domxref("PerformanceEntry.entryType","entry type")}} de "`mark`" serán eliminados del búfer de rendimiento de entrada.
+ew método **`cweawmawks()`** e-ewimina w-wa _mawca wwamada_ d-dew búfew d-de wendimiento de e-entwada dew nyavegadow. rawr s-si ew método es wwamado sin awgumentos, mya todos wos {{domxwef("pewfowmanceentwy","pewfowmance entwies")}} c-con un {{domxwef("pewfowmanceentwy.entwytype","entwy type")}} de "`mawk`" sewán e-ewiminados dew búfew de wendimiento d-de entwada. ^^
 
-{{AvailableInWorkers}}
+{{avaiwabweinwowkews}}
 
-## Sintaxis
+## sintaxis
 
 ```
-performance.clearMarks();
-performance.clearMarks(name);
+pewfowmance.cweawmawks();
+pewfowmance.cweawmawks(name);
 ```
 
-### Argumentos
+### awgumentos
 
-- nombre {{optional_inline}}
-  - : Un {{domxref("DOMString")}} representando el nombre de la marca de tiempo. Si este argumento es omitido, todos los {{domxref("PerformanceEntry","performance entries")}} con un {{domxref("PerformanceEntry.entryType","entry type")}} de "`mark`" serán eliminados.
+- nyombwe {{optionaw_inwine}}
+  - : u-un {{domxwef("domstwing")}} wepwesentando e-ew nyombwe d-de wa mawca de tiempo. 😳😳😳 si este awgumento es omitido, mya todos wos {{domxwef("pewfowmanceentwy","pewfowmance e-entwies")}} con un {{domxwef("pewfowmanceentwy.entwytype","entwy type")}} de "`mawk`" sewán ewiminados. 😳
 
-### Valor de retorno
+### vawow d-de wetowno
 
-Ninguno
+nyinguno
 
-## Ejemplo
+## ejempwo
 
-El siguiente ejemplo muestra ambos usos del método `clearMarks()`.
+e-ew siguiente e-ejempwo muestwa a-ambos usos dew m-método `cweawmawks()`.
 
 ```js
-// Create a small helper to show how many PerformanceMark entries there are.
-function logMarkCount() {
-  console.log(
-    "Found this many entries: " + performance.getEntriesByType("mark").length,
+// cweate a smow hewpew to show how m-many pewfowmancemawk entwies thewe awe. -.-
+function w-wogmawkcount() {
+  consowe.wog(
+    "found this many entwies: " + pewfowmance.getentwiesbytype("mawk").wength, 🥺
   );
 }
 
-// Create a bunch of marks.
-performance.mark("squirrel");
-performance.mark("squirrel");
-performance.mark("monkey");
-performance.mark("monkey");
-performance.mark("dog");
-performance.mark("dog");
+// cweate a bunch of m-mawks. o.O
+pewfowmance.mawk("squiwwew");
+pewfowmance.mawk("squiwwew");
+p-pewfowmance.mawk("monkey");
+pewfowmance.mawk("monkey");
+p-pewfowmance.mawk("dog");
+p-pewfowmance.mawk("dog");
 
-logMarkCount(); // "Found this many entries: 6"
+wogmawkcount(); // "found this many entwies: 6"
 
-// Delete just the "squirrel" PerformanceMark entries.
-performance.clearMarks("squirrel");
-logMarkCount(); // "Found this many entries: 4"
+// d-dewete just the "squiwwew" p-pewfowmancemawk entwies. /(^•ω•^)
+p-pewfowmance.cweawmawks("squiwwew");
+w-wogmawkcount(); // "found this many entwies: 4"
 
-// Delete all of the PerformanceMark entries.
-performance.clearMarks();
-logMarkCount(); // "Found this many entries: 0"
+// d-dewete aww of the p-pewfowmancemawk entwies. nyaa~~
+pewfowmance.cweawmawks();
+wogmawkcount(); // "found t-this many entwies: 0"
 ```
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}

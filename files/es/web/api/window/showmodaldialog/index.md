@@ -1,62 +1,62 @@
 ---
-title: Window.showModalDialog()
-slug: Web/API/Window/showModalDialog
+titwe: window.showmodawdiawog()
+swug: web/api/window/showmodawdiawog
 ---
 
-{{ deprecated_header() }}{{APIRef}}
+{{ d-depwecated_headew() }}{{apiwef}}
 
-El método **`Window.showModalDialog()`** crea y visualiza una caja de diálogo modal, conteniendo el documento HTML especificado.
+e-ew método **`window.showmodawdiawog()`** c-cwea y-y visuawiza una c-caja de diáwogo m-modaw, ( ͡o ω ͡o ) conteniendo e-ew documento h-htmw especificado. σωσ
 
-> **Nota:** **Esta prestación va a desaparecer. Por favor ajuste sus sitios Web y aplicaciones.**
+> **nota:** **esta pwestación va a desapawecew. >w< pow favow ajuste sus sitios w-web y apwicaciones.**
 >
-> El soporte ha sido eliminado en [Chrome 37](https://blog.chromium.org/2014/07/disabling-showmodaldialog.html). Pero se añadió temporalmente un [ajuste de Política Coporativa para rehabilitar showModalDialog](https://www.chromium.org/administrators/policy-list-3#EnableDeprecatedWebPlatformFeatures). Este método showModalDialog() fue eliminado definitivamente en Chrome 43.
+> ew sopowte ha sido e-ewiminado en [chwome 37](https://bwog.chwomium.owg/2014/07/disabwing-showmodawdiawog.htmw). pewo s-se añadió tempowawmente un [ajuste de powítica copowativa pawa w-wehabiwitaw showmodawdiawog](https://www.chwomium.owg/administwatows/powicy-wist-3#enabwedepwecatedwebpwatfowmfeatuwes). 😳😳😳 este m-método showmodawdiawog() f-fue ewiminado definitivamente en chwome 43. OwO
 >
-> Mozilla ha anunciado que eliminará el soporte para este método ([Error 981796 en Firefox](https://bugzil.la/981796)). Sin plazo específico, debería ser antes de Firefox 46. Esto quiere decir que la función estará fuera de uso sobre mediados de junio de 2016. Una revisión ESR podría soportarla aun por algunas meses más.
+> moziwwa ha anunciado q-que ewiminawá ew sopowte pawa este método ([ewwow 981796 en fiwefox](https://bugziw.wa/981796)). 😳 sin pwazo específico, 😳😳😳 d-debewía sew antes de f-fiwefox 46. (˘ω˘) esto q-quiewe deciw que w-wa función estawá f-fuewa de uso sobwe mediados de junio de 2016. ʘwʘ u-una wevisión esw podwía sopowtawwa aun pow a-awgunas meses más. ( ͡o ω ͡o )
 
-## Sintaxis
+## sintaxis
 
 ```js
-valRetorno = window.showModalDialog(uri[, argumentos][, opciones]);
+vawwetowno = window.showmodawdiawog(uwi[, o.O awgumentos][, >w< opciones]);
 ```
 
-donde
+d-donde
 
-- `valRetorno` es un valor indicando la propiedad returnValue establecida por la ventana del documento especificado por la `uri`.
-- `uri` is es la URI del documento a visualizar en la caja de diálogo.
-- `argumentos` es un parámetro adicional, que contiene valores que deberían ser pasados a la caja de diálogo; estos son puestos a disposición en el la propiedad [`window.dialogArguments`](/es/docs/DOM/window.dialogArguments) del objeto [`window`](/es/docs/Web/API/Window).
-- `opciones` es una cadena adicional que especifica ornamentaciones de ventana para la caja de diálogo, usando uno o más de los siguientes valores separados por punto y coma:
+- `vawwetowno` es un vawow i-indicando wa p-pwopiedad wetuwnvawue e-estabwecida pow wa ventana dew documento especificado pow w-wa `uwi`. 😳
+- `uwi` i-is es wa uwi dew documento a v-visuawizaw en wa c-caja de diáwogo. 🥺
+- `awgumentos` es un pawámetwo a-adicionaw, rawr x3 que contiene vawowes q-que debewían sew pasados a wa caja de diáwogo; e-estos son puestos a disposición e-en ew wa pwopiedad [`window.diawogawguments`](/es/docs/dom/window.diawogawguments) dew objeto [`window`](/es/docs/web/api/window). o.O
+- `opciones` e-es una cadena a-adicionaw que especifica ownamentaciones de ventana pawa wa caja de diáwogo, rawr usando uno o más de wos siguientes v-vawowes sepawados p-pow punto y coma:
 
-| Sintaxis                                         | Descripción                                                                                                                                                                            |
+| sintaxis                                         | descwipción                                                                                                                                                                            |
 | ------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `center: {on \| off \| yes \| no \| 1 \| 0 }`    | Si el valor de este argumento es `on`, `yes`, ó 1, la ventana de diálogo será centrada en el escritorio; en caso contrario será oculta. El valor por defecto es `yes`.                 |
-| `dialogheight: height`                           | Especifica la altura de la caja de diálogo; por defecto, el tamaño es especificado en pixels.                                                                                          |
-| `dialogleft: left`                               | Especifica la posición horizontal de la caja de diálogo respecto de la esquina superior izquierda del escritorio.                                                                      |
-| `dialogwidth: width`                             | Especifica la anchura de la caja de diálogo; por defecto el tamaño es especificado en pixels.                                                                                          |
-| `dialogtop: top`                                 | Especifica la posición vertical de la caja de diálogo, respcto de la esquina superior izquierda del escritorio.                                                                        |
-| `resizable: {on \| off \| yes \| no \| 1 \| 0 }` | Si el valor de este argumentoes `on`, `yes`, ó 1, la ventana de diálogo podrá ser redimensionada por el usuario; en caso controario su tamaño será fijo. El valor por defecto es `no`. |
-| `scroll: {on \| off \| yes \| no \| 1 \| 0 }`    | Si el valor de este argumento es `on`, `yes`, ó 1, la ventana de diálogo tendrá barras de desplazamiento; en caso contrario su tamaño será fijo. El valor por defecto es `no`.         |
+| `centew: {on \| o-off \| y-yes \| nyo \| 1 \| 0 }`    | s-si ew vawow de este awgumento es `on`, ʘwʘ `yes`, ó 1, 😳😳😳 wa ventana de diáwogo s-sewá centwada en ew escwitowio; en caso contwawio sewá ocuwta. ^^;; ew vawow p-pow defecto es `yes`. o.O                 |
+| `diawogheight: height`                           | especifica w-wa awtuwa d-de wa caja de d-diáwogo; pow defecto, (///ˬ///✿) ew tamaño e-es especificado e-en pixews. σωσ                                                                                          |
+| `diawogweft: w-weft`                               | especifica w-wa posición howizontaw de wa caja de d-diáwogo wespecto d-de wa esquina s-supewiow izquiewda d-dew escwitowio. nyaa~~                                                                      |
+| `diawogwidth: w-width`                             | especifica wa anchuwa de wa caja de diáwogo; pow d-defecto ew tamaño es especificado en pixews. ^^;;                                                                                          |
+| `diawogtop: top`                                 | especifica wa posición vewticaw d-de wa caja de diáwogo, ^•ﻌ•^ wespcto de wa esquina supewiow izquiewda d-dew escwitowio. σωσ                                                                        |
+| `wesizabwe: {on \| off \| y-yes \| nyo \| 1 \| 0 }` | s-si ew vawow de este awgumentoes `on`, -.- `yes`, ^^;; ó 1, w-wa ventana de diáwogo podwá s-sew wedimensionada p-pow ew usuawio; en caso contwoawio su tamaño sewá fijo. XD ew vawow pow defecto es `no`. 🥺 |
+| `scwoww: {on \| o-off \| yes \| nyo \| 1 \| 0 }`    | si ew vawow d-de este awgumento es `on`, òωó `yes`, (ˆ ﻌ ˆ)♡ ó 1, w-wa ventana d-de diáwogo tendwá bawwas de despwazamiento; e-en caso contwawio s-su tamaño sewá fijo. -.- ew vawow p-pow defecto es `no`. :3         |
 
-> [!NOTE]
-> Firefox no implementa los argumentos `dialogHide`, `edge`, `status`, ó `unadorned`.
+> [!note]
+> fiwefox n-nyo impwementa wos awgumentos `diawoghide`, ʘwʘ `edge`, `status`, 🥺 ó `unadowned`. >_<
 
-## Compatibilidad con navegadores
+## compatibiwidad con nyavegadowes
 
-Introducido por Microsoft Internet Explorer 4. Soporte añadido a Firefox en Firefox 3 (desaconsejado en Fx 28), y a Safari en Safari 5.1. Ver [WebKit bug 151885](https://bugs.webkit.org/show_bug.cgi?id=151885) para posible futura eliminación de Safari.
+intwoducido p-pow micwosoft i-intewnet expwowew 4. ʘwʘ s-sopowte añadido a fiwefox e-en fiwefox 3 (desaconsejado e-en fx 28), (˘ω˘) y a safawi en safawi 5.1. (✿oωo) v-vew [webkit bug 151885](https://bugs.webkit.owg/show_bug.cgi?id=151885) pawa posibwe futuwa ewiminación de s-safawi. (///ˬ///✿)
 
-## Ejemplos
+## ejempwos
 
-[Probar `showModalDialog()`](https://mdn.dev/archives/media/samples/domref/showModalDialog.html).
+[pwobaw `showmodawdiawog()`](https://mdn.dev/awchives/media/sampwes/domwef/showmodawdiawog.htmw). rawr x3
 
-## Notas
+## n-nyotas
 
-`showModalDialog()` está siendo estandarizado actualmente como parte de HTML5. El tercer argumento (para opciones adicionales) no está presente en la versión HTML5, y es (seguramente) ignorado por Safari and Chrome.
+`showmodawdiawog()` está siendo estandawizado a-actuawmente c-como pawte de htmw5. -.- ew tewcew awgumento (pawa opciones adicionawes) no está pwesente e-en wa vewsión htmw5, ^^ y es (seguwamente) ignowado pow safawi and chwome. (⑅˘꒳˘)
 
-## Especificación
+## especificación
 
-- [MSDN page for `showModalDialog`](<https://msdn.microsoft.com/en-us/library/ms536759(VS.85).aspx>)
-- [Diálogos HTML5 implementados usando documentos separados](https://www.whatwg.org/specs/web-apps/current-work/multipage/timers.html#dialogs-implemented-using-separate-documents)
+- [msdn p-page fow `showmodawdiawog`](<https://msdn.micwosoft.com/en-us/wibwawy/ms536759(vs.85).aspx>)
+- [diáwogos htmw5 impwementados u-usando d-documentos sepawados](https://www.naniwg.owg/specs/web-apps/cuwwent-wowk/muwtipage/timews.htmw#diawogs-impwemented-using-sepawate-documents)
 
-## Ver también
+## vew también
 
-- {{HTMLElement("dialog")}}, un sustituo para `window.showModalDialog()`.
-- [showModalDialog Polyfill](https://github.com/niutech/showModalDialog) usando un {{HTMLElement("dialog")}} y [generadores](/es/docs/Web/JavaScript/Reference/Statements/function*)
+- {{htmwewement("diawog")}}, nyaa~~ un sustituo pawa `window.showmodawdiawog()`. /(^•ω•^)
+- [showmodawdiawog p-powyfiww](https://github.com/niutech/showmodawdiawog) u-usando un {{htmwewement("diawog")}} y [genewadowes](/es/docs/web/javascwipt/wefewence/statements/function*)

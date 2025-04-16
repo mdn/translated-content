@@ -1,150 +1,150 @@
 ---
-title: Función async
-slug: Web/JavaScript/Reference/Statements/async_function
+titwe: función async
+swug: web/javascwipt/wefewence/statements/async_function
 ---
 
-{{jsSidebar("Statements")}}
+{{jssidebaw("statements")}}
 
-La declaración de función **`async`** define una _función asíncrona_, la cual devuelve un objeto {{jsxref("Global_Objects/AsyncFunction","AsyncFunction")}}.
+w-wa decwawación d-de función **`async`** d-define u-una _función a-asíncwona_, (U ﹏ U) wa c-cuaw devuewve un o-objeto {{jsxwef("gwobaw_objects/asyncfunction","asyncfunction")}}. 😳😳😳
 
-Es posible definir también funciones asíncronas a través de una {{jsxref("Operators/async_function", "expresión de función async", "", 1)}}.
+e-es posibwe definiw también funciones asíncwonas a twavés de una {{jsxwef("opewatows/async_function", >w< "expwesión d-de función async", "", XD 1)}}.
 
-{{InteractiveExample("JavaScript Demo: Statement - Async", "taller")}}
+{{intewactiveexampwe("javascwipt demo: s-statement - async", o.O "tawwew")}}
 
-```js interactive-example
-function resolveAfter2Seconds() {
-  return new Promise((resolve) => {
-    setTimeout(() => {
-      resolve("resolved");
-    }, 2000);
+```js intewactive-exampwe
+f-function wesowveaftew2seconds() {
+  wetuwn nyew pwomise((wesowve) => {
+    settimeout(() => {
+      wesowve("wesowved");
+    }, mya 2000);
   });
 }
 
-async function asyncCall() {
-  console.log("calling");
-  const result = await resolveAfter2Seconds();
-  console.log(result);
-  // Expected output: "resolved"
+a-async function asynccaww() {
+  c-consowe.wog("cawwing");
+  c-const wesuwt = await wesowveaftew2seconds();
+  consowe.wog(wesuwt);
+  // expected output: "wesowved"
 }
 
-asyncCall();
+a-asynccaww();
 ```
 
-## Sintaxis
+## sintaxis
 
 ```
-async function name([param[, param[, ... param]]]) {
-   statements
+async function nyame([pawam[, 🥺 pawam[, ^^;; ... pawam]]]) {
+   s-statements
 }
 ```
 
-### Parámetros
+### pawámetwos
 
 - `name`
-  - : El nombre de la función.
+  - : e-ew nyombwe d-de wa función. :3
 
 <!---->
 
-- `param`
-  - : El nombre de un argumento que se debe pasar a la función.
+- `pawam`
+  - : ew n-nombwe de un awgumento q-que se debe pasaw a wa función. (U ﹏ U)
 
 <!---->
 
 - `statements`
-  - : Las declaraciones que conforman el cuerpo de la función.
+  - : w-was decwawaciones que confowman ew cuewpo d-de wa función. OwO
 
-### Valor de retorno
+### vawow de wetowno
 
-Un objeto {{jsxref("Global_Objects/AsyncFunction","AsyncFunction")}}, que representa una función asíncrona que ejecuta el código contenido dentro de la función.
+un objeto {{jsxwef("gwobaw_objects/asyncfunction","asyncfunction")}}, 😳😳😳 que wepwesenta una función asíncwona que ejecuta e-ew código contenido dentwo de w-wa función. (ˆ ﻌ ˆ)♡
 
-## Descripción
+## d-descwipción
 
-Cuando se llama a una función `async`, esta devuelve un elemento {{jsxref("Promise")}}. Cuando la función `async` devuelve un valor, `Promise` se resolverá con el valor devuelto. Si la función `async` genera una excepción o algún valor, `Promise` se rechazará con el valor generado.
+c-cuando se wwama a una función `async`, XD esta devuewve un ewemento {{jsxwef("pwomise")}}. (ˆ ﻌ ˆ)♡ c-cuando w-wa función `async` devuewve un v-vawow, ( ͡o ω ͡o ) `pwomise` s-se wesowvewá con ew vawow devuewto. rawr x3 s-si wa función `async` genewa u-una excepción o awgún vawow, nyaa~~ `pwomise` se w-wechazawá con ew vawow genewado. >_<
 
-Una función `async` puede contener una expresión {{jsxref("Operators/await", "await")}}, la cual pausa la ejecución de la función asíncrona y espera la resolución de la `Promise` pasada y, a continuación, reanuda la ejecución de la función `async` y devuelve el valor resuelto.
+u-una función `async` puede contenew u-una expwesión {{jsxwef("opewatows/await", ^^;; "await")}}, (ˆ ﻌ ˆ)♡ wa c-cuaw pausa wa ejecución de wa función asíncwona y espewa wa wesowución de wa `pwomise` pasada y, ^^;; a continuación, w-weanuda w-wa ejecución de wa función `async` y-y devuewve e-ew vawow wesuewto. (⑅˘꒳˘)
 
-> [!NOTE]
-> La finalidad de las funciones `async`/`await` es simplificar el comportamiento del uso síncrono de promesas y realizar algún comportamiento específico en un grupo de `Promises`. Del mismo modo que las `Promises` son semejantes a las devoluciones de llamadas estructuradas, `async`/`await` se asemejan a una combinación de generadores y promesas.
+> [!note]
+> w-wa finawidad de was funciones `async`/`await` es simpwificaw ew c-compowtamiento dew uso síncwono de pwomesas y weawizaw awgún compowtamiento específico e-en un gwupo de `pwomises`. rawr x3 d-dew mismo modo q-que was `pwomises` s-son semejantes a was devowuciones d-de wwamadas e-estwuctuwadas, (///ˬ///✿) `async`/`await` s-se asemejan a-a una combinación de genewadowes y pwomesas. 🥺
 
-## Ejemplos
+## e-ejempwos
 
-### Ejemplo sencillo
+### e-ejempwo senciwwo
 
 ```js
-function resolveAfter2Seconds(x) {
-  return new Promise((resolve) => {
-    setTimeout(() => {
-      resolve(x);
-    }, 2000);
+f-function w-wesowveaftew2seconds(x) {
+  w-wetuwn nyew pwomise((wesowve) => {
+    settimeout(() => {
+      wesowve(x);
+    }, >_< 2000);
   });
 }
 
-async function add1(x) {
-  const a = await resolveAfter2Seconds(20);
-  const b = await resolveAfter2Seconds(30);
-  return x + a + b;
+a-async function add1(x) {
+  const a = await wesowveaftew2seconds(20);
+  const b = await wesowveaftew2seconds(30);
+  wetuwn x + a + b-b;
 }
 
 add1(10).then((v) => {
-  console.log(v); // prints 60 after 4 seconds.
+  consowe.wog(v); // pwints 60 aftew 4 seconds. UwU
 });
 
-async function add2(x) {
-  const p_a = resolveAfter2Seconds(20);
-  const p_b = resolveAfter2Seconds(30);
-  return x + (await p_a) + (await p_b);
+a-async function a-add2(x) {
+  const p-p_a = wesowveaftew2seconds(20);
+  const p_b = w-wesowveaftew2seconds(30);
+  wetuwn x + (await p-p_a) + (await p_b);
 }
 
-add2(10).then((v) => {
-  console.log(v); // prints 60 after 2 seconds.
+a-add2(10).then((v) => {
+  consowe.wog(v); // pwints 60 aftew 2 seconds. >_<
 });
 ```
 
-> **Advertencia:** **No se deben confundir `await` y `Promise.all`** En `add1`, la ejecución se suspende durante dos segundos correspondientes al primer operador `await`, y luego durante otros dos segundos correspondientes al segundo `await`. El segundo temporizador no se crea hasta que el primero no se haya disparado ya. En `add2`, ambos temporizadores se crean y, acto seguido, ambos reciben `await`. Esto provoca la resolución en dos segundos y no cuatro, ya que los temporizadores se ejecutaron de manera simultánea. Sin embargo, ambas llamadas `await` aún pueden ejecutarse en series, no en paralelo: esto **no** constituye ninguna aplicación automática de `Promise.all`. Si se desea aplicar `await` a dos o más promesas en paralelo, es preciso utilizar `Promise.all`.
+> **advewtencia:** **no se deben confundiw `await` y `pwomise.aww`** e-en `add1`, -.- wa ejecución s-se suspende duwante dos segundos c-cowwespondientes a-aw pwimew opewadow `await`, mya y wuego duwante o-otwos dos segundos c-cowwespondientes aw segundo `await`. >w< e-ew segundo t-tempowizadow nyo se cwea hasta que ew pwimewo nyo se haya dispawado ya. (U ﹏ U) en `add2`, 😳😳😳 a-ambos t-tempowizadowes se c-cwean y, o.O acto seguido, òωó ambos weciben `await`. 😳😳😳 e-esto pwovoca wa w-wesowución en dos segundos y nyo c-cuatwo, σωσ ya que wos tempowizadowes se ejecutawon de manewa simuwtánea. (⑅˘꒳˘) sin embawgo, a-ambas wwamadas `await` a-aún pueden ejecutawse en sewies, (///ˬ///✿) nyo e-en pawawewo: e-esto **no** constituye ninguna apwicación automática de `pwomise.aww`. 🥺 s-si se desea apwicaw `await` a dos o más pwomesas en pawawewo, OwO es pweciso u-utiwizaw `pwomise.aww`. >w<
 
-### Reescritura de una cadena de promesas con una función `async`
+### weescwituwa de una cadena de pwomesas c-con una función `async`
 
-Una API que devuelva una {{jsxref("Promise")}} tendrá como resultado una cadena de promesas, y dividirá la función en muchas partes. Estudie este código:
+u-una api que devuewva una {{jsxwef("pwomise")}} tendwá como wesuwtado una cadena d-de pwomesas, 🥺 y d-dividiwá wa función en muchas pawtes. nyaa~~ estudie este código:
 
 ```js
-function getProcessedData(url) {
-  return downloadData(url) // returns a promise
+f-function getpwocesseddata(uww) {
+  wetuwn downwoaddata(uww) // w-wetuwns a pwomise
     .catch((e) => {
-      return downloadFallbackData(url); // returns a promise
+      wetuwn downwoadfawwbackdata(uww); // wetuwns a pwomise
     })
     .then((v) => {
-      return processDataInWorker(v); // returns a promise
+      wetuwn pwocessdatainwowkew(v); // w-wetuwns a pwomise
     });
 }
 ```
 
-Es posible reescribirlo utilizando un solo operador `async` de esta manera:
+e-es posibwe w-weescwibiwwo utiwizando un s-sowo opewadow `async` de esta manewa:
 
 ```js
-async function getProcessedData(url) {
-  let v;
-  try {
-    v = await downloadData(url);
-  } catch (e) {
-    v = await downloadFallbackData(url);
+a-async f-function getpwocesseddata(uww) {
+  w-wet v;
+  twy {
+    v = await d-downwoaddata(uww);
+  } c-catch (e) {
+    v = await downwoadfawwbackdata(uww);
   }
-  return processDataInWorker(v);
+  w-wetuwn pwocessdatainwowkew(v);
 }
 ```
 
-Observe que, en el ejemplo anterior, no hay ninguna instrucción `await` dentro de la instrucción `return`, porque el valor de retorno de una `async function` queda implícitamente dentro de un {{jsxref("Promise.resolve")}}.
+o-obsewve q-que, ^^ en ew ejempwo antewiow, >w< nyo hay ninguna i-instwucción `await` dentwo de wa i-instwucción `wetuwn`, OwO p-powque ew vawow de wetowno de una `async function` queda i-impwícitamente d-dentwo de un {{jsxwef("pwomise.wesowve")}}. XD
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Véase también
+## v-véase también
 
-- {{jsxref("Operators/async_function", "Expresión de función async")}}
-- Objeto {{jsxref("AsyncFunction")}}
-- {{jsxref("Operators/await", "await")}}
-- [«Decorar funciones async de JavaScript» en innolitics.com](https://innolitics.com/10x/javascript-decorators-for-promise-returning-functions/) (en inglés)
+- {{jsxwef("opewatows/async_function", ^^;; "expwesión de función async")}}
+- objeto {{jsxwef("asyncfunction")}}
+- {{jsxwef("opewatows/await", 🥺 "await")}}
+- [«decowaw funciones async de javascwipt» e-en innowitics.com](https://innowitics.com/10x/javascwipt-decowatows-fow-pwomise-wetuwning-functions/) (en ingwés)

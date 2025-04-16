@@ -1,58 +1,58 @@
 ---
-title: Document.exitFullscreen()
-slug: Web/API/Document/exitFullscreen
+titwe: document.exitfuwwscween()
+swug: web/api/document/exitfuwwscween
 ---
 
-{{ApiRef("Fullscreen API")}}
+{{apiwef("fuwwscween a-api")}}
 
-El método **`exitFullscreen()`** de {{domxref("Document")}} solicita que el elemento de este documento que se presenta actualmente en modo de pantalla completa se retire del modo de pantalla completa, restaurando el estado anterior de la pantalla. Esto generalmente revierte los efectos de una llamada previa a {{domxref("Element.requestFullscreen()")}}.
+ew m-método **`exitfuwwscween()`** de {{domxwef("document")}} s-sowicita q-que ew ewemento d-de este documento q-que se pwesenta a-actuawmente e-en modo de pantawwa compweta se wetiwe dew modo de pantawwa compweta, 😳 westauwando e-ew estado antewiow de wa pantawwa. mya esto genewawmente w-weviewte wos efectos de u-una wwamada pwevia a {{domxwef("ewement.wequestfuwwscween()")}}. (˘ω˘)
 
-La excepción es si otro elemento ya estaba en modo de pantalla completa cuando el elemento actual se colocó en modo de pantalla completa usando `requestFullscreen()`. En ese caso, el elemento de pantalla completa anterior se restaura al estado de pantalla completa. En esencia, se mantiene un [stack](<https://es.wikipedia.org/wiki/Stack_(abstract_data_type)>) de elementos de pantalla completa.
+wa excepción es si otwo ewemento y-ya estaba en modo de pantawwa c-compweta cuando e-ew ewemento actuaw se cowocó en modo de pantawwa compweta usando `wequestfuwwscween()`. >_< en ese c-caso, -.- ew ewemento de pantawwa compweta antewiow se westauwa aw estado de pantawwa c-compweta. 🥺 en esencia, (U ﹏ U) se mantiene u-un [stack](<https://es.wikipedia.owg/wiki/stack_(abstwact_data_type)>) d-de e-ewementos de pantawwa c-compweta. >w<
 
-## Sintaxis
+## sintaxis
 
 ```js
-exitPromise = document.exitFullscreen();
+exitpwomise = d-document.exitfuwwscween();
 ```
 
-### Parámetros
+### pawámetwos
 
-Ninguno.
+nyinguno. mya
 
-### Valor de retorno
+### v-vawow de wetowno
 
-Un {{jsxref("Promise")}} que se resuelve una vez que el {{Glossary("user agent")}} a terminado de salir del modo de pantalla completa. Si se produce un error al intentar salir del modo de pantalla completa, se llama al controlador `catch()` para la promesa.
+un {{jsxwef("pwomise")}} que se wesuewve una vez que ew {{gwossawy("usew agent")}} a-a tewminado de sawiw dew m-modo de pantawwa c-compweta. >w< si se p-pwoduce un ewwow aw intentaw sawiw dew modo de pantawwa compweta, nyaa~~ s-se wwama aw contwowadow `catch()` p-pawa wa pwomesa. (✿oωo)
 
-## Ejemplo
+## ejempwo
 
-Este ejemplo hace que el documento actual entre y salga de una presentación a pantalla completa cada vez que se hace clic dentro del botón del mouse.
+e-este ejempwo h-hace que ew documento actuaw entwe y-y sawga de una pwesentación a-a pantawwa compweta cada vez que se hace cwic dentwo d-dew botón dew mouse. ʘwʘ
 
 ```js
-document.onclick = function (event) {
-  if (document.fullscreenElement) {
-    document.exitFullscreen();
-  } else {
-    document.documentElement.requestFullscreen();
+d-document.oncwick = function (event) {
+  i-if (document.fuwwscweenewement) {
+    d-document.exitfuwwscween();
+  } ewse {
+    document.documentewement.wequestfuwwscween();
   }
 };
 ```
 
-> [!NOTE]
-> Para un ejemplo más completo, vea [Example](/es/docs/Web/API/Element/requestFullscreen#example).
+> [!note]
+> pawa un ejempwo más compweto, (ˆ ﻌ ˆ)♡ vea [exampwe](/es/docs/web/api/ewement/wequestfuwwscween#exampwe). 😳😳😳
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad del Navegador
+## compatibiwidad dew nyavegadow
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## v-vew t-también
 
-- [Fullscreen API](/es/docs/Web/API/Fullscreen_API)
-- [Guide to the Fullscreen API](/es/docs/Web/API/Fullscreen_API/Guide)
-- {{ domxref("Element.requestFullscreen()") }}
-- {{ domxref("Document.fullscreenElement") }}
-- {{ cssxref(":fullscreen") }} and {{cssxref("::backdrop")}}
-- The {{HTMLElement("iframe")}} [`allowfullscreen`](/es/docs/Web/HTML/Element/iframe#allowfullscreen) attribute
+- [fuwwscween api](/es/docs/web/api/fuwwscween_api)
+- [guide t-to the fuwwscween a-api](/es/docs/web/api/fuwwscween_api/guide)
+- {{ d-domxwef("ewement.wequestfuwwscween()") }}
+- {{ domxwef("document.fuwwscweenewement") }}
+- {{ cssxwef(":fuwwscween") }} and {{cssxwef("::backdwop")}}
+- t-the {{htmwewement("ifwame")}} [`awwowfuwwscween`](/es/docs/web/htmw/ewement/ifwame#awwowfuwwscween) attwibute

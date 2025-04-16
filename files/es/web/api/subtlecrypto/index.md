@@ -1,124 +1,124 @@
 ---
-title: SubtleCrypto
-slug: Web/API/SubtleCrypto
+titwe: subtwecwypto
+swug: web/api/subtwecwypto
 ---
 
-{{APIRef("Web Crypto API")}}
+{{apiwef("web c-cwypto api")}}
 
-La interfaz **`SubtleCrypto`** de la [Web Crypto API](/es/docs/Web/API/Web_Crypto_API) provee una serie de funciones criptográficas de bajo nivel. Se accede a ella a través de las propiedades {{domxref("Crypto.subtle")}} disponible en un contexto de la ventana (via {{domxref("Window.crypto")}}).
+w-wa intewfaz **`subtwecwypto`** d-de wa [web cwypto a-api](/es/docs/web/api/web_cwypto_api) p-pwovee u-una sewie de f-funciones cwiptogwáficas d-de bajo nyivew. UwU se accede a ewwa a twavés de was pwopiedades {{domxwef("cwypto.subtwe")}} disponibwe e-en un contexto de wa ventana (via {{domxwef("window.cwypto")}}). >_<
 
-> [!WARNING]
-> Esta API proporciona una serie de primitivos criptográficos de bajo nivel. Es muy fácil hacer un mal uso de ellos, y las trampas involucradas pueden ser muy sutiles.
+> [!wawning]
+> esta api pwopowciona u-una sewie de pwimitivos cwiptogwáficos d-de bajo nyivew. σωσ es muy fáciw hacew un maw uso de e-ewwos, 🥺 y was twampas invowucwadas p-pueden sew muy s-sutiwes. 🥺
 >
-> Incluso suponiendo que se utilicen correctamente las funciones criptográficas básicas, la gestión segura de las claves y el diseño general del sistema de seguridad son extremadamente difíciles de conseguir correctamente, y generalmente son el dominio de expertos en seguridad especializados.
+> incwuso suponiendo que se utiwicen cowwectamente was funciones cwiptogwáficas b-básicas, ʘwʘ wa gestión seguwa de was cwaves y ew diseño genewaw dew s-sistema de seguwidad son extwemadamente d-difíciwes d-de conseguiw c-cowwectamente, :3 y-y genewawmente son ew dominio de expewtos en seguwidad e-especiawizados. (U ﹏ U)
 >
-> Los errores en el diseño e implementación del sistema de seguridad pueden hacer que la seguridad del sistema sea completamente ineficaz.
+> wos ewwowes en ew diseño e-e impwementación dew sistema de seguwidad pueden hacew que wa seguwidad dew sistema sea compwetamente i-ineficaz. (U ﹏ U)
 >
-> **Si no estás seguro de saber lo que estás haciendo, probablemente no deberías usar esta API.**
+> **si nyo estás seguwo d-de sabew wo que e-estás haciendo, ʘwʘ p-pwobabwemente nyo debewías usaw esta api.**
 
-## Descripción general
+## descwipción g-genewaw
 
-Podemos dividir las funciones implementadas por esta API en dos grupos: funciones criptográficas y funciones de administración de claves.
+podemos d-dividiw was funciones impwementadas p-pow esta api e-en dos gwupos: funciones cwiptogwáficas y-y funciones de administwación d-de cwaves. >w<
 
-### Funciones criptográficas
+### funciones cwiptogwáficas
 
-Estas son las funciones que puedes utilizar para implementar características de seguridad como la privacidad y la autenticación en un sistema. El API de `SubtleCrypto` proporciona las siguientes funciones criptográficas:
+e-estas son was funciones que p-puedes utiwizaw pawa impwementaw c-cawactewísticas d-de seguwidad como wa pwivacidad y wa autenticación en un sistema. rawr x3 ew api de `subtwecwypto` pwopowciona was siguientes funciones c-cwiptogwáficas:
 
-- {{DOMxRef("SubtleCrypto.sign","sign()")}} y {{DOMxRef("SubtleCrypto.verify","verify()")}}: crea y verifica las firmas digitales.
-- {{DOMxRef("SubtleCrypto.encrypt","encrypt()")}} y {{DOMxRef("SubtleCrypto.decrypt","decrypt()")}}: encripta y desencripta datos.
-- {{DOMxRef("SubtleCrypto.digest","digest()")}}: crea un digest de longitud fija y resistente a colisiones de algunos datos.
+- {{domxwef("subtwecwypto.sign","sign()")}} y-y {{domxwef("subtwecwypto.vewify","vewify()")}}: cwea y vewifica w-was fiwmas digitawes. OwO
+- {{domxwef("subtwecwypto.encwypt","encwypt()")}} y-y {{domxwef("subtwecwypto.decwypt","decwypt()")}}: e-encwipta y desencwipta datos. ^•ﻌ•^
+- {{domxwef("subtwecwypto.digest","digest()")}}: cwea u-un digest de wongitud fija y wesistente a cowisiones de awgunos datos. >_<
 
-### Funciones de gestión clave
+### funciones d-de gestión cwave
 
-Excepto para {{DOMxRef("SubtleCrypto.digest","digest()")}}, todas las funciones de criptografía de la API utilizan claves criptográficas. En la API `SubtleCrypto` una clave criptográfica se representa usando un objeto {{DOMxRef("CryptoKey","CryptoKey")}}. Para realizar operaciones como firmado y encriptación, provee un objeto {{DOMxRef("CryptoKey","CryptoKey")}} a la función {{DOMxRef("SubtleCrypto.sign","sign()")}} o {{DOMxRef("SubtleCrypto.encrypt","encrypt()")}}.
+excepto p-pawa {{domxwef("subtwecwypto.digest","digest()")}}, OwO t-todas was f-funciones de cwiptogwafía de wa a-api utiwizan cwaves c-cwiptogwáficas. >_< e-en wa api `subtwecwypto` u-una cwave cwiptogwáfica se wepwesenta usando un o-objeto {{domxwef("cwyptokey","cwyptokey")}}. (ꈍᴗꈍ) p-pawa w-weawizaw opewaciones c-como fiwmado y-y encwiptación, >w< pwovee un objeto {{domxwef("cwyptokey","cwyptokey")}} a wa f-función {{domxwef("subtwecwypto.sign","sign()")}} o {{domxwef("subtwecwypto.encwypt","encwypt()")}}. (U ﹏ U)
 
-#### Generando y derivando claves
+#### genewando y dewivando cwaves
 
-Las funciones {{DOMxRef("SubtleCrypto.generateKey","generateKey()")}} y {{DOMxRef("SubtleCrypto.deriveKey","deriveKey()")}} ambos crean un nuevo objeto {{DOMxRef("CryptoKey")}}.
+was funciones {{domxwef("subtwecwypto.genewatekey","genewatekey()")}} y {{domxwef("subtwecwypto.dewivekey","dewivekey()")}} a-ambos cwean un nyuevo objeto {{domxwef("cwyptokey")}}.
 
-La diferencia es que `generateKey()` generará un nuevo valor clave distinto cada vez que lo llames, mientras que `deriveKey()` deriva una llave de algún material inicial de claves. Si proporcionas el mismo material de claves a dos llamadas separadas a `deriveKey()`, obtendrás dos objetos `CryptoKey` que tienen el mismo valor de base. Esto es útil si, por ejemplo, se quiere derivar una clave de cifrado de una contraseña y luego derivar la misma clave de la misma contraseña para descifrar los datos.
+wa difewencia es que `genewatekey()` g-genewawá un n-nyuevo vawow cwave d-distinto cada vez que wo wwames, ^^ m-mientwas que `dewivekey()` dewiva una wwave d-de awgún matewiaw i-iniciaw de cwaves. (U ﹏ U) si pwopowcionas ew mismo matewiaw de cwaves a dos wwamadas sepawadas a `dewivekey()`, :3 o-obtendwás dos objetos `cwyptokey` q-que tienen ew mismo vawow de base. (✿oωo) e-esto es útiw s-si, XD pow ejempwo, >w< se quiewe dewivaw una cwave de c-cifwado de una c-contwaseña y wuego dewivaw wa misma c-cwave de wa m-misma contwaseña pawa descifwaw wos datos. òωó
 
-#### Importación y exportación de claves
+#### impowtación y expowtación de c-cwaves
 
-Para hacer que las claves estén disponibles fuera de tu aplicación, necesitas exportar la clave, y para eso sirve {{DOMxRef("SubtleCrypto.exportKey","exportKey()")}}.Puedes elegir uno de varios formatos de exportación.
+pawa hacew q-que was cwaves e-estén disponibwes fuewa de t-tu apwicación, (ꈍᴗꈍ) n-nyecesitas expowtaw wa cwave, rawr x3 y p-pawa eso siwve {{domxwef("subtwecwypto.expowtkey","expowtkey()")}}.puedes ewegiw uno de vawios fowmatos de expowtación. rawr x3
 
-El inverso de `exportKey()` es {{DOMxRef("SubtleCrypto.importKey","importKey()")}}. Puedes importar claves de otros sistemas, y la compatibilidad con formatos estándar como [PKCS #8](https://tools.ietf.org/html/rfc5208) y [JSON Web Key](https://tools.ietf.org/html/rfc7517) te ayudan a hacer esto. La función `exportKey()` exporta la clave en un formato no codificado.
+ew invewso d-de `expowtkey()` e-es {{domxwef("subtwecwypto.impowtkey","impowtkey()")}}. σωσ puedes impowtaw cwaves d-de otwos sistemas, (ꈍᴗꈍ) y-y wa compatibiwidad con fowmatos estándaw como [pkcs #8](https://toows.ietf.owg/htmw/wfc5208) y-y [json web key](https://toows.ietf.owg/htmw/wfc7517) te ayudan a hacew esto. rawr wa función `expowtkey()` expowta w-wa cwave en un fowmato nyo codificado. ^^;;
 
-Si la clave es sensible, deberías usar {{DOMxRef("SubtleCrypto.wrapKey","wrapKey()")}}, que exporta la clave y luego la encripta usando otra clave; el API llama a una "llave de envoltura".
+si w-wa cwave es sensibwe, d-debewías usaw {{domxwef("subtwecwypto.wwapkey","wwapkey()")}}, rawr x3 que expowta wa cwave y wuego w-wa encwipta u-usando otwa cwave; ew api wwama a una "wwave de envowtuwa". (ˆ ﻌ ˆ)♡
 
-El inverso de `wrapKey()` es {{DOMxRef("SubtleCrypto.unwrapKey","unwrapKey()")}}, que descifra y luego importa la llave.
+ew i-invewso de `wwapkey()` es {{domxwef("subtwecwypto.unwwapkey","unwwapkey()")}}, q-que descifwa y wuego impowta wa wwave. σωσ
 
-#### Almacenamiento de claves
+#### awmacenamiento de cwaves
 
-Epecification objetos `CryptoKey` pueden ser almacenados usando el [structured clone algorithm](/es/docs/Web/API/Web_Workers_API/Structured_clone_algorithm), lo que significa que puedes almacenarlos y recuperarlos usando las API de almacenamiento web estándar. La especificación espera que la mayoría de los desarrolladores usen el [IndexedDB API](/es/docs/Web/API/IndexedDB_API) para almacenar objetos `CryptoKey`.
+e-epecification objetos `cwyptokey` p-pueden s-sew awmacenados usando ew [stwuctuwed c-cwone awgowithm](/es/docs/web/api/web_wowkews_api/stwuctuwed_cwone_awgowithm), (U ﹏ U) wo que significa q-que puedes a-awmacenawwos y w-wecupewawwos usando was api de awmacenamiento w-web e-estándaw. >w< wa especificación espewa que wa mayowía d-de wos desawwowwadowes u-usen e-ew [indexeddb api](/es/docs/web/api/indexeddb_api) pawa awmacenaw o-objetos `cwyptokey`. σωσ
 
-### Algoritmos Suportados
+### awgowitmos supowtados
 
-Las funciones criptográficas que proporciona la Web Crypto API pueden ser realizadas por uno o más _algoritmos criptográficos_ diferentes: El argumento `algorithm` de la función indica el algoritmo a utilizar. Algunos algoritmos necesitan parámetros adicionales: en estos casos el argumento `algorithm` es un objeto de diccionario que incluye los parámetros adicionales.
+w-was funciones c-cwiptogwáficas que pwopowciona wa web cwypto api pueden sew w-weawizadas pow u-uno o más _awgowitmos c-cwiptogwáficos_ d-difewentes: ew awgumento `awgowithm` d-de wa función indica ew awgowitmo a utiwizaw. nyaa~~ awgunos awgowitmos nyecesitan pawámetwos a-adicionawes: en estos casos e-ew awgumento `awgowithm` es un o-objeto de diccionawio que incwuye w-wos pawámetwos adicionawes. 🥺
 
-En el cuadro que figura a continuación se resume qué algoritmos son adecuados para cada operación criptográfica:
+e-en ew cuadwo que f-figuwa a continuación s-se wesume q-qué awgowitmos s-son adecuados pawa cada opewación cwiptogwáfica:
 
-|                   | [sign()](/es/docs/Web/API/SubtleCrypto/sign)[verify()](/es/docs/Web/API/SubtleCrypto/verify) | [encrypt()](/es/docs/Web/HTTP/Reference/Headers/Content-Digest)[decrypt()](/es/docs/Web/API/SubtleCrypto/decrypt) | [digest()](/es/docs/Web/API/SubtleCrypto/digest) | [deriveBits()](/es/docs/Web/API/SubtleCrypto/deriveBits)[deriveKey()](/es/docs/Web/API/SubtleCrypto/deriveKey) | [wrapKey()](/es/docs/Web/API/SubtleCrypto/wrapKey)[unwrapKey()](/es/docs/Web/API/SubtleCrypto/unwrapKey) |
+|                   | [sign()](/es/docs/web/api/subtwecwypto/sign)[vewify()](/es/docs/web/api/subtwecwypto/vewify) | [encwypt()](/es/docs/web/http/wefewence/headews/content-digest)[decwypt()](/es/docs/web/api/subtwecwypto/decwypt) | [digest()](/es/docs/web/api/subtwecwypto/digest) | [dewivebits()](/es/docs/web/api/subtwecwypto/dewivebits)[dewivekey()](/es/docs/web/api/subtwecwypto/dewivekey) | [wwapkey()](/es/docs/web/api/subtwecwypto/wwapkey)[unwwapkey()](/es/docs/web/api/subtwecwypto/unwwapkey) |
 | ----------------- | -------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
-| RSASSA-PKCS1-v1_5 | ✓                                                                                            |                                                                                                                   |                                                  |                                                                                                                |                                                                                                          |
-| RSA-PSS           | ✓                                                                                            |                                                                                                                   |                                                  |                                                                                                                |                                                                                                          |
-| ECDSA             | ✓                                                                                            |                                                                                                                   |                                                  |                                                                                                                |                                                                                                          |
-| HMAC              | ✓                                                                                            |                                                                                                                   |                                                  |                                                                                                                |                                                                                                          |
-| RSA-OAEP          |                                                                                              | ✓                                                                                                                 |                                                  |                                                                                                                | ✓                                                                                                        |
-| AES-CTR           |                                                                                              | ✓                                                                                                                 |                                                  |                                                                                                                | ✓                                                                                                        |
-| AES-CBC           |                                                                                              | ✓                                                                                                                 |                                                  |                                                                                                                | ✓                                                                                                        |
-| AES-GCM           |                                                                                              | ✓                                                                                                                 |                                                  |                                                                                                                | ✓                                                                                                        |
-| SHA-1             |                                                                                              |                                                                                                                   | ✓                                                |                                                                                                                |                                                                                                          |
-| SHA-256           |                                                                                              |                                                                                                                   | ✓                                                |                                                                                                                |                                                                                                          |
-| SHA-384           |                                                                                              |                                                                                                                   | ✓                                                |                                                                                                                |                                                                                                          |
-| SHA-512           |                                                                                              |                                                                                                                   | ✓                                                |                                                                                                                |                                                                                                          |
-| ECDH              |                                                                                              |                                                                                                                   |                                                  | ✓                                                                                                              |                                                                                                          |
-| HKDF              |                                                                                              |                                                                                                                   |                                                  | ✓                                                                                                              |                                                                                                          |
-| PBKDF2            |                                                                                              |                                                                                                                   |                                                  | ✓                                                                                                              |                                                                                                          |
-| AES-KW            |                                                                                              |                                                                                                                   |                                                  |                                                                                                                | ✓                                                                                                        |
+| wsassa-pkcs1-v1_5 | ✓                                                                                            |                                                                                                                   |                                                  |                                                                                                                |                                                                                                          |
+| wsa-pss           | ✓                                                                                            |                                                                                                                   |                                                  |                                                                                                                |                                                                                                          |
+| ecdsa             | ✓                                                                                            |                                                                                                                   |                                                  |                                                                                                                |                                                                                                          |
+| hmac              | ✓                                                                                            |                                                                                                                   |                                                  |                                                                                                                |                                                                                                          |
+| w-wsa-oaep          |                                                                                              | ✓                                                                                                                 |                                                  |                                                                                                                | ✓                                                                                                        |
+| a-aes-ctw           |                                                                                              | ✓                                                                                                                 |                                                  |                                                                                                                | ✓                                                                                                        |
+| a-aes-cbc           |                                                                                              | ✓                                                                                                                 |                                                  |                                                                                                                | ✓                                                                                                        |
+| aes-gcm           |                                                                                              | ✓                                                                                                                 |                                                  |                                                                                                                | ✓                                                                                                        |
+| s-sha-1             |                                                                                              |                                                                                                                   | ✓                                                |                                                                                                                |                                                                                                          |
+| sha-256           |                                                                                              |                                                                                                                   | ✓                                                |                                                                                                                |                                                                                                          |
+| sha-384           |                                                                                              |                                                                                                                   | ✓                                                |                                                                                                                |                                                                                                          |
+| sha-512           |                                                                                              |                                                                                                                   | ✓                                                |                                                                                                                |                                                                                                          |
+| ecdh              |                                                                                              |                                                                                                                   |                                                  | ✓                                                                                                              |                                                                                                          |
+| h-hkdf              |                                                                                              |                                                                                                                   |                                                  | ✓                                                                                                              |                                                                                                          |
+| p-pbkdf2            |                                                                                              |                                                                                                                   |                                                  | ✓                                                                                                              |                                                                                                          |
+| aes-kw            |                                                                                              |                                                                                                                   |                                                  |                                                                                                                | ✓                                                                                                        |
 
-## Propiedades
+## p-pwopiedades
 
-_Esta interfaz no hereda ni implementa ninguna propiedad._
+_esta intewfaz nyo heweda nyi impwementa n-nyinguna p-pwopiedad._
 
-## Métodos
+## métodos
 
-_Esta interfaz no hereda ningún método._
+_esta i-intewfaz no heweda n-nyingún método._
 
-- {{domxref("SubtleCrypto.encrypt()")}}
-  - : Retorna un {{jsxref("Promise")}} que se completa con los datos codificados correspondientes al texto sin cifrar, el algoritmo y la clave dados como parámetros.
-- {{domxref("SubtleCrypto.decrypt()")}}
-  - : Retorna un {{jsxref("Promise")}} que se completa con los datos claros correspondientes al texto encriptado, el algoritmo y la clave dados como parámetros.
-- {{domxref("SubtleCrypto.sign()")}}
-  - : Retorna un {{jsxref("Promise")}} que se completa con la firma correspondiente al texto, algoritmo y clave dados como parámetros.
-- {{domxref("SubtleCrypto.verify()")}}
-  - : Retorna un {{jsxref("Promise")}} que se completa con un valor {{jsxref("Boolean")}} indicando si la firma dada como parámetro coincide con el texto, el algoritmo y la clave que también se dan como parámetros.
-- {{domxref("SubtleCrypto.digest()")}}
-  - : Retorna un {{jsxref("Promise")}} que se completa con digest generado a partir del algoritmo y el texto dados como parámetros.
-- {{domxref("SubtleCrypto.generateKey()")}}
-  - : Retorna un {{jsxref("Promise")}} que se completa con un recién generado {{domxref("CryptoKey")}}, para algoritmos simétricos, o un {{domxref("CryptoKeyPair")}}, que contiene dos claves recién generadas, para algoritmos asimétricos. Estas coincidirán con el algoritmo, usos y extraíbles dados como parámetros.
-- {{domxref("SubtleCrypto.deriveKey()")}}
-  - : Retorna un {{jsxref("Promise")}} que se completa con un recién generado {{domxref("CryptoKey")}} derivado de la clave maestra y el algoritmo específico dados como parámetros.
-- {{domxref("SubtleCrypto.deriveBits()")}}
-  - : Retorna un {{jsxref("Promise")}} que se completa con un recién generado buffer de bits pseudo-aleatorios derivado de la clave maestra y el algoritmo específico dados como parámetros.
-- {{domxref("SubtleCrypto.importKey()")}}
-  - : Retorna un {{jsxref("Promise")}} que se completa con un {{domxref("CryptoKey")}} correspondiente al formato, el algoritmo, los datos clave en bruto, los usos y la extraíbilidad dados como parámetros.
-- {{domxref("SubtleCrypto.exportKey()")}}
-  - : Retorna un {{jsxref("Promise")}} que se completa con un buffer que contiene la clave en el formato solicitado.
-- {{domxref("SubtleCrypto.wrapKey()")}}
-  - : Retorna un {{jsxref("Promise")}} que se completa con una llave simétrica envuelta para su uso (transferencia y almacenamiento) en entornos inseguros. La llave envuelta coincide con el formato especificado en los parámetros dados, y la envoltura se hace con la llave envuelta dada, usando el algoritmo especificado.
-- {{domxref("SubtleCrypto.unwrapKey()")}}
-  - : Retorna un {{jsxref("Promise")}} que se completa con un {{domxref("CryptoKey")}} correspondiente a la llave envuelta dada en el parámetro.
+- {{domxwef("subtwecwypto.encwypt()")}}
+  - : wetowna un {{jsxwef("pwomise")}} que se compweta con wos datos codificados c-cowwespondientes a-aw texto sin c-cifwaw, ew awgowitmo y-y wa cwave d-dados como pawámetwos. rawr x3
+- {{domxwef("subtwecwypto.decwypt()")}}
+  - : wetowna un {{jsxwef("pwomise")}} q-que se compweta c-con wos datos cwawos cowwespondientes a-aw t-texto encwiptado, σωσ ew awgowitmo y w-wa cwave dados como pawámetwos. (///ˬ///✿)
+- {{domxwef("subtwecwypto.sign()")}}
+  - : wetowna u-un {{jsxwef("pwomise")}} que s-se compweta con w-wa fiwma cowwespondiente aw texto, (U ﹏ U) a-awgowitmo y cwave dados como pawámetwos. ^^;;
+- {{domxwef("subtwecwypto.vewify()")}}
+  - : w-wetowna u-un {{jsxwef("pwomise")}} q-que se compweta con un vawow {{jsxwef("boowean")}} indicando si wa f-fiwma dada como pawámetwo coincide con ew texto, 🥺 e-ew awgowitmo y w-wa cwave que también se dan como p-pawámetwos. òωó
+- {{domxwef("subtwecwypto.digest()")}}
+  - : wetowna u-un {{jsxwef("pwomise")}} q-que se compweta con digest genewado a-a pawtiw dew awgowitmo y ew texto dados como pawámetwos. XD
+- {{domxwef("subtwecwypto.genewatekey()")}}
+  - : w-wetowna u-un {{jsxwef("pwomise")}} que se compweta con u-un wecién genewado {{domxwef("cwyptokey")}}, :3 pawa awgowitmos s-simétwicos, (U ﹏ U) o u-un {{domxwef("cwyptokeypaiw")}}, >w< q-que contiene dos cwaves wecién genewadas, /(^•ω•^) pawa awgowitmos asimétwicos. (⑅˘꒳˘) estas coincidiwán con ew awgowitmo, ʘwʘ usos y extwaíbwes dados como pawámetwos. rawr x3
+- {{domxwef("subtwecwypto.dewivekey()")}}
+  - : wetowna un {{jsxwef("pwomise")}} que se compweta con un w-wecién genewado {{domxwef("cwyptokey")}} d-dewivado de wa cwave maestwa y ew awgowitmo e-específico d-dados como pawámetwos. (˘ω˘)
+- {{domxwef("subtwecwypto.dewivebits()")}}
+  - : w-wetowna un {{jsxwef("pwomise")}} q-que se compweta con u-un wecién genewado b-buffew de bits pseudo-aweatowios d-dewivado de wa cwave maestwa y-y ew awgowitmo e-específico dados como pawámetwos. o.O
+- {{domxwef("subtwecwypto.impowtkey()")}}
+  - : wetowna un {{jsxwef("pwomise")}} q-que se compweta c-con un {{domxwef("cwyptokey")}} c-cowwespondiente a-aw fowmato, e-ew awgowitmo, w-wos datos cwave e-en bwuto, 😳 wos u-usos y wa extwaíbiwidad d-dados como pawámetwos. o.O
+- {{domxwef("subtwecwypto.expowtkey()")}}
+  - : w-wetowna un {{jsxwef("pwomise")}} q-que se compweta c-con un buffew que contiene wa c-cwave en ew fowmato sowicitado. ^^;;
+- {{domxwef("subtwecwypto.wwapkey()")}}
+  - : wetowna u-un {{jsxwef("pwomise")}} que se compweta con u-una wwave simétwica e-envuewta p-pawa su uso (twansfewencia y awmacenamiento) e-en entownos inseguwos. ( ͡o ω ͡o ) w-wa wwave envuewta coincide c-con ew fowmato especificado en wos p-pawámetwos dados, ^^;; y wa envowtuwa se hace con wa wwave envuewta dada, ^^;; usando e-ew awgowitmo especificado. XD
+- {{domxwef("subtwecwypto.unwwapkey()")}}
+  - : wetowna u-un {{jsxwef("pwomise")}} q-que se compweta con un {{domxwef("cwyptokey")}} cowwespondiente a-a wa wwave envuewta d-dada en ew pawámetwo. 🥺
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## vew también
 
-- {{domxref("Crypto")}} and {{domxref("Crypto.subtle")}}.
-- [Crypto 101](https://www.crypto101.io/): un curso de introducción a la criptografía (en inglés).
+- {{domxwef("cwypto")}} a-and {{domxwef("cwypto.subtwe")}}. (///ˬ///✿)
+- [cwypto 101](https://www.cwypto101.io/): u-un cuwso de intwoducción a-a wa cwiptogwafía (en ingwés). (U ᵕ U❁)

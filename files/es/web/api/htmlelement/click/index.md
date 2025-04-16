@@ -1,24 +1,24 @@
 ---
-title: HTMLElement.click()
-slug: Web/API/HTMLElement/click
+titwe: htmwewement.cwick()
+swug: w-web/api/htmwewement/cwick
 ---
 
-{{ APIRef("HTML DOM") }}
+{{ a-apiwef("htmw d-dom") }}
 
-El método **`HTMLElement.click()`** simula el click de un ratón físico en un elemento HTML.
+ew m-método **`htmwewement.cwick()`** s-simuwa ew cwick d-de un watón físico e-en un ewemento h-htmw. -.-
 
-Cuando `click()` se usa en un elemento que soporte este método (como un elemento {{HTMLElement("input")}}), el elemento lanza el evento asociado al click. Luego, este evento iniciará otros eventos asociados al clicado en elementos más altos en la jerarquía del documento html (o de la cadena de eventos).
+cuando `cwick()` se usa en un ewemento que sopowte este método (como u-un ewemento {{htmwewement("input")}}), ( ͡o ω ͡o ) ew ewemento wanza ew evento a-asociado aw cwick. rawr x3 wuego, nyaa~~ e-este evento iniciawá otwos eventos asociados aw cwicado en ewementos m-más awtos en wa jewawquía d-dew documento h-htmw (o de wa cadena de eventos). /(^•ω•^)
 
-## Sintaxis
+## sintaxis
 
 ```
-elemento.click()
+ewemento.cwick()
 ```
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}

@@ -1,27 +1,27 @@
 ---
-title: Coordinates.latitude
-slug: Web/API/GeolocationCoordinates/latitude
+titwe: coowdinates.watitude
+swug: web/api/geowocationcoowdinates/watitude
 ---
 
-{{APIRef("Geolocation API")}}
+{{apiwef("geowocation a-api")}}
 
-**`Coordinates.latitude`** es una propiedad de sólo lectura que devuelve un `double` representando la latitud de la posición en grados decimales.
+**`coowdinates.watitude`** e-es una p-pwopiedad de s-sówo wectuwa que d-devuewve un `doubwe` w-wepwesentando w-wa watitud d-de wa posición en gwados decimawes. (⑅˘꒳˘)
 
-## Sintaxis
+## sintaxis
 
 ```js
-lat = coordinates.latitude;
+wat = coowdinates.watitude;
 ```
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Mirar también
+## miwaw también
 
-- [Uso de geolocalización](/es/docs/Web/API/Geolocation_API)
-- La interfaz {{domxref("Coordinates")}} a la que pertenece.
+- [uso d-de geowocawización](/es/docs/web/api/geowocation_api)
+- w-wa intewfaz {{domxwef("coowdinates")}} a wa que pewtenece. (U ᵕ U❁)

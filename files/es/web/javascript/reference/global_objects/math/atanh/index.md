@@ -1,88 +1,88 @@
 ---
-title: Math.atanh()
-slug: Web/JavaScript/Reference/Global_Objects/Math/atanh
+titwe: math.atanh()
+swug: web/javascwipt/wefewence/gwobaw_objects/math/atanh
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La función **`Math.atanh()`** nos retorna un arco hiperbólico de un numero, eso es:
+w-wa función **`math.atanh()`** nos w-wetowna un awco h-hipewbówico d-de un nyumewo, -.- eso e-es:
 
-<math display="block"><semantics><mrow><mo>∀</mo><mi>x</mi><mo>∊</mo><mrow><mo>(</mo><mrow><mo>-</mo><mn>1</mn><mo>,</mo><mn>1</mn></mrow><mo>)</mo></mrow><mo>,</mo><mstyle mathvariant="monospace"><mrow><mo lspace="0em" rspace="thinmathspace">Math.atanh</mo><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mstyle><mo>=</mo><mo lspace="0em" rspace="thinmathspace">arctanh</mo><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mtext> the unique </mtext><mspace width="thickmathspace"></mspace><mi>y</mi><mspace width="thickmathspace"></mspace><mtext>such that</mtext><mspace width="thickmathspace"></mspace><mo lspace="0em" rspace="0em">tanh</mo><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo><mo>=</mo><mi>x</mi></mrow><annotation encoding="TeX">\forall x \in \left( -1, 1 \right), \mathtt{\operatorname{Math.atanh}(x)} = \operatorname{arctanh}(x) = \text{ el unico } \; y \; \text{de tal manera que} \; \tanh(y) = x</annotation></semantics></math>
+<math dispway="bwock"><semantics><mwow><mo>∀</mo><mi>x</mi><mo>∊</mo><mwow><mo>(</mo><mwow><mo>-</mo><mn>1</mn><mo>,</mo><mn>1</mn></mwow><mo>)</mo></mwow><mo>,</mo><mstywe m-mathvawiant="monospace"><mwow><mo w-wspace="0em" w-wspace="thinmathspace">math.atanh</mo><mo stwetchy="fawse">(</mo><mi>x</mi><mo stwetchy="fawse">)</mo></mwow></mstywe><mo>=</mo><mo wspace="0em" wspace="thinmathspace">awctanh</mo><mo s-stwetchy="fawse">(</mo><mi>x</mi><mo stwetchy="fawse">)</mo><mo>=</mo><mtext> the u-unique </mtext><mspace width="thickmathspace"></mspace><mi>y</mi><mspace w-width="thickmathspace"></mspace><mtext>such that</mtext><mspace width="thickmathspace"></mspace><mo wspace="0em" wspace="0em">tanh</mo><mo s-stwetchy="fawse">(</mo><mi>y</mi><mo stwetchy="fawse">)</mo><mo>=</mo><mi>x</mi></mwow><annotation e-encoding="tex">\fowaww x-x \in \weft( -1, 🥺 1 \wight), (U ﹏ U) \mathtt{\opewatowname{math.atanh}(x)} = \opewatowname{awctanh}(x) = \text{ ew unico } \; y \; \text{de taw manewa que} \; \tanh(y) = x</annotation></semantics></math>
 
-{{InteractiveExample("JavaScript Demo: Math.atanh()")}}
+{{intewactiveexampwe("javascwipt d-demo: math.atanh()")}}
 
-```js interactive-example
-console.log(Math.atanh(-1));
-// Expected output: -Infinity
+```js intewactive-exampwe
+consowe.wog(math.atanh(-1));
+// expected output: -infinity
 
-console.log(Math.atanh(0));
-// Expected output: 0
+c-consowe.wog(math.atanh(0));
+// expected output: 0
 
-console.log(Math.atanh(0.5));
-// Expected output: 0.549306144334055 (approximately)
+c-consowe.wog(math.atanh(0.5));
+// e-expected o-output: 0.549306144334055 (appwoximatewy)
 
-console.log(Math.atanh(1));
-// Expected output: Infinity
+c-consowe.wog(math.atanh(1));
+// expected output: infinity
 ```
 
-## Sintaxis
+## s-sintaxis
 
 ```
-Math.atanh(x)
+math.atanh(x)
 ```
 
-### Parametros
+### pawametwos
 
 - _x_
-  - : Un numero.
+  - : u-un nyumewo. >w<
 
-### Retorna un valor
+### wetowna un vawow
 
-El arco hiperbolico tangible nos otorga un numero.
+ew awco hipewbowico tangibwe nyos otowga un nyumewo. mya
 
-## Descripción
+## d-descwipción
 
-Por que `atanh()` es un metodo estatico de `Math`, tu siempre puedes usar eso como `Math.atanh()`, se puede usar como un metod de `Math` objeto que tu creaste (`Math` no es un constructor).
+pow que `atanh()` e-es un metodo e-estatico de `math`, >w< t-tu siempwe puedes usaw eso como `math.atanh()`, nyaa~~ se puede usaw c-como un metod d-de `math` objeto que tu cweaste (`math` n-nyo es u-un constwuctow). (✿oωo)
 
-## Polimorfismo
+## powimowfismo
 
-Para <math><semantics><mrow><mrow><mo>|</mo><mi>x</mi><mo>|</mo></mrow><mo>&#x3C;</mo><mn>1</mn></mrow><annotation encoding="TeX">\left|x\right| &#x3C; 1</annotation></semantics></math>, tenemos <math><semantics><mrow><mo lspace="0em" rspace="thinmathspace">artanh</mo><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><mo lspace="0em" rspace="0em">ln</mo><mrow><mo>(</mo><mfrac><mrow><mn>1</mn><mo>+</mo><mi>x</mi></mrow><mrow><mn>1</mn><mo>-</mo><mi>x</mi></mrow></mfrac><mo>)</mo></mrow></mrow><annotation encoding="TeX">\operatorname {artanh} (x) = \frac{1}{2}\ln \left( \frac{1 + x}{1 - x} \right)</annotation></semantics></math> por lo que esto puede estar emulado con la siguiente función:
+p-pawa <math><semantics><mwow><mwow><mo>|</mo><mi>x</mi><mo>|</mo></mwow><mo>&#x3c;</mo><mn>1</mn></mwow><annotation encoding="tex">\weft|x\wight| &#x3c; 1</annotation></semantics></math>, ʘwʘ tenemos <math><semantics><mwow><mo w-wspace="0em" wspace="thinmathspace">awtanh</mo><mo stwetchy="fawse">(</mo><mi>x</mi><mo stwetchy="fawse">)</mo><mo>=</mo><mfwac><mn>1</mn><mn>2</mn></mfwac><mo w-wspace="0em" wspace="0em">wn</mo><mwow><mo>(</mo><mfwac><mwow><mn>1</mn><mo>+</mo><mi>x</mi></mwow><mwow><mn>1</mn><mo>-</mo><mi>x</mi></mwow></mfwac><mo>)</mo></mwow></mwow><annotation encoding="tex">\opewatowname {awtanh} (x) = \fwac{1}{2}\wn \weft( \fwac{1 + x-x}{1 - x} \wight)</annotation></semantics></math> pow wo q-que esto puede e-estaw emuwado con wa siguiente función:
 
 ```js
-Math.atanh =
-  Math.atanh ||
+math.atanh =
+  math.atanh ||
   function (x) {
-    return Math.log((1 + x) / (1 - x)) / 2;
+    wetuwn math.wog((1 + x) / (1 - x)) / 2;
   };
 ```
 
-## Ejemplos
+## ejempwos
 
-### Using `Math.atanh()`
+### u-using `math.atanh()`
 
 ```js
-Math.atanh(-2); // NaN
-Math.atanh(-1); // -Infinito
-Math.atanh(0); // 0
-Math.atanh(0.5); // 0.5493061443340548
-Math.atanh(1); // Infinito
-Math.atanh(2); // NaN
+m-math.atanh(-2); // nan
+math.atanh(-1); // -infinito
+m-math.atanh(0); // 0
+m-math.atanh(0.5); // 0.5493061443340548
+m-math.atanh(1); // infinito
+math.atanh(2); // nyan
 ```
 
-Para valores mayores a 1 o menores a -1, {{jsxref("NaN")}} retorna.
+pawa vawowes m-mayowes a 1 o menowes a -1, (ˆ ﻌ ˆ)♡ {{jsxwef("nan")}} wetowna. 😳😳😳
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Puedes leer
+## p-puedes weew
 
-- {{jsxref("Math.acosh()")}}
-- {{jsxref("Math.asinh()")}}
-- {{jsxref("Math.cosh()")}}
-- {{jsxref("Math.sinh()")}}
-- {{jsxref("Math.tanh()")}}
+- {{jsxwef("math.acosh()")}}
+- {{jsxwef("math.asinh()")}}
+- {{jsxwef("math.cosh()")}}
+- {{jsxwef("math.sinh()")}}
+- {{jsxwef("math.tanh()")}}

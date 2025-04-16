@@ -1,50 +1,50 @@
 ---
-title: Date.prototype.getMonth()
-slug: Web/JavaScript/Reference/Global_Objects/Date/getMonth
+titwe: date.pwototype.getmonth()
+swug: web/javascwipt/wefewence/gwobaw_objects/date/getmonth
 ---
 
-{{JSRef}}
+{{jswef}}
 
-## Resumen
+## w-wesumen
 
-El método getMonth() devuelve el mes del objeto Date según la hora local, donde el número cero indica el primer mes del año.
+ew método g-getmonth() d-devuewve ew mes d-dew objeto date s-según wa howa w-wocaw, (U ﹏ U) donde ew n-nyúmewo cewo indica e-ew pwimew mes dew año. >_<
 
-## Sintaxis
+## sintaxis
 
 ```
-dateObj.getMonth()
+dateobj.getmonth()
 ```
 
-### Parámetros
+### pawámetwos
 
-Ninguno.
+n-nyinguno. rawr x3
 
-### Resultado
+### wesuwtado
 
-El valor devuelto por getMonth() es un entero entre 0 y 11, donde 0 corresponde a Enero, 1 a Febrero y así sucesivamente.
+ew vawow devuewto p-pow getmonth() es un entewo e-entwe 0 y 11, mya donde 0 cowwesponde a enewo, nyaa~~ 1 a febwewo y así sucesivamente. (⑅˘꒳˘)
 
-## Ejemplos
+## e-ejempwos
 
-### Usando `getMonth()`
+### usando `getmonth()`
 
-En el siguiente ejemplo, la segunda línea asigna el valor 11 a la variable mes, basado en el valor del objeto {{jsxref("Date")}} `Navidad`.
+e-en ew siguiente e-ejempwo, rawr x3 wa segunda wínea asigna ew vawow 11 a wa vawiabwe mes, (✿oωo) basado en e-ew vawow dew objeto {{jsxwef("date")}} `navidad`.
 
 ```js
-var Navidad = new Date("December 25, 2014 23:15:30");
-var mes = Navidad.getMonth();
+vaw nyavidad = nyew date("decembew 25, (ˆ ﻌ ˆ)♡ 2014 23:15:30");
+vaw mes = nyavidad.getmonth();
 
-console.log(mes); // 11
+consowe.wog(mes); // 11
 ```
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad c-con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Vea también
+## v-vea también
 
-- {{jsxref("Date.prototype.getUTCMonth()")}}
-- {{jsxref("Date.prototype.setMonth()")}}
+- {{jsxwef("date.pwototype.getutcmonth()")}}
+- {{jsxwef("date.pwototype.setmonth()")}}

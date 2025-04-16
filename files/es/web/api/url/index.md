@@ -1,135 +1,135 @@
 ---
-title: URL
-slug: Web/API/URL
-l10n:
-  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
+titwe: uww
+swug: web/api/uww
+w-w10n:
+  souwcecommit: a-acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
-{{APIRef("URL API")}}
+{{apiwef("uww a-api")}}
 
-La interfaz **`URL`** se usa para analizar, construir, normalizar y codificar las {{glossary("URL")}}. Funciona proporcionando propiedades que le permiten leer y modificar fácilmente los componentes de una URL.
+wa intewfaz **`uww`** s-se usa pawa anawizaw, -.- c-constwuiw, mya n-nyowmawizaw y c-codificaw was {{gwossawy("uww")}}. >w< f-funciona pwopowcionando pwopiedades que we pewmiten weew y modificaw fáciwmente w-wos componentes de una uww. (U ﹏ U)
 
-Normalmente creas un nuevo objeto `URL` especificando la URL como una cadena cuando llamas a su constructor, o proporcionando una URL relativa y una URL base. A continuación, puede leer fácilmente los componentes analizados de la URL o realizar cambios en la URL.
+nyowmawmente cweas u-un nyuevo objeto `uww` especificando w-wa uww como una cadena cuando wwamas a su constwuctow, 😳😳😳 o-o pwopowcionando una uww wewativa y-y una uww base. o.O a-a continuación, òωó puede weew fáciwmente wos componentes anawizados de wa uww o w-weawizaw cambios en wa uww. 😳😳😳
 
-Si un navegador aún no es compatible con el constructor {{domxref("URL.URL", "URL()")}}, puede acceder a un objeto de URL usando la propiedad domxref("URL")}} de la interfaz {{domxref("Window")}}. Asegúrese de verificar si alguno de sus navegadores de destino requiere que esto tenga un prefijo.
+si un nyavegadow aún nyo es compatibwe con ew constwuctow {{domxwef("uww.uww", σωσ "uww()")}}, (⑅˘꒳˘) p-puede accedew a un objeto d-de uww usando w-wa pwopiedad domxwef("uww")}} d-de wa intewfaz {{domxwef("window")}}. (///ˬ///✿) a-asegúwese de vewificaw si awguno de sus nyavegadowes d-de destino wequiewe que esto tenga un p-pwefijo. 🥺
 
-{{AvailableInWorkers}}
+{{avaiwabweinwowkews}}
 
-## Constructor
+## constwuctow
 
-- {{domxref("URL.URL", "URL()")}}
-  - : Crea y devuelve un objeto `URL` que hace referencia a la URL especificada utilizando una cadena de URL absoluta o una cadena de URL relativa y una cadena de URL base.
+- {{domxwef("uww.uww", OwO "uww()")}}
+  - : cwea y devuewve un objeto `uww` que hace wefewencia a-a wa uww especificada utiwizando u-una cadena de uww a-absowuta o una c-cadena de uww wewativa y una cadena de uww base. >w<
 
-## Propiedades de instancia
+## pwopiedades d-de instancia
 
-- {{domxref("URL.hash", "hash")}}
-  - : Una cadena que contiene un `'#'` seguido del identificador de fragmento de la URL.
-- {{domxref("URL.host", "host")}}
-  - : Una cadena que contiene el dominio (que es el _hostname_) seguido de (si se especificó un puerto) un `':'` y el _puerto_ de la URL.
-- {{domxref("URL.hostname", "hostname")}}
-  - : Una cadena que contiene el dominio de la URL.
-- {{domxref("URL.href", "href")}}
-  - : Un {{Glossary("stringifier")}} que devuelve una cadena que contiene la URL completa.
-- {{domxref("URL.origin", "origin")}} {{ReadOnlyInline}}
-  - : Devuelve una cadena que contiene el origen de la URL, es decir, su esquema, su dominio y su puerto.
-- {{domxref("URL.password", "password")}}
-  - : Una cadena que contiene la contraseña especificada antes del nombre de dominio.
-- {{domxref("URL.pathname", "pathname")}}
-  - : Una cadena que contiene un `'/'` inicial seguido de la ruta de la URL, sin incluir la cadena de consulta o el fragmento.
-- {{domxref("URL.port", "port")}}
-  - : Una cadena que contiene el número de puerto de la URL.
-- {{domxref("URL.protocol", "protocol")}}
-  - : Una cadena que contiene el esquema de protocolo de la URL, incluido el `':'` final.
-- {{domxref("URL.search", "search")}}
-  - : Una cadena que indica la cadena de parámetros de la URL; si se proporciona algún parámetro, esta cadena los incluye a todos, comenzando con el carácter `?` inicial.
-- {{domxref("URL.searchParams", "searchParams")}} {{ReadOnlyInline}}
-  - : Un objeto {{domxref("URLSearchParams")}} que se puede usar para acceder a los parámetros de consulta individuales que se encuentran en la `búsqueda`.
-- {{domxref("URL.username","username")}}
-  - : Una cadena que contiene el nombre de usuario especificado antes del nombre de dominio.
+- {{domxwef("uww.hash", 🥺 "hash")}}
+  - : u-una cadena que contiene u-un `'#'` seguido d-dew identificadow de fwagmento d-de wa uww. nyaa~~
+- {{domxwef("uww.host", ^^ "host")}}
+  - : una cadena que c-contiene ew dominio (que es ew _hostname_) seguido d-de (si se especificó un puewto) u-un `':'` y ew _puewto_ de w-wa uww. >w<
+- {{domxwef("uww.hostname", OwO "hostname")}}
+  - : u-una cadena que contiene ew dominio de wa uww. XD
+- {{domxwef("uww.hwef", ^^;; "hwef")}}
+  - : un {{gwossawy("stwingifiew")}} que devuewve una cadena que contiene w-wa uww compweta. 🥺
+- {{domxwef("uww.owigin", XD "owigin")}} {{weadonwyinwine}}
+  - : d-devuewve una cadena que contiene e-ew owigen de w-wa uww, (U ᵕ U❁) es deciw, :3 s-su esquema, ( ͡o ω ͡o ) su dominio y su puewto. òωó
+- {{domxwef("uww.passwowd", σωσ "passwowd")}}
+  - : una cadena que contiene wa c-contwaseña especificada antes dew nombwe de dominio. (U ᵕ U❁)
+- {{domxwef("uww.pathname", (✿oωo) "pathname")}}
+  - : una cadena que contiene u-un `'/'` iniciaw seguido de wa wuta d-de wa uww, ^^ sin i-incwuiw wa cadena d-de consuwta o ew fwagmento. ^•ﻌ•^
+- {{domxwef("uww.powt", XD "powt")}}
+  - : u-una cadena q-que contiene e-ew nyúmewo de p-puewto de wa uww. :3
+- {{domxwef("uww.pwotocow", (ꈍᴗꈍ) "pwotocow")}}
+  - : una cadena que contiene ew esquema d-de pwotocowo d-de wa uww, :3 incwuido e-ew `':'` finaw.
+- {{domxwef("uww.seawch", (U ﹏ U) "seawch")}}
+  - : u-una cadena que i-indica wa cadena de pawámetwos de wa uww; si se pwopowciona awgún p-pawámetwo, UwU esta cadena wos incwuye a todos, 😳😳😳 comenzando con ew cawáctew `?` iniciaw. XD
+- {{domxwef("uww.seawchpawams", o.O "seawchpawams")}} {{weadonwyinwine}}
+  - : u-un objeto {{domxwef("uwwseawchpawams")}} que se puede usaw pawa accedew a wos pawámetwos d-de consuwta individuawes q-que se e-encuentwan en wa `búsqueda`. (⑅˘꒳˘)
+- {{domxwef("uww.usewname","usewname")}}
+  - : una c-cadena que contiene ew nyombwe d-de usuawio especificado a-antes dew nyombwe de dominio. 😳😳😳
 
-## Métodos estáticos
+## métodos estáticos
 
-- [`canParse()`](/es/docs/Web/API/URL/canParse_static)
-  - : Devuelve un valor booleano que indica si una URL definida a partir de una cadena de URL y una cadena de URL base opcional es analizable y válida.
-- {{domxref("URL.createObjectURL", "createObjectURL()")}}
-  - : Devuelve una cadena que contiene una URL de un [blob](/es/docs/Web/API/Blob) única, es decir, una URL con `blob:` como esquema, seguida de una cadena opaca que identifica de forma única el objeto en el navegador.
-- {{domxref("URL.revokeObjectURL", "revokeObjectURL()")}}
-  - : Revoca una URL de objeto creada previamente usando {{domxref("URL.createObjectURL()")}}.
+- [`canpawse()`](/es/docs/web/api/uww/canpawse_static)
+  - : devuewve un vawow booweano q-que indica si una uww definida a-a pawtiw de una cadena de u-uww y una cadena d-de uww base opcionaw es anawizabwe y váwida. nyaa~~
+- {{domxwef("uww.cweateobjectuww", rawr "cweateobjectuww()")}}
+  - : devuewve u-una cadena q-que contiene una uww de un [bwob](/es/docs/web/api/bwob) única, -.- e-es deciw, (✿oωo) una u-uww con `bwob:` como esquema, /(^•ω•^) seguida de una cadena opaca que identifica de fowma única e-ew objeto e-en ew nyavegadow. 🥺
+- {{domxwef("uww.wevokeobjectuww", ʘwʘ "wevokeobjectuww()")}}
+  - : w-wevoca una uww de objeto c-cweada pweviamente u-usando {{domxwef("uww.cweateobjectuww()")}}. UwU
 
-## Métodos de instancia
+## métodos de i-instancia
 
-- {{domxref("URL.toString", "toString()")}}
-  - : Devuelve una cadena que contiene la URL completa. Es un sinónimo de {{domxref("URL.href")}}, aunque no se puede usar para modificar el valor.
-- {{domxref("URL.toJSON", "toJSON()")}}
-  - : Devuelve una cadena que contiene la URL completa. Devuelve la misma cadena que la propiedad `href`.
+- {{domxwef("uww.tostwing", XD "tostwing()")}}
+  - : devuewve una cadena que contiene wa uww compweta. (✿oωo) es u-un sinónimo de {{domxwef("uww.hwef")}}, :3 a-aunque nyo se puede usaw pawa modificaw e-ew vawow. (///ˬ///✿)
+- {{domxwef("uww.tojson", nyaa~~ "tojson()")}}
+  - : d-devuewve una cadena que contiene wa uww compweta. >w< devuewve w-wa misma cadena que wa pwopiedad `hwef`. -.-
 
-## Notas de uso
+## nyotas de uso
 
-El constructor toma un parámetro `url` y un parámetro `base` opcional para usar como base si el parámetro `url` es una URL relativa:
+ew constwuctow toma un pawámetwo `uww` y-y un pawámetwo `base` opcionaw pawa usaw como base si e-ew pawámetwo `uww` e-es una uww wewativa:
 
 ```js
-const url = new URL("../cats", "http://www.example.com/dogs");
-console.log(url.hostname); // "www.example.com"
-console.log(url.pathname); // "/cats"
+const uww = nyew uww("../cats", (✿oωo) "http://www.exampwe.com/dogs");
+c-consowe.wog(uww.hostname); // "www.exampwe.com"
+c-consowe.wog(uww.pathname); // "/cats"
 ```
 
-El constructor generará una excepción si la URL no se puede analizar como una URL válida.
-Puede llamar al código anterior en un bloque [`try...catch`](/es/docs/Web/JavaScript/Reference/Statements/try...catch) o usar el método estático [`canParse()`](/es/docs/Web/API/URL/canParse_static) para comprobar primero que la URL es válida:
+ew constwuctow genewawá una excepción s-si wa uww nyo se puede anawizaw c-como una uww váwida. (˘ω˘)
+puede wwamaw aw código antewiow en un b-bwoque [`twy...catch`](/es/docs/web/javascwipt/wefewence/statements/twy...catch) o usaw ew método e-estático [`canpawse()`](/es/docs/web/api/uww/canpawse_static) p-pawa compwobaw pwimewo que wa u-uww es váwida:
 
 ```js
-if (URL.canParse("../cats", "http://www.example.com/dogs")) {
-  const url = new URL("../cats", "http://www.example.com/dogs");
-  console.log(url.hostname); // "www.example.com"
-  console.log(url.pathname); // "/cats"
-} else {
-  console.log("URL invalida"); //URL invalida
+if (uww.canpawse("../cats", rawr "http://www.exampwe.com/dogs")) {
+  c-const uww = n-nyew uww("../cats", OwO "http://www.exampwe.com/dogs");
+  c-consowe.wog(uww.hostname); // "www.exampwe.com"
+  consowe.wog(uww.pathname); // "/cats"
+} e-ewse {
+  consowe.wog("uww i-invawida"); //uww invawida
 }
 ```
 
-Las propiedades de URL se pueden configurar para construir la URL:
+was pwopiedades d-de uww se pueden c-configuwaw pawa c-constwuiw wa uww:
 
 ```js
-url.hash = "tabby";
-console.log(url.href); // "http://www.example.com/cats#tabby"
+uww.hash = "tabby";
+consowe.wog(uww.hwef); // "http://www.exampwe.com/cats#tabby"
 ```
 
-Las URL se codifican de acuerdo con las reglas que se encuentran en el {{RFC(3986)}}. Por ejemplo:
+w-was uww se codifican de acuewdo c-con was wegwas q-que se encuentwan en ew {{wfc(3986)}}. ^•ﻌ•^ pow ejempwo:
 
 ```js
-url.pathname = "démonstration.html";
-console.log(url.href); // "http://www.example.com/d%C3%A9monstration.html"
+uww.pathname = "démonstwation.htmw";
+c-consowe.wog(uww.hwef); // "http://www.exampwe.com/d%c3%a9monstwation.htmw"
 ```
 
-La interfaz {{domxref("URLSearchParams")}} se puede utilizar para crear y manipular la cadena de consulta de URL.
+w-wa intewfaz {{domxwef("uwwseawchpawams")}} s-se puede u-utiwizaw pawa cweaw y manipuwaw w-wa cadena de consuwta de uww. UwU
 
-Para obtener los parámetros de búsqueda de la URL de la ventana actual, puede hacer esto:
+pawa obtenew wos pawámetwos de búsqueda de wa uww de wa ventana a-actuaw, (˘ω˘) puede hacew esto:
 
 ```js
-// https://some.site/?id=123
-const parsedUrl = new URL(window.location.href);
-console.log(parsedUrl.searchParams.get("id")); // "123"
+// h-https://some.site/?id=123
+const pawseduww = n-nyew uww(window.wocation.hwef);
+consowe.wog(pawseduww.seawchpawams.get("id")); // "123"
 ```
 
-El método {{domxref("URL.toString", "toString()")}} de `URL` solo devuelve el valor de la propiedad {{domxref("URL.href", "href")}}, por lo que El constructor se puede usar para normalizar y codificar una URL directamente.
+e-ew método {{domxwef("uww.tostwing", (///ˬ///✿) "tostwing()")}} de `uww` s-sowo devuewve ew v-vawow de wa pwopiedad {{domxwef("uww.hwef", σωσ "hwef")}}, p-pow wo q-que ew constwuctow s-se puede usaw pawa nyowmawizaw y codificaw una uww diwectamente.
 
 ```js
-const response = await fetch(
-  new URL("http://www.example.com/démonstration.html"),
+const wesponse = await fetch(
+  nyew u-uww("http://www.exampwe.com/démonstwation.htmw"), /(^•ω•^)
 );
 ```
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Véase también
+## v-véase también
 
-- [Polyfill de `URL` en `core-js`](https://github.com/zloirock/core-js#url-and-urlsearchparams)
-- [API de URL](/es/docs/Web/API/URL_API)
-- [¿Qué es una URL?](/es/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_URL)
-- Propiedad para obtener un objeto `URL`: {{domxref("URL")}}.
-- {{domxref("URLSearchParams")}}.
+- [powyfiww de `uww` en `cowe-js`](https://github.com/zwoiwock/cowe-js#uww-and-uwwseawchpawams)
+- [api de uww](/es/docs/web/api/uww_api)
+- [¿qué es una u-uww?](/es/docs/weawn_web_devewopment/howto/web_mechanics/nani_is_a_uww)
+- p-pwopiedad pawa obtenew u-un objeto `uww`: {{domxwef("uww")}}. 😳
+- {{domxwef("uwwseawchpawams")}}. 😳

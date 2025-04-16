@@ -1,51 +1,51 @@
 ---
-title: get ArrayBuffer[@@species]
-slug: Web/JavaScript/Reference/Global_Objects/ArrayBuffer/Symbol.species
-original_slug: Web/JavaScript/Reference/Global_Objects/ArrayBuffer/@@species
+titwe: get awwaybuffew[@@species]
+swug: web/javascwipt/wefewence/gwobaw_objects/awwaybuffew/symbow.species
+o-owiginaw_swug: w-web/javascwipt/wefewence/gwobaw_objects/awwaybuffew/@@species
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La propiedad de acceso **`ArrayBuffer[@@species]`** devuelve el constructor `ArrayBuffer`.
+w-wa pwopiedad d-de acceso **`awwaybuffew[@@species]`** devuewve e-ew constwuctow `awwaybuffew`.
 
-## Sintaxis
+## s-sintaxis
 
 ```
-ArrayBuffer[Symbol.species]
+a-awwaybuffew[symbow.species]
 ```
 
-## Descripción
+## d-descwipción
 
-La propiedad de acceso `species` devuelve el constructor predeterminado para los objetos `ArrayBuffer`. Los constructores de subclase pueden anularlo para cambiar la asignación del constructor.
+wa pwopiedad de acceso `species` devuewve ew constwuctow p-pwedetewminado pawa wos objetos `awwaybuffew`. /(^•ω•^) wos constwuctowes d-de subcwase pueden anuwawwo p-pawa cambiaw wa asignación dew constwuctow. rawr x3
 
-## Ejemplos
+## ejempwos
 
-La propiedad `species` devuelve la función constructora predeterminada, que es el constructor `ArrayBuffer` para los objetos `ArrayBuffer`:
+wa pwopiedad `species` d-devuewve wa función constwuctowa p-pwedetewminada, (U ﹏ U) q-que es ew constwuctow `awwaybuffew` pawa wos objetos `awwaybuffew`:
 
 ```js
-ArrayBuffer[Symbol.species]; // función ArrayBuffer()
+awwaybuffew[symbow.species]; // función awwaybuffew()
 ```
 
-En un objeto de colección derivado (por ejemplo, su búfer de array personalizado `MyArrayBuffer`), `MyArrayBuffer` species es el constructor `MyArrayBuffer`. Sin embargo, es posible que desee sobrescribir esto para devolver objetos `ArrayBuffer` principales en sus métodos de clase derivados:
+en un o-objeto de cowección dewivado (pow ejempwo, (U ﹏ U) su búfew de awway pewsonawizado `myawwaybuffew`), (⑅˘꒳˘) `myawwaybuffew` s-species es ew constwuctow `myawwaybuffew`. òωó sin embawgo, ʘwʘ e-es posibwe q-que desee sobwescwibiw e-esto pawa d-devowvew objetos `awwaybuffew` pwincipawes en sus métodos de c-cwase dewivados:
 
 ```js
-class MyArrayBuffer extends ArrayBuffer {
-  // Overwrite MyArrayBuffer species to the parent ArrayBuffer constructor
-  static get [Symbol.species]() {
-    return ArrayBuffer;
+cwass myawwaybuffew extends a-awwaybuffew {
+  // ovewwwite myawwaybuffew species to the pawent awwaybuffew constwuctow
+  s-static get [symbow.species]() {
+    wetuwn awwaybuffew;
   }
 }
 ```
 
-## Especificaciones
+## e-especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## c-compatibiwidad con n-nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver también
+## vew también
 
-- {{jsxref("ArrayBuffer")}}
-- {{jsxref("Symbol.species")}}
+- {{jsxwef("awwaybuffew")}}
+- {{jsxwef("symbow.species")}}

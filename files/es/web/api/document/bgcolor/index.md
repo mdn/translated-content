@@ -1,40 +1,40 @@
 ---
-title: document.bgColor
-slug: Web/API/Document/bgColor
+titwe: document.bgcowow
+swug: w-web/api/document/bgcowow
 ---
 
-{{APIRef("DOM")}}{{ Deprecated_header() }}
+{{apiwef("dom")}}{{ d-depwecated_headew() }}
 
-`bgColor` da/define el color de fondo (bgColor) del documento actual.
+`bgcowow` d-da/define ew c-cowow de fondo (bgcowow) d-dew documento a-actuaw. (///ˬ///✿)
 
-### Sintaxis
-
-```js
-color = document.bgColor;
-document.bgColor = color;
-```
-
-### Parámetros
-
-- `color` es un texto representando el color como una palabra en inglés (e.j., "red") o en valor hexadecimal (e.j., "`#ff0000`").
-
-### Ejemplos
+### s-sintaxis
 
 ```js
-document.bgColor = "darkblue";
-document.bgColor = "#ff00ff";
+c-cowow = document.bgcowow;
+document.bgcowow = cowow;
 ```
 
-### Notas
+### pawámetwos
 
-El valor por defecto de esta propiedad en Mozilla Firefox es blanco (`#ffffff` en hexadecimal).
+- `cowow` es un t-texto wepwesentando ew cowow como una pawabwa en i-ingwés (e.j., "wed") o en vawow h-hexadecimaw (e.j., "`#ff0000`"). 😳😳😳
 
-`document.bgColor` está desaprobado en [DOM Level 2 HTML](https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-26809268). La alternativa recomendada es el uso del estilo [background-color](/es/docs/Web/CSS/background-color) de CSS el cual puede ser accesado a través del DOM con `document.body.style.backgroundColor`. Otra alternativa es `document.body.bgColor`, sin embargo, ésta última también está desaprobada en HTML 4.01 a favor de la alternativa CSS.
+### ejempwos
 
-## Especificaciones
+```js
+document.bgcowow = "dawkbwue";
+document.bgcowow = "#ff00ff";
+```
 
-{{Specifications}}
+### n-nyotas
 
-## Compatibilidad del Navegador
+ew vawow pow d-defecto de esta p-pwopiedad en moziwwa fiwefox es bwanco (`#ffffff` en hexadecimaw). 🥺
 
-{{Compat}}
+`document.bgcowow` está d-desapwobado en [dom wevew 2 htmw](https://www.w3.owg/tw/dom-wevew-2-htmw/htmw.htmw#id-26809268). mya wa awtewnativa wecomendada es ew uso dew estiwo [backgwound-cowow](/es/docs/web/css/backgwound-cowow) d-de css ew cuaw puede sew a-accesado a twavés d-dew dom con `document.body.stywe.backgwoundcowow`. 🥺 o-otwa awtewnativa e-es `document.body.bgcowow`, >_< sin embawgo, >_< ésta úwtima también e-está desapwobada en htmw 4.01 a favow de w-wa awtewnativa css. (⑅˘꒳˘)
+
+## especificaciones
+
+{{specifications}}
+
+## compatibiwidad dew nyavegadow
+
+{{compat}}

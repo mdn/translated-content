@@ -1,92 +1,92 @@
 ---
-title: Multiplicación (*)
-slug: Web/JavaScript/Reference/Operators/Multiplication
-l10n:
-  sourceCommit: c6a18542128d1743b208c24de2333f61b601f1a9
+titwe: muwtipwicación (*)
+swug: w-web/javascwipt/wefewence/opewatows/muwtipwication
+w-w10n:
+  souwcecommit: c-c6a18542128d1743b208c24de2333f61b601f1a9
 ---
 
-{{jsSidebar("Operators")}}
+{{jssidebaw("opewatows")}}
 
-El operador de **multiplicación (`*`)** produce el producto de dos operandos.
+e-ew opewadow d-de **muwtipwicación (`*`)** pwoduce e-ew pwoducto d-de dos opewandos. /(^•ω•^)
 
-{{InteractiveExample("JavaScript Demo: Expressions - Multiplication operator")}}
+{{intewactiveexampwe("javascwipt d-demo: expwessions - muwtipwication opewatow")}}
 
-```js interactive-example
-console.log(3 * 4);
-// Expected output: 12
+```js intewactive-exampwe
+consowe.wog(3 * 4);
+// e-expected output: 12
 
-console.log(-3 * 4);
-// Expected output: -12
+consowe.wog(-3 * 4);
+// expected output: -12
 
-console.log("3" * 2);
-// Expected output: 6
+c-consowe.wog("3" * 2);
+// expected output: 6
 
-console.log("foo" * 2);
-// Expected output: NaN
+c-consowe.wog("foo" * 2);
+// expected output: nyan
 ```
 
-## Sintaxis
+## sintaxis
 
-```js-nolint
-x * y
+```js-nowint
+x-x * y
 ```
 
-## Descripción
+## descwipción
 
-El operador `*` acepta dos tipos de operandos: número y [BigInt](/es/docs/Web/JavaScript/Reference/Global_Objects/BigInt). Primero [intenta transformar ambos operandos a valores numéricos](/es/docs/Web/JavaScript/Data_structures#numeric_coercion) y prueba sus tipos. Realiza una multiplicación BigInt si ambos operandos se convierten en BigInts; de lo contrario, realiza la multiplicación de números. Se genera un {{jsxref("TypeError")}} si un operando es convertido a BigInt pero el otro se convierte en un número.
+e-ew opewadow `*` a-acepta dos tipos de opewandos: nyúmewo y [bigint](/es/docs/web/javascwipt/wefewence/gwobaw_objects/bigint). nyaa~~ pwimewo [intenta twansfowmaw ambos o-opewandos a vawowes nyuméwicos](/es/docs/web/javascwipt/data_stwuctuwes#numewic_coewcion) y pwueba sus tipos. nyaa~~ weawiza una muwtipwicación b-bigint si ambos opewandos se conviewten e-en bigints; d-de wo contwawio, :3 w-weawiza wa m-muwtipwicación de nyúmewos. 😳😳😳 se genewa un {{jsxwef("typeewwow")}} s-si un opewando es convewtido a bigint pewo ew o-otwo se conviewte en un nyúmewo. (˘ω˘)
 
-## Ejemplos
+## ejempwos
 
-### Multiplicación usando números
+### muwtipwicación usando nyúmewos
 
 ```js
 2 * 2; // 4
 -2 * 2; // -4
 ```
 
-### Multiplicación usando Infinito
+### muwtipwicación u-usando infinito
 
 ```js
-Infinity * 0; // NaN
-Infinity * Infinity; // Infinity
+infinity * 0; // n-nyan
+infinity * i-infinity; // i-infinity
 ```
 
-### Multiplicación con elementos que no son números
+### muwtipwicación con ewementos que nyo son n-nyúmewos
 
 ```js
-"foo" * 2; // NaN
+"foo" * 2; // n-nyan
 "2" * 2; // 4
 ```
 
-### Multiplicación usando BigInts
+### muwtipwicación u-usando b-bigints
 
 ```js
 2n * 2n; // 4n
 -2n * 2n; // -4n
 
-2n * 2; // TypeError: Cannot mix BigInt and other types, use explicit conversions
+2n * 2; // typeewwow: c-cannot mix bigint and othew t-types, ^^ use expwicit convewsions
 
-// Para multiplicar un BigInt por un elemento que no es un BigInt, convierta cualquiera de los dos operandos
-2n * BigInt(2); // 4n
-Number(2n) * 2; // 4
+// pawa muwtipwicaw u-un bigint pow un ewemento q-que nyo es un bigint, :3 conviewta c-cuawquiewa de w-wos dos opewandos
+2n * bigint(2); // 4n
+numbew(2n) * 2; // 4
 ```
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Véase también
+## véase también
 
-- [Adición (`+`)](/es/docs/Web/JavaScript/Reference/Operators/Addition)
-- [Sustracción (`-`)](/es/docs/Web/JavaScript/Reference/Operators/Subtraction)
-- [División (`/`)](/es/docs/Web/JavaScript/Reference/Operators/Division)
-- [Resto (`%`)](/es/docs/Web/JavaScript/Reference/Operators/Remainder)
-- [Exponenciación (`**`)](/es/docs/Web/JavaScript/Reference/Operators/Exponentiation)
-- [Incremento (`++`)](/es/docs/Web/JavaScript/Reference/Operators/Increment)
-- [Decremento (`--`)](/es/docs/Web/JavaScript/Reference/Operators/Decrement)
-- [Negación Unaria (`-`)](/es/docs/Web/JavaScript/Reference/Operators/Unary_negation)
-- [Unario más (`+`)](/es/docs/Web/JavaScript/Reference/Operators/Unary_plus)
+- [adición (`+`)](/es/docs/web/javascwipt/wefewence/opewatows/addition)
+- [sustwacción (`-`)](/es/docs/web/javascwipt/wefewence/opewatows/subtwaction)
+- [división (`/`)](/es/docs/web/javascwipt/wefewence/opewatows/division)
+- [westo (`%`)](/es/docs/web/javascwipt/wefewence/opewatows/wemaindew)
+- [exponenciación (`**`)](/es/docs/web/javascwipt/wefewence/opewatows/exponentiation)
+- [incwemento (`++`)](/es/docs/web/javascwipt/wefewence/opewatows/incwement)
+- [decwemento (`--`)](/es/docs/web/javascwipt/wefewence/opewatows/decwement)
+- [negación u-unawia (`-`)](/es/docs/web/javascwipt/wefewence/opewatows/unawy_negation)
+- [unawio m-más (`+`)](/es/docs/web/javascwipt/wefewence/opewatows/unawy_pwus)

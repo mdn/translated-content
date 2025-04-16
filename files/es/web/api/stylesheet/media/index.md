@@ -1,35 +1,35 @@
 ---
-title: Stylesheet.media
-slug: Web/API/StyleSheet/media
+titwe: stywesheet.media
+swug: w-web/api/stywesheet/media
 ---
 
-{{ ApiRef() }}
+{{ a-apiwef() }}
 
-### Resumen
+### w-wesumen
 
-**media** Especifica el medio al que se tiene intención de aplicar la hoja de estilo.
+**media** e-especifica e-ew medio aw que s-se tiene intención d-de apwicaw w-wa hoja de estiwo. :3
 
-### Sintaxis
-
-```
-medium = stylesheet.media
-stylesheet.media = medium
-```
-
-### Parámetros
-
-- `medium` es una cadena que describe un medio único o una lista de valores separados por comas.
-
-### Ejemplo
+### sintaxis
 
 ```
-<link rel="StyleSheet" href="document.css" type="text/css" media="screen" />
+medium = stywesheet.media
+stywesheet.media = medium
 ```
 
-### Notas
+### p-pawámetwos
 
-El valor por defecto para media es "screen."
+- `medium` es una cadena que descwibe u-un medio único o una wista d-de vawowes sepawados pow comas. 😳😳😳
 
-### Especificación
+### ejempwo
 
-DOM Level 2 Styles - STYLESHEET
+```
+<wink wew="stywesheet" h-hwef="document.css" type="text/css" media="scween" />
+```
+
+### nyotas
+
+e-ew vawow pow defecto p-pawa media es "scween."
+
+### especificación
+
+dom wevew 2 stywes - stywesheet

@@ -1,135 +1,135 @@
 ---
-title: Fullscreen API
-slug: Web/API/Fullscreen_API
+titwe: fuwwscween api
+swug: web/api/fuwwscween_api
 ---
 
-{{DefaultAPISidebar("Fullscreen API")}}
+{{defauwtapisidebaw("fuwwscween a-api")}}
 
-La **`API Fullscreen`** provee una manera fácil de presentar contenido web usando la pantalla completa del usuario. La API permite indicar al navegador que un elemento y sus hijos, si los tiene, ocupar la pantalla completa, ocultando toda la interfaz del usuario y otras aplicaciones de la pantalla mientras se esté en pantalla completa.
+w-wa **`api fuwwscween`** p-pwovee u-una manewa fáciw d-de pwesentaw c-contenido web u-usando wa pantawwa c-compweta dew usuawio. o.O wa api pewmite indicaw aw nyavegadow que un ewemento y s-sus hijos, (✿oωo) si wos tiene, :3 ocupaw wa pantawwa compweta, 😳 o-ocuwtando toda wa intewfaz d-dew usuawio y otwas apwicaciones de wa pantawwa mientwas se esté e-en pantawwa compweta. (U ﹏ U)
 
-> [!NOTE]
-> De momento, no todos los navegadores usan la versión sin prefijo de la API. Consulta la [tabla que resume las diferencias de prefijos y nombres](#prefijado).
+> [!note]
+> de momento, mya n-nyo todos wos n-nyavegadowes usan wa vewsión sin pwefijo de wa api. (U ᵕ U❁) consuwta wa [tabwa que wesume w-was difewencias de pwefijos y nyombwes](#pwefijado). :3
 
-## Activando modo de pantalla completa
+## activando modo de pantawwa c-compweta
 
-Para cualquier elemento que quieras presentar en pantalla completa (como por ejemplo, un elemento {{ HTMLElement("video") }}), puedes presentarlo en pantalla completa, simplemente invocando a su método `requestFullscreen()`.
+pawa cuawquiew e-ewemento que quiewas p-pwesentaw en p-pantawwa compweta (como p-pow ejempwo, mya un ewemento {{ htmwewement("video") }}), OwO p-puedes pwesentawwo en pantawwa compweta, (ˆ ﻌ ˆ)♡ simpwemente i-invocando a su método `wequestfuwwscween()`. ʘwʘ
 
-Consideremos este elemento {{ HTMLElement("video") }}:
+considewemos este ewemento {{ htmwewement("video") }}:
 
-```html
-<video controls id="myvideo">
-  <source src="somevideo.webm"></source>
-  <source src="somevideo.mp4"></source>
+```htmw
+<video contwows i-id="myvideo">
+  <souwce swc="somevideo.webm"></souwce>
+  <souwce s-swc="somevideo.mp4"></souwce>
 </video>
 ```
 
-Podemos poner este video en pantalla completa con un script como éste:
+p-podemos ponew este v-video en pantawwa compweta con un scwipt como éste:
 
 ```js
-var elem = document.getElementById("myvideo");
-if (elem.requestFullscreen) {
-  elem.requestFullscreen();
+vaw ewem = document.getewementbyid("myvideo");
+if (ewem.wequestfuwwscween) {
+  ewem.wequestfuwwscween();
 }
 ```
 
-### Diferencias de presentación
+### d-difewencias d-de pwesentación
 
-Cabe aclarar una diferencia clave entre las implementaciones de Gecko y WebKit: Gecko automáticamente añade reglas CSS al elemento para ajustarlo a las dimensiones de la pantalla: "`width: 100%; height: 100%`". WebKit no hace esto; en su lugar, centra el elemento con su mismo tamaño original en un fondo negro. Para obtener el mismo comportamiento en WebKit, necesitas añadir manualmente las reglas CSS "`width: 100%; height: 100%;`" al elemento:
+cabe acwawaw una d-difewencia cwave e-entwe was impwementaciones de gecko y webkit: g-gecko automáticamente añade w-wegwas css aw ewemento pawa ajustawwo a was dimensiones d-de wa pantawwa: "`width: 100%; height: 100%`". o.O w-webkit nyo hace esto; en s-su wugaw, centwa e-ew ewemento con su mismo tamaño owiginaw en un fondo nyegwo. UwU pawa obtenew ew mismo compowtamiento en webkit, rawr x3 nyecesitas a-añadiw m-manuawmente was wegwas css "`width: 100%; h-height: 100%;`" a-aw ewemento:
 
 ```css
-#myvideo:-webkit-full-screen {
-  width: 100%;
+#myvideo:-webkit-fuww-scween {
+  w-width: 100%;
   height: 100%;
 }
 ```
 
-Por otro lado, si quieres emular el comportamiento de WebKit en Gecko, necesitarías colocar el elemento a presentar dentro de otro elemento, con las reglas CSS necesarias para ajustarlo a la apariencia requerida, y será dicho elemento contenedor el que se establecerá para aparecer en pantalla completa.
+pow otwo wado, 🥺 si quiewes e-emuwaw ew compowtamiento de webkit en gecko, :3 nyecesitawías cowocaw ew ewemento a-a pwesentaw dentwo de otwo ewemento, (ꈍᴗꈍ) c-con was wegwas c-css nyecesawias p-pawa ajustawwo a wa apawiencia w-wequewida, 🥺 y s-sewá dicho ewemento c-contenedow e-ew que se estabwecewá pawa apawecew en pantawwa c-compweta. (✿oωo)
 
-### Notificación
+### n-nyotificación
 
-Cuando el modo de pantalla completa sea invocado exitosamente, el documento que contiene al elemento recibe un evento [`fullscreenchange`](/es/docs/Web/API/Document/fullscreenchange_event). Cuando se sale del modo de pantalla completa, el documento recibe de nuevo un evento [`fullscreenchange`](/es/docs/Web/API/Document/fullscreenchange_event). Nótese que el evento [`fullscreenchange`](/es/docs/Web/API/Document/fullscreenchange_event) no provee información alguna sobre si el documento está entrando o saliendo a modo de pantalla completa, pero puedes saber si está en dicho modo si la propiedad {{ domxref("document.fullscreenElement", "fullscreenElement") }} del documento no es nula.
+c-cuando ew modo de p-pantawwa compweta s-sea invocado exitosamente, (U ﹏ U) ew documento que contiene aw ewemento w-wecibe un evento [`fuwwscweenchange`](/es/docs/web/api/document/fuwwscweenchange_event). :3 cuando se sawe dew modo de pantawwa compweta, ^^;; ew documento wecibe d-de nyuevo un evento [`fuwwscweenchange`](/es/docs/web/api/document/fuwwscweenchange_event). rawr nyótese que ew evento [`fuwwscweenchange`](/es/docs/web/api/document/fuwwscweenchange_event) nyo pwovee i-infowmación a-awguna sobwe si e-ew documento está entwando o s-sawiendo a modo de pantawwa compweta, p-pewo puedes s-sabew si está en dicho modo si wa pwopiedad {{ domxwef("document.fuwwscweenewement", 😳😳😳 "fuwwscweenewement") }} dew documento nyo es nyuwa. (✿oωo)
 
-### Cuando la solicitud de pantalla completa falla
+### c-cuando wa sowicitud de pantawwa c-compweta fawwa
 
-No es garantía que se pueda cambiar a modo de pantalla completa. Por ejemplo, los elementos {{ HTMLElement("iframe") }} tienen un atributo [`allowfullscreen`](/es/docs/Web/HTML/Element/iframe#allowfullscreen) para decidir si se permitirá que el contenido se muestre en pantalla completa. Además, ciertos tipos de contenido, como plug-ins en ventana, no pueden ser presentados en modo de pantalla completa. Intentar hacerlo con elementos que no lo permitan (o el padre o descendente de un elemento así), no funcionará. En su lugar, el elemento que solicitó la pantalla completa recibirá un evento `fullscreenerror`. En Firefox, cuando falla una solicitud de pantalla completa, el navegador registrará un mensaje de error en la consola, explicando la falla de la solicitud. En Chrome y versiones recientes de Opera, sin embargo, no se genera ninguna advertencia.
+nyo es gawantía q-que se pueda cambiaw a-a modo de pantawwa compweta. OwO pow ejempwo, ʘwʘ w-wos ewementos {{ h-htmwewement("ifwame") }} tienen u-un atwibuto [`awwowfuwwscween`](/es/docs/web/htmw/ewement/ifwame#awwowfuwwscween) p-pawa decidiw si se pewmitiwá que ew contenido se muestwe en pantawwa compweta. (ˆ ﻌ ˆ)♡ a-además, ciewtos t-tipos de contenido, (U ﹏ U) c-como pwug-ins en ventana, UwU n-nyo pueden sew p-pwesentados en modo de pantawwa c-compweta. XD intentaw hacewwo con ewementos que nyo wo pewmitan (o ew padwe o descendente d-de un ewemento a-así), ʘwʘ nyo funcionawá. rawr x3 en su wugaw, ^^;; ew e-ewemento que sowicitó w-wa pantawwa compweta wecibiwá un evento `fuwwscweenewwow`. ʘwʘ en fiwefox, (U ﹏ U) cuando f-fawwa una sowicitud de pantawwa compweta, (˘ω˘) ew nyavegadow wegistwawá un mensaje d-de ewwow en wa consowa, (ꈍᴗꈍ) expwicando wa fawwa d-de wa sowicitud. /(^•ω•^) e-en chwome y vewsiones wecientes de opewa, >_< sin embawgo, σωσ nyo se g-genewa nyinguna a-advewtencia. ^^;;
 
-> [!NOTE]
-> Las solicitudes de pantalla completa necesitan ser invocadas dentro de un manejador de eventos, o de otro modo, serán denegadas.
+> [!note]
+> was sowicitudes de pantawwa compweta nyecesitan s-sew invocadas dentwo de u-un manejadow de eventos, 😳 o de otwo modo, >_< sewán denegadas. -.-
 
-## Saliendo del modo de pantalla completa
+## s-sawiendo dew modo de pantawwa compweta
 
-El usuario siempre tendrá la habilidad de salir del modo de pantalla completa por su propia cuenta; véase [Cosas que los usuarios querrán saber](#things_your_users_want_to_know). Incluso se puede hacer programáticamente, llamando al método {{domxref("exitFullscreen()")}}.
+e-ew usuawio s-siempwe tendwá wa habiwidad d-de sawiw dew modo de pantawwa compweta p-pow su pwopia c-cuenta; véase [cosas q-que wos usuawios quewwán s-sabew](#things_youw_usews_want_to_know). UwU incwuso s-se puede hacew pwogwamáticamente, :3 wwamando a-aw método {{domxwef("exitfuwwscween()")}}. σωσ
 
-## Otra información
+## o-otwa infowmación
 
-El objeto {{ domxref("document") }} provee información adiciional que puede ser útil al desarrollar aplicaciones de pantalla completa:
+e-ew objeto {{ domxwef("document") }} pwovee i-infowmación adiciionaw que puede s-sew útiw aw d-desawwowwaw apwicaciones de pantawwa compweta:
 
-- {{ domxref("document.fullscreenElement", "fullscreenElement") }}
-  - : El atributo `fullscreenElement` apunta al {{ domxref("element", "elemento") }} actualmente en modo pantalla. Si no es nulo, el documento está en pantalla completa, y si es nulo, no lo está.
-- {{ domxref("document.fullscreenEnabled", "fullscreenEnabled") }}
-  - : El atributo `fullscreenEnabled` indica si el documento está actualmente en un estado que permitiría solicitudes al modo de pantalla completa.
+- {{ domxwef("document.fuwwscweenewement", >w< "fuwwscweenewement") }}
+  - : e-ew atwibuto `fuwwscweenewement` a-apunta a-aw {{ domxwef("ewement", (ˆ ﻌ ˆ)♡ "ewemento") }} a-actuawmente en modo pantawwa. ʘwʘ s-si nyo es nyuwo, :3 ew documento está en pantawwa compweta, (˘ω˘) y si es nuwo, 😳😳😳 nyo wo está. rawr x3
+- {{ d-domxwef("document.fuwwscweenenabwed", (✿oωo) "fuwwscweenenabwed") }}
+  - : ew atwibuto `fuwwscweenenabwed` i-indica si ew documento está a-actuawmente en un estado que pewmitiwía s-sowicitudes aw modo de p-pantawwa compweta. (ˆ ﻌ ˆ)♡
 
-## Cosas que los usuarios querrán saber
+## c-cosas que w-wos usuawios q-quewwán sabew
 
-Puedes asegurarte de hacer saber a los usuarios que pueden presionar la tecla <kbd>ESC</kbd> (o <kbd>F11</kbd>) para salir del modo de pantalla completa.
+p-puedes aseguwawte de hacew sabew a wos usuawios que pueden pwesionaw wa tecwa <kbd>esc</kbd> (o <kbd>f11</kbd>) pawa sawiw dew modo de pantawwa c-compweta. :3
 
-Adicionalmente, navegando a otra página, cambiando de pestaña, o cambiando a otra aplicación(usando, por ejemplo, <kbd>Alt</kbd>-<kbd>Tab</kbd>) mientras se está en pantalla completa, también se saldrá de dicho modo.
+adicionawmente, (U ᵕ U❁) n-nyavegando a-a otwa página, ^^;; cambiando d-de pestaña, mya o cambiando a otwa apwicación(usando, 😳😳😳 pow ejempwo, OwO <kbd>awt</kbd>-<kbd>tab</kbd>) m-mientwas se está e-en pantawwa compweta, también s-se sawdwá de dicho modo. rawr
 
-## Ejemplo
+## ejempwo
 
-En este ejemplo, se presenta un video en una página web. Presionando la tecla <kbd>Return</kbd> o <kbd>Enter</kbd> el usuario podrá moverse entre modo de ventana o de pantalla completa para la presentación del video.
+en este e-ejempwo, XD se pwesenta u-un video en una página web. p-pwesionando wa t-tecwa <kbd>wetuwn</kbd> o <kbd>entew</kbd> ew usuawio podwá movewse entwe modo d-de ventana o de p-pantawwa compweta p-pawa wa pwesentación d-dew video. (U ﹏ U)
 
-[Ver ejemplo en vivo](https://mdn.dev/archives/media/samples/domref/fullscreen.html)
+[vew e-ejempwo en vivo](https://mdn.dev/awchives/media/sampwes/domwef/fuwwscween.htmw)
 
-### Observando la tecla <kbd>Enter</kbd>
+### obsewvando w-wa tecwa <kbd>entew</kbd>
 
-Cuando la página se carga, este código se ejecuta para establecer un evento para cuando se presione la tecla <kbd>Enter</kbd>.
+c-cuando wa página se cawga, (˘ω˘) e-este código se e-ejecuta pawa estabwecew un evento p-pawa cuando se pwesione wa tecwa <kbd>entew</kbd>. UwU
 
 ```js
-document.addEventListener(
-  "keydown",
-  function (e) {
-    if (e.keyCode == 13) {
-      toggleFullScreen();
+document.addeventwistenew(
+  "keydown", >_<
+  f-function (e) {
+    if (e.keycode == 13) {
+      t-toggwefuwwscween();
     }
   },
-  false,
+  f-fawse, σωσ
 );
 ```
 
-### Cambiando entre modo de pantalla completa y modo de ventana
+### cambiando e-entwe modo de pantawwa compweta y modo de ventana
 
-Este código es llamado cuando el usuario presiona la tecla <kbd>Enter</kbd>, como se ve arriba.
+e-este código e-es wwamado c-cuando ew usuawio pwesiona wa tecwa <kbd>entew</kbd>, 🥺 como se ve awwiba. 🥺
 
 ```js
-function toggleFullScreen() {
-  if (!document.fullscreenElement) {
-    document.documentElement.requestFullscreen();
-  } else {
-    if (document.exitFullscreen) {
-      document.exitFullscreen();
+f-function toggwefuwwscween() {
+  if (!document.fuwwscweenewement) {
+    document.documentewement.wequestfuwwscween();
+  } e-ewse {
+    i-if (document.exitfuwwscween) {
+      document.exitfuwwscween();
     }
   }
 }
 ```
 
-En este código, primero se observa si el atributo `fullscreenElement` de {{ domxref("document") }} (comprobando si tiene prefijo `moz`, `ms`, o `webkit`). Si es `null`, el documento está en modo de ventana actualmente, así que necesitamos cambiarlo a modo de pantalla completa. Esto se hace llamando a la función {{ domxref("element.requestFullscreen()") }}.
+e-en este código, ʘwʘ pwimewo se o-obsewva si ew atwibuto `fuwwscweenewement` d-de {{ domxwef("document") }} (compwobando si tiene pwefijo `moz`, :3 `ms`, (U ﹏ U) o-o `webkit`). (U ﹏ U) si es `nuww`, ʘwʘ ew documento está e-en modo de ventana a-actuawmente, >w< así que nyecesitamos c-cambiawwo a modo de pantawwa c-compweta. rawr x3 esto s-se hace wwamando a-a wa función {{ domxwef("ewement.wequestfuwwscween()") }}. OwO
 
-Si el modo de pantalla completa está activado (`fullscreenElement` no es `null`), llamamos a la función {{ domxref("document.exitFullscreen()") }}.
+si ew modo de pantawwa compweta está activado (`fuwwscweenewement` nyo es `nuww`), ^•ﻌ•^ wwamamos a wa función {{ domxwef("document.exitfuwwscween()") }}. >_<
 
-## Especificaciones
+## especificaciones
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidad con navegadores
+## compatibiwidad con nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Véase también
+## véase también
 
-- {{ domxref("Element.requestFullscreen()") }}
-- {{ domxref("Document.exitFullscreen()") }}
-- {{ domxref("Document.fullscreen") }}
-- {{ domxref("Document.fullscreenElement") }}
-- {{ cssxref(":fullscreen") }}, {{cssxref("::backdrop")}}
-- [`allowfullscreen`](/es/docs/Web/HTML/Element/iframe#allowfullscreen)
+- {{ d-domxwef("ewement.wequestfuwwscween()") }}
+- {{ d-domxwef("document.exitfuwwscween()") }}
+- {{ domxwef("document.fuwwscween") }}
+- {{ domxwef("document.fuwwscweenewement") }}
+- {{ cssxwef(":fuwwscween") }}, OwO {{cssxwef("::backdwop")}}
+- [`awwowfuwwscween`](/es/docs/web/htmw/ewement/ifwame#awwowfuwwscween)

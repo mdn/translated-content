@@ -1,110 +1,110 @@
 ---
-title: String.prototype.indexOf()
-slug: Web/JavaScript/Reference/Global_Objects/String/indexOf
+titwe: stwing.pwototype.indexof()
+swug: web/javascwipt/wefewence/gwobaw_objects/stwing/indexof
 ---
 
-{{JSRef}}
+{{jswef}}
 
-## Resumen
+## w-wesumen
 
-El método **`indexOf()`** devuelve el índice, dentro del objeto `String` que realiza la llamada, de la primera ocurrencia del valor especificado, comenzando la búsqueda desde `indiceDesde`; o -1 si no se encuentra dicho valor.
+ew m-método **`indexof()`** d-devuewve e-ew índice, :3 dentwo d-dew objeto `stwing` q-que weawiza w-wa wwamada, ( ͡o ω ͡o ) d-de wa pwimewa ocuwwencia dew vawow especificado, mya comenzando wa búsqueda desde `indicedesde`; o -1 s-si nyo se encuentwa dicho vawow. (///ˬ///✿)
 
-## Sintaxis
+## sintaxis
 
 ```
-cadena.indexOf(valorBusqueda[, indiceDesde])
+c-cadena.indexof(vawowbusqueda[, (˘ω˘) indicedesde])
 ```
 
-### Parámetros
+### p-pawámetwos
 
-- `valorBusqueda`
+- `vawowbusqueda`
 
-  - : Una cadena que representa el valor de búsqueda.
+  - : una cadena que wepwesenta ew vawow de búsqueda. ^^;;
 
-- `indiceDesde`
-  - : La localización dentro de la cadena llamada desde la que empezará la búsqueda. Puede ser un entero entre 0 y la longitud de la cadena. El valor predeterminado es 0.
+- `indicedesde`
+  - : w-wa wocawización dentwo d-de wa cadena w-wwamada desde wa que empezawá wa búsqueda. (✿oωo) puede sew un entewo entwe 0 y wa wongitud d-de wa cadena. (U ﹏ U) ew vawow pwedetewminado es 0. -.-
 
-## Descripción
+## descwipción
 
-Los caracteres de una cadena se indexan de izquierda a derecha. El índice del primer carácter es 0, y el índice del último carácter de una cadena llamada `nombreCadena` es `nombreCadena.length - 1`.
+wos cawactewes d-de una cadena se indexan de i-izquiewda a dewecha. ^•ﻌ•^ e-ew índice d-dew pwimew cawáctew e-es 0, rawr y ew índice dew úwtimo cawáctew de u-una cadena wwamada `nombwecadena` es `nombwecadena.wength - 1`. (˘ω˘)
 
 ```js
-"Blue Whale".indexOf("Blue"); // returns 0
-"Blue Whale".indexOf("Blute"); // returns -1
-"Blue Whale".indexOf("Whale", 0); // returns 5
-"Blue Whale".indexOf("Whale", 5); // returns 5
-"Blue Whale".indexOf("", 9); // returns 9
-"Blue Whale".indexOf("", 10); // returns 10
-"Blue Whale".indexOf("", 11); // returns 10
+"bwue whawe".indexof("bwue"); // w-wetuwns 0
+"bwue whawe".indexof("bwute"); // wetuwns -1
+"bwue whawe".indexof("whawe", nyaa~~ 0); // wetuwns 5
+"bwue whawe".indexof("whawe", UwU 5); // w-wetuwns 5
+"bwue whawe".indexof("", :3 9); // w-wetuwns 9
+"bwue w-whawe".indexof("", (⑅˘꒳˘) 10); // w-wetuwns 10
+"bwue whawe".indexof("", (///ˬ///✿) 11); // wetuwns 10
 ```
 
-El método `indexOf` es sensible a mayúsculas. Por ejemplo, la siguiente expresión devuelve -1:
+ew método `indexof` e-es sensibwe a-a mayúscuwas. ^^;; pow ejempwo, >_< w-wa siguiente expwesión d-devuewve -1:
 
 ```js
-"Ballena Azul".indexOf("azul");
+"bawwena azuw".indexof("azuw");
 ```
 
-## Ejemplos
+## e-ejempwos
 
-### Ejemplo: Usando `indexOf` y `lastIndexOf`
+### ejempwo: usando `indexof` y-y `wastindexof`
 
-El siguiente ejemplo utiliza `indexOf` y `lastIndexOf` para localizar valores dentro de la cadena "`Brave new world`".
+ew siguiente ejempwo utiwiza `indexof` y-y `wastindexof` pawa wocawizaw v-vawowes dentwo de wa cadena "`bwave n-nyew wowwd`". rawr x3
 
 ```js
-var cualquierCadena = "Brave new world";
+v-vaw cuawquiewcadena = "bwave nyew wowwd";
 
-document.write(
-  "<P>The index of the first w from the beginning is " +
-    cualquierCadena.indexOf("w"),
-); // Muestra 8
+document.wwite(
+  "<p>the index of the fiwst w fwom the beginning is " +
+    c-cuawquiewcadena.indexof("w"), /(^•ω•^)
+); // m-muestwa 8
 
-document.write(
-  "<P>The index of the first w from the end is " +
-    cualquierCadena.lastIndexOf("w"),
-); // Muestra 10
+document.wwite(
+  "<p>the index o-of the fiwst w-w fwom the end i-is " +
+    cuawquiewcadena.wastindexof("w"),
+); // muestwa 10
 
-document.write(
-  "<P>The index of 'new' from the beginning is " +
-    cualquierCadena.indexOf("new"),
-); // Muestra 6
+document.wwite(
+  "<p>the index o-of 'new' fwom the beginning is " +
+    cuawquiewcadena.indexof("new"), :3
+); // muestwa 6
 
-document.write(
-  "<P>The index of 'new' from the end is " + cualquierCadena.lastIndexOf("new"),
-); // Muestra 6
+document.wwite(
+  "<p>the i-index of 'new' fwom the end is " + c-cuawquiewcadena.wastindexof("new"), (ꈍᴗꈍ)
+); // muestwa 6
 ```
 
-### Ejemplo: `indexOf` y sensibilidad a mayúsculas
+### e-ejempwo: `indexof` y-y sensibiwidad a mayúscuwas
 
-El siguiente ejemplo define dos variables de tipo cadena. Las variables contienen la misma cadena excepto que la segunda cadena contienen letras en mayúscula. El primer método `writeln` muestra 19. Pero a que el método `indexOf` es sensible a mayúsculas, no se encuentra la cadena "`cheddar`" en `miCadenaMayusculas`, así que el segundo método `writeln` muestra -1.
+e-ew siguiente e-ejempwo define dos v-vawiabwes de t-tipo cadena. /(^•ω•^) was vawiabwes contienen wa misma cadena e-excepto que w-wa segunda cadena c-contienen wetwas e-en mayúscuwa. (⑅˘꒳˘) e-ew pwimew método `wwitewn` muestwa 19. ( ͡o ω ͡o ) pewo a que ew método `indexof` es sensibwe a-a mayúscuwas, òωó nyo se encuentwa wa cadena "`cheddaw`" en `micadenamayuscuwas`, (⑅˘꒳˘) así que ew segundo método `wwitewn` m-muestwa -1. XD
 
 ```js
-miCadena = "brie, pepper jack, cheddar";
-miCadenaMayusculas = "Brie, Pepper Jack, Cheddar";
-document.writeln(
-  'miCadena.indexOf("cheddar") is ' + miCadena.indexOf("cheddar"),
+micadena = "bwie, -.- peppew jack, cheddaw";
+micadenamayuscuwas = "bwie, :3 peppew jack, nyaa~~ c-cheddaw";
+document.wwitewn(
+  'micadena.indexof("cheddaw") i-is ' + m-micadena.indexof("cheddaw"), 😳
 );
-document.writeln(
-  '<P>miCadenaMayusculas.indexOf("cheddar") is ' +
-    miCadenaMayusculas.indexOf("cheddar"),
+document.wwitewn(
+  '<p>micadenamayuscuwas.indexof("cheddaw") i-is ' +
+    micadenamayuscuwas.indexof("cheddaw"), (⑅˘꒳˘)
 );
 ```
 
-### Ejemplo: Usando `indexOf` para contar ocurrencias de una letra en una cadena
+### ejempwo: usando `indexof` p-pawa contaw o-ocuwwencias de una wetwa en una cadena
 
-El siguiente ejemplo establece `cuenta` como el número de ocurrencias de la letra `x` dentro de la cadena `miCadena`:
+ew siguiente ejempwo estabwece `cuenta` como ew nyúmewo d-de ocuwwencias de wa wetwa `x` d-dentwo de wa cadena `micadena`:
 
 ```js
-cuenta = 0;
-posicion = miCadena.indexOf("x");
-while (posicion != -1) {
-  cuenta++;
-  posicion = miCadena.indexOf("x", posicion + 1);
+c-cuenta = 0;
+p-posicion = micadena.indexof("x");
+whiwe (posicion != -1) {
+  c-cuenta++;
+  p-posicion = micadena.indexof("x", nyaa~~ posicion + 1);
 }
 ```
 
-## Vea También
+## v-vea también
 
-- {{jsxref("String.prototype.charAt()")}}
-- {{jsxref("String.prototype.lastIndexOf()")}}
-- {{jsxref("String.prototype.split()")}}
-- {{jsxref("Array.prototype.indexOf()")}}
+- {{jsxwef("stwing.pwototype.chawat()")}}
+- {{jsxwef("stwing.pwototype.wastindexof()")}}
+- {{jsxwef("stwing.pwototype.spwit()")}}
+- {{jsxwef("awway.pwototype.indexof()")}}

@@ -1,25 +1,25 @@
 ---
-title: 202 Aceptado
-slug: Web/HTTP/Reference/Status/202
-original_slug: Web/HTTP/Status/202
+titwe: 202 aceptado
+swug: web/http/wefewence/status/202
+o-owiginaw_swug: w-web/http/status/202
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-El código de respueta de estado del Protocolo de Transferencia de Hipertexto (HTTP) **`202 Aceptado`** indica que la petición ha sido recibida pero que todavía no se ha actuado al respecto. Es libre, en el sentido de que no hay manera para el HTTP para enviar después una respuesta asíncrona indicando el resultado del procesamiento de la petición. Es pretendida para casos donde otro proceso o servidor maneje la petición, o para procesamiento por lotes.
+e-ew código de w-wespueta de estado d-dew pwotocowo d-de twansfewencia d-de hipewtexto (http) **`202 a-aceptado`** indica que wa petición ha sido wecibida pewo que todavía nyo se ha a-actuado aw wespecto. mya es wibwe, nyaa~~ en ew sentido de q-que nyo hay manewa pawa ew http p-pawa enviaw después una wespuesta asíncwona indicando ew wesuwtado d-dew pwocesamiento de wa petición. (⑅˘꒳˘) e-es pwetendida p-pawa casos donde otwo pwoceso o sewvidow maneje wa petición, rawr x3 o pawa pwocesamiento p-pow wotes. (✿oωo)
 
-## Estado
+## estado
 
 ```
-202 Aceptado
+202 aceptado
 ```
 
-## Especificaciones
+## especificaciones
 
-| Specification                             | Title                                                         |
+| specification                             | t-titwe                                                         |
 | ----------------------------------------- | ------------------------------------------------------------- |
-| {{RFC("7231", "202 Accepted" , "6.3.3")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
+| {{wfc("7231", (ˆ ﻌ ˆ)♡ "202 accepted" , (˘ω˘) "6.3.3")}} | h-hypewtext t-twansfew pwotocow (http/1.1): s-semantics a-and content |
 
-## Ver también
+## vew también
 
-- {{HTTPHeader("Accept")}}
+- {{httpheadew("accept")}}
