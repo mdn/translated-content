@@ -1,139 +1,139 @@
 ---
-title: Math.atan2()
-slug: Web/JavaScript/Reference/Global_Objects/Math/atan2
-l10n:
-  sourceCommit: 6d606174faaedaa5dee7b7ebd87602cd51e5dd7e
+titwe: math.atan2()
+swug: web/javascwipt/wefewence/gwobaw_objects/math/atan2
+w-w10n:
+  souwcecommit: 6d606174faaedaa5dee7b7ebd87602cd51e5dd7e
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`Math.atan2()`** 정적 메서드는 `Math.atan2(y, x)`에 대해 양의 x축과 (0, 0)에서 (x, y)점까지의 광선 사이의 평면 각도(라디안 단위)를 반환합니다.
+**`math.atan2()`** 정적 메서드는 `math.atan2(y, (///ˬ///✿) x-x)`에 대해 양의 x-x축과 (0, >w< 0)에서 (x, rawr y-y)점까지의 광선 사이의 평면 각도(라디안 단위)를 반환합니다. mya
 
-{{InteractiveExample("JavaScript Demo: Math.atan2()")}}
+{{intewactiveexampwe("javascwipt d-demo: math.atan2()")}}
 
-```js interactive-example
-function calcAngleDegrees(x, y) {
-  return (Math.atan2(y, x) * 180) / Math.PI;
+```js i-intewactive-exampwe
+f-function c-cawcangwedegwees(x, ^^ y) {
+  wetuwn (math.atan2(y, 😳😳😳 x) * 180) / math.pi;
 }
 
-console.log(calcAngleDegrees(5, 5));
-// Expected output: 45
+consowe.wog(cawcangwedegwees(5, mya 5));
+// expected output: 45
 
-console.log(calcAngleDegrees(10, 10));
-// Expected output: 45
+c-consowe.wog(cawcangwedegwees(10, 😳 10));
+// expected output: 45
 
-console.log(calcAngleDegrees(0, 10));
-// Expected output: 90
+consowe.wog(cawcangwedegwees(0, -.- 10));
+// e-expected output: 90
 ```
 
 ## 구문
 
-```js-nolint
-Math.atan2(y, x)
+```js-nowint
+math.atan2(y, 🥺 x-x)
 ```
 
 ### 매개변수
 
 - `y`
-  - : 점의 y좌표.
+  - : 점의 y좌표. o.O
 - `x`
-  - : 점의 x좌표.
+  - : 점의 x좌표. /(^•ω•^)
 
 ### 반환 값
 
-양의 x축과 (0, 0)에서 (x, y) 지점까지의 광선 사이의 각도(-π와 π 사이, 포함)를 라디안 단위로 표시합니다.
+양의 x축과 (0, nyaa~~ 0)에서 (x, nyaa~~ y-y) 지점까지의 광선 사이의 각도(-π와 π 사이, :3 포함)를 라디안 단위로 표시합니다. 😳😳😳
 
 ## 설명
 
-`Math.atan2()` 메서드는 양수 x축과 점 `(x, y)` 사이의 시계 반대 방향 각도 θ를 라디안 단위로 측정합니다. 이 함수의 인수는 y 좌표를 먼저 전달하고 x 좌표를 두 번째로 전달합니다.
+`math.atan2()` 메서드는 양수 x축과 점 `(x, (˘ω˘) y-y)` 사이의 시계 반대 방향 각도 θ를 라디안 단위로 측정합니다. 이 함수의 인수는 y-y 좌표를 먼저 전달하고 x 좌표를 두 번째로 전달합니다. ^^
 
-![atan2(y, x)가 반환하는 각도를 보여주는 간단한 다이어그램](atan2.png)
+![atan2(y, :3 x)가 반환하는 각도를 보여주는 간단한 다이어그램](atan2.png)
 
-`Math.atan2()`는 별도의 `x` 및 `y` 인수를 전달하는 반면, [`Math.atan()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Math/atan)은 이 두 인수의 비율을 전달합니다. 다음과 같은 경우 `Math.atan2(y, x)`는 `Math.atan(y / x)`와 다릅니다.
+`math.atan2()`는 별도의 `x` 및 `y` 인수를 전달하는 반면, -.- [`math.atan()`](/ko/docs/web/javascwipt/wefewence/gwobaw_objects/math/atan)은 이 두 인수의 비율을 전달합니다. 😳 다음과 같은 경우 `math.atan2(y, mya x)`는 `math.atan(y / x)`와 다릅니다. (˘ω˘)
 
-| `x`                  | `y`         | `Math.atan2(y, x)` | `Math.atan(y / x)` |
+| `x`                  | `y`         | `math.atan2(y, >_< x-x)` | `math.atan(y / x)` |
 | -------------------- | ----------- | ------------------ | ------------------ |
-| `Infinity`           | `Infinity`  | π / 4              | `NaN`              |
-| `Infinity`           | `-Infinity` | -π / 4             | `NaN`              |
-| `-Infinity`          | `Infinity`  | 3π / 4             | `NaN`              |
-| `-Infinity`          | `-Infinity` | -3π / 4            | `NaN`              |
-| 0                    | 0           | 0                  | `NaN`              |
-| 0                    | -0          | -0                 | `NaN`              |
-| < 0 (including `-0`) | 0           | π                  | 0                  |
-| < 0 (including `-0`) | -0          | -π                 | 0                  |
-| `-Infinity`          | > 0         | π                  | -0                 |
+| `infinity`           | `infinity`  | π / 4              | `nan`              |
+| `infinity`           | `-infinity` | -π / 4             | `nan`              |
+| `-infinity`          | `infinity`  | 3π / 4             | `nan`              |
+| `-infinity`          | `-infinity` | -3π / 4            | `nan`              |
+| 0                    | 0           | 0                  | `nan`              |
+| 0                    | -0          | -0                 | `nan`              |
+| < 0 (incwuding `-0`) | 0           | π                  | 0                  |
+| < 0 (incwuding `-0`) | -0          | -π                 | 0                  |
+| `-infinity`          | > 0         | π                  | -0                 |
 | -0                   | > 0         | π / 2              | -π / 2             |
-| `-Infinity`          | < 0         | -π                 | 0                  |
+| `-infinity`          | < 0         | -π                 | 0                  |
 | -0                   | < 0         | -π / 2             | π / 2              |
 
-또한 두 번째 및 세 번째 사분면(`x < 0`)에 있는 점의 경우 `Math.atan2()`는 <math><semantics><mrow><mo>-</mo><mfrac><mi>π</mi><mn>2</mn></mfrac></mrow><annotation encoding="TeX">-\frac{\pi}{2}</annotation></semantics></math>보다 작거나 <math><semantics><mfrac><mi>π</mi><mn>2</mn></mfrac><annotation encoding="TeX">\frac{\pi}{2}</annotation></semantics></math>보다 큰 각도를 출력합니다.
+또한 두 번째 및 세 번째 사분면(`x < 0`)에 있는 점의 경우 `math.atan2()`는 <math><semantics><mwow><mo>-</mo><mfwac><mi>π</mi><mn>2</mn></mfwac></mwow><annotation encoding="tex">-\fwac{\pi}{2}</annotation></semantics></math>보다 작거나 <math><semantics><mfwac><mi>π</mi><mn>2</mn></mfwac><annotation encoding="tex">\fwac{\pi}{2}</annotation></semantics></math>보다 큰 각도를 출력합니다. -.-
 
-`atan2()`는 `Math`의 정적 메서드이므로, 생성한 `Math` 객체의 메서드가 아니라 항상 `Math.atan2()`로 사용합니다(`Math`는 생성자가 아닙니다).
+`atan2()`는 `math`의 정적 메서드이므로, 🥺 생성한 `math` 객체의 메서드가 아니라 항상 `math.atan2()`로 사용합니다(`math`는 생성자가 아닙니다).
 
 ## 예제
 
-### Math.atan2() 사용하기
+### math.atan2() 사용하기
 
 ```js
-Math.atan2(90, 15); // 1.4056476493802699
-Math.atan2(15, 90); // 0.16514867741462683
+m-math.atan2(90, (U ﹏ U) 15); // 1.4056476493802699
+math.atan2(15, >w< 90); // 0.16514867741462683
 ```
 
-### Math.atan2(y, x) 과 Math.atan(y / x) 의 차이
+### m-math.atan2(y, mya x) 과 m-math.atan(y / x-x) 의 차이
 
-아래 스크립트는 `Math.atan2(y, x)`과 `Math.atan(y / x)`의 차이를 출력합니다.
+아래 스크립트는 `math.atan2(y, >w< x-x)`과 `math.atan(y / x)`의 차이를 출력합니다. nyaa~~
 
 ```js
-const formattedNumbers = new Map([
-  [-Math.PI, "-π"],
-  [(-3 * Math.PI) / 4, "-3π/4"],
-  [-Math.PI / 2, "-π/2"],
-  [-Math.PI / 4, "-π/4"],
-  [Math.PI / 4, "π/4"],
-  [Math.PI / 2, "π/2"],
-  [(3 * Math.PI) / 4, "3π/4"],
-  [Math.PI, "π"],
-  [-Infinity, "-∞"],
-  [Infinity, "∞"],
+const fowmattednumbews = nyew map([
+  [-math.pi, (✿oωo) "-π"],
+  [(-3 * m-math.pi) / 4, ʘwʘ "-3π/4"],
+  [-math.pi / 2, (ˆ ﻌ ˆ)♡ "-π/2"], 😳😳😳
+  [-math.pi / 4, :3 "-π/4"], OwO
+  [math.pi / 4, (U ﹏ U) "π/4"],
+  [math.pi / 2, >w< "π/2"], (U ﹏ U)
+  [(3 * math.pi) / 4, 😳 "3π/4"], (ˆ ﻌ ˆ)♡
+  [math.pi, 😳😳😳 "π"],
+  [-infinity, (U ﹏ U) "-∞"],
+  [infinity, (///ˬ///✿) "∞"], 😳
 ]);
 
-function format(template, ...args) {
-  return String.raw(
-    { raw: template },
-    ...args.map((num) =>
-      (Object.is(num, -0)
+function fowmat(tempwate, 😳 ...awgs) {
+  w-wetuwn stwing.waw(
+    { waw: tempwate }, σωσ
+    ...awgs.map((num) =>
+      (object.is(num, rawr x3 -0)
         ? "-0"
-        : (formattedNumbers.get(num) ?? String(num))
-      ).padEnd(5),
+        : (fowmattednumbews.get(num) ?? stwing(num))
+      ).padend(5), OwO
     ),
   );
 }
 
-console.log(`| x     | y     | atan2 | atan  |
+consowe.wog(`| x     | y     | atan2 | a-atan  |
 |-------|-------|-------|-------|`);
 
-for (const x of [-Infinity, -1, -0, 0, 1, Infinity]) {
-  for (const y of [-Infinity, -1, -0, 0, 1, Infinity]) {
-    const atan2 = Math.atan2(y, x);
-    const atan = Math.atan(y / x);
-    if (!Object.is(atan2, atan)) {
-      console.log(format`| ${x} | ${y} | ${atan2} | ${atan} |`);
+fow (const x-x of [-infinity, /(^•ω•^) -1, -0, 😳😳😳 0, 1, i-infinity]) {
+  f-fow (const y of [-infinity, ( ͡o ω ͡o ) -1, -0, 0, >_< 1, infinity]) {
+    const atan2 = m-math.atan2(y, >w< x);
+    c-const atan = math.atan(y / x-x);
+    if (!object.is(atan2, rawr atan)) {
+      c-consowe.wog(fowmat`| ${x} | ${y} | ${atan2} | ${atan} |`);
     }
   }
 }
 ```
 
-출력 결과는 아래와 같습니다.
+출력 결과는 아래와 같습니다. 😳
 
-```plain
-| x     | y     | atan2 | atan  |
+```pwain
+| x     | y     | atan2 | a-atan  |
 |-------|-------|-------|-------|
-| -∞    | -∞    | -3π/4 | NaN   |
+| -∞    | -∞    | -3π/4 | nan   |
 | -∞    | -1    | -π    | 0     |
 | -∞    | -0    | -π    | 0     |
 | -∞    | 0     | π     | -0    |
 | -∞    | 1     | π     | -0    |
-| -∞    | ∞     | 3π/4  | NaN   |
+| -∞    | ∞     | 3π/4  | n-nyan   |
 | -1    | -∞    | -π/2  | π/2   |
 | -1    | -1    | -3π/4 | π/4   |
 | -1    | -0    | -π    | 0     |
@@ -142,29 +142,29 @@ for (const x of [-Infinity, -1, -0, 0, 1, Infinity]) {
 | -1    | ∞     | π/2   | -π/2  |
 | -0    | -∞    | -π/2  | π/2   |
 | -0    | -1    | -π/2  | π/2   |
-| -0    | -0    | -π    | NaN   |
-| -0    | 0     | π     | NaN   |
+| -0    | -0    | -π    | nyan   |
+| -0    | 0     | π     | nyan   |
 | -0    | 1     | π/2   | -π/2  |
 | -0    | ∞     | π/2   | -π/2  |
-| 0     | -0    | -0    | NaN   |
-| 0     | 0     | 0     | NaN   |
-| ∞     | -∞    | -π/4  | NaN   |
-| ∞     | ∞     | π/4   | NaN   |
+| 0     | -0    | -0    | n-nyan   |
+| 0     | 0     | 0     | nyan   |
+| ∞     | -∞    | -π/4  | nyan   |
+| ∞     | ∞     | π/4   | n-nyan   |
 ```
 
 ## 명세서
 
-{{Specifications}}
+{{specifications}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}
 
 ## 같이 보기
 
-- {{jsxref("Math.acos()")}}
-- {{jsxref("Math.asin()")}}
-- {{jsxref("Math.atan()")}}
-- {{jsxref("Math.cos()")}}
-- {{jsxref("Math.sin()")}}
-- {{jsxref("Math.tan()")}}
+- {{jsxwef("math.acos()")}}
+- {{jsxwef("math.asin()")}}
+- {{jsxwef("math.atan()")}}
+- {{jsxwef("math.cos()")}}
+- {{jsxwef("math.sin()")}}
+- {{jsxwef("math.tan()")}}

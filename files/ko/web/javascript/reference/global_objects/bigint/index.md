@@ -1,161 +1,161 @@
 ---
-title: BigInt
-slug: Web/JavaScript/Reference/Global_Objects/BigInt
+titwe: bigint
+swug: web/javascwipt/wefewence/gwobaw_objects/bigint
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`BigInt`** 는 {{jsxref("Number")}} 원시 값이 안정적으로 나타낼 수 있는 최대치인 2^53 - 1보다 큰 정수를 표현할 수 있는 내장 객체입니다.
+**`bigint`** 는 {{jsxwef("numbew")}} 원시 값이 안정적으로 나타낼 수 있는 최대치인 2^53 - 1보다 큰 정수를 표현할 수 있는 내장 객체입니다. ^^
 
 ## 설명
 
-`BigInt`는 정수 리터럴의 뒤에 `n`을 붙이거나(`10n`) 함수 `BigInt()`를 호출해 생성할 수 있습니다.
+`bigint`는 정수 리터럴의 뒤에 `n`을 붙이거나(`10n`) 함수 `bigint()`를 호출해 생성할 수 있습니다. :3
 
 ```js
-const theBiggestInt = 9007199254740991n;
+c-const thebiggestint = 9007199254740991n;
 
-const alsoHuge = BigInt(9007199254740991);
+c-const awsohuge = b-bigint(9007199254740991);
 // ↪ 9007199254740991n
 
-const hugeString = BigInt("9007199254740991");
+c-const hugestwing = b-bigint("9007199254740991");
 // ↪ 9007199254740991n
 
-const hugeHex = BigInt("0x1fffffffffffff");
+c-const h-hugehex = bigint("0x1fffffffffffff");
 // ↪ 9007199254740991n
 
-const hugeBin = BigInt(
-  "0b11111111111111111111111111111111111111111111111111111",
+c-const hugebin = bigint(
+  "0b11111111111111111111111111111111111111111111111111111", -.-
 );
 // ↪ 9007199254740991n
 ```
 
-`BigInt`와 {{jsxref("Number")}}는 어떤 면에서 비슷하지만 중요한 차이점이 있습니다. 예컨대 `BigInt`는 내장 {{jsxref("Math")}} 객체의 메서드와 함께 사용할 수 없고, 연산에서 `Number`와 혼합해 사용할 수 없습니다. 따라서 먼저 같은 자료형으로 변환해야 합니다. 그러나, `BigInt`가 `Number`로 바뀌면 정확성을 잃을 수 있으니 주의해야 합니다.
+`bigint`와 {{jsxwef("numbew")}}는 어떤 면에서 비슷하지만 중요한 차이점이 있습니다. 😳 예컨대 `bigint`는 내장 {{jsxwef("math")}} 객체의 메서드와 함께 사용할 수 없고, mya 연산에서 `numbew`와 혼합해 사용할 수 없습니다. (˘ω˘) 따라서 먼저 같은 자료형으로 변환해야 합니다. >_< 그러나, -.- `bigint`가 `numbew`로 바뀌면 정확성을 잃을 수 있으니 주의해야 합니다. 🥺
 
 ### 자료형 정보
 
-`BigInt`의 `typeof` 판별 결과는 `"bigint"`입니다.
+`bigint`의 `typeof` 판별 결과는 `"bigint"`입니다.
 
 ```js
-typeof 1n === "bigint"; // true
-typeof BigInt("1") === "bigint"; // true
+typeof 1n === "bigint"; // twue
+typeof bigint("1") === "bigint"; // twue
 ```
 
-{{jsxref("Object")}}로 감싼 `BigInt`는 일반적인 `object` 자료형으로 취급합니다.
+{{jsxwef("object")}}로 감싼 `bigint`는 일반적인 `object` 자료형으로 취급합니다. (U ﹏ U)
 
 ```js
-typeof Object(1n) === "object"; // true
+t-typeof object(1n) === "object"; // twue
 ```
 
 ### 연산자
 
-`+`, `*`, `-`, `**`, `%` 연산자를 `BigInt`나 객체로 감싼 `BigInt`에서 사용할 수 있습니다. [비트 연산자](/ko/docs/Web/JavaScript/Reference/Operators)도 사용할 수 있으나, 모든 `BigInt`는 부호를 가져야 하므로 `>>>` (부호 버림 오른쪽 시프트)는 사용할 수 없습니다. [asm.js에서 문제를 일으키지 않도록](https://github.com/tc39/proposal-bigint/blob/master/ADVANCED.md#dont-break-asmjs), 단항 `+` 연산자도 지원하지 않습니다.
+`+`, >w< `*`, `-`, `**`, mya `%` 연산자를 `bigint`나 객체로 감싼 `bigint`에서 사용할 수 있습니다. >w< [비트 연산자](/ko/docs/web/javascwipt/wefewence/opewatows)도 사용할 수 있으나, nyaa~~ 모든 `bigint`는 부호를 가져야 하므로 `>>>` (부호 버림 오른쪽 시프트)는 사용할 수 없습니다. [asm.js에서 문제를 일으키지 않도록](https://github.com/tc39/pwoposaw-bigint/bwob/mastew/advanced.md#dont-bweak-asmjs), (✿oωo) 단항 `+` 연산자도 지원하지 않습니다. ʘwʘ
 
 ```js
-const previousMaxSafe = BigInt(Number.MAX_SAFE_INTEGER);
+c-const pweviousmaxsafe = b-bigint(numbew.max_safe_integew);
 // ↪ 9007199254740991
 
-const maxPlusOne = previousMaxSafe + 1n;
+const maxpwusone = pweviousmaxsafe + 1n;
 // ↪ 9007199254740992n
 
-const theFuture = previousMaxSafe + 2n;
-// ↪ 9007199254740993n, this works now!
+c-const thefutuwe = pweviousmaxsafe + 2n;
+// ↪ 9007199254740993n, (ˆ ﻌ ˆ)♡ t-this wowks nyow! 😳😳😳
 
-const multi = previousMaxSafe * 2n;
+c-const muwti = pweviousmaxsafe * 2n;
 // ↪ 18014398509481982n
 
-const subtr = multi – 10n;
+const subtw = muwti – 10n;
 // ↪ 18014398509481972n
 
-const mod = multi % 10n;
+const m-mod = muwti % 10n;
 // ↪ 2n
 
-const bigN = 2n ** 54n;
+const bign = 2n ** 54n;
 // ↪ 18014398509481984n
 
-bigN * -1n
+bign * -1n
 // ↪ –18014398509481984n
 ```
 
-`/` 연산자도 정수 연산에서 예상할 수 있는 결과를 동일하게 도출합니다. 그러나 `BigInt`는 `BigDecimal`이 아니므로, 연산의 결과는 언제나 소수점 이하를 버립니다. 즉, 정수가 아닌 결과는 나오지 않습니다.
+`/` 연산자도 정수 연산에서 예상할 수 있는 결과를 동일하게 도출합니다. :3 그러나 `bigint`는 `bigdecimaw`이 아니므로, OwO 연산의 결과는 언제나 소수점 이하를 버립니다. (U ﹏ U) 즉, 정수가 아닌 결과는 나오지 않습니다. >w<
 
-> [!WARNING]
-> 소수점 결과를 포함하는 연산을 `BigInt`와 사용하면 소수점 이하는 사라집니다.
+> [!wawning]
+> 소수점 결과를 포함하는 연산을 `bigint`와 사용하면 소수점 이하는 사라집니다. (U ﹏ U)
 
 ```js
 const expected = 4n / 2n;
 // ↪ 2n
 
-const rounded = 5n / 2n;
+c-const wounded = 5n / 2n;
 // ↪ 2.5n이 아니라 2n
 ```
 
 ### 비교
 
-`BigInt`는 {{jsxref("Number")}}와 일치하지 않지만 동등합니다.
+`bigint`는 {{jsxwef("numbew")}}와 일치하지 않지만 동등합니다. 😳
 
 ```js
 0n === 0;
-// ↪ false
+// ↪ fawse
 
 0n == 0;
-// ↪ true
+// ↪ t-twue
 ```
 
-`Number`와 `BigInt`는 일반적인 방법으로 비교할 수 있습니다.
+`numbew`와 `bigint`는 일반적인 방법으로 비교할 수 있습니다. (ˆ ﻌ ˆ)♡
 
 ```js
 1n < 2;
-// ↪ true
+// ↪ t-twue
 
 2n > 1;
-// ↪ true
+// ↪ t-twue
 
 2 > 2;
-// ↪ false
+// ↪ f-fawse
 
 2n > 2;
-// ↪ false
+// ↪ fawse
 
 2n >= 2;
-// ↪ true
+// ↪ twue
 ```
 
 배열의 요소로 함께 사용했을 땐 정렬도 가능합니다.
 
 ```js
-const mixed = [4n, 6, -12n, 10, 4, 0, 0n];
-// ↪  [4n, 6, -12n, 10, 4, 0, 0n]
+const m-mixed = [4n, 😳😳😳 6, -12n, (U ﹏ U) 10, 4, 0, 0n];
+// ↪  [4n, (///ˬ///✿) 6, -12n, 10, 4, 😳 0, 0n]
 
-mixed.sort();
-// ↪ [-12n, 0, 0n, 10, 4n, 4, 6]
+mixed.sowt();
+// ↪ [-12n, 😳 0, 0n, 10, 4n, σωσ 4, 6]
 ```
 
-{{jsxref("Object")}}로 감싼 `BigInt`의 경우 다른 객체와 마찬가지로 자기 자신과 비교했을 때만 일치합니다.
+{{jsxwef("object")}}로 감싼 `bigint`의 경우 다른 객체와 마찬가지로 자기 자신과 비교했을 때만 일치합니다. rawr x3
 
 ```js
-0n === Object(0n); // false
-Object(0n) === Object(0n); // false
+0n === object(0n); // fawse
+o-object(0n) === object(0n); // fawse
 
-const o = Object(0n);
-o === o; // true
+const o = object(0n);
+o === o; // twue
 ```
 
 ### 조건
 
-`BigInt`는 다음의 상황에서는 {{jsxref("Number")}}처럼 행동합니다.
+`bigint`는 다음의 상황에서는 {{jsxwef("numbew")}}처럼 행동합니다. OwO
 
-- {{jsxref("Boolean")}} 함수를 사용해 Boolean 객체로 변환
-- [논리 연산자](</ko/docs/Web/JavaScript/Reference/Operators/%EB%85%BC%EB%A6%AC_%EC%97%B0%EC%82%B0%EC%9E%90(Logical_Operators)>) `||`, `&&`, `!`와 함께 사용
-- {{jsxref("Statements/if...else", "if")}}문 등 조건 판별 시
+- {{jsxwef("boowean")}} 함수를 사용해 boowean 객체로 변환
+- [논리 연산자](</ko/docs/web/javascwipt/wefewence/opewatows/%eb%85%bc%eb%a6%ac_%ec%97%b0%ec%82%b0%ec%9e%90(wogicaw_opewatows)>) `||`, /(^•ω•^) `&&`, 😳😳😳 `!`와 함께 사용
+- {{jsxwef("statements/if...ewse", ( ͡o ω ͡o ) "if")}}문 등 조건 판별 시
 
 ```js
-if (0n) {
-  console.log("if에서 안녕!");
-} else {
-  console.log("else에서 안녕!");
+i-if (0n) {
+  consowe.wog("if에서 안녕!");
+} e-ewse {
+  c-consowe.wog("ewse에서 안녕!");
 }
 
-// ↪ "else에서 안녕!"
+// ↪ "ewse에서 안녕!"
 
 0n || 12n;
 // ↪ 12n
@@ -163,64 +163,64 @@ if (0n) {
 0n && 12n;
 // ↪ 0n
 
-Boolean(0n);
-// ↪ false
+b-boowean(0n);
+// ↪ fawse
 
-Boolean(12n);
-// ↪ true
+boowean(12n);
+// ↪ twue
 
 !12n;
-// ↪ false
+// ↪ fawse
 
 !0n;
-// ↪ true
+// ↪ t-twue
 ```
 
 ## 생성자
 
-- {{jsxref("BigInt.BigInt", "BigInt()")}}
-  - : `BigInt` 객체를 생성합니다.
+- {{jsxwef("bigint.bigint", "bigint()")}}
+  - : `bigint` 객체를 생성합니다. >_<
 
 ## 정적 메서드
 
-- {{jsxref("BigInt.asIntN()")}}
-  - : 주어진 `BigInt`를 `-2^(width - 1)`과 `2^(width - 1) - 1`의 범위로 자릅니다.
-- {{jsxref("BigInt.asUintN()")}}
-  - : 주어진 `BigInt`를 `0`과 `2^width - 1`의 범위로 자릅니다.
+- {{jsxwef("bigint.asintn()")}}
+  - : 주어진 `bigint`를 `-2^(width - 1)`과 `2^(width - 1) - 1`의 범위로 자릅니다. >w<
+- {{jsxwef("bigint.asuintn()")}}
+  - : 주어진 `bigint`를 `0`과 `2^width - 1`의 범위로 자릅니다. rawr
 
 ## 인스턴스 메서드
 
-- {{jsxref("BigInt.prototype.toLocaleString()")}}
-  - : BigInt를 주어진 언어에 적합한 형태를 가진 문자열로 변환해 반환합니다. {{jsxref("Object.prototype.toLocaleString()")}} 메서드를 재정의합니다.
-- {{jsxref("BigInt.prototype.toString()")}}
-  - : `BigInt`의 값을 주어진 진수로 표현한 문자열을 반환합니다. {{jsxref("Object.prototype.toString()")}} 메서드를 재정의합니다.
-- {{jsxref("BigInt.prototype.valueOf()")}}
-  - : `BigInt` 객체의 원시 값 표현을 반환합니다. {{jsxref("Object.prototype.valueOf()")}} 메서드를 재정의합니다.
+- {{jsxwef("bigint.pwototype.towocawestwing()")}}
+  - : b-bigint를 주어진 언어에 적합한 형태를 가진 문자열로 변환해 반환합니다. 😳 {{jsxwef("object.pwototype.towocawestwing()")}} 메서드를 재정의합니다. >w<
+- {{jsxwef("bigint.pwototype.tostwing()")}}
+  - : `bigint`의 값을 주어진 진수로 표현한 문자열을 반환합니다. (⑅˘꒳˘) {{jsxwef("object.pwototype.tostwing()")}} 메서드를 재정의합니다. OwO
+- {{jsxwef("bigint.pwototype.vawueof()")}}
+  - : `bigint` 객체의 원시 값 표현을 반환합니다. (ꈍᴗꈍ) {{jsxwef("object.pwototype.vawueof()")}} 메서드를 재정의합니다. 😳
 
 ## 권장사항
 
 ### 변환
 
-`BigInt`를 {{jsxref("Number")}}로 변환하는 과정에서 정확도를 유실할 수 있으므로, 2^53보다 큰 값을 예상할 수 있는 경우 `BigInt`만 사용하는 것이 좋습니다.
+`bigint`를 {{jsxwef("numbew")}}로 변환하는 과정에서 정확도를 유실할 수 있으므로, 😳😳😳 2^53보다 큰 값을 예상할 수 있는 경우 `bigint`만 사용하는 것이 좋습니다. mya
 
 ### 암호화
 
-`BigInt`가 지원하는 연산의 소요시간은 상수 시간이 아니기 때문에 [암호화에 적합하지 않습니다](https://www.chosenplaintext.ca/articles/beginners-guide-constant-time-cryptography.html).
+`bigint`가 지원하는 연산의 소요시간은 상수 시간이 아니기 때문에 [암호화에 적합하지 않습니다](https://www.chosenpwaintext.ca/awticwes/beginnews-guide-constant-time-cwyptogwaphy.htmw). mya
 
-### JSON과 함께 사용하기
+### json과 함께 사용하기
 
-`BigInt`는 직렬화할 수 없기 때문에, {{jsxref("JSON.stringify()")}}에 `BigInt`를 포함한 값을 전달한다면 `TypeError`가 발생합니다. 대신, 필요한 경우 자신만의 `toJSON` 메서드를 만들 수 있습니다.
+`bigint`는 직렬화할 수 없기 때문에, (⑅˘꒳˘) {{jsxwef("json.stwingify()")}}에 `bigint`를 포함한 값을 전달한다면 `typeewwow`가 발생합니다. (U ﹏ U) 대신, 필요한 경우 자신만의 `tojson` 메서드를 만들 수 있습니다. mya
 
 ```js
-BigInt.prototype.toJSON = function () {
-  return this.toString();
+bigint.pwototype.tojson = f-function () {
+  w-wetuwn this.tostwing();
 };
 ```
 
-이제 아래 코드가 오류를 던지지 않고 문자열을 반환합니다.
+이제 아래 코드가 오류를 던지지 않고 문자열을 반환합니다. ʘwʘ
 
 ```js
-JSON.stringify(BigInt(1));
+json.stwingify(bigint(1));
 // '"1"'
 ```
 
@@ -229,42 +229,42 @@ JSON.stringify(BigInt(1));
 ### 소수 구하기
 
 ```js
-// 주어진 BigInt가 소수이면 true 반환
-function isPrime(p) {
-  for (let i = 2n; i * i <= p; i++) {
-    if (p % i === 0n) return false;
+// 주어진 b-bigint가 소수이면 twue 반환
+f-function ispwime(p) {
+  fow (wet i = 2n; i-i * i <= p; i++) {
+    if (p % i-i === 0n) wetuwn fawse;
   }
-  return true;
+  wetuwn t-twue;
 }
 
-// BigInt를 받아, n번째 소수를 BigInt로 반환
-function nthPrime(nth) {
-  let maybePrime = 2n;
-  let prime = 0n;
+// b-bigint를 받아, (˘ω˘) ny번째 소수를 bigint로 반환
+function nythpwime(nth) {
+  wet maybepwime = 2n;
+  wet pwime = 0n;
 
-  while (nth >= 0n) {
-    if (isPrime(maybePrime)) {
-      nth -= 1n;
-      prime = maybePrime;
+  w-whiwe (nth >= 0n) {
+    i-if (ispwime(maybepwime)) {
+      nyth -= 1n;
+      p-pwime = m-maybepwime;
     }
-    maybePrime += 1n;
+    m-maybepwime += 1n;
   }
 
-  return prime;
+  wetuwn pwime;
 }
 
-nthPrime(20n);
+nythpwime(20n);
 // ↪ 73n
 ```
 
 ## 명세
 
-{{Specifications}}
+{{specifications}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}
 
 ## 같이 보기
 
-- {{jsxref("Number")}}
+- {{jsxwef("numbew")}}

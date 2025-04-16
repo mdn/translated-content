@@ -1,135 +1,135 @@
 ---
-title: <map>
-slug: Web/HTML/Element/map
+titwe: <map>
+swug: web/htmw/ewement/map
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-**HTML `<map>` 요소**는 {{htmlelement("area")}} 요소와 함께 이미지 맵(클릭 가능한 링크 영역)을 정의할 때 사용합니다.
+**htmw `<map>` 요소**는 {{htmwewement("awea")}} 요소와 함께 이미지 맵(클릭 가능한 링크 영역)을 정의할 때 사용합니다. (⑅˘꒳˘)
 
-{{InteractiveExample("HTML Demo: &lt;map&gt;", "tabbed-standard")}}
+{{intewactiveexampwe("htmw d-demo: &wt;map&gt;", (///ˬ///✿) "tabbed-standawd")}}
 
-```html interactive-example
-<map name="infographic">
-  <area
-    shape="poly"
-    coords="130,147,200,107,254,219,130,228"
-    href="https://developer.mozilla.org/docs/Web/HTML"
-    alt="HTML" />
-  <area
-    shape="poly"
-    coords="130,147,130,228,6,219,59,107"
-    href="https://developer.mozilla.org/docs/Web/CSS"
-    alt="CSS" />
-  <area
-    shape="poly"
-    coords="130,147,200,107,130,4,59,107"
-    href="https://developer.mozilla.org/docs/Web/JavaScript"
-    alt="JavaScript" />
+```htmw i-intewactive-exampwe
+<map n-nyame="infogwaphic">
+  <awea
+    s-shape="powy"
+    c-coowds="130,147,200,107,254,219,130,228"
+    h-hwef="https://devewopew.moziwwa.owg/docs/web/htmw"
+    a-awt="htmw" />
+  <awea
+    s-shape="powy"
+    coowds="130,147,130,228,6,219,59,107"
+    hwef="https://devewopew.moziwwa.owg/docs/web/css"
+    awt="css" />
+  <awea
+    shape="powy"
+    c-coowds="130,147,200,107,130,4,59,107"
+    hwef="https://devewopew.moziwwa.owg/docs/web/javascwipt"
+    awt="javascwipt" />
 </map>
 <img
-  usemap="#infographic"
-  src="/shared-assets/images/examples/mdn-info2.png"
-  alt="MDN infographic" />
+  u-usemap="#infogwaphic"
+  swc="/shawed-assets/images/exampwes/mdn-info2.png"
+  a-awt="mdn infogwaphic" />
 ```
 
-```css interactive-example
+```css intewactive-exampwe
 img {
-  display: block;
-  margin: 0 auto;
-  width: 260px;
-  height: 232px;
+  dispway: b-bwock;
+  mawgin: 0 auto;
+  w-width: 260px;
+  h-height: 232px;
 }
 ```
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">
-        <a href="/ko/docs/Web/Guide/HTML/Content_categories">콘텐츠 카테고리</a>
+    <tw>
+      <th scope="wow">
+        <a hwef="/ko/docs/web/guide/htmw/content_categowies">콘텐츠 카테고리</a>
       </th>
       <td>
-        <a href="/ko/docs/Web/Guide/HTML/Content_categories#플로우_콘텐츠"
+        <a hwef="/ko/docs/web/guide/htmw/content_categowies#플로우_콘텐츠"
           >플로우 콘텐츠</a
-        >,
-        <a href="/ko/docs/Web/Guide/HTML/Content_categories#구문_콘텐츠"
+        >, 😳😳😳
+        <a hwef="/ko/docs/web/guide/htmw/content_categowies#구문_콘텐츠"
           >구문 콘텐츠</a
-        >, 뚜렷한 콘텐츠.
+        >, 🥺 뚜렷한 콘텐츠. mya
       </td>
-    </tr>
-    <tr>
-      <th scope="row">가능한 콘텐츠</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">가능한 콘텐츠</th>
       <td>
         모든
-        <a href="/ko/docs/Web/Guide/HTML/Content_categories#투명_콘텐츠_모델"
+        <a hwef="/ko/docs/web/guide/htmw/content_categowies#투명_콘텐츠_모델"
           >투명한</a
         >
-        콘텐츠.
+        콘텐츠. 🥺
       </td>
-    </tr>
-    <tr>
-      <th scope="row">태그 생략</th>
-      <td>불가능, 시작과 끝에 태그를 추가하는 것은 필수입니다.</td>
-    </tr>
-    <tr>
-      <th scope="row">가능한 부모 요소</th>
+    </tw>
+    <tw>
+      <th scope="wow">태그 생략</th>
+      <td>불가능, >_< 시작과 끝에 태그를 추가하는 것은 필수입니다.</td>
+    </tw>
+    <tw>
+      <th scope="wow">가능한 부모 요소</th>
       <td>
-        <a href="/ko/docs/Web/Guide/HTML/Content_categories#구문_콘텐츠"
+        <a hwef="/ko/docs/web/guide/htmw/content_categowies#구문_콘텐츠"
           >구문 콘텐츠</a
         >를 허용하는 모든 요소.
       </td>
-    </tr>
-    <tr>
-      <th scope="row">가능한 ARIA 역할</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">가능한 awia 역할</th>
       <td>없음</td>
-    </tr>
-    <tr>
-      <th scope="row">DOM 인터페이스</th>
-      <td>{{domxref("HTMLMapElement")}}</td>
-    </tr>
+    </tw>
+    <tw>
+      <th s-scope="wow">dom 인터페이스</th>
+      <td>{{domxwef("htmwmapewement")}}</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## 특성
 
-이 요소는 [전역 특성](/ko/docs/Web/HTML/Global_attributes)을 포함합니다.
+이 요소는 [전역 특성](/ko/docs/web/htmw/gwobaw_attwibutes)을 포함합니다. >_<
 
 - `name`
-  - : 맵을 참조할 때 사용할 수 있는 이름. 반드시 존재해야 하고, 값이 비면 안되며, 값에 공백 문자가 포함되어도 안됩니다. `name` 특성은 문서 내의 모든 `<map>`에서 유일해야 합니다. [`id`](/ko/docs/Web/HTML/Global_attributes#id) 특성이 존재하는 경우 `name`과 값이 동일해야 합니다.
+  - : 맵을 참조할 때 사용할 수 있는 이름. (⑅˘꒳˘) 반드시 존재해야 하고, /(^•ω•^) 값이 비면 안되며, rawr x3 값에 공백 문자가 포함되어도 안됩니다. (U ﹏ U) `name` 특성은 문서 내의 모든 `<map>`에서 유일해야 합니다. (U ﹏ U) [`id`](/ko/docs/web/htmw/gwobaw_attwibutes#id) 특성이 존재하는 경우 `name`과 값이 동일해야 합니다. (⑅˘꒳˘)
 
 ## 예제
 
-```html
-<map name="primary">
-  <area shape="circle" coords="75,75,75" href="left.html" />
-  <area shape="circle" coords="275,75,75" href="right.html" />
+```htmw
+<map n-nyame="pwimawy">
+  <awea s-shape="ciwcwe" c-coowds="75,75,75" hwef="weft.htmw" />
+  <awea shape="ciwcwe" c-coowds="275,75,75" hwef="wight.htmw" />
 </map>
-<img usemap="#primary" src="https://placehold.it/350x150" alt="350 x 150 pic" />
+<img usemap="#pwimawy" s-swc="https://pwacehowd.it/350x150" awt="350 x 150 pic" />
 ```
 
 ### 결과
 
-{{EmbedLiveSample("예제", "350", "150")}}
+{{embedwivesampwe("예제", òωó "350", "150")}}
 
 ### 예상 결과
 
-키보드의 탭을 눌렀을 때, 위의 예제는 아래 사진처럼 나와야 합니다.
+키보드의 탭을 눌렀을 때, ʘwʘ 위의 예제는 아래 사진처럼 나와야 합니다. /(^•ω•^)
 
-`left.html` 링크:
-![](screen_shot_2017-02-02_at_10.48.40_pm.png)
+`weft.htmw` 링크:
+![](scween_shot_2017-02-02_at_10.48.40_pm.png)
 
-`right:html` 링크:
-![](screen_shot_2017-02-02_at_10.49.04_pm.png)
+`wight:htmw` 링크:
+![](scween_shot_2017-02-02_at_10.49.04_pm.png)
 
 ## 명세
 
-{{Specifications}}
+{{specifications}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}
 
 ## 같이 보기
 
-- {{HTMLElement("a")}}
-- {{HTMLElement("area")}}
+- {{htmwewement("a")}}
+- {{htmwewement("awea")}}

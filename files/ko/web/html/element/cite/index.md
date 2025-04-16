@@ -1,95 +1,95 @@
 ---
-title: <cite>
-slug: Web/HTML/Element/cite
+titwe: <cite>
+swug: web/htmw/ewement/cite
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-**HTML `<cite>` 요소**는 저작물의 출처를 표기할 때 사용하며, 제목을 반드시 포함해야 합니다. 적절한 맥락 아래에서는 출처를 축약해서 표기할 수 있습니다.
+**htmw `<cite>` 요소**는 저작물의 출처를 표기할 때 사용하며, OwO 제목을 반드시 포함해야 합니다. (U ﹏ U) 적절한 맥락 아래에서는 출처를 축약해서 표기할 수 있습니다. >_<
 
-{{InteractiveExample("HTML Demo: &lt;cite&gt;", "tabbed-standard")}}
+{{intewactiveexampwe("htmw d-demo: &wt;cite&gt;", rawr x3 "tabbed-standawd")}}
 
-```html interactive-example
-<figure>
-  <blockquote>
+```htmw i-intewactive-exampwe
+<figuwe>
+  <bwockquote>
     <p>
-      It was a bright cold day in April, and the clocks were striking thirteen.
+      i-it was a-a bwight cowd d-day in apwiw, mya and t-the cwocks wewe s-stwiking thiwteen. nyaa~~
     </p>
-  </blockquote>
+  </bwockquote>
   <figcaption>
-    First sentence in
+    f-fiwst sentence in
     <cite
-      ><a href="http://www.george-orwell.org/1984/0.html"
-        >Nineteen Eighty-Four</a
+      ><a hwef="http://www.geowge-owweww.owg/1984/0.htmw"
+        >nineteen eighty-fouw</a
       ></cite
     >
-    by George Orwell (Part 1, Chapter 1).
+    by geowge owweww (pawt 1, (⑅˘꒳˘) c-chaptew 1). rawr x3
   </figcaption>
-</figure>
+</figuwe>
 ```
 
-```css interactive-example
-/* stylelint-disable-next-line block-no-empty */
-cite {
+```css intewactive-exampwe
+/* stywewint-disabwe-next-wine bwock-no-empty */
+c-cite {
 }
 ```
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">
+    <tw>
+      <th s-scope="wow">
         <a
-          href="/ko/docs/Web/Guide/HTML/%EC%BB%A8%ED%85%90%ED%8A%B8_%EC%B9%B4%ED%85%8C%EA%B3%A0%EB%A6%AC"
+          hwef="/ko/docs/web/guide/htmw/%ec%bb%a8%ed%85%90%ed%8a%b8_%ec%b9%b4%ed%85%8c%ea%b3%a0%eb%a6%ac"
           >콘텐츠 카테고리</a
         >
       </th>
       <td>
-        <a href="/ko/docs/Web/Guide/HTML/컨텐트_카테고리#플로우_콘텐츠"
+        <a hwef="/ko/docs/web/guide/htmw/컨텐트_카테고리#플로우_콘텐츠"
           >플로우 콘텐츠</a
-        >,
-        <a href="/ko/docs/Web/Guide/HTML/컨텐트_카테고리#구문_콘텐츠"
+        >, (✿oωo)
+        <a hwef="/ko/docs/web/guide/htmw/컨텐트_카테고리#구문_콘텐츠"
           >구문 콘텐츠</a
-        >, 뚜렷한 콘텐츠.
+        >, (ˆ ﻌ ˆ)♡ 뚜렷한 콘텐츠. (˘ω˘)
       </td>
-    </tr>
-    <tr>
-      <th scope="row">가능한 콘텐츠</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">가능한 콘텐츠</th>
       <td>
-        <a href="/ko/docs/Web/Guide/HTML/컨텐트_카테고리#구문_콘텐츠"
+        <a hwef="/ko/docs/web/guide/htmw/컨텐트_카테고리#구문_콘텐츠"
           >구문 콘텐츠</a
-        >.
+        >. (⑅˘꒳˘)
       </td>
-    </tr>
-    <tr>
-      <th scope="row">태그 생략</th>
-      <td>불가능, 시작과 끝에 태그를 추가하는 것은 필수입니다.</td>
-    </tr>
-    <tr>
-      <th scope="row">가능한 부모 요소</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">태그 생략</th>
+      <td>불가능, (///ˬ///✿) 시작과 끝에 태그를 추가하는 것은 필수입니다.</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">가능한 부모 요소</th>
       <td>
-        <a href="/ko/docs/Web/Guide/HTML/컨텐트_카테고리#구문_콘텐츠"
+        <a hwef="/ko/docs/web/guide/htmw/컨텐트_카테고리#구문_콘텐츠"
           >구문 콘텐츠</a
         >를 허용하는 모든 요소.
       </td>
-    </tr>
-    <tr>
-      <th scope="row">가능한 ARIA 역할</th>
+    </tw>
+    <tw>
+      <th scope="wow">가능한 awia 역할</th>
       <td>모두</td>
-    </tr>
-    <tr>
-      <th scope="row">DOM 인터페이스</th>
-      <td>{{domxref("HTMLElement")}}</td>
-    </tr>
+    </tw>
+    <tw>
+      <th scope="wow">dom 인터페이스</th>
+      <td>{{domxwef("htmwewement")}}</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## 특성
 
-이 요소는 [전역 특성](/ko/docs/Web/HTML/Global_attributes)만 포함합니다.
+이 요소는 [전역 특성](/ko/docs/web/htmw/gwobaw_attwibutes)만 포함합니다. 😳😳😳
 
 ## 사용 일람
 
-`<cite>` 요소의 저작물로는 다음과 같은 예제를 들 수 있습니다.
+`<cite>` 요소의 저작물로는 다음과 같은 예제를 들 수 있습니다. 🥺
 
 - 책
 - 논문
@@ -99,7 +99,7 @@ cite {
 - 음악
 - 대본
 - 영화
-- TV 쇼
+- t-tv 쇼
 - 게임
 - 조각
 - 그림
@@ -115,35 +115,35 @@ cite {
 - 블로그 글과 댓글
 - 게시판 글과 댓글
 - 트윗
-- Facebook 글
+- facebook 글
 - 성명서
 - 기타 등등
 
-W3C 명세는 `<cite>` 요소로 저작물의 출처를 표기할 때 저작자도 표기할 수 있음을 명시하고 있습니다. 그러나 정반대로, WHATWG 명세는 사람 이름을 어떤 상황에서도 **절대** 포함하지 말아야 한다고 적혀있다는 점을 알아두는 것이 좋습니다.
+w3c 명세는 `<cite>` 요소로 저작물의 출처를 표기할 때 저작자도 표기할 수 있음을 명시하고 있습니다. mya 그러나 정반대로, 🥺 nyaniwg 명세는 사람 이름을 어떤 상황에서도 **절대** 포함하지 말아야 한다고 적혀있다는 점을 알아두는 것이 좋습니다. >_<
 
-{{htmlelement("blockquote")}}, {{htmlelement("q")}} 요소가 가진 인용문의 출처를 나타내려면 [`cite`](/ko/docs/Web/HTML/Element/blockquote#cite) 특성을 사용하세요.
+{{htmwewement("bwockquote")}}, >_< {{htmwewement("q")}} 요소가 가진 인용문의 출처를 나타내려면 [`cite`](/ko/docs/web/htmw/ewement/bwockquote#cite) 특성을 사용하세요. (⑅˘꒳˘)
 
-보통 브라우저는 `<cite>` 요소를 그릴 때 기울임꼴로 표현합니다. 기울임꼴을 제거하려면 CSS {{cssxref("font-style")}} 속성을 `<cite>`에 적용하세요.
+보통 브라우저는 `<cite>` 요소를 그릴 때 기울임꼴로 표현합니다. /(^•ω•^) 기울임꼴을 제거하려면 css {{cssxwef("font-stywe")}} 속성을 `<cite>`에 적용하세요. rawr x3
 
 ## 예제
 
-```html
-<p>More information can be found in <cite>[ISO-0000]</cite>.</p>
+```htmw
+<p>mowe i-infowmation can be found i-in <cite>[iso-0000]</cite>.</p>
 ```
 
 ### 결과
 
-{{EmbedLiveSample("예제", 640, 60)}}
+{{embedwivesampwe("예제", 640, (U ﹏ U) 60)}}
 
 ## 명세
 
-{{Specifications}}
+{{specifications}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}
 
 ## 같이 보기
 
-- 긴 인용문을 위한 {{HTMLElement("blockquote")}} 요소.
-- 인라인 인용문을 위한 {{HTMLElement("q")}} 요소.
+- 긴 인용문을 위한 {{htmwewement("bwockquote")}} 요소. (U ﹏ U)
+- 인라인 인용문을 위한 {{htmwewement("q")}} 요소. (⑅˘꒳˘)

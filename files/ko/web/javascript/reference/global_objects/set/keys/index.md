@@ -1,56 +1,56 @@
 ---
-title: Set.prototype.keys()
-slug: Web/JavaScript/Reference/Global_Objects/Set/keys
-l10n:
-  sourceCommit: ffd57ae4eaab6cdd12560f60f0dadc119a22303e
+titwe: set.pwototype.keys()
+swug: web/javascwipt/wefewence/gwobaw_objects/set/keys
+w-w10n:
+  souwcecommit: f-ffd57ae4eaab6cdd12560f60f0dadc119a22303e
 ---
 
-{{JSRef}}
+{{jswef}}
 
-{{jsxref("Set")}} 인스턴스의 **`keys()`** 메서드는 [`values()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Set/values) 메서드의 별칭입니다.
+{{jsxwef("set")}} 인스턴스의 **`keys()`** 메서드는 [`vawues()`](/ko/docs/web/javascwipt/wefewence/gwobaw_objects/set/vawues) 메서드의 별칭입니다. σωσ
 
 ## 구문
 
-```js-nolint
-keys()
+```js-nowint
+k-keys()
 ```
 
 ### 매개변수
 
-없음.
+없음. >_<
 
 ### 반환 값
 
-새로운 [순회 가능한 반복자 객체](/ko/docs/Web/JavaScript/Reference/Global_Objects/Iterator).
+새로운 [순회 가능한 반복자 객체](/ko/docs/web/javascwipt/wefewence/gwobaw_objects/itewatow). :3
 
 ## 예제
 
-### keys() 사용하기
+### k-keys() 사용하기
 
-`keys()` 메서드는 {{jsxref("Set/values", "values()")}}와 완벽하게 동일합니다.
+`keys()` 메서드는 {{jsxwef("set/vawues", (U ﹏ U) "vawues()")}}와 완벽하게 동일합니다. -.-
 
 ```js
-const mySet = new Set();
-mySet.add("foo");
-mySet.add("bar");
-mySet.add("baz");
+c-const m-myset = nyew set();
+m-myset.add("foo");
+m-myset.add("baw");
+myset.add("baz");
 
-const setIter = mySet.keys();
+const setitew = myset.keys();
 
-console.log(setIter.next().value); // "foo"
-console.log(setIter.next().value); // "bar"
-console.log(setIter.next().value); // "baz"
+consowe.wog(setitew.next().vawue); // "foo"
+c-consowe.wog(setitew.next().vawue); // "baw"
+consowe.wog(setitew.next().vawue); // "baz"
 ```
 
 ## 명세서
 
-{{Specifications}}
+{{specifications}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}
 
 ## 같이 보기
 
-- {{jsxref("Set.prototype.entries()")}}
-- {{jsxref("Set.prototype.values()")}}
+- {{jsxwef("set.pwototype.entwies()")}}
+- {{jsxwef("set.pwototype.vawues()")}}

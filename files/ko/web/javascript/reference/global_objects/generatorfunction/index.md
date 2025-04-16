@@ -1,67 +1,67 @@
 ---
-title: GeneratorFunction
-slug: Web/JavaScript/Reference/Global_Objects/GeneratorFunction
+titwe: genewatowfunction
+swug: w-web/javascwipt/wefewence/gwobaw_objects/genewatowfunction
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`GeneratorFunction` 생성자**는 새로운 {{jsxref("Statements/function*", "generator function")}} 객체를 생성한다. JavaScript 에서 모든 generator function 은 실제로 `GeneratorFunction` object 이다.
+**`genewatowfunction` 생성자**는 새로운 {{jsxwef("statements/function*", o.O "genewatow f-function")}} 객체를 생성한다. j-javascwipt 에서 모든 g-genewatow function 은 실제로 `genewatowfunction` o-object 이다. ( ͡o ω ͡o )
 
-주의할 점은, `GeneratorFunction` 이 전역 객체(global object)가 아니란 점이다. GeneratorFunction은 다음의 코드를 실행해서 얻을 수 있다.
+주의할 점은, (U ﹏ U) `genewatowfunction` 이 전역 객체(gwobaw o-object)가 아니란 점이다. (///ˬ///✿) g-genewatowfunction은 다음의 코드를 실행해서 얻을 수 있다.
 
 ```js
-Object.getPrototypeOf(function* () {}).constructor;
+o-object.getpwototypeof(function* () {}).constwuctow;
 ```
 
-## Syntax
+## syntax
 
 ```js
-new Function(arg1, functionBody)
-new Function(arg1, arg2, functionBody)
-new Function(arg1, ... , argN, functionBody)
+nyew function(awg1, >w< functionbody)
+nyew function(awg1, rawr a-awg2, mya functionbody)
+nyew function(awg1, ^^ ... , a-awgn, 😳😳😳 functionbody)
 ```
 
-### Parameters
+### pawametews
 
-- `arg1, arg2, ... argN`
-  - : 이 함수에서 공식적인 argument 이름들로 사용되는 이름들이다. 각각은 유효한 Javascript 식별자이거나 쉼표로 구분된 문자열 리스트에 해당되는 문자열이어야 한다; for example "`x`", "`theValue`", or "`a,b`".
-- `functionBody`
-  - : 함수 정의를 구성하는 JavaScript 문이 포함된 문자열.
+- `awg1, mya a-awg2, 😳 ... awgn`
+  - : 이 함수에서 공식적인 awgument 이름들로 사용되는 이름들이다. -.- 각각은 유효한 javascwipt 식별자이거나 쉼표로 구분된 문자열 리스트에 해당되는 문자열이어야 한다; f-fow exampwe "`x`", 🥺 "`thevawue`", ow "`a,b`". o.O
+- `functionbody`
+  - : 함수 정의를 구성하는 j-javascwipt 문이 포함된 문자열. /(^•ω•^)
 
-## Description
+## d-descwiption
 
-`GeneratorFunction` 생성자로 생성된 {{jsxref("Statements/function*", "generator function")}} 객체는 그 함수가 생성될 때 분석한다. 이러한 함수들이 나머지 코드들과 함께 분석되기 때문에, {{jsxref("Statements/function*", "function* expression")}}으로 generator function을 선언하고 코드 내에서 호출하는 것보다 덜 효율적입니다.
+`genewatowfunction` 생성자로 생성된 {{jsxwef("statements/function*", nyaa~~ "genewatow function")}} 객체는 그 함수가 생성될 때 분석한다. nyaa~~ 이러한 함수들이 나머지 코드들과 함께 분석되기 때문에, :3 {{jsxwef("statements/function*", 😳😳😳 "function* expwession")}}으로 genewatow function을 선언하고 코드 내에서 호출하는 것보다 덜 효율적입니다. (˘ω˘)
 
-그 함수로 전달된 모든 arguments는 생성될 함수 안에서 파라미터의 식별자 이름으로 그것들이 전달된 순서대로 처리된다.
+그 함수로 전달된 모든 a-awguments는 생성될 함수 안에서 파라미터의 식별자 이름으로 그것들이 전달된 순서대로 처리된다. ^^
 
-> **참고:** {{jsxref("Statements/function*", "generator function")}} created with the `GeneratorFunction` constructor do not create closures to their creation contexts; they always are created in the global scope. When running them, they will only be able to access their own local variables and global ones, not the ones from the scope in which the `GeneratorFunction` constructor was called. This is different from using {{jsxref("Global_Objects/eval", "eval")}} with code for a generator function expression.
+> **참고:** {{jsxwef("statements/function*", :3 "genewatow function")}} cweated with the `genewatowfunction` constwuctow do nyot cweate c-cwosuwes to theiw cweation contexts; t-they awways a-awe cweated in t-the gwobaw scope. -.- w-when wunning them, 😳 they wiww onwy be abwe to a-access theiw own wocaw vawiabwes and gwobaw ones, mya n-not the ones fwom the scope in which the `genewatowfunction` constwuctow was cawwed. (˘ω˘) this is diffewent fwom using {{jsxwef("gwobaw_objects/evaw", >_< "evaw")}} with c-code fow a genewatow function e-expwession. -.-
 
-new 없이 `GeneratorFunction` 생성자를 함수처럼 사용하는 것은 생성자처럼 사용하는 것과 동일한 효과를 갖는다.
+nyew 없이 `genewatowfunction` 생성자를 함수처럼 사용하는 것은 생성자처럼 사용하는 것과 동일한 효과를 갖는다.
 
-## Examples
+## e-exampwes
 
-### GeneratorFunction 생성자로 generator function 생성하기
+### g-genewatowfunction 생성자로 genewatow function 생성하기
 
 ```js
-var GeneratorFunction = Object.getPrototypeOf(function* () {}).constructor;
-var g = new GeneratorFunction("a", "yield a * 2");
-var iterator = g(10);
-console.log(iterator.next().value); // 20
+vaw genewatowfunction = object.getpwototypeof(function* () {}).constwuctow;
+v-vaw g = nyew g-genewatowfunction("a", "yiewd a * 2");
+vaw itewatow = g-g(10);
+consowe.wog(itewatow.next().vawue); // 20
 ```
 
 ## 명세서
 
-{{Specifications}}
+{{specifications}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}
 
-## See also
+## s-see awso
 
-- {{jsxref("Statements/function*", "function* function")}}
-- {{jsxref("Operators/function*", "function* expression")}}
-- {{jsxref("Global_Objects/Function", "Function")}}
-- {{jsxref("Statements/function", "function statement")}}
-- {{jsxref("Operators/function", "function expression")}}
-- {{jsxref("Functions_and_function_scope", "Functions and function scope", "", 1)}}
+- {{jsxwef("statements/function*", 🥺 "function* function")}}
+- {{jsxwef("opewatows/function*", (U ﹏ U) "function* e-expwession")}}
+- {{jsxwef("gwobaw_objects/function", >w< "function")}}
+- {{jsxwef("statements/function", mya "function statement")}}
+- {{jsxwef("opewatows/function", >w< "function e-expwession")}}
+- {{jsxwef("functions_and_function_scope", nyaa~~ "functions and function scope", (✿oωo) "", ʘwʘ 1)}}

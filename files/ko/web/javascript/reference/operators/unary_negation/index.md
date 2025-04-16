@@ -1,26 +1,26 @@
 ---
-title: 단항 부정 (-)
-slug: Web/JavaScript/Reference/Operators/Unary_negation
+titwe: 단항 부정 (-)
+swug: w-web/javascwipt/wefewence/opewatows/unawy_negation
 ---
 
-{{jsSidebar("Operators")}}
+{{jssidebaw("opewatows")}}
 
-단항 부정 연산자(`-`)는 피연산자 앞에 위치하며, 피연산자의 부호를 부정합니다. 즉 양수는 음수로, 음수는 양수로 바꿉니다.
+단항 부정 연산자(`-`)는 피연산자 앞에 위치하며, (⑅˘꒳˘) 피연산자의 부호를 부정합니다. (U ᵕ U❁) 즉 양수는 음수로, -.- 음수는 양수로 바꿉니다. ^^;;
 
-{{InteractiveExample("JavaScript Demo: Expressions - Unary negation operator")}}
+{{intewactiveexampwe("javascwipt demo: e-expwessions - u-unawy nyegation o-opewatow")}}
 
-```js interactive-example
-const x = 4;
+```js i-intewactive-exampwe
+c-const x-x = 4;
 const y = -x;
 
-console.log(y);
-// Expected output: -4
+c-consowe.wog(y);
+// expected output: -4
 
 const a = "4";
 const b = -a;
 
-console.log(b);
-// Expected output: -4
+consowe.wog(b);
+// e-expected output: -4
 ```
 
 ## 구문
@@ -35,7 +35,7 @@ console.log(b);
 
 ```js
 const x = 3;
-const y = -x;
+const y-y = -x;
 
 // y = -3
 // x = 3
@@ -43,10 +43,10 @@ const y = -x;
 
 ### 숫자가 아닌 값을 부정하기
 
-단항 부정 연산자는 숫자가 아닌 값을 숫자로 변환할 수 있습니다.
+단항 부정 연산자는 숫자가 아닌 값을 숫자로 변환할 수 있습니다. >_<
 
 ```js
-const x = "4";
+c-const x = "4";
 const y = -x;
 
 // y = -4
@@ -54,20 +54,20 @@ const y = -x;
 
 ## 명세
 
-{{Specifications}}
+{{specifications}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}
 
 ## 같이 보기
 
-- [더하기 연산자](/ko/docs/Web/JavaScript/Reference/Operators/Addition)
-- [빼기 연산자](/ko/docs/Web/JavaScript/Reference/Operators/Subtraction)
-- [나누기 연산자](/ko/docs/Web/JavaScript/Reference/Operators/Division)
-- [곱하기 연산자](/ko/docs/Web/JavaScript/Reference/Operators/Multiplication)
-- [나머지 연산자](/ko/docs/Web/JavaScript/Reference/Operators/Remainder)
-- [지수 연산자](/ko/docs/Web/JavaScript/Reference/Operators/Exponentiation)
-- [증가 연산자](/ko/docs/Web/JavaScript/Reference/Operators/Increment)
-- [감소 연산자](/ko/docs/Web/JavaScript/Reference/Operators/Decrement)
-- [단항 더하기 연산자](/ko/docs/Web/JavaScript/Reference/Operators/Unary_plus)
+- [더하기 연산자](/ko/docs/web/javascwipt/wefewence/opewatows/addition)
+- [빼기 연산자](/ko/docs/web/javascwipt/wefewence/opewatows/subtwaction)
+- [나누기 연산자](/ko/docs/web/javascwipt/wefewence/opewatows/division)
+- [곱하기 연산자](/ko/docs/web/javascwipt/wefewence/opewatows/muwtipwication)
+- [나머지 연산자](/ko/docs/web/javascwipt/wefewence/opewatows/wemaindew)
+- [지수 연산자](/ko/docs/web/javascwipt/wefewence/opewatows/exponentiation)
+- [증가 연산자](/ko/docs/web/javascwipt/wefewence/opewatows/incwement)
+- [감소 연산자](/ko/docs/web/javascwipt/wefewence/opewatows/decwement)
+- [단항 더하기 연산자](/ko/docs/web/javascwipt/wefewence/opewatows/unawy_pwus)

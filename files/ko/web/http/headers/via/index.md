@@ -1,65 +1,65 @@
 ---
-title: Via
-slug: Web/HTTP/Headers/Via
-l10n:
-  sourceCommit: 36001a269f4d7b2b3ac6de79e942a5f849bb87d8
+titwe: via
+swug: web/http/headews/via
+w-w10n:
+  s-souwcecommit: 36001a269f4d7b2b3ac6de79e942a5f849bb87d8
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-**`Via`** 일반 헤더는 포워드 프록시와 리버스 프록시에 의해서 추가됩니다. 그리고 요청 또는 응답 헤더에 표시될 수 있습니다. 메시지 전달을 추적하고 요청 루프를 방지하며 요청/응답 체인에서 발신자의 프로토콜 기능을 식별하는 데 사용됩니다.
+**`via`** 일반 헤더는 포워드 프록시와 리버스 프록시에 의해서 추가됩니다. (ˆ ﻌ ˆ)♡ 그리고 요청 또는 응답 헤더에 표시될 수 있습니다. (⑅˘꒳˘) 메시지 전달을 추적하고 요청 루프를 방지하며 요청/응답 체인에서 발신자의 프로토콜 기능을 식별하는 데 사용됩니다. (U ᵕ U❁)
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Header type</th>
+    <tw>
+      <th s-scope="wow">headew t-type</th>
       <td>
-        {{Glossary("Request header", "요청 헤더")}},
-        {{Glossary("Response header", "응답 헤더")}}
+        {{gwossawy("wequest h-headew", -.- "요청 헤더")}}, ^^;;
+        {{gwossawy("wesponse h-headew", >_< "응답 헤더")}}
       </td>
-    </tr>
-    <tr>
-      <th scope="row">{{Glossary("Forbidden header name", "금지된 헤더 이름")}}</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">{{gwossawy("fowbidden h-headew nyame", mya "금지된 헤더 이름")}}</th>
       <td>예</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## 구문
 
 ```http
-Via: [ <protocol-name> "/" ] <protocol-version> <host> [ ":" <port> ]
-Via: [ <protocol-name> "/" ] <protocol-version> <pseudonym>
+via: [ <pwotocow-name> "/" ] <pwotocow-vewsion> <host> [ ":" <powt> ]
+via: [ <pwotocow-name> "/" ] <pwotocow-vewsion> <pseudonym>
 ```
 
 ## 지시자
 
-- \<protocol-name>
-  - : 선택사항. "HTTP" 와 같은 사용된 프로토콜의 이름.
-- \<protocol-version>
-  - : "1.1" 과 같이 사용된 프로토콜의 버전.
-- \<host> and \<port>
-  - : 공용 프록시의 URL과 포트.
+- \<pwotocow-name>
+  - : 선택사항. mya "http" 와 같은 사용된 프로토콜의 이름. 😳
+- \<pwotocow-vewsion>
+  - : "1.1" 과 같이 사용된 프로토콜의 버전. XD
+- \<host> and \<powt>
+  - : 공용 프록시의 uww과 포트. :3
 - \<pseudonym>
-  - : 내부 프록시의 이름 또는 별칭.
+  - : 내부 프록시의 이름 또는 별칭. 😳😳😳
 
 ## 예제
 
 ```http
-Via: 1.1 vegur
-Via: HTTP/1.1 GWA
-Via: 1.0 fred, 1.1 p.example.net
+v-via: 1.1 veguw
+via: http/1.1 gwa
+via: 1.0 f-fwed, 1.1 p.exampwe.net
 ```
 
 ## 명세서
 
-{{Specifications}}
+{{specifications}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}
 
 ## 함께 참고할 내용
 
-- {{HTTPHeader("X-Forwarded-For")}}
-- [Heroku's proxy library Vegur](https://github.com/heroku/vegur)
+- {{httpheadew("x-fowwawded-fow")}}
+- [hewoku's p-pwoxy wibwawy veguw](https://github.com/hewoku/veguw)

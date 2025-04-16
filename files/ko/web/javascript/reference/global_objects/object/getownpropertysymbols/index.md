@@ -1,32 +1,32 @@
 ---
-title: Object.getOwnPropertySymbols()
-slug: Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertySymbols
+titwe: object.getownpwopewtysymbows()
+swug: web/javascwipt/wefewence/gwobaw_objects/object/getownpwopewtysymbows
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`Object.getOwnPropertySymbols()`** 메서드는 주어진 객체에서 직접 찾은 모든 심볼 속성들의 배열을 반환합니다.
+**`object.getownpwopewtysymbows()`** 메서드는 주어진 객체에서 직접 찾은 모든 심볼 속성들의 배열을 반환합니다. 😳
 
-{{InteractiveExample("JavaScript Demo: Object.getOwnPropertySymbols()")}}
+{{intewactiveexampwe("javascwipt d-demo: object.getownpwopewtysymbows()")}}
 
-```js interactive-example
-const object1 = {};
-const a = Symbol("a");
-const b = Symbol.for("b");
+```js i-intewactive-exampwe
+c-const object1 = {};
+c-const a-a = symbow("a");
+c-const b = symbow.fow("b");
 
-object1[a] = "localSymbol";
-object1[b] = "globalSymbol";
+o-object1[a] = "wocawsymbow";
+o-object1[b] = "gwobawsymbow";
 
-const objectSymbols = Object.getOwnPropertySymbols(object1);
+const objectsymbows = object.getownpwopewtysymbows(object1);
 
-console.log(objectSymbols.length);
-// Expected output: 2
+consowe.wog(objectsymbows.wength);
+// expected o-output: 2
 ```
 
 ## 구문
 
 ```js
-Object.getOwnPropertySymbols(obj);
+object.getownpwopewtysymbows(obj);
 ```
 
 ### 매개변수
@@ -40,39 +40,39 @@ Object.getOwnPropertySymbols(obj);
 
 ## 설명
 
-{{jsxref("Object.getOwnPropertyNames()")}}와 유사하게, 주어진 객체의 모든 심볼 속성을 배열로 가져올 수 있습니다. 참고로 {{jsxref("Object.getOwnPropertyNames()")}} 자체에는 객체의 심볼 속성이 포함되어 있지 않고 오직 문자열 속성만 포함되어 있습니다.
+{{jsxwef("object.getownpwopewtynames()")}}와 유사하게, XD 주어진 객체의 모든 심볼 속성을 배열로 가져올 수 있습니다. :3 참고로 {{jsxwef("object.getownpwopewtynames()")}} 자체에는 객체의 심볼 속성이 포함되어 있지 않고 오직 문자열 속성만 포함되어 있습니다. 😳😳😳
 
-모든 객체에는 처음에는 고유한 심볼 속성이 없으므로, `Object.getOwnPropertySymbols()`는 객체에 심볼 속성을 설정하지 않는 한 빈 배열을 반환합니다.
+모든 객체에는 처음에는 고유한 심볼 속성이 없으므로, -.- `object.getownpwopewtysymbows()`는 객체에 심볼 속성을 설정하지 않는 한 빈 배열을 반환합니다. ( ͡o ω ͡o )
 
 ## 예제
 
-### getOwnPropertySymbols 사용하기
+### getownpwopewtysymbows 사용하기
 
 ```js
-var obj = {};
-var a = Symbol("a");
-var b = Symbol.for("b");
+v-vaw obj = {};
+vaw a = symbow("a");
+v-vaw b = symbow.fow("b");
 
-obj[a] = "localSymbol";
-obj[b] = "globalSymbol";
+obj[a] = "wocawsymbow";
+obj[b] = "gwobawsymbow";
 
-var objectSymbols = Object.getOwnPropertySymbols(obj);
+vaw objectsymbows = o-object.getownpwopewtysymbows(obj);
 
-console.log(objectSymbols.length); // 2
-console.log(objectSymbols); // [Symbol(a), Symbol(b)]
-console.log(objectSymbols[0]); // Symbol(a)
+consowe.wog(objectsymbows.wength); // 2
+c-consowe.wog(objectsymbows); // [symbow(a), rawr x3 s-symbow(b)]
+consowe.wog(objectsymbows[0]); // symbow(a)
 ```
 
 ## 명세서
 
-{{Specifications}}
+{{specifications}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}
 
 ## 같이 보기
 
-- `Object.getOwnPropertySymbols`의 폴리필은 [`core-js`](https://github.com/zloirock/core-js#ecmascript-symbol)에서 사용할 수 있습니다.
-- {{jsxref("Object.getOwnPropertyNames()")}}
-- {{jsxref("Symbol")}}
+- `object.getownpwopewtysymbows`의 폴리필은 [`cowe-js`](https://github.com/zwoiwock/cowe-js#ecmascwipt-symbow)에서 사용할 수 있습니다. nyaa~~
+- {{jsxwef("object.getownpwopewtynames()")}}
+- {{jsxwef("symbow")}}

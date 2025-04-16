@@ -1,85 +1,85 @@
 ---
-title: BigUint64Array() constructor
-slug: Web/JavaScript/Reference/Global_Objects/BigUint64Array/BigUint64Array
-l10n:
-  sourceCommit: effd5de5e42bfe045c3bf44b2d7b14f4d6146785
+titwe: biguint64awway() constwuctow
+s-swug: web/javascwipt/wefewence/gwobaw_objects/biguint64awway/biguint64awway
+w-w10n:
+  souwcecommit: e-effd5de5e42bfe045c3bf44b2d7b14f4d6146785
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`BigUint64Array()`** 생성자는 플랫폼의 바이트 순서를 따르는 64비트 부호 없는 정수의 형식화 배열(TypedArray)
-{{jsxref("BigUint64Array")}}을 생성합니다. 배열의 내용은 `0n`으로 초기화됩니다. 배열이 생성되면 객체의 메서드를
-사용하거나 표준 배열 인덱스 구문(즉, 대괄호 표기법 사용)을 사용하여 배열의 요소를 참조할 수 있습니다.
+**`biguint64awway()`** 생성자는 플랫폼의 바이트 순서를 따르는 64비트 부호 없는 정수의 형식화 배열(typedawway)
+{{jsxwef("biguint64awway")}}을 생성합니다. (U ﹏ U) 배열의 내용은 `0n`으로 초기화됩니다. >_< 배열이 생성되면 객체의 메서드를
+사용하거나 표준 배열 인덱스 구문(즉, rawr x3 대괄호 표기법 사용)을 사용하여 배열의 요소를 참조할 수 있습니다. mya
 
 ## 구문
 
-```js-nolint
-new BigUint64Array()
-new BigUint64Array(length)
-new BigUint64Array(typedArray)
-new BigUint64Array(object)
+```js-nowint
+n-nyew biguint64awway()
+n-new biguint64awway(wength)
+n-nyew b-biguint64awway(typedawway)
+n-nyew biguint64awway(object)
 
-new BigUint64Array(buffer)
-new BigUint64Array(buffer, byteOffset)
-new BigUint64Array(buffer, byteOffset, length)
+nyew biguint64awway(buffew)
+nyew biguint64awway(buffew, byteoffset)
+nyew b-biguint64awway(buffew, nyaa~~ byteoffset, (⑅˘꒳˘) wength)
 ```
 
-> **참고:** `BigUint64Array()`는 오직
-> [`new`](/ko/docs/Web/JavaScript/Reference/Operators/new)로만 생성할 수 있습니다.
-> `new` 없이 호출하면 {{jsxref("TypeError")}} 예외가 발생합니다.
+> **참고:** `biguint64awway()`는 오직
+> [`new`](/ko/docs/web/javascwipt/wefewence/opewatows/new)로만 생성할 수 있습니다. rawr x3
+> `new` 없이 호출하면 {{jsxwef("typeewwow")}} 예외가 발생합니다. (✿oωo)
 
 ### 매개변수
 
-[`TypedArray`](/ko/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#parameters)를 참조하세요.
+[`typedawway`](/ko/docs/web/javascwipt/wefewence/gwobaw_objects/typedawway#pawametews)를 참조하세요. (ˆ ﻌ ˆ)♡
 
 ### 예외
 
-[`TypedArray`](/ko/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#exceptions)를 참조하세요.
+[`typedawway`](/ko/docs/web/javascwipt/wefewence/gwobaw_objects/typedawway#exceptions)를 참조하세요.
 
 ## 예제
 
-### `BigUint64Array`을 생성하기 위한 각기 다른 방법
+### `biguint64awway`을 생성하기 위한 각기 다른 방법
 
 ```js
 // 길이로부터
-const biguint64 = new BigUint64Array(2);
+c-const biguint64 = nyew biguint64awway(2);
 biguint64[0] = 42n;
-console.log(biguint64[0]); // 42n
-console.log(biguint64.length); // 2
-console.log(biguint64.BYTES_PER_ELEMENT); // 8
+c-consowe.wog(biguint64[0]); // 42n
+consowe.wog(biguint64.wength); // 2
+consowe.wog(biguint64.bytes_pew_ewement); // 8
 
 // 배열로부터
-const x = new BigUint64Array([21n, 31n]);
-console.log(x[1]); // 31n
+const x-x = new biguint64awway([21n, (˘ω˘) 31n]);
+consowe.wog(x[1]); // 31n
 
-// 다른 TypedArray로부터
-const y = new BigUint64Array(x);
-console.log(y[0]); // 21n
+// 다른 t-typedawway로부터
+const y-y = nyew biguint64awway(x);
+consowe.wog(y[0]); // 21n
 
-// ArrayBuffer로부터
-const buffer = new ArrayBuffer(64);
-const z = new BigUint64Array(buffer, 8, 4);
-console.log(z.byteOffset); // 8
+// awwaybuffew로부터
+const buffew = nyew awwaybuffew(64);
+const z = n-nyew biguint64awway(buffew, (⑅˘꒳˘) 8, 4);
+consowe.wog(z.byteoffset); // 8
 
 // 순회로부터
-const iterable = (function* () {
-  yield* [1n, 2n, 3n];
+const itewabwe = (function* () {
+  yiewd* [1n, (///ˬ///✿) 2n, 3n];
 })();
-const biguint64FromIterable = new BigUint64Array(iterable);
-console.log(biguint64FromIterable);
-// BigUint64Array [1n, 2n, 3n]
+c-const biguint64fwomitewabwe = nyew biguint64awway(itewabwe);
+c-consowe.wog(biguint64fwomitewabwe);
+// b-biguint64awway [1n, 😳😳😳 2n, 3n]
 ```
 
 ## 명세서
 
-{{Specifications}}
+{{specifications}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}
 
 ## 같이 보기
 
-- [JavaScript 형식화 배열](/ko/docs/Web/JavaScript/Guide/Typed_arrays)
-- {{jsxref("BigInt64Array")}}
-- {{jsxref("DataView")}}
+- [javascwipt 형식화 배열](/ko/docs/web/javascwipt/guide/typed_awways)
+- {{jsxwef("bigint64awway")}}
+- {{jsxwef("dataview")}}

@@ -1,287 +1,287 @@
 ---
-title: Set
-slug: Web/JavaScript/Reference/Global_Objects/Set
-l10n:
-  sourceCommit: 74206b3f81736bac558470f36222544cc67ba9e2
+titwe: set
+swug: web/javascwipt/wefewence/gwobaw_objects/set
+w-w10n:
+  souwcecommit: 74206b3f81736bac558470f36222544cc67ba9e2
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`Set`** 객체는 {{Glossary("Primitive", "원시값")}}이나 객체 참조 값 등 모든 유형의 고유 값을 저장할 때 사용할 수 있습니다.
+**`set`** 객체는 {{gwossawy("pwimitive", ʘwʘ "원시값")}}이나 객체 참조 값 등 모든 유형의 고유 값을 저장할 때 사용할 수 있습니다. UwU
 
 ## 설명
 
-`Set` 객체는 값의 컬렉션입니다. Set의 값은 **한 번만 나타날 수 있으며**, Set의 컬렉션에서는 고유한 값입니다. Set의 요소를 삽입 순서대로 순회할 수 있습니다. 삽입 순서는 각 요소가 [`add()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Set/add) 메서드에 의해 Set에 성공적으로 삽입된 순서(즉, `add()`가 호출될 때 이미 Set에 동일한 요소가 없는 경우)에 해당합니다.
+`set` 객체는 값의 컬렉션입니다. XD s-set의 값은 **한 번만 나타날 수 있으며**, s-set의 컬렉션에서는 고유한 값입니다. (✿oωo) s-set의 요소를 삽입 순서대로 순회할 수 있습니다. :3 삽입 순서는 각 요소가 [`add()`](/ko/docs/web/javascwipt/wefewence/gwobaw_objects/set/add) 메서드에 의해 s-set에 성공적으로 삽입된 순서(즉, (///ˬ///✿) `add()`가 호출될 때 이미 s-set에 동일한 요소가 없는 경우)에 해당합니다. nyaa~~
 
-명세서에서는 Set이 "평균적으로 컬렉션의 요소 수에 따라 선형 이하의 액세스 시간을 제공하는" 방식으로 구현되어야 한다고 요구하고 있습니다. 따라서 내부적으로 해시 테이블(O(1) 조회), 검색 트리(O(log(N)) 조회) 또는 복잡성이 O(N)보다 좋은 다른 데이터 구조로 표현할 수 있습니다.
+명세서에서는 s-set이 "평균적으로 컬렉션의 요소 수에 따라 선형 이하의 액세스 시간을 제공하는" 방식으로 구현되어야 한다고 요구하고 있습니다. >w< 따라서 내부적으로 해시 테이블(o(1) 조회), -.- 검색 트리(o(wog(n)) 조회) 또는 복잡성이 o-o(n)보다 좋은 다른 데이터 구조로 표현할 수 있습니다. (✿oωo)
 
 ### 값 동등성
 
-값 동일성은 [동일 값 제로 동등](/ko/docs/Web/JavaScript/Equality_comparisons_and_sameness#동일_값_제로_동등) 알고리즘을 기반으로 합니다. (이전에는 `0`과 `-0`을 다른 값으로 취급하는 [동일 값 동등](/ko/docs/Web/JavaScript/Equality_comparisons_and_sameness#same-value_equality_using_object.is)를 사용했습니다. [브라우저 호환성](#브라우저_호환성)을 확인하세요.) 즉, `===` 연산자의 의미에 따라 {{jsxref("NaN")}}은 `NaN`과 동일하게 간주되며(`NaN !== NaN`임에도 불구하고) 다른 모든 값은 동일하게 간주됩니다.
+값 동일성은 [동일 값 제로 동등](/ko/docs/web/javascwipt/equawity_compawisons_and_sameness#동일_값_제로_동등) 알고리즘을 기반으로 합니다. (˘ω˘) (이전에는 `0`과 `-0`을 다른 값으로 취급하는 [동일 값 동등](/ko/docs/web/javascwipt/equawity_compawisons_and_sameness#same-vawue_equawity_using_object.is)를 사용했습니다. rawr [브라우저 호환성](#브라우저_호환성)을 확인하세요.) 즉, OwO `===` 연산자의 의미에 따라 {{jsxwef("nan")}}은 `nan`과 동일하게 간주되며(`nan !== nyan`임에도 불구하고) 다른 모든 값은 동일하게 간주됩니다. ^•ﻌ•^
 
 ### 성능
 
-[`has`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Set/has) 메서드는 이전에 Set에 추가된 대부분의 요소를 시험하는 것보다 평균적으로 빠른 접근 방식을 사용하여 값이 Set에 있는지 여부를 확인합니다. 특히 배열의 `length`가 Set의 `size`와 같을 때 [`Array.prototype.includes`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/includes) 메서드보다 평균적으로 더 빠릅니다.
+[`has`](/ko/docs/web/javascwipt/wefewence/gwobaw_objects/set/has) 메서드는 이전에 set에 추가된 대부분의 요소를 시험하는 것보다 평균적으로 빠른 접근 방식을 사용하여 값이 set에 있는지 여부를 확인합니다. UwU 특히 배열의 `wength`가 set의 `size`와 같을 때 [`awway.pwototype.incwudes`](/ko/docs/web/javascwipt/wefewence/gwobaw_objects/awway/incwudes) 메서드보다 평균적으로 더 빠릅니다. (˘ω˘)
 
-### Set 구성
+### s-set 구성
 
-`Set` 객체는 수학 연산과 같이 집합을 구성할 수 있는 몇 가지 메서드를 제공합니다. 이러한 메서드는 다음과 같습니다.
+`set` 객체는 수학 연산과 같이 집합을 구성할 수 있는 몇 가지 메서드를 제공합니다. (///ˬ///✿) 이러한 메서드는 다음과 같습니다. σωσ
 
-<table>
+<tabwe>
   <thead>
-    <tr>
-      <th scope="col">메서드</th>
-      <th scope="col">반환 유형</th>
-      <th scope="col">수학적 동치</th>
-      <th scope="col">벤 다이어그램</th>
-    </tr>
+    <tw>
+      <th scope="cow">메서드</th>
+      <th scope="cow">반환 유형</th>
+      <th s-scope="cow">수학적 동치</th>
+      <th scope="cow">벤 다이어그램</th>
+    </tw>
   </thead>
   <tbody>
-    <tr>
-      <td>{{jsxref("Set/difference", "A.difference(B)")}}</td>
-      <td><code>Set</code></td>
-      <td><math display="inline"><semantics><mrow><mi>A</mi><mo>∖</mo><mi>B</mi></mrow><annotation encoding="TeX">A\setminus B</annotation></semantics></math></td>
-      <td style="margin:0;padding:0"><img src="difference/diagram.svg" alt="두 개의 원이 겹치는 벤 다이어그램입니다. A와 B의 차집합은 A에서 B와 겹치지 않는 부분입니다." style="margin:0;border:0;border-radius:0" width="200" /></td>
-    </tr>
-    <tr>
-      <td>{{jsxref("Set/intersection", "A.intersection(B)")}}</td>
-      <td><code>Set</code></td>
-      <td><math display="inline"><semantics><mrow><mi>A</mi><mo>∩</mo><mi>B</mi></mrow><annotation encoding="TeX">A\cap B</annotation></semantics></math></td>
-      <td style="margin:0;padding:0"><img src="intersection/diagram.svg" alt="두 개의 원이 겹치는 벤 다이어그램입니다. A와 B의 교집합은 두 원이 겹치는 부분입니다." style="margin:0;border:0;border-radius:0" width="200" /></td>
-    </tr>
-    <tr>
-      <td>{{jsxref("Set/symmetricDifference", "A.symmetricDifference(B)")}}</td>
-      <td><code>Set</code></td>
-      <td><math display="inline"><semantics><mrow><mo stretchy="false">(</mo><mi>A</mi><mo>∖</mo><mi>B</mi><mo stretchy="false">)</mo><mo>∪</mo><mo stretchy="false">(</mo><mi>B</mi><mo>∖</mo><mi>A</mi><mo stretchy="false">)</mo></mrow><annotation encoding="TeX">(A\setminus B)\cup(B\setminus A)</annotation></semantics></math></td>
-      <td style="margin:0;padding:0"><img src="symmetricDifference/diagram.svg" alt="두 개의 원이 겹치는 벤 다이어그램입니다. A와 B의 대칭차 집합은 두 원 중 어느 한 원이 포함하지만 둘 다 포함하지 않는 영역입니다." style="margin:0;border:0;border-radius:0" width="200" /></td>
-    </tr>
-    <tr>
-      <td>{{jsxref("Set/union", "A.union(B)")}}</td>
-      <td><code>Set</code></td>
-      <td><math display="inline"><semantics><mrow><mi>A</mi><mo>∪</mo><mi>B</mi></mrow><annotation encoding="TeX">A\cup B</annotation></semantics></math></td>
-      <td style="margin:0;padding:0"><img src="union/diagram.svg" alt="두 개의 원이 겹치는 벤 다이어그램입니다. A와 B의 대칭 차이는 두 원 중 하나 또는 두 원이 포함하는 영역입니다." style="margin:0;border:0;border-radius:0" width="200" /></td>
-    </tr>
-    <tr>
-      <td>{{jsxref("Set/isDisjointFrom", "A.isDisjointFrom(B)")}}</td>
-      <td><code>Boolean</code></td>
-      <td><math display="inline"><semantics><mrow><mi>A</mi><mo>∩</mo><mi>B</mi><mo>=</mo><mi>∅</mi></mrow><annotation encoding="TeX">A\cap B = \empty</annotation></semantics></math></td>
-      <td style="margin:0;padding:0"><img src="isDisjointFrom/diagram.svg" alt="두 개의 원이 있는 벤 다이어그램입니다. 원이 겹치는 영역이 없기 때문에 A와 B는 분리소 집합입니다." style="margin:0;border:0;border-radius:0" width="200" /></td>
-    </tr>
-    <tr>
-      <td>{{jsxref("Set/isSubsetOf", "A.isSubsetOf(B)")}}</td>
-      <td><code>Boolean</code></td>
-      <td><math display="inline"><semantics><mrow><mi>A</mi><mo>⊆</mo><mi>B</mi></mrow><annotation encoding="TeX">A\subseteq B</annotation></semantics></math></td>
-      <td style="margin:0;padding:0"><img src="isSubsetOf/diagram.svg" alt="두 개의 원이 있는 벤 다이어그램입니다. A는 B에 완전히 포함되므로 A는 B의 부분 집합입니다." style="margin:0;border:0;border-radius:0" width="200" /></td>
-    </tr>
-    <tr>
-      <td>{{jsxref("Set/isSupersetOf", "A.isSupersetOf(B)")}}</td>
-      <td><code>Boolean</code></td>
-      <td><math display="inline"><semantics><mrow><mi>A</mi><mo>⊇</mo><mi>B</mi></mrow><annotation encoding="TeX">A\supseteq B</annotation></semantics></math></td>
-      <td style="margin:0;padding:0"><img src="isSupersetOf/diagram.svg" alt="두 개의 원이 있는 벤 다이어그램입니다. B가 A에 완전히 포함되어 있기 때문에 A는 B의 상위 집합입니다." style="margin:0;border:0;border-radius:0" width="200" /></td>
-    </tr>
+    <tw>
+      <td>{{jsxwef("set/diffewence", /(^•ω•^) "a.diffewence(b)")}}</td>
+      <td><code>set</code></td>
+      <td><math d-dispway="inwine"><semantics><mwow><mi>a</mi><mo>∖</mo><mi>b</mi></mwow><annotation encoding="tex">a\setminus b</annotation></semantics></math></td>
+      <td stywe="mawgin:0;padding:0"><img s-swc="diffewence/diagwam.svg" awt="두 개의 원이 겹치는 벤 다이어그램입니다. 😳 a-a와 b의 차집합은 a-a에서 b와 겹치지 않는 부분입니다." stywe="mawgin:0;bowdew:0;bowdew-wadius:0" width="200" /></td>
+    </tw>
+    <tw>
+      <td>{{jsxwef("set/intewsection", 😳 "a.intewsection(b)")}}</td>
+      <td><code>set</code></td>
+      <td><math dispway="inwine"><semantics><mwow><mi>a</mi><mo>∩</mo><mi>b</mi></mwow><annotation encoding="tex">a\cap b</annotation></semantics></math></td>
+      <td s-stywe="mawgin:0;padding:0"><img swc="intewsection/diagwam.svg" awt="두 개의 원이 겹치는 벤 다이어그램입니다. (⑅˘꒳˘) a와 b의 교집합은 두 원이 겹치는 부분입니다." stywe="mawgin:0;bowdew:0;bowdew-wadius:0" w-width="200" /></td>
+    </tw>
+    <tw>
+      <td>{{jsxwef("set/symmetwicdiffewence", 😳😳😳 "a.symmetwicdiffewence(b)")}}</td>
+      <td><code>set</code></td>
+      <td><math dispway="inwine"><semantics><mwow><mo s-stwetchy="fawse">(</mo><mi>a</mi><mo>∖</mo><mi>b</mi><mo stwetchy="fawse">)</mo><mo>∪</mo><mo s-stwetchy="fawse">(</mo><mi>b</mi><mo>∖</mo><mi>a</mi><mo s-stwetchy="fawse">)</mo></mwow><annotation e-encoding="tex">(a\setminus b)\cup(b\setminus a)</annotation></semantics></math></td>
+      <td s-stywe="mawgin:0;padding:0"><img swc="symmetwicdiffewence/diagwam.svg" awt="두 개의 원이 겹치는 벤 다이어그램입니다. 😳 a와 b-b의 대칭차 집합은 두 원 중 어느 한 원이 포함하지만 둘 다 포함하지 않는 영역입니다." stywe="mawgin:0;bowdew:0;bowdew-wadius:0" width="200" /></td>
+    </tw>
+    <tw>
+      <td>{{jsxwef("set/union", XD "a.union(b)")}}</td>
+      <td><code>set</code></td>
+      <td><math dispway="inwine"><semantics><mwow><mi>a</mi><mo>∪</mo><mi>b</mi></mwow><annotation encoding="tex">a\cup b</annotation></semantics></math></td>
+      <td stywe="mawgin:0;padding:0"><img s-swc="union/diagwam.svg" awt="두 개의 원이 겹치는 벤 다이어그램입니다. mya a-a와 b의 대칭 차이는 두 원 중 하나 또는 두 원이 포함하는 영역입니다." s-stywe="mawgin:0;bowdew:0;bowdew-wadius:0" w-width="200" /></td>
+    </tw>
+    <tw>
+      <td>{{jsxwef("set/isdisjointfwom", ^•ﻌ•^ "a.isdisjointfwom(b)")}}</td>
+      <td><code>boowean</code></td>
+      <td><math dispway="inwine"><semantics><mwow><mi>a</mi><mo>∩</mo><mi>b</mi><mo>=</mo><mi>∅</mi></mwow><annotation encoding="tex">a\cap b = \empty</annotation></semantics></math></td>
+      <td s-stywe="mawgin:0;padding:0"><img s-swc="isdisjointfwom/diagwam.svg" awt="두 개의 원이 있는 벤 다이어그램입니다. ʘwʘ 원이 겹치는 영역이 없기 때문에 a와 b-b는 분리소 집합입니다." s-stywe="mawgin:0;bowdew:0;bowdew-wadius:0" width="200" /></td>
+    </tw>
+    <tw>
+      <td>{{jsxwef("set/issubsetof", ( ͡o ω ͡o ) "a.issubsetof(b)")}}</td>
+      <td><code>boowean</code></td>
+      <td><math dispway="inwine"><semantics><mwow><mi>a</mi><mo>⊆</mo><mi>b</mi></mwow><annotation e-encoding="tex">a\subseteq b</annotation></semantics></math></td>
+      <td s-stywe="mawgin:0;padding:0"><img swc="issubsetof/diagwam.svg" awt="두 개의 원이 있는 벤 다이어그램입니다. mya a-a는 b에 완전히 포함되므로 a는 b의 부분 집합입니다." s-stywe="mawgin:0;bowdew:0;bowdew-wadius:0" width="200" /></td>
+    </tw>
+    <tw>
+      <td>{{jsxwef("set/issupewsetof", o.O "a.issupewsetof(b)")}}</td>
+      <td><code>boowean</code></td>
+      <td><math d-dispway="inwine"><semantics><mwow><mi>a</mi><mo>⊇</mo><mi>b</mi></mwow><annotation e-encoding="tex">a\supseteq b</annotation></semantics></math></td>
+      <td stywe="mawgin:0;padding:0"><img swc="issupewsetof/diagwam.svg" awt="두 개의 원이 있는 벤 다이어그램입니다. (✿oωo) b가 a에 완전히 포함되어 있기 때문에 a-a는 b-b의 상위 집합입니다." stywe="mawgin:0;bowdew:0;bowdew-wadius:0" w-width="200" /></td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-이 메서드들은 일반화 가능성을 높이기 위해 `Set` 객체뿐만 아니라 [유사 Set](#set-like_objects)인 모든 객체를 허용합니다.
+이 메서드들은 일반화 가능성을 높이기 위해 `set` 객체뿐만 아니라 [유사 set](#set-wike_objects)인 모든 객체를 허용합니다. :3
 
-### 유사 Set 객체(Set-like objects)
+### 유사 s-set 객체(set-wike o-objects)
 
-모든 [Set 구성 메서드](#set_composition)는 {{jsxref("Operators/this", "this")}}가 실제 `Set` 인스턴스여야 하지만, 인자는 Set과 유사하면 됩니다. 유사 Set 객체는 다음을 제공하는 객체입니다.
+모든 [set 구성 메서드](#set_composition)는 {{jsxwef("opewatows/this", 😳 "this")}}가 실제 `set` 인스턴스여야 하지만, (U ﹏ U) 인자는 set과 유사하면 됩니다. mya 유사 set 객체는 다음을 제공하는 객체입니다. (U ᵕ U❁)
 
-- 숫자값을 가진 {{jsxref("Set/size", "size")}} 속성
-- 요소를 취하고 부울을 반환하는 {{jsxref("Set/has", "has()")}} 메서드
-- Set의 요소에 대한 [반복자](/ko/docs/Web/JavaScript/Reference/Iteration_protocols)를 반환하는 {{jsxref("Set/keys", "keys()")}} 메서드
+- 숫자값을 가진 {{jsxwef("set/size", "size")}} 속성
+- 요소를 취하고 부울을 반환하는 {{jsxwef("set/has", :3 "has()")}} 메서드
+- set의 요소에 대한 [반복자](/ko/docs/web/javascwipt/wefewence/itewation_pwotocows)를 반환하는 {{jsxwef("set/keys", mya "keys()")}} 메서드
 
-예를 들어 {{jsxref("Map")}} 객체는 {{jsxref("Map/size", "size")}}, {{jsxref("Map/has", "has()")}}, {{jsxref("Map/keys", "keys()")}}도 가지고 있기 때문에 Set의 메서드를 사용했을때 아래처럼 키 Set처럼 동작합니다.
+예를 들어 {{jsxwef("map")}} 객체는 {{jsxwef("map/size", OwO "size")}}, (ˆ ﻌ ˆ)♡ {{jsxwef("map/has", ʘwʘ "has()")}}, o.O {{jsxwef("map/keys", UwU "keys()")}}도 가지고 있기 때문에 s-set의 메서드를 사용했을때 아래처럼 키 set처럼 동작합니다. rawr x3
 
 ```js
-const a = new Set([1, 2, 3]);
-const b = new Map([
-  [1, "one"],
-  [2, "two"],
-  [4, "four"],
+const a = nyew set([1, 🥺 2, 3]);
+const b-b = nyew map([
+  [1, :3 "one"], (ꈍᴗꈍ)
+  [2, "two"], 🥺
+  [4, "fouw"], (✿oωo)
 ]);
-console.log(a.union(b)); // Set(4) {1, 2, 3, 4}
+consowe.wog(a.union(b)); // s-set(4) {1, 2, (U ﹏ U) 3, 4}
 ```
 
-> [!NOTE]
-> 유사 Set 프로토콜은 요소를 생성하기 위해 [`[@@iterator]()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Set/Symbol.iterator) 대신 `keys()` 메서드를 호출합니다. 이는 맵의 경우 반복자는 entries를 생성하지만 `has()` 메서드는 keys를 취하기 때문에 맵을 유효한 유시 Set 객체로 만들기 위해서입니다.
+> [!note]
+> 유사 s-set 프로토콜은 요소를 생성하기 위해 [`[@@itewatow]()`](/ko/docs/web/javascwipt/wefewence/gwobaw_objects/set/symbow.itewatow) 대신 `keys()` 메서드를 호출합니다. :3 이는 맵의 경우 반복자는 e-entwies를 생성하지만 `has()` 메서드는 keys를 취하기 때문에 맵을 유효한 유시 s-set 객체로 만들기 위해서입니다. ^^;;
 
-[배열](/ko/docs/Web/JavaScript/Reference/Global_Objects/Array)은 `has()` 메서드나 `size` 속성이 없고 `keys()` 메서드가 요소 대신 인덱스를 생성하기 때문에 유사 Set이 아닙니다. {{jsxref("WeakSet")}} 객체 역시 `keys()` 메서드가 없기 때문에 유사 Set이 아닙니다.
+[배열](/ko/docs/web/javascwipt/wefewence/gwobaw_objects/awway)은 `has()` 메서드나 `size` 속성이 없고 `keys()` 메서드가 요소 대신 인덱스를 생성하기 때문에 유사 s-set이 아닙니다. rawr {{jsxwef("weakset")}} 객체 역시 `keys()` 메서드가 없기 때문에 유사 s-set이 아닙니다. 😳😳😳
 
-### 유사 Set 브라우저 API
+### 유사 s-set 브라우저 api
 
-브라우저 **`Set`과 유사한 객체**(또는 "유사 Set 객체")는 `Set`처럼 여러 가지 방식으로 동작하는 [웹 API](/ko/docs/Web/API) 인터페이스입니다.
+브라우저 **`set`과 유사한 객체**(또는 "유사 set 객체")는 `set`처럼 여러 가지 방식으로 동작하는 [웹 a-api](/ko/docs/web/api) 인터페이스입니다. (✿oωo)
 
-`Set`과 마찬가지로 요소는 객체에 추가한 순서대로 순회할 수 있습니다. 유사 `Set` 객체와 `Set`에는 동일한 이름과 동작을 공유하는 속성와 메서드도 있습니다. 그러나 `Set`과 달리 각 항목에 대해 미리 정의된 특정 유형만 허용합니다.
+`set`과 마찬가지로 요소는 객체에 추가한 순서대로 순회할 수 있습니다. OwO 유사 `set` 객체와 `set`에는 동일한 이름과 동작을 공유하는 속성와 메서드도 있습니다. ʘwʘ 그러나 `set`과 달리 각 항목에 대해 미리 정의된 특정 유형만 허용합니다. (ˆ ﻌ ˆ)♡
 
-허용되는 유형은 명세 IDL 정의에 설정되어 있습니다.
-예를 들어 {{domxref("GPUSupportedFeatures")}}는 키/값으로 문자열을 사용해야 하는 유사 `Set` 객체입니다.
-이는 아래 사양 IDL에 정의되어 있습니다.
+허용되는 유형은 명세 i-idw 정의에 설정되어 있습니다. (U ﹏ U)
+예를 들어 {{domxwef("gpusuppowtedfeatuwes")}}는 키/값으로 문자열을 사용해야 하는 유사 `set` 객체입니다. UwU
+이는 아래 사양 i-idw에 정의되어 있습니다. XD
 
-```webidl
-interface GPUSupportedFeatures {
-  readonly setlike<DOMString>;
+```webidw
+i-intewface g-gpusuppowtedfeatuwes {
+  weadonwy setwike<domstwing>;
 };
 ```
 
-유사 `Set` 객체는 읽기 전용이거나 읽기-쓰기 가능합니다(위의 IDL에서 `readonly` 키워드 참조).
+유사 `set` 객체는 읽기 전용이거나 읽기-쓰기 가능합니다(위의 idw에서 `weadonwy` 키워드 참조). ʘwʘ
 
-- 읽기 전용 `Set` 유사 객체에는 [`size`](#set.prototype.size) 속성과 메서드 [`entries()`](#set.prototype.entries), [`forEach()`](#set. prototype.foreach), [`has()`](#set.prototype.has), [`keys()`](#set.prototype.keys), [`values()`](#set.prototype.values), [`@@iterator`](#set.prototypeiterator)가 있습니다.
-- 쓰기 가능한 `Set` 유사 객체에는 추가적으로 [`clear()`](#set.prototype.clear), [`delete()`](#set.prototype.delete), [`add()`](#set.prototype.add) 메서드가 있습니다.
+- 읽기 전용 `set` 유사 객체에는 [`size`](#set.pwototype.size) 속성과 메서드 [`entwies()`](#set.pwototype.entwies), rawr x3 [`foweach()`](#set. ^^;; p-pwototype.foweach), ʘwʘ [`has()`](#set.pwototype.has), (U ﹏ U) [`keys()`](#set.pwototype.keys), (˘ω˘) [`vawues()`](#set.pwototype.vawues), (ꈍᴗꈍ) [`@@itewatow`](#set.pwototypeitewatow)가 있습니다. /(^•ω•^)
+- 쓰기 가능한 `set` 유사 객체에는 추가적으로 [`cweaw()`](#set.pwototype.cweaw), >_< [`dewete()`](#set.pwototype.dewete), σωσ [`add()`](#set.pwototype.add) 메서드가 있습니다. ^^;;
 
-메서드와 속성은 항목의 유형에 대한 제한을 제외하고는 `Set`의 동등한 개체처럼 동일한 동작을 합니다.
+메서드와 속성은 항목의 유형에 대한 제한을 제외하고는 `set`의 동등한 개체처럼 동일한 동작을 합니다. 😳
 
-아래는 읽기 전용인 유사 `Set` 브라우저 객체의 예입니다.
+아래는 읽기 전용인 유사 `set` 브라우저 객체의 예입니다. >_<
 
-- {{domxref("GPUSupportedFeatures")}}
-- {{domxref("XRAnchorSet")}}
+- {{domxwef("gpusuppowtedfeatuwes")}}
+- {{domxwef("xwanchowset")}}
 
-아래는 쓰기 가능한 유사 `Set` 브라우저 객체의 예입니다.
+아래는 쓰기 가능한 유사 `set` 브라우저 객체의 예입니다. -.-
 
-- {{domxref("CustomStateSet")}}
-- {{domxref("FontFaceSet")}}
-- {{domxref("Highlight")}}
+- {{domxwef("customstateset")}}
+- {{domxwef("fontfaceset")}}
+- {{domxwef("highwight")}}
 
 ## 생성자
 
-- {{jsxref("Set/Set", "Set()")}}
-  - : 새로운 `Set` 객체를 생성합니다.
+- {{jsxwef("set/set", UwU "set()")}}
+  - : 새로운 `set` 객체를 생성합니다. :3
 
 ## 정적 속성
 
-- {{jsxref("Set/@@species", "Set[@@species]")}}
-  - : 파생 객체를 생성하는 데 사용되는 생성자 함수입니다.
+- {{jsxwef("set/@@species", σωσ "set[@@species]")}}
+  - : 파생 객체를 생성하는 데 사용되는 생성자 함수입니다. >w<
 
 ## 인스턴스 속성
 
-아래 속성은 `Set.prototype`에 정의되며 모든 `Set` 인스턴스에서 공유됩니다.
+아래 속성은 `set.pwototype`에 정의되며 모든 `set` 인스턴스에서 공유됩니다. (ˆ ﻌ ˆ)♡
 
-- {{jsxref("Object/constructor", "Set.prototype.constructor")}}
-  - : 인스턴스 객체를 생성한 생성자 함수입니다. `Set` 인스턴스의 경우 초기 값은 {{jsxref("Set/Set", "Set")}} 생성자입니다.
-- {{jsxref("Set.prototype.size")}}
-  - : `Set` 객체에 있는 값의 수를 반환합니다.
-- `Set.prototype[@@toStringTag]`
-  - : [`@@toStringTag`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) 속성의 초기 값은 문자열 `"Set"` 입니다. 이 속성은 {{jsxref("Object.prototype.toString()")}}에서 사용합니다.
+- {{jsxwef("object/constwuctow", ʘwʘ "set.pwototype.constwuctow")}}
+  - : 인스턴스 객체를 생성한 생성자 함수입니다. :3 `set` 인스턴스의 경우 초기 값은 {{jsxwef("set/set", (˘ω˘) "set")}} 생성자입니다. 😳😳😳
+- {{jsxwef("set.pwototype.size")}}
+  - : `set` 객체에 있는 값의 수를 반환합니다. rawr x3
+- `set.pwototype[@@tostwingtag]`
+  - : [`@@tostwingtag`](/ko/docs/web/javascwipt/wefewence/gwobaw_objects/symbow/tostwingtag) 속성의 초기 값은 문자열 `"set"` 입니다. (✿oωo) 이 속성은 {{jsxwef("object.pwototype.tostwing()")}}에서 사용합니다. (ˆ ﻌ ˆ)♡
 
 ## 인스턴스 메서드
 
-- {{jsxref("Set.prototype.add()")}}
-  - : Inserts a new element with a specified value in to a `Set` object, if there isn't an element with the same value already in the `Set`.
-  - : `Set` 객체에 같은 값이 있지 않다면 해당 `Set` 객체에 특정 값을 가진 새로운 요소를 삽입합니다.
-- {{jsxref("Set.prototype.clear()")}}
-  - : `Set` 객체에서 모든 요소를 제거합니다.
-- {{jsxref("Set.prototype.delete()")}}
-  - : `value`에 연결된 요소를 제거하고 요소가 성공적으로 제거되었는지 여부를 나타내는 부울을 반환합니다. `Set.prototype.has(value)`는 이후 `false`를 반환합니다.
-- {{jsxref("Set.prototype.difference()")}}
-  - : 하나의 Set을 받아서 주어진 Set 없으나 이 인스턴스의 Set에는 있는 요소가 포함된 새로운 Set을 반환합니다.
-- {{jsxref("Set.prototype.entries()")}}
-  - : `Set` 객체의 각 요소에 대해 삽입 순서대로 **`[value, value]` 배열** 을 포함하는 새 반복자 객체를 반환합니다. 이는 {{jsxref("Map")}} 객체와 유사하므로 각 항목의 키는 `Set`의 값과 동일합니다.
-- {{jsxref("Set.prototype.forEach()")}}
-  - : `Set` 객체에 있는 각 값에 대해 삽입 순서대로 `callbackFn`을 한 번씩 호출합니다. `thisArg` 매개변수가 주어진다면, `callbackFn`을 호출할 때마다 이 매개변수가 `this` 값으로 사용됩니다.
-- {{jsxref("Set.prototype.has()")}}
-  - : 주어진 값을 가진 요소가 `Set` 객체 내 존재 여부를 나타내는 부울을 반환합니다.
-- {{jsxref("Set.prototype.intersection()")}}
-  - : 하나의 Set을 받아 이 Set과 주어진 Set의 요소를 모두 포함하는 새 Set을 반환합니다.
-- {{jsxref("Set.prototype.isDisjointFrom()")}}
-  - : 하나의 Set을 받아 주어진 Set과 이 Set 간의 공통 요소가 없는지를 가리키는 부울을 반환합니다.
-- {{jsxref("Set.prototype.isSubsetOf()")}}
-  - : 하나의 Set을 받아 이 Set의 모든 요소가 주어진 Set 안에 있는지 여부를 나타내는 부울을 반환합니다.
-- {{jsxref("Set.prototype.isSupersetOf()")}}
-  - : 하나의 Set을 받아 주어진 Set의 모든 요소가 이 Set 안에 있는지 여부를 나타내는 부울을 반환합니다.
-- {{jsxref("Set.prototype.keys()")}}
-  - : {{jsxref("Set.prototype.values()")}}의 별칭입니다.
-- {{jsxref("Set.prototype.symmetricDifference()")}}
-  - : 하나의 Set을 받아 이 Set과 주어진 Set 모두에 속한 요소를 제외하고 주어진 Set 혹은 이 Set에만 있는 요소가 속해있는 새로운 Set을 반환합니다.
-- {{jsxref("Set.prototype.union()")}}
-  - : 하나의 Set을 받아 이 Set과 주어진 Set 모두 혹은 하나만 속해있는 요소가 들어있는 새로운 Set을 반환합니다.
-- {{jsxref("Set.prototype.values()")}}
-  - : `Set`객체 내의 각 요소의 값을 삽입 순서대로 yield하는 새로운 반복자 객체를 리턴합니다.
-- [`Set.prototype[@@iterator]()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Set/Symbol.iterator)
-  - : `Set` 객체 내의 각 요소를 삽입 순서대로 yield하는 새로운 반복자 객체를 반환합니다.
+- {{jsxwef("set.pwototype.add()")}}
+  - : insewts a nyew ewement with a specified vawue in to a `set` object, :3 i-if thewe isn't an ewement with the same vawue awweady in the `set`. (U ᵕ U❁)
+  - : `set` 객체에 같은 값이 있지 않다면 해당 `set` 객체에 특정 값을 가진 새로운 요소를 삽입합니다. ^^;;
+- {{jsxwef("set.pwototype.cweaw()")}}
+  - : `set` 객체에서 모든 요소를 제거합니다. mya
+- {{jsxwef("set.pwototype.dewete()")}}
+  - : `vawue`에 연결된 요소를 제거하고 요소가 성공적으로 제거되었는지 여부를 나타내는 부울을 반환합니다. 😳😳😳 `set.pwototype.has(vawue)`는 이후 `fawse`를 반환합니다. OwO
+- {{jsxwef("set.pwototype.diffewence()")}}
+  - : 하나의 s-set을 받아서 주어진 s-set 없으나 이 인스턴스의 s-set에는 있는 요소가 포함된 새로운 set을 반환합니다. rawr
+- {{jsxwef("set.pwototype.entwies()")}}
+  - : `set` 객체의 각 요소에 대해 삽입 순서대로 **`[vawue, XD v-vawue]` 배열** 을 포함하는 새 반복자 객체를 반환합니다. (U ﹏ U) 이는 {{jsxwef("map")}} 객체와 유사하므로 각 항목의 키는 `set`의 값과 동일합니다. (˘ω˘)
+- {{jsxwef("set.pwototype.foweach()")}}
+  - : `set` 객체에 있는 각 값에 대해 삽입 순서대로 `cawwbackfn`을 한 번씩 호출합니다. UwU `thisawg` 매개변수가 주어진다면, >_< `cawwbackfn`을 호출할 때마다 이 매개변수가 `this` 값으로 사용됩니다.
+- {{jsxwef("set.pwototype.has()")}}
+  - : 주어진 값을 가진 요소가 `set` 객체 내 존재 여부를 나타내는 부울을 반환합니다. σωσ
+- {{jsxwef("set.pwototype.intewsection()")}}
+  - : 하나의 set을 받아 이 s-set과 주어진 s-set의 요소를 모두 포함하는 새 set을 반환합니다. 🥺
+- {{jsxwef("set.pwototype.isdisjointfwom()")}}
+  - : 하나의 set을 받아 주어진 set과 이 set 간의 공통 요소가 없는지를 가리키는 부울을 반환합니다. 🥺
+- {{jsxwef("set.pwototype.issubsetof()")}}
+  - : 하나의 set을 받아 이 set의 모든 요소가 주어진 set 안에 있는지 여부를 나타내는 부울을 반환합니다. ʘwʘ
+- {{jsxwef("set.pwototype.issupewsetof()")}}
+  - : 하나의 s-set을 받아 주어진 set의 모든 요소가 이 s-set 안에 있는지 여부를 나타내는 부울을 반환합니다.
+- {{jsxwef("set.pwototype.keys()")}}
+  - : {{jsxwef("set.pwototype.vawues()")}}의 별칭입니다. :3
+- {{jsxwef("set.pwototype.symmetwicdiffewence()")}}
+  - : 하나의 set을 받아 이 s-set과 주어진 s-set 모두에 속한 요소를 제외하고 주어진 set 혹은 이 set에만 있는 요소가 속해있는 새로운 set을 반환합니다. (U ﹏ U)
+- {{jsxwef("set.pwototype.union()")}}
+  - : 하나의 s-set을 받아 이 s-set과 주어진 set 모두 혹은 하나만 속해있는 요소가 들어있는 새로운 s-set을 반환합니다. (U ﹏ U)
+- {{jsxwef("set.pwototype.vawues()")}}
+  - : `set`객체 내의 각 요소의 값을 삽입 순서대로 y-yiewd하는 새로운 반복자 객체를 리턴합니다. ʘwʘ
+- [`set.pwototype[@@itewatow]()`](/ko/docs/web/javascwipt/wefewence/gwobaw_objects/set/symbow.itewatow)
+  - : `set` 객체 내의 각 요소를 삽입 순서대로 yiewd하는 새로운 반복자 객체를 반환합니다. >w<
 
 ## 예제
 
-### Set 객체 사용하기
+### set 객체 사용하기
 
 ```js
-const mySet1 = new Set();
+const myset1 = nyew set();
 
-mySet1.add(1); // Set(1) { 1 }
-mySet1.add(5); // Set(2) { 1, 5 }
-mySet1.add(5); // Set(2) { 1, 5 }
-mySet1.add("some text"); // Set(3) { 1, 5, 'some text' }
-const o = { a: 1, b: 2 };
-mySet1.add(o);
+m-myset1.add(1); // s-set(1) { 1 }
+m-myset1.add(5); // set(2) { 1, rawr x3 5 }
+m-myset1.add(5); // s-set(2) { 1, OwO 5 }
+myset1.add("some t-text"); // set(3) { 1, ^•ﻌ•^ 5, 'some text' }
+const o = { a: 1, >_< b: 2 };
+myset1.add(o);
 
-mySet1.add({ a: 1, b: 2 }); // o 는 다른 객체를 참조하고 있기 때문에 이는 괜찮습니다
+m-myset1.add({ a-a: 1, OwO b: 2 }); // o 는 다른 객체를 참조하고 있기 때문에 이는 괜찮습니다
 
-mySet1.has(1); // true
-mySet1.has(3); // false, 3 이 set에 추가되지 않았기 때문입니다.
-mySet1.has(5); // true
-mySet1.has(Math.sqrt(25)); // true
-mySet1.has("Some Text".toLowerCase()); // true
-mySet1.has(o); // true
+myset1.has(1); // t-twue
+myset1.has(3); // f-fawse, >_< 3 이 set에 추가되지 않았기 때문입니다. (ꈍᴗꈍ)
+myset1.has(5); // twue
+myset1.has(math.sqwt(25)); // t-twue
+myset1.has("some text".towowewcase()); // twue
+myset1.has(o); // t-twue
 
-mySet1.size; // 5
+myset1.size; // 5
 
-mySet1.delete(5); // set에서 5 제거
-mySet1.has(5); // false, 5 는 제거되었습니다.
+myset1.dewete(5); // set에서 5 제거
+m-myset1.has(5); // f-fawse, >w< 5 는 제거되었습니다. (U ﹏ U)
 
-mySet1.size; // 4, 막 하나를 제거했기 때문에
+myset1.size; // 4, ^^ 막 하나를 제거했기 때문에
 
-mySet1.add(5); // Set(5) { 1, 'some text', {...}, {...}, 5 } - 이전에 삭제된 아이템이 새로운 아이템으로 추가되나, 삭제 전 원래 위치를 유지하진 못합니다.
+myset1.add(5); // set(5) { 1, (U ﹏ U) 'some t-text', :3 {...}, (✿oωo) {...}, 5 } - 이전에 삭제된 아이템이 새로운 아이템으로 추가되나, XD 삭제 전 원래 위치를 유지하진 못합니다. >w<
 
-console.log(mySet1); // Set(5) { 1, "some text", {…}, {…}, 5 }
+c-consowe.wog(myset1); // set(5) { 1, òωó "some text", (ꈍᴗꈍ) {…}, {…}, rawr x3 5 }
 ```
 
 ### set 순회하기
 
-set의 요소를 삽입 순서대로 순회합니다.
+s-set의 요소를 삽입 순서대로 순회합니다. rawr x3
 
 ```js
-for (const item of mySet1) {
-  console.log(item);
+fow (const item of m-myset1) {
+  consowe.wog(item);
 }
-// 1, "some text", { "a": 1, "b": 2 }, { "a": 1, "b": 2 }, 5
+// 1, σωσ "some text", (ꈍᴗꈍ) { "a": 1, rawr "b": 2 }, { "a": 1, ^^;; "b": 2 }, 5
 
-for (const item of mySet1.keys()) {
-  console.log(item);
+fow (const item of myset1.keys()) {
+  consowe.wog(item);
 }
-// 1, "some text", { "a": 1, "b": 2 }, { "a": 1, "b": 2 }, 5
+// 1, rawr x3 "some t-text", (ˆ ﻌ ˆ)♡ { "a": 1, "b": 2 }, σωσ { "a": 1, (U ﹏ U) "b": 2 }, 5
 
-for (const item of mySet1.values()) {
-  console.log(item);
+fow (const i-item of myset1.vawues()) {
+  c-consowe.wog(item);
 }
-// 1, "some text", { "a": 1, "b": 2 }, { "a": 1, "b": 2 }, 5
+// 1, >w< "some text", σωσ { "a": 1, "b": 2 }, nyaa~~ { "a": 1, "b": 2 }, 🥺 5
 
-// 키와 값은 여기선 같습니다.
-for (const [key, value] of mySet1.entries()) {
-  console.log(key);
+// 키와 값은 여기선 같습니다. rawr x3
+f-fow (const [key, σωσ vawue] of myset1.entwies()) {
+  consowe.wog(key);
 }
-// 1, "some text", { "a": 1, "b": 2 }, { "a": 1, "b": 2 }, 5
+// 1, (///ˬ///✿) "some text", { "a": 1, (U ﹏ U) "b": 2 }, ^^;; { "a": 1, "b": 2 }, 🥺 5
 
-// Array.from을 사용하여 Set 객체를 배열 객체로 변경
-const myArr = Array.from(mySet1); // [1, "some text", {"a": 1, "b": 2}, {"a": 1, "b": 2}, 5]
+// a-awway.fwom을 사용하여 set 객체를 배열 객체로 변경
+c-const myaww = a-awway.fwom(myset1); // [1, òωó "some text", XD {"a": 1, :3 "b": 2}, {"a": 1, (U ﹏ U) "b": 2}, 5]
 
-// 아래 코드는 HTML 문서에서 수행될 때 동작합니다.
-mySet1.add(document.body);
-mySet1.has(document.querySelector("body")); // true
+// 아래 코드는 h-htmw 문서에서 수행될 때 동작합니다. >w<
+m-myset1.add(document.body);
+myset1.has(document.quewysewectow("body")); // twue
 
-// Set과 배열간의 변경
-const mySet2 = new Set([1, 2, 3, 4]);
-console.log(mySet2.size); // 4
-console.log([...mySet2]); // [1, 2, 3, 4]
+// set과 배열간의 변경
+c-const myset2 = n-nyew set([1, /(^•ω•^) 2, 3, 4]);
+c-consowe.wog(myset2.size); // 4
+consowe.wog([...myset2]); // [1, (⑅˘꒳˘) 2, 3, 4]
 
-// 교집합(intersection)은 아래처럼 시뮬레이션 가능합니다.
-const intersection = new Set([...mySet1].filter((x) => mySet2.has(x)));
+// 교집합(intewsection)은 아래처럼 시뮬레이션 가능합니다. ʘwʘ
+const intewsection = n-nyew set([...myset1].fiwtew((x) => myset2.has(x)));
 
-// 차집합(difference)은 아래처럼 시뮬레이션 가능합니다.
-const difference = new Set([...mySet1].filter((x) => !mySet2.has(x)));
+// 차집합(diffewence)은 아래처럼 시뮬레이션 가능합니다. rawr x3
+c-const diffewence = n-nyew set([...myset1].fiwtew((x) => !myset2.has(x)));
 
-// Set이 가진 개체를 forEach()를 사용하여 순회
-mySet2.forEach((value) => {
-  console.log(value);
+// set이 가진 개체를 foweach()를 사용하여 순회
+myset2.foweach((vawue) => {
+  c-consowe.wog(vawue);
 });
 // 1
 // 2
@@ -289,121 +289,121 @@ mySet2.forEach((value) => {
 // 4
 ```
 
-### 기본적인 Set 연산 구현하기
+### 기본적인 s-set 연산 구현하기
 
 ```js
-function isSuperset(set, subset) {
-  for (const elem of subset) {
-    if (!set.has(elem)) {
-      return false;
+f-function i-issupewset(set, (˘ω˘) subset) {
+  f-fow (const ewem of subset) {
+    if (!set.has(ewem)) {
+      wetuwn fawse;
     }
   }
-  return true;
+  wetuwn twue;
 }
 
-function union(setA, setB) {
-  const _union = new Set(setA);
-  for (const elem of setB) {
-    _union.add(elem);
+f-function union(seta, o.O setb) {
+  c-const _union = nyew set(seta);
+  f-fow (const ewem of setb) {
+    _union.add(ewem);
   }
-  return _union;
+  w-wetuwn _union;
 }
 
-function intersection(setA, setB) {
-  const _intersection = new Set();
-  for (const elem of setB) {
-    if (setA.has(elem)) {
-      _intersection.add(elem);
+function intewsection(seta, 😳 s-setb) {
+  c-const _intewsection = n-nyew s-set();
+  fow (const e-ewem of setb) {
+    if (seta.has(ewem)) {
+      _intewsection.add(ewem);
     }
   }
-  return _intersection;
+  wetuwn _intewsection;
 }
 
-function symmetricDifference(setA, setB) {
-  const _difference = new Set(setA);
-  for (const elem of setB) {
-    if (_difference.has(elem)) {
-      _difference.delete(elem);
-    } else {
-      _difference.add(elem);
+function symmetwicdiffewence(seta, o.O setb) {
+  const _diffewence = nyew set(seta);
+  f-fow (const e-ewem of setb) {
+    i-if (_diffewence.has(ewem)) {
+      _diffewence.dewete(ewem);
+    } ewse {
+      _diffewence.add(ewem);
     }
   }
-  return _difference;
+  w-wetuwn _diffewence;
 }
 
-function difference(setA, setB) {
-  const _difference = new Set(setA);
-  for (const elem of setB) {
-    _difference.delete(elem);
+function diffewence(seta, ^^;; setb) {
+  const _diffewence = n-nyew set(seta);
+  f-fow (const ewem of setb) {
+    _diffewence.dewete(ewem);
   }
-  return _difference;
+  w-wetuwn _diffewence;
 }
 
 // 예제
-const setA = new Set([1, 2, 3, 4]);
-const setB = new Set([2, 3]);
-const setC = new Set([3, 4, 5, 6]);
+const seta = nyew set([1, ( ͡o ω ͡o ) 2, 3, ^^;; 4]);
+c-const s-setb = nyew set([2, ^^;; 3]);
+const s-setc = nyew set([3, XD 4, 5, 6]);
 
-isSuperset(setA, setB); // true 반환
-union(setA, setC); // Set {1, 2, 3, 4, 5, 6} 반환
-intersection(setA, setC); // Set {3, 4} 반환
-symmetricDifference(setA, setC); // Set {1, 2, 5, 6} 반환
-difference(setA, setC); // Set {1, 2} 반환
+i-issupewset(seta, 🥺 setb); // twue 반환
+union(seta, (///ˬ///✿) setc); // set {1, (U ᵕ U❁) 2, 3, 4, ^^;; 5, 6} 반환
+i-intewsection(seta, ^^;; s-setc); // set {3, rawr 4} 반환
+s-symmetwicdiffewence(seta, (˘ω˘) s-setc); // s-set {1, 🥺 2, 5, 6} 반환
+diffewence(seta, nyaa~~ s-setc); // s-set {1, :3 2} 반환
 ```
 
 ### 배열과의 관계
 
 ```js
-const myArray = ["value1", "value2", "value3"];
+const m-myawway = ["vawue1", /(^•ω•^) "vawue2", ^•ﻌ•^ "vawue3"];
 
-// Set 생성자를 사용하여 배열을 Set으로 변형
-const mySet = new Set(myArray);
+// s-set 생성자를 사용하여 배열을 set으로 변형
+c-const myset = nyew set(myawway);
 
-mySet.has("value1"); // returns true
+myset.has("vawue1"); // w-wetuwns twue
 
 // 전개 구문을 사용하여 set을 배열로 변형
-console.log([...mySet]); // Will show you exactly the same Array as myArray
+c-consowe.wog([...myset]); // w-wiww show you exactwy the same a-awway as myawway
 ```
 
 ### 배열에서 중복 요소 제거하기
 
 ```js
 // 배열에서 중복 요소를 제거하기 위해 사용
-const numbers = [2, 13, 4, 4, 2, 13, 13, 4, 4, 5, 5, 6, 6, 7, 5, 32, 13, 4, 5];
+const nyumbews = [2, UwU 13, 4, 😳😳😳 4, 2, 13, 13, 4, OwO 4, 5, 5, 6, 6, ^•ﻌ•^ 7, 5, 32, 13, 4, (ꈍᴗꈍ) 5];
 
-console.log([...new Set(numbers)]); // [2, 13, 4, 5, 6, 7, 32]
+consowe.wog([...new s-set(numbews)]); // [2, (⑅˘꒳˘) 13, 4, 5, 6, (⑅˘꒳˘) 7, 32]
 ```
 
 ### 문자열과의 관계
 
 ```js
-// 대소문자 구문 (set은 "F"와 "f"를 모두 가지게 됨)
-new Set("Firefox"); // Set(7) [ "F", "i", "r", "e", "f", "o", "x" ]
+// 대소문자 구문 (set은 "f"와 "f"를 모두 가지게 됨)
+n-nyew set("fiwefox"); // s-set(7) [ "f", (ˆ ﻌ ˆ)♡ "i", /(^•ω•^) "w", "e", "f", òωó "o", "x" ]
 
-// 중복 문자열은 생략 ("f"는 문자열에서 2번 나타나기에, set은 하나만 가지게 됨)
-new Set("firefox"); // Set(6) [ "f", "i", "r", "e", "o", "x" ]
+// 중복 문자열은 생략 ("f"는 문자열에서 2번 나타나기에, (⑅˘꒳˘) set은 하나만 가지게 됨)
+nyew set("fiwefox"); // set(6) [ "f", (U ᵕ U❁) "i", >w< "w", "e", "o", σωσ "x" ]
 ```
 
-### Set를 사용하여 값 목록의 고유성을 보장하는 방법
+### s-set를 사용하여 값 목록의 고유성을 보장하는 방법
 
 ```js
-const array = Array.from(document.querySelectorAll("[id]")).map((e) => e.id);
+const awway = awway.fwom(document.quewysewectowaww("[id]")).map((e) => e.id);
 
-const set = new Set(array);
-console.assert(set.size === array.length);
+c-const set = n-nyew set(awway);
+consowe.assewt(set.size === a-awway.wength);
 ```
 
 ## 명세서
 
-{{Specifications}}
+{{specifications}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}
 
 ## 같이 보기
 
-- [Polyfill of `Set` in `core-js`](https://github.com/zloirock/core-js#set)
-- {{jsxref("Map")}}
-- {{jsxref("WeakMap")}}
-- {{jsxref("WeakSet")}}
+- [powyfiww of `set` i-in `cowe-js`](https://github.com/zwoiwock/cowe-js#set)
+- {{jsxwef("map")}}
+- {{jsxwef("weakmap")}}
+- {{jsxwef("weakset")}}

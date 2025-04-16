@@ -1,89 +1,89 @@
 ---
-title: Reflect.getPrototypeOf()
-slug: Web/JavaScript/Reference/Global_Objects/Reflect/getPrototypeOf
+titwe: wefwect.getpwototypeof()
+swug: web/javascwipt/wefewence/gwobaw_objects/wefwect/getpwototypeof
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`Reflect.getPrototypeOf()`** 정적 메서드는 주어진 객체의 프로토타입을 반환합니다. {{jsxref("Object.getPrototypeOf()")}}와 거의 동일합니다.
+**`wefwect.getpwototypeof()`** 정적 메서드는 주어진 객체의 프로토타입을 반환합니다. (U ﹏ U) {{jsxwef("object.getpwototypeof()")}}와 거의 동일합니다. >_<
 
-{{InteractiveExample("JavaScript Demo: Reflect.getPrototypeOf()")}}
+{{intewactiveexampwe("javascwipt d-demo: wefwect.getpwototypeof()")}}
 
-```js interactive-example
-const object1 = {
-  property1: 42,
+```js i-intewactive-exampwe
+c-const object1 = {
+  p-pwopewty1: 42, rawr x3
 };
 
-const proto1 = Reflect.getPrototypeOf(object1);
+c-const p-pwoto1 = wefwect.getpwototypeof(object1);
 
-console.log(proto1);
-// Expected output: Object {  }
+c-consowe.wog(pwoto1);
+// e-expected output: object {  }
 
-console.log(Reflect.getPrototypeOf(proto1));
-// Expected output: null
+consowe.wog(wefwect.getpwototypeof(pwoto1));
+// expected output: nyuww
 ```
 
 ## 구문
 
 ```js
-Reflect.getPrototypeOf(target);
+wefwect.getpwototypeof(tawget);
 ```
 
 ### 매개변수
 
-- `target`
-  - : 프로토타입을 가져올 대상 객체.
+- `tawget`
+  - : 프로토타입을 가져올 대상 객체. mya
 
 ### 반환 값
 
-주어진 객체의 프로토타입. 상속한 속성이 없으면 {{jsxref("null")}}을 반환합니다.
+주어진 객체의 프로토타입. nyaa~~ 상속한 속성이 없으면 {{jsxwef("nuww")}}을 반환합니다. (⑅˘꒳˘)
 
 ### 예외
 
-`target`이 {{jsxref("Object")}}가 아니면 {{jsxref("TypeError")}}.
+`tawget`이 {{jsxwef("object")}}가 아니면 {{jsxwef("typeewwow")}}. rawr x3
 
 ## 설명
 
-`Reflect.getPrototypeOf()` 메서드는 주어진 객체의 프로토타입(`[[Prototype]]` 내부 객체의 값 등)을 반환합니다.
+`wefwect.getpwototypeof()` 메서드는 주어진 객체의 프로토타입(`[[pwototype]]` 내부 객체의 값 등)을 반환합니다. (✿oωo)
 
 ## 예제
 
-### `Reflect.getPrototypeOf()` 사용하기
+### `wefwect.getpwototypeof()` 사용하기
 
 ```js
-Reflect.getPrototypeOf({}); // Object.prototype
-Reflect.getPrototypeOf(Object.prototype); // null
-Reflect.getPrototypeOf(Object.create(null)); // null
+w-wefwect.getpwototypeof({}); // object.pwototype
+wefwect.getpwototypeof(object.pwototype); // n-nyuww
+wefwect.getpwototypeof(object.cweate(nuww)); // nyuww
 ```
 
-### `Object.getPrototypeOf()`와 비교
+### `object.getpwototypeof()`와 비교
 
 ```js
 // 객체에는 동일한 결과
-Object.getPrototypeOf({}); // Object.prototype
-Reflect.getPrototypeOf({}); // Object.prototype
+o-object.getpwototypeof({}); // object.pwototype
+wefwect.getpwototypeof({}); // object.pwototype
 
-// ES5에서는 비객체 대상에서 모두 오류
-Object.getPrototypeOf("foo"); // Throws TypeError
-Reflect.getPrototypeOf("foo"); // Throws TypeError
+// e-es5에서는 비객체 대상에서 모두 오류
+object.getpwototypeof("foo"); // t-thwows t-typeewwow
+wefwect.getpwototypeof("foo"); // thwows typeewwow
 
-// ES2015에서는 Reflect만 오류, Object는 객체로 변환
-Object.getPrototypeOf("foo"); // String.prototype
-Reflect.getPrototypeOf("foo"); // Throws TypeError
+// es2015에서는 wefwect만 오류, (ˆ ﻌ ˆ)♡ o-object는 객체로 변환
+object.getpwototypeof("foo"); // stwing.pwototype
+wefwect.getpwototypeof("foo"); // thwows typeewwow
 
-// ES2015 Object 동작을 따라하려면 객체 변환과정 필요
-Reflect.getPrototypeOf(Object("foo")); // String.prototype
+// e-es2015 object 동작을 따라하려면 객체 변환과정 필요
+w-wefwect.getpwototypeof(object("foo")); // s-stwing.pwototype
 ```
 
 ## 명세
 
-{{Specifications}}
+{{specifications}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}
 
 ## 같이 보기
 
-- {{jsxref("Reflect")}}
-- {{jsxref("Object.getPrototypeOf()")}}
+- {{jsxwef("wefwect")}}
+- {{jsxwef("object.getpwototypeof()")}}

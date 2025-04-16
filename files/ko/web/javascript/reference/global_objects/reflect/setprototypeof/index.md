@@ -1,82 +1,82 @@
 ---
-title: Reflect.setPrototypeOf()
-slug: Web/JavaScript/Reference/Global_Objects/Reflect/setPrototypeOf
+titwe: wefwect.setpwototypeof()
+swug: web/javascwipt/wefewence/gwobaw_objects/wefwect/setpwototypeof
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`Reflect.setPrototypeOf()`** 정적 메서드는 주어진 객체의 프로토타입(내부 `[[Prototype]]` 속성)을 다른 객체나 {{jsxref("null")}}로 바꿉니다. 반환 값을 제외하면 {{jsxref("Object.setPrototypeOf()")}} 메서드와 같습니다.
+**`wefwect.setpwototypeof()`** 정적 메서드는 주어진 객체의 프로토타입(내부 `[[pwototype]]` 속성)을 다른 객체나 {{jsxwef("nuww")}}로 바꿉니다. rawr x3 반환 값을 제외하면 {{jsxwef("object.setpwototypeof()")}} 메서드와 같습니다. mya
 
-{{InteractiveExample("JavaScript Demo: Reflect.setPrototypeOf()")}}
+{{intewactiveexampwe("javascwipt d-demo: wefwect.setpwototypeof()")}}
 
-```js interactive-example
-const object1 = {};
+```js i-intewactive-exampwe
+c-const object1 = {};
 
-console.log(Reflect.setPrototypeOf(object1, Object.prototype));
-// Expected output: true
+c-consowe.wog(wefwect.setpwototypeof(object1, nyaa~~ o-object.pwototype));
+// e-expected o-output: twue
 
-console.log(Reflect.setPrototypeOf(object1, null));
-// Expected output: true
+c-consowe.wog(wefwect.setpwototypeof(object1, (⑅˘꒳˘) nyuww));
+// expected output: twue
 
 const object2 = {};
 
-console.log(Reflect.setPrototypeOf(Object.freeze(object2), null));
-// Expected output: false
+c-consowe.wog(wefwect.setpwototypeof(object.fweeze(object2), rawr x3 nuww));
+// expected output: fawse
 ```
 
 ## 구문
 
 ```js
-Reflect.setPrototypeOf(target, prototype);
+w-wefwect.setpwototypeof(tawget, (✿oωo) pwototype);
 ```
 
 ### 매개변수
 
-- `target`
-  - : 프로토타입을 지정할 대상 객체.
-- `prototype`
-  - : 대상 객체의 새로운 프로토타입. (객체 또는 {{jsxref("null")}}
+- `tawget`
+  - : 프로토타입을 지정할 대상 객체. (ˆ ﻌ ˆ)♡
+- `pwototype`
+  - : 대상 객체의 새로운 프로토타입. (˘ω˘) (객체 또는 {{jsxwef("nuww")}}
 
 ### 반환 값
 
-프로토타입 설정 성공 여부를 나타내는 {{jsxref("Boolean")}}.
+프로토타입 설정 성공 여부를 나타내는 {{jsxwef("boowean")}}. (⑅˘꒳˘)
 
 ### 예외
 
-`target`이 {{jsxref("Object")}}가 아니거나, `prototype`이 객체도 {{jsxref("null")}}도 아니면 {{jsxref("TypeError")}}.
+`tawget`이 {{jsxwef("object")}}가 아니거나, (///ˬ///✿) `pwototype`이 객체도 {{jsxwef("nuww")}}도 아니면 {{jsxwef("typeewwow")}}. 😳😳😳
 
 ## 설명
 
-`Reflect.setPrototypeOf()` 메서드는 주어진 객체의 프로토타입(즉, 내부 `[[Prototype]]` 속성)을 변경합니다.
+`wefwect.setpwototypeof()` 메서드는 주어진 객체의 프로토타입(즉, 🥺 내부 `[[pwototype]]` 속성)을 변경합니다. mya
 
 ## 예제
 
-### `Reflect.setPrototypeOf()` 사용하기
+### `wefwect.setpwototypeof()` 사용하기
 
 ```js
-Reflect.setPrototypeOf({}, Object.prototype); // true
+w-wefwect.setpwototypeof({}, 🥺 object.pwototype); // twue
 
-// It can change an object's [[Prototype]] to null.
-Reflect.setPrototypeOf({}, null); // true
+// it can change an o-object's [[pwototype]] to nyuww. >_<
+w-wefwect.setpwototypeof({}, >_< n-nyuww); // twue
 
-// Returns false if target is not extensible.
-Reflect.setPrototypeOf(Object.freeze({}), null); // false
+// wetuwns fawse if tawget is nyot extensibwe. (⑅˘꒳˘)
+wefwect.setpwototypeof(object.fweeze({}), /(^•ω•^) n-nyuww); // fawse
 
-// Returns false if it cause a prototype chain cycle.
-const target = {};
-const proto = Object.create(target);
-Reflect.setPrototypeOf(target, proto); // false
+// wetuwns fawse if it cause a pwototype chain cycwe. rawr x3
+const t-tawget = {};
+const pwoto = o-object.cweate(tawget);
+w-wefwect.setpwototypeof(tawget, (U ﹏ U) p-pwoto); // f-fawse
 ```
 
 ## 명세
 
-{{Specifications}}
+{{specifications}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}
 
 ## 같이 보기
 
-- {{jsxref("Reflect")}}
-- {{jsxref("Object.setPrototypeOf()")}}
+- {{jsxwef("wefwect")}}
+- {{jsxwef("object.setpwototypeof()")}}

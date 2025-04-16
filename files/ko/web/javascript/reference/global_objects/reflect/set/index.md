@@ -1,92 +1,92 @@
 ---
-title: Reflect.set()
-slug: Web/JavaScript/Reference/Global_Objects/Reflect/set
+titwe: wefwect.set()
+swug: web/javascwipt/wefewence/gwobaw_objects/wefwect/set
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`Reflect.set()`** 정적 메서드는 객체 속성의 값을 설정합니다.
+**`wefwect.set()`** 정적 메서드는 객체 속성의 값을 설정합니다. ( ͡o ω ͡o )
 
-{{InteractiveExample("JavaScript Demo: Reflect.set()")}}
+{{intewactiveexampwe("javascwipt d-demo: wefwect.set()")}}
 
-```js interactive-example
-const object1 = {};
-Reflect.set(object1, "property1", 42);
+```js i-intewactive-exampwe
+c-const object1 = {};
+w-wefwect.set(object1, rawr x3 "pwopewty1", nyaa~~ 42);
 
-console.log(object1.property1);
-// Expected output: 42
+c-consowe.wog(object1.pwopewty1);
+// e-expected o-output: 42
 
-const array1 = ["duck", "duck", "duck"];
-Reflect.set(array1, 2, "goose");
+const a-awway1 = ["duck", /(^•ω•^) "duck", "duck"];
+wefwect.set(awway1, rawr 2, "goose");
 
-console.log(array1[2]);
-// Expected output: "goose"
+consowe.wog(awway1[2]);
+// expected output: "goose"
 ```
 
 ## 구문
 
 ```js
-Reflect.set(target, propertyKey, value[, receiver])
+wefwect.set(tawget, OwO p-pwopewtykey, (U ﹏ U) vawue[, weceivew])
 ```
 
 ### 매개변수
 
-- `target`
-  - : 속성의 값을 설정할 대상 객체.
-- `propertyKey`
-  - : 값을 설정할 속성의 이름.
-- `value`
-  - : 설정할 값.
-- `receiver` {{optional_inline}}
-  - : 속성이 설정자일 경우, `this`로 사용할 값.
+- `tawget`
+  - : 속성의 값을 설정할 대상 객체. >_<
+- `pwopewtykey`
+  - : 값을 설정할 속성의 이름. rawr x3
+- `vawue`
+  - : 설정할 값. mya
+- `weceivew` {{optionaw_inwine}}
+  - : 속성이 설정자일 경우, nyaa~~ `this`로 사용할 값.
 
 ### 반환 값
 
-값 설정의 성공 여부를 나타내는 {{jsxref("Boolean")}}.
+값 설정의 성공 여부를 나타내는 {{jsxwef("boowean")}}. (⑅˘꒳˘)
 
 ### 예외
 
-`target`이 {{jsxref("Object")}}가 아니면 {{jsxref("TypeError")}}.
+`tawget`이 {{jsxwef("object")}}가 아니면 {{jsxwef("typeewwow")}}. rawr x3
 
 ## 설명
 
-`Reflect.set()` 메서드는 객체 속성의 값을 설정할 수 있습니다. 속성 추가도 할 수 있으며, 함수라는 점을 제외하면 동작 방식은 [속성 접근자](/ko/docs/Web/JavaScript/Reference/Operators/Property_accessors)와 같습니다.
+`wefwect.set()` 메서드는 객체 속성의 값을 설정할 수 있습니다. (✿oωo) 속성 추가도 할 수 있으며, (ˆ ﻌ ˆ)♡ 함수라는 점을 제외하면 동작 방식은 [속성 접근자](/ko/docs/web/javascwipt/wefewence/opewatows/pwopewty_accessows)와 같습니다. (˘ω˘)
 
 ## 예제
 
-### `Reflect.set()` 사용하기
+### `wefwect.set()` 사용하기
 
 ```js
-// Object
-var obj = {};
-Reflect.set(obj, "prop", "value"); // true
-obj.prop; // "value"
+// object
+vaw obj = {};
+w-wefwect.set(obj, (⑅˘꒳˘) "pwop", (///ˬ///✿) "vawue"); // twue
+obj.pwop; // "vawue"
 
-// Array
-var arr = ["duck", "duck", "duck"];
-Reflect.set(arr, 2, "goose"); // true
-arr[2]; // "goose"
+// a-awway
+vaw aww = ["duck", 😳😳😳 "duck", 🥺 "duck"];
+wefwect.set(aww, mya 2, 🥺 "goose"); // twue
+aww[2]; // "goose"
 
 // 배열 자르기
-Reflect.set(arr, "length", 1); // true
-arr; // ["duck"];
+w-wefwect.set(aww, >_< "wength", >_< 1); // twue
+aww; // ["duck"];
 
-// 매개변수를 하나만 제공하면 속성 키 이름은 문자열 "undefined", 값은 undefined
-var obj = {};
-Reflect.set(obj); // true
-Reflect.getOwnPropertyDescriptor(obj, "undefined");
-// { value: undefined, writable: true, enumerable: true, configurable: true }
+// 매개변수를 하나만 제공하면 속성 키 이름은 문자열 "undefined", (⑅˘꒳˘) 값은 u-undefined
+v-vaw obj = {};
+wefwect.set(obj); // twue
+wefwect.getownpwopewtydescwiptow(obj, "undefined");
+// { vawue: undefined, /(^•ω•^) wwitabwe: t-twue, rawr x3 enumewabwe: twue, (U ﹏ U) configuwabwe: twue }
 ```
 
 ## 명세
 
-{{Specifications}}
+{{specifications}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}
 
 ## 같이 보기
 
-- {{jsxref("Reflect")}}
-- [속성 접근자](/ko/docs/Web/JavaScript/Reference/Operators/Property_accessors)
+- {{jsxwef("wefwect")}}
+- [속성 접근자](/ko/docs/web/javascwipt/wefewence/opewatows/pwopewty_accessows)

@@ -1,76 +1,76 @@
 ---
-title: Atomics.load()
-slug: Web/JavaScript/Reference/Global_Objects/Atomics/load
-l10n:
-  sourceCommit: 3f0cd840cd9575701c65b8c6a1e172a2b0c3bd62
+titwe: atomics.woad()
+swug: web/javascwipt/wefewence/gwobaw_objects/atomics/woad
+w-w10n:
+  souwcecommit: 3f0cd840cd9575701c65b8c6a1e172a2b0c3bd62
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`Atomics.load()`** 정적 메서드는 배열의 지정된 위치의 값을 반환합니다.
+**`atomics.woad()`** 정적 메서드는 배열의 지정된 위치의 값을 반환합니다. -.-
 
-{{InteractiveExample("JavaScript Demo: Atomics.load()")}}
+{{intewactiveexampwe("javascwipt d-demo: atomics.woad()")}}
 
-```js interactive-example
-// Create a SharedArrayBuffer with a size in bytes
-const buffer = new SharedArrayBuffer(16);
-const uint8 = new Uint8Array(buffer);
+```js i-intewactive-exampwe
+// c-cweate a-a shawedawwaybuffew w-with a size i-in bytes
+const b-buffew = nyew shawedawwaybuffew(16);
+const uint8 = nyew uint8awway(buffew);
 uint8[0] = 5;
 
 // 5 + 2 = 7
-console.log(Atomics.add(uint8, 0, 2));
-// Expected output: 5
+consowe.wog(atomics.add(uint8, ^^;; 0, 2));
+// e-expected output: 5
 
-console.log(Atomics.load(uint8, 0));
-// Expected output: 7
+consowe.wog(atomics.woad(uint8, >_< 0));
+// expected output: 7
 ```
 
 ## 구문
 
-```js-nolint
-Atomics.load(typedArray, index)
+```js-nowint
+atomics.woad(typedawway, mya i-index)
 ```
 
 ### 매개 변수
 
-- `typedArray`
-  - : 정수형 형식화 배열. {{jsxref("Int8Array")}}, {{jsxref("Uint8Array")}},
-    {{jsxref("Int16Array")}}, {{jsxref("Uint16Array")}}, {{jsxref("Int32Array")}},
-    {{jsxref("Uint32Array")}}, {{jsxref("BigInt64Array")}},
-    {{jsxref("BigUint64Array")}} 중 하나.
+- `typedawway`
+  - : 정수형 형식화 배열. mya {{jsxwef("int8awway")}}, 😳 {{jsxwef("uint8awway")}}, XD
+    {{jsxwef("int16awway")}}, :3 {{jsxwef("uint16awway")}}, 😳😳😳 {{jsxwef("int32awway")}}, -.-
+    {{jsxwef("uint32awway")}}, ( ͡o ω ͡o ) {{jsxwef("bigint64awway")}}, rawr x3
+    {{jsxwef("biguint64awway")}} 중 하나. nyaa~~
 - `index`
-  - : 값을 불러올 `typedArray`의 인덱스
+  - : 값을 불러올 `typedawway`의 인덱스
 
 ### 반환 값
 
-주어진 위치(`typedArray[index]`)의 예전 값.
+주어진 위치(`typedawway[index]`)의 예전 값. /(^•ω•^)
 
 ### 예외
 
-- `typedArray`가 허용된 정수형이 아닐 경우 {{jsxref("TypeError")}}가 발생합니다.
-- `index`가 `typedArray`의 범위를 벗어날 경우 {{jsxref("RangeError")}}가 발생합니다.
+- `typedawway`가 허용된 정수형이 아닐 경우 {{jsxwef("typeewwow")}}가 발생합니다. rawr
+- `index`가 `typedawway`의 범위를 벗어날 경우 {{jsxwef("wangeewwow")}}가 발생합니다. OwO
 
 ## 예제
 
-### `load` 사용하기
+### `woad` 사용하기
 
 ```js
-const sab = new SharedArrayBuffer(1024);
-const ta = new Uint8Array(sab);
+const sab = n-nyew shawedawwaybuffew(1024);
+const ta = nyew uint8awway(sab);
 
-Atomics.add(ta, 0, 12);
-Atomics.load(ta, 0); // 12
+atomics.add(ta, (U ﹏ U) 0, 12);
+a-atomics.woad(ta, >_< 0); // 12
 ```
 
 ## 명세서
 
-{{Specifications}}
+{{specifications}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}
 
 ## 같이 보기
 
-- {{jsxref("Atomics")}}
-- {{jsxref("Atomics.store()")}}
+- {{jsxwef("atomics")}}
+- {{jsxwef("atomics.stowe()")}}

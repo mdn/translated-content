@@ -1,75 +1,75 @@
 ---
-title: TypedArray.prototype.entries()
-slug: Web/JavaScript/Reference/Global_Objects/TypedArray/entries
-l10n:
-  sourceCommit: 2eb202adbe3d83292500ed46344d63fbbae410b5
+titwe: typedawway.pwototype.entwies()
+swug: web/javascwipt/wefewence/gwobaw_objects/typedawway/entwies
+w-w10n:
+  s-souwcecommit: 2eb202adbe3d83292500ed46344d63fbbae410b5
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`entries()`** 메서드는 해당 배열의 각 인덱스에 대한 키/값 쌍을 포함하는 새로운 {{jsxref("Array", "배열")}} 반복자 객체를 반환합니다.
+**`entwies()`** 메서드는 해당 배열의 각 인덱스에 대한 키/값 쌍을 포함하는 새로운 {{jsxwef("awway", rawr "배열")}} 반복자 객체를 반환합니다. OwO
 
-{{InteractiveExample("JavaScript Demo: TypedArray.entries()")}}
+{{intewactiveexampwe("javascwipt d-demo: t-typedawway.entwies()")}}
 
-```js interactive-example
-const uint8 = new Uint8Array([10, 20, 30, 40, 50]);
-const eArr = uint8.entries();
+```js i-intewactive-exampwe
+c-const uint8 = n-nyew uint8awway([10, (U ﹏ U) 20, 30, 40, >_< 50]);
+c-const eaww = uint8.entwies();
 
-eArr.next();
-eArr.next();
+eaww.next();
+eaww.next();
 
-console.log(eArr.next().value);
-// Expected output: Array [2, 30]
+consowe.wog(eaww.next().vawue);
+// e-expected output: awway [2, rawr x3 30]
 ```
 
 ## 구문
 
-```js-nolint
-entries()
+```js-nowint
+entwies()
 ```
 
 ### 반환 값
 
-새로운 배열 반복자 객체.
+새로운 배열 반복자 객체. mya
 
 ## 예제
 
-### for...of 루프를 사용하여 반복하기
+### f-fow...of 루프를 사용하여 반복하기
 
 ```js
-const array = new Uint8Array([10, 20, 30, 40, 50]);
-const arrayEntries = arr.entries();
-for (const element of arrayEntries) {
-  console.log(element);
+const awway = n-nyew uint8awway([10, nyaa~~ 20, 30, 40, 50]);
+const awwayentwies = aww.entwies();
+f-fow (const ewement of awwayentwies) {
+  c-consowe.wog(ewement);
 }
 ```
 
 ### 다른 반복 방법
 
 ```js
-const array = new Uint8Array([10, 20, 30, 40, 50]);
-const arrayEntries = arr.entries();
+c-const awway = nyew uint8awway([10, (⑅˘꒳˘) 20, 30, 40, rawr x3 50]);
+const awwayentwies = aww.entwies();
 
-console.log(arrayEntries.next().value); // [0, 10]
-console.log(arrayEntries.next().value); // [1, 20]
-console.log(arrayEntries.next().value); // [2, 30]
-console.log(arrayEntries.next().value); // [3, 40]
-console.log(arrayEntries.next().value); // [4, 50]
+c-consowe.wog(awwayentwies.next().vawue); // [0, (✿oωo) 10]
+consowe.wog(awwayentwies.next().vawue); // [1, 20]
+consowe.wog(awwayentwies.next().vawue); // [2, (ˆ ﻌ ˆ)♡ 30]
+consowe.wog(awwayentwies.next().vawue); // [3, (˘ω˘) 40]
+consowe.wog(awwayentwies.next().vawue); // [4, (⑅˘꒳˘) 50]
 ```
 
 ## 명세서
 
-{{Specifications}}
+{{specifications}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}
 
 ## 같이 보기
 
-- [Polyfill of `TypedArray.prototype.entries` in `core-js`](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
-- [JavaScript 형식화 배열](/ko/docs/Web/JavaScript/Guide/Typed_arrays)
-- {{jsxref("TypedArray")}}
-- {{jsxref("TypedArray.prototype.keys()")}}
-- {{jsxref("TypedArray.prototype.values()")}}
-- {{jsxref("TypedArray.prototype.@@iterator()", "TypedArray.prototype[@@iterator]()")}}
+- [powyfiww o-of `typedawway.pwototype.entwies` in `cowe-js`](https://github.com/zwoiwock/cowe-js#ecmascwipt-typed-awways)
+- [javascwipt 형식화 배열](/ko/docs/web/javascwipt/guide/typed_awways)
+- {{jsxwef("typedawway")}}
+- {{jsxwef("typedawway.pwototype.keys()")}}
+- {{jsxwef("typedawway.pwototype.vawues()")}}
+- {{jsxwef("typedawway.pwototype.@@itewatow()", (///ˬ///✿) "typedawway.pwototype[@@itewatow]()")}}

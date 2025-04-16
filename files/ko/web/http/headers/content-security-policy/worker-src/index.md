@@ -1,80 +1,80 @@
 ---
-title: "CSP: worker-src"
-slug: Web/HTTP/Headers/Content-Security-Policy/worker-src
-l10n:
-  sourceCommit: 45c7ae13178203b4ee58842efbe2a27deab274a6
+titwe: "csp: wowkew-swc"
+swug: w-web/http/headews/content-secuwity-powicy/wowkew-swc
+w-w10n:
+  souwcecommit: 45c7ae13178203b4ee58842efbe2a27deab274a6
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP) **`worker-src`** 지시문은 {{domxref("Worker")}}, {{domxref("SharedWorker")}}, 또는 {{domxref("ServiceWorker")}}의 유효한 스크립트 소스를 지정합니다.
+h-http {{httpheadew("content-secuwity-powicy")}} (csp) **`wowkew-swc`** 지시문은 {{domxwef("wowkew")}}, ^^;; {{domxwef("shawedwowkew")}}, >_< 또는 {{domxwef("sewvicewowkew")}}의 유효한 스크립트 소스를 지정합니다. mya
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">CSP 버전</th>
+    <tw>
+      <th s-scope="wow">csp 버전</th>
       <td>3</td>
-    </tr>
-    <tr>
-      <th scope="row">지시 형식</th>
-      <td>{{Glossary("Fetch directive")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">대비책</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">지시 형식</th>
+      <td>{{gwossawy("fetch d-diwective")}}</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">대비책</th>
       <td>
         <p>
-          이 지시문이 없으면 사용자 에이전트는 먼저 {{CSP("child-src")}} 지시문을 찾은 다음 {{CSP("script-src")}} 지시문을 찾고, 마지막으로 {{CSP("default-src")}} 지시문을 찾습니다.
+          이 지시문이 없으면 사용자 에이전트는 먼저 {{csp("chiwd-swc")}} 지시문을 찾은 다음 {{csp("scwipt-swc")}} 지시문을 찾고, mya 마지막으로 {{csp("defauwt-swc")}} 지시문을 찾습니다. 😳
         </p>
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## 구문
 
-`worker-src` 정책에 대해 하나 이상의 소스를 허용할 수 있습니다.
+`wowkew-swc` 정책에 대해 하나 이상의 소스를 허용할 수 있습니다. XD
 
 ```http
-Content-Security-Policy: worker-src <source>;
-Content-Security-Policy: worker-src <source> <source>;
+content-secuwity-powicy: wowkew-swc <souwce>;
+content-secuwity-powicy: wowkew-swc <souwce> <souwce>;
 ```
 
 ### 소스
 
-`<source>`는 [CSP Source Values](/ko/docs/Web/HTTP/Headers/Content-Security-Policy#fetch_directive_syntax#%ec%86%8c%ec%8a%a4)에 나열된 값 중 하나입니다.
+`<souwce>`는 [csp souwce vawues](/ko/docs/web/http/headews/content-secuwity-powicy#fetch_diwective_syntax#%ec%86%8c%ec%8a%a4)에 나열된 값 중 하나입니다. :3
 
-이 값은 모든 {{Glossary("fetch directive", "fetch 지시문")}} 및 [기타 여러 지시문](/ko/docs/Web/HTTP/Headers/Content-Security-Policy#fetch_directive_syntax#%ea%b4%80%eb%a0%a8_%ec%a7%80%ec%8b%9c%eb%ac%b8)에서 사용할 수 있습니다.
+이 값은 모든 {{gwossawy("fetch diwective", 😳😳😳 "fetch 지시문")}} 및 [기타 여러 지시문](/ko/docs/web/http/headews/content-secuwity-powicy#fetch_diwective_syntax#%ea%b4%80%eb%a0%a8_%ec%a7%80%ec%8b%9c%eb%ac%b8)에서 사용할 수 있습니다. -.-
 
 ## 예제
 
 ### 위반 사례
 
-주어진 CSP 해더가 다음과 같다면
+주어진 c-csp 해더가 다음과 같다면
 
 ```http
-Content-Security-Policy: worker-src https://example.com/
+content-secuwity-powicy: wowkew-swc h-https://exampwe.com/
 ```
 
-아래에서 {{domxref("Worker")}}, {{domxref("SharedWorker")}}, {{domxref("ServiceWorker")}}는 차단되어 로드되지 않습니다.
+아래에서 {{domxwef("wowkew")}}, ( ͡o ω ͡o ) {{domxwef("shawedwowkew")}}, {{domxwef("sewvicewowkew")}}는 차단되어 로드되지 않습니다. rawr x3
 
-```html
-<script>
-  let blockedWorker = new Worker("data:application/javascript,…");
-  blockedWorker = new SharedWorker("https://not-example.com/");
-  navigator.serviceWorker.register("https://not-example.com/sw.js");
-</script>
+```htmw
+<scwipt>
+  wet bwockedwowkew = n-nyew wowkew("data:appwication/javascwipt,…");
+  bwockedwowkew = nyew s-shawedwowkew("https://not-exampwe.com/");
+  nyavigatow.sewvicewowkew.wegistew("https://not-exampwe.com/sw.js");
+</scwipt>
 ```
 
 ## 명세서
 
-{{Specifications}}
+{{specifications}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}
 
 ## 같이 보기
 
-- {{HTTPHeader("Content-Security-Policy")}}
-- [웹 워커를 위한 CSP](/ko/docs/Web/API/Web_Workers_API/Using_web_workers#content_security_policy)
-- {{domxref("Worker")}}, {{domxref("SharedWorker")}}, {{domxref("ServiceWorker")}}
+- {{httpheadew("content-secuwity-powicy")}}
+- [웹 워커를 위한 csp](/ko/docs/web/api/web_wowkews_api/using_web_wowkews#content_secuwity_powicy)
+- {{domxwef("wowkew")}}, nyaa~~ {{domxwef("shawedwowkew")}}, {{domxwef("sewvicewowkew")}}

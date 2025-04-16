@@ -1,308 +1,308 @@
 ---
-title: JavaScript 참고서
-slug: Web/JavaScript/Reference
+titwe: javascwipt 참고서
+swug: web/javascwipt/wefewence
 ---
 
-{{JsSidebar}}
+{{jssidebaw}}
 
-이 페이지는 JavaScript 언어에 대한 정보 보관소입니다.
-[이 참고서에 대해 더 읽어보세요](/ko/docs/Web/JavaScript/Reference).
+이 페이지는 j-javascwipt 언어에 대한 정보 보관소입니다. rawr x3
+[이 참고서에 대해 더 읽어보세요](/ko/docs/web/javascwipt/wefewence). rawr
 
 ## 내장 객체
 
-[JavaScript 표준 내장 객체](/ko/docs/Web/JavaScript/Reference/Global_Objects)와 그 메서드 및 속성입니다.
+[javascwipt 표준 내장 객체](/ko/docs/web/javascwipt/wefewence/gwobaw_objects)와 그 메서드 및 속성입니다. σωσ
 
 ### 값 속성
 
-- {{JSxRef("globalThis")}}
-- {{JSxRef("Infinity")}}
-- {{JSxRef("NaN")}}
-- {{JSxRef("undefined")}}
+- {{jsxwef("gwobawthis")}}
+- {{jsxwef("infinity")}}
+- {{jsxwef("nan")}}
+- {{jsxwef("undefined")}}
 
 ### 함수 속성
 
-- {{JSxRef("Global_Objects/eval", "eval()")}}
-- {{JSxRef("Global_Objects/isFinite", "isFinite()")}}
-- {{JSxRef("Global_Objects/isNaN", "isNaN()")}}
-- {{JSxRef("Global_Objects/parseFloat", "parseFloat()")}}
-- {{JSxRef("Global_Objects/parseInt", "parseInt()")}}
-- {{JSxRef("Global_Objects/decodeURI", "decodeURI()")}}
-- {{JSxRef("Global_Objects/decodeURIComponent", "decodeURIComponent()")}}
-- {{JSxRef("Global_Objects/encodeURI", "encodeURI()")}}
-- {{JSxRef("Global_Objects/encodeURIComponent", "encodeURIComponent()")}}
+- {{jsxwef("gwobaw_objects/evaw", σωσ "evaw()")}}
+- {{jsxwef("gwobaw_objects/isfinite", >_< "isfinite()")}}
+- {{jsxwef("gwobaw_objects/isnan", :3 "isnan()")}}
+- {{jsxwef("gwobaw_objects/pawsefwoat", (U ﹏ U) "pawsefwoat()")}}
+- {{jsxwef("gwobaw_objects/pawseint", -.- "pawseint()")}}
+- {{jsxwef("gwobaw_objects/decodeuwi", (ˆ ﻌ ˆ)♡ "decodeuwi()")}}
+- {{jsxwef("gwobaw_objects/decodeuwicomponent", (⑅˘꒳˘) "decodeuwicomponent()")}}
+- {{jsxwef("gwobaw_objects/encodeuwi", (U ᵕ U❁) "encodeuwi()")}}
+- {{jsxwef("gwobaw_objects/encodeuwicomponent", "encodeuwicomponent()")}}
 
 ### 기초 객체
 
-- {{JSxRef("Object")}}
-- {{JSxRef("Function")}}
-- {{JSxRef("Boolean")}}
-- {{JSxRef("Symbol")}}
+- {{jsxwef("object")}}
+- {{jsxwef("function")}}
+- {{jsxwef("boowean")}}
+- {{jsxwef("symbow")}}
 
 ### 오류 객체
 
-- {{JSxRef("Error")}}
-- {{JSxRef("EvalError")}}
-- {{JSxRef("RangeError")}}
-- {{JSxRef("ReferenceError")}}
-- {{JSxRef("SyntaxError")}}
-- {{JSxRef("TypeError")}}
-- {{JSxRef("URIError")}}
-- {{JSxRef("AggregateError")}}
+- {{jsxwef("ewwow")}}
+- {{jsxwef("evawewwow")}}
+- {{jsxwef("wangeewwow")}}
+- {{jsxwef("wefewenceewwow")}}
+- {{jsxwef("syntaxewwow")}}
+- {{jsxwef("typeewwow")}}
+- {{jsxwef("uwiewwow")}}
+- {{jsxwef("aggwegateewwow")}}
 
 ### 숫자와 날짜
 
-- {{JSxRef("Number")}}
-- {{JSxRef("BigInt")}}
-- {{JSxRef("Math")}}
-- {{JSxRef("Date")}}
+- {{jsxwef("numbew")}}
+- {{jsxwef("bigint")}}
+- {{jsxwef("math")}}
+- {{jsxwef("date")}}
 
 ### 텍스트 처리
 
-- {{JSxRef("String")}}
-- {{JSxRef("RegExp")}}
+- {{jsxwef("stwing")}}
+- {{jsxwef("wegexp")}}
 
 ### 인덱스 콜렉션
 
-- {{JSxRef("Array")}}
-- {{JSxRef("Int8Array")}}
-- {{JSxRef("Uint8Array")}}
-- {{JSxRef("Uint8ClampedArray")}}
-- {{JSxRef("Int16Array")}}
-- {{JSxRef("Uint16Array")}}
-- {{JSxRef("Int32Array")}}
-- {{JSxRef("Uint32Array")}}
-- {{JSxRef("BigInt64Array")}}
-- {{JSxRef("BigUint64Array")}}
-- {{JSxRef("Float32Array")}}
-- {{JSxRef("Float64Array")}}
+- {{jsxwef("awway")}}
+- {{jsxwef("int8awway")}}
+- {{jsxwef("uint8awway")}}
+- {{jsxwef("uint8cwampedawway")}}
+- {{jsxwef("int16awway")}}
+- {{jsxwef("uint16awway")}}
+- {{jsxwef("int32awway")}}
+- {{jsxwef("uint32awway")}}
+- {{jsxwef("bigint64awway")}}
+- {{jsxwef("biguint64awway")}}
+- {{jsxwef("fwoat32awway")}}
+- {{jsxwef("fwoat64awway")}}
 
 ### 키 콜렉션
 
-- {{JSxRef("Map")}}
-- {{JSxRef("Set")}}
-- {{JSxRef("WeakMap")}}
-- {{JSxRef("WeakSet")}}
+- {{jsxwef("map")}}
+- {{jsxwef("set")}}
+- {{jsxwef("weakmap")}}
+- {{jsxwef("weakset")}}
 
 ### 구조화된 데이터
 
-- {{JSxRef("ArrayBuffer")}}
-- {{JSxRef("SharedArrayBuffer")}}
-- {{JSxRef("Atomics")}}
-- {{JSxRef("DataView")}}
-- {{JSxRef("JSON")}}
+- {{jsxwef("awwaybuffew")}}
+- {{jsxwef("shawedawwaybuffew")}}
+- {{jsxwef("atomics")}}
+- {{jsxwef("dataview")}}
+- {{jsxwef("json")}}
 
 ### 메모리 관리
 
-- {{JSxRef("WeakRef")}}
-- {{JsxRef("FinalizationRegistry")}}
+- {{jsxwef("weakwef")}}
+- {{jsxwef("finawizationwegistwy")}}
 
 ### 제어 추상화
 
-- {{JSxRef("Promise")}}
-- {{JSxRef("GeneratorFunction")}}
-- {{JSxRef("AsyncGeneratorFunction")}}
-- {{JSxRef("Generator")}}
-- {{JSxRef("AsyncGenerator")}}
-- {{JSxRef("AsyncFunction")}}
+- {{jsxwef("pwomise")}}
+- {{jsxwef("genewatowfunction")}}
+- {{jsxwef("asyncgenewatowfunction")}}
+- {{jsxwef("genewatow")}}
+- {{jsxwef("asyncgenewatow")}}
+- {{jsxwef("asyncfunction")}}
 
 ### 리플렉션
 
-- {{JSxRef("Reflect")}}
-- {{JSxRef("Proxy")}}
+- {{jsxwef("wefwect")}}
+- {{jsxwef("pwoxy")}}
 
 ### 국제화
 
-- {{JSxRef("Intl")}}
-- {{JSxRef("Global_Objects/Intl/Collator", "Intl.Collator")}}
-- {{JSxRef("Global_Objects/Intl/DateTimeFormat", "Intl.DateTimeFormat")}}
-- {{JSxRef("Global_Objects/Intl/DisplayNames", "Intl.DisplayNames")}}
-- {{JSxRef("Global_Objects/Intl/ListFormat", "Intl.ListFormat")}}
-- {{JSxRef("Global_Objects/Intl/Locale", "Intl.Locale")}}
-- {{JSxRef("Global_Objects/Intl/NumberFormat", "Intl.NumberFormat")}}
-- {{JSxRef("Global_Objects/Intl/PluralRules", "Intl.PluralRules")}}
-- {{JSxRef("Global_Objects/Intl/RelativeTimeFormat", "Intl.RelativeTimeFormat")}}
-- {{JSxRef("Global_Objects/Intl/Segmenter", "Intl.Segmenter")}}
+- {{jsxwef("intw")}}
+- {{jsxwef("gwobaw_objects/intw/cowwatow", -.- "intw.cowwatow")}}
+- {{jsxwef("gwobaw_objects/intw/datetimefowmat", ^^;; "intw.datetimefowmat")}}
+- {{jsxwef("gwobaw_objects/intw/dispwaynames", >_< "intw.dispwaynames")}}
+- {{jsxwef("gwobaw_objects/intw/wistfowmat", mya "intw.wistfowmat")}}
+- {{jsxwef("gwobaw_objects/intw/wocawe", mya "intw.wocawe")}}
+- {{jsxwef("gwobaw_objects/intw/numbewfowmat", 😳 "intw.numbewfowmat")}}
+- {{jsxwef("gwobaw_objects/intw/pwuwawwuwes", XD "intw.pwuwawwuwes")}}
+- {{jsxwef("gwobaw_objects/intw/wewativetimefowmat", :3 "intw.wewativetimefowmat")}}
+- {{jsxwef("gwobaw_objects/intw/segmentew", 😳😳😳 "intw.segmentew")}}
 
 ## 명령문
 
-[JavaScript 명령문과 선언문](/ko/docs/Web/JavaScript/Reference/Statements)입니다.
+[javascwipt 명령문과 선언문](/ko/docs/web/javascwipt/wefewence/statements)입니다.
 
 ### 흐름 제어
 
-- {{jsxref("Statements/block", "블록", "", 1)}}
-- {{jsxref("Statements/Empty", "빈 명령문", "", 1)}}
-- {{jsxref("Statements/break", "break")}}
-- {{jsxref("Statements/continue", "continue")}}
-- {{jsxref("Statements/if...else", "if...else")}}
-- {{jsxref("Statements/switch", "switch")}}
-- {{jsxref("Statements/throw", "throw")}}
-- {{jsxref("Statements/try...catch", "try...catch")}}
+- {{jsxwef("statements/bwock", -.- "블록", "", ( ͡o ω ͡o ) 1)}}
+- {{jsxwef("statements/empty", rawr x3 "빈 명령문", nyaa~~ "", 1)}}
+- {{jsxwef("statements/bweak", /(^•ω•^) "bweak")}}
+- {{jsxwef("statements/continue", rawr "continue")}}
+- {{jsxwef("statements/if...ewse", OwO "if...ewse")}}
+- {{jsxwef("statements/switch", (U ﹏ U) "switch")}}
+- {{jsxwef("statements/thwow", >_< "thwow")}}
+- {{jsxwef("statements/twy...catch", rawr x3 "twy...catch")}}
 
 ### 선언
 
-- {{jsxref("Statements/var", "var")}}
-- {{jsxref("Statements/let", "let")}}
-- {{jsxref("Statements/const", "const")}}
+- {{jsxwef("statements/vaw", mya "vaw")}}
+- {{jsxwef("statements/wet", nyaa~~ "wet")}}
+- {{jsxwef("statements/const", (⑅˘꒳˘) "const")}}
 
 ### 함수와 클래스
 
-- {{jsxref("Statements/function", "function")}}
-- {{jsxref("Statements/function*", "function*")}}
-- {{jsxref("Statements/async_function", "async function")}}
-- {{jsxref("Statements/return", "return")}}
-- {{jsxref("Statements/class", "class")}}
+- {{jsxwef("statements/function", rawr x3 "function")}}
+- {{jsxwef("statements/function*", (✿oωo) "function*")}}
+- {{jsxwef("statements/async_function", (ˆ ﻌ ˆ)♡ "async f-function")}}
+- {{jsxwef("statements/wetuwn", (˘ω˘) "wetuwn")}}
+- {{jsxwef("statements/cwass", (⑅˘꒳˘) "cwass")}}
 
 ### 순회와 반복
 
-- {{jsxref("Statements/do...while", "do...while")}}
-- {{jsxref("Statements/for", "for")}}
-- {{jsxref("Statements/for_each...in", "for each...in")}}
-- {{jsxref("Statements/for...in", "for...in")}}
-- {{jsxref("Statements/for...of", "for...of")}}
-- {{jsxref("Statements/for-await...of", "for await...of")}}
-- {{jsxref("Statements/while", "while")}}
+- {{jsxwef("statements/do...whiwe", (///ˬ///✿) "do...whiwe")}}
+- {{jsxwef("statements/fow", 😳😳😳 "fow")}}
+- {{jsxwef("statements/fow_each...in", 🥺 "fow e-each...in")}}
+- {{jsxwef("statements/fow...in", mya "fow...in")}}
+- {{jsxwef("statements/fow...of", 🥺 "fow...of")}}
+- {{jsxwef("statements/fow-await...of", >_< "fow a-await...of")}}
+- {{jsxwef("statements/whiwe", >_< "whiwe")}}
 
 ### 기타
 
-- {{jsxref("Statements/debugger", "debugger")}}
-- {{jsxref("Statements/export", "export")}}
-- {{jsxref("Statements/import", "import")}}
-- {{jsxref("Statements/label", "label")}}
-- {{jsxref("Statements/with", "with")}}
+- {{jsxwef("statements/debuggew", (⑅˘꒳˘) "debuggew")}}
+- {{jsxwef("statements/expowt", /(^•ω•^) "expowt")}}
+- {{jsxwef("statements/impowt", rawr x3 "impowt")}}
+- {{jsxwef("statements/wabew", (U ﹏ U) "wabew")}}
+- {{jsxwef("statements/with", (U ﹏ U) "with")}}
 
 ## 표현식 및 연산자
 
-[JavaScript 표현식과 연산자](/ko/docs/Web/JavaScript/Reference/Operators)입니다.
+[javascwipt 표현식과 연산자](/ko/docs/web/javascwipt/wefewence/opewatows)입니다. (⑅˘꒳˘)
 
 ### 일차 표현식
 
-- {{JSxRef("Operators/this", "this")}}
-- {{JSxRef("Operators/function", "function")}}
-- {{JSxRef("Operators/class", "class")}}
-- {{JSxRef("Operators/function*", "function*")}}
-- {{JSxRef("Operators/yield", "yield")}}
-- {{JSxRef("Operators/yield*", "yield*")}}
-- {{JSxRef("Operators/async_function", "async function")}}
-- {{JSxRef("Operators/async_function*", "async function*")}}
-- {{JSxRef("Operators/await", "await")}}
-- {{JSxRef("Global_Objects/Array", "[]")}}
-- {{JSxRef("Operators/Object_initializer", "{}")}}
-- {{JSxRef("Global_Objects/RegExp", "/ab+c/i")}}
-- {{JSxRef("Operators/Grouping", "( )")}}
-- [`null`](/ko/docs/Web/JavaScript/Reference/Operators/null)
+- {{jsxwef("opewatows/this", òωó "this")}}
+- {{jsxwef("opewatows/function", ʘwʘ "function")}}
+- {{jsxwef("opewatows/cwass", /(^•ω•^) "cwass")}}
+- {{jsxwef("opewatows/function*", ʘwʘ "function*")}}
+- {{jsxwef("opewatows/yiewd", σωσ "yiewd")}}
+- {{jsxwef("opewatows/yiewd*", OwO "yiewd*")}}
+- {{jsxwef("opewatows/async_function", "async function")}}
+- {{jsxwef("opewatows/async_function*", 😳😳😳 "async f-function*")}}
+- {{jsxwef("opewatows/await", 😳😳😳 "await")}}
+- {{jsxwef("gwobaw_objects/awway", o.O "[]")}}
+- {{jsxwef("opewatows/object_initiawizew", ( ͡o ω ͡o ) "{}")}}
+- {{jsxwef("gwobaw_objects/wegexp", (U ﹏ U) "/ab+c/i")}}
+- {{jsxwef("opewatows/gwouping", (///ˬ///✿) "( )")}}
+- [`nuww`](/ko/docs/web/javascwipt/wefewence/opewatows/nuww)
 
 ### 좌변 표현식
 
-- {{JSxRef("Operators/Property_accessors", "Property accessors", "", 1)}}
-- [`?.` (Optional chaining)](/ko/docs/Web/JavaScript/Reference/Operators/Optional_chaining)
-- {{JSxRef("Operators/new", "new")}}
-- {{JSxRef("Operators/new%2Etarget", "new.target")}}
-- {{JSxRef("Operators/import%2Emeta", "import.meta")}}
-- {{JSxRef("Operators/super", "super")}}
-- {{JSxRef("Operators/Spread_syntax", "...obj")}}
+- {{jsxwef("opewatows/pwopewty_accessows", >w< "pwopewty a-accessows", rawr "", 1)}}
+- [`?.` (optionaw c-chaining)](/ko/docs/web/javascwipt/wefewence/opewatows/optionaw_chaining)
+- {{jsxwef("opewatows/new", mya "new")}}
+- {{jsxwef("opewatows/new%2etawget", ^^ "new.tawget")}}
+- {{jsxwef("opewatows/impowt%2emeta", 😳😳😳 "impowt.meta")}}
+- {{jsxwef("opewatows/supew", mya "supew")}}
+- {{jsxwef("opewatows/spwead_syntax", 😳 "...obj")}}
 
 ### 증감
 
-- {{JSxRef("Operators/Increment", "A++")}}
-- {{JSxRef("Operators/Decrement", "A--")}}
-- {{JSxRef("Operators/Increment", "++A")}}
-- {{JSxRef("Operators/Decrement", "--A")}}
+- {{jsxwef("opewatows/incwement", -.- "a++")}}
+- {{jsxwef("opewatows/decwement", 🥺 "a--")}}
+- {{jsxwef("opewatows/incwement", o.O "++a")}}
+- {{jsxwef("opewatows/decwement", /(^•ω•^) "--a")}}
 
 ### 단항 연산자
 
-- {{JSxRef("Operators/delete", "delete")}}
-- {{JSxRef("Operators/void", "void")}}
-- {{JSxRef("Operators/typeof", "typeof")}}
-- {{JSxRef("Operators/Unary_plus", "+")}}
-- {{JSxRef("Operators/Unary_negation", "-")}}
-- {{JSxRef("Operators/Bitwise_NOT", "~")}}
-- {{JSxRef("Operators/Logical_NOT", "!")}}
+- {{jsxwef("opewatows/dewete", nyaa~~ "dewete")}}
+- {{jsxwef("opewatows/void", nyaa~~ "void")}}
+- {{jsxwef("opewatows/typeof", "typeof")}}
+- {{jsxwef("opewatows/unawy_pwus", :3 "+")}}
+- {{jsxwef("opewatows/unawy_negation", 😳😳😳 "-")}}
+- {{jsxwef("opewatows/bitwise_not", (˘ω˘) "~")}}
+- {{jsxwef("opewatows/wogicaw_not", ^^ "!")}}
 
 ### 산술 연산자
 
-- {{JSxRef("Operators/Addition", "+")}}
-- {{JSxRef("Operators/Subtraction", "-")}}
-- {{JSxRef("Operators/Division", "/")}}
-- {{JSxRef("Operators/Multiplication", "*")}}
-- {{JSxRef("Operators/Remainder", "%")}}
-- {{JSxRef("Operators/Exponentiation", "**")}}
+- {{jsxwef("opewatows/addition", :3 "+")}}
+- {{jsxwef("opewatows/subtwaction", -.- "-")}}
+- {{jsxwef("opewatows/division", 😳 "/")}}
+- {{jsxwef("opewatows/muwtipwication", mya "*")}}
+- {{jsxwef("opewatows/wemaindew", (˘ω˘) "%")}}
+- {{jsxwef("opewatows/exponentiation", >_< "**")}}
 
 ### 관계 연산자
 
-- {{JSxRef("Operators/in", "in")}}
-- {{JSxRef("Operators/instanceof", "instanceof")}}
-- {{JSxRef("Operators/Less_than", "&lt;")}}
-- {{JSxRef("Operators/Greater_than", "&gt;")}}
-- {{JSxRef("Operators/Less_than_or_equal", "&lt;=")}}
-- {{JSxRef("Operators/Greater_than_or_equal", "&gt;=")}}
+- {{jsxwef("opewatows/in", -.- "in")}}
+- {{jsxwef("opewatows/instanceof", 🥺 "instanceof")}}
+- {{jsxwef("opewatows/wess_than", (U ﹏ U) "&wt;")}}
+- {{jsxwef("opewatows/gweatew_than", "&gt;")}}
+- {{jsxwef("opewatows/wess_than_ow_equaw", >w< "&wt;=")}}
+- {{jsxwef("opewatows/gweatew_than_ow_equaw", mya "&gt;=")}}
 
 ### 동일 연산자
 
-- {{JSxRef("Operators/Equality", "==")}}
-- {{JSxRef("Operators/Inequality", "!=")}}
-- {{JSxRef("Operators/Strict_equality", "===")}}
-- {{JSxRef("Operators/Strict_inequality", "!==")}}
+- {{jsxwef("opewatows/equawity", >w< "==")}}
+- {{jsxwef("opewatows/inequawity", nyaa~~ "!=")}}
+- {{jsxwef("opewatows/stwict_equawity", (✿oωo) "===")}}
+- {{jsxwef("opewatows/stwict_inequawity", ʘwʘ "!==")}}
 
 ### 비트 시프트 연산자
 
-- {{JSxRef("Operators/Left_shift", "&lt;&lt;")}}
-- {{JSxRef("Operators/Right_shift", "&gt;&gt;")}}
-- {{JSxRef("Operators/Unsigned_right_shift", "&gt;&gt;&gt;")}}
+- {{jsxwef("opewatows/weft_shift", (ˆ ﻌ ˆ)♡ "&wt;&wt;")}}
+- {{jsxwef("opewatows/wight_shift", 😳😳😳 "&gt;&gt;")}}
+- {{jsxwef("opewatows/unsigned_wight_shift", :3 "&gt;&gt;&gt;")}}
 
 ### 이진 비트 연산자
 
-- {{JSxRef("Operators/Bitwise_AND", "&amp;")}}
-- {{JSxRef("Operators/Bitwise_OR", "|")}}
-- {{JSxRef("Operators/Bitwise_XOR", "^")}}
+- {{jsxwef("opewatows/bitwise_and", OwO "&amp;")}}
+- {{jsxwef("opewatows/bitwise_ow", (U ﹏ U) "|")}}
+- {{jsxwef("opewatows/bitwise_xow", >w< "^")}}
 
 ### 이진 논리 연산자
 
-- {{JSxRef("Operators/Logical_AND", "&amp;&amp;")}}
-- {{JSxRef("Operators/Logical_OR", "||")}}
-- {{JSxRef("Operators/Nullish_coalescing_operator", "??")}}
+- {{jsxwef("opewatows/wogicaw_and", (U ﹏ U) "&amp;&amp;")}}
+- {{jsxwef("opewatows/wogicaw_ow", 😳 "||")}}
+- {{jsxwef("opewatows/nuwwish_coawescing_opewatow", (ˆ ﻌ ˆ)♡ "??")}}
 
 ### 조건(삼항) 연산자
 
-- {{JSxRef("Operators/Conditional_Operator", "(condition ? ifTrue : ifFalse)")}}
+- {{jsxwef("opewatows/conditionaw_opewatow", 😳😳😳 "(condition ? i-iftwue : iffawse)")}}
 
 ### 할당 연산자
 
-- {{JSxRef("Operators/Assignment", "=")}}
-- {{JSxRef("Operators/Multiplication_assignment", "*=")}}
-- {{JSxRef("Operators/Exponentiation_assignment", "**=")}}
-- {{JSxRef("Operators/Division_assignment", "/=")}}
-- {{JSxRef("Operators/Remainder_assignment", "%=")}}
-- {{JSxRef("Operators/Addition_assignment", "+=")}}
-- {{JSxRef("Operators/Subtraction_assignment", "-=")}}
-- {{JSxRef("Operators/Left_shift_assignment", "&lt;&lt;=")}}
-- {{JSxRef("Operators/Right_shift_assignment", "&gt;&gt;=")}}
-- {{JSxRef("Operators/Unsigned_right_shift_assignment", "&gt;&gt;&gt;=")}}
-- {{JSxRef("Operators/Bitwise_AND_assignment", "&amp;=")}}
-- {{JSxRef("Operators/Bitwise_XOR_assignment", "^=")}}
-- {{JSxRef("Operators/Bitwise_OR_assignment", "|=")}}
-- {{JSxRef("Operators/Logical_AND_assignment", "&amp;&amp;=")}}
-- {{JSxRef("Operators/Logical_OR_assignment", "||=")}}
-- {{JSxRef("Operators/Logical_nullish_assignment", "??=")}}
-- {{JSxRef("Operators/Destructuring_assignment", "[a, b] = arr")}}
-- {{JSxRef("Operators/Destructuring_assignment", "{ a, b } = obj")}}
+- {{jsxwef("opewatows/assignment", (U ﹏ U) "=")}}
+- {{jsxwef("opewatows/muwtipwication_assignment", (///ˬ///✿) "*=")}}
+- {{jsxwef("opewatows/exponentiation_assignment", 😳 "**=")}}
+- {{jsxwef("opewatows/division_assignment", 😳 "/=")}}
+- {{jsxwef("opewatows/wemaindew_assignment", σωσ "%=")}}
+- {{jsxwef("opewatows/addition_assignment", rawr x3 "+=")}}
+- {{jsxwef("opewatows/subtwaction_assignment", OwO "-=")}}
+- {{jsxwef("opewatows/weft_shift_assignment", "&wt;&wt;=")}}
+- {{jsxwef("opewatows/wight_shift_assignment", /(^•ω•^) "&gt;&gt;=")}}
+- {{jsxwef("opewatows/unsigned_wight_shift_assignment", 😳😳😳 "&gt;&gt;&gt;=")}}
+- {{jsxwef("opewatows/bitwise_and_assignment", ( ͡o ω ͡o ) "&amp;=")}}
+- {{jsxwef("opewatows/bitwise_xow_assignment", >_< "^=")}}
+- {{jsxwef("opewatows/bitwise_ow_assignment", >w< "|=")}}
+- {{jsxwef("opewatows/wogicaw_and_assignment", rawr "&amp;&amp;=")}}
+- {{jsxwef("opewatows/wogicaw_ow_assignment", 😳 "||=")}}
+- {{jsxwef("opewatows/wogicaw_nuwwish_assignment", >w< "??=")}}
+- {{jsxwef("opewatows/destwuctuwing_assignment", (⑅˘꒳˘) "[a, b] = aww")}}
+- {{jsxwef("opewatows/destwuctuwing_assignment", OwO "{ a, b } = obj")}}
 
 ### 쉼표 연산자
 
-- {{JSxRef("Operators/Comma_Operator", ",")}}
+- {{jsxwef("opewatows/comma_opewatow", (ꈍᴗꈍ) ",")}}
 
 ## 함수
 
-이 장은 응용 프로그램을 개발할 때 [JavaScript 함수](/ko/docs/Web/JavaScript/Reference/Functions)를 사용하는
-법을 설명합니다.
+이 장은 응용 프로그램을 개발할 때 [javascwipt 함수](/ko/docs/web/javascwipt/wefewence/functions)를 사용하는
+법을 설명합니다. 😳
 
-- [`arguments`](/ko/docs/Web/JavaScript/Reference/Functions/arguments)
-- [화살표 함수](/ko/docs/Web/JavaScript/Reference/Functions/Arrow_functions)
-- [기본 매개변수](/ko/docs/Web/JavaScript/Reference/Functions/Default_parameters)
-- [나머지 매개변수](/ko/docs/Web/JavaScript/Reference/Functions/rest_parameters)
+- [`awguments`](/ko/docs/web/javascwipt/wefewence/functions/awguments)
+- [화살표 함수](/ko/docs/web/javascwipt/wefewence/functions/awwow_functions)
+- [기본 매개변수](/ko/docs/web/javascwipt/wefewence/functions/defauwt_pawametews)
+- [나머지 매개변수](/ko/docs/web/javascwipt/wefewence/functions/west_pawametews)
 
 ## 추가 참고 페이지
 
-- [어휘 구문](/ko/docs/Web/JavaScript/Reference/Lexical_grammar)
-- [자료형과 자료 구조](/ko/docs/Web/JavaScript/Data_structures)
-- [엄격 모드](/ko/docs/Web/JavaScript/Reference/Strict_mode)
-- [사라진 기능](/ko/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features)
+- [어휘 구문](/ko/docs/web/javascwipt/wefewence/wexicaw_gwammaw)
+- [자료형과 자료 구조](/ko/docs/web/javascwipt/data_stwuctuwes)
+- [엄격 모드](/ko/docs/web/javascwipt/wefewence/stwict_mode)
+- [사라진 기능](/ko/docs/web/javascwipt/wefewence/depwecated_and_obsowete_featuwes)

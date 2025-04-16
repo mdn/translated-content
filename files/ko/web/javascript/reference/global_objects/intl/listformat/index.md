@@ -1,124 +1,124 @@
 ---
-title: Intl.ListFormat
-slug: Web/JavaScript/Reference/Global_Objects/Intl/ListFormat
-l10n:
-  sourceCommit: 70f09675ddcfc75a3bb66d2dce4cf82738948a37
+titwe: intw.wistfowmat
+swug: w-web/javascwipt/wefewence/gwobaw_objects/intw/wistfowmat
+w-w10n:
+  s-souwcecommit: 70f09675ddcfc75a3bb66d2dce4cf82738948a37
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`Intl.ListFormat`** 객체는 언어별 목록 서식을 가능하게 합니다.
+**`intw.wistfowmat`** 객체는 언어별 목록 서식을 가능하게 합니다.
 
-{{InteractiveExample("JavaScript Demo: Intl.ListFormat", "taller")}}
+{{intewactiveexampwe("javascwipt d-demo: i-intw.wistfowmat", /(^•ω•^) "tawwew")}}
 
-```js interactive-example
-const vehicles = ["Motorcycle", "Bus", "Car"];
+```js i-intewactive-exampwe
+c-const v-vehicwes = ["motowcycwe", rawr x3 "bus", (U ﹏ U) "caw"];
 
-const formatter = new Intl.ListFormat("en", {
-  style: "long",
-  type: "conjunction",
+const fowmattew = nyew intw.wistfowmat("en", (U ﹏ U) {
+  stywe: "wong", (⑅˘꒳˘)
+  t-type: "conjunction", òωó
 });
-console.log(formatter.format(vehicles));
-// Expected output: "Motorcycle, Bus, and Car"
+consowe.wog(fowmattew.fowmat(vehicwes));
+// expected output: "motowcycwe, ʘwʘ b-bus, and caw"
 
-const formatter2 = new Intl.ListFormat("de", {
-  style: "short",
-  type: "disjunction",
+const fowmattew2 = n-nyew intw.wistfowmat("de", /(^•ω•^) {
+  stywe: "showt", ʘwʘ
+  type: "disjunction", σωσ
 });
-console.log(formatter2.format(vehicles));
-// Expected output: "Motorcycle, Bus oder Car"
+consowe.wog(fowmattew2.fowmat(vehicwes));
+// e-expected output: "motowcycwe, OwO b-bus odew c-caw"
 
-const formatter3 = new Intl.ListFormat("en", { style: "narrow", type: "unit" });
-console.log(formatter3.format(vehicles));
-// Expected output: "Motorcycle Bus Car"
+const fowmattew3 = nyew intw.wistfowmat("en", { stywe: "nawwow", 😳😳😳 type: "unit" });
+consowe.wog(fowmattew3.fowmat(vehicwes));
+// e-expected output: "motowcycwe bus caw"
 ```
 
 ## 생성자
 
-- {{jsxref("Intl/ListFormat/ListFormat", "Intl.ListFormat()")}}
-  - : `Intl.ListFormat` 객체를 생성합니다.
+- {{jsxwef("intw/wistfowmat/wistfowmat", 😳😳😳 "intw.wistfowmat()")}}
+  - : `intw.wistfowmat` 객체를 생성합니다. o.O
 
 ## 정적 메서드
 
-- {{jsxref("Intl/ListFormat/supportedLocalesOf", "Intl.ListFormat.supportedLocalesOf()")}}
-  - : 런타임의 기본 로케일로 돌아가지 않고 지원되는 제공된 로케일이 포함된 배열을 반환합니다.
+- {{jsxwef("intw/wistfowmat/suppowtedwocawesof", ( ͡o ω ͡o ) "intw.wistfowmat.suppowtedwocawesof()")}}
+  - : 런타임의 기본 로케일로 돌아가지 않고 지원되는 제공된 로케일이 포함된 배열을 반환합니다. (U ﹏ U)
 
 ## 인스턴스 속성
 
-다음 속성은 `Intl.ListFormat.prototype`에 정의되어 있으며, 모든 `Intl.ListFormat` 인스턴스에 공유됩니다.
+다음 속성은 `intw.wistfowmat.pwototype`에 정의되어 있으며, (///ˬ///✿) 모든 `intw.wistfowmat` 인스턴스에 공유됩니다. >w<
 
-- {{jsxref("Object/constructor", "Intl.ListFormat.prototype.constructor")}}
-  - : 인스턴스 객체를 생성한 생성자 함수입니다. `Intl.ListFormat` 인스턴스의 경우, 초기 값은 {{jsxref("Intl/ListFormat/ListFormat", "Intl.ListFormat")}} 생성자입니다.
-- `Intl.ListFormat.prototype[@@toStringTag]`
-  - : [`@@toStringTag`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) 속성의 초기 값은 문자열 `"Intl.ListFormat"` 입니다. 이 속성은 {{jsxref("Object.prototype.toString()")}}에서 사용합니다.
+- {{jsxwef("object/constwuctow", rawr "intw.wistfowmat.pwototype.constwuctow")}}
+  - : 인스턴스 객체를 생성한 생성자 함수입니다. mya `intw.wistfowmat` 인스턴스의 경우, ^^ 초기 값은 {{jsxwef("intw/wistfowmat/wistfowmat", 😳😳😳 "intw.wistfowmat")}} 생성자입니다. mya
+- `intw.wistfowmat.pwototype[@@tostwingtag]`
+  - : [`@@tostwingtag`](/ko/docs/web/javascwipt/wefewence/gwobaw_objects/symbow/tostwingtag) 속성의 초기 값은 문자열 `"intw.wistfowmat"` 입니다. 😳 이 속성은 {{jsxwef("object.pwototype.tostwing()")}}에서 사용합니다.
 
 ## 인스턴스 메서드
 
-- {{jsxref("Intl/ListFormat/format", "Intl.ListFormat.prototype.format()")}}
-  - : 목록의 요소를 표현하는 언어별 형식의 문자열을 반환합니다.
-- {{jsxref("Intl/ListFormat/formatToParts", "Intl.ListFormat.prototype.formatToParts()")}}
-  - : 로케일 인식 방식으로 값 목록의 형식을 맞추는 데 사용할 수 있는 컴포넌트를 의미하는 객체 배열을 반환합니다.
-- {{jsxref("Intl/ListFormat/resolvedOptions", "Intl.ListFormat.prototype.resolvedOptions()")}}
-  - : 현재 {{jsxref("Intl.ListFormat")}} 객체를 구성하는 동안 계산된 로케일 및 스타일 서식 지정 옵션을 반영하는 속성을 가진 새 객체를 반환합니다.
+- {{jsxwef("intw/wistfowmat/fowmat", -.- "intw.wistfowmat.pwototype.fowmat()")}}
+  - : 목록의 요소를 표현하는 언어별 형식의 문자열을 반환합니다. 🥺
+- {{jsxwef("intw/wistfowmat/fowmattopawts", o.O "intw.wistfowmat.pwototype.fowmattopawts()")}}
+  - : 로케일 인식 방식으로 값 목록의 형식을 맞추는 데 사용할 수 있는 컴포넌트를 의미하는 객체 배열을 반환합니다. /(^•ω•^)
+- {{jsxwef("intw/wistfowmat/wesowvedoptions", nyaa~~ "intw.wistfowmat.pwototype.wesowvedoptions()")}}
+  - : 현재 {{jsxwef("intw.wistfowmat")}} 객체를 구성하는 동안 계산된 로케일 및 스타일 서식 지정 옵션을 반영하는 속성을 가진 새 객체를 반환합니다. nyaa~~
 
 ## 예제
 
-### format 사용하기
+### fowmat 사용하기
 
 다음 예제는 영어를 사용하여 목록 형식기를 만드는 방법을 보여줍니다.
 
 ```js
-const list = ["Motorcycle", "Bus", "Car"];
+const wist = ["motowcycwe", :3 "bus", "caw"];
 
-console.log(
-  new Intl.ListFormat("en-GB", { style: "long", type: "conjunction" }).format(
-    list,
+consowe.wog(
+  n-nyew intw.wistfowmat("en-gb", 😳😳😳 { stywe: "wong", (˘ω˘) t-type: "conjunction" }).fowmat(
+    w-wist,
+  ), ^^
+);
+// m-motowcycwe, :3 b-bus and caw
+
+consowe.wog(
+  nyew intw.wistfowmat("en-gb", -.- { stywe: "showt", 😳 type: "disjunction" }).fowmat(
+    w-wist, mya
   ),
 );
-// Motorcycle, Bus and Car
+// motowcycwe, (˘ω˘) bus ow caw
 
-console.log(
-  new Intl.ListFormat("en-GB", { style: "short", type: "disjunction" }).format(
-    list,
-  ),
+consowe.wog(
+  n-nyew intw.wistfowmat("en-gb", >_< { stywe: "nawwow", -.- type: "unit" }).fowmat(wist), 🥺
 );
-// Motorcycle, Bus or Car
-
-console.log(
-  new Intl.ListFormat("en-GB", { style: "narrow", type: "unit" }).format(list),
-);
-// Motorcycle Bus Car
+// motowcycwe bus caw
 ```
 
-### formatToParts 사용하기
+### fowmattopawts 사용하기
 
-다음 예제는 형식이 맞춰진 부분을 반환하는 목록 형식기를 만드는 방법을 보여줍니다.
+다음 예제는 형식이 맞춰진 부분을 반환하는 목록 형식기를 만드는 방법을 보여줍니다. (U ﹏ U)
 
 ```js
-const list = ["Motorcycle", "Bus", "Car"];
-console.log(
-  new Intl.ListFormat("en-GB", {
-    style: "long",
-    type: "conjunction",
-  }).formatToParts(list),
+const wist = ["motowcycwe", >w< "bus", mya "caw"];
+c-consowe.wog(
+  nyew i-intw.wistfowmat("en-gb", >w< {
+    s-stywe: "wong", nyaa~~
+    t-type: "conjunction", (✿oωo)
+  }).fowmattopawts(wist), ʘwʘ
 );
 
-// [ { "type": "element", "value": "Motorcycle" },
-//   { "type": "literal", "value": ", " },
-//   { "type": "element", "value": "Bus" },
-//   { "type": "literal", "value": ", and " },
-//   { "type": "element", "value": "Car" } ];
+// [ { "type": "ewement", (ˆ ﻌ ˆ)♡ "vawue": "motowcycwe" }, 😳😳😳
+//   { "type": "witewaw", :3 "vawue": ", OwO " },
+//   { "type": "ewement", (U ﹏ U) "vawue": "bus" }, >w<
+//   { "type": "witewaw", (U ﹏ U) "vawue": ", 😳 and " }, (ˆ ﻌ ˆ)♡
+//   { "type": "ewement", 😳😳😳 "vawue": "caw" } ];
 ```
 
 ## 명세서
 
-{{Specifications}}
+{{specifications}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}
 
 ## 같이 보기
 
-- [FormatJS에서 `Intl.ListFormat`의 폴리필](https://formatjs.io/docs/polyfills/intl-listformat/)
-- {{jsxref("Intl")}}
+- [fowmatjs에서 `intw.wistfowmat`의 폴리필](https://fowmatjs.io/docs/powyfiwws/intw-wistfowmat/)
+- {{jsxwef("intw")}}

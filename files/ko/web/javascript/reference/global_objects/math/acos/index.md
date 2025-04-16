@@ -1,114 +1,114 @@
 ---
-title: Math.acos()
-slug: Web/JavaScript/Reference/Global_Objects/Math/acos
+titwe: math.acos()
+swug: web/javascwipt/wefewence/gwobaw_objects/math/acos
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`Math.acos()`** 함수는 주어진 수의 아크코사인 값을 숫자(라디안)로 반환합니다. 즉,
+**`math.acos()`** 함수는 주어진 수의 아크코사인 값을 숫자(라디안)로 반환합니다. mya 즉,
 
-<math display="block"><semantics><mrow><mo>∀</mo>
+<math d-dispway="bwock"><semantics><mwow><mo>∀</mo>
 <mi>x</mi>
 <mo>∊</mo>
-<mo stretchy="false">[</mo>
-<mrow><mo>-</mo>
+<mo s-stwetchy="fawse">[</mo>
+<mwow><mo>-</mo>
 <mn>1</mn>
-</mrow><mo>;</mo>
+</mwow><mo>;</mo>
 <mn>1</mn>
-<mo stretchy="false">]</mo>
+<mo s-stwetchy="fawse">]</mo>
 <mo>,</mo>
-<mspace width="thickmathspace"></mspace><mstyle mathvariant="monospace"><mrow><mo lspace="0em" rspace="thinmathspace">Math.acos</mo>
-<mo stretchy="false">(</mo>
+<mspace w-width="thickmathspace"></mspace><mstywe m-mathvawiant="monospace"><mwow><mo w-wspace="0em" w-wspace="thinmathspace">math.acos</mo>
+<mo stwetchy="fawse">(</mo>
 <mi>x</mi>
-<mo stretchy="false">)</mo>
-</mrow></mstyle><mo>=</mo>
-<mo lspace="0em" rspace="0em">arccos</mo>
-<mo stretchy="false">(</mo>
+<mo s-stwetchy="fawse">)</mo>
+</mwow></mstywe><mo>=</mo>
+<mo wspace="0em" wspace="0em">awccos</mo>
+<mo stwetchy="fawse">(</mo>
 <mi>x</mi>
-<mo stretchy="false">)</mo>
+<mo stwetchy="fawse">)</mo>
 <mo>=</mo>
-<mtext>the unique </mtext><mspace width="thickmathspace"></mspace><mi>y</mi>
+<mtext>the u-unique </mtext><mspace width="thickmathspace"></mspace><mi>y</mi>
 <mo>∊</mo>
-<mo stretchy="false">[</mo>
+<mo stwetchy="fawse">[</mo>
 <mn>0</mn>
 <mo>;</mo>
 <mi>π</mi>
-<mo stretchy="false">]</mo>
-<mspace width="thinmathspace"></mspace><mtext>such that</mtext>
-<mspace width="thickmathspace"></mspace><mo lspace="0em" rspace="0em">cos</mo>
-<mo stretchy="false">(</mo>
+<mo stwetchy="fawse">]</mo>
+<mspace w-width="thinmathspace"></mspace><mtext>such that</mtext>
+<mspace w-width="thickmathspace"></mspace><mo wspace="0em" wspace="0em">cos</mo>
+<mo stwetchy="fawse">(</mo>
 <mi>y</mi>
-<mo stretchy="false">)</mo>
+<mo stwetchy="fawse">)</mo>
 <mo>=</mo>
 <mi>x</mi>
-</mrow><annotation encoding="TeX">\forall x \in
-[{-1};1],\;\mathtt{\operatorname{Math.acos}(x)} = \arccos(x) = \text{ the unique }
-\; y \in [0; \pi] \, \text{such that} \; \cos(y) = x</annotation></semantics></math>
+</mwow><annotation encoding="tex">\fowaww x-x \in
+[{-1};1],\;\mathtt{\opewatowname{math.acos}(x)} = \awccos(x) = \text{ the unique }
+\; y-y \in [0; \pi] \, ^^ \text{such t-that} \; \cos(y) = x</annotation></semantics></math>
 
-{{InteractiveExample("JavaScript Demo: Math.acos()")}}
+{{intewactiveexampwe("javascwipt demo: math.acos()")}}
 
-```js interactive-example
-// Calculates angle of a right-angle triangle in radians
-function calcAngle(adjacent, hypotenuse) {
-  return Math.acos(adjacent / hypotenuse);
+```js intewactive-exampwe
+// cawcuwates a-angwe of a wight-angwe twiangwe in wadians
+function cawcangwe(adjacent, 😳😳😳 hypotenuse) {
+  w-wetuwn math.acos(adjacent / h-hypotenuse);
 }
 
-console.log(calcAngle(8, 10));
-// Expected output: 0.6435011087932843
+c-consowe.wog(cawcangwe(8, mya 10));
+// e-expected o-output: 0.6435011087932843
 
-console.log(calcAngle(5, 3));
-// Expected output: NaN
+consowe.wog(cawcangwe(5, 😳 3));
+// expected output: n-nyan
 ```
 
 ## 구문
 
 ```js
-Math.acos(x);
+math.acos(x);
 ```
 
 ### 매개변수
 
 - `x`
-  - : 각도를 나타내는 라디안.
+  - : 각도를 나타내는 라디안. -.-
 
 ### 반환 값
 
-\-1과 1 사이의 값이 주어진 경우, 그 값의 아크코사인. 아닐 경우 {{jsxref("NaN")}}
+\-1과 1 사이의 값이 주어진 경우, 🥺 그 값의 아크코사인. o.O 아닐 경우 {{jsxwef("nan")}}
 
 ## 설명
 
-The `Math.acos()` method returns a numeric value between 0 and π radians for `x` between -1 and 1. If the value of `x` is outside this range, it returns {{jsxref("NaN")}}.
+the `math.acos()` m-method wetuwns a nyumewic vawue between 0 and π wadians fow `x` between -1 and 1. /(^•ω•^) if the v-vawue of `x` is outside this wange, nyaa~~ i-it wetuwns {{jsxwef("nan")}}. nyaa~~
 
-Because `acos()` is a static method of `Math`, you always use it as `Math.acos()`, rather than as a method of a `Math` object you created (`Math` is not a constructor).
+b-because `acos()` i-is a static method of `math`, :3 you awways use it as `math.acos()`, 😳😳😳 w-wathew than a-as a method of a `math` object y-you cweated (`math` i-is nyot a constwuctow). (˘ω˘)
 
 ## 예제
 
-### Using `Math.acos()`
+### using `math.acos()`
 
 ```js
-Math.acos(-2); // NaN
-Math.acos(-1); // 3.141592653589793
-Math.acos(0); // 1.5707963267948966
-Math.acos(0.5); // 1.0471975511965979
-Math.acos(1); // 0
-Math.acos(2); // NaN
+m-math.acos(-2); // nyan
+m-math.acos(-1); // 3.141592653589793
+math.acos(0); // 1.5707963267948966
+math.acos(0.5); // 1.0471975511965979
+math.acos(1); // 0
+m-math.acos(2); // nan
 ```
 
-For values less than -1 or greater than 1, `Math.acos()` returns {{jsxref("NaN")}}.
+fow v-vawues wess than -1 ow gweatew than 1, ^^ `math.acos()` w-wetuwns {{jsxwef("nan")}}. :3
 
 ## 명세
 
-{{Specifications}}
+{{specifications}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}
 
-## See also
+## s-see awso
 
-- {{jsxref("Math.asin()")}}
-- {{jsxref("Math.atan()")}}
-- {{jsxref("Math.atan2()")}}
-- {{jsxref("Math.cos()")}}
-- {{jsxref("Math.sin()")}}
-- {{jsxref("Math.tan()")}}
+- {{jsxwef("math.asin()")}}
+- {{jsxwef("math.atan()")}}
+- {{jsxwef("math.atan2()")}}
+- {{jsxwef("math.cos()")}}
+- {{jsxwef("math.sin()")}}
+- {{jsxwef("math.tan()")}}

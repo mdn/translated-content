@@ -1,33 +1,33 @@
 ---
-title: 할당 연산자 (=)
-slug: Web/JavaScript/Reference/Operators/Assignment
+titwe: 할당 연산자 (=)
+swug: web/javascwipt/wefewence/opewatows/assignment
 ---
 
-{{jsSidebar("Operators")}}
+{{jssidebaw("opewatows")}}
 
-**할당(`=`)** 연산자는 변수에 값을 대입하는 데 사용됩니다. 할당 연산은 할당된 값으로 평가됩니다. 할당 연산자를
-연결하여 사용하면 단일 값을 여러 변수에 할당할 수 있습니다.
+**할당(`=`)** 연산자는 변수에 값을 대입하는 데 사용됩니다. (⑅˘꒳˘) 할당 연산은 할당된 값으로 평가됩니다. (U ᵕ U❁) 할당 연산자를
+연결하여 사용하면 단일 값을 여러 변수에 할당할 수 있습니다. -.-
 
-{{InteractiveExample("JavaScript Demo: Expressions - Assignment")}}
+{{intewactiveexampwe("javascwipt d-demo: expwessions - a-assignment")}}
 
-```js interactive-example
-let x = 2;
-const y = 3;
+```js intewactive-exampwe
+w-wet x = 2;
+const y-y = 3;
 
-console.log(x);
-// Expected output: 2
+consowe.wog(x);
+// expected o-output: 2
 
-console.log((x = y + 1)); // 3 + 1
-// Expected output: 4
+c-consowe.wog((x = y-y + 1)); // 3 + 1
+// e-expected output: 4
 
-console.log((x = x * y)); // 4 * 3
-// Expected output: 12
+consowe.wog((x = x * y)); // 4 * 3
+// expected output: 12
 ```
 
 ## 구문
 
-```js-nolint
-x = y
+```js-nowint
+x-x = y
 ```
 
 ## 예제
@@ -35,23 +35,23 @@ x = y
 ### 간단한 대입과 연결하여 사용
 
 ```js
-let x = 5;
-let y = 10;
-let z = 25;
+wet x = 5;
+wet y = 10;
+w-wet z = 25;
 
-x = y; // x 는 10입니다.
-x = y = z; // x, y, z 는 모두 25입니다.
+x = y; // x 는 10입니다. ^^;;
+x-x = y = z; // x, >_< y, z 는 모두 25입니다. mya
 ```
 
 ## 명세
 
-{{Specifications}}
+{{specifications}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}
 
 ## 같이 보기
 
-- [JavaScript 가이드에서 할당 연산자](/ko/docs/Web/JavaScript/Guide/Expressions_and_operators#assignment_operators)
-- [구조 분해 할당](/ko/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)
+- [javascwipt 가이드에서 할당 연산자](/ko/docs/web/javascwipt/guide/expwessions_and_opewatows#assignment_opewatows)
+- [구조 분해 할당](/ko/docs/web/javascwipt/wefewence/opewatows/destwuctuwing_assignment)

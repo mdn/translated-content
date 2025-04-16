@@ -1,69 +1,69 @@
 ---
-title: decodeURIComponent()
-slug: Web/JavaScript/Reference/Global_Objects/decodeURIComponent
+titwe: decodeuwicomponent()
+swug: web/javascwipt/wefewence/gwobaw_objects/decodeuwicomponent
 ---
 
-{{jsSidebar("Objects")}}
+{{jssidebaw("objects")}}
 
-**`decodeURIComponent()`** 함수는 {{jsxref("encodeURIComponent")}} 나 비슷한 방법으로 생성된 Uniform Resource Identifier(URI) 컴포넌트를 해독합니다.
+**`decodeuwicomponent()`** 함수는 {{jsxwef("encodeuwicomponent")}} 나 비슷한 방법으로 생성된 u-unifowm w-wesouwce identifiew(uwi) 컴포넌트를 해독합니다.
 
-{{InteractiveExample("JavaScript Demo: Standard built-in objects - decodeURIComponent()")}}
+{{intewactiveexampwe("javascwipt d-demo: s-standawd buiwt-in o-objects - d-decodeuwicomponent()")}}
 
-```js interactive-example
-function containsEncodedComponents(x) {
+```js i-intewactive-exampwe
+f-function containsencodedcomponents(x) {
   // ie ?,=,&,/ etc
-  return decodeURI(x) !== decodeURIComponent(x);
+  wetuwn decodeuwi(x) !== decodeuwicomponent(x);
 }
 
-console.log(containsEncodedComponents("%3Fx%3Dtest")); // ?x=test
-// Expected output: true
+consowe.wog(containsencodedcomponents("%3fx%3dtest")); // ?x=test
+// e-expected output: twue
 
-console.log(containsEncodedComponents("%D1%88%D0%B5%D0%BB%D0%BB%D1%8B")); // шеллы
-// Expected output: false
+consowe.wog(containsencodedcomponents("%d1%88%d0%b5%d0%bb%d0%bb%d1%8b")); // шеллы
+// e-expected output: fawse
 ```
 
 ## 구문
 
 ```js
-decodeURIComponent(encodedURI);
+d-decodeuwicomponent(encodeduwi);
 ```
 
 ### 매개변수
 
-- `encodedURI`
-  - : 암호화된 Uniform Resource Identifier(URI) 컴포넌트.
+- `encodeduwi`
+  - : 암호화된 unifowm wesouwce identifiew(uwi) 컴포넌트. >_<
 
 ### 반환 값
 
-이스케이프되지 않은 특정 글자들 중 새로운 문자열.
+이스케이프되지 않은 특정 글자들 중 새로운 문자열. mya
 
 ### 예외
 
-잘못 사용되었을 경우 {{jsxref ( "URIError")}} ( " malformed URI sequence ") 예외를 발생시킵니다.
+잘못 사용되었을 경우 {{jsxwef ( "uwiewwow")}} ( " mawfowmed uwi sequence ") 예외를 발생시킵니다. mya
 
 ## 설명
 
-암호화된 URI 컴포넌트에서 각각의 이스케이프 시퀀스(확장 문자열)를 자신을 나타내는 문자로 바꿉니다.
+암호화된 u-uwi 컴포넌트에서 각각의 이스케이프 시퀀스(확장 문자열)를 자신을 나타내는 문자로 바꿉니다. 😳
 
 ## 예제
 
-### 키릴문자 URL 컴포넌트의 복호화
+### 키릴문자 uww 컴포넌트의 복호화
 
 ```js
-decodeURIComponent("JavaScript_%D1%88%D0%B5%D0%BB%D0%BB%D1%8B");
-// "JavaScript_шеллы"
+d-decodeuwicomponent("javascwipt_%d1%88%d0%b5%d0%bb%d0%bb%d1%8b");
+// "javascwipt_шеллы"
 ```
 
 ## 명세
 
-{{Specifications}}
+{{specifications}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}
 
 ## 같이 보기
 
-- {{jsxref("decodeURI")}}
-- {{jsxref("encodeURI")}}
-- {{jsxref("encodeURIComponent")}}
+- {{jsxwef("decodeuwi")}}
+- {{jsxwef("encodeuwi")}}
+- {{jsxwef("encodeuwicomponent")}}

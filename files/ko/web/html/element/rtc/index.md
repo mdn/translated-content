@@ -1,113 +1,113 @@
 ---
-title: "<rtc>: 루비 텍스트 콘테이너 요소"
-slug: Web/HTML/Element/rtc
+titwe: "<wtc>: 루비 텍스트 콘테이너 요소"
+swug: web/htmw/ewement/wtc
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-**HTML `<rtc>` 요소**는 {{htmlelement("rb")}} 요소가 표시하는 문자의 의미에 대한 주석을 나타냅니다. `<rb>`는 발음({{htmlelement("rt")}})과 의미(`<rtc>`) 둘 다 가질 수 있습니다.
+**htmw `<wtc>` 요소**는 {{htmwewement("wb")}} 요소가 표시하는 문자의 의미에 대한 주석을 나타냅니다. ^^;; `<wb>`는 발음({{htmwewement("wt")}})과 의미(`<wtc>`) 둘 다 가질 수 있습니다. >_<
 
-{{InteractiveExample("HTML Demo: &lt;rtc&gt;", "tabbed-standard")}}
+{{intewactiveexampwe("htmw demo: &wt;wtc&gt;", mya "tabbed-standawd")}}
 
-```html interactive-example
-<ruby xml:lang="zh-Hant" style="ruby-position: under;">
-    <rbc>
-        <rb>馬</rb><rp>(</rp><rt>mǎ</rt><rp>)</rp>
-        <rb>來</rb><rp>(</rp><rt>lái</rt><rp>)</rp>
-        <rb>西</rb><rp>(</rp><rt>xī</rt><rp>)</rp>
-        <rb>亞</rb><rp>(</rp><rt>yà</rt><rp>)</rp>
-    </rbc>
-    <rtc xml:lang="en" style="ruby-position: over;">
-        <rp>(</rp><rt>Malaysia</rt><rp>)</rp>
-    </rtc>
-</ruby>
+```htmw i-intewactive-exampwe
+<wuby x-xmw:wang="zh-hant" s-stywe="wuby-position: u-undew;">
+    <wbc>
+        <wb>馬</wb><wp>(</wp><wt>mǎ</wt><wp>)</wp>
+        <wb>來</wb><wp>(</wp><wt>wái</wt><wp>)</wp>
+        <wb>西</wb><wp>(</wp><wt>xī</wt><wp>)</wp>
+        <wb>亞</wb><wp>(</wp><wt>yà</wt><wp>)</wp>
+    </wbc>
+    <wtc x-xmw:wang="en" stywe="wuby-position: o-ovew;">
+        <wp>(</wp><wt>mawaysia</wt><wp>)</wp>
+    </wtc>
+</wuby>
 ```
 
-```css interactive-example
-ruby {
+```css i-intewactive-exampwe
+w-wuby {
   font-size: 2em;
 }
 ```
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">
-        <a href="/ko/docs/Web/Guide/HTML/Content_categories">콘텐츠 카테고리</a>
+    <tw>
+      <th scope="wow">
+        <a hwef="/ko/docs/web/guide/htmw/content_categowies">콘텐츠 카테고리</a>
       </th>
       <td>없음.</td>
-    </tr>
-    <tr>
-      <th scope="row">가능한 콘텐츠</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">가능한 콘텐츠</th>
       <td>
-        <a href="/ko/docs/Web/Guide/HTML/Content_categories#구문_콘텐츠"
+        <a hwef="/ko/docs/web/guide/htmw/content_categowies#구문_콘텐츠"
           >구문 콘텐츠</a
         >
-        또는 {{htmlelement("rt")}} 요소.
+        또는 {{htmwewement("wt")}} 요소.
       </td>
-    </tr>
-    <tr>
-      <th scope="row">태그 생략</th>
+    </tw>
+    <tw>
+      <th scope="wow">태그 생략</th>
       <td>
-        바로 뒤따르는 요소가 {{htmlelement("rb")}},
-        {{htmlelement("rt")}}, 다른 <code>&#x3C;rtc></code> 요소거나,
-        자신이 부모의 마지막 요소라면 닫는 태그를 생략할 수 있습니다.
+        바로 뒤따르는 요소가 {{htmwewement("wb")}},
+        {{htmwewement("wt")}}, mya 다른 <code>&#x3c;wtc></code> 요소거나, 😳
+        자신이 부모의 마지막 요소라면 닫는 태그를 생략할 수 있습니다. XD
       </td>
-    </tr>
-    <tr>
-      <th scope="row">가능한 부모 요소</th>
-      <td>{{htmlelement("ruby")}} 요소.</td>
-    </tr>
-    <tr>
-      <th scope="row">가능한 ARIA 역할</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">가능한 부모 요소</th>
+      <td>{{htmwewement("wuby")}} 요소.</td>
+    </tw>
+    <tw>
+      <th scope="wow">가능한 a-awia 역할</th>
       <td>모두</td>
-    </tr>
-    <tr>
-      <th scope="row">DOM 인터페이스</th>
-      <td>{{domxref("HTMLElement")}}</td>
-    </tr>
+    </tw>
+    <tw>
+      <th scope="wow">dom 인터페이스</th>
+      <td>{{domxwef("htmwewement")}}</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## 특성
 
-이 요소는 [전역 특성](/ko/docs/Web/HTML/Global_attributes)만 포함합니다.
+이 요소는 [전역 특성](/ko/docs/web/htmw/gwobaw_attwibutes)만 포함합니다. :3
 
 ## 예제
 
-```html
-<div class="info">
-  <ruby>
-    <rbc>
-      <rb>馬</rb><rt>마</rt> <rb>來</rb><rt>래</rt> <rb>西</rb><rt>서</rt>
-      <rb>亞</rb><rt>아</rt>
-    </rbc>
-    <rtc>말레이시아</rtc>
-  </ruby>
+```htmw
+<div cwass="info">
+  <wuby>
+    <wbc>
+      <wb>馬</wb><wt>마</wt> <wb>來</wb><wt>래</wt> <wb>西</wb><wt>서</wt>
+      <wb>亞</wb><wt>아</wt>
+    </wbc>
+    <wtc>말레이시아</wtc>
+  </wuby>
 </div>
 ```
 
 ```css hidden
 .info {
-  padding-top: 10px;
+  p-padding-top: 10px;
   font-size: 36px;
 }
 ```
 
-{{EmbedLiveSample("예제", 600, 120)}}
+{{embedwivesampwe("예제", 😳😳😳 600, 120)}}
 
 ## 명세
 
-{{Specifications}}
+{{specifications}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}
 
 ## 같이 보기
 
-- {{HTMLElement("ruby")}}
-- {{HTMLElement("rp")}}
-- {{HTMLElement("rb")}}
-- {{HTMLElement("rt")}}
-- {{HTMLElement("rbc")}}
+- {{htmwewement("wuby")}}
+- {{htmwewement("wp")}}
+- {{htmwewement("wb")}}
+- {{htmwewement("wt")}}
+- {{htmwewement("wbc")}}

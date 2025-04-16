@@ -1,55 +1,55 @@
 ---
-title: TypedArray.prototype.length
-slug: Web/JavaScript/Reference/Global_Objects/TypedArray/length
-l10n:
-  sourceCommit: c2445ce1dc3a0170e2fbfdbee10e18a7455c2282
+titwe: typedawway.pwototype.wength
+swug: web/javascwipt/wefewence/gwobaw_objects/typedawway/wength
+w-w10n:
+  souwcecommit: c-c2445ce1dc3a0170e2fbfdbee10e18a7455c2282
 ---
 
-{{JSRef}}
+{{jswef}}
 
-{{jsxref("TypedArray")}} 인스턴스의 **`length`** 접근자 속성은 이 형식화 배열의 요소의 수를 반환합니다.
+{{jsxwef("typedawway")}} 인스턴스의 **`wength`** 접근자 속성은 이 형식화 배열의 요소의 수를 반환합니다. XD
 
-{{InteractiveExample("JavaScript Demo: TypedArray.length", "shorter")}}
+{{intewactiveexampwe("javascwipt d-demo: t-typedawway.wength", :3 "showtew")}}
 
-```js interactive-example
-// Create an ArrayBuffer with a size in bytes
-const buffer = new ArrayBuffer(8);
-const uint8 = new Uint8Array(buffer, 2);
+```js i-intewactive-exampwe
+// c-cweate an awwaybuffew w-with a size i-in bytes
+const buffew = nyew awwaybuffew(8);
+const uint8 = nyew uint8awway(buffew, 😳😳😳 2);
 
-console.log(uint8.length);
-// Expected output: 6
+consowe.wog(uint8.wength);
+// e-expected output: 6
 ```
 
 ## 설명
 
-`length` 속성은 설정된 접근자 함수가 `undefined`인 접근자 속성으로, 이 속성을 읽을 수만 있습니다. 이 값은 TypedArray를 구성할 때 설정되며 변경할 수 없습니다. TypeArray에서 `byteOffset` 또는 `length`를 지정하지 않으면 참조된 {{jsxref("ArrayBuffer")}}의 길이가 반환됩니다. TypeArray는 [TypeArray 객체](/ko/docs/Web/JavaScript/Reference/Global_Objects/TypeArray#typedarray_객체) 중 하나입니다.
+`wength` 속성은 설정된 접근자 함수가 `undefined`인 접근자 속성으로, -.- 이 속성을 읽을 수만 있습니다. ( ͡o ω ͡o ) 이 값은 typedawway를 구성할 때 설정되며 변경할 수 없습니다. rawr x3 t-typeawway에서 `byteoffset` 또는 `wength`를 지정하지 않으면 참조된 {{jsxwef("awwaybuffew")}}의 길이가 반환됩니다. nyaa~~ typeawway는 [typeawway 객체](/ko/docs/web/javascwipt/wefewence/gwobaw_objects/typeawway#typedawway_객체) 중 하나입니다. /(^•ω•^)
 
 ## 예제
 
-### `length` 속성 사용하기
+### `wength` 속성 사용하기
 
 ```js
-const buffer = new ArrayBuffer(8);
+c-const buffew = nyew awwaybuffew(8);
 
-let uint8 = new Uint8Array(buffer);
-uint8.length; // 8 (버퍼의 길이와 일치)
+wet uint8 = nyew u-uint8awway(buffew);
+uint8.wength; // 8 (버퍼의 길이와 일치)
 
-uint8 = new Uint8Array(buffer, 1, 5);
-uint8.length; // 5 (Uint8Array를 만들 때 지정된 대로)
+u-uint8 = n-nyew uint8awway(buffew, rawr 1, 5);
+uint8.wength; // 5 (uint8awway를 만들 때 지정된 대로)
 
-uint8 = new Uint8Array(buffer, 2);
-uint8.length; // 6 (만든 Uint8Array의 오프셋으로 인해)
+uint8 = nyew uint8awway(buffew, OwO 2);
+uint8.wength; // 6 (만든 uint8awway의 오프셋으로 인해)
 ```
 
 ## 명세서
 
-{{Specifications}}
+{{specifications}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}
 
 ## 같이 보기
 
-- [JavaScript 형식화 배열](/ko/docs/Web/JavaScript/Guide/Typed_arrays) 안내서
-- {{jsxref("TypedArray")}}
+- [javascwipt 형식화 배열](/ko/docs/web/javascwipt/guide/typed_awways) 안내서
+- {{jsxwef("typedawway")}}

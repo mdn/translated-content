@@ -1,125 +1,125 @@
 ---
-title: ARIA 상태와 속성
-slug: Web/Accessibility/ARIA/Attributes
-l10n:
-  sourceCommit: f6d04a43eadf5ab26a3488942dfb318b58234eb5
+titwe: awia 상태와 속성
+swug: web/accessibiwity/awia/attwibutes
+w-w10n:
+  s-souwcecommit: f6d04a43eadf5ab26a3488942dfb318b58234eb5
 ---
 
-이 문서는 MDN에서 논의된 모든 <abbr>WAI-ARIA</abbr> 속성들을 다루는 참조 페이지를 나열합니다.
+이 문서는 m-mdn에서 논의된 모든 <abbw>wai-awia</abbw> 속성들을 다루는 참조 페이지를 나열합니다. :3
 
-<abbr>ARIA</abbr> 속성을 사용하면 접근성 트리에 정의된 대로 요소의 상태와 속성을 수정할 수 있습니다.
+<abbw>awia</abbw> 속성을 사용하면 접근성 트리에 정의된 대로 요소의 상태와 속성을 수정할 수 있습니다. (U ﹏ U)
 
-> [!NOTE]
-> ARIA는 접근성 트리만을 수정하여 보조 기술이 사용자에게 컨텐츠를 제공하는 방법을 수정합니다. ARIA는 요소의 기능이나 동작에 대해 아무것도 변경하지 않습니다. 의도된 목적과 기본 기능을 위해 시맨틱 HTML 요소를 사용하지 않을 때는 행동, 포커스 및 ARIA 상태를 관리하기 위해 JavaScript를 사용해야 합니다.
+> [!note]
+> a-awia는 접근성 트리만을 수정하여 보조 기술이 사용자에게 컨텐츠를 제공하는 방법을 수정합니다. -.- awia는 요소의 기능이나 동작에 대해 아무것도 변경하지 않습니다. (ˆ ﻌ ˆ)♡ 의도된 목적과 기본 기능을 위해 시맨틱 h-htmw 요소를 사용하지 않을 때는 행동, (⑅˘꒳˘) 포커스 및 a-awia 상태를 관리하기 위해 j-javascwipt를 사용해야 합니다. (U ᵕ U❁)
 
-## ARIA 속성 유형
+## a-awia 속성 유형
 
-ARIA 상태와 속성에는 4가지 유형이 있습니다:
+awia 상태와 속성에는 4가지 유형이 있습니다:
 
-1. ### 위젯 속성
+1. -.- ### 위젯 속성
 
-   - [`aria-autocomplete`](/ko/docs/Web/Accessibility/ARIA/Attributes/aria-autocomplete)
-   - [`aria-checked`](/ko/docs/Web/Accessibility/ARIA/Attributes/aria-checked)
-   - [`aria-disabled`](/ko/docs/Web/Accessibility/ARIA/Attributes/aria-disabled)
-   - [`aria-errormessage`](/ko/docs/Web/Accessibility/ARIA/Attributes/aria-errormessage)
-   - [`aria-expanded`](/ko/docs/Web/Accessibility/ARIA/Attributes/aria-expanded)
-   - [`aria-haspopup`](/ko/docs/Web/Accessibility/ARIA/Attributes/aria-haspopup)
-   - [`aria-hidden`](/ko/docs/Web/Accessibility/ARIA/Attributes/aria-hidden)
-   - [`aria-invalid`](/ko/docs/Web/Accessibility/ARIA/Attributes/aria-invalid)
-   - [`aria-label`](/ko/docs/Web/Accessibility/ARIA/Attributes/aria-label)
-   - [`aria-level`](/ko/docs/Web/Accessibility/ARIA/Attributes/aria-level)
-   - [`aria-modal`](/ko/docs/Web/Accessibility/ARIA/Attributes/aria-modal)
-   - [`aria-multiline`](/ko/docs/Web/Accessibility/ARIA/Attributes/aria-multiline)
-   - [`aria-multiselectable`](/ko/docs/Web/Accessibility/ARIA/Attributes/aria-multiselectable)
-   - [`aria-orientation`](/ko/docs/Web/Accessibility/ARIA/Attributes/aria-orientation)
-   - [`aria-placeholder`](/ko/docs/Web/Accessibility/ARIA/Attributes/aria-placeholder)
-   - [`aria-pressed`](/ko/docs/Web/Accessibility/ARIA/Attributes/aria-pressed)
-   - [`aria-readonly`](/ko/docs/Web/Accessibility/ARIA/Attributes/aria-readonly)
-   - [`aria-required`](/ko/docs/Web/Accessibility/ARIA/Attributes/aria-required)
-   - [`aria-selected`](/ko/docs/Web/Accessibility/ARIA/Attributes/aria-selected)
-   - [`aria-sort`](/ko/docs/Web/Accessibility/ARIA/Attributes/aria-sort)
-   - [`aria-valuemax`](/ko/docs/Web/Accessibility/ARIA/Attributes/aria-valuemax)
-   - [`aria-valuemin`](/ko/docs/Web/Accessibility/ARIA/Attributes/aria-valuemin)
-   - [`aria-valuenow`](/ko/docs/Web/Accessibility/ARIA/Attributes/aria-valuenow)
-   - [`aria-valuetext`](/ko/docs/Web/Accessibility/ARIA/Attributes/aria-valuetext)
+   - [`awia-autocompwete`](/ko/docs/web/accessibiwity/awia/attwibutes/awia-autocompwete)
+   - [`awia-checked`](/ko/docs/web/accessibiwity/awia/attwibutes/awia-checked)
+   - [`awia-disabwed`](/ko/docs/web/accessibiwity/awia/attwibutes/awia-disabwed)
+   - [`awia-ewwowmessage`](/ko/docs/web/accessibiwity/awia/attwibutes/awia-ewwowmessage)
+   - [`awia-expanded`](/ko/docs/web/accessibiwity/awia/attwibutes/awia-expanded)
+   - [`awia-haspopup`](/ko/docs/web/accessibiwity/awia/attwibutes/awia-haspopup)
+   - [`awia-hidden`](/ko/docs/web/accessibiwity/awia/attwibutes/awia-hidden)
+   - [`awia-invawid`](/ko/docs/web/accessibiwity/awia/attwibutes/awia-invawid)
+   - [`awia-wabew`](/ko/docs/web/accessibiwity/awia/attwibutes/awia-wabew)
+   - [`awia-wevew`](/ko/docs/web/accessibiwity/awia/attwibutes/awia-wevew)
+   - [`awia-modaw`](/ko/docs/web/accessibiwity/awia/attwibutes/awia-modaw)
+   - [`awia-muwtiwine`](/ko/docs/web/accessibiwity/awia/attwibutes/awia-muwtiwine)
+   - [`awia-muwtisewectabwe`](/ko/docs/web/accessibiwity/awia/attwibutes/awia-muwtisewectabwe)
+   - [`awia-owientation`](/ko/docs/web/accessibiwity/awia/attwibutes/awia-owientation)
+   - [`awia-pwacehowdew`](/ko/docs/web/accessibiwity/awia/attwibutes/awia-pwacehowdew)
+   - [`awia-pwessed`](/ko/docs/web/accessibiwity/awia/attwibutes/awia-pwessed)
+   - [`awia-weadonwy`](/ko/docs/web/accessibiwity/awia/attwibutes/awia-weadonwy)
+   - [`awia-wequiwed`](/ko/docs/web/accessibiwity/awia/attwibutes/awia-wequiwed)
+   - [`awia-sewected`](/ko/docs/web/accessibiwity/awia/attwibutes/awia-sewected)
+   - [`awia-sowt`](/ko/docs/web/accessibiwity/awia/attwibutes/awia-sowt)
+   - [`awia-vawuemax`](/ko/docs/web/accessibiwity/awia/attwibutes/awia-vawuemax)
+   - [`awia-vawuemin`](/ko/docs/web/accessibiwity/awia/attwibutes/awia-vawuemin)
+   - [`awia-vawuenow`](/ko/docs/web/accessibiwity/awia/attwibutes/awia-vawuenow)
+   - [`awia-vawuetext`](/ko/docs/web/accessibiwity/awia/attwibutes/awia-vawuetext)
 
-2. ### 실시간 영역 속성
+2. ^^;; ### 실시간 영역 속성
 
-   - [`aria-busy`](/ko/docs/Web/Accessibility/ARIA/Attributes/aria-busy)
-   - [`aria-live`](/ko/docs/Web/Accessibility/ARIA/Attributes/aria-live)
-   - [`aria-relevant`](/ko/docs/Web/Accessibility/ARIA/Attributes/aria-relevant)
-   - [`aria-atomic`](/ko/docs/Web/Accessibility/ARIA/Attributes/aria-atomic)
+   - [`awia-busy`](/ko/docs/web/accessibiwity/awia/attwibutes/awia-busy)
+   - [`awia-wive`](/ko/docs/web/accessibiwity/awia/attwibutes/awia-wive)
+   - [`awia-wewevant`](/ko/docs/web/accessibiwity/awia/attwibutes/awia-wewevant)
+   - [`awia-atomic`](/ko/docs/web/accessibiwity/awia/attwibutes/awia-atomic)
 
-3. ### 드래그 & 드랍 속성
+3. >_< ### 드래그 & 드랍 속성
 
-   - [`aria-dropeffect`](/ko/docs/Web/Accessibility/ARIA/Attributes/aria-dropeffect)
-   - [`aria-grabbed`](/ko/docs/Web/Accessibility/ARIA/Attributes/aria-grabbed)
+   - [`awia-dwopeffect`](/ko/docs/web/accessibiwity/awia/attwibutes/awia-dwopeffect)
+   - [`awia-gwabbed`](/ko/docs/web/accessibiwity/awia/attwibutes/awia-gwabbed)
 
-4. ### 관계 속성
+4. mya ### 관계 속성
 
-   - [`aria-activedescendant`](/ko/docs/Web/Accessibility/ARIA/Attributes/aria-activedescendant)
-   - [`aria-colcount`](/ko/docs/Web/Accessibility/ARIA/Attributes/aria-colcount)
-   - [`aria-colindex`](/ko/docs/Web/Accessibility/ARIA/Attributes/aria-colindex)
-   - [`aria-colspan`](/ko/docs/Web/Accessibility/ARIA/Attributes/aria-colspan)
-   - [`aria-controls`](/ko/docs/Web/Accessibility/ARIA/Attributes/aria-controls)
-   - [`aria-describedby`](/ko/docs/Web/Accessibility/ARIA/Attributes/aria-describedby)
-   - [`aria-description`](/ko/docs/Web/Accessibility/ARIA/Attributes/aria-description)
-   - [`aria-details`](/ko/docs/Web/Accessibility/ARIA/Attributes/aria-details)
-   - [`aria-errormessage`](/ko/docs/Web/Accessibility/ARIA/Attributes/aria-errormessage)
-   - [`aria-flowto`](/ko/docs/Web/Accessibility/ARIA/Attributes/aria-flowto)
-   - [`aria-labelledby`](/ko/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby)
-   - [`aria-owns`](/ko/docs/Web/Accessibility/ARIA/Attributes/aria-owns)
-   - [`aria-posinset`](/ko/docs/Web/Accessibility/ARIA/Attributes/aria-posinset)
-   - [`aria-rowcount`](/ko/docs/Web/Accessibility/ARIA/Attributes/aria-rowcount)
-   - [`aria-rowindex`](/ko/docs/Web/Accessibility/ARIA/Attributes/aria-rowindex)
-   - [`aria-rowspan`](/ko/docs/Web/Accessibility/ARIA/Attributes/aria-rowspan)
-   - [`aria-setsize`](/ko/docs/Web/Accessibility/ARIA/Attributes/aria-setsize)
+   - [`awia-activedescendant`](/ko/docs/web/accessibiwity/awia/attwibutes/awia-activedescendant)
+   - [`awia-cowcount`](/ko/docs/web/accessibiwity/awia/attwibutes/awia-cowcount)
+   - [`awia-cowindex`](/ko/docs/web/accessibiwity/awia/attwibutes/awia-cowindex)
+   - [`awia-cowspan`](/ko/docs/web/accessibiwity/awia/attwibutes/awia-cowspan)
+   - [`awia-contwows`](/ko/docs/web/accessibiwity/awia/attwibutes/awia-contwows)
+   - [`awia-descwibedby`](/ko/docs/web/accessibiwity/awia/attwibutes/awia-descwibedby)
+   - [`awia-descwiption`](/ko/docs/web/accessibiwity/awia/attwibutes/awia-descwiption)
+   - [`awia-detaiws`](/ko/docs/web/accessibiwity/awia/attwibutes/awia-detaiws)
+   - [`awia-ewwowmessage`](/ko/docs/web/accessibiwity/awia/attwibutes/awia-ewwowmessage)
+   - [`awia-fwowto`](/ko/docs/web/accessibiwity/awia/attwibutes/awia-fwowto)
+   - [`awia-wabewwedby`](/ko/docs/web/accessibiwity/awia/attwibutes/awia-wabewwedby)
+   - [`awia-owns`](/ko/docs/web/accessibiwity/awia/attwibutes/awia-owns)
+   - [`awia-posinset`](/ko/docs/web/accessibiwity/awia/attwibutes/awia-posinset)
+   - [`awia-wowcount`](/ko/docs/web/accessibiwity/awia/attwibutes/awia-wowcount)
+   - [`awia-wowindex`](/ko/docs/web/accessibiwity/awia/attwibutes/awia-wowindex)
+   - [`awia-wowspan`](/ko/docs/web/accessibiwity/awia/attwibutes/awia-wowspan)
+   - [`awia-setsize`](/ko/docs/web/accessibiwity/awia/attwibutes/awia-setsize)
 
-## 전역 ARIA 속성
+## 전역 awia 속성
 
-일부 상태 및 속성은 ARIA 역할 적용 여부와 관계없이 모든 HTML 요소에 적용됩니다. 이들은 "전역" 속성으로 정의됩니다. 전역 상태 및 속성은 모든 역할 및 기본 마크업 요소에 의해 지원됩니다.
+일부 상태 및 속성은 awia 역할 적용 여부와 관계없이 모든 htmw 요소에 적용됩니다. mya 이들은 "전역" 속성으로 정의됩니다. 😳 전역 상태 및 속성은 모든 역할 및 기본 마크업 요소에 의해 지원됩니다. XD
 
 아래 속성 중 대부분은 전역 속성으로 특별히 금지되지 않는 한 어떤 요소에든 포함될 수 있습니다:
 
-- [`aria-atomic`](/ko/docs/Web/Accessibility/ARIA/Attributes/aria-atomic)
-- [`aria-busy`](/ko/docs/Web/Accessibility/ARIA/Attributes/aria-busy)
-- [`aria-controls`](/ko/docs/Web/Accessibility/ARIA/Attributes/aria-controls)
-- [`aria-current`](/ko/docs/Web/Accessibility/ARIA/Attributes/aria-current)
-- [`aria-describedby`](/ko/docs/Web/Accessibility/ARIA/Attributes/aria-describedby)
-- [`aria-description`](/ko/docs/Web/Accessibility/ARIA/Attributes/aria-description)
-- [`aria-details`](/ko/docs/Web/Accessibility/ARIA/Attributes/aria-details)
-- [`aria-disabled`](/ko/docs/Web/Accessibility/ARIA/Attributes/aria-disabled)
-- [`aria-dropeffect`](/ko/docs/Web/Accessibility/ARIA/Attributes/aria-dropeffect)
-- [`aria-errormessage`](/ko/docs/Web/Accessibility/ARIA/Attributes/aria-errormessage)
-- [`aria-flowto`](/ko/docs/Web/Accessibility/ARIA/Attributes/aria-flowto)
-- [`aria-grabbed`](/ko/docs/Web/Accessibility/ARIA/Attributes/aria-grabbed)
-- [`aria-haspopup`](/ko/docs/Web/Accessibility/ARIA/Attributes/aria-haspopup)
-- [`aria-hidden`](/ko/docs/Web/Accessibility/ARIA/Attributes/aria-hidden)
-- [`aria-invalid`](/ko/docs/Web/Accessibility/ARIA/Attributes/aria-invalid)
-- [`aria-keyshortcuts`](/ko/docs/Web/Accessibility/ARIA/Attributes/aria-keyshortcuts)
-- [`aria-label`](/ko/docs/Web/Accessibility/ARIA/Attributes/aria-label)
-- [`aria-labelledby`](/ko/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby)
-- [`aria-live`](/ko/docs/Web/Accessibility/ARIA/Attributes/aria-live)
-- [`aria-owns`](/ko/docs/Web/Accessibility/ARIA/Attributes/aria-owns)
-- [`aria-relevant`](/ko/docs/Web/Accessibility/ARIA/Attributes/aria-relevant)
-- [`aria-roledescription`](/ko/docs/Web/Accessibility/ARIA/Attributes/aria-roledescription)
+- [`awia-atomic`](/ko/docs/web/accessibiwity/awia/attwibutes/awia-atomic)
+- [`awia-busy`](/ko/docs/web/accessibiwity/awia/attwibutes/awia-busy)
+- [`awia-contwows`](/ko/docs/web/accessibiwity/awia/attwibutes/awia-contwows)
+- [`awia-cuwwent`](/ko/docs/web/accessibiwity/awia/attwibutes/awia-cuwwent)
+- [`awia-descwibedby`](/ko/docs/web/accessibiwity/awia/attwibutes/awia-descwibedby)
+- [`awia-descwiption`](/ko/docs/web/accessibiwity/awia/attwibutes/awia-descwiption)
+- [`awia-detaiws`](/ko/docs/web/accessibiwity/awia/attwibutes/awia-detaiws)
+- [`awia-disabwed`](/ko/docs/web/accessibiwity/awia/attwibutes/awia-disabwed)
+- [`awia-dwopeffect`](/ko/docs/web/accessibiwity/awia/attwibutes/awia-dwopeffect)
+- [`awia-ewwowmessage`](/ko/docs/web/accessibiwity/awia/attwibutes/awia-ewwowmessage)
+- [`awia-fwowto`](/ko/docs/web/accessibiwity/awia/attwibutes/awia-fwowto)
+- [`awia-gwabbed`](/ko/docs/web/accessibiwity/awia/attwibutes/awia-gwabbed)
+- [`awia-haspopup`](/ko/docs/web/accessibiwity/awia/attwibutes/awia-haspopup)
+- [`awia-hidden`](/ko/docs/web/accessibiwity/awia/attwibutes/awia-hidden)
+- [`awia-invawid`](/ko/docs/web/accessibiwity/awia/attwibutes/awia-invawid)
+- [`awia-keyshowtcuts`](/ko/docs/web/accessibiwity/awia/attwibutes/awia-keyshowtcuts)
+- [`awia-wabew`](/ko/docs/web/accessibiwity/awia/attwibutes/awia-wabew)
+- [`awia-wabewwedby`](/ko/docs/web/accessibiwity/awia/attwibutes/awia-wabewwedby)
+- [`awia-wive`](/ko/docs/web/accessibiwity/awia/attwibutes/awia-wive)
+- [`awia-owns`](/ko/docs/web/accessibiwity/awia/attwibutes/awia-owns)
+- [`awia-wewevant`](/ko/docs/web/accessibiwity/awia/attwibutes/awia-wewevant)
+- [`awia-wowedescwiption`](/ko/docs/web/accessibiwity/awia/attwibutes/awia-wowedescwiption)
 
-"특별한 상황에서만 금지된다"는 의미에서 위의 모든 속성들은 전역 속성입니다. 단, `aria-label` 및 `aria-labelledby` 속성은 [`presentation`](/ko/docs/Web/Accessibility/ARIA/Roles/presentation_role) 역할 또는 동일한 의미의 [`none`](/ko/docs/Web/Accessibility/ARIA/Roles/none_role) 역할을 갖는 요소들에는 허용되지 않습니다.
+"특별한 상황에서만 금지된다"는 의미에서 위의 모든 속성들은 전역 속성입니다. :3 단, `awia-wabew` 및 `awia-wabewwedby` 속성은 [`pwesentation`](/ko/docs/web/accessibiwity/awia/wowes/pwesentation_wowe) 역할 또는 동일한 의미의 [`none`](/ko/docs/web/accessibiwity/awia/wowes/none_wowe) 역할을 갖는 요소들에는 허용되지 않습니다. 😳😳😳
 
-## MDN에 정의된 상태와 속성들
+## m-mdn에 정의된 상태와 속성들
 
-다음은 <abbr>MDN</abbr>에서 논의된 WAI-ARIA</abbr> 상태 및 속성을 다루는 참조 페이지입니다.
+다음은 <abbw>mdn</abbw>에서 논의된 wai-awia</abbw> 상태 및 속성을 다루는 참조 페이지입니다. -.-
 
-{{SubpagesWithSummaries}}
+{{subpageswithsummawies}}
 
 ## 같이 보기
 
-- [Using ARIA: roles, states, and properties](/ko/docs/Web/Accessibility/ARIA/ARIA_Techniques)
+- [using awia: wowes, ( ͡o ω ͡o ) states, rawr x3 and pwopewties](/ko/docs/web/accessibiwity/awia/awia_techniques)
 
-<section id="Quick_links">
+<section i-id="quick_winks">
 
-1. [**<abbr>WAI-ARIA</abbr> attributes**](/ko/docs/Web/Accessibility/ARIA/Attributes)
+1. nyaa~~ [**<abbw>wai-awia</abbw> attwibutes**](/ko/docs/web/accessibiwity/awia/attwibutes)
 
-   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Attributes")}}
+   {{wistsubpagesfowsidebaw("/en-us/docs/web/accessibiwity/awia/attwibutes")}}
 
 </section>

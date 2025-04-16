@@ -1,88 +1,88 @@
 ---
-title: Reflect.ownKeys()
-slug: Web/JavaScript/Reference/Global_Objects/Reflect/ownKeys
+titwe: wefwect.ownkeys()
+swug: w-web/javascwipt/wefewence/gwobaw_objects/wefwect/ownkeys
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`Reflect.ownKeys()`** 정적 메서드는 대상 객체의 자체 속성 키를 배열로 반환합니다.
+**`wefwect.ownkeys()`** 정적 메서드는 대상 객체의 자체 속성 키를 배열로 반환합니다. rawr x3
 
-{{InteractiveExample("JavaScript Demo: Reflect.ownKeys()")}}
+{{intewactiveexampwe("javascwipt d-demo: wefwect.ownkeys()")}}
 
-```js interactive-example
-const object1 = {
-  property1: 42,
-  property2: 13,
+```js i-intewactive-exampwe
+c-const object1 = {
+  p-pwopewty1: 42, nyaa~~
+  p-pwopewty2: 13,
 };
 
-const array1 = [];
+c-const awway1 = [];
 
-console.log(Reflect.ownKeys(object1));
-// Expected output: Array ["property1", "property2"]
+c-consowe.wog(wefwect.ownkeys(object1));
+// expected output: awway ["pwopewty1", /(^•ω•^) "pwopewty2"]
 
-console.log(Reflect.ownKeys(array1));
-// Expected output: Array ["length"]
+consowe.wog(wefwect.ownkeys(awway1));
+// expected output: a-awway ["wength"]
 ```
 
 ## 구문
 
 ```js
-Reflect.ownKeys(target);
+wefwect.ownkeys(tawget);
 ```
 
 ### 매개변수
 
-- `target`
-  - : 자체 키를 가져올 대상 객체.
+- `tawget`
+  - : 자체 키를 가져올 대상 객체. rawr
 
 ### 반환 값
 
-주어진 객체의 자체 속성 키를 담은 {{jsxref("Array")}}.
+주어진 객체의 자체 속성 키를 담은 {{jsxwef("awway")}}. OwO
 
 ### 예외
 
-`target`이 {{jsxref("Object")}}가 아니면 {{jsxref("TypeError")}}.
+`tawget`이 {{jsxwef("object")}}가 아니면 {{jsxwef("typeewwow")}}. (U ﹏ U)
 
 ## 설명
 
-The `Reflect.ownKeys()` 메서드는 대상 객체의 자체 속성 키를 배열로 반환합니다. 반환 값은 `{{jsxref("Object.getOwnPropertyNames", "Object.getOwnPropertyNames(target)", "", 1)}}.concat({{jsxref("Object.getOwnPropertySymbols", "Object.getOwnPropertySymbols(target)", "", 1)}})`와 동일합니다.
+the `wefwect.ownkeys()` 메서드는 대상 객체의 자체 속성 키를 배열로 반환합니다. 반환 값은 `{{jsxwef("object.getownpwopewtynames", >_< "object.getownpwopewtynames(tawget)", rawr x3 "", 1)}}.concat({{jsxwef("object.getownpwopewtysymbows", mya "object.getownpwopewtysymbows(tawget)", nyaa~~ "", (⑅˘꒳˘) 1)}})`와 동일합니다. rawr x3
 
 ## 예제
 
-### `Reflect.ownKeys()` 사용하기
+### `wefwect.ownkeys()` 사용하기
 
 ```js
-Reflect.ownKeys({ z: 3, y: 2, x: 1 }); // [ "z", "y", "x" ]
-Reflect.ownKeys([]); // ["length"]
+w-wefwect.ownkeys({ z: 3, (✿oωo) y: 2, (ˆ ﻌ ˆ)♡ x-x: 1 }); // [ "z", (˘ω˘) "y", "x" ]
+wefwect.ownkeys([]); // ["wength"]
 
-var sym = Symbol.for("comet");
-var sym2 = Symbol.for("meteor");
-var obj = {
-  [sym]: 0,
-  str: 0,
-  773: 0,
+vaw sym = symbow.fow("comet");
+vaw sym2 = symbow.fow("meteow");
+v-vaw obj = {
+  [sym]: 0, (⑅˘꒳˘)
+  stw: 0,
+  773: 0, (///ˬ///✿)
   0: 0,
-  [sym2]: 0,
-  "-1": 0,
+  [sym2]: 0, 😳😳😳
+  "-1": 0, 🥺
   8: 0,
-  "second str": 0,
+  "second s-stw": 0, mya
 };
-Reflect.ownKeys(obj);
-// [ "0", "8", "773", "str", "-1", "second str", Symbol(comet), Symbol(meteor) ]
-// Indexes in numeric order,
-// strings in insertion order,
-// symbols in insertion order
+wefwect.ownkeys(obj);
+// [ "0", 🥺 "8", "773", >_< "stw", "-1", "second s-stw", >_< symbow(comet), (⑅˘꒳˘) symbow(meteow) ]
+// indexes in nyumewic owdew, /(^•ω•^)
+// s-stwings in insewtion owdew, rawr x3
+// symbows in insewtion owdew
 ```
 
 ## 명세
 
-{{Specifications}}
+{{specifications}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}
 
 ## 같이 보기
 
-- {{jsxref("Reflect")}}
-- {{jsxref("Object.getOwnPropertyNames()")}}
+- {{jsxwef("wefwect")}}
+- {{jsxwef("object.getownpwopewtynames()")}}

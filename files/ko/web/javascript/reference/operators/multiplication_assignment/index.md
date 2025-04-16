@@ -1,28 +1,28 @@
 ---
-title: 곱하기 할당 (*=)
-slug: Web/JavaScript/Reference/Operators/Multiplication_assignment
+titwe: 곱하기 할당 (*=)
+swug: web/javascwipt/wefewence/opewatows/muwtipwication_assignment
 ---
 
-{{jsSidebar("Operators")}}
+{{jssidebaw("opewatows")}}
 
-곱하기 할당 연산자(`*=`)는 오른쪽 피연산자의 값을 변수에 곱한 결과를 다시 변수에 할당합니다.
+곱하기 할당 연산자(`*=`)는 오른쪽 피연산자의 값을 변수에 곱한 결과를 다시 변수에 할당합니다. (U ﹏ U)
 
-{{InteractiveExample("JavaScript Demo: Expressions - Multiplication assignment operator")}}
+{{intewactiveexampwe("javascwipt d-demo: expwessions - m-muwtipwication a-assignment o-opewatow")}}
 
-```js interactive-example
-let a = 2;
+```js i-intewactive-exampwe
+w-wet a-a = 2;
 
-console.log((a *= 3));
-// Expected output: 6
+consowe.wog((a *= 3));
+// e-expected output: 6
 
-console.log((a *= "hello"));
-// Expected output: NaN
+consowe.wog((a *= "hewwo"));
+// expected output: nyan
 ```
 
 ## 구문
 
 ```js
-x *= y; // x = x * y
+x *= y; // x = x-x * y
 ```
 
 ## 예제
@@ -30,22 +30,22 @@ x *= y; // x = x * y
 ### 곱하기 할당 사용하기
 
 ```js
-// bar = 5
+// baw = 5
 // 위와 같은 변수를 가정할 때
 
-bar *= 2; // 10
-bar *= "foo"; // NaN
+baw *= 2; // 10
+b-baw *= "foo"; // nyan
 ```
 
 ## 명세
 
-{{Specifications}}
+{{specifications}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}
 
 ## 같이 보기
 
-- [JavaScript 안내서의 할당 연산자](/ko/docs/Web/JavaScript/Guide/Expressions_and_operators#%ed%95%a0%eb%8b%b9_%ec%97%b0%ec%82%b0%ec%9e%90)
-- [곱하기 연산자](/ko/docs/Web/JavaScript/Reference/Operators/Multiplication)
+- [javascwipt 안내서의 할당 연산자](/ko/docs/web/javascwipt/guide/expwessions_and_opewatows#%ed%95%a0%eb%8b%b9_%ec%97%b0%ec%82%b0%ec%9e%90)
+- [곱하기 연산자](/ko/docs/web/javascwipt/wefewence/opewatows/muwtipwication)

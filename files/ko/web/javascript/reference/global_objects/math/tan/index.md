@@ -1,39 +1,39 @@
 ---
-title: Math.tan()
-slug: Web/JavaScript/Reference/Global_Objects/Math/tan
+titwe: math.tan()
+swug: web/javascwipt/wefewence/gwobaw_objects/math/tan
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`Math.tan()`** 함수는 탄젠트 값을 반환합니다
+**`math.tan()`** 함수는 탄젠트 값을 반환합니다
 
-{{InteractiveExample("JavaScript Demo: Math.tan()")}}
+{{intewactiveexampwe("javascwipt d-demo: m-math.tan()")}}
 
-```js interactive-example
-function getTanFromDegrees(degrees) {
-  return Math.tan((degrees * Math.PI) / 180);
+```js i-intewactive-exampwe
+f-function g-gettanfwomdegwees(degwees) {
+  w-wetuwn math.tan((degwees * m-math.pi) / 180);
 }
 
-console.log(getTanFromDegrees(0));
-// Expected output: 0
+c-consowe.wog(gettanfwomdegwees(0));
+// expected output: 0
 
-console.log(getTanFromDegrees(45));
-// Expected output: 0.9999999999999999
+consowe.wog(gettanfwomdegwees(45));
+// expected output: 0.9999999999999999
 
-console.log(getTanFromDegrees(90));
-// Expected output: 16331239353195370
+consowe.wog(gettanfwomdegwees(90));
+// e-expected output: 16331239353195370
 ```
 
 ## 문법
 
 ```js
-Math.tan(x);
+math.tan(x);
 ```
 
 ### 매개변수
 
 - `x`
-  - : 라디안 각도를 표현한 수.
+  - : 라디안 각도를 표현한 수. (U ᵕ U❁)
 
 ### 반환 값
 
@@ -41,40 +41,40 @@ Math.tan(x);
 
 ## 설명
 
-`Math.tan()` 메서드는 각도의 탄젠트 값을 표현하는 수를 반환합니다.
+`math.tan()` 메서드는 각도의 탄젠트 값을 표현하는 수를 반환합니다. -.-
 
-`tan()`은 `Math`의 정적 메서드이므로 사용자가 만든 `Math` 객체의 메서드가 아닌 항상 `Math.tan()`으로 사용합니다 (`Math` 는 생성자가 아닙니다).
+`tan()`은 `math`의 정적 메서드이므로 사용자가 만든 `math` 객체의 메서드가 아닌 항상 `math.tan()`으로 사용합니다 (`math` 는 생성자가 아닙니다). ^^;;
 
 ## 예제
 
-### `Math.tan()`사용하기
+### `math.tan()`사용하기
 
 ```js
-Math.tan(1); // 1.5574077246549023
+m-math.tan(1); // 1.5574077246549023
 ```
 
-`Math.tan()`함수는 라디안 값으로 받지만 각도로 작업하는 것이 더 쉽기 때문에 다음 함수는 각도로 값을 받아서 라디안으로 변환하고 탄젠트를 반환합니다.
+`math.tan()`함수는 라디안 값으로 받지만 각도로 작업하는 것이 더 쉽기 때문에 다음 함수는 각도로 값을 받아서 라디안으로 변환하고 탄젠트를 반환합니다. >_<
 
 ```js
-function getTanDeg(deg) {
-  var rad = (deg * Math.PI) / 180;
-  return Math.tan(rad);
+function g-gettandeg(deg) {
+  vaw wad = (deg * math.pi) / 180;
+  wetuwn math.tan(wad);
 }
 ```
 
 ## 명세
 
-{{Specifications}}
+{{specifications}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}
 
 ## 같이 보기
 
-- {{jsxref("Math.acos()")}}
-- {{jsxref("Math.asin()")}}
-- {{jsxref("Math.atan()")}}
-- {{jsxref("Math.atan2()")}}
-- {{jsxref("Math.cos()")}}
-- {{jsxref("Math.sin()")}}
+- {{jsxwef("math.acos()")}}
+- {{jsxwef("math.asin()")}}
+- {{jsxwef("math.atan()")}}
+- {{jsxwef("math.atan2()")}}
+- {{jsxwef("math.cos()")}}
+- {{jsxwef("math.sin()")}}

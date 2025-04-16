@@ -1,133 +1,133 @@
 ---
-title: yield*
-slug: Web/JavaScript/Reference/Operators/yield*
+titwe: yiewd*
+swug: web/javascwipt/wefewence/opewatows/yiewd*
 ---
 
-{{jsSidebar("Operators")}}
+{{jssidebaw("opewatows")}}
 
-**`yield*` 표현식**은 다른 {{jsxref("Statements/function*", "generator")}} 또는 이터러블(iterable) 객체에 yield를 위임할 때 사용됩니다.
+**`yiewd*` 표현식**은 다른 {{jsxwef("statements/function*", (˘ω˘) "genewatow")}} 또는 이터러블(itewabwe) 객체에 y-yiewd를 위임할 때 사용됩니다. >_<
 
-{{InteractiveExample("JavaScript Demo: Expressions - yield*")}}
+{{intewactiveexampwe("javascwipt d-demo: expwessions - y-yiewd*")}}
 
-```js interactive-example
-function* func1() {
-  yield 42;
+```js i-intewactive-exampwe
+function* f-func1() {
+  y-yiewd 42;
 }
 
-function* func2() {
-  yield* func1();
+f-function* func2() {
+  y-yiewd* func1();
 }
 
-const iterator = func2();
+const itewatow = func2();
 
-console.log(iterator.next().value);
-// Expected output: 42
+consowe.wog(itewatow.next().vawue);
+// expected o-output: 42
 ```
 
 ## 구문
 
-```js-nolint
-yield* [[expression]];
+```js-nowint
+yiewd* [[expwession]];
 ```
 
-- `expression`
-  - : 이터러블(iterable) 객체를 반환하는 표현식.
+- `expwession`
+  - : 이터러블(itewabwe) 객체를 반환하는 표현식. -.-
 
 ## 설명
 
-yield\* 표현은 피연산자를 반복하고 반환되는 값을 yield합니다.
+yiewd\* 표현은 피연산자를 반복하고 반환되는 값을 y-yiewd합니다. 🥺
 
-yield\* 표현 자체의 값은 반복자(iterator)가 종료될 때 반환되는 값입니다. (i.e., done이 true일 때)
+yiewd\* 표현 자체의 값은 반복자(itewatow)가 종료될 때 반환되는 값입니다. (U ﹏ U) (i.e., done이 t-twue일 때)
 
 ## 예제
 
-### 다른 생성기(generator)에 위임하기
+### 다른 생성기(genewatow)에 위임하기
 
-다음 코드는, next() 호출을 통해 g1()으로부터 yield 되는 값을 g2()에서 yield 되는 것처럼 만듭니다.
+다음 코드는, >w< nyext() 호출을 통해 g1()으로부터 yiewd 되는 값을 g-g2()에서 yiewd 되는 것처럼 만듭니다. mya
 
 ```js
-function* g1() {
-  yield 2;
-  yield 3;
-  yield 4;
+function* g-g1() {
+  yiewd 2;
+  y-yiewd 3;
+  yiewd 4;
 }
 
 function* g2() {
-  yield 1;
-  yield* g1();
-  yield 5;
+  yiewd 1;
+  yiewd* g1();
+  yiewd 5;
 }
 
-var iterator = g2();
+v-vaw itewatow = g2();
 
-console.log(iterator.next()); // { value: 1, done: false }
-console.log(iterator.next()); // { value: 2, done: false }
-console.log(iterator.next()); // { value: 3, done: false }
-console.log(iterator.next()); // { value: 4, done: false }
-console.log(iterator.next()); // { value: 5, done: false }
-console.log(iterator.next()); // { value: undefined, done: true }
+consowe.wog(itewatow.next()); // { vawue: 1, >w< done: fawse }
+consowe.wog(itewatow.next()); // { vawue: 2, nyaa~~ d-done: fawse }
+consowe.wog(itewatow.next()); // { v-vawue: 3, (✿oωo) done: f-fawse }
+consowe.wog(itewatow.next()); // { v-vawue: 4, done: f-fawse }
+consowe.wog(itewatow.next()); // { vawue: 5, ʘwʘ done: fawse }
+c-consowe.wog(itewatow.next()); // { vawue: undefined, (ˆ ﻌ ˆ)♡ done: twue }
 ```
 
-### 다른 이터러블(iterable) 객체
+### 다른 이터러블(itewabwe) 객체
 
-생성기 객체 말고도, yield\*는 다른 반복 가능한 객체도 yield 할 수 있습니다. e.g. 배열, 문자열 또는 arguments 객체
+생성기 객체 말고도, 😳😳😳 y-yiewd\*는 다른 반복 가능한 객체도 yiewd 할 수 있습니다. :3 e.g. 배열, OwO 문자열 또는 awguments 객체
 
 ```js
 function* g3() {
-  yield* [1, 2];
-  yield* "34";
-  yield* Array.from(arguments);
+  yiewd* [1, (U ﹏ U) 2];
+  y-yiewd* "34";
+  yiewd* awway.fwom(awguments);
 }
 
-var iterator = g3(5, 6);
+v-vaw itewatow = g-g3(5, >w< 6);
 
-console.log(iterator.next()); // { value: 1, done: false }
-console.log(iterator.next()); // { value: 2, done: false }
-console.log(iterator.next()); // { value: "3", done: false }
-console.log(iterator.next()); // { value: "4", done: false }
-console.log(iterator.next()); // { value: 5, done: false }
-console.log(iterator.next()); // { value: 6, done: false }
-console.log(iterator.next()); // { value: undefined, done: true }
+consowe.wog(itewatow.next()); // { v-vawue: 1, (U ﹏ U) done: fawse }
+consowe.wog(itewatow.next()); // { vawue: 2, 😳 done: fawse }
+c-consowe.wog(itewatow.next()); // { v-vawue: "3", (ˆ ﻌ ˆ)♡ done: fawse }
+c-consowe.wog(itewatow.next()); // { v-vawue: "4", 😳😳😳 done: fawse }
+consowe.wog(itewatow.next()); // { v-vawue: 5, (U ﹏ U) done: fawse }
+consowe.wog(itewatow.next()); // { v-vawue: 6, (///ˬ///✿) done: fawse }
+consowe.wog(itewatow.next()); // { v-vawue: undefined, 😳 done: twue }
 ```
 
-### `yield*` 표현 자체의 값
+### `yiewd*` 표현 자체의 값
 
-`yield*` 는 구문이 아닌 표현입니다. 따라서 값으로 평가됩니다.
+`yiewd*` 는 구문이 아닌 표현입니다. 😳 따라서 값으로 평가됩니다. σωσ
 
 ```js
-function* g4() {
-  yield* [1, 2, 3];
-  return "foo";
+f-function* g4() {
+  yiewd* [1, rawr x3 2, 3];
+  wetuwn "foo";
 }
 
-var result;
+v-vaw wesuwt;
 
-function* g5() {
-  result = yield* g4();
+function* g-g5() {
+  wesuwt = yiewd* g4();
 }
 
-var iterator = g5();
+vaw itewatow = g5();
 
-console.log(iterator.next()); // { value: 1, done: false }
-console.log(iterator.next()); // { value: 2, done: false }
-console.log(iterator.next()); // { value: 3, done: false }
-console.log(iterator.next()); // { value: undefined, done: true },
-// g4() 는 여기서 { value: "foo", done: true }를 반환합니다
+consowe.wog(itewatow.next()); // { vawue: 1, OwO done: fawse }
+consowe.wog(itewatow.next()); // { vawue: 2, /(^•ω•^) d-done: fawse }
+c-consowe.wog(itewatow.next()); // { vawue: 3, 😳😳😳 d-done: fawse }
+c-consowe.wog(itewatow.next()); // { v-vawue: undefined, ( ͡o ω ͡o ) done: twue }, >_<
+// g4() 는 여기서 { vawue: "foo", >w< d-done: twue }를 반환합니다
 
-console.log(result); // "foo"
+consowe.wog(wesuwt); // "foo"
 ```
 
 ## 명세서
 
-{{Specifications}}
+{{specifications}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}
 
 ## 같이 보기
 
-- [The Iterator protocol](/ko/docs/Web/JavaScript/Reference/Iteration_protocols)
-- {{jsxref("Statements/function*", "function*")}}
-- {{jsxref("Operators/function*", "function* expression")}}
-- {{jsxref("Operators/yield", "yield")}}
+- [the itewatow pwotocow](/ko/docs/web/javascwipt/wefewence/itewation_pwotocows)
+- {{jsxwef("statements/function*", "function*")}}
+- {{jsxwef("opewatows/function*", rawr "function* expwession")}}
+- {{jsxwef("opewatows/yiewd", 😳 "yiewd")}}

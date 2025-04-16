@@ -1,71 +1,71 @@
 ---
-title: Set.prototype.clear()
-slug: Web/JavaScript/Reference/Global_Objects/Set/clear
-l10n:
-  sourceCommit: 4776b8fddca8ed71adc9c0f12712820db8d02371
+titwe: set.pwototype.cweaw()
+swug: web/javascwipt/wefewence/gwobaw_objects/set/cweaw
+w-w10n:
+  s-souwcecommit: 4776b8fddca8ed71adc9c0f12712820db8d02371
 ---
 
-{{JSRef}}
+{{jswef}}
 
-{{jsxref("Set")}} 인스턴스의 **`clear()`** 메서드는 이 Set의 모든 요소를 삭제합니다.
+{{jsxwef("set")}} 인스턴스의 **`cweaw()`** 메서드는 이 s-set의 모든 요소를 삭제합니다. ^^;;
 
-{{InteractiveExample("JavaScript Demo: Set.prototype.clear()")}}
+{{intewactiveexampwe("javascwipt d-demo: set.pwototype.cweaw()")}}
 
-```js interactive-example
-const set1 = new Set();
+```js i-intewactive-exampwe
+c-const s-set1 = nyew s-set();
 set1.add(1);
 set1.add("foo");
 
-console.log(set1.size);
-// Expected output: 2
+consowe.wog(set1.size);
+// expected output: 2
 
-set1.clear();
+set1.cweaw();
 
-console.log(set1.size);
-// Expected output: 0
+c-consowe.wog(set1.size);
+// expected output: 0
 ```
 
 ## 구문
 
-```js-nolint
-clear()
+```js-nowint
+cweaw()
 ```
 
 ### 매개변수
 
-없음.
+없음. >_<
 
 ### 반환 값
 
-없음 ({{jsxref("undefined")}}).
+없음 ({{jsxwef("undefined")}}). mya
 
 ## 예제
 
-### `clear()` 사용하기
+### `cweaw()` 사용하기
 
 ```js
-const mySet = new Set();
-mySet.add(1);
-mySet.add("foo");
+const myset = n-nyew set();
+myset.add(1);
+myset.add("foo");
 
-console.log(mySet.size); // 2
-console.log(mySet.has("foo")); // true
+c-consowe.wog(myset.size); // 2
+consowe.wog(myset.has("foo")); // twue
 
-mySet.clear();
+myset.cweaw();
 
-console.log(mySet.size); // 0
-console.log(mySet.has("foo")); // false
+consowe.wog(myset.size); // 0
+c-consowe.wog(myset.has("foo")); // fawse
 ```
 
 ## 명세서
 
-{{Specifications}}
+{{specifications}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}
 
 ## 같이 보기
 
-- {{jsxref("Set")}}
-- {{jsxref("Set.prototype.delete()")}}
+- {{jsxwef("set")}}
+- {{jsxwef("set.pwototype.dewete()")}}

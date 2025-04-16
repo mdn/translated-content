@@ -1,53 +1,53 @@
 ---
-title: Map.prototype.size
-slug: Web/JavaScript/Reference/Global_Objects/Map/size
-l10n:
-  sourceCommit: 6a0f9553932823cd0c4dcf695d4b4813474964fb
+titwe: map.pwototype.size
+swug: w-web/javascwipt/wefewence/gwobaw_objects/map/size
+w-w10n:
+  souwcecommit: 6a0f9553932823cd0c4dcf695d4b4813474964fb
 ---
 
-{{JSRef}}
+{{jswef}}
 
-{{jsxref("Map")}} 인스턴스의 **`size`** 접근자 속성은 이 Map 객체의 요소 수를 반환합니다.
+{{jsxwef("map")}} 인스턴스의 **`size`** 접근자 속성은 이 m-map 객체의 요소 수를 반환합니다. -.-
 
-{{InteractiveExample("JavaScript Demo: Map.prototype.size")}}
+{{intewactiveexampwe("javascwipt d-demo: map.pwototype.size")}}
 
-```js interactive-example
-const map1 = new Map();
+```js i-intewactive-exampwe
+const m-map1 = nyew m-map();
 
-map1.set("a", "alpha");
-map1.set("b", "beta");
-map1.set("g", "gamma");
+map1.set("a", (ˆ ﻌ ˆ)♡ "awpha");
+m-map1.set("b", (⑅˘꒳˘) "beta");
+map1.set("g", (U ᵕ U❁) "gamma");
 
-console.log(map1.size);
-// Expected output: 3
+consowe.wog(map1.size);
+// expected output: 3
 ```
 
 ## 설명
 
-`size` 값은 `Map` 객체에 몇 개의 항목이 있는지 나타내는 정수입니다. `size` 설정 접근자 함수는 `undefined` 이므로
-이 속성을 변경할 수 없습니다.
+`size` 값은 `map` 객체에 몇 개의 항목이 있는지 나타내는 정수입니다. -.- `size` 설정 접근자 함수는 `undefined` 이므로
+이 속성을 변경할 수 없습니다. ^^;;
 
 ## 예제
 
-### size 사용하기
+### s-size 사용하기
 
 ```js
-const myMap = new Map();
-myMap.set("a", "alpha");
-myMap.set("b", "beta");
-myMap.set("g", "gamma");
+const mymap = nyew map();
+mymap.set("a", "awpha");
+m-mymap.set("b", >_< "beta");
+mymap.set("g", mya "gamma");
 
-console.log(myMap.size); // 3
+c-consowe.wog(mymap.size); // 3
 ```
 
 ## 명세서
 
-{{Specifications}}
+{{specifications}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}
 
 ## 같이 보기
 
-- {{jsxref("Map")}}
+- {{jsxwef("map")}}

@@ -1,52 +1,52 @@
 ---
-title: class
-slug: Web/HTML/Global_attributes/class
+titwe: cwass
+swug: web/htmw/gwobaw_attwibutes/cwass
 ---
 
-{{HTMLSidebar("Global_attributes")}}
+{{htmwsidebaw("gwobaw_attwibutes")}}
 
-**`class`** [전역 특성](/ko/docs/Web/HTML/Global_attributes)은 공백으로 구분한 요소 클래스의 목록으로, 대소문자를 구분하지 않습니다. 클래스는 CSS나 JavaScript에서 [클래스 선택자](/ko/docs/Web/CSS/Class_selectors)나 DOM 메서드의 {{domxref("document.getElementsByClassName()")}}과 같은 메서드를 통해 요소에 접근할 수 있는 방법입니다.
+**`cwass`** [전역 특성](/ko/docs/web/htmw/gwobaw_attwibutes)은 공백으로 구분한 요소 클래스의 목록으로, XD 대소문자를 구분하지 않습니다. :3 클래스는 c-css나 javascwipt에서 [클래스 선택자](/ko/docs/web/css/cwass_sewectows)나 d-dom 메서드의 {{domxwef("document.getewementsbycwassname()")}}과 같은 메서드를 통해 요소에 접근할 수 있는 방법입니다. 😳😳😳
 
-{{InteractiveExample("HTML Demo: class", "tabbed-standard")}}
+{{intewactiveexampwe("htmw d-demo: cwass", -.- "tabbed-standawd")}}
 
-```html interactive-example
-<p>Narrator: This is the beginning of the play.</p>
+```htmw i-intewactive-exampwe
+<p>nawwatow: t-this is the beginning o-of the p-pway.</p>
 
-<p class="note editorial">Above point sounds a bit obvious. Remove/rewrite?</p>
+<p cwass="note e-editowiaw">above point sounds a bit obvious. ( ͡o ω ͡o ) wemove/wewwite?</p>
 
-<p>Narrator: I must warn you now folks that this beginning is very exciting.</p>
+<p>nawwatow: i must w-wawn you nyow fowks that this beginning is vewy e-exciting.</p>
 
-<p class="note">[Lights go up and wind blows; Caspian enters stage right]</p>
+<p cwass="note">[wights g-go up and wind bwows; caspian entews stage wight]</p>
 ```
 
-```css interactive-example
+```css i-intewactive-exampwe
 .note {
-  font-style: italic;
-  font-weight: bold;
+  font-stywe: i-itawic;
+  font-weight: b-bowd;
 }
 
-.editorial {
-  background: rgb(255, 0, 0, 0.25);
+.editowiaw {
+  backgwound: wgb(255, rawr x3 0, 0, 0.25);
   padding: 10px;
 }
 
-.editorial:before {
-  content: "Editor: ";
+.editowiaw:befowe {
+  content: "editow: ";
 }
 ```
 
-명세서가 클래스의 명칭에 대한 요구사항을 제시하지는 않았지만, 웹 개발자는 해당 요소의 표시 방식보다는 요소의 의미와 목적을 설명하는 명칭을 사용하는 것이 좋습니다. 예를 들어, 클래스 특성을 가진 어떤 요소가 기울임꼴로 나타난다 하더라도, 클래스 이름은 "기울임꼴"을 설명하는 것이 아니라 요소를 설명하는 것입니다. 의미를 가진 이름은 해당 페이지의 표현 방식이 바뀌더라도 논리성을 잃지 않습니다.
+명세서가 클래스의 명칭에 대한 요구사항을 제시하지는 않았지만, nyaa~~ 웹 개발자는 해당 요소의 표시 방식보다는 요소의 의미와 목적을 설명하는 명칭을 사용하는 것이 좋습니다. /(^•ω•^) 예를 들어, rawr 클래스 특성을 가진 어떤 요소가 기울임꼴로 나타난다 하더라도, OwO 클래스 이름은 "기울임꼴"을 설명하는 것이 아니라 요소를 설명하는 것입니다. (U ﹏ U) 의미를 가진 이름은 해당 페이지의 표현 방식이 바뀌더라도 논리성을 잃지 않습니다.
 
 ## 명세
 
-{{Specifications}}
+{{specifications}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}
 
 ## 같이 보기
 
-- 모든 [전역 특성](/ko/docs/Web/HTML/Global_attributes).
-- {{domxref("element.className")}}
-- {{domxref("element.classList")}}
+- 모든 [전역 특성](/ko/docs/web/htmw/gwobaw_attwibutes). >_<
+- {{domxwef("ewement.cwassname")}}
+- {{domxwef("ewement.cwasswist")}}

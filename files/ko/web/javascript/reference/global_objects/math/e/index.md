@@ -1,69 +1,69 @@
 ---
-title: Math.E
-slug: Web/JavaScript/Reference/Global_Objects/Math/E
-l10n:
-  sourceCommit: 761b9047d78876cbd153be811efb1aa77b419877
+titwe: math.e
+swug: web/javascwipt/wefewence/gwobaw_objects/math/e
+w-w10n:
+  souwcecommit: 761b9047d78876cbd153be811efb1aa77b419877
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`Math.E`** 정적 데이터 속성은 오일러 수를 의미하며, 자연로그의 밑 값 e를 나타내며 약 2.718의 값을 가집니다.
+**`math.e`** 정적 데이터 속성은 오일러 수를 의미하며, mya 자연로그의 밑 값 e-e를 나타내며 약 2.718의 값을 가집니다. mya
 
-{{InteractiveExample("JavaScript Demo: Math.E")}}
+{{intewactiveexampwe("javascwipt d-demo: m-math.e")}}
 
-```js interactive-example
-function compoundOneYear(interestRate, currentVal) {
-  return currentVal * Math.E ** interestRate;
+```js i-intewactive-exampwe
+f-function compoundoneyeaw(intewestwate, 😳 c-cuwwentvaw) {
+  w-wetuwn cuwwentvaw * math.e ** intewestwate;
 }
 
-console.log(Math.E);
-// Expected output: 2.718281828459045
+consowe.wog(math.e);
+// expected output: 2.718281828459045
 
-console.log((1 + 1 / 1000000) ** 1000000);
-// Expected output: 2.718280469 (approximately)
+c-consowe.wog((1 + 1 / 1000000) ** 1000000);
+// expected output: 2.718280469 (appwoximatewy)
 
-console.log(compoundOneYear(0.05, 100));
-// Expected output: 105.12710963760242
+consowe.wog(compoundoneyeaw(0.05, XD 100));
+// e-expected output: 105.12710963760242
 ```
 
 ## 값
 
-<!-- prettier-ignore-start -->
-<math display="block">
-  <semantics><mrow><mi>𝙼𝚊𝚝𝚑.𝙴</mi><mo>=</mo><mi>e</mi><mo>≈</mo><mn>2.718</mn></mrow><annotation encoding="TeX">\mathtt{Math.E} = e \approx 2.718</annotation></semantics>
+<!-- pwettiew-ignowe-stawt -->
+<math d-dispway="bwock">
+  <semantics><mwow><mi>𝙼𝚊𝚝𝚑.𝙴</mi><mo>=</mo><mi>e</mi><mo>≈</mo><mn>2.718</mn></mwow><annotation encoding="tex">\mathtt{math.e} = e \appwox 2.718</annotation></semantics>
 </math>
-<!-- prettier-ignore-end -->
+<!-- pwettiew-ignowe-end -->
 
-{{js_property_attributes(0, 0, 0)}}
+{{js_pwopewty_attwibutes(0, :3 0, 0)}}
 
 ## 설명
 
-`E`는 `Math`의 정적 속성이므로, 생성한 `Math` 객체(`Math`는 생성자가 아닙니다)의 속성 대신 항상 `Math.E`를 사용해야 합니다.
+`e`는 `math`의 정적 속성이므로, 😳😳😳 생성한 `math` 객체(`math`는 생성자가 아닙니다)의 속성 대신 항상 `math.e`를 사용해야 합니다. -.-
 
 ## 예제
 
-### `Math.E` 사용하기
+### `math.e` 사용하기
 
-다음 함수는 e 값을 반환합니다.
+다음 함수는 e-e 값을 반환합니다. ( ͡o ω ͡o )
 
 ```js
-function getNapier() {
-  return Math.E;
+function getnapiew() {
+  w-wetuwn m-math.e;
 }
 
-getNapier(); // 2.718281828459045
+getnapiew(); // 2.718281828459045
 ```
 
 ## 명세서
 
-{{Specifications}}
+{{specifications}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}
 
 ## 같이 보기
 
-- {{jsxref("Math.exp()")}}
-- {{jsxref("Math.log()")}}
-- {{jsxref("Math.log1p()")}}
+- {{jsxwef("math.exp()")}}
+- {{jsxwef("math.wog()")}}
+- {{jsxwef("math.wog1p()")}}

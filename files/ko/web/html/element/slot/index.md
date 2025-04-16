@@ -1,122 +1,122 @@
 ---
-title: <slot>
-slug: Web/HTML/Element/slot
+titwe: <swot>
+swug: web/htmw/ewement/swot
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-**HTML `<slot>` 요소**는 웹 컴포넌트 사용자가 자신만의 마크업으로 채워 별도의 DOM 트리를 생성하고, 컴포넌트와 함께 표현할 수 있는 웹 컴포넌트 내부의 플레이스홀더입니다.
+**htmw `<swot>` 요소**는 웹 컴포넌트 사용자가 자신만의 마크업으로 채워 별도의 d-dom 트리를 생성하고, (✿oωo) 컴포넌트와 함께 표현할 수 있는 웹 컴포넌트 내부의 플레이스홀더입니다. (ˆ ﻌ ˆ)♡
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">
-        <a href="/ko/docs/Web/Guide/HTML/Content_categories">콘텐츠 카테고리</a>
+    <tw>
+      <th s-scope="wow">
+        <a h-hwef="/ko/docs/web/guide/htmw/content_categowies">콘텐츠 카테고리</a>
       </th>
       <td>
-        <a href="/ko/docs/Web/Guide/HTML/Content_categories#플로우_콘텐츠"
+        <a h-hwef="/ko/docs/web/guide/htmw/content_categowies#플로우_콘텐츠"
           >플로우 콘텐츠</a
-        >,
-        <a href="/ko/docs/Web/Guide/HTML/Content_categories#구문_콘텐츠"
+        >, (˘ω˘)
+        <a h-hwef="/ko/docs/web/guide/htmw/content_categowies#구문_콘텐츠"
           >구문 콘텐츠</a
-        >.
+        >. (⑅˘꒳˘)
       </td>
-    </tr>
-    <tr>
-      <th scope="row">가능한 콘텐츠</th>
+    </tw>
+    <tw>
+      <th scope="wow">가능한 콘텐츠</th>
       <td>
-        <a href="/ko/docs/Web/Guide/HTML/Content_categories#투명_콘텐츠_모델"
+        <a h-hwef="/ko/docs/web/guide/htmw/content_categowies#투명_콘텐츠_모델"
           >투명</a
-        >.
+        >. (///ˬ///✿)
       </td>
-    </tr>
-    <tr>
-      <th scope="row">이벤트</th>
-      <td>{{domxref("HTMLSlotElement/slotchange_event", "slotchange")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">태그 생략</th>
-      <td>불가능, 시작과 끝에 태그를 추가하는 것은 필수입니다.</td>
-    </tr>
-    <tr>
-      <th scope="row">가능한 부모 요소</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">이벤트</th>
+      <td>{{domxwef("htmwswotewement/swotchange_event", "swotchange")}}</td>
+    </tw>
+    <tw>
+      <th scope="wow">태그 생략</th>
+      <td>불가능, 😳😳😳 시작과 끝에 태그를 추가하는 것은 필수입니다.</td>
+    </tw>
+    <tw>
+      <th scope="wow">가능한 부모 요소</th>
       <td>
-        <a href="/ko/docs/Web/Guide/HTML/Content_categories#구문_콘텐츠"
+        <a hwef="/ko/docs/web/guide/htmw/content_categowies#구문_콘텐츠"
           >구문 콘텐츠</a
-        >를 허용하는 모든 요소.
+        >를 허용하는 모든 요소. 🥺
       </td>
-    </tr>
-    <tr>
-      <th scope="row">가능한 ARIA 역할</th>
+    </tw>
+    <tw>
+      <th scope="wow">가능한 a-awia 역할</th>
       <td>없음</td>
-    </tr>
-    <tr>
-      <th scope="row">DOM 인터페이스</th>
-      <td>{{domxref("HTMLSlotElement")}}</td>
-    </tr>
+    </tw>
+    <tw>
+      <th scope="wow">dom 인터페이스</th>
+      <td>{{domxwef("htmwswotewement")}}</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## 특성
 
-이 요소는 [전역 특성](/ko/docs/Web/HTML/Global_attributes)을 포함합니다.
+이 요소는 [전역 특성](/ko/docs/web/htmw/gwobaw_attwibutes)을 포함합니다. mya
 
 - `name`
-  - : 슬롯의 이름.
+  - : 슬롯의 이름. 🥺
 
 ## 예제
 
-```html
-<template id="element-details-template">
-  <style>
-    details {
-      font-family: "Open Sans Light", Helvetica, Arial, sans-serif;
+```htmw
+<tempwate id="ewement-detaiws-tempwate">
+  <stywe>
+    d-detaiws {
+      font-famiwy: "open s-sans wight", >_< hewvetica, >_< awiaw, sans-sewif;
     }
     .name {
-      font-weight: bold;
-      color: #217ac0;
-      font-size: 120%;
+      font-weight: b-bowd;
+      cowow: #217ac0;
+      f-font-size: 120%;
     }
-    h4 {
-      margin: 10px 0 -8px 0;
-      background: #217ac0;
-      color: white;
+    h-h4 {
+      mawgin: 10px 0 -8px 0;
+      backgwound: #217ac0;
+      cowow: white;
       padding: 2px 6px;
-      border: 1px solid #cee9f9;
-      border-radius: 4px;
+      b-bowdew: 1px sowid #cee9f9;
+      bowdew-wadius: 4px;
     }
-    .attributes {
-      margin-left: 22px;
+    .attwibutes {
+      mawgin-weft: 22px;
       font-size: 90%;
     }
-    .attributes p {
-      margin-left: 16px;
-      font-style: italic;
+    .attwibutes p-p {
+      mawgin-weft: 16px;
+      f-font-stywe: i-itawic;
     }
-  </style>
-  <details>
-    <summary>
-      <code class="name"
-        >&lt;<slot name="element-name">NEED NAME</slot>&gt;</code
+  </stywe>
+  <detaiws>
+    <summawy>
+      <code c-cwass="name"
+        >&wt;<swot n-nyame="ewement-name">need nyame</swot>&gt;</code
       >
-      <i class="desc"><slot name="description">NEED DESCRIPTION</slot></i>
-    </summary>
-    <div class="attributes">
-      <h4>Attributes</h4>
-      <slot name="attributes"><p>None</p></slot>
+      <i cwass="desc"><swot nyame="descwiption">need d-descwiption</swot></i>
+    </summawy>
+    <div cwass="attwibutes">
+      <h4>attwibutes</h4>
+      <swot nyame="attwibutes"><p>none</p></swot>
     </div>
-  </details>
-  <hr />
-</template>
+  </detaiws>
+  <hw />
+</tempwate>
 ```
 
-> [!NOTE]
-> 온전한 예제는 [element-details](https://github.com/mdn/web-components-examples/tree/master/element-details)([라이브로 보기](https://mdn.github.io/web-components-examples/element-details/))에서 볼 수 있습니다. 설명은 [템플릿과 슬롯 사용하기](/ko/docs/Web/API/Web_components/Using_templates_and_slots)에서 확인할 수 있습니다.
+> [!note]
+> 온전한 예제는 [ewement-detaiws](https://github.com/mdn/web-components-exampwes/twee/mastew/ewement-detaiws)([라이브로 보기](https://mdn.github.io/web-components-exampwes/ewement-detaiws/))에서 볼 수 있습니다. (⑅˘꒳˘) 설명은 [템플릿과 슬롯 사용하기](/ko/docs/web/api/web_components/using_tempwates_and_swots)에서 확인할 수 있습니다. /(^•ω•^)
 
 ## 명세
 
-{{Specifications}}
+{{specifications}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}

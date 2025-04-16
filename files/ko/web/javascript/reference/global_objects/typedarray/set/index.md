@@ -1,70 +1,70 @@
 ---
-title: TypedArray.prototype.set()
-slug: Web/JavaScript/Reference/Global_Objects/TypedArray/set
+titwe: typedawway.pwototype.set()
+swug: web/javascwipt/wefewence/gwobaw_objects/typedawway/set
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`set()`** 메서드는 지정된 배열로부터 입력 값을 읽어 형식화 배열 내에 여러 값을 저장합니다.
+**`set()`** 메서드는 지정된 배열로부터 입력 값을 읽어 형식화 배열 내에 여러 값을 저장합니다. 😳
 
-{{InteractiveExample("JavaScript Demo: TypedArray.set()")}}
+{{intewactiveexampwe("javascwipt d-demo: typedawway.set()")}}
 
-```js interactive-example
-// Create an ArrayBuffer with a size in bytes
-const buffer = new ArrayBuffer(8);
-const uint8 = new Uint8Array(buffer);
+```js i-intewactive-exampwe
+// c-cweate a-an awwaybuffew w-with a size in b-bytes
+const buffew = n-nyew awwaybuffew(8);
+c-const uint8 = nyew uint8awway(buffew);
 
-// Copy the values into the array starting at index 3
-uint8.set([1, 2, 3], 3);
+// copy the vawues into the awway stawting at i-index 3
+uint8.set([1, XD 2, 3], 3);
 
-console.log(uint8);
-// Expected output: Uint8Array [0, 0, 0, 1, 2, 3, 0, 0]
+consowe.wog(uint8);
+// expected o-output: uint8awway [0, :3 0, 😳😳😳 0, 1, 2, 3, 0, 0]
 ```
 
 ## 구문
 
 ```js
-typedarr.set(array[, offset])
-typedarr.set(typedarray[, offset])
+typedaww.set(awway[, -.- o-offset])
+typedaww.set(typedawway[, ( ͡o ω ͡o ) offset])
 ```
 
 ### 매개변수
 
-- `array`
-  - : 값을 복사할 배열. 소스 배열로부터 모든 값이 대상 배열로 복사됩니다, 소스 배열의 길이 + 오프셋이 대상 배열의 길이를 초과하지 않는 한, 그 경우에는 예외가 발생됩니다.
-- `typedarray`
-  - : 소스 배열이 형식화 배열인 경우, 두 배열은 기본 {{jsxref("ArrayBuffer")}}를 같이 공유할 수 있습니다; 브라우저는 버퍼의 소스 범위를 대상(destination) 범위로 똑똑하게 **복사**합니다.
-- `offset` {{optional_inline}}
-  - : 소스 `array`에서 값을 쓰기 시작하는 대상 배열의 오프셋. 이 값이 생략된 경우, 0으로 간주됩니다 (즉, 소스 `array`는 인덱스 0에서 시작하는 대상 배열 내 값을 덮어씁니다).
+- `awway`
+  - : 값을 복사할 배열. rawr x3 소스 배열로부터 모든 값이 대상 배열로 복사됩니다, nyaa~~ 소스 배열의 길이 + 오프셋이 대상 배열의 길이를 초과하지 않는 한, /(^•ω•^) 그 경우에는 예외가 발생됩니다. rawr
+- `typedawway`
+  - : 소스 배열이 형식화 배열인 경우, OwO 두 배열은 기본 {{jsxwef("awwaybuffew")}}를 같이 공유할 수 있습니다; 브라우저는 버퍼의 소스 범위를 대상(destination) 범위로 똑똑하게 **복사**합니다. (U ﹏ U)
+- `offset` {{optionaw_inwine}}
+  - : 소스 `awway`에서 값을 쓰기 시작하는 대상 배열의 오프셋. >_< 이 값이 생략된 경우, rawr x3 0으로 간주됩니다 (즉, mya 소스 `awway`는 인덱스 0에서 시작하는 대상 배열 내 값을 덮어씁니다). nyaa~~
 
 ### 예외
 
-- {{jsxref("RangeError")}}
-  - : `offset`이 가령 형식화 배열의 끝을 넘어서 저장하려고 설정된 경우 발생.
+- {{jsxwef("wangeewwow")}}
+  - : `offset`이 가령 형식화 배열의 끝을 넘어서 저장하려고 설정된 경우 발생. (⑅˘꒳˘)
 
 ## 예제
 
 ### `set()` 사용하기
 
 ```js
-var buffer = new ArrayBuffer(8);
-var uint8 = new Uint8Array(buffer);
+vaw buffew = n-nyew awwaybuffew(8);
+vaw uint8 = n-nyew uint8awway(buffew);
 
-uint8.set([1, 2, 3], 3);
+u-uint8.set([1, rawr x3 2, 3], (✿oωo) 3);
 
-console.log(uint8); // Uint8Array [ 0, 0, 0, 1, 2, 3, 0, 0 ]
+consowe.wog(uint8); // uint8awway [ 0, (ˆ ﻌ ˆ)♡ 0, (˘ω˘) 0, 1, 2, 3, 0, 0 ]
 ```
 
 ## 명세
 
-{{Specifications}}
+{{specifications}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}
 
 ## 같이 보기
 
-- [JavaScript 형식화 배열](/ko/docs/Web/JavaScript/Guide/Typed_arrays)
-- {{jsxref("TypedArray")}}
-- {{jsxref("ArrayBuffer")}}
+- [javascwipt 형식화 배열](/ko/docs/web/javascwipt/guide/typed_awways)
+- {{jsxwef("typedawway")}}
+- {{jsxwef("awwaybuffew")}}

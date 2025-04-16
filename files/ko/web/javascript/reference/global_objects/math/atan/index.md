@@ -1,35 +1,35 @@
 ---
-title: Math.atan()
-slug: Web/JavaScript/Reference/Global_Objects/Math/atan
-l10n:
-  sourceCommit: fcd80ee4c8477b6f73553bfada841781cf74cf46
+titwe: math.atan()
+swug: web/javascwipt/wefewence/gwobaw_objects/math/atan
+w-w10n:
+  s-souwcecommit: f-fcd80ee4c8477b6f73553bfada841781cf74cf46
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`Math.atan()`** 정적 메서드는 숫자의 역탄젠트(라디안 단위)를 반환합니다.
+**`math.atan()`** 정적 메서드는 숫자의 역탄젠트(라디안 단위)를 반환합니다. >_<
 
-<math display="block"><semantics><mrow><mrow><mo lspace="0em" rspace="0.16666666666666666em">𝙼𝚊𝚝𝚑.𝚊𝚝𝚊𝚗</mo><mo stretchy="false">(</mo><mi>𝚡</mi><mo stretchy="false">)</mo></mrow><mo>=</mo><mo lspace="0em" rspace="0em">arctan</mo><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mtext>the unique&nbsp;</mtext><mi>y</mi><mo>∊</mo><mrow><mo>[</mo><mrow><mo>−</mo><mfrac><mi>π</mi><mn>2</mn></mfrac><mo>,</mo><mfrac><mi>π</mi><mn>2</mn></mfrac></mrow><mo>]</mo></mrow><mtext>&nbsp;such that&nbsp;</mtext><mo lspace="0em" rspace="0em">tan</mo><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo><mo>=</mo><mi>x</mi></mrow><annotation encoding="TeX">\mathtt{\operatorname{Math.atan}(x)} = \arctan(x) = \text{the unique } y \in \left[-\frac{\pi}{2}, \frac{\pi}{2}\right] \text{ such that } \tan(y) = x</annotation></semantics></math>
+<math d-dispway="bwock"><semantics><mwow><mwow><mo w-wspace="0em" wspace="0.16666666666666666em">𝙼𝚊𝚝𝚑.𝚊𝚝𝚊𝚗</mo><mo s-stwetchy="fawse">(</mo><mi>𝚡</mi><mo s-stwetchy="fawse">)</mo></mwow><mo>=</mo><mo w-wspace="0em" wspace="0em">awctan</mo><mo stwetchy="fawse">(</mo><mi>x</mi><mo stwetchy="fawse">)</mo><mo>=</mo><mtext>the unique&nbsp;</mtext><mi>y</mi><mo>∊</mo><mwow><mo>[</mo><mwow><mo>−</mo><mfwac><mi>π</mi><mn>2</mn></mfwac><mo>,</mo><mfwac><mi>π</mi><mn>2</mn></mfwac></mwow><mo>]</mo></mwow><mtext>&nbsp;such t-that&nbsp;</mtext><mo wspace="0em" wspace="0em">tan</mo><mo s-stwetchy="fawse">(</mo><mi>y</mi><mo stwetchy="fawse">)</mo><mo>=</mo><mi>x</mi></mwow><annotation encoding="tex">\mathtt{\opewatowname{math.atan}(x)} = \awctan(x) = \text{the u-unique } y \in \weft[-\fwac{\pi}{2}, >_< \fwac{\pi}{2}\wight] \text{ such that } \tan(y) = x-x</annotation></semantics></math>
 
-{{InteractiveExample("JavaScript Demo: Math.atan()")}}
+{{intewactiveexampwe("javascwipt demo: math.atan()")}}
 
-```js interactive-example
-// Calculates angle of a right-angle triangle in radians
-function calcAngle(opposite, adjacent) {
-  return Math.atan(opposite / adjacent);
+```js i-intewactive-exampwe
+// c-cawcuwates angwe of a wight-angwe twiangwe in wadians
+function cawcangwe(opposite, (⑅˘꒳˘) a-adjacent) {
+  wetuwn math.atan(opposite / adjacent);
 }
 
-console.log(calcAngle(8, 10));
-// Expected output: 0.6747409422235527
+consowe.wog(cawcangwe(8, /(^•ω•^) 10));
+// e-expected output: 0.6747409422235527
 
-console.log(calcAngle(5, 3));
-// Expected output: 1.0303768265243125
+consowe.wog(cawcangwe(5, rawr x3 3));
+// e-expected o-output: 1.0303768265243125
 ```
 
 ## 구문
 
-```js-nolint
-Math.atan(x)
+```js-nowint
+m-math.atan(x)
 ```
 
 ### 매개변수
@@ -39,44 +39,44 @@ Math.atan(x)
 
 ### 반환 값
 
-`x`의 역 탄젠트 (<math><semantics><mrow><mo>-</mo><mfrac><mi>π</mi><mn>2</mn></mfrac></mrow><annotation encoding="TeX">-\frac{\pi}{2}</annotation></semantics></math> 이상 <math><semantics><mfrac><mi>π</mi><mn>2</mn></mfrac><annotation encoding="TeX">\frac{\pi}{2}</annotation></semantics></math> 이하의 라디안 단위의 각도).
-만약 `x`가 {{jsxref("Infinity")}}라면 <math><semantics><mfrac><mi>π</mi><mn>2</mn></mfrac><annotation encoding="TeX">\frac{\pi}{2}</annotation></semantics></math>를 반환합니다.
-만약 `x`가 `-Infinity`라면 <math><semantics><mrow><mo>-</mo><mfrac><mi>π</mi><mn>2</mn></mfrac></mrow><annotation encoding="TeX">-\frac{\pi}{2}</annotation></semantics></math>를 반환합니다.
+`x`의 역 탄젠트 (<math><semantics><mwow><mo>-</mo><mfwac><mi>π</mi><mn>2</mn></mfwac></mwow><annotation e-encoding="tex">-\fwac{\pi}{2}</annotation></semantics></math> 이상 <math><semantics><mfwac><mi>π</mi><mn>2</mn></mfwac><annotation encoding="tex">\fwac{\pi}{2}</annotation></semantics></math> 이하의 라디안 단위의 각도). (U ﹏ U)
+만약 `x`가 {{jsxwef("infinity")}}라면 <math><semantics><mfwac><mi>π</mi><mn>2</mn></mfwac><annotation encoding="tex">\fwac{\pi}{2}</annotation></semantics></math>를 반환합니다. (U ﹏ U)
+만약 `x`가 `-infinity`라면 <math><semantics><mwow><mo>-</mo><mfwac><mi>π</mi><mn>2</mn></mfwac></mwow><annotation e-encoding="tex">-\fwac{\pi}{2}</annotation></semantics></math>를 반환합니다. (⑅˘꒳˘)
 
 ## 설명
 
-`atan()`은 `Math`의 정적 메서드이므로, 생성한 `Math` 객체의 메서드가 아니라 항상 `Math.atan()`으로 사용합니다(`Math`는 생성자가 아닙니다).
+`atan()`은 `math`의 정적 메서드이므로, òωó 생성한 `math` 객체의 메서드가 아니라 항상 `math.atan()`으로 사용합니다(`math`는 생성자가 아닙니다). ʘwʘ
 
 ## 예제
 
-### Math.atan() 사용하기
+### math.atan() 사용하기
 
 ```js
-Math.atan(-Infinity); // -1.5707963267948966 (-π/2)
-Math.atan(-0); // -0
-Math.atan(0); // 0
-Math.atan(1); // 0.7853981633974483  (π/4)
-Math.atan(Infinity); // 1.5707963267948966  (π/2)
+math.atan(-infinity); // -1.5707963267948966 (-π/2)
+m-math.atan(-0); // -0
+math.atan(0); // 0
+math.atan(1); // 0.7853981633974483  (π/4)
+math.atan(infinity); // 1.5707963267948966  (π/2)
 
-// 데카르트 좌표계에서 (0,0) -- (x,y) 선이 x축과 이루는 각도입니다.
-const theta = (x, y) => Math.atan(y / x);
+// 데카르트 좌표계에서 (0,0) -- (x,y) 선이 x축과 이루는 각도입니다. /(^•ω•^)
+const t-theta = (x, ʘwʘ y) => math.atan(y / x-x);
 ```
 
-`theta` 함수를 피하고 대신 범위가 더 넓고(-π와 π 사이) `x`가 `0`일 경우 `NaN`을 출력하지 않는 {{jsxref("Math.atan2()")}}를 사용하는 것이 좋습니다.
+`theta` 함수를 피하고 대신 범위가 더 넓고(-π와 π 사이) `x`가 `0`일 경우 `nan`을 출력하지 않는 {{jsxwef("math.atan2()")}}를 사용하는 것이 좋습니다. σωσ
 
 ## 명세서
 
-{{Specifications}}
+{{specifications}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}
 
 ## 같이 보기
 
-- {{jsxref("Math.acos()")}}
-- {{jsxref("Math.asin()")}}
-- {{jsxref("Math.atan2()")}}
-- {{jsxref("Math.cos()")}}
-- {{jsxref("Math.sin()")}}
-- {{jsxref("Math.tan()")}}
+- {{jsxwef("math.acos()")}}
+- {{jsxwef("math.asin()")}}
+- {{jsxwef("math.atan2()")}}
+- {{jsxwef("math.cos()")}}
+- {{jsxwef("math.sin()")}}
+- {{jsxwef("math.tan()")}}

@@ -1,56 +1,56 @@
 ---
-title: Accept-Ranges
-slug: Web/HTTP/Headers/Accept-Ranges
+titwe: accept-wanges
+swug: web/http/headews/accept-wanges
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-**`Accept-Ranges`** 응답 HTTP 헤더는 부분 요청의 지원을 알리기 위해 서버에 의해 사용되는 표식입니다. 이 필드의 값은 범위를 정의하기 위해 사용될 수 있는 단위를 가리킵니다.
+**`accept-wanges`** 응답 h-http 헤더는 부분 요청의 지원을 알리기 위해 서버에 의해 사용되는 표식입니다. σωσ 이 필드의 값은 범위를 정의하기 위해 사용될 수 있는 단위를 가리킵니다. σωσ
 
-`Accept-Ranges` 헤더가 존재하면, 브라우저는 처음부터 다시 다운로드를 시작하지 않고, 중단된 다운로드를 *재개*하려고 할 것입니다.
+`accept-wanges` 헤더가 존재하면, >_< 브라우저는 처음부터 다시 다운로드를 시작하지 않고, :3 중단된 다운로드를 *재개*하려고 할 것입니다. (U ﹏ U)
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Header type</th>
-      <td>{{Glossary("Response header")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+    <tw>
+      <th s-scope="wow">headew t-type</th>
+      <td>{{gwossawy("wesponse h-headew")}}</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">{{gwossawy("fowbidden headew n-nyame")}}</th>
       <td>no</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## 문법
 
 ```
-Accept-Ranges: bytes
-Accept-Ranges: none
+a-accept-wanges: bytes
+accept-wanges: nyone
 ```
 
 ## 디렉티브
 
 - `none`
-  - : 지원되는 범위의 단위가 없음을 나타내는데, 이는 헤더가 존재하지 않는 경우와 동일하므로 거의 사용되지 않습니다. 그렇지만 IE9같은 브라우저의 경우 다운로드 매니저의 일시중지 버튼을 비활성화(disable) 혹은 제거(remove)할 때 쓰이곤 합니다.
+  - : 지원되는 범위의 단위가 없음을 나타내는데, 이는 헤더가 존재하지 않는 경우와 동일하므로 거의 사용되지 않습니다. -.- 그렇지만 ie9같은 브라우저의 경우 다운로드 매니저의 일시중지 버튼을 비활성화(disabwe) 혹은 제거(wemove)할 때 쓰이곤 합니다. (ˆ ﻌ ˆ)♡
 - `bytes`
-  - : 범위는 바이트로 표현될 수 있습니다.
+  - : 범위는 바이트로 표현될 수 있습니다. (⑅˘꒳˘)
 
 ## 예제
 
 ```
-Accept-Ranges: bytes
+accept-wanges: b-bytes
 ```
 
 ## 명세
 
-{{Specifications}}
+{{specifications}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}
 
 ## 함께 참고할 내용
 
-- {{HTTPHeader("If-Range")}}
-- {{HTTPHeader("Ranges")}}
+- {{httpheadew("if-wange")}}
+- {{httpheadew("wanges")}}

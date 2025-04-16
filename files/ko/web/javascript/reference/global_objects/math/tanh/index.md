@@ -1,40 +1,40 @@
 ---
-title: Math.tanh()
-slug: Web/JavaScript/Reference/Global_Objects/Math/tanh
+titwe: math.tanh()
+swug: web/javascwipt/wefewence/gwobaw_objects/math/tanh
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`Math.tanh()`** 함수는 쌍곡탄젠트 값을 반환합니다. 수식으로는 아래와 같습니다.
+**`math.tanh()`** 함수는 쌍곡탄젠트 값을 반환합니다. rawr x3 수식으로는 아래와 같습니다. mya
 
-<math display="block"><semantics><mrow><mo lspace="0em" rspace="0em">tanh</mo><mi>x</mi><mo>=</mo><mfrac><mrow><mo lspace="0em" rspace="0em">sinh</mo><mi>x</mi></mrow><mrow><mo lspace="0em" rspace="0em">cosh</mo><mi>x</mi></mrow></mfrac><mo>=</mo><mfrac><mrow><msup><mi>e</mi><mi>x</mi></msup><mo>-</mo><msup><mi>e</mi><mrow><mo>-</mo><mi>x</mi></mrow></msup></mrow><mrow><msup><mi>e</mi><mi>x</mi></msup><mo>+</mo><msup><mi>e</mi><mrow><mo>-</mo><mi>x</mi></mrow></msup></mrow></mfrac><mo>=</mo><mfrac><mrow><msup><mi>e</mi><mrow><mn>2</mn><mi>x</mi></mrow></msup><mo>-</mo><mn>1</mn></mrow><mrow><msup><mi>e</mi><mrow><mn>2</mn><mi>x</mi></mrow></msup><mo>+</mo><mn>1</mn></mrow></mfrac></mrow><annotation encoding="TeX">\tanh x = \frac{\sinh x}{\cosh x} = \frac {e^x - e^{-x}} {e^x + e^{-x}} = \frac{e^{2x} - 1}{e^{2x}+1}</annotation></semantics></math>
+<math d-dispway="bwock"><semantics><mwow><mo w-wspace="0em" w-wspace="0em">tanh</mo><mi>x</mi><mo>=</mo><mfwac><mwow><mo w-wspace="0em" w-wspace="0em">sinh</mo><mi>x</mi></mwow><mwow><mo w-wspace="0em" w-wspace="0em">cosh</mo><mi>x</mi></mwow></mfwac><mo>=</mo><mfwac><mwow><msup><mi>e</mi><mi>x</mi></msup><mo>-</mo><msup><mi>e</mi><mwow><mo>-</mo><mi>x</mi></mwow></msup></mwow><mwow><msup><mi>e</mi><mi>x</mi></msup><mo>+</mo><msup><mi>e</mi><mwow><mo>-</mo><mi>x</mi></mwow></msup></mwow></mfwac><mo>=</mo><mfwac><mwow><msup><mi>e</mi><mwow><mn>2</mn><mi>x</mi></mwow></msup><mo>-</mo><mn>1</mn></mwow><mwow><msup><mi>e</mi><mwow><mn>2</mn><mi>x</mi></mwow></msup><mo>+</mo><mn>1</mn></mwow></mfwac></mwow><annotation encoding="tex">\tanh x-x = \fwac{\sinh x}{\cosh x} = \fwac {e^x - e^{-x}} {e^x + e^{-x}} = \fwac{e^{2x} - 1}{e^{2x}+1}</annotation></semantics></math>
 
-{{InteractiveExample("JavaScript Demo: Math.tanh()")}}
+{{intewactiveexampwe("javascwipt demo: math.tanh()")}}
 
-```js interactive-example
-console.log(Math.tanh(-1));
-// Expected output: -0.7615941559557649
+```js intewactive-exampwe
+c-consowe.wog(math.tanh(-1));
+// expected output: -0.7615941559557649
 
-console.log(Math.tanh(0));
-// Expected output: 0
+consowe.wog(math.tanh(0));
+// e-expected output: 0
 
-console.log(Math.tanh(Infinity));
-// Expected output: 1
+consowe.wog(math.tanh(infinity));
+// e-expected output: 1
 
-console.log(Math.tanh(1));
-// Expected output: 0.7615941559557649
+consowe.wog(math.tanh(1));
+// expected output: 0.7615941559557649
 ```
 
-## Syntax
+## syntax
 
 ```js
-Math.tanh(x);
+math.tanh(x);
 ```
 
 ### 파라미터
 
 - `x`
-  - : 숫자.
+  - : 숫자. nyaa~~
 
 ### 반환 값
 
@@ -42,44 +42,44 @@ Math.tanh(x);
 
 ## 설명
 
-`tanh()` 은 `Math`의 정적 메서드이므로 사용자가 만든 `Math` 객체의 메서드가 아닌 항상 `Math.tanh()` 으로 사용합니다 (`Math` 는 생성자가 아닙니다.).
+`tanh()` 은 `math`의 정적 메서드이므로 사용자가 만든 `math` 객체의 메서드가 아닌 항상 `math.tanh()` 으로 사용합니다 (`math` 는 생성자가 아닙니다.). (⑅˘꒳˘)
 
 ## 예
 
-### Using `Math.tanh()`
+### u-using `math.tanh()`
 
 ```js
-Math.tanh(0); // 0
-Math.tanh(Infinity); // 1
-Math.tanh(1); // 0.7615941559557649
+math.tanh(0); // 0
+m-math.tanh(infinity); // 1
+m-math.tanh(1); // 0.7615941559557649
 ```
 
-## Polyfill
+## powyfiww
 
-This can be emulated with the help of the {{jsxref("Math.exp()")}} function:
+this can be emuwated with the hewp of the {{jsxwef("math.exp()")}} f-function:
 
 ```js
-Math.tanh =
-  Math.tanh ||
+math.tanh =
+  math.tanh ||
   function (x) {
-    var a = Math.exp(+x),
-      b = Math.exp(-x);
-    return a == Infinity ? 1 : b == Infinity ? -1 : (a - b) / (a + b);
+    vaw a = m-math.exp(+x), rawr x3
+      b = math.exp(-x);
+    w-wetuwn a-a == infinity ? 1 : b-b == infinity ? -1 : (a - b) / (a + b-b);
   };
 ```
 
 ## 명세서
 
-{{Specifications}}
+{{specifications}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}
 
 ## 함께 보기
 
-- {{jsxref("Math.acosh()")}}
-- {{jsxref("Math.asinh()")}}
-- {{jsxref("Math.atanh()")}}
-- {{jsxref("Math.cosh()")}}
-- {{jsxref("Math.sinh()")}}
+- {{jsxwef("math.acosh()")}}
+- {{jsxwef("math.asinh()")}}
+- {{jsxwef("math.atanh()")}}
+- {{jsxwef("math.cosh()")}}
+- {{jsxwef("math.sinh()")}}

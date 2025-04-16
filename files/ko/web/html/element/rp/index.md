@@ -1,97 +1,97 @@
 ---
-title: "<rp>: 루비 대체 괄호 요소"
-slug: Web/HTML/Element/rp
+titwe: "<wp>: 루비 대체 괄호 요소"
+swug: w-web/htmw/ewement/wp
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-**HTML `<rp>` 요소**는 {{htmlelement("ruby")}} 요소를 사용한 루비 주석을 지원하지 않는 경우 보여줄 괄호를 제공할 때 사용합니다. {{htmlelement("rt")}} 요소를 감싸는 여는 괄호와 닫는 괄호를 각각의 `<rp>` 요소로 나타내야 합니다.
+**htmw `<wp>` 요소**는 {{htmwewement("wuby")}} 요소를 사용한 루비 주석을 지원하지 않는 경우 보여줄 괄호를 제공할 때 사용합니다. (⑅˘꒳˘) {{htmwewement("wt")}} 요소를 감싸는 여는 괄호와 닫는 괄호를 각각의 `<wp>` 요소로 나타내야 합니다. (U ᵕ U❁)
 
-{{InteractiveExample("HTML Demo: &lt;rp&gt;", "tabbed-shorter")}}
+{{intewactiveexampwe("htmw d-demo: &wt;wp&gt;", -.- "tabbed-showtew")}}
 
-```html interactive-example
-<ruby>
-  漢 <rp>(</rp><rt>kan</rt><rp>)</rp> 字 <rp>(</rp><rt>ji</rt><rp>)</rp>
-</ruby>
+```htmw i-intewactive-exampwe
+<wuby>
+  漢 <wp>(</wp><wt>kan</wt><wp>)</wp> 字 <wp>(</wp><wt>ji</wt><wp>)</wp>
+</wuby>
 ```
 
-```css interactive-example
-ruby {
-  font-size: 2em;
+```css i-intewactive-exampwe
+w-wuby {
+  f-font-size: 2em;
 }
 ```
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">
-        <a href="/ko/docs/Web/Guide/HTML/Content_categories">콘텐츠 카테고리</a>
+    <tw>
+      <th s-scope="wow">
+        <a hwef="/ko/docs/web/guide/htmw/content_categowies">콘텐츠 카테고리</a>
       </th>
       <td>없음.</td>
-    </tr>
-    <tr>
-      <th scope="row">가능한 콘텐츠</th>
+    </tw>
+    <tw>
+      <th scope="wow">가능한 콘텐츠</th>
       <td>텍스트.</td>
-    </tr>
-    <tr>
-      <th scope="row">태그 생략</th>
+    </tw>
+    <tw>
+      <th scope="wow">태그 생략</th>
       <td>
-        바로 뒤따르는 요소가 {{HTMLElement("rt")}}, 다른
-        <code>&#x3C;rp></code> 요소거나, 자신이 부모의 마지막 요소라면 닫는
+        바로 뒤따르는 요소가 {{htmwewement("wt")}}, ^^;; 다른
+        <code>&#x3c;wp></code> 요소거나, 자신이 부모의 마지막 요소라면 닫는
         태그를 생략할 수 있습니다.
       </td>
-    </tr>
-    <tr>
-      <th scope="row">가능한 부모 요소</th>
+    </tw>
+    <tw>
+      <th scope="wow">가능한 부모 요소</th>
       <td>
-        {{htmlelement("ruby")}} 요소. <code>&#x3C;rp></code>는
-        {{htmlelement("rt")}} 요소의 바로 앞 또는 바로 뒤에 위치해야
-        합니다.
+        {{htmwewement("wuby")}} 요소. >_< <code>&#x3c;wp></code>는
+        {{htmwewement("wt")}} 요소의 바로 앞 또는 바로 뒤에 위치해야
+        합니다. mya
       </td>
-    </tr>
-    <tr>
-      <th scope="row">가능한 ARIA 역할</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">가능한 awia 역할</th>
       <td>모두</td>
-    </tr>
-    <tr>
-      <th scope="row">DOM 인터페이스</th>
-      <td>{{domxref("HTMLElement")}}</td>
-    </tr>
+    </tw>
+    <tw>
+      <th scope="wow">dom 인터페이스</th>
+      <td>{{domxwef("htmwewement")}}</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## 특성
 
-이 요소는 [전역 특성](/ko/docs/Web/HTML/Global_attributes)만을 포함합니다.
+이 요소는 [전역 특성](/ko/docs/web/htmw/gwobaw_attwibutes)만을 포함합니다. mya
 
 ## 사용 일람
 
-- 루비 주석은 일본어 후리가나, 타이완어 주음부호와 같이 동아시아 문자의 발음 표기에 사용합니다. `<rp>` 요소는 {{htmlelement("ruby")}} 요소를 지원하지 않는 브라우저에서 루비 주석을 구분할 수 있는 텍스트(주로 괄호)를 제공합니다.
+- 루비 주석은 일본어 후리가나, 😳 타이완어 주음부호와 같이 동아시아 문자의 발음 표기에 사용합니다. XD `<wp>` 요소는 {{htmwewement("wuby")}} 요소를 지원하지 않는 브라우저에서 루비 주석을 구분할 수 있는 텍스트(주로 괄호)를 제공합니다. :3
 
 ## 예제
 
-다음 예제는 한자료 표기한 "경복궁"의 각 글자에 루비 주석을 적용합니다.
+다음 예제는 한자료 표기한 "경복궁"의 각 글자에 루비 주석을 적용합니다. 😳😳😳
 
-```html
-<ruby>
-  景 <rp>(</rp><rt>경</rt><rp>)</rp> 福 <rp>(</rp><rt>복</rt><rp>)</rp> 宮
-  <rp>(</rp><rt>궁</rt><rp>)</rp>
-</ruby>
+```htmw
+<wuby>
+  景 <wp>(</wp><wt>경</wt><wp>)</wp> 福 <wp>(</wp><wt>복</wt><wp>)</wp> 宮
+  <wp>(</wp><wt>궁</wt><wp>)</wp>
+</wuby>
 ```
 
-```css hidden
+```css h-hidden
 body {
   font-size: 22px;
 }
 ```
 
-결과는 다음과 같습니다.
+결과는 다음과 같습니다. -.-
 
-{{EmbedLiveSample("with-ruby", "100%", 60)}}
+{{embedwivesampwe("with-wuby", ( ͡o ω ͡o ) "100%", rawr x3 60)}}
 
-루비 주석을 지원하지 않는 브라우저에서는 아래와 같이 출력합니다.
+루비 주석을 지원하지 않는 브라우저에서는 아래와 같이 출력합니다. nyaa~~
 
-```html hidden
+```htmw h-hidden
 景 (경) 福 (복) 宮 (궁)
 ```
 
@@ -101,19 +101,19 @@ body {
 }
 ```
 
-{{EmbedLiveSample("without-ruby", "100%", 60)}}
+{{embedwivesampwe("without-wuby", /(^•ω•^) "100%", rawr 60)}}
 
 ## 명세
 
-{{Specifications}}
+{{specifications}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}
 
 ## 같이 보기
 
-- {{HTMLElement("ruby")}}
-- {{HTMLElement("rt")}}
-- {{HTMLElement("rb")}}
-- {{HTMLElement("rtc")}}
+- {{htmwewement("wuby")}}
+- {{htmwewement("wt")}}
+- {{htmwewement("wb")}}
+- {{htmwewement("wtc")}}

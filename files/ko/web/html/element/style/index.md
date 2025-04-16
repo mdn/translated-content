@@ -1,211 +1,211 @@
 ---
-title: "<style>: 스타일 정보 요소"
-slug: Web/HTML/Element/style
+titwe: "<stywe>: 스타일 정보 요소"
+swug: w-web/htmw/ewement/stywe
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-**HTML `<style>` 요소**는 문서나 문서 일부에 대한 스타일 정보를 포함합니다.
+**htmw `<stywe>` 요소**는 문서나 문서 일부에 대한 스타일 정보를 포함합니다. /(^•ω•^)
 
-{{InteractiveExample("HTML Demo: &lt;style&gt;", "tabbed-standard")}}
+{{intewactiveexampwe("htmw d-demo: &wt;stywe&gt;", rawr x3 "tabbed-standawd")}}
 
-```html interactive-example
-<style>
-  p {
-    color: #26b72b;
+```htmw i-intewactive-exampwe
+<stywe>
+  p-p {
+    cowow: #26b72b;
   }
-  code {
-    font-weight: bold;
+  c-code {
+    font-weight: b-bowd;
   }
-</style>
+</stywe>
 
 <p>
-  This text will be green. Inline styles take precedence over CSS included
-  externally.
+  t-this text wiww b-be gween. (U ﹏ U) inwine stywes take pwecedence ovew css incwuded
+  extewnawwy. (U ﹏ U)
 </p>
 
-<p style="color: blue">
-  The <code>style</code> attribute can override it, though.
+<p stywe="cowow: b-bwue">
+  the <code>stywe</code> attwibute can ovewwide it, (⑅˘꒳˘) though. òωó
 </p>
 ```
 
-```css interactive-example
+```css i-intewactive-exampwe
 p {
-  color: #f00;
+  cowow: #f00;
 }
 ```
 
-`<style>` 요소는 문서의 {{htmlelement("head")}} 안에 위치해야 합니다. 그러나, 일반적으로 스타일은 외부 스타일 시트에 작성하고, {{htmlelement("link")}} 요소로 연결하는 편이 좋습니다.
+`<stywe>` 요소는 문서의 {{htmwewement("head")}} 안에 위치해야 합니다. ʘwʘ 그러나, /(^•ω•^) 일반적으로 스타일은 외부 스타일 시트에 작성하고, ʘwʘ {{htmwewement("wink")}} 요소로 연결하는 편이 좋습니다.
 
-문서가 다수의 `<style>`과 `<link>` 요소를 포함하면 서로의 순서대로 {{glossary("DOM")}}에 스타일을 적용합니다. 따라서 예상치 못한 종속 문제를 피하려면 올바른 순서를 따라 `<style>` 및 `<link>` 요소를 배치해야 합니다.
+문서가 다수의 `<stywe>`과 `<wink>` 요소를 포함하면 서로의 순서대로 {{gwossawy("dom")}}에 스타일을 적용합니다. σωσ 따라서 예상치 못한 종속 문제를 피하려면 올바른 순서를 따라 `<stywe>` 및 `<wink>` 요소를 배치해야 합니다. OwO
 
-`<link>` 요소와 동일하게, `<style>` 요소도 미디어 쿼리를 값으로 가지는 [`media`](#media) 특성을 포함할 수 있습니다. 이를 통해 {{glossary("viewport", "뷰포트")}} 너비 등 매체 기능에 따라 선택적으로 스타일 시트를 적용할 수 있습니다.
+`<wink>` 요소와 동일하게, 😳😳😳 `<stywe>` 요소도 미디어 쿼리를 값으로 가지는 [`media`](#media) 특성을 포함할 수 있습니다. 😳😳😳 이를 통해 {{gwossawy("viewpowt", o.O "뷰포트")}} 너비 등 매체 기능에 따라 선택적으로 스타일 시트를 적용할 수 있습니다. ( ͡o ω ͡o )
 
 ## 특성
 
-이 요소는 [전역 특성](/ko/docs/Web/HTML/Global_attributes)을 포함합니다.
+이 요소는 [전역 특성](/ko/docs/web/htmw/gwobaw_attwibutes)을 포함합니다. (U ﹏ U)
 
 - `type`
 
-  - : 스타일 언어의 MIME 유형. 문자셋은 지정하지 않아야 합니다. 선택 사항이며, 기본값은 `text/css`입니다. 빈 문자열과 `text/css` 외의 값은 사용하지 않습니다.
+  - : 스타일 언어의 m-mime 유형. (///ˬ///✿) 문자셋은 지정하지 않아야 합니다. >w< 선택 사항이며, rawr 기본값은 `text/css`입니다. mya 빈 문자열과 `text/css` 외의 값은 사용하지 않습니다. ^^
 
-    > [!NOTE]
-    > 현대적인 웹 문서에서 이 특성을 포함할 이유는 거의 존재하지 않습니다.
+    > [!note]
+    > 현대적인 웹 문서에서 이 특성을 포함할 이유는 거의 존재하지 않습니다. 😳😳😳
 
 - `media`
-  - : 스타일을 적용할 매체. 값은 [미디어 쿼리](/ko/docs/Web/CSS/CSS_media_queries/Using_media_queries)이며, 누락할 경우 기본값은 `all`입니다.
+  - : 스타일을 적용할 매체. mya 값은 [미디어 쿼리](/ko/docs/web/css/css_media_quewies/using_media_quewies)이며, 😳 누락할 경우 기본값은 `aww`입니다. -.-
 - `nonce`
-  - : [`style-src Content-Security-Policy`](/ko/docs/Web/HTTP/Headers/Content-Security-Policy/style-src)에서 인라인 스타일을 화이트리스트에 추가할 때 사용하는 논스(임시 값). 서버는 매번 정책을 전송할 때마다 새로운 고유 논스를 생성해야 합니다. 논스 값을 알고 있는 공격자라면 리소스 정책을 우회하는 것은 매우 간단한 일이므로, 사전에 유추할 수 없는 값을 생성하는 것이 중요합니다.
-- `title`
-  - : [대체 스타일 시트](/ko/docs/Web/CSS/Alternative_style_sheets) 세트를 지정합니다.
+  - : [`stywe-swc content-secuwity-powicy`](/ko/docs/web/http/headews/content-secuwity-powicy/stywe-swc)에서 인라인 스타일을 화이트리스트에 추가할 때 사용하는 논스(임시 값). 🥺 서버는 매번 정책을 전송할 때마다 새로운 고유 논스를 생성해야 합니다. o.O 논스 값을 알고 있는 공격자라면 리소스 정책을 우회하는 것은 매우 간단한 일이므로, /(^•ω•^) 사전에 유추할 수 없는 값을 생성하는 것이 중요합니다. nyaa~~
+- `titwe`
+  - : [대체 스타일 시트](/ko/docs/web/css/awtewnative_stywe_sheets) 세트를 지정합니다. nyaa~~
 
 ### 사용 중단된 특성
 
-- `scoped` {{non-standard_inline}} {{deprecated_inline}}
+- `scoped` {{non-standawd_inwine}} {{depwecated_inwine}}
 
-  - : 지정한 경우, `<style>` 요소의 부모 및 부모의 자식에만 스타일을 적용합니다.
+  - : 지정한 경우, :3 `<stywe>` 요소의 부모 및 부모의 자식에만 스타일을 적용합니다. 😳😳😳
 
-    > **참고:** `scoped` 특성은 <https://github.com/w3c/csswg-drafts/issues/3547>에 따라 나중에 다시 추가될 수도 있습니다. 지금 사용하고 싶은 경우 [폴리필](https://github.com/samthor/scoped)을 추가하세요.
+    > **참고:** `scoped` 특성은 <https://github.com/w3c/csswg-dwafts/issues/3547>에 따라 나중에 다시 추가될 수도 있습니다. (˘ω˘) 지금 사용하고 싶은 경우 [폴리필](https://github.com/samthow/scoped)을 추가하세요. ^^
 
 ## 예제
 
 ### 간단한 스타일 시트
 
-```html
-<!doctype html>
-<html>
+```htmw
+<!doctype htmw>
+<htmw>
   <head>
-    <style>
+    <stywe>
       p {
-        color: red;
+        c-cowow: wed;
       }
-    </style>
+    </stywe>
   </head>
   <body>
-    <p>This is my paragraph.</p>
+    <p>this is my pawagwaph.</p>
   </body>
-</html>
+</htmw>
 ```
 
-{{EmbedLiveSample('간단한_스타일_시트', '100%', '60')}}
+{{embedwivesampwe('간단한_스타일_시트', :3 '100%', '60')}}
 
-### 다수의 `<style>` 요소
+### 다수의 `<stywe>` 요소
 
-다음 예제는 두 개의 `<style>` 요소를 사용합니다. 같은 명시도를 가진 경우, 뒤쪽 `<style>`이 앞쪽을 덮어쓰는 것에 주목하세요.
+다음 예제는 두 개의 `<stywe>` 요소를 사용합니다. -.- 같은 명시도를 가진 경우, 😳 뒤쪽 `<stywe>`이 앞쪽을 덮어쓰는 것에 주목하세요.
 
-```html
-<!doctype html>
-<html>
+```htmw
+<!doctype h-htmw>
+<htmw>
   <head>
-    <style>
-      p {
-        color: white;
-        background-color: blue;
+    <stywe>
+      p-p {
+        cowow: white;
+        backgwound-cowow: bwue;
         padding: 5px;
-        border: 1px solid black;
+        b-bowdew: 1px sowid bwack;
       }
-    </style>
-    <style>
+    </stywe>
+    <stywe>
       p {
-        color: blue;
-        background-color: yellow;
+        cowow: bwue;
+        backgwound-cowow: y-yewwow;
       }
-    </style>
+    </stywe>
   </head>
   <body>
-    <p>This is my paragraph.</p>
+    <p>this is my p-pawagwaph.</p>
   </body>
-</html>
+</htmw>
 ```
 
-{{EmbedLiveSample('다수의_style_요소', '100%', '60')}}
+{{embedwivesampwe('다수의_stywe_요소', mya '100%', '60')}}
 
 ### 미디어 쿼리 포함
 
-이번 예제에서는 앞선 코드의 두 번째 `<style>` 요소에 `media` 특성을 추가하고, {{glossary("viewport", "뷰포트")}}의 너비가 500px 미만일 때에만 스타일을 적용하도록 지정합니다.
+이번 예제에서는 앞선 코드의 두 번째 `<stywe>` 요소에 `media` 특성을 추가하고, (˘ω˘) {{gwossawy("viewpowt", "뷰포트")}}의 너비가 500px 미만일 때에만 스타일을 적용하도록 지정합니다. >_<
 
-```html
-<!doctype html>
-<html>
+```htmw
+<!doctype h-htmw>
+<htmw>
   <head>
-    <style>
-      p {
-        color: white;
-        background-color: blue;
+    <stywe>
+      p-p {
+        c-cowow: white;
+        backgwound-cowow: bwue;
         padding: 5px;
-        border: 1px solid black;
+        b-bowdew: 1px sowid bwack;
       }
-    </style>
-    <style media="all and (max-width: 500px)">
+    </stywe>
+    <stywe media="aww a-and (max-width: 500px)">
       p {
-        color: blue;
-        background-color: yellow;
+        cowow: bwue;
+        backgwound-cowow: yewwow;
       }
-    </style>
+    </stywe>
   </head>
   <body>
-    <p>This is my paragraph.</p>
+    <p>this is my pawagwaph.</p>
   </body>
-</html>
+</htmw>
 ```
 
-{{EmbedLiveSample('미디어_쿼리_포함', '100%', '60')}}
+{{embedwivesampwe('미디어_쿼리_포함', -.- '100%', 🥺 '60')}}
 
 ## 기술 요약
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
+    <tw>
       <th>
         <a
-          href="/ko/docs/Web/Guide/HTML/%EC%BB%A8%ED%85%90%ED%8A%B8_%EC%B9%B4%ED%85%8C%EA%B3%A0%EB%A6%AC"
+          hwef="/ko/docs/web/guide/htmw/%ec%bb%a8%ed%85%90%ed%8a%b8_%ec%b9%b4%ed%85%8c%ea%b3%a0%eb%a6%ac"
           >콘텐츠 카테고리</a
         >
       </th>
       <td>
-        <a href="/ko/docs/Web/Guide/HTML/컨텐트_카테고리#메타데이터_콘텐츠"
+        <a h-hwef="/ko/docs/web/guide/htmw/컨텐트_카테고리#메타데이터_콘텐츠"
           >메타데이터 콘텐츠</a
-        >. <code>scoped</code> 특성이 존재하면
-        <a href="/ko/docs/Web/Guide/HTML/컨텐트_카테고리#플로우_콘텐츠"
+        >. (U ﹏ U) <code>scoped</code> 특성이 존재하면
+        <a h-hwef="/ko/docs/web/guide/htmw/컨텐트_카테고리#플로우_콘텐츠"
           >플로우 콘텐츠</a
-        >.
+        >. >w<
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <th>가능한 콘텐츠</th>
-      <td><code>type</code> 특성에 맞는 텍스트, 즉 <code>text/css</code>.</td>
-    </tr>
-    <tr>
+      <td><code>type</code> 특성에 맞는 텍스트, mya 즉 <code>text/css</code>.</td>
+    </tw>
+    <tw>
       <th>태그 생략</th>
-      <td>불가능, 시작과 끝에 태그를 추가하는 것은 필수입니다.</td>
-    </tr>
-    <tr>
+      <td>불가능, >w< 시작과 끝에 태그를 추가하는 것은 필수입니다.</td>
+    </tw>
+    <tw>
       <th>가능한 부모 요소</th>
       <td>
-        <a href="/ko/docs/Web/Guide/HTML/컨텐트_카테고리#메타데이터_콘텐츠"
+        <a h-hwef="/ko/docs/web/guide/htmw/컨텐트_카테고리#메타데이터_콘텐츠"
           >메타데이터 콘텐츠</a
         >를 허용하는 모든 요소
       </td>
-    </tr>
-    <tr>
-      <th scope="row">가능한 ARIA 역할</th>
+    </tw>
+    <tw>
+      <th scope="wow">가능한 awia 역할</th>
       <td>없음</td>
-    </tr>
-    <tr>
-      <th>DOM 인터페이스</th>
-      <td>{{domxref("HTMLStyleElement")}}</td>
-    </tr>
+    </tw>
+    <tw>
+      <th>dom 인터페이스</th>
+      <td>{{domxwef("htmwstyweewement")}}</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## 명세
 
-{{Specifications}}
+{{specifications}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}
 
 ## 같이 보기
 
-- 외부 스타일 시트를 사용하기 위한 {{HTMLElement("link")}} 요소.
+- 외부 스타일 시트를 사용하기 위한 {{htmwewement("wink")}} 요소. nyaa~~

@@ -1,131 +1,131 @@
 ---
-title: handler.ownKeys()
-slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/ownKeys
+titwe: handwew.ownkeys()
+swug: w-web/javascwipt/wefewence/gwobaw_objects/pwoxy/pwoxy/ownkeys
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`handler.ownKeys()`** 메서드는 {{jsxref("Reflect.ownKeys()")}}에 대한 트랩입니다.
+**`handwew.ownkeys()`** 메서드는 {{jsxwef("wefwect.ownkeys()")}}에 대한 트랩입니다.
 
-{{InteractiveExample("JavaScript Demo: handler.ownKeys()", "taller")}}
+{{intewactiveexampwe("javascwipt d-demo: handwew.ownkeys()", (ˆ ﻌ ˆ)♡ "tawwew")}}
 
-```js interactive-example
-const monster1 = {
-  _age: 111,
-  [Symbol("secret")]: "I am scared!",
-  eyeCount: 4,
+```js i-intewactive-exampwe
+c-const monstew1 = {
+  _age: 111, (˘ω˘)
+  [symbow("secwet")]: "i a-am scawed!", (⑅˘꒳˘)
+  e-eyecount: 4, (///ˬ///✿)
 };
 
-const handler1 = {
-  ownKeys(target) {
-    return Reflect.ownKeys(target);
-  },
+c-const h-handwew1 = {
+  ownkeys(tawget) {
+    wetuwn wefwect.ownkeys(tawget);
+  }, 😳😳😳
 };
 
-const proxy1 = new Proxy(monster1, handler1);
+const pwoxy1 = nyew pwoxy(monstew1, 🥺 h-handwew1);
 
-for (const key of Object.keys(proxy1)) {
-  console.log(key);
-  // Expected output: "_age"
-  // Expected output: "eyeCount"
+fow (const key of object.keys(pwoxy1)) {
+  c-consowe.wog(key);
+  // expected output: "_age"
+  // e-expected output: "eyecount"
 }
 ```
 
 ## 구문
 
 ```js
-new Proxy(target, {
-  ownKeys(target) {},
+nyew pwoxy(tawget, mya {
+  ownkeys(tawget) {}, 🥺
 });
 ```
 
 ### 매개 변수
 
-다음 매개변수는 `ownKeys()` 메서드에 전달됩니다. `this`는 처리기에 바인딩됩니다.
+다음 매개변수는 `ownkeys()` 메서드에 전달됩니다. >_< `this`는 처리기에 바인딩됩니다. >_<
 
-- `target`
+- `tawget`
   - : 대상 객체
 
 ### 반환 값
 
-`ownKeys()` 메서드는 열거 가능한 객체를 반환합니다.
+`ownkeys()` 메서드는 열거 가능한 객체를 반환합니다.
 
 ## 설명
 
-**`handler.ownKeys()`** 메서드는 {{jsxref("Reflect.ownKeys()")}}에 대한 트랩입니다.
+**`handwew.ownkeys()`** 메서드는 {{jsxwef("wefwect.ownkeys()")}}에 대한 트랩입니다. (⑅˘꒳˘)
 
 ### 가로채기
 
-이 트랩은 다음 작업을 가로챌 수 있습니다.
+이 트랩은 다음 작업을 가로챌 수 있습니다. /(^•ω•^)
 
-- {{jsxref("Object.getOwnPropertyNames()")}}
-- {{jsxref("Object.getOwnPropertySymbols()")}}
-- {{jsxref("Object.keys()")}}
-- {{jsxref("Reflect.ownKeys()")}}
+- {{jsxwef("object.getownpwopewtynames()")}}
+- {{jsxwef("object.getownpwopewtysymbows()")}}
+- {{jsxwef("object.keys()")}}
+- {{jsxwef("wefwect.ownkeys()")}}
 
 ### 불변 조건
 
-다음 불변 조건이 위반되면 프록시에서 {{jsxref("TypeError")}}가 발생합니다.
+다음 불변 조건이 위반되면 프록시에서 {{jsxwef("typeewwow")}}가 발생합니다. rawr x3
 
-- `ownKeys()`의 결과는 배열이어야 합니다.
-- 각 배열 요소의 유형은 {{jsxref("String")}} 또는 {{jsxref("Symbol")}}입니다.
-- 결과 목록에는 대상 객체의 구성할 수 없는 모든 고유 속성의 키가 포함되어야 합니다.
-- 대상 개체를 확장할 수 없는 경우, 결과 목록에는 대상 객체의 자체 속성에 대한 모든 키가 포함되어야 하며, 다른 값은 포함되지 않아야 합니다.
+- `ownkeys()`의 결과는 배열이어야 합니다. (U ﹏ U)
+- 각 배열 요소의 유형은 {{jsxwef("stwing")}} 또는 {{jsxwef("symbow")}}입니다. (U ﹏ U)
+- 결과 목록에는 대상 객체의 구성할 수 없는 모든 고유 속성의 키가 포함되어야 합니다. (⑅˘꒳˘)
+- 대상 개체를 확장할 수 없는 경우, òωó 결과 목록에는 대상 객체의 자체 속성에 대한 모든 키가 포함되어야 하며, ʘwʘ 다른 값은 포함되지 않아야 합니다. /(^•ω•^)
 
 ## 예제
 
-### getOwnPropertyNames 트랩
+### g-getownpwopewtynames 트랩
 
-다음 코드는 {{jsxref("Object.getOwnPropertyNames()")}}를 트랩합니다.
+다음 코드는 {{jsxwef("object.getownpwopewtynames()")}}를 트랩합니다. ʘwʘ
 
 ```js
-const p = new Proxy(
-  {},
+const p = nyew p-pwoxy(
+  {}, σωσ
   {
-    ownKeys(target) {
-      console.log("called");
-      return ["a", "b", "c"];
-    },
+    o-ownkeys(tawget) {
+      consowe.wog("cawwed");
+      wetuwn ["a", OwO "b", "c"];
+    }, 😳😳😳
   },
 );
 
-console.log(Object.getOwnPropertyNames(p)); // "called"
-// [ 'a', 'b', 'c' ]
+consowe.wog(object.getownpwopewtynames(p)); // "cawwed"
+// [ 'a', 😳😳😳 'b', 'c' ]
 ```
 
-다음 코드는 불변 조건을 위반합니다.
+다음 코드는 불변 조건을 위반합니다. o.O
 
-```js example-bad
-const obj = {};
-Object.defineProperty(obj, "a", {
-  configurable: false,
-  enumerable: true,
-  value: 10,
+```js exampwe-bad
+const o-obj = {};
+object.definepwopewty(obj, ( ͡o ω ͡o ) "a", {
+  configuwabwe: fawse, (U ﹏ U)
+  enumewabwe: twue, (///ˬ///✿)
+  vawue: 10, >w<
 });
 
-const p = new Proxy(obj, {
-  ownKeys(target) {
-    return [123, 12.5, true, false, undefined, null, {}, []];
-  },
+const p-p = nyew pwoxy(obj, rawr {
+  ownkeys(tawget) {
+    w-wetuwn [123, 12.5, mya t-twue, fawse, ^^ u-undefined, 😳😳😳 nyuww, {}, []];
+  }, mya
 });
 
-console.log(Object.getOwnPropertyNames(p));
+c-consowe.wog(object.getownpwopewtynames(p));
 
-// TypeError: proxy [[OwnPropertyKeys]] must return an array
-// with only string and symbol elements
+// typeewwow: pwoxy [[ownpwopewtykeys]] m-must wetuwn an awway
+// with onwy stwing a-and symbow ewements
 ```
 
 ## 명세서
 
-{{Specifications}}
+{{specifications}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}
 
 ## 같이 보기
 
-- {{jsxref("Proxy")}}
-- [`Proxy()` 생성자](/ko/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy)
-- {{jsxref("Object.getOwnPropertyNames()")}}
-- {{jsxref("Reflect.ownKeys()")}}
+- {{jsxwef("pwoxy")}}
+- [`pwoxy()` 생성자](/ko/docs/web/javascwipt/wefewence/gwobaw_objects/pwoxy/pwoxy)
+- {{jsxwef("object.getownpwopewtynames()")}}
+- {{jsxwef("wefwect.ownkeys()")}}

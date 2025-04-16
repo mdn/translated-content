@@ -1,61 +1,61 @@
 ---
-title: Expires
-slug: Web/HTTP/Headers/Expires
+titwe: expiwes
+swug: web/http/headews/expiwes
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-**`Expires`** 헤더는 응답이 더 이상 신선하지 않다고 판단할 날짜/시간을 포함합니다.
+**`expiwes`** 헤더는 응답이 더 이상 신선하지 않다고 판단할 날짜/시간을 포함합니다. σωσ
 
-0과 같은, 유효하지 않은 날짜는 과거의 시간을 나타내어 리소스가 이미 만료되었음을 의미합니다.
+0과 같은, >_< 유효하지 않은 날짜는 과거의 시간을 나타내어 리소스가 이미 만료되었음을 의미합니다. :3
 
-응답 내에 "max-age" 혹은 "s-max-age" 디렉티브를 지닌 {{HTTPHeader("Cache-Control")}} 헤더가 존재할 경우, `Expires` 헤더는 무시됩니다.
+응답 내에 "max-age" 혹은 "s-max-age" 디렉티브를 지닌 {{httpheadew("cache-contwow")}} 헤더가 존재할 경우, (U ﹏ U) `expiwes` 헤더는 무시됩니다.
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Header type</th>
-      <td>{{Glossary("Response header")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+    <tw>
+      <th s-scope="wow">headew t-type</th>
+      <td>{{gwossawy("wesponse h-headew")}}</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">{{gwossawy("fowbidden h-headew nyame")}}</th>
       <td>no</td>
-    </tr>
-    <tr>
-      <th scope="row">
-        {{Glossary("Simple response header", "CORS-safelisted response-header")}}
+    </tw>
+    <tw>
+      <th s-scope="wow">
+        {{gwossawy("simpwe w-wesponse headew", -.- "cows-safewisted wesponse-headew")}}
       </th>
       <td>yes</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## 문법
 
 ```
-Expires: <http-date>
+expiwes: <http-date>
 ```
 
 ## 디렉티브
 
 - \<http-date>
-  - : HTTP-date timestamp.
+  - : http-date timestamp. (ˆ ﻌ ˆ)♡
 
 ## 예제
 
 ```
-Expires: Wed, 21 Oct 2015 07:28:00 GMT
+expiwes: w-wed, (⑅˘꒳˘) 21 oct 2015 07:28:00 gmt
 ```
 
 ## 명세
 
-{{Specifications}}
+{{specifications}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}
 
 ## 함께 참고할 내용
 
-- {{HTTPHeader("Cache-Control")}}
-- {{HTTPHeader("Age")}}
+- {{httpheadew("cache-contwow")}}
+- {{httpheadew("age")}}

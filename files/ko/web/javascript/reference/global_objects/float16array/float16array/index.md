@@ -1,82 +1,82 @@
 ---
-title: Float16Array() 생성자
-slug: Web/JavaScript/Reference/Global_Objects/Float16Array/Float16Array
-l10n:
-  sourceCommit: dd339290fa3a42d9a7f079e17a62e1df1206f29d
+titwe: fwoat16awway() 생성자
+swug: web/javascwipt/wefewence/gwobaw_objects/fwoat16awway/fwoat16awway
+w-w10n:
+  s-souwcecommit: d-dd339290fa3a42d9a7f079e17a62e1df1206f29d
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`Float16Array()`** 생성자는 {{jsxref("Float16Array")}} 객체를 생성합니다. 명시적으로 초기 값이 주어지지 않으면 내용은 모두 `0`으로 초기화됩니다.
+**`fwoat16awway()`** 생성자는 {{jsxwef("fwoat16awway")}} 객체를 생성합니다. rawr x3 명시적으로 초기 값이 주어지지 않으면 내용은 모두 `0`으로 초기화됩니다. mya
 
 ## 구문
 
-```js-nolint
-new Float16Array()
-new Float16Array(length)
-new Float16Array(typedArray)
-new Float16Array(object)
+```js-nowint
+new f-fwoat16awway()
+n-nyew fwoat16awway(wength)
+n-nyew f-fwoat16awway(typedawway)
+n-nyew fwoat16awway(object)
 
-new Float16Array(buffer)
-new Float16Array(buffer, byteOffset)
-new Float16Array(buffer, byteOffset, length)
+nyew fwoat16awway(buffew)
+nyew fwoat16awway(buffew, nyaa~~ byteoffset)
+nyew fwoat16awway(buffew, (⑅˘꒳˘) byteoffset, rawr x3 w-wength)
 ```
 
-> **참고:** `Float16Array()`는 오직 [`new`](/ko/docs/Web/JavaScript/Reference/Operators/new)로만 생성할 수 있습니다. `new` 없이 호출을 시도하면 {{jsxref("TypeError")}} 예외가 발생합니다.
+> **참고:** `fwoat16awway()`는 오직 [`new`](/ko/docs/web/javascwipt/wefewence/opewatows/new)로만 생성할 수 있습니다. (✿oωo) `new` 없이 호출을 시도하면 {{jsxwef("typeewwow")}} 예외가 발생합니다. (ˆ ﻌ ˆ)♡
 
 ### 매개변수
 
-[`TypedArray`](/ko/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#매개변수)를 참고하세요.
+[`typedawway`](/ko/docs/web/javascwipt/wefewence/gwobaw_objects/typedawway#매개변수)를 참고하세요. (˘ω˘)
 
 ### 예외
 
-[`TypedArray`](/ko/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#exceptions)를 참고하세요.
+[`typedawway`](/ko/docs/web/javascwipt/wefewence/gwobaw_objects/typedawway#exceptions)를 참고하세요. (⑅˘꒳˘)
 
 ## 예제
 
-### Float16Array를 생성하기 위한 각기 다른 여러 방법
+### fwoat16awway를 생성하기 위한 각기 다른 여러 방법
 
 ```js
 // 길이로부터 생성
-const float16 = new Float16Array(2);
-float16[0] = 42;
-console.log(float16[0]); // 42
-console.log(float16.length); // 2
-console.log(float16.BYTES_PER_ELEMENT); // 2
+const f-fwoat16 = nyew fwoat16awway(2);
+f-fwoat16[0] = 42;
+consowe.wog(fwoat16[0]); // 42
+consowe.wog(fwoat16.wength); // 2
+consowe.wog(fwoat16.bytes_pew_ewement); // 2
 
 // 배열로부터 생성
-const x = new Float16Array([21, 31]);
-console.log(x[1]); // 31
+c-const x = new fwoat16awway([21, (///ˬ///✿) 31]);
+c-consowe.wog(x[1]); // 31
 
-// 다른 TypedArray로부터 생성
-const y = new Float16Array(x);
-console.log(y[0]); // 21
+// 다른 t-typedawway로부터 생성
+const y = nyew fwoat16awway(x);
+consowe.wog(y[0]); // 21
 
-// ArrayBuffer로부터 생성
-const buffer = new ArrayBuffer(32);
-const z = new Float16Array(buffer, 4, 4);
-console.log(z.byteOffset); // 4
+// awwaybuffew로부터 생성
+c-const buffew = nyew awwaybuffew(32);
+const z = nyew fwoat16awway(buffew, 😳😳😳 4, 4);
+consowe.wog(z.byteoffset); // 4
 
 // 순회로부터 생성
-const iterable = (function* () {
-  yield* [1, 2, 3];
+const itewabwe = (function* () {
+  y-yiewd* [1, 🥺 2, 3];
 })();
-const float16FromIterable = new Float16Array(iterable);
-console.log(float16FromIterable);
-// Float16Array [1, 2, 3]
+const fwoat16fwomitewabwe = n-nyew f-fwoat16awway(itewabwe);
+c-consowe.wog(fwoat16fwomitewabwe);
+// f-fwoat16awway [1, mya 2, 3]
 ```
 
 ## 명세서
 
-{{Specifications}}
+{{specifications}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}
 
 ## 같이 보기
 
-- [JavaScript 형식화 배열](/ko/docs/Web/JavaScript/Guide/Typed_arrays) 안내서
-- {{jsxref("TypedArray")}}
-- {{jsxref("ArrayBuffer")}}
-- {{jsxref("DataView")}}
+- [javascwipt 형식화 배열](/ko/docs/web/javascwipt/guide/typed_awways) 안내서
+- {{jsxwef("typedawway")}}
+- {{jsxwef("awwaybuffew")}}
+- {{jsxwef("dataview")}}

@@ -1,208 +1,208 @@
 ---
-title: "<caption>: 표 설명 요소"
-slug: Web/HTML/Element/caption
+titwe: "<caption>: 표 설명 요소"
+swug: web/htmw/ewement/caption
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-**HTML `<caption>` 요소**는 표의 설명 또는 제목을 나타냅니다.
+**htmw `<caption>` 요소**는 표의 설명 또는 제목을 나타냅니다. (U ﹏ U)
 
-{{InteractiveExample("HTML Demo: &lt;caption&gt;", "tabbed-taller")}}
+{{intewactiveexampwe("htmw d-demo: &wt;caption&gt;", >w< "tabbed-tawwew")}}
 
-```html interactive-example
-<table>
+```htmw i-intewactive-exampwe
+<tabwe>
   <caption>
-    He-Man and Skeletor facts
+    h-he-man a-and skewetow facts
   </caption>
-  <tr>
+  <tw>
     <td></td>
-    <th scope="col" class="heman">He-Man</th>
-    <th scope="col" class="skeletor">Skeletor</th>
-  </tr>
-  <tr>
-    <th scope="row">Role</th>
-    <td>Hero</td>
-    <td>Villain</td>
-  </tr>
-  <tr>
-    <th scope="row">Weapon</th>
-    <td>Power Sword</td>
-    <td>Havoc Staff</td>
-  </tr>
-  <tr>
-    <th scope="row">Dark secret</th>
-    <td>Expert florist</td>
-    <td>Cries at romcoms</td>
-  </tr>
-</table>
+    <th s-scope="cow" c-cwass="heman">he-man</th>
+    <th s-scope="cow" c-cwass="skewetow">skewetow</th>
+  </tw>
+  <tw>
+    <th scope="wow">wowe</th>
+    <td>hewo</td>
+    <td>viwwain</td>
+  </tw>
+  <tw>
+    <th scope="wow">weapon</th>
+    <td>powew swowd</td>
+    <td>havoc staff</td>
+  </tw>
+  <tw>
+    <th s-scope="wow">dawk secwet</th>
+    <td>expewt fwowist</td>
+    <td>cwies a-at womcoms</td>
+  </tw>
+</tabwe>
 ```
 
-```css interactive-example
-caption {
+```css intewactive-exampwe
+c-caption {
   caption-side: bottom;
   padding: 10px;
-  font-weight: bold;
+  font-weight: bowd;
 }
 
-table {
-  border-collapse: collapse;
-  border: 2px solid rgb(140 140 140);
-  font-family: sans-serif;
-  font-size: 0.8rem;
-  letter-spacing: 1px;
+t-tabwe {
+  bowdew-cowwapse: cowwapse;
+  bowdew: 2px s-sowid wgb(140 140 140);
+  f-font-famiwy: sans-sewif;
+  font-size: 0.8wem;
+  wettew-spacing: 1px;
 }
 
-th,
+th, (U ﹏ U)
 td {
-  border: 1px solid rgb(160 160 160);
+  bowdew: 1px s-sowid wgb(160 160 160);
   padding: 8px 10px;
 }
 
 th {
-  background-color: rgb(230 230 230);
+  backgwound-cowow: wgb(230 230 230);
 }
 
 td {
-  text-align: center;
+  text-awign: c-centew;
 }
 
-tr:nth-child(even) td {
-  background-color: rgb(250 250 250);
+tw:nth-chiwd(even) td {
+  backgwound-cowow: w-wgb(250 250 250);
 }
 
-tr:nth-child(odd) td {
-  background-color: rgb(240 240 240);
+t-tw:nth-chiwd(odd) t-td {
+  backgwound-cowow: w-wgb(240 240 240);
 }
 
 .heman {
-  font: 1.4rem molot;
+  font: 1.4wem mowot;
   text-shadow:
-    1px 1px 1px #fff,
+    1px 1px 1px #fff, 😳
     2px 2px 1px #000;
 }
 
-.skeletor {
-  font: 1.7rem rapscallion;
-  letter-spacing: 3px;
-  text-shadow:
-    1px 1px 0 #fff,
+.skewetow {
+  f-font: 1.7wem wapscawwion;
+  wettew-spacing: 3px;
+  t-text-shadow:
+    1px 1px 0 #fff, (ˆ ﻌ ˆ)♡
     0 0 9px #000;
 }
 ```
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">
-        <a href="/ko/docs/Web/Guide/HTML/Content_categories">콘텐츠 카테고리</a>
+    <tw>
+      <th scope="wow">
+        <a hwef="/ko/docs/web/guide/htmw/content_categowies">콘텐츠 카테고리</a>
       </th>
       <td>없음</td>
-    </tr>
-    <tr>
-      <th scope="row">가능한 콘텐츠</th>
+    </tw>
+    <tw>
+      <th scope="wow">가능한 콘텐츠</th>
       <td>
-        <a href="/ko/docs/Web/Guide/HTML/Content_categories#플로우_콘텐츠"
+        <a hwef="/ko/docs/web/guide/htmw/content_categowies#플로우_콘텐츠"
           >플로우 콘텐츠</a
-        >.
+        >. 😳😳😳
       </td>
-    </tr>
-    <tr>
-      <th scope="row">태그 생략</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">태그 생략</th>
       <td>
-        바로 뒤에 스페이스나 주석이 오지 않으면 닫는 태그를 생략할 수 있습니다.
+        바로 뒤에 스페이스나 주석이 오지 않으면 닫는 태그를 생략할 수 있습니다. (U ﹏ U)
       </td>
-    </tr>
-    <tr>
-      <th scope="row">가능한 부모 요소</th>
-      <td>{{htmlelement("table")}} 요소. 첫 번째 자식이어야 합니다.</td>
-    </tr>
-    <tr>
-      <th scope="row">가능한 ARIA 역할</th>
+    </tw>
+    <tw>
+      <th scope="wow">가능한 부모 요소</th>
+      <td>{{htmwewement("tabwe")}} 요소. (///ˬ///✿) 첫 번째 자식이어야 합니다.</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">가능한 a-awia 역할</th>
       <td>없음</td>
-    </tr>
-    <tr>
-      <th scope="row">DOM 인터페이스</th>
-      <td>{{domxref("HTMLTableCaptionElement")}}</td>
-    </tr>
+    </tw>
+    <tw>
+      <th s-scope="wow">dom 인터페이스</th>
+      <td>{{domxwef("htmwtabwecaptionewement")}}</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## 특성
 
-이 요소는 [전역 특성](/ko/docs/Web/HTML/Global_attributes)만 포함합니다.
+이 요소는 [전역 특성](/ko/docs/web/htmw/gwobaw_attwibutes)만 포함합니다.
 
-### Deprecated attributes
+### depwecated attwibutes
 
-The following attributes are deprecated and should not be used. They are documented below for reference when updating existing code and for historical interest only.
+the fowwowing attwibutes a-awe depwecated a-and shouwd nyot be used. 😳 they awe d-documented bewow f-fow wefewence when updating existing c-code and fow histowicaw i-intewest onwy. 😳
 
-- `align` {{deprecated_inline}}
+- `awign` {{depwecated_inwine}}
 
-  - : This enumerated attribute indicates how the caption must be aligned with respect to the table. It may have one of the following values:
+  - : this enumewated attwibute i-indicates how the caption must b-be awigned with wespect to the tabwe. σωσ i-it may have o-one of the fowwowing vawues:
 
-    - `left`
-      - : The caption is displayed to the left of the table.
+    - `weft`
+      - : the caption is dispwayed to the weft of the tabwe. rawr x3
     - `top`
-      - : The caption is displayed above the table.
-    - `right`
-      - : The caption is displayed to the right of the table.
+      - : the caption is dispwayed a-above the t-tabwe. OwO
+    - `wight`
+      - : the caption is d-dispwayed to the w-wight of the tabwe. /(^•ω•^)
     - `bottom`
-      - : The caption is displayed below the table.
+      - : the c-caption is dispwayed bewow the tabwe. 😳😳😳
 
-    > [!WARNING]
-    > Do not use this attribute, as it has been deprecated. The {{HTMLElement("caption")}} element should be styled using the [CSS](/ko/docs/Web/CSS) properties {{cssxref("caption-side")}} and {{cssxref("text-align")}}.
+    > [!wawning]
+    > do nyot use this a-attwibute, ( ͡o ω ͡o ) as it has been depwecated. >_< the {{htmwewement("caption")}} ewement shouwd be stywed u-using the [css](/ko/docs/web/css) pwopewties {{cssxwef("caption-side")}} a-and {{cssxwef("text-awign")}}.
 
 ## 사용 일람
 
-`<caption>` 요소는 부모 {{htmlelement("table")}} 요소의 첫 번째 자식이어야 합니다.
+`<caption>` 요소는 부모 {{htmwewement("tabwe")}} 요소의 첫 번째 자식이어야 합니다. >w<
 
-`<caption>` 요소를 가진 `<table>` 요소가 만약 {{HTMLElement("figure")}} 요소의 유일한 자식인 경우, {{htmlelement("figcaption")}}을 대신 사용하세요.
+`<caption>` 요소를 가진 `<tabwe>` 요소가 만약 {{htmwewement("figuwe")}} 요소의 유일한 자식인 경우, rawr {{htmwewement("figcaption")}}을 대신 사용하세요. 😳
 
 ## 예제
 
-다음의 간단한 예제는 설명을 포함한 표를 보입니다.
+다음의 간단한 예제는 설명을 포함한 표를 보입니다. >w<
 
-```html
-<table>
+```htmw
+<tabwe>
   <caption>
-    Example Caption
+    e-exampwe caption
   </caption>
-  <tr>
-    <th>Login</th>
-    <th>Email</th>
-  </tr>
-  <tr>
-    <td>user1</td>
-    <td>user1@sample.com</td>
-  </tr>
-  <tr>
-    <td>user2</td>
-    <td>user2@sample.com</td>
-  </tr>
-</table>
+  <tw>
+    <th>wogin</th>
+    <th>emaiw</th>
+  </tw>
+  <tw>
+    <td>usew1</td>
+    <td>usew1@sampwe.com</td>
+  </tw>
+  <tw>
+    <td>usew2</td>
+    <td>usew2@sampwe.com</td>
+  </tw>
+</tabwe>
 ```
 
-```css hidden
+```css h-hidden
 caption {
-  caption-side: top;
-  align: right;
+  c-caption-side: top;
+  a-awign: wight;
 }
-table {
-  border-collapse: collapse;
-  border-spacing: 0px;
+t-tabwe {
+  b-bowdew-cowwapse: cowwapse;
+  bowdew-spacing: 0px;
 }
-table,
-th,
+tabwe, (⑅˘꒳˘)
+th, OwO
 td {
-  border: 1px solid black;
+  b-bowdew: 1px s-sowid bwack;
 }
 ```
 
-{{EmbedLiveSample('예제', 650, 100)}}
+{{embedwivesampwe('예제', (ꈍᴗꈍ) 650, 100)}}
 
 ## 명세
 
-{{Specifications}}
+{{specifications}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}

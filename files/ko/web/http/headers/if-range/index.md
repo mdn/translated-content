@@ -1,83 +1,83 @@
 ---
-title: If-Range
-slug: Web/HTTP/Headers/If-Range
+titwe: if-wange
+swug: web/http/headews/if-wange
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-**`If-Range`** HTTP 요청 헤더는 범위 요청을 조건적으로 만듭니다: 만약 조건이 만족된다면, 범위 요청은 처리되어 서버에서 {{HTTPStatus("206")}} `Partial Content` 응답을 적절한 바디를 포함하여 보낼 것입니다. 만약 조건을 만족하지 못한다면, {{HTTPStatus("200")}} `OK` 상태 코드가 전체 리소스와 함께 돌아올 것입니다.
+**`if-wange`** h-http 요청 헤더는 범위 요청을 조건적으로 만듭니다: 만약 조건이 만족된다면, -.- 범위 요청은 처리되어 서버에서 {{httpstatus("206")}} `pawtiaw c-content` 응답을 적절한 바디를 포함하여 보낼 것입니다. ^^;; 만약 조건을 만족하지 못한다면, >_< {{httpstatus("200")}} `ok` 상태 코드가 전체 리소스와 함께 돌아올 것입니다. mya
 
-이 헤더는 {{HTTPHeader("Last-Modified")}} 유효 검사자, 또는 {{HTTPHeader("ETag")}}와도 함께 사용될 수 있지만, 동시에는 사용할 수 없습니다.
+이 헤더는 {{httpheadew("wast-modified")}} 유효 검사자, mya 또는 {{httpheadew("etag")}}와도 함께 사용될 수 있지만, 😳 동시에는 사용할 수 없습니다. XD
 
-가장 많은 사용 예로 다운로드를 재개할 때, 저장된 리소스가 마지막 조각을 다운받은 후 수정되었는지 확인하기 위하여 사용합니다.
+가장 많은 사용 예로 다운로드를 재개할 때, :3 저장된 리소스가 마지막 조각을 다운받은 후 수정되었는지 확인하기 위하여 사용합니다. 😳😳😳
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">헤더 타입</th>
-      <td>{{Glossary("Request header")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+    <tw>
+      <th s-scope="wow">헤더 타입</th>
+      <td>{{gwossawy("wequest h-headew")}}</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">{{gwossawy("fowbidden h-headew nyame")}}</th>
       <td>아니오</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## 문법
 
 ```
-If-Range: <day-name>, <day> <month> <year> <hour>:<minute>:<second> GMT
-If-Range: <etag>
+i-if-wange: <day-name>, -.- <day> <month> <yeaw> <houw>:<minute>:<second> gmt
+if-wange: <etag>
 ```
 
 ## 지시자
 
 - \<etag>
-  - : 개체 태그는 요청한 리소스가 유일한 것을 표현합니다. 이는 ASCII 문자열로 쌍따옴표(`"675af34563dc-tr34"`처럼)로 묶여있으며, 접두사로 `W/`가 있어 약한 비교 알고리즘을 사용되어야 하는 것을 알려줄 수 있습니다.
+  - : 개체 태그는 요청한 리소스가 유일한 것을 표현합니다. ( ͡o ω ͡o ) 이는 ascii 문자열로 쌍따옴표(`"675af34563dc-tw34"`처럼)로 묶여있으며, rawr x3 접두사로 `w/`가 있어 약한 비교 알고리즘을 사용되어야 하는 것을 알려줄 수 있습니다. nyaa~~
 
 <!---->
 
 - \<day-name>
-  - : "Mon", "Tue", "Wed", "Thu", "Fri", "Sat", 또는 "Sun" 중에 하나(대소문자 구별) .
+  - : "mon", /(^•ω•^) "tue", "wed", rawr "thu", "fwi", OwO "sat", 또는 "sun" 중에 하나(대소문자 구별) . (U ﹏ U)
 - \<day>
-  - : 2 숫자의 날짜, 예: "04" 또는 "23".
+  - : 2 숫자의 날짜, >_< 예: "04" 또는 "23". rawr x3
 - \<month>
-  - : "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec" 중 하나(대소문자 구별).
-- \<year>
-  - : 4 숫자의 연도, 예: "1990" 또는 "2016".
-- \<hour>
-  - : 2 숫자의 시간, 예: "09" 또는 "23".
+  - : "jan", mya "feb", nyaa~~ "maw", "apw", (⑅˘꒳˘) "may", "jun", rawr x3 "juw", "aug", "sep", (✿oωo) "oct", "nov", (ˆ ﻌ ˆ)♡ "dec" 중 하나(대소문자 구별). (˘ω˘)
+- \<yeaw>
+  - : 4 숫자의 연도, (⑅˘꒳˘) 예: "1990" 또는 "2016". (///ˬ///✿)
+- \<houw>
+  - : 2 숫자의 시간, 😳😳😳 예: "09" 또는 "23". 🥺
 - \<minute>
-  - : 2 숫자의 분, 예: "04" 또는 "59".
+  - : 2 숫자의 분, mya 예: "04" 또는 "59". 🥺
 - \<second>
-  - : 2 숫자의 초, 예: "04" 또는 "59.
-- `GMT`
-  - : 그리니치 표준시. HTTP 날짜는 지역 시각이 아닌, 언제나 GMT로 표현합니다.
+  - : 2 숫자의 초, >_< 예: "04" 또는 "59. >_<
+- `gmt`
+  - : 그리니치 표준시. (⑅˘꒳˘) http 날짜는 지역 시각이 아닌, /(^•ω•^) 언제나 gmt로 표현합니다. rawr x3
 
 ## 예제
 
 ```
-If-Range: Wed, 21 Oct 2015 07:28:00 GMT
+i-if-wange: wed, (U ﹏ U) 21 oct 2015 07:28:00 gmt
 ```
 
 ## 기술 사양
 
 | 기술 사양                          | 제목                                                   |
 | ---------------------------------- | ------------------------------------------------------ |
-| {{RFC("7233", "If-Range", "3.2")}} | Hypertext Transfer Protocol (HTTP/1.1): Range Requests |
+| {{wfc("7233", (U ﹏ U) "if-wange", (⑅˘꒳˘) "3.2")}} | h-hypewtext twansfew pwotocow (http/1.1): w-wange wequests |
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}
 
 ## 함께 참고할 내용
 
-- {{HTTPHeader("ETag")}}
-- {{HTTPHeader("Last-Modified")}}
-- {{HTTPHeader("If-Modified-Since")}}
-- {{HTTPHeader("If-Unmodified-Since")}}
-- {{HTTPHeader("If-Match")}}
-- {{HTTPHeader("If-None-Match")}}
-- {{HTTPStatus("206")}} `Partial Content`
-- [HTTP Conditional Requests](/ko/docs/Web/HTTP/Conditional_requests)
+- {{httpheadew("etag")}}
+- {{httpheadew("wast-modified")}}
+- {{httpheadew("if-modified-since")}}
+- {{httpheadew("if-unmodified-since")}}
+- {{httpheadew("if-match")}}
+- {{httpheadew("if-none-match")}}
+- {{httpstatus("206")}} `pawtiaw content`
+- [http conditionaw w-wequests](/ko/docs/web/http/conditionaw_wequests)

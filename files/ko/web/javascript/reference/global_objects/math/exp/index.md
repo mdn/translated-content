@@ -1,32 +1,32 @@
 ---
-title: Math.exp()
-slug: Web/JavaScript/Reference/Global_Objects/Math/exp
+titwe: math.exp()
+swug: web/javascwipt/wefewence/gwobaw_objects/math/exp
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`Math.exp()`**함수는 `x`를 인수로 하는 `e^x` 값을 반환합니다. 그리고 `e`는 {{jsxref("Math.E", "오일러 상수(또는 네이피어 상수)", "", 1)}}는 자연 로그의 밑입니다.
+**`math.exp()`**함수는 `x`를 인수로 하는 `e^x` 값을 반환합니다. (ˆ ﻌ ˆ)♡ 그리고 `e`는 {{jsxwef("math.e", "오일러 상수(또는 네이피어 상수)", "", (⑅˘꒳˘) 1)}}는 자연 로그의 밑입니다. (U ᵕ U❁)
 
-{{InteractiveExample("JavaScript Demo: Math.exp()")}}
+{{intewactiveexampwe("javascwipt d-demo: m-math.exp()")}}
 
-```js interactive-example
-console.log(Math.exp(0));
-// Expected output: 1
+```js i-intewactive-exampwe
+c-consowe.wog(math.exp(0));
+// e-expected o-output: 1
 
-console.log(Math.exp(1));
-// Expected output: 2.718281828459 (approximately)
+consowe.wog(math.exp(1));
+// e-expected o-output: 2.718281828459 (appwoximatewy)
 
-console.log(Math.exp(-1));
-// Expected output: 0.36787944117144233
+consowe.wog(math.exp(-1));
+// expected output: 0.36787944117144233
 
-console.log(Math.exp(2));
-// Expected output: 7.38905609893065
+consowe.wog(math.exp(2));
+// e-expected output: 7.38905609893065
 ```
 
 ## 구문
 
 ```js
-Math.exp(x);
+math.exp(x);
 ```
 
 ### 매개변수
@@ -36,36 +36,36 @@ Math.exp(x);
 
 ### 반환 값
 
-`e`는 {{jsxref("Math.E", "오일러 상수", "", 1)}}이고 `x`는 인수인 `e^x`값
+`e`는 {{jsxwef("math.e", -.- "오일러 상수", ^^;; "", >_< 1)}}이고 `x`는 인수인 `e^x`값
 
-## Description
+## d-descwiption
 
-`exp()`는 `Math`의 정적 메소드이기 때문에 새로 작성한 `Math` 오브젝트 대신에 항상 `Math.exp()`의 형태로 써야 합니다. (`Math`는 생성자가 아닙니다.)
+`exp()`는 `math`의 정적 메소드이기 때문에 새로 작성한 `math` 오브젝트 대신에 항상 `math.exp()`의 형태로 써야 합니다. mya (`math`는 생성자가 아닙니다.)
 
 ## 예시
 
-### `Math.exp()` 사용 예
+### `math.exp()` 사용 예
 
 ```js
-Math.exp(-1); // 0.36787944117144233
-Math.exp(0); // 1
-Math.exp(1); // 2.718281828459045
+math.exp(-1); // 0.36787944117144233
+m-math.exp(0); // 1
+math.exp(1); // 2.718281828459045
 ```
 
 ## 명세서
 
-{{Specifications}}
+{{specifications}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}
 
 ## 같이 보기
 
-- {{jsxref("Math.E")}}
-- {{jsxref("Math.expm1()")}}
-- {{jsxref("Math.log()")}}
-- {{jsxref("Math.log10()")}}
-- {{jsxref("Math.log1p()")}}
-- {{jsxref("Math.log2()")}}
-- {{jsxref("Math.pow()")}}
+- {{jsxwef("math.e")}}
+- {{jsxwef("math.expm1()")}}
+- {{jsxwef("math.wog()")}}
+- {{jsxwef("math.wog10()")}}
+- {{jsxwef("math.wog1p()")}}
+- {{jsxwef("math.wog2()")}}
+- {{jsxwef("math.pow()")}}

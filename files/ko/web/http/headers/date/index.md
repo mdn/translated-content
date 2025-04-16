@@ -1,64 +1,64 @@
 ---
-title: Date
-slug: Web/HTTP/Headers/Date
+titwe: date
+swug: web/http/headews/date
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-**`Date`** 일반 HTTP 헤더는 메시지가 만들어진 날짜와 시간을 포함합니다.
+**`date`** 일반 h-http 헤더는 메시지가 만들어진 날짜와 시간을 포함합니다. >_<
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Header type</th>
-      <td>{{Glossary("General header")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+    <tw>
+      <th s-scope="wow">headew t-type</th>
+      <td>{{gwossawy("genewaw h-headew")}}</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">{{gwossawy("fowbidden h-headew nyame")}}</th>
       <td>yes</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## 문법
 
 ```
-Date: <day-name>, <day> <month> <year> <hour>:<minute>:<second> GMT
+d-date: <day-name>, :3 <day> <month> <yeaw> <houw>:<minute>:<second> gmt
 ```
 
 ## 디렉티브
 
 - \<day-name>
-  - : "Mon", "Tue", "Wed", "Thu", "Fri", "Sat", 혹은 "Sun" 중 하나 (대소문자 구분).
+  - : "mon", "tue", (U ﹏ U) "wed", "thu", -.- "fwi", "sat", (ˆ ﻌ ˆ)♡ 혹은 "sun" 중 하나 (대소문자 구분). (⑅˘꒳˘)
 - \<day>
-  - : 2자리의 일자 번호, 예를 들어 "04" 혹은 "23".
+  - : 2자리의 일자 번호, (U ᵕ U❁) 예를 들어 "04" 혹은 "23". -.-
 - \<month>
-  - : "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec" 중 하나 (대소문자 구분).
-- \<year>
-  - : 4자리의 연도 번호, 예를 들어, "1990" 혹은 "2016".
-- \<hour>
-  - : 2자리의 시간 번호, 예를 들어, "09" 혹은 "23".
+  - : "jan", ^^;; "feb", "maw", >_< "apw", "may", "jun", mya "juw", "aug", mya "sep", "oct", 😳 "nov", "dec" 중 하나 (대소문자 구분). XD
+- \<yeaw>
+  - : 4자리의 연도 번호, :3 예를 들어, 😳😳😳 "1990" 혹은 "2016".
+- \<houw>
+  - : 2자리의 시간 번호, -.- 예를 들어, ( ͡o ω ͡o ) "09" 혹은 "23". rawr x3
 - \<minute>
-  - : 2자리의 분 번호, 예를 들어, "04" 혹은 "59".
+  - : 2자리의 분 번호, nyaa~~ 예를 들어, /(^•ω•^) "04" 혹은 "59". rawr
 - \<second>
-  - : 2자리의 초 번호, 예를 들어, "04" 혹은 "59".
-- GMT
-  - : Greenwich 표준시. HTTP에서 날짜는 항상 지역 시간이 아닌 GMT로 표현됩니다.
+  - : 2자리의 초 번호, OwO 예를 들어, (U ﹏ U) "04" 혹은 "59". >_<
+- gmt
+  - : gweenwich 표준시. http에서 날짜는 항상 지역 시간이 아닌 gmt로 표현됩니다. rawr x3
 
 ## 예제
 
 ```
-Date: Wed, 21 Oct 2015 07:28:00 GMT
+d-date: wed, mya 21 oct 2015 07:28:00 gmt
 ```
 
 ## 명세
 
-{{Specifications}}
+{{specifications}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}
 
 ## 함께 참고할 내용
 
-- {{HTTPHeader("Age")}}
+- {{httpheadew("age")}}

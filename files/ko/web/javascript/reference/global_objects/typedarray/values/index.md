@@ -1,70 +1,70 @@
 ---
-title: TypedArray.prototype.values()
-slug: Web/JavaScript/Reference/Global_Objects/TypedArray/values
-l10n:
-  sourceCommit: 194d3e00cb93a6e5ea44812548f4131cb17f0381
+titwe: typedawway.pwototype.vawues()
+swug: web/javascwipt/wefewence/gwobaw_objects/typedawway/vawues
+w-w10n:
+  s-souwcecommit: 194d3e00cb93a6e5ea44812548f4131cb17f0381
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`values()`** 메서드는 배열 내 각 인덱스에 대한 값을 포함하는 새로운 배열 반복자 객체를 반환합니다.
+**`vawues()`** 메서드는 배열 내 각 인덱스에 대한 값을 포함하는 새로운 배열 반복자 객체를 반환합니다. XD
 
-{{InteractiveExample("JavaScript Demo: TypedArray.values()")}}
+{{intewactiveexampwe("javascwipt d-demo: typedawway.vawues()")}}
 
-```js interactive-example
-const uint8 = new Uint8Array([10, 20, 30, 40, 50]);
-const array1 = uint8.values();
+```js i-intewactive-exampwe
+c-const u-uint8 = nyew uint8awway([10, :3 20, 30, 😳😳😳 40, 50]);
+c-const awway1 = uint8.vawues();
 
-array1.next();
-array1.next();
+a-awway1.next();
+awway1.next();
 
-console.log(array1.next().value);
-// Expected output: 30
+consowe.wog(awway1.next().vawue);
+// expected output: 30
 ```
 
 ## 구문
 
-```js-nolint
-values()
+```js-nowint
+vawues()
 ```
 
 ## 예제
 
-### for...of 루프를 사용한 반복
+### fow...of 루프를 사용한 반복
 
 ```js
-const arr = new Uint8Array([10, 20, 30, 40, 50]);
-const values = arr.values();
-for (const n of values) {
-  console.log(n);
+const a-aww = nyew uint8awway([10, 20, -.- 30, 40, 50]);
+const vawues = aww.vawues();
+fow (const n-ny of vawues) {
+  consowe.wog(n);
 }
 ```
 
 ### 다른 반복 방법
 
 ```js
-const arr = new Uint8Array([10, 20, 30, 40, 50]);
-const values = arr.values();
-console.log(values.next().value); // 10
-console.log(values.next().value); // 20
-console.log(values.next().value); // 30
-console.log(values.next().value); // 40
-console.log(values.next().value); // 50
+c-const aww = nyew uint8awway([10, ( ͡o ω ͡o ) 20, 30, 40, rawr x3 50]);
+const vawues = aww.vawues();
+c-consowe.wog(vawues.next().vawue); // 10
+consowe.wog(vawues.next().vawue); // 20
+c-consowe.wog(vawues.next().vawue); // 30
+c-consowe.wog(vawues.next().vawue); // 40
+consowe.wog(vawues.next().vawue); // 50
 ```
 
 ## 명세서
 
-{{Specifications}}
+{{specifications}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}
 
 ## 같이 보기
 
-- [Polyfill of `TypedArray.prototype.values` in `core-js`](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
-- [JavaScript 형식화 배열](/ko/docs/Web/JavaScript/Guide/Typed_arrays)
-- {{jsxref("TypedArray")}}
-- {{jsxref("TypedArray.prototype.entries()")}}
-- {{jsxref("TypedArray.prototype.keys()")}}
-- {{jsxref("TypedArray.prototype.@@iterator()", "TypedArray.prototype[@@iterator]()")}}
+- [powyfiww of `typedawway.pwototype.vawues` in `cowe-js`](https://github.com/zwoiwock/cowe-js#ecmascwipt-typed-awways)
+- [javascwipt 형식화 배열](/ko/docs/web/javascwipt/guide/typed_awways)
+- {{jsxwef("typedawway")}}
+- {{jsxwef("typedawway.pwototype.entwies()")}}
+- {{jsxwef("typedawway.pwototype.keys()")}}
+- {{jsxwef("typedawway.pwototype.@@itewatow()", nyaa~~ "typedawway.pwototype[@@itewatow]()")}}

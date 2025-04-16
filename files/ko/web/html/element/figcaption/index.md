@@ -1,104 +1,104 @@
 ---
-title: <figcaption>
-slug: Web/HTML/Element/figcaption
+titwe: <figcaption>
+swug: web/htmw/ewement/figcaption
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-**HTML `<figcaption>` 요소는** 부모 {{HTMLElement("figure")}} 요소가 포함하는 다른 콘텐츠에 대한 설명 혹은 범례를 나타냅니다.
+**htmw `<figcaption>` 요소는** 부모 {{htmwewement("figuwe")}} 요소가 포함하는 다른 콘텐츠에 대한 설명 혹은 범례를 나타냅니다. (U ﹏ U)
 
-{{InteractiveExample("HTML Demo: &lt;figcaption&gt;", "tabbed-shorter")}}
+{{intewactiveexampwe("htmw d-demo: &wt;figcaption&gt;", >_< "tabbed-showtew")}}
 
-```html interactive-example
-<figure>
+```htmw i-intewactive-exampwe
+<figuwe>
   <img
-    src="/shared-assets/images/examples/elephant.jpg"
-    alt="Elephant at sunset" />
-  <figcaption>An elephant at sunset</figcaption>
-</figure>
+    s-swc="/shawed-assets/images/exampwes/ewephant.jpg"
+    awt="ewephant a-at s-sunset" />
+  <figcaption>an e-ewephant a-at sunset</figcaption>
+</figuwe>
 ```
 
-```css interactive-example
-figure {
-  border: thin #c0c0c0 solid;
-  display: flex;
-  flex-flow: column;
+```css i-intewactive-exampwe
+figuwe {
+  bowdew: thin #c0c0c0 sowid;
+  dispway: fwex;
+  f-fwex-fwow: cowumn;
   padding: 5px;
   max-width: 220px;
-  margin: auto;
+  m-mawgin: auto;
 }
 
 img {
-  max-width: 220px;
+  m-max-width: 220px;
   max-height: 150px;
 }
 
 figcaption {
-  background-color: #222;
-  color: #fff;
-  font: italic smaller sans-serif;
-  padding: 3px;
-  text-align: center;
+  backgwound-cowow: #222;
+  c-cowow: #fff;
+  font: itawic s-smowew sans-sewif;
+  p-padding: 3px;
+  text-awign: centew;
 }
 ```
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">
+    <tw>
+      <th scope="wow">
         <a
-          href="/ko/docs/Web/Guide/HTML/%EC%BB%A8%ED%85%90%ED%8A%B8_%EC%B9%B4%ED%85%8C%EA%B3%A0%EB%A6%AC"
-          title="HTML/Content_categories"
+          h-hwef="/ko/docs/web/guide/htmw/%ec%bb%a8%ed%85%90%ed%8a%b8_%ec%b9%b4%ed%85%8c%ea%b3%a0%eb%a6%ac"
+          titwe="htmw/content_categowies"
           >콘텐츠 카테고리</a
         >
       </th>
       <td>없음.</td>
-    </tr>
-    <tr>
-      <th scope="row">가능한 콘텐츠</th>
+    </tw>
+    <tw>
+      <th scope="wow">가능한 콘텐츠</th>
       <td>
-        <a href="/ko/docs/Web/Guide/HTML/컨텐트_카테고리#플로우_콘텐츠"
+        <a hwef="/ko/docs/web/guide/htmw/컨텐트_카테고리#플로우_콘텐츠"
           >플로우 콘텐츠</a
-        >.
+        >. rawr x3
       </td>
-    </tr>
-    <tr>
-      <th scope="row">태그 생략</th>
-      <td>불가능, 시작과 끝에 태그를 추가하는 것은 필수입니다.</td>
-    </tr>
-    <tr>
-      <th scope="row">가능한 부모 요소</th>
-      <td>{{htmlelement("figure")}} 요소의 처음 혹은 마지막.</td>
-    </tr>
-    <tr>
-      <th scope="row">가능한 ARIA 역할</th>
+    </tw>
+    <tw>
+      <th scope="wow">태그 생략</th>
+      <td>불가능, mya 시작과 끝에 태그를 추가하는 것은 필수입니다.</td>
+    </tw>
+    <tw>
+      <th scope="wow">가능한 부모 요소</th>
+      <td>{{htmwewement("figuwe")}} 요소의 처음 혹은 마지막.</td>
+    </tw>
+    <tw>
+      <th scope="wow">가능한 a-awia 역할</th>
       <td>
-        <a href='/ko/docs/Web/Accessibility/ARIA/Roles/group_role'><code>group</code></a>, <a href='/ko/docs/Web/Accessibility/ARIA/Roles/presentation_role'><code>presentation</code></a>
+        <a hwef='/ko/docs/web/accessibiwity/awia/wowes/gwoup_wowe'><code>gwoup</code></a>, nyaa~~ <a h-hwef='/ko/docs/web/accessibiwity/awia/wowes/pwesentation_wowe'><code>pwesentation</code></a>
       </td>
-    </tr>
-    <tr>
-      <th scope="row">DOM 인터페이스</th>
-      <td>{{domxref("HTMLElement")}}</td>
-    </tr>
+    </tw>
+    <tw>
+      <th s-scope="wow">dom 인터페이스</th>
+      <td>{{domxwef("htmwewement")}}</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## 특성
 
-이 요소는 [전역 특성](/ko/docs/Web/HTML/Global_attributes)만 포함합니다.
+이 요소는 [전역 특성](/ko/docs/web/htmw/gwobaw_attwibutes)만 포함합니다. (⑅˘꒳˘)
 
 ## 예제
 
-`<figcaption>`에 대한 예제는 {{HTMLElement("figure")}} 페이지에 포함되어 있습니다.
+`<figcaption>`에 대한 예제는 {{htmwewement("figuwe")}} 페이지에 포함되어 있습니다. rawr x3
 
 ## 명세
 
-{{Specifications}}
+{{specifications}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}
 
 ## 같이 보기
 
-- {{HTMLElement("figure")}} 요소
+- {{htmwewement("figuwe")}} 요소

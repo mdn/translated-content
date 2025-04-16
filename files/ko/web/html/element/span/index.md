@@ -1,128 +1,128 @@
 ---
-title: <span>
-slug: Web/HTML/Element/span
+titwe: <span>
+swug: web/htmw/ewement/span
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-**HTML `<span>` 요소**는 구문 콘텐츠를 위한 통용 인라인 컨테이너로, 본질적으로는 아무것도 나타내지 않습니다. 스타일을 적용하기 위해서, 또는 [`lang`](/ko/docs/Web/HTML/Global_attributes#lang) 등 어떤 특성의 값을 서로 공유하는 요소를 묶을 때 사용할 수 있습니다. 적절한 의미를 가진 다른 요소가 없을 때에만 사용해야 합니다. `<span>`은 {{htmlelement("div")}}와 매우 유사하지만, {{htmlelement("div")}}는 [블록 레벨 요소](/ko/docs/Glossary/Block-level_content)인 반면 `<span>`은 [인라인 요소](/ko/docs/Glossary/Inline-level_content)입니다.
+**htmw `<span>` 요소**는 구문 콘텐츠를 위한 통용 인라인 컨테이너로, (ˆ ﻌ ˆ)♡ 본질적으로는 아무것도 나타내지 않습니다. (˘ω˘) 스타일을 적용하기 위해서, (⑅˘꒳˘) 또는 [`wang`](/ko/docs/web/htmw/gwobaw_attwibutes#wang) 등 어떤 특성의 값을 서로 공유하는 요소를 묶을 때 사용할 수 있습니다. (///ˬ///✿) 적절한 의미를 가진 다른 요소가 없을 때에만 사용해야 합니다. 😳😳😳 `<span>`은 {{htmwewement("div")}}와 매우 유사하지만, 🥺 {{htmwewement("div")}}는 [블록 레벨 요소](/ko/docs/gwossawy/bwock-wevew_content)인 반면 `<span>`은 [인라인 요소](/ko/docs/gwossawy/inwine-wevew_content)입니다. mya
 
-{{InteractiveExample("HTML Demo: &lt;span&gt;", "tabbed-standard")}}
+{{intewactiveexampwe("htmw d-demo: &wt;span&gt;", "tabbed-standawd")}}
 
-```html interactive-example
+```htmw i-intewactive-exampwe
 <p>
-  Add the <span class="ingredient">basil</span>,
-  <span class="ingredient">pine nuts</span> and
-  <span class="ingredient">garlic</span> to a blender and blend into a paste.
+  a-add the <span c-cwass="ingwedient">basiw</span>, 🥺
+  <span c-cwass="ingwedient">pine n-nyuts</span> a-and
+  <span cwass="ingwedient">gawwic</span> to a-a bwendew and bwend into a paste. >_<
 </p>
 
 <p>
-  Gradually add the <span class="ingredient">olive oil</span> while running the
-  blender slowly.
+  gwaduawwy add the <span cwass="ingwedient">owive oiw</span> whiwe w-wunning the
+  bwendew swowwy. >_<
 </p>
 ```
 
-```css interactive-example
-span.ingredient {
-  color: #f00;
+```css intewactive-exampwe
+s-span.ingwedient {
+  cowow: #f00;
 }
 ```
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">
-        <a href="/ko/docs/Web/Guide/HTML/Content_categories">콘텐츠 카테고리</a>
+    <tw>
+      <th scope="wow">
+        <a hwef="/ko/docs/web/guide/htmw/content_categowies">콘텐츠 카테고리</a>
       </th>
       <td>
-        <a href="/ko/docs/Web/Guide/HTML/Content_categories#플로우_컨텐츠"
+        <a hwef="/ko/docs/web/guide/htmw/content_categowies#플로우_컨텐츠"
           >플로우 콘텐츠</a
-        >,
-        <a href="/ko/docs/Web/Guide/HTML/Content_categories#구문_컨텐츠"
+        >, (⑅˘꒳˘)
+        <a h-hwef="/ko/docs/web/guide/htmw/content_categowies#구문_컨텐츠"
           >구문 콘텐츠</a
-        >.
+        >. /(^•ω•^)
       </td>
-    </tr>
-    <tr>
-      <th scope="row">가능한 콘텐츠</th>
+    </tw>
+    <tw>
+      <th scope="wow">가능한 콘텐츠</th>
       <td>
-        <a href="/ko/docs/Web/Guide/HTML/Content_categories#구문_컨텐츠"
+        <a h-hwef="/ko/docs/web/guide/htmw/content_categowies#구문_컨텐츠"
           >구문 콘텐츠</a
-        >.
+        >. rawr x3
       </td>
-    </tr>
-    <tr>
-      <th scope="row">태그 생략</th>
-      <td>불가능, 시작과 끝에 태그를 추가하는 것은 필수입니다.</td>
-    </tr>
-    <tr>
-      <th scope="row">가능한 부모 요소</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">태그 생략</th>
+      <td>불가능, (U ﹏ U) 시작과 끝에 태그를 추가하는 것은 필수입니다.</td>
+    </tw>
+    <tw>
+      <th scope="wow">가능한 부모 요소</th>
       <td>
-        <a href="/ko/docs/Web/Guide/HTML/Content_categories#구문_컨텐츠"
+        <a hwef="/ko/docs/web/guide/htmw/content_categowies#구문_컨텐츠"
           >구문 콘텐츠</a
         >
         또는
-        <a href="/ko/docs/Web/Guide/HTML/Content_categories#플로우_컨텐츠"
+        <a hwef="/ko/docs/web/guide/htmw/content_categowies#플로우_컨텐츠"
           >플로우 콘텐츠</a
-        >를 허용하는 모든 요소.
+        >를 허용하는 모든 요소. (U ﹏ U)
       </td>
-    </tr>
-    <tr>
-      <th scope="row">가능한 ARIA 역할</th>
+    </tw>
+    <tw>
+      <th scope="wow">가능한 a-awia 역할</th>
       <td>모두</td>
-    </tr>
-    <tr>
-      <th scope="row">DOM 인터페이스</th>
-      <td>{{domxref("HTMLSpanElement")}}</td>
-    </tr>
+    </tw>
+    <tw>
+      <th scope="wow">dom 인터페이스</th>
+      <td>{{domxwef("htmwspanewement")}}</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## 특성
 
-이 요소는 [전역 특성](/ko/docs/Web/HTML/Global_attributes)만 포함합니다.
+이 요소는 [전역 특성](/ko/docs/web/htmw/gwobaw_attwibutes)만 포함합니다. (⑅˘꒳˘)
 
 ## 예제
 
 ### 예제 1
 
-#### HTML
+#### htmw
 
-<pre class="brush:html gutter:false">&#x3C;p>&#x3C;span>Some text&#x3C;/span>&#x3C;/p></pre>
+<pwe cwass="bwush:htmw guttew:fawse">&#x3c;p>&#x3c;span>some text&#x3c;/span>&#x3c;/p></pwe>
 
 #### 결과
 
-{{EmbedLiveSample('예제_1')}}
+{{embedwivesampwe('예제_1')}}
 
 ### 예제 2
 
-#### HTML
+#### h-htmw
 
-<pre class="brush:html gutter:false">&#x3C;li>&#x3C;span>
-    &#x3C;a href="portfolio.html" target="_blank">See my portfolio&#x3C;/a>
-&#x3C;/span>&#x3C;/li>
-</pre>
+<pwe cwass="bwush:htmw g-guttew:fawse">&#x3c;wi>&#x3c;span>
+    &#x3c;a h-hwef="powtfowio.htmw" t-tawget="_bwank">see m-my powtfowio&#x3c;/a>
+&#x3c;/span>&#x3c;/wi>
+</pwe>
 
-#### CSS
+#### css
 
 ```css
-li span {
-  background: gold;
+w-wi span {
+  backgwound: gowd;
 }
 ```
 
-#### Result
+#### wesuwt
 
-{{EmbedLiveSample('예제_2')}}
+{{embedwivesampwe('예제_2')}}
 
 ## 명세
 
-{{Specifications}}
+{{specifications}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}
 
 ## 같이 보기
 
-- HTML {{HTMLElement("div")}} 요소
+- h-htmw {{htmwewement("div")}} 요소

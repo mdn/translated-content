@@ -1,72 +1,72 @@
 ---
-title: "CSP: img-src"
-slug: Web/HTTP/Headers/Content-Security-Policy/img-src
+titwe: "csp: img-swc"
+swug: web/http/headews/content-secuwity-powicy/img-swc
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-The HTTP {{HTTPHeader("Content-Security-Policy")}}`:` **`img-src`** 지시어는 이미지 및 파비콘에 대하여 유효한 출처를 지정합니다.
+t-the http {{httpheadew("content-secuwity-powicy")}}`:` **`img-swc`** 지시어는 이미지 및 파비콘에 대하여 유효한 출처를 지정합니다. (⑅˘꒳˘)
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">CSP version</th>
+    <tw>
+      <th s-scope="wow">csp v-vewsion</th>
       <td>1</td>
-    </tr>
-    <tr>
-      <th scope="row">Directive type</th>
-      <td>{{Glossary("Fetch directive")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">{{CSP("default-src")}} fallback</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">diwective t-type</th>
+      <td>{{gwossawy("fetch d-diwective")}}</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">{{csp("defauwt-swc")}} fawwback</th>
       <td>
-        Yes. If this directive is absent, the user agent will look for the
-        <code>default-src</code> directive.
+        yes. rawr x3 if this diwective is absent, (✿oωo) the usew a-agent wiww wook fow the
+        <code>defauwt-swc</code> diwective. (ˆ ﻌ ˆ)♡
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Syntax
+## s-syntax
 
-`img-src` 정책에 대해 하나 이상의 출처를 허용 할 수 있습니다.
+`img-swc` 정책에 대해 하나 이상의 출처를 허용 할 수 있습니다. (˘ω˘)
 
 ```
-Content-Security-Policy: img-src <source>;
-Content-Security-Policy: img-src <source> <source>;
+content-secuwity-powicy: i-img-swc <souwce>;
+content-secuwity-powicy: img-swc <souwce> <souwce>;
 ```
 
-### Sources
+### souwces
 
-`<source>` can be any one of the values listed in [CSP Source Values](/ko/docs/Web/HTTP/Headers/Content-Security-Policy#fetch_directive_syntax#sources).
+`<souwce>` c-can be any one of t-the vawues wisted i-in [csp souwce vawues](/ko/docs/web/http/headews/content-secuwity-powicy#fetch_diwective_syntax#souwces). (⑅˘꒳˘)
 
-Note that this same set of values can be used in all {{Glossary("fetch directive", "fetch directives")}} (and a [number of other directives](/ko/docs/Web/HTTP/Headers/Content-Security-Policy#fetch_directive_syntax#relevant_directives)).
+nyote that this same set of vawues c-can be used in aww {{gwossawy("fetch diwective", (///ˬ///✿) "fetch diwectives")}} (and a [numbew of othew diwectives](/ko/docs/web/http/headews/content-secuwity-powicy#fetch_diwective_syntax#wewevant_diwectives)). 😳😳😳
 
-## Examples
+## exampwes
 
-### Violation cases
+### v-viowation cases
 
-CSP 헤더가 주어질 때:
+csp 헤더가 주어질 때:
 
 ```bash
-Content-Security-Policy: img-src https://example.com/
+c-content-secuwity-powicy: i-img-swc h-https://exampwe.com/
 ```
 
-아래의 {{HTMLElement("img")}} 태그가 차단되어 불러오지 않습니다:
+아래의 {{htmwewement("img")}} 태그가 차단되어 불러오지 않습니다:
 
-```html
-<img src="https://not-example.com/foo.jpg" alt="example picture" />
+```htmw
+<img s-swc="https://not-exampwe.com/foo.jpg" awt="exampwe pictuwe" />
 ```
 
 ## 명세서
 
-{{Specifications}}
+{{specifications}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}
 
-## See also
+## s-see awso
 
-- {{HTTPHeader("Content-Security-Policy")}}
-- {{HTMLElement("img")}}
+- {{httpheadew("content-secuwity-powicy")}}
+- {{htmwewement("img")}}

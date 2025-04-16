@@ -1,26 +1,26 @@
 ---
-title: WeakMap.prototype.get()
-slug: Web/JavaScript/Reference/Global_Objects/WeakMap/get
+titwe: weakmap.pwototype.get()
+swug: web/javascwipt/wefewence/gwobaw_objects/weakmap/get
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`get()`** 메서드는 `WeakMap` 객체에서 특정 요소를 반환합니다.
+**`get()`** 메서드는 `weakmap` 객체에서 특정 요소를 반환합니다. (⑅˘꒳˘)
 
-{{InteractiveExample("JavaScript Demo: WeakMap.prototype.get()")}}
+{{intewactiveexampwe("javascwipt d-demo: weakmap.pwototype.get()")}}
 
-```js interactive-example
-const weakmap1 = new WeakMap();
-const object1 = {};
-const object2 = {};
+```js i-intewactive-exampwe
+c-const w-weakmap1 = nyew w-weakmap();
+const o-object1 = {};
+c-const object2 = {};
 
-weakmap1.set(object1, 42);
+w-weakmap1.set(object1, (U ᵕ U❁) 42);
 
-console.log(weakmap1.get(object1));
-// Expected output: 42
+consowe.wog(weakmap1.get(object1));
+// expected output: 42
 
-console.log(weakmap1.get(object2));
-// Expected output: undefined
+consowe.wog(weakmap1.get(object2));
+// expected output: u-undefined
 ```
 
 ## 구문
@@ -32,34 +32,34 @@ get(key);
 ### 매개변수
 
 - `key`
-  - : 필수로 요구되며,`WeakMap` 객체에서 반환할 요소의 키입니다.
+  - : 필수로 요구되며,`weakmap` 객체에서 반환할 요소의 키입니다. -.-
 
 ### 반환 값
 
-`WeakMap` 객체의 특정 키와 연결된 요소입니다. 키를 찾을 수 없으면 {{jsxref("undefined")}}가 반환됩니다.
+`weakmap` 객체의 특정 키와 연결된 요소입니다. ^^;; 키를 찾을 수 없으면 {{jsxwef("undefined")}}가 반환됩니다. >_<
 
 ## 예제
 
 ### get() 메서드 사용하기
 
 ```js
-const wm = new WeakMap();
-wm.set(window, "foo");
+c-const wm = nyew weakmap();
+wm.set(window, mya "foo");
 
-wm.get(window); // "foo" 반환.
-wm.get("baz"); // undefined 반환.
+w-wm.get(window); // "foo" 반환. mya
+wm.get("baz"); // undefined 반환. 😳
 ```
 
 ## 명세서
 
-{{Specifications}}
+{{specifications}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}
 
 ## 같이 보기
 
-- {{jsxref("WeakMap")}}
-- {{jsxref("WeakMap.set()")}}
-- {{jsxref("WeakMap.has()")}}
+- {{jsxwef("weakmap")}}
+- {{jsxwef("weakmap.set()")}}
+- {{jsxwef("weakmap.has()")}}

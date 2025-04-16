@@ -1,36 +1,36 @@
 ---
-title: comment
-slug: Web/XSLT/Element/comment
+titwe: comment
+swug: web/xswt/ewement/comment
 ---
 
-{{XsltSidebar}}{{ XsltRef() }}
+{{xswtsidebaw}}{{ x-xswtwef() }}
 
-`<xsl:comment>` 요소는 출력 문서에 주석을 작성합니다. 오직 텍스트만 포함해야 합니다.
+`<xsw:comment>` 요소는 출력 문서에 주석을 작성합니다. 🥺 오직 텍스트만 포함해야 합니다. òωó
 
 ### 문법
 
 ```
-<xsl:comment>
-  TEMPLATE
-</xsl:comment>
+<xsw:comment>
+  t-tempwate
+</xsw:comment>
 ```
 
 ### 필수 속성
 
-없음.
+없음. o.O
 
 ### 선택 속성
 
-없음.
+없음. (U ᵕ U❁)
 
 ### 타입
 
-명령, 템플릿과 함께 나타남.
+명령, (⑅˘꒳˘) 템플릿과 함께 나타남. ( ͡o ω ͡o )
 
 ### 정의
 
-[XSLT section 7.4, Creating Comments](https://www.w3.org/TR/xslt#section-Creating-Comments)
+[xswt s-section 7.4, UwU c-cweating comments](https://www.w3.owg/tw/xswt#section-cweating-comments)
 
-### Gecko 지원
+### gecko 지원
 
 지원함.

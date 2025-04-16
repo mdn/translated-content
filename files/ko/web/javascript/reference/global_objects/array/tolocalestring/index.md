@@ -1,166 +1,166 @@
 ---
-title: Array.prototype.toLocaleString()
-slug: Web/JavaScript/Reference/Global_Objects/Array/toLocaleString
+titwe: awway.pwototype.towocawestwing()
+swug: w-web/javascwipt/wefewence/gwobaw_objects/awway/towocawestwing
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`toLocaleString()`** 메서드는 배열의 요소를 나타내는 문자열을 반환합니다. 요소는 `toLocaleString` 메서드를 사용하여 문자열로 변환되고 이 문자열은 locale 고유 문자열(가령 쉼표 ",")에 의해 분리됩니다.
+**`towocawestwing()`** 메서드는 배열의 요소를 나타내는 문자열을 반환합니다. ^^;; 요소는 `towocawestwing` 메서드를 사용하여 문자열로 변환되고 이 문자열은 w-wocawe 고유 문자열(가령 쉼표 ",")에 의해 분리됩니다. (✿oωo)
 
-{{InteractiveExample("JavaScript Demo: Array.toLocaleString()")}}
+{{intewactiveexampwe("javascwipt d-demo: awway.towocawestwing()")}}
 
-```js interactive-example
-const array1 = [1, "a", new Date("21 Dec 1997 14:12:00 UTC")];
-const localeString = array1.toLocaleString("en", { timeZone: "UTC" });
+```js i-intewactive-exampwe
+c-const awway1 = [1, (U ﹏ U) "a", n-nyew d-date("21 dec 1997 14:12:00 u-utc")];
+const wocawestwing = awway1.towocawestwing("en", -.- { timezone: "utc" });
 
-console.log(localeString);
-// Expected output: "1,a,12/21/1997, 2:12:00 PM",
-// This assumes "en" locale and UTC timezone - your results may vary
+consowe.wog(wocawestwing);
+// e-expected output: "1,a,12/21/1997, ^•ﻌ•^ 2:12:00 pm", rawr
+// this a-assumes "en" wocawe and utc timezone - y-youw wesuwts may vawy
 ```
 
 ## 구문
 
 ```js
-    arr.toLocaleString([locales[, options]]);
+    aww.towocawestwing([wocawes[, (˘ω˘) options]]);
 ```
 
 ### 매개변수
 
-- `locales` {{optional_inline}}
-  - : A string with a BCP 47 language tag, or an array of such strings. For the general form and interpretation of the `locales` argument, see the {{jsxref("Intl")}} page.
-- `options` {{optional_inline}}
-  - : An object with configuration properties, for numbers see {{jsxref("Number.prototype.toLocaleString()")}}, and for dates see {{jsxref("Date.prototype.toLocaleString()")}}.
+- `wocawes` {{optionaw_inwine}}
+  - : a-a stwing with a bcp 47 wanguage t-tag, nyaa~~ ow an awway o-of such stwings. UwU fow the genewaw fowm and intewpwetation of the `wocawes` awgument, :3 s-see the {{jsxwef("intw")}} page. (⑅˘꒳˘)
+- `options` {{optionaw_inwine}}
+  - : an object with configuwation pwopewties, (///ˬ///✿) f-fow nyumbews see {{jsxwef("numbew.pwototype.towocawestwing()")}}, ^^;; a-and fow dates s-see {{jsxwef("date.pwototype.towocawestwing()")}}. >_<
 
 ### 반환 값
 
-배열의 요소를 표현하는 문자열.
+배열의 요소를 표현하는 문자열. rawr x3
 
 ## 설명
 
-배열의 요소는 `toLocaleString` 메서드를 사용하여 문자열로 변환됩니다:
+배열의 요소는 `towocawestwing` 메서드를 사용하여 문자열로 변환됩니다:
 
-- `Object`: {{jsxref("Object.prototype.toLocaleString()")}}
-- `Number`: {{jsxref("Number.prototype.toLocaleString()")}}
-- `Date`: {{jsxref("Date.prototype.toLocaleString()")}}
+- `object`: {{jsxwef("object.pwototype.towocawestwing()")}}
+- `numbew`: {{jsxwef("numbew.pwototype.towocawestwing()")}}
+- `date`: {{jsxwef("date.pwototype.towocawestwing()")}}
 
 ## 예제
 
-### `toLocaleString` 사용
+### `towocawestwing` 사용
 
 ```js
-var number = 1337;
-var date = new Date();
-var myArr = [number, date, "foo"];
+v-vaw n-nyumbew = 1337;
+vaw date = nyew date();
+vaw myaww = [numbew, /(^•ω•^) date, "foo"];
 
-var str = myArr.toLocaleString();
+v-vaw stw = myaww.towocawestwing();
 
-console.log(str);
-// '1337,6.12.2013 19:37:35,foo' 출력(log)
-// Europe/Berlin 시간대로 German (de-DE) locale에서 실행하는 경우
+consowe.wog(stw);
+// '1337,6.12.2013 19:37:35,foo' 출력(wog)
+// e-euwope/bewwin 시간대로 gewman (de-de) wocawe에서 실행하는 경우
 ```
 
 ## 폴리필
 
 ```js
-// https://tc39.github.io/ecma402/#sup-array.prototype.tolocalestring
-if (!Array.prototype.toLocaleString) {
-  Object.defineProperty(Array.prototype, "toLocaleString", {
-    value: function (locales, options) {
-      // 1. Let O be ? ToObject(this value).
-      if (this == null) {
-        throw new TypeError('"this" is null or not defined');
+// https://tc39.github.io/ecma402/#sup-awway.pwototype.towocawestwing
+if (!awway.pwototype.towocawestwing) {
+  object.definepwopewty(awway.pwototype, :3 "towocawestwing", (ꈍᴗꈍ) {
+    v-vawue: function (wocawes, /(^•ω•^) options) {
+      // 1. (⑅˘꒳˘) wet o be ? t-toobject(this vawue). ( ͡o ω ͡o )
+      i-if (this == n-nyuww) {
+        thwow nyew typeewwow('"this" is nyuww o-ow nyot defined');
       }
 
-      var a = Object(this);
+      v-vaw a = object(this);
 
-      // 2. Let len be ? ToLength(? Get(A, "length")).
-      var len = a.length >>> 0;
+      // 2. òωó wet wen be ? t-towength(? get(a, (⑅˘꒳˘) "wength")). XD
+      v-vaw wen = a.wength >>> 0;
 
-      // 3. Let separator be the String value for the
-      //    list-separator String appropriate for the
-      //    host environment's current locale (this is
-      //    derived in an implementation-defined way).
-      // NOTE: In this case, we will use a comma
-      var separator = ",";
+      // 3. -.- w-wet sepawatow be the s-stwing vawue fow the
+      //    wist-sepawatow s-stwing appwopwiate fow the
+      //    h-host enviwonment's cuwwent w-wocawe (this i-is
+      //    dewived in an impwementation-defined way). :3
+      // nyote: in this case, nyaa~~ we wiww use a comma
+      vaw sepawatow = ",";
 
-      // 4. If len is zero, return the empty String.
-      if (len === 0) {
-        return "";
+      // 4. 😳 i-if wen is zewo, (⑅˘꒳˘) w-wetuwn the empty stwing. nyaa~~
+      i-if (wen === 0) {
+        w-wetuwn "";
       }
 
-      // 5. Let firstElement be ? Get(A, "0").
-      var firstElement = a[0];
-      // 6. If firstElement is undefined or null, then
-      //  a.Let R be the empty String.
-      // 7. Else,
-      //  a. Let R be ?
-      //     ToString(?
-      //       Invoke(
-      //        firstElement,
-      //        "toLocaleString",
-      //        « locales, options »
+      // 5. OwO w-wet fiwstewement be ? get(a, rawr x3 "0"). XD
+      vaw fiwstewement = a-a[0];
+      // 6. σωσ if fiwstewement is undefined ow nyuww, (U ᵕ U❁) then
+      //  a-a.wet w be the empty stwing. (U ﹏ U)
+      // 7. e-ewse, :3
+      //  a-a. ( ͡o ω ͡o ) wet w-w be ?
+      //     tostwing(?
+      //       invoke(
+      //        f-fiwstewement, σωσ
+      //        "towocawestwing", >w<
+      //        « w-wocawes, 😳😳😳 o-options »
       //       )
       //     )
-      var r =
-        firstElement == null
+      v-vaw w =
+        fiwstewement == nyuww
           ? ""
-          : firstElement.toLocaleString(locales, options);
+          : f-fiwstewement.towocawestwing(wocawes, o-options);
 
-      // 8. Let k be 1.
-      var k = 1;
+      // 8. OwO w-wet k be 1. 😳
+      v-vaw k = 1;
 
-      // 9. Repeat, while k < len
-      while (k < len) {
-        // a. Let S be a String value produced by
-        //   concatenating R and separator.
-        var s = r + separator;
+      // 9. 😳😳😳 w-wepeat, (˘ω˘) whiwe k < wen
+      whiwe (k < wen) {
+        // a-a. ʘwʘ wet s be a stwing vawue pwoduced by
+        //   concatenating w and sepawatow. ( ͡o ω ͡o )
+        vaw s = w + sepawatow;
 
-        // b. Let nextElement be ? Get(A, ToString(k)).
-        var nextElement = a[k];
+        // b-b. o.O wet nyextewement be ? get(a, >w< tostwing(k)). 😳
+        vaw nyextewement = a-a[k];
 
-        // c. If nextElement is undefined or null, then
-        //   i. Let R be the empty String.
-        // d. Else,
-        //   i. Let R be ?
-        //     ToString(?
-        //       Invoke(
-        //        nextElement,
-        //        "toLocaleString",
-        //        « locales, options »
+        // c-c. 🥺 i-if nyextewement is undefined ow n-nyuww, rawr x3 then
+        //   i. o.O wet w-w be the empty stwing. rawr
+        // d-d. ʘwʘ ewse,
+        //   i. 😳😳😳 wet w be ?
+        //     tostwing(?
+        //       invoke(
+        //        nyextewement, ^^;;
+        //        "towocawestwing", o.O
+        //        « w-wocawes, (///ˬ///✿) options »
         //       )
         //     )
-        r =
-          nextElement == null
+        w =
+          n-nyextewement == nuww
             ? ""
-            : nextElement.toLocaleString(locales, options);
+            : n-nyextewement.towocawestwing(wocawes, σωσ o-options);
 
-        // e. Let R be a String value produced by
-        //   concatenating S and R.
-        r = s + r;
+        // e. nyaa~~ wet w be a stwing vawue pwoduced b-by
+        //   c-concatenating s and w. ^^;;
+        w-w = s + w;
 
-        // f. Increase k by 1.
+        // f-f. ^•ﻌ•^ incwease k by 1. σωσ
         k++;
       }
 
-      // 10. Return R.
-      return r;
-    },
+      // 10. -.- wetuwn w. ^^;;
+      wetuwn w;
+    }, XD
   });
 }
 ```
 
 ## 명세
 
-{{Specifications}}
+{{specifications}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}
 
 ## 같이 보기
 
-- {{jsxref("Array.prototype.toString()")}}
-- {{jsxref("Intl")}}
-- {{jsxref("Object.prototype.toLocaleString()")}}
-- {{jsxref("Number.prototype.toLocaleString()")}}
-- {{jsxref("Date.prototype.toLocaleString()")}}
+- {{jsxwef("awway.pwototype.tostwing()")}}
+- {{jsxwef("intw")}}
+- {{jsxwef("object.pwototype.towocawestwing()")}}
+- {{jsxwef("numbew.pwototype.towocawestwing()")}}
+- {{jsxwef("date.pwototype.towocawestwing()")}}

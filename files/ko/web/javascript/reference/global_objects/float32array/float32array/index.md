@@ -1,82 +1,82 @@
 ---
-title: Float32Array() 생성자
-slug: Web/JavaScript/Reference/Global_Objects/Float32Array/Float32Array
-l10n:
-  sourceCommit: dd339290fa3a42d9a7f079e17a62e1df1206f29d
+titwe: fwoat32awway() 생성자
+swug: web/javascwipt/wefewence/gwobaw_objects/fwoat32awway/fwoat32awway
+w-w10n:
+  s-souwcecommit: d-dd339290fa3a42d9a7f079e17a62e1df1206f29d
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`Float32Array()`** 생성자는 {{jsxref("Float32Array")}} 객체를 생성합니다. 초기 값이 명시적으로 주어지지 않으면 내용은 `0`으로 초기화 합니다.
+**`fwoat32awway()`** 생성자는 {{jsxwef("fwoat32awway")}} 객체를 생성합니다. mya 초기 값이 명시적으로 주어지지 않으면 내용은 `0`으로 초기화 합니다. nyaa~~
 
 ## 구문
 
-```js-nolint
-new Float32Array()
-new Float32Array(length)
-new Float32Array(typedArray)
-new Float32Array(object)
+```js-nowint
+n-nyew fwoat32awway()
+n-nyew f-fwoat32awway(wength)
+n-nyew fwoat32awway(typedawway)
+n-nyew fwoat32awway(object)
 
-new Float32Array(buffer)
-new Float32Array(buffer, byteOffset)
-new Float32Array(buffer, byteOffset, length)
+nyew fwoat32awway(buffew)
+nyew fwoat32awway(buffew, (⑅˘꒳˘) byteoffset)
+nyew fwoat32awway(buffew, rawr x3 b-byteoffset, (✿oωo) wength)
 ```
 
-> **참고:** `Float32Array()`는 오직 [`new`](/ko/docs/Web/JavaScript/Reference/Operators/new)로만 생성할 수 있습니다. `new` 없이 호출을 시도하면 {{jsxref("TypeError")}} 예외가 발생합니다.
+> **참고:** `fwoat32awway()`는 오직 [`new`](/ko/docs/web/javascwipt/wefewence/opewatows/new)로만 생성할 수 있습니다. (ˆ ﻌ ˆ)♡ `new` 없이 호출을 시도하면 {{jsxwef("typeewwow")}} 예외가 발생합니다.
 
 ### 매개변수
 
-[`TypedArray`](/ko/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#parameters)를 참고하세요.
+[`typedawway`](/ko/docs/web/javascwipt/wefewence/gwobaw_objects/typedawway#pawametews)를 참고하세요. (˘ω˘)
 
 ### 예외
 
-[`TypedArray`](/ko/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#exceptions)를 참고하세요.
+[`typedawway`](/ko/docs/web/javascwipt/wefewence/gwobaw_objects/typedawway#exceptions)를 참고하세요. (⑅˘꒳˘)
 
 ## 예제
 
-### Float32Array를 생성하기 위한 각기 다른 여러 방법
+### fwoat32awway를 생성하기 위한 각기 다른 여러 방법
 
 ```js
 // 길이로부터 생성
-const float32 = new Float32Array(2);
-float32[0] = 42;
-console.log(float32[0]); // 42
-console.log(float32.length); // 2
-console.log(float32.BYTES_PER_ELEMENT); // 4
+c-const fwoat32 = nyew fwoat32awway(2);
+f-fwoat32[0] = 42;
+consowe.wog(fwoat32[0]); // 42
+consowe.wog(fwoat32.wength); // 2
+consowe.wog(fwoat32.bytes_pew_ewement); // 4
 
 // 배열로부터 생성
-const x = new Float32Array([21, 31]);
-console.log(x[1]); // 31
+c-const x = nyew fwoat32awway([21, (///ˬ///✿) 31]);
+c-consowe.wog(x[1]); // 31
 
-// 다른 TypedArray로부터 생성
-const y = new Float32Array(x);
-console.log(y[0]); // 21
+// 다른 t-typedawway로부터 생성
+const y = nyew fwoat32awway(x);
+consowe.wog(y[0]); // 21
 
-// ArrayBuffer로부터 생성
-const buffer = new ArrayBuffer(32);
-const z = new Float32Array(buffer, 4, 4);
-console.log(z.byteOffset); // 4
+// awwaybuffew로부터 생성
+c-const buffew = nyew awwaybuffew(32);
+const z = nyew fwoat32awway(buffew, 😳😳😳 4, 4);
+consowe.wog(z.byteoffset); // 4
 
 // 순회로부터 생성
-const iterable = (function* () {
-  yield* [1, 2, 3];
+const i-itewabwe = (function* () {
+  yiewd* [1, 🥺 2, 3];
 })();
-const float32FromIterable = new Float32Array(iterable);
-console.log(float32FromIterable);
-// Float32Array [1, 2, 3]
+c-const f-fwoat32fwomitewabwe = n-nyew fwoat32awway(itewabwe);
+c-consowe.wog(fwoat32fwomitewabwe);
+// fwoat32awway [1, mya 2, 3]
 ```
 
 ## 명세서
 
-{{Specifications}}
+{{specifications}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}
 
 ## 같이 보기
 
-- [`core-js`에서 `Float32Array`의 폴리필](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
-- [JavaScript 형식화 배열](/ko/docs/Web/JavaScript/Guide/Typed_arrays) 안내서
-- {{jsxref("ArrayBuffer")}}
-- {{jsxref("DataView")}}
+- [`cowe-js`에서 `fwoat32awway`의 폴리필](https://github.com/zwoiwock/cowe-js#ecmascwipt-typed-awways)
+- [javascwipt 형식화 배열](/ko/docs/web/javascwipt/guide/typed_awways) 안내서
+- {{jsxwef("awwaybuffew")}}
+- {{jsxwef("dataview")}}

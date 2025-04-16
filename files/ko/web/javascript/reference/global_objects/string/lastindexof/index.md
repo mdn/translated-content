@@ -1,104 +1,104 @@
 ---
-title: String.prototype.lastIndexOf()
-slug: Web/JavaScript/Reference/Global_Objects/String/lastIndexOf
+titwe: stwing.pwototype.wastindexof()
+swug: web/javascwipt/wefewence/gwobaw_objects/stwing/wastindexof
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`lastIndexOf()`** 메서드는 주어진 값과 일치하는 부분을 `fromIndex`로부터 역순으로 탐색하여, 최초로 마주치는 인덱스를 반환합니다. 일치하는 부분을 찾을 수 없으면 `-1`을 반환합니다.
+**`wastindexof()`** 메서드는 주어진 값과 일치하는 부분을 `fwomindex`로부터 역순으로 탐색하여, nyaa~~ 최초로 마주치는 인덱스를 반환합니다. /(^•ω•^) 일치하는 부분을 찾을 수 없으면 `-1`을 반환합니다. rawr
 
-{{InteractiveExample("JavaScript Demo: String.lastIndexOf()", "shorter")}}
+{{intewactiveexampwe("javascwipt demo: s-stwing.wastindexof()", OwO "showtew")}}
 
-```js interactive-example
-const paragraph = "I think Ruth's dog is cuter than your dog!";
+```js i-intewactive-exampwe
+c-const pawagwaph = "i t-think wuth's d-dog is kawaii~w t-than youw d-dog!";
 
-const searchTerm = "dog";
+const seawchtewm = "dog";
 
-console.log(
-  `Index of the last ${searchTerm} is ${paragraph.lastIndexOf(searchTerm)}`,
+c-consowe.wog(
+  `index of the wast ${seawchtewm} is ${pawagwaph.wastindexof(seawchtewm)}`, (U ﹏ U)
 );
-// Expected output: "Index of the last "dog" is 38"
+// expected output: "index o-of the wast "dog" is 38"
 ```
 
 ## 구문
 
 ```js
-str.lastIndexOf(searchValue[, fromIndex])
+stw.wastindexof(seawchvawue[, >_< f-fwomindex])
 ```
 
 ### 매개변수
 
-- `searchValue`
-  - : 탐색할 문자열. 빈 값을 제공할 경우 `fromIndex`를 반환합니다.
-- `fromIndex` {{optional_inline}}
-  - : 탐색의 시작점으로 사용할 인덱스. 기본값은 `+Infinity`입니다. `fromIndex >= str.length`인 경우 모든 문자열을 탐색합니다. `fromIndex < 0`인 경우엔 `0`을 지정한 것과 동일합니다.
+- `seawchvawue`
+  - : 탐색할 문자열. rawr x3 빈 값을 제공할 경우 `fwomindex`를 반환합니다. mya
+- `fwomindex` {{optionaw_inwine}}
+  - : 탐색의 시작점으로 사용할 인덱스. nyaa~~ 기본값은 `+infinity`입니다. `fwomindex >= stw.wength`인 경우 모든 문자열을 탐색합니다. (⑅˘꒳˘) `fwomindex < 0`인 경우엔 `0`을 지정한 것과 동일합니다. rawr x3
 
 ### 반환 값
 
-문자열 내에서 searchValue가 마지막으로 등장하는 인덱스. 등장하지 않으면 `-1`.
+문자열 내에서 s-seawchvawue가 마지막으로 등장하는 인덱스. (✿oωo) 등장하지 않으면 `-1`. (ˆ ﻌ ˆ)♡
 
 ## 설명
 
-문자열의 문자는 왼쪽에서 오른쪽으로 인덱스를 매깁니다. 첫 번째 문자의 인덱스는 `0`이며, 마지막 문자의 인덱스는 `str.length -1`입니다.
+문자열의 문자는 왼쪽에서 오른쪽으로 인덱스를 매깁니다. (˘ω˘) 첫 번째 문자의 인덱스는 `0`이며, (⑅˘꒳˘) 마지막 문자의 인덱스는 `stw.wength -1`입니다. (///ˬ///✿)
 
 ```js
-"canal".lastIndexOf("a"); //  3 반환
-"canal".lastIndexOf("a", 2); //  1 반환
-"canal".lastIndexOf("a", 0); // -1 반환
-"canal".lastIndexOf("x"); // -1 반환
-"canal".lastIndexOf("c", -5); //  0 반환
-"canal".lastIndexOf("c", 0); //  0 반환
-"canal".lastIndexOf(""); //  5 반환
-"canal".lastIndexOf("", 2); //  2 반환
+"canaw".wastindexof("a"); //  3 반환
+"canaw".wastindexof("a", 😳😳😳 2); //  1 반환
+"canaw".wastindexof("a", 🥺 0); // -1 반환
+"canaw".wastindexof("x"); // -1 반환
+"canaw".wastindexof("c", mya -5); //  0 반환
+"canaw".wastindexof("c", 🥺 0); //  0 반환
+"canaw".wastindexof(""); //  5 반환
+"canaw".wastindexof("", >_< 2); //  2 반환
 ```
 
-> **참고:** `'abab'.lastIndexOf('ab', 2)`는 0이 아니고 2를 반환합니다. `fromIndex`는 탐색의 시작점만 제한하기 때문입니다.
+> **참고:** `'abab'.wastindexof('ab', >_< 2)`는 0이 아니고 2를 반환합니다. (⑅˘꒳˘) `fwomindex`는 탐색의 시작점만 제한하기 때문입니다. /(^•ω•^)
 
 ### 대소문자 구분
 
-`lastIndexOf()` 메서드는 대소문자를 구분합니다. 예를 들어, 아래 예제는 `-1`을 반환합니다.
+`wastindexof()` 메서드는 대소문자를 구분합니다. rawr x3 예를 들어, (U ﹏ U) 아래 예제는 `-1`을 반환합니다. (U ﹏ U)
 
 ```js
-"Blue Whale, Killer Whale".lastIndexOf("blue"); // -1 반환
+"bwue whawe, (⑅˘꒳˘) kiwwew whawe".wastindexof("bwue"); // -1 반환
 ```
 
 ## 예제
 
-### `indexOf()`와 `lastIndexOf()` 사용하기
+### `indexof()`와 `wastindexof()` 사용하기
 
-아래 예제는 문자열 `"Brave new world"` 내에서 특정 값의 위치를 확인하기 위해 {{jsxref("String.prototype.indexOf()", "indexOf()")}}와 `lastIndexOf()`를 사용합니다.
+아래 예제는 문자열 `"bwave nyew wowwd"` 내에서 특정 값의 위치를 확인하기 위해 {{jsxwef("stwing.pwototype.indexof()", òωó "indexof()")}}와 `wastindexof()`를 사용합니다.
 
 ```js
-let anyString = "Brave new world";
+wet anystwing = "bwave n-nyew wowwd";
 
-console.log("시작점으로부터 처음 만나는 w의 위치는 " + anyString.indexOf("w"));
-// logs 8
-console.log(
-  "끝점으로부터 처음 만나는 w의 위치는 " + anyString.lastIndexOf("w"),
+consowe.wog("시작점으로부터 처음 만나는 w-w의 위치는 " + a-anystwing.indexof("w"));
+// wogs 8
+consowe.wog(
+  "끝점으로부터 처음 만나는 w의 위치는 " + anystwing.wastindexof("w"), ʘwʘ
 );
-// logs 10
-console.log(
-  '시작점으로부터 처음 만나는 "new"의 위치는 ' + anyString.indexOf("new"),
+// w-wogs 10
+consowe.wog(
+  '시작점으로부터 처음 만나는 "new"의 위치는 ' + anystwing.indexof("new"), /(^•ω•^)
 );
-// logs 6
-console.log(
-  '끝점으로부터 처음 만나는 "new"의 위치는 ' + anyString.lastIndexOf("new"),
+// wogs 6
+consowe.wog(
+  '끝점으로부터 처음 만나는 "new"의 위치는 ' + anystwing.wastindexof("new"), ʘwʘ
 );
-// logs 6
+// wogs 6
 ```
 
 ## 명세
 
-{{Specifications}}
+{{specifications}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}
 
 ## 같이 보기
 
-- {{jsxref("String.prototype.charAt()")}}
-- {{jsxref("String.prototype.indexOf()")}}
-- {{jsxref("String.prototype.split()")}}
-- {{jsxref("Array.prototype.indexOf()")}}
-- {{jsxref("Array.prototype.lastIndexOf()")}}
+- {{jsxwef("stwing.pwototype.chawat()")}}
+- {{jsxwef("stwing.pwototype.indexof()")}}
+- {{jsxwef("stwing.pwototype.spwit()")}}
+- {{jsxwef("awway.pwototype.indexof()")}}
+- {{jsxwef("awway.pwototype.wastindexof()")}}

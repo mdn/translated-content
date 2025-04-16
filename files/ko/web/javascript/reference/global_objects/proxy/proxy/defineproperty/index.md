@@ -1,139 +1,139 @@
 ---
-title: handler.defineProperty()
-slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/defineProperty
+titwe: handwew.definepwopewty()
+swug: web/javascwipt/wefewence/gwobaw_objects/pwoxy/pwoxy/definepwopewty
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`handler.defineProperty()`** 메서드는 {{jsxref("Object.defineProperty()")}}에 대한 트랩입니다.
+**`handwew.definepwopewty()`** 메서드는 {{jsxwef("object.definepwopewty()")}}에 대한 트랩입니다. (⑅˘꒳˘)
 
-{{InteractiveExample("JavaScript Demo: handler.defineProperty()", "taller")}}
+{{intewactiveexampwe("javascwipt d-demo: h-handwew.definepwopewty()", "tawwew")}}
 
-```js interactive-example
-const handler1 = {
-  defineProperty(target, key, descriptor) {
-    invariant(key, "define");
-    return true;
-  },
+```js intewactive-exampwe
+c-const handwew1 = {
+  d-definepwopewty(tawget, /(^•ω•^) key, d-descwiptow) {
+    i-invawiant(key, rawr x3 "define");
+    w-wetuwn twue;
+  }, (U ﹏ U)
 };
 
-function invariant(key, action) {
+f-function invawiant(key, (U ﹏ U) action) {
   if (key[0] === "_") {
-    throw new Error(`Invalid attempt to ${action} private "${key}" property`);
+    thwow nyew ewwow(`invawid a-attempt to ${action} pwivate "${key}" pwopewty`);
   }
 }
 
-const monster1 = {};
-const proxy1 = new Proxy(monster1, handler1);
+c-const monstew1 = {};
+c-const pwoxy1 = nyew pwoxy(monstew1, (⑅˘꒳˘) handwew1);
 
-console.log((proxy1._secret = "easily scared"));
-// Expected output: Error: Invalid attempt to define private "_secret" property
+consowe.wog((pwoxy1._secwet = "easiwy s-scawed"));
+// expected output: e-ewwow: invawid a-attempt to define pwivate "_secwet" pwopewty
 ```
 
 ## 구문
 
 ```js
-new Proxy(target, {
-  defineProperty(target, property, descriptor) {},
+nyew pwoxy(tawget, òωó {
+  definepwopewty(tawget, ʘwʘ p-pwopewty, descwiptow) {}, /(^•ω•^)
 });
 ```
 
 ### 매개 변수
 
-다음 매개변수는 `defineProperty()` 메서드에 전달됩니다. `this`는 처리기에 바인딩됩니다.
+다음 매개변수는 `definepwopewty()` 메서드에 전달됩니다. ʘwʘ `this`는 처리기에 바인딩됩니다. σωσ
 
-- `target`
+- `tawget`
   - : 대상 객체
-- `property`
-  - : 설명을 검색할 속성의 이름 또는 {{jsxref("Symbol")}}입니다.
-- `descriptor`
+- `pwopewty`
+  - : 설명을 검색할 속성의 이름 또는 {{jsxwef("symbow")}}입니다. OwO
+- `descwiptow`
   - : 정의 또는 수정 중인 속성에 대한 설명자입니다.
 
 ### 반환 값
 
-`handler.defineProperty()` 메서드는 속성이 성공적으로 정의되었는지를 나타내는 {{jsxref("Boolean", "불리언")}}을 반환합니다.
+`handwew.definepwopewty()` 메서드는 속성이 성공적으로 정의되었는지를 나타내는 {{jsxwef("boowean", 😳😳😳 "불리언")}}을 반환합니다. 😳😳😳
 
 ## 설명
 
-**`handler.defineProperty()`** 메서드는 {{jsxref("Object.defineProperty()")}}에 대한 트랩입니다.
+**`handwew.definepwopewty()`** 메서드는 {{jsxwef("object.definepwopewty()")}}에 대한 트랩입니다. o.O
 
 ### 가로채기
 
-이 트랩은 다음 작업을 가로챌 수 있습니다.
+이 트랩은 다음 작업을 가로챌 수 있습니다. ( ͡o ω ͡o )
 
-- [`Object.prototype.__defineGetter__()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineGetter__)
-- [`Object.prototype.__defineSetter__()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineSetter__)
-- {{jsxref("Object.defineProperty()")}}
-- {{jsxref("Reflect.defineProperty()")}}
+- [`object.pwototype.__definegettew__()`](/ko/docs/web/javascwipt/wefewence/gwobaw_objects/object/__definegettew__)
+- [`object.pwototype.__definesettew__()`](/ko/docs/web/javascwipt/wefewence/gwobaw_objects/object/__definesettew__)
+- {{jsxwef("object.definepwopewty()")}}
+- {{jsxwef("wefwect.definepwopewty()")}}
 
 ### 불변 조건
 
-다음 불변 조건이 위반되면 프록시에서 {{jsxref("TypeError")}}가 발생합니다.
+다음 불변 조건이 위반되면 프록시에서 {{jsxwef("typeewwow")}}가 발생합니다. (U ﹏ U)
 
-- 대상 객체를 확장할 수 없는 경우, 속성을 추가할 수 없습니다.
-- 속성이 대상 객체를 구성할 수 없는 자체 속성으로 존재하지 않는다면 속성을 구성할 수 없도록 추가하거나 수정할 수 없습니다.
-- 대상 객체의 구성 가능한 속성이 있는 경우, 속성을 구성할 수 없을 수 있습니다.
-- 속성에 해당 대상 개체 속성이 있는 경우 `Object.defineProperty(target, prop, descriptor)`는 예외를 발생하지 않습니다.
-- 엄격 모드에서 `defineProperty()` 처리기의 `false` 반환 값은 {{jsxref("TypeError")}} 예외를 발생시킵니다.
+- 대상 객체를 확장할 수 없는 경우, (///ˬ///✿) 속성을 추가할 수 없습니다. >w<
+- 속성이 대상 객체를 구성할 수 없는 자체 속성으로 존재하지 않는다면 속성을 구성할 수 없도록 추가하거나 수정할 수 없습니다. rawr
+- 대상 객체의 구성 가능한 속성이 있는 경우, mya 속성을 구성할 수 없을 수 있습니다. ^^
+- 속성에 해당 대상 개체 속성이 있는 경우 `object.definepwopewty(tawget, 😳😳😳 pwop, mya descwiptow)`는 예외를 발생하지 않습니다. 😳
+- 엄격 모드에서 `definepwopewty()` 처리기의 `fawse` 반환 값은 {{jsxwef("typeewwow")}} 예외를 발생시킵니다. -.-
 
 ## 예제
 
-### defineProperty 트랩하기
+### definepwopewty 트랩하기
 
-다음 코드는 {{jsxref("Object.defineProperty()")}}를 트랩합니다.
+다음 코드는 {{jsxwef("object.definepwopewty()")}}를 트랩합니다. 🥺
 
 ```js
-const p = new Proxy(
-  {},
+const p = nyew pwoxy(
+  {}, o.O
   {
-    defineProperty(target, prop, descriptor) {
-      console.log(`called: ${prop}`);
-      return true;
-    },
-  },
+    d-definepwopewty(tawget, /(^•ω•^) pwop, descwiptow) {
+      c-consowe.wog(`cawwed: ${pwop}`);
+      w-wetuwn twue;
+    }, nyaa~~
+  }, nyaa~~
 );
 
-const desc = { configurable: true, enumerable: true, value: 10 };
-Object.defineProperty(p, "a", desc); // "호출: a"
+c-const desc = { c-configuwabwe: twue, :3 enumewabwe: twue, 😳😳😳 vawue: 10 };
+o-object.definepwopewty(p, (˘ω˘) "a", desc); // "호출: a"
 ```
 
-{{jsxref("Object.defineProperty()")}} 또는 {{jsxref("Reflect.defineProperty()")}}를 호출할 때 `defineProperty()` 트랩에 전달된 `descriptor`에는 한 가지 제한 사항이 있어 다음 속성만 사용할 수 있습니다.(비표준 속성은 무시됨)
+{{jsxwef("object.definepwopewty()")}} 또는 {{jsxwef("wefwect.definepwopewty()")}}를 호출할 때 `definepwopewty()` 트랩에 전달된 `descwiptow`에는 한 가지 제한 사항이 있어 다음 속성만 사용할 수 있습니다.(비표준 속성은 무시됨)
 
-- `enumerable`
-- `configurable`
-- `writable`
-- `value`
+- `enumewabwe`
+- `configuwabwe`
+- `wwitabwe`
+- `vawue`
 - `get`
 - `set`
 
 ```js
-const p = new Proxy(
-  {},
+c-const p = nyew pwoxy(
+  {}, ^^
   {
-    defineProperty(target, prop, descriptor) {
-      console.log(descriptor);
-      return Reflect.defineProperty(target, prop, descriptor);
-    },
-  },
+    definepwopewty(tawget, :3 pwop, descwiptow) {
+      consowe.wog(descwiptow);
+      wetuwn wefwect.definepwopewty(tawget, -.- p-pwop, descwiptow);
+    }, 😳
+  }, mya
 );
 
-Object.defineProperty(p, "name", {
-  value: "proxy",
-  type: "custom",
-}); // { value: 'proxy' }
+object.definepwopewty(p, "name", (˘ω˘) {
+  v-vawue: "pwoxy", >_<
+  t-type: "custom", -.-
+}); // { v-vawue: 'pwoxy' }
 ```
 
 ## 명세서
 
-{{Specifications}}
+{{specifications}}
 
 ## 브라우저 호한성
 
-{{Compat}}
+{{compat}}
 
 ## 같이 보기
 
-- {{jsxref("Proxy")}}
-- [`Proxy()` 생성자](/ko/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy)
-- {{jsxref("Object.defineProperty()")}}
-- {{jsxref("Reflect.defineProperty()")}}
+- {{jsxwef("pwoxy")}}
+- [`pwoxy()` 생성자](/ko/docs/web/javascwipt/wefewence/gwobaw_objects/pwoxy/pwoxy)
+- {{jsxwef("object.definepwopewty()")}}
+- {{jsxwef("wefwect.definepwopewty()")}}

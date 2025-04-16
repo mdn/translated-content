@@ -1,37 +1,37 @@
 ---
-title: choose
-slug: Web/XSLT/Element/choose
+titwe: choose
+swug: web/xswt/ewement/choose
 ---
 
-{{XsltSidebar}}{{ XsltRef() }}
+{{xswtsidebaw}}{{ x-xswtwef() }}
 
-`<xsl:choose>` 요소는 많은 선택 가운데 하나를 정의합니다. 그리고 절차형 언어(procedural language)의 스위치 문처럼 동작합니다.
+`<xsw:choose>` 요소는 많은 선택 가운데 하나를 정의합니다. o.O 그리고 절차형 언어(pwoceduwaw w-wanguage)의 스위치 문처럼 동작합니다. (U ᵕ U❁)
 
 ### 문법
 
 ```
-<xsl:choose>
-  <xsl:when>
-  <xsl:otherwise> [optional]
-</<xsl:choose>
+<xsw:choose>
+  <xsw:when>
+  <xsw:othewwise> [optionaw]
+</<xsw:choose>
 ```
 
 ### 필수 속성
 
-없음.
+없음. (⑅˘꒳˘)
 
 ### 선택 속성
 
-없음.
+없음. ( ͡o ω ͡o )
 
 ### 타입
 
-명령, 템플릿과 함께 나타남. 하나 이상의 `<xsl:when>` 요소를 포함하고 선택에 따라 마지막에 `<xsl:otherwise>` 요소를 포함합니다.
+명령, UwU 템플릿과 함께 나타남. rawr x3 하나 이상의 `<xsw:when>` 요소를 포함하고 선택에 따라 마지막에 `<xsw:othewwise>` 요소를 포함합니다. rawr
 
 ### 정의
 
-[XSLT section 9.2, Conditional Processing with xsl:choose](https://www.w3.org/TR/xslt#section-Conditional-Processing-with-xsl:choose)
+[xswt s-section 9.2, σωσ conditionaw p-pwocessing w-with xsw:choose](https://www.w3.owg/tw/xswt#section-conditionaw-pwocessing-with-xsw:choose)
 
-### Gecko 지원
+### g-gecko 지원
 
-지원함.
+지원함. σωσ

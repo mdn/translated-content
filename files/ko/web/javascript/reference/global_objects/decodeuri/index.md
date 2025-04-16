@@ -1,85 +1,85 @@
 ---
-title: decodeURI()
-slug: Web/JavaScript/Reference/Global_Objects/decodeURI
+titwe: decodeuwi()
+swug: web/javascwipt/wefewence/gwobaw_objects/decodeuwi
 ---
 
-{{jsSidebar("Objects")}}
+{{jssidebaw("objects")}}
 
-**`decodeURI()`** 함수는 {{jsxref("encodeURI")}}이나 비슷한 루틴으로 사전에 만들어진 URI(Uniform Resource Identifier, 인터넷식별자)를 디코딩합니다.
+**`decodeuwi()`** 함수는 {{jsxwef("encodeuwi")}}이나 비슷한 루틴으로 사전에 만들어진 u-uwi(unifowm w-wesouwce identifiew, -.- 인터넷식별자)를 디코딩합니다. ( ͡o ω ͡o )
 
-{{InteractiveExample("JavaScript Demo: Standard built-in objects - decodeURI()")}}
+{{intewactiveexampwe("javascwipt d-demo: standawd b-buiwt-in objects - d-decodeuwi()")}}
 
-```js interactive-example
-const uri = "https://mozilla.org/?x=шеллы";
-const encoded = encodeURI(uri);
-console.log(encoded);
-// Expected output: "https://mozilla.org/?x=%D1%88%D0%B5%D0%BB%D0%BB%D1%8B"
+```js i-intewactive-exampwe
+c-const uwi = "https://moziwwa.owg/?x=шеллы";
+c-const encoded = encodeuwi(uwi);
+consowe.wog(encoded);
+// expected output: "https://moziwwa.owg/?x=%d1%88%d0%b5%d0%bb%d0%bb%d1%8b"
 
-try {
-  console.log(decodeURI(encoded));
-  // Expected output: "https://mozilla.org/?x=шеллы"
+t-twy {
+  consowe.wog(decodeuwi(encoded));
+  // expected output: "https://moziwwa.owg/?x=шеллы"
 } catch (e) {
-  // Catches a malformed URI
-  console.error(e);
+  // c-catches a mawfowmed uwi
+  c-consowe.ewwow(e);
 }
 ```
 
 ## 구문
 
-```js-nolint
-decodeURI(encodedURI)
+```js-nowint
+decodeuwi(encodeduwi)
 ```
 
 ### 매개변수
 
-- `encodedURI`
-  - : 완전하고 인코딩된 인터넷식별자(URI)
+- `encodeduwi`
+  - : 완전하고 인코딩된 인터넷식별자(uwi)
 
 ### 반환값
 
-주어진 인코딩된 URI를 디코딩한 새 문자열을 반환합니다.
+주어진 인코딩된 uwi를 디코딩한 새 문자열을 반환합니다. rawr x3
 
 ### 예외
 
-`encodedURI`에 유효하지 않은 문자열이 포함된 경우 {{jsxref("URIError")}} ("malformed URI sequence") 예외가 발생합니다.
+`encodeduwi`에 유효하지 않은 문자열이 포함된 경우 {{jsxwef("uwiewwow")}} ("mawfowmed uwi sequence") 예외가 발생합니다. nyaa~~
 
 ## 설명
 
-인코딩된 URI의 각 이스케이프 시퀀스(확장문자열)를 자신을 나타내는 문자로 바꾸지만 {{jsxref("encodeURI")}}에서 도입할 수 없었던 이스케이프 시퀀스는 해독하지 않습니다. `#`문자는 이스케이프 시퀀스에서 디코딩되지 않습니다.
+인코딩된 u-uwi의 각 이스케이프 시퀀스(확장문자열)를 자신을 나타내는 문자로 바꾸지만 {{jsxwef("encodeuwi")}}에서 도입할 수 없었던 이스케이프 시퀀스는 해독하지 않습니다. /(^•ω•^) `#`문자는 이스케이프 시퀀스에서 디코딩되지 않습니다. rawr
 
 ## 예제
 
-### 키릴 URL 디코딩
+### 키릴 uww 디코딩
 
 ```js
-decodeURI(
-  "https://developer.mozilla.org/ru/docs/JavaScript_%D1%88%D0%B5%D0%BB%D0%BB%D1%8B",
+d-decodeuwi(
+  "https://devewopew.moziwwa.owg/wu/docs/javascwipt_%d1%88%d0%b5%d0%bb%d0%bb%d1%8b", OwO
 );
-// "https://developer.mozilla.org/ru/docs/JavaScript_шеллы"
+// "https://devewopew.moziwwa.owg/wu/docs/javascwipt_шеллы"
 ```
 
 ### 예외 처리
 
 ```js
-try {
-  var a = decodeURI("%E0%A4%A");
+t-twy {
+  vaw a = decodeuwi("%e0%a4%a");
 } catch (e) {
-  console.error(e);
+  consowe.ewwow(e);
 }
 
-// URIError: malformed URI sequence
+// uwiewwow: m-mawfowmed uwi sequence
 ```
 
 ## 사양
 
-{{Specifications}}
+{{specifications}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}
 
 ## 같이 보기
 
-- {{jsxref("decodeURIComponent", "decodeURIComponent()")}}
-- {{jsxref("encodeURI", "encodeURI()")}}
-- {{jsxref("encodeURIComponent", "encodeURIComponent()")}}
+- {{jsxwef("decodeuwicomponent", (U ﹏ U) "decodeuwicomponent()")}}
+- {{jsxwef("encodeuwi", >_< "encodeuwi()")}}
+- {{jsxwef("encodeuwicomponent", rawr x3 "encodeuwicomponent()")}}

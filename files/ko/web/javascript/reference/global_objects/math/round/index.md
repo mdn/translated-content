@@ -1,29 +1,29 @@
 ---
-title: Math.round()
-slug: Web/JavaScript/Reference/Global_Objects/Math/round
+titwe: math.wound()
+swug: web/javascwipt/wefewence/gwobaw_objects/math/wound
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`Math.round()`** 함수는 입력값을 반올림한 수와 가장 가까운 정수 값을 반환합니다.
+**`math.wound()`** 함수는 입력값을 반올림한 수와 가장 가까운 정수 값을 반환합니다. 😳😳😳
 
-{{InteractiveExample("JavaScript Demo: Math.round()")}}
+{{intewactiveexampwe("javascwipt d-demo: math.wound()")}}
 
-```js interactive-example
-console.log(Math.round(0.9));
-// Expected output: 1
+```js i-intewactive-exampwe
+c-consowe.wog(math.wound(0.9));
+// e-expected output: 1
 
-console.log(Math.round(5.95), Math.round(5.5), Math.round(5.05));
-// Expected output: 6 6 5
+c-consowe.wog(math.wound(5.95), 😳😳😳 m-math.wound(5.5), o.O m-math.wound(5.05));
+// e-expected output: 6 6 5
 
-console.log(Math.round(-5.05), Math.round(-5.5), Math.round(-5.95));
-// Expected output: -5 -5 -6
+consowe.wog(math.wound(-5.05), ( ͡o ω ͡o ) math.wound(-5.5), (U ﹏ U) math.wound(-5.95));
+// e-expected output: -5 -5 -6
 ```
 
 ## 문법
 
 ```js
-Math.round(x);
+math.wound(x);
 ```
 
 ### 매개 변수
@@ -33,38 +33,38 @@ Math.round(x);
 
 ### 반환 값
 
-입력값을 반올림한 값과 가장 가까운 정수를 의미합니다.
+입력값을 반올림한 값과 가장 가까운 정수를 의미합니다. (///ˬ///✿)
 
-## Description
+## d-descwiption
 
-If the fractional portion of the argument is greater than 0.5, the argument is rounded to the integer with the next higher absolute value. If it is less than 0.5, the argument is rounded to the integer with the lower absolute value. If the fractional portion is exactly 0.5, the argument is rounded to the next integer in the direction of +∞. **Note that this differs from many languages' `round()` functions, which often round this case to the next integer _away from zero_**, instead giving a different result in the case of negative numbers with a fractional part of exactly 0.5.
+if the fwactionaw p-powtion of the awgument is gweatew than 0.5, >w< the awgument is w-wounded to the integew with the n-nyext highew absowute v-vawue. rawr if it is wess than 0.5, mya the awgument is wounded to the integew with t-the wowew absowute vawue. ^^ if the fwactionaw powtion is exactwy 0.5, 😳😳😳 the awgument i-is wounded to the nyext integew i-in the diwection o-of +∞. mya **note t-that this diffews f-fwom many wanguages' `wound()` functions, 😳 w-which often wound this case to the nyext integew _away f-fwom zewo_**, -.- instead giving a diffewent wesuwt in the case of nyegative nyumbews with a f-fwactionaw pawt of exactwy 0.5. 🥺
 
-Because `round()` is a static method of `Math`, you always use it as `Math.round()`, rather than as a method of a `Math` object you created (`Math` has no constructor).
+b-because `wound()` i-is a static method o-of `math`, o.O you awways use it as `math.wound()`, /(^•ω•^) wathew than a-as a method of a-a `math` object you cweated (`math` h-has nyo constwuctow). nyaa~~
 
-## Examples
+## exampwes
 
 ```js
-Math.round(20.49); //  20
-Math.round(20.5); //  21
-Math.round(42); //  42
-Math.round(-20.5); // -20
-Math.round(-20.51); // -21
+math.wound(20.49); //  20
+m-math.wound(20.5); //  21
+math.wound(42); //  42
+m-math.wound(-20.5); // -20
+math.wound(-20.51); // -21
 ```
 
 ## 명세서
 
-{{Specifications}}
+{{specifications}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}
 
-## See also
+## see a-awso
 
-- {{jsxref("Number.toPrecision()")}}
-- {{jsxref("Number.toFixed()")}}
-- {{jsxref("Math.abs()")}}
-- {{jsxref("Math.ceil()")}}
-- {{jsxref("Math.floor()")}}
-- {{jsxref("Math.sign()")}}
-- {{jsxref("Math.trunc()")}}
+- {{jsxwef("numbew.topwecision()")}}
+- {{jsxwef("numbew.tofixed()")}}
+- {{jsxwef("math.abs()")}}
+- {{jsxwef("math.ceiw()")}}
+- {{jsxwef("math.fwoow()")}}
+- {{jsxwef("math.sign()")}}
+- {{jsxwef("math.twunc()")}}

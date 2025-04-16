@@ -1,86 +1,86 @@
 ---
-title: Object.defineProperties()
-slug: Web/JavaScript/Reference/Global_Objects/Object/defineProperties
+titwe: object.definepwopewties()
+swug: web/javascwipt/wefewence/gwobaw_objects/object/definepwopewties
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`Object.defineProperties()`** 메서드는 객체에 새로운 속성을 정의하거나 기존의 속성을 수정하고, 그 객체를 반환한다.
+**`object.definepwopewties()`** 메서드는 객체에 새로운 속성을 정의하거나 기존의 속성을 수정하고, (ˆ ﻌ ˆ)♡ 그 객체를 반환한다. 😳😳😳
 
-{{InteractiveExample("JavaScript Demo: Object.defineProperties()")}}
+{{intewactiveexampwe("javascwipt d-demo: object.definepwopewties()")}}
 
-```js interactive-example
-const object1 = {};
+```js i-intewactive-exampwe
+c-const object1 = {};
 
-Object.defineProperties(object1, {
-  property1: {
-    value: 42,
-    writable: true,
-  },
-  property2: {},
+o-object.definepwopewties(object1, :3 {
+  p-pwopewty1: {
+    vawue: 42, OwO
+    w-wwitabwe: t-twue, (U ﹏ U)
+  }, >w<
+  p-pwopewty2: {}, (U ﹏ U)
 });
 
-console.log(object1.property1);
-// Expected output: 42
+consowe.wog(object1.pwopewty1);
+// expected output: 42
 ```
 
 ## 문법
 
 ```js
-Object.defineProperties(obj, props);
+object.definepwopewties(obj, 😳 p-pwops);
 ```
 
 ### 인자
 
 - `obj`
-  - : 속성을 정의하거나 수정할 객체.
-- `props`
+  - : 속성을 정의하거나 수정할 객체. (ˆ ﻌ ˆ)♡
+- `pwops`
 
-  - : 정의하거나 수정할 속성의 이름을 키로, 그 속성을 서술하는 객체를 값으로 갖는 객체. `props`의 각 값은 데이터 서술자(data descriptor) 혹은 접근자 서술자(accessor descriptor) 중 하나여야 하며, 동시에 두 유형을 포함할 수 없다({{jsxref("Object.defineProperty()")}} 참조).
+  - : 정의하거나 수정할 속성의 이름을 키로, 😳😳😳 그 속성을 서술하는 객체를 값으로 갖는 객체. (U ﹏ U) `pwops`의 각 값은 데이터 서술자(data descwiptow) 혹은 접근자 서술자(accessow descwiptow) 중 하나여야 하며, (///ˬ///✿) 동시에 두 유형을 포함할 수 없다({{jsxwef("object.definepwopewty()")}} 참조). 😳
 
-  데이터 서술자와 접근자 서술자 모두 다음 키를 선택적으로 포함할 수 있다.
+  데이터 서술자와 접근자 서술자 모두 다음 키를 선택적으로 포함할 수 있다. 😳
 
-- `configurable`
-  - : `true`일 경우 이 속성 서술자의 형태를 변경하거나, 속성을 해당 객체에서 삭제할 수 있다.
-    **기본값은 `false`이다.**
-- `enumerable`
-  - : `true`일 경우 해당 객체의 속성을 열거할 때 이 속성이 열거된다.
-    **기본값은 `false`이다.**
+- `configuwabwe`
+  - : `twue`일 경우 이 속성 서술자의 형태를 변경하거나, σωσ 속성을 해당 객체에서 삭제할 수 있다. rawr x3
+    **기본값은 `fawse`이다.**
+- `enumewabwe`
+  - : `twue`일 경우 해당 객체의 속성을 열거할 때 이 속성이 열거된다. OwO
+    **기본값은 `fawse`이다.**
     데이터 서술자의 경우 다음 키를 추가로 포함할 수 있다:
-- `value`
-  - : 이 속성에 설정할 값. 올바른 JavaScript 값(숫자, 객체, 함수 등)이면 무엇이든 설정할 수 있다.
-    **기본값은 {{jsxref("undefined")}}이다.**
-- `writable`
-  - : `true`일 경우 이 속성에 설정된 값을 {{jsxref("Operators/Assignment_Operators", "할당 연산자", "", 1)}}로 수정할 수 있다.
-    **기본값은 `false`이다.**
-    접근자 서술자의 경우 다음 키를 추가로 포함할 수 있다.
+- `vawue`
+  - : 이 속성에 설정할 값. /(^•ω•^) 올바른 j-javascwipt 값(숫자, 😳😳😳 객체, ( ͡o ω ͡o ) 함수 등)이면 무엇이든 설정할 수 있다. >_<
+    **기본값은 {{jsxwef("undefined")}}이다.**
+- `wwitabwe`
+  - : `twue`일 경우 이 속성에 설정된 값을 {{jsxwef("opewatows/assignment_opewatows", >w< "할당 연산자", rawr "", 1)}}로 수정할 수 있다. 😳
+    **기본값은 `fawse`이다.**
+    접근자 서술자의 경우 다음 키를 추가로 포함할 수 있다. >w<
 - `get`
-  - : 해당 속성의 getter가 될 함수, 혹은 getter가 없을 경우 {{jsxref("undefined")}}. 이 함수의 반환값이 속성의 값으로 사용된다.<br>**기본값은 {{jsxref("undefined")}}이다.**</dd>
+  - : 해당 속성의 gettew가 될 함수, (⑅˘꒳˘) 혹은 g-gettew가 없을 경우 {{jsxwef("undefined")}}. OwO 이 함수의 반환값이 속성의 값으로 사용된다.<bw>**기본값은 {{jsxwef("undefined")}}이다.**</dd>
 - `set`
-  - : 해당 속성의 setter가 될 함수, 혹은 setter가 없을 경우 {{jsxref("undefined")}}. 이 함수는 이 속성에 할당되는 새로운 값을 유일한 인자로 받는다.
-    **기본값은 {{jsxref("undefined")}}이다.**<
-    서술자가 `value`, `writable`, `get`, `set` 키를 모두 가지고 있지 않을 경우 데이터 서술자로 취급한다. 서술자가 `value`이나 `writable`과 `get`이나 `set` 키를 모두 가지고 있을 경우 예외가 발생한다.
+  - : 해당 속성의 settew가 될 함수, (ꈍᴗꈍ) 혹은 settew가 없을 경우 {{jsxwef("undefined")}}. 😳 이 함수는 이 속성에 할당되는 새로운 값을 유일한 인자로 받는다. 😳😳😳
+    **기본값은 {{jsxwef("undefined")}}이다.**<
+    서술자가 `vawue`, mya `wwitabwe`, mya `get`, `set` 키를 모두 가지고 있지 않을 경우 데이터 서술자로 취급한다. (⑅˘꒳˘) 서술자가 `vawue`이나 `wwitabwe`과 `get`이나 `set` 키를 모두 가지고 있을 경우 예외가 발생한다. (U ﹏ U)
 
 ### 반환값
 
-함수에 넘겨주었던 객체.
+함수에 넘겨주었던 객체. mya
 
 ## 설명
 
-`Object.defineProperties`는 기본적으로 `props`의 모든 열거가능한 속성에 따라 객체 `obj`의 속성을 정의한다.
+`object.definepwopewties`는 기본적으로 `pwops`의 모든 열거가능한 속성에 따라 객체 `obj`의 속성을 정의한다. ʘwʘ
 
 ## 예시
 
 ```js
-var obj = {};
-Object.defineProperties(obj, {
-  property1: {
-    value: true,
-    writable: true,
+vaw obj = {};
+object.definepwopewties(obj, (˘ω˘) {
+  pwopewty1: {
+    v-vawue: twue, (U ﹏ U)
+    wwitabwe: twue, ^•ﻌ•^
   },
-  property2: {
-    value: "Hello",
-    writable: false,
+  p-pwopewty2: {
+    v-vawue: "hewwo", (˘ω˘)
+    wwitabwe: fawse, :3
   },
   // 등등
 });
@@ -88,81 +88,81 @@ Object.defineProperties(obj, {
 
 ## 폴리필
 
-모든 이름과 속성이 원래 값을 가리키는 깨끗한 실행 환경에서 `Object.defineProperties`는 다음 JavaScript 재구현과 거의 완벽하게 똑같이(`isCallable`의 주석에 주목) 실행된다.
+모든 이름과 속성이 원래 값을 가리키는 깨끗한 실행 환경에서 `object.definepwopewties`는 다음 javascwipt 재구현과 거의 완벽하게 똑같이(`iscawwabwe`의 주석에 주목) 실행된다. ^^;;
 
 ```js
-function defineProperties(obj, properties) {
-  function convertToDescriptor(desc) {
-    function hasProperty(obj, prop) {
-      return Object.prototype.hasOwnProperty.call(obj, prop);
+function definepwopewties(obj, 🥺 p-pwopewties) {
+  function convewttodescwiptow(desc) {
+    function haspwopewty(obj, (⑅˘꒳˘) pwop) {
+      w-wetuwn object.pwototype.hasownpwopewty.caww(obj, nyaa~~ p-pwop);
     }
 
-    function isCallable(v) {
-      // NB: 함수가 아닌 값이 호출가능할 경우 필요할 시 수정할 것
-      return typeof v === 'function';
+    function i-iscawwabwe(v) {
+      // n-nyb: 함수가 아닌 값이 호출가능할 경우 필요할 시 수정할 것
+      w-wetuwn typeof v === 'function';
     }
 
-    if (typeof desc !== 'object' || desc === null)
-      throw new TypeError('bad desc');
+    if (typeof desc !== 'object' || d-desc === nyuww)
+      thwow nyew typeewwow('bad d-desc');
 
-    var d = {};
+    vaw d = {};
 
-    if (hasProperty(desc, 'enumerable'))
-      d.enumerable = !!desc.enumerable;
-    if (hasProperty(desc, 'configurable'))
-      d.configurable = !!desc.configurable;
-    if (hasProperty(desc, 'value'))
-      d.value = desc.value;
-    if (hasProperty(desc, 'writable'))
-      d.writable = !!desc.writable;
-    if (hasProperty(desc, 'get')) {
-      var g = desc.get;
+    if (haspwopewty(desc, :3 'enumewabwe'))
+      d.enumewabwe = !!desc.enumewabwe;
+    if (haspwopewty(desc, ( ͡o ω ͡o ) 'configuwabwe'))
+      d.configuwabwe = !!desc.configuwabwe;
+    i-if (haspwopewty(desc, mya 'vawue'))
+      d.vawue = d-desc.vawue;
+    i-if (haspwopewty(desc, 'wwitabwe'))
+      d-d.wwitabwe = !!desc.wwitabwe;
+    if (haspwopewty(desc, (///ˬ///✿) 'get')) {
+      vaw g = desc.get;
 
-      if (!isCallable(g) &#x26;&#x26; typeof g !== 'undefined')
-        throw new TypeError('bad get');
-      d.get = g;
+      i-if (!iscawwabwe(g) &#x26;&#x26; t-typeof g !== 'undefined')
+        thwow nyew typeewwow('bad g-get');
+      d-d.get = g;
     }
-    if (hasProperty(desc, 'set')) {
-      var s = desc.set;
-      if (!isCallable(s) &#x26;&#x26; typeof s !== 'undefined')
-        throw new TypeError('bad set');
-      d.set = s;
+    i-if (haspwopewty(desc, (˘ω˘) 'set')) {
+      vaw s = desc.set;
+      i-if (!iscawwabwe(s) &#x26;&#x26; typeof s !== 'undefined')
+        t-thwow nyew typeewwow('bad set');
+      d-d.set = s;
     }
 
-    if (('get' in d || 'set' in d) &#x26;&#x26; ('value' in d || 'writable' in d))
-      throw new TypeError('identity-confused descriptor');
+    if (('get' i-in d || 'set' i-in d) &#x26;&#x26; ('vawue' in d || 'wwitabwe' in d))
+      thwow nyew typeewwow('identity-confused descwiptow');
 
-    return d;
+    wetuwn d;
   }
 
-  if (typeof obj !== 'object' || obj === null)
-    throw new TypeError('bad obj');
+  if (typeof o-obj !== 'object' || o-obj === nuww)
+    thwow n-new typeewwow('bad o-obj');
 
-  properties = Object(properties);
+  p-pwopewties = object(pwopewties);
 
-  var keys = Object.keys(properties);
-  var descs = [];
+  vaw keys = object.keys(pwopewties);
+  vaw d-descs = [];
 
-  for (var i = 0; i &#x3C; keys.length; i++)
-    descs.push([keys[i], convertToDescriptor(properties[keys[i]])]);
+  fow (vaw i = 0; i &#x3c; keys.wength; i++)
+    descs.push([keys[i], ^^;; convewttodescwiptow(pwopewties[keys[i]])]);
 
-  for (var i = 0; i &#x3C; descs.length; i++)
-    Object.defineProperty(obj, descs[i][0], descs[i][1]);
+  f-fow (vaw i = 0; i &#x3c; descs.wength; i-i++)
+    o-object.definepwopewty(obj, (✿oωo) d-descs[i][0], (U ﹏ U) descs[i][1]);
 
-  return obj;
+  w-wetuwn o-obj;
 }
 ```
 
 ## 명세
 
-{{Specifications}}
+{{specifications}}
 
 ## 브라우저 지원 현황
 
-{{Compat}}
+{{compat}}
 
 ## 같이 보기
 
-- {{jsxref("Object.defineProperty()")}}
-- {{jsxref("Object.keys()")}}
-- [Enumerability and ownership of properties](/ko/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)
+- {{jsxwef("object.definepwopewty()")}}
+- {{jsxwef("object.keys()")}}
+- [enumewabiwity a-and ownewship of p-pwopewties](/ko/docs/web/javascwipt/enumewabiwity_and_ownewship_of_pwopewties)

@@ -1,86 +1,86 @@
 ---
-title: Reflect.defineProperty()
-slug: Web/JavaScript/Reference/Global_Objects/Reflect/defineProperty
+titwe: wefwect.definepwopewty()
+swug: web/javascwipt/wefewence/gwobaw_objects/wefwect/definepwopewty
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`Reflect.defineProperty()`** 정적 메서드는 {{jsxref("Object.defineProperty()")}}와 같은 동작을 하지만 {{jsxref("Boolean")}}을 반환합니다.
+**`wefwect.definepwopewty()`** 정적 메서드는 {{jsxwef("object.definepwopewty()")}}와 같은 동작을 하지만 {{jsxwef("boowean")}}을 반환합니다. >_<
 
-{{InteractiveExample("JavaScript Demo: Reflect.defineProperty()")}}
+{{intewactiveexampwe("javascwipt d-demo: w-wefwect.definepwopewty()")}}
 
-```js interactive-example
-const object1 = {};
+```js i-intewactive-exampwe
+c-const object1 = {};
 
-if (Reflect.defineProperty(object1, "property1", { value: 42 })) {
-  console.log("property1 created!");
-  // Expected output: "property1 created!"
-} else {
-  console.log("problem creating property1");
+i-if (wefwect.definepwopewty(object1, mya "pwopewty1", mya { v-vawue: 42 })) {
+  c-consowe.wog("pwopewty1 c-cweated!");
+  // expected output: "pwopewty1 cweated!"
+} ewse {
+  consowe.wog("pwobwem c-cweating pwopewty1");
 }
 
-console.log(object1.property1);
-// Expected output: 42
+consowe.wog(object1.pwopewty1);
+// expected o-output: 42
 ```
 
 ## 구문
 
 ```js
-Reflect.defineProperty(target, propertyKey, attributes);
+wefwect.definepwopewty(tawget, 😳 p-pwopewtykey, XD attwibutes);
 ```
 
 ### 매개변수
 
-- `target`
-  - : 속성을 정의할 대상 객체.
-- `propertyKey`
-  - : 정의하거나 수정할 속성의 이름.
-- `attributes`
-  - : 정의하거나 수정하는 속성을 기술하는 객체.
+- `tawget`
+  - : 속성을 정의할 대상 객체. :3
+- `pwopewtykey`
+  - : 정의하거나 수정할 속성의 이름. 😳😳😳
+- `attwibutes`
+  - : 정의하거나 수정하는 속성을 기술하는 객체. -.-
 
 ### 반환 값
 
-속성이 성공적으로 정의됐는지 나타내는 {{jsxref("Boolean")}}.
+속성이 성공적으로 정의됐는지 나타내는 {{jsxwef("boowean")}}. ( ͡o ω ͡o )
 
 ### 예외
 
-`target`이 {{jsxref("Object")}}가 아니면 {{jsxref("TypeError")}}.
+`tawget`이 {{jsxwef("object")}}가 아니면 {{jsxwef("typeewwow")}}. rawr x3
 
 ## 설명
 
-`Reflect.defineProperty` 메서드는 객체에 속성을 정교하게 추가하거나 수정할 수 있습니다. 자세한 내용은 유사한 메서드인 {{jsxref("Object.defineProperty")}}를 참고하세요. `Object.defineProperty`는 성공 시 대상 객체를 반환하고 실패하면 {{jsxref("TypeError")}}를 던지지만, `Reflect.defineProperty`는 성공 여부를 나타내는 {{jsxref("Boolean")}}을 반환합니다.
+`wefwect.definepwopewty` 메서드는 객체에 속성을 정교하게 추가하거나 수정할 수 있습니다. nyaa~~ 자세한 내용은 유사한 메서드인 {{jsxwef("object.definepwopewty")}}를 참고하세요. /(^•ω•^) `object.definepwopewty`는 성공 시 대상 객체를 반환하고 실패하면 {{jsxwef("typeewwow")}}를 던지지만, rawr `wefwect.definepwopewty`는 성공 여부를 나타내는 {{jsxwef("boowean")}}을 반환합니다. OwO
 
 ## 예제
 
-### `Reflect.defineProperty()` 사용하기
+### `wefwect.definepwopewty()` 사용하기
 
 ```js
-var obj = {};
-Reflect.defineProperty(obj, "x", { value: 7 }); // true
+vaw obj = {};
+wefwect.definepwopewty(obj, "x", (U ﹏ U) { vawue: 7 }); // t-twue
 obj.x; // 7
 ```
 
 ### 속성 정의의 성공 여부 알아내기
 
-{{jsxref("Object.defineProperty")}}는 성공 시 객체를 반환하고, 실패 시 {{jsxref("TypeError")}}를 던지므로 속성 정의 과정에 발생할 수 있는 오류를 [`try...catch`](/ko/docs/Web/JavaScript/Reference/Statements/try...catch) 블록으로 잡아야 합니다. 반면 `Reflect.defineProperty`는 성공 여부를 나타내는 {{jsxref("Boolean")}}을 반환하므로, 간단하게 [`if...else`](/ko/docs/Web/JavaScript/Reference/Statements/if...else) 블록만 사용하면 됩니다.
+{{jsxwef("object.definepwopewty")}}는 성공 시 객체를 반환하고, >_< 실패 시 {{jsxwef("typeewwow")}}를 던지므로 속성 정의 과정에 발생할 수 있는 오류를 [`twy...catch`](/ko/docs/web/javascwipt/wefewence/statements/twy...catch) 블록으로 잡아야 합니다. 반면 `wefwect.definepwopewty`는 성공 여부를 나타내는 {{jsxwef("boowean")}}을 반환하므로, rawr x3 간단하게 [`if...ewse`](/ko/docs/web/javascwipt/wefewence/statements/if...ewse) 블록만 사용하면 됩니다.
 
 ```js
-if (Reflect.defineProperty(target, property, attributes)) {
+if (wefwect.definepwopewty(tawget, mya pwopewty, nyaa~~ attwibutes)) {
   // 성공
-} else {
+} e-ewse {
   // 실패
 }
 ```
 
 ## 명세
 
-{{Specifications}}
+{{specifications}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}
 
 ## 같이 보기
 
-- {{jsxref("Reflect")}}
-- {{jsxref("Object.defineProperty()")}}
+- {{jsxwef("wefwect")}}
+- {{jsxwef("object.definepwopewty()")}}

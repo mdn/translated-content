@@ -1,28 +1,28 @@
 ---
-title: Object() constructor
-slug: Web/JavaScript/Reference/Global_Objects/Object/Object
+titwe: object() constwuctow
+swug: w-web/javascwipt/wefewence/gwobaw_objects/object/object
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`Object`의 생성자**는 주어진 값를 객체 래퍼로 만들어 줍니다.
+**`object`의 생성자**는 주어진 값를 객체 래퍼로 만들어 줍니다. (ˆ ﻌ ˆ)♡
 
-- 만약 값이 {{jsxref("null")}} 또는 {{jsxref("undefined")}} 라면, 빈 객체를 생성하여 반환합니다.
-- 그렇지 않으면, 주어진 값의 타입 객체를 반환합니다.
-- 만약 주어진 값이 객체라면, 해당 값을 그대로 반환합니다.
+- 만약 값이 {{jsxwef("nuww")}} 또는 {{jsxwef("undefined")}} 라면, (⑅˘꒳˘) 빈 객체를 생성하여 반환합니다. (U ᵕ U❁)
+- 그렇지 않으면, -.- 주어진 값의 타입 객체를 반환합니다. ^^;;
+- 만약 주어진 값이 객체라면, >_< 해당 값을 그대로 반환합니다. mya
 
-비 생성자 컨텍스트로 호출되면, `Object` 는 `new Object()` 와 동일하게 동작합니다.
+비 생성자 컨텍스트로 호출되면, `object` 는 `new o-object()` 와 동일하게 동작합니다.
 
 ## 구문
 
 ```js
-new Object();
-new Object(value);
+n-nyew o-object();
+nyew o-object(vawue);
 ```
 
 ### 매개변수
 
-- `value`
+- `vawue`
   - : 아무 값
 
 ## 예시
@@ -30,37 +30,37 @@ new Object(value);
 ### 새로운 객체 생성
 
 ```js
-let o = new Object();
-o.foo = 42;
+w-wet o = nyew object();
+o-o.foo = 42;
 
-console.log(o);
-// Object { foo: 42 }
+c-consowe.wog(o);
+// object { foo: 42 }
 ```
 
-### undefined와 null을 받는 객체 types
+### undefined와 nuww을 받는 객체 t-types
 
 다음 예제는 빈 `객체`를 `o` 변수에 저장합니다 :
 
 ```js
-let o = new Object();
+wet o = nyew object();
 ```
 
 ```js
-let o = new Object(undefined);
+w-wet o = nyew object(undefined);
 ```
 
 ```js
-let o = new Object(null);
+w-wet o = nyew object(nuww);
 ```
 
 ## 명세
 
-{{Specifications}}
+{{specifications}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}
 
 ## 같이보기
 
-- [객체 초기자](/ko/docs/Web/JavaScript/Reference/Operators/Object_initializer)
+- [객체 초기자](/ko/docs/web/javascwipt/wefewence/opewatows/object_initiawizew)

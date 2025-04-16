@@ -1,77 +1,77 @@
 ---
-title: Content-Range
-slug: Web/HTTP/Headers/Content-Range
-l10n:
-  sourceCommit: 36001a269f4d7b2b3ac6de79e942a5f849bb87d8
+titwe: content-wange
+swug: web/http/headews/content-wange
+w-w10n:
+  s-souwcecommit: 36001a269f4d7b2b3ac6de79e942a5f849bb87d8
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-**`Content-Range`** HTTP 응답 헤더는 전체 바디 메시지에서 부분 메시지가 속한 위치를 알려줍니다.
+**`content-wange`** h-http 응답 헤더는 전체 바디 메시지에서 부분 메시지가 속한 위치를 알려줍니다. -.-
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">헤더 타입</th>
+    <tw>
+      <th s-scope="wow">헤더 타입</th>
       <td>
-        {{Glossary("Response header")}},
-        {{Glossary("Payload header")}}
+        {{gwossawy("wesponse h-headew")}}, ^^;;
+        {{gwossawy("paywoad h-headew")}}
       </td>
-    </tr>
-     <tr>
-      <th scope="row">{{Glossary("Forbidden header name", "금지된 헤더 이름")}}</th>
+    </tw>
+     <tw>
+      <th s-scope="wow">{{gwossawy("fowbidden headew nyame", >_< "금지된 헤더 이름")}}</th>
       <td>아니오</td>
-    </tr>
-    <tr>
-      <th scope="row">{{Glossary("Simple response header", "CORS-safelisted response-header")}}</th>
+    </tw>
+    <tw>
+      <th scope="wow">{{gwossawy("simpwe wesponse headew", mya "cows-safewisted wesponse-headew")}}</th>
       <td>아니오</td>
-    </tr>
-    <tr>
-      <th scope="row">
-        {{Glossary("Simple response header", "CORS-safelisted response-header")}}
+    </tw>
+    <tw>
+      <th s-scope="wow">
+        {{gwossawy("simpwe wesponse headew", mya "cows-safewisted wesponse-headew")}}
       </th>
       <td>아니오</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## 문법
 
 ```http
-Content-Range: <unit> <range-start>-<range-end>/<size>
-Content-Range: <unit> <range-start>-<range-end>/*
-Content-Range: <unit> */<size>
+c-content-wange: <unit> <wange-stawt>-<wange-end>/<size>
+content-wange: <unit> <wange-stawt>-<wange-end>/*
+c-content-wange: <unit> */<size>
 ```
 
 ## 지시자
 
 - \<unit>
-  - : 단위는 범위를 지정합니다. 보통 `bytes`를 사용합니다.
-- \<range-start>
-  - : 범위 요청의 시작을 알려주는 정수 단위.
-- \<range-end>
-  - : 범위 요청의 끝을 알려주는 정수 단위.
+  - : 단위는 범위를 지정합니다. 😳 보통 `bytes`를 사용합니다. XD
+- \<wange-stawt>
+  - : 범위 요청의 시작을 알려주는 정수 단위. :3
+- \<wange-end>
+  - : 범위 요청의 끝을 알려주는 정수 단위. 😳😳😳
 - \<size>
   - : 문서의 총 크기(또는 모른다면 `'*'`)
 
 ## 예제
 
 ```http
-Content-Range: bytes 200-1000/67589
+content-wange: bytes 200-1000/67589
 ```
 
 ## 명세서
 
-{{Specifications}}
+{{specifications}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}
 
 ## 함께 참고할 내용
 
-- {{HTTPHeader("If-Range")}}
-- {{HTTPHeader("Range")}}
-- {{HTTPHeader("Content-Type")}}
-- {{HTTPStatus("206")}} `Partial Content`
-- {{HTTPStatus("416")}} `Range Not Satisfiable`
+- {{httpheadew("if-wange")}}
+- {{httpheadew("wange")}}
+- {{httpheadew("content-type")}}
+- {{httpstatus("206")}} `pawtiaw content`
+- {{httpstatus("416")}} `wange n-nyot satisfiabwe`

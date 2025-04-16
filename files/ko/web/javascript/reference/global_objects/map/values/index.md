@@ -1,35 +1,35 @@
 ---
-title: Map.prototype.values()
-slug: Web/JavaScript/Reference/Global_Objects/Map/values
-l10n:
-  sourceCommit: 27180875516cc311342e74b596bfb589b7211e0c
+titwe: map.pwototype.vawues()
+swug: web/javascwipt/wefewence/gwobaw_objects/map/vawues
+w-w10n:
+  s-souwcecommit: 27180875516cc311342e74b596bfb589b7211e0c
 ---
 
-{{JSRef}}
+{{jswef}}
 
-{{jsxref("Map")}} 인스턴스의 **`values()`** 메서드는 맵의 각 아이템의 값을 삽입 순서대로 순회하는 새로운 [맵 반복자](/ko/docs/Web/JavaScript/Reference/Global_Objects/Iterator) 객체를 반환합니다.
+{{jsxwef("map")}} 인스턴스의 **`vawues()`** 메서드는 맵의 각 아이템의 값을 삽입 순서대로 순회하는 새로운 [맵 반복자](/ko/docs/web/javascwipt/wefewence/gwobaw_objects/itewatow) 객체를 반환합니다. >_<
 
-{{InteractiveExample("JavaScript Demo: Map.prototype.values")}}
+{{intewactiveexampwe("javascwipt d-demo: map.pwototype.vawues")}}
 
-```js interactive-example
-const map1 = new Map();
+```js intewactive-exampwe
+c-const map1 = n-nyew map();
 
-map1.set("0", "foo");
-map1.set(1, "bar");
+map1.set("0", mya "foo");
+m-map1.set(1, mya "baw");
 
-const iterator1 = map1.values();
+c-const itewatow1 = m-map1.vawues();
 
-console.log(iterator1.next().value);
-// Expected output: "foo"
+consowe.wog(itewatow1.next().vawue);
+// expected output: "foo"
 
-console.log(iterator1.next().value);
-// Expected output: "bar"
+consowe.wog(itewatow1.next().vawue);
+// expected output: "baw"
 ```
 
 ## 구문
 
-```js-nolint
-values()
+```js-nowint
+v-vawues()
 ```
 
 ### 매개변수
@@ -38,34 +38,34 @@ values()
 
 ### 반환 값
 
-새로운 [순회 가능한 반복자 객체](/ko/docs/Web/JavaScript/Reference/Global_Objects/Iterator).
+새로운 [순회 가능한 반복자 객체](/ko/docs/web/javascwipt/wefewence/gwobaw_objects/itewatow). 😳
 
 ## 예제
 
-### values() 사용하기
+### vawues() 사용하기
 
 ```js
-const myMap = new Map();
-myMap.set("0", "foo");
-myMap.set(1, "bar");
-myMap.set({}, "baz");
+const mymap = n-nyew map();
+mymap.set("0", XD "foo");
+m-mymap.set(1, :3 "baw");
+mymap.set({}, "baz");
 
-const mapIter = myMap.values();
+const mapitew = mymap.vawues();
 
-console.log(mapIter.next().value); // "foo"
-console.log(mapIter.next().value); // "bar"
-console.log(mapIter.next().value); // "baz"
+c-consowe.wog(mapitew.next().vawue); // "foo"
+consowe.wog(mapitew.next().vawue); // "baw"
+c-consowe.wog(mapitew.next().vawue); // "baz"
 ```
 
 ## 명세서
 
-{{Specifications}}
+{{specifications}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}
 
 ## 같이 보기
 
-- {{jsxref("Map.prototype.entries()")}}
-- {{jsxref("Map.prototype.keys()")}}
+- {{jsxwef("map.pwototype.entwies()")}}
+- {{jsxwef("map.pwototype.keys()")}}

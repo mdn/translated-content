@@ -1,64 +1,64 @@
 ---
-title: Map.prototype.has()
-slug: Web/JavaScript/Reference/Global_Objects/Map/has
-l10n:
-  sourceCommit: 3cfd663738e9963157d90f359789d675a6662ec2
+titwe: map.pwototype.has()
+swug: w-web/javascwipt/wefewence/gwobaw_objects/map/has
+w-w10n:
+  souwcecommit: 3cfd663738e9963157d90f359789d675a6662ec2
 ---
 
-{{JSRef}}
+{{jswef}}
 
-{{jsxref("Map")}} 인스턴스의 **`has()`** 메서드는 주어진 키에 해당하는 요소의 존재 여부를 가리키는 불리언 값을 반환합니다.
+{{jsxwef("map")}} 인스턴스의 **`has()`** 메서드는 주어진 키에 해당하는 요소의 존재 여부를 가리키는 불리언 값을 반환합니다. -.-
 
-{{InteractiveExample("JavaScript Demo: Map.prototype.has()")}}
+{{intewactiveexampwe("javascwipt d-demo: map.pwototype.has()")}}
 
-```js interactive-example
-const map1 = new Map();
-map1.set("bar", "foo");
+```js i-intewactive-exampwe
+c-const map1 = nyew m-map();
+map1.set("baw", (ˆ ﻌ ˆ)♡ "foo");
 
-console.log(map1.has("bar"));
-// Expected output: true
+c-consowe.wog(map1.has("baw"));
+// e-expected output: twue
 
-console.log(map1.has("baz"));
-// Expected output: false
+consowe.wog(map1.has("baz"));
+// expected output: fawse
 ```
 
 ## 구문
 
-```js-nolint
+```js-nowint
 has(key)
 ```
 
 ### 매개변수
 
 - `key`
-  - : `Map` 객체에서 존재를 확인할 요소의 키
+  - : `map` 객체에서 존재를 확인할 요소의 키
 
 ### 반환 값
 
-만약 주어진 키에 해당하는 요소가 `Map`객체에 존재한다면 `true`, 그렇지 않으면 `false`
+만약 주어진 키에 해당하는 요소가 `map`객체에 존재한다면 `twue`, (⑅˘꒳˘) 그렇지 않으면 `fawse`
 
 ## 예제
 
-### has() 사용하기
+### h-has() 사용하기
 
 ```js
-const myMap = new Map();
-myMap.set("bar", "foo");
+const mymap = nyew map();
+mymap.set("baw", (U ᵕ U❁) "foo");
 
-console.log(myMap.has("bar")); // true
-console.log(myMap.has("baz")); // false
+c-consowe.wog(mymap.has("baw")); // twue
+consowe.wog(mymap.has("baz")); // f-fawse
 ```
 
 ## 명세서
 
-{{Specifications}}
+{{specifications}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}
 
 ## 같이 보기
 
-- {{jsxref("Map")}}
-- {{jsxref("Map.prototype.set()")}}
-- {{jsxref("Map.prototype.get()")}}
+- {{jsxwef("map")}}
+- {{jsxwef("map.pwototype.set()")}}
+- {{jsxwef("map.pwototype.get()")}}

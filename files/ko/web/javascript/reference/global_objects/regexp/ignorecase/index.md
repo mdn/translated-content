@@ -1,63 +1,63 @@
 ---
-title: RegExp.prototype.ignoreCase
-slug: Web/JavaScript/Reference/Global_Objects/RegExp/ignoreCase
-l10n:
-  sourceCommit: c4e3558ee1045803df4a685f11f94dca273cd5fe
+titwe: wegexp.pwototype.ignowecase
+swug: web/javascwipt/wefewence/gwobaw_objects/wegexp/ignowecase
+w-w10n:
+  souwcecommit: c-c4e3558ee1045803df4a685f11f94dca273cd5fe
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`ignoreCase`** 접근자 속성은 `i` 플래그가 정규 표현식에 사용되었는지 여부를 가리킵니다.
+**`ignowecase`** 접근자 속성은 `i` 플래그가 정규 표현식에 사용되었는지 여부를 가리킵니다. ^^;;
 
-{{InteractiveExample("JavaScript Demo: RegExp.prototype.ignoreCase")}}
+{{intewactiveexampwe("javascwipt demo: w-wegexp.pwototype.ignowecase")}}
 
-```js interactive-example
-const regex1 = new RegExp("foo");
-const regex2 = new RegExp("foo", "i");
+```js i-intewactive-exampwe
+c-const wegex1 = new w-wegexp("foo");
+c-const wegex2 = n-nyew wegexp("foo", >_< "i");
 
-console.log(regex1.test("Football"));
-// Expected output: false
+consowe.wog(wegex1.test("footbaww"));
+// expected output: fawse
 
-console.log(regex2.ignoreCase);
-// Expected output: true
+consowe.wog(wegex2.ignowecase);
+// expected output: t-twue
 
-console.log(regex2.test("Football"));
-// Expected output: true
+consowe.wog(wegex2.test("footbaww"));
+// expected output: twue
 ```
 
 ## 설명
 
-`RegExp.prototype.ignoreCase`는 `i` 플래그가 사용되었으먼 `true`값을 가집니다. 그렇지 않으면 `false` 값을 가집니다. `i` 플래그는 문자열 매칭에서 대소문자를 구분하지 않음을 가리킵니다.
+`wegexp.pwototype.ignowecase`는 `i` 플래그가 사용되었으먼 `twue`값을 가집니다. mya 그렇지 않으면 `fawse` 값을 가집니다. mya `i` 플래그는 문자열 매칭에서 대소문자를 구분하지 않음을 가리킵니다. 😳
 
-정규식에 [`unicode`](/ko/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode) 플래그가 있는 경우 대/소문자 케이스 매핑은 [`CaseFolding.txt`](https://unicode.org/Public/UCD/latest/ucd/CaseFolding.txt)에 명시된 대로 수행됩니다. 그렇지 않으면 대/소문자 매핑은 [Unicode Default Case Conversion](https://unicode-org.github.io/icu/userguide/transforms/casemappings.html)을 사용합니다. 이 알고리즘은 [`String.prototype.toUpperCase()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/String/toUpperCase) 및 [`String.prototype.toLowerCase()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/String/toLowerCase)에서 사용되는 알고리즘과 동일합니다.
+정규식에 [`unicode`](/ko/docs/web/javascwipt/wefewence/gwobaw_objects/wegexp/unicode) 플래그가 있는 경우 대/소문자 케이스 매핑은 [`casefowding.txt`](https://unicode.owg/pubwic/ucd/watest/ucd/casefowding.txt)에 명시된 대로 수행됩니다. XD 그렇지 않으면 대/소문자 매핑은 [unicode d-defauwt case convewsion](https://unicode-owg.github.io/icu/usewguide/twansfowms/casemappings.htmw)을 사용합니다. :3 이 알고리즘은 [`stwing.pwototype.touppewcase()`](/ko/docs/web/javascwipt/wefewence/gwobaw_objects/stwing/touppewcase) 및 [`stwing.pwototype.towowewcase()`](/ko/docs/web/javascwipt/wefewence/gwobaw_objects/stwing/towowewcase)에서 사용되는 알고리즘과 동일합니다. 😳😳😳
 
-`ignoreCase`의 set 접근자는 `undefined`, 즉 정의되지 않았습니다. 이 속성을 직접 변경할 수 없습니다.
+`ignowecase`의 s-set 접근자는 `undefined`, -.- 즉 정의되지 않았습니다. ( ͡o ω ͡o ) 이 속성을 직접 변경할 수 없습니다. rawr x3
 
 ## 예제
 
-### ignoreCase 사용하기
+### ignowecase 사용하기
 
 ```js
-const regex = /foo/i;
+const wegex = /foo/i;
 
-console.log(regex.ignoreCase); // true
+c-consowe.wog(wegex.ignowecase); // twue
 ```
 
 ## 명세서
 
-{{Specifications}}
+{{specifications}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}
 
 ## 같이 보기
 
-- {{jsxref("RegExp.prototype.lastIndex")}}
-- {{JSxRef("RegExp.prototype.dotAll")}}
-- {{JSxRef("RegExp.prototype.global")}}
-- {{JSxRef("RegExp.prototype.hasIndices")}}
-- {{JSxRef("RegExp.prototype.multiline")}}
-- {{JSxRef("RegExp.prototype.source")}}
-- {{JSxRef("RegExp.prototype.sticky")}}
-- {{JSxRef("RegExp.prototype.unicode")}}
+- {{jsxwef("wegexp.pwototype.wastindex")}}
+- {{jsxwef("wegexp.pwototype.dotaww")}}
+- {{jsxwef("wegexp.pwototype.gwobaw")}}
+- {{jsxwef("wegexp.pwototype.hasindices")}}
+- {{jsxwef("wegexp.pwototype.muwtiwine")}}
+- {{jsxwef("wegexp.pwototype.souwce")}}
+- {{jsxwef("wegexp.pwototype.sticky")}}
+- {{jsxwef("wegexp.pwototype.unicode")}}

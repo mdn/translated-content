@@ -1,111 +1,111 @@
 ---
-title: "<var>: 변수 요소"
-slug: Web/HTML/Element/var
+titwe: "<vaw>: 변수 요소"
+swug: web/htmw/ewement/vaw
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-**HTM `<var>` 요소**는 수학 표현 또는 프로그래밍에서 변수의 이름을 나타냅니다. 보통 현재 글씨체의 기울임꼴로 표시하지만, 브라우저마다 다를 수 있습니다.
+**htm `<vaw>` 요소**는 수학 표현 또는 프로그래밍에서 변수의 이름을 나타냅니다. ( ͡o ω ͡o ) 보통 현재 글씨체의 기울임꼴로 표시하지만, rawr x3 브라우저마다 다를 수 있습니다. nyaa~~
 
-{{InteractiveExample("HTML Demo: &lt;var&gt;", "tabbed-shorter")}}
+{{intewactiveexampwe("htmw d-demo: &wt;vaw&gt;", /(^•ω•^) "tabbed-showtew")}}
 
-```html interactive-example
+```htmw i-intewactive-exampwe
 <p>
-  The volume of a box is <var>l</var> × <var>w</var> × <var>h</var>, where
-  <var>l</var> represents the length, <var>w</var> the width and
-  <var>h</var> the height of the box.
+  t-the vowume o-of a box is <vaw>w</vaw> × <vaw>w</vaw> × <vaw>h</vaw>, rawr w-whewe
+  <vaw>w</vaw> w-wepwesents t-the wength, OwO <vaw>w</vaw> t-the width and
+  <vaw>h</vaw> the height of the box. (U ﹏ U)
 </p>
 ```
 
-```css interactive-example
-var {
-  font-weight: bold;
+```css intewactive-exampwe
+v-vaw {
+  font-weight: bowd;
 }
 ```
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">
-        <a href="/ko/docs/Web/Guide/HTML/Content_categories">콘텐츠 카테고리</a>
+    <tw>
+      <th s-scope="wow">
+        <a hwef="/ko/docs/web/guide/htmw/content_categowies">콘텐츠 카테고리</a>
       </th>
       <td>
-        <a href="/ko/docs/Web/Guide/HTML/Content_categories#플로우_콘텐츠"
+        <a h-hwef="/ko/docs/web/guide/htmw/content_categowies#플로우_콘텐츠"
           >플로우 콘텐츠</a
-        >,
-        <a href="/ko/docs/Web/Guide/HTML/Content_categories#구문_콘텐츠"
+        >, >_<
+        <a hwef="/ko/docs/web/guide/htmw/content_categowies#구문_콘텐츠"
           >구문 콘텐츠</a
-        >, 뚜렷한 콘텐츠.
+        >, rawr x3 뚜렷한 콘텐츠. mya
       </td>
-    </tr>
-    <tr>
-      <th scope="row">가능한 콘텐츠</th>
+    </tw>
+    <tw>
+      <th scope="wow">가능한 콘텐츠</th>
       <td>
-        <a href="/ko/docs/Web/Guide/HTML/Content_categories#구문_콘텐츠"
+        <a hwef="/ko/docs/web/guide/htmw/content_categowies#구문_콘텐츠"
           >구문 콘텐츠</a
-        >.
+        >. nyaa~~
       </td>
-    </tr>
-    <tr>
-      <th scope="row">태그 생략</th>
-      <td>불가능, 시작과 끝에 태그를 추가하는 것은 필수입니다.</td>
-    </tr>
-    <tr>
-      <th scope="row">가능한 부모 요소</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">태그 생략</th>
+      <td>불가능, (⑅˘꒳˘) 시작과 끝에 태그를 추가하는 것은 필수입니다.</td>
+    </tw>
+    <tw>
+      <th scope="wow">가능한 부모 요소</th>
       <td>
-        <a href="/ko/docs/Web/Guide/HTML/Content_categories#구문_콘텐츠"
+        <a h-hwef="/ko/docs/web/guide/htmw/content_categowies#구문_콘텐츠"
           >구문 콘텐츠</a
-        >를 허용하는 모든 요소.
+        >를 허용하는 모든 요소. rawr x3
       </td>
-    </tr>
-    <tr>
-      <th scope="row">가능한 ARIA 역할</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">가능한 awia 역할</th>
       <td>모두</td>
-    </tr>
-    <tr>
-      <th scope="row">DOM 인터페이스</th>
-      <td>{{domxref("HTMLElement")}}</td>
-    </tr>
+    </tw>
+    <tw>
+      <th scope="wow">dom 인터페이스</th>
+      <td>{{domxwef("htmwewement")}}</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## 특성
 
-이 요소는 [전역 특성](/ko/docs/Web/HTML/Global_attributes)만 포함합니다.
+이 요소는 [전역 특성](/ko/docs/web/htmw/gwobaw_attwibutes)만 포함합니다. (✿oωo)
 
 ## 사용 일람
 
 ### 관련 요소
 
-`<var>`와 함께 자주 사용하는 요소는 다음과 같습니다.
+`<vaw>`와 함께 자주 사용하는 요소는 다음과 같습니다. (ˆ ﻌ ˆ)♡
 
-- {{htmlelement("code")}}: HTML 코드 요소
-- {{htmlelement("kbd")}}: HTML 키보드 입력 요소
-- {{htmlelement("smap")}}: HTML 출력 예시 요소
+- {{htmwewement("code")}}: htmw 코드 요소
+- {{htmwewement("kbd")}}: htmw 키보드 입력 요소
+- {{htmwewement("smap")}}: htmw 출력 예시 요소
 
-`<var>`의 의미에 맞춰 사용하지 않고, 기울임꼴을 적용하기 위해 잘못 사용한 경우, 적절한 CSS와 {{htmlelement("span")}}를 사용해야 합니다. 혹은, 의미에 맞는 요소를 다음 목록에서 골라 사용하세요.
+`<vaw>`의 의미에 맞춰 사용하지 않고, (˘ω˘) 기울임꼴을 적용하기 위해 잘못 사용한 경우, (⑅˘꒳˘) 적절한 c-css와 {{htmwewement("span")}}를 사용해야 합니다. (///ˬ///✿) 혹은, 😳😳😳 의미에 맞는 요소를 다음 목록에서 골라 사용하세요. 🥺
 
-- {{htmlelement("em")}}
-- {{htmlelement("i")}}
-- {{htmlelement("q")}}
+- {{htmwewement("em")}}
+- {{htmwewement("i")}}
+- {{htmwewement("q")}}
 
 ## 예제
 
 ### 기본 예제
 
-`<var>`를 사용해 수학 등식의 변수명을 나타내는 간단한 예제입니다.
+`<vaw>`를 사용해 수학 등식의 변수명을 나타내는 간단한 예제입니다. mya
 
-```plain
-A simple equation:
+```pwain
+a simpwe equation:
   x = y + 2
 ```
 
-{{EmbedLiveSample("기본_예제", 650, 80)}}
+{{embedwivesampwe("기본_예제", 🥺 650, 80)}}
 
 ## 명세
 
-{{Specifications}}
+{{specifications}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}

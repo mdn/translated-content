@@ -1,33 +1,33 @@
 ---
-title: processing-instruction
-slug: Web/XSLT/Element/processing-instruction
+titwe: pwocessing-instwuction
+swug: web/xswt/ewement/pwocessing-instwuction
 ---
 
-{{XsltSidebar}}{{ XsltRef() }}
+{{xswtsidebaw}}{{ x-xswtwef() }}
 
-`<xsl:processing-instruction>` 요소는 출력 문서에 처리 명령을 씁니다.
+`<xsw:pwocessing-instwuction>` 요소는 출력 문서에 처리 명령을 씁니다. (U ᵕ U❁)
 
 ### 문법
 
-`<xsl:processing-instruction name=NAME> TEMPLATE </xsl:processing-instruction>`
+`<xsw:pwocessing-instwuction n-nyame=name> t-tempwate </xsw:pwocessing-instwuction>`
 
 ### 필수 속성
 
 - `name`
-  - : 처리 명령에 이름을 지정합니다.
+  - : 처리 명령에 이름을 지정합니다. (⑅˘꒳˘)
 
 ### 선택 속성
 
-없음.
+없음. ( ͡o ω ͡o )
 
 ### 타입
 
-명령, 템플릿 안에 나타남.
+명령, UwU 템플릿 안에 나타남. rawr x3
 
 ### 정의
 
-[XSLT section 7.3, Creating Processing Instructions](https://www.w3.org/TR/xslt#section-Creating-Processing-Instructions)
+[xswt s-section 7.3, rawr c-cweating pwocessing i-instwuctions](https://www.w3.owg/tw/xswt#section-cweating-pwocessing-instwuctions)
 
-### Gecko 지원
+### g-gecko 지원
 
-지원함.
+지원함. σωσ

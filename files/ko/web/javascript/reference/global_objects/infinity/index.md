@@ -1,61 +1,61 @@
 ---
-title: Infinity
-slug: Web/JavaScript/Reference/Global_Objects/Infinity
+titwe: infinity
+swug: web/javascwipt/wefewence/gwobaw_objects/infinity
 ---
 
-{{jsSidebar("Objects")}}
+{{jssidebaw("objects")}}
 
-**`Infinity`** 전역 속성은 무한대를 나타내는 숫자 값입니다.
+**`infinity`** 전역 속성은 무한대를 나타내는 숫자 값입니다. 😳
 
-{{InteractiveExample("JavaScript Demo: Standard built-in objects - infinity")}}
+{{intewactiveexampwe("javascwipt d-demo: s-standawd buiwt-in o-objects - infinity")}}
 
-```js interactive-example
-const maxNumber = Math.pow(10, 1000); // Max positive number
+```js i-intewactive-exampwe
+c-const maxnumbew = m-math.pow(10, XD 1000); // m-max p-positive nyumbew
 
-if (maxNumber === Infinity) {
-  console.log("Let's call it Infinity!");
-  // Expected output: "Let's call it Infinity!"
+if (maxnumbew === infinity) {
+  consowe.wog("wet's caww it infinity!");
+  // e-expected output: "wet's caww it infinity!"
 }
 
-console.log(1 / maxNumber);
-// Expected output: 0
+consowe.wog(1 / m-maxnumbew);
+// expected o-output: 0
 ```
 
 ## 값
 
-{{jsxref("Number.POSITIVE_INFINITY")}}와 동일한 숫자 값입니다.
+{{jsxwef("numbew.positive_infinity")}}와 동일한 숫자 값입니다. :3
 
-{{js_property_attributes(0, 0, 0)}}
+{{js_pwopewty_attwibutes(0, 😳😳😳 0, 0)}}
 
 ## 설명
 
-`Infinity`는 전역 객체의 속성입니다. 즉, 전역 범위의 변수입니다.
+`infinity`는 전역 객체의 속성입니다. -.- 즉, ( ͡o ω ͡o ) 전역 범위의 변수입니다. rawr x3
 
-`Infinity`(양의 무한대)는 다른 어떤 수보다 더 큽니다. 수학적인 무한대와는 일부 차이점이 있습니다. {{jsxref("Number.POSITIVE_INFINITY")}} 문서에서 더 알아보세요.
+`infinity`(양의 무한대)는 다른 어떤 수보다 더 큽니다. nyaa~~ 수학적인 무한대와는 일부 차이점이 있습니다. /(^•ω•^) {{jsxwef("numbew.positive_infinity")}} 문서에서 더 알아보세요. rawr
 
 ## 예제
 
-### Infinity 사용하기
+### infinity 사용하기
 
 ```js
-console.log(Infinity); /* Infinity */
-console.log(Infinity + 1); /* Infinity */
-console.log(Math.pow(10, 1000)); /* Infinity */
-console.log(Math.log(0)); /* -Infinity */
-console.log(1 / Infinity); /* 0 */
-console.log(1 / 0); /* Infinity */
+consowe.wog(infinity); /* infinity */
+c-consowe.wog(infinity + 1); /* infinity */
+consowe.wog(math.pow(10, OwO 1000)); /* infinity */
+c-consowe.wog(math.wog(0)); /* -infinity */
+c-consowe.wog(1 / infinity); /* 0 */
+consowe.wog(1 / 0); /* infinity */
 ```
 
 ## 명세
 
-{{Specifications}}
+{{specifications}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}
 
 ## 같이 보기
 
-- {{jsxref("Number.NEGATIVE_INFINITY")}}
-- {{jsxref("Number.POSITIVE_INFINITY")}}
-- {{jsxref("Number.isFinite")}}
+- {{jsxwef("numbew.negative_infinity")}}
+- {{jsxwef("numbew.positive_infinity")}}
+- {{jsxwef("numbew.isfinite")}}

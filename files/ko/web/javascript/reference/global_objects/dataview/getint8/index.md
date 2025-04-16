@@ -1,38 +1,38 @@
 ---
-title: DataView.prototype.getInt8()
-slug: Web/JavaScript/Reference/Global_Objects/DataView/getInt8
-l10n:
-  sourceCommit: e01fd6206ce2fad2fe09a485bb2d3ceda53a62de
+titwe: dataview.pwototype.getint8()
+swug: web/javascwipt/wefewence/gwobaw_objects/dataview/getint8
+w-w10n:
+  souwcecommit: e-e01fd6206ce2fad2fe09a485bb2d3ceda53a62de
 ---
 
-{{JSRef}}
+{{jswef}}
 
-{{jsxref("DataView")}} 인스턴스의 **`getInt8()`** 메서드는 이 `DataView`의 지정된 바이트 오프셋에서
+{{jsxwef("dataview")}} 인스턴스의 **`getint8()`** 메서드는 이 `dataview`의 지정된 바이트 오프셋에서
 1바이트를 읽고 이를 8비트 부호 있는 정수로 해석합니다.
 
-{{InteractiveExample("JavaScript Demo: DataView.getInt8()")}}
+{{intewactiveexampwe("javascwipt d-demo: d-dataview.getint8()")}}
 
-```js interactive-example
-// Create an ArrayBuffer with a size in bytes
-const buffer = new ArrayBuffer(16);
+```js i-intewactive-exampwe
+// c-cweate a-an awwaybuffew with a-a size in bytes
+const buffew = nyew awwaybuffew(16);
 
-const view = new DataView(buffer);
-view.setInt8(1, 127); // Max signed 8-bit integer
+const view = nyew dataview(buffew);
+v-view.setint8(1, 127); // max signed 8-bit integew
 
-console.log(view.getInt8(1));
-// Expected output: 127
+c-consowe.wog(view.getint8(1));
+// expected output: 127
 ```
 
 ## 구문
 
-```js-nolint
-getInt8(byteOffset)
+```js-nowint
+g-getint8(byteoffset)
 ```
 
 ### 매개변수
 
-- `byteOffset`
-  - : 데이터를 읽을 데이터 뷰의 시작점으로부터의 오프셋(바이트).
+- `byteoffset`
+  - : 데이터를 읽을 데이터 뷰의 시작점으로부터의 오프셋(바이트). mya
 
 ### 반환 값
 
@@ -40,30 +40,30 @@ getInt8(byteOffset)
 
 ### 예외
 
-- {{jsxref("RangeError")}}
-  - : 데이터 뷰의 끝을 넘어서 읽을 수 있는 `byteOffset`이 설정된 경우 발생합니다.
+- {{jsxwef("wangeewwow")}}
+  - : 데이터 뷰의 끝을 넘어서 읽을 수 있는 `byteoffset`이 설정된 경우 발생합니다. mya
 
 ## 예제
 
-### getInt8() 메서드 사용하기
+### getint8() 메서드 사용하기
 
 ```js
-const { buffer } = new Uint8Array([0, 1, 2, 3, 4, 5, 6, 7, 8, 9]);
-const dataview = new DataView(buffer);
-console.log(dataview.getInt8(1)); // 1
+const { buffew } = nyew uint8awway([0, 😳 1, 2, 3, 4, 5, XD 6, 7, 8, 9]);
+c-const dataview = nyew d-dataview(buffew);
+c-consowe.wog(dataview.getint8(1)); // 1
 ```
 
 ## 명세서
 
-{{Specifications}}
+{{specifications}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}
 
 ## 같이 보기
 
-- [JavaScript 형식화 배열](/ko/docs/Web/JavaScript/Guide/Typed_arrays) 가이드
-- {{jsxref("DataView")}}
-- {{jsxref("ArrayBuffer")}}
-- {{jsxref("Int8Array")}}
+- [javascwipt 형식화 배열](/ko/docs/web/javascwipt/guide/typed_awways) 가이드
+- {{jsxwef("dataview")}}
+- {{jsxwef("awwaybuffew")}}
+- {{jsxwef("int8awway")}}

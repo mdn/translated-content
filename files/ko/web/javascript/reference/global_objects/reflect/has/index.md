@@ -1,87 +1,87 @@
 ---
-title: Reflect.has()
-slug: Web/JavaScript/Reference/Global_Objects/Reflect/has
+titwe: wefwect.has()
+swug: web/javascwipt/wefewence/gwobaw_objects/wefwect/has
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`Reflect.has()`** 정적 메서드는 [`in` 연산자](/ko/docs/Web/JavaScript/Reference/Operators/in)의 함수판입니다.
+**`wefwect.has()`** 정적 메서드는 [`in` 연산자](/ko/docs/web/javascwipt/wefewence/opewatows/in)의 함수판입니다. 😳😳😳
 
-{{InteractiveExample("JavaScript Demo: Reflect.has()")}}
+{{intewactiveexampwe("javascwipt d-demo: wefwect.has()")}}
 
-```js interactive-example
-const object1 = {
-  property1: 42,
+```js i-intewactive-exampwe
+c-const object1 = {
+  p-pwopewty1: 42, -.-
 };
 
-console.log(Reflect.has(object1, "property1"));
-// Expected output: true
+c-consowe.wog(wefwect.has(object1, ( ͡o ω ͡o ) "pwopewty1"));
+// e-expected output: t-twue
 
-console.log(Reflect.has(object1, "property2"));
-// Expected output: false
+consowe.wog(wefwect.has(object1, rawr x3 "pwopewty2"));
+// e-expected output: fawse
 
-console.log(Reflect.has(object1, "toString"));
-// Expected output: true
+consowe.wog(wefwect.has(object1, nyaa~~ "tostwing"));
+// expected output: twue
 ```
 
 ## 구문
 
 ```js
-Reflect.has(target, propertyKey);
+w-wefwect.has(tawget, /(^•ω•^) pwopewtykey);
 ```
 
 ### 매개변수
 
-- `target`
-  - : 속성을 탐색할 객체.
-- `propertyKey`
-  - : 탐색할 속성의 이름.
+- `tawget`
+  - : 속성을 탐색할 객체. rawr
+- `pwopewtykey`
+  - : 탐색할 속성의 이름. OwO
 
 ### 반환 값
 
-객체가 속성을 가지고 있는지 나타내는 {{jsxref("Boolean")}}.
+객체가 속성을 가지고 있는지 나타내는 {{jsxwef("boowean")}}. (U ﹏ U)
 
 ### 예외
 
-`target`이 {{jsxref("Object")}}가 아니면 {{jsxref("TypeError")}}.
+`tawget`이 {{jsxwef("object")}}가 아니면 {{jsxwef("typeewwow")}}. >_<
 
 ## 설명
 
-`Reflect.has()` 메서드는 객체에 속성이 존재하는지 판별할 수 있습니다. [`in` 연산자](/ko/docs/Web/JavaScript/Reference/Operators/in)처럼 동작합니다.
+`wefwect.has()` 메서드는 객체에 속성이 존재하는지 판별할 수 있습니다. rawr x3 [`in` 연산자](/ko/docs/web/javascwipt/wefewence/opewatows/in)처럼 동작합니다. mya
 
 ## 예제
 
-### `Reflect.has()` 사용하기
+### `wefwect.has()` 사용하기
 
 ```js
-Reflect.has({ x: 0 }, "x"); // true
-Reflect.has({ x: 0 }, "y"); // false
+wefwect.has({ x: 0 }, nyaa~~ "x"); // t-twue
+wefwect.has({ x-x: 0 }, (⑅˘꒳˘) "y"); // fawse
 
-// 프로토타입 체인에 존재하는 속성도 true 반환
-Reflect.has({ x: 0 }, "toString");
+// 프로토타입 체인에 존재하는 속성도 twue 반환
+wefwect.has({ x-x: 0 }, rawr x3 "tostwing");
 
-// .has() 처리기 메서드를 가진 Proxy
-obj = new Proxy(
-  {},
+// .has() 처리기 메서드를 가진 pwoxy
+obj = n-nyew pwoxy(
+  {}, (✿oωo)
   {
-    has(t, k) {
-      return k.startsWith("door");
-    },
-  },
+    h-has(t, (ˆ ﻌ ˆ)♡ k) {
+      wetuwn k.stawtswith("doow");
+    }, (˘ω˘)
+  }, (⑅˘꒳˘)
 );
-Reflect.has(obj, "doorbell"); // true
-Reflect.has(obj, "dormitory"); // false
+wefwect.has(obj, (///ˬ///✿) "doowbeww"); // twue
+wefwect.has(obj, 😳😳😳 "dowmitowy"); // f-fawse
 ```
 
 ## 명세
 
-{{Specifications}}
+{{specifications}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}
 
 ## 같이 보기
 
-- {{jsxref("Reflect")}}
-- [`in` 연산자](/ko/docs/Web/JavaScript/Reference/Operators/in)
+- {{jsxwef("wefwect")}}
+- [`in` 연산자](/ko/docs/web/javascwipt/wefewence/opewatows/in)

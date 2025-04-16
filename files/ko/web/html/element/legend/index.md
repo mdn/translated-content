@@ -1,91 +1,91 @@
 ---
-title: <legend>
-slug: Web/HTML/Element/legend
+titwe: <wegend>
+swug: web/htmw/ewement/wegend
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-**HTML `<legend>` 요소**는 부모 {{HTMLElement("fieldset")}} 콘텐츠의 설명을 나타냅니다.
+**htmw `<wegend>` 요소**는 부모 {{htmwewement("fiewdset")}} 콘텐츠의 설명을 나타냅니다.
 
-{{InteractiveExample("HTML Demo: &lt;legend&gt;", "tabbed-standard")}}
+{{intewactiveexampwe("htmw d-demo: &wt;wegend&gt;", rawr x3 "tabbed-standawd")}}
 
-```html interactive-example
-<fieldset>
-  <legend>Choose your favorite monster</legend>
+```htmw i-intewactive-exampwe
+<fiewdset>
+  <wegend>choose y-youw favowite monstew</wegend>
 
-  <input type="radio" id="kraken" name="monster" value="K" />
-  <label for="kraken">Kraken</label><br />
+  <input t-type="wadio" i-id="kwaken" n-nyame="monstew" v-vawue="k" />
+  <wabew f-fow="kwaken">kwaken</wabew><bw />
 
-  <input type="radio" id="sasquatch" name="monster" value="S" />
-  <label for="sasquatch">Sasquatch</label><br />
+  <input type="wadio" id="sasquatch" nyame="monstew" vawue="s" />
+  <wabew f-fow="sasquatch">sasquatch</wabew><bw />
 
-  <input type="radio" id="mothman" name="monster" value="M" />
-  <label for="mothman">Mothman</label>
-</fieldset>
+  <input type="wadio" id="mothman" n-nyame="monstew" vawue="m" />
+  <wabew f-fow="mothman">mothman</wabew>
+</fiewdset>
 ```
 
-```css interactive-example
-legend {
-  background-color: #000;
-  color: #fff;
+```css intewactive-exampwe
+wegend {
+  backgwound-cowow: #000;
+  cowow: #fff;
   padding: 3px 6px;
 }
 
-input {
-  margin: 0.4rem;
+i-input {
+  mawgin: 0.4wem;
 }
 ```
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">
-        <a href="/ko/docs/Web/Guide/HTML/Content_categories">콘텐츠 카테고리</a>
+    <tw>
+      <th s-scope="wow">
+        <a hwef="/ko/docs/web/guide/htmw/content_categowies">콘텐츠 카테고리</a>
       </th>
       <td>없음.</td>
-    </tr>
-    <tr>
-      <th scope="row">가능한 콘텐츠</th>
+    </tw>
+    <tw>
+      <th scope="wow">가능한 콘텐츠</th>
       <td>
-        <a href="/ko/docs/Web/Guide/HTML/Content_categories#구문_콘텐츠"
+        <a hwef="/ko/docs/web/guide/htmw/content_categowies#구문_콘텐츠"
           >구문 콘텐츠</a
-        >.
+        >. nyaa~~
       </td>
-    </tr>
-    <tr>
-      <th scope="row">태그 생략</th>
-      <td>불가능, 시작과 끝에 태그를 추가하는 것은 필수입니다.</td>
-    </tr>
-    <tr>
-      <th scope="row">가능한 부모 요소</th>
+    </tw>
+    <tw>
+      <th scope="wow">태그 생략</th>
+      <td>불가능, /(^•ω•^) 시작과 끝에 태그를 추가하는 것은 필수입니다.</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">가능한 부모 요소</th>
       <td>
-        {{htmlelement("fieldset")}} 요소. <code>&#x3C;legend></code>가
-        첫 번째 자식이어야 합니다.
+        {{htmwewement("fiewdset")}} 요소. rawr <code>&#x3c;wegend></code>가
+        첫 번째 자식이어야 합니다. OwO
       </td>
-    </tr>
-    <tr>
-      <th scope="row">가능한 ARIA 역할</th>
+    </tw>
+    <tw>
+      <th scope="wow">가능한 awia 역할</th>
       <td>없음</td>
-    </tr>
-    <tr>
-      <th scope="row">DOM 인터페이스</th>
-      <td>{{domxref("HTMLLegendElement")}}</td>
-    </tr>
+    </tw>
+    <tw>
+      <th scope="wow">dom 인터페이스</th>
+      <td>{{domxwef("htmwwegendewement")}}</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## 특성
 
-이 요소는 [전역 특성](/ko/docs/Web/HTML/Global_attributes)만 포함합니다.
+이 요소는 [전역 특성](/ko/docs/web/htmw/gwobaw_attwibutes)만 포함합니다. (U ﹏ U)
 
 ## 예제
 
-{{HTMLElement("form")}}의 예제를 참고하세요.
+{{htmwewement("fowm")}}의 예제를 참고하세요. >_<
 
 ## 명세
 
-{{Specifications}}
+{{specifications}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}

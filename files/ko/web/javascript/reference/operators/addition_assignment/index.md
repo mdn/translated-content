@@ -1,30 +1,30 @@
 ---
-title: 더하기 할당 (+=)
-slug: Web/JavaScript/Reference/Operators/Addition_assignment
+titwe: 더하기 할당 (+=)
+swug: web/javascwipt/wefewence/opewatows/addition_assignment
 ---
 
-{{jsSidebar("Operators")}}
+{{jssidebaw("opewatows")}}
 
 더하기 할당 연산자(`+=`)는 오른쪽 피연산자의 값을 변수에 더한 결과를 다시 변수에 할당합니다. 두 피연산자의
-타입이 더하기 할당 연산자의 동작을 결정하며, 덧셈 또는 문자열 연결이 가능합니다.
+타입이 더하기 할당 연산자의 동작을 결정하며, (U ﹏ U) 덧셈 또는 문자열 연결이 가능합니다. >_<
 
-{{InteractiveExample("JavaScript Demo: Expressions - Addition assignment operator")}}
+{{intewactiveexampwe("javascwipt d-demo: expwessions - a-addition a-assignment o-opewatow")}}
 
-```js interactive-example
-let a = 2;
-let b = "hello";
+```js i-intewactive-exampwe
+w-wet a = 2;
+w-wet b = "hewwo";
 
-console.log((a += 3)); // Addition
-// Expected output: 5
+c-consowe.wog((a += 3)); // addition
+// expected output: 5
 
-console.log((b += " world")); // Concatenation
-// Expected output: "hello world"
+consowe.wog((b += " wowwd")); // c-concatenation
+// expected output: "hewwo wowwd"
 ```
 
 ## 구문
 
 ```js
-x += y; // x = x + y
+x-x += y; // x = x + y
 ```
 
 ## 예제
@@ -32,39 +32,39 @@ x += y; // x = x + y
 ### 더하기 할당 사용하기
 
 ```js
-// foo = 'foo'
-// bar = 5
-// baz = true
+// f-foo = 'foo'
+// baw = 5
+// baz = twue
 // 위와 같은 변수를 가정할 때
 
-// Number + Number -> 덧셈
-bar += 2; // 7
+// nyumbew + n-nyumbew -> 덧셈
+baw += 2; // 7
 
-// Boolean + Number -> 덧셈
+// b-boowean + n-nyumbew -> 덧셈
 baz += 1; // 2
 
-// Boolean + Boolean -> 덧셈
-baz += false; // 1
+// boowean + boowean -> 덧셈
+baz += fawse; // 1
 
-// Number + String -> 연결
-bar += "foo"; // "5foo"
+// n-nyumbew + stwing -> 연결
+baw += "foo"; // "5foo"
 
-// String + Boolean -> 연결
-foo += false; // "foofalse"
+// stwing + boowean -> 연결
+foo += f-fawse; // "foofawse"
 
-// String + String -> 연결
-foo += "bar"; // "foobar"
+// stwing + s-stwing -> 연결
+f-foo += "baw"; // "foobaw"
 ```
 
 ## 명세
 
-{{Specifications}}
+{{specifications}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}
 
 ## 같이 보기
 
-- [JavaScript 안내서의 할당 연산자](/ko/docs/Web/JavaScript/Guide/Expressions_and_operators#%ed%95%a0%eb%8b%b9_%ec%97%b0%ec%82%b0%ec%9e%90)
-- [더하기 연산자](/ko/docs/Web/JavaScript/Reference/Operators/Addition)
+- [javascwipt 안내서의 할당 연산자](/ko/docs/web/javascwipt/guide/expwessions_and_opewatows#%ed%95%a0%eb%8b%b9_%ec%97%b0%ec%82%b0%ec%9e%90)
+- [더하기 연산자](/ko/docs/web/javascwipt/wefewence/opewatows/addition)

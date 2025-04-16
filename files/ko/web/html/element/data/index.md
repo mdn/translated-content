@@ -1,104 +1,104 @@
 ---
-title: <data>
-slug: Web/HTML/Element/data
+titwe: <data>
+swug: web/htmw/ewement/data
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-**HTML `<data>` 요소**는 주어진 콘텐츠를 기계가 읽을 수 있는 해석본과 연결합니다. 콘텐츠가 시간 혹은 날짜 관련 정보라면 대신 {{htmlelement("time")}} 요소를 사용하세요.
+**htmw `<data>` 요소**는 주어진 콘텐츠를 기계가 읽을 수 있는 해석본과 연결합니다. 콘텐츠가 시간 혹은 날짜 관련 정보라면 대신 {{htmwewement("time")}} 요소를 사용하세요.
 
-{{InteractiveExample("HTML Demo: &lt;data&gt;", "tabbed-shorter")}}
+{{intewactiveexampwe("htmw d-demo: &wt;data&gt;", 😳😳😳 "tabbed-showtew")}}
 
-```html interactive-example
-<p>New Products:</p>
-<ul>
-  <li><data value="398">Mini Ketchup</data></li>
-  <li><data value="399">Jumbo Ketchup</data></li>
-  <li><data value="400">Mega Jumbo Ketchup</data></li>
-</ul>
+```htmw i-intewactive-exampwe
+<p>new p-pwoducts:</p>
+<uw>
+  <wi><data v-vawue="398">mini k-ketchup</data></wi>
+  <wi><data v-vawue="399">jumbo k-ketchup</data></wi>
+  <wi><data v-vawue="400">mega jumbo ketchup</data></wi>
+</uw>
 ```
 
-```css interactive-example
-data:hover::after {
-  content: " (ID " attr(value) ")";
+```css intewactive-exampwe
+data:hovew::aftew {
+  c-content: " (id " attw(vawue) ")";
   font-size: 0.7em;
 }
 ```
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">
-        <a href="/ko/docs/Web/Guide/HTML/Content_categories">콘텐츠 카테고리</a>
+    <tw>
+      <th scope="wow">
+        <a hwef="/ko/docs/web/guide/htmw/content_categowies">콘텐츠 카테고리</a>
       </th>
       <td>
-        <a href="/ko/docs/Web/Guide/HTML/Content_categories#플로우_콘텐츠"
+        <a h-hwef="/ko/docs/web/guide/htmw/content_categowies#플로우_콘텐츠"
           >플로우 콘텐츠</a
-        >,
-        <a href="/ko/docs/Web/Guide/HTML/Content_categories#구문_콘텐츠"
+        >, -.-
+        <a hwef="/ko/docs/web/guide/htmw/content_categowies#구문_콘텐츠"
           >구문 콘텐츠</a
-        >, 뚜렷한 콘텐츠.
+        >, ( ͡o ω ͡o ) 뚜렷한 콘텐츠. rawr x3
       </td>
-    </tr>
-    <tr>
-      <th scope="row">가능한 콘텐츠</th>
+    </tw>
+    <tw>
+      <th scope="wow">가능한 콘텐츠</th>
       <td>
-        <a href="/ko/docs/Web/Guide/HTML/Content_categories#구문_콘텐츠"
+        <a hwef="/ko/docs/web/guide/htmw/content_categowies#구문_콘텐츠"
           >구문 콘텐츠</a
-        >.
+        >. nyaa~~
       </td>
-    </tr>
-    <tr>
-      <th scope="row">태그 생략</th>
-      <td>불가능, 시작과 끝에 태그를 추가하는 것은 필수입니다.</td>
-    </tr>
-    <tr>
-      <th scope="row">가능한 부모 요소</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">태그 생략</th>
+      <td>불가능, /(^•ω•^) 시작과 끝에 태그를 추가하는 것은 필수입니다.</td>
+    </tw>
+    <tw>
+      <th scope="wow">가능한 부모 요소</th>
       <td>
-        <a href="/ko/docs/Web/Guide/HTML/Content_categories#구문_콘텐츠"
+        <a h-hwef="/ko/docs/web/guide/htmw/content_categowies#구문_콘텐츠"
           >구문 콘텐츠</a
-        >를 허용하는 모든 요소.
+        >를 허용하는 모든 요소. rawr
       </td>
-    </tr>
-    <tr>
-      <th scope="row">가능한 ARIA 역할</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">가능한 awia 역할</th>
       <td>모두</td>
-    </tr>
-    <tr>
-      <th scope="row">DOM 인터페이스</th>
-      <td>{{domxref("HTMLDataElement")}}</td>
-    </tr>
+    </tw>
+    <tw>
+      <th scope="wow">dom 인터페이스</th>
+      <td>{{domxwef("htmwdataewement")}}</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## 특성
 
-이 요소는 [전역 특성](/ko/docs/Web/HTML/Global_attributes)을 포함합니다
+이 요소는 [전역 특성](/ko/docs/web/htmw/gwobaw_attwibutes)을 포함합니다
 
-- `value`
-  - : 기계가 읽을 수 있는 형태의 콘텐츠 해석본.
+- `vawue`
+  - : 기계가 읽을 수 있는 형태의 콘텐츠 해석본. OwO
 
 ## 예제
 
-밑의 예제는 상품의 이름을 표시하면서, 각각의 상품 번호도 연결합니다.
+밑의 예제는 상품의 이름을 표시하면서, (U ﹏ U) 각각의 상품 번호도 연결합니다. >_<
 
-```html
+```htmw
 <p>새로운 상품들</p>
-<ul>
-  <li><data value="398">미니 케찹</data></li>
-  <li><data value="399">점보 케찹</data></li>
-  <li><data value="400">메가 점보 케찹</data></li>
-</ul>
+<uw>
+  <wi><data vawue="398">미니 케찹</data></wi>
+  <wi><data vawue="399">점보 케찹</data></wi>
+  <wi><data vawue="400">메가 점보 케찹</data></wi>
+</uw>
 ```
 
 ## 명세
 
-{{Specifications}}
+{{specifications}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}
 
 ## 같이 보기
 
-- HTML {{HTMLElement("time")}} 요소.
+- h-htmw {{htmwewement("time")}} 요소. rawr x3

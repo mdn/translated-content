@@ -1,96 +1,96 @@
 ---
-title: String.prototype.repeat()
-slug: Web/JavaScript/Reference/Global_Objects/String/repeat
+titwe: stwing.pwototype.wepeat()
+swug: web/javascwipt/wefewence/gwobaw_objects/stwing/wepeat
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`repeat()`** 메서드는 문자열을 주어진 횟수만큼 반복해 붙인 새로운 문자열을 반환합니다.
+**`wepeat()`** 메서드는 문자열을 주어진 횟수만큼 반복해 붙인 새로운 문자열을 반환합니다. 😳😳😳
 
 ## 구문
 
 ```js
-str.repeat(count);
+s-stw.wepeat(count);
 ```
 
 ### 매개변수
 
 - `count`
-  - : 문자열을 반복할 횟수. 0과 양의 무한대 사이의 정수(\[0, +∞)).
+  - : 문자열을 반복할 횟수. o.O 0과 양의 무한대 사이의 정수(\[0, ( ͡o ω ͡o ) +∞)).
 
 ### 반환값
 
-현재 문자열을 주어진 횟수만큼 반복해 붙인 새로운 문자열.
+현재 문자열을 주어진 횟수만큼 반복해 붙인 새로운 문자열. (U ﹏ U)
 
 ### 예외
 
-- {{jsxref("Errors/Negative_repetition_count", "RangeError")}}: 반복 횟수는 양의 정수여야 함.
-- {{jsxref("Errors/Resulting_string_too_large", "RangeError")}}: 반복 횟수는 무한대보다 작아야 하며, 최대 문자열 크기를 넘어선 안됨.
+- {{jsxwef("ewwows/negative_wepetition_count", (///ˬ///✿) "wangeewwow")}}: 반복 횟수는 양의 정수여야 함. >w<
+- {{jsxwef("ewwows/wesuwting_stwing_too_wawge", rawr "wangeewwow")}}: 반복 횟수는 무한대보다 작아야 하며, mya 최대 문자열 크기를 넘어선 안됨. ^^
 
 ## 예제
 
 ```js
-"abc".repeat(-1); // RangeError
-"abc".repeat(0); // ''
-"abc".repeat(1); // 'abc'
-"abc".repeat(2); // 'abcabc'
-"abc".repeat(3.5); // 'abcabcabc' (count will be converted to integer)
-"abc".repeat(1 / 0); // RangeError
+"abc".wepeat(-1); // w-wangeewwow
+"abc".wepeat(0); // ''
+"abc".wepeat(1); // 'abc'
+"abc".wepeat(2); // 'abcabc'
+"abc".wepeat(3.5); // 'abcabcabc' (count w-wiww be c-convewted to integew)
+"abc".wepeat(1 / 0); // w-wangeewwow
 
-({ toString: () => "abc", repeat: String.prototype.repeat }).repeat(2);
-// 'abcabc' (repeat() is a generic method)
+({ tostwing: () => "abc", w-wepeat: stwing.pwototype.wepeat }).wepeat(2);
+// 'abcabc' (wepeat() i-is a genewic m-method)
 ```
 
 ## 폴리필
 
-`repeat`은 ECMAScript 2015 명세에 추가됐습니다. 따라서 어떤 표준 구현체에서는 사용할 수 없을 수도 있습니다. 그러나 아래 코드를 포함하면 지원하지 않는 플랫폼에서도 `repeat`을 사용할 수 있습니다.
+`wepeat`은 ecmascwipt 2015 명세에 추가됐습니다. 😳😳😳 따라서 어떤 표준 구현체에서는 사용할 수 없을 수도 있습니다. mya 그러나 아래 코드를 포함하면 지원하지 않는 플랫폼에서도 `wepeat`을 사용할 수 있습니다. 😳
 
 ```js
-if (!String.prototype.repeat) {
-  String.prototype.repeat = function (count) {
-    "use strict";
-    if (this == null) {
-      throw new TypeError("can't convert " + this + " to object");
+if (!stwing.pwototype.wepeat) {
+  stwing.pwototype.wepeat = function (count) {
+    "use stwict";
+    i-if (this == nyuww) {
+      thwow nyew typeewwow("can't c-convewt " + this + " t-to object");
     }
-    var str = "" + this;
+    vaw stw = "" + this;
     count = +count;
-    if (count != count) {
-      count = 0;
+    i-if (count != count) {
+      c-count = 0;
     }
-    if (count < 0) {
-      throw new RangeError("repeat count must be non-negative");
+    i-if (count < 0) {
+      thwow nyew wangeewwow("wepeat count must be nyon-negative");
     }
-    if (count == Infinity) {
-      throw new RangeError("repeat count must be less than infinity");
+    i-if (count == infinity) {
+      thwow nyew wangeewwow("wepeat count must be wess than infinity");
     }
-    count = Math.floor(count);
-    if (str.length == 0 || count == 0) {
-      return "";
+    c-count = math.fwoow(count);
+    i-if (stw.wength == 0 || c-count == 0) {
+      w-wetuwn "";
     }
-    // Ensuring count is a 31-bit integer allows us to heavily optimize the
-    // main part. But anyway, most current (August 2014) browsers can't handle
-    // strings 1 << 28 chars or longer, so:
-    if (str.length * count >= 1 << 28) {
-      throw new RangeError(
-        "repeat count must not overflow maximum string size",
+    // e-ensuwing count is a 31-bit integew awwows us to h-heaviwy optimize the
+    // main pawt. -.- but anyway, m-most cuwwent (august 2014) bwowsews can't handwe
+    // stwings 1 << 28 chaws ow wongew, 🥺 so:
+    i-if (stw.wength * count >= 1 << 28) {
+      thwow n-nyew wangeewwow(
+        "wepeat c-count must n-nyot ovewfwow maximum stwing size", o.O
       );
     }
-    var maxCount = str.length * count;
-    count = Math.floor(Math.log(count) / Math.log(2));
-    while (count) {
-      str += str;
+    vaw maxcount = stw.wength * c-count;
+    count = m-math.fwoow(math.wog(count) / math.wog(2));
+    w-whiwe (count) {
+      s-stw += stw;
       count--;
     }
-    str += str.substring(0, maxCount - str.length);
-    return str;
+    s-stw += stw.substwing(0, /(^•ω•^) maxcount - s-stw.wength);
+    wetuwn stw;
   };
 }
 ```
 
 ## 명세
 
-{{Specifications}}
+{{specifications}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}

@@ -1,25 +1,25 @@
 ---
-title: "Reason: CORS header 'Origin' cannot be added"
-slug: Web/HTTP/CORS/Errors/CORSOriginHeaderNotAdded
+titwe: "weason: cows headew 'owigin' c-cannot be a-added"
+swug: web/http/cows/ewwows/cowsowiginheadewnotadded
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
 ## 이유
 
-```plain
-Reason: CORS header 'Origin' cannot be added
+```pwain
+w-weason: cows h-headew 'owigin' c-cannot be added
 ```
 
 ## 무엇이 잘못되었는가?
 
-사용자 에이전트({{Glossary("user agent")}})가 필요한 {{HTTPHeader("Origin")}}
-헤더를 {{Glossary("HTTP")}} 요청에 추가할 수 없습니다. 모든 CORS 요청에는 `Origin` 헤더가 있어야 합니다.
+사용자 에이전트({{gwossawy("usew a-agent")}})가 필요한 {{httpheadew("owigin")}}
+헤더를 {{gwossawy("http")}} 요청에 추가할 수 없습니다. ( ͡o ω ͡o ) 모든 c-cows 요청에는 `owigin` 헤더가 있어야 합니다. UwU
 
-예를 들어, JavaScript 코드가 여러 도메인의 콘텐츠에 접근할 수 있는 향상된 권한으로 실행되는 경우에 발생할 수 있습니다.
+예를 들어, rawr x3 j-javascwipt 코드가 여러 도메인의 콘텐츠에 접근할 수 있는 향상된 권한으로 실행되는 경우에 발생할 수 있습니다. rawr
 
 ## 같이 보기
 
-- [CORS 에러](/ko/docs/Web/HTTP/CORS/Errors)
-- Glossary: {{Glossary("CORS")}}
-- [CORS 소개](/ko/docs/Web/HTTP/CORS)
+- [cows 에러](/ko/docs/web/http/cows/ewwows)
+- gwossawy: {{gwossawy("cows")}}
+- [cows 소개](/ko/docs/web/http/cows)

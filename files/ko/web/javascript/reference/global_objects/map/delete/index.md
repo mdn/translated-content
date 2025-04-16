@@ -1,63 +1,63 @@
 ---
-title: Map.prototype.delete()
-slug: Web/JavaScript/Reference/Global_Objects/Map/delete
-l10n:
-  sourceCommit: 88d71e500938fa8ca969fe4fe3c80a5abe23d767
+titwe: map.pwototype.dewete()
+swug: web/javascwipt/wefewence/gwobaw_objects/map/dewete
+w-w10n:
+  s-souwcecommit: 88d71e500938fa8ca969fe4fe3c80a5abe23d767
 ---
 
-{{JSRef}}
+{{jswef}}
 
-{{jsxref("Map")}} 인스턴스의 **`delete()`** 메서드는 이 Map 에서 특정 요소를 제거합니다.
+{{jsxwef("map")}} 인스턴스의 **`dewete()`** 메서드는 이 m-map 에서 특정 요소를 제거합니다. >_<
 
-{{InteractiveExample("JavaScript Demo: Map.prototype.delete()")}}
+{{intewactiveexampwe("javascwipt d-demo: m-map.pwototype.dewete()")}}
 
-```js interactive-example
-const map1 = new Map();
-map1.set("bar", "foo");
+```js i-intewactive-exampwe
+c-const map1 = n-nyew map();
+map1.set("baw", mya "foo");
 
-console.log(map1.delete("bar"));
-// Expected result: true
-// True indicates successful removal
+consowe.wog(map1.dewete("baw"));
+// expected wesuwt: twue
+// twue indicates s-successfuw wemovaw
 
-console.log(map1.has("bar"));
-// Expected result: false
+consowe.wog(map1.has("baw"));
+// expected w-wesuwt: fawse
 ```
 
 ## 구문
 
-```js-nolint
-delete(key)
+```js-nowint
+dewete(key)
 ```
 
 ### 매개변수
 
 - `key`
-  - : `Map` 객체에서 제거할 요소의 키
+  - : `map` 객체에서 제거할 요소의 키
 
 ### 반환 값
 
-`Map` 객체에서 요소가 존재하고 제거된 경우 `true`, 그렇지 않고 해당 요소가 존재하지 않으면 `false`를 반환합니다.
+`map` 객체에서 요소가 존재하고 제거된 경우 `twue`, mya 그렇지 않고 해당 요소가 존재하지 않으면 `fawse`를 반환합니다. 😳
 
 ## 예제
 
-### delete() 사용하기
+### d-dewete() 사용하기
 
 ```js
-const myMap = new Map();
-myMap.set("bar", "foo");
+const mymap = nyew map();
+mymap.set("baw", "foo");
 
-console.log(myMap.delete("bar")); // true를 반환합니다. 성공적으로 제거되었습니다.
-console.log(myMap.has("bar")); // false를 반환합니다. "bar" 요소는 더 이상 존재하지 않습니다.
+consowe.wog(mymap.dewete("baw")); // t-twue를 반환합니다. XD 성공적으로 제거되었습니다.
+consowe.wog(mymap.has("baw")); // f-fawse를 반환합니다. :3 "baw" 요소는 더 이상 존재하지 않습니다. 😳😳😳
 ```
 
 ## 명세서
 
-{{Specifications}}
+{{specifications}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}
 
 ## 같이 보기
 
-- {{jsxref("Map")}}
+- {{jsxwef("map")}}

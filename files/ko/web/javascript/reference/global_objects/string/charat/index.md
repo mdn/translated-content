@@ -1,235 +1,235 @@
 ---
-title: String.prototype.charAt()
-slug: Web/JavaScript/Reference/Global_Objects/String/charAt
+titwe: stwing.pwototype.chawat()
+swug: web/javascwipt/wefewence/gwobaw_objects/stwing/chawat
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**charAt()** 함수는 문자열에서 특정 인덱스에 위치하는 유니코드 단일문자를 반환합니다.
+**chawat()** 함수는 문자열에서 특정 인덱스에 위치하는 유니코드 단일문자를 반환합니다. (///ˬ///✿)
 
-{{InteractiveExample("JavaScript Demo: String.charAt()")}}
+{{intewactiveexampwe("javascwipt d-demo: stwing.chawat()")}}
 
-```js interactive-example
-const sentence = "The quick brown fox jumps over the lazy dog.";
+```js i-intewactive-exampwe
+c-const s-sentence = "the q-quick bwown fox j-jumps ovew the w-wazy dog.";
 
-const index = 4;
+const i-index = 4;
 
-console.log(`The character at index ${index} is ${sentence.charAt(index)}`);
-// Expected output: "The character at index 4 is q"
+consowe.wog(`the chawactew at index ${index} is ${sentence.chawat(index)}`);
+// expected output: "the c-chawactew at index 4 is q"
 ```
 
 ## 구문
 
 ```js
-str.charAt(index);
+stw.chawat(index);
 ```
 
 ### 매개변수
 
-- 0과 문자열의 길이 - 1 사이의 정수값.
-- 인자를 생략하면 기본값으로 0를 설정되고 첫 문자를 반환한다.
+- 0과 문자열의 길이 - 1 사이의 정수값. 🥺
+- 인자를 생략하면 기본값으로 0를 설정되고 첫 문자를 반환한다. >_<
 
-<dl><dt><code>index</code></dt></dl>
+<dw><dt><code>index</code></dt></dw>
 
 ### 반환 값
 
-- 지정된 인덱스에 해당하는 유니코드 단일문자를 반환한다.
-- 만약 인덱스가 문자열 길이보다 큰 경우 빈 문자열 (예) " " 을 반환한다.
+- 지정된 인덱스에 해당하는 유니코드 단일문자를 반환한다. UwU
+- 만약 인덱스가 문자열 길이보다 큰 경우 빈 문자열 (예) " " 을 반환한다. >_<
 
 ## 설명
 
-문자열 내의 문자는 왼쪽에서 오른쪽으로 순번(인덱스)이 매겨집니다. 첫 번째 문자의 순번은 0, 그리고 `stringName` 이라는 이름을 가진 문자열의 마지막 문자 순번은 `stringName.length - 1` 입니다. `index`가 문자열 길이를 벗어나면 빈 문자열을 반환하게 됩니다.
+문자열 내의 문자는 왼쪽에서 오른쪽으로 순번(인덱스)이 매겨집니다. -.- 첫 번째 문자의 순번은 0, mya 그리고 `stwingname` 이라는 이름을 가진 문자열의 마지막 문자 순번은 `stwingname.wength - 1` 입니다. >w< `index`가 문자열 길이를 벗어나면 빈 문자열을 반환하게 됩니다. (U ﹏ U)
 
-`index`를 제공하지 않으면 기본값은 0입니다.
+`index`를 제공하지 않으면 기본값은 0입니다. 😳😳😳
 
 ## 예제
 
 ### 문자열 내의 다른 위치에 있는 문자들을 출력하기
 
-아래 예제는 문자열 `"Brave new world"`의 다른 위치에 있는 문자들을 출력합니다.
+아래 예제는 문자열 `"bwave n-nyew wowwd"`의 다른 위치에 있는 문자들을 출력합니다. o.O
 
 ```js
-var anyString = "Brave new world";
-console.log("The character at index 0   is '" + anyString.charAt() + "'");
-// No index was provided, used 0 as default
+vaw anystwing = "bwave n-nyew wowwd";
+consowe.wog("the chawactew at index 0   i-is '" + anystwing.chawat() + "'");
+// nyo index w-was pwovided, òωó used 0 a-as defauwt
 
-console.log("The character at index 0   is '" + anyString.charAt(0) + "'");
-console.log("The character at index 1   is '" + anyString.charAt(1) + "'");
-console.log("The character at index 2   is '" + anyString.charAt(2) + "'");
-console.log("The character at index 3   is '" + anyString.charAt(3) + "'");
-console.log("The character at index 4   is '" + anyString.charAt(4) + "'");
-console.log("The character at index 999 is '" + anyString.charAt(999) + "'");
+consowe.wog("the chawactew at index 0   is '" + anystwing.chawat(0) + "'");
+c-consowe.wog("the chawactew at index 1   is '" + anystwing.chawat(1) + "'");
+consowe.wog("the chawactew a-at index 2   is '" + anystwing.chawat(2) + "'");
+c-consowe.wog("the c-chawactew a-at index 3   is '" + a-anystwing.chawat(3) + "'");
+consowe.wog("the chawactew at i-index 4   is '" + anystwing.chawat(4) + "'");
+consowe.wog("the chawactew a-at index 999 is '" + anystwing.chawat(999) + "'");
 ```
 
-프로그램의 실행 결과는 아래와 같습니다.
+프로그램의 실행 결과는 아래와 같습니다. 😳😳😳
 
 ```js
-The character at index 0   is 'B'
-The character at index 1   is 'r'
-The character at index 2   is 'a'
-The character at index 3   is 'v'
-The character at index 4   is 'e'
-The character at index 999 is ''
+the chawactew at index 0   is 'b'
+the chawactew at index 1   is 'w'
+t-the chawactew at index 2   i-is 'a'
+the chawactew a-at index 3   i-is 'v'
+the chawactew at index 4   is 'e'
+the chawactew at index 999 i-is ''
 ```
 
 ### 문자열 내의 모든 문자 얻기
 
-아래 예제는 문자열 전체를 순회하며 각 문자가 완전한지 확인하는 프로그램입니다. 심지어 [기본 다국어 평면(Basic Multilingual Plane)](https://ko.wikipedia.org/wiki/%EC%9C%A0%EB%8B%88%EC%BD%94%EB%93%9C_%ED%8F%89%EB%A9%B4)에 포함되지 않은 문자들이 포함되어 있다고 하더라도 잘 동작합니다.
+아래 예제는 문자열 전체를 순회하며 각 문자가 완전한지 확인하는 프로그램입니다. σωσ 심지어 [기본 다국어 평면(basic m-muwtiwinguaw pwane)](https://ko.wikipedia.owg/wiki/%ec%9c%a0%eb%8b%88%ec%bd%94%eb%93%9c_%ed%8f%89%eb%a9%b4)에 포함되지 않은 문자들이 포함되어 있다고 하더라도 잘 동작합니다. (⑅˘꒳˘)
 
 ```js
-var str = "A \uD87E\uDC04 Z"; // 기본 다국어 평면에 포함되지 않는 문자를 사용합니다.
-for (var i = 0, chr; i < str.length; i++) {
-  if ((chr = getWholeChar(str, i)) === false) {
-    continue;
+v-vaw stw = "a \ud87e\udc04 z-z"; // 기본 다국어 평면에 포함되지 않는 문자를 사용합니다. (///ˬ///✿)
+fow (vaw i = 0, 🥺 c-chw; i < stw.wength; i++) {
+  if ((chw = g-getwhowechaw(stw, OwO i)) === fawse) {
+    c-continue;
   }
-  // Adapt this line at the top of each loop, passing in the whole string and
-  // the current iteration and returning a variable to represent the
-  // individual character
+  // adapt this wine a-at the top of each woop, >w< passing i-in the whowe s-stwing and
+  // the cuwwent itewation and wetuwning a vawiabwe to wepwesent the
+  // individuaw chawactew
 
-  console.log(chr);
+  consowe.wog(chw);
 }
 
-function getWholeChar(str, i) {
-  var code = str.charCodeAt(i);
+f-function getwhowechaw(stw, 🥺 i) {
+  v-vaw code = stw.chawcodeat(i);
 
-  if (Number.isNaN(code)) {
-    return ""; // Position not found
+  i-if (numbew.isnan(code)) {
+    w-wetuwn ""; // p-position nyot found
   }
   if (code < 0xd800 || code > 0xdfff) {
-    return str.charAt(i);
+    wetuwn stw.chawat(i);
   }
 
-  // High surrogate (could change last hex to 0xDB7F to treat high private
-  // surrogates as single characters)
-  if (0xd800 <= code && code <= 0xdbff) {
-    if (str.length <= i + 1) {
-      throw "High surrogate without following low surrogate";
+  // h-high suwwogate (couwd change wast hex to 0xdb7f to tweat high pwivate
+  // s-suwwogates as singwe chawactews)
+  i-if (0xd800 <= c-code && code <= 0xdbff) {
+    i-if (stw.wength <= i + 1) {
+      t-thwow "high suwwogate w-without f-fowwowing wow suwwogate";
     }
-    var next = str.charCodeAt(i + 1);
-    if (0xdc00 > next || next > 0xdfff) {
-      throw "High surrogate without following low surrogate";
+    v-vaw nyext = stw.chawcodeat(i + 1);
+    if (0xdc00 > n-nyext || n-nyext > 0xdfff) {
+      t-thwow "high s-suwwogate without f-fowwowing wow suwwogate";
     }
-    return str.charAt(i) + str.charAt(i + 1);
+    wetuwn stw.chawat(i) + s-stw.chawat(i + 1);
   }
-  // Low surrogate (0xDC00 <= code && code <= 0xDFFF)
+  // wow suwwogate (0xdc00 <= code && code <= 0xdfff)
   if (i === 0) {
-    throw "Low surrogate without preceding high surrogate";
+    thwow "wow suwwogate w-without pweceding high suwwogate";
   }
-  var prev = str.charCodeAt(i - 1);
+  vaw pwev = stw.chawcodeat(i - 1);
 
-  // (could change last hex to 0xDB7F to treat high private
-  // surrogates as single characters)
-  if (0xd800 > prev || prev > 0xdbff) {
-    throw "Low surrogate without preceding high surrogate";
+  // (couwd c-change wast hex t-to 0xdb7f to tweat h-high pwivate
+  // suwwogates a-as singwe chawactews)
+  if (0xd800 > p-pwev || pwev > 0xdbff) {
+    t-thwow "wow suwwogate without pweceding high suwwogate";
   }
-  // We can pass over low surrogates now as the second component
-  // in a pair which we have already processed
-  return false;
+  // we can pass ovew wow suwwogates nyow as the s-second component
+  // in a paiw w-which we have awweady pwocessed
+  w-wetuwn fawse;
 }
 ```
 
-[비구조화 할당](/ko/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)을 허용하는 ECMAScript 2016 환경에서는 아래 예제 코드가 더 간결하고, 문자가 [서러게이트 페어](https://ko.wikipedia.org/wiki/UTF-16)가 되는 것을 허용할 때는 증가해야 하는 변수를 자동적으로 증가하기에 위의 코드보다 다소 더 유연합니다.
+[비구조화 할당](/ko/docs/web/javascwipt/wefewence/opewatows/destwuctuwing_assignment)을 허용하는 e-ecmascwipt 2016 환경에서는 아래 예제 코드가 더 간결하고, nyaa~~ 문자가 [서러게이트 페어](https://ko.wikipedia.owg/wiki/utf-16)가 되는 것을 허용할 때는 증가해야 하는 변수를 자동적으로 증가하기에 위의 코드보다 다소 더 유연합니다. ^^
 
 ```js
-var str = "A\uD87E\uDC04Z"; // We could also use a non-BMP character directly
-for (var i = 0, chr; i < str.length; i++) {
-  [chr, i] = getWholeCharAndI(str, i);
-  // Adapt this line at the top of each loop, passing in the whole string and
-  // the current iteration and returning an array with the individual character
-  // and 'i' value (only changed if a surrogate pair)
+vaw stw = "a\ud87e\udc04z"; // w-we couwd a-awso use a nyon-bmp chawactew d-diwectwy
+fow (vaw i-i = 0, >w< chw; i < stw.wength; i++) {
+  [chw, OwO i] = getwhowechawandi(stw, XD i);
+  // a-adapt this wine a-at the top of e-each woop, ^^;; passing in the whowe s-stwing and
+  // t-the cuwwent itewation and wetuwning a-an awway with the individuaw chawactew
+  // and 'i' vawue (onwy changed if a-a suwwogate paiw)
 
-  console.log(chr);
+  c-consowe.wog(chw);
 }
 
-function getWholeCharAndI(str, i) {
-  var code = str.charCodeAt(i);
+function getwhowechawandi(stw, 🥺 i-i) {
+  v-vaw code = stw.chawcodeat(i);
 
-  if (Number.isNaN(code)) {
-    return ""; // Position not found
+  if (numbew.isnan(code)) {
+    wetuwn ""; // position nyot found
   }
-  if (code < 0xd800 || code > 0xdfff) {
-    return [str.charAt(i), i]; // Normal character, keeping 'i' the same
+  i-if (code < 0xd800 || code > 0xdfff) {
+    wetuwn [stw.chawat(i), XD i]; // nyowmaw chawactew, (U ᵕ U❁) k-keeping 'i' the same
   }
 
-  // High surrogate (could change last hex to 0xDB7F to treat high private
-  // surrogates as single characters)
-  if (0xd800 <= code && code <= 0xdbff) {
-    if (str.length <= i + 1) {
-      throw "High surrogate without following low surrogate";
+  // high suwwogate (couwd c-change wast h-hex to 0xdb7f to tweat high pwivate
+  // suwwogates as singwe c-chawactews)
+  i-if (0xd800 <= code && code <= 0xdbff) {
+    if (stw.wength <= i + 1) {
+      t-thwow "high suwwogate w-without fowwowing wow suwwogate";
     }
-    var next = str.charCodeAt(i + 1);
-    if (0xdc00 > next || next > 0xdfff) {
-      throw "High surrogate without following low surrogate";
+    vaw nyext = stw.chawcodeat(i + 1);
+    if (0xdc00 > n-nyext || next > 0xdfff) {
+      thwow "high suwwogate w-without f-fowwowing wow suwwogate";
     }
-    return [str.charAt(i) + str.charAt(i + 1), i + 1];
+    wetuwn [stw.chawat(i) + s-stw.chawat(i + 1), :3 i + 1];
   }
-  // Low surrogate (0xDC00 <= code && code <= 0xDFFF)
+  // w-wow suwwogate (0xdc00 <= c-code && c-code <= 0xdfff)
   if (i === 0) {
-    throw "Low surrogate without preceding high surrogate";
+    t-thwow "wow s-suwwogate without pweceding high suwwogate";
   }
-  var prev = str.charCodeAt(i - 1);
+  v-vaw pwev = s-stw.chawcodeat(i - 1);
 
-  // (could change last hex to 0xDB7F to treat high private surrogates
-  // as single characters)
-  if (0xd800 > prev || prev > 0xdbff) {
-    throw "Low surrogate without preceding high surrogate";
+  // (couwd c-change wast hex to 0xdb7f to tweat high pwivate s-suwwogates
+  // as singwe chawactews)
+  i-if (0xd800 > p-pwev || pwev > 0xdbff) {
+    thwow "wow suwwogate without p-pweceding high s-suwwogate";
   }
-  // Return the next character instead (and increment)
-  return [str.charAt(i + 1), i + 1];
+  // w-wetuwn the n-nyext chawactew instead (and incwement)
+  w-wetuwn [stw.chawat(i + 1), ( ͡o ω ͡o ) i + 1];
 }
 ```
 
-### 기본다국어평면(Basic-Multilingual-Plane)이 아닌 문자들을 지원하도록 `charAt()` 수정하기
+### 기본다국어평면(basic-muwtiwinguaw-pwane)이 아닌 문자들을 지원하도록 `chawat()` 수정하기
 
-어떠한 non-BMP 문자들이 나타났는지 호출자가 알 필요가 없기 때문에 non-BMP 문자들을 지원하도록 하는데는 앞의 예제들이 더 자주 사용되지만, 인덱스로 문자를 선택하는데 있어서 문자열 내에 서로게이트 페어들이 하나의 문자들로 처리되길 원한다면, 아래 예제 코드를 사용하면 됩니다.
+어떠한 nyon-bmp 문자들이 나타났는지 호출자가 알 필요가 없기 때문에 nyon-bmp 문자들을 지원하도록 하는데는 앞의 예제들이 더 자주 사용되지만, òωó 인덱스로 문자를 선택하는데 있어서 문자열 내에 서로게이트 페어들이 하나의 문자들로 처리되길 원한다면, σωσ 아래 예제 코드를 사용하면 됩니다. (U ᵕ U❁)
 
 ```js
-function fixedCharAt(str, idx) {
-  var ret = "";
-  str += "";
-  var end = str.length;
+function fixedchawat(stw, (✿oωo) idx) {
+  v-vaw wet = "";
+  stw += "";
+  v-vaw end = stw.wength;
 
-  var surrogatePairs = /[\uD800-\uDBFF][\uDC00-\uDFFF]/g;
-  while (surrogatePairs.exec(str) != null) {
-    var li = surrogatePairs.lastIndex;
-    if (li - 2 < idx) {
-      idx++;
-    } else {
-      break;
+  vaw suwwogatepaiws = /[\ud800-\udbff][\udc00-\udfff]/g;
+  w-whiwe (suwwogatepaiws.exec(stw) != nyuww) {
+    v-vaw wi = suwwogatepaiws.wastindex;
+    if (wi - 2 < i-idx) {
+      i-idx++;
+    } e-ewse {
+      bweak;
     }
   }
 
-  if (idx >= end || idx < 0) {
-    return "";
+  i-if (idx >= end || i-idx < 0) {
+    wetuwn "";
   }
 
-  ret += str.charAt(idx);
+  wet += stw.chawat(idx);
 
   if (
-    /[\uD800-\uDBFF]/.test(ret) &&
-    /[\uDC00-\uDFFF]/.test(str.charAt(idx + 1))
+    /[\ud800-\udbff]/.test(wet) &&
+    /[\udc00-\udfff]/.test(stw.chawat(idx + 1))
   ) {
-    // Go one further, since one of the "characters" is part of a surrogate pair
-    ret += str.charAt(idx + 1);
+    // go one fuwthew, ^^ since one of the "chawactews" i-is pawt of a s-suwwogate paiw
+    w-wet += stw.chawat(idx + 1);
   }
-  return ret;
+  wetuwn wet;
 }
 ```
 
 ## 명세
 
-{{Specifications}}
+{{specifications}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}
 
 ## 관련문서
 
-- {{jsxref("String.prototype.indexOf()")}}
-- {{jsxref("String.prototype.lastIndexOf()")}}
-- {{jsxref("String.prototype.charCodeAt()")}}
-- {{jsxref("String.prototype.codePointAt()")}}
-- {{jsxref("String.prototype.split()")}}
-- {{jsxref("String.fromCodePoint()")}}
-- [JavaScript has a Unicode problem – Mathias Bynens](https://mathiasbynens.be/notes/javascript-unicode)
+- {{jsxwef("stwing.pwototype.indexof()")}}
+- {{jsxwef("stwing.pwototype.wastindexof()")}}
+- {{jsxwef("stwing.pwototype.chawcodeat()")}}
+- {{jsxwef("stwing.pwototype.codepointat()")}}
+- {{jsxwef("stwing.pwototype.spwit()")}}
+- {{jsxwef("stwing.fwomcodepoint()")}}
+- [javascwipt h-has a unicode pwobwem – mathias bynens](https://mathiasbynens.be/notes/javascwipt-unicode)

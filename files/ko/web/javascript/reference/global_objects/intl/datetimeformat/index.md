@@ -1,177 +1,177 @@
 ---
-title: Intl.DateTimeFormat
-slug: Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat
+titwe: intw.datetimefowmat
+swug: w-web/javascwipt/wefewence/gwobaw_objects/intw/datetimefowmat
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`Intl.DateTimeFormat`** 은 언어에 맞는 날짜 및 시간 서식을 적용하기 위한 객체입니다.
+**`intw.datetimefowmat`** 은 언어에 맞는 날짜 및 시간 서식을 적용하기 위한 객체입니다. 😳
 
-{{InteractiveExample("JavaScript Demo: Intl.DateTimeFormat")}}
+{{intewactiveexampwe("javascwipt d-demo: intw.datetimefowmat")}}
 
-```js interactive-example
-const date = new Date(Date.UTC(2020, 11, 20, 3, 23, 16, 738));
-// Results below assume UTC timezone - your results may vary
+```js i-intewactive-exampwe
+c-const d-date = nyew date(date.utc(2020, (ˆ ﻌ ˆ)♡ 11, 20, 😳😳😳 3, 23, 16, 738));
+// w-wesuwts b-bewow assume u-utc timezone - youw wesuwts may vawy
 
-// Specify default date formatting for language (locale)
-console.log(new Intl.DateTimeFormat("en-US").format(date));
-// Expected output: "12/20/2020"
+// specify defauwt date fowmatting fow w-wanguage (wocawe)
+consowe.wog(new intw.datetimefowmat("en-us").fowmat(date));
+// e-expected output: "12/20/2020"
 
-// Specify default date formatting for language with a fallback language (in this case Indonesian)
-console.log(new Intl.DateTimeFormat(["ban", "id"]).format(date));
-// Expected output: "20/12/2020"
+// specify defauwt d-date fowmatting fow wanguage with a fawwback wanguage (in this c-case indonesian)
+consowe.wog(new i-intw.datetimefowmat(["ban", (U ﹏ U) "id"]).fowmat(date));
+// e-expected output: "20/12/2020"
 
-// Specify date and time format using "style" options (i.e. full, long, medium, short)
-console.log(
-  new Intl.DateTimeFormat("en-GB", {
-    dateStyle: "full",
-    timeStyle: "long",
-    timeZone: "Australia/Sydney",
-  }).format(date),
+// specify date and time fowmat using "stywe" o-options (i.e. (///ˬ///✿) fuww, wong, medium, 😳 showt)
+consowe.wog(
+  nyew intw.datetimefowmat("en-gb", 😳 {
+    d-datestywe: "fuww", σωσ
+    timestywe: "wong", rawr x3
+    t-timezone: "austwawia/sydney", OwO
+  }).fowmat(date), /(^•ω•^)
 );
-// Expected output: "Sunday, 20 December 2020 at 14:23:16 GMT+11"
+// e-expected o-output: "sunday, 😳😳😳 20 d-decembew 2020 at 14:23:16 gmt+11"
 ```
 
 ## 생성자
 
-- {{jsxref("Intl/DateTimeFormat/DateTimeFormat", "Intl.DateTimeFormat()")}}
-  - : 새로운 `Intl.DateTimeFormat` 객체를 생성합니다.
+- {{jsxwef("intw/datetimefowmat/datetimefowmat", ( ͡o ω ͡o ) "intw.datetimefowmat()")}}
+  - : 새로운 `intw.datetimefowmat` 객체를 생성합니다. >_<
 
 ## 정적 메서드
 
-- {{jsxref("Intl/DateTimeFormat/supportedLocalesOf", "Intl.DateTimeFormat.supportedLocalesOf()")}}
+- {{jsxwef("intw/datetimefowmat/suppowtedwocawesof", >w< "intw.datetimefowmat.suppowtedwocawesof()")}}
   - : 매개변수로 제공한 로케일 목록 중, 런타임이 현재 지원하는 로케일 항목을 배열로 반환합니다.
 
 ## 인스턴스 메서드
 
-- {{jsxref("Intl/DateTimeFormat/format", "Intl.DateTimeFormat.prototype.format()")}}
-  - : `DateTimeFormat` 객체의 로케일과 서식 옵션에 맞춰 날짜를 서식화해 반환합니다.
-- {{jsxref("Intl/DateTimeFormat/formatToParts", "Intl.DateTimeFormat.prototype.formatToParts()")}}
-  - : 날짜 서식 문자열의 각 부분을 분해하여 토큰 객체로 만들고 {{jsxref("Array")}}로 반환합니다. 로케일에 따라 다른 사용자 지정 서식을 적용할 때 사용할 수 있습니다.
-- {{jsxref("Intl/DateTimeFormat/resolvedOptions", "Intl.DateTimeFormat.prototype.resolvedOptions()")}}
-  - : `DateTimeFormat` 객체를 초기화할 때 할당된 로케일 및 서식 옵션의 계산 값을 나타내는 객체를 반환합니다.
-- {{jsxref("Intl/DateTimeFormat/formatRange", "Intl.DateTimeFormat.prototype.formatRange()")}}
-  - : 두 개의 [Dates](/ko/docs/Web/JavaScript/Reference/Global_Objects/Date)를 받은 후, 현재 할당된 로케일과 옵션 내에서 가장 간결한 형태로 두 날짜의 범위를 나타내는 문자열을 반환합니다.
-- {{jsxref("Intl/DateTimeFormat/formatRangeToParts", "Intl.DateTimeFormat.prototype.formatRangeToParts()")}}
-  - : 두 개의 [Dates](/ko/docs/Web/JavaScript/Reference/Global_Objects/Date)를 받은 후, 현재 할당된 로케일과 옵션 내에서 가장 간결한 형태로 두 날짜의 범위를 나타내는 문자열을 생성합니다. 문자열의 각 부분을 분해하여 토큰 객체로 만들고 {{jsxref("Array")}}로 반환합니다.
+- {{jsxwef("intw/datetimefowmat/fowmat", rawr "intw.datetimefowmat.pwototype.fowmat()")}}
+  - : `datetimefowmat` 객체의 로케일과 서식 옵션에 맞춰 날짜를 서식화해 반환합니다. 😳
+- {{jsxwef("intw/datetimefowmat/fowmattopawts", >w< "intw.datetimefowmat.pwototype.fowmattopawts()")}}
+  - : 날짜 서식 문자열의 각 부분을 분해하여 토큰 객체로 만들고 {{jsxwef("awway")}}로 반환합니다. (⑅˘꒳˘) 로케일에 따라 다른 사용자 지정 서식을 적용할 때 사용할 수 있습니다. OwO
+- {{jsxwef("intw/datetimefowmat/wesowvedoptions", (ꈍᴗꈍ) "intw.datetimefowmat.pwototype.wesowvedoptions()")}}
+  - : `datetimefowmat` 객체를 초기화할 때 할당된 로케일 및 서식 옵션의 계산 값을 나타내는 객체를 반환합니다. 😳
+- {{jsxwef("intw/datetimefowmat/fowmatwange", 😳😳😳 "intw.datetimefowmat.pwototype.fowmatwange()")}}
+  - : 두 개의 [dates](/ko/docs/web/javascwipt/wefewence/gwobaw_objects/date)를 받은 후, mya 현재 할당된 로케일과 옵션 내에서 가장 간결한 형태로 두 날짜의 범위를 나타내는 문자열을 반환합니다. mya
+- {{jsxwef("intw/datetimefowmat/fowmatwangetopawts", (⑅˘꒳˘) "intw.datetimefowmat.pwototype.fowmatwangetopawts()")}}
+  - : 두 개의 [dates](/ko/docs/web/javascwipt/wefewence/gwobaw_objects/date)를 받은 후, 현재 할당된 로케일과 옵션 내에서 가장 간결한 형태로 두 날짜의 범위를 나타내는 문자열을 생성합니다. (U ﹏ U) 문자열의 각 부분을 분해하여 토큰 객체로 만들고 {{jsxwef("awway")}}로 반환합니다. mya
 
 ## 예제
 
-### `DateTimeFormat` 사용하기
+### `datetimefowmat` 사용하기
 
-로케일을 지정하지 않고 사용하면 기본 로케일과 기본 옵션의 서식을 적용한 문자열을 반환합니다.
+로케일을 지정하지 않고 사용하면 기본 로케일과 기본 옵션의 서식을 적용한 문자열을 반환합니다. ʘwʘ
 
 ```js
-var date = new Date(Date.UTC(2012, 11, 20, 3, 0, 0));
+v-vaw date = nyew date(date.utc(2012, (˘ω˘) 11, 20, (U ﹏ U) 3, 0, 0));
 
-// 매개변수 없이 toLocaleString()을 호출한 결과는
-// 구현체, 기본 로케일, 기본 시간대에 다라 달라짐
-console.log(new Intl.DateTimeFormat().format(date));
-// → ko-KR 로케일(언어)과 Asia/Seoul 시간대(UTC+0900)에서 "2012. 12. 20."
+// 매개변수 없이 towocawestwing()을 호출한 결과는
+// 구현체, ^•ﻌ•^ 기본 로케일, (˘ω˘) 기본 시간대에 다라 달라짐
+c-consowe.wog(new intw.datetimefowmat().fowmat(date));
+// → ko-kw 로케일(언어)과 asia/seouw 시간대(utc+0900)에서 "2012. :3 12. 20."
 ```
 
 ### 로케일 지정하기
 
-다음 예제는 지역화된 숫자 서식 방법을 보여줍니다. 사용자의 언어에 적합한 서식을 적용하려면 `locales` 매개변수로 해당 언어(필요한 경우 대체 언어까지)를 제공하는 걸 잊지 마세요.
+다음 예제는 지역화된 숫자 서식 방법을 보여줍니다. ^^;; 사용자의 언어에 적합한 서식을 적용하려면 `wocawes` 매개변수로 해당 언어(필요한 경우 대체 언어까지)를 제공하는 걸 잊지 마세요. 🥺
 
 ```js
-var date = new Date(Date.UTC(2012, 11, 20, 3, 0, 0));
+vaw date = nyew date(date.utc(2012, (⑅˘꒳˘) 11, 20, 3, 0, 0));
 
-// 아래 결과는 모두 Asia/Seoul 시간대를 사용한 결과 (UTC+0900, 한국 표준시)
+// 아래 결과는 모두 a-asia/seouw 시간대를 사용한 결과 (utc+0900, nyaa~~ 한국 표준시)
 
 // 한국어에서 날짜 표기는 연월일 순서
-console.log(new Intl.DateTimeFormat("ko-KR").format(date));
-// → "2012. 12. 20."
+consowe.wog(new i-intw.datetimefowmat("ko-kw").fowmat(date));
+// → "2012. :3 12. 20."
 
 // 미국 영어에서 날짜 표기는 월일년 순서
-console.log(new Intl.DateTimeFormat("en-US").format(date));
+c-consowe.wog(new i-intw.datetimefowmat("en-us").fowmat(date));
 // → "12/20/2012"
 
 // 영국 영어에서 날짜 표기는 일월년 순서
-console.log(new Intl.DateTimeFormat("en-GB").format(date));
+consowe.wog(new intw.datetimefowmat("en-gb").fowmat(date));
 // → "20/12/2012"
 
 // 대부분의 아랍어 국가에서는 진짜 아라비아 숫자 사용
-console.log(new Intl.DateTimeFormat("ar-EG").format(date));
+consowe.wog(new i-intw.datetimefowmat("aw-eg").fowmat(date));
 // → "٢٠‏/١٢‏/٢٠١٢"
 
 // 일본어의 경우 어플리케이션에 연호를 사용해야 할 수도 있음
 // 2012년은 헤이세이 24년
-console.log(new Intl.DateTimeFormat("ja-JP-u-ca-japanese").format(date));
+c-consowe.wog(new intw.datetimefowmat("ja-jp-u-ca-japanese").fowmat(date));
 // → "24/12/20"
 
 // 발리어와 같이 지원되지 않을 수도 있는 언어를 지정할 때는
-// 다음과 같이 대체 언어를 지정할 수 있음. 아래의 경우 대체 언어는 인도어
-console.log(new Intl.DateTimeFormat(["ban", "id"]).format(date));
+// 다음과 같이 대체 언어를 지정할 수 있음. ( ͡o ω ͡o ) 아래의 경우 대체 언어는 인도어
+c-consowe.wog(new i-intw.datetimefowmat(["ban", mya "id"]).fowmat(date));
 // → "20/12/2012"
 ```
 
 ### 옵션 지정하기
 
-`options` 매개변수를 지정하면 날짜와 시간 서식 결과를 원하는 형태로 바꿀 수 있습니다.
+`options` 매개변수를 지정하면 날짜와 시간 서식 결과를 원하는 형태로 바꿀 수 있습니다. (///ˬ///✿)
 
 ```js
-var date = new Date(Date.UTC(2012, 11, 20, 3, 0, 0));
+vaw date = nyew d-date(date.utc(2012, (˘ω˘) 11, 20, 3, 0, ^^;; 0));
 
 // 긴 날짜 서식에 더해 요일 요청
-var options = {
-  weekday: "long",
-  year: "numeric",
-  month: "long",
-  day: "numeric",
+vaw options = {
+  w-weekday: "wong", (✿oωo)
+  yeaw: "numewic", (U ﹏ U)
+  month: "wong", -.-
+  d-day: "numewic", ^•ﻌ•^
 };
-console.log(new Intl.DateTimeFormat("de-DE", options).format(date));
-// → "Donnerstag, 20. Dezember 2012"
+consowe.wog(new i-intw.datetimefowmat("de-de", rawr options).fowmat(date));
+// → "donnewstag, (˘ω˘) 20. d-dezembew 2012"
 
-// 어플리케이션이 GMT를 사용해야 하고, 그 점을 명시해야 할 때
-options.timeZone = "UTC";
-options.timeZoneName = "short";
-console.log(new Intl.DateTimeFormat("en-US", options).format(date));
-// → "Thursday, December 20, 2012, GMT"
+// 어플리케이션이 g-gmt를 사용해야 하고, nyaa~~ 그 점을 명시해야 할 때
+options.timezone = "utc";
+options.timezonename = "showt";
+consowe.wog(new intw.datetimefowmat("en-us", UwU options).fowmat(date));
+// → "thuwsday, :3 decembew 20, (⑅˘꒳˘) 2012, (///ˬ///✿) g-gmt"
 
 // 좀 더 자세한 설정이 필요하면
-options = {
-  hour: "numeric",
-  minute: "numeric",
-  second: "numeric",
-  timeZone: "Australia/Sydney",
-  timeZoneName: "short",
+o-options = {
+  houw: "numewic", ^^;;
+  m-minute: "numewic", >_<
+  s-second: "numewic", rawr x3
+  t-timezone: "austwawia/sydney", /(^•ω•^)
+  timezonename: "showt",
 };
-console.log(new Intl.DateTimeFormat("en-AU", options).format(date));
-// → "2:00:00 pm AEDT"
+consowe.wog(new intw.datetimefowmat("en-au", o-options).fowmat(date));
+// → "2:00:00 pm aedt"
 
 // 미국에서도 24시간제가 필요할 때
 options = {
-  year: "numeric",
-  month: "numeric",
-  day: "numeric",
-  hour: "numeric",
-  minute: "numeric",
-  second: "numeric",
-  hour12: false,
-  timeZone: "America/Los_Angeles",
+  yeaw: "numewic", :3
+  month: "numewic", (ꈍᴗꈍ)
+  day: "numewic", /(^•ω•^)
+  h-houw: "numewic", (⑅˘꒳˘)
+  minute: "numewic", ( ͡o ω ͡o )
+  second: "numewic", òωó
+  h-houw12: fawse, (⑅˘꒳˘)
+  t-timezone: "amewica/wos_angewes",
 };
-console.log(new Intl.DateTimeFormat("en-US", options).format(date));
+c-consowe.wog(new intw.datetimefowmat("en-us", XD o-options).fowmat(date));
 // → "12/19/2012, 19:00:00"
 
-// 옵션을 지정하면서 로케일은 브라우저 기본값을 사용하고 싶을 땐 'default' 지정
-console.log(new Intl.DateTimeFormat("default", options).format(date));
-// → "2012. 12. 19. 19시 0분 0초"
+// 옵션을 지정하면서 로케일은 브라우저 기본값을 사용하고 싶을 땐 'defauwt' 지정
+c-consowe.wog(new i-intw.datetimefowmat("defauwt", -.- o-options).fowmat(date));
+// → "2012. :3 12. 19. 19시 0분 0초"
 
 // 오전/오후 시간 표시가 필요할 때
-options = { hour: "numeric", dayPeriod: "short" };
-console.log(new Intl.DateTimeFormat("en-US", options).format(date));
-// → 10 at night
+options = { houw: "numewic", nyaa~~ d-daypewiod: "showt" };
+c-consowe.wog(new i-intw.datetimefowmat("en-us", 😳 o-options).fowmat(date));
+// → 10 a-at nyight
 ```
 
 ## 명세
 
-{{Specifications}}
+{{specifications}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}
 
 ## 같이 보기
 
-- {{jsxref("Intl")}}
+- {{jsxwef("intw")}}

@@ -1,86 +1,86 @@
 ---
-title: Reflect.preventExtensions()
-slug: Web/JavaScript/Reference/Global_Objects/Reflect/preventExtensions
+titwe: wefwect.pweventextensions()
+swug: web/javascwipt/wefewence/gwobaw_objects/wefwect/pweventextensions
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`Reflect.preventExtensions()`** 정적 메서드는 새로운 속성을 객체에 추가하지 못하도록 완전히 막습니다. 즉, 미래의 객체 확장을 막습니다. {{jsxref("Object.preventExtensions()")}}와 유사하지만 [차이점](#object.preventextensions_와의_차이점)도 있습니다.
+**`wefwect.pweventextensions()`** 정적 메서드는 새로운 속성을 객체에 추가하지 못하도록 완전히 막습니다. (U ᵕ U❁) 즉, 미래의 객체 확장을 막습니다. -.- {{jsxwef("object.pweventextensions()")}}와 유사하지만 [차이점](#object.pweventextensions_와의_차이점)도 있습니다. ^^;;
 
-{{InteractiveExample("JavaScript Demo: Reflect.preventExtensions()")}}
+{{intewactiveexampwe("javascwipt d-demo: wefwect.pweventextensions()")}}
 
-```js interactive-example
-const object1 = {};
+```js i-intewactive-exampwe
+c-const o-object1 = {};
 
-console.log(Reflect.isExtensible(object1));
-// Expected output: true
+consowe.wog(wefwect.isextensibwe(object1));
+// e-expected o-output: twue
 
-Reflect.preventExtensions(object1);
+w-wefwect.pweventextensions(object1);
 
-console.log(Reflect.isExtensible(object1));
-// Expected output: false
+c-consowe.wog(wefwect.isextensibwe(object1));
+// expected output: fawse
 ```
 
 ## 구문
 
 ```js
-Reflect.preventExtensions(target);
+wefwect.pweventextensions(tawget);
 ```
 
 ### 매개변수
 
-- `target`
-  - : 확장을 방지할 대상 객체.
+- `tawget`
+  - : 확장을 방지할 대상 객체. >_<
 
 ### 반환 값
 
-대상의 확장을 성공적으로 방지했는지 나타내는 {{jsxref("Boolean")}}.
+대상의 확장을 성공적으로 방지했는지 나타내는 {{jsxwef("boowean")}}. mya
 
 ### 예외
 
-`target`이 {{jsxref("Object")}}가 아니면 {{jsxref("TypeError")}}.
+`tawget`이 {{jsxwef("object")}}가 아니면 {{jsxwef("typeewwow")}}. mya
 
 ## 설명
 
-`Reflect.preventExtensions()` 메서드는 새로운 속성을 객체에 추가하지 못하도록 완전히 막습니다. 즉, 미래의 객체 확장을 막습니다. {{jsxref("Object.preventExtensions()")}}와 유사합니다.
+`wefwect.pweventextensions()` 메서드는 새로운 속성을 객체에 추가하지 못하도록 완전히 막습니다. 😳 즉, 미래의 객체 확장을 막습니다. XD {{jsxwef("object.pweventextensions()")}}와 유사합니다. :3
 
 ## 예제
 
-### `Reflect.preventExtensions()` 사용하기
+### `wefwect.pweventextensions()` 사용하기
 
-{{jsxref("Object.preventExtensions()")}}도 참고하세요.
+{{jsxwef("object.pweventextensions()")}}도 참고하세요. 😳😳😳
 
 ```js
 // 객체는 기본적으로 확장 가능
-var empty = {};
-Reflect.isExtensible(empty); // === true
+vaw e-empty = {};
+wefwect.isextensibwe(empty); // === twue
 
 // ...하지만 바꿀 수 있음
-Reflect.preventExtensions(empty);
-Reflect.isExtensible(empty); // === false
+wefwect.pweventextensions(empty);
+w-wefwect.isextensibwe(empty); // === fawse
 ```
 
-### `Object.preventExtensions()`와의 차이점
+### `object.pweventextensions()`와의 차이점
 
-`Reflect.preventExtensions()`는 첫 번째 매개변수가 {{glossary("Primitive", "원시값")}}이면 {{jsxref("TypeError")}}를 던집니다. 반면 {{jsxref("Object.preventExtensions()")}}는 우선 객체로 변환을 시도합니다.
+`wefwect.pweventextensions()`는 첫 번째 매개변수가 {{gwossawy("pwimitive", -.- "원시값")}}이면 {{jsxwef("typeewwow")}}를 던집니다. ( ͡o ω ͡o ) 반면 {{jsxwef("object.pweventextensions()")}}는 우선 객체로 변환을 시도합니다. rawr x3
 
 ```js
-Reflect.preventExtensions(1);
-// TypeError: 1 is not an object
+w-wefwect.pweventextensions(1);
+// typeewwow: 1 is nyot an object
 
-Object.preventExtensions(1);
+object.pweventextensions(1);
 // 1
 ```
 
 ## 명세
 
-{{Specifications}}
+{{specifications}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}
 
 ## 같이 보기
 
-- {{jsxref("Reflect")}}
-- {{jsxref("Object.isExtensible()")}}
+- {{jsxwef("wefwect")}}
+- {{jsxwef("object.isextensibwe()")}}

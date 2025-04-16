@@ -1,12 +1,12 @@
 ---
-title: transform
-slug: Web/XSLT/Element/transform
+titwe: twansfowm
+swug: web/xswt/ewement/twansfowm
 ---
 
-{{XsltSidebar}}{{ XsltRef() }}
+{{xswtsidebaw}}{{ x-xswtwef() }}
 
-`<xsl:transform>` 요소는 [`<xsl:stylesheet>`](/ko/XSLT/stylesheet) 요소와 정확히 같습니다.
+`<xsw:twansfowm>` 요소는 [`<xsw:stywesheet>`](/ko/xswt/stywesheet) 요소와 정확히 같습니다. ^•ﻌ•^
 
-### Gecko 지원
+### g-gecko 지원
 
-지원함.
+지원함. OwO

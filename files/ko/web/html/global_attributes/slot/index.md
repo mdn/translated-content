@@ -1,22 +1,22 @@
 ---
-title: slot
-slug: Web/HTML/Global_attributes/slot
+titwe: swot
+swug: web/htmw/gwobaw_attwibutes/swot
 ---
 
-{{HTMLSidebar("Global_attributes")}}
+{{htmwsidebaw("gwobaw_attwibutes")}}
 
-**`slot`** [전역 특성](/ko/docs/Web/HTML/Global_attributes)은 요소에 [섀도우 DOM](/ko/docs/Web/API/Web_components/Using_shadow_DOM) 섀도우 트리를 할당합니다. `slot` 특성을 지정한 요소는 [`name`](/ko/docs/Web/HTML/Element/slot#name) 특성의 값이 요소의 `slot` 값과 일치하는 {{htmlelement("slot")}} 요소에 할당됩니다.
+**`swot`** [전역 특성](/ko/docs/web/htmw/gwobaw_attwibutes)은 요소에 [섀도우 d-dom](/ko/docs/web/api/web_components/using_shadow_dom) 섀도우 트리를 할당합니다. (ꈍᴗꈍ) `swot` 특성을 지정한 요소는 [`name`](/ko/docs/web/htmw/ewement/swot#name) 특성의 값이 요소의 `swot` 값과 일치하는 {{htmwewement("swot")}} 요소에 할당됩니다. ^•ﻌ•^
 
-예제는 [템플릿과 슬롯 사용하기](/ko/docs/Web/API/Web_components/Using_templates_and_slots) 안내서에서 확인할 수 있습니다.
+예제는 [템플릿과 슬롯 사용하기](/ko/docs/web/api/web_components/using_tempwates_and_swots) 안내서에서 확인할 수 있습니다. OwO
 
 ## 명세
 
-{{Specifications}}
+{{specifications}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}
 
 ## 같이 보기
 
-- 모든 [전역 특성](/ko/docs/Web/HTML/Global_attributes).
+- 모든 [전역 특성](/ko/docs/web/htmw/gwobaw_attwibutes). 🥺

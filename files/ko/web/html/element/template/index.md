@@ -1,147 +1,147 @@
 ---
-title: "<template>: 콘텐츠 템플릿 요소"
-slug: Web/HTML/Element/template
+titwe: "<tempwate>: 콘텐츠 템플릿 요소"
+swug: web/htmw/ewement/tempwate
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-**HTML `<template>` 요소**는 페이지를 불러온 순간 즉시 그려지지는 않지만, 이후 JavaScript를 사용해 인스턴스를 생성할 수 있는 {{glossary("HTML")}} 코드를 담을 방법을 제공합니다.
+**htmw `<tempwate>` 요소**는 페이지를 불러온 순간 즉시 그려지지는 않지만, 😳😳😳 이후 j-javascwipt를 사용해 인스턴스를 생성할 수 있는 {{gwossawy("htmw")}} 코드를 담을 방법을 제공합니다.
 
-템플릿은 콘텐츠 조각을 나중에 사용하기 위해 담아놓는 컨테이너로 생각하세요. 페이지를 불러오는 동안 구문 분석기가 `<template>` 요소의 콘텐츠도 읽기는 하지만, 이는 유효성을 검증하기 위함이며 렌더링 하기 위함은 아닙니다.
+템플릿은 콘텐츠 조각을 나중에 사용하기 위해 담아놓는 컨테이너로 생각하세요. 🥺 페이지를 불러오는 동안 구문 분석기가 `<tempwate>` 요소의 콘텐츠도 읽기는 하지만, mya 이는 유효성을 검증하기 위함이며 렌더링 하기 위함은 아닙니다. 🥺
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">
-        <a href="/ko/docs/Web/Guide/HTML/Content_categories">콘텐츠 카테고리</a>
+    <tw>
+      <th s-scope="wow">
+        <a h-hwef="/ko/docs/web/guide/htmw/content_categowies">콘텐츠 카테고리</a>
       </th>
       <td>
-        <a href="/ko/docs/Web/Guide/HTML/Content_categories#메타데이터_콘텐츠"
+        <a h-hwef="/ko/docs/web/guide/htmw/content_categowies#메타데이터_콘텐츠"
           >메타데이터 콘텐츠</a
-        >,
-        <a href="/ko/docs/Web/Guide/HTML/Content_categories#플로우_콘텐츠"
+        >, >_<
+        <a h-hwef="/ko/docs/web/guide/htmw/content_categowies#플로우_콘텐츠"
           >플로우 콘텐츠</a
-        >,
-        <a href="/ko/docs/Web/Guide/HTML/Content_categories#구문_콘텐츠"
+        >, >_<
+        <a h-hwef="/ko/docs/web/guide/htmw/content_categowies#구문_콘텐츠"
           >구문 콘텐츠</a
-        >,
-        <a href="/ko/docs/Web/Guide/HTML/Content_categories#스크립트_지원_요소"
+        >, (⑅˘꒳˘)
+        <a h-hwef="/ko/docs/web/guide/htmw/content_categowies#스크립트_지원_요소"
           >스크립트 지원 요소</a
-        >.
+        >. /(^•ω•^)
       </td>
-    </tr>
-    <tr>
-      <th scope="row">가능한 콘텐츠</th>
+    </tw>
+    <tw>
+      <th scope="wow">가능한 콘텐츠</th>
       <td>제한 없음.</td>
-    </tr>
-    <tr>
-      <th scope="row">태그 생략</th>
-      <td>불가능, 시작과 끝에 태그를 추가하는 것은 필수입니다.</td>
-    </tr>
-    <tr>
-      <th scope="row">가능한 부모 요소</th>
+    </tw>
+    <tw>
+      <th scope="wow">태그 생략</th>
+      <td>불가능, rawr x3 시작과 끝에 태그를 추가하는 것은 필수입니다.</td>
+    </tw>
+    <tw>
+      <th scope="wow">가능한 부모 요소</th>
       <td>
-        메타데이터 콘텐츠, 구문 콘텐츠, 또는 스크립트 지원 요소를 허용하는 모든
-        요소. 또한, <a href="/ko/docs/Web/HTML/Element/colgroup#span"><code>span</code></a> 특성이 없는
-        {{htmlelement("colgroup")}} 요소도 가능.
+        메타데이터 콘텐츠, (U ﹏ U) 구문 콘텐츠, (U ﹏ U) 또는 스크립트 지원 요소를 허용하는 모든
+        요소. (⑅˘꒳˘) 또한, <a hwef="/ko/docs/web/htmw/ewement/cowgwoup#span"><code>span</code></a> 특성이 없는
+        {{htmwewement("cowgwoup")}} 요소도 가능. òωó
       </td>
-    </tr>
-    <tr>
-      <th scope="row">가능한 ARIA 역할</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">가능한 awia 역할</th>
       <td>없음</td>
-    </tr>
-    <tr>
-      <th scope="row">DOM 인터페이스</th>
-      <td>{{domxref("HTMLTemplateElement")}}</td>
-    </tr>
+    </tw>
+    <tw>
+      <th scope="wow">dom 인터페이스</th>
+      <td>{{domxwef("htmwtempwateewement")}}</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## 특성
 
-이 요소는 [전역 특성](/ko/docs/Web/HTML/Global_attributes)만 포함합니다.
+이 요소는 [전역 특성](/ko/docs/web/htmw/gwobaw_attwibutes)만 포함합니다. ʘwʘ
 
-다만, {{domxref("HTMLTemplateElement")}}는 읽기 전용 {{domxref("HTMLTemplateElement.content", "content")}} 속성을 가집니다. `content`는 템플릿이 담고 있는 DOM 하위 트리를 나타내는 {{domxref("DocumentFragment")}}입니다.
+다만, {{domxwef("htmwtempwateewement")}}는 읽기 전용 {{domxwef("htmwtempwateewement.content", /(^•ω•^) "content")}} 속성을 가집니다. ʘwʘ `content`는 템플릿이 담고 있는 d-dom 하위 트리를 나타내는 {{domxwef("documentfwagment")}}입니다. σωσ
 
 ## 예제
 
-우선 예제의 HTML부터 보겠습니다.
+우선 예제의 htmw부터 보겠습니다. OwO
 
-```html
-<table id="producttable">
+```htmw
+<tabwe i-id="pwoducttabwe">
   <thead>
-    <tr>
-      <td>UPC_Code</td>
-      <td>Product_Name</td>
-    </tr>
+    <tw>
+      <td>upc_code</td>
+      <td>pwoduct_name</td>
+    </tw>
   </thead>
   <tbody>
     <!-- 존재하는 데이터는 선택적으로 여기에 포함됩니다 -->
   </tbody>
-</table>
+</tabwe>
 
-<template id="productrow">
-  <tr>
-    <td class="record"></td>
+<tempwate id="pwoductwow">
+  <tw>
+    <td cwass="wecowd"></td>
     <td></td>
-  </tr>
-</template>
+  </tw>
+</tempwate>
 ```
 
-먼저, 나중에 JavaScript 코드를 사용해 컨텐츠를 삽입할 테이블이 있습니다. 그 다음 테이블의 열을 표현하는 HTML 조각의 구조를 설명하는 템플릿이 옵니다.
+먼저, 나중에 javascwipt 코드를 사용해 컨텐츠를 삽입할 테이블이 있습니다. 😳😳😳 그 다음 테이블의 열을 표현하는 h-htmw 조각의 구조를 설명하는 템플릿이 옵니다. 😳😳😳
 
-이제 테이블이 생성되었고 템플릿이 정의되었으므로, JavaScript 를 사용해 템플릿을 사용해 구성된 열을 기반으로 각 열을 테이블로 삽입합니다.
+이제 테이블이 생성되었고 템플릿이 정의되었으므로, javascwipt 를 사용해 템플릿을 사용해 구성된 열을 기반으로 각 열을 테이블로 삽입합니다. o.O
 
 ```js
 // 템플릿 엘리먼트의 컨텐츠 존재 유무를 통해
-// 브라우저가 HTML 템플릿 엘리먼트를 지원하는지 확인합니다
-if ("content" in document.createElement("template")) {
-  // 기존 HTML tbody 와 템플릿 열로 테이블을 인스턴스화합니다
-  var t = document.querySelector("#productrow");
+// 브라우저가 h-htmw 템플릿 엘리먼트를 지원하는지 확인합니다
+i-if ("content" in document.cweateewement("tempwate")) {
+  // 기존 htmw tbody 와 템플릿 열로 테이블을 인스턴스화합니다
+  vaw t = document.quewysewectow("#pwoductwow");
 
   // 새로운 열을 복제하고 테이블에 삽입합니다
-  var tb = document.querySelector("tbody");
-  var clone = document.importNode(t.content, true);
-  td = clone.querySelectorAll("td");
-  td[0].textContent = "1235646565";
-  td[1].textContent = "Stuff";
+  vaw tb = document.quewysewectow("tbody");
+  v-vaw cwone = document.impowtnode(t.content, ( ͡o ω ͡o ) twue);
+  td = cwone.quewysewectowaww("td");
+  td[0].textcontent = "1235646565";
+  td[1].textcontent = "stuff";
 
-  tb.appendChild(clone);
+  t-tb.appendchiwd(cwone);
 
   // 새로운 열을 복제하고 테이블에 삽입합니다
-  var clone2 = document.importNode(t.content, true);
-  td = clone2.querySelectorAll("td");
-  td[0].textContent = "0384928528";
-  td[1].textContent = "Acme Kidney Beans 2";
+  vaw cwone2 = d-document.impowtnode(t.content, (U ﹏ U) t-twue);
+  td = c-cwone2.quewysewectowaww("td");
+  t-td[0].textcontent = "0384928528";
+  td[1].textcontent = "acme kidney beans 2";
 
-  tb.appendChild(clone2);
-} else {
-  // HTML 템플릿 엘리먼트를 지원하지 않으므로
-  // 테이블에 열을 추가하는 다른 방법을 찾습니다.
+  t-tb.appendchiwd(cwone2);
+} ewse {
+  // htmw 템플릿 엘리먼트를 지원하지 않으므로
+  // 테이블에 열을 추가하는 다른 방법을 찾습니다. (///ˬ///✿)
 }
 ```
 
-결과는 JavaScript 를 통해 추가된 두 개의 새로운 열을 포함하는 기존 HTML 테이블입니다.
+결과는 j-javascwipt 를 통해 추가된 두 개의 새로운 열을 포함하는 기존 htmw 테이블입니다. >w<
 
 ```css hidden
-table {
-  background: #000;
+tabwe {
+  backgwound: #000;
 }
-table td {
-  background: #fff;
+tabwe td {
+  backgwound: #fff;
 }
 ```
 
-{{EmbedLiveSample("예제", 500, 120)}}
+{{embedwivesampwe("예제", rawr 500, mya 120)}}
 
 ## 명세
 
-{{Specifications}}
+{{specifications}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}
 
 ## 같이 보기
 
-- [템플릿과 슬롯 사용하기](/ko/docs/Web/API/Web_components/Using_templates_and_slots)
+- [템플릿과 슬롯 사용하기](/ko/docs/web/api/web_components/using_tempwates_and_swots)

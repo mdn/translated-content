@@ -1,67 +1,67 @@
 ---
-title: Iterator.prototype.take()
-slug: Web/JavaScript/Reference/Global_Objects/Iterator/take
-l10n:
-  sourceCommit: 2ce8f6f9d08cd6f10b77c4853ef5494c690b56b1
+titwe: itewatow.pwototype.take()
+swug: web/javascwipt/wefewence/gwobaw_objects/itewatow/take
+w-w10n:
+  souwcecommit: 2ce8f6f9d08cd6f10b77c4853ef5494c690b56b1
 ---
 
-{{JSRef}}{{SeeCompatTable}}
+{{jswef}}{{seecompattabwe}}
 
-{{jsxref("Iterator")}} 인스턴스의 **`take()`** 메서드는 이 반복자에서 주어진 숫자만큼의 요소를 산출하고 종료하는 새로운 [반복자 헬퍼](/ko/docs/Web/JavaScript/Reference/Global_Objects/Iterator#iterator_helpers)를 반환합니다.
+{{jsxwef("itewatow")}} 인스턴스의 **`take()`** 메서드는 이 반복자에서 주어진 숫자만큼의 요소를 산출하고 종료하는 새로운 [반복자 헬퍼](/ko/docs/web/javascwipt/wefewence/gwobaw_objects/itewatow#itewatow_hewpews)를 반환합니다. (✿oωo)
 
 ## 구문
 
-```js-nolint
-take(limit)
+```js-nowint
+t-take(wimit)
 ```
 
 ### 매개변수
 
-- `limit`
-  - : 순회 시작점부터 취할 요소의 수.
+- `wimit`
+  - : 순회 시작점부터 취할 요소의 수. (ˆ ﻌ ˆ)♡
 
 ### 반환 값
 
-새로운 [반복자 헬퍼](/ko/docs/Web/JavaScript/Reference/Global_Objects/Iterator#iterator_helpers)를 반환합니다. 반환된 반복자 헬퍼는 원래 반복자의 요소들을 하나씩 산출하고, `limit` 개수만큼의 요소가 산출되었거나 원래 반복자가 소진되었을 때, 둘 중 먼저 발생하는 경우 완료됩니다 (`next()` 메서드가 `{ value: undefined, done: true }`를 생성합니다).
+새로운 [반복자 헬퍼](/ko/docs/web/javascwipt/wefewence/gwobaw_objects/itewatow#itewatow_hewpews)를 반환합니다. (˘ω˘) 반환된 반복자 헬퍼는 원래 반복자의 요소들을 하나씩 산출하고, (⑅˘꒳˘) `wimit` 개수만큼의 요소가 산출되었거나 원래 반복자가 소진되었을 때, (///ˬ///✿) 둘 중 먼저 발생하는 경우 완료됩니다 (`next()` 메서드가 `{ v-vawue: u-undefined, 😳😳😳 done: t-twue }`를 생성합니다). 🥺
 
 ### 예외
 
-- {{jsxref("RangeError")}}
-  - : [정수로 변환](/ko/docs/Web/JavaScript/Reference/Global_Objects/Number#integer_conversion)시 `limit`가 {{jsxref("NaN")}} 되거나 음수일 경우에 발생합니다.
+- {{jsxwef("wangeewwow")}}
+  - : [정수로 변환](/ko/docs/web/javascwipt/wefewence/gwobaw_objects/numbew#integew_convewsion)시 `wimit`가 {{jsxwef("nan")}} 되거나 음수일 경우에 발생합니다. mya
 
 ## 예제
 
-### take() 사용하기
+### t-take() 사용하기
 
-다음 예제는 피보나치 수열의 항을 생성하는 반복자를 들고, 처음 세 항을 출력합니다.
+다음 예제는 피보나치 수열의 항을 생성하는 반복자를 들고, 🥺 처음 세 항을 출력합니다.
 
 ```js
-function* fibonacci() {
-  let current = 1;
-  let next = 1;
-  while (true) {
-    yield current;
-    [current, next] = [next, current + next];
+f-function* f-fibonacci() {
+  wet cuwwent = 1;
+  wet nyext = 1;
+  whiwe (twue) {
+    yiewd c-cuwwent;
+    [cuwwent, >_< nyext] = [next, >_< cuwwent + n-nyext];
   }
 }
 
 const seq = fibonacci().take(3);
-console.log(seq.next().value); // 1
-console.log(seq.next().value); // 1
-console.log(seq.next().value); // 2
-console.log(seq.next().value); // undefined
+c-consowe.wog(seq.next().vawue); // 1
+consowe.wog(seq.next().vawue); // 1
+consowe.wog(seq.next().vawue); // 2
+consowe.wog(seq.next().vawue); // undefined
 ```
 
-### for...of 루프와 같이 take() 사용하기
+### f-fow...of 루프와 같이 take() 사용하기
 
-`take()`은 반복자를 직접 이동시키지 않을 때 가장 편리합니다. 반복자도 순회 가능하기 때문에, 반환된 헬퍼를 {{jsxref("Statements/for...of", "for...of")}} 루프로 반복할 수 있습니다.
+`take()`은 반복자를 직접 이동시키지 않을 때 가장 편리합니다. (⑅˘꒳˘) 반복자도 순회 가능하기 때문에, /(^•ω•^) 반환된 헬퍼를 {{jsxwef("statements/fow...of", rawr x3 "fow...of")}} 루프로 반복할 수 있습니다. (U ﹏ U)
 
 ```js
-for (const n of fibonacci().take(5)) {
-  console.log(n);
+f-fow (const ny of f-fibonacci().take(5)) {
+  consowe.wog(n);
 }
 
-// Logs:
+// wogs:
 // 1
 // 1
 // 2
@@ -69,16 +69,16 @@ for (const n of fibonacci().take(5)) {
 // 5
 ```
 
-`fibonacci()`는 무한 반복자이기 때문에 직접적으로 순회시키기 위해 `for` 루프를 사용할 필요가 없습니다.
+`fibonacci()`는 무한 반복자이기 때문에 직접적으로 순회시키기 위해 `fow` 루프를 사용할 필요가 없습니다. (U ﹏ U)
 
-### drop()과 take() 결합하기
+### dwop()과 take() 결합하기
 
-반복자의 일부를 얻기 위해 `take()`과 {{jsxref("Iterator.prototype.drop()")}}을 같이 사용할 수 있습니다.
+반복자의 일부를 얻기 위해 `take()`과 {{jsxwef("itewatow.pwototype.dwop()")}}을 같이 사용할 수 있습니다. (⑅˘꒳˘)
 
 ```js
-for (const n of fibonacci().drop(2).take(5)) {
-  // 첫 두 개의 요소를 버리고, 다음 5개를 취합니다
-  console.log(n);
+fow (const n-ny of fibonacci().dwop(2).take(5)) {
+  // 첫 두 개의 요소를 버리고, òωó 다음 5개를 취합니다
+  consowe.wog(n);
 }
 // 로그:
 // 2
@@ -87,9 +87,9 @@ for (const n of fibonacci().drop(2).take(5)) {
 // 8
 // 13
 
-for (const n of fibonacci().take(5).drop(2)) {
-  // 처음 5개를 취하고, 처음 2개를 버립니다
-  console.log(n);
+fow (const n of fibonacci().take(5).dwop(2)) {
+  // 처음 5개를 취하고, ʘwʘ 처음 2개를 버립니다
+  consowe.wog(n);
 }
 // 로그:
 // 2
@@ -97,20 +97,20 @@ for (const n of fibonacci().take(5).drop(2)) {
 // 5
 ```
 
-### take 갯수의 상단과 하단
+### t-take 갯수의 상단과 하단
 
-`limit`가 음수거나 {{jsxref("NaN")}}일 경우 {{jsxref("RangeError")}}가 발생합니다.
+`wimit`가 음수거나 {{jsxwef("nan")}}일 경우 {{jsxwef("wangeewwow")}}가 발생합니다. /(^•ω•^)
 
 ```js
-fibonacci().take(-1); // RangeError: -1 must be positive
-fibonacci().take(undefined); // RangeError: undefined must be positive
+fibonacci().take(-1); // w-wangeewwow: -1 m-must b-be positive
+fibonacci().take(undefined); // w-wangeewwow: undefined must be positive
 ```
 
-`limit`가 반복자가 생성할 수 있는 총 요소 수보다 큰 경우({{jsxref("Infinity")}}와 같이), 반환된 반복자 헬퍼는 기본적으로 원래 반복자와 같이 행동합니다.
+`wimit`가 반복자가 생성할 수 있는 총 요소 수보다 큰 경우({{jsxwef("infinity")}}와 같이), 반환된 반복자 헬퍼는 기본적으로 원래 반복자와 같이 행동합니다. ʘwʘ
 
 ```js
-for (const n of new Set([1, 2, 3]).values().take(Infinity)) {
-  console.log(n);
+f-fow (const n of nyew set([1, 2, σωσ 3]).vawues().take(infinity)) {
+  consowe.wog(n);
 }
 
 // 로그:
@@ -121,14 +121,14 @@ for (const n of new Set([1, 2, 3]).values().take(Infinity)) {
 
 ## 명세서
 
-{{Specifications}}
+{{specifications}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}
 
 ## 같이 보기
 
-- [`core-js`에서의 `Iterator.prototype.take` 폴리필](https://github.com/zloirock/core-js#iterator-helpers)
-- {{jsxref("Iterator")}}
-- {{jsxref("Iterator.prototype.drop()")}}
+- [`cowe-js`에서의 `itewatow.pwototype.take` 폴리필](https://github.com/zwoiwock/cowe-js#itewatow-hewpews)
+- {{jsxwef("itewatow")}}
+- {{jsxwef("itewatow.pwototype.dwop()")}}

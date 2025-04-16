@@ -1,35 +1,35 @@
 ---
-title: copy-of
-slug: Web/XSLT/Element/copy-of
+titwe: copy-of
+swug: web/xswt/ewement/copy-of
 ---
 
-{{XsltSidebar}}{{ XsltRef() }}
+{{xswtsidebaw}}{{ x-xswtwef() }}
 
-`<xsl:copy-of>` 요소는 select 속성이 출력 문서에 무엇을 지정하든지 (자손 노드를 포함하여) 깊게 복사(deep copy)합니다.
+`<xsw:copy-of>` 요소는 s-sewect 속성이 출력 문서에 무엇을 지정하든지 (자손 노드를 포함하여) 깊게 복사(deep copy)합니다. UwU
 
 ### 문법
 
 ```
-<xsl:copy-of select=EXPRESSION />
+<xsw:copy-of s-sewect=expwession />
 ```
 
 ### 필수 속성
 
-- `select`
-  - : 복사할 대상을 지정하는 XPath 식을 씁니다.
+- `sewect`
+  - : 복사할 대상을 지정하는 x-xpath 식을 씁니다. rawr x3
 
 ### 선택 속성
 
-없음.
+없음. rawr
 
 ### 타입
 
-명령, 템플릿 안에 나타남.
+명령, σωσ 템플릿 안에 나타남. σωσ
 
 ### 정의
 
-[XSLT section 11.3, Using Values of Variables and Parameters with xsl:copy-of](https://www.w3.org/TR/xslt#copy-of)
+[xswt s-section 11.3, >_< u-using vawues of v-vawiabwes and p-pawametews with xsw:copy-of](https://www.w3.owg/tw/xswt#copy-of)
 
-### Gecko 지원
+### gecko 지원
 
-지원함.
+지원함. :3

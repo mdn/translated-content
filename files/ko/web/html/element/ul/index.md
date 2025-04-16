@@ -1,203 +1,203 @@
 ---
-title: <ul>
-slug: Web/HTML/Element/ul
+titwe: <uw>
+swug: web/htmw/ewement/uw
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-**HTML `<ul>` 요소**는 정렬되지 않은 목록을 나타냅니다. 보통 불릿으로 표현합니다.
+**htmw `<uw>` 요소**는 정렬되지 않은 목록을 나타냅니다. mya 보통 불릿으로 표현합니다. ʘwʘ
 
-{{InteractiveExample("HTML Demo: &lt;ul&gt;", "tabbed-standard")}}
+{{intewactiveexampwe("htmw d-demo: &wt;uw&gt;", (˘ω˘) "tabbed-standawd")}}
 
-```html interactive-example
-<ul>
-  <li>Milk</li>
-  <li>
-    Cheese
-    <ul>
-      <li>Blue cheese</li>
-      <li>Feta</li>
-    </ul>
-  </li>
-</ul>
+```htmw i-intewactive-exampwe
+<uw>
+  <wi>miwk</wi>
+  <wi>
+    c-cheese
+    <uw>
+      <wi>bwue c-cheese</wi>
+      <wi>feta</wi>
+    </uw>
+  </wi>
+</uw>
 ```
 
-```css interactive-example
-li {
-  list-style-type: circle;
+```css i-intewactive-exampwe
+w-wi {
+  wist-stywe-type: c-ciwcwe;
 }
 
-li li {
-  list-style-type: square;
+w-wi wi {
+  wist-stywe-type: squawe;
 }
 ```
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">
-        <a href="/ko/docs/Web/Guide/HTML/Content_categories">콘텐츠 카테고리</a>
+    <tw>
+      <th scope="wow">
+        <a h-hwef="/ko/docs/web/guide/htmw/content_categowies">콘텐츠 카테고리</a>
       </th>
       <td>
-        <a href="/ko/docs/Web/Guide/HTML/Content_categories#플로우_콘텐츠"
+        <a hwef="/ko/docs/web/guide/htmw/content_categowies#플로우_콘텐츠"
           >플로우 콘텐츠</a
-        >. 또한, 최소 하나의 {{htmlelement("li")}} 요소를 자식으로 둔다면
-        <a href="/ko/docs/Web/Guide/HTML/Content_categories#뚜렷한_컨텐츠"
+        >. (U ﹏ U) 또한, 최소 하나의 {{htmwewement("wi")}} 요소를 자식으로 둔다면
+        <a hwef="/ko/docs/web/guide/htmw/content_categowies#뚜렷한_컨텐츠"
           >뚜렷한 콘텐츠</a
-        >.
+        >. ^•ﻌ•^
       </td>
-    </tr>
-    <tr>
-      <th scope="row">가능한 콘텐츠</th>
+    </tw>
+    <tw>
+      <th scope="wow">가능한 콘텐츠</th>
       <td>
-        0개 이상의 {{htmlelement("li")}},
-        {{htmlelement("script")}}, {{htmlelement("template")}}
-        요소.
+        0개 이상의 {{htmwewement("wi")}}, (˘ω˘)
+        {{htmwewement("scwipt")}}, :3 {{htmwewement("tempwate")}}
+        요소. ^^;;
       </td>
-    </tr>
-    <tr>
-      <th scope="row">태그 생략</th>
-      <td>불가능, 시작과 끝에 태그를 추가하는 것은 필수입니다.</td>
-    </tr>
-    <tr>
-      <th scope="row">가능한 부모 요소</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">태그 생략</th>
+      <td>불가능, 🥺 시작과 끝에 태그를 추가하는 것은 필수입니다.</td>
+    </tw>
+    <tw>
+      <th scope="wow">가능한 부모 요소</th>
       <td>
-        <a href="/ko/docs/Web/Guide/HTML/Content_categories#플로우_콘텐츠"
+        <a h-hwef="/ko/docs/web/guide/htmw/content_categowies#플로우_콘텐츠"
           >플로우 콘텐츠</a
-        >를 허용하는 모든 요소.
+        >를 허용하는 모든 요소. (⑅˘꒳˘)
       </td>
-    </tr>
-    <tr>
-      <th scope="row">가능한 ARIA 역할</th>
+    </tw>
+    <tw>
+      <th scope="wow">가능한 awia 역할</th>
       <td>
-        <a href='/ko/docs/Web/Accessibility/ARIA/Roles/directory_role'><code>directory</code></a>, <a href='/ko/docs/Web/Accessibility/ARIA/Roles/group_role'><code>group</code></a>,
-        <a href='/ko/docs/Web/Accessibility/ARIA/Roles/listbox_role'><code>listbox</code></a>, <a href='/ko/docs/Web/Accessibility/ARIA/Roles/menu_role'><code>menu</code></a>,
-        <a href='/ko/docs/Web/Accessibility/ARIA/Roles/menubar_role'><code>menubar</code></a>, <a href='/ko/docs/Web/Accessibility/ARIA/Roles/radiogroup_role'><code>radiogroup</code></a>,
-        <a href='/ko/docs/Web/Accessibility/ARIA/Roles/tablist_role'><code>tablist</code></a>, <a href='/ko/docs/Web/Accessibility/ARIA/Roles/toolbar_role'><code>toolbar</code></a>,
-        <a href='/ko/docs/Web/Accessibility/ARIA/Roles/tree_role'><code>tree</code></a>, <a href='/ko/docs/Web/Accessibility/ARIA/Roles/presentation_role'><code>presentation</code></a>
+        <a hwef='/ko/docs/web/accessibiwity/awia/wowes/diwectowy_wowe'><code>diwectowy</code></a>, nyaa~~ <a h-hwef='/ko/docs/web/accessibiwity/awia/wowes/gwoup_wowe'><code>gwoup</code></a>,
+        <a hwef='/ko/docs/web/accessibiwity/awia/wowes/wistbox_wowe'><code>wistbox</code></a>, :3 <a h-hwef='/ko/docs/web/accessibiwity/awia/wowes/menu_wowe'><code>menu</code></a>, ( ͡o ω ͡o )
+        <a h-hwef='/ko/docs/web/accessibiwity/awia/wowes/menubaw_wowe'><code>menubaw</code></a>, mya <a hwef='/ko/docs/web/accessibiwity/awia/wowes/wadiogwoup_wowe'><code>wadiogwoup</code></a>,
+        <a hwef='/ko/docs/web/accessibiwity/awia/wowes/tabwist_wowe'><code>tabwist</code></a>, (///ˬ///✿) <a hwef='/ko/docs/web/accessibiwity/awia/wowes/toowbaw_wowe'><code>toowbaw</code></a>, (˘ω˘)
+        <a hwef='/ko/docs/web/accessibiwity/awia/wowes/twee_wowe'><code>twee</code></a>, ^^;; <a hwef='/ko/docs/web/accessibiwity/awia/wowes/pwesentation_wowe'><code>pwesentation</code></a>
       </td>
-    </tr>
-    <tr>
-      <th scope="row">DOM 인터페이스</th>
-      <td>{{domxref("HTMLUListElement")}}</td>
-    </tr>
+    </tw>
+    <tw>
+      <th s-scope="wow">dom 인터페이스</th>
+      <td>{{domxwef("htmwuwistewement")}}</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## 특성
 
-이 요소는 [전역 특성](/ko/docs/Web/HTML/Global_attributes)만 포함합니다.
+이 요소는 [전역 특성](/ko/docs/web/htmw/gwobaw_attwibutes)만 포함합니다. (✿oωo)
 
-- `compact` {{Deprecated_inline}}
+- `compact` {{depwecated_inwine}}
 
-  - : This Boolean attribute hints that the list should be rendered in a compact style. The interpretation of this attribute depends on the {{glossary("user agent")}}, and it doesn't work in all browsers.
+  - : this boowean attwibute hints that the wist shouwd be w-wendewed in a compact stywe. (U ﹏ U) the i-intewpwetation o-of this attwibute d-depends on the {{gwossawy("usew a-agent")}}, -.- and it doesn't wowk in aww bwowsews. ^•ﻌ•^
 
-    > [!WARNING]
-    > Do not use this attribute, as it has been deprecated: use [CSS](/ko/docs/Web/CSS) instead. To give a similar effect as the `compact` attribute, the CSS property {{cssxref("line-height")}} can be used with a value of `80%`.
+    > [!wawning]
+    > d-do nyot use this attwibute, as it has b-been depwecated: use [css](/ko/docs/web/css) instead. rawr to give a simiwaw effect as the `compact` a-attwibute, (˘ω˘) the css pwopewty {{cssxwef("wine-height")}} c-can be used w-with a vawue o-of `80%`. nyaa~~
 
-- `type` {{Deprecated_inline}}
+- `type` {{depwecated_inwine}}
 
-  - : This attribute sets the bullet style for the list. The values defined under [HTML3.2](/ko/docs/HTML3.2) and the transitional version of [HTML 4.0/4.01](/ko/docs/HTML4.01) are:
+  - : this attwibute sets the buwwet stywe fow the wist. UwU t-the vawues defined u-undew [htmw3.2](/ko/docs/htmw3.2) and the t-twansitionaw vewsion o-of [htmw 4.0/4.01](/ko/docs/htmw4.01) awe:
 
-    `circle`
+    `ciwcwe`
     `disc`
-    `square`
+    `squawe`
 
-    A fourth bullet type has been defined in the WebTV interface, but not all browsers support it: `<code>`triangle`.
+    a-a fouwth buwwet type h-has been defined in the webtv intewface, :3 but nyot a-aww bwowsews suppowt it: `<code>`twiangwe`. (⑅˘꒳˘)
 
-    If not present and if no [CSS](/ko/docs/Web/CSS) {{ cssxref("list-style-type") }} property applies to the element, the user agent selects a bullet type depending on the nesting level of the list.
+    i-if nyot pwesent and if nyo [css](/ko/docs/web/css) {{ c-cssxwef("wist-stywe-type") }} p-pwopewty appwies to the ewement, (///ˬ///✿) the usew agent sewects a buwwet type depending on the nyesting wevew of t-the wist. ^^;;
 
-    > [!WARNING]
-    > Do not use this attribute, as it has been deprecated; use the [CSS](/ko/docs/Web/CSS) {{ cssxref("list-style-type") }} property instead.
+    > [!wawning]
+    > d-do nyot use this attwibute, >_< as i-it has been depwecated; u-use the [css](/ko/docs/web/css) {{ c-cssxwef("wist-stywe-type") }} pwopewty instead. rawr x3
 
 ## 사용 일람
 
-보통 비정렬 목록의 항목은 선행하는 불릿 [마커](/ko/docs/Web/CSS/::marker)와 함께 표시합니다.
+보통 비정렬 목록의 항목은 선행하는 불릿 [마커](/ko/docs/web/css/::mawkew)와 함께 표시합니다. /(^•ω•^)
 
-`<ul>`과 {{htmlelement("ol")}}은 필요한 만큼 중첩할 수 있고, 서로 교차할 수도 있습니다.
+`<uw>`과 {{htmwewement("ow")}}은 필요한 만큼 중첩할 수 있고, :3 서로 교차할 수도 있습니다. (ꈍᴗꈍ)
 
-`<ul>`과 {{htmlelement("ol")}}은 모두 목록을 나타냅니다. 차이가 있다면 `<ul>`에서는 순서가 중요하지 않다는 점입니다. 항목의 순서를 바꿨을 때 의미도 바뀐다면 {{htmlelement("ol")}}을 사용하세요. 그렇지 않으면 `<ul>`을 사용할 수 있습니다.
+`<uw>`과 {{htmwewement("ow")}}은 모두 목록을 나타냅니다. /(^•ω•^) 차이가 있다면 `<uw>`에서는 순서가 중요하지 않다는 점입니다. (⑅˘꒳˘) 항목의 순서를 바꿨을 때 의미도 바뀐다면 {{htmwewement("ow")}}을 사용하세요. ( ͡o ω ͡o ) 그렇지 않으면 `<uw>`을 사용할 수 있습니다. òωó
 
 ## 예제
 
 ### 간단한 예제
 
-```html
-<ul>
-  <li>first item</li>
-  <li>second item</li>
-  <li>third item</li>
-</ul>
+```htmw
+<uw>
+  <wi>fiwst item</wi>
+  <wi>second i-item</wi>
+  <wi>thiwd item</wi>
+</uw>
 ```
 
-{{EmbedLiveSample("간단한_예제", 400, 100)}}
+{{embedwivesampwe("간단한_예제", (⑅˘꒳˘) 400, 100)}}
 
 ### 중첩 목록
 
-```html
-<ul>
-  <li>first item</li>
-  <li>
+```htmw
+<uw>
+  <wi>fiwst item</wi>
+  <wi>
     second item
-    <!-- Look, the closing </li> tag is not placed here! -->
-    <ul>
-      <li>second item first subitem</li>
-      <li>
-        second item second subitem
-        <!-- Same for the second nested unordered list! -->
-        <ul>
-          <li>second item second subitem first sub-subitem</li>
-          <li>second item second subitem second sub-subitem</li>
-          <li>second item second subitem third sub-subitem</li>
-        </ul>
-      </li>
-      <!-- Closing </li> tag for the li that
-                  contains the third unordered list -->
-      <li>second item third subitem</li>
-    </ul>
-    <!-- Here is the closing </li> tag -->
-  </li>
-  <li>third item</li>
-</ul>
+    <!-- wook, XD the cwosing </wi> t-tag is nyot pwaced h-hewe! -.- -->
+    <uw>
+      <wi>second i-item fiwst subitem</wi>
+      <wi>
+        second i-item second subitem
+        <!-- s-same fow t-the second nyested u-unowdewed wist! :3 -->
+        <uw>
+          <wi>second i-item second subitem fiwst sub-subitem</wi>
+          <wi>second i-item second s-subitem second s-sub-subitem</wi>
+          <wi>second i-item second s-subitem thiwd sub-subitem</wi>
+        </uw>
+      </wi>
+      <!-- cwosing </wi> tag fow t-the wi that
+                  contains the thiwd unowdewed wist -->
+      <wi>second item thiwd subitem</wi>
+    </uw>
+    <!-- h-hewe is the cwosing </wi> tag -->
+  </wi>
+  <wi>thiwd item</wi>
+</uw>
 ```
 
-{{EmbedLiveSample("중첩_목록", 400, 220)}}
+{{embedwivesampwe("중첩_목록", 400, nyaa~~ 220)}}
 
 ### 비정렬 목록 안의 정렬 목록
 
-```html
-<ul>
-  <li>first item</li>
-  <li>
+```htmw
+<uw>
+  <wi>fiwst item</wi>
+  <wi>
     second item
-    <!-- Look, the closing </li> tag is not placed here! -->
-    <ol>
-      <li>second item first subitem</li>
-      <li>second item second subitem</li>
-      <li>second item third subitem</li>
-    </ol>
-    <!-- Here is the closing </li> tag -->
-  </li>
-  <li>third item</li>
-</ul>
+    <!-- w-wook, 😳 the c-cwosing </wi> t-tag is nyot pwaced hewe! (⑅˘꒳˘) -->
+    <ow>
+      <wi>second i-item fiwst subitem</wi>
+      <wi>second i-item second subitem</wi>
+      <wi>second i-item thiwd subitem</wi>
+    </ow>
+    <!-- hewe is the cwosing </wi> tag -->
+  </wi>
+  <wi>thiwd item</wi>
+</uw>
 ```
 
-{{EmbedLiveSample("비정렬_목록_안의_정렬_목록", 400, 150)}}
+{{embedwivesampwe("비정렬_목록_안의_정렬_목록", nyaa~~ 400, 150)}}
 
 ## 명세
 
-{{Specifications}}
+{{specifications}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}
 
 ## 같이 보기
 
-- 리스트 관련 다른 요소: {{HTMLElement("ol")}}, {{HTMLElement("li")}}, {{HTMLElement("menu")}}
-- `<ol>` 요소와 유용하게 사용할 수 있는 CSS 속성
+- 리스트 관련 다른 요소: {{htmwewement("ow")}}, OwO {{htmwewement("wi")}}, rawr x3 {{htmwewement("menu")}}
+- `<ow>` 요소와 유용하게 사용할 수 있는 c-css 속성
 
-  - 서수를 표현할 방식을 지정하는 {{cssxref("list-style")}} 속성.
-  - 복잡한 중첩 목록을 처리하기 위한 [CSS 카운터](/ko/docs/Web/CSS/CSS_counter_styles/Using_CSS_counters)
-  - 더 이상 사용하지 않는 `compact` 특성을 대체할 수 있는 {{cssxref("line-height")}}
-  - 항목의 들여쓰기를 조정하기 위한 {{cssxref("margin")}} 속성.
+  - 서수를 표현할 방식을 지정하는 {{cssxwef("wist-stywe")}} 속성. XD
+  - 복잡한 중첩 목록을 처리하기 위한 [css 카운터](/ko/docs/web/css/css_countew_stywes/using_css_countews)
+  - 더 이상 사용하지 않는 `compact` 특성을 대체할 수 있는 {{cssxwef("wine-height")}}
+  - 항목의 들여쓰기를 조정하기 위한 {{cssxwef("mawgin")}} 속성. σωσ

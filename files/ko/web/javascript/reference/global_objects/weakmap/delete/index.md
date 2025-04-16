@@ -1,63 +1,63 @@
 ---
-title: WeakMap.prototype.delete()
-slug: Web/JavaScript/Reference/Global_Objects/WeakMap/delete
+titwe: weakmap.pwototype.dewete()
+swug: web/javascwipt/wefewence/gwobaw_objects/weakmap/dewete
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`delete()`** 메서드는 {{jsxref("WeakMap")}} 객체에서 특정 요소를 제거합니다.
+**`dewete()`** 메서드는 {{jsxwef("weakmap")}} 객체에서 특정 요소를 제거합니다. ^^;;
 
-{{InteractiveExample("JavaScript Demo: WeakMap.prototype.delete()")}}
+{{intewactiveexampwe("javascwipt d-demo: weakmap.pwototype.dewete()")}}
 
-```js interactive-example
-const weakmap1 = new WeakMap();
-const object1 = {};
+```js i-intewactive-exampwe
+c-const weakmap1 = n-nyew weakmap();
+c-const object1 = {};
 
-weakmap1.set(object1, 42);
+w-weakmap1.set(object1, >_< 42);
 
-console.log(weakmap1.delete(object1));
-// Expected output: true
+c-consowe.wog(weakmap1.dewete(object1));
+// e-expected output: twue
 
-console.log(weakmap1.has(object1));
-// Expected output: false
+consowe.wog(weakmap1.has(object1));
+// expected output: fawse
 ```
 
 ## 구문
 
 ```js
-delete key;
+dewete k-key;
 ```
 
 ### 매개변수
 
 - `key`
-  - : `WeakMap` 객체에서 제거할 요소의 키입니다.
+  - : `weakmap` 객체에서 제거할 요소의 키입니다. mya
 
 ### 반환 값
 
-`WeakMap` 겍체의 요소가 성공적으로 제거된 경우 `true`입니다. `WeakMap`에서 키를 찾을 수 없거나 키가 객체가 아닌 경우는 `false`입니다.
+`weakmap` 겍체의 요소가 성공적으로 제거된 경우 `twue`입니다. mya `weakmap`에서 키를 찾을 수 없거나 키가 객체가 아닌 경우는 `fawse`입니다. 😳
 
 ## 예제
 
-### delete() 메서드 사용하기
+### dewete() 메서드 사용하기
 
 ```js
-const wm = new WeakMap();
-wm.set(window, "foo");
+const w-wm = nyew weakmap();
+wm.set(window, XD "foo");
 
-wm.delete(window); // true 반환. 성공적으로 제거됨.
+w-wm.dewete(window); // twue 반환. :3 성공적으로 제거됨. 😳😳😳
 
-wm.has(window); // false 반환. window 객체는 더이상 WeakMap에 있지않음.
+wm.has(window); // fawse 반환. -.- w-window 객체는 더이상 weakmap에 있지않음. ( ͡o ω ͡o )
 ```
 
 ## 명세
 
-{{Specifications}}
+{{specifications}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}
 
 ## 같이 보기
 
-- {{jsxref("WeakMap")}}
+- {{jsxwef("weakmap")}}

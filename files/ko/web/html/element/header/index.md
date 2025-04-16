@@ -1,150 +1,150 @@
 ---
-title: <header>
-slug: Web/HTML/Element/header
+titwe: <headew>
+swug: web/htmw/ewement/headew
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-**HTML `<header>` 요소**는 소개 및 탐색에 도움을 주는 콘텐츠를 나타냅니다. 제목, 로고, 검색 폼, 작성자 이름 등의 요소도 포함할 수 있습니다.
+**htmw `<headew>` 요소**는 소개 및 탐색에 도움을 주는 콘텐츠를 나타냅니다. ʘwʘ 제목, /(^•ω•^) 로고, 검색 폼, ʘwʘ 작성자 이름 등의 요소도 포함할 수 있습니다. σωσ
 
-{{InteractiveExample("HTML Demo: &lt;header&gt;", "tabbed-standard")}}
+{{intewactiveexampwe("htmw demo: &wt;headew&gt;", OwO "tabbed-standawd")}}
 
-```html interactive-example
-<header>
-  <a class="logo" href="#">Cute Puppies Express!</a>
-</header>
+```htmw i-intewactive-exampwe
+<headew>
+  <a c-cwass="wogo" h-hwef="#">kawaii~ p-puppies expwess!</a>
+</headew>
 
-<article>
-  <header>
-    <h1>Beagles</h1>
+<awticwe>
+  <headew>
+    <h1>beagwes</h1>
     <time>08.12.2014</time>
-  </header>
+  </headew>
   <p>
-    I love beagles <em>so</em> much! Like, really, a lot. They’re adorable and
-    their ears are so, so snugly soft!
+    i-i wuv beagwes <em>so</em> m-much! 😳😳😳 w-wike, 😳😳😳 weawwy, a w-wot. o.O they’we adowabwe and
+    theiw eaws awe so, ( ͡o ω ͡o ) so snugwy soft! (U ﹏ U)
   </p>
-</article>
+</awticwe>
 ```
 
-```css interactive-example
-.logo {
-  background: left / cover
-    url("/shared-assets/images/examples/puppy-header.jpg");
-  display: flex;
-  height: 120px;
-  align-items: center;
-  justify-content: center;
+```css intewactive-exampwe
+.wogo {
+  backgwound: w-weft / covew
+    uww("/shawed-assets/images/exampwes/puppy-headew.jpg");
+  dispway: fwex;
+  h-height: 120px;
+  awign-items: c-centew;
+  justify-content: centew;
   font:
-    bold calc(1em + 2 * (100vw - 120px) / 100) "Dancing Script",
-    fantasy;
-  color: #ff0083;
-  text-shadow: #000 2px 2px 0.2rem;
+    bowd cawc(1em + 2 * (100vw - 120px) / 100) "dancing scwipt", (///ˬ///✿)
+    f-fantasy;
+  cowow: #ff0083;
+  t-text-shadow: #000 2px 2px 0.2wem;
 }
 
-header > h1 {
-  margin-bottom: 0;
+h-headew > h1 {
+  mawgin-bottom: 0;
 }
 
-header > time {
-  font: italic 0.7rem sans-serif;
+headew > time {
+  font: itawic 0.7wem s-sans-sewif;
 }
 ```
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">
-        <a href="/ko/docs/Web/Guide/HTML/Content_categories">콘텐츠 카테고리</a>
+    <tw>
+      <th scope="wow">
+        <a hwef="/ko/docs/web/guide/htmw/content_categowies">콘텐츠 카테고리</a>
       </th>
       <td>
-        <a href="/ko/docs/Web/Guide/HTML/Content_categories#플로우_콘텐츠"
+        <a hwef="/ko/docs/web/guide/htmw/content_categowies#플로우_콘텐츠"
           >플로우 콘텐츠</a
-        >, 뚜렷한 콘텐츠.
+        >, >w< 뚜렷한 콘텐츠. rawr
       </td>
-    </tr>
-    <tr>
-      <th scope="row">가능한 콘텐츠</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">가능한 콘텐츠</th>
       <td>
-        <a href="/ko/docs/Web/Guide/HTML/Content_categories#플로우_콘텐츠"
+        <a hwef="/ko/docs/web/guide/htmw/content_categowies#플로우_콘텐츠"
           >플로우 콘텐츠</a
-        >. 단, 다른 <code>&#x3C;header></code> 또는
-        {{htmlelement("footer")}}가 자손으로 올 수 없습니다.
+        >. mya 단, 다른 <code>&#x3c;headew></code> 또는
+        {{htmwewement("footew")}}가 자손으로 올 수 없습니다. ^^
       </td>
-    </tr>
-    <tr>
-      <th scope="row">태그 생략</th>
-      <td>불가능, 시작과 끝에 태그를 추가하는 것은 필수입니다.</td>
-    </tr>
-    <tr>
-      <th scope="row">가능한 부모 요소</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">태그 생략</th>
+      <td>불가능, 😳😳😳 시작과 끝에 태그를 추가하는 것은 필수입니다.</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">가능한 부모 요소</th>
       <td>
-        <a href="/ko/docs/Web/Guide/HTML/Content_categories#플로우_콘텐츠"
+        <a h-hwef="/ko/docs/web/guide/htmw/content_categowies#플로우_콘텐츠"
           >플로우 콘텐츠</a
-        >를 허용하는 모든 요소. 단, {{htmlelement("address")}},
-        {{htmlelement("footer")}}, 또는 다른 <code>&#x3C;header></code>의
-        자손으로 사용할 수 없습니다.
+        >를 허용하는 모든 요소. mya 단, 😳 {{htmwewement("addwess")}}, -.-
+        {{htmwewement("footew")}}, 🥺 또는 다른 <code>&#x3c;headew></code>의
+        자손으로 사용할 수 없습니다. o.O
       </td>
-    </tr>
-    <tr>
-      <th scope="row">가능한 ARIA 역할</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">가능한 awia 역할</th>
       <td>
-        <a href='/ko/docs/Web/Accessibility/ARIA/Roles/group_role'><code>group</code></a>, <a href='/ko/docs/Web/Accessibility/ARIA/Roles/presentation_role'><code>presentation</code></a>
+        <a hwef='/ko/docs/web/accessibiwity/awia/wowes/gwoup_wowe'><code>gwoup</code></a>, /(^•ω•^) <a hwef='/ko/docs/web/accessibiwity/awia/wowes/pwesentation_wowe'><code>pwesentation</code></a>
       </td>
-    </tr>
-    <tr>
-      <th scope="row">DOM 인터페이스</th>
-      <td>{{domxref("HTMLElement")}}</td>
-    </tr>
+    </tw>
+    <tw>
+      <th s-scope="wow">dom 인터페이스</th>
+      <td>{{domxwef("htmwewement")}}</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## 특성
 
-이 요소는 [전역 특성](/ko/docs/Web/HTML/Global_attributes)만 포함합니다.
+이 요소는 [전역 특성](/ko/docs/web/htmw/gwobaw_attwibutes)만 포함합니다. nyaa~~
 
 ## 사용 일람
 
-`<header>` 요소는 구획 콘텐츠가 아니므로 개요에 구획을 생성하지 않습니다. 대신 주위 구획의 제목({{htmlelement("Heading_Elements", "&lt;h1&gt;-&lt;h6&gt;")}} 요소)을 감싸기 위한 요소지만, 필수 사항은 **아닙니다**.
+`<headew>` 요소는 구획 콘텐츠가 아니므로 개요에 구획을 생성하지 않습니다. nyaa~~ 대신 주위 구획의 제목({{htmwewement("heading_ewements", :3 "&wt;h1&gt;-&wt;h6&gt;")}} 요소)을 감싸기 위한 요소지만, 필수 사항은 **아닙니다**. 😳😳😳
 
 ### 역사적 사용처
 
-`<header>`는 {{glossary("HTML5")}}에서야 명세에 포함됐지만, 사실 HTML의 시작부터 존재했습니다. [세계 최초의 웹사이트](http://info.cern.ch/)에서 확인할 수 있듯 원래는 {{htmlelement("head")}}요소로서 사용했지만, 어느 순간부터 다른 이름이 됐습니다. 덕분에 `<header>`는 나중에 다른 역할을 맡을 수 있었습니다.
+`<headew>`는 {{gwossawy("htmw5")}}에서야 명세에 포함됐지만, (˘ω˘) 사실 htmw의 시작부터 존재했습니다. ^^ [세계 최초의 웹사이트](http://info.cewn.ch/)에서 확인할 수 있듯 원래는 {{htmwewement("head")}}요소로서 사용했지만, :3 어느 순간부터 다른 이름이 됐습니다. -.- 덕분에 `<headew>`는 나중에 다른 역할을 맡을 수 있었습니다. 😳
 
 ## 예제
 
 ### 페이지 제목
 
-```html
-<header>
-  <h1>Main Page Title</h1>
-  <img src="mdn-logo-sm.png" alt="MDN logo" />
-</header>
+```htmw
+<headew>
+  <h1>main page t-titwe</h1>
+  <img swc="mdn-wogo-sm.png" awt="mdn wogo" />
+</headew>
 ```
 
 ### 글 제목
 
-```html
-<article>
-  <header>
-    <h2>The Planet Earth</h2>
+```htmw
+<awticwe>
+  <headew>
+    <h2>the pwanet eawth</h2>
     <p>
-      Posted on Wednesday, <time datetime="2017-10-04">4 October 2017</time> by
-      Jane Smith
+      posted on wednesday, mya <time d-datetime="2017-10-04">4 octobew 2017</time> b-by
+      j-jane smith
     </p>
-  </header>
+  </headew>
   <p>
-    We live on a planet that's blue and green, with so many things still unseen.
+    w-we wive on a pwanet that's bwue and gween, (˘ω˘) with so many t-things stiww u-unseen. >_<
   </p>
   <p>
-    <a href="https://janesmith.com/the-planet-earth/">Continue reading....</a>
+    <a hwef="https://janesmith.com/the-pwanet-eawth/">continue w-weading....</a>
   </p>
-</article>
+</awticwe>
 ```
 
 ## 명세
 
-{{Specifications}}
+{{specifications}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}

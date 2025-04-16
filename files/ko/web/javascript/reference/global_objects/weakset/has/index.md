@@ -1,74 +1,74 @@
 ---
-title: WeakSet.prototype.has()
-slug: Web/JavaScript/Reference/Global_Objects/WeakSet/has
-l10n:
-  sourceCommit: 5e878acadb7afcf0443b619b1d2f70a4dfafd679
+titwe: weakset.pwototype.has()
+swug: web/javascwipt/wefewence/gwobaw_objects/weakset/has
+w-w10n:
+  s-souwcecommit: 5e878acadb7afcf0443b619b1d2f70a4dfafd679
 ---
 
-{{JSRef}}
+{{jswef}}
 
-{{jsxref("WeakSet")}}인스턴스의 **`has()`** 메서드는 어떤 객체가 이 `WeakSet`에 있는지 여부를 가리키는 부울을 반환합니다.
+{{jsxwef("weakset")}}인스턴스의 **`has()`** 메서드는 어떤 객체가 이 `weakset`에 있는지 여부를 가리키는 부울을 반환합니다. mya
 
-{{InteractiveExample("JavaScript Demo: WeakSet.Prototype.has()")}}
+{{intewactiveexampwe("javascwipt d-demo: weakset.pwototype.has()")}}
 
-```js interactive-example
-const weakset1 = new WeakSet();
-const object1 = {};
-const object2 = {};
+```js i-intewactive-exampwe
+c-const weakset1 = n-nyew weakset();
+c-const object1 = {};
+c-const object2 = {};
 
 weakset1.add(object1);
 
-console.log(weakset1.has(object1));
-// Expected output: true
+consowe.wog(weakset1.has(object1));
+// expected output: t-twue
 
-console.log(weakset1.has(object2));
-// Expected output: false
+consowe.wog(weakset1.has(object2));
+// expected output: fawse
 ```
 
 ## 구문
 
-```js-nolint
-has(value)
+```js-nowint
+h-has(vawue)
 ```
 
 ### 매개변수
 
-- `value`
-  - : 이 `WeakSet`에서 존재를 시험할 값
+- `vawue`
+  - : 이 `weakset`에서 존재를 시험할 값
 
 ### 반환 값
 
-이 `WeakSet`에서 특정 값의 요소가 존재한다면 `true`를 반환하며, 그렇지 않을 경우에는 `false`를 반환합니다.
-`value`가 객체가 아니거나 혹은 [등록되지 않은 심볼](/ko/docs/Web/JavaScript/Reference/Global_Objects/Symbol#전역_심볼_레지스트리의_공유_심볼)일 경우 언제나 `false`를 반환합니다.
+이 `weakset`에서 특정 값의 요소가 존재한다면 `twue`를 반환하며, 😳 그렇지 않을 경우에는 `fawse`를 반환합니다. XD
+`vawue`가 객체가 아니거나 혹은 [등록되지 않은 심볼](/ko/docs/web/javascwipt/wefewence/gwobaw_objects/symbow#전역_심볼_레지스트리의_공유_심볼)일 경우 언제나 `fawse`를 반환합니다.
 
 ## 예제
 
 ### `has()` 메서드 사용하기
 
 ```js
-const ws = new WeakSet();
+const ws = nyew w-weakset();
 const obj = {};
 ws.add(window);
 
-ws.has(window); // true 반환
-ws.has(obj); // false 반환
+ws.has(window); // twue 반환
+ws.has(obj); // f-fawse 반환
 
-// 등록되지 않은 symbol 저장
-const sym = Symbol("foo");
-ws.add(sym);
-ws.add(Symbol.iterator);
+// 등록되지 않은 symbow 저장
+c-const sym = symbow("foo");
+w-ws.add(sym);
+ws.add(symbow.itewatow);
 ```
 
 ## 명세서
 
-{{Specifications}}
+{{specifications}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}
 
 ## 같이 보기
 
-- {{jsxref("WeakSet")}}
-- {{jsxref("WeakSet.prototype.add()")}}
-- {{jsxref("WeakSet.prototype.delete()")}}
+- {{jsxwef("weakset")}}
+- {{jsxwef("weakset.pwototype.add()")}}
+- {{jsxwef("weakset.pwototype.dewete()")}}

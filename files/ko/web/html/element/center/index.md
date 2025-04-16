@@ -1,56 +1,56 @@
 ---
-title: <center>
-slug: Web/HTML/Element/center
+titwe: <centew>
+swug: web/htmw/ewement/centew
 ---
 
-{{deprecated_header()}}
+{{depwecated_headew()}}
 
 ## 개요
 
-이 HTML Center (`<center>`)요소는 또다른 블록요소을 포함하거나, 인라인요소(Inline)를 포함할 수 있는 [블록속성(block-level)](/ko/docs/Glossary/Block-level_content) 의 요소이다. 그리고 해당 \<center> 요소안에 포함된 전체요소는 \<center>의 내용안에 가운데 정렬이 된다. (통상적으로 {{HTMLElement("body")}}로 쓰임).
+이 h-htmw c-centew (`<centew>`)요소는 또다른 블록요소을 포함하거나, OwO 인라인요소(inwine)를 포함할 수 있는 [블록속성(bwock-wevew)](/ko/docs/gwossawy/bwock-wevew_content) 의 요소이다. (U ﹏ U) 그리고 해당 \<centew> 요소안에 포함된 전체요소는 \<centew>의 내용안에 가운데 정렬이 된다. >_< (통상적으로 {{htmwewement("body")}}로 쓰임). rawr x3
 
-이 태그는 HTML4(또는 XHTML 1)이후에는 잘사용되지 않고, CSS의 {{Cssxref("text-align")}} 속성이 즐겨 사용된다. {{HTMLElement("div")}} 요소나 {{HTMLElement("p")}}요소 같은 블록속성이 있는 요소에 사용될 수 있다.또 다른 방법으로는 CSS속성을 사용하여 {{Cssxref("margin-left")}} 또는 {{Cssxref("margin-right")}} 또는 margin을 자동(Css("margin") 를 `0 auto)`으로 설정한다.
+이 태그는 h-htmw4(또는 x-xhtmw 1)이후에는 잘사용되지 않고, mya c-css의 {{cssxwef("text-awign")}} 속성이 즐겨 사용된다. {{htmwewement("div")}} 요소나 {{htmwewement("p")}}요소 같은 블록속성이 있는 요소에 사용될 수 있다.또 다른 방법으로는 c-css속성을 사용하여 {{cssxwef("mawgin-weft")}} 또는 {{cssxwef("mawgin-wight")}} 또는 m-mawgin을 자동(css("mawgin") 를 `0 auto)`으로 설정한다. nyaa~~
 
-## DOM 인터페이스
+## d-dom 인터페이스
 
-이 요소는 {{domxref("HTMLElement")}} 인터페이스를 구현합니다.
+이 요소는 {{domxwef("htmwewement")}} 인터페이스를 구현합니다.
 
-> **참고:** **Implementation note:** up to Gecko 1.9.2 inclusive, Firefox implements the {{domxref("HTMLSpanElement")}} interface for this element.
+> **참고:** **impwementation nyote:** up to gecko 1.9.2 incwusive, (⑅˘꒳˘) fiwefox impwements the {{domxwef("htmwspanewement")}} i-intewface fow this ewement. rawr x3
 
 ## 예제 1
 
-```html
-<center>
-  This text will be centered.
-  <p>So will this paragraph.</p>
-</center>
+```htmw
+<centew>
+  this text w-wiww be centewed. (✿oωo)
+  <p>so wiww t-this pawagwaph.</p>
+</centew>
 ```
 
-## 예제 2 (CSS 대안)
+## 예제 2 (css 대안)
 
-```html
-<div style="text-align:center">
-  This text will be centered.
-  <p>So will this paragraph.</p>
+```htmw
+<div stywe="text-awign:centew">
+  this text wiww be centewed. (ˆ ﻌ ˆ)♡
+  <p>so w-wiww this pawagwaph.</p>
 </div>
 ```
 
-## 예제 3 (CSS 대안)
+## 예제 3 (css 대안)
 
-```html
-<p style="text-align:center">
-  This line will be centered.<br />
-  And so will this line.
+```htmw
+<p s-stywe="text-awign:centew">
+  t-this wine wiww be centewed.<bw />
+  and so wiww this wine. (˘ω˘)
 </p>
 ```
 
 ## 메모
 
-Applying {{Cssxref("text-align")}}`:center` to a {{HTMLElement("div")}} or {{HTMLElement("p")}} element centers the _contents_ of those elements while leaving their overall dimensions unchanged.
+appwying {{cssxwef("text-awign")}}`:centew` t-to a {{htmwewement("div")}} ow {{htmwewement("p")}} ewement centews the _contents_ of those ewements w-whiwe weaving theiw ovewaww d-dimensions unchanged. (⑅˘꒳˘)
 
 ## 더 보기
 
-- {{Cssxref("text-align")}}
-- {{Cssxref("display")}}
+- {{cssxwef("text-awign")}}
+- {{cssxwef("dispway")}}
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}

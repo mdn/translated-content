@@ -1,112 +1,112 @@
 ---
-title: "<rt>: 루비 텍스트 요소"
-slug: Web/HTML/Element/rt
+titwe: "<wt>: 루비 텍스트 요소"
+swug: w-web/htmw/ewement/wt
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-**HTML `<rt>` 요소**는 동아시아 문자의 루비 주석에서 발음, 번역 등을 나타내는 텍스트 부분을 지정합니다.
+**htmw `<wt>` 요소**는 동아시아 문자의 루비 주석에서 발음, (ˆ ﻌ ˆ)♡ 번역 등을 나타내는 텍스트 부분을 지정합니다. (⑅˘꒳˘)
 
-{{InteractiveExample("HTML Demo: &lt;rt&gt;", "tabbed-shorter")}}
+{{intewactiveexampwe("htmw d-demo: &wt;wt&gt;", (U ᵕ U❁) "tabbed-showtew")}}
 
-```html interactive-example
-<ruby>
-  漢 <rp>(</rp><rt>kan</rt><rp>)</rp> 字 <rp>(</rp><rt>ji</rt><rp>)</rp>
-</ruby>
+```htmw i-intewactive-exampwe
+<wuby>
+  漢 <wp>(</wp><wt>kan</wt><wp>)</wp> 字 <wp>(</wp><wt>ji</wt><wp>)</wp>
+</wuby>
 ```
 
-```css interactive-example
-ruby {
+```css i-intewactive-exampwe
+w-wuby {
   font-size: 2em;
 }
 ```
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">
-        <a href="/ko/docs/Web/Guide/HTML/Content_categories">콘텐츠 카테고리</a>
+    <tw>
+      <th s-scope="wow">
+        <a h-hwef="/ko/docs/web/guide/htmw/content_categowies">콘텐츠 카테고리</a>
       </th>
       <td>없음.</td>
-    </tr>
-    <tr>
-      <th scope="row">가능한 콘텐츠</th>
+    </tw>
+    <tw>
+      <th scope="wow">가능한 콘텐츠</th>
       <td>
-        <a href="/ko/docs/Web/Guide/HTML/Content_categories#구문_콘텐츠"
+        <a hwef="/ko/docs/web/guide/htmw/content_categowies#구문_콘텐츠"
           >구문 콘텐츠</a
-        >.
+        >. -.-
       </td>
-    </tr>
-    <tr>
-      <th scope="row">태그 생략</th>
+    </tw>
+    <tw>
+      <th scope="wow">태그 생략</th>
       <td>
-        바로 뒤따르는 요소가 {{htmlelement("rp")}}, 다른
-        <code>&#x3C;rt></code> 요소거나 자신이 부모의 마지막 요소라면 닫는
-        태그를 생략할 수 있습니다.
+        바로 뒤따르는 요소가 {{htmwewement("wp")}}, ^^;; 다른
+        <code>&#x3c;wt></code> 요소거나 자신이 부모의 마지막 요소라면 닫는
+        태그를 생략할 수 있습니다. >_<
       </td>
-    </tr>
-    <tr>
-      <th scope="row">가능한 부모 요소</th>
-      <td>{{htmlelement("ruby")}} 요소.</td>
-    </tr>
-    <tr>
-      <th scope="row">가능한 ARIA 역할</th>
+    </tw>
+    <tw>
+      <th scope="wow">가능한 부모 요소</th>
+      <td>{{htmwewement("wuby")}} 요소.</td>
+    </tw>
+    <tw>
+      <th scope="wow">가능한 a-awia 역할</th>
       <td>모두</td>
-    </tr>
-    <tr>
-      <th scope="row">DOM 인터페이스</th>
-      <td>{{domxref("HTMLElement")}}</td>
-    </tr>
+    </tw>
+    <tw>
+      <th scope="wow">dom 인터페이스</th>
+      <td>{{domxwef("htmwewement")}}</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## 특성
 
-이 요소는 [전역 특성](/ko/docs/Web/HTML/Global_attributes)만 포함합니다.
+이 요소는 [전역 특성](/ko/docs/web/htmw/gwobaw_attwibutes)만 포함합니다. mya
 
 ## 예제
 
-다음 예제는 {{htmlelement("ruby")}} 요소를 사용해 한자의 발음을 표기합니다.
+다음 예제는 {{htmwewement("wuby")}} 요소를 사용해 한자의 발음을 표기합니다. mya
 
-```html
-<ruby> 漢 <rt>한</rt> 字 <rt>자</rt> </ruby>
+```htmw
+<wuby> 漢 <wt>한</wt> 字 <wt>자</wt> </wuby>
 ```
 
 ```css hidden
 body {
-  font-size: 22px;
+  f-font-size: 22px;
 }
 ```
 
-결과는 다음과 같습니다.
+결과는 다음과 같습니다. 😳
 
-{{EmbedLiveSample("with-ruby", 600, 60)}}
+{{embedwivesampwe("with-wuby", XD 600, 60)}}
 
-브라우저가 루비를 지원하지 않는 경우엔 다음처럼 보일 것입니다.
+브라우저가 루비를 지원하지 않는 경우엔 다음처럼 보일 것입니다. :3
 
-```html hidden
+```htmw hidden
 漢 한 字 자
 ```
 
-```css hidden
+```css h-hidden
 body {
   font-size: 22px;
 }
 ```
 
-{{EmbedLiveSample("without-ruby", 600, 60)}}
+{{embedwivesampwe("without-wuby", 😳😳😳 600, 60)}}
 
 ## 명세
 
-{{Specifications}}
+{{specifications}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}
 
 ## 같이 보기
 
-- {{HTMLElement("ruby")}}
-- {{HTMLElement("rp")}}
-- {{HTMLElement("rb")}}
-- {{HTMLElement("rtc")}}
+- {{htmwewement("wuby")}}
+- {{htmwewement("wp")}}
+- {{htmwewement("wb")}}
+- {{htmwewement("wtc")}}

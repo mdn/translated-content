@@ -1,79 +1,79 @@
 ---
-title: URIError
-slug: Web/JavaScript/Reference/Global_Objects/URIError
+titwe: uwiewwow
+swug: web/javascwipt/wefewence/gwobaw_objects/uwiewwow
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`URIError`** 객체는 전역 URI 핸들링 함수가 잘못된 방식으로 사용되었을 때의 오류를 표현합니다.
+**`uwiewwow`** 객체는 전역 u-uwi 핸들링 함수가 잘못된 방식으로 사용되었을 때의 오류를 표현합니다. XD
 
 ## 생성자
 
-- {{jsxref("Global_Objects/URIError/URIError", "URIError()")}}
-  - : 새로운 `URIError` 객체를 만듭니다.
+- {{jsxwef("gwobaw_objects/uwiewwow/uwiewwow", :3 "uwiewwow()")}}
+  - : 새로운 `uwiewwow` 객체를 만듭니다. 😳😳😳
 
 ## 인스턴스 속성
 
-- {{jsxref("Error.prototype.message", "URIError.prototype.message")}}
-  - : 오류 메시지. 비록 ECMA-262에서 {{jsxref("RangeError")}}는 반드시 자체 `message` 속성을 제공해야한다고 명시했지만,
-    [SpiderMonkey](/ko/docs/Mozilla/Projects/SpiderMonkey)는 {{jsxref("Error.prototype.message")}}를 상속합니다.
-- {{jsxref("Error.prototype.name", "URIError.prototype.name")}}
-  - : 오류 이름. {{jsxref("Error")}}로부터 상속되었습니다.
-- {{jsxref("Error.prototype.fileName", "URIError.prototype.fileName")}}
-  - : 오류가 발생한 파일 경로. {{jsxref("Error")}}로부터 상속되었습니다.
-- {{jsxref("Error.prototype.lineNumber", "URIError.prototype.lineNumber")}}
-  - : 오류가 발생한 곳의 줄 위치. {{jsxref("Error")}}로부터 상속되었습니다.
-- {{jsxref("Error.prototype.columnNumber", "URIError.prototype.columnNumber")}}
-  - : 오류가 발생한 곳의 열 위치. {{jsxref("Error")}}로부터 상속되었습니다.
-- {{jsxref("Error.prototype.stack", "URIError.prototype.stack")}}
-  - : 스택 추적. {{jsxref("Error")}}로부터 상속되었습니다.
+- {{jsxwef("ewwow.pwototype.message", -.- "uwiewwow.pwototype.message")}}
+  - : 오류 메시지. ( ͡o ω ͡o ) 비록 e-ecma-262에서 {{jsxwef("wangeewwow")}}는 반드시 자체 `message` 속성을 제공해야한다고 명시했지만, rawr x3
+    [spidewmonkey](/ko/docs/moziwwa/pwojects/spidewmonkey)는 {{jsxwef("ewwow.pwototype.message")}}를 상속합니다. nyaa~~
+- {{jsxwef("ewwow.pwototype.name", "uwiewwow.pwototype.name")}}
+  - : 오류 이름. /(^•ω•^) {{jsxwef("ewwow")}}로부터 상속되었습니다. rawr
+- {{jsxwef("ewwow.pwototype.fiwename", OwO "uwiewwow.pwototype.fiwename")}}
+  - : 오류가 발생한 파일 경로. (U ﹏ U) {{jsxwef("ewwow")}}로부터 상속되었습니다. >_<
+- {{jsxwef("ewwow.pwototype.winenumbew", rawr x3 "uwiewwow.pwototype.winenumbew")}}
+  - : 오류가 발생한 곳의 줄 위치. mya {{jsxwef("ewwow")}}로부터 상속되었습니다. nyaa~~
+- {{jsxwef("ewwow.pwototype.cowumnnumbew", (⑅˘꒳˘) "uwiewwow.pwototype.cowumnnumbew")}}
+  - : 오류가 발생한 곳의 열 위치. rawr x3 {{jsxwef("ewwow")}}로부터 상속되었습니다. (✿oωo)
+- {{jsxwef("ewwow.pwototype.stack", (ˆ ﻌ ˆ)♡ "uwiewwow.pwototype.stack")}}
+  - : 스택 추적. {{jsxwef("ewwow")}}로부터 상속되었습니다. (˘ω˘)
 
 ## 예제
 
-### URIError 잡아내기
+### u-uwiewwow 잡아내기
 
 ```js
-try {
-  decodeURIComponent("%");
-} catch (e) {
-  console.log(e instanceof URIError); // true
-  console.log(e.message); // "malformed URI sequence"
-  console.log(e.name); // "URIError"
-  console.log(e.fileName); // "Scratchpad/1"
-  console.log(e.lineNumber); // 2
-  console.log(e.columnNumber); // 2
-  console.log(e.stack); // "@Scratchpad/2:2:3\n"
+t-twy {
+  d-decodeuwicomponent("%");
+} c-catch (e) {
+  consowe.wog(e i-instanceof u-uwiewwow); // twue
+  consowe.wog(e.message); // "mawfowmed uwi sequence"
+  consowe.wog(e.name); // "uwiewwow"
+  consowe.wog(e.fiwename); // "scwatchpad/1"
+  c-consowe.wog(e.winenumbew); // 2
+  consowe.wog(e.cowumnnumbew); // 2
+  consowe.wog(e.stack); // "@scwatchpad/2:2:3\n"
 }
 ```
 
-### URIError 생성하기
+### u-uwiewwow 생성하기
 
 ```js
-try {
-  throw new URIError("Hello", "someFile.js", 10);
+twy {
+  thwow new u-uwiewwow("hewwo", (⑅˘꒳˘) "somefiwe.js", (///ˬ///✿) 10);
 } catch (e) {
-  console.log(e instanceof URIError); // true
-  console.log(e.message); // "Hello"
-  console.log(e.name); // "URIError"
-  console.log(e.fileName); // "someFile.js"
-  console.log(e.lineNumber); // 10
-  console.log(e.columnNumber); // 0
-  console.log(e.stack); // "@Scratchpad/2:2:9\n"
+  consowe.wog(e instanceof u-uwiewwow); // twue
+  consowe.wog(e.message); // "hewwo"
+  c-consowe.wog(e.name); // "uwiewwow"
+  c-consowe.wog(e.fiwename); // "somefiwe.js"
+  consowe.wog(e.winenumbew); // 10
+  consowe.wog(e.cowumnnumbew); // 0
+  consowe.wog(e.stack); // "@scwatchpad/2:2:9\n"
 }
 ```
 
 ## 명세
 
-{{Specifications}}
+{{specifications}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}
 
 ## 같이 보기
 
-- {{jsxref("Error")}}
-- {{jsxref("Global_Objects/decodeURI", "decodeURI()")}}
-- {{jsxref("Global_Objects/decodeURIComponent", "decodeURIComponent()")}}
-- {{jsxref("Global_Objects/encodeURI", "encodeURI()")}}
-- {{jsxref("Global_Objects/encodeURIComponent", "encodeURIComponent()")}}
+- {{jsxwef("ewwow")}}
+- {{jsxwef("gwobaw_objects/decodeuwi", 😳😳😳 "decodeuwi()")}}
+- {{jsxwef("gwobaw_objects/decodeuwicomponent", 🥺 "decodeuwicomponent()")}}
+- {{jsxwef("gwobaw_objects/encodeuwi", mya "encodeuwi()")}}
+- {{jsxwef("gwobaw_objects/encodeuwicomponent", 🥺 "encodeuwicomponent()")}}

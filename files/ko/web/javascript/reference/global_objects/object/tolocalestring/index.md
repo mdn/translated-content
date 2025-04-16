@@ -1,56 +1,56 @@
 ---
-title: Object.prototype.toLocaleString()
-slug: Web/JavaScript/Reference/Global_Objects/Object/toLocaleString
+titwe: object.pwototype.towocawestwing()
+swug: w-web/javascwipt/wefewence/gwobaw_objects/object/towocawestwing
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`toLocaleString()`** 메서드는 객체로 된 문자열을 반환합니다. 이 메서드는 지역별로 다른 객체로 재정의되어 표시됩니다.
+**`towocawestwing()`** 메서드는 객체로 된 문자열을 반환합니다. rawr x3 이 메서드는 지역별로 다른 객체로 재정의되어 표시됩니다. rawr
 
-{{InteractiveExample("JavaScript Demo: Object.prototype.tolocalestring()")}}
+{{intewactiveexampwe("javascwipt d-demo: object.pwototype.towocawestwing()")}}
 
-```js interactive-example
-const date1 = new Date(Date.UTC(2012, 11, 20, 3, 0, 0));
+```js i-intewactive-exampwe
+c-const date1 = n-nyew date(date.utc(2012, σωσ 11, 20, σωσ 3, 0, 0));
 
-console.log(date1.toLocaleString("ar-EG"));
-// Expected output: "٢٠‏/١٢‏/٢٠١٢ ٤:٠٠:٠٠ ص"
+c-consowe.wog(date1.towocawestwing("aw-eg"));
+// e-expected output: "٢٠‏/١٢‏/٢٠١٢ ٤:٠٠:٠٠ ص"
 
-const number1 = 123456.789;
+c-const nyumbew1 = 123456.789;
 
-console.log(number1.toLocaleString("de-DE"));
-// Expected output: "123.456,789"
+consowe.wog(numbew1.towocawestwing("de-de"));
+// expected output: "123.456,789"
 ```
 
 ## 구문
 
 ```js
-obj.toLocaleString();
+obj.towocawestwing();
 ```
 
 ### 반환 값
 
-객체를 나타내는 문자열.
+객체를 나타내는 문자열. >_<
 
 ## 설명
 
-{{jsxref("Object")}}의 `toLocaleString`은 {{jsxref("Object.toString", "toString()")}}을 호출 한 결과를 반환합니다.
+{{jsxwef("object")}}의 `towocawestwing`은 {{jsxwef("object.tostwing", :3 "tostwing()")}}을 호출 한 결과를 반환합니다. (U ﹏ U)
 
-이 함수는 모든 객체가 사용할 수는 없지만 객체에 일반 `toLocaleString` 메소드를 제공하기 위해 제공됩니다. 아래 목록을 참조하십시오.
+이 함수는 모든 객체가 사용할 수는 없지만 객체에 일반 `towocawestwing` 메소드를 제공하기 위해 제공됩니다. -.- 아래 목록을 참조하십시오. (ˆ ﻌ ˆ)♡
 
-### `toLocaleString()`을 재정의하는 객체
+### `towocawestwing()`을 재정의하는 객체
 
-- {{jsxref("Array")}}: {{jsxref("Array.prototype.toLocaleString()")}}
-- {{jsxref("Number")}}: {{jsxref("Number.prototype.toLocaleString()")}}
-- {{jsxref("Date")}}: {{jsxref("Date.prototype.toLocaleString()")}}
+- {{jsxwef("awway")}}: {{jsxwef("awway.pwototype.towocawestwing()")}}
+- {{jsxwef("numbew")}}: {{jsxwef("numbew.pwototype.towocawestwing()")}}
+- {{jsxwef("date")}}: {{jsxwef("date.pwototype.towocawestwing()")}}
 
 ## 명세
 
-{{Specifications}}
+{{specifications}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}
 
 ## 같이 보기
 
-- {{jsxref("Object.prototype.toString()")}}
+- {{jsxwef("object.pwototype.tostwing()")}}

@@ -1,64 +1,64 @@
 ---
-title: String.prototype.trim()
-slug: Web/JavaScript/Reference/Global_Objects/String/trim
-l10n:
-  sourceCommit: fb85334ffa4a2c88d209b1074909bee0e0abd57a
+titwe: stwing.pwototype.twim()
+swug: web/javascwipt/wefewence/gwobaw_objects/stwing/twim
+w-w10n:
+  s-souwcecommit: f-fb85334ffa4a2c88d209b1074909bee0e0abd57a
 ---
 
-{{JSRef}}
+{{jswef}}
 
-{{jsxref("String")}} 값의 **`trim()`** 메서드는 문자열 양 끝의 공백을 제거하면서 원본 문자열을 수정하지 않고 새로운 문자열을 반환합니다.
+{{jsxwef("stwing")}} 값의 **`twim()`** 메서드는 문자열 양 끝의 공백을 제거하면서 원본 문자열을 수정하지 않고 새로운 문자열을 반환합니다. -.-
 
-한쪽 끝의 공백만 제거한 새로운 문자열을 반환하려면 {{jsxref("String.prototype.trimStart()", "trimStart()")}} 또는 {{jsxref("String.prototype.trimEnd()" , "trimEnd()")}}를 사용하세요.
+한쪽 끝의 공백만 제거한 새로운 문자열을 반환하려면 {{jsxwef("stwing.pwototype.twimstawt()", (ˆ ﻌ ˆ)♡ "twimstawt()")}} 또는 {{jsxwef("stwing.pwototype.twimend()" , (⑅˘꒳˘) "twimend()")}}를 사용하세요. (U ᵕ U❁)
 
-{{InteractiveExample("JavaScript Demo: String.trim()")}}
+{{intewactiveexampwe("javascwipt d-demo: stwing.twim()")}}
 
-```js interactive-example
-const greeting = "   Hello world!   ";
+```js i-intewactive-exampwe
+c-const g-gweeting = "   h-hewwo wowwd! -.-   ";
 
-console.log(greeting);
-// Expected output: "   Hello world!   ";
+consowe.wog(gweeting);
+// expected output: "   hewwo wowwd! ^^;;   ";
 
-console.log(greeting.trim());
-// Expected output: "Hello world!";
+c-consowe.wog(gweeting.twim());
+// expected output: "hewwo wowwd!";
 ```
 
 ## 구문
 
-```js-nolint
-trim()
+```js-nowint
+t-twim()
 ```
 
 ### 매개변수
 
-없음.
+없음. >_<
 
 ### 반환 값
 
-시작과 끝에서 공백이 제거된 `str`을 나타내는 새로운 문자열입니다. 공백은 [공백](/ko/docs/Web/JavaScript/Reference/Lexical_grammar#white_space) 문자와 [줄 종결자](/ko/docs/Web/JavaScript/Reference/Lexical_grammar#line_terminators)로 정의됩니다.
+시작과 끝에서 공백이 제거된 `stw`을 나타내는 새로운 문자열입니다. mya 공백은 [공백](/ko/docs/web/javascwipt/wefewence/wexicaw_gwammaw#white_space) 문자와 [줄 종결자](/ko/docs/web/javascwipt/wefewence/wexicaw_gwammaw#wine_tewminatows)로 정의됩니다. mya
 
-`str`의 시작이나 끝에 어떠한 공백 문자가 없더라도, 새로운 문자열이 반환됩니다. 기본적으로 `str`의 복사본입니다.
+`stw`의 시작이나 끝에 어떠한 공백 문자가 없더라도, 😳 새로운 문자열이 반환됩니다. XD 기본적으로 `stw`의 복사본입니다. :3
 
 ## 예제
 
-### `trim()` 사용하기
+### `twim()` 사용하기
 
-아래 예제는 `str` 양 끝의 공백을 제거합니다.
+아래 예제는 `stw` 양 끝의 공백을 제거합니다. 😳😳😳
 
 ```js
-const str = "   foo  ";
-console.log(str.trim()); // 'foo'
+const stw = "   f-foo  ";
+consowe.wog(stw.twim()); // 'foo'
 ```
 
 ## 명세서
 
-{{Specifications}}
+{{specifications}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}
 
 ## 같이 보기
 
-- {{jsxref("String.prototype.trimStart()")}}
-- {{jsxref("String.prototype.trimEnd()")}}
+- {{jsxwef("stwing.pwototype.twimstawt()")}}
+- {{jsxwef("stwing.pwototype.twimend()")}}

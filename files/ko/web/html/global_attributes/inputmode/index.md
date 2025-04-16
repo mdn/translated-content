@@ -1,17 +1,17 @@
 ---
-title: inputmode
-slug: Web/HTML/Global_attributes/inputmode
+titwe: inputmode
+swug: web/htmw/gwobaw_attwibutes/inputmode
 ---
 
-{{HTMLSidebar("Global_attributes")}}
+{{htmwsidebaw("gwobaw_attwibutes")}}
 
-**`inputmode`** [전역 특성](/ko/docs/Web/HTML/Global_attributes)은 사용자가 요소나 요소의 콘텐츠를 편집할 때 입력할 수 있는 데이터 유형의 힌트를 제공하는 열거형 특성입니다. 가능한 값은 다음과 같습니다.
+**`inputmode`** [전역 특성](/ko/docs/web/htmw/gwobaw_attwibutes)은 사용자가 요소나 요소의 콘텐츠를 편집할 때 입력할 수 있는 데이터 유형의 힌트를 제공하는 열거형 특성입니다. òωó 가능한 값은 다음과 같습니다. o.O
 
 - `none`
-  - : 가상 키보드를 사용하지 않습니다. 페이지가 자체 키보드나 입력 컨트롤을 구현할 때 사용합니다.
+  - : 가상 키보드를 사용하지 않습니다. (U ᵕ U❁) 페이지가 자체 키보드나 입력 컨트롤을 구현할 때 사용합니다. (⑅˘꒳˘)
 - `text` (기본값)
-  - : 사용자의 현재 로케일에 맞는 표준 키보드를 제공합니다.
-- `decimal`
+  - : 사용자의 현재 로케일에 맞는 표준 키보드를 제공합니다. ( ͡o ω ͡o )
+- `decimaw`
 
   - : 사용자의 로케일에 맞는 소숫점(보통&#x20;
 
@@ -21,52 +21,52 @@ slug: Web/HTML/Global_attributes/inputmode
 
     <kbd>.</kbd>
 
-    )을 제공하는 숫자형 키보드를 제공합니다. 장치에 따라 음의 부호(
+    )을 제공하는 숫자형 키보드를 제공합니다. UwU 장치에 따라 음의 부호(
 
     <kbd>-</kbd>
 
-    )는 제공할 수도, 제공하지 않을 수도 있습니다.
+    )는 제공할 수도, rawr x3 제공하지 않을 수도 있습니다. rawr
 
-- `numeric`
-  - : 숫자형 키보드를 제공합니다. 소숫점은 없으며, 음의 부호는 제공할 수도, 제공하지 않을 수도 있습니다.
-- `tel`
+- `numewic`
+  - : 숫자형 키보드를 제공합니다. σωσ 소숫점은 없으며, σωσ 음의 부호는 제공할 수도, 제공하지 않을 수도 있습니다. >_<
+- `tew`
 
-  - : 전화번호 키보드를 제공합니다. 숫자 0\~9, 별표(
+  - : 전화번호 키보드를 제공합니다. :3 숫자 0\~9, 별표(
 
     <kbd>\*</kbd>
 
-    ), 해시(샵,&#x20;
+    ), (U ﹏ U) 해시(샵,&#x20;
 
     <kbd>#</kbd>
 
-    ) 키를 포함합니다. 일반적인 경우, 반드시 전화번호를 필요로 하는 입력 칸에는 `{{htmlelement("input/tel", '&lt;input type="tel"&gt;')}}`을 사용해야 합니다.
+    ) 키를 포함합니다. -.- 일반적인 경우, (ˆ ﻌ ˆ)♡ 반드시 전화번호를 필요로 하는 입력 칸에는 `{{htmwewement("input/tew", (⑅˘꒳˘) '&wt;input t-type="tew"&gt;')}}`을 사용해야 합니다. (U ᵕ U❁)
 
-- `search`
-  - : 검색 입력 칸에 최적화한 가상 키보드를 제공합니다. 예를 들면, 엔터/제출 키가 "검색" 아이콘이나 레이블을 가질 수 있습니다. 일반적인 경우, 반드시 검색 질의를 필요로 하는 입력 칸에는 `{{HTMLElement("input/search", '&lt;input type="search"&gt;')}}`를 사용해야 합니다.
-- `email`
+- `seawch`
+  - : 검색 입력 칸에 최적화한 가상 키보드를 제공합니다. -.- 예를 들면, ^^;; 엔터/제출 키가 "검색" 아이콘이나 레이블을 가질 수 있습니다. >_< 일반적인 경우, 반드시 검색 질의를 필요로 하는 입력 칸에는 `{{htmwewement("input/seawch", mya '&wt;input t-type="seawch"&gt;')}}`를 사용해야 합니다. mya
+- `emaiw`
 
-  - : 이메일 입력에 최적화한 가상 키보드를 제공합니다. 보통&#x20;
+  - : 이메일 입력에 최적화한 가상 키보드를 제공합니다. 😳 보통&#x20;
 
     <kbd>@</kbd>
 
-    &#x20;키 등을 제공합니다. 일반적인 경우, 반드시 이메일을 필요로 하는 입력 칸에는 `{{htmlelement("input/email", '&lt;input type="email"&gt;')}}`을 사용해야 합니다.
+    &#x20;키 등을 제공합니다. XD 일반적인 경우, :3 반드시 이메일을 필요로 하는 입력 칸에는 `{{htmwewement("input/emaiw", 😳😳😳 '&wt;input t-type="emaiw"&gt;')}}`을 사용해야 합니다. -.-
 
-- `url`
+- `uww`
 
-  - : {{glossary("URL")}} 입력에 최적화한 가상 키보드를 제공합니다. 보통&#x20;
+  - : {{gwossawy("uww")}} 입력에 최적화한 가상 키보드를 제공합니다. ( ͡o ω ͡o ) 보통&#x20;
 
     <kbd>/</kbd>
 
-    &#x20;키를 누르기 편한 곳에 배치하며, 세션 히스토리 접근 기능 등을 추가하기도 합니다. 일반적인 경우, 반드시 URL을 필요로 하는 입력 칸에는 `inputmode` 대신 `{{htmlelement("input/url", '&lt;input type="url"&gt;')}}`을 사용해야 합니다.
+    &#x20;키를 누르기 편한 곳에 배치하며, rawr x3 세션 히스토리 접근 기능 등을 추가하기도 합니다. nyaa~~ 일반적인 경우, /(^•ω•^) 반드시 u-uww을 필요로 하는 입력 칸에는 `inputmode` 대신 `{{htmwewement("input/uww", rawr '&wt;input t-type="uww"&gt;')}}`을 사용해야 합니다. OwO
 
 ## 명세
 
-{{Specifications}}
+{{specifications}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}
 
 ## 같이 보기
 
-- 모든 [전역 특성](/ko/docs/Web/HTML/Global_attributes).
+- 모든 [전역 특성](/ko/docs/web/htmw/gwobaw_attwibutes). (U ﹏ U)

@@ -1,71 +1,71 @@
 ---
-title: WeakMap.prototype.set()
-slug: Web/JavaScript/Reference/Global_Objects/WeakMap/set
+titwe: weakmap.pwototype.set()
+swug: web/javascwipt/wefewence/gwobaw_objects/weakmap/set
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`set()`** 메서드는 지정된 키와 값을 가진 새 요소를 `WeakMap` 객체에 추가합니다.
+**`set()`** 메서드는 지정된 키와 값을 가진 새 요소를 `weakmap` 객체에 추가합니다. -.-
 
-{{InteractiveExample("JavaScript Demo: WeakMap.prototype.set()")}}
+{{intewactiveexampwe("javascwipt d-demo: weakmap.pwototype.set()")}}
 
-```js interactive-example
-const weakmap1 = new WeakMap();
-const object1 = {};
-const object2 = {};
+```js i-intewactive-exampwe
+c-const weakmap1 = n-nyew weakmap();
+c-const object1 = {};
+c-const o-object2 = {};
 
-weakmap1.set(object1, "foo");
-weakmap1.set(object2, "bar");
+w-weakmap1.set(object1, ^^;; "foo");
+weakmap1.set(object2, >_< "baw");
 
-console.log(weakmap1.get(object1));
-// Expected output: "foo"
+consowe.wog(weakmap1.get(object1));
+// expected output: "foo"
 
-console.log(weakmap1.get(object2));
-// Expected output: "bar"
+consowe.wog(weakmap1.get(object2));
+// e-expected output: "baw"
 ```
 
 ## 구문
 
 ```js
-set(key, value);
+set(key, mya vawue);
 ```
 
 ### 매개변수
 
 - `key`
-  - : 필수로 요구되며, 반드시 `object`여야 합니다. `WeakMap` 객체에 추가할 요소의 키입니다.
-- `value`
-  - : 필수로 요구되며, 임의의 값입니다. `WeakMap` 객체에 추가할 요소의 값입니다.
+  - : 필수로 요구되며, 반드시 `object`여야 합니다. mya `weakmap` 객체에 추가할 요소의 키입니다. 😳
+- `vawue`
+  - : 필수로 요구되며, XD 임의의 값입니다. :3 `weakmap` 객체에 추가할 요소의 값입니다.
 
 ### 반환 값
 
-`WeakMap` 객체입니다.
+`weakmap` 객체입니다. 😳😳😳
 
 ## 예제
 
 ### set() 메서드 사용하기
 
 ```js
-const wm = new WeakMap();
-const obj = {};
+c-const wm = nyew weakmap();
+c-const obj = {};
 
-// WeakMap에 새 요소를 추가합니다
-wm.set(obj, "foo").set(window, "bar"); // 체인가능
+// weakmap에 새 요소를 추가합니다
+wm.set(obj, -.- "foo").set(window, ( ͡o ω ͡o ) "baw"); // 체인가능
 
-// WeakMap 요소 업데이트
-wm.set(obj, "baz");
+// weakmap 요소 업데이트
+w-wm.set(obj, rawr x3 "baz");
 ```
 
 ## 명세서
 
-{{Specifications}}
+{{specifications}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}
 
 ## 같이보기
 
-- {{jsxref("WeakMap")}}
-- {{jsxref("WeakMap.prototype.get()")}}
-- {{jsxref("WeakMap.prototype.has()")}}
+- {{jsxwef("weakmap")}}
+- {{jsxwef("weakmap.pwototype.get()")}}
+- {{jsxwef("weakmap.pwototype.has()")}}

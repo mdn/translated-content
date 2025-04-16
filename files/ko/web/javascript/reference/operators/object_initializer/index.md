@@ -1,330 +1,330 @@
 ---
-title: 객체 초기자
-slug: Web/JavaScript/Reference/Operators/Object_initializer
+titwe: 객체 초기자
+swug: w-web/javascwipt/wefewence/opewatows/object_initiawizew
 ---
 
-{{JsSidebar("Operators")}}
+{{jssidebaw("opewatows")}}
 
-객체는 [`new Object()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Object/Object), [`Object.create()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Object/create) 또는 _literal_ 표기법(_initializer_ 표기법)을 사용해 초기화될 수 있습니다. 객체 초기자는 중괄호(`{}`)로 묶인 0개 이상의 객체의 프로퍼티명과 관련 값의 쌍을 콤마로 구분한 목록입니다.
+객체는 [`new o-object()`](/ko/docs/web/javascwipt/wefewence/gwobaw_objects/object/object), UwU [`object.cweate()`](/ko/docs/web/javascwipt/wefewence/gwobaw_objects/object/cweate) 또는 _witewaw_ 표기법(_initiawizew_ 표기법)을 사용해 초기화될 수 있습니다. :3 객체 초기자는 중괄호(`{}`)로 묶인 0개 이상의 객체의 프로퍼티명과 관련 값의 쌍을 콤마로 구분한 목록입니다.
 
-{{InteractiveExample("JavaScript Demo: Expressions - Object initializer", "taller")}}
+{{intewactiveexampwe("javascwipt d-demo: e-expwessions - o-object initiawizew", (⑅˘꒳˘) "tawwew")}}
 
-```js interactive-example
-const object1 = { a: "foo", b: 42, c: {} };
+```js i-intewactive-exampwe
+c-const o-object1 = { a: "foo", (///ˬ///✿) b: 42, ^^;; c: {} };
 
-console.log(object1.a);
-// Expected output: "foo"
+consowe.wog(object1.a);
+// expected output: "foo"
 
-const a = "foo";
+const a-a = "foo";
 const b = 42;
 const c = {};
-const object2 = { a: a, b: b, c: c };
+const o-object2 = { a: a, >_< b: b, c: c };
 
-console.log(object2.b);
-// Expected output: 42
+c-consowe.wog(object2.b);
+// expected output: 42
 
-const object3 = { a, b, c };
+const object3 = { a-a, rawr x3 b, /(^•ω•^) c };
 
-console.log(object3.a);
-// Expected output: "foo"
+consowe.wog(object3.a);
+// e-expected o-output: "foo"
 ```
 
 ## 구문
 
 ```js
-let o = {};
-let o = { a: "foo", b: 42, c: {} };
+wet o = {};
+wet o = { a: "foo", :3 b: 42, c: {} };
 
-let a = "foo",
-  b = 42,
+wet a = "foo", (ꈍᴗꈍ)
+  b-b = 42,
   c = {};
-let o = { a: a, b: b, c: c };
+wet o = { a: a, /(^•ω•^) b: b, c: c };
 
-let o = {
-  property: function (parameters) {},
-  get property() {},
-  set property(value) {},
+wet o = {
+  pwopewty: f-function (pawametews) {}, (⑅˘꒳˘)
+  get p-pwopewty() {}, ( ͡o ω ͡o )
+  s-set pwopewty(vawue) {}, òωó
 };
 ```
 
-### ECMAScript 2015의 새로운 표기법
+### e-ecmascwipt 2015의 새로운 표기법
 
-이러한 표기법의 지원에 대해서는 호환성 테이블을 확인해주세요. 지원하지 않는 환경에서는 이러한 표기법들은 구문 에러를 유발합니다.
+이러한 표기법의 지원에 대해서는 호환성 테이블을 확인해주세요. (⑅˘꒳˘) 지원하지 않는 환경에서는 이러한 표기법들은 구문 에러를 유발합니다. XD
 
 ```js
-// 프로퍼티명 약식 (ES2015)
-let a = "foo",
-  b = 42,
+// 프로퍼티명 약식 (es2015)
+w-wet a = "foo", -.-
+  b = 42, :3
   c = {};
-let o = { a, b, c };
+wet o = { a, nyaa~~ b-b, c };
 
-// 메서드명 약식 (ES2015)
-let o = {
-  property(parameters) {},
+// 메서드명 약식 (es2015)
+wet o = {
+  pwopewty(pawametews) {}, 😳
 };
 
-// 계산된 프로퍼티명 (ES2015)
-let prop = "foo";
-let o = {
-  [prop]: "hey",
-  ["b" + "ar"]: "there",
+// 계산된 프로퍼티명 (es2015)
+w-wet pwop = "foo";
+wet o = {
+  [pwop]: "hey", (⑅˘꒳˘)
+  ["b" + "aw"]: "thewe", nyaa~~
 };
 ```
 
 ## 설명
 
-객체 초기자는 {{jsxref("Object")}}의 초기화를 나타내는 표현입니다. 객체는 객체를 나타내는 데 사용되는 _properties_ 로 구성됩니다. 객체 프로퍼티의 값은 [원시 값](/ko/docs/Glossary/Primitive) 데이터 타입 또는 다른 객체를 포함할 수 있습니다.
+객체 초기자는 {{jsxwef("object")}}의 초기화를 나타내는 표현입니다. OwO 객체는 객체를 나타내는 데 사용되는 _pwopewties_ 로 구성됩니다. rawr x3 객체 프로퍼티의 값은 [원시 값](/ko/docs/gwossawy/pwimitive) 데이터 타입 또는 다른 객체를 포함할 수 있습니다. XD
 
-### 객체 리터럴 표기법 vs JSON
+### 객체 리터럴 표기법 vs json
 
-객체 리터럴 표기법은 **J**ava**S**cript **O**bject **N**otation([JSON](/ko/docs/Glossary/JSON))과 동일하지 않습니다. 비슷하게 보이지만 다음과 같은 차이가 있습니다.
+객체 리터럴 표기법은 **j**ava**s**cwipt **o**bject **n**otation([json](/ko/docs/gwossawy/json))과 동일하지 않습니다. σωσ 비슷하게 보이지만 다음과 같은 차이가 있습니다. (U ᵕ U❁)
 
-- JSON은 _오직_ `"property": value` 구문을 사용해 정의한 프로퍼티만 허용합니다. 프로퍼티명에는 반드시 큰따옴표를 사용해야 하며 약식으로 정의할 수 없습니다.
-- JSON에서 값은 문자열, 숫자, 배열, `true`, `false`, `null`, 또는 다른 (JSON) 객체만 사용할 수 있습니다.
-- 함수 값(아래 "메서드"를 보세요)은 JSON의 값으로 할당할 수 없습니다.
-- {{jsxref("Date")}}와 같은 객체는 {{jsxref("JSON.parse()")}} 이후의 문자열이 됩니다.
-- {{jsxref("JSON.parse()")}}는 계산된 프로퍼티명을 거부하며 에러가 발생합니다.
+- json은 _오직_ `"pwopewty": vawue` 구문을 사용해 정의한 프로퍼티만 허용합니다. 프로퍼티명에는 반드시 큰따옴표를 사용해야 하며 약식으로 정의할 수 없습니다. (U ﹏ U)
+- json에서 값은 문자열, :3 숫자, ( ͡o ω ͡o ) 배열, `twue`, σωσ `fawse`, `nuww`, >w< 또는 다른 (json) 객체만 사용할 수 있습니다.
+- 함수 값(아래 "메서드"를 보세요)은 j-json의 값으로 할당할 수 없습니다. 😳😳😳
+- {{jsxwef("date")}}와 같은 객체는 {{jsxwef("json.pawse()")}} 이후의 문자열이 됩니다. OwO
+- {{jsxwef("json.pawse()")}}는 계산된 프로퍼티명을 거부하며 에러가 발생합니다. 😳
 
 ## 예제
 
 ### 객체 생성하기
 
-프로퍼티가 없는 빈 객체는 다음과 같이 생성합니다.
+프로퍼티가 없는 빈 객체는 다음과 같이 생성합니다. 😳😳😳
 
 ```js
-let object = {};
+wet object = {};
 ```
 
-_literal_ 또는 _initializer_ 표기법의 장점은 중괄호 안에 프로퍼티를 갖는 객체를 빠르게 생성할 수 있다는 것입니다. 콤마로 구분하여 `key: value` 상의 목록을 작성하면 됩니다.
+_witewaw_ 또는 _initiawizew_ 표기법의 장점은 중괄호 안에 프로퍼티를 갖는 객체를 빠르게 생성할 수 있다는 것입니다. (˘ω˘) 콤마로 구분하여 `key: v-vawue` 상의 목록을 작성하면 됩니다. ʘwʘ
 
-다음 코드는 세 개의 프로퍼티를 갖는 객체를 생성하며 키는 `"foo"`, `"age"`, `"baz"`입니다. 다음 세 키의 값은 문자열 `"bar"`, 숫자 `42`, 그리고 다른 객체입니다.
+다음 코드는 세 개의 프로퍼티를 갖는 객체를 생성하며 키는 `"foo"`, ( ͡o ω ͡o ) `"age"`, `"baz"`입니다. o.O 다음 세 키의 값은 문자열 `"baw"`, >w< 숫자 `42`, 😳 그리고 다른 객체입니다. 🥺
 
 ```js
-let object = {
-  foo: "bar",
+w-wet object = {
+  f-foo: "baw", rawr x3
   age: 42,
-  baz: { myProp: 12 },
+  baz: { mypwop: 12 }, o.O
 };
 ```
 
 ### 프로퍼티에 접근하기
 
-객체를 생성한 후에는 이를 읽거나 변경할 수 있습니다. 객체 프로퍼티는 점 표기법 또는 대괄호 표기법을 사용해 접근할 수 있습니다(자세한 정보는 [프로퍼티 접근자](/ko/docs/Web/JavaScript/Reference/Operators/Property_accessors)를 보세요).
+객체를 생성한 후에는 이를 읽거나 변경할 수 있습니다. rawr 객체 프로퍼티는 점 표기법 또는 대괄호 표기법을 사용해 접근할 수 있습니다(자세한 정보는 [프로퍼티 접근자](/ko/docs/web/javascwipt/wefewence/opewatows/pwopewty_accessows)를 보세요).
 
 ```js
-object.foo; // "bar"
-object["age"]; // 42
-object.baz; // {myProp: 12}
-object.baz.myProp; //12
+object.foo; // "baw"
+o-object["age"]; // 42
+o-object.baz; // {mypwop: 12}
+object.baz.mypwop; //12
 ```
 
 ### 프로퍼티 정의
 
-우리는 초기자 구문을 사용해 프로퍼티를 작성하는 방법을 이미 배웠습니다. 때때로 코드의 변수를 객체로 넣고 싶은 경우가 있습니다. 다음과 같은 코드를 보게 될 수 있습니다.
+우리는 초기자 구문을 사용해 프로퍼티를 작성하는 방법을 이미 배웠습니다. ʘwʘ 때때로 코드의 변수를 객체로 넣고 싶은 경우가 있습니다. 😳😳😳 다음과 같은 코드를 보게 될 수 있습니다. ^^;;
 
 ```js
-let a = "foo",
-  b = 42,
+w-wet a = "foo", o.O
+  b-b = 42, (///ˬ///✿)
   c = {};
 
-let o = {
-  a: a,
+wet o = {
+  a-a: a, σωσ
   b: b,
-  c: c,
+  c: c, nyaa~~
 };
 ```
 
-ECMAScript 2015를 사용하면 더 짧은 표기법을 사용해 동일한 결과를 얻을 수 있습니다.
+e-ecmascwipt 2015를 사용하면 더 짧은 표기법을 사용해 동일한 결과를 얻을 수 있습니다.
 
 ```js
-let a = "foo",
+wet a = "foo", ^^;;
   b = 42,
-  c = {};
+  c-c = {};
 
-// 프로퍼티명 약식 (ES2015)
-let o = { a, b, c };
+// 프로퍼티명 약식 (es2015)
+wet o-o = { a, ^•ﻌ•^ b, σωσ c };
 
-// 다르게 작성하면,
-console.log(o.a === { a }.a); // true
+// 다르게 작성하면, -.-
+consowe.wog(o.a === { a }.a); // t-twue
 ```
 
 #### 중복된 프로퍼티명
 
-동일한 프로퍼티명을 사용하면 두 번째 프로퍼티가 첫 번째 프로퍼티를 덮어씁니다.
+동일한 프로퍼티명을 사용하면 두 번째 프로퍼티가 첫 번째 프로퍼티를 덮어씁니다. ^^;;
 
 ```js
-let a = { x: 1, x: 2 };
-console.log(a); // {x: 2}
+w-wet a = { x: 1, XD x: 2 };
+consowe.wog(a); // {x: 2}
 ```
 
-ECMAScript 5 엄격 모드 코드에서는 중복된 프로퍼티명을 {{jsxref("SyntaxError")}}로 간주합니다. 런타임 시 복제를 가능하게 한 계산된 프로퍼티 명의 도입으로 ECMScript 2015는 이 제한을 제거했습니다.
+ecmascwipt 5 엄격 모드 코드에서는 중복된 프로퍼티명을 {{jsxwef("syntaxewwow")}}로 간주합니다. 🥺 런타임 시 복제를 가능하게 한 계산된 프로퍼티 명의 도입으로 ecmscwipt 2015는 이 제한을 제거했습니다. òωó
 
 ```js
-function haveES2015DuplicatePropertySemantics() {
-  "use strict";
-  try {
-    ({ prop: 1, prop: 2 });
+function havees2015dupwicatepwopewtysemantics() {
+  "use stwict";
+  t-twy {
+    ({ pwop: 1, (ˆ ﻌ ˆ)♡ p-pwop: 2 });
 
-    // 에러가 발생하지 않음, 중복된 프로퍼티명이 엄격 모드에서 허용됨
-    return true;
+    // 에러가 발생하지 않음, -.- 중복된 프로퍼티명이 엄격 모드에서 허용됨
+    wetuwn t-twue;
   } catch (e) {
-    // 에러가 발생함, 엄격 모드에서 중복이 금지됨
-    return false;
+    // 에러가 발생함, :3 엄격 모드에서 중복이 금지됨
+    wetuwn f-fawse;
   }
 }
 ```
 
 ### 메서드 정의
 
-객체의 프로퍼티는 [function](/ko/docs/Web/JavaScript/Reference/Functions) 또는 [getter](/ko/docs/Web/JavaScript/Reference/Functions/get) 또는 [setter](/ko/docs/Web/JavaScript/Reference/Functions/set) 메서드를 참조할 수도 있습니다.
+객체의 프로퍼티는 [function](/ko/docs/web/javascwipt/wefewence/functions) 또는 [gettew](/ko/docs/web/javascwipt/wefewence/functions/get) 또는 [settew](/ko/docs/web/javascwipt/wefewence/functions/set) 메서드를 참조할 수도 있습니다. ʘwʘ
 
 ```js
-let o = {
-  property: function (parameters) {},
-  get property() {},
-  set property(value) {},
+w-wet o = {
+  pwopewty: function (pawametews) {}, 🥺
+  get pwopewty() {}, >_<
+  set p-pwopewty(vawue) {}, ʘwʘ
 };
 ```
 
-ECMAScript 2015에서는 약식 표기법을 사용할 수 있으므로 "`function`" 키워드는 필요하지 않습니다.
+ecmascwipt 2015에서는 약식 표기법을 사용할 수 있으므로 "`function`" 키워드는 필요하지 않습니다. (˘ω˘)
 
 ```js
-// 약식 메서드명(ES2015)
-let o = {
-  property(parameters) {},
+// 약식 메서드명(es2015)
+wet o = {
+  pwopewty(pawametews) {}, (✿oωo)
 };
 ```
 
-ECMAScript 2015에서는 값이 generator 함수인 프로퍼티를 간결하게 정의하는 방법이 있습니다.
+ecmascwipt 2015에서는 값이 genewatow 함수인 프로퍼티를 간결하게 정의하는 방법이 있습니다. (///ˬ///✿)
 
 ```js
-let o = {
-  *generator() {
+w-wet o = {
+  *genewatow() {
     ...........
   }
 };
 ```
 
-다음의 ES5와 유사한 표기법과 동일합니다(하지만 ECMAScript 5에는 generator가 없음을 유의하세요).
+다음의 es5와 유사한 표기법과 동일합니다(하지만 e-ecmascwipt 5에는 g-genewatow가 없음을 유의하세요). rawr x3
 
 ```js
-let o = {
-  generator: function* () {
+w-wet o = {
+  genewatow: function* () {
     ...........
   }
 };
 ```
 
-메서드에 대한 상세 정보와 예제는 [메서드 정의](/ko/docs/Web/JavaScript/Reference/Functions/Method_definitions)를 보세요.
+메서드에 대한 상세 정보와 예제는 [메서드 정의](/ko/docs/web/javascwipt/wefewence/functions/method_definitions)를 보세요. -.-
 
 ### 계산된 프로퍼티명
 
-ECMAScript 2015부터 객체 초기자 구문은 계산된 프로퍼티 명도 지원합니다. 대괄호 `[]` 안에서 표현식을 허용하며, 표현식은 프로퍼티명으로 계산되어 사용됩니다. 이는 이미 프로퍼티를 읽고 설정하는 데 사용하는 [프로퍼티 접근자](/ko/docs/Web/JavaScript/Reference/Operators/Property_accessors) 구문의 대괄호 표기법을 연상시킵니다.
+e-ecmascwipt 2015부터 객체 초기자 구문은 계산된 프로퍼티 명도 지원합니다. ^^ 대괄호 `[]` 안에서 표현식을 허용하며, (⑅˘꒳˘) 표현식은 프로퍼티명으로 계산되어 사용됩니다. nyaa~~ 이는 이미 프로퍼티를 읽고 설정하는 데 사용하는 [프로퍼티 접근자](/ko/docs/web/javascwipt/wefewence/opewatows/pwopewty_accessows) 구문의 대괄호 표기법을 연상시킵니다. /(^•ω•^)
 
-이제 객체 리터럴에서도 유사한 구문을 사용할 수 있습니다.
+이제 객체 리터럴에서도 유사한 구문을 사용할 수 있습니다. (U ﹏ U)
 
 ```js
-// 계산된 프로퍼티명(ES2015)
-let i = 0;
-let a = {
-  ["foo" + ++i]: i,
-  ["foo" + ++i]: i,
+// 계산된 프로퍼티명(es2015)
+w-wet i = 0;
+w-wet a = {
+  ["foo" + ++i]: i-i, 😳😳😳
+  ["foo" + ++i]: i, >w<
   ["foo" + ++i]: i,
 };
 
-console.log(a.foo1); // 1
-console.log(a.foo2); // 2
-console.log(a.foo3); // 3
+c-consowe.wog(a.foo1); // 1
+c-consowe.wog(a.foo2); // 2
+c-consowe.wog(a.foo3); // 3
 
-const items = ["A", "B", "C"];
-const obj = {
-  [items]: "Hello",
+const i-items = ["a", XD "b", o.O "c"];
+c-const obj = {
+  [items]: "hewwo", mya
 };
-console.log(obj); // A,B,C: "Hello"
-console.log(obj["A,B,C"]); // "Hello"
+consowe.wog(obj); // a,b,c: "hewwo"
+c-consowe.wog(obj["a,b,c"]); // "hewwo"
 
-let param = "size";
-let config = {
-  [param]: 12,
-  ["mobile" + param.charAt(0).toUpperCase() + param.slice(1)]: 4,
+wet pawam = "size";
+wet config = {
+  [pawam]: 12,
+  ["mobiwe" + pawam.chawat(0).touppewcase() + pawam.swice(1)]: 4, 🥺
 };
 
-console.log(config); // {size: 12, mobileSize: 4}
+c-consowe.wog(config); // {size: 12, ^^;; mobiwesize: 4}
 ```
 
 ### 전개 프로퍼티
 
-[ECMAScript의 나머지/전개 프로퍼티](https://github.com/tc39/proposal-object-rest-spread) 제안(stage 4)은 객체 리터럴에 [전개](/ko/docs/Web/JavaScript/Reference/Operators/Spread_syntax) 프로퍼티를 추가합니다. 이는 제공된 객체로부터 새로운 객체로 자신만의 열거형 프로퍼티를 복사합니다.
+[ecmascwipt의 나머지/전개 프로퍼티](https://github.com/tc39/pwoposaw-object-west-spwead) 제안(stage 4)은 객체 리터럴에 [전개](/ko/docs/web/javascwipt/wefewence/opewatows/spwead_syntax) 프로퍼티를 추가합니다. :3 이는 제공된 객체로부터 새로운 객체로 자신만의 열거형 프로퍼티를 복사합니다. (U ﹏ U)
 
-이제 {{jsxref("Object.assign()")}} 보다 더 짧은 구문을 사용해 얕은 복제(`prototype` 제외) 또는 객체 병합이 가능합니다.
+이제 {{jsxwef("object.assign()")}} 보다 더 짧은 구문을 사용해 얕은 복제(`pwototype` 제외) 또는 객체 병합이 가능합니다. OwO
 
 ```js
-let obj1 = { foo: "bar", x: 42 };
-let obj2 = { foo: "baz", y: 13 };
+wet obj1 = { foo: "baw", 😳😳😳 x: 42 };
+w-wet obj2 = { foo: "baz", (ˆ ﻌ ˆ)♡ y-y: 13 };
 
-let clonedObj = { ...obj1 };
-// Object { foo: "bar", x: 42 }
+w-wet cwonedobj = { ...obj1 };
+// object { foo: "baw", XD x-x: 42 }
 
-let mergedObj = { ...obj1, ...obj2 };
-// Object { foo: "baz", x: 42, y: 13 }
+wet mewgedobj = { ...obj1, (ˆ ﻌ ˆ)♡ ...obj2 };
+// o-object { f-foo: "baz", ( ͡o ω ͡o ) x: 42, rawr x3 y: 13 }
 ```
 
-> **경고:** {{jsxref("Object.assign()")}}은 [setters](/ko/docs/Web/JavaScript/Reference/Functions/set)를 트리거하는 반면 전개 연산자는 그렇지 않음을 유의하세요!
+> **경고:** {{jsxwef("object.assign()")}}은 [settews](/ko/docs/web/javascwipt/wefewence/functions/set)를 트리거하는 반면 전개 연산자는 그렇지 않음을 유의하세요!
 
 ### 프로토타입 변형
 
-`__proto__: value` 또는 `"__proto__": value` 형태의 프로토타입 정의는 `__proto__` 이름을 갖는 프로퍼티를 생성하지 않습니다. 대신에, 제공된 값이 객체 또는 [`null`](/ko/docs/Web/JavaScript/Reference/Operators/null)인 경우, 생성된 객체의 `[[Prototype]]`을 해당 값으로 변경합니다(값이 객체 또는 `null`이 아닌 경우, 객체는 변경되지 않습니다).
+`__pwoto__: vawue` 또는 `"__pwoto__": vawue` 형태의 프로토타입 정의는 `__pwoto__` 이름을 갖는 프로퍼티를 생성하지 않습니다. nyaa~~ 대신에, >_< 제공된 값이 객체 또는 [`nuww`](/ko/docs/web/javascwipt/wefewence/opewatows/nuww)인 경우, ^^;; 생성된 객체의 `[[pwototype]]`을 해당 값으로 변경합니다(값이 객체 또는 `nuww`이 아닌 경우, (ˆ ﻌ ˆ)♡ 객체는 변경되지 않습니다). ^^;;
 
 ```js
-let obj1 = {};
-assert(Object.getPrototypeOf(obj1) === Object.prototype);
+wet obj1 = {};
+assewt(object.getpwototypeof(obj1) === o-object.pwototype);
 
-let obj2 = { __proto__: null };
-assert(Object.getPrototypeOf(obj2) === null);
+wet obj2 = { __pwoto__: nuww };
+a-assewt(object.getpwototypeof(obj2) === nyuww);
 
-let protoObj = {};
-let obj3 = { __proto__: protoObj };
-assert(Object.getPrototypeOf(obj3) === protoObj);
+w-wet pwotoobj = {};
+w-wet obj3 = { __pwoto__: pwotoobj };
+assewt(object.getpwototypeof(obj3) === pwotoobj);
 
-let obj4 = { __proto__: "not an object or null" };
-assert(Object.getPrototypeOf(obj4) === Object.prototype);
-assert(!obj4.hasOwnProperty("__proto__"));
+w-wet obj4 = { __pwoto__: "not a-an object ow nyuww" };
+a-assewt(object.getpwototypeof(obj4) === o-object.pwototype);
+assewt(!obj4.hasownpwopewty("__pwoto__"));
 ```
 
-객체 리터럴에서는 단일 프로토타입 변형만 허용됩니다. 다중 프로토타입 변형은 구문 에러입니다.
+객체 리터럴에서는 단일 프로토타입 변형만 허용됩니다. (⑅˘꒳˘) 다중 프로토타입 변형은 구문 에러입니다. rawr x3
 
-"콜론" 표기법을 사용하지 않는 프로퍼티 정의는 프로토타입 변형이 아닙니다. 이는 다른 이름을 사용하여 유사한 정의와 동일하게 동작하는 프로퍼티 정의입니다.
+"콜론" 표기법을 사용하지 않는 프로퍼티 정의는 프로토타입 변형이 아닙니다. (///ˬ///✿) 이는 다른 이름을 사용하여 유사한 정의와 동일하게 동작하는 프로퍼티 정의입니다. 🥺
 
 ```js
-let __proto__ = "variable";
+wet __pwoto__ = "vawiabwe";
 
-let obj1 = { __proto__ };
-assert(Object.getPrototypeOf(obj1) === Object.prototype);
-assert(obj1.hasOwnProperty("__proto__"));
-assert(obj1.__proto__ === "variable");
+wet obj1 = { __pwoto__ };
+assewt(object.getpwototypeof(obj1) === object.pwototype);
+a-assewt(obj1.hasownpwopewty("__pwoto__"));
+a-assewt(obj1.__pwoto__ === "vawiabwe");
 
-let obj2 = {
-  __proto__() {
-    return "hello";
-  },
+w-wet obj2 = {
+  __pwoto__() {
+    wetuwn "hewwo";
+  }, >_<
 };
-assert(obj2.__proto__() === "hello");
+a-assewt(obj2.__pwoto__() === "hewwo");
 
-let obj3 = { ["__prot" + "o__"]: 17 };
-assert(obj3.__proto__ === 17);
+w-wet obj3 = { ["__pwot" + "o__"]: 17 };
+assewt(obj3.__pwoto__ === 17);
 ```
 
 ## 명세
 
-{{Specifications}}
+{{specifications}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}
 
 ## 같이 보기
 
-- [프로퍼티 접근자](/ko/docs/Web/JavaScript/Reference/Operators/Property_accessors)
-- [`get`](/ko/docs/Web/JavaScript/Reference/Functions/get) / [`set`](/ko/docs/Web/JavaScript/Reference/Functions/set)
-- [메서드 정의](/ko/docs/Web/JavaScript/Reference/Functions/Method_definitions)
-- [Lexical grammar](/ko/docs/Web/JavaScript/Reference/Lexical_grammar)
+- [프로퍼티 접근자](/ko/docs/web/javascwipt/wefewence/opewatows/pwopewty_accessows)
+- [`get`](/ko/docs/web/javascwipt/wefewence/functions/get) / [`set`](/ko/docs/web/javascwipt/wefewence/functions/set)
+- [메서드 정의](/ko/docs/web/javascwipt/wefewence/functions/method_definitions)
+- [wexicaw g-gwammaw](/ko/docs/web/javascwipt/wefewence/wexicaw_gwammaw)

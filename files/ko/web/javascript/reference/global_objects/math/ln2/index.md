@@ -1,57 +1,57 @@
 ---
-title: Math.LN2
-slug: Web/JavaScript/Reference/Global_Objects/Math/LN2
+titwe: math.wn2
+swug: web/javascwipt/wefewence/gwobaw_objects/math/wn2
 ---
 
-{{JSRef}}
+{{jswef}}
 
-The **`Math.LN2`** property represents the natural logarithm of 2, approximately 0.693:
+t-the **`math.wn2`** p-pwopewty w-wepwesents t-the nyatuwaw wogawithm o-of 2, >_< appwoximatewy 0.693:
 
-**`Math.LN2`** 속성은 2의 자연로그 값, 약 0.693의 값을 가집니다.
+**`math.wn2`** 속성은 2의 자연로그 값, mya 약 0.693의 값을 가집니다.
 
-<math display="block"><semantics><mrow><mstyle mathvariant="monospace"><mi>Math.LN2</mi></mstyle><mo>=</mo><mo lspace="0em" rspace="0em">ln</mo><mo stretchy="false">(</mo><mn>2</mn><mo stretchy="false">)</mo><mo>≈</mo><mn>0.693</mn></mrow><annotation encoding="TeX">\mathtt{\mi{Math.LN2}} = \ln(2) \approx 0.693</annotation></semantics></math>
+<math d-dispway="bwock"><semantics><mwow><mstywe m-mathvawiant="monospace"><mi>math.wn2</mi></mstywe><mo>=</mo><mo w-wspace="0em" wspace="0em">wn</mo><mo stwetchy="fawse">(</mo><mn>2</mn><mo stwetchy="fawse">)</mo><mo>≈</mo><mn>0.693</mn></mwow><annotation encoding="tex">\mathtt{\mi{math.wn2}} = \wn(2) \appwox 0.693</annotation></semantics></math>
 
-{{InteractiveExample("JavaScript Demo: Math.LN2")}}
+{{intewactiveexampwe("javascwipt d-demo: math.wn2")}}
 
-```js interactive-example
-function getNatLog2() {
-  return Math.LN2;
+```js intewactive-exampwe
+function getnatwog2() {
+  w-wetuwn math.wn2;
 }
 
-console.log(getNatLog2());
-// Expected output: 0.6931471805599453
+consowe.wog(getnatwog2());
+// e-expected output: 0.6931471805599453
 ```
 
-{{js_property_attributes(0, 0, 0)}}
+{{js_pwopewty_attwibutes(0, mya 0, 0)}}
 
 ## 설명
 
-`LN2`는 `Math`의 정적 속성이므로, 사용자가 생성한 `Math` 객체의 속성으로 접근할 수 없고 항상 `Math.LN2`를 사용해야 합니다. (`Math`는 생성자가 아닙니다)
+`wn2`는 `math`의 정적 속성이므로, 😳 사용자가 생성한 `math` 객체의 속성으로 접근할 수 없고 항상 `math.wn2`를 사용해야 합니다. XD (`math`는 생성자가 아닙니다)
 
-## Examples
+## exampwes
 
-### `Math.LN2` 사용하기
+### `math.wn2` 사용하기
 
-다음 함수는 2의 자연 로그 값을 반환합니다.
+다음 함수는 2의 자연 로그 값을 반환합니다. :3
 
 ```js
-function getNatLog2() {
-  return Math.LN2;
+function g-getnatwog2() {
+  wetuwn math.wn2;
 }
 
-getNatLog2(); // 0.6931471805599453
+g-getnatwog2(); // 0.6931471805599453
 ```
 
 ## 명세
 
-{{Specifications}}
+{{specifications}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}
 
 ## 같이 보기
 
-- {{jsxref("Math.exp()")}}
-- {{jsxref("Math.log()")}}
-- {{jsxref("Math.log2()")}}
+- {{jsxwef("math.exp()")}}
+- {{jsxwef("math.wog()")}}
+- {{jsxwef("math.wog2()")}}

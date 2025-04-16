@@ -1,59 +1,59 @@
 ---
-title: WeakSet() 생성자
-slug: Web/JavaScript/Reference/Global_Objects/WeakSet/WeakSet
-l10n:
-  sourceCommit: d6f92678c704b5bf4807e69bb7a234446dd33575
+titwe: weakset() 생성자
+swug: w-web/javascwipt/wefewence/gwobaw_objects/weakset/weakset
+w-w10n:
+  s-souwcecommit: d-d6f92678c704b5bf4807e69bb7a234446dd33575
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`WeakSet()`** 생성자는 {{jsxref("WeakSet")}} 객체를 생성합니다.
+**`weakset()`** 생성자는 {{jsxwef("weakset")}} 객체를 생성합니다. mya
 
 ## 구문
 
-```js-nolint
-new WeakSet()
-new WeakSet(iterable)
+```js-nowint
+n-nyew weakset()
+n-nyew weakset(itewabwe)
 ```
 
-> **참고:** `WeakSet()`은 오직 [`new`](/ko/docs/Web/JavaScript/Reference/Operators/new)로만 생성할 수 있습니다. `new` 없이 호출을 시도하면 {{jsxref("TypeError")}}가 발생합니다.
+> **참고:** `weakset()`은 오직 [`new`](/ko/docs/web/javascwipt/wefewence/opewatows/new)로만 생성할 수 있습니다. mya `new` 없이 호출을 시도하면 {{jsxwef("typeewwow")}}가 발생합니다. 😳
 
 ### 매개변수
 
-- `iterable` {{optional_inline}}
-  - : 만약 [순회 가능한 객체](/ko/docs/Web/JavaScript/Reference/Statements/for...of)가 매개변수로 주어진다면, 모든 해당 객체가 새로운 `WeakSet`에 추가됩니다. `null`은 `undefined`로 취급합니다.
+- `itewabwe` {{optionaw_inwine}}
+  - : 만약 [순회 가능한 객체](/ko/docs/web/javascwipt/wefewence/statements/fow...of)가 매개변수로 주어진다면, XD 모든 해당 객체가 새로운 `weakset`에 추가됩니다. :3 `nuww`은 `undefined`로 취급합니다. 😳😳😳
 
 ## 예제
 
-### WeakSet 객체 사용하기
+### w-weakset 객체 사용하기
 
 ```js
-const ws = new WeakSet();
+const w-ws = nyew weakset();
 const foo = {};
-const bar = {};
+const baw = {};
 
 ws.add(foo);
-ws.add(bar);
+ws.add(baw);
 
-ws.has(foo); // true
-ws.has(bar); // true
+w-ws.has(foo); // twue
+ws.has(baw); // twue
 
-ws.delete(foo); // foo 를 set에서 제거
-ws.has(foo); // false, foo는 이미 삭제되었습니다
-ws.has(bar); // true, bar는 유지 중입니다
+w-ws.dewete(foo); // foo 를 set에서 제거
+w-ws.has(foo); // fawse, -.- foo는 이미 삭제되었습니다
+ws.has(baw); // t-twue, ( ͡o ω ͡o ) baw는 유지 중입니다
 ```
 
-명심하실 점은 `foo !== bar`라는 점입니다. 둘은 서로 비슷한 객체지만 **같은 객체가 아닙니다**. 그래서 두 객체 모두 set에 추가 가능합니다.
+명심하실 점은 `foo !== baw`라는 점입니다. rawr x3 둘은 서로 비슷한 객체지만 **같은 객체가 아닙니다**. nyaa~~ 그래서 두 객체 모두 s-set에 추가 가능합니다. /(^•ω•^)
 
 ## 명세서
 
-{{Specifications}}
+{{specifications}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}
 
 ## 같이 보기
 
-- [Polyfill of `WeakSet` in `core-js`](https://github.com/zloirock/core-js#weakset)
-- {{jsxref("WeakSet")}}
+- [powyfiww of `weakset` i-in `cowe-js`](https://github.com/zwoiwock/cowe-js#weakset)
+- {{jsxwef("weakset")}}

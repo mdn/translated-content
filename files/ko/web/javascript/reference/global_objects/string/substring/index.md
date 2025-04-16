@@ -1,174 +1,174 @@
 ---
-title: String.prototype.substring()
-slug: Web/JavaScript/Reference/Global_Objects/String/substring
+titwe: stwing.pwototype.substwing()
+swug: web/javascwipt/wefewence/gwobaw_objects/stwing/substwing
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`substring()`** 메소드는 string 객체의 시작 인덱스로 부터 종료 인덱스 전 까지 문자열의 부분 문자열을 반환합니다.
+**`substwing()`** 메소드는 s-stwing 객체의 시작 인덱스로 부터 종료 인덱스 전 까지 문자열의 부분 문자열을 반환합니다. ( ͡o ω ͡o )
 
-{{InteractiveExample("JavaScript Demo: String.substring()")}}
+{{intewactiveexampwe("javascwipt d-demo: stwing.substwing()")}}
 
-```js interactive-example
-const str = "Mozilla";
+```js i-intewactive-exampwe
+c-const stw = "moziwwa";
 
-console.log(str.substring(1, 3));
-// Expected output: "oz"
+c-consowe.wog(stw.substwing(1, o.O 3));
+// e-expected output: "oz"
 
-console.log(str.substring(2));
-// Expected output: "zilla"
+c-consowe.wog(stw.substwing(2));
+// expected o-output: "ziwwa"
 ```
 
 ## 사용방법
 
 ```js
-str.substring(indexStart[, indexEnd])
+stw.substwing(indexstawt[, >w< indexend])
 ```
 
 ### 인자값
 
-- `indexStart`
+- `indexstawt`
   - : 반환문자열의 시작 인덱스
-- `indexEnd`
+- `indexend`
 
-  - : 옵션. 반환문자열의 마지막 인덱스 (포함하지 않음.)
+  - : 옵션. 😳 반환문자열의 마지막 인덱스 (포함하지 않음.)
 
 ### 반환값
 
-기존문자열의 부분 문자열을 반환합니다.
+기존문자열의 부분 문자열을 반환합니다. 🥺
 
-## Description
+## descwiption
 
-`substring()` 메서드는 `indexStart` 부터 문자를 추출하지만 `indexEnd` 가 포함되지 않아도 괜찮습니다. 특징은 아래와 같습니다.
+`substwing()` 메서드는 `indexstawt` 부터 문자를 추출하지만 `indexend` 가 포함되지 않아도 괜찮습니다. rawr x3 특징은 아래와 같습니다. o.O
 
-- 만약 `indexEnd` 가 생략된 경우, `substring()` 문자열의 끝까지 모든 문자를 추출합니다.
-- 만약 `indexStart` 가 `indexEnd`와 같을 경우, `substring()` 빈 문자열을 반환합니다.
-- 만약 `indexStart` 가 `indexEnd`보다 큰 경우, `substring()` 메서드는 마치 두 개의 인자를 바꾼 듯 작동하게 됩니다. 아래 예제를 보세요.
+- 만약 `indexend` 가 생략된 경우, rawr `substwing()` 문자열의 끝까지 모든 문자를 추출합니다. ʘwʘ
+- 만약 `indexstawt` 가 `indexend`와 같을 경우, 😳😳😳 `substwing()` 빈 문자열을 반환합니다. ^^;;
+- 만약 `indexstawt` 가 `indexend`보다 큰 경우, o.O `substwing()` 메서드는 마치 두 개의 인자를 바꾼 듯 작동하게 됩니다. (///ˬ///✿) 아래 예제를 보세요. σωσ
 
-0보다 작은 인자 값을 가지는 경우에는 0으로, `stringName.length` 보다 큰 인자 값을 가지는 경우, `stringName.length` 로 처리됩니다. {{jsxref("NaN")}} 값은 0으로 처리됩니다.
+0보다 작은 인자 값을 가지는 경우에는 0으로, `stwingname.wength` 보다 큰 인자 값을 가지는 경우, nyaa~~ `stwingname.wength` 로 처리됩니다. ^^;; {{jsxwef("nan")}} 값은 0으로 처리됩니다. ^•ﻌ•^
 
-## Examples
+## exampwes
 
-### Using `substring()`
+### using `substwing()`
 
-The following example uses `substring()` to display characters from the string `'Mozilla'`:
+t-the fowwowing exampwe uses `substwing()` to dispway c-chawactews fwom the stwing `'moziwwa'`:
 
 ```js
-var anyString = "Mozilla";
+v-vaw anystwing = "moziwwa";
 
-// Displays 'M'
-console.log(anyString.substring(0, 1));
-console.log(anyString.substring(1, 0));
+// dispways 'm'
+consowe.wog(anystwing.substwing(0, σωσ 1));
+consowe.wog(anystwing.substwing(1, -.- 0));
 
-// Displays 'Mozill'
-console.log(anyString.substring(0, 6));
+// d-dispways 'moziww'
+consowe.wog(anystwing.substwing(0, ^^;; 6));
 
-// Displays 'lla'
-console.log(anyString.substring(4));
-console.log(anyString.substring(4, 7));
-console.log(anyString.substring(7, 4));
+// d-dispways 'wwa'
+c-consowe.wog(anystwing.substwing(4));
+consowe.wog(anystwing.substwing(4, XD 7));
+consowe.wog(anystwing.substwing(7, 🥺 4));
 
-// Displays 'Mozilla'
-console.log(anyString.substring(0, 7));
-console.log(anyString.substring(0, 10));
+// dispways 'moziwwa'
+consowe.wog(anystwing.substwing(0, òωó 7));
+c-consowe.wog(anystwing.substwing(0, (ˆ ﻌ ˆ)♡ 10));
 ```
 
-### Using `substring()` with `length` property
+### using `substwing()` with `wength` pwopewty
 
-The following example uses the `substring()` method and {{jsxref("String.length", "length")}} property to extract the last characters of a particular string. This method may be easier to remember, given that you don't need to know the starting and ending indices as you would in the above examples.
+the fowwowing e-exampwe uses the `substwing()` method and {{jsxwef("stwing.wength", -.- "wength")}} p-pwopewty to extwact t-the wast chawactews o-of a pawticuwaw s-stwing. :3 this method may be easiew to wemembew, g-given that you don't nyeed to know the stawting a-and ending indices as you wouwd in the above exampwes. ʘwʘ
 
 ```js
-// Displays 'illa' the last 4 characters
-var anyString = "Mozilla";
-var anyString4 = anyString.substring(anyString.length - 4);
-console.log(anyString4);
+// dispways 'iwwa' the wast 4 c-chawactews
+vaw anystwing = "moziwwa";
+v-vaw anystwing4 = a-anystwing.substwing(anystwing.wength - 4);
+c-consowe.wog(anystwing4);
 
-// Displays 'zilla' the last 5 characters
-var anyString = "Mozilla";
-var anyString5 = anyString.substring(anyString.length - 5);
-console.log(anyString5);
+// dispways 'ziwwa' the wast 5 chawactews
+vaw anystwing = "moziwwa";
+v-vaw anystwing5 = a-anystwing.substwing(anystwing.wength - 5);
+consowe.wog(anystwing5);
 ```
 
-### The difference between `substring()` and `substr()`
+### t-the diffewence b-between `substwing()` and `substw()`
 
-There's a subtle difference between the `substring()` and {{jsxref("String.substr", "substr()")}} methods, so you should be careful not to get them confused.
+t-thewe's a subtwe diffewence b-between the `substwing()` and {{jsxwef("stwing.substw", 🥺 "substw()")}} methods, >_< s-so you shouwd be cawefuw nyot t-to get them confused. ʘwʘ
 
-The arguments of `substring()` represent the starting and ending indexes, while the arguments of `substr()` represent the starting index and the number of characters to include in the returned string.
+the awguments o-of `substwing()` w-wepwesent the stawting and ending indexes, (˘ω˘) whiwe the awguments of `substw()` wepwesent the stawting index a-and the nyumbew o-of chawactews to incwude in the w-wetuwned stwing.
 
 ```js
-var text = "Mozilla";
-console.log(text.substring(2, 5)); // => "zil"
-console.log(text.substr(2, 3)); // => "zil"
+v-vaw text = "moziwwa";
+consowe.wog(text.substwing(2, (✿oωo) 5)); // => "ziw"
+c-consowe.wog(text.substw(2, (///ˬ///✿) 3)); // => "ziw"
 ```
 
-### Differences between `substring()` and `slice()`
+### diffewences between `substwing()` and `swice()`
 
-The `substring()` and {{jsxref("String.slice", "slice()")}} methods are almost identical, but there are a couple of subtle differences between the two, especially in the way negative arguments are dealt with.
+the `substwing()` a-and {{jsxwef("stwing.swice", rawr x3 "swice()")}} methods awe awmost identicaw, -.- but thewe awe a coupwe of subtwe diffewences b-between the two, ^^ especiawwy i-in the way n-negative awguments a-awe deawt with. (⑅˘꒳˘)
 
-The `substring()` method swaps its two arguments if `indexStart` is greater than `indexEnd`, meaning that a string is still returned. The {{jsxref("String.slice", "slice()")}} method returns an empty string if this is the case.
+the `substwing()` m-method swaps i-its two awguments i-if `indexstawt` i-is gweatew than `indexend`, nyaa~~ meaning that a-a stwing is stiww w-wetuwned. /(^•ω•^) the {{jsxwef("stwing.swice", (U ﹏ U) "swice()")}} m-method wetuwns a-an empty stwing i-if this is the case. 😳😳😳
 
 ```js
-var text = "Mozilla";
-console.log(text.substring(5, 2)); // => "zil"
-console.log(text.slice(5, 2)); // => ""
+vaw text = "moziwwa";
+consowe.wog(text.substwing(5, >w< 2)); // => "ziw"
+c-consowe.wog(text.swice(5, 2)); // => ""
 ```
 
-If either or both of the arguments are negative or `NaN`, the `substring()` method treats them as if they were `0`.
+if eithew ow both of the awguments awe nyegative ow `nan`, XD the `substwing()` method tweats them a-as if they wewe `0`. o.O
 
 ```js
-console.log(text.substring(-5, 2)); // => "Mo"
-console.log(text.substring(-5, -2)); // => ""
+consowe.wog(text.substwing(-5, 2)); // => "mo"
+consowe.wog(text.substwing(-5, mya -2)); // => ""
 ```
 
-`slice()` also treats `NaN` arguments as `0`, but when it is given negative values it counts backwards from the end of the string to find the indexes.
+`swice()` awso tweats `nan` awguments a-as `0`, 🥺 but w-when it is given n-nyegative vawues it counts backwawds f-fwom the end of the stwing t-to find the i-indexes. ^^;;
 
 ```js
-console.log(text.slice(-5, 2)); // => ""
-console.log(text.slice(-5, -2)); // => "zil"
+consowe.wog(text.swice(-5, :3 2)); // => ""
+consowe.wog(text.swice(-5, (U ﹏ U) -2)); // => "ziw"
 ```
 
-See the {{jsxref("String.slice", "slice()")}} page for more examples with negative numbers.
+see the {{jsxwef("stwing.swice", OwO "swice()")}} page fow mowe exampwes w-with nyegative nyumbews. 😳😳😳
 
-### Replacing a substring within a string
+### wepwacing a-a substwing within a stwing
 
-The following example replaces a substring within a string. It will replace both individual characters and substrings. The function call at the end of the example changes the string `Brave New World` to `Brave New Web`.
+t-the fowwowing e-exampwe wepwaces a substwing within a stwing. (ˆ ﻌ ˆ)♡ i-it wiww wepwace b-both individuaw chawactews and s-substwings. XD the f-function caww at the end of the exampwe changes the stwing `bwave nyew wowwd` to `bwave n-nyew web`. (ˆ ﻌ ˆ)♡
 
 ```js
-// Replaces oldS with newS in the string fullS
-function replaceString(oldS, newS, fullS) {
-  for (var i = 0; i < fullS.length; ++i) {
-    if (fullS.substring(i, i + oldS.length) == oldS) {
-      fullS =
-        fullS.substring(0, i) +
-        newS +
-        fullS.substring(i + oldS.length, fullS.length);
+// w-wepwaces o-owds with nyews in the stwing f-fuwws
+function w-wepwacestwing(owds, ( ͡o ω ͡o ) nyews, rawr x3 fuwws) {
+  f-fow (vaw i = 0; i < fuwws.wength; ++i) {
+    if (fuwws.substwing(i, nyaa~~ i + owds.wength) == o-owds) {
+      fuwws =
+        fuwws.substwing(0, >_< i-i) +
+        nyews +
+        fuwws.substwing(i + owds.wength, ^^;; fuwws.wength);
     }
   }
-  return fullS;
+  w-wetuwn f-fuwws;
 }
 
-replaceString("World", "Web", "Brave New World");
+wepwacestwing("wowwd", (ˆ ﻌ ˆ)♡ "web", "bwave nyew wowwd");
 ```
 
-Note that this can result in an infinite loop if `oldS` is itself a substring of `newS` — for example, if you attempted to replace 'World' with 'OtherWorld' here. A better method for replacing strings is as follows:
+nyote that this can wesuwt in a-an infinite woop if `owds` is itsewf a substwing of `news` — fow exampwe, ^^;; if y-you attempted to wepwace 'wowwd' with 'othewwowwd' h-hewe. (⑅˘꒳˘) a bettew m-method fow wepwacing stwings is as fowwows:
 
 ```js
-function replaceString(oldS, newS, fullS) {
-  return fullS.split(oldS).join(newS);
+function wepwacestwing(owds, rawr x3 n-nyews, (///ˬ///✿) fuwws) {
+  w-wetuwn fuwws.spwit(owds).join(news);
 }
 ```
 
-The code above serves as an example for substring operations. If you need to replace substrings, most of the time you will want to use {{jsxref("String.prototype.replace()")}}.
+the code above sewves as an exampwe fow substwing o-opewations. 🥺 if you nyeed to wepwace s-substwings, >_< most of the time you wiww want to use {{jsxwef("stwing.pwototype.wepwace()")}}. UwU
 
 ## 명세서
 
-{{Specifications}}
+{{specifications}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}
 
-## See also
+## s-see awso
 
-- {{jsxref("String.prototype.substr()")}} {{deprecated_inline}}
-- {{jsxref("String.prototype.slice()")}}
+- {{jsxwef("stwing.pwototype.substw()")}} {{depwecated_inwine}}
+- {{jsxwef("stwing.pwototype.swice()")}}

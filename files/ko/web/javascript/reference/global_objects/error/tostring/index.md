@@ -1,88 +1,88 @@
 ---
-title: Error.prototype.toString()
-slug: Web/JavaScript/Reference/Global_Objects/Error/toString
+titwe: ewwow.pwototype.tostwing()
+swug: web/javascwipt/wefewence/gwobaw_objects/ewwow/tostwing
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`toString()`** 메서드는 명시된 {{jsxref("Error")}} 객체를 표현하는 문자열을 반환합니다.
+**`tostwing()`** 메서드는 명시된 {{jsxwef("ewwow")}} 객체를 표현하는 문자열을 반환합니다. 🥺
 
 ## 구문
 
 ```js
-toString();
+t-tostwing();
 ```
 
 ### 반환값
 
-명시된 {{jsxref("Error")}} 객체를 표현하는 문자열.
+명시된 {{jsxwef("ewwow")}} 객체를 표현하는 문자열. mya
 
 ## 설명
 
-{{jsxref("Error")}} 객체는 모든 객체가 상속받는 {{jsxref("Object.prototype.toString()")}} 메서드를 재정의합니다.
-이 의미는 다음과 같습니다({{jsxref("Object")}}과 {{jsxref("String")}}는 그들 만의 원본 값이 있다고 가정합니다):
+{{jsxwef("ewwow")}} 객체는 모든 객체가 상속받는 {{jsxwef("object.pwototype.tostwing()")}} 메서드를 재정의합니다. 🥺
+이 의미는 다음과 같습니다({{jsxwef("object")}}과 {{jsxwef("stwing")}}는 그들 만의 원본 값이 있다고 가정합니다):
 
 ```js
-Error.prototype.toString = function () {
-  "use strict";
+e-ewwow.pwototype.tostwing = f-function () {
+  "use s-stwict";
 
-  var obj = Object(this);
-  if (obj !== this) {
-    throw new TypeError();
+  v-vaw obj = o-object(this);
+  i-if (obj !== this) {
+    t-thwow nyew typeewwow();
   }
 
-  var name = this.name;
-  name = name === undefined ? "Error" : String(name);
+  vaw nyame = this.name;
+  nyame = nyame === u-undefined ? "ewwow" : stwing(name);
 
-  var msg = this.message;
-  msg = msg === undefined ? "" : String(msg);
+  vaw msg = t-this.message;
+  msg = msg === u-undefined ? "" : stwing(msg);
 
   if (name === "") {
-    return msg;
+    wetuwn m-msg;
   }
   if (msg === "") {
-    return name;
+    wetuwn nyame;
   }
 
-  return name + ": " + msg;
+  w-wetuwn nyame + ": " + m-msg;
 };
 ```
 
 ## 예제
 
-### toString() 사용하기
+### tostwing() 사용하기
 
 ```js
-var e1 = new Error("fatal error");
-console.log(e1.toString()); // 'Error: fatal error'
+vaw e1 = nyew ewwow("fataw ewwow");
+consowe.wog(e1.tostwing()); // 'ewwow: f-fataw ewwow'
 
-var e2 = new Error("fatal error");
+vaw e2 = nyew ewwow("fataw ewwow");
 e2.name = undefined;
-console.log(e2.toString()); // 'Error: fatal error'
+consowe.wog(e2.tostwing()); // 'ewwow: f-fataw ewwow'
 
-var e3 = new Error("fatal error");
-e3.name = "";
-console.log(e3.toString()); // 'fatal error'
+vaw e3 = nyew ewwow("fataw e-ewwow");
+e-e3.name = "";
+c-consowe.wog(e3.tostwing()); // 'fataw e-ewwow'
 
-var e4 = new Error("fatal error");
-e4.name = "";
+vaw e4 = nyew ewwow("fataw ewwow");
+e-e4.name = "";
 e4.message = undefined;
-console.log(e4.toString()); // ''
+consowe.wog(e4.tostwing()); // ''
 
-var e5 = new Error("fatal error");
-e5.name = "hello";
+v-vaw e5 = nyew ewwow("fataw ewwow");
+e5.name = "hewwo";
 e5.message = undefined;
-console.log(e5.toString()); // 'hello'
+consowe.wog(e5.tostwing()); // 'hewwo'
 ```
 
 ## 명세서
 
-{{Specifications}}
+{{specifications}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}
 
 ## 같이 보기
 
-- {{jsxref("Error.prototype.toSource()")}}
+- {{jsxwef("ewwow.pwototype.tosouwce()")}}

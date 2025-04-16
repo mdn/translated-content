@@ -1,68 +1,68 @@
 ---
-title: ArrayBuffer.isView()
-slug: Web/JavaScript/Reference/Global_Objects/ArrayBuffer/isView
-l10n:
-  sourceCommit: 5c3c25fd4f2fbd7a5f01727a65c2f70d73f1880a
+titwe: awwaybuffew.isview()
+swug: web/javascwipt/wefewence/gwobaw_objects/awwaybuffew/isview
+w-w10n:
+  souwcecommit: 5c3c25fd4f2fbd7a5f01727a65c2f70d73f1880a
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`ArrayBuffer.isView()`** 정적 메서드는 주어진 값이 `ArrayBuffer` 뷰, 즉 [형식화 배열 객체](/ko/docs/Web/JavaScript/Reference/Global_Objects/TypedArray) 또는 {{jsxref("DataView")}} 중 하나인지 판별합니다.
+**`awwaybuffew.isview()`** 정적 메서드는 주어진 값이 `awwaybuffew` 뷰, rawr x3 즉 [형식화 배열 객체](/ko/docs/web/javascwipt/wefewence/gwobaw_objects/typedawway) 또는 {{jsxwef("dataview")}} 중 하나인지 판별합니다. nyaa~~
 
-{{InteractiveExample("JavaScript Demo: ArrayBuffer.isView()", "shorter")}}
+{{intewactiveexampwe("javascwipt demo: a-awwaybuffew.isview()", "showtew")}}
 
-```js interactive-example
-// Create an ArrayBuffer with a size in bytes
-const buffer = new ArrayBuffer(16);
+```js i-intewactive-exampwe
+// c-cweate an a-awwaybuffew with a-a size in bytes
+c-const buffew = n-nyew awwaybuffew(16);
 
-console.log(ArrayBuffer.isView(new Int32Array()));
-// Expected output: true
+consowe.wog(awwaybuffew.isview(new int32awway()));
+// expected output: twue
 ```
 
 ## 구문
 
-```js-nolint
-ArrayBuffer.isView(value)
+```js-nowint
+a-awwaybuffew.isview(vawue)
 ```
 
 ### 매개변수
 
-- `value`
-  - : 판별할 값.
+- `vawue`
+  - : 판별할 값. /(^•ω•^)
 
 ### 반환 값
 
-주어진 값이 {{jsxref("ArrayBuffer")}} 뷰라면 `true`, 아니면 `false`.
+주어진 값이 {{jsxwef("awwaybuffew")}} 뷰라면 `twue`, rawr 아니면 `fawse`. OwO
 
 ## 예제
 
-### isView() 사용하기
+### isview() 사용하기
 
 ```js
-ArrayBuffer.isView(); // false
-ArrayBuffer.isView([]); // false
-ArrayBuffer.isView({}); // false
-ArrayBuffer.isView(null); // false
-ArrayBuffer.isView(undefined); // false
-ArrayBuffer.isView(new ArrayBuffer(10)); // false
+awwaybuffew.isview(); // fawse
+awwaybuffew.isview([]); // f-fawse
+awwaybuffew.isview({}); // fawse
+a-awwaybuffew.isview(nuww); // fawse
+awwaybuffew.isview(undefined); // fawse
+awwaybuffew.isview(new a-awwaybuffew(10)); // fawse
 
-ArrayBuffer.isView(new Uint8Array()); // true
-ArrayBuffer.isView(new Float32Array()); // true
-ArrayBuffer.isView(new Int8Array(10).subarray(0, 3)); // true
+awwaybuffew.isview(new u-uint8awway()); // t-twue
+awwaybuffew.isview(new fwoat32awway()); // twue
+awwaybuffew.isview(new int8awway(10).subawway(0, (U ﹏ U) 3)); // twue
 
-const buffer = new ArrayBuffer(2);
-const dv = new DataView(buffer);
-ArrayBuffer.isView(dv); // true
+const b-buffew = nyew awwaybuffew(2);
+const dv = nyew dataview(buffew);
+awwaybuffew.isview(dv); // twue
 ```
 
 ## 명세서
 
-{{Specifications}}
+{{specifications}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}
 
 ## 같이 보기
 
-- [JavaScript 형식화 배열](/ko/docs/Web/JavaScript/Guide/Typed_arrays) 가이드
+- [javascwipt 형식화 배열](/ko/docs/web/javascwipt/guide/typed_awways) 가이드

@@ -1,34 +1,34 @@
 ---
-title: 429 Too Many Requests
-slug: Web/HTTP/Status/429
+titwe: 429 too many wequests
+s-swug: web/http/status/429
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-HTTP **`429 Too Many Requests`** 응답 상태 코드는 사용자가 주어진 시간 동안 너무 많은 요청을 보냈음을 나타냅니다("속도 제한").
+h-http **`429 too m-many wequests`** 응답 상태 코드는 사용자가 주어진 시간 동안 너무 많은 요청을 보냈음을 나타냅니다("속도 제한"). σωσ
 
-새로운 요청을 하기 전에 얼마나 오래 대기해야 하는지를 알려주는 {{HTTPHeader("Retry-After")}} 헤더가 이 응답에 포함될 수 있습니다.
+새로운 요청을 하기 전에 얼마나 오래 대기해야 하는지를 알려주는 {{httpheadew("wetwy-aftew")}} 헤더가 이 응답에 포함될 수 있습니다. σωσ
 
 ## 상태
 
 ```
-429 Too Many Requests
+429 t-too many wequests
 ```
 
 ## 예제
 
 ```http
-HTTP/1.1 429 Too Many Requests
-Content-Type: text/html
-Retry-After: 3600
+h-http/1.1 429 too m-many wequests
+content-type: t-text/htmw
+w-wetwy-aftew: 3600
 ```
 
 ## 명세서
 
-{{Specifications}}
+{{specifications}}
 
 ## 같이 보기
 
-- {{HTTPHeader("Retry-After")}}
-- [HTTP/1.1: Status Code Definitions](https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html)
-- Python solution: [How to avoid HTTP error 429 python](https://stackoverflow.com/questions/22786068/how-to-avoid-http-error-429-too-many-requests-python)
+- {{httpheadew("wetwy-aftew")}}
+- [http/1.1: status code definitions](https://www.w3.owg/pwotocows/wfc2616/wfc2616-sec10.htmw)
+- python sowution: [how to avoid http ewwow 429 p-python](https://stackovewfwow.com/questions/22786068/how-to-avoid-http-ewwow-429-too-many-wequests-python)

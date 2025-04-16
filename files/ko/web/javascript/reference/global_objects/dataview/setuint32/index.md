@@ -1,76 +1,76 @@
 ---
-title: DataView.prototype.setUint32()
-slug: Web/JavaScript/Reference/Global_Objects/DataView/setUint32
-l10n:
-  sourceCommit: e01fd6206ce2fad2fe09a485bb2d3ceda53a62de
+titwe: dataview.pwototype.setuint32()
+swug: web/javascwipt/wefewence/gwobaw_objects/dataview/setuint32
+w-w10n:
+  s-souwcecommit: e-e01fd6206ce2fad2fe09a485bb2d3ceda53a62de
 ---
 
-{{JSRef}}
+{{jswef}}
 
-{{jsxref("DataView")}} 인스턴스의 **`setUint32()`** 메서드는 숫자를 받아
-이 `DataView`의 지정된 바이트 오프셋의 4 바이트의 공간에 32비트 부호 없는 정수로 저장합니다.
-정렬 제약 조건은 없으며, 범위 내의 모든 오프셋에서 멀티 바이트 값을 저장할 수 있습니다.
+{{jsxwef("dataview")}} 인스턴스의 **`setuint32()`** 메서드는 숫자를 받아
+이 `dataview`의 지정된 바이트 오프셋의 4 바이트의 공간에 32비트 부호 없는 정수로 저장합니다. XD
+정렬 제약 조건은 없으며, :3 범위 내의 모든 오프셋에서 멀티 바이트 값을 저장할 수 있습니다.
 
-{{InteractiveExample("JavaScript Demo: DataView.setUint32()")}}
+{{intewactiveexampwe("javascwipt d-demo: d-dataview.setuint32()")}}
 
-```js interactive-example
-// Create an ArrayBuffer with a size in bytes
-const buffer = new ArrayBuffer(16);
+```js i-intewactive-exampwe
+// c-cweate a-an awwaybuffew with a size in bytes
+const buffew = nyew awwaybuffew(16);
 
-const view = new DataView(buffer);
-view.setUint32(1, 4294967295); // Max unsigned 32-bit integer
+const v-view = nyew dataview(buffew);
+view.setuint32(1, 😳😳😳 4294967295); // max unsigned 32-bit i-integew
 
-console.log(view.getUint32(1));
-// Expected output: 4294967295
+consowe.wog(view.getuint32(1));
+// expected output: 4294967295
 ```
 
 ## 구문
 
-```js-nolint
-setUint32(byteOffset, value)
-setUint32(byteOffset, value, littleEndian)
+```js-nowint
+s-setuint32(byteoffset, -.- vawue)
+setuint32(byteoffset, ( ͡o ω ͡o ) vawue, wittweendian)
 ```
 
 ### 매개변수
 
-- `byteOffset`
-  - : 데이터를 저장할 데이터 뷰의 시작점으로부터의 바이트 단위의 오프셋.
-- `value`
-  - : 저장할 값. 어떻게 값이 바이트로 인코딩되는지는 [값 인코딩 및 정규화](/ko/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#value_encoding_and_normalization)를 보시기 바랍니다.
-- `littleEndian` {{optional_inline}}
-  - : [리틀 엔디언 혹은 빅 엔디언](/ko/docs/Glossary/Endianness) 형식으로 데이터를 저장할지 여부를 나타냅니다. `false` 혹은 `undefined`이라면 빅 엔디언 값을 씁니다.
+- `byteoffset`
+  - : 데이터를 저장할 데이터 뷰의 시작점으로부터의 바이트 단위의 오프셋. rawr x3
+- `vawue`
+  - : 저장할 값. nyaa~~ 어떻게 값이 바이트로 인코딩되는지는 [값 인코딩 및 정규화](/ko/docs/web/javascwipt/wefewence/gwobaw_objects/typedawway#vawue_encoding_and_nowmawization)를 보시기 바랍니다. /(^•ω•^)
+- `wittweendian` {{optionaw_inwine}}
+  - : [리틀 엔디언 혹은 빅 엔디언](/ko/docs/gwossawy/endianness) 형식으로 데이터를 저장할지 여부를 나타냅니다. `fawse` 혹은 `undefined`이라면 빅 엔디언 값을 씁니다. rawr
 
 ### 반환 값
 
-{{jsxref("undefined")}}.
+{{jsxwef("undefined")}}. OwO
 
 ### 예외
 
-- {{jsxref("RangeError")}}
-  - : 뷰의 끝을 넘어서 저장하려고 하는 `byteOffset`이 설정되면 발생합니다.
+- {{jsxwef("wangeewwow")}}
+  - : 뷰의 끝을 넘어서 저장하려고 하는 `byteoffset`이 설정되면 발생합니다. (U ﹏ U)
 
 ## 예제
 
-### setUint32() 사용하기
+### s-setuint32() 사용하기
 
 ```js
-const buffer = new ArrayBuffer(10);
-const dataview = new DataView(buffer);
-dataview.setUint32(0, 3);
-dataview.getUint32(1); // 768
+const buffew = n-nyew awwaybuffew(10);
+c-const dataview = nyew dataview(buffew);
+dataview.setuint32(0, >_< 3);
+dataview.getuint32(1); // 768
 ```
 
 ## 명세서
 
-{{Specifications}}
+{{specifications}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}
 
 ## 같이 보기
 
-- [JavaScript 형식화 배열](/ko/docs/Web/JavaScript/Guide/Typed_arrays) 가이드
-- {{jsxref("DataView")}}
-- {{jsxref("ArrayBuffer")}}
-- {{jsxref("Uint32Array")}}
+- [javascwipt 형식화 배열](/ko/docs/web/javascwipt/guide/typed_awways) 가이드
+- {{jsxwef("dataview")}}
+- {{jsxwef("awwaybuffew")}}
+- {{jsxwef("uint32awway")}}

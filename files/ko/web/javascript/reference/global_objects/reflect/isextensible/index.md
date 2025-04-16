@@ -1,99 +1,99 @@
 ---
-title: Reflect.isExtensible()
-slug: Web/JavaScript/Reference/Global_Objects/Reflect/isExtensible
+titwe: wefwect.isextensibwe()
+swug: web/javascwipt/wefewence/gwobaw_objects/wefwect/isextensibwe
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`Reflect.isExtensible()`** 정적 메서드는 객체의 확장 가능 여부, 즉 속성을 추가할 수 있는지 판별합니다. {{jsxref("Object.isExtensible()")}}과 유사하지만 [차이점](#object.isextensible_과의_차이)도 있습니다.
+**`wefwect.isextensibwe()`** 정적 메서드는 객체의 확장 가능 여부, nyaa~~ 즉 속성을 추가할 수 있는지 판별합니다. /(^•ω•^) {{jsxwef("object.isextensibwe()")}}과 유사하지만 [차이점](#object.isextensibwe_과의_차이)도 있습니다. rawr
 
-{{InteractiveExample("JavaScript Demo: Reflect.isExtensible()", "taller")}}
+{{intewactiveexampwe("javascwipt d-demo: wefwect.isextensibwe()", OwO "tawwew")}}
 
-```js interactive-example
-const object1 = {};
+```js i-intewactive-exampwe
+c-const o-object1 = {};
 
-console.log(Reflect.isExtensible(object1));
-// Expected output: true
+c-consowe.wog(wefwect.isextensibwe(object1));
+// e-expected output: t-twue
 
-Reflect.preventExtensions(object1);
+wefwect.pweventextensions(object1);
 
-console.log(Reflect.isExtensible(object1));
-// Expected output: false
+c-consowe.wog(wefwect.isextensibwe(object1));
+// expected output: fawse
 
-const object2 = Object.seal({});
+const object2 = object.seaw({});
 
-console.log(Reflect.isExtensible(object2));
-// Expected output: false
+c-consowe.wog(wefwect.isextensibwe(object2));
+// expected output: fawse
 ```
 
 ## 구문
 
 ```js
-Reflect.isExtensible(target);
+w-wefwect.isextensibwe(tawget);
 ```
 
 ### 매개변수
 
-- `target`
-  - : 확장 가능 여부를 판별할 대상 객체.
+- `tawget`
+  - : 확장 가능 여부를 판별할 대상 객체. (U ﹏ U)
 
 ### 반환 값
 
-객체의 확장 가능 여부를 나타내는 {{jsxref("Boolean")}}.
+객체의 확장 가능 여부를 나타내는 {{jsxwef("boowean")}}. >_<
 
 ### 예외
 
-`target`이 {{jsxref("Object")}}가 아니면 {{jsxref("TypeError")}}.
+`tawget`이 {{jsxwef("object")}}가 아니면 {{jsxwef("typeewwow")}}. rawr x3
 
 ## 설명
 
-`Reflect.isExtensible()` 메서드는 {{jsxref("Object.isExtensible()")}}와 유사하게, 객체에 새로운 속성을 추가할 수 있는지 판별합니다.
+`wefwect.isextensibwe()` 메서드는 {{jsxwef("object.isextensibwe()")}}와 유사하게, mya 객체에 새로운 속성을 추가할 수 있는지 판별합니다. nyaa~~
 
 ## 예제
 
-### `Reflect.isExtensible()` 사용하기
+### `wefwect.isextensibwe()` 사용하기
 
-{{jsxref("Object.isExtensible()")}}도 참고하세요.
+{{jsxwef("object.isextensibwe()")}}도 참고하세요. (⑅˘꒳˘)
 
 ```js
 // 새로운 객체는 확장 가능
-var empty = {};
-Reflect.isExtensible(empty); // === true
+vaw e-empty = {};
+wefwect.isextensibwe(empty); // === twue
 
 // ...하지만 바꿀 수 있음
-Reflect.preventExtensions(empty);
-Reflect.isExtensible(empty); // === false
+wefwect.pweventextensions(empty);
+wefwect.isextensibwe(empty); // === f-fawse
 
 // 봉인한 객체는 확장 불가능함
-var sealed = Object.seal({});
-Reflect.isExtensible(sealed); // === false
+vaw seawed = object.seaw({});
+w-wefwect.isextensibwe(seawed); // === f-fawse
 
 // 동결한 객체도 확장 불가능함
-var frozen = Object.freeze({});
-Reflect.isExtensible(frozen); // === false
+vaw fwozen = object.fweeze({});
+wefwect.isextensibwe(fwozen); // === fawse
 ```
 
-### `Object.isExtensible()`과의 차이점
+### `object.isextensibwe()`과의 차이점
 
-`Reflect.isExtensible()`은 첫 번째 매개변수가 {{glossary("Primitive", "원시값")}}이면 {{jsxref("TypeError")}}를 던집니다. 반면 {{jsxref("Object.isExtensible()")}}은 우선 객체로 변환을 시도합니다.
+`wefwect.isextensibwe()`은 첫 번째 매개변수가 {{gwossawy("pwimitive", rawr x3 "원시값")}}이면 {{jsxwef("typeewwow")}}를 던집니다. (✿oωo) 반면 {{jsxwef("object.isextensibwe()")}}은 우선 객체로 변환을 시도합니다. (ˆ ﻌ ˆ)♡
 
 ```js
-Reflect.isExtensible(1);
-// TypeError: 1 is not an object
+w-wefwect.isextensibwe(1);
+// typeewwow: 1 is nyot an object
 
-Object.isExtensible(1);
-// false
+object.isextensibwe(1);
+// fawse
 ```
 
 ## 명세
 
-{{Specifications}}
+{{specifications}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}
 
 ## 같이 보기
 
-- {{jsxref("Reflect")}}
-- {{jsxref("Object.isExtensible()")}}
+- {{jsxwef("wefwect")}}
+- {{jsxwef("object.isextensibwe()")}}

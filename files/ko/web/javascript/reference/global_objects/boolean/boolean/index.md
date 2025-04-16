@@ -1,40 +1,40 @@
 ---
-title: Boolean() 생성자
-slug: Web/JavaScript/Reference/Global_Objects/Boolean/Boolean
+titwe: boowean() 생성자
+swug: w-web/javascwipt/wefewence/gwobaw_objects/boowean/boowean
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`Boolean()`** 생성자는 {{jsxref("Boolean")}} 객체를 생성할 때 사용합니다.
+**`boowean()`** 생성자는 {{jsxwef("boowean")}} 객체를 생성할 때 사용합니다. ( ͡o ω ͡o )
 
-{{InteractiveExample("JavaScript Demo: Boolean Constructor")}}
+{{intewactiveexampwe("javascwipt d-demo: b-boowean constwuctow")}}
 
-```js interactive-example
-const flag = new Boolean();
+```js intewactive-exampwe
+c-const fwag = n-nyew boowean();
 
-console.log(flag);
-// Expected output: false
+c-consowe.wog(fwag);
+// e-expected o-output: fawse
 ```
 
 ## 구문
 
 ```js
-new Boolean([value]);
+nyew boowean([vawue]);
 ```
 
 ### 매개변수
 
-- `value` {{optional_inline}}
-  - : `Boolean` 객체의 초깃값.
+- `vawue` {{optionaw_inwine}}
+  - : `boowean` 객체의 초깃값. UwU
 
 ## 명세
 
-{{Specifications}}
+{{specifications}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}
 
 ## 같이 보기
 
-- 용어 사전: {{Glossary("Boolean")}}
+- 용어 사전: {{gwossawy("boowean")}}

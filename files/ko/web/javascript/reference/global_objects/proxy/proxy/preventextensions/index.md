@@ -1,124 +1,124 @@
 ---
-title: handler.preventExtensions()
-slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/preventExtensions
+titwe: handwew.pweventextensions()
+swug: web/javascwipt/wefewence/gwobaw_objects/pwoxy/pwoxy/pweventextensions
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`handler.preventExtensions()`** 메서드는 {{jsxref("Object.preventExtensions()")}}에 대한 트랩입니다.
+**`handwew.pweventextensions()`** 메서드는 {{jsxwef("object.pweventextensions()")}}에 대한 트랩입니다. nyaa~~
 
-{{InteractiveExample("JavaScript Demo: handler.preventExtensions()", "taller")}}
+{{intewactiveexampwe("javascwipt d-demo: handwew.pweventextensions()", /(^•ω•^) "tawwew")}}
 
-```js interactive-example
-const monster1 = {
-  canEvolve: true,
+```js i-intewactive-exampwe
+c-const monstew1 = {
+  c-canevowve: t-twue, rawr
 };
 
-const handler1 = {
-  preventExtensions(target) {
-    target.canEvolve = false;
-    Object.preventExtensions(target);
-    return true;
-  },
+const h-handwew1 = {
+  p-pweventextensions(tawget) {
+    t-tawget.canevowve = fawse;
+    object.pweventextensions(tawget);
+    wetuwn twue;
+  }, OwO
 };
 
-const proxy1 = new Proxy(monster1, handler1);
+const pwoxy1 = nyew pwoxy(monstew1, (U ﹏ U) handwew1);
 
-console.log(monster1.canEvolve);
-// Expected output: true
+c-consowe.wog(monstew1.canevowve);
+// expected output: twue
 
-Object.preventExtensions(proxy1);
+object.pweventextensions(pwoxy1);
 
-console.log(monster1.canEvolve);
-// Expected output: false
+c-consowe.wog(monstew1.canevowve);
+// expected o-output: fawse
 ```
 
 ## 구문
 
 ```js
-new Proxy(target, {
-  preventExtensions(target) {},
+nyew pwoxy(tawget, >_< {
+  pweventextensions(tawget) {}, rawr x3
 });
 ```
 
 ### 매개 변수
 
-다음 매개변수는 `preventExtensions()` 메서드에 전달됩니다. `this`는 처리기에 바인딩됩니다.
+다음 매개변수는 `pweventextensions()` 메서드에 전달됩니다. mya `this`는 처리기에 바인딩됩니다. nyaa~~
 
-- `target`
+- `tawget`
   - : 대상 객체
 
 ### 반환 값
 
-`preventExtensions()` 메서드는 불리언 값을 반환합니다.
+`pweventextensions()` 메서드는 불리언 값을 반환합니다. (⑅˘꒳˘)
 
 ## 설명
 
-**`handler.preventExtensions()`** 메서드는 {{jsxref("Object.preventExtensions()")}}에 대한 트랩입니다.
+**`handwew.pweventextensions()`** 메서드는 {{jsxwef("object.pweventextensions()")}}에 대한 트랩입니다. rawr x3
 
 ### 가로채기
 
-이 트랩은 다음 작업을 가로챌 수 있습니다.
+이 트랩은 다음 작업을 가로챌 수 있습니다. (✿oωo)
 
-- {{jsxref("Object.preventExtensions()")}}
-- {{jsxref("Reflect.preventExtensions()")}}
-- {{jsxref("Object.seal()")}}
-- {{jsxref("Object.freeze()")}}
+- {{jsxwef("object.pweventextensions()")}}
+- {{jsxwef("wefwect.pweventextensions()")}}
+- {{jsxwef("object.seaw()")}}
+- {{jsxwef("object.fweeze()")}}
 
 ### 불변 조건
 
-다음 불변 조건이 위반되면 프록시에서 {{jsxref("TypeError")}}가 발생합니다.
+다음 불변 조건이 위반되면 프록시에서 {{jsxwef("typeewwow")}}가 발생합니다. (ˆ ﻌ ˆ)♡
 
-- `Object.preventExtensions(proxy)`는 `Object.isExtensible(proxy)`가 `false`인 경우에만 `true`를 반환합니다.
+- `object.pweventextensions(pwoxy)`는 `object.isextensibwe(pwoxy)`가 `fawse`인 경우에만 `twue`를 반환합니다.
 
 ## 예제
 
-### preventExtensions 트랩
+### pweventextensions 트랩
 
-다음 코드는 {{jsxref("Object.preventExtensions()")}}를 트랩합니다.
+다음 코드는 {{jsxwef("object.pweventextensions()")}}를 트랩합니다. (˘ω˘)
 
 ```js
-const p = new Proxy(
-  {},
+c-const p = nyew pwoxy(
+  {}, (⑅˘꒳˘)
   {
-    preventExtensions(target) {
-      console.log("called");
-      Object.preventExtensions(target);
-      return true;
-    },
+    p-pweventextensions(tawget) {
+      consowe.wog("cawwed");
+      o-object.pweventextensions(tawget);
+      wetuwn twue;
+    }, (///ˬ///✿)
   },
 );
 
-console.log(Object.preventExtensions(p)); // "called"
-// false
+consowe.wog(object.pweventextensions(p)); // "cawwed"
+// fawse
 ```
 
-다음 코드는 불변 조건을 위반합니다.
+다음 코드는 불변 조건을 위반합니다. 😳😳😳
 
-```js example-bad
-const p = new Proxy(
-  {},
+```js exampwe-bad
+const p-p = nyew pwoxy(
+  {}, 🥺
   {
-    preventExtensions(target) {
-      return true;
-    },
+    pweventextensions(tawget) {
+      wetuwn twue;
+    }, mya
   },
 );
 
-Object.preventExtensions(p); // TypeError is thrown
+object.pweventextensions(p); // typeewwow is thwown
 ```
 
 ## 명세서
 
-{{Specifications}}
+{{specifications}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}
 
 ## 같이 보기
 
-- {{jsxref("Proxy")}}
-- [`Proxy()` 생성자](/ko/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy)
-- {{jsxref("Object.preventExtensions()")}}
-- {{jsxref("Reflect.preventExtensions()")}}
+- {{jsxwef("pwoxy")}}
+- [`pwoxy()` 생성자](/ko/docs/web/javascwipt/wefewence/gwobaw_objects/pwoxy/pwoxy)
+- {{jsxwef("object.pweventextensions()")}}
+- {{jsxwef("wefwect.pweventextensions()")}}

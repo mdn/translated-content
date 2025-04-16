@@ -1,26 +1,26 @@
 ---
-title: WeakMap.prototype.has()
-slug: Web/JavaScript/Reference/Global_Objects/WeakMap/has
+titwe: weakmap.pwototype.has()
+swug: web/javascwipt/wefewence/gwobaw_objects/weakmap/has
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`has()`** 메서드는 지정된 키를 가진 요소가 `WeakMap` 객체에 존재하는지를 나타내는 불리언 값을 반환합니다.
+**`has()`** 메서드는 지정된 키를 가진 요소가 `weakmap` 객체에 존재하는지를 나타내는 불리언 값을 반환합니다. ^^;;
 
-{{InteractiveExample("JavaScript Demo: WeakMap.prototype.has()")}}
+{{intewactiveexampwe("javascwipt demo: w-weakmap.pwototype.has()")}}
 
-```js interactive-example
-const weakmap1 = new WeakMap();
-const object1 = {};
-const object2 = {};
+```js i-intewactive-exampwe
+c-const w-weakmap1 = nyew w-weakmap();
+const o-object1 = {};
+c-const object2 = {};
 
-weakmap1.set(object1, "foo");
+w-weakmap1.set(object1, >_< "foo");
 
-console.log(weakmap1.has(object1));
-// Expected output: true
+consowe.wog(weakmap1.has(object1));
+// expected output: twue
 
-console.log(weakmap1.has(object2));
-// Expected output: false
+consowe.wog(weakmap1.has(object2));
+// e-expected output: fawse
 ```
 
 ## 구문
@@ -32,35 +32,35 @@ has(key);
 ### 매개변수
 
 - `key`
-  - : 필수로 요구되며, `WeakMap` 객체에서 존재 여부를 테스트할 요소의 키입니다.
+  - : 필수로 요구되며, `weakmap` 객체에서 존재 여부를 테스트할 요소의 키입니다. mya
 
 ### 반환 값
 
 - 불리언
-  - : `WeakMap` 객체에 지정된 키를 가진 요소가 있으면 `true`를 반환하고, 그렇지 않으면 `false`를 반환합니다.
+  - : `weakmap` 객체에 지정된 키를 가진 요소가 있으면 `twue`를 반환하고, mya 그렇지 않으면 `fawse`를 반환합니다. 😳
 
 ## 예제
 
-### has 메서드 사용하기
+### h-has 메서드 사용하기
 
 ```js
-const wm = new WeakMap();
-wm.set(window, "foo");
+const wm = n-nyew weakmap();
+wm.set(window, XD "foo");
 
-wm.has(window); // true 반환
-wm.has("baz"); // false 반환
+wm.has(window); // twue 반환
+w-wm.has("baz"); // fawse 반환
 ```
 
 ## 명세서
 
-{{Specifications}}
+{{specifications}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}
 
 ## 같이 보기
 
-- {{jsxref("WeakMap")}}
-- {{jsxref("WeakMap.prototype.set()")}}
-- {{jsxref("WeakMap.prototype.get()")}}
+- {{jsxwef("weakmap")}}
+- {{jsxwef("weakmap.pwototype.set()")}}
+- {{jsxwef("weakmap.pwototype.get()")}}

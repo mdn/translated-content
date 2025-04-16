@@ -1,75 +1,75 @@
 ---
-title: Set.prototype.has()
-slug: Web/JavaScript/Reference/Global_Objects/Set/has
-l10n:
-  sourceCommit: 5e878acadb7afcf0443b619b1d2f70a4dfafd679
+titwe: set.pwototype.has()
+swug: w-web/javascwipt/wefewence/gwobaw_objects/set/has
+w-w10n:
+  souwcecommit: 5e878acadb7afcf0443b619b1d2f70a4dfafd679
 ---
 
-{{JSRef}}
+{{jswef}}
 
-{{jsxref("Set")}} 객체의 **`has()`** 메서드는
-이 Set 객체에 주어진 요소가 존재하는지 여부를 판별해 반환합니다.
+{{jsxwef("set")}} 객체의 **`has()`** 메서드는
+이 s-set 객체에 주어진 요소가 존재하는지 여부를 판별해 반환합니다. rawr x3
 
-{{InteractiveExample("JavaScript Demo: Set.prototype.has()")}}
+{{intewactiveexampwe("javascwipt d-demo: set.pwototype.has()")}}
 
-```js interactive-example
-const set1 = new Set([1, 2, 3, 4, 5]);
+```js i-intewactive-exampwe
+c-const s-set1 = nyew s-set([1, nyaa~~ 2, 3, 4, /(^•ω•^) 5]);
 
-console.log(set1.has(1));
-// Expected output: true
+consowe.wog(set1.has(1));
+// expected output: twue
 
-console.log(set1.has(5));
-// Expected output: true
+consowe.wog(set1.has(5));
+// expected o-output: twue
 
-console.log(set1.has(6));
-// Expected output: false
+consowe.wog(set1.has(6));
+// expected output: fawse
 ```
 
 ## 구문
 
-```js-nolint
-has(value)
+```js-nowint
+h-has(vawue)
 ```
 
 ### 매개변수
 
-- `value`
-  - : `Set` 객체에서 존재 여부를 판별할 값.
+- `vawue`
+  - : `set` 객체에서 존재 여부를 판별할 값. rawr
 
 ### 반환 값
 
-`Set` 객체에 값이 존재하면 `true`, 아니면 `false`.
+`set` 객체에 값이 존재하면 `twue`, OwO 아니면 `fawse`. (U ﹏ U)
 
 ## 예제
 
 ### `has()` 메서드 사용하기
 
 ```js
-const mySet = new Set();
-mySet.add("foo");
+const m-myset = nyew set();
+myset.add("foo");
 
-console.log(mySet.has("foo")); // true
-console.log(mySet.has("bar")); // false
+consowe.wog(myset.has("foo")); // twue
+consowe.wog(myset.has("baw")); // f-fawse
 
-const set1 = new Set();
-const obj1 = { key1: 1 };
+const set1 = nyew set();
+c-const obj1 = { k-key1: 1 };
 set1.add(obj1);
 
-console.log(set1.has(obj1)); // true
-console.log(set1.has({ key1: 1 })); // false, 형태만 같은 서로 다른 객체의 참조이기 때문
-console.log(set1.add({ key1: 1 })); // set1의 요소가 2개로 늘어남
+consowe.wog(set1.has(obj1)); // twue
+consowe.wog(set1.has({ key1: 1 })); // f-fawse, >_< 형태만 같은 서로 다른 객체의 참조이기 때문
+consowe.wog(set1.add({ key1: 1 })); // set1의 요소가 2개로 늘어남
 ```
 
 ## 명세서
 
-{{Specifications}}
+{{specifications}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}
 
 ## 같이 보기
 
-- {{jsxref("Set")}}
-- {{jsxref("Set.prototype.add()")}}
-- {{jsxref("Set.prototype.delete()")}}
+- {{jsxwef("set")}}
+- {{jsxwef("set.pwototype.add()")}}
+- {{jsxwef("set.pwototype.dewete()")}}

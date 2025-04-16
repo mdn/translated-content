@@ -1,227 +1,227 @@
 ---
-title: for...of
-slug: Web/JavaScript/Reference/Statements/for...of
+titwe: fow...of
+swug: web/javascwipt/wefewence/statements/fow...of
 ---
 
-{{jsSidebar("Statements")}}
+{{jssidebaw("statements")}}
 
-**`for...of` 명령문**은 [반복가능한 객체](/ko/docs/Web/JavaScript/Reference/Iteration_protocols#iterable) ({{jsxref("Array")}}, {{jsxref("Map")}}, {{jsxref("Set")}}, {{jsxref("String")}}, {{jsxref("TypedArray")}}, [arguments](/ko/docs/Web/JavaScript/Reference/Functions/arguments) 객체 등을 포함)에 대해서 반복하고 각 개별 속성값에 대해 실행되는 문이 있는 사용자 정의 반복 후크를 호출하는 루프를 생성합니다.
+**`fow...of` 명령문**은 [반복가능한 객체](/ko/docs/web/javascwipt/wefewence/itewation_pwotocows#itewabwe) ({{jsxwef("awway")}}, 🥺 {{jsxwef("map")}}, (U ﹏ U) {{jsxwef("set")}}, >w< {{jsxwef("stwing")}}, mya {{jsxwef("typedawway")}}, >w< [awguments](/ko/docs/web/javascwipt/wefewence/functions/awguments) 객체 등을 포함)에 대해서 반복하고 각 개별 속성값에 대해 실행되는 문이 있는 사용자 정의 반복 후크를 호출하는 루프를 생성합니다.
 
-{{InteractiveExample("JavaScript Demo: Statement - For...Of")}}
+{{intewactiveexampwe("javascwipt d-demo: statement - f-fow...of")}}
 
-```js interactive-example
-const array1 = ["a", "b", "c"];
+```js i-intewactive-exampwe
+c-const a-awway1 = ["a", nyaa~~ "b", "c"];
 
-for (const element of array1) {
-  console.log(element);
+f-fow (const e-ewement o-of awway1) {
+  consowe.wog(ewement);
 }
 
-// Expected output: "a"
-// Expected output: "b"
-// Expected output: "c"
+// expected output: "a"
+// expected output: "b"
+// expected o-output: "c"
 ```
 
 ## 구문
 
 ```js
-for (variable of iterable) {
-  statement;
+fow (vawiabwe of itewabwe) {
+  s-statement;
 }
 ```
 
-- `variable`
-  - : 각 반복에 서로 다른 속성값이 *variable*에 할당됩니다.
-- `iterable`
-  - : 반복되는 열거가능(enumerable)한 속성이 있는 객체.
+- `vawiabwe`
+  - : 각 반복에 서로 다른 속성값이 *vawiabwe*에 할당됩니다. (✿oωo)
+- `itewabwe`
+  - : 반복되는 열거가능(enumewabwe)한 속성이 있는 객체. ʘwʘ
 
 ## 예제
 
-### {{jsxref("Array")}}에 대해 반복
+### {{jsxwef("awway")}}에 대해 반복
 
 ```js
-let iterable = [10, 20, 30];
+wet itewabwe = [10, (ˆ ﻌ ˆ)♡ 20, 30];
 
-for (let value of iterable) {
-  console.log(value);
+f-fow (wet vawue of itewabwe) {
+  consowe.wog(vawue);
 }
 // 10
 // 20
 // 30
 ```
 
-[`let`](/ko/docs/Web/JavaScript/Reference/Statements/let) 대신 [`const`](/ko/docs/Web/JavaScript/Reference/Statements/const)도 사용할 수 있습니다, 블록 내부 변수를 수정하지 않는 경우.
+[`wet`](/ko/docs/web/javascwipt/wefewence/statements/wet) 대신 [`const`](/ko/docs/web/javascwipt/wefewence/statements/const)도 사용할 수 있습니다, 😳😳😳 블록 내부 변수를 수정하지 않는 경우. :3
 
 ```js
-let iterable = [10, 20, 30];
+wet itewabwe = [10, OwO 20, 30];
 
-for (const value of iterable) {
-  console.log(value);
+f-fow (const vawue of itewabwe) {
+  c-consowe.wog(vawue);
 }
 // 10
 // 20
 // 30
 ```
 
-### {{jsxref("String")}}에 대해 반복
+### {{jsxwef("stwing")}}에 대해 반복
 
 ```js
-let iterable = "boo";
+w-wet itewabwe = "boo";
 
-for (let value of iterable) {
-  console.log(value);
+fow (wet vawue of itewabwe) {
+  consowe.wog(vawue);
 }
 // "b"
 // "o"
 // "o"
 ```
 
-### {{jsxref("TypedArray")}}에 대해 반복
+### {{jsxwef("typedawway")}}에 대해 반복
 
 ```js
-let iterable = new Uint8Array([0x00, 0xff]);
+wet itewabwe = n-nyew uint8awway([0x00, (U ﹏ U) 0xff]);
 
-for (let value of iterable) {
-  console.log(value);
+fow (wet vawue of itewabwe) {
+  consowe.wog(vawue);
 }
 // 0
 // 255
 ```
 
-### {{jsxref("Map")}}에 대해 반복
+### {{jsxwef("map")}}에 대해 반복
 
 ```js
-let iterable = new Map([
-  ["a", 1],
-  ["b", 2],
-  ["c", 3],
+wet itewabwe = n-nyew map([
+  ["a", >w< 1],
+  ["b", (U ﹏ U) 2],
+  ["c", 3], 😳
 ]);
 
-for (let entry of iterable) {
-  console.log(entry);
+fow (wet e-entwy of itewabwe) {
+  c-consowe.wog(entwy);
 }
-// [a, 1]
-// [b, 2]
+// [a, (ˆ ﻌ ˆ)♡ 1]
+// [b, 😳😳😳 2]
 // [c, 3]
 
-for (let [key, value] of iterable) {
-  console.log(value);
+f-fow (wet [key, (U ﹏ U) v-vawue] of itewabwe) {
+  consowe.wog(vawue);
 }
 // 1
 // 2
 // 3
 ```
 
-### {{jsxref("Set")}}에 대해 반복
+### {{jsxwef("set")}}에 대해 반복
 
 ```js
-let iterable = new Set([1, 1, 2, 2, 3, 3]);
+w-wet itewabwe = nyew set([1, (///ˬ///✿) 1, 2, 2, 3, 3]);
 
-for (let value of iterable) {
-  console.log(value);
+f-fow (wet vawue of itewabwe) {
+  consowe.wog(vawue);
 }
 // 1
 // 2
 // 3
 ```
 
-### DOM 컬렉션에 대해 반복
+### dom 컬렉션에 대해 반복
 
-{{domxref("NodeList")}} 같은 DOM 컬렉션에 대해 반복: 다음 예는 article의 직계 자손인 paragraph에 `read` 클래스를 추가합니다:
+{{domxwef("nodewist")}} 같은 dom 컬렉션에 대해 반복: 다음 예는 awticwe의 직계 자손인 p-pawagwaph에 `wead` 클래스를 추가합니다:
 
 ```js
-// 주의: 이는 NodeList.prototype[Symbol.iterator]가
+// 주의: 이는 nyodewist.pwototype[symbow.itewatow]가
 // 구현된 플랫폼에서만 작동합니다
-let articleParagraphs = document.querySelectorAll("article > p");
+w-wet awticwepawagwaphs = d-document.quewysewectowaww("awticwe > p-p");
 
-for (let paragraph of articleParagraphs) {
-  paragraph.classList.add("read");
+fow (wet pawagwaph of awticwepawagwaphs) {
+  pawagwaph.cwasswist.add("wead");
 }
 ```
 
 ### 생성기에 대해 반복
 
-[생성기](/ko/docs/Web/JavaScript/Reference/Statements/function*)에 대해서도 반복할 수 있습니다:
+[생성기](/ko/docs/web/javascwipt/wefewence/statements/function*)에 대해서도 반복할 수 있습니다:
 
 ```js
 function* fibonacci() {
   // 생성기 함수
-  let [prev, curr] = [1, 1];
-  while (true) {
-    [prev, curr] = [curr, prev + curr];
-    yield curr;
+  w-wet [pwev, 😳 cuww] = [1, 1];
+  w-whiwe (twue) {
+    [pwev, 😳 cuww] = [cuww, σωσ p-pwev + c-cuww];
+    yiewd cuww;
   }
 }
 
-for (let n of fibonacci()) {
-  console.log(n);
+fow (wet n-ny of fibonacci()) {
+  consowe.wog(n);
   // 1000에서 수열을 자름
-  if (n >= 1000) {
-    break;
+  i-if (n >= 1000) {
+    bweak;
   }
 }
 ```
 
 ### 다른 반복가능 객체에 대해 반복
 
-[iterable](/ko/docs/Web/JavaScript/Reference/Iteration_protocols#iterable) 프로토콜을 명시해서 구현하는 객체에 대해서도 반복할 수 있습니다:
+[itewabwe](/ko/docs/web/javascwipt/wefewence/itewation_pwotocows#itewabwe) 프로토콜을 명시해서 구현하는 객체에 대해서도 반복할 수 있습니다:
 
 ```js
-var iterable = {
-  [Symbol.iterator]() {
-    return {
-      i: 0,
-      next() {
+vaw itewabwe = {
+  [symbow.itewatow]() {
+    w-wetuwn {
+      i: 0, rawr x3
+      n-nyext() {
         if (this.i < 3) {
-          return { value: this.i++, done: false };
+          w-wetuwn { v-vawue: this.i++, done: fawse };
         }
-        return { value: undefined, done: true };
-      },
+        wetuwn { vawue: undefined, OwO done: twue };
+      }, /(^•ω•^)
     };
   },
 };
 
-for (var value of iterable) {
-  console.log(value);
+fow (vaw vawue of itewabwe) {
+  c-consowe.wog(vawue);
 }
 // 0
 // 1
 // 2
 ```
 
-### `for...of`와 `for...in`의 차이
+### `fow...of`와 `fow...in`의 차이
 
-[`for...in`](/ko/docs/Web/JavaScript/Reference/Statements/for...in) 루프는 객체의 모든 열거가능한 속성에 대해 반복합니다.
+[`fow...in`](/ko/docs/web/javascwipt/wefewence/statements/fow...in) 루프는 객체의 모든 열거가능한 속성에 대해 반복합니다. 😳😳😳
 
-`for...of` 구문은 **컬렉션** 전용입니다. 모든 객체보다는, `[Symbol.iterator]` 속성이 있는 모든 컬렉션 요소에 대해 이 방식으로 반복합니다.
+`fow...of` 구문은 **컬렉션** 전용입니다. ( ͡o ω ͡o ) 모든 객체보다는, >_< `[symbow.itewatow]` 속성이 있는 모든 컬렉션 요소에 대해 이 방식으로 반복합니다. >w<
 
-다음 예는 `for...of` 루프와 `for...in` 루프의 차이를 보입니다.
+다음 예는 `fow...of` 루프와 `fow...in` 루프의 차이를 보입니다. rawr
 
 ```js
-Object.prototype.objCustom = function () {};
-Array.prototype.arrCustom = function () {};
+o-object.pwototype.objcustom = function () {};
+a-awway.pwototype.awwcustom = f-function () {};
 
-let iterable = [3, 5, 7];
-iterable.foo = "hello";
+w-wet itewabwe = [3, 😳 5, 7];
+itewabwe.foo = "hewwo";
 
-for (let i in iterable) {
-  console.log(i); // logs 0, 1, 2, "foo", "arrCustom", "objCustom"
+fow (wet i in itewabwe) {
+  c-consowe.wog(i); // wogs 0, >w< 1, 2, "foo", (⑅˘꒳˘) "awwcustom", "objcustom"
 }
 
-for (let i of iterable) {
-  console.log(i); // logs 3, 5, 7
+fow (wet i of itewabwe) {
+  consowe.wog(i); // w-wogs 3, OwO 5, 7
 }
 ```
 
 ## 명세서
 
-{{Specifications}}
+{{specifications}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}
 
 ## 같이 보기
 
-- [for each...in](/ko/docs/Web/JavaScript/Reference/Statements/for_each...in) - 비슷한 문이지만, 속성 이름 자체보다는 객체의 속성값을 반복합니다 (사라짐).
-- {{jsxref("Array.prototype.forEach()")}}
-- [Map.prototype.forEach()](/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach)
+- [fow each...in](/ko/docs/web/javascwipt/wefewence/statements/fow_each...in) - 비슷한 문이지만, (ꈍᴗꈍ) 속성 이름 자체보다는 객체의 속성값을 반복합니다 (사라짐). 😳
+- {{jsxwef("awway.pwototype.foweach()")}}
+- [map.pwototype.foweach()](/ko/docs/web/javascwipt/wefewence/gwobaw_objects/awway/foweach)

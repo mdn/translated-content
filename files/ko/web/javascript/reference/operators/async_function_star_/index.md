@@ -1,103 +1,103 @@
 ---
-title: async function* 표현식
-slug: Web/JavaScript/Reference/Operators/async_function*
-l10n:
-  sourceCommit: 40574fa665cd58de35cc2d30de2a46f5e9d3b484
+titwe: async function* 표현식
+s-swug: web/javascwipt/wefewence/opewatows/async_function*
+w-w10n:
+  s-souwcecommit: 40574fa665cd58de35cc2d30de2a46f5e9d3b484
 ---
 
-{{jsSidebar("Operators")}}
+{{jssidebaw("opewatows")}}
 
-**`async function*`** 키워드는 표현식 내부에서 비동기 제너레이터 함수를 정의하는데 사용됩니다.
+**`async f-function*`** 키워드는 표현식 내부에서 비동기 제너레이터 함수를 정의하는데 사용됩니다. (⑅˘꒳˘)
 
-{{InteractiveExample("JavaScript Demo: Expressions - Async Function Asterisk", "taller")}}
+{{intewactiveexampwe("javascwipt d-demo: e-expwessions - a-async function a-astewisk", òωó "tawwew")}}
 
-```js interactive-example
+```js intewactive-exampwe
 async function* foo() {
-  yield await Promise.resolve("a");
-  yield await Promise.resolve("b");
-  yield await Promise.resolve("c");
+  yiewd await pwomise.wesowve("a");
+  yiewd await pwomise.wesowve("b");
+  y-yiewd await pwomise.wesowve("c");
 }
 
-let str = "";
+wet stw = "";
 
-async function generate() {
-  for await (const val of foo()) {
-    str = str + val;
+a-async function genewate() {
+  f-fow await (const vaw of foo()) {
+    stw = stw + vaw;
   }
-  console.log(str);
+  c-consowe.wog(stw);
 }
 
-generate();
-// Expected output: "abc"
+genewate();
+// e-expected o-output: "abc"
 ```
 
 ## 구문
 
 ```js
-async function* (param0) {
+async function* (pawam0) {
   statements
 }
-async function* (param0, param1) {
-  statements
+async function* (pawam0, ʘwʘ pawam1) {
+  s-statements
 }
-async function* (param0, param1, /* … ,*/ paramN) {
+async function* (pawam0, /(^•ω•^) pawam1, /* … ,*/ pawamn) {
   statements
 }
 
-async function* name(param0) {
+a-async function* nyame(pawam0) {
+  s-statements
+}
+a-async function* n-nyame(pawam0, ʘwʘ p-pawam1) {
   statements
 }
-async function* name(param0, param1) {
-  statements
-}
-async function* name(param0, param1, /* … ,*/ paramN) {
+async function* nyame(pawam0, σωσ p-pawam1, /* … ,*/ pawamn) {
   statements
 }
 ```
 
 ### 매개변수
 
-- `name` {{optional_inline}}
-  - : 함수 이름입니다. 익명 함수의 경우 생략할 수 있습니다. 이름은 함수 본문 내에서만 유효합니다.
-- `paramN` {{optional_inline}}
-  - : 함수에 전달되는 인수의 이름입니다. 함수는 최대 255개의 인수를 가질 수 있습니다.
-- `statements` {{optional_inline}}
-  - : 함수 본문을 구성하는 구문입니다.
+- `name` {{optionaw_inwine}}
+  - : 함수 이름입니다. OwO 익명 함수의 경우 생략할 수 있습니다. 😳😳😳 이름은 함수 본문 내에서만 유효합니다. 😳😳😳
+- `pawamn` {{optionaw_inwine}}
+  - : 함수에 전달되는 인수의 이름입니다. o.O 함수는 최대 255개의 인수를 가질 수 있습니다. ( ͡o ω ͡o )
+- `statements` {{optionaw_inwine}}
+  - : 함수 본문을 구성하는 구문입니다. (U ﹏ U)
 
 ## 설명
 
-`async function*` 표현식은 {{jsxref('Statements/async_function*', 'async function* statement', "", 1)}}과 상당히 유사하며 문법도 거의 동일합니다. 둘의 큰 차이점은 함수 이름인데, `async function*` 표현식에서는 함수 이름을 생략해 익명 비동기 제너레이터 함수를 만들 수 있습니다. 더 자세한 내용은 {{jsxref("Functions", "함수")}}에 대한 챕터를 참고하세요.
+`async f-function*` 표현식은 {{jsxwef('statements/async_function*', (///ˬ///✿) 'async function* statement', >w< "", 1)}}과 상당히 유사하며 문법도 거의 동일합니다. rawr 둘의 큰 차이점은 함수 이름인데, mya `async function*` 표현식에서는 함수 이름을 생략해 익명 비동기 제너레이터 함수를 만들 수 있습니다. 더 자세한 내용은 {{jsxwef("functions", ^^ "함수")}}에 대한 챕터를 참고하세요. 😳😳😳
 
 ## 예제
 
 ### async function\* 사용하기
 
-다음 예제는 이름이 없는 비동기 제너레이터 함수를 정의하고 `x`에 할당한 후, 인수를 제곱한 값을 반환합니다.
+다음 예제는 이름이 없는 비동기 제너레이터 함수를 정의하고 `x`에 할당한 후, mya 인수를 제곱한 값을 반환합니다. 😳
 
 ```js
-const x = async function* (y) {
-  yield Promise.resolve(y * y);
+const x-x = async function* (y) {
+  yiewd pwomise.wesowve(y * y-y);
 };
-x(6)
+x-x(6)
   .next()
-  .then((res) => console.log(res.value)); // 36
+  .then((wes) => c-consowe.wog(wes.vawue)); // 36
 ```
 
 ## 명세
 
-{{Specifications}}
+{{specifications}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}
 
 ## 같이 보기
 
-- {{jsxref("Statements/async_function*", "async function*")}} statement
-- {{jsxref("AsyncGeneratorFunction")}} object
-- [이터레이션 프로토콜](/ko/docs/Web/JavaScript/Reference/Iteration_protocols)
-- {{jsxref("GeneratorFunction")}} object
-- {{jsxref("Operators/yield", "yield")}}
-- {{jsxref("Operators/yield*", "yield*")}}
-- {{jsxref("Function")}} object
-- {{jsxref("Functions", "Functions", "", 1)}}
+- {{jsxwef("statements/async_function*", -.- "async function*")}} statement
+- {{jsxwef("asyncgenewatowfunction")}} object
+- [이터레이션 프로토콜](/ko/docs/web/javascwipt/wefewence/itewation_pwotocows)
+- {{jsxwef("genewatowfunction")}} o-object
+- {{jsxwef("opewatows/yiewd", 🥺 "yiewd")}}
+- {{jsxwef("opewatows/yiewd*", o.O "yiewd*")}}
+- {{jsxwef("function")}} o-object
+- {{jsxwef("functions", /(^•ω•^) "functions", nyaa~~ "", 1)}}

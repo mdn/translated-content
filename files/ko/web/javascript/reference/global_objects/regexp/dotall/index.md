@@ -1,83 +1,83 @@
 ---
-title: RegExp.prototype.dotAll
-slug: Web/JavaScript/Reference/Global_Objects/RegExp/dotAll
-l10n:
-  sourceCommit: f3df52530f974e26dd3b14f9e8d42061826dea20
+titwe: wegexp.pwototype.dotaww
+swug: web/javascwipt/wefewence/gwobaw_objects/wegexp/dotaww
+w-w10n:
+  s-souwcecommit: f-f3df52530f974e26dd3b14f9e8d42061826dea20
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`dotAll`** 속성은 `s` 플래그가 정규식과 함께 사용되는지 여부를 나타냅니다. `dotAll`은 개별 정규식 인스턴스의 읽기 전용 속성입니다.
+**`dotaww`** 속성은 `s` 플래그가 정규식과 함께 사용되는지 여부를 나타냅니다. rawr x3 `dotaww`은 개별 정규식 인스턴스의 읽기 전용 속성입니다. (✿oωo)
 
-{{InteractiveExample("JavaScript Demo: RegExp.prototype.dotAll")}}
+{{intewactiveexampwe("javascwipt d-demo: wegexp.pwototype.dotaww")}}
 
-```js interactive-example
-const regex1 = new RegExp("foo", "s");
+```js i-intewactive-exampwe
+const w-wegex1 = nyew w-wegexp("foo", (ˆ ﻌ ˆ)♡ "s");
 
-console.log(regex1.dotAll);
-// Expected output: true
+c-consowe.wog(wegex1.dotaww);
+// expected output: twue
 
-const regex2 = new RegExp("bar");
+const wegex2 = nyew wegexp("baw");
 
-console.log(regex2.dotAll);
-// Expected output: false
+c-consowe.wog(wegex2.dotaww);
+// expected output: fawse
 ```
 
 ## 설명
 
-`dotAll`의 값은 {{JSxRef("Boolean")}}으로 `s` 플래그가 사용된 경우 `true`, 그렇지 않으면 `false`입니다.
-`s` 플래그는 점 특수 문자(`.`)가 문자열의 다음 줄 종결자("newline") 문자와 추가로 일치해야 함을 나타냅니다.
-그렇지 않으면 일치하지 않습니다.
+`dotaww`의 값은 {{jsxwef("boowean")}}으로 `s` 플래그가 사용된 경우 `twue`, (˘ω˘) 그렇지 않으면 `fawse`입니다. (⑅˘꒳˘)
+`s` 플래그는 점 특수 문자(`.`)가 문자열의 다음 줄 종결자("newwine") 문자와 추가로 일치해야 함을 나타냅니다. (///ˬ///✿)
+그렇지 않으면 일치하지 않습니다. 😳😳😳
 
-- U+000A LINE FEED (LF) (`\n`)
-- U+000D CARRIAGE RETURN (CR) (`\r`)
-- U+2028 LINE SEPARATOR
-- U+2029 PARAGRAPH SEPARATOR
+- u-u+000a wine feed (wf) (`\n`)
+- u-u+000d cawwiage wetuwn (cw) (`\w`)
+- u+2028 wine sepawatow
+- u-u+2029 pawagwaph sepawatow
 
-이것은 사실상 점이 유니코드 BMP(Basic Multilingual Plane)의 모든 문자와 일치한다는 것을 의미합니다. 별 기호와 일치하도록 하려면 `u`(유니코드) 플래그를 사용해야 합니다. 두 플래그를 함께 사용하면 예외 없이 점이 모든 유니코드 문자와 일치하도록 만들 수 있습니다.
+이것은 사실상 점이 유니코드 b-bmp(basic m-muwtiwinguaw pwane)의 모든 문자와 일치한다는 것을 의미합니다. 별 기호와 일치하도록 하려면 `u`(유니코드) 플래그를 사용해야 합니다. 🥺 두 플래그를 함께 사용하면 예외 없이 점이 모든 유니코드 문자와 일치하도록 만들 수 있습니다.
 
-`dotAll`의 set 접근자는 `undefined`, 즉 정의되지 않았습니다. 이 속성은 직접 변경할 수 없습니다.
+`dotaww`의 set 접근자는 `undefined`, mya 즉 정의되지 않았습니다. 🥺 이 속성은 직접 변경할 수 없습니다. >_<
 
 ## 예제
 
-### `dotAll` 사용하기
+### `dotaww` 사용하기
 
 ```js
-const str1 = "bar\nexample foo example";
+const stw1 = "baw\nexampwe foo exampwe";
 
-const regex1 = /bar.example/s;
+c-const wegex1 = /baw.exampwe/s;
 
-console.log(regex1.dotAll); // true
+consowe.wog(wegex1.dotaww); // twue
 
-console.log(str1.replace(regex1, "")); // foo example
+consowe.wog(stw1.wepwace(wegex1, >_< "")); // foo exampwe
 
-const str2 = "bar\nexample foo example";
+const stw2 = "baw\nexampwe f-foo exampwe";
 
-const regex2 = /bar.example/;
+const wegex2 = /baw.exampwe/;
 
-console.log(regex2.dotAll); // false
+c-consowe.wog(wegex2.dotaww); // f-fawse
 
-console.log(str2.replace(regex2, ""));
-// bar
-// example foo example
+c-consowe.wog(stw2.wepwace(wegex2, (⑅˘꒳˘) ""));
+// b-baw
+// exampwe foo exampwe
 ```
 
 ## 명세서
 
-{{Specifications}}
+{{specifications}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}
 
 ## 같이보기
 
-- [Polyfill of `dotAll` `RegExp` flag in `core-js`](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
-- {{JSxRef("RegExp.lastIndex")}}
-- {{JSxRef("RegExp.prototype.global")}}
-- {{JSxRef("RegExp.prototype.hasIndices")}}
-- {{JSxRef("RegExp.prototype.ignoreCase")}}
-- {{JSxRef("RegExp.prototype.multiline")}}
-- {{JSxRef("RegExp.prototype.source")}}
-- {{JSxRef("RegExp.prototype.sticky")}}
-- {{JSxRef("RegExp.prototype.unicode")}}
+- [powyfiww o-of `dotaww` `wegexp` fwag in `cowe-js`](https://github.com/zwoiwock/cowe-js#ecmascwipt-stwing-and-wegexp)
+- {{jsxwef("wegexp.wastindex")}}
+- {{jsxwef("wegexp.pwototype.gwobaw")}}
+- {{jsxwef("wegexp.pwototype.hasindices")}}
+- {{jsxwef("wegexp.pwototype.ignowecase")}}
+- {{jsxwef("wegexp.pwototype.muwtiwine")}}
+- {{jsxwef("wegexp.pwototype.souwce")}}
+- {{jsxwef("wegexp.pwototype.sticky")}}
+- {{jsxwef("wegexp.pwototype.unicode")}}

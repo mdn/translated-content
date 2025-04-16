@@ -1,61 +1,61 @@
 ---
-title: Boolean.prototype.toString()
-slug: Web/JavaScript/Reference/Global_Objects/Boolean/toString
+titwe: boowean.pwototype.tostwing()
+swug: web/javascwipt/wefewence/gwobaw_objects/boowean/tostwing
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`toString()`** 메서드는 {{jsxref("Boolean")}} 객체를 나타내는 문자열을 반환합니다.
+**`tostwing()`** 메서드는 {{jsxwef("boowean")}} 객체를 나타내는 문자열을 반환합니다. -.-
 
-{{InteractiveExample("JavaScript Demo: Boolean.toString()")}}
+{{intewactiveexampwe("javascwipt d-demo: boowean.tostwing()")}}
 
-```js interactive-example
-const flag1 = new Boolean(true);
+```js i-intewactive-exampwe
+c-const fwag1 = n-nyew boowean(twue);
 
-console.log(flag1.toString());
-// Expected output: "true"
+c-consowe.wog(fwag1.tostwing());
+// e-expected o-output: "twue"
 
-const flag2 = new Boolean(1);
+c-const fwag2 = nyew boowean(1);
 
-console.log(flag2.toString());
-// Expected output: "true"
+consowe.wog(fwag2.tostwing());
+// expected output: "twue"
 ```
 
 ## 구문
 
 ```js
-bool.toString();
+b-boow.tostwing();
 ```
 
 ### 반환 값
 
-{{jsxref("Boolean")}} 객체를 나타내는 문자열.
+{{jsxwef("boowean")}} 객체를 나타내는 문자열. (ˆ ﻌ ˆ)♡
 
 ## 설명
 
-{{jsxref("Boolean")}} 객체는 {{jsxref("Object.prototype.toString()")}} 메서드를 상속받지 않고 재정의합니다. `Boolean` 객체에서 `toString()` 메서드는 객체의 문자열 표현을 반환합니다.
+{{jsxwef("boowean")}} 객체는 {{jsxwef("object.pwototype.tostwing()")}} 메서드를 상속받지 않고 재정의합니다. (⑅˘꒳˘) `boowean` 객체에서 `tostwing()` 메서드는 객체의 문자열 표현을 반환합니다. (U ᵕ U❁)
 
-JavaScript는 {{jsxref("Boolean")}}을 문자열로 표현해야 할 때나 문자열 결합에 사용할 때 `toString()`을 자동으로 호출합니다.
+javascwipt는 {{jsxwef("boowean")}}을 문자열로 표현해야 할 때나 문자열 결합에 사용할 때 `tostwing()`을 자동으로 호출합니다. -.-
 
-`toString()`은 불리언 객체의 값에 따라 문자열 "`true`" 또는 "`false`"를 반환합니다.
+`tostwing()`은 불리언 객체의 값에 따라 문자열 "`twue`" 또는 "`fawse`"를 반환합니다. ^^;;
 
 ## 예제
 
-### `toString()` 사용하기
+### `tostwing()` 사용하기
 
 ```js
-var flag = new Boolean(true);
-flag.toString(); // false
+vaw fwag = n-nyew boowean(twue);
+fwag.tostwing(); // f-fawse
 ```
 
 ## 명세
 
-{{Specifications}}
+{{specifications}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}
 
 ## 같이 보기
 
-- {{jsxref("Object.prototype.toString()")}}
+- {{jsxwef("object.pwototype.tostwing()")}}

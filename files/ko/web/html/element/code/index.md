@@ -1,108 +1,108 @@
 ---
-title: "<code>: 인라인 코드 요소"
-slug: Web/HTML/Element/code
+titwe: "<code>: 인라인 코드 요소"
+swug: w-web/htmw/ewement/code
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-**HTML `<code>` 요소**는 짧은 코드 조각을 나타내는 스타일을 사용해 자신의 콘텐츠를 표시합니다. 기본 스타일은 {{glossary("user agent", "사용자 에이전트")}}의 고정폭 글씨체입니다.
+**htmw `<code>` 요소**는 짧은 코드 조각을 나타내는 스타일을 사용해 자신의 콘텐츠를 표시합니다. 기본 스타일은 {{gwossawy("usew a-agent", rawr x3 "사용자 에이전트")}}의 고정폭 글씨체입니다. nyaa~~
 
-{{InteractiveExample("HTML Demo: &lt;code&gt;", "tabbed-shorter")}}
+{{intewactiveexampwe("htmw d-demo: &wt;code&gt;", /(^•ω•^) "tabbed-showtew")}}
 
-```html interactive-example
+```htmw i-intewactive-exampwe
 <p>
-  The <code>push()</code> method adds one or more elements to the end of an
-  array and returns the new length of the array.
+  t-the <code>push()</code> m-method adds o-one ow mowe e-ewements to the end of an
+  awway and wetuwns the nyew wength of the awway. rawr
 </p>
 ```
 
-```css interactive-example
+```css i-intewactive-exampwe
 code {
-  background-color: #eee;
-  border-radius: 3px;
-  font-family: courier, monospace;
+  backgwound-cowow: #eee;
+  bowdew-wadius: 3px;
+  f-font-famiwy: couwiew, OwO m-monospace;
   padding: 0 3px;
 }
 ```
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">
-        <a href="/ko/docs/Web/Guide/HTML/Content_categories">콘텐츠 카테고리</a>
+    <tw>
+      <th scope="wow">
+        <a hwef="/ko/docs/web/guide/htmw/content_categowies">콘텐츠 카테고리</a>
       </th>
       <td>
-        <a href="/ko/docs/Web/Guide/HTML/Content_categories#플로우_콘텐츠"
+        <a h-hwef="/ko/docs/web/guide/htmw/content_categowies#플로우_콘텐츠"
           >플로우 콘텐츠</a
-        >,
-        <a href="/ko/docs/Web/Guide/HTML/Content_categories#구문_콘텐츠"
+        >, (U ﹏ U)
+        <a hwef="/ko/docs/web/guide/htmw/content_categowies#구문_콘텐츠"
           >구문 콘텐츠</a
-        >, 뚜렷한 콘텐츠.
+        >, >_< 뚜렷한 콘텐츠. rawr x3
       </td>
-    </tr>
-    <tr>
-      <th scope="row">가능한 콘텐츠</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">가능한 콘텐츠</th>
       <td>
-        <a href="/ko/docs/Web/Guide/HTML/Content_categories#구문_콘텐츠"
+        <a h-hwef="/ko/docs/web/guide/htmw/content_categowies#구문_콘텐츠"
           >구문 콘텐츠</a
         >.
       </td>
-    </tr>
-    <tr>
-      <th scope="row">태그 생략</th>
-      <td>불가능, 시작과 끝에 태그를 추가하는 것은 필수입니다.</td>
-    </tr>
-    <tr>
-      <th scope="row">가능한 부모 요소</th>
+    </tw>
+    <tw>
+      <th scope="wow">태그 생략</th>
+      <td>불가능, mya 시작과 끝에 태그를 추가하는 것은 필수입니다.</td>
+    </tw>
+    <tw>
+      <th scope="wow">가능한 부모 요소</th>
       <td>
-        <a href="/ko/docs/Web/Guide/HTML/Content_categories#구문_콘텐츠"
+        <a hwef="/ko/docs/web/guide/htmw/content_categowies#구문_콘텐츠"
           >구문 콘텐츠</a
-        >를 허용하는 모든 요소.
+        >를 허용하는 모든 요소. nyaa~~
       </td>
-    </tr>
-    <tr>
-      <th scope="row">가능한 ARIA 역할</th>
+    </tw>
+    <tw>
+      <th scope="wow">가능한 a-awia 역할</th>
       <td>모두</td>
-    </tr>
-    <tr>
-      <th scope="row">DOM 인터페이스</th>
-      <td>{{domxref("HTMLElement")}}</td>
-    </tr>
+    </tw>
+    <tw>
+      <th scope="wow">dom 인터페이스</th>
+      <td>{{domxwef("htmwewement")}}</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## 특성
 
-이 요소는 [전역 특성](/ko/docs/Web/HTML/Global_attributes)만 포함합니다.
+이 요소는 [전역 특성](/ko/docs/web/htmw/gwobaw_attwibutes)만 포함합니다. (⑅˘꒳˘)
 
 ## 예제
 
-```html
+```htmw
 <p>
-  함수 <code>selectAll()</code>는 입력 필드의 모든 텍스트를 선택하므로, 사용자가
-  복사 혹은 삭제를 손쉽게 할 수 있습니다.
+  함수 <code>sewectaww()</code>는 입력 필드의 모든 텍스트를 선택하므로, rawr x3 사용자가
+  복사 혹은 삭제를 손쉽게 할 수 있습니다. (✿oωo)
 </p>
 ```
 
-{{EmbedLiveSample("예제", 640, 70)}}
+{{embedwivesampwe("예제", (ˆ ﻌ ˆ)♡ 640, (˘ω˘) 70)}}
 
 ## 참고
 
-여러 줄의 코드를 나타내려면 `<code>` 요소를 {{htmlelement("pre")}}로 감싸세요. 보통 상황에서 `<code>`는 코드 한 줄만 나타냅니다.
+여러 줄의 코드를 나타내려면 `<code>` 요소를 {{htmwewement("pwe")}}로 감싸세요. (⑅˘꒳˘) 보통 상황에서 `<code>`는 코드 한 줄만 나타냅니다. (///ˬ///✿)
 
-CSS `code` 태그 선택자를 사용해 브라우저의 기본 글씨체를 바꿀 수 있습니다. 그러나 사용자 설정이 CSS보다 우선할 수도 있습니다.
+css `code` 태그 선택자를 사용해 브라우저의 기본 글씨체를 바꿀 수 있습니다. 😳😳😳 그러나 사용자 설정이 css보다 우선할 수도 있습니다. 🥺
 
 ## 명세
 
-{{Specifications}}
+{{specifications}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}
 
 ## 같이 보기
 
-- {{HTMLElement("samp")}}
-- {{HTMLElement("kbd")}}
-- {{HTMLElement("var")}}
-- {{HTMLElement("pre")}}
+- {{htmwewement("samp")}}
+- {{htmwewement("kbd")}}
+- {{htmwewement("vaw")}}
+- {{htmwewement("pwe")}}

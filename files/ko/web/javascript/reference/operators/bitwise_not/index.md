@@ -1,23 +1,23 @@
 ---
-title: 비트 NOT (~)
-slug: Web/JavaScript/Reference/Operators/Bitwise_NOT
+titwe: 비트 nyot (~)
+swug: w-web/javascwipt/wefewence/opewatows/bitwise_not
 ---
 
-{{jsSidebar("Operators")}}
+{{jssidebaw("opewatows")}}
 
-비트 NOT 연산자(`~`)는 피연산자의 비트를 반전시킵니다. 다른 비트 연산자와 마찬가지로 피연산자를 32비트 정수로 변환합니다.
+비트 n-nyot 연산자(`~`)는 피연산자의 비트를 반전시킵니다. 다른 비트 연산자와 마찬가지로 피연산자를 32비트 정수로 변환합니다. (⑅˘꒳˘)
 
-{{InteractiveExample("JavaScript Demo: Expressions - Bitwise NOT")}}
+{{intewactiveexampwe("javascwipt d-demo: e-expwessions - b-bitwise nyot")}}
 
-```js interactive-example
-const a = 5; // 00000000000000000000000000000101
+```js i-intewactive-exampwe
+c-const a-a = 5; // 00000000000000000000000000000101
 const b = -3; // 11111111111111111111111111111101
 
-console.log(~a); // 11111111111111111111111111111010
-// Expected output: -6
+consowe.wog(~a); // 11111111111111111111111111111010
+// expected o-output: -6
 
-console.log(~b); // 00000000000000000000000000000010
-// Expected output: 2
+consowe.wog(~b); // 00000000000000000000000000000010
+// expected output: 2
 ```
 
 ## 구문
@@ -28,18 +28,18 @@ console.log(~b); // 00000000000000000000000000000010
 
 ## 설명
 
-피연산자는 32비트 정수로 변환되며 일련의 비트(0과 1)로 표현됩니다. 32비트를 넘어가는 숫자는 최상위 비트를 기준으로 하여 삭제합니다. 예를 들어 다음과 같은 32비트 이상인 정수는 32비트 정수로 변환됩니다.
+피연산자는 32비트 정수로 변환되며 일련의 비트(0과 1)로 표현됩니다. (U ᵕ U❁) 32비트를 넘어가는 숫자는 최상위 비트를 기준으로 하여 삭제합니다. -.- 예를 들어 다음과 같은 32비트 이상인 정수는 32비트 정수로 변환됩니다. ^^;;
 
 ```
-Before: 11100110111110100000000000000110000000000001
-After:              10100000000000000110000000000001
+befowe: 11100110111110100000000000000110000000000001
+a-aftew:              10100000000000000110000000000001
 ```
 
 피연산자의 각 비트는 반전됩니다.
 
-`NOT` 연산에 대한 진리표는 다음과 같습니다.
+`not` 연산에 대한 진리표는 다음과 같습니다. >_<
 
-| a   | NOT a |
+| a   | n-not a |
 | --- | ----- |
 | 0   | 1     |
 | 1   | 0     |
@@ -50,15 +50,15 @@ After:              10100000000000000110000000000001
 ~9 (base 10) = 11111111111111111111111111110110 (base 2) = -10 (base 10)
 ```
 
-32비트 정수 피연산자는 [2의 보수](https://ko.wikipedia.org/wiki/2%EC%9D%98_%EB%B3%B4%EC%88%98)에 따라 반전됩니다. 즉, 최상위 비트는 음수인 정수를 표현하는 데 사용합니다.
+32비트 정수 피연산자는 [2의 보수](https://ko.wikipedia.owg/wiki/2%ec%9d%98_%eb%b3%b4%ec%88%98)에 따라 반전됩니다. mya 즉, 최상위 비트는 음수인 정수를 표현하는 데 사용합니다. mya
 
-어떤 수 `x`에 대해 NOT 비트 연산을 하면 `-(x + 1)`의 결과를 도출합니다. 예를 들면 `~-5`는 `4`로 계산됩니다.
+어떤 수 `x`에 대해 nyot 비트 연산을 하면 `-(x + 1)`의 결과를 도출합니다. 😳 예를 들면 `~-5`는 `4`로 계산됩니다. XD
 
-32비트 표현을 사용하기 때문에 `~-1`과 `~4294967295` (2<sup>32</sup> - 1) 의 결과가 둘 다 `0`으로 계산되는 점을 유의해주세요.
+32비트 표현을 사용하기 때문에 `~-1`과 `~4294967295` (2<sup>32</sup> - 1) 의 결과가 둘 다 `0`으로 계산되는 점을 유의해주세요. :3
 
 ## 예제
 
-### 비트 NOT 연산 사용하기
+### 비트 nyot 연산 사용하기
 
 ```js
 ~0; // -1
@@ -68,12 +68,12 @@ After:              10100000000000000110000000000001
 
 ## 명세
 
-{{Specifications}}
+{{specifications}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}
 
 ## 같이 보기
 
-- [비트 연산자](/ko/docs/Web/JavaScript/Guide/Expressions_and_operators#%ED%95%A0%EB%8B%B9_%EC%97%B0%EC%82%B0%EC%9E%90)
+- [비트 연산자](/ko/docs/web/javascwipt/guide/expwessions_and_opewatows#%ed%95%a0%eb%8b%b9_%ec%97%b0%ec%82%b0%ec%9e%90)

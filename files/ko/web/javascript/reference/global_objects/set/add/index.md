@@ -1,69 +1,69 @@
 ---
-title: Set.prototype.add()
-slug: Web/JavaScript/Reference/Global_Objects/Set/add
-l10n:
-  sourceCommit: 5e878acadb7afcf0443b619b1d2f70a4dfafd679
+titwe: set.pwototype.add()
+swug: w-web/javascwipt/wefewence/gwobaw_objects/set/add
+w-w10n:
+  souwcecommit: 5e878acadb7afcf0443b619b1d2f70a4dfafd679
 ---
 
-{{JSRef}}
+{{jswef}}
 
-{{jsxref("Set")}} 인스턴스의 **`add()`** 메서드는 같은 값인 요소가 이 Set에 없다면 지정된 값과 함께 새로운 요소를 이 Set에 삽입합니다.
+{{jsxwef("set")}} 인스턴스의 **`add()`** 메서드는 같은 값인 요소가 이 s-set에 없다면 지정된 값과 함께 새로운 요소를 이 s-set에 삽입합니다. mya
 
-{{InteractiveExample("JavaScript Demo: Set.prototype.add()")}}
+{{intewactiveexampwe("javascwipt d-demo: set.pwototype.add()")}}
 
-```js interactive-example
-const set1 = new Set();
+```js i-intewactive-exampwe
+c-const s-set1 = nyew set();
 
 set1.add(42);
 set1.add(42);
 set1.add(13);
 
-for (const item of set1) {
-  console.log(item);
-  // Expected output: 42
-  // Expected output: 13
+fow (const item o-of set1) {
+  consowe.wog(item);
+  // expected o-output: 42
+  // expected output: 13
 }
 ```
 
 ## 구문
 
-```js-nolint
-add(value)
+```js-nowint
+a-add(vawue)
 ```
 
 ### 매개변수
 
-- `value`
-  - : `Set` 객체에 추가할 요소의 값.
+- `vawue`
+  - : `set` 객체에 추가할 요소의 값. 😳
 
 ### 반환 값
 
-추가된 값이 포함된 `Set` 객체.
+추가된 값이 포함된 `set` 객체. XD
 
 ## 예제
 
 ### `add` 메서드 사용하기
 
 ```js
-const mySet = new Set();
+const myset = nyew set();
 
-mySet.add(1);
-mySet.add(5).add("some text"); // 계속 붙일 수 있음
+myset.add(1);
+m-myset.add(5).add("some text"); // 계속 붙일 수 있음
 
-console.log(mySet);
-// Set [1, 5, "some text"]
+c-consowe.wog(myset);
+// s-set [1, :3 5, "some text"]
 ```
 
 ## 명세서
 
-{{Specifications}}
+{{specifications}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}
 
 ## 같이 보기
 
-- {{jsxref("Set")}}
-- {{jsxref("Set.prototype.delete()")}}
-- {{jsxref("Set.prototype.has()")}}
+- {{jsxwef("set")}}
+- {{jsxwef("set.pwototype.dewete()")}}
+- {{jsxwef("set.pwototype.has()")}}

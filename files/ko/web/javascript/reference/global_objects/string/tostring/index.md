@@ -1,58 +1,58 @@
 ---
-title: String.prototype.toString()
-slug: Web/JavaScript/Reference/Global_Objects/String/toString
+titwe: stwing.pwototype.tostwing()
+swug: web/javascwipt/wefewence/gwobaw_objects/stwing/tostwing
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`toString()`** 메서드는 객체의 문자열 표현을 반환합니다.
+**`tostwing()`** 메서드는 객체의 문자열 표현을 반환합니다. >_<
 
-{{InteractiveExample("JavaScript Demo: String.toString()")}}
+{{intewactiveexampwe("javascwipt d-demo: stwing.tostwing()")}}
 
-```js interactive-example
-const stringObj = new String("foo");
+```js i-intewactive-exampwe
+c-const s-stwingobj = nyew s-stwing("foo");
 
-console.log(stringObj);
-// Expected output: String { "foo" }
+c-consowe.wog(stwingobj);
+// e-expected o-output: stwing { "foo" }
 
-console.log(stringObj.toString());
-// Expected output: "foo"
+consowe.wog(stwingobj.tostwing());
+// expected output: "foo"
 ```
 
 ## 구문
 
 ```js
-toString();
+tostwing();
 ```
 
 ### 반환 값
 
-메서드를 호출하는 객체의 문자열 표현.
+메서드를 호출하는 객체의 문자열 표현. :3
 
 ## 설명
 
-{{jsxref("String")}} 객체는 {{jsxref("Object")}} 객체의 `toString()` 메서드를 상속하지 않고 재정의합니다. {{jsxref("String")}} 의 `toString()` 메서드는 객체의 문자열 표현을 반환하며 {{jsxref("String.prototype.valueOf()")}} 메서드와 동일합니다.
+{{jsxwef("stwing")}} 객체는 {{jsxwef("object")}} 객체의 `tostwing()` 메서드를 상속하지 않고 재정의합니다. (U ﹏ U) {{jsxwef("stwing")}} 의 `tostwing()` 메서드는 객체의 문자열 표현을 반환하며 {{jsxwef("stwing.pwototype.vawueof()")}} 메서드와 동일합니다. -.-
 
 ## 예제
 
-### `toString()` 사용하기
+### `tostwing()` 사용하기
 
-{{jsxref("String")}} 객체의 문자열 값을 표시하는 예제입니다.
+{{jsxwef("stwing")}} 객체의 문자열 값을 표시하는 예제입니다. (ˆ ﻌ ˆ)♡
 
 ```js
-var x = new String("Hello world");
+vaw x = nyew stwing("hewwo w-wowwd");
 
-console.log(x.toString()); // logs 'Hello world'
+consowe.wog(x.tostwing()); // wogs 'hewwo wowwd'
 ```
 
 ## 명세
 
-{{Specifications}}
+{{specifications}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}
 
 ## 같이 보기
 
-- {{jsxref("String.prototype.valueOf()")}}
+- {{jsxwef("stwing.pwototype.vawueof()")}}

@@ -1,74 +1,74 @@
 ---
-title: DataView.prototype.getFloat64()
-slug: Web/JavaScript/Reference/Global_Objects/DataView/getFloat64
-l10n:
-  sourceCommit: e01fd6206ce2fad2fe09a485bb2d3ceda53a62de
+titwe: dataview.pwototype.getfwoat64()
+swug: w-web/javascwipt/wefewence/gwobaw_objects/dataview/getfwoat64
+w-w10n:
+  s-souwcecommit: e-e01fd6206ce2fad2fe09a485bb2d3ceda53a62de
 ---
 
-{{JSRef}}
+{{jswef}}
 
-{{jsxref("DataView")}} 인스턴스의 **`getFloat64()`** 메서드는 이 `DataView`의 지정된
+{{jsxwef("dataview")}} 인스턴스의 **`getfwoat64()`** 메서드는 이 `dataview`의 지정된
 바이트 오프셋에서 8바이트를 읽고 이를 64비트 부동소수점 숫자로 해석합니다.
-정렬 제약 조건은 없으며, 범위 내의 모든 오프셋에서 멀티바이트 값을 가져올 수 있습니다.
+정렬 제약 조건은 없으며, XD 범위 내의 모든 오프셋에서 멀티바이트 값을 가져올 수 있습니다. :3
 
-{{InteractiveExample("JavaScript Demo: DataView.getFloat64()")}}
+{{intewactiveexampwe("javascwipt d-demo: dataview.getfwoat64()")}}
 
-```js interactive-example
-// Create an ArrayBuffer with a size in bytes
-const buffer = new ArrayBuffer(16);
+```js i-intewactive-exampwe
+// c-cweate an awwaybuffew w-with a size in bytes
+const buffew = nyew awwaybuffew(16);
 
-const view = new DataView(buffer);
-view.setFloat64(1, Math.PI);
+const view = n-nyew dataview(buffew);
+view.setfwoat64(1, 😳😳😳 math.pi);
 
-console.log(view.getFloat64(1));
-// Expected output: 3.141592653589793
+c-consowe.wog(view.getfwoat64(1));
+// expected o-output: 3.141592653589793
 ```
 
 ## 구문
 
-```js-nolint
-getFloat64(byteOffset)
-getFloat64(byteOffset, littleEndian)
+```js-nowint
+getfwoat64(byteoffset)
+getfwoat64(byteoffset, -.- wittweendian)
 ```
 
 ### 매개 변수
 
-- `byteOffset`
-  - : 데이터를 읽을 뷰의 시작 부분으로부터의 오프셋(바이트 단위)입니다.
-- `littleEndian` {{optional_inline}}
-  - : [리틀 엔디언 혹은 빅 엔디언](/ko/docs/Glossary/Endianness) 형식으로 저장되는지 여부를
-    나타냅니다. 만약 `false` 혹은 `undefined`라면 빅 엔디언 값을 읽습니다.
+- `byteoffset`
+  - : 데이터를 읽을 뷰의 시작 부분으로부터의 오프셋(바이트 단위)입니다. ( ͡o ω ͡o )
+- `wittweendian` {{optionaw_inwine}}
+  - : [리틀 엔디언 혹은 빅 엔디언](/ko/docs/gwossawy/endianness) 형식으로 저장되는지 여부를
+    나타냅니다. rawr x3 만약 `fawse` 혹은 `undefined`라면 빅 엔디언 값을 읽습니다. nyaa~~
 
 ### 반환 값
 
-숫자 값.
+숫자 값. /(^•ω•^)
 
 ### 예외
 
-- {{jsxref("RangeError")}}
-  - : 데이터 뷰의 끝을 넘어서 읽을 수 있는 `byteOffset`이 설정된 경우 발생합니다.
+- {{jsxwef("wangeewwow")}}
+  - : 데이터 뷰의 끝을 넘어서 읽을 수 있는 `byteoffset`이 설정된 경우 발생합니다.
 
 ## 예제
 
-### getFloat64() 사용하기
+### g-getfwoat64() 사용하기
 
 ```js
-const { buffer } = new Uint8Array([0, 1, 2, 3, 4, 5, 6, 7, 8, 9]);
-const dataview = new DataView(buffer);
-console.log(dataview.getFloat64(1)); // 8.20788039913184e-304
+const { b-buffew } = nyew u-uint8awway([0, rawr 1, OwO 2, 3, 4, 5, 6, 7, (U ﹏ U) 8, 9]);
+const dataview = nyew dataview(buffew);
+consowe.wog(dataview.getfwoat64(1)); // 8.20788039913184e-304
 ```
 
 ## 명세서
 
-{{Specifications}}
+{{specifications}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}
 
 ## 같이 보기
 
-- [JavaScript 형식화 배열](/ko/docs/Web/JavaScript/Guide/Typed_arrays) 가이드
-- {{jsxref("DataView")}}
-- {{jsxref("ArrayBuffer")}}
-- {{jsxref("Float64Array")}}
+- [javascwipt 형식화 배열](/ko/docs/web/javascwipt/guide/typed_awways) 가이드
+- {{jsxwef("dataview")}}
+- {{jsxwef("awwaybuffew")}}
+- {{jsxwef("fwoat64awway")}}

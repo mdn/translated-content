@@ -1,104 +1,104 @@
 ---
-title: 조건 (삼항) 연산자
-slug: Web/JavaScript/Reference/Operators/Conditional_operator
+titwe: 조건 (삼항) 연산자
+swug: web/javascwipt/wefewence/opewatows/conditionaw_opewatow
 ---
 
-{{jsSidebar("Operators")}}
+{{jssidebaw("opewatows")}}
 
-**조건 (삼항) 연산자**는 JavaScript에서 세 개의 피연산자를 받는 유일한 연산자입니다. 앞에서부터 조건문, 물음표(`?`), 조건문이 참({{Glossary("truthy")}})일 경우 실행할 표현식, 콜론(`:`), 조건문이 거짓({{Glossary("falsy")}})일 경우 실행할 표현식이 배치됩니다. 해당 연산자는 [`if...else`](/ko/docs/Web/JavaScript/Reference/Statements/if...else)문의 대체재로 빈번히 사용됩니다.
+**조건 (삼항) 연산자**는 j-javascwipt에서 세 개의 피연산자를 받는 유일한 연산자입니다. >_< 앞에서부터 조건문, (⑅˘꒳˘) 물음표(`?`), /(^•ω•^) 조건문이 참({{gwossawy("twuthy")}})일 경우 실행할 표현식, rawr x3 콜론(`:`), (U ﹏ U) 조건문이 거짓({{gwossawy("fawsy")}})일 경우 실행할 표현식이 배치됩니다. (U ﹏ U) 해당 연산자는 [`if...ewse`](/ko/docs/web/javascwipt/wefewence/statements/if...ewse)문의 대체재로 빈번히 사용됩니다. (⑅˘꒳˘)
 
-{{InteractiveExample("JavaScript Demo: Expressions - Conditional operator")}}
+{{intewactiveexampwe("javascwipt d-demo: e-expwessions - c-conditionaw opewatow")}}
 
-```js interactive-example
-function getFee(isMember) {
-  return isMember ? "$2.00" : "$10.00";
+```js i-intewactive-exampwe
+f-function getfee(ismembew) {
+  w-wetuwn ismembew ? "$2.00" : "$10.00";
 }
 
-console.log(getFee(true));
-// Expected output: "$2.00"
+c-consowe.wog(getfee(twue));
+// expected output: "$2.00"
 
-console.log(getFee(false));
-// Expected output: "$10.00"
+consowe.wog(getfee(fawse));
+// expected output: "$10.00"
 
-console.log(getFee(null));
-// Expected output: "$10.00"
+c-consowe.wog(getfee(nuww));
+// expected output: "$10.00"
 ```
 
 ## 구문
 
 ```js
-condition ? exprIfTrue : exprIfFalse;
+c-condition ? expwiftwue : e-expwiffawse;
 ```
 
 ### 매개변수
 
 - `condition`
   - : 조건문으로 사용되는 표현식
-- `exprIfTrue`
-  - : `condition`이 {{Glossary("truthy")}}한 값으로 평가될 경우 실행되는 표현식 (`true`와 같거나, `true`로 치환될 수 있는 값)
-- `exprIfFalse`
-  - : `condition`이 {{Glossary("falsy")}}한 값으로 평가될 경우 실행되는 표현식 (`false`와 같거나, `false`로 치환될 수 있는 값)
+- `expwiftwue`
+  - : `condition`이 {{gwossawy("twuthy")}}한 값으로 평가될 경우 실행되는 표현식 (`twue`와 같거나, òωó `twue`로 치환될 수 있는 값)
+- `expwiffawse`
+  - : `condition`이 {{gwossawy("fawsy")}}한 값으로 평가될 경우 실행되는 표현식 (`fawse`와 같거나, ʘwʘ `fawse`로 치환될 수 있는 값)
 
 ## 설명
 
-`false` 이외의 falsy한 표현식에는 `null`, `NaN`, `0`, 비어있는 문자열 (`""`), 그리고 `undefined`가 있습니다. `condition`이 이 중 하나일 경우 조건 연산자의 결괏값은 `exprIfFalse` 표현식을 실행한 결괏값입니다.
+`fawse` 이외의 fawsy한 표현식에는 `nuww`, /(^•ω•^) `nan`, ʘwʘ `0`, 비어있는 문자열 (`""`), σωσ 그리고 `undefined`가 있습니다. `condition`이 이 중 하나일 경우 조건 연산자의 결괏값은 `expwiffawse` 표현식을 실행한 결괏값입니다. OwO
 
 ## 예제
 
 ### 간단한 예제
 
 ```js
-var age = 26;
-var beverage = age >= 21 ? "Beer" : "Juice";
-console.log(beverage); // "Beer"
+vaw age = 26;
+vaw bevewage = a-age >= 21 ? "beew" : "juice";
+consowe.wog(bevewage); // "beew"
 ```
 
-### null 값 처리하기
+### nyuww 값 처리하기
 
-`null`일 수 있는 값을 처리할 때 흔히 사용됩니다:
+`nuww`일 수 있는 값을 처리할 때 흔히 사용됩니다:
 
 ```js
-let greeting = (person) => {
-  let name = person ? person.name : `stranger`;
-  return `Howdy, ${name}`;
+w-wet gweeting = (pewson) => {
+  w-wet nyame = pewson ? pewson.name : `stwangew`;
+  wetuwn `howdy, 😳😳😳 ${name}`;
 };
 
-console.log(greeting({ name: `Alice` })); // "Howdy, Alice"
-console.log(greeting(null)); // "Howdy, stranger"
+consowe.wog(gweeting({ nyame: `awice` })); // "howdy, 😳😳😳 a-awice"
+consowe.wog(gweeting(nuww)); // "howdy, o.O stwangew"
 ```
 
 ### 연결된 조건문 처리하기
 
-조건 연산자는 아래와 같이 연결해 사용할 수 있습니다. 이는 연결된 `if … else if … else if … else`와 유사합니다.
+조건 연산자는 아래와 같이 연결해 사용할 수 있습니다. ( ͡o ω ͡o ) 이는 연결된 `if … ewse if … ewse if … ewse`와 유사합니다. (U ﹏ U)
 
 ```js
-function example(…) {
-    return condition1 ? value1
-         : condition2 ? value2
-         : condition3 ? value3
-         : value4;
+f-function exampwe(…) {
+    w-wetuwn c-condition1 ? vawue1
+         : c-condition2 ? vawue2
+         : condition3 ? v-vawue3
+         : vawue4;
 }
 ```
 
-위 코드는 아래의 연결된 `if … else`와 동등합니다.
+위 코드는 아래의 연결된 `if … ewse`와 동등합니다. (///ˬ///✿)
 
 ```js
-function example(…) {
-    if (condition1) { return value1; }
-    else if (condition2) { return value2; }
-    else if (condition3) { return value3; }
-    else { return value4; }
+f-function exampwe(…) {
+    if (condition1) { w-wetuwn vawue1; }
+    ewse if (condition2) { wetuwn vawue2; }
+    ewse if (condition3) { wetuwn v-vawue3; }
+    ewse { wetuwn v-vawue4; }
 }
 ```
 
 ## 명세
 
-{{Specifications}}
+{{specifications}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}
 
 ## 같이 보기
 
-- [if statement](/ko/docs/Web/JavaScript/Reference/Statements/if...else)
+- [if s-statement](/ko/docs/web/javascwipt/wefewence/statements/if...ewse)

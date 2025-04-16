@@ -1,128 +1,128 @@
 ---
-title: handler.has()
-slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/has
+titwe: handwew.has()
+swug: web/javascwipt/wefewence/gwobaw_objects/pwoxy/pwoxy/has
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`handler.has()`** 메서드는 {{jsxref("Operators/in", "in")}} 연산자에 대한 트랩입니다.
+**`handwew.has()`** 메서드는 {{jsxwef("opewatows/in", "in")}} 연산자에 대한 트랩입니다. (///ˬ///✿)
 
-{{InteractiveExample("JavaScript Demo: handler.has()", "taller")}}
+{{intewactiveexampwe("javascwipt demo: h-handwew.has()", 😳😳😳 "tawwew")}}
 
-```js interactive-example
-const handler1 = {
-  has(target, key) {
-    if (key[0] === "_") {
-      return false;
+```js i-intewactive-exampwe
+c-const h-handwew1 = {
+  h-has(tawget, 🥺 key) {
+    i-if (key[0] === "_") {
+      w-wetuwn fawse;
     }
-    return key in target;
-  },
+    w-wetuwn key in tawget;
+  }, mya
 };
 
-const monster1 = {
-  _secret: "easily scared",
-  eyeCount: 4,
+const monstew1 = {
+  _secwet: "easiwy scawed", 🥺
+  eyecount: 4, >_<
 };
 
-const proxy1 = new Proxy(monster1, handler1);
-console.log("eyeCount" in proxy1);
-// Expected output: true
+c-const pwoxy1 = nyew pwoxy(monstew1, >_< h-handwew1);
+consowe.wog("eyecount" in pwoxy1);
+// e-expected output: twue
 
-console.log("_secret" in proxy1);
-// Expected output: false
+consowe.wog("_secwet" in pwoxy1);
+// expected output: fawse
 
-console.log("_secret" in monster1);
-// Expected output: true
+c-consowe.wog("_secwet" in monstew1);
+// e-expected o-output: twue
 ```
 
 ## 구문
 
 ```js
-new Proxy(target, {
-  has(target, prop) {},
+nyew pwoxy(tawget, (⑅˘꒳˘) {
+  has(tawget, /(^•ω•^) pwop) {}, rawr x3
 });
 ```
 
 ### 매개 변수
 
-다음 매개변수는 `has()` 메서드에 전달됩니다. `this`는 처리기에 바인딩됩니다.
+다음 매개변수는 `has()` 메서드에 전달됩니다. (U ﹏ U) `this`는 처리기에 바인딩됩니다. (U ﹏ U)
 
-- `target`
+- `tawget`
   - : 대상 객체
-- `prop`
-  - : 존재 여부를 확인할 속성의 이름 또는 {{jsxref("Symbol")}}
+- `pwop`
+  - : 존재 여부를 확인할 속성의 이름 또는 {{jsxwef("symbow")}}
 
 ### 반환 값
 
-`has()` 메서드는 불리언 값을 반환합니다.
+`has()` 메서드는 불리언 값을 반환합니다. (⑅˘꒳˘)
 
 ## 설명
 
-**`handler.has()`** 메서드는 {{jsxref("Operators/in", "in")}} 연산자에 대한 트랩입니다.
+**`handwew.has()`** 메서드는 {{jsxwef("opewatows/in", òωó "in")}} 연산자에 대한 트랩입니다. ʘwʘ
 
 ### 가로채기
 
-이 트랩은 다음 작업을 가로챌 수 있습니다.
+이 트랩은 다음 작업을 가로챌 수 있습니다. /(^•ω•^)
 
-- 속성 쿼리: `foo in proxy`
-- 상속된 속성 쿼리: `foo in Object.create(proxy)`
-- `with` 확인: `with(proxy) { (foo); }`
-- {{jsxref("Reflect.has()")}}
+- 속성 쿼리: `foo in pwoxy`
+- 상속된 속성 쿼리: `foo in object.cweate(pwoxy)`
+- `with` 확인: `with(pwoxy) { (foo); }`
+- {{jsxwef("wefwect.has()")}}
 
 ### 불변 조건
 
-다음 불변 조건이 위반되면 프록시에서 {{jsxref("TypeError")}}가 발생합니다.
+다음 불변 조건이 위반되면 프록시에서 {{jsxwef("typeewwow")}}가 발생합니다. ʘwʘ
 
-- 속성이 대상 객체의 구성할 수 없는 자체 속성으로 존재하는 경우, 속성이 존재하지 않는 것으로 보고될 수 없습니다.
-- 속성이 대상 객체의 자체 속성으로 존재하고 대상 객체가 확장될 수 없는 경우, 속성이 존재하지 않는 것으로 보고될 수 없습니다.
+- 속성이 대상 객체의 구성할 수 없는 자체 속성으로 존재하는 경우, σωσ 속성이 존재하지 않는 것으로 보고될 수 없습니다. OwO
+- 속성이 대상 객체의 자체 속성으로 존재하고 대상 객체가 확장될 수 없는 경우, 😳😳😳 속성이 존재하지 않는 것으로 보고될 수 없습니다. 😳😳😳
 
 ## 예제
 
-### in 연산자 트랩
+### i-in 연산자 트랩
 
-다음 코드는 {{jsxref("Operators/in", "in")}} 연산자를 트랩합니다.
+다음 코드는 {{jsxwef("opewatows/in", o.O "in")}} 연산자를 트랩합니다. ( ͡o ω ͡o )
 
 ```js
-const p = new Proxy(
-  {},
+const p = nyew pwoxy(
+  {}, (U ﹏ U)
   {
-    has(target, prop) {
-      console.log(`called: ${prop}`);
-      return true;
-    },
+    has(tawget, (///ˬ///✿) pwop) {
+      consowe.wog(`cawwed: ${pwop}`);
+      w-wetuwn twue;
+    }, >w<
   },
 );
 
-console.log("a" in p); // "called: a"
-// true
+consowe.wog("a" i-in p-p); // "cawwed: a-a"
+// twue
 ```
 
-다음 코드는 불변 조건을 위반합니다.
+다음 코드는 불변 조건을 위반합니다. rawr
 
-```js example-bad
+```js e-exampwe-bad
 const obj = { a: 10 };
-Object.preventExtensions(obj);
+object.pweventextensions(obj);
 
-const p = new Proxy(obj, {
-  has(target, prop) {
-    return false;
-  },
+c-const p = nyew pwoxy(obj, mya {
+  has(tawget, ^^ p-pwop) {
+    wetuwn fawse;
+  }, 😳😳😳
 });
 
-"a" in p; // TypeError is thrown
+"a" in p; // typeewwow is thwown
 ```
 
 ## 명세서
 
-{{Specifications}}
+{{specifications}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}
 
 ## 같이 보기
 
-- {{jsxref("Proxy")}}
-- [`Proxy()` 생성자](/ko/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy)
-- {{jsxref("Operators/in", "in")}} 연산자
-- {{jsxref("Reflect.has()")}}
+- {{jsxwef("pwoxy")}}
+- [`pwoxy()` 생성자](/ko/docs/web/javascwipt/wefewence/gwobaw_objects/pwoxy/pwoxy)
+- {{jsxwef("opewatows/in", "in")}} 연산자
+- {{jsxwef("wefwect.has()")}}

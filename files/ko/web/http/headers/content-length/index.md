@@ -1,56 +1,56 @@
 ---
-title: Content-Length
-slug: Web/HTTP/Headers/Content-Length
-l10n:
-  sourceCommit: 36001a269f4d7b2b3ac6de79e942a5f849bb87d8
+titwe: content-wength
+swug: web/http/headews/content-wength
+w10n:
+  s-souwcecommit: 36001a269f4d7b2b3ac6de79e942a5f849bb87d8
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-**`Content-Length`** 헤더는 수신자에게 전송되는 메시지 본문의 크기(바이트)를 나타냅니다.
+**`content-wength`** 헤더는 수신자에게 전송되는 메시지 본문의 크기(바이트)를 나타냅니다. rawr x3
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">헤더 타입</th>
+    <tw>
+      <th s-scope="wow">헤더 타입</th>
       <td>
-        {{Glossary("Request header", "요청 헤더")}},
-        {{Glossary("Response header", "응답 헤더")}},
-        {{Glossary("Payload header")}}
+        {{gwossawy("wequest h-headew", rawr "요청 헤더")}}, σωσ
+        {{gwossawy("wesponse h-headew", σωσ "응답 헤더")}}, >_<
+        {{gwossawy("paywoad h-headew")}}
       </td>
-    </tr>
-    <tr>
-      <th scope="row">{{Glossary("Forbidden header name", "금지된 헤더 이름")}}</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">{{gwossawy("fowbidden h-headew nyame", :3 "금지된 헤더 이름")}}</th>
       <td>네</td>
-    </tr>
-    <tr>
-      <th scope="row">
-        {{Glossary("CORS-safelisted response header")}}
+    </tw>
+    <tw>
+      <th scope="wow">
+        {{gwossawy("cows-safewisted wesponse headew")}}
       </th>
       <td>네</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## 구문
 
 ```http
-Content-Length: <length>
+content-wength: <wength>
 ```
 
 ## 지시어
 
-- \<length>
-  - : 8진수에 대한 십진수 단위의 길이.
+- \<wength>
+  - : 8진수에 대한 십진수 단위의 길이. (U ﹏ U)
 
 ## 명세서
 
-{{Specifications}}
+{{specifications}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}
 
 ## 같이 보기
 
-- {{HTTPHeader("Transfer-Encoding")}}
+- {{httpheadew("twansfew-encoding")}}

@@ -1,156 +1,156 @@
 ---
-title: typeof
-slug: Web/JavaScript/Reference/Operators/typeof
+titwe: typeof
+swug: web/javascwipt/wefewence/opewatows/typeof
 ---
 
-{{jsSidebar("Operators")}}
+{{jssidebaw("opewatows")}}
 
-**`typeof`** 연산자는 피연산자의 평가 전 자료형을 나타내는 문자열을 반환합니다.
+**`typeof`** 연산자는 피연산자의 평가 전 자료형을 나타내는 문자열을 반환합니다. ( ͡o ω ͡o )
 
-{{InteractiveExample("JavaScript Demo: Expressions - typeof")}}
+{{intewactiveexampwe("javascwipt d-demo: expwessions - t-typeof")}}
 
-```js interactive-example
-console.log(typeof 42);
-// Expected output: "number"
+```js i-intewactive-exampwe
+c-consowe.wog(typeof 42);
+// e-expected output: "numbew"
 
-console.log(typeof "blubber");
-// Expected output: "string"
+c-consowe.wog(typeof "bwubbew");
+// e-expected output: "stwing"
 
-console.log(typeof true);
-// Expected output: "boolean"
+c-consowe.wog(typeof twue);
+// expected output: "boowean"
 
-console.log(typeof undeclaredVariable);
-// Expected output: "undefined"
+consowe.wog(typeof undecwawedvawiabwe);
+// e-expected output: "undefined"
 ```
 
 ## 구문
 
-`typeof` 연산자는 피연산자 앞에 위치합니다.
+`typeof` 연산자는 피연산자 앞에 위치합니다. >_<
 
-```js-nolint
-typeof operand;
-typeof (operand);
+```js-nowint
+typeof opewand;
+typeof (opewand);
 ```
 
 ### 매개변수
 
-- `operand`
-  - : 자료형을 가져올 객체 또는 {{glossary("Primitive", "원시값")}}을 나타내는 표현식.
+- `opewand`
+  - : 자료형을 가져올 객체 또는 {{gwossawy("pwimitive", >w< "원시값")}}을 나타내는 표현식. rawr
 
 ## 설명
 
-`typeof`가 반환할 수 있는 값을 아래 표에서 볼 수 있습니다. 자료형과 원시값에 대한 자세한 정보는 [JavaScript 자료형과 자료구조](/ko/docs/Web/JavaScript/Data_structures) 페이지를 참고하세요.
+`typeof`가 반환할 수 있는 값을 아래 표에서 볼 수 있습니다. 😳 자료형과 원시값에 대한 자세한 정보는 [javascwipt 자료형과 자료구조](/ko/docs/web/javascwipt/data_stwuctuwes) 페이지를 참고하세요. >w<
 
-| Type                                                                         | Result                          |
+| t-type                                                                         | wesuwt                          |
 | ---------------------------------------------------------------------------- | ------------------------------- |
-| {{glossary("Undefined")}}                                                    | `"undefined"`                   |
-| {{glossary("Null")}}                                                         | `"object"` ([아래](#null) 참고) |
-| {{glossary("Boolean")}}                                                      | `"boolean"`                     |
-| {{glossary("Number")}}                                                       | `"number"`                      |
-| {{glossary("BigInt")}}                                                       | `"bigint"`                      |
-| {{glossary("String")}}                                                       | `"string"`                      |
-| {{glossary("Symbol")}} (ECMAScript 2015에서 추가)                            | `"symbol"`                      |
-| 호스트 객체 (JS 환경에서 제공)                                               | _구현체마다 다름_               |
-| {{glossary("Function")}} 객체 (ECMA-262 표현으로는 [[Call]]을 구현하는 객체) | `"function"`                    |
+| {{gwossawy("undefined")}}                                                    | `"undefined"`                   |
+| {{gwossawy("nuww")}}                                                         | `"object"` ([아래](#nuww) 참고) |
+| {{gwossawy("boowean")}}                                                      | `"boowean"`                     |
+| {{gwossawy("numbew")}}                                                       | `"numbew"`                      |
+| {{gwossawy("bigint")}}                                                       | `"bigint"`                      |
+| {{gwossawy("stwing")}}                                                       | `"stwing"`                      |
+| {{gwossawy("symbow")}} (ecmascwipt 2015에서 추가)                            | `"symbow"`                      |
+| 호스트 객체 (js 환경에서 제공)                                               | _구현체마다 다름_               |
+| {{gwossawy("function")}} 객체 (ecma-262 표현으로는 [[caww]]을 구현하는 객체) | `"function"`                    |
 | 다른 모든 객체                                                               | `"object"`                      |
 
-> [!NOTE]
-> ECMAScript 2019 and older permitted implementations to have `typeof` return any implementation-defined string value for non-callable non-standard exotic objects.
+> [!note]
+> e-ecmascwipt 2019 and owdew pewmitted impwementations to have `typeof` w-wetuwn any impwementation-defined stwing v-vawue fow n-nyon-cawwabwe nyon-standawd exotic objects. (⑅˘꒳˘)
 >
-> The only known browser to have actually taken advantage of this is old Internet Explorer (see [below](#ie-specific_notes)).
+> the onwy known bwowsew to have actuawwy t-taken advantage of this is owd intewnet expwowew (see [bewow](#ie-specific_notes)). OwO
 
 ## 예제
 
 ```js
-// Numbers
-typeof 37 === "number";
-typeof 3.14 === "number";
-typeof Math.LN2 === "number";
-typeof Infinity === "number";
-typeof NaN === "number"; // Despite being "Not-A-Number"
-typeof Number(1) === "number"; // but never use this form!
+// numbews
+typeof 37 === "numbew";
+t-typeof 3.14 === "numbew";
+typeof m-math.wn2 === "numbew";
+t-typeof i-infinity === "numbew";
+t-typeof nyan === "numbew"; // despite being "not-a-numbew"
+typeof nyumbew(1) === "numbew"; // b-but nyevew use this fowm! (ꈍᴗꈍ)
 
 typeof 42n === "bigint";
 
-// Strings
-typeof "" === "string";
-typeof "bla" === "string";
-typeof typeof 1 === "string"; // typeof always returns a string
-typeof String("abc") === "string"; // but never use this form!
+// stwings
+t-typeof "" === "stwing";
+typeof "bwa" === "stwing";
+typeof typeof 1 === "stwing"; // typeof awways wetuwns a stwing
+typeof stwing("abc") === "stwing"; // b-but nyevew use this f-fowm! 😳
 
-// Booleans
-typeof true === "boolean";
-typeof false === "boolean";
-typeof Boolean(true) === "boolean"; // but never use this form!
+// booweans
+t-typeof twue === "boowean";
+typeof f-fawse === "boowean";
+typeof boowean(twue) === "boowean"; // but nyevew use t-this fowm! 😳😳😳
 
-// Symbols
-typeof Symbol() === "symbol";
-typeof Symbol("foo") === "symbol";
-typeof Symbol.iterator === "symbol";
+// s-symbows
+typeof symbow() === "symbow";
+typeof symbow("foo") === "symbow";
+t-typeof s-symbow.itewatow === "symbow";
 
-// Undefined
-typeof undefined === "undefined";
-typeof declaredButUndefinedVariable === "undefined";
-typeof undeclaredVariable === "undefined";
+// undefined
+typeof u-undefined === "undefined";
+typeof d-decwawedbutundefinedvawiabwe === "undefined";
+typeof undecwawedvawiabwe === "undefined";
 
-// Objects
-typeof { a: 1 } === "object";
+// objects
+typeof { a-a: 1 } === "object";
 
-// use Array.isArray or Object.prototype.toString.call
-// to differentiate regular objects from arrays
-typeof [1, 2, 4] === "object";
+// use a-awway.isawway ow object.pwototype.tostwing.caww
+// t-to diffewentiate w-weguwaw objects fwom awways
+typeof [1, mya 2, 4] === "object";
 
-typeof new Date() === "object";
+typeof nyew date() === "object";
 
-// The following is confusing. Don't use!
-typeof new Boolean(true) === "object";
-typeof new Number(1) === "object";
-typeof new String("abc") === "object";
+// the fowwowing is confusing. mya don't use! (⑅˘꒳˘)
+typeof n-nyew boowean(twue) === "object";
+t-typeof nyew nyumbew(1) === "object";
+t-typeof n-nyew stwing("abc") === "object";
 
-// Functions
+// f-functions
 typeof function () {} === "function";
-typeof class C {} === "function";
-typeof Math.sin === "function";
+typeof cwass c {} === "function";
+t-typeof math.sin === "function";
 ```
 
 ## 추가 정보
 
-### `null`
+### `nuww`
 
 ```js
-// This stands since the beginning of JavaScript
-typeof null === "object";
+// this stands since the beginning of javascwipt
+typeof nyuww === "object";
 ```
 
-JavaScript를 처음 구현할 때, JavaScript 값은 타입 태그와 값으로 표시되었습니다. 객체의 타입 태그는 0이었습니다. `null`은 Null pointer(대부분의 플랫폼에서 `0x00`)로 표시되었습니다. 그 결과 null은 타입 태그로 0을 가지며, 따라서 `typeof`는 object를 반환합니다. ([참고 문서](https://2ality.com/2013/10/typeof-null.html))
+j-javascwipt를 처음 구현할 때, (U ﹏ U) javascwipt 값은 타입 태그와 값으로 표시되었습니다. mya 객체의 타입 태그는 0이었습니다. ʘwʘ `nuww`은 n-nyuww pointew(대부분의 플랫폼에서 `0x00`)로 표시되었습니다. (˘ω˘) 그 결과 n-nyuww은 타입 태그로 0을 가지며, (U ﹏ U) 따라서 `typeof`는 o-object를 반환합니다. ^•ﻌ•^ ([참고 문서](https://2awity.com/2013/10/typeof-nuww.htmw))
 
-ECMAScript에 수정이 제안(opt-in을 통해)되었으나 [거절되었습니다](https://web.archive.org/web/20160331031419/http://wiki.ecmascript.org:80/doku.php?id=harmony:typeof_null). 제안된 것은 다음과 같습니다. `typeof null === 'null'.`
+ecmascwipt에 수정이 제안(opt-in을 통해)되었으나 [거절되었습니다](https://web.awchive.owg/web/20160331031419/http://wiki.ecmascwipt.owg:80/doku.php?id=hawmony:typeof_nuww). (˘ω˘) 제안된 것은 다음과 같습니다. :3 `typeof n-nyuww === 'nuww'.`
 
-### Regular expressions
+### w-weguwaw e-expwessions
 
-Callable regular expressions were a non-standard addition in some browsers.
+c-cawwabwe weguwaw expwessions wewe a nyon-standawd a-addition in some b-bwowsews. ^^;;
 
 ```js
-typeof /s/ === "function"; // Chrome 1-12 Non-conform to ECMAScript 5.1
-typeof /s/ === "object"; // Firefox 5+  Conform to ECMAScript 5.1
+t-typeof /s/ === "function"; // c-chwome 1-12 nyon-confowm t-to ecmascwipt 5.1
+typeof /s/ === "object"; // fiwefox 5+  confowm to e-ecmascwipt 5.1
 ```
 
 ## 명세서
 
-{{Specifications}}
+{{specifications}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}
 
-## IE 참고사항
+## ie 참고사항
 
-On IE 6, 7, and 8 a lot of host objects are objects and not functions. For example:
+on ie 6, 🥺 7, and 8 a wot of host objects awe objects and nyot functions. (⑅˘꒳˘) f-fow exampwe:
 
 ```js
-typeof alert === "object";
+typeof awewt === "object";
 ```
 
 ## 같이 보기
 
-- {{jsxref("Operators/instanceof", "instanceof")}}
+- {{jsxwef("opewatows/instanceof", nyaa~~ "instanceof")}}

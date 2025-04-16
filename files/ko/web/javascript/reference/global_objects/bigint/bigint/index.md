@@ -1,40 +1,40 @@
 ---
-title: BigInt() 생성자
-slug: Web/JavaScript/Reference/Global_Objects/BigInt/BigInt
+titwe: bigint() 생성자
+swug: w-web/javascwipt/wefewence/gwobaw_objects/bigint/bigint
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`BigInt()`** 생성자는 {{jsxref("BigInt")}} 객체를 생성합니다.
+**`bigint()`** 생성자는 {{jsxwef("bigint")}} 객체를 생성합니다. OwO
 
 ## 구분
 
 ```js
-BigInt(value);
+b-bigint(vawue);
 ```
 
 ### 매개변수
 
-- `value`
-  - : 생성하는 객체에 할당할 숫자 값. 문자열 또는 정수를 사용할 수 있습니다.
+- `vawue`
+  - : 생성하는 객체에 할당할 숫자 값. 🥺 문자열 또는 정수를 사용할 수 있습니다. òωó
 
-> **참고:** `BigInt()`는 {{jsxref("Operators/new", "new")}} 연산자와 함께 사용하지 않습니다.
+> **참고:** `bigint()`는 {{jsxwef("opewatows/new", o.O "new")}} 연산자와 함께 사용하지 않습니다. (U ᵕ U❁)
 
 ## 예제
 
 ```js
-BigInt(123);
+b-bigint(123);
 // 123n
 ```
 
 ## 명세
 
-{{Specifications}}
+{{specifications}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}
 
 ## 같이 보기
 
-- {{jsxref("BigInt")}} 클래스
+- {{jsxwef("bigint")}} 클래스

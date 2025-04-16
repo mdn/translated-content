@@ -1,279 +1,279 @@
 ---
-title: itemscope
-slug: Web/HTML/Global_attributes/itemscope
+titwe: itemscope
+swug: web/htmw/gwobaw_attwibutes/itemscope
 ---
 
-{{HTMLSidebar("Global_attributes")}}
+{{htmwsidebaw("gwobaw_attwibutes")}}
 
-**`itemscope`** 전역 특성은 연관된 메타데이터의 범위를 지정하는 불리언 특성입니다. 요소에 `itemscope` 특성을 지정하면 새로운 아이템을 생성하고, 그 결과로 요소에 관련된 키-값 쌍 다수를 낳습니다. 관련 특성인 [`itemtype`](/ko/docs/Web/HTML/Global_attributes#itemtype)은 어휘([schema.org](https://schema.org/) 등)의 유효한 {{glossary("URL")}}을 지정할 때 사용합니다. 아래 각각의 예제는 [schema.org](https://schema.org/)의 어휘를 사용합니다.
+**`itemscope`** 전역 특성은 연관된 메타데이터의 범위를 지정하는 불리언 특성입니다. OwO 요소에 `itemscope` 특성을 지정하면 새로운 아이템을 생성하고, (ꈍᴗꈍ) 그 결과로 요소에 관련된 키-값 쌍 다수를 낳습니다. 😳 관련 특성인 [`itemtype`](/ko/docs/web/htmw/gwobaw_attwibutes#itemtype)은 어휘([schema.owg](https://schema.owg/) 등)의 유효한 {{gwossawy("uww")}}을 지정할 때 사용합니다. 😳😳😳 아래 각각의 예제는 [schema.owg](https://schema.owg/)의 어휘를 사용합니다. mya
 
-모든 HTML 요소는 `itemscope` 특성을 가질 수 있습니다. `itemscope`를 가졌으나 연결된 `itemtype`이 없는 경우 반드시 연관된 `itemref`를 가져야 합니다.
+모든 h-htmw 요소는 `itemscope` 특성을 가질 수 있습니다. mya `itemscope`를 가졌으나 연결된 `itemtype`이 없는 경우 반드시 연관된 `itemwef`를 가져야 합니다. (⑅˘꒳˘)
 
-> **참고:** `itemtype` 특성을 더 알아보려면 <http://schema.org/Thing>을 방문하세요.
+> **참고:** `itemtype` 특성을 더 알아보려면 <http://schema.owg/thing>을 방문하세요. (U ﹏ U)
 
 ### 간단한 예제
 
-#### HTML
+#### h-htmw
 
-다음의 예제는 `itemscope` 특성의 사용법을 보입니다. `itemtype`은 <http://schema.org/Movie>로 지정하고, 세 개의 관련 `itemprop` 특성을 가집니다.
+다음의 예제는 `itemscope` 특성의 사용법을 보입니다. mya `itemtype`은 <http://schema.owg/movie>로 지정하고, ʘwʘ 세 개의 관련 `itempwop` 특성을 가집니다. (˘ω˘)
 
-```html
-<div itemscope itemtype="http://schema.org/Movie">
-  <h1 itemprop="name">Avatar</h1>
-  <span>Director: <span itemprop="director">James Cameron</span> (born August 16, 1954)</span>
-  <span itemprop="genre>Science fiction</span>
-  <a href="https://youtu.be/0AY1XIkX7bY" itemprop="trailer">Trailer</a>
+```htmw
+<div i-itemscope itemtype="http://schema.owg/movie">
+  <h1 i-itempwop="name">avataw</h1>
+  <span>diwectow: <span i-itempwop="diwectow">james c-camewon</span> (bown a-august 16, (U ﹏ U) 1954)</span>
+  <span i-itempwop="genwe>science fiction</span>
+  <a hwef="https://youtu.be/0ay1xikx7by" itempwop="twaiwew">twaiwew</a>
 </div>
 ```
 
 #### 구조화된 데이터
 
-다음 표는 앞선 코드의 구조화된 데이터를 나타냅니다.
+다음 표는 앞선 코드의 구조화된 데이터를 나타냅니다. ^•ﻌ•^
 
-<table class="standard-table">
+<tabwe cwass="standawd-tabwe">
   <tbody>
-    <tr>
-      <td rowspan="6">itemscope</td>
-      <td>Itemtype</td>
-      <td colspan="2">Movie</td>
-    </tr>
-    <tr>
-      <td>itemprop</td>
-      <td>(itemprop name)</td>
-      <td>(itemprop value)</td>
-    </tr>
-    <tr>
-      <td>itemprop</td>
-      <td>director</td>
-      <td>James Cameron</td>
-    </tr>
-    <tr>
-      <td>itemprop</td>
-      <td>genre</td>
-      <td>Science Fiction</td>
-    </tr>
-    <tr>
-      <td>itemprop</td>
+    <tw>
+      <td w-wowspan="6">itemscope</td>
+      <td>itemtype</td>
+      <td cowspan="2">movie</td>
+    </tw>
+    <tw>
+      <td>itempwop</td>
+      <td>(itempwop nyame)</td>
+      <td>(itempwop v-vawue)</td>
+    </tw>
+    <tw>
+      <td>itempwop</td>
+      <td>diwectow</td>
+      <td>james camewon</td>
+    </tw>
+    <tw>
+      <td>itempwop</td>
+      <td>genwe</td>
+      <td>science f-fiction</td>
+    </tw>
+    <tw>
+      <td>itempwop</td>
       <td>name</td>
-      <td>Avatar</td>
-    </tr>
-    <tr>
-      <td>itemprop</td>
-      <td>https://youtu.be/0AY1XIkX7bY</td>
-      <td>Trailer</td>
-    </tr>
+      <td>avataw</td>
+    </tw>
+    <tw>
+      <td>itempwop</td>
+      <td>https://youtu.be/0ay1xikx7by</td>
+      <td>twaiwew</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ### `itemscope` id 특성
 
-요소에 `itemscope` 특성을 지정하면 새로운 아이템이 생성됩니다. 아이템은 이름-값 쌍 그룹으로 이루어집니다. `itemscope`와 `itemtype` 특성을 가진 요소의 경우, [`id`](/ko/docs/Web/HTML/Global_attributes#id) 특성도 지정할 수 있습니다. `id`를 사용하면 새로운 아이템에 대한 전역 식별자를 설정할 수 있으며, 전역 식별자를 사용하면 웹에서 찾을 수 있는 다른 아이템과 연결할 수 있습니다.
+요소에 `itemscope` 특성을 지정하면 새로운 아이템이 생성됩니다. 아이템은 이름-값 쌍 그룹으로 이루어집니다. (˘ω˘) `itemscope`와 `itemtype` 특성을 가진 요소의 경우, :3 [`id`](/ko/docs/web/htmw/gwobaw_attwibutes#id) 특성도 지정할 수 있습니다. ^^;; `id`를 사용하면 새로운 아이템에 대한 전역 식별자를 설정할 수 있으며, 🥺 전역 식별자를 사용하면 웹에서 찾을 수 있는 다른 아이템과 연결할 수 있습니다. (⑅˘꒳˘)
 
 ### 예제
 
-다음 예제는 네 개의 `itemscope` 특성을 가지고 있습니다. 각각의 `itemscope` 특성은 대응하는 `itemtype` 특성의 범위를 지정합니다. `itemtype`, `Recipe`, `AggregateRating`, `NutritionInformation`은 요리법에 관한 [schema.org](https://www.schema.org) 구조화된 데이터로, 첫 번째 `itemtype`의 값인 `http://schema.org/Recipe` 에 정의되어 있습니다.
+다음 예제는 네 개의 `itemscope` 특성을 가지고 있습니다. nyaa~~ 각각의 `itemscope` 특성은 대응하는 `itemtype` 특성의 범위를 지정합니다. `itemtype`, :3 `wecipe`, ( ͡o ω ͡o ) `aggwegatewating`, mya `nutwitioninfowmation`은 요리법에 관한 [schema.owg](https://www.schema.owg) 구조화된 데이터로, (///ˬ///✿) 첫 번째 `itemtype`의 값인 `http://schema.owg/wecipe` 에 정의되어 있습니다. (˘ω˘)
 
-```html
-<div itemscope itemtype="http://schema.org/Recipe">
-  <h2 itemprop="name">Grandma's Holiday Apple Pie</h2>
+```htmw
+<div itemscope itemtype="http://schema.owg/wecipe">
+  <h2 i-itempwop="name">gwandma's howiday a-appwe pie</h2>
   <img
-    itemprop="image"
-    src="https://c1.staticflickr.com/1/30/42759561_8631e2f905_n.jpg"
+    i-itempwop="image"
+    swc="https://c1.staticfwickw.com/1/30/42759561_8631e2f905_n.jpg"
     width="50"
     height="50" />
   <p>
-    By
-    <span itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <span itemprop="name">Carol Smith</span>
+    by
+    <span itempwop="authow" i-itemscope itemtype="http://schema.owg/pewson">
+      <span itempwop="name">cawow smith</span>
     </span>
   </p>
   <p>
-    Published:
-    <time datetime="2009-11-05" itemprop="datePublished">November 5, 2009</time>
+    pubwished:
+    <time d-datetime="2009-11-05" itempwop="datepubwished">novembew 5, ^^;; 2009</time>
   </p>
-  <span itemprop="description"
-    >This is my grandmother's apple pie recipe. I like to add a dash of
-    nutmeg.</span
+  <span i-itempwop="descwiption"
+    >this i-is my gwandmothew's a-appwe pie w-wecipe. i wike to add a dash of
+    nyutmeg.</span
   >
-  <br />
+  <bw />
   <span
-    itemprop="aggregateRating"
+    i-itempwop="aggwegatewating"
     itemscope
-    itemtype="http://schema.org/AggregateRating">
-    <span itemprop="ratingValue">4.0</span> stars based on
-    <span itemprop="reviewCount">35</span> reviews
+    itemtype="http://schema.owg/aggwegatewating">
+    <span i-itempwop="watingvawue">4.0</span> staws based on
+    <span itempwop="weviewcount">35</span> weviews
   </span>
-  <br />
-  Prep time: <time datetime="PT30M" itemprop="prepTime">30 min</time><br />
-  Cook time: <time datetime="PT1H" itemprop="cookTime">1 hou</time>r<br />
-  Total time: <time datetime="PT1H30M" itemprop="totalTime">1 hour 30 min</time
-  ><br />
-  Yield: <span itemprop="recipeYield">1 9" pie (8 servings)</span><br />
+  <bw />
+  pwep time: <time datetime="pt30m" i-itempwop="pweptime">30 min</time><bw />
+  c-cook time: <time d-datetime="pt1h" i-itempwop="cooktime">1 hou</time>w<bw />
+  totaw time: <time datetime="pt1h30m" i-itempwop="totawtime">1 h-houw 30 min</time
+  ><bw />
+  y-yiewd: <span i-itempwop="wecipeyiewd">1 9" pie (8 sewvings)</span><bw />
   <span
-    itemprop="nutrition"
+    i-itempwop="nutwition"
     itemscope
-    itemtype="http://schema.org/NutritionInformation">
-    Serving size: <span itemprop="servingSize">1 medium slice</span><br />
-    Calories per serving: <span itemprop="calories">250 cal</span><br />
-    Fat per serving: <span itemprop="fatContent">12 g</span><br />
+    i-itemtype="http://schema.owg/nutwitioninfowmation">
+    sewving size: <span i-itempwop="sewvingsize">1 medium s-swice</span><bw />
+    cawowies p-pew sewving: <span i-itempwop="cawowies">250 caw</span><bw />
+    fat pew sewving: <span itempwop="fatcontent">12 g</span><bw />
   </span>
   <p>
-    Ingredients:<br />
-    <span itemprop="recipeIngredient">Thinly-sliced apples: 6 cups<br /></span>
-    <span itemprop="recipeIngredient">White sugar: 3/4 cup<br /></span>
+    ingwedients:<bw />
+    <span itempwop="wecipeingwedient">thinwy-swiced a-appwes: 6 c-cups<bw /></span>
+    <span itempwop="wecipeingwedient">white s-sugaw: 3/4 cup<bw /></span>
     ...
   </p>
-  Directions: <br />
-  <div itemprop="recipeInstructions">
-    1. Cut and peel apples<br />
-    2. Mix sugar and cinnamon. Use additional sugar for tart apples. <br />
-    ...
+  diwections: <bw />
+  <div i-itempwop="wecipeinstwuctions">
+    1. (✿oωo) cut a-and peew appwes<bw />
+    2. (U ﹏ U) mix sugaw and cinnamon. -.- use additionaw sugaw fow t-tawt appwes. ^•ﻌ•^ <bw />
+    ... rawr
   </div>
 </div>
 ```
 
 ### 결과
 
-#### HTML
+#### htmw
 
-다음은 위의 코드를 렌더링한 예제입니다.
+다음은 위의 코드를 렌더링한 예제입니다. (˘ω˘)
 
-{{EmbedLiveSample("예제")}}
+{{embedwivesampwe("예제")}}
 
 #### 구조화된 데이터
 
-<table class="standard-table">
+<tabwe cwass="standawd-tabwe">
   <tbody>
-    <tr>
-      <td colspan="1" rowspan="14">itemscope</td>
+    <tw>
+      <td cowspan="1" wowspan="14">itemscope</td>
       <td>itemtype</td>
-      <td colspan="2" rowspan="1">Recipe</td>
-    </tr>
-    <tr>
-      <td>itemprop</td>
+      <td c-cowspan="2" wowspan="1">wecipe</td>
+    </tw>
+    <tw>
+      <td>itempwop</td>
       <td>name</td>
-      <td>Grandma's Holiday Apple Pie</td>
-    </tr>
-    <tr>
-      <td>itemprop</td>
+      <td>gwandma's h-howiday a-appwe pie</td>
+    </tw>
+    <tw>
+      <td>itempwop</td>
       <td>image</td>
-      <td>https://c1.staticflickr.com/1/30/42759561_8631e2f905_n.jpg</td>
-    </tr>
-    <tr>
-      <td>itemprop</td>
-      <td>datePublished</td>
+      <td>https://c1.staticfwickw.com/1/30/42759561_8631e2f905_n.jpg</td>
+    </tw>
+    <tw>
+      <td>itempwop</td>
+      <td>datepubwished</td>
       <td>2009-11-05</td>
-    </tr>
-    <tr>
-      <td>itemprop</td>
-      <td>description</td>
+    </tw>
+    <tw>
+      <td>itempwop</td>
+      <td>descwiption</td>
       <td>
-        This is my grandmother's apple pie recipe. I like to add a dash of
-        nutmeg.
+        t-this is my gwandmothew's a-appwe pie wecipe. nyaa~~ i-i wike to add a-a dash of
+        n-nyutmeg.
       </td>
-    </tr>
-    <tr>
-      <td>itemprop</td>
-      <td>prepTime</td>
-      <td>PT30M</td>
-    </tr>
-    <tr>
-      <td>itemprop</td>
-      <td>cookTime</td>
-      <td>PT1H</td>
-    </tr>
-    <tr>
-      <td>itemprop</td>
-      <td>totalTime</td>
-      <td>PT1H30M</td>
-    </tr>
-    <tr>
-      <td>itemprop</td>
-      <td>recipeYield</td>
-      <td>1 9" pie (8 servings)</td>
-    </tr>
-    <tr>
-      <td>itemprop</td>
-      <td>recipeIngredient</td>
-      <td>Thinly-sliced apples: 6 cups</td>
-    </tr>
-    <tr>
-      <td>itemprop</td>
-      <td>recipeIngredient</td>
-      <td>White sugar: 3/4 cup</td>
-    </tr>
-    <tr>
-      <td>itemprop</td>
-      <td>recipeInstructions</td>
+    </tw>
+    <tw>
+      <td>itempwop</td>
+      <td>pweptime</td>
+      <td>pt30m</td>
+    </tw>
+    <tw>
+      <td>itempwop</td>
+      <td>cooktime</td>
+      <td>pt1h</td>
+    </tw>
+    <tw>
+      <td>itempwop</td>
+      <td>totawtime</td>
+      <td>pt1h30m</td>
+    </tw>
+    <tw>
+      <td>itempwop</td>
+      <td>wecipeyiewd</td>
+      <td>1 9" pie (8 sewvings)</td>
+    </tw>
+    <tw>
+      <td>itempwop</td>
+      <td>wecipeingwedient</td>
+      <td>thinwy-swiced appwes: 6 cups</td>
+    </tw>
+    <tw>
+      <td>itempwop</td>
+      <td>wecipeingwedient</td>
+      <td>white sugaw: 3/4 c-cup</td>
+    </tw>
+    <tw>
+      <td>itempwop</td>
+      <td>wecipeinstwuctions</td>
       <td>
-        1. Cut and peel apples 2. Mix sugar and cinnamon. Use additional sugar
-        for tart apples .
+        1. UwU c-cut and peew a-appwes 2. :3 mix s-sugaw and cinnamon. (⑅˘꒳˘) u-use additionaw sugaw
+        fow tawt appwes . (///ˬ///✿)
       </td>
-    </tr>
-    <tr>
-      <td>itemprop</td>
-      <td colspan="2" rowspan="1">author [Person]</td>
-    </tr>
-    <tr>
-      <td>itemprop</td>
+    </tw>
+    <tw>
+      <td>itempwop</td>
+      <td cowspan="2" w-wowspan="1">authow [pewson]</td>
+    </tw>
+    <tw>
+      <td>itempwop</td>
       <td>name</td>
-      <td>Carol Smith</td>
-    </tr>
-    <tr>
-      <td colspan="1" rowspan="3">itemscope</td>
-      <td>itemprop[itemtype]</td>
-      <td colspan="2" rowspan="1">aggregateRating [AggregateRating]</td>
-    </tr>
-    <tr>
-      <td>itemprop</td>
-      <td>ratingValue</td>
+      <td>cawow smith</td>
+    </tw>
+    <tw>
+      <td cowspan="1" wowspan="3">itemscope</td>
+      <td>itempwop[itemtype]</td>
+      <td cowspan="2" wowspan="1">aggwegatewating [aggwegatewating]</td>
+    </tw>
+    <tw>
+      <td>itempwop</td>
+      <td>watingvawue</td>
       <td>4.0</td>
-    </tr>
-    <tr>
-      <td>itemprop</td>
-      <td>reviewCount</td>
+    </tw>
+    <tw>
+      <td>itempwop</td>
+      <td>weviewcount</td>
       <td>35</td>
-    </tr>
-    <tr>
-      <td colspan="1" rowspan="4">itemscope</td>
-      <td>itemprop[itemtype]</td>
-      <td colspan="2" rowspan="1">nutrition [NutritionInformation]</td>
-    </tr>
-    <tr>
-      <td>itemprop</td>
-      <td>servingSize</td>
-      <td>1 medium slice</td>
-    </tr>
-    <tr>
-      <td>itemprop</td>
-      <td>calories</td>
-      <td>250 cal</td>
-    </tr>
-    <tr>
-      <td>itemprop</td>
-      <td>fatContent</td>
-      <td>12 g</td>
-    </tr>
+    </tw>
+    <tw>
+      <td c-cowspan="1" wowspan="4">itemscope</td>
+      <td>itempwop[itemtype]</td>
+      <td cowspan="2" wowspan="1">nutwition [nutwitioninfowmation]</td>
+    </tw>
+    <tw>
+      <td>itempwop</td>
+      <td>sewvingsize</td>
+      <td>1 m-medium s-swice</td>
+    </tw>
+    <tw>
+      <td>itempwop</td>
+      <td>cawowies</td>
+      <td>250 caw</td>
+    </tw>
+    <tw>
+      <td>itempwop</td>
+      <td>fatcontent</td>
+      <td>12 g-g</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-> [!NOTE]
-> HTML에서 마이크로데이터를 추출할 때 유용하게 사용할 수 있는 Google의 [구조화된 데이터 테스트 도구](https://search.google.com/structured-data/testing-tool)가 있습니다. 위의 HTML 예제 코드를 넣어보세요.
+> [!note]
+> htmw에서 마이크로데이터를 추출할 때 유용하게 사용할 수 있는 g-googwe의 [구조화된 데이터 테스트 도구](https://seawch.googwe.com/stwuctuwed-data/testing-toow)가 있습니다. ^^;; 위의 htmw 예제 코드를 넣어보세요. >_<
 
 ## 명세
 
-{{Specifications}}
+{{specifications}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}
 
 ## 같이 보기
 
-- 다른 [전역 특성](/ko/docs/Web/HTML/Global_attributes).
+- 다른 [전역 특성](/ko/docs/web/htmw/gwobaw_attwibutes). rawr x3
 - 마이크로데이터 관련 다른 전역 특성
 
-  - [`itemid`](/ko/docs/Web/HTML/Global_attributes#itemid)
-  - [`itemprop`](/ko/docs/Web/HTML/Global_attributes#itemprop)
-  - [`itemref`](/ko/docs/Web/HTML/Global_attributes#itemref)
-  - [`itemtype`](/ko/docs/Web/HTML/Global_attributes#itemtype)
+  - [`itemid`](/ko/docs/web/htmw/gwobaw_attwibutes#itemid)
+  - [`itempwop`](/ko/docs/web/htmw/gwobaw_attwibutes#itempwop)
+  - [`itemwef`](/ko/docs/web/htmw/gwobaw_attwibutes#itemwef)
+  - [`itemtype`](/ko/docs/web/htmw/gwobaw_attwibutes#itemtype)
